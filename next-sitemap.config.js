@@ -1,0 +1,38 @@
+/** @type {import('next-sitemap').IConfig} */
+module.exports = {
+  siteUrl: 'https://aegryn.com',
+  generateRobotsTxt: true,
+  changefreq: 'weekly',
+  priority: 0.7,
+  exclude: ['/admin/*', '/api/*'],
+  alternateRefs: [
+    { href: 'https://aegryn.com/fr', hreflang: 'fr' },
+    { href: 'https://aegryn.com/en', hreflang: 'en' },
+    { href: 'https://aegryn.com/de', hreflang: 'de' },
+    { href: 'https://aegryn.com/it', hreflang: 'it' },
+    { href: 'https://aegryn.com/es', hreflang: 'es' },
+    { href: 'https://aegryn.com/nl', hreflang: 'nl' },
+    { href: 'https://aegryn.com/fr', hreflang: 'x-default' },
+  ],
+  robotsTxtOptions: {
+    policies: [
+      { userAgent: '*', allow: '/' },
+      { userAgent: 'GPTBot', allow: '/' },
+      { userAgent: 'ChatGPT-User', allow: '/' },
+      { userAgent: 'ClaudeBot', allow: '/' },
+      { userAgent: 'Claude-Web', allow: '/' },
+      { userAgent: 'Anthropic-AI', allow: '/' },
+      { userAgent: 'Google-Extended', allow: '/' },
+      { userAgent: 'Googlebot', allow: '/' },
+      { userAgent: 'Bingbot', allow: '/' },
+      { userAgent: 'PerplexityBot', allow: '/' },
+      { userAgent: 'YouBot', allow: '/' },
+      { userAgent: 'CCBot', allow: '/' },
+      { userAgent: 'cohere-ai', allow: '/' },
+      { userAgent: 'Meta-ExternalAgent', allow: '/' },
+      { userAgent: 'Bytespider', allow: '/' },
+      { userAgent: 'Applebot-Extended', allow: '/' },
+    ],
+    additionalSitemaps: ['https://aegryn.com/llms.txt'],
+  },
+}

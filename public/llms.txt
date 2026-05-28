@@ -1,0 +1,57 @@
+# Aegryn — Swiss Tech Asset Builder
+> https://aegryn.com
+
+## What is Aegryn?
+
+Aegryn is a Swiss Tech Asset Builder. We design, fund and operate proprietary digital assets from Switzerland, built to last across economic cycles. Our model is based on full ownership, sovereign infrastructure and long-term value creation. We do not build MVPs. We build assets.
+
+Tagline: "Engineered to Last"
+Founder: Yohann Bollack
+Incorporated in Switzerland.
+
+## Our Proprietary Assets
+
+- **Nexoris** — Modular AI platform for enterprises demanding reliability, compliance and data sovereignty. (AI, B2B, SaaS, EU AI Act)
+- **Kryolio** — Digital and crypto asset management network: portfolio, performance tracking and automated strategy. (Crypto, DeFi, Portfolio, Web3)
+- **Lyvra** — Premium lifestyle super-app for subscription management, digital concierge and personalised experience. (Lifestyle, B2C, App, Premium)
+- **Vorrex** — Secure peer-to-peer transaction network with integrated compliance protocols for European markets. (Fintech, P2P, Compliance, SEPA)
+- **Domify** — Intelligent real estate platform combining search, AI valuation and rental management for Swiss and European markets. (Proptech, AI, Real Estate, CH/EU)
+- **Fleetori** — Next-generation fleet management and logistics solution for urban mobility companies. (Logistics, Fleet, B2B, Mobility)
+
+## Advisory
+
+Aegryn Advisory provides cybersecurity protocols, AI auditing and digital strategy for companies that refuse to be vulnerable.
+
+Services:
+- Cybersecurity — Attack surface audit, penetration testing, incident response, cloud & on-premise hardening.
+- AI Audit & Trust — Algorithmic bias audit, EU AI Act compliance, LLM red-teaming, decision traceability.
+- Digital Strategy — Data governance, GDPR & FADP compliance, secure architecture, innovation roadmap.
+
+## Philosophy
+
+Proprietary. Sovereign. Durable.
+100% ownership. Swiss sovereignty. Engineered to Last.
+We do not sell minority stakes to VCs. Every Aegryn asset is designed to be fully owned, sovereignly operated and passed on to the next generation.
+
+## Values
+
+- Precision — Every decision is documented, measured and traceable.
+- Durability — We build for the long term, not the next funding round.
+- Sovereignty — Our assets, our infrastructure, our data. No critical external dependencies.
+- Transparency — Towards our partners, users and the market.
+
+## Geography
+
+Switzerland, France, Germany, Belgium, European Union. GDPR and Swiss FADP compliant.
+
+## Languages
+
+French, English, German, Italian, Spanish, Dutch
+
+## Links
+
+- [Home](https://aegryn.com)
+- [What We Build](https://aegryn.com/en/what-we-build)
+- [Advisory](https://aegryn.com/en/advisory)
+- [About](https://aegryn.com/en/about)
+- [Contact](https://aegryn.com/en/contact)

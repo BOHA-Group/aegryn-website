@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "about": "Over ons",
+    "whatWeBuild": "Wat we bouwen",
+    "advisory": "Advisory",
+    "growWithUs": "Groeien met ons",
+    "career": "Carrières",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Engineered to Last",
+    "title": "Wij bouwen\nwat blijft.",
+    "sub": "Eigen assets van de protocollaag\ntot de gebruikersinterface.",
+    "cta": "Ontdek onze assets"
+  },
+  "manifesto": {
+    "aegis": {
+      "label": "AEGIS",
+      "title": "Absolute bescherming",
+      "desc": "Uit het Grieks αἰγίς — het goddelijke schild van Zeus en Athena. Aegryn beschermt zijn assets tegen alle bedreigingen."
+    },
+    "aegir": {
+      "label": "AEGIR",
+      "title": "Beheersing van stromen",
+      "desc": "Uit het Oudnoors Ægir — god van de zee. Aegryn orkestreert digitale waardestromen tussen zijn assets."
+    },
+    "aeon": {
+      "label": "AEON",
+      "title": "Tijdloze duurzaamheid",
+      "desc": "Uit het Grieks αἰών — de eeuwigheid. Directe afstemming op \"Engineered to Last\"."
+    }
+  },
+  "assets": {
+    "title": "Ons eigen ecosysteem.",
+    "sub": "Zes eigen assets. Één gemeenschappelijk huis.",
+    "categories": {
+      "ai": "AI & Protocollen",
+      "lifestyle": "Services & Lifestyle",
+      "transactions": "Transacties & Netwerk"
+    }
+  },
+  "advisory": {
+    "strip": "Aegryn Advisory — Wij beschermen wat jij bouwt",
+    "cta": "Contact opnemen",
+    "hero": {
+      "title": "Beschermen wat jij bouwt.",
+      "desc": "Cyberbeveiligingsprotocollen, AI-audits en digitale strategie voor bedrijven die geen risico's willen nemen."
+    },
+    "services": {
+      "cyber": {
+        "title": "Cyberbeveiliging",
+        "desc": "Aanvalsoppervlak identificeren, infrastructuur harden en incidenten afhandelen.",
+        "items": ["Aanvalsoppervlak-audit", "Penetratietesten", "Incidentrespons", "Cloud & on-premise hardening"]
+      },
+      "ai": {
+        "title": "AI-audit & Vertrouwen",
+        "desc": "Wij auditten uw modellen, pipelines en beslissingsprocessen voor betrouwbaarheid en compliance.",
+        "items": ["Algoritmische bias-audit", "EU AI Act-compliance", "LLM red-teaming", "Beslissingstracering"]
+      },
+      "strategy": {
+        "title": "Digitale Strategie",
+        "desc": "Afstemming tussen uw digitale ambities en Europese en Zwitserse regelgevingsvereisten.",
+        "items": ["Data governance", "AVG & DSG-compliance", "Veilige architectuur", "Innovatie-roadmap"]
+      }
+    },
+    "approach": {
+      "title": "Een rigoureus protocol, geen belofte.",
+      "desc": "Elke opdracht begint met een uitgebreide diagnose vóór elke aanbeveling. Wij documenteren, meten en leveren.",
+      "steps": [
+        { "label": "Diagnose", "desc": "Volledige mapping van uw digitale blootstelling en identificatie van kritieke risico's." },
+        { "label": "Protocol", "desc": "Ontwikkeling van een geprioriteerd behandelingsplan, afgestemd op uw sector en beperkingen." },
+        { "label": "Uitvoering", "desc": "Implementatie met continue monitoring en transparante rapportage bij elke mijlpaal." },
+        { "label": "Hardening", "desc": "Einddocumentatie, kennisoverdracht en toegang tot nazorg." }
+      ]
+    }
+  },
+  "build": {
+    "hero": { "label": "Wat we bouwen", "title": "Zes assets. Één visie.", "desc": "Elk Aegryn-asset is ontworpen om zijn verticaal te domineren — van bedrijfs-AI tot transactienetwerken, van lifestyle tot vastgoed." },
+    "categories": { "ai": "AI & Protocollen", "lifestyle": "Services & Lifestyle", "transactions": "Transacties & Netwerk" },
+    "status": { "building": "In aanbouw", "concept": "Concept", "live": "Live" },
+    "visitSite": "Website bezoeken", "comingSoon": "Binnenkort beschikbaar",
+    "assets": {
+      "nexoris": { "desc": "Modulair AI-platform voor bedrijven die betrouwbaarheid, compliance en datasouvereiniteit vereisen.", "tags": ["AI", "B2B", "SaaS", "EU AI Act"] },
+      "kryolio": { "desc": "Netwerk voor digitaal en crypto-assetbeheer — portfolio, prestatietracking en geautomatiseerde strategie.", "tags": ["Crypto", "DeFi", "Portfolio", "Web3"] },
+      "lyvra": { "desc": "Premium lifestyle super-app voor abonnementsbeheer, digitale conciërge en gepersonaliseerde ervaring.", "tags": ["Lifestyle", "B2C", "App", "Premium"] },
+      "vorrex": { "desc": "Veilig peer-to-peer transactienetwerk met geïntegreerde complianceprotocollen voor Europese markten.", "tags": ["Fintech", "P2P", "Compliance", "SEPA"] },
+      "domify": { "desc": "Intelligent vastgoedplatform met AI-waardering en huurbeheer voor de Zwitserse en Europese markt.", "tags": ["Proptech", "AI", "Vastgoed", "CH/EU"] },
+      "fleetori": { "desc": "Volgende generatie vlootbeheer en logistieke oplossing voor stedelijke mobiliteitsbedrijven.", "tags": ["Logistiek", "Fleet", "B2B", "Mobiliteit"] }
+    },
+    "philosophy": { "label": "Onze filosofie", "title": "Eigendom. Soeverein. Duurzaam.", "desc": "We bouwen geen MVP's. We verkopen geen minderheidsbelangen aan VC's. Elk Aegryn-asset is ontworpen voor volledig eigendom en soevereine exploitatie." },
+    "pillars": { "proprietary": { "stat": "100%", "label": "Eigendom" }, "sovereign": { "stat": "CH", "label": "Soevereiniteit" }, "durable": { "stat": "∞", "label": "Duurzaamheid" } },
+    "advisoryCta": { "text": "Heeft uw bedrijf institutionele digitale bescherming nodig?", "button": "Ontdek Advisory" }
+  },
+  "about": {
+    "hero": { "label": "Over Aegryn", "title": "Een builder, geen consultant.", "desc": "Aegryn is een Swiss Tech Asset Builder. We ontwerpen, financieren en beheren eigen digitale assets vanuit Zwitserland." },
+    "mission": { "label": "Onze missie", "title": "Bouwen wat de tand des tijds doorstaat.", "p1": "Aegryn verkoopt geen projecten. We bouwen assets. Elk product dat we lanceren is ontworpen om te duren, langetermijnwaarde te genereren en economische cycli te doorstaan.", "p2": "Ons model is gebaseerd op volledig eigendom van onze digitale assets, beheerd in een soevereine omgeving.", "p3": "Zwitserland is niet alleen een adres. Het is onze standaard: neutraliteit, precisie, duurzaamheid." },
+    "values": {
+      "precision": { "label": "01", "title": "Precisie", "desc": "Elke beslissing is gedocumenteerd, gemeten en traceerbaar." },
+      "durability": { "label": "02", "title": "Duurzaamheid", "desc": "We bouwen voor de lange termijn, niet voor de volgende financieringsronde." },
+      "sovereignty": { "label": "03", "title": "Soevereiniteit", "desc": "Onze assets, onze infrastructuur, onze data. Geen kritieke externe afhankelijkheden." },
+      "transparency": { "label": "04", "title": "Transparantie", "desc": "Naar onze partners, gebruikers en de markt." }
+    },
+    "founder": { "label": "De oprichter", "bio1": "Yohann Bollack is ondernemer, builder en digitaal strateeg. Hij richtte Aegryn op met een eenvoudige overtuiging: de beste digitale assets worden geboren uit totale beheersing van de keten, van idee tot infrastructuur.", "bio2": "Gepassioneerd door de kruising van technologie, beveiliging en design leidt hij een ecosysteem van zes producten.", "cta": "Contact opnemen" },
+    "swiss": { "title": "Zes assets. Één gemeenschappelijk huis. Één Zwitserse ambitie.", "cta": "Bekijk onze assets" }
+  },
+  "contact": {
+    "hero": { "title": "Laten we praten.", "desc": "Advisory, partnerschap, pers of algemene vraag — we reageren binnen 24u." },
+    "responseTime": { "label": "Reactietijd", "value": "Binnen 24 uur" },
+    "form": {
+      "name": "Volledige naam", "email": "E-mailadres", "company": "Bedrijf (optioneel)",
+      "subject": "Onderwerp", "subjectPlaceholder": "Kies een onderwerp",
+      "subjects": { "advisory": "Advisory & Cyberbeveiliging", "partnership": "Partnerschap", "press": "Pers & Media", "other": "Anders" },
+      "message": "Bericht", "messagePlaceholder": "Beschrijf uw vraag...",
+      "submit": "Versturen", "sending": "Versturen...", "error": "Er is een fout opgetreden. Probeer het opnieuw of schrijf ons rechtstreeks.",
+      "success": { "title": "Bericht ontvangen.", "desc": "Wij reageren binnen 24 uur." }
+    }
+  },
+  "stats": {
+    "assets": "assets",
+    "languages": "talen",
+    "base": "Zwitserse basis"
+  },
+  "footer": {
+    "legal": "© 2026 Aegryn Sàrl — Alle rechten voorbehouden",
+    "company": "An Aegryn company",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden",
+    "tagline": "Engineered to Last"
+  }
+}

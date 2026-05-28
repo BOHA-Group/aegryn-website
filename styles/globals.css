@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Aegryn Design Tokens ─────────────────────────────── */
+:root {
+  /* Primaires */
+  --aegryn-obsidian  : #050505;
+  --aegryn-navy      : #0A1D2E;
+  --aegryn-apex      : #5ADDA4;
+  --aegryn-white     : #F8FAFC;
+
+  /* Surfaces */
+  --aegryn-bg        : #FFFFFF;
+  --aegryn-bg2       : #FAFAF8;
+  --aegryn-bg3       : #F0EBE2;
+
+  /* Texte */
+  --aegryn-cream     : #0D0C0B;
+  --aegryn-cream2    : #4A4640;
+  --aegryn-muted     : #9A9590;
+
+  /* Bordures */
+  --aegryn-border    : rgba(0, 0, 0, 0.08);
+  --aegryn-border-h  : rgba(0, 0, 0, 0.18);
+  --aegryn-glass     : rgba(0, 0, 0, 0.03);
+
+  /* États */
+  --aegryn-live      : #00C950;
+  --aegryn-beta      : #D97706;
+}
+
+/* ── Base ─────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--aegryn-bg);
+  color: var(--aegryn-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--aegryn-bg);
+  overflow-x: hidden;
+}
+
+/* ── Selection ────────────────────────────────────────── */
+::selection {
+  background: rgba(90, 221, 164, 0.30);
+  color: var(--aegryn-obsidian);
+}
+
+/* ── Focus visible ────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--aegryn-apex);
+  outline-offset: 3px;
+}
+
+/* ── Scrollbar ────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--aegryn-bg2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.28);
+}
+
+/* ── Keyframes ────────────────────────────────────────── */
+@keyframes apex-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.45; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Utilities ────────────────────────────────────────── */
+.animate-apex-pulse {
+  animation: apex-pulse 2.5s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Reduced motion ───────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

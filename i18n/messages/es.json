@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "about": "Sobre nosotros",
+    "whatWeBuild": "Lo que construimos",
+    "advisory": "Advisory",
+    "growWithUs": "Crecer con nosotros",
+    "career": "Carreras",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "tagline": "Engineered to Last",
+    "title": "Construimos\nlo que perdura.",
+    "sub": "Activos propietarios desde la capa de protocolo\nhasta la interfaz de usuario.",
+    "cta": "Descubrir nuestros activos"
+  },
+  "manifesto": {
+    "aegis": {
+      "label": "AEGIS",
+      "title": "Protección absoluta",
+      "desc": "Del griego αἰγίς — el escudo divino de Zeus y Atenea. Aegryn protege sus activos contra todas las amenazas."
+    },
+    "aegir": {
+      "label": "AEGIR",
+      "title": "Dominio de los flujos",
+      "desc": "Del nórdico antiguo Ægir — dios del mar. Aegryn orquesta los flujos de valor digital entre sus activos."
+    },
+    "aeon": {
+      "label": "AEON",
+      "title": "Durabilidad atemporal",
+      "desc": "Del griego αἰών — la eternidad. Alineamiento directo con \"Engineered to Last\"."
+    }
+  },
+  "assets": {
+    "title": "Nuestro ecosistema propio.",
+    "sub": "Seis activos propietarios. Una casa común.",
+    "categories": {
+      "ai": "IA & Protocolos",
+      "lifestyle": "Servicios & Lifestyle",
+      "transactions": "Transacciones & Red"
+    }
+  },
+  "advisory": {
+    "strip": "Aegryn Advisory — Protegemos lo que construyes",
+    "cta": "Ponerse en contacto",
+    "hero": {
+      "title": "Proteger lo que construyes.",
+      "desc": "Protocolos de ciberseguridad, auditoría IA y estrategia digital para empresas que se niegan a ser vulnerables."
+    },
+    "services": {
+      "cyber": {
+        "title": "Ciberseguridad",
+        "desc": "Identificación de superficie de ataque, endurecimiento de infraestructuras y respuesta a incidentes.",
+        "items": ["Auditoría de superficie de ataque", "Pruebas de penetración", "Respuesta a incidentes", "Endurecimiento cloud & on-premise"]
+      },
+      "ai": {
+        "title": "Auditoría IA & Confianza",
+        "desc": "Auditamos tus modelos, pipelines y procesos de decisión para garantizar fiabilidad y cumplimiento.",
+        "items": ["Auditoría de sesgos algorítmicos", "Cumplimiento EU AI Act", "Red-teaming LLM", "Trazabilidad de decisiones"]
+      },
+      "strategy": {
+        "title": "Estrategia Digital",
+        "desc": "Alineación entre tus ambiciones digitales y las restricciones regulatorias europeas y suizas.",
+        "items": ["Gobernanza de datos", "Cumplimiento RGPD & LPD", "Arquitectura segura", "Hoja de ruta de innovación"]
+      }
+    },
+    "approach": {
+      "title": "Un protocolo riguroso, no una promesa.",
+      "desc": "Cada encargo comienza con un diagnóstico exhaustivo antes de cualquier recomendación. Documentamos, medimos y entregamos.",
+      "steps": [
+        { "label": "Diagnóstico", "desc": "Mapeo completo de tu exposición digital e identificación de riesgos críticos." },
+        { "label": "Protocolo", "desc": "Elaboración de un plan de tratamiento priorizado, adaptado a tu sector y restricciones." },
+        { "label": "Ejecución", "desc": "Implementación con seguimiento continuo y reporting transparente en cada hito." },
+        { "label": "Blindaje", "desc": "Documentación final, transferencia de conocimientos y acceso al seguimiento post-misión." }
+      ]
+    }
+  },
+  "build": {
+    "hero": { "label": "Lo que construimos", "title": "Seis activos. Una visión.", "desc": "Cada activo Aegryn está diseñado para dominar su vertical — desde IA empresarial hasta redes de transacciones, del lifestyle al inmobiliario." },
+    "categories": { "ai": "IA & Protocolos", "lifestyle": "Servicios & Lifestyle", "transactions": "Transacciones & Red" },
+    "status": { "building": "En construcción", "concept": "Concepto", "live": "En línea" },
+    "visitSite": "Visitar sitio", "comingSoon": "Próximamente",
+    "assets": {
+      "nexoris": { "desc": "Plataforma de inteligencia artificial modular para empresas que exigen fiabilidad, cumplimiento y soberanía de datos.", "tags": ["IA", "B2B", "SaaS", "EU AI Act"] },
+      "kryolio": { "desc": "Red de gestión de activos digitales y cripto — cartera, seguimiento de rendimiento y estrategia automatizada.", "tags": ["Cripto", "DeFi", "Portfolio", "Web3"] },
+      "lyvra": { "desc": "Super-app lifestyle premium para gestión de suscripciones, concierge digital y experiencia personalizada.", "tags": ["Lifestyle", "B2C", "App", "Premium"] },
+      "vorrex": { "desc": "Red de transacciones peer-to-peer segura con protocolos de cumplimiento integrados para mercados europeos.", "tags": ["Fintech", "P2P", "Cumplimiento", "SEPA"] },
+      "domify": { "desc": "Plataforma inmobiliaria inteligente con valoración IA y gestión de alquiler para el mercado suizo y europeo.", "tags": ["Proptech", "IA", "Inmobiliario", "CH/EU"] },
+      "fleetori": { "desc": "Solución de gestión de flotas y logística de próxima generación para empresas de movilidad urbana.", "tags": ["Logística", "Fleet", "B2B", "Movilidad"] }
+    },
+    "philosophy": { "label": "Nuestra filosofía", "title": "Propietario. Soberano. Duradero.", "desc": "No construimos MVPs. No vendemos participaciones minoritarias a VCs. Cada activo Aegryn está diseñado para ser totalmente propio y operado soberanamente." },
+    "pillars": { "proprietary": { "stat": "100%", "label": "Propiedad" }, "sovereign": { "stat": "CH", "label": "Soberanía" }, "durable": { "stat": "∞", "label": "Durabilidad" } },
+    "advisoryCta": { "text": "¿Tu empresa necesita protección digital de nivel institucional?", "button": "Descubrir Advisory" }
+  },
+  "about": {
+    "hero": { "label": "Sobre Aegryn", "title": "Un builder, no un consultor.", "desc": "Aegryn es un Swiss Tech Asset Builder. Diseñamos, financiamos y operamos activos digitales propietarios desde Suiza." },
+    "mission": { "label": "Nuestra misión", "title": "Construir lo que resiste el paso del tiempo.", "p1": "Aegryn no vende proyectos. Construimos activos. Cada producto que lanzamos está diseñado para durar, generar valor a largo plazo y resistir los ciclos económicos.", "p2": "Nuestro modelo se basa en la propiedad total de nuestros activos digitales, operados en un entorno soberano.", "p3": "Suiza no es solo una dirección. Es nuestro estándar: neutralidad, precisión, durabilidad." },
+    "values": {
+      "precision": { "label": "01", "title": "Precisión", "desc": "Cada decisión está documentada, medida y trazable." },
+      "durability": { "label": "02", "title": "Durabilidad", "desc": "Construimos para el largo plazo, no para la próxima ronda de financiación." },
+      "sovereignty": { "label": "03", "title": "Soberanía", "desc": "Nuestros activos, nuestra infraestructura, nuestros datos. Sin dependencias externas críticas." },
+      "transparency": { "label": "04", "title": "Transparencia", "desc": "Hacia nuestros socios, usuarios y el mercado." }
+    },
+    "founder": { "label": "El fundador", "bio1": "Yohann Bollack es emprendedor, builder y estratega digital. Fundó Aegryn con una convicción simple: los mejores activos digitales nacen del dominio total de la cadena, de la idea a la infraestructura.", "bio2": "Apasionado por la intersección entre tecnología, seguridad y diseño, lidera un ecosistema de seis productos.", "cta": "Ponerse en contacto" },
+    "swiss": { "title": "Seis activos. Una casa común. Una ambición helvética.", "cta": "Ver nuestros activos" }
+  },
+  "contact": {
+    "hero": { "title": "Hablemos.", "desc": "Advisory, asociación, prensa o consulta general — respondemos en 24h." },
+    "responseTime": { "label": "Tiempo de respuesta", "value": "En 24 horas" },
+    "form": {
+      "name": "Nombre completo", "email": "Correo electrónico", "company": "Empresa (opcional)",
+      "subject": "Asunto", "subjectPlaceholder": "Elegir un asunto",
+      "subjects": { "advisory": "Advisory & Ciberseguridad", "partnership": "Asociación", "press": "Prensa & Medios", "other": "Otro" },
+      "message": "Mensaje", "messagePlaceholder": "Describe tu solicitud...",
+      "submit": "Enviar", "sending": "Enviando...", "error": "Ocurrió un error. Inténtalo de nuevo o escríbenos directamente.",
+      "success": { "title": "Mensaje recibido.", "desc": "Te responderemos en 24 horas." }
+    }
+  },
+  "stats": {
+    "assets": "activos",
+    "languages": "idiomas",
+    "base": "Base Suiza"
+  },
+  "footer": {
+    "legal": "© 2026 Aegryn Sàrl — Todos los derechos reservados",
+    "company": "An Aegryn company",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "tagline": "Engineered to Last"
+  }
+}
