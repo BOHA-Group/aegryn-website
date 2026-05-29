@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { ArrowUpRight }       from 'lucide-react'
-import { gsap, ScrollTrigger } from '@/lib/gsap'
+import { gsap } from '@/lib/gsap'
 import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
 import type { Asset } from '@/data/assets'
 

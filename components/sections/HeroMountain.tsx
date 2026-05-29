@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import Image                  from 'next/image'
-import { gsap, ScrollTrigger, SplitText } from '@/lib/gsap'
+import { gsap, SplitText } from '@/lib/gsap'
 
 export function HeroMountain() {
   const sectionRef = useRef<HTMLElement>(null)
