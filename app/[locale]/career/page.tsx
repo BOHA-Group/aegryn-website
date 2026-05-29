@@ -68,7 +68,7 @@ export default async function CareerPage({ params }: Props) {
       {/* Hero */}
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
-          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-6">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-6">
             Aegryn Advisory & Careers
           </p>
           <h1
@@ -88,10 +88,10 @@ export default async function CareerPage({ params }: Props) {
       <section className="border-b border-ag-border py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between border-b border-ag-border py-4 mb-0">
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
               Postes ouverts
             </p>
-            <p className="font-mono text-[10px] text-ag-gray-light">
+            <p className="font-sans font-semibold text-[10px] text-ag-gray-light">
               {String(OPEN_POSITIONS.length).padStart(2, '0')}
             </p>
           </div>
@@ -102,7 +102,7 @@ export default async function CareerPage({ params }: Props) {
               className="group flex items-center justify-between border-b border-ag-border py-6 hover:bg-ag-off-white transition-colors px-0 -mx-0 cursor-default"
             >
               <div className="flex items-start gap-6">
-                <span className="font-mono text-[10px] text-ag-gray-light w-6 shrink-0 pt-0.5">
+                <span className="font-sans font-semibold text-[10px] text-ag-gray-light w-6 shrink-0 pt-0.5">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <div>
@@ -112,12 +112,12 @@ export default async function CareerPage({ params }: Props) {
                   >
                     {pos.title}
                   </p>
-                  <p className="font-mono text-[10px] text-ag-gray-light mt-1">
+                  <p className="font-sans font-semibold text-[10px] text-ag-gray-light mt-1">
                     {pos.domain}
                   </p>
                 </div>
               </div>
-              <span className="shrink-0 font-mono text-[10px] tracking-[0.12em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light ml-6">
+              <span className="shrink-0 font-sans font-semibold text-[10px] tracking-[0.12em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light ml-6">
                 {pos.type}
               </span>
             </div>
@@ -126,14 +126,14 @@ export default async function CareerPage({ params }: Props) {
           <div className="mt-12 flex items-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 bg-ag-black text-white font-mono text-[11px] tracking-[0.16em] uppercase px-6 py-3.5 hover:bg-ag-navy transition-colors"
+              className="inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-6 py-3.5 hover:bg-ag-navy transition-colors"
             >
               Postuler
               <ArrowUpRight size={14} />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase border border-ag-border px-6 py-3.5 text-ag-dark hover:border-ag-black hover:text-ag-black transition-all"
+              className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase border border-ag-border px-6 py-3.5 text-ag-dark hover:border-ag-black hover:text-ag-black transition-all"
             >
               Candidature spontanée
               <ArrowUpRight size={14} />
@@ -146,7 +146,7 @@ export default async function CareerPage({ params }: Props) {
       <section className="bg-ag-navy py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
-            <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/40 mb-4">
+            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/40 mb-4">
               Aegryn Advisory
             </p>
             <h2
@@ -158,7 +158,7 @@ export default async function CareerPage({ params }: Props) {
           </div>
           <Link
             href="/advisory"
-            className="shrink-0 inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
+            className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
           >
             Découvrir l&apos;Advisory
             <ArrowUpRight size={14} />

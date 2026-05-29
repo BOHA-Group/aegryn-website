@@ -61,7 +61,7 @@ export default function AdvisoryPage() {
       {/* Hero */}
       <section className="border-b border-ag-border bg-ag-navy overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 md:px-12 py-32">
-          <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             Aegryn Advisory
           </p>
           <h1
@@ -75,13 +75,13 @@ export default function AdvisoryPage() {
             <br /><br />
             We don&apos;t rely on theory, trends or recycled frameworks. We provide clear, direct and execution-grounded strategic direction across Data, AI and Cybersecurity — focused on impact, resilience and long-term value.
           </p>
-          <p className="font-mono text-[13px] text-white/40 leading-relaxed max-w-xl mb-10 border-l-2 border-ag-apex/40 pl-5">
+          <p className="font-sans font-semibold text-[13px] text-white/40 leading-relaxed max-w-xl mb-10 border-l-2 border-ag-apex/40 pl-5">
             No endless slides. No generic playbooks.<br />
             Only standards that have been tested in real environments.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 bg-white text-ag-navy font-mono text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex transition-colors"
+            className="inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex transition-colors"
           >
             Book a session <ArrowUpRight size={14} />
           </Link>
@@ -92,7 +92,7 @@ export default function AdvisoryPage() {
       <section className="border-b border-ag-border bg-ag-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex items-center border-b border-ag-border py-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / Why Advisory?
             </p>
           </div>
@@ -121,14 +121,14 @@ export default function AdvisoryPage() {
       <section className="border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex items-center border-b border-ag-border py-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / Who is Advisory for?
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border">
             {WHO_FOR.map((item, i) => (
               <div key={item.title} className="py-14 md:px-10 first:pl-0 last:pr-0">
-                <p className="font-mono text-[10px] tracking-[0.2em] text-ag-gray-light mb-6">
+                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-gray-light mb-6">
                   {String(i + 1).padStart(2, '0')}
                 </p>
                 <h2
@@ -150,10 +150,10 @@ export default function AdvisoryPage() {
       <section className="border-b border-ag-border bg-ag-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
           <div className="flex items-center justify-between mb-12">
-            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / Our Experts
             </p>
-            <p className="font-mono text-[10px] text-ag-gray-light">
+            <p className="font-sans font-semibold text-[10px] text-ag-gray-light">
               {String(TEAM.length).padStart(2, '0')} Senior Advisors
             </p>
           </div>
@@ -164,23 +164,23 @@ export default function AdvisoryPage() {
                 className="flex items-center justify-between py-5 hover:bg-ag-off-white transition-colors group"
               >
                 <div className="flex items-start gap-6">
-                  <span className="font-mono text-[10px] text-ag-gray-light w-6 shrink-0 pt-0.5">
+                  <span className="font-sans font-semibold text-[10px] text-ag-gray-light w-6 shrink-0 pt-0.5">
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <div>
                     <p className="font-display font-black text-ag-black text-[16px] tracking-[-0.02em] group-hover:text-ag-navy transition-colors">
                       {member.name}
                     </p>
-                    <p className="font-mono text-[11px] text-ag-gray-light mt-0.5">
+                    <p className="font-sans font-semibold text-[11px] text-ag-gray-light mt-0.5">
                       {member.domain}
                     </p>
                   </div>
                 </div>
                 <div className="hidden sm:flex items-center gap-4 shrink-0 ml-6">
-                  <span className="font-mono text-[10px] tracking-[0.12em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light">
+                  <span className="font-sans font-semibold text-[10px] tracking-[0.12em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light">
                     {member.area}
                   </span>
-                  <span className="font-mono text-[10px] text-ag-gray-light">
+                  <span className="font-sans font-semibold text-[10px] text-ag-gray-light">
                     {member.langs}
                   </span>
                 </div>
@@ -194,7 +194,7 @@ export default function AdvisoryPage() {
       <section className="border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
           <div className="flex items-center justify-between mb-12">
-            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / Our areas of intervention
             </p>
           </div>
@@ -220,7 +220,7 @@ export default function AdvisoryPage() {
       <section className="bg-ag-navy py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
-            <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/40 mb-4">
+            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/40 mb-4">
               / Approach
             </p>
             <h2
@@ -235,7 +235,7 @@ export default function AdvisoryPage() {
           </div>
           <Link
             href="/contact"
-            className="shrink-0 inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3.5 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
+            className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3.5 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
           >
             Book a session <ArrowUpRight size={14} />
           </Link>

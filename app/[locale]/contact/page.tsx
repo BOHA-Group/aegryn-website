@@ -24,7 +24,7 @@ export default async function ContactPage({ params }: Props) {
       {/* Hero */}
       <section className="border-b border-ag-border">
         <div className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-ag-apex mb-6">
+          <p className="font-sans font-semibold text-xs uppercase tracking-[0.3em] text-ag-apex mb-6">
             Contact
           </p>
           <h1 className="font-display text-6xl font-black tracking-tighter text-ag-black sm:text-7xl max-w-xl">
@@ -42,13 +42,13 @@ export default async function ContactPage({ params }: Props) {
           {/* Info column */}
           <div className="space-y-10">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
                 Base
               </p>
               <p className="text-sm text-ag-gray">Suisse</p>
             </div>
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
                 Email
               </p>
               <a
@@ -59,7 +59,7 @@ export default async function ContactPage({ params }: Props) {
               </a>
             </div>
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
                 LinkedIn
               </p>
               <a
@@ -72,7 +72,7 @@ export default async function ContactPage({ params }: Props) {
               </a>
             </div>
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
                 {t('responseTime.label')}
               </p>
               <p className="text-sm text-ag-gray">{t('responseTime.value')}</p>

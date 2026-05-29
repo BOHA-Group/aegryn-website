@@ -33,7 +33,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
       {/* Hero */}
       <section className="border-b border-ag-border">
         <div className="mx-auto max-w-7xl px-6 md:px-12 py-28">
-          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-6">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-6">
             {t('hero.label')}
           </p>
           <h1
@@ -60,7 +60,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ag-white/60" />
         <div className="absolute bottom-0 left-0 right-0 max-w-7xl mx-auto px-6 md:px-12 pb-10">
-          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70">
+          <p className="font-sans font-semibold text-[10px] tracking-[0.24em] uppercase text-white/70">
             Engineered to Last — Swiss Tech Asset Builder
           </p>
         </div>
@@ -79,7 +79,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
                   <span className="font-display font-bold text-[11px] tracking-[0.18em] uppercase text-ag-black">
                     {ASSET_CATEGORIES[cat].label}
                   </span>
-                  <span className="font-mono text-[11px] text-ag-gray-light">
+                  <span className="font-sans font-semibold text-[11px] text-ag-gray-light">
                     {String(catAssets.length).padStart(2, '0')}
                   </span>
                 </div>
@@ -97,7 +97,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
                         className="group flex flex-col border-r border-ag-border p-10 min-h-[260px] bg-ag-white hover:bg-ag-off-white transition-colors last:border-r-0"
                       >
                         <div className="flex justify-between items-start mb-auto">
-                          <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-2.5 py-1 group-hover:border-ag-border-h transition-colors">
+                          <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-2.5 py-1 group-hover:border-ag-border-h transition-colors">
                             {asset.badge}
                           </span>
                           <span className="w-8 h-8 border border-ag-border flex items-center justify-center text-ag-gray group-hover:bg-ag-black group-hover:border-ag-black group-hover:text-white transition-all">
@@ -108,7 +108,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
                           <h2 className="font-display font-black text-ag-black text-[24px] tracking-[-0.03em] leading-none mb-2">
                             {asset.name}
                           </h2>
-                          <p className="font-mono text-[12px] text-ag-gray leading-relaxed mb-4">
+                          <p className="font-sans font-semibold text-[12px] text-ag-gray leading-relaxed mb-4">
                             {asset.tagline}
                           </p>
                           <p className="text-[13px] text-ag-gray leading-relaxed mb-5">
@@ -116,7 +116,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
                           </p>
                           <div className="flex items-center gap-2">
                             <span className={`w-1.5 h-1.5 rounded-full ${status.dot}`} />
-                            <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
+                            <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
                               {status.label}
                             </span>
                           </div>
@@ -135,7 +135,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
       <section className="border-t border-ag-border bg-ag-navy py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
           <div>
-            <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/40 mb-3">
+            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/40 mb-3">
               Aegryn Advisory
             </p>
             <h2 className="font-display font-black text-white tracking-[-0.03em] leading-[0.95] max-w-lg"
@@ -146,7 +146,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
           </div>
           <Link
             href="/advisory"
-            className="shrink-0 inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
+            className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
           >
             {t('advisoryCta.button')}
             <ArrowUpRight size={14} />

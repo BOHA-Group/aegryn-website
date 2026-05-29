@@ -32,7 +32,7 @@ export default function LanguageSwitcher() {
         value={locale}
         onChange={handleChange}
         aria-label="Sélectionner la langue"
-        className="bg-transparent font-mono text-[11px] uppercase tracking-[0.12em] text-ag-gray cursor-pointer hover:text-ag-black transition-colors appearance-none pr-1 focus:outline-none"
+        className="bg-transparent font-sans font-semibold text-[11px] uppercase tracking-[0.12em] text-ag-gray cursor-pointer hover:text-ag-black transition-colors appearance-none pr-1 focus:outline-none"
       >
         {locales.map(({ code, label }) => (
           <option key={code} value={code} className="bg-white text-ag-dark">

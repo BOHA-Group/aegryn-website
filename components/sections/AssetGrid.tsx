@@ -35,7 +35,7 @@ export function AssetGrid() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         <div className="mb-20">
-          <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-gray-light mb-4">
+          <p className="font-sans font-semibold text-[11px] tracking-[0.2em] uppercase text-ag-gray-light mb-4">
             Notre écosystème
           </p>
           <h2
@@ -57,7 +57,7 @@ export function AssetGrid() {
                   <span className="font-display font-bold text-[11px] tracking-[0.18em] uppercase text-ag-black">
                     {ASSET_CATEGORIES[cat].label}
                   </span>
-                  <span className="font-mono text-[11px] text-ag-gray-light">
+                  <span className="font-sans font-semibold text-[11px] text-ag-gray-light">
                     {String(catAssets.length).padStart(2, '0')}
                   </span>
                 </div>
@@ -107,7 +107,7 @@ function AssetTile({ asset }: { asset: Asset }) {
       onMouseLeave={onLeave}
     >
       <div className="flex justify-between items-start mb-auto">
-        <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-2.5 py-1 group-hover:border-ag-border-h group-hover:text-ag-gray transition-all duration-200">
+        <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-2.5 py-1 group-hover:border-ag-border-h group-hover:text-ag-gray transition-all duration-200">
           {asset.badge}
         </span>
         <span className="w-8 h-8 border border-ag-border flex items-center justify-center text-ag-gray group-hover:border-ag-black group-hover:bg-ag-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
@@ -122,12 +122,12 @@ function AssetTile({ asset }: { asset: Asset }) {
         >
           {asset.name}
         </h3>
-        <p className="font-mono text-[12px] text-ag-gray leading-relaxed">
+        <p className="font-sans font-semibold text-[12px] text-ag-gray leading-relaxed">
           {asset.tagline}
         </p>
         <div className="flex items-center gap-2 mt-5">
           <span className={`w-1.5 h-1.5 rounded-full ${status.dot} ${status.pulse ? 'animate-pulse' : ''}`} />
-          <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
+          <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
             {status.label}
           </span>
         </div>

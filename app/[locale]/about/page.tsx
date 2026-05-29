@@ -33,7 +33,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="border-b border-ag-border">
         <div className="mx-auto max-w-7xl px-6 md:px-12 py-32">
-          <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
             {t('hero.label')}
           </p>
           <h1
@@ -53,7 +53,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 md:px-12">
           <div className="grid md:grid-cols-[280px_1fr_360px] divide-y md:divide-y-0 md:divide-x divide-ag-border">
             <div className="py-16 md:pr-16 flex items-start">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
                 / {t('vision.label')}
               </p>
             </div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
       <section className="border-b border-ag-border">
         <div className="mx-auto max-w-7xl px-6 md:px-12 py-4">
           <div className="flex items-center justify-between border-b border-ag-border py-4 mb-0">
-            <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+            <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / {t('mission.label')}
             </span>
             <span className="font-display font-black text-ag-black tracking-[-0.02em] text-[13px]">
@@ -87,7 +87,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border">
             {missionPillars.map((key, i) => (
               <div key={key} className="py-14 md:px-10 first:pl-0 last:pr-0">
-                <p className="font-mono text-[10px] tracking-[0.2em] text-ag-gray-light mb-6">
+                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-gray-light mb-6">
                   {String(i + 1).padStart(2, '0')}
                 </p>
                 <h2
@@ -108,13 +108,13 @@ export default function AboutPage() {
       {/* DNA — values grid */}
       <section className="border-b border-ag-border bg-ag-off-white">
         <div className="mx-auto max-w-7xl px-6 md:px-12 py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-12">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-12">
             / Notre ADN
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border">
             {values.map((v) => (
               <div key={v} className="bg-ag-off-white p-8 hover:bg-ag-white transition-colors">
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex mb-4">
+                <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex mb-4">
                   {t(`values.${v}.label`)}
                 </p>
                 <p className="font-display font-black text-ag-black text-[18px] tracking-[-0.02em] leading-none mb-3">
@@ -132,7 +132,7 @@ export default function AboutPage() {
       {/* Founder */}
       <section className="border-b border-ag-border">
         <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-14">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-14">
             / {t('founder.label')}
           </p>
           <div className="grid gap-14 lg:grid-cols-[200px_1fr] lg:items-start">
@@ -146,7 +146,7 @@ export default function AboutPage() {
               >
                 Yohann Bollack
               </h2>
-              <p className="font-mono text-[11px] text-ag-apex uppercase tracking-[0.22em] mb-8">
+              <p className="font-sans font-semibold text-[11px] text-ag-apex uppercase tracking-[0.22em] mb-8">
                 Founder & CEO — Aegryn
               </p>
               <div className="space-y-4 text-[15px] text-ag-gray leading-relaxed max-w-2xl">
@@ -158,13 +158,13 @@ export default function AboutPage() {
                   href="https://www.linkedin.com/in/yohannbollack"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border border-ag-border px-5 py-2.5 font-mono text-[11px] tracking-[0.14em] uppercase text-ag-gray hover:border-ag-black hover:text-ag-black transition-all"
+                  className="inline-flex items-center gap-2 border border-ag-border px-5 py-2.5 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-gray hover:border-ag-black hover:text-ag-black transition-all"
                 >
                   LinkedIn <ArrowUpRight size={12} />
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 border border-ag-apex/40 px-5 py-2.5 font-mono text-[11px] tracking-[0.14em] uppercase text-ag-apex hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+                  className="inline-flex items-center gap-2 border border-ag-apex/40 px-5 py-2.5 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-apex hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
                 >
                   {t('founder.cta')} <ArrowUpRight size={12} />
                 </Link>
@@ -178,7 +178,7 @@ export default function AboutPage() {
       <section className="bg-ag-navy py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
           <div>
-            <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/40 mb-4">
+            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/40 mb-4">
               Aegryn Group
             </p>
             <h2
@@ -190,7 +190,7 @@ export default function AboutPage() {
           </div>
           <Link
             href="/what-we-build"
-            className="shrink-0 inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
+            className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
           >
             {t('swiss.cta')} <ArrowUpRight size={14} />
           </Link>

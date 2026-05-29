@@ -71,7 +71,7 @@ export function HeroMountain() {
       <div className="absolute bottom-16 left-0 right-0 z-10 max-w-7xl mx-auto px-6 md:px-12">
         <p
           ref={labelRef}
-          className="font-mono text-[11px] tracking-[0.25em] uppercase text-white/60 mb-5 flex items-center gap-3"
+          className="font-sans font-semibold text-[11px] tracking-[0.25em] uppercase text-white/60 mb-5 flex items-center gap-3"
         >
           <span className="w-8 h-px bg-white/40 inline-block" />
           Swiss Tech Asset Builder
@@ -88,7 +88,7 @@ export function HeroMountain() {
 
         <p
           ref={subtitleRef}
-          className="font-mono text-[13px] text-white/55 leading-relaxed mt-6 max-w-sm"
+          className="font-sans font-semibold text-[13px] text-white/55 leading-relaxed mt-6 max-w-sm"
         >
           We develop proprietary digital ecosystems<br />
           engineered for endurance and scale.
@@ -99,7 +99,7 @@ export function HeroMountain() {
       <div className="absolute bottom-8 right-12 z-10 flex flex-col items-center gap-3">
         <div className="w-px h-12 bg-white/25" />
         <span
-          className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/30"
+          className="font-sans font-semibold text-[9px] tracking-[0.22em] uppercase text-white/30"
           style={{ writingMode: 'vertical-rl' }}
         >
           Scroll

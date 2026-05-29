@@ -34,7 +34,7 @@ export default function Nav() {
             <Link
               key={key}
               href={href}
-              className="font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors duration-200"
+              className="font-sans font-semibold text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors duration-200"
             >
               {t(key)}
             </Link>
@@ -46,7 +46,7 @@ export default function Nav() {
           <LanguageSwitcher />
           <Link
             href="/contact"
-            className="font-mono text-[11px] tracking-[0.14em] uppercase border border-ag-border px-4 py-2 text-ag-dark hover:border-ag-black hover:text-ag-black transition-all duration-200"
+            className="font-sans font-semibold text-[11px] tracking-[0.14em] uppercase border border-ag-border px-4 py-2 text-ag-dark hover:border-ag-black hover:text-ag-black transition-all duration-200"
           >
             Contact
           </Link>
@@ -71,7 +71,7 @@ export default function Nav() {
               <Link
                 key={key}
                 href={href}
-                className="font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors"
+                className="font-sans font-semibold text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors"
                 onClick={() => setOpen(false)}
               >
                 {t(key)}
@@ -79,7 +79,7 @@ export default function Nav() {
             ))}
             <Link
               href="/contact"
-              className="font-mono text-[11px] tracking-[0.14em] uppercase border border-ag-border px-4 py-2.5 text-ag-dark text-center hover:border-ag-black transition-all"
+              className="font-sans font-semibold text-[11px] tracking-[0.14em] uppercase border border-ag-border px-4 py-2.5 text-ag-dark text-center hover:border-ag-black transition-all"
               onClick={() => setOpen(false)}
             >
               Contact

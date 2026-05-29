@@ -16,7 +16,7 @@ export default function CookieBanner() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div className="flex-1 min-w-0">
-          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">
             Aegryn — Cookies & Analytics
           </p>
           <p className="text-[13px] text-ag-gray leading-relaxed max-w-2xl">
@@ -35,13 +35,13 @@ export default function CookieBanner() {
         <div className="flex items-center gap-3 shrink-0">
           <button
             onClick={refuse}
-            className="font-mono text-[11px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-4 py-2.5 hover:border-ag-border-h hover:text-ag-dark transition-all"
+            className="font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-4 py-2.5 hover:border-ag-border-h hover:text-ag-dark transition-all"
           >
             Refuser
           </button>
           <button
             onClick={accept}
-            className="font-mono text-[11px] tracking-[0.14em] uppercase text-white bg-ag-black px-5 py-2.5 hover:bg-ag-navy transition-colors"
+            className="font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-white bg-ag-black px-5 py-2.5 hover:bg-ag-navy transition-colors"
           >
             Accepter
           </button>

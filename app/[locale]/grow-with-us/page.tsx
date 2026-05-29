@@ -62,7 +62,7 @@ export default async function GrowWithUsPage({ params }: Props) {
       {/* Hero */}
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
-          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-6">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-6">
             Partenariats Stratégiques & Investissement
           </p>
           <h1
@@ -77,7 +77,7 @@ export default async function GrowWithUsPage({ params }: Props) {
           </p>
           <Link
             href="/contact"
-            className="mt-10 inline-flex items-center gap-3 bg-ag-black text-white font-mono text-[11px] tracking-[0.16em] uppercase px-6 py-3.5 hover:bg-ag-navy transition-colors"
+            className="mt-10 inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-6 py-3.5 hover:bg-ag-navy transition-colors"
           >
             Contact us
             <ArrowUpRight size={14} />
@@ -89,7 +89,7 @@ export default async function GrowWithUsPage({ params }: Props) {
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between border-b border-ag-border py-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
               / Investors
             </p>
             <p className="font-display font-black text-ag-black text-[13px] tracking-[-0.02em]">
@@ -99,7 +99,7 @@ export default async function GrowWithUsPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y divide-ag-border">
             {INVESTOR_WHY.map((item) => (
               <div key={item.num} className="py-14 md:px-10 first:pl-0 last:pr-0">
-                <p className="font-mono text-[10px] tracking-[0.2em] text-ag-gray-light mb-6">
+                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-gray-light mb-6">
                   {item.num}
                 </p>
                 <h2
@@ -121,7 +121,7 @@ export default async function GrowWithUsPage({ params }: Props) {
       <section className="border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
           <div className="flex items-center justify-between mb-12">
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
               / Partners
             </p>
             <p className="font-display font-black text-ag-black text-[13px] tracking-[-0.02em]">
@@ -150,7 +150,7 @@ export default async function GrowWithUsPage({ params }: Props) {
       <section className="bg-ag-navy py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
-            <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/40 mb-4">
+            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/40 mb-4">
               Aegryn Group
             </p>
             <h2
@@ -162,7 +162,7 @@ export default async function GrowWithUsPage({ params }: Props) {
           </div>
           <Link
             href="/contact"
-            className="shrink-0 inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
+            className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
           >
             Contact us
             <ArrowUpRight size={14} />

@@ -71,7 +71,7 @@ export function ManifestoSection() {
           <div className="flex items-center justify-between border-b border-ag-border py-4">
             <Link
               href="/advisory"
-              className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light hover:text-ag-black transition-colors"
+              className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light hover:text-ag-black transition-colors"
             >
               / What we do
             </Link>
@@ -79,7 +79,7 @@ export function ManifestoSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-ag-border">
             {WHAT_WE_DO.map((item) => (
               <div key={item.num} className="what-col py-12 lg:px-8 first:pl-0 last:pr-0">
-                <p className="font-mono text-[10px] tracking-[0.2em] text-ag-apex mb-5">
+                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-5">
                   {item.num}
                 </p>
                 <h3
@@ -102,7 +102,7 @@ export function ManifestoSection() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid md:grid-cols-[1fr_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
             <div className="py-20 md:pr-16">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
                 / About us
               </p>
               <h2
@@ -118,7 +118,7 @@ export function ManifestoSection() {
               </p>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all"
+                className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all"
               >
                 More About Us →
               </Link>
@@ -131,7 +131,7 @@ export function ManifestoSection() {
                 >
                   &ldquo;We develop proprietary digital ecosystems engineered for endurance and scale. Our advisory draws on real execution frameworks in Data, AI &amp; Security&rdquo;
                 </p>
-                <footer className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-gray-light">
+                <footer className="font-sans font-semibold text-[11px] tracking-[0.2em] uppercase text-ag-gray-light">
                   CEO — Aegryn Group
                 </footer>
               </blockquote>
@@ -144,7 +144,7 @@ export function ManifestoSection() {
       <section ref={missionRef} className="border-t border-ag-border bg-ag-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between border-b border-ag-border py-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / Our Mission
             </p>
             <p
@@ -156,7 +156,7 @@ export function ManifestoSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border">
             {MISSION_PILLARS.map((item, i) => (
               <div key={item.title} className="mission-col py-14 md:px-10 first:pl-0 last:pr-0">
-                <p className="font-mono text-[10px] tracking-[0.2em] text-ag-gray-light mb-6">
+                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-gray-light mb-6">
                   {String(i + 1).padStart(2, '0')}
                 </p>
                 <h3

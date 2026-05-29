@@ -34,7 +34,7 @@ export default function ContactForm({ locale }: Props) {
   if (status === 'sent') {
     return (
       <div className="flex flex-col items-start justify-center gap-4 rounded-2xl border border-ag-apex/30 bg-ag-apex/5 p-10">
-        <span className="font-mono text-2xl text-ag-apex">✓</span>
+        <span className="font-sans font-semibold text-2xl text-ag-apex">✓</span>
         <p className="font-display text-xl font-bold text-ag-dark">{t('success.title')}</p>
         <p className="text-sm text-ag-gray">{t('success.desc')}</p>
       </div>
@@ -45,7 +45,7 @@ export default function ContactForm({ locale }: Props) {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
+          <label htmlFor="name" className="mb-2 block font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
             {t('name')}
           </label>
           <input
@@ -58,7 +58,7 @@ export default function ContactForm({ locale }: Props) {
           />
         </div>
         <div>
-          <label htmlFor="email" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
+          <label htmlFor="email" className="mb-2 block font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
             {t('email')}
           </label>
           <input
@@ -73,7 +73,7 @@ export default function ContactForm({ locale }: Props) {
       </div>
 
       <div>
-        <label htmlFor="company" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
+        <label htmlFor="company" className="mb-2 block font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
           {t('company')}
         </label>
         <input
@@ -86,7 +86,7 @@ export default function ContactForm({ locale }: Props) {
       </div>
 
       <div>
-        <label htmlFor="subject" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
+        <label htmlFor="subject" className="mb-2 block font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
           {t('subject')}
         </label>
         <select
@@ -107,7 +107,7 @@ export default function ContactForm({ locale }: Props) {
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
+        <label htmlFor="message" className="mb-2 block font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
           {t('message')}
         </label>
         <textarea
@@ -121,7 +121,7 @@ export default function ContactForm({ locale }: Props) {
       </div>
 
       {status === 'error' && (
-        <p className="font-mono text-xs text-red-400">{t('error')}</p>
+        <p className="font-sans font-semibold text-xs text-red-400">{t('error')}</p>
       )}
 
       <button

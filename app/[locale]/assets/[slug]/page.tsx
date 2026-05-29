@@ -121,7 +121,7 @@ export default async function AssetPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-4">
           <Link
             href="/what-we-build"
-            className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.14em] uppercase text-ag-gray-light hover:text-ag-black transition-colors"
+            className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-gray-light hover:text-ag-black transition-colors"
           >
             <ArrowLeft size={12} />
             Nos actifs
@@ -133,15 +133,15 @@ export default async function AssetPage({ params }: Props) {
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-28">
           <div className="flex flex-wrap items-center gap-3 mb-10">
-            <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light border border-ag-border px-3 py-1">
+            <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light border border-ag-border px-3 py-1">
               {category.label}
             </span>
-            <span className="font-mono text-[10px] tracking-[0.2em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light">
+            <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light">
               {asset.badge}
             </span>
             <span className="flex items-center gap-1.5">
               <span className={`w-1.5 h-1.5 rounded-full ${status.dot}`} />
-              <span className={`font-mono text-[10px] tracking-[0.14em] uppercase ${status.text}`}>
+              <span className={`font-sans font-semibold text-[10px] tracking-[0.14em] uppercase ${status.text}`}>
                 {status.label}
               </span>
             </span>
@@ -153,7 +153,7 @@ export default async function AssetPage({ params }: Props) {
           >
             {asset.name}
           </h1>
-          <p className="font-mono text-[14px] text-ag-gray leading-relaxed max-w-xl mb-10">
+          <p className="font-sans font-semibold text-[14px] text-ag-gray leading-relaxed max-w-xl mb-10">
             {asset.tagline}
           </p>
 
@@ -162,13 +162,13 @@ export default async function AssetPage({ params }: Props) {
               href={asset.url!}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-ag-black text-white font-mono text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-navy transition-colors"
+              className="inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-navy transition-colors"
             >
               Visiter {asset.name}
               <ArrowUpRight size={14} />
             </a>
           ) : (
-            <span className="inline-flex items-center gap-3 border border-ag-border text-ag-gray-light font-mono text-[11px] tracking-[0.16em] uppercase px-7 py-4 cursor-default select-none">
+            <span className="inline-flex items-center gap-3 border border-ag-border text-ag-gray-light font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 cursor-default select-none">
               Bientôt disponible
             </span>
           )}
@@ -185,7 +185,7 @@ export default async function AssetPage({ params }: Props) {
 
             {/* Long description */}
             <div className="py-20 md:pr-16">
-              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
+              <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
                 Présentation
               </p>
               <p className="text-[15px] text-ag-dark leading-[1.8]">
@@ -193,7 +193,7 @@ export default async function AssetPage({ params }: Props) {
               </p>
               {details?.audience && (
                 <div className="mt-10 pt-8 border-t border-ag-border">
-                  <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
+                  <p className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
                     Public cible
                   </p>
                   <p className="text-[14px] text-ag-gray">{details.audience}</p>
@@ -203,7 +203,7 @@ export default async function AssetPage({ params }: Props) {
 
             {/* Features */}
             <div className="py-20 md:pl-16">
-              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
+              <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
                 Fonctionnalités
               </p>
               <ul className="space-y-4">
@@ -220,7 +220,7 @@ export default async function AssetPage({ params }: Props) {
               {details?.tech && (
                 <div className="mt-12 flex flex-wrap gap-2">
                   {details.tech.map((tag) => (
-                    <span key={tag} className="font-mono text-[10px] tracking-[0.12em] uppercase border border-ag-border px-3 py-1.5 text-ag-gray-light">
+                    <span key={tag} className="font-sans font-semibold text-[10px] tracking-[0.12em] uppercase border border-ag-border px-3 py-1.5 text-ag-gray-light">
                       {tag}
                     </span>
                   ))}
@@ -235,7 +235,7 @@ export default async function AssetPage({ params }: Props) {
       <section className="bg-ag-navy py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
-            <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/40 mb-4">
+            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/40 mb-4">
               Aegryn Group
             </p>
             <h2
@@ -248,14 +248,14 @@ export default async function AssetPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <Link
               href="/what-we-build"
-              className="inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
+              className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
             >
               Tous nos actifs
               <ArrowUpRight size={14} />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-ag-navy bg-ag-apex px-6 py-3 hover:bg-white transition-colors"
+              className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-navy bg-ag-apex px-6 py-3 hover:bg-white transition-colors"
             >
               Nous contacter
               <ArrowUpRight size={14} />
