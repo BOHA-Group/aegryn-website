@@ -16,25 +16,52 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-const VALUES = [
+const OPEN_POSITIONS = [
   {
-    label: 'Builders first',
-    desc: "Nous recrutons des gens qui font — pas qui délèguent. Chaque collaborateur est co-responsable d'un actif réel.",
+    title: 'Senior Advisor – Business Strategy',
+    domain: 'Business Strategy',
+    type: 'Advisory',
   },
   {
-    label: 'Long terme',
-    desc: "Pas de sprint culture. Pas de burn & churn. Nous construisons des actifs pour 10 ans, pas pour le prochain pitch.",
+    title: 'Senior Advisor – Backend & Application Security (Mobile & SaaS)',
+    domain: 'Cybersecurity',
+    type: 'Advisory',
   },
   {
-    label: 'Souveraineté',
-    desc: 'Vos décisions comptent. Notre structure plate garantit que les meilleures idées gagnent, quelle que soit leur origine.',
+    title: 'Senior Advisor – M&A, Fundraising & Capital Strategy',
+    domain: 'Finance',
+    type: 'Advisory — Exception Track',
+  },
+  {
+    title: 'Senior Advisor – Growth, Brand & Go-To-Market',
+    domain: 'Growth & Brand',
+    type: 'Advisory',
+  },
+  {
+    title: 'Senior Advisor – AI, Automation & Data Strategy',
+    domain: 'AI & Data',
+    type: 'Advisory',
+  },
+  {
+    title: 'Senior Advisor – Architecture & Digital Platforms',
+    domain: 'Architecture',
+    type: 'Advisory',
+  },
+  {
+    title: 'Senior Advisor – UX, Design & User Experience',
+    domain: 'UX & Design',
+    type: 'Advisory',
+  },
+  {
+    title: 'Senior Advisor – Product, Platform & Innovation (Mobile & SaaS)',
+    domain: 'Product',
+    type: 'Advisory',
   },
 ]
 
 export default async function CareerPage({ params }: Props) {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'nav' })
-  void t
+  const _t = await getTranslations({ locale, namespace: 'nav' })
 
   return (
     <>
@@ -42,58 +69,71 @@ export default async function CareerPage({ params }: Props) {
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
           <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-6">
-            Carrières
+            Aegryn Advisory & Careers
           </p>
           <h1
             className="font-display font-black text-ag-black tracking-[-0.03em] leading-[0.95] max-w-3xl"
             style={{ fontSize: 'clamp(48px,6vw,88px)' }}
           >
-            Construire ce qui<br />dure, ensemble.
+            Advisory & Digital Ecosystem Experts
           </h1>
-          <p className="mt-8 text-base text-ag-gray leading-relaxed max-w-lg">
-            Aegryn est un builder, pas une agence. Rejoindre l&apos;équipe, c&apos;est prendre une part
-            de responsabilité réelle sur des actifs propriétaires suisses.
+          <p className="mt-8 text-[15px] text-ag-gray leading-relaxed max-w-xl">
+            Aegryn recrute des Senior Advisors — des experts opérationnels en Data, IA et Cybersécurité
+            pour structurer des écosystèmes numériques durables.
           </p>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border">
-            {VALUES.map((v, i) => (
-              <div key={i} className="py-16 md:px-12 first:pl-0 last:pr-0">
-                <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-4">
-                  {String(i + 1).padStart(2, '0')}
-                </p>
-                <h2 className="font-display font-black text-ag-black text-[22px] tracking-[-0.03em] leading-none mb-3">
-                  {v.label}
-                </h2>
-                <p className="text-[14px] text-ag-gray leading-relaxed">
-                  {v.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Open positions — placeholder */}
+      {/* Open positions */}
       <section className="border-b border-ag-border py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-gray-light mb-12">
-            Postes ouverts
-          </p>
-          <div className="border border-ag-border p-12 text-center">
-            <p className="font-display font-black text-ag-black text-[20px] tracking-[-0.02em] mb-2">
-              Aucun poste ouvert pour le moment.
+          <div className="flex items-center justify-between border-b border-ag-border py-4 mb-0">
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
+              Postes ouverts
             </p>
-            <p className="text-[14px] text-ag-gray mb-8">
-              Mais nous cherchons toujours des profils exceptionnels. Envoyez-nous une candidature spontanée.
+            <p className="font-mono text-[10px] text-ag-gray-light">
+              {String(OPEN_POSITIONS.length).padStart(2, '0')}
             </p>
+          </div>
+
+          {OPEN_POSITIONS.map((pos, i) => (
+            <div
+              key={i}
+              className="group flex items-center justify-between border-b border-ag-border py-6 hover:bg-ag-off-white transition-colors px-0 -mx-0 cursor-default"
+            >
+              <div className="flex items-start gap-6">
+                <span className="font-mono text-[10px] text-ag-gray-light w-6 shrink-0 pt-0.5">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <div>
+                  <p
+                    className="font-display font-black text-ag-black tracking-[-0.02em] leading-tight group-hover:text-ag-navy transition-colors"
+                    style={{ fontSize: 'clamp(15px,1.4vw,18px)' }}
+                  >
+                    {pos.title}
+                  </p>
+                  <p className="font-mono text-[10px] text-ag-gray-light mt-1">
+                    {pos.domain}
+                  </p>
+                </div>
+              </div>
+              <span className="shrink-0 font-mono text-[10px] tracking-[0.12em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light ml-6">
+                {pos.type}
+              </span>
+            </div>
+          ))}
+
+          <div className="mt-12 flex items-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase border border-ag-border px-6 py-3 text-ag-dark hover:border-ag-black hover:text-ag-black transition-all"
+              className="inline-flex items-center gap-3 bg-ag-black text-white font-mono text-[11px] tracking-[0.16em] uppercase px-6 py-3.5 hover:bg-ag-navy transition-colors"
+            >
+              Postuler
+              <ArrowUpRight size={14} />
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase border border-ag-border px-6 py-3.5 text-ag-dark hover:border-ag-black hover:text-ag-black transition-all"
             >
               Candidature spontanée
               <ArrowUpRight size={14} />
@@ -103,22 +143,24 @@ export default async function CareerPage({ params }: Props) {
       </section>
 
       {/* Statement */}
-      <section className="bg-ag-navy py-32 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/40 mb-6">
-            Aegryn Group
-          </p>
-          <h2
-            className="font-display font-black text-white tracking-[-0.03em] leading-[0.95] max-w-2xl mb-10"
-            style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
-          >
-            Engineered to Last — et construits par des gens qui y croient.
-          </h2>
+      <section className="bg-ag-navy py-28 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
+          <div>
+            <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/40 mb-4">
+              Aegryn Advisory
+            </p>
+            <h2
+              className="font-display font-black text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
+              style={{ fontSize: 'clamp(26px,3vw,46px)' }}
+            >
+              Engineered to Last — construit par des experts qui y croient.
+            </h2>
+          </div>
           <Link
-            href="/contact"
-            className="inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
+            href="/advisory"
+            className="shrink-0 inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
           >
-            Nous écrire
+            Découvrir l&apos;Advisory
             <ArrowUpRight size={14} />
           </Link>
         </div>

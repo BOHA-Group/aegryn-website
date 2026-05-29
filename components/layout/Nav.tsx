@@ -8,9 +8,9 @@ import LanguageSwitcher from '@/components/layout/LanguageSwitcher'
 import { AegrynLogo }  from '@/components/brand/AegrynLogo'
 
 const navLinks = [
-  { key: 'whatWeBuild', href: '/what-we-build' },
-  { key: 'advisory',   href: '/advisory' },
   { key: 'about',      href: '/about' },
+  { key: 'advisory',   href: '/advisory' },
+  { key: 'whatWeBuild', href: '/what-we-build' },
   { key: 'growWithUs', href: '/grow-with-us' },
   { key: 'career',     href: '/career' },
 ] as const

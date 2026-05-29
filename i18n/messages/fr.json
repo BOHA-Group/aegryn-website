@@ -1,9 +1,9 @@
 {
   "nav": {
     "about": "À propos",
-    "whatWeBuild": "Ce que nous construisons",
+    "whatWeBuild": "Actifs",
     "advisory": "Advisory",
-    "growWithUs": "Grandir avec nous",
+    "growWithUs": "Alliances",
     "career": "Carrières",
     "contact": "Contact"
   },
@@ -110,15 +110,19 @@
   "about": {
     "hero": {
       "label": "À propos d'Aegryn",
-      "title": "Un builder, pas un consultant.",
-      "desc": "Aegryn est un Swiss Tech Asset Builder. Nous concevons, finançons et opérons des actifs numériques propriétaires depuis la Suisse."
+      "title": "Swiss Tech Asset Builder",
+      "desc": "Nous concevons, construisons et opérons des écosystèmes numériques — de l'idée audacieuse à une technologie fiable et durable. Ingénié en Suisse. Construit pour durer."
+    },
+    "vision": {
+      "label": "Notre vision",
+      "text": "Nous croyons que la technologie doit faire plus qu'impressionner. Elle doit structurer, simplifier et élever les expériences du quotidien. Dans un monde saturé d'applications fragmentées et de solutions court-termistes, nous construisons des écosystèmes numériques cohérents — des environnements où utilisateurs, données et transactions se connectent naturellement et de façon sécurisée."
     },
     "mission": {
       "label": "Notre mission",
-      "title": "Construire ce qui traverse le temps.",
-      "p1": "Aegryn ne vend pas des projets. Nous construisons des actifs. Chaque produit que nous lançons est conçu pour durer, générer de la valeur sur le long terme et résister aux cycles économiques.",
-      "p2": "Notre modèle repose sur la propriété totale de nos actifs numériques, opérés dans un environnement souverain avec une infrastructure maîtrisée de bout en bout.",
-      "p3": "La Suisse n'est pas qu'une adresse. C'est notre standard : neutralité, précision, durabilité."
+      "title": "Simplifier la vie avec des applications intelligentes.",
+      "create": { "title": "Nous créons", "desc": "Des solutions qui anticipent vos besoins en tant qu'individus ou professionnels, garantissant des interactions numériques fluides qui améliorent le quotidien." },
+      "simplify": { "title": "Nous simplifions", "desc": "Éliminer la complexité en intégrant une automatisation intelligente, des interfaces intuitives et des systèmes interconnectés, rendant la technologie sans effort et efficace." },
+      "embrace": { "title": "Nous embrassons", "desc": "Nous restons en avance en pionnier des innovations, en adoptant les avancées de pointe et en fixant de nouveaux standards dans les expériences numériques fluides." }
     },
     "values": {
       "precision": { "label": "01", "title": "Précision", "desc": "Chaque décision est documentée, mesurée et traçable." },
@@ -129,11 +133,11 @@
     "founder": {
       "label": "Le fondateur",
       "bio1": "Yohann Bollack est entrepreneur, builder et stratège numérique. Il fonde Aegryn avec une conviction simple : les meilleurs actifs numériques naissent d'une maîtrise totale de la chaîne, de l'idée à l'infrastructure.",
-      "bio2": "Passionné par l'intersection entre technologie, sécurité et design, il pilote un écosystème de six produits couvrant l'IA, l'immobilier, la logistique et les réseaux sociaux.",
+      "bio2": "Passionné par l'intersection entre technologie, sécurité et design, il pilote un écosystème de produits couvrant l'IA, l'immobilier, la logistique et les réseaux sociaux.",
       "cta": "Prendre contact"
     },
     "swiss": {
-      "title": "Six actifs. Une maison commune. Une ambition helvétique.",
+      "title": "Nos actifs. Une maison commune. Une ambition helvétique.",
       "cta": "Voir nos actifs"
     }
   },

@@ -64,7 +64,7 @@ html {
 body {
   background-color       : var(--ag-white);
   color                  : var(--ag-dark);
-  font-family            : var(--font-dm-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family            : var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x             : hidden;
 }
 

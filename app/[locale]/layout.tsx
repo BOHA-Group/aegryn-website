@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Unbounded, DM_Sans, DM_Mono } from 'next/font/google'
+import { Unbounded, DM_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
@@ -16,10 +17,20 @@ const unbounded = Unbounded({
   display: 'swap',
 })
 
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  variable: '--font-dm-sans',
+const overusedGrotesk = localFont({
+  src: [
+    {
+      path: '../../public/fonts/OverusedGrotesk-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/OverusedGrotesk-SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-body',
   display: 'swap',
 })
 
@@ -60,7 +71,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body
-        className={`${unbounded.variable} ${dmSans.variable} ${dmMono.variable} font-sans bg-ag-white text-ag-dark antialiased`}
+        className={`${unbounded.variable} ${overusedGrotesk.variable} ${dmMono.variable} font-sans bg-ag-white text-ag-dark antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           <LenisProvider>
