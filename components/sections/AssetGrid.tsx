@@ -83,19 +83,68 @@ export function AssetGrid() {
 
 function AssetTile({ asset }: { asset: Asset }) {
   const ref    = useRef<HTMLAnchorElement>(null)
+  const divRef = useRef<HTMLDivElement>(null)
   const status = STATUS_CONFIG[asset.status]
+  const isKryv = asset.id === 'kryv'
 
-  const onMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!ref.current) return
-    const r = ref.current.getBoundingClientRect()
+  const onMove = (e: React.MouseEvent) => {
+    const el = ref.current || divRef.current
+    if (!el) return
+    const r = el.getBoundingClientRect()
     const x = (e.clientX - r.left) / r.width - 0.5
     const y = (e.clientY - r.top) / r.height - 0.5
-    ref.current.style.transform =
-      `perspective(1000px) rotateY(${x * 3}deg) rotateX(${-y * 3}deg) translateY(-1px)`
+    el.style.transform = `perspective(1000px) rotateY(${x * 3}deg) rotateX(${-y * 3}deg) translateY(-1px)`
+  }
+  const onLeave = () => {
+    const el = ref.current || divRef.current
+    if (el) el.style.transform = ''
   }
 
-  const onLeave = (_e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (ref.current) ref.current.style.transform = ''
+  if (isKryv) {
+    return (
+      <div
+        ref={divRef}
+        className="asset-tile group relative flex flex-col border-r border-ag-border p-10 min-h-[260px] bg-ag-navy overflow-hidden will-change-transform last:border-r-0"
+        onMouseMove={onMove}
+        onMouseLeave={onLeave}
+      >
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{ background: 'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(90,221,164,0.08) 0%, transparent 70%)' }}
+        />
+        <div className="flex justify-between items-start mb-auto relative z-10">
+          <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-apex/60 border border-ag-apex/30 px-2.5 py-1">
+            CLASSIFIÉ
+          </span>
+          <span className="w-8 h-8 border border-white/20 flex items-center justify-center text-white/30">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </span>
+        </div>
+        <div className="mt-16 relative z-10">
+          <h3
+            className="font-display font-black text-white tracking-[-0.03em] leading-none mb-2"
+            style={{ fontSize: 'clamp(22px,2vw,28px)' }}
+          >
+            {asset.name}
+          </h3>
+          <p className="font-sans font-normal text-[12px] text-white/50 leading-relaxed mb-3">
+            {asset.tagline}
+          </p>
+          <p className="font-sans font-normal text-[11px] text-white/30 leading-relaxed mb-5">
+            Développement confidentiel — accès restreint.
+          </p>
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-ag-apex animate-pulse" />
+            <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-apex/60">
+              Restricted
+            </span>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -114,7 +163,6 @@ function AssetTile({ asset }: { asset: Asset }) {
           <ArrowUpRight size={13} />
         </span>
       </div>
-
       <div className="mt-16">
         <h3
           className="font-display font-black text-ag-black tracking-[-0.03em] leading-none mb-2"
@@ -122,7 +170,7 @@ function AssetTile({ asset }: { asset: Asset }) {
         >
           {asset.name}
         </h3>
-        <p className="font-sans font-semibold text-[12px] text-ag-gray leading-relaxed">
+        <p className="font-sans font-normal text-[12px] text-ag-gray leading-relaxed">
           {asset.tagline}
         </p>
         <div className="flex items-center gap-2 mt-5">

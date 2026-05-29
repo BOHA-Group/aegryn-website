@@ -12,7 +12,7 @@ const STATUS_CONFIG = {
   dev:   { label: 'Dev',   dot: 'bg-ag-dev',   pulse: false },
 } as const
 
-const VISIBLE = AEGRYN_ASSETS.filter((a) => a.id !== 'kryv')
+const VISIBLE = AEGRYN_ASSETS.slice()
 
 /**
  * Horizontal scroll-snap carousel for assets.
@@ -91,10 +91,61 @@ export function AssetCarousel() {
       <div
         ref={trackRef}
         className="flex md:flex-nowrap flex-wrap gap-0 will-change-transform"
-        style={{ width: `${VISIBLE.length * 340}px` }}
+        style={{ width: `${(VISIBLE.length + 1) * 340}px` }}
       >
         {VISIBLE.map((asset) => {
           const status = STATUS_CONFIG[asset.status]
+          const isKryv = asset.id === 'kryv'
+
+          if (isKryv) {
+            return (
+              <div
+                key={asset.id}
+                className="group relative flex flex-col shrink-0 border-r border-white/10 p-10 bg-ag-navy overflow-hidden"
+                style={{ width: '340px', minHeight: '420px' }}
+              >
+                <div
+                  className="pointer-events-none absolute inset-0"
+                  style={{
+                    background: 'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(90,221,164,0.08) 0%, transparent 70%)',
+                  }}
+                />
+                <div className="flex justify-between items-start mb-auto relative z-10">
+                  <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-apex/60 border border-ag-apex/30 px-2.5 py-1">
+                    CLASSIFIÉ
+                  </span>
+                  <span className="w-8 h-8 border border-white/20 flex items-center justify-center text-white/30">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                  </span>
+                </div>
+                <div className="mt-16 relative z-10">
+                  <h3
+                    className="font-display font-black text-white tracking-[-0.03em] leading-none mb-2"
+                    style={{ fontSize: 'clamp(22px,2vw,28px)' }}
+                  >
+                    {asset.name}
+                  </h3>
+                  <p className="font-sans font-normal text-[13px] text-white/50 leading-relaxed mb-3">
+                    {asset.tagline}
+                  </p>
+                  <p className="font-sans font-normal text-[12px] text-white/30 leading-relaxed mb-5">
+                    Protocole en développement confidentiel.
+                    <br />Accès restreint aux partenaires accrédités.
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-ag-apex animate-pulse" />
+                    <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-apex/60">
+                      Restricted
+                    </span>
+                  </div>
+                </div>
+              </div>
+            )
+          }
+
           return (
             <Link
               key={asset.id}
@@ -102,14 +153,12 @@ export function AssetCarousel() {
               className="group relative flex flex-col shrink-0 border-r border-ag-border p-10 bg-ag-white hover:bg-ag-off-white transition-colors duration-300 overflow-hidden"
               style={{ width: '340px', minHeight: '420px' }}
             >
-              {/* Radial glow on hover */}
               <div
                 className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{
                   background: 'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(90,221,164,0.07) 0%, transparent 70%)',
                 }}
               />
-
               <div className="flex justify-between items-start mb-auto relative z-10">
                 <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-2.5 py-1 group-hover:border-ag-apex group-hover:text-ag-apex transition-all duration-200">
                   {asset.badge}
@@ -118,7 +167,6 @@ export function AssetCarousel() {
                   <ArrowUpRight size={13} />
                 </span>
               </div>
-
               <div className="mt-16 relative z-10">
                 <h3
                   className="font-display font-black text-ag-black tracking-[-0.03em] leading-none mb-2"

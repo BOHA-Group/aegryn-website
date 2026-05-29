@@ -59,17 +59,17 @@ export function WhyUseApps() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 divide-y sm:divide-y-0 sm:divide-x divide-ag-border">
           {WHY_ITEMS.map((item) => (
-            <div key={item.num} className="why-col py-12 lg:px-6 first:pl-0 last:pr-0">
-              <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-5">
+            <div key={item.num} className="why-col py-14 lg:px-6 first:pl-0 last:pr-0">
+              <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-6">
                 {item.num}
               </p>
               <h3
-                className="font-sans font-semibold text-ag-black leading-tight mb-3"
-                style={{ fontSize: 'clamp(13px,1vw,15px)' }}
+                className="font-display font-black text-ag-black tracking-[-0.02em] leading-[1.1] mb-4"
+                style={{ fontSize: 'clamp(14px,1.15vw,16px)' }}
               >
                 {item.title}
               </h3>
-              <p className="font-sans font-normal text-[12px] text-ag-gray leading-relaxed">
+              <p className="font-sans font-normal text-[12px] text-ag-gray leading-[1.7]">
                 {item.desc}
               </p>
             </div>

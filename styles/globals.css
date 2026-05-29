@@ -74,21 +74,45 @@ html {
 body {
   background-color       : var(--ag-white);
   color                  : var(--ag-dark);
-  font-family            : var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight            : 400;        /* Body Text: Plus Jakarta Sans Regular */
+  font-family            : var(--font-body), 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight            : 400;
   font-size              : 16px;
   line-height            : 1.6;
   overflow-x             : hidden;
 }
 
-/* ── Typography hierarchy (Plus Jakarta Sans brand guidelines) */
-h1, h2                         { font-weight: 700; }   /* Header: Bold  */
-h3, h4                         { font-weight: 600; }   /* Sub-Header: SemiBold */
-h5, h6                         { font-weight: 600; }   /* Sub-Header: SemiBold */
-p, li, td, th                  { font-weight: 400; }   /* Body Text: Regular   */
-label, figcaption, caption     { font-weight: 600; }   /* Annotations: SemiBold */
-button, [type='button'],
-[type='submit'], [type='reset'] { font-weight: 600; }   /* Button: SemiBold     */
+/* ── Force Plus Jakarta Sans on every element — no exceptions */
+*, *::before, *::after {
+  font-family: inherit;
+}
+
+/* ── Typography hierarchy */
+h1, h2 {
+  font-family : var(--font-body), 'Plus Jakarta Sans', sans-serif;
+  font-weight : 700;
+}
+h3, h4, h5, h6 {
+  font-family : var(--font-body), 'Plus Jakarta Sans', sans-serif;
+  font-weight : 600;
+}
+p, li, td, th, span, a, div {
+  font-family : inherit;
+  font-weight : inherit;
+}
+label, figcaption, caption, small {
+  font-family : var(--font-body), 'Plus Jakarta Sans', sans-serif;
+  font-weight : 600;
+}
+button, input, select, textarea,
+[type='button'], [type='submit'], [type='reset'] {
+  font-family : var(--font-body), 'Plus Jakarta Sans', sans-serif;
+  font-weight : 600;
+}
+
+/* ── font-display class → Unbounded (grandes mises en page) */
+.font-display {
+  font-family : var(--font-unbounded), 'Unbounded', sans-serif !important;
+}
 
 /* ── Selection ────────────────────────────────────────── */
 ::selection {
