@@ -8,6 +8,8 @@ import { routing } from '@/i18n/routing'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import LenisProvider from '@/components/providers/LenisProvider'
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
+import CookieBanner from '@/components/analytics/CookieBanner'
 import '@/styles/globals.css'
 
 const unbounded = Unbounded({
@@ -86,6 +88,8 @@ export default async function LocaleLayout({ children, params }: Props) {
               {children}
             </main>
             <Footer />
+            <CookieBanner />
+            <GoogleAnalytics />
           </LenisProvider>
         </NextIntlClientProvider>
       </body>

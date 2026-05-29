@@ -34,3 +34,4 @@ jobs:
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           NEXT_PUBLIC_SITE_URL: https://aegryn.com
+          NEXT_PUBLIC_GA_ID: G-YW7XT6BLT6
