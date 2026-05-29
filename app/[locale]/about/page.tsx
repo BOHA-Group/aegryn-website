@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
+import { AegrynSceneClient } from '@/components/three/AegrynSceneClient'
 import type { Metadata } from 'next'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -9,8 +10,8 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
-    title: 'About',
-    description: 'We design, build and operate digital ecosystems — from bold ideas to reliable, enduring technology. Engineered in Switzerland. Built to last.',
+    title: 'About Aegryn | Structuring the Digital Economy',
+    description: 'Learn how we build and operate digital ecosystems and provide selective advisory in Data, AI and Cybersecurity across Europe.',
     path: '/about',
     locale,
   })
@@ -47,22 +48,26 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Vision */}
+      {/* Vision + 3D Logo */}
       <section className="border-b border-ag-border">
         <div className="mx-auto max-w-7xl px-6 md:px-12">
-          <div className="grid md:grid-cols-[280px_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
+          <div className="grid md:grid-cols-[280px_1fr_360px] divide-y md:divide-y-0 md:divide-x divide-ag-border">
             <div className="py-16 md:pr-16 flex items-start">
               <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
                 / {t('vision.label')}
               </p>
             </div>
-            <div className="py-16 md:pl-16">
+            <div className="py-16 md:px-16">
               <p
                 className="font-display font-black text-ag-black tracking-[-0.02em] leading-[1.15]"
                 style={{ fontSize: 'clamp(22px,2.5vw,32px)' }}
               >
                 {t('vision.text')}
               </p>
+            </div>
+            {/* 3D Logo R3F */}
+            <div className="py-8 md:pl-8 flex items-center justify-center" style={{ height: '320px' }}>
+              <AegrynSceneClient />
             </div>
           </div>
         </div>

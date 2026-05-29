@@ -11,8 +11,8 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
-    title: 'What We Build',
-    description: "Six actifs numériques propriétaires d'Aegryn — de l'IA aux services, de l'immobilier aux réseaux sociaux.",
+    title: 'What We Make | Digital Ecosystems by Aegryn',
+    description: 'Discover the proprietary digital ecosystems designed and operated by Aegryn, structured for scalability, resilience and long-term value.',
     path: '/what-we-build',
     locale,
   })

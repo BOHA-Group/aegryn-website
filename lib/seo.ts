@@ -16,7 +16,7 @@ export function generateAegrynMetadata({
   image?: string
 }): Metadata {
   const url = `${BASE_URL}/${locale}${path}`
-  const fullTitle = `${title} — Aegryn`
+  const fullTitle = title.includes('Aegryn') ? title : `${title} — Aegryn`
 
   return {
     title: fullTitle,
@@ -76,7 +76,13 @@ export const aegrynOrganizationSchema = {
     addressLocality: 'Suisse',
     addressCountry: 'CH',
   },
-  sameAs: ['https://www.linkedin.com/company/aegryn'],
+  sameAs: [
+    'https://www.linkedin.com/company/aegryn/',
+    'https://www.instagram.com/aegryn/',
+    'https://www.tiktok.com/@aegryn',
+    'https://www.youtube.com/@aegryn',
+    'https://www.facebook.com/aegryn',
+  ],
   founder: {
     '@type': 'Person',
     name: 'Yohann Bollack',

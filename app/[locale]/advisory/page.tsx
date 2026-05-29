@@ -8,8 +8,8 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
-    title: 'Advisory',
-    description: 'Strategic clarity. Operational depth. Structured guidance in Data, AI and Cybersecurity — grounded in real execution.',
+    title: 'Aegryn Advisory — Strategic Advisory Data, AI & Cybersecurity',
+    description: 'Strategic guidance in Data, AI and Cybersecurity. Built by operators. Delivered without noise.',
     path: '/advisory',
     locale,
   })
@@ -72,6 +72,8 @@ export default function AdvisoryPage() {
           </h1>
           <p className="text-[15px] text-white/60 leading-relaxed max-w-xl mb-10">
             At Aegryn Advisory, we work with founders, executives and organizations facing critical technology decisions. Our guidance is derived from how we design, build and secure our own digital ecosystems.
+            <br /><br />
+            We don&apos;t rely on theory, trends or recycled frameworks. We provide clear, direct and execution-grounded strategic direction across Data, AI and Cybersecurity — focused on impact, resilience and long-term value.
           </p>
           <p className="font-mono text-[13px] text-white/40 leading-relaxed max-w-xl mb-10 border-l-2 border-ag-apex/40 pl-5">
             No endless slides. No generic playbooks.<br />
@@ -100,7 +102,7 @@ export default function AdvisoryPage() {
                 Designing or scaling a digital ecosystem requires more than ambition. It requires architectural clarity, disciplined execution and long-term thinking.
               </p>
               <p className="text-[15px] text-ag-gray leading-relaxed">
-                Our perspective comes from building and operating our own digital ecosystems. We have navigated infrastructure trade-offs. We have secured real environments. We have scaled real systems.
+                Aegryn Advisory exists for leaders who need structured guidance in moments where Data, AI and Cybersecurity decisions define future resilience and growth. Our perspective comes from building and operating our own digital ecosystems. We have navigated infrastructure trade-offs. We have secured real environments. We have scaled real systems.
               </p>
             </div>
             <div className="py-16 md:pl-16">

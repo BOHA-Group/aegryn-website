@@ -5,7 +5,7 @@ export const AEGRYN_ASSETS = [
     id:          'subblink',
     name:        'Subblink',
     slug:        'subblink',
-    url:         'https://subblink.boha-group.com' as string | null,
+    url:         'https://subblink.app' as string | null,
     badge:       'B2B — SaaS',
     tagline:     'Analyse contractuelle par IA',
     description: "Analyse vos contrats en quelques secondes grâce à l'IA, calibrée pour le droit suisse et français. Pour freelances, consultants et PME.",

@@ -9,8 +9,8 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
-    title: 'Grow With Us',
-    description: "Rejoignez l'écosystème Aegryn — partenariats stratégiques, co-building et accès à notre réseau suisse.",
+    title: 'Grow With Us | Strategic Partnerships & Investment | Aegryn',
+    description: 'Partner with Aegryn to build and scale durable digital ecosystems across Switzerland and Europe. Long-term vision. Disciplined execution.',
     path: '/grow-with-us',
     locale,
   })
@@ -19,28 +19,38 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const INVESTOR_WHY = [
   {
     num: '01',
-    title: 'Fuel growth',
-    desc: "Participez activement à la croissance d'actifs numériques propriétaires avec un potentiel de rendement à long terme.",
+    title: 'High-growth market',
+    desc: 'We are positioned in the rapidly transforming and expanding digital ecosystem sector, opening up significant revenue opportunities.',
   },
   {
     num: '02',
-    title: 'Shape the future',
-    desc: "Contribuez à la direction stratégique d'un écosystème technologique suisse pensé pour durer des décennies.",
+    title: 'Proven expertise',
+    desc: 'Our team consists of top-tier developers, UX designers, and marketing strategists committed to delivering cutting-edge digital products.',
   },
   {
     num: '03',
-    title: 'Unlock new opportunities',
-    desc: "Accédez à un réseau exclusif de décideurs, fondateurs et partenaires technologiques en Suisse et en Europe.",
+    title: 'Next-gen technology',
+    desc: 'We integrate AI, machine learning and automation to craft future-proof solutions built for endurance and scale.',
+  },
+  {
+    num: '04',
+    title: 'Data-driven success',
+    desc: 'Our robust business model and financial strategies ensure long-term profitability and sustained innovation.',
+  },
+  {
+    num: '05',
+    title: 'Transparent & investor-focused',
+    desc: 'We provide clear, consistent updates on project progress, financial milestones, and market trends.',
   },
 ]
 
 const PARTNER_OPS = [
-  { title: 'App development', desc: 'Co-construction de solutions mobiles et SaaS intégrées à l\'écosystème Aegryn.' },
-  { title: 'Embedded insurance', desc: 'Intégration d\'assurances numériques dans nos plateformes lifestyle et services.' },
-  { title: 'Integrated payment solutions', desc: 'Connexion de solutions de paiement nativement dans nos actifs transactionnels.' },
-  { title: 'Co-branded growth initiatives', desc: 'Initiatives de croissance conjointes avec visibilité partagée sur nos marchés.' },
-  { title: 'Data-driven marketing campaigns', desc: 'Campagnes marketing ciblées grâce à nos données first-party agrégées.' },
-  { title: 'Social media & influencer collaborations', desc: 'Collaborations avec notre réseau de créateurs et influenceurs partenaires.' },
+  { title: 'App development', desc: "Expand your agency's service portfolio and unlock significant new revenue streams." },
+  { title: 'Embedded insurance', desc: 'Propose instant, seamless coverage for purchases, deliveries, and financial transactions.' },
+  { title: 'Integrated payment solutions', desc: 'Power real-time payments, flexible financing, and revenue-sharing models.' },
+  { title: 'Co-branded growth initiatives', desc: 'Launch viral campaigns, exclusive offers and limited-time events.' },
+  { title: 'Data-driven marketing campaigns', desc: 'Leverage platform data insights to create highly targeted and personalized marketing campaigns that drive conversions.' },
+  { title: 'Social media & influencer collaborations', desc: "Partner with us to amplify our brand's message through engaging social media campaigns and strategic influencer partnerships." },
 ]
 
 export default async function GrowWithUsPage({ params }: Props) {
@@ -59,17 +69,17 @@ export default async function GrowWithUsPage({ params }: Props) {
             className="font-display font-black text-ag-black tracking-[-0.03em] leading-[0.95] max-w-3xl"
             style={{ fontSize: 'clamp(48px,6vw,88px)' }}
           >
-            Partenaire de la révolution<br />des apps mobiles.
+            Grow With Us.
           </h1>
           <p className="mt-8 text-[15px] text-ag-gray leading-relaxed max-w-xl">
-            Vision long terme. Exécution disciplinée. Construisons ensemble des écosystèmes
-            numériques durables à travers la Suisse et l&apos;Europe.
+            Aegryn is inviting visionary investors and partners to be part of a groundbreaking movement in digital technology.
+            Long-term vision. Disciplined execution.
           </p>
           <Link
             href="/contact"
             className="mt-10 inline-flex items-center gap-3 bg-ag-black text-white font-mono text-[11px] tracking-[0.16em] uppercase px-6 py-3.5 hover:bg-ag-navy transition-colors"
           >
-            Nous contacter
+            Contact us
             <ArrowUpRight size={14} />
           </Link>
         </div>
@@ -80,13 +90,13 @@ export default async function GrowWithUsPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between border-b border-ag-border py-4">
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
-              / Investisseurs
+              / Investors
             </p>
             <p className="font-display font-black text-ag-black text-[13px] tracking-[-0.02em]">
-              Devenez un acteur clé
+              Become a key player
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y divide-ag-border">
             {INVESTOR_WHY.map((item) => (
               <div key={item.num} className="py-14 md:px-10 first:pl-0 last:pr-0">
                 <p className="font-mono text-[10px] tracking-[0.2em] text-ag-gray-light mb-6">
@@ -112,10 +122,10 @@ export default async function GrowWithUsPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
           <div className="flex items-center justify-between mb-12">
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
-              / Partenaires
+              / Partners
             </p>
             <p className="font-display font-black text-ag-black text-[13px] tracking-[-0.02em]">
-              Opportunités à fort impact
+              High-impact opportunities
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border">
@@ -147,14 +157,14 @@ export default async function GrowWithUsPage({ params }: Props) {
               className="font-display font-black text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
               style={{ fontSize: 'clamp(26px,3vw,46px)' }}
             >
-              La bonne décision commence par la bonne conversation.
+              Ready to build the future together?
             </h2>
           </div>
           <Link
             href="/contact"
             className="shrink-0 inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
           >
-            Prendre contact
+            Contact us
             <ArrowUpRight size={14} />
           </Link>
         </div>

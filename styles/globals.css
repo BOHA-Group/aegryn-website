@@ -2,37 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── Aegryn Design Tokens — Light Mode ───────────────── */
+/* ── Aegryn Brand Tokens ─────────────────────────────── */
+/* Primary   #5ADDA4 — Emerald Mint                       */
+/* Secondary #050505 — Near Black                         */
+/* Tertiary  #F8FAFC — Off White                          */
+/* Additional #475569 — Slate                             */
 :root {
-  /* Fonds */
+  /* ── Brand colors */
+  --ag-primary    : #5ADDA4;   /* Primary — Emerald Mint      */
+  --ag-secondary  : #050505;   /* Secondary — Near Black       */
+  --ag-tertiary   : #F8FAFC;   /* Tertiary — Off White         */
+  --ag-slate      : #475569;   /* Additional — Slate           */
+
+  /* ── Backgrounds */
   --ag-white      : #FFFFFF;
-  --ag-off-white  : #F7F6F4;
+  --ag-off-white  : #F8FAFC;   /* = tertiary */
   --ag-light-gray : #EFEFEF;
   --ag-mid-gray   : #D0CECA;
 
-  /* Textes */
-  --ag-black      : #0A0A0A;
-  --ag-dark       : #1A1A1A;
-  --ag-gray       : #6B6B6B;
-  --ag-gray-light : #9B9B9B;
+  /* ── Texts */
+  --ag-black      : #050505;   /* = secondary */
+  --ag-dark       : #0A0A0A;
+  --ag-gray       : #475569;   /* = additional */
+  --ag-gray-light : #94A3B8;
 
-  /* Brand */
+  /* ── Brand accent */
   --ag-navy       : #0A1D2E;
-  --ag-apex       : #2EAF7D;
+  --ag-apex       : #5ADDA4;   /* = primary */
 
-  /* Borders */
-  --ag-border     : #E8E6E2;
-  --ag-border-h   : #BEBAB4;
+  /* ── Borders */
+  --ag-border     : #E2E8F0;
+  --ag-border-h   : #CBD5E1;
 
-  /* Status */
+  /* ── Status */
   --ag-live       : #16A34A;
   --ag-beta       : #B45309;
-  --ag-dev        : #9B9B9B;
+  --ag-dev        : #94A3B8;
 
-  /* ── Aliases rétrocompatibilité (supprimables après migration) */
+  /* ── Aliases rétrocompatibilité */
   --aegryn-obsidian  : #050505;
   --aegryn-navy      : var(--ag-navy);
-  --aegryn-apex      : var(--ag-apex);
+  --aegryn-apex      : var(--ag-primary);
   --aegryn-white     : #F8FAFC;
   --aegryn-bg        : var(--ag-white);
   --aegryn-bg2       : var(--ag-off-white);
@@ -65,12 +75,24 @@ body {
   background-color       : var(--ag-white);
   color                  : var(--ag-dark);
   font-family            : var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight            : 400;        /* Body Text: Plus Jakarta Sans Regular */
+  font-size              : 16px;
+  line-height            : 1.6;
   overflow-x             : hidden;
 }
 
+/* ── Typography hierarchy (Plus Jakarta Sans brand guidelines) */
+h1, h2                         { font-weight: 700; }   /* Header: Bold  */
+h3, h4                         { font-weight: 600; }   /* Sub-Header: SemiBold */
+h5, h6                         { font-weight: 600; }   /* Sub-Header: SemiBold */
+p, li, td, th                  { font-weight: 400; }   /* Body Text: Regular   */
+label, figcaption, caption     { font-weight: 600; }   /* Annotations: SemiBold */
+button, [type='button'],
+[type='submit'], [type='reset'] { font-weight: 600; }   /* Button: SemiBold     */
+
 /* ── Selection ────────────────────────────────────────── */
 ::selection {
-  background: rgba(46, 175, 125, 0.20);
+  background: rgba(90, 221, 164, 0.25);  /* Primary #5ADDA4 */
   color: var(--ag-black);
 }
 

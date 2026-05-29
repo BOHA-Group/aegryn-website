@@ -2,7 +2,8 @@ import { getTranslations } from 'next-intl/server'
 import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
 import { HeroMountain }    from '@/components/sections/HeroMountain'
 import { ManifestoSection } from '@/components/sections/ManifestoSection'
-import { AssetGrid }        from '@/components/sections/AssetGrid'
+import { AssetCarousel }    from '@/components/sections/AssetCarousel'
+import { WhyUseApps }       from '@/components/sections/WhyUseApps'
 import { StatementStrip }   from '@/components/sections/StatementStrip'
 import { StatsRow }         from '@/components/sections/StatsRow'
 import type { Metadata }    from 'next'
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'hero' })
   return generateAegrynMetadata({
     title: t('tagline'),
-    description: 'Aegryn est un Swiss Tech Asset Builder. Nous construisons des actifs propriétaires conçus pour durer.',
+    description: 'We are a Swiss Tech Asset Builder designing and operating digital ecosystems, with selective advisory in Data, AI and Cybersecurity across Europe.',
     locale,
   })
 }
@@ -28,7 +29,8 @@ export default function HomePage() {
       />
       <HeroMountain />
       <ManifestoSection />
-      <AssetGrid />
+      <AssetCarousel />
+      <WhyUseApps />
       <StatementStrip
         label="Aegryn Advisory"
         title="Nous protégeons ce que vous construisez."
