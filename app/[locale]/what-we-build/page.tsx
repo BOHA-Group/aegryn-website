@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
-import Link from 'next/link'
+import Link  from 'next/link'
+import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
@@ -47,11 +48,29 @@ export default async function WhatWeBuildPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Intro image */}
+      <div className="relative w-full overflow-hidden" style={{ height: 'clamp(280px, 40vw, 560px)' }}>
+        <Image
+          src="/images/assets-intro.jpg"
+          alt="Aegryn — Nos actifs numériques"
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ag-white/60" />
+        <div className="absolute bottom-0 left-0 right-0 max-w-7xl mx-auto px-6 md:px-12 pb-10">
+          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70">
+            Engineered to Last — Swiss Tech Asset Builder
+          </p>
+        </div>
+      </div>
+
       {/* Assets by category */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           {(Object.keys(ASSET_CATEGORIES) as Array<keyof typeof ASSET_CATEGORIES>).map((cat) => {
-            const catAssets = AEGRYN_ASSETS.filter((a) => a.category === cat)
+            const catAssets = AEGRYN_ASSETS.filter((a) => a.category === cat && a.id !== 'kryv')
             if (!catAssets.length) return null
 
             return (
@@ -71,14 +90,11 @@ export default async function WhatWeBuildPage({ params }: Props) {
                 }`}>
                   {catAssets.map((asset) => {
                     const status = STATUS_CONFIG[asset.status]
-                    const isExternal = asset.url.startsWith('http')
                     return (
-                      <a
+                      <Link
                         key={asset.id}
-                        href={asset.url}
-                        target={isExternal ? '_blank' : '_self'}
-                        rel={isExternal ? 'noopener noreferrer' : undefined}
-                        className="group flex flex-col border-r border-ag-border p-10 min-h-[240px] bg-ag-white hover:bg-ag-off-white transition-colors last:border-r-0"
+                        href={`/assets/${asset.slug}`}
+                        className="group flex flex-col border-r border-ag-border p-10 min-h-[260px] bg-ag-white hover:bg-ag-off-white transition-colors last:border-r-0"
                       >
                         <div className="flex justify-between items-start mb-auto">
                           <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-2.5 py-1 group-hover:border-ag-border-h transition-colors">
@@ -105,7 +121,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     )
                   })}
                 </div>

@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import { useState }    from 'react'
 import { Menu, X }     from 'lucide-react'
 import LanguageSwitcher from '@/components/layout/LanguageSwitcher'
+import { AegrynLogo }  from '@/components/brand/AegrynLogo'
 
 const navLinks = [
   { key: 'whatWeBuild', href: '/what-we-build' },
@@ -23,12 +24,8 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
 
         {/* Logo */}
-        <Link
-          href="/"
-          aria-label="Aegryn — Accueil"
-          className="font-display font-black text-[13px] tracking-[0.2em] uppercase text-ag-black hover:opacity-60 transition-opacity duration-200"
-        >
-          Aegryn
+        <Link href="/" aria-label="Aegryn — Accueil" className="hover:opacity-70 transition-opacity duration-200">
+          <AegrynLogo size={28} variant="full" />
         </Link>
 
         {/* Desktop links */}

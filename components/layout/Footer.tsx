@@ -1,14 +1,13 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import AegrynLogo from '@/components/ui/AegrynLogo'
+import { AegrynLogo } from '@/components/brand/AegrynLogo'
 
 const footerAssets = [
-  { name: 'Subblink',        href: 'https://subblink.app',    label: 'B2B' },
-  { name: 'KRYV Protocol',   href: '/kryv',                   label: 'Protocole' },
-  { name: 'Neediu',          href: 'https://neediu.com',      label: 'B2C' },
-  { name: 'Primiom',         href: 'https://primiom.com',     label: 'B2C' },
-  { name: 'Movtoo',          href: 'https://movtoo.com',      label: 'B2C' },
-  { name: 'Hobconnect',      href: 'https://hobconnect.com',  label: 'B2C' },
+  { name: 'Subblink',    href: '/assets/subblink',    label: 'B2B' },
+  { name: 'Neediu',      href: '/assets/neediu',      label: 'B2C' },
+  { name: 'Primiom',     href: '/assets/primiom',     label: 'B2C' },
+  { name: 'Movtoo',      href: '/assets/movtoo',      label: 'B2C' },
+  { name: 'Hobconnect',  href: '/assets/hobconnect',  label: 'B2C' },
 ]
 
 const legal = [
@@ -25,7 +24,7 @@ export default function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="col-span-full lg:col-span-1">
-            <AegrynLogo className="h-6 w-auto mb-4" />
+            <AegrynLogo size={24} variant="full" onDark className="mb-4" />
             <p className="font-mono text-[11px] text-white/40 tracking-[0.18em] uppercase mt-1">
               Engineered to Last
             </p>
@@ -51,16 +50,15 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerAssets.map(({ name, href, label }) => (
                 <li key={name}>
-                  <a
+                  <Link
                     href={href}
-                    {...(href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                     className="group flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
                   >
                     {name}
                     <span className="font-mono text-[9px] text-white/30 group-hover:text-ag-apex transition-colors">
                       {label}
                     </span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
