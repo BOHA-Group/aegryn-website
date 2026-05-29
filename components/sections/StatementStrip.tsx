@@ -59,7 +59,7 @@ export function StatementStrip({ label, title, cta, href }: Props) {
       <div className="max-w-7xl mx-auto relative z-10">
         <p
           ref={labelRef}
-          className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/40 mb-6"
+          className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-6"
         >
           {label}
         </p>

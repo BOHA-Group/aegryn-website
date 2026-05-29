@@ -42,7 +42,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-full lg:col-span-1">
             <AegrynLogo size={24} variant="full" onDark className="mb-4" />
-            <p className="font-sans font-semibold text-[11px] text-white/40 tracking-[0.18em] uppercase mt-1">
+            <p className="font-sans font-semibold text-[11px] text-white/60 tracking-[0.18em] uppercase mt-1">
               Engineered to Last
             </p>
             <p className="mt-2 font-sans font-semibold text-[11px] text-white/30">
@@ -66,7 +66,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/40 uppercase mb-4">Aegryn</p>
+            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">Aegryn</p>
             <ul className="space-y-3">
               {footerNav.map(({ label, href }) => (
                 <li key={href}>
@@ -80,7 +80,7 @@ export default function Footer() {
 
           {/* Assets */}
           <div>
-            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/40 uppercase mb-4">Ecosystem</p>
+            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">Ecosystem</p>
             <ul className="space-y-3">
               {footerAssets.map(({ name, href, label }) => (
                 <li key={name}>
@@ -100,7 +100,7 @@ export default function Footer() {
 
           {/* Advisory CTA */}
           <div>
-            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/40 uppercase mb-4">Advisory</p>
+            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">Advisory</p>
             <p className="text-sm text-white/60 leading-relaxed mb-6">
               Strategic clarity in Data, AI and Cybersecurity.
             </p>

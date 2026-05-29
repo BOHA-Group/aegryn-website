@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <!-- Left leg — thin -->
+  <polygon points="0,155 18,155 80,18 64,18" fill="#050505"/>
+  <!-- Right leg — thick -->
+  <polygon points="96,18 160,155 142,155 80,18" fill="#050505"/>
+  <!-- Apex triangle — mint emerald -->
+  <polygon points="64,18 96,18 80,0" fill="#5ADDA4"/>
+</svg>

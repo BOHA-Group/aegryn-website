@@ -75,7 +75,7 @@ export default function AdvisoryPage() {
             <br /><br />
             We don&apos;t rely on theory, trends or recycled frameworks. We provide clear, direct and execution-grounded strategic direction across Data, AI and Cybersecurity — focused on impact, resilience and long-term value.
           </p>
-          <p className="font-sans font-semibold text-[13px] text-white/40 leading-relaxed max-w-xl mb-10 border-l-2 border-ag-apex/40 pl-5">
+          <p className="font-sans font-semibold text-[13px] text-white/60 leading-relaxed max-w-xl mb-10 border-l-2 border-ag-apex/40 pl-5">
             No endless slides. No generic playbooks.<br />
             Only standards that have been tested in real environments.
           </p>
@@ -220,7 +220,7 @@ export default function AdvisoryPage() {
       <section className="bg-ag-navy py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
-            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/40 mb-4">
+            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">
               / Approach
             </p>
             <h2

@@ -196,7 +196,7 @@ export function AssetCarousel() {
           className="shrink-0 flex flex-col items-center justify-center bg-ag-navy px-10"
           style={{ width: '340px', minHeight: '420px' }}
         >
-          <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/40 mb-4 text-center">
+          <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4 text-center">
             Aegryn Group
           </p>
           <p

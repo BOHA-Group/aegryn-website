@@ -12,7 +12,7 @@
   --ag-primary    : #5ADDA4;   /* Primary — Emerald Mint      */
   --ag-secondary  : #050505;   /* Secondary — Near Black       */
   --ag-tertiary   : #F8FAFC;   /* Tertiary — Off White         */
-  --ag-slate      : #475569;   /* Additional — Slate           */
+  --ag-slate      : #374151;   /* Additional — Slate (WCAG AA) */
 
   /* ── Backgrounds */
   --ag-white      : #FFFFFF;
@@ -23,8 +23,8 @@
   /* ── Texts */
   --ag-black      : #050505;   /* = secondary */
   --ag-dark       : #0A0A0A;
-  --ag-gray       : #475569;   /* = additional */
-  --ag-gray-light : #94A3B8;
+  --ag-gray       : #374151;   /* = additional — darkened for WCAG AA */
+  --ag-gray-light : #6B7280;   /* darkened: 4.6:1 on white */
 
   /* ── Brand accent */
   --ag-navy       : #0A1D2E;

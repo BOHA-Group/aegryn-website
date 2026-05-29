@@ -135,7 +135,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
       <section className="border-t border-ag-border bg-ag-navy py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
           <div>
-            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/40 mb-3">
+            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-3">
               Aegryn Advisory
             </p>
             <h2 className="font-display font-black text-white tracking-[-0.03em] leading-[0.95] max-w-lg"

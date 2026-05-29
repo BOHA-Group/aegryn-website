@@ -14,7 +14,7 @@ const config: Config = {
           primary:     '#5ADDA4',   /* Primary — Emerald Mint  */
           secondary:   '#050505',   /* Secondary — Near Black  */
           tertiary:    '#F8FAFC',   /* Tertiary — Off White    */
-          slate:       '#475569',   /* Additional — Slate      */
+          slate:       '#374151',   /* Additional — Slate (WCAG AA) */
           /* ── Backgrounds */
           white:       '#FFFFFF',
           'off-white': '#F8FAFC',
@@ -23,8 +23,8 @@ const config: Config = {
           /* ── Texts */
           black:       '#050505',
           dark:        '#0A0A0A',
-          gray:        '#475569',
-          'gray-light':'#94A3B8',
+          gray:        '#374151',   /* WCAG AA on white */
+          'gray-light':'#6B7280',   /* WCAG AA on white */
           /* ── Brand accent */
           navy:        '#0A1D2E',
           apex:        '#5ADDA4',
