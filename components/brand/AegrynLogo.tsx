@@ -11,26 +11,21 @@ export function AegrynLogo({ className = '', size = 32, variant = 'full', onDark
   const bodyColor = onDark ? '#FFFFFF' : '#050505'
 
   /**
-   * Logo mark — faithful to provided brand image:
-   * Λ (lambda): left leg thin, right leg thick, apex cut = mint #5ADDA4
-   * ViewBox 160×160 for crisp rendering at all sizes
+   * SVG source exact — coordonnées verbatim depuis logo.svg officiel.
+   * viewBox="0 0 441.14 487.91" — AUCUNE modification de coordonnées.
    */
   const mark = (
     <svg
       width={size}
-      height={size}
-      viewBox="0 0 160 160"
+      height={Math.round(size * 487.91 / 441.14)}
+      viewBox="0 0 441.14 487.91"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
       focusable="false"
     >
-      {/* Left leg — thin */}
-      <polygon points="2,155 20,155 80,22 66,22" fill={bodyColor} />
-      {/* Right leg — thick */}
-      <polygon points="94,22 158,155 140,155 80,22" fill={bodyColor} />
-      {/* Apex cut — mint emerald triangle */}
-      <polygon points="66,22 94,22 80,2" fill="#5ADDA4" />
+      <polygon fill="#5adda4" points="297.96 171.32 266.09 100.56 220.57 0 191.6 64.14 254.09 127.04 297.96 171.32"/>
+      <polygon fill={bodyColor} points="317.41 214.36 246.64 143.18 184.15 80.28 175.05 100.56 0 487.91 90.63 487.91 220.57 201.12 350.51 487.91 441.14 487.91 317.41 214.36"/>
     </svg>
   )
 
@@ -41,8 +36,8 @@ export function AegrynLogo({ className = '', size = 32, variant = 'full', onDark
       {mark}
       <span
         style={{
-          fontFamily: 'var(--font-unbounded)',
-          fontWeight: 800,
+          fontFamily: 'var(--font-body), "Plus Jakarta Sans", sans-serif',
+          fontWeight: 700,
           fontSize: size * 0.42,
           letterSpacing: '0.15em',
           color: bodyColor,

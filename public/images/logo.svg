@@ -1,8 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
-  <!-- Left leg — thin -->
-  <polygon points="0,155 18,155 80,18 64,18" fill="#050505"/>
-  <!-- Right leg — thick -->
-  <polygon points="96,18 160,155 142,155 80,18" fill="#050505"/>
-  <!-- Apex triangle — mint emerald -->
-  <polygon points="64,18 96,18 80,0" fill="#5ADDA4"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 441.14 487.91">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5adda4;
+      }
+    </style>
+  </defs>
+  <g id="Swatch_Info_Layer" data-name="Swatch Info Layer">
+    <g>
+      <polygon class="cls-1" points="297.96 171.32 266.09 100.56 220.57 0 191.6 64.14 254.09 127.04 297.96 171.32"/>
+      <polygon points="317.41 214.36 246.64 143.18 184.15 80.28 175.05 100.56 0 487.91 90.63 487.91 220.57 201.12 350.51 487.91 441.14 487.91 317.41 214.36"/>
+    </g>
+  </g>
 </svg>
