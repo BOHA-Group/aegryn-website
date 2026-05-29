@@ -21,16 +21,20 @@ export function CountUp({ value, className }: Props) {
     const el = ref.current
     if (!el) return
 
-    /* Parse number + suffix: "6.8B" → { num: 6.8, suffix: 'B', prefix: '' } */
-    const match = value.match(/^([\d.]+)([A-Za-z%]*)$/)
+    /* Parse formats:
+     * "6.8B"  → num=6.8, suffix="B"
+     * "4h12"  → num=4,   suffix="h12"
+     * "CH"    → non-numeric, display as-is
+     */
+    const match = value.match(/^([\d.]+)(.*)$/)
     if (!match) {
       setDisplayed(value)
       return
     }
 
-    const target  = parseFloat(match[1])
-    const suffix  = match[2] ?? ''
-    const isFloat = match[1].includes('.')
+    const target   = parseFloat(match[1])
+    const suffix   = match[2] ?? ''
+    const isFloat  = match[1].includes('.')
     const decimals = isFloat ? match[1].split('.')[1].length : 0
 
     const observer = new IntersectionObserver(
