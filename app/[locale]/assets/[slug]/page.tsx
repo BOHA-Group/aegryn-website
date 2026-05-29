@@ -112,7 +112,7 @@ export default async function AssetPage({ params }: Props) {
   const details  = ASSET_DETAILS[asset.id]
   const status   = STATUS_CONFIG[asset.status]
   const category = ASSET_CATEGORIES[asset.category]
-  const isLive   = asset.url.startsWith('http')
+  const isLive   = !!asset.url
 
   return (
     <>
@@ -157,9 +157,9 @@ export default async function AssetPage({ params }: Props) {
             {asset.tagline}
           </p>
 
-          {isLive && (
+          {isLive ? (
             <a
-              href={asset.url}
+              href={asset.url!}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-ag-black text-white font-mono text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-navy transition-colors"
@@ -167,9 +167,8 @@ export default async function AssetPage({ params }: Props) {
               Visiter {asset.name}
               <ArrowUpRight size={14} />
             </a>
-          )}
-          {!isLive && (
-            <span className="inline-flex items-center gap-3 border border-ag-border text-ag-gray-light font-mono text-[11px] tracking-[0.16em] uppercase px-7 py-4 cursor-default">
+          ) : (
+            <span className="inline-flex items-center gap-3 border border-ag-border text-ag-gray-light font-mono text-[11px] tracking-[0.16em] uppercase px-7 py-4 cursor-default select-none">
               Bientôt disponible
             </span>
           )}

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Link                   from 'next/link'
 import { ArrowUpRight }       from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
@@ -83,7 +84,6 @@ export function AssetGrid() {
 function AssetTile({ asset }: { asset: Asset }) {
   const ref    = useRef<HTMLAnchorElement>(null)
   const status = STATUS_CONFIG[asset.status]
-  const isExternal = asset.url.startsWith('http')
 
   const onMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!ref.current) return
@@ -94,16 +94,14 @@ function AssetTile({ asset }: { asset: Asset }) {
       `perspective(1000px) rotateY(${x * 3}deg) rotateX(${-y * 3}deg) translateY(-1px)`
   }
 
-  const onLeave = () => {
+  const onLeave = (_e: React.MouseEvent<HTMLAnchorElement>) => {
     if (ref.current) ref.current.style.transform = ''
   }
 
   return (
-    <a
+    <Link
       ref={ref}
-      href={asset.url}
-      target={isExternal ? '_blank' : '_self'}
-      rel={isExternal ? 'noopener noreferrer' : undefined}
+      href={`/assets/${asset.slug}`}
       className="asset-tile group relative flex flex-col border-r border-ag-border p-10 min-h-[260px] bg-ag-white overflow-hidden transition-colors duration-300 hover:bg-ag-off-white will-change-transform last:border-r-0"
       onMouseMove={onMove}
       onMouseLeave={onLeave}
@@ -134,6 +132,6 @@ function AssetTile({ asset }: { asset: Asset }) {
           </span>
         </div>
       </div>
-    </a>
+    </Link>
   )
 }
