@@ -86,7 +86,7 @@ export function ManifestoSection() {
                   {item.num}
                 </p>
                 <h3
-                  className="font-display font-black text-ag-black tracking-[-0.02em] leading-[1.1] mb-4"
+                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.1] mb-4"
                   style={{ fontSize: 'clamp(15px,1.25vw,17px)' }}
                 >
                   {item.title}
@@ -109,7 +109,7 @@ export function ManifestoSection() {
                 / About Aegryn
               </p>
               <h2
-                className="font-display font-black text-ag-black tracking-[-0.03em] leading-[0.93] mb-10"
+                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.93] mb-10"
                 style={{ fontSize: 'clamp(34px,4.5vw,58px)' }}
               >
                 Swiss Technology<br />Asset Platform.
@@ -138,14 +138,14 @@ export function ManifestoSection() {
             <div className="py-20 md:pl-16 flex flex-col justify-between gap-16">
               <blockquote className="relative">
                 <span
-                  className="font-display font-black text-ag-black/5 absolute -top-4 -left-2 select-none"
+                  className="font-sans font-bold text-ag-black/5 absolute -top-4 -left-2 select-none"
                   style={{ fontSize: '120px', lineHeight: 1 }}
                   aria-hidden="true"
                 >
                   &ldquo;
                 </span>
                 <p
-                  className="font-display font-black text-ag-black tracking-[-0.02em] leading-[1.2] mb-8 relative z-10"
+                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2] mb-8 relative z-10"
                   style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}
                 >
                   Nous construisons des actifs numériques qui améliorent
@@ -171,7 +171,7 @@ export function ManifestoSection() {
                 ].map((s) => (
                   <div key={s.label}>
                     <p
-                      className="font-display font-black text-ag-black tracking-[-0.03em] mb-1"
+                      className="font-sans font-bold text-ag-black tracking-[-0.03em] mb-1"
                       style={{ fontSize: 'clamp(28px,3vw,40px)' }}
                     >
                       {s.val}
@@ -205,7 +205,7 @@ export function ManifestoSection() {
                   {String(i + 1).padStart(2, '0')}
                 </p>
                 <h3
-                  className="font-display font-black text-ag-black tracking-[-0.02em] leading-[1.05] mb-5"
+                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.05] mb-5"
                   style={{ fontSize: 'clamp(22px,2vw,28px)' }}
                 >
                   {item.title}

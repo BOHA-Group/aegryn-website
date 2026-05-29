@@ -35,7 +35,7 @@ export default function ContactForm({ locale }: Props) {
     return (
       <div className="flex flex-col items-start justify-center gap-4 rounded-2xl border border-ag-apex/30 bg-ag-apex/5 p-10">
         <span className="font-sans font-semibold text-2xl text-ag-apex">✓</span>
-        <p className="font-display text-xl font-bold text-ag-dark">{t('success.title')}</p>
+        <p className="font-sans text-xl font-bold text-ag-dark">{t('success.title')}</p>
         <p className="text-sm text-ag-gray">{t('success.desc')}</p>
       </div>
     )
@@ -127,7 +127,7 @@ export default function ContactForm({ locale }: Props) {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="group flex items-center gap-3 rounded-full bg-ag-apex px-7 py-3.5 font-display text-sm font-bold text-ag-navy transition-all hover:bg-ag-navy hover:text-white disabled:opacity-50"
+        className="group flex items-center gap-3 rounded-full bg-ag-apex px-7 py-3.5 font-sans text-sm font-bold text-ag-navy transition-all hover:bg-ag-navy hover:text-white disabled:opacity-50"
       >
         {status === 'sending' ? t('sending') : t('submit')}
         <span className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>

@@ -65,7 +65,7 @@ export default function AdvisoryPage() {
             Aegryn Advisory
           </p>
           <h1
-            className="font-display font-black text-white tracking-[-0.03em] leading-[0.92] max-w-3xl mb-8"
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.92] max-w-3xl mb-8"
             style={{ fontSize: 'clamp(48px,6vw,86px)' }}
           >
             Strategic Clarity.<br />Operational Depth.
@@ -107,7 +107,7 @@ export default function AdvisoryPage() {
             </div>
             <div className="py-16 md:pl-16">
               <p
-                className="font-display font-black text-ag-black tracking-[-0.02em] leading-[1.2]"
+                className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2]"
                 style={{ fontSize: 'clamp(20px,2vw,28px)' }}
               >
                 Our role is simple: Bring clarity. Reduce risk. Accelerate the right decisions.
@@ -132,7 +132,7 @@ export default function AdvisoryPage() {
                   {String(i + 1).padStart(2, '0')}
                 </p>
                 <h2
-                  className="font-display font-black text-ag-black tracking-[-0.02em] leading-tight mb-4"
+                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4"
                   style={{ fontSize: 'clamp(16px,1.4vw,20px)' }}
                 >
                   {item.title}
@@ -168,7 +168,7 @@ export default function AdvisoryPage() {
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <div>
-                    <p className="font-display font-black text-ag-black text-[16px] tracking-[-0.02em] group-hover:text-ag-navy transition-colors">
+                    <p className="font-sans font-bold text-ag-black text-[16px] tracking-[-0.02em] group-hover:text-ag-navy transition-colors">
                       {member.name}
                     </p>
                     <p className="font-sans font-semibold text-[11px] text-ag-gray-light mt-0.5">
@@ -202,7 +202,7 @@ export default function AdvisoryPage() {
             {DOMAINS.map((d) => (
               <div key={d.title} className="bg-ag-off-white p-8 hover:bg-ag-white transition-colors">
                 <h3
-                  className="font-display font-black text-ag-black tracking-[-0.02em] leading-tight mb-3"
+                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-3"
                   style={{ fontSize: 'clamp(15px,1.3vw,18px)' }}
                 >
                   {d.title}
@@ -224,7 +224,7 @@ export default function AdvisoryPage() {
               / Approach
             </p>
             <h2
-              className="font-display font-black text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
+              className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
               style={{ fontSize: 'clamp(24px,3vw,44px)' }}
             >
               Making the right decision starts with the right conversation.

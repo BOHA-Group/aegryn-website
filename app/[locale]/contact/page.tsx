@@ -27,7 +27,7 @@ export default async function ContactPage({ params }: Props) {
           <p className="font-sans font-semibold text-xs uppercase tracking-[0.3em] text-ag-apex mb-6">
             Contact
           </p>
-          <h1 className="font-display text-6xl font-black tracking-tighter text-ag-black sm:text-7xl max-w-xl">
+          <h1 className="font-sans text-6xl font-bold tracking-tighter text-ag-black sm:text-7xl max-w-xl">
             {t('hero.title')}
           </h1>
           <p className="mt-4 text-sm text-ag-gray max-w-md leading-relaxed">

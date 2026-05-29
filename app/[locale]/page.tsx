@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
 import { HeroMountain }    from '@/components/sections/HeroMountain'
 import { ManifestoSection } from '@/components/sections/ManifestoSection'
-import { AssetCarousel }    from '@/components/sections/AssetCarousel'
+import { AssetGrid }        from '@/components/sections/AssetGrid'
 import { WhyUseApps }       from '@/components/sections/WhyUseApps'
 import { StatementStrip }   from '@/components/sections/StatementStrip'
 import { StatsRow }         from '@/components/sections/StatsRow'
@@ -29,7 +29,7 @@ export default function HomePage() {
       />
       <HeroMountain />
       <ManifestoSection />
-      <AssetCarousel />
+      <AssetGrid />
       <WhyUseApps />
       <StatementStrip
         label="Aegryn Advisory"

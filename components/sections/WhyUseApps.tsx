@@ -52,7 +52,7 @@ export function WhyUseApps() {
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
             / Why use our apps
           </p>
-          <p className="font-display font-black text-ag-black text-[13px] tracking-[-0.02em]">
+          <p className="font-sans font-bold text-ag-black text-[13px] tracking-[-0.02em]">
             04
           </p>
         </div>
@@ -64,7 +64,7 @@ export function WhyUseApps() {
                 {item.num}
               </p>
               <h3
-                className="font-display font-black text-ag-black tracking-[-0.02em] leading-[1.1] mb-4"
+                className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.1] mb-4"
                 style={{ fontSize: 'clamp(14px,1.15vw,16px)' }}
               >
                 {item.title}

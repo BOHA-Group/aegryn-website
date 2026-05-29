@@ -38,7 +38,7 @@ export function StatsRow() {
           >
             <CountUp
               value={num}
-              className="font-display font-black text-ag-black tracking-[-0.04em] leading-none text-[48px]"
+              className="font-sans font-bold text-ag-black tracking-[-0.04em] leading-none text-[48px]"
             />
             <span className="font-sans font-semibold text-[11px] tracking-[0.18em] uppercase text-ag-gray-light">
               {label}

@@ -39,7 +39,7 @@ export function AssetGrid() {
             Notre écosystème
           </p>
           <h2
-            className="font-display font-black text-ag-black tracking-[-0.03em] leading-[0.95]"
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.95]"
             style={{ fontSize: 'clamp(36px,4.5vw,64px)' }}
           >
             Ce que nous<br />construisons.
@@ -54,7 +54,7 @@ export function AssetGrid() {
             return (
               <div key={cat}>
                 <div className="flex items-center justify-between border-y border-ag-border py-4">
-                  <span className="font-display font-bold text-[11px] tracking-[0.18em] uppercase text-ag-black">
+                  <span className="font-sans font-bold text-[11px] tracking-[0.18em] uppercase text-ag-black">
                     {ASSET_CATEGORIES[cat].label}
                   </span>
                   <span className="font-sans font-semibold text-[11px] text-ag-gray-light">
@@ -125,7 +125,7 @@ function AssetTile({ asset }: { asset: Asset }) {
         </div>
         <div className="mt-16 relative z-10">
           <h3
-            className="font-display font-black text-white tracking-[-0.03em] leading-none mb-2"
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-none mb-2"
             style={{ fontSize: 'clamp(22px,2vw,28px)' }}
           >
             {asset.name}
@@ -165,7 +165,7 @@ function AssetTile({ asset }: { asset: Asset }) {
       </div>
       <div className="mt-16">
         <h3
-          className="font-display font-black text-ag-black tracking-[-0.03em] leading-none mb-2"
+          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-none mb-2"
           style={{ fontSize: 'clamp(22px,2vw,28px)' }}
         >
           {asset.name}

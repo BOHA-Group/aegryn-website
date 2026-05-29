@@ -55,9 +55,10 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ['var(--font-unbounded)', 'sans-serif'],
-        sans:    ['var(--font-body)', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        mono:    ['var(--font-body)', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        display: ['var(--font-body)', 'Plus Jakarta Sans', 'sans-serif'],
+        sans:    ['var(--font-body)', 'Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        mono:    ['var(--font-body)', 'Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        unbounded: ['var(--font-unbounded)', 'sans-serif'],
       },
       letterSpacing: {
         tighter: '-0.03em',

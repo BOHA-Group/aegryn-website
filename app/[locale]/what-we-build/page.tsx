@@ -37,7 +37,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
             {t('hero.label')}
           </p>
           <h1
-            className="font-display font-black text-ag-black tracking-[-0.03em] leading-[0.95] max-w-2xl"
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.95] max-w-2xl"
             style={{ fontSize: 'clamp(48px,6vw,80px)' }}
           >
             {t('hero.title')}
@@ -76,7 +76,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
             return (
               <div key={cat} className="mb-16 last:mb-0">
                 <div className="flex items-center justify-between border-y border-ag-border py-4 mb-0">
-                  <span className="font-display font-bold text-[11px] tracking-[0.18em] uppercase text-ag-black">
+                  <span className="font-sans font-bold text-[11px] tracking-[0.18em] uppercase text-ag-black">
                     {ASSET_CATEGORIES[cat].label}
                   </span>
                   <span className="font-sans font-semibold text-[11px] text-ag-gray-light">
@@ -105,7 +105,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
                           </span>
                         </div>
                         <div className="mt-12">
-                          <h2 className="font-display font-black text-ag-black text-[24px] tracking-[-0.03em] leading-none mb-2">
+                          <h2 className="font-sans font-bold text-ag-black text-[24px] tracking-[-0.03em] leading-none mb-2">
                             {asset.name}
                           </h2>
                           <p className="font-sans font-semibold text-[12px] text-ag-gray leading-relaxed mb-4">
@@ -138,7 +138,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
             <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-3">
               Aegryn Advisory
             </p>
-            <h2 className="font-display font-black text-white tracking-[-0.03em] leading-[0.95] max-w-lg"
+            <h2 className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.95] max-w-lg"
               style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
             >
               {t('advisoryCta.text')}

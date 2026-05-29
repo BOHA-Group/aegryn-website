@@ -65,7 +65,7 @@ export function StatementStrip({ label, title, cta, href }: Props) {
         </p>
         <h2
           ref={titleRef}
-          className="font-display font-black text-white tracking-[-0.03em] leading-[0.95] max-w-2xl mb-12"
+          className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.95] max-w-2xl mb-12"
           style={{ fontSize: 'clamp(32px,4vw,60px)' }}
         >
           {title}

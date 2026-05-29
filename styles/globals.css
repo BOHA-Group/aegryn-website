@@ -109,9 +109,10 @@ button, input, select, textarea,
   font-weight : 600;
 }
 
-/* ── font-display class → Unbounded (grandes mises en page) */
+/* ── font-display class → Plus Jakarta Sans Bold (titres impact) */
 .font-display {
-  font-family : var(--font-unbounded), 'Unbounded', sans-serif !important;
+  font-family : var(--font-body), 'Plus Jakarta Sans', sans-serif !important;
+  font-weight : 700 !important;
 }
 
 /* ── Selection ────────────────────────────────────────── */

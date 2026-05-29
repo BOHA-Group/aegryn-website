@@ -148,7 +148,7 @@ export default async function AssetPage({ params }: Props) {
           </div>
 
           <h1
-            className="font-display font-black text-ag-black tracking-[-0.03em] leading-[0.92] max-w-3xl mb-6"
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.92] max-w-3xl mb-6"
             style={{ fontSize: 'clamp(56px,7vw,96px)' }}
           >
             {asset.name}
@@ -239,7 +239,7 @@ export default async function AssetPage({ params }: Props) {
               Aegryn Group
             </p>
             <h2
-              className="font-display font-black text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
+              className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
               style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
             >
               Découvrez l&apos;ensemble de l&apos;écosystème.

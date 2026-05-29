@@ -72,7 +72,7 @@ export default async function CareerPage({ params }: Props) {
             Aegryn Advisory & Careers
           </p>
           <h1
-            className="font-display font-black text-ag-black tracking-[-0.03em] leading-[0.95] max-w-3xl"
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.95] max-w-3xl"
             style={{ fontSize: 'clamp(48px,6vw,88px)' }}
           >
             Advisory & Digital Ecosystem Experts
@@ -107,7 +107,7 @@ export default async function CareerPage({ params }: Props) {
                 </span>
                 <div>
                   <p
-                    className="font-display font-black text-ag-black tracking-[-0.02em] leading-tight group-hover:text-ag-navy transition-colors"
+                    className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight group-hover:text-ag-navy transition-colors"
                     style={{ fontSize: 'clamp(15px,1.4vw,18px)' }}
                   >
                     {pos.title}
@@ -150,7 +150,7 @@ export default async function CareerPage({ params }: Props) {
               Aegryn Advisory
             </p>
             <h2
-              className="font-display font-black text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
+              className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
               style={{ fontSize: 'clamp(26px,3vw,46px)' }}
             >
               Engineered to Last — construit par des experts qui y croient.

@@ -66,7 +66,7 @@ export default async function GrowWithUsPage({ params }: Props) {
             Partenariats Stratégiques & Investissement
           </p>
           <h1
-            className="font-display font-black text-ag-black tracking-[-0.03em] leading-[0.95] max-w-3xl"
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.95] max-w-3xl"
             style={{ fontSize: 'clamp(48px,6vw,88px)' }}
           >
             Grow With Us.
@@ -92,7 +92,7 @@ export default async function GrowWithUsPage({ params }: Props) {
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
               / Investors
             </p>
-            <p className="font-display font-black text-ag-black text-[13px] tracking-[-0.02em]">
+            <p className="font-sans font-bold text-ag-black text-[13px] tracking-[-0.02em]">
               Become a key player
             </p>
           </div>
@@ -103,7 +103,7 @@ export default async function GrowWithUsPage({ params }: Props) {
                   {item.num}
                 </p>
                 <h2
-                  className="font-display font-black text-ag-black tracking-[-0.02em] leading-none mb-4"
+                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-none mb-4"
                   style={{ fontSize: 'clamp(18px,1.6vw,22px)' }}
                 >
                   {item.title}
@@ -124,7 +124,7 @@ export default async function GrowWithUsPage({ params }: Props) {
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
               / Partners
             </p>
-            <p className="font-display font-black text-ag-black text-[13px] tracking-[-0.02em]">
+            <p className="font-sans font-bold text-ag-black text-[13px] tracking-[-0.02em]">
               High-impact opportunities
             </p>
           </div>
@@ -132,7 +132,7 @@ export default async function GrowWithUsPage({ params }: Props) {
             {PARTNER_OPS.map((op) => (
               <div key={op.title} className="bg-ag-off-white p-8 hover:bg-ag-white transition-colors">
                 <h3
-                  className="font-display font-black text-ag-black tracking-[-0.02em] leading-tight mb-3"
+                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-3"
                   style={{ fontSize: 'clamp(16px,1.4vw,20px)' }}
                 >
                   {op.title}
@@ -154,7 +154,7 @@ export default async function GrowWithUsPage({ params }: Props) {
               Aegryn Group
             </p>
             <h2
-              className="font-display font-black text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
+              className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
               style={{ fontSize: 'clamp(26px,3vw,46px)' }}
             >
               Ready to build the future together?

@@ -84,7 +84,7 @@ export function HeroMountain() {
           <h1
             ref={headingRef}
             id="hero-title"
-            className="font-display font-black text-white leading-[0.88] tracking-[-0.03em] max-w-4xl mb-6"
+            className="font-sans font-bold text-white leading-[0.88] tracking-[-0.03em] max-w-4xl mb-6"
             style={{ fontSize: 'clamp(56px,7.5vw,116px)' }}
           >
             Building<br />

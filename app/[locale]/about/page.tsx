@@ -37,7 +37,7 @@ export default function AboutPage() {
             {t('hero.label')}
           </p>
           <h1
-            className="font-display font-black text-ag-black tracking-[-0.03em] leading-[0.93] max-w-3xl mb-8"
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.93] max-w-3xl mb-8"
             style={{ fontSize: 'clamp(52px,6.5vw,88px)' }}
           >
             {t('hero.title')}
@@ -59,7 +59,7 @@ export default function AboutPage() {
             </div>
             <div className="py-16 md:px-16">
               <p
-                className="font-display font-black text-ag-black tracking-[-0.02em] leading-[1.15]"
+                className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15]"
                 style={{ fontSize: 'clamp(22px,2.5vw,32px)' }}
               >
                 {t('vision.text')}
@@ -80,7 +80,7 @@ export default function AboutPage() {
             <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / {t('mission.label')}
             </span>
-            <span className="font-display font-black text-ag-black tracking-[-0.02em] text-[13px]">
+            <span className="font-sans font-bold text-ag-black tracking-[-0.02em] text-[13px]">
               {t('mission.title')}
             </span>
           </div>
@@ -91,7 +91,7 @@ export default function AboutPage() {
                   {String(i + 1).padStart(2, '0')}
                 </p>
                 <h2
-                  className="font-display font-black text-ag-black tracking-[-0.02em] leading-none mb-4"
+                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-none mb-4"
                   style={{ fontSize: 'clamp(20px,1.8vw,26px)' }}
                 >
                   {t(`mission.${key}.title`)}
@@ -117,7 +117,7 @@ export default function AboutPage() {
                 <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex mb-4">
                   {t(`values.${v}.label`)}
                 </p>
-                <p className="font-display font-black text-ag-black text-[18px] tracking-[-0.02em] leading-none mb-3">
+                <p className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-none mb-3">
                   {t(`values.${v}.title`)}
                 </p>
                 <p className="text-[13px] text-ag-gray-light leading-relaxed">
@@ -137,11 +137,11 @@ export default function AboutPage() {
           </p>
           <div className="grid gap-14 lg:grid-cols-[200px_1fr] lg:items-start">
             <div className="h-56 w-44 border border-ag-border bg-ag-off-white flex items-center justify-center shrink-0">
-              <span className="font-display text-3xl font-black text-ag-gray-light tracking-[-0.04em]">YB</span>
+              <span className="font-sans text-3xl font-bold text-ag-gray-light tracking-[-0.04em]">YB</span>
             </div>
             <div>
               <h2
-                className="font-display font-black text-ag-black tracking-[-0.03em] leading-none mb-1"
+                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-none mb-1"
                 style={{ fontSize: 'clamp(28px,3vw,42px)' }}
               >
                 Yohann Bollack
@@ -182,7 +182,7 @@ export default function AboutPage() {
               Aegryn Group
             </p>
             <h2
-              className="font-display font-black text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
+              className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
               style={{ fontSize: 'clamp(26px,3vw,48px)' }}
             >
               {t('swiss.title')}
