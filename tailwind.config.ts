@@ -46,7 +46,7 @@ const config: Config = {
       },
       fontFamily: {
         display: ['var(--font-unbounded)', 'sans-serif'],
-        sans: ['var(--font-dm-sans)', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        sans: ['var(--font-body)', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         mono: ['var(--font-dm-mono)', 'monospace'],
       },
       letterSpacing: {

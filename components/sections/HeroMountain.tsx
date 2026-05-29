@@ -80,18 +80,18 @@ export function HeroMountain() {
         <h1
           ref={headingRef}
           id="hero-title"
-          className="font-display font-black text-white leading-[0.92] tracking-[-0.03em] max-w-3xl"
+          className="font-display font-black text-white leading-[0.9] tracking-[-0.03em] max-w-3xl"
           style={{ fontSize: 'clamp(52px,7vw,108px)' }}
         >
-          Engineered<br />to Last.
+          Swiss Tech<br />asset builder.
         </h1>
 
         <p
           ref={subtitleRef}
-          className="font-mono text-[13px] text-white/55 leading-relaxed mt-6 max-w-xs"
+          className="font-mono text-[13px] text-white/55 leading-relaxed mt-6 max-w-sm"
         >
-          Des actifs propriétaires construits<br />
-          pour durer des décennies.
+          We develop proprietary digital ecosystems<br />
+          engineered for endurance and scale.
         </p>
       </div>
 

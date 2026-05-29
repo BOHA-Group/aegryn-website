@@ -1,7 +1,8 @@
 const STATS = [
-  { num: '06', label: 'Actifs propres' },
-  { num: '06', label: 'Langues' },
-  { num: 'CH', label: 'Base suisse' },
+  { num: '6.8B', label: 'Total mobile devices' },
+  { num: '5.6B', label: 'Global smartphone connections' },
+  { num: '4h12', label: 'Daily screen time' },
+  { num: 'CH', label: 'Engineered in Switzerland' },
 ]
 
 export function StatsRow() {

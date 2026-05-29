@@ -22,12 +22,12 @@ const unbounded = Unbounded({
 const overusedGrotesk = localFont({
   src: [
     {
-      path: '../../public/fonts/OverusedGrotesk-Medium.woff2',
+      path: '../fonts/OverusedGrotesk-Medium.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: '../../public/fonts/OverusedGrotesk-SemiBold.woff2',
+      path: '../fonts/OverusedGrotesk-SemiBold.woff2',
       weight: '600',
       style: 'normal',
     },
