@@ -22,15 +22,15 @@ export default async function ContactPage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="border-b border-aegryn-border">
+      <section className="border-b border-ag-border">
         <div className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-aegryn-apex mb-6">
+          <p className="font-mono text-xs uppercase tracking-[0.3em] text-ag-apex mb-6">
             Contact
           </p>
-          <h1 className="font-display text-6xl font-black tracking-tighter text-aegryn-cream sm:text-7xl max-w-xl">
+          <h1 className="font-display text-6xl font-black tracking-tighter text-ag-black sm:text-7xl max-w-xl">
             {t('hero.title')}
           </h1>
-          <p className="mt-4 text-sm text-aegryn-cream2 max-w-md leading-relaxed">
+          <p className="mt-4 text-sm text-ag-gray max-w-md leading-relaxed">
             {t('hero.desc')}
           </p>
         </div>
@@ -42,40 +42,40 @@ export default async function ContactPage({ params }: Props) {
           {/* Info column */}
           <div className="space-y-10">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-aegryn-muted mb-3">
+              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
                 Base
               </p>
-              <p className="text-sm text-aegryn-cream2">Suisse</p>
+              <p className="text-sm text-ag-gray">Suisse</p>
             </div>
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-aegryn-muted mb-3">
+              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
                 Email
               </p>
               <a
                 href="mailto:contact@aegryn.com"
-                className="text-sm text-aegryn-cream2 hover:text-aegryn-cream transition-colors"
+                className="text-sm text-ag-gray hover:text-ag-black transition-colors"
               >
                 contact@aegryn.com
               </a>
             </div>
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-aegryn-muted mb-3">
+              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
                 LinkedIn
               </p>
               <a
                 href="https://www.linkedin.com/company/aegryn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-aegryn-cream2 hover:text-aegryn-cream transition-colors"
+                className="text-sm text-ag-gray hover:text-ag-black transition-colors"
               >
                 /company/aegryn ↗
               </a>
             </div>
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-aegryn-muted mb-3">
+              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
                 {t('responseTime.label')}
               </p>
-              <p className="text-sm text-aegryn-cream2">{t('responseTime.value')}</p>
+              <p className="text-sm text-ag-gray">{t('responseTime.value')}</p>
             </div>
           </div>
 

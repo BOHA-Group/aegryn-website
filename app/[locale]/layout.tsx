@@ -60,13 +60,13 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body
-        className={`${unbounded.variable} ${dmSans.variable} ${dmMono.variable} font-sans bg-aegryn-bg text-aegryn-cream antialiased`}
+        className={`${unbounded.variable} ${dmSans.variable} ${dmMono.variable} font-sans bg-ag-white text-ag-dark antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           <LenisProvider>
             <a
               href="#main"
-              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 rounded-md bg-aegryn-apex px-4 py-2 text-sm font-bold text-aegryn-obsidian"
+              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-ag-navy px-4 py-2 text-sm font-bold text-white"
             >
               Skip to content
             </a>

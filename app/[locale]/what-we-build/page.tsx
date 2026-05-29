@@ -1,7 +1,8 @@
-import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import Link from 'next/link'
+import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
+import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
 import type { Metadata } from 'next'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -10,196 +11,129 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
     title: 'What We Build',
-    description: "Six actifs numériques propriétaires d'Aegryn — de l'IA aux réseaux sociaux, de l'immobilier à la logistique.",
+    description: "Six actifs numériques propriétaires d'Aegryn — de l'IA aux services, de l'immobilier aux réseaux sociaux.",
     path: '/what-we-build',
     locale,
   })
 }
 
-const assets = [
-  {
-    id: 'nexoris',
-    category: 'ai',
-    status: 'building',
-    href: 'https://nexoris.ai',
-    color: 'from-violet-500/5 to-transparent',
-    accent: 'text-violet-600',
-    border: 'border-violet-500/15 hover:border-violet-500/35',
-  },
-  {
-    id: 'kryolio',
-    category: 'transactions',
-    status: 'building',
-    href: 'https://kryolio.com',
-    color: 'from-emerald-500/5 to-transparent',
-    accent: 'text-emerald-700',
-    border: 'border-emerald-500/20 hover:border-emerald-500/40',
-  },
-  {
-    id: 'lyvra',
-    category: 'lifestyle',
-    status: 'concept',
-    href: '#',
-    color: 'from-rose-500/5 to-transparent',
-    accent: 'text-rose-600',
-    border: 'border-rose-500/15 hover:border-rose-500/35',
-  },
-  {
-    id: 'vorrex',
-    category: 'transactions',
-    status: 'concept',
-    href: '#',
-    color: 'from-amber-500/5 to-transparent',
-    accent: 'text-amber-700',
-    border: 'border-amber-500/15 hover:border-amber-500/35',
-  },
-  {
-    id: 'domify',
-    category: 'lifestyle',
-    status: 'concept',
-    href: '#',
-    color: 'from-sky-500/5 to-transparent',
-    accent: 'text-sky-700',
-    border: 'border-sky-500/15 hover:border-sky-500/35',
-  },
-  {
-    id: 'fleetori',
-    category: 'transactions',
-    status: 'concept',
-    href: '#',
-    color: 'from-orange-500/5 to-transparent',
-    accent: 'text-orange-700',
-    border: 'border-orange-500/15 hover:border-orange-500/35',
-  },
-] as const
+const STATUS_CONFIG = {
+  live:  { label: 'Live',              dot: 'bg-ag-live' },
+  beta:  { label: 'Bêta',             dot: 'bg-ag-beta' },
+  dev:   { label: 'En développement', dot: 'bg-ag-dev' },
+} as const
 
-const statusColors: Record<string, string> = {
-  building: 'bg-aegryn-apex/10 text-emerald-700',
-  concept: 'bg-black/5 text-aegryn-muted',
-  live: 'bg-green-500/10 text-green-700',
-}
-
-export default function WhatWeBuildPage() {
-  const t = useTranslations('build')
+export default async function WhatWeBuildPage({ params }: Props) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'build' })
 
   return (
     <>
       {/* Hero */}
-      <section className="border-b border-aegryn-border">
-        <div className="mx-auto max-w-7xl px-6 py-28">
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-aegryn-apex mb-6">
+      <section className="border-b border-ag-border">
+        <div className="mx-auto max-w-7xl px-6 md:px-12 py-28">
+          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-6">
             {t('hero.label')}
           </p>
-          <h1 className="font-display text-6xl font-black tracking-tighter text-aegryn-cream sm:text-7xl max-w-2xl leading-[1.02]">
+          <h1
+            className="font-display font-black text-ag-black tracking-[-0.03em] leading-[0.95] max-w-2xl"
+            style={{ fontSize: 'clamp(48px,6vw,80px)' }}
+          >
             {t('hero.title')}
           </h1>
-          <p className="mt-6 text-sm text-aegryn-cream2 leading-relaxed max-w-lg">
+          <p className="mt-6 text-base text-ag-gray leading-relaxed max-w-lg">
             {t('hero.desc')}
           </p>
         </div>
       </section>
 
-      {/* Assets grid */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {assets.map((asset) => (
-            <div
-              key={asset.id}
-              className={`group relative overflow-hidden rounded-2xl border bg-white p-8 shadow-sm transition-all ${asset.border}`}
-            >
-              <div className={`absolute inset-0 bg-gradient-to-br ${asset.color} opacity-0 group-hover:opacity-100 transition-opacity`} />
-              <div className="relative">
-                {/* Header */}
-                <div className="mb-6 flex items-start justify-between">
-                  <div>
-                    <p className={`font-mono text-[10px] uppercase tracking-[0.25em] mb-1 ${asset.accent}`}>
-                      {t(`categories.${asset.category}`)}
-                    </p>
-                    <h2 className="font-display text-2xl font-black tracking-tighter text-aegryn-cream">
-                      {asset.id.charAt(0).toUpperCase() + asset.id.slice(1)}
-                    </h2>
-                  </div>
-                  <span className={`inline-flex items-center rounded-full px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.2em] ${statusColors[asset.status]}`}>
-                    {t(`status.${asset.status}`)}
+      {/* Assets by category */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          {(Object.keys(ASSET_CATEGORIES) as Array<keyof typeof ASSET_CATEGORIES>).map((cat) => {
+            const catAssets = AEGRYN_ASSETS.filter((a) => a.category === cat)
+            if (!catAssets.length) return null
+
+            return (
+              <div key={cat} className="mb-16 last:mb-0">
+                <div className="flex items-center justify-between border-y border-ag-border py-4 mb-0">
+                  <span className="font-display font-bold text-[11px] tracking-[0.18em] uppercase text-ag-black">
+                    {ASSET_CATEGORIES[cat].label}
+                  </span>
+                  <span className="font-mono text-[11px] text-ag-gray-light">
+                    {String(catAssets.length).padStart(2, '0')}
                   </span>
                 </div>
-
-                {/* Content */}
-                <p className="text-sm text-aegryn-cream2 leading-relaxed mb-6">
-                  {t(`assets.${asset.id}.desc`)}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {(t.raw(`assets.${asset.id}.tags`) as string[]).map((tag: string) => (
-                    <span key={tag} className="rounded-full border border-aegryn-border px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.15em] text-aegryn-muted">
-                      {tag}
-                    </span>
-                  ))}
+                <div className={`grid border-b border-ag-border ${
+                  catAssets.length <= 2
+                    ? 'grid-cols-1 md:grid-cols-2'
+                    : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+                }`}>
+                  {catAssets.map((asset) => {
+                    const status = STATUS_CONFIG[asset.status]
+                    const isExternal = asset.url.startsWith('http')
+                    return (
+                      <a
+                        key={asset.id}
+                        href={asset.url}
+                        target={isExternal ? '_blank' : '_self'}
+                        rel={isExternal ? 'noopener noreferrer' : undefined}
+                        className="group flex flex-col border-r border-ag-border p-10 min-h-[240px] bg-ag-white hover:bg-ag-off-white transition-colors last:border-r-0"
+                      >
+                        <div className="flex justify-between items-start mb-auto">
+                          <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-2.5 py-1 group-hover:border-ag-border-h transition-colors">
+                            {asset.badge}
+                          </span>
+                          <span className="w-8 h-8 border border-ag-border flex items-center justify-center text-ag-gray group-hover:bg-ag-black group-hover:border-ag-black group-hover:text-white transition-all">
+                            <ArrowUpRight size={13} />
+                          </span>
+                        </div>
+                        <div className="mt-12">
+                          <h2 className="font-display font-black text-ag-black text-[24px] tracking-[-0.03em] leading-none mb-2">
+                            {asset.name}
+                          </h2>
+                          <p className="font-mono text-[12px] text-ag-gray leading-relaxed mb-4">
+                            {asset.tagline}
+                          </p>
+                          <p className="text-[13px] text-ag-gray leading-relaxed mb-5">
+                            {asset.description}
+                          </p>
+                          <div className="flex items-center gap-2">
+                            <span className={`w-1.5 h-1.5 rounded-full ${status.dot}`} />
+                            <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
+                              {status.label}
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    )
+                  })}
                 </div>
-
-                {/* CTA */}
-                {asset.href !== '#' ? (
-                  <a
-                    href={asset.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-2 font-mono text-xs transition-colors ${asset.accent} hover:opacity-70`}
-                  >
-                    {t('visitSite')} ↗
-                  </a>
-                ) : (
-                  <span className="font-mono text-xs text-aegryn-muted">{t('comingSoon')}</span>
-                )}
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Philosophy */}
-      <section className="border-t border-aegryn-border bg-aegryn-bg2">
-        <div className="mx-auto max-w-7xl px-6 py-24">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-aegryn-apex mb-6">
-                / {t('philosophy.label')}
-              </p>
-              <h2 className="font-display text-4xl font-black tracking-tighter text-aegryn-cream sm:text-5xl mb-6">
-                {t('philosophy.title')}
-              </h2>
-              <p className="text-sm text-aegryn-cream2 leading-relaxed">
-                {t('philosophy.desc')}
-              </p>
-            </div>
-            <div className="grid grid-cols-3 gap-4 text-center">
-              {(['proprietary', 'sovereign', 'durable'] as const).map((p) => (
-                <div key={p} className="rounded-2xl border border-aegryn-border bg-aegryn-bg3 p-6">
-                  <p className="font-display text-3xl font-black text-aegryn-apex mb-2">
-                    {t(`pillars.${p}.stat`)}
-                  </p>
-                  <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-aegryn-muted">
-                    {t(`pillars.${p}.label`)}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+            )
+          })}
         </div>
       </section>
 
       {/* Advisory CTA */}
-      <section className="border-t border-aegryn-border">
-        <div className="mx-auto max-w-7xl px-6 py-16 flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-display text-2xl font-black tracking-tighter text-aegryn-cream max-w-md">
-            {t('advisoryCta.text')}
-          </p>
+      <section className="border-t border-ag-border bg-ag-navy py-24 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+          <div>
+            <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/40 mb-3">
+              Aegryn Advisory
+            </p>
+            <h2 className="font-display font-black text-white tracking-[-0.03em] leading-[0.95] max-w-lg"
+              style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+            >
+              {t('advisoryCta.text')}
+            </h2>
+          </div>
           <Link
             href="/advisory"
-            className="group shrink-0 inline-flex items-center gap-3 rounded-full bg-aegryn-apex px-7 py-3.5 font-display text-sm font-bold text-aegryn-obsidian transition-all hover:bg-aegryn-obsidian hover:text-aegryn-white"
+            className="shrink-0 inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
           >
             {t('advisoryCta.button')}
-            <span className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+            <ArrowUpRight size={14} />
           </Link>
         </div>
       </section>

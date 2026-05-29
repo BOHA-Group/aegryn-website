@@ -1,83 +1,93 @@
 'use client'
 
-import Link from 'next/link'
+import Link            from 'next/link'
 import { useTranslations } from 'next-intl'
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
-import AegrynLogo from '@/components/ui/AegrynLogo'
+import { useState }    from 'react'
+import { Menu, X }     from 'lucide-react'
 import LanguageSwitcher from '@/components/layout/LanguageSwitcher'
 
 const navLinks = [
-  { key: 'about',        href: '/about' },
-  { key: 'whatWeBuild',  href: '/what-we-build' },
-  { key: 'advisory',    href: '/advisory' },
-  { key: 'contact',     href: '/contact' },
+  { key: 'whatWeBuild', href: '/what-we-build' },
+  { key: 'advisory',   href: '/advisory' },
+  { key: 'about',      href: '/about' },
+  { key: 'growWithUs', href: '/grow-with-us' },
+  { key: 'career',     href: '/career' },
 ] as const
 
 export default function Nav() {
-  const t = useTranslations('nav')
+  const t    = useTranslations('nav')
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/[0.08] bg-white/90 backdrop-blur-xl">
-      <nav
-        className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
-        aria-label="Navigation principale"
-      >
-        <Link href="/" aria-label="Aegryn — Accueil">
-          <AegrynLogo className="h-7 w-auto" variant="navy" />
+    <header className="sticky top-0 z-50 bg-ag-white border-b border-ag-border">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
+
+        {/* Logo */}
+        <Link
+          href="/"
+          aria-label="Aegryn — Accueil"
+          className="font-display font-black text-[13px] tracking-[0.2em] uppercase text-ag-black hover:opacity-60 transition-opacity duration-200"
+        >
+          Aegryn
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden items-center gap-8 text-sm md:flex">
+        <nav className="hidden lg:flex items-center gap-10" aria-label="Navigation principale">
           {navLinks.map(({ key, href }) => (
             <Link
               key={key}
               href={href}
-              className="font-mono text-xs tracking-widest text-aegryn-cream2 uppercase transition-colors hover:text-aegryn-cream"
+              className="font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors duration-200"
             >
               {t(key)}
             </Link>
           ))}
-        </div>
+        </nav>
 
-        <div className="hidden items-center gap-4 md:flex">
+        {/* Right side: locale + contact CTA */}
+        <div className="hidden lg:flex items-center gap-6">
           <LanguageSwitcher />
           <Link
             href="/contact"
-            className="group flex items-center gap-2 rounded-full border border-aegryn-apex/40 px-5 py-2 text-xs font-bold text-aegryn-apex transition-all hover:border-aegryn-apex hover:bg-aegryn-apex hover:text-aegryn-obsidian"
+            className="font-mono text-[11px] tracking-[0.14em] uppercase border border-ag-border px-4 py-2 text-ag-dark hover:border-ag-black hover:text-ag-black transition-all duration-200"
           >
             Contact
-            <span className="inline-block transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
           </Link>
         </div>
 
         {/* Mobile toggle */}
         <button
-          className="rounded-md p-2 text-aegryn-cream2 transition-colors hover:text-aegryn-cream md:hidden"
+          className="lg:hidden rounded p-2 text-ag-gray hover:text-ag-black transition-colors"
           onClick={() => setOpen(!open)}
           aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
           aria-expanded={open}
         >
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
-      </nav>
+      </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-black/[0.08] bg-aegryn-bg2 px-6 py-6 md:hidden">
+        <div className="lg:hidden border-t border-ag-border bg-ag-white px-6 py-6">
           <div className="flex flex-col gap-5">
             {navLinks.map(({ key, href }) => (
               <Link
                 key={key}
                 href={href}
-                className="font-mono text-xs tracking-widest text-aegryn-cream2 uppercase hover:text-aegryn-cream"
+                className="font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors"
                 onClick={() => setOpen(false)}
               >
                 {t(key)}
               </Link>
             ))}
-            <div className="mt-2 pt-4 border-t border-black/[0.08]">
+            <Link
+              href="/contact"
+              className="font-mono text-[11px] tracking-[0.14em] uppercase border border-ag-border px-4 py-2.5 text-ag-dark text-center hover:border-ag-black transition-all"
+              onClick={() => setOpen(false)}
+            >
+              Contact
+            </Link>
+            <div className="pt-2 border-t border-ag-border">
               <LanguageSwitcher />
             </div>
           </div>

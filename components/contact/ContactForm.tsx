@@ -33,10 +33,10 @@ export default function ContactForm({ locale }: Props) {
 
   if (status === 'sent') {
     return (
-      <div className="flex flex-col items-start justify-center gap-4 rounded-2xl border border-aegryn-apex/30 bg-aegryn-apex/5 p-10">
-        <span className="font-mono text-2xl text-aegryn-apex">✓</span>
-        <p className="font-display text-xl font-bold text-aegryn-cream">{t('success.title')}</p>
-        <p className="text-sm text-aegryn-cream2">{t('success.desc')}</p>
+      <div className="flex flex-col items-start justify-center gap-4 rounded-2xl border border-ag-apex/30 bg-ag-apex/5 p-10">
+        <span className="font-mono text-2xl text-ag-apex">✓</span>
+        <p className="font-display text-xl font-bold text-ag-dark">{t('success.title')}</p>
+        <p className="text-sm text-ag-gray">{t('success.desc')}</p>
       </div>
     )
   }
@@ -45,7 +45,7 @@ export default function ContactForm({ locale }: Props) {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-aegryn-muted">
+          <label htmlFor="name" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
             {t('name')}
           </label>
           <input
@@ -53,12 +53,12 @@ export default function ContactForm({ locale }: Props) {
             name="name"
             type="text"
             required
-            className="w-full rounded-xl border border-aegryn-border bg-white px-4 py-3 text-sm text-aegryn-cream placeholder-aegryn-muted outline-none transition-colors focus:border-aegryn-apex/60 focus:ring-2 focus:ring-aegryn-apex/10"
+            className="w-full rounded-xl border border-ag-border bg-white px-4 py-3 text-sm text-ag-dark placeholder-ag-gray-light outline-none transition-colors focus:border-ag-apex/60 focus:ring-2 focus:ring-ag-apex/10"
             placeholder="Jean Dupont"
           />
         </div>
         <div>
-          <label htmlFor="email" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-aegryn-muted">
+          <label htmlFor="email" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
             {t('email')}
           </label>
           <input
@@ -66,40 +66,40 @@ export default function ContactForm({ locale }: Props) {
             name="email"
             type="email"
             required
-            className="w-full rounded-xl border border-aegryn-border bg-white px-4 py-3 text-sm text-aegryn-cream placeholder-aegryn-muted outline-none transition-colors focus:border-aegryn-apex/60 focus:ring-2 focus:ring-aegryn-apex/10"
+            className="w-full rounded-xl border border-ag-border bg-white px-4 py-3 text-sm text-ag-dark placeholder-ag-gray-light outline-none transition-colors focus:border-ag-apex/60 focus:ring-2 focus:ring-ag-apex/10"
             placeholder="jean@entreprise.com"
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="company" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-aegryn-muted">
+        <label htmlFor="company" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
           {t('company')}
         </label>
         <input
           id="company"
           name="company"
           type="text"
-          className="w-full rounded-xl border border-aegryn-border bg-white px-4 py-3 text-sm text-aegryn-cream placeholder-aegryn-muted outline-none transition-colors focus:border-aegryn-apex/60 focus:ring-2 focus:ring-aegryn-apex/10"
+          className="w-full rounded-xl border border-ag-border bg-white px-4 py-3 text-sm text-ag-dark placeholder-ag-gray-light outline-none transition-colors focus:border-ag-apex/60 focus:ring-2 focus:ring-ag-apex/10"
           placeholder="Acme SA"
         />
       </div>
 
       <div>
-        <label htmlFor="subject" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-aegryn-muted">
+        <label htmlFor="subject" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
           {t('subject')}
         </label>
         <select
           id="subject"
           name="subject"
           required
-          className="w-full rounded-xl border border-aegryn-border bg-white px-4 py-3 text-sm text-aegryn-cream outline-none transition-colors focus:border-aegryn-apex/60 focus:ring-2 focus:ring-aegryn-apex/10"
+          className="w-full rounded-xl border border-ag-border bg-white px-4 py-3 text-sm text-ag-dark outline-none transition-colors focus:border-ag-apex/60 focus:ring-2 focus:ring-ag-apex/10"
         >
-          <option value="" disabled className="text-aegryn-muted">
+          <option value="" disabled className="text-ag-gray-light">
             {t('subjectPlaceholder')}
           </option>
           {subjects.map((s) => (
-            <option key={s} value={s} className="bg-aegryn-bg2">
+            <option key={s} value={s} className="bg-ag-off-white">
               {t(`subjects.${s}`)}
             </option>
           ))}
@@ -107,7 +107,7 @@ export default function ContactForm({ locale }: Props) {
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-aegryn-muted">
+        <label htmlFor="message" className="mb-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
           {t('message')}
         </label>
         <textarea
@@ -115,7 +115,7 @@ export default function ContactForm({ locale }: Props) {
           name="message"
           rows={5}
           required
-          className="w-full rounded-xl border border-aegryn-border bg-white px-4 py-3 text-sm text-aegryn-cream placeholder-aegryn-muted outline-none transition-colors focus:border-aegryn-apex/60 focus:ring-2 focus:ring-aegryn-apex/10 resize-none"
+          className="w-full rounded-xl border border-ag-border bg-white px-4 py-3 text-sm text-ag-dark placeholder-ag-gray-light outline-none transition-colors focus:border-ag-apex/60 focus:ring-2 focus:ring-ag-apex/10 resize-none"
           placeholder={t('messagePlaceholder')}
         />
       </div>
@@ -127,7 +127,7 @@ export default function ContactForm({ locale }: Props) {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="group flex items-center gap-3 rounded-full bg-aegryn-apex px-7 py-3.5 font-display text-sm font-bold text-aegryn-obsidian transition-all hover:bg-aegryn-obsidian hover:text-aegryn-white disabled:opacity-50"
+        className="group flex items-center gap-3 rounded-full bg-ag-apex px-7 py-3.5 font-display text-sm font-bold text-ag-navy transition-all hover:bg-ag-navy hover:text-white disabled:opacity-50"
       >
         {status === 'sending' ? t('sending') : t('submit')}
         <span className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>

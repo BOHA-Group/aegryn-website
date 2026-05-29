@@ -26,16 +26,16 @@ export default function LanguageSwitcher() {
   }
 
   return (
-    <div className="flex items-center gap-1.5 text-aegryn-cream2">
+    <div className="flex items-center gap-1.5 text-ag-gray">
       <Globe size={13} className="opacity-60" aria-hidden="true" />
       <select
         value={locale}
         onChange={handleChange}
         aria-label="Sélectionner la langue"
-        className="bg-transparent font-mono text-xs uppercase tracking-widest text-aegryn-cream2 cursor-pointer hover:text-aegryn-cream transition-colors appearance-none pr-1 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aegryn-apex"
+        className="bg-transparent font-mono text-[11px] uppercase tracking-[0.12em] text-ag-gray cursor-pointer hover:text-ag-black transition-colors appearance-none pr-1 focus:outline-none"
       >
         {locales.map(({ code, label }) => (
-          <option key={code} value={code} className="bg-white text-aegryn-obsidian">
+          <option key={code} value={code} className="bg-white text-ag-dark">
             {label}
           </option>
         ))}

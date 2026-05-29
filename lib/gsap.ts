@@ -7,18 +7,8 @@ import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
 import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin'
 import { Flip } from 'gsap/Flip'
 
-let registered = false
-
-export function registerGSAP() {
-  if (registered) return
-  gsap.registerPlugin(
-    ScrollTrigger,
-    SplitText,
-    DrawSVGPlugin,
-    ScrambleTextPlugin,
-    Flip,
-  )
-  registered = true
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin, ScrambleTextPlugin, Flip)
 }
 
 export { gsap, ScrollTrigger, SplitText, DrawSVGPlugin, ScrambleTextPlugin, Flip }
