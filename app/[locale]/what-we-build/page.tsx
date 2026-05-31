@@ -55,7 +55,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
             <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-3">
               {t('advisoryCta.label')}
             </p>
-            <h2 className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.95] max-w-lg"
+            <h2 className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.2] max-w-lg"
               style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
             >
               {t('advisoryCta.text')}
@@ -63,7 +63,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
           </div>
           <Link
             href="/advisory"
-            className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
+            className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
           >
             {t('advisoryCta.button')}
             <ArrowUpRight size={14} />

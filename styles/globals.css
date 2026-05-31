@@ -166,10 +166,10 @@ a, button {
 .link-underline::after {
   content           : '';
   position          : absolute;
-  bottom            : -1px;
+  bottom            : -3px;
   left              : 0;
   width             : 0;
-  height            : 1px;
+  height            : 2px;
   background        : currentColor;
   transition        : width 300ms cubic-bezier(0.25, 0, 0, 1);
 }

@@ -64,7 +64,7 @@ const footerAssets = [
 ]
 
 const socialLinks = [
-  { label: 'LinkedIn',  href: 'https://www.linkedin.com/company/aegryn/' },
+  { label: 'LinkedIn',  href: 'https://www.linkedin.com/company/106273747/' },
   { label: 'Instagram', href: 'https://www.instagram.com/aegryn/' },
   { label: 'TikTok',    href: 'https://www.tiktok.com/@aegryn' },
   { label: 'YouTube',   href: 'https://www.youtube.com/@aegryn' },
