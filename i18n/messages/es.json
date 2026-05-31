@@ -157,13 +157,25 @@
     "founder": { "label": "El fundador", "bio1": "Yohann Bollack es emprendedor, builder y estratega digital. Fundó Aegryn con una convicción simple: los mejores activos digitales nacen del dominio total de la cadena, de la idea a la infraestructura.", "bio2": "Apasionado por la intersección entre tecnología, seguridad y diseño, lidera un ecosistema de seis productos.", "cta": "Ponerse en contacto" },
     "swiss": { "title": "Seis activos. Una casa común. Una ambición helvética.", "cta": "Ver nuestros activos" }
   },
+  "career": {
+    "hero": { "label": "Aegryn Advisory & Carreras", "title": "Advisory & Expertos en Ecosistemas Digitales", "desc": "Aegryn busca Senior Advisors — expertos operativos en Data, IA y Ciberseguridad para estructurar ecosistemas digitales duraderos." },
+    "positions": { "label": "Próximas posiciones", "count": "08", "domain": "Dominio", "type": "Tipo" },
+    "apply": "Postularse",
+    "spontaneous": "Candidatura espontanéa",
+    "statement": { "label": "Aegryn Advisory", "title": "Engineered to Last — construido por expertos que creen en ello.", "cta": "Descubrir Advisory" },
+    "domains": { "all": "Todos los dominios", "strategy": "Business Strategy", "cyber": "Ciberseguridad", "finance": "Finanzas", "growth": "Growth & Brand", "ai": "IA & Data", "architecture": "Arquitectura", "ux": "UX & Diseño", "product": "Producto" }
+  },
+  "assetPage": {
+    "back": "Nuestros activos", "presentation": "Presentación", "audience": "Público objetivo", "features": "Características", "visit": "Visitar", "comingSoon": "Próximamente",
+    "cta": { "title": "Descubre todo el ecosistema.", "label": "Aegryn Group", "allAssets": "Todos nuestros activos", "contact": "Contáctanos" }
+  },
   "contact": {
     "hero": { "title": "Hablemos.", "desc": "Advisory, asociación, prensa o consulta general — respondemos en 24h." },
     "responseTime": { "label": "Tiempo de respuesta", "value": "En 24 horas" },
     "form": {
       "name": "Nombre completo", "email": "Correo electrónico", "company": "Empresa (opcional)",
       "subject": "Asunto", "subjectPlaceholder": "Elegir un asunto",
-      "subjects": { "general": "Consulta general", "advisory": "Advisory & Ciberseguridad", "partnership": "Asociación", "investor": "Inversor", "media": "Prensa & Medios", "career": "Empleo" },
+      "subjects": { "general": "Consulta general", "advisory": "Advisory", "partnership": "Asociación", "investor": "Inversor", "media": "Prensa & Medios", "career": "Empleo" },
       "message": "Mensaje", "messagePlaceholder": "Describe tu solicitud...",
       "submit": "Enviar", "sending": "Enviando...", "error": "Ocurrió un error. Inténtalo de nuevo o escríbenos directamente.",
       "success": { "title": "Mensaje recibido.", "desc": "Te responderemos en 24 horas." }

@@ -157,13 +157,25 @@
     "founder": { "label": "De oprichter", "bio1": "Yohann Bollack is ondernemer, builder en digitaal strateeg. Hij richtte Aegryn op met een eenvoudige overtuiging: de beste digitale assets worden geboren uit totale beheersing van de keten, van idee tot infrastructuur.", "bio2": "Gepassioneerd door de kruising van technologie, beveiliging en design leidt hij een ecosysteem van zes producten.", "cta": "Contact opnemen" },
     "swiss": { "title": "Zes assets. Één gemeenschappelijk huis. Één Zwitserse ambitie.", "cta": "Bekijk onze assets" }
   },
+  "career": {
+    "hero": { "label": "Aegryn Advisory & Carrières", "title": "Advisory & Experts in Digitale Ecosystemen", "desc": "Aegryn zoekt Senior Advisors — operationele experts in Data, AI en Cyberbeveiliging voor duurzame digitale ecosystemen." },
+    "positions": { "label": "Aankomende functies", "count": "08", "domain": "Domein", "type": "Type" },
+    "apply": "Solliciteren",
+    "spontaneous": "Open sollicitatie",
+    "statement": { "label": "Aegryn Advisory", "title": "Engineered to Last — gebouwd door experts die erin geloven.", "cta": "Ontdek Advisory" },
+    "domains": { "all": "Alle domeinen", "strategy": "Business Strategy", "cyber": "Cyberbeveiliging", "finance": "Financiën", "growth": "Growth & Brand", "ai": "AI & Data", "architecture": "Architectuur", "ux": "UX & Design", "product": "Product" }
+  },
+  "assetPage": {
+    "back": "Onze assets", "presentation": "Presentatie", "audience": "Doelgroep", "features": "Functies", "visit": "Bezoeken", "comingSoon": "Binnenkort beschikbaar",
+    "cta": { "title": "Ontdek het volledige ecosysteem.", "label": "Aegryn Group", "allAssets": "Al onze assets", "contact": "Neem contact op" }
+  },
   "contact": {
     "hero": { "title": "Laten we praten.", "desc": "Advisory, partnerschap, pers of algemene vraag — we reageren binnen 24u." },
     "responseTime": { "label": "Reactietijd", "value": "Binnen 24 uur" },
     "form": {
       "name": "Volledige naam", "email": "E-mailadres", "company": "Bedrijf (optioneel)",
       "subject": "Onderwerp", "subjectPlaceholder": "Kies een onderwerp",
-      "subjects": { "general": "Algemene vraag", "advisory": "Advisory & Cyberbeveiliging", "partnership": "Partnerschap", "investor": "Investeerder", "media": "Pers & Media", "career": "Carrière" },
+      "subjects": { "general": "Algemene vraag", "advisory": "Advisory", "partnership": "Partnerschap", "investor": "Investeerder", "media": "Pers & Media", "career": "Carrière" },
       "message": "Bericht", "messagePlaceholder": "Beschrijf uw vraag...",
       "submit": "Versturen", "sending": "Versturen...", "error": "Er is een fout opgetreden. Probeer het opnieuw of schrijf ons rechtstreeks.",
       "success": { "title": "Bericht ontvangen.", "desc": "Wij reageren binnen 24 uur." }

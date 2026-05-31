@@ -157,13 +157,25 @@
     "founder": { "label": "Il fondatore", "bio1": "Yohann Bollack è imprenditore, builder e stratega digitale. Ha fondato Aegryn con una semplice convinzione: i migliori asset digitali nascono dalla totale padronanza della catena, dall'idea all'infrastruttura.", "bio2": "Appassionato dell'intersezione tra tecnologia, sicurezza e design, guida un ecosistema di sei prodotti.", "cta": "Contattaci" },
     "swiss": { "title": "Sei asset. Una casa comune. Un'ambizione elvetica.", "cta": "Scopri i nostri asset" }
   },
+  "career": {
+    "hero": { "label": "Aegryn Advisory & Carriere", "title": "Advisory & Esperti di Ecosistemi Digitali", "desc": "Aegryn cerca Senior Advisors — esperti operativi in Data, IA e Cybersicurezza per strutturare ecosistemi digitali duraturi." },
+    "positions": { "label": "Posizioni a venire", "count": "08", "domain": "Dominio", "type": "Tipo" },
+    "apply": "Candidarsi",
+    "spontaneous": "Candidatura spontanea",
+    "statement": { "label": "Aegryn Advisory", "title": "Engineered to Last — costruito da esperti che ci credono.", "cta": "Scopri Advisory" },
+    "domains": { "all": "Tutti i domini", "strategy": "Business Strategy", "cyber": "Cybersicurezza", "finance": "Finanza", "growth": "Growth & Brand", "ai": "IA & Data", "architecture": "Architettura", "ux": "UX & Design", "product": "Prodotto" }
+  },
+  "assetPage": {
+    "back": "I nostri asset", "presentation": "Presentazione", "audience": "Pubblico target", "features": "Funzionalità", "visit": "Visita", "comingSoon": "Prossimamente",
+    "cta": { "title": "Scopri l'intero ecosistema.", "label": "Aegryn Group", "allAssets": "Tutti i nostri asset", "contact": "Contattaci" }
+  },
   "contact": {
     "hero": { "title": "Parliamo.", "desc": "Advisory, partnership, stampa o domanda generale — rispondiamo entro 24h." },
     "responseTime": { "label": "Tempo di risposta", "value": "Entro 24 ore" },
     "form": {
       "name": "Nome completo", "email": "Indirizzo email", "company": "Azienda (opzionale)",
       "subject": "Oggetto", "subjectPlaceholder": "Scegli un oggetto",
-      "subjects": { "general": "Richiesta generale", "advisory": "Advisory & Cybersicurezza", "partnership": "Partnership", "investor": "Investitore", "media": "Stampa & Media", "career": "Carriera" },
+      "subjects": { "general": "Richiesta generale", "advisory": "Advisory", "partnership": "Partnership", "investor": "Investitore", "media": "Stampa & Media", "career": "Carriera" },
       "message": "Messaggio", "messagePlaceholder": "Descrivi la tua richiesta...",
       "submit": "Invia", "sending": "Invio...", "error": "Si è verificato un errore. Riprova o scrivici direttamente.",
       "success": { "title": "Messaggio ricevuto.", "desc": "Ti risponderemo entro 24 ore." }

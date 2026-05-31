@@ -187,6 +187,51 @@
       "cta": "Voir nos actifs"
     }
   },
+  "career": {
+    "hero": {
+      "label": "Aegryn Advisory & Carrières",
+      "title": "Advisory & Experts Écosystèmes Numériques",
+      "desc": "Aegryn recrute des Senior Advisors — des experts opérationnels en Data, IA et Cybersécurité pour structurer des écosystèmes numériques durables."
+    },
+    "positions": {
+      "label": "Postes à venir",
+      "count": "08",
+      "domain": "Domaine",
+      "type": "Type"
+    },
+    "apply": "Postuler",
+    "spontaneous": "Candidature spontanée",
+    "statement": {
+      "label": "Aegryn Advisory",
+      "title": "Engineered to Last — construit par des experts qui y croient.",
+      "cta": "Découvrir l'Advisory"
+    },
+    "domains": {
+      "all": "Tous les domaines",
+      "strategy": "Business Strategy",
+      "cyber": "Cybersécurité",
+      "finance": "Finance",
+      "growth": "Growth & Brand",
+      "ai": "AI & Data",
+      "architecture": "Architecture",
+      "ux": "UX & Design",
+      "product": "Product"
+    }
+  },
+  "assetPage": {
+    "back": "Nos actifs",
+    "presentation": "Présentation",
+    "audience": "Public cible",
+    "features": "Fonctionnalités",
+    "visit": "Visiter",
+    "comingSoon": "Bientôt disponible",
+    "cta": {
+      "title": "Découvrez l'ensemble de l'écosystème.",
+      "label": "Aegryn Group",
+      "allAssets": "Tous nos actifs",
+      "contact": "Nous contacter"
+    }
+  },
   "contact": {
     "hero": {
       "title": "Parlons.",
@@ -201,7 +246,7 @@
       "subjectPlaceholder": "Choisir un sujet",
       "subjects": {
         "general": "Demande générale",
-        "advisory": "Advisory & Cybersécurité",
+        "advisory": "Advisory",
         "partnership": "Partenariat",
         "investor": "Investisseur",
         "media": "Presse & Médias",

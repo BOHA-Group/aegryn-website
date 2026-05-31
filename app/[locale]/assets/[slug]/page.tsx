@@ -3,7 +3,8 @@ import Link                   from 'next/link'
 import { ArrowUpRight, ArrowLeft } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
-import type { Metadata } from 'next'
+import { getTranslations }    from 'next-intl/server'
+import type { Metadata }      from 'next'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -86,10 +87,13 @@ const ASSET_DETAILS: Record<string, {
   },
 }
 
+const LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl']
+
 export async function generateStaticParams() {
-  return AEGRYN_ASSETS
-    .filter((a) => a.id !== 'kryv')
-    .map((a) => ({ slug: a.slug }))
+  const assets = AEGRYN_ASSETS.filter((a) => a.id !== 'kryv')
+  return LOCALES.flatMap((locale) =>
+    assets.map((a) => ({ locale, slug: a.slug }))
+  )
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -105,7 +109,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function AssetPage({ params }: Props) {
-  const { slug } = await params
+  const { locale, slug } = await params
+  const t     = await getTranslations({ locale, namespace: 'assetPage' })
   const asset = AEGRYN_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) notFound()
 
@@ -124,7 +129,7 @@ export default async function AssetPage({ params }: Props) {
             className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-gray-light hover:text-ag-black transition-colors"
           >
             <ArrowLeft size={12} />
-            Nos actifs
+            {t('back')}
           </Link>
         </div>
       </div>
@@ -164,12 +169,12 @@ export default async function AssetPage({ params }: Props) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-navy transition-colors"
             >
-              Visiter {asset.name}
+              {t('visit')} {asset.name}
               <ArrowUpRight size={14} />
             </a>
           ) : (
             <span className="inline-flex items-center gap-3 border border-ag-border text-ag-gray-light font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 cursor-default select-none">
-              Bientôt disponible
+              {t('comingSoon')}
             </span>
           )}
         </div>
@@ -186,7 +191,7 @@ export default async function AssetPage({ params }: Props) {
             {/* Long description */}
             <div className="py-20 md:pr-16">
               <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
-                Présentation
+                {t('presentation')}
               </p>
               <p className="text-[15px] text-ag-dark leading-[1.8]">
                 {details?.longDesc ?? asset.description}
@@ -194,7 +199,7 @@ export default async function AssetPage({ params }: Props) {
               {details?.audience && (
                 <div className="mt-10 pt-8 border-t border-ag-border">
                   <p className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
-                    Public cible
+                    {t('audience')}
                   </p>
                   <p className="text-[14px] text-ag-gray">{details.audience}</p>
                 </div>
@@ -204,7 +209,7 @@ export default async function AssetPage({ params }: Props) {
             {/* Features */}
             <div className="py-20 md:pl-16">
               <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
-                Fonctionnalités
+                {t('features')}
               </p>
               <ul className="space-y-4">
                 {(details?.features ?? []).map((f, i) => (
@@ -236,13 +241,13 @@ export default async function AssetPage({ params }: Props) {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
             <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">
-              Aegryn Group
+              {t('cta.label')}
             </p>
             <h2
               className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
               style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
             >
-              Découvrez l&apos;ensemble de l&apos;écosystème.
+              {t('cta.title')}
             </h2>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
@@ -250,14 +255,14 @@ export default async function AssetPage({ params }: Props) {
               href="/what-we-build"
               className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
             >
-              Tous nos actifs
+              {t('cta.allAssets')}
               <ArrowUpRight size={14} />
             </Link>
             <Link
               href="/contact"
               className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-navy bg-ag-apex px-6 py-3 hover:bg-white transition-colors"
             >
-              Nous contacter
+              {t('cta.contact')}
               <ArrowUpRight size={14} />
             </Link>
           </div>

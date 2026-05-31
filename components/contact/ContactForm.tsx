@@ -1,15 +1,17 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { useState } from 'react'
+import { useState }        from 'react'
 
 type Props = { locale: string }
 
-const subjects = ['general', 'advisory', 'partnership', 'investor', 'media', 'career'] as const
+const subjects   = ['general', 'advisory', 'partnership', 'investor', 'media', 'career'] as const
+const MSG_LIMIT  = 250
 
 export default function ContactForm({ locale }: Props) {
   const t = useTranslations('contact.form')
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [msgLen, setMsgLen] = useState(0)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -25,6 +27,7 @@ export default function ContactForm({ locale }: Props) {
       })
       if (!res.ok) throw new Error()
       setStatus('sent')
+      setMsgLen(0)
       form.reset()
     } catch {
       setStatus('error')
@@ -54,7 +57,7 @@ export default function ContactForm({ locale }: Props) {
             type="text"
             required
             className="w-full rounded-xl border border-ag-border bg-white px-4 py-3 text-sm text-ag-dark placeholder-ag-gray-light outline-none transition-colors focus:border-ag-apex/60 focus:ring-2 focus:ring-ag-apex/10"
-            placeholder="Jean Dupont"
+            placeholder={t('name')}
           />
         </div>
         <div>
@@ -67,7 +70,7 @@ export default function ContactForm({ locale }: Props) {
             type="email"
             required
             className="w-full rounded-xl border border-ag-border bg-white px-4 py-3 text-sm text-ag-dark placeholder-ag-gray-light outline-none transition-colors focus:border-ag-apex/60 focus:ring-2 focus:ring-ag-apex/10"
-            placeholder="jean@entreprise.com"
+            placeholder={t('email')}
           />
         </div>
       </div>
@@ -81,7 +84,7 @@ export default function ContactForm({ locale }: Props) {
           name="company"
           type="text"
           className="w-full rounded-xl border border-ag-border bg-white px-4 py-3 text-sm text-ag-dark placeholder-ag-gray-light outline-none transition-colors focus:border-ag-apex/60 focus:ring-2 focus:ring-ag-apex/10"
-          placeholder="Acme SA"
+          placeholder={t('company')}
         />
       </div>
 
@@ -115,9 +118,16 @@ export default function ContactForm({ locale }: Props) {
           name="message"
           rows={5}
           required
+          maxLength={MSG_LIMIT}
           className="w-full rounded-xl border border-ag-border bg-white px-4 py-3 text-sm text-ag-dark placeholder-ag-gray-light outline-none transition-colors focus:border-ag-apex/60 focus:ring-2 focus:ring-ag-apex/10 resize-none"
-          placeholder={t('messagePlaceholder')}
+          placeholder={t('message')}
+          onChange={(e) => setMsgLen(e.target.value.length)}
         />
+        <p className={`text-right font-sans text-[10px] mt-1 tabular-nums ${
+          msgLen >= MSG_LIMIT ? 'text-red-400' : 'text-ag-gray-light'
+        }`}>
+          {msgLen}/{MSG_LIMIT}
+        </p>
       </div>
 
       {status === 'error' && (

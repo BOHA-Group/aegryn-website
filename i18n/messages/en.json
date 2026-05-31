@@ -187,6 +187,27 @@
       "cta": "See our assets"
     }
   },
+  "career": {
+    "hero": {
+      "label": "Aegryn Advisory & Careers",
+      "title": "Advisory & Digital Ecosystem Experts",
+      "desc": "Aegryn is recruiting Senior Advisors — operational experts in Data, AI and Cybersecurity to structure durable digital ecosystems."
+    },
+    "positions": { "label": "Upcoming positions", "count": "08", "domain": "Domain", "type": "Type" },
+    "apply": "Apply",
+    "spontaneous": "Unsolicited application",
+    "statement": { "label": "Aegryn Advisory", "title": "Engineered to Last — built by experts who believe in it.", "cta": "Discover Advisory" },
+    "domains": { "all": "All domains", "strategy": "Business Strategy", "cyber": "Cybersecurity", "finance": "Finance", "growth": "Growth & Brand", "ai": "AI & Data", "architecture": "Architecture", "ux": "UX & Design", "product": "Product" }
+  },
+  "assetPage": {
+    "back": "Our assets",
+    "presentation": "Overview",
+    "audience": "Target audience",
+    "features": "Features",
+    "visit": "Visit",
+    "comingSoon": "Coming soon",
+    "cta": { "title": "Discover the full ecosystem.", "label": "Aegryn Group", "allAssets": "All our assets", "contact": "Contact us" }
+  },
   "contact": {
     "hero": {
       "title": "Let's talk.",
@@ -201,7 +222,7 @@
       "subjectPlaceholder": "Choose a subject",
       "subjects": {
         "general": "General Inquiry",
-        "advisory": "Advisory & Cybersecurity",
+        "advisory": "Advisory",
         "partnership": "Partnership",
         "investor": "Investor",
         "media": "Press & Media",
