@@ -2,47 +2,18 @@
 
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
 
-const WHAT_WE_DO = [
-  {
-    num: '01',
-    title: 'ECOSYSTEM ENGINEERING',
-    desc: 'We architect digital ecosystems built for scale, resilience and long-term value — where every component connects and compounds.',
-  },
-  {
-    num: '02',
-    title: 'EXPERIENCE ARCHITECTURE',
-    desc: 'We design seamless user experiences that simplify complexity and create intuitive interactions across all our platforms.',
-  },
-  {
-    num: '03',
-    title: 'TECHNOLOGY FOUNDATIONS',
-    desc: 'We build on solid, sovereign technology infrastructure — ensuring security, independence and durability at every layer.',
-  },
-  {
-    num: '04',
-    title: 'STRATEGIC ADVISORY',
-    desc: 'Our advisory draws on real execution frameworks in Data, AI & Security — grounded in how we build our own ecosystems.',
-  },
-]
-
-const MISSION_PILLARS = [
-  {
-    title: 'WE CREATE',
-    desc: 'Design and develop solutions that anticipate your needs as individuals or professionals, ensuring seamless digital interactions that enhance everyday life.',
-  },
-  {
-    title: 'WE SIMPLIFY',
-    desc: 'Eliminate complexity by integrating smart automation, intuitive interfaces, and interconnected systems, making technology effortless and efficient.',
-  },
-  {
-    title: 'WE EMBRACE',
-    desc: 'We stay ahead by pioneering innovations, embracing cutting-edge advancements, and setting new standards and offers in seamless digital experiences.',
-  },
-]
-
 export function ManifestoSection() {
+  const tW = useTranslations('whatwedo')
+  const tA = useTranslations('aboutSection')
+  const tM = useTranslations('missionSection')
+
+  const whatwedoItems  = tW.raw('items') as { num: string; title: string; desc: string }[]
+  const missionItems   = tM.raw('items') as { title: string; desc: string }[]
+  const stats          = tA.raw('stats') as { val: string; label: string }[]
+
   const whatRef  = useRef<HTMLElement>(null)
   const aboutRef = useRef<HTMLElement>(null)
   const missionRef = useRef<HTMLElement>(null)
@@ -73,14 +44,14 @@ export function ManifestoSection() {
               href="/advisory"
               className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light hover:text-ag-black transition-colors"
             >
-              / What we do
+              / {tW('label')}
             </Link>
             <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
               04
             </span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-ag-border">
-            {WHAT_WE_DO.map((item) => (
+            {whatwedoItems.map((item) => (
               <div key={item.num} className="what-col py-14 lg:px-8 first:pl-0 last:pr-0">
                 <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-6">
                   {item.num}
@@ -106,23 +77,23 @@ export function ManifestoSection() {
           <div className="grid md:grid-cols-[1fr_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
             <div className="py-20 md:pr-16">
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
-                / About Aegryn
+                / {tA('label')}
               </p>
               <h2
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.93] mb-10"
                 style={{ fontSize: 'clamp(34px,4.5vw,58px)' }}
               >
-                Swiss Technology<br />Asset Platform.
+                {tA('title').split('\n').map((line, i) => (
+                  <span key={i}>{line}{i === 0 && <br />}</span>
+                ))}
               </h2>
               <p className="font-sans font-normal text-[15px] text-ag-gray leading-[1.85] mb-10 max-w-lg">
-                Nous concevons, finançons et exploitons des écosystèmes numériques
-                qui progressent des idées ambitieuses vers des technologies réelles
-                et pérennes. Pas des features — des actifs.
+                {tA('desc')}
               </p>
               <div className="flex items-center gap-px">
                 <div className="w-8 h-px bg-ag-apex" />
                 <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-apex ml-3">
-                  Engineered in Switzerland. Built to last.
+                  {tA('tagline')}
                 </p>
               </div>
               <div className="mt-8">
@@ -130,7 +101,7 @@ export function ManifestoSection() {
                   href="/about"
                   className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3.5 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300"
                 >
-                  À propos d&apos;Aegryn
+                  {tA('cta')}
                   <span className="text-base leading-none">→</span>
                 </Link>
               </div>
@@ -148,27 +119,21 @@ export function ManifestoSection() {
                   className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2] mb-8 relative z-10"
                   style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}
                 >
-                  Nous construisons des actifs numériques qui améliorent
-                  la vie quotidienne — pour les individus, les professionnels
-                  et les marchés qu&apos;ils servent.
+                  {tA('quote')}
                 </p>
                 <footer>
                   <p className="font-sans font-semibold text-[11px] tracking-[0.2em] uppercase text-ag-black">
-                    Yohann Bollack
+                    {tA('ceoName')}
                   </p>
                   <p className="font-sans font-normal text-[11px] text-ag-gray-light mt-0.5">
-                    Founder & CEO — Aegryn Group
+                    {tA('ceoTitle')}
                   </p>
                 </footer>
               </blockquote>
 
               {/* Stats inline */}
               <div className="grid grid-cols-3 border-t border-ag-border pt-8 gap-4">
-                {[
-                  { val: '6', label: 'Actifs' },
-                  { val: '3', label: 'Catégories' },
-                  { val: '6', label: 'Marchés' },
-                ].map((s) => (
+                {stats.map((s) => (
                   <div key={s.label}>
                     <p
                       className="font-sans font-bold text-ag-black tracking-[-0.03em] mb-1"
@@ -192,14 +157,14 @@ export function ManifestoSection() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between border-b border-ag-border py-4 mb-0">
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-              / Notre Mission
+              / {tM('label')}
             </p>
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
-              Simplifier la vie par le numérique
+              {tM('sub')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border">
-            {MISSION_PILLARS.map((item, i) => (
+            {missionItems.map((item, i) => (
               <div key={item.title} className="mission-col py-14 md:px-10 first:pl-0 last:pr-0">
                 <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-8">
                   {String(i + 1).padStart(2, '0')}

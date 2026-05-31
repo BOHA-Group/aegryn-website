@@ -108,6 +108,50 @@
       "button": "Discover Advisory"
     }
   },
+  "whatwedo": {
+    "label": "What we do",
+    "items": [
+      { "num": "01", "title": "ECOSYSTEM ENGINEERING", "desc": "We architect digital ecosystems built for scale, resilience and long-term value — where every component connects and compounds." },
+      { "num": "02", "title": "EXPERIENCE ARCHITECTURE", "desc": "We design seamless user experiences that simplify complexity and create intuitive interactions across all our platforms." },
+      { "num": "03", "title": "TECHNOLOGY FOUNDATIONS", "desc": "We build on solid, sovereign technology infrastructure — ensuring security, independence and durability at every layer." },
+      { "num": "04", "title": "STRATEGIC ADVISORY", "desc": "Our advisory draws on real execution frameworks in Data, AI & Security — grounded in how we build our own ecosystems." }
+    ]
+  },
+  "aboutSection": {
+    "label": "About Aegryn",
+    "title": "Swiss Technology\nAsset Platform.",
+    "desc": "We design, build and operate digital ecosystems that move from bold ideas to real, enduring technology. Not features — assets.",
+    "tagline": "Engineered in Switzerland. Built to last.",
+    "cta": "About Aegryn",
+    "quote": "We build digital assets that improve everyday life — for individuals, professionals and the markets they serve.",
+    "ceoName": "Yohann Bollack",
+    "ceoTitle": "Founder & CEO — Aegryn Group",
+    "stats": [
+      { "val": "6", "label": "Assets" },
+      { "val": "3", "label": "Categories" },
+      { "val": "6", "label": "Markets" }
+    ]
+  },
+  "missionSection": {
+    "label": "Our Mission",
+    "sub": "Simplifying life with smart apps",
+    "items": [
+      { "title": "WE CREATE", "desc": "Solutions that anticipate your needs as individuals or professionals, ensuring seamless digital interactions that enhance everyday life." },
+      { "title": "WE SIMPLIFY", "desc": "Eliminate complexity by integrating smart automation, intuitive interfaces, and interconnected systems, making technology effortless and efficient." },
+      { "title": "WE EMBRACE", "desc": "We stay ahead by pioneering innovations, embracing cutting-edge advancements, and setting new standards in seamless digital experiences." }
+    ]
+  },
+  "whyapps": {
+    "label": "Why our apps",
+    "count": "04",
+    "items": [
+      { "num": "01", "title": "Innovative", "desc": "We leverage cutting-edge technologies — AI, automation and smart data — to create apps that continuously evolve and improve your experience." },
+      { "num": "02", "title": "Secure & Private", "desc": "Your data is yours. Every Aegryn app is engineered with privacy-first architecture, encrypted communications and transparent data practices aligned with Swiss and European standards." },
+      { "num": "03", "title": "Diverse & Inclusive", "desc": "We design for everyone. Our apps are built to be accessible, culturally sensitive and available across languages and markets — because great technology should serve all." },
+      { "num": "04", "title": "Social Impact", "desc": "We build with purpose. Each platform we create is designed to simplify real-life challenges, reduce friction and create measurable value for individuals and communities." },
+      { "num": "05", "title": "Accessible", "desc": "From first-time smartphone users to seasoned professionals, our apps are intuitive and barrier-free — because the best interface is one anyone can use." }
+    ]
+  },
   "about": {
     "hero": {
       "label": "About Aegryn",

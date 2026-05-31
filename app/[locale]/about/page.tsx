@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
 import Image from 'next/image'
-import { AegrynLogo } from '@/components/brand/AegrynLogo'
+import { LogoZoomSection } from '@/components/sections/LogoZoomSection'
 import type { Metadata } from 'next'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -66,10 +66,8 @@ export default function AboutPage() {
                 {t('vision.text')}
               </p>
             </div>
-            {/* Logo officiel */}
-            <div className="py-8 md:pl-8 flex items-center justify-center" style={{ height: '320px' }}>
-              <AegrynLogo size={160} variant="mark" />
-            </div>
+            {/* Logo zoom au scroll */}
+            <LogoZoomSection />
           </div>
         </div>
       </section>

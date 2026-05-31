@@ -108,6 +108,50 @@
       "button": "Découvrir Advisory"
     }
   },
+  "whatwedo": {
+    "label": "Ce que nous faisons",
+    "items": [
+      { "num": "01", "title": "ECOSYSTEM ENGINEERING", "desc": "Nous architecturons des écosystèmes numériques conçus pour la scalabilité, la résilience et la valeur à long terme — où chaque composant se connecte et se cumule." },
+      { "num": "02", "title": "EXPERIENCE ARCHITECTURE", "desc": "Nous concevons des expériences utilisateurs fluides qui simplifient la complexité et créent des interactions intuitives sur l'ensemble de nos plateformes." },
+      { "num": "03", "title": "TECHNOLOGY FOUNDATIONS", "desc": "Nous construisons sur une infrastructure technologique solide et souveraine — garantissant sécurité, indépendance et durabilité à chaque couche." },
+      { "num": "04", "title": "STRATEGIC ADVISORY", "desc": "Notre advisory s'appuie sur de vrais cadres d'exécution en Data, IA & Sécurité — ancrés dans la façon dont nous construisons nos propres écosystèmes." }
+    ]
+  },
+  "aboutSection": {
+    "label": "À propos d'Aegryn",
+    "title": "Swiss Technology\nAsset Platform.",
+    "desc": "Nous concevons, finançons et exploitons des écosystèmes numériques qui progressent des idées ambitieuses vers des technologies réelles et pérennes. Pas des features — des actifs.",
+    "tagline": "Ingénié en Suisse. Construit pour durer.",
+    "cta": "À propos d'Aegryn",
+    "quote": "Nous construisons des actifs numériques qui améliorent la vie quotidienne — pour les individus, les professionnels et les marchés qu'ils servent.",
+    "ceoName": "Yohann Bollack",
+    "ceoTitle": "Fondateur & CEO — Aegryn Group",
+    "stats": [
+      { "val": "6", "label": "Actifs" },
+      { "val": "3", "label": "Catégories" },
+      { "val": "6", "label": "Marchés" }
+    ]
+  },
+  "missionSection": {
+    "label": "Notre Mission",
+    "sub": "Simplifier la vie par le numérique",
+    "items": [
+      { "title": "WE CREATE", "desc": "Des solutions qui anticipent vos besoins en tant qu'individus ou professionnels, garantissant des interactions numériques fluides qui améliorent le quotidien." },
+      { "title": "WE SIMPLIFY", "desc": "Éliminer la complexité en intégrant une automatisation intelligente, des interfaces intuitives et des systèmes interconnectés, rendant la technologie sans effort et efficace." },
+      { "title": "WE EMBRACE", "desc": "Nous restons en avance en pionnier des innovations, en adoptant les avancées de pointe et en fixant de nouveaux standards dans les expériences numériques fluides." }
+    ]
+  },
+  "whyapps": {
+    "label": "Pourquoi nos apps",
+    "count": "04",
+    "items": [
+      { "num": "01", "title": "Innovantes", "desc": "Nous exploitons les technologies de pointe — IA, automatisation et données intelligentes — pour créer des applications qui évoluent et améliorent continuellement votre expérience." },
+      { "num": "02", "title": "Sécurisées & Privées", "desc": "Vos données vous appartiennent. Chaque application Aegryn est conçue avec une architecture privacy-first, des communications chiffrées et des pratiques transparentes alignées sur les normes suisses et européennes." },
+      { "num": "03", "title": "Diversité & Inclusion", "desc": "Nous concevons pour tous. Nos applications sont accessibles, culturellement sensibles et disponibles dans plusieurs langues et marchés — parce que la grande technologie doit servir tout le monde." },
+      { "num": "04", "title": "Impact social", "desc": "Nous construisons avec un objectif. Chaque plateforme que nous créons est conçue pour simplifier les défis du quotidien, réduire les frictions et créer de la valeur mesurable pour les individus et les communautés." },
+      { "num": "05", "title": "Accessibles", "desc": "Des premiers utilisateurs de smartphones aux professionnels chevronnés, nos applications sont intuitives et sans barrières — parce que la meilleure interface est celle que tout le monde peut utiliser." }
+    ]
+  },
   "about": {
     "hero": {
       "label": "À propos d'Aegryn",

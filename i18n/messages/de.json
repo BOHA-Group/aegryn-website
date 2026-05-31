@@ -92,6 +92,50 @@
     "pillars": { "proprietary": { "stat": "100%", "label": "Eigentum" }, "sovereign": { "stat": "CH", "label": "Souveränität" }, "durable": { "stat": "∞", "label": "Beständigkeit" } },
     "advisoryCta": { "text": "Benötigt Ihr Unternehmen institutionellen digitalen Schutz?", "button": "Advisory entdecken" }
   },
+  "whatwedo": {
+    "label": "Was wir tun",
+    "items": [
+      { "num": "01", "title": "ECOSYSTEM ENGINEERING", "desc": "Wir entwerfen digitale Ökosysteme für Skalierbarkeit, Resilienz und langfristigen Wert — wo jede Komponente sich verbindet und multipliziert." },
+      { "num": "02", "title": "EXPERIENCE ARCHITECTURE", "desc": "Wir gestalten nahtlose Nutzererlebnisse, die Komplexität vereinfachen und intuitive Interaktionen auf allen Plattformen ermöglichen." },
+      { "num": "03", "title": "TECHNOLOGY FOUNDATIONS", "desc": "Wir bauen auf solider, souveräner Technologieinfrastruktur — mit Sicherheit, Unabhängigkeit und Bestandsfähigkeit auf jeder Ebene." },
+      { "num": "04", "title": "STRATEGIC ADVISORY", "desc": "Unser Advisory basiert auf echten Umsetzungsrahmen in Data, KI & Sicherheit — verankert in der Art, wie wir unsere eigenen Ökosysteme aufbauen." }
+    ]
+  },
+  "aboutSection": {
+    "label": "Über Aegryn",
+    "title": "Swiss Technology\nAsset Platform.",
+    "desc": "Wir konzipieren, finanzieren und betreiben digitale Ökosysteme — von kühnen Ideen zu echter, bestandsfähiger Technologie. Keine Features — Assets.",
+    "tagline": "Entwickelt in der Schweiz. Gebaut um zu bleiben.",
+    "cta": "Über Aegryn",
+    "quote": "Wir bauen digitale Assets, die den Alltag verbessern — für Einzelpersonen, Profis und die Märkte, in denen sie tätig sind.",
+    "ceoName": "Yohann Bollack",
+    "ceoTitle": "Gründer & CEO — Aegryn Group",
+    "stats": [
+      { "val": "6", "label": "Assets" },
+      { "val": "3", "label": "Kategorien" },
+      { "val": "6", "label": "Märkte" }
+    ]
+  },
+  "missionSection": {
+    "label": "Unsere Mission",
+    "sub": "Leben vereinfachen mit smarten Apps",
+    "items": [
+      { "title": "WIR SCHAFFEN", "desc": "Lösungen, die Ihre Bedürfnisse antizipieren, und nahtlose digitale Interaktionen gewährleisten, die den Alltag verbessern." },
+      { "title": "WIR VEREINFACHEN", "desc": "Wir beseitigen Komplexität durch intelligente Automatisierung, intuitive Interfaces und vernetzte Systeme." },
+      { "title": "WIR GESTALTEN", "desc": "Wir bleiben führend durch Pionierarbeit bei Innovationen und das Setzen neuer Standards in nahtlosen digitalen Erlebnissen." }
+    ]
+  },
+  "whyapps": {
+    "label": "Warum unsere Apps",
+    "count": "04",
+    "items": [
+      { "num": "01", "title": "Innovativ", "desc": "Wir nutzen modernste Technologien — KI, Automatisierung und Smart Data — um Apps zu schaffen, die sich kontinuierlich weiterentwickeln." },
+      { "num": "02", "title": "Sicher & Privat", "desc": "Ihre Daten gehören Ihnen. Jede Aegryn-App ist mit Privacy-First-Architektur und verschlüsselter Kommunikation entwickelt." },
+      { "num": "03", "title": "Vielfältig & Inklusiv", "desc": "Wir entwickeln für alle. Unsere Apps sind barrierefrei, kulturell sensibel und in mehreren Sprachen verfügbar." },
+      { "num": "04", "title": "Sozialer Impact", "desc": "Wir bauen mit Zweck. Jede Plattform vereinfacht echte Alltagsherausforderungen und schafft messbaren Mehrwert." },
+      { "num": "05", "title": "Zugänglich", "desc": "Von Erstnutzern bis zu erfahrenen Profis — unsere Apps sind intuitiv und barrierefrei, weil die beste Schnittstelle jeder nutzen kann." }
+    ]
+  },
   "about": {
     "hero": { "label": "Über Aegryn", "title": "Ein Builder, kein Berater.", "desc": "Aegryn ist ein Swiss Tech Asset Builder. Wir entwickeln, finanzieren und betreiben eigene digitale Assets aus der Schweiz." },
     "mission": { "label": "Unsere Mission", "title": "Bauen, was Zeit überdauert.", "p1": "Aegryn verkauft keine Projekte. Wir bauen Assets. Jedes Produkt, das wir starten, ist für Langlebigkeit, Wertschöpfung und Widerstandsfähigkeit ausgelegt.", "p2": "Unser Modell basiert auf vollständigem Eigentum unserer digitalen Assets, betrieben in einer souveränen Umgebung.", "p3": "Die Schweiz ist nicht nur eine Adresse. Es ist unser Standard: Neutralität, Präzision, Beständigkeit." },

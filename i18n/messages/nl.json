@@ -92,6 +92,50 @@
     "pillars": { "proprietary": { "stat": "100%", "label": "Eigendom" }, "sovereign": { "stat": "CH", "label": "Soevereiniteit" }, "durable": { "stat": "∞", "label": "Duurzaamheid" } },
     "advisoryCta": { "text": "Heeft uw bedrijf institutionele digitale bescherming nodig?", "button": "Ontdek Advisory" }
   },
+  "whatwedo": {
+    "label": "Wat we doen",
+    "items": [
+      { "num": "01", "title": "ECOSYSTEM ENGINEERING", "desc": "We ontwerpen digitale ecosystemen voor schaalbaarheid, veerkracht en langetermijnwaarde — waar elk onderdeel verbindt en vermenigvuldigt." },
+      { "num": "02", "title": "EXPERIENCE ARCHITECTURE", "desc": "We ontwerpen naadloze gebruikerservaringen die complexiteit vereenvoudigen en intuitiïve interacties creëren op al onze platforms." },
+      { "num": "03", "title": "TECHNOLOGY FOUNDATIONS", "desc": "We bouwen op solide, soevereine technologie-infrastructuur — met beveiliging, onafhankelijkheid en duurzaamheid op elke laag." },
+      { "num": "04", "title": "STRATEGIC ADVISORY", "desc": "Onze advisory is gebaseerd op echte uitvoeringsraamwerken in Data, AI & Beveiliging — verankerd in hoe we onze eigen ecosystemen bouwen." }
+    ]
+  },
+  "aboutSection": {
+    "label": "Over Aegryn",
+    "title": "Swiss Technology\nAsset Platform.",
+    "desc": "We ontwerpen, financieren en beheren digitale ecosystemen die evolueren van gedurfde ideeën naar echte, duurzame technologie. Geen features — assets.",
+    "tagline": "Ontwikkeld in Zwitserland. Gebouwd om te blijven.",
+    "cta": "Over Aegryn",
+    "quote": "We bouwen digitale assets die het dagelijks leven verbeteren — voor individuen, professionals en de markten waarin zij opereren.",
+    "ceoName": "Yohann Bollack",
+    "ceoTitle": "Oprichter & CEO — Aegryn Group",
+    "stats": [
+      { "val": "6", "label": "Assets" },
+      { "val": "3", "label": "Categorieën" },
+      { "val": "6", "label": "Markten" }
+    ]
+  },
+  "missionSection": {
+    "label": "Onze Missie",
+    "sub": "Het leven vereenvoudigen met slimme apps",
+    "items": [
+      { "title": "WE CREEËREN", "desc": "Oplossingen die uw behoeften anticiperen als individuen of professionals, en naadloze digitale interacties garanderen die het dagelijks leven verbeteren." },
+      { "title": "WE VEREENVOUDIGEN", "desc": "We elimineren complexiteit door slimme automatisering, intuitiïve interfaces en onderling verbonden systemen te integreren." },
+      { "title": "WE OMARMEN", "desc": "We blijven voorop lopen door baanbrekende innovaties en het stellen van nieuwe standaarden in naadloze digitale ervaringen." }
+    ]
+  },
+  "whyapps": {
+    "label": "Waarom onze apps",
+    "count": "04",
+    "items": [
+      { "num": "01", "title": "Innovatief", "desc": "We benutten geavanceerde technologieën — AI, automatisering en slimme data — om apps te creëren die continu evolueren." },
+      { "num": "02", "title": "Veilig & Privaat", "desc": "Uw data is van u. Elke Aegryn-app is ontworpen met privacy-first architectuur en versleutelde communicatie." },
+      { "num": "03", "title": "Divers & Inclusief", "desc": "We ontwerpen voor iedereen. Onze apps zijn toegankelijk, cultureel gevoelig en beschikbaar in meerdere talen en markten." },
+      { "num": "04", "title": "Sociale Impact", "desc": "We bouwen met een doel. Elk platform vereenvoudigt echte dagelijkse uitdagingen en creëert meetbare waarde voor individuen en gemeenschappen." },
+      { "num": "05", "title": "Toegankelijk", "desc": "Van beginners tot ervaren professionals — onze apps zijn intuitiëf en drempelvrij, want de beste interface is er een die iedereen kan gebruiken." }
+    ]
+  },
   "about": {
     "hero": { "label": "Over Aegryn", "title": "Een builder, geen consultant.", "desc": "Aegryn is een Swiss Tech Asset Builder. We ontwerpen, financieren en beheren eigen digitale assets vanuit Zwitserland." },
     "mission": { "label": "Onze missie", "title": "Bouwen wat de tand des tijds doorstaat.", "p1": "Aegryn verkoopt geen projecten. We bouwen assets. Elk product dat we lanceren is ontworpen om te duren, langetermijnwaarde te genereren en economische cycli te doorstaan.", "p2": "Ons model is gebaseerd op volledig eigendom van onze digitale assets, beheerd in een soevereine omgeving.", "p3": "Zwitserland is niet alleen een adres. Het is onze standaard: neutraliteit, precisie, duurzaamheid." },
