@@ -3,35 +3,145 @@
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { gsap } from '@/lib/gsap'
+import { gsap, SplitText } from '@/lib/gsap'
 
 export function ManifestoSection() {
   const tW = useTranslations('whatwedo')
   const tA = useTranslations('aboutSection')
   const tM = useTranslations('missionSection')
 
-  const whatwedoItems  = tW.raw('items') as { num: string; title: string; desc: string }[]
-  const missionItems   = tM.raw('items') as { title: string; desc: string }[]
-  const stats          = tA.raw('stats') as { val: string; label: string }[]
+  const whatwedoItems = tW.raw('items') as { num: string; title: string; desc: string }[]
+  const missionItems  = tM.raw('items') as { title: string; desc: string }[]
+  const stats         = tA.raw('stats') as { val: string; label: string }[]
 
-  const whatRef  = useRef<HTMLElement>(null)
-  const aboutRef = useRef<HTMLElement>(null)
+  const whatRef    = useRef<HTMLElement>(null)
+  const aboutRef   = useRef<HTMLElement>(null)
+  const aboutH2Ref = useRef<HTMLHeadingElement>(null)
   const missionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from('.what-col', {
-        opacity: 0, y: 24, stagger: 0.1,
-        ease: 'expo.out', duration: 0.7,
-        scrollTrigger: { trigger: whatRef.current, start: 'top 78%' },
-      })
-      gsap.from('.mission-col', {
-        opacity: 0, y: 24, stagger: 0.1,
-        ease: 'expo.out', duration: 0.7,
-        scrollTrigger: { trigger: missionRef.current, start: 'top 78%' },
-      })
+    const aboutH2 = aboutH2Ref.current
+    if (!aboutH2) return
+
+    /* ── SplitText setup — aboutH2 words clip reveal ── */
+    const splitAbout = new SplitText(aboutH2, {
+      type: 'words',
+      wordsClass: 'about-word-inner',
     })
-    return () => ctx.revert()
+    splitAbout.words.forEach((word) => {
+      const w = word as HTMLElement
+      const wrap = document.createElement('span')
+      wrap.style.display = 'inline-block'
+      wrap.style.overflow = 'hidden'
+      wrap.style.verticalAlign = 'bottom'
+      wrap.style.marginRight = '0.22em'
+      w.parentNode?.insertBefore(wrap, w)
+      wrap.appendChild(w)
+      w.style.display = 'inline-block'
+    })
+
+    const ctx = gsap.context(() => {
+
+      /* ── What we do: stagger clip-reveal per column ── */
+      gsap.fromTo('.what-col',
+        { opacity: 0, y: 30, clipPath: 'inset(0 0 100% 0)' },
+        {
+          opacity: 1, y: 0, clipPath: 'inset(0 0 0% 0)',
+          stagger: 0.1, duration: 0.9, ease: 'expo.out',
+          scrollTrigger: { trigger: whatRef.current, start: 'top 78%', once: true },
+        },
+      )
+
+      /* ── About H2: words clip reveal scrub ── */
+      gsap.fromTo(splitAbout.words,
+        { yPercent: 110 },
+        {
+          yPercent: 0,
+          stagger: 0.07,
+          ease: 'expo.out',
+          duration: 0.9,
+          scrollTrigger: {
+            trigger: aboutRef.current,
+            start: 'top 72%',
+            once: true,
+          },
+        },
+      )
+
+      /* About desc + tagline + CTA: staggered fade-up */
+      gsap.fromTo('.about-body > *',
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1, y: 0,
+          stagger: 0.1, duration: 0.7, ease: 'expo.out',
+          scrollTrigger: { trigger: '.about-body', start: 'top 80%', once: true },
+        },
+      )
+
+      /* About quote fade-up */
+      gsap.fromTo('.about-quote',
+        { opacity: 0, y: 24 },
+        {
+          opacity: 1, y: 0,
+          duration: 0.8, ease: 'expo.out',
+          scrollTrigger: { trigger: '.about-quote', start: 'top 82%', once: true },
+        },
+      )
+
+      /* Stats count-up reveal */
+      gsap.fromTo('.about-stat',
+        { opacity: 0, y: 16 },
+        {
+          opacity: 1, y: 0,
+          stagger: 0.09, duration: 0.6, ease: 'expo.out',
+          scrollTrigger: { trigger: '.about-stats', start: 'top 85%', once: true },
+        },
+      )
+
+      /* ── Mission: each col — num ScrambleText + title clip per word ── */
+      document.querySelectorAll<HTMLElement>('.mission-col').forEach((col) => {
+        const titleEl = col.querySelector<HTMLElement>('.mission-title')
+        if (!titleEl) return
+
+        const splitM = new SplitText(titleEl, { type: 'words', wordsClass: 'mission-word' })
+        splitM.words.forEach((word) => {
+          const w = word as HTMLElement
+          const wrap = document.createElement('span')
+          wrap.style.display = 'inline-block'
+          wrap.style.overflow = 'hidden'
+          wrap.style.verticalAlign = 'bottom'
+          wrap.style.marginRight = '0.22em'
+          w.parentNode?.insertBefore(wrap, w)
+          wrap.appendChild(w)
+          w.style.display = 'inline-block'
+        })
+
+        const tl = gsap.timeline({
+          scrollTrigger: { trigger: col, start: 'top 80%', once: true },
+        })
+
+        tl.fromTo(col.querySelector('.mission-num'),
+          { opacity: 0, x: -8 },
+          { opacity: 1, x: 0, duration: 0.5, ease: 'expo.out' },
+        )
+        .fromTo(splitM.words,
+          { yPercent: 105 },
+          { yPercent: 0, stagger: 0.07, duration: 0.75, ease: 'expo.out' },
+          '-=0.2',
+        )
+        .fromTo(col.querySelector('.mission-desc'),
+          { opacity: 0, y: 14 },
+          { opacity: 1, y: 0, duration: 0.6, ease: 'expo.out' },
+          '-=0.4',
+        )
+      })
+
+    })
+
+    return () => {
+      ctx.revert()
+      splitAbout.revert()
+    }
   }, [])
 
   return (
@@ -52,7 +162,7 @@ export function ManifestoSection() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-ag-border">
             {whatwedoItems.map((item) => (
-              <div key={item.num} className="what-col py-14 lg:px-8 first:pl-0 last:pr-0">
+              <div key={item.num} className="what-col py-14 lg:px-8 first:pl-0 last:pr-0" style={{ opacity: 0 }}>
                 <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-6">
                   {item.num}
                 </p>
@@ -72,31 +182,34 @@ export function ManifestoSection() {
       </section>
 
       {/* ── About us ───────────────────────────────────────── */}
-      <section ref={aboutRef} className="border-t border-ag-border bg-ag-off-white">
+      <section ref={aboutRef} className="border-t border-ag-border bg-ag-off-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid md:grid-cols-[1fr_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
+
+            {/* Left col */}
             <div className="py-20 md:pr-16">
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
                 / {tA('label')}
               </p>
               <h2
-                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.93] mb-10"
+                ref={aboutH2Ref}
+                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-10 overflow-hidden"
                 style={{ fontSize: 'clamp(34px,4.5vw,58px)' }}
               >
                 {tA('title').split('\n').map((line, i) => (
                   <span key={i}>{line}{i === 0 && <br />}</span>
                 ))}
               </h2>
-              <p className="font-sans font-normal text-[15px] text-ag-gray leading-[1.85] mb-10 max-w-lg">
-                {tA('desc')}
-              </p>
-              <div className="flex items-center gap-px">
-                <div className="w-8 h-px bg-ag-apex" />
-                <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-apex ml-3">
-                  {tA('tagline')}
+              <div className="about-body space-y-6">
+                <p className="font-sans font-normal text-[15px] text-ag-gray leading-[1.85] max-w-lg">
+                  {tA('desc')}
                 </p>
-              </div>
-              <div className="mt-8">
+                <div className="flex items-center gap-px">
+                  <div className="w-8 h-px bg-ag-apex" />
+                  <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-apex ml-3">
+                    {tA('tagline')}
+                  </p>
+                </div>
                 <Link
                   href="/about"
                   className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3.5 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300"
@@ -106,8 +219,10 @@ export function ManifestoSection() {
                 </Link>
               </div>
             </div>
+
+            {/* Right col */}
             <div className="py-20 md:pl-16 flex flex-col justify-between gap-16">
-              <blockquote className="relative">
+              <blockquote className="about-quote relative" style={{ opacity: 0 }}>
                 <span
                   className="font-sans font-bold text-ag-black/5 absolute -top-4 -left-2 select-none"
                   style={{ fontSize: '120px', lineHeight: 1 }}
@@ -131,10 +246,9 @@ export function ManifestoSection() {
                 </footer>
               </blockquote>
 
-              {/* Stats inline */}
-              <div className="grid grid-cols-3 border-t border-ag-border pt-8 gap-4">
+              <div className="about-stats grid grid-cols-3 border-t border-ag-border pt-8 gap-4">
                 {stats.map((s) => (
-                  <div key={s.label}>
+                  <div key={s.label} className="about-stat" style={{ opacity: 0 }}>
                     <p
                       className="font-sans font-bold text-ag-black tracking-[-0.03em] mb-1"
                       style={{ fontSize: 'clamp(28px,3vw,40px)' }}
@@ -166,16 +280,16 @@ export function ManifestoSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border">
             {missionItems.map((item, i) => (
               <div key={item.title} className="mission-col py-14 md:px-10 first:pl-0 last:pr-0">
-                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-8">
+                <p className="mission-num font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-8" style={{ opacity: 0 }}>
                   {String(i + 1).padStart(2, '0')}
                 </p>
                 <h3
-                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.05] mb-5"
+                  className="mission-title font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.05] mb-5 overflow-hidden"
                   style={{ fontSize: 'clamp(22px,2vw,28px)' }}
                 >
                   {item.title}
                 </h3>
-                <p className="font-sans font-normal text-[14px] text-ag-gray leading-[1.75]">
+                <p className="mission-desc font-sans font-normal text-[14px] text-ag-gray leading-[1.75]" style={{ opacity: 0 }}>
                   {item.desc}
                 </p>
               </div>

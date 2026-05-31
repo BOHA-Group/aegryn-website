@@ -120,6 +120,14 @@
       { "num": "04", "title": "STRATEGIC ADVISORY", "desc": "Our advisory draws on real execution frameworks in Data, AI & Security — grounded in how we build our own ecosystems." }
     ]
   },
+  "statsRow": {
+    "items": [
+      { "num": "6.8B", "label": "Total mobile devices" },
+      { "num": "5.6B", "label": "Global smartphone connections" },
+      { "num": "4h12", "label": "Daily screen time" },
+      { "num": "CH",   "label": "Engineered in Switzerland" }
+    ]
+  },
   "assetGrid": {
     "sectionLabel": "Our ecosystem",
     "sectionTitle": "What we\nbuild.",

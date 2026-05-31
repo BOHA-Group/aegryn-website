@@ -104,6 +104,14 @@
       { "num": "04", "title": "STRATEGISCHES ADVISORY", "desc": "Unser Advisory basiert auf echten Umsetzungsrahmen in Data, KI & Sicherheit — verankert in der Art, wie wir unsere eigenen Ökosysteme aufbauen." }
     ]
   },
+  "statsRow": {
+    "items": [
+      { "num": "6.8B", "label": "Mobile Geräte gesamt" },
+      { "num": "5.6B", "label": "Smartphone-Verbindungen" },
+      { "num": "4h12", "label": "Tägliche Bildschirmzeit" },
+      { "num": "CH",   "label": "Entwickelt in der Schweiz" }
+    ]
+  },
   "assetGrid": {
     "sectionLabel": "Unser Ökosystem",
     "sectionTitle": "Was wir\nbauen.",

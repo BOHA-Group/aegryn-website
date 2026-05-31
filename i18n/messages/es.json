@@ -104,6 +104,14 @@
       { "num": "04", "title": "ADVISORY ESTRATÉGICO", "desc": "Nuestro advisory se basa en marcos de ejecución reales en Data, IA & Seguridad — anclados en cómo construimos nuestros propios ecosistemas." }
     ]
   },
+  "statsRow": {
+    "items": [
+      { "num": "6.8B", "label": "Dispositivos móviles" },
+      { "num": "5.6B", "label": "Conexiones smartphone" },
+      { "num": "4h12", "label": "Tiempo de pantalla diario" },
+      { "num": "CH",   "label": "Desarrollado en Suiza" }
+    ]
+  },
   "assetGrid": {
     "sectionLabel": "Nuestro ecosistema",
     "sectionTitle": "Lo que\nconstruimos.",

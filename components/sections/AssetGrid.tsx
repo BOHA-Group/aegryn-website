@@ -4,7 +4,7 @@ import { useEffect, useRef }  from 'react'
 import Link                    from 'next/link'
 import { ArrowUpRight, Lock }  from 'lucide-react'
 import { useTranslations }     from 'next-intl'
-import { gsap }                from '@/lib/gsap'
+import { gsap, SplitText }     from '@/lib/gsap'
 import { AEGRYN_ASSETS }       from '@/data/assets'
 
 /* ── Inactive assets — greyed badge ── */
@@ -14,13 +14,51 @@ const KRYV_ID = 'kryv'
 export function AssetGrid() {
   const t       = useTranslations('assetGrid')
   const tStatus = useTranslations('build.status')
-  const wrapRef = useRef<HTMLDivElement>(null)
+  const wrapRef    = useRef<HTMLDivElement>(null)
+  const headerRef  = useRef<HTMLDivElement>(null)
+  const h2Ref      = useRef<HTMLHeadingElement>(null)
+  const labelRef   = useRef<HTMLParagraphElement>(null)
 
   useEffect(() => {
+    const h2 = h2Ref.current
+    if (!h2) return
+
+    /* SplitText H2 — lines clip-reveal */
+    const split = new SplitText(h2, { type: 'lines', linesClass: 'ag-line-inner' })
+    split.lines.forEach((line) => {
+      const w = document.createElement('div')
+      w.style.overflow = 'hidden'
+      ;(line as HTMLElement).parentNode?.insertBefore(w, line)
+      w.appendChild(line)
+    })
+
     const ctx = gsap.context(() => {
+
+      /* Label ScrambleText */
+      if (labelRef.current) {
+        gsap.fromTo(labelRef.current,
+          { opacity: 0 },
+          {
+            opacity: 1, duration: 0.5,
+            scrollTrigger: { trigger: headerRef.current, start: 'top 82%', once: true },
+          },
+        )
+      }
+
+      /* H2 lines clip reveal */
+      gsap.fromTo(split.lines,
+        { yPercent: 110 },
+        {
+          yPercent: 0,
+          stagger: 0.1, duration: 1.0, ease: 'expo.out',
+          scrollTrigger: { trigger: headerRef.current, start: 'top 80%', once: true },
+        },
+      )
+
+      /* Asset rows stagger */
       AEGRYN_ASSETS.forEach((_, i) => {
         gsap.fromTo(`.asset-row-${i}`,
-          { opacity: 0, y: 32 },
+          { opacity: 0, y: 28 },
           {
             opacity: 1, y: 0, duration: 0.75, ease: 'expo.out',
             scrollTrigger: {
@@ -32,19 +70,21 @@ export function AssetGrid() {
         )
       })
     }, wrapRef)
-    return () => ctx.revert()
+
+    return () => { ctx.revert(); split.revert() }
   }, [])
 
   return (
     <section className="bg-ag-white border-t border-ag-border">
 
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-12">
-        <p className="font-sans font-semibold text-[11px] tracking-[0.24em] uppercase text-ag-gray-light mb-5">
+      <div ref={headerRef} className="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-12">
+        <p ref={labelRef} className="font-sans font-semibold text-[11px] tracking-[0.24em] uppercase text-ag-gray-light mb-5">
           {t('sectionLabel')}
         </p>
         <h2
-          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.93] whitespace-pre-line"
+          ref={h2Ref}
+          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.93] whitespace-pre-line overflow-hidden"
           style={{ fontSize: 'clamp(42px,5.5vw,80px)' }}
         >
           {t('sectionTitle')}

@@ -104,6 +104,14 @@
       { "num": "04", "title": "STRATEGISCHE ADVISORY", "desc": "Onze advisory is gebaseerd op echte uitvoeringsraamwerken in Data, AI & Beveiliging — verankerd in hoe we onze eigen ecosystemen bouwen." }
     ]
   },
+  "statsRow": {
+    "items": [
+      { "num": "6.8B", "label": "Mobiele apparaten totaal" },
+      { "num": "5.6B", "label": "Smartphone-verbindingen" },
+      { "num": "4h12", "label": "Dagelijkse schermtijd" },
+      { "num": "CH",   "label": "Ontwikkeld in Zwitserland" }
+    ]
+  },
   "assetGrid": {
     "sectionLabel": "Ons ecosysteem",
     "sectionTitle": "Wat wij\nbouwen.",

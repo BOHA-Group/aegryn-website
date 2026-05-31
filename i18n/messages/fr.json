@@ -155,6 +155,14 @@
       { "num": "05", "title": "Accessibles", "desc": "Des premiers utilisateurs de smartphones aux professionnels chevronnés, nos applications sont intuitives et sans barrières — parce que la meilleure interface est celle que tout le monde peut utiliser." }
     ]
   },
+  "statsRow": {
+    "items": [
+      { "num": "6.8B", "label": "Appareils mobiles" },
+      { "num": "5.6B", "label": "Connexions smartphones" },
+      { "num": "4h12", "label": "Temps d'écran quotidien" },
+      { "num": "CH",   "label": "Conçu en Suisse" }
+    ]
+  },
   "assetGrid": {
     "sectionLabel": "Notre écosystème",
     "sectionTitle": "Ce que nous\nconstruisons.",

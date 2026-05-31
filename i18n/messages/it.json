@@ -104,6 +104,14 @@
       { "num": "04", "title": "ADVISORY STRATEGICO", "desc": "Il nostro advisory si basa su veri framework di esecuzione in Data, AI & Sicurezza — radicati nel modo in cui costruiamo i nostri ecosistemi." }
     ]
   },
+  "statsRow": {
+    "items": [
+      { "num": "6.8B", "label": "Dispositivi mobili totali" },
+      { "num": "5.6B", "label": "Connessioni smartphone" },
+      { "num": "4h12", "label": "Tempo schermo giornaliero" },
+      { "num": "CH",   "label": "Sviluppato in Svizzera" }
+    ]
+  },
   "assetGrid": {
     "sectionLabel": "Il nostro ecosistema",
     "sectionTitle": "Cosa\ncostruiamo.",
