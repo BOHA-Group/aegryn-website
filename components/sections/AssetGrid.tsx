@@ -101,16 +101,15 @@ export function AssetGrid() {
             const isKryv       = asset.id === KRYV_ID
             const isNotStarted = NOT_STARTED_IDS.includes(asset.id)
             const isLive       = asset.status === 'live'
-            const href         = asset.url ?? `/assets/${asset.slug}`
-            const isExternal   = !!asset.url
             const isDisabled   = isKryv || isNotStarted
+            const href         = '/what-we-build'
 
             const chip = (
-              <div className={`asset-row-${i} group relative flex flex-col justify-between h-full p-8 border-ag-border transition-colors duration-300
+              <div className={`asset-row-${i} group relative flex flex-col justify-between h-full p-5 border-ag-border transition-colors duration-300
                 ${i % 3 !== 2 ? 'lg:border-r' : ''}
                 ${i < 3 ? 'sm:border-b' : ''}
                 ${isDisabled ? 'cursor-default' : 'cursor-pointer hover:bg-ag-off-white'}`}
-                style={{ minHeight: '220px' }}
+                style={{ minHeight: '160px' }}
               >
                 {/* Top — index + status */}
                 <div className="flex items-start justify-between mb-6">
@@ -150,31 +149,31 @@ export function AssetGrid() {
 
                 {/* Name */}
                 <h3
-                  className={`font-sans font-bold tracking-[-0.03em] leading-none mb-3 transition-colors duration-300 ${
+                  className={`font-sans font-bold tracking-[-0.03em] leading-none mb-2 transition-colors duration-300 ${
                     isDisabled ? 'text-ag-gray-light' : 'text-ag-black group-hover:text-ag-navy'
                   }`}
-                  style={{ fontSize: 'clamp(28px,2.8vw,42px)' }}
+                  style={{ fontSize: 'clamp(20px,2vw,28px)' }}
                 >
                   {asset.name}
                 </h3>
 
                 {/* Tagline */}
-                <p className={`font-sans font-normal text-[12px] leading-relaxed mb-5 ${
+                <p className={`font-sans font-normal text-[11px] leading-relaxed mb-4 ${
                   isDisabled ? 'text-ag-gray-light/40' : 'text-ag-gray'
                 }`}>
                   {asset.tagline}
                 </p>
 
                 {/* Bottom — badge + arrow */}
-                <div className="flex items-center justify-between mt-auto pt-4 border-t border-ag-border">
-                  <span className={`font-sans font-semibold text-[10px] tracking-[0.16em] uppercase ${
+                <div className="flex items-center justify-between mt-auto pt-3 border-t border-ag-border">
+                  <span className={`font-sans font-semibold text-[9px] tracking-[0.14em] uppercase ${
                     isDisabled ? 'text-ag-gray-light/30' : 'text-ag-gray-light'
                   }`}>
                     {asset.badge}
                   </span>
                   {!isDisabled && (
-                    <span className="w-7 h-7 border border-ag-border flex items-center justify-center text-ag-gray-light group-hover:border-ag-black group-hover:bg-ag-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200">
-                      <ArrowUpRight size={12} />
+                    <span className="w-6 h-6 border border-ag-border flex items-center justify-center text-ag-gray-light group-hover:border-ag-black group-hover:bg-ag-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200">
+                      <ArrowUpRight size={10} />
                     </span>
                   )}
                 </div>
@@ -186,11 +185,7 @@ export function AssetGrid() {
             }
 
             return (
-              <Link
-                key={asset.id}
-                href={href}
-                {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-              >
+              <Link key={asset.id} href={href}>
                 {chip}
               </Link>
             )

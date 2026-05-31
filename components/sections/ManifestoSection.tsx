@@ -8,16 +8,13 @@ import { gsap, SplitText } from '@/lib/gsap'
 export function ManifestoSection() {
   const tW = useTranslations('whatwedo')
   const tA = useTranslations('aboutSection')
-  const tM = useTranslations('missionSection')
 
   const whatwedoItems = tW.raw('items') as { num: string; title: string; desc: string }[]
-  const missionItems  = tM.raw('items') as { title: string; desc: string }[]
   const stats         = tA.raw('stats') as { val: string; label: string }[]
 
   const whatRef    = useRef<HTMLElement>(null)
   const aboutRef   = useRef<HTMLElement>(null)
   const aboutH2Ref = useRef<HTMLHeadingElement>(null)
-  const missionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     const aboutH2 = aboutH2Ref.current
@@ -97,44 +94,6 @@ export function ManifestoSection() {
           scrollTrigger: { trigger: '.about-stats', start: 'top 85%', once: true },
         },
       )
-
-      /* ── Mission: each col — num ScrambleText + title clip per word ── */
-      document.querySelectorAll<HTMLElement>('.mission-col').forEach((col) => {
-        const titleEl = col.querySelector<HTMLElement>('.mission-title')
-        if (!titleEl) return
-
-        const splitM = new SplitText(titleEl, { type: 'words', wordsClass: 'mission-word' })
-        splitM.words.forEach((word) => {
-          const w = word as HTMLElement
-          const wrap = document.createElement('span')
-          wrap.style.display = 'inline-block'
-          wrap.style.overflow = 'hidden'
-          wrap.style.verticalAlign = 'bottom'
-          wrap.style.marginRight = '0.22em'
-          w.parentNode?.insertBefore(wrap, w)
-          wrap.appendChild(w)
-          w.style.display = 'inline-block'
-        })
-
-        const tl = gsap.timeline({
-          scrollTrigger: { trigger: col, start: 'top 80%', once: true },
-        })
-
-        tl.fromTo(col.querySelector('.mission-num'),
-          { opacity: 0, x: -8 },
-          { opacity: 1, x: 0, duration: 0.5, ease: 'expo.out' },
-        )
-        .fromTo(splitM.words,
-          { yPercent: 105 },
-          { yPercent: 0, stagger: 0.07, duration: 0.75, ease: 'expo.out' },
-          '-=0.2',
-        )
-        .fromTo(col.querySelector('.mission-desc'),
-          { opacity: 0, y: 14 },
-          { opacity: 1, y: 0, duration: 0.6, ease: 'expo.out' },
-          '-=0.4',
-        )
-      })
 
     })
 
@@ -266,37 +225,6 @@ export function ManifestoSection() {
         </div>
       </section>
 
-      {/* ── Our Mission ────────────────────────────────────── */}
-      <section ref={missionRef} className="border-t border-ag-border bg-ag-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="flex items-center justify-between border-b border-ag-border py-4 mb-0">
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-              / {tM('label')}
-            </p>
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
-              {tM('sub')}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border">
-            {missionItems.map((item, i) => (
-              <div key={item.title} className="mission-col py-14 md:px-10 first:pl-0 last:pr-0">
-                <p className="mission-num font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-8" style={{ opacity: 0 }}>
-                  {String(i + 1).padStart(2, '0')}
-                </p>
-                <h3
-                  className="mission-title font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.05] mb-5 overflow-hidden"
-                  style={{ fontSize: 'clamp(22px,2vw,28px)' }}
-                >
-                  {item.title}
-                </h3>
-                <p className="mission-desc font-sans font-normal text-[14px] text-ag-gray leading-[1.75]" style={{ opacity: 0 }}>
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   )
 }
