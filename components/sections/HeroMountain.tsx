@@ -72,7 +72,7 @@ export function HeroMountain() {
       {/* Photo plein format — parallax */}
       <div ref={photoRef} className="absolute inset-0 scale-[1.12] will-change-transform">
         <Image
-          src="/images/mountains.avif"
+          src="/images/home-mountains.png"
           alt="Alpes suisses — Aegryn Group"
           fill priority quality={95}
           className="object-cover object-center"
