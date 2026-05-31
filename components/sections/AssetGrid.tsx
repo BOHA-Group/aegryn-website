@@ -81,57 +81,73 @@ export function AssetGrid() {
     <section className="bg-ag-white border-t border-ag-border">
 
       {/* Header */}
-      <div ref={headerRef} className="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-12">
-        <p ref={labelRef} className="font-sans font-semibold text-[11px] tracking-[0.24em] uppercase text-ag-gray-light mb-5">
+      <div ref={headerRef} className="max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-14">
+        <p ref={labelRef} className="font-sans font-semibold text-[11px] tracking-[0.24em] uppercase text-ag-gray-light mb-6">
           {t('sectionLabel')}
         </p>
         <h2
           ref={h2Ref}
-          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.93] whitespace-pre-line overflow-hidden"
+          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.0] whitespace-pre-line overflow-hidden"
           style={{ fontSize: 'clamp(42px,5.5vw,80px)' }}
         >
           {t('sectionTitle')}
         </h2>
       </div>
 
-      {/* 6 chips condensés — style hexa.com */}
-      <div ref={wrapRef} className="border-t border-ag-border">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 divide-y sm:divide-y-0 divide-ag-border">
+      {/* Grille hexa-style — bordures nettes, pas de divide pour contrôle précis */}
+      <div ref={wrapRef} className="max-w-7xl mx-auto px-6 md:px-12 pb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-ag-border">
           {AEGRYN_ASSETS.map((asset, i) => {
             const isKryv       = asset.id === KRYV_ID
             const isNotStarted = NOT_STARTED_IDS.includes(asset.id)
             const isLive       = asset.status === 'live'
+            const isFeatured   = asset.featured && !isKryv && !isNotStarted
             const isDisabled   = isKryv || isNotStarted
             const href         = '/what-we-build'
 
+            /* Bordure droite sur les deux premières colonnes */
+            const borderRight = i % 3 !== 2 ? 'lg:border-r border-ag-border' : ''
+            /* Bordure droite sur colonne 1 (tablette 2 col) */
+            const borderRightSm = i % 2 !== 1 ? 'sm:border-r border-ag-border' : ''
+            /* Bordure basse sur toutes les lignes sauf la dernière */
+            const borderBottom = i < AEGRYN_ASSETS.length - (AEGRYN_ASSETS.length % 3 || 3)
+              ? 'border-b border-ag-border'
+              : ''
+
             const chip = (
-              <div className={`asset-row-${i} group relative flex flex-col justify-between h-full p-5 border-ag-border transition-colors duration-300
-                ${i % 3 !== 2 ? 'lg:border-r' : ''}
-                ${i < 3 ? 'sm:border-b' : ''}
-                ${isDisabled ? 'cursor-default' : 'cursor-pointer hover:bg-ag-off-white'}`}
-                style={{ minHeight: '160px' }}
+              <div
+                className={`asset-row-${i} group relative flex flex-col items-center justify-between
+                  text-center p-8 transition-all duration-300
+                  ${borderRight} ${borderRightSm} ${borderBottom}
+                  ${isFeatured
+                    ? 'bg-ag-navy cursor-pointer'
+                    : isDisabled
+                      ? 'bg-ag-white cursor-default'
+                      : 'bg-ag-white cursor-pointer hover:bg-ag-off-white'
+                  }`}
+                style={{ minHeight: '200px' }}
               >
-                {/* Top — index + status */}
-                <div className="flex items-start justify-between mb-6">
-                  <span className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-gray-light">
-                    {String(i + 1).padStart(2, '0')}
+                {/* Top — badge catégorie */}
+                <div className="w-full flex items-center justify-between mb-6">
+                  <span className={`font-sans font-semibold text-[10px] tracking-[0.18em] uppercase ${
+                    isFeatured ? 'text-white/50' : isDisabled ? 'text-ag-gray-light/30' : 'text-ag-gray-light'
+                  }`}>
+                    {asset.badge}
                   </span>
 
-                  {/* Status indicator */}
+                  {/* Status */}
                   {isKryv && (
-                    <span className="inline-flex items-center gap-1.5 border border-ag-border px-2 py-0.5 font-sans font-semibold text-[9px] tracking-[0.12em] uppercase text-ag-gray-light">
-                      <Lock size={7} />
-                      Restricted
+                    <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-ag-gray-light/50">
+                      <Lock size={7} /> Restricted
                     </span>
                   )}
                   {!isKryv && isNotStarted && (
-                    <span className="inline-flex items-center gap-1.5 font-sans font-semibold text-[9px] tracking-[0.12em] uppercase text-ag-gray-light/50">
-                      <span className="w-1.5 h-1.5 rounded-full bg-ag-gray-light/30 inline-block" />
+                    <span className="font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-ag-gray-light/40">
                       {t('notStarted')}
                     </span>
                   )}
                   {!isKryv && !isNotStarted && isLive && (
-                    <span className="inline-flex items-center gap-1.5 font-sans font-semibold text-[9px] tracking-[0.12em] uppercase text-emerald-600">
+                    <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-emerald-500">
                       <span className="relative flex w-1.5 h-1.5">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50" />
                         <span className="relative inline-flex rounded-full w-1.5 h-1.5 bg-emerald-400" />
@@ -140,43 +156,40 @@ export function AssetGrid() {
                     </span>
                   )}
                   {!isKryv && !isNotStarted && !isLive && (
-                    <span className="inline-flex items-center gap-1.5 font-sans font-semibold text-[9px] tracking-[0.12em] uppercase text-orange-500">
+                    <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-orange-400">
                       <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
                       {tStatus('building')}
                     </span>
                   )}
                 </div>
 
-                {/* Name */}
+                {/* Centre — nom */}
                 <h3
-                  className={`font-sans font-bold tracking-[-0.03em] leading-none mb-2 transition-colors duration-300 ${
-                    isDisabled ? 'text-ag-gray-light' : 'text-ag-black group-hover:text-ag-navy'
+                  className={`font-sans font-bold tracking-[-0.03em] leading-[1.0] mb-3 transition-colors duration-300 ${
+                    isFeatured
+                      ? 'text-white'
+                      : isDisabled
+                        ? 'text-ag-gray-light/50'
+                        : 'text-ag-black group-hover:text-ag-navy'
                   }`}
-                  style={{ fontSize: 'clamp(20px,2vw,28px)' }}
+                  style={{ fontSize: 'clamp(22px,2.2vw,32px)' }}
                 >
                   {asset.name}
                 </h3>
 
                 {/* Tagline */}
-                <p className={`font-sans font-normal text-[11px] leading-relaxed mb-4 ${
-                  isDisabled ? 'text-ag-gray-light/40' : 'text-ag-gray'
+                <p className={`font-sans font-normal text-[12px] leading-relaxed ${
+                  isFeatured ? 'text-white/70' : isDisabled ? 'text-ag-gray-light/30' : 'text-ag-gray'
                 }`}>
                   {asset.tagline}
                 </p>
 
-                {/* Bottom — badge + arrow */}
-                <div className="flex items-center justify-between mt-auto pt-3 border-t border-ag-border">
-                  <span className={`font-sans font-semibold text-[9px] tracking-[0.14em] uppercase ${
-                    isDisabled ? 'text-ag-gray-light/30' : 'text-ag-gray-light'
-                  }`}>
-                    {asset.badge}
-                  </span>
-                  {!isDisabled && (
-                    <span className="w-6 h-6 border border-ag-border flex items-center justify-center text-ag-gray-light group-hover:border-ag-black group-hover:bg-ag-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200">
-                      <ArrowUpRight size={10} />
-                    </span>
-                  )}
-                </div>
+                {/* Flèche featured */}
+                {isFeatured && (
+                  <div className="mt-6">
+                    <ArrowUpRight size={16} className="text-white/70" />
+                  </div>
+                )}
               </div>
             )
 

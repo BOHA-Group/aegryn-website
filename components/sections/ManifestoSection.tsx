@@ -121,12 +121,12 @@ export function ManifestoSection() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-ag-border">
             {whatwedoItems.map((item) => (
-              <div key={item.num} className="what-col py-14 lg:px-8 first:pl-0 last:pr-0" style={{ opacity: 0 }}>
+              <div key={item.num} className="what-col py-16 lg:px-10 first:pl-0 last:pr-0" style={{ opacity: 0 }}>
                 <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-6">
                   {item.num}
                 </p>
                 <h3
-                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.1] mb-4"
+                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.25] mb-5"
                   style={{ fontSize: 'clamp(15px,1.25vw,17px)' }}
                 >
                   {item.title}
@@ -146,20 +146,20 @@ export function ManifestoSection() {
           <div className="grid md:grid-cols-[1fr_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
 
             {/* Left col */}
-            <div className="py-20 md:pr-16">
+            <div className="py-24 md:pr-16">
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
                 / {tA('label')}
               </p>
               <h2
                 ref={aboutH2Ref}
-                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-10 overflow-hidden"
+                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.12] mb-12 overflow-hidden"
                 style={{ fontSize: 'clamp(34px,4.5vw,58px)' }}
               >
                 {tA('title').split('\n').map((line, i) => (
                   <span key={i}>{line}{i === 0 && <br />}</span>
                 ))}
               </h2>
-              <div className="about-body space-y-6">
+              <div className="about-body space-y-8">
                 <p className="font-sans font-normal text-[15px] text-ag-gray leading-[1.85] max-w-lg">
                   {tA('desc')}
                 </p>
@@ -180,7 +180,7 @@ export function ManifestoSection() {
             </div>
 
             {/* Right col */}
-            <div className="py-20 md:pl-16 flex flex-col justify-between gap-16">
+            <div className="py-24 md:pl-16 flex flex-col justify-between gap-16">
               <blockquote className="about-quote relative" style={{ opacity: 0 }}>
                 <span
                   className="font-sans font-bold text-ag-black/5 absolute -top-4 -left-2 select-none"
@@ -190,7 +190,7 @@ export function ManifestoSection() {
                   &ldquo;
                 </span>
                 <p
-                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2] mb-8 relative z-10"
+                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.35] mb-8 relative z-10"
                   style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}
                 >
                   {tA('quote')}

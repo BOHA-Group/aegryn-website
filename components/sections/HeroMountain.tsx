@@ -60,6 +60,17 @@ export function HeroMountain() {
           scrub: true,
         },
       })
+
+      /* Éclaircissement progressif au scroll — overlay s'estompe */
+      gsap.to('#hero-overlay', {
+        opacity: 0.45, ease: 'none',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: '60% top',
+          scrub: true,
+        },
+      })
     }, sectionRef)
 
     return () => { ctx.revert(); split.revert() }
@@ -80,8 +91,8 @@ export function HeroMountain() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        {/* Gradient: transparent top → dark bottom — Rolex style */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/92" />
+        {/* Gradient foncé au départ — s'éclaircit au scroll via GSAP */}
+        <div id="hero-overlay" className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/95" />
       </div>
 
       {/* Content — bottom anchored, left-aligned */}
