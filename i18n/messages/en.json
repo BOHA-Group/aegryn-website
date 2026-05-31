@@ -228,6 +228,20 @@
     "comingSoon": "Coming soon",
     "cta": { "title": "Discover the full ecosystem.", "label": "Aegryn Group", "allAssets": "All our assets", "contact": "Contact us" }
   },
+  "assetCarousel": {
+    "label": "Our ecosystem",
+    "title": "What we build.",
+    "scrollHint": "← scroll →",
+    "swipeHint": "Swipe to explore →",
+    "cta": {
+      "label": "Aegryn Group",
+      "title": "All our assets.\nBuilt to last.",
+      "button": "View all"
+    },
+    "restricted": "Restricted",
+    "classifiedLabel": "CLASSIFIED",
+    "classifiedDesc": "Protocol under confidential development.\nAccess restricted to accredited partners."
+  },
   "growWithUs": {
     "hero": {
       "label": "Strategic Partnerships & Investment",

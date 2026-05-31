@@ -14,7 +14,7 @@ import { gsap }               from '@/lib/gsap'
  *   - backdrop blur 0px → 6px (via class toggle + CSS var scrubbed)
  *   - texte superposé fade-up + clip reveal
  */
-export function FounderSection() {
+export function FounderSection({ videoSrc }: { videoSrc?: string } = {}) {
   const t           = useTranslations('about')
   const sectionRef  = useRef<HTMLElement>(null)
   const overlayRef  = useRef<HTMLDivElement>(null)
@@ -98,7 +98,7 @@ export function FounderSection() {
         </p>
       </div>
 
-      {/* Photo plein fond */}
+      {/* Photo plein fond — sert de poster si vidéo présente */}
       <div className="absolute inset-0">
         <Image
           src="/images/profil CEO 169.png"
@@ -109,6 +109,20 @@ export function FounderSection() {
           className="object-cover object-center"
           sizes="100vw"
         />
+        {/* Standard 8 — vidéo autoplay si disponible */}
+        {videoSrc && (
+          <video
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/profil CEO 169.png"
+          >
+            <source src={videoSrc.replace(/\.mp4$/, '.webm')} type="video/webm" />
+            <source src={videoSrc} type="video/mp4" />
+          </video>
+        )}
       </div>
 
       {/* Overlay noir progressif (scrub GSAP) */}

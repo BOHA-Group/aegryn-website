@@ -187,6 +187,20 @@
     "back": "Onze assets", "presentation": "Presentatie", "audience": "Doelgroep", "features": "Functies", "visit": "Bezoeken", "comingSoon": "Binnenkort beschikbaar",
     "cta": { "title": "Ontdek het volledige ecosysteem.", "label": "Aegryn Group", "allAssets": "Al onze assets", "contact": "Neem contact op" }
   },
+  "assetCarousel": {
+    "label": "Ons ecosysteem",
+    "title": "Wat we bouwen.",
+    "scrollHint": "← scrollen →",
+    "swipeHint": "Veeg om te verkennen →",
+    "cta": {
+      "label": "Aegryn Group",
+      "title": "Al onze assets.\nGebouwd om te blijven.",
+      "button": "Alles bekijken"
+    },
+    "restricted": "Beperkt",
+    "classifiedLabel": "VERTROUWELIJK",
+    "classifiedDesc": "Protocol in vertrouwelijke ontwikkeling.\nToegang beperkt tot geaccrediteerde partners."
+  },
   "growWithUs": {
     "hero": {
       "label": "Strategische Partnerschappen & Investeringen",

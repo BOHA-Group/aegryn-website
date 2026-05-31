@@ -1,6 +1,6 @@
 import Link            from 'next/link'
+import Image           from 'next/image'
 import { useTranslations } from 'next-intl'
-import { AegrynLogo }  from '@/components/brand/AegrynLogo'
 
 const footerAssets = [
   { name: 'subblink',    href: 'https://subblink.boha-group.com', label: 'B2B', external: true  },
@@ -45,7 +45,13 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="col-span-full lg:col-span-1">
-            <AegrynLogo size={24} variant="full" onDark className="mb-4" />
+            <Image
+              src="/images/logo-aegryn.png"
+              alt="Aegryn"
+              width={100}
+              height={44}
+              className="h-8 w-auto object-contain mb-4 brightness-0 invert"
+            />
             <p className="font-sans font-semibold text-[11px] text-white/60 tracking-[0.18em] uppercase mt-1">
               {t('tagline')}
             </p>

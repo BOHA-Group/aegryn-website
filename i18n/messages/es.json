@@ -187,6 +187,20 @@
     "back": "Nuestros activos", "presentation": "Presentación", "audience": "Público objetivo", "features": "Características", "visit": "Visitar", "comingSoon": "Próximamente",
     "cta": { "title": "Descubre todo el ecosistema.", "label": "Aegryn Group", "allAssets": "Todos nuestros activos", "contact": "Contáctanos" }
   },
+  "assetCarousel": {
+    "label": "Nuestro ecosistema",
+    "title": "Lo que construimos.",
+    "scrollHint": "← desplazar →",
+    "swipeHint": "Desliza para explorar →",
+    "cta": {
+      "label": "Aegryn Group",
+      "title": "Todos nuestros activos.\nConstruidos para durar.",
+      "button": "Ver todo"
+    },
+    "restricted": "Restringido",
+    "classifiedLabel": "CLASIFICADO",
+    "classifiedDesc": "Protocolo en desarrollo confidencial.\nAcceso restringido a socios acreditados."
+  },
   "growWithUs": {
     "hero": {
       "label": "Alianzas Estratégicas e Inversión",

@@ -22,7 +22,15 @@ export function StatementStrip({ label, title, cta, href }: Props) {
     const titleEl = titleRef.current
     if (!titleEl) return
 
-    const split = new SplitText(titleEl, { type: 'words' })
+    /* Standard 5 Rolex: SplitText on LINES, not chars/words */
+    const split = new SplitText(titleEl, { type: 'lines', linesClass: 'stmt-line-inner' })
+    split.lines.forEach((line) => {
+      const wrap = document.createElement('div')
+      wrap.style.overflow = 'hidden'
+      ;(line as HTMLElement).parentNode?.insertBefore(wrap, line)
+      wrap.appendChild(line)
+    })
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -31,11 +39,13 @@ export function StatementStrip({ label, title, cta, href }: Props) {
           once: true,
         },
       })
-      tl.from(labelRef.current, { opacity: 0, y: 10, duration: 0.5, ease: 'expo.out' })
-        .from(split.words, {
-          opacity: 0, y: 24, stagger: 0.06, duration: 0.7, ease: 'expo.out',
-        }, '-=0.2')
-        .from(ctaRef.current, { opacity: 0, y: 10, duration: 0.5, ease: 'expo.out' }, '-=0.3')
+      tl.from(labelRef.current, { opacity: 0, y: 8, duration: 0.5, ease: 'expo.out' })
+        .fromTo(split.lines,
+          { yPercent: 110 },
+          { yPercent: 0, stagger: 0.08, duration: 0.9, ease: 'expo.out' },
+          '-=0.2',
+        )
+        .from(ctaRef.current, { opacity: 0, y: 10, duration: 0.5, ease: 'expo.out' }, '-=0.4')
     }, sectionRef)
 
     return () => { ctx.revert(); split.revert() }

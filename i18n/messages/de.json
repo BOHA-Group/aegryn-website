@@ -187,6 +187,20 @@
     "back": "Unsere Assets", "presentation": "Übersicht", "audience": "Zielgruppe", "features": "Funktionen", "visit": "Besuchen", "comingSoon": "Demnächst verfügbar",
     "cta": { "title": "Entdecken Sie das gesamte Ökosystem.", "label": "Aegryn Group", "allAssets": "Alle unsere Assets", "contact": "Kontaktieren Sie uns" }
   },
+  "assetCarousel": {
+    "label": "Unser Ökosystem",
+    "title": "Was wir bauen.",
+    "scrollHint": "← scrollen →",
+    "swipeHint": "Wischen zum Erkunden →",
+    "cta": {
+      "label": "Aegryn Group",
+      "title": "Alle unsere Assets.\nGebaut für die Ewigkeit.",
+      "button": "Alle ansehen"
+    },
+    "restricted": "Eingeschränkt",
+    "classifiedLabel": "VERTRAULICH",
+    "classifiedDesc": "Protokoll in vertraulicher Entwicklung.\nZugang nur für akkreditierte Partner."
+  },
   "growWithUs": {
     "hero": {
       "label": "Strategische Partnerschaften & Investitionen",

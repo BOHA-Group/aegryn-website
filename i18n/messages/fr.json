@@ -252,6 +252,20 @@
       "contact": "Nous contacter"
     }
   },
+  "assetCarousel": {
+    "label": "Notre écosystème",
+    "title": "Ce que nous construisons.",
+    "scrollHint": "← défiler →",
+    "swipeHint": "Faites glisser pour explorer →",
+    "cta": {
+      "label": "Aegryn Group",
+      "title": "Tous nos actifs.\nConçus pour durer.",
+      "button": "Voir tout"
+    },
+    "restricted": "Restreint",
+    "classifiedLabel": "CONFIDENTIEL",
+    "classifiedDesc": "Protocole en développement confidentiel.\nAccès restreint aux partenaires accrédités."
+  },
   "growWithUs": {
     "hero": {
       "label": "Partenariats Stratégiques & Investissement",
