@@ -55,15 +55,18 @@ export function AssetGrid() {
         },
       )
 
-      /* Asset rows stagger */
-      AEGRYN_ASSETS.forEach((_, i) => {
+      /* Asset chips stagger */
+      AEGRYN_ASSETS.forEach((asset, i) => {
+        const isDisabled = [...NOT_STARTED_IDS, KRYV_ID].includes(asset.id)
         gsap.fromTo(`.asset-row-${i}`,
-          { opacity: 0, y: 28 },
+          { opacity: 0, y: 20 },
           {
-            opacity: 1, y: 0, duration: 0.75, ease: 'expo.out',
+            opacity: isDisabled ? 0.45 : 1,
+            y: 0, duration: 0.7, ease: 'expo.out',
+            delay: (i % 3) * 0.05,
             scrollTrigger: {
-              trigger: `.asset-row-${i}`,
-              start: 'top 88%',
+              trigger: wrapRef.current,
+              start: 'top 85%',
               once: true,
             },
           },
@@ -91,109 +94,108 @@ export function AssetGrid() {
         </h2>
       </div>
 
-      {/* Asset rows — full-width Hexa style */}
+      {/* 6 chips condensés — style hexa.com */}
       <div ref={wrapRef} className="border-t border-ag-border">
-        {AEGRYN_ASSETS.map((asset, i) => {
-          const isKryv       = asset.id === KRYV_ID
-          const isNotStarted = NOT_STARTED_IDS.includes(asset.id)
-          const isLive       = asset.status === 'live'
-          const href         = asset.url ?? `/assets/${asset.slug}`
-          const isExternal   = !!asset.url
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 divide-y sm:divide-y-0 divide-ag-border">
+          {AEGRYN_ASSETS.map((asset, i) => {
+            const isKryv       = asset.id === KRYV_ID
+            const isNotStarted = NOT_STARTED_IDS.includes(asset.id)
+            const isLive       = asset.status === 'live'
+            const href         = asset.url ?? `/assets/${asset.slug}`
+            const isExternal   = !!asset.url
+            const isDisabled   = isKryv || isNotStarted
 
-          const inner = (
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-12 max-w-7xl mx-auto px-6 md:px-12 py-8 md:py-10">
+            const chip = (
+              <div className={`asset-row-${i} group relative flex flex-col justify-between h-full p-8 border-ag-border transition-colors duration-300
+                ${i % 3 !== 2 ? 'lg:border-r' : ''}
+                ${i < 3 ? 'sm:border-b' : ''}
+                ${isDisabled ? 'cursor-default' : 'cursor-pointer hover:bg-ag-off-white'}`}
+                style={{ minHeight: '220px' }}
+              >
+                {/* Top — index + status */}
+                <div className="flex items-start justify-between mb-6">
+                  <span className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-gray-light">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
 
-              {/* Left — index + name + tagline */}
-              <div className="flex items-start gap-6 min-w-0 flex-1">
-                <span className="font-sans font-semibold text-[11px] tracking-[0.16em] text-ag-gray-light shrink-0 pt-1 w-7">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <div className="min-w-0">
-                  <div className="flex items-center gap-3 mb-1 flex-wrap">
-                    <h3
-                      className={`font-sans font-bold tracking-[-0.03em] leading-none transition-colors duration-300 ${
-                        isKryv || isNotStarted
-                          ? 'text-ag-gray-light'
-                          : 'text-ag-black group-hover:text-ag-navy'
-                      }`}
-                      style={{ fontSize: 'clamp(22px,2.5vw,34px)' }}
-                    >
-                      {asset.name}
-                    </h3>
-                    {/* Status badge */}
-                    {isKryv && (
-                      <span className="inline-flex items-center gap-1.5 border border-ag-border px-2.5 py-0.5 font-sans font-semibold text-[9px] tracking-[0.14em] uppercase text-ag-gray-light">
-                        <Lock size={8} />
-                        Restricted
+                  {/* Status indicator */}
+                  {isKryv && (
+                    <span className="inline-flex items-center gap-1.5 border border-ag-border px-2 py-0.5 font-sans font-semibold text-[9px] tracking-[0.12em] uppercase text-ag-gray-light">
+                      <Lock size={7} />
+                      Restricted
+                    </span>
+                  )}
+                  {!isKryv && isNotStarted && (
+                    <span className="inline-flex items-center gap-1.5 font-sans font-semibold text-[9px] tracking-[0.12em] uppercase text-ag-gray-light/50">
+                      <span className="w-1.5 h-1.5 rounded-full bg-ag-gray-light/30 inline-block" />
+                      {t('notStarted')}
+                    </span>
+                  )}
+                  {!isKryv && !isNotStarted && isLive && (
+                    <span className="inline-flex items-center gap-1.5 font-sans font-semibold text-[9px] tracking-[0.12em] uppercase text-emerald-600">
+                      <span className="relative flex w-1.5 h-1.5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50" />
+                        <span className="relative inline-flex rounded-full w-1.5 h-1.5 bg-emerald-400" />
                       </span>
-                    )}
-                    {!isKryv && isNotStarted && (
-                      <span className="inline-flex items-center gap-1.5 border border-ag-border/60 px-2.5 py-0.5 font-sans font-semibold text-[9px] tracking-[0.14em] uppercase text-ag-gray-light/60">
-                        <span className="w-1.5 h-1.5 rounded-full bg-ag-gray-light/40 inline-block" />
-                        {t('notStarted')}
-                      </span>
-                    )}
-                    {!isKryv && !isNotStarted && isLive && (
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 font-sans font-semibold text-[9px] tracking-[0.14em] uppercase text-emerald-600">
-                        <span className="relative flex w-2 h-2">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50" />
-                          <span className="relative inline-flex rounded-full w-2 h-2 bg-emerald-400" />
-                        </span>
-                        {tStatus('live')}
-                      </span>
-                    )}
-                    {!isKryv && !isNotStarted && !isLive && (
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 font-sans font-semibold text-[9px] tracking-[0.14em] uppercase text-orange-500">
-                        <span className="w-2 h-2 rounded-full bg-orange-400 inline-block" />
-                        {tStatus('building')}
-                      </span>
-                    )}
-                  </div>
-                  <p className={`font-sans font-normal text-[13px] leading-relaxed max-w-lg ${
-                    isKryv || isNotStarted ? 'text-ag-gray-light/50' : 'text-ag-gray'
+                      {tStatus('live')}
+                    </span>
+                  )}
+                  {!isKryv && !isNotStarted && !isLive && (
+                    <span className="inline-flex items-center gap-1.5 font-sans font-semibold text-[9px] tracking-[0.12em] uppercase text-orange-500">
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
+                      {tStatus('building')}
+                    </span>
+                  )}
+                </div>
+
+                {/* Name */}
+                <h3
+                  className={`font-sans font-bold tracking-[-0.03em] leading-none mb-3 transition-colors duration-300 ${
+                    isDisabled ? 'text-ag-gray-light' : 'text-ag-black group-hover:text-ag-navy'
+                  }`}
+                  style={{ fontSize: 'clamp(28px,2.8vw,42px)' }}
+                >
+                  {asset.name}
+                </h3>
+
+                {/* Tagline */}
+                <p className={`font-sans font-normal text-[12px] leading-relaxed mb-5 ${
+                  isDisabled ? 'text-ag-gray-light/40' : 'text-ag-gray'
+                }`}>
+                  {asset.tagline}
+                </p>
+
+                {/* Bottom — badge + arrow */}
+                <div className="flex items-center justify-between mt-auto pt-4 border-t border-ag-border">
+                  <span className={`font-sans font-semibold text-[10px] tracking-[0.16em] uppercase ${
+                    isDisabled ? 'text-ag-gray-light/30' : 'text-ag-gray-light'
                   }`}>
-                    {asset.tagline}
-                  </p>
+                    {asset.badge}
+                  </span>
+                  {!isDisabled && (
+                    <span className="w-7 h-7 border border-ag-border flex items-center justify-center text-ag-gray-light group-hover:border-ag-black group-hover:bg-ag-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200">
+                      <ArrowUpRight size={12} />
+                    </span>
+                  )}
                 </div>
               </div>
+            )
 
-              {/* Right — category + arrow */}
-              <div className="flex items-center gap-6 shrink-0 pl-13 md:pl-0">
-                <span className={`font-sans font-semibold text-[10px] tracking-[0.18em] uppercase ${
-                  isKryv || isNotStarted ? 'text-ag-gray-light/40' : 'text-ag-gray-light'
-                }`}>
-                  {asset.badge}
-                </span>
-                {!isKryv && !isNotStarted && (
-                  <span className="w-9 h-9 border border-ag-border flex items-center justify-center text-ag-gray group-hover:border-ag-black group-hover:bg-ag-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
-                    <ArrowUpRight size={14} />
-                  </span>
-                )}
-              </div>
-            </div>
-          )
+            if (isDisabled) {
+              return <div key={asset.id}>{chip}</div>
+            }
 
-          const rowClass = `group asset-row-${i} border-b border-ag-border transition-colors duration-300 ${
-            isKryv || isNotStarted
-              ? 'bg-ag-off-white/60 cursor-default opacity-60'
-              : 'bg-ag-white hover:bg-ag-off-white cursor-pointer'
-          }`
-
-          if (isKryv || isNotStarted) {
-            return <div key={asset.id} className={rowClass}>{inner}</div>
-          }
-
-          return (
-            <Link
-              key={asset.id}
-              href={href}
-              className={rowClass}
-              {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-            >
-              {inner}
-            </Link>
-          )
-        })}
+            return (
+              <Link
+                key={asset.id}
+                href={href}
+                {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
+                {chip}
+              </Link>
+            )
+          })}
+        </div>
       </div>
     </section>
   )

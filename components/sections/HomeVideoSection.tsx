@@ -19,7 +19,6 @@ export function HomeVideoSection({ children }: { children: React.ReactNode }) {
   const wrapRef    = useRef<HTMLDivElement>(null)
   const videoRef   = useRef<HTMLVideoElement>(null)
   const blurRef    = useRef<HTMLDivElement>(null)
-  const overlayRef = useRef<HTMLDivElement>(null)
   const nextRef    = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -45,40 +44,18 @@ export function HomeVideoSection({ children }: { children: React.ReactNode }) {
         },
       })
 
-      /*
-       * Phase 0–15% — vidéo apparaît RAPIDEMENT (overlap temporaire avec texte Mission)
-       * La vidéo monte en opacité pendant que la dernière section ManifestoSection
-       * est encore visible → crée l'effet de superposition immersive demandé.
-       */
+      /* Phase 0–20% — vidéo apparaît rapidement, proprement */
       tl.fromTo(videoRef.current,
         { opacity: 0 },
-        { opacity: 1, ease: 'none', duration: 0.15 },
+        { opacity: 1, ease: 'none', duration: 0.20 },
         0,
       )
 
-      /*
-       * Phase 0–25% — overlay semi-transparent sur les premières secondes
-       * Couvre temporairement le texte "Notre Mission" encore visible en dessous
-       * lors du début du pin → effet de fondu immersif progressif
-       */
-      tl.fromTo(overlayRef.current,
-        { opacity: 0.55 },
-        { opacity: 0, ease: 'none', duration: 0.25 },
-        0,
-      )
-
-      /* Phase 25–55% — blur progressif de la vidéo, ease: none */
+      /* Phase 20–55% — blur progressif de la vidéo, ease: none */
       tl.fromTo(blurRef.current,
         { backdropFilter: 'blur(0px)', WebkitBackdropFilter: 'blur(0px)' },
-        { backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', ease: 'none', duration: 0.30 },
-        0.25,
-      )
-
-      /* Phase 40–60% — overlay sombre progressif avant reveal, ease: none */
-      tl.fromTo(overlayRef.current,
-        { opacity: 0 },
-        { opacity: 0.45, ease: 'none', duration: 0.20 },
-        0.40,
+        { backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', ease: 'none', duration: 0.35 },
+        0.20,
       )
 
       /* Phase 60–100% — clip-path inset reveal Rolex-style */
@@ -116,13 +93,6 @@ export function HomeVideoSection({ children }: { children: React.ReactNode }) {
         ref={blurRef}
         className="absolute inset-0 pointer-events-none"
         style={{ backdropFilter: 'blur(0px)', WebkitBackdropFilter: 'blur(0px)' }}
-      />
-
-      {/* ── Overlay — démarre semi-opaque pour couvrir le texte Mission, puis se dissipe ── */}
-      <div
-        ref={overlayRef}
-        className="absolute inset-0 bg-ag-navy pointer-events-none"
-        style={{ opacity: 0.55 }}
       />
 
       {/* ── Section suivante (AssetGrid) — clip-path reveal Rolex-style ── */}
