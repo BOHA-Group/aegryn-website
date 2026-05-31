@@ -1,25 +1,35 @@
 'use client'
 
-import Link            from 'next/link'
+import Link             from 'next/link'
 import { useTranslations } from 'next-intl'
-import { useState }    from 'react'
-import { Menu, X }     from 'lucide-react'
-import LanguageSwitcher from '@/components/layout/LanguageSwitcher'
-import { AegrynLogo }  from '@/components/brand/AegrynLogo'
-import { MusicPlayer } from '@/components/ui/MusicPlayer'
+import { useState }     from 'react'
+import { usePathname, useParams } from 'next/navigation'
+import { Menu, X }      from 'lucide-react'
+import LanguageSwitcher  from '@/components/layout/LanguageSwitcher'
+import { AegrynLogo }   from '@/components/brand/AegrynLogo'
+import { MusicPlayer }  from '@/components/ui/MusicPlayer'
 
 const navLinks = [
-  { key: 'home',       href: '/' },
-  { key: 'about',      href: '/about' },
-  { key: 'advisory',   href: '/advisory' },
+  { key: 'home',        href: '/' },
+  { key: 'about',       href: '/about' },
+  { key: 'advisory',    href: '/advisory' },
   { key: 'whatWeBuild', href: '/what-we-build' },
-  { key: 'growWithUs', href: '/grow-with-us' },
-  { key: 'career',     href: '/career' },
+  { key: 'growWithUs',  href: '/grow-with-us' },
+  { key: 'career',      href: '/career' },
 ] as const
 
 export default function Nav() {
-  const t    = useTranslations('nav')
+  const t      = useTranslations('nav')
+  const params = useParams()
+  const locale = (params?.locale as string) ?? 'fr'
+  const pathname = usePathname()
   const [open, setOpen] = useState(false)
+
+  /* Strip locale prefix to get bare path, e.g. /fr/about → /about */
+  const barePath = pathname.replace(new RegExp(`^/${locale}`), '') || '/'
+
+  const isActive = (href: string) =>
+    href === '/' ? barePath === '/' : barePath === href || barePath.startsWith(href + '/')
 
   return (
     <header className="sticky top-0 z-50 bg-ag-white border-b border-ag-border">
@@ -32,15 +42,23 @@ export default function Nav() {
 
         {/* Desktop links */}
         <nav className="hidden lg:flex items-center gap-10" aria-label="Navigation principale">
-          {navLinks.map(({ key, href }) => (
-            <Link
-              key={key}
-              href={href}
-              className="link-underline font-sans font-semibold text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black"
-            >
-              {t(key)}
-            </Link>
-          ))}
+          {navLinks.map(({ key, href }) => {
+            const active = isActive(href)
+            return (
+              <Link
+                key={key}
+                href={href}
+                aria-current={active ? 'page' : undefined}
+                className={`link-underline font-sans font-semibold text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 ${
+                  active
+                    ? 'text-ag-black link-active'
+                    : 'text-ag-gray hover:text-ag-black'
+                }`}
+              >
+                {t(key)}
+              </Link>
+            )
+          })}
         </nav>
 
         {/* Right side: player + locale + contact CTA */}
@@ -71,16 +89,24 @@ export default function Nav() {
       {open && (
         <div className="lg:hidden border-t border-ag-border bg-ag-white px-6 py-6">
           <div className="flex flex-col gap-5">
-            {navLinks.map(({ key, href }) => (
-              <Link
-                key={key}
-                href={href}
-                className="font-sans font-semibold text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors"
-                onClick={() => setOpen(false)}
-              >
-                {t(key)}
-              </Link>
-            ))}
+            {navLinks.map(({ key, href }) => {
+              const active = isActive(href)
+              return (
+                <Link
+                  key={key}
+                  href={href}
+                  aria-current={active ? 'page' : undefined}
+                  className={`link-underline font-sans font-semibold text-[11px] tracking-[0.12em] uppercase transition-colors ${
+                    active
+                      ? 'text-ag-black link-active'
+                      : 'text-ag-gray hover:text-ag-black'
+                  }`}
+                  onClick={() => setOpen(false)}
+                >
+                  {t(key)}
+                </Link>
+              )
+            })}
             <Link
               href="/contact"
               className="font-sans font-semibold text-[11px] tracking-[0.14em] uppercase border border-ag-border px-4 py-2.5 text-ag-dark text-center hover:border-ag-black transition-all"

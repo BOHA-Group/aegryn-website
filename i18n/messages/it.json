@@ -247,10 +247,12 @@
     "base": "Base Svizzera"
   },
   "footer": {
-    "legal": "© 2026 Aegryn Sàrl — Tutti i diritti riservati",
+    "legal": "© 2026 AEGRYN. All rights reserved.",
     "company": "An Aegryn company",
-    "privacy": "Privacy",
-    "terms": "Termini",
+    "privacy": "Informativa sulla privacy",
+    "terms": "Termini di utilizzo",
+    "dataProtection": "Informativa sulla protezione dei dati",
+    "neediuLegal": "Neediu — Protezione dati & Termini di utilizzo",
     "tagline": "Engineered to Last",
     "swissTagline": "Swiss Tech Asset Builder",
     "navLabel": "Aegryn",

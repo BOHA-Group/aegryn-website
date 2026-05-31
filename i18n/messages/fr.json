@@ -332,10 +332,12 @@
     "base": "Base Suisse"
   },
   "footer": {
-    "legal": "© 2026 Aegryn Sàrl — Tous droits réservés",
+    "legal": "© 2026 AEGRYN. All rights reserved.",
     "company": "An Aegryn company",
     "privacy": "Confidentialité",
-    "terms": "Conditions",
+    "terms": "Conditions d'utilisation",
+    "dataProtection": "Politique de protection des données",
+    "neediuLegal": "Neediu — Protection des données & CGU",
     "tagline": "Engineered to Last",
     "swissTagline": "Swiss Tech Asset Builder",
     "navLabel": "Aegryn",

@@ -19,8 +19,10 @@ const socialLinks = [
 ]
 
 const legal = [
-  { key: 'privacy', href: '/privacy' },
-  { key: 'terms',   href: '/terms' },
+  { key: 'privacy',       href: '/privacy',                                                  external: false },
+  { key: 'terms',         href: '/terms',                                                    external: false },
+  { key: 'dataProtection', href: '/data-protection-notice',                                  external: false },
+  { key: 'neediuLegal',   href: '/data-protection-notice-neediu',                            external: false },
 ]
 
 const footerNavLinks = [
@@ -117,11 +119,15 @@ export default function Footer() {
           <p className="font-sans font-semibold text-[10px] text-white/55">
             {t('legal')}
           </p>
-          <div className="flex items-center gap-6">
-            {legal.map(({ key, href }) => (
-              <Link key={key} href={href}
-                className="font-sans font-semibold text-[10px] text-white/55 hover:text-white transition-colors">
-                {t(key as 'privacy' | 'terms')}
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            {legal.map(({ key, href, external }) => (
+              <Link
+                key={key}
+                href={href}
+                {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                className="font-sans font-semibold text-[10px] text-white/55 hover:text-white transition-colors"
+              >
+                {t(key as 'privacy' | 'terms' | 'dataProtection' | 'neediuLegal')}
               </Link>
             ))}
           </div>

@@ -48,8 +48,8 @@ export function VisionMissionBlock({
 
       /* Phase 1 (0–30%) : logo visible net, pas de flou */
       tl.fromTo(logo,
-        { scale: 1,   filter: 'blur(0px)',  opacity: 0.45 },
-        { scale: 2.5, filter: 'blur(0px)',  opacity: 0.45, ease: 'none', duration: 0.30 },
+        { scale: 1,   filter: 'blur(0px)',  opacity: 0.6 },
+        { scale: 2.5, filter: 'blur(0px)',  opacity: 0.6, ease: 'none', duration: 0.30 },
         0,
       )
 
@@ -79,22 +79,22 @@ export function VisionMissionBlock({
   return (
     <div ref={wrapRef} className="relative overflow-hidden" style={{ minHeight: '100vh' }}>
 
-      {/* ── Logo fond centré ── */}
+      {/* ── Logo fond — net au chargement, blur+zoom au scroll ── */}
       <div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
+        className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none"
         aria-hidden="true"
       >
         <div
           ref={logoRef}
           className="will-change-transform"
-          style={{ transformOrigin: 'center center', opacity: 0.45 }}
+          style={{ transformOrigin: 'center center', opacity: 0.6, filter: 'blur(0px)' }}
         >
-          <AegrynLogo size={180} variant="mark" />
+          <AegrynLogo size={220} variant="mark" />
         </div>
       </div>
 
-      {/* ── Contenu scrollable Vision + ADN ── */}
-      <div className="relative z-10 overflow-y-auto" style={{ maxHeight: '100vh' }}>
+      {/* ── Contenu Vision + ADN ── */}
+      <div className="relative z-10">
 
         {/* Vision */}
         <section className="border-b border-ag-border bg-ag-off-white/80 backdrop-blur-sm">
