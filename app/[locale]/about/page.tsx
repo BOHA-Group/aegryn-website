@@ -2,8 +2,8 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
-import { LogoZoomSection }  from '@/components/sections/LogoZoomSection'
-import { FounderSection }   from '@/components/sections/FounderSection'
+import { VisionMissionBlock } from '@/components/sections/VisionMissionBlock'
+import { FounderSection }      from '@/components/sections/FounderSection'
 import type { Metadata } from 'next'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -49,60 +49,51 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Vision + 3D Logo */}
-      <section className="border-b border-ag-border">
-        <div className="mx-auto max-w-7xl px-6 md:px-12">
-          <div className="grid md:grid-cols-[280px_1fr_360px] divide-y md:divide-y-0 md:divide-x divide-ag-border">
-            <div className="py-16 md:pr-16 flex items-start">
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-                / {t('vision.label')}
-              </p>
+      <VisionMissionBlock
+        visionLabel={
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+            / {t('vision.label')}
+          </p>
+        }
+        visionText={
+          <p
+            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15]"
+            style={{ fontSize: 'clamp(22px,2.5vw,32px)' }}
+          >
+            {t('vision.text')}
+          </p>
+        }
+        missionContent={
+          <div className="mx-auto max-w-7xl px-6 md:px-12 py-4">
+            <div className="flex items-center justify-between border-b border-ag-border py-4 mb-0">
+              <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+                / {t('mission.label')}
+              </span>
+              <span className="font-sans font-bold text-ag-black tracking-[-0.02em] text-[13px]">
+                {t('mission.title')}
+              </span>
             </div>
-            <div className="py-16 md:px-16">
-              <p
-                className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15]"
-                style={{ fontSize: 'clamp(22px,2.5vw,32px)' }}
-              >
-                {t('vision.text')}
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border">
+              {missionPillars.map((key, i) => (
+                <div key={key} className="py-14 md:px-10 first:pl-0 last:pr-0">
+                  <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-gray-light mb-6">
+                    {String(i + 1).padStart(2, '0')}
+                  </p>
+                  <h2
+                    className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-none mb-4"
+                    style={{ fontSize: 'clamp(20px,1.8vw,26px)' }}
+                  >
+                    {t(`mission.${key}.title`)}
+                  </h2>
+                  <p className="text-[14px] text-ag-gray leading-relaxed">
+                    {t(`mission.${key}.desc`)}
+                  </p>
+                </div>
+              ))}
             </div>
-            {/* Logo zoom au scroll */}
-            <LogoZoomSection />
           </div>
-        </div>
-      </section>
-
-      {/* Mission — 3 pillars */}
-      <section className="border-b border-ag-border">
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-4">
-          <div className="flex items-center justify-between border-b border-ag-border py-4 mb-0">
-            <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-              / {t('mission.label')}
-            </span>
-            <span className="font-sans font-bold text-ag-black tracking-[-0.02em] text-[13px]">
-              {t('mission.title')}
-            </span>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border">
-            {missionPillars.map((key, i) => (
-              <div key={key} className="py-14 md:px-10 first:pl-0 last:pr-0">
-                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-gray-light mb-6">
-                  {String(i + 1).padStart(2, '0')}
-                </p>
-                <h2
-                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-none mb-4"
-                  style={{ fontSize: 'clamp(20px,1.8vw,26px)' }}
-                >
-                  {t(`mission.${key}.title`)}
-                </h2>
-                <p className="text-[14px] text-ag-gray leading-relaxed">
-                  {t(`mission.${key}.desc`)}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        }
+      />
 
       {/* DNA — values grid */}
       <section className="border-b border-ag-border bg-ag-off-white">
