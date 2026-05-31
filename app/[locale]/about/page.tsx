@@ -2,8 +2,8 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
-import Image from 'next/image'
-import { LogoZoomSection } from '@/components/sections/LogoZoomSection'
+import { LogoZoomSection }  from '@/components/sections/LogoZoomSection'
+import { FounderSection }   from '@/components/sections/FounderSection'
 import type { Metadata } from 'next'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -128,56 +128,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder */}
-      <section className="border-b border-ag-border">
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-14">
-            / {t('founder.label')}
-          </p>
-          <div className="grid gap-14 lg:grid-cols-[200px_1fr] lg:items-start">
-            <div className="relative h-56 w-44 border border-ag-border overflow-hidden shrink-0">
-              <Image
-                src="/images/profil-ceo.jpeg"
-                alt="Yohann Bollack — Founder & CEO, Aegryn"
-                fill
-                className="object-cover object-top"
-                sizes="176px"
-              />
-            </div>
-            <div>
-              <h2
-                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-none mb-1"
-                style={{ fontSize: 'clamp(28px,3vw,42px)' }}
-              >
-                Yohann Bollack
-              </h2>
-              <p className="font-sans font-semibold text-[11px] text-ag-apex uppercase tracking-[0.22em] mb-8">
-                Founder & CEO — Aegryn
-              </p>
-              <div className="space-y-4 text-[15px] text-ag-gray leading-relaxed max-w-2xl">
-                <p>{t('founder.bio1')}</p>
-                <p>{t('founder.bio2')}</p>
-              </div>
-              <div className="mt-10 flex flex-wrap gap-4">
-                <a
-                  href="https://www.linkedin.com/in/yohann-bollack-2a2922"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border border-ag-border px-5 py-2.5 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-gray hover:border-ag-black hover:text-ag-black transition-all"
-                >
-                  LinkedIn <ArrowUpRight size={12} />
-                </a>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 border border-ag-apex/40 px-5 py-2.5 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-apex hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
-                >
-                  {t('founder.cta')} <ArrowUpRight size={12} />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Founder — Rolex-style scroll reveal */}
+      <FounderSection />
 
       {/* CTA */}
       <section className="bg-ag-navy py-28 px-6 md:px-12">
