@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import Link  from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
-import { AssetHeroBanner }     from '@/components/sections/AssetHeroBanner'
+import { AssetHeroBannerVideo } from '@/components/sections/AssetHeroBannerVideo'
 import { AssetGridWithDrawer } from '@/components/sections/AssetDrawer'
 import type { Metadata } from 'next'
 
@@ -42,8 +42,8 @@ export default async function WhatWeBuildPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Bannière image avec texte animé */}
-      <AssetHeroBanner />
+      {/* Bannière image + vidéo cross-fade avec texte animé — Standard 8 */}
+      <AssetHeroBannerVideo videoSrc="/videos/assets-reel.mp4" />
 
       {/* Grille actifs — drawer au clic */}
       <AssetGridWithDrawer />
