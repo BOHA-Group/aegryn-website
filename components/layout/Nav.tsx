@@ -6,6 +6,7 @@ import { useState }    from 'react'
 import { Menu, X }     from 'lucide-react'
 import LanguageSwitcher from '@/components/layout/LanguageSwitcher'
 import { AegrynLogo }  from '@/components/brand/AegrynLogo'
+import { MusicPlayer } from '@/components/ui/MusicPlayer'
 
 const navLinks = [
   { key: 'home',       href: '/' },
@@ -42,8 +43,10 @@ export default function Nav() {
           ))}
         </nav>
 
-        {/* Right side: locale + contact CTA */}
+        {/* Right side: player + locale + contact CTA */}
         <div className="hidden lg:flex items-center gap-6">
+          <MusicPlayer />
+          <span className="w-px h-4 bg-ag-border" />
           <LanguageSwitcher />
           <Link
             href="/contact"
@@ -87,6 +90,9 @@ export default function Nav() {
             </Link>
             <div className="pt-2 border-t border-ag-border">
               <LanguageSwitcher />
+            </div>
+            <div className="pt-2 border-t border-ag-border">
+              <MusicPlayer />
             </div>
           </div>
         </div>
