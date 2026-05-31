@@ -41,8 +41,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-ag-navy border-t border-white/10">
-      <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto max-w-7xl px-6 pt-10 pb-0">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
 
           {/* Brand */}
           <div className="col-span-full lg:col-span-1">
@@ -59,7 +59,7 @@ export default function Footer() {
             <p className="mt-2 font-sans font-semibold text-[11px] text-white/30">
               {t('swissTagline')}
             </p>
-            <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2">
+            <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2">
               {socialLinks.map(({ label, href }) => (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer"
                   className="font-sans font-semibold text-[10px] text-white/30 hover:text-ag-apex transition-colors">
@@ -74,7 +74,7 @@ export default function Footer() {
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
               {t('navLabel')}
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
               {footerNavLinks.map(({ navKey, href }) => (
                 <li key={href}>
                   <Link href={href} className="text-sm text-white/75 hover:text-white transition-colors">
@@ -90,7 +90,7 @@ export default function Footer() {
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
               {t('ecosystemLabel')}
             </p>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               {footerAssets.map(({ name, href, external }) => (
                 <li key={name}>
                   <Link href={href}
@@ -108,7 +108,7 @@ export default function Footer() {
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
               {t('advisoryLabel')}
             </p>
-            <p className="text-sm text-white/75 leading-relaxed mb-6">
+            <p className="text-sm text-white/75 leading-relaxed mb-5">
               {t('advisoryDesc')}
             </p>
             <Link href="/advisory"
@@ -118,18 +118,18 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center">
-          <p className="font-sans font-semibold text-[10px] text-white/55">
+        {/* Legal strip — compact, fused above marquee */}
+        <div className="mt-8 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-4 sm:flex-row sm:items-center">
+          <p className="font-sans font-semibold text-[10px] text-white/45">
             {t('legal')}
           </p>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             {legal.map(({ key, href, external }) => (
               <Link
                 key={key}
                 href={href}
                 {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                className="font-sans font-semibold text-[10px] text-white/55 hover:text-white transition-colors"
+                className="font-sans font-semibold text-[10px] text-white/45 hover:text-white transition-colors"
               >
                 {t(key as 'privacy' | 'neediuLegal')}
               </Link>
@@ -137,7 +137,12 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <FooterMarquee />
+
+      {/* Marquee — fused at bottom, no extra border */}
+      <FooterMarquee
+        medallionText={t('medallionText')}
+        contactLabel={t('contactLabel')}
+      />
     </footer>
   )
 }

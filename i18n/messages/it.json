@@ -318,7 +318,9 @@
     "ecosystemLabel": "Ecosistema",
     "advisoryLabel": "Advisory",
     "advisoryDesc": "Chiarezza strategica in Data, AI e Cybersicurezza.",
-    "advisoryBook": "Prenota una sessione ↗"
+    "advisoryBook": "Prenota una sessione ↗",
+    "medallionText": "Parliamo . Contattaci . Parliamo . Contattaci .",
+    "contactLabel": "Contattaci"
   },
   "cookie": {
     "title": "Aegryn — Cookie & Analytics",

@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
 import { VisionMissionBlock } from '@/components/sections/VisionMissionBlock'
 import { FounderSection }      from '@/components/sections/FounderSection'
-import { AegrynLogo }          from '@/components/brand/AegrynLogo'
+import { AboutHeroLogo }       from '@/components/brand/AboutHeroLogo'
 import type { Metadata } from 'next'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -50,10 +50,8 @@ export default function AboutPage() {
                 {t('hero.desc')}
               </p>
             </div>
-            {/* Aegryn logo — floated right of title block, desktop only */}
-            <div className="hidden lg:flex shrink-0 items-center justify-center self-center" aria-hidden="true">
-              <AegrynLogo size={180} variant="mark" className="opacity-20" />
-            </div>
+            {/* Aegryn logo — floated right of title block, animated scroll zoom-in */}
+            <AboutHeroLogo />
           </div>
         </div>
       </section>

@@ -318,7 +318,9 @@
     "ecosystemLabel": "Ecosysteem",
     "advisoryLabel": "Advisory",
     "advisoryDesc": "Strategische helderheid in Data, AI en Cyberbeveiliging.",
-    "advisoryBook": "Sessie boeken ↗"
+    "advisoryBook": "Sessie boeken ↗",
+    "medallionText": "Laten we praten . Neem contact op . Laten we praten . Neem contact op .",
+    "contactLabel": "Neem contact op"
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",

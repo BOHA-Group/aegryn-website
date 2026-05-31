@@ -417,7 +417,9 @@
     "ecosystemLabel": "Écosystème",
     "advisoryLabel": "Advisory",
     "advisoryDesc": "Clarté stratégique en Data, IA et Cybersécurité.",
-    "advisoryBook": "Prendre contact ↗"
+    "advisoryBook": "Prendre contact ↗",
+    "medallionText": "Discutons . Contactez-nous . Discutons . Contactez-nous .",
+    "contactLabel": "Nous contacter"
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
