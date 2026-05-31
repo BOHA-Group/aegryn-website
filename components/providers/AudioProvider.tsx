@@ -93,8 +93,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       audio.src = ''
       ctxRef.current?.close()
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []) // buildGraph intentionally omitted — created once on mount
 
   const togglePlay = useCallback(() => {
     const audio = audioRef.current
