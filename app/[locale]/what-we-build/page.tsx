@@ -42,10 +42,11 @@ export default async function WhatWeBuildPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Bannière vidéo immersive + overlap chips actifs — Standard 8 */}
-      <AssetHeroBannerVideo>
-        <AssetGridWithDrawer />
-      </AssetHeroBannerVideo>
+      {/* Bannière vidéo immersive — Standard 8 */}
+      <AssetHeroBannerVideo />
+
+      {/* Grille actifs — apparaît naturellement après la vidéo */}
+      <AssetGridWithDrawer />
 
       {/* Advisory CTA */}
       <section className="border-t border-ag-border bg-ag-navy py-24 px-6 md:px-12">

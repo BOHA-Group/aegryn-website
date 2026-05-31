@@ -14,11 +14,7 @@ import { gsap, SplitText }    from '@/lib/gsap'
  *   Phase 75–100%: children (AssetGridWithDrawer) remonte par-dessus — chips visibles
  *                  sur fond vidéo floutée → effet immersif overlap
  */
-export function AssetHeroBannerVideo({
-  children,
-}: {
-  children?: React.ReactNode
-}) {
+export function AssetHeroBannerVideo() {
   const wrapRef    = useRef<HTMLDivElement>(null)
   const photoRef   = useRef<HTMLDivElement>(null)
   const videoRef   = useRef<HTMLVideoElement>(null)
@@ -27,7 +23,6 @@ export function AssetHeroBannerVideo({
   const headingRef = useRef<HTMLHeadingElement>(null)
   const subRef     = useRef<HTMLParagraphElement>(null)
   const labelRef   = useRef<HTMLParagraphElement>(null)
-  const nextRef    = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const wrap    = wrapRef.current
@@ -93,26 +88,13 @@ export function AssetHeroBannerVideo({
         0.48,
       )
 
-      /* Phase 60–75% — blur + overlay progressifs, ease: none */
-      tl.fromTo(blurRef.current,
-        { backdropFilter: 'blur(0px)', WebkitBackdropFilter: 'blur(0px)' },
-        { backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', ease: 'none', duration: 0.15 },
-        0.60,
-      )
+      /* Phase 60–80% — légère vignette finale, ease: none */
       tl.fromTo(overlayRef.current,
         { opacity: 0 },
-        { opacity: 0.48, ease: 'none', duration: 0.15 },
+        { opacity: 0.20, ease: 'none', duration: 0.20 },
         0.60,
       )
 
-      /* Phase 75–100% — clip-path inset reveal Rolex-style */
-      if (nextRef.current) {
-        tl.fromTo(nextRef.current,
-          { clipPath: 'inset(100% 0 0 0)' },
-          { clipPath: 'inset(0% 0 0 0)', ease: 'none', duration: 0.25 },
-          0.75,
-        )
-      }
 
     }, wrap)
 
@@ -198,16 +180,6 @@ export function AssetHeroBannerVideo({
         </div>
       </div>
 
-      {/* ── Couche 7 : section overlap (chips actifs) — slide depuis le bas ── */}
-      {children && (
-        <div
-          ref={nextRef}
-          className="absolute inset-x-0 bottom-0 top-0 z-20 overflow-auto"
-          style={{ clipPath: 'inset(100% 0 0 0)' }}
-        >
-          {children}
-        </div>
-      )}
     </div>
   )
 }

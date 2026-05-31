@@ -27,7 +27,6 @@ const TEAM = [
   { name: 'Romain M.',    domain: 'Digital Law & Intellectual Property',                                   area: 'Legal' },
   { name: 'Léo H.',       domain: 'Product & Platform Strategy',                                          area: 'Product' },
   { name: 'Baptiste L.',  domain: 'UX Design & User Experience',                                          area: 'Design' },
-  { name: 'Nour M.',      domain: 'Marketing & Social Networks',                                           area: 'Marketing' },
 ]
 
 export default async function AdvisoryPage({ params }: Props) {
