@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import Link                  from 'next/link'
 import { useTranslations }   from 'next-intl'
 import { gsap, SplitText }   from '@/lib/gsap'
 

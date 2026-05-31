@@ -10,7 +10,7 @@
   },
   "hero": {
     "tagline": "Engineered to Last",
-    "eyebrow": "Zwitserse tech-assetbouwer — Gemaakt om te blijven",
+    "eyebrow": "Zwitserse tech-assetbouwer",
     "title": "Wij bouwen\nwat blijft.",
     "sub": "Eigen assets van de protocollaag\ntot de gebruikersinterface.",
     "cta": "Ontdek onze assets",
@@ -240,10 +240,10 @@
     "faq": {
       "label": "/ Veelgestelde vragen",
       "items": [
-        { "q": "Wat is Aegryn en wat doen we?", "a": "Aegryn is een Zwitserse tech-assetbouwer die eigen digitale ecosystemen ontwerpt en beheert — omgevingen waar technologie het dagelijks leven van individuen, professionals en de markten waarin zij opereren structureert." },
+        { "q": "Wie zijn wij en wat doen we?", "a": "Aegryn is een Zwitserse tech-assetbouwer die eigen digitale ecosystemen ontwerpt en beheert — omgevingen waar technologie het dagelijks leven van individuen, professionals en de markten waarin zij opereren structureert." },
         { "q": "Wat onderscheidt ons van de concurrentie?", "a": "In tegenstelling tot adviesbureaus of agencies bouwen en beheren we onze eigen digitale ecosystemen. Elk advisory-inzicht, beveiligingsprotocol en groeiframework dat we aanbieden is gebaseerd op echte uitvoering, niet op theorie." },
-        { "q": "Hoe kan ik investeren of partner worden van Aegryn?", "a": "We verwelkomen visionaire investeerders en strategische partners die onze langetermijnperspectief delen. Gebruik het contactformulier, selecteer \"Partnerschap\" als onderwerp en ons team reageert binnen 24 uur." },
-        { "q": "Waar is Aegryn gevestigd?", "a": "Aegryn is gevestigd in Zwitserland. Onze digitale ecosystemen opereren in heel Europa en onze advisory practice bedient cliënten in Zwitserland, Frankrijk en de bredere EU." }
+        { "q": "Hoe kan ik investeren of partner worden?", "a": "We verwelkomen visionaire investeerders en strategische partners die onze langetermijnperspectief delen. Gebruik het contactformulier, selecteer \"Partnerschap\" als onderwerp en ons team reageert binnen 24 uur." },
+        { "q": "Waar zijn wij gevestigd?", "a": "Aegryn is gevestigd in Zwitserland. Onze digitale ecosystemen opereren in heel Europa en onze advisory practice bedient cliënten in Zwitserland, Frankrijk en de bredere EU." }
       ]
     },
     "hero": { "title": "Laten we praten.", "desc": "Advisory, partnerschap, pers of algemene vraag — we reageren binnen 24u." },

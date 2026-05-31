@@ -112,7 +112,7 @@ export function HeroMountain() {
           <h1
             ref={headingRef}
             id="hero-title"
-            className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-4xl mb-6"
+            className="font-sans font-bold text-white leading-[1.1] tracking-[-0.03em] max-w-4xl mb-6"
             style={{ fontSize: 'clamp(56px,7.5vw,116px)' }}
           >
             {t('title').split('\n').map((line, i, arr) => (
@@ -155,18 +155,13 @@ export function HeroMountain() {
 
         {/* Bottom bar — Rolex-style info strip */}
         <div className="border-t border-white/10 bg-ag-navy/80 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-6 md:px-12 py-3 flex items-center justify-between">
-            <div className="flex items-center gap-8">
-              <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/60">
-                {t('strip')}
-              </span>
-              <span className="hidden sm:block w-px h-3 bg-white/25" />
-              <span className="hidden sm:block font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/60">
-                {t('geo')}
-              </span>
-            </div>
+          <div className="max-w-7xl mx-auto px-6 md:px-12 py-3 flex items-center gap-8">
             <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/60">
-              Est. 2024
+              {t('strip')}
+            </span>
+            <span className="hidden sm:block w-px h-3 bg-white/25" />
+            <span className="hidden sm:block font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/60">
+              {t('geo')}
             </span>
           </div>
         </div>

@@ -10,7 +10,7 @@
   },
   "hero": {
     "tagline": "Engineered to Last",
-    "eyebrow": "Constructeur d'actifs tech suisse — Fait pour durer.",
+    "eyebrow": "Constructeur d'actifs tech suisse",
     "title": "Nous construisons\nce qui dure.",
     "sub": "Des actifs propriétaires de la couche protocole\njusqu'à l'interface utilisateur.",
     "cta": "Découvrir nos actifs",
@@ -306,19 +306,19 @@
       "label": "/ Questions fréquentes",
       "items": [
         {
-          "q": "Qu'est-ce qu'Aegryn et que faisons-nous ?",
+          "q": "Qui sommes-nous et que faisons-nous ?",
           "a": "Aegryn est un constructeur d'actifs tech suisse qui conçoit et opère des écosystèmes numériques propriétaires — des environnements où la technologie structure le quotidien des individus, des professionnels et des marchés dans lesquels ils évoluent."
         },
         {
-          "q": "Qu'est-ce qui nous différencie de la concurrence ?",
+          "q": "Qu'est-ce qui nous différencie ?",
           "a": "Contrairement aux cabinets de conseil ou agences, nous construisons et opérons nos propres écosystèmes numériques. Chaque insight advisory, chaque protocole de sécurité, chaque cadre de croissance que nous proposons est issu d'une exécution réelle — pas de la théorie. Nous ne revendons pas des frameworks. Nous partageons ce qui fonctionne parce que nous l'utilisons nous-mêmes."
         },
         {
-          "q": "Comment investir ou devenir partenaire d'Aegryn ?",
+          "q": "Comment investir ou devenir partenaire ?",
           "a": "Nous accueillons les investisseurs visionnaires et partenaires stratégiques qui partagent notre perspective long terme. Utilisez le formulaire ci-dessus, sélectionnez \u00ab Partenariat \u00bb comme sujet, et notre équipe vous répondra sous 24h pour organiser un premier échange."
         },
         {
-          "q": "Où est basé Aegryn ?",
+          "q": "Où sommes-nous basés ?",
           "a": "Aegryn a son siège en Suisse. Nos écosystèmes numériques opèrent à travers l'Europe, et notre practice advisory accompagne des clients en Suisse, en France et dans l'UE."
         }
       ]

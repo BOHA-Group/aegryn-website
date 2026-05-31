@@ -4,6 +4,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
 import { VisionMissionBlock } from '@/components/sections/VisionMissionBlock'
 import { FounderSection }      from '@/components/sections/FounderSection'
+import { AegrynLogo }          from '@/components/brand/AegrynLogo'
 import type { Metadata } from 'next'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -34,18 +35,26 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="border-b border-ag-border">
         <div className="mx-auto max-w-7xl px-6 md:px-12 py-32">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
-            {t('hero.label')}
-          </p>
-          <h1
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8"
-            style={{ fontSize: 'clamp(52px,6.5vw,88px)' }}
-          >
-            {t('hero.title')}
-          </h1>
-          <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl">
-            {t('hero.desc')}
-          </p>
+          <div className="flex items-start justify-between gap-8">
+            <div className="flex-1 min-w-0">
+              <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
+                {t('hero.label')}
+              </p>
+              <h1
+                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8"
+                style={{ fontSize: 'clamp(52px,6.5vw,88px)' }}
+              >
+                {t('hero.title')}
+              </h1>
+              <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl">
+                {t('hero.desc')}
+              </p>
+            </div>
+            {/* Aegryn logo — floated right of title block, desktop only */}
+            <div className="hidden lg:flex shrink-0 items-center justify-center self-center" aria-hidden="true">
+              <AegrynLogo size={180} variant="mark" className="opacity-20" />
+            </div>
+          </div>
         </div>
       </section>
 

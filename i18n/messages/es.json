@@ -10,7 +10,7 @@
   },
   "hero": {
     "tagline": "Engineered to Last",
-    "eyebrow": "Constructor de activos tech suizo — Hecho para durar",
+    "eyebrow": "Constructor de activos tech suizo",
     "title": "Construimos\nlo que perdura.",
     "sub": "Activos propietarios desde la capa de protocolo\nhasta la interfaz de usuario.",
     "cta": "Descubrir nuestros activos",
@@ -240,10 +240,10 @@
     "faq": {
       "label": "/ Preguntas frecuentes",
       "items": [
-        { "q": "¿Qué es Aegryn y qué hacemos?", "a": "Aegryn es un constructor de activos tech suizo que diseña y opera ecosistemas digitales propietarios — entornos donde la tecnología estructura el día a día de individuos, profesionales y los mercados en los que operan." },
+        { "q": "¿Quiénes somos y qué hacemos?", "a": "Aegryn es un constructor de activos tech suizo que diseña y opera ecosistemas digitales propietarios — entornos donde la tecnología estructura el día a día de individuos, profesionales y los mercados en los que operan." },
         { "q": "¿Qué nos diferencia de la competencia?", "a": "A diferencia de consultoras o agencias, construimos y operamos nuestros propios ecosistemas digitales. Cada insight advisory, protocolo de seguridad y marco de crecimiento que ofrecemos proviene de ejecución real, no de teoría." },
-        { "q": "¿Cómo puedo invertir o asociarme con Aegryn?", "a": "Damos la bienvenida a inversores visionarios y socios estratégicos que comparten nuestra perspectiva a largo plazo. Use el formulario de contacto, seleccione \"Asociación\" como asunto y nuestro equipo responderá en 24 horas." },
-        { "q": "¿Dónde está ubicado Aegryn?", "a": "Aegryn tiene su sede en Suiza. Nuestros ecosistemas digitales operan en toda Europa y nuestra practice advisory atiende clientes en Suiza, Francia y la UE." }
+        { "q": "¿Cómo puedo invertir o asociarme?", "a": "Damos la bienvenida a inversores visionarios y socios estratégicos que comparten nuestra perspectiva a largo plazo. Use el formulario de contacto, seleccione \"Asociación\" como asunto y nuestro equipo responderá en 24 horas." },
+        { "q": "¿Dónde estamos ubicados?", "a": "Aegryn tiene su sede en Suiza. Nuestros ecosistemas digitales operan en toda Europa y nuestra practice advisory atiende clientes en Suiza, Francia y la UE." }
       ]
     },
     "hero": { "title": "Hablemos.", "desc": "Advisory, asociación, prensa o consulta general — respondemos en 24h." },

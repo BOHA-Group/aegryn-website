@@ -10,7 +10,7 @@
   },
   "hero": {
     "tagline": "Engineered to Last",
-    "eyebrow": "Schweizer Tech-Asset-Builder — Gebaut für die Ewigkeit",
+    "eyebrow": "Schweizer Tech-Asset-Builder",
     "title": "Wir bauen\nwas besteht.",
     "sub": "Eigene Assets von der Protokollschicht\nbis zur Benutzeroberfläche.",
     "cta": "Unsere Assets entdecken",
@@ -240,10 +240,10 @@
     "faq": {
       "label": "/ Häufig gestellte Fragen",
       "items": [
-        { "q": "Was ist Aegryn und was tun wir?", "a": "Aegryn ist ein Schweizer Tech-Asset-Builder, der propriäre digitale Ökosysteme entwirft und betreibt — Umgebungen, in denen Technologie den Alltag von Einzelpersonen, Profis und den Märkten, in denen sie tätig sind, strukturiert." },
+        { "q": "Wer sind wir und was tun wir?", "a": "Aegryn ist ein Schweizer Tech-Asset-Builder, der propriäre digitale Ökosysteme entwirft und betreibt — Umgebungen, in denen Technologie den Alltag von Einzelpersonen, Profis und den Märkten, in denen sie tätig sind, strukturiert." },
         { "q": "Was unterscheidet uns von der Konkurrenz?", "a": "Im Gegensatz zu Beratungsunternehmen oder Agenturen bauen und betreiben wir unsere eigenen digitalen Ökosysteme. Jeder Advisory-Einblick, jedes Sicherheitsprotokoll, jeder Wachstumsrahmen, den wir anbieten, stammt aus realer Ausführung — nicht aus der Theorie." },
-        { "q": "Wie kann ich in Aegryn investieren oder Partner werden?", "a": "Wir begrüßen visionäre Investoren und strategische Partner, die unsere langfristige Perspektive teilen. Nutzen Sie das Kontaktformular, wählen Sie \"Partnerschaft\" als Betreff, und unser Team meldet sich innerhalb von 24 Stunden." },
-        { "q": "Wo hat Aegryn seinen Sitz?", "a": "Aegryn hat seinen Sitz in der Schweiz. Unsere digitalen Ökosysteme agieren in ganz Europa, und unsere Advisory-Praxis betreut Kunden in der Schweiz, Frankreich und der EU." }
+        { "q": "Wie kann ich investieren oder Partner werden?", "a": "Wir begrüßen visionäre Investoren und strategische Partner, die unsere langfristige Perspektive teilen. Nutzen Sie das Kontaktformular, wählen Sie \"Partnerschaft\" als Betreff, und unser Team meldet sich innerhalb von 24 Stunden." },
+        { "q": "Wo haben wir unseren Sitz?", "a": "Aegryn hat seinen Sitz in der Schweiz. Unsere digitalen Ökosysteme agieren in ganz Europa, und unsere Advisory-Praxis betreut Kunden in der Schweiz, Frankreich und der EU." }
       ]
     },
     "hero": { "title": "Sprechen wir.", "desc": "Advisory, Partnerschaft, Presse oder allgemeine Anfragen — wir antworten innerhalb von 24h." },
