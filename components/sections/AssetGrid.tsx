@@ -139,7 +139,7 @@ export function AssetGrid() {
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50" />
                           <span className="relative inline-flex rounded-full w-2 h-2 bg-emerald-400" />
                         </span>
-                        Live
+                        {tStatus('live')}
                       </span>
                     )}
                     {!isKryv && !isNotStarted && !isLive && (

@@ -10,6 +10,7 @@
   },
   "hero": {
     "tagline": "Engineered to Last",
+    "eyebrow": "Zwitserse tech-assetbouwer — Gemaakt om te blijven",
     "title": "Wij bouwen\nwat blijft.",
     "sub": "Eigen assets van de protocollaag\ntot de gebruikersinterface.",
     "cta": "Ontdek onze assets",
@@ -93,7 +94,7 @@
     },
     "philosophy": { "label": "Onze filosofie", "title": "Eigendom. Soeverein. Duurzaam.", "desc": "We bouwen geen MVP's. We verkopen geen minderheidsbelangen aan VC's. Elk Aegryn-asset is ontworpen voor volledig eigendom en soevereine exploitatie." },
     "pillars": { "proprietary": { "stat": "100%", "label": "Eigendom" }, "sovereign": { "stat": "CH", "label": "Soevereiniteit" }, "durable": { "stat": "∞", "label": "Duurzaamheid" } },
-    "advisoryCta": { "text": "Heeft uw bedrijf institutionele digitale bescherming nodig?", "button": "Ontdek Advisory" }
+    "advisoryCta": { "label": "Aegryn Advisory", "text": "Heeft uw bedrijf institutionele digitale bescherming nodig?", "button": "Ontdek Advisory" }
   },
   "whatwedo": {
     "label": "Wat we doen",
@@ -120,7 +121,7 @@
   },
   "aboutSection": {
     "label": "Over Aegryn",
-    "title": "Swiss Technology\nAsset Platform.",
+    "title": "Zwitsers technologie-\nassetplatform.",
     "desc": "We ontwerpen, financieren en beheren digitale ecosystemen die evolueren van gedurfde ideeën naar echte, duurzame technologie. Geen features — assets.",
     "tagline": "Ontwikkeld in Zwitserland. Gebouwd om te blijven.",
     "cta": "Over Aegryn",
@@ -154,7 +155,7 @@
     ]
   },
   "about": {
-    "hero": { "label": "Over Aegryn", "title": "Swiss Tech Asset Builder", "desc": "We ontwerpen, bouwen en beheren digitale ecosystemen — van gedurfde ideeën naar betrouwbare, duurzame technologie. Ontwikkeld in Zwitserland. Gebouwd om te blijven." },
+    "hero": { "label": "Over Aegryn", "title": "Zwitserse tech-assetbouwer", "desc": "We ontwerpen, bouwen en beheren digitale ecosystemen — van gedurfde ideeën naar betrouwbare, duurzame technologie. Ontwikkeld in Zwitserland. Gebouwd om te blijven." },
     "vision": {
       "label": "Onze visie",
       "text": "Wij geloven dat technologie meer moet doen dan indruk maken. Ze moet structureren, vereenvoudigen en alledaagse ervaringen verheffen. In een wereld vol gefragmenteerde apps en kortetermijnoplossingen bouwen we coherente digitale ecosystemen — omgevingen waar gebruikers, data en transacties op natuurlijke en veilige wijze verbonden zijn."
@@ -172,7 +173,7 @@
       "transparency": { "label": "04", "title": "Transparantie", "desc": "Naar onze partners, gebruikers en de markt." }
     },
     "founder": { "label": "De oprichter", "bio1": "Yohann Bollack is ondernemer, builder en digitaal strateeg. Hij richtte Aegryn op met een eenvoudige overtuiging: de beste digitale assets worden geboren uit totale beheersing van de keten, van idee tot infrastructuur.", "bio2": "Gepassioneerd door de kruising van technologie, beveiliging en design leidt hij een ecosysteem van zes producten.", "cta": "Contact opnemen" },
-    "swiss": { "title": "Zes assets. Één gemeenschappelijk huis. Één Zwitserse ambitie.", "cta": "Bekijk onze assets" }
+    "swiss": { "groupLabel": "Aegryn Group", "title": "Zes assets. Één gemeenschappelijk huis. Één Zwitserse ambitie.", "cta": "Bekijk onze assets" }
   },
   "career": {
     "hero": { "label": "Aegryn Advisory & Carrières", "title": "Advisory & Experts in Digitale Ecosystemen", "desc": "Aegryn zoekt Senior Advisors — operationele experts in Data, AI en Cyberbeveiliging voor duurzame digitale ecosystemen." },
@@ -185,6 +186,41 @@
   "assetPage": {
     "back": "Onze assets", "presentation": "Presentatie", "audience": "Doelgroep", "features": "Functies", "visit": "Bezoeken", "comingSoon": "Binnenkort beschikbaar",
     "cta": { "title": "Ontdek het volledige ecosysteem.", "label": "Aegryn Group", "allAssets": "Al onze assets", "contact": "Neem contact op" }
+  },
+  "growWithUs": {
+    "hero": {
+      "label": "Strategische Partnerschappen & Investeringen",
+      "title": "Groei met ons mee.",
+      "desc": "Aegryn nodigt visionaire investeerders en partners uit om deel uit te maken van een baanbrekende beweging in digitale technologie. Langetermijnvisie. Gedisciplineerde uitvoering.",
+      "cta": "Contact opnemen"
+    },
+    "investors": {
+      "label": "/ Investeerders",
+      "sub": "Word een sleutelspeler",
+      "items": [
+        { "num": "01", "title": "Sterk groeiende markt", "desc": "We zijn gepositioneerd in de snel transformerende sector van digitale ecosystemen, met aanzienlijke omzetkansen." },
+        { "num": "02", "title": "Bewezen expertise", "desc": "Ons team bestaat uit topklasse ontwikkelaars, UX-designers en marketingstrategen die geavanceerde digitale producten leveren." },
+        { "num": "03", "title": "Volgende generatie technologie", "desc": "We integreren AI, machine learning en automatisering voor toekomstbestendige oplossingen, gebouwd voor duurzaamheid en schaalbaarheid." },
+        { "num": "04", "title": "Datagedreven succes", "desc": "Ons robuuste businessmodel en financiële strategieën garanderen langetermijnwinstgevendheid en aanhoudende innovatie." },
+        { "num": "05", "title": "Transparant & investeerdergericht", "desc": "We bieden duidelijke, consistente updates over projectvoortgang, financiële mijlpalen en marktontwikkelingen." }
+      ]
+    },
+    "partners": {
+      "label": "/ Partners",
+      "sub": "Krachtige opportuniteiten",
+      "items": [
+        { "title": "App-ontwikkeling", "desc": "Vergroot het dienstenportfolio van uw bureau en ontsluit significante nieuwe inkomstenstromen." },
+        { "title": "Embedded verzekering", "desc": "Bied directe, naadloze dekking voor aankopen, leveringen en financiële transacties." },
+        { "title": "Geïntegreerde betalingsoplossingen", "desc": "Activeer realtime betalingen, flexibele financiering en omzetdelingsmodellen." },
+        { "title": "Co-branded groei-initiatieven", "desc": "Lanceer virale campagnes, exclusieve aanbiedingen en tijdgebonden evenementen." },
+        { "title": "Datagedreven marketingcampagnes", "desc": "Benut platformdata om zeer gerichte en gepersonaliseerde marketingcampagnes te creëren die conversies stimuleren." },
+        { "title": "Social media & influencer-samenwerkingen", "desc": "Werk met ons samen om de boodschap van ons merk te versterken via boeiende social media-campagnes en strategische influencer-partnerships." }
+      ]
+    },
+    "cta": {
+      "title": "Klaar om samen de toekomst te bouwen?",
+      "button": "Contact opnemen"
+    }
   },
   "contact": {
     "hero": { "title": "Laten we praten.", "desc": "Advisory, partnerschap, pers of algemene vraag — we reageren binnen 24u." },
@@ -247,6 +283,7 @@
     "base": "Zwitserse basis"
   },
   "footer": {
+    "groupLabel": "Aegryn Group",
     "legal": "© 2026 AEGRYN. All rights reserved.",
     "company": "An Aegryn company",
     "privacy": "Privacybeleid",

@@ -2,7 +2,7 @@ import type { AssetStatus } from '@/data/assets'
 
 /* ── Voyants lumineux ─────────────────────────────────────────────── */
 
-export function LiveIndicator() {
+export function LiveIndicator({ label = 'Live' }: { label?: string }) {
   return (
     <span className="relative inline-flex items-center gap-2">
       <span className="absolute left-0 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-emerald-400/30 animate-ping" />
@@ -11,7 +11,7 @@ export function LiveIndicator() {
         style={{ boxShadow: '0 0 6px 2px rgba(52,211,153,0.65)' }}
       />
       <span className="font-sans font-semibold text-[10px] tracking-[0.16em] uppercase text-emerald-600">
-        Live
+        {label}
       </span>
     </span>
   )

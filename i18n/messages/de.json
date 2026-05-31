@@ -10,6 +10,7 @@
   },
   "hero": {
     "tagline": "Engineered to Last",
+    "eyebrow": "Schweizer Tech-Asset-Builder — Gebaut für die Ewigkeit",
     "title": "Wir bauen\nwas besteht.",
     "sub": "Eigene Assets von der Protokollschicht\nbis zur Benutzeroberfläche.",
     "cta": "Unsere Assets entdecken",
@@ -93,7 +94,7 @@
     },
     "philosophy": { "label": "Unsere Philosophie", "title": "Eigen. Souverän. Beständig.", "desc": "Wir bauen keine MVPs. Wir verkaufen keine Minderheitsbeteiligungen an VCs. Jedes Aegryn-Asset ist für vollständiges Eigentum und souveränen Betrieb konzipiert." },
     "pillars": { "proprietary": { "stat": "100%", "label": "Eigentum" }, "sovereign": { "stat": "CH", "label": "Souveränität" }, "durable": { "stat": "∞", "label": "Beständigkeit" } },
-    "advisoryCta": { "text": "Benötigt Ihr Unternehmen institutionellen digitalen Schutz?", "button": "Advisory entdecken" }
+    "advisoryCta": { "label": "Aegryn Advisory", "text": "Benötigt Ihr Unternehmen institutionellen digitalen Schutz?", "button": "Advisory entdecken" }
   },
   "whatwedo": {
     "label": "Was wir tun",
@@ -120,7 +121,7 @@
   },
   "aboutSection": {
     "label": "Über Aegryn",
-    "title": "Swiss Technology\nAsset Platform.",
+    "title": "Schweizer Technologie-\nAsset-Plattform.",
     "desc": "Wir konzipieren, finanzieren und betreiben digitale Ökosysteme — von kühnen Ideen zu echter, bestandsfähiger Technologie. Keine Features — Assets.",
     "tagline": "Entwickelt in der Schweiz. Gebaut um zu bleiben.",
     "cta": "Über Aegryn",
@@ -154,7 +155,7 @@
     ]
   },
   "about": {
-    "hero": { "label": "Über Aegryn", "title": "Swiss Tech Asset Builder", "desc": "Wir konzipieren, entwickeln und betreiben digitale Ökosysteme — von kühnen Ideen zu zuverlässiger, dauerhafter Technologie. Entwickelt in der Schweiz. Gebaut um zu bleiben." },
+    "hero": { "label": "Über Aegryn", "title": "Schweizer Tech-Asset-Builder", "desc": "Wir konzipieren, entwickeln und betreiben digitale Ökosysteme — von kühnen Ideen zu zuverlässiger, dauerhafter Technologie. Entwickelt in der Schweiz. Gebaut um zu bleiben." },
     "vision": {
       "label": "Unsere Vision",
       "text": "Wir glauben, dass Technologie mehr leisten muss als zu beeindrucken. Sie soll strukturieren, vereinfachen und den Alltag bereichern. In einer Welt voller fragmentierter Apps und kurzfristiger Lösungen bauen wir kohärente digitale Ökosysteme — Umgebungen, in denen Nutzer, Daten und Transaktionen natürlich und sicher verbunden sind."
@@ -172,7 +173,7 @@
       "transparency": { "label": "04", "title": "Transparenz", "desc": "Gegenüber unseren Partnern, Nutzern und dem Markt." }
     },
     "founder": { "label": "Der Gründer", "bio1": "Yohann Bollack ist Unternehmer, Builder und digitaler Stratege. Er gründete Aegryn mit der Überzeugung: Die besten digitalen Assets entstehen aus totaler Beherrschung der Kette, von der Idee bis zur Infrastruktur.", "bio2": "Mit Leidenschaft für Technologie, Sicherheit und Design leitet er ein Ökosystem aus sechs Produkten.", "cta": "Kontakt aufnehmen" },
-    "swiss": { "title": "Sechs Assets. Ein gemeinsames Haus. Eine helvetische Ambition.", "cta": "Unsere Assets entdecken" }
+    "swiss": { "groupLabel": "Aegryn Group", "title": "Sechs Assets. Ein gemeinsames Haus. Eine helvetische Ambition.", "cta": "Unsere Assets entdecken" }
   },
   "career": {
     "hero": { "label": "Aegryn Advisory & Karriere", "title": "Advisory & Experten für digitale Ökosysteme", "desc": "Aegryn sucht Senior Advisors — operative Experten in Data, KI und Cybersicherheit für nachhaltige digitale Ökosysteme." },
@@ -185,6 +186,41 @@
   "assetPage": {
     "back": "Unsere Assets", "presentation": "Übersicht", "audience": "Zielgruppe", "features": "Funktionen", "visit": "Besuchen", "comingSoon": "Demnächst verfügbar",
     "cta": { "title": "Entdecken Sie das gesamte Ökosystem.", "label": "Aegryn Group", "allAssets": "Alle unsere Assets", "contact": "Kontaktieren Sie uns" }
+  },
+  "growWithUs": {
+    "hero": {
+      "label": "Strategische Partnerschaften & Investitionen",
+      "title": "Wachsen Sie mit uns.",
+      "desc": "Aegryn lädt visionäre Investoren und Partner ein, Teil einer bahnbrechenden Bewegung in der digitalen Technologie zu werden. Langfristige Vision. Disziplinierte Ausführung.",
+      "cta": "Kontakt aufnehmen"
+    },
+    "investors": {
+      "label": "/ Investoren",
+      "sub": "Werden Sie ein Schlüsselakteur",
+      "items": [
+        { "num": "01", "title": "Wachstumsstarker Markt", "desc": "Wir sind im sich rasch wandelnden digitalen Ökosystemsektor positioniert und eröffnen bedeutende Umsatzchancen." },
+        { "num": "02", "title": "Bewährte Expertise", "desc": "Unser Team besteht aus erstklassigen Entwicklern, UX-Designern und Marketingstrategen, die hochmoderne digitale Produkte liefern." },
+        { "num": "03", "title": "Next-Gen-Technologie", "desc": "Wir integrieren KI, Machine Learning und Automatisierung für zukunftssichere Lösungen, die auf Bestand und Skalierung ausgelegt sind." },
+        { "num": "04", "title": "Datengesteuerter Erfolg", "desc": "Unser robustes Geschäftsmodell und unsere Finanzstrategien gewährleisten langfristige Rentabilität und anhaltende Innovation." },
+        { "num": "05", "title": "Transparent & investorenorientiert", "desc": "Wir liefern klare, regelmäßige Updates zu Projektfortschritt, finanziellen Meilensteinen und Markttrends." }
+      ]
+    },
+    "partners": {
+      "label": "/ Partner",
+      "sub": "Wirkungsstarke Chancen",
+      "items": [
+        { "title": "App-Entwicklung", "desc": "Erweitern Sie das Dienstleistungsportfolio Ihrer Agentur und erschließen Sie bedeutende neue Einnahmequellen." },
+        { "title": "Embedded Insurance", "desc": "Bieten Sie sofortigen, nahtlosen Versicherungsschutz für Käufe, Lieferungen und Finanztransaktionen an." },
+        { "title": "Integrierte Zahlungslösungen", "desc": "Ermöglichen Sie Echtzeitzahlungen, flexibles Finanzieren und Umsatzteilungsmodelle." },
+        { "title": "Co-branded Wachstumsinitiativen", "desc": "Starten Sie virale Kampagnen, exklusive Angebote und zeitlich begrenzte Events." },
+        { "title": "Datengesteuerte Marketingkampagnen", "desc": "Nutzen Sie Plattformdaten für hochgradig zielgerichtete und personalisierte Marketingkampagnen." },
+        { "title": "Social-Media & Influencer-Kooperationen", "desc": "Verstärken Sie unsere Markenbotschaft durch einbindende Social-Media-Kampagnen und strategische Influencer-Partnerschaften." }
+      ]
+    },
+    "cta": {
+      "title": "Bereit, gemeinsam die Zukunft zu gestalten?",
+      "button": "Kontakt aufnehmen"
+    }
   },
   "contact": {
     "hero": { "title": "Sprechen wir.", "desc": "Advisory, Partnerschaft, Presse oder allgemeine Anfragen — wir antworten innerhalb von 24h." },
@@ -247,6 +283,7 @@
     "base": "Schweizer Basis"
   },
   "footer": {
+    "groupLabel": "Aegryn Group",
     "legal": "© 2026 AEGRYN. All rights reserved.",
     "company": "An Aegryn company",
     "privacy": "Datenschutzerklärung",

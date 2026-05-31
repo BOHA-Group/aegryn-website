@@ -127,7 +127,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
           <div>
             <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">
-              Aegryn Group
+              {t('swiss.groupLabel')}
             </p>
             <h2
               className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.95] max-w-xl"

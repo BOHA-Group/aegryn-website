@@ -94,7 +94,7 @@ export function HeroMountain() {
             className="font-sans font-semibold text-[10px] tracking-[0.3em] uppercase text-white/75 mb-6 flex items-center gap-3"
           >
             <span className="w-10 h-px bg-white/30 inline-block" />
-            Swiss Tech Asset Builder — Engineered to Last
+            {t('eyebrow')}
           </p>
 
           {/* H1 — Unbounded display */}

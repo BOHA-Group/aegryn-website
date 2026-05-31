@@ -1,12 +1,12 @@
 'use client'
 
 import Link             from 'next/link'
+import Image            from 'next/image'
 import { useTranslations } from 'next-intl'
 import { useState }     from 'react'
 import { usePathname, useParams } from 'next/navigation'
 import { Menu, X }      from 'lucide-react'
 import LanguageSwitcher  from '@/components/layout/LanguageSwitcher'
-import { AegrynLogo }   from '@/components/brand/AegrynLogo'
 import { MusicPlayer }  from '@/components/ui/MusicPlayer'
 
 const navLinks = [
@@ -36,8 +36,15 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
 
         {/* Logo */}
-        <Link href="/" aria-label="Aegryn — Accueil" className="hover:opacity-70 transition-opacity duration-200">
-          <AegrynLogo size={28} variant="full" />
+        <Link href="/" aria-label="Aegryn — Accueil" className="hover:opacity-80 transition-opacity duration-200">
+          <Image
+            src="/images/logo-aegryn.png"
+            alt="Aegryn"
+            width={120}
+            height={52}
+            className="h-9 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop links */}

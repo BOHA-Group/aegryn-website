@@ -10,6 +10,7 @@
   },
   "hero": {
     "tagline": "Engineered to Last",
+    "eyebrow": "Constructeur d'actifs tech suisse — Fait pour durer.",
     "title": "Nous construisons\nce qui dure.",
     "sub": "Des actifs propriétaires de la couche protocole\njusqu'à l'interface utilisateur.",
     "cta": "Découvrir nos actifs",
@@ -107,6 +108,7 @@
       "durable": { "stat": "∞", "label": "Durabilité" }
     },
     "advisoryCta": {
+      "label": "Aegryn Advisory",
       "text": "Votre entreprise a besoin d'une protection numérique de niveau institutionnel ?",
       "button": "Découvrir Advisory"
     }
@@ -122,7 +124,7 @@
   },
   "aboutSection": {
     "label": "À propos d'Aegryn",
-    "title": "Swiss Technology\nAsset Platform.",
+    "title": "Plateforme d'actifs\ntechnologiques suisse.",
     "desc": "Nous concevons, finançons et exploitons des écosystèmes numériques qui progressent des idées ambitieuses vers des technologies réelles et pérennes. Pas des features — des actifs.",
     "tagline": "Ingénié en Suisse. Construit pour durer.",
     "cta": "À propos d'Aegryn",
@@ -172,7 +174,7 @@
   "about": {
     "hero": {
       "label": "À propos d'Aegryn",
-      "title": "Swiss Tech Asset Builder",
+      "title": "Constructeur d'actifs tech suisse",
       "desc": "Nous concevons, construisons et opérons des écosystèmes numériques — de l'idée audacieuse à une technologie fiable et durable. Ingénié en Suisse. Construit pour durer."
     },
     "vision": {
@@ -200,6 +202,7 @@
       "cta": "Prendre contact"
     },
     "swiss": {
+      "groupLabel": "Aegryn Group",
       "title": "Nos actifs. Une maison commune. Une ambition helvétique.",
       "cta": "Voir nos actifs"
     }
@@ -247,6 +250,41 @@
       "label": "Aegryn Group",
       "allAssets": "Tous nos actifs",
       "contact": "Nous contacter"
+    }
+  },
+  "growWithUs": {
+    "hero": {
+      "label": "Partenariats Stratégiques & Investissement",
+      "title": "Grandissons ensemble.",
+      "desc": "Aegryn invite des investisseurs visionnaires et des partenaires à rejoindre un mouvement de fond dans la technologie numérique. Vision long terme. Exécution disciplinée.",
+      "cta": "Nous contacter"
+    },
+    "investors": {
+      "label": "/ Investisseurs",
+      "sub": "Devenez un acteur clé",
+      "items": [
+        { "num": "01", "title": "Marché à forte croissance", "desc": "Nous sommes positionnés dans un secteur d'écosystèmes numériques en pleine transformation, ouvrant d'importantes opportunités de revenus." },
+        { "num": "02", "title": "Expertise éprouvée", "desc": "Notre équipe est composée de développeurs, designers UX et stratèges marketing engagés à livrer des produits numériques de pointe." },
+        { "num": "03", "title": "Technologie nouvelle génération", "desc": "Nous intégrons l'IA, le machine learning et l'automatisation pour créer des solutions pérennes, conçues pour durer et scaler." },
+        { "num": "04", "title": "Succès basé sur la donnée", "desc": "Notre modèle économique robuste et nos stratégies financières garantissent rentabilité à long terme et innovation continue." },
+        { "num": "05", "title": "Transparent & orienté investisseur", "desc": "Nous fournissons des mises à jour claires et régulières sur l'avancement des projets, les jalons financiers et les tendances marché." }
+      ]
+    },
+    "partners": {
+      "label": "/ Partenaires",
+      "sub": "Opportunités à fort impact",
+      "items": [
+        { "title": "Développement d'applications", "desc": "Élargissez le portefeuille de services de votre agence et débloquez de nouveaux flux de revenus significatifs." },
+        { "title": "Assurance embarquée", "desc": "Proposez une couverture instantanée et transparente pour les achats, livraisons et transactions financières." },
+        { "title": "Solutions de paiement intégrées", "desc": "Activez les paiements en temps réel, le financement flexible et les modèles de partage de revenus." },
+        { "title": "Initiatives de croissance co-brandées", "desc": "Lancez des campagnes virales, des offres exclusives et des événements à durée limitée." },
+        { "title": "Campagnes marketing data-driven", "desc": "Exploitez les données de la plateforme pour créer des campagnes marketing hautement ciblées et personnalisées." },
+        { "title": "Collaborations réseaux sociaux & influenceurs", "desc": "Amplifiez le message de notre marque via des campagnes réseaux sociaux engageantes et des partenariats influenceurs stratégiques." }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à construire l'avenir ensemble ?",
+      "button": "Nous contacter"
     }
   },
   "contact": {
@@ -332,6 +370,7 @@
     "base": "Base Suisse"
   },
   "footer": {
+    "groupLabel": "Aegryn Group",
     "legal": "© 2026 AEGRYN. All rights reserved.",
     "company": "An Aegryn company",
     "privacy": "Confidentialité",
