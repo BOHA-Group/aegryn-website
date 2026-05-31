@@ -264,6 +264,15 @@
     }
   },
   "contact": {
+    "faq": {
+      "label": "/ Frequently Asked Questions",
+      "items": [
+        { "q": "What is Aegryn and what do we do?", "a": "Aegryn is a Swiss Tech Asset Builder designing and operating proprietary digital ecosystems — environments where technology structures everyday life for individuals, professionals and the markets they operate in." },
+        { "q": "What makes us unique compared to competitors?", "a": "Unlike consultancies or agencies, we build and operate our own digital ecosystems. Every advisory insight, every security protocol, every growth framework we offer is derived from real execution — not theory. We do not resell frameworks. We share what works because we use it ourselves." },
+        { "q": "How can I invest or partner with Aegryn?", "a": "We welcome visionary investors and strategic partners who share our long-term perspective. Use the contact form above, select \"Partnership\" as the subject, and our team will respond within 24 hours to schedule an initial conversation." },
+        { "q": "Where is Aegryn based?", "a": "Aegryn is headquartered in Switzerland. Our digital ecosystems operate across Europe, and our advisory practice serves clients in Switzerland, France, and the broader EU." }
+      ]
+    },
     "hero": {
       "title": "Let's talk.",
       "desc": "Advisory, partnership, press or general enquiry — we respond within 24h."

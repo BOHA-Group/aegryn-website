@@ -223,6 +223,15 @@
     }
   },
   "contact": {
+    "faq": {
+      "label": "/ Domande frequenti",
+      "items": [
+        { "q": "Cos'è Aegryn e cosa facciamo?", "a": "Aegryn è un costruttore svizzero di asset tech che progetta e gestisce ecosistemi digitali proprietari — ambienti in cui la tecnologia struttura il quotidiano di individui, professionisti e i mercati in cui operano." },
+        { "q": "Cosa ci differenzia dalla concorrenza?", "a": "A differenza di consulenze o agenzie, costruiamo e gestiamo i nostri ecosistemi digitali. Ogni insight advisory, protocollo di sicurezza e framework di crescita che offriamo deriva da vera esecuzione, non dalla teoria." },
+        { "q": "Come posso investire o diventare partner di Aegryn?", "a": "Accogliamo investitori visionari e partner strategici che condividono la nostra prospettiva a lungo termine. Usa il modulo di contatto, seleziona \"Partnership\" come oggetto e il nostro team risponderà entro 24 ore." },
+        { "q": "Dove ha sede Aegryn?", "a": "Aegryn ha sede in Svizzera. I nostri ecosistemi digitali operano in tutta Europa e la nostra practice advisory serve clienti in Svizzera, Francia e nell'UE." }
+      ]
+    },
     "hero": { "title": "Parliamo.", "desc": "Advisory, partnership, stampa o domanda generale — rispondiamo entro 24h." },
     "responseTime": { "label": "Tempo di risposta", "value": "Entro 24 ore" },
     "form": {
