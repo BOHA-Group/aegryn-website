@@ -52,7 +52,7 @@ export default function Nav() {
             href="/contact"
             className="font-sans font-semibold text-[11px] tracking-[0.14em] uppercase border border-ag-border px-4 py-2 text-ag-dark hover:border-ag-black hover:text-ag-black transition-all duration-200"
           >
-            Contact
+            {t('contact')}
           </Link>
         </div>
 
@@ -86,7 +86,7 @@ export default function Nav() {
               className="font-sans font-semibold text-[11px] tracking-[0.14em] uppercase border border-ag-border px-4 py-2.5 text-ag-dark text-center hover:border-ag-black transition-all"
               onClick={() => setOpen(false)}
             >
-              Contact
+              {t('contact')}
             </Link>
             <div className="pt-2 border-t border-ag-border">
               <LanguageSwitcher />

@@ -263,6 +263,52 @@
       }
     }
   },
+  "advisoryPage": {
+    "hero": {
+      "label": "Aegryn Advisory",
+      "title": "Clarté Stratégique.\nProfondeur Opérationnelle.",
+      "desc1": "Chez Aegryn Advisory, nous accompagnons les fondateurs, dirigeants et organisations face à des décisions technologiques critiques. Notre conseil repose sur la façon dont nous concevons, construisons et sécurisons nos propres écosystèmes numériques.",
+      "desc2": "Nous ne nous appuyons pas sur la théorie, les tendances ou les frameworks recyclés. Nous apportons une direction stratégique claire, directe et ancrée dans l'exécution — en Data, IA et Cybersécurité.",
+      "quote": "Pas de slides interminables. Pas de playbooks génériques.\nUniquement des standards testés dans des environnements réels.",
+      "cta": "Prendre contact"
+    },
+    "why": {
+      "label": "Pourquoi Advisory ?",
+      "desc1": "Concevoir ou faire évoluer un écosystème numérique demande plus que de l'ambition. Cela requiert une clarté architecturale, une exécution disciplinée et une vision long terme.",
+      "desc2": "Aegryn Advisory existe pour les dirigeants qui ont besoin d'un accompagnement structuré au moment où les décisions en Data, IA et Cybersécurité définissent la résilience future.",
+      "tagline": "Notre rôle est simple : apporter la clarté, réduire le risque, accélérer les bonnes décisions."
+    },
+    "whoFor": {
+      "label": "Pour qui ?",
+      "items": [
+        { "title": "Fondateurs & Builders", "desc": "Vous construisez ou faites évoluer une plateforme numérique et faites face à des décisions structurelles qui définiront sa résilience long terme. Nous vous aidons à établir des fondations solides avant que la complexité s'accumule." },
+        { "title": "Organisations en croissance", "desc": "À mesure que votre organisation grandit, la profondeur technique devient critique. Nous apportons une perspective indépendante et senior sur la scalabilité infra, le déploiement IA et la cohérence architecturale." },
+        { "title": "Directions en transition", "desc": "L'évolution numérique exige une discipline structurelle, pas des correctifs incrémentaux. Nous accompagnons les équipes dirigeantes dans la modernisation legacy, la restructuration data et le renforcement cybersécurité." }
+      ]
+    },
+    "experts": {
+      "label": "Nos Experts",
+      "count": "Senior Advisors"
+    },
+    "domains": {
+      "label": "Nos domaines d'intervention",
+      "items": [
+        { "title": "Produits Numériques", "desc": "Applications mobiles, plateformes web, SaaS, choix technologiques, gestion de projets numériques." },
+        { "title": "Audit & Sécurité Applicative", "desc": "Évaluation des solutions numériques, recommandations, conformité et attribution d'un label de confiance annuel." },
+        { "title": "Intelligence Artificielle & Automatisation", "desc": "Agents IA, automatisation des processus, productivité, intégration de l'IA dans les produits et organisations." },
+        { "title": "Droit Numérique & Propriété Intellectuelle", "desc": "CGU, conformité numérique, protection IP, structuration juridique des produits numériques." },
+        { "title": "Design & Expérience Utilisateur", "desc": "UX/UI, identité produit, parcours utilisateurs." },
+        { "title": "Stratégie Business", "desc": "Architecture métier, logique revenus, efficience capital, modèles scalables, positionnement marché." },
+        { "title": "Marketing & Réseaux Sociaux", "desc": "Positionnement, stratégie contenu, croissance organique et inorganique." }
+      ]
+    },
+    "approach": {
+      "label": "Approche",
+      "title": "La bonne décision commence par la bonne conversation.",
+      "desc": "Nous offrons du temps senior qualifié, des échanges directs avec les bons experts et des recommandations immédiatement actionnables. Vous payez pour l'expertise et l'expérience, pas pour la structure.",
+      "cta": "Prendre contact"
+    }
+  },
   "stats": {
     "assets": "actifs",
     "languages": "langues",
@@ -273,6 +319,19 @@
     "company": "An Aegryn company",
     "privacy": "Confidentialité",
     "terms": "Conditions",
-    "tagline": "Engineered to Last"
+    "tagline": "Engineered to Last",
+    "swissTagline": "Swiss Tech Asset Builder",
+    "navLabel": "Aegryn",
+    "ecosystemLabel": "Écosystème",
+    "advisoryLabel": "Advisory",
+    "advisoryDesc": "Clarté stratégique en Data, IA et Cybersécurité.",
+    "advisoryBook": "Prendre contact ↗"
+  },
+  "cookie": {
+    "title": "Aegryn — Cookies & Analytics",
+    "desc": "Nous utilisons Cloudflare Analytics (anonymisé) pour mesurer l'audience et améliorer l'expérience. Aucune donnée publicitaire. Conformité RGPD & LPD.",
+    "learnMore": "En savoir plus",
+    "accept": "Accepter",
+    "refuse": "Refuser"
   }
 }

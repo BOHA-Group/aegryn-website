@@ -181,6 +181,49 @@
       "success": { "title": "Nachricht erhalten.", "desc": "Wir melden uns innerhalb von 24 Stunden." }
     }
   },
+  "advisoryPage": {
+    "hero": {
+      "label": "Aegryn Advisory",
+      "title": "Strategische Klarheit.\nOperative Tiefe.",
+      "desc1": "Bei Aegryn Advisory begleiten wir Gründer, Führungskräfte und Organisationen bei kritischen Technologieentscheidungen. Unsere Beratung basiert auf der Art, wie wir unsere eigenen digitalen Ökosysteme gestalten, aufbauen und absichern.",
+      "desc2": "Wir verlassen uns nicht auf Theorie, Trends oder recycelte Frameworks. Wir liefern klare, direkte und ausführungsbasierte strategische Orientierung in Data, KI und Cybersicherheit.",
+      "quote": "Keine endlosen Folien. Keine generischen Playbooks.\nNur Standards, die in realen Umgebungen getestet wurden.",
+      "cta": "Gespräch vereinbaren"
+    },
+    "why": {
+      "label": "Warum Advisory?",
+      "desc1": "Ein digitales Ökosystem zu gestalten oder zu skalieren erfordert mehr als Ambition. Es braucht architektonische Klarheit, disziplinierte Ausführung und langfristiges Denken.",
+      "desc2": "Aegryn Advisory existiert für Führungskräfte, die strukturierte Beratung benötigen, wenn Entscheidungen in Data, KI und Cybersicherheit die zukünftige Resilienz bestimmen.",
+      "tagline": "Unsere Rolle ist einfach: Klarheit schaffen. Risiken reduzieren. Die richtigen Entscheidungen beschleunigen."
+    },
+    "whoFor": {
+      "label": "Für wen ist Advisory?",
+      "items": [
+        { "title": "Gründer & Builder", "desc": "Sie bauen oder skalieren eine digitale Plattform und treffen strukturelle Entscheidungen, die deren langfristige Resilienz prägen werden. Wir helfen Ihnen, robuste Grundlagen zu schaffen, bevor die Komplexität zunimmt." },
+        { "title": "Wachsende Organisationen", "desc": "Mit dem Wachstum Ihrer Organisation wird technische Tiefe entscheidend. Wir bieten eine unabhängige, erfahrene Perspektive auf Infrastruktur-Skalierbarkeit, KI-Einsatz und langfristige Architekturkohärenz." },
+        { "title": "Führungen im Wandel", "desc": "Digitale Evolution erfordert strukturelle Disziplin, keine inkrementellen Flicken. Wir unterstützen Führungsteams bei Legacy-Modernisierung, Datenrestrukturierung und Cybersicherheitsverstärkung." }
+      ]
+    },
+    "experts": { "label": "Unsere Experten", "count": "Senior Advisors" },
+    "domains": {
+      "label": "Unsere Einsatzbereiche",
+      "items": [
+        { "title": "Digitale Produkte", "desc": "Mobile Anwendungen, Web-Plattformen, SaaS, Technologieentscheidungen, digitales Projektmanagement." },
+        { "title": "Audit & Anwendungssicherheit", "desc": "Bewertung digitaler Lösungen, Empfehlungen, Compliance und Vergabe eines jährlichen Vertrauenslabels." },
+        { "title": "Künstliche Intelligenz & Automatisierung", "desc": "KI-Agenten, Prozessautomatisierung, Produktivität, KI-Integration in Produkte und Organisationen." },
+        { "title": "Digitales Recht & Geistiges Eigentum", "desc": "AGB, digitale Compliance, IP-Schutz, rechtliche Strukturierung digitaler Produkte." },
+        { "title": "Design & Nutzererfahrung", "desc": "UX/UI, Produktidentität, Nutzerreisen." },
+        { "title": "Business-Strategie", "desc": "Unternehmensarchitektur, Ertragslogik, Kapitaleffizienz, skalierbare Modelle, Marktpositionierung." },
+        { "title": "Marketing & Soziale Netzwerke", "desc": "Positionierung, Content-Strategie, organisches und anorganisches Wachstum." }
+      ]
+    },
+    "approach": {
+      "label": "Ansatz",
+      "title": "Die richtige Entscheidung beginnt mit dem richtigen Gespräch.",
+      "desc": "Wir bieten qualifizierte Senior-Zeit, direkte Austausche mit den richtigen Experten und sofort umsetzbare Empfehlungen. Sie zahlen für Expertise und Erfahrung, nicht für Struktur.",
+      "cta": "Gespräch vereinbaren"
+    }
+  },
   "stats": {
     "assets": "Assets",
     "languages": "Sprachen",
@@ -191,6 +234,19 @@
     "company": "An Aegryn company",
     "privacy": "Datenschutz",
     "terms": "AGB",
-    "tagline": "Engineered to Last"
+    "tagline": "Engineered to Last",
+    "swissTagline": "Schweizer Tech Asset Builder",
+    "navLabel": "Aegryn",
+    "ecosystemLabel": "Ökosystem",
+    "advisoryLabel": "Advisory",
+    "advisoryDesc": "Strategische Klarheit in Data, KI und Cybersicherheit.",
+    "advisoryBook": "Gespräch vereinbaren ↗"
+  },
+  "cookie": {
+    "title": "Aegryn — Cookies & Analytics",
+    "desc": "Wir verwenden Cloudflare Analytics (anonymisiert) zur Messung des Traffics. Keine Werbedaten. DSGVO- & DSG-konform.",
+    "learnMore": "Mehr erfahren",
+    "accept": "Akzeptieren",
+    "refuse": "Ablehnen"
   }
 }

@@ -181,6 +181,49 @@
       "success": { "title": "Bericht ontvangen.", "desc": "Wij reageren binnen 24 uur." }
     }
   },
+  "advisoryPage": {
+    "hero": {
+      "label": "Aegryn Advisory",
+      "title": "Strategische Helderheid.\nOperationele Diepte.",
+      "desc1": "Bij Aegryn Advisory werken we samen met oprichters, leidinggevenden en organisaties die kritieke technologische beslissingen moeten nemen. Onze begeleiding is gebaseerd op hoe wij onze eigen digitale ecosystemen ontwerpen, bouwen en beveiligen.",
+      "desc2": "We baseren ons niet op theorie, trends of gerecyclede frameworks. We bieden duidelijke, directe en uitvoeringsgerichte strategische richting in Data, AI en Cyberbeveiliging.",
+      "quote": "Geen eindeloze slides. Geen generieke playbooks.\nAlleen standaarden die getest zijn in echte omgevingen.",
+      "cta": "Sessie boeken"
+    },
+    "why": {
+      "label": "Waarom Advisory?",
+      "desc1": "Het ontwerpen of opschalen van een digitaal ecosysteem vereist meer dan ambitie. Het vereist architectonische helderheid, gedisciplineerde uitvoering en langetermijndenken.",
+      "desc2": "Aegryn Advisory bestaat voor leiders die gestructureerde begeleiding nodig hebben op momenten waarop Data, AI en Cyberbeveiliging de toekomstige veerkracht bepalen.",
+      "tagline": "Onze rol is eenvoudig: helderheid brengen, risico verminderen, de juiste beslissingen versnellen."
+    },
+    "whoFor": {
+      "label": "Voor wie is Advisory?",
+      "items": [
+        { "title": "Oprichters & Builders", "desc": "U bouwt of schaalt een digitaal platform en staat voor structurele beslissingen die de langetermijnveerkracht zullen bepalen. Wij helpen u robuuste fundamenten te leggen voordat de complexiteit toeneemt." },
+        { "title": "Groeiende organisaties", "desc": "Naarmate uw organisatie groeit, wordt technische diepgang kritisch. Wij bieden een onafhankelijk, senior perspectief op infrastructuurschaalbaarheid, AI-inzet en architecturele coherentie." },
+        { "title": "Leiderschap in transitie", "desc": "Digitale evolutie vereist structurele discipline, geen incrementele patches. Wij ondersteunen leiderschapsteams bij legacy-modernisering, dataherstructurering en cyberbeveiliging." }
+      ]
+    },
+    "experts": { "label": "Onze Experts", "count": "Senior Advisors" },
+    "domains": {
+      "label": "Onze interventiegebieden",
+      "items": [
+        { "title": "Digitale Producten", "desc": "Mobiele applicaties, webplatforms, SaaS, technologiekeuzes, digitaal projectmanagement." },
+        { "title": "Audit & Applicatiebeveiliging", "desc": "Evaluatie van digitale oplossingen, aanbevelingen, compliance en toekenning van een jaarlijks vertrouwenslabel." },
+        { "title": "Kunstmatige Intelligentie & Automatisering", "desc": "AI-agenten, procesautomatisering, productiviteit, integratie van AI in producten en organisaties." },
+        { "title": "Digitaal Recht & Intellectueel Eigendom", "desc": "Servicevoorwaarden, digitale compliance, IP-bescherming, juridische structurering van digitale producten." },
+        { "title": "Design & Gebruikerservaring", "desc": "UX/UI, productidentiteit, gebruikersreizen." },
+        { "title": "Bedrijfsstrategie", "desc": "Bedrijfsarchitectuur, inkomstenlogica, kapitaalefficiëntie, schaalbare modellen, marktpositionering." },
+        { "title": "Marketing & Sociale Netwerken", "desc": "Positionering, contentstrategie, organische en anorganische groei." }
+      ]
+    },
+    "approach": {
+      "label": "Aanpak",
+      "title": "De juiste beslissing begint met het juiste gesprek.",
+      "desc": "Wij bieden gekwalificeerde senior tijd, directe uitwisselingen met de juiste experts en onmiddellijk uitvoerbare aanbevelingen. U betaalt voor expertise en ervaring, niet voor structuur.",
+      "cta": "Sessie boeken"
+    }
+  },
   "stats": {
     "assets": "assets",
     "languages": "talen",
@@ -191,6 +234,19 @@
     "company": "An Aegryn company",
     "privacy": "Privacy",
     "terms": "Voorwaarden",
-    "tagline": "Engineered to Last"
+    "tagline": "Engineered to Last",
+    "swissTagline": "Swiss Tech Asset Builder",
+    "navLabel": "Aegryn",
+    "ecosystemLabel": "Ecosysteem",
+    "advisoryLabel": "Advisory",
+    "advisoryDesc": "Strategische helderheid in Data, AI en Cyberbeveiliging.",
+    "advisoryBook": "Sessie boeken ↗"
+  },
+  "cookie": {
+    "title": "Aegryn — Cookies & Analytics",
+    "desc": "Wij gebruiken Cloudflare Analytics (geanonimiseerd) om het publiek te meten. Geen advertentiedata. AVG-conform.",
+    "learnMore": "Meer info",
+    "accept": "Accepteren",
+    "refuse": "Weigeren"
   }
 }

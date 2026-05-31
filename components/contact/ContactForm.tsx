@@ -96,7 +96,8 @@ export default function ContactForm({ locale }: Props) {
           id="subject"
           name="subject"
           required
-          className="w-full rounded-xl border border-ag-border bg-white px-4 py-3 text-sm text-ag-dark outline-none transition-colors focus:border-ag-apex/60 focus:ring-2 focus:ring-ag-apex/10"
+          defaultValue=""
+          className="w-full rounded-xl border border-ag-border bg-white px-4 py-3 h-[46px] text-sm text-ag-dark outline-none transition-colors focus:border-ag-apex/60 focus:ring-2 focus:ring-ag-apex/10"
         >
           <option value="" disabled className="text-ag-gray-light">
             {t('subjectPlaceholder')}

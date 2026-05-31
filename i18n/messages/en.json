@@ -239,6 +239,52 @@
       }
     }
   },
+  "advisoryPage": {
+    "hero": {
+      "label": "Aegryn Advisory",
+      "title": "Strategic Clarity.\nOperational Depth.",
+      "desc1": "At Aegryn Advisory, we work with founders, executives and organisations facing critical technology decisions. Our guidance is derived from how we design, build and secure our own digital ecosystems.",
+      "desc2": "We don't rely on theory, trends or recycled frameworks. We provide clear, direct and execution-grounded strategic direction across Data, AI and Cybersecurity — focused on impact, resilience and long-term value.",
+      "quote": "No endless slides. No generic playbooks.\nOnly standards that have been tested in real environments.",
+      "cta": "Book a session"
+    },
+    "why": {
+      "label": "Why Advisory?",
+      "desc1": "Designing or scaling a digital ecosystem requires more than ambition. It requires architectural clarity, disciplined execution and long-term thinking.",
+      "desc2": "Aegryn Advisory exists for leaders who need structured guidance in moments where Data, AI and Cybersecurity decisions define future resilience and growth.",
+      "tagline": "Our role is simple: Bring clarity. Reduce risk. Accelerate the right decisions."
+    },
+    "whoFor": {
+      "label": "Who is Advisory for?",
+      "items": [
+        { "title": "Founders & Builders", "desc": "You are building or scaling a digital platform and facing structural decisions that will shape its long-term resilience. We help you establish robust foundations before complexity compounds." },
+        { "title": "Growing Organisations", "desc": "As your organisation grows, technical depth becomes critical. We provide an independent, senior-level perspective on infrastructure scalability, AI deployment and long-term architectural coherence." },
+        { "title": "Leadership in Transition", "desc": "Digital evolution requires structural discipline, not incremental patchwork. We support leadership teams navigating legacy modernisation, data restructuring and cybersecurity reinforcement." }
+      ]
+    },
+    "experts": {
+      "label": "Our Experts",
+      "count": "Senior Advisors"
+    },
+    "domains": {
+      "label": "Our areas of intervention",
+      "items": [
+        { "title": "Digital Products", "desc": "Mobile applications, web platforms, SaaS, technology choices, digital project management." },
+        { "title": "Audit & Application Security", "desc": "Evaluation of digital solutions, recommendations, compliance and awarding of an annual trust label." },
+        { "title": "Artificial Intelligence & Automation", "desc": "AI agents, process automation, productivity, integration of AI into products and organisations." },
+        { "title": "Digital Law & Intellectual Property", "desc": "Terms of Service, digital compliance, IP protection, legal structuring of digital products." },
+        { "title": "Design & User Experience", "desc": "UX/UI, product identity, user journeys." },
+        { "title": "Business Strategy", "desc": "Business architecture, revenue logic, capital efficiency, scalable models, market positioning." },
+        { "title": "Marketing & Social Networks", "desc": "Positioning, content strategy, organic and inorganic growth." }
+      ]
+    },
+    "approach": {
+      "label": "Approach",
+      "title": "Making the right decision starts with the right conversation.",
+      "desc": "We offer qualified senior time, direct exchanges with the right experts, and immediately actionable recommendations. You pay for expertise and experience, not for structure.",
+      "cta": "Book a session"
+    }
+  },
   "stats": {
     "assets": "assets",
     "languages": "languages",
@@ -249,6 +295,19 @@
     "company": "An Aegryn company",
     "privacy": "Privacy",
     "terms": "Terms",
-    "tagline": "Engineered to Last"
+    "tagline": "Engineered to Last",
+    "swissTagline": "Swiss Tech Asset Builder",
+    "navLabel": "Aegryn",
+    "ecosystemLabel": "Ecosystem",
+    "advisoryLabel": "Advisory",
+    "advisoryDesc": "Strategic clarity in Data, AI and Cybersecurity.",
+    "advisoryBook": "Book a session ↗"
+  },
+  "cookie": {
+    "title": "Aegryn — Cookies & Analytics",
+    "desc": "We use Cloudflare Analytics (anonymised) to measure audience and improve experience. No advertising data. GDPR & LPD compliant.",
+    "learnMore": "Learn more",
+    "accept": "Accept",
+    "refuse": "Decline"
   }
 }

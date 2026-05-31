@@ -6,8 +6,12 @@ import { AegrynLogo }        from '@/components/brand/AegrynLogo'
 
 /**
  * Bloc Vision + ADN + Mission.
- * Logo Aegryn en fond flou progressif DERRIÈRE Vision + ADN (stacking naturel).
- * La section Mission arrive en clip-reveal depuis le bas à la fin du scrub.
+ * Séquence logo pinné 3 phases :
+ *   1. Logo net + clair (opacity 0.45)
+ *   2. Zoom in + flou progressif (scale → 8, blur → 24px)
+ *   3. Fondu sortie (opacity → 0)
+ * Vision + ADN s'affichent par-dessus (bg semi-transparent).
+ * Mission arrive en clip-reveal depuis le bas.
  */
 export function VisionMissionBlock({
   visionLabel,
@@ -20,41 +24,52 @@ export function VisionMissionBlock({
   dnaContent:     React.ReactNode
   missionContent: React.ReactNode
 }) {
-  const outerRef   = useRef<HTMLDivElement>(null)
+  const wrapRef    = useRef<HTMLDivElement>(null)
   const logoRef    = useRef<HTMLDivElement>(null)
   const missionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const outer   = outerRef.current
+    const wrap    = wrapRef.current
     const logo    = logoRef.current
     const mission = missionRef.current
-    if (!outer || !logo || !mission) return
+    if (!wrap || !logo || !mission) return
 
     const ctx = gsap.context(() => {
-      /* Logo: blur s'intensifie en arrière-plan au scroll (pas pinné) */
-      gsap.fromTo(logo,
-        { scale: 1,   filter: 'blur(0px)',  opacity: 0.10 },
-        { scale: 6.5, filter: 'blur(20px)', opacity: 0.20, ease: 'none',
-          scrollTrigger: {
-            trigger: outer,
-            start:   'top 80%',
-            end:     'bottom 30%',
-            scrub:   1.2,
-          },
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger:       wrap,
+          start:         'top top',
+          end:           '+=260%',
+          pin:           true,
+          scrub:         1.4,
+          anticipatePin: 1,
         },
+      })
+
+      /* Phase 1 (0–30%) : logo visible net, pas de flou */
+      tl.fromTo(logo,
+        { scale: 1,   filter: 'blur(0px)',  opacity: 0.45 },
+        { scale: 2.5, filter: 'blur(0px)',  opacity: 0.45, ease: 'none', duration: 0.30 },
+        0,
       )
 
-      /* Mission: clip-reveal depuis le bas au scroll (pinné court) */
-      gsap.fromTo(mission,
-        { clipPath: 'inset(100% 0% 0% 0%)', pointerEvents: 'none' },
-        { clipPath: 'inset(0% 0% 0% 0%)',   pointerEvents: 'auto', ease: 'expo.inOut',
-          scrollTrigger: {
-            trigger: outer,
-            start:   'bottom 70%',
-            end:     'bottom top',
-            scrub:   1,
-          },
-        },
+      /* Phase 2 (30–70%) : zoom + flou s'intensifie */
+      tl.to(logo,
+        { scale: 8, filter: 'blur(24px)', opacity: 0.22, ease: 'none', duration: 0.40 },
+        0.30,
+      )
+
+      /* Phase 3 (70–85%) : logo disparaît */
+      tl.to(logo,
+        { opacity: 0, ease: 'none', duration: 0.15 },
+        0.70,
+      )
+
+      /* Phase 4 (80–100%) : Mission slide depuis le bas */
+      tl.fromTo(mission,
+        { yPercent: 100 },
+        { yPercent: 0, ease: 'expo.inOut', duration: 0.22 },
+        0.80,
       )
     })
 
@@ -62,50 +77,50 @@ export function VisionMissionBlock({
   }, [])
 
   return (
-    /* Outer = déclenche les animations */
-    <div ref={outerRef} className="relative">
+    <div ref={wrapRef} className="relative overflow-hidden" style={{ minHeight: '100vh' }}>
 
-      {/* ── Logo en fond absolu centré — visible derrière tout le contenu ── */}
+      {/* ── Logo fond centré ── */}
       <div
-        className="sticky top-0 h-0 overflow-visible pointer-events-none select-none z-0"
+        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
         aria-hidden="true"
       >
-        <div className="absolute inset-x-0 top-0 flex items-center justify-center"
-          style={{ height: '100vh' }}>
-          <div
-            ref={logoRef}
-            className="will-change-transform"
-            style={{ transformOrigin: 'center center', opacity: 0.10 }}
-          >
-            <AegrynLogo size={160} variant="mark" />
-          </div>
+        <div
+          ref={logoRef}
+          className="will-change-transform"
+          style={{ transformOrigin: 'center center', opacity: 0.45 }}
+        >
+          <AegrynLogo size={180} variant="mark" />
         </div>
       </div>
 
-      {/* ── Vision ── */}
-      <section className="relative z-10 border-b border-ag-border bg-white/70 backdrop-blur-0">
-        <div className="mx-auto max-w-7xl px-6 md:px-12">
-          <div className="grid md:grid-cols-[280px_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
-            <div className="py-16 md:pr-16 flex items-start">
-              {visionLabel}
-            </div>
-            <div className="py-16 md:px-16">
-              {visionText}
+      {/* ── Contenu scrollable Vision + ADN ── */}
+      <div className="relative z-10 overflow-y-auto" style={{ maxHeight: '100vh' }}>
+
+        {/* Vision */}
+        <section className="border-b border-ag-border bg-ag-off-white/80 backdrop-blur-sm">
+          <div className="mx-auto max-w-7xl px-6 md:px-12">
+            <div className="grid md:grid-cols-[280px_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
+              <div className="py-16 md:pr-16 flex items-start">
+                {visionLabel}
+              </div>
+              <div className="py-16 md:px-16">
+                {visionText}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── ADN ── */}
-      <div className="relative z-10">
-        {dnaContent}
+        {/* ADN */}
+        <div className="bg-ag-white/80 backdrop-blur-sm">
+          {dnaContent}
+        </div>
       </div>
 
-      {/* ── Mission — clip-reveal depuis le bas ── */}
+      {/* ── Mission — slide depuis le bas ── */}
       <div
         ref={missionRef}
-        className="relative z-20 bg-ag-white"
-        style={{ clipPath: 'inset(100% 0% 0% 0%)' }}
+        className="absolute inset-0 z-20 bg-ag-white overflow-auto"
+        style={{ transform: 'translateY(100%)' }}
       >
         {missionContent}
       </div>
