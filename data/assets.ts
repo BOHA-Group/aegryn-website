@@ -22,7 +22,7 @@ export const AEGRYN_ASSETS = [
     tagline:     'Certification d\'intégrité',
     description: "Protocole blockchain de certification de l'intégrité du code IA. Le SSL du code artificiel — chaque déploiement, immuablement scellé.",
     category:    'ai',
-    status:      'beta' as const,
+    status:      'dev' as const,
     featured:    false,
   },
 

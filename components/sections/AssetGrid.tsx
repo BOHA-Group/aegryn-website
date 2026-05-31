@@ -6,12 +6,7 @@ import { ArrowUpRight }       from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
 import type { Asset } from '@/data/assets'
-
-const STATUS_CONFIG = {
-  live:  { label: 'Live',              dot: 'bg-ag-live',  pulse: true },
-  beta:  { label: 'Bêta',             dot: 'bg-ag-beta',  pulse: true },
-  dev:   { label: 'En développement', dot: 'bg-ag-dev',   pulse: false },
-} as const
+import { BadgePill, StatusIndicator } from '@/components/ui/AssetIndicators'
 
 export function AssetGrid() {
   const gridRef = useRef<HTMLDivElement>(null)
@@ -84,7 +79,6 @@ export function AssetGrid() {
 function AssetTile({ asset }: { asset: Asset }) {
   const ref    = useRef<HTMLAnchorElement>(null)
   const divRef = useRef<HTMLDivElement>(null)
-  const status = STATUS_CONFIG[asset.status]
   const isKryv = asset.id === 'kryv'
 
   const onMove = (e: React.MouseEvent) => {
@@ -109,9 +103,7 @@ function AssetTile({ asset }: { asset: Asset }) {
         onMouseLeave={onLeave}
       >
         <div className="flex justify-between items-start mb-auto">
-          <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-2.5 py-1">
-            CLASSIFIÉ
-          </span>
+          <BadgePill badge={asset.badge} />
           <span className="w-8 h-8 border border-ag-border flex items-center justify-center text-ag-gray">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
@@ -129,12 +121,7 @@ function AssetTile({ asset }: { asset: Asset }) {
           <p className="font-sans font-normal text-[12px] text-ag-gray leading-relaxed">
             {asset.tagline}
           </p>
-          <div className="flex items-center gap-2 mt-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-ag-dev" />
-            <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
-              Restricted
-            </span>
-          </div>
+          <div className="mt-5"><StatusIndicator status={asset.status} isRestricted /></div>
         </div>
       </div>
     )
@@ -153,9 +140,7 @@ function AssetTile({ asset }: { asset: Asset }) {
       onMouseLeave={onLeave}
     >
       <div className="flex justify-between items-start mb-auto">
-        <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-2.5 py-1 group-hover:border-ag-border-h group-hover:text-ag-gray transition-all duration-200">
-          {asset.badge}
-        </span>
+        <BadgePill badge={asset.badge} />
         <span className="w-8 h-8 border border-ag-border flex items-center justify-center text-ag-gray group-hover:border-ag-black group-hover:bg-ag-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
           <ArrowUpRight size={13} />
         </span>
@@ -170,11 +155,8 @@ function AssetTile({ asset }: { asset: Asset }) {
         <p className="font-sans font-normal text-[12px] text-ag-gray leading-relaxed">
           {asset.tagline}
         </p>
-        <div className="flex items-center gap-2 mt-5">
-          <span className={`w-1.5 h-1.5 rounded-full ${status.dot} ${status.pulse ? 'animate-pulse' : ''}`} />
-          <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
-            {status.label}
-          </span>
+        <div className="mt-5">
+          <StatusIndicator status={asset.status} />
         </div>
       </div>
     </Link>
