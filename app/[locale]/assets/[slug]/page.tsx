@@ -9,9 +9,10 @@ import type { Metadata }      from 'next'
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
 const STATUS_CONFIG = {
-  live:  { label: 'Live',              dot: 'bg-ag-live',  text: 'text-ag-live' },
-  beta:  { label: 'Bêta',             dot: 'bg-ag-beta',  text: 'text-ag-beta' },
-  dev:   { label: 'En développement', dot: 'bg-ag-gray-light', text: 'text-ag-gray-light' },
+  live:        { label: 'Live',              dot: 'bg-ag-live',       text: 'text-ag-live'       },
+  beta:        { label: 'Bêta',             dot: 'bg-ag-beta',       text: 'text-ag-beta'       },
+  dev:         { label: 'En développement', dot: 'bg-ag-gray-light', text: 'text-ag-gray-light' },
+  not_started: { label: 'Non démarré',     dot: 'bg-ag-gray-light', text: 'text-ag-gray-light' },
 } as const
 
 const ASSET_DETAILS: Record<string, {

@@ -3,11 +3,11 @@ import Image           from 'next/image'
 import { useTranslations } from 'next-intl'
 
 const footerAssets = [
-  { name: 'subblink',    href: 'https://subblink.boha-group.com', label: 'B2B', external: true  },
-  { name: 'neediu',      href: '/assets/neediu',      label: 'B2C', external: false },
-  { name: 'primiom',     href: '/assets/primiom',     label: 'B2C', external: false },
-  { name: 'movtoo',      href: '/assets/movtoo',      label: 'B2C', external: false },
-  { name: 'hobconnect',  href: '/assets/hobconnect',  label: 'B2C', external: false },
+  { name: 'subblink',   href: 'https://subblink.boha-group.com', external: true  },
+  { name: 'neediu',     href: '/what-we-build',                  external: false },
+  { name: 'primiom',    href: '/what-we-build',                  external: false },
+  { name: 'movtoo',     href: '/what-we-build',                  external: false },
+  { name: 'hobconnect', href: '/what-we-build',                  external: false },
 ]
 
 const socialLinks = [
@@ -19,10 +19,9 @@ const socialLinks = [
 ]
 
 const legal = [
-  { key: 'privacy',       href: '/privacy',                                                  external: false },
-  { key: 'terms',         href: '/terms',                                                    external: false },
-  { key: 'dataProtection', href: '/data-protection-notice',                                  external: false },
-  { key: 'neediuLegal',   href: '/data-protection-notice-neediu',                            external: false },
+  { key: 'privacy',     href: '/privacy',                          external: false },
+  { key: 'terms',       href: '/terms',                            external: false },
+  { key: 'neediuLegal', href: '/data-protection-notice-neediu',    external: false },
 ]
 
 const footerNavLinks = [
@@ -90,15 +89,12 @@ export default function Footer() {
               {t('ecosystemLabel')}
             </p>
             <ul className="space-y-2.5">
-              {footerAssets.map(({ name, href, label, external }) => (
+              {footerAssets.map(({ name, href, external }) => (
                 <li key={name}>
                   <Link href={href}
                     {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                    className="group flex items-center text-sm text-white/75 hover:text-white transition-colors">
-                    <span className="flex-1">{name}</span>
-                    <span className="w-8 shrink-0 font-sans font-semibold text-[9px] text-white/50 group-hover:text-ag-apex transition-colors text-right">
-                      {label}
-                    </span>
+                    className="text-sm text-white/75 hover:text-white transition-colors">
+                    {name}
                   </Link>
                 </li>
               ))}
@@ -133,7 +129,7 @@ export default function Footer() {
                 {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 className="font-sans font-semibold text-[10px] text-white/55 hover:text-white transition-colors"
               >
-                {t(key as 'privacy' | 'terms' | 'dataProtection' | 'neediuLegal')}
+                {t(key as 'privacy' | 'terms' | 'neediuLegal')}
               </Link>
             ))}
           </div>

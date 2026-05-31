@@ -7,7 +7,7 @@ import { useTranslations }     from 'next-intl'
 import { gsap, SplitText }     from '@/lib/gsap'
 import { AEGRYN_ASSETS }       from '@/data/assets'
 
-/* ── Inactive assets — greyed badge ── */
+/* ── Special status assets ── */
 const NOT_STARTED_IDS = ['movtoo', 'primiom', 'hobconnect']
 const KRYV_ID = 'kryv'
 
@@ -56,12 +56,11 @@ export function AssetGrid() {
       )
 
       /* Asset chips stagger */
-      AEGRYN_ASSETS.forEach((asset, i) => {
-        const isDisabled = [...NOT_STARTED_IDS, KRYV_ID].includes(asset.id)
+      AEGRYN_ASSETS.forEach((_asset, i) => {
         gsap.fromTo(`.asset-row-${i}`,
           { opacity: 0, y: 20 },
           {
-            opacity: isDisabled ? 0.45 : 1,
+            opacity: 1,
             y: 0, duration: 0.7, ease: 'expo.out',
             delay: (i % 3) * 0.05,
             scrollTrigger: {
@@ -101,100 +100,75 @@ export function AssetGrid() {
             const isKryv       = asset.id === KRYV_ID
             const isNotStarted = NOT_STARTED_IDS.includes(asset.id)
             const isLive       = asset.status === 'live'
-            const isDisabled   = isKryv || isNotStarted
-            const href         = '/what-we-build'
 
             /* Bordure droite sur les deux premières colonnes */
-            const borderRight = i % 3 !== 2 ? 'lg:border-r border-ag-border' : ''
-            /* Bordure droite sur colonne 1 (tablette 2 col) */
+            const borderRight   = i % 3 !== 2 ? 'lg:border-r border-ag-border' : ''
             const borderRightSm = i % 2 !== 1 ? 'sm:border-r border-ag-border' : ''
-            /* Bordure basse sur toutes les lignes sauf la dernière */
-            const borderBottom = i < AEGRYN_ASSETS.length - (AEGRYN_ASSETS.length % 3 || 3)
+            const borderBottom  = i < AEGRYN_ASSETS.length - (AEGRYN_ASSETS.length % 3 || 3)
               ? 'border-b border-ag-border'
               : ''
 
-            const chip = (
-              <div
-                className={`asset-row-${i} group relative flex flex-col items-center justify-between
-                  text-center p-8 transition-all duration-500
-                  ${borderRight} ${borderRightSm} ${borderBottom}
-                  ${isDisabled
-                    ? 'bg-ag-white cursor-default'
-                    : 'bg-ag-white cursor-pointer hover:bg-ag-navy'
-                  }`}
-                style={{ minHeight: '200px' }}
-              >
-                {/* Top — badge catégorie */}
-                <div className="w-full flex items-center justify-between mb-6">
-                  <span className={`font-sans font-semibold text-[10px] tracking-[0.18em] uppercase transition-colors duration-500 ${
-                    isDisabled ? 'text-ag-gray-light/40' : 'text-ag-gray-light group-hover:text-white/50'
-                  }`}>
-                    {asset.badge}
-                  </span>
-
-                  {/* Status */}
-                  {isKryv && (
-                    <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-ag-gray-light/50 group-hover:text-white/40 transition-colors duration-500">
-                      <Lock size={7} /> Restricted
-                    </span>
-                  )}
-                  {!isKryv && isNotStarted && (
-                    <span className="font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-ag-gray-light/40">
-                      {t('notStarted')}
-                    </span>
-                  )}
-                  {!isKryv && !isNotStarted && isLive && (
-                    <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-emerald-500 group-hover:text-emerald-300 transition-colors duration-500">
-                      <span className="relative flex w-1.5 h-1.5">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50" />
-                        <span className="relative inline-flex rounded-full w-1.5 h-1.5 bg-emerald-400" />
-                      </span>
-                      {tStatus('live')}
-                    </span>
-                  )}
-                  {!isKryv && !isNotStarted && !isLive && (
-                    <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-orange-400 group-hover:text-orange-300 transition-colors duration-500">
-                      <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
-                      {tStatus('building')}
-                    </span>
-                  )}
-                </div>
-
-                {/* Centre — nom */}
-                <h3
-                  className={`font-sans font-bold tracking-[-0.03em] leading-[1.0] mb-3 transition-colors duration-500 ${
-                    isDisabled
-                      ? 'text-ag-gray-light/50'
-                      : 'text-ag-black group-hover:text-white'
-                  }`}
-                  style={{ fontSize: 'clamp(22px,2.2vw,32px)' }}
+            return (
+              <Link key={asset.id} href="/what-we-build">
+                <div
+                  className={`asset-row-${i} group relative flex flex-col items-center justify-between
+                    text-center p-8 transition-all duration-500 cursor-pointer
+                    bg-ag-white hover:bg-ag-navy
+                    ${borderRight} ${borderRightSm} ${borderBottom}`}
+                  style={{ minHeight: '200px' }}
                 >
-                  {asset.name}
-                </h3>
+                  {/* Top — badge catégorie */}
+                  <div className="w-full flex items-center justify-between mb-6">
+                    <span className="font-sans font-semibold text-[10px] tracking-[0.18em] uppercase text-ag-gray-light group-hover:text-white/50 transition-colors duration-500">
+                      {asset.badge}
+                    </span>
 
-                {/* Tagline */}
-                <p className={`font-sans font-normal text-[12px] leading-relaxed transition-colors duration-500 ${
-                  isDisabled ? 'text-ag-gray-light/30' : 'text-ag-gray group-hover:text-white/70'
-                }`}>
-                  {asset.tagline}
-                </p>
+                    {/* Status */}
+                    {isKryv && (
+                      <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-ag-gray-light/60 group-hover:text-white/40 transition-colors duration-500">
+                        <Lock size={7} /> Restricted
+                      </span>
+                    )}
+                    {!isKryv && isNotStarted && (
+                      <span className="font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-ag-gray-light/60 group-hover:text-white/40 transition-colors duration-500">
+                        {t('notStarted')}
+                      </span>
+                    )}
+                    {!isKryv && !isNotStarted && isLive && (
+                      <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-emerald-500 group-hover:text-emerald-300 transition-colors duration-500">
+                        <span className="relative flex w-1.5 h-1.5">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50" />
+                          <span className="relative inline-flex rounded-full w-1.5 h-1.5 bg-emerald-400" />
+                        </span>
+                        {tStatus('live')}
+                      </span>
+                    )}
+                    {!isKryv && !isNotStarted && !isLive && (
+                      <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-orange-400 group-hover:text-orange-300 transition-colors duration-500">
+                        <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
+                        {tStatus('building')}
+                      </span>
+                    )}
+                  </div>
 
-                {/* Flèche au hover */}
-                {!isDisabled && (
+                  {/* Centre — nom */}
+                  <h3
+                    className="font-sans font-bold tracking-[-0.03em] leading-[1.0] mb-3 text-ag-black group-hover:text-white transition-colors duration-500"
+                    style={{ fontSize: 'clamp(22px,2.2vw,32px)' }}
+                  >
+                    {asset.name}
+                  </h3>
+
+                  {/* Tagline */}
+                  <p className="font-sans font-normal text-[12px] leading-relaxed text-ag-gray group-hover:text-white/70 transition-colors duration-500">
+                    {asset.tagline}
+                  </p>
+
+                  {/* Flèche au hover */}
                   <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <ArrowUpRight size={14} className="text-white/60" />
                   </div>
-                )}
-              </div>
-            )
-
-            if (isDisabled) {
-              return <div key={asset.id}>{chip}</div>
-            }
-
-            return (
-              <Link key={asset.id} href={href}>
-                {chip}
+                </div>
               </Link>
             )
           })}

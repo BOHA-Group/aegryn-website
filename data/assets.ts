@@ -48,7 +48,7 @@ export const AEGRYN_ASSETS = [
     tagline:     'Livraison à la demande en temps réel',
     description: "Plateforme de livraison immédiate pilotée par l'intelligence artificielle.",
     category:    'lifestyle',
-    status:      'dev' as const,
+    status:      'not_started' as const,
     featured:    false,
   },
 
@@ -62,7 +62,7 @@ export const AEGRYN_ASSETS = [
     tagline:     'Transactions immobilières assistées par l\'IA',
     description: "Réinvente la transaction immobilière grâce à des outils d'analyse et de décision basés sur l'IA.",
     category:    'transactions',
-    status:      'dev' as const,
+    status:      'not_started' as const,
     featured:    false,
   },
   {
@@ -74,7 +74,7 @@ export const AEGRYN_ASSETS = [
     tagline:     'Réseau social centré sur les passions partagées',
     description: 'Crée des communautés autour des centres d\'intérêt et des passions communes.',
     category:    'transactions',
-    status:      'dev' as const,
+    status:      'not_started' as const,
     featured:    false,
   },
 

@@ -47,9 +47,21 @@ export function RestrictedIndicator() {
   )
 }
 
+export function NotStartedIndicator() {
+  return (
+    <span className="inline-flex items-center gap-2">
+      <span className="w-2.5 h-2.5 rounded-full border border-ag-gray-light/60 shrink-0" />
+      <span className="font-sans font-semibold text-[10px] tracking-[0.16em] uppercase text-ag-gray-light">
+        Non démarré
+      </span>
+    </span>
+  )
+}
+
 export function StatusIndicator({ status, isRestricted }: { status: AssetStatus; isRestricted?: boolean }) {
   if (isRestricted) return <RestrictedIndicator />
   if (status === 'live') return <LiveIndicator />
+  if (status === 'not_started') return <NotStartedIndicator />
   return <DevIndicator />
 }
 

@@ -7,9 +7,10 @@ import { gsap } from '@/lib/gsap'
 import { AEGRYN_ASSETS } from '@/data/assets'
 
 const STATUS_CONFIG = {
-  live:  { label: 'Live',  dot: 'bg-ag-live',  pulse: true },
-  beta:  { label: 'Beta',  dot: 'bg-ag-beta',  pulse: true },
-  dev:   { label: 'Dev',   dot: 'bg-ag-dev',   pulse: false },
+  live:        { label: 'Live',         dot: 'bg-ag-live',        pulse: true  },
+  beta:        { label: 'Beta',         dot: 'bg-ag-beta',        pulse: true  },
+  dev:         { label: 'Dev',          dot: 'bg-ag-dev',         pulse: false },
+  not_started: { label: 'Non démarré', dot: 'bg-ag-gray-light',  pulse: false },
 } as const
 
 const VISIBLE = AEGRYN_ASSETS.slice()
