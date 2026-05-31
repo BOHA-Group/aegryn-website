@@ -169,6 +169,7 @@
       "simplify": { "title": "Nous simplifions", "desc": "Éliminer la complexité en intégrant une automatisation intelligente, des interfaces intuitives et des systèmes interconnectés, rendant la technologie sans effort et efficace." },
       "embrace": { "title": "Nous embrassons", "desc": "Nous restons en avance en pionnier des innovations, en adoptant les avancées de pointe et en fixant de nouveaux standards dans les expériences numériques fluides." }
     },
+    "dna": { "label": "Notre ADN" },
     "values": {
       "precision": { "label": "01", "title": "Précision", "desc": "Chaque décision est documentée, mesurée et traçable." },
       "durability": { "label": "02", "title": "Durabilité", "desc": "Nous construisons pour le long terme, pas pour le prochain funding." },
@@ -199,10 +200,12 @@
       "subject": "Sujet",
       "subjectPlaceholder": "Choisir un sujet",
       "subjects": {
+        "general": "Demande générale",
         "advisory": "Advisory & Cybersécurité",
         "partnership": "Partenariat",
-        "press": "Presse & Médias",
-        "other": "Autre"
+        "investor": "Investisseur",
+        "media": "Presse & Médias",
+        "career": "Carrières"
       },
       "message": "Message",
       "messagePlaceholder": "Décrivez votre demande...",

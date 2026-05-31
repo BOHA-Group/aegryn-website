@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 type Props = { locale: string }
 
-const subjects = ['advisory', 'partnership', 'press', 'other'] as const
+const subjects = ['general', 'advisory', 'partnership', 'investor', 'media', 'career'] as const
 
 export default function ContactForm({ locale }: Props) {
   const t = useTranslations('contact.form')

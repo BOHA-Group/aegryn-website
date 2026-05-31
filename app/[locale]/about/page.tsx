@@ -63,6 +63,30 @@ export default function AboutPage() {
             {t('vision.text')}
           </p>
         }
+        dnaContent={
+          <section className="border-b border-ag-border bg-ag-off-white/80">
+            <div className="mx-auto max-w-7xl px-6 md:px-12 py-20">
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-12">
+                / {t('dna.label')}
+              </p>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border">
+                {values.map((v) => (
+                  <div key={v} className="bg-ag-off-white p-8 hover:bg-ag-white transition-colors">
+                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex mb-4">
+                      {t(`values.${v}.label`)}
+                    </p>
+                    <p className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-none mb-3">
+                      {t(`values.${v}.title`)}
+                    </p>
+                    <p className="text-[13px] text-ag-gray leading-relaxed">
+                      {t(`values.${v}.desc`)}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        }
         missionContent={
           <div className="mx-auto max-w-7xl px-6 md:px-12 py-4">
             <div className="flex items-center justify-between border-b border-ag-border py-4 mb-0">
@@ -94,30 +118,6 @@ export default function AboutPage() {
           </div>
         }
       />
-
-      {/* DNA — values grid */}
-      <section className="border-b border-ag-border bg-ag-off-white">
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-20">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-12">
-            / Notre ADN
-          </p>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border">
-            {values.map((v) => (
-              <div key={v} className="bg-ag-off-white p-8 hover:bg-ag-white transition-colors">
-                <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex mb-4">
-                  {t(`values.${v}.label`)}
-                </p>
-                <p className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-none mb-3">
-                  {t(`values.${v}.title`)}
-                </p>
-                <p className="text-[13px] text-ag-gray-light leading-relaxed">
-                  {t(`values.${v}.desc`)}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Founder — Rolex-style scroll reveal */}
       <FounderSection />

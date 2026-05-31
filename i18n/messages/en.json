@@ -169,6 +169,7 @@
       "simplify": { "title": "We simplify", "desc": "Eliminate complexity by integrating smart automation, intuitive interfaces, and interconnected systems, making technology effortless and efficient." },
       "embrace": { "title": "We embrace", "desc": "We stay ahead by pioneering innovations, embracing cutting-edge advancements, and setting new standards in seamless digital experiences." }
     },
+    "dna": { "label": "Our DNA" },
     "values": {
       "precision": { "label": "01", "title": "Precision", "desc": "Every decision is documented, measured and traceable." },
       "durability": { "label": "02", "title": "Durability", "desc": "We build for the long term, not the next funding round." },
@@ -199,10 +200,12 @@
       "subject": "Subject",
       "subjectPlaceholder": "Choose a subject",
       "subjects": {
+        "general": "General Inquiry",
         "advisory": "Advisory & Cybersecurity",
         "partnership": "Partnership",
-        "press": "Press & Media",
-        "other": "Other"
+        "investor": "Investor",
+        "media": "Press & Media",
+        "career": "Career"
       },
       "message": "Message",
       "messagePlaceholder": "Describe your request...",

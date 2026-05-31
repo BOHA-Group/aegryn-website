@@ -147,6 +147,7 @@
       "simplify": { "title": "Wir vereinfachen", "desc": "Wir beseitigen Komplexität durch intelligente Automatisierung, intuitive Interfaces und vernetzte Systeme." },
       "embrace": { "title": "Wir gestalten", "desc": "Wir bleiben führend durch Pionierarbeit bei Innovationen und das Setzen neuer Standards in nahtlosen digitalen Erlebnissen." }
     },
+    "dna": { "label": "Unsere DNA" },
     "values": {
       "precision": { "label": "01", "title": "Präzision", "desc": "Jede Entscheidung ist dokumentiert, gemessen und nachvollziehbar." },
       "durability": { "label": "02", "title": "Beständigkeit", "desc": "Wir bauen für die Zukunft, nicht für die nächste Finanzierungsrunde." },
@@ -162,7 +163,7 @@
     "form": {
       "name": "Vollständiger Name", "email": "E-Mail-Adresse", "company": "Unternehmen (optional)",
       "subject": "Betreff", "subjectPlaceholder": "Betreff wählen",
-      "subjects": { "advisory": "Advisory & Cybersicherheit", "partnership": "Partnerschaft", "press": "Presse & Medien", "other": "Sonstiges" },
+      "subjects": { "general": "Allgemeine Anfrage", "advisory": "Advisory & Cybersicherheit", "partnership": "Partnerschaft", "investor": "Investor", "media": "Presse & Medien", "career": "Karriere" },
       "message": "Nachricht", "messagePlaceholder": "Beschreiben Sie Ihr Anliegen...",
       "submit": "Senden", "sending": "Wird gesendet...", "error": "Ein Fehler ist aufgetreten. Bitte erneut versuchen.",
       "success": { "title": "Nachricht erhalten.", "desc": "Wir melden uns innerhalb von 24 Stunden." }

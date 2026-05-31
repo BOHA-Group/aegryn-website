@@ -108,7 +108,7 @@ function ScrollingTitle({ text, active }: { text: string; active: boolean }) {
       <div
         className={[
           'flex gap-6 whitespace-nowrap font-sans font-semibold text-[8px] tracking-[0.14em] uppercase',
-          active ? 'text-ag-black' : 'text-ag-gray-light',
+          active ? 'text-ag-black' : 'text-ag-gray',
         ].join(' ')}
         style={{
           animation: active ? 'ag-marquee 8s linear infinite' : 'none',
@@ -126,27 +126,33 @@ function ScrollingTitle({ text, active }: { text: string; active: boolean }) {
 export function MusicPlayer() {
   const audioRef              = useRef<HTMLAudioElement | null>(null)
   const [playing, setPlaying] = useState(false)
-  const [muted,   setMuted]   = useState(true)
+  const [muted,   setMuted]   = useState(false)
   const [ready,   setReady]   = useState(false)
 
   useEffect(() => {
     const audio      = new Audio(AUDIO_SRC)
     audio.loop       = true
     audio.volume     = 0.55
-    audio.muted      = true
-    audio.preload    = 'metadata'
+    audio.muted      = false
+    audio.preload    = 'auto'
     audioRef.current = audio
 
-    audio.addEventListener('canplaythrough', () => setReady(true))
+    const markReady = () => setReady(true)
+    audio.addEventListener('loadedmetadata', markReady)
+    audio.addEventListener('canplay', markReady)
 
     const wasPlaying = sessionStorage.getItem(STORAGE_KEY) === 'true'
     if (wasPlaying) {
-      audio.muted = false
       setMuted(false)
       audio.play().then(() => setPlaying(true)).catch(() => {})
     }
 
-    return () => { audio.pause(); audio.src = '' }
+    return () => {
+      audio.removeEventListener('loadedmetadata', markReady)
+      audio.removeEventListener('canplay', markReady)
+      audio.pause()
+      audio.src = ''
+    }
   }, [])
 
   const togglePlay = useCallback(() => {
@@ -212,7 +218,7 @@ export function MusicPlayer() {
           onClick={restart}
           disabled={!ready}
           aria-label="Recommencer"
-          className="w-5 h-5 flex items-center justify-center text-ag-gray-light hover:text-ag-black disabled:opacity-25 transition-colors"
+          className="w-5 h-5 flex items-center justify-center text-ag-gray hover:text-ag-black disabled:opacity-30 transition-colors"
         >
           {/* ⏮ inline SVG — plus petit que lucide SkipBack */}
           <svg width="9" height="9" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true">
@@ -253,7 +259,7 @@ export function MusicPlayer() {
           onClick={toggleMute}
           disabled={!ready}
           aria-label={muted ? 'Activer le son' : 'Couper le son'}
-          className="w-5 h-5 flex items-center justify-center text-ag-gray-light hover:text-ag-black disabled:opacity-25 transition-colors"
+          className="w-5 h-5 flex items-center justify-center text-ag-gray hover:text-ag-black disabled:opacity-30 transition-colors"
         >
           {muted ? (
             <svg width="10" height="10" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" aria-hidden="true">

@@ -147,6 +147,7 @@
       "simplify": { "title": "Wij vereenvoudigen", "desc": "We elimineren complexiteit door slimme automatisering, intuïtieve interfaces en onderling verbonden systemen te integreren." },
       "embrace": { "title": "Wij omarmen", "desc": "We blijven voorop lopen door baanbrekende innovaties en het stellen van nieuwe standaarden in naadloze digitale ervaringen." }
     },
+    "dna": { "label": "Ons DNA" },
     "values": {
       "precision": { "label": "01", "title": "Precisie", "desc": "Elke beslissing is gedocumenteerd, gemeten en traceerbaar." },
       "durability": { "label": "02", "title": "Duurzaamheid", "desc": "We bouwen voor de lange termijn, niet voor de volgende financieringsronde." },
@@ -162,7 +163,7 @@
     "form": {
       "name": "Volledige naam", "email": "E-mailadres", "company": "Bedrijf (optioneel)",
       "subject": "Onderwerp", "subjectPlaceholder": "Kies een onderwerp",
-      "subjects": { "advisory": "Advisory & Cyberbeveiliging", "partnership": "Partnerschap", "press": "Pers & Media", "other": "Anders" },
+      "subjects": { "general": "Algemene vraag", "advisory": "Advisory & Cyberbeveiliging", "partnership": "Partnerschap", "investor": "Investeerder", "media": "Pers & Media", "career": "Carrière" },
       "message": "Bericht", "messagePlaceholder": "Beschrijf uw vraag...",
       "submit": "Versturen", "sending": "Versturen...", "error": "Er is een fout opgetreden. Probeer het opnieuw of schrijf ons rechtstreeks.",
       "success": { "title": "Bericht ontvangen.", "desc": "Wij reageren binnen 24 uur." }
