@@ -12,7 +12,10 @@
     "tagline": "Engineered to Last",
     "title": "Costruiamo\nciò che dura.",
     "sub": "Asset proprietari dallo strato protocollo\nfino all'interfaccia utente.",
-    "cta": "Scopri i nostri asset"
+    "cta": "Scopri i nostri asset",
+    "strip": "6 asset — 3 categorie",
+    "geo": "Svizzera · Europa · Global",
+    "scroll": "Scorri"
   },
   "manifesto": {
     "aegis": {
@@ -95,11 +98,17 @@
   "whatwedo": {
     "label": "Cosa facciamo",
     "items": [
-      { "num": "01", "title": "ECOSYSTEM ENGINEERING", "desc": "Progettiamo ecosistemi digitali costruiti per la scalabilità, la resilienza e il valore a lungo termine — dove ogni componente si connette e si moltiplica." },
-      { "num": "02", "title": "EXPERIENCE ARCHITECTURE", "desc": "Progettiamo esperienze utente fluide che semplificano la complessità e creano interazioni intuitive su tutte le nostre piattaforme." },
-      { "num": "03", "title": "TECHNOLOGY FOUNDATIONS", "desc": "Costruiamo su un'infrastruttura tecnologica solida e sovrana — garantendo sicurezza, indipendenza e durabilità a ogni livello." },
-      { "num": "04", "title": "STRATEGIC ADVISORY", "desc": "Il nostro advisory si basa su veri framework di esecuzione in Data, AI & Sicurezza — radicati nel modo in cui costruiamo i nostri ecosistemi." }
+      { "num": "01", "title": "INGEGNERIA DELL'ECOSISTEMA", "desc": "Progettiamo ecosistemi digitali costruiti per la scalabilità, la resilienza e il valore a lungo termine — dove ogni componente si connette e si moltiplica." },
+      { "num": "02", "title": "ARCHITETTURA DELL'ESPERIENZA", "desc": "Progettiamo esperienze utente fluide che semplificano la complessità e creano interazioni intuitive su tutte le nostre piattaforme." },
+      { "num": "03", "title": "FONDAMENTA TECNOLOGICHE", "desc": "Costruiamo su un'infrastruttura tecnologica solida e sovrana — garantendo sicurezza, indipendenza e durabilità a ogni livello." },
+      { "num": "04", "title": "ADVISORY STRATEGICO", "desc": "Il nostro advisory si basa su veri framework di esecuzione in Data, AI & Sicurezza — radicati nel modo in cui costruiamo i nostri ecosistemi." }
     ]
+  },
+  "assetGrid": {
+    "sectionLabel": "Il nostro ecosistema",
+    "sectionTitle": "Cosa\ncostruiamo.",
+    "notStarted": "Non avviato",
+    "comingSoon": "Prossimamente"
   },
   "aboutSection": {
     "label": "Chi è Aegryn",

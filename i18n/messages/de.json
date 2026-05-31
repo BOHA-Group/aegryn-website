@@ -12,7 +12,10 @@
     "tagline": "Engineered to Last",
     "title": "Wir bauen\nwas besteht.",
     "sub": "Eigene Assets von der Protokollschicht\nbis zur Benutzeroberfläche.",
-    "cta": "Unsere Assets entdecken"
+    "cta": "Unsere Assets entdecken",
+    "strip": "6 Assets — 3 Kategorien",
+    "geo": "Schweiz · Europa · Global",
+    "scroll": "Scrollen"
   },
   "manifesto": {
     "aegis": {
@@ -95,11 +98,17 @@
   "whatwedo": {
     "label": "Was wir tun",
     "items": [
-      { "num": "01", "title": "ECOSYSTEM ENGINEERING", "desc": "Wir entwerfen digitale Ökosysteme für Skalierbarkeit, Resilienz und langfristigen Wert — wo jede Komponente sich verbindet und multipliziert." },
-      { "num": "02", "title": "EXPERIENCE ARCHITECTURE", "desc": "Wir gestalten nahtlose Nutzererlebnisse, die Komplexität vereinfachen und intuitive Interaktionen auf allen Plattformen ermöglichen." },
-      { "num": "03", "title": "TECHNOLOGY FOUNDATIONS", "desc": "Wir bauen auf solider, souveräner Technologieinfrastruktur — mit Sicherheit, Unabhängigkeit und Bestandsfähigkeit auf jeder Ebene." },
-      { "num": "04", "title": "STRATEGIC ADVISORY", "desc": "Unser Advisory basiert auf echten Umsetzungsrahmen in Data, KI & Sicherheit — verankert in der Art, wie wir unsere eigenen Ökosysteme aufbauen." }
+      { "num": "01", "title": "ÖKOSYSTEM-ENGINEERING", "desc": "Wir entwerfen digitale Ökosysteme für Skalierbarkeit, Resilienz und langfristigen Wert — wo jede Komponente sich verbindet und multipliziert." },
+      { "num": "02", "title": "ERLEBNIS-ARCHITEKTUR", "desc": "Wir gestalten nahtlose Nutzererlebnisse, die Komplexität vereinfachen und intuitive Interaktionen auf allen Plattformen ermöglichen." },
+      { "num": "03", "title": "TECHNOLOGISCHE GRUNDLAGEN", "desc": "Wir bauen auf solider, souveräner Technologieinfrastruktur — mit Sicherheit, Unabhängigkeit und Bestandsfähigkeit auf jeder Ebene." },
+      { "num": "04", "title": "STRATEGISCHES ADVISORY", "desc": "Unser Advisory basiert auf echten Umsetzungsrahmen in Data, KI & Sicherheit — verankert in der Art, wie wir unsere eigenen Ökosysteme aufbauen." }
     ]
+  },
+  "assetGrid": {
+    "sectionLabel": "Unser Ökosystem",
+    "sectionTitle": "Was wir\nbauen.",
+    "notStarted": "Nicht gestartet",
+    "comingSoon": "Demnächst"
   },
   "aboutSection": {
     "label": "Über Aegryn",

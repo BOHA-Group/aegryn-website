@@ -1,164 +1,160 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import Link                   from 'next/link'
-import { ArrowUpRight }       from 'lucide-react'
-import { gsap } from '@/lib/gsap'
-import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
-import type { Asset } from '@/data/assets'
-import { BadgePill, StatusIndicator } from '@/components/ui/AssetIndicators'
+import { useEffect, useRef }  from 'react'
+import Link                    from 'next/link'
+import { ArrowUpRight, Lock }  from 'lucide-react'
+import { useTranslations }     from 'next-intl'
+import { gsap }                from '@/lib/gsap'
+import { AEGRYN_ASSETS }       from '@/data/assets'
+
+/* ── Inactive assets — greyed badge ── */
+const NOT_STARTED_IDS = ['movtoo', 'primiom', 'hobconnect']
+const KRYV_ID = 'kryv'
 
 export function AssetGrid() {
-  const gridRef = useRef<HTMLDivElement>(null)
+  const t       = useTranslations('assetGrid')
+  const tStatus = useTranslations('build.status')
+  const wrapRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.asset-tile', {
-        opacity: 0, y: 24, stagger: 0.07,
-        ease: 'expo.out', duration: 0.65,
-        scrollTrigger: {
-          trigger: gridRef.current,
-          start: 'top 80%',
-        },
+      AEGRYN_ASSETS.forEach((_, i) => {
+        gsap.fromTo(`.asset-row-${i}`,
+          { opacity: 0, y: 32 },
+          {
+            opacity: 1, y: 0, duration: 0.75, ease: 'expo.out',
+            scrollTrigger: {
+              trigger: `.asset-row-${i}`,
+              start: 'top 88%',
+              once: true,
+            },
+          },
+        )
       })
-    }, gridRef)
+    }, wrapRef)
     return () => ctx.revert()
   }, [])
 
   return (
-    <section className="py-32 bg-ag-white border-t border-ag-border">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section className="bg-ag-white border-t border-ag-border">
 
-        <div className="mb-20">
-          <p className="font-sans font-semibold text-[11px] tracking-[0.2em] uppercase text-ag-gray-light mb-4">
-            Notre écosystème
-          </p>
-          <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.95]"
-            style={{ fontSize: 'clamp(36px,4.5vw,64px)' }}
-          >
-            Ce que nous<br />construisons.
-          </h2>
-        </div>
+      {/* Header */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-12">
+        <p className="font-sans font-semibold text-[11px] tracking-[0.24em] uppercase text-ag-gray-light mb-5">
+          {t('sectionLabel')}
+        </p>
+        <h2
+          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.93] whitespace-pre-line"
+          style={{ fontSize: 'clamp(42px,5.5vw,80px)' }}
+        >
+          {t('sectionTitle')}
+        </h2>
+      </div>
 
-        <div ref={gridRef} className="space-y-0">
-          {(Object.keys(ASSET_CATEGORIES) as Array<keyof typeof ASSET_CATEGORIES>).map((cat) => {
-            const catAssets = AEGRYN_ASSETS.filter((a) => a.category === cat)
-            if (!catAssets.length) return null
+      {/* Asset rows — full-width Hexa style */}
+      <div ref={wrapRef} className="border-t border-ag-border">
+        {AEGRYN_ASSETS.map((asset, i) => {
+          const isKryv       = asset.id === KRYV_ID
+          const isNotStarted = NOT_STARTED_IDS.includes(asset.id)
+          const isLive       = asset.status === 'live'
+          const href         = asset.url ?? `/assets/${asset.slug}`
+          const isExternal   = !!asset.url
 
-            return (
-              <div key={cat}>
-                <div className="flex items-center justify-between border-y border-ag-border py-4">
-                  <span className="font-sans font-bold text-[11px] tracking-[0.18em] uppercase text-ag-black">
-                    {ASSET_CATEGORIES[cat].label}
-                  </span>
-                  <span className="font-sans font-semibold text-[11px] text-ag-gray-light">
-                    {String(catAssets.length).padStart(2, '0')}
-                  </span>
-                </div>
+          const inner = (
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-12 max-w-7xl mx-auto px-6 md:px-12 py-8 md:py-10">
 
-                <div className={`grid border-b border-ag-border ${
-                  catAssets.length <= 2
-                    ? 'grid-cols-1 md:grid-cols-2'
-                    : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-                }`}>
-                  {catAssets.map((asset) => (
-                    <AssetTile key={asset.id} asset={asset as Asset} />
-                  ))}
+              {/* Left — index + name + tagline */}
+              <div className="flex items-start gap-6 min-w-0 flex-1">
+                <span className="font-sans font-semibold text-[11px] tracking-[0.16em] text-ag-gray-light shrink-0 pt-1 w-7">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-3 mb-1 flex-wrap">
+                    <h3
+                      className={`font-sans font-bold tracking-[-0.03em] leading-none transition-colors duration-300 ${
+                        isKryv || isNotStarted
+                          ? 'text-ag-gray-light'
+                          : 'text-ag-black group-hover:text-ag-navy'
+                      }`}
+                      style={{ fontSize: 'clamp(22px,2.5vw,34px)' }}
+                    >
+                      {asset.name}
+                    </h3>
+                    {/* Status badge */}
+                    {isKryv && (
+                      <span className="inline-flex items-center gap-1.5 border border-ag-border px-2.5 py-0.5 font-sans font-semibold text-[9px] tracking-[0.14em] uppercase text-ag-gray-light">
+                        <Lock size={8} />
+                        Restricted
+                      </span>
+                    )}
+                    {!isKryv && isNotStarted && (
+                      <span className="inline-flex items-center gap-1.5 border border-ag-border/60 px-2.5 py-0.5 font-sans font-semibold text-[9px] tracking-[0.14em] uppercase text-ag-gray-light/60">
+                        <span className="w-1.5 h-1.5 rounded-full bg-ag-gray-light/40 inline-block" />
+                        {t('notStarted')}
+                      </span>
+                    )}
+                    {!isKryv && !isNotStarted && isLive && (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 font-sans font-semibold text-[9px] tracking-[0.14em] uppercase text-emerald-600">
+                        <span className="relative flex w-2 h-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50" />
+                          <span className="relative inline-flex rounded-full w-2 h-2 bg-emerald-400" />
+                        </span>
+                        Live
+                      </span>
+                    )}
+                    {!isKryv && !isNotStarted && !isLive && (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 font-sans font-semibold text-[9px] tracking-[0.14em] uppercase text-orange-500">
+                        <span className="w-2 h-2 rounded-full bg-orange-400 inline-block" />
+                        {tStatus('building')}
+                      </span>
+                    )}
+                  </div>
+                  <p className={`font-sans font-normal text-[13px] leading-relaxed max-w-lg ${
+                    isKryv || isNotStarted ? 'text-ag-gray-light/50' : 'text-ag-gray'
+                  }`}>
+                    {asset.tagline}
+                  </p>
                 </div>
               </div>
-            )
-          })}
-        </div>
 
+              {/* Right — category + arrow */}
+              <div className="flex items-center gap-6 shrink-0 pl-13 md:pl-0">
+                <span className={`font-sans font-semibold text-[10px] tracking-[0.18em] uppercase ${
+                  isKryv || isNotStarted ? 'text-ag-gray-light/40' : 'text-ag-gray-light'
+                }`}>
+                  {asset.badge}
+                </span>
+                {!isKryv && !isNotStarted && (
+                  <span className="w-9 h-9 border border-ag-border flex items-center justify-center text-ag-gray group-hover:border-ag-black group-hover:bg-ag-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
+                    <ArrowUpRight size={14} />
+                  </span>
+                )}
+              </div>
+            </div>
+          )
+
+          const rowClass = `group asset-row-${i} border-b border-ag-border transition-colors duration-300 ${
+            isKryv || isNotStarted
+              ? 'bg-ag-off-white/60 cursor-default opacity-60'
+              : 'bg-ag-white hover:bg-ag-off-white cursor-pointer'
+          }`
+
+          if (isKryv || isNotStarted) {
+            return <div key={asset.id} className={rowClass}>{inner}</div>
+          }
+
+          return (
+            <Link
+              key={asset.id}
+              href={href}
+              className={rowClass}
+              {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+            >
+              {inner}
+            </Link>
+          )
+        })}
       </div>
     </section>
-  )
-}
-
-function AssetTile({ asset }: { asset: Asset }) {
-  const ref    = useRef<HTMLAnchorElement>(null)
-  const divRef = useRef<HTMLDivElement>(null)
-  const isKryv = asset.id === 'kryv'
-
-  const onMove = (e: React.MouseEvent) => {
-    const el = ref.current || divRef.current
-    if (!el) return
-    const r = el.getBoundingClientRect()
-    const x = (e.clientX - r.left) / r.width - 0.5
-    const y = (e.clientY - r.top) / r.height - 0.5
-    el.style.transform = `perspective(1000px) rotateY(${x * 3}deg) rotateX(${-y * 3}deg) translateY(-1px)`
-  }
-  const onLeave = () => {
-    const el = ref.current || divRef.current
-    if (el) el.style.transform = ''
-  }
-
-  if (isKryv) {
-    return (
-      <div
-        ref={divRef}
-        className="asset-tile group relative flex flex-col border-r border-ag-border p-10 min-h-[260px] bg-ag-white overflow-hidden will-change-transform last:border-r-0"
-        onMouseMove={onMove}
-        onMouseLeave={onLeave}
-      >
-        <div className="flex justify-between items-start mb-auto">
-          <BadgePill badge={asset.badge} />
-          <span className="w-8 h-8 border border-ag-border flex items-center justify-center text-ag-gray">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-            </svg>
-          </span>
-        </div>
-        <div className="mt-16">
-          <h3
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-none mb-2"
-            style={{ fontSize: 'clamp(22px,2vw,28px)' }}
-          >
-            {asset.name}
-          </h3>
-          <p className="font-sans font-normal text-[12px] text-ag-gray leading-relaxed">
-            {asset.tagline}
-          </p>
-          <div className="mt-5"><StatusIndicator status={asset.status} isRestricted /></div>
-        </div>
-      </div>
-    )
-  }
-
-  const href = asset.url ?? `/assets/${asset.slug}`
-  const isExternal = !!asset.url
-
-  return (
-    <Link
-      ref={ref}
-      href={href}
-      {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-      className="asset-tile group relative flex flex-col border-r border-ag-border p-10 min-h-[260px] bg-ag-white overflow-hidden transition-colors duration-300 hover:bg-ag-off-white will-change-transform last:border-r-0"
-      onMouseMove={onMove}
-      onMouseLeave={onLeave}
-    >
-      <div className="flex justify-between items-start mb-auto">
-        <BadgePill badge={asset.badge} />
-        <span className="w-8 h-8 border border-ag-border flex items-center justify-center text-ag-gray group-hover:border-ag-black group-hover:bg-ag-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
-          <ArrowUpRight size={13} />
-        </span>
-      </div>
-      <div className="mt-16">
-        <h3
-          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-none mb-2"
-          style={{ fontSize: 'clamp(22px,2vw,28px)' }}
-        >
-          {asset.name}
-        </h3>
-        <p className="font-sans font-normal text-[12px] text-ag-gray leading-relaxed">
-          {asset.tagline}
-        </p>
-        <div className="mt-5">
-          <StatusIndicator status={asset.status} />
-        </div>
-      </div>
-    </Link>
   )
 }

@@ -12,7 +12,10 @@
     "tagline": "Engineered to Last",
     "title": "Wij bouwen\nwat blijft.",
     "sub": "Eigen assets van de protocollaag\ntot de gebruikersinterface.",
-    "cta": "Ontdek onze assets"
+    "cta": "Ontdek onze assets",
+    "strip": "6 assets — 3 categorieën",
+    "geo": "Zwitserland · Europa · Global",
+    "scroll": "Scrollen"
   },
   "manifesto": {
     "aegis": {
@@ -95,11 +98,17 @@
   "whatwedo": {
     "label": "Wat we doen",
     "items": [
-      { "num": "01", "title": "ECOSYSTEM ENGINEERING", "desc": "We ontwerpen digitale ecosystemen voor schaalbaarheid, veerkracht en langetermijnwaarde — waar elk onderdeel verbindt en vermenigvuldigt." },
-      { "num": "02", "title": "EXPERIENCE ARCHITECTURE", "desc": "We ontwerpen naadloze gebruikerservaringen die complexiteit vereenvoudigen en intuitiïve interacties creëren op al onze platforms." },
-      { "num": "03", "title": "TECHNOLOGY FOUNDATIONS", "desc": "We bouwen op solide, soevereine technologie-infrastructuur — met beveiliging, onafhankelijkheid en duurzaamheid op elke laag." },
-      { "num": "04", "title": "STRATEGIC ADVISORY", "desc": "Onze advisory is gebaseerd op echte uitvoeringsraamwerken in Data, AI & Beveiliging — verankerd in hoe we onze eigen ecosystemen bouwen." }
+      { "num": "01", "title": "ECOSYSTEEM-ENGINEERING", "desc": "We ontwerpen digitale ecosystemen voor schaalbaarheid, veerkracht en langetermijnwaarde — waar elk onderdeel verbindt en vermenigvuldigt." },
+      { "num": "02", "title": "ERVARINGSARCHITECTUUR", "desc": "We ontwerpen naadloze gebruikerservaringen die complexiteit vereenvoudigen en intuitiïve interacties creëren op al onze platforms." },
+      { "num": "03", "title": "TECHNOLOGISCHE FUNDAMENTEN", "desc": "We bouwen op solide, soevereine technologie-infrastructuur — met beveiliging, onafhankelijkheid en duurzaamheid op elke laag." },
+      { "num": "04", "title": "STRATEGISCHE ADVISORY", "desc": "Onze advisory is gebaseerd op echte uitvoeringsraamwerken in Data, AI & Beveiliging — verankerd in hoe we onze eigen ecosystemen bouwen." }
     ]
+  },
+  "assetGrid": {
+    "sectionLabel": "Ons ecosysteem",
+    "sectionTitle": "Wat wij\nbouwen.",
+    "notStarted": "Niet gestart",
+    "comingSoon": "Binnenkort"
   },
   "aboutSection": {
     "label": "Over Aegryn",

@@ -12,7 +12,10 @@
     "tagline": "Engineered to Last",
     "title": "Nous construisons\nce qui dure.",
     "sub": "Des actifs propriétaires de la couche protocole\njusqu'à l'interface utilisateur.",
-    "cta": "Découvrir nos actifs"
+    "cta": "Découvrir nos actifs",
+    "strip": "6 actifs — 3 catégories",
+    "geo": "Suisse · Europe · Global",
+    "scroll": "Défiler"
   },
   "manifesto": {
     "aegis": {
@@ -111,10 +114,10 @@
   "whatwedo": {
     "label": "Ce que nous faisons",
     "items": [
-      { "num": "01", "title": "ECOSYSTEM ENGINEERING", "desc": "Nous architecturons des écosystèmes numériques conçus pour la scalabilité, la résilience et la valeur à long terme — où chaque composant se connecte et se cumule." },
-      { "num": "02", "title": "EXPERIENCE ARCHITECTURE", "desc": "Nous concevons des expériences utilisateurs fluides qui simplifient la complexité et créent des interactions intuitives sur l'ensemble de nos plateformes." },
-      { "num": "03", "title": "TECHNOLOGY FOUNDATIONS", "desc": "Nous construisons sur une infrastructure technologique solide et souveraine — garantissant sécurité, indépendance et durabilité à chaque couche." },
-      { "num": "04", "title": "STRATEGIC ADVISORY", "desc": "Notre advisory s'appuie sur de vrais cadres d'exécution en Data, IA & Sécurité — ancrés dans la façon dont nous construisons nos propres écosystèmes." }
+      { "num": "01", "title": "INGÉNIERIE D'ÉCOSYSTÈME", "desc": "Nous architecturons des écosystèmes numériques conçus pour la scalabilité, la résilience et la valeur à long terme — où chaque composant se connecte et se cumule." },
+      { "num": "02", "title": "ARCHITECTURE D'EXPÉRIENCE", "desc": "Nous concevons des expériences utilisateurs fluides qui simplifient la complexité et créent des interactions intuitives sur l'ensemble de nos plateformes." },
+      { "num": "03", "title": "FONDATIONS TECHNOLOGIQUES", "desc": "Nous construisons sur une infrastructure technologique solide et souveraine — garantissant sécurité, indépendance et durabilité à chaque couche." },
+      { "num": "04", "title": "ADVISORY STRATÉGIQUE", "desc": "Notre advisory s'appuie sur de vrais cadres d'exécution en Data, IA & Sécurité — ancrés dans la façon dont nous construisons nos propres écosystèmes." }
     ]
   },
   "aboutSection": {
@@ -136,9 +139,9 @@
     "label": "Notre Mission",
     "sub": "Simplifier la vie par le numérique",
     "items": [
-      { "title": "WE CREATE", "desc": "Des solutions qui anticipent vos besoins en tant qu'individus ou professionnels, garantissant des interactions numériques fluides qui améliorent le quotidien." },
-      { "title": "WE SIMPLIFY", "desc": "Éliminer la complexité en intégrant une automatisation intelligente, des interfaces intuitives et des systèmes interconnectés, rendant la technologie sans effort et efficace." },
-      { "title": "WE EMBRACE", "desc": "Nous restons en avance en pionnier des innovations, en adoptant les avancées de pointe et en fixant de nouveaux standards dans les expériences numériques fluides." }
+      { "title": "NOUS CRÉONS", "desc": "Des solutions qui anticipent vos besoins en tant qu'individus ou professionnels, garantissant des interactions numériques fluides qui améliorent le quotidien." },
+      { "title": "NOUS SIMPLIFIONS", "desc": "Éliminer la complexité en intégrant une automatisation intelligente, des interfaces intuitives et des systèmes interconnectés, rendant la technologie sans effort et efficace." },
+      { "title": "NOUS EMBRASSONS", "desc": "Nous restons en avance en pionnier des innovations, en adoptant les avancées de pointe et en fixant de nouveaux standards dans les expériences numériques fluides." }
     ]
   },
   "whyapps": {
@@ -151,6 +154,12 @@
       { "num": "04", "title": "Impact social", "desc": "Nous construisons avec un objectif. Chaque plateforme que nous créons est conçue pour simplifier les défis du quotidien, réduire les frictions et créer de la valeur mesurable pour les individus et les communautés." },
       { "num": "05", "title": "Accessibles", "desc": "Des premiers utilisateurs de smartphones aux professionnels chevronnés, nos applications sont intuitives et sans barrières — parce que la meilleure interface est celle que tout le monde peut utiliser." }
     ]
+  },
+  "assetGrid": {
+    "sectionLabel": "Notre écosystème",
+    "sectionTitle": "Ce que nous\nconstruisons.",
+    "notStarted": "Non démarré",
+    "comingSoon": "Bientôt"
   },
   "about": {
     "hero": {

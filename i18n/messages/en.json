@@ -12,7 +12,10 @@
     "tagline": "Engineered to Last",
     "title": "We build\nwhat endures.",
     "sub": "Proprietary assets from the protocol layer\nto the user interface.",
-    "cta": "Explore our assets"
+    "cta": "Explore our assets",
+    "strip": "6 assets — 3 categories",
+    "geo": "Switzerland · Europe · Global",
+    "scroll": "Scroll"
   },
   "manifesto": {
     "aegis": {
@@ -116,6 +119,12 @@
       { "num": "03", "title": "TECHNOLOGY FOUNDATIONS", "desc": "We build on solid, sovereign technology infrastructure — ensuring security, independence and durability at every layer." },
       { "num": "04", "title": "STRATEGIC ADVISORY", "desc": "Our advisory draws on real execution frameworks in Data, AI & Security — grounded in how we build our own ecosystems." }
     ]
+  },
+  "assetGrid": {
+    "sectionLabel": "Our ecosystem",
+    "sectionTitle": "What we\nbuild.",
+    "notStarted": "Not started",
+    "comingSoon": "Coming soon"
   },
   "aboutSection": {
     "label": "About Aegryn",

@@ -12,7 +12,10 @@
     "tagline": "Engineered to Last",
     "title": "Construimos\nlo que perdura.",
     "sub": "Activos propietarios desde la capa de protocolo\nhasta la interfaz de usuario.",
-    "cta": "Descubrir nuestros activos"
+    "cta": "Descubrir nuestros activos",
+    "strip": "6 activos — 3 categorías",
+    "geo": "Suiza · Europa · Global",
+    "scroll": "Desplazar"
   },
   "manifesto": {
     "aegis": {
@@ -95,11 +98,17 @@
   "whatwedo": {
     "label": "Lo que hacemos",
     "items": [
-      { "num": "01", "title": "ECOSYSTEM ENGINEERING", "desc": "Arquitecturamos ecosistemas digitales construidos para la escala, la resiliencia y el valor a largo plazo — donde cada componente se conecta y se multiplica." },
-      { "num": "02", "title": "EXPERIENCE ARCHITECTURE", "desc": "Diseñamos experiencias de usuario fluidas que simplifican la complejidad y crean interacciones intuitivas en todas nuestras plataformas." },
-      { "num": "03", "title": "TECHNOLOGY FOUNDATIONS", "desc": "Construimos sobre una infraestructura tecnológica sólida y soberana — garantizando seguridad, independencia y durabilidad en cada capa." },
-      { "num": "04", "title": "STRATEGIC ADVISORY", "desc": "Nuestro advisory se basa en marcos de ejecución reales en Data, IA & Seguridad — anclados en cómo construimos nuestros propios ecosistemas." }
+      { "num": "01", "title": "INGENIERÍA DE ECOSISTEMA", "desc": "Arquitecturamos ecosistemas digitales construidos para la escala, la resiliencia y el valor a largo plazo — donde cada componente se conecta y se multiplica." },
+      { "num": "02", "title": "ARQUITECTURA DE EXPERIENCIA", "desc": "Diseñamos experiencias de usuario fluidas que simplifican la complejidad y crean interacciones intuitivas en todas nuestras plataformas." },
+      { "num": "03", "title": "FUNDAMENTOS TECNOLÓGICOS", "desc": "Construimos sobre una infraestructura tecnológica sólida y soberana — garantizando seguridad, independencia y durabilidad en cada capa." },
+      { "num": "04", "title": "ADVISORY ESTRATÉGICO", "desc": "Nuestro advisory se basa en marcos de ejecución reales en Data, IA & Seguridad — anclados en cómo construimos nuestros propios ecosistemas." }
     ]
+  },
+  "assetGrid": {
+    "sectionLabel": "Nuestro ecosistema",
+    "sectionTitle": "Lo que\nconstruimos.",
+    "notStarted": "No iniciado",
+    "comingSoon": "Próximamente"
   },
   "aboutSection": {
     "label": "Sobre Aegryn",

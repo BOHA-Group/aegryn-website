@@ -1,6 +1,6 @@
-import { getTranslations } from 'next-intl/server'
+import { getTranslations }  from 'next-intl/server'
 import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
-import { HeroMountain }    from '@/components/sections/HeroMountain'
+import { HeroMountain }     from '@/components/sections/HeroMountain'
 import { ManifestoSection } from '@/components/sections/ManifestoSection'
 import { AssetGrid }        from '@/components/sections/AssetGrid'
 import { WhyUseApps }       from '@/components/sections/WhyUseApps'
@@ -20,7 +20,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-export default function HomePage() {
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params
+  const tAdv = await getTranslations({ locale, namespace: 'advisory' })
+
   return (
     <>
       <script
@@ -33,8 +36,8 @@ export default function HomePage() {
       <WhyUseApps />
       <StatementStrip
         label="Aegryn Advisory"
-        title="Nous protégeons ce que vous construisez."
-        cta="Découvrir l'advisory"
+        title={tAdv('hero.title')}
+        cta={tAdv('cta')}
         href="/advisory"
       />
       <StatsRow />

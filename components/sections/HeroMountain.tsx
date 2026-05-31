@@ -147,11 +147,11 @@ export function HeroMountain() {
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-3 flex items-center justify-between">
             <div className="flex items-center gap-8">
               <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/60">
-                6 actifs — 3 catégories
+                {t('strip')}
               </span>
               <span className="hidden sm:block w-px h-3 bg-white/25" />
               <span className="hidden sm:block font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/60">
-                Suisse · Europe · Global
+                {t('geo')}
               </span>
             </div>
             <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/60">
@@ -168,7 +168,7 @@ export function HeroMountain() {
           className="font-sans font-semibold text-[9px] tracking-[0.28em] uppercase text-white/55"
           style={{ writingMode: 'vertical-rl' }}
         >
-          Scroll
+          {t('scroll')}
         </span>
       </div>
     </section>
