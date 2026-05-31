@@ -2,8 +2,46 @@
 
 import Link            from 'next/link'
 import Image           from 'next/image'
+import { useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
+import { gsap } from '@/lib/gsap'
 import { FooterMarquee } from '@/components/layout/FooterMarquee'
+
+/* ── Inline spinning medallion for the Advisory column ── */
+function FooterMedallion({ medallionText, contactLabel }: { medallionText: string; contactLabel: string }) {
+  const ringRef = useRef<HTMLDivElement>(null)
+  const dotRef  = useRef<HTMLSpanElement>(null)
+  useEffect(() => {
+    const r = gsap.to(ringRef.current, { rotation: 360, duration: 22, ease: 'none', repeat: -1 })
+    const d = gsap.to(dotRef.current,  { scale: 1.6, opacity: 0.35, duration: 1.1, ease: 'power1.inOut', yoyo: true, repeat: -1 })
+    return () => { r.kill(); d.kill() }
+  }, [])
+  const SIZE = 100; const CX = 50; const CY = 50; const R = 40
+  return (
+    <Link href="/contact" aria-label={contactLabel}
+      className="relative inline-flex items-center justify-center group"
+      style={{ width: SIZE, height: SIZE }}>
+      <div ref={ringRef} className="absolute inset-0" aria-hidden="true">
+        <svg viewBox={`0 0 ${SIZE} ${SIZE}`} className="w-full h-full">
+          <defs>
+            <path id="footer-medal-ring" d={`M ${CX},${CY} m -${R},0 a ${R},${R} 0 1,1 ${R*2},0 a ${R},${R} 0 1,1 -${R*2},0`}/>
+          </defs>
+          <text style={{ fontSize: 8, fontFamily: 'inherit', fontWeight: 600 }} fill="rgba(90,221,164,0.75)" letterSpacing="2">
+            <textPath href="#footer-medal-ring">{medallionText}</textPath>
+          </text>
+        </svg>
+      </div>
+      <div className="relative w-12 h-12 rounded-full bg-ag-apex/15 border border-ag-apex/40 flex items-center justify-center
+        group-hover:bg-ag-apex group-hover:border-ag-apex transition-all duration-300">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="none"
+          className="text-ag-apex group-hover:text-ag-navy transition-colors duration-300">
+          <path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </div>
+      <span ref={dotRef} className="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-ag-apex" />
+    </Link>
+  )
+}
 
 const footerAssets = [
   { name: 'subblink',   href: 'https://subblink.boha-group.com', external: true  },
@@ -103,7 +141,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Advisory CTA */}
+          {/* Advisory CTA — macaron contact */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
               {t('advisoryLabel')}
@@ -111,10 +149,11 @@ export default function Footer() {
             <p className="text-sm text-white/75 leading-relaxed mb-5">
               {t('advisoryDesc')}
             </p>
-            <Link href="/advisory"
-              className="inline-flex items-center gap-2 border border-ag-apex/40 px-4 py-2 font-sans font-semibold text-xs text-ag-apex hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all">
-              {t('advisoryBook')}
-            </Link>
+            {/* Medallion inline (static version — no spin here) */}
+            <FooterMedallion
+              medallionText={t('medallionText')}
+              contactLabel={t('contactLabel')}
+            />
           </div>
         </div>
 
