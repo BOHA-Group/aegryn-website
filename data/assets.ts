@@ -3,7 +3,7 @@ export const AEGRYN_ASSETS = [
   // ── AI & PROTOCOLES ──────────────────────────────────────────
   {
     id:          'subblink',
-    name:        'Subblink',
+    name:        'subblink',
     slug:        'subblink',
     url:         'https://subblink.app' as string | null,
     badge:       'B2B — SaaS',
@@ -29,7 +29,7 @@ export const AEGRYN_ASSETS = [
   // ── SERVICES & LIFESTYLE ─────────────────────────────────────
   {
     id:          'neediu',
-    name:        'Neediu',
+    name:        'neediu',
     slug:        'neediu',
     url:         null as string | null,
     badge:       'B2C — Marketplace',
@@ -41,7 +41,7 @@ export const AEGRYN_ASSETS = [
   },
   {
     id:          'movtoo',
-    name:        'Movtoo',
+    name:        'movtoo',
     slug:        'movtoo',
     url:         null as string | null,
     badge:       'B2C — Livraison',
@@ -55,7 +55,7 @@ export const AEGRYN_ASSETS = [
   // ── TRANSACTIONS & RÉSEAU ─────────────────────────────────────
   {
     id:          'primiom',
-    name:        'Primiom',
+    name:        'primiom',
     slug:        'primiom',
     url:         null as string | null,
     badge:       'B2C — Immobilier',
@@ -67,7 +67,7 @@ export const AEGRYN_ASSETS = [
   },
   {
     id:          'hobconnect',
-    name:        'Hobconnect',
+    name:        'hobconnect',
     slug:        'hobconnect',
     url:         null as string | null,
     badge:       'B2C — Social',

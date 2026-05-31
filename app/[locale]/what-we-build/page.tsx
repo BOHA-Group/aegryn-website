@@ -70,7 +70,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           {(Object.keys(ASSET_CATEGORIES) as Array<keyof typeof ASSET_CATEGORIES>).map((cat) => {
-            const catAssets = AEGRYN_ASSETS.filter((a) => a.category === cat && a.id !== 'kryv')
+            const catAssets = AEGRYN_ASSETS.filter((a) => a.category === cat)
             if (!catAssets.length) return null
 
             return (
@@ -90,6 +90,40 @@ export default async function WhatWeBuildPage({ params }: Props) {
                 }`}>
                   {catAssets.map((asset) => {
                     const status = STATUS_CONFIG[asset.status]
+                    if (asset.id === 'kryv') {
+                      return (
+                        <div
+                          key={asset.id}
+                          className="flex flex-col border-r border-ag-border p-10 min-h-[260px] bg-ag-white last:border-r-0"
+                        >
+                          <div className="flex justify-between items-start mb-auto">
+                            <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-2.5 py-1">
+                              CLASSIFIÉ
+                            </span>
+                            <span className="w-8 h-8 border border-ag-border flex items-center justify-center text-ag-gray">
+                              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                              </svg>
+                            </span>
+                          </div>
+                          <div className="mt-12">
+                            <h2 className="font-sans font-bold text-ag-black text-[24px] tracking-[-0.03em] leading-none mb-2">
+                              {asset.name}
+                            </h2>
+                            <p className="font-sans font-semibold text-[12px] text-ag-gray leading-relaxed mb-4">
+                              {asset.tagline}
+                            </p>
+                            <div className="flex items-center gap-2 mt-5">
+                              <span className="w-1.5 h-1.5 rounded-full bg-ag-dev" />
+                              <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
+                                Restricted
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    }
                     return (
                       <Link
                         key={asset.id}

@@ -2,7 +2,8 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
-import { AegrynSceneClient } from '@/components/three/AegrynSceneClient'
+import Image from 'next/image'
+import { AegrynLogo } from '@/components/brand/AegrynLogo'
 import type { Metadata } from 'next'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -65,9 +66,9 @@ export default function AboutPage() {
                 {t('vision.text')}
               </p>
             </div>
-            {/* 3D Logo R3F */}
+            {/* Logo officiel */}
             <div className="py-8 md:pl-8 flex items-center justify-center" style={{ height: '320px' }}>
-              <AegrynSceneClient />
+              <AegrynLogo size={160} variant="mark" />
             </div>
           </div>
         </div>
@@ -136,8 +137,14 @@ export default function AboutPage() {
             / {t('founder.label')}
           </p>
           <div className="grid gap-14 lg:grid-cols-[200px_1fr] lg:items-start">
-            <div className="h-56 w-44 border border-ag-border bg-ag-off-white flex items-center justify-center shrink-0">
-              <span className="font-sans text-3xl font-bold text-ag-gray-light tracking-[-0.04em]">YB</span>
+            <div className="relative h-56 w-44 border border-ag-border overflow-hidden shrink-0">
+              <Image
+                src="/images/profil-ceo.jpeg"
+                alt="Yohann Bollack — Founder & CEO, Aegryn"
+                fill
+                className="object-cover object-top"
+                sizes="176px"
+              />
             </div>
             <div>
               <h2
@@ -155,7 +162,7 @@ export default function AboutPage() {
               </div>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
-                  href="https://www.linkedin.com/in/yohannbollack"
+                  href="https://www.linkedin.com/in/yohann-bollack-2a2922"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 border border-ag-border px-5 py-2.5 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-gray hover:border-ag-black hover:text-ag-black transition-all"

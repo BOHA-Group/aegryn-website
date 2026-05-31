@@ -8,6 +8,7 @@ import LanguageSwitcher from '@/components/layout/LanguageSwitcher'
 import { AegrynLogo }  from '@/components/brand/AegrynLogo'
 
 const navLinks = [
+  { key: 'home',       href: '/' },
   { key: 'about',      href: '/about' },
   { key: 'advisory',   href: '/advisory' },
   { key: 'whatWeBuild', href: '/what-we-build' },

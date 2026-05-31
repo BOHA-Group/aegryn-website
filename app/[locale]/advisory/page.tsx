@@ -18,7 +18,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const TEAM = [
   { name: 'Romain F.',    domain: 'Security Audit – Cybersecurity, Penetration Testing & Risk Management', langs: 'French, English', area: 'Back-end security' },
   { name: 'Yacouba N.',   domain: 'App & SaaS Security Audit – Cybersecurity Back-End & Cloud Expert',    langs: 'French',          area: 'Back-end security' },
-  { name: 'Yohann B.',    domain: 'Business Strategy, Creation & Growth',                                  langs: 'French, English', area: 'Business Strategy' },
   { name: 'Ferdinand H.', domain: 'Mobile Application – CTO as a service',                                langs: 'French, English', area: 'Mobile application' },
   { name: 'Sarah L.',     domain: 'Digital Transformation – Operational Efficiency Expert',               langs: 'French',          area: 'UI/UX no-code' },
   { name: 'Rayan K.',     domain: 'Growth & Digital Marketing Expert',                                    langs: 'French, English', area: 'Growth' },
@@ -157,32 +156,27 @@ export default function AdvisoryPage() {
               {String(TEAM.length).padStart(2, '0')} Senior Advisors
             </p>
           </div>
-          <div className="divide-y divide-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border">
             {TEAM.map((member, i) => (
               <div
                 key={member.name}
-                className="flex items-center justify-between py-5 hover:bg-ag-off-white transition-colors group"
+                className="bg-ag-white p-6 hover:bg-ag-off-white transition-colors group"
               >
-                <div className="flex items-start gap-6">
-                  <span className="font-sans font-semibold text-[10px] text-ag-gray-light w-6 shrink-0 pt-0.5">
+                <div className="flex items-start gap-4">
+                  <span className="font-sans font-semibold text-[10px] text-ag-gray-light w-5 shrink-0 pt-0.5">
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <div>
-                    <p className="font-sans font-bold text-ag-black text-[16px] tracking-[-0.02em] group-hover:text-ag-navy transition-colors">
+                  <div className="min-w-0">
+                    <p className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.02em] group-hover:text-ag-navy transition-colors">
                       {member.name}
                     </p>
-                    <p className="font-sans font-semibold text-[11px] text-ag-gray-light mt-0.5">
+                    <p className="font-sans font-normal text-[12px] text-ag-gray leading-snug mt-0.5 mb-2">
                       {member.domain}
                     </p>
+                    <span className="font-sans font-semibold text-[10px] tracking-[0.12em] uppercase border border-ag-border px-2.5 py-0.5 text-ag-gray-light">
+                      {member.area}
+                    </span>
                   </div>
-                </div>
-                <div className="hidden sm:flex items-center gap-4 shrink-0 ml-6">
-                  <span className="font-sans font-semibold text-[10px] tracking-[0.12em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light">
-                    {member.area}
-                  </span>
-                  <span className="font-sans font-semibold text-[10px] text-ag-gray-light">
-                    {member.langs}
-                  </span>
                 </div>
               </div>
             ))}
