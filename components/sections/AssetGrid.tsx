@@ -140,10 +140,14 @@ function AssetTile({ asset }: { asset: Asset }) {
     )
   }
 
+  const href = asset.url ?? `/assets/${asset.slug}`
+  const isExternal = !!asset.url
+
   return (
     <Link
       ref={ref}
-      href={`/assets/${asset.slug}`}
+      href={href}
+      {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
       className="asset-tile group relative flex flex-col border-r border-ag-border p-10 min-h-[260px] bg-ag-white overflow-hidden transition-colors duration-300 hover:bg-ag-off-white will-change-transform last:border-r-0"
       onMouseMove={onMove}
       onMouseLeave={onLeave}

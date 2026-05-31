@@ -3,11 +3,11 @@ import { useTranslations } from 'next-intl'
 import { AegrynLogo } from '@/components/brand/AegrynLogo'
 
 const footerAssets = [
-  { name: 'Subblink',   href: '/assets/subblink',   label: 'B2B' },
-  { name: 'Neediu',     href: '/assets/neediu',     label: 'B2C' },
-  { name: 'Primiom',   href: '/assets/primiom',    label: 'B2C' },
-  { name: 'Movtoo',    href: '/assets/movtoo',     label: 'B2C' },
-  { name: 'Hobconnect',href: '/assets/hobconnect', label: 'B2C' },
+  { name: 'subblink',   href: 'https://subblink.boha-group.com', label: 'B2B', external: true },
+  { name: 'neediu',     href: '/assets/neediu',     label: 'B2C', external: false },
+  { name: 'primiom',   href: '/assets/primiom',    label: 'B2C', external: false },
+  { name: 'movtoo',    href: '/assets/movtoo',     label: 'B2C', external: false },
+  { name: 'hobconnect',href: '/assets/hobconnect', label: 'B2C', external: false },
 ]
 
 const footerNav = [
@@ -81,15 +81,16 @@ export default function Footer() {
           {/* Assets */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">Ecosystem</p>
-            <ul className="space-y-3">
-              {footerAssets.map(({ name, href, label }) => (
+            <ul className="space-y-2.5">
+              {footerAssets.map(({ name, href, label, external }) => (
                 <li key={name}>
                   <Link
                     href={href}
-                    className="group flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
+                    {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    className="group flex items-center gap-0 text-sm text-white/60 hover:text-white transition-colors"
                   >
-                    {name}
-                    <span className="font-sans font-semibold text-[9px] text-white/30 group-hover:text-ag-apex transition-colors">
+                    <span className="flex-1">{name}</span>
+                    <span className="w-8 shrink-0 font-sans font-semibold text-[9px] text-white/30 group-hover:text-ag-apex transition-colors text-right">
                       {label}
                     </span>
                   </Link>

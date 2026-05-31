@@ -124,10 +124,13 @@ export default async function WhatWeBuildPage({ params }: Props) {
                         </div>
                       )
                     }
+                    const tileHref = asset.url ?? `/assets/${asset.slug}`
+                    const tileExternal = !!asset.url
                     return (
                       <Link
                         key={asset.id}
-                        href={`/assets/${asset.slug}`}
+                        href={tileHref}
+                        {...(tileExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                         className="group flex flex-col border-r border-ag-border p-10 min-h-[260px] bg-ag-white hover:bg-ag-off-white transition-colors last:border-r-0"
                       >
                         <div className="flex justify-between items-start mb-auto">

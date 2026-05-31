@@ -35,7 +35,7 @@ export default function Nav() {
             <Link
               key={key}
               href={href}
-              className="font-sans font-semibold text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors duration-200"
+              className="link-underline font-sans font-semibold text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black"
             >
               {t(key)}
             </Link>
