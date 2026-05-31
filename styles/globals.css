@@ -23,8 +23,8 @@
   /* ── Texts */
   --ag-black      : #050505;   /* = secondary */
   --ag-dark       : #0A0A0A;
-  --ag-gray       : #374151;   /* = additional — darkened for WCAG AA */
-  --ag-gray-light : #6B7280;   /* darkened: 4.6:1 on white */
+  --ag-gray       : #2D3748;   /* darkened — 8.2:1 on white, WCAG AAA */
+  --ag-gray-light : #52525B;   /* darkened — 5.9:1 on white, WCAG AA */
 
   /* ── Brand accent */
   --ag-navy       : #0A1D2E;

@@ -18,18 +18,33 @@ export function HeroMountain() {
   useEffect(() => {
     if (!headingRef.current || !sectionRef.current) return
 
-    const split = new SplitText(headingRef.current, { type: 'chars,words' })
+    /* Split by LINES — boha-group.com style: each line clips up from below */
+    const split = new SplitText(headingRef.current, {
+      type: 'lines',
+      linesClass: 'hero-line-inner',
+    })
+
+    /* Wrap each line in a clip container */
+    split.lines.forEach((line) => {
+      const wrapper = document.createElement('div')
+      wrapper.style.overflow = 'hidden'
+      wrapper.style.display  = 'block'
+      line.parentNode?.insertBefore(wrapper, line)
+      wrapper.appendChild(line)
+    })
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'expo.out' } })
 
-      tl.from(labelRef.current, { opacity: 0, y: 10, duration: 0.6, delay: 0.2 })
-        .from(split.chars, {
-          opacity: 0, yPercent: 110, rotationX: -90,
-          stagger: 0.022, duration: 0.85,
-        }, '-=0.35')
-        .from(subtitleRef.current, { opacity: 0, y: 14, duration: 0.6 }, '-=0.45')
-        .from(ruleRef.current,     { scaleX: 0, duration: 0.7, transformOrigin: 'left' }, '-=0.5')
+      tl.from(labelRef.current, { opacity: 0, y: 8, duration: 0.5, delay: 0.1 })
+        .from(split.lines, {
+          yPercent: 105,
+          duration: 1.0,
+          stagger: 0.12,
+          ease: 'expo.out',
+        }, '-=0.2')
+        .from(ruleRef.current, { scaleX: 0, duration: 0.8, transformOrigin: 'left' }, '-=0.6')
+        .from(subtitleRef.current, { opacity: 0, y: 12, duration: 0.6 }, '-=0.55')
         .from(ctasRef.current?.children ?? [], {
           opacity: 0, y: 10, stagger: 0.1, duration: 0.5,
         }, '-=0.4')
@@ -64,7 +79,7 @@ export function HeroMountain() {
           sizes="100vw"
         />
         {/* Gradient: transparent top → dark bottom — Rolex style */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/78" />
       </div>
 
       {/* Content — bottom anchored, left-aligned */}
@@ -74,7 +89,7 @@ export function HeroMountain() {
           {/* Eyebrow label */}
           <p
             ref={labelRef}
-            className="font-sans font-semibold text-[10px] tracking-[0.3em] uppercase text-white/50 mb-6 flex items-center gap-3"
+            className="font-sans font-semibold text-[10px] tracking-[0.3em] uppercase text-white/75 mb-6 flex items-center gap-3"
           >
             <span className="w-10 h-px bg-white/30 inline-block" />
             Swiss Tech Asset Builder — Engineered to Last
@@ -101,7 +116,7 @@ export function HeroMountain() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 max-w-4xl">
             <p
               ref={subtitleRef}
-              className="font-sans font-normal text-[14px] text-white/55 leading-relaxed max-w-xs"
+              className="font-sans font-normal text-[14px] text-white/80 leading-relaxed max-w-xs"
             >
               Aegryn conçoit, finance et opère des écosystèmes numériques
               construits pour durer.
@@ -129,15 +144,15 @@ export function HeroMountain() {
         <div className="border-t border-white/10 bg-ag-navy/80 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-3 flex items-center justify-between">
             <div className="flex items-center gap-8">
-              <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/35">
+              <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/60">
                 6 actifs — 3 catégories
               </span>
-              <span className="hidden sm:block w-px h-3 bg-white/15" />
-              <span className="hidden sm:block font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/35">
+              <span className="hidden sm:block w-px h-3 bg-white/25" />
+              <span className="hidden sm:block font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/60">
                 Suisse · Europe · Global
               </span>
             </div>
-            <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/35">
+            <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/60">
               Est. 2024
             </span>
           </div>
@@ -146,9 +161,9 @@ export function HeroMountain() {
 
       {/* Scroll indicator — vertical right */}
       <div className="absolute bottom-20 right-10 z-10 hidden lg:flex flex-col items-center gap-2">
-        <div className="w-px h-14 bg-white/20" />
+        <div className="w-px h-14 bg-white/40" />
         <span
-          className="font-sans font-semibold text-[9px] tracking-[0.28em] uppercase text-white/25"
+          className="font-sans font-semibold text-[9px] tracking-[0.28em] uppercase text-white/55"
           style={{ writingMode: 'vertical-rl' }}
         >
           Scroll

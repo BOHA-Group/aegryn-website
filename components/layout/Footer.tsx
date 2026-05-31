@@ -70,7 +70,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerNav.map(({ label, href }) => (
                 <li key={href}>
-                  <Link href={href} className="text-sm text-white/60 hover:text-white transition-colors">
+                  <Link href={href} className="text-sm text-white/75 hover:text-white transition-colors">
                     {label}
                   </Link>
                 </li>
@@ -87,10 +87,10 @@ export default function Footer() {
                   <Link
                     href={href}
                     {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                    className="group flex items-center gap-0 text-sm text-white/60 hover:text-white transition-colors"
+                    className="group flex items-center gap-0 text-sm text-white/75 hover:text-white transition-colors"
                   >
                     <span className="flex-1">{name}</span>
-                    <span className="w-8 shrink-0 font-sans font-semibold text-[9px] text-white/30 group-hover:text-ag-apex transition-colors text-right">
+                    <span className="w-8 shrink-0 font-sans font-semibold text-[9px] text-white/50 group-hover:text-ag-apex transition-colors text-right">
                       {label}
                     </span>
                   </Link>
@@ -102,7 +102,7 @@ export default function Footer() {
           {/* Advisory CTA */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">Advisory</p>
-            <p className="text-sm text-white/60 leading-relaxed mb-6">
+            <p className="text-sm text-white/75 leading-relaxed mb-6">
               Strategic clarity in Data, AI and Cybersecurity.
             </p>
             <Link
@@ -116,7 +116,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center">
-          <p className="font-sans font-semibold text-[10px] text-white/30">
+          <p className="font-sans font-semibold text-[10px] text-white/55">
             © 2025 Aegryn. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
@@ -124,7 +124,7 @@ export default function Footer() {
               <Link
                 key={key}
                 href={href}
-                className="font-sans font-semibold text-[10px] text-white/30 hover:text-white/60 transition-colors"
+                className="font-sans font-semibold text-[10px] text-white/55 hover:text-white transition-colors"
               >
                 {t(key)}
               </Link>
