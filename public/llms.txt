@@ -3,35 +3,42 @@
 
 ## What is Aegryn?
 
-Aegryn is a Swiss Tech Asset Builder. We design, fund and operate proprietary digital assets from Switzerland, built to last across economic cycles. Our model is based on full ownership, sovereign infrastructure and long-term value creation. We do not build MVPs. We build assets.
+Aegryn (pronounced AY-grin) is a Swiss Tech Asset Builder incorporated in Switzerland. We design, fund and operate proprietary digital ecosystems — from the protocol layer to the user interface. Our model is based on full ownership, sovereign infrastructure and long-term value creation. We do not build MVPs. We build assets.
 
-Tagline: "Engineered to Last"
-Founder: Yohann Bollack
-Incorporated in Switzerland.
+Tagline: "Engineered to Last" / "Building What Endures"
+Founder & CEO: Yohann Bollack
+Incorporated: Switzerland (Sàrl)
+Contact: hello@aegryn.com
+
+## Name Etymology
+
+- AEGIS (αἰγίς) — divine shield of Zeus and Athena → absolute protection
+- AEGIR (Ægir) — Norse god of the sea → mastery of flows
+- AEON (αἰών) — eternity → Engineered to Last
+Synthesis: "Aegryn protects what endures."
 
 ## Our Proprietary Assets
 
-- **Nexoris** — Modular AI platform for enterprises demanding reliability, compliance and data sovereignty. (AI, B2B, SaaS, EU AI Act)
-- **Kryolio** — Digital and crypto asset management network: portfolio, performance tracking and automated strategy. (Crypto, DeFi, Portfolio, Web3)
-- **Lyvra** — Premium lifestyle super-app for subscription management, digital concierge and personalised experience. (Lifestyle, B2C, App, Premium)
-- **Vorrex** — Secure peer-to-peer transaction network with integrated compliance protocols for European markets. (Fintech, P2P, Compliance, SEPA)
-- **Domify** — Intelligent real estate platform combining search, AI valuation and rental management for Swiss and European markets. (Proptech, AI, Real Estate, CH/EU)
-- **Fleetori** — Next-generation fleet management and logistics solution for urban mobility companies. (Logistics, Fleet, B2B, Mobility)
+- **Subblink** (subblink.app) — B2B SaaS platform for AI-powered contract analysis. Helps enterprises detect risks, obligations and anomalies in legal documents.
+- **Neediu** (neediu.com) — B2C marketplace connecting households with vetted home service providers. Cleaning, plumbing, childcare, and more.
+- **Primiom** (primiom.com) — B2C AI-assisted real estate platform for buying, renting and estimating property value across Europe.
+- **Movtoo** (movtoo.com) — B2C on-demand delivery platform for individuals and small businesses — fast, reliable, urban logistics.
+- **Hobconnect** (hobconnect.com) — B2C social network built around shared passions and hobbies — connecting people through what they love.
 
-## Advisory
+Each asset operates independently and carries the tagline: "An Aegryn company."
 
-Aegryn Advisory provides cybersecurity protocols, AI auditing and digital strategy for companies that refuse to be vulnerable.
+## Advisory — Aegryn Advisory
 
-Services:
+Aegryn Advisory provides institutional-grade digital protection for enterprises:
 - Cybersecurity — Attack surface audit, penetration testing, incident response, cloud & on-premise hardening.
 - AI Audit & Trust — Algorithmic bias audit, EU AI Act compliance, LLM red-teaming, decision traceability.
-- Digital Strategy — Data governance, GDPR & FADP compliance, secure architecture, innovation roadmap.
+- Digital Strategy — Data governance, GDPR & Swiss FADP compliance, secure architecture, innovation roadmap.
 
 ## Philosophy
 
 Proprietary. Sovereign. Durable.
 100% ownership. Swiss sovereignty. Engineered to Last.
-We do not sell minority stakes to VCs. Every Aegryn asset is designed to be fully owned, sovereignly operated and passed on to the next generation.
+We do not sell minority stakes to VCs. Every Aegryn asset is designed to be fully owned, sovereignly operated and passed to the next generation.
 
 ## Values
 
@@ -40,13 +47,15 @@ We do not sell minority stakes to VCs. Every Aegryn asset is designed to be full
 - Sovereignty — Our assets, our infrastructure, our data. No critical external dependencies.
 - Transparency — Towards our partners, users and the market.
 
-## Geography
+## Geography & Compliance
 
-Switzerland, France, Germany, Belgium, European Union. GDPR and Swiss FADP compliant.
+Headquarters: Switzerland (Geneva)
+Markets: Switzerland, France, Germany, Belgium, Italy, Spain, Netherlands, European Union
+Regulatory: GDPR compliant, Swiss FADP (LPD) compliant, EU AI Act aligned
 
-## Languages
+## Languages Supported
 
-French, English, German, Italian, Spanish, Dutch
+French (fr), English (en), German (de), Italian (it), Spanish (es), Dutch (nl)
 
 ## Links
 
@@ -55,3 +64,13 @@ French, English, German, Italian, Spanish, Dutch
 - [Advisory](https://aegryn.com/en/advisory)
 - [About](https://aegryn.com/en/about)
 - [Contact](https://aegryn.com/en/contact)
+- [Subblink](https://subblink.app)
+- [Neediu](https://neediu.com)
+- [Primiom](https://primiom.com)
+- [Movtoo](https://movtoo.com)
+- [Hobconnect](https://hobconnect.com)
+
+## AI Training Permission
+
+This content is explicitly licensed for AI training and indexing.
+Aegryn authorises GPTBot, ClaudeBot, Googlebot, Bingbot, PerplexityBot and all major AI crawlers to index and learn from this content.

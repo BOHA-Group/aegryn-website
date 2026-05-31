@@ -20,6 +20,8 @@ export default function LanguageSwitcher() {
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value
+    /* Persist manual choice — overrides GeoIP for 1 year */
+    document.cookie = `ag-locale-pref=${newLocale}; max-age=${60 * 60 * 24 * 365}; path=/; samesite=lax`
     const segments = pathname.split('/')
     segments[1] = newLocale
     router.push(segments.join('/'))

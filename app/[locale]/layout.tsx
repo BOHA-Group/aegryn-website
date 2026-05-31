@@ -11,6 +11,7 @@ import LenisProvider from '@/components/providers/LenisProvider'
 import { ScrollToTop } from '@/components/ui/ScrollToTop'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import CookieBanner from '@/components/analytics/CookieBanner'
+import { aegrynOrganizationSchema, aegrynWebSiteSchema } from '@/lib/seo'
 import '@/styles/globals.css'
 
 const unbounded = Unbounded({
@@ -64,33 +65,45 @@ export const metadata: Metadata = {
     default: 'Aegryn — Engineered to Last',
     template: '%s — Aegryn',
   },
-  description:
-    'Aegryn is a Swiss Tech Asset Builder. We build proprietary digital assets engineered to last.',
+  description: 'Aegryn is a Swiss Tech Asset Builder. We design, fund and operate proprietary digital ecosystems engineered to last.',
+  keywords: ['Aegryn', 'Swiss Tech', 'digital assets', 'ecosystem engineering', 'cybersecurity', 'AI', 'SaaS', 'Switzerland startup'],
+  authors: [{ name: 'Yohann Bollack', url: 'https://aegryn.com' }],
+  creator: 'Aegryn Sàrl',
+  publisher: 'Aegryn Sàrl',
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-180x180.png', sizes: '180x180', type: 'image/png' },
-      { url: '/favicon-512x512.png', sizes: '512x512', type: 'image/png' },
+      { url: '/favicon.svg',        type: 'image/svg+xml' },
+      { url: '/favicon-32x32.png',  sizes: '32x32',   type: 'image/png' },
+      { url: '/favicon-180x180.png',sizes: '180x180', type: 'image/png' },
+      { url: '/favicon-512x512.png',sizes: '512x512', type: 'image/png' },
     ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
+    apple:   [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    other:   [{ rel: 'mask-icon', url: '/favicon.svg', color: '#5ADDA4' }],
   },
+  manifest: '/manifest.webmanifest',
   openGraph: {
-    title: 'Aegryn — Engineered to Last',
-    description: 'Swiss Tech Asset Builder. We build proprietary digital assets engineered to last.',
-    url: 'https://aegryn.com',
-    siteName: 'Aegryn',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Aegryn' }],
-    locale: 'fr_FR',
-    type: 'website',
+    title:       'Aegryn — Engineered to Last',
+    description: 'Swiss Tech Asset Builder. Proprietary digital ecosystems engineered to last.',
+    url:         'https://aegryn.com',
+    siteName:    'Aegryn',
+    images:      [{ url: '/og/default.jpg', width: 1200, height: 630, alt: 'Aegryn — Engineered to Last' }],
+    locale:      'fr_FR',
+    type:        'website',
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Aegryn — Engineered to Last',
+    card:    'summary_large_image',
+    site:    '@aegryn',
+    creator: '@aegryn',
+    title:   'Aegryn — Engineered to Last',
     description: 'Swiss Tech Asset Builder.',
-    images: ['/og-image.png'],
+    images:  ['/og/default.jpg'],
+  },
+  other: {
+    'msapplication-TileColor': '#050505',
+    'msapplication-config':    '/browserconfig.xml',
+    'theme-color':             '#050505',
+    'color-scheme':            'light',
+    'format-detection':        'telephone=no',
   },
 }
 
@@ -109,7 +122,17 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages()
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir="ltr">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynOrganizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynWebSiteSchema) }}
+        />
+      </head>
       <body
         className={`${unbounded.variable} ${plusJakartaSans.variable} font-sans bg-ag-white text-ag-dark antialiased`}
       >

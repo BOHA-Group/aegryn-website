@@ -1,0 +1,27 @@
+{
+  "name": "Aegryn — Swiss Tech Asset Builder",
+  "short_name": "Aegryn",
+  "description": "Proprietary digital ecosystems engineered to last. Swiss Tech Asset Builder.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#050505",
+  "lang": "en",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["business", "technology", "finance"],
+  "icons": [
+    { "src": "/favicon-32x32.png",  "sizes": "32x32",   "type": "image/png" },
+    { "src": "/favicon-180x180.png","sizes": "180x180",  "type": "image/png" },
+    { "src": "/favicon-512x512.png","sizes": "512x512",  "type": "image/png", "purpose": "any maskable" }
+  ],
+  "screenshots": [
+    {
+      "src": "/og/default.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "label": "Aegryn Homepage"
+    }
+  ],
+  "prefer_related_applications": false
+}

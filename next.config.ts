@@ -3,15 +3,35 @@ import createNextIntlPlugin from 'next-intl/plugin'
 
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
 
+const CSP = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://static.cloudflareinsights.com",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "font-src 'self' https://fonts.gstatic.com data:",
+  "img-src 'self' data: blob: https: https://www.google-analytics.com",
+  "media-src 'self' blob:",
+  "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://vitals.vercel-insights.com https://cloudflareinsights.com wss:",
+  "frame-src 'none'",
+  "frame-ancestors 'none'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "upgrade-insecure-requests",
+].join('; ')
+
 const securityHeaders = [
-  { key: 'X-DNS-Prefetch-Control', value: 'on' },
-  { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-  { key: 'X-Content-Type-Options', value: 'nosniff' },
-  { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
-  {
-    key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=()',
-  },
+  { key: 'X-DNS-Prefetch-Control',        value: 'on' },
+  { key: 'X-Frame-Options',               value: 'DENY' },
+  { key: 'X-Content-Type-Options',        value: 'nosniff' },
+  { key: 'X-XSS-Protection',              value: '1; mode=block' },
+  { key: 'Referrer-Policy',               value: 'strict-origin-when-cross-origin' },
+  { key: 'Strict-Transport-Security',     value: 'max-age=63072000; includeSubDomains; preload' },
+  { key: 'Permissions-Policy',            value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
+  { key: 'Content-Security-Policy',       value: CSP },
+  { key: 'X-Robots-Tag',                  value: 'index, follow, max-image-preview:large, max-snippet:-1' },
+  { key: 'Cross-Origin-Opener-Policy',    value: 'same-origin' },
+  { key: 'Cross-Origin-Resource-Policy',  value: 'same-origin' },
+  { key: 'Cross-Origin-Embedder-Policy',  value: 'unsafe-none' },
 ]
 
 const nextConfig: NextConfig = {
@@ -24,11 +44,36 @@ const nextConfig: NextConfig = {
         source: '/(.*)',
         headers: securityHeaders,
       },
+      {
+        source: '/_next/static/(.*)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        source: '/fonts/(.*)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        source: '/images/(.*)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' }],
+      },
+      {
+        source: '/audio/(.*)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=86400' }],
+      },
+      {
+        source: '/manifest.webmanifest',
+        headers: [{ key: 'Content-Type', value: 'application/manifest+json' }],
+      },
     ]
   },
   images: {
     formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
+    minimumCacheTTL: 86400,
   },
+  compress: true,
+  poweredByHeader: false,
 }
 
 export default withNextIntl(nextConfig)
