@@ -45,68 +45,71 @@ export function AssetHeroBannerVideo({
     })
 
     const ctx = gsap.context(() => {
+      /*
+       * Pattern Rolex GMT Master II — scrub: true strict, ease: 'none' partout.
+       * Image/vidéo STATIQUE — aucun Ken Burns.
+       * Texte : fade-up opacity+y scrubé linéairement.
+       * Section suivante : clip-path inset(100%→0%) depuis le bas.
+       */
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger:       wrap,
           start:         'top top',
           end:           '+=300%',
           pin:           true,
-          scrub:         1.2,
+          scrub:         true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
         },
       })
 
-      /* Phase 0–35% — Ken Burns dezoom image + vidéo fondue simultanément */
-      tl.fromTo(photoRef.current,
-        { scale: 1.12 },
-        { scale: 1.0, ease: 'none', duration: 0.35 },
-        0,
-      )
+      /* Phase 0–30% — vidéo fondue opacity 0→1, ease: none */
       tl.fromTo(videoRef.current,
         { opacity: 0 },
-        { opacity: 1, ease: 'none', duration: 0.35 },
+        { opacity: 1, ease: 'none', duration: 0.30 },
         0,
       )
 
-      /* Phase 28–42% — label fade */
+      /* Phase 20–35% — label fade-up scrubé */
       tl.fromTo(labelRef.current,
-        { opacity: 0, y: 6 },
-        { opacity: 1, y: 0, ease: 'expo.out', duration: 0.10 },
-        0.28,
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, ease: 'none', duration: 0.15 },
+        0.20,
       )
 
-      /* Phase 34–52% — titre clip reveal ligne par ligne */
-      tl.fromTo(split.lines,
-        { yPercent: 110 },
-        { yPercent: 0, stagger: 0.06, ease: 'expo.out', duration: 0.14 },
-        0.34,
-      )
+      /* Phase 28–50% — titre lignes fade-up scrubé, stagger inline */
+      split.lines.forEach((line, i) => {
+        tl.fromTo(line,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, ease: 'none', duration: 0.14 },
+          0.28 + i * 0.06,
+        )
+      })
 
-      /* Phase 44–56% — sous-texte fade-up */
+      /* Phase 48–60% — sous-texte fade-up scrubé */
       tl.fromTo(subRef.current,
-        { opacity: 0, y: 12 },
-        { opacity: 1, y: 0, ease: 'expo.out', duration: 0.10 },
-        0.44,
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, ease: 'none', duration: 0.12 },
+        0.48,
       )
 
-      /* Phase 55–75% — blur vidéo + overlay → prépare l'overlap */
+      /* Phase 60–75% — blur + overlay progressifs, ease: none */
       tl.fromTo(blurRef.current,
         { backdropFilter: 'blur(0px)', WebkitBackdropFilter: 'blur(0px)' },
-        { backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', ease: 'none', duration: 0.20 },
-        0.55,
+        { backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', ease: 'none', duration: 0.15 },
+        0.60,
       )
       tl.fromTo(overlayRef.current,
         { opacity: 0 },
-        { opacity: 0.50, ease: 'none', duration: 0.20 },
-        0.55,
+        { opacity: 0.48, ease: 'none', duration: 0.15 },
+        0.60,
       )
 
-      /* Phase 75–100% — section chips remonte par-dessus */
+      /* Phase 75–100% — clip-path inset reveal Rolex-style */
       if (nextRef.current) {
         tl.fromTo(nextRef.current,
-          { yPercent: 100 },
-          { yPercent: 0, ease: 'expo.inOut', duration: 0.25 },
+          { clipPath: 'inset(100% 0 0 0)' },
+          { clipPath: 'inset(0% 0 0 0)', ease: 'none', duration: 0.25 },
           0.75,
         )
       }
@@ -122,8 +125,8 @@ export function AssetHeroBannerVideo({
       className="relative overflow-hidden"
       style={{ height: '100vh' }}
     >
-      {/* ── Couche 1 : image poster (Ken Burns) ── */}
-      <div ref={photoRef} className="absolute inset-0 will-change-transform">
+      {/* ── Couche 1 : image poster statique (pas de Ken Burns — Rolex standard) ── */}
+      <div ref={photoRef} className="absolute inset-0">
         <Image
           src="/images/assets-intro.jpg"
           alt="Aegryn — Nos actifs numériques"
@@ -147,7 +150,7 @@ export function AssetHeroBannerVideo({
         poster="/images/assets-intro.jpg"
         preload="auto"
       >
-        <source src="/videos/assets-animation2.mp4" type="video/mp4" />
+        <source src="/videos/assets-animation2-web.mp4" type="video/mp4" />
       </video>
 
       {/* ── Couche 3 : blur progressif (scrub GSAP) ── */}
@@ -200,7 +203,7 @@ export function AssetHeroBannerVideo({
         <div
           ref={nextRef}
           className="absolute inset-x-0 bottom-0 top-0 z-20 overflow-auto"
-          style={{ transform: 'translateY(100%)' }}
+          style={{ clipPath: 'inset(100% 0 0 0)' }}
         >
           {children}
         </div>

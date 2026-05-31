@@ -27,42 +27,50 @@ export function HomeVideoSection({ children }: { children: React.ReactNode }) {
     if (!wrap) return
 
     const ctx = gsap.context(() => {
+      /*
+       * Pattern Rolex GMT Master II — scrub strict, ease: 'none' sur tout.
+       * Vidéo STATIQUE — aucun Ken Burns, aucun zoom.
+       * Texte : fade-up opacity+y scrubé linéairement.
+       * Section suivante : clip-path inset reveal depuis le bas (pas de yPercent).
+       */
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger:       wrap,
           start:         'top top',
           end:           '+=280%',
           pin:           true,
-          scrub:         1.2,
+          scrub:         true,          /* scrub: true = strictement linéaire */
           anticipatePin: 1,
           invalidateOnRefresh: true,
         },
       })
 
-      /* Phase 0–40% — vidéo apparaît en fondue immersive */
+      /* Phase 0–35% — vidéo fondue opacity 0→1, ease: none */
       tl.fromTo(videoRef.current,
         { opacity: 0 },
-        { opacity: 1, ease: 'none', duration: 0.40 },
+        { opacity: 1, ease: 'none', duration: 0.35 },
         0,
       )
 
-      /* Phase 40–70% — blur vidéo + overlay sombre progressifs */
-      tl.fromTo(blurRef.current,
-        { backdropFilter: 'blur(0px)', WebkitBackdropFilter: 'blur(0px)' },
-        { backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', ease: 'none', duration: 0.30 },
-        0.40,
-      )
+      /* Phase 35–60% — overlay sombre progressif, ease: none */
       tl.fromTo(overlayRef.current,
         { opacity: 0 },
-        { opacity: 0.55, ease: 'none', duration: 0.30 },
-        0.40,
+        { opacity: 0.50, ease: 'none', duration: 0.25 },
+        0.35,
       )
 
-      /* Phase 70–100% — section suivante remonte par-dessus */
+      /* Phase 35–60% — blur progressif, ease: none */
+      tl.fromTo(blurRef.current,
+        { backdropFilter: 'blur(0px)', WebkitBackdropFilter: 'blur(0px)' },
+        { backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', ease: 'none', duration: 0.25 },
+        0.35,
+      )
+
+      /* Phase 60–100% — clip-path inset reveal Rolex-style */
       tl.fromTo(nextRef.current,
-        { yPercent: 100 },
-        { yPercent: 0, ease: 'expo.inOut', duration: 0.30 },
-        0.70,
+        { clipPath: 'inset(100% 0 0 0)' },
+        { clipPath: 'inset(0% 0 0 0)', ease: 'none', duration: 0.40 },
+        0.60,
       )
 
     }, wrap)
@@ -85,7 +93,7 @@ export function HomeVideoSection({ children }: { children: React.ReactNode }) {
         poster="/images/home-mountains.png"
         preload="auto"
       >
-        <source src="/videos/assets-animation1.mp4" type="video/mp4" />
+        <source src="/videos/assets-animation1-web.mp4" type="video/mp4" />
       </video>
 
       {/* ── Couche blur (GSAP scrub) ── */}
@@ -102,11 +110,11 @@ export function HomeVideoSection({ children }: { children: React.ReactNode }) {
         style={{ opacity: 0 }}
       />
 
-      {/* ── Section suivante (AssetGrid) — slide depuis le bas ── */}
+      {/* ── Section suivante (AssetGrid) — clip-path reveal Rolex-style ── */}
       <div
         ref={nextRef}
         className="absolute inset-x-0 bottom-0 top-0 overflow-auto"
-        style={{ transform: 'translateY(100%)' }}
+        style={{ clipPath: 'inset(100% 0 0 0)' }}
       >
         {children}
       </div>

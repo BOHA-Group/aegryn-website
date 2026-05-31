@@ -29,3 +29,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+public/videos/assets-animation1.mp4
+public/videos/assets-animation2.mp4
