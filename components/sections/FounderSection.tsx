@@ -34,50 +34,49 @@ export function FounderSection() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start:   'top top',
-          end:     'bottom top',
-          scrub:   1.6,
+          start:   'top 60%',
+          end:     '+=120%',
+          scrub:   1.4,
         },
       })
 
-      /* Phase 1 (0→40%) — photo nette, rien ne se passe */
-      /* Phase 2 (40→75%) — overlay noir + blur progressif */
+      /* Phase 1 (0→30%) — overlay noir + blur progressif */
       tl.fromTo(overlayRef.current,
         { opacity: 0 },
-        { opacity: 0.72, ease: 'none', duration: 0.35 },
-        0.40,
+        { opacity: 0.72, ease: 'none', duration: 0.30 },
+        0,
       )
       tl.fromTo(blurRef.current,
         { backdropFilter: 'blur(0px)' },
-        { backdropFilter: 'blur(8px)', ease: 'none', duration: 0.35 },
-        0.40,
+        { backdropFilter: 'blur(8px)', ease: 'none', duration: 0.30 },
+        0,
       )
 
-      /* Phase 3 — texte apparaît dès 55% de la progression */
+      /* Phase 2 (30→80%) — texte apparaît progressivement */
       tl.fromTo(nameRef.current,
-        { yPercent: 30, opacity: 0 },
-        { yPercent: 0,  opacity: 1, ease: 'expo.out', duration: 0.18 },
-        0.55,
+        { yPercent: 20, opacity: 0 },
+        { yPercent: 0,  opacity: 1, ease: 'expo.out', duration: 0.16 },
+        0.30,
       )
       tl.fromTo(titleRef.current,
-        { yPercent: 20, opacity: 0 },
-        { yPercent: 0,  opacity: 1, ease: 'expo.out', duration: 0.15 },
-        0.62,
+        { yPercent: 16, opacity: 0 },
+        { yPercent: 0,  opacity: 1, ease: 'expo.out', duration: 0.14 },
+        0.38,
       )
       tl.fromTo(bio1Ref.current,
-        { yPercent: 18, opacity: 0 },
-        { yPercent: 0,  opacity: 1, ease: 'expo.out', duration: 0.15 },
-        0.68,
+        { yPercent: 14, opacity: 0 },
+        { yPercent: 0,  opacity: 1, ease: 'expo.out', duration: 0.14 },
+        0.46,
       )
       tl.fromTo(bio2Ref.current,
-        { yPercent: 18, opacity: 0 },
-        { yPercent: 0,  opacity: 1, ease: 'expo.out', duration: 0.15 },
-        0.74,
+        { yPercent: 14, opacity: 0 },
+        { yPercent: 0,  opacity: 1, ease: 'expo.out', duration: 0.14 },
+        0.54,
       )
       tl.fromTo(ctasRef.current,
-        { yPercent: 14, opacity: 0 },
+        { yPercent: 10, opacity: 0 },
         { yPercent: 0,  opacity: 1, ease: 'expo.out', duration: 0.12 },
-        0.80,
+        0.62,
       )
     }, sectionRef)
 
