@@ -4,9 +4,11 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link  from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { gsap, SplitText } from '@/lib/gsap'
 
 export function HeroMountain() {
+  const t = useTranslations('hero')
   const sectionRef  = useRef<HTMLElement>(null)
   const headingRef  = useRef<HTMLHeadingElement>(null)
   const subtitleRef = useRef<HTMLParagraphElement>(null)
@@ -99,11 +101,12 @@ export function HeroMountain() {
           <h1
             ref={headingRef}
             id="hero-title"
-            className="font-sans font-bold text-white leading-[0.88] tracking-[-0.03em] max-w-4xl mb-6"
+            className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-4xl mb-6"
             style={{ fontSize: 'clamp(56px,7.5vw,116px)' }}
           >
-            Building<br />
-            What Endures.
+            {t('title').split('\n').map((line, i, arr) => (
+              <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+            ))}
           </h1>
 
           {/* Horizontal rule — Rolex signature separator */}
@@ -118,8 +121,7 @@ export function HeroMountain() {
               ref={subtitleRef}
               className="font-sans font-normal text-[14px] text-white/80 leading-relaxed max-w-xs"
             >
-              Aegryn conçoit, finance et opère des écosystèmes numériques
-              construits pour durer.
+              {t('sub').split('\n').join(' ')}
             </p>
 
             <div ref={ctasRef} className="flex items-center gap-4 shrink-0">
@@ -127,14 +129,14 @@ export function HeroMountain() {
                 href="/what-we-build"
                 className="inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-3.5 hover:bg-ag-apex transition-colors duration-300"
               >
-                Nos actifs
+                {t('cta')}
                 <ArrowUpRight size={13} />
               </Link>
               <Link
                 href="/about"
                 className="inline-flex items-center gap-3 border border-white/40 text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-3.5 hover:border-white hover:bg-white/10 transition-all duration-300"
               >
-                Notre mission
+                {t('tagline')}
               </Link>
             </div>
           </div>

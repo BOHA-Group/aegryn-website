@@ -137,8 +137,16 @@
     ]
   },
   "about": {
-    "hero": { "label": "Chi è Aegryn", "title": "Un builder, non un consulente.", "desc": "Aegryn è un Swiss Tech Asset Builder. Progettiamo, finanziamo e operiamo asset digitali proprietari dalla Svizzera." },
-    "mission": { "label": "La nostra missione", "title": "Costruire ciò che resiste nel tempo.", "p1": "Aegryn non vende progetti. Costruiamo asset. Ogni prodotto che lanciamo è progettato per durare, generare valore nel lungo periodo e resistere ai cicli economici.", "p2": "Il nostro modello si basa sulla piena proprietà dei nostri asset digitali, operati in un ambiente sovrano.", "p3": "La Svizzera non è solo un indirizzo. È il nostro standard: neutralità, precisione, durabilità." },
+    "hero": { "label": "Chi è Aegryn", "title": "Swiss Tech Asset Builder", "desc": "Progettiamo, costruiamo e gestiamo ecosistemi digitali — da idee audaci a tecnologia affidabile e duratura. Sviluppato in Svizzera. Costruito per durare." },
+    "vision": {
+      "label": "La nostra visione",
+      "text": "Crediamo che la tecnologia debba fare di più che impressionare. Deve strutturare, semplificare ed elevare le esperienze quotidiane. In un mondo saturo di app frammentate e soluzioni a breve termine, costruiamo ecosistemi digitali coerenti — ambienti in cui utenti, dati e transazioni si connettono in modo naturale e sicuro."
+    },
+    "mission": { "label": "La nostra missione", "title": "Semplificare la vita con app intelligenti.",
+      "create": { "title": "Creiamo", "desc": "Soluzioni che anticipano le tue esigenze come individui o professionisti, garantendo interazioni digitali fluide che migliorano la vita quotidiana." },
+      "simplify": { "title": "Semplifichiamo", "desc": "Eliminiamo la complessità integrando automazione intelligente, interfacce intuitive e sistemi interconnessi." },
+      "embrace": { "title": "Abbracciamo", "desc": "Restiamo all'avanguardia con innovazioni pionieristiche e stabilendo nuovi standard nelle esperienze digitali fluide." }
+    },
     "values": {
       "precision": { "label": "01", "title": "Precisione", "desc": "Ogni decisione è documentata, misurata e tracciabile." },
       "durability": { "label": "02", "title": "Durabilità", "desc": "Costruiamo per il lungo termine, non per il prossimo round di finanziamento." },

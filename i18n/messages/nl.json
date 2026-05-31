@@ -137,8 +137,16 @@
     ]
   },
   "about": {
-    "hero": { "label": "Over Aegryn", "title": "Een builder, geen consultant.", "desc": "Aegryn is een Swiss Tech Asset Builder. We ontwerpen, financieren en beheren eigen digitale assets vanuit Zwitserland." },
-    "mission": { "label": "Onze missie", "title": "Bouwen wat de tand des tijds doorstaat.", "p1": "Aegryn verkoopt geen projecten. We bouwen assets. Elk product dat we lanceren is ontworpen om te duren, langetermijnwaarde te genereren en economische cycli te doorstaan.", "p2": "Ons model is gebaseerd op volledig eigendom van onze digitale assets, beheerd in een soevereine omgeving.", "p3": "Zwitserland is niet alleen een adres. Het is onze standaard: neutraliteit, precisie, duurzaamheid." },
+    "hero": { "label": "Over Aegryn", "title": "Swiss Tech Asset Builder", "desc": "We ontwerpen, bouwen en beheren digitale ecosystemen — van gedurfde ideeën naar betrouwbare, duurzame technologie. Ontwikkeld in Zwitserland. Gebouwd om te blijven." },
+    "vision": {
+      "label": "Onze visie",
+      "text": "Wij geloven dat technologie meer moet doen dan indruk maken. Ze moet structureren, vereenvoudigen en alledaagse ervaringen verheffen. In een wereld vol gefragmenteerde apps en kortetermijnoplossingen bouwen we coherente digitale ecosystemen — omgevingen waar gebruikers, data en transacties op natuurlijke en veilige wijze verbonden zijn."
+    },
+    "mission": { "label": "Onze missie", "title": "Het leven vereenvoudigen met slimme apps.",
+      "create": { "title": "Wij creëren", "desc": "Oplossingen die uw behoeften anticiperen als individuen of professionals, en naadloze digitale interacties garanderen die het dagelijks leven verbeteren." },
+      "simplify": { "title": "Wij vereenvoudigen", "desc": "We elimineren complexiteit door slimme automatisering, intuïtieve interfaces en onderling verbonden systemen te integreren." },
+      "embrace": { "title": "Wij omarmen", "desc": "We blijven voorop lopen door baanbrekende innovaties en het stellen van nieuwe standaarden in naadloze digitale ervaringen." }
+    },
     "values": {
       "precision": { "label": "01", "title": "Precisie", "desc": "Elke beslissing is gedocumenteerd, gemeten en traceerbaar." },
       "durability": { "label": "02", "title": "Duurzaamheid", "desc": "We bouwen voor de lange termijn, niet voor de volgende financieringsronde." },
