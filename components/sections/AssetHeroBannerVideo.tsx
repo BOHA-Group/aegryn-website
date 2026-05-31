@@ -5,28 +5,29 @@ import Image                  from 'next/image'
 import { gsap, SplitText }    from '@/lib/gsap'
 
 /**
- * AssetHeroBannerVideo — Standard Rolex 8 appliqué à la page actifs.
+ * AssetHeroBannerVideo — Page actifs. Standard Rolex 8.
  *
- * Séquence (pin sur ≈3s de scroll = 300vh) :
- *   Phase 0–30%  : image assets-intro visible, Ken Burns scale 1.08→1.0
- *   Phase 30–65% : vidéo cross-fade opacity 0→1 par-dessus l'image (fondue)
- *   Phase 65–85% : texte clip-reveal ligne par ligne (SplitText lines, stagger 0.08)
- *   Phase 85–100%: sub-texte + compteur fade-up — section dépinne → cartes apparaissent
- *
- * Si aucune vidéo n'est disponible (videoSrc absent), la section se comporte
- * exactement comme AssetHeroBanner (Ken Burns + texte reveal).
- *
- * Usage :
- *   <AssetHeroBannerVideo videoSrc="/videos/assets-reel.mp4" />
+ * Séquence pinée (scrub) :
+ *   Phase 0–35%  : image poster Ken Burns (scale 1.12→1.0) + vidéo fondue (opacity 0→1)
+ *   Phase 30–55% : texte superposé clip-reveal ligne par ligne (SplitText lines)
+ *   Phase 55–75% : blur progressif vidéo (0→12px) + overlay sombre
+ *   Phase 75–100%: children (AssetGridWithDrawer) remonte par-dessus — chips visibles
+ *                  sur fond vidéo floutée → effet immersif overlap
  */
-export function AssetHeroBannerVideo({ videoSrc }: { videoSrc?: string }) {
-  const wrapRef     = useRef<HTMLDivElement>(null)
-  const photoRef    = useRef<HTMLDivElement>(null)
-  const videoRef    = useRef<HTMLVideoElement>(null)
-  const headingRef  = useRef<HTMLHeadingElement>(null)
-  const subRef      = useRef<HTMLParagraphElement>(null)
-  const labelRef    = useRef<HTMLParagraphElement>(null)
-  const textRef     = useRef<HTMLDivElement>(null)
+export function AssetHeroBannerVideo({
+  children,
+}: {
+  children?: React.ReactNode
+}) {
+  const wrapRef    = useRef<HTMLDivElement>(null)
+  const photoRef   = useRef<HTMLDivElement>(null)
+  const videoRef   = useRef<HTMLVideoElement>(null)
+  const blurRef    = useRef<HTMLDivElement>(null)
+  const overlayRef = useRef<HTMLDivElement>(null)
+  const headingRef = useRef<HTMLHeadingElement>(null)
+  const subRef     = useRef<HTMLParagraphElement>(null)
+  const labelRef   = useRef<HTMLParagraphElement>(null)
+  const nextRef    = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const wrap    = wrapRef.current
@@ -44,8 +45,6 @@ export function AssetHeroBannerVideo({ videoSrc }: { videoSrc?: string }) {
     })
 
     const ctx = gsap.context(() => {
-
-      /* ── Timeline principale — scrub (1 unité = scroll 300vh) ── */
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger:       wrap,
@@ -58,47 +57,64 @@ export function AssetHeroBannerVideo({ videoSrc }: { videoSrc?: string }) {
         },
       })
 
-      /* Phase 0–30% — Ken Burns dezoom image */
+      /* Phase 0–35% — Ken Burns dezoom image + vidéo fondue simultanément */
       tl.fromTo(photoRef.current,
         { scale: 1.12 },
-        { scale: 1.0, ease: 'none', duration: 0.30 },
+        { scale: 1.0, ease: 'none', duration: 0.35 },
+        0,
+      )
+      tl.fromTo(videoRef.current,
+        { opacity: 0 },
+        { opacity: 1, ease: 'none', duration: 0.35 },
         0,
       )
 
-      /* Phase 30–65% — cross-fade vidéo par-dessus image (si disponible) */
-      if (videoSrc && videoRef.current) {
-        tl.fromTo(videoRef.current,
-          { opacity: 0 },
-          { opacity: 1, ease: 'none', duration: 0.35 },
-          0.30,
-        )
-      }
-
-      /* Phase 55–75% — label fade */
+      /* Phase 28–42% — label fade */
       tl.fromTo(labelRef.current,
         { opacity: 0, y: 6 },
-        { opacity: 1, y: 0, ease: 'expo.out', duration: 0.12 },
+        { opacity: 1, y: 0, ease: 'expo.out', duration: 0.10 },
+        0.28,
+      )
+
+      /* Phase 34–52% — titre clip reveal ligne par ligne */
+      tl.fromTo(split.lines,
+        { yPercent: 110 },
+        { yPercent: 0, stagger: 0.06, ease: 'expo.out', duration: 0.14 },
+        0.34,
+      )
+
+      /* Phase 44–56% — sous-texte fade-up */
+      tl.fromTo(subRef.current,
+        { opacity: 0, y: 12 },
+        { opacity: 1, y: 0, ease: 'expo.out', duration: 0.10 },
+        0.44,
+      )
+
+      /* Phase 55–75% — blur vidéo + overlay → prépare l'overlap */
+      tl.fromTo(blurRef.current,
+        { backdropFilter: 'blur(0px)', WebkitBackdropFilter: 'blur(0px)' },
+        { backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', ease: 'none', duration: 0.20 },
+        0.55,
+      )
+      tl.fromTo(overlayRef.current,
+        { opacity: 0 },
+        { opacity: 0.50, ease: 'none', duration: 0.20 },
         0.55,
       )
 
-      /* Phase 62–85% — titre clip reveal ligne par ligne */
-      tl.fromTo(split.lines,
-        { yPercent: 110 },
-        { yPercent: 0, stagger: 0.08, ease: 'expo.out', duration: 0.16 },
-        0.62,
-      )
-
-      /* Phase 78–92% — sous-texte fade-up */
-      tl.fromTo(subRef.current,
-        { opacity: 0, y: 14 },
-        { opacity: 1, y: 0, ease: 'expo.out', duration: 0.13 },
-        0.78,
-      )
+      /* Phase 75–100% — section chips remonte par-dessus */
+      if (nextRef.current) {
+        tl.fromTo(nextRef.current,
+          { yPercent: 100 },
+          { yPercent: 0, ease: 'expo.inOut', duration: 0.25 },
+          0.75,
+        )
+      }
 
     }, wrap)
 
     return () => { ctx.revert(); split.revert() }
-  }, [videoSrc])
+  }, [])
 
   return (
     <div
@@ -106,7 +122,7 @@ export function AssetHeroBannerVideo({ videoSrc }: { videoSrc?: string }) {
       className="relative overflow-hidden"
       style={{ height: '100vh' }}
     >
-      {/* ── Couche 1 : image fond (toujours présente, sert de poster) ── */}
+      {/* ── Couche 1 : image poster (Ken Burns) ── */}
       <div ref={photoRef} className="absolute inset-0 will-change-transform">
         <Image
           src="/images/assets-intro.jpg"
@@ -119,31 +135,40 @@ export function AssetHeroBannerVideo({ videoSrc }: { videoSrc?: string }) {
         />
       </div>
 
-      {/* ── Couche 2 : vidéo cross-fade (Standard 8 — optionnelle) ── */}
-      {videoSrc && (
-        <video
-          ref={videoRef}
-          className="absolute inset-0 w-full h-full object-cover object-center will-change-[opacity]"
-          style={{ opacity: 0 }}
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/images/assets-intro.jpg"
-        >
-          <source src={videoSrc.replace(/\.mp4$/, '.webm')} type="video/webm" />
-          <source src={videoSrc} type="video/mp4" />
-        </video>
-      )}
-
-      {/* ── Couche 3 : gradient de lisibilité texte ── */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/25 to-black/80 pointer-events-none" />
-
-      {/* ── Couche 4 : texte superposé ── */}
-      <div
-        ref={textRef}
-        className="absolute inset-0 flex flex-col justify-end pointer-events-none"
+      {/* ── Couche 2 : vidéo assets-animation2 — fondue immersive ── */}
+      <video
+        ref={videoRef}
+        className="absolute inset-0 w-full h-full object-cover object-center will-change-[opacity]"
+        style={{ opacity: 0 }}
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/images/assets-intro.jpg"
+        preload="auto"
       >
+        <source src="/videos/assets-animation2.mp4" type="video/mp4" />
+      </video>
+
+      {/* ── Couche 3 : blur progressif (scrub GSAP) ── */}
+      <div
+        ref={blurRef}
+        className="absolute inset-0 pointer-events-none"
+        style={{ backdropFilter: 'blur(0px)', WebkitBackdropFilter: 'blur(0px)' }}
+      />
+
+      {/* ── Couche 4 : overlay sombre progressif ── */}
+      <div
+        ref={overlayRef}
+        className="absolute inset-0 bg-ag-navy pointer-events-none"
+        style={{ opacity: 0 }}
+      />
+
+      {/* ── Couche 5 : gradient texte permanent ── */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/75 pointer-events-none" />
+
+      {/* ── Couche 6 : texte superposé ── */}
+      <div className="absolute inset-0 flex flex-col justify-end pointer-events-none z-10">
         <div className="max-w-7xl mx-auto w-full px-6 md:px-12 pb-14">
           <p
             ref={labelRef}
@@ -153,7 +178,6 @@ export function AssetHeroBannerVideo({ videoSrc }: { videoSrc?: string }) {
             <span className="w-8 h-px bg-white/40 inline-block" />
             Aegryn — Notre écosystème
           </p>
-
           <h2
             ref={headingRef}
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.9] mb-6 overflow-hidden"
@@ -161,7 +185,6 @@ export function AssetHeroBannerVideo({ videoSrc }: { videoSrc?: string }) {
           >
             Ce que nous<br />construisons.
           </h2>
-
           <p
             ref={subRef}
             className="font-sans font-normal text-[14px] text-white/75 leading-relaxed max-w-sm"
@@ -171,6 +194,17 @@ export function AssetHeroBannerVideo({ videoSrc }: { videoSrc?: string }) {
           </p>
         </div>
       </div>
+
+      {/* ── Couche 7 : section overlap (chips actifs) — slide depuis le bas ── */}
+      {children && (
+        <div
+          ref={nextRef}
+          className="absolute inset-x-0 bottom-0 top-0 z-20 overflow-auto"
+          style={{ transform: 'translateY(100%)' }}
+        >
+          {children}
+        </div>
+      )}
     </div>
   )
 }

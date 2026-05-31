@@ -42,11 +42,10 @@ export default async function WhatWeBuildPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Bannière image + vidéo cross-fade avec texte animé — Standard 8 */}
-      <AssetHeroBannerVideo videoSrc="/videos/assets-reel.mp4" />
-
-      {/* Grille actifs — drawer au clic */}
-      <AssetGridWithDrawer />
+      {/* Bannière vidéo immersive + overlap chips actifs — Standard 8 */}
+      <AssetHeroBannerVideo>
+        <AssetGridWithDrawer />
+      </AssetHeroBannerVideo>
 
       {/* Advisory CTA */}
       <section className="border-t border-ag-border bg-ag-navy py-24 px-6 md:px-12">

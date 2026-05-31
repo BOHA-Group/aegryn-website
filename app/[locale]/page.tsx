@@ -1,8 +1,9 @@
 import { getTranslations }  from 'next-intl/server'
 import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
 import { HeroMountain }     from '@/components/sections/HeroMountain'
-import { ManifestoSection } from '@/components/sections/ManifestoSection'
-import { AssetGrid }        from '@/components/sections/AssetGrid'
+import { ManifestoSection }  from '@/components/sections/ManifestoSection'
+import { AssetGrid }         from '@/components/sections/AssetGrid'
+import { HomeVideoSection }  from '@/components/sections/HomeVideoSection'
 import { WhyUseApps }       from '@/components/sections/WhyUseApps'
 import { StatementStrip }   from '@/components/sections/StatementStrip'
 import { StatsRow }         from '@/components/sections/StatsRow'
@@ -32,7 +33,9 @@ export default async function HomePage({ params }: Props) {
       />
       <HeroMountain />
       <ManifestoSection />
-      <AssetGrid />
+      <HomeVideoSection>
+        <AssetGrid />
+      </HomeVideoSection>
       <WhyUseApps />
       <StatementStrip
         label="Aegryn Advisory"
