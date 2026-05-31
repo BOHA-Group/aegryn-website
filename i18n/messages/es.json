@@ -289,8 +289,7 @@
         { "title": "Inteligencia Artificial & Automatización", "desc": "Agentes de IA, automatización de procesos, productividad, integración de IA en productos y organizaciones." },
         { "title": "Derecho Digital & Propiedad Intelectual", "desc": "Términos de servicio, cumplimiento digital, protección IP, estructuración legal de productos digitales." },
         { "title": "Diseño & Experiencia de Usuario", "desc": "UX/UI, identidad de producto, recorridos de usuario." },
-        { "title": "Estrategia de Negocio", "desc": "Arquitectura empresarial, lógica de ingresos, eficiencia de capital, modelos escalables, posicionamiento de mercado." },
-        { "title": "Marketing & Redes Sociales", "desc": "Posicionamiento, estrategia de contenidos, crecimiento orgánico e inorgánico." }
+        { "title": "Estrategia de Negocio", "desc": "Arquitectura empresarial, lógica de ingresos, eficiencia de capital, modelos escalables, posicionamiento de mercado." }
       ]
     },
     "approach": {

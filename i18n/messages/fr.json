@@ -388,8 +388,7 @@
         { "title": "Intelligence Artificielle & Automatisation", "desc": "Agents IA, automatisation des processus, productivité, intégration de l'IA dans les produits et organisations." },
         { "title": "Droit Numérique & Propriété Intellectuelle", "desc": "CGU, conformité numérique, protection IP, structuration juridique des produits numériques." },
         { "title": "Design & Expérience Utilisateur", "desc": "UX/UI, identité produit, parcours utilisateurs." },
-        { "title": "Stratégie Business", "desc": "Architecture métier, logique revenus, efficience capital, modèles scalables, positionnement marché." },
-        { "title": "Marketing & Réseaux Sociaux", "desc": "Positionnement, stratégie contenu, croissance organique et inorganique." }
+        { "title": "Stratégie Business", "desc": "Architecture métier, logique revenus, efficience capital, modèles scalables, positionnement marché." }
       ]
     },
     "approach": {

@@ -101,7 +101,6 @@ export function AssetGrid() {
             const isKryv       = asset.id === KRYV_ID
             const isNotStarted = NOT_STARTED_IDS.includes(asset.id)
             const isLive       = asset.status === 'live'
-            const isFeatured   = asset.featured && !isKryv && !isNotStarted
             const isDisabled   = isKryv || isNotStarted
             const href         = '/what-we-build'
 
@@ -117,27 +116,25 @@ export function AssetGrid() {
             const chip = (
               <div
                 className={`asset-row-${i} group relative flex flex-col items-center justify-between
-                  text-center p-8 transition-all duration-300
+                  text-center p-8 transition-all duration-500
                   ${borderRight} ${borderRightSm} ${borderBottom}
-                  ${isFeatured
-                    ? 'bg-ag-navy cursor-pointer'
-                    : isDisabled
-                      ? 'bg-ag-white cursor-default'
-                      : 'bg-ag-white cursor-pointer hover:bg-ag-off-white'
+                  ${isDisabled
+                    ? 'bg-ag-white cursor-default'
+                    : 'bg-ag-white cursor-pointer hover:bg-ag-navy'
                   }`}
                 style={{ minHeight: '200px' }}
               >
                 {/* Top — badge catégorie */}
                 <div className="w-full flex items-center justify-between mb-6">
-                  <span className={`font-sans font-semibold text-[10px] tracking-[0.18em] uppercase ${
-                    isFeatured ? 'text-white/50' : isDisabled ? 'text-ag-gray-light/30' : 'text-ag-gray-light'
+                  <span className={`font-sans font-semibold text-[10px] tracking-[0.18em] uppercase transition-colors duration-500 ${
+                    isDisabled ? 'text-ag-gray-light/40' : 'text-ag-gray-light group-hover:text-white/50'
                   }`}>
                     {asset.badge}
                   </span>
 
                   {/* Status */}
                   {isKryv && (
-                    <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-ag-gray-light/50">
+                    <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-ag-gray-light/50 group-hover:text-white/40 transition-colors duration-500">
                       <Lock size={7} /> Restricted
                     </span>
                   )}
@@ -147,7 +144,7 @@ export function AssetGrid() {
                     </span>
                   )}
                   {!isKryv && !isNotStarted && isLive && (
-                    <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-emerald-500">
+                    <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-emerald-500 group-hover:text-emerald-300 transition-colors duration-500">
                       <span className="relative flex w-1.5 h-1.5">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50" />
                         <span className="relative inline-flex rounded-full w-1.5 h-1.5 bg-emerald-400" />
@@ -156,7 +153,7 @@ export function AssetGrid() {
                     </span>
                   )}
                   {!isKryv && !isNotStarted && !isLive && (
-                    <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-orange-400">
+                    <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-orange-400 group-hover:text-orange-300 transition-colors duration-500">
                       <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
                       {tStatus('building')}
                     </span>
@@ -165,12 +162,10 @@ export function AssetGrid() {
 
                 {/* Centre — nom */}
                 <h3
-                  className={`font-sans font-bold tracking-[-0.03em] leading-[1.0] mb-3 transition-colors duration-300 ${
-                    isFeatured
-                      ? 'text-white'
-                      : isDisabled
-                        ? 'text-ag-gray-light/50'
-                        : 'text-ag-black group-hover:text-ag-navy'
+                  className={`font-sans font-bold tracking-[-0.03em] leading-[1.0] mb-3 transition-colors duration-500 ${
+                    isDisabled
+                      ? 'text-ag-gray-light/50'
+                      : 'text-ag-black group-hover:text-white'
                   }`}
                   style={{ fontSize: 'clamp(22px,2.2vw,32px)' }}
                 >
@@ -178,16 +173,16 @@ export function AssetGrid() {
                 </h3>
 
                 {/* Tagline */}
-                <p className={`font-sans font-normal text-[12px] leading-relaxed ${
-                  isFeatured ? 'text-white/70' : isDisabled ? 'text-ag-gray-light/30' : 'text-ag-gray'
+                <p className={`font-sans font-normal text-[12px] leading-relaxed transition-colors duration-500 ${
+                  isDisabled ? 'text-ag-gray-light/30' : 'text-ag-gray group-hover:text-white/70'
                 }`}>
                   {asset.tagline}
                 </p>
 
-                {/* Flèche featured */}
-                {isFeatured && (
-                  <div className="mt-6">
-                    <ArrowUpRight size={16} className="text-white/70" />
+                {/* Flèche au hover */}
+                {!isDisabled && (
+                  <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <ArrowUpRight size={14} className="text-white/60" />
                   </div>
                 )}
               </div>

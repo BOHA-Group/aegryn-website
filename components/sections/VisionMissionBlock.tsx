@@ -35,6 +35,22 @@ export function VisionMissionBlock({
     if (!wrap || !logo || !mission) return
 
     const ctx = gsap.context(() => {
+
+      /* ── Animation 1 : slide-up + zoom-in logo au scroll-in ── */
+      gsap.fromTo(logo,
+        { yPercent: 35, scale: 0.72, opacity: 0 },
+        {
+          yPercent: 0, scale: 1, opacity: 0.65,
+          ease: 'expo.out', duration: 1.1,
+          scrollTrigger: {
+            trigger: wrap,
+            start:   'top 85%',
+            once:    true,
+          },
+        },
+      )
+
+      /* ── Animation 2 : pin + zoom+blur+fondu au scroll ── */
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger:       wrap,
@@ -46,10 +62,10 @@ export function VisionMissionBlock({
         },
       })
 
-      /* Phase 1 (0–30%) : logo visible net, pas de flou */
+      /* Phase 1 (0–30%) : zoom progressif, net */
       tl.fromTo(logo,
-        { scale: 1,   filter: 'blur(0px)',  opacity: 0.6 },
-        { scale: 2.5, filter: 'blur(0px)',  opacity: 0.6, ease: 'none', duration: 0.30 },
+        { scale: 1,   filter: 'blur(0px)',  opacity: 0.65 },
+        { scale: 2.5, filter: 'blur(0px)',  opacity: 0.65, ease: 'none', duration: 0.30 },
         0,
       )
 
@@ -79,17 +95,17 @@ export function VisionMissionBlock({
   return (
     <div ref={wrapRef} className="relative overflow-hidden" style={{ minHeight: '100vh' }}>
 
-      {/* ── Logo fond — net au chargement, blur+zoom au scroll ── */}
+      {/* ── Logo — positionné à droite du bloc Vision, animé slide-up puis zoom+blur ── */}
       <div
-        className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none"
+        className="absolute right-[6%] top-[12%] z-0 pointer-events-none select-none hidden md:block"
         aria-hidden="true"
       >
         <div
           ref={logoRef}
           className="will-change-transform"
-          style={{ transformOrigin: 'center center', opacity: 0.6, filter: 'blur(0px)' }}
+          style={{ transformOrigin: 'center center', opacity: 0, filter: 'blur(0px)' }}
         >
-          <AegrynLogo size={220} variant="mark" />
+          <AegrynLogo size={260} variant="mark" />
         </div>
       </div>
 

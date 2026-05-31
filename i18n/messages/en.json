@@ -352,8 +352,7 @@
         { "title": "Artificial Intelligence & Automation", "desc": "AI agents, process automation, productivity, integration of AI into products and organisations." },
         { "title": "Digital Law & Intellectual Property", "desc": "Terms of Service, digital compliance, IP protection, legal structuring of digital products." },
         { "title": "Design & User Experience", "desc": "UX/UI, product identity, user journeys." },
-        { "title": "Business Strategy", "desc": "Business architecture, revenue logic, capital efficiency, scalable models, market positioning." },
-        { "title": "Marketing & Social Networks", "desc": "Positioning, content strategy, organic and inorganic growth." }
+        { "title": "Business Strategy", "desc": "Business architecture, revenue logic, capital efficiency, scalable models, market positioning." }
       ]
     },
     "approach": {

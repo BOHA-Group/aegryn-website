@@ -289,8 +289,7 @@
         { "title": "Künstliche Intelligenz & Automatisierung", "desc": "KI-Agenten, Prozessautomatisierung, Produktivität, KI-Integration in Produkte und Organisationen." },
         { "title": "Digitales Recht & Geistiges Eigentum", "desc": "AGB, digitale Compliance, IP-Schutz, rechtliche Strukturierung digitaler Produkte." },
         { "title": "Design & Nutzererfahrung", "desc": "UX/UI, Produktidentität, Nutzerreisen." },
-        { "title": "Business-Strategie", "desc": "Unternehmensarchitektur, Ertragslogik, Kapitaleffizienz, skalierbare Modelle, Marktpositionierung." },
-        { "title": "Marketing & Soziale Netzwerke", "desc": "Positionierung, Content-Strategie, organisches und anorganisches Wachstum." }
+        { "title": "Business-Strategie", "desc": "Unternehmensarchitektur, Ertragslogik, Kapitaleffizienz, skalierbare Modelle, Marktpositionierung." }
       ]
     },
     "approach": {

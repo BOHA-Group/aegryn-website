@@ -289,8 +289,7 @@
         { "title": "Kunstmatige Intelligentie & Automatisering", "desc": "AI-agenten, procesautomatisering, productiviteit, integratie van AI in producten en organisaties." },
         { "title": "Digitaal Recht & Intellectueel Eigendom", "desc": "Servicevoorwaarden, digitale compliance, IP-bescherming, juridische structurering van digitale producten." },
         { "title": "Design & Gebruikerservaring", "desc": "UX/UI, productidentiteit, gebruikersreizen." },
-        { "title": "Bedrijfsstrategie", "desc": "Bedrijfsarchitectuur, inkomstenlogica, kapitaalefficiëntie, schaalbare modellen, marktpositionering." },
-        { "title": "Marketing & Sociale Netwerken", "desc": "Positionering, contentstrategie, organische en anorganische groei." }
+        { "title": "Bedrijfsstrategie", "desc": "Bedrijfsarchitectuur, inkomstenlogica, kapitaalefficiëntie, schaalbare modellen, marktpositionering." }
       ]
     },
     "approach": {

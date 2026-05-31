@@ -248,56 +248,64 @@ export function AssetGridWithDrawer() {
     <>
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          {(Object.keys(ASSET_CATEGORIES) as Array<keyof typeof ASSET_CATEGORIES>).map((cat) => {
-            const catAssets = AEGRYN_ASSETS.filter((a) => a.category === cat)
-            if (!catAssets.length) return null
 
-            return (
-              <div key={cat} className="mb-16 last:mb-0">
-                <div className="flex items-center justify-between border-y border-ag-border py-4">
-                  <span className="font-sans font-bold text-[11px] tracking-[0.18em] uppercase text-ag-black">
-                    {ASSET_CATEGORIES[cat].label}
-                  </span>
-                  <span className="font-sans font-semibold text-[11px] text-ag-gray-light">
-                    {String(catAssets.length).padStart(2, '0')}
-                  </span>
-                </div>
+          {/* Header row avec compteur */}
+          <div className="flex items-center justify-between border-y border-ag-border py-4 mb-0">
+            <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+              / Tous les actifs
+            </span>
+            <span className="font-sans font-semibold text-[10px] text-ag-gray-light">
+              {String(AEGRYN_ASSETS.length).padStart(2, '0')}
+            </span>
+          </div>
 
-                <div className={`grid border-b border-ag-border ${
-                  catAssets.length <= 2
-                    ? 'grid-cols-1 md:grid-cols-2'
-                    : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-                }`}>
-                  {catAssets.map((asset) => (
-                    <button
-                      key={asset.id}
-                      onClick={() => setOpenId(asset.id)}
-                      className="group text-left flex flex-col border-r border-ag-border p-10 min-h-[260px] bg-ag-white hover:bg-ag-off-white transition-colors duration-300 last:border-r-0 will-change-transform"
+          {/* Grille 3 colonnes flat — toutes catégories mélangées */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-ag-border">
+            {AEGRYN_ASSETS.map((asset, i) => {
+              const isRestricted = asset.id === 'kryv'
+              const colBorder = i % 3 !== 2 ? 'lg:border-r border-ag-border' : ''
+              const colBorderSm = i % 2 !== 1 ? 'md:border-r border-ag-border' : ''
+              const rowBorder = 'border-b border-ag-border'
+
+              return (
+                <button
+                  key={asset.id}
+                  onClick={() => setOpenId(asset.id)}
+                  className={`group text-left flex flex-col p-10 min-h-[240px] transition-all duration-500
+                    bg-ag-white hover:bg-ag-navy
+                    ${colBorder} ${colBorderSm} ${rowBorder}`}
+                >
+                  {/* Top — badge + catégorie + flèche */}
+                  <div className="flex justify-between items-start w-full mb-auto">
+                    <div className="space-y-2">
+                      <span className="font-sans font-semibold text-[10px] tracking-[0.16em] uppercase text-ag-gray-light group-hover:text-white/50 transition-colors duration-500">
+                        {ASSET_CATEGORIES[asset.category].label}
+                      </span>
+                      <br />
+                      <BadgePill badge={asset.badge} />
+                    </div>
+                    <span className="w-8 h-8 border border-ag-border flex items-center justify-center text-ag-gray group-hover:border-white/40 group-hover:text-white transition-all duration-500 shrink-0">
+                      <ArrowUpRight size={13} />
+                    </span>
+                  </div>
+
+                  {/* Bottom — nom + tagline + status */}
+                  <div className="mt-12">
+                    <h3
+                      className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-none mb-2 group-hover:text-white transition-colors duration-500"
+                      style={{ fontSize: 'clamp(22px,2vw,28px)' }}
                     >
-                      <div className="flex justify-between items-start mb-auto">
-                        <BadgePill badge={asset.badge} />
-                        <span className="w-8 h-8 border border-ag-border flex items-center justify-center text-ag-gray group-hover:border-ag-black group-hover:bg-ag-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
-                          <ArrowUpRight size={13} />
-                        </span>
-                      </div>
-                      <div className="mt-16">
-                        <h3
-                          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-none mb-2"
-                          style={{ fontSize: 'clamp(22px,2vw,28px)' }}
-                        >
-                          {asset.name}
-                        </h3>
-                        <p className="font-sans font-normal text-[12px] text-ag-gray leading-relaxed mb-5">
-                          {asset.tagline}
-                        </p>
-                        <StatusIndicator status={asset.status} isRestricted={asset.id === 'kryv'} />
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )
-          })}
+                      {asset.name}
+                    </h3>
+                    <p className="font-sans font-normal text-[12px] text-ag-gray leading-relaxed mb-4 group-hover:text-white/65 transition-colors duration-500">
+                      {asset.tagline}
+                    </p>
+                    <StatusIndicator status={asset.status} isRestricted={isRestricted} />
+                  </div>
+                </button>
+              )
+            })}
+          </div>
         </div>
       </section>
 

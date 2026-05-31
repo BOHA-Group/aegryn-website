@@ -38,7 +38,7 @@ export default function AboutPage() {
             {t('hero.label')}
           </p>
           <h1
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.93] max-w-3xl mb-8"
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8"
             style={{ fontSize: 'clamp(52px,6.5vw,88px)' }}
           >
             {t('hero.title')}
@@ -104,7 +104,7 @@ export default function AboutPage() {
                     {String(i + 1).padStart(2, '0')}
                   </p>
                   <h2
-                    className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-none mb-4"
+                    className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2] mb-5"
                     style={{ fontSize: 'clamp(20px,1.8vw,26px)' }}
                   >
                     {t(`mission.${key}.title`)}
