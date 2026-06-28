@@ -34,7 +34,7 @@ export default async function GrowWithUsPage({ params }: Props) {
             {t('hero.label')}
           </p>
           <h1
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.95] max-w-3xl"
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl"
             style={{ fontSize: 'clamp(48px,6vw,88px)' }}
           >
             {t('hero.title')}
@@ -121,7 +121,7 @@ export default async function GrowWithUsPage({ params }: Props) {
               {tFooter('groupLabel')}
             </p>
             <h2
-              className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
+              className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl"
               style={{ fontSize: 'clamp(26px,3vw,46px)' }}
             >
               {t('cta.title')}

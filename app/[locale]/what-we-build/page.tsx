@@ -31,7 +31,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
             {t('hero.label')}
           </p>
           <h1
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.95] max-w-2xl"
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-2xl"
             style={{ fontSize: 'clamp(48px,6vw,80px)' }}
           >
             {t('hero.title')}

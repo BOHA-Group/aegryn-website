@@ -137,7 +137,7 @@ export default function AboutPage() {
               {t('swiss.groupLabel')}
             </p>
             <h2
-              className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
+              className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl"
               style={{ fontSize: 'clamp(26px,3vw,48px)' }}
             >
               {t('swiss.title')}

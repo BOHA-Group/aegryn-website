@@ -187,7 +187,7 @@ export default async function AdvisoryPage({ params }: Props) {
               / {t('approach.label')}
             </p>
             <h2
-              className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
+              className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl"
               style={{ fontSize: 'clamp(24px,3vw,44px)' }}
             >
               {t('approach.title')}

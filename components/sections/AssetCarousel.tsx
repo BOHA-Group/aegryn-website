@@ -77,7 +77,7 @@ export function AssetCarousel() {
             Notre écosystème
           </p>
           <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[0.95]"
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
             style={{ fontSize: 'clamp(32px,4vw,56px)' }}
           >
             Ce que nous construisons.
@@ -201,7 +201,7 @@ export function AssetCarousel() {
             Aegryn Group
           </p>
           <p
-            className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.95] text-center mb-8"
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] text-center mb-8"
             style={{ fontSize: 'clamp(22px,2vw,30px)' }}
           >
             All our assets.<br />Built to last.

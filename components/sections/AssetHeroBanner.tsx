@@ -95,7 +95,7 @@ export function AssetHeroBanner() {
 
           <h2
             ref={headingRef}
-            className="font-sans font-bold text-white tracking-[-0.03em] leading-[0.9] mb-6"
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] mb-6"
             style={{ fontSize: 'clamp(40px,5.5vw,80px)' }}
           >
             Ce que nous<br />construisons.
