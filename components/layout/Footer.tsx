@@ -72,8 +72,7 @@ const socialLinks = [
 ]
 
 const legal = [
-  { key: 'privacy',     href: '/privacy',                       external: false },
-  { key: 'neediuLegal', href: '/data-protection-notice-neediu', external: false },
+  { key: 'privacy', href: '/privacy', external: false },
 ]
 
 const footerNavLinks = [
@@ -182,7 +181,7 @@ export default function Footer() {
                 {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 className="font-sans font-semibold text-[10px] text-white/45 hover:text-white transition-colors"
               >
-                {t(key as 'privacy' | 'neediuLegal')}
+                {t(key as 'privacy')}
               </Link>
             ))}
           </div>

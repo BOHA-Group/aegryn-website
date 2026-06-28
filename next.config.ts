@@ -29,7 +29,7 @@ const securityHeaders = [
   { key: 'Permissions-Policy',            value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
   { key: 'Content-Security-Policy',       value: CSP },
   { key: 'X-Robots-Tag',                  value: 'index, follow, max-image-preview:large, max-snippet:-1' },
-  { key: 'Cross-Origin-Opener-Policy',    value: 'same-origin' },
+  { key: 'Cross-Origin-Opener-Policy',    value: 'same-origin-allow-popups' },
   { key: 'Cross-Origin-Resource-Policy',  value: 'same-origin' },
   { key: 'Cross-Origin-Embedder-Policy',  value: 'unsafe-none' },
 ]
