@@ -1278,5 +1278,56 @@
         "category": "Guía adquirente"
       }
     ]
+  },
+  "alliances": {
+    "meta": {
+      "title": "Alianzas — AEGRYN",
+      "desc": "Socios de certificación, distribución y deal flow. AEGRYN selecciona sus Alianzas con el mismo rigor que sus activos."
+    },
+    "hero": {
+      "label": "AEGRYN Alianzas",
+      "title": "Los socios que hacen\nel grade irrefutable.",
+      "desc": "AEGRYN no certifica solo. Cada informe de grade implica socios externos co-firmantes. Cada deal implica socios institucionales. Esa estructura es lo que nos hace creíbles."
+    },
+    "types": {
+      "certification": {
+        "label": "Certificación",
+        "title": "Co-firmantes del grade",
+        "desc": "Despachos jurídicos tech, auditores, socios de ciberseguridad. Co-firmáis los informes de grade AEGRYN y comprometéis vuestra responsabilidad profesional.",
+        "profiles": "Despachos IP & tech · Auditores · Socios de ciberseguridad",
+        "cta": "Convertirse en socio de certificación"
+      },
+      "distribution": {
+        "label": "Distribución",
+        "title": "Acceso al deal flow",
+        "desc": "Family offices, banca privada, fondos. Sus clientes acceden con prioridad a activos Grade A/B antes de cualquier listing. Comisión de distribución en cada membresía firmada.",
+        "profiles": "Banca privada suiza · Family offices · Gestores de patrimonio",
+        "cta": "Explorar la asociación de distribución"
+      },
+      "dealflow": {
+        "label": "Deal Flow",
+        "title": "Sourcing de deals",
+        "desc": "Fondos VC/PE, boutiques M&A, aceleradoras tech. Referenciad activos a ceder o adquirentes activos. Comisión de aportación en cada deal cerrado.",
+        "profiles": "Fondos micro-PE · Boutiques M&A · Aceleradoras tech · FONGIT",
+        "cta": "Referenciar un activo o adquirente"
+      }
+    },
+    "form": {
+      "title": "Convertirse en socio Alliance.",
+      "structure": "Organización",
+      "type": "Tipo de alianza",
+      "typePlaceholder": "Elegir un tipo",
+      "typeOptions": {
+        "certification": "Certificación (co-firma grade)",
+        "distribution": "Distribución (membresía adquirentes)",
+        "dealflow": "Deal flow (aportación de negocios)",
+        "other": "Otro"
+      },
+      "country": "País",
+      "description": "Descripción de la oportunidad",
+      "email": "Email profesional",
+      "submit": "Enviar candidatura",
+      "note": "Respuesta en 7 días hábiles. Entrevista de cualificación requerida."
+    }
   }
 }

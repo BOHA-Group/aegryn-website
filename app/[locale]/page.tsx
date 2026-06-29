@@ -1,16 +1,19 @@
 import { getTranslations }  from 'next-intl/server'
 import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
-import { HeroMountain }     from '@/components/sections/HeroMountain'
-import { ManifestoSection }    from '@/components/sections/ManifestoSection'
-import { AssetGrid }           from '@/components/sections/AssetGrid'
+import { HeroMountain }      from '@/components/sections/HeroMountain'
+import { PillarsSection }    from '@/components/sections/PillarsSection'
+import { ManifestoSection }  from '@/components/sections/ManifestoSection'
+import { GradeStrip }        from '@/components/sections/GradeStrip'
+import { GradeShowcase }     from '@/components/sections/GradeShowcase'
 import { MissionVideoSection } from '@/components/sections/MissionVideoSection'
-import { WhyUseApps }       from '@/components/sections/WhyUseApps'
-import { StatementStrip }   from '@/components/sections/StatementStrip'
-import { StatsRow }         from '@/components/sections/StatsRow'
-import { GradeStrip }       from '@/components/sections/GradeStrip'
-import { AuctionNarrative } from '@/components/sections/AuctionNarrative'
-import { AcqSupportStrip }  from '@/components/sections/AcqSupportStrip'
-import { DiscoverStrip }    from '@/components/sections/DiscoverStrip'
+import { AssetGrid }         from '@/components/sections/AssetGrid'
+import { AuctionNarrative }  from '@/components/sections/AuctionNarrative'
+import { MarketStatStrip }   from '@/components/sections/MarketStatStrip'
+import { WhyUseApps }        from '@/components/sections/WhyUseApps'
+import { AcqSupportStrip }   from '@/components/sections/AcqSupportStrip'
+import { StatementStrip }    from '@/components/sections/StatementStrip'
+import { DiscoverStrip }     from '@/components/sections/DiscoverStrip'
+import { StatsRow }          from '@/components/sections/StatsRow'
 import type { Metadata }    from 'next'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -36,11 +39,14 @@ export default async function HomePage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynOrganizationSchema) }}
       />
       <HeroMountain />
+      <PillarsSection />
       <ManifestoSection />
       <GradeStrip />
+      <GradeShowcase />
       <MissionVideoSection />
       <AssetGrid />
       <AuctionNarrative />
+      <MarketStatStrip />
       <WhyUseApps />
       <AcqSupportStrip />
       <StatementStrip

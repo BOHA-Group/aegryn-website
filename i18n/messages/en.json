@@ -1264,5 +1264,56 @@
     "article3Title": "How PE buyers evaluate a SaaS in 2026",
     "article3Cat": "Buyer guide",
     "cta": "View all insights"
+  },
+  "alliances": {
+    "meta": {
+      "title": "Alliances — AEGRYN",
+      "desc": "Certification, distribution and deal flow partners. AEGRYN selects its Alliances with the same rigour as its assets."
+    },
+    "hero": {
+      "label": "AEGRYN Alliances",
+      "title": "The partners that make\nthe grade irrefutable.",
+      "desc": "AEGRYN does not certify alone. Every grade report involves external co-signing partners. Every deal involves institutional partners. That structure is what makes us credible."
+    },
+    "types": {
+      "certification": {
+        "label": "Certification",
+        "title": "Grade co-signers",
+        "desc": "Tech law firms, chartered accountants, cybersecurity partners. You co-sign AEGRYN grade reports and commit your professional liability.",
+        "profiles": "IP & tech law firms · Chartered accountants · Cybersecurity partners",
+        "cta": "Become a certification partner"
+      },
+      "distribution": {
+        "label": "Distribution",
+        "title": "Deal flow access",
+        "desc": "Family offices, private banks, funds. Your clients get priority access to Grade A/B assets before any listing. Distribution commission on each signed membership.",
+        "profiles": "Swiss private banks · Family offices · Wealth managers",
+        "cta": "Explore distribution partnership"
+      },
+      "dealflow": {
+        "label": "Deal Flow",
+        "title": "Deal sourcing",
+        "desc": "VC/PE funds, M&A boutiques, tech accelerators. Source assets for sale or active acquirers. Sourcing commission on each closed deal.",
+        "profiles": "Micro-PE funds · Boutique M&A firms · Tech accelerators · FONGIT",
+        "cta": "Source an asset or acquirer"
+      }
+    },
+    "form": {
+      "title": "Become an Alliance partner.",
+      "structure": "Organisation",
+      "type": "Alliance type",
+      "typePlaceholder": "Choose a type",
+      "typeOptions": {
+        "certification": "Certification (grade co-signing)",
+        "distribution": "Distribution (acquirer membership)",
+        "dealflow": "Deal flow (deal sourcing)",
+        "other": "Other"
+      },
+      "country": "Country",
+      "description": "Opportunity description",
+      "email": "Professional email",
+      "submit": "Submit application",
+      "note": "Response within 7 business days. Qualification interview required."
+    }
   }
 }

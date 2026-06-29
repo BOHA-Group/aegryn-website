@@ -1264,5 +1264,56 @@
     "article3Title": "Comment les acquéreurs PE évaluent un SaaS en 2026",
     "article3Cat": "Guide acquéreur",
     "cta": "Voir tous les insights"
+  },
+  "alliances": {
+    "meta": {
+      "title": "Alliances — AEGRYN",
+      "desc": "Partenaires de certification, de distribution et de deal flow. AEGRYN sélectionne ses Alliances avec la même rigueur que ses actifs."
+    },
+    "hero": {
+      "label": "AEGRYN Alliances",
+      "title": "Les partenaires qui rendent\nle grade irréfutable.",
+      "desc": "AEGRYN ne certifie pas seul. Chaque rapport de grade engage des partenaires externes co-signataires. Chaque deal implique des partenaires institutionnels. C'est la structure qui nous rend crédibles."
+    },
+    "types": {
+      "certification": {
+        "label": "Certification",
+        "title": "Co-signataires du grade",
+        "desc": "Cabinets juridiques tech, experts-comptables, partenaires cybersécurité. Vous co-signez les rapports de grade AEGRYN et engagez votre responsabilité professionnelle.",
+        "profiles": "Cabinets IP & tech · Experts-comptables · Partenaires cybersécurité",
+        "cta": "Devenir partenaire certification"
+      },
+      "distribution": {
+        "label": "Distribution",
+        "title": "Accès au deal flow",
+        "desc": "Family offices, banques privées, fonds. Vos clients accèdent en priorité aux actifs Grade A/B avant tout listing. Commission de distribution sur chaque membership signé.",
+        "profiles": "Banques privées suisses · Family offices · Gérants de fortune",
+        "cta": "Explorer le partenariat distribution"
+      },
+      "dealflow": {
+        "label": "Deal Flow",
+        "title": "Apporteurs d'affaires",
+        "desc": "Fonds VC/PE, cabinets M&A, accélérateurs tech. Référencez des actifs à céder ou des acquéreurs actifs. Commission d'apport sur chaque deal closé.",
+        "profiles": "Fonds micro-PE · Cabinets M&A boutique · Accélérateurs tech · FONGIT",
+        "cta": "Référencer un actif ou un acquéreur"
+      }
+    },
+    "form": {
+      "title": "Devenir partenaire Alliance.",
+      "structure": "Structure",
+      "type": "Type d'alliance",
+      "typePlaceholder": "Choisir un type",
+      "typeOptions": {
+        "certification": "Certification (co-signature grade)",
+        "distribution": "Distribution (membership acquéreurs)",
+        "dealflow": "Deal flow (apport d'affaires)",
+        "other": "Autre"
+      },
+      "country": "Pays",
+      "description": "Description de l'opportunité",
+      "email": "Email professionnel",
+      "submit": "Soumettre la candidature",
+      "note": "Réponse sous 7 jours ouvrés. Entretien de qualification requis."
+    }
   }
 }

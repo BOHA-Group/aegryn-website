@@ -1278,5 +1278,56 @@
         "category": "Gids koper"
       }
     ]
+  },
+  "alliances": {
+    "meta": {
+      "title": "Allianties — AEGRYN",
+      "desc": "Certificerings-, distributie- en deal flow-partners. AEGRYN selecteert zijn Allianties met dezelfde strengheid als zijn assets."
+    },
+    "hero": {
+      "label": "AEGRYN Allianties",
+      "title": "De partners die de grade\nonweerlegbaar maken.",
+      "desc": "AEGRYN certificeert niet alleen. Elk grade-rapport betrekt externe mede-ondertekende partners. Elke deal betrekt institutionele partners. Die structuur maakt ons geloofwaardig."
+    },
+    "types": {
+      "certification": {
+        "label": "Certificering",
+        "title": "Grade mede-ondertekenaars",
+        "desc": "Tech-advocatenkantoren, accountants, cybersecuritypartners. U mede-ondertekent AEGRYN grade-rapporten en engageert uw beroepsaansprakelijkheid.",
+        "profiles": "IP & tech-kantoren · Accountants · Cybersecuritypartners",
+        "cta": "Certificeringspartner worden"
+      },
+      "distribution": {
+        "label": "Distributie",
+        "title": "Toegang tot deal flow",
+        "desc": "Family offices, private banks, fondsen. Uw klanten krijgen prioritaire toegang tot Grade A/B assets voor elke listing. Distributiecommissie op elke ondertekende membership.",
+        "profiles": "Zwitserse private banks · Family offices · Vermogensbeheerders",
+        "cta": "Distributiepartnerschap verkennen"
+      },
+      "dealflow": {
+        "label": "Deal Flow",
+        "title": "Deal sourcing",
+        "desc": "VC/PE-fondsen, M&A-boutiques, tech-acceleratoren. Breng assets te koop of actieve kopers aan. Aanbrengscommissie op elke gesloten deal.",
+        "profiles": "Micro-PE-fondsen · M&A-boutiques · Tech-acceleratoren · FONGIT",
+        "cta": "Een asset of koper aanbrengen"
+      }
+    },
+    "form": {
+      "title": "Alliance-partner worden.",
+      "structure": "Organisatie",
+      "type": "Type alliantie",
+      "typePlaceholder": "Kies een type",
+      "typeOptions": {
+        "certification": "Certificering (grade mede-ondertekening)",
+        "distribution": "Distributie (koper-membership)",
+        "dealflow": "Deal flow (aanbrengen)",
+        "other": "Overig"
+      },
+      "country": "Land",
+      "description": "Beschrijving van de kans",
+      "email": "Professioneel e-mailadres",
+      "submit": "Sollicitatie indienen",
+      "note": "Antwoord binnen 7 werkdagen. Kwalificatiegesprek vereist."
+    }
   }
 }

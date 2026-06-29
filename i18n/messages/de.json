@@ -1278,5 +1278,56 @@
         "category": "Käufer-Guide"
       }
     ]
+  },
+  "alliances": {
+    "meta": {
+      "title": "Allianzen — AEGRYN",
+      "desc": "Zertifizierungs-, Distributions- und Deal-Flow-Partner. AEGRYN wählt seine Allianzen mit derselben Strenge aus wie seine Assets."
+    },
+    "hero": {
+      "label": "AEGRYN Allianzen",
+      "title": "Die Partner, die den\nGrade unwiderlegbar machen.",
+      "desc": "AEGRYN zertifiziert nicht allein. Jeder Grade-Bericht verpflichtet externe mitunterzeichnende Partner. Jeder Deal beinhaltet institutionelle Partner. Diese Struktur macht uns glaubwürdig."
+    },
+    "types": {
+      "certification": {
+        "label": "Zertifizierung",
+        "title": "Grade-Mitunterzeichner",
+        "desc": "Tech-Anwaltskanzleien, Wirtschaftsprüfer, Cybersicherheitspartner. Sie mitunterzeichnen AEGRYN-Grade-Berichte und verpflichten Ihre berufliche Haftung.",
+        "profiles": "IP & Tech-Kanzleien · Wirtschaftsprüfer · Cybersicherheitspartner",
+        "cta": "Zertifizierungspartner werden"
+      },
+      "distribution": {
+        "label": "Distribution",
+        "title": "Deal-Flow-Zugang",
+        "desc": "Family Offices, Privatbanken, Fonds. Ihre Kunden erhalten vorrangigen Zugang zu Grade-A/B-Assets vor jedem Listing. Distributionsprovision auf jede unterzeichnete Mitgliedschaft.",
+        "profiles": "Schweizer Privatbanken · Family Offices · Vermögensverwalter",
+        "cta": "Distributions-Partnerschaft erkunden"
+      },
+      "dealflow": {
+        "label": "Deal Flow",
+        "title": "Deal-Sourcing",
+        "desc": "VC/PE-Fonds, M&A-Boutiquen, Tech-Acceleratoren. Vermitteln Sie zu veräußernde Assets oder aktive Käufer. Vermittlungsprovision auf jeden abgeschlossenen Deal.",
+        "profiles": "Micro-PE-Fonds · M&A-Boutiquen · Tech-Acceleratoren · FONGIT",
+        "cta": "Ein Asset oder einen Käufer vermitteln"
+      }
+    },
+    "form": {
+      "title": "Alliance-Partner werden.",
+      "structure": "Organisation",
+      "type": "Allianztyp",
+      "typePlaceholder": "Typ auswählen",
+      "typeOptions": {
+        "certification": "Zertifizierung (Grade-Mitunterzeichnung)",
+        "distribution": "Distribution (Käufer-Mitgliedschaft)",
+        "dealflow": "Deal Flow (Deal-Vermittlung)",
+        "other": "Andere"
+      },
+      "country": "Land",
+      "description": "Beschreibung der Möglichkeit",
+      "email": "Professionelle E-Mail",
+      "submit": "Bewerbung einreichen",
+      "note": "Antwort innerhalb von 7 Werktagen. Qualifikationsgespräch erforderlich."
+    }
   }
 }

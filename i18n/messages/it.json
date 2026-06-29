@@ -1278,5 +1278,56 @@
         "category": "Guida acquirente"
       }
     ]
+  },
+  "alliances": {
+    "meta": {
+      "title": "Alleanze — AEGRYN",
+      "desc": "Partner di certificazione, distribuzione e deal flow. AEGRYN seleziona le sue Alleanze con lo stesso rigore dei suoi asset."
+    },
+    "hero": {
+      "label": "AEGRYN Alleanze",
+      "title": "I partner che rendono\nil grade irrefutabile.",
+      "desc": "AEGRYN non certifica da solo. Ogni rapporto di grade coinvolge partner esterni co-firmatari. Ogni deal coinvolge partner istituzionali. È questa struttura che ci rende credibili."
+    },
+    "types": {
+      "certification": {
+        "label": "Certificazione",
+        "title": "Co-firmatari del grade",
+        "desc": "Studi legali tech, revisori contabili, partner cybersecurity. Co-firmate i rapporti di grade AEGRYN e impegnate la vostra responsabilità professionale.",
+        "profiles": "Studi IP & tech · Revisori contabili · Partner cybersecurity",
+        "cta": "Diventare partner di certificazione"
+      },
+      "distribution": {
+        "label": "Distribuzione",
+        "title": "Accesso al deal flow",
+        "desc": "Family office, banche private, fondi. I vostri clienti accedono in priorità agli asset Grade A/B prima di qualsiasi listing. Commissione di distribuzione su ogni membership firmata.",
+        "profiles": "Banche private svizzere · Family office · Gestori patrimoniali",
+        "cta": "Esplorare la partnership di distribuzione"
+      },
+      "dealflow": {
+        "label": "Deal Flow",
+        "title": "Sourcing di deal",
+        "desc": "Fondi VC/PE, boutique M&A, acceleratori tech. Riferite asset da cedere o acquirenti attivi. Commissione di apporto su ogni deal concluso.",
+        "profiles": "Fondi micro-PE · Boutique M&A · Acceleratori tech · FONGIT",
+        "cta": "Riferire un asset o un acquirente"
+      }
+    },
+    "form": {
+      "title": "Diventare partner Alliance.",
+      "structure": "Organizzazione",
+      "type": "Tipo di alleanza",
+      "typePlaceholder": "Scegli un tipo",
+      "typeOptions": {
+        "certification": "Certificazione (co-firma grade)",
+        "distribution": "Distribuzione (membership acquirenti)",
+        "dealflow": "Deal flow (apporto d'affari)",
+        "other": "Altro"
+      },
+      "country": "Paese",
+      "description": "Descrizione dell'opportunità",
+      "email": "Email professionale",
+      "submit": "Inviare la candidatura",
+      "note": "Risposta entro 7 giorni lavorativi. Colloquio di qualificazione richiesto."
+    }
   }
 }
