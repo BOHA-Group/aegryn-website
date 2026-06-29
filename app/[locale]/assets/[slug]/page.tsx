@@ -3,8 +3,7 @@ import Link                   from 'next/link'
 import { ArrowUpRight, ArrowLeft } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
-import { getTranslations }    from 'next-intl/server'
-import type { Metadata }      from 'next'
+import type { Metadata } from 'next'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -12,7 +11,7 @@ const STATUS_CONFIG = {
   live:        { label: 'Live',              dot: 'bg-ag-live',       text: 'text-ag-live'       },
   beta:        { label: 'Bêta',             dot: 'bg-ag-beta',       text: 'text-ag-beta'       },
   dev:         { label: 'En développement', dot: 'bg-ag-gray-light', text: 'text-ag-gray-light' },
-  not_started: { label: 'Non démarré',     dot: 'bg-ag-gray-light', text: 'text-ag-gray-light' },
+  not_started: { label: 'Non démarré',      dot: 'bg-ag-gray-light', text: 'text-ag-gray-light' },
 } as const
 
 const ASSET_DETAILS: Record<string, {
@@ -88,13 +87,10 @@ const ASSET_DETAILS: Record<string, {
   },
 }
 
-const LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl']
-
 export async function generateStaticParams() {
-  const assets = AEGRYN_ASSETS.filter((a) => a.id !== 'kryv')
-  return LOCALES.flatMap((locale) =>
-    assets.map((a) => ({ locale, slug: a.slug }))
-  )
+  return AEGRYN_ASSETS
+    .filter((a) => a.id !== 'kryv')
+    .map((a) => ({ slug: a.slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -110,9 +106,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function AssetPage({ params }: Props) {
-  const { locale, slug } = await params
-  const t       = await getTranslations({ locale, namespace: 'assetPage' })
-  const tFooter  = await getTranslations({ locale, namespace: 'footer' })
+  const { slug } = await params
   const asset = AEGRYN_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) notFound()
 
@@ -128,10 +122,10 @@ export default async function AssetPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-4">
           <Link
             href="/what-we-build"
-            className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-gray-light hover:text-ag-black transition-colors"
+            className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.14em] uppercase text-ag-gray-light hover:text-ag-black transition-colors"
           >
             <ArrowLeft size={12} />
-            {t('back')}
+            Nos actifs
           </Link>
         </div>
       </div>
@@ -140,27 +134,27 @@ export default async function AssetPage({ params }: Props) {
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-28">
           <div className="flex flex-wrap items-center gap-3 mb-10">
-            <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light border border-ag-border px-3 py-1">
+            <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light border border-ag-border px-3 py-1">
               {category.label}
             </span>
-            <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light">
+            <span className="font-mono text-[10px] tracking-[0.2em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light">
               {asset.badge}
             </span>
             <span className="flex items-center gap-1.5">
               <span className={`w-1.5 h-1.5 rounded-full ${status.dot}`} />
-              <span className={`font-sans font-semibold text-[10px] tracking-[0.14em] uppercase ${status.text}`}>
+              <span className={`font-mono text-[10px] tracking-[0.14em] uppercase ${status.text}`}>
                 {status.label}
               </span>
             </span>
           </div>
 
           <h1
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-6"
+            className="font-display font-black text-ag-black tracking-[-0.03em] leading-[0.92] max-w-3xl mb-6"
             style={{ fontSize: 'clamp(56px,7vw,96px)' }}
           >
             {asset.name}
           </h1>
-          <p className="font-sans font-semibold text-[14px] text-ag-gray leading-relaxed max-w-xl mb-10">
+          <p className="font-mono text-[14px] text-ag-gray leading-relaxed max-w-xl mb-10">
             {asset.tagline}
           </p>
 
@@ -169,14 +163,14 @@ export default async function AssetPage({ params }: Props) {
               href={asset.url!}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-navy transition-colors"
+              className="inline-flex items-center gap-3 bg-ag-black text-white font-mono text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-navy transition-colors"
             >
-              {t('visit')} {asset.name}
+              Visiter {asset.name}
               <ArrowUpRight size={14} />
             </a>
           ) : (
-            <span className="inline-flex items-center gap-3 border border-ag-border text-ag-gray-light font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 cursor-default select-none">
-              {t('comingSoon')}
+            <span className="inline-flex items-center gap-3 border border-ag-border text-ag-gray-light font-mono text-[11px] tracking-[0.16em] uppercase px-7 py-4 cursor-default select-none">
+              Bientôt disponible
             </span>
           )}
         </div>
@@ -192,16 +186,16 @@ export default async function AssetPage({ params }: Props) {
 
             {/* Long description */}
             <div className="py-20 md:pr-16">
-              <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
-                {t('presentation')}
+              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
+                Présentation
               </p>
               <p className="text-[15px] text-ag-dark leading-[1.8]">
                 {details?.longDesc ?? asset.description}
               </p>
               {details?.audience && (
                 <div className="mt-10 pt-8 border-t border-ag-border">
-                  <p className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
-                    {t('audience')}
+                  <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
+                    Public cible
                   </p>
                   <p className="text-[14px] text-ag-gray">{details.audience}</p>
                 </div>
@@ -210,8 +204,8 @@ export default async function AssetPage({ params }: Props) {
 
             {/* Features */}
             <div className="py-20 md:pl-16">
-              <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
-                {t('features')}
+              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
+                Fonctionnalités
               </p>
               <ul className="space-y-4">
                 {(details?.features ?? []).map((f, i) => (
@@ -227,7 +221,7 @@ export default async function AssetPage({ params }: Props) {
               {details?.tech && (
                 <div className="mt-12 flex flex-wrap gap-2">
                   {details.tech.map((tag) => (
-                    <span key={tag} className="font-sans font-semibold text-[10px] tracking-[0.12em] uppercase border border-ag-border px-3 py-1.5 text-ag-gray-light">
+                    <span key={tag} className="font-mono text-[10px] tracking-[0.12em] uppercase border border-ag-border px-3 py-1.5 text-ag-gray-light">
                       {tag}
                     </span>
                   ))}
@@ -238,47 +232,33 @@ export default async function AssetPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Neediu legal notice — only on the neediu page */}
-      {asset.id === 'neediu' && (
-        <div className="border-b border-ag-border bg-ag-off-white">
-          <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-end">
-            <Link
-              href="/data-protection-notice-neediu"
-              className="font-sans font-semibold text-[10px] tracking-[0.16em] uppercase text-ag-gray-light hover:text-ag-black transition-colors"
-            >
-              {tFooter('neediuLegal')}
-            </Link>
-          </div>
-        </div>
-      )}
-
       {/* CTA strip */}
       <section className="bg-ag-navy py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
-            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">
-              {t('cta.label')}
+            <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/40 mb-4">
+              Aegryn Group
             </p>
             <h2
-              className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl"
+              className="font-display font-black text-white tracking-[-0.03em] leading-[0.95] max-w-xl"
               style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
             >
-              {t('cta.title')}
+              Découvrez l&apos;ensemble de l&apos;écosystème.
             </h2>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <Link
               href="/what-we-build"
-              className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+              className="inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
             >
-              {t('cta.allAssets')}
+              Tous nos actifs
               <ArrowUpRight size={14} />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-navy bg-ag-apex px-6 py-3 hover:bg-white transition-colors"
+              className="inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-ag-navy bg-ag-apex px-6 py-3 hover:bg-white transition-colors"
             >
-              {t('cta.contact')}
+              Nous contacter
               <ArrowUpRight size={14} />
             </Link>
           </div>

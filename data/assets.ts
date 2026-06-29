@@ -7,7 +7,7 @@ export interface AegrynAsset {
   tagline:         string
   description:     string
   category:        'ai' | 'lifestyle' | 'transactions'
-  status:          'live' | 'beta' | 'dev'
+  status:          'live' | 'beta' | 'dev' | 'not_started'
   featured:        boolean
   grade:           AssetGrade
   gradeCode:       string | undefined

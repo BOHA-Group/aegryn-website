@@ -1,179 +1,138 @@
 'use client'
 
-import { useEffect, useRef }  from 'react'
-import Link                    from 'next/link'
-import { ArrowUpRight, Lock }  from 'lucide-react'
-import { useTranslations }     from 'next-intl'
-import { gsap, SplitText }     from '@/lib/gsap'
-import { AEGRYN_ASSETS }       from '@/data/assets'
+import { useEffect, useRef } from 'react'
+import Link                   from 'next/link'
+import { ArrowUpRight }       from 'lucide-react'
+import { gsap } from '@/lib/gsap'
+import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
+import type { Asset } from '@/data/assets'
 
-/* ── Special status assets ── */
-const NOT_STARTED_IDS = ['movtoo', 'primiom', 'hobconnect']
-const KRYV_ID = 'kryv'
+const STATUS_CONFIG = {
+  live:        { label: 'Live',              dot: 'bg-ag-live',       pulse: true  },
+  beta:        { label: 'Bêta',             dot: 'bg-ag-beta',       pulse: true  },
+  dev:         { label: 'En développement', dot: 'bg-ag-dev',        pulse: false },
+  not_started: { label: 'Non démarré',      dot: 'bg-ag-gray-light', pulse: false },
+} as const
 
 export function AssetGrid() {
-  const t       = useTranslations('assetGrid')
-  const tStatus = useTranslations('build.status')
-  const wrapRef    = useRef<HTMLDivElement>(null)
-  const headerRef  = useRef<HTMLDivElement>(null)
-  const h2Ref      = useRef<HTMLHeadingElement>(null)
-  const labelRef   = useRef<HTMLParagraphElement>(null)
+  const gridRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const h2 = h2Ref.current
-    if (!h2) return
-
-    /* SplitText H2 — lines clip-reveal */
-    const split = new SplitText(h2, { type: 'lines', linesClass: 'ag-line-inner' })
-    split.lines.forEach((line) => {
-      const w = document.createElement('div')
-      w.style.overflow = 'hidden'
-      ;(line as HTMLElement).parentNode?.insertBefore(w, line)
-      w.appendChild(line)
-    })
-
     const ctx = gsap.context(() => {
-
-      /* Label ScrambleText */
-      if (labelRef.current) {
-        gsap.fromTo(labelRef.current,
-          { opacity: 0 },
-          {
-            opacity: 1, duration: 0.5,
-            scrollTrigger: { trigger: headerRef.current, start: 'top 82%', once: true },
-          },
-        )
-      }
-
-      /* H2 lines clip reveal */
-      gsap.fromTo(split.lines,
-        { yPercent: 110 },
-        {
-          yPercent: 0,
-          stagger: 0.1, duration: 1.0, ease: 'expo.out',
-          scrollTrigger: { trigger: headerRef.current, start: 'top 80%', once: true },
+      gsap.from('.asset-tile', {
+        opacity: 0, y: 24, stagger: 0.07,
+        ease: 'expo.out', duration: 0.65,
+        scrollTrigger: {
+          trigger: gridRef.current,
+          start: 'top 80%',
         },
-      )
-
-      /* Asset chips stagger */
-      AEGRYN_ASSETS.forEach((_asset, i) => {
-        gsap.fromTo(`.asset-row-${i}`,
-          { opacity: 0, y: 20 },
-          {
-            opacity: 1,
-            y: 0, duration: 0.7, ease: 'expo.out',
-            delay: (i % 3) * 0.05,
-            scrollTrigger: {
-              trigger: wrapRef.current,
-              start: 'top 85%',
-              once: true,
-            },
-          },
-        )
       })
-    }, wrapRef)
-
-    return () => { ctx.revert(); split.revert() }
+    }, gridRef)
+    return () => ctx.revert()
   }, [])
 
   return (
-    <section className="bg-ag-white border-t border-ag-border">
+    <section className="py-32 bg-ag-white border-t border-ag-border">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
 
-      {/* Header */}
-      <div ref={headerRef} className="max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-14">
-        <p ref={labelRef} className="font-sans font-semibold text-[11px] tracking-[0.24em] uppercase text-ag-gray-light mb-6">
-          {t('sectionLabel')}
-        </p>
-        <h2
-          ref={h2Ref}
-          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.0] whitespace-pre-line overflow-hidden"
-          style={{ fontSize: 'clamp(42px,5.5vw,80px)' }}
-        >
-          {t('sectionTitle')}
-        </h2>
-      </div>
+        <div className="mb-20">
+          <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-gray-light mb-4">
+            Notre écosystème
+          </p>
+          <h2
+            className="font-display font-black text-ag-black tracking-[-0.03em] leading-[0.95]"
+            style={{ fontSize: 'clamp(36px,4.5vw,64px)' }}
+          >
+            Ce que nous<br />construisons.
+          </h2>
+        </div>
 
-      {/* Grille hexa-style — bordures nettes, pas de divide pour contrôle précis */}
-      <div ref={wrapRef} className="max-w-7xl mx-auto px-6 md:px-12 pb-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-ag-border">
-          {AEGRYN_ASSETS.map((asset, i) => {
-            const isKryv       = asset.id === KRYV_ID
-            const isNotStarted = NOT_STARTED_IDS.includes(asset.id)
-            const isLive       = asset.status === 'live'
-
-            /* Bordure droite sur les deux premières colonnes */
-            const borderRight   = i % 3 !== 2 ? 'lg:border-r border-ag-border' : ''
-            const borderRightSm = i % 2 !== 1 ? 'sm:border-r border-ag-border' : ''
-            const borderBottom  = i < AEGRYN_ASSETS.length - (AEGRYN_ASSETS.length % 3 || 3)
-              ? 'border-b border-ag-border'
-              : ''
+        <div ref={gridRef} className="space-y-0">
+          {(Object.keys(ASSET_CATEGORIES) as Array<keyof typeof ASSET_CATEGORIES>).map((cat) => {
+            const catAssets = AEGRYN_ASSETS.filter((a) => a.category === cat)
+            if (!catAssets.length) return null
 
             return (
-              <Link key={asset.id} href="/what-we-build">
-                <div
-                  className={`asset-row-${i} group relative flex flex-col items-center justify-between
-                    text-center p-8 transition-all duration-500 cursor-pointer
-                    bg-ag-white hover:bg-ag-navy
-                    ${borderRight} ${borderRightSm} ${borderBottom}`}
-                  style={{ minHeight: '200px' }}
-                >
-                  {/* Top — badge catégorie */}
-                  <div className="w-full flex items-center justify-between mb-6">
-                    <span className="font-sans font-semibold text-[10px] tracking-[0.18em] uppercase text-ag-gray-light group-hover:text-white/50 transition-colors duration-500">
-                      {asset.badge}
-                    </span>
-
-                    {/* Status */}
-                    {isKryv && (
-                      <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-ag-gray-light/60 group-hover:text-white/40 transition-colors duration-500">
-                        <Lock size={7} /> Restricted
-                      </span>
-                    )}
-                    {!isKryv && isNotStarted && (
-                      <span className="font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-ag-gray-light/60 group-hover:text-white/40 transition-colors duration-500">
-                        {t('notStarted')}
-                      </span>
-                    )}
-                    {!isKryv && !isNotStarted && isLive && (
-                      <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-emerald-500 group-hover:text-emerald-300 transition-colors duration-500">
-                        <span className="relative flex w-1.5 h-1.5">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50" />
-                          <span className="relative inline-flex rounded-full w-1.5 h-1.5 bg-emerald-400" />
-                        </span>
-                        {tStatus('live')}
-                      </span>
-                    )}
-                    {!isKryv && !isNotStarted && !isLive && (
-                      <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-orange-400 group-hover:text-orange-300 transition-colors duration-500">
-                        <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
-                        {tStatus('building')}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Centre — nom */}
-                  <h3
-                    className="font-sans font-bold tracking-[-0.03em] leading-[1.0] mb-3 text-ag-black group-hover:text-white transition-colors duration-500"
-                    style={{ fontSize: 'clamp(22px,2.2vw,32px)' }}
-                  >
-                    {asset.name}
-                  </h3>
-
-                  {/* Tagline */}
-                  <p className="font-sans font-normal text-[12px] leading-relaxed text-ag-gray group-hover:text-white/70 transition-colors duration-500">
-                    {asset.tagline}
-                  </p>
-
-                  {/* Flèche au hover */}
-                  <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <ArrowUpRight size={14} className="text-white/60" />
-                  </div>
+              <div key={cat}>
+                <div className="flex items-center justify-between border-y border-ag-border py-4">
+                  <span className="font-display font-bold text-[11px] tracking-[0.18em] uppercase text-ag-black">
+                    {ASSET_CATEGORIES[cat].label}
+                  </span>
+                  <span className="font-mono text-[11px] text-ag-gray-light">
+                    {String(catAssets.length).padStart(2, '0')}
+                  </span>
                 </div>
-              </Link>
+
+                <div className={`grid border-b border-ag-border ${
+                  catAssets.length <= 2
+                    ? 'grid-cols-1 md:grid-cols-2'
+                    : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+                }`}>
+                  {catAssets.map((asset) => (
+                    <AssetTile key={asset.id} asset={asset as Asset} />
+                  ))}
+                </div>
+              </div>
             )
           })}
         </div>
+
       </div>
     </section>
+  )
+}
+
+function AssetTile({ asset }: { asset: Asset }) {
+  const ref    = useRef<HTMLAnchorElement>(null)
+  const status = STATUS_CONFIG[asset.status]
+
+  const onMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!ref.current) return
+    const r = ref.current.getBoundingClientRect()
+    const x = (e.clientX - r.left) / r.width - 0.5
+    const y = (e.clientY - r.top) / r.height - 0.5
+    ref.current.style.transform =
+      `perspective(1000px) rotateY(${x * 3}deg) rotateX(${-y * 3}deg) translateY(-1px)`
+  }
+
+  const onLeave = (_e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (ref.current) ref.current.style.transform = ''
+  }
+
+  return (
+    <Link
+      ref={ref}
+      href={`/assets/${asset.slug}`}
+      className="asset-tile group relative flex flex-col border-r border-ag-border p-10 min-h-[260px] bg-ag-white overflow-hidden transition-colors duration-300 hover:bg-ag-off-white will-change-transform last:border-r-0"
+      onMouseMove={onMove}
+      onMouseLeave={onLeave}
+    >
+      <div className="flex justify-between items-start mb-auto">
+        <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-2.5 py-1 group-hover:border-ag-border-h group-hover:text-ag-gray transition-all duration-200">
+          {asset.badge}
+        </span>
+        <span className="w-8 h-8 border border-ag-border flex items-center justify-center text-ag-gray group-hover:border-ag-black group-hover:bg-ag-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
+          <ArrowUpRight size={13} />
+        </span>
+      </div>
+
+      <div className="mt-16">
+        <h3
+          className="font-display font-black text-ag-black tracking-[-0.03em] leading-none mb-2"
+          style={{ fontSize: 'clamp(22px,2vw,28px)' }}
+        >
+          {asset.name}
+        </h3>
+        <p className="font-mono text-[12px] text-ag-gray leading-relaxed">
+          {asset.tagline}
+        </p>
+        <div className="flex items-center gap-2 mt-5">
+          <span className={`w-1.5 h-1.5 rounded-full ${status.dot} ${status.pulse ? 'animate-pulse' : ''}`} />
+          <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
+            {status.label}
+          </span>
+        </div>
+      </div>
+    </Link>
   )
 }
