@@ -1,39 +1,185 @@
 {
   "nav": {
-    "home": "Accueil",
     "about": "À propos",
     "whatWeBuild": "Actifs",
     "advisory": "Advisory",
     "growWithUs": "Alliances",
     "career": "Carrières",
-    "contact": "Contact"
+    "contact": "Contact",
+    "auction": "Auction",
+    "grade": "Grade",
+    "assets": "Actifs",
+    "services": "Services",
+    "discover": "Discover",
+    "clientSpace": "Espace client",
+    "submitAsset": "Soumettre un actif",
+    "auctionCatalog": "Catalogue",
+    "auctionSell": "Vendre un actif",
+    "auctionBuy": "Devenir acquéreur",
+    "auctionSession": "Prochaine session",
+    "auctionResults": "Résultats",
+    "gradeSystem": "Système de grade",
+    "gradeMethod": "Méthodologie",
+    "gradeSubmit": "Soumettre pour certification",
+    "servicesAdvisory": "Advisory",
+    "servicesAlliances": "Alliances",
+    "servicesAcquisition": "Acquisition Support"
   },
   "hero": {
-    "tagline": "Engineered to Last",
-    "eyebrow": "Constructeur d'actifs tech suisse",
-    "title": "Nous construisons\nce qui dure.",
-    "sub": "Des actifs propriétaires de la couche protocole\njusqu'à l'interface utilisateur.",
-    "cta": "Découvrir nos actifs",
-    "strip": "6 actifs — 3 catégories",
-    "geo": "Suisse · Europe · Global",
-    "scroll": "Défiler"
+    "tagline": "Certified Tech Asset Transactions — Europe",
+    "title": "Where the finest tech assets\nfind their\nrightful owner.",
+    "sub": "Certification indépendante. Transactions institutionnelles.\nMoins de 25% des actifs soumis sont acceptés.",
+    "ctaPrimary": "Voir le catalogue",
+    "ctaSecondary": "Soumettre un actif"
   },
-  "manifesto": {
-    "aegis": {
-      "label": "AEGIS",
-      "title": "Protection absolue",
-      "desc": "Du grec αἰγίς — le bouclier divin de Zeus et Athéna. Aegryn couvre et protège ses actifs contre toutes les menaces."
+  "conviction": {
+    "label": "Notre conviction",
+    "title": "Un marché tech mérite une infrastructure digne de lui.",
+    "col1": {
+      "label": "CERTIFIER",
+      "title": "La vérité avant la transaction.",
+      "desc": "Chaque actif passe par notre protocole de certification indépendant. Un grade, des sous-codes, une traçabilité blockchain. Pas d'estimation approximative — une vérité documentée."
     },
-    "aegir": {
-      "label": "AEGIR",
-      "title": "Maîtrise des flux",
-      "desc": "Du vieux norrois Ægir — dieu de la mer, maître des courants invisibles. Aegryn orchestre les flux de valeur numérique entre ses actifs."
+    "col2": {
+      "label": "TRANSACTER",
+      "title": "Des sessions, pas des bazars.",
+      "desc": "Les sessions AEGRYN réunissent vendeurs qualifiés et acquéreurs institutionnels dans un cadre contractuel rigoureux. Escrow, NDA, protocole de transaction sécurisé."
     },
-    "aeon": {
-      "label": "AEON",
-      "title": "Durabilité intemporelle",
-      "desc": "Du grec αἰών — l'éternité, une ère immense. Alignement direct avec \"Engineered to Last\" — nous construisons ce qui traversera le temps."
+    "col3": {
+      "label": "PROTÉGER",
+      "title": "L'actif et les parties.",
+      "desc": "De la soumission à la clôture, chaque étape est encadrée : due diligence, valorisation, CGV, accords de confidentialité, accompagnement post-transaction."
     }
+  },
+  "pillars": {
+    "build": {
+      "label": "BUILD",
+      "desc": "Actifs propriétaires construits pour durer"
+    },
+    "grade": {
+      "label": "GRADE",
+      "desc": "Certification indépendante A→E"
+    },
+    "auction": {
+      "label": "AUCTION",
+      "desc": "Transactions institutionnelles encadrées"
+    }
+  },
+  "gradeShowcase": {
+    "label": "Le système AEGRYN Grade",
+    "title": "Un actif sans grade\nest un actif sans prix.",
+    "desc": "Notre protocole de certification évalue chaque actif sur 4 dimensions : Code, Infrastructure, Finance, Stratégie. Un grade objectif, reproductible, opposable.",
+    "cta": "Comprendre le système de grade",
+    "exceptional": "Exceptionnel",
+    "premium": "Premium",
+    "standard": "Standard",
+    "developing": "En développement",
+    "earlyStage": "Early stage",
+    "grades": {
+      "star": {
+        "label": "AEG ★",
+        "desc": "Exceptionnel — top 1%"
+      },
+      "aaa": {
+        "label": "AEG AAA",
+        "desc": "Premium — prêt pour transaction"
+      },
+      "aa": {
+        "label": "AEG AA",
+        "desc": "Solide — valorisation confirmée"
+      },
+      "a": {
+        "label": "AEG A",
+        "desc": "Standard — potentiel identifié"
+      },
+      "b": {
+        "label": "AEG B",
+        "desc": "Early stage — plan de remédiation"
+      }
+    }
+  },
+  "marketStats": {
+    "label": "Le marché en chiffres — 2026",
+    "stats": [
+      {
+        "value": "+42%",
+        "label": "Volume M&A SaaS Europe 2025 YoY",
+        "source": "Synergy AI 2026"
+      },
+      {
+        "value": "14,2 Md€",
+        "label": "Volume transactions SaaS Europe 2025",
+        "source": "Synergy AI 2026"
+      },
+      {
+        "value": "3,1x ARR",
+        "label": "Multiple médian privé SaaS mars 2026",
+        "source": "Aventis Advisors"
+      },
+      {
+        "value": "58%",
+        "label": "Part PE buyers dans les deals SaaS 2025",
+        "source": "SEG Annual Report"
+      }
+    ]
+  },
+  "auctionNarrative": {
+    "label": "Sessions AEGRYN",
+    "title": "Une session. Deux parties.\nUne transaction propre.",
+    "desc": "Les sessions AEGRYN ne sont pas des enchères. Ce sont des protocoles de transaction privés, réunissant vendeurs certifiés et acquéreurs qualifiés autour d'actifs gradés. Chaque session est précédée d'une due diligence, encadrée par des CGV et clôturée par un escrow institutionnel.",
+    "ctaPrimary": "Voir la prochaine session",
+    "ctaSecondary": "Soumettre mon actif",
+    "steps": [
+      {
+        "num": "01",
+        "label": "Soumission & pré-qualification"
+      },
+      {
+        "num": "02",
+        "label": "Certification AEGRYN Grade"
+      },
+      {
+        "num": "03",
+        "label": "Accès acquéreurs qualifiés"
+      },
+      {
+        "num": "04",
+        "label": "Négociation encadrée"
+      },
+      {
+        "num": "05",
+        "label": "Transaction & escrow"
+      }
+    ]
+  },
+  "acquisitionSupport": {
+    "label": "Acquisition Support",
+    "title": "Vous avez identifié\nl'actif. Nous finançons\nle closing.",
+    "desc": "Co-investissement, bridge, earnout structuré — AEGRYN connecte les acquéreurs qualifiés à des partenaires financiers pour fermer les deals qui méritent de l'être.",
+    "cta": "Découvrir l'Acquisition Support",
+    "legal": "AEGRYN Sàrl n'est pas un établissement financier. Ce service est une mise en relation avec des partenaires tiers indépendants."
+  },
+  "discoverSection": {
+    "label": "Discover",
+    "title": "Intelligence de marché.\nAccessible à tous.",
+    "cta": "Voir tous les articles",
+    "articles": [
+      {
+        "category": "Rapport marché",
+        "title": "État du marché M&A tech Europe — Q3 2026",
+        "desc": "Analyse des volumes de transactions, multiples de valorisation et tendances sectorielles sur le marché européen des actifs tech."
+      },
+      {
+        "category": "Guide vendeur",
+        "title": "Les 5 erreurs qui font chuter la valorisation de votre SaaS",
+        "desc": "Les erreurs les plus fréquentes identifiées lors des certifications AEGRYN — et comment les corriger avant de soumettre."
+      },
+      {
+        "category": "Certification",
+        "title": "Qu'est-ce qu'un actif tech vraiment certifiable ?",
+        "desc": "Les critères objectifs qui distinguent un actif certifiable d'un actif qui nécessite un plan de remédiation préalable."
+      }
+    ]
   },
   "assets": {
     "title": "Notre écosystème propre.",
@@ -42,6 +188,29 @@
       "ai": "AI & Protocoles",
       "lifestyle": "Services & Lifestyle",
       "transactions": "Transactions & Réseau"
+    },
+    "page": {
+      "label": "Écosystème AEGRYN",
+      "title": "Six actifs propriétaires.\nUne vision commune.",
+      "desc": "Chaque actif AEGRYN est conçu, construit et opéré en interne. Propriété totale, souveraineté absolue, durabilité garantie.",
+      "meta": {
+        "title": "Actifs AEGRYN — Écosystème propriétaire",
+        "desc": "Découvrez les 6 actifs propriétaires d'AEGRYN : Subblink, Neediu, Movtoo, Primiom, Hobconnect et KRYV Protocol."
+      },
+      "filterAll": "Tous",
+      "filterAI": "AI & Protocoles",
+      "filterLifestyle": "Services & Lifestyle",
+      "filterTransactions": "Transactions & Réseau",
+      "statusLive": "En ligne",
+      "statusBeta": "Bêta",
+      "statusDev": "En développement",
+      "gradeLabel": "Grade AEGRYN",
+      "gradePending": "En cours de certification",
+      "visitSite": "Visiter le site",
+      "viewDetails": "Voir la fiche",
+      "auctionEligible": "Éligible auction",
+      "ctaGrade": "Certifier votre actif",
+      "ctaAuction": "Voir les sessions auction"
     }
   },
   "advisory": {
@@ -55,27 +224,54 @@
       "cyber": {
         "title": "Cybersécurité",
         "desc": "Identification des vecteurs d'attaque, durcissement des infrastructures et réponse aux incidents.",
-        "items": ["Audit de surface d'attaque", "Tests de pénétration", "Réponse aux incidents", "Durcissement cloud & on-premise"]
+        "items": [
+          "Audit de surface d'attaque",
+          "Tests de pénétration",
+          "Réponse aux incidents",
+          "Durcissement cloud & on-premise"
+        ]
       },
       "ai": {
         "title": "Audit IA & Confiance",
         "desc": "Nous auditrons vos modèles, pipelines et processus décisionnels pour garantir fiabilité et conformité.",
-        "items": ["Audit de biais algorithmiques", "Conformité EU AI Act", "Red-teaming LLM", "Traçabilité des décisions"]
+        "items": [
+          "Audit de biais algorithmiques",
+          "Conformité EU AI Act",
+          "Red-teaming LLM",
+          "Traçabilité des décisions"
+        ]
       },
       "strategy": {
         "title": "Stratégie Numérique",
         "desc": "Alignement entre vos ambitions digitales et les contraintes réglementaires européennes et suisses.",
-        "items": ["Gouvernance data", "Conformité RGPD & LPD", "Architecture sécurisée", "Roadmap innovation"]
+        "items": [
+          "Gouvernance data",
+          "Conformité RGPD & LPD",
+          "Architecture sécurisée",
+          "Roadmap innovation"
+        ]
       }
     },
     "approach": {
       "title": "Un protocole rigoureux, pas une promesse.",
       "desc": "Chaque mission démarre par une phase de diagnostic exhaustif avant toute recommandation. Nous documentons, nous mesurons, nous livrons.",
       "steps": [
-        { "label": "Diagnostic", "desc": "Cartographie complète de votre exposition numérique et identification des risques critiques." },
-        { "label": "Protocole", "desc": "Élaboration d'un plan de traitement priorisé, adapté à votre secteur et vos contraintes." },
-        { "label": "Exécution", "desc": "Mise en œuvre avec suivi continu et reporting transparent à chaque jalon." },
-        { "label": "Blindage", "desc": "Documentation finale, transfert de compétences et accès au suivi post-mission." }
+        {
+          "label": "Diagnostic",
+          "desc": "Cartographie complète de votre exposition numérique et identification des risques critiques."
+        },
+        {
+          "label": "Protocole",
+          "desc": "Élaboration d'un plan de traitement priorisé, adapté à votre secteur et vos contraintes."
+        },
+        {
+          "label": "Exécution",
+          "desc": "Mise en œuvre avec suivi continu et reporting transparent à chaque jalon."
+        },
+        {
+          "label": "Blindage",
+          "desc": "Documentation finale, transfert de compétences et accès au suivi post-mission."
+        }
       ]
     }
   },
@@ -85,17 +281,73 @@
       "title": "Six actifs. Une vision.",
       "desc": "Chaque actif Aegryn est conçu pour dominer sa verticale — de l'IA d'entreprise aux réseaux de transactions, du lifestyle au logement."
     },
-    "categories": { "ai": "IA & Protocoles", "lifestyle": "Services & Lifestyle", "transactions": "Transactions & Réseau" },
-    "status": { "building": "En construction", "concept": "Concept", "live": "En ligne" },
+    "categories": {
+      "ai": "IA & Protocoles",
+      "lifestyle": "Services & Lifestyle",
+      "transactions": "Transactions & Réseau"
+    },
+    "status": {
+      "building": "En construction",
+      "concept": "Concept",
+      "live": "En ligne"
+    },
     "visitSite": "Visiter le site",
     "comingSoon": "Bientôt disponible",
     "assets": {
-      "nexoris": { "desc": "Plateforme d'intelligence artificielle modulaire pour les entreprises exigeant fiabilité, conformité et souveraineté des données.", "tags": ["IA", "B2B", "SaaS", "EU AI Act"] },
-      "kryolio": { "desc": "Réseau de gestion d'actifs numériques et crypto — portefeuille, suivi de performance et stratégie automatisée.", "tags": ["Crypto", "DeFi", "Portfolio", "Web3"] },
-      "lyvra": { "desc": "Super-application lifestyle premium pour la gestion des abonnements, du concierge numérique et de l'expérience personnalisée.", "tags": ["Lifestyle", "B2C", "App", "Premium"] },
-      "vorrex": { "desc": "Réseau de transactions pair-à-pair sécurisé avec protocoles de conformité intégrés pour les marchés européens.", "tags": ["Fintech", "P2P", "Compliance", "SEPA"] },
-      "domify": { "desc": "Plateforme immobilière intelligente combinant recherche, estimation IA et gestion locative pour le marché suisse et européen.", "tags": ["Proptech", "IA", "Immobilier", "CH/EU"] },
-      "fleetori": { "desc": "Solution de gestion de flotte et logistique de dernière génération pour les entreprises de mobilité urbaine.", "tags": ["Logistique", "Fleet", "B2B", "Mobilité"] }
+      "nexoris": {
+        "desc": "Plateforme d'intelligence artificielle modulaire pour les entreprises exigeant fiabilité, conformité et souveraineté des données.",
+        "tags": [
+          "IA",
+          "B2B",
+          "SaaS",
+          "EU AI Act"
+        ]
+      },
+      "kryolio": {
+        "desc": "Réseau de gestion d'actifs numériques et crypto — portefeuille, suivi de performance et stratégie automatisée.",
+        "tags": [
+          "Crypto",
+          "DeFi",
+          "Portfolio",
+          "Web3"
+        ]
+      },
+      "lyvra": {
+        "desc": "Super-application lifestyle premium pour la gestion des abonnements, du concierge numérique et de l'expérience personnalisée.",
+        "tags": [
+          "Lifestyle",
+          "B2C",
+          "App",
+          "Premium"
+        ]
+      },
+      "vorrex": {
+        "desc": "Réseau de transactions pair-à-pair sécurisé avec protocoles de conformité intégrés pour les marchés européens.",
+        "tags": [
+          "Fintech",
+          "P2P",
+          "Compliance",
+          "SEPA"
+        ]
+      },
+      "domify": {
+        "desc": "Plateforme immobilière intelligente combinant recherche, estimation IA et gestion locative pour le marché suisse et européen.",
+        "tags": [
+          "Proptech",
+          "IA",
+          "Immobilier",
+          "CH/EU"
+        ]
+      },
+      "fleetori": {
+        "desc": "Solution de gestion de flotte et logistique de dernière génération pour les entreprises de mobilité urbaine.",
+        "tags": [
+          "Logistique",
+          "Fleet",
+          "B2B",
+          "Mobilité"
+        ]
+      }
     },
     "philosophy": {
       "label": "Notre philosophie",
@@ -103,78 +355,28 @@
       "desc": "Nous ne construisons pas des MVPs. Nous ne vendons pas de parts minoritaires à des VCs. Chaque actif Aegryn est conçu pour être possédé en totalité, opéré souverainement et transmis aux générations suivantes."
     },
     "pillars": {
-      "proprietary": { "stat": "100%", "label": "Propriété" },
-      "sovereign": { "stat": "CH", "label": "Souveraineté" },
-      "durable": { "stat": "∞", "label": "Durabilité" }
+      "proprietary": {
+        "stat": "100%",
+        "label": "Propriété"
+      },
+      "sovereign": {
+        "stat": "CH",
+        "label": "Souveraineté"
+      },
+      "durable": {
+        "stat": "∞",
+        "label": "Durabilité"
+      }
     },
     "advisoryCta": {
-      "label": "Aegryn Advisory",
       "text": "Votre entreprise a besoin d'une protection numérique de niveau institutionnel ?",
       "button": "Découvrir Advisory"
     }
   },
-  "whatwedo": {
-    "label": "Ce que nous faisons",
-    "items": [
-      { "num": "01", "title": "INGÉNIERIE D'ÉCOSYSTÈME", "desc": "Nous architecturons des écosystèmes numériques conçus pour la scalabilité, la résilience et la valeur à long terme — où chaque composant se connecte et se cumule." },
-      { "num": "02", "title": "ARCHITECTURE D'EXPÉRIENCE", "desc": "Nous concevons des expériences utilisateurs fluides qui simplifient la complexité et créent des interactions intuitives sur l'ensemble de nos plateformes." },
-      { "num": "03", "title": "FONDATIONS TECHNOLOGIQUES", "desc": "Nous construisons sur une infrastructure technologique solide et souveraine — garantissant sécurité, indépendance et durabilité à chaque couche." },
-      { "num": "04", "title": "ADVISORY STRATÉGIQUE", "desc": "Notre advisory s'appuie sur de vrais cadres d'exécution en Data, IA & Sécurité — ancrés dans la façon dont nous construisons nos propres écosystèmes." }
-    ]
-  },
-  "aboutSection": {
-    "label": "À propos d'Aegryn",
-    "title": "Plateforme d'actifs\ntechnologiques suisse.",
-    "desc": "Nous concevons, finançons et exploitons des écosystèmes numériques qui progressent des idées ambitieuses vers des technologies réelles et pérennes. Pas des features — des actifs.",
-    "tagline": "Ingénié en Suisse. Construit pour durer.",
-    "cta": "À propos d'Aegryn",
-    "quote": "Nous construisons des actifs numériques qui améliorent la vie quotidienne — pour les individus, les professionnels et les marchés qu'ils servent.",
-    "ceoName": "Yohann Bollack",
-    "ceoTitle": "Fondateur & CEO — Aegryn Group",
-    "stats": [
-      { "val": "6", "label": "Actifs" },
-      { "val": "3", "label": "Catégories" },
-      { "val": "6", "label": "Marchés" }
-    ]
-  },
-  "missionSection": {
-    "label": "Notre Mission",
-    "sub": "Simplifier la vie par le numérique",
-    "items": [
-      { "title": "NOUS CRÉONS", "desc": "Des solutions qui anticipent vos besoins en tant qu'individus ou professionnels, garantissant des interactions numériques fluides qui améliorent le quotidien." },
-      { "title": "NOUS SIMPLIFIONS", "desc": "Éliminer la complexité en intégrant une automatisation intelligente, des interfaces intuitives et des systèmes interconnectés, rendant la technologie sans effort et efficace." },
-      { "title": "NOUS EMBRASSONS", "desc": "Nous restons en avance en pionnier des innovations, en adoptant les avancées de pointe et en fixant de nouveaux standards dans les expériences numériques fluides." }
-    ]
-  },
-  "whyapps": {
-    "label": "Pourquoi nos apps",
-    "count": "04",
-    "items": [
-      { "num": "01", "title": "Innovantes", "desc": "Nous exploitons les technologies de pointe — IA, automatisation et données intelligentes — pour créer des applications qui évoluent et améliorent continuellement votre expérience." },
-      { "num": "02", "title": "Sécurisées & Privées", "desc": "Vos données vous appartiennent. Chaque application Aegryn est conçue avec une architecture privacy-first, des communications chiffrées et des pratiques transparentes alignées sur les normes suisses et européennes." },
-      { "num": "03", "title": "Diversité & Inclusion", "desc": "Nous concevons pour tous. Nos applications sont accessibles, culturellement sensibles et disponibles dans plusieurs langues et marchés — parce que la grande technologie doit servir tout le monde." },
-      { "num": "04", "title": "Impact social", "desc": "Nous construisons avec un objectif. Chaque plateforme que nous créons est conçue pour simplifier les défis du quotidien, réduire les frictions et créer de la valeur mesurable pour les individus et les communautés." },
-      { "num": "05", "title": "Accessibles", "desc": "Des premiers utilisateurs de smartphones aux professionnels chevronnés, nos applications sont intuitives et sans barrières — parce que la meilleure interface est celle que tout le monde peut utiliser." }
-    ]
-  },
-  "statsRow": {
-    "items": [
-      { "num": "6.8B", "label": "Appareils mobiles" },
-      { "num": "5.6B", "label": "Connexions smartphones" },
-      { "num": "4h12", "label": "Temps d'écran quotidien" },
-      { "num": "CH",   "label": "Conçu en Suisse" }
-    ]
-  },
-  "assetGrid": {
-    "sectionLabel": "Notre écosystème",
-    "sectionTitle": "Ce que nous\nconstruisons.",
-    "notStarted": "Non démarré",
-    "comingSoon": "Bientôt"
-  },
   "about": {
     "hero": {
       "label": "À propos d'Aegryn",
-      "title": "Constructeur d'actifs tech suisse",
+      "title": "Swiss Tech Asset Builder",
       "desc": "Nous concevons, construisons et opérons des écosystèmes numériques — de l'idée audacieuse à une technologie fiable et durable. Ingénié en Suisse. Construit pour durer."
     },
     "vision": {
@@ -184,16 +386,40 @@
     "mission": {
       "label": "Notre mission",
       "title": "Simplifier la vie avec des applications intelligentes.",
-      "create": { "title": "Nous créons", "desc": "Des solutions qui anticipent vos besoins en tant qu'individus ou professionnels, garantissant des interactions numériques fluides qui améliorent le quotidien." },
-      "simplify": { "title": "Nous simplifions", "desc": "Éliminer la complexité en intégrant une automatisation intelligente, des interfaces intuitives et des systèmes interconnectés, rendant la technologie sans effort et efficace." },
-      "embrace": { "title": "Nous embrassons", "desc": "Nous restons en avance en pionnier des innovations, en adoptant les avancées de pointe et en fixant de nouveaux standards dans les expériences numériques fluides." }
+      "create": {
+        "title": "Nous créons",
+        "desc": "Des solutions qui anticipent vos besoins en tant qu'individus ou professionnels, garantissant des interactions numériques fluides qui améliorent le quotidien."
+      },
+      "simplify": {
+        "title": "Nous simplifions",
+        "desc": "Éliminer la complexité en intégrant une automatisation intelligente, des interfaces intuitives et des systèmes interconnectés, rendant la technologie sans effort et efficace."
+      },
+      "embrace": {
+        "title": "Nous embrassons",
+        "desc": "Nous restons en avance en pionnier des innovations, en adoptant les avancées de pointe et en fixant de nouveaux standards dans les expériences numériques fluides."
+      }
     },
-    "dna": { "label": "Notre ADN" },
     "values": {
-      "precision": { "label": "01", "title": "Précision", "desc": "Chaque décision est documentée, mesurée et traçable." },
-      "durability": { "label": "02", "title": "Durabilité", "desc": "Nous construisons pour le long terme, pas pour le prochain funding." },
-      "sovereignty": { "label": "03", "title": "Souveraineté", "desc": "Nos actifs, notre infrastructure, nos données. Aucune dépendance externe critique." },
-      "transparency": { "label": "04", "title": "Transparence", "desc": "Vis-à-vis de nos partenaires, utilisateurs et du marché." }
+      "precision": {
+        "label": "01",
+        "title": "Précision",
+        "desc": "Chaque décision est documentée, mesurée et traçable."
+      },
+      "durability": {
+        "label": "02",
+        "title": "Durabilité",
+        "desc": "Nous construisons pour le long terme, pas pour le prochain funding."
+      },
+      "sovereignty": {
+        "label": "03",
+        "title": "Souveraineté",
+        "desc": "Nos actifs, notre infrastructure, nos données. Aucune dépendance externe critique."
+      },
+      "transparency": {
+        "label": "04",
+        "title": "Transparence",
+        "desc": "Vis-à-vis de nos partenaires, utilisateurs et du marché."
+      }
     },
     "founder": {
       "label": "Le fondateur",
@@ -202,132 +428,24 @@
       "cta": "Prendre contact"
     },
     "swiss": {
-      "groupLabel": "Aegryn Group",
       "title": "Nos actifs. Une maison commune. Une ambition helvétique.",
       "cta": "Voir nos actifs"
     }
   },
-  "career": {
-    "hero": {
-      "label": "Aegryn Advisory & Carrières",
-      "title": "Advisory & Experts Écosystèmes Numériques",
-      "desc": "Aegryn recrute des Senior Advisors — des experts opérationnels en Data, IA et Cybersécurité pour structurer des écosystèmes numériques durables."
-    },
-    "positions": {
-      "label": "Postes à venir",
-      "count": "08",
-      "domain": "Domaine",
-      "type": "Type"
-    },
-    "apply": "Postuler",
-    "spontaneous": "Candidature spontanée",
-    "statement": {
-      "label": "Aegryn Advisory",
-      "title": "Engineered to Last — construit par des experts qui y croient.",
-      "cta": "Découvrir l'Advisory"
-    },
-    "domains": {
-      "all": "Tous les domaines",
-      "strategy": "Business Strategy",
-      "cyber": "Cybersécurité",
-      "finance": "Finance",
-      "growth": "Growth & Brand",
-      "ai": "AI & Data",
-      "architecture": "Architecture",
-      "ux": "UX & Design",
-      "product": "Product"
-    }
-  },
-  "assetPage": {
-    "back": "Nos actifs",
-    "presentation": "Présentation",
-    "audience": "Public cible",
-    "features": "Fonctionnalités",
-    "visit": "Visiter",
-    "comingSoon": "Bientôt disponible",
-    "cta": {
-      "title": "Découvrez l'ensemble de l'écosystème.",
-      "label": "Aegryn Group",
-      "allAssets": "Tous nos actifs",
-      "contact": "Nous contacter"
-    }
-  },
-  "assetCarousel": {
-    "label": "Notre écosystème",
-    "title": "Ce que nous construisons.",
-    "scrollHint": "← défiler →",
-    "swipeHint": "Faites glisser pour explorer →",
-    "cta": {
-      "label": "Aegryn Group",
-      "title": "Tous nos actifs.\nConçus pour durer.",
-      "button": "Voir tout"
-    },
-    "restricted": "Restreint",
-    "classifiedLabel": "CONFIDENTIEL",
-    "classifiedDesc": "Protocole en développement confidentiel.\nAccès restreint aux partenaires accrédités."
-  },
-  "growWithUs": {
-    "hero": {
-      "label": "Partenariats Stratégiques & Investissement",
-      "title": "Grandissons ensemble.",
-      "desc": "Aegryn invite des investisseurs visionnaires et des partenaires à rejoindre un mouvement de fond dans la technologie numérique. Vision long terme. Exécution disciplinée.",
-      "cta": "Nous contacter"
-    },
-    "investors": {
-      "label": "/ Investisseurs",
-      "sub": "Devenez un acteur clé",
-      "items": [
-        { "num": "01", "title": "Marché à forte croissance", "desc": "Nous sommes positionnés dans un secteur d'écosystèmes numériques en pleine transformation, ouvrant d'importantes opportunités de revenus." },
-        { "num": "02", "title": "Expertise éprouvée", "desc": "Notre équipe est composée de développeurs, designers UX et stratèges marketing engagés à livrer des produits numériques de pointe." },
-        { "num": "03", "title": "Technologie nouvelle génération", "desc": "Nous intégrons l'IA, le machine learning et l'automatisation pour créer des solutions pérennes, conçues pour durer et scaler." },
-        { "num": "04", "title": "Succès basé sur la donnée", "desc": "Notre modèle économique robuste et nos stratégies financières garantissent rentabilité à long terme et innovation continue." },
-        { "num": "05", "title": "Transparent & orienté investisseur", "desc": "Nous fournissons des mises à jour claires et régulières sur l'avancement des projets, les jalons financiers et les tendances marché." }
-      ]
-    },
-    "partners": {
-      "label": "/ Partenaires",
-      "sub": "Opportunités à fort impact",
-      "items": [
-        { "title": "Développement d'applications", "desc": "Élargissez le portefeuille de services de votre agence et débloquez de nouveaux flux de revenus significatifs." },
-        { "title": "Assurance embarquée", "desc": "Proposez une couverture instantanée et transparente pour les achats, livraisons et transactions financières." },
-        { "title": "Solutions de paiement intégrées", "desc": "Activez les paiements en temps réel, le financement flexible et les modèles de partage de revenus." },
-        { "title": "Initiatives de croissance co-brandées", "desc": "Lancez des campagnes virales, des offres exclusives et des événements à durée limitée." },
-        { "title": "Campagnes marketing data-driven", "desc": "Exploitez les données de la plateforme pour créer des campagnes marketing hautement ciblées et personnalisées." },
-        { "title": "Collaborations réseaux sociaux & influenceurs", "desc": "Amplifiez le message de notre marque via des campagnes réseaux sociaux engageantes et des partenariats influenceurs stratégiques." }
-      ]
-    },
-    "cta": {
-      "title": "Prêt à construire l'avenir ensemble ?",
-      "button": "Nous contacter"
-    }
-  },
   "contact": {
-    "faq": {
-      "label": "/ Questions fréquentes",
-      "items": [
-        {
-          "q": "Qui sommes-nous et que faisons-nous ?",
-          "a": "Aegryn est un constructeur d'actifs tech suisse qui conçoit et opère des écosystèmes numériques propriétaires — des environnements où la technologie structure le quotidien des individus, des professionnels et des marchés dans lesquels ils évoluent."
-        },
-        {
-          "q": "Qu'est-ce qui nous différencie ?",
-          "a": "Contrairement aux cabinets de conseil ou agences, nous construisons et opérons nos propres écosystèmes numériques. Chaque insight advisory, chaque protocole de sécurité, chaque cadre de croissance que nous proposons est issu d'une exécution réelle — pas de la théorie. Nous ne revendons pas des frameworks. Nous partageons ce qui fonctionne parce que nous l'utilisons nous-mêmes."
-        },
-        {
-          "q": "Comment investir ou devenir partenaire ?",
-          "a": "Nous accueillons les investisseurs visionnaires et partenaires stratégiques qui partagent notre perspective long terme. Utilisez le formulaire ci-dessus, sélectionnez \u00ab Partenariat \u00bb comme sujet, et notre équipe vous répondra sous 24h pour organiser un premier échange."
-        },
-        {
-          "q": "Où sommes-nous basés ?",
-          "a": "Aegryn a son siège en Suisse. Nos écosystèmes numériques opèrent à travers l'Europe, et notre practice advisory accompagne des clients en Suisse, en France et dans l'UE."
-        }
-      ]
+    "meta": {
+      "title": "Contact — AEGRYN",
+      "desc": "Prenez contact avec AEGRYN — advisory, certification d'actif, session auction, partenariat ou question générale."
     },
     "hero": {
+      "label": "Nous contacter",
       "title": "Parlons.",
-      "desc": "Advisory, partenariat, presse ou question générale — nous répondons sous 24h."
+      "desc": "Advisory, certification, auction, partenariat ou question générale — nous répondons sous 24h."
     },
-    "responseTime": { "label": "Délai de réponse", "value": "Sous 24 heures" },
+    "responseTime": {
+      "label": "Délai de réponse",
+      "value": "Sous 24 heures"
+    },
     "form": {
       "name": "Nom complet",
       "email": "Adresse email",
@@ -335,12 +453,12 @@
       "subject": "Sujet",
       "subjectPlaceholder": "Choisir un sujet",
       "subjects": {
-        "general": "Demande générale",
-        "advisory": "Advisory",
+        "advisory": "Advisory & Cybersécurité",
+        "grade": "Certification d'actif (Grade)",
+        "auction": "Session Auction",
         "partnership": "Partenariat",
-        "investor": "Investisseur",
-        "media": "Presse & Médias",
-        "career": "Carrières"
+        "press": "Presse & Médias",
+        "other": "Autre"
       },
       "message": "Message",
       "messagePlaceholder": "Décrivez votre demande...",
@@ -353,49 +471,438 @@
       }
     }
   },
-  "advisoryPage": {
-    "hero": {
-      "label": "Aegryn Advisory",
-      "title": "Clarté Stratégique.\nProfondeur Opérationnelle.",
-      "desc1": "Chez Aegryn Advisory, nous accompagnons les fondateurs, dirigeants et organisations face à des décisions technologiques critiques. Notre conseil repose sur la façon dont nous concevons, construisons et sécurisons nos propres écosystèmes numériques.",
-      "desc2": "Nous ne nous appuyons pas sur la théorie, les tendances ou les frameworks recyclés. Nous apportons une direction stratégique claire, directe et ancrée dans l'exécution — en Data, IA et Cybersécurité.",
-      "quote": "Pas de slides interminables. Pas de playbooks génériques.\nUniquement des standards testés dans des environnements réels.",
-      "cta": "Prendre contact"
+  "acquisition": {
+    "meta": {
+      "title": "Support à l'acquisition — AEGRYN Advisory",
+      "desc": "AEGRYN accompagne les acquéreurs institutionnels dans l'identification, la qualification et la transaction d'actifs tech certifiés en Europe."
     },
-    "why": {
-      "label": "Pourquoi Advisory ?",
-      "desc1": "Concevoir ou faire évoluer un écosystème numérique demande plus que de l'ambition. Cela requiert une clarté architecturale, une exécution disciplinée et une vision long terme.",
-      "desc2": "Aegryn Advisory existe pour les dirigeants qui ont besoin d'un accompagnement structuré au moment où les décisions en Data, IA et Cybersécurité définissent la résilience future.",
-      "tagline": "Notre rôle est simple : apporter la clarté, réduire le risque, accélérer les bonnes décisions."
-    },
-    "whoFor": {
-      "label": "Pour qui ?",
+    "label": "AEGRYN Advisory — Service",
+    "title": "Vous cherchez.\nNous trouvons.\nNous sécurisons.",
+    "desc": "Un service d'acquisition dédié pour les investisseurs, fonds et holdings qui souhaitent accéder aux meilleures opportunités tech en Europe — certifiées, qualifiées, prêtes à transacter.",
+    "ctaPrimary": "Discuter de mon mandat",
+    "ctaDiscover": "Lire nos analyses",
+    "forWhom": {
+      "label": "Pour qui",
+      "title": "Un service pour les acquéreurs sérieux.",
       "items": [
-        { "title": "Fondateurs & Builders", "desc": "Vous construisez ou faites évoluer une plateforme numérique et faites face à des décisions structurelles qui définiront sa résilience long terme. Nous vous aidons à établir des fondations solides avant que la complexité s'accumule." },
-        { "title": "Organisations en croissance", "desc": "À mesure que votre organisation grandit, la profondeur technique devient critique. Nous apportons une perspective indépendante et senior sur la scalabilité infra, le déploiement IA et la cohérence architecturale." },
-        { "title": "Directions en transition", "desc": "L'évolution numérique exige une discipline structurelle, pas des correctifs incrémentaux. Nous accompagnons les équipes dirigeantes dans la modernisation legacy, la restructuration data et le renforcement cybersécurité." }
+        {
+          "title": "Fonds d'investissement",
+          "desc": "PE, VC, family offices cherchant des actifs tech à intégrer à leur portefeuille avec un grade de certification indépendant."
+        },
+        {
+          "title": "Holdings industriels",
+          "desc": "Groupes cherchant à acquérir des actifs complémentaires ou à verticaliser leur chaîne de valeur digitale."
+        },
+        {
+          "title": "Entrepreneurs acquéreurs",
+          "desc": "Opérateurs souhaitant acquérir un actif à reprendre, à faire croître ou à fusionner avec une activité existante."
+        }
       ]
     },
-    "experts": {
-      "label": "Nos Experts",
-      "count": "Senior Advisors"
-    },
-    "domains": {
-      "label": "Nos domaines d'intervention",
-      "items": [
-        { "title": "Produits Numériques", "desc": "Applications mobiles, plateformes web, SaaS, choix technologiques, gestion de projets numériques." },
-        { "title": "Audit & Sécurité Applicative", "desc": "Évaluation des solutions numériques, recommandations, conformité et attribution d'un label de confiance annuel." },
-        { "title": "Intelligence Artificielle & Automatisation", "desc": "Agents IA, automatisation des processus, productivité, intégration de l'IA dans les produits et organisations." },
-        { "title": "Droit Numérique & Propriété Intellectuelle", "desc": "CGU, conformité numérique, protection IP, structuration juridique des produits numériques." },
-        { "title": "Design & Expérience Utilisateur", "desc": "UX/UI, identité produit, parcours utilisateurs." },
-        { "title": "Stratégie Business", "desc": "Architecture métier, logique revenus, efficience capital, modèles scalables, positionnement marché." }
+    "offer": {
+      "label": "Ce que nous faisons",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Définition du mandat",
+          "desc": "Cadrage précis de vos critères d'acquisition : secteur, grade, ARR, géographie, structure de deal."
+        },
+        {
+          "num": "02",
+          "title": "Sourcing propriétaire",
+          "desc": "Accès à notre pipeline d'actifs certifiés et non-publics. Aucune enchère ouverte. Opportunités en exclusivité ou bilatérale."
+        },
+        {
+          "num": "03",
+          "title": "Qualification & due diligence",
+          "desc": "Rapport de qualification AEGRYN Grade + analyse des 4 dimensions. Vous décidez en connaissance de cause."
+        },
+        {
+          "num": "04",
+          "title": "Structuration & closing",
+          "desc": "Accompagnement jusqu'au closing : LOI, escrow institutionnel, conditions suspensives, documentation."
+        }
       ]
     },
-    "approach": {
-      "label": "Approche",
-      "title": "La bonne décision commence par la bonne conversation.",
-      "desc": "Nous offrons du temps senior qualifié, des échanges directs avec les bons experts et des recommandations immédiatement actionnables. Vous payez pour l'expertise et l'expérience, pas pour la structure.",
-      "cta": "Prendre contact"
+    "diff": {
+      "label": "Notre différence",
+      "items": [
+        {
+          "title": "Certification indépendante",
+          "desc": "Chaque actif est évalué par nos analystes avant d'être présenté — pas de prospectus commercial non vérifié."
+        },
+        {
+          "title": "Pipeline non-public",
+          "desc": "La majorité de nos actifs ne sont pas sur le marché ouvert. Accès réservé aux mandants AEGRYN."
+        },
+        {
+          "title": "Alignement d'intérêts",
+          "desc": "Notre rémunération est conditionnée au closing réussi. Pas de frais de retainer. Pas d'incitation à présenter des deals sous-optimaux."
+        },
+        {
+          "title": "Confidentialité absolue",
+          "desc": "NDA systématique. Identité de l'acquéreur protégée jusqu'au terme convenu. Aucune divulgation sans accord explicite."
+        }
+      ]
+    },
+    "fees": {
+      "label": "Honoraires",
+      "title": "Alignés sur votre succès.",
+      "desc": "Notre rémunération est exclusivement à la performance : un pourcentage du prix de transaction au closing, sans frais fixes.",
+      "note": "Les conditions précises sont définies dans la lettre de mission signée avant tout engagement."
+    },
+    "cta": {
+      "title": "Prêt à initier un mandat d'acquisition ?",
+      "desc": "Décrivez votre cible idéale et nous revenons vers vous sous 48h avec une première sélection d'opportunités.",
+      "btn": "Initier mon mandat"
+    }
+  },
+  "discover": {
+    "meta": {
+      "title": "Discover — Intelligence de marché AEGRYN",
+      "desc": "Rapports marché, guides vendeurs et acquéreurs, analyses certification — l'intelligence du marché tech européen par AEGRYN."
+    },
+    "label": "AEGRYN Discover",
+    "title": "Intelligence de marché.\nAccessible à tous.",
+    "desc": "Rapports, guides et analyses pour comprendre le marché des actifs tech européens — rédigés par les équipes AEGRYN.",
+    "filterAll": "Tous",
+    "filterMarket": "Rapport marché",
+    "filterSeller": "Guide vendeur",
+    "filterBuyer": "Guide acquéreur",
+    "filterCertification": "Certification",
+    "filterStrategy": "Stratégie",
+    "readMin": "min de lecture",
+    "readMore": "Lire l'article",
+    "backToDiscover": "← Retour à Discover",
+    "featuredLabel": "À la une",
+    "allArticles": "Tous les articles",
+    "ctaGrade": "Certifier mon actif",
+    "ctaAuction": "Voir les sessions",
+    "noArticles": "Aucun article dans cette catégorie pour l'instant.",
+    "newsletterLabel": "Newsletter",
+    "newsletterTitle": "Ne manquez aucune analyse.",
+    "newsletterDesc": "Recevez les rapports marché et guides AEGRYN directement dans votre boîte mail.",
+    "newsletterCta": "S'abonner"
+  },
+  "grade": {
+    "meta": {
+      "title": "Système de grade AEGRYN — Certification d'actifs tech",
+      "desc": "Le protocole AEGRYN Grade certifie objectivement chaque actif tech sur 4 dimensions : Code, Infrastructure, Finance, Stratégie."
+    },
+    "index": {
+      "label": "Système AEGRYN Grade",
+      "title": "La vérité objective\nsur chaque actif tech.",
+      "desc": "Pas d'estimation. Pas de feeling. Un protocole d'évaluation rigoureux sur 4 dimensions, débouchant sur un grade public, opposable et traçable.",
+      "ctaSubmit": "Soumettre pour certification",
+      "ctaMethod": "Lire la méthodologie"
+    },
+    "grades": [
+      {
+        "code": "AEG ★",
+        "name": "Exceptionnel",
+        "color": "grade-star",
+        "desc": "Top 1% des actifs soumis. Prêt pour transaction institutionnelle immédiate."
+      },
+      {
+        "code": "AEG AAA",
+        "name": "Premium",
+        "color": "grade-aaa",
+        "desc": "Actif mature, documenté, valorisation fiable. Transaction standard sans réserve."
+      },
+      {
+        "code": "AEG AA",
+        "name": "Solide",
+        "color": "grade-aa",
+        "desc": "Bonnes métriques, quelques optimisations recommandées. Valorisation confirmée."
+      },
+      {
+        "code": "AEG A",
+        "name": "Standard",
+        "color": "grade-a",
+        "desc": "Potentiel identifié, axes d'amélioration documentés. Plan de valeur proposé."
+      },
+      {
+        "code": "AEG B",
+        "name": "Early Stage",
+        "color": "grade-b",
+        "desc": "Actif en développement. Plan de remédiation requis avant transaction."
+      }
+    ],
+    "dimensions": {
+      "label": "Les 4 dimensions d'évaluation",
+      "title": "Un grade, quatre vérités.",
+      "items": [
+        {
+          "code": "C",
+          "name": "Code",
+          "desc": "Qualité du code, dette technique, couverture tests, sécurité applicative, documentation."
+        },
+        {
+          "code": "I",
+          "name": "Infrastructure",
+          "desc": "Architecture, résilience, scalabilité, coûts hébergement, sécurité opérationnelle."
+        },
+        {
+          "code": "F",
+          "name": "Finance",
+          "desc": "ARR/MRR, trajectoire de croissance, marges, CAC, LTV, burn rate."
+        },
+        {
+          "code": "S",
+          "name": "Stratégie",
+          "desc": "Positionnement marché, barrières à l'entrée, dépendances, pipeline, roadmap."
+        }
+      ]
+    },
+    "process": {
+      "label": "Le processus de certification",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Soumission",
+          "desc": "Formulaire en ligne + documentation initiale. Pré-qualification sous 5 jours ouvrés."
+        },
+        {
+          "num": "02",
+          "title": "Analyse",
+          "desc": "Accès data room. Évaluation sur 4 dimensions par nos analystes certifiés."
+        },
+        {
+          "num": "03",
+          "title": "Rapport",
+          "desc": "Rapport de certification complet avec grade, sous-codes et recommandations."
+        },
+        {
+          "num": "04",
+          "title": "Publication",
+          "desc": "Le grade est publié dans le catalogue AEGRYN et tracé blockchain."
+        }
+      ]
+    },
+    "submit": {
+      "label": "Soumettre un actif",
+      "title": "Obtenez le grade\nqui donne du prix à votre actif.",
+      "desc": "La certification AEGRYN est le passeport de votre actif pour accéder aux acquéreurs institutionnels et aux sessions d'auction.",
+      "cta": "Démarrer la soumission"
+    },
+    "methodology": {
+      "label": "Méthodologie",
+      "title": "Un protocole reproductible.\nPas une appréciation subjective.",
+      "desc": "La méthodologie AEGRYN Grade est documentée, versionnée et auditée. Chaque analyste suit le même protocole.",
+      "versionLabel": "Version du protocole",
+      "version": "AEGRYN Grade Protocol v2.1 — 2026",
+      "principlesLabel": "Principes fondamentaux",
+      "principles": [
+        {
+          "title": "Reproductibilité",
+          "desc": "Deux analystes indépendants appliquant le même protocole doivent aboutir au même grade à ±1 sous-code près."
+        },
+        {
+          "title": "Traçabilité",
+          "desc": "Chaque grade est signé numériquement et ancré blockchain. Toute modification génère une nouvelle version traçable."
+        },
+        {
+          "title": "Indépendance",
+          "desc": "Les analystes n'ont aucun intérêt financier dans les actifs certifiés. Séparation stricte certification/transaction."
+        },
+        {
+          "title": "Évolutivité",
+          "desc": "Un grade peut être révisé après amélioration documentée. Le grade original reste visible dans l'historique."
+        }
+      ],
+      "scoringLabel": "Système de notation",
+      "scoringDesc": "Chaque dimension est notée de 0 à 25 points. Le total détermine le grade selon une grille publiée.",
+      "scores": [
+        {
+          "range": "90–100",
+          "grade": "AEG ★",
+          "color": "grade-star"
+        },
+        {
+          "range": "75–89",
+          "grade": "AEG AAA",
+          "color": "grade-aaa"
+        },
+        {
+          "range": "60–74",
+          "grade": "AEG AA",
+          "color": "grade-aa"
+        },
+        {
+          "range": "45–59",
+          "grade": "AEG A",
+          "color": "grade-a"
+        },
+        {
+          "range": "30–44",
+          "grade": "AEG B",
+          "color": "grade-b"
+        }
+      ]
+    }
+  },
+  "auction": {
+    "meta": {
+      "title": "Auction — Sessions de transactions d'actifs tech",
+      "desc": "Sessions AEGRYN : achetez ou vendez des actifs tech certifiés. Catalogue, prochaine session, résultats."
+    },
+    "index": {
+      "label": "Sessions AEGRYN Auction",
+      "title": "La place de marché des actifs tech\ncertifiés d'Europe.",
+      "desc": "Pas d'enchères ouvertes. Des sessions privées, rigoureuses, réservées aux vendeurs certifiés et acquéreurs qualifiés. Chaque actif est gradé. Chaque transaction est encadrée.",
+      "ctaCatalog": "Voir le catalogue",
+      "ctaSession": "Prochaine session",
+      "ctaSubmit": "Soumettre un actif",
+      "statsLabel": "En chiffres",
+      "stats": [
+        {
+          "value": "<25%",
+          "label": "Taux d'acceptation"
+        },
+        {
+          "value": "100%",
+          "label": "Actifs certifiés"
+        },
+        {
+          "value": "Escrow",
+          "label": "Sécurisation des fonds"
+        },
+        {
+          "value": "NDA",
+          "label": "Confidentialité systématique"
+        }
+      ],
+      "howLabel": "Comment ça fonctionne",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Soumission",
+          "desc": "Vous soumettez votre actif via le formulaire. Nos experts procèdent à une pré-qualification sous 5 jours ouvrés."
+        },
+        {
+          "num": "02",
+          "title": "Certification",
+          "desc": "Un protocole d'évaluation sur 4 dimensions (Code, Infra, Finance, Stratégie) débouche sur un grade AEG."
+        },
+        {
+          "num": "03",
+          "title": "Session",
+          "desc": "L'actif certifié est présenté aux acquéreurs qualifiés lors d'une session privée. Vous fixez votre prix plancher."
+        },
+        {
+          "num": "04",
+          "title": "Transaction",
+          "desc": "Négociation encadrée, NDA, escrow institutionnel. Clôture sécurisée pour les deux parties."
+        }
+      ]
+    },
+    "catalog": {
+      "label": "Catalogue AEGRYN",
+      "title": "Actifs certifiés\ndisponibles.",
+      "desc": "Chaque actif listé dans ce catalogue a passé le protocole de certification AEGRYN. Grade, sous-codes, valorisation indicative — tout est documenté.",
+      "filterAll": "Tous les grades",
+      "filterStar": "AEG ★",
+      "filterAAA": "AEG AAA",
+      "filterAA": "AEG AA",
+      "filterA": "AEG A",
+      "filterB": "AEG B",
+      "emptyTitle": "Catalogue en préparation.",
+      "emptyDesc": "La prochaine session est en cours de constitution. Inscrivez-vous pour être notifié en priorité.",
+      "notifyLabel": "Me notifier",
+      "notifyCta": "Être notifié en priorité",
+      "assetGrade": "Grade",
+      "assetCategory": "Catégorie",
+      "assetRevenue": "ARR indicatif",
+      "assetAsk": "Prix vendeur",
+      "viewAsset": "Voir la fiche",
+      "confidential": "Confidentiel — NDA requis"
+    },
+    "session": {
+      "label": "Prochaine session",
+      "title": "Session Q3 — 2026",
+      "date": "Date",
+      "dateTbd": "À confirmer — Q3 2026",
+      "format": "Format",
+      "formatValue": "Session privée — invitation uniquement",
+      "location": "Lieu",
+      "locationValue": "Zurich, Suisse (+ accès distanciel sécurisé)",
+      "assetsLabel": "Actifs en session",
+      "assetsTbd": "Catalogue publié 30 jours avant la session",
+      "registerTitle": "Demander un accès",
+      "registerDesc": "L'accès aux sessions est réservé aux acquéreurs qualifiés. Complétez le formulaire pour soumettre votre candidature.",
+      "registerCta": "Demander l'accès acquéreur",
+      "sellerTitle": "Vous souhaitez vendre ?",
+      "sellerDesc": "Soumettez votre actif dès maintenant. La certification prend 2 à 4 semaines.",
+      "sellerCta": "Soumettre mon actif",
+      "pastSessions": "Sessions précédentes",
+      "noSessions": "Aucune session passée pour l'instant."
+    },
+    "results": {
+      "label": "Résultats des sessions",
+      "title": "Transparence totale\nsur les transactions clôturées.",
+      "desc": "Chaque session clôturée fait l'objet d'un compte-rendu public anonymisé. Montants, grades, durées de négociation — le marché mérite de la clarté.",
+      "noResults": "Aucun résultat disponible. Les résultats de la première session seront publiés ici.",
+      "sessionLabel": "Session",
+      "assetsTransacted": "Actifs transactés",
+      "totalVolume": "Volume total",
+      "avgMultiple": "Multiple médian"
+    },
+    "sell": {
+      "label": "Vendre via AEGRYN",
+      "title": "Votre actif mérite\nmieux qu'un broker.",
+      "desc": "Un processus transparent, un grade objectif, des acquéreurs pré-qualifiés. Pas de commission cachée — notre rémunération est alignée sur votre succès.",
+      "step1Title": "Soumettez",
+      "step1Desc": "Remplissez le formulaire de soumission. Informations de base sur l'actif, métriques clés, documentation disponible.",
+      "step2Title": "Certification",
+      "step2Desc": "Notre équipe évalue votre actif sur 4 dimensions. Vous recevez un rapport de certification complet avec le grade AEG.",
+      "step3Title": "Préparation session",
+      "step3Desc": "Vous signez les CGV vendeur, définissez votre prix plancher et accédez à la liste des acquéreurs qualifiés inscrits.",
+      "step4Title": "Transaction",
+      "step4Desc": "Négociation encadrée par nos équipes. Escrow institutionnel. Transfert sécurisé des droits.",
+      "feesTitle": "Notre modèle de rémunération",
+      "feesDesc": "Frais de certification fixes + success fee sur transaction. Aucun frais si aucune transaction n'est conclue.",
+      "feesCert": "Certification",
+      "feesCertValue": "Forfait selon complexité",
+      "feesSuccess": "Success fee",
+      "feesSuccessValue": "% du prix de transaction",
+      "cta": "Soumettre mon actif maintenant"
+    },
+    "buy": {
+      "label": "Acquérir via AEGRYN",
+      "title": "Des actifs vérifiés.\nDes transactions sécurisées.",
+      "desc": "Chaque actif que vous voyez dans notre catalogue est certifié, gradé et documenté. Vous négociez avec un vendeur qui a accepté notre protocole. Vous achetez avec escrow.",
+      "qualifTitle": "Profil acquéreur",
+      "qualifDesc": "Les sessions AEGRYN sont réservées aux acquéreurs sérieux : fonds PE/VC, family offices, entrepreneurs acquéreurs, holdings. Complétez le dossier de qualification.",
+      "qualifItems": [
+        "Capacité financière documentée",
+        "Lettre d'intention ou historique d'acquisitions",
+        "NDA signé avec AEGRYN",
+        "Entretien de qualification (30 min)"
+      ],
+      "processTitle": "Le processus acquéreur",
+      "processSteps": [
+        {
+          "num": "01",
+          "title": "Qualification",
+          "desc": "Dossier de qualification + entretien. Accès au catalogue complet une fois validé."
+        },
+        {
+          "num": "02",
+          "title": "Due diligence",
+          "desc": "Accès au data room de l'actif sous NDA. Rapport de certification AEGRYN inclus."
+        },
+        {
+          "num": "03",
+          "title": "Offre",
+          "desc": "Vous soumettez une offre via notre plateforme sécurisée. Le vendeur dispose de 72h pour répondre."
+        },
+        {
+          "num": "04",
+          "title": "Closing",
+          "desc": "Accord des parties → escrow institutionnel → transfert de droits. AEGRYN reste garant de la procédure."
+        }
+      ],
+      "cta": "Demander l'accès acquéreur"
     }
   },
   "stats": {
@@ -404,28 +911,25 @@
     "base": "Base Suisse"
   },
   "footer": {
-    "groupLabel": "Aegryn Group",
-    "legal": "© 2026 AEGRYN. All rights reserved.",
+    "legal": "© 2026 Aegryn Sàrl — Tous droits réservés",
     "company": "An Aegryn company",
     "privacy": "Confidentialité",
-    "terms": "Conditions d'utilisation",
-    "dataProtection": "Politique de protection des données",
-    "neediuLegal": "Neediu — Protection des données & CGU",
+    "terms": "Conditions",
     "tagline": "Engineered to Last",
-    "swissTagline": "Swiss Tech Asset Builder",
-    "navLabel": "Aegryn",
-    "ecosystemLabel": "Écosystème",
-    "advisoryLabel": "Advisory",
-    "advisoryDesc": "Clarté stratégique en Data, IA et Cybersécurité.",
-    "advisoryBook": "Prendre contact ↗",
-    "medallionText": "Discutons . Contactez-nous . Discutons . Contactez-nous .",
-    "contactLabel": "Nous contacter"
+    "neediuLegal": "Neediu est une marque déposée d'Aegryn Sàrl. Tous droits réservés."
   },
-  "cookie": {
-    "title": "Aegryn — Cookies & Analytics",
-    "desc": "Nous utilisons Cloudflare Analytics (anonymisé) pour mesurer l'audience et améliorer l'expérience. Aucune donnée publicitaire. Conformité RGPD & LPD.",
-    "learnMore": "En savoir plus",
-    "accept": "Accepter",
-    "refuse": "Refuser"
+  "assetPage": {
+    "back": "← Retour aux actifs",
+    "visit": "Visiter",
+    "comingSoon": "Bientôt disponible",
+    "presentation": "Présentation",
+    "audience": "Audience cible",
+    "features": "Fonctionnalités clés",
+    "cta": {
+      "label": "Intéressé par cet actif ?",
+      "title": "Discutons de votre projet d'acquisition",
+      "allAssets": "Voir tous les actifs",
+      "contact": "Contacter AEGRYN"
+    }
   }
 }

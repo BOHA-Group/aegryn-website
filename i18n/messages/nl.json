@@ -1,22 +1,35 @@
 {
   "nav": {
-    "home": "Home",
     "about": "Over ons",
     "whatWeBuild": "Wat we bouwen",
     "advisory": "Advisory",
     "growWithUs": "Groeien met ons",
     "career": "Carrières",
-    "contact": "Contact"
+    "contact": "Contact",
+    "auction": "Veiling",
+    "grade": "Grade",
+    "assets": "Assets",
+    "services": "Diensten",
+    "discover": "Ontdekken",
+    "clientSpace": "Klantenzone",
+    "submitAsset": "Asset indienen",
+    "auctionCatalog": "Catalogus",
+    "auctionSell": "Asset verkopen",
+    "auctionBuy": "Koper worden",
+    "auctionSession": "Volgende sessie",
+    "auctionResults": "Resultaten",
+    "gradeSystem": "Grade-systeem",
+    "gradeMethod": "Methodologie",
+    "gradeSubmit": "Indienen voor certificering",
+    "servicesAdvisory": "Advisory",
+    "servicesAlliances": "Allianties",
+    "servicesAcquisition": "Acquisitieondersteuning"
   },
   "hero": {
     "tagline": "Engineered to Last",
-    "eyebrow": "Zwitserse tech-assetbouwer",
     "title": "Wij bouwen\nwat blijft.",
     "sub": "Eigen assets van de protocollaag\ntot de gebruikersinterface.",
-    "cta": "Ontdek onze assets",
-    "strip": "6 assets — 3 categorieën",
-    "geo": "Zwitserland · Europa · Global",
-    "scroll": "Scrollen"
+    "cta": "Ontdek onze assets"
   },
   "manifesto": {
     "aegis": {
@@ -42,6 +55,29 @@
       "ai": "AI & Protocollen",
       "lifestyle": "Services & Lifestyle",
       "transactions": "Transacties & Netwerk"
+    },
+    "page": {
+      "label": "AEGRYN Ecosysteem",
+      "title": "Zes eigen assets.\nÉén gedeelde visie.",
+      "desc": "Elk AEGRYN-asset wordt intern ontworpen, gebouwd en beheerd. Volledig eigendom, absolute soevereiniteit.",
+      "meta": {
+        "title": "AEGRYN Assets — Eigen ecosysteem",
+        "desc": "Ontdek de 6 eigen AEGRYN-assets."
+      },
+      "filterAll": "Alle",
+      "filterAI": "AI & Protocollen",
+      "filterLifestyle": "Services & Lifestyle",
+      "filterTransactions": "Transacties & Netwerk",
+      "statusLive": "Live",
+      "statusBeta": "Beta",
+      "statusDev": "In ontwikkeling",
+      "gradeLabel": "AEGRYN Grade",
+      "gradePending": "Certificering loopt",
+      "visitSite": "Bezoek site",
+      "viewDetails": "Bekijk details",
+      "auctionEligible": "Veiling-geschikt",
+      "ctaGrade": "Mijn asset certificeren",
+      "ctaAuction": "Veilingsessies bekijken"
     }
   },
   "advisory": {
@@ -55,248 +91,687 @@
       "cyber": {
         "title": "Cyberbeveiliging",
         "desc": "Aanvalsoppervlak identificeren, infrastructuur harden en incidenten afhandelen.",
-        "items": ["Aanvalsoppervlak-audit", "Penetratietesten", "Incidentrespons", "Cloud & on-premise hardening"]
+        "items": [
+          "Aanvalsoppervlak-audit",
+          "Penetratietesten",
+          "Incidentrespons",
+          "Cloud & on-premise hardening"
+        ]
       },
       "ai": {
         "title": "AI-audit & Vertrouwen",
         "desc": "Wij auditten uw modellen, pipelines en beslissingsprocessen voor betrouwbaarheid en compliance.",
-        "items": ["Algoritmische bias-audit", "EU AI Act-compliance", "LLM red-teaming", "Beslissingstracering"]
+        "items": [
+          "Algoritmische bias-audit",
+          "EU AI Act-compliance",
+          "LLM red-teaming",
+          "Beslissingstracering"
+        ]
       },
       "strategy": {
         "title": "Digitale Strategie",
         "desc": "Afstemming tussen uw digitale ambities en Europese en Zwitserse regelgevingsvereisten.",
-        "items": ["Data governance", "AVG & DSG-compliance", "Veilige architectuur", "Innovatie-roadmap"]
+        "items": [
+          "Data governance",
+          "AVG & DSG-compliance",
+          "Veilige architectuur",
+          "Innovatie-roadmap"
+        ]
       }
     },
     "approach": {
       "title": "Een rigoureus protocol, geen belofte.",
       "desc": "Elke opdracht begint met een uitgebreide diagnose vóór elke aanbeveling. Wij documenteren, meten en leveren.",
       "steps": [
-        { "label": "Diagnose", "desc": "Volledige mapping van uw digitale blootstelling en identificatie van kritieke risico's." },
-        { "label": "Protocol", "desc": "Ontwikkeling van een geprioriteerd behandelingsplan, afgestemd op uw sector en beperkingen." },
-        { "label": "Uitvoering", "desc": "Implementatie met continue monitoring en transparante rapportage bij elke mijlpaal." },
-        { "label": "Hardening", "desc": "Einddocumentatie, kennisoverdracht en toegang tot nazorg." }
+        {
+          "label": "Diagnose",
+          "desc": "Volledige mapping van uw digitale blootstelling en identificatie van kritieke risico's."
+        },
+        {
+          "label": "Protocol",
+          "desc": "Ontwikkeling van een geprioriteerd behandelingsplan, afgestemd op uw sector en beperkingen."
+        },
+        {
+          "label": "Uitvoering",
+          "desc": "Implementatie met continue monitoring en transparante rapportage bij elke mijlpaal."
+        },
+        {
+          "label": "Hardening",
+          "desc": "Einddocumentatie, kennisoverdracht en toegang tot nazorg."
+        }
       ]
     }
   },
   "build": {
-    "hero": { "label": "Wat we bouwen", "title": "Zes assets. Één visie.", "desc": "Elk Aegryn-asset is ontworpen om zijn verticaal te domineren — van bedrijfs-AI tot transactienetwerken, van lifestyle tot vastgoed." },
-    "categories": { "ai": "AI & Protocollen", "lifestyle": "Services & Lifestyle", "transactions": "Transacties & Netwerk" },
-    "status": { "building": "In aanbouw", "concept": "Concept", "live": "Live" },
-    "visitSite": "Website bezoeken", "comingSoon": "Binnenkort beschikbaar",
-    "assets": {
-      "nexoris": { "desc": "Modulair AI-platform voor bedrijven die betrouwbaarheid, compliance en datasouvereiniteit vereisen.", "tags": ["AI", "B2B", "SaaS", "EU AI Act"] },
-      "kryolio": { "desc": "Netwerk voor digitaal en crypto-assetbeheer — portfolio, prestatietracking en geautomatiseerde strategie.", "tags": ["Crypto", "DeFi", "Portfolio", "Web3"] },
-      "lyvra": { "desc": "Premium lifestyle super-app voor abonnementsbeheer, digitale conciërge en gepersonaliseerde ervaring.", "tags": ["Lifestyle", "B2C", "App", "Premium"] },
-      "vorrex": { "desc": "Veilig peer-to-peer transactienetwerk met geïntegreerde complianceprotocollen voor Europese markten.", "tags": ["Fintech", "P2P", "Compliance", "SEPA"] },
-      "domify": { "desc": "Intelligent vastgoedplatform met AI-waardering en huurbeheer voor de Zwitserse en Europese markt.", "tags": ["Proptech", "AI", "Vastgoed", "CH/EU"] },
-      "fleetori": { "desc": "Volgende generatie vlootbeheer en logistieke oplossing voor stedelijke mobiliteitsbedrijven.", "tags": ["Logistiek", "Fleet", "B2B", "Mobiliteit"] }
+    "hero": {
+      "label": "Wat we bouwen",
+      "title": "Zes assets. Één visie.",
+      "desc": "Elk Aegryn-asset is ontworpen om zijn verticaal te domineren — van bedrijfs-AI tot transactienetwerken, van lifestyle tot vastgoed."
     },
-    "philosophy": { "label": "Onze filosofie", "title": "Eigendom. Soeverein. Duurzaam.", "desc": "We bouwen geen MVP's. We verkopen geen minderheidsbelangen aan VC's. Elk Aegryn-asset is ontworpen voor volledig eigendom en soevereine exploitatie." },
-    "pillars": { "proprietary": { "stat": "100%", "label": "Eigendom" }, "sovereign": { "stat": "CH", "label": "Soevereiniteit" }, "durable": { "stat": "∞", "label": "Duurzaamheid" } },
-    "advisoryCta": { "label": "Aegryn Advisory", "text": "Heeft uw bedrijf institutionele digitale bescherming nodig?", "button": "Ontdek Advisory" }
-  },
-  "whatwedo": {
-    "label": "Wat we doen",
-    "items": [
-      { "num": "01", "title": "ECOSYSTEEM-ENGINEERING", "desc": "We ontwerpen digitale ecosystemen voor schaalbaarheid, veerkracht en langetermijnwaarde — waar elk onderdeel verbindt en vermenigvuldigt." },
-      { "num": "02", "title": "ERVARINGSARCHITECTUUR", "desc": "We ontwerpen naadloze gebruikerservaringen die complexiteit vereenvoudigen en intuitiïve interacties creëren op al onze platforms." },
-      { "num": "03", "title": "TECHNOLOGISCHE FUNDAMENTEN", "desc": "We bouwen op solide, soevereine technologie-infrastructuur — met beveiliging, onafhankelijkheid en duurzaamheid op elke laag." },
-      { "num": "04", "title": "STRATEGISCHE ADVISORY", "desc": "Onze advisory is gebaseerd op echte uitvoeringsraamwerken in Data, AI & Beveiliging — verankerd in hoe we onze eigen ecosystemen bouwen." }
-    ]
-  },
-  "statsRow": {
-    "items": [
-      { "num": "6.8B", "label": "Mobiele apparaten totaal" },
-      { "num": "5.6B", "label": "Smartphone-verbindingen" },
-      { "num": "4h12", "label": "Dagelijkse schermtijd" },
-      { "num": "CH",   "label": "Ontwikkeld in Zwitserland" }
-    ]
-  },
-  "assetGrid": {
-    "sectionLabel": "Ons ecosysteem",
-    "sectionTitle": "Wat wij\nbouwen.",
-    "notStarted": "Niet gestart",
-    "comingSoon": "Binnenkort"
-  },
-  "aboutSection": {
-    "label": "Over Aegryn",
-    "title": "Zwitsers technologie-\nassetplatform.",
-    "desc": "We ontwerpen, financieren en beheren digitale ecosystemen die evolueren van gedurfde ideeën naar echte, duurzame technologie. Geen features — assets.",
-    "tagline": "Ontwikkeld in Zwitserland. Gebouwd om te blijven.",
-    "cta": "Over Aegryn",
-    "quote": "We bouwen digitale assets die het dagelijks leven verbeteren — voor individuen, professionals en de markten waarin zij opereren.",
-    "ceoName": "Yohann Bollack",
-    "ceoTitle": "Oprichter & CEO — Aegryn Group",
-    "stats": [
-      { "val": "6", "label": "Assets" },
-      { "val": "3", "label": "Categorieën" },
-      { "val": "6", "label": "Markten" }
-    ]
-  },
-  "missionSection": {
-    "label": "Onze Missie",
-    "sub": "Het leven vereenvoudigen met slimme apps",
-    "items": [
-      { "title": "WE CREEËREN", "desc": "Oplossingen die uw behoeften anticiperen als individuen of professionals, en naadloze digitale interacties garanderen die het dagelijks leven verbeteren." },
-      { "title": "WE VEREENVOUDIGEN", "desc": "We elimineren complexiteit door slimme automatisering, intuitiïve interfaces en onderling verbonden systemen te integreren." },
-      { "title": "WE OMARMEN", "desc": "We blijven voorop lopen door baanbrekende innovaties en het stellen van nieuwe standaarden in naadloze digitale ervaringen." }
-    ]
-  },
-  "whyapps": {
-    "label": "Waarom onze apps",
-    "count": "04",
-    "items": [
-      { "num": "01", "title": "Innovatief", "desc": "We benutten geavanceerde technologieën — AI, automatisering en slimme data — om apps te creëren die continu evolueren." },
-      { "num": "02", "title": "Veilig & Privaat", "desc": "Uw data is van u. Elke Aegryn-app is ontworpen met privacy-first architectuur en versleutelde communicatie." },
-      { "num": "03", "title": "Divers & Inclusief", "desc": "We ontwerpen voor iedereen. Onze apps zijn toegankelijk, cultureel gevoelig en beschikbaar in meerdere talen en markten." },
-      { "num": "04", "title": "Sociale Impact", "desc": "We bouwen met een doel. Elk platform vereenvoudigt echte dagelijkse uitdagingen en creëert meetbare waarde voor individuen en gemeenschappen." },
-      { "num": "05", "title": "Toegankelijk", "desc": "Van beginners tot ervaren professionals — onze apps zijn intuitiëf en drempelvrij, want de beste interface is er een die iedereen kan gebruiken." }
-    ]
+    "categories": {
+      "ai": "AI & Protocollen",
+      "lifestyle": "Services & Lifestyle",
+      "transactions": "Transacties & Netwerk"
+    },
+    "status": {
+      "building": "In aanbouw",
+      "concept": "Concept",
+      "live": "Live"
+    },
+    "visitSite": "Website bezoeken",
+    "comingSoon": "Binnenkort beschikbaar",
+    "assets": {
+      "nexoris": {
+        "desc": "Modulair AI-platform voor bedrijven die betrouwbaarheid, compliance en datasouvereiniteit vereisen.",
+        "tags": [
+          "AI",
+          "B2B",
+          "SaaS",
+          "EU AI Act"
+        ]
+      },
+      "kryolio": {
+        "desc": "Netwerk voor digitaal en crypto-assetbeheer — portfolio, prestatietracking en geautomatiseerde strategie.",
+        "tags": [
+          "Crypto",
+          "DeFi",
+          "Portfolio",
+          "Web3"
+        ]
+      },
+      "lyvra": {
+        "desc": "Premium lifestyle super-app voor abonnementsbeheer, digitale conciërge en gepersonaliseerde ervaring.",
+        "tags": [
+          "Lifestyle",
+          "B2C",
+          "App",
+          "Premium"
+        ]
+      },
+      "vorrex": {
+        "desc": "Veilig peer-to-peer transactienetwerk met geïntegreerde complianceprotocollen voor Europese markten.",
+        "tags": [
+          "Fintech",
+          "P2P",
+          "Compliance",
+          "SEPA"
+        ]
+      },
+      "domify": {
+        "desc": "Intelligent vastgoedplatform met AI-waardering en huurbeheer voor de Zwitserse en Europese markt.",
+        "tags": [
+          "Proptech",
+          "AI",
+          "Vastgoed",
+          "CH/EU"
+        ]
+      },
+      "fleetori": {
+        "desc": "Volgende generatie vlootbeheer en logistieke oplossing voor stedelijke mobiliteitsbedrijven.",
+        "tags": [
+          "Logistiek",
+          "Fleet",
+          "B2B",
+          "Mobiliteit"
+        ]
+      }
+    },
+    "philosophy": {
+      "label": "Onze filosofie",
+      "title": "Eigendom. Soeverein. Duurzaam.",
+      "desc": "We bouwen geen MVP's. We verkopen geen minderheidsbelangen aan VC's. Elk Aegryn-asset is ontworpen voor volledig eigendom en soevereine exploitatie."
+    },
+    "pillars": {
+      "proprietary": {
+        "stat": "100%",
+        "label": "Eigendom"
+      },
+      "sovereign": {
+        "stat": "CH",
+        "label": "Soevereiniteit"
+      },
+      "durable": {
+        "stat": "∞",
+        "label": "Duurzaamheid"
+      }
+    },
+    "advisoryCta": {
+      "text": "Heeft uw bedrijf institutionele digitale bescherming nodig?",
+      "button": "Ontdek Advisory"
+    }
   },
   "about": {
-    "hero": { "label": "Over Aegryn", "title": "Zwitserse tech-assetbouwer", "desc": "We ontwerpen, bouwen en beheren digitale ecosystemen — van gedurfde ideeën naar betrouwbare, duurzame technologie. Ontwikkeld in Zwitserland. Gebouwd om te blijven." },
-    "vision": {
-      "label": "Onze visie",
-      "text": "Wij geloven dat technologie meer moet doen dan indruk maken. Ze moet structureren, vereenvoudigen en alledaagse ervaringen verheffen. In een wereld vol gefragmenteerde apps en kortetermijnoplossingen bouwen we coherente digitale ecosystemen — omgevingen waar gebruikers, data en transacties op natuurlijke en veilige wijze verbonden zijn."
-    },
-    "mission": { "label": "Onze missie", "title": "Het leven vereenvoudigen met slimme apps.",
-      "create": { "title": "Wij creëren", "desc": "Oplossingen die uw behoeften anticiperen als individuen of professionals, en naadloze digitale interacties garanderen die het dagelijks leven verbeteren." },
-      "simplify": { "title": "Wij vereenvoudigen", "desc": "We elimineren complexiteit door slimme automatisering, intuïtieve interfaces en onderling verbonden systemen te integreren." },
-      "embrace": { "title": "Wij omarmen", "desc": "We blijven voorop lopen door baanbrekende innovaties en het stellen van nieuwe standaarden in naadloze digitale ervaringen." }
-    },
-    "dna": { "label": "Ons DNA" },
-    "values": {
-      "precision": { "label": "01", "title": "Precisie", "desc": "Elke beslissing is gedocumenteerd, gemeten en traceerbaar." },
-      "durability": { "label": "02", "title": "Duurzaamheid", "desc": "We bouwen voor de lange termijn, niet voor de volgende financieringsronde." },
-      "sovereignty": { "label": "03", "title": "Soevereiniteit", "desc": "Onze assets, onze infrastructuur, onze data. Geen kritieke externe afhankelijkheden." },
-      "transparency": { "label": "04", "title": "Transparantie", "desc": "Naar onze partners, gebruikers en de markt." }
-    },
-    "founder": { "label": "De oprichter", "bio1": "Yohann Bollack is ondernemer, builder en digitaal strateeg. Hij richtte Aegryn op met een eenvoudige overtuiging: de beste digitale assets worden geboren uit totale beheersing van de keten, van idee tot infrastructuur.", "bio2": "Gepassioneerd door de kruising van technologie, beveiliging en design leidt hij een ecosysteem van zes producten.", "cta": "Contact opnemen" },
-    "swiss": { "groupLabel": "Aegryn Group", "title": "Zes assets. Één gemeenschappelijk huis. Één Zwitserse ambitie.", "cta": "Bekijk onze assets" }
-  },
-  "career": {
-    "hero": { "label": "Aegryn Advisory & Carrières", "title": "Advisory & Experts in Digitale Ecosystemen", "desc": "Aegryn zoekt Senior Advisors — operationele experts in Data, AI en Cyberbeveiliging voor duurzame digitale ecosystemen." },
-    "positions": { "label": "Aankomende functies", "count": "08", "domain": "Domein", "type": "Type" },
-    "apply": "Solliciteren",
-    "spontaneous": "Open sollicitatie",
-    "statement": { "label": "Aegryn Advisory", "title": "Engineered to Last — gebouwd door experts die erin geloven.", "cta": "Ontdek Advisory" },
-    "domains": { "all": "Alle domeinen", "strategy": "Business Strategy", "cyber": "Cyberbeveiliging", "finance": "Financiën", "growth": "Growth & Brand", "ai": "AI & Data", "architecture": "Architectuur", "ux": "UX & Design", "product": "Product" }
-  },
-  "assetPage": {
-    "back": "Onze assets", "presentation": "Presentatie", "audience": "Doelgroep", "features": "Functies", "visit": "Bezoeken", "comingSoon": "Binnenkort beschikbaar",
-    "cta": { "title": "Ontdek het volledige ecosysteem.", "label": "Aegryn Group", "allAssets": "Al onze assets", "contact": "Neem contact op" }
-  },
-  "assetCarousel": {
-    "label": "Ons ecosysteem",
-    "title": "Wat we bouwen.",
-    "scrollHint": "← scrollen →",
-    "swipeHint": "Veeg om te verkennen →",
-    "cta": {
-      "label": "Aegryn Group",
-      "title": "Al onze assets.\nGebouwd om te blijven.",
-      "button": "Alles bekijken"
-    },
-    "restricted": "Beperkt",
-    "classifiedLabel": "VERTROUWELIJK",
-    "classifiedDesc": "Protocol in vertrouwelijke ontwikkeling.\nToegang beperkt tot geaccrediteerde partners."
-  },
-  "growWithUs": {
     "hero": {
-      "label": "Strategische Partnerschappen & Investeringen",
-      "title": "Groei met ons mee.",
-      "desc": "Aegryn nodigt visionaire investeerders en partners uit om deel uit te maken van een baanbrekende beweging in digitale technologie. Langetermijnvisie. Gedisciplineerde uitvoering.",
+      "label": "Over Aegryn",
+      "title": "Een builder, geen consultant.",
+      "desc": "Aegryn is een Swiss Tech Asset Builder. We ontwerpen, financieren en beheren eigen digitale assets vanuit Zwitserland."
+    },
+    "mission": {
+      "label": "Onze missie",
+      "title": "Bouwen wat de tand des tijds doorstaat.",
+      "p1": "Aegryn verkoopt geen projecten. We bouwen assets. Elk product dat we lanceren is ontworpen om te duren, langetermijnwaarde te genereren en economische cycli te doorstaan.",
+      "p2": "Ons model is gebaseerd op volledig eigendom van onze digitale assets, beheerd in een soevereine omgeving.",
+      "p3": "Zwitserland is niet alleen een adres. Het is onze standaard: neutraliteit, precisie, duurzaamheid."
+    },
+    "values": {
+      "precision": {
+        "label": "01",
+        "title": "Precisie",
+        "desc": "Elke beslissing is gedocumenteerd, gemeten en traceerbaar."
+      },
+      "durability": {
+        "label": "02",
+        "title": "Duurzaamheid",
+        "desc": "We bouwen voor de lange termijn, niet voor de volgende financieringsronde."
+      },
+      "sovereignty": {
+        "label": "03",
+        "title": "Soevereiniteit",
+        "desc": "Onze assets, onze infrastructuur, onze data. Geen kritieke externe afhankelijkheden."
+      },
+      "transparency": {
+        "label": "04",
+        "title": "Transparantie",
+        "desc": "Naar onze partners, gebruikers en de markt."
+      }
+    },
+    "founder": {
+      "label": "De oprichter",
+      "bio1": "Yohann Bollack is ondernemer, builder en digitaal strateeg. Hij richtte Aegryn op met een eenvoudige overtuiging: de beste digitale assets worden geboren uit totale beheersing van de keten, van idee tot infrastructuur.",
+      "bio2": "Gepassioneerd door de kruising van technologie, beveiliging en design leidt hij een ecosysteem van zes producten.",
       "cta": "Contact opnemen"
     },
-    "investors": {
-      "label": "/ Investeerders",
-      "sub": "Word een sleutelspeler",
-      "items": [
-        { "num": "01", "title": "Sterk groeiende markt", "desc": "We zijn gepositioneerd in de snel transformerende sector van digitale ecosystemen, met aanzienlijke omzetkansen." },
-        { "num": "02", "title": "Bewezen expertise", "desc": "Ons team bestaat uit topklasse ontwikkelaars, UX-designers en marketingstrategen die geavanceerde digitale producten leveren." },
-        { "num": "03", "title": "Volgende generatie technologie", "desc": "We integreren AI, machine learning en automatisering voor toekomstbestendige oplossingen, gebouwd voor duurzaamheid en schaalbaarheid." },
-        { "num": "04", "title": "Datagedreven succes", "desc": "Ons robuuste businessmodel en financiële strategieën garanderen langetermijnwinstgevendheid en aanhoudende innovatie." },
-        { "num": "05", "title": "Transparant & investeerdergericht", "desc": "We bieden duidelijke, consistente updates over projectvoortgang, financiële mijlpalen en marktontwikkelingen." }
-      ]
-    },
-    "partners": {
-      "label": "/ Partners",
-      "sub": "Krachtige opportuniteiten",
-      "items": [
-        { "title": "App-ontwikkeling", "desc": "Vergroot het dienstenportfolio van uw bureau en ontsluit significante nieuwe inkomstenstromen." },
-        { "title": "Embedded verzekering", "desc": "Bied directe, naadloze dekking voor aankopen, leveringen en financiële transacties." },
-        { "title": "Geïntegreerde betalingsoplossingen", "desc": "Activeer realtime betalingen, flexibele financiering en omzetdelingsmodellen." },
-        { "title": "Co-branded groei-initiatieven", "desc": "Lanceer virale campagnes, exclusieve aanbiedingen en tijdgebonden evenementen." },
-        { "title": "Datagedreven marketingcampagnes", "desc": "Benut platformdata om zeer gerichte en gepersonaliseerde marketingcampagnes te creëren die conversies stimuleren." },
-        { "title": "Social media & influencer-samenwerkingen", "desc": "Werk met ons samen om de boodschap van ons merk te versterken via boeiende social media-campagnes en strategische influencer-partnerships." }
-      ]
-    },
-    "cta": {
-      "title": "Klaar om samen de toekomst te bouwen?",
-      "button": "Contact opnemen"
+    "swiss": {
+      "title": "Zes assets. Één gemeenschappelijk huis. Één Zwitserse ambitie.",
+      "cta": "Bekijk onze assets"
     }
   },
   "contact": {
-    "faq": {
-      "label": "/ Veelgestelde vragen",
-      "items": [
-        { "q": "Wie zijn wij en wat doen we?", "a": "Aegryn is een Zwitserse tech-assetbouwer die eigen digitale ecosystemen ontwerpt en beheert — omgevingen waar technologie het dagelijks leven van individuen, professionals en de markten waarin zij opereren structureert." },
-        { "q": "Wat onderscheidt ons van de concurrentie?", "a": "In tegenstelling tot adviesbureaus of agencies bouwen en beheren we onze eigen digitale ecosystemen. Elk advisory-inzicht, beveiligingsprotocol en groeiframework dat we aanbieden is gebaseerd op echte uitvoering, niet op theorie." },
-        { "q": "Hoe kan ik investeren of partner worden?", "a": "We verwelkomen visionaire investeerders en strategische partners die onze langetermijnperspectief delen. Gebruik het contactformulier, selecteer \"Partnerschap\" als onderwerp en ons team reageert binnen 24 uur." },
-        { "q": "Waar zijn wij gevestigd?", "a": "Aegryn is gevestigd in Zwitserland. Onze digitale ecosystemen opereren in heel Europa en onze advisory practice bedient cliënten in Zwitserland, Frankrijk en de bredere EU." }
-      ]
+    "meta": {
+      "title": "Contact — AEGRYN",
+      "desc": "Neem contact op met AEGRYN — Advisory, certificering, veiling, partnerschap of algemene vraag."
     },
-    "hero": { "title": "Laten we praten.", "desc": "Advisory, partnerschap, pers of algemene vraag — we reageren binnen 24u." },
-    "responseTime": { "label": "Reactietijd", "value": "Binnen 24 uur" },
+    "hero": {
+      "label": "Contact opnemen",
+      "title": "Laten we praten.",
+      "desc": "Advisory, certificering, veiling, partnerschap of algemene vraag — we reageren binnen 24u."
+    },
+    "responseTime": {
+      "label": "Reactietijd",
+      "value": "Binnen 24 uur"
+    },
     "form": {
-      "name": "Volledige naam", "email": "E-mailadres", "company": "Bedrijf (optioneel)",
-      "subject": "Onderwerp", "subjectPlaceholder": "Kies een onderwerp",
-      "subjects": { "general": "Algemene vraag", "advisory": "Advisory", "partnership": "Partnerschap", "investor": "Investeerder", "media": "Pers & Media", "career": "Carrière" },
-      "message": "Bericht", "messagePlaceholder": "Beschrijf uw vraag...",
-      "submit": "Versturen", "sending": "Versturen...", "error": "Er is een fout opgetreden. Probeer het opnieuw of schrijf ons rechtstreeks.",
-      "success": { "title": "Bericht ontvangen.", "desc": "Wij reageren binnen 24 uur." }
+      "name": "Volledige naam",
+      "email": "E-mailadres",
+      "company": "Bedrijf (optioneel)",
+      "subject": "Onderwerp",
+      "subjectPlaceholder": "Kies een onderwerp",
+      "subjects": {
+        "advisory": "Advisory & Cyberbeveiliging",
+        "grade": "Asset-certificering (Grade)",
+        "auction": "Veilingsessie",
+        "partnership": "Partnerschap",
+        "press": "Pers & Media",
+        "other": "Anders"
+      },
+      "message": "Bericht",
+      "messagePlaceholder": "Beschrijf uw vraag...",
+      "submit": "Versturen",
+      "sending": "Versturen...",
+      "error": "Er is een fout opgetreden. Probeer het opnieuw of schrijf ons rechtstreeks.",
+      "success": {
+        "title": "Bericht ontvangen.",
+        "desc": "Wij reageren binnen 24 uur."
+      }
     }
   },
-  "advisoryPage": {
-    "hero": {
-      "label": "Aegryn Advisory",
-      "title": "Strategische Helderheid.\nOperationele Diepte.",
-      "desc1": "Bij Aegryn Advisory werken we samen met oprichters, leidinggevenden en organisaties die kritieke technologische beslissingen moeten nemen. Onze begeleiding is gebaseerd op hoe wij onze eigen digitale ecosystemen ontwerpen, bouwen en beveiligen.",
-      "desc2": "We baseren ons niet op theorie, trends of gerecyclede frameworks. We bieden duidelijke, directe en uitvoeringsgerichte strategische richting in Data, AI en Cyberbeveiliging.",
-      "quote": "Geen eindeloze slides. Geen generieke playbooks.\nAlleen standaarden die getest zijn in echte omgevingen.",
-      "cta": "Sessie boeken"
+  "acquisition": {
+    "meta": {
+      "title": "Acquisitieondersteuning — AEGRYN Advisory",
+      "desc": "AEGRYN begeleidt institutionele kopers bij het identificeren en sluiten van gecertificeerde tech-assettransacties."
     },
-    "why": {
-      "label": "Waarom Advisory?",
-      "desc1": "Het ontwerpen of opschalen van een digitaal ecosysteem vereist meer dan ambitie. Het vereist architectonische helderheid, gedisciplineerde uitvoering en langetermijndenken.",
-      "desc2": "Aegryn Advisory bestaat voor leiders die gestructureerde begeleiding nodig hebben op momenten waarop Data, AI en Cyberbeveiliging de toekomstige veerkracht bepalen.",
-      "tagline": "Onze rol is eenvoudig: helderheid brengen, risico verminderen, de juiste beslissingen versnellen."
-    },
-    "whoFor": {
-      "label": "Voor wie is Advisory?",
+    "label": "AEGRYN Advisory — Service",
+    "title": "U zoekt.\nWij vinden.\nWij beveiligen.",
+    "desc": "Een dedicated acquisitieservice voor investeerders, fondsen en holdings die toegang willen tot Europa's beste tech-opportuniteiten.",
+    "ctaPrimary": "Mijn mandaat bespreken",
+    "ctaDiscover": "Onze analyses lezen",
+    "forWhom": {
+      "label": "Voor wie",
+      "title": "Een service voor serieuze kopers.",
       "items": [
-        { "title": "Oprichters & Builders", "desc": "U bouwt of schaalt een digitaal platform en staat voor structurele beslissingen die de langetermijnveerkracht zullen bepalen. Wij helpen u robuuste fundamenten te leggen voordat de complexiteit toeneemt." },
-        { "title": "Groeiende organisaties", "desc": "Naarmate uw organisatie groeit, wordt technische diepgang kritisch. Wij bieden een onafhankelijk, senior perspectief op infrastructuurschaalbaarheid, AI-inzet en architecturele coherentie." },
-        { "title": "Leiderschap in transitie", "desc": "Digitale evolutie vereist structurele discipline, geen incrementele patches. Wij ondersteunen leiderschapsteams bij legacy-modernisering, dataherstructurering en cyberbeveiliging." }
+        {
+          "title": "Investeringsfondsen",
+          "desc": "PE, VC, family offices die tech-assets zoeken met onafhankelijke certificering."
+        },
+        {
+          "title": "Industrieholdings",
+          "desc": "Groepen die complementaire assets willen verwerven of hun digitale waardeketen willen verticaliseren."
+        },
+        {
+          "title": "Ondernemer-kopers",
+          "desc": "Operators die een asset willen overnemen, laten groeien of samenvoegen met een bestaand bedrijf."
+        }
       ]
     },
-    "experts": { "label": "Onze Experts", "count": "Senior Advisors" },
-    "domains": {
-      "label": "Onze interventiegebieden",
-      "items": [
-        { "title": "Digitale Producten", "desc": "Mobiele applicaties, webplatforms, SaaS, technologiekeuzes, digitaal projectmanagement." },
-        { "title": "Audit & Applicatiebeveiliging", "desc": "Evaluatie van digitale oplossingen, aanbevelingen, compliance en toekenning van een jaarlijks vertrouwenslabel." },
-        { "title": "Kunstmatige Intelligentie & Automatisering", "desc": "AI-agenten, procesautomatisering, productiviteit, integratie van AI in producten en organisaties." },
-        { "title": "Digitaal Recht & Intellectueel Eigendom", "desc": "Servicevoorwaarden, digitale compliance, IP-bescherming, juridische structurering van digitale producten." },
-        { "title": "Design & Gebruikerservaring", "desc": "UX/UI, productidentiteit, gebruikersreizen." },
-        { "title": "Bedrijfsstrategie", "desc": "Bedrijfsarchitectuur, inkomstenlogica, kapitaalefficiëntie, schaalbare modellen, marktpositionering." }
+    "offer": {
+      "label": "Wat we doen",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Mandaatdefinitie",
+          "desc": "Nauwkeurige omschrijving van uw acquisitiecriteria."
+        },
+        {
+          "num": "02",
+          "title": "Eigen sourcing",
+          "desc": "Toegang tot ons portfolio van gecertificeerde en niet-publieke assets."
+        },
+        {
+          "num": "03",
+          "title": "Kwalificatie & due diligence",
+          "desc": "AEGRYN Grade-kwalificatierapport + 4-dimensieanalyse."
+        },
+        {
+          "num": "04",
+          "title": "Structurering & closing",
+          "desc": "Begeleiding tot aan de closing: LOI, institutioneel escrow, documentatie."
+        }
       ]
     },
-    "approach": {
-      "label": "Aanpak",
-      "title": "De juiste beslissing begint met het juiste gesprek.",
-      "desc": "Wij bieden gekwalificeerde senior tijd, directe uitwisselingen met de juiste experts en onmiddellijk uitvoerbare aanbevelingen. U betaalt voor expertise en ervaring, niet voor structuur.",
-      "cta": "Sessie boeken"
+    "diff": {
+      "label": "Ons verschil",
+      "items": [
+        {
+          "title": "Onafhankelijke certificering",
+          "desc": "Elk asset wordt door onze analisten beoordeeld voordat het wordt gepresenteerd."
+        },
+        {
+          "title": "Off-market pipeline",
+          "desc": "De meeste van onze assets zijn niet op de open markt."
+        },
+        {
+          "title": "Belangen-afstemming",
+          "desc": "Onze vergoeding is gekoppeld aan de succesvolle closing. Geen retainer."
+        },
+        {
+          "title": "Absolute vertrouwelijkheid",
+          "desc": "Systematische NDA. Identiteit koper beschermd."
+        }
+      ]
+    },
+    "fees": {
+      "label": "Vergoedingen",
+      "title": "Afgestemd op uw succes.",
+      "desc": "Onze vergoeding is uitsluitend op basis van resultaat: een percentage van de transactieprijs bij closing.",
+      "note": "De exacte voorwaarden worden vastgelegd in de opdrachtbrief."
+    },
+    "cta": {
+      "title": "Klaar om een acquisitiemandate te starten?",
+      "desc": "Beschrijf uw ideale doel en we reageren binnen 48u met een eerste selectie.",
+      "btn": "Mijn mandaat starten"
+    }
+  },
+  "discover": {
+    "meta": {
+      "title": "Discover — AEGRYN Marktintelligentie",
+      "desc": "Marktrapportages, verkoper- en kopershandleidingen, certificeringsanalyses van AEGRYN."
+    },
+    "label": "AEGRYN Discover",
+    "title": "Marktintelligentie.\nVoor iedereen toegankelijk.",
+    "desc": "Rapporten, gidsen en analyses om de Europese tech-assetmarkt te begrijpen.",
+    "filterAll": "Alle",
+    "filterMarket": "Marktrapport",
+    "filterSeller": "Verkopersgids",
+    "filterBuyer": "Kopersgids",
+    "filterCertification": "Certificering",
+    "filterStrategy": "Strategie",
+    "readMin": "min leestijd",
+    "readMore": "Artikel lezen",
+    "backToDiscover": "← Terug naar Discover",
+    "featuredLabel": "Uitgelicht",
+    "allArticles": "Alle artikelen",
+    "ctaGrade": "Mijn asset certificeren",
+    "ctaAuction": "Sessies bekijken",
+    "noArticles": "Nog geen artikelen in deze categorie.",
+    "newsletterLabel": "Nieuwsbrief",
+    "newsletterTitle": "Mis geen enkele analyse.",
+    "newsletterDesc": "Ontvang AEGRYN-marktrapportages en gidsen rechtstreeks in uw inbox.",
+    "newsletterCta": "Abonneren"
+  },
+  "grade": {
+    "meta": {
+      "title": "AEGRYN Grade-systeem — Tech-assetcertificering",
+      "desc": "Het AEGRYN Grade-protocol certificeert elk tech-asset objectief op 4 dimensies."
+    },
+    "index": {
+      "label": "AEGRYN Grade-systeem",
+      "title": "Objectieve waarheid\nover elk tech-asset.",
+      "desc": "Geen schatting. Geen gevoel. Een rigoureus 4-dimensie-beoordelingsprotocol.",
+      "ctaSubmit": "Indienen voor certificering",
+      "ctaMethod": "Methodologie lezen"
+    },
+    "grades": [
+      {
+        "code": "AEG ★",
+        "name": "Uitzonderlijk",
+        "color": "grade-star",
+        "desc": "Top 1% van ingediende assets. Klaar voor directe institutionele transactie."
+      },
+      {
+        "code": "AEG AAA",
+        "name": "Premium",
+        "color": "grade-aaa",
+        "desc": "Volwassen, gedocumenteerd asset. Betrouwbare waardering. Standaardtransactie zonder voorbehoud."
+      },
+      {
+        "code": "AEG AA",
+        "name": "Solide",
+        "color": "grade-aa",
+        "desc": "Goede metrieken, enkele optimalisaties aanbevolen. Waardering bevestigd."
+      },
+      {
+        "code": "AEG A",
+        "name": "Standaard",
+        "color": "grade-a",
+        "desc": "Potentieel geïdentificeerd, verbeterpunten gedocumenteerd. Waardeplan voorgesteld."
+      },
+      {
+        "code": "AEG B",
+        "name": "Early Stage",
+        "color": "grade-b",
+        "desc": "Asset in ontwikkeling. Saneringsplan vereist vóór transactie."
+      }
+    ],
+    "dimensions": {
+      "label": "De 4 beoordelingsdimensies",
+      "title": "Één grade, vier waarheden.",
+      "items": [
+        {
+          "code": "C",
+          "name": "Code",
+          "desc": "Codekwaliteit, technische schuld, testdekking, applicatiebeveiliging."
+        },
+        {
+          "code": "I",
+          "name": "Infrastructuur",
+          "desc": "Systeemarchitectuur, veerkracht, schaalbaarheid, operationele beveiliging."
+        },
+        {
+          "code": "F",
+          "name": "Financiën",
+          "desc": "ARR/MRR, groeitraject, marges, CAC, LTV, burn rate."
+        },
+        {
+          "code": "S",
+          "name": "Strategie",
+          "desc": "Marktpositionering, toetredingsbarrières, afhankelijkheden, pipeline, roadmap."
+        }
+      ]
+    },
+    "process": {
+      "label": "Het certificeringsproces",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Indiening",
+          "desc": "Online formulier + initiële documentatie. Voorkwalificatie binnen 5 werkdagen."
+        },
+        {
+          "num": "02",
+          "title": "Analyse",
+          "desc": "Toegang tot de data room. 4-dimensiebeoordeling door gecertificeerde analisten."
+        },
+        {
+          "num": "03",
+          "title": "Rapport",
+          "desc": "Volledig certificeringsrapport met grade, sub-codes en aanbevelingen."
+        },
+        {
+          "num": "04",
+          "title": "Publicatie",
+          "desc": "De grade wordt gepubliceerd in de AEGRYN-catalogus en verankerd op de blockchain."
+        }
+      ]
+    },
+    "submit": {
+      "label": "Asset indienen",
+      "title": "Ontvang de grade die\nwaarde geeft aan uw asset.",
+      "desc": "De AEGRYN-certificering is het paspoort van uw asset naar institutionele kopers.",
+      "cta": "Indiening starten"
+    },
+    "methodology": {
+      "label": "Methodologie",
+      "title": "Een reproduceerbaar protocol.\nGeen subjectieve mening.",
+      "desc": "De AEGRYN Grade-methodologie is gedocumenteerd, geversioneerd en geauditeerd.",
+      "versionLabel": "Protocolversie",
+      "version": "AEGRYN Grade Protocol v2.1 — 2026",
+      "principlesLabel": "Grondbeginselen",
+      "principles": [
+        {
+          "title": "Reproduceerbaarheid",
+          "desc": "Twee onafhankelijke analisten moeten tot hetzelfde grade komen (±1 sub-code)."
+        },
+        {
+          "title": "Traceerbaarheid",
+          "desc": "Elke grade is digitaal ondertekend en verankerd op de blockchain."
+        },
+        {
+          "title": "Onafhankelijkheid",
+          "desc": "Analisten hebben geen financieel belang in de assets die ze certificeren."
+        },
+        {
+          "title": "Herzienbaarhheid",
+          "desc": "Een grade kan worden herzien na gedocumenteerde verbetering."
+        }
+      ],
+      "scoringLabel": "Scoresysteem",
+      "scoringDesc": "Elke dimensie wordt beoordeeld van 0 tot 25. De som bepaalt de grade.",
+      "scores": [
+        {
+          "range": "90–100",
+          "grade": "AEG ★",
+          "color": "grade-star"
+        },
+        {
+          "range": "75–89",
+          "grade": "AEG AAA",
+          "color": "grade-aaa"
+        },
+        {
+          "range": "60–74",
+          "grade": "AEG AA",
+          "color": "grade-aa"
+        },
+        {
+          "range": "45–59",
+          "grade": "AEG A",
+          "color": "grade-a"
+        },
+        {
+          "range": "30–44",
+          "grade": "AEG B",
+          "color": "grade-b"
+        }
+      ]
+    }
+  },
+  "auction": {
+    "meta": {
+      "title": "Veiling — Gecertificeerde tech-assettransacties",
+      "desc": "AEGRYN-sessies: gecertificeerde tech-assets kopen of verkopen."
+    },
+    "index": {
+      "label": "AEGRYN Veilingsessies",
+      "title": "De Europese marktplaats voor\ngecertificeerde tech-assets.",
+      "desc": "Geen open biedingen. Private, rigoureuze sessies voor gecertificeerde verkopers en gekwalificeerde kopers.",
+      "ctaCatalog": "Catalogus bekijken",
+      "ctaSession": "Volgende sessie",
+      "statsLabel": "In cijfers",
+      "stats": [
+        {
+          "value": "<25%",
+          "label": "Acceptatiepercentage"
+        },
+        {
+          "value": "100%",
+          "label": "Gecertificeerde assets"
+        },
+        {
+          "value": "Escrow",
+          "label": "Fondsveiligheid"
+        },
+        {
+          "value": "NDA",
+          "label": "Systematische vertrouwelijkheid"
+        }
+      ],
+      "stepsLabel": "Verloop van een sessie",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Certificering",
+          "desc": "Elk gepresenteerd asset heeft een AEGRYN Grade."
+        },
+        {
+          "num": "02",
+          "title": "Kwalificatie",
+          "desc": "Kopers worden gekwalificeerd voor toegang."
+        },
+        {
+          "num": "03",
+          "title": "Sessie",
+          "desc": "Bilaterale onderhandelingen onder vertrouwelijkheid en escrow."
+        },
+        {
+          "num": "04",
+          "title": "Closing",
+          "desc": "Escrow, contractondertekening, eigendomsoverdracht."
+        }
+      ]
+    },
+    "catalog": {
+      "label": "AEGRYN Catalogus",
+      "title": "Nu beschikbare\ngecertificeerde assets.",
+      "desc": "Elk vermeld asset heeft het AEGRYN-certificeringsprotocol doorstaan.",
+      "filterAll": "Alle grades",
+      "filterStar": "AEG ★",
+      "filterAaa": "AEG AAA",
+      "filterAa": "AEG AA",
+      "filterA": "AEG A",
+      "empty": "Geen asset komt overeen met dit filter.",
+      "emptyAll": "De catalogus is leeg.",
+      "emptyNote": "De volgende sessie opent Q3 2026.",
+      "notifyBtn": "Melding ontvangen",
+      "sellerTitle": "Uw asset verkopen?",
+      "sellerDesc": "Dien uw asset in voor certificering en krijg toegang tot de volgende catalogus.",
+      "sellerCta": "Indienen voor certificering"
+    },
+    "sell": {
+      "label": "Verkoper",
+      "title": "Verkoop uw asset\naan de juiste koper.",
+      "desc": "AEGRYN vindt de optimale koper voor uw gecertificeerde asset.",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Indiening",
+          "desc": "Formulier + documentatie. Voorkwalificatie in 5 werkdagen."
+        },
+        {
+          "num": "02",
+          "title": "Certificering",
+          "desc": "Beoordeling op 4 dimensies. AEGRYN Grade-rapport."
+        },
+        {
+          "num": "03",
+          "title": "Sessie",
+          "desc": "Uw asset wordt gepresenteerd in de volgende catalogus."
+        },
+        {
+          "num": "04",
+          "title": "Closing",
+          "desc": "Onderhandeling, escrow, overdracht — alles begeleid door AEGRYN."
+        }
+      ],
+      "feesTitle": "Vergoedingsstructuur",
+      "feesNote": "Commissie alleen bij succesvolle closing.",
+      "fees": [
+        {
+          "item": "Certificering",
+          "value": "Vaste vergoeding"
+        },
+        {
+          "item": "Commissie",
+          "value": "% van transactieprijs"
+        },
+        {
+          "item": "Retainer",
+          "value": "Geen"
+        }
+      ],
+      "cta": "Mijn asset indienen"
+    },
+    "buy": {
+      "label": "Koper",
+      "title": "Verwerf een gecertificeerd\ntech-asset.",
+      "desc": "Toegang tot geverifieerde opportuniteiten buiten de open markt.",
+      "qualifTitle": "Kopersprofiel",
+      "qualifDesc": "AEGRYN-sessies zijn gereserveerd voor gekwalificeerde kopers.",
+      "qualifItems": [
+        "Institutionele of professionele investeerder",
+        "Aangetoonde acquisitie-ervaring",
+        "Ondertekende NDA",
+        "Financiële capaciteit passend bij het asset"
+      ],
+      "processTitle": "Proces",
+      "processSteps": [
+        {
+          "num": "01",
+          "title": "Registratie",
+          "desc": "Formulier + kwalificatiedocumenten indienen."
+        },
+        {
+          "num": "02",
+          "title": "Toegang",
+          "desc": "Toegang tot sessiecatalogus na validatie."
+        },
+        {
+          "num": "03",
+          "title": "Due Diligence",
+          "desc": "Toegang tot data room en analyse van assets."
+        },
+        {
+          "num": "04",
+          "title": "Bod",
+          "desc": "Bilaterale onderhandeling en closing onder escrow."
+        }
+      ],
+      "cta": "Koperstoegang aanvragen"
+    },
+    "results": {
+      "label": "Resultaten",
+      "title": "Sessieresultaten.",
+      "desc": "Voltooide transacties en gerealiseerde gradewaarderingen.",
+      "noResults": "Nog geen voltooide sessies."
+    },
+    "session": {
+      "label": "Volgende sessie",
+      "title": "AEGRYN Sessie Q3 2026",
+      "date": "Datum",
+      "dateTbd": "Q3 2026 — Exacte datum volgt",
+      "format": "Formaat",
+      "formatValue": "Private sessie — alleen op uitnodiging",
+      "location": "Locatie",
+      "locationValue": "Zürich, Zwitserland (+ beveiligde remote toegang)",
+      "assetsLabel": "Assets in sessie",
+      "assetsTbd": "Catalogus gepubliceerd 30 dagen voor de sessie",
+      "registerTitle": "Toegang aanvragen",
+      "registerDesc": "Sesietoegang is gereserveerd voor gekwalificeerde kopers.",
+      "registerCta": "Koperstoegang aanvragen",
+      "sellerTitle": "Uw asset indienen",
+      "sellerDesc": "Dien uw asset in voor certificering.",
+      "sellerCta": "Asset indienen",
+      "pastSessions": "Vorige sessies",
+      "noSessions": "Nog geen voltooide sessies."
     }
   },
   "stats": {
@@ -305,28 +780,25 @@
     "base": "Zwitserse basis"
   },
   "footer": {
-    "groupLabel": "Aegryn Group",
-    "legal": "© 2026 AEGRYN. All rights reserved.",
+    "legal": "© 2026 Aegryn Sàrl — Alle rechten voorbehouden",
     "company": "An Aegryn company",
-    "privacy": "Privacybeleid",
-    "terms": "Gebruiksvoorwaarden",
-    "dataProtection": "Gegevensbeschermingsverklaring",
-    "neediuLegal": "Neediu — Gegevensbescherming & Gebruiksvoorwaarden",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden",
     "tagline": "Engineered to Last",
-    "swissTagline": "Swiss Tech Asset Builder",
-    "navLabel": "Aegryn",
-    "ecosystemLabel": "Ecosysteem",
-    "advisoryLabel": "Advisory",
-    "advisoryDesc": "Strategische helderheid in Data, AI en Cyberbeveiliging.",
-    "advisoryBook": "Sessie boeken ↗",
-    "medallionText": "Laten we praten . Neem contact op . Laten we praten . Neem contact op .",
-    "contactLabel": "Neem contact op"
+    "neediuLegal": "Neediu is een geregistreerd handelsmerk van Aegryn Sàrl. Alle rechten voorbehouden."
   },
-  "cookie": {
-    "title": "Aegryn — Cookies & Analytics",
-    "desc": "Wij gebruiken Cloudflare Analytics (geanonimiseerd) om het publiek te meten. Geen advertentiedata. AVG-conform.",
-    "learnMore": "Meer info",
-    "accept": "Accepteren",
-    "refuse": "Weigeren"
+  "assetPage": {
+    "back": "← Terug naar activa",
+    "visit": "Bezoeken",
+    "comingSoon": "Binnenkort beschikbaar",
+    "presentation": "Overzicht",
+    "audience": "Doelgroep",
+    "features": "Kernfuncties",
+    "cta": {
+      "label": "Geïnteresseerd in dit actief?",
+      "title": "Laten we uw acquisitie bespreken",
+      "allAssets": "Alle activa bekijken",
+      "contact": "Contact AEGRYN"
+    }
   }
 }
