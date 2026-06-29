@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, ArrowUpRight } from 'lucide-react'
-import { ARTICLES, ARTICLE_CATEGORIES } from '@/data/articles'
+import { ARTICLES, ARTICLE_CATEGORIES, type ContentBlock } from '@/data/articles'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -66,17 +66,77 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       </section>
 
-      {/* Article body placeholder */}
+      {/* Article body */}
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="border border-ag-border bg-ag-off-white p-10 text-center">
-            <p className="font-sans text-[14px] text-ag-gray mb-2">
-              Contenu complet disponible prochainement.
-            </p>
-            <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-ag-gray-light">
-              AEGRYN Editorial — Q3 2026
-            </p>
-          </div>
+          {article.body ? (
+            <div className="space-y-8">
+              {article.body.map((block: ContentBlock, i: number) => {
+                if (block.type === 'p') return (
+                  <p key={i} className="font-sans text-[16px] text-ag-gray leading-[1.85]">
+                    {block.text[lang]}
+                  </p>
+                )
+                if (block.type === 'h2') return (
+                  <h2 key={i} className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] leading-snug pt-6 border-t border-ag-border">
+                    {block.text[lang]}
+                  </h2>
+                )
+                if (block.type === 'h3') return (
+                  <h3 key={i} className="font-sans font-semibold text-ag-black text-[17px] tracking-[-0.01em] leading-snug">
+                    {block.text[lang]}
+                  </h3>
+                )
+                if (block.type === 'list') return (
+                  <ul key={i} className="space-y-3 pl-0">
+                    {block.items.map((item, j) => (
+                      <li key={j} className="flex items-start gap-3 font-sans text-[15px] text-ag-gray leading-relaxed">
+                        <span className="shrink-0 mt-1.5 w-1.5 h-1.5 bg-ag-apex rounded-full" />
+                        {item[lang]}
+                      </li>
+                    ))}
+                  </ul>
+                )
+                if (block.type === 'quote') return (
+                  <blockquote key={i} className="border-l-2 border-ag-apex pl-6 my-8">
+                    <p className="font-sans italic text-[17px] text-ag-black leading-[1.7] mb-3">
+                      &ldquo;{block.text[lang]}&rdquo;
+                    </p>
+                    {block.author && (
+                      <cite className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light not-italic">
+                        — {block.author}
+                      </cite>
+                    )}
+                  </blockquote>
+                )
+                if (block.type === 'stats') return (
+                  <div key={i} className="grid grid-cols-2 md:grid-cols-4 gap-px bg-ag-border border border-ag-border my-8">
+                    {block.items.map((stat, j) => (
+                      <div key={j} className="bg-ag-off-white p-6">
+                        <p className="font-sans font-bold text-ag-apex tracking-[-0.03em] leading-none mb-2"
+                           style={{ fontSize: 'clamp(22px,2.5vw,34px)' }}>
+                          {stat.value}
+                        </p>
+                        <p className="font-sans text-[11px] text-ag-gray leading-snug">
+                          {stat.label[lang]}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                )
+                return null
+              })}
+            </div>
+          ) : (
+            <div className="border border-ag-border bg-ag-off-white p-10 text-center">
+              <p className="font-sans text-[14px] text-ag-gray mb-2">
+                Contenu complet disponible prochainement.
+              </p>
+              <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-ag-gray-light">
+                AEGRYN Editorial — Q3 2026
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
