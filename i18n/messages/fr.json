@@ -39,23 +39,6 @@
     "ctaSecondary": "SOUMETTRE UN ACTIF",
     "chip2": "GRADE A→E — CO-SIGNÉ"
   },
-  "manifesto": {
-    "aegis": {
-      "label": "AEGIS",
-      "title": "Protection absolue",
-      "desc": "Du grec αἰγίς — le bouclier divin de Zeus et Athéna. Aegryn couvre et protège ses actifs contre toutes les menaces."
-    },
-    "aegir": {
-      "label": "AEGIR",
-      "title": "Maîtrise des flux",
-      "desc": "Du vieux norrois Ægir — dieu de la mer, maître des courants invisibles. Aegryn orchestre les flux de valeur numérique entre ses actifs."
-    },
-    "aeon": {
-      "label": "AEON",
-      "title": "Durabilité intemporelle",
-      "desc": "Du grec αἰών — l'éternité, une ère immense. Alignement direct avec \"Engineered to Last\" — nous construisons ce qui traversera le temps."
-    }
-  },
   "assets": {
     "title": "Notre écosystème propre.",
     "sub": "Six actifs propriétaires. Une maison commune.",
@@ -70,7 +53,7 @@
       "desc": "Chaque actif AEGRYN est conçu, construit et opéré en interne. Propriété totale, souveraineté absolue, durabilité garantie.",
       "meta": {
         "title": "Actifs AEGRYN — Écosystème propriétaire",
-        "desc": "Découvrez les 6 actifs propriétaires d'AEGRYN : Subblink, Neediu, Movtoo, Primiom, Hobconnect et KRYV Protocol."
+        "desc": "Découvrez les actifs propriétaires d'AEGRYN : Subblink, Neediu, Primiom, Movtoo et Hobconnect — conçus pour être certifiables et transférables."
       },
       "filterAll": "Tous",
       "filterAI": "AI & Protocoles",
@@ -152,9 +135,9 @@
   },
   "build": {
     "hero": {
-      "label": "Ce que nous construisons",
-      "title": "Six actifs. Une vision.",
-      "desc": "Chaque actif Aegryn est conçu pour dominer sa verticale — de l'IA d'entreprise aux réseaux de transactions, du lifestyle au logement."
+      "label": "Portefeuille AEGRYN",
+      "title": "Six actifs propriétaires.\nUne vision commune.",
+      "desc": "Chaque actif AEGRYN est conçu dès l'origine pour être certifiable et transférable — IP déposée, codebase propriétaire, stack documentée."
     },
     "categories": {
       "ai": "IA & Protocoles",
@@ -168,62 +151,6 @@
     },
     "visitSite": "Visiter le site",
     "comingSoon": "Bientôt disponible",
-    "assets": {
-      "nexoris": {
-        "desc": "Plateforme d'intelligence artificielle modulaire pour les entreprises exigeant fiabilité, conformité et souveraineté des données.",
-        "tags": [
-          "IA",
-          "B2B",
-          "SaaS",
-          "EU AI Act"
-        ]
-      },
-      "kryolio": {
-        "desc": "Réseau de gestion d'actifs numériques et crypto — portefeuille, suivi de performance et stratégie automatisée.",
-        "tags": [
-          "Crypto",
-          "DeFi",
-          "Portfolio",
-          "Web3"
-        ]
-      },
-      "lyvra": {
-        "desc": "Super-application lifestyle premium pour la gestion des abonnements, du concierge numérique et de l'expérience personnalisée.",
-        "tags": [
-          "Lifestyle",
-          "B2C",
-          "App",
-          "Premium"
-        ]
-      },
-      "vorrex": {
-        "desc": "Réseau de transactions pair-à-pair sécurisé avec protocoles de conformité intégrés pour les marchés européens.",
-        "tags": [
-          "Fintech",
-          "P2P",
-          "Compliance",
-          "SEPA"
-        ]
-      },
-      "domify": {
-        "desc": "Plateforme immobilière intelligente combinant recherche, estimation IA et gestion locative pour le marché suisse et européen.",
-        "tags": [
-          "Proptech",
-          "IA",
-          "Immobilier",
-          "CH/EU"
-        ]
-      },
-      "fleetori": {
-        "desc": "Solution de gestion de flotte et logistique de dernière génération pour les entreprises de mobilité urbaine.",
-        "tags": [
-          "Logistique",
-          "Fleet",
-          "B2B",
-          "Mobilité"
-        ]
-      }
-    },
     "philosophy": {
       "label": "Notre philosophie",
       "title": "Propriétaire. Souverain. Durable.",
@@ -244,7 +171,8 @@
       }
     },
     "advisoryCta": {
-      "text": "Votre entreprise a besoin d'une protection numérique de niveau institutionnel ?",
+      "label": "AEGRYN Advisory",
+      "text": "Votre actif n'a pas encore atteint le Grade A ?",
       "button": "Découvrir Advisory"
     }
   },
@@ -345,20 +273,20 @@
   "statsRow": {
     "items": [
       {
-        "num": "6.8B",
-        "label": "Appareils mobiles"
+        "num": "+42%",
+        "label": "Volume M&A SaaS Europe 2025 YoY"
       },
       {
-        "num": "5.6B",
-        "label": "Connexions smartphones"
+        "num": "14,2 Md€",
+        "label": "Transactions SaaS Europe 2025"
       },
       {
-        "num": "4h12",
-        "label": "Temps d'écran quotidien"
+        "num": "3,1x ARR",
+        "label": "Multiple médian privé 2026"
       },
       {
-        "num": "CH",
-        "label": "Conçu en Suisse"
+        "num": "< 25%",
+        "label": "Taux d'acceptation AEGRYN"
       }
     ]
   },
@@ -726,25 +654,6 @@
     "learnMore": "En savoir plus",
     "accept": "Accepter",
     "refuse": "Refuser"
-  },
-  "conviction": {
-    "label": "Notre conviction",
-    "title": "Un marché tech mérite une infrastructure digne de lui.",
-    "col1": {
-      "label": "CERTIFIER",
-      "title": "La vérité avant la transaction.",
-      "desc": "Chaque actif passe par notre protocole de certification indépendant. Un grade, des sous-codes, une traçabilité blockchain. Pas d'estimation approximative — une vérité documentée."
-    },
-    "col2": {
-      "label": "TRANSACTER",
-      "title": "Des sessions, pas des bazars.",
-      "desc": "Les sessions AEGRYN réunissent vendeurs qualifiés et acquéreurs institutionnels dans un cadre contractuel rigoureux. Escrow, NDA, protocole de transaction sécurisé."
-    },
-    "col3": {
-      "label": "PROTÉGER",
-      "title": "L'actif et les parties.",
-      "desc": "De la soumission à la clôture, chaque étape est encadrée : due diligence, valorisation, CGV, accords de confidentialité, accompagnement post-transaction."
-    }
   },
   "pillars": {
     "build": {

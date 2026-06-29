@@ -39,23 +39,6 @@
     "chip2": "GRADE A→E — CO-FIRMATO",
     "ctaPrimary": "Vedi il catalogo"
   },
-  "manifesto": {
-    "aegis": {
-      "label": "AEGIS",
-      "title": "Protezione assoluta",
-      "desc": "Dal greco αἰγίς — lo scudo divino di Zeus e Atena. Aegryn copre e protegge i suoi asset da tutte le minacce."
-    },
-    "aegir": {
-      "label": "AEGIR",
-      "title": "Padronanza dei flussi",
-      "desc": "Dal norreno Ægir — dio del mare. Aegryn orchestra i flussi di valore digitale tra i suoi asset."
-    },
-    "aeon": {
-      "label": "AEON",
-      "title": "Durabilità senza tempo",
-      "desc": "Dal greco αἰών — l'eternità. Allineamento diretto con \"Engineered to Last\"."
-    }
-  },
   "assets": {
     "title": "Il nostro ecosistema proprietario.",
     "sub": "Sei asset proprietari. Una casa comune.",
@@ -70,7 +53,7 @@
       "desc": "Ogni asset AEGRYN è progettato, costruito e gestito internamente. Proprietà totale, sovranità assoluta.",
       "meta": {
         "title": "Asset AEGRYN — Ecosistema proprietario",
-        "desc": "Scopri i 6 asset proprietari di AEGRYN."
+        "desc": "Scopri gli asset proprietari di AEGRYN: Subblink, Neediu, Primiom, Movtoo e Hobconnect — progettati per essere certificabili e trasferibili."
       },
       "filterAll": "Tutti",
       "filterAI": "AI & Protocolli",
@@ -152,9 +135,9 @@
   },
   "build": {
     "hero": {
-      "label": "Cosa costruiamo",
-      "title": "Sei asset. Una visione.",
-      "desc": "Ogni asset Aegryn è progettato per dominare la sua verticale — dall'IA aziendale alle reti di transazioni, dal lifestyle all'immobiliare."
+      "label": "Portfolio AEGRYN",
+      "title": "Sei asset proprietari.\nUna visione comune.",
+      "desc": "Ogni asset AEGRYN è progettato fin dall'origine per essere certificabile e trasferibile — IP registrata, codebase proprietaria, stack documentata."
     },
     "categories": {
       "ai": "AI & Protocolli",
@@ -168,62 +151,6 @@
     },
     "visitSite": "Visita il sito",
     "comingSoon": "Prossimamente",
-    "assets": {
-      "nexoris": {
-        "desc": "Piattaforma di intelligenza artificiale modulare per aziende che richiedono affidabilità, conformità e sovranità dei dati.",
-        "tags": [
-          "AI",
-          "B2B",
-          "SaaS",
-          "EU AI Act"
-        ]
-      },
-      "kryolio": {
-        "desc": "Rete di gestione di asset digitali e crypto — portafoglio, monitoraggio performance e strategia automatizzata.",
-        "tags": [
-          "Crypto",
-          "DeFi",
-          "Portfolio",
-          "Web3"
-        ]
-      },
-      "lyvra": {
-        "desc": "Super-app lifestyle premium per la gestione degli abbonamenti, concierge digitale ed esperienza personalizzata.",
-        "tags": [
-          "Lifestyle",
-          "B2C",
-          "App",
-          "Premium"
-        ]
-      },
-      "vorrex": {
-        "desc": "Rete di transazioni peer-to-peer sicura con protocolli di conformità integrati per i mercati europei.",
-        "tags": [
-          "Fintech",
-          "P2P",
-          "Conformità",
-          "SEPA"
-        ]
-      },
-      "domify": {
-        "desc": "Piattaforma immobiliare intelligente con valutazione AI e gestione locativa per il mercato svizzero ed europeo.",
-        "tags": [
-          "Proptech",
-          "AI",
-          "Immobiliare",
-          "CH/EU"
-        ]
-      },
-      "fleetori": {
-        "desc": "Soluzione di gestione flotte e logistica di nuova generazione per le aziende di mobilità urbana.",
-        "tags": [
-          "Logistica",
-          "Fleet",
-          "B2B",
-          "Mobilità"
-        ]
-      }
-    },
     "philosophy": {
       "label": "La nostra filosofia",
       "title": "Proprietario. Sovrano. Durevole.",
@@ -244,7 +171,8 @@
       }
     },
     "advisoryCta": {
-      "text": "La tua azienda ha bisogno di protezione digitale di livello istituzionale?",
+      "label": "AEGRYN Advisory",
+      "text": "Il vostro asset non ha ancora raggiunto il Grade A?",
       "button": "Scopri Advisory"
     }
   },
@@ -272,20 +200,20 @@
   "statsRow": {
     "items": [
       {
-        "num": "6.8B",
-        "label": "Dispositivi mobili totali"
+        "num": "+42%",
+        "label": "Crescita M&A tech Europa 2025 YoY"
       },
       {
-        "num": "5.6B",
-        "label": "Connessioni smartphone"
+        "num": "14,2 Mld€",
+        "label": "Transazioni SaaS Europa 2025"
       },
       {
-        "num": "4h12",
-        "label": "Tempo schermo giornaliero"
+        "num": "3,1x ARR",
+        "label": "Multiplo mediano privato 2026"
       },
       {
-        "num": "CH",
-        "label": "Sviluppato in Svizzera"
+        "num": "< 25%",
+        "label": "Tasso di accettazione AEGRYN"
       }
     ]
   },
@@ -1243,25 +1171,6 @@
     "article3Title": "Come gli acquirenti PE valutano un SaaS nel 2026",
     "article3Cat": "Guida per acquirenti",
     "cta": "Visualizza tutti gli insights"
-  },
-  "conviction": {
-    "label": "La nostra convinzione",
-    "title": "Un mercato tech merita un'infrastruttura degna di esso.",
-    "col1": {
-      "label": "CERTIFICARE",
-      "title": "La verità prima della transazione.",
-      "desc": "Ogni asset passa attraverso il nostro protocollo di certificazione indipendente. Un grade, sotto-codici, tracciabilità blockchain. Nessuna stima — una verità documentata."
-    },
-    "col2": {
-      "label": "TRANSIGERE",
-      "title": "Sessioni, non bazar.",
-      "desc": "Le sessioni AEGRYN riuniscono venditori qualificati e acquirenti istituzionali in un quadro contrattuale rigoroso. Escrow, NDA, protocollo di transazione sicuro."
-    },
-    "col3": {
-      "label": "PROTEGGERE",
-      "title": "L'asset e le parti.",
-      "desc": "Dalla presentazione al closing, ogni passo è inquadrato: due diligence, valutazione, CGV, accordi di riservatezza, accompagnamento post-transazione."
-    }
   },
   "pillars": {
     "build": {

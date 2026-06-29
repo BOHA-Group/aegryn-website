@@ -39,23 +39,6 @@
     "chip2": "GRADE A→E — MEDE-ONDERTEKEND",
     "ctaPrimary": "Catalogus bekijken"
   },
-  "manifesto": {
-    "aegis": {
-      "label": "AEGIS",
-      "title": "Absolute bescherming",
-      "desc": "Uit het Grieks αἰγίς — het goddelijke schild van Zeus en Athena. Aegryn beschermt zijn assets tegen alle bedreigingen."
-    },
-    "aegir": {
-      "label": "AEGIR",
-      "title": "Beheersing van stromen",
-      "desc": "Uit het Oudnoors Ægir — god van de zee. Aegryn orkestreert digitale waardestromen tussen zijn assets."
-    },
-    "aeon": {
-      "label": "AEON",
-      "title": "Tijdloze duurzaamheid",
-      "desc": "Uit het Grieks αἰών — de eeuwigheid. Directe afstemming op \"Engineered to Last\"."
-    }
-  },
   "assets": {
     "title": "Ons eigen ecosysteem.",
     "sub": "Zes eigen assets. Één gemeenschappelijk huis.",
@@ -70,7 +53,7 @@
       "desc": "Elk AEGRYN-asset wordt intern ontworpen, gebouwd en beheerd. Volledig eigendom, absolute soevereiniteit.",
       "meta": {
         "title": "AEGRYN Assets — Eigen ecosysteem",
-        "desc": "Ontdek de 6 eigen AEGRYN-assets."
+        "desc": "Ontdek de propriëtaire assets van AEGRYN: Subblink, Neediu, Primiom, Movtoo en Hobconnect — ontworpen om certificeerbaar en overdraagbaar te zijn."
       },
       "filterAll": "Alle",
       "filterAI": "AI & Protocollen",
@@ -152,9 +135,9 @@
   },
   "build": {
     "hero": {
-      "label": "Wat we bouwen",
-      "title": "Zes assets. Één visie.",
-      "desc": "Elk Aegryn-asset is ontworpen om zijn verticaal te domineren — van bedrijfs-AI tot transactienetwerken, van lifestyle tot vastgoed."
+      "label": "AEGRYN Portfolio",
+      "title": "Zes propriëtaire assets.\nEén gemeenschappelijke visie.",
+      "desc": "Elk AEGRYN-asset is van meet af aan ontworpen om certificeerbaar en overdraagbaar te zijn — geregistreerd IP, propriëtaire codebase, gedocumenteerde stack."
     },
     "categories": {
       "ai": "AI & Protocollen",
@@ -168,62 +151,6 @@
     },
     "visitSite": "Website bezoeken",
     "comingSoon": "Binnenkort beschikbaar",
-    "assets": {
-      "nexoris": {
-        "desc": "Modulair AI-platform voor bedrijven die betrouwbaarheid, compliance en datasouvereiniteit vereisen.",
-        "tags": [
-          "AI",
-          "B2B",
-          "SaaS",
-          "EU AI Act"
-        ]
-      },
-      "kryolio": {
-        "desc": "Netwerk voor digitaal en crypto-assetbeheer — portfolio, prestatietracking en geautomatiseerde strategie.",
-        "tags": [
-          "Crypto",
-          "DeFi",
-          "Portfolio",
-          "Web3"
-        ]
-      },
-      "lyvra": {
-        "desc": "Premium lifestyle super-app voor abonnementsbeheer, digitale conciërge en gepersonaliseerde ervaring.",
-        "tags": [
-          "Lifestyle",
-          "B2C",
-          "App",
-          "Premium"
-        ]
-      },
-      "vorrex": {
-        "desc": "Veilig peer-to-peer transactienetwerk met geïntegreerde complianceprotocollen voor Europese markten.",
-        "tags": [
-          "Fintech",
-          "P2P",
-          "Compliance",
-          "SEPA"
-        ]
-      },
-      "domify": {
-        "desc": "Intelligent vastgoedplatform met AI-waardering en huurbeheer voor de Zwitserse en Europese markt.",
-        "tags": [
-          "Proptech",
-          "AI",
-          "Vastgoed",
-          "CH/EU"
-        ]
-      },
-      "fleetori": {
-        "desc": "Volgende generatie vlootbeheer en logistieke oplossing voor stedelijke mobiliteitsbedrijven.",
-        "tags": [
-          "Logistiek",
-          "Fleet",
-          "B2B",
-          "Mobiliteit"
-        ]
-      }
-    },
     "philosophy": {
       "label": "Onze filosofie",
       "title": "Eigendom. Soeverein. Duurzaam.",
@@ -244,7 +171,8 @@
       }
     },
     "advisoryCta": {
-      "text": "Heeft uw bedrijf institutionele digitale bescherming nodig?",
+      "label": "AEGRYN Advisory",
+      "text": "Heeft uw asset Grade A nog niet bereikt?",
       "button": "Ontdek Advisory"
     }
   },
@@ -272,20 +200,20 @@
   "statsRow": {
     "items": [
       {
-        "num": "6.8B",
-        "label": "Mobiele apparaten totaal"
+        "num": "+42%",
+        "label": "Groei tech-M&A Europa 2025 YoY"
       },
       {
-        "num": "5.6B",
-        "label": "Smartphone-verbindingen"
+        "num": "14,2 Mrd€",
+        "label": "SaaS-transacties Europa 2025"
       },
       {
-        "num": "4h12",
-        "label": "Dagelijkse schermtijd"
+        "num": "3,1x ARR",
+        "label": "Mediane private multiplier 2026"
       },
       {
-        "num": "CH",
-        "label": "Ontwikkeld in Zwitserland"
+        "num": "< 25%",
+        "label": "AEGRYN-acceptatiepercentage"
       }
     ]
   },
@@ -1243,25 +1171,6 @@
     "article3Title": "Hoe PE-kopers een SaaS in 2026 beoordelen",
     "article3Cat": "Gids voor kopers",
     "cta": "Bekijk alle insights"
-  },
-  "conviction": {
-    "label": "Onze overtuiging",
-    "title": "Een tech-markt verdient een infrastructuur die hem waardig is.",
-    "col1": {
-      "label": "CERTIFICEREN",
-      "title": "De waarheid vóór de transactie.",
-      "desc": "Elk asset doorloopt ons onafhankelijk certificeringsprotocol. Een grade, subcodes, blockchain-traceerbaarheid. Geen schatting — een gedocumenteerde waarheid."
-    },
-    "col2": {
-      "label": "TRANSIGEREN",
-      "title": "Sessies, geen bazaars.",
-      "desc": "AEGRYN-sessies brengen gekwalificeerde verkopers en institutionele kopers samen in een strikt contractueel kader. Escrow, NDA, beveiligd transactieprotocol."
-    },
-    "col3": {
-      "label": "BESCHERMEN",
-      "title": "Het asset en de partijen.",
-      "desc": "Van indiening tot closing is elke stap omlijnd: due diligence, waardering, AV, vertrouwelijkheidsovereenkomsten, begeleiding na transactie."
-    }
   },
   "pillars": {
     "build": {

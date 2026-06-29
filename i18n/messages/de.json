@@ -39,23 +39,6 @@
     "chip2": "GRADE A→E — KO-SIGNIERT",
     "ctaPrimary": "Katalog ansehen"
   },
-  "manifesto": {
-    "aegis": {
-      "label": "AEGIS",
-      "title": "Absoluter Schutz",
-      "desc": "Aus dem Griechischen αἰγίς — der göttliche Schild von Zeus und Athena. Aegryn schützt seine Assets gegen alle Bedrohungen."
-    },
-    "aegir": {
-      "label": "AEGIR",
-      "title": "Beherrschung der Ströme",
-      "desc": "Aus dem Altnordischen Ægir — Gott des Meeres. Aegryn orchestriert digitale Wertflüsse zwischen seinen Assets."
-    },
-    "aeon": {
-      "label": "AEON",
-      "title": "Zeitlose Beständigkeit",
-      "desc": "Aus dem Griechischen αἰών — die Ewigkeit. Direkte Ausrichtung auf \"Engineered to Last\"."
-    }
-  },
   "assets": {
     "title": "Unser eigenes Ökosystem.",
     "sub": "Sechs eigene Assets. Ein gemeinsames Haus.",
@@ -70,7 +53,7 @@
       "desc": "Jedes AEGRYN-Asset wird intern konzipiert, gebaut und betrieben. Vollständiges Eigentum, absolute Souveränität.",
       "meta": {
         "title": "AEGRYN Assets — Eigenes Ökosystem",
-        "desc": "Entdecken Sie die 6 eigenen AEGRYN-Assets: Subblink, Neediu, Movtoo, Primiom, Hobconnect und KRYV Protocol."
+        "desc": "Entdecken Sie die proprietären Assets von AEGRYN: Subblink, Neediu, Primiom, Movtoo und Hobconnect — konzipiert, um zertifizierbar und übertragbar zu sein."
       },
       "filterAll": "Alle",
       "filterAI": "KI & Protokolle",
@@ -152,9 +135,9 @@
   },
   "build": {
     "hero": {
-      "label": "Was wir bauen",
-      "title": "Sechs Assets. Eine Vision.",
-      "desc": "Jedes Aegryn-Asset ist darauf ausgelegt, seine Vertikale zu dominieren — von Unternehmens-KI bis hin zu Transaktionsnetzwerken."
+      "label": "AEGRYN Portfolio",
+      "title": "Sechs proprietäre Assets.\nEine gemeinsame Vision.",
+      "desc": "Jedes AEGRYN-Asset ist von Beginn an so konzipiert, dass es zertifizierbar und übertragbar ist — eingetragenes IP, proprietäre Codebasis, dokumentierter Stack."
     },
     "categories": {
       "ai": "KI & Protokolle",
@@ -168,62 +151,6 @@
     },
     "visitSite": "Website besuchen",
     "comingSoon": "Demnächst verfügbar",
-    "assets": {
-      "nexoris": {
-        "desc": "Modulare KI-Plattform für Unternehmen, die Zuverlässigkeit, Compliance und Datensouveränität fordern.",
-        "tags": [
-          "KI",
-          "B2B",
-          "SaaS",
-          "EU AI Act"
-        ]
-      },
-      "kryolio": {
-        "desc": "Netzwerk für digitales und Krypto-Asset-Management — Portfolio, Performance-Tracking und automatisierte Strategie.",
-        "tags": [
-          "Krypto",
-          "DeFi",
-          "Portfolio",
-          "Web3"
-        ]
-      },
-      "lyvra": {
-        "desc": "Premium-Lifestyle-Super-App für Abonnementverwaltung, digitalen Concierge und personalisiertes Erlebnis.",
-        "tags": [
-          "Lifestyle",
-          "B2C",
-          "App",
-          "Premium"
-        ]
-      },
-      "vorrex": {
-        "desc": "Sicheres Peer-to-Peer-Transaktionsnetzwerk mit integrierten Compliance-Protokollen für europäische Märkte.",
-        "tags": [
-          "Fintech",
-          "P2P",
-          "Compliance",
-          "SEPA"
-        ]
-      },
-      "domify": {
-        "desc": "Intelligente Immobilienplattform mit KI-Bewertung und Mietverwaltung für den Schweizer und europäischen Markt.",
-        "tags": [
-          "Proptech",
-          "KI",
-          "Immobilien",
-          "CH/EU"
-        ]
-      },
-      "fleetori": {
-        "desc": "Flottenmanagement- und Logistiklösung der nächsten Generation für städtische Mobilitätsunternehmen.",
-        "tags": [
-          "Logistik",
-          "Fleet",
-          "B2B",
-          "Mobilität"
-        ]
-      }
-    },
     "philosophy": {
       "label": "Unsere Philosophie",
       "title": "Eigen. Souverän. Beständig.",
@@ -244,7 +171,8 @@
       }
     },
     "advisoryCta": {
-      "text": "Benötigt Ihr Unternehmen institutionellen digitalen Schutz?",
+      "label": "AEGRYN Advisory",
+      "text": "Ihr Asset hat Grade A noch nicht erreicht?",
       "button": "Advisory entdecken"
     }
   },
@@ -272,20 +200,20 @@
   "statsRow": {
     "items": [
       {
-        "num": "6.8B",
-        "label": "Mobile Geräte gesamt"
+        "num": "+42%",
+        "label": "Wachstum Tech-M&A Europa 2025 YoY"
       },
       {
-        "num": "5.6B",
-        "label": "Smartphone-Verbindungen"
+        "num": "14,2 Mrd€",
+        "label": "SaaS-Transaktionen Europa 2025"
       },
       {
-        "num": "4h12",
-        "label": "Tägliche Bildschirmzeit"
+        "num": "3,1x ARR",
+        "label": "Medianer Privatmultiplikator 2026"
       },
       {
-        "num": "CH",
-        "label": "Entwickelt in der Schweiz"
+        "num": "< 25%",
+        "label": "AEGRYN-Akzeptanzrate"
       }
     ]
   },
@@ -1243,25 +1171,6 @@
     "article3Title": "Wie PE-Käufer ein SaaS im Jahr 2026 bewerten",
     "article3Cat": "Käufer-Guide",
     "cta": "Alle Insights ansehen"
-  },
-  "conviction": {
-    "label": "Unsere Überzeugung",
-    "title": "Ein Tech-Markt verdient eine ihm würdige Infrastruktur.",
-    "col1": {
-      "label": "ZERTIFIZIEREN",
-      "title": "Die Wahrheit vor der Transaktion.",
-      "desc": "Jedes Asset durchläuft unser unabhängiges Zertifizierungsprotokoll. Ein Grade, Untercodes, Blockchain-Rückverfolgbarkeit. Keine Schätzung — eine dokumentierte Wahrheit."
-    },
-    "col2": {
-      "label": "TRANSAGIEREN",
-      "title": "Sessions, keine Bazare.",
-      "desc": "AEGRYN-Sessions bringen qualifizierte Verkäufer und institutionelle Käufer in einem strengen Vertragsrahmen zusammen. Escrow, NDA, gesichertes Transaktionsprotokoll."
-    },
-    "col3": {
-      "label": "SCHÜTZEN",
-      "title": "Das Asset und die Parteien.",
-      "desc": "Von der Einreichung bis zum Closing ist jeder Schritt geregelt: Due Diligence, Bewertung, AGB, Vertraulichkeitsvereinbarungen, Post-Transaktionsbegleitung."
-    }
   },
   "pillars": {
     "build": {
