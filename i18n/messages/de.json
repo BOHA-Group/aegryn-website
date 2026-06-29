@@ -246,27 +246,23 @@
     }
   },
   "whatwedo": {
-    "label": "Was wir tun",
+    "label": "Unsere Überzeugung",
+    "conviction": "Die besten europäischen Tech-Assets verdienen mehr als eine Listung auf einem amerikanischen Marktplatz.",
     "items": [
       {
         "num": "01",
-        "title": "ÖKOSYSTEM-ENGINEERING",
-        "desc": "Wir entwerfen digitale Ökosysteme für Skalierbarkeit, Resilienz und langfristigen Wert — wo jede Komponente sich verbindet und multipliziert."
+        "title": "Die Zertifizierung fehlte.",
+        "desc": "Ein Tech-Asset ohne unabhängige Zertifizierung zu kaufen, ist wie eine Uhr ohne Papiere zu kaufen. AEGRYN liefert die Papiere — co-signiert, verifizierbar, blockchain-zertifiziert."
       },
       {
         "num": "02",
-        "title": "ERLEBNIS-ARCHITEKTUR",
-        "desc": "Wir gestalten nahtlose Nutzererlebnisse, die Komplexität vereinfachen und intuitive Interaktionen auf allen Plattformen ermöglichen."
+        "title": "Die Diskretion wurde geopfert.",
+        "desc": "Die besten Transaktionen finden nicht öffentlich statt. Sie finden in einem geschlossenen Kreis statt, zwischen Parteien, die wissen, was sie suchen. AEGRYN ist dieser Kreis."
       },
       {
         "num": "03",
-        "title": "TECHNOLOGISCHE GRUNDLAGEN",
-        "desc": "Wir bauen auf solider, souveräner Technologieinfrastruktur — mit Sicherheit, Unabhängigkeit und Bestandsfähigkeit auf jeder Ebene."
-      },
-      {
-        "num": "04",
-        "title": "STRATEGISCHES ADVISORY",
-        "desc": "Unser Advisory basiert auf echten Umsetzungsrahmen in Data, KI & Sicherheit — verankert in der Art, wie wir unsere eigenen Ökosysteme aufbauen."
+        "title": "Europa hatte keine Referenz.",
+        "desc": "Die großen Tech-Transaktionshäuser sind amerikanisch. Der europäische Tech-Markt ist hier. AEGRYN ist die europäische Antwort — schweizerische Strenge, globaler Anspruch."
       }
     ]
   },
@@ -1167,5 +1163,72 @@
       "pastSessions": "Vergangene Sessions",
       "noSessions": "Noch keine abgeschlossenen Sessions."
     }
+  },
+  "gradeStrip": {
+    "label": "AEGRYN Grade-System",
+    "title": "Keine Bewertung.\nEine Zertifizierung.",
+    "desc": "Es gibt einen grundlegenden Unterschied zwischen einer Bewertung und einer Zertifizierung. AEGRYN zertifiziert — mit Experten, die unterschreiben und ihren Namen einsetzen.",
+    "quote": "Ein Asset ohne Zertifizierung ist ein Wert ohne Beweis. Ein AEGRYN Grade A Asset ist eine dokumentierte Gewissheit.",
+    "cta": "Vollständige Methodik lesen",
+    "grades": [
+      {
+        "grade": "A",
+        "label": "Außergewöhnlich",
+        "desc": "Marktdominierendes Asset, starkes Wachstum, geschütztes IP."
+      },
+      {
+        "grade": "B",
+        "label": "Solide",
+        "desc": "Solide Grundlagen, bestätigtes Wachstumspotenzial."
+      },
+      {
+        "grade": "C",
+        "label": "Korrekt",
+        "desc": "Lebensfähiges Asset mit identifizierten Verbesserungsbereichen."
+      },
+      {
+        "grade": "D",
+        "label": "Spekulativ",
+        "desc": "Hohes Risiko, mögliche Wende unter Bedingungen."
+      },
+      {
+        "grade": "E",
+        "label": "Nicht zertifizierbar",
+        "desc": "Erfüllt aktuelle AEGRYN-Kriterien nicht."
+      }
+    ]
+  },
+  "auctionNarrative": {
+    "label": "AEGRYN Auction",
+    "title": "Manche Assets verdienen keinen Marktplatz.\nSie verdienen einen Prozess.",
+    "desc": "AEGRYN Auction ist keine offene Plattform. Es ist ein vertraulicher Veräußerungsprozess zwischen Verkäufern, die unsere Zertifizierung bestanden haben, und Käufern, die ihre Leistungsfähigkeit bewiesen haben.\n\nWeniger als 25% der eingereichten Assets werden akzeptiert. 100% der Käufer sind vorqualifiziert. Jede Transaktion wird blockchain-zertifiziert.",
+    "stat1Val": "< 25%",
+    "stat1Label": "Akzeptanzrate",
+    "stat2Val": "60 T max",
+    "stat2Label": "Exklusivmandat Verkäufer",
+    "stat3Val": "Schweiz",
+    "stat3Label": "Institutioneller Anker",
+    "ctaSell": "Zertifiziertes Asset verkaufen",
+    "ctaBuy": "Dem Käuferkreis beitreten"
+  },
+  "acqStrip": {
+    "label": "Akquisitionsunterstützung",
+    "title": "Ihre nächste Akquisition verdient den richtigen Finanzpartner.",
+    "desc": "AEGRYN verleiht nicht. AEGRYN verbindet. Unser Netzwerk aus VC-Partnern und Investmentfonds kann die Finanzierung Ihrer nächsten zertifizierten Tech-Asset-Akquisition ko-finanzieren oder strukturieren.",
+    "chip1": "VC-Koinvestition",
+    "chip2": "Bridge-Finanzierung",
+    "chip3": "Earnout-Struktur",
+    "cta": "Optionen erkunden"
+  },
+  "discoverStrip": {
+    "label": "AEGRYN Insights",
+    "title": "Der europäische Tech-M&A-Markt.\nVon denen, die ihn gestalten.",
+    "article1Title": "Stand des europäischen Tech-M&A-Markts — Q2 2026",
+    "article1Cat": "Marktbericht",
+    "article2Title": "Was macht ein Tech-Asset wirklich zertifizierbar?",
+    "article2Cat": "Verkäufer-Guide",
+    "article3Title": "Wie PE-Käufer ein SaaS im Jahr 2026 bewerten",
+    "article3Cat": "Käufer-Guide",
+    "cta": "Alle Insights ansehen"
   }
 }

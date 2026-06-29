@@ -7,6 +7,10 @@ import { MissionVideoSection } from '@/components/sections/MissionVideoSection'
 import { WhyUseApps }       from '@/components/sections/WhyUseApps'
 import { StatementStrip }   from '@/components/sections/StatementStrip'
 import { StatsRow }         from '@/components/sections/StatsRow'
+import { GradeStrip }       from '@/components/sections/GradeStrip'
+import { AuctionNarrative } from '@/components/sections/AuctionNarrative'
+import { AcqSupportStrip }  from '@/components/sections/AcqSupportStrip'
+import { DiscoverStrip }    from '@/components/sections/DiscoverStrip'
 import type { Metadata }    from 'next'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -33,15 +37,19 @@ export default async function HomePage({ params }: Props) {
       />
       <HeroMountain />
       <ManifestoSection />
+      <GradeStrip />
       <MissionVideoSection />
       <AssetGrid />
+      <AuctionNarrative />
       <WhyUseApps />
+      <AcqSupportStrip />
       <StatementStrip
         label="Aegryn Advisory"
         title={tAdv('hero.title')}
         cta={tAdv('cta')}
         href="/advisory"
       />
+      <DiscoverStrip />
       <StatsRow />
     </>
   )

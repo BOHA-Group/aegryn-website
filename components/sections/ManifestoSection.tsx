@@ -109,17 +109,22 @@ export function ManifestoSection() {
       <section ref={whatRef} className="border-t border-ag-border bg-ag-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between border-b border-ag-border py-4 mb-0">
-            <Link
-              href="/advisory"
-              className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light hover:text-ag-black transition-colors"
-            >
+            <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / {tW('label')}
-            </Link>
+            </span>
             <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
-              04
+              03
             </span>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-ag-border">
+          <div className="py-16 border-b border-ag-border text-center px-4">
+            <p
+              className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.3] mx-auto"
+              style={{ fontSize: 'clamp(20px,2.5vw,30px)', maxWidth: '800px' }}
+            >
+              {tW('conviction')}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-ag-border">
             {whatwedoItems.map((item) => (
               <div key={item.num} className="what-col py-16 lg:px-10 first:pl-0 last:pr-0" style={{ opacity: 0 }}>
                 <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-6">

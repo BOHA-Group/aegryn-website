@@ -248,27 +248,23 @@
     }
   },
   "whatwedo": {
-    "label": "What we do",
+    "label": "Our Conviction",
+    "conviction": "The best European tech assets deserve more than a listing on an American marketplace.",
     "items": [
       {
         "num": "01",
-        "title": "ECOSYSTEM ENGINEERING",
-        "desc": "We architect digital ecosystems built for scale, resilience and long-term value — where every component connects and compounds."
+        "title": "Certification was missing.",
+        "desc": "Buying a tech asset without independent certification is like buying a watch without papers. AEGRYN provides the papers — co-signed, verifiable, blockchain-certified."
       },
       {
         "num": "02",
-        "title": "EXPERIENCE ARCHITECTURE",
-        "desc": "We design seamless user experiences that simplify complexity and create intuitive interactions across all our platforms."
+        "title": "Discretion was sacrificed.",
+        "desc": "The best disposals do not happen in public. They happen in a closed circle, between parties who know what they are looking for. AEGRYN is that circle."
       },
       {
         "num": "03",
-        "title": "TECHNOLOGY FOUNDATIONS",
-        "desc": "We build on solid, sovereign technology infrastructure — ensuring security, independence and durability at every layer."
-      },
-      {
-        "num": "04",
-        "title": "STRATEGIC ADVISORY",
-        "desc": "Our advisory draws on real execution frameworks in Data, AI & Security — grounded in how we build our own ecosystems."
+        "title": "Europe had no reference.",
+        "desc": "The major tech transaction houses are American. The European tech market, however, is here. AEGRYN is the European answer — Swiss in rigour, global in ambition."
       }
     ]
   },
@@ -819,33 +815,17 @@
     ]
   },
   "auctionNarrative": {
-    "label": "AEGRYN Sessions",
-    "title": "One session. Two parties.\nOne clean transaction.",
-    "desc": "AEGRYN sessions are not auctions. They are private transaction protocols, bringing certified sellers and qualified buyers together around graded assets. Each session is preceded by due diligence, governed by T&Cs and closed through institutional escrow.",
-    "ctaPrimary": "View next session",
-    "ctaSecondary": "Submit my asset",
-    "steps": [
-      {
-        "num": "01",
-        "label": "Submission & pre-qualification"
-      },
-      {
-        "num": "02",
-        "label": "AEGRYN Grade certification"
-      },
-      {
-        "num": "03",
-        "label": "Qualified buyer access"
-      },
-      {
-        "num": "04",
-        "label": "Supervised negotiation"
-      },
-      {
-        "num": "05",
-        "label": "Transaction & escrow"
-      }
-    ]
+    "label": "AEGRYN Auction",
+    "title": "Some assets do not deserve to be on a marketplace.\nThey deserve a process.",
+    "desc": "AEGRYN Auction is not an open platform. It is a confidential disposal process between sellers who have passed our certification and buyers who have proven their capacity and seriousness.\n\nLess than 25% of submitted assets are accepted. 100% of buyers are pre-qualified. Each transaction is blockchain-certified at the date of transfer.",
+    "stat1Val": "< 25%",
+    "stat1Label": "Acceptance rate of submitted assets",
+    "stat2Val": "60d max",
+    "stat2Label": "Exclusive seller mandate",
+    "stat3Val": "Switzerland",
+    "stat3Label": "Institutional anchor",
+    "ctaSell": "Sell a certified asset",
+    "ctaBuy": "Join the buyer circle"
   },
   "acquisitionSupport": {
     "label": "Acquisition Support",
@@ -1309,5 +1289,59 @@
       ],
       "cta": "Request buyer access"
     }
+  },
+  "gradeStrip": {
+    "label": "AEGRYN Grade System",
+    "title": "Not a score.\nA certification.",
+    "desc": "There is a fundamental difference between giving a score and certifying. AEGRYN certifies — with experts who sign and put their name on the line.",
+    "quote": "An asset without certification is a value without proof. An AEGRYN Grade A asset is a documented certainty.",
+    "cta": "Read the full methodology",
+    "grades": [
+      {
+        "grade": "A",
+        "label": "Exceptional",
+        "desc": "Market-dominant asset, strong growth, protected IP."
+      },
+      {
+        "grade": "B",
+        "label": "Solid",
+        "desc": "Sound fundamentals, confirmed growth potential."
+      },
+      {
+        "grade": "C",
+        "label": "Correct",
+        "desc": "Viable asset with identified improvement areas."
+      },
+      {
+        "grade": "D",
+        "label": "Speculative",
+        "desc": "High risk, possible turnaround under conditions."
+      },
+      {
+        "grade": "E",
+        "label": "Non-certifiable",
+        "desc": "Does not meet current AEGRYN criteria."
+      }
+    ]
+  },
+  "acqStrip": {
+    "label": "Acquisition Support",
+    "title": "Your next acquisition deserves the right financial partner.",
+    "desc": "AEGRYN does not lend. AEGRYN connects. Our network of VC partners and investment funds can co-finance, co-invest, or structure the financing of your next certified tech asset acquisition.",
+    "chip1": "VC co-investment",
+    "chip2": "Bridge financing",
+    "chip3": "Earnout structure",
+    "cta": "Explore options"
+  },
+  "discoverStrip": {
+    "label": "AEGRYN Insights",
+    "title": "The European tech M&A market.\nBy those who do it.",
+    "article1Title": "State of the European tech M&A market — Q2 2026",
+    "article1Cat": "Market report",
+    "article2Title": "What makes a tech asset truly certifiable?",
+    "article2Cat": "Seller guide",
+    "article3Title": "How PE buyers evaluate a SaaS in 2026",
+    "article3Cat": "Buyer guide",
+    "cta": "View all insights"
   }
 }

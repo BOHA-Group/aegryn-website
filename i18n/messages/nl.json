@@ -246,27 +246,23 @@
     }
   },
   "whatwedo": {
-    "label": "Wat we doen",
+    "label": "Onze Overtuiging",
+    "conviction": "De beste Europese tech-assets verdienen meer dan een vermelding op een Amerikaans platform.",
     "items": [
       {
         "num": "01",
-        "title": "ECOSYSTEEM-ENGINEERING",
-        "desc": "We ontwerpen digitale ecosystemen voor schaalbaarheid, veerkracht en langetermijnwaarde — waar elk onderdeel verbindt en vermenigvuldigt."
+        "title": "De certificering ontbrak.",
+        "desc": "Een tech-asset kopen zonder onafhankelijke certificering is als een horloge kopen zonder papieren. AEGRYN levert de papieren — co-ondertekend, verifieerbaar, blockchain-gecertificeerd."
       },
       {
         "num": "02",
-        "title": "ERVARINGSARCHITECTUUR",
-        "desc": "We ontwerpen naadloze gebruikerservaringen die complexiteit vereenvoudigen en intuitiïve interacties creëren op al onze platforms."
+        "title": "Discretie werd opgeofferd.",
+        "desc": "De beste overdrachten vinden niet publiekelijk plaats. Ze vinden plaats in een besloten kring, tussen partijen die weten wat ze zoeken. AEGRYN is die kring."
       },
       {
         "num": "03",
-        "title": "TECHNOLOGISCHE FUNDAMENTEN",
-        "desc": "We bouwen op solide, soevereine technologie-infrastructuur — met beveiliging, onafhankelijkheid en duurzaamheid op elke laag."
-      },
-      {
-        "num": "04",
-        "title": "STRATEGISCHE ADVISORY",
-        "desc": "Onze advisory is gebaseerd op echte uitvoeringsraamwerken in Data, AI & Beveiliging — verankerd in hoe we onze eigen ecosystemen bouwen."
+        "title": "Europa had geen referentie.",
+        "desc": "De grote tech-transactiebedrijven zijn Amerikaans. De Europese tech-markt is hier. AEGRYN is het Europese antwoord — Zwitserse nauwkeurigheid, mondiale ambitie."
       }
     ]
   },
@@ -1167,5 +1163,72 @@
       "pastSessions": "Vorige sessies",
       "noSessions": "Nog geen voltooide sessies."
     }
+  },
+  "gradeStrip": {
+    "label": "AEGRYN Grade-systeem",
+    "title": "Geen cijfer.\nEen certificering.",
+    "desc": "Er is een fundamenteel verschil tussen een cijfer geven en certificeren. AEGRYN certificeert — met experts die ondertekenen en hun naam op het spel zetten.",
+    "quote": "Een asset zonder certificering is een waarde zonder bewijs. Een AEGRYN Grade A asset is een gedocumenteerde zekerheid.",
+    "cta": "Lees de volledige methodologie",
+    "grades": [
+      {
+        "grade": "A",
+        "label": "Uitzonderlijk",
+        "desc": "Marktdominant asset, sterke groei, beschermd IP."
+      },
+      {
+        "grade": "B",
+        "label": "Solide",
+        "desc": "Gezonde fundamenten, bevestigd groeipotentieel."
+      },
+      {
+        "grade": "C",
+        "label": "Correct",
+        "desc": "Levensvatbaar asset met geïdentificeerde verbeterpunten."
+      },
+      {
+        "grade": "D",
+        "label": "Speculatief",
+        "desc": "Hoog risico, mogelijke ommekeer onder voorwaarden."
+      },
+      {
+        "grade": "E",
+        "label": "Niet certificeerbaar",
+        "desc": "Voldoet niet aan de huidige AEGRYN-criteria."
+      }
+    ]
+  },
+  "auctionNarrative": {
+    "label": "AEGRYN Auction",
+    "title": "Sommige assets verdienen geen marketplace.\nZe verdienen een proces.",
+    "desc": "AEGRYN Auction is geen open platform. Het is een vertrouwelijk overdrachtsproces tussen verkopers die onze certificering hebben doorstaan en kopers die hun capaciteit hebben bewezen.\n\nMinder dan 25% van de ingediende assets wordt geaccepteerd. 100% van de kopers is vooraf gekwalificeerd. Elke transactie is blockchain-gecertificeerd.",
+    "stat1Val": "< 25%",
+    "stat1Label": "Acceptatiegraad ingediende assets",
+    "stat2Val": "60 d max",
+    "stat2Label": "Exclusief mandaat verkoper",
+    "stat3Val": "Zwitserland",
+    "stat3Label": "Institutioneel anker",
+    "ctaSell": "Een gecertificeerd asset verkopen",
+    "ctaBuy": "Word lid van de koperskring"
+  },
+  "acqStrip": {
+    "label": "Acquisitieondersteuning",
+    "title": "Uw volgende acquisitie verdient de juiste financiële partner.",
+    "desc": "AEGRYN leent niet. AEGRYN verbindt. Ons netwerk van VC-partners en investeringsfondsen kan de financiering van uw volgende gecertificeerde tech-asset-acquisitie co-financieren of structureren.",
+    "chip1": "VC co-investering",
+    "chip2": "Bridge financing",
+    "chip3": "Earnout-structuur",
+    "cta": "Opties verkennen"
+  },
+  "discoverStrip": {
+    "label": "AEGRYN Insights",
+    "title": "De Europese tech M&A-markt.\nDoor degenen die het doen.",
+    "article1Title": "Stand van de Europese tech M&A-markt — Q2 2026",
+    "article1Cat": "Marktrapport",
+    "article2Title": "Wat maakt een tech-asset echt certificeerbaar?",
+    "article2Cat": "Gids voor verkopers",
+    "article3Title": "Hoe PE-kopers een SaaS in 2026 beoordelen",
+    "article3Cat": "Gids voor kopers",
+    "cta": "Bekijk alle insights"
   }
 }

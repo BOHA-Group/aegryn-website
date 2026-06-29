@@ -248,27 +248,23 @@
     }
   },
   "whatwedo": {
-    "label": "Ce que nous faisons",
+    "label": "Notre Conviction",
+    "conviction": "Les meilleurs actifs tech européens méritent mieux qu'une liste sur une marketplace américaine.",
     "items": [
       {
         "num": "01",
-        "title": "INGÉNIERIE D'ÉCOSYSTÈME",
-        "desc": "Nous architecturons des écosystèmes numériques conçus pour la scalabilité, la résilience et la valeur à long terme — où chaque composant se connecte et se cumule."
+        "title": "La certification manquait.",
+        "desc": "Acheter un actif tech sans certification indépendante, c'est acheter une montre sans papers. AEGRYN apporte les papers — co-signés, vérifiables, blockchain-certified."
       },
       {
         "num": "02",
-        "title": "ARCHITECTURE D'EXPÉRIENCE",
-        "desc": "Nous concevons des expériences utilisateurs fluides qui simplifient la complexité et créent des interactions intuitives sur l'ensemble de nos plateformes."
+        "title": "La discrétion était sacrifiée.",
+        "desc": "Les meilleures cessions ne se font pas en public. Elles se font dans un cercle fermé, entre des parties qui savent ce qu'elles cherchent. AEGRYN est ce cercle."
       },
       {
         "num": "03",
-        "title": "FONDATIONS TECHNOLOGIQUES",
-        "desc": "Nous construisons sur une infrastructure technologique solide et souveraine — garantissant sécurité, indépendance et durabilité à chaque couche."
-      },
-      {
-        "num": "04",
-        "title": "ADVISORY STRATÉGIQUE",
-        "desc": "Notre advisory s'appuie sur de vrais cadres d'exécution en Data, IA & Sécurité — ancrés dans la façon dont nous construisons nos propres écosystèmes."
+        "title": "L'Europe n'avait pas sa référence.",
+        "desc": "Les grandes maisons de transaction tech sont américaines. Le marché tech européen, lui, est ici. AEGRYN est la réponse européenne — suisse de rigueur, mondiale d'ambition."
       }
     ]
   },
@@ -819,33 +815,17 @@
     ]
   },
   "auctionNarrative": {
-    "label": "Sessions AEGRYN",
-    "title": "Une session. Deux parties.\nUne transaction propre.",
-    "desc": "Les sessions AEGRYN ne sont pas des enchères. Ce sont des protocoles de transaction privés, réunissant vendeurs certifiés et acquéreurs qualifiés autour d'actifs gradés. Chaque session est précédée d'une due diligence, encadrée par des CGV et clôturée par un escrow institutionnel.",
-    "ctaPrimary": "Voir la prochaine session",
-    "ctaSecondary": "Soumettre mon actif",
-    "steps": [
-      {
-        "num": "01",
-        "label": "Soumission & pré-qualification"
-      },
-      {
-        "num": "02",
-        "label": "Certification AEGRYN Grade"
-      },
-      {
-        "num": "03",
-        "label": "Accès acquéreurs qualifiés"
-      },
-      {
-        "num": "04",
-        "label": "Négociation encadrée"
-      },
-      {
-        "num": "05",
-        "label": "Transaction & escrow"
-      }
-    ]
+    "label": "AEGRYN Auction",
+    "title": "Certains actifs ne méritent pas d'être sur une marketplace.\nIls méritent un processus.",
+    "desc": "AEGRYN Auction n'est pas une plateforme ouverte. C'est un processus de cession confidentiel entre des vendeurs qui ont passé notre certification et des acquéreurs qui ont prouvé leur capacité et leur sérieux.\n\nMoins de 25% des actifs soumis sont acceptés. 100% des acquéreurs sont pré-qualifiés. Chaque transaction est certifiée blockchain à la date de transfert.",
+    "stat1Val": "< 25%",
+    "stat1Label": "Taux d'acceptation des actifs soumis",
+    "stat2Val": "60 j max",
+    "stat2Label": "Mandat exclusif vendeur",
+    "stat3Val": "Suisse",
+    "stat3Label": "Ancrage institutionnel",
+    "ctaSell": "Vendre un actif certifié",
+    "ctaBuy": "Rejoindre le cercle acquéreurs"
   },
   "acquisitionSupport": {
     "label": "Acquisition Support",
@@ -1309,5 +1289,59 @@
       ],
       "cta": "Demander l'accès acquéreur"
     }
+  },
+  "gradeStrip": {
+    "label": "Système de Grade AEGRYN",
+    "title": "Pas une note.\nUne certification.",
+    "desc": "Il y a une différence fondamentale entre donner une note et certifier. AEGRYN certifie — avec des experts qui signent et qui engagent leur nom.",
+    "quote": "Un actif sans certification, c'est une valeur sans preuve. Un actif AEGRYN Grade A, c'est une certitude documentée.",
+    "cta": "Lire la méthodologie complète",
+    "grades": [
+      {
+        "grade": "A",
+        "label": "Exceptionnel",
+        "desc": "Actif dominant son marché, croissance forte, IP protégée."
+      },
+      {
+        "grade": "B",
+        "label": "Solide",
+        "desc": "Fondamentaux sains, potentiel de croissance confirmé."
+      },
+      {
+        "grade": "C",
+        "label": "Correct",
+        "desc": "Actif viable avec axes d'amélioration identifiés."
+      },
+      {
+        "grade": "D",
+        "label": "Spéculatif",
+        "desc": "Risque élevé, retournement possible sous conditions."
+      },
+      {
+        "grade": "E",
+        "label": "Non certifiable",
+        "desc": "Ne répond pas aux critères AEGRYN actuels."
+      }
+    ]
+  },
+  "acqStrip": {
+    "label": "Acquisition Support",
+    "title": "Votre prochaine acquisition mérite le bon partenaire financier.",
+    "desc": "AEGRYN ne prête pas. AEGRYN connecte. Notre réseau de partenaires VC et de fonds d'investissement peut co-financer, co-investir, ou structurer le financement de votre prochaine acquisition d'actif tech certifié.",
+    "chip1": "Co-investissement VC",
+    "chip2": "Bridge financing",
+    "chip3": "Structure earnout",
+    "cta": "Explorer les options"
+  },
+  "discoverStrip": {
+    "label": "AEGRYN Insights",
+    "title": "Le marché M&A tech en Europe.\nPar ceux qui le font.",
+    "article1Title": "État du marché M&A tech Europe — Q2 2026",
+    "article1Cat": "Rapport marché",
+    "article2Title": "Qu'est-ce qu'un actif tech vraiment certifiable ?",
+    "article2Cat": "Guide vendeur",
+    "article3Title": "Comment les acquéreurs PE évaluent un SaaS en 2026",
+    "article3Cat": "Guide acquéreur",
+    "cta": "Voir tous les insights"
   }
 }
