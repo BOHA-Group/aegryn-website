@@ -17,7 +17,9 @@
     "auctionCatalog": "Catalog",
     "auctionSell": "Sell an asset",
     "auctionBuy": "Become a buyer",
+    "auctionBidModels": "Bid Models",
     "auctionSession": "Next session",
+    "auctionAssessment": "Assessment Days",
     "auctionResults": "Results",
     "gradeSystem": "Grade system",
     "gradeMethod": "Methodology",
@@ -1157,7 +1159,7 @@
     "sell": {
       "label": "Sell via AEGRYN",
       "title": "Your asset deserves\nbetter than a broker.",
-      "desc": "A transparent process, an objective grade, pre-qualified buyers. No hidden commission — our fee is aligned with your success.",
+      "desc": "A transparent process, an objective grade, pre-qualified buyers. Our fee is aligned with your success — terms in GTC.",
       "step1Title": "Submit",
       "step1Desc": "Fill in the submission form. Basic asset information, key metrics, available documentation.",
       "step2Title": "Certification",
@@ -1169,7 +1171,7 @@
       "feesTitle": "Our fee structure",
       "feesDesc": "The financial terms of the transaction are detailed in our General Terms and Conditions, available upon request after qualification.",
       "feesCert": "Certification",
-      "feesCertValue": "Competitive commission structure — details in GTC",
+      "feesCertValue": "Financial terms available in GTC",
       "feesSuccess": "Success fee",
       "feesSuccessValue": "Conditions in GTC",
       "cta": "Submit my asset now"
@@ -1292,14 +1294,14 @@
       "distribution": {
         "label": "Distribution",
         "title": "Deal flow access",
-        "desc": "Family offices, private banks, funds. Your clients get priority access to Grade A/B assets before any listing. Distribution commission on each signed membership.",
+        "desc": "Family offices, private banks, funds. Your clients get priority access to Grade A/B assets before any listing. Privileged access to our certified deal flow.",
         "profiles": "Swiss private banks · Family offices · Wealth managers",
         "cta": "Explore distribution partnership"
       },
       "dealflow": {
         "label": "Deal Flow",
         "title": "Deal sourcing",
-        "desc": "VC/PE funds, M&A boutiques, tech accelerators. Source assets for sale or active acquirers. Sourcing commission on each closed deal.",
+        "desc": "VC/PE funds, M&A boutiques, tech accelerators. Source assets for sale or active acquirers. Partnership terms defined during the qualification interview.",
         "profiles": "Micro-PE funds · Boutique M&A firms · Tech accelerators · FONGIT",
         "cta": "Source an asset or acquirer"
       }
@@ -1320,6 +1322,315 @@
       "email": "Professional email",
       "submit": "Submit application",
       "note": "Response within 7 business days. Qualification interview required."
+    },
+    "tabs": {
+      "overview": "Overview",
+      "certification": "Certification",
+      "distribution": "Distribution",
+      "dealflow": "Deal Flow",
+      "apply": "Apply"
+    }
+  },
+  "gradeSubmit": {
+    "meta": {
+      "title": "Submit an asset — AEGRYN Certification",
+      "desc": "Start the AEGRYN certification process. Confidential pre-submission form. No commitment before agreement on methodology."
+    },
+    "hero": {
+      "label": "AEGRYN GRADE — CERTIFICATION",
+      "title": "Start the certification\nprocess.",
+      "desc": "Every AEGRYN certification process is unique because every asset is. This pre-submission form allows us to qualify your asset and propose a tailored roadmap. No commitment before agreement on methodology."
+    },
+    "form": {
+      "title": "Your asset",
+      "assetName": "Asset name",
+      "assetType": "Asset type",
+      "assetTypePlaceholder": "Choose a type",
+      "assetTypeOptions": {
+        "saas": "B2B SaaS",
+        "mobile": "Mobile App",
+        "marketplace": "Marketplace",
+        "protocol": "Protocol",
+        "ip": "Pure IP",
+        "other": "Other"
+      },
+      "assetUrl": "URL or demo access (optional)",
+      "techStack": "Main stack (optional)",
+      "techStackPlaceholder": "e.g. Next.js, Supabase",
+      "status": "Asset status",
+      "statusPlaceholder": "Choose a status",
+      "statusOptions": {
+        "prod_revenue": "In production (revenue)",
+        "prod_no_revenue": "In production (no revenue)",
+        "beta": "Beta",
+        "prototype": "Prototype",
+        "ip_only": "IP and code only"
+      },
+      "arr": "Annual ARR (€, optional)",
+      "ipFiled": "IP filed?",
+      "ipYes": "Yes",
+      "ipNo": "No",
+      "ipPending": "Pending",
+      "motivation": "Certification objective",
+      "motivationPlaceholder": "Choose an objective",
+      "motivationOptions": {
+        "full_exit": "Full exit",
+        "partial_exit": "Partial exit",
+        "liquidity": "Partial liquidity",
+        "valuation": "Valuation only",
+        "other": "Other"
+      },
+      "targetValuation": "Target valuation (€, optional)",
+      "timeline": "Desired timeline",
+      "timelinePlaceholder": "Choose a timeline",
+      "timelineOptions": {
+        "urgent": "Urgent (< 3 months)",
+        "standard": "Standard (3–6 months)",
+        "long": "Long-term (6–12 months)",
+        "none": "No timeline"
+      },
+      "contactTitle": "Your contact details",
+      "fullName": "First and last name",
+      "email": "Professional email",
+      "company": "Company (optional)",
+      "message": "Additional information (optional)",
+      "submit": "Send my file",
+      "submitting": "Sending...",
+      "successTitle": "File submitted.",
+      "successDesc": "Your file has been submitted. Response within 5 business days. A confidential pre-screening will be proposed by email.",
+      "errorMsg": "An error occurred. Please try again or contact us directly.",
+      "legalNote": "The financial terms of the certification are available in our General Terms of Service, shared at the first exchange. No commitment at this stage."
+    }
+  },
+  "bidModels": {
+    "meta": {
+      "title": "AEGRYN Bid Models — Club Deal, Corporate, Funds",
+      "desc": "Three bid models to acquire a certified AEGRYN tech asset: individual with co-investors, corporate, or investment fund."
+    },
+    "hero": {
+      "label": "AEGRYN AUCTION — BID MODELS",
+      "title": "Three ways to acquire\na certified asset.",
+      "desc": "AEGRYN structures three bid models adapted to each buyer profile — from individuals with co-investors to institutional funds. Each model includes an escrow mechanism and a certified Transaction Promise."
+    },
+    "model1": {
+      "label": "MODEL 01",
+      "title": "Club Deal\n(Individual + co-investors)",
+      "badge": "HNWI · Entrepreneurs",
+      "desc": "A lead bidder can associate up to 4 declared co-investors. One offer, one escrow paid by the lead. Internal allocation remains confidential to AEGRYN.",
+      "features": [
+        "Minimum ticket: €500,000",
+        "Up to 4 declared co-investors",
+        "Escrow paid by the lead bidder",
+        "Free internal allocation until signing",
+        "Full lead KYC + simplified co-investor KYC"
+      ],
+      "cta": "Apply — Club Deal"
+    },
+    "model2": {
+      "label": "MODEL 02",
+      "title": "Corporate\n(Company or Holding)",
+      "badge": "SME · Holdings · Corporates",
+      "desc": "A legal entity acquires the asset directly on its balance sheet. Co-bid possible between two entities in a declared JV. Asset deal or share deal depending on the structure.",
+      "features": [
+        "Minimum ticket: €500,000",
+        "Direct balance sheet acquisition",
+        "Asset deal or share deal available",
+        "JV possible (two co-acquiring entities)",
+        "Full B2B KYC (company registration, articles, UBO)"
+      ],
+      "cta": "Apply — Corporate"
+    },
+    "model3": {
+      "label": "MODEL 03",
+      "title": "Fund\n(PE · VC · Family Office)",
+      "badge": "PE · VC · Family Office · Search Fund",
+      "desc": "Institutional funds benefit from an IC (Investment Committee) period of 5 to 10 days before submitting a firm offer. SPV available for direct LP co-investment.",
+      "features": [
+        "Minimum ticket: €500,000 (no cap)",
+        "IC period of 5–10 business days granted",
+        "SPV available for LP co-investment",
+        "Management presentation organised by AEGRYN",
+        "Institutional KYC (authorisation, prospectus, significant GP + LP)"
+      ],
+      "cta": "Apply — Fund"
+    },
+    "escrow": {
+      "label": "COMMON MECHANISM",
+      "title": "The Transaction Promise\nwith institutional escrow.",
+      "desc": "Regardless of the bid model, every AEGRYN transaction relies on our PTT mechanism:",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Expression of Interest",
+          "desc": "Non-binding. Transmitted to seller within 48h. No deposit required."
+        },
+        {
+          "num": "02",
+          "title": "Agreement in Principle",
+          "desc": "Price and structure agreed. Signing the AP triggers the escrow obligation."
+        },
+        {
+          "num": "03",
+          "title": "10% Escrow",
+          "desc": "Paid into a third-party bank account within 5 business days. AEGRYN never has access to the funds."
+        },
+        {
+          "num": "04",
+          "title": "Due Diligence — 30 days",
+          "desc": "Full data room access. Q&A via AEGRYN. Extensions possible by mutual agreement."
+        },
+        {
+          "num": "05",
+          "title": "Signing & Closing",
+          "desc": "Blockchain certification of the exact code state. Funds released. Asset transferred."
+        }
+      ],
+      "penaltiesTitle": "Bilateral protection",
+      "penaltyBuyer": "Buyer withdrawal without cause → escrow acquired by seller",
+      "penaltySeller": "Seller withdrawal without cause → escrow returned doubled to buyer",
+      "penaltyCs": "Condition precedent lifted → escrow fully refunded (no fault)"
+    },
+    "cta": {
+      "title": "Ready to submit an offer?",
+      "desc": "Complete your buyer qualification file to access the catalogue and submit an offer on a certified asset.",
+      "btn": "Submit my buyer application",
+      "secondary": "View catalogue"
+    }
+  },
+  "assessmentDays": {
+    "meta": {
+      "title": "AEGRYN Assessment Days — Free expertise for your tech asset",
+      "desc": "Free by-appointment expert sessions. Present your tech asset in 45 minutes to an AEGRYN advisor. Grade estimate and valuation range. No commitment."
+    },
+    "hero": {
+      "label": "AEGRYN ASSESSMENT DAYS",
+      "title": "45 minutes to know\nwhat your asset is worth.",
+      "desc": "By appointment, in 4 European cities, our advisors conduct a confidential pre-screening of your asset. Indicative grade estimate, valuation range, recommendations. Free. No commitment."
+    },
+    "what": {
+      "label": "WHAT YOU GET",
+      "title": "A pre-screening, not a pitch.",
+      "items": [
+        {
+          "title": "Indicative grade estimate",
+          "desc": "Positioning on the AEG ★/AAA/AA/A/B scale based on a preliminary analysis of your metrics, stack, and IP."
+        },
+        {
+          "title": "Valuation range",
+          "desc": "Estimate based on ARR multiples observed in AEGRYN transactions and 2026 market data."
+        },
+        {
+          "title": "Concrete recommendations",
+          "desc": "The 3 to 5 priority actions to improve your grade before a formal submission."
+        },
+        {
+          "title": "Next steps",
+          "desc": "If your asset is promising, we propose a full certification process. No obligation."
+        }
+      ]
+    },
+    "notIncluded": {
+      "title": "What you don't get",
+      "items": [
+        "An official report (generated only during the paid audit)",
+        "A price or sale commitment",
+        "Access to the buyer catalogue"
+      ]
+    },
+    "bring": {
+      "title": "What to bring",
+      "items": [
+        "Key metrics: ARR/MRR, number of clients, churn, NRR",
+        "Technical stack summary (2–3 lines)",
+        "IP status: registered trademarks or not, software rights",
+        "Your desired valuation range"
+      ]
+    },
+    "cities": {
+      "label": "CITIES 2026",
+      "title": "4 cities. By appointment.",
+      "list": [
+        {
+          "city": "Zurich",
+          "country": "Switzerland",
+          "dates": "Q3 2026 — dates to be confirmed",
+          "format": "In-person + Video"
+        },
+        {
+          "city": "Paris",
+          "country": "France",
+          "dates": "Q3 2026 — dates to be confirmed",
+          "format": "In-person + Video"
+        },
+        {
+          "city": "Amsterdam",
+          "country": "Netherlands",
+          "dates": "Q4 2026 — dates to be confirmed",
+          "format": "Video only"
+        },
+        {
+          "city": "Munich",
+          "country": "Germany",
+          "dates": "Q4 2026 — dates to be confirmed",
+          "format": "Video only"
+        }
+      ]
+    },
+    "form": {
+      "title": "Book a slot.",
+      "name": "First and last name",
+      "email": "Professional email",
+      "company": "Company (optional)",
+      "city": "Preferred city",
+      "cityPlaceholder": "Choose a city",
+      "cityOptions": {
+        "zurich": "Zurich",
+        "paris": "Paris",
+        "amsterdam": "Amsterdam",
+        "munich": "Munich"
+      },
+      "format": "Preferred format",
+      "formatPhysical": "In-person",
+      "formatVideo": "Video (Zoom / Meet)",
+      "assetType": "Asset type",
+      "assetTypePlaceholder": "B2B SaaS, Marketplace, Mobile app...",
+      "arrRange": "Approximate ARR",
+      "arrPlaceholder": "Choose a range",
+      "arrOptions": {
+        "pre": "Pre-revenue",
+        "under100": "< €100K",
+        "100to500": "€100K — €500K",
+        "500to2m": "€500K — €2M",
+        "above2m": "> €2M"
+      },
+      "message": "Additional information (optional)",
+      "submit": "Book my slot",
+      "submitting": "Sending...",
+      "successTitle": "Slot requested.",
+      "successDesc": "Confirmation within 48h. 45-minute slot. No charge. No commitment.",
+      "errorMsg": "An error occurred. Please try again.",
+      "note": "Confirmation within 48h. 45-minute slot. No charge. No commitment."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Is it really free?",
+          "a": "Yes, without exception. Assessment Days are an AEGRYN service offered to founders considering a sale. No billing, no hidden fees."
+        },
+        {
+          "q": "Does my asset need to be operational?",
+          "a": "No. We evaluate assets at all stages — in production with revenue, in beta, or even at IP and code-only stage."
+        },
+        {
+          "q": "Is the pre-screening confidential?",
+          "a": "Completely. Each session is covered by an AEGRYN framework NDA signed before the exchange. Your metrics and identity are never shared without your consent."
+        },
+        {
+          "q": "What happens after the Assessment Day?",
+          "a": "If your asset is eligible for certification, we propose starting the process. No follow-up obligation. You leave with your recommendations in any case."
+        }
+      ]
     }
   }
 }

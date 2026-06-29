@@ -17,7 +17,9 @@
     "auctionCatalog": "Katalog",
     "auctionSell": "Asset verkaufen",
     "auctionBuy": "Käufer werden",
+    "auctionBidModels": "Bid-Modelle",
     "auctionSession": "Nächste Session",
+    "auctionAssessment": "Assessment Days",
     "auctionResults": "Ergebnisse",
     "gradeSystem": "Grade-System",
     "gradeMethod": "Methodik",
@@ -1050,7 +1052,7 @@
       ],
       "cta": "Mein Asset einreichen",
       "feesDesc": "Die finanziellen Bedingungen der Transaktion sind in unseren Allgemeinen Geschäftsbedingungen aufgeführt, die auf Anfrage nach Qualifizierung erhältlich sind.",
-      "feesCertValue": "Wettbewerbsfähige Provisionsstruktur — Details in AGB",
+      "feesCertValue": "Finanzielle Konditionen in den AGB",
       "feesSuccessValue": "Bedingungen in AGB"
     },
     "buy": {
@@ -1306,14 +1308,14 @@
       "distribution": {
         "label": "Distribution",
         "title": "Deal-Flow-Zugang",
-        "desc": "Family Offices, Privatbanken, Fonds. Ihre Kunden erhalten vorrangigen Zugang zu Grade-A/B-Assets vor jedem Listing. Distributionsprovision auf jede unterzeichnete Mitgliedschaft.",
+        "desc": "Family Offices, Privatbanken, Fonds. Ihre Kunden erhalten vorrangigen Zugang zu Grade-A/B-Assets vor jedem Listing. Bevorzugter Zugang zu unserem zertifizierten Deal-Flow.",
         "profiles": "Schweizer Privatbanken · Family Offices · Vermögensverwalter",
         "cta": "Distributions-Partnerschaft erkunden"
       },
       "dealflow": {
         "label": "Deal Flow",
         "title": "Deal-Sourcing",
-        "desc": "VC/PE-Fonds, M&A-Boutiquen, Tech-Acceleratoren. Vermitteln Sie zu veräußernde Assets oder aktive Käufer. Vermittlungsprovision auf jeden abgeschlossenen Deal.",
+        "desc": "VC/PE-Fonds, M&A-Boutiquen, Tech-Acceleratoren. Vermitteln Sie zu veräußernde Assets oder aktive Käufer. Partnerschaftsbedingungen werden beim Qualifikationsgespräch festgelegt.",
         "profiles": "Micro-PE-Fonds · M&A-Boutiquen · Tech-Acceleratoren · FONGIT",
         "cta": "Ein Asset oder einen Käufer vermitteln"
       }
@@ -1334,6 +1336,315 @@
       "email": "Professionelle E-Mail",
       "submit": "Bewerbung einreichen",
       "note": "Antwort innerhalb von 7 Werktagen. Qualifikationsgespräch erforderlich."
+    },
+    "tabs": {
+      "overview": "Übersicht",
+      "certification": "Zertifizierung",
+      "distribution": "Distribution",
+      "dealflow": "Deal Flow",
+      "apply": "Bewerbung"
+    }
+  },
+  "gradeSubmit": {
+    "meta": {
+      "title": "Asset einreichen — AEGRYN Zertifizierung",
+      "desc": "Starten Sie den AEGRYN-Zertifizierungsprozess. Vertrauliches Voreinreichungsformular. Keine Verpflichtung vor Einigung auf die Methodik."
+    },
+    "hero": {
+      "label": "AEGRYN GRADE — ZERTIFIZIERUNG",
+      "title": "Den Zertifizierungs-\nprozess starten.",
+      "desc": "Jeder AEGRYN-Zertifizierungsprozess ist einzigartig, weil es jedes Asset ist. Dieses Voreinreichungsformular ermöglicht uns, Ihr Asset zu qualifizieren und einen maßgeschneiderten Fahrplan vorzuschlagen. Keine Verpflichtung vor Einigung auf die Methodik."
+    },
+    "form": {
+      "title": "Ihr Asset",
+      "assetName": "Asset-Name",
+      "assetType": "Asset-Typ",
+      "assetTypePlaceholder": "Typ auswählen",
+      "assetTypeOptions": {
+        "saas": "B2B SaaS",
+        "mobile": "Mobile App",
+        "marketplace": "Marketplace",
+        "protocol": "Protokoll",
+        "ip": "Reines IP",
+        "other": "Sonstiges"
+      },
+      "assetUrl": "URL oder Demo-Zugang (optional)",
+      "techStack": "Hauptstack (optional)",
+      "techStackPlaceholder": "z.B. Next.js, Supabase",
+      "status": "Asset-Status",
+      "statusPlaceholder": "Status auswählen",
+      "statusOptions": {
+        "prod_revenue": "In Produktion (Einnahmen)",
+        "prod_no_revenue": "In Produktion (keine Einnahmen)",
+        "beta": "Beta",
+        "prototype": "Prototyp",
+        "ip_only": "Nur IP und Code"
+      },
+      "arr": "Jährlicher ARR (€, optional)",
+      "ipFiled": "IP angemeldet?",
+      "ipYes": "Ja",
+      "ipNo": "Nein",
+      "ipPending": "In Bearbeitung",
+      "motivation": "Zertifizierungsziel",
+      "motivationPlaceholder": "Ziel auswählen",
+      "motivationOptions": {
+        "full_exit": "Vollständiger Exit",
+        "partial_exit": "Teilweiser Exit",
+        "liquidity": "Teilweise Liquidität",
+        "valuation": "Nur Bewertung",
+        "other": "Sonstiges"
+      },
+      "targetValuation": "Ziel-Bewertung (€, optional)",
+      "timeline": "Gewünschter Zeitrahmen",
+      "timelinePlaceholder": "Zeitrahmen auswählen",
+      "timelineOptions": {
+        "urgent": "Dringend (< 3 Monate)",
+        "standard": "Standard (3–6 Monate)",
+        "long": "Langfristig (6–12 Monate)",
+        "none": "Kein Zeitrahmen"
+      },
+      "contactTitle": "Ihre Kontaktdaten",
+      "fullName": "Vor- und Nachname",
+      "email": "Professionelle E-Mail",
+      "company": "Unternehmen (optional)",
+      "message": "Zusätzliche Informationen (optional)",
+      "submit": "Unterlagen senden",
+      "submitting": "Wird gesendet...",
+      "successTitle": "Unterlagen übermittelt.",
+      "successDesc": "Ihre Unterlagen wurden übermittelt. Antwort innerhalb von 5 Werktagen. Ein vertrauliches Pre-Screening wird per E-Mail vorgeschlagen.",
+      "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
+      "legalNote": "Die finanziellen Bedingungen der Zertifizierung sind in unseren Allgemeinen Geschäftsbedingungen verfügbar, die beim ersten Austausch mitgeteilt werden. Keine Verpflichtung zu diesem Zeitpunkt."
+    }
+  },
+  "bidModels": {
+    "meta": {
+      "title": "AEGRYN Bid-Modelle — Club Deal, Corporate, Fonds",
+      "desc": "Drei Bid-Modelle fuer den Erwerb eines zertifizierten AEGRYN-Tech-Assets: Einzelperson mit Co-Investoren, Unternehmen oder Investmentfonds."
+    },
+    "hero": {
+      "label": "AEGRYN AUCTION — BID-MODELLE",
+      "title": "Drei Wege, ein\nzertifiziertes Asset zu erwerben.",
+      "desc": "AEGRYN strukturiert drei Bid-Modelle fuer jeden Kaeufertyp. Jedes Modell umfasst einen Treuhandmechanismus und eine zertifizierte Transaktionszusage."
+    },
+    "model1": {
+      "label": "MODELL 01",
+      "title": "Club Deal\n(Einzelperson + Co-Investoren)",
+      "badge": "HNWI · Unternehmer",
+      "desc": "Ein Hauptbieter kann bis zu 4 erklaerte Co-Investoren einbinden. Ein Angebot, ein Treuhandkonto, bezahlt vom Lead.",
+      "features": [
+        "Mindestticket: 500.000 EUR",
+        "Bis zu 4 erklaerte Co-Investoren",
+        "Treuhand durch den Lead-Bieter",
+        "Freie interne Aufteilung bis zur Unterzeichnung",
+        "Vollstaendiges Lead-KYC + vereinfachtes Co-Inv.-KYC"
+      ],
+      "cta": "Bewerben — Club Deal"
+    },
+    "model2": {
+      "label": "MODELL 02",
+      "title": "Corporate\n(Unternehmen oder Holding)",
+      "badge": "KMU · Holdings · Corporates",
+      "desc": "Eine juristische Person erwirbt das Asset direkt in ihrer Bilanz. Co-Bid zwischen zwei Entitaeten in einem erklaerten JV moeglich.",
+      "features": [
+        "Mindestticket: 500.000 EUR",
+        "Direkterwerb in der Bilanz",
+        "Asset Deal oder Share Deal moeglich",
+        "JV moeglich (zwei co-erwerbende Entitaeten)",
+        "Vollstaendiges B2B-KYC"
+      ],
+      "cta": "Bewerben — Corporate"
+    },
+    "model3": {
+      "label": "MODELL 03",
+      "title": "Fonds\n(PE · VC · Family Office)",
+      "badge": "PE · VC · Family Office · Search Fund",
+      "desc": "Institutionelle Fonds profitieren von einem IC-Zeitraum von 5 bis 10 Tagen vor der Abgabe eines verbindlichen Angebots. SPV fuer direktes LP-Co-Investment moeglich.",
+      "features": [
+        "Mindestticket: 500.000 EUR (kein Maximum)",
+        "IC-Zeitraum von 5-10 Werktagen",
+        "SPV fuer LP-Co-Investment verfuegbar",
+        "Management Presentation durch AEGRYN",
+        "Institutionelles KYC"
+      ],
+      "cta": "Bewerben — Fonds"
+    },
+    "escrow": {
+      "label": "GEMEINSAMER MECHANISMUS",
+      "title": "Die Transaktionszusage\nmit institutionellem Treuhand.",
+      "desc": "Unabhaengig vom Bid-Modell stuetzt sich jede AEGRYN-Transaktion auf unseren PTT-Mechanismus:",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Interessensbekundung",
+          "desc": "Unverbindlich. Weitergeleitet innerhalb von 48h. Keine Einzahlung erforderlich."
+        },
+        {
+          "num": "02",
+          "title": "Grundsatzvereinbarung",
+          "desc": "Preis und Struktur vereinbart. Unterzeichnung loest die Treuhandpflicht aus."
+        },
+        {
+          "num": "03",
+          "title": "Treuhand 10%",
+          "desc": "Eingezahlt auf ein Drittbank-Konto innerhalb von 5 Werktagen. AEGRYN hat niemals Zugang zu den Geldern."
+        },
+        {
+          "num": "04",
+          "title": "Due Diligence — 30 Tage",
+          "desc": "Vollstaendiger Data-Room-Zugang. Q&A ueber AEGRYN."
+        },
+        {
+          "num": "05",
+          "title": "Signing & Closing",
+          "desc": "Blockchain-Zertifizierung. Gelder freigegeben. Asset uebertragen."
+        }
+      ],
+      "penaltiesTitle": "Bilateraler Schutz",
+      "penaltyBuyer": "Kaeuferruecktritt ohne Grund -> Treuhand an den Verkaeufer",
+      "penaltySeller": "Verkaeuferruecktritt ohne Grund -> Treuhand verdoppelt an den Kaeufer",
+      "penaltyCs": "Aufschiebende Bedingung aufgehoben -> Treuhand vollstaendig zurueckerstattet"
+    },
+    "cta": {
+      "title": "Bereit, ein Angebot abzugeben?",
+      "desc": "Vervollstaendigen Sie Ihre Kaeuferqualifikation fuer den Zugang zum Katalog.",
+      "btn": "Meine Kaeuferbe werbung einreichen",
+      "secondary": "Katalog ansehen"
+    }
+  },
+  "assessmentDays": {
+    "meta": {
+      "title": "AEGRYN Assessment Days — Kostenlose Expertise fuer Ihr Tech-Asset",
+      "desc": "Kostenlose Expertensitzungen nach Vereinbarung. 45 Minuten mit einem AEGRYN-Advisor. Grade-Schaetzung und Bewertungsspanne. Kein Engagement."
+    },
+    "hero": {
+      "label": "AEGRYN ASSESSMENT DAYS",
+      "title": "45 Minuten, um den Wert\nIhres Assets zu kennen.",
+      "desc": "Nach Vereinbarung, in 4 europaeischen Staedten, fuehren unsere Advisors ein vertrauliches Pre-Screening durch. Kostenlos. Ohne Engagement."
+    },
+    "what": {
+      "label": "WAS SIE ERHALTEN",
+      "title": "Ein Pre-Screening, kein Pitch.",
+      "items": [
+        {
+          "title": "Indikative Grade-Schaetzung",
+          "desc": "Positionierung auf der AEG-Skala ★/AAA/AA/A/B basierend auf einer Voranalyse."
+        },
+        {
+          "title": "Bewertungsspanne",
+          "desc": "Schaetzung basierend auf ARR-Multiples aus AEGRYN-Transaktionen und Marktdaten 2026."
+        },
+        {
+          "title": "Konkrete Empfehlungen",
+          "desc": "Die 3 bis 5 Prioritaetsmassnahmen zur Verbesserung Ihres Grades."
+        },
+        {
+          "title": "Naechste Schritte",
+          "desc": "Wenn Ihr Asset vielversprechend ist, schlagen wir einen vollstaendigen Zertifizierungsprozess vor."
+        }
+      ]
+    },
+    "notIncluded": {
+      "title": "Was Sie nicht erhalten",
+      "items": [
+        "Einen offiziellen Bericht (nur beim kostenpflichtigen Audit)",
+        "Eine Preis- oder Verkaufsverpflichtung",
+        "Zugang zum Kaeufer katalog"
+      ]
+    },
+    "bring": {
+      "title": "Was mitzubringen ist",
+      "items": [
+        "Kennzahlen: ARR/MRR, Kundenanzahl, Churn, NRR",
+        "Technische Stack-Zusammenfassung",
+        "IP-Status",
+        "Ihre gewuenschte Bewertungsspanne"
+      ]
+    },
+    "cities": {
+      "label": "STAEDTE 2026",
+      "title": "4 Staedte. Nach Vereinbarung.",
+      "list": [
+        {
+          "city": "Zuerich",
+          "country": "Schweiz",
+          "dates": "Q3 2026 — Termine zu bestaetigen",
+          "format": "Praesenz + Video"
+        },
+        {
+          "city": "Paris",
+          "country": "Frankreich",
+          "dates": "Q3 2026 — Termine zu bestaetigen",
+          "format": "Praesenz + Video"
+        },
+        {
+          "city": "Amsterdam",
+          "country": "Niederlande",
+          "dates": "Q4 2026 — Termine zu bestaetigen",
+          "format": "Nur Video"
+        },
+        {
+          "city": "Muenchen",
+          "country": "Deutschland",
+          "dates": "Q4 2026 — Termine zu bestaetigen",
+          "format": "Nur Video"
+        }
+      ]
+    },
+    "form": {
+      "title": "Einen Termin buchen.",
+      "name": "Vor- und Nachname",
+      "email": "Professionelle E-Mail",
+      "company": "Unternehmen (optional)",
+      "city": "Bevorzugte Stadt",
+      "cityPlaceholder": "Stadt auswaehlen",
+      "cityOptions": {
+        "zurich": "Zuerich",
+        "paris": "Paris",
+        "amsterdam": "Amsterdam",
+        "munich": "Muenchen"
+      },
+      "format": "Bevorzugtes Format",
+      "formatPhysical": "Praesenz",
+      "formatVideo": "Video (Zoom / Meet)",
+      "assetType": "Asset-Typ",
+      "assetTypePlaceholder": "B2B SaaS, Marketplace, Mobile App...",
+      "arrRange": "Ungefahrer ARR",
+      "arrPlaceholder": "Bereich auswaehlen",
+      "arrOptions": {
+        "pre": "Pre-revenue",
+        "under100": "< 100.000 EUR",
+        "100to500": "100.000–500.000 EUR",
+        "500to2m": "500.000–2 Mio. EUR",
+        "above2m": "> 2 Mio. EUR"
+      },
+      "message": "Zusaetzliche Informationen (optional)",
+      "submit": "Meinen Termin buchen",
+      "submitting": "Wird gesendet...",
+      "successTitle": "Termin angefragt.",
+      "successDesc": "Bestaetigung innerhalb von 48h. 45-Minuten-Termin. Keine Kosten. Kein Engagement.",
+      "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+      "note": "Bestaetigung innerhalb von 48h. 45-Minuten-Termin. Keine Kosten."
+    },
+    "faq": {
+      "title": "Haeufig gestellte Fragen",
+      "items": [
+        {
+          "q": "Ist es wirklich kostenlos?",
+          "a": "Ja, ohne Ausnahme. Keine Rechnungen, keine versteckten Kosten."
+        },
+        {
+          "q": "Muss mein Asset betriebsbereit sein?",
+          "a": "Nein. Wir bewerten Assets in allen Entwicklungsphasen."
+        },
+        {
+          "q": "Ist das Pre-Screening vertraulich?",
+          "a": "Vollstaendig. Durch ein AEGRYN-Rahmen-NDA abgedeckt."
+        },
+        {
+          "q": "Was passiert nach dem Assessment Day?",
+          "a": "Wenn Ihr Asset geeignet ist, schlagen wir den Zertifizierungsprozess vor. Keine Folgeverpflichtung."
+        }
+      ]
     }
   }
 }

@@ -11,17 +11,19 @@ import { gsap }          from '@/lib/gsap'
 type DropdownKey = 'auction' | 'grade' | 'services' | null
 
 const AUCTION_LINKS = [
-  { labelKey: 'auctionCatalog',  href: '/auction/catalog' },
-  { labelKey: 'auctionSell',     href: '/auction/how-to-sell' },
-  { labelKey: 'auctionBuy',      href: '/auction/how-to-buy' },
-  { labelKey: 'auctionSession',  href: '/auction' },
-  { labelKey: 'auctionResults',  href: '/auction/results' },
+  { labelKey: 'auctionCatalog',     href: '/auction/catalog' },
+  { labelKey: 'auctionSell',        href: '/auction/how-to-sell' },
+  { labelKey: 'auctionBuy',         href: '/auction/how-to-buy' },
+  { labelKey: 'auctionBidModels',   href: '/auction/bid-models' },
+  { labelKey: 'auctionSession',     href: '/auction/sessions' },
+  { labelKey: 'auctionAssessment',  href: '/auction/assessment-days' },
+  { labelKey: 'auctionResults',     href: '/auction/results' },
 ]
 
 const GRADE_LINKS = [
   { labelKey: 'gradeSystem',     href: '/grade' },
   { labelKey: 'gradeMethod',     href: '/grade/methodology' },
-  { labelKey: 'gradeSubmit',     href: '/contact' },
+  { labelKey: 'gradeSubmit',     href: '/grade/submit' },
 ]
 
 const SERVICES_LINKS = [

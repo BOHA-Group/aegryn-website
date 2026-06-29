@@ -17,7 +17,9 @@
     "auctionCatalog": "Catálogo",
     "auctionSell": "Vender un activo",
     "auctionBuy": "Convertirse en comprador",
+    "auctionBidModels": "Modelos de bid",
     "auctionSession": "Próxima sesión",
+    "auctionAssessment": "Assessment Days",
     "auctionResults": "Resultados",
     "gradeSystem": "Sistema de grade",
     "gradeMethod": "Metodología",
@@ -1050,7 +1052,7 @@
       ],
       "cta": "Enviar mi activo",
       "feesDesc": "Las condiciones financieras de la transacción se detallan en nuestras Condiciones Generales de Venta, disponibles previa solicitud tras la cualificación.",
-      "feesCertValue": "Estructura de comisión competitiva — detalles en CGV",
+      "feesCertValue": "Condiciones financieras disponibles en CGV",
       "feesSuccessValue": "Condiciones en CGV"
     },
     "buy": {
@@ -1306,14 +1308,14 @@
       "distribution": {
         "label": "Distribución",
         "title": "Acceso al deal flow",
-        "desc": "Family offices, banca privada, fondos. Sus clientes acceden con prioridad a activos Grade A/B antes de cualquier listing. Comisión de distribución en cada membresía firmada.",
+        "desc": "Family offices, banca privada, fondos. Sus clientes acceden con prioridad a activos Grade A/B antes de cualquier listing. Acceso privilegiado a nuestro deal flow certificado.",
         "profiles": "Banca privada suiza · Family offices · Gestores de patrimonio",
         "cta": "Explorar la asociación de distribución"
       },
       "dealflow": {
         "label": "Deal Flow",
         "title": "Sourcing de deals",
-        "desc": "Fondos VC/PE, boutiques M&A, aceleradoras tech. Referenciad activos a ceder o adquirentes activos. Comisión de aportación en cada deal cerrado.",
+        "desc": "Fondos VC/PE, boutiques M&A, aceleradoras tech. Referenciad activos a ceder o adquirentes activos. Condiciones de asociación definidas en la entrevista de cualificación.",
         "profiles": "Fondos micro-PE · Boutiques M&A · Aceleradoras tech · FONGIT",
         "cta": "Referenciar un activo o adquirente"
       }
@@ -1334,6 +1336,315 @@
       "email": "Email profesional",
       "submit": "Enviar candidatura",
       "note": "Respuesta en 7 días hábiles. Entrevista de cualificación requerida."
+    },
+    "tabs": {
+      "overview": "Presentación",
+      "certification": "Certificación",
+      "distribution": "Distribución",
+      "dealflow": "Deal Flow",
+      "apply": "Candidatura"
+    }
+  },
+  "gradeSubmit": {
+    "meta": {
+      "title": "Enviar un activo — Certificación AEGRYN",
+      "desc": "Inicia el proceso de certificación AEGRYN. Formulario de preenvío confidencial. Sin compromiso antes del acuerdo sobre la metodología."
+    },
+    "hero": {
+      "label": "AEGRYN GRADE — CERTIFICACIÓN",
+      "title": "Iniciar el proceso\nde certificación.",
+      "desc": "Cada proceso de certificación AEGRYN es único porque cada activo lo es. Este formulario de preenvío nos permite calificar su activo y proponer una hoja de ruta adaptada. Sin compromiso antes del acuerdo sobre la metodología."
+    },
+    "form": {
+      "title": "Su activo",
+      "assetName": "Nombre del activo",
+      "assetType": "Tipo de activo",
+      "assetTypePlaceholder": "Elegir un tipo",
+      "assetTypeOptions": {
+        "saas": "SaaS B2B",
+        "mobile": "App móvil",
+        "marketplace": "Marketplace",
+        "protocol": "Protocolo",
+        "ip": "IP pura",
+        "other": "Otro"
+      },
+      "assetUrl": "URL o acceso demo (opcional)",
+      "techStack": "Stack principal (opcional)",
+      "techStackPlaceholder": "ej. Next.js, Supabase",
+      "status": "Estado del activo",
+      "statusPlaceholder": "Elegir un estado",
+      "statusOptions": {
+        "prod_revenue": "En producción (ingresos)",
+        "prod_no_revenue": "En producción (sin ingresos)",
+        "beta": "Beta",
+        "prototype": "Prototipo",
+        "ip_only": "Solo IP y código"
+      },
+      "arr": "ARR anual (€, opcional)",
+      "ipFiled": "¿IP registrada?",
+      "ipYes": "Sí",
+      "ipNo": "No",
+      "ipPending": "En trámite",
+      "motivation": "Objetivo de la certificación",
+      "motivationPlaceholder": "Elegir un objetivo",
+      "motivationOptions": {
+        "full_exit": "Exit total",
+        "partial_exit": "Exit parcial",
+        "liquidity": "Liquidez parcial",
+        "valuation": "Solo valoración",
+        "other": "Otro"
+      },
+      "targetValuation": "Valoración objetivo (€, opcional)",
+      "timeline": "Plazo deseado",
+      "timelinePlaceholder": "Elegir un plazo",
+      "timelineOptions": {
+        "urgent": "Urgente (< 3 meses)",
+        "standard": "Estándar (3–6 meses)",
+        "long": "Largo plazo (6–12 meses)",
+        "none": "Sin plazo"
+      },
+      "contactTitle": "Sus datos de contacto",
+      "fullName": "Nombre y apellidos",
+      "email": "Email profesional",
+      "company": "Empresa (opcional)",
+      "message": "Información adicional (opcional)",
+      "submit": "Enviar mi expediente",
+      "submitting": "Enviando...",
+      "successTitle": "Expediente enviado.",
+      "successDesc": "Su expediente ha sido enviado. Respuesta en 5 días hábiles. Se le propondrá un preexamen confidencial por email.",
+      "errorMsg": "Se ha producido un error. Inténtelo de nuevo o contáctenos directamente.",
+      "legalNote": "Las condiciones financieras de la certificación están disponibles en nuestras Condiciones Generales de Servicios, transmitidas en el primer intercambio. Sin compromiso en esta etapa."
+    }
+  },
+  "bidModels": {
+    "meta": {
+      "title": "Modelos de bid AEGRYN — Club Deal, Corporate, Fondos",
+      "desc": "Tres modelos de bid para adquirir un activo tech certificado AEGRYN: individual con co-inversores, empresa o fondo de inversión."
+    },
+    "hero": {
+      "label": "AEGRYN AUCTION — MODELOS DE BID",
+      "title": "Tres formas de adquirir\nun activo certificado.",
+      "desc": "AEGRYN estructura tres modelos de bid para cada perfil de adquirente. Cada modelo incluye un mecanismo de depósito en garantía y una Promesa de Transacción certificada."
+    },
+    "model1": {
+      "label": "MODELO 01",
+      "title": "Club Deal\n(Individual + co-inversores)",
+      "badge": "HNWI · Emprendedores",
+      "desc": "Un adquirente principal puede asociar hasta 4 co-inversores declarados. Una sola oferta, un solo depósito pagado por el lead.",
+      "features": [
+        "Ticket mínimo: 500.000 EUR",
+        "Hasta 4 co-inversores declarados",
+        "Depósito pagado por el lead bidder",
+        "Asignación interna libre hasta la firma",
+        "KYC completo lead + KYC simplificado co-inv."
+      ],
+      "cta": "Solicitar — Club Deal"
+    },
+    "model2": {
+      "label": "MODELO 02",
+      "title": "Corporate\n(Empresa o Holding)",
+      "badge": "PYME · Holdings · Corporates",
+      "desc": "Una entidad legal adquiere el activo directamente en su balance. Co-bid posible entre dos entidades en JV declarada.",
+      "features": [
+        "Ticket mínimo: 500.000 EUR",
+        "Adquisición directa en balance",
+        "Asset deal o share deal disponible",
+        "JV posible (dos entidades co-adquirentes)",
+        "KYC completo B2B"
+      ],
+      "cta": "Solicitar — Corporate"
+    },
+    "model3": {
+      "label": "MODELO 03",
+      "title": "Fondo\n(PE · VC · Family Office)",
+      "badge": "PE · VC · Family Office · Search Fund",
+      "desc": "Los fondos institucionales se benefician de un plazo IC de 5 a 10 días antes de presentar una oferta firme. SPV disponible para co-inversión directa de LP.",
+      "features": [
+        "Ticket mínimo: 500.000 EUR (sin tope)",
+        "Plazo IC de 5-10 días hábiles",
+        "SPV disponible para co-inversión LP",
+        "Management presentation organizada por AEGRYN",
+        "KYC institucional"
+      ],
+      "cta": "Solicitar — Fondo"
+    },
+    "escrow": {
+      "label": "MECANISMO COMÚN",
+      "title": "La Promesa de Transacción\ncon depósito institucional.",
+      "desc": "Independientemente del modelo de bid, cada transacción AEGRYN se apoya en nuestro mecanismo PTT:",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Expresión de Interés",
+          "desc": "No vinculante. Transmitida al vendedor en 48h. No se requiere depósito."
+        },
+        {
+          "num": "02",
+          "title": "Acuerdo de Principio",
+          "desc": "Precio y estructura acordados. La firma del AP activa la obligación de depósito."
+        },
+        {
+          "num": "03",
+          "title": "Depósito 10%",
+          "desc": "Pagado en cuenta bancaria de terceros en 5 días hábiles. AEGRYN nunca tiene acceso a los fondos."
+        },
+        {
+          "num": "04",
+          "title": "Due Diligence — 30 días",
+          "desc": "Acceso completo a data room. Q&A vía AEGRYN."
+        },
+        {
+          "num": "05",
+          "title": "Signing & Closing",
+          "desc": "Certificación blockchain del código. Fondos liberados. Transferencia del activo."
+        }
+      ],
+      "penaltiesTitle": "Protección bilateral",
+      "penaltyBuyer": "Retirada del comprador sin causa -> depósito al vendedor",
+      "penaltySeller": "Retirada del vendedor sin causa -> depósito doblado al comprador",
+      "penaltyCs": "Condición suspensiva levantada -> depósito íntegramente restituido"
+    },
+    "cta": {
+      "title": "¿Listo para presentar una oferta?",
+      "desc": "Complete su expediente de calificación como adquirente para acceder al catálogo.",
+      "btn": "Presentar mi candidatura como adquirente",
+      "secondary": "Ver el catálogo"
+    }
+  },
+  "assessmentDays": {
+    "meta": {
+      "title": "Assessment Days AEGRYN — Pericia gratuita de su activo tech",
+      "desc": "Sesiones gratuitas de pericia con cita previa. Presente su activo tech en 45 minutos. Estimación de grade y valoración. Sin compromiso."
+    },
+    "hero": {
+      "label": "AEGRYN ASSESSMENT DAYS",
+      "title": "45 minutos para saber\nlo que vale su activo.",
+      "desc": "Con cita previa, en 4 ciudades europeas, nuestros advisors realizan un pre-screening confidencial de su activo. Gratuito. Sin compromiso."
+    },
+    "what": {
+      "label": "LO QUE OBTIENE",
+      "title": "Un pre-screening, no un pitch.",
+      "items": [
+        {
+          "title": "Estimación indicativa de grade",
+          "desc": "Posicionamiento en la escala AEG ★/AAA/AA/A/B."
+        },
+        {
+          "title": "Horquilla de valoración",
+          "desc": "Estimación basada en múltiplos ARR observados en transacciones AEGRYN y datos de mercado 2026."
+        },
+        {
+          "title": "Recomendaciones concretas",
+          "desc": "Las 3 a 5 acciones prioritarias para mejorar su grade."
+        },
+        {
+          "title": "Próximos pasos",
+          "desc": "Si su activo es prometedor, proponemos un proceso de certificación completo."
+        }
+      ]
+    },
+    "notIncluded": {
+      "title": "Lo que no obtiene",
+      "items": [
+        "Un informe oficial (generado solo en la auditoría de pago)",
+        "Un compromiso de precio o cesión",
+        "Acceso al catálogo de adquirentes"
+      ]
+    },
+    "bring": {
+      "title": "Lo que hay que traer",
+      "items": [
+        "Métricas clave: ARR/MRR, número de clientes, churn, NRR",
+        "Stack técnico resumido",
+        "Estado de la IP",
+        "Su horquilla de valoración deseada"
+      ]
+    },
+    "cities": {
+      "label": "CIUDADES 2026",
+      "title": "4 ciudades. Con cita previa.",
+      "list": [
+        {
+          "city": "Zurich",
+          "country": "Suiza",
+          "dates": "Q3 2026 — fechas a confirmar",
+          "format": "Presencial + Vídeo"
+        },
+        {
+          "city": "París",
+          "country": "Francia",
+          "dates": "Q3 2026 — fechas a confirmar",
+          "format": "Presencial + Vídeo"
+        },
+        {
+          "city": "Amsterdam",
+          "country": "Países Bajos",
+          "dates": "Q4 2026 — fechas a confirmar",
+          "format": "Solo vídeo"
+        },
+        {
+          "city": "Múnich",
+          "country": "Alemania",
+          "dates": "Q4 2026 — fechas a confirmar",
+          "format": "Solo vídeo"
+        }
+      ]
+    },
+    "form": {
+      "title": "Reservar un horario.",
+      "name": "Nombre y apellidos",
+      "email": "Email profesional",
+      "company": "Empresa (opcional)",
+      "city": "Ciudad preferida",
+      "cityPlaceholder": "Elegir una ciudad",
+      "cityOptions": {
+        "zurich": "Zurich",
+        "paris": "París",
+        "amsterdam": "Amsterdam",
+        "munich": "Múnich"
+      },
+      "format": "Formato preferido",
+      "formatPhysical": "Presencial",
+      "formatVideo": "Vídeo (Zoom / Meet)",
+      "assetType": "Tipo de activo",
+      "assetTypePlaceholder": "SaaS B2B, Marketplace, App móvil...",
+      "arrRange": "ARR aproximado",
+      "arrPlaceholder": "Elegir una franja",
+      "arrOptions": {
+        "pre": "Pre-revenue",
+        "under100": "< 100K EUR",
+        "100to500": "100K–500K EUR",
+        "500to2m": "500K–2M EUR",
+        "above2m": "> 2M EUR"
+      },
+      "message": "Información adicional (opcional)",
+      "submit": "Reservar mi horario",
+      "submitting": "Enviando...",
+      "successTitle": "Horario solicitado.",
+      "successDesc": "Confirmación en 48h. 45 minutos. Sin cargos. Sin compromiso.",
+      "errorMsg": "Se ha producido un error. Inténtelo de nuevo.",
+      "note": "Confirmación en 48h. Sin cargos. Sin compromiso."
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Es realmente gratuito?",
+          "a": "Sí, sin excepción. Sin facturación, sin cargos ocultos."
+        },
+        {
+          "q": "¿Mi activo debe estar operativo?",
+          "a": "No. Evaluamos activos en todos los estadios."
+        },
+        {
+          "q": "¿El pre-screening es confidencial?",
+          "a": "Totalmente. Cubierto por un NDA marco AEGRYN."
+        },
+        {
+          "q": "¿Qué ocurre después del Assessment Day?",
+          "a": "Si su activo es elegible, proponemos iniciar el proceso. Sin obligación de continuación."
+        }
+      ]
     }
   }
 }

@@ -40,7 +40,8 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      { source: '/:locale/grow-with-us', destination: '/:locale/alliances', permanent: true },
+      { source: '/:locale/grow-with-us',       destination: '/:locale/alliances',         permanent: true },
+      { source: '/:locale/auction/session',    destination: '/:locale/auction/sessions',   permanent: true },
     ]
   },
   async headers() {

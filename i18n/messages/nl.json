@@ -17,7 +17,9 @@
     "auctionCatalog": "Catalogus",
     "auctionSell": "Asset verkopen",
     "auctionBuy": "Koper worden",
+    "auctionBidModels": "Bid-modellen",
     "auctionSession": "Volgende sessie",
+    "auctionAssessment": "Assessment Days",
     "auctionResults": "Resultaten",
     "gradeSystem": "Grade-systeem",
     "gradeMethod": "Methodologie",
@@ -1050,7 +1052,7 @@
       ],
       "cta": "Mijn asset indienen",
       "feesDesc": "De financiële voorwaarden van de transactie zijn gedetailleerd in onze Algemene Verkoopvoorwaarden, beschikbaar op verzoek na kwalificatie.",
-      "feesCertValue": "Concurrerende commissiestructuur — details in AVV",
+      "feesCertValue": "Financiële voorwaarden beschikbaar in AVV",
       "feesSuccessValue": "Voorwaarden in AVV"
     },
     "buy": {
@@ -1306,14 +1308,14 @@
       "distribution": {
         "label": "Distributie",
         "title": "Toegang tot deal flow",
-        "desc": "Family offices, private banks, fondsen. Uw klanten krijgen prioritaire toegang tot Grade A/B assets voor elke listing. Distributiecommissie op elke ondertekende membership.",
+        "desc": "Family offices, private banks, fondsen. Uw klanten krijgen prioritaire toegang tot Grade A/B assets voor elke listing. Bevoorrechte toegang tot onze gecertificeerde deal flow.",
         "profiles": "Zwitserse private banks · Family offices · Vermogensbeheerders",
         "cta": "Distributiepartnerschap verkennen"
       },
       "dealflow": {
         "label": "Deal Flow",
         "title": "Deal sourcing",
-        "desc": "VC/PE-fondsen, M&A-boutiques, tech-acceleratoren. Breng assets te koop of actieve kopers aan. Aanbrengscommissie op elke gesloten deal.",
+        "desc": "VC/PE-fondsen, M&A-boutiques, tech-acceleratoren. Breng assets te koop of actieve kopers aan. Partnerschapsvoorwaarden vastgesteld tijdens het kwalificatiegesprek.",
         "profiles": "Micro-PE-fondsen · M&A-boutiques · Tech-acceleratoren · FONGIT",
         "cta": "Een asset of koper aanbrengen"
       }
@@ -1334,6 +1336,315 @@
       "email": "Professioneel e-mailadres",
       "submit": "Sollicitatie indienen",
       "note": "Antwoord binnen 7 werkdagen. Kwalificatiegesprek vereist."
+    },
+    "tabs": {
+      "overview": "Overzicht",
+      "certification": "Certificering",
+      "distribution": "Distributie",
+      "dealflow": "Deal Flow",
+      "apply": "Aanmelden"
+    }
+  },
+  "gradeSubmit": {
+    "meta": {
+      "title": "Asset indienen — AEGRYN Certificering",
+      "desc": "Start het AEGRYN-certificeringsproces. Vertrouwelijk voorindiening formulier. Geen verplichting voor overeenstemming over de methodologie."
+    },
+    "hero": {
+      "label": "AEGRYN GRADE — CERTIFICERING",
+      "title": "Het certificerings-\nproces starten.",
+      "desc": "Elk AEGRYN-certificeringsproces is uniek omdat elk asset dat is. Dit voorindiening formulier stelt ons in staat uw asset te kwalificeren en een op maat gemaakt stappenplan voor te stellen. Geen verplichting voor overeenstemming over de methodologie."
+    },
+    "form": {
+      "title": "Uw asset",
+      "assetName": "Naam van het asset",
+      "assetType": "Type asset",
+      "assetTypePlaceholder": "Kies een type",
+      "assetTypeOptions": {
+        "saas": "B2B SaaS",
+        "mobile": "Mobiele app",
+        "marketplace": "Marketplace",
+        "protocol": "Protocol",
+        "ip": "Puur IP",
+        "other": "Overige"
+      },
+      "assetUrl": "URL of demo-toegang (optioneel)",
+      "techStack": "Hoofdstack (optioneel)",
+      "techStackPlaceholder": "bijv. Next.js, Supabase",
+      "status": "Status van het asset",
+      "statusPlaceholder": "Kies een status",
+      "statusOptions": {
+        "prod_revenue": "In productie (inkomsten)",
+        "prod_no_revenue": "In productie (geen inkomsten)",
+        "beta": "Beta",
+        "prototype": "Prototype",
+        "ip_only": "Alleen IP en code"
+      },
+      "arr": "Jaarlijkse ARR (€, optioneel)",
+      "ipFiled": "IP ingediend?",
+      "ipYes": "Ja",
+      "ipNo": "Nee",
+      "ipPending": "In behandeling",
+      "motivation": "Doel van de certificering",
+      "motivationPlaceholder": "Kies een doel",
+      "motivationOptions": {
+        "full_exit": "Volledige exit",
+        "partial_exit": "Gedeeltelijke exit",
+        "liquidity": "Gedeeltelijke liquiditeit",
+        "valuation": "Alleen waardering",
+        "other": "Overige"
+      },
+      "targetValuation": "Gewenste waardering (€, optioneel)",
+      "timeline": "Gewenste tijdlijn",
+      "timelinePlaceholder": "Kies een tijdlijn",
+      "timelineOptions": {
+        "urgent": "Urgent (< 3 maanden)",
+        "standard": "Standaard (3–6 maanden)",
+        "long": "Lange termijn (6–12 maanden)",
+        "none": "Geen tijdlijn"
+      },
+      "contactTitle": "Uw contactgegevens",
+      "fullName": "Voor- en achternaam",
+      "email": "Professioneel e-mailadres",
+      "company": "Bedrijf (optioneel)",
+      "message": "Aanvullende informatie (optioneel)",
+      "submit": "Mijn dossier verzenden",
+      "submitting": "Verzenden...",
+      "successTitle": "Dossier verzonden.",
+      "successDesc": "Uw dossier is verzonden. Antwoord binnen 5 werkdagen. Een vertrouwelijke pre-screening wordt per e-mail voorgesteld.",
+      "errorMsg": "Er is een fout opgetreden. Probeer het opnieuw of neem direct contact met ons op.",
+      "legalNote": "De financiële voorwaarden van de certificering zijn beschikbaar in onze Algemene Dienstverleningsvoorwaarden, gedeeld bij de eerste uitwisseling. Geen verplichting in dit stadium."
+    }
+  },
+  "bidModels": {
+    "meta": {
+      "title": "AEGRYN Bid-modellen — Club Deal, Corporate, Fondsen",
+      "desc": "Drie bid-modellen voor de verwerving van een gecertificeerd AEGRYN tech-asset: individueel met co-investeerders, bedrijf of investeringsfonds."
+    },
+    "hero": {
+      "label": "AEGRYN AUCTION — BID-MODELLEN",
+      "title": "Drie manieren om een\ngecertificeerd asset te verwerven.",
+      "desc": "AEGRYN structureert drie bid-modellen voor elk kopersprofiel. Elk model bevat een escrow-mechanisme en een gecertificeerde Transactiebelofte."
+    },
+    "model1": {
+      "label": "MODEL 01",
+      "title": "Club Deal\n(Individueel + co-investeerders)",
+      "badge": "HNWI · Ondernemers",
+      "desc": "Een hoofdbiedende partij kan tot 4 gedeclareerde co-investeerders associëren. Één bod, één escrow betaald door de lead.",
+      "features": [
+        "Minimumticket: EUR 500.000",
+        "Tot 4 gedeclareerde co-investeerders",
+        "Escrow betaald door de lead bidder",
+        "Vrije interne verdeling tot ondertekening",
+        "Volledig lead KYC + vereenvoudigd co-inv. KYC"
+      ],
+      "cta": "Aanmelden — Club Deal"
+    },
+    "model2": {
+      "label": "MODEL 02",
+      "title": "Corporate\n(Bedrijf of Holding)",
+      "badge": "MKB · Holdings · Corporates",
+      "desc": "Een rechtspersoon verwerft het asset direct op zijn balans. Co-bid mogelijk tussen twee entiteiten in een gedeclareerde JV.",
+      "features": [
+        "Minimumticket: EUR 500.000",
+        "Directe balansverwerving",
+        "Asset deal of share deal beschikbaar",
+        "JV mogelijk (twee co-verwervende entiteiten)",
+        "Volledig B2B KYC"
+      ],
+      "cta": "Aanmelden — Corporate"
+    },
+    "model3": {
+      "label": "MODEL 03",
+      "title": "Fonds\n(PE · VC · Family Office)",
+      "badge": "PE · VC · Family Office · Search Fund",
+      "desc": "Institutionele fondsen krijgen een IC-periode van 5-10 dagen voor het indienen van een bindend bod. SPV beschikbaar voor directe LP-co-investering.",
+      "features": [
+        "Minimumticket: EUR 500.000 (geen maximum)",
+        "IC-periode van 5-10 werkdagen",
+        "SPV beschikbaar voor LP-co-investering",
+        "Management presentatie georganiseerd door AEGRYN",
+        "Institutioneel KYC"
+      ],
+      "cta": "Aanmelden — Fonds"
+    },
+    "escrow": {
+      "label": "GEMEENSCHAPPELIJK MECHANISME",
+      "title": "De Transactiebelofte\nmet institutionele escrow.",
+      "desc": "Ongeacht het bid-model steunt elke AEGRYN-transactie op ons PTT-mechanisme:",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Intentieverklaring",
+          "desc": "Niet-bindend. Doorgestuurd naar verkoper binnen 48u. Geen storting vereist."
+        },
+        {
+          "num": "02",
+          "title": "Principe-akkoord",
+          "desc": "Prijs en structuur overeengekomen. Ondertekening activeert de escrow-verplichting."
+        },
+        {
+          "num": "03",
+          "title": "Escrow 10%",
+          "desc": "Gestort op derdenrekening binnen 5 werkdagen. AEGRYN heeft nooit toegang tot de fondsen."
+        },
+        {
+          "num": "04",
+          "title": "Due Diligence — 30 dagen",
+          "desc": "Volledige toegang data room. Q&A via AEGRYN."
+        },
+        {
+          "num": "05",
+          "title": "Signing & Closing",
+          "desc": "Blockchain-certificering van de code. Fondsen vrijgegeven. Asset overgedragen."
+        }
+      ],
+      "penaltiesTitle": "Bilaterale bescherming",
+      "penaltyBuyer": "Terugtrekking koper zonder reden -> escrow naar verkoper",
+      "penaltySeller": "Terugtrekking verkoper zonder reden -> escrow verdubbeld naar koper",
+      "penaltyCs": "Opschortende voorwaarde opgeheven -> escrow volledig teruggegeven"
+    },
+    "cta": {
+      "title": "Klaar om een bod in te dienen?",
+      "desc": "Vul uw koperskwalificatiedossier in voor toegang tot de catalogus.",
+      "btn": "Mijn koperssollicitatie indienen",
+      "secondary": "Catalogus bekijken"
+    }
+  },
+  "assessmentDays": {
+    "meta": {
+      "title": "AEGRYN Assessment Days — Gratis expertise voor uw tech-asset",
+      "desc": "Gratis expertsessies op afspraak. Presenteer uw tech-asset in 45 minuten. Grade-schatting en waarderingsbereik. Geen verplichting."
+    },
+    "hero": {
+      "label": "AEGRYN ASSESSMENT DAYS",
+      "title": "45 minuten om te weten\nwat uw asset waard is.",
+      "desc": "Op afspraak, in 4 Europese steden, voeren onze advisors een vertrouwelijke pre-screening uit. Gratis. Zonder verplichting."
+    },
+    "what": {
+      "label": "WAT U ONTVANGT",
+      "title": "Een pre-screening, geen pitch.",
+      "items": [
+        {
+          "title": "Indicatieve grade-schatting",
+          "desc": "Positionering op de AEG ★/AAA/AA/A/B-schaal."
+        },
+        {
+          "title": "Waarderingsbereik",
+          "desc": "Schatting op basis van ARR-multiples uit AEGRYN-transacties en marktdata 2026."
+        },
+        {
+          "title": "Concrete aanbevelingen",
+          "desc": "De 3 tot 5 prioritaire acties om uw grade te verbeteren."
+        },
+        {
+          "title": "Volgende stappen",
+          "desc": "Als uw asset veelbelovend is, stellen we een volledig certificeringsproces voor."
+        }
+      ]
+    },
+    "notIncluded": {
+      "title": "Wat u niet ontvangt",
+      "items": [
+        "Een officieel rapport (enkel bij betaalde audit)",
+        "Een prijs- of verkoopverplichting",
+        "Toegang tot de koperschatalogus"
+      ]
+    },
+    "bring": {
+      "title": "Wat u meebrengt",
+      "items": [
+        "Kernmetrics: ARR/MRR, aantal klanten, churn, NRR",
+        "Technische stack samenvatting",
+        "IP-status",
+        "Uw gewenste waarderingsbereik"
+      ]
+    },
+    "cities": {
+      "label": "STEDEN 2026",
+      "title": "4 steden. Op afspraak.",
+      "list": [
+        {
+          "city": "Zurich",
+          "country": "Zwitserland",
+          "dates": "Q3 2026 — data te bevestigen",
+          "format": "Aanwezig + Video"
+        },
+        {
+          "city": "Parijs",
+          "country": "Frankrijk",
+          "dates": "Q3 2026 — data te bevestigen",
+          "format": "Aanwezig + Video"
+        },
+        {
+          "city": "Amsterdam",
+          "country": "Nederland",
+          "dates": "Q4 2026 — data te bevestigen",
+          "format": "Alleen video"
+        },
+        {
+          "city": "München",
+          "country": "Duitsland",
+          "dates": "Q4 2026 — data te bevestigen",
+          "format": "Alleen video"
+        }
+      ]
+    },
+    "form": {
+      "title": "Een slot boeken.",
+      "name": "Voor- en achternaam",
+      "email": "Professioneel e-mailadres",
+      "company": "Bedrijf (optioneel)",
+      "city": "Gewenste stad",
+      "cityPlaceholder": "Kies een stad",
+      "cityOptions": {
+        "zurich": "Zurich",
+        "paris": "Parijs",
+        "amsterdam": "Amsterdam",
+        "munich": "München"
+      },
+      "format": "Gewenst formaat",
+      "formatPhysical": "Aanwezig",
+      "formatVideo": "Video (Zoom / Meet)",
+      "assetType": "Type asset",
+      "assetTypePlaceholder": "B2B SaaS, Marketplace, Mobiele app...",
+      "arrRange": "Geschatte ARR",
+      "arrPlaceholder": "Kies een bereik",
+      "arrOptions": {
+        "pre": "Pre-revenue",
+        "under100": "< EUR 100K",
+        "100to500": "EUR 100K–500K",
+        "500to2m": "EUR 500K–2M",
+        "above2m": "> EUR 2M"
+      },
+      "message": "Aanvullende informatie (optioneel)",
+      "submit": "Mijn slot boeken",
+      "submitting": "Verzenden...",
+      "successTitle": "Slot aangevraagd.",
+      "successDesc": "Bevestiging binnen 48u. 45 minuten. Geen kosten. Geen verplichting.",
+      "errorMsg": "Er is een fout opgetreden. Probeer opnieuw.",
+      "note": "Bevestiging binnen 48u. Geen kosten. Geen verplichting."
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Is het echt gratis?",
+          "a": "Ja, zonder uitzondering. Geen facturering, geen verborgen kosten."
+        },
+        {
+          "q": "Moet mijn asset operationeel zijn?",
+          "a": "Nee. We evalueren assets in alle stadia."
+        },
+        {
+          "q": "Is de pre-screening vertrouwelijk?",
+          "a": "Volledig. Gedekt door een AEGRYN-kader NDA."
+        },
+        {
+          "q": "Wat gebeurt er na de Assessment Day?",
+          "a": "Als uw asset in aanmerking komt, stellen we het certificeringsproces voor. Geen vervolgverplichting."
+        }
+      ]
     }
   }
 }
