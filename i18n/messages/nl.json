@@ -1099,7 +1099,10 @@
           "value": "Geen"
         }
       ],
-      "cta": "Mijn asset indienen"
+      "cta": "Mijn asset indienen",
+      "feesDesc": "De financiële voorwaarden van de transactie zijn gedetailleerd in onze Algemene Verkoopvoorwaarden, beschikbaar op verzoek na kwalificatie.",
+      "feesCertValue": "Concurrerende commissiestructuur — details in AVV",
+      "feesSuccessValue": "Voorwaarden in AVV"
     },
     "buy": {
       "label": "Koper",

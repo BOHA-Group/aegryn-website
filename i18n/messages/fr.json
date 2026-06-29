@@ -1265,11 +1265,11 @@
       "step4Title": "Transaction",
       "step4Desc": "Négociation encadrée par nos équipes. Escrow institutionnel. Transfert sécurisé des droits.",
       "feesTitle": "Notre modèle de rémunération",
-      "feesDesc": "Frais de certification fixes + success fee sur transaction. Aucun frais si aucune transaction n'est conclue.",
+      "feesDesc": "Les conditions financières de la transaction sont détaillées dans nos Conditions Générales de Vente, disponibles sur demande après qualification.",
       "feesCert": "Certification",
-      "feesCertValue": "Forfait selon complexité",
+      "feesCertValue": "Structure de commission compétitive — détails en CGV",
       "feesSuccess": "Success fee",
-      "feesSuccessValue": "% du prix de transaction",
+      "feesSuccessValue": "Conditions en CGV",
       "cta": "Soumettre mon actif maintenant"
     },
     "buy": {

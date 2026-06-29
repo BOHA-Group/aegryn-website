@@ -1099,7 +1099,10 @@
           "value": "Nessuno"
         }
       ],
-      "cta": "Invia il mio asset"
+      "cta": "Invia il mio asset",
+      "feesDesc": "Le condizioni finanziarie della transazione sono dettagliate nelle nostre Condizioni Generali di Vendita, disponibili su richiesta dopo la qualifica.",
+      "feesCertValue": "Struttura commissionale competitiva — dettagli nelle CGV",
+      "feesSuccessValue": "Condizioni nelle CGV"
     },
     "buy": {
       "label": "Acquirente",

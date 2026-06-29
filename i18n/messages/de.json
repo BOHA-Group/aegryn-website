@@ -1099,7 +1099,10 @@
           "value": "Keine"
         }
       ],
-      "cta": "Mein Asset einreichen"
+      "cta": "Mein Asset einreichen",
+      "feesDesc": "Die finanziellen Bedingungen der Transaktion sind in unseren Allgemeinen Geschäftsbedingungen aufgeführt, die auf Anfrage nach Qualifizierung erhältlich sind.",
+      "feesCertValue": "Wettbewerbsfähige Provisionsstruktur — Details in AGB",
+      "feesSuccessValue": "Bedingungen in AGB"
     },
     "buy": {
       "label": "Käufer",

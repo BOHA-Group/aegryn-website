@@ -1265,11 +1265,11 @@
       "step4Title": "Transaction",
       "step4Desc": "Negotiation supervised by our teams. Institutional escrow. Secure transfer of rights.",
       "feesTitle": "Our fee structure",
-      "feesDesc": "Fixed certification fee + success fee on transaction. No fee if no transaction is concluded.",
+      "feesDesc": "The financial terms of the transaction are detailed in our General Terms and Conditions, available upon request after qualification.",
       "feesCert": "Certification",
-      "feesCertValue": "Fixed fee based on complexity",
+      "feesCertValue": "Competitive commission structure — details in GTC",
       "feesSuccess": "Success fee",
-      "feesSuccessValue": "% of transaction price",
+      "feesSuccessValue": "Conditions in GTC",
       "cta": "Submit my asset now"
     },
     "buy": {

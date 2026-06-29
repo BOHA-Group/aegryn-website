@@ -1099,7 +1099,10 @@
           "value": "Ninguno"
         }
       ],
-      "cta": "Enviar mi activo"
+      "cta": "Enviar mi activo",
+      "feesDesc": "Las condiciones financieras de la transacción se detallan en nuestras Condiciones Generales de Venta, disponibles previa solicitud tras la cualificación.",
+      "feesCertValue": "Estructura de comisión competitiva — detalles en CGV",
+      "feesSuccessValue": "Condiciones en CGV"
     },
     "buy": {
       "label": "Comprador",
