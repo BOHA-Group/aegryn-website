@@ -24,7 +24,11 @@
     "gradeSubmit": "Enviar para certificación",
     "servicesAdvisory": "Advisory",
     "servicesAlliances": "Alianzas",
-    "servicesAcquisition": "Apoyo a la adquisición"
+    "servicesAcquisition": "Apoyo a la adquisición",
+    "gradeDimC": "Código",
+    "gradeDimI": "Infraestructura",
+    "gradeDimF": "Finanzas",
+    "gradeDimS": "Estrategia"
   },
   "hero": {
     "tagline": "Engineered to Last",
@@ -770,7 +774,9 @@
     "newsletterLabel": "Newsletter",
     "newsletterTitle": "No te pierdas ningún análisis.",
     "newsletterDesc": "Recibe informes y guías de AEGRYN directamente en tu bandeja de entrada.",
-    "newsletterCta": "Suscribirse"
+    "newsletterCta": "Suscribirse",
+    "bodyComingSoon": "Contenido completo disponible próximamente.",
+    "ctaTeaser": "¿Listo para enviar su activo o acceder al catálogo?"
   },
   "grade": {
     "meta": {

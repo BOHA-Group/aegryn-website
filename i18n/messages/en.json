@@ -24,7 +24,11 @@
     "gradeSubmit": "Submit for certification",
     "servicesAdvisory": "Advisory",
     "servicesAlliances": "Alliances",
-    "servicesAcquisition": "Acquisition Support"
+    "servicesAcquisition": "Acquisition Support",
+    "gradeDimC": "Code",
+    "gradeDimI": "Infrastructure",
+    "gradeDimF": "Finance",
+    "gradeDimS": "Strategy"
   },
   "hero": {
     "tagline": "Certified Tech Asset Transactions — Europe",
@@ -883,7 +887,9 @@
     "newsletterLabel": "Newsletter",
     "newsletterTitle": "Never miss an analysis.",
     "newsletterDesc": "Receive AEGRYN market reports and guides directly in your inbox.",
-    "newsletterCta": "Subscribe"
+    "newsletterCta": "Subscribe",
+    "bodyComingSoon": "Full content available soon.",
+    "ctaTeaser": "Ready to submit your asset or access the catalogue?"
   },
   "grade": {
     "meta": {

@@ -46,6 +46,85 @@ function DropdownMenu({ links, t }: { links: { labelKey: string; href: string }[
   )
 }
 
+function GradeMegaMenu({
+  t,
+  onClose,
+}: {
+  t: ReturnType<typeof useTranslations>
+  onClose: () => void
+}) {
+  const tg = useTranslations('gradeShowcase')
+
+  const GRADES = [
+    { label: 'AEG ★',   key: 'star', cls: 'border-ag-apex/40  bg-ag-apex/[0.06]  text-ag-apex'         },
+    { label: 'AEG AAA', key: 'aaa',  cls: 'border-ag-navy/35  bg-ag-navy/[0.05]  text-ag-navy'         },
+    { label: 'AEG AA',  key: 'aa',   cls: 'border-ag-navy/20  bg-ag-navy/[0.03]  text-ag-navy/80'      },
+    { label: 'AEG A',   key: 'a',    cls: 'border-ag-border   bg-ag-off-white    text-ag-gray'          },
+    { label: 'AEG B',   key: 'b',    cls: 'border-ag-border/50 bg-ag-white       text-ag-gray-light'   },
+  ] as const
+
+  const DIMS = [
+    { letter: 'C', tKey: 'gradeDimC' },
+    { letter: 'I', tKey: 'gradeDimI' },
+    { letter: 'F', tKey: 'gradeDimF' },
+    { letter: 'S', tKey: 'gradeDimS' },
+  ] as const
+
+  return (
+    <div className="absolute top-full left-0 mt-2 w-[500px] bg-ag-white border border-ag-border shadow-lg z-50">
+
+      {/* Header */}
+      <div className="px-5 py-3 border-b border-ag-border">
+        <p className="font-mono text-[9px] tracking-[0.30em] uppercase text-ag-gray-light">
+          {tg('label')}
+        </p>
+      </div>
+
+      {/* Grade scale — 5 slots inspired by Antiquorum watch grading */}
+      <div className="p-3.5 grid grid-cols-5 gap-1.5">
+        {GRADES.map(({ label, key, cls }) => (
+          <div key={key} className={`border p-2.5 text-center ${cls}`}>
+            <p className="font-mono text-[10px] font-semibold tracking-[0.04em] leading-none mb-1.5 whitespace-nowrap">
+              {label}
+            </p>
+            <p className="font-sans text-[9px] leading-tight opacity-80">
+              {tg(`grades.${key}.desc`)}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* 4 dimensions */}
+      <div className="px-3.5 pb-3 flex gap-1.5">
+        {DIMS.map(({ letter, tKey }) => (
+          <span
+            key={letter}
+            className="inline-flex items-center gap-1.5 border border-ag-border px-2.5 py-1 font-mono text-[9px] tracking-[0.08em] text-ag-gray"
+          >
+            <span className="text-ag-navy font-bold text-[10px]">{letter}</span>
+            {t(tKey)}
+          </span>
+        ))}
+      </div>
+
+      {/* Nav links */}
+      <div className="border-t border-ag-border">
+        {GRADE_LINKS.map(({ labelKey, href }) => (
+          <Link
+            key={labelKey}
+            href={href}
+            onClick={onClose}
+            className="flex items-center justify-between px-5 py-3 font-sans text-[12px] text-ag-gray hover:text-ag-black hover:bg-ag-off-white transition-colors border-b border-ag-border/50 last:border-0"
+          >
+            {t(labelKey)}
+            <span className="text-ag-apex text-[11px] font-semibold">→</span>
+          </Link>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function Nav() {
   const t = useTranslations('nav')
   const [mobileOpen, setMobileOpen]   = useState(false)
@@ -137,7 +216,7 @@ export default function Nav() {
               {t('grade')}
               <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'grade' ? 'rotate-180' : ''}`} />
             </button>
-            {activeDropdown === 'grade' && <DropdownMenu links={GRADE_LINKS} t={t} />}
+            {activeDropdown === 'grade' && <GradeMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
           </div>
 
           {/* Assets */}
@@ -243,13 +322,43 @@ export default function Nav() {
                 <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'grade' ? 'rotate-180' : ''}`} />
               </button>
               {mobileAccordion === 'grade' && (
-                <div className="py-2 pl-4 flex flex-col gap-1">
-                  {GRADE_LINKS.map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-2.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
-                      {t(labelKey)}
-                    </Link>
-                  ))}
+                <div className="py-3 flex flex-col gap-3">
+                  {/* Grade scale — 2 rows × 3 / 2 cols */}
+                  <div className="grid grid-cols-3 gap-1">
+                    {[
+                      { label: 'AEG ★',   key: 'star', cls: 'border-ag-apex/40 text-ag-apex'      },
+                      { label: 'AEG AAA', key: 'aaa',  cls: 'border-white/20  text-white/80'      },
+                      { label: 'AEG AA',  key: 'aa',   cls: 'border-white/15  text-white/60'      },
+                      { label: 'AEG A',   key: 'a',    cls: 'border-white/10  text-white/40'      },
+                      { label: 'AEG B',   key: 'b',    cls: 'border-white/8   text-white/30'      },
+                    ].map(({ label, cls }) => (
+                      <div key={label} className={`border p-2 text-center ${cls}`}>
+                        <p className="font-mono text-[10px] font-semibold tracking-[0.04em]">{label}</p>
+                      </div>
+                    ))}
+                  </div>
+                  {/* Dimensions */}
+                  <div className="flex gap-1.5 flex-wrap">
+                    {(['C','I','F','S'] as const).map((letter, i) => {
+                      const keys = ['gradeDimC','gradeDimI','gradeDimF','gradeDimS'] as const
+                      return (
+                        <span key={letter} className="inline-flex items-center gap-1 border border-white/15 px-2 py-0.5 font-mono text-[9px] text-white/40">
+                          <span className="text-ag-apex font-bold">{letter}</span>
+                          {t(keys[i])}
+                        </span>
+                      )
+                    })}
+                  </div>
+                  {/* Nav links */}
+                  <div className="flex flex-col gap-0 border-t border-white/10 pt-2">
+                    {GRADE_LINKS.map(({ labelKey, href }) => (
+                      <Link key={labelKey} href={href} onClick={closeMobile}
+                        className="flex items-center justify-between py-2.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors border-b border-white/5 last:border-0">
+                        {t(labelKey)}
+                        <span className="text-ag-apex text-[10px]">→</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>

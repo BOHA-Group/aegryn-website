@@ -24,7 +24,11 @@
     "gradeSubmit": "Zur Zertifizierung einreichen",
     "servicesAdvisory": "Advisory",
     "servicesAlliances": "Allianzen",
-    "servicesAcquisition": "Akquisitionsunterstützung"
+    "servicesAcquisition": "Akquisitionsunterstützung",
+    "gradeDimC": "Code",
+    "gradeDimI": "Infrastruktur",
+    "gradeDimF": "Finanzen",
+    "gradeDimS": "Strategie"
   },
   "hero": {
     "tagline": "Engineered to Last",
@@ -770,7 +774,9 @@
     "newsletterLabel": "Newsletter",
     "newsletterTitle": "Keine Analyse verpassen.",
     "newsletterDesc": "Erhalten Sie AEGRYN-Marktberichte und Leitfäden direkt in Ihr Postfach.",
-    "newsletterCta": "Abonnieren"
+    "newsletterCta": "Abonnieren",
+    "bodyComingSoon": "Vollständiger Inhalt demnächst verfügbar.",
+    "ctaTeaser": "Bereit, Ihr Asset einzureichen oder den Katalog aufzurufen?"
   },
   "grade": {
     "meta": {

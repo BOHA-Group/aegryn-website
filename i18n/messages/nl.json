@@ -24,7 +24,11 @@
     "gradeSubmit": "Indienen voor certificering",
     "servicesAdvisory": "Advisory",
     "servicesAlliances": "Allianties",
-    "servicesAcquisition": "Acquisitieondersteuning"
+    "servicesAcquisition": "Acquisitieondersteuning",
+    "gradeDimC": "Code",
+    "gradeDimI": "Infrastructuur",
+    "gradeDimF": "Financiën",
+    "gradeDimS": "Strategie"
   },
   "hero": {
     "tagline": "Engineered to Last",
@@ -770,7 +774,9 @@
     "newsletterLabel": "Nieuwsbrief",
     "newsletterTitle": "Mis geen enkele analyse.",
     "newsletterDesc": "Ontvang AEGRYN-marktrapportages en gidsen rechtstreeks in uw inbox.",
-    "newsletterCta": "Abonneren"
+    "newsletterCta": "Abonneren",
+    "bodyComingSoon": "Volledige inhoud binnenkort beschikbaar.",
+    "ctaTeaser": "Klaar om uw actief in te dienen of de catalogus te raadplegen?"
   },
   "grade": {
     "meta": {

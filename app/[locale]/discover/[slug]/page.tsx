@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params
   const article = ARTICLES.find(a => a.slug === slug)
   if (!article) return {}
-  const lang = locale === 'fr' ? 'fr' : 'en'
+  const lang = (locale === 'fr') ? 'fr' : 'en'
   return {
     title: article.title[lang],
     description: article.excerpt[lang],
@@ -27,7 +27,7 @@ export default async function ArticlePage({ params }: Props) {
   const article = ARTICLES.find(a => a.slug === slug)
   if (!article) notFound()
 
-  const lang     = locale === 'fr' ? 'fr' : 'en'
+  const lang     = (locale === 'fr') ? 'fr' : 'en'
   const t        = await getTranslations({ locale, namespace: 'discover' })
   const catLabel = ARTICLE_CATEGORIES[article.category][lang]
   const dateStr  = new Date(article.date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
@@ -130,7 +130,7 @@ export default async function ArticlePage({ params }: Props) {
           ) : (
             <div className="border border-ag-border bg-ag-off-white p-10 text-center">
               <p className="font-sans text-[14px] text-ag-gray mb-2">
-                Contenu complet disponible prochainement.
+                {t('bodyComingSoon')}
               </p>
               <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-ag-gray-light">
                 AEGRYN Editorial — Q3 2026
@@ -144,7 +144,7 @@ export default async function ArticlePage({ params }: Props) {
       <section className="py-16 px-6 border-t border-ag-border bg-ag-off-white">
         <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <p className="font-sans font-semibold text-ag-black text-[17px] max-w-md">
-            Prêt à soumettre votre actif ou accéder au catalogue ?
+            {t('ctaTeaser')}
           </p>
           <div className="flex gap-3 shrink-0">
             <Link href="/grade" className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-5 py-3 hover:bg-ag-navy-mid transition-colors">
