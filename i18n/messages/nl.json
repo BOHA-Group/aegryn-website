@@ -1,5 +1,6 @@
 {
   "nav": {
+    "home": "Home",
     "about": "Over ons",
     "whatWeBuild": "Wat we bouwen",
     "advisory": "Advisory",
@@ -27,9 +28,13 @@
   },
   "hero": {
     "tagline": "Engineered to Last",
+    "eyebrow": "Zwitserse tech-assetbouwer",
     "title": "Wij bouwen\nwat blijft.",
     "sub": "Eigen assets van de protocollaag\ntot de gebruikersinterface.",
-    "cta": "Ontdek onze assets"
+    "cta": "Ontdek onze assets",
+    "strip": "6 assets — 3 categorieën",
+    "geo": "Zwitserland · Europa · Global",
+    "scroll": "Scrollen"
   },
   "manifesto": {
     "aegis": {
@@ -240,11 +245,139 @@
       "button": "Ontdek Advisory"
     }
   },
+  "whatwedo": {
+    "label": "Wat we doen",
+    "items": [
+      {
+        "num": "01",
+        "title": "ECOSYSTEEM-ENGINEERING",
+        "desc": "We ontwerpen digitale ecosystemen voor schaalbaarheid, veerkracht en langetermijnwaarde — waar elk onderdeel verbindt en vermenigvuldigt."
+      },
+      {
+        "num": "02",
+        "title": "ERVARINGSARCHITECTUUR",
+        "desc": "We ontwerpen naadloze gebruikerservaringen die complexiteit vereenvoudigen en intuitiïve interacties creëren op al onze platforms."
+      },
+      {
+        "num": "03",
+        "title": "TECHNOLOGISCHE FUNDAMENTEN",
+        "desc": "We bouwen op solide, soevereine technologie-infrastructuur — met beveiliging, onafhankelijkheid en duurzaamheid op elke laag."
+      },
+      {
+        "num": "04",
+        "title": "STRATEGISCHE ADVISORY",
+        "desc": "Onze advisory is gebaseerd op echte uitvoeringsraamwerken in Data, AI & Beveiliging — verankerd in hoe we onze eigen ecosystemen bouwen."
+      }
+    ]
+  },
+  "statsRow": {
+    "items": [
+      {
+        "num": "6.8B",
+        "label": "Mobiele apparaten totaal"
+      },
+      {
+        "num": "5.6B",
+        "label": "Smartphone-verbindingen"
+      },
+      {
+        "num": "4h12",
+        "label": "Dagelijkse schermtijd"
+      },
+      {
+        "num": "CH",
+        "label": "Ontwikkeld in Zwitserland"
+      }
+    ]
+  },
+  "assetGrid": {
+    "sectionLabel": "Ons ecosysteem",
+    "sectionTitle": "Wat wij\nbouwen.",
+    "notStarted": "Niet gestart",
+    "comingSoon": "Binnenkort"
+  },
+  "aboutSection": {
+    "label": "Over Aegryn",
+    "title": "Zwitsers technologie-\nassetplatform.",
+    "desc": "We ontwerpen, financieren en beheren digitale ecosystemen die evolueren van gedurfde ideeën naar echte, duurzame technologie. Geen features — assets.",
+    "tagline": "Ontwikkeld in Zwitserland. Gebouwd om te blijven.",
+    "cta": "Over Aegryn",
+    "quote": "We bouwen digitale assets die het dagelijks leven verbeteren — voor individuen, professionals en de markten waarin zij opereren.",
+    "ceoName": "Yohann Bollack",
+    "ceoTitle": "Oprichter & CEO — Aegryn Group",
+    "stats": [
+      {
+        "val": "6",
+        "label": "Assets"
+      },
+      {
+        "val": "3",
+        "label": "Categorieën"
+      },
+      {
+        "val": "6",
+        "label": "Markten"
+      }
+    ]
+  },
+  "missionSection": {
+    "label": "Onze Missie",
+    "sub": "Het leven vereenvoudigen met slimme apps",
+    "items": [
+      {
+        "title": "WE CREEËREN",
+        "desc": "Oplossingen die uw behoeften anticiperen als individuen of professionals, en naadloze digitale interacties garanderen die het dagelijks leven verbeteren."
+      },
+      {
+        "title": "WE VEREENVOUDIGEN",
+        "desc": "We elimineren complexiteit door slimme automatisering, intuitiïve interfaces en onderling verbonden systemen te integreren."
+      },
+      {
+        "title": "WE OMARMEN",
+        "desc": "We blijven voorop lopen door baanbrekende innovaties en het stellen van nieuwe standaarden in naadloze digitale ervaringen."
+      }
+    ]
+  },
+  "whyapps": {
+    "label": "Waarom onze apps",
+    "count": "04",
+    "items": [
+      {
+        "num": "01",
+        "title": "Innovatief",
+        "desc": "We benutten geavanceerde technologieën — AI, automatisering en slimme data — om apps te creëren die continu evolueren."
+      },
+      {
+        "num": "02",
+        "title": "Veilig & Privaat",
+        "desc": "Uw data is van u. Elke Aegryn-app is ontworpen met privacy-first architectuur en versleutelde communicatie."
+      },
+      {
+        "num": "03",
+        "title": "Divers & Inclusief",
+        "desc": "We ontwerpen voor iedereen. Onze apps zijn toegankelijk, cultureel gevoelig en beschikbaar in meerdere talen en markten."
+      },
+      {
+        "num": "04",
+        "title": "Sociale Impact",
+        "desc": "We bouwen met een doel. Elk platform vereenvoudigt echte dagelijkse uitdagingen en creëert meetbare waarde voor individuen en gemeenschappen."
+      },
+      {
+        "num": "05",
+        "title": "Toegankelijk",
+        "desc": "Van beginners tot ervaren professionals — onze apps zijn intuitiëf en drempelvrij, want de beste interface is er een die iedereen kan gebruiken."
+      }
+    ]
+  },
   "about": {
     "hero": {
       "label": "Over Aegryn",
       "title": "Een builder, geen consultant.",
       "desc": "Aegryn is een Swiss Tech Asset Builder. We ontwerpen, financieren en beheren eigen digitale assets vanuit Zwitserland."
+    },
+    "vision": {
+      "label": "Onze visie",
+      "text": "Wij geloven dat technologie meer moet doen dan indruk maken. Ze moet structureren, vereenvoudigen en alledaagse ervaringen verheffen. In een wereld vol gefragmenteerde apps en kortetermijnoplossingen bouwen we coherente digitale ecosystemen — omgevingen waar gebruikers, data en transacties op natuurlijke en veilige wijze verbonden zijn."
     },
     "mission": {
       "label": "Onze missie",
@@ -252,6 +385,9 @@
       "p1": "Aegryn verkoopt geen projecten. We bouwen assets. Elk product dat we lanceren is ontworpen om te duren, langetermijnwaarde te genereren en economische cycli te doorstaan.",
       "p2": "Ons model is gebaseerd op volledig eigendom van onze digitale assets, beheerd in een soevereine omgeving.",
       "p3": "Zwitserland is niet alleen een adres. Het is onze standaard: neutraliteit, precisie, duurzaamheid."
+    },
+    "dna": {
+      "label": "Ons DNA"
     },
     "values": {
       "precision": {
@@ -286,10 +422,159 @@
       "cta": "Bekijk onze assets"
     }
   },
+  "career": {
+    "hero": {
+      "label": "Aegryn Advisory & Carrières",
+      "title": "Advisory & Experts in Digitale Ecosystemen",
+      "desc": "Aegryn zoekt Senior Advisors — operationele experts in Data, AI en Cyberbeveiliging voor duurzame digitale ecosystemen."
+    },
+    "positions": {
+      "label": "Aankomende functies",
+      "count": "08",
+      "domain": "Domein",
+      "type": "Type"
+    },
+    "apply": "Solliciteren",
+    "spontaneous": "Open sollicitatie",
+    "statement": {
+      "label": "Aegryn Advisory",
+      "title": "Engineered to Last — gebouwd door experts die erin geloven.",
+      "cta": "Ontdek Advisory"
+    },
+    "domains": {
+      "all": "Alle domeinen",
+      "strategy": "Business Strategy",
+      "cyber": "Cyberbeveiliging",
+      "finance": "Financiën",
+      "growth": "Growth & Brand",
+      "ai": "AI & Data",
+      "architecture": "Architectuur",
+      "ux": "UX & Design",
+      "product": "Product"
+    }
+  },
+  "assetPage": {
+    "back": "← Terug naar activa",
+    "presentation": "Overzicht",
+    "audience": "Doelgroep",
+    "features": "Kernfuncties",
+    "visit": "Bezoeken",
+    "comingSoon": "Binnenkort beschikbaar",
+    "cta": {
+      "label": "Geïnteresseerd in dit actief?",
+      "title": "Laten we uw acquisitie bespreken",
+      "allAssets": "Alle activa bekijken",
+      "contact": "Contact AEGRYN"
+    }
+  },
+  "assetCarousel": {
+    "label": "Ons ecosysteem",
+    "title": "Wat we bouwen.",
+    "scrollHint": "← scrollen →",
+    "swipeHint": "Veeg om te verkennen →",
+    "cta": {
+      "label": "Aegryn Group",
+      "title": "Al onze assets.\nGebouwd om te blijven.",
+      "button": "Alles bekijken"
+    },
+    "restricted": "Beperkt",
+    "classifiedLabel": "VERTROUWELIJK",
+    "classifiedDesc": "Protocol in vertrouwelijke ontwikkeling.\nToegang beperkt tot geaccrediteerde partners."
+  },
+  "growWithUs": {
+    "hero": {
+      "label": "Strategische Partnerschappen & Investeringen",
+      "title": "Groei met ons mee.",
+      "desc": "Aegryn nodigt visionaire investeerders en partners uit om deel uit te maken van een baanbrekende beweging in digitale technologie. Langetermijnvisie. Gedisciplineerde uitvoering.",
+      "cta": "Contact opnemen"
+    },
+    "investors": {
+      "label": "/ Investeerders",
+      "sub": "Word een sleutelspeler",
+      "items": [
+        {
+          "num": "01",
+          "title": "Sterk groeiende markt",
+          "desc": "We zijn gepositioneerd in de snel transformerende sector van digitale ecosystemen, met aanzienlijke omzetkansen."
+        },
+        {
+          "num": "02",
+          "title": "Bewezen expertise",
+          "desc": "Ons team bestaat uit topklasse ontwikkelaars, UX-designers en marketingstrategen die geavanceerde digitale producten leveren."
+        },
+        {
+          "num": "03",
+          "title": "Volgende generatie technologie",
+          "desc": "We integreren AI, machine learning en automatisering voor toekomstbestendige oplossingen, gebouwd voor duurzaamheid en schaalbaarheid."
+        },
+        {
+          "num": "04",
+          "title": "Datagedreven succes",
+          "desc": "Ons robuuste businessmodel en financiële strategieën garanderen langetermijnwinstgevendheid en aanhoudende innovatie."
+        },
+        {
+          "num": "05",
+          "title": "Transparant & investeerdergericht",
+          "desc": "We bieden duidelijke, consistente updates over projectvoortgang, financiële mijlpalen en marktontwikkelingen."
+        }
+      ]
+    },
+    "partners": {
+      "label": "/ Partners",
+      "sub": "Krachtige opportuniteiten",
+      "items": [
+        {
+          "title": "App-ontwikkeling",
+          "desc": "Vergroot het dienstenportfolio van uw bureau en ontsluit significante nieuwe inkomstenstromen."
+        },
+        {
+          "title": "Embedded verzekering",
+          "desc": "Bied directe, naadloze dekking voor aankopen, leveringen en financiële transacties."
+        },
+        {
+          "title": "Geïntegreerde betalingsoplossingen",
+          "desc": "Activeer realtime betalingen, flexibele financiering en omzetdelingsmodellen."
+        },
+        {
+          "title": "Co-branded groei-initiatieven",
+          "desc": "Lanceer virale campagnes, exclusieve aanbiedingen en tijdgebonden evenementen."
+        },
+        {
+          "title": "Datagedreven marketingcampagnes",
+          "desc": "Benut platformdata om zeer gerichte en gepersonaliseerde marketingcampagnes te creëren die conversies stimuleren."
+        },
+        {
+          "title": "Social media & influencer-samenwerkingen",
+          "desc": "Werk met ons samen om de boodschap van ons merk te versterken via boeiende social media-campagnes en strategische influencer-partnerships."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Klaar om samen de toekomst te bouwen?",
+      "button": "Contact opnemen"
+    }
+  },
   "contact": {
-    "meta": {
-      "title": "Contact — AEGRYN",
-      "desc": "Neem contact op met AEGRYN — Advisory, certificering, veiling, partnerschap of algemene vraag."
+    "faq": {
+      "label": "/ Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Wie zijn wij en wat doen we?",
+          "a": "Aegryn is een Zwitserse tech-assetbouwer die eigen digitale ecosystemen ontwerpt en beheert — omgevingen waar technologie het dagelijks leven van individuen, professionals en de markten waarin zij opereren structureert."
+        },
+        {
+          "q": "Wat onderscheidt ons van de concurrentie?",
+          "a": "In tegenstelling tot adviesbureaus of agencies bouwen en beheren we onze eigen digitale ecosystemen. Elk advisory-inzicht, beveiligingsprotocol en groeiframework dat we aanbieden is gebaseerd op echte uitvoering, niet op theorie."
+        },
+        {
+          "q": "Hoe kan ik investeren of partner worden?",
+          "a": "We verwelkomen visionaire investeerders en strategische partners die onze langetermijnperspectief delen. Gebruik het contactformulier, selecteer \"Partnerschap\" als onderwerp en ons team reageert binnen 24 uur."
+        },
+        {
+          "q": "Waar zijn wij gevestigd?",
+          "a": "Aegryn is gevestigd in Zwitserland. Onze digitale ecosystemen opereren in heel Europa en onze advisory practice bedient cliënten in Zwitserland, Frankrijk en de bredere EU."
+        }
+      ]
     },
     "hero": {
       "label": "Contact opnemen",
@@ -323,7 +608,113 @@
         "title": "Bericht ontvangen.",
         "desc": "Wij reageren binnen 24 uur."
       }
+    },
+    "meta": {
+      "title": "Contact — AEGRYN",
+      "desc": "Neem contact op met AEGRYN — Advisory, certificering, veiling, partnerschap of algemene vraag."
     }
+  },
+  "advisoryPage": {
+    "hero": {
+      "label": "Aegryn Advisory",
+      "title": "Strategische Helderheid.\nOperationele Diepte.",
+      "desc1": "Bij Aegryn Advisory werken we samen met oprichters, leidinggevenden en organisaties die kritieke technologische beslissingen moeten nemen. Onze begeleiding is gebaseerd op hoe wij onze eigen digitale ecosystemen ontwerpen, bouwen en beveiligen.",
+      "desc2": "We baseren ons niet op theorie, trends of gerecyclede frameworks. We bieden duidelijke, directe en uitvoeringsgerichte strategische richting in Data, AI en Cyberbeveiliging.",
+      "quote": "Geen eindeloze slides. Geen generieke playbooks.\nAlleen standaarden die getest zijn in echte omgevingen.",
+      "cta": "Sessie boeken"
+    },
+    "why": {
+      "label": "Waarom Advisory?",
+      "desc1": "Het ontwerpen of opschalen van een digitaal ecosysteem vereist meer dan ambitie. Het vereist architectonische helderheid, gedisciplineerde uitvoering en langetermijndenken.",
+      "desc2": "Aegryn Advisory bestaat voor leiders die gestructureerde begeleiding nodig hebben op momenten waarop Data, AI en Cyberbeveiliging de toekomstige veerkracht bepalen.",
+      "tagline": "Onze rol is eenvoudig: helderheid brengen, risico verminderen, de juiste beslissingen versnellen."
+    },
+    "whoFor": {
+      "label": "Voor wie is Advisory?",
+      "items": [
+        {
+          "title": "Oprichters & Builders",
+          "desc": "U bouwt of schaalt een digitaal platform en staat voor structurele beslissingen die de langetermijnveerkracht zullen bepalen. Wij helpen u robuuste fundamenten te leggen voordat de complexiteit toeneemt."
+        },
+        {
+          "title": "Groeiende organisaties",
+          "desc": "Naarmate uw organisatie groeit, wordt technische diepgang kritisch. Wij bieden een onafhankelijk, senior perspectief op infrastructuurschaalbaarheid, AI-inzet en architecturele coherentie."
+        },
+        {
+          "title": "Leiderschap in transitie",
+          "desc": "Digitale evolutie vereist structurele discipline, geen incrementele patches. Wij ondersteunen leiderschapsteams bij legacy-modernisering, dataherstructurering en cyberbeveiliging."
+        }
+      ]
+    },
+    "experts": {
+      "label": "Onze Experts",
+      "count": "Senior Advisors"
+    },
+    "domains": {
+      "label": "Onze interventiegebieden",
+      "items": [
+        {
+          "title": "Digitale Producten",
+          "desc": "Mobiele applicaties, webplatforms, SaaS, technologiekeuzes, digitaal projectmanagement."
+        },
+        {
+          "title": "Audit & Applicatiebeveiliging",
+          "desc": "Evaluatie van digitale oplossingen, aanbevelingen, compliance en toekenning van een jaarlijks vertrouwenslabel."
+        },
+        {
+          "title": "Kunstmatige Intelligentie & Automatisering",
+          "desc": "AI-agenten, procesautomatisering, productiviteit, integratie van AI in producten en organisaties."
+        },
+        {
+          "title": "Digitaal Recht & Intellectueel Eigendom",
+          "desc": "Servicevoorwaarden, digitale compliance, IP-bescherming, juridische structurering van digitale producten."
+        },
+        {
+          "title": "Design & Gebruikerservaring",
+          "desc": "UX/UI, productidentiteit, gebruikersreizen."
+        },
+        {
+          "title": "Bedrijfsstrategie",
+          "desc": "Bedrijfsarchitectuur, inkomstenlogica, kapitaalefficiëntie, schaalbare modellen, marktpositionering."
+        }
+      ]
+    },
+    "approach": {
+      "label": "Aanpak",
+      "title": "De juiste beslissing begint met het juiste gesprek.",
+      "desc": "Wij bieden gekwalificeerde senior tijd, directe uitwisselingen met de juiste experts en onmiddellijk uitvoerbare aanbevelingen. U betaalt voor expertise en ervaring, niet voor structuur.",
+      "cta": "Sessie boeken"
+    }
+  },
+  "stats": {
+    "assets": "assets",
+    "languages": "talen",
+    "base": "Zwitserse basis"
+  },
+  "footer": {
+    "groupLabel": "Aegryn Group",
+    "legal": "© 2026 Aegryn Sàrl — Alle rechten voorbehouden",
+    "company": "An Aegryn company",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden",
+    "dataProtection": "Gegevensbeschermingsverklaring",
+    "neediuLegal": "Neediu is een geregistreerd handelsmerk van Aegryn Sàrl. Alle rechten voorbehouden.",
+    "tagline": "Engineered to Last",
+    "swissTagline": "Swiss Tech Asset Builder",
+    "navLabel": "Aegryn",
+    "ecosystemLabel": "Ecosysteem",
+    "advisoryLabel": "Advisory",
+    "advisoryDesc": "Strategische helderheid in Data, AI en Cyberbeveiliging.",
+    "advisoryBook": "Sessie boeken ↗",
+    "medallionText": "Laten we praten . Neem contact op . Laten we praten . Neem contact op .",
+    "contactLabel": "Neem contact op"
+  },
+  "cookie": {
+    "title": "Aegryn — Cookies & Analytics",
+    "desc": "Wij gebruiken Cloudflare Analytics (geanonimiseerd) om het publiek te meten. Geen advertentiedata. AVG-conform.",
+    "learnMore": "Meer info",
+    "accept": "Accepteren",
+    "refuse": "Weigeren"
   },
   "acquisition": {
     "meta": {
@@ -772,33 +1163,6 @@
       "sellerCta": "Asset indienen",
       "pastSessions": "Vorige sessies",
       "noSessions": "Nog geen voltooide sessies."
-    }
-  },
-  "stats": {
-    "assets": "assets",
-    "languages": "talen",
-    "base": "Zwitserse basis"
-  },
-  "footer": {
-    "legal": "© 2026 Aegryn Sàrl — Alle rechten voorbehouden",
-    "company": "An Aegryn company",
-    "privacy": "Privacy",
-    "terms": "Voorwaarden",
-    "tagline": "Engineered to Last",
-    "neediuLegal": "Neediu is een geregistreerd handelsmerk van Aegryn Sàrl. Alle rechten voorbehouden."
-  },
-  "assetPage": {
-    "back": "← Terug naar activa",
-    "visit": "Bezoeken",
-    "comingSoon": "Binnenkort beschikbaar",
-    "presentation": "Overzicht",
-    "audience": "Doelgroep",
-    "features": "Kernfuncties",
-    "cta": {
-      "label": "Geïnteresseerd in dit actief?",
-      "title": "Laten we uw acquisitie bespreken",
-      "allAssets": "Alle activa bekijken",
-      "contact": "Contact AEGRYN"
     }
   }
 }

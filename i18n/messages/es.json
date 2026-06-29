@@ -1,5 +1,6 @@
 {
   "nav": {
+    "home": "Inicio",
     "about": "Sobre nosotros",
     "whatWeBuild": "Lo que construimos",
     "advisory": "Advisory",
@@ -27,9 +28,13 @@
   },
   "hero": {
     "tagline": "Engineered to Last",
+    "eyebrow": "Constructor de activos tech suizo",
     "title": "Construimos\nlo que perdura.",
     "sub": "Activos propietarios desde la capa de protocolo\nhasta la interfaz de usuario.",
-    "cta": "Descubrir nuestros activos"
+    "cta": "Descubrir nuestros activos",
+    "strip": "6 activos — 3 categorías",
+    "geo": "Suiza · Europa · Global",
+    "scroll": "Desplazar"
   },
   "manifesto": {
     "aegis": {
@@ -240,11 +245,139 @@
       "button": "Descubrir Advisory"
     }
   },
+  "whatwedo": {
+    "label": "Lo que hacemos",
+    "items": [
+      {
+        "num": "01",
+        "title": "INGENIERÍA DE ECOSISTEMA",
+        "desc": "Arquitecturamos ecosistemas digitales construidos para la escala, la resiliencia y el valor a largo plazo — donde cada componente se conecta y se multiplica."
+      },
+      {
+        "num": "02",
+        "title": "ARQUITECTURA DE EXPERIENCIA",
+        "desc": "Diseñamos experiencias de usuario fluidas que simplifican la complejidad y crean interacciones intuitivas en todas nuestras plataformas."
+      },
+      {
+        "num": "03",
+        "title": "FUNDAMENTOS TECNOLÓGICOS",
+        "desc": "Construimos sobre una infraestructura tecnológica sólida y soberana — garantizando seguridad, independencia y durabilidad en cada capa."
+      },
+      {
+        "num": "04",
+        "title": "ADVISORY ESTRATÉGICO",
+        "desc": "Nuestro advisory se basa en marcos de ejecución reales en Data, IA & Seguridad — anclados en cómo construimos nuestros propios ecosistemas."
+      }
+    ]
+  },
+  "statsRow": {
+    "items": [
+      {
+        "num": "6.8B",
+        "label": "Dispositivos móviles"
+      },
+      {
+        "num": "5.6B",
+        "label": "Conexiones smartphone"
+      },
+      {
+        "num": "4h12",
+        "label": "Tiempo de pantalla diario"
+      },
+      {
+        "num": "CH",
+        "label": "Desarrollado en Suiza"
+      }
+    ]
+  },
+  "assetGrid": {
+    "sectionLabel": "Nuestro ecosistema",
+    "sectionTitle": "Lo que\nconstruimos.",
+    "notStarted": "No iniciado",
+    "comingSoon": "Próximamente"
+  },
+  "aboutSection": {
+    "label": "Sobre Aegryn",
+    "title": "Plataforma suiza de\nactivos tecnológicos.",
+    "desc": "Diseñamos, financiamos y operamos ecosistemas digitales que avanzan de ideas ambiciosas a tecnología real y duradera. No features — activos.",
+    "tagline": "Desarrollado en Suiza. Construido para durar.",
+    "cta": "Sobre Aegryn",
+    "quote": "Construimos activos digitales que mejoran la vida cotidiana — para individuos, profesionales y los mercados en los que operan.",
+    "ceoName": "Yohann Bollack",
+    "ceoTitle": "Fundador & CEO — Aegryn Group",
+    "stats": [
+      {
+        "val": "6",
+        "label": "Activos"
+      },
+      {
+        "val": "3",
+        "label": "Categorías"
+      },
+      {
+        "val": "6",
+        "label": "Mercados"
+      }
+    ]
+  },
+  "missionSection": {
+    "label": "Nuestra Misión",
+    "sub": "Simplificando la vida con apps inteligentes",
+    "items": [
+      {
+        "title": "CREAMOS",
+        "desc": "Soluciones que anticipan tus necesidades como individuos o profesionales, garantizando interacciones digitales fluidas que mejoran el día a día."
+      },
+      {
+        "title": "SIMPLIFICAMOS",
+        "desc": "Eliminamos la complejidad integrando automatización inteligente, interfaces intuitivas y sistemas interconectados."
+      },
+      {
+        "title": "ADOPTAMOS",
+        "desc": "Nos mantenemos a la vanguardia con innovaciones pioneras y estableciendo nuevos estándares en experiencias digitales fluidas."
+      }
+    ]
+  },
+  "whyapps": {
+    "label": "Por qué nuestras apps",
+    "count": "04",
+    "items": [
+      {
+        "num": "01",
+        "title": "Innovadoras",
+        "desc": "Aprovechamos tecnologías de vanguardia — IA, automatización y datos inteligentes — para crear apps que evolucionan continuamente."
+      },
+      {
+        "num": "02",
+        "title": "Seguras & Privadas",
+        "desc": "Tus datos son tuyos. Cada app Aegryn está diseñada con arquitectura privacy-first y comunicaciones cifradas."
+      },
+      {
+        "num": "03",
+        "title": "Diversas & Inclusivas",
+        "desc": "Diseñamos para todos. Nuestras apps son accesibles, culturalmente sensibles y disponibles en varios idiomas y mercados."
+      },
+      {
+        "num": "04",
+        "title": "Impacto Social",
+        "desc": "Construimos con propósito. Cada plataforma simplifica desafíos cotidianos reales y crea valor medible para individuos y comunidades."
+      },
+      {
+        "num": "05",
+        "title": "Accesibles",
+        "desc": "Desde los primeros usuarios de smartphones hasta profesionales experimentados — nuestras apps son intuitivas y sin barreras."
+      }
+    ]
+  },
   "about": {
     "hero": {
       "label": "Sobre Aegryn",
       "title": "Un builder, no un consultor.",
       "desc": "Aegryn es un Swiss Tech Asset Builder. Diseñamos, financiamos y operamos activos digitales propietarios desde Suiza."
+    },
+    "vision": {
+      "label": "Nuestra visión",
+      "text": "Creemos que la tecnología debe hacer más que impresionar. Debe estructurar, simplificar y elevar las experiencias cotidianas. En un mundo saturado de apps fragmentadas y soluciones a corto plazo, construimos ecosistemas digitales coherentes — entornos donde usuarios, datos y transacciones se conectan de forma natural y segura."
     },
     "mission": {
       "label": "Nuestra misión",
@@ -252,6 +385,9 @@
       "p1": "Aegryn no vende proyectos. Construimos activos. Cada producto que lanzamos está diseñado para durar, generar valor a largo plazo y resistir los ciclos económicos.",
       "p2": "Nuestro modelo se basa en la propiedad total de nuestros activos digitales, operados en un entorno soberano.",
       "p3": "Suiza no es solo una dirección. Es nuestro estándar: neutralidad, precisión, durabilidad."
+    },
+    "dna": {
+      "label": "Nuestro ADN"
     },
     "values": {
       "precision": {
@@ -286,10 +422,159 @@
       "cta": "Ver nuestros activos"
     }
   },
+  "career": {
+    "hero": {
+      "label": "Aegryn Advisory & Carreras",
+      "title": "Advisory & Expertos en Ecosistemas Digitales",
+      "desc": "Aegryn busca Senior Advisors — expertos operativos en Data, IA y Ciberseguridad para estructurar ecosistemas digitales duraderos."
+    },
+    "positions": {
+      "label": "Próximas posiciones",
+      "count": "08",
+      "domain": "Dominio",
+      "type": "Tipo"
+    },
+    "apply": "Postularse",
+    "spontaneous": "Candidatura espontanéa",
+    "statement": {
+      "label": "Aegryn Advisory",
+      "title": "Engineered to Last — construido por expertos que creen en ello.",
+      "cta": "Descubrir Advisory"
+    },
+    "domains": {
+      "all": "Todos los dominios",
+      "strategy": "Business Strategy",
+      "cyber": "Ciberseguridad",
+      "finance": "Finanzas",
+      "growth": "Growth & Brand",
+      "ai": "IA & Data",
+      "architecture": "Arquitectura",
+      "ux": "UX & Diseño",
+      "product": "Producto"
+    }
+  },
+  "assetPage": {
+    "back": "← Volver a los activos",
+    "presentation": "Presentación",
+    "audience": "Público objetivo",
+    "features": "Funcionalidades clave",
+    "visit": "Visitar",
+    "comingSoon": "Próximamente",
+    "cta": {
+      "label": "¿Interesado en este activo?",
+      "title": "Hablemos de su adquisición",
+      "allAssets": "Ver todos los activos",
+      "contact": "Contactar AEGRYN"
+    }
+  },
+  "assetCarousel": {
+    "label": "Nuestro ecosistema",
+    "title": "Lo que construimos.",
+    "scrollHint": "← desplazar →",
+    "swipeHint": "Desliza para explorar →",
+    "cta": {
+      "label": "Aegryn Group",
+      "title": "Todos nuestros activos.\nConstruidos para durar.",
+      "button": "Ver todo"
+    },
+    "restricted": "Restringido",
+    "classifiedLabel": "CLASIFICADO",
+    "classifiedDesc": "Protocolo en desarrollo confidencial.\nAcceso restringido a socios acreditados."
+  },
+  "growWithUs": {
+    "hero": {
+      "label": "Alianzas Estratégicas e Inversión",
+      "title": "Crezcamos juntos.",
+      "desc": "Aegryn invita a inversores visionarios y socios a formar parte de un movimiento transformador en tecnología digital. Visión a largo plazo. Ejecución disciplinada.",
+      "cta": "Contactarnos"
+    },
+    "investors": {
+      "label": "/ Inversores",
+      "sub": "Conviértase en un actor clave",
+      "items": [
+        {
+          "num": "01",
+          "title": "Mercado de alto crecimiento",
+          "desc": "Estamos posicionados en el sector de ecosistemas digitales en rápida transformación, abriendo importantes oportunidades de ingresos."
+        },
+        {
+          "num": "02",
+          "title": "Experiencia probada",
+          "desc": "Nuestro equipo cuenta con desarrolladores, diseñadores UX y estratégas de marketing comprometidos con entregar productos digitales de vanguardia."
+        },
+        {
+          "num": "03",
+          "title": "Tecnología de nueva generación",
+          "desc": "Integramos IA, aprendizaje automático y automatización para crear soluciones a prueba de futuro, diseñadas para durar y escalar."
+        },
+        {
+          "num": "04",
+          "title": "Éxito basado en datos",
+          "desc": "Nuestro sólido modelo de negocio y estrategias financieras garantizan rentabilidad a largo plazo e innovación sostenida."
+        },
+        {
+          "num": "05",
+          "title": "Transparente y orientado al inversor",
+          "desc": "Proporcionamos actualizaciones claras y consistentes sobre el progreso del proyecto, hitos financieros y tendencias del mercado."
+        }
+      ]
+    },
+    "partners": {
+      "label": "/ Socios",
+      "sub": "Oportunidades de alto impacto",
+      "items": [
+        {
+          "title": "Desarrollo de aplicaciones",
+          "desc": "Amplíe el portafolio de servicios de su agencia y desbloquee importantes nuevos flujos de ingresos."
+        },
+        {
+          "title": "Seguro integrado",
+          "desc": "Ofrezca cobertura instantánea y fluida para compras, entregas y transacciones financieras."
+        },
+        {
+          "title": "Soluciones de pago integradas",
+          "desc": "Impulse pagos en tiempo real, financiación flexible y modelos de reparto de ingresos."
+        },
+        {
+          "title": "Iniciativas de crecimiento co-branded",
+          "desc": "Lance campañas virales, ofertas exclusivas y eventos por tiempo limitado."
+        },
+        {
+          "title": "Campañas de marketing basadas en datos",
+          "desc": "Aproveche los datos de la plataforma para crear campañas de marketing altamente segmentadas y personalizadas."
+        },
+        {
+          "title": "Colaboraciones en redes sociales e influencers",
+          "desc": "Assóciese con nosotros para amplificar el mensaje de nuestra marca a través de campañas de redes sociales y alianzas con influencers."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para construir el futuro juntos?",
+      "button": "Contactarnos"
+    }
+  },
   "contact": {
-    "meta": {
-      "title": "Contacto — AEGRYN",
-      "desc": "Contáctanos — Advisory, certificación, subasta, asociación o consulta general."
+    "faq": {
+      "label": "/ Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Quiénes somos y qué hacemos?",
+          "a": "Aegryn es un constructor de activos tech suizo que diseña y opera ecosistemas digitales propietarios — entornos donde la tecnología estructura el día a día de individuos, profesionales y los mercados en los que operan."
+        },
+        {
+          "q": "¿Qué nos diferencia de la competencia?",
+          "a": "A diferencia de consultoras o agencias, construimos y operamos nuestros propios ecosistemas digitales. Cada insight advisory, protocolo de seguridad y marco de crecimiento que ofrecemos proviene de ejecución real, no de teoría."
+        },
+        {
+          "q": "¿Cómo puedo invertir o asociarme?",
+          "a": "Damos la bienvenida a inversores visionarios y socios estratégicos que comparten nuestra perspectiva a largo plazo. Use el formulario de contacto, seleccione \"Asociación\" como asunto y nuestro equipo responderá en 24 horas."
+        },
+        {
+          "q": "¿Dónde estamos ubicados?",
+          "a": "Aegryn tiene su sede en Suiza. Nuestros ecosistemas digitales operan en toda Europa y nuestra practice advisory atiende clientes en Suiza, Francia y la UE."
+        }
+      ]
     },
     "hero": {
       "label": "Contacto",
@@ -323,7 +608,113 @@
         "title": "Mensaje recibido.",
         "desc": "Te responderemos en 24 horas."
       }
+    },
+    "meta": {
+      "title": "Contacto — AEGRYN",
+      "desc": "Contáctanos — Advisory, certificación, subasta, asociación o consulta general."
     }
+  },
+  "advisoryPage": {
+    "hero": {
+      "label": "Aegryn Advisory",
+      "title": "Claridad Estratégica.\nProfundidad Operativa.",
+      "desc1": "En Aegryn Advisory, trabajamos con fundadores, ejecutivos y organizaciones que enfrentan decisiones tecnológicas críticas. Nuestra orientación proviene de cómo diseñamos, construimos y aseguramos nuestros propios ecosistemas digitales.",
+      "desc2": "No nos apoyamos en teoría, tendencias ni frameworks reciclados. Ofrecemos una dirección estratégica clara, directa y basada en la ejecución en Data, IA y Ciberseguridad.",
+      "quote": "Sin diapositivas interminables. Sin playbooks genéricos.\nSolo estándares probados en entornos reales.",
+      "cta": "Reservar sesión"
+    },
+    "why": {
+      "label": "¿Por qué Advisory?",
+      "desc1": "Diseñar o escalar un ecosistema digital requiere más que ambición. Requiere claridad arquitectónica, ejecución disciplinada y pensamiento a largo plazo.",
+      "desc2": "Aegryn Advisory existe para los líderes que necesitan orientación estructurada cuando las decisiones en Data, IA y Ciberseguridad definen la resiliencia futura.",
+      "tagline": "Nuestro rol es simple: aportar claridad, reducir riesgos, acelerar las decisiones correctas."
+    },
+    "whoFor": {
+      "label": "¿Para quién es Advisory?",
+      "items": [
+        {
+          "title": "Fundadores & Builders",
+          "desc": "Está construyendo o escalando una plataforma digital y se enfrenta a decisiones estructurales que definirán su resiliencia a largo plazo. Le ayudamos a establecer bases sólidas antes de que la complejidad se acumule."
+        },
+        {
+          "title": "Organizaciones en crecimiento",
+          "desc": "A medida que su organización crece, la profundidad técnica se vuelve crítica. Ofrecemos una perspectiva independiente y sénior sobre la escalabilidad de la infraestructura, el despliegue de IA y la coherencia arquitectónica."
+        },
+        {
+          "title": "Dirección en transición",
+          "desc": "La evolución digital requiere disciplina estructural, no parches incrementales. Apoyamos a los equipos de liderazgo en la modernización legacy, la reestructuración de datos y el refuerzo de la ciberseguridad."
+        }
+      ]
+    },
+    "experts": {
+      "label": "Nuestros Expertos",
+      "count": "Senior Advisors"
+    },
+    "domains": {
+      "label": "Nuestras áreas de intervención",
+      "items": [
+        {
+          "title": "Productos Digitales",
+          "desc": "Aplicaciones móviles, plataformas web, SaaS, elecciones tecnológicas, gestión de proyectos digitales."
+        },
+        {
+          "title": "Auditoría & Seguridad de Aplicaciones",
+          "desc": "Evaluación de soluciones digitales, recomendaciones, cumplimiento y otorgamiento de una etiqueta de confianza anual."
+        },
+        {
+          "title": "Inteligencia Artificial & Automatización",
+          "desc": "Agentes de IA, automatización de procesos, productividad, integración de IA en productos y organizaciones."
+        },
+        {
+          "title": "Derecho Digital & Propiedad Intelectual",
+          "desc": "Términos de servicio, cumplimiento digital, protección IP, estructuración legal de productos digitales."
+        },
+        {
+          "title": "Diseño & Experiencia de Usuario",
+          "desc": "UX/UI, identidad de producto, recorridos de usuario."
+        },
+        {
+          "title": "Estrategia de Negocio",
+          "desc": "Arquitectura empresarial, lógica de ingresos, eficiencia de capital, modelos escalables, posicionamiento de mercado."
+        }
+      ]
+    },
+    "approach": {
+      "label": "Enfoque",
+      "title": "La decisión correcta comienza con la conversación correcta.",
+      "desc": "Ofrecemos tiempo sénior calificado, intercambios directos con los expertos adecuados y recomendaciones inmediatamente accionables. Usted paga por experiencia y conocimiento, no por estructura.",
+      "cta": "Reservar sesión"
+    }
+  },
+  "stats": {
+    "assets": "activos",
+    "languages": "idiomas",
+    "base": "Base Suiza"
+  },
+  "footer": {
+    "groupLabel": "Aegryn Group",
+    "legal": "© 2026 Aegryn Sàrl — Todos los derechos reservados",
+    "company": "An Aegryn company",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "dataProtection": "Aviso de protección de datos",
+    "neediuLegal": "Neediu es una marca registrada de Aegryn Sàrl. Todos los derechos reservados.",
+    "tagline": "Engineered to Last",
+    "swissTagline": "Swiss Tech Asset Builder",
+    "navLabel": "Aegryn",
+    "ecosystemLabel": "Ecosistema",
+    "advisoryLabel": "Advisory",
+    "advisoryDesc": "Claridad estratégica en Data, IA y Ciberseguridad.",
+    "advisoryBook": "Reservar sesión ↗",
+    "medallionText": "Hablemos . Contáctenos . Hablemos . Contáctenos .",
+    "contactLabel": "Contáctenos"
+  },
+  "cookie": {
+    "title": "Aegryn — Cookies & Analytics",
+    "desc": "Utilizamos Cloudflare Analytics (anonimizado) para medir la audiencia. Sin datos publicitarios. Conforme al RGPD.",
+    "learnMore": "Saber más",
+    "accept": "Aceptar",
+    "refuse": "Rechazar"
   },
   "acquisition": {
     "meta": {
@@ -772,33 +1163,6 @@
       "sellerCta": "Enviar activo",
       "pastSessions": "Sesiones pasadas",
       "noSessions": "Ninguna sesión completada todavía."
-    }
-  },
-  "stats": {
-    "assets": "activos",
-    "languages": "idiomas",
-    "base": "Base Suiza"
-  },
-  "footer": {
-    "legal": "© 2026 Aegryn Sàrl — Todos los derechos reservados",
-    "company": "An Aegryn company",
-    "privacy": "Privacidad",
-    "terms": "Términos",
-    "tagline": "Engineered to Last",
-    "neediuLegal": "Neediu es una marca registrada de Aegryn Sàrl. Todos los derechos reservados."
-  },
-  "assetPage": {
-    "back": "← Volver a los activos",
-    "visit": "Visitar",
-    "comingSoon": "Próximamente",
-    "presentation": "Presentación",
-    "audience": "Público objetivo",
-    "features": "Funcionalidades clave",
-    "cta": {
-      "label": "¿Interesado en este activo?",
-      "title": "Hablemos de su adquisición",
-      "allAssets": "Ver todos los activos",
-      "contact": "Contactar AEGRYN"
     }
   }
 }
