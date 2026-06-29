@@ -1,88 +1,131 @@
-export const AEGRYN_ASSETS = [
+export interface AegrynAsset {
+  id:              string
+  name:            string
+  slug:            string
+  url:             string | null
+  badge:           string
+  tagline:         string
+  description:     string
+  category:        'ai' | 'lifestyle' | 'transactions'
+  status:          'live' | 'beta' | 'dev'
+  featured:        boolean
+  grade:           AssetGrade
+  gradeCode:       string | undefined
+  tier:            1 | 2
+  auctionEligible: boolean
+}
+
+export type AssetGrade    = 'star' | 'aaa' | 'aa' | 'a' | 'b' | 'pending' | 'refused'
+
+export const AEGRYN_ASSETS: AegrynAsset[] = [
 
   // ── AI & PROTOCOLES ──────────────────────────────────────────
   {
-    id:          'subblink',
-    name:        'subblink',
-    slug:        'subblink',
-    url:         'https://subblink.boha-group.com' as string | null,
-    badge:       'B2B — SaaS',
-    tagline:     'Analyse contractuelle par IA',
-    description: "Analyse vos contrats en quelques secondes grâce à l'IA, calibrée pour le droit suisse et français. Pour freelances, consultants et PME.",
-    category:    'ai',
-    status:      'live' as const,
-    featured:    true,
+    id:               'subblink',
+    name:             'Subblink',
+    slug:             'subblink',
+    url:              'https://subblink.boha-group.com' as string | null,
+    badge:            'B2B — SaaS',
+    tagline:          'Analyse contractuelle par IA',
+    description:      "Analyse vos contrats en quelques secondes grâce à l'IA, calibrée pour le droit suisse et français. Pour freelances, consultants et PME.",
+    category:         'ai',
+    status:           'live' as const,
+    featured:         true,
+    grade:            'aaa' as const,
+    gradeCode:        'C2-D01 | I1-M01 | F1-A01 | S2',
+    tier:             1 as const,
+    auctionEligible:  true,
   },
   {
-    id:          'kryv',
-    name:        'KRYV Protocol',
-    slug:        'kryv',
-    url:         null as string | null,
-    badge:       'Protocole — Blockchain',
-    tagline:     'Certification d\'intégrité',
-    description: "Protocole blockchain de certification de l'intégrité du code IA. Le SSL du code artificiel — chaque déploiement, immuablement scellé.",
-    category:    'ai',
-    status:      'dev' as const,
-    featured:    false,
+    id:               'kryv',
+    name:             'KRYV Protocol',
+    slug:             'kryv',
+    url:              null as string | null,
+    badge:            'Protocole — Blockchain',
+    tagline:          'Certification d\'intégrité du code IA',
+    description:      "Protocole blockchain de certification de l'intégrité du code IA. Le SSL du code artificiel — chaque déploiement, immuablement scellé.",
+    category:         'ai',
+    status:           'beta' as const,
+    featured:         false,
+    grade:            'pending' as const,
+    gradeCode:        undefined,
+    tier:             1 as const,
+    auctionEligible:  false,
   },
 
   // ── SERVICES & LIFESTYLE ─────────────────────────────────────
   {
-    id:          'neediu',
-    name:        'neediu',
-    slug:        'neediu',
-    url:         null as string | null,
-    badge:       'B2C — Marketplace',
-    tagline:     'Services à domicile, mise en relation intelligente',
-    description: 'Connecte les particuliers aux meilleurs prestataires de services à domicile en région parisienne.',
-    category:    'lifestyle',
-    status:      'dev' as const,
-    featured:    true,
+    id:               'neediu',
+    name:             'Neediu',
+    slug:             'neediu',
+    url:              null as string | null,
+    badge:            'B2C — Marketplace',
+    tagline:          'Services à domicile, mise en relation intelligente',
+    description:      'Connecte les particuliers aux meilleurs prestataires de services à domicile en région parisienne.',
+    category:         'lifestyle',
+    status:           'dev' as const,
+    featured:         true,
+    grade:            'aa' as const,
+    gradeCode:        'C1-D02 | I2-M01 | F2-A02 | S1',
+    tier:             1 as const,
+    auctionEligible:  true,
   },
   {
-    id:          'movtoo',
-    name:        'movtoo',
-    slug:        'movtoo',
-    url:         null as string | null,
-    badge:       'B2C — Livraison',
-    tagline:     'Livraison à la demande en temps réel',
-    description: "Plateforme de livraison immédiate pilotée par l'intelligence artificielle.",
-    category:    'lifestyle',
-    status:      'not_started' as const,
-    featured:    false,
+    id:               'movtoo',
+    name:             'Movtoo',
+    slug:             'movtoo',
+    url:              null as string | null,
+    badge:            'B2C — Livraison',
+    tagline:          'Livraison à la demande en temps réel',
+    description:      "Plateforme de livraison immédiate pilotée par l'intelligence artificielle.",
+    category:         'lifestyle',
+    status:           'dev' as const,
+    featured:         false,
+    grade:            'pending' as const,
+    gradeCode:        undefined,
+    tier:             2 as const,
+    auctionEligible:  false,
   },
 
   // ── TRANSACTIONS & RÉSEAU ─────────────────────────────────────
   {
-    id:          'primiom',
-    name:        'primiom',
-    slug:        'primiom',
-    url:         null as string | null,
-    badge:       'B2C — Immobilier',
-    tagline:     'Transactions immobilières assistées par l\'IA',
-    description: "Réinvente la transaction immobilière grâce à des outils d'analyse et de décision basés sur l'IA.",
-    category:    'transactions',
-    status:      'not_started' as const,
-    featured:    false,
+    id:               'primiom',
+    name:             'Primiom',
+    slug:             'primiom',
+    url:              null as string | null,
+    badge:            'B2C — Immobilier',
+    tagline:          'Transactions immobilières assistées par l\'IA',
+    description:      "Réinvente la transaction immobilière grâce à des outils d'analyse et de décision basés sur l'IA.",
+    category:         'transactions',
+    status:           'dev' as const,
+    featured:         false,
+    grade:            'pending' as const,
+    gradeCode:        undefined,
+    tier:             2 as const,
+    auctionEligible:  false,
   },
   {
-    id:          'hobconnect',
-    name:        'hobconnect',
-    slug:        'hobconnect',
-    url:         null as string | null,
-    badge:       'B2C — Social',
-    tagline:     'Réseau social centré sur les passions partagées',
-    description: 'Crée des communautés autour des centres d\'intérêt et des passions communes.',
-    category:    'transactions',
-    status:      'not_started' as const,
-    featured:    false,
+    id:               'hobconnect',
+    name:             'Hobconnect',
+    slug:             'hobconnect',
+    url:              null as string | null,
+    badge:            'B2C — Social',
+    tagline:          'Réseau social centré sur les passions partagées',
+    description:      'Crée des communautés autour des centres d\'intérêt et des passions communes.',
+    category:         'transactions',
+    status:           'dev' as const,
+    featured:         false,
+    grade:            'pending' as const,
+    gradeCode:        undefined,
+    tier:             2 as const,
+    auctionEligible:  false,
   },
 
-] as const
+]
 
-export type Asset         = typeof AEGRYN_ASSETS[number]
-export type AssetCategory = Asset['category']
-export type AssetStatus   = Asset['status']
+export type Asset         = AegrynAsset
+export type AssetCategory = AegrynAsset['category']
+export type AssetStatus   = AegrynAsset['status']
 
 export const ASSET_CATEGORIES = {
   ai:           { label: 'AI & Protocoles',       en: 'AI & Protocols' },
