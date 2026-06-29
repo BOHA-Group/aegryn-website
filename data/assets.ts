@@ -11,8 +11,9 @@ export interface AegrynAsset {
   featured:        boolean
   grade:           AssetGrade
   gradeCode:       string | undefined
-  tier:            1 | 2
-  auctionEligible: boolean
+  tier:              1 | 2
+  auctionEligible:   boolean
+  showOnHomepage?:   boolean
 }
 
 export type AssetGrade    = 'star' | 'aaa' | 'aa' | 'a' | 'b' | 'pending' | 'refused'
@@ -51,6 +52,7 @@ export const AEGRYN_ASSETS: AegrynAsset[] = [
     gradeCode:        undefined,
     tier:             1 as const,
     auctionEligible:  false,
+    showOnHomepage:   false,
   },
 
   // ── SERVICES & LIFESTYLE ─────────────────────────────────────

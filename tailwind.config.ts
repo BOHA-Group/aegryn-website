@@ -35,6 +35,13 @@ const config: Config = {
           live:        '#16A34A',
           beta:        '#B45309',
           dev:         '#94A3B8',
+          /* ── Grade tokens */
+          'grade-star':    '#5ADDA4',
+          'grade-aaa':     '#C9A84C',
+          'grade-aa':      '#9BA8B0',
+          'grade-a':       '#4A90D9',
+          'grade-b':       '#D4820A',
+          'grade-refused': '#C0392B',
         },
         aegryn: {
           obsidian: '#050505',

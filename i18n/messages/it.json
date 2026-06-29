@@ -28,13 +28,15 @@
   },
   "hero": {
     "tagline": "Engineered to Last",
-    "eyebrow": "Costruttore svizzero di asset tech",
-    "title": "Costruiamo\nciò che dura.",
-    "sub": "Asset proprietari dallo strato protocollo\nfino all'interfaccia utente.",
-    "cta": "Scopri i nostri asset",
-    "strip": "6 asset — 3 categorie",
+    "eyebrow": "AEGRYN — CERTIFIED TECH ASSET TRANSACTIONS",
+    "title": "The art\nof the exit.",
+    "sub": "AEGRYN certifica e transige asset tech premium in Europa.\nGrade co-firmato A→E. Deposito istituzionale.\nCertificazione blockchain ad ogni trasferimento.",
+    "cta": "SCOPRI IL CATALOGO",
+    "strip": "CERTIFIED TECH ASSET TRANSACTIONS — EUROPE",
     "geo": "Svizzera · Europa · Global",
-    "scroll": "Scorri"
+    "scroll": "Scorri",
+    "ctaSecondary": "INVIA UN ASSET",
+    "chip2": "GRADE A→E — CO-FIRMATO"
   },
   "manifesto": {
     "aegis": {
@@ -290,78 +292,81 @@
     "sectionLabel": "Il nostro ecosistema",
     "sectionTitle": "Cosa\ncostruiamo.",
     "notStarted": "Non avviato",
-    "comingSoon": "Prossimamente"
+    "comingSoon": "Prossimamente",
+    "tier1Label": "Asset certificati",
+    "tier2Label": "In attesa di certificazione",
+    "cta": "Invia il tuo asset per la certificazione"
   },
   "aboutSection": {
     "label": "Chi è Aegryn",
-    "title": "Piattaforma svizzera di\nasset tecnologici.",
-    "desc": "Progettiamo, finanziamo e gestiamo ecosistemi digitali che avanzano da idee audaci a tecnologia reale e duratura. Non feature — asset.",
-    "tagline": "Sviluppato in Svizzera. Costruito per durare.",
+    "title": "Tre discipline.\nUno standard di mercato.",
+    "desc": "AEGRYN costruisce asset tech proprietari, li certifica sotto un label indipendente co-firmato, e li transige attraverso un processo riservato tra venditori qualificati e acquirenti istituzionali. La prima infrastruttura di fiducia per il M&A tech in Europa.",
+    "tagline": "CERTIFICATO IN SVIZZERA. RIFERIMENTO IN EUROPA.",
     "cta": "Chi è Aegryn",
-    "quote": "Costruiamo asset digitali che migliorano la vita quotidiana — per individui, professionisti e i mercati in cui operano.",
+    "quote": "Un asset tech senza certificazione co-firmata è un valore senza prova. AEGRYN fornisce la prova — su ogni asset, ad ogni trasferimento.",
     "ceoName": "Yohann Bollack",
-    "ceoTitle": "Fondatore & CEO — Aegryn Group",
+    "ceoTitle": "Fondatore & CEO — AEGRYN Sàrl",
     "stats": [
       {
         "val": "6",
         "label": "Asset"
       },
       {
-        "val": "3",
-        "label": "Categorie"
+        "val": "A→E",
+        "label": "Gradi"
       },
       {
-        "val": "6",
-        "label": "Mercati"
+        "val": "< 25%",
+        "label": "Accettati"
       }
     ]
   },
   "missionSection": {
-    "label": "La nostra Missione",
-    "sub": "Semplificare la vita con app intelligenti",
+    "label": "Il Modello AEGRYN",
+    "sub": "Tre discipline. Un ecosistema integrato.",
     "items": [
       {
-        "title": "CREIAMO",
-        "desc": "Soluzioni che anticipano le tue esigenze come individui o professionisti, garantendo interazioni digitali fluide che migliorano la vita quotidiana."
+        "title": "BUILD",
+        "desc": "Costruiamo asset tech proprietari progettati sin dall'origine per essere certificabili e trasferibili — SaaS, marketplace, protocolli IA. Ogni asset è strutturato per resistere all'audit più esigente."
       },
       {
-        "title": "SEMPLIFICHIAMO",
-        "desc": "Eliminiamo la complessità integrando automazione intelligente, interfacce intuitive e sistemi interconnessi."
+        "title": "GRADE",
+        "desc": "Certifichiamo asset di terze parti e proprietari secondo un label indipendente A→E, co-firmato da esperti legali, finanziari e di cybersicurezza che impegnano la propria responsabilità. KRYV Protocol certifica il codice su blockchain ad ogni trasferimento."
       },
       {
-        "title": "ABBRACCIAMO",
-        "desc": "Restiamo all'avanguardia con innovazioni pionieristiche e stabilendo nuovi standard nelle esperienze digitali fluide."
+        "title": "AUCTION",
+        "desc": "Transigiamo asset certificati attraverso un processo riservato — deposito istituzionale, cerchia di acquirenti pre-qualificati, mandato esclusivo 60 giorni. Meno del 25% degli asset presentati viene accettato."
       }
     ]
   },
   "whyapps": {
-    "label": "Perché le nostre app",
-    "count": "04",
+    "label": "Perché AEGRYN",
+    "count": "05",
     "items": [
       {
         "num": "01",
-        "title": "Innovative",
-        "desc": "Sfruttiamo tecnologie all'avanguardia — AI, automazione e dati intelligenti — per creare app che evolvono continuamente."
+        "title": "CERTIFICAZIONE CO-FIRMATA",
+        "desc": "Ogni report di grade AEGRYN è co-firmato da uno studio legale, un commercialista e un partner di cybersicurezza. Impegnano la loro responsabilità. Non un'opinione — una certificazione."
       },
       {
         "num": "02",
-        "title": "Sicure & Private",
-        "desc": "I tuoi dati sono tuoi. Ogni app Aegryn è progettata con architettura privacy-first e comunicazioni crittografate."
+        "title": "BLOCKCHAIN AL TRASFERIMENTO",
+        "desc": "KRYV Protocol registra l'esatta impronta crittografica del codebase alla data di firma. Ciò che si riceve è dimostrabile in qualsiasi data futura. Immutabile per design."
       },
       {
         "num": "03",
-        "title": "Diversità & Inclusione",
-        "desc": "Progettiamo per tutti. Le nostre app sono accessibili, culturalmente sensibili e disponibili in più lingue e mercati."
+        "title": "DEPOSITO ISTITUZIONALE",
+        "desc": "Il 10% del prezzo della transazione viene depositato su un conto bancario di deposito alla firma del Principio d'Accordo. Il venditore è protetto. L'acquirente è impegnato. AEGRYN non tocca mai i fondi."
       },
       {
         "num": "04",
-        "title": "Impatto Sociale",
-        "desc": "Costruiamo con uno scopo. Ogni piattaforma semplifica le sfide quotidiane reali e crea valore misurabile per individui e comunità."
+        "title": "CERCHIA CHIUSA",
+        "desc": "Nessun asset è visibile pubblicamente prima di aver superato il grade. Nessun acquirente accede al catalogo senza prova di capacità. La discrezione è strutturale, non opzionale."
       },
       {
         "num": "05",
-        "title": "Accessibili",
-        "desc": "Dai primi utenti di smartphone ai professionisti esperti — le nostre app sono intuitive e senza barriere."
+        "title": "RIFERIMENTO EUROPEO",
+        "desc": "Radicato in Svizzera, operante in Europa. Le nostre sessioni di transazione, il nostro rapporto trimestrale di mercato e il nostro catalogo storico costruiscono lo standard che il mercato M&A tech europeo aspettava."
       }
     ]
   },
@@ -695,12 +700,12 @@
     "terms": "Termini",
     "dataProtection": "Informativa sulla protezione dei dati",
     "neediuLegal": "Neediu è un marchio registrato di Aegryn Sàrl. Tutti i diritti riservati.",
-    "tagline": "Engineered to Last",
-    "swissTagline": "Swiss Tech Asset Builder",
+    "tagline": "CERTIFIED TO TRANSACT.",
+    "swissTagline": "Il riferimento certificato per le transazioni di asset tech premium in Europa.",
     "navLabel": "Aegryn",
     "ecosystemLabel": "Ecosistema",
     "advisoryLabel": "Advisory",
-    "advisoryDesc": "Chiarezza strategica in Data, AI e Cybersicurezza.",
+    "advisoryDesc": "Rimedio e consulenza per asset che non hanno ancora raggiunto il Grade A.",
     "advisoryBook": "Prenota una sessione ↗",
     "medallionText": "Parliamo . Contattaci . Parliamo . Contattaci .",
     "contactLabel": "Contattaci"
@@ -1168,33 +1173,38 @@
     "label": "Sistema di Grade AEGRYN",
     "title": "Non un voto.\nUna certificazione.",
     "desc": "C'è una differenza fondamentale tra dare un voto e certificare. AEGRYN certifica — con esperti che firmano e mettono in gioco il loro nome.",
-    "quote": "Un asset senza certificazione è un valore senza prova. Un asset AEGRYN Grade A è una certezza documentata.",
+    "quote": "Un asset senza certificazione co-firmata è un valore senza prova. Un asset AEGRYN Grade AAA è una certezza documentata — co-firmata, verificabile, registrata su blockchain.",
     "cta": "Leggi la metodologia completa",
     "grades": [
       {
-        "grade": "A",
+        "grade": "★",
         "label": "Eccezionale",
-        "desc": "Asset dominante nel mercato, forte crescita, IP protetta."
+        "desc": "Asset di primo livello. IP impeccabile, metriche eccezionali, sicurezza certificata. < 5% degli asset certificati."
+      },
+      {
+        "grade": "AAA",
+        "label": "Eccellente",
+        "desc": "Asset di alta qualità in tutte le dimensioni. Solo punti di ottimizzazione minori. Molto liquido."
+      },
+      {
+        "grade": "AA",
+        "label": "Molto buono",
+        "desc": "Asset solido con riserve documentate e quantificate. Valutazione adeguata. Consigliato senza riserve."
+      },
+      {
+        "grade": "A",
+        "label": "Buono",
+        "desc": "Asset praticabile con una o più riserve significative. Piano di rimedio fornito."
       },
       {
         "grade": "B",
-        "label": "Solido",
-        "desc": "Fondamentali sani, potenziale di crescita confermato."
-      },
-      {
-        "grade": "C",
         "label": "Corretto",
-        "desc": "Asset praticabile con aree di miglioramento identificate."
+        "desc": "Advisory consigliato prima della transazione. Non idoneo per le sessioni principali AEGRYN."
       },
       {
-        "grade": "D",
-        "label": "Speculativo",
-        "desc": "Alto rischio, possibile recupero sotto condizioni."
-      },
-      {
-        "grade": "E",
-        "label": "Non certificabile",
-        "desc": "Non soddisfa gli attuali criteri AEGRYN."
+        "grade": "✕",
+        "label": "Rifiutato",
+        "desc": "Rifiuto motivato per iscritto. Report di pre-screening consegnato."
       }
     ]
   },
@@ -1206,10 +1216,12 @@
     "stat1Label": "Tasso di accettazione degli asset",
     "stat2Val": "60 gg max",
     "stat2Label": "Mandato esclusivo venditore",
-    "stat3Val": "Svizzera",
-    "stat3Label": "Ancoraggio istituzionale",
+    "stat3Val": "100%",
+    "stat3Label": "Acquirenti pre-qualificati",
     "ctaSell": "Vendere un asset certificato",
-    "ctaBuy": "Unirsi al circolo acquirenti"
+    "ctaBuy": "Unirsi al circolo acquirenti",
+    "stat4Val": "Svizzera",
+    "stat4Label": "Ancoraggio istituzionale"
   },
   "acqStrip": {
     "label": "Supporto all'Acquisizione",

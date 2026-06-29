@@ -28,15 +28,16 @@
   },
   "hero": {
     "tagline": "Certified Tech Asset Transactions — Europe",
-    "eyebrow": "Constructeur d'actifs tech suisse",
-    "title": "Where the finest tech assets\nfind their\nrightful owner.",
-    "sub": "Certification indépendante. Transactions institutionnelles.\nMoins de 25% des actifs soumis sont acceptés.",
-    "cta": "Découvrir nos actifs",
-    "strip": "6 actifs — 3 catégories",
+    "eyebrow": "AEGRYN — CERTIFIED TECH ASSET TRANSACTIONS",
+    "title": "The art\nof the exit.",
+    "sub": "AEGRYN certifie et transige des actifs tech premium en Europe.\nGrade co-signé A→E. Séquestre institutionnel.\nCertification blockchain à chaque transfert.",
+    "cta": "DÉCOUVRIR LE CATALOGUE",
+    "strip": "CERTIFIED TECH ASSET TRANSACTIONS — EUROPE",
     "geo": "Suisse · Europe · Global",
     "scroll": "Défiler",
     "ctaPrimary": "Voir le catalogue",
-    "ctaSecondary": "Soumettre un actif"
+    "ctaSecondary": "SOUMETTRE UN ACTIF",
+    "chip2": "GRADE A→E — CO-SIGNÉ"
   },
   "manifesto": {
     "aegis": {
@@ -270,74 +271,74 @@
   },
   "aboutSection": {
     "label": "À propos d'Aegryn",
-    "title": "Plateforme d'actifs\ntechnologiques suisse.",
-    "desc": "Nous concevons, finançons et exploitons des écosystèmes numériques qui progressent des idées ambitieuses vers des technologies réelles et pérennes. Pas des features — des actifs.",
-    "tagline": "Ingénié en Suisse. Construit pour durer.",
+    "title": "Trois métiers.\nUn standard de marché.",
+    "desc": "AEGRYN construit des actifs tech propriétaires, les certifie selon un label indépendant co-signé, et les transige via un processus confidentiel entre vendeurs qualifiés et acquéreurs institutionnels. La première infrastructure de confiance pour le M&A tech en Europe.",
+    "tagline": "CERTIFIÉ EN SUISSE. RÉFÉRENCE EN EUROPE.",
     "cta": "À propos d'Aegryn",
-    "quote": "Nous construisons des actifs numériques qui améliorent la vie quotidienne — pour les individus, les professionnels et les marchés qu'ils servent.",
+    "quote": "Un actif tech sans certification co-signée, c'est une valeur sans preuve. AEGRYN apporte la preuve — sur chaque actif, à chaque transfert.",
     "ceoName": "Yohann Bollack",
-    "ceoTitle": "Fondateur & CEO — Aegryn Group",
+    "ceoTitle": "Fondateur & CEO — AEGRYN Sàrl",
     "stats": [
       {
         "val": "6",
         "label": "Actifs"
       },
       {
-        "val": "3",
-        "label": "Catégories"
+        "val": "A→E",
+        "label": "Grades"
       },
       {
-        "val": "6",
-        "label": "Marchés"
+        "val": "< 25%",
+        "label": "Acceptés"
       }
     ]
   },
   "missionSection": {
-    "label": "Notre Mission",
-    "sub": "Simplifier la vie par le numérique",
+    "label": "Le Modèle AEGRYN",
+    "sub": "Trois métiers. Un écosystème intégré.",
     "items": [
       {
-        "title": "NOUS CRÉONS",
-        "desc": "Des solutions qui anticipent vos besoins en tant qu'individus ou professionnels, garantissant des interactions numériques fluides qui améliorent le quotidien."
+        "title": "BUILD",
+        "desc": "Nous construisons des actifs tech propriétaires conçus dès l'origine pour être certifiables et transférables — SaaS, marketplaces, protocoles IA. Chaque actif est structuré pour résister à l'audit le plus exigeant."
       },
       {
-        "title": "NOUS SIMPLIFIONS",
-        "desc": "Éliminer la complexité en intégrant une automatisation intelligente, des interfaces intuitives et des systèmes interconnectés, rendant la technologie sans effort et efficace."
+        "title": "GRADE",
+        "desc": "Nous certifions des actifs tiers et propres selon un label indépendant A→E, co-signé par des experts juridiques, financiers et cybersécurité engageant leur responsabilité. KRYV Protocol certifie le code sur blockchain à chaque transfert."
       },
       {
-        "title": "NOUS EMBRASSONS",
-        "desc": "Nous restons en avance en pionnier des innovations, en adoptant les avancées de pointe et en fixant de nouveaux standards dans les expériences numériques fluides."
+        "title": "AUCTION",
+        "desc": "Nous transigeons des actifs certifiés via un processus confidentiel — séquestre institutionnel, cercle d'acquéreurs pré-qualifiés, mandat exclusif 60 jours. Moins de 25% des actifs soumis sont acceptés."
       }
     ]
   },
   "whyapps": {
-    "label": "Pourquoi nos apps",
-    "count": "04",
+    "label": "Pourquoi AEGRYN",
+    "count": "05",
     "items": [
       {
         "num": "01",
-        "title": "Innovantes",
-        "desc": "Nous exploitons les technologies de pointe — IA, automatisation et données intelligentes — pour créer des applications qui évoluent et améliorent continuellement votre expérience."
+        "title": "CERTIFICATION CO-SIGNÉE",
+        "desc": "Chaque rapport de grade AEGRYN est co-signé par un cabinet juridique, un expert-comptable et un partenaire cybersécurité. Ils engagent leur responsabilité. Pas une opinion — une certification."
       },
       {
         "num": "02",
-        "title": "Sécurisées & Privées",
-        "desc": "Vos données vous appartiennent. Chaque application Aegryn est conçue avec une architecture privacy-first, des communications chiffrées et des pratiques transparentes alignées sur les normes suisses et européennes."
+        "title": "BLOCKCHAIN AU TRANSFERT",
+        "desc": "KRYV Protocol enregistre l'empreinte cryptographique exacte du codebase à la date de signing. Ce que vous recevez est prouvable à toute date future. Inaltérable par design."
       },
       {
         "num": "03",
-        "title": "Diversité & Inclusion",
-        "desc": "Nous concevons pour tous. Nos applications sont accessibles, culturellement sensibles et disponibles dans plusieurs langues et marchés — parce que la grande technologie doit servir tout le monde."
+        "title": "SÉQUESTRE INSTITUTIONNEL",
+        "desc": "10% du prix de transaction versé sur un compte séquestre bancaire dès l'Accord de Principe. Le vendeur est protégé. L'acquéreur est engagé. AEGRYN ne touche jamais les fonds."
       },
       {
         "num": "04",
-        "title": "Impact social",
-        "desc": "Nous construisons avec un objectif. Chaque plateforme que nous créons est conçue pour simplifier les défis du quotidien, réduire les frictions et créer de la valeur mesurable pour les individus et les communautés."
+        "title": "CERCLE FERMÉ",
+        "desc": "Aucun actif n'est visible publiquement avant d'avoir passé le grade. Aucun acquéreur n'accède au catalogue sans justificatif de capacité. La discrétion est structurelle, pas optionnelle."
       },
       {
         "num": "05",
-        "title": "Accessibles",
-        "desc": "Des premiers utilisateurs de smartphones aux professionnels chevronnés, nos applications sont intuitives et sans barrières — parce que la meilleure interface est celle que tout le monde peut utiliser."
+        "title": "RÉFÉRENCE EUROPÉENNE",
+        "desc": "Ancré en Suisse, opérant en Europe. Nos sessions de transaction, notre rapport de marché trimestriel, et notre catalogue historique construisent le standard que le marché M&A tech européen attendait."
       }
     ]
   },
@@ -365,7 +366,10 @@
     "sectionLabel": "Notre écosystème",
     "sectionTitle": "Ce que nous\nconstruisons.",
     "notStarted": "Non démarré",
-    "comingSoon": "Bientôt"
+    "comingSoon": "Bientôt",
+    "tier1Label": "Actifs certifiés",
+    "tier2Label": "En cours de certification",
+    "cta": "Soumettre votre actif pour certification"
   },
   "about": {
     "hero": {
@@ -706,12 +710,12 @@
     "terms": "Conditions",
     "dataProtection": "Politique de protection des données",
     "neediuLegal": "Neediu est une marque déposée d'Aegryn Sàrl. Tous droits réservés.",
-    "tagline": "Engineered to Last",
-    "swissTagline": "Swiss Tech Asset Builder",
+    "tagline": "CERTIFIED TO TRANSACT.",
+    "swissTagline": "The certified reference for premium tech asset transactions in Europe.",
     "navLabel": "Aegryn",
     "ecosystemLabel": "Écosystème",
     "advisoryLabel": "Advisory",
-    "advisoryDesc": "Clarté stratégique en Data, IA et Cybersécurité.",
+    "advisoryDesc": "Remédiation et conseil pour les actifs qui n'ont pas encore atteint le Grade A.",
     "advisoryBook": "Prendre contact ↗",
     "medallionText": "Discutons . Contactez-nous . Discutons . Contactez-nous .",
     "contactLabel": "Nous contacter"
@@ -822,10 +826,12 @@
     "stat1Label": "Taux d'acceptation des actifs soumis",
     "stat2Val": "60 j max",
     "stat2Label": "Mandat exclusif vendeur",
-    "stat3Val": "Suisse",
-    "stat3Label": "Ancrage institutionnel",
+    "stat3Val": "100%",
+    "stat3Label": "Acquéreurs pré-qualifiés",
     "ctaSell": "Vendre un actif certifié",
-    "ctaBuy": "Rejoindre le cercle acquéreurs"
+    "ctaBuy": "Rejoindre le cercle acquéreurs",
+    "stat4Val": "Suisse",
+    "stat4Label": "Ancrage institutionnel"
   },
   "acquisitionSupport": {
     "label": "Acquisition Support",
@@ -1294,33 +1300,38 @@
     "label": "Système de Grade AEGRYN",
     "title": "Pas une note.\nUne certification.",
     "desc": "Il y a une différence fondamentale entre donner une note et certifier. AEGRYN certifie — avec des experts qui signent et qui engagent leur nom.",
-    "quote": "Un actif sans certification, c'est une valeur sans preuve. Un actif AEGRYN Grade A, c'est une certitude documentée.",
+    "quote": "Un actif sans certification co-signée, c'est une valeur sans preuve. Un actif AEGRYN Grade AAA, c'est une certitude documentée — co-signée, vérifiable, enregistrée sur blockchain.",
     "cta": "Lire la méthodologie complète",
     "grades": [
       {
-        "grade": "A",
+        "grade": "★",
         "label": "Exceptionnel",
-        "desc": "Actif dominant son marché, croissance forte, IP protégée."
+        "desc": "Actif de premier plan. IP irréprochable, métriques exceptionnelles, sécurité certifiée. < 5% des actifs certifiés."
+      },
+      {
+        "grade": "AAA",
+        "label": "Excellent",
+        "desc": "Actif de haute qualité sur toutes les dimensions. Quelques points d'optimisation mineurs. Très liquide."
+      },
+      {
+        "grade": "AA",
+        "label": "Très bon",
+        "desc": "Actif solide avec réserves documentées et chiffrées. Valorisation ajustée. Recommandé sans réserve."
+      },
+      {
+        "grade": "A",
+        "label": "Bon",
+        "desc": "Actif viable avec une ou plusieurs réserves significatives. Plan de remédiation fourni."
       },
       {
         "grade": "B",
-        "label": "Solide",
-        "desc": "Fondamentaux sains, potentiel de croissance confirmé."
-      },
-      {
-        "grade": "C",
         "label": "Correct",
-        "desc": "Actif viable avec axes d'amélioration identifiés."
+        "desc": "Advisory recommandé avant transaction. Non éligible sessions AEGRYN principales."
       },
       {
-        "grade": "D",
-        "label": "Spéculatif",
-        "desc": "Risque élevé, retournement possible sous conditions."
-      },
-      {
-        "grade": "E",
-        "label": "Non certifiable",
-        "desc": "Ne répond pas aux critères AEGRYN actuels."
+        "grade": "✕",
+        "label": "Refusé",
+        "desc": "Refus motivé par écrit. Rapport de pre-screening transmis."
       }
     ]
   },

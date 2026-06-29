@@ -28,15 +28,16 @@
   },
   "hero": {
     "tagline": "Certified Tech Asset Transactions — Europe",
-    "eyebrow": "Swiss Tech Asset Builder",
-    "title": "Where the finest tech assets\nfind their\nrightful owner.",
-    "sub": "Independent certification. Institutional transactions.\nLess than 25% of submitted assets accepted.",
-    "cta": "Explore our assets",
-    "strip": "6 assets — 3 categories",
+    "eyebrow": "AEGRYN — CERTIFIED TECH ASSET TRANSACTIONS",
+    "title": "The art\nof the exit.",
+    "sub": "AEGRYN certifies and transacts premium tech assets across Europe.\nCo-signed Grade A→E. Institutional escrow.\nBlockchain certification at every transfer.",
+    "cta": "DISCOVER THE CATALOGUE",
+    "strip": "CERTIFIED TECH ASSET TRANSACTIONS — EUROPE",
     "geo": "Switzerland · Europe · Global",
     "scroll": "Scroll",
     "ctaPrimary": "View catalog",
-    "ctaSecondary": "Submit an asset"
+    "ctaSecondary": "SUBMIT AN ASSET",
+    "chip2": "GRADE A→E — CO-SIGNED"
   },
   "manifesto": {
     "aegis": {
@@ -292,78 +293,81 @@
     "sectionLabel": "Our ecosystem",
     "sectionTitle": "What we\nbuild.",
     "notStarted": "Not started",
-    "comingSoon": "Coming soon"
+    "comingSoon": "Coming soon",
+    "tier1Label": "Certified assets",
+    "tier2Label": "Pending certification",
+    "cta": "Submit your asset for certification"
   },
   "aboutSection": {
     "label": "About Aegryn",
-    "title": "Swiss Technology\nAsset Platform.",
-    "desc": "We design, build and operate digital ecosystems that move from bold ideas to real, enduring technology. Not features — assets.",
-    "tagline": "Engineered in Switzerland. Built to last.",
+    "title": "Three disciplines.\nOne market standard.",
+    "desc": "AEGRYN builds proprietary tech assets, certifies them under an independent co-signed label, and transacts them through a confidential process between qualified sellers and institutional buyers. The first trust infrastructure for tech M&A in Europe.",
+    "tagline": "CERTIFIED IN SWITZERLAND. REFERENCE IN EUROPE.",
     "cta": "About Aegryn",
-    "quote": "We build digital assets that improve everyday life — for individuals, professionals and the markets they serve.",
+    "quote": "A tech asset without a co-signed certification is a value without proof. AEGRYN provides the proof — on every asset, at every transfer.",
     "ceoName": "Yohann Bollack",
-    "ceoTitle": "Founder & CEO — Aegryn Group",
+    "ceoTitle": "Founder & CEO — AEGRYN Sàrl",
     "stats": [
       {
         "val": "6",
         "label": "Assets"
       },
       {
-        "val": "3",
-        "label": "Categories"
+        "val": "A→E",
+        "label": "Grades"
       },
       {
-        "val": "6",
-        "label": "Markets"
+        "val": "< 25%",
+        "label": "Accepted"
       }
     ]
   },
   "missionSection": {
-    "label": "Our Mission",
-    "sub": "Simplifying life with smart apps",
+    "label": "The AEGRYN Model",
+    "sub": "Three disciplines. One integrated ecosystem.",
     "items": [
       {
-        "title": "WE CREATE",
-        "desc": "Solutions that anticipate your needs as individuals or professionals, ensuring seamless digital interactions that enhance everyday life."
+        "title": "BUILD",
+        "desc": "We build proprietary tech assets designed from inception to be certifiable and transferable — SaaS, marketplaces, AI protocols. Each asset is structured to withstand the most rigorous audit."
       },
       {
-        "title": "WE SIMPLIFY",
-        "desc": "Eliminate complexity by integrating smart automation, intuitive interfaces, and interconnected systems, making technology effortless and efficient."
+        "title": "GRADE",
+        "desc": "We certify third-party and proprietary assets under an independent A→E label, co-signed by legal, financial and cybersecurity experts who stake their professional liability. KRYV Protocol blockchain-certifies the code at every transfer."
       },
       {
-        "title": "WE EMBRACE",
-        "desc": "We stay ahead by pioneering innovations, embracing cutting-edge advancements, and setting new standards in seamless digital experiences."
+        "title": "AUCTION",
+        "desc": "We transact certified assets through a confidential process — institutional escrow, circle of pre-qualified buyers, 60-day exclusive mandate. Less than 25% of submitted assets are accepted."
       }
     ]
   },
   "whyapps": {
-    "label": "Why our apps",
-    "count": "04",
+    "label": "Why AEGRYN",
+    "count": "05",
     "items": [
       {
         "num": "01",
-        "title": "Innovative",
-        "desc": "We leverage cutting-edge technologies — AI, automation and smart data — to create apps that continuously evolve and improve your experience."
+        "title": "CO-SIGNED CERTIFICATION",
+        "desc": "Every AEGRYN grade report is co-signed by a law firm, an accountant and a cybersecurity partner. They stake their liability. Not an opinion — a certification."
       },
       {
         "num": "02",
-        "title": "Secure & Private",
-        "desc": "Your data is yours. Every Aegryn app is engineered with privacy-first architecture, encrypted communications and transparent data practices aligned with Swiss and European standards."
+        "title": "BLOCKCHAIN AT TRANSFER",
+        "desc": "KRYV Protocol records the exact cryptographic fingerprint of the codebase at the signing date. What you receive is provable at any future date. Immutable by design."
       },
       {
         "num": "03",
-        "title": "Diverse & Inclusive",
-        "desc": "We design for everyone. Our apps are built to be accessible, culturally sensitive and available across languages and markets — because great technology should serve all."
+        "title": "INSTITUTIONAL ESCROW",
+        "desc": "10% of the transaction price is deposited in a bank escrow account upon signing the Heads of Terms. The seller is protected. The buyer is committed. AEGRYN never touches the funds."
       },
       {
         "num": "04",
-        "title": "Social Impact",
-        "desc": "We build with purpose. Each platform we create is designed to simplify real-life challenges, reduce friction and create measurable value for individuals and communities."
+        "title": "CLOSED CIRCLE",
+        "desc": "No asset is publicly visible before passing the grade. No buyer accesses the catalogue without proof of capacity. Discretion is structural, not optional."
       },
       {
         "num": "05",
-        "title": "Accessible",
-        "desc": "From first-time smartphone users to seasoned professionals, our apps are intuitive and barrier-free — because the best interface is one anyone can use."
+        "title": "EUROPEAN REFERENCE",
+        "desc": "Anchored in Switzerland, operating across Europe. Our transaction sessions, quarterly market report, and historical catalogue build the standard the European tech M&A market has been waiting for."
       }
     ]
   },
@@ -706,12 +710,12 @@
     "terms": "Terms",
     "dataProtection": "Data Protection Notice",
     "neediuLegal": "Neediu is a registered trademark of Aegryn Sàrl. All rights reserved.",
-    "tagline": "Engineered to Last",
-    "swissTagline": "Swiss Tech Asset Builder",
+    "tagline": "CERTIFIED TO TRANSACT.",
+    "swissTagline": "The certified reference for premium tech asset transactions in Europe.",
     "navLabel": "Aegryn",
     "ecosystemLabel": "Ecosystem",
     "advisoryLabel": "Advisory",
-    "advisoryDesc": "Strategic clarity in Data, AI and Cybersecurity.",
+    "advisoryDesc": "Remediation and advisory for assets that have not yet reached Grade A.",
     "advisoryBook": "Book a session ↗",
     "medallionText": "Let's talk . Contact us . Let's talk . Contact us .",
     "contactLabel": "Contact us"
@@ -822,10 +826,12 @@
     "stat1Label": "Acceptance rate of submitted assets",
     "stat2Val": "60d max",
     "stat2Label": "Exclusive seller mandate",
-    "stat3Val": "Switzerland",
-    "stat3Label": "Institutional anchor",
+    "stat3Val": "100%",
+    "stat3Label": "Pre-qualified buyers",
     "ctaSell": "Sell a certified asset",
-    "ctaBuy": "Join the buyer circle"
+    "ctaBuy": "Join the buyer circle",
+    "stat4Val": "Switzerland",
+    "stat4Label": "Institutional anchor"
   },
   "acquisitionSupport": {
     "label": "Acquisition Support",
@@ -1294,33 +1300,38 @@
     "label": "AEGRYN Grade System",
     "title": "Not a score.\nA certification.",
     "desc": "There is a fundamental difference between giving a score and certifying. AEGRYN certifies — with experts who sign and put their name on the line.",
-    "quote": "An asset without certification is a value without proof. An AEGRYN Grade A asset is a documented certainty.",
+    "quote": "An asset without a co-signed certification is a value without proof. An AEGRYN Grade AAA asset is a documented certainty — co-signed, verifiable, recorded on blockchain.",
     "cta": "Read the full methodology",
     "grades": [
       {
-        "grade": "A",
+        "grade": "★",
         "label": "Exceptional",
-        "desc": "Market-dominant asset, strong growth, protected IP."
+        "desc": "Top-tier asset. Impeccable IP, exceptional metrics, certified security. < 5% of certified assets."
+      },
+      {
+        "grade": "AAA",
+        "label": "Excellent",
+        "desc": "High-quality asset across all dimensions. Minor optimization points only. Highly liquid."
+      },
+      {
+        "grade": "AA",
+        "label": "Very Good",
+        "desc": "Solid asset with documented and quantified reservations. Adjusted valuation. Recommended without reserve."
+      },
+      {
+        "grade": "A",
+        "label": "Good",
+        "desc": "Viable asset with one or more significant reservations. Remediation plan provided."
       },
       {
         "grade": "B",
-        "label": "Solid",
-        "desc": "Sound fundamentals, confirmed growth potential."
-      },
-      {
-        "grade": "C",
         "label": "Correct",
-        "desc": "Viable asset with identified improvement areas."
+        "desc": "Advisory recommended before transaction. Not eligible for main AEGRYN sessions."
       },
       {
-        "grade": "D",
-        "label": "Speculative",
-        "desc": "High risk, possible turnaround under conditions."
-      },
-      {
-        "grade": "E",
-        "label": "Non-certifiable",
-        "desc": "Does not meet current AEGRYN criteria."
+        "grade": "✕",
+        "label": "Refused",
+        "desc": "Refusal with written reasoning. Pre-screening report delivered."
       }
     ]
   },

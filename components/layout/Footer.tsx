@@ -64,11 +64,7 @@ const footerAssets = [
 ]
 
 const socialLinks = [
-  { label: 'LinkedIn',  href: 'https://www.linkedin.com/company/106273747/' },
-  { label: 'Instagram', href: 'https://www.instagram.com/aegryn/' },
-  { label: 'TikTok',    href: 'https://www.tiktok.com/@aegryn' },
-  { label: 'YouTube',   href: 'https://www.youtube.com/@aegryn' },
-  { label: 'Facebook',  href: 'https://www.facebook.com/aegryn' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/106273747/' },
 ]
 
 const legal = [
@@ -77,6 +73,8 @@ const legal = [
 
 const footerNavLinks = [
   { navKey: 'about'      as const, href: '/about' },
+  { navKey: 'auction'    as const, href: '/auction' },
+  { navKey: 'grade'      as const, href: '/grade' },
   { navKey: 'advisory'   as const, href: '/advisory' },
   { navKey: 'whatWeBuild'as const, href: '/what-we-build' },
   { navKey: 'growWithUs' as const, href: '/grow-with-us' },

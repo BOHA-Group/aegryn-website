@@ -28,13 +28,15 @@
   },
   "hero": {
     "tagline": "Engineered to Last",
-    "eyebrow": "Zwitserse tech-assetbouwer",
-    "title": "Wij bouwen\nwat blijft.",
-    "sub": "Eigen assets van de protocollaag\ntot de gebruikersinterface.",
-    "cta": "Ontdek onze assets",
-    "strip": "6 assets — 3 categorieën",
+    "eyebrow": "AEGRYN — CERTIFIED TECH ASSET TRANSACTIONS",
+    "title": "The art\nof the exit.",
+    "sub": "AEGRYN certificeert en transigeert premium tech-assets in Europa.\nMede-ondertekend Grade A→E. Institutioneel depot.\nBlockchain-certificering bij elke overdracht.",
+    "cta": "ONTDEK DE CATALOGUS",
+    "strip": "CERTIFIED TECH ASSET TRANSACTIONS — EUROPE",
     "geo": "Zwitserland · Europa · Global",
-    "scroll": "Scrollen"
+    "scroll": "Scrollen",
+    "ctaSecondary": "EEN ASSET INDIENEN",
+    "chip2": "GRADE A→E — MEDE-ONDERTEKEND"
   },
   "manifesto": {
     "aegis": {
@@ -290,78 +292,81 @@
     "sectionLabel": "Ons ecosysteem",
     "sectionTitle": "Wat wij\nbouwen.",
     "notStarted": "Niet gestart",
-    "comingSoon": "Binnenkort"
+    "comingSoon": "Binnenkort",
+    "tier1Label": "Gecertificeerde assets",
+    "tier2Label": "In certificering",
+    "cta": "Dien uw asset in voor certificering"
   },
   "aboutSection": {
     "label": "Over Aegryn",
-    "title": "Zwitsers technologie-\nassetplatform.",
-    "desc": "We ontwerpen, financieren en beheren digitale ecosystemen die evolueren van gedurfde ideeën naar echte, duurzame technologie. Geen features — assets.",
-    "tagline": "Ontwikkeld in Zwitserland. Gebouwd om te blijven.",
+    "title": "Drie disciplines.\nEén marktstandaard.",
+    "desc": "AEGRYN bouwt propriëtaire tech-assets, certificeert ze onder een onafhankelijk mede-ondertekend label en transigeert ze via een vertrouwelijk proces tussen gekwalificeerde verkopers en institutionele kopers. De eerste vertrouwensinfrastructuur voor tech-M&A in Europa.",
+    "tagline": "GECERTIFICEERD IN ZWITSERLAND. REFERENTIE IN EUROPA.",
     "cta": "Over Aegryn",
-    "quote": "We bouwen digitale assets die het dagelijks leven verbeteren — voor individuen, professionals en de markten waarin zij opereren.",
+    "quote": "Een tech-asset zonder mede-ondertekende certificering is een waarde zonder bewijs. AEGRYN levert het bewijs — bij elk asset, bij elke overdracht.",
     "ceoName": "Yohann Bollack",
-    "ceoTitle": "Oprichter & CEO — Aegryn Group",
+    "ceoTitle": "Oprichter & CEO — AEGRYN Sàrl",
     "stats": [
       {
         "val": "6",
         "label": "Assets"
       },
       {
-        "val": "3",
-        "label": "Categorieën"
+        "val": "A→E",
+        "label": "Grades"
       },
       {
-        "val": "6",
-        "label": "Markten"
+        "val": "< 25%",
+        "label": "Geaccepteerd"
       }
     ]
   },
   "missionSection": {
-    "label": "Onze Missie",
-    "sub": "Het leven vereenvoudigen met slimme apps",
+    "label": "Het AEGRYN-model",
+    "sub": "Drie disciplines. Één geïntegreerd ecosysteem.",
     "items": [
       {
-        "title": "WE CREEËREN",
-        "desc": "Oplossingen die uw behoeften anticiperen als individuen of professionals, en naadloze digitale interacties garanderen die het dagelijks leven verbeteren."
+        "title": "BUILD",
+        "desc": "We bouwen propriëtaire tech-assets die vanaf de basis zijn ontworpen om certificeerbaar en overdraagbaar te zijn — SaaS, marktplaatsen, AI-protocollen. Elk asset is gestructureerd om de strengste audit te doorstaan."
       },
       {
-        "title": "WE VEREENVOUDIGEN",
-        "desc": "We elimineren complexiteit door slimme automatisering, intuitiïve interfaces en onderling verbonden systemen te integreren."
+        "title": "GRADE",
+        "desc": "We certificeren assets van derden en propriëtaire assets onder een onafhankelijk A→E-label, mede-ondertekend door juridische, financiële en cyberbeveiligingsexperts die hun aansprakelijkheid op het spel zetten. KRYV Protocol certificeert de code op blockchain bij elke overdracht."
       },
       {
-        "title": "WE OMARMEN",
-        "desc": "We blijven voorop lopen door baanbrekende innovaties en het stellen van nieuwe standaarden in naadloze digitale ervaringen."
+        "title": "AUCTION",
+        "desc": "We transigeren gecertificeerde assets via een vertrouwelijk proces — institutioneel depot, kring van vooraf gekwalificeerde kopers, exclusief mandaat van 60 dagen. Minder dan 25% van de ingediende assets wordt geaccepteerd."
       }
     ]
   },
   "whyapps": {
-    "label": "Waarom onze apps",
-    "count": "04",
+    "label": "Waarom AEGRYN",
+    "count": "05",
     "items": [
       {
         "num": "01",
-        "title": "Innovatief",
-        "desc": "We benutten geavanceerde technologieën — AI, automatisering en slimme data — om apps te creëren die continu evolueren."
+        "title": "MEDE-ONDERTEKENDE CERTIFICERING",
+        "desc": "Elk AEGRYN-grade-rapport is mede-ondertekend door een advocatenkantoor, een accountant en een cyberbeveiligingspartner. Ze zetten hun aansprakelijkheid op het spel. Geen mening — een certificering."
       },
       {
         "num": "02",
-        "title": "Veilig & Privaat",
-        "desc": "Uw data is van u. Elke Aegryn-app is ontworpen met privacy-first architectuur en versleutelde communicatie."
+        "title": "BLOCKCHAIN BIJ OVERDRACHT",
+        "desc": "KRYV Protocol registreert de exacte cryptografische vingerafdruk van de codebase op de ondertekeningsdatum. Wat u ontvangt is op elke toekomstige datum bewijsbaar. Onveranderlijk van ontwerp."
       },
       {
         "num": "03",
-        "title": "Divers & Inclusief",
-        "desc": "We ontwerpen voor iedereen. Onze apps zijn toegankelijk, cultureel gevoelig en beschikbaar in meerdere talen en markten."
+        "title": "INSTITUTIONEEL DEPOT",
+        "desc": "10% van de transactieprijs wordt bij ondertekening van de Hoofdovereenkomst op een bankrekening gestort. De verkoper is beschermd. De koper is gebonden. AEGRYN raakt de fondsen nooit aan."
       },
       {
         "num": "04",
-        "title": "Sociale Impact",
-        "desc": "We bouwen met een doel. Elk platform vereenvoudigt echte dagelijkse uitdagingen en creëert meetbare waarde voor individuen en gemeenschappen."
+        "title": "GESLOTEN KRING",
+        "desc": "Geen asset is openbaar zichtbaar voordat het de grade heeft doorstaan. Geen koper krijgt toegang tot de catalogus zonder bewijs van capaciteit. Discretie is structureel, niet optioneel."
       },
       {
         "num": "05",
-        "title": "Toegankelijk",
-        "desc": "Van beginners tot ervaren professionals — onze apps zijn intuitiëf en drempelvrij, want de beste interface is er een die iedereen kan gebruiken."
+        "title": "EUROPESE REFERENTIE",
+        "desc": "Verankerd in Zwitserland, actief in Europa. Onze transactiesessies, ons kwartaalrapport over de markt en onze historische catalogus bouwen de standaard die de Europese tech-M&A-markt verwachtte."
       }
     ]
   },
@@ -695,12 +700,12 @@
     "terms": "Voorwaarden",
     "dataProtection": "Gegevensbeschermingsverklaring",
     "neediuLegal": "Neediu is een geregistreerd handelsmerk van Aegryn Sàrl. Alle rechten voorbehouden.",
-    "tagline": "Engineered to Last",
-    "swissTagline": "Swiss Tech Asset Builder",
+    "tagline": "CERTIFIED TO TRANSACT.",
+    "swissTagline": "De gecertificeerde referentie voor premium tech-asset-transacties in Europa.",
     "navLabel": "Aegryn",
     "ecosystemLabel": "Ecosysteem",
     "advisoryLabel": "Advisory",
-    "advisoryDesc": "Strategische helderheid in Data, AI en Cyberbeveiliging.",
+    "advisoryDesc": "Sanering en advies voor assets die Grade A nog niet hebben bereikt.",
     "advisoryBook": "Sessie boeken ↗",
     "medallionText": "Laten we praten . Neem contact op . Laten we praten . Neem contact op .",
     "contactLabel": "Neem contact op"
@@ -1168,33 +1173,38 @@
     "label": "AEGRYN Grade-systeem",
     "title": "Geen cijfer.\nEen certificering.",
     "desc": "Er is een fundamenteel verschil tussen een cijfer geven en certificeren. AEGRYN certificeert — met experts die ondertekenen en hun naam op het spel zetten.",
-    "quote": "Een asset zonder certificering is een waarde zonder bewijs. Een AEGRYN Grade A asset is een gedocumenteerde zekerheid.",
+    "quote": "Een asset zonder mede-ondertekende certificering is een waarde zonder bewijs. Een AEGRYN Grade AAA asset is een gedocumenteerde zekerheid — mede-ondertekend, verifieerbaar, geregistreerd op blockchain.",
     "cta": "Lees de volledige methodologie",
     "grades": [
       {
-        "grade": "A",
+        "grade": "★",
         "label": "Uitzonderlijk",
-        "desc": "Marktdominant asset, sterke groei, beschermd IP."
+        "desc": "Topkwaliteit asset. Onberispelijk IP, uitzonderlijke statistieken, gecertificeerde beveiliging. < 5% van gecertificeerde assets."
+      },
+      {
+        "grade": "AAA",
+        "label": "Uitstekend",
+        "desc": "Hoogwaardig asset op alle dimensies. Slechts kleine optimalisatiepunten. Zeer liquide."
+      },
+      {
+        "grade": "AA",
+        "label": "Zeer goed",
+        "desc": "Solide asset met gedocumenteerde en gekwantificeerde voorbehouden. Aangepaste waardering. Onvoorwaardelijk aanbevolen."
+      },
+      {
+        "grade": "A",
+        "label": "Goed",
+        "desc": "Levensvatbaar asset met een of meer significante voorbehouden. Saneringsplan geleverd."
       },
       {
         "grade": "B",
-        "label": "Solide",
-        "desc": "Gezonde fundamenten, bevestigd groeipotentieel."
-      },
-      {
-        "grade": "C",
         "label": "Correct",
-        "desc": "Levensvatbaar asset met geïdentificeerde verbeterpunten."
+        "desc": "Advisory aanbevolen vóór transactie. Niet in aanmerking voor de belangrijkste AEGRYN-sessies."
       },
       {
-        "grade": "D",
-        "label": "Speculatief",
-        "desc": "Hoog risico, mogelijke ommekeer onder voorwaarden."
-      },
-      {
-        "grade": "E",
-        "label": "Niet certificeerbaar",
-        "desc": "Voldoet niet aan de huidige AEGRYN-criteria."
+        "grade": "✕",
+        "label": "Geweigerd",
+        "desc": "Weigering met schriftelijke motivering. Pre-screening rapport geleverd."
       }
     ]
   },
@@ -1206,10 +1216,12 @@
     "stat1Label": "Acceptatiegraad ingediende assets",
     "stat2Val": "60 d max",
     "stat2Label": "Exclusief mandaat verkoper",
-    "stat3Val": "Zwitserland",
-    "stat3Label": "Institutioneel anker",
+    "stat3Val": "100%",
+    "stat3Label": "Vooraf gekwalificeerde kopers",
     "ctaSell": "Een gecertificeerd asset verkopen",
-    "ctaBuy": "Word lid van de koperskring"
+    "ctaBuy": "Word lid van de koperskring",
+    "stat4Val": "Zwitserland",
+    "stat4Label": "Institutioneel anker"
   },
   "acqStrip": {
     "label": "Acquisitieondersteuning",

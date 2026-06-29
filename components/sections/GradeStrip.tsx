@@ -7,11 +7,12 @@ import { ArrowUpRight } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 
 const GRADE_COLORS: Record<string, string> = {
-  A: 'bg-ag-apex text-ag-navy',
-  B: 'bg-ag-navy text-white',
-  C: 'bg-ag-gray-light/30 text-ag-black',
-  D: 'bg-ag-border text-ag-gray',
-  E: 'bg-ag-off-white text-ag-gray-light',
+  '★':  'bg-ag-grade-star text-ag-navy',
+  'AAA':'bg-ag-grade-aaa text-white',
+  'AA': 'bg-ag-grade-aa text-white',
+  'A':  'bg-ag-grade-a text-white',
+  'B':  'bg-ag-grade-b text-white',
+  '✕':  'bg-ag-grade-refused text-white',
 }
 
 export function GradeStrip() {
@@ -61,7 +62,7 @@ export function GradeStrip() {
           </p>
         </div>
 
-        <div className="grade-cards-row grid grid-cols-1 sm:grid-cols-5 gap-px bg-ag-border mb-14">
+        <div className="grade-cards-row grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-ag-border mb-14">
           {grades.map((g) => (
             <div
               key={g.grade}

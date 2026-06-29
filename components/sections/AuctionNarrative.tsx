@@ -69,11 +69,12 @@ export function AuctionNarrative() {
       {/* Stats strip */}
       <div className="auction-stats-strip border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+          <div className="grid grid-cols-2 sm:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
             {[
               { val: t('stat1Val'), label: t('stat1Label') },
               { val: t('stat2Val'), label: t('stat2Label') },
               { val: t('stat3Val'), label: t('stat3Label') },
+              { val: t('stat4Val'), label: t('stat4Label') },
             ].map((s) => (
               <div key={s.label} className="auction-stat py-8 px-6 first:pl-0 last:pr-0" style={{ opacity: 0 }}>
                 <p

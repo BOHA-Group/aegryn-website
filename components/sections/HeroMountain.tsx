@@ -137,17 +137,17 @@ export function HeroMountain() {
 
             <div ref={ctasRef} className="flex items-center gap-4 shrink-0">
               <Link
-                href="/what-we-build"
+                href="/auction"
                 className="inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-3.5 hover:bg-ag-apex transition-colors duration-300"
               >
                 {t('cta')}
                 <ArrowUpRight size={13} />
               </Link>
               <Link
-                href="/about"
+                href="/auction#sell"
                 className="inline-flex items-center gap-3 border border-white/40 text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-3.5 hover:border-white hover:bg-white/10 transition-all duration-300"
               >
-                {t('tagline')}
+                {t('ctaSecondary')}
               </Link>
             </div>
           </div>
@@ -158,6 +158,10 @@ export function HeroMountain() {
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-3 flex items-center gap-8">
             <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/60">
               {t('strip')}
+            </span>
+            <span className="hidden sm:block w-px h-3 bg-white/25" />
+            <span className="hidden sm:block font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-apex">
+              {t('chip2')}
             </span>
             <span className="hidden sm:block w-px h-3 bg-white/25" />
             <span className="hidden sm:block font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/60">
