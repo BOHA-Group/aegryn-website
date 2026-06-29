@@ -38,6 +38,11 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
+  async redirects() {
+    return [
+      { source: '/:locale/grow-with-us', destination: '/:locale/alliances', permanent: true },
+    ]
+  },
   async headers() {
     return [
       {

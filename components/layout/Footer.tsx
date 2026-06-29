@@ -77,7 +77,7 @@ const footerNavLinks = [
   { navKey: 'grade'      as const, href: '/grade' },
   { navKey: 'advisory'   as const, href: '/advisory' },
   { navKey: 'whatWeBuild'as const, href: '/what-we-build' },
-  { navKey: 'growWithUs' as const, href: '/grow-with-us' },
+  { navKey: 'growWithUs' as const, href: '/alliances' },
   { navKey: 'career'     as const, href: '/career' },
   { navKey: 'contact'    as const, href: '/contact' },
 ]
