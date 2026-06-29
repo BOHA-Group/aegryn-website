@@ -36,7 +36,8 @@
     "geo": "Schweiz · Europa · Global",
     "scroll": "Scrollen",
     "ctaSecondary": "ASSET EINREICHEN",
-    "chip2": "GRADE A→E — KO-SIGNIERT"
+    "chip2": "GRADE A→E — KO-SIGNIERT",
+    "ctaPrimary": "Katalog ansehen"
   },
   "manifesto": {
     "aegis": {
@@ -1242,5 +1243,118 @@
     "article3Title": "Wie PE-Käufer ein SaaS im Jahr 2026 bewerten",
     "article3Cat": "Käufer-Guide",
     "cta": "Alle Insights ansehen"
+  },
+  "conviction": {
+    "label": "Unsere Überzeugung",
+    "title": "Ein Tech-Markt verdient eine ihm würdige Infrastruktur.",
+    "col1": {
+      "label": "ZERTIFIZIEREN",
+      "title": "Die Wahrheit vor der Transaktion.",
+      "desc": "Jedes Asset durchläuft unser unabhängiges Zertifizierungsprotokoll. Ein Grade, Untercodes, Blockchain-Rückverfolgbarkeit. Keine Schätzung — eine dokumentierte Wahrheit."
+    },
+    "col2": {
+      "label": "TRANSAGIEREN",
+      "title": "Sessions, keine Bazare.",
+      "desc": "AEGRYN-Sessions bringen qualifizierte Verkäufer und institutionelle Käufer in einem strengen Vertragsrahmen zusammen. Escrow, NDA, gesichertes Transaktionsprotokoll."
+    },
+    "col3": {
+      "label": "SCHÜTZEN",
+      "title": "Das Asset und die Parteien.",
+      "desc": "Von der Einreichung bis zum Closing ist jeder Schritt geregelt: Due Diligence, Bewertung, AGB, Vertraulichkeitsvereinbarungen, Post-Transaktionsbegleitung."
+    }
+  },
+  "pillars": {
+    "build": {
+      "label": "BUILD",
+      "desc": "Proprietäre Assets, gebaut für die Dauer"
+    },
+    "grade": {
+      "label": "GRADE",
+      "desc": "Unabhängige Zertifizierung A→E"
+    },
+    "auction": {
+      "label": "AUCTION",
+      "desc": "Institutionell gerahmte Transaktionen"
+    }
+  },
+  "gradeShowcase": {
+    "label": "Das AEGRYN Grade System",
+    "title": "Ein Asset ohne Grade\nist ein Asset ohne Preis.",
+    "desc": "Unser Zertifizierungsprotokoll bewertet jedes Asset auf 4 Dimensionen: Code, Infrastruktur, Finanzen, Strategie. Ein objektiver, reproduzierbarer, anfechtbarer Grade.",
+    "cta": "Das Grade-System verstehen",
+    "exceptional": "Außergewöhnlich",
+    "premium": "Premium",
+    "standard": "Standard",
+    "developing": "In Entwicklung",
+    "earlyStage": "Frühphase",
+    "grades": {
+      "star": {
+        "label": "AEG ★",
+        "desc": "Außergewöhnlich — Top 1%"
+      },
+      "aaa": {
+        "label": "AEG AAA",
+        "desc": "Premium — transaktionsbereit"
+      },
+      "aa": {
+        "label": "AEG AA",
+        "desc": "Solide — Bewertung bestätigt"
+      },
+      "a": {
+        "label": "AEG A",
+        "desc": "Standard — Potenzial identifiziert"
+      },
+      "b": {
+        "label": "AEG B",
+        "desc": "Frühphase — Sanierungsplan"
+      }
+    }
+  },
+  "marketStats": {
+    "label": "Der Markt in Zahlen — 2026",
+    "stats": [
+      {
+        "value": "+42%",
+        "label": "Wachstum Tech-M&A Europa 2025–2026"
+      },
+      {
+        "value": "€12Mrd",
+        "label": "Transagiertes Volumen SME-Tech Q1 2026"
+      },
+      {
+        "value": "< 30 Tage",
+        "label": "Ø Transaktionsdauer zertifizierter Assets"
+      },
+      {
+        "value": "68%",
+        "label": "Deals ohne öffentliche Ausschreibung"
+      }
+    ]
+  },
+  "acquisitionSupport": {
+    "label": "Acquisition Support",
+    "title": "Ihr nächster Kauf verdient\nden richtigen Finanzpartner.",
+    "desc": "AEGRYN leiht nicht. AEGRYN verbindet. Unser Netzwerk aus VC-Partnern und Investmentfonds kann Ihre nächste zertifizierte Tech-Asset-Akquisition ko-finanzieren, ko-investieren oder strukturieren.",
+    "cta": "Optionen erkunden",
+    "legal": "AEGRYN Sàrl ist kein Finanzinstitut. Dieser Service vermittelt unabhängige Drittpartner."
+  },
+  "discoverSection": {
+    "label": "AEGRYN Insights",
+    "title": "Der Tech-M&A-Markt in Europa.\nVon denen, die ihn gestalten.",
+    "cta": "Alle Insights ansehen",
+    "articles": [
+      {
+        "title": "Zustand des Tech-M&A-Markts Europa — Q2 2026",
+        "category": "Marktbericht"
+      },
+      {
+        "title": "Was ist ein wirklich zertifizierbares Tech-Asset?",
+        "category": "Verkäufer-Guide"
+      },
+      {
+        "title": "Wie PE-Acquirer ein SaaS im Jahr 2026 bewerten",
+        "category": "Käufer-Guide"
+      }
+    ]
   }
 }

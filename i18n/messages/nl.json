@@ -36,7 +36,8 @@
     "geo": "Zwitserland · Europa · Global",
     "scroll": "Scrollen",
     "ctaSecondary": "EEN ASSET INDIENEN",
-    "chip2": "GRADE A→E — MEDE-ONDERTEKEND"
+    "chip2": "GRADE A→E — MEDE-ONDERTEKEND",
+    "ctaPrimary": "Catalogus bekijken"
   },
   "manifesto": {
     "aegis": {
@@ -1242,5 +1243,118 @@
     "article3Title": "Hoe PE-kopers een SaaS in 2026 beoordelen",
     "article3Cat": "Gids voor kopers",
     "cta": "Bekijk alle insights"
+  },
+  "conviction": {
+    "label": "Onze overtuiging",
+    "title": "Een tech-markt verdient een infrastructuur die hem waardig is.",
+    "col1": {
+      "label": "CERTIFICEREN",
+      "title": "De waarheid vóór de transactie.",
+      "desc": "Elk asset doorloopt ons onafhankelijk certificeringsprotocol. Een grade, subcodes, blockchain-traceerbaarheid. Geen schatting — een gedocumenteerde waarheid."
+    },
+    "col2": {
+      "label": "TRANSIGEREN",
+      "title": "Sessies, geen bazaars.",
+      "desc": "AEGRYN-sessies brengen gekwalificeerde verkopers en institutionele kopers samen in een strikt contractueel kader. Escrow, NDA, beveiligd transactieprotocol."
+    },
+    "col3": {
+      "label": "BESCHERMEN",
+      "title": "Het asset en de partijen.",
+      "desc": "Van indiening tot closing is elke stap omlijnd: due diligence, waardering, AV, vertrouwelijkheidsovereenkomsten, begeleiding na transactie."
+    }
+  },
+  "pillars": {
+    "build": {
+      "label": "BUILD",
+      "desc": "Propriëtaire assets gebouwd om te duren"
+    },
+    "grade": {
+      "label": "GRADE",
+      "desc": "Onafhankelijke certificering A→E"
+    },
+    "auction": {
+      "label": "AUCTION",
+      "desc": "Institutioneel omlijste transacties"
+    }
+  },
+  "gradeShowcase": {
+    "label": "Het AEGRYN Grade systeem",
+    "title": "Een asset zonder grade\nis een asset zonder prijs.",
+    "desc": "Ons certificeringsprotocol evalueert elk asset op 4 dimensies: Code, Infrastructuur, Financiën, Strategie. Een objectieve, reproduceerbare, betwistbare grade.",
+    "cta": "Het grade-systeem begrijpen",
+    "exceptional": "Uitzonderlijk",
+    "premium": "Premium",
+    "standard": "Standaard",
+    "developing": "In ontwikkeling",
+    "earlyStage": "Early stage",
+    "grades": {
+      "star": {
+        "label": "AEG ★",
+        "desc": "Uitzonderlijk — top 1%"
+      },
+      "aaa": {
+        "label": "AEG AAA",
+        "desc": "Premium — transactieklaar"
+      },
+      "aa": {
+        "label": "AEG AA",
+        "desc": "Solide — waardering bevestigd"
+      },
+      "a": {
+        "label": "AEG A",
+        "desc": "Standaard — potentieel geïdentificeerd"
+      },
+      "b": {
+        "label": "AEG B",
+        "desc": "Early stage — saneringsplan"
+      }
+    }
+  },
+  "marketStats": {
+    "label": "De markt in cijfers — 2026",
+    "stats": [
+      {
+        "value": "+42%",
+        "label": "Groei tech-M&A Europa 2025–2026"
+      },
+      {
+        "value": "€12Mrd",
+        "label": "Getransageerd volume SME-tech Q1 2026"
+      },
+      {
+        "value": "< 30 dagen",
+        "label": "Gemiddelde transactieduur gecertificeerde assets"
+      },
+      {
+        "value": "68%",
+        "label": "Deals zonder openbare aanbesteding"
+      }
+    ]
+  },
+  "acquisitionSupport": {
+    "label": "Acquisition Support",
+    "title": "Uw volgende acquisitie verdient\nde juiste financiële partner.",
+    "desc": "AEGRYN leent niet. AEGRYN verbindt. Ons netwerk van VC-partners en investeringsfondsen kan uw volgende gecertificeerde tech-asset-acquisitie co-financieren, co-investeren of structureren.",
+    "cta": "Opties verkennen",
+    "legal": "AEGRYN Sàrl is geen financiële instelling. Deze dienst verbindt met onafhankelijke externe partners."
+  },
+  "discoverSection": {
+    "label": "AEGRYN Insights",
+    "title": "De tech-M&A-markt in Europa.\nDoor degenen die het doen.",
+    "cta": "Alle insights bekijken",
+    "articles": [
+      {
+        "title": "Stand van de tech-M&A-markt Europa — Q2 2026",
+        "category": "Marktrapport"
+      },
+      {
+        "title": "Wat is een echt certificeerbaar tech-asset?",
+        "category": "Gids verkoper"
+      },
+      {
+        "title": "Hoe PE-acquirers een SaaS beoordelen in 2026",
+        "category": "Gids koper"
+      }
+    ]
   }
 }
