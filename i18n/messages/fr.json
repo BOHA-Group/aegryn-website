@@ -301,28 +301,28 @@
   },
   "about": {
     "hero": {
-      "label": "À propos d'Aegryn",
-      "title": "Swiss Tech Asset Builder",
-      "desc": "Nous concevons, construisons et opérons des écosystèmes numériques — de l'idée audacieuse à une technologie fiable et durable. Ingénié en Suisse. Construit pour durer."
+      "label": "À propos d'AEGRYN",
+      "title": "L'infrastructure de confiance\ndu M&A tech européen.",
+      "desc": "AEGRYN construit des actifs tech propriétaires, les certifie selon un label indépendant co-signé, et les transige via un processus confidentiel entre vendeurs qualifiés et acquéreurs institutionnels."
     },
     "vision": {
       "label": "Notre vision",
-      "text": "Nous croyons que la technologie doit faire plus qu'impressionner. Elle doit structurer, simplifier et élever les expériences du quotidien. Dans un monde saturé d'applications fragmentées et de solutions court-termistes, nous construisons des écosystèmes numériques cohérents — des environnements où utilisateurs, données et transactions se connectent naturellement et de façon sécurisée."
+      "text": "La valeur d'un actif tech est structurellement sous-évaluée faute d'un référentiel de certification crédible. Les vendeurs ne savent pas à quel prix céder. Les acquéreurs ne savent pas ce qu'ils achètent. AEGRYN est ce référentiel — construit avec IP propriétaire, partenaires co-signataires, et certification blockchain."
     },
     "mission": {
       "label": "Notre mission",
-      "title": "Simplifier la vie avec des applications intelligentes.",
+      "title": "Trois métiers. Un standard de marché.",
       "create": {
-        "title": "Nous créons",
-        "desc": "Des solutions qui anticipent vos besoins en tant qu'individus ou professionnels, garantissant des interactions numériques fluides qui améliorent le quotidien."
+        "title": "BUILD",
+        "desc": "Construire des actifs tech propriétaires, certifiables, transférables. IP déposée, codebase documentée, stack souveraine."
       },
       "simplify": {
-        "title": "Nous simplifions",
-        "desc": "Éliminer la complexité en intégrant une automatisation intelligente, des interfaces intuitives et des systèmes interconnectés, rendant la technologie sans effort et efficace."
+        "title": "GRADE",
+        "desc": "Certifier de façon indépendante et co-signée. Refuser plus qu'accepter. Un grade objectif, reproductible, opposable."
       },
       "embrace": {
-        "title": "Nous embrassons",
-        "desc": "Nous restons en avance en pionnier des innovations, en adoptant les avancées de pointe et en fixant de nouveaux standards dans les expériences numériques fluides."
+        "title": "AUCTION",
+        "desc": "Transiger dans la discrétion, avec la certitude pour les deux parties. Séquestre institutionnel. Blockchain au transfert."
       }
     },
     "dna": {
@@ -357,8 +357,9 @@
       "cta": "Prendre contact"
     },
     "swiss": {
-      "title": "Nos actifs. Une maison commune. Une ambition helvétique.",
-      "cta": "Voir nos actifs"
+      "groupLabel": "Aegryn Group",
+      "title": "Ancré en Suisse. Référence en Europe.",
+      "cta": "Voir le catalogue"
     }
   },
   "career": {

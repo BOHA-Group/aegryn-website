@@ -301,28 +301,28 @@
   },
   "about": {
     "hero": {
-      "label": "About Aegryn",
-      "title": "Swiss Tech Asset Builder",
-      "desc": "We design, build and operate digital ecosystems — from bold ideas to reliable, enduring technology. Engineered in Switzerland. Built to last."
+      "label": "About AEGRYN",
+      "title": "The trust infrastructure\nfor European tech M&A.",
+      "desc": "AEGRYN builds proprietary tech assets, certifies them under an independently co-signed label, and transacts them through a confidential process between qualified sellers and institutional acquirers."
     },
     "vision": {
       "label": "Our vision",
-      "text": "We believe technology should do more than impress. It should structure, simplify and elevate everyday experiences. In a world filled with fragmented apps and short-term solutions, we build coherent digital ecosystems — environments where users, data and transactions connect naturally and securely."
+      "text": "The value of a tech asset is structurally underestimated for lack of a credible certification framework. Sellers don't know at what price to exit. Acquirers don't know what they're buying. AEGRYN is that framework — built with proprietary IP, co-signing partners, and blockchain certification."
     },
     "mission": {
       "label": "Our mission",
-      "title": "Simplifying life with smart apps.",
+      "title": "Three businesses. One market standard.",
       "create": {
-        "title": "We create",
-        "desc": "Solutions that anticipate your needs as individuals or professionals, ensuring seamless digital interactions that enhance everyday life."
+        "title": "BUILD",
+        "desc": "Build proprietary, certifiable, transferable tech assets. Filed IP, documented codebase, sovereign stack."
       },
       "simplify": {
-        "title": "We simplify",
-        "desc": "Eliminate complexity by integrating smart automation, intuitive interfaces, and interconnected systems, making technology effortless and efficient."
+        "title": "GRADE",
+        "desc": "Certify independently and co-signed. Refuse more than accept. An objective, reproducible, opposable grade."
       },
       "embrace": {
-        "title": "We embrace",
-        "desc": "We stay ahead by pioneering innovations, embracing cutting-edge advancements, and setting new standards in seamless digital experiences."
+        "title": "AUCTION",
+        "desc": "Transact in confidence, with certainty for both parties. Institutional escrow. Blockchain at transfer."
       }
     },
     "dna": {
@@ -357,8 +357,9 @@
       "cta": "Get in touch"
     },
     "swiss": {
-      "title": "Our assets. One common house. One Swiss ambition.",
-      "cta": "See our assets"
+      "groupLabel": "Aegryn Group",
+      "title": "Rooted in Switzerland. The European reference.",
+      "cta": "View the catalogue"
     }
   },
   "career": {

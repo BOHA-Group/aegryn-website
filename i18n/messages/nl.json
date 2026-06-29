@@ -301,20 +301,32 @@
   },
   "about": {
     "hero": {
-      "label": "Over Aegryn",
-      "title": "Een builder, geen consultant.",
-      "desc": "Aegryn is een Swiss Tech Asset Builder. We ontwerpen, financieren en beheren eigen digitale assets vanuit Zwitserland."
+      "label": "Over AEGRYN",
+      "title": "De vertrouwensinfrastructuur\nvoor Europees tech-M&A.",
+      "desc": "AEGRYN bouwt propriëtaire tech-assets, certificeert ze onder een onafhankelijk mede-ondertekend label en transageert ze via een vertrouwelijk proces tussen gekwalificeerde verkopers en institutionele kopers."
     },
     "vision": {
       "label": "Onze visie",
-      "text": "Wij geloven dat technologie meer moet doen dan indruk maken. Ze moet structureren, vereenvoudigen en alledaagse ervaringen verheffen. In een wereld vol gefragmenteerde apps en kortetermijnoplossingen bouwen we coherente digitale ecosystemen — omgevingen waar gebruikers, data en transacties op natuurlijke en veilige wijze verbonden zijn."
+      "text": "De waarde van een tech-asset wordt structureel onderschat bij gebrek aan een geloofwaardig certificeringsreferentiekader. Verkopers weten niet tegen welke prijs te verkopen. Kopers weten niet wat ze kopen. AEGRYN is dat kader — gebouwd met propriëtair IP, mede-ondertekende partners en blockchain-certificering."
     },
     "mission": {
       "label": "Onze missie",
-      "title": "Bouwen wat de tand des tijds doorstaat.",
+      "title": "Drie activiteiten. Eén marktstandaard.",
       "p1": "Aegryn verkoopt geen projecten. We bouwen assets. Elk product dat we lanceren is ontworpen om te duren, langetermijnwaarde te genereren en economische cycli te doorstaan.",
       "p2": "Ons model is gebaseerd op volledig eigendom van onze digitale assets, beheerd in een soevereine omgeving.",
-      "p3": "Zwitserland is niet alleen een adres. Het is onze standaard: neutraliteit, precisie, duurzaamheid."
+      "p3": "Zwitserland is niet alleen een adres. Het is onze standaard: neutraliteit, precisie, duurzaamheid.",
+      "create": {
+        "title": "BUILD",
+        "desc": "Propriëtaire, certificeerbare, overdraagbare tech-assets bouwen. Geregistreerd IP, gedocumenteerde codebase, soevereine stack."
+      },
+      "simplify": {
+        "title": "GRADE",
+        "desc": "Onafhankelijk en mede-ondertekend certificeren. Meer weigeren dan accepteren. Een objectieve, reproduceerbare, betwistbare grade."
+      },
+      "embrace": {
+        "title": "AUCTION",
+        "desc": "Discreet transageren, met zekerheid voor beide partijen. Institutionele escrow. Blockchain bij overdracht."
+      }
     },
     "dna": {
       "label": "Ons DNA"
@@ -348,8 +360,9 @@
       "cta": "Contact opnemen"
     },
     "swiss": {
-      "title": "Zes assets. Één gemeenschappelijk huis. Één Zwitserse ambitie.",
-      "cta": "Bekijk onze assets"
+      "groupLabel": "Aegryn Group",
+      "title": "Geworteld in Zwitserland. Europese referentie.",
+      "cta": "Catalogus bekijken"
     }
   },
   "career": {

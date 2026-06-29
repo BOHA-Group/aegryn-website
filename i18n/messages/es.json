@@ -301,20 +301,32 @@
   },
   "about": {
     "hero": {
-      "label": "Sobre Aegryn",
-      "title": "Un builder, no un consultor.",
-      "desc": "Aegryn es un Swiss Tech Asset Builder. Diseñamos, financiamos y operamos activos digitales propietarios desde Suiza."
+      "label": "Sobre AEGRYN",
+      "title": "La infraestructura de confianza\ndel M&A tech europeo.",
+      "desc": "AEGRYN construye activos tech propietarios, los certifica bajo un label independiente co-firmado, y los transacciona a través de un proceso confidencial entre vendedores cualificados y adquirentes institucionales."
     },
     "vision": {
       "label": "Nuestra visión",
-      "text": "Creemos que la tecnología debe hacer más que impresionar. Debe estructurar, simplificar y elevar las experiencias cotidianas. En un mundo saturado de apps fragmentadas y soluciones a corto plazo, construimos ecosistemas digitales coherentes — entornos donde usuarios, datos y transacciones se conectan de forma natural y segura."
+      "text": "El valor de un activo tech está estructuralmente subestimado por falta de un referencial de certificación creíble. Los vendedores no saben a qué precio ceder. Los adquirentes no saben qué están comprando. AEGRYN es ese referencial — construido con IP propietaria, socios co-firmantes y certificación blockchain."
     },
     "mission": {
       "label": "Nuestra misión",
-      "title": "Construir lo que resiste el paso del tiempo.",
+      "title": "Tres negocios. Un estándar de mercado.",
       "p1": "Aegryn no vende proyectos. Construimos activos. Cada producto que lanzamos está diseñado para durar, generar valor a largo plazo y resistir los ciclos económicos.",
       "p2": "Nuestro modelo se basa en la propiedad total de nuestros activos digitales, operados en un entorno soberano.",
-      "p3": "Suiza no es solo una dirección. Es nuestro estándar: neutralidad, precisión, durabilidad."
+      "p3": "Suiza no es solo una dirección. Es nuestro estándar: neutralidad, precisión, durabilidad.",
+      "create": {
+        "title": "BUILD",
+        "desc": "Construir activos tech propietarios, certificables, transferibles. IP registrada, codebase documentada, stack soberana."
+      },
+      "simplify": {
+        "title": "GRADE",
+        "desc": "Certificar de forma independiente y co-firmada. Rechazar más que aceptar. Un grade objetivo, reproducible, oponible."
+      },
+      "embrace": {
+        "title": "AUCTION",
+        "desc": "Transaccionar con discreción, con certeza para ambas partes. Escrow institucional. Blockchain en la transferencia."
+      }
     },
     "dna": {
       "label": "Nuestro ADN"
@@ -348,8 +360,9 @@
       "cta": "Ponerse en contacto"
     },
     "swiss": {
-      "title": "Seis activos. Una casa común. Una ambición helvética.",
-      "cta": "Ver nuestros activos"
+      "groupLabel": "Aegryn Group",
+      "title": "Arraigado en Suiza. Referencia en Europa.",
+      "cta": "Ver el catálogo"
     }
   },
   "career": {
