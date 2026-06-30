@@ -1,0 +1,236 @@
+'use client'
+
+import { useRouter, useSearchParams, usePathname } from 'next/navigation'
+import { useCallback } from 'react'
+
+const SOURCES = [
+  { key: 'valuation',  label: 'Valuation'    },
+  { key: 'catalog',    label: 'Catalogue'    },
+  { key: 'assessment', label: 'Assessment Day' },
+  { key: 'alliances',  label: 'Alliances'    },
+] as const
+
+const GRADES   = ['all', '★', 'AAA', 'AA', 'A', 'B', 'NG'] as const
+const STATUSES = ['all', 'new', 'pending', 'contacted', 'confirmed', 'submitted', 'closed', 'reviewed', 'accepted', 'declined'] as const
+
+function fmtEur(n: unknown) {
+  if (!n || typeof n !== 'number') return '—'
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)} M€`
+  if (n >= 1_000)     return `${(n / 1_000).toFixed(0)} K€`
+  return `${Math.round(n)} €`
+}
+
+function gradeColor(g: string) {
+  return g === '★'  ? 'bg-emerald-100 text-emerald-800'
+    : g === 'AAA'   ? 'bg-blue-100 text-blue-800'
+    : g === 'AA'    ? 'bg-green-100 text-green-800'
+    : g === 'A'     ? 'bg-yellow-100 text-yellow-800'
+    : g === 'B'     ? 'bg-gray-100 text-gray-700'
+    : 'bg-red-50 text-red-600'
+}
+
+function statusColor(s: string) {
+  return s === 'new' || s === 'pending'   ? 'bg-blue-50 text-blue-700'
+    : s === 'contacted' || s === 'reviewed' ? 'bg-yellow-50 text-yellow-700'
+    : s === 'confirmed' || s === 'submitted' || s === 'accepted' ? 'bg-emerald-50 text-emerald-700'
+    : 'bg-gray-100 text-gray-500'
+}
+
+function fmtDate(d: unknown) {
+  if (!d || typeof d !== 'string') return '—'
+  return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: '2-digit', year: '2-digit' })
+}
+
+/* ── Tables par source ── */
+function ValuationTable({ rows }: { rows: Record<string, unknown>[] }) {
+  if (!rows.length) return <EmptyState />
+  return (
+    <table className="w-full text-[12px] bg-white border border-gray-200">
+      <thead className="bg-gray-50 border-b border-gray-200">
+        <tr>{['Date','Email','Grade','Score /100','ARR','Valorisation','Statut','Locale'].map(h => <Th key={h}>{h}</Th>)}</tr>
+      </thead>
+      <tbody className="divide-y divide-gray-100">
+        {rows.map((r, i) => (
+          <tr key={i} className="hover:bg-gray-50">
+            <Td mono>{fmtDate(r.created_at)}</Td>
+            <Td><a href={`mailto:${r.email}`} className="hover:text-blue-600">{String(r.email)}</a></Td>
+            <Td><span className={`px-2 py-0.5 text-[11px] font-bold ${gradeColor(String(r.estimated_grade ?? ''))}`}>{String(r.estimated_grade ?? '—')}</span></Td>
+            <Td mono>{String(r.score_total ?? '—')}</Td>
+            <Td>{r.pre_revenue ? <em className="text-gray-400">pre-rev</em> : fmtEur(r.arr)}</Td>
+            <Td>{r.valuation_low && r.valuation_high ? `${fmtEur(r.valuation_low)} — ${fmtEur(r.valuation_high)}` : '—'}</Td>
+            <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
+            <Td mono small>{String(r.locale ?? '—')}</Td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}
+
+function CatalogTable({ rows }: { rows: Record<string, unknown>[] }) {
+  if (!rows.length) return <EmptyState />
+  return (
+    <table className="w-full text-[12px] bg-white border border-gray-200">
+      <thead className="bg-gray-50 border-b border-gray-200">
+        <tr>{['Date','Email','Type','Capacité','Secteurs','Statut'].map(h => <Th key={h}>{h}</Th>)}</tr>
+      </thead>
+      <tbody className="divide-y divide-gray-100">
+        {rows.map((r, i) => (
+          <tr key={i} className="hover:bg-gray-50">
+            <Td mono>{fmtDate(r.created_at)}</Td>
+            <Td><a href={`mailto:${r.email}`} className="hover:text-blue-600">{String(r.email)}</a></Td>
+            <Td>{String(r.acquirer_type ?? '—')}</Td>
+            <Td>{String(r.capacity_range ?? '—')}</Td>
+            <Td small>{Array.isArray(r.sectors_interest) ? r.sectors_interest.join(', ') : '—'}</Td>
+            <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}
+
+function AssessmentTable({ rows }: { rows: Record<string, unknown>[] }) {
+  if (!rows.length) return <EmptyState />
+  return (
+    <table className="w-full text-[12px] bg-white border border-gray-200">
+      <thead className="bg-gray-50 border-b border-gray-200">
+        <tr>{['Date','Nom','Email','Entreprise','Ville','Format','ARR','Statut'].map(h => <Th key={h}>{h}</Th>)}</tr>
+      </thead>
+      <tbody className="divide-y divide-gray-100">
+        {rows.map((r, i) => (
+          <tr key={i} className="hover:bg-gray-50">
+            <Td mono>{fmtDate(r.created_at)}</Td>
+            <Td>{String(r.name ?? '—')}</Td>
+            <Td><a href={`mailto:${r.email}`} className="hover:text-blue-600">{String(r.email)}</a></Td>
+            <Td>{String(r.company ?? '—')}</Td>
+            <Td>{String(r.preferred_city ?? '—')}</Td>
+            <Td>{String(r.preferred_format ?? '—')}</Td>
+            <Td>{String(r.arr_range ?? '—')}</Td>
+            <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}
+
+function AlliancesTable({ rows }: { rows: Record<string, unknown>[] }) {
+  if (!rows.length) return <EmptyState />
+  return (
+    <table className="w-full text-[12px] bg-white border border-gray-200">
+      <thead className="bg-gray-50 border-b border-gray-200">
+        <tr>{['Date','Organisation','Type','Email','Pays','Statut'].map(h => <Th key={h}>{h}</Th>)}</tr>
+      </thead>
+      <tbody className="divide-y divide-gray-100">
+        {rows.map((r, i) => (
+          <tr key={i} className="hover:bg-gray-50">
+            <Td mono>{fmtDate(r.created_at)}</Td>
+            <Td>{String(r.organization_name ?? '—')}</Td>
+            <Td><span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-[10px] font-semibold uppercase">{String(r.alliance_type ?? '—')}</span></Td>
+            <Td><a href={`mailto:${r.email}`} className="hover:text-blue-600">{String(r.email)}</a></Td>
+            <Td>{String(r.country ?? '—')}</Td>
+            <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}
+
+/* ── Micro-composants ── */
+function Th({ children }: { children: React.ReactNode }) {
+  return <th className="text-left px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500 whitespace-nowrap">{children}</th>
+}
+function Td({ children, mono, small }: { children: React.ReactNode; mono?: boolean; small?: boolean }) {
+  return <td className={`px-4 py-3 ${mono ? 'font-mono' : ''} ${small ? 'text-[10px]' : ''} text-gray-700`}>{children}</td>
+}
+function EmptyState() {
+  return (
+    <div className="bg-white border border-gray-200 p-12 text-center">
+      <p className="text-[13px] text-gray-400">Aucun enregistrement.</p>
+    </div>
+  )
+}
+
+/* ── Main client component ── */
+export default function AdminLeadsClient({
+  rows, source, counts, currentGrade, currentStatus, adminToken,
+}: {
+  rows: Record<string, unknown>[]
+  source: string
+  counts: Record<string, number>
+  currentGrade: string
+  currentStatus: string
+  adminToken?: string
+}) {
+  const router   = useRouter()
+  const pathname = usePathname()
+  const sp       = useSearchParams()
+
+  const nav = useCallback((key: string, val: string) => {
+    const p = new URLSearchParams(sp.toString())
+    p.set(key, val)
+    if (adminToken) p.set('token', adminToken)
+    router.push(`${pathname}?${p.toString()}`)
+  }, [sp, router, pathname, adminToken])
+
+  return (
+    <div className="flex flex-col gap-6">
+
+      {/* Source tabs */}
+      <div className="flex flex-wrap gap-2">
+        {SOURCES.map(({ key, label }) => (
+          <button key={key} onClick={() => nav('source', key)}
+            className={`px-5 py-2.5 text-[12px] font-semibold border transition-colors flex items-center gap-2 ${
+              source === key ? 'bg-gray-900 text-white border-gray-900' : 'border-gray-200 text-gray-600 hover:border-gray-400 bg-white'
+            }`}>
+            {label}
+            <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${source === key ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-500'}`}>
+              {counts[key] ?? 0}
+            </span>
+          </button>
+        ))}
+      </div>
+
+      {/* Filtres grade (valuation only) + statut */}
+      <div className="flex flex-wrap gap-6 bg-white border border-gray-200 p-4">
+        {source === 'valuation' && (
+          <div className="flex flex-col gap-1.5">
+            <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400">Grade</p>
+            <div className="flex flex-wrap gap-1.5">
+              {GRADES.map(g => (
+                <button key={g} onClick={() => nav('grade', g)}
+                  className={`px-3 py-1 text-[11px] font-semibold border transition-colors ${
+                    currentGrade === g ? 'bg-gray-900 text-white border-gray-900' : 'border-gray-200 text-gray-600 hover:border-gray-400'
+                  }`}>{g === 'all' ? 'Tous' : g}</button>
+              ))}
+            </div>
+          </div>
+        )}
+        <div className="flex flex-col gap-1.5">
+          <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400">Statut</p>
+          <div className="flex flex-wrap gap-1.5">
+            {STATUSES.map(s => (
+              <button key={s} onClick={() => nav('status', s)}
+                className={`px-3 py-1 text-[11px] font-semibold border transition-colors ${
+                  currentStatus === s ? 'bg-gray-900 text-white border-gray-900' : 'border-gray-200 text-gray-600 hover:border-gray-400'
+                }`}>{s === 'all' ? 'Tous' : s}</button>
+            ))}
+          </div>
+        </div>
+        <div className="ml-auto self-end font-mono text-[11px] text-gray-400">
+          {rows.length} résultat{rows.length !== 1 ? 's' : ''}
+        </div>
+      </div>
+
+      {/* Table */}
+      <div className="overflow-x-auto">
+        {source === 'valuation'  && <ValuationTable  rows={rows} />}
+        {source === 'catalog'    && <CatalogTable    rows={rows} />}
+        {source === 'assessment' && <AssessmentTable rows={rows} />}
+        {source === 'alliances'  && <AlliancesTable  rows={rows} />}
+      </div>
+    </div>
+  )
+}

@@ -2,118 +2,123 @@ import { createServiceClient } from '@/lib/supabase'
 import { redirect }            from 'next/navigation'
 import { headers }             from 'next/headers'
 import type { Metadata }       from 'next'
-import LeadsTable              from './LeadsTable'
+import AdminLeadsClient        from './AdminLeadsClient'
 
 export const metadata: Metadata = {
-  title: 'Valuation Leads — AEGRYN Admin',
+  title: 'Leads — AEGRYN Admin',
   robots: { index: false, follow: false },
 }
 
-/* ─── Basic token gate (header X-Admin-Token ou query ?token=) ── */
-async function checkAccess(): Promise<boolean> {
+async function checkAccess(token?: string): Promise<boolean> {
   const adminToken = process.env.ADMIN_LEADS_TOKEN
-  if (!adminToken) return true  // dev : pas de token requis
-
+  if (!adminToken) return true
+  if (token === adminToken) return true
   const hdrs = await headers()
-  const headerToken = hdrs.get('x-admin-token')
-  if (headerToken === adminToken) return true
-
-  return false
-}
-
-export type Lead = {
-  id:               string
-  email:            string
-  estimated_grade:  string
-  score_total:      number
-  score_breakdown:  { finance: number; code: number; ip: number; security: number } | null
-  arr:              number | null
-  valuation_low:    number | null
-  valuation_high:   number | null
-  pre_revenue:      boolean
-  status:           string
-  locale:           string | null
-  created_at:       string
+  return hdrs.get('x-admin-token') === adminToken
 }
 
 export default async function AdminLeadsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ token?: string; grade?: string; status?: string }>
+  searchParams: Promise<{ token?: string; source?: string; grade?: string; status?: string }>
 }) {
   const params = await searchParams
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
 
-  /* Token gate via query param (pour accès direct navigateur) */
-  if (adminToken && params.token !== adminToken) {
-    const hasAccess = await checkAccess()
-    if (!hasAccess) redirect('/')
+  if (!(await checkAccess(params.token))) redirect('/')
+
+  const supa   = createServiceClient()
+  const source = params.source ?? 'valuation'
+
+  /* ── Fetch selon la source ── */
+  let rows: Record<string, unknown>[] = []
+  let fetchError: string | null = null
+
+  try {
+    if (source === 'valuation') {
+      let q = supa
+        .from('valuation_leads')
+        .select('id, email, estimated_grade, score_total, arr, valuation_low, valuation_high, pre_revenue, status, locale, created_at')
+        .order('created_at', { ascending: false }).limit(200)
+      if (params.grade && params.grade !== 'all') q = q.eq('estimated_grade', params.grade)
+      if (params.status && params.status !== 'all') q = q.eq('status', params.status)
+      const { data, error } = await q
+      if (error) fetchError = error.message
+      rows = (data ?? []) as Record<string, unknown>[]
+    }
+
+    if (source === 'catalog') {
+      const { data, error } = await supa
+        .from('catalog_waitlist')
+        .select('id, email, acquirer_type, capacity_range, sectors_interest, status, locale, created_at')
+        .order('created_at', { ascending: false }).limit(200)
+      if (error) fetchError = error.message
+      rows = (data ?? []) as Record<string, unknown>[]
+    }
+
+    if (source === 'assessment') {
+      let q = supa
+        .from('assessment_day_bookings')
+        .select('id, name, email, company, preferred_city, preferred_format, asset_type, arr_range, status, locale, created_at')
+        .order('created_at', { ascending: false }).limit(200)
+      if (params.status && params.status !== 'all') q = q.eq('status', params.status)
+      const { data, error } = await q
+      if (error) fetchError = error.message
+      rows = (data ?? []) as Record<string, unknown>[]
+    }
+
+    if (source === 'alliances') {
+      let q = supa
+        .from('alliance_applications')
+        .select('id, organization_name, alliance_type, email, country, status, locale, created_at')
+        .order('created_at', { ascending: false }).limit(200)
+      if (params.status && params.status !== 'all') q = q.eq('status', params.status)
+      const { data, error } = await q
+      if (error) fetchError = error.message
+      rows = (data ?? []) as Record<string, unknown>[]
+    }
+  } catch (e) {
+    fetchError = String(e)
   }
 
-  /* Fetch leads via service_role */
-  const supa = createServiceClient()
-
-  let query = supa
-    .from('valuation_leads')
-    .select('id, email, estimated_grade, score_total, score_breakdown, arr, valuation_low, valuation_high, pre_revenue, status, locale, created_at')
-    .order('created_at', { ascending: false })
-    .limit(200)
-
-  if (params.grade && params.grade !== 'all') {
-    query = query.eq('estimated_grade', params.grade)
-  }
-  if (params.status && params.status !== 'all') {
-    query = query.eq('status', params.status)
-  }
-
-  const { data: leads, error } = await query
+  /* ── Counts pour badges ── */
+  const counts: Record<string, number> = {}
+  try {
+    const tables = [
+      { key: 'valuation', table: 'valuation_leads' },
+      { key: 'catalog',   table: 'catalog_waitlist' },
+      { key: 'assessment',table: 'assessment_day_bookings' },
+      { key: 'alliances', table: 'alliance_applications' },
+    ]
+    await Promise.all(tables.map(async ({ key, table }) => {
+      const { count } = await supa.from(table).select('id', { count: 'exact', head: true })
+      counts[key] = count ?? 0
+    }))
+  } catch { /* silencieux */ }
 
   return (
-    <main className="min-h-screen bg-gray-50 p-8">
+    <main className="min-h-screen bg-gray-50 p-6 md:p-10">
       <div className="max-w-7xl mx-auto">
-
-        {/* Header */}
         <div className="mb-8">
-          <p className="text-[11px] font-mono text-gray-400 uppercase tracking-widest mb-1">AEGRYN ADMIN</p>
-          <h1 className="text-[28px] font-bold text-gray-900 tracking-tight">Valuation Leads</h1>
-          <p className="text-[13px] text-gray-500 mt-1">
-            Prospects ayant utilisé le simulateur /valuation et soumis leur email.
-            Lecture seule · Service-role Supabase · RLS bypass.
-          </p>
+          <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">AEGRYN ADMIN</p>
+          <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Leads & Prospects</h1>
+          <p className="text-[12px] text-gray-400 mt-1">Service-role · RLS bypass · lecture seule</p>
         </div>
 
-        {error && (
-          <div className="bg-red-50 border border-red-200 p-4 mb-6 text-[13px] text-red-700">
-            Erreur Supabase : {error.message}
-            {!process.env.SUPABASE_SERVICE_ROLE_KEY && (
-              <p className="mt-1 font-semibold">SUPABASE_SERVICE_ROLE_KEY manquant dans .env.local</p>
-            )}
+        {fetchError && (
+          <div className="bg-red-50 border border-red-200 p-4 mb-6 text-[12px] text-red-700">
+            Erreur : {fetchError}
+            {!process.env.SUPABASE_SERVICE_ROLE_KEY && <span className="ml-2 font-bold">— SUPABASE_SERVICE_ROLE_KEY manquant</span>}
           </div>
         )}
 
-        {/* Stats rapides */}
-        {leads && (
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 mb-8">
-            {(['★', 'AAA', 'AA', 'A', 'B'] as const).map(g => {
-              const count = leads.filter(l => l.estimated_grade === g).length
-              return (
-                <div key={g} className="bg-white border border-gray-200 p-4">
-                  <p className="text-[22px] font-bold text-gray-900">{count}</p>
-                  <p className="text-[11px] text-gray-500 uppercase tracking-widest">Grade {g}</p>
-                </div>
-              )
-            })}
-          </div>
-        )}
-
-        {/* Table avec filtres client-side */}
-        <LeadsTable
-          leads={(leads ?? []) as Lead[]}
+        <AdminLeadsClient
+          rows={rows}
+          source={source}
+          counts={counts}
           currentGrade={params.grade ?? 'all'}
           currentStatus={params.status ?? 'all'}
           adminToken={params.token}
         />
-
       </div>
     </main>
   )
