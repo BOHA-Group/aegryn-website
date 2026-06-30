@@ -18,7 +18,7 @@ Convention de nommage : `NNN_nom_table.sql` (NNN = ordre d'exécution).
 | 003 | `003_bookings_and_alliances.sql` | `assessment_day_bookings`, `alliance_applications` | — | ✅ exécuté |
 | 004 | `004_assets.sql` | `assets` | trigger `set_updated_at` | ✅ exécuté |
 | 005 | `005_user_profiles.sql` | `user_profiles` + colonne `assets.seller_uid` | 004, Auth activé | ✅ exécuté |
-| 006 | `006_nda_requests.sql` | `nda_requests` — demandes d'accès NDA acquéreurs | 004 | ⏳ à exécuter |
+| 006 | `006_nda_requests.sql` | `nda_requests` — demandes d'accès NDA acquéreurs | 004 | ✅ exécuté |
 
 ---
 
