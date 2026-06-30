@@ -1,8 +1,21 @@
 /**
  * types/auction.ts
  * Shapes for AssetLotSheet and related auction data.
- * Every field mirrors a Supabase JSONB column in `auction_lots`.
+ * Every field mirrors a Supabase JSONB column in `auction_assets`.
  */
+
+/** Teaser document confidentiel — AssetTeaserDocument */
+export interface AssetTeaser {
+  lotNumber:      string
+  name:           string
+  tagline:        string
+  catalogContext: string
+  recipientName:  string | null
+  pitch:          string
+  tags:           string[]
+  stats:          Array<{ value: string; label: string }>
+  investmentNote: string
+}
 
 export interface HeroStat {
   value: string
