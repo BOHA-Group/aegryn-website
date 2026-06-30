@@ -757,6 +757,45 @@
       "btn": "Kontakt aufnehmen"
     }
   },
+  "roadmapPage": {
+    "meta": {
+      "title": "Fahrplan — AEGRYN",
+      "desc": "Die nächsten Schritte des AEGRYN-Protokolls: Web3-Assets, proprietäre APIs und europäische Expansion."
+    },
+    "label": "AEGRYN — Im Aufbau",
+    "title": "Was wir als\nnächstes bauen.",
+    "desc": "Das AEGRYN-Protokoll entwickelt sich weiter. Hier sind die kommenden Meilensteine — keine festen Daten, aber eine klare Richtung.",
+    "items": [
+      {
+        "phase": "Phase 2",
+        "title": "Web3 & NFT-Assets",
+        "desc": "Erweiterung des AEGRYN-Protokolls auf On-Chain-Digitalassets: Utility-Token, ertragsbringende NFTs, DeFi-Protokolle. Angepasstes CIFS-Raster.",
+        "status": "In Entwicklung"
+      },
+      {
+        "phase": "Phase 3",
+        "title": "Proprietäre AEGRYN-APIs",
+        "desc": "Programmatischer Zugang zu Grades, Marktdaten und Zertifizierungswarnungen für Partnerplattformen und institutionelle Käufer.",
+        "status": "Geplant"
+      },
+      {
+        "phase": "Phase 4",
+        "title": "Europäische Expansion",
+        "desc": "Aufbau des Co-Unterzeichner-Partnernetzwerks (Anwaltskanzleien, Wirtschaftsprüfer) in Deutschland, den Niederlanden, Italien und Spanien.",
+        "status": "Geplant"
+      }
+    ],
+    "currentLabel": "Heute verfügbar",
+    "current": [
+      "Certification Auction — kostenlos",
+      "AEGRYN Review — 2.000 € zzgl. MwSt.",
+      "AEGRYN Review+ — 5.000 € zzgl. MwSt. (Partner-Co-Signatur)",
+      "Bewertungsrechner",
+      "Käufer-Kundenbereich"
+    ],
+    "cta": "Asset einreichen",
+    "ctaSecondary": "Mehr über Grade erfahren"
+  },
   "discover": {
     "meta": {
       "title": "Discover — AEGRYN Marktintelligenz",

@@ -757,6 +757,45 @@
       "btn": "Contattarci"
     }
   },
+  "roadmapPage": {
+    "meta": {
+      "title": "Tabella di marcia — AEGRYN",
+      "desc": "I prossimi passi del protocollo AEGRYN: asset Web3, API proprietarie ed espansione europea."
+    },
+    "label": "AEGRYN — In costruzione",
+    "title": "Cosa stiamo\ncostruendo dopo.",
+    "desc": "Il protocollo AEGRYN si evolve. Ecco le prossime tappe — nessuna data fissa, ma una direzione chiara.",
+    "items": [
+      {
+        "phase": "Fase 2",
+        "title": "Asset Web3 & NFT",
+        "desc": "Estensione del protocollo AEGRYN agli asset digitali on-chain: token di utilità, NFT a reddito ricorrente, protocolli DeFi. Griglia CIFS adattata.",
+        "status": "In sviluppo"
+      },
+      {
+        "phase": "Fase 3",
+        "title": "API proprietarie AEGRYN",
+        "desc": "Accesso programmatico a grade, dati di mercato e avvisi di certificazione per piattaforme partner e acquirenti istituzionali.",
+        "status": "Pianificato"
+      },
+      {
+        "phase": "Fase 4",
+        "title": "Espansione europea",
+        "desc": "Dispiegamento della rete di partner co-firmatari (studi legali, revisori) in Germania, Paesi Bassi, Italia e Spagna.",
+        "status": "Pianificato"
+      }
+    ],
+    "currentLabel": "Disponibile oggi",
+    "current": [
+      "Certification Auction — gratuita",
+      "AEGRYN Review — 2.000 € IVA esclusa",
+      "AEGRYN Review+ — 5.000 € IVA esclusa (co-firma partner)",
+      "Calcolatore di valorizzazione",
+      "Area clienti acquirenti"
+    ],
+    "cta": "Invia un asset",
+    "ctaSecondary": "Scopri di più sul Grade"
+  },
   "discover": {
     "meta": {
       "title": "Discover — Intelligenza di mercato AEGRYN",

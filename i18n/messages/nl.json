@@ -757,6 +757,45 @@
       "btn": "Ons contacteren"
     }
   },
+  "roadmapPage": {
+    "meta": {
+      "title": "Routekaart — AEGRYN",
+      "desc": "De volgende stappen van het AEGRYN-protocol: Web3-activa, eigen API's en Europese expansie."
+    },
+    "label": "AEGRYN — In aanbouw",
+    "title": "Wat we\nvervolgens bouwen.",
+    "desc": "Het AEGRYN-protocol evolueert. Dit zijn de komende mijlpalen — geen vaste datums, maar een duidelijke richting.",
+    "items": [
+      {
+        "phase": "Fase 2",
+        "title": "Web3 & NFT-activa",
+        "desc": "Uitbreiding van het AEGRYN-protocol naar on-chain digitale activa: utility-tokens, NFT's met terugkerende inkomsten, DeFi-protocollen. Aangepast CIFS-raster.",
+        "status": "In ontwikkeling"
+      },
+      {
+        "phase": "Fase 3",
+        "title": "Eigen AEGRYN-API's",
+        "desc": "Programmatische toegang tot grades, marktdata en certificeringswaarschuwingen voor partnerplatforms en institutionele kopers.",
+        "status": "Gepland"
+      },
+      {
+        "phase": "Fase 4",
+        "title": "Europese expansie",
+        "desc": "Uitrol van het netwerk van mede-ondertekenende partners (advocatenkantoren, accountants) in Duitsland, Nederland, Italië en Spanje.",
+        "status": "Gepland"
+      }
+    ],
+    "currentLabel": "Vandaag beschikbaar",
+    "current": [
+      "Certification Auction — gratis",
+      "AEGRYN Review — € 2.000 excl. btw",
+      "AEGRYN Review+ — € 5.000 excl. btw (partner co-ondertekening)",
+      "Waarderingsberekening",
+      "Klantenruimte voor kopers"
+    ],
+    "cta": "Een actief indienen",
+    "ctaSecondary": "Meer over Grade"
+  },
   "discover": {
     "meta": {
       "title": "Discover — AEGRYN Marktintelligentie",
