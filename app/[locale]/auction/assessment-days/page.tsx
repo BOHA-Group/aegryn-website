@@ -25,10 +25,20 @@ export default function AssessmentDaysPage() {
     setError(false)
     const data = Object.fromEntries(new FormData(e.currentTarget))
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('/api/assessment/book', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, _type: 'assessment-day' }),
+        body: JSON.stringify({
+          name:             data.name,
+          email:            data.email,
+          company:          data.company || undefined,
+          preferred_city:   data.city || undefined,
+          preferred_format: data.format || undefined,
+          asset_type:       data.assetType || undefined,
+          arr_range:        data.arrRange || undefined,
+          message:          data.message || undefined,
+          locale:           document.documentElement.lang || 'fr',
+        }),
       })
       if (res.ok) setSubmitted(true)
       else setError(true)

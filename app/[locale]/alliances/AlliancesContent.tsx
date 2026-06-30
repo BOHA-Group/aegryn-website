@@ -31,6 +31,34 @@ export default function AlliancesContent() {
   const [activeTab, setActiveTab] = useState<TabKey>(
     TAB_KEYS.includes(initialTab) ? initialTab : 'overview'
   )
+  const [submitted, setSubmitted] = useState(false)
+  const [loading,   setLoading]   = useState(false)
+  const [formError, setFormError] = useState(false)
+
+  async function handleApply(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setLoading(true)
+    setFormError(false)
+    const raw = Object.fromEntries(new FormData(e.currentTarget))
+    try {
+      const res = await fetch('/api/alliances/apply', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          organization_name: raw.structure,
+          alliance_type:     raw.alliance_type,
+          email:             raw.email,
+          country:           raw.country || undefined,
+          description:       raw.description || undefined,
+          website:           raw.website || undefined,
+          locale:            document.documentElement.lang || 'fr',
+        }),
+      })
+      if (res.ok) setSubmitted(true)
+      else setFormError(true)
+    } catch { setFormError(true) }
+    finally  { setLoading(false) }
+  }
 
   function setTab(key: TabKey) {
     setActiveTab(key)
@@ -178,7 +206,14 @@ export default function AlliancesContent() {
                 </p>
               </div>
 
-              <form action="/api/contact" method="POST" className="space-y-5">
+              {submitted ? (
+                <div className="border border-ag-apex/30 bg-ag-off-white p-10 flex flex-col items-start gap-4">
+                  <CheckCircle2 size={28} className="text-ag-apex" />
+                  <p className="font-sans font-bold text-ag-black text-[18px]">{t('form.successTitle')}</p>
+                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('form.successDesc')}</p>
+                </div>
+              ) : (
+              <form onSubmit={handleApply} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className={labelCls}>{t('form.structure')}</label>
@@ -208,13 +243,18 @@ export default function AlliancesContent() {
                   <label className={labelCls}>{t('form.description')}</label>
                   <textarea name="description" rows={5} required className={`${inputCls} resize-none`} />
                 </div>
+                {formError && (
+                  <p className="font-sans text-[11px] text-red-500">{t('form.errorMsg')}</p>
+                )}
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-8 py-3.5 hover:bg-ag-navy transition-colors"
+                  disabled={loading}
+                  className="inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-8 py-3.5 hover:bg-ag-navy transition-colors disabled:opacity-60"
                 >
-                  {t('form.submit')} <ArrowUpRight size={13} />
+                  {loading ? t('form.submitting') : t('form.submit')} {!loading && <ArrowUpRight size={13} />}
                 </button>
               </form>
+              )}
             </div>
           </section>
         )}

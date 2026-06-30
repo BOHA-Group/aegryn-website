@@ -1349,7 +1349,11 @@
       "description": "Descrizione dell'opportunità",
       "email": "Email professionale",
       "submit": "Inviare la candidatura",
-      "note": "Risposta entro 7 giorni lavorativi. Colloquio di qualificazione richiesto."
+      "note": "Risposta entro 7 giorni lavorativi. Colloquio di qualificazione richiesto.",
+      "successTitle": "Candidatura ricevuta",
+      "successDesc": "Il nostro team esaminerà la sua candidatura e la contatterà per un colloquio di qualificazione.",
+      "errorMsg": "Si è verificato un errore. Riprovare.",
+      "submitting": "Invio..."
     },
     "tabs": {
       "overview": "Panoramica",

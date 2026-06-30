@@ -1334,7 +1334,11 @@
       "description": "Description de l'opportunité",
       "email": "Email professionnel",
       "submit": "Soumettre la candidature",
-      "note": "Réponse sous 7 jours ouvrés. Entretien de qualification requis."
+      "note": "Réponse sous 7 jours ouvrés. Entretien de qualification requis.",
+      "successTitle": "Candidature reçue",
+      "successDesc": "Nos équipes examineront votre dossier et vous contacteront pour un entretien de qualification.",
+      "errorMsg": "Une erreur est survenue. Veuillez réessayer.",
+      "submitting": "Envoi en cours..."
     },
     "tabs": {
       "overview": "Présentation",

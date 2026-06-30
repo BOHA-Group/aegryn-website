@@ -1349,7 +1349,11 @@
       "description": "Descripción de la oportunidad",
       "email": "Email profesional",
       "submit": "Enviar candidatura",
-      "note": "Respuesta en 7 días hábiles. Entrevista de cualificación requerida."
+      "note": "Respuesta en 7 días hábiles. Entrevista de cualificación requerida.",
+      "successTitle": "Candidatura recibida",
+      "successDesc": "Nuestros equipos revisarán su solicitud y se pondrán en contacto con usted para una entrevista de cualificación.",
+      "errorMsg": "Se ha producido un error. Por favor, inténtelo de nuevo.",
+      "submitting": "Enviando..."
     },
     "tabs": {
       "overview": "Presentación",

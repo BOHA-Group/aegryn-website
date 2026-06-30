@@ -1349,7 +1349,11 @@
       "description": "Beschrijving van de kans",
       "email": "Professioneel e-mailadres",
       "submit": "Sollicitatie indienen",
-      "note": "Antwoord binnen 7 werkdagen. Kwalificatiegesprek vereist."
+      "note": "Antwoord binnen 7 werkdagen. Kwalificatiegesprek vereist.",
+      "successTitle": "Aanmelding ontvangen",
+      "successDesc": "Ons team beoordeelt uw aanvraag en neemt contact met u op voor een kwalificatiegesprek.",
+      "errorMsg": "Er is een fout opgetreden. Probeer het opnieuw.",
+      "submitting": "Verzenden..."
     },
     "tabs": {
       "overview": "Overzicht",

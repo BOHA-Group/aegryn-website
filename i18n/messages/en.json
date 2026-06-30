@@ -1334,7 +1334,11 @@
       "description": "Opportunity description",
       "email": "Professional email",
       "submit": "Submit application",
-      "note": "Response within 7 business days. Qualification interview required."
+      "note": "Response within 7 business days. Qualification interview required.",
+      "successTitle": "Application received",
+      "successDesc": "Our teams will review your application and contact you for a qualification interview.",
+      "errorMsg": "An error occurred. Please try again.",
+      "submitting": "Sending..."
     },
     "tabs": {
       "overview": "Overview",
