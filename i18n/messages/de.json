@@ -667,88 +667,88 @@
   },
   "acquisition": {
     "meta": {
-      "title": "Akquisitionsunterstützung — AEGRYN Advisory",
-      "desc": "AEGRYN begleitet institutionelle Käufer bei der Identifikation und dem Abschluss zertifizierter Tech-Asset-Transaktionen in Europa."
+      "title": "Acquisition Support — AEGRYN",
+      "desc": "Co-Investment, Bridge, strukturiertes Earnout — AEGRYN verbindet qualifizierte Erwerber mit Finanzpartnern, um Deals abzuschließen, die es verdienen."
     },
-    "label": "AEGRYN Advisory — Service",
-    "title": "Sie suchen.\nWir finden.\nWir sichern.",
-    "desc": "Ein dedizierter Akquisitionsservice für Investoren, Fonds und Holdings, die Zugang zu Europas besten Tech-Assets suchen.",
-    "ctaPrimary": "Mein Mandat besprechen",
+    "label": "Services — Acquisition Support",
+    "title": "Sie haben\nden Asset identifiziert.\nWir finanzieren den Closing.",
+    "desc": "Co-Investment, Bridge, strukturiertes Earnout — AEGRYN verbindet qualifizierte Erwerber mit Finanzpartnern, um Deals abzuschließen, die es verdienen.",
+    "ctaPrimary": "Meine Akquisition besprechen",
     "ctaDiscover": "Unsere Analysen lesen",
     "forWhom": {
       "label": "Für wen",
-      "title": "Ein Service für ernsthafte Käufer.",
+      "title": "Ein dedizierter Service für ernsthafte Erwerber.",
       "items": [
         {
-          "title": "Investmentfonds",
-          "desc": "PE, VC, Family Offices, die Tech-Assets mit unabhängigem Zertifizierungsgrad suchen."
+          "title": "Fonds und Family Offices",
+          "desc": "Sie setzen Kapital ein und suchen wiederkehrende, geprüfte Tech-Assets mit vollständiger Dokumentation. AEGRYN gibt Ihnen Zugang zur Off-Market-Pipeline."
         },
         {
-          "title": "Industrieholdings",
-          "desc": "Gruppen, die komplementäre Assets erwerben oder ihre digitale Wertschöpfungskette vertikalisieren möchten."
+          "title": "Strategische Käufer",
+          "desc": "Sie integrieren einen Asset in Ihr bestehendes Angebot. Wir strukturieren die Akquisition (Earnout, Integration, Treuhand), damit der Closing sauber verläuft."
         },
         {
-          "title": "Unternehmer-Käufer",
-          "desc": "Betreiber, die ein Asset übernehmen, wachsen lassen oder mit einem bestehenden Unternehmen fusionieren möchten."
+          "title": "Erstmalige Erwerber",
+          "desc": "Sie tätigen Ihre erste Tech-Akquisition. Wir begleiten Sie bei Bewertung, Due Diligence und Verhandlung — ohne Sie versteckten Risiken auszusetzen."
         }
       ]
     },
     "offer": {
-      "label": "Was wir tun",
+      "label": "Unser Prozess",
       "steps": [
         {
           "num": "01",
-          "title": "Mandatsdefinition",
-          "desc": "Genaue Festlegung Ihrer Akquisitionskriterien: Sektor, Grade, ARR, Geografie, Deal-Struktur."
+          "title": "Investor-Briefing",
+          "desc": "Kriterien: Sektor, Ziel-ARR, Geografie, maximales Multiple, bevorzugtes Deal-Format."
         },
         {
           "num": "02",
-          "title": "Proprietäres Sourcing",
-          "desc": "Zugang zu unserem Pipeline zertifizierter und nicht-öffentlicher Assets. Keine offenen Gebote."
+          "title": "Pipeline-Matching",
+          "desc": "Prioritätszugang zum AEGRYN-Katalog und Off-Market-Flow — nur Grade A und darüber zertifizierte Assets."
         },
         {
           "num": "03",
-          "title": "Qualifizierung & Due Diligence",
-          "desc": "AEGRYN Grade-Qualifizierungsbericht + 4-Dimensionen-Analyse. Sie entscheiden informiert."
+          "title": "Finanzstrukturierung",
+          "desc": "Bei Bedarf Vermittlung an Finanzpartner (Bridge, Co-Invest, Earnout) zur Optimierung der Closing-Finanzierung."
         },
         {
           "num": "04",
-          "title": "Strukturierung & Closing",
-          "desc": "Begleitung bis zum Closing: LOI, institutionelles Escrow, aufschiebende Bedingungen, Dokumentation."
+          "title": "Sicherer Closing",
+          "desc": "Institutioneller Treuhand, KRYV-Protocol-Zertifizierung beim Transfer, vollständige Dokumentation."
         }
       ]
     },
     "diff": {
-      "label": "Unser Unterschied",
+      "label": "Warum AEGRYN",
       "items": [
         {
-          "title": "Unabhängige Zertifizierung",
-          "desc": "Jedes Asset wird von unseren Analysten bewertet, bevor es präsentiert wird."
+          "title": "Zertifizierte Assets, reduziertes Risiko",
+          "desc": "Jeder Pipeline-Asset wurde vor der Listung auf 4 Dimensionen (C/I/F/S) geprüft. Sie verhandeln nicht auf Basis von Erklärungen — Sie kaufen auf verifizierten Grades."
         },
         {
-          "title": "Off-Market-Pipeline",
-          "desc": "Die meisten unserer Assets sind nicht auf dem offenen Markt. Zugang nur für AEGRYN-Mandanten."
+          "title": "Off-Market zuerst",
+          "desc": "Die meisten AEGRYN-Assets sind nie öffentlich gelistet. Qualifizierte Erwerber-Mitglieder erhalten vorrangig — oder exklusiv — Zugang."
         },
         {
-          "title": "Interessenausrichtung",
-          "desc": "Unsere Vergütung ist an den erfolgreichen Abschluss geknüpft. Kein Retainer."
+          "title": "Strukturierung inklusive",
+          "desc": "AEGRYN beschränkt sich nicht auf Vermittlungen. Wir intervenieren bei der Deal-Strukturierung, damit die Transaktion tragfähig und vertretbar ist."
         },
         {
-          "title": "Absolute Vertraulichkeit",
-          "desc": "Systematisches NDA. Käuferidentität geschützt bis zum vereinbarten Zeitpunkt."
+          "title": "Haftung engagiert",
+          "desc": "Unser Grade wird von unabhängigen Dritten mitunterzeichnet (Kanzlei, Wirtschaftsprüfer). Wenn der Grade falsch ist, haften wir — nicht nur unser Ruf."
         }
       ]
     },
     "fees": {
       "label": "Honorare",
-      "title": "Auf Ihren Erfolg ausgerichtet.",
-      "desc": "Unsere Vergütung ist ausschließlich erfolgsbasiert: ein Prozentsatz des Transaktionspreises beim Closing.",
-      "note": "Die genauen Konditionen werden im Mandatsschreiben festgelegt."
+      "title": "Eine Erfolgsprovision,\nkeine Fixkosten.",
+      "desc": "Unsere Vergütung ist ausschließlich vom wirksamen Closing abhängig. Kein Retainer, keine Einstiegsgebühren. Detaillierte Bedingungen in unseren AGB.",
+      "note": "AEGRYN Sàrl ist kein zugelassenes Finanzinstitut. Dieser Service ist eine Vermittlung an unabhängige Drittfinanzpartner. Er stellt keine Anlageberatung im Sinne der MiFID-II-Richtlinie dar."
     },
     "cta": {
-      "title": "Bereit, ein Akquisitionsmandat zu starten?",
-      "desc": "Beschreiben Sie Ihr Ziel und wir melden uns innerhalb von 48h mit einer ersten Auswahl.",
-      "btn": "Mein Mandat starten"
+      "title": "Interesse an einem Asset?",
+      "desc": "Erzählen Sie uns von Ihrem Akquisitionsprojekt. Wir melden uns innerhalb von 48h mit einer Machbarkeitsanalyse.",
+      "btn": "Kontakt aufnehmen"
     }
   },
   "discover": {

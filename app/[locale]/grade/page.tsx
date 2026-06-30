@@ -22,7 +22,7 @@ export default function GradePage() {
 
   const serviceLd = serviceJsonLd({
     name:        'AEGRYN Grade — Tech Asset Certification',
-    description: 'Independent certification of digital tech assets across 4 dimensions: Code, Infrastructure, Finance, Strategy.',
+    description: 'Independent certification of digital tech assets across 4 dimensions: Code, IP, Finance, Security.',
     url:         'https://aegryn.com/grade',
     serviceType: 'Asset Certification',
   })

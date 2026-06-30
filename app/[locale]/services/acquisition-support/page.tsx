@@ -1,5 +1,4 @@
 import { getTranslations } from 'next-intl/server'
-import { useTranslations } from 'next-intl'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowUpRight, Check, Shield, Lock } from 'lucide-react'
@@ -13,8 +12,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: t('title'), description: t('desc') }
 }
 
-export default function AcquisitionSupportPage() {
-  const t        = useTranslations('acquisition')
+export default async function AcquisitionSupportPage({ params }: Props) {
+  const { locale } = await params
+  const t        = await getTranslations({ locale, namespace: 'acquisition' })
   const forWhom  = t.raw('forWhom.items')  as { title: string; desc: string }[]
   const steps    = t.raw('offer.steps')    as { num: string; title: string; desc: string }[]
   const diffItems = t.raw('diff.items')    as { title: string; desc: string }[]

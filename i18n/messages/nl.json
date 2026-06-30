@@ -667,88 +667,88 @@
   },
   "acquisition": {
     "meta": {
-      "title": "Acquisitieondersteuning — AEGRYN Advisory",
-      "desc": "AEGRYN begeleidt institutionele kopers bij het identificeren en sluiten van gecertificeerde tech-assettransacties."
+      "title": "Acquisition Support — AEGRYN",
+      "desc": "Co-investering, bridge, gestructureerde earnout — AEGRYN verbindt gekwalificeerde overnemers met financiële partners om deals te sluiten die het verdienen."
     },
-    "label": "AEGRYN Advisory — Service",
-    "title": "U zoekt.\nWij vinden.\nWij beveiligen.",
-    "desc": "Een dedicated acquisitieservice voor investeerders, fondsen en holdings die toegang willen tot Europa's beste tech-opportuniteiten.",
-    "ctaPrimary": "Mijn mandaat bespreken",
+    "label": "Services — Acquisition Support",
+    "title": "U heeft\nhet asset geïdentificeerd.\nWij financieren de closing.",
+    "desc": "Co-investering, bridge, gestructureerde earnout — AEGRYN verbindt gekwalificeerde overnemers met financiële partners om deals te sluiten die het verdienen.",
+    "ctaPrimary": "Mijn acquisitie bespreken",
     "ctaDiscover": "Onze analyses lezen",
     "forWhom": {
       "label": "Voor wie",
-      "title": "Een service voor serieuze kopers.",
+      "title": "Een dedicated service voor serieuze overnemers.",
       "items": [
         {
-          "title": "Investeringsfondsen",
-          "desc": "PE, VC, family offices die tech-assets zoeken met onafhankelijke certificering."
+          "title": "Fondsen en family offices",
+          "desc": "U zet kapitaal in en zoekt terugkerende, geauditeerde tech-assets met volledige documentatie. AEGRYN geeft u toegang tot de off-market pipeline."
         },
         {
-          "title": "Industrieholdings",
-          "desc": "Groepen die complementaire assets willen verwerven of hun digitale waardeketen willen verticaliseren."
+          "title": "Strategische kopers",
+          "desc": "U integreert een asset in uw bestaand aanbod. Wij structureren de acquisitie (earnout, integratie, escrow) zodat de closing schoon verloopt."
         },
         {
-          "title": "Ondernemer-kopers",
-          "desc": "Operators die een asset willen overnemen, laten groeien of samenvoegen met een bestaand bedrijf."
+          "title": "Eerste overnemers",
+          "desc": "U voert uw eerste tech-acquisitie uit. Wij begeleiden u bij waardering, due diligence en onderhandeling — zonder u bloot te stellen aan verborgen risico's."
         }
       ]
     },
     "offer": {
-      "label": "Wat we doen",
+      "label": "Ons proces",
       "steps": [
         {
           "num": "01",
-          "title": "Mandaatdefinitie",
-          "desc": "Nauwkeurige omschrijving van uw acquisitiecriteria."
+          "title": "Investor briefing",
+          "desc": "Criteria: sector, doel-ARR, geografie, maximaal multiple, gewenst deal-formaat."
         },
         {
           "num": "02",
-          "title": "Eigen sourcing",
-          "desc": "Toegang tot ons portfolio van gecertificeerde en niet-publieke assets."
+          "title": "Pipeline matching",
+          "desc": "Prioriteitstoegang tot de AEGRYN-catalogus en off-market flow — alleen Grade A en hoger gecertificeerde assets."
         },
         {
           "num": "03",
-          "title": "Kwalificatie & due diligence",
-          "desc": "AEGRYN Grade-kwalificatierapport + 4-dimensieanalyse."
+          "title": "Financiële structurering",
+          "desc": "Indien nodig, introductie bij financiële partners (bridge, co-invest, earnout) voor optimalisatie van de closing-financiering."
         },
         {
           "num": "04",
-          "title": "Structurering & closing",
-          "desc": "Begeleiding tot aan de closing: LOI, institutioneel escrow, documentatie."
+          "title": "Veilige closing",
+          "desc": "Institutionele escrow, KRYV Protocol-certificering bij overdracht, volledige documentatie verstrekt."
         }
       ]
     },
     "diff": {
-      "label": "Ons verschil",
+      "label": "Waarom AEGRYN",
       "items": [
         {
-          "title": "Onafhankelijke certificering",
-          "desc": "Elk asset wordt door onze analisten beoordeeld voordat het wordt gepresenteerd."
+          "title": "Gecertificeerde assets, minder risico",
+          "desc": "Elk pipeline-asset is vóór listung beoordeeld op 4 dimensies (C/I/F/S). U onderhandelt niet op verklaringen — u koopt op geverifieerde grades."
         },
         {
-          "title": "Off-market pipeline",
-          "desc": "De meeste van onze assets zijn niet op de open markt."
+          "title": "Off-market eerst",
+          "desc": "De meeste AEGRYN-assets worden nooit publiek gelistet. Gekwalificeerde overnemer-leden krijgen toegang vóór enige publieke listung — of exclusief."
         },
         {
-          "title": "Belangen-afstemming",
-          "desc": "Onze vergoeding is gekoppeld aan de succesvolle closing. Geen retainer."
+          "title": "Structurering inbegrepen",
+          "desc": "AEGRYN beperkt zich niet tot introducties. Wij grijpen in op de deal-structurering zodat de transactie haalbaar en verdedigbaar is."
         },
         {
-          "title": "Absolute vertrouwelijkheid",
-          "desc": "Systematische NDA. Identiteit koper beschermd."
+          "title": "Aansprakelijkheid ingezet",
+          "desc": "Onze grade wordt mede-ondertekend door onafhankelijke derden (juridisch kantoor, accountant). Als de grade onjuist is, is onze aansprakelijkheid in het geding."
         }
       ]
     },
     "fees": {
-      "label": "Vergoedingen",
-      "title": "Afgestemd op uw succes.",
-      "desc": "Onze vergoeding is uitsluitend op basis van resultaat: een percentage van de transactieprijs bij closing.",
-      "note": "De exacte voorwaarden worden vastgelegd in de opdrachtbrief."
+      "label": "Honoraria",
+      "title": "Een succesfee,\nnul vaste kosten.",
+      "desc": "Onze vergoeding is uitsluitend afhankelijk van een effectieve closing. Geen retainer, geen instapkosten. Gedetailleerde voorwaarden beschikbaar in onze AV.",
+      "note": "AEGRYN Sàrl is geen erkende financiële instelling. Deze service is een introductie bij onafhankelijke derde financiële partners. Het vormt geen beleggingsadvies in de zin van de MiFID II-richtlijn."
     },
     "cta": {
-      "title": "Klaar om een acquisitiemandate te starten?",
-      "desc": "Beschrijf uw ideale doel en we reageren binnen 48u met een eerste selectie.",
-      "btn": "Mijn mandaat starten"
+      "title": "Interesse in een asset?",
+      "desc": "Vertel ons over uw acquisitieproject. Wij reageren binnen 48u met een haalbaarheidsanalyse.",
+      "btn": "Ons contacteren"
     }
   },
   "discover": {

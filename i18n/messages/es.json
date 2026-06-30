@@ -667,88 +667,88 @@
   },
   "acquisition": {
     "meta": {
-      "title": "Apoyo a la adquisición — AEGRYN Advisory",
-      "desc": "AEGRYN acompaña a compradores institucionales en la identificación y cierre de transacciones de activos tech certificados."
+      "title": "Acquisition Support — AEGRYN",
+      "desc": "Co-inversión, bridge, earnout estructurado — AEGRYN conecta adquirentes cualificados con socios financieros para cerrar los deals que lo merecen."
     },
-    "label": "AEGRYN Advisory — Servicio",
-    "title": "Buscas.\nEncontramos.\nAseguramos.",
-    "desc": "Un servicio de adquisición dedicado para inversores, fondos y holdings que buscan acceder a las mejores oportunidades tech en Europa.",
-    "ctaPrimary": "Hablar de mi mandato",
+    "label": "Servicios — Acquisition Support",
+    "title": "Ha identificado\nel activo. Financiamos\nel cierre.",
+    "desc": "Co-inversión, bridge, earnout estructurado — AEGRYN conecta adquirentes cualificados con socios financieros para cerrar los deals que lo merecen.",
+    "ctaPrimary": "Hablar de mi adquisición",
     "ctaDiscover": "Leer nuestros análisis",
     "forWhom": {
       "label": "Para quién",
-      "title": "Un servicio para compradores serios.",
+      "title": "Un servicio dedicado a adquirentes serios.",
       "items": [
         {
-          "title": "Fondos de inversión",
-          "desc": "PE, VC, family offices que buscan activos tech con certificación independiente."
+          "title": "Fondos y family offices",
+          "desc": "Despliega capital y busca activos tech recurrentes y auditados con documentación completa. AEGRYN le da acceso al pipeline off-market."
         },
         {
-          "title": "Holdings industriales",
-          "desc": "Grupos que buscan activos complementarios o verticalizar su cadena de valor digital."
+          "title": "Compradores estratégicos",
+          "desc": "Integra un activo en su oferta existente. Estructuramos la adquisición (earnout, integración, depósito) para que el cierre sea limpio."
         },
         {
-          "title": "Emprendedores compradores",
-          "desc": "Operadores que desean adquirir un activo para crecer o fusionar con un negocio existente."
+          "title": "Primeros adquirentes",
+          "desc": "Realiza su primera adquisición tech. Le acompañamos en la valoración, due diligence y negociación — sin exponerle a riesgos ocultos."
         }
       ]
     },
     "offer": {
-      "label": "Lo que hacemos",
+      "label": "Nuestro proceso",
       "steps": [
         {
           "num": "01",
-          "title": "Definición del mandato",
-          "desc": "Encuadre preciso de tus criterios de adquisición."
+          "title": "Briefing del inversor",
+          "desc": "Definición de criterios: sector, ARR objetivo, geografía, múltiplo máximo, formato de deal deseado."
         },
         {
           "num": "02",
-          "title": "Sourcing propio",
-          "desc": "Acceso a nuestra cartera de activos certificados y no públicos."
+          "title": "Matching de pipeline",
+          "desc": "Acceso prioritario al catálogo AEGRYN y flujo off-market — sólo activos certificados Grade A y superiores."
         },
         {
           "num": "03",
-          "title": "Calificación y due diligence",
-          "desc": "Informe de calificación AEGRYN Grade + análisis de 4 dimensiones."
+          "title": "Estructuración financiera",
+          "desc": "Si es necesario, presentación a socios financieros (bridge, co-inversión, earnout) para optimizar la financiación del cierre."
         },
         {
           "num": "04",
-          "title": "Estructuración y cierre",
-          "desc": "Acompañamiento hasta el cierre: LOI, escrow institucional, documentación."
+          "title": "Cierre seguro",
+          "desc": "Depósito institucional, certificación KRYV Protocol en la transferencia, CGV y documentación completa."
         }
       ]
     },
     "diff": {
-      "label": "Nuestra diferencia",
+      "label": "Por qué AEGRYN",
       "items": [
         {
-          "title": "Certificación independiente",
-          "desc": "Cada activo es evaluado por nuestros analistas antes de ser presentado."
+          "title": "Activos certificados, riesgo reducido",
+          "desc": "Cada activo del pipeline ha sido auditado en 4 dimensiones (C/I/F/S) antes de figurar. No negocia sobre declaraciones — compra sobre grades verificados."
         },
         {
-          "title": "Pipeline fuera de mercado",
-          "desc": "La mayoría de nuestros activos no están en el mercado abierto."
+          "title": "Off-market primero",
+          "desc": "La mayoría de los activos AEGRYN nunca se listan públicamente. Los miembros adquirentes cualificados acceden antes de cualquier listado público — o exclusivamente."
         },
         {
-          "title": "Alineación de intereses",
-          "desc": "Nuestra remuneración depende del cierre exitoso. Sin retainer."
+          "title": "Estructuración incluida",
+          "desc": "AEGRYN no se limita a las presentaciones. Intervenimos en la estructuración del deal para que la transacción sea viable y defendible."
         },
         {
-          "title": "Confidencialidad absoluta",
-          "desc": "NDA sistemático. Identidad del comprador protegida."
+          "title": "Responsabilidad comprometida",
+          "desc": "Nuestro grade es co-firmado por terceros independientes (gabinete jurídico, auditor). Si el grade es incorrecto, nuestra responsabilidad está comprometida."
         }
       ]
     },
     "fees": {
       "label": "Honorarios",
-      "title": "Alineados con tu éxito.",
-      "desc": "Nuestra remuneración es exclusivamente a éxito: un porcentaje del precio de transacción al cierre.",
-      "note": "Las condiciones exactas se definen en la carta de mandato."
+      "title": "Una comisión de éxito,\ncero costes fijos.",
+      "desc": "Nuestra remuneración está exclusivamente condicionada al cierre efectivo. Sin retainer, sin gastos de entrada. Las condiciones detalladas están disponibles en nuestras CGV.",
+      "note": "AEGRYN Sàrl no es una entidad financiera autorizada. Este servicio es una presentación a socios financieros terceros independientes. No constituye asesoramiento en inversión en el sentido de la directiva MiFID II."
     },
     "cta": {
-      "title": "¿Listo para iniciar un mandato de adquisición?",
-      "desc": "Describe tu objetivo ideal y te respondemos en 48h.",
-      "btn": "Iniciar mi mandato"
+      "title": "¿Le interesa un activo?",
+      "desc": "Cuéntenos su proyecto de adquisición. Le respondemos en 48h con un análisis de viabilidad.",
+      "btn": "Contactarnos"
     }
   },
   "discover": {
