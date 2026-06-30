@@ -70,6 +70,14 @@ CREATE POLICY "valuation_leads_update_service"
   TO service_role
   USING (true);
 
+-- ── Grants PostgREST (requis en plus du RLS) ─────────────
+-- anon : INSERT uniquement (soumission formulaire public)
+GRANT INSERT ON public.valuation_leads TO anon;
+GRANT INSERT ON public.valuation_leads TO authenticated;
+
+-- service_role : accès complet pour l'admin et les API routes
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.valuation_leads TO service_role;
+
 -- ── updated_at auto ───────────────────────────────────────
 CREATE OR REPLACE FUNCTION public.handle_updated_at()
 RETURNS TRIGGER AS $$
