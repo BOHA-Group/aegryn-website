@@ -3,6 +3,7 @@ import { redirect }            from 'next/navigation'
 import type { Metadata }       from 'next'
 import Link                    from 'next/link'
 import { ArrowUpRight }        from 'lucide-react'
+import InviteButton            from './InviteButton'
 
 export const metadata: Metadata = {
   title: 'Assets — AEGRYN Admin',
@@ -78,10 +79,16 @@ export default async function AdminAssetsPage({
             <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Actifs soumis</h1>
             <p className="text-[12px] text-gray-400 mt-1">Gestion du pipeline de certification</p>
           </div>
-          <Link href={`/admin/leads${tokenQs}`}
-            className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
-            ← Leads
-          </Link>
+          <div className="flex gap-2">
+            <Link href={`/admin/catalog${tokenQs}`}
+              className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
+              Catalogue
+            </Link>
+            <Link href={`/admin/leads${tokenQs}`}
+              className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
+              ← Leads
+            </Link>
+          </div>
         </div>
 
         {error && (
@@ -115,7 +122,7 @@ export default async function AdminAssetsPage({
             <table className="w-full text-[12px] bg-white border border-gray-200">
               <thead className="bg-gray-50 border-b border-gray-200">
                 <tr>
-                  {['Soumis', 'Vendeur', 'Société', 'Type', 'ARR', 'Grade', 'Score', 'Statut', 'Actions'].map(h => (
+                  {['Soumis', 'Vendeur', 'Société', 'Type', 'ARR', 'Grade', 'Score', 'Statut', 'Accès client', 'Actions'].map(h => (
                     <th key={h} className="text-left px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500 whitespace-nowrap">{h}</th>
                   ))}
                 </tr>
@@ -143,6 +150,14 @@ export default async function AdminAssetsPage({
                       <span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>
                         {String(r.status ?? '—')}
                       </span>
+                    </td>
+                    <td className="px-4 py-3">
+                      <InviteButton
+                        assetId={String(r.id)}
+                        sellerEmail={String(r.seller_email ?? '')}
+                        sellerName={String(r.seller_name ?? '')}
+                        adminToken={params.token ?? ''}
+                      />
                     </td>
                     <td className="px-4 py-3">
                       <Link
