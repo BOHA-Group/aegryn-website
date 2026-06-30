@@ -100,6 +100,7 @@ export default function ValuationCalculator() {
   const [emailSent, setEmailSent]   = useState(false)
   const [emailErr,  setEmailErr]    = useState(false)
   const [emailLoading, setEmailLoading] = useState(false)
+  const [savedLeadId, setSavedLeadId] = useState<string | null>(null)
 
   function f<T>(setter: React.Dispatch<React.SetStateAction<Partial<T>>>, key: keyof T, val: unknown) {
     setter(p => ({ ...p, [key]: val }))
@@ -181,8 +182,11 @@ export default function ValuationCalculator() {
           source_url:  window.location.href,
         }),
       })
-      if (res.ok) setEmailSent(true)
-      else setEmailErr(true)
+      if (res.ok) {
+        setEmailSent(true)
+        const json = await res.json().catch(() => ({}))
+        if (json?.id) setSavedLeadId(json.id)
+      } else setEmailErr(true)
     } catch { setEmailErr(true) }
     finally  { setEmailLoading(false) }
   }
@@ -425,6 +429,7 @@ export default function ValuationCalculator() {
                 email={email} setEmail={setEmail}
                 emailSent={emailSent} emailErr={emailErr} emailLoading={emailLoading}
                 onEmailSubmit={sendEmail} onRestart={restart}
+                savedLeadId={savedLeadId}
               />
             )}
 
@@ -478,7 +483,7 @@ function NavButtons({ canAdvance, onNext, showBack, onBack, nextLabel, backLabel
   )
 }
 
-function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr, emailLoading, onEmailSubmit, onRestart }: {
+function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr, emailLoading, onEmailSubmit, onRestart, savedLeadId }: {
   result: ValuationResult
   finance: Partial<FinanceData>
   t: ReturnType<typeof useTranslations>
@@ -486,6 +491,7 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
   emailSent: boolean; emailErr: boolean; emailLoading: boolean
   onEmailSubmit: (e: React.FormEvent) => void
   onRestart: () => void
+  savedLeadId?: string | null
 }) {
   const { grade, scores, range, preRevenue, preRevenueScore, weakestDim, strongestDim } = result
   const prRange = preRevenue ? preRevenueRange(preRevenueScore) : null
@@ -610,16 +616,28 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
       )}
 
       {/* CTAs */}
-      <div className="flex flex-col sm:flex-row gap-3">
-        <Link href="/grade/submit"
-          className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors">
-          {t('result.ctaGrade')} <ArrowUpRight size={12} />
-        </Link>
-        <Link href="/auction/assessment-days"
-          className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:border-ag-black transition-colors">
-          {t('result.ctaAssessment')} <ArrowUpRight size={12} />
-        </Link>
-      </div>
+      {(() => {
+        const gradeKey = result.grade.grade
+        const suggested = (gradeKey === 'NG' || gradeKey === 'B')
+          ? 'review_internal'
+          : gradeKey === 'A'
+          ? 'review_partner'
+          : 'full_certification'
+        const leadParam = savedLeadId ? `&source_lead=${savedLeadId}` : ''
+        const submitHref = `/grade/submit?suggested=${suggested}${leadParam}`
+        return (
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href={submitHref}
+              className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors">
+              {t('result.ctaGrade')} <ArrowUpRight size={12} />
+            </Link>
+            <Link href="/auction/assessment-days"
+              className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:border-ag-black transition-colors">
+              {t('result.ctaAssessment')} <ArrowUpRight size={12} />
+            </Link>
+          </div>
+        )
+      })()}
 
       {/* Email capture */}
       <div className="border border-ag-border p-6 flex flex-col gap-4">

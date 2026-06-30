@@ -653,7 +653,13 @@
     "advisoryDesc": "Remédiation et conseil pour les actifs qui n'ont pas encore atteint le Grade A.",
     "advisoryBook": "Prendre contact ↗",
     "medallionText": "Discutons . Contactez-nous . Discutons . Contactez-nous .",
-    "contactLabel": "Nous contacter"
+    "contactLabel": "Nous contacter",
+    "roadmap": {
+      "title": "Feuille de route",
+      "nft": "Actifs Web3 & NFT — Bientôt",
+      "data": "APIs propriétaires — Bientôt",
+      "international": "Expansion européenne — Bientôt"
+    }
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
@@ -1425,7 +1431,27 @@
       "successTitle": "Dossier transmis.",
       "successDesc": "Votre dossier a été transmis. Réponse sous 5 jours ouvrés. Un pré-screening confidentiel vous sera proposé par email.",
       "errorMsg": "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.",
-      "legalNote": "Les conditions financières de la certification sont disponibles dans nos Conditions Générales de Services, transmises lors du premier échange. Aucun engagement à ce stade."
+      "legalNote": "Les conditions financières de la certification sont disponibles dans nos Conditions Générales de Services, transmises lors du premier échange. Aucun engagement à ce stade.",
+      "evalTypeTitle": "Quel niveau d'évaluation souhaitez-vous ?",
+      "evalTypeFull": {
+        "label": "Certification Auction",
+        "desc": "Rémunération à la transaction. Processus complet co-signé (juridique + comptable + cybersécurité), 3–4 semaines, en vue d'une cession via AEGRYN Auction.",
+        "price": "Gratuit"
+      },
+      "evalTypeReview": {
+        "label": "AEGRYN Review",
+        "desc": "Avis écrit d'un analyste AEGRYN sous 5 jours ouvrés. Sans revue partenaire externe. Non publiable au catalogue, non co-signé.",
+        "price": "2 000 € HT"
+      },
+      "evalTypeReviewPlus": {
+        "label": "AEGRYN Review+",
+        "desc": "Avis écrit + revue d'un partenaire externe (cabinet juridique ou expert-comptable) sous 10 jours ouvrés. Référence croisée avec nos partenaires Alliance.",
+        "price": "5 000 € HT"
+      },
+      "evalDeductibleNote": "Ce montant est intégralement déductible du coût de certification si vous engagez un processus complet vers l'Auction dans les 6 mois suivant la remise de votre Review.",
+      "partnerSelectLabel": "Partenaire à associer",
+      "partnerLegal": "Cabinet juridique",
+      "partnerAccounting": "Expert-comptable"
     }
   },
   "bidModels": {

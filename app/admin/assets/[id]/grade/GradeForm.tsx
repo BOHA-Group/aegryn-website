@@ -4,6 +4,7 @@ import { useState }    from 'react'
 import { useRouter }   from 'next/navigation'
 import { estimateGrade } from '@/lib/valuationEngine'
 import { CheckCircle2, AlertTriangle } from 'lucide-react'
+import ReviewBadge from '@/components/ui/ReviewBadge'
 
 const DIMS = [
   { key: 'score_code',     label: 'C — Code',     desc: 'Qualité code, dette technique, tests, CI/CD' },
@@ -37,11 +38,13 @@ const labelCls  = 'block text-[10px] font-semibold uppercase tracking-widest tex
 const sectionCls = 'bg-white border border-gray-200 p-6 flex flex-col gap-4'
 
 export default function GradeForm({
-  assetId, adminToken, initialStatus,
+  assetId, adminToken, initialStatus, evaluationType, partnerReviewerType,
 }: {
   assetId: string
   adminToken: string
   initialStatus: string
+  evaluationType?: string
+  partnerReviewerType?: string
 }) {
   const router = useRouter()
 
@@ -63,6 +66,11 @@ export default function GradeForm({
   const [loading, setLoading] = useState(false)
   const [saved,   setSaved]   = useState(false)
   const [error,   setError]   = useState('')
+
+  const evalType    = evaluationType ?? 'full_certification'
+  const isReview    = evalType === 'review_internal'
+  const isReviewPlus = evalType === 'review_partner'
+  const isFull      = evalType === 'full_certification'
 
   /* ── Grade en temps réel ── */
   const total = scores.score_code + scores.score_ip + scores.score_finance + scores.score_security
@@ -104,13 +112,38 @@ export default function GradeForm({
   return (
     <form onSubmit={onSubmit} className="flex flex-col gap-6">
 
+      {/* ── Bandeau type d'évaluation ── */}
+      {!isFull && (
+        <div className="bg-blue-50 border border-blue-200 px-5 py-3 flex items-center justify-between">
+          <div>
+            <p className="text-[10px] font-mono uppercase tracking-widest text-blue-500 mb-0.5">Type d’évaluation</p>
+            <p className="text-[13px] font-semibold text-blue-800">
+              {isReviewPlus
+                ? `AEGRYN Review+ — ${partnerReviewerType === 'legal' ? 'Cabinet juridique' : 'Expert-comptable'}`
+                : 'AEGRYN Review'}
+            </p>
+          </div>
+          <ReviewBadge
+            label={isReviewPlus ? 'AEGRYN Review+' : 'AEGRYN Review'}
+            sublabel={isReviewPlus
+              ? (partnerReviewerType === 'legal' ? 'Co-revu — Cabinet juridique' : 'Co-revu — Expert-comptable')
+              : undefined}
+            score={total}
+            showNotPublishable
+          />
+        </div>
+      )}
+
       {/* ── Grade live ── */}
-      <div className={`border p-6 flex items-center justify-between gap-6 ${GRADE_COLORS[grade] ?? 'bg-gray-50 border-gray-200'}`}>
+      <div className={`border p-6 flex items-center justify-between gap-6 ${isFull ? (GRADE_COLORS[grade] ?? 'bg-gray-50 border-gray-200') : 'bg-blue-50 border-blue-200'}`}>
         <div>
-          <p className="text-[10px] font-mono uppercase tracking-widest opacity-60 mb-1">Grade calculé (même grille que /valuation)</p>
+          <p className="text-[10px] font-mono uppercase tracking-widest opacity-60 mb-1">Score calculé (même grille que /valuation)</p>
           <div className="flex items-baseline gap-3">
-            <span className="text-[52px] font-bold leading-none">{grade}</span>
-            <span className="text-[13px] font-mono opacity-60">{gradeLabel}</span>
+            {isFull
+              ? <span className="text-[52px] font-bold leading-none">{grade}</span>
+              : <span className="text-[28px] font-bold text-blue-700 leading-none">Score analytique</span>
+            }
+            <span className="text-[13px] font-mono opacity-60">{isFull ? gradeLabel : 'Non publié'}</span>
           </div>
         </div>
         <div className="text-right">
@@ -146,36 +179,47 @@ export default function GradeForm({
         </div>
       </div>
 
-      {/* ── Co-signataires ── */}
-      <div className={sectionCls}>
-        <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Co-signataires</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {[
-            { nKey: 'cosigner_legal',   dKey: 'cosigner_legal_date',   label: 'Cabinet juridique' },
-            { nKey: 'cosigner_account', dKey: 'cosigner_account_date', label: 'Expert-comptable' },
-            { nKey: 'cosigner_cyber',   dKey: 'cosigner_cyber_date',   label: 'Partenaire cyber (opt.)' },
-          ].map(({ nKey, dKey, label }) => (
-            <div key={nKey} className="flex flex-col gap-2">
-              <label className={labelCls}>{label}</label>
-              <input type="text" placeholder="Nom / cabinet" value={(cosigners as Record<string, string>)[nKey]}
-                onChange={e => setCosigners(p => ({ ...p, [nKey]: e.target.value }))}
-                className={inputCls} />
-              <input type="date" value={(cosigners as Record<string, string>)[dKey]}
-                onChange={e => setCosigners(p => ({ ...p, [dKey]: e.target.value }))}
-                className={inputCls} />
-            </div>
-          ))}
+      {/* ── Co-signataires (full_certification = 3 ; review_partner = 1 seul ; review = masqué) ── */}
+      {!isReview && (
+        <div className={sectionCls}>
+          <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Co-signataires</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[
+              { nKey: 'cosigner_legal',   dKey: 'cosigner_legal_date',   label: 'Cabinet juridique',     show: isFull || (isReviewPlus && partnerReviewerType === 'legal') },
+              { nKey: 'cosigner_account', dKey: 'cosigner_account_date', label: 'Expert-comptable',       show: isFull || (isReviewPlus && partnerReviewerType === 'accounting') },
+              { nKey: 'cosigner_cyber',   dKey: 'cosigner_cyber_date',   label: 'Partenaire cyber (opt.)', show: isFull },
+            ].filter(c => c.show).map(({ nKey, dKey, label }) => (
+              <div key={nKey} className="flex flex-col gap-2">
+                <label className={labelCls}>{label}</label>
+                <input type="text" placeholder="Nom / cabinet" value={(cosigners as Record<string, string>)[nKey]}
+                  onChange={e => setCosigners(p => ({ ...p, [nKey]: e.target.value }))}
+                  className={inputCls} />
+                <input type="date" value={(cosigners as Record<string, string>)[dKey]}
+                  onChange={e => setCosigners(p => ({ ...p, [dKey]: e.target.value }))}
+                  className={inputCls} />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
-      {/* ── KRYV + Publication ── */}
+      {/* ── KRYV + Publication (full_certification seulement) ── */}
       <div className={sectionCls}>
-        <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">KRYV Protocol & Publication</h2>
-        <div>
-          <label className={labelCls}>Hash KRYV (saisie manuelle MVP)</label>
-          <input type="text" value={kryv_hash} onChange={e => setKryvHash(e.target.value)}
-            placeholder="0x..." className={inputCls} />
-        </div>
+        <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">
+          {isFull ? 'KRYV Protocol & Publication' : 'Rapport interne'}
+        </h2>
+        {isFull && (
+          <div>
+            <label className={labelCls}>Hash KRYV (saisie manuelle MVP)</label>
+            <input type="text" value={kryv_hash} onChange={e => setKryvHash(e.target.value)}
+              placeholder="0x..." className={inputCls} />
+          </div>
+        )}
+        {!isFull && (
+          <div className="bg-blue-50 border border-blue-100 px-4 py-2 text-[11px] text-blue-600">
+            Hash KRYV et publication catalogue non disponibles pour ce type d’évaluation.
+          </div>
+        )}
         <div>
           <label className={labelCls}>Résumé public (anonymisé — affiché au catalogue)</label>
           <textarea rows={4} value={public_summary} onChange={e => setPublicSummary(e.target.value)}

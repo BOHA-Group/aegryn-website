@@ -656,7 +656,13 @@
     "advisoryDesc": "Remediación y asesoramiento para activos que aún no han alcanzado el Grade A.",
     "advisoryBook": "Reservar sesión ↗",
     "medallionText": "Hablemos . Contáctenos . Hablemos . Contáctenos .",
-    "contactLabel": "Contáctenos"
+    "contactLabel": "Contáctenos",
+    "roadmap": {
+      "title": "Hoja de ruta",
+      "nft": "Activos Web3 & NFT — Próximamente",
+      "data": "APIs propietarias — Próximamente",
+      "international": "Expansión europea — Próximamente"
+    }
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
@@ -1440,7 +1446,27 @@
       "successTitle": "Expediente enviado.",
       "successDesc": "Su expediente ha sido enviado. Respuesta en 5 días hábiles. Se le propondrá un preexamen confidencial por email.",
       "errorMsg": "Se ha producido un error. Inténtelo de nuevo o contáctenos directamente.",
-      "legalNote": "Las condiciones financieras de la certificación están disponibles en nuestras Condiciones Generales de Servicios, transmitidas en el primer intercambio. Sin compromiso en esta etapa."
+      "legalNote": "Las condiciones financieras de la certificación están disponibles en nuestras Condiciones Generales de Servicios, transmitidas en el primer intercambio. Sin compromiso en esta etapa.",
+      "evalTypeTitle": "¿Qué nivel de evaluación necesita?",
+      "evalTypeFull": {
+        "label": "Certificación Auction",
+        "desc": "Honorarios éxito. Proceso completo co-firmado (legal + contabilidad + ciberseguridad), 3–4 semanas, para una transacción vía AEGRYN Auction.",
+        "price": "Gratuito"
+      },
+      "evalTypeReview": {
+        "label": "AEGRYN Review",
+        "desc": "Opinión escrita de un analista AEGRYN en 5 días hábiles. Sin revisión de socio externo. No publicable en el catálogo, no co-firmado.",
+        "price": "2.000 € sin IVA"
+      },
+      "evalTypeReviewPlus": {
+        "label": "AEGRYN Review+",
+        "desc": "Opinión escrita + revisión por un socio externo (bufete jurídico o contador) en 10 días hábiles. Referencia cruzada con nuestros socios Alliance.",
+        "price": "5.000 € sin IVA"
+      },
+      "evalDeductibleNote": "Este importe es íntegramente deducible del costo de certificación si inicia un proceso completo de Auction en los 6 meses siguientes a la recepción de su Review.",
+      "partnerSelectLabel": "Socio a involucrar",
+      "partnerLegal": "Bufete jurídico",
+      "partnerAccounting": "Contador público"
     }
   },
   "bidModels": {

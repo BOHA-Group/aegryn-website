@@ -656,7 +656,13 @@
     "advisoryDesc": "Sanering en advies voor assets die Grade A nog niet hebben bereikt.",
     "advisoryBook": "Sessie boeken ↗",
     "medallionText": "Laten we praten . Neem contact op . Laten we praten . Neem contact op .",
-    "contactLabel": "Neem contact op"
+    "contactLabel": "Neem contact op",
+    "roadmap": {
+      "title": "Routekaart",
+      "nft": "Web3 & NFT-activa — Binnenkort",
+      "data": "Proprietäre API's — Binnenkort",
+      "international": "Europese uitbreiding — Binnenkort"
+    }
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
@@ -1440,7 +1446,27 @@
       "successTitle": "Dossier verzonden.",
       "successDesc": "Uw dossier is verzonden. Antwoord binnen 5 werkdagen. Een vertrouwelijke pre-screening wordt per e-mail voorgesteld.",
       "errorMsg": "Er is een fout opgetreden. Probeer het opnieuw of neem direct contact met ons op.",
-      "legalNote": "De financiële voorwaarden van de certificering zijn beschikbaar in onze Algemene Dienstverleningsvoorwaarden, gedeeld bij de eerste uitwisseling. Geen verplichting in dit stadium."
+      "legalNote": "De financiële voorwaarden van de certificering zijn beschikbaar in onze Algemene Dienstverleningsvoorwaarden, gedeeld bij de eerste uitwisseling. Geen verplichting in dit stadium.",
+      "evalTypeTitle": "Welk evaluatieniveau wenst u?",
+      "evalTypeFull": {
+        "label": "Auction-certificering",
+        "desc": "Succesfee. Volledig co-ondertekend proces (juridisch + boekhouding + cyberbeveiliging), 3–4 weken, voor een transactie via AEGRYN Auction.",
+        "price": "Gratis"
+      },
+      "evalTypeReview": {
+        "label": "AEGRYN Review",
+        "desc": "Schriftelijk advies van een AEGRYN-analist binnen 5 werkdagen. Geen externe partnerreview. Niet publiceerbaar in de catalogus, niet co-ondertekend.",
+        "price": "2.000 € excl. btw"
+      },
+      "evalTypeReviewPlus": {
+        "label": "AEGRYN Review+",
+        "desc": "Schriftelijk advies + review door een externe partner (juridisch kantoor of accountant) binnen 10 werkdagen. Kruisverwijzingen met onze Alliance-partners.",
+        "price": "5.000 € excl. btw"
+      },
+      "evalDeductibleNote": "Dit bedrag is volledig aftrekbaar van de certificeringskosten als u binnen 6 maanden na ontvangst van uw Review een volledig Auction-proces start.",
+      "partnerSelectLabel": "Te betrekken partner",
+      "partnerLegal": "Juridisch kantoor",
+      "partnerAccounting": "Accountant"
     }
   },
   "bidModels": {

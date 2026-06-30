@@ -656,7 +656,13 @@
     "advisoryDesc": "Sanierung und Beratung für Assets, die Grade A noch nicht erreicht haben.",
     "advisoryBook": "Gespräch vereinbaren ↗",
     "medallionText": "Sprechen wir . Kontaktieren Sie uns . Sprechen wir . Kontaktieren Sie uns .",
-    "contactLabel": "Kontaktieren Sie uns"
+    "contactLabel": "Kontaktieren Sie uns",
+    "roadmap": {
+      "title": "Fahrplan",
+      "nft": "Web3 & NFT-Assets — Demnächst",
+      "data": "Proprietäre APIs — Demnächst",
+      "international": "Europäische Expansion — Demnächst"
+    }
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
@@ -1440,7 +1446,27 @@
       "successTitle": "Unterlagen übermittelt.",
       "successDesc": "Ihre Unterlagen wurden übermittelt. Antwort innerhalb von 5 Werktagen. Ein vertrauliches Pre-Screening wird per E-Mail vorgeschlagen.",
       "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
-      "legalNote": "Die finanziellen Bedingungen der Zertifizierung sind in unseren Allgemeinen Geschäftsbedingungen verfügbar, die beim ersten Austausch mitgeteilt werden. Keine Verpflichtung zu diesem Zeitpunkt."
+      "legalNote": "Die finanziellen Bedingungen der Zertifizierung sind in unseren Allgemeinen Geschäftsbedingungen verfügbar, die beim ersten Austausch mitgeteilt werden. Keine Verpflichtung zu diesem Zeitpunkt.",
+      "evalTypeTitle": "Welches Bewertungsniveau wünschen Sie?",
+      "evalTypeFull": {
+        "label": "Auction-Zertifizierung",
+        "desc": "Erfölgsbeteiligung. Vollständiger co-signierter Prozess (Rechtlich + Buchführung + Cybersicherheit), 3–4 Wochen, für eine Transaktion über AEGRYN Auction.",
+        "price": "Kostenlos"
+      },
+      "evalTypeReview": {
+        "label": "AEGRYN Review",
+        "desc": "Schriftliches Gutachten eines AEGRYN-Analysten innerhalb von 5 Werktagen. Keine externe Partnerprüfung. Nicht im Katalog veröffentlichbar, nicht co-signiert.",
+        "price": "2.000 € zzgl. MwSt."
+      },
+      "evalTypeReviewPlus": {
+        "label": "AEGRYN Review+",
+        "desc": "Schriftliches Gutachten + Prüfung durch einen externen Partner (Kanzlei oder Wirtschaftsprüfer) innerhalb von 10 Werktagen. Querverweise mit unseren Alliance-Partnern.",
+        "price": "5.000 € zzgl. MwSt."
+      },
+      "evalDeductibleNote": "Dieser Betrag wird vollständig von den Zertifizierungskosten abgezogen, wenn Sie innerhalb von 6 Monaten nach Erhalt Ihres Reviews einen vollständigen Auction-Prozess einleiten.",
+      "partnerSelectLabel": "Einzubeziehender Partner",
+      "partnerLegal": "Rechtsanwaltskanzlei",
+      "partnerAccounting": "Wirtschaftsprüfer"
     }
   },
   "bidModels": {

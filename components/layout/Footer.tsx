@@ -89,7 +89,7 @@ export default function Footer() {
   return (
     <footer className="bg-ag-navy border-t border-white/10">
       <div className="mx-auto max-w-7xl px-6 pt-10 pb-10">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
 
           {/* Brand */}
           <div className="col-span-full lg:col-span-1">
@@ -145,6 +145,22 @@ export default function Footer() {
                     className="text-sm text-white/75 hover:text-white transition-colors">
                     {name}
                   </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Roadmap */}
+          <div>
+            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
+              {t('roadmap.title')}
+            </p>
+            <ul className="space-y-2.5">
+              {(['nft', 'data', 'international'] as const).map(k => (
+                <li key={k}>
+                  <span className="text-sm text-white/40 cursor-default select-none">
+                    {t(`roadmap.${k}`)}
+                  </span>
                 </li>
               ))}
             </ul>

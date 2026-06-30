@@ -1,51 +1,90 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowUpRight, CheckCircle2, ChevronLeft } from 'lucide-react'
+
+type EvalType = 'review_internal' | 'review_partner' | 'full_certification'
+type PartnerType = 'legal' | 'accounting'
 
 const IP_KEYS = ['yes', 'no', 'pending'] as const
 type IpKey = typeof IP_KEYS[number]
 
 export default function GradeSubmitForm() {
-  const t    = useTranslations('gradeSubmit')
-  const tNav = useTranslations('nav')
+  const t          = useTranslations('gradeSubmit')
+  const tNav       = useTranslations('nav')
+  const params     = useSearchParams()
+
+  const [evalType,    setEvalType]    = useState<EvalType>('full_certification')
+  const [partnerType, setPartnerType] = useState<PartnerType>('legal')
+  const [sourceLeadId, setSourceLeadId] = useState<string | null>(null)
 
   const [ipChoice, setIpChoice] = useState<IpKey | ''>('')
   const [submitted, setSubmitted] = useState(false)
   const [error, setError]         = useState(false)
   const [loading, setLoading]     = useState(false)
 
+  useEffect(() => {
+    const suggested = params.get('suggested') as EvalType | null
+    const lead      = params.get('source_lead')
+    if (suggested && ['review_internal', 'review_partner', 'full_certification'].includes(suggested)) {
+      setEvalType(suggested)
+    }
+    if (lead) setSourceLeadId(lead)
+  }, [params])
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setLoading(true)
     setError(false)
-    const data = Object.fromEntries(new FormData(e.currentTarget))
+    const data   = Object.fromEntries(new FormData(e.currentTarget))
+    const locale = document.documentElement.lang || 'fr'
+    const payload = {
+      fullName:        data.fullName,
+      email:           data.email,
+      company:         data.company        || undefined,
+      assetName:       data.assetName,
+      assetType:       data.assetType,
+      assetUrl:        data.assetUrl        || undefined,
+      techStack:       data.techStack       || undefined,
+      status:          data.status          || undefined,
+      arr:             data.arr              || undefined,
+      ipFiled:         data.ipFiled          || undefined,
+      motivation:      data.motivation       || undefined,
+      targetValuation: data.targetValuation  || undefined,
+      timeline:        data.timeline         || undefined,
+      message:         data.message          || undefined,
+      evaluationType:  evalType,
+      partnerType:     evalType === 'review_partner' ? partnerType : undefined,
+      sourceLeadId:    sourceLeadId ?? undefined,
+      locale,
+    }
     try {
-      const res = await fetch('/api/grade/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          fullName:        data.fullName,
-          email:           data.email,
-          company:         data.company        || undefined,
-          assetName:       data.assetName,
-          assetType:       data.assetType,
-          assetUrl:        data.assetUrl        || undefined,
-          techStack:       data.techStack       || undefined,
-          status:          data.status          || undefined,
-          arr:             data.arr              || undefined,
-          ipFiled:         data.ipFiled          || undefined,
-          motivation:      data.motivation       || undefined,
-          targetValuation: data.targetValuation  || undefined,
-          timeline:        data.timeline         || undefined,
-          message:         data.message          || undefined,
-          locale:          document.documentElement.lang || 'fr',
-        }),
-      })
-      if (res.ok) setSubmitted(true)
-      else setError(true)
+      /* full_certification → soumission directe */
+      if (evalType === 'full_certification') {
+        const res = await fetch('/api/grade/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        })
+        if (res.ok) setSubmitted(true)
+        else setError(true)
+      } else {
+        /* review → Stripe Checkout */
+        const res = await fetch('/api/grade/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        })
+        const json = await res.json()
+        if (res.ok && json.redirect) {
+          window.location.href = json.redirect
+        } else {
+          setError(true)
+        }
+      }
     } catch {
       setError(true)
     } finally {
@@ -117,6 +156,11 @@ export default function GradeSubmitForm() {
           </div>
 
           {/* Right */}
+          {params.get('cancelled') === 'true' && (
+            <div className="col-span-full mb-4 border border-amber-200 bg-amber-50 px-5 py-4 text-[13px] text-amber-800">
+              Paiement annulé. Vous pouvez compléter votre soumission à nouveau.
+            </div>
+          )}
           {submitted ? (
             <div className="border border-ag-apex/30 bg-ag-off-white p-12 flex flex-col items-start gap-6">
               <CheckCircle2 size={32} className="text-ag-apex" />
@@ -135,6 +179,89 @@ export default function GradeSubmitForm() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
+
+              {/* ── Sélecteur palier d'évaluation ── */}
+              <div className="border border-ag-border p-6 flex flex-col gap-4">
+                <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-black">
+                  {t('form.evalTypeTitle')}
+                </p>
+                <div className="flex flex-col gap-3">
+                  {([
+                    {
+                      key:   'full_certification' as EvalType,
+                      label: t('form.evalTypeFull.label'),
+                      desc:  t('form.evalTypeFull.desc'),
+                      price: t('form.evalTypeFull.price'),
+                    },
+                    {
+                      key:   'review_internal' as EvalType,
+                      label: t('form.evalTypeReview.label'),
+                      desc:  t('form.evalTypeReview.desc'),
+                      price: t('form.evalTypeReview.price'),
+                    },
+                    {
+                      key:   'review_partner' as EvalType,
+                      label: t('form.evalTypeReviewPlus.label'),
+                      desc:  t('form.evalTypeReviewPlus.desc'),
+                      price: t('form.evalTypeReviewPlus.price'),
+                    },
+                  ]).map(({ key, label, desc, price }) => (
+                    <label
+                      key={key}
+                      className={`flex items-start gap-4 cursor-pointer border p-4 transition-colors ${
+                        evalType === key
+                          ? 'border-ag-navy bg-ag-navy/5'
+                          : 'border-ag-border hover:border-ag-black/30'
+                      }`}
+                    >
+                      <input
+                        type="radio" name="evalType" value={key}
+                        checked={evalType === key}
+                        onChange={() => setEvalType(key)}
+                        className="mt-1 accent-ag-navy shrink-0"
+                      />
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-baseline gap-3 flex-wrap">
+                          <span className="font-sans font-bold text-ag-black text-[13px]">{label}</span>
+                          <span className="font-mono text-[11px] text-ag-apex font-semibold">{price}</span>
+                        </div>
+                        <p className="font-sans text-[12px] text-ag-gray mt-1 leading-relaxed">{desc}</p>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+
+                {/* Note déductibilité */}
+                {(evalType === 'review_internal' || evalType === 'review_partner') && (
+                  <div className="bg-emerald-50 border border-emerald-200 px-4 py-3 text-[12px] text-emerald-800 font-sans leading-relaxed">
+                    {t('form.evalDeductibleNote')}
+                  </div>
+                )}
+
+                {/* Sélecteur partenaire (Review+ seulement) */}
+                {evalType === 'review_partner' && (
+                  <div className="mt-1">
+                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-3">
+                      {t('form.partnerSelectLabel')}
+                    </p>
+                    <div className="flex gap-4">
+                      {(['legal', 'accounting'] as PartnerType[]).map(pt => (
+                        <label key={pt} className="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="radio" name="partnerType" value={pt}
+                            checked={partnerType === pt}
+                            onChange={() => setPartnerType(pt)}
+                            className="accent-ag-navy"
+                          />
+                          <span className="font-sans text-[13px] text-ag-black">
+                            {pt === 'legal' ? t('form.partnerLegal') : t('form.partnerAccounting')}
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
 
               {/* Asset name + type */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">

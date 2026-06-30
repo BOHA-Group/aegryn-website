@@ -656,7 +656,13 @@
     "advisoryDesc": "Rimedio e consulenza per asset che non hanno ancora raggiunto il Grade A.",
     "advisoryBook": "Prenota una sessione ↗",
     "medallionText": "Parliamo . Contattaci . Parliamo . Contattaci .",
-    "contactLabel": "Contattaci"
+    "contactLabel": "Contattaci",
+    "roadmap": {
+      "title": "Tabella di marcia",
+      "nft": "Asset Web3 & NFT — Prossimamente",
+      "data": "API proprietarie — Prossimamente",
+      "international": "Espansione europea — Prossimamente"
+    }
   },
   "cookie": {
     "title": "Aegryn — Cookie & Analytics",
@@ -1440,7 +1446,27 @@
       "successTitle": "Fascicolo inviato.",
       "successDesc": "Il vostro fascicolo è stato inviato. Risposta entro 5 giorni lavorativi. Verrà proposto un pre-screening riservato via email.",
       "errorMsg": "Si è verificato un errore. Riprovare o contattarci direttamente.",
-      "legalNote": "Le condizioni finanziarie della certificazione sono disponibili nelle nostre Condizioni Generali di Servizio, trasmesse al primo scambio. Nessun impegno in questa fase."
+      "legalNote": "Le condizioni finanziarie della certificazione sono disponibili nelle nostre Condizioni Generali di Servizio, trasmesse al primo scambio. Nessun impegno in questa fase.",
+      "evalTypeTitle": "Quale livello di valutazione desidera?",
+      "evalTypeFull": {
+        "label": "Certificazione Auction",
+        "desc": "Compenso al successo. Processo completo co-firmato (legale + contabilità + cybersicurezza), 3–4 settimane, per una transazione tramite AEGRYN Auction.",
+        "price": "Gratuito"
+      },
+      "evalTypeReview": {
+        "label": "AEGRYN Review",
+        "desc": "Parere scritto di un analista AEGRYN entro 5 giorni lavorativi. Senza revisione da partner esterno. Non pubblicabile nel catalogo, non co-firmato.",
+        "price": "2.000 € IVA esclusa"
+      },
+      "evalTypeReviewPlus": {
+        "label": "AEGRYN Review+",
+        "desc": "Parere scritto + revisione da un partner esterno (studio legale o commercialista) entro 10 giorni lavorativi. Riferimenti incrociati con i nostri partner Alliance.",
+        "price": "5.000 € IVA esclusa"
+      },
+      "evalDeductibleNote": "Questo importo è interamente deducibile dal costo di certificazione se avvia un processo completo di Auction entro 6 mesi dalla ricezione della sua Review.",
+      "partnerSelectLabel": "Partner da coinvolgere",
+      "partnerLegal": "Studio legale",
+      "partnerAccounting": "Commercialista"
     }
   },
   "bidModels": {

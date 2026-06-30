@@ -10,7 +10,22 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-const STATUS_ORDER = ['submitted', 'under_review', 'graded', 'published', 'sold', 'withdrawn']
+const STATUS_ORDER  = ['submitted', 'under_review', 'graded', 'published', 'sold', 'withdrawn']
+const EVAL_TYPES    = ['full_certification', 'review_internal', 'review_partner'] as const
+
+function evalColor(e: string) {
+  return e === 'full_certification' ? 'bg-gray-100 text-gray-600'
+    : e === 'review_internal'       ? 'bg-blue-50 text-blue-700'
+    : e === 'review_partner'        ? 'bg-indigo-50 text-indigo-700'
+    : 'bg-gray-50 text-gray-400'
+}
+
+function evalLabel(e: string) {
+  return e === 'full_certification' ? 'Certification'
+    : e === 'review_internal'       ? 'Review'
+    : e === 'review_partner'        ? 'Review+'
+    : e
+}
 
 function statusColor(s: string) {
   return s === 'submitted'    ? 'bg-blue-50 text-blue-700'
@@ -39,7 +54,7 @@ function fmtDate(d: unknown) {
 export default async function AdminAssetsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ token?: string; status?: string }>
+  searchParams: Promise<{ token?: string; status?: string; eval?: string }>
 }) {
   const params = await searchParams
 
@@ -48,14 +63,16 @@ export default async function AdminAssetsPage({
 
   const supa   = createServiceClient()
   const status = params.status ?? 'all'
+  const evalFilter = params.eval ?? 'all'
 
   let q = supa
     .from('assets')
-    .select('id, seller_name, seller_email, company_name, asset_type, arr, official_grade, score_total, status, submitted_at, graded_at')
+    .select('id, seller_name, seller_email, company_name, asset_type, arr, official_grade, score_total, status, submitted_at, graded_at, evaluation_type')
     .order('submitted_at', { ascending: false })
     .limit(200)
 
   if (status !== 'all') q = q.eq('status', status)
+  if (evalFilter !== 'all') q = q.eq('evaluation_type', evalFilter)
 
   const { data, error } = await q
   const rows = (data ?? []) as Record<string, unknown>[]
@@ -98,15 +115,28 @@ export default async function AdminAssetsPage({
         )}
 
         {/* Filtres statut */}
-        <div className="flex flex-wrap gap-2 mb-6">
+        <div className="flex flex-wrap gap-2 mb-3">
           {[{ key: 'all', label: 'Tous', count: Object.values(counts).reduce((a, b) => a + b, 0) }, ...STATUS_ORDER.map(s => ({ key: s, label: s, count: counts[s] ?? 0 }))].map(({ key, label, count }) => (
             <Link key={key}
-              href={`/admin/assets?status=${key}${params.token ? `&token=${params.token}` : ''}`}
+              href={`/admin/assets?status=${key}${evalFilter !== 'all' ? `&eval=${evalFilter}` : ''}${params.token ? `&token=${params.token}` : ''}`}
               className={`px-4 py-2 text-[11px] font-semibold border transition-colors flex items-center gap-2 ${
                 status === key ? 'bg-gray-900 text-white border-gray-900' : 'border-gray-200 text-gray-600 hover:border-gray-400 bg-white'
               }`}>
               {label}
               <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${status === key ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-500'}`}>{count}</span>
+            </Link>
+          ))}
+        </div>
+
+        {/* Filtres type d'évaluation */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          {(['all', ...EVAL_TYPES] as const).map(k => (
+            <Link key={k}
+              href={`/admin/assets?status=${status}&eval=${k}${params.token ? `&token=${params.token}` : ''}`}
+              className={`px-3 py-1.5 text-[10px] font-semibold border transition-colors ${
+                evalFilter === k ? 'bg-indigo-700 text-white border-indigo-700' : 'border-gray-200 text-gray-500 hover:border-gray-400 bg-white'
+              }`}>
+              {k === 'all' ? 'Tous types' : evalLabel(k)}
             </Link>
           ))}
         </div>
@@ -122,7 +152,7 @@ export default async function AdminAssetsPage({
             <table className="w-full text-[12px] bg-white border border-gray-200">
               <thead className="bg-gray-50 border-b border-gray-200">
                 <tr>
-                  {['Soumis', 'Vendeur', 'Société', 'Type', 'ARR', 'Grade', 'Score', 'Statut', 'Accès client', 'Actions'].map(h => (
+                  {['Soumis', 'Vendeur', 'Société', 'Type', 'ARR', 'Grade', 'Score', 'Évaluation', 'Statut', 'Accès client', 'Actions'].map(h => (
                     <th key={h} className="text-left px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500 whitespace-nowrap">{h}</th>
                   ))}
                 </tr>
@@ -146,6 +176,11 @@ export default async function AdminAssetsPage({
                         : <span className="text-gray-300 text-[10px]">non gradé</span>}
                     </td>
                     <td className="px-4 py-3 font-mono">{r.score_total != null ? String(r.score_total) : '—'}</td>
+                    <td className="px-4 py-3">
+                      <span className={`px-2 py-0.5 text-[10px] font-semibold ${evalColor(String(r.evaluation_type ?? 'full_certification'))}`}>
+                        {evalLabel(String(r.evaluation_type ?? 'full_certification'))}
+                      </span>
+                    </td>
                     <td className="px-4 py-3">
                       <span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>
                         {String(r.status ?? '—')}

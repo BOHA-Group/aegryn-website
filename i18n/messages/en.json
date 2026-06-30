@@ -653,7 +653,13 @@
     "advisoryDesc": "Remediation and advisory for assets that have not yet reached Grade A.",
     "advisoryBook": "Book a session ↗",
     "medallionText": "Let's talk . Contact us . Let's talk . Contact us .",
-    "contactLabel": "Contact us"
+    "contactLabel": "Contact us",
+    "roadmap": {
+      "title": "Roadmap",
+      "nft": "Web3 & NFT Assets — Coming soon",
+      "data": "Proprietary APIs — Coming soon",
+      "international": "European expansion — Coming soon"
+    }
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
@@ -1425,7 +1431,27 @@
       "successTitle": "File submitted.",
       "successDesc": "Your file has been submitted. Response within 5 business days. A confidential pre-screening will be proposed by email.",
       "errorMsg": "An error occurred. Please try again or contact us directly.",
-      "legalNote": "The financial terms of the certification are available in our General Terms of Service, shared at the first exchange. No commitment at this stage."
+      "legalNote": "The financial terms of the certification are available in our General Terms of Service, shared at the first exchange. No commitment at this stage.",
+      "evalTypeTitle": "What level of evaluation do you need?",
+      "evalTypeFull": {
+        "label": "Auction Certification",
+        "desc": "Success-fee only. Full co-signed process (legal + accounting + cybersecurity), 3–4 weeks, for a transaction via AEGRYN Auction.",
+        "price": "Free"
+      },
+      "evalTypeReview": {
+        "label": "AEGRYN Review",
+        "desc": "Written opinion from an AEGRYN analyst within 5 business days. No external partner review. Not publishable in the catalogue, not co-signed.",
+        "price": "2,000 € excl. VAT"
+      },
+      "evalTypeReviewPlus": {
+        "label": "AEGRYN Review+",
+        "desc": "Written opinion + review by an external partner (law firm or chartered accountant) within 10 business days. Cross-referenced with our Alliance partners.",
+        "price": "5,000 € excl. VAT"
+      },
+      "evalDeductibleNote": "This amount is fully deductible from the certification fee if you engage a full Auction process within 6 months of receiving your Review.",
+      "partnerSelectLabel": "Partner to involve",
+      "partnerLegal": "Law firm",
+      "partnerAccounting": "Chartered accountant"
     }
   },
   "bidModels": {

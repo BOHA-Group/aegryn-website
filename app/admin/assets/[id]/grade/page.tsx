@@ -98,6 +98,8 @@ export default async function AdminAssetGradePage({
           assetId={id}
           adminToken={token ?? ''}
           initialStatus={String(a.status ?? 'submitted')}
+          evaluationType={String(a.evaluation_type ?? 'full_certification')}
+          partnerReviewerType={a.partner_reviewer_type ? String(a.partner_reviewer_type) : undefined}
         />
 
       </div>
