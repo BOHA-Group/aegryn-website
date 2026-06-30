@@ -1650,33 +1650,35 @@
   "valuation": {
     "meta": {
       "title": "Tech-Asset bewerten — AEGRYN Valuation",
-      "desc": "B2B-SaaS-Bewertungsrechner. Erhalten Sie in 3 Schritten eine konservative, mittlere und Premium-Spanne basierend auf ARR-Multiples 2026."
+      "desc": "B2B-SaaS-Bewertungsrechner auf Basis des AEGRYN-Grade-Protokolls. 4 Dimensionen, Score /100, Bewertungsspanne. Kostenlos. Vertraulich."
     },
     "hero": {
       "label": "AEGRYN VALUATION",
       "title": "Bewerten Sie Ihr\nTech-Asset.",
-      "desc": "In 3 Schritten liefert unser Rechner eine Bewertungsspanne auf Basis der ARR-Multiples des europaeischen Tech-Markts 2026. Kostenlos. Vertraulich. Unverbindlich."
+      "desc": "Unser Rechner simuliert das AEGRYN-Grade-Protokoll über 4 Dimensionen — Finanzen, Code, IP, Sicherheit — und liefert eine Bewertungsspanne auf Basis der Marktmultiples 2026. Kostenlos. Vertraulich. Unverbindlich."
     },
     "progress": {
       "step": "Schritt",
       "of": "von"
     },
-    "step1": {
-      "title": "Umsatzkennzahlen",
-      "arr": "Jaehrlicher ARR (€)",
+    "steps": {
+      "finance": "Finanzen",
+      "code": "Code",
+      "ip": "IP & Rechte",
+      "security": "Sicherheit"
+    },
+    "finance": {
+      "title": "Finanzdaten",
+      "subtitle": "Dimension F — Finanzen (0–25 Pkt)",
+      "arr": "Jährlicher ARR (€)",
       "arrPlaceholder": "z.B. 500000",
-      "arrHint": "Annual Recurring Revenue in Euro",
-      "mrr": "Monatlicher MRR (€, optional)",
-      "mrrPlaceholder": "z.B. 41667",
+      "arrHint": "0 eingeben bei Pre-Revenue",
       "growth": "YoY-Wachstum (%)",
       "growthPlaceholder": "z.B. 35",
       "churn": "Monatlicher Churn (%)",
-      "churnPlaceholder": "z.B. 2.5"
-    },
-    "step2": {
-      "title": "Kundenbasisqualitaet",
+      "churnPlaceholder": "z.B. 2.5",
       "nrr": "NRR — Net Revenue Retention (%)",
-      "nrrPlaceholder": "z.B. 115",
+      "nrrPlaceholder": "z.B. 110",
       "nrrHint": "> 100% = Netto-Expansion",
       "margin": "Bruttomarge (%)",
       "marginPlaceholder": "z.B. 72",
@@ -1685,56 +1687,170 @@
         "under1": "Weniger als 12 Monate",
         "one_to_three": "1 bis 3 Jahre",
         "above3": "Mehr als 3 Jahre"
+      },
+      "arrAudited": "ARR von Buchprüfer geprüft?",
+      "arrAuditedOptions": {
+        "yes": "Ja",
+        "no": "Nein",
+        "not_yet": "Noch nicht"
       }
     },
-    "step3": {
-      "title": "IP & Tech-Stack",
-      "ip": "IP angemeldet?",
-      "ipYes": "Ja",
-      "ipNo": "Nein",
-      "ipPending": "In Bearbeitung",
+    "code": {
+      "title": "Codequalität",
+      "subtitle": "Dimension C — Code (0–25 Pkt)",
+      "tests": "Automatisierte Tests vorhanden?",
+      "testsOptions": {
+        "full": "Ja, vollständige Abdeckung",
+        "partial": "Teilweise",
+        "none": "Nein"
+      },
+      "docs": "Technische Dokumentation?",
+      "docsOptions": {
+        "full": "Vollständig",
+        "partial": "Teilweise",
+        "none": "Fehlend"
+      },
+      "cicd": "CI/CD konfiguriert?",
+      "cicdOptions": {
+        "yes": "Ja",
+        "no": "Nein"
+      },
+      "techDebt": "Bekannte technische Schulden?",
+      "techDebtOptions": {
+        "documented": "Dokumentiert und bewertet",
+        "known": "Bekannt, nicht bewertet",
+        "unknown": "Nicht evaluiert"
+      },
+      "deps": "Abhängigkeiten aktuell?",
+      "depsOptions": {
+        "under1y": "Aktualisiert < 1 Jahr",
+        "one_to_two": "1 bis 2 Jahre",
+        "above2y": "> 2 Jahre",
+        "unknown": "Unbekannt"
+      },
       "stack": "Hauptstack",
-      "stackPlaceholder": "Auswaehlen",
-      "stackOptions": {
-        "saas_b2b": "B2B SaaS",
-        "marketplace": "Marketplace",
-        "mobile": "Mobile App",
-        "protocol": "Protokoll / Infrastruktur",
-        "ip_only": "Reine IP / nur Code",
-        "other": "Sonstige"
+      "stackPlaceholder": "z.B. Next.js, Supabase, Python"
+    },
+    "ip": {
+      "title": "Geistiges Eigentum",
+      "subtitle": "Dimension I — IP & Rechte (0–25 Pkt)",
+      "trademark": "Marke angemeldet?",
+      "trademarkOptions": {
+        "yes": "Ja (Land/Zone angegeben)",
+        "pending": "In Bearbeitung",
+        "no": "Nein"
+      },
+      "copyright": "Softwarerechte formalisiert?",
+      "copyrightOptions": {
+        "full": "Unterzeichnete Rechtsübertragung",
+        "partial": "Teilweise",
+        "none": "Nicht formalisiert"
+      },
+      "opensource": "Kritische Open-Source-Abhängigkeiten?",
+      "opensourceOptions": {
+        "clean": "Konform (MIT/Apache/BSD)",
+        "gpl": "GPL vorhanden — zu behandeln",
+        "unaudited": "Nicht geprüft"
+      },
+      "apiContracts": "Drittanbieter-API-Verträge in Ordnung?",
+      "apiContractsOptions": {
+        "yes": "Ja",
+        "partial": "Teilweise",
+        "no": "Nein"
       }
     },
-    "next": "Naechster Schritt",
-    "back": "Zurueck",
+    "security": {
+      "title": "Sicherheit & Compliance",
+      "subtitle": "Dimension S — Sicherheit (0–25 Pkt)",
+      "pentest": "Pentest durchgeführt?",
+      "pentestOptions": {
+        "under6m": "Ja — vor weniger als 6 Monaten",
+        "six_to_12m": "Ja — vor 6 bis 12 Monaten",
+        "above12m": "Ja — vor mehr als 12 Monaten",
+        "never": "Nie"
+      },
+      "gdpr": "DSGVO-Konformität?",
+      "gdprOptions": {
+        "full": "Vollständig",
+        "partial": "Teilweise",
+        "none": "Nicht bewertet"
+      },
+      "mfa": "Starke Authentifizierung (MFA)?",
+      "mfaOptions": {
+        "yes": "Ja",
+        "no": "Nein"
+      },
+      "secrets": "Secrets-Management?",
+      "secretsOptions": {
+        "vault": "Vault / verschlüsselt (z.B. Doppler)",
+        "partial": "Teilweise gesichert",
+        "none": "Nicht gesichert"
+      }
+    },
+    "next": "Nächster Schritt",
+    "back": "Zurück",
     "calculate": "Bewertung berechnen",
     "result": {
-      "title": "Indikative Bewertungsspanne.",
-      "conservative": {
-        "label": "Konservativ",
-        "hint": "Vorsichtiges Szenario — anspruchsvoller Kaeufer"
+      "gradeTitle": "Ihr geschätzter Grade",
+      "scoreLabel": "Score",
+      "outOf": "/ 100",
+      "rangeTitle": "Indikative Bewertungsspanne",
+      "medianLabel": "Median",
+      "multipleLabel": "ARR-Multiple",
+      "basisLabel": "Basierend auf Ihrem ARR von",
+      "dimBreakdown": "Aufschlüsselung nach Dimension",
+      "dimMax": "Pkt / 25",
+      "weakTitle": "Was Ihren Score belastet",
+      "strongTitle": "Was Ihren Score hebt",
+      "weakMessages": {
+        "finance": "Ihr Finanz-Score ist am schwächsten. Ein geprüfter ARR und NRR > 100% sind die wirkungsvollsten Hebel.",
+        "code": "Ihre Code-Dimension limitiert den Grade. Automatisierte Tests und CI/CD können 8–10 Punkte bringen.",
+        "ip": "Ihre IP ist noch nicht gesichert. Das ist der #1-Faktor — eine angemeldete Marke allein bringt +8 Punkte.",
+        "security": "Kein aktueller Pentest. Institutionelle Käufer verlangen einen Bericht < 12 Monate."
       },
-      "median": {
-        "label": "Marktmedian",
-        "hint": "Medianer SaaS B2B Europa Multiple 2026"
+      "strongMessages": {
+        "finance": "Ihre Finanzkennzahlen sind stark. Exzellentes Signal für Käufer.",
+        "code": "Ihre Codebasis ist gut gepflegt. Starkes Wartbarkeitssignal.",
+        "ip": "Ihr geistiges Eigentum ist ordnungsgemäß gesichert.",
+        "security": "Aktueller Pentest und DSGVO-Konformität in Ordnung."
       },
-      "premium": {
-        "label": "Premium",
-        "hint": "NRR > 110% + Wachstum > 25% bestaetigt"
-      },
-      "basis": "Berechnungsgrundlage",
-      "arrMultiple": "ARR-Multiple",
-      "disclaimer": "Diese Schaetzung ist indikativ und stellt kein Angebot oder keine Verpflichtung dar.",
-      "gradeHint": "Um diese Bewertung zu bestaetigen und zu maximieren, ist der AEGRYN-Zertifizierungsprozess der naechste Schritt.",
-      "ctaGrade": "Zur Zertifizierung einreichen",
-      "ctaAssessment": "Assessment Day buchen",
-      "emailTitle": "Schaetzung per E-Mail erhalten.",
-      "emailDesc": "Ihre vollstaendige Bewertungsspanne mit Multiples und Empfehlungen.",
+      "preRevenueTitle": "Pre-Revenue-Asset",
+      "preRevenueDesc": "Ohne ARR basiert die Bewertung auf dem kombinierten IP- und Code-Score.",
+      "preRevenueRange": "Indikative Spanne",
+      "preRevenueNote": "Für ein Pre-Revenue-Asset ist AEGRYN Grade C der natürliche nächste Schritt.",
+      "ngNote": "Ihr Score liegt unter der Gradierungsschwelle. Ein kostenloser Assessment Day zeigt die 3 Prioritäten.",
+      "disclaimer": "Diese Schätzung ist indikativ und stellt kein Angebot oder keine finanzielle Verpflichtung dar.",
+      "ctaGrade": "Offizielle Zertifizierung starten",
+      "ctaAssessment": "Kostenlosen Assessment Day buchen",
+      "emailTitle": "Detaillierten Bericht per E-Mail erhalten.",
+      "emailDesc": "Score je Dimension, vollständige Spanne und 3 Prioritätsmaßnahmen.",
       "emailPlaceholder": "Professionelle E-Mail",
       "emailSubmit": "Bericht erhalten",
       "emailSending": "Wird gesendet...",
-      "emailSuccess": "Bericht gesendet. Posteingang pruefen.",
-      "emailError": "Fehler — bitte erneut versuchen.",
-      "restart": "Neue Schaetzung"
+      "emailSuccess": "Bericht gesendet.",
+      "emailError": "Fehler — erneut versuchen.",
+      "restart": "Neue Schätzung"
+    },
+    "marketContext": {
+      "label": "Marktkontext 2026",
+      "items": [
+        {
+          "value": "3,1x ARR",
+          "label": "Median SaaS B2B Europa"
+        },
+        {
+          "value": "6,9x ARR",
+          "label": "Grade AAA — top zertifizierte Assets"
+        },
+        {
+          "value": "2,8x ARR",
+          "label": "Assets ohne Zertifizierung"
+        },
+        {
+          "value": "14,2 Mrd.€",
+          "label": "SaaS M&A Volumen Europa 2025"
+        }
+      ]
     }
   }
 }

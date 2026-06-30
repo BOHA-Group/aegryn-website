@@ -1650,33 +1650,35 @@
   "valuation": {
     "meta": {
       "title": "Schat de waarde van uw tech-asset — AEGRYN Valuation",
-      "desc": "B2B SaaS-waarderingscalculator. Krijg in 3 stappen een conservatief, mediaan en premium bereik op basis van ARR-multiples van de markt 2026."
+      "desc": "B2B SaaS-waarderingscalculator op basis van het AEGRYN-gradeprotocol. 4 dimensies, score op 100, geschat grade en waarderingsbereik. Gratis. Vertrouwelijk."
     },
     "hero": {
       "label": "AEGRYN VALUATION",
       "title": "Schat de waarde\nvan uw asset.",
-      "desc": "In 3 stappen geeft onze calculator een waarderingsbereik op basis van ARR-multiples in de Europese techmarkt 2026. Gratis. Vertrouwelijk. Geen verplichting."
+      "desc": "Onze calculator simuleert het AEGRYN-gradeprotocol over 4 dimensies — Financiën, Code, IP, Beveiliging — en geeft een waarderingsbereik op basis van de marktmultiples 2026. Gratis. Vertrouwelijk. Geen verplichting."
     },
     "progress": {
       "step": "Stap",
       "of": "van"
     },
-    "step1": {
-      "title": "Omzetcijfers",
+    "steps": {
+      "finance": "Financiën",
+      "code": "Code",
+      "ip": "IP & Rechten",
+      "security": "Beveiliging"
+    },
+    "finance": {
+      "title": "Financiële gegevens",
+      "subtitle": "Dimensie F — Financiën (0–25 pt)",
       "arr": "Jaarlijkse ARR (€)",
       "arrPlaceholder": "Bijv. 500000",
-      "arrHint": "Annual Recurring Revenue in euro",
-      "mrr": "Maandelijkse MRR (€, optioneel)",
-      "mrrPlaceholder": "Bijv. 41667",
+      "arrHint": "Voer 0 in bij pre-revenue",
       "growth": "YoY-groei (%)",
       "growthPlaceholder": "Bijv. 35",
       "churn": "Maandelijkse churn (%)",
-      "churnPlaceholder": "Bijv. 2.5"
-    },
-    "step2": {
-      "title": "Kwaliteit klantenbasis",
+      "churnPlaceholder": "Bijv. 2.5",
       "nrr": "NRR — Net Revenue Retention (%)",
-      "nrrPlaceholder": "Bijv. 115",
+      "nrrPlaceholder": "Bijv. 110",
       "nrrHint": "> 100% = netto expansie",
       "margin": "Brutomarje (%)",
       "marginPlaceholder": "Bijv. 72",
@@ -1685,56 +1687,170 @@
         "under1": "Minder dan 12 maanden",
         "one_to_three": "1 tot 3 jaar",
         "above3": "Meer dan 3 jaar"
+      },
+      "arrAudited": "ARR gecontroleerd door accountant?",
+      "arrAuditedOptions": {
+        "yes": "Ja",
+        "no": "Nee",
+        "not_yet": "Nog niet"
       }
     },
-    "step3": {
-      "title": "IP & Tech-stack",
-      "ip": "IP ingediend?",
-      "ipYes": "Ja",
-      "ipNo": "Nee",
-      "ipPending": "In behandeling",
+    "code": {
+      "title": "Codekwaliteit",
+      "subtitle": "Dimensie C — Code (0–25 pt)",
+      "tests": "Geautomatiseerde tests aanwezig?",
+      "testsOptions": {
+        "full": "Ja, volledige dekking",
+        "partial": "Gedeeltelijk",
+        "none": "Nee"
+      },
+      "docs": "Technische documentatie?",
+      "docsOptions": {
+        "full": "Volledig",
+        "partial": "Gedeeltelijk",
+        "none": "Afwezig"
+      },
+      "cicd": "CI/CD geconfigureerd?",
+      "cicdOptions": {
+        "yes": "Ja",
+        "no": "Nee"
+      },
+      "techDebt": "Bekende technische schuld?",
+      "techDebtOptions": {
+        "documented": "Gedocumenteerd en gekwantificeerd",
+        "known": "Geïdentificeerd, niet gekwantificeerd",
+        "unknown": "Niet geëvalueerd"
+      },
+      "deps": "Afhankelijkheden up-to-date?",
+      "depsOptions": {
+        "under1y": "Bijgewerkt < 1 jaar",
+        "one_to_two": "1 tot 2 jaar",
+        "above2y": "> 2 jaar",
+        "unknown": "Onbekend"
+      },
       "stack": "Hoofdstack",
-      "stackPlaceholder": "Selecteren",
-      "stackOptions": {
-        "saas_b2b": "B2B SaaS",
-        "marketplace": "Marketplace",
-        "mobile": "Mobiele app",
-        "protocol": "Protocol / infrastructuur",
-        "ip_only": "Pure IP / alleen code",
-        "other": "Anders"
+      "stackPlaceholder": "Bijv. Next.js, Supabase, Python"
+    },
+    "ip": {
+      "title": "Intellectueel eigendom",
+      "subtitle": "Dimensie I — IP & Rechten (0–25 pt)",
+      "trademark": "Merk geregistreerd?",
+      "trademarkOptions": {
+        "yes": "Ja (land of zone gespecificeerd)",
+        "pending": "In behandeling",
+        "no": "Nee"
+      },
+      "copyright": "Softwarerechten geformaliseerd?",
+      "copyrightOptions": {
+        "full": "Ondertekende rechtsoverdracht",
+        "partial": "Gedeeltelijk",
+        "none": "Niet geformaliseerd"
+      },
+      "opensource": "Kritieke open-source afhankelijkheden?",
+      "opensourceOptions": {
+        "clean": "Conform (MIT/Apache/BSD)",
+        "gpl": "GPL aanwezig — te behandelen",
+        "unaudited": "Niet gecontroleerd"
+      },
+      "apiContracts": "Derde-partij API-contracten in orde?",
+      "apiContractsOptions": {
+        "yes": "Ja",
+        "partial": "Gedeeltelijk",
+        "no": "Nee"
+      }
+    },
+    "security": {
+      "title": "Beveiliging & compliance",
+      "subtitle": "Dimensie S — Beveiliging (0–25 pt)",
+      "pentest": "Pentest uitgevoerd?",
+      "pentestOptions": {
+        "under6m": "Ja — minder dan 6 maanden geleden",
+        "six_to_12m": "Ja — 6 tot 12 maanden geleden",
+        "above12m": "Ja — meer dan 12 maanden geleden",
+        "never": "Nooit"
+      },
+      "gdpr": "AVG-conformiteit?",
+      "gdprOptions": {
+        "full": "Volledig",
+        "partial": "Gedeeltelijk",
+        "none": "Niet geëvalueerd"
+      },
+      "mfa": "Sterke authenticatie (MFA)?",
+      "mfaOptions": {
+        "yes": "Ja",
+        "no": "Nee"
+      },
+      "secrets": "Secretsbeheer?",
+      "secretsOptions": {
+        "vault": "Vault / versleuteld (bijv. Doppler)",
+        "partial": "Gedeeltelijk beveiligd",
+        "none": "Niet beveiligd"
       }
     },
     "next": "Volgende stap",
     "back": "Terug",
     "calculate": "Mijn waardering berekenen",
     "result": {
-      "title": "Indicatief waarderingsbereik.",
-      "conservative": {
-        "label": "Conservatief",
-        "hint": "Voorzichtig scenario — veeleisende koper"
+      "gradeTitle": "Uw geschatte grade",
+      "scoreLabel": "Score",
+      "outOf": "/ 100",
+      "rangeTitle": "Indicatief waarderingsbereik",
+      "medianLabel": "Mediaan",
+      "multipleLabel": "ARR-multiple",
+      "basisLabel": "Gebaseerd op uw ARR van",
+      "dimBreakdown": "Uitsplitsing per dimensie",
+      "dimMax": "pt / 25",
+      "weakTitle": "Wat uw score schaadt",
+      "strongTitle": "Wat uw score verhoogt",
+      "weakMessages": {
+        "finance": "Uw Finance-score is het zwakst. Een gecertificeerde ARR en NRR > 100% zijn de krachtigste hefbomen.",
+        "code": "Uw Code-dimensie beperkt de grade. Geautomatiseerde tests en CI/CD kunnen 8–10 punten toevoegen.",
+        "ip": "Uw IP is nog niet beveiligd. Een geregistreerd merk alleen is al +8 punten waard.",
+        "security": "Geen recente pentest. Institutionele kopers eisen een rapport < 12 maanden oud."
       },
-      "median": {
-        "label": "Marktmediaan",
-        "hint": "Mediaan SaaS B2B Europa multiple 2026"
+      "strongMessages": {
+        "finance": "Uw financiële metrics zijn sterk. Uitstekend signaal.",
+        "code": "Uw codebase is goed onderhouden.",
+        "ip": "Uw intellectueel eigendom is goed beveiligd.",
+        "security": "Recente pentest en AVG-conformiteit in orde."
       },
-      "premium": {
-        "label": "Premium",
-        "hint": "NRR > 110% + groei > 25% bevestigd"
-      },
-      "basis": "Berekeningsgrondslag",
-      "arrMultiple": "ARR-multiple",
-      "disclaimer": "Deze schatting is indicatief en vormt geen aanbod of verplichting.",
-      "gradeHint": "Om deze waardering te bevestigen en te maximaliseren, is het AEGRYN-certificeringsproces de volgende stap.",
-      "ctaGrade": "Indienen voor certificering",
-      "ctaAssessment": "Assessment Day boeken",
-      "emailTitle": "Schatting per e-mail ontvangen.",
-      "emailDesc": "Uw volledige waarderingsbereik met multipletoelichting en aanbevelingen.",
+      "preRevenueTitle": "Pre-revenue asset",
+      "preRevenueDesc": "Zonder ARR is de waardering gebaseerd op de gecombineerde IP- en Code-score.",
+      "preRevenueRange": "Indicatief bereik",
+      "preRevenueNote": "Voor een pre-revenue asset is AEGRYN Grade C de volgende logische stap.",
+      "ngNote": "Uw score ligt onder de gradeerbaarheidsdrempel. Een gratis Assessment Day identificeert de 3 prioritaire acties.",
+      "disclaimer": "Deze schatting is indicatief en vormt geen aanbod of financiële verplichting.",
+      "ctaGrade": "Mijn officiële certificering starten",
+      "ctaAssessment": "Gratis Assessment Day boeken",
+      "emailTitle": "Mijn gedetailleerd rapport per e-mail ontvangen.",
+      "emailDesc": "Score per dimensie, volledig bereik en 3 prioritaire acties.",
       "emailPlaceholder": "Professioneel e-mailadres",
       "emailSubmit": "Rapport ontvangen",
       "emailSending": "Verzenden...",
-      "emailSuccess": "Rapport verzonden. Controleer uw inbox.",
+      "emailSuccess": "Rapport verzonden.",
       "emailError": "Fout — probeer opnieuw.",
       "restart": "Nieuwe schatting"
+    },
+    "marketContext": {
+      "label": "Marktcontext 2026",
+      "items": [
+        {
+          "value": "3,1x ARR",
+          "label": "Mediaan SaaS B2B Europa multiple"
+        },
+        {
+          "value": "6,9x ARR",
+          "label": "Grade AAA — top gecertificeerde assets"
+        },
+        {
+          "value": "2,8x ARR",
+          "label": "Assets zonder certificering"
+        },
+        {
+          "value": "14,2 Mrd€",
+          "label": "SaaS M&A volume Europa 2025"
+        }
+      ]
     }
   }
 }

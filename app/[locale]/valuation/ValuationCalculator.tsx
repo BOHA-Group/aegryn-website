@@ -1,144 +1,146 @@
 'use client'
 
-import { useState } from 'react'
+import { useState }        from 'react'
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
-import { ArrowUpRight, ChevronRight, ChevronLeft, RotateCcw, TrendingUp, Mail, CheckCircle2 } from 'lucide-react'
+import Link                from 'next/link'
+import {
+  ArrowUpRight, ChevronRight, ChevronLeft,
+  RotateCcw, CheckCircle2, Mail,
+} from 'lucide-react'
+import {
+  type FinanceData, type CodeData, type IPData, type SecurityData,
+  type ValuationResult,
+  scoreFinance, scoreCode, scoreIP, scoreSecurity,
+  estimateGrade, runValuation, fmtEur, preRevenueRange,
+} from '@/lib/valuationEngine'
 
-/* ─── Types ──────────────────────────────────────────────── */
-interface FormData {
-  arr:       string
-  mrr:       string
-  growth:    string
-  churn:     string
-  nrr:       string
-  margin:    string
-  seniority: 'under1' | 'one_to_three' | 'above3' | ''
-  ip:        'yes' | 'no' | 'pending' | ''
-  stack:     string
-}
-
-interface ValuationResult {
-  conservative: { min: number; max: number; multiple: number }
-  median:       { min: number; max: number; multiple: number }
-  premium:      { min: number; max: number; multiple: number } | null
-  arr:          number
-  isPremium:    boolean
-}
-
-/* ─── Calculation engine (pure JS, zero API) ─────────────── */
-function calculate(f: FormData): ValuationResult {
-  const arr    = parseFloat(f.arr)    || 0
-  const growth = parseFloat(f.growth) || 0
-  const churn  = parseFloat(f.churn)  || 0
-  const nrr    = parseFloat(f.nrr)    || 100
-  const margin = parseFloat(f.margin) || 60
-
-  let adj = 0
-
-  // Growth
-  if (growth > 50)      adj += 1.0
-  else if (growth > 25) adj += 0.5
-  else if (growth < 0)  adj -= 0.5
-
-  // Churn
-  if (churn > 10)      adj -= 0.8
-  else if (churn > 5)  adj -= 0.3
-  else if (churn < 1)  adj += 0.2
-
-  // NRR
-  if (nrr > 120)       adj += 0.8
-  else if (nrr > 110)  adj += 0.5
-  else if (nrr < 90)   adj -= 0.5
-  else if (nrr < 80)   adj -= 0.8
-
-  // Margin
-  if (margin > 80)      adj += 0.4
-  else if (margin > 70) adj += 0.2
-  else if (margin < 50) adj -= 0.4
-  else if (margin < 40) adj -= 0.7
-
-  // Seniority
-  if (f.seniority === 'above3')       adj += 0.2
-  else if (f.seniority === 'under1')  adj -= 0.5
-
-  // IP
-  if (f.ip === 'yes')     adj += 0.2
-  else if (f.ip === 'pending') adj += 0.1
-
-  const adjClamped = Math.max(-2, Math.min(2, adj))
-
-  const consMult   = Math.max(1.0, 2.5 + adjClamped * 0.5)
-  const medMult    = Math.max(1.5, 3.1 + adjClamped * 0.7)
-  const isPremium  = nrr > 110 && growth > 25
-  const premMinMult = isPremium ? Math.min(8, 5 + adjClamped * 0.5)  : 0
-  const premMaxMult = isPremium ? Math.min(10, 8 + adjClamped * 0.6) : 0
-
-  return {
-    arr,
-    isPremium,
-    conservative: { multiple: +consMult.toFixed(1), min: arr * consMult * 0.85, max: arr * consMult * 1.15 },
-    median:       { multiple: +medMult.toFixed(1),  min: arr * medMult  * 0.85, max: arr * medMult  * 1.15 },
-    premium: isPremium
-      ? { multiple: +((premMinMult + premMaxMult) / 2).toFixed(1), min: arr * premMinMult, max: arr * premMaxMult }
-      : null,
-  }
-}
-
-/* ─── Format ─────────────────────────────────────────────── */
-function fmtEur(n: number): string {
-  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1).replace('.', ',')} M€`
-  if (n >= 1_000)     return `${(n / 1_000).toFixed(0)} K€`
-  return `${n.toFixed(0)} €`
-}
-
-/* ─── Style helpers ──────────────────────────────────────── */
+/* ─── Style constants ────────────────────────────────────── */
 const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
 const selectCls = inputCls + ' appearance-none'
 const labelCls  = 'block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-2'
+const hintCls   = 'font-sans text-[10px] text-ag-gray-light mt-1 leading-relaxed'
 
-const SENIORITY_KEYS = ['under1', 'one_to_three', 'above3'] as const
-const STACK_KEYS     = ['saas_b2b', 'marketplace', 'mobile', 'protocol', 'ip_only', 'other'] as const
-const IP_KEYS        = ['yes', 'no', 'pending'] as const
+function RadioGroup<T extends string>({
+  options, value, onChange,
+}: {
+  options: { key: T; label: string }[]
+  value: T | ''
+  onChange: (v: T) => void
+}) {
+  return (
+    <div className="flex flex-wrap gap-2 mt-1">
+      {options.map(({ key, label }) => (
+        <button
+          key={key}
+          type="button"
+          onClick={() => onChange(key)}
+          className={`border px-4 py-2 font-sans text-[12px] transition-colors whitespace-nowrap ${
+            value === key
+              ? 'border-ag-black bg-ag-black text-white'
+              : 'border-ag-border text-ag-black hover:border-ag-black'
+          }`}
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+  )
+}
 
-/* ─── Component ──────────────────────────────────────────── */
+/* ─── Score bar ──────────────────────────────────────────── */
+function ScoreBar({ score, max = 25 }: { score: number; max?: number }) {
+  const pct = Math.round((score / max) * 100)
+  return (
+    <div className="flex items-center gap-3">
+      <div className="flex-1 h-1.5 bg-ag-border">
+        <div
+          className="h-full bg-ag-apex transition-all duration-700"
+          style={{ width: `${pct}%` }}
+        />
+      </div>
+      <span className="font-sans font-semibold text-[11px] text-ag-black w-12 text-right shrink-0">
+        {score} / {max}
+      </span>
+    </div>
+  )
+}
+
+/* ─── Grade badge ────────────────────────────────────────── */
+function GradeBadge({ grade, colorClass }: { grade: string; colorClass: string }) {
+  return (
+    <div className={`inline-flex items-center justify-center w-24 h-24 border-2 ${
+      grade === '★' ? 'border-ag-apex' : 'border-current'
+    } ${colorClass}`}>
+      <span className="font-sans font-bold text-[28px] tracking-tight leading-none">
+        {grade === 'NG' ? '—' : grade === '★' ? '★' : `AEG\n${grade}`}
+      </span>
+    </div>
+  )
+}
+
+/* ─── Main component ─────────────────────────────────────── */
 export default function ValuationCalculator() {
-  const t = useTranslations('valuation')
+  const t    = useTranslations('valuation')
   const tNav = useTranslations('nav')
 
-  const [step, setStep]   = useState(1)
+  const STEPS = ['finance', 'code', 'ip', 'security'] as const
+  type Step = typeof STEPS[number] | 'result'
+
+  const [step, setStep]     = useState<Step>('finance')
   const [result, setResult] = useState<ValuationResult | null>(null)
 
-  const [form, setForm] = useState<FormData>({
-    arr: '', mrr: '', growth: '', churn: '',
-    nrr: '', margin: '', seniority: '',
-    ip: '', stack: '',
-  })
+  /* ── Form state ── */
+  const [finance, setFinance] = useState<Partial<FinanceData>>({})
+  const [code,    setCode]    = useState<Partial<CodeData>>({})
+  const [ip,      setIp]      = useState<Partial<IPData>>({})
+  const [security, setSecurity] = useState<Partial<SecurityData>>({})
 
-  const [email, setEmail]         = useState('')
-  const [emailSent, setEmailSent] = useState(false)
-  const [emailErr, setEmailErr]   = useState(false)
+  /* ── Email ── */
+  const [email, setEmail]           = useState('')
+  const [emailSent, setEmailSent]   = useState(false)
+  const [emailErr,  setEmailErr]    = useState(false)
   const [emailLoading, setEmailLoading] = useState(false)
 
-  function set(k: keyof FormData, v: string) {
-    setForm(p => ({ ...p, [k]: v }))
+  function f<T>(setter: React.Dispatch<React.SetStateAction<Partial<T>>>, key: keyof T, val: unknown) {
+    setter(p => ({ ...p, [key]: val }))
   }
 
-  function canNext() {
-    if (step === 1) return !!form.arr && !!form.growth && !!form.churn
-    if (step === 2) return !!form.nrr && !!form.margin && !!form.seniority
-    if (step === 3) return !!form.ip && !!form.stack
+  /* ── Validation ── */
+  function canAdvance(): boolean {
+    if (step === 'finance')  return !!(finance.arr !== undefined && finance.growth !== undefined && finance.churn !== undefined && finance.nrr !== undefined && finance.margin !== undefined && finance.seniority && finance.arrAudited)
+    if (step === 'code')     return !!(code.tests && code.docs && code.cicd && code.techDebt && code.deps)
+    if (step === 'ip')       return !!(ip.trademark && ip.copyright && ip.opensource && ip.apiContracts)
+    if (step === 'security') return !!(security.pentest && security.gdpr && security.mfa && security.secrets)
     return false
   }
 
-  function handleCalculate() {
-    setResult(calculate(form))
-    setStep(4)
+  function advance() {
+    const idx = STEPS.indexOf(step as typeof STEPS[number])
+    if (idx < STEPS.length - 1) {
+      setStep(STEPS[idx + 1])
+    } else {
+      const input = {
+        finance:  finance as FinanceData,
+        code:     code    as CodeData,
+        ip:       ip      as IPData,
+        security: security as SecurityData,
+      }
+      setResult(runValuation(input))
+      setStep('result')
+    }
+  }
+
+  function back() {
+    const idx = STEPS.indexOf(step as typeof STEPS[number])
+    if (idx > 0) setStep(STEPS[idx - 1])
   }
 
   function restart() {
-    setForm({ arr: '', mrr: '', growth: '', churn: '', nrr: '', margin: '', seniority: '', ip: '', stack: '' })
-    setStep(1)
+    setStep('finance')
+    setFinance({})
+    setCode({})
+    setIp({})
+    setSecurity({})
     setResult(null)
     setEmail('')
     setEmailSent(false)
@@ -157,24 +159,23 @@ export default function ValuationCalculator() {
         body: JSON.stringify({
           _type: 'valuation-report',
           email,
-          arr: form.arr,
-          growth: form.growth,
-          nrr: form.nrr,
-          conservative_min: fmtEur(result.conservative.min),
-          conservative_max: fmtEur(result.conservative.max),
-          median_min: fmtEur(result.median.min),
-          median_max: fmtEur(result.median.max),
-          premium: result.isPremium,
+          grade:   result.grade.grade,
+          score:   result.grade.totalScore,
+          arr:     finance.arr,
+          scores:  result.scores,
+          preRevenue: result.preRevenue,
         }),
       })
       if (res.ok) setEmailSent(true)
       else setEmailErr(true)
-    } catch {
-      setEmailErr(true)
-    } finally {
-      setEmailLoading(false)
-    }
+    } catch { setEmailErr(true) }
+    finally  { setEmailLoading(false) }
   }
+
+  const stepIdx = STEPS.indexOf(step as typeof STEPS[number])
+
+  /* ─── Market context sidebar ─────────────────────────── */
+  const marketItems = t.raw('marketContext.items') as { value: string; label: string }[]
 
   return (
     <main id="main" className="bg-ag-white">
@@ -198,402 +199,440 @@ export default function ValuationCalculator() {
         </div>
       </section>
 
-      {/* Calculator */}
+      {/* Calculator area */}
       <section className="py-20 px-6 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-16 items-start">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-16 items-start">
 
-          {/* Left — progress + market context */}
+          {/* ── Sidebar ── */}
           <div className="lg:sticky lg:top-24 flex flex-col gap-8">
 
-            {/* Steps */}
-            {step < 4 && (
-              <div className="flex flex-col gap-2">
-                {[1, 2, 3].map(n => (
+            {/* Progress */}
+            {step !== 'result' && (
+              <div className="flex flex-col gap-1">
+                {STEPS.map((s, i) => (
                   <div
-                    key={n}
-                    className={`flex items-center gap-3 py-3 border-l-2 pl-4 transition-colors ${
-                      step === n ? 'border-ag-apex' : step > n ? 'border-ag-apex/30' : 'border-ag-border'
+                    key={s}
+                    className={`flex items-center gap-3 py-3 pl-4 border-l-2 transition-colors ${
+                      step === s         ? 'border-ag-apex'
+                      : stepIdx > i      ? 'border-ag-apex/40'
+                      :                    'border-ag-border'
                     }`}
                   >
-                    <span className={`font-mono text-[10px] font-bold tracking-[0.1em] ${step >= n ? 'text-ag-apex' : 'text-ag-gray-light'}`}>
-                      0{n}
+                    <span className={`font-mono text-[9px] font-bold tracking-[0.12em] shrink-0 ${
+                      i <= stepIdx ? 'text-ag-apex' : 'text-ag-gray-light'
+                    }`}>
+                      0{i + 1}
                     </span>
-                    <span className={`font-sans text-[12px] ${step === n ? 'text-ag-black font-semibold' : 'text-ag-gray-light'}`}>
-                      {t(`step${n}.title` as Parameters<typeof t>[0])}
+                    <span className={`font-sans text-[12px] ${
+                      step === s ? 'text-ag-black font-semibold' : 'text-ag-gray-light'
+                    }`}>
+                      {t(`steps.${s}`)}
                     </span>
+                    {stepIdx > i && (
+                      <CheckCircle2 size={11} className="text-ag-apex ml-auto shrink-0" />
+                    )}
                   </div>
                 ))}
               </div>
             )}
 
-            {/* Market context card */}
-            <div className="border border-ag-border p-6 flex flex-col gap-4">
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light">
-                Marché SaaS B2B — 2026
+            {/* Market context */}
+            <div className="border border-ag-border p-5 flex flex-col gap-3">
+              <p className="font-sans font-semibold text-[9px] uppercase tracking-[0.22em] text-ag-gray-light">
+                {t('marketContext.label')}
               </p>
-              {[
-                { v: '3,1x ARR', l: 'Multiple médian marché' },
-                { v: '6,9x ARR', l: 'Grade AAA — Top actifs' },
-                { v: '2,8x ARR', l: 'Sans certification' },
-                { v: '14,2 Md€', l: 'Volume M&A SaaS Europe' },
-              ].map(({ v, l }) => (
-                <div key={l} className="flex items-baseline justify-between gap-4 border-b border-ag-border pb-3 last:border-b-0 last:pb-0">
-                  <span className="font-sans font-bold text-ag-black text-[15px]">{v}</span>
-                  <span className="font-sans text-[11px] text-ag-gray-light text-right">{l}</span>
+              {marketItems.map(({ value, label }) => (
+                <div key={label} className="flex items-baseline justify-between gap-3 border-b border-ag-border pb-2.5 last:border-b-0 last:pb-0">
+                  <span className="font-sans font-bold text-ag-black text-[14px]">{value}</span>
+                  <span className="font-sans text-[10px] text-ag-gray-light text-right leading-tight">{label}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Right — form or result */}
+          {/* ── Form panels ── */}
           <div>
 
-            {/* ── Step 1 ── */}
-            {step === 1 && (
+            {/* STEP — FINANCE */}
+            {step === 'finance' && (
               <div className="flex flex-col gap-6">
-                <div className="flex items-center justify-between border-b border-ag-border pb-4">
-                  <h2 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em]">
-                    {t('step1.title')}
-                  </h2>
-                  <span className="font-sans text-[11px] text-ag-gray-light">
-                    {t('progress.step')} 1 {t('progress.of')} 3
-                  </span>
-                </div>
+                <StepHeader title={t('finance.title')} subtitle={t('finance.subtitle')} step={1} total={4} t={t} />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className={labelCls}>{t('step1.arr')} *</label>
-                    <input
-                      type="number" min="0" value={form.arr}
-                      onChange={e => set('arr', e.target.value)}
-                      placeholder={t('step1.arrPlaceholder')}
-                      className={inputCls}
-                    />
-                    <p className="font-sans text-[10px] text-ag-gray-light mt-1">{t('step1.arrHint')}</p>
+                    <label className={labelCls}>{t('finance.arr')} *</label>
+                    <input type="number" min="0"
+                      value={finance.arr ?? ''}
+                      onChange={e => f(setFinance, 'arr', parseFloat(e.target.value) || 0)}
+                      placeholder={t('finance.arrPlaceholder')} className={inputCls} />
+                    <p className={hintCls}>{t('finance.arrHint')}</p>
                   </div>
                   <div>
-                    <label className={labelCls}>{t('step1.mrr')}</label>
-                    <input
-                      type="number" min="0" value={form.mrr}
-                      onChange={e => set('mrr', e.target.value)}
-                      placeholder={t('step1.mrrPlaceholder')}
-                      className={inputCls}
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className={labelCls}>{t('step1.growth')} *</label>
-                    <input
-                      type="number" value={form.growth}
-                      onChange={e => set('growth', e.target.value)}
-                      placeholder={t('step1.growthPlaceholder')}
-                      className={inputCls}
-                    />
+                    <label className={labelCls}>{t('finance.growth')} *</label>
+                    <input type="number"
+                      value={finance.growth ?? ''}
+                      onChange={e => f(setFinance, 'growth', parseFloat(e.target.value) || 0)}
+                      placeholder={t('finance.growthPlaceholder')} className={inputCls} />
                   </div>
                   <div>
-                    <label className={labelCls}>{t('step1.churn')} *</label>
-                    <input
-                      type="number" min="0" max="100" step="0.1" value={form.churn}
-                      onChange={e => set('churn', e.target.value)}
-                      placeholder={t('step1.churnPlaceholder')}
-                      className={inputCls}
-                    />
-                  </div>
-                </div>
-
-                <button
-                  disabled={!canNext()}
-                  onClick={() => setStep(2)}
-                  className="self-start inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-navy-mid transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-                >
-                  {t('next')} <ChevronRight size={13} />
-                </button>
-              </div>
-            )}
-
-            {/* ── Step 2 ── */}
-            {step === 2 && (
-              <div className="flex flex-col gap-6">
-                <div className="flex items-center justify-between border-b border-ag-border pb-4">
-                  <h2 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em]">
-                    {t('step2.title')}
-                  </h2>
-                  <span className="font-sans text-[11px] text-ag-gray-light">
-                    {t('progress.step')} 2 {t('progress.of')} 3
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className={labelCls}>{t('step2.nrr')} *</label>
-                    <input
-                      type="number" min="0" max="300" value={form.nrr}
-                      onChange={e => set('nrr', e.target.value)}
-                      placeholder={t('step2.nrrPlaceholder')}
-                      className={inputCls}
-                    />
-                    <p className="font-sans text-[10px] text-ag-gray-light mt-1">{t('step2.nrrHint')}</p>
+                    <label className={labelCls}>{t('finance.churn')} *</label>
+                    <input type="number" min="0" max="100" step="0.1"
+                      value={finance.churn ?? ''}
+                      onChange={e => f(setFinance, 'churn', parseFloat(e.target.value) || 0)}
+                      placeholder={t('finance.churnPlaceholder')} className={inputCls} />
                   </div>
                   <div>
-                    <label className={labelCls}>{t('step2.margin')} *</label>
-                    <input
-                      type="number" min="0" max="100" value={form.margin}
-                      onChange={e => set('margin', e.target.value)}
-                      placeholder={t('step2.marginPlaceholder')}
-                      className={inputCls}
-                    />
+                    <label className={labelCls}>{t('finance.nrr')} *</label>
+                    <input type="number" min="0" max="300"
+                      value={finance.nrr ?? ''}
+                      onChange={e => f(setFinance, 'nrr', parseFloat(e.target.value) || 0)}
+                      placeholder={t('finance.nrrPlaceholder')} className={inputCls} />
+                    <p className={hintCls}>{t('finance.nrrHint')}</p>
+                  </div>
+                  <div>
+                    <label className={labelCls}>{t('finance.margin')} *</label>
+                    <input type="number" min="0" max="100"
+                      value={finance.margin ?? ''}
+                      onChange={e => f(setFinance, 'margin', parseFloat(e.target.value) || 0)}
+                      placeholder={t('finance.marginPlaceholder')} className={inputCls} />
                   </div>
                 </div>
 
                 <div>
-                  <label className={labelCls}>{t('step2.seniority')} *</label>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-1">
-                    {SENIORITY_KEYS.map(k => (
-                      <button
-                        key={k}
-                        onClick={() => set('seniority', k)}
-                        className={`border px-4 py-3 font-sans text-[12px] text-left transition-colors ${
-                          form.seniority === k
-                            ? 'border-ag-black bg-ag-black text-white'
-                            : 'border-ag-border text-ag-black hover:border-ag-black'
-                        }`}
-                      >
-                        {t(`step2.seniorityOptions.${k}`)}
-                      </button>
-                    ))}
-                  </div>
+                  <label className={labelCls}>{t('finance.seniority')} *</label>
+                  <RadioGroup
+                    options={(['under1','one_to_three','above3'] as const).map(k => ({ key: k, label: t(`finance.seniorityOptions.${k}`) }))}
+                    value={finance.seniority ?? ''}
+                    onChange={v => f(setFinance, 'seniority', v)}
+                  />
                 </div>
 
-                <div className="flex gap-3">
-                  <button
-                    onClick={() => setStep(1)}
-                    className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-5 py-4 hover:border-ag-black transition-colors"
-                  >
-                    <ChevronLeft size={13} /> {t('back')}
-                  </button>
-                  <button
-                    disabled={!canNext()}
-                    onClick={() => setStep(3)}
-                    className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-navy-mid transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-                  >
-                    {t('next')} <ChevronRight size={13} />
-                  </button>
+                <div>
+                  <label className={labelCls}>{t('finance.arrAudited')} *</label>
+                  <RadioGroup
+                    options={(['yes','no','not_yet'] as const).map(k => ({ key: k, label: t(`finance.arrAuditedOptions.${k}`) }))}
+                    value={finance.arrAudited ?? ''}
+                    onChange={v => f(setFinance, 'arrAudited', v)}
+                  />
                 </div>
+
+                <NavButtons canAdvance={canAdvance()} onNext={advance} showBack={false} onBack={back} nextLabel={t('next')} backLabel={t('back')} />
               </div>
             )}
 
-            {/* ── Step 3 ── */}
-            {step === 3 && (
+            {/* STEP — CODE */}
+            {step === 'code' && (
               <div className="flex flex-col gap-6">
-                <div className="flex items-center justify-between border-b border-ag-border pb-4">
-                  <h2 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em]">
-                    {t('step3.title')}
-                  </h2>
-                  <span className="font-sans text-[11px] text-ag-gray-light">
-                    {t('progress.step')} 3 {t('progress.of')} 3
-                  </span>
-                </div>
+                <StepHeader title={t('code.title')} subtitle={t('code.subtitle')} step={2} total={4} t={t} />
 
-                <div>
-                  <label className={labelCls}>{t('step3.ip')} *</label>
-                  <div className="flex gap-4 mt-1 flex-wrap">
-                    {IP_KEYS.map(k => (
-                      <button
-                        key={k}
-                        onClick={() => set('ip', k)}
-                        className={`border px-5 py-2.5 font-sans text-[12px] transition-colors ${
-                          form.ip === k
-                            ? 'border-ag-black bg-ag-black text-white'
-                            : 'border-ag-border text-ag-black hover:border-ag-black'
-                        }`}
-                      >
-                        {t(`step3.ip${k.charAt(0).toUpperCase() + k.slice(1)}` as Parameters<typeof t>[0])}
-                      </button>
-                    ))}
+                {([ 
+                  { key: 'tests',    label: t('code.tests'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`code.testsOptions.${k}`) })) },
+                  { key: 'docs',     label: t('code.docs'),     opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`code.docsOptions.${k}`) })) },
+                  { key: 'cicd',     label: t('code.cicd'),     opts: (['yes','no'] as const).map(k => ({ key: k, label: t(`code.cicdOptions.${k}`) })) },
+                  { key: 'techDebt', label: t('code.techDebt'), opts: (['documented','known','unknown'] as const).map(k => ({ key: k, label: t(`code.techDebtOptions.${k}`) })) },
+                  { key: 'deps',     label: t('code.deps'),     opts: (['under1y','one_to_two','above2y','unknown'] as const).map(k => ({ key: k, label: t(`code.depsOptions.${k}`) })) },
+                ] as { key: keyof CodeData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
+                  <div key={key as string}>
+                    <label className={labelCls}>{label} *</label>
+                    <RadioGroup
+                      options={opts as {key: never; label: string}[]}
+                      value={(code[key] ?? '') as never}
+                      onChange={(v) => f(setCode, key, v)}
+                    />
                   </div>
-                </div>
+                ))}
 
                 <div>
-                  <label className={labelCls}>{t('step3.stack')} *</label>
-                  <select
-                    value={form.stack}
-                    onChange={e => set('stack', e.target.value)}
-                    className={selectCls}
-                  >
-                    <option value="">{t('step3.stackPlaceholder')}</option>
-                    {STACK_KEYS.map(k => (
-                      <option key={k} value={k}>{t(`step3.stackOptions.${k}`)}</option>
-                    ))}
-                  </select>
+                  <label className={labelCls}>{t('code.stack')}</label>
+                  <input type="text"
+                    value={code.stack ?? ''}
+                    onChange={e => f(setCode, 'stack', e.target.value)}
+                    placeholder={t('code.stackPlaceholder')} className={inputCls} />
                 </div>
 
-                <div className="flex gap-3">
-                  <button
-                    onClick={() => setStep(2)}
-                    className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-5 py-4 hover:border-ag-black transition-colors"
-                  >
-                    <ChevronLeft size={13} /> {t('back')}
-                  </button>
-                  <button
-                    disabled={!canNext()}
-                    onClick={handleCalculate}
-                    className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-bold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-                  >
-                    <TrendingUp size={13} /> {t('calculate')}
-                  </button>
-                </div>
+                <NavButtons canAdvance={canAdvance()} onNext={advance} showBack onBack={back} nextLabel={t('next')} backLabel={t('back')} />
               </div>
             )}
 
-            {/* ── Result ── */}
-            {step === 4 && result && (
-              <div className="flex flex-col gap-8">
-                <div className="flex items-center justify-between border-b border-ag-border pb-4">
-                  <h2 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em]">
-                    {t('result.title')}
-                  </h2>
-                  <button
-                    onClick={restart}
-                    className="inline-flex items-center gap-1.5 font-sans text-[11px] text-ag-gray-light hover:text-ag-black transition-colors"
-                  >
-                    <RotateCcw size={12} /> {t('result.restart')}
-                  </button>
-                </div>
+            {/* STEP — IP */}
+            {step === 'ip' && (
+              <div className="flex flex-col gap-6">
+                <StepHeader title={t('ip.title')} subtitle={t('ip.subtitle')} step={3} total={4} t={t} />
 
-                {/* Range cards */}
-                <div className={`grid gap-4 ${result.isPremium ? 'grid-cols-1 sm:grid-cols-3' : 'grid-cols-1 sm:grid-cols-2'}`}>
-
-                  {/* Conservative */}
-                  <div className="border border-ag-border p-6 flex flex-col gap-3">
-                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light">
-                      {t('result.conservative.label')}
-                    </p>
-                    <p className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em]">
-                      {fmtEur(result.conservative.min)} — {fmtEur(result.conservative.max)}
-                    </p>
-                    <p className="font-sans text-[10px] text-ag-gray-light">
-                      {t('result.arrMultiple')} : {result.conservative.multiple}x
-                    </p>
-                    <p className="font-sans text-[11px] text-ag-gray mt-auto">{t('result.conservative.hint')}</p>
+                {([
+                  { key: 'trademark',    label: t('ip.trademark'),    opts: (['yes','pending','no'] as const).map(k => ({ key: k, label: t(`ip.trademarkOptions.${k}`) })) },
+                  { key: 'copyright',    label: t('ip.copyright'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`ip.copyrightOptions.${k}`) })) },
+                  { key: 'opensource',   label: t('ip.opensource'),   opts: (['clean','gpl','unaudited'] as const).map(k => ({ key: k, label: t(`ip.opensourceOptions.${k}`) })) },
+                  { key: 'apiContracts', label: t('ip.apiContracts'), opts: (['yes','partial','no'] as const).map(k => ({ key: k, label: t(`ip.apiContractsOptions.${k}`) })) },
+                ] as { key: keyof IPData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
+                  <div key={key as string}>
+                    <label className={labelCls}>{label} *</label>
+                    <RadioGroup
+                      options={opts as {key: never; label: string}[]}
+                      value={(ip[key] ?? '') as never}
+                      onChange={(v) => f(setIp, key, v)}
+                    />
                   </div>
+                ))}
 
-                  {/* Median */}
-                  <div className="border-2 border-ag-navy p-6 flex flex-col gap-3 relative">
-                    <span className="absolute top-3 right-3 font-sans font-bold text-[9px] uppercase tracking-[0.2em] text-ag-apex bg-ag-navy px-2 py-1">
-                      2026
-                    </span>
-                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-navy">
-                      {t('result.median.label')}
-                    </p>
-                    <p className="font-sans font-bold text-ag-navy text-[22px] tracking-[-0.02em]">
-                      {fmtEur(result.median.min)} — {fmtEur(result.median.max)}
-                    </p>
-                    <p className="font-sans text-[10px] text-ag-gray-light">
-                      {t('result.arrMultiple')} : {result.median.multiple}x
-                    </p>
-                    <p className="font-sans text-[11px] text-ag-gray mt-auto">{t('result.median.hint')}</p>
-                  </div>
-
-                  {/* Premium — conditionnel */}
-                  {result.isPremium && result.premium && (
-                    <div className="border border-ag-apex p-6 flex flex-col gap-3 bg-ag-navy">
-                      <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-apex">
-                        {t('result.premium.label')}
-                      </p>
-                      <p className="font-sans font-bold text-white text-[22px] tracking-[-0.02em]">
-                        {fmtEur(result.premium.min)} — {fmtEur(result.premium.max)}
-                      </p>
-                      <p className="font-sans text-[10px] text-white/50">
-                        {t('result.arrMultiple')} : {result.premium.multiple}x
-                      </p>
-                      <p className="font-sans text-[11px] text-white/60 mt-auto">{t('result.premium.hint')}</p>
-                    </div>
-                  )}
-                </div>
-
-                {/* Basis */}
-                <div className="flex flex-wrap gap-6 border-t border-ag-border pt-4">
-                  {[
-                    { l: 'ARR',     v: fmtEur(result.arr) },
-                    { l: 'YoY',     v: `${form.growth}%` },
-                    { l: 'Churn',   v: `${form.churn}%/mois` },
-                    { l: 'NRR',     v: `${form.nrr}%` },
-                    { l: 'Marge',   v: `${form.margin}%` },
-                  ].map(({ l, v }) => (
-                    <div key={l}>
-                      <p className="font-sans text-[10px] text-ag-gray-light uppercase tracking-[0.18em]">{l}</p>
-                      <p className="font-sans font-bold text-ag-black text-[13px]">{v}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Grade hint */}
-                <div className="border border-ag-apex/30 bg-ag-off-white p-6 flex flex-col gap-4">
-                  <p className="font-sans text-[13px] text-ag-black leading-relaxed">{t('result.gradeHint')}</p>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Link
-                      href="/grade/submit"
-                      className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3 hover:bg-ag-navy-mid transition-colors"
-                    >
-                      {t('result.ctaGrade')} <ArrowUpRight size={12} />
-                    </Link>
-                    <Link
-                      href="/auction/assessment-days"
-                      className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3 hover:border-ag-black transition-colors"
-                    >
-                      {t('result.ctaAssessment')} <ArrowUpRight size={12} />
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Email capture */}
-                <div className="border border-ag-border p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Mail size={16} className="text-ag-gray-light" />
-                    <p className="font-sans font-bold text-ag-black text-[14px]">{t('result.emailTitle')}</p>
-                  </div>
-                  <p className="font-sans text-[12px] text-ag-gray mb-5 leading-relaxed">{t('result.emailDesc')}</p>
-
-                  {emailSent ? (
-                    <div className="flex items-center gap-2 text-ag-apex">
-                      <CheckCircle2 size={16} />
-                      <span className="font-sans font-semibold text-[12px]">{t('result.emailSuccess')}</span>
-                    </div>
-                  ) : (
-                    <form onSubmit={sendEmail} className="flex gap-3">
-                      <input
-                        type="email" required value={email}
-                        onChange={e => setEmail(e.target.value)}
-                        placeholder={t('result.emailPlaceholder')}
-                        className={`${inputCls} flex-1`}
-                      />
-                      <button
-                        type="submit"
-                        disabled={emailLoading}
-                        className="shrink-0 bg-ag-black text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3 hover:bg-ag-navy transition-colors disabled:opacity-60"
-                      >
-                        {emailLoading ? t('result.emailSending') : t('result.emailSubmit')}
-                      </button>
-                    </form>
-                  )}
-                  {emailErr && (
-                    <p className="font-sans text-[11px] text-red-500 mt-2">{t('result.emailError')}</p>
-                  )}
-                </div>
-
-                {/* Disclaimer */}
-                <p className="font-sans text-[11px] text-ag-gray-light leading-relaxed border-t border-ag-border pt-4">
-                  {t('result.disclaimer')}
-                </p>
+                <NavButtons canAdvance={canAdvance()} onNext={advance} showBack onBack={back} nextLabel={t('next')} backLabel={t('back')} />
               </div>
+            )}
+
+            {/* STEP — SECURITY */}
+            {step === 'security' && (
+              <div className="flex flex-col gap-6">
+                <StepHeader title={t('security.title')} subtitle={t('security.subtitle')} step={4} total={4} t={t} />
+
+                {([
+                  { key: 'pentest', label: t('security.pentest'), opts: (['under6m','six_to_12m','above12m','never'] as const).map(k => ({ key: k, label: t(`security.pentestOptions.${k}`) })) },
+                  { key: 'gdpr',    label: t('security.gdpr'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`security.gdprOptions.${k}`) })) },
+                  { key: 'mfa',     label: t('security.mfa'),     opts: (['yes','no'] as const).map(k => ({ key: k, label: t(`security.mfaOptions.${k}`) })) },
+                  { key: 'secrets', label: t('security.secrets'), opts: (['vault','partial','none'] as const).map(k => ({ key: k, label: t(`security.secretsOptions.${k}`) })) },
+                ] as { key: keyof SecurityData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
+                  <div key={key as string}>
+                    <label className={labelCls}>{label} *</label>
+                    <RadioGroup
+                      options={opts as {key: never; label: string}[]}
+                      value={(security[key] ?? '') as never}
+                      onChange={(v) => f(setSecurity, key, v)}
+                    />
+                  </div>
+                ))}
+
+                <NavButtons canAdvance={canAdvance()} onNext={advance} showBack onBack={back} nextLabel={t('calculate')} backLabel={t('back')} isLast />
+              </div>
+            )}
+
+            {/* STEP — RESULT */}
+            {step === 'result' && result && (
+              <ResultPanel result={result} finance={finance} t={t}
+                email={email} setEmail={setEmail}
+                emailSent={emailSent} emailErr={emailErr} emailLoading={emailLoading}
+                onEmailSubmit={sendEmail} onRestart={restart}
+              />
             )}
 
           </div>
         </div>
       </section>
-
     </main>
+  )
+}
+
+/* ─── Sub-components ─────────────────────────────────────── */
+
+function StepHeader({ title, subtitle, step, total, t }: {
+  title: string; subtitle: string; step: number; total: number
+  t: ReturnType<typeof useTranslations>
+}) {
+  return (
+    <div className="border-b border-ag-border pb-4">
+      <div className="flex items-center justify-between mb-1">
+        <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">{title}</h2>
+        <span className="font-sans text-[11px] text-ag-gray-light">
+          {t('progress.step')} {step} {t('progress.of')} {total}
+        </span>
+      </div>
+      <p className="font-sans text-[11px] text-ag-apex font-semibold uppercase tracking-[0.18em]">{subtitle}</p>
+    </div>
+  )
+}
+
+function NavButtons({ canAdvance, onNext, showBack, onBack, nextLabel, backLabel, isLast }: {
+  canAdvance: boolean; onNext: () => void; showBack: boolean; onBack: () => void
+  nextLabel: string; backLabel: string; isLast?: boolean
+}) {
+  return (
+    <div className="flex gap-3 pt-2">
+      {showBack && (
+        <button type="button" onClick={onBack}
+          className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-5 py-3.5 hover:border-ag-black transition-colors">
+          <ChevronLeft size={12} /> {backLabel}
+        </button>
+      )}
+      <button type="button" disabled={!canAdvance} onClick={onNext}
+        className={`inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-3.5 transition-colors disabled:opacity-40 disabled:cursor-not-allowed ${
+          isLast
+            ? 'bg-ag-apex text-ag-navy hover:bg-white'
+            : 'bg-ag-navy text-white hover:bg-ag-navy-mid'
+        }`}>
+        {nextLabel} <ChevronRight size={12} />
+      </button>
+    </div>
+  )
+}
+
+function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr, emailLoading, onEmailSubmit, onRestart }: {
+  result: ValuationResult
+  finance: Partial<FinanceData>
+  t: ReturnType<typeof useTranslations>
+  email: string; setEmail: (v: string) => void
+  emailSent: boolean; emailErr: boolean; emailLoading: boolean
+  onEmailSubmit: (e: React.FormEvent) => void
+  onRestart: () => void
+}) {
+  const { grade, scores, range, preRevenue, preRevenueScore, weakestDim, strongestDim } = result
+  const prRange = preRevenue ? preRevenueRange(preRevenueScore) : null
+
+  const dimKeys = ['finance', 'code', 'ip', 'security'] as const
+  const dimLabels: Record<string, string> = {
+    finance: t('steps.finance'), code: t('steps.code'),
+    ip: t('steps.ip'), security: t('steps.security'),
+  }
+
+  return (
+    <div className="flex flex-col gap-8">
+
+      {/* Header */}
+      <div className="flex items-center justify-between border-b border-ag-border pb-4">
+        <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">
+          {t('result.gradeTitle')}
+        </h2>
+        <button onClick={onRestart} className="inline-flex items-center gap-1.5 font-sans text-[11px] text-ag-gray-light hover:text-ag-black transition-colors">
+          <RotateCcw size={12} /> {t('result.restart')}
+        </button>
+      </div>
+
+      {/* Grade + score hero */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 p-8 border border-ag-border bg-ag-off-white">
+        <div className="flex items-center justify-center w-28 h-28 border-2 border-current shrink-0 flex-col gap-0.5" style={{ color: grade.grade === '★' ? '#5ADDA4' : grade.grade === 'AAA' ? '#2563eb' : grade.grade === 'AA' ? '#16a34a' : grade.grade === 'A' ? '#ca8a04' : '#6b7280' }}>
+          {grade.grade === '★' ? (
+            <span className="font-sans font-bold text-[36px] leading-none">★</span>
+          ) : grade.grade === 'NG' ? (
+            <span className="font-sans font-bold text-[18px] leading-none text-ag-gray-light">N/G</span>
+          ) : (
+            <>
+              <span className="font-sans font-semibold text-[9px] tracking-[0.2em] opacity-60">AEG</span>
+              <span className="font-sans font-bold text-[28px] leading-none">{grade.grade}</span>
+            </>
+          )}
+        </div>
+        <div className="flex flex-col gap-2">
+          <p className="font-sans text-[13px] text-ag-gray-light">
+            {t('result.scoreLabel')} : <span className="font-bold text-ag-black text-[22px] tracking-tight">{scores.total}</span>
+            <span className="text-[14px] text-ag-gray-light"> {t('result.outOf')}</span>
+          </p>
+          {!preRevenue && range && (
+            <>
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
+                {t('result.rangeTitle')}
+              </p>
+              <p className="font-sans font-bold text-ag-black text-[24px] tracking-[-0.02em] leading-tight">
+                {fmtEur(range.low)} — {fmtEur(range.high)}
+              </p>
+              <p className="font-sans text-[11px] text-ag-gray-light">
+                {t('result.medianLabel')} : {fmtEur(range.median)} · {t('result.multipleLabel')} : {grade.multLow}x – {grade.multHigh}x
+              </p>
+              {finance.arr !== undefined && (
+                <p className="font-sans text-[11px] text-ag-gray-light">
+                  {t('result.basisLabel')} {fmtEur(finance.arr)}
+                </p>
+              )}
+            </>
+          )}
+          {preRevenue && prRange && (
+            <>
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">{t('result.preRevenueTitle')}</p>
+              <p className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em]">
+                {fmtEur(prRange.low)} — {fmtEur(prRange.high)}
+              </p>
+              <p className="font-sans text-[11px] text-ag-gray-light leading-relaxed">{t('result.preRevenueDesc')}</p>
+            </>
+          )}
+        </div>
+      </div>
+
+      {/* Dimension breakdown */}
+      <div className="border border-ag-border p-6 flex flex-col gap-5">
+        <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light">
+          {t('result.dimBreakdown')}
+        </p>
+        {dimKeys.map(dim => (
+          <div key={dim} className="flex flex-col gap-2">
+            <div className="flex items-center justify-between">
+              <span className="font-sans font-semibold text-[12px] text-ag-black">{dimLabels[dim]}</span>
+              <span className="font-sans text-[11px] text-ag-gray-light">{t('result.dimMax')}</span>
+            </div>
+            <ScoreBar score={scores[dim as keyof typeof scores] as number} />
+          </div>
+        ))}
+      </div>
+
+      {/* Diagnostic */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="border border-red-100 bg-red-50 p-5 flex flex-col gap-2">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.18em] text-red-500">
+            {t('result.weakTitle')}
+          </p>
+          <p className="font-sans text-[12px] text-ag-black leading-relaxed">
+            {t(`result.weakMessages.${weakestDim}`)}
+          </p>
+        </div>
+        <div className="border border-emerald-100 bg-emerald-50 p-5 flex flex-col gap-2">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.18em] text-emerald-600">
+            {t('result.strongTitle')}
+          </p>
+          <p className="font-sans text-[12px] text-ag-black leading-relaxed">
+            {t(`result.strongMessages.${strongestDim}`)}
+          </p>
+        </div>
+      </div>
+
+      {/* Special notes */}
+      {preRevenue && (
+        <div className="border border-ag-apex/30 bg-ag-off-white p-5">
+          <p className="font-sans text-[12px] text-ag-black leading-relaxed">{t('result.preRevenueNote')}</p>
+        </div>
+      )}
+      {grade.grade === 'NG' && (
+        <div className="border border-ag-border p-5">
+          <p className="font-sans text-[12px] text-ag-black leading-relaxed">{t('result.ngNote')}</p>
+        </div>
+      )}
+
+      {/* CTAs */}
+      <div className="flex flex-col sm:flex-row gap-3">
+        <Link href="/grade/submit"
+          className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors">
+          {t('result.ctaGrade')} <ArrowUpRight size={12} />
+        </Link>
+        <Link href="/auction/assessment-days"
+          className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:border-ag-black transition-colors">
+          {t('result.ctaAssessment')} <ArrowUpRight size={12} />
+        </Link>
+      </div>
+
+      {/* Email capture */}
+      <div className="border border-ag-border p-6 flex flex-col gap-4">
+        <div className="flex items-center gap-3">
+          <Mail size={15} className="text-ag-gray-light shrink-0" />
+          <p className="font-sans font-bold text-ag-black text-[14px]">{t('result.emailTitle')}</p>
+        </div>
+        <p className="font-sans text-[12px] text-ag-gray leading-relaxed">{t('result.emailDesc')}</p>
+        {emailSent ? (
+          <div className="flex items-center gap-2 text-emerald-600">
+            <CheckCircle2 size={15} />
+            <span className="font-sans font-semibold text-[12px]">{t('result.emailSuccess')}</span>
+          </div>
+        ) : (
+          <form onSubmit={onEmailSubmit} className="flex gap-3">
+            <input type="email" required value={email} onChange={e => setEmail(e.target.value)}
+              placeholder={t('result.emailPlaceholder')}
+              className={`${inputCls} flex-1`} />
+            <button type="submit" disabled={emailLoading}
+              className="shrink-0 bg-ag-black text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3 hover:bg-ag-navy transition-colors disabled:opacity-60">
+              {emailLoading ? t('result.emailSending') : t('result.emailSubmit')}
+            </button>
+          </form>
+        )}
+        {emailErr && <p className="font-sans text-[11px] text-red-500">{t('result.emailError')}</p>}
+      </div>
+
+      {/* Disclaimer */}
+      <p className="font-sans text-[11px] text-ag-gray-light leading-relaxed border-t border-ag-border pt-4">
+        {t('result.disclaimer')}
+      </p>
+    </div>
   )
 }

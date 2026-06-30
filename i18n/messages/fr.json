@@ -1636,34 +1636,36 @@
   "valuation": {
     "meta": {
       "title": "Estimez la valeur de votre actif tech — AEGRYN Valuation",
-      "desc": "Calculatrice de valorisation SaaS B2B. Obtenez en 3 étapes une fourchette conservative, médiane et premium basée sur les multiples ARR du marché 2026."
+      "desc": "Calculatrice de valorisation SaaS B2B basée sur le protocole de grade AEGRYN. 4 dimensions, score sur 100, grade estimé et fourchette de valorisation. Gratuit. Confidentiel."
     },
     "hero": {
       "label": "AEGRYN VALUATION",
       "title": "Estimez la valeur\nde votre actif.",
-      "desc": "En 3 étapes, notre calculatrice vous donne une fourchette de valorisation basée sur les multiples ARR observés sur le marché tech européen 2026. Gratuit. Confidentiel. Sans engagement."
+      "desc": "Notre calculatrice simule le protocole de grade AEGRYN sur 4 dimensions — Finance, Code, IP, Sécurité — et vous donne une fourchette de valorisation calibrée sur les multiples du marché 2026. Gratuit. Confidentiel. Sans engagement."
     },
     "progress": {
       "step": "Étape",
       "of": "sur"
     },
-    "step1": {
-      "title": "Métriques de revenus",
+    "steps": {
+      "finance": "Finance",
+      "code": "Code",
+      "ip": "IP & Droits",
+      "security": "Sécurité"
+    },
+    "finance": {
+      "title": "Données financières",
+      "subtitle": "Dimension F — Finance (0–25 pts)",
       "arr": "ARR annuel (€)",
       "arrPlaceholder": "Ex. 500000",
-      "arrHint": "Annual Recurring Revenue en euros",
-      "mrr": "MRR mensuel (€, optionnel)",
-      "mrrPlaceholder": "Ex. 41667",
+      "arrHint": "Entrez 0 si vous êtes pre-revenue",
       "growth": "Croissance YoY (%)",
       "growthPlaceholder": "Ex. 35",
       "churn": "Churn mensuel (%)",
-      "churnPlaceholder": "Ex. 2.5"
-    },
-    "step2": {
-      "title": "Qualité de la base clients",
+      "churnPlaceholder": "Ex. 2.5",
       "nrr": "NRR — Net Revenue Retention (%)",
-      "nrrPlaceholder": "Ex. 115",
-      "nrrHint": "> 100% = expansion nette",
+      "nrrPlaceholder": "Ex. 110",
+      "nrrHint": "> 100% = expansion nette. Calculé comme (MRR fin de période - nouveaux MRR) / MRR début × 100",
       "margin": "Marge brute (%)",
       "marginPlaceholder": "Ex. 72",
       "seniority": "Ancienneté de l'actif",
@@ -1671,56 +1673,170 @@
         "under1": "Moins de 12 mois",
         "one_to_three": "1 à 3 ans",
         "above3": "Plus de 3 ans"
+      },
+      "arrAudited": "ARR audité par expert-comptable ?",
+      "arrAuditedOptions": {
+        "yes": "Oui",
+        "no": "Non",
+        "not_yet": "Pas encore"
       }
     },
-    "step3": {
-      "title": "IP & Stack technique",
-      "ip": "IP déposée ?",
-      "ipYes": "Oui",
-      "ipNo": "Non",
-      "ipPending": "En cours",
+    "code": {
+      "title": "Qualité du code",
+      "subtitle": "Dimension C — Code (0–25 pts)",
+      "tests": "Tests automatisés en place ?",
+      "testsOptions": {
+        "full": "Oui, couverture complète",
+        "partial": "Partiel",
+        "none": "Non"
+      },
+      "docs": "Documentation technique ?",
+      "docsOptions": {
+        "full": "Complète",
+        "partial": "Partielle",
+        "none": "Absente"
+      },
+      "cicd": "CI/CD configuré ?",
+      "cicdOptions": {
+        "yes": "Oui",
+        "no": "Non"
+      },
+      "techDebt": "Dette technique connue ?",
+      "techDebtOptions": {
+        "documented": "Documentée et chiffrée",
+        "known": "Identifiée, non chiffrée",
+        "unknown": "Non évaluée"
+      },
+      "deps": "Dépendances à jour ?",
+      "depsOptions": {
+        "under1y": "Mises à jour < 1 an",
+        "one_to_two": "1 à 2 ans",
+        "above2y": "> 2 ans",
+        "unknown": "Inconnu"
+      },
       "stack": "Stack principale",
-      "stackPlaceholder": "Sélectionner",
-      "stackOptions": {
-        "saas_b2b": "SaaS B2B",
-        "marketplace": "Marketplace",
-        "mobile": "App mobile",
-        "protocol": "Protocole / infra",
-        "ip_only": "IP pure / code only",
-        "other": "Autre"
+      "stackPlaceholder": "Ex. Next.js, Supabase, Python"
+    },
+    "ip": {
+      "title": "Propriété intellectuelle",
+      "subtitle": "Dimension I — IP & Droits (0–25 pts)",
+      "trademark": "Marque déposée ?",
+      "trademarkOptions": {
+        "yes": "Oui (pays ou zone précisée)",
+        "pending": "En cours",
+        "no": "Non"
+      },
+      "copyright": "Droits logiciels formalisés ?",
+      "copyrightOptions": {
+        "full": "Cession de droits signée",
+        "partial": "Partielle",
+        "none": "Non formalisée"
+      },
+      "opensource": "Dépendances open source critiques ?",
+      "opensourceOptions": {
+        "clean": "Conformes (MIT/Apache/BSD)",
+        "gpl": "GPL présent — à traiter",
+        "unaudited": "Non auditées"
+      },
+      "apiContracts": "Contrats APIs tierces en ordre ?",
+      "apiContractsOptions": {
+        "yes": "Oui",
+        "partial": "Partiellement",
+        "no": "Non"
+      }
+    },
+    "security": {
+      "title": "Sécurité & conformité",
+      "subtitle": "Dimension S — Sécurité (0–25 pts)",
+      "pentest": "Pentest réalisé ?",
+      "pentestOptions": {
+        "under6m": "Oui — il y a moins de 6 mois",
+        "six_to_12m": "Oui — il y a 6 à 12 mois",
+        "above12m": "Oui — il y a plus de 12 mois",
+        "never": "Jamais"
+      },
+      "gdpr": "Conformité RGPD ?",
+      "gdprOptions": {
+        "full": "Complète",
+        "partial": "Partielle",
+        "none": "Non évaluée"
+      },
+      "mfa": "Authentification forte (MFA) ?",
+      "mfaOptions": {
+        "yes": "Oui",
+        "no": "Non"
+      },
+      "secrets": "Gestion des secrets ?",
+      "secretsOptions": {
+        "vault": "Vault / chiffrement (ex. Doppler, AWS Secrets)",
+        "partial": "Partiellement sécurisé",
+        "none": "Non sécurisé"
       }
     },
     "next": "Étape suivante",
     "back": "Retour",
     "calculate": "Calculer ma valorisation",
     "result": {
-      "title": "Fourchette de valorisation indicative.",
-      "conservative": {
-        "label": "Conservative",
-        "hint": "Scénario prudent — acheteur exigeant"
+      "gradeTitle": "Votre grade estimé",
+      "scoreLabel": "Score",
+      "outOf": "/ 100",
+      "rangeTitle": "Fourchette de valorisation indicative",
+      "medianLabel": "Médiane",
+      "multipleLabel": "Multiple ARR",
+      "basisLabel": "Basé sur votre ARR de",
+      "dimBreakdown": "Détail par dimension",
+      "dimMax": "pts / 25",
+      "weakTitle": "Ce qui plombe votre score",
+      "strongTitle": "Ce qui tire votre score vers le haut",
+      "weakMessages": {
+        "finance": "Votre score Finance est le plus faible. Un ARR audité et un NRR > 100% sont les leviers les plus impactants.",
+        "code": "Votre dimension Code limite votre grade. Ajouter des tests automatisés et une CI/CD peut faire gagner 8 à 10 points.",
+        "ip": "Votre IP n'est pas encore sécurisée. C'est le facteur #1 qui limite votre grade — une marque déposée seule vaut +8 points.",
+        "security": "Aucun pentest récent. Les acquéreurs institutionnels exigent un rapport < 12 mois. C'est un bloquant fréquent en due diligence."
       },
-      "median": {
-        "label": "Médiane marché",
-        "hint": "Multiple médian SaaS B2B Europe 2026"
+      "strongMessages": {
+        "finance": "Vos métriques financières sont solides. Excellent signal pour les acquéreurs.",
+        "code": "Votre base de code est bien maintenue. Signal fort de maintenabilité pour l'acquéreur.",
+        "ip": "Votre propriété intellectuelle est correctement sécurisée. Bon signal de protection des actifs.",
+        "security": "Pentest récent et conformité RGPD en ordre. Excellent signal pour les acquéreurs institutionnels."
       },
-      "premium": {
-        "label": "Premium",
-        "hint": "NRR > 110% + croissance > 25% confirmés"
-      },
-      "basis": "Base de calcul",
-      "arrMultiple": "Multiple ARR",
-      "disclaimer": "Cette estimation est indicative. Elle ne constitue ni une offre, ni un engagement. La valorisation définitive dépend d'un audit complet et de la négociation avec les acquéreurs.",
-      "gradeHint": "Pour confirmer et maximiser cette valorisation, le processus de certification AEGRYN est l'étape suivante.",
-      "ctaGrade": "Soumettre pour certification",
-      "ctaAssessment": "Réserver un Assessment Day",
-      "emailTitle": "Recevoir mon estimation par email.",
-      "emailDesc": "Votre fourchette de valorisation complète, avec détail des multiples et recommandations.",
+      "preRevenueTitle": "Actif pre-revenue",
+      "preRevenueDesc": "Sans ARR, la valorisation est basée sur votre score IP et Code combiné. La fourchette indicative reflète la valeur de l'actif brut.",
+      "preRevenueRange": "Fourchette indicative",
+      "preRevenueNote": "Pour un actif pre-revenue, le grade AEGRYN C est l'étape naturelle. Il permet de valoriser l'IP et le code avant toute transaction.",
+      "ngNote": "Votre score actuel est en dessous du seuil de gradabilité. Un Assessment Day gratuit vous permettra d'identifier les 3 actions prioritaires.",
+      "disclaimer": "Cette estimation est indicative. Elle ne constitue ni une offre, ni un engagement financier. La valorisation définitive dépend d'un audit complet et de la négociation avec les acquéreurs. Les multiples utilisés sont issus des transactions AEGRYN et des données de marché SaaS B2B Europe 2026 (Aventis Advisors, SEG).",
+      "ctaGrade": "Démarrer ma certification officielle",
+      "ctaAssessment": "Réserver un Assessment Day gratuit",
+      "emailTitle": "Recevoir mon rapport détaillé par email.",
+      "emailDesc": "Score détaillé par dimension, fourchette complète, et les 3 actions prioritaires pour améliorer votre grade.",
       "emailPlaceholder": "Email professionnel",
       "emailSubmit": "Recevoir le rapport",
       "emailSending": "Envoi...",
       "emailSuccess": "Rapport envoyé. Vérifiez votre boîte.",
       "emailError": "Erreur — réessayez.",
       "restart": "Nouvelle estimation"
+    },
+    "marketContext": {
+      "label": "Contexte marché 2026",
+      "items": [
+        {
+          "value": "3,1x ARR",
+          "label": "Multiple médian SaaS B2B Europe"
+        },
+        {
+          "value": "6,9x ARR",
+          "label": "Grade AAA — top actifs certifiés"
+        },
+        {
+          "value": "2,8x ARR",
+          "label": "Actifs sans certification"
+        },
+        {
+          "value": "14,2 Md€",
+          "label": "Volume M&A SaaS Europe 2025"
+        }
+      ]
     }
   }
 }
