@@ -5,12 +5,13 @@
  *
  * Conditions d'accès :
  *  1. Utilisateur authentifié (session Supabase valide)
- *  2. Entrée active dans `auction_lot_access` pour ce lot
- *  3. Fenêtre d'accès non expirée (expires_at > now())
- *     La durée standard est de 30 jours à compter de l'ouverture de session.
+ *  2. Entrée active dans `auction_asset_access` pour cet actif
+ *  3. expires_at > now() ET session_closes_at > now()
+ *     La fenêtre max est 30 jours avant session_closes_at.
  *
- * Si l'une des conditions n'est pas remplie → message dédié, pas de 404
- * (pour éviter l'énumération de slugs).
+ * Tracking : chaque ouverture est enregistrée dans auction_access_log.
+ * URL révélée uniquement dans /client/auction — jamais par email.
+ * Si l'une des conditions n'est pas remplie → message dédié, pas de 404.
  */
 import { cookies }          from 'next/headers'
 import { redirect }         from 'next/navigation'
@@ -70,10 +71,10 @@ export default async function AuctionLotPage({ params }: Props) {
 
   const { data: lotRow } = await supa
     .from('auction_assets')
-    .select('id, status')
+    .select('id, status, session_closes_at')
     .eq('slug', slug)
     .eq('status', 'published')
-    .single() as { data: { id: string; status: string } | null }
+    .single() as { data: { id: string; status: string; session_closes_at: string | null } | null }
 
   if (!lotRow) {
     /* Lot inexistant ou non publié — même message que "pas d'accès" */
@@ -82,16 +83,20 @@ export default async function AuctionLotPage({ params }: Props) {
 
   const { data: access } = await supa
     .from('auction_asset_access')
-    .select('expires_at, status')
+    .select('id, expires_at, status')
     .eq('asset_id', lotRow.id)
     .eq('user_id', user.id)
-    .single() as { data: Pick<AuctionLotAccess, 'expires_at' | 'status'> | null }
+    .single() as { data: (Pick<AuctionLotAccess, 'expires_at' | 'status'> & { id: string }) | null }
 
+  const now = new Date()
   let accessState: AccessState = 'ok'
 
   if (!access || access.status !== 'active') {
     accessState = 'no_access'
-  } else if (new Date(access.expires_at) < new Date()) {
+  } else if (new Date(access.expires_at) < now) {
+    accessState = 'expired'
+  } else if (lotRow.session_closes_at && new Date(lotRow.session_closes_at) < now) {
+    /* Session d'enchère clôturée — accès révoqué automatiquement */
     accessState = 'expired'
   }
 
@@ -114,6 +119,14 @@ export default async function AuctionLotPage({ params }: Props) {
   if (!asset) {
     return <AccessDeniedScreen locale={locale} slug={slug} state="no_access" t={t} />
   }
+
+  /* ── 4. Tracking (fire-and-forget, ne bloque pas le rendu) ── */
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+  fetch(`${siteUrl}/api/auction/track-access`, {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify({ asset_id: lotRow.id, access_id: access!.id, page: 'dossier' }),
+  }).catch(() => { /* non-blocking */ })
 
   return (
     <main id="main" className="min-h-screen py-12 px-4" style={{ backgroundColor: '#FAF8F3' }}>
@@ -153,10 +166,10 @@ function AccessDeniedScreen({
         </div>
         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
           <Link
-            href={`/${locale}/auction/submit`}
+            href={`/${locale}/client/auction`}
             className="inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors"
           >
-            {t('requestAccessCta')} <ArrowUpRight size={12} />
+            Mon espace acquéreur <ArrowUpRight size={12} />
           </Link>
           <Link
             href={`/${locale}/auction/catalog`}

@@ -1,7 +1,9 @@
 'use client'
 
-import { ArrowRight, Lock } from 'lucide-react'
-import type { AssetTeaser } from '@/types/auction'
+import { useState }              from 'react'
+import { ArrowRight, Lock }      from 'lucide-react'
+import type { AssetTeaser }      from '@/types/auction'
+import DossierRequestModal       from './DossierRequestModal'
 
 const T = {
   ink:     '#0C0C0C',
@@ -48,11 +50,12 @@ function Tag({ children }: { children: React.ReactNode }) {
 }
 
 interface Props {
-  teaser:           AssetTeaser
-  onRequestDossier: () => void
+  teaser:  AssetTeaser
+  assetId: string
 }
 
-export default function AssetTeaserDocument({ teaser, onRequestDossier }: Props) {
+export default function AssetTeaserDocument({ teaser, assetId }: Props) {
+  const [showModal, setShowModal] = useState(false)
   if (!teaser) return null
 
   const {
@@ -161,9 +164,17 @@ export default function AssetTeaserDocument({ teaser, onRequestDossier }: Props)
         </div>
 
         {/* CTA */}
+        {showModal && (
+          <DossierRequestModal
+            assetId={assetId}
+            assetName={name}
+            onClose={() => setShowModal(false)}
+          />
+        )}
+
         <button
           type="button"
-          onClick={onRequestDossier}
+          onClick={() => setShowModal(true)}
           className="w-full flex items-center justify-center gap-2 py-3.5 rounded-sm transition-opacity hover:opacity-90"
           style={{ backgroundColor: T.ink }}
         >
