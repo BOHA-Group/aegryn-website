@@ -2385,207 +2385,207 @@
     "lotRef": "Kavel"
   },
   "legalNav": {
-    "termsUse": "Terms of Use",
-    "termsCgv": "Terms of Service",
+    "termsUse": "Gebruiksvoorwaarden",
+    "termsCgv": "Algemene voorwaarden",
     "privacy": "Privacy",
-    "security": "Security",
+    "security": "Beveiliging",
     "faq": "FAQ"
   },
   "termsUse": {
     "meta": {
-      "title": "Terms of Use — AEGRYN",
-      "desc": "Terms governing access to and use of the aegryn.com website."
+      "title": "Gebruiksvoorwaarden — AEGRYN",
+      "desc": "Voorwaarden voor toegang tot en gebruik van de website aegryn.com."
     },
-    "label": "Terms of Use",
-    "version": "Version: July 2026",
-    "intro": "These Terms of Use (\"Terms\") govern access to and use of the AEGRYN website at aegryn.com and any associated sites (the \"Site\"). By accessing the Site, you accept these Terms without reservation. AEGRYN Sàrl reserves the right to modify them at any time. Please check this page regularly.",
-    "s1Title": "Site Content",
-    "s1": "The Site and all its contents (texts, graphics, images, data, code, scripts, methodologies, rating systems) are protected by intellectual property rights applicable in Switzerland and the European Union. These contents are the exclusive property of AEGRYN Sàrl or its partners. Any reproduction, modification, distribution or commercial use without prior written authorisation is strictly prohibited.\n\nThe AEGRYN Grade methodology, the C/I/F/S evaluation protocol, grade reports, and all editorial content published on the Site are protected works. The use of robots, scrapers, automated scripts or any other data extraction method is prohibited.",
-    "s2Title": "Permitted Use",
-    "s2": "You may consult the Site for legitimate personal and professional purposes. Any use for fraudulent purposes, contrary to public order or good morals is prohibited. AEGRYN reserves the right to suspend or delete access for any user in violation of these Terms.",
-    "s3Title": "Registration and User Accounts",
-    "s3": "Access to the AEGRYN client space (buyer catalogue, certification tracking) is reserved for qualified members previously authorised by AEGRYN. You agree to provide accurate information and keep it up to date. You are responsible for the confidentiality of your credentials and any activity carried out under your account.",
-    "s4Title": "Accuracy of Information",
-    "s4": "Information published on the Site is provided for indicative purposes. In the event of any discrepancy between Site content and signed contractual documents (certification mandate, transaction conditions), the latter shall prevail.",
-    "s5Title": "Limitation of Liability",
-    "s5": "AEGRYN does not guarantee that the Site will be accessible without interruption or error-free. The Site is provided \"as is\". AEGRYN disclaims all liability for direct or indirect damages resulting from use or inability to use the Site.",
-    "s6Title": "External Links",
-    "s6": "The Site may contain links to third-party sites. AEGRYN is not responsible for the content of these sites and does not implicitly endorse them.",
-    "s7Title": "Intellectual Property",
-    "s7": "The AEGRYN Grade label, the AEGRYN trademark, the AE monogram, the C/I/F/S protocol, and all methodologies and reports produced by AEGRYN are the exclusive property of AEGRYN Sàrl. Any unauthorised use will be prosecuted.",
-    "s8Title": "Governing Law and Jurisdiction",
-    "s8": "These Terms are governed by Swiss law. Any dispute arising from these Terms shall be submitted to the exclusive jurisdiction of the courts of AEGRYN Sàrl's registered canton. If any clause is invalid, the remaining clauses remain applicable.",
-    "ctaCgv": "View Terms of Service",
-    "ctaPrivacy": "Privacy Policy"
+    "label": "Gebruiksvoorwaarden",
+    "version": "Versie: juli 2026",
+    "intro": "Deze Gebruiksvoorwaarden regelen de toegang tot en het gebruik van de AEGRYN-website op aegryn.com en alle bijbehorende websites. Door de website te bezoeken, aanvaardt u deze voorwaarden onvoorwaardelijk. AEGRYN Sàrl behoudt zich het recht voor deze op elk moment te wijzigen.",
+    "s1Title": "Website-inhoud",
+    "s1": "De website en al haar inhoud (teksten, grafische elementen, afbeeldingen, gegevens, code, scripts, methodologieën, beoordelingssystemen) zijn beschermd door intellectuele eigendomsrechten die van toepassing zijn in Zwitserland en de Europese Unie. Deze inhoud is uitsluitend eigendom van AEGRYN Sàrl of haar partners. Elke reproductie, wijziging, verspreiding of commercieel gebruik zonder voorafgaande schriftelijke toestemming is strikt verboden. Het gebruik van bots, scrapers of geautomatiseerde scripts voor gegevensextractie is verboden.",
+    "s2Title": "Toegestaan gebruik",
+    "s2": "U mag de website raadplegen voor legitieme persoonlijke en professionele doeleinden. Elk gebruik voor frauduleuze doeleinden of in strijd met de openbare orde is verboden. AEGRYN behoudt zich het recht voor de toegang van elke gebruiker die deze voorwaarden schendt, op te schorten of te verwijderen.",
+    "s3Title": "Registratie en gebruikersaccounts",
+    "s3": "De toegang tot de AEGRYN-klantenomgeving is voorbehouden aan gekwalificeerde leden die vooraf door AEGRYN zijn geautoriseerd. U verbindt zich ertoe nauwkeurige informatie te verstrekken en up-to-date te houden. U bent verantwoordelijk voor de vertrouwelijkheid van uw inloggegevens.",
+    "s4Title": "Juistheid van informatie",
+    "s4": "De op de website gepubliceerde informatie heeft slechts indicatieve waarde. Bij tegenstrijdigheid tussen de website-inhoud en ondertekende contractuele documenten, prevaleren de laatste.",
+    "s5Title": "Beperking van aansprakelijkheid",
+    "s5": "AEGRYN garandeert niet dat de website zonder onderbreking of foutloos toegankelijk is. De website wordt aangeboden zoals deze is. AEGRYN wijst alle aansprakelijkheid voor directe of indirecte schade als gevolg van het gebruik van de website af.",
+    "s6Title": "Externe links",
+    "s6": "De website kan links bevatten naar websites van derden. AEGRYN is niet verantwoordelijk voor de inhoud van deze websites.",
+    "s7Title": "Intellectueel eigendom",
+    "s7": "Het label AEGRYN Grade, het merk AEGRYN, het monogram AE, het C/I/F/S-protocol en alle methodologieën en rapporten die door AEGRYN zijn geproduceerd, zijn uitsluitend eigendom van AEGRYN Sàrl. Elk ongeoorloofd gebruik zal worden vervolgd.",
+    "s8Title": "Toepasselijk recht en bevoegde rechter",
+    "s8": "Deze voorwaarden zijn onderworpen aan het Zwitserse recht. Elk geschil valt onder de exclusieve bevoegdheid van de rechtbanken van het kanton waar AEGRYN Sàrl gevestigd is. Indien een clausule ongeldig is, blijven de overige clausules van toepassing.",
+    "ctaCgv": "Algemene voorwaarden bekijken",
+    "ctaPrivacy": "Privacybeleid"
   },
   "termsCgv": {
     "meta": {
-      "title": "Terms of Service — AEGRYN",
-      "desc": "Contractual conditions governing AEGRYN certification, transactions and services."
+      "title": "Algemene Verkoopvoorwaarden — AEGRYN",
+      "desc": "Contractuele voorwaarden voor AEGRYN-certificering, transacties en diensten."
     },
-    "label": "Terms of Service",
-    "version": "Version: July 2026",
-    "note": "This document constitutes the binding contractual reference. Precise pricing conditions are specified in the signed mandate or quote between the parties.",
-    "s1Title": "Definitions",
-    "defAegryn": "AEGRYN Sàrl, a company registered in Switzerland (CHE-XXX.XXX.XXX).",
-    "defAsset": "Any digital asset that may be certified and/or transferred via AEGRYN, including without limitation: software (SaaS, applications), codebases, digital intellectual property, trademarks associated with a digital asset, protocols.",
-    "defGrade": "Official certification of a tech asset under the C/I/F/S protocol, co-signed by external partners. Grade awarded: ★, AAA, AA, A, B.",
-    "defGradeEst": "Non-certified indicative opinion produced by an AEGRYN analyst without external co-signature. Never enforceable against third parties. Always suffixed \"(estimated)\" in all communications.",
-    "defPtt": "Contractual mechanism governing the transfer of a certified asset, including a 10% bank escrow of the agreed price.",
-    "defEscrow": "Amount deposited by the buyer with a third-party bank designated by AEGRYN. AEGRYN is never the custodian of these funds.",
-    "defSeller": "Any natural or legal person submitting a tech asset to the AEGRYN process.",
-    "defBuyer": "Any qualified AEGRYN member authorised to access the catalogue and submit offers.",
-    "s2Title": "Services Covered",
+    "label": "Algemene Verkoop- en Servicevoorwaarden",
+    "version": "Versie: juli 2026",
+    "note": "Dit document vormt de bindende contractuele referentie. De exacte tariefvoorwaarden worden gespecificeerd in het ondertekende mandaat of offerte tussen de partijen.",
+    "s1Title": "Definities",
+    "defAegryn": "AEGRYN Sàrl, in Zwitserland geregistreerde vennootschap (CHE-XXX.XXX.XXX).",
+    "defAsset": "Elk digitaal goed dat via AEGRYN kan worden gecertificeerd en/of overgedragen: software (SaaS, applicaties), codebases, digitaal intellectueel eigendom, merken gekoppeld aan een digitaal asset, protocollen.",
+    "defGrade": "Officiële certificering van een tech-asset volgens het C/I/F/S-protocol, mede-ondertekend door externe partners. Toegekende grades: ★, AAA, AA, A, B.",
+    "defGradeEst": "Niet-gecertificeerde indicatieve opinie van een AEGRYN-analist zonder externe medeondertekening. Nooit afdwingbaar jegens derden. Altijd voorzien van het achtervoegsel (geschat) in alle communicatie.",
+    "defPtt": "Contractueel mechanisme voor de overdracht van een gecertificeerd asset, inclusief een bankgarantie van 10% van de overeengekomen prijs.",
+    "defEscrow": "Bedrag dat door de koper is gestort bij een door AEGRYN aangewezen externe bank. AEGRYN is nooit bewaarder van deze middelen.",
+    "defSeller": "Elke natuurlijke of rechtspersoon die een tech-asset in het AEGRYN-proces indient.",
+    "defBuyer": "Elk gekwalificeerd AEGRYN-lid dat bevoegd is toegang te krijgen tot de catalogus en biedingen in te dienen.",
+    "s2Title": "Gedekte diensten",
     "s2ReviewTitle": "AEGRYN Review",
-    "s2Review": "Written opinion from an AEGRYN analyst on a submitted tech asset. Timeline: 5 working days. Not co-signed, not publishable in the catalogue. Indicative value only. Fully deductible from certification fees if the full process is started within 6 months.",
+    "s2Review": "Schriftelijke opinie van een AEGRYN-analist over een ingediend tech-asset. Doorlooptijd: 5 werkdagen. Niet mede-ondertekend, niet publiceerbaar in de catalogus. Slechts indicatieve waarde. Volledig aftrekbaar van de certificeringsvergoedingen als het volledige proces binnen 6 maanden wordt gestart.",
     "s2ReviewPlusTitle": "AEGRYN Review+",
-    "s2ReviewPlus": "Written opinion from an AEGRYN analyst supplemented by an external partner review. Timeline: 10 working days. Not co-signed in the sense of official certification, not publishable. Fully deductible under the same conditions.",
-    "s2CertTitle": "Auction Certification",
-    "s2Cert": "Full multi-dimensional audit process across all 4 C/I/F/S dimensions. Co-signed by a tech law firm, an accountant, a cybersecurity partner if applicable. Official AEG Grade awarded and publishable in the catalogue. Fees: success-based (commission on sale).",
+    "s2ReviewPlus": "Schriftelijke opinie van een AEGRYN-analist aangevuld met de beoordeling van een externe partner. Doorlooptijd: 10 werkdagen. Niet mede-ondertekend in de zin van de officiële certificering, niet publiceerbaar. Volledig aftrekbaar onder dezelfde voorwaarden.",
+    "s2CertTitle": "Auction-certificering",
+    "s2Cert": "Volledig multidimensionaal auditproces over alle 4 C/I/F/S-dimensies. Mede-ondertekend door een tech-advocatenkantoor, een accountant, een cybersecuritypartner indien van toepassing. Officieel AEG-grade toegekend en publiceerbaar in de catalogus. Vergoeding: op basis van succes (commissie bij verkoop).",
     "s2AdvisoryTitle": "AEGRYN Advisory",
-    "s2Advisory": "Strategic and operational support for assets undergoing remediation and re-submission. Fees on quote.",
-    "s3Title": "Submission Conditions",
-    "s3": "All assets are submitted via /grade/submit. Submission does not constitute a contractual commitment. AEGRYN has 5 working days to respond with a pre-screening. Less than 25% of submitted assets are accepted for full certification.",
-    "s3ObligTitle": "Submitter Obligations",
-    "s3Oblig": "The seller agrees to provide accurate and complete information, guarantee having the rights to transfer the asset, maintain confidentiality of the evaluation process, and not transfer the asset to a third party during the exclusive mandate period.",
-    "s4Title": "The Tech Transaction Promise (PTT)",
-    "s4EiTitle": "Expression of Interest (EoI)",
-    "s4Ei": "Non-binding. Transmitted by AEGRYN to the seller within 48 hours. No deposit required.",
-    "s4ApTitle": "Heads of Agreement (HoA)",
-    "s4Ap": "Formalisation of the agreed price and transaction structure. Signing the HoA creates the buyer's obligation to pay the escrow.",
+    "s2Advisory": "Strategische en operationele begeleiding van assets voor herstel en herindiening. Vergoeding op offerte.",
+    "s3Title": "Indieningsvoorwaarden",
+    "s3": "Alle assets worden ingediend via /grade/submit. De indiening vormt geen contractuele verbintenis. AEGRYN heeft 5 werkdagen om te reageren met een voorafgaande selectie. Minder dan 25% van de ingediende assets wordt geaccepteerd voor het volledige certificeringsproces.",
+    "s3ObligTitle": "Verplichtingen van de indiener",
+    "s3Oblig": "De verkoper verbindt zich ertoe nauwkeurige en volledige informatie te verstrekken, te garanderen dat hij de nodige rechten heeft om het asset over te dragen, de vertrouwelijkheid van het evaluatieproces te bewaren en het asset tijdens het exclusieve mandaat niet aan derden over te dragen.",
+    "s4Title": "De Tech-transactiebelofte (PTT)",
+    "s4EiTitle": "Intentieverklaring (IV)",
+    "s4Ei": "Niet-bindend. Binnen 48 uur door AEGRYN aan de verkoper doorgegeven. Geen storting vereist.",
+    "s4ApTitle": "Principe-akkoord (PA)",
+    "s4Ap": "Formalisering van de overeengekomen prijs en de transactiestructuur. De ondertekening van het PA schept de verplichting van de koper om de escrow te betalen.",
     "s4EscrowTitle": "Escrow",
-    "s4Escrow": "Amount: 10% of the agreed transaction price. Payment deadline: 5 working days following HoA signature. Custodian: third-party bank designated by AEGRYN. Dual signature required for any release.",
-    "s4RetractTitle": "Withdrawal Rules",
-    "s4RetractBuyer": "Buyer withdrawal without legitimate reason: escrow is awarded to the seller, less AEGRYN's handling commission.",
-    "s4RetractSeller": "Seller withdrawal without legitimate reason: escrow is fully returned to the buyer. The seller additionally pays an indemnity equal to the escrow amount.",
-    "s4RetractSusp": "Unfulfilled condition precedent (documented legitimate reason): escrow is fully returned to the buyer. The audit commission already paid remains due to AEGRYN.",
+    "s4Escrow": "Bedrag: 10% van de overeengekomen transactieprijs. Betalingstermijn: 5 werkdagen na ondertekening van het PA. Bewaarder: externe bank aangewezen door AEGRYN. Dubbele handtekening vereist voor elke vrijgave.",
+    "s4RetractTitle": "Herroepingsregels",
+    "s4RetractBuyer": "Herroeping door de koper zonder geldige reden: de escrow wordt toegewezen aan de verkoper, verminderd met de beheercommissie van AEGRYN.",
+    "s4RetractSeller": "Herroeping door de verkoper zonder geldige reden: de escrow wordt volledig terugbetaald aan de koper. De verkoper betaalt bovendien een vergoeding gelijk aan het escrow-bedrag.",
+    "s4RetractSusp": "Niet-vervulde opschortende voorwaarde (gedocumenteerde geldige reden): de escrow wordt volledig terugbetaald aan de koper. De reeds betaalde auditcommissie blijft bij AEGRYN.",
     "s4DdTitle": "Due Diligence (DD)",
-    "s4Dd": "Standard duration: 30 calendar days from escrow confirmation. The buyer accesses the full data room under NDA. Extension possible by mutual written agreement (maximum 30 additional days).",
-    "s4SigningTitle": "Signing & Closing",
-    "s4Signing": "At signing: KRYV Protocol certifies the codebase state via blockchain fingerprint. The balance (90%) is paid by the buyer. The bank releases the escrow. AEGRYN deducts its commission and pays the net balance to the seller. AEGRYN issues the official Transaction Certificate.",
-    "s5Title": "Liability",
-    "s5": "AEGRYN acts exclusively as intermediary and process operator. AEGRYN does not guarantee the outcome of a transaction, the future value of an asset, or post-transfer performance. In case of discrepancy between declared data and reality discovered during DD, AEGRYN's liability is limited to refunding certification fees received for the asset. Under no circumstances shall AEGRYN be liable for indirect damages, lost profits, or consequential damages.",
-    "s6Title": "Grade Dispute",
-    "s6": "Any dispute of the official Grade must be notified to AEGRYN in writing (certification@aegryn.com) within 30 calendar days of report delivery. AEGRYN undertakes to respond within 15 working days.",
-    "s7Title": "Transaction Confidentiality",
-    "s7": "AEGRYN never discloses the seller's identity to the buyer, nor the buyer's identity to the seller, without explicit agreement of both parties. Transaction data published in the results catalogue is systematically anonymised.",
-    "s8Title": "Anti-Money Laundering (AML/CFT)",
-    "s8": "In accordance with Swiss AML law and AMLD6, AEGRYN is required to verify the identity of all clients (KYC), identify beneficial owners (UBO ≥ 25%), and report suspicious transactions. In case of doubt, AEGRYN may suspend or cancel any process without prejudice.",
-    "s9Title": "Governing Law and Dispute Resolution",
-    "s9": "These Terms are governed by Swiss substantive law. Any dispute shall be submitted to the exclusive jurisdiction of the courts of AEGRYN Sàrl's registered canton. The parties will endeavour to resolve any dispute amicably within 30 days before any legal proceedings.",
-    "ctaContact": "Contact the AEGRYN team",
-    "ctaTermsUse": "Terms of Use"
+    "s4Dd": "Standaardduur: 30 kalenderdagen vanaf de bevestiging van de escrow. De koper krijgt toegang tot de volledige data room onder NDA. Verlenging mogelijk bij wederzijds schriftelijk akkoord (maximum 30 extra dagen).",
+    "s4SigningTitle": "Ondertekening en afsluiting",
+    "s4Signing": "Op de datum van ondertekening: KRYV Protocol certificeert de staat van de codebase via blockchain-vingerafdruk. Het saldo (90%) wordt door de koper betaald. De bank geeft de escrow vrij. AEGRYN trekt zijn commissie af en betaalt het nettosaldo aan de verkoper. AEGRYN geeft het officiële Transactiecertificaat af.",
+    "s5Title": "Aansprakelijkheid",
+    "s5": "AEGRYN handelt uitsluitend als tussenpersoon en procesoperator. AEGRYN garandeert noch de uitkomst van een transactie, noch de toekomstige waarde van een asset, noch de prestaties na overdracht. De aansprakelijkheid van AEGRYN is beperkt tot de terugbetaling van de ontvangen certificeringsvergoedingen voor het betrokken asset. AEGRYN is in geen geval aansprakelijk voor indirecte schade, gederfde winst of gevolgschade.",
+    "s6Title": "Betwisting van de Grade",
+    "s6": "Elke betwisting van de officiële Grade moet schriftelijk aan AEGRYN worden gemeld (certification@aegryn.com) binnen 30 kalenderdagen na afgifte van het rapport. AEGRYN verbindt zich ertoe binnen 15 werkdagen te antwoorden.",
+    "s7Title": "Vertrouwelijkheid van transacties",
+    "s7": "AEGRYN maakt de identiteit van de verkoper nooit bekend aan de koper, noch de identiteit van de koper aan de verkoper, zonder uitdrukkelijke instemming van beide partijen. Transactiegegevens die in de resultatencatalogus worden gepubliceerd, worden systematisch geanonimiseerd.",
+    "s8Title": "Witwasbestrijding (AML/CFT)",
+    "s8": "Overeenkomstig de Zwitserse witwasregelgeving en de AMLD6 is AEGRYN verplicht de identiteit van alle klanten te verifiëren (KYC), uiteindelijk begunstigden te identificeren (UBO >= 25%) en verdachte transacties te melden. Bij twijfel kan AEGRYN elk proces opschorten of annuleren zonder nadeel.",
+    "s9Title": "Toepasselijk recht en geschillenbeslechting",
+    "s9": "Deze voorwaarden zijn onderworpen aan het materiële Zwitserse recht. Elk geschil valt onder de exclusieve bevoegdheid van de rechtbanken van het kanton waar AEGRYN Sàrl gevestigd is. Partijen zullen trachten elk geschil binnen 30 dagen in der minne te schikken voordat zij de rechter inschakelen.",
+    "ctaContact": "Contact opnemen met het AEGRYN-team",
+    "ctaTermsUse": "Gebruiksvoorwaarden"
   },
   "privacy": {
     "meta": {
-      "title": "Privacy Policy — AEGRYN",
-      "desc": "How AEGRYN collects, processes and protects your personal data. Swiss LPD and GDPR compliant."
+      "title": "Privacybeleid — AEGRYN",
+      "desc": "Hoe AEGRYN uw persoonsgegevens verzamelt, verwerkt en beschermt. Conform de Zwitserse DSG en de AVG."
     },
-    "label": "Privacy Policy",
-    "updated": "Last updated: July 2026",
-    "langSelector": "Available in",
-    "intro": "Like most businesses operating in the financial and transaction sector, AEGRYN collects and processes data relating to its clients, partners and others who may be interested in its services. This notice explains the type of data we process, why we process it and how this may affect you.",
-    "s1Title": "Who we are",
-    "s1": "The data controller is AEGRYN Sàrl, a company registered in Switzerland (CHE-XXX.XXX.XXX). When you use our services (certification, transaction, advisory, catalogue), the data controller is AEGRYN Sàrl.",
-    "s2Title": "What data do we collect and how?",
-    "s2DirectTitle": "Data you provide directly",
-    "s2Direct": "Name, professional contact details, entity information, financial information (investment capacity, proof of funds), identity documents, entity documents, beneficial owner (UBO) information. Collected during registration, asset submission, Alliance application, Assessment Day booking, use of the valuation calculator or any communication.",
-    "s2AutoTitle": "Automatically collected data",
-    "s2Auto": "IP address, browser type, operating system, pages visited, visit duration — via cookies and similar technologies. See our Cookie Policy.",
-    "s2ThirdTitle": "Data from third parties",
-    "s2Third": "Public registers, identity verification and fraud prevention services, sanctions and politically exposed persons (PEP) databases.",
-    "s3Title": "Why do we process your data?",
-    "s3TablePurpose": "Purpose",
-    "s3TableData": "Data concerned",
-    "s3TableBasis": "Legal basis",
-    "s3Row1Purpose": "Providing requested services",
-    "s3Row1Data": "Identity, contact, financial data, documents",
-    "s3Row1Basis": "Contract performance",
-    "s3Row2Purpose": "Legal obligations (AML, AMLD6, KYC)",
-    "s3Row2Data": "Identity, UBO, source of funds, PEP",
-    "s3Row2Basis": "Legal obligation",
-    "s3Row3Purpose": "Anti-money laundering and fraud prevention",
-    "s3Row3Data": "Identity, transactions, documents",
-    "s3Row3Basis": "Legal obligation / Legitimate interests",
-    "s3Row4Purpose": "Site security and fraud prevention",
-    "s3Row4Data": "Navigation data, IP",
-    "s3Row4Basis": "Legitimate interests",
-    "s3Row5Purpose": "Service communications",
-    "s3Row5Data": "Email, preferences",
-    "s3Row5Basis": "Legitimate interests / Consent",
-    "s3Row6Purpose": "Historical transaction catalogue",
-    "s3Row6Data": "Anonymised data",
-    "s3Row6Basis": "Legitimate interests / Public interest",
-    "s4Title": "Who can access your data?",
-    "s4": "Within AEGRYN: team members with a legitimate operational need. Co-signatory partners: law firms, accountants, cybersecurity partners (subject to strict confidentiality obligations). Escrow bank: for escrow account management. Technical service providers: hosting, email, payment via Stripe. Authorities: when legally required. AEGRYN never sells your data to third parties.",
-    "s5Title": "International transfers",
-    "s5": "Data is hosted on servers in the European Union or Switzerland. For transfers to third countries, we implement appropriate safeguards (approved standard contractual clauses).",
-    "s6Title": "Retention",
-    "s6": "We retain your data as long as necessary for service delivery, legal and regulatory compliance (AML obligations: minimum 10 years after end of commercial relationship), and protection against claims. Anonymised historical catalogue data is retained indefinitely.",
-    "s7Title": "Your rights",
-    "s7": "Under Swiss LPD and GDPR: rights of access, rectification, erasure, objection, restriction and portability.",
-    "s7Contact": "To exercise these rights: dataprivacy@aegryn.com",
-    "s8Title": "Data security",
-    "s8": "Technical and organisational measures: encryption of sensitive data at rest and in transit, role-based access control (Supabase RLS), data room access logging, 2FA for admin access. In case of breach, notification of authorities and affected persons in accordance with Swiss LPD and GDPR.",
+    "label": "Privacybeleid",
+    "updated": "Laatste update: juli 2026",
+    "langSelector": "Beschikbaar in",
+    "intro": "Zoals de meeste bedrijven die actief zijn in de financiële en transactionele sector, verzamelt en verwerkt AEGRYN gegevens over zijn klanten, partners en andere personen die mogelijk geïnteresseerd zijn in zijn diensten. Dit beleid legt uit welk type gegevens we verwerken, waarom we ze verwerken en hoe dit u kan beïnvloeden.",
+    "s1Title": "Wie zijn wij?",
+    "s1": "De verwerkingsverantwoordelijke voor uw gegevens is AEGRYN Sàrl, een in Zwitserland geregistreerde vennootschap (CHE-XXX.XXX.XXX). Wanneer u onze diensten gebruikt (certificering, transactie, advisory, catalogus), is de verwerkingsverantwoordelijke AEGRYN Sàrl.",
+    "s2Title": "Welke gegevens verzamelen we en hoe?",
+    "s2DirectTitle": "Gegevens die u ons rechtstreeks verstrekt",
+    "s2Direct": "Naam, professionele contactgegevens, informatie over de vertegenwoordigde entiteit, financiële informatie, identiteitsdocumenten, bedrijfsdocumenten, informatie over uiteindelijk begunstigden (UBO). Verzameld bij registratie, indiening van assets, Alliance-kandidatuur, reservering Assessment Day, gebruik van de waarderingscalculator of enige communicatie.",
+    "s2AutoTitle": "Automatisch verzamelde gegevens",
+    "s2Auto": "IP-adres, browsertype, besturingssysteem, bezochte pagina's, bezoekduur — via cookies en vergelijkbare technologieën. Zie ons Cookiebeleid.",
+    "s2ThirdTitle": "Gegevens van derden",
+    "s2Third": "Openbare registers, identiteitsverificatie- en fraudepreventiediensten, sancties- en PEP-databases.",
+    "s3Title": "Waarom verwerken we uw gegevens?",
+    "s3TablePurpose": "Doel",
+    "s3TableData": "Betrokken gegevens",
+    "s3TableBasis": "Rechtsgrondslag",
+    "s3Row1Purpose": "Levering van gevraagde diensten",
+    "s3Row1Data": "Identiteit, contact, financiële gegevens, documenten",
+    "s3Row1Basis": "Uitvoering van de overeenkomst",
+    "s3Row2Purpose": "Wettelijke verplichtingen (AML, AMLD6, KYC)",
+    "s3Row2Data": "Identiteit, UBO, herkomst van middelen, PEP",
+    "s3Row2Basis": "Wettelijke verplichting",
+    "s3Row3Purpose": "Witwasbestrijding en fraudepreventie",
+    "s3Row3Data": "Identiteit, transacties, documenten",
+    "s3Row3Basis": "Wettelijke verplichting / Gerechtvaardigd belang",
+    "s3Row4Purpose": "Websitebeveiliging en fraudepreventie",
+    "s3Row4Data": "Navigatiegegevens, IP",
+    "s3Row4Basis": "Gerechtvaardigd belang",
+    "s3Row5Purpose": "Servicecommunicatie",
+    "s3Row5Data": "E-mail, voorkeuren",
+    "s3Row5Basis": "Gerechtvaardigd belang / Toestemming",
+    "s3Row6Purpose": "Historische transactiecatalogus",
+    "s3Row6Data": "Geanonimiseerde gegevens",
+    "s3Row6Basis": "Gerechtvaardigd belang / Algemeen belang",
+    "s4Title": "Wie heeft toegang tot uw gegevens?",
+    "s4": "Binnen AEGRYN: teamleden met een legitieme operationele behoefte. Mede-ondertekende partners: advocatenkantoren, accountants, cybersecuritypartners (onderworpen aan strikte vertrouwelijkheidsverplichtingen). Bewaarbank. Technische dienstverleners: hosting, e-mail, betaling via Stripe. Autoriteiten: wanneer wettelijk vereist. AEGRYN verkoopt uw gegevens nooit aan derden.",
+    "s5Title": "Internationale overdrachten",
+    "s5": "Gegevens worden opgeslagen op servers in de Europese Unie of Zwitserland. Voor overdrachten naar derde landen passen we passende waarborgen toe (goedgekeurde standaardcontractbepalingen).",
+    "s6Title": "Bewaring",
+    "s6": "Wij bewaren uw gegevens zo lang als nodig is voor de dienstverlening, naleving van wettelijke verplichtingen (AML-verplichtingen: minimaal 10 jaar na einde van de commerciële relatie) en bescherming tegen mogelijke vorderingen.",
+    "s7Title": "Uw rechten",
+    "s7": "Op grond van de Zwitserse DSG en de AVG: rechten op inzage, rectificatie, verwijdering, bezwaar, beperking en overdraagbaarheid.",
+    "s7Contact": "Om deze rechten uit te oefenen: dataprivacy@aegryn.com",
+    "s8Title": "Gegevensbeveiliging",
+    "s8": "Technische en organisatorische maatregelen: versleuteling van gevoelige gegevens in rust en tijdens overdracht, rolgebaseerde toegangscontrole (Supabase RLS), registratie van toegangen tot de data room, 2FA voor beheerderstoegang. Bij een inbreuk: kennisgeving aan autoriteiten en betrokkenen conform de Zwitserse DSG en de AVG.",
     "s9Title": "Cookies",
-    "s9": "We use analytical cookies (Cloudflare Web Analytics, no personally identifiable data). No advertising cookies. You may decline analytical cookies via our consent banner.",
-    "s10Title": "Complaints",
-    "s10": "You have the right to lodge a complaint with the competent supervisory authority.",
-    "authorityCH": "Switzerland: FDPIC — www.edoeb.admin.ch",
-    "authorityFR": "France: CNIL — www.cnil.fr",
+    "s9": "Wij gebruiken analytische cookies (Cloudflare Web Analytics, geen persoonlijk identificeerbare gegevens). Geen advertentiecookies. U kunt analytische cookies weigeren via onze toestemmingsbanner.",
+    "s10Title": "Klachten",
+    "s10": "U heeft het recht een klacht in te dienen bij de bevoegde toezichthoudende autoriteit.",
+    "authorityCH": "Zwitserland: FDPIC — www.edoeb.admin.ch",
+    "authorityFR": "Frankrijk: CNIL — www.cnil.fr",
     "authorityEU": "EU: EDPB — www.edpb.europa.eu",
     "contactEmail": "dataprivacy@aegryn.com"
   },
   "security": {
     "meta": {
-      "title": "Online Security — AEGRYN",
-      "desc": "How to protect yourself against fraud and impersonation related to AEGRYN."
+      "title": "Online veiligheid — AEGRYN",
+      "desc": "Hoe u zichzelf beschermt tegen fraude en identiteitsmisbruik gerelateerd aan AEGRYN."
     },
-    "label": "Staying secure online",
-    "subtitle": "How to protect yourself against fraud",
+    "label": "Online veiligheid",
+    "subtitle": "Hoe u zichzelf beschermt tegen fraude",
     "contactEmail": "keepsecure@aegryn.com",
-    "intro": "When using our services, we may ask you for identity, banking and entity documents. We use advanced technology to protect your data, and we recommend you also adopt basic security practices.",
-    "s1Title": "Brand impersonation",
-    "s1": "Fraudsters may create fake websites, social media profiles or emails appearing to come from AEGRYN to induce you to make fraudulent payments.",
-    "s1Official": "Our official emails come exclusively from the @aegryn.com domain. Any payment request from another domain is fraudulent.",
-    "s1NeverTitle": "AEGRYN will never ask you to:",
-    "s1Never1": "Make a deposit payment to a personal account",
-    "s1Never2": "Make advance payments not specified in your signed mandate",
-    "s1Never3": "Share your login credentials by email or phone",
-    "s2Title": "Identifying fraudulent communications",
-    "s2": "Check that: the sender email is exactly @aegryn.com (not @aegryn.net, @aegryn-group.com or any variant), links in emails point to aegryn.com, and payment requests match what is specified in your signed mandate or contract.",
-    "s2Doubt": "If in doubt, contact us directly at keepsecure@aegryn.com — do not reply to the suspicious email.",
-    "s3Title": "Securing your AEGRYN account",
+    "intro": "Wanneer u onze diensten gebruikt, kunnen wij u vragen om informatie over uw identiteit, bankgegevens en bedrijfsdocumenten. Wij gebruiken geavanceerde technologieën om uw gegevens te beschermen en raden u aan ook elementaire beveiligingspraktijken toe te passen.",
+    "s1Title": "Merkmisbruik",
+    "s1": "Fraudeurs kunnen nep-websites, socialemediaprofielen of e-mails aanmaken die lijken te komen van AEGRYN, met als doel u ertoe te verleiden frauduleuze betalingen te doen.",
+    "s1Official": "Onze officiële e-mails zijn uitsluitend afkomstig van het domein @aegryn.com. Elk betalingsverzoek van een ander domein is frauduleus.",
+    "s1NeverTitle": "AEGRYN vraagt nooit om:",
+    "s1Never1": "Een storting op een persoonlijk account",
+    "s1Never2": "Vooruitbetalingen die niet zijn voorzien in uw ondertekend mandaat",
+    "s1Never3": "Uw inloggegevens via e-mail of telefoon",
+    "s2Title": "Frauduleuze communicatie herkennen",
+    "s2": "Controleer of: het e-mailadres van de afzender exact @aegryn.com is (niet @aegryn.net of een variant), links in e-mails naar aegryn.com verwijzen, en betalingsverzoeken overeenkomen met wat in uw ondertekend mandaat of contract is voorzien.",
+    "s2Doubt": "Neem bij twijfel rechtstreeks contact met ons op via keepsecure@aegryn.com — reageer niet op de verdachte e-mail.",
+    "s3Title": "Uw AEGRYN-account beveiligen",
     "s3Items": [
-      "Use a strong, unique password for your AEGRYN account",
-      "Enable two-factor authentication (2FA) when available",
-      "Never share your login credentials",
-      "Sign out after each session"
+      "Gebruik een sterk en uniek wachtwoord voor uw AEGRYN-account",
+      "Activeer tweefactorauthenticatie (2FA) indien beschikbaar",
+      "Deel nooit uw inloggegevens",
+      "Log na elke sessie uit"
     ],
-    "s4Title": "Payment processes — normal vs fraudulent",
-    "s4NormalTitle": "Normal",
-    "s4Normal1": "Payment of AEGRYN Review (€2,000) or Review+ (€5,000) fees via Stripe Checkout on aegryn.com",
-    "s4Normal2": "Escrow payment (10% of agreed price) by bank transfer to the designated partner bank IBAN with transaction reference",
-    "s4FraudTitle": "Fraudulent",
-    "s4Fraud1": "Any payment request to a personal account",
-    "s4Fraud2": "Any cryptocurrency payment not specified in the contract",
-    "s4Fraud3": "Any \"insurance fees\" or \"activation fees\" not mentioned in your mandate",
-    "s5Title": "Reporting suspicious activity",
-    "s5Step1": "Do not click any links or provide any information",
-    "s5Step2": "Report immediately to keepsecure@aegryn.com",
-    "s5Step3": "Report the platform directly (social network, registrar)"
+    "s4Title": "Betalingsprocessen — normaal versus frauduleus",
+    "s4NormalTitle": "Normaal",
+    "s4Normal1": "Betaling van AEGRYN Review-honoraria (2.000 EUR) of Review+ (5.000 EUR) via Stripe Checkout op aegryn.com",
+    "s4Normal2": "Escrow-betaling (10% van de overeengekomen prijs) per bankoverschrijving naar het IBAN van de aangewezen partnerbank met transactiereferentie",
+    "s4FraudTitle": "Frauduleus",
+    "s4Fraud1": "Elk betalingsverzoek naar een persoonlijk account",
+    "s4Fraud2": "Elke cryptovalutabetaling die niet in het contract is voorzien",
+    "s4Fraud3": "Elke verzekeringsvergoeding of activeringsvergoeding die niet in uw mandaat is vermeld",
+    "s5Title": "Verdachte activiteit melden",
+    "s5Step1": "Klik op geen enkele link en verstrek geen informatie",
+    "s5Step2": "Meld dit onmiddellijk aan keepsecure@aegryn.com",
+    "s5Step3": "Meld het betreffende platform rechtstreeks (sociaal netwerk, registrar)"
   },
   "faq": {
     "meta": {
-      "title": "FAQ — Frequently Asked Questions — AEGRYN",
-      "desc": "Answers to frequently asked questions about AEGRYN Grade certification, transactions, sessions and accounts."
+      "title": "FAQ — Veelgestelde vragen — AEGRYN",
+      "desc": "Antwoorden op veelgestelde vragen over AEGRYN Grade-certificering, transacties, sessies en accounts."
     },
-    "label": "Frequently Asked Questions",
-    "filterAll": "All",
-    "filterSellers": "Sellers",
-    "filterBuyers": "Buyers",
-    "filterCertification": "Certification",
-    "filterTransactions": "Transactions",
+    "label": "Veelgestelde vragen",
+    "filterAll": "Alle",
+    "filterSellers": "Verkopers",
+    "filterBuyers": "Kopers",
+    "filterCertification": "Certificering",
+    "filterTransactions": "Transacties",
     "filterAccount": "Account",
     "items": [
       {
@@ -2593,32 +2593,32 @@
         "cat": [
           "certification"
         ],
-        "q": "What is the AEGRYN Grade?",
-        "a": "The AEGRYN Grade is an official multi-dimensional certification evaluating 4 dimensions: Code (C), IP & Rights (I), Finance (F), Security (S). Each dimension is scored out of 25. The total score (out of 100) determines the official Grade: ★ Exceptional (≥90), AAA Excellent (≥75), AA Very Good (≥60), A Good (≥45), B Correct (≥30)."
+        "q": "Wat is de AEGRYN Grade?",
+        "a": "De AEGRYN Grade is een officiële multidimensionale certificering die 4 dimensies beoordeelt: Code (C), IP en Rechten (I), Financiën (F), Beveiliging (S). Elke dimensie wordt beoordeeld op 25 punten. De totale score (op 100) bepaalt de officiële Grade: Ster Uitzonderlijk (>=90), AAA Uitstekend (>=75), AA Zeer goed (>=60), A Goed (>=45), B Voldoende (>=30)."
       },
       {
         "id": "grade-vs-estimate",
         "cat": [
           "certification"
         ],
-        "q": "What is the difference between an official Grade and an estimated grade?",
-        "a": "An official Grade is assigned after a real audit by AEGRYN analysts, co-signed by independent external partners (law firm, accountant, cybersecurity partner) who engage their professional liability. It can be published in the catalogue. An estimated grade (from /valuation or AEGRYN Review) is an indicative opinion based on declared data, always suffixed \"(estimated)\" with no contractual value."
+        "q": "Wat is het verschil tussen een officiële Grade en een geschatte grade?",
+        "a": "Een officiële Grade wordt toegekend na een echte audit door AEGRYN-analisten en mede-ondertekend door onafhankelijke externe partners die hun professionele aansprakelijkheid in het geding brengen. Een geschatte grade (via /valuation of AEGRYN Review) is een indicatieve opinie op basis van verklaarbare gegevens, altijd voorzien van het achtervoegsel (geschat) en zonder contractuele waarde."
       },
       {
         "id": "cert-duration",
         "cat": [
           "certification"
         ],
-        "q": "How long does the certification process take?",
-        "a": "AEGRYN Review: 5 working days after confirmed payment. AEGRYN Review+: 10 working days. Full Auction Certification: 3 to 5 weeks depending on asset complexity."
+        "q": "Hoe lang duurt het certificeringsproces?",
+        "a": "AEGRYN Review: 5 werkdagen na bevestigde betaling. AEGRYN Review+: 10 werkdagen. Volledige Auction-certificering: 3 tot 5 weken afhankelijk van de complexiteit van het asset."
       },
       {
         "id": "cert-cost",
         "cat": [
           "certification"
         ],
-        "q": "How much does certification cost?",
-        "a": "AEGRYN Review: €2,000 excl. VAT — deductible if full certification started within 6 months. AEGRYN Review+: €5,000 excl. VAT — same conditions. Auction Certification: free if transaction (AEGRYN earns commission on sale). Precise conditions in signed mandate."
+        "q": "Wat kost de certificering?",
+        "a": "AEGRYN Review: 2.000 EUR excl. btw — aftrekbaar als de volledige certificering binnen 6 maanden wordt gestart. AEGRYN Review+: 5.000 EUR excl. btw — zelfde voorwaarden. Auction-certificering: gratis bij transactie (AEGRYN verdient commissie bij verkoop). Exacte voorwaarden in het ondertekende mandaat."
       },
       {
         "id": "refusal-resubmit",
@@ -2626,8 +2626,8 @@
           "certification",
           "sellers"
         ],
-        "q": "My asset was declined. Can I resubmit?",
-        "a": "Yes. Each refusal is accompanied by a detailed written report identifying areas for improvement. Our Advisory service can support you through remediation. A declined asset may be resubmitted at any time if documented improvements have been made."
+        "q": "Mijn asset is afgewezen. Kan ik het opnieuw indienen?",
+        "a": "Ja. Elke afwijzing gaat vergezeld van een gedetailleerd schriftelijk rapport met verbeterpunten. Onze Advisory-dienst kan u begeleiden bij het herstelproces. Een afgewezen asset kan op elk moment opnieuw worden ingediend als gedocumenteerde verbeteringen zijn aangebracht."
       },
       {
         "id": "kryv",
@@ -2635,48 +2635,48 @@
           "certification",
           "transactions"
         ],
-        "q": "What is KRYV Protocol?",
-        "a": "KRYV Protocol is our blockchain certification infrastructure component. It generates a cryptographic fingerprint of the codebase at the exact date of certification and/or transfer, recorded immutably. This allows any buyer to prove at any future date that the code received matches exactly the certified code."
+        "q": "Wat is KRYV Protocol?",
+        "a": "KRYV Protocol is onze blockchain-certificeringsinfrastructuurcomponent. Het genereert een cryptografische vingerafdruk van de codebase op de exacte datum van certificering of overdracht, onveranderlijk opgeslagen. Hierdoor kan elke koper op elk toekomstig moment bewijzen dat de ontvangen code exact overeenkomt met de gecertificeerde code."
       },
       {
         "id": "what-assets",
         "cat": [
           "sellers"
         ],
-        "q": "What types of assets can I submit?",
-        "a": "AEGRYN certifies and transacts digital tech assets: B2B SaaS, mobile apps, marketplaces, AI protocols, digital intellectual property. Minimum ticket: €500,000 estimated valuation."
+        "q": "Welke typen assets kan ik indienen?",
+        "a": "AEGRYN certificeert en verhandelt digitale tech-assets: B2B SaaS, mobiele apps, marktplaatsen, AI-protocollen, digitaal intellectueel eigendom. Minimumticket: 500.000 EUR geschatte waardering."
       },
       {
         "id": "seller-identity",
         "cat": [
           "sellers"
         ],
-        "q": "Will my identity be disclosed to buyers?",
-        "a": "No. AEGRYN maintains the confidentiality of your identity throughout the process. It is only disclosed to the buyer after both parties' explicit agreement and AEGRYN's introduction decision."
+        "q": "Wordt mijn identiteit bekend gemaakt aan kopers?",
+        "a": "Nee. AEGRYN beschermt uw identiteit gedurende het hele proces. Deze wordt alleen aan de koper onthuld na uitdrukkelijke instemming van beide partijen en de introductiebeslissing van AEGRYN."
       },
       {
         "id": "mandate-duration",
         "cat": [
           "sellers"
         ],
-        "q": "How long does the exclusive mandate last?",
-        "a": "60 days, renewable by mutual agreement. After this period without a closed transaction, you regain full contractual freedom."
+        "q": "Hoe lang duurt het exclusieve mandaat?",
+        "a": "60 dagen, verlengbaar bij onderlinge overeenkomst. Na deze periode zonder afgesloten transactie herneemt u uw volledige contractuele vrijheid."
       },
       {
         "id": "become-buyer",
         "cat": [
           "buyers"
         ],
-        "q": "How do I become a member buyer?",
-        "a": "Via the application form at /auction#membership. Your application is reviewed by AEGRYN within 10 working days. A 20–30 minute qualification interview is required. Financial capacity documents are necessary."
+        "q": "Hoe word ik ledenkoper?",
+        "a": "Via het sollicitatieformulier op /auction#membership. Uw sollicitatie wordt door AEGRYN beoordeeld binnen 10 werkdagen. Een kwalificatiegesprek van 20-30 minuten is vereist. Documenten die de financiële capaciteit aantonen zijn noodzakelijk."
       },
       {
         "id": "min-ticket",
         "cat": [
           "buyers"
         ],
-        "q": "What is the minimum acquisition ticket?",
-        "a": "€500,000."
+        "q": "Wat is het minimale acquisitieticket?",
+        "a": "500.000 EUR."
       },
       {
         "id": "bid-models",
@@ -2684,8 +2684,8 @@
           "buyers",
           "transactions"
         ],
-        "q": "What bid models are available?",
-        "a": "AEGRYN offers 4 bid models: Club Deal (individual + up to 4 co-investors), Corporate (legal entity or JV), Fund (PE/VC/Family Office, IC timeline possible), Equity Stake (equity participation without full transfer). See /auction/bid-models for full details."
+        "q": "Welke biedmodellen zijn beschikbaar?",
+        "a": "AEGRYN biedt 4 biedmodellen: Club Deal (individueel + maximaal 4 mede-investeerders), Corporate (rechtspersoon of JV), Fonds (PE/VC/Family Office, IC-tijdlijn mogelijk), Equity Stake (aandelenparticipatie zonder volledige overdracht). Zie /auction/bid-models voor alle details."
       },
       {
         "id": "escrow",
@@ -2693,8 +2693,8 @@
           "buyers",
           "transactions"
         ],
-        "q": "How does the escrow work?",
-        "a": "After a signed Heads of Agreement, the buyer deposits 10% of the agreed price with a third-party partner bank. AEGRYN never holds these funds. See /terms/cgv for withdrawal rules."
+        "q": "Hoe werkt de escrow?",
+        "a": "Na een ondertekend principe-akkoord stort de koper 10% van de overeengekomen prijs bij een externe partnerbank. AEGRYN houdt deze middelen nooit vast. Zie /terms/cgv voor de herroepingsregels."
       },
       {
         "id": "kyc-docs",
@@ -2702,8 +2702,8 @@
           "buyers",
           "sellers"
         ],
-        "q": "What KYC documents are required?",
-        "a": "Individuals: valid ID + proof of address (<3 months) + proof of financial capacity. Entities (companies, funds): company registration equivalent (<3 months) + articles of association + representative's ID + UBO declaration (≥25%) + regulatory licence if applicable."
+        "q": "Welke KYC-documenten zijn vereist?",
+        "a": "Particulieren: geldig identiteitsbewijs + bewijs van woonplaats (minder dan 3 maanden oud) + bewijs van financiële capaciteit. Entiteiten (bedrijven, fondsen): uittreksel uit het handelsregister (minder dan 3 maanden oud) + statuten + identiteitsbewijs van de wettelijke vertegenwoordiger + UBO-verklaring (>=25%) + regulerende licentie indien van toepassing."
       },
       {
         "id": "data-room",
@@ -2711,16 +2711,16 @@
           "buyers",
           "transactions"
         ],
-        "q": "What is the data room?",
-        "a": "The data room is a secure space containing the asset's complete documents (grade report, audited financials, IP contracts, technical documentation). Accessible only to member buyers who have signed the asset-specific NDA. Every consultation is timestamped and logged."
+        "q": "Wat is de data room?",
+        "a": "De data room is een beveiligde ruimte met de volledige documenten van het asset (grade-rapport, gecontroleerde financiële overzichten, IP-contracten, technische documentatie). Alleen toegankelijk voor ledenkoper die de asset-specifieke NDA hebben ondertekend. Elke raadpleging wordt voorzien van een tijdstempel."
       },
       {
         "id": "results-publication",
         "cat": [
           "transactions"
         ],
-        "q": "When and how are session results published?",
-        "a": "Results are published on /auction/results within 30 days of each session closing, in anonymised form: grade, category, sector, valuation range (±20%), process duration. No identities are disclosed."
+        "q": "Wanneer en hoe worden sessieresultaten gepubliceerd?",
+        "a": "Resultaten worden gepubliceerd op /auction/results binnen 30 dagen na sluiting van elke sessie, in geanonimiseerde vorm: grade, categorie, sector, waarderingsbandbreedte (+-20%), procesduur. Er worden geen identiteiten bekendgemaakt."
       },
       {
         "id": "sessions",
@@ -2728,24 +2728,24 @@
           "transactions",
           "buyers"
         ],
-        "q": "What is an AEGRYN Session?",
-        "a": "AEGRYN Sessions are private transaction events held twice a year in Switzerland. 6 to 10 Grade A or above certified assets are presented to a closed circle of qualified member buyers. Access is by invitation only."
+        "q": "Wat is een AEGRYN Sessie?",
+        "a": "AEGRYN Sessies zijn private transactie-evenementen die twee keer per jaar in Zwitserland worden georganiseerd. 6 tot 10 gecertificeerde assets met Grade A of hoger worden gepresenteerd aan een gesloten kring van gekwalificeerde ledenkoper. Toegang is uitsluitend op uitnodiging."
       },
       {
         "id": "forgot-password",
         "cat": [
           "account"
         ],
-        "q": "I forgot my password.",
-        "a": "Use the \"Forgot password\" link on /client/login. A reset email will be sent within 5 minutes."
+        "q": "Ik ben mijn wachtwoord vergeten.",
+        "a": "Gebruik de link Wachtwoord vergeten op /client/login. Er wordt binnen 5 minuten een herstel-e-mail verstuurd."
       },
       {
         "id": "update-kyc",
         "cat": [
           "account"
         ],
-        "q": "How do I update my KYC information?",
-        "a": "Via the \"My Profile\" section of your client space. Updated documents are submitted to AEGRYN for re-validation."
+        "q": "Hoe update ik mijn KYC-informatie?",
+        "a": "Via de sectie Mijn profiel in uw klantenomgeving. Bijgewerkte documenten worden ter hervalidatie ingediend bij AEGRYN."
       }
     ]
   }
