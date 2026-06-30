@@ -1632,5 +1632,95 @@
         }
       ]
     }
+  },
+  "valuation": {
+    "meta": {
+      "title": "Estimate the value of your tech asset — AEGRYN Valuation",
+      "desc": "B2B SaaS valuation calculator. Get in 3 steps a conservative, median and premium range based on 2026 market ARR multiples."
+    },
+    "hero": {
+      "label": "AEGRYN VALUATION",
+      "title": "Estimate the value\nof your asset.",
+      "desc": "In 3 steps, our calculator gives you a valuation range based on ARR multiples observed in the European tech market 2026. Free. Confidential. No commitment."
+    },
+    "progress": {
+      "step": "Step",
+      "of": "of"
+    },
+    "step1": {
+      "title": "Revenue metrics",
+      "arr": "Annual ARR (€)",
+      "arrPlaceholder": "E.g. 500000",
+      "arrHint": "Annual Recurring Revenue in euros",
+      "mrr": "Monthly MRR (€, optional)",
+      "mrrPlaceholder": "E.g. 41667",
+      "growth": "YoY growth (%)",
+      "growthPlaceholder": "E.g. 35",
+      "churn": "Monthly churn (%)",
+      "churnPlaceholder": "E.g. 2.5"
+    },
+    "step2": {
+      "title": "Customer base quality",
+      "nrr": "NRR — Net Revenue Retention (%)",
+      "nrrPlaceholder": "E.g. 115",
+      "nrrHint": "> 100% = net expansion",
+      "margin": "Gross margin (%)",
+      "marginPlaceholder": "E.g. 72",
+      "seniority": "Asset seniority",
+      "seniorityOptions": {
+        "under1": "Less than 12 months",
+        "one_to_three": "1 to 3 years",
+        "above3": "More than 3 years"
+      }
+    },
+    "step3": {
+      "title": "IP & Tech stack",
+      "ip": "IP filed?",
+      "ipYes": "Yes",
+      "ipNo": "No",
+      "ipPending": "Pending",
+      "stack": "Main stack",
+      "stackPlaceholder": "Select",
+      "stackOptions": {
+        "saas_b2b": "B2B SaaS",
+        "marketplace": "Marketplace",
+        "mobile": "Mobile app",
+        "protocol": "Protocol / infra",
+        "ip_only": "Pure IP / code only",
+        "other": "Other"
+      }
+    },
+    "next": "Next step",
+    "back": "Back",
+    "calculate": "Calculate my valuation",
+    "result": {
+      "title": "Indicative valuation range.",
+      "conservative": {
+        "label": "Conservative",
+        "hint": "Cautious scenario — demanding buyer"
+      },
+      "median": {
+        "label": "Market median",
+        "hint": "Median SaaS B2B Europe multiple 2026"
+      },
+      "premium": {
+        "label": "Premium",
+        "hint": "NRR > 110% + growth > 25% confirmed"
+      },
+      "basis": "Calculation basis",
+      "arrMultiple": "ARR multiple",
+      "disclaimer": "This estimate is indicative. It does not constitute an offer or commitment. Final valuation depends on a full audit and negotiation with buyers.",
+      "gradeHint": "To confirm and maximize this valuation, the AEGRYN certification process is the next step.",
+      "ctaGrade": "Submit for certification",
+      "ctaAssessment": "Book an Assessment Day",
+      "emailTitle": "Receive my estimate by email.",
+      "emailDesc": "Your complete valuation range with multiple breakdown and recommendations.",
+      "emailPlaceholder": "Professional email",
+      "emailSubmit": "Receive report",
+      "emailSending": "Sending...",
+      "emailSuccess": "Report sent. Check your inbox.",
+      "emailError": "Error — please try again.",
+      "restart": "New estimate"
+    }
   }
 }

@@ -1646,5 +1646,95 @@
         }
       ]
     }
+  },
+  "valuation": {
+    "meta": {
+      "title": "Tech-Asset bewerten — AEGRYN Valuation",
+      "desc": "B2B-SaaS-Bewertungsrechner. Erhalten Sie in 3 Schritten eine konservative, mittlere und Premium-Spanne basierend auf ARR-Multiples 2026."
+    },
+    "hero": {
+      "label": "AEGRYN VALUATION",
+      "title": "Bewerten Sie Ihr\nTech-Asset.",
+      "desc": "In 3 Schritten liefert unser Rechner eine Bewertungsspanne auf Basis der ARR-Multiples des europaeischen Tech-Markts 2026. Kostenlos. Vertraulich. Unverbindlich."
+    },
+    "progress": {
+      "step": "Schritt",
+      "of": "von"
+    },
+    "step1": {
+      "title": "Umsatzkennzahlen",
+      "arr": "Jaehrlicher ARR (€)",
+      "arrPlaceholder": "z.B. 500000",
+      "arrHint": "Annual Recurring Revenue in Euro",
+      "mrr": "Monatlicher MRR (€, optional)",
+      "mrrPlaceholder": "z.B. 41667",
+      "growth": "YoY-Wachstum (%)",
+      "growthPlaceholder": "z.B. 35",
+      "churn": "Monatlicher Churn (%)",
+      "churnPlaceholder": "z.B. 2.5"
+    },
+    "step2": {
+      "title": "Kundenbasisqualitaet",
+      "nrr": "NRR — Net Revenue Retention (%)",
+      "nrrPlaceholder": "z.B. 115",
+      "nrrHint": "> 100% = Netto-Expansion",
+      "margin": "Bruttomarge (%)",
+      "marginPlaceholder": "z.B. 72",
+      "seniority": "Asset-Alter",
+      "seniorityOptions": {
+        "under1": "Weniger als 12 Monate",
+        "one_to_three": "1 bis 3 Jahre",
+        "above3": "Mehr als 3 Jahre"
+      }
+    },
+    "step3": {
+      "title": "IP & Tech-Stack",
+      "ip": "IP angemeldet?",
+      "ipYes": "Ja",
+      "ipNo": "Nein",
+      "ipPending": "In Bearbeitung",
+      "stack": "Hauptstack",
+      "stackPlaceholder": "Auswaehlen",
+      "stackOptions": {
+        "saas_b2b": "B2B SaaS",
+        "marketplace": "Marketplace",
+        "mobile": "Mobile App",
+        "protocol": "Protokoll / Infrastruktur",
+        "ip_only": "Reine IP / nur Code",
+        "other": "Sonstige"
+      }
+    },
+    "next": "Naechster Schritt",
+    "back": "Zurueck",
+    "calculate": "Bewertung berechnen",
+    "result": {
+      "title": "Indikative Bewertungsspanne.",
+      "conservative": {
+        "label": "Konservativ",
+        "hint": "Vorsichtiges Szenario — anspruchsvoller Kaeufer"
+      },
+      "median": {
+        "label": "Marktmedian",
+        "hint": "Medianer SaaS B2B Europa Multiple 2026"
+      },
+      "premium": {
+        "label": "Premium",
+        "hint": "NRR > 110% + Wachstum > 25% bestaetigt"
+      },
+      "basis": "Berechnungsgrundlage",
+      "arrMultiple": "ARR-Multiple",
+      "disclaimer": "Diese Schaetzung ist indikativ und stellt kein Angebot oder keine Verpflichtung dar.",
+      "gradeHint": "Um diese Bewertung zu bestaetigen und zu maximieren, ist der AEGRYN-Zertifizierungsprozess der naechste Schritt.",
+      "ctaGrade": "Zur Zertifizierung einreichen",
+      "ctaAssessment": "Assessment Day buchen",
+      "emailTitle": "Schaetzung per E-Mail erhalten.",
+      "emailDesc": "Ihre vollstaendige Bewertungsspanne mit Multiples und Empfehlungen.",
+      "emailPlaceholder": "Professionelle E-Mail",
+      "emailSubmit": "Bericht erhalten",
+      "emailSending": "Wird gesendet...",
+      "emailSuccess": "Bericht gesendet. Posteingang pruefen.",
+      "emailError": "Fehler — bitte erneut versuchen.",
+      "restart": "Neue Schaetzung"
+    }
   }
 }

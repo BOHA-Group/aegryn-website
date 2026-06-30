@@ -21,6 +21,7 @@ const STATIC_ROUTES = [
   { path: '/auction/assessment-days',           priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/auction/results',                   priority: 0.6,  changeFrequency: 'weekly'  as const },
   { path: '/grade/submit',                      priority: 0.8,  changeFrequency: 'monthly' as const },
+  { path: '/valuation',                         priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/services/acquisition-support',      priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/what-we-build',                     priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/alliances',                          priority: 0.7,  changeFrequency: 'monthly' as const },

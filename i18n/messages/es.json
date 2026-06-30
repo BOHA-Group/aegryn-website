@@ -1646,5 +1646,95 @@
         }
       ]
     }
+  },
+  "valuation": {
+    "meta": {
+      "title": "Estime el valor de su activo tech — AEGRYN Valuation",
+      "desc": "Calculadora de valoración SaaS B2B. Obtenga en 3 pasos una horquilla conservadora, mediana y premium basada en múltiplos ARR del mercado 2026."
+    },
+    "hero": {
+      "label": "AEGRYN VALUATION",
+      "title": "Estime el valor\nde su activo.",
+      "desc": "En 3 pasos, nuestra calculadora le da una horquilla de valoración basada en múltiplos ARR observados en el mercado tech europeo 2026. Gratuito. Confidencial. Sin compromiso."
+    },
+    "progress": {
+      "step": "Paso",
+      "of": "de"
+    },
+    "step1": {
+      "title": "Métricas de ingresos",
+      "arr": "ARR anual (€)",
+      "arrPlaceholder": "Ej. 500000",
+      "arrHint": "Annual Recurring Revenue en euros",
+      "mrr": "MRR mensual (€, opcional)",
+      "mrrPlaceholder": "Ej. 41667",
+      "growth": "Crecimiento YoY (%)",
+      "growthPlaceholder": "Ej. 35",
+      "churn": "Churn mensual (%)",
+      "churnPlaceholder": "Ej. 2.5"
+    },
+    "step2": {
+      "title": "Calidad de la base de clientes",
+      "nrr": "NRR — Net Revenue Retention (%)",
+      "nrrPlaceholder": "Ej. 115",
+      "nrrHint": "> 100% = expansión neta",
+      "margin": "Margen bruto (%)",
+      "marginPlaceholder": "Ej. 72",
+      "seniority": "Antigüedad del activo",
+      "seniorityOptions": {
+        "under1": "Menos de 12 meses",
+        "one_to_three": "1 a 3 años",
+        "above3": "Más de 3 años"
+      }
+    },
+    "step3": {
+      "title": "IP y stack técnico",
+      "ip": "¿IP registrada?",
+      "ipYes": "Sí",
+      "ipNo": "No",
+      "ipPending": "En trámite",
+      "stack": "Stack principal",
+      "stackPlaceholder": "Seleccionar",
+      "stackOptions": {
+        "saas_b2b": "SaaS B2B",
+        "marketplace": "Marketplace",
+        "mobile": "App móvil",
+        "protocol": "Protocolo / infraestructura",
+        "ip_only": "IP pura / sólo código",
+        "other": "Otro"
+      }
+    },
+    "next": "Siguiente paso",
+    "back": "Volver",
+    "calculate": "Calcular mi valoración",
+    "result": {
+      "title": "Horquilla de valoración indicativa.",
+      "conservative": {
+        "label": "Conservadora",
+        "hint": "Escenario prudente — comprador exigente"
+      },
+      "median": {
+        "label": "Mediana de mercado",
+        "hint": "Múltiplo mediano SaaS B2B Europa 2026"
+      },
+      "premium": {
+        "label": "Premium",
+        "hint": "NRR > 110% + crecimiento > 25% confirmados"
+      },
+      "basis": "Base de cálculo",
+      "arrMultiple": "Múltiplo ARR",
+      "disclaimer": "Esta estimación es indicativa y no constituye oferta ni compromiso alguno.",
+      "gradeHint": "Para confirmar y maximizar esta valoración, el proceso de certificación AEGRYN es el siguiente paso.",
+      "ctaGrade": "Enviar para certificación",
+      "ctaAssessment": "Reservar un Assessment Day",
+      "emailTitle": "Recibir mi estimación por email.",
+      "emailDesc": "Su horquilla de valoración completa con desglose de múltiplos y recomendaciones.",
+      "emailPlaceholder": "Email profesional",
+      "emailSubmit": "Recibir informe",
+      "emailSending": "Enviando...",
+      "emailSuccess": "Informe enviado. Revise su bandeja.",
+      "emailError": "Error — inténtelo de nuevo.",
+      "restart": "Nueva estimación"
+    }
   }
 }

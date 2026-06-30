@@ -1632,5 +1632,95 @@
         }
       ]
     }
+  },
+  "valuation": {
+    "meta": {
+      "title": "Estimez la valeur de votre actif tech — AEGRYN Valuation",
+      "desc": "Calculatrice de valorisation SaaS B2B. Obtenez en 3 étapes une fourchette conservative, médiane et premium basée sur les multiples ARR du marché 2026."
+    },
+    "hero": {
+      "label": "AEGRYN VALUATION",
+      "title": "Estimez la valeur\nde votre actif.",
+      "desc": "En 3 étapes, notre calculatrice vous donne une fourchette de valorisation basée sur les multiples ARR observés sur le marché tech européen 2026. Gratuit. Confidentiel. Sans engagement."
+    },
+    "progress": {
+      "step": "Étape",
+      "of": "sur"
+    },
+    "step1": {
+      "title": "Métriques de revenus",
+      "arr": "ARR annuel (€)",
+      "arrPlaceholder": "Ex. 500000",
+      "arrHint": "Annual Recurring Revenue en euros",
+      "mrr": "MRR mensuel (€, optionnel)",
+      "mrrPlaceholder": "Ex. 41667",
+      "growth": "Croissance YoY (%)",
+      "growthPlaceholder": "Ex. 35",
+      "churn": "Churn mensuel (%)",
+      "churnPlaceholder": "Ex. 2.5"
+    },
+    "step2": {
+      "title": "Qualité de la base clients",
+      "nrr": "NRR — Net Revenue Retention (%)",
+      "nrrPlaceholder": "Ex. 115",
+      "nrrHint": "> 100% = expansion nette",
+      "margin": "Marge brute (%)",
+      "marginPlaceholder": "Ex. 72",
+      "seniority": "Ancienneté de l'actif",
+      "seniorityOptions": {
+        "under1": "Moins de 12 mois",
+        "one_to_three": "1 à 3 ans",
+        "above3": "Plus de 3 ans"
+      }
+    },
+    "step3": {
+      "title": "IP & Stack technique",
+      "ip": "IP déposée ?",
+      "ipYes": "Oui",
+      "ipNo": "Non",
+      "ipPending": "En cours",
+      "stack": "Stack principale",
+      "stackPlaceholder": "Sélectionner",
+      "stackOptions": {
+        "saas_b2b": "SaaS B2B",
+        "marketplace": "Marketplace",
+        "mobile": "App mobile",
+        "protocol": "Protocole / infra",
+        "ip_only": "IP pure / code only",
+        "other": "Autre"
+      }
+    },
+    "next": "Étape suivante",
+    "back": "Retour",
+    "calculate": "Calculer ma valorisation",
+    "result": {
+      "title": "Fourchette de valorisation indicative.",
+      "conservative": {
+        "label": "Conservative",
+        "hint": "Scénario prudent — acheteur exigeant"
+      },
+      "median": {
+        "label": "Médiane marché",
+        "hint": "Multiple médian SaaS B2B Europe 2026"
+      },
+      "premium": {
+        "label": "Premium",
+        "hint": "NRR > 110% + croissance > 25% confirmés"
+      },
+      "basis": "Base de calcul",
+      "arrMultiple": "Multiple ARR",
+      "disclaimer": "Cette estimation est indicative. Elle ne constitue ni une offre, ni un engagement. La valorisation définitive dépend d'un audit complet et de la négociation avec les acquéreurs.",
+      "gradeHint": "Pour confirmer et maximiser cette valorisation, le processus de certification AEGRYN est l'étape suivante.",
+      "ctaGrade": "Soumettre pour certification",
+      "ctaAssessment": "Réserver un Assessment Day",
+      "emailTitle": "Recevoir mon estimation par email.",
+      "emailDesc": "Votre fourchette de valorisation complète, avec détail des multiples et recommandations.",
+      "emailPlaceholder": "Email professionnel",
+      "emailSubmit": "Recevoir le rapport",
+      "emailSending": "Envoi...",
+      "emailSuccess": "Rapport envoyé. Vérifiez votre boîte.",
+      "emailError": "Erreur — réessayez.",
+      "restart": "Nouvelle estimation"
+    }
   }
 }

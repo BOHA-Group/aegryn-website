@@ -1646,5 +1646,95 @@
         }
       ]
     }
+  },
+  "valuation": {
+    "meta": {
+      "title": "Schat de waarde van uw tech-asset — AEGRYN Valuation",
+      "desc": "B2B SaaS-waarderingscalculator. Krijg in 3 stappen een conservatief, mediaan en premium bereik op basis van ARR-multiples van de markt 2026."
+    },
+    "hero": {
+      "label": "AEGRYN VALUATION",
+      "title": "Schat de waarde\nvan uw asset.",
+      "desc": "In 3 stappen geeft onze calculator een waarderingsbereik op basis van ARR-multiples in de Europese techmarkt 2026. Gratis. Vertrouwelijk. Geen verplichting."
+    },
+    "progress": {
+      "step": "Stap",
+      "of": "van"
+    },
+    "step1": {
+      "title": "Omzetcijfers",
+      "arr": "Jaarlijkse ARR (€)",
+      "arrPlaceholder": "Bijv. 500000",
+      "arrHint": "Annual Recurring Revenue in euro",
+      "mrr": "Maandelijkse MRR (€, optioneel)",
+      "mrrPlaceholder": "Bijv. 41667",
+      "growth": "YoY-groei (%)",
+      "growthPlaceholder": "Bijv. 35",
+      "churn": "Maandelijkse churn (%)",
+      "churnPlaceholder": "Bijv. 2.5"
+    },
+    "step2": {
+      "title": "Kwaliteit klantenbasis",
+      "nrr": "NRR — Net Revenue Retention (%)",
+      "nrrPlaceholder": "Bijv. 115",
+      "nrrHint": "> 100% = netto expansie",
+      "margin": "Brutomarje (%)",
+      "marginPlaceholder": "Bijv. 72",
+      "seniority": "Leeftijd van het asset",
+      "seniorityOptions": {
+        "under1": "Minder dan 12 maanden",
+        "one_to_three": "1 tot 3 jaar",
+        "above3": "Meer dan 3 jaar"
+      }
+    },
+    "step3": {
+      "title": "IP & Tech-stack",
+      "ip": "IP ingediend?",
+      "ipYes": "Ja",
+      "ipNo": "Nee",
+      "ipPending": "In behandeling",
+      "stack": "Hoofdstack",
+      "stackPlaceholder": "Selecteren",
+      "stackOptions": {
+        "saas_b2b": "B2B SaaS",
+        "marketplace": "Marketplace",
+        "mobile": "Mobiele app",
+        "protocol": "Protocol / infrastructuur",
+        "ip_only": "Pure IP / alleen code",
+        "other": "Anders"
+      }
+    },
+    "next": "Volgende stap",
+    "back": "Terug",
+    "calculate": "Mijn waardering berekenen",
+    "result": {
+      "title": "Indicatief waarderingsbereik.",
+      "conservative": {
+        "label": "Conservatief",
+        "hint": "Voorzichtig scenario — veeleisende koper"
+      },
+      "median": {
+        "label": "Marktmediaan",
+        "hint": "Mediaan SaaS B2B Europa multiple 2026"
+      },
+      "premium": {
+        "label": "Premium",
+        "hint": "NRR > 110% + groei > 25% bevestigd"
+      },
+      "basis": "Berekeningsgrondslag",
+      "arrMultiple": "ARR-multiple",
+      "disclaimer": "Deze schatting is indicatief en vormt geen aanbod of verplichting.",
+      "gradeHint": "Om deze waardering te bevestigen en te maximaliseren, is het AEGRYN-certificeringsproces de volgende stap.",
+      "ctaGrade": "Indienen voor certificering",
+      "ctaAssessment": "Assessment Day boeken",
+      "emailTitle": "Schatting per e-mail ontvangen.",
+      "emailDesc": "Uw volledige waarderingsbereik met multipletoelichting en aanbevelingen.",
+      "emailPlaceholder": "Professioneel e-mailadres",
+      "emailSubmit": "Rapport ontvangen",
+      "emailSending": "Verzenden...",
+      "emailSuccess": "Rapport verzonden. Controleer uw inbox.",
+      "emailError": "Fout — probeer opnieuw.",
+      "restart": "Nieuwe schatting"
+    }
   }
 }
