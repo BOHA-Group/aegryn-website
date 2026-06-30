@@ -23,10 +23,26 @@ export default function GradeSubmitForm() {
     setError(false)
     const data = Object.fromEntries(new FormData(e.currentTarget))
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('/api/grade/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, _type: 'grade-submit' }),
+        body: JSON.stringify({
+          fullName:        data.fullName,
+          email:           data.email,
+          company:         data.company        || undefined,
+          assetName:       data.assetName,
+          assetType:       data.assetType,
+          assetUrl:        data.assetUrl        || undefined,
+          techStack:       data.techStack       || undefined,
+          status:          data.status          || undefined,
+          arr:             data.arr              || undefined,
+          ipFiled:         data.ipFiled          || undefined,
+          motivation:      data.motivation       || undefined,
+          targetValuation: data.targetValuation  || undefined,
+          timeline:        data.timeline         || undefined,
+          message:         data.message          || undefined,
+          locale:          document.documentElement.lang || 'fr',
+        }),
       })
       if (res.ok) setSubmitted(true)
       else setError(true)
