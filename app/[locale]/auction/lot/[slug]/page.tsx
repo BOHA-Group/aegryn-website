@@ -111,6 +111,9 @@ export default async function AuctionLotPage({ params }: Props) {
   }
 
   const asset = mapRowToAsset(fullRow)
+  if (!asset) {
+    return <AccessDeniedScreen locale={locale} slug={slug} state="no_access" t={t} />
+  }
 
   return (
     <main id="main" className="min-h-screen py-12 px-4" style={{ backgroundColor: '#FAF8F3' }}>
