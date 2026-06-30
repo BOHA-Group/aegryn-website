@@ -507,6 +507,9 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
               <span className="font-sans font-bold text-[28px] leading-none">{grade.grade}</span>
             </>
           )}
+          {grade.grade !== 'NG' && (
+            <span className="font-sans text-[8px] tracking-[0.1em] opacity-50 uppercase mt-0.5">{t('result.estimated')}</span>
+          )}
         </div>
         <div className="flex flex-col gap-2">
           <p className="font-sans text-[13px] text-ag-gray-light">
@@ -629,10 +632,18 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
         {emailErr && <p className="font-sans text-[11px] text-red-500">{t('result.emailError')}</p>}
       </div>
 
-      {/* Disclaimer */}
-      <p className="font-sans text-[11px] text-ag-gray-light leading-relaxed border-t border-ag-border pt-4">
-        {t('result.disclaimer')}
-      </p>
+      {/* Disclaimer visible — non officiel */}
+      <div className="border border-amber-200 bg-amber-50 p-5 flex flex-col gap-2">
+        <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-amber-700">
+          {t('result.disclaimerLabel')}
+        </p>
+        <p className="font-sans text-[12px] text-ag-black leading-relaxed">
+          {t('result.disclaimer')}
+        </p>
+        <Link href="/grade/submit" className="inline-flex items-center gap-1.5 font-sans font-semibold text-[11px] text-amber-700 underline underline-offset-2 hover:text-ag-black transition-colors mt-1">
+          {t('result.disclaimerCta')} <ArrowUpRight size={11} />
+        </Link>
+      </div>
     </div>
   )
 }

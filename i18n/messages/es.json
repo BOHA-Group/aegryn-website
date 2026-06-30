@@ -1819,7 +1819,7 @@
       "preRevenueRange": "Horquilla indicativa",
       "preRevenueNote": "Para un activo pre-revenue, el Grade C de AEGRYN es el paso natural siguiente.",
       "ngNote": "Su puntuación está por debajo del umbral de gradabilidad. Un Assessment Day gratuito identificará las 3 acciones prioritarias.",
-      "disclaimer": "Esta estimación es indicativa y no constituye oferta ni compromiso financiero.",
+      "disclaimer": "Esta estimación es generada por un algoritmo a partir de datos que usted declara sin verificación. No constituye un Grade AEGRYN oficial. El Grade AEGRYN solo se otorga tras una auditoría real por nuestros equipos y socios co-firmantes (despacho jurídico, auditor, socio de ciberseguridad).",
       "ctaGrade": "Iniciar mi certificación oficial",
       "ctaAssessment": "Reservar un Assessment Day gratuito",
       "emailTitle": "Recibir mi informe detallado por email.",
@@ -1829,7 +1829,10 @@
       "emailSending": "Enviando...",
       "emailSuccess": "Informe enviado.",
       "emailError": "Error — inténtelo de nuevo.",
-      "restart": "Nueva estimación"
+      "restart": "Nueva estimación",
+      "estimated": "estimado",
+      "disclaimerLabel": "Estimación no oficial",
+      "disclaimerCta": "Iniciar una certificación oficial"
     },
     "marketContext": {
       "label": "Contexto de mercado 2026",

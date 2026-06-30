@@ -1819,7 +1819,7 @@
       "preRevenueRange": "Indicatief bereik",
       "preRevenueNote": "Voor een pre-revenue asset is AEGRYN Grade C de volgende logische stap.",
       "ngNote": "Uw score ligt onder de gradeerbaarheidsdrempel. Een gratis Assessment Day identificeert de 3 prioritaire acties.",
-      "disclaimer": "Deze schatting is indicatief en vormt geen aanbod of financiële verplichting.",
+      "disclaimer": "Deze schatting wordt gegenereerd door een algoritme op basis van gegevens die u opgeeft zonder verificatie. Het vormt geen officieel AEGRYN Grade. Het AEGRYN Grade wordt alleen toegekend na een echte audit door ons team en mede-ondertekenaars (juridisch kantoor, accountant, cybersecuritypartner).",
       "ctaGrade": "Mijn officiële certificering starten",
       "ctaAssessment": "Gratis Assessment Day boeken",
       "emailTitle": "Mijn gedetailleerd rapport per e-mail ontvangen.",
@@ -1829,7 +1829,10 @@
       "emailSending": "Verzenden...",
       "emailSuccess": "Rapport verzonden.",
       "emailError": "Fout — probeer opnieuw.",
-      "restart": "Nieuwe schatting"
+      "restart": "Nieuwe schatting",
+      "estimated": "geschat",
+      "disclaimerLabel": "Niet-officiële schatting",
+      "disclaimerCta": "Een officiële certificering starten"
     },
     "marketContext": {
       "label": "Marktcontext 2026",

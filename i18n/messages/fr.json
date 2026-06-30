@@ -1805,7 +1805,7 @@
       "preRevenueRange": "Fourchette indicative",
       "preRevenueNote": "Pour un actif pre-revenue, le grade AEGRYN C est l'étape naturelle. Il permet de valoriser l'IP et le code avant toute transaction.",
       "ngNote": "Votre score actuel est en dessous du seuil de gradabilité. Un Assessment Day gratuit vous permettra d'identifier les 3 actions prioritaires.",
-      "disclaimer": "Cette estimation est indicative. Elle ne constitue ni une offre, ni un engagement financier. La valorisation définitive dépend d'un audit complet et de la négociation avec les acquéreurs. Les multiples utilisés sont issus des transactions AEGRYN et des données de marché SaaS B2B Europe 2026 (Aventis Advisors, SEG).",
+      "disclaimer": "Cette estimation est générée par un algorithme à partir de données que vous déclarez sans vérification. Elle ne constitue pas un Grade AEGRYN officiel. Le Grade AEGRYN n'est attribué qu'après audit réel par nos équipes et nos partenaires co-signataires (cabinet juridique, expert-comptable, partenaire cybersécurité).",
       "ctaGrade": "Démarrer ma certification officielle",
       "ctaAssessment": "Réserver un Assessment Day gratuit",
       "emailTitle": "Recevoir mon rapport détaillé par email.",
@@ -1815,7 +1815,10 @@
       "emailSending": "Envoi...",
       "emailSuccess": "Rapport envoyé. Vérifiez votre boîte.",
       "emailError": "Erreur — réessayez.",
-      "restart": "Nouvelle estimation"
+      "restart": "Nouvelle estimation",
+      "estimated": "estimé",
+      "disclaimerLabel": "Estimation non officielle",
+      "disclaimerCta": "Démarrer une certification officielle"
     },
     "marketContext": {
       "label": "Contexte marché 2026",
