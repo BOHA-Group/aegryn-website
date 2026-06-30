@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
-import { createServiceClient }      from '@/lib/supabase'
+import { captureLead, fmtEur }      from '@/lib/leadCapture'
 
 /* ─── Validation ─────────────────────────────────────────── */
 const schema = z.object({
@@ -36,29 +36,7 @@ const schema = z.object({
 
 type Payload = z.infer<typeof schema>
 
-/* ─── Resend helpers ─────────────────────────────────────── */
-async function sendEmail(to: string[], subject: string, text: string) {
-  const key  = process.env.RESEND_API_KEY
-  const from = process.env.RESEND_FROM ?? 'contact@aegryn.com'
-  if (!key) {
-    console.warn('[valuation/submit] RESEND_API_KEY missing — skip email')
-    return
-  }
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ from: `AEGRYN <${from}>`, to, subject, text }),
-  })
-  if (!res.ok) console.error('[valuation/submit] Resend error', await res.text())
-}
-
-function fmtEur(n?: number) {
-  if (!n) return '—'
-  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1).replace('.', ',')} M€`
-  if (n >= 1_000)     return `${(n / 1_000).toFixed(0)} K€`
-  return `${Math.round(n)} €`
-}
-
+/* ─── Email body builders ────────────────────────────────── */
 function reportText(d: Payload): string {
   return `
 AEGRYN VALUATION — RAPPORT INDICATIF
@@ -117,46 +95,34 @@ export async function POST(req: NextRequest) {
     const body = await req.json()
     const data = schema.parse(body)
 
-    /* 1. Insert in Supabase via service_role (bypasses RLS) */
-    const supa = createServiceClient()
-    const { error: dbErr } = await supa.from('valuation_leads').insert({
-      email:           data.email,
-      arr:             data.arr,
-      growth_yoy:      data.growth_yoy,
-      churn_monthly:   data.churn_monthly,
-      nrr:             data.nrr,
-      gross_margin:    data.gross_margin,
-      seniority:       data.seniority,
-      arr_audited:     data.arr_audited,
-      estimated_grade: data.estimated_grade,
-      score_total:     data.score_total,
-      score_breakdown: data.score_breakdown,
-      valuation_low:   data.valuation_low,
-      valuation_high:  data.valuation_high,
-      valuation_median: data.valuation_median,
-      pre_revenue:     data.pre_revenue ?? false,
-      locale:          data.locale,
-      source_url:      data.source_url,
-    })
-
-    if (dbErr) {
-      console.error('[valuation/submit] Supabase insert error', dbErr)
-      // On ne bloque pas l'email même si la DB échoue
-    }
-
-    /* 2. Rapport au fondateur */
-    await sendEmail(
-      [data.email],
-      `Votre estimation AEGRYN — Grade ${data.estimated_grade} (${data.score_total}/100)`,
-      reportText(data),
-    )
-
-    /* 3. Notification interne équipe */
-    const internalEmail = process.env.AEGRYN_INTERNAL_EMAIL ?? 'team@aegryn.com'
-    await sendEmail(
-      [internalEmail],
-      `[Lead Valuation] ${data.estimated_grade} — ${data.email}`,
-      internalNotifText(data),
+    await captureLead(
+      'valuation_leads',
+      {
+        email:            data.email,
+        arr:              data.arr,
+        growth_yoy:       data.growth_yoy,
+        churn_monthly:    data.churn_monthly,
+        nrr:              data.nrr,
+        gross_margin:     data.gross_margin,
+        seniority:        data.seniority,
+        arr_audited:      data.arr_audited,
+        estimated_grade:  data.estimated_grade,
+        score_total:      data.score_total,
+        score_breakdown:  data.score_breakdown,
+        valuation_low:    data.valuation_low,
+        valuation_high:   data.valuation_high,
+        valuation_median: data.valuation_median,
+        pre_revenue:      data.pre_revenue ?? false,
+        locale:           data.locale,
+        source_url:       data.source_url,
+      },
+      {
+        to:              data.email,
+        subjectFounder:  `Votre estimation AEGRYN — Grade ${data.estimated_grade} (${data.score_total}/100)`,
+        textFounder:     reportText(data),
+        subjectInternal: `[Lead Valuation] ${data.estimated_grade} — ${data.email}`,
+        textInternal:    internalNotifText(data),
+      },
     )
 
     return NextResponse.json({ ok: true })
