@@ -153,17 +153,32 @@ export default function ValuationCalculator() {
     setEmailLoading(true)
     setEmailErr(false)
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('/api/valuation/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          _type: 'valuation-report',
           email,
-          grade:   result.grade.grade,
-          score:   result.grade.totalScore,
-          arr:     finance.arr,
-          scores:  result.scores,
-          preRevenue: result.preRevenue,
+          estimated_grade:  result.grade.grade,
+          score_total:      result.grade.totalScore,
+          score_breakdown:  {
+            finance:  result.scores.finance,
+            code:     result.scores.code,
+            ip:       result.scores.ip,
+            security: result.scores.security,
+          },
+          arr:          finance.arr,
+          growth_yoy:   finance.growth,
+          churn_monthly: finance.churn,
+          nrr:          finance.nrr,
+          gross_margin: finance.margin,
+          seniority:    finance.seniority,
+          arr_audited:  finance.arrAudited,
+          valuation_low:    result.range?.low,
+          valuation_high:   result.range?.high,
+          valuation_median: result.range?.median,
+          pre_revenue:      result.preRevenue,
+          locale:      document.documentElement.lang || 'fr',
+          source_url:  window.location.href,
         }),
       })
       if (res.ok) setEmailSent(true)
