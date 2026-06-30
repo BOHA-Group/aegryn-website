@@ -46,6 +46,10 @@ CREATE TRIGGER trg_auction_sessions_updated_at
 -- ── Row-Level Security ────────────────────────────────────────────────────
 ALTER TABLE auction_sessions ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "admin_full_access_sessions"     ON auction_sessions;
+DROP POLICY IF EXISTS "public_read_published_sessions" ON auction_sessions;
+DROP POLICY IF EXISTS "buyer_read_open_sessions"       ON auction_sessions;
+
 CREATE POLICY "admin_full_access_sessions"
   ON auction_sessions FOR ALL
   TO authenticated

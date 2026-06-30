@@ -33,6 +33,9 @@ CREATE UNIQUE INDEX IF NOT EXISTS idx_benchmark_category_tier
 -- ── Row-Level Security ────────────────────────────────────────────────────
 ALTER TABLE benchmark_data ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "public_read_benchmark" ON benchmark_data;
+DROP POLICY IF EXISTS "admin_write_benchmark"  ON benchmark_data;
+
 -- Lecture publique — données de marché non sensibles
 CREATE POLICY "public_read_benchmark"
   ON benchmark_data FOR SELECT

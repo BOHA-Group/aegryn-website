@@ -31,6 +31,11 @@ CREATE INDEX IF NOT EXISTS idx_transaction_results_public
 -- ── Row-Level Security ────────────────────────────────────────────────────
 ALTER TABLE transaction_results ENABLE ROW LEVEL SECURITY;
 
+-- Idempotence : supprimer les policies si elles existent déjà
+DROP POLICY IF EXISTS "public_read_results"          ON transaction_results;
+DROP POLICY IF EXISTS "buyer_read_all_public_results" ON transaction_results;
+DROP POLICY IF EXISTS "admin_full_results"            ON transaction_results;
+
 -- Lecture publique (anon) des résultats marqués is_public = true
 CREATE POLICY "public_read_results"
   ON transaction_results FOR SELECT
@@ -55,13 +60,20 @@ CREATE POLICY "admin_full_results"
   );
 
 -- ── Entrée test (à supprimer ou garder selon décision éditoriale) ─────────
+-- ON CONFLICT DO NOTHING — idempotent si la migration est rejouée
 INSERT INTO transaction_results
   (grade_aeg, category, sector, valuation_range, format,
    process_duration_weeks, closed_at, is_public)
-VALUES
-  ('aa', 'SaaS B2B', 'LegalTech',
-   '{"min": 900000, "max": 1200000}',
-   'private_transaction', 7, '2026-06-01', true);
+SELECT 'aa', 'SaaS B2B', 'LegalTech',
+       '{"min": 900000, "max": 1200000}'::jsonb,
+       'private_transaction', 7, '2026-06-01', true
+WHERE NOT EXISTS (
+  SELECT 1 FROM transaction_results
+  WHERE grade_aeg = 'aa'
+    AND category  = 'SaaS B2B'
+    AND sector    = 'LegalTech'
+    AND closed_at = '2026-06-01'
+);
 
 -- ════════════════════════════════════════════════════════════════════════
 -- FIN — attendre validation Yohann avant db push
