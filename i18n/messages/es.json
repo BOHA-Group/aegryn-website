@@ -28,9 +28,9 @@
     "servicesAlliances": "Alianzas",
     "servicesAcquisition": "Apoyo a la adquisición",
     "gradeDimC": "Código",
-    "gradeDimI": "Infraestructura",
+    "gradeDimI": "IP",
     "gradeDimF": "Finanzas",
-    "gradeDimS": "Estrategia"
+    "gradeDimS": "Seguridad"
   },
   "hero": {
     "tagline": "Engineered to Last",
@@ -366,7 +366,7 @@
       "cta": "Ponerse en contacto"
     },
     "swiss": {
-      "groupLabel": "Aegryn Group",
+      "groupLabel": "AEGRYN",
       "title": "Arraigado en Suiza. Referencia en Europa.",
       "cta": "Ver el catálogo"
     }
@@ -387,7 +387,7 @@
     "spontaneous": "Candidatura espontanéa",
     "statement": {
       "label": "Aegryn Advisory",
-      "title": "Engineered to Last — construido por expertos que creen en ello.",
+      "title": "Certified to transact — construido por expertos que creen en ello.",
       "cta": "Descubrir Advisory"
     },
     "domains": {
@@ -641,8 +641,8 @@
     "base": "Base Suiza"
   },
   "footer": {
-    "groupLabel": "Aegryn Group",
-    "legal": "© 2026 Aegryn Sàrl — Todos los derechos reservados",
+    "groupLabel": "AEGRYN",
+    "legal": "© 2026 AEGRYN Sàrl — Todos los derechos reservados",
     "company": "An Aegryn company",
     "privacy": "Privacidad",
     "terms": "Términos",
@@ -835,8 +835,8 @@
         },
         {
           "code": "I",
-          "name": "Infraestructura",
-          "desc": "Arquitectura, resiliencia, escalabilidad, seguridad operativa."
+          "name": "PI & Derechos",
+          "desc": "Cobertura de derechos de software, marcas registradas, licencias propietarias, patentes y contratos de exclusividad. Evalúa la solidez jurídica y la transmisibilidad del activo intelectual."
         },
         {
           "code": "F",
@@ -845,8 +845,8 @@
         },
         {
           "code": "S",
-          "name": "Estrategia",
-          "desc": "Posicionamiento, barreras de entrada, dependencias, pipeline, roadmap."
+          "name": "Seguridad",
+          "desc": "Conformidad RGPD, pruebas de penetración, gestión de secretos, MFA, arquitectura zero-trust y ausencia de vulnerabilidades críticas conocidas. Evalúa el riesgo cibernético en la transferencia."
         }
       ]
     },
@@ -1120,7 +1120,7 @@
       "format": "Formato",
       "formatValue": "Sesión privada — solo por invitación",
       "location": "Ubicación",
-      "locationValue": "Zurich, Suiza (+ acceso remoto seguro)",
+      "locationValue": "Suiza (+ acceso remoto seguro)",
       "assetsLabel": "Activos en sesión",
       "assetsTbd": "Catálogo publicado 30 días antes de la sesión",
       "registerTitle": "Solicitar acceso",
@@ -1224,7 +1224,7 @@
   "gradeShowcase": {
     "label": "El sistema AEGRYN Grade",
     "title": "Un activo sin grade\nes un activo sin precio.",
-    "desc": "Nuestro protocolo de certificación evalúa cada activo en 4 dimensiones: Código, Infraestructura, Finanzas, Estrategia. Un grade objetivo, reproducible, oponible.",
+    "desc": "Nuestro protocolo de certificación evalúa cada activo en 4 dimensiones: Código, IP, Finanzas, Seguridad. Un grade objetivo, reproducible, oponible.",
     "cta": "Entender el sistema de grade",
     "exceptional": "Excepcional",
     "premium": "Premium",

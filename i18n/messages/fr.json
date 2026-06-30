@@ -28,9 +28,9 @@
     "servicesAlliances": "Alliances",
     "servicesAcquisition": "Acquisition Support",
     "gradeDimC": "Code",
-    "gradeDimI": "Infrastructure",
+    "gradeDimI": "IP",
     "gradeDimF": "Finance",
-    "gradeDimS": "Stratégie"
+    "gradeDimS": "Sécurité"
   },
   "hero": {
     "tagline": "Certified Tech Asset Transactions — Europe",
@@ -363,7 +363,7 @@
       "cta": "Prendre contact"
     },
     "swiss": {
-      "groupLabel": "Aegryn Group",
+      "groupLabel": "AEGRYN",
       "title": "Ancré en Suisse. Référence en Europe.",
       "cta": "Voir le catalogue"
     }
@@ -384,7 +384,7 @@
     "spontaneous": "Candidature spontanée",
     "statement": {
       "label": "Aegryn Advisory",
-      "title": "Engineered to Last — construit par des experts qui y croient.",
+      "title": "Certified to transact — construit par des experts qui y croient.",
       "cta": "Découvrir l'Advisory"
     },
     "domains": {
@@ -638,8 +638,8 @@
     "base": "Base Suisse"
   },
   "footer": {
-    "groupLabel": "Aegryn Group",
-    "legal": "© 2026 Aegryn Sàrl — Tous droits réservés",
+    "groupLabel": "AEGRYN",
+    "legal": "© 2026 AEGRYN Sàrl — Tous droits réservés",
     "company": "An Aegryn company",
     "privacy": "Confidentialité",
     "terms": "Conditions",
@@ -679,7 +679,7 @@
   "gradeShowcase": {
     "label": "Le système AEGRYN Grade",
     "title": "Un actif sans grade\nest un actif sans prix.",
-    "desc": "Notre protocole de certification évalue chaque actif sur 4 dimensions : Code, Infrastructure, Finance, Stratégie. Un grade objectif, reproductible, opposable.",
+    "desc": "Notre protocole de certification évalue chaque actif sur 4 dimensions : Code, IP, Finance, Sécurité. Un grade objectif, reproductible, opposable.",
     "cta": "Comprendre le système de grade",
     "exceptional": "Exceptionnel",
     "premium": "Premium",
@@ -948,8 +948,8 @@
         },
         {
           "code": "I",
-          "name": "Infrastructure",
-          "desc": "Architecture, résilience, scalabilité, coûts hébergement, sécurité opérationnelle."
+          "name": "IP & Droits",
+          "desc": "Couverture des droits logiciels, marques déposées, licences propriétaires, brevets et contrats d'exclusivité. Évalue la solidité juridique et la cessibilité de l'actif intellectuel."
         },
         {
           "code": "F",
@@ -958,8 +958,8 @@
         },
         {
           "code": "S",
-          "name": "Stratégie",
-          "desc": "Positionnement marché, barrières à l'entrée, dépendances, pipeline, roadmap."
+          "name": "Sécurité",
+          "desc": "Conformité RGPD, tests de pénétration, gestion des secrets, MFA, architecture zero-trust et absence de vulnérabilités critiques connues. Évalue le risque cyber au transfert."
         }
       ]
     },
@@ -1147,7 +1147,7 @@
       "format": "Format",
       "formatValue": "Session privée — invitation uniquement",
       "location": "Lieu",
-      "locationValue": "Zurich, Suisse (+ accès distanciel sécurisé)",
+      "locationValue": "Suisse (+ accès distanciel sécurisé)",
       "assetsLabel": "Actifs en session",
       "assetsTbd": "Catalogue publié 30 jours avant la session",
       "registerTitle": "Demander un accès",

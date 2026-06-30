@@ -28,9 +28,9 @@
     "servicesAlliances": "Allianties",
     "servicesAcquisition": "Acquisitieondersteuning",
     "gradeDimC": "Code",
-    "gradeDimI": "Infrastructuur",
+    "gradeDimI": "IP",
     "gradeDimF": "Financiën",
-    "gradeDimS": "Strategie"
+    "gradeDimS": "Beveiliging"
   },
   "hero": {
     "tagline": "Engineered to Last",
@@ -366,7 +366,7 @@
       "cta": "Contact opnemen"
     },
     "swiss": {
-      "groupLabel": "Aegryn Group",
+      "groupLabel": "AEGRYN",
       "title": "Geworteld in Zwitserland. Europese referentie.",
       "cta": "Catalogus bekijken"
     }
@@ -387,7 +387,7 @@
     "spontaneous": "Open sollicitatie",
     "statement": {
       "label": "Aegryn Advisory",
-      "title": "Engineered to Last — gebouwd door experts die erin geloven.",
+      "title": "Certified to transact — gebouwd door experts die erin geloven.",
       "cta": "Ontdek Advisory"
     },
     "domains": {
@@ -641,8 +641,8 @@
     "base": "Zwitserse basis"
   },
   "footer": {
-    "groupLabel": "Aegryn Group",
-    "legal": "© 2026 Aegryn Sàrl — Alle rechten voorbehouden",
+    "groupLabel": "AEGRYN",
+    "legal": "© 2026 AEGRYN Sàrl — Alle rechten voorbehouden",
     "company": "An Aegryn company",
     "privacy": "Privacy",
     "terms": "Voorwaarden",
@@ -835,8 +835,8 @@
         },
         {
           "code": "I",
-          "name": "Infrastructuur",
-          "desc": "Systeemarchitectuur, veerkracht, schaalbaarheid, operationele beveiliging."
+          "name": "IP & Rechten",
+          "desc": "Dekking van softwarerechten, geregistreerde handelsmerken, eigendomslicenties, octrooien en exclusiviteitscontracten. Beoordeelt de juridische robuustheid en overdraagbaarheid van het intellectuele actief."
         },
         {
           "code": "F",
@@ -845,8 +845,8 @@
         },
         {
           "code": "S",
-          "name": "Strategie",
-          "desc": "Marktpositionering, toetredingsbarrières, afhankelijkheden, pipeline, roadmap."
+          "name": "Beveiliging",
+          "desc": "AVG-naleving, penetratietests, secretsbeheer, MFA, zero-trust-architectuur en afwezigheid van bekende kritieke kwetsbaarheden. Beoordeelt het cyberrisico bij overdracht."
         }
       ]
     },
@@ -1120,7 +1120,7 @@
       "format": "Formaat",
       "formatValue": "Private sessie — alleen op uitnodiging",
       "location": "Locatie",
-      "locationValue": "Zürich, Zwitserland (+ beveiligde remote toegang)",
+      "locationValue": "Zwitserland (+ beveiligde externe toegang)",
       "assetsLabel": "Assets in sessie",
       "assetsTbd": "Catalogus gepubliceerd 30 dagen voor de sessie",
       "registerTitle": "Toegang aanvragen",
@@ -1224,7 +1224,7 @@
   "gradeShowcase": {
     "label": "Het AEGRYN Grade systeem",
     "title": "Een asset zonder grade\nis een asset zonder prijs.",
-    "desc": "Ons certificeringsprotocol evalueert elk asset op 4 dimensies: Code, Infrastructuur, Financiën, Strategie. Een objectieve, reproduceerbare, betwistbare grade.",
+    "desc": "Ons certificeringsprotocol evalueert elk asset op 4 dimensies: Code, IP, Financiën, Beveiliging. Een objectieve, reproduceerbare, betwistbare grade.",
     "cta": "Het grade-systeem begrijpen",
     "exceptional": "Uitzonderlijk",
     "premium": "Premium",

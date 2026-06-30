@@ -28,9 +28,9 @@
     "servicesAlliances": "Alleanze",
     "servicesAcquisition": "Supporto all'acquisizione",
     "gradeDimC": "Codice",
-    "gradeDimI": "Infrastruttura",
+    "gradeDimI": "IP",
     "gradeDimF": "Finanza",
-    "gradeDimS": "Strategia"
+    "gradeDimS": "Sicurezza"
   },
   "hero": {
     "tagline": "Engineered to Last",
@@ -366,7 +366,7 @@
       "cta": "Contattaci"
     },
     "swiss": {
-      "groupLabel": "Aegryn Group",
+      "groupLabel": "AEGRYN",
       "title": "Radicato in Svizzera. Riferimento in Europa.",
       "cta": "Vedi il catalogo"
     }
@@ -387,7 +387,7 @@
     "spontaneous": "Candidatura spontanea",
     "statement": {
       "label": "Aegryn Advisory",
-      "title": "Engineered to Last — costruito da esperti che ci credono.",
+      "title": "Certified to transact — costruito da esperti che ci credono.",
       "cta": "Scopri Advisory"
     },
     "domains": {
@@ -641,8 +641,8 @@
     "base": "Base Svizzera"
   },
   "footer": {
-    "groupLabel": "Aegryn Group",
-    "legal": "© 2026 Aegryn Sàrl — Tutti i diritti riservati",
+    "groupLabel": "AEGRYN",
+    "legal": "© 2026 AEGRYN Sàrl — Tutti i diritti riservati",
     "company": "An Aegryn company",
     "privacy": "Privacy",
     "terms": "Termini",
@@ -835,8 +835,8 @@
         },
         {
           "code": "I",
-          "name": "Infrastruttura",
-          "desc": "Architettura, resilienza, scalabilità, sicurezza operativa."
+          "name": "IP & Diritti",
+          "desc": "Copertura dei diritti software, marchi registrati, licenze proprietarie, brevetti e contratti di esclusiva. Valuta la solidità giuridica e la cedibilità dell'asset intellettuale."
         },
         {
           "code": "F",
@@ -845,8 +845,8 @@
         },
         {
           "code": "S",
-          "name": "Strategia",
-          "desc": "Posizionamento, barriere all'ingresso, dipendenze, pipeline, roadmap."
+          "name": "Sicurezza",
+          "desc": "Conformità RGPD, test di penetrazione, gestione dei segreti, MFA, architettura zero-trust e assenza di vulnerabilità critiche note. Valuta il rischio cyber al trasferimento."
         }
       ]
     },
@@ -1120,7 +1120,7 @@
       "format": "Formato",
       "formatValue": "Sessione privata — solo su invito",
       "location": "Luogo",
-      "locationValue": "Zurigo, Svizzera (+ accesso remoto sicuro)",
+      "locationValue": "Svizzera (+ accesso remoto sicuro)",
       "assetsLabel": "Asset in sessione",
       "assetsTbd": "Catalogo pubblicato 30 giorni prima della sessione",
       "registerTitle": "Richiedi accesso",

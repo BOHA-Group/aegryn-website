@@ -28,9 +28,9 @@
     "servicesAlliances": "Alliances",
     "servicesAcquisition": "Acquisition Support",
     "gradeDimC": "Code",
-    "gradeDimI": "Infrastructure",
+    "gradeDimI": "IP",
     "gradeDimF": "Finance",
-    "gradeDimS": "Strategy"
+    "gradeDimS": "Security"
   },
   "hero": {
     "tagline": "Certified Tech Asset Transactions — Europe",
@@ -363,7 +363,7 @@
       "cta": "Get in touch"
     },
     "swiss": {
-      "groupLabel": "Aegryn Group",
+      "groupLabel": "AEGRYN",
       "title": "Rooted in Switzerland. The European reference.",
       "cta": "View the catalogue"
     }
@@ -384,7 +384,7 @@
     "spontaneous": "Unsolicited application",
     "statement": {
       "label": "Aegryn Advisory",
-      "title": "Engineered to Last — built by experts who believe in it.",
+      "title": "Certified to transact — built by experts who believe in it.",
       "cta": "Discover Advisory"
     },
     "domains": {
@@ -638,8 +638,8 @@
     "base": "Swiss Base"
   },
   "footer": {
-    "groupLabel": "Aegryn Group",
-    "legal": "© 2026 Aegryn Sàrl — All rights reserved",
+    "groupLabel": "AEGRYN",
+    "legal": "© 2026 AEGRYN Sàrl — All rights reserved",
     "company": "An Aegryn company",
     "privacy": "Privacy",
     "terms": "Terms",
@@ -679,7 +679,7 @@
   "gradeShowcase": {
     "label": "The AEGRYN Grade system",
     "title": "An asset without a grade\nis an asset without a price.",
-    "desc": "Our certification protocol evaluates each asset across 4 dimensions: Code, Infrastructure, Finance, Strategy. An objective, reproducible, enforceable grade.",
+    "desc": "Our certification protocol evaluates each asset across 4 dimensions: Code, IP, Finance, Security. An objective, reproducible, enforceable grade.",
     "cta": "Understand the grade system",
     "exceptional": "Exceptional",
     "premium": "Premium",
@@ -948,8 +948,8 @@
         },
         {
           "code": "I",
-          "name": "Infrastructure",
-          "desc": "System architecture, resilience, scalability, hosting costs, operational security."
+          "name": "IP & Rights",
+          "desc": "Coverage of software rights, registered trademarks, proprietary licences, patents and exclusivity agreements. Assesses the legal robustness and transferability of the intellectual asset."
         },
         {
           "code": "F",
@@ -958,8 +958,8 @@
         },
         {
           "code": "S",
-          "name": "Strategy",
-          "desc": "Market positioning, entry barriers, critical dependencies, pipeline, roadmap."
+          "name": "Security",
+          "desc": "GDPR compliance, penetration testing, secrets management, MFA, zero-trust architecture and absence of known critical vulnerabilities. Assesses cyber risk at transfer."
         }
       ]
     },
@@ -1147,7 +1147,7 @@
       "format": "Format",
       "formatValue": "Private session — invitation only",
       "location": "Location",
-      "locationValue": "Zurich, Switzerland (+ secure remote access)",
+      "locationValue": "Switzerland (+ secure remote access)",
       "assetsLabel": "Assets in session",
       "assetsTbd": "Catalog published 30 days before the session",
       "registerTitle": "Request access",
