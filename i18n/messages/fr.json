@@ -75,9 +75,11 @@
       "viewDetails": "Voir la fiche",
       "auctionEligible": "Éligible auction",
       "internalOnly": "Usage interne",
-      "heroLabel": "AEGRYN — Écosystème propriétaire",
+      "heroLabel": "AEGRYN — Portefeuille propriétaire",
       "heroTitle": "Ce que nous\nconstruisons.",
-      "heroSub": "6 actifs · 3 catégories · Suisse & Europe",
+      "heroSub": "Actifs appartenant au groupe AEGRYN — non soumis par des tiers",
+      "ownedNote": "Ces actifs appartiennent au groupe AEGRYN. Ils ne sont pas en vente par défaut. Certains peuvent exceptionnellement faire l'objet d'une mise en auction sur décision stratégique du groupe.",
+      "auctionEligibleNote": "Actif éligible à une mise en auction — contact investisseurs sur demande.",
       "ctaBottom": "Vous souhaitez soumettre votre propre actif pour certification ?",
       "ctaGrade": "Soumettre un actif tiers",
       "ctaAuction": "Voir les sessions auction"
@@ -1448,9 +1450,10 @@
       "marketCta": "Estimer la valeur de mon actif"
     },
     "catalog": {
-      "label": "Catalogue AEGRYN",
+      "label": "AEGRYN Auction — Actifs tiers",
       "title": "Actifs certifiés\ndisponibles.",
-      "desc": "Chaque actif listé dans ce catalogue a passé le protocole de certification AEGRYN. Grade, sous-codes, valorisation indicative — tout est documenté.",
+      "desc": "Actifs soumis par des vendeurs tiers ayant passé le protocole de certification AEGRYN. Ces actifs ne font pas partie du portefeuille propriétaire du groupe.",
+      "thirdPartyNote": "Ces actifs sont proposés par des vendeurs indépendants. AEGRYN agit comme intermédiaire certifié et organisateur de la transaction — pas comme vendeur.",
       "filterAll": "Tous les grades",
       "filterStar": "AEG ★",
       "filterAAA": "AAA",

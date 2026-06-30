@@ -1,6 +1,7 @@
 import { getTranslations }   from 'next-intl/server'
 import type { Metadata }     from 'next'
 import Link                  from 'next/link'
+import { ArrowUpRight, Info } from 'lucide-react'
 import CatalogNotifyForm     from './CatalogNotifyForm'
 import NdaRequestForm        from './NdaRequestForm'
 import { createServiceClient } from '@/lib/supabase'
@@ -81,6 +82,24 @@ export default async function AuctionCatalogPage({ params }: Props) {
           </p>
         </div>
       </section>
+
+      {/* Bannière éditoriale — actifs tiers uniquement */}
+      <div className="border-b border-ag-border bg-ag-off-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="flex items-start gap-3">
+            <Info size={14} className="text-ag-gray-light mt-0.5 shrink-0" />
+            <p className="font-sans text-[12px] text-ag-gray leading-relaxed max-w-2xl">
+              {t('thirdPartyNote')}
+            </p>
+          </div>
+          <Link
+            href="/assets"
+            className="shrink-0 inline-flex items-center gap-2 font-sans font-semibold text-[10px] uppercase tracking-[0.16em] text-ag-gray-light border border-ag-border px-4 py-2 hover:border-ag-black hover:text-ag-black transition-colors whitespace-nowrap"
+          >
+            Portfolio AEGRYN <ArrowUpRight size={11} />
+          </Link>
+        </div>
+      </div>
 
       {/* Grade filters */}
       <section className="border-b border-ag-border bg-ag-white sticky top-16 z-30">

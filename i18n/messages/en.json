@@ -75,9 +75,11 @@
       "viewDetails": "View details",
       "auctionEligible": "Auction eligible",
       "internalOnly": "Internal use",
-      "heroLabel": "AEGRYN — Proprietary ecosystem",
+      "heroLabel": "AEGRYN — Proprietary portfolio",
       "heroTitle": "What we're\nbuilding.",
-      "heroSub": "6 assets · 3 categories · Switzerland & Europe",
+      "heroSub": "Assets owned by the AEGRYN group — not submitted by third parties",
+      "ownedNote": "These assets belong to the AEGRYN group. They are not for sale by default. Some may exceptionally be listed for auction following a strategic decision by the group.",
+      "auctionEligibleNote": "Auction-eligible asset — investor inquiries on request.",
       "ctaBottom": "Want to submit your own asset for certification?",
       "ctaGrade": "Submit a third-party asset",
       "ctaAuction": "View auction sessions"
@@ -1448,9 +1450,10 @@
       "marketCta": "Estimate my asset's value"
     },
     "catalog": {
-      "label": "AEGRYN Catalog",
+      "label": "AEGRYN Auction — Third-party assets",
       "title": "Certified assets\navailable now.",
-      "desc": "Every asset listed in this catalog has passed the AEGRYN certification protocol. Grade, sub-codes, indicative valuation — all documented.",
+      "desc": "Assets submitted by independent third-party sellers who have passed the AEGRYN certification protocol. These assets are not part of the group's proprietary portfolio.",
+      "thirdPartyNote": "These assets are offered by independent sellers. AEGRYN acts as a certified intermediary and transaction organiser — not as the seller.",
       "filterAll": "All grades",
       "filterStar": "AEG ★",
       "filterAAA": "AAA",
