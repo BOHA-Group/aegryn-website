@@ -26,9 +26,9 @@ export const subblinkLot: AssetLot = {
   ],
 
   grade: {
-    letter: "B+",
+    letter: "B",
     label:
-      "Actif technologique mature, traction commerciale démontrée, marché non disputé. Réserve méthodologique : grade préliminaire fondateur, à confirmer par audit AEGRYN Auction indépendant (KRYV Protocol + due diligence tierce) avant inscription définitive au catalogue.",
+      "Actif technologique mature, traction commerciale démontrée, marché non disputé. Grade préliminaire fondateur — à confirmer par audit AEGRYN Auction indépendant (KRYV Protocol + due diligence tierce) avant inscription définitive au catalogue.",
   },
 
   executiveSummary: {
