@@ -3,11 +3,11 @@ import { Lock, ArrowUpRight, CalendarClock } from 'lucide-react'
 import type { AssetLotTeaser } from '@/types/auction'
 
 const GRADE_PALETTE: Record<string, { bg: string; text: string; border: string }> = {
-  '★':  { bg: '#ECFDF5', text: '#065F46', border: '#6EE7B7' },
-  'AAA': { bg: '#EFF6FF', text: '#1D4ED8', border: '#93C5FD' },
-  'AA':  { bg: '#EFF6FF', text: '#2563EB', border: '#BFDBFE' },
-  'A':   { bg: '#F0FDF4', text: '#15803D', border: '#86EFAC' },
-  'B':   { bg: '#FFFBEB', text: '#92400E', border: '#FCD34D' },
+  '★':   { bg: '#EDFAF4', text: '#0A6B47', border: '#5ADDA4' },  // apex mint
+  'AAA': { bg: '#FBF7EE', text: '#7A5E24', border: '#C9A84C' },  // gold
+  'AA':  { bg: '#F4F5F6', text: '#4A5568', border: '#9BA8B0' },  // silver
+  'A':   { bg: '#EFF6FF', text: '#1A5B9E', border: '#4A90D9' },  // blue
+  'B':   { bg: '#FEF3E2', text: '#9B5E09', border: '#D4820A' },  // amber
 }
 
 function gradeStyle(letter: string) {

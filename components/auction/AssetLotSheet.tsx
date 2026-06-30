@@ -21,16 +21,11 @@ const T = {
 }
 
 const GRADE_COLORS: Record<string, string> = {
-  '★':  '#3F6B4A',
-  'AAA': '#1D4ED8',
-  'AA':  '#2563EB',
-  'A':   '#3F6B4A',
-  'A+':  '#3F6B4A',
-  'B':   '#9C7A3C',
-  'B+':  '#9C7A3C',
-  'C':   '#A8763F',
-  'D':   '#8A4A3A',
-  'E':   '#6B2F2A',
+  '★':   '#5ADDA4',  // ag-grade-star — Apex Mint
+  'AAA': '#C9A84C',  // ag-grade-aaa  — Gold
+  'AA':  '#9BA8B0',  // ag-grade-aa   — Silver
+  'A':   '#4A90D9',  // ag-grade-a    — Blue
+  'B':   '#D4820A',  // ag-grade-b    — Amber
 }
 
 function Kicker({ children }: { children: React.ReactNode }) {
