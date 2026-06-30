@@ -260,3 +260,67 @@ export function preRevenueRange(score: number): { low: number; high: number } {
     high: 150_000 + pct * 350_000,
   }
 }
+
+/* ─── Benchmark market anchor (60% weight) ──────────────── */
+
+export interface BenchmarkResult {
+  multipleLow:  number
+  multipleHigh: number
+  source:       string
+  sourceDate:   string
+  tier:         string
+}
+
+/**
+ * Fetches the best matching benchmark tier for a given asset profile.
+ * Requires a Supabase client with anon access to benchmark_data.
+ * Server-side only — do not call from client components.
+ *
+ * @param supabase  - Supabase client instance (anon or service)
+ * @param category  - Asset category matching benchmark_data.category
+ * @param nrr       - Net Revenue Retention %
+ * @param growth    - YoY growth %
+ * @param margin    - Gross margin %
+ */
+export async function fetchBenchmark(
+  supabase: { from: (table: string) => unknown },
+  category: string,
+  nrr:      number,
+  growth:   number,
+  margin:   number,
+): Promise<BenchmarkResult | null> {
+  const { data, error } = await (supabase as { from: Function })
+    .from('benchmark_data')
+    .select('profile_tier, multiple_low, multiple_high, source, source_date')
+    .eq('category', category)
+    .lte('nrr_min', nrr)
+    .lte('growth_min', growth)
+    .lte('gross_margin_min', margin)
+    .order('nrr_min', { ascending: false })
+    .limit(1)
+    .maybeSingle()
+
+  if (error || !data) return null
+
+  return {
+    multipleLow:  data.multiple_low,
+    multipleHigh: data.multiple_high,
+    source:       data.source,
+    sourceDate:   data.source_date,
+    tier:         data.profile_tier,
+  }
+}
+
+/**
+ * Blends benchmark multiples (60%) with internal grade multiples (40%).
+ * The market sets the price; the grade explains position in the range.
+ */
+export function calculateFinalMultiple(
+  gradeMultiplier:     { low: number; high: number },
+  benchmarkMultiplier: { low: number; high: number },
+): { low: number; high: number } {
+  return {
+    low:  benchmarkMultiplier.low  * 0.6 + gradeMultiplier.low  * 0.4,
+    high: benchmarkMultiplier.high * 0.6 + gradeMultiplier.high * 0.4,
+  }
+}

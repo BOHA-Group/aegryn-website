@@ -6,15 +6,74 @@ import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import Link                    from 'next/link'
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 
-const TAB_KEYS = ['overview', 'certification', 'distribution', 'dealflow', 'apply'] as const
+const TAB_KEYS = ['overview', 'certification', 'sequestre', 'dealflow', 'technique', 'assurance', 'apply'] as const
 type TabKey = typeof TAB_KEYS[number]
 
-const TYPE_KEYS = ['certification', 'distribution', 'dealflow'] as const
+const TYPE_KEYS = ['certification', 'sequestre', 'dealflow', 'technique', 'assurance'] as const
 
 const TYPE_ACCENT: Record<string, string> = {
   certification: 'border-ag-apex',
-  distribution:  'text-ag-grade-aaa',
-  dealflow:      'text-ag-grade-a',
+  sequestre:     'border-ag-grade-aa',
+  dealflow:      'border-ag-grade-a',
+  technique:     'border-ag-grade-aaa',
+  assurance:     'border-ag-grade-b',
+}
+
+const TYPE_DATA: Record<string, { label: string; title: string; desc: string; profiles: string[]; cta: string }> = {
+  certification: {
+    label: 'CERTIFICATION',
+    title: 'Co-signataires du Grade AEGRYN',
+    desc: 'Le label AEGRYN Grade n\'est pas une opinion — c\'est une certification co-signée par des experts indépendants qui engagent leur responsabilité professionnelle.',
+    profiles: [
+      'Cabinets juridiques tech & IP — co-signent la dimension I (IP & Droits) du grade',
+      'Experts-comptables / Cabinets d\'audit — co-signent la dimension F (Finance)',
+      'Partenaires cybersécurité — co-signent la dimension S (Sécurité)',
+    ],
+    cta: 'Devenir partenaire certification',
+  },
+  sequestre: {
+    label: 'SÉQUESTRE & JURIDIQUE',
+    title: 'Sécuriser les transactions à chaque closing',
+    desc: 'Chaque transaction AEGRYN implique un séquestre institutionnel et une documentation contractuelle rigoureuse.',
+    profiles: [
+      'Banques privées et fiduciaires suisses — dépositaires tiers indépendants (FINMA)',
+      'Avocats M&A tech — rédigent SPA, asset deal, share deal (droit suisse + UE)',
+      'Notaires — officialisation des actes de cession pour les deals > 3M€',
+    ],
+    cta: 'Proposer un partenariat séquestre/juridique',
+  },
+  dealflow: {
+    label: 'FINANCEMENT & DEAL FLOW',
+    title: 'Connecter acquéreurs et capital',
+    desc: 'Les meilleures transactions tech naissent de la rencontre entre un actif certifié et le bon partenaire financier.',
+    profiles: [
+      'Fonds PE/VC/Family Office — acquéreurs directs ou apporteurs d\'actifs à céder',
+      'Cabinets M&A boutique — deal flow vendeurs et acquéreurs, commission sur closing',
+      'Accélérateurs et incubateurs tech — portfolio companies en phase de sortie',
+    ],
+    cta: 'Référencer un actif ou un acquéreur',
+  },
+  technique: {
+    label: 'EXPERTISE TECHNIQUE',
+    title: 'Les spécialistes qui rendent le grade irréfutable',
+    desc: 'Certifier le code d\'un actif tech nécessite des experts indépendants capables d\'auditer ce que nos outils internes ne couvrent pas.',
+    profiles: [
+      'Spécialistes revue de code et dette technique — CTO freelance senior, cabinets indépendants',
+      'Auditeurs de sécurité / Pentesteurs — accréditation PASSI ou CREST recommandée',
+      'Spécialistes blockchain et Web3 — pour la future extension du grade aux actifs Web3',
+    ],
+    cta: 'Proposer un partenariat technique',
+  },
+  assurance: {
+    label: 'ASSURANCE & CONFORMITÉ',
+    title: 'Sécuriser les parties après le closing',
+    desc: 'Les meilleures transactions institutionnelles s\'accompagnent de couvertures assurantielles et d\'une conformité fiscale optimisée.',
+    profiles: [
+      'Assureurs W&I (Warranty & Indemnity) — couvrent les risques post-cession pour deals > 2M€',
+      'Fiscalistes spécialisés transactions — optimisent l\'exit vendeur et l\'acquisition acheteur',
+    ],
+    cta: 'Explorer un partenariat assurance/conformité',
+  },
 }
 
 const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
@@ -150,31 +209,38 @@ export default function AlliancesContent() {
           </section>
         )}
 
-        {/* Certification / Distribution / Dealflow */}
-        {(activeTab === 'certification' || activeTab === 'distribution' || activeTab === 'dealflow') && (
+        {/* Category detail tabs */}
+        {(activeTab === 'certification' || activeTab === 'sequestre' || activeTab === 'dealflow' || activeTab === 'technique' || activeTab === 'assurance') && (
           <section className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
             <div className="max-w-2xl">
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-5">
-                {t(`types.${activeTab}.label`)}
-              </p>
-              <h2
-                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6"
-                style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
-              >
-                {t(`types.${activeTab}.title`)}
-              </h2>
-              <p className="text-[15px] text-ag-gray leading-relaxed mb-8 max-w-lg">
-                {t(`types.${activeTab}.desc`)}
-              </p>
-              <p className="font-sans text-[12px] text-ag-gray-light tracking-wide border-l-2 border-ag-apex/30 pl-4 mb-10">
-                {t(`types.${activeTab}.profiles`)}
-              </p>
+              {(() => {
+                const d = TYPE_DATA[activeTab as keyof typeof TYPE_DATA]
+                if (!d) return null
+                return (
+                  <>
+                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-5">{d.label}</p>
+                    <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6" style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}>{d.title}</h2>
+                    <p className="text-[15px] text-ag-gray leading-relaxed mb-8 max-w-lg">{d.desc}</p>
+                    <ul className="flex flex-col gap-3 mb-10">
+                      {d.profiles.map((p, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <CheckCircle2 size={13} className="text-ag-apex mt-0.5 shrink-0" />
+                          <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{p}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="font-sans text-[12px] text-ag-gray-light italic mb-8">
+                      Note : AEGRYN ne liste pas encore de partenaires nommés publiquement. Ces catégories présentent les profils recherchés. Les premiers partenaires seront publiés sur <a href="/grade/partners" className="underline hover:text-ag-apex transition-colors">/grade/partners</a> dès les premiers mandats formalisés.
+                    </p>
+                  </>
+                )
+              })()}
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() => setTab('apply')}
                   className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-navy-mid transition-colors"
                 >
-                  {t(`types.${activeTab}.cta`)} <ArrowUpRight size={12} />
+                  {TYPE_DATA[activeTab as keyof typeof TYPE_DATA]?.cta ?? 'Candidater'} <ArrowUpRight size={12} />
                 </button>
                 <button
                   onClick={() => setTab('overview')}
@@ -223,9 +289,12 @@ export default function AlliancesContent() {
                     <label className={labelCls}>{t('form.type')}</label>
                     <select name="alliance_type" required className={selectCls}>
                       <option value="">{t('form.typePlaceholder')}</option>
-                      {(['certification','distribution','dealflow','other'] as const).map(k => (
-                        <option key={k} value={k}>{t(`form.typeOptions.${k}`)}</option>
-                      ))}
+                      <option value="certification">Certification (grade)</option>
+                      <option value="sequestre">Séquestre &amp; Juridique</option>
+                      <option value="dealflow">Financement &amp; Deal Flow</option>
+                      <option value="technique">Expertise technique</option>
+                      <option value="assurance">Assurance &amp; Conformité</option>
+                      <option value="other">Autre</option>
                     </select>
                   </div>
                 </div>

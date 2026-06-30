@@ -16,13 +16,13 @@ const AUCTION_LINKS = [
   { labelKey: 'auctionBuy',         href: '/auction/how-to-buy' },
   { labelKey: 'auctionBidModels',   href: '/auction/bid-models' },
   { labelKey: 'auctionSession',     href: '/auction/sessions' },
-  { labelKey: 'auctionAssessment',  href: '/auction/assessment-days' },
   { labelKey: 'auctionResults',     href: '/auction/results' },
 ]
 
 const GRADE_LINKS = [
   { labelKey: 'gradeSystem',     href: '/grade' },
   { labelKey: 'gradeMethod',     href: '/grade/methodology' },
+  { labelKey: 'gradePartners',   href: '/grade/partners' },
   { labelKey: 'gradeSubmit',     href: '/grade/submit' },
 ]
 

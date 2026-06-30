@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Unbounded } from 'next/font/google'
 import localFont from 'next/font/local'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
@@ -13,13 +12,6 @@ import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import CookieBanner from '@/components/analytics/CookieBanner'
 import { aegrynOrganizationSchema, aegrynWebSiteSchema } from '@/lib/seo'
 import '@/styles/globals.css'
-
-const unbounded = Unbounded({
-  subsets: ['latin'],
-  weight: ['400', '700', '800'],
-  variable: '--font-unbounded',
-  display: 'swap',
-})
 
 const plusJakartaSans = localFont({
   src: [
@@ -134,7 +126,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
       </head>
       <body
-        className={`${unbounded.variable} ${plusJakartaSans.variable} font-sans bg-ag-white text-ag-dark antialiased`}
+        className={`${plusJakartaSans.variable} font-sans bg-ag-white text-ag-dark antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           <LenisProvider>

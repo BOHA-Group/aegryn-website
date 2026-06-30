@@ -1,6 +1,7 @@
 import { generateAegrynMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Download } from 'lucide-react'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -19,10 +20,19 @@ export default function TermsPage() {
     <main className="bg-ag-off-white min-h-screen">
       <div className="mx-auto max-w-3xl px-6 md:px-12 py-28">
 
-        <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.24em] text-ag-gray-light mb-10">
-          <Link href="/" className="hover:text-ag-black transition-colors">Aegryn</Link>
-          {' / '}Terms of Use
-        </p>
+        <div className="flex items-start justify-between gap-6 mb-10">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.24em] text-ag-gray-light">
+            <Link href="/" className="hover:text-ag-black transition-colors">Aegryn</Link>
+            {' / '}Conditions Générales de Vente
+          </p>
+          <a
+            href="/legal/cgv.pdf"
+            download
+            className="shrink-0 inline-flex items-center gap-2 border border-ag-border px-4 py-2 font-sans font-semibold text-[10px] uppercase tracking-[0.16em] text-ag-gray hover:border-ag-black hover:text-ag-black transition-colors"
+          >
+            <Download size={11} /> Télécharger PDF <span className="text-ag-gray-light font-normal">(juin 2026)</span>
+          </a>
+        </div>
 
         <h1 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4"
           style={{ fontSize: 'clamp(32px,4vw,52px)' }}>

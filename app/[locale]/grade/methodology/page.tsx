@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Download } from 'lucide-react'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -98,12 +98,21 @@ export default function GradeMethodologyPage() {
           <p className="font-sans font-semibold text-ag-black text-[18px] max-w-md">
             Prêt à soumettre votre actif pour certification ?
           </p>
-          <Link
-            href="/contact"
-            className="shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy-mid transition-colors"
-          >
-            Soumettre mon actif <ArrowUpRight size={13} />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link
+              href="/grade/submit"
+              className="shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy-mid transition-colors"
+            >
+              Soumettre mon actif <ArrowUpRight size={13} />
+            </Link>
+            <a
+              href="/legal/methodology.pdf"
+              download
+              className="shrink-0 inline-flex items-center gap-2 border border-ag-border text-ag-gray font-sans font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:border-ag-black hover:text-ag-black transition-colors"
+            >
+              <Download size={11} /> Méthodologie PDF <span className="font-normal text-ag-gray-light">(juin 2026)</span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
