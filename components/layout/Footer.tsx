@@ -61,7 +61,11 @@ const socialLinks = [
 ]
 
 const legal = [
-  { key: 'privacy', href: '/privacy', external: false },
+  { key: 'termsUse',  href: '/terms/use',  ns: 'legalNav' },
+  { key: 'termsCgv',  href: '/terms/cgv',  ns: 'legalNav' },
+  { key: 'privacy',   href: '/privacy',    ns: 'legalNav' },
+  { key: 'security',  href: '/security',   ns: 'legalNav' },
+  { key: 'faq',       href: '/help/faq',   ns: 'legalNav' },
 ]
 
 const footerNavLinks = [
@@ -78,6 +82,7 @@ const footerNavLinks = [
 export default function Footer() {
   const t    = useTranslations('footer')
   const tNav = useTranslations('nav')
+  const tL   = useTranslations('legalNav')
 
   return (
     <footer className="bg-ag-navy border-t border-white/10">
@@ -175,14 +180,13 @@ export default function Footer() {
             {t('legal')}
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
-            {legal.map(({ key, href, external }) => (
+            {legal.map(({ key, href }) => (
               <Link
                 key={key}
                 href={href}
-                {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 className="font-sans font-semibold text-[10px] text-white/45 hover:text-white transition-colors"
               >
-                {t(key as 'privacy')}
+                {tL(key as 'termsUse')}
               </Link>
             ))}
           </div>

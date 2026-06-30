@@ -2383,5 +2383,370 @@
     "teaserAccessLabel": "Acceder al dossier",
     "ndaLabel": "NDA requerido — Acceso controlado",
     "lotRef": "Lote"
+  },
+  "legalNav": {
+    "termsUse": "Terms of Use",
+    "termsCgv": "Terms of Service",
+    "privacy": "Privacy",
+    "security": "Security",
+    "faq": "FAQ"
+  },
+  "termsUse": {
+    "meta": {
+      "title": "Terms of Use — AEGRYN",
+      "desc": "Terms governing access to and use of the aegryn.com website."
+    },
+    "label": "Terms of Use",
+    "version": "Version: July 2026",
+    "intro": "These Terms of Use (\"Terms\") govern access to and use of the AEGRYN website at aegryn.com and any associated sites (the \"Site\"). By accessing the Site, you accept these Terms without reservation. AEGRYN Sàrl reserves the right to modify them at any time. Please check this page regularly.",
+    "s1Title": "Site Content",
+    "s1": "The Site and all its contents (texts, graphics, images, data, code, scripts, methodologies, rating systems) are protected by intellectual property rights applicable in Switzerland and the European Union. These contents are the exclusive property of AEGRYN Sàrl or its partners. Any reproduction, modification, distribution or commercial use without prior written authorisation is strictly prohibited.\n\nThe AEGRYN Grade methodology, the C/I/F/S evaluation protocol, grade reports, and all editorial content published on the Site are protected works. The use of robots, scrapers, automated scripts or any other data extraction method is prohibited.",
+    "s2Title": "Permitted Use",
+    "s2": "You may consult the Site for legitimate personal and professional purposes. Any use for fraudulent purposes, contrary to public order or good morals is prohibited. AEGRYN reserves the right to suspend or delete access for any user in violation of these Terms.",
+    "s3Title": "Registration and User Accounts",
+    "s3": "Access to the AEGRYN client space (buyer catalogue, certification tracking) is reserved for qualified members previously authorised by AEGRYN. You agree to provide accurate information and keep it up to date. You are responsible for the confidentiality of your credentials and any activity carried out under your account.",
+    "s4Title": "Accuracy of Information",
+    "s4": "Information published on the Site is provided for indicative purposes. In the event of any discrepancy between Site content and signed contractual documents (certification mandate, transaction conditions), the latter shall prevail.",
+    "s5Title": "Limitation of Liability",
+    "s5": "AEGRYN does not guarantee that the Site will be accessible without interruption or error-free. The Site is provided \"as is\". AEGRYN disclaims all liability for direct or indirect damages resulting from use or inability to use the Site.",
+    "s6Title": "External Links",
+    "s6": "The Site may contain links to third-party sites. AEGRYN is not responsible for the content of these sites and does not implicitly endorse them.",
+    "s7Title": "Intellectual Property",
+    "s7": "The AEGRYN Grade label, the AEGRYN trademark, the AE monogram, the C/I/F/S protocol, and all methodologies and reports produced by AEGRYN are the exclusive property of AEGRYN Sàrl. Any unauthorised use will be prosecuted.",
+    "s8Title": "Governing Law and Jurisdiction",
+    "s8": "These Terms are governed by Swiss law. Any dispute arising from these Terms shall be submitted to the exclusive jurisdiction of the courts of AEGRYN Sàrl's registered canton. If any clause is invalid, the remaining clauses remain applicable.",
+    "ctaCgv": "View Terms of Service",
+    "ctaPrivacy": "Privacy Policy"
+  },
+  "termsCgv": {
+    "meta": {
+      "title": "Terms of Service — AEGRYN",
+      "desc": "Contractual conditions governing AEGRYN certification, transactions and services."
+    },
+    "label": "Terms of Service",
+    "version": "Version: July 2026",
+    "note": "This document constitutes the binding contractual reference. Precise pricing conditions are specified in the signed mandate or quote between the parties.",
+    "s1Title": "Definitions",
+    "defAegryn": "AEGRYN Sàrl, a company registered in Switzerland (CHE-XXX.XXX.XXX).",
+    "defAsset": "Any digital asset that may be certified and/or transferred via AEGRYN, including without limitation: software (SaaS, applications), codebases, digital intellectual property, trademarks associated with a digital asset, protocols.",
+    "defGrade": "Official certification of a tech asset under the C/I/F/S protocol, co-signed by external partners. Grade awarded: ★, AAA, AA, A, B.",
+    "defGradeEst": "Non-certified indicative opinion produced by an AEGRYN analyst without external co-signature. Never enforceable against third parties. Always suffixed \"(estimated)\" in all communications.",
+    "defPtt": "Contractual mechanism governing the transfer of a certified asset, including a 10% bank escrow of the agreed price.",
+    "defEscrow": "Amount deposited by the buyer with a third-party bank designated by AEGRYN. AEGRYN is never the custodian of these funds.",
+    "defSeller": "Any natural or legal person submitting a tech asset to the AEGRYN process.",
+    "defBuyer": "Any qualified AEGRYN member authorised to access the catalogue and submit offers.",
+    "s2Title": "Services Covered",
+    "s2ReviewTitle": "AEGRYN Review",
+    "s2Review": "Written opinion from an AEGRYN analyst on a submitted tech asset. Timeline: 5 working days. Not co-signed, not publishable in the catalogue. Indicative value only. Fully deductible from certification fees if the full process is started within 6 months.",
+    "s2ReviewPlusTitle": "AEGRYN Review+",
+    "s2ReviewPlus": "Written opinion from an AEGRYN analyst supplemented by an external partner review. Timeline: 10 working days. Not co-signed in the sense of official certification, not publishable. Fully deductible under the same conditions.",
+    "s2CertTitle": "Auction Certification",
+    "s2Cert": "Full multi-dimensional audit process across all 4 C/I/F/S dimensions. Co-signed by a tech law firm, an accountant, a cybersecurity partner if applicable. Official AEG Grade awarded and publishable in the catalogue. Fees: success-based (commission on sale).",
+    "s2AdvisoryTitle": "AEGRYN Advisory",
+    "s2Advisory": "Strategic and operational support for assets undergoing remediation and re-submission. Fees on quote.",
+    "s3Title": "Submission Conditions",
+    "s3": "All assets are submitted via /grade/submit. Submission does not constitute a contractual commitment. AEGRYN has 5 working days to respond with a pre-screening. Less than 25% of submitted assets are accepted for full certification.",
+    "s3ObligTitle": "Submitter Obligations",
+    "s3Oblig": "The seller agrees to provide accurate and complete information, guarantee having the rights to transfer the asset, maintain confidentiality of the evaluation process, and not transfer the asset to a third party during the exclusive mandate period.",
+    "s4Title": "The Tech Transaction Promise (PTT)",
+    "s4EiTitle": "Expression of Interest (EoI)",
+    "s4Ei": "Non-binding. Transmitted by AEGRYN to the seller within 48 hours. No deposit required.",
+    "s4ApTitle": "Heads of Agreement (HoA)",
+    "s4Ap": "Formalisation of the agreed price and transaction structure. Signing the HoA creates the buyer's obligation to pay the escrow.",
+    "s4EscrowTitle": "Escrow",
+    "s4Escrow": "Amount: 10% of the agreed transaction price. Payment deadline: 5 working days following HoA signature. Custodian: third-party bank designated by AEGRYN. Dual signature required for any release.",
+    "s4RetractTitle": "Withdrawal Rules",
+    "s4RetractBuyer": "Buyer withdrawal without legitimate reason: escrow is awarded to the seller, less AEGRYN's handling commission.",
+    "s4RetractSeller": "Seller withdrawal without legitimate reason: escrow is fully returned to the buyer. The seller additionally pays an indemnity equal to the escrow amount.",
+    "s4RetractSusp": "Unfulfilled condition precedent (documented legitimate reason): escrow is fully returned to the buyer. The audit commission already paid remains due to AEGRYN.",
+    "s4DdTitle": "Due Diligence (DD)",
+    "s4Dd": "Standard duration: 30 calendar days from escrow confirmation. The buyer accesses the full data room under NDA. Extension possible by mutual written agreement (maximum 30 additional days).",
+    "s4SigningTitle": "Signing & Closing",
+    "s4Signing": "At signing: KRYV Protocol certifies the codebase state via blockchain fingerprint. The balance (90%) is paid by the buyer. The bank releases the escrow. AEGRYN deducts its commission and pays the net balance to the seller. AEGRYN issues the official Transaction Certificate.",
+    "s5Title": "Liability",
+    "s5": "AEGRYN acts exclusively as intermediary and process operator. AEGRYN does not guarantee the outcome of a transaction, the future value of an asset, or post-transfer performance. In case of discrepancy between declared data and reality discovered during DD, AEGRYN's liability is limited to refunding certification fees received for the asset. Under no circumstances shall AEGRYN be liable for indirect damages, lost profits, or consequential damages.",
+    "s6Title": "Grade Dispute",
+    "s6": "Any dispute of the official Grade must be notified to AEGRYN in writing (certification@aegryn.com) within 30 calendar days of report delivery. AEGRYN undertakes to respond within 15 working days.",
+    "s7Title": "Transaction Confidentiality",
+    "s7": "AEGRYN never discloses the seller's identity to the buyer, nor the buyer's identity to the seller, without explicit agreement of both parties. Transaction data published in the results catalogue is systematically anonymised.",
+    "s8Title": "Anti-Money Laundering (AML/CFT)",
+    "s8": "In accordance with Swiss AML law and AMLD6, AEGRYN is required to verify the identity of all clients (KYC), identify beneficial owners (UBO ≥ 25%), and report suspicious transactions. In case of doubt, AEGRYN may suspend or cancel any process without prejudice.",
+    "s9Title": "Governing Law and Dispute Resolution",
+    "s9": "These Terms are governed by Swiss substantive law. Any dispute shall be submitted to the exclusive jurisdiction of the courts of AEGRYN Sàrl's registered canton. The parties will endeavour to resolve any dispute amicably within 30 days before any legal proceedings.",
+    "ctaContact": "Contact the AEGRYN team",
+    "ctaTermsUse": "Terms of Use"
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy Policy — AEGRYN",
+      "desc": "How AEGRYN collects, processes and protects your personal data. Swiss LPD and GDPR compliant."
+    },
+    "label": "Privacy Policy",
+    "updated": "Last updated: July 2026",
+    "langSelector": "Available in",
+    "intro": "Like most businesses operating in the financial and transaction sector, AEGRYN collects and processes data relating to its clients, partners and others who may be interested in its services. This notice explains the type of data we process, why we process it and how this may affect you.",
+    "s1Title": "Who we are",
+    "s1": "The data controller is AEGRYN Sàrl, a company registered in Switzerland (CHE-XXX.XXX.XXX). When you use our services (certification, transaction, advisory, catalogue), the data controller is AEGRYN Sàrl.",
+    "s2Title": "What data do we collect and how?",
+    "s2DirectTitle": "Data you provide directly",
+    "s2Direct": "Name, professional contact details, entity information, financial information (investment capacity, proof of funds), identity documents, entity documents, beneficial owner (UBO) information. Collected during registration, asset submission, Alliance application, Assessment Day booking, use of the valuation calculator or any communication.",
+    "s2AutoTitle": "Automatically collected data",
+    "s2Auto": "IP address, browser type, operating system, pages visited, visit duration — via cookies and similar technologies. See our Cookie Policy.",
+    "s2ThirdTitle": "Data from third parties",
+    "s2Third": "Public registers, identity verification and fraud prevention services, sanctions and politically exposed persons (PEP) databases.",
+    "s3Title": "Why do we process your data?",
+    "s3TablePurpose": "Purpose",
+    "s3TableData": "Data concerned",
+    "s3TableBasis": "Legal basis",
+    "s3Row1Purpose": "Providing requested services",
+    "s3Row1Data": "Identity, contact, financial data, documents",
+    "s3Row1Basis": "Contract performance",
+    "s3Row2Purpose": "Legal obligations (AML, AMLD6, KYC)",
+    "s3Row2Data": "Identity, UBO, source of funds, PEP",
+    "s3Row2Basis": "Legal obligation",
+    "s3Row3Purpose": "Anti-money laundering and fraud prevention",
+    "s3Row3Data": "Identity, transactions, documents",
+    "s3Row3Basis": "Legal obligation / Legitimate interests",
+    "s3Row4Purpose": "Site security and fraud prevention",
+    "s3Row4Data": "Navigation data, IP",
+    "s3Row4Basis": "Legitimate interests",
+    "s3Row5Purpose": "Service communications",
+    "s3Row5Data": "Email, preferences",
+    "s3Row5Basis": "Legitimate interests / Consent",
+    "s3Row6Purpose": "Historical transaction catalogue",
+    "s3Row6Data": "Anonymised data",
+    "s3Row6Basis": "Legitimate interests / Public interest",
+    "s4Title": "Who can access your data?",
+    "s4": "Within AEGRYN: team members with a legitimate operational need. Co-signatory partners: law firms, accountants, cybersecurity partners (subject to strict confidentiality obligations). Escrow bank: for escrow account management. Technical service providers: hosting, email, payment via Stripe. Authorities: when legally required. AEGRYN never sells your data to third parties.",
+    "s5Title": "International transfers",
+    "s5": "Data is hosted on servers in the European Union or Switzerland. For transfers to third countries, we implement appropriate safeguards (approved standard contractual clauses).",
+    "s6Title": "Retention",
+    "s6": "We retain your data as long as necessary for service delivery, legal and regulatory compliance (AML obligations: minimum 10 years after end of commercial relationship), and protection against claims. Anonymised historical catalogue data is retained indefinitely.",
+    "s7Title": "Your rights",
+    "s7": "Under Swiss LPD and GDPR: rights of access, rectification, erasure, objection, restriction and portability.",
+    "s7Contact": "To exercise these rights: dataprivacy@aegryn.com",
+    "s8Title": "Data security",
+    "s8": "Technical and organisational measures: encryption of sensitive data at rest and in transit, role-based access control (Supabase RLS), data room access logging, 2FA for admin access. In case of breach, notification of authorities and affected persons in accordance with Swiss LPD and GDPR.",
+    "s9Title": "Cookies",
+    "s9": "We use analytical cookies (Cloudflare Web Analytics, no personally identifiable data). No advertising cookies. You may decline analytical cookies via our consent banner.",
+    "s10Title": "Complaints",
+    "s10": "You have the right to lodge a complaint with the competent supervisory authority.",
+    "authorityCH": "Switzerland: FDPIC — www.edoeb.admin.ch",
+    "authorityFR": "France: CNIL — www.cnil.fr",
+    "authorityEU": "EU: EDPB — www.edpb.europa.eu",
+    "contactEmail": "dataprivacy@aegryn.com"
+  },
+  "security": {
+    "meta": {
+      "title": "Online Security — AEGRYN",
+      "desc": "How to protect yourself against fraud and impersonation related to AEGRYN."
+    },
+    "label": "Staying secure online",
+    "subtitle": "How to protect yourself against fraud",
+    "contactEmail": "keepsecure@aegryn.com",
+    "intro": "When using our services, we may ask you for identity, banking and entity documents. We use advanced technology to protect your data, and we recommend you also adopt basic security practices.",
+    "s1Title": "Brand impersonation",
+    "s1": "Fraudsters may create fake websites, social media profiles or emails appearing to come from AEGRYN to induce you to make fraudulent payments.",
+    "s1Official": "Our official emails come exclusively from the @aegryn.com domain. Any payment request from another domain is fraudulent.",
+    "s1NeverTitle": "AEGRYN will never ask you to:",
+    "s1Never1": "Make a deposit payment to a personal account",
+    "s1Never2": "Make advance payments not specified in your signed mandate",
+    "s1Never3": "Share your login credentials by email or phone",
+    "s2Title": "Identifying fraudulent communications",
+    "s2": "Check that: the sender email is exactly @aegryn.com (not @aegryn.net, @aegryn-group.com or any variant), links in emails point to aegryn.com, and payment requests match what is specified in your signed mandate or contract.",
+    "s2Doubt": "If in doubt, contact us directly at keepsecure@aegryn.com — do not reply to the suspicious email.",
+    "s3Title": "Securing your AEGRYN account",
+    "s3Items": [
+      "Use a strong, unique password for your AEGRYN account",
+      "Enable two-factor authentication (2FA) when available",
+      "Never share your login credentials",
+      "Sign out after each session"
+    ],
+    "s4Title": "Payment processes — normal vs fraudulent",
+    "s4NormalTitle": "Normal",
+    "s4Normal1": "Payment of AEGRYN Review (€2,000) or Review+ (€5,000) fees via Stripe Checkout on aegryn.com",
+    "s4Normal2": "Escrow payment (10% of agreed price) by bank transfer to the designated partner bank IBAN with transaction reference",
+    "s4FraudTitle": "Fraudulent",
+    "s4Fraud1": "Any payment request to a personal account",
+    "s4Fraud2": "Any cryptocurrency payment not specified in the contract",
+    "s4Fraud3": "Any \"insurance fees\" or \"activation fees\" not mentioned in your mandate",
+    "s5Title": "Reporting suspicious activity",
+    "s5Step1": "Do not click any links or provide any information",
+    "s5Step2": "Report immediately to keepsecure@aegryn.com",
+    "s5Step3": "Report the platform directly (social network, registrar)"
+  },
+  "faq": {
+    "meta": {
+      "title": "FAQ — Frequently Asked Questions — AEGRYN",
+      "desc": "Answers to frequently asked questions about AEGRYN Grade certification, transactions, sessions and accounts."
+    },
+    "label": "Frequently Asked Questions",
+    "filterAll": "All",
+    "filterSellers": "Sellers",
+    "filterBuyers": "Buyers",
+    "filterCertification": "Certification",
+    "filterTransactions": "Transactions",
+    "filterAccount": "Account",
+    "items": [
+      {
+        "id": "what-grade",
+        "cat": [
+          "certification"
+        ],
+        "q": "What is the AEGRYN Grade?",
+        "a": "The AEGRYN Grade is an official multi-dimensional certification evaluating 4 dimensions: Code (C), IP & Rights (I), Finance (F), Security (S). Each dimension is scored out of 25. The total score (out of 100) determines the official Grade: ★ Exceptional (≥90), AAA Excellent (≥75), AA Very Good (≥60), A Good (≥45), B Correct (≥30)."
+      },
+      {
+        "id": "grade-vs-estimate",
+        "cat": [
+          "certification"
+        ],
+        "q": "What is the difference between an official Grade and an estimated grade?",
+        "a": "An official Grade is assigned after a real audit by AEGRYN analysts, co-signed by independent external partners (law firm, accountant, cybersecurity partner) who engage their professional liability. It can be published in the catalogue. An estimated grade (from /valuation or AEGRYN Review) is an indicative opinion based on declared data, always suffixed \"(estimated)\" with no contractual value."
+      },
+      {
+        "id": "cert-duration",
+        "cat": [
+          "certification"
+        ],
+        "q": "How long does the certification process take?",
+        "a": "AEGRYN Review: 5 working days after confirmed payment. AEGRYN Review+: 10 working days. Full Auction Certification: 3 to 5 weeks depending on asset complexity."
+      },
+      {
+        "id": "cert-cost",
+        "cat": [
+          "certification"
+        ],
+        "q": "How much does certification cost?",
+        "a": "AEGRYN Review: €2,000 excl. VAT — deductible if full certification started within 6 months. AEGRYN Review+: €5,000 excl. VAT — same conditions. Auction Certification: free if transaction (AEGRYN earns commission on sale). Precise conditions in signed mandate."
+      },
+      {
+        "id": "refusal-resubmit",
+        "cat": [
+          "certification",
+          "sellers"
+        ],
+        "q": "My asset was declined. Can I resubmit?",
+        "a": "Yes. Each refusal is accompanied by a detailed written report identifying areas for improvement. Our Advisory service can support you through remediation. A declined asset may be resubmitted at any time if documented improvements have been made."
+      },
+      {
+        "id": "kryv",
+        "cat": [
+          "certification",
+          "transactions"
+        ],
+        "q": "What is KRYV Protocol?",
+        "a": "KRYV Protocol is our blockchain certification infrastructure component. It generates a cryptographic fingerprint of the codebase at the exact date of certification and/or transfer, recorded immutably. This allows any buyer to prove at any future date that the code received matches exactly the certified code."
+      },
+      {
+        "id": "what-assets",
+        "cat": [
+          "sellers"
+        ],
+        "q": "What types of assets can I submit?",
+        "a": "AEGRYN certifies and transacts digital tech assets: B2B SaaS, mobile apps, marketplaces, AI protocols, digital intellectual property. Minimum ticket: €500,000 estimated valuation."
+      },
+      {
+        "id": "seller-identity",
+        "cat": [
+          "sellers"
+        ],
+        "q": "Will my identity be disclosed to buyers?",
+        "a": "No. AEGRYN maintains the confidentiality of your identity throughout the process. It is only disclosed to the buyer after both parties' explicit agreement and AEGRYN's introduction decision."
+      },
+      {
+        "id": "mandate-duration",
+        "cat": [
+          "sellers"
+        ],
+        "q": "How long does the exclusive mandate last?",
+        "a": "60 days, renewable by mutual agreement. After this period without a closed transaction, you regain full contractual freedom."
+      },
+      {
+        "id": "become-buyer",
+        "cat": [
+          "buyers"
+        ],
+        "q": "How do I become a member buyer?",
+        "a": "Via the application form at /auction#membership. Your application is reviewed by AEGRYN within 10 working days. A 20–30 minute qualification interview is required. Financial capacity documents are necessary."
+      },
+      {
+        "id": "min-ticket",
+        "cat": [
+          "buyers"
+        ],
+        "q": "What is the minimum acquisition ticket?",
+        "a": "€500,000."
+      },
+      {
+        "id": "bid-models",
+        "cat": [
+          "buyers",
+          "transactions"
+        ],
+        "q": "What bid models are available?",
+        "a": "AEGRYN offers 4 bid models: Club Deal (individual + up to 4 co-investors), Corporate (legal entity or JV), Fund (PE/VC/Family Office, IC timeline possible), Equity Stake (equity participation without full transfer). See /auction/bid-models for full details."
+      },
+      {
+        "id": "escrow",
+        "cat": [
+          "buyers",
+          "transactions"
+        ],
+        "q": "How does the escrow work?",
+        "a": "After a signed Heads of Agreement, the buyer deposits 10% of the agreed price with a third-party partner bank. AEGRYN never holds these funds. See /terms/cgv for withdrawal rules."
+      },
+      {
+        "id": "kyc-docs",
+        "cat": [
+          "buyers",
+          "sellers"
+        ],
+        "q": "What KYC documents are required?",
+        "a": "Individuals: valid ID + proof of address (<3 months) + proof of financial capacity. Entities (companies, funds): company registration equivalent (<3 months) + articles of association + representative's ID + UBO declaration (≥25%) + regulatory licence if applicable."
+      },
+      {
+        "id": "data-room",
+        "cat": [
+          "buyers",
+          "transactions"
+        ],
+        "q": "What is the data room?",
+        "a": "The data room is a secure space containing the asset's complete documents (grade report, audited financials, IP contracts, technical documentation). Accessible only to member buyers who have signed the asset-specific NDA. Every consultation is timestamped and logged."
+      },
+      {
+        "id": "results-publication",
+        "cat": [
+          "transactions"
+        ],
+        "q": "When and how are session results published?",
+        "a": "Results are published on /auction/results within 30 days of each session closing, in anonymised form: grade, category, sector, valuation range (±20%), process duration. No identities are disclosed."
+      },
+      {
+        "id": "sessions",
+        "cat": [
+          "transactions",
+          "buyers"
+        ],
+        "q": "What is an AEGRYN Session?",
+        "a": "AEGRYN Sessions are private transaction events held twice a year in Switzerland. 6 to 10 Grade A or above certified assets are presented to a closed circle of qualified member buyers. Access is by invitation only."
+      },
+      {
+        "id": "forgot-password",
+        "cat": [
+          "account"
+        ],
+        "q": "I forgot my password.",
+        "a": "Use the \"Forgot password\" link on /client/login. A reset email will be sent within 5 minutes."
+      },
+      {
+        "id": "update-kyc",
+        "cat": [
+          "account"
+        ],
+        "q": "How do I update my KYC information?",
+        "a": "Via the \"My Profile\" section of your client space. Updated documents are submitted to AEGRYN for re-validation."
+      }
+    ]
   }
 }

@@ -1,36 +1,72 @@
-import { generateAegrynMetadata } from '@/lib/seo'
-import type { Metadata } from 'next'
-import Link from 'next/link'
+import { getTranslations }    from 'next-intl/server'
+import type { Metadata }        from 'next'
+import Link                     from 'next/link'
+import { ArrowUpRight }         from 'lucide-react'
 
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  return generateAegrynMetadata({
-    title: 'Politique de Confidentialité | Aegryn',
-    description: "Notice de protection des données d'Aegryn Sàrl — conformité LPD suisse et RGPD.",
-    path: '/privacy',
-    locale,
-  })
+  const t = await getTranslations({ locale, namespace: 'privacy.meta' })
+  return { title: t('title'), description: t('desc') }
 }
 
-export default function PrivacyPage() {
+export default async function PrivacyPage({ params }: Props) {
+  const { locale } = await params
+  const tN = await getTranslations({ locale, namespace: 'legalNav' })
+  const tP = await getTranslations({ locale, namespace: 'privacy' })
+
   return (
-    <main className="bg-white min-h-screen">
-      <div className="mx-auto max-w-5xl px-6 md:px-16 py-28">
+    <main id="main" className="bg-white min-h-screen">
 
-        <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.24em] text-ag-gray-light mb-10">
-          <Link href="/" className="hover:text-ag-black transition-colors">Aegryn</Link>
-          {' / '}Politique de Confidentialité
-        </p>
+      {/* Hero */}
+      <section className="bg-ag-navy pt-24 pb-14 px-6">
+        <div className="max-w-4xl mx-auto">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">AEGRYN — Legal</p>
+          <h1
+            className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] mb-4"
+            style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
+          >
+            {tP('label')}
+          </h1>
+          <p className="font-sans text-[13px] text-white/40">{tP('updated')}</p>
+          {/* Sélecteur de langue */}
+          <div className="mt-6 flex flex-wrap gap-3">
+            {(['fr','en','de','es','it','nl'] as const).map(lang => (
+              <Link
+                key={lang}
+                href={`/${lang}/privacy`}
+                className={`font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1 border transition-colors ${
+                  lang === locale
+                    ? 'border-ag-apex text-ag-apex'
+                    : 'border-white/20 text-white/40 hover:border-white/50 hover:text-white/70'
+                }`}
+              >
+                {lang.toUpperCase()}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex mb-4">(01)</p>
+      {/* Legal nav */}
+      <div className="border-b border-ag-border bg-ag-off-white sticky top-16 z-20">
+        <div className="max-w-4xl mx-auto px-6 py-3 flex flex-wrap gap-x-6 gap-y-1">
+          {(['termsUse','termsCgv','privacy','security','faq'] as const).map((k, i) => (
+            <Link
+              key={k}
+              href={['/terms/use','/terms/cgv','/privacy','/security','/help/faq'][i]}
+              className={`font-mono text-[10px] tracking-[0.18em] uppercase transition-colors ${
+                k === 'privacy' ? 'text-ag-black' : 'text-ag-gray-light hover:text-ag-black'
+              }`}
+            >
+              {tN(k)}
+            </Link>
+          ))}
+        </div>
+      </div>
 
-        <h1 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4"
-          style={{ fontSize: 'clamp(32px,4vw,52px)' }}>
-          Politique de Confidentialité
-        </h1>
-        <p className="font-sans font-semibold text-[11px] text-ag-gray-light mb-16">Dernière mise à jour : 01/03/2026</p>
+      <div className="mx-auto max-w-5xl px-6 md:px-16 py-16">
 
         <div className="prose prose-slate max-w-none font-sans
           prose-headings:font-sans prose-headings:font-bold prose-headings:text-ag-black prose-headings:tracking-[-0.02em]

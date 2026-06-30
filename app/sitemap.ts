@@ -25,8 +25,11 @@ const STATIC_ROUTES = [
   { path: '/services/acquisition-support',      priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/alliances',                          priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/career',                            priority: 0.6,  changeFrequency: 'monthly' as const },
+  { path: '/terms/use',                         priority: 0.3,  changeFrequency: 'yearly'  as const },
+  { path: '/terms/cgv',                         priority: 0.3,  changeFrequency: 'yearly'  as const },
   { path: '/privacy',                           priority: 0.3,  changeFrequency: 'yearly'  as const },
-  { path: '/terms',                             priority: 0.3,  changeFrequency: 'yearly'  as const },
+  { path: '/security',                          priority: 0.4,  changeFrequency: 'monthly' as const },
+  { path: '/help/faq',                          priority: 0.6,  changeFrequency: 'monthly' as const },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
