@@ -5,6 +5,7 @@ Convention de nommage : `NNN_nom_table.sql` (NNN = ordre d'exécution).
 
 > **Important :** toujours exécuter dans l'ordre croissant.  
 > La migration 005 dépend de `auth.users` (Supabase Auth activé) et du trigger `set_updated_at` créé en 004.
+> La migration 006 dépend de la table `assets` créée en 004.
 
 ---
 
@@ -17,7 +18,7 @@ Convention de nommage : `NNN_nom_table.sql` (NNN = ordre d'exécution).
 | 003 | `003_bookings_and_alliances.sql` | `assessment_day_bookings`, `alliance_applications` | — | ✅ exécuté |
 | 004 | `004_assets.sql` | `assets` | trigger `set_updated_at` | ✅ exécuté |
 | 005 | `005_user_profiles.sql` | `user_profiles` + colonne `assets.seller_uid` | 004, Auth activé | ✅ exécuté |
-| 009 | `009_nda_requests.sql` | `nda_requests` — demandes d'accès NDA acquéreurs | 004 | ⏳ à exécuter |
+| 006 | `006_nda_requests.sql` | `nda_requests` — demandes d'accès NDA acquéreurs | 004 | ⏳ à exécuter |
 
 ---
 
@@ -25,9 +26,9 @@ Convention de nommage : `NNN_nom_table.sql` (NNN = ordre d'exécution).
 
 | # | Fichier (à créer) | Objectif | Prérequis |
 |---|-------------------|----------|-----------|
-| 006 | `006_sessions.sql` | `auction_sessions` — sessions de vente planifiées | — |
-| 007 | `007_bids.sql` | `bids` — offres d'acquéreurs sur actifs | 005, 006 |
-| 008 | `008_transactions.sql` | `transactions` — clôture de vente, escrow | 004, 007 |
+| 007 | `007_sessions.sql` | `auction_sessions` — sessions de vente planifiées | — |
+| 008 | `008_bids.sql` | `bids` — offres d'acquéreurs sur actifs | 005, 007 |
+| 009 | `009_transactions.sql` | `transactions` — clôture de vente, escrow | 004, 008 |
 | 010 | `010_notifications.sql` | `notifications` — alertes utilisateurs | 005 |
 
 ---
