@@ -33,7 +33,7 @@ interface Props {
 }
 
 export default function AssetTeaserCard({ lot, locale, labels }: Props) {
-  const { bg, text, border } = gradeStyle(lot.grade_letter)
+  const { bg, text, border } = gradeStyle(lot.grade?.letter ?? '')
   const session = sessionLabel(lot.session_opens_at)
 
   return (
@@ -43,36 +43,22 @@ export default function AssetTeaserCard({ lot, locale, labels }: Props) {
       <div className="flex items-start justify-between gap-4">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 border rounded-sm"
           style={{ backgroundColor: bg, color: text, borderColor: border }}>
-          <span className="font-sans font-bold text-[18px] leading-none">{lot.grade_letter || '—'}</span>
-          {lot.grade_label && (
+          <span className="font-sans font-bold text-[18px] leading-none">{lot.grade?.letter || '—'}</span>
+          {lot.grade?.label && (
             <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.12em] hidden sm:inline">
-              {lot.grade_label}
+              {lot.grade.label}
             </span>
           )}
         </div>
         <span className="font-mono text-[10px] tracking-[0.2em] text-ag-gray-light uppercase">
-          {labels.lotRef} {lot.lotNumber}
+          {labels.lotRef} {lot.lot_number}
         </span>
       </div>
 
-      {/* Category chip + ARR */}
-      <div className="flex flex-wrap items-center gap-2">
-        {lot.category && (
-          <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light border border-ag-border px-2 py-0.5">
-            {lot.category}
-          </span>
-        )}
-        {lot.arr_range && (
-          <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-apex">
-            {lot.arr_range}
-          </span>
-        )}
-      </div>
-
       {/* Context label */}
-      {lot.catalogContext && (
+      {lot.catalog_context && (
         <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light">
-          {lot.catalogContext}
+          {lot.catalog_context}
         </p>
       )}
 

@@ -107,18 +107,16 @@ export interface AssetLot {
 export interface AssetLotTeaser {
   id:              string
   slug:            string
-  lotNumber:       string
-  tagline:         string
-  catalogContext:  string
-  grade_letter:    string
-  grade_label:     string
-  category:        string
-  arr_range:       string | null
-  status:          'draft' | 'published' | 'closed'
+  lot_number:      string
+  tagline:         string | null
+  catalog_context: string | null
+  grade:           { letter: string; label: string }
+  status:          'draft' | 'published' | 'archived' | 'withdrawn'
+  access_circle:   number
   session_opens_at: string | null
 }
 
-/** Supabase row shape (auction_lots table) */
+/** Supabase row shape (auction_assets table — schéma canonique) */
 export interface AuctionLotRow {
   id:              string
   slug:            string
@@ -126,34 +124,33 @@ export interface AuctionLotRow {
   name:            string
   tagline:         string | null
   catalog_context: string | null
-  grade_letter:    string | null
-  grade_label:     string | null
-  category:        string | null
-  arr_range:       string | null
-  status:          string
-  session_opens_at: string | null
+  /** JSONB {letter: string, label: string} */
+  grade:              unknown
+  status:          'draft' | 'published' | 'archived' | 'withdrawn'
+  access_circle:   number
+  session_opens_at:  string | null
   session_closes_at: string | null
-  hero_stats:         unknown
-  executive_summary:  unknown
+  hero_stats:          unknown
+  executive_summary:   unknown
   presentation_notice: unknown
-  provenance:         unknown
-  rarity:             unknown
-  asset_state:        unknown
-  capabilities:       unknown
-  target_segments:    unknown
-  growth:             unknown
+  provenance:          unknown
+  rarity:              unknown
+  asset_state:         unknown
+  capabilities:        unknown
+  target_segments:     unknown
+  growth:              unknown
   competitive_position: unknown
-  traction:           unknown
-  maturity:           unknown
-  risks:              unknown
-  thesis:             unknown
-  mentions:           unknown
+  traction:            unknown
+  maturity:            unknown
+  risks:               unknown
+  thesis:              unknown
+  mentions:            unknown
 }
 
-/** Access record shape */
+/** Access record shape (auction_asset_access table) */
 export interface AuctionLotAccess {
   id:         string
-  lot_id:     string
+  asset_id:   string
   user_id:    string
   granted_at: string
   expires_at: string

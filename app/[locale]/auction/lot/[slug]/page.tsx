@@ -69,7 +69,7 @@ export default async function AuctionLotPage({ params }: Props) {
   const supa = createServiceClient()
 
   const { data: lotRow } = await supa
-    .from('auction_lots')
+    .from('auction_assets')
     .select('id, status')
     .eq('slug', slug)
     .eq('status', 'published')
@@ -81,9 +81,9 @@ export default async function AuctionLotPage({ params }: Props) {
   }
 
   const { data: access } = await supa
-    .from('auction_lot_access')
+    .from('auction_asset_access')
     .select('expires_at, status')
-    .eq('lot_id', lotRow.id)
+    .eq('asset_id', lotRow.id)
     .eq('user_id', user.id)
     .single() as { data: Pick<AuctionLotAccess, 'expires_at' | 'status'> | null }
 
@@ -101,7 +101,7 @@ export default async function AuctionLotPage({ params }: Props) {
 
   /* ── 3. Fetch full lot data ── */
   const { data: fullRow } = await supa
-    .from('auction_lots')
+    .from('auction_assets')
     .select('*')
     .eq('id', lotRow.id)
     .single() as { data: AuctionLotRow | null }

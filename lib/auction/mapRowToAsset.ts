@@ -21,10 +21,10 @@ export function mapRowToAsset(row: AuctionLotRow): AssetLot {
     catalogContext: row.catalog_context ?? '',
 
     heroStats: jsonb(row.hero_stats, []),
-    grade: {
-      letter: row.grade_letter ?? '—',
-      label:  row.grade_label  ?? '',
-    },
+    grade: (() => {
+      const g = jsonb<{ letter?: string; label?: string }>(row.grade, {})
+      return { letter: g.letter ?? '—', label: g.label ?? '' }
+    })(),
 
     executiveSummary:    jsonb(row.executive_summary,  { intro: '', items: [] }),
     presentationNotice:  jsonb(row.presentation_notice, { body: [], meta: '' }),
