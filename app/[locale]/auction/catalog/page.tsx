@@ -1,8 +1,8 @@
 import { getTranslations }   from 'next-intl/server'
 import type { Metadata }     from 'next'
 import Link                  from 'next/link'
-import { ArrowUpRight }      from 'lucide-react'
 import CatalogNotifyForm     from './CatalogNotifyForm'
+import NdaRequestForm        from './NdaRequestForm'
 import { createServiceClient } from '@/lib/supabase'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -135,14 +135,13 @@ export default async function AuctionCatalogPage({ params }: Props) {
                         {asset.public_summary}
                       </p>
                     )}
-                    {/* CTA contact */}
+                    {/* Form NDA inline */}
                     <div className="mt-auto pt-4 border-t border-ag-border">
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ag-black hover:text-ag-apex transition-colors"
-                      >
-                        Demander l&apos;accès (NDA) <ArrowUpRight size={10} />
-                      </Link>
+                      <NdaRequestForm
+                        assetId={asset.id}
+                        grade={asset.official_grade ?? '—'}
+                        locale={locale}
+                      />
                     </div>
                   </div>
                 ))}

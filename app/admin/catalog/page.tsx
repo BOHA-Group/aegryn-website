@@ -90,6 +90,10 @@ export default async function AdminCatalogPage({
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
               ← Assets
             </Link>
+            <Link href={`/admin/members${tokenQs}`}
+              className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
+              Members
+            </Link>
             <Link href={`/admin/leads${tokenQs}`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
               Leads
