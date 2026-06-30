@@ -73,7 +73,12 @@
       "visitSite": "Website besuchen",
       "viewDetails": "Details anzeigen",
       "auctionEligible": "Auktion-geeignet",
-      "ctaGrade": "Mein Asset zertifizieren",
+      "internalOnly": "Interne Nutzung",
+      "heroLabel": "AEGRYN — Proprietäres Ökosystem",
+      "heroTitle": "Was wir\nbauen.",
+      "heroSub": "6 Assets · 3 Kategorien · Schweiz & Europa",
+      "ctaBottom": "Möchten Sie Ihr eigenes Asset zur Zertifizierung einreichen?",
+      "ctaGrade": "Drittanbieter-Asset einreichen",
       "ctaAuction": "Auktions-Sessions ansehen"
     }
   },

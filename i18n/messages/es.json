@@ -73,7 +73,12 @@
       "visitSite": "Visitar sitio",
       "viewDetails": "Ver detalles",
       "auctionEligible": "Apto para subasta",
-      "ctaGrade": "Certificar mi activo",
+      "internalOnly": "Uso interno",
+      "heroLabel": "AEGRYN — Ecosistema propietario",
+      "heroTitle": "Lo que\nconstruimos.",
+      "heroSub": "6 activos · 3 categorías · Suiza & Europa",
+      "ctaBottom": "¿Desea enviar su propio activo para certificación?",
+      "ctaGrade": "Enviar un activo de terceros",
       "ctaAuction": "Ver sesiones de subasta"
     }
   },

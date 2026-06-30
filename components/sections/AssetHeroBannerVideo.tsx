@@ -14,7 +14,13 @@ import { gsap, SplitText }    from '@/lib/gsap'
  *   Phase 75–100%: children (AssetGridWithDrawer) remonte par-dessus — chips visibles
  *                  sur fond vidéo floutée → effet immersif overlap
  */
-export function AssetHeroBannerVideo() {
+interface AssetHeroBannerVideoProps {
+  label?: string
+  title?: string
+  sub?:   string
+}
+
+export function AssetHeroBannerVideo({ label, title, sub }: AssetHeroBannerVideoProps = {}) {
   const wrapRef    = useRef<HTMLDivElement>(null)
   const photoRef   = useRef<HTMLDivElement>(null)
   const videoRef   = useRef<HTMLVideoElement>(null)
@@ -161,21 +167,21 @@ export function AssetHeroBannerVideo() {
             style={{ opacity: 0 }}
           >
             <span className="w-8 h-px bg-white/40 inline-block" />
-            Aegryn — Notre écosystème
+            {label ?? 'Aegryn — Notre écosystème'}
           </p>
           <h2
             ref={headingRef}
-            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] mb-6 overflow-hidden"
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] mb-6 overflow-hidden whitespace-pre-line"
             style={{ fontSize: 'clamp(40px,5.5vw,80px)' }}
           >
-            Ce que nous<br />construisons.
+            {title ?? 'Ce que nous\nconstruisons.'}
           </h2>
           <p
             ref={subRef}
             className="font-sans font-normal text-[14px] text-white/75 leading-relaxed max-w-sm"
             style={{ opacity: 0 }}
           >
-            6 actifs · 3 catégories · Suisse &amp; Europe
+            {sub ?? '6 actifs · 3 catégories · Suisse & Europe'}
           </p>
         </div>
       </div>

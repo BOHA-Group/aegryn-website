@@ -73,7 +73,12 @@
       "visitSite": "Bezoek site",
       "viewDetails": "Bekijk details",
       "auctionEligible": "Veiling-geschikt",
-      "ctaGrade": "Mijn asset certificeren",
+      "internalOnly": "Intern gebruik",
+      "heroLabel": "AEGRYN — Eigen ecosysteem",
+      "heroTitle": "Wat we\nbouwen.",
+      "heroSub": "6 activa · 3 categorieën · Zwitserland & Europa",
+      "ctaBottom": "Wilt u uw eigen asset indienen voor certificering?",
+      "ctaGrade": "Een extern asset indienen",
       "ctaAuction": "Veilingsessies bekijken"
     }
   },

@@ -59,7 +59,7 @@
       "desc": "Chaque actif AEGRYN est conçu, construit et opéré en interne. Propriété totale, souveraineté absolue, durabilité garantie.",
       "meta": {
         "title": "Actifs AEGRYN — Écosystème propriétaire",
-        "desc": "Découvrez les actifs propriétaires d'AEGRYN : Subblink, Neediu, Primiom, Movtoo et Hobconnect — conçus pour être certifiables et transférables."
+        "desc": "Découvrez les actifs propriétaires d'AEGRYN : Subblink, Neediu, KRYV Protocol, Primiom, Movtoo, Hobconnect — conçus pour durer, certifiables et transférables."
       },
       "filterAll": "Tous",
       "filterAI": "AI & Protocoles",
@@ -73,7 +73,12 @@
       "visitSite": "Visiter le site",
       "viewDetails": "Voir la fiche",
       "auctionEligible": "Éligible auction",
-      "ctaGrade": "Certifier votre actif",
+      "internalOnly": "Usage interne",
+      "heroLabel": "AEGRYN — Écosystème propriétaire",
+      "heroTitle": "Ce que nous\nconstruisons.",
+      "heroSub": "6 actifs · 3 catégories · Suisse & Europe",
+      "ctaBottom": "Vous souhaitez soumettre votre propre actif pour certification ?",
+      "ctaGrade": "Soumettre un actif tiers",
       "ctaAuction": "Voir les sessions auction"
     }
   },

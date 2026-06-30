@@ -59,7 +59,7 @@
       "desc": "Every AEGRYN asset is designed, built and operated in-house. Full ownership, absolute sovereignty, guaranteed durability.",
       "meta": {
         "title": "AEGRYN Assets — Proprietary ecosystem",
-        "desc": "Discover AEGRYN's proprietary assets: Subblink, Neediu, Primiom, Movtoo and Hobconnect — designed to be certifiable and transferable."
+        "desc": "Discover AEGRYN's proprietary assets: Subblink, Neediu, KRYV Protocol, Primiom, Movtoo, Hobconnect — engineered to last, certifiable and transferable."
       },
       "filterAll": "All",
       "filterAI": "AI & Protocols",
@@ -73,7 +73,12 @@
       "visitSite": "Visit site",
       "viewDetails": "View details",
       "auctionEligible": "Auction eligible",
-      "ctaGrade": "Certify your asset",
+      "internalOnly": "Internal use",
+      "heroLabel": "AEGRYN — Proprietary ecosystem",
+      "heroTitle": "What we're\nbuilding.",
+      "heroSub": "6 assets · 3 categories · Switzerland & Europe",
+      "ctaBottom": "Want to submit your own asset for certification?",
+      "ctaGrade": "Submit a third-party asset",
       "ctaAuction": "View auction sessions"
     }
   },

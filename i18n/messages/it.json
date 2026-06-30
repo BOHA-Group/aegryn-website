@@ -73,7 +73,12 @@
       "visitSite": "Visita sito",
       "viewDetails": "Vedi dettagli",
       "auctionEligible": "Idoneo all'asta",
-      "ctaGrade": "Certifica il mio asset",
+      "internalOnly": "Uso interno",
+      "heroLabel": "AEGRYN — Ecosistema proprietario",
+      "heroTitle": "Ciò che\nconstruiamo.",
+      "heroSub": "6 asset · 3 categorie · Svizzera & Europa",
+      "ctaBottom": "Vuole inviare il suo asset per la certificazione?",
+      "ctaGrade": "Invia un asset di terze parti",
       "ctaAuction": "Vedi sessioni d'asta"
     }
   },

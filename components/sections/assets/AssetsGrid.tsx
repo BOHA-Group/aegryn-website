@@ -36,7 +36,7 @@ export function AssetsGrid() {
 
   const filtered = active === 'all'
     ? AEGRYN_ASSETS
-    : AEGRYN_ASSETS.filter(a => a.category === active)
+    : AEGRYN_ASSETS.filter((a) => a.category === active)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -117,13 +117,18 @@ export function AssetsGrid() {
               </div>
 
               {/* Badge + status */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 flex-wrap">
                 <span className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray border border-ag-border px-2 py-1">
                   {asset.badge}
                 </span>
                 <span className={`font-mono text-[10px] tracking-[0.12em] uppercase ${statusColor(asset.status)}`}>
                   {statusLabel(asset.status)}
                 </span>
+                {asset.internalOnly && (
+                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-gray-light border border-ag-border px-2 py-0.5">
+                    {t('internalOnly')}
+                  </span>
+                )}
                 {asset.auctionEligible && (
                   <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-apex">
                     {t('auctionEligible')}
@@ -166,15 +171,15 @@ export function AssetsGrid() {
 
         {/* Bottom CTA */}
         <div className="mt-16 pt-10 border-t border-ag-border flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <p className="font-sans font-semibold text-ag-black text-[17px] max-w-md">
-            Vous avez un actif tech à certifier ou à vendre ?
+          <p className="font-sans text-[15px] text-ag-gray max-w-md">
+            {t('ctaBottom')}
           </p>
-          <div className="flex gap-3">
+          <div className="flex gap-3 shrink-0">
             <Link
-              href="/grade"
+              href="/grade/submit"
               className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy-mid transition-colors"
             >
-              {t('ctaGrade')}
+              {t('ctaGrade')} <ArrowUpRight size={11} />
             </Link>
             <Link
               href="/auction"

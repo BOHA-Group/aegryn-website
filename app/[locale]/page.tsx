@@ -13,7 +13,6 @@ import { WhyUseApps }        from '@/components/sections/WhyUseApps'
 import { AcqSupportStrip }   from '@/components/sections/AcqSupportStrip'
 import { StatementStrip }    from '@/components/sections/StatementStrip'
 import { DiscoverStrip }     from '@/components/sections/DiscoverStrip'
-import { StatsRow }          from '@/components/sections/StatsRow'
 import type { Metadata }    from 'next'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -56,7 +55,6 @@ export default async function HomePage({ params }: Props) {
         href="/advisory"
       />
       <DiscoverStrip />
-      <StatsRow />
     </>
   )
 }
