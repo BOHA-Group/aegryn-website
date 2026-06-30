@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: `Aegryn Contact <${fromEmail}>`,
+        from: `${process.env.RESEND_FROM_NAME ?? 'AEGRYN'} <${fromEmail}>`,
         to: ['contact@aegryn.com'],
         reply_to: data.email,
         subject: `[Aegryn] ${data.subject} — ${data.name}`,

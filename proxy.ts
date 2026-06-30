@@ -73,7 +73,7 @@ export default function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl
 
   /* ── 1. Protection /client/* ──────────────────────────── */
-  if (pathname.startsWith('/client/') && pathname !== '/client/login') {
+  if (pathname.startsWith('/client/') && pathname !== '/client/login' && pathname !== '/client/auth-confirm') {
     const { hasSession } = getSupabaseUser(req)
     if (!hasSession) {
       const loginUrl = req.nextUrl.clone()

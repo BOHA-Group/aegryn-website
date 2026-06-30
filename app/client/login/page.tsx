@@ -6,7 +6,13 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-export default function ClientLoginPage() {
+export default async function ClientLoginPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>
+}) {
+  const { error } = await searchParams
+
   return (
     <main className="min-h-screen bg-ag-navy flex items-center justify-center px-6">
       <div className="w-full max-w-md">
@@ -19,6 +25,13 @@ export default function ClientLoginPage() {
             Accès réservé aux vendeurs et acquéreurs certifiés AEGRYN.
           </p>
         </div>
+        {error && (
+          <div className="mb-6 bg-red-900/30 border border-red-700/40 px-4 py-3 text-center">
+            <p className="font-sans text-[12px] text-red-400">
+              Lien expiré ou invalide. Veuillez en demander un nouveau.
+            </p>
+          </div>
+        )}
         <LoginForm />
         <p className="mt-8 text-center font-sans text-[11px] text-white/25">
           Vous n&apos;avez pas de compte ? L&apos;accès est sur invitation uniquement.
