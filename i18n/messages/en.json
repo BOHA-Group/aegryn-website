@@ -703,19 +703,19 @@
         "desc": "Exceptional — top 1%"
       },
       "aaa": {
-        "label": "AEG AAA",
+        "label": "AAA",
         "desc": "Premium — transaction ready"
       },
       "aa": {
-        "label": "AEG AA",
+        "label": "AA",
         "desc": "Solid — confirmed valuation"
       },
       "a": {
-        "label": "AEG A",
+        "label": "A",
         "desc": "Standard — identified potential"
       },
       "b": {
-        "label": "AEG B",
+        "label": "B",
         "desc": "Early stage — remediation plan"
       }
     }
@@ -968,25 +968,25 @@
         "desc": "Top 1% of submitted assets. Ready for immediate institutional transaction."
       },
       {
-        "code": "AEG AAA",
+        "code": "AAA",
         "name": "Premium",
         "color": "grade-aaa",
         "desc": "Mature, documented asset. Reliable valuation. Standard transaction without reservation."
       },
       {
-        "code": "AEG AA",
+        "code": "AA",
         "name": "Solid",
         "color": "grade-aa",
         "desc": "Strong metrics, some optimisations recommended. Confirmed valuation."
       },
       {
-        "code": "AEG A",
+        "code": "A",
         "name": "Standard",
         "color": "grade-a",
         "desc": "Identified potential, documented improvement areas. Value plan proposed."
       },
       {
-        "code": "AEG B",
+        "code": "B",
         "name": "Early Stage",
         "color": "grade-b",
         "desc": "Asset in development. Remediation plan required before transaction."
@@ -1084,22 +1084,22 @@
         },
         {
           "range": "75–89",
-          "grade": "AEG AAA",
+          "grade": "AAA",
           "color": "grade-aaa"
         },
         {
           "range": "60–74",
-          "grade": "AEG AA",
+          "grade": "AA",
           "color": "grade-aa"
         },
         {
           "range": "45–59",
-          "grade": "AEG A",
+          "grade": "A",
           "color": "grade-a"
         },
         {
           "range": "30–44",
-          "grade": "AEG B",
+          "grade": "B",
           "color": "grade-b"
         }
       ]
@@ -1108,7 +1108,7 @@
   "gradingSystem": {
     "meta": {
       "title": "Grading System — AEGRYN Grade Protocol",
-      "desc": "The AEGRYN Grade protocol: CIFS framework, AEG ★ to AEG B grade definitions, sub-codes, analysis process and independence principles."
+      "desc": "The AEGRYN Grade protocol: CIFS framework, AEG ★ to B grade definitions, sub-codes, analysis process and independence principles."
     },
     "label": "AEGRYN — Grading System",
     "version": "Protocol v2.1 — 2026",
@@ -1153,7 +1153,7 @@
       }
     ],
     "gradesTitle": "AEGRYN Grades",
-    "gradesDesc": "Each grade corresponds to a precise score range and a distinct asset profile. AEG ★ and AEG AAA grades are awarded to fewer than 15% of submitted assets.",
+    "gradesDesc": "Each grade corresponds to a precise score range and a distinct asset profile. AEG ★ and AAA grades are awarded to fewer than 15% of submitted assets.",
     "grades": [
       {
         "grade": "AEG ★",
@@ -1166,7 +1166,7 @@
         "subcodes": ["C1", "I1", "F1", "S1"]
       },
       {
-        "grade": "AEG AAA",
+        "grade": "AAA",
         "label": "Premium",
         "range": "75–89 / 100",
         "color": "#C9A84C",
@@ -1176,7 +1176,7 @@
         "subcodes": ["C1–C2", "I1–I2", "F1–F2", "S1–S2"]
       },
       {
-        "grade": "AEG AA",
+        "grade": "AA",
         "label": "Standard",
         "range": "60–74 / 100",
         "color": "#9BA8B0",
@@ -1186,7 +1186,7 @@
         "subcodes": ["C2–C3", "I2–I3", "F2–F3", "S2–S3"]
       },
       {
-        "grade": "AEG A",
+        "grade": "A",
         "label": "Developing",
         "range": "45–59 / 100",
         "color": "#4A90D9",
@@ -1196,7 +1196,7 @@
         "subcodes": ["C3–C4", "I3–I4", "F3–F4", "S3–S4"]
       },
       {
-        "grade": "AEG B",
+        "grade": "B",
         "label": "Early Stage",
         "range": "30–44 / 100",
         "color": "#D4820A",
@@ -1215,7 +1215,7 @@
       { "code": "04", "label": "Remediation", "desc": "Insufficient level — remediation plan required" }
     ],
     "exampleTitle": "Full code example",
-    "exampleDesc": "An asset graded AEG AAA with code C1-D01 | I2-M02 | F1-A01 | S2 reads as follows:",
+    "exampleDesc": "An asset graded AAA with code C1-D01 | I2-M02 | F1-A01 | S2 reads as follows:",
     "exampleItems": [
       { "part": "C1-D01", "meaning": "Code: reference level, full depth of analysis" },
       { "part": "I2-M02", "meaning": "IP: solid, confirmed legal maturity" },
@@ -1227,7 +1227,7 @@
       { "num": "01", "title": "Submission & pre-qualification", "desc": "Receipt of file, verification of document completeness (data room, financials, codebase access). Pre-qualification within 5 business days. An incomplete file is returned without rating." },
       { "num": "02", "title": "Technical analysis (Code + Security)", "desc": "Code review by two AEGRYN-certified senior engineers. Automated security scan followed by manual review of critical components. Duration: 5–10 days." },
       { "num": "03", "title": "Commercial analysis (IP + Finance)", "desc": "Financial metrics audit against source documents, IP verification with competent registries (INPI, IGE/IPI, EUIPO). Interview with the founder. Duration: 5–10 days." },
-      { "num": "04", "title": "Deliberation & co-signature", "desc": "Both analysts deliberate and produce a preliminary report. For AEG ★ and AEG AAA grades, a partner co-signatory (law or audit firm) validates the final report." },
+      { "num": "04", "title": "Deliberation & co-signature", "desc": "Both analysts deliberate and produce a preliminary report. For AEG ★ and AAA grades, a partner co-signatory (law or audit firm) validates the final report." },
       { "num": "05", "title": "Issuance & blockchain anchoring", "desc": "The grade is issued, digitally signed and anchored on the KRYV protocol — immutably sealed. The certificate is sent to the holder and published in the AEGRYN register." }
     ],
     "principlesTitle": "Independence principles",
@@ -1307,10 +1307,10 @@
       "desc": "Every asset listed in this catalog has passed the AEGRYN certification protocol. Grade, sub-codes, indicative valuation — all documented.",
       "filterAll": "All grades",
       "filterStar": "AEG ★",
-      "filterAAA": "AEG AAA",
-      "filterAA": "AEG AA",
-      "filterA": "AEG A",
-      "filterB": "AEG B",
+      "filterAAA": "AAA",
+      "filterAA": "AA",
+      "filterA": "A",
+      "filterB": "B",
       "emptyTitle": "Catalog in preparation.",
       "emptyDesc": "The next session is being assembled. Sign up to be notified first.",
       "notifyLabel": "Notify me",

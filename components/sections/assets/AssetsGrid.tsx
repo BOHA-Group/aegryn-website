@@ -21,10 +21,10 @@ const GRADE_COLORS: Record<string, string> = {
 
 const GRADE_LABELS: Record<string, string> = {
   star:    'AEG ★',
-  aaa:     'AEG AAA',
-  aa:      'AEG AA',
-  a:       'AEG A',
-  b:       'AEG B',
+  aaa:     'AAA',
+  aa:      'AA',
+  a:       'A',
+  b:       'B',
   pending: '—',
   refused: 'Refusé',
 }

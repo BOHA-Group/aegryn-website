@@ -58,11 +58,11 @@ function GradeMegaMenu({
   const tg = useTranslations('gradeShowcase')
 
   const GRADES = [
-    { label: 'AEG ★',   key: 'star', cls: 'border-ag-apex/40  bg-ag-apex/[0.06]  text-ag-apex'         },
-    { label: 'AEG AAA', key: 'aaa',  cls: 'border-ag-navy/35  bg-ag-navy/[0.05]  text-ag-navy'         },
-    { label: 'AEG AA',  key: 'aa',   cls: 'border-ag-navy/20  bg-ag-navy/[0.03]  text-ag-navy/80'      },
-    { label: 'AEG A',   key: 'a',    cls: 'border-ag-border   bg-ag-off-white    text-ag-gray'          },
-    { label: 'AEG B',   key: 'b',    cls: 'border-ag-border/50 bg-ag-white       text-ag-gray-light'   },
+    { label: 'AEG ★', key: 'star', cls: 'border-ag-apex/40  bg-ag-apex/[0.06]  text-ag-apex'         },
+    { label: 'AAA',    key: 'aaa',  cls: 'border-ag-navy/35  bg-ag-navy/[0.05]  text-ag-navy'         },
+    { label: 'AA',     key: 'aa',   cls: 'border-ag-navy/20  bg-ag-navy/[0.03]  text-ag-navy/80'      },
+    { label: 'A',      key: 'a',    cls: 'border-ag-border   bg-ag-off-white    text-ag-gray'          },
+    { label: 'B',      key: 'b',    cls: 'border-ag-border/50 bg-ag-white       text-ag-gray-light'   },
   ] as const
 
   const DIMS = [
@@ -328,11 +328,11 @@ export default function Nav() {
                   {/* Grade scale — 2 rows × 3 / 2 cols */}
                   <div className="grid grid-cols-3 gap-1">
                     {[
-                      { label: 'AEG ★',   key: 'star', cls: 'border-ag-apex/40 text-ag-apex'      },
-                      { label: 'AEG AAA', key: 'aaa',  cls: 'border-white/20  text-white/80'      },
-                      { label: 'AEG AA',  key: 'aa',   cls: 'border-white/15  text-white/60'      },
-                      { label: 'AEG A',   key: 'a',    cls: 'border-white/10  text-white/40'      },
-                      { label: 'AEG B',   key: 'b',    cls: 'border-white/8   text-white/30'      },
+                      { label: 'AEG ★', key: 'star', cls: 'border-ag-apex/40 text-ag-apex'      },
+                      { label: 'AAA',    key: 'aaa',  cls: 'border-white/20  text-white/80'      },
+                      { label: 'AA',     key: 'aa',   cls: 'border-white/15  text-white/60'      },
+                      { label: 'A',      key: 'a',    cls: 'border-white/10  text-white/40'      },
+                      { label: 'B',      key: 'b',    cls: 'border-white/8   text-white/30'      },
                     ].map(({ label, cls }) => (
                       <div key={label} className={`border p-2 text-center ${cls}`}>
                         <p className="font-mono text-[10px] font-semibold tracking-[0.04em]">{label}</p>

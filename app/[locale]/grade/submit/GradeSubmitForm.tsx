@@ -138,11 +138,11 @@ export default function GradeSubmitForm() {
           <div className="flex flex-col gap-10">
             <div className="border border-ag-border p-6 flex flex-col gap-3">
               {([
-                { g: 'AEG ★',   c: 'text-ag-apex',        d: 'Top 1% — Exceptionnel' },
-                { g: 'AEG AAA', c: 'text-ag-grade-aaa',   d: 'Premium — Prêt pour transaction' },
-                { g: 'AEG AA',  c: 'text-ag-grade-aaa/70',d: 'Solide — Valorisation confirmée' },
-                { g: 'AEG A',   c: 'text-ag-grade-a',     d: 'Standard — Potentiel identifié' },
-                { g: 'AEG B',   c: 'text-ag-gray-light',  d: 'Early stage — Plan de remédiation' },
+                { g: 'AEG ★', c: 'text-ag-apex',        d: 'Top 1% — Exceptionnel' },
+                { g: 'AAA',    c: 'text-ag-grade-aaa',   d: 'Premium — Prêt pour transaction' },
+                { g: 'AA',     c: 'text-ag-grade-aaa/70',d: 'Solide — Valorisation confirmée' },
+                { g: 'A',      c: 'text-ag-grade-a',     d: 'Standard — Potentiel identifié' },
+                { g: 'B',      c: 'text-ag-gray-light',  d: 'Early stage — Plan de remédiation' },
               ] as const).map(({ g, c, d }) => (
                 <div key={g} className="flex items-center gap-4">
                   <span className={`font-mono text-[11px] font-bold tracking-[0.08em] w-16 shrink-0 ${c}`}>{g}</span>

@@ -151,8 +151,8 @@ export const ARTICLES: Article[] = [
       { type: 'h2', text: { fr: 'Les 4 dimensions du protocole AEGRYN Grade', en: 'The 4 dimensions of the AEGRYN Grade protocol' } },
       { type: 'h3', text: { fr: 'C — Code & Architecture', en: 'C — Code & Architecture' } },
       { type: 'p', text: {
-        fr: 'Qualité du code source (couverture tests, documentation, absence de hardcoded secrets), architecture (microservices vs monolithe, dette identifiée), dépendances (versions, licences, vulnérabilités), et dépôt IP (INPI, EUIPO ou équivalent). Un actif qui échoue en dimension C ne peut pas recevoir de grade supérieur à AEG B.',
-        en: 'Source code quality (test coverage, documentation, absence of hardcoded secrets), architecture (microservices vs monolith, identified debt), dependencies (versions, licences, vulnerabilities), and IP filing (INPI, EUIPO or equivalent). An asset failing on dimension C cannot receive a grade above AEG B.',
+        fr: 'Qualité du code source (couverture tests, documentation, absence de hardcoded secrets), architecture (microservices vs monolithe, dette identifiée), dépendances (versions, licences, vulnérabilités), et dépôt IP (INPI, EUIPO ou équivalent). Un actif qui échoue en dimension C ne peut pas recevoir de grade supérieur à B.',
+        en: 'Source code quality (test coverage, documentation, absence of hardcoded secrets), architecture (microservices vs monolith, identified debt), dependencies (versions, licences, vulnerabilities), and IP filing (INPI, EUIPO or equivalent). An asset failing on dimension C cannot receive a grade above B.',
       }},
       { type: 'h3', text: { fr: 'I — Infrastructure & Sécurité', en: 'I — Infrastructure & Security' } },
       { type: 'p', text: {
@@ -249,8 +249,8 @@ export const ARTICLES: Article[] = [
         { fr: 'J+90 : Signing et closing', en: 'D+90: Signing and closing' },
       ]},
       { type: 'p', text: {
-        fr: 'La certification AEGRYN compresse ce calendrier de 30 à 45 jours en fournissant une due diligence pré-validée. L\'acquéreur PE qui reçoit un rapport de grade AEG AAA peut passer directement à la LOI.',
-        en: 'AEGRYN certification compresses this timeline by 30–45 days by providing pre-validated due diligence. A PE acquirer receiving an AEG AAA grade report can move directly to the LOI.',
+        fr: 'La certification AEGRYN compresse ce calendrier de 30 à 45 jours en fournissant une due diligence pré-validée. L\'acquéreur PE qui reçoit un rapport de grade AAA peut passer directement à la LOI.',
+        en: 'AEGRYN certification compresses this timeline by 30–45 days by providing pre-validated due diligence. A PE acquirer receiving an AAA grade report can move directly to the LOI.',
       }},
       { type: 'stats', items: [
         { value: '58%',  label: { fr: 'Part PE buyers dans les deals SaaS 2025', en: 'Share of PE buyers in SaaS deals 2025' } },

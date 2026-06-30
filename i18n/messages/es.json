@@ -765,7 +765,7 @@
   "gradingSystem": {
     "meta": {
       "title": "Sistema de calificación — AEGRYN Grade Protocol",
-      "desc": "El protocolo AEGRYN Grade: marco CIFS, definiciones de grados AEG ★ a AEG B, sub-códigos, proceso de análisis y principios de independencia."
+      "desc": "El protocolo AEGRYN Grade: marco CIFS, definiciones de grados AEG ★ a B, sub-códigos, proceso de análisis y principios de independencia."
     },
     "label": "AEGRYN — Grading System",
     "version": "Protocol v2.1 — 2026",
@@ -782,13 +782,13 @@
       { "code": "S", "name": "Security", "full": "Security & Governance", "weight": "25 pts", "desc": "Cumplimiento GDPR y LPD suizo, seguridad de infraestructura, gestión de accesos y gobernanza de datos.", "criteria": ["Cumplimiento GDPR / LPD documentado", "Autenticación MFA en todos los accesos admin", "Datos cifrados en reposo y en tránsito", "Auditoría de seguridad de terceros en los últimos 18 meses", "Política de gestión de incidentes documentada"] }
     ],
     "gradesTitle": "Grados AEGRYN",
-    "gradesDesc": "Cada grado corresponde a un rango de puntuación preciso y un perfil de activo definido. AEG ★ y AEG AAA se otorgan a menos del 15% de los activos enviados.",
+    "gradesDesc": "Cada grado corresponde a un rango de puntuación preciso y un perfil de activo definido. AEG ★ y AAA se otorgan a menos del 15% de los activos enviados.",
     "grades": [
       { "grade": "AEG ★", "label": "Stellar", "range": "90–100 / 100", "color": "#5ADDA4", "rarity": "< 5% de los activos certificados", "profile": "Activo excepcional. Arquitectura de referencia, IP sólida, métricas financieras top decil. Apto para transacciones institucionales.", "typical": "SaaS B2B ARR > 2M€, churn < 1%, cobertura de pruebas > 90%.", "subcodes": ["C1", "I1", "F1", "S1"] },
-      { "grade": "AEG AAA", "label": "Premium", "range": "75–89 / 100", "color": "#C9A84C", "rarity": "10–15% de los activos certificados", "profile": "Activo de alta calidad con fundamentos sólidos en las cuatro dimensiones.", "typical": "SaaS ARR > 500K€, crecimiento > 30% YoY, cumplimiento GDPR completo.", "subcodes": ["C1–C2", "I1–I2", "F1–F2", "S1–S2"] },
-      { "grade": "AEG AA", "label": "Standard", "range": "60–74 / 100", "color": "#9BA8B0", "rarity": "25–30% de los activos certificados", "profile": "Activo de buena calidad con fortalezas identificadas y áreas de mejora documentadas.", "typical": "SaaS en crecimiento, algunas carencias en pruebas o cumplimiento.", "subcodes": ["C2–C3", "I2–I3", "F2–F3", "S2–S3"] },
-      { "grade": "AEG A", "label": "Developing", "range": "45–59 / 100", "color": "#4A90D9", "rarity": "30–35% de los activos certificados", "profile": "Activo en desarrollo con potencial identificable pero debilidades estructurales.", "typical": "Producto en early traction, deuda técnica significativa.", "subcodes": ["C3–C4", "I3–I4", "F3–F4", "S3–S4"] },
-      { "grade": "AEG B", "label": "Early Stage", "range": "30–44 / 100", "color": "#D4820A", "rarity": "15–20% de los activos certificados", "profile": "Activo early stage con fundamentos parciales. Certificación con informe de remediación detallado.", "typical": "MVP o producto pre-ingresos, arquitectura no documentada.", "subcodes": ["C4", "I4", "F4", "S4"] }
+      { "grade": "AAA", "label": "Premium", "range": "75–89 / 100", "color": "#C9A84C", "rarity": "10–15% de los activos certificados", "profile": "Activo de alta calidad con fundamentos sólidos en las cuatro dimensiones.", "typical": "SaaS ARR > 500K€, crecimiento > 30% YoY, cumplimiento GDPR completo.", "subcodes": ["C1–C2", "I1–I2", "F1–F2", "S1–S2"] },
+      { "grade": "AA", "label": "Standard", "range": "60–74 / 100", "color": "#9BA8B0", "rarity": "25–30% de los activos certificados", "profile": "Activo de buena calidad con fortalezas identificadas y áreas de mejora documentadas.", "typical": "SaaS en crecimiento, algunas carencias en pruebas o cumplimiento.", "subcodes": ["C2–C3", "I2–I3", "F2–F3", "S2–S3"] },
+      { "grade": "A", "label": "Developing", "range": "45–59 / 100", "color": "#4A90D9", "rarity": "30–35% de los activos certificados", "profile": "Activo en desarrollo con potencial identificable pero debilidades estructurales.", "typical": "Producto en early traction, deuda técnica significativa.", "subcodes": ["C3–C4", "I3–I4", "F3–F4", "S3–S4"] },
+      { "grade": "B", "label": "Early Stage", "range": "30–44 / 100", "color": "#D4820A", "rarity": "15–20% de los activos certificados", "profile": "Activo early stage con fundamentos parciales. Certificación con informe de remediación detallado.", "typical": "MVP o producto pre-ingresos, arquitectura no documentada.", "subcodes": ["C4", "I4", "F4", "S4"] }
     ],
     "subcodesTitle": "Nomenclatura de sub-códigos",
     "subcodesDesc": "Cada dimensión recibe un sub-código de M01 a M04 (Madurez) y D01 a D04 (Profundidad).",
@@ -811,7 +811,7 @@
       { "num": "01", "title": "Envío y prequalificación", "desc": "Recepción del expediente, verificación de la completitud de los documentos. Prequalificación en 5 días hábiles." },
       { "num": "02", "title": "Análisis técnico (Code + Security)", "desc": "Revisión del código por dos ingenieros senior certificados AEGRYN. Escaneo de seguridad automatizado y revisión manual. Duración: 5–10 días." },
       { "num": "03", "title": "Análisis comercial (IP + Finance)", "desc": "Auditoría de métricas financieras, verificación IP en registros competentes. Entrevista con el fundador. Duración: 5–10 días." },
-      { "num": "04", "title": "Deliberación y co-firma", "desc": "Ambos analistas deliberan y producen un informe preliminar. Para AEG ★ y AEG AAA, un co-firmante socio valida el informe final." },
+      { "num": "04", "title": "Deliberación y co-firma", "desc": "Ambos analistas deliberan y producen un informe preliminar. Para AEG ★ y AAA, un co-firmante socio valida el informe final." },
       { "num": "05", "title": "Emisión y anclaje blockchain", "desc": "El grado se emite, se firma digitalmente y se ancla en el protocolo KRYV — sellado inmutablemente." }
     ],
     "principlesTitle": "Principios de independencia",
@@ -919,25 +919,25 @@
         "desc": "Top 1% de activos enviados. Listo para transacción institucional inmediata."
       },
       {
-        "code": "AEG AAA",
+        "code": "AAA",
         "name": "Premium",
         "color": "grade-aaa",
         "desc": "Activo maduro y documentado. Valoración fiable. Transacción estándar sin reservas."
       },
       {
-        "code": "AEG AA",
+        "code": "AA",
         "name": "Sólido",
         "color": "grade-aa",
         "desc": "Buenas métricas, algunas optimizaciones recomendadas. Valoración confirmada."
       },
       {
-        "code": "AEG A",
+        "code": "A",
         "name": "Estándar",
         "color": "grade-a",
         "desc": "Potencial identificado, áreas de mejora documentadas. Plan de valor propuesto."
       },
       {
-        "code": "AEG B",
+        "code": "B",
         "name": "Early Stage",
         "color": "grade-b",
         "desc": "Activo en desarrollo. Plan de remediación requerido antes de la transacción."
@@ -1035,22 +1035,22 @@
         },
         {
           "range": "75–89",
-          "grade": "AEG AAA",
+          "grade": "AAA",
           "color": "grade-aaa"
         },
         {
           "range": "60–74",
-          "grade": "AEG AA",
+          "grade": "AA",
           "color": "grade-aa"
         },
         {
           "range": "45–59",
-          "grade": "AEG A",
+          "grade": "A",
           "color": "grade-a"
         },
         {
           "range": "30–44",
-          "grade": "AEG B",
+          "grade": "B",
           "color": "grade-b"
         }
       ]
@@ -1067,6 +1067,8 @@
       "desc": "Sin pujas abiertas. Sesiones privadas y rigurosas para vendedores certificados y compradores cualificados.",
       "ctaCatalog": "Ver catálogo",
       "ctaSession": "Próxima sesión",
+      "ctaSubmit": "Enviar un activo",
+      "howLabel": "Cómo funciona",
       "statsLabel": "En números",
       "stats": [
         {
@@ -1120,9 +1122,21 @@
       "desc": "Cada activo listado ha superado el protocolo de certificación AEGRYN.",
       "filterAll": "Todos los grades",
       "filterStar": "AEG ★",
-      "filterAaa": "AEG AAA",
-      "filterAa": "AEG AA",
-      "filterA": "AEG A",
+      "filterAAA": "AAA",
+      "filterAaa": "AAA",
+      "filterAA": "AA",
+      "filterAa": "AA",
+      "filterA": "A",
+      "filterB": "B",
+      "emptyTitle": "Catálogo en preparación.",
+      "emptyDesc": "La próxima sesión está en constitución. Regístrese para ser notificado prioritariamente.",
+      "notifyLabel": "Notificarme",
+      "assetGrade": "Grade",
+      "assetCategory": "Categoría",
+      "assetRevenue": "ARR indicativo",
+      "assetAsk": "Precio vendedor",
+      "viewAsset": "Ver el dossier",
+      "confidential": "Confidencial — NDA requerido",
       "empty": "Ningún activo coincide con este filtro.",
       "emptyAll": "El catálogo está vacío.",
       "emptyNote": "La próxima sesión abre Q3 2026.",
@@ -1171,6 +1185,16 @@
           "desc": "Negociación, escrow, transferencia — todo acompañado por AEGRYN."
         }
       ],
+      "step1Title": "Enviar",
+      "step1Desc": "Rellene el formulario de envío. Información básica del activo, métricas clave, documentación disponible.",
+      "step2Title": "Certificación",
+      "step2Desc": "Nuestro equipo evalúa su activo en 4 dimensiones. Recibe un informe de certificación completo con el grade AEGRYN.",
+      "step3Title": "Preparación de sesión",
+      "step3Desc": "Firma las CGV del vendedor, define su precio mínimo y accede a la lista de compradores cualificados inscritos.",
+      "step4Title": "Transacción",
+      "step4Desc": "Negociación acompañada por nuestros equipos. Escrow institucional. Transferencia segura de derechos.",
+      "feesCert": "Certificación",
+      "feesSuccess": "Comisión de éxito",
       "feesTitle": "Estructura de honorarios",
       "feesNote": "Comisión solo en cierre exitoso.",
       "fees": [
@@ -1233,7 +1257,11 @@
       "label": "Resultados",
       "title": "Resultados de sesiones.",
       "desc": "Transacciones completadas y valoraciones realizadas.",
-      "noResults": "Ninguna sesión completada todavía."
+      "noResults": "Ninguna sesión completada todavía.",
+      "sessionLabel": "Sesión",
+      "assetsTransacted": "Activos transaccionados",
+      "totalVolume": "Volumen total",
+      "avgMultiple": "Múltiplo mediano"
     },
     "session": {
       "label": "Próxima sesión",
@@ -1360,19 +1388,19 @@
         "desc": "Excepcional — top 1%"
       },
       "aaa": {
-        "label": "AEG AAA",
+        "label": "AAA",
         "desc": "Premium — listo para transacción"
       },
       "aa": {
-        "label": "AEG AA",
+        "label": "AA",
         "desc": "Sólido — valoración confirmada"
       },
       "a": {
-        "label": "AEG A",
+        "label": "A",
         "desc": "Estándar — potencial identificado"
       },
       "b": {
-        "label": "AEG B",
+        "label": "B",
         "desc": "Early stage — plan de remediación"
       }
     }
