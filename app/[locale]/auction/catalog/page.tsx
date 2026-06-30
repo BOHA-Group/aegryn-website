@@ -1,8 +1,7 @@
 import { getTranslations } from 'next-intl/server'
-import { useTranslations } from 'next-intl'
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { Bell } from 'lucide-react'
+import type { Metadata }   from 'next'
+import Link                from 'next/link'
+import CatalogNotifyForm   from './CatalogNotifyForm'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -12,8 +11,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: t('title'), description: t('desc') }
 }
 
-export default function AuctionCatalogPage() {
-  const t = useTranslations('auction.catalog')
+export default async function AuctionCatalogPage({ params }: Props) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'auction.catalog' })
 
   const GRADES = [
     { key: 'filterAll', color: '' },
@@ -59,24 +59,10 @@ export default function AuctionCatalogPage() {
         </div>
       </section>
 
-      {/* Empty state */}
-      <section className="py-32 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-          <div className="w-16 h-16 border border-ag-border flex items-center justify-center mb-8">
-            <Bell size={20} className="text-ag-gray-light" />
-          </div>
-          <h2 className="font-sans font-bold text-ag-black text-[24px] tracking-[-0.02em] mb-4">
-            {t('emptyTitle')}
-          </h2>
-          <p className="font-sans text-[14px] text-ag-gray max-w-md mb-8">
-            {t('emptyDesc')}
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:bg-ag-navy-mid transition-colors"
-          >
-            {t('notifyCta')}
-          </Link>
+      {/* Empty state + formulaire de notification */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <CatalogNotifyForm locale={locale} />
         </div>
       </section>
 

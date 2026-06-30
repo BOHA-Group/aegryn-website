@@ -1006,7 +1006,21 @@
       "notifyBtn": "Ricevi notifica",
       "sellerTitle": "Vuoi vendere il tuo asset?",
       "sellerDesc": "Invia il tuo asset per la certificazione e accedi al prossimo catalogo.",
-      "sellerCta": "Invia per certificazione"
+      "sellerCta": "Invia per certificazione",
+      "notifyEmail": "La sua email",
+      "notifyEmailPlaceholder": "fondatore@esempio.com",
+      "notifyType": "Lei è",
+      "notifyTypeIndividual": "Privato",
+      "notifyTypeCompany": "Azienda",
+      "notifyTypeFund": "Fondo / Family Office",
+      "notifyCapacity": "Capacità di acquisizione",
+      "notifySectors": "Settori di interesse",
+      "notifyCta": "Notificami prima",
+      "notifyLoading": "Invio...",
+      "notifyError": "Si è verificato un errore. Riprovare.",
+      "notifySuccessTitle": "Registrazione confermata",
+      "notifySuccessDesc": "Sarà contattato con priorità non appena il catalogo sarà aperto ai membri.",
+      "notifySuccessCta": "Inviare il mio asset per la certificazione"
     },
     "sell": {
       "label": "Venditore",

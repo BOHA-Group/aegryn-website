@@ -1006,7 +1006,21 @@
       "notifyBtn": "Recibir notificación",
       "sellerTitle": "¿Vender tu activo?",
       "sellerDesc": "Envía tu activo a certificación y accede al próximo catálogo.",
-      "sellerCta": "Enviar para certificación"
+      "sellerCta": "Enviar para certificación",
+      "notifyEmail": "Su email",
+      "notifyEmailPlaceholder": "fundador@ejemplo.com",
+      "notifyType": "Usted es",
+      "notifyTypeIndividual": "Particular",
+      "notifyTypeCompany": "Empresa",
+      "notifyTypeFund": "Fondo / Family Office",
+      "notifyCapacity": "Capacidad de adquisición",
+      "notifySectors": "Sectores de interés",
+      "notifyCta": "Notificarme primero",
+      "notifyLoading": "Enviando...",
+      "notifyError": "Se ha producido un error. Por favor, inténtelo de nuevo.",
+      "notifySuccessTitle": "Registro confirmado",
+      "notifySuccessDesc": "Será contactado con prioridad en cuanto el catálogo se abra a los miembros.",
+      "notifySuccessCta": "Enviar mi activo para certificación"
     },
     "sell": {
       "label": "Vendedor",

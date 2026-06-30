@@ -1006,7 +1006,21 @@
       "notifyBtn": "Benachrichtigt werden",
       "sellerTitle": "Ihr Asset verkaufen?",
       "sellerDesc": "Reichen Sie Ihr Asset zur Zertifizierung ein und erhalten Sie Zugang zum nächsten Katalog.",
-      "sellerCta": "Zur Zertifizierung einreichen"
+      "sellerCta": "Zur Zertifizierung einreichen",
+      "notifyEmail": "Ihre E-Mail",
+      "notifyEmailPlaceholder": "gründer@beispiel.com",
+      "notifyType": "Sie sind",
+      "notifyTypeIndividual": "Privatperson",
+      "notifyTypeCompany": "Unternehmen",
+      "notifyTypeFund": "Fonds / Family Office",
+      "notifyCapacity": "Akquisitionskapazität",
+      "notifySectors": "Interessensektoren",
+      "notifyCta": "Priorität-Benachrichtigung",
+      "notifyLoading": "Wird gesendet...",
+      "notifyError": "Ein Fehler ist aufgetreten. Bitte erneut versuchen.",
+      "notifySuccessTitle": "Anmeldung bestätigt",
+      "notifySuccessDesc": "Sie werden vorrangig kontaktiert, sobald der Katalog für Mitglieder geöffnet wird.",
+      "notifySuccessCta": "Mein Asset zur Zertifizierung einreichen"
     },
     "sell": {
       "label": "Verkäufer",

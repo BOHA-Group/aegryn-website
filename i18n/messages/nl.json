@@ -1006,7 +1006,21 @@
       "notifyBtn": "Melding ontvangen",
       "sellerTitle": "Uw asset verkopen?",
       "sellerDesc": "Dien uw asset in voor certificering en krijg toegang tot de volgende catalogus.",
-      "sellerCta": "Indienen voor certificering"
+      "sellerCta": "Indienen voor certificering",
+      "notifyEmail": "Uw e-mail",
+      "notifyEmailPlaceholder": "oprichter@voorbeeld.com",
+      "notifyType": "U bent",
+      "notifyTypeIndividual": "Particulier",
+      "notifyTypeCompany": "Bedrijf",
+      "notifyTypeFund": "Fonds / Family Office",
+      "notifyCapacity": "Acquisitiecapaciteit",
+      "notifySectors": "Interessesectoren",
+      "notifyCta": "Mij als eerste notificeren",
+      "notifyLoading": "Verzenden...",
+      "notifyError": "Er is een fout opgetreden. Probeer het opnieuw.",
+      "notifySuccessTitle": "Registratie bevestigd",
+      "notifySuccessDesc": "U wordt als eerste gecontacteerd zodra de catalogus voor leden wordt geopend.",
+      "notifySuccessCta": "Mijn asset indienen voor certificering"
     },
     "sell": {
       "label": "Verkoper",
