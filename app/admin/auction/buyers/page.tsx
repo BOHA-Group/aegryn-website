@@ -2,7 +2,7 @@
  * /admin/auction/buyers
  * Suivi KYC acquéreurs + gestion accès dossier
  */
-import { redirect }            from 'next/navigation'
+import { requireAdmin }        from '@/lib/adminAuth'
 import Link                    from 'next/link'
 import { createServiceClient } from '@/lib/supabase'
 import type { Metadata }       from 'next'
@@ -27,13 +27,12 @@ const KYC_COLOR: Record<string, string> = {
 export default async function AuctionBuyersPage({
   searchParams,
 }: {
-  searchParams: Promise<{ token?: string; kyc?: string }>
+  searchParams: Promise<{ kyc?: string }>
 }) {
-  const { token, kyc = 'all' } = await searchParams
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
-  if (adminToken && token !== adminToken) redirect('/')
+  await requireAdmin()
+  const { kyc = 'all' } = await searchParams
 
-  const qs   = token ? `?token=${token}` : ''
+  const qs   = ''
   const supa = createServiceClient()
 
   /* KYC verifications */
@@ -73,7 +72,7 @@ export default async function AuctionBuyersPage({
           {['all', 'pending', 'in_review', 'approved', 'rejected'].map(s => (
             <Link
               key={s}
-              href={`/admin/auction/buyers${token ? `?token=${token}&` : '?'}kyc=${s}`}
+              href={`/admin/auction/buyers?kyc=${s}`}
               className={`text-[11px] font-mono uppercase tracking-wider px-4 py-2 border transition-colors ${
                 kyc === s
                   ? 'bg-gray-900 text-white border-gray-900'

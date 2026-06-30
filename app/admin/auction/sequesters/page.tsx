@@ -2,9 +2,9 @@
  * /admin/auction/sequesters
  * Suivi des cautions bancaires (séquestres)
  */
-import { redirect }            from 'next/navigation'
 import Link                    from 'next/link'
 import { createServiceClient } from '@/lib/supabase'
+import { requireAdmin }        from '@/lib/adminAuth'
 import type { Metadata }       from 'next'
 
 export const metadata: Metadata = { title: 'Séquestres — Auction Admin', robots: { index: false, follow: false } }
@@ -27,13 +27,12 @@ const STATUS_COLOR: Record<string, string> = {
 export default async function AuctionSequesters({
   searchParams,
 }: {
-  searchParams: Promise<{ token?: string; status?: string }>
+  searchParams: Promise<{ status?: string }>
 }) {
-  const { token, status = 'awaited' } = await searchParams
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
-  if (adminToken && token !== adminToken) redirect('/')
+  await requireAdmin()
+  const { status = 'awaited' } = await searchParams
 
-  const qs   = token ? `?token=${token}` : ''
+  const qs   = ''
   const supa = createServiceClient()
 
   let q = supa
@@ -84,7 +83,7 @@ export default async function AuctionSequesters({
           {['awaited', 'received', 'released', 'applied', 'forfeited', 'all'].map(s => (
             <Link
               key={s}
-              href={`/admin/auction/sequesters${token ? `?token=${token}&` : '?'}status=${s}`}
+              href={`/admin/auction/sequesters?status=${s}`}
               className={`text-[11px] font-mono uppercase tracking-wider px-3 py-1.5 border transition-colors ${
                 status === s
                   ? 'bg-gray-900 text-white border-gray-900'
@@ -133,7 +132,7 @@ export default async function AuctionSequesters({
                         {s.received_at ? new Date(s.received_at as string).toLocaleDateString('fr-CH') : '—'}
                       </td>
                       <td className="px-6 py-3 text-right">
-                        <Link href={`/admin/auction/sequesters/${s.id}${qs}`} className="text-blue-600 hover:underline">
+                        <Link href={`/admin/auction/sequesters/${s.id}`} className="text-blue-600 hover:underline">
                           Gérer →
                         </Link>
                       </td>

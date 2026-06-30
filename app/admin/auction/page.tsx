@@ -1,10 +1,10 @@
 /**
  * /admin/auction — Tableau de bord AEGRYN Auction
- * Auth : token ADMIN_LEADS_TOKEN (query param)
+ * Auth : Supabase session + rôle admin
  */
-import { redirect }            from 'next/navigation'
 import Link                    from 'next/link'
 import { createServiceClient } from '@/lib/supabase'
+import { requireAdmin }        from '@/lib/adminAuth'
 import type { Metadata }       from 'next'
 import {
   Gavel, Users, FileText, Banknote,
@@ -28,16 +28,10 @@ function fmtChf(n: number | null | undefined) {
   return `CHF ${new Intl.NumberFormat('fr-CH').format(n)}`
 }
 
-export default async function AuctionAdminPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ token?: string }>
-}) {
-  const { token } = await searchParams
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
-  if (adminToken && token !== adminToken) redirect('/')
+export default async function AuctionAdminPage() {
+  await requireAdmin()
 
-  const qs   = token ? `?token=${token}` : ''
+  const qs   = ''
   const supa = createServiceClient()
 
   const [

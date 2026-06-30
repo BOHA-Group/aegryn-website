@@ -2,9 +2,9 @@
  * /admin/auction/bids
  * Revue des offres scellées — adjudication
  */
-import { redirect }            from 'next/navigation'
 import Link                    from 'next/link'
 import { createServiceClient } from '@/lib/supabase'
+import { requireAdmin }        from '@/lib/adminAuth'
 import type { Metadata }       from 'next'
 
 export const metadata: Metadata = { title: 'Bids — Auction Admin', robots: { index: false, follow: false } }
@@ -27,13 +27,12 @@ const STATUS_COLOR: Record<string, string> = {
 export default async function AuctionBidsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ token?: string; status?: string; asset?: string }>
+  searchParams: Promise<{ status?: string; asset?: string }>
 }) {
-  const { token, status = 'submitted', asset } = await searchParams
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
-  if (adminToken && token !== adminToken) redirect('/')
+  await requireAdmin()
+  const { status = 'submitted', asset } = await searchParams
 
-  const qs   = token ? `?token=${token}` : ''
+  const qs   = ''
   const supa = createServiceClient()
 
   /* Offres */
@@ -79,7 +78,7 @@ export default async function AuctionBidsPage({
           {['submitted', 'under_review', 'retained', 'rejected', 'all'].map(s => (
             <Link
               key={s}
-              href={`/admin/auction/bids${token ? `?token=${token}&` : '?'}status=${s}${asset ? `&asset=${asset}` : ''}`}
+              href={`/admin/auction/bids?status=${s}${asset ? `&asset=${asset}` : ''}`}
               className={`text-[11px] font-mono uppercase tracking-wider px-3 py-1.5 border transition-colors ${
                 status === s
                   ? 'bg-gray-900 text-white border-gray-900'
@@ -145,7 +144,7 @@ export default async function AuctionBidsPage({
                         {new Date(b.submitted_at as string).toLocaleDateString('fr-CH')}
                       </td>
                       <td className="px-6 py-3 text-right">
-                        <Link href={`/admin/auction/bids/${b.id}${qs}`} className="text-blue-600 hover:underline">
+                        <Link href={`/admin/auction/bids/${b.id}`} className="text-blue-600 hover:underline">
                           Examiner →
                         </Link>
                       </td>

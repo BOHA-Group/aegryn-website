@@ -88,8 +88,19 @@ export default function middleware(req: NextRequest) {
     return NextResponse.next()
   }
 
-  /* ── 2. Routes admin — pass-through (protégées par token query param) ── */
+  /* ── 2. Protection /admin/* ────────────────────────────── */
   if (pathname.startsWith('/admin/')) {
+    /* /admin/login est public */
+    if (pathname === '/admin/login') return NextResponse.next()
+
+    /* Toutes les autres routes admin requièrent une session */
+    const { hasSession } = getSupabaseUser(req)
+    if (!hasSession) {
+      const loginUrl = req.nextUrl.clone()
+      loginUrl.pathname = '/admin/login'
+      loginUrl.search   = ''
+      return NextResponse.redirect(loginUrl)
+    }
     return NextResponse.next()
   }
 

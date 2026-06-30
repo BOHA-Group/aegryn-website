@@ -2,9 +2,9 @@
  * /admin/auction/lots
  * Gestion des lots — statut, session, mise à prix, grade
  */
-import { redirect }            from 'next/navigation'
 import Link                    from 'next/link'
 import { createServiceClient } from '@/lib/supabase'
+import { requireAdmin }        from '@/lib/adminAuth'
 import type { Metadata }       from 'next'
 
 export const metadata: Metadata = { title: 'Lots — Auction Admin', robots: { index: false, follow: false } }
@@ -17,13 +17,12 @@ const GRADE_COLORS: Record<string, string> = {
 export default async function AuctionLotsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ token?: string; status?: string }>
+  searchParams: Promise<{ status?: string }>
 }) {
-  const { token, status = 'all' } = await searchParams
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
-  if (adminToken && token !== adminToken) redirect('/')
+  await requireAdmin()
+  const { status = 'all' } = await searchParams
 
-  const qs   = token ? `?token=${token}` : ''
+  const qs   = ''
   const supa = createServiceClient()
 
   let q = supa
@@ -61,7 +60,7 @@ export default async function AuctionLotsPage({
           {['all', 'draft', 'published', 'archived', 'withdrawn'].map(s => (
             <Link
               key={s}
-              href={`/admin/auction/lots${token ? `?token=${token}&` : '?'}status=${s}`}
+              href={`/admin/auction/lots?status=${s}`}
               className={`text-[11px] font-mono uppercase tracking-wider px-3 py-1.5 border transition-colors ${
                 status === s
                   ? 'bg-gray-900 text-white border-gray-900'
