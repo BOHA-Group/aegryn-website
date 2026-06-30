@@ -44,27 +44,44 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'invalid_signature' }, { status: 400 })
   }
 
+  /* ── Point 7 : log systématique ── */
+  console.log(`[stripe/webhook] event.type=${event.type} event.id=${event.id}`)
+
   if (event.type === 'checkout.session.completed') {
     const session  = event.data.object as Stripe.Checkout.Session
     const meta     = session.metadata ?? {}
     const assetId  = meta.draft_asset_id
     const email    = session.customer_email ?? ''
+    const paymentIntentId = session.payment_intent as string | null ?? null
     const supa     = createServiceClient()
 
     if (assetId) {
+      /* ── Point 5 : idempotence — ignorer si déjà payé ── */
+      const { data: existing } = await supa
+        .from('assets')
+        .select('id, evaluation_fee_paid')
+        .eq('id', assetId)
+        .maybeSingle()
+
+      if (existing?.evaluation_fee_paid === true) {
+        console.log(`[stripe/webhook] idempotent skip — asset ${assetId} already paid`)
+        return NextResponse.json({ received: true })
+      }
+
+      /* ── Point 4 : erreur Supabase → 200 quand même, logger ── */
       const { error } = await supa
         .from('assets')
         .update({
-          status:                    'submitted',
-          evaluation_fee_paid:       true,
-          evaluation_fee_paid_at:    new Date().toISOString(),
-          stripe_payment_intent_id:  session.payment_intent as string ?? null,
+          status:                   'submitted',
+          evaluation_fee_paid:      true,
+          evaluation_fee_paid_at:   new Date().toISOString(),
+          stripe_payment_intent_id: paymentIntentId,
         })
         .eq('id', assetId)
 
-      if (error) console.error('[stripe/webhook] asset update:', error)
+      if (error) console.error('[stripe/webhook] asset update error (non-blocking):', error)
 
-      /* Emails */
+      /* Emails — Point 4 : erreurs email non-bloquantes */
       const internal  = process.env.AEGRYN_INTERNAL_EMAIL ?? 'tech@boha-group.com'
       const typeLabel = meta.evaluationType === 'review_partner' ? 'AEGRYN Review+' : 'AEGRYN Review'
 
@@ -80,8 +97,12 @@ export async function POST(req: NextRequest) {
           `Nouveau paiement reçu\n\nType : ${typeLabel}\nEmail : ${email}\nPartner type : ${meta.partnerType || '—'}\nAsset ID : ${assetId}\nStripe session : ${session.id}`
         ),
       ])
+    } else {
+      /* Test webhook Stripe sans metadata.draft_asset_id — ignorer silencieusement */
+      console.log(`[stripe/webhook] no draft_asset_id in metadata — test event, ignoring`)
     }
   }
 
+  /* ── Point 4 : toujours 200 après vérification de signature réussie ── */
   return NextResponse.json({ received: true })
 }
