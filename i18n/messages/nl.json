@@ -790,7 +790,12 @@
       "title": "Objectieve waarheid\nover elk tech-asset.",
       "desc": "Geen schatting. Geen gevoel. Een rigoureus 4-dimensie-beoordelingsprotocol.",
       "ctaSubmit": "Indienen voor certificering",
-      "ctaMethod": "Methodologie lezen"
+      "ctaMethod": "Methodologie lezen",
+      "marketLabel": "Waarom nu certificeren",
+      "marketTitle": "Certificering creëert\nmeetbare waarde.",
+      "marketDesc": "De tech-M&A-markt heeft een duidelijke premie ontwikkeld voor assets waarvan de kwaliteit verifieerbaar is. Deze premie is geen projectie — ze is waarneembaar op afgeronde transacties.",
+      "marketCta": "Mijn asset indienen",
+      "marketCtaSecondary": "Methodologie bekijken"
     },
     "grades": [
       {
@@ -989,7 +994,11 @@
           "title": "Closing",
           "desc": "Escrow, contractondertekening, eigendomsoverdracht."
         }
-      ]
+      ],
+      "marketLabel": "De markt in 2026",
+      "marketTitle": "Een bifurcerende markt.",
+      "marketDesc": "Gecertificeerde en niet-gecertificeerde tech-assets spelen niet meer in dezelfde categorie. Het multiple-verschil is in 3 jaar met 2,5x gegroeid — en blijft groeien.",
+      "marketCta": "Mijn asset waarderen"
     },
     "catalog": {
       "label": "AEGRYN Catalogus",

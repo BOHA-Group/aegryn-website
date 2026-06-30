@@ -903,7 +903,12 @@
       "title": "La vérité objective\nsur chaque actif tech.",
       "desc": "Pas d'estimation. Pas de feeling. Un protocole d'évaluation rigoureux sur 4 dimensions, débouchant sur un grade public, opposable et traçable.",
       "ctaSubmit": "Soumettre pour certification",
-      "ctaMethod": "Lire la méthodologie"
+      "ctaMethod": "Lire la méthodologie",
+      "marketLabel": "Pourquoi certifier maintenant",
+      "marketTitle": "La certification crée\nde la valeur mesurable.",
+      "marketDesc": "Le marché M&A tech a développé un premium clair pour les actifs dont la qualité est vérifiable. Ce premium n'est pas une projection — il est observable sur les transactions réalisées.",
+      "marketCta": "Soumettre mon actif",
+      "marketCtaSecondary": "Voir la méthodologie"
     },
     "grades": [
       {
@@ -1103,7 +1108,11 @@
           "title": "Transaction",
           "desc": "Négociation encadrée, NDA, escrow institutionnel. Clôture sécurisée pour les deux parties."
         }
-      ]
+      ],
+      "marketLabel": "Le marché en 2026",
+      "marketTitle": "Un marché en bifurcation.",
+      "marketDesc": "Les actifs tech certifiés et les actifs non certifiés ne jouent plus dans la même cour. L'écart de multiple s'est creusé de 2,5x en 3 ans — et continue.",
+      "marketCta": "Estimer la valeur de mon actif"
     },
     "catalog": {
       "label": "Catalogue AEGRYN",

@@ -903,7 +903,12 @@
       "title": "Objective truth\nabout every tech asset.",
       "desc": "No estimation. No gut feeling. A rigorous 4-dimension evaluation protocol producing a public, auditable and traceable grade.",
       "ctaSubmit": "Submit for certification",
-      "ctaMethod": "Read the methodology"
+      "ctaMethod": "Read the methodology",
+      "marketLabel": "Why certify now",
+      "marketTitle": "Certification creates\nmeasurable value.",
+      "marketDesc": "The tech M&A market has developed a clear premium for assets whose quality is verifiable. This premium is not a projection — it is observable on completed transactions.",
+      "marketCta": "Submit my asset",
+      "marketCtaSecondary": "View methodology"
     },
     "grades": [
       {
@@ -1103,7 +1108,11 @@
           "title": "Transaction",
           "desc": "Structured negotiation, NDA, institutional escrow. Secure closing for both parties."
         }
-      ]
+      ],
+      "marketLabel": "The market in 2026",
+      "marketTitle": "A bifurcating market.",
+      "marketDesc": "Certified tech assets and uncertified ones no longer play in the same league. The multiple gap has widened by 2.5x in 3 years — and keeps growing.",
+      "marketCta": "Estimate my asset's value"
     },
     "catalog": {
       "label": "AEGRYN Catalog",

@@ -1,8 +1,7 @@
-import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, TrendingUp } from 'lucide-react'
 import { AuctionHero } from '@/components/sections/auction/AuctionHero'
 import { AuctionStats } from '@/components/sections/auction/AuctionStats'
 import { AuctionSteps } from '@/components/sections/auction/AuctionSteps'
@@ -19,8 +18,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function AuctionPage() {
-  const t = useTranslations('auction.index')
+export default async function AuctionPage({ params }: Props) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'auction.index' })
+  const tValuation = await getTranslations({ locale, namespace: 'valuation.marketContext' })
+  const marketItems = tValuation.raw('items') as { value: string; label: string }[]
 
   const serviceLd = serviceJsonLd({
     name:        'AEGRYN Auction — Certified Tech Asset Transactions',
@@ -40,6 +42,43 @@ export default function AuctionPage() {
       <AuctionHero />
       <AuctionStats />
       <AuctionSteps />
+
+      {/* ── Section marché 2026 ── */}
+      <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-5 flex items-center gap-3">
+                <TrendingUp size={11} className="text-ag-apex" />
+                {t('marketLabel')}
+              </p>
+              <h2
+                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-6 whitespace-pre-line"
+                style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
+              >
+                {t('marketTitle')}
+              </h2>
+              <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-8 max-w-md">
+                {t('marketDesc')}
+              </p>
+              <Link
+                href="/valuation"
+                className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+              >
+                {t('marketCta')} <ArrowUpRight size={13} />
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-px bg-ag-border border border-ag-border">
+              {marketItems.map(({ value, label }) => (
+                <div key={label} className="bg-ag-white p-8 flex flex-col gap-2">
+                  <span className="font-sans font-bold text-ag-black tracking-[-0.03em]" style={{ fontSize: 'clamp(24px,2.5vw,36px)' }}>{value}</span>
+                  <span className="font-sans text-[12px] text-ag-gray leading-snug">{label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Bottom CTA strip */}
       <section className="bg-ag-navy py-20 px-6 border-t border-white/10">

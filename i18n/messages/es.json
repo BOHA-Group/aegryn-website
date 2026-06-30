@@ -790,7 +790,12 @@
       "title": "Verdad objetiva\nsobre cada activo tech.",
       "desc": "Sin estimaciones. Sin intuición. Un riguroso protocolo de evaluación en 4 dimensiones.",
       "ctaSubmit": "Enviar para certificación",
-      "ctaMethod": "Leer la metodología"
+      "ctaMethod": "Leer la metodología",
+      "marketLabel": "Por qué certificar ahora",
+      "marketTitle": "La certificación crea\nvalor medible.",
+      "marketDesc": "El mercado M&A tech ha desarrollado una prima clara para los activos cuya calidad es verificable. Esta prima no es una proyección — es observable en transacciones realizadas.",
+      "marketCta": "Enviar mi activo",
+      "marketCtaSecondary": "Ver metodología"
     },
     "grades": [
       {
@@ -989,7 +994,11 @@
           "title": "Cierre",
           "desc": "Escrow, firma de contrato, transferencia de propiedad."
         }
-      ]
+      ],
+      "marketLabel": "El mercado en 2026",
+      "marketTitle": "Un mercado en bifurcación.",
+      "marketDesc": "Los activos tech certificados y los no certificados ya no juegan en la misma liga. La brecha de múltiplo se ha ampliado 2,5x en 3 años — y sigue creciendo.",
+      "marketCta": "Estimar el valor de mi activo"
     },
     "catalog": {
       "label": "Catálogo AEGRYN",

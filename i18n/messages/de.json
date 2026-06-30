@@ -790,7 +790,12 @@
       "title": "Objektive Wahrheit\nüber jedes Tech-Asset.",
       "desc": "Kein Schätzen. Kein Bauchgefühl. Ein rigoroses 4-Dimensionen-Bewertungsprotokoll.",
       "ctaSubmit": "Zur Zertifizierung einreichen",
-      "ctaMethod": "Methodik lesen"
+      "ctaMethod": "Methodik lesen",
+      "marketLabel": "Warum jetzt zertifizieren",
+      "marketTitle": "Zertifizierung schafft\nmessbaren Wert.",
+      "marketDesc": "Der Tech-M&A-Markt hat eine klare Prämie für Assets entwickelt, deren Qualität überprüfbar ist. Diese Prämie ist keine Projektion — sie ist an abgeschlossenen Transaktionen beobachtbar.",
+      "marketCta": "Meinen Asset einreichen",
+      "marketCtaSecondary": "Methodik ansehen"
     },
     "grades": [
       {
@@ -989,7 +994,11 @@
           "title": "Closing",
           "desc": "Fondssicherung, Vertragsunterzeichnung, Eigentumsübertragung."
         }
-      ]
+      ],
+      "marketLabel": "Der Markt 2026",
+      "marketTitle": "Ein bifurkierender Markt.",
+      "marketDesc": "Zertifizierte und nicht zertifizierte Tech-Assets spielen nicht mehr in der gleichen Liga. Der Multiple-Unterschied hat sich in 3 Jahren um 2,5x vergrößert — und wächst weiter.",
+      "marketCta": "Meinen Asset bewerten"
     },
     "catalog": {
       "label": "AEGRYN Katalog",

@@ -790,7 +790,12 @@
       "title": "Verità oggettiva\nsu ogni asset tech.",
       "desc": "Nessuna stima. Nessuna intuizione. Un rigoroso protocollo di valutazione in 4 dimensioni.",
       "ctaSubmit": "Invia per certificazione",
-      "ctaMethod": "Leggi la metodologia"
+      "ctaMethod": "Leggi la metodologia",
+      "marketLabel": "Perché certificare ora",
+      "marketTitle": "La certificazione crea\nvalore misurabile.",
+      "marketDesc": "Il mercato M&A tech ha sviluppato un premio chiaro per gli asset la cui qualità è verificabile. Questo premio non è una proiezione — è osservabile sulle transazioni realizzate.",
+      "marketCta": "Inviare il mio asset",
+      "marketCtaSecondary": "Vedere la metodologia"
     },
     "grades": [
       {
@@ -989,7 +994,11 @@
           "title": "Chiusura",
           "desc": "Escrow, firma del contratto, trasferimento di proprietà."
         }
-      ]
+      ],
+      "marketLabel": "Il mercato nel 2026",
+      "marketTitle": "Un mercato in biforcazione.",
+      "marketDesc": "Gli asset tech certificati e quelli non certificati non giocano più nella stessa categoria. Il divario di multiplo si è ampliato di 2,5x in 3 anni — e continua.",
+      "marketCta": "Stimare il valore del mio asset"
     },
     "catalog": {
       "label": "Catalogo AEGRYN",
