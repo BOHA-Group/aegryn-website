@@ -55,13 +55,6 @@ function FooterMedallion({ medallionText, contactLabel }: { medallionText: strin
   )
 }
 
-const footerAssets = [
-  { name: 'subblink',   href: 'https://subblink.boha-group.com', external: true  },
-  { name: 'neediu',     href: '/what-we-build',                  external: false },
-  { name: 'primiom',    href: '/what-we-build',                  external: false },
-  { name: 'movtoo',     href: '/what-we-build',                  external: false },
-  { name: 'hobconnect', href: '/what-we-build',                  external: false },
-]
 
 const socialLinks = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/106273747/' },
@@ -132,37 +125,31 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Assets */}
+          {/* Ecosystem — single catalogue link */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
               {t('ecosystemLabel')}
             </p>
-            <ul className="space-y-2">
-              {footerAssets.map(({ name, href, external }) => (
-                <li key={name}>
-                  <Link href={href}
-                    {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                    className="text-sm text-white/75 hover:text-white transition-colors">
-                    {name}
-                  </Link>
-                </li>
-              ))}
+            <ul className="space-y-2.5">
+              <li>
+                <Link href="/what-we-build" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('ecosystemCatalogLink')}
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Roadmap */}
+          {/* Roadmap — single link */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
               {t('roadmap.title')}
             </p>
             <ul className="space-y-2.5">
-              {(['nft', 'data', 'international'] as const).map(k => (
-                <li key={k}>
-                  <span className="text-sm text-white/40 cursor-default select-none">
-                    {t(`roadmap.${k}`)}
-                  </span>
-                </li>
-              ))}
+              <li>
+                <Link href="/roadmap" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('roadmap.link')}
+                </Link>
+              </li>
             </ul>
           </div>
 

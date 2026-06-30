@@ -663,11 +663,10 @@
     "medallionText": "Sprechen wir . Kontaktieren Sie uns . Sprechen wir . Kontaktieren Sie uns .",
     "contactLabel": "Kontaktieren Sie uns",
     "roadmap": {
-      "title": "Fahrplan",
-      "nft": "Web3 & NFT-Assets — Demnächst",
-      "data": "Proprietäre APIs — Demnächst",
-      "international": "Europäische Expansion — Demnächst"
-    }
+      "title": "Plattform",
+      "link": "Fahrplan"
+    },
+    "ecosystemCatalogLink": "Unsere proprietären Assets"
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
@@ -776,50 +775,232 @@
     "cifsTitle": "Der CIFS-Rahmen",
     "cifsDesc": "Jedes Asset wird anhand von vier unabhängigen Dimensionen bewertet, jede mit 0 bis 25 Punkten. Die Gesamtpunktzahl von 100 bestimmt das Grade.",
     "cifs": [
-      { "code": "C", "name": "Code", "full": "Code Quality & Architecture", "weight": "25 Pkt.", "desc": "Quellcodequalität, Testabdeckung, technische Schulden, Dokumentation, Implementierungssicherheit und skalierbare Architektur.", "criteria": ["Testabdeckung ≥ 70%", "Dokumentierte technische Schulden", "Keine kritischen Schwachstellen (OWASP Top 10)", "Entkoppelte und skalierbare Architektur", "Vollständige API-Dokumentation"] },
-      { "code": "I", "name": "IP", "full": "Intellectual Property & Moat", "weight": "25 Pkt.", "desc": "Geistiges Eigentum, Markteintrittsbarrieren, eingetragene Marken, Patente und nachhaltige Differenzierung.", "criteria": ["Marken in Zielgerichtsbarkeiten eingetragen", "Keine aktiven IP-Streitigkeiten", "Drittanbieter-Abhängigkeiten unter kompatiblen Lizenzen", "Identifizierbarer Burggraben", "Kundenverträge mit Wettbewerbsverboten"] },
-      { "code": "F", "name": "Finance", "full": "Financial Health & Traction", "weight": "25 Pkt.", "desc": "Wichtige Finanzkennzahlen: ARR, MRR, Churn, LTV/CAC, Burn Rate, Runway und Wachstumshistorie. Alle Daten werden gegen Quelldokumente geprüft.", "criteria": ["ARR über mindestens 24 Monate dokumentiert", "Monatlicher Churn < 3%", "Bruttomargen > 60% (SaaS)", "Runway ≥ 12 Monate", "Dokumentiertes YoY ARR-Wachstum"] },
-      { "code": "S", "name": "Security", "full": "Security & Governance", "weight": "25 Pkt.", "desc": "DSGVO- und Schweizer DSG-Konformität, Infrastruktursicherheit, Zugriffsmanagement und Datenschutz-Governance.", "criteria": ["DSGVO / DSG-Konformität dokumentiert", "MFA-Authentifizierung für alle Admin-Zugänge", "Verschlüsselung von Daten im Ruhezustand und bei der Übertragung", "Drittanbieter-Sicherheitsaudit in den letzten 18 Monaten", "Dokumentierte Vorfallsmanagement-Richtlinie"] }
+      {
+        "code": "C",
+        "name": "Code",
+        "full": "Code Quality & Architecture",
+        "weight": "25 Pkt.",
+        "desc": "Quellcodequalität, Testabdeckung, technische Schulden, Dokumentation, Implementierungssicherheit und skalierbare Architektur.",
+        "criteria": [
+          "Testabdeckung ≥ 70%",
+          "Dokumentierte technische Schulden",
+          "Keine kritischen Schwachstellen (OWASP Top 10)",
+          "Entkoppelte und skalierbare Architektur",
+          "Vollständige API-Dokumentation"
+        ]
+      },
+      {
+        "code": "I",
+        "name": "IP",
+        "full": "Intellectual Property & Moat",
+        "weight": "25 Pkt.",
+        "desc": "Geistiges Eigentum, Markteintrittsbarrieren, eingetragene Marken, Patente und nachhaltige Differenzierung.",
+        "criteria": [
+          "Marken in Zielgerichtsbarkeiten eingetragen",
+          "Keine aktiven IP-Streitigkeiten",
+          "Drittanbieter-Abhängigkeiten unter kompatiblen Lizenzen",
+          "Identifizierbarer Burggraben",
+          "Kundenverträge mit Wettbewerbsverboten"
+        ]
+      },
+      {
+        "code": "F",
+        "name": "Finance",
+        "full": "Financial Health & Traction",
+        "weight": "25 Pkt.",
+        "desc": "Wichtige Finanzkennzahlen: ARR, MRR, Churn, LTV/CAC, Burn Rate, Runway und Wachstumshistorie. Alle Daten werden gegen Quelldokumente geprüft.",
+        "criteria": [
+          "ARR über mindestens 24 Monate dokumentiert",
+          "Monatlicher Churn < 3%",
+          "Bruttomargen > 60% (SaaS)",
+          "Runway ≥ 12 Monate",
+          "Dokumentiertes YoY ARR-Wachstum"
+        ]
+      },
+      {
+        "code": "S",
+        "name": "Security",
+        "full": "Security & Governance",
+        "weight": "25 Pkt.",
+        "desc": "DSGVO- und Schweizer DSG-Konformität, Infrastruktursicherheit, Zugriffsmanagement und Datenschutz-Governance.",
+        "criteria": [
+          "DSGVO / DSG-Konformität dokumentiert",
+          "MFA-Authentifizierung für alle Admin-Zugänge",
+          "Verschlüsselung von Daten im Ruhezustand und bei der Übertragung",
+          "Drittanbieter-Sicherheitsaudit in den letzten 18 Monaten",
+          "Dokumentierte Vorfallsmanagement-Richtlinie"
+        ]
+      }
     ],
     "gradesTitle": "AEGRYN Grades",
     "gradesDesc": "Jedes Grade entspricht einem genauen Punktebereich und einem definierten Asset-Profil. AEG ★ und AAA werden weniger als 15% der eingereichten Assets verliehen.",
     "grades": [
-      { "grade": "AEG ★", "label": "Stellar", "range": "90–100 / 100", "color": "#5ADDA4", "rarity": "< 5% der zertifizierten Assets", "profile": "Außergewöhnliches Asset. Referenzarchitektur, starkes IP, Top-Dezil-Finanzkennzahlen. Für institutionelle Transaktionen geeignet.", "typical": "B2B SaaS ARR > 2M€, Churn < 1%, Testabdeckung > 90%.", "subcodes": ["C1", "I1", "F1", "S1"] },
-      { "grade": "AAA", "label": "Premium", "range": "75–89 / 100", "color": "#C9A84C", "rarity": "10–15% der zertifizierten Assets", "profile": "Hochwertiges Asset mit soliden Grundlagen in allen vier Dimensionen.", "typical": "SaaS ARR > 500K€, Wachstum > 30% YoY, DSGVO-konform.", "subcodes": ["C1–C2", "I1–I2", "F1–F2", "S1–S2"] },
-      { "grade": "AA", "label": "Standard", "range": "60–74 / 100", "color": "#9BA8B0", "rarity": "25–30% der zertifizierten Assets", "profile": "Gutes Asset mit identifizierten Stärken und dokumentierten Verbesserungsbereichen.", "typical": "Wachsendes SaaS, einige Lücken in Tests oder Compliance.", "subcodes": ["C2–C3", "I2–I3", "F2–F3", "S2–S3"] },
-      { "grade": "A", "label": "Developing", "range": "45–59 / 100", "color": "#4A90D9", "rarity": "30–35% der zertifizierten Assets", "profile": "Asset in Entwicklung mit identifizierbarem Potenzial, aber strukturellen Schwächen.", "typical": "Produkt in früher Traktion, erhebliche technische Schulden.", "subcodes": ["C3–C4", "I3–I4", "F3–F4", "S3–S4"] },
-      { "grade": "B", "label": "Early Stage", "range": "30–44 / 100", "color": "#D4820A", "rarity": "15–20% der zertifizierten Assets", "profile": "Early-Stage-Asset mit teilweisen Grundlagen. Zertifizierung mit detailliertem Remediierungsbericht.", "typical": "MVP oder Pre-Revenue-Produkt, undokumentierte Architektur.", "subcodes": ["C4", "I4", "F4", "S4"] }
+      {
+        "grade": "AEG ★",
+        "label": "Stellar",
+        "range": "90–100 / 100",
+        "color": "#5ADDA4",
+        "rarity": "< 5% der zertifizierten Assets",
+        "profile": "Außergewöhnliches Asset. Referenzarchitektur, starkes IP, Top-Dezil-Finanzkennzahlen. Für institutionelle Transaktionen geeignet.",
+        "typical": "B2B SaaS ARR > 2M€, Churn < 1%, Testabdeckung > 90%.",
+        "subcodes": [
+          "C1",
+          "I1",
+          "F1",
+          "S1"
+        ]
+      },
+      {
+        "grade": "AAA",
+        "label": "Premium",
+        "range": "75–89 / 100",
+        "color": "#C9A84C",
+        "rarity": "10–15% der zertifizierten Assets",
+        "profile": "Hochwertiges Asset mit soliden Grundlagen in allen vier Dimensionen.",
+        "typical": "SaaS ARR > 500K€, Wachstum > 30% YoY, DSGVO-konform.",
+        "subcodes": [
+          "C1–C2",
+          "I1–I2",
+          "F1–F2",
+          "S1–S2"
+        ]
+      },
+      {
+        "grade": "AA",
+        "label": "Standard",
+        "range": "60–74 / 100",
+        "color": "#9BA8B0",
+        "rarity": "25–30% der zertifizierten Assets",
+        "profile": "Gutes Asset mit identifizierten Stärken und dokumentierten Verbesserungsbereichen.",
+        "typical": "Wachsendes SaaS, einige Lücken in Tests oder Compliance.",
+        "subcodes": [
+          "C2–C3",
+          "I2–I3",
+          "F2–F3",
+          "S2–S3"
+        ]
+      },
+      {
+        "grade": "A",
+        "label": "Developing",
+        "range": "45–59 / 100",
+        "color": "#4A90D9",
+        "rarity": "30–35% der zertifizierten Assets",
+        "profile": "Asset in Entwicklung mit identifizierbarem Potenzial, aber strukturellen Schwächen.",
+        "typical": "Produkt in früher Traktion, erhebliche technische Schulden.",
+        "subcodes": [
+          "C3–C4",
+          "I3–I4",
+          "F3–F4",
+          "S3–S4"
+        ]
+      },
+      {
+        "grade": "B",
+        "label": "Early Stage",
+        "range": "30–44 / 100",
+        "color": "#D4820A",
+        "rarity": "15–20% der zertifizierten Assets",
+        "profile": "Early-Stage-Asset mit teilweisen Grundlagen. Zertifizierung mit detailliertem Remediierungsbericht.",
+        "typical": "MVP oder Pre-Revenue-Produkt, undokumentierte Architektur.",
+        "subcodes": [
+          "C4",
+          "I4",
+          "F4",
+          "S4"
+        ]
+      }
     ],
     "subcodesTitle": "Untercode-Nomenklatur",
     "subcodesDesc": "Jede Dimension erhält einen Untercode von M01 bis M04 (Reife) und D01 bis D04 (Tiefe).",
     "subcodeTable": [
-      { "code": "01", "label": "Referenz", "desc": "Branchenreferenzniveau — Top 5%" },
-      { "code": "02", "label": "Solide", "desc": "Über dem Median — Grundlagen beherrscht" },
-      { "code": "03", "label": "In Bearbeitung", "desc": "Unter dem Median — Verbesserungsbereiche identifiziert" },
-      { "code": "04", "label": "Remediierung", "desc": "Unzureichendes Niveau — Remediierungsplan erforderlich" }
+      {
+        "code": "01",
+        "label": "Referenz",
+        "desc": "Branchenreferenzniveau — Top 5%"
+      },
+      {
+        "code": "02",
+        "label": "Solide",
+        "desc": "Über dem Median — Grundlagen beherrscht"
+      },
+      {
+        "code": "03",
+        "label": "In Bearbeitung",
+        "desc": "Unter dem Median — Verbesserungsbereiche identifiziert"
+      },
+      {
+        "code": "04",
+        "label": "Remediierung",
+        "desc": "Unzureichendes Niveau — Remediierungsplan erforderlich"
+      }
     ],
     "exampleTitle": "Vollständiges Code-Beispiel",
     "exampleDesc": "Ein mit AEG AAA bewertetes Asset mit Code C1-D01 | I2-M02 | F1-A01 | S2 liest sich wie folgt:",
     "exampleItems": [
-      { "part": "C1-D01", "meaning": "Code: Referenzniveau, vollständige Analysetiefe" },
-      { "part": "I2-M02", "meaning": "IP: Solide, bestätigte rechtliche Reife" },
-      { "part": "F1-A01", "meaning": "Finance: Referenz, vollständiges Daten-Audit" },
-      { "part": "S2", "meaning": "Sicherheit: Solide, Drittanbieter-Audit validiert" }
+      {
+        "part": "C1-D01",
+        "meaning": "Code: Referenzniveau, vollständige Analysetiefe"
+      },
+      {
+        "part": "I2-M02",
+        "meaning": "IP: Solide, bestätigte rechtliche Reife"
+      },
+      {
+        "part": "F1-A01",
+        "meaning": "Finance: Referenz, vollständiges Daten-Audit"
+      },
+      {
+        "part": "S2",
+        "meaning": "Sicherheit: Solide, Drittanbieter-Audit validiert"
+      }
     ],
     "processTitle": "Der Analyseprozess",
     "process": [
-      { "num": "01", "title": "Einreichung & Vorqualifikation", "desc": "Empfang der Unterlagen, Prüfung der Vollständigkeit (Data Room, Finanzdaten, Codebase-Zugang). Vorqualifikation innerhalb von 5 Werktagen." },
-      { "num": "02", "title": "Technische Analyse (Code + Security)", "desc": "Code-Review durch zwei AEGRYN-zertifizierte Senior-Ingenieure. Automatisierter Sicherheitsscan gefolgt von manueller Überprüfung. Dauer: 5–10 Tage." },
-      { "num": "03", "title": "Kommerzielle Analyse (IP + Finance)", "desc": "Prüfung der Finanzkennzahlen gegen Quelldokumente, IP-Überprüfung bei zuständigen Registern. Gespräch mit dem Gründer. Dauer: 5–10 Tage." },
-      { "num": "04", "title": "Beratung & Co-Unterzeichnung", "desc": "Beide Analysten beraten und erstellen einen Vorbericht. Für AEG ★ und AAA validiert ein Partner-Co-Unterzeichner den Abschlussbericht." },
-      { "num": "05", "title": "Ausgabe & Blockchain-Verankerung", "desc": "Das Grade wird ausgestellt, digital signiert und im KRYV-Protokoll verankert — unveränderlich versiegelt." }
+      {
+        "num": "01",
+        "title": "Einreichung & Vorqualifikation",
+        "desc": "Empfang der Unterlagen, Prüfung der Vollständigkeit (Data Room, Finanzdaten, Codebase-Zugang). Vorqualifikation innerhalb von 5 Werktagen."
+      },
+      {
+        "num": "02",
+        "title": "Technische Analyse (Code + Security)",
+        "desc": "Code-Review durch zwei AEGRYN-zertifizierte Senior-Ingenieure. Automatisierter Sicherheitsscan gefolgt von manueller Überprüfung. Dauer: 5–10 Tage."
+      },
+      {
+        "num": "03",
+        "title": "Kommerzielle Analyse (IP + Finance)",
+        "desc": "Prüfung der Finanzkennzahlen gegen Quelldokumente, IP-Überprüfung bei zuständigen Registern. Gespräch mit dem Gründer. Dauer: 5–10 Tage."
+      },
+      {
+        "num": "04",
+        "title": "Beratung & Co-Unterzeichnung",
+        "desc": "Beide Analysten beraten und erstellen einen Vorbericht. Für AEG ★ und AAA validiert ein Partner-Co-Unterzeichner den Abschlussbericht."
+      },
+      {
+        "num": "05",
+        "title": "Ausgabe & Blockchain-Verankerung",
+        "desc": "Das Grade wird ausgestellt, digital signiert und im KRYV-Protokoll verankert — unveränderlich versiegelt."
+      }
     ],
     "principlesTitle": "Unabhängigkeitsprinzipien",
     "principles": [
-      { "title": "Strikte Trennung", "desc": "AEGRYN-Analysten haben kein finanzielles Interesse an den von ihnen zertifizierten Assets. Jede Beziehung zum Inhaber führt zur automatischen Ablehnung." },
-      { "title": "Reproduzierbarkeit", "desc": "Zwei unabhängige Analysten müssen zum gleichen Grade kommen (±1 Untercode). Eine größere Abweichung löst ein Schiedsverfahren aus." },
-      { "title": "Nachvollziehbarkeit", "desc": "Jedes Grade ist versioniert. Jede Revision erzeugt eine neue Version mit vollständiger Verlaufsverfolgung." },
-      { "title": "Einspruch", "desc": "Der Inhaber kann ein Grade innerhalb von 30 Tagen anfechten. Der Einspruch wird von einem unabhängigen Panel aus drei Analysten geprüft." }
+      {
+        "title": "Strikte Trennung",
+        "desc": "AEGRYN-Analysten haben kein finanzielles Interesse an den von ihnen zertifizierten Assets. Jede Beziehung zum Inhaber führt zur automatischen Ablehnung."
+      },
+      {
+        "title": "Reproduzierbarkeit",
+        "desc": "Zwei unabhängige Analysten müssen zum gleichen Grade kommen (±1 Untercode). Eine größere Abweichung löst ein Schiedsverfahren aus."
+      },
+      {
+        "title": "Nachvollziehbarkeit",
+        "desc": "Jedes Grade ist versioniert. Jede Revision erzeugt eine neue Version mit vollständiger Verlaufsverfolgung."
+      },
+      {
+        "title": "Einspruch",
+        "desc": "Der Inhaber kann ein Grade innerhalb von 30 Tagen anfechten. Der Einspruch wird von einem unabhängigen Panel aus drei Analysten geprüft."
+      }
     ],
     "ctaTitle": "Ihr Asset zertifizieren",
     "ctaDesc": "Bereit, Ihr Asset dem AEGRYN Grade-Protokoll einzureichen?",
@@ -828,42 +1009,79 @@
   },
   "roadmapPage": {
     "meta": {
-      "title": "Fahrplan — AEGRYN",
-      "desc": "Die nächsten Schritte des AEGRYN-Protokolls: Web3-Assets, proprietäre APIs und europäische Expansion."
+      "title": "Plattform — AEGRYN Auction Switzerland",
+      "desc": "Die AEGRYN Auction Switzerland Plattform: Zertifizierung, private Sessions, Schweizer Recht, internationale Offenheit."
     },
-    "label": "AEGRYN — Im Aufbau",
-    "title": "Was wir als\nnächstes bauen.",
-    "desc": "Das AEGRYN-Protokoll entwickelt sich weiter. Hier sind die kommenden Meilensteine — keine festen Daten, aber eine klare Richtung.",
+    "label": "AEGRYN Auction Switzerland",
+    "title": "Die Plattform.\nIhre Funktionen.",
+    "desc": "Jeder Verkauf wird ausschliesslich über AEGRYN Auction Switzerland abgewickelt. Schweizer Recht findet Anwendung. Verkäufer und Käufer aus aller Welt sind willkommen.",
+    "swissNote": "Schweizer Recht gilt für jede Transaktion — unabhängig von der Herkunft des Assets oder der Nationalität der Parteien.",
+    "featuresLabel": "Was die Plattform bietet",
+    "features": {
+      "certification": {
+        "title": "AEGRYN Grade Zertifizierung",
+        "desc": "Jedes zum Verkauf gestellte Asset wird vor jeder Session nach dem CIFS-Protokoll zertifiziert. Nicht zertifizierte Assets werden nicht zugelassen."
+      },
+      "swissLaw": {
+        "title": "Schweizer Recht — 100 %",
+        "desc": "Alle Transaktionen unterliegen dem Schweizer Recht, unabhängig von der Nationalität des Verkäufers oder Käufers."
+      },
+      "international": {
+        "title": "Internationale Offenheit",
+        "desc": "Qualifizierte Verkäufer und Käufer aus aller Welt. Keine geografischen Beschränkungen für die Herkunft von Assets oder Parteien."
+      },
+      "nda": {
+        "title": "Systematisches NDA",
+        "desc": "Der Zugang zum Asset-Dossier setzt die Unterzeichnung eines NDA voraus. Vertraulichkeit standardmässig garantiert."
+      },
+      "escrow": {
+        "title": "Institutionelles Escrow",
+        "desc": "Gelder werden auf einem von AEGRYN kontrollierten institutionellen Treuhandkonto bis zum Closing verwahrt."
+      },
+      "buyers": {
+        "title": "Qualifizierte Käufer",
+        "desc": "Jeder Käufer wird vor dem Zugang zu Sessions qualifiziert. Akquisitionskapazität und Absichten geprüft."
+      },
+      "dueDiligence": {
+        "title": "Vorvalidierte Due Diligence",
+        "desc": "Der AEGRYN Grade-Bericht ersetzt teilweise die Due Diligence und verkürzt den Zeitplan um 30 bis 45 Tage."
+      },
+      "transaction": {
+        "title": "Begleitete Transaktion",
+        "desc": "AEGRYN koordiniert die Verhandlung, stellt den Rechtetransfer sicher und garantiert das Verfahren von A bis Z."
+      }
+    },
+    "roadmapLabel": "Kommende Funktionen",
     "items": [
       {
-        "phase": "Phase 2",
-        "title": "Web3 & NFT-Assets",
-        "desc": "Erweiterung des AEGRYN-Protokolls auf On-Chain-Digitalassets: Utility-Token, ertragsbringende NFTs, DeFi-Protokolle. Angepasstes CIFS-Raster.",
+        "phase": "Q4 2026",
+        "title": "Gleichzeitiger Multi-Asset-Katalog",
+        "desc": "Sessions, die mehrere zertifizierte Assets gleichzeitig präsentieren, mit erweitertem Filtern nach Grade, Kategorie und Bewertungsrahmen.",
         "status": "In Entwicklung"
       },
       {
-        "phase": "Phase 3",
-        "title": "Proprietäre AEGRYN-APIs",
-        "desc": "Programmatischer Zugang zu Grades, Marktdaten und Zertifizierungswarnungen für Partnerplattformen und institutionelle Käufer.",
+        "phase": "Q1 2027",
+        "title": "AEGRYN Partner-API",
+        "desc": "Programmatischer Zugang zu veröffentlichten Grades und Marktdaten für Partnerplattformen und institutionelle Fonds.",
         "status": "Geplant"
       },
       {
-        "phase": "Phase 4",
-        "title": "Europäische Expansion",
-        "desc": "Aufbau des Co-Unterzeichner-Partnernetzwerks (Anwaltskanzleien, Wirtschaftsprüfer) in Deutschland, den Niederlanden, Italien und Spanien.",
+        "phase": "Q2 2027",
+        "title": "On-Chain-Assets nach Schweizer Recht",
+        "desc": "Erweiterung des CIFS-Protokolls auf tokenisierte digitale Assets (Utility-Token, DeFi-Protokolle). Schweizer Rechtsrahmen.",
         "status": "Geplant"
       }
     ],
     "currentLabel": "Heute verfügbar",
     "current": [
-      "Certification Auction — kostenlos",
-      "AEGRYN Review — 2.000 € zzgl. MwSt.",
-      "AEGRYN Review+ — 5.000 € zzgl. MwSt. (Partner-Co-Signatur)",
-      "Bewertungsrechner",
-      "Käufer-Kundenbereich"
+      "Private Verkaufssessionen — Q3 2026",
+      "AEGRYN Grade-Zertifizierung inklusive",
+      "Institutionelles Escrow",
+      "Automatisiertes NDA",
+      "Internationale qualifizierte Käufer"
     ],
-    "cta": "Asset einreichen",
-    "ctaSecondary": "Mehr über Grade erfahren"
+    "cta": "Asset zum Verkauf einreichen",
+    "ctaSecondary": "Mehr über den Grade erfahren"
   },
   "discover": {
     "meta": {
@@ -1190,7 +1408,7 @@
       "step2Title": "Zertifizierung",
       "step2Desc": "Unser Team bewertet Ihr Asset auf 4 Dimensionen. Sie erhalten einen vollständigen Zertifizierungsbericht mit AEGRYN Grade.",
       "step3Title": "Session-Vorbereitung",
-      "step3Desc": "Sie unterzeichnen die Verkäufer-AGB, legen Ihren Mindestpreis fest und erhalten Zugang zur Liste der qualifizierten Käufer.",
+      "step3Desc": "Sie unterzeichnen die Verkäufer-AGB, legen Ihren Mindestpreis fest. Ihr Asset wird den für die Session registrierten qualifizierten Käufern zugänglich.",
       "step4Title": "Transaktion",
       "step4Desc": "Von unseren Teams begleitete Verhandlung. Institutionelles Escrow. Gesicherter Rechteübertrag.",
       "feesCert": "Zertifizierung",
@@ -2043,6 +2261,113 @@
           "label": "SaaS M&A Volumen Europa 2025"
         }
       ]
+    }
+  },
+  "auctionSubmit": {
+    "meta": {
+      "title": "Asset einreichen — AEGRYN Auction Switzerland",
+      "desc": "Reichen Sie Ihr Tech-Asset für eine AEGRYN Auction Switzerland Session ein. Schweizer Recht. International offen."
+    },
+    "hero": {
+      "label": "AEGRYN Auction Switzerland",
+      "title": "Ein Asset zum\nVerkauf einreichen.",
+      "desc": "Jeder Verkauf erfolgt ausschliesslich über AEGRYN Auction Switzerland. Schweizer Recht gilt. Verkäufer aus aller Welt sind willkommen."
+    },
+    "swissNote": "Schweizer Recht gilt für jede Transaktion — unabhängig von der Herkunft des Verkäufers oder des Assets.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Einreichung",
+        "desc": "Sie füllen dieses Formular aus."
+      },
+      {
+        "num": "02",
+        "title": "Zertifizierung",
+        "desc": "Unser Team zertifiziert Ihr Asset (AEGRYN Grade)."
+      },
+      {
+        "num": "03",
+        "title": "Session",
+        "desc": "Ihr Asset wird den für die Session registrierten qualifizierten Käufern zugänglich."
+      },
+      {
+        "num": "04",
+        "title": "Transaktion",
+        "desc": "Begleitete Verhandlung — Escrow — Rechteübertragung."
+      }
+    ],
+    "form": {
+      "sectionAsset": "Ihr Asset",
+      "assetName": "Name des Assets",
+      "assetType": "Art des Assets",
+      "assetTypePlaceholder": "Auswählen",
+      "assetTypeOptions": {
+        "saas_b2b": "SaaS B2B",
+        "saas_b2c": "SaaS B2C",
+        "marketplace": "Marketplace",
+        "mobile": "Mobile App",
+        "protocol": "Protokoll / API",
+        "ip": "Nur IP-Rechte",
+        "other": "Sonstiges"
+      },
+      "assetUrl": "Website / App-URL",
+      "techStack": "Tech-Stack (optional)",
+      "techStackPlaceholder": "z.B. Next.js, Supabase, Python",
+      "devStage": "Entwicklungsstand",
+      "devStagePlaceholder": "Auswählen",
+      "devStageOptions": {
+        "prod_revenue": "In Produktion mit Umsatz",
+        "prod_no_revenue": "In Produktion ohne Umsatz",
+        "beta": "Beta / Vorproduktion",
+        "prototype": "Prototyp / MVP",
+        "ip_only": "Nur IP"
+      },
+      "sectionFinancial": "Finanzdaten",
+      "arr": "Annualisierter ARR / MRR (€ oder CHF)",
+      "arrPlaceholder": "z.B. 150000",
+      "askPrice": "Gewünschter Verkaufspreis (€ oder CHF)",
+      "askPricePlaceholder": "z.B. 1200000",
+      "ipFiled": "Geistiges Eigentum eingetragen",
+      "ipYes": "Ja",
+      "ipNo": "Nein",
+      "ipPending": "In Bearbeitung",
+      "sectionTransaction": "Transaktionskontext",
+      "motivation": "Motivation",
+      "motivationPlaceholder": "Auswählen",
+      "motivationOptions": {
+        "full_exit": "Vollständiger Exit",
+        "partial_exit": "Teilweiser Exit",
+        "liquidity": "Gesellschafterliquidität",
+        "other": "Sonstiges"
+      },
+      "timeline": "Gewünschter Zeitrahmen",
+      "timelinePlaceholder": "Auswählen",
+      "timelineOptions": {
+        "urgent": "Dringend — weniger als 3 Monate",
+        "standard": "Standard — 3 bis 6 Monate",
+        "long": "Langfristig — mehr als 6 Monate"
+      },
+      "targetSession": "Gewünschte Session",
+      "targetSessionPlaceholder": "Auswählen",
+      "targetSessionOptions": {
+        "q3_2026": "Q3 2026",
+        "q4_2026": "Q4 2026",
+        "q1_2027": "Q1 2027",
+        "flexible": "Flexibel"
+      },
+      "sectionContact": "Ihre Kontaktdaten",
+      "fullName": "Vollständiger Name",
+      "email": "Geschäftliche E-Mail",
+      "country": "Wohnsitzland",
+      "countryPlaceholder": "z.B. Frankreich, Schweiz, Deutschland",
+      "company": "Gesellschaft / Struktur (optional)",
+      "message": "Zusätzliche Nachricht (optional)",
+      "swissLawLabel": "Ich bestätige, dass das Schweizer Recht für jede über AEGRYN Auction Switzerland abgewickelte Transaktion gilt.",
+      "submit": "Mein Dossier einreichen",
+      "submitting": "Wird gesendet…",
+      "successTitle": "Dossier erhalten.",
+      "successDesc": "Unser Team meldet sich innerhalb von 48–72 Werktagen, um die Zertifizierungsphase einzuleiten.",
+      "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt."
     }
   }
 }

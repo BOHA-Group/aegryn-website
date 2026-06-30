@@ -663,11 +663,10 @@
     "medallionText": "Laten we praten . Neem contact op . Laten we praten . Neem contact op .",
     "contactLabel": "Neem contact op",
     "roadmap": {
-      "title": "Routekaart",
-      "nft": "Web3 & NFT-activa — Binnenkort",
-      "data": "Proprietäre API's — Binnenkort",
-      "international": "Europese uitbreiding — Binnenkort"
-    }
+      "title": "Platform",
+      "link": "Routekaart"
+    },
+    "ecosystemCatalogLink": "Onze propriëtaire assets"
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
@@ -776,50 +775,232 @@
     "cifsTitle": "Het CIFS-kader",
     "cifsDesc": "Elk asset wordt beoordeeld op vier onafhankelijke dimensies, elk gescoord van 0 tot 25 punten. De totale score op 100 bepaalt het grade.",
     "cifs": [
-      { "code": "C", "name": "Code", "full": "Code Quality & Architecture", "weight": "25 pt", "desc": "Broncodequaliteit, testdekking, technische schuld, documentatie, implementatiebeveiliging en schaalbare architectuur.", "criteria": ["Testdekking ≥ 70%", "Gedocumenteerde technische schuld", "Geen kritieke kwetsbaarheden (OWASP Top 10)", "Ontkoppelde en schaalbare architectuur", "Volledige API-documentatie"] },
-      { "code": "I", "name": "IP", "full": "Intellectual Property & Moat", "weight": "25 pt", "desc": "Intellectueel eigendom, toetredingsbarrières, geregistreerde merken, octrooien en duurzame differentiatie.", "criteria": ["Merken geregistreerd in doeljurisdicties", "Geen actieve IP-geschillen", "Afhankelijkheden van derden onder compatibele licenties", "Identificeerbare slotgracht", "Klantcontracten met concurrentiebedingen"] },
-      { "code": "F", "name": "Finance", "full": "Financial Health & Traction", "weight": "25 pt", "desc": "Belangrijke financiële statistieken: ARR, MRR, churn, LTV/CAC, burn rate, runway en groei. Alle gegevens worden geauditeerd.", "criteria": ["ARR gedocumenteerd over minimaal 24 maanden", "Maandelijkse churn < 3%", "Brutomarge > 60% (SaaS)", "Runway ≥ 12 maanden", "YoY ARR-groei gedocumenteerd"] },
-      { "code": "S", "name": "Security", "full": "Security & Governance", "weight": "25 pt", "desc": "AVG- en Zwitserse DSG-naleving, infrastructuurbeveiliging, toegangsbeheer en gegevensgovernance.", "criteria": ["AVG / DSG-naleving gedocumenteerd", "MFA-authenticatie op alle beheerderstoegang", "Gegevens versleuteld in rust en in transit", "Beveiligingsaudit van derden in de laatste 18 maanden", "Gedocumenteerd incidentbeheerbeleid"] }
+      {
+        "code": "C",
+        "name": "Code",
+        "full": "Code Quality & Architecture",
+        "weight": "25 pt",
+        "desc": "Broncodequaliteit, testdekking, technische schuld, documentatie, implementatiebeveiliging en schaalbare architectuur.",
+        "criteria": [
+          "Testdekking ≥ 70%",
+          "Gedocumenteerde technische schuld",
+          "Geen kritieke kwetsbaarheden (OWASP Top 10)",
+          "Ontkoppelde en schaalbare architectuur",
+          "Volledige API-documentatie"
+        ]
+      },
+      {
+        "code": "I",
+        "name": "IP",
+        "full": "Intellectual Property & Moat",
+        "weight": "25 pt",
+        "desc": "Intellectueel eigendom, toetredingsbarrières, geregistreerde merken, octrooien en duurzame differentiatie.",
+        "criteria": [
+          "Merken geregistreerd in doeljurisdicties",
+          "Geen actieve IP-geschillen",
+          "Afhankelijkheden van derden onder compatibele licenties",
+          "Identificeerbare slotgracht",
+          "Klantcontracten met concurrentiebedingen"
+        ]
+      },
+      {
+        "code": "F",
+        "name": "Finance",
+        "full": "Financial Health & Traction",
+        "weight": "25 pt",
+        "desc": "Belangrijke financiële statistieken: ARR, MRR, churn, LTV/CAC, burn rate, runway en groei. Alle gegevens worden geauditeerd.",
+        "criteria": [
+          "ARR gedocumenteerd over minimaal 24 maanden",
+          "Maandelijkse churn < 3%",
+          "Brutomarge > 60% (SaaS)",
+          "Runway ≥ 12 maanden",
+          "YoY ARR-groei gedocumenteerd"
+        ]
+      },
+      {
+        "code": "S",
+        "name": "Security",
+        "full": "Security & Governance",
+        "weight": "25 pt",
+        "desc": "AVG- en Zwitserse DSG-naleving, infrastructuurbeveiliging, toegangsbeheer en gegevensgovernance.",
+        "criteria": [
+          "AVG / DSG-naleving gedocumenteerd",
+          "MFA-authenticatie op alle beheerderstoegang",
+          "Gegevens versleuteld in rust en in transit",
+          "Beveiligingsaudit van derden in de laatste 18 maanden",
+          "Gedocumenteerd incidentbeheerbeleid"
+        ]
+      }
     ],
     "gradesTitle": "AEGRYN Grades",
     "gradesDesc": "Elk grade correspondeert met een nauwkeurig scorebereik en een gedefinieerd assetprofiel. AEG ★ en AAA worden toegekend aan minder dan 15% van de ingediende activa.",
     "grades": [
-      { "grade": "AEG ★", "label": "Stellar", "range": "90–100 / 100", "color": "#5ADDA4", "rarity": "< 5% van gecertificeerde activa", "profile": "Uitzonderlijk asset. Referentiearchitectuur, sterk IP, top-deciel financiële statistieken. Geschikt voor institutionele transacties.", "typical": "B2B SaaS ARR > €2M, churn < 1%, testdekking > 90%.", "subcodes": ["C1", "I1", "F1", "S1"] },
-      { "grade": "AAA", "label": "Premium", "range": "75–89 / 100", "color": "#C9A84C", "rarity": "10–15% van gecertificeerde activa", "profile": "Hoogwaardig asset met solide fundamenten in alle vier dimensies.", "typical": "SaaS ARR > €500K, groei > 30% YoY, volledige AVG-naleving.", "subcodes": ["C1–C2", "I1–I2", "F1–F2", "S1–S2"] },
-      { "grade": "AA", "label": "Standard", "range": "60–74 / 100", "color": "#9BA8B0", "rarity": "25–30% van gecertificeerde activa", "profile": "Goed asset met geïdentificeerde sterke punten en gedocumenteerde verbeterpunten.", "typical": "Groeiende SaaS, enkele hiaten in tests of naleving.", "subcodes": ["C2–C3", "I2–I3", "F2–F3", "S2–S3"] },
-      { "grade": "A", "label": "Developing", "range": "45–59 / 100", "color": "#4A90D9", "rarity": "30–35% van gecertificeerde activa", "profile": "Asset in ontwikkeling met identificeerbaar potentieel maar structurele zwakheden.", "typical": "Product in early traction, aanzienlijke technische schuld.", "subcodes": ["C3–C4", "I3–I4", "F3–F4", "S3–S4"] },
-      { "grade": "B", "label": "Early Stage", "range": "30–44 / 100", "color": "#D4820A", "rarity": "15–20% van gecertificeerde activa", "profile": "Early stage asset met gedeeltelijke fundamenten. Certificering met gedetailleerd remediatierapport.", "typical": "MVP of pre-revenue product, ongedocumenteerde architectuur.", "subcodes": ["C4", "I4", "F4", "S4"] }
+      {
+        "grade": "AEG ★",
+        "label": "Stellar",
+        "range": "90–100 / 100",
+        "color": "#5ADDA4",
+        "rarity": "< 5% van gecertificeerde activa",
+        "profile": "Uitzonderlijk asset. Referentiearchitectuur, sterk IP, top-deciel financiële statistieken. Geschikt voor institutionele transacties.",
+        "typical": "B2B SaaS ARR > €2M, churn < 1%, testdekking > 90%.",
+        "subcodes": [
+          "C1",
+          "I1",
+          "F1",
+          "S1"
+        ]
+      },
+      {
+        "grade": "AAA",
+        "label": "Premium",
+        "range": "75–89 / 100",
+        "color": "#C9A84C",
+        "rarity": "10–15% van gecertificeerde activa",
+        "profile": "Hoogwaardig asset met solide fundamenten in alle vier dimensies.",
+        "typical": "SaaS ARR > €500K, groei > 30% YoY, volledige AVG-naleving.",
+        "subcodes": [
+          "C1–C2",
+          "I1–I2",
+          "F1–F2",
+          "S1–S2"
+        ]
+      },
+      {
+        "grade": "AA",
+        "label": "Standard",
+        "range": "60–74 / 100",
+        "color": "#9BA8B0",
+        "rarity": "25–30% van gecertificeerde activa",
+        "profile": "Goed asset met geïdentificeerde sterke punten en gedocumenteerde verbeterpunten.",
+        "typical": "Groeiende SaaS, enkele hiaten in tests of naleving.",
+        "subcodes": [
+          "C2–C3",
+          "I2–I3",
+          "F2–F3",
+          "S2–S3"
+        ]
+      },
+      {
+        "grade": "A",
+        "label": "Developing",
+        "range": "45–59 / 100",
+        "color": "#4A90D9",
+        "rarity": "30–35% van gecertificeerde activa",
+        "profile": "Asset in ontwikkeling met identificeerbaar potentieel maar structurele zwakheden.",
+        "typical": "Product in early traction, aanzienlijke technische schuld.",
+        "subcodes": [
+          "C3–C4",
+          "I3–I4",
+          "F3–F4",
+          "S3–S4"
+        ]
+      },
+      {
+        "grade": "B",
+        "label": "Early Stage",
+        "range": "30–44 / 100",
+        "color": "#D4820A",
+        "rarity": "15–20% van gecertificeerde activa",
+        "profile": "Early stage asset met gedeeltelijke fundamenten. Certificering met gedetailleerd remediatierapport.",
+        "typical": "MVP of pre-revenue product, ongedocumenteerde architectuur.",
+        "subcodes": [
+          "C4",
+          "I4",
+          "F4",
+          "S4"
+        ]
+      }
     ],
     "subcodesTitle": "Subcode-nomenclatuur",
     "subcodesDesc": "Elke dimensie ontvangt een subcode van M01 tot M04 (Volwassenheid) en D01 tot D04 (Diepte).",
     "subcodeTable": [
-      { "code": "01", "label": "Referentie", "desc": "Sectoraal referentieniveau — top 5%" },
-      { "code": "02", "label": "Solide", "desc": "Boven de mediaan — fundamenten beheerst" },
-      { "code": "03", "label": "In uitvoering", "desc": "Onder de mediaan — verbeterpunten geïdentificeerd" },
-      { "code": "04", "label": "Remediatie", "desc": "Onvoldoende niveau — remediatieplan vereist" }
+      {
+        "code": "01",
+        "label": "Referentie",
+        "desc": "Sectoraal referentieniveau — top 5%"
+      },
+      {
+        "code": "02",
+        "label": "Solide",
+        "desc": "Boven de mediaan — fundamenten beheerst"
+      },
+      {
+        "code": "03",
+        "label": "In uitvoering",
+        "desc": "Onder de mediaan — verbeterpunten geïdentificeerd"
+      },
+      {
+        "code": "04",
+        "label": "Remediatie",
+        "desc": "Onvoldoende niveau — remediatieplan vereist"
+      }
     ],
     "exampleTitle": "Volledig codevoorbeeld",
     "exampleDesc": "Een asset met grade AAA en code C1-D01 | I2-M02 | F1-A01 | S2 wordt als volgt gelezen:",
     "exampleItems": [
-      { "part": "C1-D01", "meaning": "Code: referentieniveau, volledige diepte van analyse" },
-      { "part": "I2-M02", "meaning": "IP: solide, bevestigde juridische volwassenheid" },
-      { "part": "F1-A01", "meaning": "Finance: referentie, volledige data-audit" },
-      { "part": "S2", "meaning": "Beveiliging: solide, externe audit gevalideerd" }
+      {
+        "part": "C1-D01",
+        "meaning": "Code: referentieniveau, volledige diepte van analyse"
+      },
+      {
+        "part": "I2-M02",
+        "meaning": "IP: solide, bevestigde juridische volwassenheid"
+      },
+      {
+        "part": "F1-A01",
+        "meaning": "Finance: referentie, volledige data-audit"
+      },
+      {
+        "part": "S2",
+        "meaning": "Beveiliging: solide, externe audit gevalideerd"
+      }
     ],
     "processTitle": "Het analyseproces",
     "process": [
-      { "num": "01", "title": "Indiening & voorkwalificatie", "desc": "Ontvangst van het dossier, verificatie van de volledigheid van documenten. Voorkwalificatie binnen 5 werkdagen." },
-      { "num": "02", "title": "Technische analyse (Code + Security)", "desc": "Coderevue door twee AEGRYN-gecertificeerde senior ingenieurs. Geautomatiseerde beveiligingsscan gevolgd door handmatige beoordeling. Duur: 5–10 dagen." },
-      { "num": "03", "title": "Commerciële analyse (IP + Finance)", "desc": "Audit van financiële statistieken, IP-verificatie bij bevoegde registers. Interview met de oprichter. Duur: 5–10 dagen." },
-      { "num": "04", "title": "Beraadslaging & medeondertekening", "desc": "Beide analisten beraadslagen en produceren een voorlopig rapport. Voor AEG ★ en AAA valideert een partner-medeondertekenaar het eindrapport." },
-      { "num": "05", "title": "Uitgifte & blockchain-verankering", "desc": "Het grade wordt uitgegeven, digitaal ondertekend en verankerd in het KRYV-protocol — onveranderlijk verzegeld." }
+      {
+        "num": "01",
+        "title": "Indiening & voorkwalificatie",
+        "desc": "Ontvangst van het dossier, verificatie van de volledigheid van documenten. Voorkwalificatie binnen 5 werkdagen."
+      },
+      {
+        "num": "02",
+        "title": "Technische analyse (Code + Security)",
+        "desc": "Coderevue door twee AEGRYN-gecertificeerde senior ingenieurs. Geautomatiseerde beveiligingsscan gevolgd door handmatige beoordeling. Duur: 5–10 dagen."
+      },
+      {
+        "num": "03",
+        "title": "Commerciële analyse (IP + Finance)",
+        "desc": "Audit van financiële statistieken, IP-verificatie bij bevoegde registers. Interview met de oprichter. Duur: 5–10 dagen."
+      },
+      {
+        "num": "04",
+        "title": "Beraadslaging & medeondertekening",
+        "desc": "Beide analisten beraadslagen en produceren een voorlopig rapport. Voor AEG ★ en AAA valideert een partner-medeondertekenaar het eindrapport."
+      },
+      {
+        "num": "05",
+        "title": "Uitgifte & blockchain-verankering",
+        "desc": "Het grade wordt uitgegeven, digitaal ondertekend en verankerd in het KRYV-protocol — onveranderlijk verzegeld."
+      }
     ],
     "principlesTitle": "Onafhankelijkheidsprincipes",
     "principles": [
-      { "title": "Strikte scheiding", "desc": "AEGRYN-analisten hebben geen financieel belang bij de activa die zij certificeren. Elke relatie met de houder activeert automatische wraking." },
-      { "title": "Reproduceerbaarheid", "desc": "Twee onafhankelijke analisten moeten tot hetzelfde grade komen (±1 subcode). Een grotere discrepantie activeert een arbitrageprocedure." },
-      { "title": "Traceerbaarheid", "desc": "Elk grade is geversioneerd. Elke revisie genereert een nieuwe versie met volledige historietraceerbaarheid." },
-      { "title": "Beroep", "desc": "De houder kan een grade binnen 30 dagen betwisten. Het beroep wordt behandeld door een onafhankelijk panel van drie analisten." }
+      {
+        "title": "Strikte scheiding",
+        "desc": "AEGRYN-analisten hebben geen financieel belang bij de activa die zij certificeren. Elke relatie met de houder activeert automatische wraking."
+      },
+      {
+        "title": "Reproduceerbaarheid",
+        "desc": "Twee onafhankelijke analisten moeten tot hetzelfde grade komen (±1 subcode). Een grotere discrepantie activeert een arbitrageprocedure."
+      },
+      {
+        "title": "Traceerbaarheid",
+        "desc": "Elk grade is geversioneerd. Elke revisie genereert een nieuwe versie met volledige historietraceerbaarheid."
+      },
+      {
+        "title": "Beroep",
+        "desc": "De houder kan een grade binnen 30 dagen betwisten. Het beroep wordt behandeld door een onafhankelijk panel van drie analisten."
+      }
     ],
     "ctaTitle": "Certificeer uw asset",
     "ctaDesc": "Klaar om uw asset in te dienen bij het AEGRYN Grade-protocol?",
@@ -828,42 +1009,79 @@
   },
   "roadmapPage": {
     "meta": {
-      "title": "Routekaart — AEGRYN",
-      "desc": "De volgende stappen van het AEGRYN-protocol: Web3-activa, eigen API's en Europese expansie."
+      "title": "Platform — AEGRYN Auction Switzerland",
+      "desc": "Het AEGRYN Auction Switzerland platform: certificering, private sessies, Zwitsers recht, internationale openheid."
     },
-    "label": "AEGRYN — In aanbouw",
-    "title": "Wat we\nvervolgens bouwen.",
-    "desc": "Het AEGRYN-protocol evolueert. Dit zijn de komende mijlpalen — geen vaste datums, maar een duidelijke richting.",
+    "label": "AEGRYN Auction Switzerland",
+    "title": "Het platform.\nZijn functies.",
+    "desc": "Elke verkoop vindt uitsluitend plaats via AEGRYN Auction Switzerland. Zwitsers recht is van toepassing. Verkopers en kopers van over de hele wereld zijn welkom.",
+    "swissNote": "Zwitsers recht is van toepassing op elke transactie — ongeacht de herkomst van het asset of de nationaliteit van de partijen.",
+    "featuresLabel": "Wat het platform biedt",
+    "features": {
+      "certification": {
+        "title": "AEGRYN Grade Certificering",
+        "desc": "Elk asset dat te koop wordt aangeboden, is gecertificeerd volgens het CIFS-protocol vóór elke sessie. Geen niet-gecertificeerd asset wordt toegelaten."
+      },
+      "swissLaw": {
+        "title": "Zwitsers recht — 100 %",
+        "desc": "Alle transacties worden beheerst door het Zwitserse recht, ongeacht de nationaliteit van de verkoper of koper."
+      },
+      "international": {
+        "title": "Internationale openheid",
+        "desc": "Gekwalificeerde verkopers en kopers van over de hele wereld. Geen geografische beperkingen op de herkomst van assets of partijen."
+      },
+      "nda": {
+        "title": "Systematische NDA",
+        "desc": "Toegang tot het asset-dossier is afhankelijk van ondertekening van een NDA. Vertrouwelijkheid standaard gegarandeerd."
+      },
+      "escrow": {
+        "title": "Institutionele escrow",
+        "desc": "Gelden worden op een door AEGRYN beheerde institutionele derdenrekening bewaard tot closing."
+      },
+      "buyers": {
+        "title": "Gekwalificeerde kopers",
+        "desc": "Elke koper wordt gekwalificeerd vóór toegang tot sessies. Verwervingscapaciteit en intenties geverifieerd."
+      },
+      "dueDiligence": {
+        "title": "Voorgevalideerde due diligence",
+        "desc": "Het AEGRYN Grade-rapport vervangt gedeeltelijk de due diligence en verkort de tijdlijn met 30 tot 45 dagen."
+      },
+      "transaction": {
+        "title": "Begeleide transactie",
+        "desc": "AEGRYN coördineert de onderhandeling, zorgt voor de overdracht van rechten en garandeert de procedure van A tot Z."
+      }
+    },
+    "roadmapLabel": "Komende functies",
     "items": [
       {
-        "phase": "Fase 2",
-        "title": "Web3 & NFT-activa",
-        "desc": "Uitbreiding van het AEGRYN-protocol naar on-chain digitale activa: utility-tokens, NFT's met terugkerende inkomsten, DeFi-protocollen. Aangepast CIFS-raster.",
+        "phase": "Q4 2026",
+        "title": "Gelijktijdige multi-asset catalogus",
+        "desc": "Sessies met meerdere gecertificeerde assets tegelijkertijd, met geavanceerd filteren op grade, categorie en waarderingsrange.",
         "status": "In ontwikkeling"
       },
       {
-        "phase": "Fase 3",
-        "title": "Eigen AEGRYN-API's",
-        "desc": "Programmatische toegang tot grades, marktdata en certificeringswaarschuwingen voor partnerplatforms en institutionele kopers.",
+        "phase": "Q1 2027",
+        "title": "AEGRYN partner-API",
+        "desc": "Programmatische toegang tot gepubliceerde grades en marktgegevens voor partnerplatforms en institutionele fondsen.",
         "status": "Gepland"
       },
       {
-        "phase": "Fase 4",
-        "title": "Europese expansie",
-        "desc": "Uitrol van het netwerk van mede-ondertekenende partners (advocatenkantoren, accountants) in Duitsland, Nederland, Italië en Spanje.",
+        "phase": "Q2 2027",
+        "title": "On-chain assets onder Zwitsers recht",
+        "desc": "Uitbreiding van het CIFS-protocol naar getokeniseerde digitale assets (utility-tokens, DeFi-protocollen). Zwitsers juridisch kader.",
         "status": "Gepland"
       }
     ],
     "currentLabel": "Vandaag beschikbaar",
     "current": [
-      "Certification Auction — gratis",
-      "AEGRYN Review — € 2.000 excl. btw",
-      "AEGRYN Review+ — € 5.000 excl. btw (partner co-ondertekening)",
-      "Waarderingsberekening",
-      "Klantenruimte voor kopers"
+      "Private verkoopsessies — Q3 2026",
+      "AEGRYN Grade certificering inbegrepen",
+      "Institutionele escrow",
+      "Geautomatiseerde NDA",
+      "Internationale gekwalificeerde kopers"
     ],
-    "cta": "Een actief indienen",
-    "ctaSecondary": "Meer over Grade"
+    "cta": "Asset indienen voor verkoop",
+    "ctaSecondary": "Meer informatie over de Grade"
   },
   "discover": {
     "meta": {
@@ -1190,7 +1408,7 @@
       "step2Title": "Certificering",
       "step2Desc": "Ons team beoordeelt uw asset op 4 dimensies. U ontvangt een volledig certificeringsrapport met de AEGRYN Grade.",
       "step3Title": "Sessievoorbereiding",
-      "step3Desc": "U ondertekent de verkoper-AV, stelt uw minimumprijs vast en krijgt toegang tot de lijst van gekwalificeerde geregistreerde kopers.",
+      "step3Desc": "U ondertekent de verkoper-AV en stelt uw minimumprijs vast. Uw asset wordt dan toegankelijk voor de gekwalificeerde kopers die voor de sessie zijn ingeschreven.",
       "step4Title": "Transactie",
       "step4Desc": "Onderhandeling begeleid door onze teams. Institutioneel escrow. Veilige overdracht van rechten.",
       "feesCert": "Certificering",
@@ -2043,6 +2261,113 @@
           "label": "SaaS M&A volume Europa 2025"
         }
       ]
+    }
+  },
+  "auctionSubmit": {
+    "meta": {
+      "title": "Asset indienen — AEGRYN Auction Switzerland",
+      "desc": "Dien uw tech-asset in voor een AEGRYN Auction Switzerland sessie. Zwitsers recht. Internationaal open."
+    },
+    "hero": {
+      "label": "AEGRYN Auction Switzerland",
+      "title": "Een asset indienen\nvoor verkoop.",
+      "desc": "Elke verkoop is exclusief via AEGRYN Auction Switzerland. Zwitsers recht is van toepassing. Verkopers van over de hele wereld zijn welkom."
+    },
+    "swissNote": "Zwitsers recht is van toepassing op elke transactie — ongeacht de herkomst van de verkoper of het asset.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Indiening",
+        "desc": "U vult dit formulier in."
+      },
+      {
+        "num": "02",
+        "title": "Certificering",
+        "desc": "Ons team certificeert uw asset (AEGRYN Grade)."
+      },
+      {
+        "num": "03",
+        "title": "Sessie",
+        "desc": "Uw asset wordt toegankelijk voor de gekwalificeerde kopers die voor de sessie zijn ingeschreven."
+      },
+      {
+        "num": "04",
+        "title": "Transactie",
+        "desc": "Begeleide onderhandeling — escrow — overdracht van rechten."
+      }
+    ],
+    "form": {
+      "sectionAsset": "Uw asset",
+      "assetName": "Naam van het asset",
+      "assetType": "Type asset",
+      "assetTypePlaceholder": "Selecteren",
+      "assetTypeOptions": {
+        "saas_b2b": "SaaS B2B",
+        "saas_b2c": "SaaS B2C",
+        "marketplace": "Marketplace",
+        "mobile": "Mobiele applicatie",
+        "protocol": "Protocol / API",
+        "ip": "Alleen IP-rechten",
+        "other": "Anders"
+      },
+      "assetUrl": "Website / applicatie-URL",
+      "techStack": "Tech stack (optioneel)",
+      "techStackPlaceholder": "bijv. Next.js, Supabase, Python",
+      "devStage": "Ontwikkelingsfase",
+      "devStagePlaceholder": "Selecteren",
+      "devStageOptions": {
+        "prod_revenue": "In productie met omzet",
+        "prod_no_revenue": "In productie zonder omzet",
+        "beta": "Beta / Pre-productie",
+        "prototype": "Prototype / MVP",
+        "ip_only": "Alleen IP"
+      },
+      "sectionFinancial": "Financiële gegevens",
+      "arr": "Geannualiseerde ARR / MRR (€ of CHF)",
+      "arrPlaceholder": "bijv. 150000",
+      "askPrice": "Gewenste verkoopprijs (€ of CHF)",
+      "askPricePlaceholder": "bijv. 1200000",
+      "ipFiled": "Intellectueel eigendom geregistreerd",
+      "ipYes": "Ja",
+      "ipNo": "Nee",
+      "ipPending": "In behandeling",
+      "sectionTransaction": "Transactiecontext",
+      "motivation": "Motivatie",
+      "motivationPlaceholder": "Selecteren",
+      "motivationOptions": {
+        "full_exit": "Volledige exit",
+        "partial_exit": "Gedeeltelijke exit",
+        "liquidity": "Aandeelhoudersliquiditeit",
+        "other": "Anders"
+      },
+      "timeline": "Gewenste tijdlijn",
+      "timelinePlaceholder": "Selecteren",
+      "timelineOptions": {
+        "urgent": "Dringend — minder dan 3 maanden",
+        "standard": "Standaard — 3 tot 6 maanden",
+        "long": "Lange termijn — meer dan 6 maanden"
+      },
+      "targetSession": "Doelsessie",
+      "targetSessionPlaceholder": "Selecteren",
+      "targetSessionOptions": {
+        "q3_2026": "Q3 2026",
+        "q4_2026": "Q4 2026",
+        "q1_2027": "Q1 2027",
+        "flexible": "Flexibel"
+      },
+      "sectionContact": "Uw contactgegevens",
+      "fullName": "Volledige naam",
+      "email": "Zakelijk e-mailadres",
+      "country": "Land van verblijf",
+      "countryPlaceholder": "bijv. Frankrijk, Zwitserland, Duitsland",
+      "company": "Bedrijf / Structuur (optioneel)",
+      "message": "Aanvullend bericht (optioneel)",
+      "swissLawLabel": "Ik erken dat het Zwitserse recht van toepassing is op elke transactie via AEGRYN Auction Switzerland.",
+      "submit": "Mijn dossier indienen",
+      "submitting": "Verzenden…",
+      "successTitle": "Dossier ontvangen.",
+      "successDesc": "Ons team neemt binnen 48–72 werkuren contact met u op om het certificeringsproces te starten.",
+      "errorMsg": "Er is een fout opgetreden. Probeer het opnieuw of neem rechtstreeks contact met ons op."
     }
   }
 }
