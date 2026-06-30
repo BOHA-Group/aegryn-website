@@ -2369,5 +2369,18 @@
       "successDesc": "Il nostro team la ricontatterà entro 48–72 ore lavorative per avviare il processo di certificazione.",
       "errorMsg": "Si è verificato un errore. La preghiamo di riprovare o di contattarci direttamente."
     }
+  },
+  "auctionLot": {
+    "accessDeniedTitle": "Accesso limitato",
+    "accessDeniedDesc": "Questo dossier è accessibile solo agli acquirenti qualificati con un'autorizzazione admin valida e un accesso alla sessione attivo.",
+    "accessExpiredTitle": "Accesso scaduto",
+    "accessExpiredDesc": "Il suo periodo di accesso a questo dossier è scaduto. L'accesso è concesso per 30 giorni dall'apertura della sessione.",
+    "requestAccessCta": "Inviare un dossier acquirente",
+    "requestAccessDesc": "Invii un dossier acquirente per essere qualificato e ricevere l'accesso ai dossier di sessione.",
+    "backToCatalog": "Torna al catalogo",
+    "confidentialLabel": "Dossier riservato",
+    "teaserAccessLabel": "Accedere al dossier",
+    "ndaLabel": "NDA richiesto — Accesso controllato",
+    "lotRef": "Lotto"
   }
 }

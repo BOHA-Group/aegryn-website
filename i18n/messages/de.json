@@ -2369,5 +2369,18 @@
       "successDesc": "Unser Team meldet sich innerhalb von 48–72 Werktagen, um die Zertifizierungsphase einzuleiten.",
       "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt."
     }
+  },
+  "auctionLot": {
+    "accessDeniedTitle": "Zugang beschränkt",
+    "accessDeniedDesc": "Dieses Dossier ist nur qualifizierten Käufern mit einer gültigen Admin-Genehmigung und aktivem Session-Zugang zugänglich.",
+    "accessExpiredTitle": "Zugang abgelaufen",
+    "accessExpiredDesc": "Ihr Zugang zu diesem Dossier ist abgelaufen. Der Zugang wird für 30 Tage ab Sessionöffnung gewährt.",
+    "requestAccessCta": "Käufer-Dossier einreichen",
+    "requestAccessDesc": "Reichen Sie ein Käufer-Dossier ein, um qualifiziert zu werden und Zugang zu Session-Dossiers zu erhalten.",
+    "backToCatalog": "Zurück zum Katalog",
+    "confidentialLabel": "Vertrauliches Dossier",
+    "teaserAccessLabel": "Dossier aufrufen",
+    "ndaLabel": "NDA erforderlich — Kontrollierter Zugang",
+    "lotRef": "Los"
   }
 }

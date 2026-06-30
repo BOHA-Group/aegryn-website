@@ -2326,5 +2326,18 @@
       "successDesc": "Notre équipe revient vers vous sous 48–72h ouvrées pour lancer la phase de certification.",
       "errorMsg": "Une erreur est survenue. Merci de réessayer ou de nous contacter directement."
     }
+  },
+  "auctionLot": {
+    "accessDeniedTitle": "Accès restreint",
+    "accessDeniedDesc": "Ce dossier est accessible uniquement aux acquéreurs qualifiés disposant d'une autorisation admin valide et d'un accès session actif.",
+    "accessExpiredTitle": "Accès expiré",
+    "accessExpiredDesc": "Votre période d'accès à ce dossier est terminée. L'accès est accordé pour 30 jours à compter de l'ouverture de la session.",
+    "requestAccessCta": "Déposer un dossier acquéreur",
+    "requestAccessDesc": "Soumettez un dossier acquéreur pour être qualifié et recevoir un accès aux fiches en session.",
+    "backToCatalog": "Retour au catalogue",
+    "confidentialLabel": "Dossier confidentiel",
+    "teaserAccessLabel": "Accéder au dossier",
+    "ndaLabel": "NDA requis — Accès contrôlé",
+    "lotRef": "Lot"
   }
 }

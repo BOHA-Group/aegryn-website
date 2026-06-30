@@ -2369,5 +2369,18 @@
       "successDesc": "Ons team neemt binnen 48–72 werkuren contact met u op om het certificeringsproces te starten.",
       "errorMsg": "Er is een fout opgetreden. Probeer het opnieuw of neem rechtstreeks contact met ons op."
     }
+  },
+  "auctionLot": {
+    "accessDeniedTitle": "Toegang beperkt",
+    "accessDeniedDesc": "Dit dossier is alleen toegankelijk voor gekwalificeerde kopers met een geldige adminautorisatie en een actieve sessietoegang.",
+    "accessExpiredTitle": "Toegang verlopen",
+    "accessExpiredDesc": "Uw toegangsperiode tot dit dossier is verlopen. Toegang wordt verleend voor 30 dagen vanaf de sessieopening.",
+    "requestAccessCta": "Koperdossier indienen",
+    "requestAccessDesc": "Dien een koperdossier in om gekwalificeerd te worden en toegang te krijgen tot sessiedossiers.",
+    "backToCatalog": "Terug naar catalogus",
+    "confidentialLabel": "Vertrouwelijk dossier",
+    "teaserAccessLabel": "Dossier raadplegen",
+    "ndaLabel": "NDA vereist — Gecontroleerde toegang",
+    "lotRef": "Kavel"
   }
 }
