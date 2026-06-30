@@ -33,7 +33,12 @@ export default async function ClientLoginPage({
           </div>
         )}
         <LoginForm />
-        <p className="mt-8 text-center font-sans text-[11px] text-white/25">
+        <p className="mt-5 text-center">
+          <a href="/client/forgot-password" className="font-sans text-[12px] text-white/30 hover:text-ag-apex transition-colors">
+            Mot de passe oublié ?
+          </a>
+        </p>
+        <p className="mt-4 text-center font-sans text-[11px] text-white/25">
           Vous n&apos;avez pas de compte ? L&apos;accès est sur invitation uniquement.
           <br />
           Contactez <a href="mailto:contact@aegryn.com" className="text-ag-apex/60 hover:text-ag-apex transition-colors">contact@aegryn.com</a>

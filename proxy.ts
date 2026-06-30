@@ -90,8 +90,12 @@ export default function middleware(req: NextRequest) {
 
   /* ── 2. Protection /admin/* ────────────────────────────── */
   if (pathname.startsWith('/admin/')) {
-    /* /admin/login est public */
-    if (pathname === '/admin/login') return NextResponse.next()
+    /* Pages publiques admin (auth flows) */
+    if (
+      pathname === '/admin/login' ||
+      pathname === '/admin/forgot-password' ||
+      pathname === '/admin/reset-password'
+    ) return NextResponse.next()
 
     /* Toutes les autres routes admin requièrent une session */
     const { hasSession } = getSupabaseUser(req)

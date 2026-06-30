@@ -30,7 +30,13 @@ export default async function AdminLoginPage({
           <AdminLoginForm errorParam={error} />
         </div>
 
-        <p className="text-center text-[11px] text-gray-300 mt-6">
+        <p className="text-center mt-4">
+          <a href="/admin/forgot-password" className="text-[11px] text-gray-400 hover:text-gray-600 transition-colors">
+            Mot de passe oublié ?
+          </a>
+        </p>
+
+        <p className="text-center text-[11px] text-gray-300 mt-3">
           Seuls les comptes avec le rôle <code className="text-gray-400">admin</code> ont accès.
         </p>
       </div>
