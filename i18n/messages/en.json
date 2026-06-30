@@ -1105,6 +1105,143 @@
       ]
     }
   },
+  "gradingSystem": {
+    "meta": {
+      "title": "Grading System — AEGRYN Grade Protocol",
+      "desc": "The AEGRYN Grade protocol: CIFS framework, AEG ★ to AEG B grade definitions, sub-codes, analysis process and independence principles."
+    },
+    "label": "AEGRYN — Grading System",
+    "version": "Protocol v2.1 — 2026",
+    "title": "AEGRYN\nGrading System.",
+    "intro": "The AEGRYN Grade protocol is the reference certification standard for digital tech assets in Europe. Inspired by Swiss watchmaking grading standards and adapted to the realities of the SaaS M&A market, it produces a reproducible, traceable and independent rating.",
+    "downloadLabel": "Full documentation",
+    "downloadCta": "Download protocol PDF",
+    "cifsTitle": "The CIFS framework",
+    "cifsDesc": "Each asset is assessed across four independent dimensions, each scored from 0 to 25 points. The total score out of 100 determines the grade.",
+    "cifs": [
+      {
+        "code": "C",
+        "name": "Code",
+        "full": "Code Quality & Architecture",
+        "weight": "25 pts",
+        "desc": "Source code quality, test coverage, technical debt, documentation, implementation security and scalable architecture. Review by certified senior engineers.",
+        "criteria": ["Test coverage ≥ 70%", "Documented technical debt", "No critical vulnerabilities (OWASP Top 10)", "Decoupled and scalable architecture", "Complete API documentation"]
+      },
+      {
+        "code": "I",
+        "name": "IP",
+        "full": "Intellectual Property & Moat",
+        "weight": "25 pts",
+        "desc": "Intellectual property, barriers to entry, registered trademarks, patents, contractual exclusivities and sustainable differentiation in the target market.",
+        "criteria": ["Trademarks registered in target jurisdictions", "No active IP disputes", "Third-party dependencies under compatible licences", "Identifiable moat (network, data, regulation)", "Client contracts with non-compete clauses"]
+      },
+      {
+        "code": "F",
+        "name": "Finance",
+        "full": "Financial Health & Traction",
+        "weight": "25 pts",
+        "desc": "Key financial metrics: ARR, MRR, churn, LTV/CAC, burn rate, runway, margins and growth history. All data is audited against source documents.",
+        "criteria": ["ARR documented over minimum 24 months", "Monthly churn < 3%", "Gross margins > 60% (SaaS)", "Runway ≥ 12 months", "YoY ARR growth documented"]
+      },
+      {
+        "code": "S",
+        "name": "Security",
+        "full": "Security & Governance",
+        "weight": "25 pts",
+        "desc": "GDPR and Swiss LPD compliance, infrastructure security, access management, third-party security audits, vulnerability disclosure policy and data governance.",
+        "criteria": ["GDPR / LPD compliance documented", "MFA authentication on all admin access", "Data encrypted at rest and in transit", "Third-party security audit within last 18 months", "Documented incident management policy"]
+      }
+    ],
+    "gradesTitle": "AEGRYN Grades",
+    "gradesDesc": "Each grade corresponds to a precise score range and a distinct asset profile. AEG ★ and AEG AAA grades are awarded to fewer than 15% of submitted assets.",
+    "grades": [
+      {
+        "grade": "AEG ★",
+        "label": "Stellar",
+        "range": "90–100 / 100",
+        "color": "#5ADDA4",
+        "rarity": "< 5% of certified assets",
+        "profile": "Exceptional asset. Reference architecture, strong IP, top-decile financial metrics, perfect compliance. Eligible for institutional transactions.",
+        "typical": "B2B SaaS ARR > €2M, churn < 1%, test coverage > 90%, trademarks in 3+ jurisdictions.",
+        "subcodes": ["C1", "I1", "F1", "S1"]
+      },
+      {
+        "grade": "AEG AAA",
+        "label": "Premium",
+        "range": "75–89 / 100",
+        "color": "#C9A84C",
+        "rarity": "10–15% of certified assets",
+        "profile": "High-quality asset with solid fundamentals across all four dimensions. A few documented improvement areas but not blocking.",
+        "typical": "SaaS ARR > €500K, growth > 30% YoY, managed technical debt, full GDPR compliance.",
+        "subcodes": ["C1–C2", "I1–I2", "F1–F2", "S1–S2"]
+      },
+      {
+        "grade": "AEG AA",
+        "label": "Standard",
+        "range": "60–74 / 100",
+        "color": "#9BA8B0",
+        "rarity": "25–30% of certified assets",
+        "profile": "Good quality asset with identified strengths and clearly documented improvement areas. Eligible for standard auction sessions.",
+        "typical": "Growing SaaS, some gaps in tests or compliance, IP in consolidation.",
+        "subcodes": ["C2–C3", "I2–I3", "F2–F3", "S2–S3"]
+      },
+      {
+        "grade": "AEG A",
+        "label": "Developing",
+        "range": "45–59 / 100",
+        "color": "#4A90D9",
+        "rarity": "30–35% of certified assets",
+        "profile": "Developing asset with identifiable potential but structural weaknesses to address. Eligible for AEGRYN Review with remediation plan.",
+        "typical": "Product in early traction, significant technical debt, partially documented financial metrics.",
+        "subcodes": ["C3–C4", "I3–I4", "F3–F4", "S3–S4"]
+      },
+      {
+        "grade": "AEG B",
+        "label": "Early Stage",
+        "range": "30–44 / 100",
+        "color": "#D4820A",
+        "rarity": "15–20% of certified assets",
+        "profile": "Early stage asset with partial fundamentals. Certification accompanied by a detailed remediation report. Not eligible for auction without improvement.",
+        "typical": "MVP or pre-revenue product, undocumented architecture, compliance to build.",
+        "subcodes": ["C4", "I4", "F4", "S4"]
+      }
+    ],
+    "subcodesTitle": "Sub-code nomenclature",
+    "subcodesDesc": "Each dimension receives a sub-code from M01 to M04 (Maturity) and D01 to D04 (Depth) specifying the exact level within the dimension.",
+    "subcodeTable": [
+      { "code": "01", "label": "Reference", "desc": "Sector reference level — top 5%" },
+      { "code": "02", "label": "Solid", "desc": "Above median — fundamentals mastered" },
+      { "code": "03", "label": "In progress", "desc": "Below median — improvement areas identified" },
+      { "code": "04", "label": "Remediation", "desc": "Insufficient level — remediation plan required" }
+    ],
+    "exampleTitle": "Full code example",
+    "exampleDesc": "An asset graded AEG AAA with code C1-D01 | I2-M02 | F1-A01 | S2 reads as follows:",
+    "exampleItems": [
+      { "part": "C1-D01", "meaning": "Code: reference level, full depth of analysis" },
+      { "part": "I2-M02", "meaning": "IP: solid, confirmed legal maturity" },
+      { "part": "F1-A01", "meaning": "Finance: reference, full data audit" },
+      { "part": "S2", "meaning": "Security: solid, third-party audit validated" }
+    ],
+    "processTitle": "The analysis process",
+    "process": [
+      { "num": "01", "title": "Submission & pre-qualification", "desc": "Receipt of file, verification of document completeness (data room, financials, codebase access). Pre-qualification within 5 business days. An incomplete file is returned without rating." },
+      { "num": "02", "title": "Technical analysis (Code + Security)", "desc": "Code review by two AEGRYN-certified senior engineers. Automated security scan followed by manual review of critical components. Duration: 5–10 days." },
+      { "num": "03", "title": "Commercial analysis (IP + Finance)", "desc": "Financial metrics audit against source documents, IP verification with competent registries (INPI, IGE/IPI, EUIPO). Interview with the founder. Duration: 5–10 days." },
+      { "num": "04", "title": "Deliberation & co-signature", "desc": "Both analysts deliberate and produce a preliminary report. For AEG ★ and AEG AAA grades, a partner co-signatory (law or audit firm) validates the final report." },
+      { "num": "05", "title": "Issuance & blockchain anchoring", "desc": "The grade is issued, digitally signed and anchored on the KRYV protocol — immutably sealed. The certificate is sent to the holder and published in the AEGRYN register." }
+    ],
+    "principlesTitle": "Independence principles",
+    "principles": [
+      { "title": "Strict separation", "desc": "AEGRYN analysts have no financial interest in the assets they certify. Any relationship with the holder or acquirer triggers automatic recusal." },
+      { "title": "Reproducibility", "desc": "Two independent analysts applying protocol v2.1 must reach the same grade to within ±1 sub-code. A greater discrepancy triggers an arbitration procedure." },
+      { "title": "Traceability", "desc": "Each grade is versioned. Any revision generates a new version with full history traceability. The original grade remains viewable." },
+      { "title": "Appeal", "desc": "The holder may contest a grade within 30 days. The appeal is heard by an independent panel of three analysts who did not participate in the original certification." }
+    ],
+    "ctaTitle": "Certify your asset",
+    "ctaDesc": "Ready to submit your asset to the AEGRYN Grade protocol?",
+    "ctaPrimary": "Start certification",
+    "ctaSecondary": "Read the full methodology"
+  },
   "auction": {
     "meta": {
       "title": "Auction — Certified tech asset transaction sessions",

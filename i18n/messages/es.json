@@ -762,6 +762,70 @@
       "btn": "Contactarnos"
     }
   },
+  "gradingSystem": {
+    "meta": {
+      "title": "Sistema de calificación — AEGRYN Grade Protocol",
+      "desc": "El protocolo AEGRYN Grade: marco CIFS, definiciones de grados AEG ★ a AEG B, sub-códigos, proceso de análisis y principios de independencia."
+    },
+    "label": "AEGRYN — Grading System",
+    "version": "Protocol v2.1 — 2026",
+    "title": "AEGRYN\nGrading System.",
+    "intro": "El protocolo AEGRYN Grade es la referencia de certificación para activos digitales tech en Europa. Inspirado en los estándares de calificación relojera suiza y adaptado al mercado SaaS M&A, produce una calificación reproducible, trazable e independiente.",
+    "downloadLabel": "Documentación completa",
+    "downloadCta": "Descargar el protocolo PDF",
+    "cifsTitle": "El marco CIFS",
+    "cifsDesc": "Cada activo se evalúa en cuatro dimensiones independientes, cada una puntuada de 0 a 25 puntos. La puntuación total sobre 100 determina el grado.",
+    "cifs": [
+      { "code": "C", "name": "Code", "full": "Code Quality & Architecture", "weight": "25 pts", "desc": "Calidad del código fuente, cobertura de pruebas, deuda técnica, documentación, seguridad de implementación y arquitectura escalable.", "criteria": ["Cobertura de pruebas ≥ 70%", "Deuda técnica documentada", "Sin vulnerabilidades críticas (OWASP Top 10)", "Arquitectura desacoplada y escalable", "Documentación API completa"] },
+      { "code": "I", "name": "IP", "full": "Intellectual Property & Moat", "weight": "25 pts", "desc": "Propiedad intelectual, barreras de entrada, marcas registradas, patentes y diferenciación sostenible.", "criteria": ["Marcas registradas en jurisdicciones objetivo", "Sin disputas IP activas", "Dependencias de terceros bajo licencias compatibles", "Foso identificable", "Contratos de clientes con cláusulas de no competencia"] },
+      { "code": "F", "name": "Finance", "full": "Financial Health & Traction", "weight": "25 pts", "desc": "Métricas financieras clave: ARR, MRR, churn, LTV/CAC, burn rate, runway y crecimiento. Todos los datos son auditados.", "criteria": ["ARR documentado durante mínimo 24 meses", "Churn mensual < 3%", "Márgenes brutos > 60% (SaaS)", "Runway ≥ 12 meses", "Crecimiento ARR YoY documentado"] },
+      { "code": "S", "name": "Security", "full": "Security & Governance", "weight": "25 pts", "desc": "Cumplimiento GDPR y LPD suizo, seguridad de infraestructura, gestión de accesos y gobernanza de datos.", "criteria": ["Cumplimiento GDPR / LPD documentado", "Autenticación MFA en todos los accesos admin", "Datos cifrados en reposo y en tránsito", "Auditoría de seguridad de terceros en los últimos 18 meses", "Política de gestión de incidentes documentada"] }
+    ],
+    "gradesTitle": "Grados AEGRYN",
+    "gradesDesc": "Cada grado corresponde a un rango de puntuación preciso y un perfil de activo definido. AEG ★ y AEG AAA se otorgan a menos del 15% de los activos enviados.",
+    "grades": [
+      { "grade": "AEG ★", "label": "Stellar", "range": "90–100 / 100", "color": "#5ADDA4", "rarity": "< 5% de los activos certificados", "profile": "Activo excepcional. Arquitectura de referencia, IP sólida, métricas financieras top decil. Apto para transacciones institucionales.", "typical": "SaaS B2B ARR > 2M€, churn < 1%, cobertura de pruebas > 90%.", "subcodes": ["C1", "I1", "F1", "S1"] },
+      { "grade": "AEG AAA", "label": "Premium", "range": "75–89 / 100", "color": "#C9A84C", "rarity": "10–15% de los activos certificados", "profile": "Activo de alta calidad con fundamentos sólidos en las cuatro dimensiones.", "typical": "SaaS ARR > 500K€, crecimiento > 30% YoY, cumplimiento GDPR completo.", "subcodes": ["C1–C2", "I1–I2", "F1–F2", "S1–S2"] },
+      { "grade": "AEG AA", "label": "Standard", "range": "60–74 / 100", "color": "#9BA8B0", "rarity": "25–30% de los activos certificados", "profile": "Activo de buena calidad con fortalezas identificadas y áreas de mejora documentadas.", "typical": "SaaS en crecimiento, algunas carencias en pruebas o cumplimiento.", "subcodes": ["C2–C3", "I2–I3", "F2–F3", "S2–S3"] },
+      { "grade": "AEG A", "label": "Developing", "range": "45–59 / 100", "color": "#4A90D9", "rarity": "30–35% de los activos certificados", "profile": "Activo en desarrollo con potencial identificable pero debilidades estructurales.", "typical": "Producto en early traction, deuda técnica significativa.", "subcodes": ["C3–C4", "I3–I4", "F3–F4", "S3–S4"] },
+      { "grade": "AEG B", "label": "Early Stage", "range": "30–44 / 100", "color": "#D4820A", "rarity": "15–20% de los activos certificados", "profile": "Activo early stage con fundamentos parciales. Certificación con informe de remediación detallado.", "typical": "MVP o producto pre-ingresos, arquitectura no documentada.", "subcodes": ["C4", "I4", "F4", "S4"] }
+    ],
+    "subcodesTitle": "Nomenclatura de sub-códigos",
+    "subcodesDesc": "Cada dimensión recibe un sub-código de M01 a M04 (Madurez) y D01 a D04 (Profundidad).",
+    "subcodeTable": [
+      { "code": "01", "label": "Referencia", "desc": "Nivel de referencia sectorial — top 5%" },
+      { "code": "02", "label": "Sólido", "desc": "Por encima de la mediana — fundamentos dominados" },
+      { "code": "03", "label": "En progreso", "desc": "Por debajo de la mediana — áreas de mejora identificadas" },
+      { "code": "04", "label": "Remediación", "desc": "Nivel insuficiente — plan de remediación requerido" }
+    ],
+    "exampleTitle": "Ejemplo de código completo",
+    "exampleDesc": "Un activo con grado AEG AAA y código C1-D01 | I2-M02 | F1-A01 | S2 se lee así:",
+    "exampleItems": [
+      { "part": "C1-D01", "meaning": "Código: nivel de referencia, profundidad de análisis completa" },
+      { "part": "I2-M02", "meaning": "IP: sólido, madurez legal confirmada" },
+      { "part": "F1-A01", "meaning": "Finance: referencia, auditoría completa de datos" },
+      { "part": "S2", "meaning": "Seguridad: sólida, auditoría de terceros validada" }
+    ],
+    "processTitle": "El proceso de análisis",
+    "process": [
+      { "num": "01", "title": "Envío y prequalificación", "desc": "Recepción del expediente, verificación de la completitud de los documentos. Prequalificación en 5 días hábiles." },
+      { "num": "02", "title": "Análisis técnico (Code + Security)", "desc": "Revisión del código por dos ingenieros senior certificados AEGRYN. Escaneo de seguridad automatizado y revisión manual. Duración: 5–10 días." },
+      { "num": "03", "title": "Análisis comercial (IP + Finance)", "desc": "Auditoría de métricas financieras, verificación IP en registros competentes. Entrevista con el fundador. Duración: 5–10 días." },
+      { "num": "04", "title": "Deliberación y co-firma", "desc": "Ambos analistas deliberan y producen un informe preliminar. Para AEG ★ y AEG AAA, un co-firmante socio valida el informe final." },
+      { "num": "05", "title": "Emisión y anclaje blockchain", "desc": "El grado se emite, se firma digitalmente y se ancla en el protocolo KRYV — sellado inmutablemente." }
+    ],
+    "principlesTitle": "Principios de independencia",
+    "principles": [
+      { "title": "Separación estricta", "desc": "Los analistas AEGRYN no tienen interés financiero en los activos que certifican. Cualquier relación con el titular activa la recusación automática." },
+      { "title": "Reproducibilidad", "desc": "Dos analistas independientes deben llegar al mismo grado (±1 sub-código). Una discrepancia mayor activa un procedimiento de arbitraje." },
+      { "title": "Trazabilidad", "desc": "Cada grado está versionado. Cualquier revisión genera una nueva versión con trazabilidad completa del historial." },
+      { "title": "Apelación", "desc": "El titular puede impugnar un grado en 30 días. La apelación es instruida por un panel independiente de tres analistas." }
+    ],
+    "ctaTitle": "Certifique su activo",
+    "ctaDesc": "¿Listo para enviar su activo al protocolo AEGRYN Grade?",
+    "ctaPrimary": "Iniciar la certificación",
+    "ctaSecondary": "Leer la metodología completa"
+  },
   "roadmapPage": {
     "meta": {
       "title": "Hoja de ruta — AEGRYN",
