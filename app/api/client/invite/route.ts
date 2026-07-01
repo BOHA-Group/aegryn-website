@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
     const { data: userData, error: inviteError } = await supa.auth.admin.inviteUserByEmail(
       body.email,
       {
-        redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'}/client/my-assets`,
+        redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'}/api/auth/callback?next=/client/set-password`,
         data: {
           full_name: body.fullName ?? '',
           company:   body.company  ?? '',

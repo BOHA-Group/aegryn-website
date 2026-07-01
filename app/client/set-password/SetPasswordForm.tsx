@@ -1,56 +1,18 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { useRouter }           from 'next/navigation'
-import { supabase }            from '@/lib/supabase'
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { supabase }  from '@/lib/supabase'
 import { Eye, EyeOff, CheckCircle2 } from 'lucide-react'
 
-export default function ResetPasswordForm() {
-  const router   = useRouter()
+export default function SetPasswordForm() {
+  const router  = useRouter()
   const [password,  setPassword]  = useState('')
   const [confirm,   setConfirm]   = useState('')
   const [show,      setShow]      = useState(false)
   const [loading,   setLoading]   = useState(false)
   const [error,     setError]     = useState('')
   const [done,      setDone]      = useState(false)
-  const [ready,     setReady]     = useState(false)
-  const [linkError, setLinkError] = useState(false)
-
-  /*
-   * Le lien de réinitialisation Supabase peut arriver sous deux formes :
-   *  1. PKCE (flow par défaut du projet) : ?code=... en query param
-   *     -> nécessite un échange explicite via exchangeCodeForSession()
-   *     (même mécanisme que /api/auth/callback pour les liens magiques).
-   *  2. Implicite (fallback) : #access_token=... en hash fragment
-   *     -> détecté automatiquement par le SDK, qui émet PASSWORD_RECOVERY.
-   * Sans le cas 1, le lien reçu par email restait bloqué indéfiniment sur
-   * "Vérification du lien…" — c'était le bug de réinitialisation signalé.
-   */
-  useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
-      if (event === 'PASSWORD_RECOVERY') {
-        setReady(true)
-      }
-    })
-
-    const params = new URLSearchParams(window.location.search)
-    const code    = params.get('code')
-    const errParam = params.get('error') ?? params.get('error_code')
-
-    if (errParam) {
-      setLinkError(true)
-    } else if (code) {
-      supabase.auth.exchangeCodeForSession(code).then(({ error: exchangeErr }) => {
-        if (exchangeErr) {
-          setLinkError(true)
-        } else {
-          setReady(true)
-        }
-      })
-    }
-
-    return () => subscription.unsubscribe()
-  }, [])
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -72,12 +34,12 @@ export default function ResetPasswordForm() {
     setLoading(false)
 
     if (err) {
-      setError('Lien expiré ou invalide. Recommencez depuis la page de connexion.')
+      setError('Session expirée. Demandez un nouvel email d\'invitation.')
       return
     }
 
     setDone(true)
-    setTimeout(() => router.push('/client/login'), 3000)
+    setTimeout(() => router.push('/client/my-assets'), 3000)
   }
 
   if (done) {
@@ -85,36 +47,11 @@ export default function ResetPasswordForm() {
       <div className="bg-white/5 border border-white/10 p-8 text-center">
         <CheckCircle2 size={32} className="text-ag-apex mx-auto mb-4" />
         <h2 className="font-sans font-semibold text-white text-[17px] mb-2">
-          Mot de passe mis à jour
+          Compte activé
         </h2>
         <p className="font-sans text-[13px] text-white/50">
-          Redirection vers la connexion dans 3 secondes…
+          Redirection vers votre espace dans 3 secondes…
         </p>
-      </div>
-    )
-  }
-
-  if (linkError) {
-    return (
-      <div className="bg-red-900/20 border border-red-800/30 p-8 text-center flex flex-col items-center gap-4">
-        <p className="font-sans font-semibold text-white text-[16px]">Lien expiré ou invalide</p>
-        <p className="font-sans text-[13px] text-white/50 leading-relaxed">
-          Les liens de réinitialisation sont valables 1 heure et à usage unique. Demandez-en un nouveau.
-        </p>
-        <a
-          href="/client/forgot-password"
-          className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors mt-2"
-        >
-          Demander un nouveau lien
-        </a>
-      </div>
-    )
-  }
-
-  if (!ready) {
-    return (
-      <div className="text-center py-12">
-        <p className="font-sans text-[13px] text-white/40">Vérification du lien…</p>
       </div>
     )
   }
@@ -129,7 +66,7 @@ export default function ResetPasswordForm() {
 
       <div>
         <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 mb-2">
-          Nouveau mot de passe
+          Choisir un mot de passe
         </label>
         <div className="relative">
           <input
@@ -166,7 +103,6 @@ export default function ResetPasswordForm() {
         />
       </div>
 
-      {/* Indicateur de force */}
       {password.length > 0 && (
         <div className="flex gap-1">
           {[1,2,3,4].map(i => (
@@ -187,7 +123,7 @@ export default function ResetPasswordForm() {
         disabled={loading}
         className="w-full bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 font-semibold hover:bg-ag-apex/90 transition-colors disabled:opacity-50"
       >
-        {loading ? 'Mise à jour...' : 'Enregistrer le nouveau mot de passe'}
+        {loading ? 'Activation...' : 'Activer mon compte'}
       </button>
     </form>
   )
