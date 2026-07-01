@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter, useSearchParams, usePathname } from 'next/navigation'
-import { useCallback } from 'react'
+import { useCallback, useState } from 'react'
 
 const SOURCES = [
   { key: 'valuation',  label: 'Valuation'    },
@@ -67,12 +67,49 @@ function ValuationTable({ rows }: { rows: Record<string, unknown>[] }) {
   )
 }
 
-function CatalogTable({ rows }: { rows: Record<string, unknown>[] }) {
+function InviteButton({ id, email, adminToken }: { id: string; email: string; adminToken?: string }) {
+  const router = useRouter()
+  const [state, setState] = useState<'idle' | 'loading' | 'done' | 'error'>('idle')
+
+  async function onInvite() {
+    if (!confirm(`Créer un compte acquéreur pour ${email} et envoyer l'invitation par email ?`)) return
+    setState('loading')
+    try {
+      const res = await fetch('/api/client/invite', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, role: 'buyer', waitlistId: id, token: adminToken ?? '' }),
+      })
+      if (res.ok) {
+        setState('done')
+        router.refresh()
+      } else {
+        setState('error')
+      }
+    } catch {
+      setState('error')
+    }
+  }
+
+  if (state === 'done') return <span className="text-[10px] font-semibold text-emerald-600">Invité ✓</span>
+
+  return (
+    <button
+      onClick={onInvite}
+      disabled={state === 'loading'}
+      className="px-3 py-1 text-[10px] font-semibold uppercase tracking-wide border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-colors disabled:opacity-50 whitespace-nowrap"
+    >
+      {state === 'loading' ? '...' : state === 'error' ? 'Réessayer' : 'Inviter'}
+    </button>
+  )
+}
+
+function CatalogTable({ rows, adminToken }: { rows: Record<string, unknown>[]; adminToken?: string }) {
   if (!rows.length) return <EmptyState />
   return (
     <table className="w-full text-[12px] bg-white border border-gray-200">
       <thead className="bg-gray-50 border-b border-gray-200">
-        <tr>{['Date','Email','Type','Capacité','Secteurs','Statut'].map(h => <Th key={h}>{h}</Th>)}</tr>
+        <tr>{['Date','Email','Type','Capacité','Secteurs','Statut','Action'].map(h => <Th key={h}>{h}</Th>)}</tr>
       </thead>
       <tbody className="divide-y divide-gray-100">
         {rows.map((r, i) => (
@@ -83,6 +120,11 @@ function CatalogTable({ rows }: { rows: Record<string, unknown>[] }) {
             <Td>{String(r.capacity_range ?? '—')}</Td>
             <Td small>{Array.isArray(r.sectors_interest) ? r.sectors_interest.join(', ') : '—'}</Td>
             <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
+            <Td>
+              {r.status === 'converted'
+                ? <span className="text-[10px] font-semibold text-emerald-600">Invité ✓</span>
+                : <InviteButton id={String(r.id)} email={String(r.email)} adminToken={adminToken} />}
+            </Td>
           </tr>
         ))}
       </tbody>
@@ -227,7 +269,7 @@ export default function AdminLeadsClient({
       {/* Table */}
       <div className="overflow-x-auto">
         {source === 'valuation'  && <ValuationTable  rows={rows} />}
-        {source === 'catalog'    && <CatalogTable    rows={rows} />}
+        {source === 'catalog'    && <CatalogTable    rows={rows} adminToken={adminToken} />}
         {source === 'assessment' && <AssessmentTable rows={rows} />}
         {source === 'alliances'  && <AlliancesTable  rows={rows} />}
       </div>

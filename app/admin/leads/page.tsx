@@ -50,6 +50,7 @@ export default async function AdminLeadsPage({
       const { data, error } = await supa
         .from('catalog_waitlist')
         .select('id, email, acquirer_type, capacity_range, sectors_interest, status, locale, created_at')
+        // id est requis par AdminLeadsClient pour l'action "Inviter" (création de compte acquéreur)
         .order('created_at', { ascending: false }).limit(200)
       if (error) fetchError = error.message
       rows = (data ?? []) as Record<string, unknown>[]

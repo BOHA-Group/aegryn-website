@@ -105,7 +105,7 @@ export default function AuctionSessionPage() {
                   {t('sessionCardCtaCatalog')}
                 </Link>
                 <Link
-                  href="/contact"
+                  href={{ pathname: '/auction/catalog', hash: 'notify' }}
                   className="inline-flex items-center gap-2 border border-ag-apex/40 text-ag-apex font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:border-ag-apex hover:bg-ag-apex/10 transition-colors"
                 >
                   <Bell size={11} /> {t('sessionCardCtaNotify')}
