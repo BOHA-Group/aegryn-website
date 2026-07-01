@@ -1,16 +1,18 @@
 'use client'
 
-import Link             from 'next/link'
+import { Link }          from '@/i18n/navigation'
+import NextLink          from 'next/link'
 import { useTranslations } from 'next-intl'
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, type ComponentProps } from 'react'
 import { Menu, X, ChevronDown, User } from 'lucide-react'
 import LanguageSwitcher  from '@/components/layout/LanguageSwitcher'
 import { AegrynLogo }   from '@/components/brand/AegrynLogo'
 import { gsap }          from '@/lib/gsap'
 
 type DropdownKey = 'auction' | 'grade' | 'services' | null
+type LinkHref = ComponentProps<typeof Link>['href']
 
-const AUCTION_LINKS = [
+const AUCTION_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'auctionCatalog',     href: '/auction/catalog' },
   { labelKey: 'auctionSell',        href: '/auction/how-to-sell' },
   { labelKey: 'auctionBuy',         href: '/auction/how-to-buy' },
@@ -19,20 +21,20 @@ const AUCTION_LINKS = [
   { labelKey: 'auctionResults',     href: '/auction/results' },
 ]
 
-const GRADE_LINKS = [
+const GRADE_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'gradeSystem',     href: '/grade' },
   { labelKey: 'gradeMethod',     href: '/grade/methodology' },
   { labelKey: 'gradePartners',   href: '/grade/partners' },
   { labelKey: 'gradeSubmit',     href: '/grade/submit' },
 ]
 
-const SERVICES_LINKS = [
+const SERVICES_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'servicesAdvisory',   href: '/advisory' },
   { labelKey: 'servicesAlliances',  href: '/alliances' },
   { labelKey: 'servicesAcquisition',href: '/services/acquisition-support' },
 ]
 
-function DropdownMenu({ links, t }: { links: { labelKey: string; href: string }[]; t: ReturnType<typeof useTranslations> }) {
+function DropdownMenu({ links, t }: { links: { labelKey: string; href: LinkHref }[]; t: ReturnType<typeof useTranslations> }) {
   return (
     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 bg-ag-white border border-ag-border shadow-lg z-50">
       {links.map(({ labelKey, href }) => (
@@ -262,13 +264,13 @@ export default function Nav() {
         {/* Right side: locale + client + CTA */}
         <div ref={rightRef} className="hidden lg:flex items-center gap-5">
           <LanguageSwitcher />
-          <Link
+          <NextLink
             href="/client/login"
             className="flex items-center gap-1.5 font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors duration-200"
           >
             <User size={13} />
             {t('clientSpace')}
-          </Link>
+          </NextLink>
           <Link
             href="/contact"
             className="font-mono text-[11px] tracking-[0.14em] uppercase bg-ag-navy text-white px-4 py-2 hover:bg-ag-navy-mid transition-colors duration-200"
@@ -406,14 +408,14 @@ export default function Nav() {
 
             {/* Bottom CTAs */}
             <div className="mt-8 flex flex-col gap-3">
-              <Link
+              <NextLink
                 href="/client/login"
                 onClick={closeMobile}
                 className="flex items-center justify-center gap-2 border border-white/20 px-4 py-3 font-mono text-[11px] tracking-[0.14em] uppercase text-white/70 hover:border-white/50 hover:text-white transition-all"
               >
                 <User size={13} />
                 {t('clientSpace')}
-              </Link>
+              </NextLink>
               <Link
                 href="/contact"
                 onClick={closeMobile}

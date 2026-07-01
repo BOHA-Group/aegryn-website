@@ -1,8 +1,8 @@
 'use client'
 
-import Link            from 'next/link'
+import { Link }        from '@/i18n/navigation'
 import Image           from 'next/image'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, type ComponentProps } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
 
@@ -60,7 +60,9 @@ const socialLinks = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/106273747/' },
 ]
 
-const legal = [
+type LinkHref = ComponentProps<typeof Link>['href']
+
+const legal: { key: string; href: LinkHref; ns: string }[] = [
   { key: 'termsUse',  href: '/terms/use',  ns: 'legalNav' },
   { key: 'termsCgv',  href: '/terms/cgv',  ns: 'legalNav' },
   { key: 'privacy',   href: '/privacy',    ns: 'legalNav' },
@@ -68,15 +70,15 @@ const legal = [
   { key: 'faq',       href: '/help/faq',   ns: 'legalNav' },
 ]
 
-const footerNavLinks = [
-  { navKey: 'about'      as const, href: '/about' },
-  { navKey: 'auction'    as const, href: '/auction' },
-  { navKey: 'grade'      as const, href: '/grade' },
-  { navKey: 'advisory'   as const, href: '/advisory' },
-  { navKey: 'whatWeBuild'as const, href: '/what-we-build' },
-  { navKey: 'growWithUs' as const, href: '/alliances' },
-  { navKey: 'career'     as const, href: '/career' },
-  { navKey: 'contact'    as const, href: '/contact' },
+const footerNavLinks: { navKey: 'about' | 'auction' | 'grade' | 'advisory' | 'whatWeBuild' | 'growWithUs' | 'career' | 'contact'; href: LinkHref }[] = [
+  { navKey: 'about',       href: '/about' },
+  { navKey: 'auction',     href: '/auction' },
+  { navKey: 'grade',       href: '/grade' },
+  { navKey: 'advisory',    href: '/advisory' },
+  { navKey: 'whatWeBuild', href: '/what-we-build' },
+  { navKey: 'growWithUs',  href: '/alliances' },
+  { navKey: 'career',      href: '/career' },
+  { navKey: 'contact',     href: '/contact' },
 ]
 
 export default function Footer() {
@@ -121,7 +123,7 @@ export default function Footer() {
             </p>
             <ul className="space-y-2.5">
               {footerNavLinks.map(({ navKey, href }) => (
-                <li key={href}>
+                <li key={navKey}>
                   <Link href={href} className="text-sm text-white/75 hover:text-white transition-colors">
                     {tNav(navKey)}
                   </Link>
