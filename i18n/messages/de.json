@@ -1702,6 +1702,18 @@
         "desc": "VC/PE-Fonds, M&A-Boutiquen, Tech-Acceleratoren. Vermitteln Sie zu veräußernde Assets oder aktive Käufer. Partnerschaftsbedingungen werden beim Qualifikationsgespräch festgelegt.",
         "profiles": "Micro-PE-Fonds · M&A-Boutiquen · Tech-Acceleratoren · FONGIT",
         "cta": "Ein Asset oder einen Käufer vermitteln"
+      },
+      "sequestre": {
+        "label": "TREUHAND & RECHT",
+        "profiles": "Depotbanken · Transaktionsrechtliche Kanzleien"
+      },
+      "technique": {
+        "label": "TECHNISCHE EXPERTISE",
+        "profiles": "Senior Freelance-CTOs · PASSI/CREST-Sicherheitsauditoren · Web3-Spezialisten"
+      },
+      "assurance": {
+        "label": "VERSICHERUNG & COMPLIANCE",
+        "profiles": "W&I-Versicherer · Auf Transaktionen spezialisierte Steuerberater"
       }
     },
     "form": {
@@ -1730,7 +1742,10 @@
       "certification": "Zertifizierung",
       "distribution": "Distribution",
       "dealflow": "Deal Flow",
-      "apply": "Bewerbung"
+      "apply": "Bewerbung",
+      "sequestre": "Treuhand",
+      "technique": "Technisch",
+      "assurance": "Versicherung"
     }
   },
   "gradeSubmit": {

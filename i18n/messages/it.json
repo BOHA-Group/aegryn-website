@@ -1702,6 +1702,18 @@
         "desc": "Fondi VC/PE, boutique M&A, acceleratori tech. Riferite asset da cedere o acquirenti attivi. Condizioni di partnership definite durante il colloquio di qualifica.",
         "profiles": "Fondi micro-PE · Boutique M&A · Acceleratori tech · FONGIT",
         "cta": "Riferire un asset o un acquirente"
+      },
+      "sequestre": {
+        "label": "DEPOSITO E LEGALE",
+        "profiles": "Banche depositarie · Studi legali transazionali"
+      },
+      "technique": {
+        "label": "COMPETENZA TECNICA",
+        "profiles": "CTO freelance senior · Auditor di sicurezza PASSI/CREST · Specialisti Web3"
+      },
+      "assurance": {
+        "label": "ASSICURAZIONE E COMPLIANCE",
+        "profiles": "Assicuratori W&I · Consulenti fiscali specializzati in transazioni"
       }
     },
     "form": {
@@ -1730,7 +1742,10 @@
       "certification": "Certificazione",
       "distribution": "Distribuzione",
       "dealflow": "Deal Flow",
-      "apply": "Candidatura"
+      "apply": "Candidatura",
+      "sequestre": "Deposito",
+      "technique": "Tecnico",
+      "assurance": "Assicurazione"
     }
   },
   "gradeSubmit": {

@@ -1662,6 +1662,18 @@
         "desc": "VC/PE funds, M&A boutiques, tech accelerators. Source assets for sale or active acquirers. Partnership terms defined during the qualification interview.",
         "profiles": "Micro-PE funds · Boutique M&A firms · Tech accelerators · FONGIT",
         "cta": "Source an asset or acquirer"
+      },
+      "sequestre": {
+        "label": "ESCROW & LEGAL",
+        "profiles": "Depositary banks · Transactional law firms"
+      },
+      "technique": {
+        "label": "TECHNICAL EXPERTISE",
+        "profiles": "Senior freelance CTOs · PASSI/CREST security auditors · Web3 specialists"
+      },
+      "assurance": {
+        "label": "INSURANCE & COMPLIANCE",
+        "profiles": "W&I insurers · Transaction-specialized tax advisors"
       }
     },
     "form": {
@@ -1690,7 +1702,10 @@
       "certification": "Certification",
       "distribution": "Distribution",
       "dealflow": "Deal Flow",
-      "apply": "Apply"
+      "apply": "Apply",
+      "sequestre": "Escrow",
+      "technique": "Technical",
+      "assurance": "Insurance"
     }
   },
   "gradeSubmit": {
@@ -2516,7 +2531,12 @@
     "s2": "Check that: the sender email is exactly @aegryn.com (not @aegryn.net, @aegryn-group.com or any variant), links in emails point to aegryn.com, and payment requests match what is specified in your signed mandate or contract.",
     "s2Doubt": "If in doubt, contact us directly at keepsecure@aegryn.com — do not reply to the suspicious email.",
     "s3Title": "Securing your AEGRYN account",
-    "s3Items": ["Use a strong, unique password for your AEGRYN account", "Enable two-factor authentication (2FA) when available", "Never share your login credentials", "Sign out after each session"],
+    "s3Items": [
+      "Use a strong, unique password for your AEGRYN account",
+      "Enable two-factor authentication (2FA) when available",
+      "Never share your login credentials",
+      "Sign out after each session"
+    ],
     "s4Title": "Payment processes — normal vs fraudulent",
     "s4NormalTitle": "Normal",
     "s4Normal1": "Payment of AEGRYN Review (€2,000) or Review+ (€5,000) fees via Stripe Checkout on aegryn.com",
@@ -2545,115 +2565,160 @@
     "items": [
       {
         "id": "what-grade",
-        "cat": ["certification"],
+        "cat": [
+          "certification"
+        ],
         "q": "What is the AEGRYN Grade?",
         "a": "The AEGRYN Grade is an official multi-dimensional certification evaluating 4 dimensions: Code (C), IP & Rights (I), Finance (F), Security (S). Each dimension is scored out of 25. The total score (out of 100) determines the official Grade: ★ Exceptional (≥90), AAA Excellent (≥75), AA Very Good (≥60), A Good (≥45), B Correct (≥30)."
       },
       {
         "id": "grade-vs-estimate",
-        "cat": ["certification"],
+        "cat": [
+          "certification"
+        ],
         "q": "What is the difference between an official Grade and an estimated grade?",
         "a": "An official Grade is assigned after a real audit by AEGRYN analysts, co-signed by independent external partners (law firm, accountant, cybersecurity partner) who engage their professional liability. It can be published in the catalogue. An estimated grade (from /valuation or AEGRYN Review) is an indicative opinion based on declared data, always suffixed \"(estimated)\" with no contractual value."
       },
       {
         "id": "cert-duration",
-        "cat": ["certification"],
+        "cat": [
+          "certification"
+        ],
         "q": "How long does the certification process take?",
         "a": "AEGRYN Review: 5 working days after confirmed payment. AEGRYN Review+: 10 working days. Full Auction Certification: 3 to 5 weeks depending on asset complexity."
       },
       {
         "id": "cert-cost",
-        "cat": ["certification"],
+        "cat": [
+          "certification"
+        ],
         "q": "How much does certification cost?",
         "a": "AEGRYN Review: €2,000 excl. VAT — deductible if full certification started within 6 months. AEGRYN Review+: €5,000 excl. VAT — same conditions. Auction Certification: free if transaction (AEGRYN earns commission on sale). Precise conditions in signed mandate."
       },
       {
         "id": "refusal-resubmit",
-        "cat": ["certification", "sellers"],
+        "cat": [
+          "certification",
+          "sellers"
+        ],
         "q": "My asset was declined. Can I resubmit?",
         "a": "Yes. Each refusal is accompanied by a detailed written report identifying areas for improvement. Our Advisory service can support you through remediation. A declined asset may be resubmitted at any time if documented improvements have been made."
       },
       {
         "id": "kryv",
-        "cat": ["certification", "transactions"],
+        "cat": [
+          "certification",
+          "transactions"
+        ],
         "q": "What is KRYV Protocol?",
         "a": "KRYV Protocol is our blockchain certification infrastructure component. It generates a cryptographic fingerprint of the codebase at the exact date of certification and/or transfer, recorded immutably. This allows any buyer to prove at any future date that the code received matches exactly the certified code."
       },
       {
         "id": "what-assets",
-        "cat": ["sellers"],
+        "cat": [
+          "sellers"
+        ],
         "q": "What types of assets can I submit?",
         "a": "AEGRYN certifies and transacts digital tech assets: B2B SaaS, mobile apps, marketplaces, AI protocols, digital intellectual property. Minimum ticket: €500,000 estimated valuation."
       },
       {
         "id": "seller-identity",
-        "cat": ["sellers"],
+        "cat": [
+          "sellers"
+        ],
         "q": "Will my identity be disclosed to buyers?",
         "a": "No. AEGRYN maintains the confidentiality of your identity throughout the process. It is only disclosed to the buyer after both parties' explicit agreement and AEGRYN's introduction decision."
       },
       {
         "id": "mandate-duration",
-        "cat": ["sellers"],
+        "cat": [
+          "sellers"
+        ],
         "q": "How long does the exclusive mandate last?",
         "a": "60 days, renewable by mutual agreement. After this period without a closed transaction, you regain full contractual freedom."
       },
       {
         "id": "become-buyer",
-        "cat": ["buyers"],
+        "cat": [
+          "buyers"
+        ],
         "q": "How do I become a member buyer?",
         "a": "Via the application form at /auction#membership. Your application is reviewed by AEGRYN within 10 working days. A 20–30 minute qualification interview is required. Financial capacity documents are necessary."
       },
       {
         "id": "min-ticket",
-        "cat": ["buyers"],
+        "cat": [
+          "buyers"
+        ],
         "q": "What is the minimum acquisition ticket?",
         "a": "€500,000."
       },
       {
         "id": "bid-models",
-        "cat": ["buyers", "transactions"],
+        "cat": [
+          "buyers",
+          "transactions"
+        ],
         "q": "What bid models are available?",
         "a": "AEGRYN offers 4 bid models: Club Deal (individual + up to 4 co-investors), Corporate (legal entity or JV), Fund (PE/VC/Family Office, IC timeline possible), Equity Stake (equity participation without full transfer). See /auction/bid-models for full details."
       },
       {
         "id": "escrow",
-        "cat": ["buyers", "transactions"],
+        "cat": [
+          "buyers",
+          "transactions"
+        ],
         "q": "How does the escrow work?",
         "a": "After a signed Heads of Agreement, the buyer deposits 10% of the agreed price with a third-party partner bank. AEGRYN never holds these funds. See /terms/cgv for withdrawal rules."
       },
       {
         "id": "kyc-docs",
-        "cat": ["buyers", "sellers"],
+        "cat": [
+          "buyers",
+          "sellers"
+        ],
         "q": "What KYC documents are required?",
         "a": "Individuals: valid ID + proof of address (<3 months) + proof of financial capacity. Entities (companies, funds): company registration equivalent (<3 months) + articles of association + representative's ID + UBO declaration (≥25%) + regulatory licence if applicable."
       },
       {
         "id": "data-room",
-        "cat": ["buyers", "transactions"],
+        "cat": [
+          "buyers",
+          "transactions"
+        ],
         "q": "What is the data room?",
         "a": "The data room is a secure space containing the asset's complete documents (grade report, audited financials, IP contracts, technical documentation). Accessible only to member buyers who have signed the asset-specific NDA. Every consultation is timestamped and logged."
       },
       {
         "id": "results-publication",
-        "cat": ["transactions"],
+        "cat": [
+          "transactions"
+        ],
         "q": "When and how are session results published?",
         "a": "Results are published on /auction/results within 30 days of each session closing, in anonymised form: grade, category, sector, valuation range (±20%), process duration. No identities are disclosed."
       },
       {
         "id": "sessions",
-        "cat": ["transactions", "buyers"],
+        "cat": [
+          "transactions",
+          "buyers"
+        ],
         "q": "What is an AEGRYN Session?",
         "a": "AEGRYN Sessions are private transaction events held twice a year in Switzerland. 6 to 10 Grade A or above certified assets are presented to a closed circle of qualified member buyers. Access is by invitation only."
       },
       {
         "id": "forgot-password",
-        "cat": ["account"],
+        "cat": [
+          "account"
+        ],
         "q": "I forgot my password.",
         "a": "Use the \"Forgot password\" link on /client/login. A reset email will be sent within 5 minutes."
       },
       {
         "id": "update-kyc",
-        "cat": ["account"],
+        "cat": [
+          "account"
+        ],
         "q": "How do I update my KYC information?",
         "a": "Via the \"My Profile\" section of your client space. Updated documents are submitted to AEGRYN for re-validation."
       }

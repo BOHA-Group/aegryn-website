@@ -1702,6 +1702,18 @@
         "desc": "VC/PE-fondsen, M&A-boutiques, tech-acceleratoren. Breng assets te koop of actieve kopers aan. Partnerschapsvoorwaarden vastgesteld tijdens het kwalificatiegesprek.",
         "profiles": "Micro-PE-fondsen · M&A-boutiques · Tech-acceleratoren · FONGIT",
         "cta": "Een asset of koper aanbrengen"
+      },
+      "sequestre": {
+        "label": "ESCROW EN JURIDISCH",
+        "profiles": "Bewaarbanken · Transactionele advocatenkantoren"
+      },
+      "technique": {
+        "label": "TECHNISCHE EXPERTISE",
+        "profiles": "Senior freelance CTO's · PASSI/CREST-beveiligingsauditors · Web3-specialisten"
+      },
+      "assurance": {
+        "label": "VERZEKERING EN COMPLIANCE",
+        "profiles": "W&I-verzekeraars · Op transacties gespecialiseerde belastingadviseurs"
       }
     },
     "form": {
@@ -1730,7 +1742,10 @@
       "certification": "Certificering",
       "distribution": "Distributie",
       "dealflow": "Deal Flow",
-      "apply": "Aanmelden"
+      "apply": "Aanmelden",
+      "sequestre": "Escrow",
+      "technique": "Technisch",
+      "assurance": "Verzekering"
     }
   },
   "gradeSubmit": {

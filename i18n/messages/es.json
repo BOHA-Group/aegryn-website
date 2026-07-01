@@ -1702,6 +1702,18 @@
         "desc": "Fondos VC/PE, boutiques M&A, aceleradoras tech. Referenciad activos a ceder o adquirentes activos. Condiciones de asociación definidas en la entrevista de cualificación.",
         "profiles": "Fondos micro-PE · Boutiques M&A · Aceleradoras tech · FONGIT",
         "cta": "Referenciar un activo o adquirente"
+      },
+      "sequestre": {
+        "label": "DEPÓSITO Y LEGAL",
+        "profiles": "Bancos depositarios · Despachos jurídicos transaccionales"
+      },
+      "technique": {
+        "label": "EXPERIENCIA TÉCNICA",
+        "profiles": "CTO freelance senior · Auditores de seguridad PASSI/CREST · Especialistas Web3"
+      },
+      "assurance": {
+        "label": "SEGURO Y CUMPLIMIENTO",
+        "profiles": "Aseguradoras W&I · Asesores fiscales especializados en transacciones"
       }
     },
     "form": {
@@ -1730,7 +1742,10 @@
       "certification": "Certificación",
       "distribution": "Distribución",
       "dealflow": "Deal Flow",
-      "apply": "Candidatura"
+      "apply": "Candidatura",
+      "sequestre": "Depósito",
+      "technique": "Técnico",
+      "assurance": "Seguro"
     }
   },
   "gradeSubmit": {
