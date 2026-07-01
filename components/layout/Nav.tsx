@@ -152,9 +152,11 @@ export default function Nav() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      /* Logo — toujours pleinement opaque, sans animation d'entrée ni filtre */
+      gsap.set(logoRef.current, { opacity: 1, x: 0, clearProps: 'opacity,transform,filter' })
+
       const tl = gsap.timeline({ defaults: { ease: 'expo.out', duration: 0.6 } })
-      tl.from(logoRef.current,  { opacity: 0, x: -12, delay: 0.1 })
-        .from('.nav-link-item', { opacity: 0, y: -8, stagger: 0.06 }, '-=0.4')
+      tl.from('.nav-link-item', { opacity: 0, y: -8, stagger: 0.06, delay: 0.1 })
         .from(rightRef.current,  { opacity: 0, x: 12 }, '-=0.4')
     }, navRef)
     return () => ctx.revert()
