@@ -551,7 +551,11 @@
         "auction": "Session Auction",
         "partnership": "Partenariat",
         "press": "Presse & Médias",
-        "other": "Autre"
+        "other": "Autre",
+        "general": "Demande générale",
+        "investor": "Investisseur",
+        "media": "Presse & Médias",
+        "career": "Carrière"
       },
       "message": "Message",
       "messagePlaceholder": "Décrivez votre demande...",

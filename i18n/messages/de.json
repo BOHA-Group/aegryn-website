@@ -552,7 +552,11 @@
         "auction": "Auktions-Session",
         "partnership": "Partnerschaft",
         "press": "Presse & Medien",
-        "other": "Sonstiges"
+        "other": "Sonstiges",
+        "general": "Allgemeine Anfrage",
+        "investor": "Investor",
+        "media": "Presse & Medien",
+        "career": "Karriere"
       },
       "message": "Nachricht",
       "messagePlaceholder": "Beschreiben Sie Ihr Anliegen...",

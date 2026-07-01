@@ -552,7 +552,11 @@
         "auction": "Sesión de subasta",
         "partnership": "Asociación",
         "press": "Prensa & Medios",
-        "other": "Otro"
+        "other": "Otro",
+        "general": "Consulta general",
+        "investor": "Inversor",
+        "media": "Prensa & Medios",
+        "career": "Carrera"
       },
       "message": "Mensaje",
       "messagePlaceholder": "Describe tu solicitud...",

@@ -552,7 +552,11 @@
         "auction": "Veilingsessie",
         "partnership": "Partnerschap",
         "press": "Pers & Media",
-        "other": "Anders"
+        "other": "Anders",
+        "general": "Algemene vraag",
+        "investor": "Investeerder",
+        "media": "Pers & Media",
+        "career": "Carrière"
       },
       "message": "Bericht",
       "messagePlaceholder": "Beschrijf uw vraag...",

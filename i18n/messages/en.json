@@ -551,7 +551,11 @@
         "auction": "Auction Session",
         "partnership": "Partnership",
         "press": "Press & Media",
-        "other": "Other"
+        "other": "Other",
+        "general": "General enquiry",
+        "investor": "Investor",
+        "media": "Press & Media",
+        "career": "Career"
       },
       "message": "Message",
       "messagePlaceholder": "Describe your request...",

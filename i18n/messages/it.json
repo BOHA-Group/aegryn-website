@@ -552,7 +552,11 @@
         "auction": "Sessione d'asta",
         "partnership": "Partnership",
         "press": "Stampa & Media",
-        "other": "Altro"
+        "other": "Altro",
+        "general": "Richiesta generale",
+        "investor": "Investitore",
+        "media": "Stampa & Media",
+        "career": "Carriera"
       },
       "message": "Messaggio",
       "messagePlaceholder": "Descrivi la tua richiesta...",
