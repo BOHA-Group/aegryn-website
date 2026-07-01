@@ -1,17 +1,13 @@
-import { getTranslations }        from 'next-intl/server'
-import type { Metadata }           from 'next'
-import { GradingSystemPage }       from '@/components/sections/grade/GradingSystemPage'
+import { redirect } from 'next/navigation'
 
 type Props = { params: Promise<{ locale: string }> }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+/**
+ * Route consolidée dans /grade/methodology (contenu fusionné : storytelling
+ * Antiquorum + cadre CIFS détaillé). Redirection permanente pour éviter le
+ * doublon de contenu et préserver le référencement des liens existants.
+ */
+export default async function GradingSystemRedirect({ params }: Props) {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'gradingSystem.meta' })
-  return { title: t('title'), description: t('desc') }
-}
-
-export default async function GradingSystem({ params }: Props) {
-  const { locale } = await params
-  await getTranslations({ locale, namespace: 'gradingSystem' })
-  return <GradingSystemPage />
+  redirect(`/${locale}/grade/methodology`)
 }

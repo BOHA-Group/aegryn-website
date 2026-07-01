@@ -770,7 +770,7 @@
     "label": "AEGRYN — Grading System",
     "version": "Protocol v2.1 — 2026",
     "title": "AEGRYN\nGrading System.",
-    "intro": "El protocolo AEGRYN Grade es la referencia de certificación para activos digitales tech en Europa. Inspirado en los estándares de calificación relojera suiza y adaptado al mercado SaaS M&A, produce una calificación reproducible, trazable e independiente.",
+    "intro": "Así como Antiquorum introdujo su sistema de clasificación en sus catálogos de subastas de relojes para ofrecer información inmediata y detallada sobre el estado de cada lote, AEGRYN introduce su propio sistema de certificación para activos tecnológicos, con total transparencia en las 4 dimensiones fundamentales del valor.",
     "downloadLabel": "Documentación completa",
     "downloadCta": "Descargar el protocolo PDF",
     "cifsTitle": "El marco CIFS",
@@ -1006,7 +1006,76 @@
     "ctaTitle": "Certifique su activo",
     "ctaDesc": "¿Listo para enviar su activo al protocolo AEGRYN Grade?",
     "ctaPrimary": "Iniciar la certificación",
-    "ctaSecondary": "Leer la metodología completa"
+    "ctaSecondary": "Descubre a nuestros socios cofirmantes",
+    "antiquorumTitle": "La analogía Antiquorum",
+    "antiquorumDesc": "Antiquorum tiene 3 dimensiones físicas (Caja, Esfera, Movimiento) + 1 opinión global. AEGRYN adapta este formato a los activos tecnológicos con 4 dimensiones + 1 opinión global — la Seguridad no tiene equivalente en relojería.",
+    "antiquorumTable": [
+      {
+        "source": "C = Case",
+        "sourceDim": "Carcasa física",
+        "target": "C = Código",
+        "targetDim": "Arquitectura y código"
+      },
+      {
+        "source": "D = Dial & Hands",
+        "sourceDim": "Interfaz visible",
+        "target": "I = PI y Derechos",
+        "targetDim": "Propiedad intelectual"
+      },
+      {
+        "source": "M = Movement",
+        "sourceDim": "Motor interno",
+        "target": "F = Finanzas",
+        "targetDim": "Motor económico"
+      },
+      {
+        "source": "—",
+        "sourceDim": "(sin equivalente en relojería)",
+        "target": "S = Seguridad",
+        "targetDim": "Cumplimiento y ciberseguridad"
+      },
+      {
+        "source": "★/AAA/AA/A/B",
+        "sourceDim": "Expert's Overall Opinion",
+        "target": "AEG ★/AAA/AA/A/B",
+        "targetDim": "AEGRYN Expert Grade"
+      }
+    ],
+    "disclaimerTitle": "Mención obligatoria",
+    "disclaimerText": "Aunque se ha hecho todo lo posible por ser objetivos, se informa a los clientes de que toda certificación implica un componente de juicio experto. La información contenida en un informe AEGRYN Grade se proporciona como certificación profesional, cofirmada por expertos independientes que asumen su responsabilidad. No constituye una garantía de valor de mercado.",
+    "refusalTitle": "Condiciones de rechazo automático",
+    "refusalDesc": "Ciertas configuraciones provocan un rechazo automático independientemente de la puntuación global — el algoritmo da una puntuación, el experto da la opinión final, pero un rechazo automático nunca puede ser revertido.",
+    "refusalConditions": [
+      "Secretos expuestos no resueltos (C-40) combinados con CVE críticas no resueltas (C-34) → Rechazo dimensión Código",
+      "Litigio de marca activo (I-18) o derechos no formalizados sobre código producido por terceros (I-21) → Rechazo dimensión PI",
+      "Vulnerabilidades críticas no resueltas (S-17) o incidente de seguridad en curso no resuelto (S-37) → Rechazo dimensión Seguridad",
+      "Datos financieros no verificables a pesar de la solicitud → Rechazo dimensión Finanzas",
+      "Negativa a cooperar durante la auditoría → Rechazo global de la certificación"
+    ],
+    "maturityTitle": "Elegibilidad al catálogo según madurez",
+    "maturityDesc": "Antiquorum aplica criterios diferentes según la antigüedad del reloj. AEGRYN adapta sus criterios según la madurez del activo.",
+    "maturityRules": [
+      {
+        "tier": "Pre-revenue / < 6 meses de tracción",
+        "rule": "Grado ★/AAA/AA imposible en F. Grado C solo posible si I=1 y C=1. AEG máximo: A."
+      },
+      {
+        "tier": "6–12 meses de ingresos",
+        "rule": "NRR no significativo (periodo demasiado corto). F basado en crecimiento y calidad de métricas unitarias (LTV:CAC, churn)."
+      },
+      {
+        "tier": "12–24 meses de ingresos",
+        "rule": "Evaluación estándar completa. Todos los grados posibles."
+      },
+      {
+        "tier": "> 24 meses de ingresos",
+        "rule": "ARR auditado requerido para F-1 o F-2. Historial de retención NRR de al menos 4 trimestres."
+      },
+      {
+        "tier": "Pre-revenue con PI excepcional",
+        "rule": "Valoración solo sobre activos tangibles. Dimensión F con nota especial \"Pre-revenue\" sin puntuación numérica. AEG máximo: A."
+      }
+    ]
   },
   "roadmapPage": {
     "meta": {
@@ -1836,7 +1905,19 @@
       "evalDeductibleNote": "Este importe es íntegramente deducible del costo de certificación si inicia un proceso completo de Auction en los 6 meses siguientes a la recepción de su Review.",
       "partnerSelectLabel": "Socio a involucrar",
       "partnerLegal": "Bufete jurídico",
-      "partnerAccounting": "Contador público"
+      "partnerAccounting": "Contador público",
+      "analysisDataTitle": "Datos para el análisis (AEGRYN Grading System)",
+      "analysisDataDesc": "Esta información acelera nuestro análisis interno y la comparación de mercado de su activo. Opcional pero recomendado.",
+      "sector": "Sector",
+      "sectorPlaceholder": "ej: LegalTech, FinTech, RRHH y Nómina...",
+      "benchmarkCategory": "Categoría de mercado más cercana",
+      "benchmarkCategoryPlaceholder": "— Seleccionar —",
+      "revenueTrackMonths": "Antigüedad de los ingresos (meses)",
+      "teamSize": "Tamaño del equipo",
+      "foundedYear": "Año de fundación",
+      "arrGrowth": "Crecimiento ARR interanual (%)",
+      "grossMargin": "Margen bruto (%)",
+      "nrr": "Net Revenue Retention — NRR (%)"
     }
   },
   "bidModels": {

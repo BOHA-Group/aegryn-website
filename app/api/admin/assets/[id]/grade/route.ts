@@ -2,12 +2,28 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
 import { estimateGrade }            from '@/lib/valuationEngine'
+import {
+  checkAutoRefusal,
+  suggestAegFromScore,
+  deriveMaturityTier,
+  capAegByMaturity,
+  type AEGGrade,
+} from '@/lib/gradingSystem'
 
 const schema = z.object({
   score_code:     z.number().int().min(0).max(25),
   score_ip:       z.number().int().min(0).max(25),
   score_finance:  z.number().int().min(0).max(25),
   score_security: z.number().int().min(0).max(25),
+  subcodes_code:     z.array(z.string()).optional(),
+  subcodes_ip:       z.array(z.string()).optional(),
+  subcodes_finance:  z.array(z.string()).optional(),
+  subcodes_security: z.array(z.string()).optional(),
+  revenue_track_months: z.number().int().min(0).optional(),
+  gross_margin:      z.number().optional(),
+  nrr:               z.number().optional(),
+  benchmark_category: z.string().optional(),
+  aeg_grade_override: z.enum(['star', 'aaa', 'aa', 'a', 'b', 'refused']).optional(),
   cosigner_legal:        z.string().max(200).optional(),
   cosigner_legal_date:   z.string().optional(),
   cosigner_account:      z.string().max(200).optional(),
@@ -20,6 +36,10 @@ const schema = z.object({
   status:          z.enum(['submitted', 'under_review', 'graded', 'published', 'sold', 'withdrawn']).optional(),
   token:           z.string(),
 })
+
+const AEG_TO_SYMBOL: Record<AEGGrade, string> = {
+  star: '★', aaa: 'AAA', aa: 'AA', a: 'A', b: 'B', refused: 'NG',
+}
 
 export async function PATCH(
   req: NextRequest,
@@ -36,9 +56,22 @@ export async function PATCH(
       return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
     }
 
-    /* ── Calcul grade ── */
+    /* ── Refus automatique (indépendant du score) ── */
+    const subcodes = {
+      code:     body.subcodes_code     ?? [],
+      ip:       body.subcodes_ip       ?? [],
+      finance:  body.subcodes_finance  ?? [],
+      security: body.subcodes_security ?? [],
+    }
+    const { refused, reasons } = checkAutoRefusal(subcodes)
+
+    /* ── Calcul du score total + AEG suggéré, plafonné par la maturité ── */
     const total = body.score_code + body.score_ip + body.score_finance + body.score_security
     const { grade } = estimateGrade(total)
+    const maturityTier = deriveMaturityTier(body.revenue_track_months)
+    let aegGrade: AEGGrade = body.aeg_grade_override ?? suggestAegFromScore(total)
+    aegGrade = capAegByMaturity(aegGrade, maturityTier)
+    if (refused) aegGrade = 'refused'
 
     const supa = createServiceClient()
 
@@ -47,10 +80,20 @@ export async function PATCH(
       score_ip:       body.score_ip,
       score_finance:  body.score_finance,
       score_security: body.score_security,
-      official_grade: grade,
+      official_grade: refused ? 'NG' : grade,
+      aeg_grade:      aegGrade,
+      auto_refusal_reasons: reasons,
+      subcodes_code:     subcodes.code,
+      subcodes_ip:       subcodes.ip,
+      subcodes_finance:  subcodes.finance,
+      subcodes_security: subcodes.security,
       graded_at:      new Date().toISOString(),
     }
 
+    if (body.revenue_track_months != null) updatePayload.revenue_track_months = body.revenue_track_months
+    if (body.gross_margin != null)         updatePayload.gross_margin         = body.gross_margin
+    if (body.nrr != null)                  updatePayload.nrr                  = body.nrr
+    if (body.benchmark_category)           updatePayload.benchmark_category   = body.benchmark_category
     if (body.cosigner_legal)        updatePayload.cosigner_legal        = body.cosigner_legal
     if (body.cosigner_legal_date)   updatePayload.cosigner_legal_date   = body.cosigner_legal_date
     if (body.cosigner_account)      updatePayload.cosigner_account      = body.cosigner_account
@@ -73,7 +116,16 @@ export async function PATCH(
       return NextResponse.json({ error: error.message }, { status: 500 })
     }
 
-    return NextResponse.json({ ok: true, grade, total })
+    return NextResponse.json({
+      ok: true,
+      grade: refused ? 'NG' : grade,
+      aegGrade,
+      aegSymbol: AEG_TO_SYMBOL[aegGrade],
+      total,
+      refused,
+      refusalReasons: reasons,
+      maturityTier,
+    })
   } catch (err) {
     if (err instanceof z.ZodError) {
       return NextResponse.json({ error: 'validation', issues: err.issues }, { status: 400 })

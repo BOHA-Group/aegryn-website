@@ -30,6 +30,15 @@ const schema = z.object({
   timeline:        z.string().max(50).optional(),
   message:         z.string().max(2000).optional(),
   locale:          z.string().optional(),
+  /* ── Données entrantes requises pour l'analyse interne (grading system v1.0) ── */
+  sector:               z.string().max(100).optional(),
+  arrGrowth:            z.coerce.number().optional(),
+  teamSize:             z.coerce.number().int().nonnegative().optional(),
+  foundedYear:          z.coerce.number().int().optional(),
+  revenueTrackMonths:   z.coerce.number().int().nonnegative().optional(),
+  grossMargin:          z.coerce.number().optional(),
+  nrr:                  z.coerce.number().optional(),
+  benchmarkCategory:    z.string().max(50).optional(),
 })
 
 export async function POST(req: NextRequest) {
@@ -47,6 +56,14 @@ export async function POST(req: NextRequest) {
         website:      body.assetUrl || null,
         asset_type:   body.assetType,
         arr:          body.arr ?? null,
+        sector:               body.sector             ?? null,
+        arr_growth:           body.arrGrowth           ?? null,
+        team_size:            body.teamSize            ?? null,
+        founded_year:         body.foundedYear         ?? null,
+        revenue_track_months: body.revenueTrackMonths  ?? null,
+        gross_margin:         body.grossMargin         ?? null,
+        nrr:                  body.nrr                 ?? null,
+        benchmark_category:   body.benchmarkCategory   || null,
         description:  [
           body.techStack   ? `Stack: ${body.techStack}`   : '',
           body.status      ? `Statut: ${body.status}`     : '',
@@ -77,7 +94,7 @@ export async function POST(req: NextRequest) {
       sendEmail(
         internal,
         `[Grade Submit] Nouveau dossier — ${body.assetName} (${body.email})`,
-        `Nouveau dossier de certification\nVendeur : ${body.fullName}\nEmail : ${body.email}\nActif : ${body.assetName} (${body.assetType})\nSite : ${body.assetUrl || '—'}\nARR : ${body.arr ? `${body.arr}€` : '—'}\nIP : ${body.ipFiled ?? '—'}\nMotivation : ${body.motivation ?? '—'}\nTimeline : ${body.timeline ?? '—'}\nValorisation cible : ${body.targetValuation ? `${body.targetValuation}€` : '—'}\nStack : ${body.techStack ?? '—'}\nMessage : ${body.message ?? '—'}\nLocale : ${body.locale ?? '—'}\nID Supabase : ${asset?.id ?? '—'}`,
+        `Nouveau dossier de certification\nVendeur : ${body.fullName}\nEmail : ${body.email}\nActif : ${body.assetName} (${body.assetType})\nSite : ${body.assetUrl || '—'}\nARR : ${body.arr ? `${body.arr}€` : '—'}\nIP : ${body.ipFiled ?? '—'}\nMotivation : ${body.motivation ?? '—'}\nTimeline : ${body.timeline ?? '—'}\nValorisation cible : ${body.targetValuation ? `${body.targetValuation}€` : '—'}\nStack : ${body.techStack ?? '—'}\nMessage : ${body.message ?? '—'}\nLocale : ${body.locale ?? '—'}\nID Supabase : ${asset?.id ?? '—'}\n\n── Données pour analyse interne (AEGRYN Grading System v1.0) ──\nSecteur : ${body.sector ?? '\u26a0\ufe0f manquant'}\nCroissance ARR YoY : ${body.arrGrowth != null ? `${body.arrGrowth}%` : '\u26a0\ufe0f manquant'}\nÉquipe : ${body.teamSize != null ? `${body.teamSize} pers.` : '\u26a0\ufe0f manquant'}\nFondé en : ${body.foundedYear ?? '\u26a0\ufe0f manquant'}\nAncienneté revenus (mois) : ${body.revenueTrackMonths ?? '\u26a0\ufe0f manquant — requis pour règles de maturité (Partie 9)'}\nMarge brute : ${body.grossMargin != null ? `${body.grossMargin}%` : '\u26a0\ufe0f manquant — requis pour benchmark marché'}\nNRR : ${body.nrr != null ? `${body.nrr}%` : '\u26a0\ufe0f manquant — requis pour benchmark marché'}\nCatégorie benchmark : ${body.benchmarkCategory ?? '\u26a0\ufe0f à déterminer par l\'analyste avant grading'}\n\nRappel checklist avant attribution du grade (/admin/assets/${asset?.id ?? '[id]'}/grade) :\n- Sous-codes C/I/F/S à cocher par dimension\n- Vérifier les conditions de refus automatique (C-40+C-34, I-18, I-21, S-17, S-37)\n- Renseigner ancienneté des revenus pour appliquer le plafond de maturité\n- Sélectionner la catégorie de benchmark marché pour comparaison`,
       ),
     ])
 

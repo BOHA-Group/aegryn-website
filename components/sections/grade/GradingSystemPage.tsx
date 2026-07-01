@@ -56,6 +56,18 @@ type Principle = {
   desc: string
 }
 
+type AntiquorumRow = {
+  source: string
+  sourceDim: string
+  target: string
+  targetDim: string
+}
+
+type MaturityRuleItem = {
+  tier: string
+  rule: string
+}
+
 export function GradingSystemPage() {
   const t         = useTranslations('gradingSystem')
   const heroRef   = useRef<HTMLDivElement>(null)
@@ -69,6 +81,9 @@ export function GradingSystemPage() {
   const examples  = t.raw('exampleItems') as ExampleItem[]
   const process   = t.raw('process')  as ProcessStep[]
   const principles = t.raw('principles') as Principle[]
+  const antiquorumTable = t.raw('antiquorumTable') as AntiquorumRow[]
+  const refusalConditions = t.raw('refusalConditions') as string[]
+  const maturityRules = t.raw('maturityRules') as MaturityRuleItem[]
 
   useEffect(() => {
     const ctxHero = gsap.context(() => {
@@ -163,6 +178,39 @@ export function GradingSystemPage() {
                 >
                   {g.grade}
                 </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ANALOGIE ANTIQUORUM ── */}
+      <section className="py-28 px-6 border-t border-ag-border bg-ag-off-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-14 max-w-2xl">
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
+              {t('antiquorumTitle')}
+            </p>
+            <p className="font-sans text-[16px] text-ag-gray leading-relaxed">
+              {t('antiquorumDesc')}
+            </p>
+          </div>
+          <div className="border border-ag-border overflow-x-auto">
+            <div className="grid grid-cols-[1fr_1fr_40px_1fr_1fr] min-w-[760px] border-b border-ag-border bg-ag-light-gray">
+              <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light px-5 py-3 col-span-2">Antiquorum</p>
+              <span />
+              <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex px-5 py-3 col-span-2">AEGRYN</p>
+            </div>
+            {antiquorumTable.map((row, i) => (
+              <div
+                key={i}
+                className="grid grid-cols-[1fr_1fr_40px_1fr_1fr] min-w-[760px] border-b border-ag-border last:border-0 bg-ag-white hover:bg-ag-off-white transition-colors"
+              >
+                <p className="font-mono text-[13px] font-bold text-ag-black px-5 py-4">{row.source}</p>
+                <p className="font-sans text-[12px] text-ag-gray px-4 py-4">{row.sourceDim}</p>
+                <div className="flex items-center justify-center text-ag-gray-light">→</div>
+                <p className="font-mono text-[13px] font-bold text-ag-apex px-5 py-4">{row.target}</p>
+                <p className="font-sans text-[12px] text-ag-gray px-4 py-4">{row.targetDim}</p>
               </div>
             ))}
           </div>
@@ -492,6 +540,62 @@ export function GradingSystemPage() {
         </div>
       </section>
 
+      {/* ── REFUS AUTOMATIQUE ── */}
+      <section className="py-28 px-6 border-t border-ag-border bg-ag-off-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-16 items-start">
+          <div>
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
+              {t('refusalTitle')}
+            </p>
+            <p className="font-sans text-[15px] text-ag-gray leading-relaxed">
+              {t('refusalDesc')}
+            </p>
+          </div>
+          <div className="flex flex-col gap-0 border border-ag-border">
+            {refusalConditions.map((cond, i) => (
+              <div key={i} className="flex items-start gap-4 px-6 py-5 bg-ag-white border-b border-ag-border last:border-0">
+                <span className="font-mono text-[11px] font-bold text-red-600 shrink-0 mt-0.5">✕</span>
+                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{cond}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ÉLIGIBILITÉ PAR MATURITÉ ── */}
+      <section className="py-28 px-6 border-t border-ag-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-14 max-w-2xl">
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
+              {t('maturityTitle')}
+            </p>
+            <p className="font-sans text-[16px] text-ag-gray leading-relaxed">
+              {t('maturityDesc')}
+            </p>
+          </div>
+          <div className="flex flex-col gap-px bg-ag-border border border-ag-border">
+            {maturityRules.map((m, i) => (
+              <div key={i} className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-4 md:gap-8 bg-ag-white p-8">
+                <p className="font-sans font-semibold text-ag-black text-[14px] leading-snug">{m.tier}</p>
+                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{m.rule}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── DISCLAIMER ── */}
+      <section className="py-16 px-6 border-t border-ag-border bg-ag-navy">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-apex/60 mb-3">
+            {t('disclaimerTitle')}
+          </p>
+          <p className="font-sans text-[13px] text-white/50 leading-relaxed max-w-3xl">
+            {t('disclaimerText')}
+          </p>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="py-24 px-6 border-t border-ag-border">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
@@ -511,11 +615,18 @@ export function GradingSystemPage() {
               {t('ctaPrimary')} <ArrowUpRight size={12} />
             </Link>
             <Link
-              href="/grade/methodology"
+              href="/grade/partners"
               className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-4 hover:border-ag-black hover:text-ag-black transition-all"
             >
               {t('ctaSecondary')}
             </Link>
+            <a
+              href="/legal/methodology.pdf"
+              download
+              className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.14em] uppercase text-ag-gray-light hover:text-ag-black px-2 py-4 transition-colors"
+            >
+              {t('downloadCta')}
+            </a>
           </div>
         </div>
       </section>

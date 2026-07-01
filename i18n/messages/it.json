@@ -770,7 +770,7 @@
     "label": "AEGRYN — Grading System",
     "version": "Protocol v2.1 — 2026",
     "title": "AEGRYN\nGrading System.",
-    "intro": "Il protocollo AEGRYN Grade è lo standard di certificazione per gli asset digitali tech in Europa. Ispirato agli standard orologieri svizzeri e adattato al mercato SaaS M&A, produce una valutazione riproducibile, tracciabile e indipendente.",
+    "intro": "Come Antiquorum ha introdotto il proprio sistema di grading nei cataloghi d'asta degli orologi per fornire informazioni immediate e dettagliate sullo stato di ogni lotto, AEGRYN introduce il proprio sistema di certificazione per gli asset tech, con piena trasparenza sulle 4 dimensioni fondamentali del valore.",
     "downloadLabel": "Documentazione completa",
     "downloadCta": "Scarica il protocollo PDF",
     "cifsTitle": "Il framework CIFS",
@@ -1006,7 +1006,76 @@
     "ctaTitle": "Certifica il tuo asset",
     "ctaDesc": "Pronto a inviare il tuo asset al protocollo AEGRYN Grade?",
     "ctaPrimary": "Avvia la certificazione",
-    "ctaSecondary": "Leggi la metodologia completa"
+    "ctaSecondary": "Scopri i nostri partner co-firmatari",
+    "antiquorumTitle": "L'analogia Antiquorum",
+    "antiquorumDesc": "Antiquorum ha 3 dimensioni fisiche (Cassa, Quadrante, Movimento) + 1 opinione complessiva. AEGRYN adatta questo formato agli asset tech con 4 dimensioni + 1 opinione complessiva — la Sicurezza non ha equivalente nell'orologeria.",
+    "antiquorumTable": [
+      {
+        "source": "C = Case",
+        "sourceDim": "Involucro fisico",
+        "target": "C = Codice",
+        "targetDim": "Architettura e codebase"
+      },
+      {
+        "source": "D = Dial & Hands",
+        "sourceDim": "Interfaccia visibile",
+        "target": "I = IP e Diritti",
+        "targetDim": "Proprietà intellettuale"
+      },
+      {
+        "source": "M = Movement",
+        "sourceDim": "Motore interno",
+        "target": "F = Finanza",
+        "targetDim": "Motore economico"
+      },
+      {
+        "source": "—",
+        "sourceDim": "(nessun equivalente nell'orologeria)",
+        "target": "S = Sicurezza",
+        "targetDim": "Conformità e cybersicurezza"
+      },
+      {
+        "source": "★/AAA/AA/A/B",
+        "sourceDim": "Expert's Overall Opinion",
+        "target": "AEG ★/AAA/AA/A/B",
+        "targetDim": "AEGRYN Expert Grade"
+      }
+    ],
+    "disclaimerTitle": "Avviso obbligatorio",
+    "disclaimerText": "Sebbene sia stato fatto ogni sforzo per rimanere obiettivi, i clienti sono informati che ogni certificazione comporta una componente di giudizio esperto. Le informazioni contenute in un rapporto AEGRYN Grade sono fornite come certificazione professionale, controfirmata da esperti indipendenti che se ne assumono la responsabilità. Non costituiscono una garanzia di valore di mercato.",
+    "refusalTitle": "Condizioni di rifiuto automatico",
+    "refusalDesc": "Alcune configurazioni comportano un rifiuto automatico indipendentemente dal punteggio complessivo — l'algoritmo fornisce un punteggio, l'esperto dà il parere finale, ma un rifiuto automatico non può mai essere annullato.",
+    "refusalConditions": [
+      "Segreti esposti non risolti (C-40) combinati con CVE critiche non risolte (C-34) → Rifiuto dimensione Codice",
+      "Contenzioso di marchio attivo (I-18) o diritti non formalizzati su codebase prodotta da terzi (I-21) → Rifiuto dimensione IP",
+      "Vulnerabilità critiche non risolte (S-17) o incidente di sicurezza in corso non risolto (S-37) → Rifiuto dimensione Sicurezza",
+      "Dati finanziari non verificabili nonostante la richiesta → Rifiuto dimensione Finanza",
+      "Rifiuto di cooperare durante l'audit → Rifiuto globale della certificazione"
+    ],
+    "maturityTitle": "Idoneità al catalogo per maturità",
+    "maturityDesc": "Antiquorum applica criteri diversi in base all'anzianità dell'orologio. AEGRYN adatta i propri criteri in base alla maturità dell'asset.",
+    "maturityRules": [
+      {
+        "tier": "Pre-revenue / < 6 mesi di trazione",
+        "rule": "Grado ★/AAA/AA impossibile su F. Grado C possibile solo se I=1 e C=1. AEG massimo: A."
+      },
+      {
+        "tier": "6–12 mesi di ricavi",
+        "rule": "NRR non significativo (periodo troppo breve). F basato su crescita e qualità delle metriche unitarie (LTV:CAC, churn)."
+      },
+      {
+        "tier": "12–24 mesi di ricavi",
+        "rule": "Valutazione standard completa. Tutti i gradi possibili."
+      },
+      {
+        "tier": "> 24 mesi di ricavi",
+        "rule": "ARR verificato richiesto per F-1 o F-2. Storico di retention NRR di almeno 4 trimestri."
+      },
+      {
+        "tier": "Pre-revenue con IP eccezionale",
+        "rule": "Valutazione solo su asset tangibili. Dimensione F con nota speciale \"Pre-revenue\" senza punteggio numerico. AEG massimo: A."
+      }
+    ]
   },
   "roadmapPage": {
     "meta": {
@@ -1836,7 +1905,19 @@
       "evalDeductibleNote": "Questo importo è interamente deducibile dal costo di certificazione se avvia un processo completo di Auction entro 6 mesi dalla ricezione della sua Review.",
       "partnerSelectLabel": "Partner da coinvolgere",
       "partnerLegal": "Studio legale",
-      "partnerAccounting": "Commercialista"
+      "partnerAccounting": "Commercialista",
+      "analysisDataTitle": "Dati per l'analisi (AEGRYN Grading System)",
+      "analysisDataDesc": "Queste informazioni accelerano la nostra analisi interna e il benchmark di mercato del tuo asset. Facoltative ma consigliate.",
+      "sector": "Settore",
+      "sectorPlaceholder": "es: LegalTech, FinTech, HR & Payroll...",
+      "benchmarkCategory": "Categoria di mercato più vicina",
+      "benchmarkCategoryPlaceholder": "— Seleziona —",
+      "revenueTrackMonths": "Anzianità dei ricavi (mesi)",
+      "teamSize": "Dimensione del team",
+      "foundedYear": "Anno di fondazione",
+      "arrGrowth": "Crescita ARR YoY (%)",
+      "grossMargin": "Margine lordo (%)",
+      "nrr": "Net Revenue Retention — NRR (%)"
     }
   },
   "bidModels": {

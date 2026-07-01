@@ -42,6 +42,18 @@ export default async function AdminAssetGradePage({
   const a = asset as Record<string, unknown>
   const tokenQs = token ? `?token=${token}` : ''
 
+  /* ── Benchmark marché — comparables pour contextualiser le grading ── */
+  const { data: benchmarkRows } = await supa
+    .from('benchmark_data')
+    .select('*')
+    .order('category', { ascending: true })
+
+  const { data: transactionComps } = await supa
+    .from('transaction_results')
+    .select('*')
+    .order('closed_at', { ascending: false })
+    .limit(50)
+
   return (
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">
       <div className="max-w-4xl mx-auto">
@@ -100,6 +112,25 @@ export default async function AdminAssetGradePage({
           initialStatus={String(a.status ?? 'submitted')}
           evaluationType={String(a.evaluation_type ?? 'full_certification')}
           partnerReviewerType={a.partner_reviewer_type ? String(a.partner_reviewer_type) : undefined}
+          initialAsset={{
+            score_code:          Number(a.score_code ?? 0),
+            score_ip:            Number(a.score_ip ?? 0),
+            score_finance:       Number(a.score_finance ?? 0),
+            score_security:      Number(a.score_security ?? 0),
+            subcodes_code:       (a.subcodes_code as string[]      | null) ?? [],
+            subcodes_ip:         (a.subcodes_ip as string[]        | null) ?? [],
+            subcodes_finance:    (a.subcodes_finance as string[]   | null) ?? [],
+            subcodes_security:   (a.subcodes_security as string[]  | null) ?? [],
+            revenue_track_months: a.revenue_track_months != null ? Number(a.revenue_track_months) : null,
+            gross_margin:        a.gross_margin != null ? Number(a.gross_margin) : null,
+            nrr:                 a.nrr != null ? Number(a.nrr) : null,
+            benchmark_category:  (a.benchmark_category as string | null) ?? null,
+            aeg_grade:           (a.aeg_grade as string | null) ?? null,
+            arr:                 a.arr != null ? Number(a.arr) : null,
+            sector:              a.sector ? String(a.sector) : null,
+          }}
+          benchmarkRows={benchmarkRows ?? []}
+          transactionComps={transactionComps ?? []}
         />
 
       </div>

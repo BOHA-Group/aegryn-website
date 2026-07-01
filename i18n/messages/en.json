@@ -1152,7 +1152,7 @@
     "label": "AEGRYN — Grading System",
     "version": "Protocol v2.1 — 2026",
     "title": "AEGRYN\nGrading System.",
-    "intro": "The AEGRYN Grade protocol is the reference certification standard for digital tech assets in Europe. Inspired by Swiss watchmaking grading standards and adapted to the realities of the SaaS M&A market, it produces a reproducible, traceable and independent rating.",
+    "intro": "Just as Antiquorum introduced its grading system in its watch auction catalogues to provide immediate, detailed insight into each lot's condition, AEGRYN introduces its own certification system for tech assets, with full transparency across the 4 fundamental dimensions of value.",
     "downloadLabel": "Full documentation",
     "downloadCta": "Download protocol PDF",
     "cifsTitle": "The CIFS framework",
@@ -1388,7 +1388,76 @@
     "ctaTitle": "Certify your asset",
     "ctaDesc": "Ready to submit your asset to the AEGRYN Grade protocol?",
     "ctaPrimary": "Start certification",
-    "ctaSecondary": "Read the full methodology"
+    "ctaSecondary": "Discover our co-signatory partners",
+    "antiquorumTitle": "The Antiquorum analogy",
+    "antiquorumDesc": "Antiquorum has 3 physical dimensions (Case, Dial, Movement) + 1 overall opinion. AEGRYN adapts this format to tech assets with 4 dimensions + 1 overall opinion — Security has no equivalent in watchmaking.",
+    "antiquorumTable": [
+      {
+        "source": "C = Case",
+        "sourceDim": "Physical housing",
+        "target": "C = Code",
+        "targetDim": "Architecture & codebase"
+      },
+      {
+        "source": "D = Dial & Hands",
+        "sourceDim": "Visible interface",
+        "target": "I = IP & Rights",
+        "targetDim": "Intellectual property"
+      },
+      {
+        "source": "M = Movement",
+        "sourceDim": "Internal engine",
+        "target": "F = Finance",
+        "targetDim": "Economic engine"
+      },
+      {
+        "source": "—",
+        "sourceDim": "(no watchmaking equivalent)",
+        "target": "S = Security",
+        "targetDim": "Compliance & cybersecurity"
+      },
+      {
+        "source": "★/AAA/AA/A/B",
+        "sourceDim": "Expert's Overall Opinion",
+        "target": "AEG ★/AAA/AA/A/B",
+        "targetDim": "AEGRYN Expert Grade"
+      }
+    ],
+    "disclaimerTitle": "Mandatory notice",
+    "disclaimerText": "While every effort has been made to remain objective, clients are informed that any certification involves an element of expert judgement. The information contained in an AEGRYN Grade report is provided as professional certification, co-signed by independent experts who assume responsibility for it. It does not constitute a guarantee of market value.",
+    "refusalTitle": "Automatic refusal conditions",
+    "refusalDesc": "Certain configurations trigger an automatic refusal regardless of the overall score — the algorithm produces a score, the expert gives the final opinion, but an automatic refusal can never be overridden.",
+    "refusalConditions": [
+      "Unresolved exposed secrets (C-40) combined with unresolved critical CVEs (C-34) → Code dimension refused",
+      "Active trademark dispute (I-18) or unformalised rights on third-party-produced codebase (I-21) → IP dimension refused",
+      "Unresolved critical vulnerabilities (S-17) or ongoing unresolved security incident (S-37) → Security dimension refused",
+      "Financial data not verifiable despite request → Finance dimension refused",
+      "Refusal to cooperate during the audit → Global certification refusal"
+    ],
+    "maturityTitle": "Catalogue eligibility by maturity",
+    "maturityDesc": "Antiquorum applies different criteria depending on a watch's age. AEGRYN adapts its criteria based on asset maturity.",
+    "maturityRules": [
+      {
+        "tier": "Pre-revenue / < 6 months traction",
+        "rule": "★/AAA/AA grade impossible on F. Grade C possible only if I=1 and C=1. Maximum AEG: A."
+      },
+      {
+        "tier": "6–12 months of revenue",
+        "rule": "NRR not significant (period too short). F based on growth and unit metric quality (LTV:CAC, churn)."
+      },
+      {
+        "tier": "12–24 months of revenue",
+        "rule": "Full standard evaluation. All grades possible."
+      },
+      {
+        "tier": "> 24 months of revenue",
+        "rule": "Audited ARR required for F-1 or F-2. NRR retention history over at least 4 quarters."
+      },
+      {
+        "tier": "Pre-revenue with exceptional IP",
+        "rule": "Valuation on tangible assets only. F dimension gets a special \"Pre-revenue\" note with no numeric score. Maximum AEG: A."
+      }
+    ]
   },
   "auction": {
     "meta": {
@@ -1796,7 +1865,19 @@
       "evalDeductibleNote": "This amount is fully deductible from the certification fee if you engage a full Auction process within 6 months of receiving your Review.",
       "partnerSelectLabel": "Partner to involve",
       "partnerLegal": "Law firm",
-      "partnerAccounting": "Chartered accountant"
+      "partnerAccounting": "Chartered accountant",
+      "analysisDataTitle": "Data for analysis (AEGRYN Grading System)",
+      "analysisDataDesc": "This information speeds up our internal analysis and market benchmarking of your asset. Optional but recommended.",
+      "sector": "Sector",
+      "sectorPlaceholder": "e.g. LegalTech, FinTech, HR & Payroll...",
+      "benchmarkCategory": "Closest market category",
+      "benchmarkCategoryPlaceholder": "— Select —",
+      "revenueTrackMonths": "Revenue track record (months)",
+      "teamSize": "Team size",
+      "foundedYear": "Year founded",
+      "arrGrowth": "ARR YoY growth (%)",
+      "grossMargin": "Gross margin (%)",
+      "nrr": "Net Revenue Retention — NRR (%)"
     }
   },
   "bidModels": {

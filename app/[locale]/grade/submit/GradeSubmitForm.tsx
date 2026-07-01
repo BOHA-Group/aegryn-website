@@ -309,6 +309,61 @@ export default function GradeSubmitForm() {
                 </div>
               </div>
 
+              {/* Données pour l'analyse interne (AEGRYN Grading System v1.0) */}
+              {evalType === 'full_certification' && (
+                <div className="border border-ag-border p-6 flex flex-col gap-5 bg-ag-off-white">
+                  <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-black">
+                    {t('form.analysisDataTitle')}
+                  </p>
+                  <p className="font-sans text-[12px] text-ag-gray -mt-2 leading-relaxed">
+                    {t('form.analysisDataDesc')}
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className={labelCls}>{t('form.sector')}</label>
+                      <input name="sector" type="text" placeholder={t('form.sectorPlaceholder')} className={inputCls} />
+                    </div>
+                    <div>
+                      <label className={labelCls}>{t('form.benchmarkCategory')}</label>
+                      <select name="benchmarkCategory" className={selectCls}>
+                        <option value="">{t('form.benchmarkCategoryPlaceholder')}</option>
+                        {(['saas_vertical','saas_horizontal','ai_native','marketplace','mobile_app','fintech','legaltech','healthtech','regtech','web3'] as const).map(k => (
+                          <option key={k} value={k}>{k}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                    <div>
+                      <label className={labelCls}>{t('form.revenueTrackMonths')}</label>
+                      <input name="revenueTrackMonths" type="number" min="0" className={inputCls} />
+                    </div>
+                    <div>
+                      <label className={labelCls}>{t('form.teamSize')}</label>
+                      <input name="teamSize" type="number" min="0" className={inputCls} />
+                    </div>
+                    <div>
+                      <label className={labelCls}>{t('form.foundedYear')}</label>
+                      <input name="foundedYear" type="number" min="1990" max="2030" className={inputCls} />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                    <div>
+                      <label className={labelCls}>{t('form.arrGrowth')}</label>
+                      <input name="arrGrowth" type="number" step="0.1" className={inputCls} />
+                    </div>
+                    <div>
+                      <label className={labelCls}>{t('form.grossMargin')}</label>
+                      <input name="grossMargin" type="number" step="0.1" className={inputCls} />
+                    </div>
+                    <div>
+                      <label className={labelCls}>{t('form.nrr')}</label>
+                      <input name="nrr" type="number" step="0.1" className={inputCls} />
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* IP filed */}
               <div>
                 <p className={labelCls}>{t('form.ipFiled')}</p>

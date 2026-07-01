@@ -770,7 +770,7 @@
     "label": "AEGRYN — Grading System",
     "version": "Protocol v2.1 — 2026",
     "title": "AEGRYN\nGrading System.",
-    "intro": "Het AEGRYN Grade-protocol is de certificeringsstandaard voor digitale tech-activa in Europa. Geïnspireerd door Zwitserse horlogemakersstandaarden en aangepast aan de SaaS M&A-markt, produceert het een reproduceerbare, traceerbare en onafhankelijke beoordeling.",
+    "intro": "Zoals Antiquorum zijn grading-systeem introduceerde in zijn horlogeveiling-catalogi om onmiddellijke, gedetailleerde informatie te geven over de staat van elk kavel, introduceert AEGRYN zijn eigen certificeringssysteem voor tech-assets, met volledige transparantie over de 4 fundamentele waardedimensies.",
     "downloadLabel": "Volledige documentatie",
     "downloadCta": "Protocol PDF downloaden",
     "cifsTitle": "Het CIFS-kader",
@@ -1006,7 +1006,76 @@
     "ctaTitle": "Certificeer uw asset",
     "ctaDesc": "Klaar om uw asset in te dienen bij het AEGRYN Grade-protocol?",
     "ctaPrimary": "Certificering starten",
-    "ctaSecondary": "Volledige methodologie lezen"
+    "ctaSecondary": "Ontdek onze medeondertekenende partners",
+    "antiquorumTitle": "De Antiquorum-analogie",
+    "antiquorumDesc": "Antiquorum heeft 3 fysieke dimensies (Kast, Wijzerplaat, Uurwerk) + 1 algemeen oordeel. AEGRYN past dit format aan voor tech-assets met 4 dimensies + 1 algemeen oordeel — Beveiliging heeft geen equivalent in de horlogerie.",
+    "antiquorumTable": [
+      {
+        "source": "C = Case",
+        "sourceDim": "Fysieke behuizing",
+        "target": "C = Code",
+        "targetDim": "Architectuur & codebase"
+      },
+      {
+        "source": "D = Dial & Hands",
+        "sourceDim": "Zichtbare interface",
+        "target": "I = IE & Rechten",
+        "targetDim": "Intellectueel eigendom"
+      },
+      {
+        "source": "M = Movement",
+        "sourceDim": "Interne motor",
+        "target": "F = Financiën",
+        "targetDim": "Economische motor"
+      },
+      {
+        "source": "—",
+        "sourceDim": "(geen equivalent in de horlogerie)",
+        "target": "S = Beveiliging",
+        "targetDim": "Compliance & cybersecurity"
+      },
+      {
+        "source": "★/AAA/AA/A/B",
+        "sourceDim": "Expert's Overall Opinion",
+        "target": "AEG ★/AAA/AA/A/B",
+        "targetDim": "AEGRYN Expert Grade"
+      }
+    ],
+    "disclaimerTitle": "Verplichte vermelding",
+    "disclaimerText": "Hoewel alles in het werk is gesteld om objectief te blijven, worden klanten geïnformeerd dat elke certificering een element van deskundig oordeel bevat. De informatie in een AEGRYN Grade-rapport wordt verstrekt als professionele certificering, medeondertekend door onafhankelijke experts die hiervoor verantwoordelijkheid dragen. Dit vormt geen garantie voor marktwaarde.",
+    "refusalTitle": "Voorwaarden voor automatische afwijzing",
+    "refusalDesc": "Bepaalde configuraties leiden tot automatische afwijzing, ongeacht de totaalscore — het algoritme levert een score, de expert geeft het uiteindelijke oordeel, maar een automatische afwijzing kan nooit worden overruled.",
+    "refusalConditions": [
+      "Onopgeloste blootgestelde geheimen (C-40) gecombineerd met onopgeloste kritieke CVE's (C-34) → Dimensie Code afgewezen",
+      "Actief merkgeschil (I-18) of niet-geformaliseerde rechten op door derden geproduceerde codebase (I-21) → Dimensie IE afgewezen",
+      "Onopgeloste kritieke kwetsbaarheden (S-17) of lopend onopgelost beveiligingsincident (S-37) → Dimensie Beveiliging afgewezen",
+      "Financiële gegevens niet verifieerbaar ondanks verzoek → Dimensie Financiën afgewezen",
+      "Weigering om mee te werken tijdens de audit → Globale afwijzing van de certificering"
+    ],
+    "maturityTitle": "Catalogusgeschiktheid naar volwassenheid",
+    "maturityDesc": "Antiquorum hanteert verschillende criteria afhankelijk van de ouderdom van het horloge. AEGRYN past zijn criteria aan op basis van de volwassenheid van het asset.",
+    "maturityRules": [
+      {
+        "tier": "Pre-revenue / < 6 maanden tractie",
+        "rule": "★/AAA/AA-grade onmogelijk op F. Grade C alleen mogelijk als I=1 en C=1. Maximale AEG: A."
+      },
+      {
+        "tier": "6–12 maanden omzet",
+        "rule": "NRR niet significant (periode te kort). F gebaseerd op groei en kwaliteit van unit-metrics (LTV:CAC, churn)."
+      },
+      {
+        "tier": "12–24 maanden omzet",
+        "rule": "Volledige standaardevaluatie. Alle grades mogelijk."
+      },
+      {
+        "tier": "> 24 maanden omzet",
+        "rule": "Geauditeerde ARR vereist voor F-1 of F-2. NRR-retentiehistorie over minstens 4 kwartalen."
+      },
+      {
+        "tier": "Pre-revenue met uitzonderlijke IE",
+        "rule": "Waardering uitsluitend op tastbare activa. Dimensie F krijgt speciale notitie \"Pre-revenue\" zonder numerieke score. Maximale AEG: A."
+      }
+    ]
   },
   "roadmapPage": {
     "meta": {
@@ -1836,7 +1905,19 @@
       "evalDeductibleNote": "Dit bedrag is volledig aftrekbaar van de certificeringskosten als u binnen 6 maanden na ontvangst van uw Review een volledig Auction-proces start.",
       "partnerSelectLabel": "Te betrekken partner",
       "partnerLegal": "Juridisch kantoor",
-      "partnerAccounting": "Accountant"
+      "partnerAccounting": "Accountant",
+      "analysisDataTitle": "Gegevens voor analyse (AEGRYN Grading System)",
+      "analysisDataDesc": "Deze informatie versnelt onze interne analyse en marktbenchmark van uw asset. Optioneel maar aanbevolen.",
+      "sector": "Sector",
+      "sectorPlaceholder": "bijv. LegalTech, FinTech, HR & Payroll...",
+      "benchmarkCategory": "Dichtstbijzijnde marktcategorie",
+      "benchmarkCategoryPlaceholder": "— Selecteren —",
+      "revenueTrackMonths": "Omzethistorie (maanden)",
+      "teamSize": "Teamgrootte",
+      "foundedYear": "Oprichtingsjaar",
+      "arrGrowth": "ARR-groei YoY (%)",
+      "grossMargin": "Brutomarge (%)",
+      "nrr": "Net Revenue Retention — NRR (%)"
     }
   },
   "bidModels": {
