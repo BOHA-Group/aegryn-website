@@ -2,7 +2,8 @@ import { getTranslations } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Calendar, MapPin, Users, ArrowUpRight } from 'lucide-react'
+import Image from 'next/image'
+import { Calendar, MapPin, Users, ArrowUpRight, Bell } from 'lucide-react'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -48,13 +49,70 @@ export default function AuctionSessionPage() {
         </div>
       </section>
 
-      {/* Assets in session */}
+      {/* Assets in session — liste style Antiquorum (vignette + statut + CTA) */}
       <section className="py-20 px-6 border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
-            {t('assetsLabel')}
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
+            {t('upcomingSessions')}
           </p>
-          <p className="font-sans text-[15px] text-ag-gray">{t('assetsTbd')}</p>
+
+          <div className="border border-ag-border bg-ag-white flex flex-col md:flex-row gap-0 md:gap-8 hover:border-ag-black/30 transition-colors">
+            {/* Vignette */}
+            <div className="relative w-full md:w-64 h-56 md:h-auto shrink-0 bg-ag-off-white overflow-hidden">
+              <Image
+                src="/images/auction/auction_legal tech_T32026.jpg"
+                alt={t('sessionCardTitle')}
+                fill
+                className="object-cover"
+                sizes="256px"
+              />
+              <span className="absolute top-3 left-3 bg-ag-apex text-ag-navy font-mono font-semibold text-[10px] tracking-[0.14em] uppercase px-3 py-1.5">
+                {t('sessionCardStatus')}
+              </span>
+            </div>
+
+            {/* Détails */}
+            <div className="flex-1 py-8 pr-8 pl-6 md:pl-0 flex flex-col md:flex-row md:items-center gap-6">
+              <div className="flex-1">
+                <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-apex mb-2">
+                  {t('sessionCardKicker')} — {t('sessionCardCategory')}
+                </p>
+                <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em] leading-snug mb-3">
+                  {t('sessionCardTitle')}
+                </h2>
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-ag-gray">
+                  <span className="flex items-center gap-1.5 font-sans text-[13px]">
+                    <MapPin size={13} className="text-ag-gray-light" /> {t('sessionCardLocation')}
+                  </span>
+                  <span className="flex items-center gap-1.5 font-sans text-[13px]">
+                    <Calendar size={13} className="text-ag-gray-light" /> {t('sessionCardDateValue')}
+                  </span>
+                </div>
+              </div>
+
+              {/* CTAs — équivalent Price List / Top Lots / Catalog */}
+              <div className="flex flex-wrap items-center gap-2 shrink-0">
+                <Link
+                  href="/auction/teaser-preview"
+                  className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:bg-ag-navy-mid transition-colors"
+                >
+                  {t('sessionCardCtaPreview')}
+                </Link>
+                <Link
+                  href="/auction/catalog"
+                  className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:border-ag-black hover:text-ag-black transition-colors"
+                >
+                  {t('sessionCardCtaCatalog')}
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 border border-ag-apex/40 text-ag-apex font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:border-ag-apex hover:bg-ag-apex/10 transition-colors"
+                >
+                  <Bell size={11} /> {t('sessionCardCtaNotify')}
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

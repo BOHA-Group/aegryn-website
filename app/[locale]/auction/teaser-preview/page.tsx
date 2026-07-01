@@ -1,6 +1,9 @@
 /**
- * /auction/teaser-preview — page de validation visuelle locale.
- * ⚠️ À retirer ou protéger avant toute mise en production.
+ * /auction/teaser-preview — aperçu public du lot en vente (teaser AEGRYN Auction).
+ * Désormais lié publiquement depuis /auction/sessions ("Aperçu du lot" — session à venir).
+ *
+ * ⚠️ SUBBLINK_ASSET_ID est un placeholder — à remplacer par l'UUID réel de la
+ * ligne `auction_assets` une fois le lot subblink créé en base (db push).
  *
  * onRequestDossier : à brancher selon le choix de Yohann —
  *   A) formulaire modal de qualification

@@ -1575,7 +1575,18 @@
       "sellerDesc": "Soumettez votre actif dès maintenant. La certification prend 2 à 4 semaines.",
       "sellerCta": "Soumettre mon actif",
       "pastSessions": "Sessions précédentes",
-      "noSessions": "Aucune session passée pour l'instant."
+      "noSessions": "Aucune session passée pour l'instant.",
+      "sessionCardKicker": "Vente en ligne",
+      "sessionCardStatus": "À venir",
+      "sessionCardCategory": "Legal-Tech · Actif propriétaire AEGRYN",
+      "sessionCardTitle": "Intelligence contractuelle par IA — Lot N°001",
+      "sessionCardLocation": "En ligne — Suisse",
+      "sessionCardDateLabel": "Ouverture du catalogue",
+      "sessionCardDateValue": "Q3 2026 — date exacte communiquée 30 jours avant",
+      "sessionCardCtaPreview": "Aperçu du lot",
+      "sessionCardCtaCatalog": "Catalogue",
+      "sessionCardCtaNotify": "Être notifié",
+      "upcomingSessions": "Session à venir"
     },
     "results": {
       "label": "Résultats des sessions",

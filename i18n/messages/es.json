@@ -1573,7 +1573,18 @@
       "sellerDesc": "Envía tu activo para certificación.",
       "sellerCta": "Enviar activo",
       "pastSessions": "Sesiones pasadas",
-      "noSessions": "Ninguna sesión completada todavía."
+      "noSessions": "Ninguna sesión completada todavía.",
+      "sessionCardKicker": "Venta en línea",
+      "sessionCardStatus": "Próximamente",
+      "sessionCardCategory": "Legal-Tech · Activo propio de AEGRYN",
+      "sessionCardTitle": "Inteligencia contractual por IA — Lote N.º 001",
+      "sessionCardLocation": "En línea — Suiza",
+      "sessionCardDateLabel": "Apertura del catálogo",
+      "sessionCardDateValue": "Q3 2026 — fecha exacta anunciada 30 días antes",
+      "sessionCardCtaPreview": "Vista previa del lote",
+      "sessionCardCtaCatalog": "Catálogo",
+      "sessionCardCtaNotify": "Recibir notificación",
+      "upcomingSessions": "Próxima sesión"
     }
   },
   "gradeStrip": {

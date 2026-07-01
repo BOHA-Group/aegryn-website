@@ -1573,7 +1573,18 @@
       "sellerDesc": "Dien uw asset in voor certificering.",
       "sellerCta": "Asset indienen",
       "pastSessions": "Vorige sessies",
-      "noSessions": "Nog geen voltooide sessies."
+      "noSessions": "Nog geen voltooide sessies.",
+      "sessionCardKicker": "Online veiling",
+      "sessionCardStatus": "Binnenkort",
+      "sessionCardCategory": "Legal-Tech · AEGRYN-eigen asset",
+      "sessionCardTitle": "AI-contractintelligentie — Kavel nr. 001",
+      "sessionCardLocation": "Online — Zwitserland",
+      "sessionCardDateLabel": "Catalogus opent",
+      "sessionCardDateValue": "Q3 2026 — exacte datum 30 dagen vooraf",
+      "sessionCardCtaPreview": "Kavel-preview",
+      "sessionCardCtaCatalog": "Catalogus",
+      "sessionCardCtaNotify": "Op de hoogte blijven",
+      "upcomingSessions": "Aankomende sessie"
     }
   },
   "gradeStrip": {

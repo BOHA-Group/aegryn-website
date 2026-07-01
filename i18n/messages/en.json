@@ -1575,7 +1575,18 @@
       "sellerDesc": "Submit your asset now. Certification takes 2 to 4 weeks.",
       "sellerCta": "Submit my asset",
       "pastSessions": "Past sessions",
-      "noSessions": "No past sessions yet."
+      "noSessions": "No past sessions yet.",
+      "sessionCardKicker": "Online sale",
+      "sessionCardStatus": "Upcoming",
+      "sessionCardCategory": "Legal-Tech · AEGRYN proprietary asset",
+      "sessionCardTitle": "AI Contract Intelligence — Lot No.001",
+      "sessionCardLocation": "Online — Switzerland",
+      "sessionCardDateLabel": "Catalogue opens",
+      "sessionCardDateValue": "Q3 2026 — exact date announced 30 days prior",
+      "sessionCardCtaPreview": "Lot preview",
+      "sessionCardCtaCatalog": "Catalogue",
+      "sessionCardCtaNotify": "Get notified",
+      "upcomingSessions": "Upcoming session"
     },
     "results": {
       "label": "Session results",

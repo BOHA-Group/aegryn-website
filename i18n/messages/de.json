@@ -1573,7 +1573,18 @@
       "sellerDesc": "Reichen Sie Ihr Asset zur Zertifizierung ein.",
       "sellerCta": "Asset einreichen",
       "pastSessions": "Vergangene Sessions",
-      "noSessions": "Noch keine abgeschlossenen Sessions."
+      "noSessions": "Noch keine abgeschlossenen Sessions.",
+      "sessionCardKicker": "Online-Verkauf",
+      "sessionCardStatus": "Demnächst",
+      "sessionCardCategory": "Legal-Tech · AEGRYN-eigenes Asset",
+      "sessionCardTitle": "KI-Vertragsintelligenz — Los Nr. 001",
+      "sessionCardLocation": "Online — Schweiz",
+      "sessionCardDateLabel": "Katalogeröffnung",
+      "sessionCardDateValue": "Q3 2026 — genaues Datum 30 Tage vorher",
+      "sessionCardCtaPreview": "Los-Vorschau",
+      "sessionCardCtaCatalog": "Katalog",
+      "sessionCardCtaNotify": "Benachrichtigen lassen",
+      "upcomingSessions": "Kommende Session"
     }
   },
   "gradeStrip": {
