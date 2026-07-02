@@ -2,12 +2,13 @@
 
 import { useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
+import { Hammer, BadgeCheck, Gavel } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 
-const PILLAR_ICONS: Record<string, string> = {
-  build:   'B',
-  grade:   'G',
-  auction: 'A',
+const PILLAR_ICONS: Record<string, typeof Hammer> = {
+  build:   Hammer,
+  grade:   BadgeCheck,
+  auction: Gavel,
 }
 
 export function PillarsSection() {
@@ -34,14 +35,16 @@ export function PillarsSection() {
     <section ref={ref} className="bg-ag-navy border-t border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/[0.08]">
-          {pillars.map((key) => (
+          {pillars.map((key) => {
+            const Icon = PILLAR_ICONS[key]
+            return (
             <div
               key={key}
               className="pillar-item flex items-start gap-6 py-10 md:py-0 md:px-10 first:pl-0 last:pr-0"
               style={{ opacity: 0 }}
             >
-              <span className="shrink-0 w-10 h-10 flex items-center justify-center border border-ag-apex/40 font-sans font-bold text-[13px] tracking-[0.08em] text-ag-apex">
-                {PILLAR_ICONS[key]}
+              <span className="shrink-0 w-10 h-10 flex items-center justify-center border border-ag-apex/40 text-ag-apex">
+                <Icon size={16} strokeWidth={1.75} />
               </span>
               <div className="space-y-2">
                 <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/50">
@@ -52,7 +55,7 @@ export function PillarsSection() {
                 </p>
               </div>
             </div>
-          ))}
+          )})}
         </div>
       </div>
     </section>

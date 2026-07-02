@@ -35,15 +35,15 @@
   },
   "hero": {
     "tagline": "Engineered to Last",
-    "eyebrow": "AEGRYN — CERTIFIED TECH ASSET TRANSACTIONS",
+    "eyebrow": "SWISS CERTIFIED TECH ASSET TRANSACTIONS",
     "title": "Rare by selection.",
-    "sub": "AEGRYN zertifiziert und transagiert Premium-Tech-Assets in Europa.\nKo-signiertes Grade A→E. Institutionelles Treuhand.\nBlockchain-Zertifizierung bei jedem Transfer.",
+    "sub": "Die europäische Referenz für die Zertifizierung und den Handel\nvon Premium-Tech-Assets. Diskret von Natur aus. Streng nach Anspruch.",
     "cta": "KATALOG ENTDECKEN",
     "strip": "CERTIFIED TECH ASSET TRANSACTIONS — EUROPE",
     "geo": "Schweiz · Europa · Global",
     "scroll": "Scrollen",
     "ctaSecondary": "ASSET EINREICHEN",
-    "chip2": "GRADE A→E — KO-SIGNIERT",
+    "chip2": "ZERTIFIZIERTES GRADE — KO-SIGNIERT",
     "ctaPrimary": "Katalog ansehen"
   },
   "assets": {
@@ -190,7 +190,7 @@
   },
   "whatwedo": {
     "label": "Unsere Überzeugung",
-    "conviction": "Die besten europäischen Tech-Assets verdienen mehr als eine Listung auf einem amerikanischen Marktplatz.",
+    "conviction": "Die besten europäischen Tech-Assets verdienen eine Zertifizierung. Keine Listung.",
     "items": [
       {
         "num": "01",
@@ -204,39 +204,54 @@
       },
       {
         "num": "03",
-        "title": "Europa hatte keine Referenz.",
-        "desc": "Die großen Tech-Transaktionshäuser sind amerikanisch. Der europäische Tech-Markt ist hier. AEGRYN ist die europäische Antwort — schweizerische Strenge, globaler Anspruch."
+        "title": "Die Schweiz als Zertifizierungsstandard.",
+        "desc": "Verwurzelt in der Schweiz. Helvetische Strenge, institutionelle Diskretion, und Zugang zu den selektivsten Family Offices und Privatfonds des Kontinents."
       }
     ]
   },
-  "statsRow": {
-    "items": [
+  "ecosystemDomains": {
+    "label": "Die AEGRYN Märkte",
+    "title": "Welche Themen\nüber AEGRYN Auction laufen.",
+    "domains": [
       {
-        "num": "+42%",
-        "label": "Wachstum Tech-M&A Europa 2025 YoY"
+        "id": "ai",
+        "label": "KI & Künstliche Intelligenz",
+        "tag": "Aktive Sessions",
+        "desc": "Proprietäre Modelle, vertikale Automatisierungstools, AI-native SaaS. Das aktivste Segment des europäischen Tech-M&A."
       },
       {
-        "num": "14,2 Mrd€",
-        "label": "SaaS-Transaktionen Europa 2025"
+        "id": "saas",
+        "label": "SaaS B2B & Vertical Software",
+        "tag": "Aktive Sessions",
+        "desc": "Sektorspezifische CRMs, RegTech, LegalTech, HealthTech, EU-Compliance-Tools. 10x–14x ARR-Multiplikatoren für Marktführer."
       },
       {
-        "num": "3,1x ARR",
-        "label": "Medianer Privatmultiplikator 2026"
+        "id": "marketplace",
+        "label": "Marketplaces & Plattformen",
+        "tag": "Aktive Sessions",
+        "desc": "Zweiseitige Plattformen, sektorale Aggregatoren, B2B-Marktplätze. Liquidität auf beiden Seiten und Retention bestimmen die Multiplikatoren."
       },
       {
-        "num": "< 25%",
-        "label": "AEGRYN-Akzeptanzrate"
+        "id": "fintech",
+        "label": "Fintech & Finanzdienstleistungen",
+        "tag": "Aktive Sessions",
+        "desc": "Payment-Infrastruktur, Finanz-Compliance, Risikoanalyse. Starke Nachfrage von Schweizer Privatbanken und institutionellen Fonds."
+      },
+      {
+        "id": "ip",
+        "label": "IP Tech & Protokolle",
+        "tag": "Aktive Sessions",
+        "desc": "Softwarepatente, proprietäre Protokolle, exklusive Datensätze, hochwertige APIs. Die I-Dimension des AEGRYN Grade bewertet jede Komponente."
+      },
+      {
+        "id": "web3",
+        "label": "Digital Art & Web3",
+        "tag": "Roadmap 2027",
+        "tagVariant": "coming-soon",
+        "desc": "Digitale kreative Assets, Smart Contracts mit hohem IP-Wert. Erweiterung des AEGRYN Grade Labels auf Web3-Assets für 2027 geplant."
       }
-    ]
-  },
-  "assetGrid": {
-    "sectionLabel": "Unser Ökosystem",
-    "sectionTitle": "Was wir\nbauen.",
-    "notStarted": "Nicht gestartet",
-    "comingSoon": "Demnächst",
-    "tier1Label": "Zertifizierte Assets",
-    "tier2Label": "In Zertifizierung",
-    "cta": "Ihr Asset zur Zertifizierung einreichen"
+    ],
+    "cta": "Reichen Sie Ihr Asset zur Zertifizierung ein"
   },
   "aboutSection": {
     "label": "Über Aegryn",
@@ -253,7 +268,7 @@
         "label": "Assets"
       },
       {
-        "val": "A→E",
+        "val": "★ AAA AA A B",
         "label": "Grades"
       },
       {
@@ -272,7 +287,7 @@
       },
       {
         "title": "GRADE",
-        "desc": "Wir zertifizieren Drittanbieter- und proprietäre Assets nach einem unabhängigen A→E-Label, ko-signiert von Rechts-, Finanz- und Cybersicherheitsexperten. KRYV Protocol zertifiziert den Code auf der Blockchain bei jedem Transfer."
+        "desc": "Wir zertifizieren Drittanbieter- und proprietäre Assets nach einem unabhängigen, ko-signierten Label von Rechts-, Finanz- und Cybersicherheitsexperten. KRYV Protocol zertifiziert den Code auf der Blockchain bei jedem Transfer."
       },
       {
         "title": "AUCTION",
@@ -1628,7 +1643,7 @@
   },
   "auctionNarrative": {
     "label": "AEGRYN Auction",
-    "title": "Manche Assets verdienen keinen Marktplatz.\nSie verdienen einen Prozess.",
+    "title": "Manche Assets verdienen mehr\nals eine öffentliche Listung.",
     "desc": "AEGRYN Auction ist keine offene Plattform. Es ist ein vertraulicher Veräußerungsprozess zwischen Verkäufern, die unsere Zertifizierung bestanden haben, und Käufern, die ihre Leistungsfähigkeit bewiesen haben.\n\nWeniger als 25% der eingereichten Assets werden akzeptiert. 100% der Käufer sind vorqualifiziert. Jede Transaktion wird blockchain-zertifiziert.",
     "stat1Val": "< 25%",
     "stat1Label": "Akzeptanzrate",
@@ -1668,7 +1683,7 @@
     },
     "grade": {
       "label": "GRADE",
-      "desc": "Unabhängige Zertifizierung A→E"
+      "desc": "Unabhängige, ko-signierte Zertifizierung"
     },
     "auction": {
       "label": "AUCTION",
@@ -1678,7 +1693,7 @@
   "gradeShowcase": {
     "label": "Das AEGRYN Grade System",
     "title": "Ein Asset ohne Grade\nist ein Asset ohne Preis.",
-    "desc": "Unser Zertifizierungsprotokoll bewertet jedes Asset auf 4 Dimensionen: Code, IP, Finanzen, Sicherheit. Ein objektiver, reproduzierbarer, anfechtbarer Grade.",
+    "desc": "Unser Zertifizierungsprotokoll bewertet jedes Asset auf 4 Dimensionen: Code, IP & Rechte, Finanzen, Sicherheit. Ein objektiver, reproduzierbarer, anfechtbarer Grade.",
     "cta": "Das Grade-System verstehen",
     "exceptional": "Außergewöhnlich",
     "premium": "Premium",
@@ -1704,7 +1719,7 @@
       },
       "b": {
         "label": "B",
-        "desc": "Frühphase — Sanierungsplan"
+        "desc": "Solide — Advisory empfohlen"
       }
     }
   },

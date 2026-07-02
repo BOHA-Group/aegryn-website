@@ -35,15 +35,15 @@
   },
   "hero": {
     "tagline": "Engineered to Last",
-    "eyebrow": "AEGRYN — CERTIFIED TECH ASSET TRANSACTIONS",
+    "eyebrow": "SWISS CERTIFIED TECH ASSET TRANSACTIONS",
     "title": "Rare by selection.",
-    "sub": "AEGRYN certifica y transacciona activos tech premium en Europa.\nGrade co-firmado A→E. Fideicomiso institucional.\nCertificación blockchain en cada transferencia.",
+    "sub": "La referencia europea para la certificación y la transacción\nde activos tech premium. Discreto por naturaleza. Riguroso por exigencia.",
     "cta": "DESCUBRIR EL CATÁLOGO",
     "strip": "CERTIFIED TECH ASSET TRANSACTIONS — EUROPE",
     "geo": "Suiza · Europa · Global",
     "scroll": "Desplazar",
     "ctaSecondary": "ENVIAR UN ACTIVO",
-    "chip2": "GRADE A→E — CO-FIRMADO",
+    "chip2": "GRADE CERTIFICADO — CO-FIRMADO",
     "ctaPrimary": "Ver el catálogo"
   },
   "assets": {
@@ -190,7 +190,7 @@
   },
   "whatwedo": {
     "label": "Nuestra Convicción",
-    "conviction": "Los mejores activos tech europeos merecen más que una ficha en un marketplace americano.",
+    "conviction": "Los mejores activos tech europeos merecen una certificación. No una ficha.",
     "items": [
       {
         "num": "01",
@@ -204,39 +204,54 @@
       },
       {
         "num": "03",
-        "title": "Europa no tenía su referencia.",
-        "desc": "Las grandes casas de transacción tech son americanas. El mercado tech europeo está aquí. AEGRYN es la respuesta europea — rigor suizo, ambición global."
+        "title": "Suiza como estándar de certificación.",
+        "desc": "Arraigado en Suiza. El rigor helvético, la discreción institucional, y el acceso a los family offices y fondos privados más selectivos del continente."
       }
     ]
   },
-  "statsRow": {
-    "items": [
+  "ecosystemDomains": {
+    "label": "Los mercados AEGRYN",
+    "title": "Qué temáticas\ntransitan por AEGRYN Auction.",
+    "domains": [
       {
-        "num": "+42%",
-        "label": "Crecimiento M&A tech Europa 2025 YoY"
+        "id": "ai",
+        "label": "IA & Inteligencia Artificial",
+        "tag": "Sesiones activas",
+        "desc": "Modelos propietarios, herramientas de automatización vertical, SaaS AI-native. El segmento más activo del M&A tech en Europa."
       },
       {
-        "num": "14,2 Mil M€",
-        "label": "Transacciones SaaS Europa 2025"
+        "id": "saas",
+        "label": "SaaS B2B & Vertical Software",
+        "tag": "Sesiones activas",
+        "desc": "CRMs sectoriales, RegTech, LegalTech, HealthTech, herramientas de cumplimiento regulatorio UE. Múltiplos 10x–14x ARR para los líderes."
       },
       {
-        "num": "3,1x ARR",
-        "label": "Múltiplo mediano privado 2026"
+        "id": "marketplace",
+        "label": "Marketplaces & Plataformas",
+        "tag": "Sesiones activas",
+        "desc": "Plataformas bilaterales, agregadores sectoriales, marketplaces B2B. La liquidez en ambos lados y la retención definen los múltiplos."
       },
       {
-        "num": "< 25%",
-        "label": "Tasa de aceptación AEGRYN"
+        "id": "fintech",
+        "label": "Fintech & Servicios Financieros",
+        "tag": "Sesiones activas",
+        "desc": "Infraestructura de pagos, cumplimiento financiero, análisis de riesgo. Fuerte demanda de bancos privados y fondos institucionales suizos."
+      },
+      {
+        "id": "ip",
+        "label": "IP Tech & Protocolos",
+        "tag": "Sesiones activas",
+        "desc": "Patentes de software, protocolos propietarios, datasets exclusivos, APIs de alto valor. La dimensión I del Grade AEGRYN evalúa cada componente."
+      },
+      {
+        "id": "web3",
+        "label": "Digital Art & Web3",
+        "tag": "Roadmap 2027",
+        "tagVariant": "coming-soon",
+        "desc": "Activos creativos digitales, smart contracts de alto valor IP. Extensión del label AEGRYN Grade a los activos Web3 prevista para 2027."
       }
-    ]
-  },
-  "assetGrid": {
-    "sectionLabel": "Nuestro ecosistema",
-    "sectionTitle": "Lo que\nconstruimos.",
-    "notStarted": "No iniciado",
-    "comingSoon": "Próximamente",
-    "tier1Label": "Activos certificados",
-    "tier2Label": "En proceso de certificación",
-    "cta": "Envía tu activo para certificación"
+    ],
+    "cta": "Presenta tu activo para certificación"
   },
   "aboutSection": {
     "label": "Sobre Aegryn",
@@ -253,7 +268,7 @@
         "label": "Activos"
       },
       {
-        "val": "A→E",
+        "val": "★ AAA AA A B",
         "label": "Grades"
       },
       {
@@ -272,7 +287,7 @@
       },
       {
         "title": "GRADE",
-        "desc": "Certificamos activos de terceros y propios bajo un sello independiente A→E, co-firmado por expertos jurídicos, financieros y de ciberseguridad que comprometemos su responsabilidad. KRYV Protocol certifica el código en blockchain en cada transferencia."
+        "desc": "Certificamos activos de terceros y propios bajo un sello independiente co-firmado por expertos jurídicos, financieros y de ciberseguridad que comprometen su responsabilidad. KRYV Protocol certifica el código en blockchain en cada transferencia."
       },
       {
         "title": "AUCTION",
@@ -1628,7 +1643,7 @@
   },
   "auctionNarrative": {
     "label": "AEGRYN Auction",
-    "title": "Algunos activos no merecen estar en un marketplace.\nMerecen un proceso.",
+    "title": "Algunos activos merecen más\nque una ficha pública.",
     "desc": "AEGRYN Auction no es una plataforma abierta. Es un proceso de cesión confidencial entre vendedores que han pasado nuestra certificación y adquirentes que han demostrado su capacidad.\n\nMenos del 25% de los activos presentados son aceptados. El 100% de los adquirentes están pre-calificados. Cada transacción está certificada en blockchain.",
     "stat1Val": "< 25%",
     "stat1Label": "Tasa de aceptación de activos",
@@ -1668,7 +1683,7 @@
     },
     "grade": {
       "label": "GRADE",
-      "desc": "Certificación independiente A→E"
+      "desc": "Certificación independiente co-firmada"
     },
     "auction": {
       "label": "AUCTION",
@@ -1678,7 +1693,7 @@
   "gradeShowcase": {
     "label": "El sistema AEGRYN Grade",
     "title": "Un activo sin grade\nes un activo sin precio.",
-    "desc": "Nuestro protocolo de certificación evalúa cada activo en 4 dimensiones: Código, IP, Finanzas, Seguridad. Un grade objetivo, reproducible, oponible.",
+    "desc": "Nuestro protocolo de certificación evalúa cada activo en 4 dimensiones: Código, IP y Derechos, Finanzas, Seguridad. Un grade objetivo, reproducible, oponible.",
     "cta": "Entender el sistema de grade",
     "exceptional": "Excepcional",
     "premium": "Premium",
@@ -1704,7 +1719,7 @@
       },
       "b": {
         "label": "B",
-        "desc": "Early stage — plan de remediación"
+        "desc": "Correcto — advisory recomendado"
       }
     }
   },

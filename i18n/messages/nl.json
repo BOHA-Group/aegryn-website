@@ -35,15 +35,15 @@
   },
   "hero": {
     "tagline": "Engineered to Last",
-    "eyebrow": "AEGRYN — CERTIFIED TECH ASSET TRANSACTIONS",
+    "eyebrow": "SWISS CERTIFIED TECH ASSET TRANSACTIONS",
     "title": "Rare by selection.",
-    "sub": "AEGRYN certificeert en transigeert premium tech-assets in Europa.\nMede-ondertekend Grade A→E. Institutioneel depot.\nBlockchain-certificering bij elke overdracht.",
+    "sub": "De Europese referentie voor de certificering en de handel\nvan premium tech-assets. Discreet van nature. Streng qua eis.",
     "cta": "ONTDEK DE CATALOGUS",
     "strip": "CERTIFIED TECH ASSET TRANSACTIONS — EUROPE",
     "geo": "Zwitserland · Europa · Global",
     "scroll": "Scrollen",
     "ctaSecondary": "EEN ASSET INDIENEN",
-    "chip2": "GRADE A→E — MEDE-ONDERTEKEND",
+    "chip2": "GECERTIFICEERDE GRADE — MEDE-ONDERTEKEND",
     "ctaPrimary": "Catalogus bekijken"
   },
   "assets": {
@@ -190,7 +190,7 @@
   },
   "whatwedo": {
     "label": "Onze Overtuiging",
-    "conviction": "De beste Europese tech-assets verdienen meer dan een vermelding op een Amerikaans platform.",
+    "conviction": "De beste Europese tech-assets verdienen een certificering. Geen vermelding.",
     "items": [
       {
         "num": "01",
@@ -204,38 +204,53 @@
       },
       {
         "num": "03",
-        "title": "Europa had geen referentie.",
-        "desc": "De grote tech-transactiebedrijven zijn Amerikaans. De Europese tech-markt is hier. AEGRYN is het Europese antwoord — Zwitserse nauwkeurigheid, mondiale ambitie."
+        "title": "Zwitserland als certificeringsstandaard.",
+        "desc": "Verankerd in Zwitserland. Helvetische nauwkeurigheid, institutionele discretie, en toegang tot de meest selectieve family offices en privéfondsen van het continent."
       }
     ]
   },
-  "statsRow": {
-    "items": [
+  "ecosystemDomains": {
+    "label": "De AEGRYN-markten",
+    "title": "Welke thema's\nlopen via AEGRYN Auction.",
+    "domains": [
       {
-        "num": "+42%",
-        "label": "Groei tech-M&A Europa 2025 YoY"
+        "id": "ai",
+        "label": "AI & Kunstmatige Intelligentie",
+        "tag": "Actieve sessies",
+        "desc": "Propriëtaire modellen, verticale automatiseringstools, AI-native SaaS. Het meest actieve segment van Europese tech-M&A."
       },
       {
-        "num": "14,2 Mrd€",
-        "label": "SaaS-transacties Europa 2025"
+        "id": "saas",
+        "label": "SaaS B2B & Vertical Software",
+        "tag": "Actieve sessies",
+        "desc": "Sectorspecifieke CRM's, RegTech, LegalTech, HealthTech, EU-compliancetools. 10x–14x ARR-multiples voor de leiders."
       },
       {
-        "num": "3,1x ARR",
-        "label": "Mediane private multiplier 2026"
+        "id": "marketplace",
+        "label": "Marketplaces & Platformen",
+        "tag": "Actieve sessies",
+        "desc": "Tweezijdige platformen, sectorale aggregatoren, B2B-marketplaces. Liquiditeit aan beide zijden en retentie bepalen de multiples."
       },
       {
-        "num": "< 25%",
-        "label": "AEGRYN-acceptatiepercentage"
+        "id": "fintech",
+        "label": "Fintech & Financiële Diensten",
+        "tag": "Actieve sessies",
+        "desc": "Payment-infrastructuur, financiële compliance, risicoanalyse. Sterke vraag van Zwitserse privébanken en institutionele fondsen."
+      },
+      {
+        "id": "ip",
+        "label": "IP Tech & Protocollen",
+        "tag": "Actieve sessies",
+        "desc": "Softwarepatenten, propriëtaire protocollen, exclusieve datasets, hoogwaardige API's. De I-dimensie van de AEGRYN Grade evalueert elk component."
+      },
+      {
+        "id": "web3",
+        "label": "Digital Art & Web3",
+        "tag": "Roadmap 2027",
+        "tagVariant": "coming-soon",
+        "desc": "Digitale creatieve assets, smart contracts met hoge IP-waarde. Uitbreiding van het AEGRYN Grade-label naar Web3-assets gepland voor 2027."
       }
-    ]
-  },
-  "assetGrid": {
-    "sectionLabel": "Ons ecosysteem",
-    "sectionTitle": "Wat wij\nbouwen.",
-    "notStarted": "Niet gestart",
-    "comingSoon": "Binnenkort",
-    "tier1Label": "Gecertificeerde assets",
-    "tier2Label": "In certificering",
+    ],
     "cta": "Dien uw asset in voor certificering"
   },
   "aboutSection": {
@@ -253,7 +268,7 @@
         "label": "Assets"
       },
       {
-        "val": "A→E",
+        "val": "★ AAA AA A B",
         "label": "Grades"
       },
       {
@@ -272,7 +287,7 @@
       },
       {
         "title": "GRADE",
-        "desc": "We certificeren assets van derden en propriëtaire assets onder een onafhankelijk A→E-label, mede-ondertekend door juridische, financiële en cyberbeveiligingsexperts die hun aansprakelijkheid op het spel zetten. KRYV Protocol certificeert de code op blockchain bij elke overdracht."
+        "desc": "We certificeren assets van derden en propriëtaire assets onder een onafhankelijk, mede-ondertekend label, gedragen door juridische, financiële en cyberbeveiligingsexperts die hun aansprakelijkheid op het spel zetten. KRYV Protocol certificeert de code op blockchain bij elke overdracht."
       },
       {
         "title": "AUCTION",
@@ -1628,7 +1643,7 @@
   },
   "auctionNarrative": {
     "label": "AEGRYN Auction",
-    "title": "Sommige assets verdienen geen marketplace.\nZe verdienen een proces.",
+    "title": "Sommige assets verdienen meer\ndan een publieke vermelding.",
     "desc": "AEGRYN Auction is geen open platform. Het is een vertrouwelijk overdrachtsproces tussen verkopers die onze certificering hebben doorstaan en kopers die hun capaciteit hebben bewezen.\n\nMinder dan 25% van de ingediende assets wordt geaccepteerd. 100% van de kopers is vooraf gekwalificeerd. Elke transactie is blockchain-gecertificeerd.",
     "stat1Val": "< 25%",
     "stat1Label": "Acceptatiegraad ingediende assets",
@@ -1668,7 +1683,7 @@
     },
     "grade": {
       "label": "GRADE",
-      "desc": "Onafhankelijke certificering A→E"
+      "desc": "Onafhankelijke, mede-ondertekende certificering"
     },
     "auction": {
       "label": "AUCTION",
@@ -1678,7 +1693,7 @@
   "gradeShowcase": {
     "label": "Het AEGRYN Grade systeem",
     "title": "Een asset zonder grade\nis een asset zonder prijs.",
-    "desc": "Ons certificeringsprotocol evalueert elk asset op 4 dimensies: Code, IP, Financiën, Beveiliging. Een objectieve, reproduceerbare, betwistbare grade.",
+    "desc": "Ons certificeringsprotocol evalueert elk asset op 4 dimensies: Code, IP & Rechten, Financiën, Beveiliging. Een objectieve, reproduceerbare, betwistbare grade.",
     "cta": "Het grade-systeem begrijpen",
     "exceptional": "Uitzonderlijk",
     "premium": "Premium",
@@ -1704,7 +1719,7 @@
       },
       "b": {
         "label": "B",
-        "desc": "Early stage — saneringsplan"
+        "desc": "Correct — advisory aanbevolen"
       }
     }
   },

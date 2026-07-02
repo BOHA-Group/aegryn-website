@@ -6,7 +6,7 @@ import { ManifestoSection }  from '@/components/sections/ManifestoSection'
 import { GradeStrip }        from '@/components/sections/GradeStrip'
 import { GradeShowcase }     from '@/components/sections/GradeShowcase'
 import { MissionVideoSection } from '@/components/sections/MissionVideoSection'
-import { AssetGrid }         from '@/components/sections/AssetGrid'
+import { EcosystemDomains }  from '@/components/sections/EcosystemDomains'
 import { AuctionNarrative }  from '@/components/sections/AuctionNarrative'
 import { MarketStatStrip }   from '@/components/sections/MarketStatStrip'
 import { WhyUseApps }        from '@/components/sections/WhyUseApps'
@@ -43,7 +43,7 @@ export default async function HomePage({ params }: Props) {
       <GradeStrip />
       <GradeShowcase />
       <MissionVideoSection />
-      <AssetGrid />
+      <EcosystemDomains />
       <AuctionNarrative />
       <MarketStatStrip />
       <WhyUseApps />

@@ -35,16 +35,16 @@
   },
   "hero": {
     "tagline": "Certified Tech Asset Transactions — Europe",
-    "eyebrow": "AEGRYN — CERTIFIED TECH ASSET TRANSACTIONS",
+    "eyebrow": "SWISS CERTIFIED TECH ASSET TRANSACTIONS",
     "title": "Rare by selection.",
-    "sub": "AEGRYN certifie et transige des actifs tech premium en Europe.\nGrade co-signé A→E. Séquestre institutionnel.\nCertification blockchain à chaque transfert.",
+    "sub": "La référence européenne pour la certification et la transaction\nd'actifs tech premium. Discret par nature. Rigoureux par exigence.",
     "cta": "DÉCOUVRIR LE CATALOGUE",
     "strip": "CERTIFIED TECH ASSET TRANSACTIONS — EUROPE",
     "geo": "Suisse · Europe · Global",
     "scroll": "Défiler",
     "ctaPrimary": "Voir le catalogue",
     "ctaSecondary": "SOUMETTRE UN ACTIF",
-    "chip2": "GRADE A→E — CO-SIGNÉ"
+    "chip2": "GRADE CERTIFIÉ — CO-SIGNÉ"
   },
   "assets": {
     "title": "Notre écosystème propre.",
@@ -192,7 +192,7 @@
   },
   "whatwedo": {
     "label": "Notre Conviction",
-    "conviction": "Les meilleurs actifs tech européens méritent mieux qu'une liste sur une marketplace américaine.",
+    "conviction": "Les meilleurs actifs tech européens méritent une certification. Pas une liste.",
     "items": [
       {
         "num": "01",
@@ -206,8 +206,8 @@
       },
       {
         "num": "03",
-        "title": "L'Europe n'avait pas sa référence.",
-        "desc": "Les grandes maisons de transaction tech sont américaines. Le marché tech européen, lui, est ici. AEGRYN est la réponse européenne — suisse de rigueur, mondiale d'ambition."
+        "title": "La Suisse comme standard de certification.",
+        "desc": "Ancré en Suisse. La rigueur helvétique, la discrétion institutionnelle, et l'accès aux family offices et fonds privés les plus sélectifs du continent."
       }
     ]
   },
@@ -226,7 +226,7 @@
         "label": "Actifs"
       },
       {
-        "val": "A→E",
+        "val": "★ AAA AA A B",
         "label": "Grades"
       },
       {
@@ -245,7 +245,7 @@
       },
       {
         "title": "GRADE",
-        "desc": "Nous certifions des actifs tiers et propres selon un label indépendant A→E, co-signé par des experts juridiques, financiers et cybersécurité engageant leur responsabilité. KRYV Protocol certifie le code sur blockchain à chaque transfert."
+        "desc": "Nous certifions des actifs tiers et propres selon un label indépendant co-signé par des experts juridiques, financiers et cybersécurité engageant leur responsabilité. KRYV Protocol certifie le code sur blockchain à chaque transfert."
       },
       {
         "title": "AUCTION",
@@ -284,33 +284,48 @@
       }
     ]
   },
-  "statsRow": {
-    "items": [
+  "ecosystemDomains": {
+    "label": "Les marchés AEGRYN",
+    "title": "Quelles thématiques\ntransitent via AEGRYN Auction.",
+    "domains": [
       {
-        "num": "+42%",
-        "label": "Volume M&A SaaS Europe 2025 YoY"
+        "id": "ai",
+        "label": "AI & Intelligence Artificielle",
+        "tag": "Sessions actives",
+        "desc": "Modèles propriétaires, outils d'automatisation verticale, SaaS AI-native. Le segment le plus actif du M&A tech en Europe."
       },
       {
-        "num": "14,2 Md€",
-        "label": "Transactions SaaS Europe 2025"
+        "id": "saas",
+        "label": "SaaS B2B & Vertical Software",
+        "tag": "Sessions actives",
+        "desc": "CRM sectoriels, RegTech, LegalTech, HealthTech, outils de conformité réglementaire EU. Multiples 10x–14x ARR pour les leaders."
       },
       {
-        "num": "3,1x ARR",
-        "label": "Multiple médian privé 2026"
+        "id": "marketplace",
+        "label": "Marketplaces & Plateformes",
+        "tag": "Sessions actives",
+        "desc": "Plateformes bifaces, agrégateurs sectoriels, marketplaces B2B. La liquidité des deux côtés et la rétention définissent les multiples."
       },
       {
-        "num": "< 25%",
-        "label": "Taux d'acceptation AEGRYN"
+        "id": "fintech",
+        "label": "Fintech & Services Financiers",
+        "tag": "Sessions actives",
+        "desc": "Payment infrastructure, conformité financière, analyse de risque. Forte demande des banques privées et fonds institutionnels suisses."
+      },
+      {
+        "id": "ip",
+        "label": "IP Tech & Protocoles",
+        "tag": "Sessions actives",
+        "desc": "Brevets logiciels, protocoles propriétaires, datasets exclusifs, APIs à haute valeur. La dimension I du Grade AEGRYN évalue chaque composant."
+      },
+      {
+        "id": "web3",
+        "label": "Digital Art & Web3",
+        "tag": "Roadmap 2027",
+        "tagVariant": "coming-soon",
+        "desc": "Actifs créatifs numériques, smart contracts à haute valeur IP. Extension du label AEGRYN Grade aux actifs Web3 prévue en 2027."
       }
-    ]
-  },
-  "assetGrid": {
-    "sectionLabel": "Notre écosystème",
-    "sectionTitle": "Ce que nous\nconstruisons.",
-    "notStarted": "Non démarré",
-    "comingSoon": "Bientôt",
-    "tier1Label": "Actifs certifiés",
-    "tier2Label": "En cours de certification",
+    ],
     "cta": "Soumettre votre actif pour certification"
   },
   "about": {
@@ -686,7 +701,7 @@
     },
     "grade": {
       "label": "GRADE",
-      "desc": "Certification indépendante A→E"
+      "desc": "Certification indépendante co-signée"
     },
     "auction": {
       "label": "AUCTION",
@@ -696,7 +711,7 @@
   "gradeShowcase": {
     "label": "Le système AEGRYN Grade",
     "title": "Un actif sans grade\nest un actif sans prix.",
-    "desc": "Notre protocole de certification évalue chaque actif sur 4 dimensions : Code, IP, Finance, Sécurité. Un grade objectif, reproductible, opposable.",
+    "desc": "Notre protocole de certification évalue chaque actif sur 4 dimensions : Code, IP & Droits, Finance, Sécurité. Un grade objectif, reproductible, opposable.",
     "cta": "Comprendre le système de grade",
     "exceptional": "Exceptionnel",
     "premium": "Premium",
@@ -722,7 +737,7 @@
       },
       "b": {
         "label": "B",
-        "desc": "Early stage — plan de remédiation"
+        "desc": "Correct — advisory recommandé"
       }
     }
   },
@@ -745,15 +760,15 @@
         "source": "Aventis Advisors"
       },
       {
-        "value": "58%",
-        "label": "Part PE buyers dans les deals SaaS 2025",
-        "source": "SEG Annual Report"
+        "value": "< 25%",
+        "label": "Taux d'acceptation AEGRYN Grade",
+        "source": "AEGRYN — 2026"
       }
     ]
   },
   "auctionNarrative": {
     "label": "AEGRYN Auction",
-    "title": "Certains actifs ne méritent pas d'être sur une marketplace.\nIls méritent un processus.",
+    "title": "Certains actifs méritent mieux\nqu'une liste publique.",
     "desc": "AEGRYN Auction n'est pas une plateforme ouverte. C'est un processus de cession confidentiel entre des vendeurs qui ont passé notre certification et des acquéreurs qui ont prouvé leur capacité et leur sérieux.\n\nMoins de 25% des actifs soumis sont acceptés. 100% des acquéreurs sont pré-qualifiés. Chaque transaction est certifiée blockchain à la date de transfert.",
     "stat1Val": "< 25%",
     "stat1Label": "Taux d'acceptation des actifs soumis",

@@ -35,16 +35,16 @@
   },
   "hero": {
     "tagline": "Certified Tech Asset Transactions — Europe",
-    "eyebrow": "AEGRYN — CERTIFIED TECH ASSET TRANSACTIONS",
+    "eyebrow": "SWISS CERTIFIED TECH ASSET TRANSACTIONS",
     "title": "Rare by selection.",
-    "sub": "AEGRYN certifies and transacts premium tech assets across Europe.\nCo-signed Grade A→E. Institutional escrow.\nBlockchain certification at every transfer.",
+    "sub": "The European reference for the certification and transaction\nof premium tech assets. Discreet by nature. Rigorous by demand.",
     "cta": "DISCOVER THE CATALOGUE",
     "strip": "CERTIFIED TECH ASSET TRANSACTIONS — EUROPE",
     "geo": "Switzerland · Europe · Global",
     "scroll": "Scroll",
     "ctaPrimary": "View catalog",
     "ctaSecondary": "SUBMIT AN ASSET",
-    "chip2": "GRADE A→E — CO-SIGNED"
+    "chip2": "CERTIFIED GRADE — CO-SIGNED"
   },
   "assets": {
     "title": "Our proprietary ecosystem.",
@@ -192,7 +192,7 @@
   },
   "whatwedo": {
     "label": "Our Conviction",
-    "conviction": "The best European tech assets deserve more than a listing on an American marketplace.",
+    "conviction": "The best European tech assets deserve certification. Not a listing.",
     "items": [
       {
         "num": "01",
@@ -206,38 +206,53 @@
       },
       {
         "num": "03",
-        "title": "Europe had no reference.",
-        "desc": "The major tech transaction houses are American. The European tech market, however, is here. AEGRYN is the European answer — Swiss in rigour, global in ambition."
+        "title": "Switzerland as the certification standard.",
+        "desc": "Rooted in Switzerland. Helvetic rigour, institutional discretion, and access to the continent's most selective family offices and private funds."
       }
     ]
   },
-  "statsRow": {
-    "items": [
+  "ecosystemDomains": {
+    "label": "AEGRYN markets",
+    "title": "Which themes\nflow through AEGRYN Auction.",
+    "domains": [
       {
-        "num": "+42%",
-        "label": "Tech M&A volume growth Europe 2025 YoY"
+        "id": "ai",
+        "label": "AI & Artificial Intelligence",
+        "tag": "Active sessions",
+        "desc": "Proprietary models, vertical automation tools, AI-native SaaS. The most active segment of European tech M&A."
       },
       {
-        "num": "€14.2B",
-        "label": "SaaS transactions Europe 2025"
+        "id": "saas",
+        "label": "SaaS B2B & Vertical Software",
+        "tag": "Active sessions",
+        "desc": "Sector CRMs, RegTech, LegalTech, HealthTech, EU regulatory compliance tools. 10x–14x ARR multiples for leaders."
       },
       {
-        "num": "3.1x ARR",
-        "label": "Median private multiple 2026"
+        "id": "marketplace",
+        "label": "Marketplaces & Platforms",
+        "tag": "Active sessions",
+        "desc": "Two-sided platforms, sector aggregators, B2B marketplaces. Liquidity on both sides and retention define multiples."
       },
       {
-        "num": "< 25%",
-        "label": "AEGRYN acceptance rate"
+        "id": "fintech",
+        "label": "Fintech & Financial Services",
+        "tag": "Active sessions",
+        "desc": "Payment infrastructure, financial compliance, risk analysis. Strong demand from Swiss private banks and institutional funds."
+      },
+      {
+        "id": "ip",
+        "label": "IP Tech & Protocols",
+        "tag": "Active sessions",
+        "desc": "Software patents, proprietary protocols, exclusive datasets, high-value APIs. The I dimension of the AEGRYN Grade evaluates every component."
+      },
+      {
+        "id": "web3",
+        "label": "Digital Art & Web3",
+        "tag": "Roadmap 2027",
+        "tagVariant": "coming-soon",
+        "desc": "Digital creative assets, high-IP-value smart contracts. Extension of the AEGRYN Grade label to Web3 assets planned for 2027."
       }
-    ]
-  },
-  "assetGrid": {
-    "sectionLabel": "Our ecosystem",
-    "sectionTitle": "What we\nbuild.",
-    "notStarted": "Not started",
-    "comingSoon": "Coming soon",
-    "tier1Label": "Certified assets",
-    "tier2Label": "Pending certification",
+    ],
     "cta": "Submit your asset for certification"
   },
   "aboutSection": {
@@ -255,7 +270,7 @@
         "label": "Assets"
       },
       {
-        "val": "A→E",
+        "val": "★ AAA AA A B",
         "label": "Grades"
       },
       {
@@ -274,7 +289,7 @@
       },
       {
         "title": "GRADE",
-        "desc": "We certify third-party and proprietary assets under an independent A→E label, co-signed by legal, financial and cybersecurity experts who stake their professional liability. KRYV Protocol blockchain-certifies the code at every transfer."
+        "desc": "We certify third-party and proprietary assets under an independent, co-signed label, backed by legal, financial and cybersecurity experts who stake their professional liability. KRYV Protocol blockchain-certifies the code at every transfer."
       },
       {
         "title": "AUCTION",
@@ -686,7 +701,7 @@
     },
     "grade": {
       "label": "GRADE",
-      "desc": "Independent certification A→E"
+      "desc": "Independent, co-signed certification"
     },
     "auction": {
       "label": "AUCTION",
@@ -696,7 +711,7 @@
   "gradeShowcase": {
     "label": "The AEGRYN Grade system",
     "title": "An asset without a grade\nis an asset without a price.",
-    "desc": "Our certification protocol evaluates each asset across 4 dimensions: Code, IP, Finance, Security. An objective, reproducible, enforceable grade.",
+    "desc": "Our certification protocol evaluates each asset across 4 dimensions: Code, IP & Rights, Finance, Security. An objective, reproducible, enforceable grade.",
     "cta": "Understand the grade system",
     "exceptional": "Exceptional",
     "premium": "Premium",
@@ -722,7 +737,7 @@
       },
       "b": {
         "label": "B",
-        "desc": "Early stage — remediation plan"
+        "desc": "Fair — advisory recommended"
       }
     }
   },
@@ -745,15 +760,15 @@
         "source": "Aventis Advisors"
       },
       {
-        "value": "58%",
-        "label": "PE buyer share in SaaS deals 2025",
-        "source": "SEG Annual Report"
+        "value": "< 25%",
+        "label": "AEGRYN Grade acceptance rate",
+        "source": "AEGRYN — 2026"
       }
     ]
   },
   "auctionNarrative": {
     "label": "AEGRYN Auction",
-    "title": "Some assets do not deserve to be on a marketplace.\nThey deserve a process.",
+    "title": "Some assets deserve more\nthan a public listing.",
     "desc": "AEGRYN Auction is not an open platform. It is a confidential disposal process between sellers who have passed our certification and buyers who have proven their capacity and seriousness.\n\nLess than 25% of submitted assets are accepted. 100% of buyers are pre-qualified. Each transaction is blockchain-certified at the date of transfer.",
     "stat1Val": "< 25%",
     "stat1Label": "Acceptance rate of submitted assets",

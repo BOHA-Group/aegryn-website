@@ -1,11 +1,18 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link  from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { gsap, SplitText } from '@/lib/gsap'
+
+const HERO_SLIDES = [
+  { src: '/images/mountains.avif',   alt: 'Alpes suisses — Aegryn Group' },
+  { src: '/images/home_geneva.jpg',  alt: 'Genève — Aegryn Group' },
+]
+
+const SLIDE_INTERVAL_MS = 6000
 
 export function HeroMountain() {
   const t = useTranslations('hero')
@@ -16,6 +23,15 @@ export function HeroMountain() {
   const labelRef    = useRef<HTMLParagraphElement>(null)
   const ctasRef     = useRef<HTMLDivElement>(null)
   const ruleRef     = useRef<HTMLDivElement>(null)
+
+  const [activeSlide, setActiveSlide] = useState(0)
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % HERO_SLIDES.length)
+    }, SLIDE_INTERVAL_MS)
+    return () => clearInterval(id)
+  }, [])
 
   useEffect(() => {
     if (!headingRef.current || !sectionRef.current) return
@@ -82,17 +98,38 @@ export function HeroMountain() {
       className="relative h-[96vh] min-h-[640px] overflow-hidden"
       aria-labelledby="hero-title"
     >
-      {/* Photo plein format — parallax */}
+      {/* Photo plein format — carousel auto-rotatif + parallax */}
       <div ref={photoRef} className="absolute inset-0 scale-[1.12] will-change-transform">
-        <Image
-          src="/images/home-mountains.png"
-          alt="Alpes suisses — Aegryn Group"
-          fill priority quality={95}
-          className="object-cover object-center"
-          sizes="100vw"
-        />
+        {HERO_SLIDES.map((slide, i) => (
+          <Image
+            key={slide.src}
+            src={slide.src}
+            alt={slide.alt}
+            fill
+            priority={i === 0}
+            quality={95}
+            className="object-cover object-center transition-opacity duration-1000"
+            style={{ opacity: activeSlide === i ? 1 : 0 }}
+            sizes="100vw"
+          />
+        ))}
         {/* Gradient foncé au départ — s'éclaircit au scroll via GSAP */}
         <div id="hero-overlay" className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/95" />
+
+        {/* Dots de navigation manuelle */}
+        <div className="absolute bottom-28 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2">
+          {HERO_SLIDES.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              aria-label={`Photo ${i + 1}`}
+              onClick={() => setActiveSlide(i)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                activeSlide === i ? 'w-6 bg-white' : 'w-1.5 bg-white/40 hover:bg-white/60'
+              }`}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Content — bottom anchored, left-aligned */}

@@ -57,13 +57,13 @@ export default function AuctionSessionPage() {
           </p>
 
           <div className="border border-ag-border bg-ag-white flex flex-col md:flex-row gap-0 md:gap-8 hover:border-ag-black/30 transition-colors">
-            {/* Vignette */}
-            <div className="relative w-full md:w-64 h-56 md:h-auto shrink-0 bg-ag-off-white overflow-hidden">
+            {/* Vignette — format vertical 9:16, image visible en totalité (style Antiquorum) */}
+            <div className="relative w-full md:w-64 shrink-0 bg-ag-off-white overflow-hidden" style={{ aspectRatio: '9 / 16' }}>
               <Image
                 src="/images/auction/auction_legal tech_T32026.jpg"
                 alt={t('sessionCardTitle')}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="256px"
               />
               <span className="absolute top-3 left-3 bg-ag-apex text-ag-navy font-mono font-semibold text-[10px] tracking-[0.14em] uppercase px-3 py-1.5">
