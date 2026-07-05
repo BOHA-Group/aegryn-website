@@ -195,11 +195,18 @@ export default async function AdminAssetsPage({
                       />
                     </td>
                     <td className="px-4 py-3">
-                      <Link
-                        href={`/admin/assets/${r.id}/grade${tokenQs}`}
-                        className="inline-flex items-center gap-1 text-[10px] font-semibold text-blue-600 hover:text-blue-800">
-                        Grader <ArrowUpRight size={10} />
-                      </Link>
+                      <div className="flex flex-col gap-1.5">
+                        <Link
+                          href={`/admin/assets/${r.id}/grade${tokenQs}`}
+                          className="inline-flex items-center gap-1 text-[10px] font-semibold text-blue-600 hover:text-blue-800">
+                          Grader <ArrowUpRight size={10} />
+                        </Link>
+                        <Link
+                          href={`/admin/assets/${r.id}/grade-engine`}
+                          className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-600 hover:text-emerald-800">
+                          Moteur <ArrowUpRight size={10} />
+                        </Link>
+                      </div>
                     </td>
                   </tr>
                 ))}
