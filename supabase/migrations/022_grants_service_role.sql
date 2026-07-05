@@ -9,6 +9,10 @@
  * (API routes serveur Next.js). Les utilisateurs authentifiés passent par RLS.
  */
 
+-- ── Table profiles (migration 005) — CRITIQUE pour le routing par rôle ───────
+GRANT ALL ON public.profiles TO service_role;
+GRANT SELECT ON public.profiles TO authenticated;
+
 -- ── Migrations 017 — client spaces ───────────────────────────────────────────
 GRANT ALL ON public.partner_certifications  TO service_role;
 GRANT ALL ON public.introductions           TO service_role;
