@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main, preview]
+    branches: [main, preview, feature/v2]
   pull_request:
     branches: [main, preview]
 
@@ -35,3 +35,6 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           NEXT_PUBLIC_SITE_URL: https://aegryn.com
           NEXT_PUBLIC_GA_ID: G-YW7XT6BLT6
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          ADMIN_LEADS_TOKEN: ${{ secrets.ADMIN_LEADS_TOKEN }}
