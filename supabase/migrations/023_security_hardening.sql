@@ -169,8 +169,8 @@ CREATE POLICY nda_requests_insert_public
   ON public.nda_requests FOR INSERT
   TO anon, authenticated
   WITH CHECK (
-    email IS NOT NULL
-    AND email <> ''
+    buyer_email IS NOT NULL
+    AND buyer_email <> ''
   );
 
 -- ── alliance_applications ─────────────────────────────────────────────────────
