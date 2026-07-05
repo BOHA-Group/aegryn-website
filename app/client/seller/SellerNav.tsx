@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LayoutDashboard, FileText, ArrowRightLeft, ShieldCheck, Bell } from 'lucide-react'
+import { LayoutDashboard, FileText, ArrowRightLeft, ShieldCheck, Bell, UserCircle } from 'lucide-react'
 
 const NAV_ITEMS = [
   { href: '/client/seller',              label: 'Tableau de bord', icon: LayoutDashboard },
@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { href: '/client/seller/transactions', label: 'Transactions',    icon: ArrowRightLeft },
   { href: '/client/seller/kyc',          label: 'KYC',             icon: ShieldCheck },
   { href: '/client/seller/notifications',label: 'Notifications',   icon: Bell },
+  { href: '/client/account',             label: 'Mon compte',     icon: UserCircle },
 ]
 
 export default function SellerNav({ unreadCount }: { unreadCount: number }) {

@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LayoutDashboard, Award, Users, DollarSign, Bell } from 'lucide-react'
+import { LayoutDashboard, Award, Users, DollarSign, Bell, UserCircle } from 'lucide-react'
 
 const NAV_ITEMS = [
   { href: '/client/partner',                label: 'Tableau de bord',  icon: LayoutDashboard },
@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { href: '/client/partner/introductions',  label: 'Introductions',    icon: Users },
   { href: '/client/partner/commissions',    label: 'Commissions',      icon: DollarSign },
   { href: '/client/partner/notifications',  label: 'Notifications',    icon: Bell },
+  { href: '/client/account',               label: 'Mon compte',       icon: UserCircle },
 ]
 
 export default function PartnerNav({ unreadCount }: { unreadCount: number }) {
