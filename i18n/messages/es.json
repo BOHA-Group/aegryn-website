@@ -804,7 +804,7 @@
     "label": "AEGRYN — Grading System",
     "version": "Protocol v2.1 — 2026",
     "title": "AEGRYN\nGrading System.",
-    "intro": "Así como Antiquorum introdujo su sistema de clasificación en sus catálogos de subastas de relojes para ofrecer información inmediata y detallada sobre el estado de cada lote, AEGRYN introduce su propio sistema de certificación para activos tecnológicos, con total transparencia en las 4 dimensiones fundamentales del valor.",
+    "intro": "AEGRYN introduce su propio sistema de certificación para activos tecnológicos, con total transparencia en las 4 dimensiones fundamentales del valor.",
     "downloadLabel": "Documentación completa",
     "downloadCta": "Descargar el protocolo PDF",
     "cifsTitle": "El marco CIFS",
@@ -1041,40 +1041,6 @@
     "ctaDesc": "¿Listo para enviar su activo al protocolo AEGRYN Grade?",
     "ctaPrimary": "Iniciar la certificación",
     "ctaSecondary": "Descubre a nuestros socios cofirmantes",
-    "antiquorumTitle": "La analogía Antiquorum",
-    "antiquorumDesc": "Antiquorum tiene 3 dimensiones físicas (Caja, Esfera, Movimiento) + 1 opinión global. AEGRYN adapta este formato a los activos tecnológicos con 4 dimensiones + 1 opinión global — la Seguridad no tiene equivalente en relojería.",
-    "antiquorumTable": [
-      {
-        "source": "C = Case",
-        "sourceDim": "Carcasa física",
-        "target": "C = Código",
-        "targetDim": "Arquitectura y código"
-      },
-      {
-        "source": "D = Dial & Hands",
-        "sourceDim": "Interfaz visible",
-        "target": "I = PI y Derechos",
-        "targetDim": "Propiedad intelectual"
-      },
-      {
-        "source": "M = Movement",
-        "sourceDim": "Motor interno",
-        "target": "F = Finanzas",
-        "targetDim": "Motor económico"
-      },
-      {
-        "source": "—",
-        "sourceDim": "(sin equivalente en relojería)",
-        "target": "S = Seguridad",
-        "targetDim": "Cumplimiento y ciberseguridad"
-      },
-      {
-        "source": "★/AAA/AA/A/B",
-        "sourceDim": "Expert's Overall Opinion",
-        "target": "AEG ★/AAA/AA/A/B",
-        "targetDim": "AEGRYN Expert Grade"
-      }
-    ],
     "disclaimerTitle": "Mención obligatoria",
     "disclaimerText": "Aunque se ha hecho todo lo posible por ser objetivos, se informa a los clientes de que toda certificación implica un componente de juicio experto. La información contenida en un informe AEGRYN Grade se proporciona como certificación profesional, cofirmada por expertos independientes que asumen su responsabilidad. No constituye una garantía de valor de mercado.",
     "refusalTitle": "Condiciones de rechazo automático",
@@ -1087,7 +1053,7 @@
       "Negativa a cooperar durante la auditoría → Rechazo global de la certificación"
     ],
     "maturityTitle": "Elegibilidad al catálogo según madurez",
-    "maturityDesc": "Antiquorum aplica criterios diferentes según la antigüedad del reloj. AEGRYN adapta sus criterios según la madurez del activo.",
+    "maturityDesc": "AEGRYN adapta sus criterios de evaluación según la madurez del activo.",
     "maturityRules": [
       {
         "tier": "Pre-revenue / < 6 meses de tracción",

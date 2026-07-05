@@ -3,30 +3,30 @@ import Link from 'next/link'
 import { ArrowUpRight, Scale, Calculator, ShieldCheck } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Partenaires co-signataires — AEGRYN Grade',
-  description: 'Les experts indépendants qui co-signent le Grade AEGRYN : cabinets juridiques IP, experts-comptables et spécialistes cybersécurité.',
+  title: 'Réseau d\'experts — AEGRYN Grade',
+  description: 'AEGRYN Grade est une certification standalone. Les experts indépendants (juridique IP, expert-comptable, cybersécurité) peuvent candidater pour s\'adosser à la certification ou accompagner vendeurs et acquéreurs.',
 }
 
 const PARTNER_TYPES = [
   {
     icon: Scale,
     label: 'JURIDIQUE IP',
-    title: 'Partenaire à venir',
-    desc: 'Cabinet juridique spécialisé tech & IP, co-signataire de la dimension I (IP & Droits) du grade AEGRYN.',
+    title: 'Candidatures ouvertes',
+    desc: 'Cabinet juridique spécialisé tech & IP, en support sur la dimension I (IP & Droits) pour les vendeurs et acquéreurs qui le souhaitent.',
     dimension: 'Dimension I — IP & Droits',
   },
   {
     icon: Calculator,
     label: 'EXPERT-COMPTABLE',
-    title: 'Partenaire à venir',
-    desc: 'Cabinet d\'audit ou expert-comptable spécialisé SaaS/tech, co-signataire de la dimension F (Finance) du grade.',
+    title: 'Candidatures ouvertes',
+    desc: 'Cabinet d\'audit ou expert-comptable spécialisé SaaS/tech, en support sur la dimension F (Finance) pour les vendeurs et acquéreurs qui le souhaitent.',
     dimension: 'Dimension F — Finance',
   },
   {
     icon: ShieldCheck,
     label: 'CYBERSÉCURITÉ',
-    title: 'Partenaire à venir',
-    desc: 'Spécialiste cybersécurité accrédité (PASSI ou CREST), co-signataire de la dimension S (Sécurité) du grade.',
+    title: 'Candidatures ouvertes',
+    desc: 'Spécialiste cybersécurité accrédité (PASSI ou CREST), en support sur la dimension S (Sécurité) pour les vendeurs et acquéreurs qui le souhaitent.',
     dimension: 'Dimension S — Sécurité',
   },
 ]
@@ -46,13 +46,13 @@ export default function GradePartnersPage() {
             AEGRYN GRADE
           </p>
           <h1 className="font-sans font-bold text-ag-black leading-[1.05] tracking-[-0.03em] max-w-2xl mb-6" style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}>
-            Les partenaires qui rendent le grade irréfutable
+            Un réseau d'experts en support, pas une obligation
           </h1>
           <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl mb-8">
-            AEGRYN ne certifie pas seul. Chaque rapport de grade co-signé engage des experts indépendants qui attestent par leur signature des conclusions sur chaque dimension auditée.
+            L'AEGRYN Grade est une certification standalone : AEGRYN évalue et note la qualité des actifs tech mis en vente sans dépendre d'un tiers pour émettre son grade. Nos vendeurs se font par ailleurs accompagner de façon indépendante dans leur processus de vente.
           </p>
-          <p className="font-sans text-[13px] text-ag-gray-light italic max-w-xl">
-            La liste de nos partenaires co-signataires sera publiée ici au fur et à mesure des premiers mandats formalisés.
+          <p className="font-sans text-[13px] text-ag-gray-light max-w-xl">
+            Nous restons ouverts aux candidatures d'experts indépendants souhaitant s'adosser à la certification ou rejoindre notre réseau, mobilisable à la demande avant, pendant et après une transaction.
           </p>
         </div>
       </section>
@@ -75,7 +75,7 @@ export default function GradePartnersPage() {
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{p.desc}</p>
                 <div className="mt-auto pt-4 border-t border-ag-border/50">
                   <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-ag-gray-light">
-                    Annonce dès le premier mandat signé
+                    Annonce dès le premier partenariat formalisé
                   </span>
                 </div>
               </div>
@@ -93,13 +93,13 @@ export default function GradePartnersPage() {
               Vous êtes cabinet juridique, expert-comptable ou spécialiste cybersécurité ?
             </h2>
             <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-8">
-              Découvrez comment devenir partenaire co-signataire AEGRYN : accès à un flux régulier d'actifs tech nécessitant votre expertise, visibilité institutionnelle, clientèle qualifiée.
+              Candidatez pour rejoindre le réseau d'experts AEGRYN : accès à un flux régulier d'actifs tech nécessitant votre expertise, visibilité institutionnelle, clientèle qualifiée.
             </p>
             <Link
               href="/alliances?tab=certification"
               className="inline-flex items-center gap-2 bg-ag-black text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-navy transition-colors"
             >
-              Devenir partenaire co-signataire <ArrowUpRight size={13} />
+              Candidater au réseau d'experts <ArrowUpRight size={13} />
             </Link>
           </div>
           <div className="border border-ag-border p-8 bg-ag-white">
@@ -107,7 +107,7 @@ export default function GradePartnersPage() {
             <ul className="flex flex-col gap-4">
               {[
                 'Accès à un flux régulier d\'actifs tech nécessitant votre expertise',
-                'Visibilité en tant que partenaire co-signataire AEGRYN (dès les premiers mandats)',
+                'Visibilité en tant que partenaire du réseau AEGRYN (dès les premiers mandats)',
                 'Clientèle institutionnelle qualifiée — acquéreurs PE, VC, Family Office',
                 'Rémunération définie dans le cadre du partenariat',
               ].map((item, i) => (

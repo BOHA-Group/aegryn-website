@@ -56,13 +56,6 @@ type Principle = {
   desc: string
 }
 
-type AntiquorumRow = {
-  source: string
-  sourceDim: string
-  target: string
-  targetDim: string
-}
-
 type MaturityRuleItem = {
   tier: string
   rule: string
@@ -81,7 +74,6 @@ export function GradingSystemPage() {
   const examples  = t.raw('exampleItems') as ExampleItem[]
   const process   = t.raw('process')  as ProcessStep[]
   const principles = t.raw('principles') as Principle[]
-  const antiquorumTable = t.raw('antiquorumTable') as AntiquorumRow[]
   const refusalConditions = t.raw('refusalConditions') as string[]
   const maturityRules = t.raw('maturityRules') as MaturityRuleItem[]
 
@@ -178,39 +170,6 @@ export function GradingSystemPage() {
                 >
                   {g.grade}
                 </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── ANALOGIE ANTIQUORUM ── */}
-      <section className="py-28 px-6 border-t border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-14 max-w-2xl">
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
-              {t('antiquorumTitle')}
-            </p>
-            <p className="font-sans text-[16px] text-ag-gray leading-relaxed">
-              {t('antiquorumDesc')}
-            </p>
-          </div>
-          <div className="border border-ag-border overflow-x-auto">
-            <div className="grid grid-cols-[1fr_1fr_40px_1fr_1fr] min-w-[760px] border-b border-ag-border bg-ag-light-gray">
-              <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light px-5 py-3 col-span-2">Antiquorum</p>
-              <span />
-              <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex px-5 py-3 col-span-2">AEGRYN</p>
-            </div>
-            {antiquorumTable.map((row, i) => (
-              <div
-                key={i}
-                className="grid grid-cols-[1fr_1fr_40px_1fr_1fr] min-w-[760px] border-b border-ag-border last:border-0 bg-ag-white hover:bg-ag-off-white transition-colors"
-              >
-                <p className="font-mono text-[13px] font-bold text-ag-black px-5 py-4">{row.source}</p>
-                <p className="font-sans text-[12px] text-ag-gray px-4 py-4">{row.sourceDim}</p>
-                <div className="flex items-center justify-center text-ag-gray-light">→</div>
-                <p className="font-mono text-[13px] font-bold text-ag-apex px-5 py-4">{row.target}</p>
-                <p className="font-sans text-[12px] text-ag-gray px-4 py-4">{row.targetDim}</p>
               </div>
             ))}
           </div>
