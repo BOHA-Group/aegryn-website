@@ -28,7 +28,7 @@ export default async function AdminPartnerDetailPage({
 
   const [{ data: certs }, { data: refs }, { data: comms }] = await Promise.all([
     supa.from('partner_certifications').select('*, assets(name, official_grade)').eq('partner_id', id).order('created_at', { ascending: false }),
-    supa.from('referrals').select('*').eq('partner_id', id).order('created_at', { ascending: false }),
+    supa.from('introductions').select('*').eq('partner_id', id).order('created_at', { ascending: false }),
     supa.from('commissions').select('*').eq('partner_id', id).order('created_at', { ascending: false }),
   ])
 
@@ -83,10 +83,10 @@ export default async function AdminPartnerDetailPage({
                   {(refs ?? []).map((r: Record<string, unknown>) => (
                     <div key={String(r.id)} className="px-6 py-4 flex items-center justify-between">
                       <div>
-                        <p className="font-semibold text-gray-800 text-[13px]">{String(r.contact_name)} — {String(r.type) === 'asset' ? 'Actif' : 'Acquéreur'}</p>
+                        <p className="font-semibold text-gray-800 text-[13px]">{String(r.contact_name)} — {String(r.introduction_type) === 'asset' ? 'Actif' : 'Acquéreur'}</p>
                         <p className="text-[11px] text-gray-400">{String(r.contact_email)}</p>
                       </div>
-                      <span className="px-2 py-0.5 text-[10px] uppercase font-semibold bg-gray-100 text-gray-700">{String(r.status)}</span>
+                      <span className="px-2 py-0.5 text-[10px] uppercase font-semibold bg-gray-100 text-gray-700">{String(r.introduction_status)}</span>
                     </div>
                   ))}
                 </div>

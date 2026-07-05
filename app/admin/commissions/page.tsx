@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 }
 
 const TYPE_LABEL: Record<string, string> = {
-  cosignature:     'Co-signature',
-  referral_asset:  'Apport actif',
-  referral_buyer:  'Apport acquéreur',
+  cosignature:         'Co-signature',
+  introduction_asset:  'Apport actif',
+  introduction_buyer:  'Apport acquéreur',
 }
 
 const STATUS_FLOW = ['pending', 'to_invoice', 'invoiced', 'paid'] as const

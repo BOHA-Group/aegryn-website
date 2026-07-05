@@ -31,7 +31,7 @@ export default async function AdminPartnersPage({
   const partnerIds = rows.map(r => String(r.id))
   const [{ data: certs }, { data: refs }, { data: comms }] = await Promise.all([
     partnerIds.length ? supa.from('partner_certifications').select('partner_id, status').in('partner_id', partnerIds) : Promise.resolve({ data: [] }),
-    partnerIds.length ? supa.from('referrals').select('partner_id, status').in('partner_id', partnerIds) : Promise.resolve({ data: [] }),
+    partnerIds.length ? supa.from('introductions').select('partner_id, introduction_status').in('partner_id', partnerIds) : Promise.resolve({ data: [] }),
     partnerIds.length ? supa.from('commissions').select('partner_id, amount_chf, status').in('partner_id', partnerIds) : Promise.resolve({ data: [] }),
   ])
 
@@ -41,7 +41,7 @@ export default async function AdminPartnersPage({
     const m = (comms ?? []).filter((x: Record<string, unknown>) => x.partner_id === id)
     return {
       pendingCerts: c.filter((x: Record<string, unknown>) => x.status === 'assigned' || x.status === 'in_review').length,
-      referrals: r.length,
+      introductions: r.length,
       commissionsDue: m.filter((x: Record<string, unknown>) => x.status !== 'paid').reduce((s: number, x: Record<string, unknown>) => s + Number(x.amount_chf ?? 0), 0),
     }
   }
@@ -90,7 +90,7 @@ export default async function AdminPartnersPage({
                       <td className="px-4 py-3 font-semibold text-gray-800">{String(r.full_name ?? '—')}</td>
                       <td className="px-4 py-3 text-gray-500">{String(r.email ?? '—')}</td>
                       <td className="px-4 py-3 font-mono text-[11px]">{s.pendingCerts}</td>
-                      <td className="px-4 py-3 font-mono text-[11px]">{s.referrals}</td>
+                      <td className="px-4 py-3 font-mono text-[11px]">{s.introductions}</td>
                       <td className="px-4 py-3 font-mono text-[11px]">{s.commissionsDue.toLocaleString('fr-CH')} CHF</td>
                       <td className="px-4 py-3">
                         <Link href={`/admin/partners/${r.id}${tokenQs}`}

@@ -8,8 +8,8 @@
 --
 -- Ajoute :
 --   • profiles.roles (multi-rôle : buyer/seller/partner/admin/super_admin)
---   • partner_certifications  — co-signature manuelle par dimension
---   • referrals               — apports d'affaires partenaires
+--   • partner_certifications  — co-signature manuelle par dimension (score + sous-codes CIFS)
+--   • introductions           — apports d'affaires partenaires (vocabulaire M&A, pas "referral")
 --   • commissions             — commissions dues/versées (co-signature + apports)
 --   • kyc_documents           — documents KYC unitaires (buyer + seller)
 --   • transactions            — pipeline PTT (Promesse-To-Transfer) manuel
@@ -76,39 +76,41 @@ CREATE TRIGGER trg_partner_certifications_updated_at
   BEFORE UPDATE ON public.partner_certifications
   FOR EACH ROW EXECUTE FUNCTION public.set_profiles_updated_at();
 
--- ── 3. Apports d'affaires (referrals) ────────────────────────────────────
-CREATE TABLE IF NOT EXISTS public.referrals (
-  id              UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
-  partner_id      UUID        NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
-  type            TEXT        NOT NULL CHECK (type IN ('asset', 'buyer')),
+-- ── 3. Apports d'affaires (introductions) ────────────────────────────────
+-- Vocabulaire M&A/PE institutionnel ('introduction' / 'deal introduction' / 'origination')
+-- plutôt que 'referral', registre SaaS/marketing (parrainage) hors de propos ici.
+CREATE TABLE IF NOT EXISTS public.introductions (
+  id                  UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
+  partner_id          UUID        NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+  introduction_type   TEXT        NOT NULL CHECK (introduction_type IN ('asset', 'buyer')),
 
-  contact_name    TEXT        NOT NULL,
-  contact_email   TEXT        NOT NULL,
-  details         JSONB       NOT NULL DEFAULT '{}',  -- champs libres selon type
-  context_note    TEXT,
+  contact_name        TEXT        NOT NULL,
+  contact_email       TEXT        NOT NULL,
+  details             JSONB       NOT NULL DEFAULT '{}',  -- champs libres selon introduction_type
+  context_note        TEXT,
 
-  status          TEXT        NOT NULL DEFAULT 'new'
-                              CHECK (status IN ('new', 'contacted', 'qualified', 'closed_won', 'closed_lost')),
-  admin_note      TEXT,
+  introduction_status TEXT        NOT NULL DEFAULT 'new'
+                                  CHECK (introduction_status IN ('new', 'contacted', 'qualified', 'closed_won', 'closed_lost')),
+  admin_note          TEXT,
 
-  created_at      TIMESTAMPTZ NOT NULL DEFAULT now(),
-  updated_at      TIMESTAMPTZ NOT NULL DEFAULT now()
+  created_at          TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at          TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
-CREATE INDEX IF NOT EXISTS idx_referrals_partner ON public.referrals(partner_id, status);
+CREATE INDEX IF NOT EXISTS idx_introductions_partner ON public.introductions(partner_id, introduction_status);
 
-ALTER TABLE public.referrals ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.introductions ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY "service_role_referrals"
-  ON public.referrals FOR ALL
+CREATE POLICY "service_role_introductions"
+  ON public.introductions FOR ALL
   USING (auth.role() = 'service_role');
 
-CREATE POLICY "partners_own_referrals"
-  ON public.referrals FOR SELECT
+CREATE POLICY "partners_own_introductions"
+  ON public.introductions FOR SELECT
   USING (auth.uid() = partner_id);
 
-CREATE TRIGGER trg_referrals_updated_at
-  BEFORE UPDATE ON public.referrals
+CREATE TRIGGER trg_introductions_updated_at
+  BEFORE UPDATE ON public.introductions
   FOR EACH ROW EXECUTE FUNCTION public.set_profiles_updated_at();
 
 -- ── 4. Commissions (co-signature + apports) ──────────────────────────────
@@ -116,9 +118,9 @@ CREATE TABLE IF NOT EXISTS public.commissions (
   id                UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
   partner_id        UUID        NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
   type              TEXT        NOT NULL
-                                CHECK (type IN ('cosignature', 'referral_asset', 'referral_buyer')),
+                                CHECK (type IN ('cosignature', 'introduction_asset', 'introduction_buyer')),
 
-  referral_id       UUID        REFERENCES public.referrals(id) ON DELETE SET NULL,
+  introduction_id   UUID        REFERENCES public.introductions(id) ON DELETE SET NULL,
   certification_id  UUID        REFERENCES public.partner_certifications(id) ON DELETE SET NULL,
   transaction_id    UUID,       -- FK ajoutée après création de la table transactions
   asset_id          UUID        REFERENCES public.assets(id) ON DELETE SET NULL,
@@ -219,8 +221,13 @@ CREATE TABLE IF NOT EXISTS public.transactions (
   -- Séquestre — géré manuellement par une banque/fiduciaire partenaire externe
   escrow_amount_chf   NUMERIC(14,2),
   escrow_provider     TEXT,        -- nom de la banque/fiduciaire partenaire
+  escrow_bank_iban    TEXT,        -- IBAN du compte séquestre chez le partenaire externe
   escrow_reference    TEXT,
   escrow_confirmed_at TIMESTAMPTZ,
+  -- Libération à double instruction : admin AEGRYN + partie externe (notaire/banque). Les
+  -- deux validations sont requises avant de renseigner escrow_released_at (contrainte applicative).
+  escrow_release_validated_admin    BOOLEAN NOT NULL DEFAULT false,
+  escrow_release_validated_external BOOLEAN NOT NULL DEFAULT false,
   escrow_released_at  TIMESTAMPTZ,
   escrow_note         TEXT,
 
@@ -285,6 +292,9 @@ CREATE TABLE IF NOT EXISTS public.user_notifications (
   title        TEXT        NOT NULL,
   body         TEXT,
   link         TEXT,
+  -- Données contextuelles structurées par type (asset_id, amount, status, ...) exploitables
+  -- directement par le frontend sans reparser le texte de la notification.
+  payload      JSONB       NOT NULL DEFAULT '{}',
   read_at      TIMESTAMPTZ,
   created_at   TIMESTAMPTZ NOT NULL DEFAULT now()
 );
