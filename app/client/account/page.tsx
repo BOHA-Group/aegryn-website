@@ -31,11 +31,12 @@ export default async function AccountPage() {
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, roles, created_at')
+    .select('full_name, roles, created_at, email_notifications_enabled')
     .eq('id', user.id)
     .single()
 
   const roles: string[] = Array.isArray(profile?.roles) ? profile.roles : []
+  const emailNotifEnabled = profile?.email_notifications_enabled !== false
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
@@ -77,6 +78,37 @@ export default async function AccountPage() {
           currentName={profile?.full_name ?? ''}
           currentEmail={user.email ?? ''}
         />
+
+        {/* Préférences email */}
+        <div className="bg-white border border-gray-200 p-5 mt-4">
+          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">Notifications email</p>
+          {emailNotifEnabled ? (
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="font-sans text-[13px] text-gray-700">Emails de l&apos;équipe AEGRYN activés</p>
+                <p className="font-sans text-[11px] text-gray-400 mt-0.5">Mises à jour dossier, alertes transactions, actualités.</p>
+              </div>
+              <form action="/api/client/account/email-unsubscribe" method="POST">
+                <input type="hidden" name="uid" value={user.id} />
+                <button type="submit"
+                  className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-red-500 border border-gray-200 hover:border-red-200 px-3 py-1.5 transition-colors shrink-0">
+                  Se désabonner
+                </button>
+              </form>
+            </div>
+          ) : (
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="font-sans text-[13px] text-red-500">Notifications email désactivées</p>
+                <p className="font-sans text-[11px] text-gray-400 mt-0.5">Vous ne recevez plus les emails de l&apos;équipe AEGRYN.</p>
+              </div>
+              <a href="/api/client/account/email-resubscribe"
+                className="font-mono text-[10px] uppercase tracking-widest text-emerald-600 border border-emerald-200 px-3 py-1.5 hover:bg-emerald-50 transition-colors shrink-0">
+                Réactiver
+              </a>
+            </div>
+          )}
+        </div>
 
         {/* Infos compte */}
         <div className="bg-white border border-gray-200 p-5 mt-6">

@@ -138,6 +138,14 @@ export default async function AdminIndexPage({
       badgeLabel: '',
       color:   'border-gray-200 hover:border-gray-400',
     },
+    {
+      href:    `/admin/notifications${tokenQs}`,
+      title:   'Notifications Email',
+      desc:    'Broadcast email + in-app vers acquéreurs, cédants et partenaires',
+      badge:   null,
+      badgeLabel: '',
+      color:   'border-violet-200 hover:border-violet-400',
+    },
   ]
 
   return (
