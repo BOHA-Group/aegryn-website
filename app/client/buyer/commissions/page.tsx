@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 type BuyerCommission = {
   id: string
   transaction_id: string | null
-  amount: number
-  currency: string
+  amount_chf: number | null
+  eligible_at: string | null
   status: string
   created_at: string
   asset_id: string | null
@@ -21,14 +21,15 @@ type BuyerCommission = {
 }
 
 const STATUS_CFG: Record<string, { label: string; renderIcon: () => React.ReactNode; color: string }> = {
-  pending:   { label: 'À régler',         renderIcon: () => <Clock         size={13} className="text-amber-500"   />, color: 'text-amber-500'   },
-  invoiced:  { label: 'Facturée',         renderIcon: () => <AlertCircle   size={13} className="text-blue-500"    />, color: 'text-blue-500'    },
-  paid:      { label: 'Réglée',           renderIcon: () => <CheckCircle2  size={13} className="text-emerald-500" />, color: 'text-emerald-500' },
-  disputed:  { label: 'Contestée',        renderIcon: () => <AlertCircle   size={13} className="text-red-500"     />, color: 'text-red-500'     },
+  pending:    { label: 'À régler',    renderIcon: () => <Clock        size={13} className="text-amber-500"   />, color: 'text-amber-500'   },
+  to_invoice: { label: 'À facturer', renderIcon: () => <AlertCircle  size={13} className="text-blue-400"    />, color: 'text-blue-400'    },
+  invoiced:   { label: 'Facturée',   renderIcon: () => <AlertCircle  size={13} className="text-blue-500"    />, color: 'text-blue-500'    },
+  paid:       { label: 'Réglée',     renderIcon: () => <CheckCircle2 size={13} className="text-emerald-500" />, color: 'text-emerald-500' },
 }
 
-function fmtAmount(amount: number, currency: string) {
-  return new Intl.NumberFormat('fr-CH', { style: 'currency', currency: currency ?? 'CHF', maximumFractionDigits: 0 }).format(amount)
+function fmtAmount(amount: number | null) {
+  if (amount == null) return '—'
+  return new Intl.NumberFormat('fr-CH', { style: 'currency', currency: 'CHF', maximumFractionDigits: 0 }).format(amount)
 }
 
 function fmtDate(d: string) {
@@ -42,7 +43,7 @@ export default async function BuyerCommissionsPage() {
   const supa = createServiceClient()
   const { data } = await supa
     .from('buyer_commission_dues')
-    .select('id, transaction_id, amount, currency, status, created_at, asset_id, transaction_stage')
+    .select('id, transaction_id, amount_chf, eligible_at, status, created_at, asset_id, transaction_stage')
     .eq('buyer_id', user.id)
     .order('created_at', { ascending: false })
 
@@ -50,7 +51,7 @@ export default async function BuyerCommissionsPage() {
 
   const totalDue = commissions
     .filter(c => c.status !== 'paid')
-    .reduce((s, c) => s + (c.amount ?? 0), 0)
+    .reduce((s, c) => s + (c.amount_chf ?? 0), 0)
 
   return (
     <div className="p-8 max-w-3xl">
@@ -67,7 +68,7 @@ export default async function BuyerCommissionsPage() {
         <div className="bg-amber-50 border border-amber-200 p-4 mb-6 flex items-center justify-between">
           <div>
             <p className="font-mono text-[9px] uppercase tracking-widest text-amber-600 mb-0.5">Total restant dû</p>
-            <p className="font-sans font-bold text-[22px] text-amber-700">{fmtAmount(totalDue, 'CHF')}</p>
+            <p className="font-sans font-bold text-[22px] text-amber-700">{fmtAmount(totalDue)}</p>
           </div>
           <p className="font-sans text-[11px] text-amber-600 max-w-[200px] text-right">
             Contactez <a href="mailto:finance@aegryn.com" className="underline">finance@aegryn.com</a> pour régulariser.
@@ -103,9 +104,15 @@ export default async function BuyerCommissionsPage() {
                     )}
                   </div>
                   <p className="font-sans font-bold text-[18px] text-gray-900 shrink-0">
-                    {fmtAmount(c.amount, c.currency)}
+                    {fmtAmount(c.amount_chf)}
                   </p>
                 </div>
+
+                {c.eligible_at && (
+                  <p className="font-sans text-[11px] text-gray-400 mb-2">
+                    Éligible depuis le {fmtDate(c.eligible_at)}
+                  </p>
+                )}
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5">

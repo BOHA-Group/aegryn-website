@@ -79,13 +79,13 @@ CREATE OR REPLACE VIEW public.buyer_commission_dues AS
     c.id,
     c.transaction_id,
     c.buyer_id,
-    c.amount,
-    c.currency,
+    c.amount_chf,
+    c.eligible_at,
     c.status,
     c.commission_type,
     c.created_at,
     c.updated_at,
-    t.asset_id,
+    c.asset_id,
     t.stage AS transaction_stage
   FROM public.commissions c
   LEFT JOIN public.transactions t ON t.id = c.transaction_id
