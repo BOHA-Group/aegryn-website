@@ -86,7 +86,7 @@ CREATE OR REPLACE VIEW public.buyer_commission_dues AS
     c.created_at,
     c.updated_at,
     c.asset_id,
-    t.stage AS transaction_stage
+    t.status AS transaction_stage
   FROM public.commissions c
   LEFT JOIN public.transactions t ON t.id = c.transaction_id
   WHERE c.commission_type = 'buyer_transaction_fee'
