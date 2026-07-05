@@ -11,7 +11,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getUser }             from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 
-export async function GET(req: NextRequest) {
+export async function GET(_req: NextRequest) {
   const user = await getUser()
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 

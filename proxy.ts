@@ -43,7 +43,7 @@ const intlMiddleware = createIntlMiddleware(routing)
 function getSupabaseUser(req: NextRequest): { hasSession: boolean; res: NextResponse } {
   const res = NextResponse.next({ request: req })
 
-  const supabase = createServerClient(
+  const _supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {

@@ -6,7 +6,6 @@
  */
 import { redirect }           from 'next/navigation'
 import Link                   from 'next/link'
-import { getTranslations }    from 'next-intl/server'
 import { getUser }            from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { Lock, ExternalLink, Clock, XCircle, CheckCircle, Hourglass } from 'lucide-react'

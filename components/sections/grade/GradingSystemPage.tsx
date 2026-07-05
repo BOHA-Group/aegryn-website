@@ -6,7 +6,7 @@ import { useTranslations }     from 'next-intl'
 import { ArrowUpRight, Check } from 'lucide-react'
 import { gsap }                from '@/lib/gsap'
 
-const GRADE_COLORS: Record<string, string> = {
+const _GRADE_COLORS: Record<string, string> = {
   '#5ADDA4': '#5ADDA4',
   '#C9A84C': '#C9A84C',
   '#9BA8B0': '#9BA8B0',

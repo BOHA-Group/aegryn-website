@@ -1,9 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useTranslations }     from 'next-intl'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
-import Link                    from 'next/link'
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 
 const TAB_KEYS = ['overview', 'certification', 'sequestre', 'dealflow', 'technique', 'assurance', 'apply'] as const
@@ -11,7 +10,7 @@ type TabKey = typeof TAB_KEYS[number]
 
 const TYPE_KEYS = ['certification', 'sequestre', 'dealflow', 'technique', 'assurance'] as const
 
-const TYPE_ACCENT: Record<string, string> = {
+const _TYPE_ACCENT: Record<string, string> = {
   certification: 'border-ag-apex',
   sequestre:     'border-ag-grade-aa',
   dealflow:      'border-ag-grade-a',

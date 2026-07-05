@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
-import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { Users, ArrowUpRight, Plus } from 'lucide-react'
+import { Users, Plus } from 'lucide-react'
 import NewIntroductionForm from './NewIntroductionForm'
 
 export const metadata: Metadata = {
@@ -46,7 +45,7 @@ export default async function PartnerIntroductionsPage() {
     .eq('partner_id', user.id)
     .order('created_at', { ascending: false })
 
-  const [showForm, setShowForm] = [false, () => {}]
+  const [_showForm, setShowForm] = [false, () => {}]
   void setShowForm
 
   return (

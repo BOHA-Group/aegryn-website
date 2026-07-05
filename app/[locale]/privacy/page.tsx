@@ -1,7 +1,6 @@
 import { getTranslations }    from 'next-intl/server'
 import type { Metadata }        from 'next'
 import Link                     from 'next/link'
-import { ArrowUpRight }         from 'lucide-react'
 
 type Props = { params: Promise<{ locale: string }> }
 

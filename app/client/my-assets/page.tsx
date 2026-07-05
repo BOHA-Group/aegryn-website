@@ -178,7 +178,7 @@ export default async function ClientMyAssetsPage() {
                         {STATUS_STEPS.map((step, i) => {
                           const done    = i < stepIdx
                           const current = i === stepIdx
-                          const future  = i > stepIdx
+                          const _future  = i > stepIdx
                           return (
                             <div key={step.key} className="flex-1 flex flex-col items-center relative">
                               {/* Connecteur */}

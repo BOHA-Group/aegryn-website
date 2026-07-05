@@ -43,7 +43,6 @@ export default function CertificationForm({ certId, currentStatus }: Props) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
-  const dimension = certId.length > 8 ? 'ip' : 'ip'
 
   function toggleSubcode(code: string) {
     setSelectedSubcodes(prev =>

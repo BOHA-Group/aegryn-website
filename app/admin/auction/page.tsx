@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function fmt(n: number | null | undefined, suffix = '') {
   if (n == null) return '—'
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)} M${suffix}`

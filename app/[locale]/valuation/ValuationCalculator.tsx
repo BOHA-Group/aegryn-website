@@ -10,13 +10,12 @@ import {
 import {
   type FinanceData, type CodeData, type IPData, type SecurityData,
   type ValuationResult,
-  scoreFinance, scoreCode, scoreIP, scoreSecurity,
-  estimateGrade, runValuation, fmtEur, preRevenueRange,
+  runValuation, fmtEur, preRevenueRange,
 } from '@/lib/valuationEngine'
 
 /* ─── Style constants ────────────────────────────────────── */
 const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
-const selectCls = inputCls + ' appearance-none'
+const _selectCls = inputCls + ' appearance-none'
 const labelCls  = 'block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-2'
 const hintCls   = 'font-sans text-[10px] text-ag-gray-light mt-1 leading-relaxed'
 
@@ -66,6 +65,7 @@ function ScoreBar({ score, max = 25 }: { score: number; max?: number }) {
 }
 
 /* ─── Grade badge ────────────────────────────────────────── */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function GradeBadge({ grade, colorClass }: { grade: string; colorClass: string }) {
   return (
     <div className={`inline-flex items-center justify-center w-24 h-24 border-2 ${
@@ -81,7 +81,7 @@ function GradeBadge({ grade, colorClass }: { grade: string; colorClass: string }
 /* ─── Main component ─────────────────────────────────────── */
 export default function ValuationCalculator() {
   const t    = useTranslations('valuation')
-  const tNav = useTranslations('nav')
+  const _tNav = useTranslations('nav')
 
   const STEPS = ['finance', 'code', 'ip', 'security'] as const
   type Step = typeof STEPS[number] | 'result'

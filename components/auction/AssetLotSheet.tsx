@@ -37,6 +37,7 @@ function Kicker({ children }: { children: React.ReactNode }) {
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function SectionHeading({ numeral, title, icon: Icon }: {
   numeral?: string; title: string; icon?: LucideIcon
 }) {
@@ -196,7 +197,7 @@ function TargetGrid({ targets }: { targets: TargetItem[] }) {
   )
 }
 
-function CollapsibleSection({ numeral, title, icon: Icon, defaultOpen = true, children }: {
+function CollapsibleSection({ numeral, title, icon: _icon, defaultOpen = true, children }: {
   numeral?: string; title: string; icon?: LucideIcon
   defaultOpen?: boolean; children: React.ReactNode
 }) {

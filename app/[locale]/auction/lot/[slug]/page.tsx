@@ -137,7 +137,7 @@ export default async function AuctionLotPage({ params }: Props) {
 
 /* ── Écrans de garde ── */
 function AccessDeniedScreen({
-  locale, slug, state, t,
+  locale, slug: _slug, state, t,
 }: {
   locale: string; slug: string
   state: Exclude<AccessState, 'ok'>
