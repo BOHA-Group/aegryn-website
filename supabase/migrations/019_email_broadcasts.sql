@@ -60,15 +60,7 @@ CREATE INDEX IF NOT EXISTS email_broadcasts_target_idx   ON public.email_broadca
 CREATE INDEX IF NOT EXISTS email_broadcasts_status_idx   ON public.email_broadcasts (status);
 CREATE INDEX IF NOT EXISTS email_broadcasts_created_idx  ON public.email_broadcasts (created_at DESC);
 
--- ── 3. dismissed_at sur user_notifications (archivage côté client) ──────────
--- Permet aux utilisateurs de masquer une notification sans la supprimer (pattern Subblink)
-ALTER TABLE public.user_notifications
-  ADD COLUMN IF NOT EXISTS dismissed_at TIMESTAMPTZ;
-
-COMMENT ON COLUMN public.user_notifications.dismissed_at IS
-  'Horodatage du masquage côté client. NULL = visible. Non-null = archivé (ne s''affiche plus).';
-
--- ── 4. RLS — table réservée aux admins ──────────────────────────────────────
+-- ── 3. RLS — table réservée aux admins ──────────────────────────────────────
 ALTER TABLE public.email_broadcasts ENABLE ROW LEVEL SECURITY;
 
 -- Seul le service-role (admin backend) peut insérer / lire

@@ -2,16 +2,17 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LayoutDashboard, BookOpen, Gavel, ArrowRightLeft, ShieldCheck, Bell, UserCircle } from 'lucide-react'
+import { LayoutDashboard, BookOpen, Gavel, ArrowRightLeft, ShieldCheck, Bell, UserCircle, Receipt } from 'lucide-react'
 
 const NAV_ITEMS = [
-  { href: '/client/buyer',               label: 'Tableau de bord', icon: LayoutDashboard },
-  { href: '/client/buyer/catalogue',     label: 'Catalogue',       icon: BookOpen },
-  { href: '/client/buyer/offres',        label: 'Mes offres',      icon: Gavel },
-  { href: '/client/buyer/transactions',  label: 'Transactions',    icon: ArrowRightLeft },
-  { href: '/client/buyer/kyc',           label: 'KYC',             icon: ShieldCheck },
-  { href: '/client/buyer/notifications', label: 'Notifications',   icon: Bell },
-  { href: '/client/account',             label: 'Mon compte',      icon: UserCircle },
+  { href: '/client/buyer',               label: 'Tableau de bord',    icon: LayoutDashboard },
+  { href: '/client/buyer/catalogue',     label: 'Catalogue',          icon: BookOpen },
+  { href: '/client/buyer/offres',        label: 'Mes offres',         icon: Gavel },
+  { href: '/client/buyer/transactions',  label: 'Transactions',       icon: ArrowRightLeft },
+  { href: '/client/buyer/commissions',   label: 'Commissions dues',   icon: Receipt },
+  { href: '/client/buyer/kyc',           label: 'KYC',                icon: ShieldCheck },
+  { href: '/client/buyer/notifications', label: 'Notifications',      icon: Bell },
+  { href: '/client/account',             label: 'Mon compte',         icon: UserCircle },
 ]
 
 export default function BuyerNav({ unreadCount }: { unreadCount: number }) {
