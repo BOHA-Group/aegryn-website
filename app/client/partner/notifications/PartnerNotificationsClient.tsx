@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Bell, CheckCheck, ArrowUpRight } from 'lucide-react'
+import { Bell, CheckCheck, ArrowUpRight, X } from 'lucide-react'
 import type { Notification } from './page'
 
 const TYPE_ICON_MAP: Record<string, string> = {
@@ -23,10 +23,12 @@ function fmtDate(d: string) {
 }
 
 export default function PartnerNotificationsClient({ notifications }: { notifications: Notification[] }) {
-  const [items, setItems] = useState(notifications)
-  const [markingAll, setMarkingAll] = useState(false)
+  const [items, setItems]               = useState(notifications)
+  const [markingAll, setMarkingAll]     = useState(false)
+  const [dismissingAll, setDismissingAll] = useState(false)
 
   const unreadCount = items.filter(n => !n.read_at).length
+  const readCount   = items.filter(n =>  n.read_at).length
 
   async function markAllRead() {
     setMarkingAll(true)
@@ -47,23 +49,51 @@ export default function PartnerNotificationsClient({ notifications }: { notifica
     setItems(prev => prev.map(n => n.id === id ? { ...n, read_at: new Date().toISOString() } : n))
   }
 
+  async function dismiss(id: string) {
+    await fetch('/api/client/notifications/dismiss', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id }),
+    })
+    setItems(prev => prev.filter(n => n.id !== id))
+  }
+
+  async function dismissAllRead() {
+    setDismissingAll(true)
+    try {
+      await fetch('/api/client/notifications/dismiss', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ all: true }),
+      })
+      setItems(prev => prev.filter(n => !n.read_at))
+    } finally {
+      setDismissingAll(false)
+    }
+  }
+
   return (
     <div>
-      {unreadCount > 0 && (
-        <div className="flex items-center justify-between mb-4">
-          <p className="font-sans text-[12px] text-gray-500">
-            <strong>{unreadCount}</strong> non lue{unreadCount > 1 ? 's' : ''}
-          </p>
-          <button
-            onClick={markAllRead}
-            disabled={markingAll}
-            className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors disabled:opacity-40"
-          >
-            <CheckCheck size={12} />
-            Tout marquer comme lu
-          </button>
+      <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+        <p className="font-sans text-[12px] text-gray-500">
+          {unreadCount > 0 && <><strong>{unreadCount}</strong> non lue{unreadCount > 1 ? 's' : ''} · </>}
+          {items.length} au total
+        </p>
+        <div className="flex items-center gap-3">
+          {unreadCount > 0 && (
+            <button onClick={markAllRead} disabled={markingAll}
+              className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors disabled:opacity-40">
+              <CheckCheck size={12} /> Tout lire
+            </button>
+          )}
+          {readCount > 0 && (
+            <button onClick={dismissAllRead} disabled={dismissingAll}
+              className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-gray-300 hover:text-gray-500 transition-colors disabled:opacity-40">
+              <X size={12} /> Archiver les lues
+            </button>
+          )}
         </div>
-      )}
+      </div>
 
       <div className="flex flex-col gap-2">
         {items.map(n => (
@@ -84,7 +114,13 @@ export default function PartnerNotificationsClient({ notifications }: { notifica
                 <p className={`font-sans text-[13px] leading-tight ${!n.read_at ? 'font-semibold text-gray-900' : 'font-medium text-gray-700'}`}>
                   {n.title}
                 </p>
-                {!n.read_at && <span className="shrink-0 w-2 h-2 bg-blue-500 rounded-full mt-1" />}
+                <div className="flex items-center gap-1.5 shrink-0">
+                  {!n.read_at && <span className="w-2 h-2 bg-blue-500 rounded-full mt-1" />}
+                  <button onClick={(e) => { e.stopPropagation(); dismiss(n.id) }}
+                    className="text-gray-200 hover:text-gray-500 transition-colors mt-0.5" title="Archiver">
+                    <X size={12} />
+                  </button>
+                </div>
               </div>
               {n.body && (
                 <p className="font-sans text-[12px] text-gray-500 leading-relaxed mb-2">{n.body}</p>

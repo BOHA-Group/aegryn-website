@@ -22,8 +22,16 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-  const body = await req.json().catch(() => ({}))
-  const uid  = body?.uid as string | undefined
+  let uid: string | null = null
+
+  const ct = req.headers.get('content-type') ?? ''
+  if (ct.includes('application/x-www-form-urlencoded')) {
+    const text = await req.text()
+    uid = new URLSearchParams(text).get('uid')
+  } else {
+    const body = await req.json().catch(() => ({}))
+    uid = (body?.uid as string) ?? null
+  }
 
   if (!uid) return NextResponse.json({ error: 'uid requis' }, { status: 400 })
 
@@ -34,5 +42,6 @@ export async function POST(req: NextRequest) {
     .eq('id', uid)
 
   if (error) return NextResponse.json({ error: 'Update failed' }, { status: 500 })
-  return NextResponse.json({ ok: true })
+
+  return NextResponse.redirect(new URL('/client/account?unsubscribed=1', req.url))
 }

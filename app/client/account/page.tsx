@@ -141,11 +141,26 @@ export default async function AccountPage() {
           </form>
         </div>
 
-        {/* Info RGPD */}
-        <p className="font-sans text-[11px] text-gray-400 mt-8 leading-relaxed">
-          Pour demander la suppression de votre compte et de toutes vos données, contactez{' '}
-          <a href="mailto:privacy@aegryn.com" className="text-ag-navy underline">privacy@aegryn.com</a>.
-        </p>
+        {/* RGPD — export + contact */}
+        <div className="bg-white border border-gray-200 p-5 mt-4">
+          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">Données personnelles</p>
+          <div className="flex items-start justify-between gap-4 mb-4">
+            <div>
+              <p className="font-sans text-[13px] text-gray-700">Exporter mes données</p>
+              <p className="font-sans text-[11px] text-gray-400 mt-0.5">
+                Art. 20 RGPD / Art. 28 nLPD — fichier JSON téléchargeable.
+              </p>
+            </div>
+            <a href="/api/client/account/export"
+              className="font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0">
+              Télécharger
+            </a>
+          </div>
+          <p className="font-sans text-[11px] text-gray-400 leading-relaxed border-t border-gray-100 pt-3">
+            Pour demander la suppression ou l&apos;anonymisation de votre compte, contactez{' '}
+            <a href="mailto:privacy@aegryn.com" className="text-ag-navy underline">privacy@aegryn.com</a>.
+          </p>
+        </div>
       </div>
     </div>
   )

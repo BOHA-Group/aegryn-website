@@ -18,6 +18,7 @@ export type Notification = {
   link: string | null
   payload: Record<string, unknown>
   read_at: string | null
+  dismissed_at: string | null
   created_at: string
 }
 
@@ -28,8 +29,9 @@ export default async function SellerNotificationsPage() {
   const supa = createServiceClient()
   const { data } = await supa
     .from('user_notifications')
-    .select('id, type, title, body, link, payload, read_at, created_at')
+    .select('id, type, title, body, link, payload, read_at, dismissed_at, created_at')
     .eq('user_id', user.id)
+    .is('dismissed_at', null)
     .order('created_at', { ascending: false })
     .limit(50)
 
