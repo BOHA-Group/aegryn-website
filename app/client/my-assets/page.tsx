@@ -4,6 +4,7 @@ import Link                   from 'next/link'
 import { ArrowUpRight, LogOut } from 'lucide-react'
 import { getUser }            from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
+import DeleteAccountButton    from './DeleteAccountButton'
 
 export const metadata: Metadata = {
   title: 'Mes actifs — Espace client AEGRYN',
@@ -247,6 +248,11 @@ export default async function ClientMyAssetsPage() {
             </Link>
           </div>
         )}
+
+        {/* Zone de danger — suppression de compte (RGPD) */}
+        <div className="mt-16 pt-8 border-t border-gray-200">
+          <DeleteAccountButton />
+        </div>
 
       </div>
     </main>
