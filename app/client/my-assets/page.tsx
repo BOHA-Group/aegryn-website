@@ -43,6 +43,19 @@ export default async function ClientMyAssetsPage() {
 
   const supa = createServiceClient()
 
+  /* Dispatcher de rôles — redirige vers l'espace approprié */
+  const { data: profile } = await supa
+    .from('profiles')
+    .select('roles')
+    .eq('id', user.id)
+    .single()
+
+  const roles = (profile?.roles ?? []) as string[]
+  if (roles.includes('admin') || roles.includes('super_admin')) redirect('/admin')
+  if (roles.includes('buyer'))   redirect('/client/buyer')
+  if (roles.includes('partner')) redirect('/client/partner')
+  // seller → reste sur cette page (my-assets legacy)
+
   /* Fetch actifs du vendeur par email (seller_uid pas encore lié pour les anciens) */
   const { data: byEmail } = await supa
     .from('assets')

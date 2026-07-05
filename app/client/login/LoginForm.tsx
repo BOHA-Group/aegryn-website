@@ -34,7 +34,26 @@ export default function LoginForm() {
         return
       }
 
-      router.push('/client/my-assets')
+      // Récupérer les rôles via l'API pour rediriger vers le bon espace
+      try {
+        const res = await fetch('/api/client/me/roles')
+        if (res.ok) {
+          const { roles } = await res.json() as { roles: string[] }
+          if (roles.includes('admin') || roles.includes('super_admin')) {
+            router.push('/admin')
+          } else if (roles.includes('buyer')) {
+            router.push('/client/buyer')
+          } else if (roles.includes('partner')) {
+            router.push('/client/partner')
+          } else {
+            router.push('/client/my-assets')
+          }
+        } else {
+          router.push('/client/my-assets')
+        }
+      } catch {
+        router.push('/client/my-assets')
+      }
       router.refresh()
     } catch {
       setError(t('errorNetwork'))
