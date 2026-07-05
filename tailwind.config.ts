@@ -28,6 +28,7 @@ const config: Config = {
           /* ── Brand accent */
           navy:        '#0A1D2E',
           apex:        '#5ADDA4',
+          'apex-ink':  '#0C7A52',   /* Apex foncé — texte sur fond blanc/beige, WCAG AA */
           /* ── Borders */
           border:      '#E2E8F0',
           'border-h':  '#CBD5E1',

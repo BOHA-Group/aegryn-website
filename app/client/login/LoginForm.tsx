@@ -18,17 +18,21 @@ export default function LoginForm() {
     setLoading(true)
     setError('')
 
-    const { error: err } = await supabase.auth.signInWithPassword({ email, password })
+    try {
+      const { error: err } = await supabase.auth.signInWithPassword({ email, password })
 
-    setLoading(false)
+      if (err) {
+        setError('Identifiant ou mot de passe incorrect.')
+        return
+      }
 
-    if (err) {
-      setError('Identifiant ou mot de passe incorrect.')
-      return
+      router.push('/client/my-assets')
+      router.refresh()
+    } catch {
+      setError('Impossible de contacter le serveur. Vérifiez votre connexion et réessayez.')
+    } finally {
+      setLoading(false)
     }
-
-    router.push('/client/my-assets')
-    router.refresh()
   }
 
   return (

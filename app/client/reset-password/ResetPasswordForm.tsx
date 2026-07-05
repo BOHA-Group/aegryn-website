@@ -67,17 +67,21 @@ export default function ResetPasswordForm() {
 
     setLoading(true)
 
-    const { error: err } = await supabase.auth.updateUser({ password })
+    try {
+      const { error: err } = await supabase.auth.updateUser({ password })
 
-    setLoading(false)
+      if (err) {
+        setError('Lien expiré ou invalide. Recommencez depuis la page de connexion.')
+        return
+      }
 
-    if (err) {
-      setError('Lien expiré ou invalide. Recommencez depuis la page de connexion.')
-      return
+      setDone(true)
+      setTimeout(() => router.push('/client/login'), 3000)
+    } catch {
+      setError('Impossible de contacter le serveur. Vérifiez votre connexion et réessayez.')
+    } finally {
+      setLoading(false)
     }
-
-    setDone(true)
-    setTimeout(() => router.push('/client/login'), 3000)
   }
 
   if (done) {

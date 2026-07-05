@@ -127,7 +127,7 @@ export function ManifestoSection() {
           <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-ag-border">
             {whatwedoItems.map((item) => (
               <div key={item.num} className="what-col py-16 lg:px-10 first:pl-0 last:pr-0" style={{ opacity: 0 }}>
-                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-6">
+                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-6">
                   {item.num}
                 </p>
                 <h3
@@ -170,7 +170,7 @@ export function ManifestoSection() {
                 </p>
                 <div className="flex items-center gap-px">
                   <div className="w-8 h-px bg-ag-apex" />
-                  <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-apex ml-3">
+                  <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-apex-ink ml-3">
                     {tA('tagline')}
                   </p>
                 </div>

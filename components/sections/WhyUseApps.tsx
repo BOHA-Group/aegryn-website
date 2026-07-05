@@ -81,7 +81,7 @@ export function WhyUseApps() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 divide-y sm:divide-y-0 sm:divide-x divide-ag-border">
           {items.map((item) => (
             <div key={item.num} className="why-col py-14 lg:px-6 first:pl-0 last:pr-0">
-              <p className="why-num font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-6" style={{ opacity: 0 }}>
+              <p className="why-num font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-6" style={{ opacity: 0 }}>
                 {item.num}
               </p>
               <h3

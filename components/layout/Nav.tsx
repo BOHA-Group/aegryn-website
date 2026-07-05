@@ -60,7 +60,7 @@ function GradeMegaMenu({
   const tg = useTranslations('gradeShowcase')
 
   const GRADES = [
-    { label: 'AEG ★', key: 'star', cls: 'border-ag-apex/40  bg-ag-apex/[0.06]  text-ag-apex'         },
+    { label: 'AEG ★', key: 'star', cls: 'border-ag-apex/40  bg-ag-apex/[0.06]  text-ag-apex-ink'      },
     { label: 'AAA',    key: 'aaa',  cls: 'border-ag-navy/35  bg-ag-navy/[0.05]  text-ag-navy'         },
     { label: 'AA',     key: 'aa',   cls: 'border-ag-navy/20  bg-ag-navy/[0.03]  text-ag-navy/80'      },
     { label: 'A',      key: 'a',    cls: 'border-ag-border   bg-ag-off-white    text-ag-gray'          },
@@ -121,7 +121,7 @@ function GradeMegaMenu({
             className="flex items-center justify-between px-5 py-3 font-sans text-[12px] text-ag-gray hover:text-ag-black hover:bg-ag-off-white transition-colors border-b border-ag-border/50 last:border-0"
           >
             {t(labelKey)}
-            <span className="text-ag-apex text-[11px] font-semibold">→</span>
+            <span className="text-ag-apex-ink text-[11px] font-semibold">→</span>
           </Link>
         ))}
       </div>

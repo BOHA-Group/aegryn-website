@@ -16,19 +16,23 @@ export default function ForgotPasswordForm() {
     setLoading(true)
     setError('')
 
-    const base = process.env.NEXT_PUBLIC_SITE_URL ?? window.location.origin
-    const { error: err } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${base}/client/reset-password`,
-    })
+    try {
+      const base = process.env.NEXT_PUBLIC_SITE_URL ?? window.location.origin
+      const { error: err } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${base}/client/reset-password`,
+      })
 
-    setLoading(false)
+      if (err) {
+        setError('Une erreur est survenue. Vérifiez l\'adresse email.')
+        return
+      }
 
-    if (err) {
-      setError('Une erreur est survenue. Vérifiez l\'adresse email.')
-      return
+      setSent(true)
+    } catch {
+      setError('Impossible de contacter le serveur. Vérifiez votre connexion et réessayez.')
+    } finally {
+      setLoading(false)
     }
-
-    setSent(true)
   }
 
   if (sent) {

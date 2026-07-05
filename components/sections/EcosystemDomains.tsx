@@ -111,8 +111,8 @@ export function EcosystemDomains() {
                   <span
                     className={`font-sans font-semibold text-[9px] tracking-[0.14em] uppercase transition-colors duration-500 ${
                       isComingSoon
-                        ? 'text-orange-400 group-hover:text-orange-300'
-                        : 'text-ag-apex group-hover:text-ag-apex'
+                        ? 'text-orange-600 group-hover:text-orange-300'
+                        : 'text-ag-apex-ink group-hover:text-ag-apex'
                     }`}
                   >
                     {domain.tag}

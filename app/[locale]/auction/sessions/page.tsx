@@ -58,13 +58,13 @@ export default function AuctionSessionPage() {
 
           <div className="border border-ag-border bg-ag-white flex flex-col md:flex-row gap-0 md:gap-8 hover:border-ag-black/30 transition-colors">
             {/* Vignette — format vertical 9:16, image visible en totalité (style Antiquorum) */}
-            <div className="relative w-full md:w-64 shrink-0 bg-ag-off-white overflow-hidden" style={{ aspectRatio: '9 / 16' }}>
+            <div className="relative w-full md:w-[166px] shrink-0 bg-ag-off-white overflow-hidden" style={{ aspectRatio: '9 / 16' }}>
               <Image
                 src="/images/auction/auction_legal tech_T32026.jpg"
                 alt={t('sessionCardTitle')}
                 fill
                 className="object-contain"
-                sizes="256px"
+                sizes="166px"
               />
               <span className="absolute top-3 left-3 bg-ag-apex text-ag-navy font-mono font-semibold text-[10px] tracking-[0.14em] uppercase px-3 py-1.5">
                 {t('sessionCardStatus')}
@@ -74,7 +74,7 @@ export default function AuctionSessionPage() {
             {/* Détails */}
             <div className="flex-1 py-8 pr-8 pl-6 md:pl-0 flex flex-col md:flex-row md:items-center gap-6">
               <div className="flex-1">
-                <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-apex mb-2">
+                <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-apex-ink mb-2">
                   {t('sessionCardKicker')} — {t('sessionCardCategory')}
                 </p>
                 <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em] leading-snug mb-3">
@@ -106,7 +106,7 @@ export default function AuctionSessionPage() {
                 </Link>
                 <Link
                   href={{ pathname: '/auction/catalog', hash: 'notify' }}
-                  className="inline-flex items-center gap-2 border border-ag-apex/40 text-ag-apex font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:border-ag-apex hover:bg-ag-apex/10 transition-colors"
+                  className="inline-flex items-center gap-2 border border-ag-apex/40 text-ag-apex-ink font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:border-ag-apex hover:bg-ag-apex/10 transition-colors"
                 >
                   <Bell size={11} /> {t('sessionCardCtaNotify')}
                 </Link>
@@ -121,7 +121,7 @@ export default function AuctionSessionPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Buyer */}
           <div className="border border-ag-border bg-ag-white p-10 flex flex-col gap-6">
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex">{t('registerTitle')}</p>
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink">{t('registerTitle')}</p>
             <p className="font-sans font-bold text-ag-black text-[20px] leading-snug tracking-[-0.02em]">
               {t('registerTitle')}
             </p>
@@ -135,7 +135,7 @@ export default function AuctionSessionPage() {
           </div>
           {/* Seller */}
           <div className="border border-ag-apex/30 bg-ag-white p-10 flex flex-col gap-6">
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex">{t('sellerTitle')}</p>
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink">{t('sellerTitle')}</p>
             <p className="font-sans font-bold text-ag-black text-[20px] leading-snug tracking-[-0.02em]">
               {t('sellerTitle')}
             </p>

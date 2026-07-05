@@ -29,6 +29,7 @@
   /* ── Brand accent */
   --ag-navy       : #0A1D2E;
   --ag-apex       : #5ADDA4;   /* = primary */
+  --ag-apex-ink   : #0C7A52;   /* apex foncé — texte sur fond blanc/beige, WCAG AA */
 
   /* ── Borders */
   --ag-border     : #E2E8F0;
