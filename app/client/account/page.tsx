@@ -102,6 +102,7 @@ export default async function AccountPage() {
                 <p className="font-sans text-[13px] text-red-500">Notifications email désactivées</p>
                 <p className="font-sans text-[11px] text-gray-400 mt-0.5">Vous ne recevez plus les emails de l&apos;équipe AEGRYN.</p>
               </div>
+              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
               <a href="/api/client/account/email-resubscribe"
                 className="font-mono text-[10px] uppercase tracking-widest text-emerald-600 border border-emerald-200 px-3 py-1.5 hover:bg-emerald-50 transition-colors shrink-0">
                 Réactiver
@@ -151,6 +152,7 @@ export default async function AccountPage() {
                 Art. 20 RGPD / Art. 28 nLPD — fichier JSON téléchargeable.
               </p>
             </div>
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a href="/api/client/account/export"
               className="font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0">
               Télécharger

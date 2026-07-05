@@ -230,6 +230,7 @@ export default function AlliancesContent() {
                       ))}
                     </ul>
                     <p className="font-sans text-[12px] text-ag-gray-light italic mb-8">
+                      {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                       Note : AEGRYN ne liste pas encore de partenaires nommés publiquement. Ces catégories présentent les profils recherchés. Les premiers partenaires seront publiés sur <a href="/grade/partners" className="underline hover:text-ag-apex transition-colors">/grade/partners</a> dès les premiers mandats formalisés.
                     </p>
                   </>

@@ -1,6 +1,7 @@
 import type { Metadata }    from 'next'
 import { cookies }          from 'next/headers'
 import { getTranslations }  from 'next-intl/server'
+import Link                from 'next/link'
 import ForgotPasswordForm   from './ForgotPasswordForm'
 import ClientLocaleSwitcher from '../ClientLocaleSwitcher'
 
@@ -16,12 +17,12 @@ export default async function ForgotPasswordPage() {
 
   return (
     <main className="min-h-screen bg-ag-navy flex items-center justify-center px-6 relative">
-      <a
+      <Link
         href="/client/login"
         className="absolute top-6 left-6 inline-flex items-center gap-2 font-sans text-[12px] text-white/40 hover:text-white transition-colors"
       >
         <span aria-hidden="true">←</span> {t('backToLogin')}
-      </a>
+      </Link>
       <ClientLocaleSwitcher />
       <div className="w-full max-w-md">
         <div className="mb-10 text-center">

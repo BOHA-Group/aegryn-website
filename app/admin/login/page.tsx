@@ -1,4 +1,5 @@
 import type { Metadata }  from 'next'
+import Link               from 'next/link'
 import AdminLoginForm      from './AdminLoginForm'
 
 export const metadata: Metadata = {
@@ -31,9 +32,9 @@ export default async function AdminLoginPage({
         </div>
 
         <p className="text-center mt-4">
-          <a href="/admin/forgot-password" className="text-[11px] text-gray-400 hover:text-gray-600 transition-colors">
+          <Link href="/admin/forgot-password" className="text-[11px] text-gray-400 hover:text-gray-600 transition-colors">
             Mot de passe oublié ?
-          </a>
+          </Link>
         </p>
 
         <p className="text-center text-[11px] text-gray-300 mt-3">

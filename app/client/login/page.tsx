@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { cookies }       from 'next/headers'
 import { getTranslations } from 'next-intl/server'
+import Link              from 'next/link'
 import LoginForm         from './LoginForm'
 import ClientLocaleSwitcher from '../ClientLocaleSwitcher'
 
@@ -21,12 +22,12 @@ export default async function ClientLoginPage({
 
   return (
     <main className="min-h-screen bg-ag-navy flex items-center justify-center px-6 relative">
-      <a
+      <Link
         href="/"
         className="absolute top-6 left-6 inline-flex items-center gap-2 font-sans text-[12px] text-white/40 hover:text-white transition-colors"
       >
         <span aria-hidden="true">←</span> {t('backToSite')}
-      </a>
+      </Link>
       <ClientLocaleSwitcher />
       <div className="w-full max-w-md">
         <div className="mb-10 text-center">
@@ -47,9 +48,9 @@ export default async function ClientLoginPage({
         )}
         <LoginForm />
         <p className="mt-5 text-center">
-          <a href="/client/forgot-password" className="font-sans text-[12px] text-white/30 hover:text-ag-apex transition-colors">
+          <Link href="/client/forgot-password" className="font-sans text-[12px] text-white/30 hover:text-ag-apex transition-colors">
             {t('forgotPassword')}
-          </a>
+          </Link>
         </p>
         <p className="mt-4 text-center font-sans text-[11px] text-white/25">
           {t('noAccount')}

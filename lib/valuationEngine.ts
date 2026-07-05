@@ -289,7 +289,8 @@ export async function fetchBenchmark(
   growth:   number,
   margin:   number,
 ): Promise<BenchmarkResult | null> {
-  const { data, error } = await (supabase as { from: Function })
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { data, error } = await (supabase as any)
     .from('benchmark_data')
     .select('profile_tier, multiple_low, multiple_high, source, source_date')
     .eq('category', category)

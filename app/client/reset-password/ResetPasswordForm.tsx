@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter }           from 'next/navigation'
 import { useTranslations }     from 'next-intl'
+import Link                    from 'next/link'
 import { supabase }            from '@/lib/supabase'
 import { Eye, EyeOff, CheckCircle2 } from 'lucide-react'
 
@@ -113,12 +114,12 @@ export default function ResetPasswordForm() {
         <p className="font-sans text-[13px] text-white/50 leading-relaxed">
           {t('linkErrorDesc')}
         </p>
-        <a
+        <Link
           href="/client/forgot-password"
           className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors mt-2"
         >
           {t('requestNewLink')}
-        </a>
+        </Link>
       </div>
     )
   }
