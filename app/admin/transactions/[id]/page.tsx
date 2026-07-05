@@ -1,5 +1,6 @@
+import { checkAdminAccess } from '@/lib/adminAuth'
 import { createServiceClient } from '@/lib/supabase'
-import { redirect, notFound }  from 'next/navigation'
+import { notFound }  from 'next/navigation'
 import type { Metadata }       from 'next'
 import Link                    from 'next/link'
 import TransactionForm         from './TransactionForm'
@@ -18,8 +19,7 @@ export default async function AdminTransactionDetailPage({
 }) {
   const { id } = await paramsPromise
   const params = await searchParams
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
-  if (adminToken && params.token !== adminToken) redirect('/')
+  await checkAdminAccess(params.token)
 
   const supa = createServiceClient()
   const tokenQs = params.token ? `?token=${params.token}` : ''

@@ -1,5 +1,5 @@
+import { checkAdminAccess } from '@/lib/adminAuth'
 import type { Metadata }  from 'next'
-import { redirect }       from 'next/navigation'
 import { createServiceClient } from '@/lib/supabase'
 import BroadcastForm      from './BroadcastForm'
 import { Mail, CheckCircle2, AlertTriangle, Clock, XCircle } from 'lucide-react'
@@ -51,8 +51,7 @@ export default async function AdminNotificationsPage({
   searchParams: Promise<{ token?: string }>
 }) {
   const params     = await searchParams
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
-  if (adminToken && params.token !== adminToken) redirect('/')
+  await checkAdminAccess(params.token)
 
   const tokenQs = params.token ? `?token=${params.token}` : ''
   const supa    = createServiceClient()

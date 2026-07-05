@@ -1,3 +1,4 @@
+import { checkAdminAccess }    from '@/lib/adminAuth'
 import { createServiceClient } from '@/lib/supabase'
 import { redirect }            from 'next/navigation'
 import type { Metadata }       from 'next'
@@ -34,8 +35,7 @@ export default async function AdminKycMemberPage({
 }) {
   const { memberId } = await paramsPromise
   const params       = await searchParams
-  const adminToken   = process.env.ADMIN_LEADS_TOKEN
-  if (adminToken && params.token !== adminToken) redirect('/')
+  await checkAdminAccess(params.token)
 
   const supa    = createServiceClient()
   const tokenQs = params.token ? `?token=${params.token}` : ''

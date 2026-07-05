@@ -1,5 +1,5 @@
+import { checkAdminAccess } from '@/lib/adminAuth'
 import { createServiceClient } from '@/lib/supabase'
-import { redirect }            from 'next/navigation'
 import type { Metadata }       from 'next'
 import Link                    from 'next/link'
 import { ArrowUpRight }        from 'lucide-react'
@@ -58,8 +58,7 @@ export default async function AdminAssetsPage({
 }) {
   const params = await searchParams
 
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
-  if (adminToken && params.token !== adminToken) redirect('/')
+  await checkAdminAccess(params.token)
 
   const supa   = createServiceClient()
   const status = params.status ?? 'all'

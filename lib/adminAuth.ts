@@ -35,6 +35,18 @@ export async function requireAdmin() {
   return user
 }
 
+/**
+ * Vérifie l'accès admin : token URL OU session Supabase avec rôle admin.
+ * Utiliser dans toutes les sous-pages admin à la place du check token seul.
+ */
+export async function checkAdminAccess(token?: string): Promise<void> {
+  const adminToken = process.env.ADMIN_LEADS_TOKEN
+  const hasToken = !!adminToken && token === adminToken
+  if (!hasToken) {
+    await requireAdmin()
+  }
+}
+
 /** Retourne l'user admin connecté ou null (sans redirection) */
 export async function getAdminUser() {
   try {
