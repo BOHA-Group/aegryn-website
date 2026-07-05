@@ -22,11 +22,12 @@ export async function requireAdmin() {
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('role')
+    .select('roles')
     .eq('id', user.id)
     .single()
 
-  if (profile?.role !== 'admin') {
+  const roles = (profile?.roles ?? []) as string[]
+  if (!roles.includes('admin') && !roles.includes('super_admin')) {
     await client.auth.signOut()
     redirect('/admin/login?error=not_admin')
   }

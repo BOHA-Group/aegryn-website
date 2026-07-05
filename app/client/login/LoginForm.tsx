@@ -43,6 +43,8 @@ export default function LoginForm() {
             router.push('/admin')
           } else if (roles.includes('buyer')) {
             router.push('/client/buyer')
+          } else if (roles.includes('seller')) {
+            router.push('/client/seller')
           } else if (roles.includes('partner')) {
             router.push('/client/partner')
           } else {
