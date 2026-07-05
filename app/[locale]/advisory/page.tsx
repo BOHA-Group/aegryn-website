@@ -16,24 +16,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-const TEAM = [
-  { name: 'Romain F.',    domain: 'Security Audit – Cybersecurity, Penetration Testing & Risk Management', area: 'Back-end security' },
-  { name: 'Yacouba N.',   domain: 'App & SaaS Security Audit – Cybersecurity Back-End & Cloud Expert',    area: 'Back-end security' },
-  { name: 'Ferdinand H.', domain: 'Mobile Application – CTO as a service',                                area: 'Mobile application' },
-  { name: 'Sarah L.',     domain: 'Digital Transformation – Operational Efficiency Expert',               area: 'UI/UX no-code' },
-  { name: 'Rayan K.',     domain: 'Growth & Digital Marketing Expert',                                    area: 'Growth' },
-  { name: 'Jeremy D.',    domain: 'Full-Stack Engineer & Technical Architecture',                          area: 'Engineering' },
-  { name: 'Alexandre M.', domain: 'Data & AI Strategy',                                                   area: 'AI & Data' },
-  { name: 'Romain M.',    domain: 'Digital Law & Intellectual Property',                                   area: 'Legal' },
-  { name: 'Léo H.',       domain: 'Product & Platform Strategy',                                          area: 'Product' },
-  { name: 'Baptiste L.',  domain: 'UX Design & User Experience',                                          area: 'Design' },
-]
-
 export default async function AdvisoryPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'advisoryPage' })
 
   const whoFor  = t.raw('whoFor.items')  as { title: string; desc: string }[]
+  const experts = t.raw('experts.items') as { title: string; desc: string }[]
   const domains = t.raw('domains.items') as { title: string; desc: string }[]
 
   return (
@@ -122,31 +110,28 @@ export default async function AdvisoryPage({ params }: Props) {
       {/* Experts */}
       <section className="border-b border-ag-border bg-ag-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-          <div className="flex items-center justify-between mb-12">
+          <div className="flex items-center border-b border-ag-border py-4 mb-12">
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / {t('experts.label')}
             </p>
-            <p className="font-sans font-semibold text-[10px] text-ag-gray-light">
-              {String(TEAM.length).padStart(2, '0')} {t('experts.count')}
-            </p>
           </div>
+          <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
+            {t('experts.desc')}
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border">
-            {TEAM.map((member, i) => (
-              <div key={member.name} className="bg-ag-white p-6 hover:bg-ag-off-white transition-colors group">
+            {experts.map((item, i) => (
+              <div key={i} className="bg-ag-white p-6 hover:bg-ag-off-white transition-colors group">
                 <div className="flex items-start gap-4">
                   <span className="font-sans font-semibold text-[10px] text-ag-gray-light w-5 shrink-0 pt-0.5">
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <div className="min-w-0">
-                    <p className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.02em] group-hover:text-ag-navy transition-colors">
-                      {member.name}
+                    <p className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.02em] group-hover:text-ag-navy transition-colors mb-1">
+                      {item.title}
                     </p>
-                    <p className="font-sans font-normal text-[12px] text-ag-gray leading-snug mt-0.5 mb-2">
-                      {member.domain}
+                    <p className="font-sans font-normal text-[12px] text-ag-gray leading-snug">
+                      {item.desc}
                     </p>
-                    <span className="font-sans font-semibold text-[10px] tracking-[0.12em] uppercase border border-ag-border px-2.5 py-0.5 text-ag-gray-light">
-                      {member.area}
-                    </span>
                   </div>
                 </div>
               </div>

@@ -381,6 +381,7 @@
     },
     "founder": {
       "label": "The founder",
+      "role": "Founder — AEGRYN",
       "bio1": "Yohann Bollack is an entrepreneur, builder and tech M&A strategist. He founded AEGRYN with a simple conviction: the European tech market deserves its own trust infrastructure — co-signed certification, confidential transactions, blockchain certification.",
       "bio2": "He leads a proprietary asset ecosystem spanning AI, marketplaces, logistics and social networks — all designed from inception to be certifiable and transferable.",
       "cta": "Get in touch"
@@ -620,8 +621,18 @@
       ]
     },
     "experts": {
-      "label": "Our Experts",
-      "count": "Senior Advisors"
+      "label": "Expertise mobilised",
+      "desc": "Serving clients supported before, during and after the transaction, our experts cover every domain required for asset certification that meets AEGRYN standards.",
+      "items": [
+        { "title": "Security Audit & Cybersecurity", "desc": "Penetration testing, risk management, application and cloud infrastructure security." },
+        { "title": "Technical Architecture & Engineering", "desc": "CTO as a service, full-stack architecture, platform scalability." },
+        { "title": "Data & Artificial Intelligence", "desc": "AI strategy, automation, data governance." },
+        { "title": "Digital Law & Intellectual Property", "desc": "Compliance, IP protection, legal structuring of digital assets." },
+        { "title": "Transaction Law & M&A", "desc": "Due diligence, deal structuring, contractual support before, during and after a transaction." },
+        { "title": "Blockchain Certification & Digital Notarization", "desc": "Timestamping, proof of authenticity, confidential transaction escrow." },
+        { "title": "Tax & Corporate Structuring", "desc": "Swiss and European tax optimisation, holding structuring." },
+        { "title": "Design & User Experience", "desc": "UX/UI, product identity, user journeys." }
+      ]
     },
     "domains": {
       "label": "Our areas of intervention",

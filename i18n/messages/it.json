@@ -382,6 +382,7 @@
     },
     "founder": {
       "label": "Il fondatore",
+      "role": "Fondatore — AEGRYN",
       "bio1": "Yohann Bollack è imprenditore, builder e stratega M&A tech. Fonda AEGRYN con una convinzione semplice: il mercato tech europeo merita un'infrastruttura di fiducia propria — certificazione co-firmata, transazione riservata, certificazione blockchain.",
       "bio2": "Guida un ecosistema di asset proprietari che spazia dall'IA ai marketplace, dalla logistica ai social network — tutti progettati fin dall'origine per essere certificabili e trasferibili.",
       "cta": "Contattaci"
@@ -621,8 +622,18 @@
       ]
     },
     "experts": {
-      "label": "I Nostri Esperti",
-      "count": "Senior Advisors"
+      "label": "Competenze mobilitate",
+      "desc": "Al servizio dei nostri clienti, accompagnati prima, durante e dopo la transazione, i nostri esperti coprono tutti gli ambiti necessari per una certificazione degli asset conforme agli standard AEGRYN.",
+      "items": [
+        { "title": "Audit di sicurezza e Cybersecurity", "desc": "Penetration test, gestione del rischio, sicurezza applicativa e dell'infrastruttura cloud." },
+        { "title": "Architettura tecnica & Engineering", "desc": "CTO as a service, architettura full-stack, scalabilità delle piattaforme." },
+        { "title": "Dati e Intelligenza Artificiale", "desc": "Strategia IA, automazione, data governance." },
+        { "title": "Diritto digitale e proprietà intellettuale", "desc": "Conformità, protezione IP, strutturazione legale degli asset digitali." },
+        { "title": "Diritto delle transazioni e M&A", "desc": "Due diligence, strutturazione delle operazioni, supporto contrattuale prima, durante e dopo la transazione." },
+        { "title": "Certificazione blockchain e notarizzazione digitale", "desc": "Marcatura temporale, prova di autenticità, deposito fiduciario riservato delle transazioni." },
+        { "title": "Fiscalità e strutturazione societaria", "desc": "Ottimizzazione fiscale svizzera ed europea, strutturazione di holding." },
+        { "title": "Design ed esperienza utente", "desc": "UX/UI, identità di prodotto, percorsi utente." }
+      ]
     },
     "domains": {
       "label": "Le nostre aree di intervento",

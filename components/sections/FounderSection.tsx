@@ -102,7 +102,7 @@ export function FounderSection({ videoSrc }: { videoSrc?: string } = {}) {
       <div className="absolute inset-0">
         <Image
           src="/images/profil CEO 169.png"
-          alt="Yohann Bollack — Founder & CEO, Aegryn"
+          alt="Yohann Bollack — Founder, Aegryn"
           fill
           priority
           quality={95}
@@ -160,7 +160,7 @@ export function FounderSection({ videoSrc }: { videoSrc?: string } = {}) {
           className="font-sans font-semibold text-ag-apex uppercase tracking-[0.22em] text-[11px] mb-10"
           style={{ opacity: 0 }}
         >
-          Founder &amp; CEO — Aegryn
+          {t('founder.role')}
         </p>
 
         <div className="space-y-5 max-w-xl mb-10">

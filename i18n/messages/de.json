@@ -382,6 +382,7 @@
     },
     "founder": {
       "label": "Der Gründer",
+      "role": "Gründer — AEGRYN",
       "bio1": "Yohann Bollack ist Unternehmer, Builder und Tech-M&A-Stratege. Er gründet AEGRYN mit einer einfachen Überzeugung: Der europäische Tech-Markt verdient eine eigene Vertrauensinfrastruktur — mitunterzeichnete Zertifizierung, vertrauliche Transaktion, Blockchain-Zertifizierung.",
       "bio2": "Er leitet ein proprietäres Asset-Ökosystem aus KI, Marktplätzen, Logistik und sozialen Netzwerken — alle von Anfang an so konzipiert, dass sie zertifizierbar und übertragbar sind.",
       "cta": "Kontakt aufnehmen"
@@ -621,8 +622,18 @@
       ]
     },
     "experts": {
-      "label": "Unsere Experten",
-      "count": "Senior Advisors"
+      "label": "Eingesetzte Expertise",
+      "desc": "Im Dienst unserer Kunden, die vor, während und nach der Transaktion begleitet werden, decken unsere Experten alle Bereiche ab, die für eine Asset-Zertifizierung nach AEGRYN-Standards erforderlich sind.",
+      "items": [
+        { "title": "Sicherheitsaudit & Cybersicherheit", "desc": "Penetrationstests, Risikomanagement, Anwendungs- und Cloud-Infrastruktursicherheit." },
+        { "title": "Technische Architektur & Engineering", "desc": "CTO as a Service, Full-Stack-Architektur, Skalierbarkeit von Plattformen." },
+        { "title": "Daten & Künstliche Intelligenz", "desc": "KI-Strategie, Automatisierung, Data Governance." },
+        { "title": "Digitalrecht & geistiges Eigentum", "desc": "Compliance, IP-Schutz, rechtliche Strukturierung digitaler Vermögenswerte." },
+        { "title": "Transaktionsrecht & M&A", "desc": "Due Diligence, Deal-Strukturierung, vertragliche Begleitung vor, während und nach einer Transaktion." },
+        { "title": "Blockchain-Zertifizierung & digitale Beurkundung", "desc": "Zeitstempel, Echtheitsnachweis, vertrauliche Transaktions-Treuhand." },
+        { "title": "Steuer- & Unternehmensstrukturierung", "desc": "Schweizer und europäische Steueroptimierung, Holdingstrukturierung." },
+        { "title": "Design & User Experience", "desc": "UX/UI, Produktidentität, Nutzerreisen." }
+      ]
     },
     "domains": {
       "label": "Unsere Einsatzbereiche",

@@ -382,6 +382,7 @@
     },
     "founder": {
       "label": "El fundador",
+      "role": "Fundador — AEGRYN",
       "bio1": "Yohann Bollack es emprendedor, builder y estratega de M&A tech. Funda AEGRYN con una convicción simple: el mercado tech europeo merece su propia infraestructura de confianza — certificación co-firmada, transacción confidencial, certificación blockchain.",
       "bio2": "Dirige un ecosistema de activos propietarios que abarca IA, marketplaces, logística y redes sociales — todos diseñados desde el origen para ser certificables y transferibles.",
       "cta": "Ponerse en contacto"
@@ -621,8 +622,18 @@
       ]
     },
     "experts": {
-      "label": "Nuestros Expertos",
-      "count": "Senior Advisors"
+      "label": "Experiencia movilizada",
+      "desc": "Al servicio de nuestros clientes, acompañados antes, durante y después de la transacción, nuestros expertos cubren todos los ámbitos necesarios para una certificación de activos conforme a los estándares AEGRYN.",
+      "items": [
+        { "title": "Auditoría de seguridad y ciberseguridad", "desc": "Pruebas de penetración, gestión de riesgos, seguridad de aplicaciones e infraestructura cloud." },
+        { "title": "Arquitectura técnica e ingeniería", "desc": "CTO as a service, arquitectura full-stack, escalabilidad de plataformas." },
+        { "title": "Datos e inteligencia artificial", "desc": "Estrategia de IA, automatización, gobernanza de datos." },
+        { "title": "Derecho digital y propiedad intelectual", "desc": "Cumplimiento normativo, protección de PI, estructuración legal de activos digitales." },
+        { "title": "Derecho transaccional y M&A", "desc": "Due diligence, estructuración de operaciones, acompañamiento contractual antes, durante y después de la transacción." },
+        { "title": "Certificación blockchain y notarización digital", "desc": "Sellado de tiempo, prueba de autenticidad, custodia confidencial de transacciones." },
+        { "title": "Fiscalidad y estructuración corporativa", "desc": "Optimización fiscal suiza y europea, estructuración de holdings." },
+        { "title": "Diseño y experiencia de usuario", "desc": "UX/UI, identidad de producto, recorridos de usuario." }
+      ]
     },
     "domains": {
       "label": "Nuestras áreas de intervención",

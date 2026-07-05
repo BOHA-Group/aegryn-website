@@ -381,6 +381,7 @@
     },
     "founder": {
       "label": "Le fondateur",
+      "role": "Fondateur — AEGRYN",
       "bio1": "Yohann Bollack est entrepreneur, builder et stratège M&A tech. Il fonde AEGRYN avec une conviction simple : le marché tech européen mérite une infrastructure de confiance propre — certification co-signée, transaction confidentielle, certification blockchain.",
       "bio2": "Il pilote un écosystème d'actifs propriétaires couvrant l'IA, les marketplaces, la logistique et les réseaux sociaux — tous conçus dès l'origine pour être certifiables et transférables.",
       "cta": "Prendre contact"
@@ -620,8 +621,18 @@
       ]
     },
     "experts": {
-      "label": "Nos Experts",
-      "count": "Senior Advisors"
+      "label": "Expertises mobilisées",
+      "desc": "Au service de nos clients accompagnés avant, pendant et après la transaction, nos experts couvrent l'ensemble des domaines nécessaires à une certification d'actif conforme aux standards AEGRYN.",
+      "items": [
+        { "title": "Audit de sécurité & Cybersécurité", "desc": "Pentest, gestion des risques, sécurité applicative et infrastructure cloud." },
+        { "title": "Architecture technique & Ingénierie", "desc": "CTO as a service, architecture full-stack, scalabilité des plateformes." },
+        { "title": "Data & Intelligence Artificielle", "desc": "Stratégie IA, automatisation, gouvernance des données." },
+        { "title": "Droit du numérique & Propriété intellectuelle", "desc": "Conformité, protection IP, structuration juridique des actifs digitaux." },
+        { "title": "Droit des transactions & M&A", "desc": "Due diligence, structuration de deals, accompagnement contractuel avant, pendant et après la transaction." },
+        { "title": "Certification blockchain & Notariat numérique", "desc": "Horodatage, preuve d'authenticité, séquestre confidentiel des transactions." },
+        { "title": "Fiscalité & Structuration corporate", "desc": "Optimisation fiscale suisse et européenne, structuration de holding." },
+        { "title": "Design & Expérience utilisateur", "desc": "UX/UI, identité produit, parcours utilisateurs." }
+      ]
     },
     "domains": {
       "label": "Nos domaines d'intervention",

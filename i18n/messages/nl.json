@@ -382,6 +382,7 @@
     },
     "founder": {
       "label": "De oprichter",
+      "role": "Oprichter — AEGRYN",
       "bio1": "Yohann Bollack is ondernemer, builder en tech-M&A-strateeg. Hij richtte AEGRYN op met een eenvoudige overtuiging: de Europese techmarkt verdient zijn eigen vertrouwensinfrastructuur — mede-ondertekende certificering, vertrouwelijke transacties, blockchain-certificering.",
       "bio2": "Hij leidt een propriëtair asset-ecosysteem dat AI, marktplaatsen, logistiek en sociale netwerken omvat — allemaal van meet af aan ontworpen om certificeerbaar en overdraagbaar te zijn.",
       "cta": "Contact opnemen"
@@ -621,8 +622,18 @@
       ]
     },
     "experts": {
-      "label": "Onze Experts",
-      "count": "Senior Advisors"
+      "label": "Ingezette expertise",
+      "desc": "Ten dienste van onze klanten, begeleid voor, tijdens en na de transactie, dekken onze experts alle domeinen die nodig zijn voor een activacertificering die voldoet aan de AEGRYN-normen.",
+      "items": [
+        { "title": "Beveiligingsaudit & Cybersecurity", "desc": "Penetratietests, risicobeheer, applicatie- en cloudinfrastructuurbeveiliging." },
+        { "title": "Technische architectuur & Engineering", "desc": "CTO as a service, full-stack architectuur, schaalbaarheid van platforms." },
+        { "title": "Data & Kunstmatige Intelligentie", "desc": "AI-strategie, automatisering, datagovernance." },
+        { "title": "Digitaal recht & Intellectueel eigendom", "desc": "Compliance, IP-bescherming, juridische structurering van digitale activa." },
+        { "title": "Transactierecht & M&A", "desc": "Due diligence, dealstructurering, contractuele begeleiding voor, tijdens en na een transactie." },
+        { "title": "Blockchaincertificering & digitale notariëring", "desc": "Tijdstempeling, authenticiteitsbewijs, vertrouwelijk transactie-escrow." },
+        { "title": "Fiscaliteit & bedrijfsstructurering", "desc": "Zwitserse en Europese fiscale optimalisatie, holdingstructurering." },
+        { "title": "Design & gebruikerservaring", "desc": "UX/UI, productidentiteit, gebruikerstrajecten." }
+      ]
     },
     "domains": {
       "label": "Onze interventiegebieden",
