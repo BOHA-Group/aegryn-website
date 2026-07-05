@@ -14,7 +14,13 @@ export default async function ClientLoginPage({
   const { error } = await searchParams
 
   return (
-    <main className="min-h-screen bg-ag-navy flex items-center justify-center px-6">
+    <main className="min-h-screen bg-ag-navy flex items-center justify-center px-6 relative">
+      <a
+        href="/"
+        className="absolute top-6 left-6 inline-flex items-center gap-2 font-sans text-[12px] text-white/40 hover:text-white transition-colors"
+      >
+        <span aria-hidden="true">←</span> Retour au site
+      </a>
       <div className="w-full max-w-md">
         <div className="mb-10 text-center">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">AEGRYN</p>
