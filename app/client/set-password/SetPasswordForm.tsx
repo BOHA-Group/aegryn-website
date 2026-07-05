@@ -32,7 +32,13 @@ export default function SetPasswordForm() {
     setLoading(true)
 
     try {
-      const { error: err } = await supabase.auth.updateUser({ password })
+      let err
+      for (let attempt = 0; attempt < 3; attempt++) {
+        if (attempt > 0) await new Promise(r => setTimeout(r, 1500))
+        const result = await supabase.auth.updateUser({ password })
+        err = result.error
+        if (!err || !err.message?.toLowerCase().includes('database error')) break
+      }
 
       if (err) {
         setError(t('errorExpired'))

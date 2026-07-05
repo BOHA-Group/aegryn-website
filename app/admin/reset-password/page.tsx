@@ -13,13 +13,40 @@ export default function AdminResetPasswordPage() {
   const [show,     setShow]     = useState(false)
   const [loading,  setLoading]  = useState(false)
   const [error,    setError]    = useState('')
-  const [done,     setDone]     = useState(false)
-  const [ready,    setReady]    = useState(false)
+  const [done,      setDone]      = useState(false)
+  const [ready,     setReady]     = useState(false)
+  const [linkError, setLinkError] = useState(false)
 
+  /*
+   * Le lien de réinitialisation Supabase peut arriver sous deux formes :
+   *  1. PKCE (flow par défaut du projet) : ?code=... en query param
+   *     -> nécessite un échange explicite via exchangeCodeForSession()
+   *  2. Implicite (fallback) : #access_token=... en hash fragment
+   *     -> détecté automatiquement par le SDK, qui émet PASSWORD_RECOVERY.
+   * Sans le cas 1, le lien reçu par email reste bloqué indéfiniment sur
+   * "Vérification du lien…" (même bug que /client/reset-password).
+   */
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
       if (event === 'PASSWORD_RECOVERY') setReady(true)
     })
+
+    const params  = new URLSearchParams(window.location.search)
+    const code    = params.get('code')
+    const errParam = params.get('error') ?? params.get('error_code')
+
+    if (errParam) {
+      setLinkError(true)
+    } else if (code) {
+      supabase.auth.exchangeCodeForSession(code).then(({ error: exchangeErr }) => {
+        if (exchangeErr) {
+          setLinkError(true)
+        } else {
+          setReady(true)
+        }
+      })
+    }
+
     return () => subscription.unsubscribe()
   }, [])
 
@@ -30,7 +57,13 @@ export default function AdminResetPasswordPage() {
     if (password !== confirm) { setError('Les mots de passe ne correspondent pas.'); return }
 
     setLoading(true)
-    const { error: err } = await supabase.auth.updateUser({ password })
+    let err
+    for (let attempt = 0; attempt < 3; attempt++) {
+      if (attempt > 0) await new Promise(r => setTimeout(r, 1500))
+      const result = await supabase.auth.updateUser({ password })
+      err = result.error
+      if (!err || !err.message?.toLowerCase().includes('database error')) break
+    }
     setLoading(false)
 
     if (err) { setError('Lien expiré. Recommencez depuis /admin/forgot-password.'); return }
@@ -59,7 +92,14 @@ export default function AdminResetPasswordPage() {
         </div>
 
         <div className="bg-white border border-[#D9D2C2] p-8">
-          {!ready ? (
+          {linkError ? (
+            <div className="text-center py-6">
+              <p className="text-[13px] text-red-600 mb-4">Lien expiré ou invalide. Demandez-en un nouveau.</p>
+              <Link href="/admin/forgot-password" className="inline-block bg-[#0C0C0C] text-white text-[11px] font-bold uppercase tracking-[0.18em] px-6 py-3.5 hover:opacity-90">
+                Demander un nouveau lien
+              </Link>
+            </div>
+          ) : !ready ? (
             <p className="text-center text-[13px] text-gray-400 py-6">Vérification du lien…</p>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">

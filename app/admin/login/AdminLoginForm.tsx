@@ -20,9 +20,16 @@ export default function AdminLoginForm({ errorParam }: { errorParam?: string }) 
     setLoading(true)
     setError('')
 
-    const { data, error: signInErr } = await supabase.auth.signInWithPassword({ email, password })
+    let data, signInErr
+    for (let attempt = 0; attempt < 3; attempt++) {
+      if (attempt > 0) await new Promise(r => setTimeout(r, 1500))
+      const result = await supabase.auth.signInWithPassword({ email, password })
+      data = result.data
+      signInErr = result.error
+      if (!signInErr || !signInErr.message?.toLowerCase().includes('database error')) break
+    }
 
-    if (signInErr || !data.user) {
+    if (signInErr || !data?.user) {
       setLoading(false)
       setError('Identifiant ou mot de passe incorrect.')
       return
