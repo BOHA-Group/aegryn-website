@@ -89,7 +89,7 @@ export default function middleware(req: NextRequest) {
   }
 
   /* ── 2. Protection /admin/* ────────────────────────────── */
-  if (pathname.startsWith('/admin/')) {
+  if (pathname === '/admin' || pathname.startsWith('/admin/')) {
     /* Pages publiques admin (auth flows) */
     if (
       pathname === '/admin/login' ||
