@@ -48,7 +48,7 @@ const LABELS: Record<string, string> = {
 export async function POST(req: NextRequest) {
   try {
     const body = schema.parse(await req.json())
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.boha-group.com'
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'
     const supa    = createServiceClient()
 
     /* ── full_certification : pas de paiement, submit direct ── */

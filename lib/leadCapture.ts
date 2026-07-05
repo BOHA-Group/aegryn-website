@@ -22,7 +22,13 @@ async function sendEmail(to: string, subject: string, text: string) {
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ from: `${process.env.RESEND_FROM_NAME ?? 'AEGRYN'} <${from}>`, to: [to], subject, text }),
+    body: JSON.stringify({
+      from: `${process.env.RESEND_FROM_NAME ?? 'AEGRYN'} <${from}>`,
+      reply_to: process.env.RESEND_REPLY_TO ?? 'contact@aegryn.com',
+      to: [to],
+      subject,
+      text,
+    }),
   })
   if (!res.ok) console.error(`[leadCapture] Resend error (${to})`, await res.text())
 }

@@ -14,13 +14,19 @@ export const runtime = 'nodejs'
 
 async function sendEmail(to: string, subject: string, text: string) {
   const key  = process.env.RESEND_API_KEY
-  const from = process.env.RESEND_FROM ?? 'contact@boha-group.com'
+  const from = process.env.RESEND_FROM ?? 'contact@aegryn.com'
   const name = process.env.RESEND_FROM_NAME ?? 'AEGRYN'
   if (!key) return
   await fetch('https://api.resend.com/emails', {
     method:  'POST',
     headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
-    body:    JSON.stringify({ from: `${name} <${from}>`, to: [to], subject, text }),
+    body:    JSON.stringify({
+      from: `${name} <${from}>`,
+      reply_to: process.env.RESEND_REPLY_TO ?? 'contact@aegryn.com',
+      to: [to],
+      subject,
+      text,
+    }),
   })
 }
 
@@ -82,14 +88,14 @@ export async function POST(req: NextRequest) {
       if (error) console.error('[stripe/webhook] asset update error (non-blocking):', error)
 
       /* Emails — Point 4 : erreurs email non-bloquantes */
-      const internal  = process.env.AEGRYN_INTERNAL_EMAIL ?? 'tech@boha-group.com'
+      const internal  = process.env.AEGRYN_INTERNAL_EMAIL ?? 'tech@aegryn.com'
       const typeLabel = meta.evaluationType === 'review_partner' ? 'AEGRYN Review+' : 'AEGRYN Review'
 
       await Promise.allSettled([
         sendEmail(
           email,
           `AEGRYN — Paiement confirmé — ${typeLabel}`,
-          `Bonjour,\n\nVotre paiement ${typeLabel} a bien été reçu.\n\nNotre équipe va analyser votre dossier et vous contactera sous les délais convenus.\n\nL'équipe AEGRYN\nhttps://aegryn.boha-group.com`
+          `Bonjour,\n\nVotre paiement ${typeLabel} a bien été reçu.\n\nNotre équipe va analyser votre dossier et vous contactera sous les délais convenus.\n\nL'équipe AEGRYN\nhttps://aegryn.com`
         ),
         sendEmail(
           internal,
