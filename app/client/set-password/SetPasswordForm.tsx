@@ -2,10 +2,12 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import { supabase }  from '@/lib/supabase'
 import { Eye, EyeOff, CheckCircle2 } from 'lucide-react'
 
 export default function SetPasswordForm() {
+  const t       = useTranslations('clientArea.setPassword')
   const router  = useRouter()
   const [password,  setPassword]  = useState('')
   const [confirm,   setConfirm]   = useState('')
@@ -19,27 +21,31 @@ export default function SetPasswordForm() {
     setError('')
 
     if (password.length < 8) {
-      setError('Le mot de passe doit contenir au moins 8 caractères.')
+      setError(t('errorTooShort'))
       return
     }
     if (password !== confirm) {
-      setError('Les mots de passe ne correspondent pas.')
+      setError(t('errorMismatch'))
       return
     }
 
     setLoading(true)
 
-    const { error: err } = await supabase.auth.updateUser({ password })
+    try {
+      const { error: err } = await supabase.auth.updateUser({ password })
 
-    setLoading(false)
+      if (err) {
+        setError(t('errorExpired'))
+        return
+      }
 
-    if (err) {
-      setError('Session expirée. Demandez un nouvel email d\'invitation.')
-      return
+      setDone(true)
+      setTimeout(() => router.push('/client/my-assets'), 3000)
+    } catch {
+      setError(t('errorNetwork'))
+    } finally {
+      setLoading(false)
     }
-
-    setDone(true)
-    setTimeout(() => router.push('/client/my-assets'), 3000)
   }
 
   if (done) {
@@ -47,10 +53,10 @@ export default function SetPasswordForm() {
       <div className="bg-white/5 border border-white/10 p-8 text-center">
         <CheckCircle2 size={32} className="text-ag-apex mx-auto mb-4" />
         <h2 className="font-sans font-semibold text-white text-[17px] mb-2">
-          Compte activé
+          {t('doneTitle')}
         </h2>
         <p className="font-sans text-[13px] text-white/50">
-          Redirection vers votre espace dans 3 secondes…
+          {t('doneDesc')}
         </p>
       </div>
     )
@@ -66,7 +72,7 @@ export default function SetPasswordForm() {
 
       <div>
         <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 mb-2">
-          Choisir un mot de passe
+          {t('chooseLabel')}
         </label>
         <div className="relative">
           <input
@@ -75,7 +81,7 @@ export default function SetPasswordForm() {
             autoComplete="new-password"
             value={password}
             onChange={e => setPassword(e.target.value)}
-            placeholder="8 caractères minimum"
+            placeholder={t('passwordPlaceholder')}
             className="w-full border border-white/15 bg-white/5 text-white placeholder:text-white/20 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
           />
           <button
@@ -90,7 +96,7 @@ export default function SetPasswordForm() {
 
       <div>
         <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 mb-2">
-          Confirmer le mot de passe
+          {t('confirmLabel')}
         </label>
         <input
           type={show ? 'text' : 'password'}
@@ -98,7 +104,7 @@ export default function SetPasswordForm() {
           autoComplete="new-password"
           value={confirm}
           onChange={e => setConfirm(e.target.value)}
-          placeholder="••••••••••••"
+          placeholder={t('confirmPlaceholder')}
           className="w-full border border-white/15 bg-white/5 text-white placeholder:text-white/20 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
         />
       </div>
@@ -123,7 +129,7 @@ export default function SetPasswordForm() {
         disabled={loading}
         className="w-full bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 font-semibold hover:bg-ag-apex/90 transition-colors disabled:opacity-50"
       >
-        {loading ? 'Activation...' : 'Activer mon compte'}
+        {loading ? t('submitting') : t('submit')}
       </button>
     </form>
   )

@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "Chi siamo",
     "whatWeBuild": "Cosa costruiamo",
+    "blog": "Blog",
     "advisory": "Advisory",
     "growWithUs": "Cresci con noi",
     "career": "Carriere",
@@ -687,6 +688,9 @@
     "tagline": "CERTIFIED TO TRANSACT.",
     "swissTagline": "Il riferimento certificato per le transazioni di asset tech premium in Europa.",
     "navLabel": "Aegryn",
+    "companyLabel": "Azienda",
+    "servicesLabel": "Servizi",
+    "blogLink": "Blog",
     "ecosystemLabel": "Ecosistema",
     "advisoryLabel": "Advisory",
     "advisoryDesc": "Rimedio e consulenza per asset che non hanno ancora raggiunto il Grade A.",
@@ -2885,5 +2889,81 @@
         "a": "Tramite la sezione Il mio profilo nel suo spazio clienti. I documenti aggiornati vengono inviati ad AEGRYN per la rivalidazione."
       }
     ]
+  },
+  "blogPage": {
+    "label": "Blog",
+    "title": "Analisi e prospettive.",
+    "desc": "Le nostre riflessioni sulla certificazione degli asset, le transazioni tech e gli standard AEGRYN. Primi articoli in arrivo."
+  },
+  "clientArea": {
+    "login": {
+      "title": "Area clienti",
+      "subtitle": "Accesso riservato a venditori e acquirenti certificati AEGRYN.",
+      "linkExpired": "Link scaduto o non valido. Richiedine uno nuovo.",
+      "emailLabel": "Indirizzo email",
+      "emailPlaceholder": "tu@esempio.com",
+      "passwordLabel": "Password",
+      "submit": "Accedi alla mia area",
+      "submitting": "Accesso...",
+      "forgotPassword": "Password dimenticata?",
+      "noAccount": "Non hai un account? L'accesso è solo su invito.",
+      "contact": "Contatta",
+      "errorInvalid": "Email o password errati.",
+      "errorNetwork": "Impossibile contattare il server. Controlla la connessione e riprova.",
+      "backToSite": "Torna al sito"
+    },
+    "forgotPassword": {
+      "title": "Reimposta password",
+      "subtitle": "Inserisci la tua email per ricevere un link di reimpostazione.",
+      "emailLabel": "Indirizzo email",
+      "emailPlaceholder": "tu@esempio.com",
+      "submit": "Invia link di reimpostazione",
+      "submitting": "Invio...",
+      "backToLogin": "Torna al login",
+      "sentTitle": "Email inviata",
+      "sentDesc": "Un link di reimpostazione è stato inviato a",
+      "sentValidity": "Valido per 1 ora.",
+      "notReceived": "Non ricevuta? Controlla lo spam o contatta",
+      "errorGeneric": "Si è verificato un errore. Controlla l'indirizzo email.",
+      "errorNetwork": "Impossibile contattare il server. Controlla la connessione e riprova."
+    },
+    "resetPassword": {
+      "title": "Nuova password",
+      "subtitle": "Scegli una password sicura per il tuo account.",
+      "backToSite": "Torna al sito",
+      "newPasswordLabel": "Nuova password",
+      "newPasswordPlaceholder": "Minimo 8 caratteri",
+      "confirmLabel": "Conferma password",
+      "confirmPlaceholder": "••••••••••••",
+      "submit": "Salva nuova password",
+      "submitting": "Aggiornamento...",
+      "doneTitle": "Password aggiornata",
+      "doneDesc": "Reindirizzamento al login tra 3 secondi…",
+      "linkErrorTitle": "Link scaduto o non valido",
+      "linkErrorDesc": "I link di reimpostazione sono validi 1 ora e monouso. Richiedine uno nuovo.",
+      "requestNewLink": "Richiedi un nuovo link",
+      "checkingLink": "Verifica del link…",
+      "errorTooShort": "La password deve contenere almeno 8 caratteri.",
+      "errorMismatch": "Le password non coincidono.",
+      "errorExpired": "Link scaduto o non valido. Ricomincia dalla pagina di login.",
+      "errorNetwork": "Impossibile contattare il server. Controlla la connessione e riprova."
+    },
+    "setPassword": {
+      "title": "Attiva il tuo account",
+      "subtitle": "Scegli una password per accedere alla tua area clienti.",
+      "backToSite": "Torna al sito",
+      "chooseLabel": "Scegli una password",
+      "passwordPlaceholder": "Minimo 8 caratteri",
+      "confirmLabel": "Conferma password",
+      "confirmPlaceholder": "••••••••••••",
+      "submit": "Attiva il mio account",
+      "submitting": "Attivazione...",
+      "doneTitle": "Account attivato",
+      "doneDesc": "Reindirizzamento alla tua area tra 3 secondi…",
+      "errorTooShort": "La password deve contenere almeno 8 caratteri.",
+      "errorMismatch": "Le password non coincidono.",
+      "errorExpired": "Sessione scaduta. Richiedi una nuova email di invito.",
+      "errorNetwork": "Impossibile contattare il server. Controlla la connessione e riprova."
+    }
   }
 }

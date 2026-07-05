@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter }           from 'next/navigation'
+import { useTranslations }     from 'next-intl'
 import { supabase }            from '@/lib/supabase'
 import { Eye, EyeOff, CheckCircle2 } from 'lucide-react'
 
 export default function ResetPasswordForm() {
+  const t        = useTranslations('clientArea.resetPassword')
   const router   = useRouter()
   const [password,  setPassword]  = useState('')
   const [confirm,   setConfirm]   = useState('')
@@ -57,11 +59,11 @@ export default function ResetPasswordForm() {
     setError('')
 
     if (password.length < 8) {
-      setError('Le mot de passe doit contenir au moins 8 caractères.')
+      setError(t('errorTooShort'))
       return
     }
     if (password !== confirm) {
-      setError('Les mots de passe ne correspondent pas.')
+      setError(t('errorMismatch'))
       return
     }
 
@@ -71,14 +73,14 @@ export default function ResetPasswordForm() {
       const { error: err } = await supabase.auth.updateUser({ password })
 
       if (err) {
-        setError('Lien expiré ou invalide. Recommencez depuis la page de connexion.')
+        setError(t('errorExpired'))
         return
       }
 
       setDone(true)
       setTimeout(() => router.push('/client/login'), 3000)
     } catch {
-      setError('Impossible de contacter le serveur. Vérifiez votre connexion et réessayez.')
+      setError(t('errorNetwork'))
     } finally {
       setLoading(false)
     }
@@ -89,10 +91,10 @@ export default function ResetPasswordForm() {
       <div className="bg-white/5 border border-white/10 p-8 text-center">
         <CheckCircle2 size={32} className="text-ag-apex mx-auto mb-4" />
         <h2 className="font-sans font-semibold text-white text-[17px] mb-2">
-          Mot de passe mis à jour
+          {t('doneTitle')}
         </h2>
         <p className="font-sans text-[13px] text-white/50">
-          Redirection vers la connexion dans 3 secondes…
+          {t('doneDesc')}
         </p>
       </div>
     )
@@ -101,15 +103,15 @@ export default function ResetPasswordForm() {
   if (linkError) {
     return (
       <div className="bg-red-900/20 border border-red-800/30 p-8 text-center flex flex-col items-center gap-4">
-        <p className="font-sans font-semibold text-white text-[16px]">Lien expiré ou invalide</p>
+        <p className="font-sans font-semibold text-white text-[16px]">{t('linkErrorTitle')}</p>
         <p className="font-sans text-[13px] text-white/50 leading-relaxed">
-          Les liens de réinitialisation sont valables 1 heure et à usage unique. Demandez-en un nouveau.
+          {t('linkErrorDesc')}
         </p>
         <a
           href="/client/forgot-password"
           className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors mt-2"
         >
-          Demander un nouveau lien
+          {t('requestNewLink')}
         </a>
       </div>
     )
@@ -118,7 +120,7 @@ export default function ResetPasswordForm() {
   if (!ready) {
     return (
       <div className="text-center py-12">
-        <p className="font-sans text-[13px] text-white/40">Vérification du lien…</p>
+        <p className="font-sans text-[13px] text-white/40">{t('checkingLink')}</p>
       </div>
     )
   }
@@ -133,7 +135,7 @@ export default function ResetPasswordForm() {
 
       <div>
         <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 mb-2">
-          Nouveau mot de passe
+          {t('newPasswordLabel')}
         </label>
         <div className="relative">
           <input
@@ -142,7 +144,7 @@ export default function ResetPasswordForm() {
             autoComplete="new-password"
             value={password}
             onChange={e => setPassword(e.target.value)}
-            placeholder="8 caractères minimum"
+            placeholder={t('newPasswordPlaceholder')}
             className="w-full border border-white/15 bg-white/5 text-white placeholder:text-white/20 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
           />
           <button
@@ -157,7 +159,7 @@ export default function ResetPasswordForm() {
 
       <div>
         <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 mb-2">
-          Confirmer le mot de passe
+          {t('confirmLabel')}
         </label>
         <input
           type={show ? 'text' : 'password'}
@@ -165,7 +167,7 @@ export default function ResetPasswordForm() {
           autoComplete="new-password"
           value={confirm}
           onChange={e => setConfirm(e.target.value)}
-          placeholder="••••••••••••"
+          placeholder={t('confirmPlaceholder')}
           className="w-full border border-white/15 bg-white/5 text-white placeholder:text-white/20 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
         />
       </div>
@@ -191,7 +193,7 @@ export default function ResetPasswordForm() {
         disabled={loading}
         className="w-full bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 font-semibold hover:bg-ag-apex/90 transition-colors disabled:opacity-50"
       >
-        {loading ? 'Mise à jour...' : 'Enregistrer le nouveau mot de passe'}
+        {loading ? t('submitting') : t('submit')}
       </button>
     </form>
   )

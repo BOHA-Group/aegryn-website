@@ -2,10 +2,12 @@
 
 import { useState }          from 'react'
 import { useRouter }         from 'next/navigation'
+import { useTranslations }   from 'next-intl'
 import { supabase }          from '@/lib/supabase'
 import { ArrowUpRight, Eye, EyeOff } from 'lucide-react'
 
 export default function LoginForm() {
+  const t        = useTranslations('clientArea.login')
   const router   = useRouter()
   const [email,    setEmail]    = useState('')
   const [password, setPassword] = useState('')
@@ -22,14 +24,14 @@ export default function LoginForm() {
       const { error: err } = await supabase.auth.signInWithPassword({ email, password })
 
       if (err) {
-        setError('Identifiant ou mot de passe incorrect.')
+        setError(t('errorInvalid'))
         return
       }
 
       router.push('/client/my-assets')
       router.refresh()
     } catch {
-      setError('Impossible de contacter le serveur. Vérifiez votre connexion et réessayez.')
+      setError(t('errorNetwork'))
     } finally {
       setLoading(false)
     }
@@ -45,7 +47,7 @@ export default function LoginForm() {
 
       <div>
         <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 mb-2">
-          Adresse email
+          {t('emailLabel')}
         </label>
         <input
           type="email"
@@ -53,14 +55,14 @@ export default function LoginForm() {
           autoComplete="email"
           value={email}
           onChange={e => setEmail(e.target.value)}
-          placeholder="vous@exemple.com"
+          placeholder={t('emailPlaceholder')}
           className="w-full border border-white/15 bg-white/5 text-white placeholder:text-white/20 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
         />
       </div>
 
       <div>
         <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 mb-2">
-          Mot de passe
+          {t('passwordLabel')}
         </label>
         <div className="relative">
           <input
@@ -87,7 +89,7 @@ export default function LoginForm() {
         disabled={loading}
         className="w-full bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 font-semibold hover:bg-ag-apex/90 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
       >
-        {loading ? 'Connexion...' : 'Accéder à mon espace'}
+        {loading ? t('submitting') : t('submit')}
         {!loading && <ArrowUpRight size={13} />}
       </button>
     </form>

@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "whatWeBuild": "Assets",
+    "blog": "Blog",
     "advisory": "Advisory",
     "growWithUs": "Alliances",
     "career": "Careers",
@@ -686,6 +687,9 @@
     "tagline": "CERTIFIED TO TRANSACT.",
     "swissTagline": "The certified reference for premium tech asset transactions in Europe.",
     "navLabel": "Aegryn",
+    "companyLabel": "Company",
+    "servicesLabel": "Services",
+    "blogLink": "Blog",
     "ecosystemLabel": "Ecosystem",
     "advisoryLabel": "Advisory",
     "advisoryDesc": "Remediation and advisory for assets that have not yet reached Grade A.",
@@ -2845,5 +2849,81 @@
         "a": "Via the \"My Profile\" section of your client space. Updated documents are submitted to AEGRYN for re-validation."
       }
     ]
+  },
+  "blogPage": {
+    "label": "Blog",
+    "title": "Insights & perspectives.",
+    "desc": "Our thinking on asset certification, tech transactions and AEGRYN standards. First articles coming soon."
+  },
+  "clientArea": {
+    "login": {
+      "title": "Client Area",
+      "subtitle": "Access reserved for AEGRYN-certified sellers and buyers.",
+      "linkExpired": "Expired or invalid link. Please request a new one.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "passwordLabel": "Password",
+      "submit": "Access my account",
+      "submitting": "Signing in...",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account? Access is by invitation only.",
+      "contact": "Contact",
+      "errorInvalid": "Incorrect email or password.",
+      "errorNetwork": "Unable to reach the server. Check your connection and try again.",
+      "backToSite": "Back to site"
+    },
+    "forgotPassword": {
+      "title": "Reset password",
+      "subtitle": "Enter your email to receive a reset link.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "submit": "Send reset link",
+      "submitting": "Sending...",
+      "backToLogin": "Back to login",
+      "sentTitle": "Email sent",
+      "sentDesc": "A reset link has been sent to",
+      "sentValidity": "Valid for 1 hour.",
+      "notReceived": "Didn't receive it? Check your spam folder or contact",
+      "errorGeneric": "An error occurred. Check the email address.",
+      "errorNetwork": "Unable to reach the server. Check your connection and try again."
+    },
+    "resetPassword": {
+      "title": "New password",
+      "subtitle": "Choose a secure password for your account.",
+      "backToSite": "Back to site",
+      "newPasswordLabel": "New password",
+      "newPasswordPlaceholder": "8 characters minimum",
+      "confirmLabel": "Confirm password",
+      "confirmPlaceholder": "••••••••••••",
+      "submit": "Save new password",
+      "submitting": "Updating...",
+      "doneTitle": "Password updated",
+      "doneDesc": "Redirecting to login in 3 seconds…",
+      "linkErrorTitle": "Expired or invalid link",
+      "linkErrorDesc": "Reset links are valid for 1 hour and single-use. Please request a new one.",
+      "requestNewLink": "Request a new link",
+      "checkingLink": "Verifying link…",
+      "errorTooShort": "Password must be at least 8 characters.",
+      "errorMismatch": "Passwords do not match.",
+      "errorExpired": "Expired or invalid link. Start again from the login page.",
+      "errorNetwork": "Unable to reach the server. Check your connection and try again."
+    },
+    "setPassword": {
+      "title": "Activate your account",
+      "subtitle": "Choose a password to access your client area.",
+      "backToSite": "Back to site",
+      "chooseLabel": "Choose a password",
+      "passwordPlaceholder": "8 characters minimum",
+      "confirmLabel": "Confirm password",
+      "confirmPlaceholder": "••••••••••••",
+      "submit": "Activate my account",
+      "submitting": "Activating...",
+      "doneTitle": "Account activated",
+      "doneDesc": "Redirecting to your account in 3 seconds…",
+      "errorTooShort": "Password must be at least 8 characters.",
+      "errorMismatch": "Passwords do not match.",
+      "errorExpired": "Session expired. Request a new invitation email.",
+      "errorNetwork": "Unable to reach the server. Check your connection and try again."
+    }
   }
 }

@@ -57,6 +57,7 @@ export const routing = defineRouting({
     '/assets':                            '/assets',
     '/assets/[slug]':                     '/assets/[slug]',
     '/alliances':                         '/alliances',
+    '/blog':                              '/blog',
     '/career':                            '/career',
     '/discover':                          '/discover',
     '/discover/[slug]':                   '/discover/[slug]',

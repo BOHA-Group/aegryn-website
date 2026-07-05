@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "Over ons",
     "whatWeBuild": "Wat we bouwen",
+    "blog": "Blog",
     "advisory": "Advisory",
     "growWithUs": "Groeien met ons",
     "career": "Carrières",
@@ -687,6 +688,9 @@
     "tagline": "CERTIFIED TO TRANSACT.",
     "swissTagline": "De gecertificeerde referentie voor premium tech-asset-transacties in Europa.",
     "navLabel": "Aegryn",
+    "companyLabel": "Bedrijf",
+    "servicesLabel": "Diensten",
+    "blogLink": "Blog",
     "ecosystemLabel": "Ecosysteem",
     "advisoryLabel": "Advisory",
     "advisoryDesc": "Sanering en advies voor assets die Grade A nog niet hebben bereikt.",
@@ -2885,5 +2889,81 @@
         "a": "Via de sectie Mijn profiel in uw klantenomgeving. Bijgewerkte documenten worden ter hervalidatie ingediend bij AEGRYN."
       }
     ]
+  },
+  "blogPage": {
+    "label": "Blog",
+    "title": "Inzichten & perspectieven.",
+    "desc": "Onze visie op activacertificering, techtransacties en AEGRYN-normen. Eerste artikelen volgen binnenkort."
+  },
+  "clientArea": {
+    "login": {
+      "title": "Klantenzone",
+      "subtitle": "Toegang voorbehouden aan door AEGRYN gecertificeerde verkopers en kopers.",
+      "linkExpired": "Verlopen of ongeldige link. Vraag een nieuwe aan.",
+      "emailLabel": "E-mailadres",
+      "emailPlaceholder": "u@voorbeeld.com",
+      "passwordLabel": "Wachtwoord",
+      "submit": "Toegang tot mijn zone",
+      "submitting": "Aanmelden...",
+      "forgotPassword": "Wachtwoord vergeten?",
+      "noAccount": "Geen account? Toegang is alleen op uitnodiging.",
+      "contact": "Neem contact op met",
+      "errorInvalid": "Onjuiste gebruikersnaam of wachtwoord.",
+      "errorNetwork": "Kan geen verbinding maken met de server. Controleer uw verbinding en probeer opnieuw.",
+      "backToSite": "Terug naar de site"
+    },
+    "forgotPassword": {
+      "title": "Wachtwoord opnieuw instellen",
+      "subtitle": "Voer uw e-mail in om een resetlink te ontvangen.",
+      "emailLabel": "E-mailadres",
+      "emailPlaceholder": "u@voorbeeld.com",
+      "submit": "Resetlink verzenden",
+      "submitting": "Verzenden...",
+      "backToLogin": "Terug naar inloggen",
+      "sentTitle": "E-mail verzonden",
+      "sentDesc": "Er is een resetlink verzonden naar",
+      "sentValidity": "1 uur geldig.",
+      "notReceived": "Niet ontvangen? Controleer uw spam of neem contact op met",
+      "errorGeneric": "Er is een fout opgetreden. Controleer het e-mailadres.",
+      "errorNetwork": "Kan geen verbinding maken met de server. Controleer uw verbinding en probeer opnieuw."
+    },
+    "resetPassword": {
+      "title": "Nieuw wachtwoord",
+      "subtitle": "Kies een veilig wachtwoord voor uw account.",
+      "backToSite": "Terug naar de site",
+      "newPasswordLabel": "Nieuw wachtwoord",
+      "newPasswordPlaceholder": "Minimaal 8 tekens",
+      "confirmLabel": "Bevestig wachtwoord",
+      "confirmPlaceholder": "••••••••••••",
+      "submit": "Nieuw wachtwoord opslaan",
+      "submitting": "Bijwerken...",
+      "doneTitle": "Wachtwoord bijgewerkt",
+      "doneDesc": "Doorverwijzing naar inloggen over 3 seconden…",
+      "linkErrorTitle": "Verlopen of ongeldige link",
+      "linkErrorDesc": "Resetlinks zijn 1 uur geldig en eenmalig te gebruiken. Vraag een nieuwe aan.",
+      "requestNewLink": "Nieuwe link aanvragen",
+      "checkingLink": "Link wordt gecontroleerd…",
+      "errorTooShort": "Het wachtwoord moet minstens 8 tekens bevatten.",
+      "errorMismatch": "De wachtwoorden komen niet overeen.",
+      "errorExpired": "Verlopen of ongeldige link. Begin opnieuw vanaf de inlogpagina.",
+      "errorNetwork": "Kan geen verbinding maken met de server. Controleer uw verbinding en probeer opnieuw."
+    },
+    "setPassword": {
+      "title": "Activeer uw account",
+      "subtitle": "Kies een wachtwoord voor toegang tot uw klantenzone.",
+      "backToSite": "Terug naar de site",
+      "chooseLabel": "Kies een wachtwoord",
+      "passwordPlaceholder": "Minimaal 8 tekens",
+      "confirmLabel": "Bevestig wachtwoord",
+      "confirmPlaceholder": "••••••••••••",
+      "submit": "Mijn account activeren",
+      "submitting": "Activeren...",
+      "doneTitle": "Account geactiveerd",
+      "doneDesc": "Doorverwijzing naar uw zone over 3 seconden…",
+      "errorTooShort": "Het wachtwoord moet minstens 8 tekens bevatten.",
+      "errorMismatch": "De wachtwoorden komen niet overeen.",
+      "errorExpired": "Sessie verlopen. Vraag een nieuwe uitnodigingsmail aan.",
+      "errorNetwork": "Kan geen verbinding maken met de server. Controleer uw verbinding en probeer opnieuw."
+    }
   }
 }

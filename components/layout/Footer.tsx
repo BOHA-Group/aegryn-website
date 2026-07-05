@@ -70,15 +70,17 @@ const legal: { key: string; href: LinkHref; ns: string }[] = [
   { key: 'faq',       href: '/help/faq',   ns: 'legalNav' },
 ]
 
-const footerNavLinks: { navKey: 'about' | 'auction' | 'grade' | 'advisory' | 'whatWeBuild' | 'growWithUs' | 'career' | 'contact'; href: LinkHref }[] = [
-  { navKey: 'about',       href: '/about' },
-  { navKey: 'auction',     href: '/auction' },
-  { navKey: 'grade',       href: '/grade' },
-  { navKey: 'advisory',    href: '/advisory' },
-  { navKey: 'whatWeBuild', href: '/what-we-build' },
-  { navKey: 'growWithUs',  href: '/alliances' },
-  { navKey: 'career',      href: '/career' },
-  { navKey: 'contact',     href: '/contact' },
+const companyLinks: { navKey: 'about' | 'career' | 'contact'; href: LinkHref }[] = [
+  { navKey: 'about',   href: '/about' },
+  { navKey: 'career',  href: '/career' },
+  { navKey: 'contact', href: '/contact' },
+]
+
+const servicesLinks: { navKey: 'auction' | 'grade' | 'advisory' | 'growWithUs'; href: LinkHref }[] = [
+  { navKey: 'auction',    href: '/auction' },
+  { navKey: 'grade',      href: '/grade' },
+  { navKey: 'advisory',   href: '/advisory' },
+  { navKey: 'growWithUs', href: '/alliances' },
 ]
 
 export default function Footer() {
@@ -116,13 +118,13 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Navigation */}
+          {/* Entreprise */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
-              {t('navLabel')}
+              {t('companyLabel')}
             </p>
             <ul className="space-y-2.5">
-              {footerNavLinks.map(({ navKey, href }) => (
+              {companyLinks.map(({ navKey, href }) => (
                 <li key={navKey}>
                   <Link href={href} className="text-sm text-white/75 hover:text-white transition-colors">
                     {tNav(navKey)}
@@ -132,7 +134,23 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Ecosystem — single catalogue link */}
+          {/* Services */}
+          <div>
+            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
+              {t('servicesLabel')}
+            </p>
+            <ul className="space-y-2.5">
+              {servicesLinks.map(({ navKey, href }) => (
+                <li key={navKey}>
+                  <Link href={href} className="text-sm text-white/75 hover:text-white transition-colors">
+                    {tNav(navKey)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Écosystème — actifs, blog, roadmap */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
               {t('ecosystemLabel')}
@@ -143,15 +161,11 @@ export default function Footer() {
                   {t('ecosystemCatalogLink')}
                 </Link>
               </li>
-            </ul>
-          </div>
-
-          {/* Roadmap — single link */}
-          <div>
-            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
-              {t('roadmap.title')}
-            </p>
-            <ul className="space-y-2.5">
+              <li>
+                <Link href="/blog" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('blogLink')}
+                </Link>
+              </li>
               <li>
                 <Link href="/roadmap" className="text-sm text-white/75 hover:text-white transition-colors">
                   {t('roadmap.link')}

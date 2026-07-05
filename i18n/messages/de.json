@@ -3,6 +3,7 @@
     "home": "Startseite",
     "about": "Über uns",
     "whatWeBuild": "Was wir bauen",
+    "blog": "Blog",
     "advisory": "Advisory",
     "growWithUs": "Mit uns wachsen",
     "career": "Karriere",
@@ -687,6 +688,9 @@
     "tagline": "CERTIFIED TO TRANSACT.",
     "swissTagline": "Die zertifizierte Referenz für Premium-Tech-Asset-Transaktionen in Europa.",
     "navLabel": "Aegryn",
+    "companyLabel": "Unternehmen",
+    "servicesLabel": "Dienstleistungen",
+    "blogLink": "Blog",
     "ecosystemLabel": "Ökosystem",
     "advisoryLabel": "Advisory",
     "advisoryDesc": "Sanierung und Beratung für Assets, die Grade A noch nicht erreicht haben.",
@@ -2885,5 +2889,81 @@
         "a": "Über den Bereich Mein Profil in Ihrem Kundenbereich. Aktualisierte Dokumente werden zur erneuten Validierung an AEGRYN übermittelt."
       }
     ]
+  },
+  "blogPage": {
+    "label": "Blog",
+    "title": "Einblicke & Perspektiven.",
+    "desc": "Unsere Überlegungen zu Asset-Zertifizierung, Tech-Transaktionen und AEGRYN-Standards. Erste Artikel folgen in Kürze."
+  },
+  "clientArea": {
+    "login": {
+      "title": "Kundenbereich",
+      "subtitle": "Zugang nur für zertifizierte AEGRYN-Verkäufer und -Käufer.",
+      "linkExpired": "Link abgelaufen oder ungültig. Bitte fordern Sie einen neuen an.",
+      "emailLabel": "E-Mail-Adresse",
+      "emailPlaceholder": "sie@beispiel.com",
+      "passwordLabel": "Passwort",
+      "submit": "Zu meinem Bereich",
+      "submitting": "Anmeldung...",
+      "forgotPassword": "Passwort vergessen?",
+      "noAccount": "Kein Konto? Der Zugang erfolgt nur auf Einladung.",
+      "contact": "Kontaktieren Sie",
+      "errorInvalid": "Falsche E-Mail-Adresse oder falsches Passwort.",
+      "errorNetwork": "Server nicht erreichbar. Bitte Verbindung prüfen und erneut versuchen.",
+      "backToSite": "Zurück zur Website"
+    },
+    "forgotPassword": {
+      "title": "Passwort zurücksetzen",
+      "subtitle": "Geben Sie Ihre E-Mail ein, um einen Reset-Link zu erhalten.",
+      "emailLabel": "E-Mail-Adresse",
+      "emailPlaceholder": "sie@beispiel.com",
+      "submit": "Reset-Link senden",
+      "submitting": "Wird gesendet...",
+      "backToLogin": "Zurück zur Anmeldung",
+      "sentTitle": "E-Mail gesendet",
+      "sentDesc": "Ein Reset-Link wurde gesendet an",
+      "sentValidity": "1 Stunde gültig.",
+      "notReceived": "Nicht erhalten? Prüfen Sie Ihren Spam-Ordner oder kontaktieren Sie",
+      "errorGeneric": "Ein Fehler ist aufgetreten. Überprüfen Sie die E-Mail-Adresse.",
+      "errorNetwork": "Server nicht erreichbar. Bitte Verbindung prüfen und erneut versuchen."
+    },
+    "resetPassword": {
+      "title": "Neues Passwort",
+      "subtitle": "Wählen Sie ein sicheres Passwort für Ihr Konto.",
+      "backToSite": "Zurück zur Website",
+      "newPasswordLabel": "Neues Passwort",
+      "newPasswordPlaceholder": "Mindestens 8 Zeichen",
+      "confirmLabel": "Passwort bestätigen",
+      "confirmPlaceholder": "••••••••••••",
+      "submit": "Neues Passwort speichern",
+      "submitting": "Aktualisierung...",
+      "doneTitle": "Passwort aktualisiert",
+      "doneDesc": "Weiterleitung zur Anmeldung in 3 Sekunden…",
+      "linkErrorTitle": "Link abgelaufen oder ungültig",
+      "linkErrorDesc": "Reset-Links sind 1 Stunde gültig und nur einmal verwendbar. Fordern Sie einen neuen an.",
+      "requestNewLink": "Neuen Link anfordern",
+      "checkingLink": "Link wird überprüft…",
+      "errorTooShort": "Das Passwort muss mindestens 8 Zeichen lang sein.",
+      "errorMismatch": "Die Passwörter stimmen nicht überein.",
+      "errorExpired": "Link abgelaufen oder ungültig. Beginnen Sie erneut auf der Anmeldeseite.",
+      "errorNetwork": "Server nicht erreichbar. Bitte Verbindung prüfen und erneut versuchen."
+    },
+    "setPassword": {
+      "title": "Konto aktivieren",
+      "subtitle": "Wählen Sie ein Passwort für den Zugang zu Ihrem Kundenbereich.",
+      "backToSite": "Zurück zur Website",
+      "chooseLabel": "Passwort wählen",
+      "passwordPlaceholder": "Mindestens 8 Zeichen",
+      "confirmLabel": "Passwort bestätigen",
+      "confirmPlaceholder": "••••••••••••",
+      "submit": "Mein Konto aktivieren",
+      "submitting": "Aktivierung...",
+      "doneTitle": "Konto aktiviert",
+      "doneDesc": "Weiterleitung zu Ihrem Bereich in 3 Sekunden…",
+      "errorTooShort": "Das Passwort muss mindestens 8 Zeichen lang sein.",
+      "errorMismatch": "Die Passwörter stimmen nicht überein.",
+      "errorExpired": "Sitzung abgelaufen. Fordern Sie eine neue Einladungs-E-Mail an.",
+      "errorNetwork": "Server nicht erreichbar. Bitte Verbindung prüfen und erneut versuchen."
+    }
   }
 }

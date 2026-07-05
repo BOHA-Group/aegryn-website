@@ -1,5 +1,14 @@
 import localFont  from 'next/font/local'
+import { cookies } from 'next/headers'
+import { NextIntlClientProvider } from 'next-intl'
 import '@/styles/globals.css'
+
+const SUPPORTED_LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
+type SupportedLocale = typeof SUPPORTED_LOCALES[number]
+
+function isSupportedLocale(value: string | undefined): value is SupportedLocale {
+  return !!value && (SUPPORTED_LOCALES as readonly string[]).includes(value)
+}
 
 const plusJakartaSans = localFont({
   src: [
@@ -15,11 +24,18 @@ const plusJakartaSans = localFont({
   fallback: ['system-ui', '-apple-system', 'sans-serif'],
 })
 
-export default function ClientLayout({ children }: { children: React.ReactNode }) {
+export default async function ClientLayout({ children }: { children: React.ReactNode }) {
+  const cookieStore   = await cookies()
+  const preferred      = cookieStore.get('ag-locale-pref')?.value
+  const locale: SupportedLocale = isSupportedLocale(preferred) ? preferred : 'fr'
+  const messages       = (await import(`@/i18n/messages/${locale}.json`)).default
+
   return (
-    <html lang="fr" className={`${plusJakartaSans.variable}`}>
+    <html lang={locale} className={`${plusJakartaSans.variable}`}>
       <body className="font-sans antialiased">
-        {children}
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   )

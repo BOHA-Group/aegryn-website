@@ -3,6 +3,7 @@
     "home": "Inicio",
     "about": "Sobre nosotros",
     "whatWeBuild": "Lo que construimos",
+    "blog": "Blog",
     "advisory": "Advisory",
     "growWithUs": "Crecer con nosotros",
     "career": "Carreras",
@@ -687,6 +688,9 @@
     "tagline": "CERTIFIED TO TRANSACT.",
     "swissTagline": "La referencia certificada para transacciones de activos tech premium en Europa.",
     "navLabel": "Aegryn",
+    "companyLabel": "Empresa",
+    "servicesLabel": "Servicios",
+    "blogLink": "Blog",
     "ecosystemLabel": "Ecosistema",
     "advisoryLabel": "Advisory",
     "advisoryDesc": "Remediación y asesoramiento para activos que aún no han alcanzado el Grade A.",
@@ -2885,5 +2889,81 @@
         "a": "A través de la sección Mi perfil en su espacio de cliente. Los documentos actualizados se envían a AEGRYN para su revalidación."
       }
     ]
+  },
+  "blogPage": {
+    "label": "Blog",
+    "title": "Análisis y perspectivas.",
+    "desc": "Nuestras reflexiones sobre la certificación de activos, las transacciones tecnológicas y los estándares AEGRYN. Próximamente los primeros artículos."
+  },
+  "clientArea": {
+    "login": {
+      "title": "Área de clientes",
+      "subtitle": "Acceso reservado a vendedores y compradores certificados por AEGRYN.",
+      "linkExpired": "Enlace caducado o inválido. Solicite uno nuevo.",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "usted@ejemplo.com",
+      "passwordLabel": "Contraseña",
+      "submit": "Acceder a mi espacio",
+      "submitting": "Iniciando sesión...",
+      "forgotPassword": "¿Olvidó su contraseña?",
+      "noAccount": "¿No tiene cuenta? El acceso es solo por invitación.",
+      "contact": "Contacte a",
+      "errorInvalid": "Correo o contraseña incorrectos.",
+      "errorNetwork": "No se pudo contactar con el servidor. Compruebe su conexión e inténtelo de nuevo.",
+      "backToSite": "Volver al sitio"
+    },
+    "forgotPassword": {
+      "title": "Restablecer contraseña",
+      "subtitle": "Introduzca su correo para recibir un enlace de restablecimiento.",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "usted@ejemplo.com",
+      "submit": "Enviar enlace de restablecimiento",
+      "submitting": "Enviando...",
+      "backToLogin": "Volver al inicio de sesión",
+      "sentTitle": "Correo enviado",
+      "sentDesc": "Se ha enviado un enlace de restablecimiento a",
+      "sentValidity": "Válido durante 1 hora.",
+      "notReceived": "¿No lo recibió? Revise su carpeta de spam o contacte a",
+      "errorGeneric": "Se produjo un error. Compruebe la dirección de correo.",
+      "errorNetwork": "No se pudo contactar con el servidor. Compruebe su conexión e inténtelo de nuevo."
+    },
+    "resetPassword": {
+      "title": "Nueva contraseña",
+      "subtitle": "Elija una contraseña segura para su cuenta.",
+      "backToSite": "Volver al sitio",
+      "newPasswordLabel": "Nueva contraseña",
+      "newPasswordPlaceholder": "Mínimo 8 caracteres",
+      "confirmLabel": "Confirmar contraseña",
+      "confirmPlaceholder": "••••••••••••",
+      "submit": "Guardar nueva contraseña",
+      "submitting": "Actualizando...",
+      "doneTitle": "Contraseña actualizada",
+      "doneDesc": "Redirigiendo al inicio de sesión en 3 segundos…",
+      "linkErrorTitle": "Enlace caducado o inválido",
+      "linkErrorDesc": "Los enlaces de restablecimiento son válidos durante 1 hora y de un solo uso. Solicite uno nuevo.",
+      "requestNewLink": "Solicitar un nuevo enlace",
+      "checkingLink": "Verificando enlace…",
+      "errorTooShort": "La contraseña debe tener al menos 8 caracteres.",
+      "errorMismatch": "Las contraseñas no coinciden.",
+      "errorExpired": "Enlace caducado o inválido. Vuelva a empezar desde la página de inicio de sesión.",
+      "errorNetwork": "No se pudo contactar con el servidor. Compruebe su conexión e inténtelo de nuevo."
+    },
+    "setPassword": {
+      "title": "Active su cuenta",
+      "subtitle": "Elija una contraseña para acceder a su área de clientes.",
+      "backToSite": "Volver al sitio",
+      "chooseLabel": "Elegir una contraseña",
+      "passwordPlaceholder": "Mínimo 8 caracteres",
+      "confirmLabel": "Confirmar contraseña",
+      "confirmPlaceholder": "••••••••••••",
+      "submit": "Activar mi cuenta",
+      "submitting": "Activando...",
+      "doneTitle": "Cuenta activada",
+      "doneDesc": "Redirigiendo a su espacio en 3 segundos…",
+      "errorTooShort": "La contraseña debe tener al menos 8 caracteres.",
+      "errorMismatch": "Las contraseñas no coinciden.",
+      "errorExpired": "Sesión caducada. Solicite un nuevo correo de invitación.",
+      "errorNetwork": "No se pudo contactar con el servidor. Compruebe su conexión e inténtelo de nuevo."
+    }
   }
 }

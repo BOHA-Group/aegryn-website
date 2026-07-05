@@ -3,6 +3,7 @@
     "home": "Accueil",
     "about": "À propos",
     "whatWeBuild": "Actifs",
+    "blog": "Blog",
     "advisory": "Advisory",
     "growWithUs": "Alliances",
     "career": "Carrières",
@@ -686,6 +687,9 @@
     "tagline": "CERTIFIED TO TRANSACT.",
     "swissTagline": "The certified reference for premium tech asset transactions in Europe.",
     "navLabel": "Aegryn",
+    "companyLabel": "Entreprise",
+    "servicesLabel": "Services",
+    "blogLink": "Blog",
     "ecosystemLabel": "Écosystème",
     "advisoryLabel": "Advisory",
     "advisoryDesc": "Remédiation et conseil pour les actifs qui n'ont pas encore atteint le Grade A.",
@@ -2845,5 +2849,81 @@
         "a": "Via la section « Mon Profil » de votre espace client. Les documents mis à jour sont soumis à AEGRYN pour re-validation."
       }
     ]
+  },
+  "blogPage": {
+    "label": "Blog",
+    "title": "Analyses & perspectives.",
+    "desc": "Nos réflexions sur la certification d'actifs, la transaction tech et les standards AEGRYN. Premiers articles à venir."
+  },
+  "clientArea": {
+    "login": {
+      "title": "Espace client",
+      "subtitle": "Accès réservé aux vendeurs et acquéreurs certifiés AEGRYN.",
+      "linkExpired": "Lien expiré ou invalide. Veuillez en demander un nouveau.",
+      "emailLabel": "Adresse email",
+      "emailPlaceholder": "vous@exemple.com",
+      "passwordLabel": "Mot de passe",
+      "submit": "Accéder à mon espace",
+      "submitting": "Connexion...",
+      "forgotPassword": "Mot de passe oublié ?",
+      "noAccount": "Vous n'avez pas de compte ? L'accès est sur invitation uniquement.",
+      "contact": "Contactez",
+      "errorInvalid": "Identifiant ou mot de passe incorrect.",
+      "errorNetwork": "Impossible de contacter le serveur. Vérifiez votre connexion et réessayez.",
+      "backToSite": "Retour au site"
+    },
+    "forgotPassword": {
+      "title": "Réinitialiser le mot de passe",
+      "subtitle": "Entrez votre email pour recevoir un lien de réinitialisation.",
+      "emailLabel": "Adresse email",
+      "emailPlaceholder": "vous@exemple.com",
+      "submit": "Envoyer le lien de réinitialisation",
+      "submitting": "Envoi...",
+      "backToLogin": "Retour à la connexion",
+      "sentTitle": "Email envoyé",
+      "sentDesc": "Un lien de réinitialisation a été envoyé à",
+      "sentValidity": "Valable 1 heure.",
+      "notReceived": "Pas reçu ? Vérifiez vos spams ou contactez",
+      "errorGeneric": "Une erreur est survenue. Vérifiez l'adresse email.",
+      "errorNetwork": "Impossible de contacter le serveur. Vérifiez votre connexion et réessayez."
+    },
+    "resetPassword": {
+      "title": "Nouveau mot de passe",
+      "subtitle": "Choisissez un mot de passe sécurisé pour votre compte.",
+      "backToSite": "Retour au site",
+      "newPasswordLabel": "Nouveau mot de passe",
+      "newPasswordPlaceholder": "8 caractères minimum",
+      "confirmLabel": "Confirmer le mot de passe",
+      "confirmPlaceholder": "••••••••••••",
+      "submit": "Enregistrer le nouveau mot de passe",
+      "submitting": "Mise à jour...",
+      "doneTitle": "Mot de passe mis à jour",
+      "doneDesc": "Redirection vers la connexion dans 3 secondes…",
+      "linkErrorTitle": "Lien expiré ou invalide",
+      "linkErrorDesc": "Les liens de réinitialisation sont valables 1 heure et à usage unique. Demandez-en un nouveau.",
+      "requestNewLink": "Demander un nouveau lien",
+      "checkingLink": "Vérification du lien…",
+      "errorTooShort": "Le mot de passe doit contenir au moins 8 caractères.",
+      "errorMismatch": "Les mots de passe ne correspondent pas.",
+      "errorExpired": "Lien expiré ou invalide. Recommencez depuis la page de connexion.",
+      "errorNetwork": "Impossible de contacter le serveur. Vérifiez votre connexion et réessayez."
+    },
+    "setPassword": {
+      "title": "Activez votre compte",
+      "subtitle": "Choisissez un mot de passe pour accéder à votre espace client.",
+      "backToSite": "Retour au site",
+      "chooseLabel": "Choisir un mot de passe",
+      "passwordPlaceholder": "8 caractères minimum",
+      "confirmLabel": "Confirmer le mot de passe",
+      "confirmPlaceholder": "••••••••••••",
+      "submit": "Activer mon compte",
+      "submitting": "Activation...",
+      "doneTitle": "Compte activé",
+      "doneDesc": "Redirection vers votre espace dans 3 secondes…",
+      "errorTooShort": "Le mot de passe doit contenir au moins 8 caractères.",
+      "errorMismatch": "Les mots de passe ne correspondent pas.",
+      "errorExpired": "Session expirée. Demandez un nouvel email d'invitation.",
+      "errorNetwork": "Impossible de contacter le serveur. Vérifiez votre connexion et réessayez."
+    }
   }
 }
