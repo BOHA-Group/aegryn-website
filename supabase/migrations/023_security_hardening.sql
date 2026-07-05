@@ -141,7 +141,6 @@ CREATE POLICY valuation_leads_insert_public
   WITH CHECK (
     email IS NOT NULL
     AND email <> ''
-    AND company_name IS NOT NULL
   );
 
 -- ── assets (soumission dossier vendeur) ───────────────────────────────────────
