@@ -2,7 +2,6 @@ import { redirect } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import ClientTopBar from '@/components/layout/ClientTopBar'
 import PartnerNav from './PartnerNav'
 
 export default async function PartnerLayout({ children }: { children: React.ReactNode }) {
@@ -30,10 +29,8 @@ export default async function PartnerLayout({ children }: { children: React.Reac
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <ClientTopBar userName={displayName} userLabel="Partenaire" />
-
-      <div className="flex pt-14 min-h-screen">
-        <aside className="w-56 bg-ag-navy flex-shrink-0 flex flex-col fixed top-14 left-0 bottom-0 z-40 overflow-y-auto">
+      <div className="flex pt-16 min-h-screen">
+        <aside className="w-56 bg-ag-navy flex-shrink-0 flex flex-col fixed top-16 left-0 bottom-0 z-40 overflow-y-auto">
           <div className="px-5 py-4 border-b border-white/10">
             <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex font-bold">Espace Partenaire</p>
             <p className="font-sans text-[11px] text-white/60 mt-0.5 truncate">{displayName}</p>
@@ -53,7 +50,7 @@ export default async function PartnerLayout({ children }: { children: React.Reac
           </div>
         </aside>
 
-        <main className="flex-1 ml-56 overflow-y-auto min-h-[calc(100vh-3.5rem)]">
+        <main className="flex-1 ml-56 overflow-y-auto min-h-[calc(100vh-4rem)]">
           {children}
         </main>
       </div>

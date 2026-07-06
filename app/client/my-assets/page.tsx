@@ -92,7 +92,7 @@ export default async function ClientMyAssetsPage() {
   }[]
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 pt-16">
 
       {/* Header */}
       <header className="bg-ag-navy px-6 py-5 flex items-center justify-between">

@@ -39,14 +39,14 @@ export default async function AccountPage() {
   const emailNotifEnabled = profile?.email_notifications_enabled !== false
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
+    <div className="min-h-screen bg-gray-50 pt-16 pb-12 px-4">
       <div className="max-w-xl mx-auto">
 
         {/* Header */}
         <div className="mb-10">
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace client AEGRYN</p>
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-500 mb-1">Espace client AEGRYN</p>
           <h1 className="font-sans font-bold text-gray-900 text-[26px] tracking-tight">Mon compte</h1>
-          <p className="font-sans text-[13px] text-gray-400 mt-0.5">{user.email}</p>
+          <p className="font-sans text-[13px] text-gray-500 mt-0.5">{user.email}</p>
         </div>
 
         {/* Rôles actifs */}

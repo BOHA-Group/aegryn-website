@@ -72,7 +72,7 @@ export default function LoginForm() {
       )}
 
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/55 mb-2">
           {t('emailLabel')}
         </label>
         <input
@@ -82,12 +82,12 @@ export default function LoginForm() {
           value={email}
           onChange={e => setEmail(e.target.value)}
           placeholder={t('emailPlaceholder')}
-          className="w-full border border-white/15 bg-white/5 text-white placeholder:text-white/20 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
+          className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
         />
       </div>
 
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/55 mb-2">
           {t('passwordLabel')}
         </label>
         <div className="relative">
@@ -98,12 +98,12 @@ export default function LoginForm() {
             value={password}
             onChange={e => setPassword(e.target.value)}
             placeholder="••••••••••••"
-            className="w-full border border-white/15 bg-white/5 text-white placeholder:text-white/20 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
+            className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
           />
           <button
             type="button"
             onClick={() => setShow(v => !v)}
-            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60"
+            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-white/50 hover:text-white"
           >
             {show ? <EyeOff size={16} /> : <Eye size={16} />}
           </button>

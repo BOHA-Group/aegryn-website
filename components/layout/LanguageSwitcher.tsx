@@ -22,9 +22,17 @@ export default function LanguageSwitcher() {
     const newLocale = e.target.value
     /* Persist manual choice — overrides GeoIP for 1 year */
     document.cookie = `ag-locale-pref=${newLocale}; max-age=${60 * 60 * 24 * 365}; path=/; samesite=lax`
+
     const segments = pathname.split('/')
-    segments[1] = newLocale
-    router.push(segments.join('/'))
+    const knownLocales = locales.map(l => l.code)
+    /* Public site: URL is locale-prefixed (/fr/...) → swap the segment.
+       Client / admin spaces: not prefixed → just refresh (cookie drives locale). */
+    if (knownLocales.includes(segments[1])) {
+      segments[1] = newLocale
+      router.push(segments.join('/'))
+    } else {
+      router.refresh()
+    }
   }
 
   return (

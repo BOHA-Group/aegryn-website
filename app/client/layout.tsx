@@ -1,7 +1,10 @@
 import localFont  from 'next/font/local'
 import { cookies } from 'next/headers'
 import { NextIntlClientProvider } from 'next-intl'
-import ClientTopBar from '@/components/layout/ClientTopBar'
+import { getTranslations } from 'next-intl/server'
+import { getUser } from '@/lib/supabaseServer'
+import { createServiceClient } from '@/lib/supabase'
+import Nav, { type NavUser } from '@/components/layout/Nav'
 import '@/styles/globals.css'
 
 const SUPPORTED_LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
@@ -31,11 +34,30 @@ export default async function ClientLayout({ children }: { children: React.React
   const locale: SupportedLocale = isSupportedLocale(preferred) ? preferred : 'fr'
   const messages       = (await import(`@/i18n/messages/${locale}.json`)).default
 
+  /* Identité connectée pour la navbar (null sur les pages auth) */
+  let navUser: NavUser | null = null
+  try {
+    const user = await getUser()
+    if (user) {
+      const supa = createServiceClient()
+      const { data: profile } = await supa
+        .from('profiles').select('full_name, roles').eq('id', user.id).single()
+      const roles: string[] = Array.isArray(profile?.roles) ? profile.roles : []
+      const t = await getTranslations({ locale, namespace: 'clientSpace' })
+      let label = t('spaceNameBuyer')
+      if (roles.includes('admin') || roles.includes('super_admin')) label = 'Admin'
+      else if (roles.includes('seller'))  label = t('spaceNameSeller')
+      else if (roles.includes('partner')) label = t('spaceNamePartner')
+      else if (roles.includes('buyer'))   label = t('spaceNameBuyer')
+      navUser = { name: profile?.full_name ?? user.email ?? '', label }
+    }
+  } catch { /* pages auth : pas de session, navbar publique */ }
+
   return (
     <html lang={locale} className={`${plusJakartaSans.variable}`}>
       <body className="font-sans antialiased">
-        <ClientTopBar />
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <Nav user={navUser} />
           {children}
         </NextIntlClientProvider>
       </body>

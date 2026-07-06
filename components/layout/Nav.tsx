@@ -4,7 +4,7 @@ import { Link, usePathname } from '@/i18n/navigation'
 import NextLink          from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useState, useRef, useEffect, type ComponentProps } from 'react'
-import { Menu, X, ChevronDown, User } from 'lucide-react'
+import { Menu, X, ChevronDown, User, UserCircle, LogOut } from 'lucide-react'
 import LanguageSwitcher  from '@/components/layout/LanguageSwitcher'
 import { AegrynLogo }   from '@/components/brand/AegrynLogo'
 import { gsap }          from '@/lib/gsap'
@@ -129,7 +129,14 @@ function GradeMegaMenu({
   )
 }
 
-export default function Nav() {
+export interface NavUser {
+  /** Nom complet ou email de l'utilisateur connecté */
+  name: string
+  /** Libellé de l'espace : "Acquéreur", "Vendeur", "Partenaire", "Admin" */
+  label: string
+}
+
+export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const t = useTranslations('nav')
   const pathname = usePathname()
   const isActive = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href)
@@ -298,19 +305,44 @@ export default function Nav() {
         {/* Right side: locale + client + CTA */}
         <div ref={rightRef} className="hidden lg:flex items-center gap-5">
           <LanguageSwitcher />
-          <NextLink
-            href="/client/login"
-            className="flex items-center gap-1.5 font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors duration-200"
-          >
-            <User size={13} />
-            {t('clientSpace')}
-          </NextLink>
-          <Link
-            href="/contact"
-            className="font-mono text-[11px] tracking-[0.14em] uppercase bg-ag-navy text-white px-4 py-2 hover:bg-ag-navy-mid transition-colors duration-200"
-          >
-            {t('submitAsset')} →
-          </Link>
+
+          {user ? (
+            <>
+              {/* Identité connectée — accès au compte */}
+              <NextLink href="/client/account" className="flex items-center gap-2 pl-1 group" aria-label="Mon compte">
+                <UserCircle size={16} className="text-ag-apex-ink shrink-0" aria-hidden="true" />
+                <div className="leading-tight">
+                  <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-ag-gray-light">{user.label}</p>
+                  <p className="font-sans text-[12px] font-semibold text-ag-black truncate max-w-[150px] group-hover:text-ag-apex-ink transition-colors">{user.name}</p>
+                </div>
+              </NextLink>
+              <form action="/api/client/logout" method="POST">
+                <button
+                  type="submit"
+                  className="flex items-center gap-1.5 font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors duration-200"
+                >
+                  <LogOut size={13} />
+                  {t('logout')}
+                </button>
+              </form>
+            </>
+          ) : (
+            <>
+              <NextLink
+                href="/client/login"
+                className="flex items-center gap-1.5 font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors duration-200"
+              >
+                <User size={13} />
+                {t('clientSpace')}
+              </NextLink>
+              <Link
+                href="/contact"
+                className="font-mono text-[11px] tracking-[0.14em] uppercase bg-ag-navy text-white px-4 py-2 hover:bg-ag-navy-mid transition-colors duration-200"
+              >
+                {t('submitAsset')} →
+              </Link>
+            </>
+          )}
         </div>
 
         {/* Mobile toggle */}
@@ -460,21 +492,44 @@ export default function Nav() {
 
             {/* Bottom CTAs */}
             <div className="mt-8 flex flex-col gap-3">
-              <NextLink
-                href="/client/login"
-                onClick={closeMobile}
-                className="flex items-center justify-center gap-2 border border-white/20 px-4 py-3 font-mono text-[11px] tracking-[0.14em] uppercase text-white/70 hover:border-white/50 hover:text-white transition-all"
-              >
-                <User size={13} />
-                {t('clientSpace')}
-              </NextLink>
-              <Link
-                href="/contact"
-                onClick={closeMobile}
-                className="flex items-center justify-center gap-2 bg-ag-apex px-4 py-3 font-mono text-[11px] tracking-[0.14em] uppercase text-ag-navy font-semibold hover:bg-ag-apex/90 transition-colors"
-              >
-                {t('submitAsset')} →
-              </Link>
+              {user ? (
+                <>
+                  <div className="flex items-center gap-2.5 border border-white/15 px-4 py-3">
+                    <UserCircle size={18} className="text-ag-apex shrink-0" aria-hidden="true" />
+                    <div className="leading-tight">
+                      <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-white/45">{user.label}</p>
+                      <p className="font-sans text-[13px] font-semibold text-white truncate max-w-[200px]">{user.name}</p>
+                    </div>
+                  </div>
+                  <form action="/api/client/logout" method="POST">
+                    <button
+                      type="submit"
+                      className="w-full flex items-center justify-center gap-2 border border-white/20 px-4 py-3 font-mono text-[11px] tracking-[0.14em] uppercase text-white/70 hover:border-white/50 hover:text-white transition-all"
+                    >
+                      <LogOut size={13} />
+                      {t('logout')}
+                    </button>
+                  </form>
+                </>
+              ) : (
+                <>
+                  <NextLink
+                    href="/client/login"
+                    onClick={closeMobile}
+                    className="flex items-center justify-center gap-2 border border-white/20 px-4 py-3 font-mono text-[11px] tracking-[0.14em] uppercase text-white/70 hover:border-white/50 hover:text-white transition-all"
+                  >
+                    <User size={13} />
+                    {t('clientSpace')}
+                  </NextLink>
+                  <Link
+                    href="/contact"
+                    onClick={closeMobile}
+                    className="flex items-center justify-center gap-2 bg-ag-apex px-4 py-3 font-mono text-[11px] tracking-[0.14em] uppercase text-ag-navy font-semibold hover:bg-ag-apex/90 transition-colors"
+                  >
+                    {t('submitAsset')} →
+                  </Link>
+                </>
+              )}
             </div>
 
             {/* Language */}
