@@ -1,0 +1,30 @@
+/**
+ * lib/auctionAccess.ts
+ *
+ * Vérifie si un utilisateur a les droits d'accès au catalogue auction tiers.
+ * Prérequis : compte créé + NDA AEGRYN Auction signé + CGV acceptées.
+ * Ces deux champs sont renseignés manuellement par l'admin sur profiles.
+ */
+import { createServiceClient } from '@/lib/supabase'
+
+export type AuctionAccessStatus =
+  | 'ok'              // NDA + CGV validés → accès catalogue complet
+  | 'not_authenticated' // non connecté
+  | 'pending_nda'     // connecté, NDA non encore signé
+  | 'pending_cgv'     // NDA signé mais CGV non acceptées
+
+export async function checkAuctionCatalogAccess(
+  userId: string
+): Promise<AuctionAccessStatus> {
+  const supa = createServiceClient()
+  const { data } = await supa
+    .from('profiles')
+    .select('auction_nda_signed_at, auction_cgv_accepted_at')
+    .eq('id', userId)
+    .single()
+
+  if (!data) return 'pending_nda'
+  if (!data.auction_nda_signed_at)   return 'pending_nda'
+  if (!data.auction_cgv_accepted_at) return 'pending_cgv'
+  return 'ok'
+}

@@ -24,6 +24,7 @@ import { Lock, ArrowUpRight, ClockAlert } from 'lucide-react'
 import AssetLotSheet   from '@/components/auction/AssetLotSheet'
 import { mapRowToAsset } from '@/lib/auction/mapRowToAsset'
 import { createServiceClient } from '@/lib/supabase'
+import { checkAuctionCatalogAccess } from '@/lib/auctionAccess'
 import type { AuctionLotRow, AuctionLotAccess } from '@/types/auction'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
@@ -66,7 +67,13 @@ export default async function AuctionLotPage({ params }: Props) {
     redirect(`/${locale}/client/login?next=/${locale}/auction/lot/${slug}`)
   }
 
-  /* ── 2. Access check via service client (bypasses RLS) ── */
+  /* ── 2. NDA + CGV check ── */
+  const catalogAccess = await checkAuctionCatalogAccess(user.id)
+  if (catalogAccess !== 'ok') {
+    redirect(`/${locale}/auction/catalog`)
+  }
+
+  /* ── 3. Access check via service client (bypasses RLS) ── */
   const supa = createServiceClient()
 
   const { data: lotRow } = await supa
