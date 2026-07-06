@@ -80,12 +80,20 @@ export default function middleware(req: NextRequest) {
       loginUrl.pathname = '/client/login'
       return NextResponse.redirect(loginUrl)
     }
-    return NextResponse.next()
+    const preferred = req.cookies.get(PREF_COOKIE)?.value as Locale | undefined
+    const locale: Locale = preferred && LOCALES.includes(preferred) ? preferred : (routing.defaultLocale as Locale)
+    const clientRes = NextResponse.next()
+    clientRes.headers.set('x-next-intl-locale', locale)
+    return clientRes
   }
 
   /* /client/login accessible sans session → pass-through */
   if (pathname.startsWith('/client/')) {
-    return NextResponse.next()
+    const preferred = req.cookies.get(PREF_COOKIE)?.value as Locale | undefined
+    const locale: Locale = preferred && LOCALES.includes(preferred) ? preferred : (routing.defaultLocale as Locale)
+    const res = NextResponse.next()
+    res.headers.set('x-next-intl-locale', locale)
+    return res
   }
 
   /* ── 2. Protection /admin/* ────────────────────────────── */
@@ -105,7 +113,11 @@ export default function middleware(req: NextRequest) {
       loginUrl.search   = ''
       return NextResponse.redirect(loginUrl)
     }
-    return NextResponse.next()
+    const preferred = req.cookies.get(PREF_COOKIE)?.value as Locale | undefined
+    const locale: Locale = preferred && LOCALES.includes(preferred) ? preferred : (routing.defaultLocale as Locale)
+    const adminRes = NextResponse.next()
+    adminRes.headers.set('x-next-intl-locale', locale)
+    return adminRes
   }
 
   /* ── 3. Routes API — pass-through ── */
