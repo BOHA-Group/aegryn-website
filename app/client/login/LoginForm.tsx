@@ -56,7 +56,6 @@ export default function LoginForm() {
       } catch {
         router.push('/client/my-assets')
       }
-      router.refresh()
     } catch {
       setError(t('errorNetwork'))
     } finally {

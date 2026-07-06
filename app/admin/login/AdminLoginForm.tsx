@@ -45,7 +45,6 @@ export default function AdminLoginForm({ errorParam }: { errorParam?: string }) 
     }
 
     router.push('/admin/auction')
-    router.refresh()
   }
 
   return (

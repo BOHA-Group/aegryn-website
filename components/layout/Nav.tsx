@@ -196,7 +196,7 @@ export default function Nav() {
   }
 
   return (
-    <header ref={navRef} className="sticky top-0 z-50 bg-ag-white border-b border-ag-border">
+    <header ref={navRef} className="fixed top-0 left-0 right-0 z-50 bg-ag-white border-b border-ag-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
 
         {/* Logo */}
@@ -270,16 +270,16 @@ export default function Nav() {
             {activeDropdown === 'services' && <DropdownMenu links={SERVICES_LINKS} t={t} />}
           </div>
 
-          {/* Discover */}
+          {/* Blog */}
           <Link
-            href="/discover"
-            aria-current={isActive('/discover') ? 'page' : undefined}
+            href="/blog"
+            aria-current={isActive('/blog') ? 'page' : undefined}
             className={`nav-link-item relative font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-              isActive('/discover') ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
+              isActive('/blog') ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
             }`}
           >
             {t('discover')}
-            {isActive('/discover') && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
+            {isActive('/blog') && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
           </Link>
 
           {/* About */}
@@ -440,11 +440,11 @@ export default function Nav() {
               )}
             </div>
 
-            {/* Discover */}
-            <Link href="/discover" onClick={closeMobile}
-              aria-current={isActive('/discover') ? 'page' : undefined}
+            {/* Blog */}
+            <Link href="/blog" onClick={closeMobile}
+              aria-current={isActive('/blog') ? 'page' : undefined}
               className={`mobile-nav-item py-4 font-mono text-[12px] tracking-[0.18em] uppercase transition-colors border-b ${
-                isActive('/discover') ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                isActive('/blog') ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
               }`}>
               {t('discover')}
             </Link>

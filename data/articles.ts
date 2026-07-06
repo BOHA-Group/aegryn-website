@@ -297,19 +297,19 @@ export const ARTICLES: Article[] = [
         en: 'Christie\'s does not list paintings. Christie\'s selects works, authenticates them, establishes their provenance, and presents them to a circle of buyers who have proven their capacity and seriousness. The refusal is the product. In 2023, Christie\'s refused more lots than it accepted — and it is precisely this signal of selectivity that justifies the prices achieved.',
       }},
       { type: 'p', text: {
-        fr: 'Antiquorum fait la même chose pour les montres de collection. Chaque lot reçoit un grade multi-dimensionnel co-signé par des experts engageant leur réputation. Ce n\'est pas une note — c\'est une certification. La différence est fondamentale : une note est une opinion, une certification est une responsabilité.',
-        en: 'Antiquorum does the same for collectible watches. Each lot receives a multidimensional grade co-signed by experts staking their reputation. It is not a rating — it is a certification. The difference is fundamental: a rating is an opinion, a certification is a responsibility.',
+        fr: 'Antiquorum fait la même chose pour les montres de collection. Chaque lot reçoit un grade multi-dimensionnel émis par des experts indépendants selon un protocole reproductible. Ce n\'est pas une note — c\'est une certification. La différence est fondamentale : une note est une opinion, une certification est une responsabilité.',
+        en: 'Antiquorum does the same for collectible watches. Each lot receives a multidimensional grade issued by independent experts following a reproducible protocol. It is not a rating — it is a certification. The difference is fundamental: a rating is an opinion, a certification is a responsibility.',
       }},
       { type: 'h2', text: { fr: 'La thèse AEGRYN', en: 'The AEGRYN thesis' } },
       { type: 'p', text: {
-        fr: 'Un actif tech mérite le même traitement qu\'une Rolex Daytona de 1963 ou qu\'un Picasso de la période bleue. Il a une provenance (son historique de build), un état (son grade C/I/F/S), une authenticité (sa certification blockchain), et une valeur de marché (son multiple ARR ajusté).',
-        en: 'A tech asset deserves the same treatment as a 1963 Rolex Daytona or a Picasso from the Blue Period. It has a provenance (its build history), a condition (its C/I/F/S grade), an authenticity (its blockchain certification), and a market value (its adjusted ARR multiple).',
+        fr: 'Un actif tech mérite le même traitement qu\'une Rolex Daytona de 1963 ou qu\'un Picasso de la période bleue. Il a une provenance (son historique de build), un état (son grade C/I/F/S), une authenticité (sa certification indépendante documentée), et une valeur de marché (son multiple ARR ajusté).',
+        en: 'A tech asset deserves the same treatment as a 1963 Rolex Daytona or a Picasso from the Blue Period. It has a provenance (its build history), a condition (its C/I/F/S grade), an authenticity (its independent documented certification), and a market value (its adjusted ARR multiple).',
       }},
       { type: 'list', items: [
-        { fr: 'La certification remplace l\'estimation — chaque actif reçoit un grade AEG ★/AAA/AA/A/B co-signé par des experts indépendants', en: 'Certification replaces estimation — each asset receives an AEG ★/AAA/AA/A/B grade co-signed by independent experts' },
+        { fr: 'La certification remplace l\'estimation — chaque actif reçoit un grade AEG ★/AAA/AA/A/B émis par des analystes certifiés AEGRYN selon un protocole indépendant', en: 'Certification replaces estimation — each asset receives an AEG ★/AAA/AA/A/B grade issued by AEGRYN certified analysts following an independent protocol' },
         { fr: 'Le cercle fermé remplace la marketplace — les acquéreurs sont pré-qualifiés avant d\'accéder au moindre dossier', en: 'The closed circle replaces the marketplace — acquirers are pre-qualified before accessing any file' },
         { fr: 'Le séquestre remplace la promesse verbale — 10% du prix de transaction est versé à la signature de la Promesse de Transaction', en: 'Escrow replaces the verbal promise — 10% of the transaction price is paid upon signing the Transaction Promise' },
-        { fr: 'La blockchain remplace la confiance aveugle — l\'empreinte exacte du code est certifiée au jour du transfert', en: 'Blockchain replaces blind trust — the exact code fingerprint is certified on the day of transfer' },
+        { fr: 'La documentation remplace la confiance aveugle — l\'état exact du codebase est documenté et versionné au transfert', en: 'Documentation replaces blind trust — the exact codebase state is documented and versioned at transfer' },
       ]},
       { type: 'h2', text: { fr: 'Pourquoi la Suisse', en: 'Why Switzerland' } },
       { type: 'p', text: {
@@ -422,7 +422,7 @@ export const ARTICLES: Article[] = [
       ]},
       { type: 'h2', text: { fr: 'Certification et grade', en: 'Certification and grade' } },
       { type: 'list', items: [
-        { fr: 'Grade AEG — Opinion globale co-signée des experts AEGRYN sur un actif tech. De ★ (Exceptionnel) à B (Correct). Non attribué = Refusé.', en: 'AEG Grade — Overall co-signed expert opinion from AEGRYN on a tech asset. From ★ (Exceptional) to B (Standard). Not assigned = Refused.' },
+        { fr: 'Grade AEG — Certification indépendante des analystes AEGRYN sur un actif tech, émise selon un protocole reproductible. De ★ (Exceptionnel) à B (Correct). Non attribué = Refusé.', en: 'AEG Grade — Independent certification from AEGRYN analysts on a tech asset, issued following a reproducible protocol. From ★ (Exceptional) to B (Standard). Not assigned = Refused.' },
         { fr: 'Dimension C (Code) — Qualité du codebase : dette technique, tests, documentation, CI/CD, sécurité applicative.', en: 'Dimension C (Code) — Codebase quality: technical debt, tests, documentation, CI/CD, application security.' },
         { fr: 'Dimension I (IP) — Propriété intellectuelle : marques, droits logiciels, licences, contrats prestataires.', en: 'Dimension I (IP) — Intellectual property: trademarks, software rights, licences, contractor contracts.' },
         { fr: 'Dimension F (Finance) — Métriques financières : ARR audité, NRR, churn, marges, croissance.', en: 'Dimension F (Finance) — Financial metrics: audited ARR, NRR, churn, margins, growth.' },

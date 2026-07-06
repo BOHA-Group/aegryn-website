@@ -21,12 +21,12 @@ const _TYPE_ACCENT: Record<string, string> = {
 const TYPE_DATA: Record<string, { label: string; title: string; desc: string; profiles: string[]; cta: string }> = {
   certification: {
     label: 'CERTIFICATION',
-    title: 'Co-signataires du Grade AEGRYN',
-    desc: 'Le label AEGRYN Grade n\'est pas une opinion — c\'est une certification co-signée par des experts indépendants qui engagent leur responsabilité professionnelle.',
+    title: 'Partenaires du réseau d\'experts AEGRYN',
+    desc: 'Le label AEGRYN Grade est émis de façon indépendante par nos analystes certifiés. Nous construisons un réseau de partenaires experts appelés à enrichir certains rapports d\'une revue croisée complémentaire, à mesure que ce dispositif se déploie.',
     profiles: [
-      'Cabinets juridiques tech & IP — co-signent la dimension I (IP & Droits) du grade',
-      'Experts-comptables / Cabinets d\'audit — co-signent la dimension F (Finance)',
-      'Partenaires cybersécurité — co-signent la dimension S (Sécurité)',
+      'Cabinets juridiques tech & IP — experts de la dimension I (IP & Droits)',
+      'Experts-comptables / Cabinets d\'audit — experts de la dimension F (Finance)',
+      'Partenaires cybersécurité — experts de la dimension S (Sécurité)',
     ],
     cta: 'Devenir partenaire certification',
   },
@@ -59,7 +59,7 @@ const TYPE_DATA: Record<string, { label: string; title: string; desc: string; pr
     profiles: [
       'Spécialistes revue de code et dette technique — CTO freelance senior, cabinets indépendants',
       'Auditeurs de sécurité / Pentesteurs — accréditation PASSI ou CREST recommandée',
-      'Spécialistes blockchain et Web3 — pour la future extension du grade aux actifs Web3',
+      'Spécialistes blockchain et Web3 — appelés à enrichir la traçabilité du registre à terme',
     ],
     cta: 'Proposer un partenariat technique',
   },
