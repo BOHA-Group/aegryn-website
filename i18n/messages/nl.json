@@ -79,6 +79,8 @@
       "heroLabel": "AEGRYN — Eigen ecosysteem",
       "heroTitle": "Wat we\nbouwen.",
       "heroSub": "6 activa · 3 categorieën · Zwitserland & Europa",
+      "ownedNote": "Deze activa behoren tot de AEGRYN-groep. Ze staan standaard niet te koop. Sommige kunnen uitzonderlijk worden geveild op strategische beslissing van de groep.",
+      "auctionEligibleNote": "Activum geschikt voor veiling — investeerderscontact op verzoek.",
       "ctaBottom": "Wilt u uw eigen asset indienen voor certificering?",
       "ctaGrade": "Een extern asset indienen",
       "ctaAuction": "Veilingsessies bekijken"
@@ -2496,7 +2498,8 @@
     "termsCgv": "Algemene voorwaarden",
     "privacy": "Privacy",
     "security": "Beveiliging",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "sitemap": "Sitemap"
   },
   "termsUse": {
     "meta": {
@@ -2931,5 +2934,10 @@
       "errorExpired": "Sessie verlopen. Vraag een nieuwe uitnodigingsmail aan.",
       "errorNetwork": "Kan geen verbinding maken met de server. Controleer uw verbinding en probeer opnieuw."
     }
+  },
+  "comingSoon": {
+    "label": "Binnenkort beschikbaar",
+    "desc": "Deze functionaliteit is in opbouw. Ze zal zeer binnenkort beschikbaar zijn.",
+    "descSection": "De sectie \"{section}\" is in opbouw. Ze zal zeer binnenkort beschikbaar zijn."
   }
 }

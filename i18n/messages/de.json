@@ -79,6 +79,8 @@
       "heroLabel": "AEGRYN — Proprietäres Ökosystem",
       "heroTitle": "Was wir\nbauen.",
       "heroSub": "6 Assets · 3 Kategorien · Schweiz & Europa",
+      "ownedNote": "Diese Assets gehören zur AEGRYN-Gruppe. Sie stehen standardmäßig nicht zum Verkauf. Einige können ausnahmsweise auf strategischen Beschluss der Gruppe hin zur Auktion angeboten werden.",
+      "auctionEligibleNote": "Asset für Auktion geeignet — Investorenkontakt auf Anfrage.",
       "ctaBottom": "Möchten Sie Ihr eigenes Asset zur Zertifizierung einreichen?",
       "ctaGrade": "Drittanbieter-Asset einreichen",
       "ctaAuction": "Auktions-Sessions ansehen"
@@ -2496,7 +2498,8 @@
     "termsCgv": "AGB",
     "privacy": "Datenschutz",
     "security": "Sicherheit",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "sitemap": "Seitenübersicht"
   },
   "termsUse": {
     "meta": {
@@ -2931,5 +2934,10 @@
       "errorExpired": "Sitzung abgelaufen. Fordern Sie eine neue Einladungs-E-Mail an.",
       "errorNetwork": "Server nicht erreichbar. Bitte Verbindung prüfen und erneut versuchen."
     }
+  },
+  "comingSoon": {
+    "label": "Demnächst verfügbar",
+    "desc": "Diese Funktion befindet sich im Aufbau. Sie wird in Kürze verfügbar sein.",
+    "descSection": "Der Bereich \"{section}\" befindet sich im Aufbau. Er wird in Kürze verfügbar sein."
   }
 }

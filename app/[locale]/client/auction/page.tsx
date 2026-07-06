@@ -9,6 +9,7 @@ import Link                   from 'next/link'
 import { getUser }            from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { Lock, ExternalLink, Clock, XCircle, CheckCircle, Hourglass } from 'lucide-react'
+import { ComingSoonBanner }   from '@/components/ui/ComingSoonBanner'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -208,6 +209,15 @@ export default async function ClientAuctionPage({ params }: Props) {
             })}
           </div>
         )}
+
+        {/* Sections à venir */}
+        <div className="mt-12 space-y-4">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-4">
+            Espaces en construction
+          </p>
+          <ComingSoonBanner section="Espace vendeur" />
+          <ComingSoonBanner section="Espace partenaire" />
+        </div>
 
         {/* Disclaimer */}
         <p className="mt-10 text-center font-mono text-[9px] uppercase tracking-[0.18em] text-ag-gray-light">

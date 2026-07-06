@@ -12,7 +12,7 @@
     "grade": "Grade",
     "assets": "Actifs",
     "services": "Services",
-    "discover": "Discover",
+    "discover": "Veille",
     "clientSpace": "Espace client",
     "submitAsset": "Soumettre un actif",
     "auctionCatalog": "Catalogue",
@@ -409,7 +409,7 @@
     "spontaneous": "Candidature spontanée",
     "statement": {
       "label": "Aegryn Advisory",
-      "title": "Certified to transact — construit par des experts qui y croient.",
+      "title": "Certifié pour transiger — construit par des experts qui y croient.",
       "cta": "Découvrir l'Advisory"
     },
     "domains": {
@@ -685,7 +685,7 @@
     "dataProtection": "Politique de protection des données",
     "neediuLegal": "Neediu est une marque déposée d'Aegryn Sàrl. Tous droits réservés.",
     "tagline": "CERTIFIED TO TRANSACT.",
-    "swissTagline": "The certified reference for premium tech asset transactions in Europe.",
+    "swissTagline": "La référence certifiée pour les transactions d'actifs tech premium en Europe.",
     "navLabel": "Aegryn",
     "companyLabel": "Entreprise",
     "servicesLabel": "Services",
@@ -2456,7 +2456,8 @@
     "termsCgv": "CGV",
     "privacy": "Confidentialité",
     "security": "Sécurité",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "sitemap": "Plan du site"
   },
   "termsUse": {
     "meta": {
@@ -2891,5 +2892,10 @@
       "errorExpired": "Session expirée. Demandez un nouvel email d'invitation.",
       "errorNetwork": "Impossible de contacter le serveur. Vérifiez votre connexion et réessayez."
     }
+  },
+  "comingSoon": {
+    "label": "Prochainement disponible",
+    "desc": "Cette fonctionnalité est en cours de construction. Elle sera accessible très prochainement.",
+    "descSection": "La section \"{section}\" est en cours de construction. Elle sera accessible très prochainement."
   }
 }

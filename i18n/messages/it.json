@@ -79,6 +79,8 @@
       "heroLabel": "AEGRYN — Ecosistema proprietario",
       "heroTitle": "Ciò che\nconstruiamo.",
       "heroSub": "6 asset · 3 categorie · Svizzera & Europa",
+      "ownedNote": "Questi asset appartengono al gruppo AEGRYN. Non sono in vendita per impostazione predefinita. Alcuni possono essere eccezionalmente messi all'asta per decisione strategica del gruppo.",
+      "auctionEligibleNote": "Asset idoneo all'asta — contatto investitori su richiesta.",
       "ctaBottom": "Vuole inviare il suo asset per la certificazione?",
       "ctaGrade": "Invia un asset di terze parti",
       "ctaAuction": "Vedi sessioni d'asta"
@@ -2496,7 +2498,8 @@
     "termsCgv": "CGV",
     "privacy": "Privacy",
     "security": "Sicurezza",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "sitemap": "Mappa del sito"
   },
   "termsUse": {
     "meta": {
@@ -2931,5 +2934,10 @@
       "errorExpired": "Sessione scaduta. Richiedi una nuova email di invito.",
       "errorNetwork": "Impossibile contattare il server. Controlla la connessione e riprova."
     }
+  },
+  "comingSoon": {
+    "label": "Disponibile a breve",
+    "desc": "Questa funzionalità è in fase di costruzione. Sarà disponibile molto presto.",
+    "descSection": "La sezione \"{section}\" è in fase di costruzione. Sarà disponibile molto presto."
   }
 }

@@ -62,12 +62,13 @@ const socialLinks = [
 
 type LinkHref = ComponentProps<typeof Link>['href']
 
-const legal: { key: string; href: LinkHref; ns: string }[] = [
+const legal: { key: string; href: LinkHref; ns: string; external?: boolean }[] = [
   { key: 'termsUse',  href: '/terms/use',  ns: 'legalNav' },
   { key: 'termsCgv',  href: '/terms/cgv',  ns: 'legalNav' },
   { key: 'privacy',   href: '/privacy',    ns: 'legalNav' },
   { key: 'security',  href: '/security',   ns: 'legalNav' },
   { key: 'faq',       href: '/help/faq',   ns: 'legalNav' },
+  { key: 'sitemap',   href: '/sitemap.xml' as unknown as LinkHref, ns: 'legalNav', external: true },
 ]
 
 const companyLinks: { navKey: 'about' | 'career' | 'contact'; href: LinkHref }[] = [
@@ -196,14 +197,26 @@ export default function Footer() {
             {t('legal')}
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
-            {legal.map(({ key, href }) => (
-              <Link
-                key={key}
-                href={href}
-                className="font-sans font-semibold text-[10px] text-white/45 hover:text-white transition-colors"
-              >
-                {tL(key as 'termsUse')}
-              </Link>
+            {legal.map(({ key, href, external }) => (
+              external ? (
+                <a
+                  key={key}
+                  href={href as string}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-sans font-semibold text-[10px] text-white/45 hover:text-white transition-colors"
+                >
+                  {tL(key as 'termsUse')}
+                </a>
+              ) : (
+                <Link
+                  key={key}
+                  href={href}
+                  className="font-sans font-semibold text-[10px] text-white/45 hover:text-white transition-colors"
+                >
+                  {tL(key as 'termsUse')}
+                </Link>
+              )
             ))}
           </div>
         </div>

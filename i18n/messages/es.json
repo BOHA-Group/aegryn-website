@@ -79,6 +79,8 @@
       "heroLabel": "AEGRYN — Ecosistema propietario",
       "heroTitle": "Lo que\nconstruimos.",
       "heroSub": "6 activos · 3 categorías · Suiza & Europa",
+      "ownedNote": "Estos activos pertenecen al grupo AEGRYN. No están a la venta por defecto. Algunos pueden ofrecerse excepcionalmente en subasta por decisión estratégica del grupo.",
+      "auctionEligibleNote": "Activo elegible para subasta — contacto inversores bajo demanda.",
       "ctaBottom": "¿Desea enviar su propio activo para certificación?",
       "ctaGrade": "Enviar un activo de terceros",
       "ctaAuction": "Ver sesiones de subasta"
@@ -2496,7 +2498,8 @@
     "termsCgv": "CGV",
     "privacy": "Privacidad",
     "security": "Seguridad",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "sitemap": "Mapa del sitio"
   },
   "termsUse": {
     "meta": {
@@ -2931,5 +2934,10 @@
       "errorExpired": "Sesión caducada. Solicite un nuevo correo de invitación.",
       "errorNetwork": "No se pudo contactar con el servidor. Compruebe su conexión e inténtelo de nuevo."
     }
+  },
+  "comingSoon": {
+    "label": "Próximamente",
+    "desc": "Esta funcionalidad está en construcción. Estará disponible muy pronto.",
+    "descSection": "La sección \"{section}\" está en construcción. Estará disponible muy pronto."
   }
 }
