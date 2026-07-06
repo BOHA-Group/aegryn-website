@@ -2937,6 +2937,31 @@
       "errorMismatch": "De wachtwoorden komen niet overeen.",
       "errorExpired": "Sessie verlopen. Vraag een nieuwe uitnodigingsmail aan.",
       "errorNetwork": "Kan geen verbinding maken met de server. Controleer uw verbinding en probeer opnieuw."
+    },
+    "register": {
+      "title": "Account aanmaken",
+      "subtitle": "Word lid van het AEGRYN-klantengebied — gecertificeerde kopers, verkopers en partners.",
+      "fullNameLabel": "Volledige naam",
+      "fullNamePlaceholder": "Voornaam Achternaam",
+      "emailLabel": "E-mailadres",
+      "emailPlaceholder": "u@voorbeeld.nl",
+      "passwordLabel": "Wachtwoord",
+      "passwordPlaceholder": "Minimaal 8 tekens",
+      "roleLabel": "Ik wil",
+      "roleBuyer": "Een tech-asset verwerven",
+      "roleSeller": "Een tech-asset overdragen",
+      "rolePartner": "Introducerende partner worden",
+      "submit": "Mijn account aanmaken",
+      "submitting": "Account aanmaken…",
+      "alreadyAccount": "Al een account?",
+      "loginLink": "Inloggen →",
+      "successTitle": "Account aangemaakt",
+      "successDesc": "Doorsturen naar uw ruimte in 3 seconden…",
+      "errorEmailExists": "Dit e-mailadres is al in gebruik. Log in of reset uw wachtwoord.",
+      "errorTooShort": "Het wachtwoord moet minimaal 8 tekens bevatten.",
+      "errorInvalid": "Ongeldig e-mailadres.",
+      "errorGeneric": "Account kon niet worden aangemaakt. Probeer opnieuw.",
+      "errorNetwork": "Kan geen verbinding maken met de server. Controleer uw verbinding."
     }
   },
   "clientSpace": {

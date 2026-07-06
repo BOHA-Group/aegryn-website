@@ -16,13 +16,7 @@ export default async function SetPasswordPage() {
   const t = await getTranslations({ locale, namespace: 'clientArea.setPassword' })
 
   return (
-    <main className="min-h-screen bg-ag-navy flex items-center justify-center px-6 relative">
-      <Link
-        href="/"
-        className="absolute top-6 left-6 inline-flex items-center gap-2 font-sans text-[12px] text-white/40 hover:text-white transition-colors"
-      >
-        <span aria-hidden="true">←</span> {t('backToSite')}
-      </Link>
+    <main className="min-h-screen bg-ag-navy flex items-center justify-center px-6 pt-14 relative">
       <ClientLocaleSwitcher />
       <div className="w-full max-w-md">
         <div className="mb-8 text-center">

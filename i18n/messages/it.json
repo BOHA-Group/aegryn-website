@@ -2937,6 +2937,31 @@
       "errorMismatch": "Le password non coincidono.",
       "errorExpired": "Sessione scaduta. Richiedi una nuova email di invito.",
       "errorNetwork": "Impossibile contattare il server. Controlla la connessione e riprova."
+    },
+    "register": {
+      "title": "Crea un account",
+      "subtitle": "Unisciti all'area clienti AEGRYN — acquirenti, venditori e partner certificati.",
+      "fullNameLabel": "Nome completo",
+      "fullNamePlaceholder": "Nome Cognome",
+      "emailLabel": "Indirizzo email",
+      "emailPlaceholder": "tu@esempio.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Minimo 8 caratteri",
+      "roleLabel": "Desidero",
+      "roleBuyer": "Acquisire un asset tech",
+      "roleSeller": "Cedere un asset tech",
+      "rolePartner": "Diventare partner referente",
+      "submit": "Crea il mio account",
+      "submitting": "Creazione in corso…",
+      "alreadyAccount": "Hai già un account?",
+      "loginLink": "Accedi →",
+      "successTitle": "Account creato",
+      "successDesc": "Reindirizzamento al tuo spazio tra 3 secondi…",
+      "errorEmailExists": "Questa email è già in uso. Accedi o reimposta la password.",
+      "errorTooShort": "La password deve contenere almeno 8 caratteri.",
+      "errorInvalid": "Email non valida.",
+      "errorGeneric": "Impossibile creare l'account. Riprova.",
+      "errorNetwork": "Impossibile contattare il server. Controlla la connessione."
     }
   },
   "clientSpace": {

@@ -2937,6 +2937,31 @@
       "errorMismatch": "Die Passwörter stimmen nicht überein.",
       "errorExpired": "Sitzung abgelaufen. Fordern Sie eine neue Einladungs-E-Mail an.",
       "errorNetwork": "Server nicht erreichbar. Bitte Verbindung prüfen und erneut versuchen."
+    },
+    "register": {
+      "title": "Konto erstellen",
+      "subtitle": "Treten Sie dem AEGRYN-Kundenbereich bei — zertifizierte Käufer, Verkäufer und Partner.",
+      "fullNameLabel": "Vollständiger Name",
+      "fullNamePlaceholder": "Vorname Nachname",
+      "emailLabel": "E-Mail-Adresse",
+      "emailPlaceholder": "sie@beispiel.com",
+      "passwordLabel": "Passwort",
+      "passwordPlaceholder": "Mindestens 8 Zeichen",
+      "roleLabel": "Ich möchte",
+      "roleBuyer": "Ein Tech-Asset erwerben",
+      "roleSeller": "Ein Tech-Asset veräußern",
+      "rolePartner": "Einführender Partner werden",
+      "submit": "Mein Konto erstellen",
+      "submitting": "Konto wird erstellt…",
+      "alreadyAccount": "Bereits ein Konto?",
+      "loginLink": "Anmelden →",
+      "successTitle": "Konto erstellt",
+      "successDesc": "Weiterleitung zu Ihrem Bereich in 3 Sekunden…",
+      "errorEmailExists": "Diese E-Mail wird bereits verwendet. Melden Sie sich an oder setzen Sie Ihr Passwort zurück.",
+      "errorTooShort": "Das Passwort muss mindestens 8 Zeichen lang sein.",
+      "errorInvalid": "Ungültige E-Mail-Adresse.",
+      "errorGeneric": "Konto konnte nicht erstellt werden. Bitte versuchen Sie es erneut.",
+      "errorNetwork": "Server nicht erreichbar. Bitte Verbindung prüfen."
     }
   },
   "clientSpace": {

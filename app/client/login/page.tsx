@@ -21,13 +21,7 @@ export default async function ClientLoginPage({
   const t = await getTranslations({ locale, namespace: 'clientArea.login' })
 
   return (
-    <main className="min-h-screen bg-ag-navy flex items-center justify-center px-6 relative">
-      <Link
-        href="/"
-        className="absolute top-6 left-6 inline-flex items-center gap-2 font-sans text-[12px] text-white/40 hover:text-white transition-colors"
-      >
-        <span aria-hidden="true">←</span> {t('backToSite')}
-      </Link>
+    <main className="min-h-screen bg-ag-navy flex items-center justify-center px-6 pt-14 relative">
       <ClientLocaleSwitcher />
       <div className="w-full max-w-md">
         <div className="mb-10 text-center">
@@ -52,10 +46,11 @@ export default async function ClientLoginPage({
             {t('forgotPassword')}
           </Link>
         </p>
-        <p className="mt-4 text-center font-sans text-[11px] text-white/25">
-          {t('noAccount')}
-          <br />
-          {t('contact')} <a href="mailto:contact@aegryn.com" className="text-ag-apex/60 hover:text-ag-apex transition-colors">contact@aegryn.com</a>
+        <p className="mt-4 text-center font-sans text-[11px] text-white/30">
+          {t('noAccount')}{' '}
+          <Link href="/client/register" className="text-ag-apex hover:text-ag-apex/80 underline underline-offset-2 transition-colors">
+            {t('createAccount')}
+          </Link>
         </p>
       </div>
     </main>

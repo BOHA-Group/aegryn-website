@@ -1,6 +1,7 @@
 import localFont  from 'next/font/local'
 import { cookies } from 'next/headers'
 import { NextIntlClientProvider } from 'next-intl'
+import ClientTopBar from '@/components/layout/ClientTopBar'
 import '@/styles/globals.css'
 
 const SUPPORTED_LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
@@ -33,6 +34,7 @@ export default async function ClientLayout({ children }: { children: React.React
   return (
     <html lang={locale} className={`${plusJakartaSans.variable}`}>
       <body className="font-sans antialiased">
+        <ClientTopBar />
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
