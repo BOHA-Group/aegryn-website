@@ -1,9 +1,9 @@
 import { getTranslations } from 'next-intl/server'
-import { useTranslations } from 'next-intl'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, MapPin, Users, ArrowUpRight, Bell } from 'lucide-react'
+import WaitlistForm from '@/components/auction/WaitlistForm'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -13,8 +13,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: t('title'), description: t('registerDesc') }
 }
 
-export default function AuctionSessionPage() {
-  const t = useTranslations('auction.session')
+export default async function AuctionSessionPage({ params }: Props) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'auction.session' })
 
   const details = [
     { icon: Calendar, label: t('date'),   value: t('dateTbd')      },
@@ -116,36 +117,39 @@ export default function AuctionSessionPage() {
         </div>
       </section>
 
-      {/* Two-column CTAs */}
-      <section className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Buyer */}
-          <div className="border border-ag-border bg-ag-white p-10 flex flex-col gap-6">
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink">{t('registerTitle')}</p>
-            <p className="font-sans font-bold text-ag-black text-[20px] leading-snug tracking-[-0.02em]">
+      {/* Waiting list */}
+      <section id="waitlist" className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10 max-w-xl">
+            <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-ag-apex mb-3">
+              Accès prioritaire
+            </p>
+            <h2 className="font-sans font-bold text-ag-black text-[26px] tracking-[-0.02em] leading-tight mb-3">
               {t('registerTitle')}
+            </h2>
+            <p className="font-sans text-[14px] text-ag-gray leading-relaxed">
+              {t('registerDesc')}
             </p>
-            <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('registerDesc')}</p>
-            <Link
-              href="/contact"
-              className="self-start inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy-mid transition-colors"
-            >
-              {t('registerCta')} <ArrowUpRight size={13} />
-            </Link>
           </div>
-          {/* Seller */}
-          <div className="border border-ag-apex/30 bg-ag-white p-10 flex flex-col gap-6">
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink">{t('sellerTitle')}</p>
-            <p className="font-sans font-bold text-ag-black text-[20px] leading-snug tracking-[-0.02em]">
-              {t('sellerTitle')}
-            </p>
-            <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('sellerDesc')}</p>
-            <Link
-              href="/auction/how-to-sell"
-              className="self-start inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
-            >
-              {t('sellerCta')} <ArrowUpRight size={13} />
-            </Link>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            {/* Formulaire */}
+            <WaitlistForm locale={locale} />
+
+            {/* Seller CTA (conservé) */}
+            <div className="border border-ag-apex/30 bg-ag-white p-10 flex flex-col gap-6">
+              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink">{t('sellerTitle')}</p>
+              <p className="font-sans font-bold text-ag-black text-[20px] leading-snug tracking-[-0.02em]">
+                {t('sellerTitle')}
+              </p>
+              <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('sellerDesc')}</p>
+              <Link
+                href={`/${locale}/auction/how-to-sell`}
+                className="self-start inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
+              >
+                {t('sellerCta')} <ArrowUpRight size={13} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
