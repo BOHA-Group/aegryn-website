@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import type { GradeInput, GradeResult, GradeLetter } from '@/lib/gradeEngine'
-import { ChevronDown, ChevronUp, AlertTriangle, CheckCircle2, Calculator, Send } from 'lucide-react'
+import { runGradeEngine } from '@/lib/gradeEngine'
+import { ChevronDown, ChevronUp, AlertTriangle, CheckCircle2, Calculator, Send, Zap } from 'lucide-react'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types locaux
@@ -110,16 +111,86 @@ function YesNoNASelect({ value, onChange }: { value: string; onChange: (v: strin
 // ScoreBar
 // ─────────────────────────────────────────────────────────────────────────────
 
-function ScoreBar({ label, score, max = 25 }: { label: string; score: number; max?: number }) {
+function ScoreBar({ label, score, max = 25, dim }: { label: string; score: number; max?: number; dim?: string }) {
   const pct = Math.round((score / max) * 100)
   const color = pct >= 80 ? 'bg-emerald-500' : pct >= 60 ? 'bg-blue-500' : pct >= 40 ? 'bg-amber-500' : 'bg-red-400'
+  const dimLabel: Record<string, string> = { C: 'Code', I: 'IP', F: 'Finance', S: 'Sécurité' }
   return (
     <div className="flex items-center gap-3">
-      <p className="font-mono text-[11px] text-gray-500 w-16 shrink-0">{label}</p>
+      <p className="font-mono text-[11px] text-gray-500 w-16 shrink-0">{dim ? dimLabel[dim] ?? label : label}</p>
       <div className="flex-1 h-2 bg-gray-100 overflow-hidden">
-        <div className={`h-full ${color} transition-all`} style={{ width: `${pct}%` }} />
+        <div className={`h-full ${color} transition-all duration-300`} style={{ width: `${pct}%` }} />
       </div>
       <p className="font-mono text-[11px] text-gray-700 w-12 text-right shrink-0">{score}/{max}</p>
+    </div>
+  )
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// LiveScorePanel — aperçu temps réel pendant la saisie
+// ─────────────────────────────────────────────────────────────────────────────
+
+const GRADE_BADGE: Record<string, string> = {
+  star:    'bg-amber-100 text-amber-700 border-amber-300',
+  aaa:     'bg-blue-100 text-blue-800 border-blue-300',
+  aa:      'bg-green-100 text-green-800 border-green-300',
+  a:       'bg-yellow-100 text-yellow-700 border-yellow-300',
+  b:       'bg-gray-100 text-gray-600 border-gray-300',
+  refused: 'bg-red-100 text-red-700 border-red-300',
+}
+const GRADE_LABELS: Record<string, string> = {
+  star: 'AEG ★', aaa: 'AAA', aa: 'AA', a: 'A', b: 'B', refused: 'NG',
+}
+
+function LiveScorePanel({ live }: { live: ReturnType<typeof runGradeEngine> }) {
+  const badge = GRADE_BADGE[live.grade] ?? GRADE_BADGE.b
+  return (
+    <div className="sticky top-4 bg-white border border-gray-200 p-4 space-y-3">
+      <div className="flex items-center gap-1.5 mb-2">
+        <Zap size={11} className="text-ag-apex" />
+        <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Score live</p>
+      </div>
+
+      <ScoreBar label="Code"     score={live.dimensions.code.score} />
+      <ScoreBar label="IP"       score={live.dimensions.ip.score} />
+      <ScoreBar label="Finance"  score={live.dimensions.finance.score} />
+      <ScoreBar label="Sécurité" score={live.dimensions.security.score} />
+
+      <div className="border-t border-gray-100 pt-3 flex items-center justify-between">
+        <div>
+          <p className="font-mono text-[9px] text-gray-400 uppercase tracking-widest">Total</p>
+          <p className="font-sans font-bold text-[22px] text-gray-900 leading-none mt-0.5">
+            {live.totalScore}<span className="text-[13px] text-gray-400">/100</span>
+          </p>
+        </div>
+        <div className={`border px-3 py-1.5 text-center ${badge}`}>
+          <p className="font-mono text-[9px] uppercase tracking-widest opacity-70 mb-0.5">Grade estimé</p>
+          <p className="font-sans font-bold text-[18px] leading-none">{GRADE_LABELS[live.grade]}</p>
+        </div>
+      </div>
+
+      {live.autoRefusal && (
+        <div className="bg-red-50 border border-red-200 p-2">
+          <p className="font-mono text-[9px] text-red-600 uppercase tracking-widest mb-1">Refus auto</p>
+          {live.refusalReasons.map((r, i) => (
+            <p key={i} className="font-sans text-[10px] text-red-700">· {r}</p>
+          ))}
+        </div>
+      )}
+
+      {!live.autoRefusal && live.totalScore > 0 && (
+        <div className="space-y-1">
+          {(['code', 'ip', 'finance', 'security'] as const).map(dim => {
+            const d = live.dimensions[dim]
+            const dimNames: Record<string, string> = { code: 'Code', ip: 'IP', finance: 'Finance', security: 'Sécu' }
+            return d.rationale.slice(0, 2).map((r, i) => (
+              <p key={`${dim}-${i}`} className="font-sans text-[10px] text-gray-500 leading-tight">
+                <span className="font-mono text-ag-navy text-[9px]">[{dimNames[dim]}]</span> {r}
+              </p>
+            ))
+          })}
+        </div>
+      )}
     </div>
   )
 }
@@ -141,6 +212,9 @@ export default function GradeEngineForm({ assetId, adminToken }: { assetId: stri
   const [validating, setValidating] = useState(false)
   const [publishing, setPublishing] = useState(false)
   const [statusMsg, setStatusMsg] = useState('')
+
+  /* ── Score live recalculé à chaque changement d'input ── */
+  const liveScore = useMemo(() => runGradeEngine(input), [input])
 
   function setCode<K extends keyof GradeInput['code']>(k: K, v: GradeInput['code'][K]) {
     setInput(p => ({ ...p, code: { ...p.code, [k]: v } }))
@@ -225,7 +299,10 @@ export default function GradeEngineForm({ assetId, adminToken }: { assetId: stri
 
   // ── Rendu formulaire saisie ────────────────────────────────────────────────
   if (step === 'input') return (
-    <div className="space-y-3">
+    <div className="grid grid-cols-1 xl:grid-cols-[1fr_280px] gap-6 items-start">
+
+      {/* Colonne gauche — formulaire */}
+      <div className="space-y-3">
 
       {/* DIMENSION CODE */}
       <Section title="Dimension C — Code (25 pts)" open={open.code} onToggle={() => setOpen(p => ({ ...p, code: !p.code }))}>
@@ -376,6 +453,11 @@ export default function GradeEngineForm({ assetId, adminToken }: { assetId: stri
           {computing ? 'Calcul en cours…' : 'Calculer le grade'}
         </button>
       </div>
+      </div>{/* fin colonne gauche */}
+
+      {/* Colonne droite — score live */}
+      <LiveScorePanel live={liveScore} />
+
     </div>
   )
 

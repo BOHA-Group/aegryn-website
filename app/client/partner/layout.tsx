@@ -1,8 +1,8 @@
 import { redirect } from 'next/navigation'
-import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
+import ClientTopBar from '@/components/layout/ClientTopBar'
 import PartnerNav from './PartnerNav'
 
 export default async function PartnerLayout({ children }: { children: React.ReactNode }) {
@@ -29,33 +29,34 @@ export default async function PartnerLayout({ children }: { children: React.Reac
   const t = await getTranslations('clientSpace')
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
-          <aside className="w-60 bg-ag-navy flex-shrink-0 flex flex-col">
-            <div className="px-6 py-5 border-b border-white/10">
-              <Link href="/" className="font-mono text-[11px] tracking-[0.22em] uppercase text-ag-apex font-bold">
-                AEGRYN
-              </Link>
-              <p className="font-sans text-[10px] text-white/30 mt-0.5">{t('spaceNamePartner')}</p>
-            </div>
+    <div className="min-h-screen bg-gray-50">
+      <ClientTopBar />
 
-            <PartnerNav unreadCount={unreadCount ?? 0} />
+      <div className="flex pt-14 min-h-screen">
+        <aside className="w-56 bg-ag-navy flex-shrink-0 flex flex-col fixed top-14 left-0 bottom-0 z-40 overflow-y-auto">
+          <div className="px-5 py-4 border-b border-white/10">
+            <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex font-bold">Espace Partenaire</p>
+            <p className="font-sans text-[11px] text-white/60 mt-0.5 truncate">{displayName}</p>
+          </div>
 
-            <div className="mt-auto px-5 py-5 border-t border-white/10">
-              <p className="font-sans text-[11px] text-white/40 truncate mb-3">{displayName}</p>
-              <form action="/api/client/logout" method="POST">
-                <button
-                  type="submit"
-                  className="font-mono text-[10px] uppercase tracking-widest text-white/25 hover:text-white/60 transition-colors"
-                >
-                  {t('logout')}
-                </button>
-              </form>
-            </div>
-          </aside>
+          <PartnerNav unreadCount={unreadCount ?? 0} />
 
-          <main className="flex-1 overflow-y-auto">
-            {children}
-          </main>
+          <div className="mt-auto px-5 py-4 border-t border-white/10">
+            <form action="/api/client/logout" method="POST">
+              <button
+                type="submit"
+                className="font-mono text-[10px] uppercase tracking-widest text-white/25 hover:text-white/60 transition-colors"
+              >
+                {t('logout')}
+              </button>
+            </form>
+          </div>
+        </aside>
+
+        <main className="flex-1 ml-56 overflow-y-auto min-h-[calc(100vh-3.5rem)]">
+          {children}
+        </main>
+      </div>
     </div>
   )
 }

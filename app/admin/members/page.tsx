@@ -65,6 +65,15 @@ export default async function AdminMembersPage({
 
   const rows = (data ?? []) as Record<string, unknown>[]
 
+  /* ── Récupère les profils par email pour lier vers /admin/members/[id] ── */
+  const emails = [...new Set(rows.map(r => String(r.buyer_email ?? '')).filter(Boolean))]
+  const { data: profilesByEmail } = emails.length
+    ? await supa.from('profiles').select('id, email').in('email', emails)
+    : { data: [] }
+  const profileIdByEmail = Object.fromEntries(
+    (profilesByEmail ?? []).map((p: { id: string; email: string }) => [p.email, p.id])
+  )
+
   const counts = {
     pending:    rows.filter(r => r.status === 'pending').length,
     approved:   rows.filter(r => r.status === 'approved').length,
@@ -131,7 +140,7 @@ export default async function AdminMembersPage({
             <table className="w-full text-[12px] bg-white border border-gray-200">
               <thead className="bg-gray-50 border-b border-gray-200">
                 <tr>
-                  {['Date', 'Acquéreur', 'Société', 'Profil', 'Capacité', 'Actif ciblé', 'Grade', 'Statut', 'Message', 'Actions'].map(h => (
+                  {['Date', 'Acquéreur', 'Société', 'Type', 'Détail', 'Capacité', 'Actif ciblé', 'Grade', 'Statut', 'Message', 'Actions'].map(h => (
                     <th key={h} className="text-left px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500 whitespace-nowrap">{h}</th>
                   ))}
                 </tr>
@@ -146,8 +155,21 @@ export default async function AdminMembersPage({
                         <div className="font-semibold text-gray-800">{String(r.buyer_name ?? '—')}</div>
                         <div className="text-[10px] text-gray-400">{String(r.buyer_email ?? '')}</div>
                       </td>
+
                       <td className="px-4 py-3 text-gray-600">{String(r.buyer_company ?? '—')}</td>
                       <td className="px-4 py-3 text-[10px] uppercase tracking-wide text-gray-500">{buyerTypeLabel(String(r.buyer_type ?? ''))}</td>
+                      <td className="px-4 py-3">
+                        {profileIdByEmail[String(r.buyer_email ?? '')] ? (
+                          <Link
+                            href={`/admin/members/${profileIdByEmail[String(r.buyer_email ?? '')]}${tokenQs}`}
+                            className="font-mono text-[9px] uppercase tracking-widest text-ag-navy border border-ag-navy/20 px-2 py-1 hover:bg-ag-navy hover:text-white transition-colors whitespace-nowrap"
+                          >
+                            Profil →
+                          </Link>
+                        ) : (
+                          <span className="text-gray-300 text-[10px]">—</span>
+                        )}
+                      </td>
                       <td className="px-4 py-3 font-mono text-[11px] text-gray-500">{String(r.capacity ?? '—')}</td>
                       <td className="px-4 py-3 font-mono text-[10px] text-gray-400">{String(r.asset_id ?? '').slice(0, 8)}…</td>
                       <td className="px-4 py-3">
