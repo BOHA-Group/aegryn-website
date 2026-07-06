@@ -30,7 +30,7 @@ export default async function PartnerLayout({ children }: { children: React.Reac
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <ClientTopBar />
+      <ClientTopBar userName={displayName} userLabel="Partenaire" />
 
       <div className="flex pt-14 min-h-screen">
         <aside className="w-56 bg-ag-navy flex-shrink-0 flex flex-col fixed top-14 left-0 bottom-0 z-40 overflow-y-auto">

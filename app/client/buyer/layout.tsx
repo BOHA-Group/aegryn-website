@@ -30,7 +30,7 @@ export default async function BuyerLayout({ children }: { children: React.ReactN
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <ClientTopBar />
+      <ClientTopBar userName={displayName} userLabel="Acquéreur" />
 
       <div className="flex pt-14 min-h-screen">
         {/* Sidebar */}

@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { AegrynLogo } from '@/components/brand/AegrynLogo'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, UserCircle } from 'lucide-react'
 
 const NAV_LINKS = [
   { href: '/auction/catalog', label: 'Catalogue' },
@@ -13,7 +13,14 @@ const NAV_LINKS = [
   { href: '/blog',            label: 'Blog' },
 ]
 
-export default function ClientTopBar() {
+interface ClientTopBarProps {
+  /** Nom ou email de l'utilisateur connecté (affiché dans la navbar) */
+  userName?: string
+  /** Label de l'espace : "Acquéreur", "Vendeur", "Partenaire", "Admin" */
+  userLabel?: string
+}
+
+export default function ClientTopBar({ userName, userLabel }: ClientTopBarProps) {
   const pathname = usePathname()
 
   return (
@@ -44,8 +51,23 @@ export default function ClientTopBar() {
         })}
       </nav>
 
-      {/* Lien "Retour au site" visible sur mobile */}
-      <div className="ml-auto flex items-center gap-1">
+      {/* Droite — identifiant connecté + lien site */}
+      <div className="ml-auto flex items-center gap-4">
+        {userName && (
+          <>
+            <div className="hidden sm:flex items-center gap-1.5">
+              <UserCircle size={13} className="text-ag-apex shrink-0" />
+              <div className="leading-none">
+                {userLabel && (
+                  <p className="font-mono text-[7px] uppercase tracking-[0.18em] text-gray-400 mb-0.5">{userLabel}</p>
+                )}
+                <p className="font-sans text-[11px] text-gray-700 font-medium truncate max-w-[140px]">{userName}</p>
+              </div>
+            </div>
+            <div className="h-4 w-px bg-gray-200 shrink-0 hidden sm:block" aria-hidden="true" />
+          </>
+        )}
+
         <Link
           href="/"
           className="flex items-center gap-1 font-mono text-[9px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors"
