@@ -3,7 +3,7 @@
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { Check, Trash2, Save, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react'
+import { Check, Trash2, Save, ExternalLink } from 'lucide-react'
 
 const ALL_ROLES = ['buyer', 'seller', 'partner', 'admin', 'super_admin'] as const
 type Role = typeof ALL_ROLES[number]
