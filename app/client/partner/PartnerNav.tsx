@@ -1,31 +1,32 @@
-'use client'
-
+import { getTranslations } from 'next-intl/server'
 import { LayoutDashboard, Award, Users, DollarSign, Bell, UserCircle, Settings } from 'lucide-react'
 import SideNav from '@/app/client/SideNav'
 import type { NavGroup } from '@/app/client/SideNav'
 
-export default function PartnerNav({ unreadCount }: { unreadCount: number }) {
+export default async function PartnerNav({ unreadCount }: { unreadCount: number }) {
+  const t = await getTranslations('clientSpace')
+
   const groups: NavGroup[] = [
     {
-      label: 'Vue générale',
+      label: t('navGroupOverview'),
       items: [
-        { href: '/client/partner', label: 'Tableau de bord', icon: LayoutDashboard },
+        { href: '/client/partner', label: t('navDashboard'), icon: LayoutDashboard },
       ],
     },
     {
-      label: 'Activité',
+      label: t('navGroupActivity'),
       items: [
-        { href: '/client/partner/certifications', label: 'Co-signatures',  icon: Award },
-        { href: '/client/partner/introductions',  label: 'Introductions',  icon: Users },
-        { href: '/client/partner/commissions',    label: 'Commissions',    icon: DollarSign },
+        { href: '/client/partner/certifications', label: t('navCosigning'),            icon: Award },
+        { href: '/client/partner/introductions',  label: t('navIntroductions'),         icon: Users },
+        { href: '/client/partner/commissions',    label: t('navPartnerCommissions'),    icon: DollarSign },
       ],
     },
     {
-      label: 'Compte',
+      label: t('navGroupAccount'),
       items: [
-        { href: '/client/partner/notifications', label: 'Notifications', icon: Bell,       badge: unreadCount },
-        { href: '/client/account',               label: 'Mon compte',    icon: UserCircle },
-        { href: '/client/account#settings',      label: 'Paramètres',    icon: Settings },
+        { href: '/client/partner/notifications', label: t('navNotifications'), icon: Bell,       badge: unreadCount },
+        { href: '/client/account',               label: t('navMyAccount'),     icon: UserCircle },
+        { href: '/client/account#settings',      label: t('navSettings'),     icon: Settings },
       ],
     },
   ]

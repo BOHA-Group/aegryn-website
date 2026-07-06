@@ -2935,6 +2935,31 @@
       "errorNetwork": "Server nicht erreichbar. Bitte Verbindung prüfen und erneut versuchen."
     }
   },
+  "clientSpace": {
+    "spaceNameSeller": "Verkäuferbereich",
+    "spaceNameBuyer": "Käuferbereich",
+    "spaceNamePartner": "Partnerbereich",
+    "logout": "Abmelden",
+    "navGroupOverview": "Übersicht",
+    "navGroupFiles": "Akten",
+    "navGroupCompliance": "Compliance",
+    "navGroupAccount": "Konto",
+    "navGroupActivity": "Aktivität",
+    "navGroupAcquisitions": "Akquisitionen",
+    "navDashboard": "Dashboard",
+    "navAssets": "Meine Assets",
+    "navTransactions": "Transaktionen",
+    "navKyc": "KYC / Identität",
+    "navNotifications": "Benachrichtigungen",
+    "navMyAccount": "Mein Konto",
+    "navSettings": "Einstellungen",
+    "navCatalog": "Katalog",
+    "navOffers": "Meine Angebote",
+    "navCommissions": "Fällige Provisionen",
+    "navCosigning": "Ko-Signaturen",
+    "navIntroductions": "Empfehlungen",
+    "navPartnerCommissions": "Provisionen"
+  },
   "comingSoon": {
     "label": "Demnächst verfügbar",
     "desc": "Diese Funktion befindet sich im Aufbau. Sie wird in Kürze verfügbar sein.",

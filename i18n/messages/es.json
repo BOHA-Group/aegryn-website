@@ -2935,6 +2935,31 @@
       "errorNetwork": "No se pudo contactar con el servidor. Compruebe su conexión e inténtelo de nuevo."
     }
   },
+  "clientSpace": {
+    "spaceNameSeller": "Espacio vendedor",
+    "spaceNameBuyer": "Espacio comprador",
+    "spaceNamePartner": "Espacio socio",
+    "logout": "Cerrar sesión",
+    "navGroupOverview": "Resumen",
+    "navGroupFiles": "Expedientes",
+    "navGroupCompliance": "Cumplimiento",
+    "navGroupAccount": "Cuenta",
+    "navGroupActivity": "Actividad",
+    "navGroupAcquisitions": "Adquisiciones",
+    "navDashboard": "Panel",
+    "navAssets": "Mis activos",
+    "navTransactions": "Transacciones",
+    "navKyc": "KYC / Identidad",
+    "navNotifications": "Notificaciones",
+    "navMyAccount": "Mi cuenta",
+    "navSettings": "Ajustes",
+    "navCatalog": "Catálogo",
+    "navOffers": "Mis ofertas",
+    "navCommissions": "Comisiones pendientes",
+    "navCosigning": "Co-firmas",
+    "navIntroductions": "Presentaciones",
+    "navPartnerCommissions": "Comisiones"
+  },
   "comingSoon": {
     "label": "Próximamente",
     "desc": "Esta funcionalidad está en construcción. Estará disponible muy pronto.",

@@ -1,36 +1,37 @@
-'use client'
-
+import { getTranslations } from 'next-intl/server'
 import { LayoutDashboard, FileText, ArrowRightLeft, ShieldCheck, Bell, UserCircle, Settings } from 'lucide-react'
 import SideNav from '@/app/client/SideNav'
 import type { NavGroup } from '@/app/client/SideNav'
 
-export default function SellerNav({ unreadCount }: { unreadCount: number }) {
+export default async function SellerNav({ unreadCount }: { unreadCount: number }) {
+  const t = await getTranslations('clientSpace')
+
   const groups: NavGroup[] = [
     {
-      label: 'Vue générale',
+      label: t('navGroupOverview'),
       items: [
-        { href: '/client/seller', label: 'Tableau de bord', icon: LayoutDashboard },
+        { href: '/client/seller', label: t('navDashboard'), icon: LayoutDashboard },
       ],
     },
     {
-      label: 'Dossiers',
+      label: t('navGroupFiles'),
       items: [
-        { href: '/client/seller/actifs',       label: 'Mes actifs',   icon: FileText },
-        { href: '/client/seller/transactions', label: 'Transactions', icon: ArrowRightLeft },
+        { href: '/client/seller/actifs',       label: t('navAssets'),       icon: FileText },
+        { href: '/client/seller/transactions', label: t('navTransactions'), icon: ArrowRightLeft },
       ],
     },
     {
-      label: 'Conformité',
+      label: t('navGroupCompliance'),
       items: [
-        { href: '/client/seller/kyc', label: 'KYC / Identité', icon: ShieldCheck },
+        { href: '/client/seller/kyc', label: t('navKyc'), icon: ShieldCheck },
       ],
     },
     {
-      label: 'Compte',
+      label: t('navGroupAccount'),
       items: [
-        { href: '/client/seller/notifications', label: 'Notifications', icon: Bell,       badge: unreadCount },
-        { href: '/client/account',              label: 'Mon compte',    icon: UserCircle },
-        { href: '/client/account#settings',     label: 'Paramètres',   icon: Settings },
+        { href: '/client/seller/notifications', label: t('navNotifications'), icon: Bell,       badge: unreadCount },
+        { href: '/client/account',              label: t('navMyAccount'),     icon: UserCircle },
+        { href: '/client/account#settings',     label: t('navSettings'),     icon: Settings },
       ],
     },
   ]

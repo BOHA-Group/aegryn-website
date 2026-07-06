@@ -2935,6 +2935,31 @@
       "errorNetwork": "Impossibile contattare il server. Controlla la connessione e riprova."
     }
   },
+  "clientSpace": {
+    "spaceNameSeller": "Spazio venditore",
+    "spaceNameBuyer": "Spazio acquirente",
+    "spaceNamePartner": "Spazio partner",
+    "logout": "Disconnettersi",
+    "navGroupOverview": "Panoramica",
+    "navGroupFiles": "Fascicoli",
+    "navGroupCompliance": "Conformità",
+    "navGroupAccount": "Account",
+    "navGroupActivity": "Attività",
+    "navGroupAcquisitions": "Acquisizioni",
+    "navDashboard": "Dashboard",
+    "navAssets": "I miei asset",
+    "navTransactions": "Transazioni",
+    "navKyc": "KYC / Identità",
+    "navNotifications": "Notifiche",
+    "navMyAccount": "Il mio account",
+    "navSettings": "Impostazioni",
+    "navCatalog": "Catalogo",
+    "navOffers": "Le mie offerte",
+    "navCommissions": "Commissioni dovute",
+    "navCosigning": "Co-firme",
+    "navIntroductions": "Presentazioni",
+    "navPartnerCommissions": "Commissioni"
+  },
   "comingSoon": {
     "label": "Disponibile a breve",
     "desc": "Questa funzionalità è in fase di costruzione. Sarà disponibile molto presto.",

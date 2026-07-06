@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import PartnerNav from './PartnerNav'
@@ -25,6 +26,7 @@ export default async function PartnerLayout({ children }: { children: React.Reac
     .is('read_at', null)
 
   const displayName = profile?.full_name ?? user.email ?? ''
+  const t = await getTranslations('clientSpace')
 
   return (
     <div className="flex min-h-screen bg-gray-50">
@@ -33,7 +35,7 @@ export default async function PartnerLayout({ children }: { children: React.Reac
               <Link href="/" className="font-mono text-[11px] tracking-[0.22em] uppercase text-ag-apex font-bold">
                 AEGRYN
               </Link>
-              <p className="font-sans text-[10px] text-white/30 mt-0.5">Espace Partenaire</p>
+              <p className="font-sans text-[10px] text-white/30 mt-0.5">{t('spaceNamePartner')}</p>
             </div>
 
             <PartnerNav unreadCount={unreadCount ?? 0} />
@@ -45,7 +47,7 @@ export default async function PartnerLayout({ children }: { children: React.Reac
                   type="submit"
                   className="font-mono text-[10px] uppercase tracking-widest text-white/25 hover:text-white/60 transition-colors"
                 >
-                  Déconnexion
+                  {t('logout')}
                 </button>
               </form>
             </div>

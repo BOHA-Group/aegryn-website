@@ -2893,6 +2893,31 @@
       "errorNetwork": "Impossible de contacter le serveur. Vérifiez votre connexion et réessayez."
     }
   },
+  "clientSpace": {
+    "spaceNameSeller": "Espace Cédant",
+    "spaceNameBuyer": "Espace Acquéreur",
+    "spaceNamePartner": "Espace Partenaire",
+    "logout": "Déconnexion",
+    "navGroupOverview": "Vue générale",
+    "navGroupFiles": "Dossiers",
+    "navGroupCompliance": "Conformité",
+    "navGroupAccount": "Compte",
+    "navGroupActivity": "Activité",
+    "navGroupAcquisitions": "Acquisitions",
+    "navDashboard": "Tableau de bord",
+    "navAssets": "Mes actifs",
+    "navTransactions": "Transactions",
+    "navKyc": "KYC / Identité",
+    "navNotifications": "Notifications",
+    "navMyAccount": "Mon compte",
+    "navSettings": "Paramètres",
+    "navCatalog": "Catalogue",
+    "navOffers": "Mes offres",
+    "navCommissions": "Commissions dues",
+    "navCosigning": "Co-signatures",
+    "navIntroductions": "Introductions",
+    "navPartnerCommissions": "Commissions"
+  },
   "comingSoon": {
     "label": "Prochainement disponible",
     "desc": "Cette fonctionnalité est en cours de construction. Elle sera accessible très prochainement.",

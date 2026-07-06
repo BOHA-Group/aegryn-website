@@ -2935,6 +2935,31 @@
       "errorNetwork": "Kan geen verbinding maken met de server. Controleer uw verbinding en probeer opnieuw."
     }
   },
+  "clientSpace": {
+    "spaceNameSeller": "Verkopersruimte",
+    "spaceNameBuyer": "Kopersruimte",
+    "spaceNamePartner": "Partnerruimte",
+    "logout": "Afmelden",
+    "navGroupOverview": "Overzicht",
+    "navGroupFiles": "Dossiers",
+    "navGroupCompliance": "Compliance",
+    "navGroupAccount": "Account",
+    "navGroupActivity": "Activiteit",
+    "navGroupAcquisitions": "Acquisities",
+    "navDashboard": "Dashboard",
+    "navAssets": "Mijn assets",
+    "navTransactions": "Transacties",
+    "navKyc": "KYC / Identiteit",
+    "navNotifications": "Meldingen",
+    "navMyAccount": "Mijn account",
+    "navSettings": "Instellingen",
+    "navCatalog": "Catalogus",
+    "navOffers": "Mijn aanbiedingen",
+    "navCommissions": "Verschuldigde commissies",
+    "navCosigning": "Mede-ondertekeningen",
+    "navIntroductions": "Introducties",
+    "navPartnerCommissions": "Commissies"
+  },
   "comingSoon": {
     "label": "Binnenkort beschikbaar",
     "desc": "Deze functionaliteit is in opbouw. Ze zal zeer binnenkort beschikbaar zijn.",

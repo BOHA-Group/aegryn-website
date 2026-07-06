@@ -2893,6 +2893,31 @@
       "errorNetwork": "Unable to reach the server. Check your connection and try again."
     }
   },
+  "clientSpace": {
+    "spaceNameSeller": "Seller Space",
+    "spaceNameBuyer": "Buyer Space",
+    "spaceNamePartner": "Partner Space",
+    "logout": "Log out",
+    "navGroupOverview": "Overview",
+    "navGroupFiles": "Files",
+    "navGroupCompliance": "Compliance",
+    "navGroupAccount": "Account",
+    "navGroupActivity": "Activity",
+    "navGroupAcquisitions": "Acquisitions",
+    "navDashboard": "Dashboard",
+    "navAssets": "My assets",
+    "navTransactions": "Transactions",
+    "navKyc": "KYC / Identity",
+    "navNotifications": "Notifications",
+    "navMyAccount": "My account",
+    "navSettings": "Settings",
+    "navCatalog": "Catalogue",
+    "navOffers": "My offers",
+    "navCommissions": "Commissions due",
+    "navCosigning": "Co-signing",
+    "navIntroductions": "Introductions",
+    "navPartnerCommissions": "Commissions"
+  },
   "comingSoon": {
     "label": "Coming soon",
     "desc": "This feature is currently being built. It will be available very soon.",
