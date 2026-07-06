@@ -1,7 +1,7 @@
 import type { Metadata }      from 'next'
 import { redirect }            from 'next/navigation'
 import { createServiceClient } from '@/lib/supabase'
-import { getUser }             from '@/lib/supabaseServer'
+import { checkAdminAccess }    from '@/lib/adminAuth'
 import Link                    from 'next/link'
 import { ArrowLeft, Clock }    from 'lucide-react'
 import GradeEngineForm         from './GradeEngineForm'
@@ -21,26 +21,16 @@ function fmtDate(d: string) {
 
 export default async function GradeEnginePage({
   params,
+  searchParams,
 }: {
-  params: Promise<{ id: string }>
+  params:       Promise<{ id: string }>
+  searchParams: Promise<{ token?: string }>
 }) {
-  const { id } = await params
-  const user = await getUser()
-  if (!user) redirect('/admin/login')
+  const { id }    = await params
+  const sp        = await searchParams
+  await checkAdminAccess(sp.token)
 
   const supa = createServiceClient()
-
-  // Vérification rôle admin
-  const { data: profile } = await supa
-    .from('profiles')
-    .select('roles')
-    .eq('id', user.id)
-    .single()
-
-  const roles = (profile?.roles ?? []) as string[]
-  if (!roles.includes('admin') && !roles.includes('super_admin')) {
-    redirect('/admin')
-  }
 
   // Charger la fiche actif
   const { data: asset } = await supa
@@ -59,7 +49,7 @@ export default async function GradeEnginePage({
     .order('created_at', { ascending: false })
     .limit(10)
 
-  const adminToken = process.env.ADMIN_LEADS_TOKEN ?? ''
+  const adminToken = sp.token ?? process.env.ADMIN_LEADS_TOKEN ?? ''
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -67,7 +57,7 @@ export default async function GradeEnginePage({
 
         {/* En-tête */}
         <div className="mb-8">
-          <Link href="/admin/assets"
+          <Link href={`/admin/assets${sp.token ? `?token=${sp.token}` : ''}`}
             className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 mb-6 transition-colors">
             <ArrowLeft size={12} /> Retour aux actifs
           </Link>
