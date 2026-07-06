@@ -156,15 +156,18 @@ export default function Nav() {
   }, [])
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      /* Logo — toujours pleinement opaque, sans animation d'entrée ni filtre */
-      gsap.set(logoRef.current, { opacity: 1, x: 0, clearProps: 'opacity,transform,filter' })
+    /* Logo — toujours pleinement opaque, sans animation d'entrée ni filtre */
+    if (logoRef.current) gsap.set(logoRef.current, { opacity: 1, x: 0, clearProps: 'opacity,transform,filter' })
 
-      const tl = gsap.timeline({ defaults: { ease: 'expo.out', duration: 0.6 } })
-      tl.from('.nav-link-item', { opacity: 0, y: -8, stagger: 0.06, delay: 0.1 })
-        .from(rightRef.current,  { opacity: 0, x: 12 }, '-=0.4')
-    }, navRef)
-    return () => ctx.revert()
+    const tl = gsap.timeline({ defaults: { ease: 'expo.out', duration: 0.6 } })
+    tl.from('.nav-link-item', { opacity: 0, y: -8, stagger: 0.06, delay: 0.1 })
+      .from(rightRef.current, { opacity: 0, x: 12 }, '-=0.4')
+      .call(() => {
+        gsap.set('.nav-link-item', { clearProps: 'opacity,transform' })
+        if (rightRef.current) gsap.set(rightRef.current, { clearProps: 'opacity,transform' })
+      })
+
+    return () => { tl.kill() }
   }, [])
 
   useEffect(() => {

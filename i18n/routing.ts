@@ -71,5 +71,6 @@ export const routing = defineRouting({
     '/help/faq':                          '/help/faq',
     '/data-protection-notice-neediu':     '/data-protection-notice-neediu',
     '/client/auction':                    '/client/auction',
+    '/sitemap':                           '/sitemap',
   },
 })

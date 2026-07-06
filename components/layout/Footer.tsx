@@ -68,7 +68,7 @@ const legal: { key: string; href: LinkHref; ns: string; external?: boolean }[] =
   { key: 'privacy',   href: '/privacy',    ns: 'legalNav' },
   { key: 'security',  href: '/security',   ns: 'legalNav' },
   { key: 'faq',       href: '/help/faq',   ns: 'legalNav' },
-  { key: 'sitemap',   href: '/sitemap.xml' as unknown as LinkHref, ns: 'legalNav', external: true },
+  { key: 'sitemap',   href: '/sitemap',    ns: 'legalNav' },
 ]
 
 const companyLinks: { navKey: 'about' | 'career' | 'contact'; href: LinkHref }[] = [
