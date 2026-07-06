@@ -1,11 +1,13 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 
 type Props = { children: React.ReactNode }
 
 export default function LenisProvider({ children }: Props) {
-  const lenisRef = useRef<{ destroy: () => void } | null>(null)
+  const lenisRef = useRef<{ destroy: () => void; scrollTo: (target: number, opts?: object) => void } | null>(null)
+  const pathname = usePathname()
 
   useEffect(() => {
     const initLenis = async () => {
@@ -35,6 +37,13 @@ export default function LenisProvider({ children }: Props) {
       lenisRef.current?.destroy()
     }
   }, [])
+
+  /* Reset scroll position on route change */
+  useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true })
+    }
+  }, [pathname])
 
   return <>{children}</>
 }
