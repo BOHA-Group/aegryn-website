@@ -25,7 +25,7 @@
     "gradeSystem": "Grade-systeem",
     "gradeMethod": "Methodologie",
     "gradeSubmit": "Indienen voor certificering",
-    "gradePartners": "Mede-ondertekende partners",
+    "gradePartners": "Expertnetwerk",
     "servicesAdvisory": "Advisory",
     "servicesAlliances": "Allianties",
     "servicesAcquisition": "Acquisitieondersteuning",
@@ -44,7 +44,7 @@
     "geo": "Zwitserland · Europa · Global",
     "scroll": "Scrollen",
     "ctaSecondary": "EEN ASSET INDIENEN",
-    "chip2": "GECERTIFICEERDE GRADE — MEDE-ONDERTEKEND",
+    "chip2": "GECERTIFICEERDE GRADE — ONAFHANKELIJK",
     "ctaPrimary": "Catalogus bekijken"
   },
   "assets": {
@@ -198,7 +198,7 @@
       {
         "num": "01",
         "title": "De certificering ontbrak.",
-        "desc": "Een tech-asset kopen zonder onafhankelijke certificering is als een horloge kopen zonder papieren. AEGRYN levert de papieren — co-ondertekend, verifieerbaar, blockchain-gecertificeerd."
+        "desc": "Een tech-asset kopen zonder onafhankelijke certificering is als een horloge kopen zonder papieren. AEGRYN levert de papieren — gecertificeerd, verifieerbaar, gedocumenteerd."
       },
       {
         "num": "02",
@@ -259,10 +259,10 @@
   "aboutSection": {
     "label": "Over Aegryn",
     "title": "Drie disciplines.\nEén marktstandaard.",
-    "desc": "AEGRYN bouwt propriëtaire tech-assets, certificeert ze onder een onafhankelijk mede-ondertekend label en transigeert ze via een vertrouwelijk proces tussen gekwalificeerde verkopers en institutionele kopers. De eerste vertrouwensinfrastructuur voor tech-M&A in Europa.",
+    "desc": "AEGRYN bouwt propriëtaire tech-assets, certificeert ze onder een onafhankelijk label en transageert ze via een vertrouwelijk proces tussen gekwalificeerde verkopers en kopers. De eerste vertrouwensinfrastructuur voor tech-M&A in Europa.",
     "tagline": "GECERTIFICEERD IN ZWITSERLAND. REFERENTIE IN EUROPA.",
     "cta": "Over Aegryn",
-    "quote": "Een tech-asset zonder mede-ondertekende certificering is een waarde zonder bewijs. AEGRYN levert het bewijs — bij elk asset, bij elke overdracht.",
+    "quote": "Een tech-asset zonder onafhankelijke certificering is een waarde zonder bewijs. AEGRYN levert het bewijs bij elk asset, bij elke overdracht.",
     "ceoName": "Yohann Bollack",
     "ceoTitle": "Oprichter & CEO — AEGRYN Sàrl",
     "stats": [
@@ -290,7 +290,7 @@
       },
       {
         "title": "GRADE",
-        "desc": "We certificeren assets van derden en propriëtaire assets onder een onafhankelijk, mede-ondertekend label, gedragen door juridische, financiële en cyberbeveiligingsexperts die hun aansprakelijkheid op het spel zetten. KRYV Protocol certificeert de code op blockchain bij elke overdracht."
+        "desc": "We certificeren assets van derden en propriëtaire assets onder een onafhankelijk label, gestructureerd over 4 analysedimensies — Code, IP, Financiën, Beveiliging. Een reproduceerbaar, traceerbaar en conclusief protocol."
       },
       {
         "title": "AUCTION",
@@ -304,13 +304,13 @@
     "items": [
       {
         "num": "01",
-        "title": "MEDE-ONDERTEKENDE CERTIFICERING",
-        "desc": "Elk AEGRYN-grade-rapport is mede-ondertekend door een advocatenkantoor, een accountant en een cyberbeveiligingspartner. Ze zetten hun aansprakelijkheid op het spel. Geen mening — een certificering."
+        "title": "ONAFHANKELIJKE CERTIFICERING",
+        "desc": "Elk AEGRYN-grade-rapport wordt uitgegeven door onze gecertificeerde analisten, volgens een reproduceerbaar en traceerbaar protocol. Geen mening — een certificering."
       },
       {
         "num": "02",
-        "title": "BLOCKCHAIN BIJ OVERDRACHT",
-        "desc": "KRYV Protocol registreert de exacte cryptografische vingerafdruk van de codebase op de ondertekeningsdatum. Wat u ontvangt is op elke toekomstige datum bewijsbaar. Onveranderlijk van ontwerp."
+        "title": "TRACEERBAARHEID BIJ OVERDRACHT",
+        "desc": "Elke asset-overdracht wordt nauwkeurig gedocumenteerd — staat van de codebase, datum, exact perimeter. Een blockchain-certificeringslaag zal deze traceerbaarheid op termijn versterken."
       },
       {
         "num": "03",
@@ -333,11 +333,11 @@
     "hero": {
       "label": "Over AEGRYN",
       "title": "De vertrouwensinfrastructuur\nvoor Europees tech-M&A.",
-      "desc": "AEGRYN bouwt propriëtaire tech-assets, certificeert ze onder een onafhankelijk mede-ondertekend label en transageert ze via een vertrouwelijk proces tussen gekwalificeerde verkopers en institutionele kopers."
+      "desc": "AEGRYN bouwt propriëtaire tech-assets, certificeert ze onder een onafhankelijk label en transageert ze via een vertrouwelijk proces tussen gekwalificeerde verkopers en kopers."
     },
     "vision": {
       "label": "Onze visie",
-      "text": "De waarde van een tech-asset wordt structureel onderschat bij gebrek aan een geloofwaardig certificeringsreferentiekader. Verkopers weten niet tegen welke prijs te verkopen. Kopers weten niet wat ze kopen. AEGRYN is dat kader — gebouwd met propriëtair IP, mede-ondertekende partners en blockchain-certificering."
+      "text": "De waarde van een tech-asset wordt structureel onderschat bij gebrek aan een geloofwaardig certificeringsreferentiekader. Verkopers weten niet tegen welke prijs te verkopen. Kopers weten niet wat ze kopen. AEGRYN is dat kader — gebouwd met propriëtair IP en een onafhankelijk evaluatieprotocol."
     },
     "mission": {
       "label": "Onze missie",
@@ -351,11 +351,11 @@
       },
       "simplify": {
         "title": "GRADE",
-        "desc": "Onafhankelijk en mede-ondertekend certificeren. Meer weigeren dan accepteren. Een objectieve, reproduceerbare, betwistbare grade."
+        "desc": "Onafhankelijk en objectief certificeren. Meer weigeren dan accepteren. Een reproduceerbare, traceerbare, conclusieve grade."
       },
       "embrace": {
         "title": "AUCTION",
-        "desc": "Discreet transageren, met zekerheid voor beide partijen. Institutionele escrow. Blockchain bij overdracht."
+        "desc": "Discreet transageren, met zekerheid voor beide partijen. Institutionele escrow. Volledige documentatie bij elke overdracht."
       }
     },
     "dna": {
@@ -386,7 +386,7 @@
     "founder": {
       "label": "De oprichter",
       "role": "Oprichter — AEGRYN",
-      "bio1": "Yohann Bollack is ondernemer, builder en tech-M&A-strateeg. Hij richtte AEGRYN op met een eenvoudige overtuiging: de Europese techmarkt verdient zijn eigen vertrouwensinfrastructuur — mede-ondertekende certificering, vertrouwelijke transacties, blockchain-certificering.",
+      "bio1": "Yohann Bollack is ondernemer, builder en tech-M&A-strateeg. Hij richtte AEGRYN op met een eenvoudige overtuiging: de Europese techmarkt verdient zijn eigen vertrouwensinfrastructuur — onafhankelijke certificering, vertrouwelijke transacties, gedocumenteerde overdrachten.",
       "bio2": "Hij leidt een propriëtair asset-ecosysteem dat AI, marktplaatsen, logistiek en sociale netwerken omvat — allemaal van meet af aan ontworpen om certificeerbaar en overdraagbaar te zijn.",
       "cta": "Contact opnemen"
     },
@@ -761,7 +761,7 @@
         {
           "num": "04",
           "title": "Veilige closing",
-          "desc": "Institutionele escrow, KRYV Protocol-certificering bij overdracht, volledige documentatie verstrekt."
+          "desc": "Institutionele escrow, volledige documentatie bij overdracht, AGV inbegrepen."
         }
       ]
     },
@@ -782,7 +782,7 @@
         },
         {
           "title": "Aansprakelijkheid ingezet",
-          "desc": "Onze grade wordt mede-ondertekend door onafhankelijke derden (juridisch kantoor, accountant). Als de grade onjuist is, is onze aansprakelijkheid in het geding."
+          "desc": "Onze grade wordt uitgegeven door gecertificeerde analisten volgens een rigoureus onafhankelijk protocol. Als de grade onjuist is, is onze aansprakelijkheid in het geding."
         }
       ]
     },
@@ -1011,13 +1011,13 @@
       },
       {
         "num": "04",
-        "title": "Beraadslaging & medeondertekening",
-        "desc": "Beide analisten beraadslagen en produceren een voorlopig rapport. Voor AEG ★ en AAA valideert een partner-medeondertekenaar het eindrapport."
+        "title": "Beraadslaging & validatie",
+        "desc": "Beide analisten beraadslagen en produceren het conclusieve rapport, volgens een reproduceerbaar en onafhankelijk protocol."
       },
       {
         "num": "05",
-        "title": "Uitgifte & blockchain-verankering",
-        "desc": "Het grade wordt uitgegeven, digitaal ondertekend en verankerd in het KRYV-protocol — onveranderlijk verzegeld."
+        "title": "Uitgifte & publicatie",
+        "desc": "Het grade wordt uitgegeven, gedocumenteerd en geversioneerd. Het certificaat wordt overgemaakt aan de houder en gepubliceerd in het AEGRYN-register. Een blockchain-certificeringslaag zal de verankering van dit register op termijn versterken."
       }
     ],
     "principlesTitle": "Onafhankelijkheidsprincipes",
@@ -1037,14 +1037,18 @@
       {
         "title": "Beroep",
         "desc": "De houder kan een grade binnen 30 dagen betwisten. Het beroep wordt behandeld door een onafhankelijk panel van drie analisten."
+      },
+      {
+        "title": "Toekomstige versterking",
+        "desc": "AEGRYN bouwt geleidelijk een netwerk van expertpartners op die bepaalde rapporten kunnen verrijken met een aanvullende kruisreview, evenals een blockchain-certificeringslaag om de traceerbaarheid van het register te versterken. Deze bouwstenen zullen het reeds volledig operationele onafhankelijke protocol aanvullen — nooit vervangen."
       }
     ],
     "ctaTitle": "Certificeer uw asset",
     "ctaDesc": "Klaar om uw asset in te dienen bij het AEGRYN Grade-protocol?",
     "ctaPrimary": "Certificering starten",
-    "ctaSecondary": "Ontdek onze medeondertekenende partners",
+    "ctaSecondary": "Ontdek de volledige methodologie",
     "disclaimerTitle": "Verplichte vermelding",
-    "disclaimerText": "Hoewel alles in het werk is gesteld om objectief te blijven, worden klanten geïnformeerd dat elke certificering een element van deskundig oordeel bevat. De informatie in een AEGRYN Grade-rapport wordt verstrekt als professionele certificering, medeondertekend door onafhankelijke experts die hiervoor verantwoordelijkheid dragen. Dit vormt geen garantie voor marktwaarde.",
+    "disclaimerText": "Hoewel alles in het werk is gesteld om objectief te blijven, worden klanten geïnformeerd dat elke certificering een element van deskundig oordeel bevat. De informatie in een AEGRYN Grade-rapport wordt verstrekt als professionele certificering, uitgegeven door gecertificeerde AEGRYN-analisten. Dit vormt geen garantie voor marktwaarde.",
     "refusalTitle": "Voorwaarden voor automatische afwijzing",
     "refusalDesc": "Bepaalde configuraties leiden tot automatische afwijzing, ongeacht de totaalscore — het algoritme levert een score, de expert geeft het uiteindelijke oordeel, maar een automatische afwijzing kan nooit worden overruled.",
     "refusalConditions": [
@@ -1280,7 +1284,7 @@
         {
           "num": "04",
           "title": "Publicatie",
-          "desc": "De grade wordt gepubliceerd in de AEGRYN-catalogus en verankerd op de blockchain."
+          "desc": "De grade wordt gepubliceerd in de AEGRYN-catalogus en geversioneerd in het officiële register."
         }
       ]
     },
@@ -1304,7 +1308,7 @@
         },
         {
           "title": "Traceerbaarheid",
-          "desc": "Elke grade is digitaal ondertekend en verankerd op de blockchain."
+          "desc": "Elke grade is digitaal ondertekend en geversioneerd. Elke wijziging genereert een nieuwe traceerbare versie."
         },
         {
           "title": "Onafhankelijkheid",
@@ -1588,8 +1592,8 @@
   "gradeStrip": {
     "label": "AEGRYN Grade-systeem",
     "title": "Geen cijfer.\nEen certificering.",
-    "desc": "Er is een fundamenteel verschil tussen een cijfer geven en certificeren. AEGRYN certificeert — met experts die ondertekenen en hun naam op het spel zetten.",
-    "quote": "Een asset zonder mede-ondertekende certificering is een waarde zonder bewijs. Een AEGRYN Grade AAA asset is een gedocumenteerde zekerheid — mede-ondertekend, verifieerbaar, geregistreerd op blockchain.",
+    "desc": "Er is een fundamenteel verschil tussen een cijfer geven en certificeren. AEGRYN certificeert via een onafhankelijk, reproduceerbaar en traceerbaar protocol.",
+    "quote": "Een asset zonder onafhankelijke certificering is een waarde zonder bewijs. Een AEGRYN Grade AAA asset is een gedocumenteerde en traceerbare zekerheid.",
     "cta": "Lees de volledige methodologie",
     "grades": [
       {
@@ -1627,7 +1631,7 @@
   "auctionNarrative": {
     "label": "AEGRYN Auction",
     "title": "Sommige assets verdienen meer\ndan een publieke vermelding.",
-    "desc": "AEGRYN Auction is geen open platform. Het is een vertrouwelijk overdrachtsproces tussen verkopers die onze certificering hebben doorstaan en kopers die hun capaciteit hebben bewezen.\n\nMinder dan 25% van de ingediende assets wordt geaccepteerd. 100% van de kopers is vooraf gekwalificeerd. Elke transactie is blockchain-gecertificeerd.",
+    "desc": "AEGRYN Auction is geen open platform. Het is een vertrouwelijk overdrachtsproces tussen verkopers die onze certificering hebben doorstaan en kopers die hun capaciteit hebben bewezen.\n\nMinder dan 25% van de ingediende assets wordt geaccepteerd. 100% van de kopers is vooraf gekwalificeerd. Elke transactie is volledig gedocumenteerd en beveiligd.",
     "stat1Val": "< 25%",
     "stat1Label": "Acceptatiegraad ingediende assets",
     "stat2Val": "60 d max",
@@ -1666,7 +1670,7 @@
     },
     "grade": {
       "label": "GRADE",
-      "desc": "Onafhankelijke, mede-ondertekende certificering"
+      "desc": "Onafhankelijke, gedocumenteerde certificering"
     },
     "auction": {
       "label": "AUCTION",
@@ -1761,13 +1765,13 @@
     "hero": {
       "label": "AEGRYN Allianties",
       "title": "De partners die de grade\nonweerlegbaar maken.",
-      "desc": "AEGRYN certificeert niet alleen. Elk grade-rapport betrekt externe mede-ondertekende partners. Elke deal betrekt institutionele partners. Die structuur maakt ons geloofwaardig."
+      "desc": "AEGRYN certificeert onafhankelijk. Onze partners nemen deel aan distributie, deal flow en transactiestructurering en kunnen op termijn bepaalde rapporten verrijken met een aanvullende kruisreview. Dit ecosysteem maakt ons operationeel."
     },
     "types": {
       "certification": {
         "label": "Certificering",
-        "title": "Grade mede-ondertekenaars",
-        "desc": "Tech-advocatenkantoren, accountants, cybersecuritypartners. U mede-ondertekent AEGRYN grade-rapporten en engageert uw beroepsaansprakelijkheid.",
+        "title": "Expertnetwerk AEGRYN",
+        "desc": "Tech-advocatenkantoren, accountants, cybersecuritypartners. Sluit u aan bij de eerste kring van partners die het AEGRYN Grade-protocol zullen verrijken met een kruisreview, naarmate dit systeem wordt ingevoerd.",
         "profiles": "IP & tech-kantoren · Accountants · Cybersecuritypartners",
         "cta": "Certificeringspartner worden"
       },
@@ -1804,7 +1808,7 @@
       "type": "Type alliantie",
       "typePlaceholder": "Kies een type",
       "typeOptions": {
-        "certification": "Certificering (grade mede-ondertekening)",
+        "certification": "Certificering (expertnetwerk)",
         "distribution": "Distributie (koper-membership)",
         "dealflow": "Deal flow (aanbrengen)",
         "other": "Overig"
@@ -1902,12 +1906,12 @@
       "evalTypeTitle": "Welk evaluatieniveau wenst u?",
       "evalTypeFull": {
         "label": "Auction-certificering",
-        "desc": "Succesfee. Volledig co-ondertekend proces (juridisch + boekhouding + cyberbeveiliging), 3–4 weken, voor een transactie via AEGRYN Auction.",
+        "desc": "Succesfee. Volledig proces via onafhankelijk AEGRYN-protocol (4 dimensies C/I/F/S), 3–4 weken, voor een transactie via AEGRYN Auction.",
         "price": "Gratis"
       },
       "evalTypeReview": {
         "label": "AEGRYN Review",
-        "desc": "Schriftelijk advies van een AEGRYN-analist binnen 5 werkdagen. Geen externe partnerreview. Niet publiceerbaar in de catalogus, niet co-ondertekend.",
+        "desc": "Schriftelijk advies van een AEGRYN-analist binnen 5 werkdagen. Geen externe partnerreview. Niet publiceerbaar in de catalogus, zonder externe validatie.",
         "price": "2.000 € excl. btw"
       },
       "evalTypeReviewPlus": {
@@ -2013,7 +2017,7 @@
         {
           "num": "05",
           "title": "Signing & Closing",
-          "desc": "Blockchain-certificering van de code. Fondsen vrijgegeven. Asset overgedragen."
+          "desc": "Documentatie van de code. Fondsen vrijgegeven. Asset overgedragen."
         }
       ],
       "penaltiesTitle": "Bilaterale bescherming",
@@ -2336,7 +2340,7 @@
       "preRevenueRange": "Indicatief bereik",
       "preRevenueNote": "Voor een pre-revenue asset is AEGRYN Grade C de volgende logische stap.",
       "ngNote": "Uw score ligt onder de gradeerbaarheidsdrempel. Een gratis Assessment Day identificeert de 3 prioritaire acties.",
-      "disclaimer": "Deze schatting wordt gegenereerd door een algoritme op basis van gegevens die u opgeeft zonder verificatie. Het vormt geen officieel AEGRYN Grade. Het AEGRYN Grade wordt alleen toegekend na een echte audit door ons team en mede-ondertekenaars (juridisch kantoor, accountant, cybersecuritypartner).",
+      "disclaimer": "Deze schatting wordt gegenereerd door een algoritme op basis van gegevens die u opgeeft zonder verificatie. Het vormt geen officieel AEGRYN Grade. Het AEGRYN Grade wordt alleen toegekend na een echte audit door gecertificeerde AEGRYN-analisten.",
       "ctaGrade": "Mijn officiële certificering starten",
       "ctaAssessment": "Gratis Assessment Day boeken",
       "emailTitle": "Mijn gedetailleerd rapport per e-mail ontvangen.",
@@ -2539,19 +2543,19 @@
     "s1Title": "Definities",
     "defAegryn": "AEGRYN Sàrl, in Zwitserland geregistreerde vennootschap (CHE-XXX.XXX.XXX).",
     "defAsset": "Elk digitaal goed dat via AEGRYN kan worden gecertificeerd en/of overgedragen: software (SaaS, applicaties), codebases, digitaal intellectueel eigendom, merken gekoppeld aan een digitaal asset, protocollen.",
-    "defGrade": "Officiële certificering van een tech-asset volgens het C/I/F/S-protocol, mede-ondertekend door externe partners. Toegekende grades: ★, AAA, AA, A, B.",
-    "defGradeEst": "Niet-gecertificeerde indicatieve opinie van een AEGRYN-analist zonder externe medeondertekening. Nooit afdwingbaar jegens derden. Altijd voorzien van het achtervoegsel (geschat) in alle communicatie.",
+    "defGrade": "Officiële certificering van een tech-asset volgens het C/I/F/S-protocol, uitgegeven door gecertificeerde AEGRYN-analisten. Toegekende grades: ★, AAA, AA, A, B.",
+    "defGradeEst": "Niet-gecertificeerde indicatieve opinie van een AEGRYN-analist zonder externe validatie. Nooit afdwingbaar jegens derden. Altijd voorzien van het achtervoegsel (geschat) in alle communicatie.",
     "defPtt": "Contractueel mechanisme voor de overdracht van een gecertificeerd asset, inclusief een bankgarantie van 10% van de overeengekomen prijs.",
     "defEscrow": "Bedrag dat door de koper is gestort bij een door AEGRYN aangewezen externe bank. AEGRYN is nooit bewaarder van deze middelen.",
     "defSeller": "Elke natuurlijke of rechtspersoon die een tech-asset in het AEGRYN-proces indient.",
     "defBuyer": "Elk gekwalificeerd AEGRYN-lid dat bevoegd is toegang te krijgen tot de catalogus en biedingen in te dienen.",
     "s2Title": "Gedekte diensten",
     "s2ReviewTitle": "AEGRYN Review",
-    "s2Review": "Schriftelijke opinie van een AEGRYN-analist over een ingediend tech-asset. Doorlooptijd: 5 werkdagen. Niet mede-ondertekend, niet publiceerbaar in de catalogus. Slechts indicatieve waarde. Volledig aftrekbaar van de certificeringsvergoedingen als het volledige proces binnen 6 maanden wordt gestart.",
+    "s2Review": "Schriftelijke opinie van een AEGRYN-analist over een ingediend tech-asset. Doorlooptijd: 5 werkdagen. Zonder externe validatie, niet publiceerbaar in de catalogus. Slechts indicatieve waarde. Volledig aftrekbaar van de certificeringsvergoedingen als het volledige proces binnen 6 maanden wordt gestart.",
     "s2ReviewPlusTitle": "AEGRYN Review+",
-    "s2ReviewPlus": "Schriftelijke opinie van een AEGRYN-analist aangevuld met de beoordeling van een externe partner. Doorlooptijd: 10 werkdagen. Niet mede-ondertekend in de zin van de officiële certificering, niet publiceerbaar. Volledig aftrekbaar onder dezelfde voorwaarden.",
+    "s2ReviewPlus": "Schriftelijke opinie van een AEGRYN-analist aangevuld met de beoordeling van een externe partner. Doorlooptijd: 10 werkdagen. Niet officieel in de zin van de volledige certificering, niet publiceerbaar. Volledig aftrekbaar onder dezelfde voorwaarden.",
     "s2CertTitle": "Auction-certificering",
-    "s2Cert": "Volledig multidimensionaal auditproces over alle 4 C/I/F/S-dimensies. Mede-ondertekend door een tech-advocatenkantoor, een accountant, een cybersecuritypartner indien van toepassing. Officieel AEG-grade toegekend en publiceerbaar in de catalogus. Vergoeding: op basis van succes (commissie bij verkoop).",
+    "s2Cert": "Volledig multidimensionaal auditproces over alle 4 C/I/F/S-dimensies. Uitgevoerd door gecertificeerde AEGRYN-analisten volgens het officiële protocol. Officieel AEG-grade toegekend en publiceerbaar in de catalogus. Vergoeding: op basis van succes (commissie bij verkoop).",
     "s2AdvisoryTitle": "AEGRYN Advisory",
     "s2Advisory": "Strategische en operationele begeleiding van assets voor herstel en herindiening. Vergoeding op offerte.",
     "s3Title": "Indieningsvoorwaarden",
@@ -2572,7 +2576,7 @@
     "s4DdTitle": "Due Diligence (DD)",
     "s4Dd": "Standaardduur: 30 kalenderdagen vanaf de bevestiging van de escrow. De koper krijgt toegang tot de volledige data room onder NDA. Verlenging mogelijk bij wederzijds schriftelijk akkoord (maximum 30 extra dagen).",
     "s4SigningTitle": "Ondertekening en afsluiting",
-    "s4Signing": "Op de datum van ondertekening: KRYV Protocol certificeert de staat van de codebase via blockchain-vingerafdruk. Het saldo (90%) wordt door de koper betaald. De bank geeft de escrow vrij. AEGRYN trekt zijn commissie af en betaalt het nettosaldo aan de verkoper. AEGRYN geeft het officiële Transactiecertificaat af.",
+    "s4Signing": "Op de datum van ondertekening: de exacte staat van de codebase wordt gedocumenteerd en geversioneerd. Indien van toepassing, wordt de overdracht gedocumenteerd en geversioneerd in het AEGRYN-register. Het saldo (90%) wordt door de koper betaald. De bank geeft de escrow vrij. AEGRYN trekt zijn commissie af en betaalt het nettosaldo aan de verkoper. AEGRYN geeft het officiële Transactiecertificaat af.",
     "s5Title": "Aansprakelijkheid",
     "s5": "AEGRYN handelt uitsluitend als tussenpersoon en procesoperator. AEGRYN garandeert noch de uitkomst van een transactie, noch de toekomstige waarde van een asset, noch de prestaties na overdracht. De aansprakelijkheid van AEGRYN is beperkt tot de terugbetaling van de ontvangen certificeringsvergoedingen voor het betrokken asset. AEGRYN is in geen geval aansprakelijk voor indirecte schade, gederfde winst of gevolgschade.",
     "s6Title": "Betwisting van de Grade",
@@ -2627,7 +2631,7 @@
     "s3Row6Data": "Geanonimiseerde gegevens",
     "s3Row6Basis": "Gerechtvaardigd belang / Algemeen belang",
     "s4Title": "Wie heeft toegang tot uw gegevens?",
-    "s4": "Binnen AEGRYN: teamleden met een legitieme operationele behoefte. Mede-ondertekende partners: advocatenkantoren, accountants, cybersecuritypartners (onderworpen aan strikte vertrouwelijkheidsverplichtingen). Bewaarbank. Technische dienstverleners: hosting, e-mail, betaling via Stripe. Autoriteiten: wanneer wettelijk vereist. AEGRYN verkoopt uw gegevens nooit aan derden.",
+    "s4": "Binnen AEGRYN: teamleden met een legitieme operationele behoefte. Certificeringspartners (onderworpen aan strikte vertrouwelijkheidsverplichtingen). Bewaarbank. Technische dienstverleners: hosting, e-mail, betaling via Stripe. Autoriteiten: wanneer wettelijk vereist. AEGRYN verkoopt uw gegevens nooit aan derden.",
     "s5Title": "Internationale overdrachten",
     "s5": "Gegevens worden opgeslagen op servers in de Europese Unie of Zwitserland. Voor overdrachten naar derde landen passen we passende waarborgen toe (goedgekeurde standaardcontractbepalingen).",
     "s6Title": "Bewaring",
@@ -2712,7 +2716,7 @@
           "certification"
         ],
         "q": "Wat is het verschil tussen een officiële Grade en een geschatte grade?",
-        "a": "Een officiële Grade wordt toegekend na een echte audit door AEGRYN-analisten en mede-ondertekend door onafhankelijke externe partners die hun professionele aansprakelijkheid in het geding brengen. Een geschatte grade (via /valuation of AEGRYN Review) is een indicatieve opinie op basis van verklaarbare gegevens, altijd voorzien van het achtervoegsel (geschat) en zonder contractuele waarde."
+        "a": "Een officiële Grade wordt toegekend na een echte audit door AEGRYN-analisten en volgens een onafhankelijk en reproduceerbaar protocol waarvoor AEGRYN de verantwoordelijkheid draagt. Een geschatte grade (via /valuation of AEGRYN Review) is een indicatieve opinie op basis van verklaarbare gegevens, altijd voorzien van het achtervoegsel (geschat) en zonder contractuele waarde."
       },
       {
         "id": "cert-duration",
@@ -2745,8 +2749,8 @@
           "certification",
           "transactions"
         ],
-        "q": "Wat is KRYV Protocol?",
-        "a": "KRYV Protocol is onze blockchain-certificeringsinfrastructuurcomponent. Het genereert een cryptografische vingerafdruk van de codebase op de exacte datum van certificering of overdracht, onveranderlijk opgeslagen. Hierdoor kan elke koper op elk toekomstig moment bewijzen dat de ontvangen code exact overeenkomt met de gecertificeerde code."
+        "q": "Hoe garandeert AEGRYN de traceerbaarheid van een grade?",
+        "a": "Elke grade wordt gedocumenteerd, geversioneerd en opgeslagen in het AEGRYN-register. Elke wijziging aan een gecertificeerde codebase na uitgifte genereert een nieuwe versie. Dit maakt het mogelijk om op elk moment te verifiëren dat de ontvangen code exact overeenkomt met de gecertificeerde code."
       },
       {
         "id": "what-assets",
@@ -2956,7 +2960,7 @@
     "navCatalog": "Catalogus",
     "navOffers": "Mijn aanbiedingen",
     "navCommissions": "Verschuldigde commissies",
-    "navCosigning": "Mede-ondertekeningen",
+    "navCosigning": "Validaties",
     "navIntroductions": "Introducties",
     "navPartnerCommissions": "Commissies"
   },
@@ -2985,7 +2989,7 @@
     "auctionResults": "Resultaten",
     "grade": "Grade-systeem",
     "gradeMethod": "Methodologie",
-    "gradePartners": "Mede-ondertekende partners",
+    "gradePartners": "Expertnetwerk",
     "gradeSubmit": "Indienen voor certificering",
     "assets": "Assetcatalogus",
     "advisory": "Advisory",

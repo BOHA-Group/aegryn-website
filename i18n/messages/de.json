@@ -25,7 +25,7 @@
     "gradeSystem": "Grade-System",
     "gradeMethod": "Methodik",
     "gradeSubmit": "Zur Zertifizierung einreichen",
-    "gradePartners": "Co-signierende Partner",
+    "gradePartners": "Expertennetzwerk",
     "servicesAdvisory": "Advisory",
     "servicesAlliances": "Allianzen",
     "servicesAcquisition": "Akquisitionsunterstützung",
@@ -44,7 +44,7 @@
     "geo": "Schweiz · Europa · Global",
     "scroll": "Scrollen",
     "ctaSecondary": "ASSET EINREICHEN",
-    "chip2": "ZERTIFIZIERTES GRADE — KO-SIGNIERT",
+    "chip2": "ZERTIFIZIERTES GRADE — UNABHÄNGIG",
     "ctaPrimary": "Katalog ansehen"
   },
   "assets": {
@@ -198,7 +198,7 @@
       {
         "num": "01",
         "title": "Die Zertifizierung fehlte.",
-        "desc": "Ein Tech-Asset ohne unabhängige Zertifizierung zu kaufen, ist wie eine Uhr ohne Papiere zu kaufen. AEGRYN liefert die Papiere — co-signiert, verifizierbar, blockchain-zertifiziert."
+        "desc": "Ein Tech-Asset ohne unabhängige Zertifizierung zu kaufen, ist wie eine Uhr ohne Papiere zu kaufen. AEGRYN liefert die Papiere — zertifiziert, verifizierbar, dokumentiert."
       },
       {
         "num": "02",
@@ -259,10 +259,10 @@
   "aboutSection": {
     "label": "Über Aegryn",
     "title": "Drei Disziplinen.\nEin Marktstandard.",
-    "desc": "AEGRYN baut proprietäre Tech-Assets, zertifiziert sie unter einem unabhängigen ko-signierten Label und transagiert sie über einen vertraulichen Prozess zwischen qualifizierten Verkäufern und institutionellen Käufern. Die erste Vertrauensinfrastruktur für Tech-M&A in Europa.",
+    "desc": "AEGRYN baut proprietäre Tech-Assets, zertifiziert sie unter einem unabhängigen Label und transagiert sie über einen vertraulichen Prozess zwischen qualifizierten Verkäufern und Käufern. Die erste Vertrauensinfrastruktur für Tech-M&A in Europa.",
     "tagline": "ZERTIFIZIERT IN DER SCHWEIZ. REFERENZ IN EUROPA.",
     "cta": "Über Aegryn",
-    "quote": "Ein Tech-Asset ohne ko-signierte Zertifizierung ist ein Wert ohne Beweis. AEGRYN liefert den Beweis — bei jedem Asset, bei jedem Transfer.",
+    "quote": "Ein Tech-Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. AEGRYN liefert den Beweis bei jedem Asset, bei jedem Transfer.",
     "ceoName": "Yohann Bollack",
     "ceoTitle": "Gründer & CEO — AEGRYN Sàrl",
     "stats": [
@@ -290,7 +290,7 @@
       },
       {
         "title": "GRADE",
-        "desc": "Wir zertifizieren Drittanbieter- und proprietäre Assets nach einem unabhängigen, ko-signierten Label von Rechts-, Finanz- und Cybersicherheitsexperten. KRYV Protocol zertifiziert den Code auf der Blockchain bei jedem Transfer."
+        "desc": "Wir zertifizieren Drittanbieter- und proprietäre Assets nach einem unabhängigen Label, strukturiert über 4 Analysedimensionen — Code, IP, Finanzen, Sicherheit. Ein reproduzierbares, nachvollziehbares und schlüssiges Protokoll."
       },
       {
         "title": "AUCTION",
@@ -304,13 +304,13 @@
     "items": [
       {
         "num": "01",
-        "title": "KO-SIGNIERTE ZERTIFIZIERUNG",
-        "desc": "Jeder AEGRYN-Grade-Bericht ist ko-signiert von einer Anwaltskanzlei, einem Wirtschaftsprüfer und einem Cybersicherheitspartner. Sie setzen ihre Haftung ein. Keine Meinung — eine Zertifizierung."
+        "title": "UNABHÄNGIGE ZERTIFIZIERUNG",
+        "desc": "Jeder AEGRYN-Grade-Bericht wird von unseren zertifizierten Analysten nach einem reproduzierbaren und nachvollziehbaren Protokoll ausgestellt. Keine Meinung — eine Zertifizierung."
       },
       {
         "num": "02",
-        "title": "BLOCKCHAIN BEI TRANSFER",
-        "desc": "KRYV Protocol zeichnet den genauen kryptografischen Fingerabdruck der Codebasis zum Signierdatum auf. Was Sie erhalten, ist zu jedem zukünftigen Zeitpunkt beweisbar. Unveränderlich von Grund auf."
+        "title": "NACHVOLLZIEHBARKEIT BEI ÜBERTRAGUNG",
+        "desc": "Jede Asset-Übertragung wird präzise dokumentiert — Codebase-Zustand, Datum, genauer Umfang. Eine Blockchain-Zertifizierungsschicht wird diese Nachvollziehbarkeit langfristig verstärken."
       },
       {
         "num": "03",
@@ -333,11 +333,11 @@
     "hero": {
       "label": "Über AEGRYN",
       "title": "Die Vertrauensinfrastruktur\nfür europäisches Tech-M&A.",
-      "desc": "AEGRYN baut proprietäre Tech-Assets, zertifiziert sie unter einem unabhängig mitunterzeichneten Label und transagiert sie über einen vertraulichen Prozess zwischen qualifizierten Verkäufern und institutionellen Käufern."
+      "desc": "AEGRYN baut proprietäre Tech-Assets, zertifiziert sie unter einem unabhängigen Label und transagiert sie über einen vertraulichen Prozess zwischen qualifizierten Verkäufern und Käufern."
     },
     "vision": {
       "label": "Unsere Vision",
-      "text": "Der Wert eines Tech-Assets wird strukturell unterschätzt, weil es kein glaubwürdiges Zertifizierungsreferenzrahmen gibt. Verkäufer wissen nicht, zu welchem Preis sie verkaufen sollen. Käufer wissen nicht, was sie kaufen. AEGRYN ist dieser Rahmen — mit proprietärem IP, mitunterzeichnenden Partnern und Blockchain-Zertifizierung."
+      "text": "Der Wert eines Tech-Assets wird strukturell unterschätzt, weil es kein glaubwürdiges Zertifizierungsreferenzrahmen gibt. Verkäufer wissen nicht, zu welchem Preis sie verkaufen sollen. Käufer wissen nicht, was sie kaufen. AEGRYN ist dieser Rahmen — mit proprietärem IP und einem unabhängigen Bewertungsprotokoll."
     },
     "mission": {
       "label": "Unsere Mission",
@@ -351,11 +351,11 @@
       },
       "simplify": {
         "title": "GRADE",
-        "desc": "Unabhängig und mitunterzeichnet zertifizieren. Mehr ablehnen als annehmen. Ein objektiver, reproduzierbarer, anfechtbarer Grade."
+        "desc": "Unabhängig und objektiv zertifizieren. Mehr ablehnen als annehmen. Ein reproduzierbarer, nachvollziehbarer, schlüssiger Grade."
       },
       "embrace": {
         "title": "AUCTION",
-        "desc": "Diskret transagieren, mit Sicherheit für beide Parteien. Institutioneller Escrow. Blockchain bei Übertragung."
+        "desc": "Diskret transagieren, mit Sicherheit für beide Parteien. Institutioneller Escrow. Vollständige Dokumentation bei jeder Übertragung."
       }
     },
     "dna": {
@@ -386,7 +386,7 @@
     "founder": {
       "label": "Der Gründer",
       "role": "Gründer — AEGRYN",
-      "bio1": "Yohann Bollack ist Unternehmer, Builder und Tech-M&A-Stratege. Er gründet AEGRYN mit einer einfachen Überzeugung: Der europäische Tech-Markt verdient eine eigene Vertrauensinfrastruktur — mitunterzeichnete Zertifizierung, vertrauliche Transaktion, Blockchain-Zertifizierung.",
+      "bio1": "Yohann Bollack ist Unternehmer, Builder und Tech-M&A-Stratege. Er gründet AEGRYN mit einer einfachen Überzeugung: Der europäische Tech-Markt verdient eine eigene Vertrauensinfrastruktur — unabhängige Zertifizierung, vertrauliche Transaktionen, dokumentierte Übertragungen.",
       "bio2": "Er leitet ein proprietäres Asset-Ökosystem aus KI, Marktplätzen, Logistik und sozialen Netzwerken — alle von Anfang an so konzipiert, dass sie zertifizierbar und übertragbar sind.",
       "cta": "Kontakt aufnehmen"
     },
@@ -761,7 +761,7 @@
         {
           "num": "04",
           "title": "Sicherer Closing",
-          "desc": "Institutioneller Treuhand, KRYV-Protocol-Zertifizierung beim Transfer, vollständige Dokumentation."
+          "desc": "Institutioneller Treuhand, vollständige Dokumentation beim Transfer, AGB bereitgestellt."
         }
       ]
     },
@@ -782,7 +782,7 @@
         },
         {
           "title": "Haftung engagiert",
-          "desc": "Unser Grade wird von unabhängigen Dritten mitunterzeichnet (Kanzlei, Wirtschaftsprüfer). Wenn der Grade falsch ist, haften wir — nicht nur unser Ruf."
+          "desc": "Unser Grade wird von zertifizierten AEGRYN-Analysten nach einem unabhängigen und strengen Protokoll ausgestellt. Wenn der Grade falsch ist, haften wir — nicht nur unser Ruf."
         }
       ]
     },
@@ -1011,13 +1011,13 @@
       },
       {
         "num": "04",
-        "title": "Beratung & Co-Unterzeichnung",
-        "desc": "Beide Analysten beraten und erstellen einen Vorbericht. Für AEG ★ und AAA validiert ein Partner-Co-Unterzeichner den Abschlussbericht."
+        "title": "Beratung & Validierung",
+        "desc": "Beide Analysten beraten und erstellen den Abschlussbericht nach einem reproduzierbaren und unabhängigen Protokoll."
       },
       {
         "num": "05",
-        "title": "Ausgabe & Blockchain-Verankerung",
-        "desc": "Das Grade wird ausgestellt, digital signiert und im KRYV-Protokoll verankert — unveränderlich versiegelt."
+        "title": "Ausgabe & Veröffentlichung",
+        "desc": "Das Grade wird ausgestellt, dokumentiert und versioniert. Das Zertifikat wird an den Inhaber übermittelt und im AEGRYN-Register veröffentlicht. Eine Blockchain-Zertifizierungsschicht wird die Verankerung dieses Registers langfristig verstärken."
       }
     ],
     "principlesTitle": "Unabhängigkeitsprinzipien",
@@ -1037,14 +1037,18 @@
       {
         "title": "Einspruch",
         "desc": "Der Inhaber kann ein Grade innerhalb von 30 Tagen anfechten. Der Einspruch wird von einem unabhängigen Panel aus drei Analysten geprüft."
+      },
+      {
+        "title": "Zukünftige Verstärkung",
+        "desc": "AEGRYN baut schrittweise ein Netzwerk von Expertenpartnern auf, die bestimmte Berichte mit einer ergänzenden Querprüfung anreichern können, sowie eine Blockchain-Zertifizierungsschicht zur Stärkung der Nachvollziehbarkeit des Registers. Diese Bausteine werden das bereits vollständig operative unabhängige Protokoll ergänzen — niemals ersetzen."
       }
     ],
     "ctaTitle": "Ihr Asset zertifizieren",
     "ctaDesc": "Bereit, Ihr Asset dem AEGRYN Grade-Protokoll einzureichen?",
     "ctaPrimary": "Zertifizierung starten",
-    "ctaSecondary": "Unsere Mitunterzeichner-Partner entdecken",
+    "ctaSecondary": "Vollständige Methodik entdecken",
     "disclaimerTitle": "Verpflichtender Hinweis",
-    "disclaimerText": "Obwohl alles unternommen wurde, um objektiv zu bleiben, werden Kunden darüber informiert, dass jede Zertifizierung ein Element fachlicher Beurteilung enthält. Die in einem AEGRYN Grade-Bericht enthaltenen Informationen werden als professionelle Zertifizierung bereitgestellt, mitunterzeichnet von unabhängigen Experten, die dafür Verantwortung übernehmen. Sie stellen keine Garantie für den Marktwert dar.",
+    "disclaimerText": "Obwohl alles unternommen wurde, um objektiv zu bleiben, werden Kunden darüber informiert, dass jede Zertifizierung ein Element fachlicher Beurteilung enthält. Die in einem AEGRYN Grade-Bericht enthaltenen Informationen werden als professionelle Zertifizierung bereitgestellt, ausgestellt von zertifizierten AEGRYN-Analysten. Sie stellen keine Garantie für den Marktwert dar.",
     "refusalTitle": "Bedingungen für automatische Ablehnung",
     "refusalDesc": "Bestimmte Konfigurationen führen unabhängig von der Gesamtpunktzahl zu einer automatischen Ablehnung — der Algorithmus liefert eine Punktzahl, der Experte das endgültige Urteil, aber eine automatische Ablehnung kann niemals überstimmt werden.",
     "refusalConditions": [
@@ -1280,7 +1284,7 @@
         {
           "num": "04",
           "title": "Veröffentlichung",
-          "desc": "Der Grade wird im AEGRYN-Katalog veröffentlicht und Blockchain-verankert."
+          "desc": "Der Grade wird im AEGRYN-Katalog veröffentlicht und im offiziellen Register versioniert."
         }
       ]
     },
@@ -1304,7 +1308,7 @@
         },
         {
           "title": "Rückverfolgbarkeit",
-          "desc": "Jeder Grade wird digital signiert und Blockchain-verankert."
+          "desc": "Jeder Grade wird digital signiert und versioniert. Jede Änderung erzeugt eine neue nachvollziehbare Version."
         },
         {
           "title": "Unabhängigkeit",
@@ -1588,8 +1592,8 @@
   "gradeStrip": {
     "label": "AEGRYN Grade-System",
     "title": "Keine Bewertung.\nEine Zertifizierung.",
-    "desc": "Es gibt einen grundlegenden Unterschied zwischen einer Bewertung und einer Zertifizierung. AEGRYN zertifiziert — mit Experten, die unterschreiben und ihren Namen einsetzen.",
-    "quote": "Ein Asset ohne ko-signierte Zertifizierung ist ein Wert ohne Beweis. Ein AEGRYN Grade AAA Asset ist eine dokumentierte Gewissheit — ko-signiert, verifizierbar, auf der Blockchain gespeichert.",
+    "desc": "Es gibt einen grundlegenden Unterschied zwischen einer Bewertung und einer Zertifizierung. AEGRYN zertifiziert — nach einem unabhängigen, reproduzierbaren und nachvollziehbaren Protokoll.",
+    "quote": "Ein Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. Ein AEGRYN Grade AAA Asset ist eine dokumentierte und nachvollziehbare Gewissheit.",
     "cta": "Vollständige Methodik lesen",
     "grades": [
       {
@@ -1627,7 +1631,7 @@
   "auctionNarrative": {
     "label": "AEGRYN Auction",
     "title": "Manche Assets verdienen mehr\nals eine öffentliche Listung.",
-    "desc": "AEGRYN Auction ist keine offene Plattform. Es ist ein vertraulicher Veräußerungsprozess zwischen Verkäufern, die unsere Zertifizierung bestanden haben, und Käufern, die ihre Leistungsfähigkeit bewiesen haben.\n\nWeniger als 25% der eingereichten Assets werden akzeptiert. 100% der Käufer sind vorqualifiziert. Jede Transaktion wird blockchain-zertifiziert.",
+    "desc": "AEGRYN Auction ist keine offene Plattform. Es ist ein vertraulicher Veräußerungsprozess zwischen Verkäufern, die unsere Zertifizierung bestanden haben, und Käufern, die ihre Leistungsfähigkeit bewiesen haben.\n\nWeniger als 25% der eingereichten Assets werden akzeptiert. 100% der Käufer sind vorqualifiziert. Jede Transaktion wird vollständig dokumentiert und abgesichert.",
     "stat1Val": "< 25%",
     "stat1Label": "Akzeptanzrate",
     "stat2Val": "60 T max",
@@ -1666,7 +1670,7 @@
     },
     "grade": {
       "label": "GRADE",
-      "desc": "Unabhängige, ko-signierte Zertifizierung"
+      "desc": "Unabhängige, dokumentierte Zertifizierung"
     },
     "auction": {
       "label": "AUCTION",
@@ -1761,13 +1765,13 @@
     "hero": {
       "label": "AEGRYN Allianzen",
       "title": "Die Partner, die den\nGrade unwiderlegbar machen.",
-      "desc": "AEGRYN zertifiziert nicht allein. Jeder Grade-Bericht verpflichtet externe mitunterzeichnende Partner. Jeder Deal beinhaltet institutionelle Partner. Diese Struktur macht uns glaubwürdig."
+      "desc": "AEGRYN zertifiziert unabhängig. Unsere Partner wirken bei Vertrieb, Deal-Flow und Transaktionsstrukturierung mit und können langfristig bestimmte Berichte mit einer ergänzenden Querprüfung anreichern. Dieses Ökosystem macht uns operationell."
     },
     "types": {
       "certification": {
         "label": "Zertifizierung",
-        "title": "Grade-Mitunterzeichner",
-        "desc": "Tech-Anwaltskanzleien, Wirtschaftsprüfer, Cybersicherheitspartner. Sie mitunterzeichnen AEGRYN-Grade-Berichte und verpflichten Ihre berufliche Haftung.",
+        "title": "Partner des Expertennetzwerks",
+        "desc": "Tech-Anwaltskanzleien, Wirtschaftsprüfer, Cybersicherheitspartner. Treten Sie dem ersten Kreis von Partnern bei, die das AEGRYN Grade-Protokoll mit einer Querprüfung anreichern sollen, sobald sich dieses System entfaltet.",
         "profiles": "IP & Tech-Kanzleien · Wirtschaftsprüfer · Cybersicherheitspartner",
         "cta": "Zertifizierungspartner werden"
       },
@@ -1804,7 +1808,7 @@
       "type": "Allianztyp",
       "typePlaceholder": "Typ auswählen",
       "typeOptions": {
-        "certification": "Zertifizierung (Grade-Mitunterzeichnung)",
+        "certification": "Zertifizierung (Expertennetzwerk)",
         "distribution": "Distribution (Käufer-Mitgliedschaft)",
         "dealflow": "Deal Flow (Deal-Vermittlung)",
         "other": "Andere"
@@ -1902,12 +1906,12 @@
       "evalTypeTitle": "Welches Bewertungsniveau wünschen Sie?",
       "evalTypeFull": {
         "label": "Auction-Zertifizierung",
-        "desc": "Erfölgsbeteiligung. Vollständiger co-signierter Prozess (Rechtlich + Buchführung + Cybersicherheit), 3–4 Wochen, für eine Transaktion über AEGRYN Auction.",
+        "desc": "Erfölgsbeteiligung. Vollständiges unabhängiges AEGRYN-Protokoll (4 Dimensionen C/I/F/S), 3–4 Wochen, für eine Transaktion über AEGRYN Auction.",
         "price": "Kostenlos"
       },
       "evalTypeReview": {
         "label": "AEGRYN Review",
-        "desc": "Schriftliches Gutachten eines AEGRYN-Analysten innerhalb von 5 Werktagen. Keine externe Partnerprüfung. Nicht im Katalog veröffentlichbar, nicht co-signiert.",
+        "desc": "Schriftliches Gutachten eines AEGRYN-Analysten innerhalb von 5 Werktagen. Keine externe Partnerprüfung. Nicht im Katalog veröffentlichbar, ohne externe Validierung.",
         "price": "2.000 € zzgl. MwSt."
       },
       "evalTypeReviewPlus": {
@@ -2013,7 +2017,7 @@
         {
           "num": "05",
           "title": "Signing & Closing",
-          "desc": "Blockchain-Zertifizierung. Gelder freigegeben. Asset uebertragen."
+          "desc": "Dokumentation des genauen Code-Zustands. Gelder freigegeben. Asset übertragen."
         }
       ],
       "penaltiesTitle": "Bilateraler Schutz",
@@ -2336,7 +2340,7 @@
       "preRevenueRange": "Indikative Spanne",
       "preRevenueNote": "Für ein Pre-Revenue-Asset ist AEGRYN Grade C der natürliche nächste Schritt.",
       "ngNote": "Ihr Score liegt unter der Gradierungsschwelle. Ein kostenloser Assessment Day zeigt die 3 Prioritäten.",
-      "disclaimer": "Diese Schätzung wird von einem Algorithmus auf Basis Ihrer nicht verifizierten Angaben generiert. Sie stellt keinen offiziellen AEGRYN Grade dar. Der AEGRYN Grade wird erst nach einem echten Audit durch unser Team und Co-Unterzeichner (Rechtskanzlei, Wirtschaftsprüfer, Cybersicherheitspartner) vergeben.",
+      "disclaimer": "Diese Schätzung wird von einem Algorithmus auf Basis Ihrer nicht verifizierten Angaben generiert. Sie stellt keinen offiziellen AEGRYN Grade dar. Der AEGRYN Grade wird erst nach einem echten Audit durch unser Team zertifizierter AEGRYN-Analysten vergeben.",
       "ctaGrade": "Offizielle Zertifizierung starten",
       "ctaAssessment": "Kostenlosen Assessment Day buchen",
       "emailTitle": "Detaillierten Bericht per E-Mail erhalten.",
@@ -2539,19 +2543,19 @@
     "s1Title": "Definitionen",
     "defAegryn": "AEGRYN Sàrl, in der Schweiz eingetragene Gesellschaft (CHE-XXX.XXX.XXX).",
     "defAsset": "Jedes digitale Gut, das über AEGRYN zertifiziert und/oder übertragen werden kann: Software (SaaS, Anwendungen), Codebases, digitales geistiges Eigentum, Marken, Protokolle.",
-    "defGrade": "Offizielle Zertifizierung eines Tech-Assets nach dem C/I/F/S-Protokoll, von externen Partnern mitunterzeichnet. Vergebene Grade: ★, AAA, AA, A, B.",
-    "defGradeEst": "Nicht zertifiziertes Gutachten eines AEGRYN-Analysten ohne externe Mitunterzeichnung. Gegenüber Dritten nie durchsetzbar. Immer mit dem Zusatz (geschätzt) versehen.",
+    "defGrade": "Offizielle Zertifizierung eines Tech-Assets nach dem C/I/F/S-Protokoll, ausgestellt von zertifizierten AEGRYN-Analysten. Vergebene Grade: ★, AAA, AA, A, B.",
+    "defGradeEst": "Nicht zertifiziertes Gutachten eines AEGRYN-Analysten ohne externe Validierung. Gegenüber Dritten nie durchsetzbar. Immer mit dem Zusatz (geschätzt) versehen.",
     "defPtt": "Vertraglicher Mechanismus zur Regelung der Übertragung eines zertifizierten Assets, einschliesslich einer Banktreuhand von 10% des vereinbarten Preises.",
     "defEscrow": "Vom Käufer bei einer von AEGRYN benannten Drittbank hinterlegter Betrag. AEGRYN ist niemals Verwahrer dieser Mittel.",
     "defSeller": "Jede natürliche oder juristische Person, die ein Tech-Asset in den AEGRYN-Prozess einbringt.",
     "defBuyer": "Jedes qualifizierte AEGRYN-Mitglied, das zum Zugang zum Katalog und zur Abgabe von Angeboten berechtigt ist.",
     "s2Title": "Erbrachte Dienstleistungen",
     "s2ReviewTitle": "AEGRYN Review",
-    "s2Review": "Schriftliches Gutachten eines AEGRYN-Analysten zu einem eingereichten Tech-Asset. Bearbeitungszeit: 5 Werktage. Nicht mitunterzeichnet, nicht im Katalog veröffentlichbar. Nur indikativer Wert. Vollständig auf Zertifizierungsgebühren anrechenbar, wenn der Prozess innerhalb von 6 Monaten gestartet wird.",
+    "s2Review": "Schriftliches Gutachten eines AEGRYN-Analysten zu einem eingereichten Tech-Asset. Bearbeitungszeit: 5 Werktage. Ohne externe Validierung, nicht im Katalog veröffentlichbar. Nur indikativer Wert. Vollständig auf Zertifizierungsgebühren anrechenbar, wenn der Prozess innerhalb von 6 Monaten gestartet wird.",
     "s2ReviewPlusTitle": "AEGRYN Review+",
-    "s2ReviewPlus": "Schriftliches Gutachten ergänzt durch einen externen Partner. Bearbeitungszeit: 10 Werktage. Nicht mitunterzeichnet, nicht veröffentlichbar. Unter gleichen Bedingungen vollständig anrechenbar.",
+    "s2ReviewPlus": "Schriftliches Gutachten ergänzt durch einen externen Partner. Bearbeitungszeit: 10 Werktage. Nicht offiziell im Sinne der vollständigen Zertifizierung, nicht veröffentlichbar. Unter gleichen Bedingungen vollständig anrechenbar.",
     "s2CertTitle": "Auction-Zertifizierung",
-    "s2Cert": "Vollständiger mehrdimensionaler Auditprozess über alle 4 C/I/F/S-Dimensionen. Mitunterzeichnet von einer Tech-Anwaltskanzlei, einem Wirtschaftsprüfer, einem Cybersicherheitspartner. Offizieller AEG-Grade vergeben und im Katalog veröffentlichbar. Honorar: erfolgsbasiert (Provision beim Verkauf).",
+    "s2Cert": "Vollständiger mehrdimensionaler Auditprozess über alle 4 C/I/F/S-Dimensionen. Durchgeführt von zertifizierten AEGRYN-Analysten gemäß dem offiziellen Protokoll. Offizieller AEG-Grade vergeben und im Katalog veröffentlichbar. Honorar: erfolgsbasiert (Provision beim Verkauf).",
     "s2AdvisoryTitle": "AEGRYN Advisory",
     "s2Advisory": "Strategische und operative Begleitung von Assets zur Sanierung und Neueinreichung. Honorar nach Angebot.",
     "s3Title": "Einreichungsbedingungen",
@@ -2572,7 +2576,7 @@
     "s4DdTitle": "Due Diligence (DD)",
     "s4Dd": "Standarddauer: 30 Kalendertage ab Treuhandbestätigung. Der Käufer erhält Zugang zum vollständigen Datenraum unter NDA. Verlängerung durch gegenseitige schriftliche Vereinbarung möglich (max. 30 weitere Tage).",
     "s4SigningTitle": "Unterzeichnung und Closing",
-    "s4Signing": "Bei der Unterzeichnung: KRYV Protocol zertifiziert den Codebase-Status via Blockchain-Fingerabdruck. Der Restbetrag (90%) wird vom Käufer gezahlt. Die Bank gibt die Treuhand frei. AEGRYN zieht seine Provision ab und zahlt den Nettobetrag an den Verkäufer. AEGRYN stellt das offizielle Transaktionszertifikat aus.",
+    "s4Signing": "Bei der Unterzeichnung: der genaue Codebase-Zustand wird dokumentiert und versioniert. Die Codebase wird im AEGRYN-Register archiviert und versioniert. Der Restbetrag (90%) wird vom Käufer gezahlt. Die Bank gibt die Treuhand frei. AEGRYN zieht seine Provision ab und zahlt den Nettobetrag an den Verkäufer. AEGRYN stellt das offizielle Transaktionszertifikat aus.",
     "s5Title": "Haftung",
     "s5": "AEGRYN handelt ausschliesslich als Vermittler und Prozessbetreiber. AEGRYN garantiert weder den Ausgang einer Transaktion noch den zukünftigen Wert eines Assets noch die Leistung nach der Übertragung. Die Haftung von AEGRYN ist auf die Rückerstattung der Zertifizierungsgebühren für das betreffende Asset beschränkt. AEGRYN haftet in keinem Fall für indirekte Schäden oder entgangenen Gewinn.",
     "s6Title": "Grade-Anfechtung",
@@ -2627,7 +2631,7 @@
     "s3Row6Data": "Anonymisierte Daten",
     "s3Row6Basis": "Berechtigte Interessen / Öffentliches Interesse",
     "s4Title": "Wer hat Zugang zu Ihren Daten?",
-    "s4": "Innerhalb von AEGRYN: Teammitglieder mit berechtigtem operativem Bedarf. Mitunterzeichnende Partner: Anwaltskanzleien, Wirtschaftsprüfer, Cybersicherheitspartner (unterliegen strengen Vertraulichkeitspflichten). Treuhandbank. Technische Dienstleister: Hosting, E-Mail, Zahlung über Stripe. Behörden: wenn gesetzlich vorgeschrieben. AEGRYN verkauft Ihre Daten niemals an Dritte.",
+    "s4": "Innerhalb von AEGRYN: Teammitglieder mit berechtigtem operativem Bedarf. Zertifizierungspartner (unterliegen strengen Vertraulichkeitspflichten). Treuhandbank. Technische Dienstleister: Hosting, E-Mail, Zahlung über Stripe. Behörden: wenn gesetzlich vorgeschrieben. AEGRYN verkauft Ihre Daten niemals an Dritte.",
     "s5Title": "Internationale Übermittlungen",
     "s5": "Daten werden auf Servern in der Europäischen Union oder der Schweiz gehostet. Bei Übermittlungen in Drittländer setzen wir geeignete Garantien ein (genehmigte Standardvertragsklauseln).",
     "s6Title": "Aufbewahrung",
@@ -2712,7 +2716,7 @@
           "certification"
         ],
         "q": "Was ist der Unterschied zwischen einem offiziellen Grade und einem geschätzten Grade?",
-        "a": "Ein offizieller Grade wird nach einem echten Audit durch AEGRYN-Analysten vergeben und von unabhängigen externen Partnern mitunterzeichnet, die ihre berufliche Haftung übernehmen. Ein geschätzter Grade (aus /valuation oder AEGRYN Review) ist ein auf erklärten Daten basierendes Gutachten, immer mit (geschätzt) gekennzeichnet, ohne Vertragswert."
+        "a": "Ein offizieller Grade wird nach einem echten Audit durch AEGRYN-Analysten nach einem unabhängigen und reproduzierbaren Protokoll vergeben, für das AEGRYN die Verantwortung übernimmt. Ein geschätzter Grade (aus /valuation oder AEGRYN Review) ist ein auf erklärten Daten basierendes Gutachten, immer mit (geschätzt) gekennzeichnet, ohne Vertragswert."
       },
       {
         "id": "cert-duration",
@@ -2745,8 +2749,8 @@
           "certification",
           "transactions"
         ],
-        "q": "Was ist KRYV Protocol?",
-        "a": "KRYV Protocol ist unsere Blockchain-Zertifizierungsinfrastruktur. Es erstellt einen kryptographischen Fingerabdruck der Codebase zum genauen Zertifizierungsdatum, unveränderlich gespeichert. Damit kann jeder Käufer zu einem späteren Zeitpunkt beweisen, dass der erhaltene Code genau dem zertifizierten Code entspricht."
+        "q": "Wie gewährleistet AEGRYN die Nachvollziehbarkeit eines Grades?",
+        "a": "Jeder Grade wird dokumentiert, versioniert und im AEGRYN-Register gespeichert. Jede Änderung an einer zertifizierten Codebase nach der Ausstellung generiert eine neue Version. Damit kann jederzeit nachgewiesen werden, dass der erhaltene Code genau dem zertifizierten Code entspricht."
       },
       {
         "id": "what-assets",
@@ -2956,7 +2960,7 @@
     "navCatalog": "Katalog",
     "navOffers": "Meine Angebote",
     "navCommissions": "Fällige Provisionen",
-    "navCosigning": "Ko-Signaturen",
+    "navCosigning": "Validierungen",
     "navIntroductions": "Empfehlungen",
     "navPartnerCommissions": "Provisionen"
   },
@@ -2985,7 +2989,7 @@
     "auctionResults": "Ergebnisse",
     "grade": "Grade-System",
     "gradeMethod": "Methodik",
-    "gradePartners": "Ko-signierende Partner",
+    "gradePartners": "Expertennetzwerk",
     "gradeSubmit": "Zur Zertifizierung einreichen",
     "assets": "Asset-Katalog",
     "advisory": "Advisory",
