@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { ArrowUpRight, SlidersHorizontal } from 'lucide-react'
@@ -46,6 +47,7 @@ export default async function BuyerCataloguePage({
   const user = await getUser()
   if (!user) redirect('/client/login')
 
+  const t = await getTranslations('clientSpace')
   const { grade, type } = await searchParams
 
   const supa = createServiceClient()
@@ -68,10 +70,10 @@ export default async function BuyerCataloguePage({
     <div className="p-8">
       {/* Header */}
       <div className="mb-8">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Acquéreur</p>
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('spaceNameBuyer')}</p>
         <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Catalogue AEGRYN</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
-          Actifs certifiés et publiés — accès réservé aux acquéreurs qualifiés.
+          {t('catalogSubtitle')}
         </p>
       </div>
 
@@ -79,13 +81,13 @@ export default async function BuyerCataloguePage({
       <div className="flex flex-wrap gap-4 mb-8 p-4 bg-white border border-gray-200">
         <div className="flex items-center gap-2">
           <SlidersHorizontal size={13} className="text-gray-400" />
-          <span className="font-mono text-[10px] uppercase tracking-widest text-gray-400">Filtres</span>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-gray-400">{t('filterLabel')}</span>
         </div>
 
         <div className="flex flex-wrap gap-2">
-          <span className="font-sans text-[11px] text-gray-500 self-center">Grade :</span>
+          <span className="font-sans text-[11px] text-gray-500 self-center">{t('filterGrade')} :</span>
           <Link href="/client/buyer/catalogue" className={`px-3 py-1 border font-mono text-[10px] uppercase tracking-wider ${!grade ? 'bg-ag-navy text-white border-ag-navy' : 'text-gray-500 border-gray-200 hover:border-gray-400'}`}>
-            Tous
+            {t('filterAll')}
           </Link>
           {grades.map(g => (
             <Link key={g}
@@ -97,15 +99,15 @@ export default async function BuyerCataloguePage({
         </div>
 
         <div className="flex flex-wrap gap-2">
-          <span className="font-sans text-[11px] text-gray-500 self-center">Type :</span>
+          <span className="font-sans text-[11px] text-gray-500 self-center">{t('filterType')} :</span>
           <Link href={`/client/buyer/catalogue${grade ? `?grade=${grade}` : ''}`} className={`px-3 py-1 border font-mono text-[10px] uppercase tracking-wider ${!type ? 'bg-ag-navy text-white border-ag-navy' : 'text-gray-500 border-gray-200 hover:border-gray-400'}`}>
-            Tous
+            {t('filterAll')}
           </Link>
-          {types.map(t => (
-            <Link key={t}
-              href={`/client/buyer/catalogue?${grade ? `grade=${grade}&` : ''}type=${t}`}
-              className={`px-3 py-1 border font-mono text-[10px] uppercase tracking-wider ${type === t ? 'bg-ag-navy text-white border-ag-navy' : 'text-gray-500 border-gray-200 hover:border-gray-400'}`}>
-              {t}
+          {types.map(assetType => (
+            <Link key={assetType}
+              href={`/client/buyer/catalogue?${grade ? `grade=${grade}&` : ''}type=${assetType}`}
+              className={`px-3 py-1 border font-mono text-[10px] uppercase tracking-wider ${type === assetType ? 'bg-ag-navy text-white border-ag-navy' : 'text-gray-500 border-gray-200 hover:border-gray-400'}`}>
+              {assetType}
             </Link>
           ))}
         </div>
@@ -119,7 +121,7 @@ export default async function BuyerCataloguePage({
       {!assets || assets.length === 0 ? (
         <div className="bg-white border border-gray-200 px-8 py-16 text-center">
           <p className="font-sans text-[14px] text-gray-400">
-            Aucun actif disponible avec ces critères.
+            {t('noAssets')}
           </p>
         </div>
       ) : (
@@ -133,7 +135,7 @@ export default async function BuyerCataloguePage({
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap mb-1">
                     <h2 className="font-sans font-semibold text-gray-900 text-[15px] truncate">
-                      {asset.company_name ?? `Actif #${asset.id.slice(0, 8)}`}
+                      {asset.company_name ?? `${t('assetDefault')} #${asset.id.slice(0, 8)}`}
                     </h2>
                     {asset.asset_type && (
                       <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-gray-400 border border-gray-200 px-1.5 py-0.5">
@@ -163,7 +165,7 @@ export default async function BuyerCataloguePage({
                 </div>
                 {asset.gross_margin != null && (
                   <div>
-                    <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-0.5">Marge brute</p>
+                    <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-0.5">{t('grossMargin')}</p>
                     <p className="font-sans font-semibold text-[13px] text-gray-800">{asset.gross_margin}%</p>
                   </div>
                 )}
@@ -184,7 +186,7 @@ export default async function BuyerCataloguePage({
 
               <div className="flex items-center justify-end">
                 <span className="font-mono text-[10px] uppercase tracking-widest text-ag-navy group-hover:underline flex items-center gap-1">
-                  Voir la fiche <ArrowUpRight size={10} />
+                  {t('viewDetails')} <ArrowUpRight size={10} />
                 </span>
               </div>
             </Link>
