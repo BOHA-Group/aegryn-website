@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const BASE = 'https://aegryn.com'
+const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')
 const LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
 
 const STATIC_ROUTES = [
