@@ -456,79 +456,6 @@
     "classifiedLabel": "CLASSIFICATO",
     "classifiedDesc": "Protocollo in sviluppo riservato.\nAccesso limitato ai partner accreditati."
   },
-  "growWithUs": {
-    "hero": {
-      "label": "Partnership Strategiche & Investimenti",
-      "title": "Cresciamo insieme.",
-      "desc": "Aegryn invita investitori visionari e partner a far parte di un movimento rivoluzionario nel settore tecnologico digitale. Visione a lungo termine. Esecuzione disciplinata.",
-      "cta": "Contattaci"
-    },
-    "investors": {
-      "label": "/ Investitori",
-      "sub": "Diventa un attore chiave",
-      "items": [
-        {
-          "num": "01",
-          "title": "Mercato in forte crescita",
-          "desc": "Siamo posizionati nel settore degli ecosistemi digitali in rapida trasformazione, aprendo significative opportunità di ricavi."
-        },
-        {
-          "num": "02",
-          "title": "Competenza comprovata",
-          "desc": "Il nostro team è composto da sviluppatori, designer UX e strateghi di marketing impegnati a fornire prodotti digitali all'avanguardia."
-        },
-        {
-          "num": "03",
-          "title": "Tecnologia di nuova generazione",
-          "desc": "Integriamo AI, machine learning e automazione per creare soluzioni a prova di futuro, progettate per durare e scalare."
-        },
-        {
-          "num": "04",
-          "title": "Successo basato sui dati",
-          "desc": "Il nostro solido modello di business e le strategie finanziarie garantiscono redditività a lungo termine e innovazione continua."
-        },
-        {
-          "num": "05",
-          "title": "Trasparente e orientato agli investitori",
-          "desc": "Forniamo aggiornamenti chiari e costanti sull'avanzamento del progetto, sulle tappe finanziarie e sulle tendenze di mercato."
-        }
-      ]
-    },
-    "partners": {
-      "label": "/ Partner",
-      "sub": "Opportunità ad alto impatto",
-      "items": [
-        {
-          "title": "Sviluppo app",
-          "desc": "Espandi il portafoglio servizi della tua agenzia e sblocca significativi nuovi flussi di ricavi."
-        },
-        {
-          "title": "Assicurazione integrata",
-          "desc": "Proponi copertura istantanea e fluida per acquisti, consegne e transazioni finanziarie."
-        },
-        {
-          "title": "Soluzioni di pagamento integrate",
-          "desc": "Abilita pagamenti in tempo reale, finanziamenti flessibili e modelli di revenue sharing."
-        },
-        {
-          "title": "Iniziative di crescita co-branded",
-          "desc": "Lancia campagne virali, offerte esclusive ed eventi a tempo limitato."
-        },
-        {
-          "title": "Campagne marketing data-driven",
-          "desc": "Sfrutta i dati della piattaforma per creare campagne marketing altamente mirate e personalizzate."
-        },
-        {
-          "title": "Collaborazioni social media & influencer",
-          "desc": "Collabora con noi per amplificare il messaggio del nostro brand attraverso campagne social coinvolgenti e partnership con influencer strategici."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Pronti a costruire il futuro insieme?",
-      "button": "Contattaci"
-    }
-  },
   "contact": {
     "faq": {
       "label": "/ Domande frequenti",
@@ -629,14 +556,38 @@
       "label": "Competenze mobilitate",
       "desc": "Al servizio dei nostri clienti, accompagnati prima, durante e dopo la transazione, i nostri esperti coprono tutti gli ambiti necessari per una certificazione degli asset conforme agli standard AEGRYN.",
       "items": [
-        { "title": "Audit di sicurezza e Cybersecurity", "desc": "Penetration test, gestione del rischio, sicurezza applicativa e dell'infrastruttura cloud." },
-        { "title": "Architettura tecnica & Engineering", "desc": "CTO as a service, architettura full-stack, scalabilità delle piattaforme." },
-        { "title": "Dati e Intelligenza Artificiale", "desc": "Strategia IA, automazione, data governance." },
-        { "title": "Diritto digitale e proprietà intellettuale", "desc": "Conformità, protezione IP, strutturazione legale degli asset digitali." },
-        { "title": "Diritto delle transazioni e M&A", "desc": "Due diligence, strutturazione delle operazioni, supporto contrattuale prima, durante e dopo la transazione." },
-        { "title": "Certificazione blockchain e notarizzazione digitale", "desc": "Marcatura temporale, prova di autenticità, deposito fiduciario riservato delle transazioni." },
-        { "title": "Fiscalità e strutturazione societaria", "desc": "Ottimizzazione fiscale svizzera ed europea, strutturazione di holding." },
-        { "title": "Design ed esperienza utente", "desc": "UX/UI, identità di prodotto, percorsi utente." }
+        {
+          "title": "Audit di sicurezza e Cybersecurity",
+          "desc": "Penetration test, gestione del rischio, sicurezza applicativa e dell'infrastruttura cloud."
+        },
+        {
+          "title": "Architettura tecnica & Engineering",
+          "desc": "CTO as a service, architettura full-stack, scalabilità delle piattaforme."
+        },
+        {
+          "title": "Dati e Intelligenza Artificiale",
+          "desc": "Strategia IA, automazione, data governance."
+        },
+        {
+          "title": "Diritto digitale e proprietà intellettuale",
+          "desc": "Conformità, protezione IP, strutturazione legale degli asset digitali."
+        },
+        {
+          "title": "Diritto delle transazioni e M&A",
+          "desc": "Due diligence, strutturazione delle operazioni, supporto contrattuale prima, durante e dopo la transazione."
+        },
+        {
+          "title": "Certificazione blockchain e notarizzazione digitale",
+          "desc": "Marcatura temporale, prova di autenticità, deposito fiduciario riservato delle transazioni."
+        },
+        {
+          "title": "Fiscalità e strutturazione societaria",
+          "desc": "Ottimizzazione fiscale svizzera ed europea, strutturazione di holding."
+        },
+        {
+          "title": "Design ed esperienza utente",
+          "desc": "UX/UI, identità di prodotto, percorsi utente."
+        }
       ]
     },
     "domains": {
@@ -1034,10 +985,6 @@
       {
         "title": "Tracciabilità",
         "desc": "Ogni grade è versionato. Qualsiasi revisione genera una nuova versione con tracciabilità completa della cronologia."
-      },
-      {
-        "title": "Ricorso",
-        "desc": "Il titolare può contestare un grade entro 30 giorni. Il ricorso è istruito da un panel indipendente di tre analisti."
       },
       {
         "title": "Rafforzamento futuro",
@@ -2986,7 +2933,7 @@
     "navCatalog": "Catalogo",
     "navOffers": "Le mie offerte",
     "navCommissions": "Commissioni dovute",
-    "navCosigning": "Validazioni",
+    "navCosigning": "Missioni",
     "navIntroductions": "Presentazioni",
     "navPartnerCommissions": "Commissioni",
     "filterLabel": "Filtri",

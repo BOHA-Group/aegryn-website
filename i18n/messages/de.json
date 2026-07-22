@@ -456,79 +456,6 @@
     "classifiedLabel": "VERTRAULICH",
     "classifiedDesc": "Protokoll in vertraulicher Entwicklung.\nZugang nur für akkreditierte Partner."
   },
-  "growWithUs": {
-    "hero": {
-      "label": "Strategische Partnerschaften & Investitionen",
-      "title": "Wachsen Sie mit uns.",
-      "desc": "Aegryn lädt visionäre Investoren und Partner ein, Teil einer bahnbrechenden Bewegung in der digitalen Technologie zu werden. Langfristige Vision. Disziplinierte Ausführung.",
-      "cta": "Kontakt aufnehmen"
-    },
-    "investors": {
-      "label": "/ Investoren",
-      "sub": "Werden Sie ein Schlüsselakteur",
-      "items": [
-        {
-          "num": "01",
-          "title": "Wachstumsstarker Markt",
-          "desc": "Wir sind im sich rasch wandelnden digitalen Ökosystemsektor positioniert und eröffnen bedeutende Umsatzchancen."
-        },
-        {
-          "num": "02",
-          "title": "Bewährte Expertise",
-          "desc": "Unser Team besteht aus erstklassigen Entwicklern, UX-Designern und Marketingstrategen, die hochmoderne digitale Produkte liefern."
-        },
-        {
-          "num": "03",
-          "title": "Next-Gen-Technologie",
-          "desc": "Wir integrieren KI, Machine Learning und Automatisierung für zukunftssichere Lösungen, die auf Bestand und Skalierung ausgelegt sind."
-        },
-        {
-          "num": "04",
-          "title": "Datengesteuerter Erfolg",
-          "desc": "Unser robustes Geschäftsmodell und unsere Finanzstrategien gewährleisten langfristige Rentabilität und anhaltende Innovation."
-        },
-        {
-          "num": "05",
-          "title": "Transparent & investorenorientiert",
-          "desc": "Wir liefern klare, regelmäßige Updates zu Projektfortschritt, finanziellen Meilensteinen und Markttrends."
-        }
-      ]
-    },
-    "partners": {
-      "label": "/ Partner",
-      "sub": "Wirkungsstarke Chancen",
-      "items": [
-        {
-          "title": "App-Entwicklung",
-          "desc": "Erweitern Sie das Dienstleistungsportfolio Ihrer Agentur und erschließen Sie bedeutende neue Einnahmequellen."
-        },
-        {
-          "title": "Embedded Insurance",
-          "desc": "Bieten Sie sofortigen, nahtlosen Versicherungsschutz für Käufe, Lieferungen und Finanztransaktionen an."
-        },
-        {
-          "title": "Integrierte Zahlungslösungen",
-          "desc": "Ermöglichen Sie Echtzeitzahlungen, flexibles Finanzieren und Umsatzteilungsmodelle."
-        },
-        {
-          "title": "Co-branded Wachstumsinitiativen",
-          "desc": "Starten Sie virale Kampagnen, exklusive Angebote und zeitlich begrenzte Events."
-        },
-        {
-          "title": "Datengesteuerte Marketingkampagnen",
-          "desc": "Nutzen Sie Plattformdaten für hochgradig zielgerichtete und personalisierte Marketingkampagnen."
-        },
-        {
-          "title": "Social-Media & Influencer-Kooperationen",
-          "desc": "Verstärken Sie unsere Markenbotschaft durch einbindende Social-Media-Kampagnen und strategische Influencer-Partnerschaften."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Bereit, gemeinsam die Zukunft zu gestalten?",
-      "button": "Kontakt aufnehmen"
-    }
-  },
   "contact": {
     "faq": {
       "label": "/ Häufig gestellte Fragen",
@@ -629,14 +556,38 @@
       "label": "Eingesetzte Expertise",
       "desc": "Im Dienst unserer Kunden, die vor, während und nach der Transaktion begleitet werden, decken unsere Experten alle Bereiche ab, die für eine Asset-Zertifizierung nach AEGRYN-Standards erforderlich sind.",
       "items": [
-        { "title": "Sicherheitsaudit & Cybersicherheit", "desc": "Penetrationstests, Risikomanagement, Anwendungs- und Cloud-Infrastruktursicherheit." },
-        { "title": "Technische Architektur & Engineering", "desc": "CTO as a Service, Full-Stack-Architektur, Skalierbarkeit von Plattformen." },
-        { "title": "Daten & Künstliche Intelligenz", "desc": "KI-Strategie, Automatisierung, Data Governance." },
-        { "title": "Digitalrecht & geistiges Eigentum", "desc": "Compliance, IP-Schutz, rechtliche Strukturierung digitaler Vermögenswerte." },
-        { "title": "Transaktionsrecht & M&A", "desc": "Due Diligence, Deal-Strukturierung, vertragliche Begleitung vor, während und nach einer Transaktion." },
-        { "title": "Blockchain-Zertifizierung & digitale Beurkundung", "desc": "Zeitstempel, Echtheitsnachweis, vertrauliche Transaktions-Treuhand." },
-        { "title": "Steuer- & Unternehmensstrukturierung", "desc": "Schweizer und europäische Steueroptimierung, Holdingstrukturierung." },
-        { "title": "Design & User Experience", "desc": "UX/UI, Produktidentität, Nutzerreisen." }
+        {
+          "title": "Sicherheitsaudit & Cybersicherheit",
+          "desc": "Penetrationstests, Risikomanagement, Anwendungs- und Cloud-Infrastruktursicherheit."
+        },
+        {
+          "title": "Technische Architektur & Engineering",
+          "desc": "CTO as a Service, Full-Stack-Architektur, Skalierbarkeit von Plattformen."
+        },
+        {
+          "title": "Daten & Künstliche Intelligenz",
+          "desc": "KI-Strategie, Automatisierung, Data Governance."
+        },
+        {
+          "title": "Digitalrecht & geistiges Eigentum",
+          "desc": "Compliance, IP-Schutz, rechtliche Strukturierung digitaler Vermögenswerte."
+        },
+        {
+          "title": "Transaktionsrecht & M&A",
+          "desc": "Due Diligence, Deal-Strukturierung, vertragliche Begleitung vor, während und nach einer Transaktion."
+        },
+        {
+          "title": "Blockchain-Zertifizierung & digitale Beurkundung",
+          "desc": "Zeitstempel, Echtheitsnachweis, vertrauliche Transaktions-Treuhand."
+        },
+        {
+          "title": "Steuer- & Unternehmensstrukturierung",
+          "desc": "Schweizer und europäische Steueroptimierung, Holdingstrukturierung."
+        },
+        {
+          "title": "Design & User Experience",
+          "desc": "UX/UI, Produktidentität, Nutzerreisen."
+        }
       ]
     },
     "domains": {
@@ -1034,10 +985,6 @@
       {
         "title": "Nachvollziehbarkeit",
         "desc": "Jedes Grade ist versioniert. Jede Revision erzeugt eine neue Version mit vollständiger Verlaufsverfolgung."
-      },
-      {
-        "title": "Einspruch",
-        "desc": "Der Inhaber kann ein Grade innerhalb von 30 Tagen anfechten. Der Einspruch wird von einem unabhängigen Panel aus drei Analysten geprüft."
       },
       {
         "title": "Zukünftige Verstärkung",
@@ -2986,7 +2933,7 @@
     "navCatalog": "Katalog",
     "navOffers": "Meine Angebote",
     "navCommissions": "Fällige Provisionen",
-    "navCosigning": "Validierungen",
+    "navCosigning": "Missionen",
     "navIntroductions": "Empfehlungen",
     "navPartnerCommissions": "Provisionen",
     "filterLabel": "Filter",

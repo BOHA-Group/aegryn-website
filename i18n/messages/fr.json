@@ -452,79 +452,6 @@
     "classifiedLabel": "CONFIDENTIEL",
     "classifiedDesc": "Protocole en développement confidentiel.\nAccès restreint aux partenaires accrédités."
   },
-  "growWithUs": {
-    "hero": {
-      "label": "Partenariats Stratégiques & Investissement",
-      "title": "Grandissons ensemble.",
-      "desc": "Aegryn invite des investisseurs visionnaires et des partenaires à rejoindre un mouvement de fond dans la technologie numérique. Vision long terme. Exécution disciplinée.",
-      "cta": "Nous contacter"
-    },
-    "investors": {
-      "label": "/ Investisseurs",
-      "sub": "Devenez un acteur clé",
-      "items": [
-        {
-          "num": "01",
-          "title": "Marché à forte croissance",
-          "desc": "Nous sommes positionnés dans un secteur d'écosystèmes numériques en pleine transformation, ouvrant d'importantes opportunités de revenus."
-        },
-        {
-          "num": "02",
-          "title": "Expertise éprouvée",
-          "desc": "Notre équipe est composée de développeurs, designers UX et stratèges marketing engagés à livrer des produits numériques de pointe."
-        },
-        {
-          "num": "03",
-          "title": "Technologie nouvelle génération",
-          "desc": "Nous intégrons l'IA, le machine learning et l'automatisation pour créer des solutions pérennes, conçues pour durer et scaler."
-        },
-        {
-          "num": "04",
-          "title": "Succès basé sur la donnée",
-          "desc": "Notre modèle économique robuste et nos stratégies financières garantissent rentabilité à long terme et innovation continue."
-        },
-        {
-          "num": "05",
-          "title": "Transparent & orienté investisseur",
-          "desc": "Nous fournissons des mises à jour claires et régulières sur l'avancement des projets, les jalons financiers et les tendances marché."
-        }
-      ]
-    },
-    "partners": {
-      "label": "/ Partenaires",
-      "sub": "Opportunités à fort impact",
-      "items": [
-        {
-          "title": "Développement d'applications",
-          "desc": "Élargissez le portefeuille de services de votre agence et débloquez de nouveaux flux de revenus significatifs."
-        },
-        {
-          "title": "Assurance embarquée",
-          "desc": "Proposez une couverture instantanée et transparente pour les achats, livraisons et transactions financières."
-        },
-        {
-          "title": "Solutions de paiement intégrées",
-          "desc": "Activez les paiements en temps réel, le financement flexible et les modèles de partage de revenus."
-        },
-        {
-          "title": "Initiatives de croissance co-brandées",
-          "desc": "Lancez des campagnes virales, des offres exclusives et des événements à durée limitée."
-        },
-        {
-          "title": "Campagnes marketing data-driven",
-          "desc": "Exploitez les données de la plateforme pour créer des campagnes marketing hautement ciblées et personnalisées."
-        },
-        {
-          "title": "Collaborations réseaux sociaux & influenceurs",
-          "desc": "Amplifiez le message de notre marque via des campagnes réseaux sociaux engageantes et des partenariats influenceurs stratégiques."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Prêt à construire l'avenir ensemble ?",
-      "button": "Nous contacter"
-    }
-  },
   "contact": {
     "faq": {
       "label": "/ Questions fréquentes",
@@ -1413,10 +1340,6 @@
       {
         "title": "Traçabilité",
         "desc": "Chaque grade est versionné. Toute révision génère une nouvelle version avec traçabilité complète de l'historique. Le grade original reste consultable."
-      },
-      {
-        "title": "Appel",
-        "desc": "Le porteur peut contester un grade dans les 30 jours. L'appel est instruit par un panel indépendant de trois analystes n'ayant pas participé à la certification initiale."
       },
       {
         "title": "Renforcement à venir",
@@ -2961,7 +2884,7 @@
     "navCatalog": "Catalogue",
     "navOffers": "Mes offres",
     "navCommissions": "Commissions dues",
-    "navCosigning": "Validations",
+    "navCosigning": "Missions",
     "navIntroductions": "Introductions",
     "navPartnerCommissions": "Commissions",
     "filterLabel": "Filtres",

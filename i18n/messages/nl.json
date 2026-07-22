@@ -456,79 +456,6 @@
     "classifiedLabel": "VERTROUWELIJK",
     "classifiedDesc": "Protocol in vertrouwelijke ontwikkeling.\nToegang beperkt tot geaccrediteerde partners."
   },
-  "growWithUs": {
-    "hero": {
-      "label": "Strategische Partnerschappen & Investeringen",
-      "title": "Groei met ons mee.",
-      "desc": "Aegryn nodigt visionaire investeerders en partners uit om deel uit te maken van een baanbrekende beweging in digitale technologie. Langetermijnvisie. Gedisciplineerde uitvoering.",
-      "cta": "Contact opnemen"
-    },
-    "investors": {
-      "label": "/ Investeerders",
-      "sub": "Word een sleutelspeler",
-      "items": [
-        {
-          "num": "01",
-          "title": "Sterk groeiende markt",
-          "desc": "We zijn gepositioneerd in de snel transformerende sector van digitale ecosystemen, met aanzienlijke omzetkansen."
-        },
-        {
-          "num": "02",
-          "title": "Bewezen expertise",
-          "desc": "Ons team bestaat uit topklasse ontwikkelaars, UX-designers en marketingstrategen die geavanceerde digitale producten leveren."
-        },
-        {
-          "num": "03",
-          "title": "Volgende generatie technologie",
-          "desc": "We integreren AI, machine learning en automatisering voor toekomstbestendige oplossingen, gebouwd voor duurzaamheid en schaalbaarheid."
-        },
-        {
-          "num": "04",
-          "title": "Datagedreven succes",
-          "desc": "Ons robuuste businessmodel en financiële strategieën garanderen langetermijnwinstgevendheid en aanhoudende innovatie."
-        },
-        {
-          "num": "05",
-          "title": "Transparant & investeerdergericht",
-          "desc": "We bieden duidelijke, consistente updates over projectvoortgang, financiële mijlpalen en marktontwikkelingen."
-        }
-      ]
-    },
-    "partners": {
-      "label": "/ Partners",
-      "sub": "Krachtige opportuniteiten",
-      "items": [
-        {
-          "title": "App-ontwikkeling",
-          "desc": "Vergroot het dienstenportfolio van uw bureau en ontsluit significante nieuwe inkomstenstromen."
-        },
-        {
-          "title": "Embedded verzekering",
-          "desc": "Bied directe, naadloze dekking voor aankopen, leveringen en financiële transacties."
-        },
-        {
-          "title": "Geïntegreerde betalingsoplossingen",
-          "desc": "Activeer realtime betalingen, flexibele financiering en omzetdelingsmodellen."
-        },
-        {
-          "title": "Co-branded groei-initiatieven",
-          "desc": "Lanceer virale campagnes, exclusieve aanbiedingen en tijdgebonden evenementen."
-        },
-        {
-          "title": "Datagedreven marketingcampagnes",
-          "desc": "Benut platformdata om zeer gerichte en gepersonaliseerde marketingcampagnes te creëren die conversies stimuleren."
-        },
-        {
-          "title": "Social media & influencer-samenwerkingen",
-          "desc": "Werk met ons samen om de boodschap van ons merk te versterken via boeiende social media-campagnes en strategische influencer-partnerships."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Klaar om samen de toekomst te bouwen?",
-      "button": "Contact opnemen"
-    }
-  },
   "contact": {
     "faq": {
       "label": "/ Veelgestelde vragen",
@@ -629,14 +556,38 @@
       "label": "Ingezette expertise",
       "desc": "Ten dienste van onze klanten, begeleid voor, tijdens en na de transactie, dekken onze experts alle domeinen die nodig zijn voor een activacertificering die voldoet aan de AEGRYN-normen.",
       "items": [
-        { "title": "Beveiligingsaudit & Cybersecurity", "desc": "Penetratietests, risicobeheer, applicatie- en cloudinfrastructuurbeveiliging." },
-        { "title": "Technische architectuur & Engineering", "desc": "CTO as a service, full-stack architectuur, schaalbaarheid van platforms." },
-        { "title": "Data & Kunstmatige Intelligentie", "desc": "AI-strategie, automatisering, datagovernance." },
-        { "title": "Digitaal recht & Intellectueel eigendom", "desc": "Compliance, IP-bescherming, juridische structurering van digitale activa." },
-        { "title": "Transactierecht & M&A", "desc": "Due diligence, dealstructurering, contractuele begeleiding voor, tijdens en na een transactie." },
-        { "title": "Blockchaincertificering & digitale notariëring", "desc": "Tijdstempeling, authenticiteitsbewijs, vertrouwelijk transactie-escrow." },
-        { "title": "Fiscaliteit & bedrijfsstructurering", "desc": "Zwitserse en Europese fiscale optimalisatie, holdingstructurering." },
-        { "title": "Design & gebruikerservaring", "desc": "UX/UI, productidentiteit, gebruikerstrajecten." }
+        {
+          "title": "Beveiligingsaudit & Cybersecurity",
+          "desc": "Penetratietests, risicobeheer, applicatie- en cloudinfrastructuurbeveiliging."
+        },
+        {
+          "title": "Technische architectuur & Engineering",
+          "desc": "CTO as a service, full-stack architectuur, schaalbaarheid van platforms."
+        },
+        {
+          "title": "Data & Kunstmatige Intelligentie",
+          "desc": "AI-strategie, automatisering, datagovernance."
+        },
+        {
+          "title": "Digitaal recht & Intellectueel eigendom",
+          "desc": "Compliance, IP-bescherming, juridische structurering van digitale activa."
+        },
+        {
+          "title": "Transactierecht & M&A",
+          "desc": "Due diligence, dealstructurering, contractuele begeleiding voor, tijdens en na een transactie."
+        },
+        {
+          "title": "Blockchaincertificering & digitale notariëring",
+          "desc": "Tijdstempeling, authenticiteitsbewijs, vertrouwelijk transactie-escrow."
+        },
+        {
+          "title": "Fiscaliteit & bedrijfsstructurering",
+          "desc": "Zwitserse en Europese fiscale optimalisatie, holdingstructurering."
+        },
+        {
+          "title": "Design & gebruikerservaring",
+          "desc": "UX/UI, productidentiteit, gebruikerstrajecten."
+        }
       ]
     },
     "domains": {
@@ -1034,10 +985,6 @@
       {
         "title": "Traceerbaarheid",
         "desc": "Elk grade is geversioneerd. Elke revisie genereert een nieuwe versie met volledige historietraceerbaarheid."
-      },
-      {
-        "title": "Beroep",
-        "desc": "De houder kan een grade binnen 30 dagen betwisten. Het beroep wordt behandeld door een onafhankelijk panel van drie analisten."
       },
       {
         "title": "Toekomstige versterking",
@@ -2986,7 +2933,7 @@
     "navCatalog": "Catalogus",
     "navOffers": "Mijn aanbiedingen",
     "navCommissions": "Verschuldigde commissies",
-    "navCosigning": "Validaties",
+    "navCosigning": "Opdrachten",
     "navIntroductions": "Introducties",
     "navPartnerCommissions": "Commissies",
     "filterLabel": "Filters",

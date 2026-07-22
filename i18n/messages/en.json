@@ -453,79 +453,6 @@
     "classifiedLabel": "CLASSIFIED",
     "classifiedDesc": "Protocol under confidential development.\nAccess restricted to accredited partners."
   },
-  "growWithUs": {
-    "hero": {
-      "label": "Strategic Partnerships & Investment",
-      "title": "Grow With Us.",
-      "desc": "Aegryn is inviting visionary investors and partners to be part of a groundbreaking movement in digital technology. Long-term vision. Disciplined execution.",
-      "cta": "Contact us"
-    },
-    "investors": {
-      "label": "/ Investors",
-      "sub": "Become a key player",
-      "items": [
-        {
-          "num": "01",
-          "title": "High-growth market",
-          "desc": "We are positioned in the rapidly transforming and expanding digital ecosystem sector, opening up significant revenue opportunities."
-        },
-        {
-          "num": "02",
-          "title": "Proven expertise",
-          "desc": "Our team consists of top-tier developers, UX designers, and marketing strategists committed to delivering cutting-edge digital products."
-        },
-        {
-          "num": "03",
-          "title": "Next-gen technology",
-          "desc": "We integrate AI, machine learning and automation to craft future-proof solutions built for endurance and scale."
-        },
-        {
-          "num": "04",
-          "title": "Data-driven success",
-          "desc": "Our robust business model and financial strategies ensure long-term profitability and sustained innovation."
-        },
-        {
-          "num": "05",
-          "title": "Transparent & investor-focused",
-          "desc": "We provide clear, consistent updates on project progress, financial milestones, and market trends."
-        }
-      ]
-    },
-    "partners": {
-      "label": "/ Partners",
-      "sub": "High-impact opportunities",
-      "items": [
-        {
-          "title": "App development",
-          "desc": "Expand your agency's service portfolio and unlock significant new revenue streams."
-        },
-        {
-          "title": "Embedded insurance",
-          "desc": "Propose instant, seamless coverage for purchases, deliveries, and financial transactions."
-        },
-        {
-          "title": "Integrated payment solutions",
-          "desc": "Power real-time payments, flexible financing, and revenue-sharing models."
-        },
-        {
-          "title": "Co-branded growth initiatives",
-          "desc": "Launch viral campaigns, exclusive offers and limited-time events."
-        },
-        {
-          "title": "Data-driven marketing campaigns",
-          "desc": "Leverage platform data insights to create highly targeted and personalized marketing campaigns that drive conversions."
-        },
-        {
-          "title": "Social media & influencer collaborations",
-          "desc": "Partner with us to amplify our brand's message through engaging social media campaigns and strategic influencer partnerships."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Ready to build the future together?",
-      "button": "Contact us"
-    }
-  },
   "contact": {
     "faq": {
       "label": "/ Frequently Asked Questions",
@@ -1414,10 +1341,6 @@
       {
         "title": "Traceability",
         "desc": "Each grade is versioned. Any revision generates a new version with full history traceability. The original grade remains viewable."
-      },
-      {
-        "title": "Appeal",
-        "desc": "The holder may contest a grade within 30 days. The appeal is heard by an independent panel of three analysts who did not participate in the original certification."
       },
       {
         "title": "Coming reinforcement",
@@ -2945,7 +2868,7 @@
     "navCatalog": "Catalogue",
     "navOffers": "My offers",
     "navCommissions": "Commissions due",
-    "navCosigning": "Validations",
+    "navCosigning": "Missions",
     "navIntroductions": "Introductions",
     "navPartnerCommissions": "Commissions",
     "filterLabel": "Filters",
