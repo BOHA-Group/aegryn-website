@@ -553,14 +553,38 @@
       "label": "Expertise mobilised",
       "desc": "Serving clients supported before, during and after the transaction, our experts cover every domain required for asset certification that meets AEGRYN standards.",
       "items": [
-        { "title": "Security Audit & Cybersecurity", "desc": "Penetration testing, risk management, application and cloud infrastructure security." },
-        { "title": "Technical Architecture & Engineering", "desc": "CTO as a service, full-stack architecture, platform scalability." },
-        { "title": "Data & Artificial Intelligence", "desc": "AI strategy, automation, data governance." },
-        { "title": "Digital Law & Intellectual Property", "desc": "Compliance, IP protection, legal structuring of digital assets." },
-        { "title": "Transaction Law & M&A", "desc": "Due diligence, deal structuring, contractual support before, during and after a transaction." },
-        { "title": "Blockchain Certification & Digital Notarization", "desc": "Timestamping, proof of authenticity, confidential transaction escrow." },
-        { "title": "Tax & Corporate Structuring", "desc": "Swiss and European tax optimisation, holding structuring." },
-        { "title": "Design & User Experience", "desc": "UX/UI, product identity, user journeys." }
+        {
+          "title": "Security Audit & Cybersecurity",
+          "desc": "Penetration testing, risk management, application and cloud infrastructure security."
+        },
+        {
+          "title": "Technical Architecture & Engineering",
+          "desc": "CTO as a service, full-stack architecture, platform scalability."
+        },
+        {
+          "title": "Data & Artificial Intelligence",
+          "desc": "AI strategy, automation, data governance."
+        },
+        {
+          "title": "Digital Law & Intellectual Property",
+          "desc": "Compliance, IP protection, legal structuring of digital assets."
+        },
+        {
+          "title": "Transaction Law & M&A",
+          "desc": "Due diligence, deal structuring, contractual support before, during and after a transaction."
+        },
+        {
+          "title": "Blockchain Certification & Digital Notarization",
+          "desc": "Timestamping, proof of authenticity, confidential transaction escrow."
+        },
+        {
+          "title": "Tax & Corporate Structuring",
+          "desc": "Swiss and European tax optimisation, holding structuring."
+        },
+        {
+          "title": "Design & User Experience",
+          "desc": "UX/UI, product identity, user journeys."
+        }
       ]
     },
     "domains": {
@@ -750,6 +774,11 @@
         "category": "Certification",
         "title": "What makes a tech asset truly certifiable?",
         "desc": "The objective criteria that distinguish a certifiable asset from one requiring a prior remediation plan."
+      },
+      {
+        "category": "Case study",
+        "title": "Grading a B2B SaaS: a methodological exercise on a public transaction",
+        "desc": "Illustrative application of the CIFS protocol to a published tech transaction — to understand how each C/I/F/S dimension influences the final grade. Educational exercise, non-contractual."
       }
     ]
   },
@@ -1193,7 +1222,13 @@
           "I1",
           "F1",
           "S1"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code level 1 — test coverage >90%, mature CI/CD, near-zero tech debt, documented scalable architecture.",
+          "I": "IP level 1 — trademarks registered in 3+ jurisdictions, software rights fully assigned, no litigation, clear moat.",
+          "F": "Finance level 1 — audited ARR >€2M, NRR >120%, churn <1%, margins >75%, YoY growth >40%.",
+          "S": "Security level 1 — pentest <6 months with no critical vulnerability, full MFA, end-to-end encryption, documented GDPR/LPD compliance."
+        }
       },
       {
         "grade": "AAA",
@@ -1208,7 +1243,13 @@
           "I1–I2",
           "F1–F2",
           "S1–S2"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code level 1–2 — solid tests (>70%), minor documented tech debt, functional CI/CD.",
+          "I": "IP level 1–2 — trademark registered, rights formalised, minor reservations possible on third-party licences.",
+          "F": "Finance level 1–2 — audited ARR >€500K, NRR >100%, growth >25% YoY, margins >60%.",
+          "S": "Security level 1–2 — pentest <12 months, MFA active, substantial GDPR compliance."
+        }
       },
       {
         "grade": "AA",
@@ -1223,7 +1264,13 @@
           "I2–I3",
           "F2–F3",
           "S2–S3"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code level 2–3 — partial tests, tech debt identified and quantified, some documented improvement areas.",
+          "I": "IP level 2–3 — trademark in progress or locally registered, rights partially formalised.",
+          "F": "Finance level 2–3 — ARR documented >12 months, NRR close to 100%, stable growth.",
+          "S": "Security level 2–3 — existing security audit but >12 months old, partial GDPR compliance."
+        }
       },
       {
         "grade": "A",
@@ -1238,7 +1285,13 @@
           "I3–I4",
           "F3–F4",
           "S3–S4"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code level 3–4 — significant tech debt, insufficient tests, documentation to build.",
+          "I": "IP level 3–4 — trademark not filed or recent, rights to formalise.",
+          "F": "Finance level 3–4 — early traction (<12 months), metrics partially documented.",
+          "S": "Security level 3–4 — no recent audit, compliance to build."
+        }
       },
       {
         "grade": "B",
@@ -1253,7 +1306,13 @@
           "I4",
           "F4",
           "S4"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code level 4 — undocumented architecture, uncontrolled tech debt.",
+          "I": "IP level 4 — no formalised protection.",
+          "F": "Finance level 4 — pre-revenue or minimal traction.",
+          "S": "Security level 4 — no compliance, no audit."
+        }
       }
     ],
     "subcodesTitle": "Sub-code nomenclature",

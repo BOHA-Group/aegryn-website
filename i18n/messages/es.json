@@ -837,7 +837,13 @@
           "I1",
           "F1",
           "S1"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Código nivel 1 — cobertura de pruebas >90%, CI/CD maduro, deuda técnica casi nula, arquitectura escalable documentada.",
+          "I": "IP nivel 1 — marcas registradas en 3+ jurisdicciones, derechos de software íntegramente cedidos, sin litigios, moat claro.",
+          "F": "Finanzas nivel 1 — ARR auditado >2M€, NRR >120%, churn <1%, márgenes >75%, crecimiento YoY >40%.",
+          "S": "Seguridad nivel 1 — pentest <6 meses sin vulnerabilidades críticas, MFA completo, cifrado extremo a extremo, cumplimiento RGPD/LPD documentado."
+        }
       },
       {
         "grade": "AAA",
@@ -852,7 +858,13 @@
           "I1–I2",
           "F1–F2",
           "S1–S2"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Código nivel 1–2 — pruebas sólidas (>70%), deuda técnica menor documentada, CI/CD funcional.",
+          "I": "IP nivel 1–2 — marca registrada, derechos formalizados, reservas menores posibles en licencias de terceros.",
+          "F": "Finanzas nivel 1–2 — ARR auditado >500K€, NRR >100%, crecimiento >25% YoY, márgenes >60%.",
+          "S": "Seguridad nivel 1–2 — pentest <12 meses, MFA activo, cumplimiento RGPD sustancial."
+        }
       },
       {
         "grade": "AA",
@@ -867,7 +879,13 @@
           "I2–I3",
           "F2–F3",
           "S2–S3"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Código nivel 2–3 — pruebas parciales, deuda técnica identificada y cuantificada, algunas áreas de mejora documentadas.",
+          "I": "IP nivel 2–3 — marca en proceso o registrada localmente, derechos parcialmente formalizados.",
+          "F": "Finanzas nivel 2–3 — ARR documentado >12 meses, NRR cercano al 100%, crecimiento estable.",
+          "S": "Seguridad nivel 2–3 — auditoría de seguridad existente pero >12 meses, cumplimiento RGPD parcial."
+        }
       },
       {
         "grade": "A",
@@ -882,7 +900,13 @@
           "I3–I4",
           "F3–F4",
           "S3–S4"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Código nivel 3–4 — deuda técnica significativa, pruebas insuficientes, documentación por construir.",
+          "I": "IP nivel 3–4 — marca no registrada o reciente, derechos por formalizar.",
+          "F": "Finanzas nivel 3–4 — tracción temprana (<12 meses), métricas parcialmente documentadas.",
+          "S": "Seguridad nivel 3–4 — sin auditoría reciente, cumplimiento por construir."
+        }
       },
       {
         "grade": "B",
@@ -897,7 +921,13 @@
           "I4",
           "F4",
           "S4"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Código nivel 4 — arquitectura no documentada, deuda técnica no controlada.",
+          "I": "IP nivel 4 — sin protección formalizada.",
+          "F": "Finanzas nivel 4 — pre-revenue o tracción mínima.",
+          "S": "Seguridad nivel 4 — sin cumplimiento, sin auditoría."
+        }
       }
     ],
     "subcodesTitle": "Nomenclatura de sub-códigos",
@@ -1702,6 +1732,11 @@
       {
         "title": "Cómo los adquirentes PE valoran un SaaS en 2026",
         "category": "Guía adquirente"
+      },
+      {
+        "category": "Caso de estudio",
+        "title": "Calificar un SaaS B2B: ejercicio metodológico sobre una transacción pública",
+        "desc": "Aplicación ilustrativa del protocolo CIFS a una transacción tech publicada — para entender cómo cada dimensión C/I/F/S influye en el grade final. Ejercicio pedagógico, no contractual."
       }
     ]
   },

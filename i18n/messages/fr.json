@@ -552,14 +552,38 @@
       "label": "Expertises mobilisées",
       "desc": "Au service de nos clients accompagnés avant, pendant et après la transaction, nos experts couvrent l'ensemble des domaines nécessaires à une certification d'actif conforme aux standards AEGRYN.",
       "items": [
-        { "title": "Audit de sécurité & Cybersécurité", "desc": "Pentest, gestion des risques, sécurité applicative et infrastructure cloud." },
-        { "title": "Architecture technique & Ingénierie", "desc": "CTO as a service, architecture full-stack, scalabilité des plateformes." },
-        { "title": "Data & Intelligence Artificielle", "desc": "Stratégie IA, automatisation, gouvernance des données." },
-        { "title": "Droit du numérique & Propriété intellectuelle", "desc": "Conformité, protection IP, structuration juridique des actifs digitaux." },
-        { "title": "Droit des transactions & M&A", "desc": "Due diligence, structuration de deals, accompagnement contractuel avant, pendant et après la transaction." },
-        { "title": "Certification blockchain & Notariat numérique", "desc": "Horodatage, preuve d'authenticité, séquestre confidentiel des transactions." },
-        { "title": "Fiscalité & Structuration corporate", "desc": "Optimisation fiscale suisse et européenne, structuration de holding." },
-        { "title": "Design & Expérience utilisateur", "desc": "UX/UI, identité produit, parcours utilisateurs." }
+        {
+          "title": "Audit de sécurité & Cybersécurité",
+          "desc": "Pentest, gestion des risques, sécurité applicative et infrastructure cloud."
+        },
+        {
+          "title": "Architecture technique & Ingénierie",
+          "desc": "CTO as a service, architecture full-stack, scalabilité des plateformes."
+        },
+        {
+          "title": "Data & Intelligence Artificielle",
+          "desc": "Stratégie IA, automatisation, gouvernance des données."
+        },
+        {
+          "title": "Droit du numérique & Propriété intellectuelle",
+          "desc": "Conformité, protection IP, structuration juridique des actifs digitaux."
+        },
+        {
+          "title": "Droit des transactions & M&A",
+          "desc": "Due diligence, structuration de deals, accompagnement contractuel avant, pendant et après la transaction."
+        },
+        {
+          "title": "Certification blockchain & Notariat numérique",
+          "desc": "Horodatage, preuve d'authenticité, séquestre confidentiel des transactions."
+        },
+        {
+          "title": "Fiscalité & Structuration corporate",
+          "desc": "Optimisation fiscale suisse et européenne, structuration de holding."
+        },
+        {
+          "title": "Design & Expérience utilisateur",
+          "desc": "UX/UI, identité produit, parcours utilisateurs."
+        }
       ]
     },
     "domains": {
@@ -749,6 +773,11 @@
         "category": "Certification",
         "title": "Qu'est-ce qu'un actif tech vraiment certifiable ?",
         "desc": "Les critères objectifs qui distinguent un actif certifiable d'un actif qui nécessite un plan de remédiation préalable."
+      },
+      {
+        "category": "Étude de cas",
+        "title": "Grader un SaaS B2B : exercice méthodologique sur une cession publique",
+        "desc": "Application illustrative du protocole CIFS sur une transaction tech publiée — pour comprendre comment chaque dimension C/I/F/S influence le grade final. Exercice pédagogique, non contractuel."
       }
     ]
   },
@@ -1192,7 +1221,13 @@
           "I1",
           "F1",
           "S1"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code niveau 1 — couverture tests >90%, CI/CD mature, dette technique quasi nulle, architecture scalable documentée.",
+          "I": "IP niveau 1 — marques déposées dans 3+ juridictions, droits logiciels intégralement cédés, aucun litige, moat clair.",
+          "F": "Finance niveau 1 — ARR audité >2M€, NRR >120%, churn <1%, marges >75%, croissance YoY >40%.",
+          "S": "Sécurité niveau 1 — pentest <6 mois sans vulnérabilité critique, MFA complet, chiffrement bout-en-bout, conformité RGPD/LPD documentée."
+        }
       },
       {
         "grade": "AAA",
@@ -1207,7 +1242,13 @@
           "I1–I2",
           "F1–F2",
           "S1–S2"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code niveau 1–2 — tests solides (>70%), dette technique mineure documentée, CI/CD fonctionnel.",
+          "I": "IP niveau 1–2 — marque déposée, droits formalisés, réserves mineures possibles sur licences tierces.",
+          "F": "Finance niveau 1–2 — ARR audité >500K€, NRR >100%, croissance >25% YoY, marges >60%.",
+          "S": "Sécurité niveau 1–2 — pentest <12 mois, MFA actif, conformité RGPD substantielle."
+        }
       },
       {
         "grade": "AA",
@@ -1222,7 +1263,13 @@
           "I2–I3",
           "F2–F3",
           "S2–S3"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code niveau 2–3 — tests partiels, dette technique identifiée et chiffrée, quelques axes d'amélioration documentés.",
+          "I": "IP niveau 2–3 — marque en cours ou déposée localement, droits partiellement formalisés.",
+          "F": "Finance niveau 2–3 — ARR documenté >12 mois, NRR proche de 100%, croissance stable.",
+          "S": "Sécurité niveau 2–3 — audit sécurité existant mais >12 mois, conformité RGPD partielle."
+        }
       },
       {
         "grade": "A",
@@ -1237,7 +1284,13 @@
           "I3–I4",
           "F3–F4",
           "S3–S4"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code niveau 3–4 — dette technique significative, tests insuffisants, documentation à construire.",
+          "I": "IP niveau 3–4 — marque non déposée ou récente, droits à formaliser.",
+          "F": "Finance niveau 3–4 — traction précoce (<12 mois), métriques partiellement documentées.",
+          "S": "Sécurité niveau 3–4 — pas d'audit récent, conformité à construire."
+        }
       },
       {
         "grade": "B",
@@ -1252,7 +1305,13 @@
           "I4",
           "F4",
           "S4"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code niveau 4 — architecture non documentée, dette technique non maîtrisée.",
+          "I": "IP niveau 4 — aucune protection formalisée.",
+          "F": "Finance niveau 4 — pre-revenue ou traction minimale.",
+          "S": "Sécurité niveau 4 — conformité inexistante, pas d'audit."
+        }
       }
     ],
     "subcodesTitle": "Nomenclature des sous-codes",

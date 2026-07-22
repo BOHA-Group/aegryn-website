@@ -837,7 +837,13 @@
           "I1",
           "F1",
           "S1"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code niveau 1 — testdekking >90%, volwassen CI/CD, vrijwel geen technische schuld, gedocumenteerde schaalbare architectuur.",
+          "I": "IP niveau 1 — merken geregistreerd in 3+ rechtsgebieden, softwarerechten volledig overgedragen, geen geschillen, duidelijke moat.",
+          "F": "Financiën niveau 1 — gecontroleerde ARR >2M€, NRR >120%, churn <1%, marges >75%, YoY-groei >40%.",
+          "S": "Beveiliging niveau 1 — pentest <6 maanden zonder kritieke kwetsbaarheden, volledige MFA, end-to-end encryptie, gedocumenteerde AVG/DSG-naleving."
+        }
       },
       {
         "grade": "AAA",
@@ -852,7 +858,13 @@
           "I1–I2",
           "F1–F2",
           "S1–S2"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code niveau 1–2 — solide tests (>70%), gedocumenteerde kleine technische schuld, functionele CI/CD.",
+          "I": "IP niveau 1–2 — merk geregistreerd, rechten geformaliseerd, mogelijke kleine voorbehouden bij licenties van derden.",
+          "F": "Financiën niveau 1–2 — gecontroleerde ARR >500K€, NRR >100%, groei >25% YoY, marges >60%.",
+          "S": "Beveiliging niveau 1–2 — pentest <12 maanden, MFA actief, substantiële AVG-naleving."
+        }
       },
       {
         "grade": "AA",
@@ -867,7 +879,13 @@
           "I2–I3",
           "F2–F3",
           "S2–S3"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code niveau 2–3 — gedeeltelijke tests, geïdentificeerde en gekwantificeerde technische schuld, enkele gedocumenteerde verbeterpunten.",
+          "I": "IP niveau 2–3 — merk in behandeling of lokaal geregistreerd, rechten gedeeltelijk geformaliseerd.",
+          "F": "Financiën niveau 2–3 — ARR >12 maanden gedocumenteerd, NRR dicht bij 100%, stabiele groei.",
+          "S": "Beveiliging niveau 2–3 — bestaande beveiligingsaudit maar >12 maanden oud, gedeeltelijke AVG-naleving."
+        }
       },
       {
         "grade": "A",
@@ -882,7 +900,13 @@
           "I3–I4",
           "F3–F4",
           "S3–S4"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code niveau 3–4 — aanzienlijke technische schuld, onvoldoende tests, documentatie op te bouwen.",
+          "I": "IP niveau 3–4 — merk niet geregistreerd of recent, rechten te formaliseren.",
+          "F": "Financiën niveau 3–4 — vroege tractie (<12 maanden), statistieken gedeeltelijk gedocumenteerd.",
+          "S": "Beveiliging niveau 3–4 — geen recent audit, naleving op te bouwen."
+        }
       },
       {
         "grade": "B",
@@ -897,7 +921,13 @@
           "I4",
           "F4",
           "S4"
-        ]
+        ],
+        "dimensionRationale": {
+          "C": "Code niveau 4 — niet-gedocumenteerde architectuur, ongecontroleerde technische schuld.",
+          "I": "IP niveau 4 — geen geformaliseerde bescherming.",
+          "F": "Financiën niveau 4 — pre-revenue of minimale tractie.",
+          "S": "Beveiliging niveau 4 — geen naleving, geen audit."
+        }
       }
     ],
     "subcodesTitle": "Subcode-nomenclatuur",
@@ -1702,6 +1732,11 @@
       {
         "title": "Hoe PE-acquirers een SaaS beoordelen in 2026",
         "category": "Gids koper"
+      },
+      {
+        "category": "Casestudy",
+        "title": "Een B2B SaaS beoordelen: een methodologische oefening op een publieke transactie",
+        "desc": "Illustratieve toepassing van het CIFS-protocol op een gepubliceerde tech-transactie — om te begrijpen hoe elke C/I/F/S-dimensie het eindcijfer beïnvloedt. Pedagogische oefening, niet bindend."
       }
     ]
   },
