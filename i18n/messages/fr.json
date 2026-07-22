@@ -21,7 +21,6 @@
     "auctionBuy": "Devenir acquéreur",
     "auctionBidModels": "Modèles de bid",
     "auctionSession": "Prochaine session",
-    "auctionAssessment": "Assessment Days",
     "auctionResults": "Résultats",
     "gradeSystem": "Système de grade",
     "gradeMethod": "Méthodologie",
@@ -1495,6 +1494,15 @@
           "label": "Confidentialité systématique"
         }
       ],
+      "segmentLabel": "NOTRE SEGMENT",
+      "segmentTitle": "100K€ — 2,5M€.\nLà où les actifs tech ont une valeur réelle mais restent invisibles.",
+      "segmentDesc": "Trop grands pour une revente informelle. Trop petits pour les banques d'affaires. AEGRYN structure les transactions que personne d'autre ne certifie — avec la rigueur institutionnelle que ce segment mérite.",
+      "segmentItems": [
+        "Actifs entre 100 000€ et 2 500 000€ de valorisation",
+        "SaaS B2B, marketplaces, IP numérique, protocoles IA",
+        "Vendeurs : fondateurs, studios, holdings opérationnelles",
+        "Acquéreurs : entrepreneurs, corporates, family offices"
+      ],
       "howLabel": "Comment ça fonctionne",
       "steps": [
         {
@@ -1602,7 +1610,7 @@
     "sell": {
       "label": "Vendre via AEGRYN",
       "title": "Votre actif mérite\nmieux qu'un broker.",
-      "desc": "Un processus transparent, un grade objectif, des acquéreurs pré-qualifiés. Notre rémunération est alignée sur votre succès — conditions en CGV.",
+      "desc": "Un processus transparent, un grade objectif, des acquéreurs pré-qualifiés. Notre rémunération est alignée sur votre succès — conditions en CGV. Un conseiller AEGRYN vous répond directement par email sous 24h.",
       "step1Title": "Soumettez",
       "step1Desc": "Remplissez le formulaire de soumission. Informations de base sur l'actif, métriques clés, documentation disponible.",
       "step2Title": "Certification",
@@ -1624,7 +1632,7 @@
       "title": "Des actifs vérifiés.\nDes transactions sécurisées.",
       "desc": "Chaque actif que vous voyez dans notre catalogue est certifié, gradé et documenté. Vous négociez avec un vendeur qui a accepté notre protocole. Vous achetez avec escrow.",
       "qualifTitle": "Profil acquéreur",
-      "qualifDesc": "Les sessions AEGRYN sont réservées aux acquéreurs sérieux : fonds PE/VC, family offices, entrepreneurs acquéreurs, holdings. Complétez le dossier de qualification.",
+      "qualifDesc": "Les sessions AEGRYN sont réservées aux acquéreurs sérieux : fonds PE/VC, family offices, entrepreneurs acquéreurs, holdings. Complétez le dossier de qualification. Un conseiller AEGRYN vous répond directement par email sous 24h.",
       "qualifItems": [
         "Capacité financière documentée",
         "Lettre d'intention ou historique d'acquisitions",
@@ -1903,8 +1911,8 @@
     },
     "hero": {
       "label": "AEGRYN AUCTION — MODÈLES DE BID",
-      "title": "Trois façons d'acquérir\nun actif certifié.",
-      "desc": "AEGRYN structure trois modèles de bid adaptés à chaque profil d'acquéreur — du particulier avec co-investisseurs au fonds institutionnel. Chaque modèle inclut un mécanisme de séquestre et une Promesse de Transaction certifiée."
+      "title": "Une transaction.\nPlusieurs façons de la structurer.",
+      "desc": "Vous exprimez votre intérêt. Votre conseiller AEGRYN structure ensuite l'acquisition selon votre profil réel — seul, à plusieurs, via une société, ou en tant que fonds. La structure s'adapte à vous, pas l'inverse. Un conseiller AEGRYN vous répond directement par email sous 24h."
     },
     "model1": {
       "label": "MODÈLE 01",
@@ -1912,13 +1920,13 @@
       "badge": "HNWI · Entrepreneurs",
       "desc": "Un acquéreur principal (lead bidder) peut associer jusqu'à 4 co-investisseurs déclarés. Une seule offre, un seul séquestre versé par le lead. La répartition interne reste confidentielle pour AEGRYN.",
       "features": [
-        "Ticket minimum : 500 000€",
+        "Ticket minimum : 100 000€",
         "Jusqu'à 4 co-investisseurs déclarés",
         "Séquestre versé par le lead bidder",
         "Répartition interne libre jusqu'au signing",
         "KYC lead complet + KYC co-inv. simplifié"
       ],
-      "cta": "Candidater — Club Deal"
+      "cta": ""
     },
     "model2": {
       "label": "MODÈLE 02",
@@ -1926,13 +1934,13 @@
       "badge": "PME · Holdings · Corporates",
       "desc": "Une entité légale acquiert l'actif directement dans son bilan. Possibilité de co-bid entre deux entités en JV déclarée. Asset deal ou share deal selon la structure retenue.",
       "features": [
-        "Ticket minimum : 500 000€",
+        "Ticket minimum : 100 000€",
         "Acquisition directe au bilan",
         "Asset deal ou share deal disponible",
         "JV possible (deux entités co-acquéreuses)",
         "KYC complet B2B (Kbis, statuts, UBO)"
       ],
-      "cta": "Candidater — Corporate"
+      "cta": ""
     },
     "model3": {
       "label": "MODÈLE 03",
@@ -1940,14 +1948,16 @@
       "badge": "PE · VC · Family Office · Search Fund",
       "desc": "Les fonds institutionnels bénéficient d'un délai IC (Investment Committee) de 5 à 10 jours avant de soumettre une offre ferme. SPV possible pour co-investissement direct des LP.",
       "features": [
-        "Ticket minimum : 500 000€ (pas de plafond)",
+        "Ticket minimum : 100 000€ (pas de plafond)",
         "Délai IC de 5–10 jours ouvrés accordé",
         "SPV disponible pour co-investissement LP",
         "Management presentation organisée par AEGRYN",
         "KYC institutionnel (agrément, prospectus, GP + LP signifiants)"
       ],
-      "cta": "Candidater — Fonds"
+      "cta": ""
     },
+    "ctaMain": "Exprimer un intérêt sur un actif →",
+    "ctaDesc": "Votre conseiller AEGRYN vous contacte par email sous 24h pour structurer votre acquisition.",
     "escrow": {
       "label": "MÉCANISME COMMUN",
       "title": "La Promesse de Transaction\navec séquestre institutionnel.",
@@ -2398,8 +2408,12 @@
       "sectionFinancial": "Données financières",
       "arr": "ARR / MRR annualisé (€ ou CHF)",
       "arrPlaceholder": "ex. 150000",
-      "askPrice": "Prix de cession souhaité (€ ou CHF)",
-      "askPricePlaceholder": "ex. 1200000",
+      "askPrice": "Prix de cession souhaité",
+      "askPriceCurrency": "Devise",
+      "askPriceCurrencyEur": "EUR (€)",
+      "askPriceCurrencyChf": "CHF (Fr.)",
+      "askPriceCurrencyUsd": "USD ($)",
+      "askPricePlaceholder": "ex. 1 200 000",
       "ipFiled": "Propriété intellectuelle déposée",
       "ipYes": "Oui",
       "ipNo": "Non",
@@ -2420,13 +2434,15 @@
         "standard": "Standard — 3 à 6 mois",
         "long": "Long terme — plus de 6 mois"
       },
-      "targetSession": "Session souhaitée",
-      "targetSessionPlaceholder": "Sélectionner",
+      "targetSession": "Période de cession souhaitée",
+      "targetSessionPlaceholder": "Sélectionner une période",
+      "targetSessionHelper": "Votre sélection détermine le quarter et l'année d'éligibilité pour le prochain catalogue de vente.",
       "targetSessionOptions": {
-        "q3_2026": "Q3 2026",
-        "q4_2026": "Q4 2026",
-        "q1_2027": "T1 2027",
-        "flexible": "Flexible"
+        "q3_2026": "Q3 2026 (juil. — sept. 2026)",
+        "q4_2026": "Q4 2026 (oct. — déc. 2026)",
+        "q1_2027": "T1 2027 (janv. — mars 2027)",
+        "q2_2027": "T2 2027 (avr. — juin 2027)",
+        "flexible": "Flexible — selon disponibilité catalogue"
       },
       "sectionContact": "Vos coordonnées",
       "fullName": "Nom complet",
@@ -2717,7 +2733,7 @@
           "sellers"
         ],
         "q": "Quels types d'actifs puis-je soumettre ?",
-        "a": "AEGRYN certifie et transige des actifs tech numériques : SaaS B2B, applications mobiles, marketplaces, protocoles IA, propriété intellectuelle numérique. Ticket minimum : 500 000 € de valorisation estimée."
+        "a": "AEGRYN certifie et transige des actifs tech numériques : SaaS B2B, applications mobiles, marketplaces, protocoles IA, propriété intellectuelle numérique. Ticket minimum : 100 000 € de valorisation estimée."
       },
       {
         "id": "seller-identity",
@@ -2749,7 +2765,7 @@
           "buyers"
         ],
         "q": "Quel est le ticket minimum d'acquisition ?",
-        "a": "500 000 €."
+        "a": "100 000 €."
       },
       {
         "id": "bid-models",
@@ -3037,6 +3053,6 @@
     "upcomingTitle": "Espaces en construction",
     "sectionSeller": "Espace vendeur",
     "sectionPartner": "Espace partenaire",
-    "disclaimer": "AEGRYN Auction · Genève · Suisse — Accès strictement confidentiel"
+    "disclaimer": "AEGRYN Auction · Suisse — Accès strictement confidentiel"
   }
 }
