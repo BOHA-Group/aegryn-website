@@ -490,16 +490,15 @@
       "subject": "Sujet",
       "subjectPlaceholder": "Choisir un sujet",
       "subjects": {
+        "general": "Demande générale",
         "advisory": "Advisory & Cybersécurité",
         "grade": "Certification d'actif (Grade)",
         "auction": "Session Auction",
         "partnership": "Partenariat",
-        "press": "Presse & Médias",
-        "other": "Autre",
-        "general": "Demande générale",
         "investor": "Investisseur",
-        "media": "Presse & Médias",
-        "career": "Carrière"
+        "press": "Presse & Médias",
+        "career": "Carrière",
+        "other": "Autre"
       },
       "message": "Message",
       "messagePlaceholder": "Décrivez votre demande...",

@@ -148,7 +148,7 @@ export const aegrynOrganizationSchema = {
     availableLanguage:  ['French', 'English', 'German', 'Italian', 'Spanish', 'Dutch'],
   },
   sameAs: [
-    'https://www.linkedin.com/company/aegryn/',
+    'https://www.linkedin.com/company/106273747/',
     'https://www.instagram.com/aegryn/',
     'https://www.tiktok.com/@aegryn',
     'https://www.youtube.com/@aegryn',

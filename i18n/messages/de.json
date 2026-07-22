@@ -494,16 +494,15 @@
       "subject": "Betreff",
       "subjectPlaceholder": "Betreff wählen",
       "subjects": {
-        "advisory": "Advisory & Cybersicherheit",
-        "grade": "Asset-Zertifizierung (Grade)",
-        "auction": "Auktions-Session",
-        "partnership": "Partnerschaft",
-        "press": "Presse & Medien",
-        "other": "Sonstiges",
         "general": "Allgemeine Anfrage",
+        "advisory": "Advisory & Cybersicherheit",
+        "grade": "Vermögenszertifizierung (Grade)",
+        "auction": "Auktionssitzung",
+        "partnership": "Partnerschaft",
         "investor": "Investor",
-        "media": "Presse & Medien",
-        "career": "Karriere"
+        "press": "Presse & Medien",
+        "career": "Karriere",
+        "other": "Sonstiges"
       },
       "message": "Nachricht",
       "messagePlaceholder": "Beschreiben Sie Ihr Anliegen...",

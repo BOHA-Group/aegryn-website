@@ -494,16 +494,15 @@
       "subject": "Asunto",
       "subjectPlaceholder": "Elegir un asunto",
       "subjects": {
+        "general": "Consulta general",
         "advisory": "Advisory & Ciberseguridad",
         "grade": "Certificación de activo (Grade)",
         "auction": "Sesión de subasta",
         "partnership": "Asociación",
-        "press": "Prensa & Medios",
-        "other": "Otro",
-        "general": "Consulta general",
         "investor": "Inversor",
-        "media": "Prensa & Medios",
-        "career": "Carrera"
+        "press": "Prensa & Medios",
+        "career": "Carrera",
+        "other": "Otro"
       },
       "message": "Mensaje",
       "messagePlaceholder": "Describe tu solicitud...",

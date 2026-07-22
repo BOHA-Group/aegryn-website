@@ -491,16 +491,15 @@
       "subject": "Subject",
       "subjectPlaceholder": "Choose a subject",
       "subjects": {
+        "general": "General inquiry",
         "advisory": "Advisory & Cybersecurity",
-        "grade": "Asset Certification (Grade)",
-        "auction": "Auction Session",
+        "grade": "Asset certification (Grade)",
+        "auction": "Auction session",
         "partnership": "Partnership",
-        "press": "Press & Media",
-        "other": "Other",
-        "general": "General enquiry",
         "investor": "Investor",
-        "media": "Press & Media",
-        "career": "Career"
+        "press": "Press & Media",
+        "career": "Career",
+        "other": "Other"
       },
       "message": "Message",
       "messagePlaceholder": "Describe your request...",

@@ -5,7 +5,7 @@ const schema = z.object({
   name: z.string().min(2).max(100),
   email: z.string().email(),
   company: z.string().max(100).optional(),
-  subject: z.enum(['advisory', 'partnership', 'press', 'other']),
+  subject: z.enum(['general', 'advisory', 'grade', 'auction', 'partnership', 'press', 'media', 'investor', 'career', 'other']),
   message: z.string().min(10).max(5000),
   locale: z.string().optional(),
 })

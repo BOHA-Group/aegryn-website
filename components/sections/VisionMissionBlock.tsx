@@ -38,18 +38,18 @@ export function VisionMissionBlock({
         scrollTrigger: {
           trigger:       wrap,
           start:         'top top',
-          end:           '+=220%',
+          end:           '+=160%',
           pin:           true,
-          scrub:         1.4,
+          scrub:         0.8,
           anticipatePin: 1,
         },
       })
 
-      /* (80–100%) : Mission slide depuis le bas */
+      /* (75–100%) : Mission slide depuis le bas */
       tl.fromTo(mission,
         { yPercent: 100 },
-        { yPercent: 0, ease: 'expo.inOut', duration: 0.22 },
-        0.80,
+        { yPercent: 0, ease: 'expo.inOut', duration: 0.25 },
+        0.75,
       )
     })
 

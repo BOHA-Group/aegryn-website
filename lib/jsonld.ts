@@ -16,7 +16,7 @@ export function organizationJsonLd() {
       addressLocality:  'Zurich',
     },
     sameAs: [
-      'https://www.linkedin.com/company/aegryn',
+      'https://www.linkedin.com/company/106273747/',
     ],
     contactPoint: {
       '@type':            'ContactPoint',

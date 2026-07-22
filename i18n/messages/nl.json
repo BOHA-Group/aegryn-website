@@ -494,16 +494,15 @@
       "subject": "Onderwerp",
       "subjectPlaceholder": "Kies een onderwerp",
       "subjects": {
+        "general": "Algemene vraag",
         "advisory": "Advisory & Cyberbeveiliging",
-        "grade": "Asset-certificering (Grade)",
+        "grade": "Activumcertificering (Grade)",
         "auction": "Veilingsessie",
         "partnership": "Partnerschap",
-        "press": "Pers & Media",
-        "other": "Anders",
-        "general": "Algemene vraag",
         "investor": "Investeerder",
-        "media": "Pers & Media",
-        "career": "Carrière"
+        "press": "Pers & Media",
+        "career": "Carrière",
+        "other": "Overige"
       },
       "message": "Bericht",
       "messagePlaceholder": "Beschrijf uw vraag...",

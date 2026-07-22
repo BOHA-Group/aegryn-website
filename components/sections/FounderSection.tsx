@@ -35,9 +35,9 @@ export function FounderSection({ videoSrc }: { videoSrc?: string } = {}) {
         scrollTrigger: {
           trigger:       section,
           start:         'top top',
-          end:           '+=180%',
+          end:           '+=130%',
           pin:           true,
-          scrub:         1.4,
+          scrub:         0.9,
           anticipatePin: 1,
         },
       })

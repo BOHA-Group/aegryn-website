@@ -63,12 +63,12 @@ export default async function ContactPage({ params }: Props) {
                 LinkedIn
               </p>
               <a
-                href="https://www.linkedin.com/company/aegryn"
+                href="https://www.linkedin.com/company/106273747/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-ag-gray hover:text-ag-black transition-colors"
               >
-                /company/aegryn ↗
+                AEGRYN — LinkedIn ↗
               </a>
             </div>
             <div>

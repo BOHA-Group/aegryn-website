@@ -494,16 +494,15 @@
       "subject": "Oggetto",
       "subjectPlaceholder": "Scegli un oggetto",
       "subjects": {
+        "general": "Richiesta generale",
         "advisory": "Advisory & Cybersicurezza",
         "grade": "Certificazione asset (Grade)",
         "auction": "Sessione d'asta",
         "partnership": "Partnership",
-        "press": "Stampa & Media",
-        "other": "Altro",
-        "general": "Richiesta generale",
         "investor": "Investitore",
-        "media": "Stampa & Media",
-        "career": "Carriera"
+        "press": "Stampa & Media",
+        "career": "Carriera",
+        "other": "Altro"
       },
       "message": "Messaggio",
       "messagePlaceholder": "Descrivi la tua richiesta...",
