@@ -1217,10 +1217,10 @@
         "profile": "Actif d'exception. Architecture de référence, IP forte, métriques financières top décile, conformité parfaite. Éligible aux transactions institutionnelles.",
         "typical": "SaaS B2B ARR > 2M€, churn < 1%, couverture tests > 90%, marques déposées dans 3+ juridictions.",
         "subcodes": [
-          "C1",
-          "I1",
-          "F1",
-          "S1"
+          "C-01",
+          "I-01",
+          "F-01",
+          "S-01"
         ],
         "dimensionRationale": {
           "C": "Code niveau 1 — couverture tests >90%, CI/CD mature, dette technique quasi nulle, architecture scalable documentée.",
@@ -1238,10 +1238,10 @@
         "profile": "Actif de haute qualité avec des fondamentaux solides dans l'ensemble des quatre dimensions. Quelques axes d'amélioration documentés mais non bloquants.",
         "typical": "SaaS ARR > 500K€, croissance > 30% YoY, dette technique maîtrisée, conformité RGPD complète.",
         "subcodes": [
-          "C1–C2",
-          "I1–I2",
-          "F1–F2",
-          "S1–S2"
+          "C-01 — C-02",
+          "I-01 — I-02",
+          "F-01 — F-02",
+          "S-01 — S-02"
         ],
         "dimensionRationale": {
           "C": "Code niveau 1–2 — tests solides (>70%), dette technique mineure documentée, CI/CD fonctionnel.",
@@ -1259,10 +1259,10 @@
         "profile": "Actif de qualité correcte avec des points forts identifiés et des axes d'amélioration clairement documentés. Éligible aux sessions auction standard.",
         "typical": "SaaS en croissance, quelques lacunes en tests ou conformité, IP en cours de consolidation.",
         "subcodes": [
-          "C2–C3",
-          "I2–I3",
-          "F2–F3",
-          "S2–S3"
+          "C-02 — C-03",
+          "I-02 — I-03",
+          "F-02 — F-03",
+          "S-02 — S-03"
         ],
         "dimensionRationale": {
           "C": "Code niveau 2–3 — tests partiels, dette technique identifiée et chiffrée, quelques axes d'amélioration documentés.",
@@ -1280,10 +1280,10 @@
         "profile": "Actif en développement avec un potentiel identifiable mais des faiblesses structurelles à adresser. Éligible à l'AEGRYN Review avec plan de remédiation.",
         "typical": "Produit en early traction, dette technique significative, métriques financières partiellement documentées.",
         "subcodes": [
-          "C3–C4",
-          "I3–I4",
-          "F3–F4",
-          "S3–S4"
+          "C-03 — C-04",
+          "I-03 — I-04",
+          "F-03 — F-04",
+          "S-03 — S-04"
         ],
         "dimensionRationale": {
           "C": "Code niveau 3–4 — dette technique significative, tests insuffisants, documentation à construire.",
@@ -1301,10 +1301,10 @@
         "profile": "Actif early stage avec fondamentaux partiels. Certification accompagnée d'un rapport de remédiation détaillé. Non éligible à l'auction sans amélioration.",
         "typical": "MVP ou produit pré-revenue, architecture non documentée, conformité à construire.",
         "subcodes": [
-          "C4",
-          "I4",
-          "F4",
-          "S4"
+          "C-04",
+          "I-04",
+          "F-04",
+          "S-04"
         ],
         "dimensionRationale": {
           "C": "Code niveau 4 — architecture non documentée, dette technique non maîtrisée.",
@@ -1442,6 +1442,448 @@
       {
         "tier": "Pre-revenue avec IP exceptionnelle",
         "rule": "Valorisation sur actifs tangibles uniquement. Dimension F note spéciale \"Pre-revenue\" sans note numérique. AEG maximum : A."
+      }
+    ],
+    "fullCodesTitle": "Table complète des sous-codes CIFS",
+    "fullCodesDesc": "Chaque sous-code identifie un critère précis évalué lors de la certification. Les codes marqués ⛔ sont des conditions de refus automatique.",
+    "fullCodesTable": [
+      {
+        "dim": "C",
+        "code": "C-11",
+        "label": "Architecture",
+        "desc": "Découplage des composants, séparation des responsabilités, patterns documentés."
+      },
+      {
+        "dim": "C",
+        "code": "C-12",
+        "label": "Scalabilité",
+        "desc": "Capacité à absorber ×10 la charge sans refonte majeure."
+      },
+      {
+        "dim": "C",
+        "code": "C-13",
+        "label": "Documentation technique",
+        "desc": "README, ADR, diagrammes d'architecture à jour."
+      },
+      {
+        "dim": "C",
+        "code": "C-14",
+        "label": "Couverture de tests",
+        "desc": "Tests unitaires + intégration + E2E. Seuil : ≥70% pour niveau 2."
+      },
+      {
+        "dim": "C",
+        "code": "C-15",
+        "label": "CI/CD",
+        "desc": "Pipeline automatisé de build, test et déploiement opérationnel."
+      },
+      {
+        "dim": "C",
+        "code": "C-16",
+        "label": "Qualité du code",
+        "desc": "Linting, formatage, revues de code documentées."
+      },
+      {
+        "dim": "C",
+        "code": "C-17",
+        "label": "Dette technique",
+        "desc": "Identification, chiffrage et plan de remédiation de la dette existante."
+      },
+      {
+        "dim": "C",
+        "code": "C-18",
+        "label": "Dépendances tierces",
+        "desc": "Inventaire des packages, licences compatibles, pas de dépendances abandonnées."
+      },
+      {
+        "dim": "C",
+        "code": "C-19",
+        "label": "Gestion des secrets",
+        "desc": "Variables d'environnement, vault, rotation des clés documentée."
+      },
+      {
+        "dim": "C",
+        "code": "C-21",
+        "label": "Monitoring & observabilité",
+        "desc": "Logs structurés, alertes, dashboards opérationnels."
+      },
+      {
+        "dim": "C",
+        "code": "C-22",
+        "label": "Résilience & recovery",
+        "desc": "Stratégie de backup, RTO/RPO documentés, tests de restauration effectués."
+      },
+      {
+        "dim": "C",
+        "code": "C-23",
+        "label": "Séparation environnements",
+        "desc": "Dev / staging / prod isolés, pas de données réelles en dev."
+      },
+      {
+        "dim": "C",
+        "code": "C-31",
+        "label": "Maintenabilité",
+        "desc": "Facilité d'onboarding d'un nouveau développeur — temps estimé documenté."
+      },
+      {
+        "dim": "C",
+        "code": "C-32",
+        "label": "Versioning & historique",
+        "desc": "Git propre, conventions de commit, changelogs maintenus."
+      },
+      {
+        "dim": "C",
+        "code": "C-33",
+        "label": "Performance",
+        "desc": "Benchmarks de temps de réponse documentés, pas de régression non adressée."
+      },
+      {
+        "dim": "C",
+        "code": "C-34",
+        "label": "CVE critiques",
+        "desc": "Absence de CVE critique non résolue dans les dépendances directes. Bloquant si présent."
+      },
+      {
+        "dim": "C",
+        "code": "C-35",
+        "label": "Accessibilité codebase",
+        "desc": "Accès fourni aux analystes avec périmètre défini et NDA signé."
+      },
+      {
+        "dim": "C",
+        "code": "C-40",
+        "label": "Secrets exposés",
+        "desc": "Absence de secrets (API keys, tokens) exposés dans l'historique Git ou le code. Bloquant si présent."
+      },
+      {
+        "dim": "C",
+        "code": "C-41",
+        "label": "Ownership du code",
+        "desc": "Tout le code appartient à l'entité vendeuse — pas de contribution externe non cédée."
+      },
+      {
+        "dim": "I",
+        "code": "I-11",
+        "label": "Marques déposées",
+        "desc": "Dépôt national ou international (OMPI, EUIPO) validé, aucune opposition en cours."
+      },
+      {
+        "dim": "I",
+        "code": "I-12",
+        "label": "Droits logiciels",
+        "desc": "Cession formelle des droits patrimoniaux à l'entité vendeuse, tous contributeurs inclus."
+      },
+      {
+        "dim": "I",
+        "code": "I-13",
+        "label": "Brevets",
+        "desc": "Brevets déposés ou en cours — valeur et périmètre documentés."
+      },
+      {
+        "dim": "I",
+        "code": "I-14",
+        "label": "Moat technologique",
+        "desc": "Barrière à l'entrée technique identifiable et documentée (algo propriétaire, data exclusive, réseau)."
+      },
+      {
+        "dim": "I",
+        "code": "I-15",
+        "label": "Exclusivités contractuelles",
+        "desc": "Clauses d'exclusivité clients ou fournisseurs en vigueur."
+      },
+      {
+        "dim": "I",
+        "code": "I-16",
+        "label": "Données propriétaires",
+        "desc": "Dataset ou base de données créée par l'actif, non réplicable facilement par un concurrent."
+      },
+      {
+        "dim": "I",
+        "code": "I-17",
+        "label": "Licences tierces",
+        "desc": "Inventaire complet des licences tierces, compatibilité avec cession vérifiée."
+      },
+      {
+        "dim": "I",
+        "code": "I-18",
+        "label": "Contentieux de marque",
+        "desc": "Absence de litige IP actif ou en cours. Bloquant si contentieux actif."
+      },
+      {
+        "dim": "I",
+        "code": "I-19",
+        "label": "Non-concurrence",
+        "desc": "Clauses de non-concurrence avec employés clés et prestataires documentées."
+      },
+      {
+        "dim": "I",
+        "code": "I-21",
+        "label": "Droits tiers sur codebase",
+        "desc": "Absence de droits non cédés de contributeurs externes sur le code produit. Bloquant si non formalisé."
+      },
+      {
+        "dim": "I",
+        "code": "I-22",
+        "label": "Noms de domaine",
+        "desc": "Domaines stratégiques détenus par l'entité vendeuse, renouvellements à jour."
+      },
+      {
+        "dim": "I",
+        "code": "I-23",
+        "label": "Réseaux sociaux & handles",
+        "desc": "Comptes officiels détenus par l'entité, pas de squatting tiers."
+      },
+      {
+        "dim": "I",
+        "code": "I-31",
+        "label": "Positionnement marché",
+        "desc": "Différenciation claire et défendable vis-à-vis des 3 concurrents directs identifiés."
+      },
+      {
+        "dim": "I",
+        "code": "I-32",
+        "label": "Réputation & avis",
+        "desc": "Avis publics, NPS ou retours clients documentés — absence de bad buzz structurel."
+      },
+      {
+        "dim": "I",
+        "code": "I-39",
+        "label": "Chaîne de titre",
+        "desc": "Historique de propriété clair depuis la création — pas de gap dans la chaîne de titre."
+      },
+      {
+        "dim": "F",
+        "code": "F-11",
+        "label": "ARR documenté",
+        "desc": "ARR audité sur pièces (contrats, factures, relevés) sur 12 mois minimum."
+      },
+      {
+        "dim": "F",
+        "code": "F-12",
+        "label": "MRR et saisonnalité",
+        "desc": "MRR mensuel sur 24 mois, identification des pics saisonniers."
+      },
+      {
+        "dim": "F",
+        "code": "F-13",
+        "label": "Churn",
+        "desc": "Churn mensuel calculé sur pièces. Seuil niveau 2 : <3% mensuel."
+      },
+      {
+        "dim": "F",
+        "code": "F-14",
+        "label": "NRR — Net Revenue Retention",
+        "desc": "Expansion revenue incluse. Seuil niveau 1 : >120%. Niveau 2 : >100%."
+      },
+      {
+        "dim": "F",
+        "code": "F-15",
+        "label": "LTV / CAC",
+        "desc": "Ratio LTV:CAC documenté et calculé sur une cohorte représentative."
+      },
+      {
+        "dim": "F",
+        "code": "F-16",
+        "label": "Marges brutes",
+        "desc": "Marge brute sur 12 mois. Seuil niveau 1 : >75% (SaaS)."
+      },
+      {
+        "dim": "F",
+        "code": "F-17",
+        "label": "Runway",
+        "desc": "Trésorerie disponible et date estimée d'épuisement de cash si applicable."
+      },
+      {
+        "dim": "F",
+        "code": "F-18",
+        "label": "Burn rate",
+        "desc": "Burn mensuel moyen sur 6 mois, distinction OPEX / CAPEX."
+      },
+      {
+        "dim": "F",
+        "code": "F-21",
+        "label": "Croissance ARR YoY",
+        "desc": "Taux de croissance annuel documenté. Seuil niveau 1 : >40%."
+      },
+      {
+        "dim": "F",
+        "code": "F-22",
+        "label": "Concentration clients",
+        "desc": "Part du top client dans le CA total — risque de concentration évalué."
+      },
+      {
+        "dim": "F",
+        "code": "F-23",
+        "label": "Contrats récurrents",
+        "desc": "Durée moyenne des contrats, taux de renouvellement documentés."
+      },
+      {
+        "dim": "F",
+        "code": "F-24",
+        "label": "Cohortes de revenus",
+        "desc": "Analyse de cohortes sur 4+ trimestres pour valider la rétention."
+      },
+      {
+        "dim": "F",
+        "code": "F-31",
+        "label": "Structure juridique",
+        "desc": "Entité légale propre, comptes séparés, pas de mélange avec d'autres activités."
+      },
+      {
+        "dim": "F",
+        "code": "F-32",
+        "label": "Passifs cachés",
+        "desc": "Absence de dettes fournisseurs, litiges sociaux ou fiscaux non déclarés."
+      },
+      {
+        "dim": "F",
+        "code": "F-33",
+        "label": "Auditabilité",
+        "desc": "Comptes annuels disponibles, grand livre accessible sur demande."
+      },
+      {
+        "dim": "F",
+        "code": "F-41",
+        "label": "Pipeline commercial",
+        "desc": "Pipeline documenté des deals en cours avec probabilités et montants."
+      },
+      {
+        "dim": "F",
+        "code": "F-42",
+        "label": "Dépendance fondateur",
+        "desc": "Part du CA portée personnellement par le(s) fondateur(s) — risque clé évalué."
+      },
+      {
+        "dim": "F",
+        "code": "F-43",
+        "label": "Données vérifiables",
+        "desc": "Toutes les métriques financières sont vérifiables sur pièces — absence de blocage. Bloquant si refus."
+      },
+      {
+        "dim": "F",
+        "code": "F-46",
+        "label": "Indicateurs unitaires",
+        "desc": "ARPU, CAC par canal, LTV par segment documentés."
+      },
+      {
+        "dim": "S",
+        "code": "S-11",
+        "label": "Conformité RGPD/LPD",
+        "desc": "Politique de confidentialité, registre des traitements, DPO ou référent RGPD désigné."
+      },
+      {
+        "dim": "S",
+        "code": "S-12",
+        "label": "MFA",
+        "desc": "Authentification multi-facteurs active sur tous les accès admin et production."
+      },
+      {
+        "dim": "S",
+        "code": "S-13",
+        "label": "Chiffrement au repos",
+        "desc": "Données sensibles chiffrées en base et dans les sauvegardes."
+      },
+      {
+        "dim": "S",
+        "code": "S-14",
+        "label": "Chiffrement en transit",
+        "desc": "TLS 1.2+ sur toutes les communications, HSTS activé."
+      },
+      {
+        "dim": "S",
+        "code": "S-15",
+        "label": "Gestion des accès",
+        "desc": "Principe du moindre privilège appliqué, offboarding documenté."
+      },
+      {
+        "dim": "S",
+        "code": "S-16",
+        "label": "Audit de sécurité tiers",
+        "desc": "Rapport de pentest ou audit par un tiers indépendant dans les 18 derniers mois."
+      },
+      {
+        "dim": "S",
+        "code": "S-17",
+        "label": "Vulnérabilités critiques",
+        "desc": "Absence de CVE critique non résolue sur l'infrastructure. Bloquant si présent."
+      },
+      {
+        "dim": "S",
+        "code": "S-18",
+        "label": "Politique de divulgation",
+        "desc": "Processus de responsible disclosure documenté et accessible."
+      },
+      {
+        "dim": "S",
+        "code": "S-19",
+        "label": "WAF & protection périmètre",
+        "desc": "Pare-feu applicatif, protection DDoS, isolation des services exposés."
+      },
+      {
+        "dim": "S",
+        "code": "S-21",
+        "label": "Logs & audit trail",
+        "desc": "Journalisation des accès critiques, conservation ≥90 jours, intégrité vérifiable."
+      },
+      {
+        "dim": "S",
+        "code": "S-22",
+        "label": "Gestion des incidents",
+        "desc": "Procédure de réponse aux incidents documentée, exercice de simulation effectué."
+      },
+      {
+        "dim": "S",
+        "code": "S-23",
+        "label": "Sauvegardes",
+        "desc": "Stratégie 3-2-1, tests de restauration documentés, RTO/RPO définis."
+      },
+      {
+        "dim": "S",
+        "code": "S-31",
+        "label": "Sous-traitants & tiers",
+        "desc": "Liste des sous-traitants data, DPA signés, niveau de conformité évalué."
+      },
+      {
+        "dim": "S",
+        "code": "S-32",
+        "label": "Formation sécurité",
+        "desc": "Sensibilisation de l'équipe au phishing et aux bonnes pratiques, au moins annuelle."
+      },
+      {
+        "dim": "S",
+        "code": "S-33",
+        "label": "Politique de mots de passe",
+        "desc": "Gestionnaire de mots de passe imposé, rotation des credentials critiques documentée."
+      },
+      {
+        "dim": "S",
+        "code": "S-34",
+        "label": "Isolation des environnements",
+        "desc": "Production isolée du staging et du dev, accès restreint."
+      },
+      {
+        "dim": "S",
+        "code": "S-37",
+        "label": "Incident en cours",
+        "desc": "Absence d'incident de sécurité actif non résolu. Bloquant si présent."
+      },
+      {
+        "dim": "S",
+        "code": "S-38",
+        "label": "Droit à l'effacement",
+        "desc": "Processus de suppression des données personnelles sur demande opérationnel."
+      },
+      {
+        "dim": "S",
+        "code": "S-39",
+        "label": "Transferts hors UE",
+        "desc": "Encadrement des transferts de données hors UE/CH (clauses contractuelles types ou équivalent)."
+      },
+      {
+        "dim": "S",
+        "code": "S-40",
+        "label": "Gouvernance des données",
+        "desc": "Responsable des données désigné, politique de classification et de rétention documentée."
       }
     ]
   },
