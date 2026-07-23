@@ -178,9 +178,9 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   }, [])
 
   useEffect(() => {
-    if (!drawerRef.current) return
-    if (mobileOpen) {
-      gsap.fromTo(drawerRef.current,
+    if (!drawerRef.current || !mobileOpen) return
+    const ctx = gsap.context(() => {
+      gsap.fromTo(drawerRef.current!,
         { opacity: 0, y: -16 },
         { opacity: 1, y: 0, duration: 0.35, ease: 'expo.out' }
       )
@@ -188,7 +188,8 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
         opacity: 0, x: -16, stagger: 0.05,
         duration: 0.35, ease: 'expo.out', delay: 0.1,
       })
-    }
+    }, drawerRef)
+    return () => ctx.revert()
   }, [mobileOpen])
 
   const toggleDropdown = (key: DropdownKey) =>

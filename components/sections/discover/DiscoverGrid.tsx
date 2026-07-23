@@ -30,6 +30,8 @@ export function DiscoverGrid({ locale }: Props) {
       gsap.from('.discover-card', {
         opacity: 0, y: 20, stagger: 0.07,
         ease: 'expo.out', duration: 0.6,
+        immediateRender: false,
+        clearProps: 'opacity,transform',
       })
     }, gridRef)
     return () => ctx.revert()
@@ -40,6 +42,8 @@ export function DiscoverGrid({ locale }: Props) {
       gsap.from(['.discover-hero-label', '.discover-hero-title', '.discover-hero-desc'], {
         opacity: 0, y: 16, stagger: 0.12,
         ease: 'expo.out', duration: 0.7, delay: 0.1,
+        immediateRender: false,
+        clearProps: 'opacity,transform',
       })
     }, heroRef)
     return () => ctx.revert()
