@@ -1,4 +1,3 @@
-import { getTranslations } from 'next-intl/server'
 import type { Metadata }   from 'next'
 import Link                from 'next/link'
 import { generateAegrynMetadata } from '@/lib/seo'
