@@ -3844,6 +3844,8 @@
         "h": "Introduction",
         "p1": "neediu is a platform that enables users to quickly identify and connect with trusted professionals or individuals offering help with home-related needs in their area. As we place great importance on protecting your data and privacy, we have prepared this data protection notice to explain what we do with your data when you use our platform.",
         "p2": "This data protection notice covers only data processing related to our platform. Our goal is to ensure adequate protection of personal data in accordance with all applicable data protection laws, including but not limited to the Swiss Federal Act on Data Protection (FADP) and the General Data Protection Regulation (GDPR).",
+        "p3": "In Switzerland, the protection of your data is based in particular on the Federal Act of the 25th of September 2020 on Data Protection (FADP), as well as on the Federal Ordinance of the 31st of August on Data Protection (DPO). Our data protection notice, as well as our practices, is aligned with the legal provisions contained within the legislation mentioned.",
+        "p4": "Although we make every effort to simplify our data protection notice, the difficulty of understanding it stems from the language specific to the legal framework. This is why we have taken the initiative of grouping together the main definitions to make our data protection notice easier to understand, as these are taken from the FADP.",
         "defsTitle": "Key definitions from the FADP:",
         "defs": {
           "dataSubject": ["Data subject:", "The natural person whose personal data is being processed."],
@@ -3862,11 +3864,12 @@
       "ourRole": {
         "h": "What is our role in data protection?",
         "p1": "When you use our platform, we may process certain personal data about you. Under the FADP, we act as the data controller. When personal data is shared with a Service Provider for the execution of a task, the Service Provider acts as an independent data controller.",
-        "p2": "As data controller, we determine the purposes for which we process your personal data, how it is processed, and the applicable security measures. Data protection is everyone's responsibility. We encourage you to read this notice carefully."
+        "p2": "As data controller, we determine the purposes for which we process your personal data, how it is processed, and the applicable security measures. When we work with third-party providers in the course of our business, we ensure that they share our commitment to data protection and comply with the same standards we apply.",
+        "p3": "Data protection is everyone's business. We therefore encourage you to read our data protection notice. We also encourage you, if you are one of our customers, to review the contractual documents that bind us, as these may contain additional details about how we process your data."
       },
       "whenCollect": {
         "h": "When and how do we collect your data?",
-        "p": "Data collection begins as soon as you access or interact with our Platform. We collect data directly from you when you use the Platform and when you create a User Account, whether as a Client or a Service Provider. We do not collect data from third parties, except in the context of targeted marketing campaigns."
+        "p": "Data collection begins as soon as you access or interact with our Platform. We collect data directly from you when you use the Platform and when you create a User Account, whether as a Client or a Service Provider. We do not collect data from third parties, except in the context of targeted marketing campaigns, where a limited and indirect collection of personal data may occur. In such cases, data may be shared with us by third parties in accordance with their respective data protection notices."
       },
       "categories": {
         "h": "What categories of data do we process?",
@@ -3884,19 +3887,20 @@
         "otherP": "Type and scope of the task, size or condition of the home or premises, desired date and time, photos or descriptions clarifying the nature of the assignment, identification data as part of the KYC process."
       },
       "sensitive": {
-        "h": "Sensitive data and minors",
-        "p": "We do not collect or process any sensitive personal data. Our services are intended exclusively for adults. We do not target minors and do not deliberately collect any personal data relating to them."
+        "h": "What about sensitive data?",
+        "p": "We do not collect or process any sensitive personal data."
+      },
+      "minors": {
+        "h": "What about data relating to minors?",
+        "p": "Our services are intended exclusively for adults. We do not target minors and do not deliberately collect any personal data relating to them."
       },
       "why": {
         "h": "Why do we process your data?",
-        "pIntro": "We process your personal data in order to:",
-        "items": [
-          "Enable access and use of the Platform (account creation and management, matching, payment processing, messaging, display of relevant information).",
-          "Communicate with you, respond to your requests, and exercise your rights.",
-          "Generate traffic statistics useful for improving the Platform.",
-          "Comply with applicable laws, directives, and authority recommendations."
-        ],
-        "pNote": "We do not make any automated individual decisions."
+        "p": "We process your personal data to enable you to access and use the functionalities of our platform and to ensure the proper execution of the services offered through it. This includes, in particular, the creation and management of your user account, the connection between Clients and Service Providers, the processing of payments, the transmission of messages between users, and the display of relevant information based on your profile and preferences. We also process your data for the purpose of communicating with you, in particular to respond to your requests and exercise your rights, as well as to inform you about our services. We also process your personal data in order to generate traffic statistics that are useful for improving our platform. Finally, we process your personal data to comply with laws, directives and recommendations from authorities."
+      },
+      "automated": {
+        "h": "Do we take automated individual decisions?",
+        "p": "We use various IT tools to manage our activities. These tools are designed to centralise and structure processes, improve efficiency and guarantee the quality of our services. It is important to note that we do not take any automated individual decisions with the help of these IT tools."
       },
       "rights": {
         "h": "What are your rights?",
@@ -3909,19 +3913,22 @@
           "You have the right to request the deletion or destruction of your data.",
           "You have the right to request that an automated individual decision be reviewed by a natural person."
         ],
-        "pContact": "To exercise any of these rights, please contact us. If you believe we are processing your data in violation of data protection provisions, you may report us to the FDPIC."
+        "pContact": "If you wish to exercise any of the above rights, please contact us. In order to prevent misuse, we must first identify you (e.g. by means of a copy of your identity card, if no other means of identification is possible). Please note that conditions, exceptions and restrictions may apply to the exercise of these rights under the FADP (e.g. to protect third parties or trade secrets). We will inform you if this is the case.",
+        "pContact2": "If you believe that we are processing your data in contravention of data protection provisions, you also have the option of reporting us to the FDPIC. We encourage you to inform us first so that we have the opportunity to address your concerns. If we are unable to do so, you can contact the FDPIC by following the instructions given on his website."
       },
       "security": {
         "h": "How do we protect your data?",
-        "p": "We take appropriate security measures, such as encryption, to protect your personal data. If you believe your data has been compromised, please inform us immediately at legal@boha-group.com."
+        "p": "We take appropriate security measures, such as encryption, to keep your personal data safe and make sure it stays private, secure, and available. Unfortunately, we cannot guarantee that your data will always be completely safe. If you believe your personal data has been compromised, please let us know right away at legal@boha-group.com."
       },
       "storage": {
         "h": "Where and for how long is your data stored?",
-        "p": "Personal data is stored in our premises as well as in processing centres operated by our third-party providers. We retain it for as long as the purpose of processing requires, or as long as we have a legitimate interest in retaining it. For certain data, the retention period may be up to ten years."
+        "p": "Personal data is stored in our premises as well as in processing centres operated by our third-party providers. We retain it for as long as the purpose of processing requires, or as long as we have a legitimate interest in retaining it. For certain data, the retention period may be up to ten years. Once these periods have elapsed, we destroy your personal data."
       },
       "sharing": {
         "h": "Who do we share your data with?",
-        "p": "Managing our platform involves working with specialised third-party service providers. Some personal data is also shared directly between users when necessary for the execution of a requested service. All such communications are strictly limited to what is necessary and comply with applicable legal frameworks. When data is transferred outside Switzerland or the EEA, we use the revised standard contractual clauses of the European Commission or other appropriate safeguards.",
+        "p1": "The management of our platform involves collaboration with specialised external third-party providers, particularly for its creation, maintenance and hosting. We collaborate with third-party providers recognised in their field of expertise to ensure the smooth running of our platform and, more generally, the quality of our services. Within the framework of these collaborations, it may be necessary to communicate your data to our third-party providers. Please be assured that these communications are strictly limited to what is necessary and are carried out in compliance with the legal framework.",
+        "p2": "In addition, certain personal data is also shared directly between users when it is necessary for the preparation, execution, or follow-up of a requested service. Such exchanges are essential to enable the proper functioning of the platform and the services it facilitates.",
+        "p3": "Where personal data is transferred to a third-party provider located outside Switzerland or the European Economic Area (EEA) and not offering an adequate level of protection, we require that the third-party provider undertakes to comply with the applicable data protection legislation (for this purpose, we use the revised standard contractual clauses of the European Commission), unless the third-party provider is already subject to a legally accepted set of rules designed to guarantee data protection (Swiss-U.S. Data Privacy Framework) or we can invoke an exception.",
         "providersH": "Our third-party providers",
         "tableHeaders": ["Provider", "Purpose", "Processing location"],
         "providers": [
@@ -3958,9 +3965,13 @@
       "s3Member": "There are two categories of Registered Users: (i) Clients who use the Platform to search for and receive services, and (ii) Service Providers who offer and perform services for Clients.",
       "s3ConfidTitle": "Confidentiality.",
       "s3Confid": "You are solely responsible for the confidentiality of your password and any activity occurring under your Account. Notify us immediately of any fraudulent use.",
+      "s3InfoTitle": "Information.",
+      "s3Info": "As part of your registration, you agree to provide true, accurate, current and complete information, and to update this information as often and as soon as necessary.",
       "s3KycTitle": "Identity verification.",
-      "s3Kyc": "To meet legal requirements related to financial transactions and fraud prevention, we or our third-party provider may conduct identity verification procedures (KYC).",
+      "s3Kyc": "To meet legal requirements related to financial transactions and fraud prevention, we or our third-party provider may conduct identity verification procedures (KYC). You agree to provide accurate and complete information and documentation upon request. If you fail to complete the identity verification process, your access to the Platform or certain Services may be suspended or terminated.",
       "s4H": "4. Access, Internet, and Telecommunications",
+      "s4AccessTitle": "Access.",
+      "s4Access": "You are solely responsible for the quality and confidentiality of your password and username, and for any and all activity that occurs under your password and Account. You undertake to inform us immediately of any fraudulent use of your password or Account and any other breach of security, and to ensure that you close your Account at the end of each session (logout).",
       "s4InternetTitle": "Internet.",
       "s4Internet": "Using the internet involves risks (interception, alteration, deletion of data). By using the Platform, you accept these risks.",
       "s4TelecomTitle": "Telecommunications.",
@@ -3973,9 +3984,18 @@
       "s6RestrictTitle": "Restrictions.",
       "s6Restrict": "It is strictly prohibited to: (i) use the Platform for purposes other than those intended; (ii) reproduce, modify, or create derivative works from the Platform; (iii) access the source code through decompilation or reverse engineering; (iv) collect email addresses for spamming purposes.",
       "s7H": "7. User Content",
-      "s7": "Users may post or create content (texts, images, photos). Reviews must be honest, respectful, and based on real experiences. Users grant Aegryn a worldwide, royalty-free, perpetual licence to use User Content in connection with the Services.",
+      "s7ContentTitle": "User Content.",
+      "s7Content": "Users have the opportunity to display, transmit or create links from the Platform and/or Services, texts, files, images, photos or other materials (the User Content). In particular, a User may describe with text to other Users a problem to illustrate a damaged item or explain the type of service required.",
+      "s7ReviewTitle": "Review and Ratings.",
+      "s7Review": "After the completion of a service, Users may leave a public review and rating regarding their experience. Reviews should be honest, respectful, and based on actual experiences.",
+      "s7LicenseTitle": "License.",
+      "s7License": "The Users grant to Aegryn a worldwide, royalty-free, perpetual, irrevocable, transferable and assignable, sublicensable license, as well as any related property right, to use the User Content in relation to the Services, Platform and all related Services. We reserve the right (but have no obligation) to edit, refuse or remove any User Content at any time, at our sole discretion.",
+      "s7WarrantyTitle": "Warranty.",
+      "s7Warranty": "Any User Content published, transmitted or referenced on the Platform is the sole responsibility of the User who is the originator. We do not systematically monitor User Content, nor any use of the Platform by other Users. We provide no guarantee, express or implied, as to the accuracy, timeliness or completeness of the User Content and have no liability in this respect.",
       "s8H": "8. Payments and Fees",
       "s8": "All payments made through the Platform are processed by third-party payment service providers. We do not store or directly process your payment card information.",
+      "s8ClientFeeTitle": "Client's Fee.",
+      "s8ClientFee": "As a Client, you will only be charged for Services that you have selected and expressly approved through the Platform. The total price, including any applicable taxes, service fees, or additional charges, will be clearly displayed before you confirm your request.",
       "s8FeesTitle": "Service Provider fees.",
       "s8FeesIntro": "As a Service Provider, you are subject to a commission on each successfully completed service:",
       "s8Fees": [
@@ -3983,9 +4003,13 @@
         "Pro level (150 to 300 missions): 17.5%",
         "Elite level (more than 300 missions): 15%"
       ],
-      "s8Payout": "Payouts are generally processed within 5 to 7 business days following service completion.",
+      "s8TierTitle": "Tier status.",
+      "s8Tier": "Tier status is regularly reviewed to ensure accurate application of commission rates. Repeated cancellations after arriving at a job, failure to comply with our policies, or other violations may negatively impact your tier status and access to future opportunities on the Platform. Serious or repeated breaches may result in a review of your account and lead to suspension or permanent removal.",
+      "s8Payout": "Payouts are generally processed within 5 to 7 business days after completion of the service, provided no dispute or refund request has been initiated by the Client. We reserve the right to delay or withhold payouts in the event of suspected fraud, violation of these ToU, or pending resolution of a dispute.",
       "s9H": "9. Refunds",
-      "s9": "If a paid service is not delivered as promised, you may request a refund within 7 days of the scheduled service time, with supporting details. We will evaluate requests on a case-by-case basis.",
+      "s9": "If a service you have paid for is not provided as promised, you can request a refund directly through the platform. Requests must be submitted within 7 days following the scheduled service time and include supporting details. We will assess refund requests on a case-by-case basis and reserve the right to approve or reject a refund. Refunds, when granted, are processed through the same payment method used for the original transaction.",
+      "s9DisputeTitle": "Dispute Between Users.",
+      "s9Dispute": "We are not a party to the contractual relationship between Clients and Service Providers and do not intervene in the execution of the service. However, we may facilitate communication between parties in case of a dispute. If no mutual agreement is found, we may, but we are not obligated to, propose a resolution or issue a partial or full refund, based on the available evidence and in good faith.",
       "s10H": "10. Intellectual Property",
       "s10": "Except for User Content, Aegryn remains the sole owner of all intellectual property rights in the Platform, the Services, and the content accessible through the Platform.",
       "s11H": "11. Usage restrictions",
@@ -4002,13 +4026,19 @@
       "s16": "You agree to indemnify us against any liability, loss, damage, or claim arising from your breach of these ToU.",
       "s17H": "17. Miscellaneous",
       "s17DivTitle": "Severability.",
-      "s17Div": "If any provision is void or unenforceable, the remaining provisions remain fully in force.",
+      "s17Div": "If any provision of these ToU is or becomes null or inapplicable, the parties agree that their intentions, as reflected in the defective provision, will be carried out to the fullest extent possible and that the other provisions of the ToU shall remain in full force and effect.",
       "s17ForceTitle": "Force majeure.",
-      "s17Force": "We cannot be held liable for non-performance due to force majeure events.",
+      "s17Force": "We cannot be held liable for the non-performance or delay in performance of our obligations due to events of force majeure, such as natural disasters of particular intensity, wars, acts of government or authorities, riots, strikes, epidemics or pandemics, or breakdowns in electricity or telecommunications networks. If such an event occurs, we will inform you without delay.",
+      "s17AssignTitle": "Assignment.",
+      "s17Assign": "You shall not assign or transfer any of your rights or obligations under these ToU. We may assign or transfer any right or obligation, or subcontract the performance of any of our obligations under this ToU to any third party at any time, without your prior consent.",
+      "s17PromoTitle": "Promotion.",
+      "s17Promo": "Aegryn is entitled to use your trademark or logo as a reference to promote its Platforms and Services to third parties.",
+      "s17AmicableTitle": "Amicable Resolution.",
+      "s17Amicable": "We encourage Users to contact us directly to resolve any dispute. We will make reasonable efforts to resolve your concerns.",
       "s17LawTitle": "Governing law.",
-      "s17Law": "These ToU are governed by Swiss substantive law, without reference to its conflict of laws provisions.",
+      "s17Law": "These ToU and the relationship between you and us are governed by and construed in accordance with Switzerland's substantive law, without reference to its conflict of laws provisions.",
       "s17JurisTitle": "Jurisdiction.",
-      "s17Juris": "Any dispute shall be subject to the exclusive jurisdiction of the competent courts at Aegryn's registered office.",
+      "s17Juris": "Any dispute in connection with these ToU shall be subject to the exclusive jurisdiction of the competent courts of the seat of Aegryn, subject to a mandatory forum.",
       "s18H": "18. Contact",
       "s18": "You may contact us at legal@boha-group.com."
     }
