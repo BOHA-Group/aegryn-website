@@ -492,7 +492,7 @@
       "subjectPlaceholder": "Choose a subject",
       "subjects": {
         "general": "General inquiry",
-        "advisory": "Advisory & Cybersecurity",
+        "advisory": "Advisory",
         "grade": "Asset certification (Grade)",
         "auction": "Auction session",
         "partnership": "Partnership",
@@ -514,6 +514,10 @@
     "meta": {
       "title": "Contact — AEGRYN",
       "desc": "Get in touch with AEGRYN — advisory, asset certification, auction session, partnership or general enquiry."
+    },
+    "info": {
+      "baseLabel": "Headquarters",
+      "baseValue": "Switzerland"
     }
   },
   "advisoryPage": {
@@ -629,7 +633,7 @@
   },
   "footer": {
     "groupLabel": "AEGRYN",
-    "legal": "© 2026 AEGRYN Sàrl — All rights reserved",
+    "legal": "© 2026 AEGRYN (formerly BOHA-Group) — All rights reserved",
     "company": "An Aegryn company",
     "privacy": "Privacy",
     "terms": "Terms",

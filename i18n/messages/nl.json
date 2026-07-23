@@ -495,7 +495,7 @@
       "subjectPlaceholder": "Kies een onderwerp",
       "subjects": {
         "general": "Algemene vraag",
-        "advisory": "Advisory & Cyberbeveiliging",
+        "advisory": "Advisory",
         "grade": "Activumcertificering (Grade)",
         "auction": "Veilingsessie",
         "partnership": "Partnerschap",
@@ -517,6 +517,10 @@
     "meta": {
       "title": "Contact — AEGRYN",
       "desc": "Neem contact op met AEGRYN — Advisory, certificering, veiling, partnerschap of algemene vraag."
+    },
+    "info": {
+      "baseLabel": "Hoofdkantoor",
+      "baseValue": "Zwitserland"
     }
   },
   "advisoryPage": {
@@ -632,7 +636,7 @@
   },
   "footer": {
     "groupLabel": "AEGRYN",
-    "legal": "© 2026 AEGRYN Sàrl — Alle rechten voorbehouden",
+    "legal": "© 2026 AEGRYN (formerly BOHA-Group) — Alle rechten voorbehouden",
     "company": "An Aegryn company",
     "privacy": "Privacy",
     "terms": "Voorwaarden",

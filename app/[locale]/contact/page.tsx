@@ -43,9 +43,9 @@ export default async function ContactPage({ params }: Props) {
           <div className="space-y-10">
             <div>
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
-                Base
+                {t('info.baseLabel')}
               </p>
-              <p className="text-sm text-ag-gray">Suisse</p>
+              <p className="text-sm text-ag-gray">{t('info.baseValue')}</p>
             </div>
             <div>
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
