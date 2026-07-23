@@ -43,6 +43,16 @@
   ],
   "redirects": [
     {
+      "source": "/:locale/discover/:slug",
+      "destination": "/:locale/blog/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/discover",
+      "destination": "/:locale/blog",
+      "permanent": true
+    },
+    {
       "source": "/fr/:path*",
       "has": [{ "type": "host", "value": "boha-group.com" }],
       "destination": "https://aegryn.com/fr/:path*",
