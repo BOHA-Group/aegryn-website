@@ -9,23 +9,28 @@ export type ArticleCategory =
   | 'vertical'
   | 'dach'
 
-export type ContentBlock =
-  | { type: 'p';     text:  { fr: string; en: string } }
-  | { type: 'h2';    text:  { fr: string; en: string } }
-  | { type: 'h3';    text:  { fr: string; en: string } }
-  | { type: 'list';  items: { fr: string; en: string }[] }
-  | { type: 'quote'; text:  { fr: string; en: string }; author?: string }
-  | { type: 'stats'; items: { value: string; label: { fr: string; en: string } }[] }
+export type LocaleText = {
+  fr: string; en: string;
+  de?: string; es?: string; it?: string; nl?: string;
+}
 
-export type FaqItem = { q: { fr: string; en: string }; a: { fr: string; en: string } }
+export type ContentBlock =
+  | { type: 'p';     text:  LocaleText }
+  | { type: 'h2';    text:  LocaleText }
+  | { type: 'h3';    text:  LocaleText }
+  | { type: 'list';  items: LocaleText[] }
+  | { type: 'quote'; text:  LocaleText; author?: string }
+  | { type: 'stats'; items: { value: string; label: LocaleText }[] }
+
+export type FaqItem = { q: LocaleText; a: LocaleText }
 
 export interface Article {
   slug:        string
   category:    ArticleCategory
   date:        string
   readMin:     number
-  title:       { fr: string; en: string }
-  excerpt:     { fr: string; en: string }
+  title:       LocaleText
+  excerpt:     LocaleText
   featured:    boolean
   ogImage?:    string
   body?:       ContentBlock[]
@@ -42,53 +47,85 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'État du marché M&A tech Europe — Q3 2026',
       en: 'European Tech M&A Market — Q3 2026 Report',
+      de: 'Europäischer Tech-M&A-Markt — Q3 2026 Bericht',
+      es: 'Mercado de M&A tech europeo — Informe Q3 2026',
+      it: 'Mercato M&A tech europeo — Report Q3 2026',
+      nl: 'Europese Tech M&A-markt — Q3 2026 Rapport',
     },
     excerpt: {
       fr: 'Analyse des volumes de transactions, multiples de valorisation et tendances sectorielles sur le marché européen des actifs tech. SaaS B2B en tête avec un multiple médian de 3,1x ARR.',
       en: 'Analysis of transaction volumes, valuation multiples and sector trends in the European tech asset market. B2B SaaS leads with a median multiple of 3.1x ARR.',
+      de: 'Analyse von Transaktionsvolumen, Bewertungsmultiplikatoren und Branchentrends auf dem europäischen Tech-Asset-Markt. B2B SaaS führt mit einem Median-Multiplikator von 3,1x ARR.',
+      es: 'Análisis de volúmenes de transacciones, múltiplos de valoración y tendencias sectoriales en el mercado europeo de activos tech. El SaaS B2B lidera con un múltiplo mediano de 3,1x ARR.',
+      it: 'Analisi dei volumi di transazione, multipli di valutazione e tendenze settoriali nel mercato europeo degli asset tech. Il SaaS B2B guida con un multiplo mediano di 3,1x ARR.',
+      nl: 'Analyse van transactievolumes, waarderingsmultiples en sectortrends op de Europese tech-assetmarkt. B2B SaaS leidt met een mediane multiple van 3,1x ARR.',
     },
     body: [
       { type: 'p', text: {
         fr: 'Le marché européen des actifs tech a franchi en 2025 un seuil structurel. Les volumes de M&A SaaS ont progressé de 42% en un an, portés par une conjonction de facteurs : normalisation des taux post-cycle de hausse, maturité des fonds micro-PE spécialisés, et émergence d\'une demande institutionnelle pour des actifs certifiés et documentés.',
         en: 'The European tech asset market crossed a structural threshold in 2025. SaaS M&A volumes grew 42% year-on-year, driven by a combination of factors: interest rate normalisation post-hike cycle, maturity of specialist micro-PE funds, and growing institutional demand for certified, documented assets.',
+        de: 'Der europäische Tech-Asset-Markt hat 2025 eine strukturelle Schwelle überschritten. Die SaaS-M&A-Volumina stiegen um 42% im Jahresvergleich, getrieben von einer Kombination aus Zinsnormalisierung nach dem Zinserhöhungszyklus, der Reife spezialisierter Mikro-PE-Fonds und einer wachsenden institutionellen Nachfrage nach zertifizierten, dokumentierten Assets.',
+        es: 'El mercado europeo de activos tech cruzó un umbral estructural en 2025. Los volúmenes de M&A SaaS crecieron un 42% interanual, impulsados por una combinación de factores: normalización de tasas post-ciclo de subidas, madurez de los fondos micro-PE especializados y una demanda institucional creciente de activos certificados y documentados.',
+        it: 'Il mercato europeo degli asset tech ha superato una soglia strutturale nel 2025. I volumi M&A SaaS sono cresciuti del 42% su base annua, trainati da una combinazione di fattori: normalizzazione dei tassi post-ciclo di rialzi, maturità dei fondi micro-PE specializzati e crescente domanda istituzionale di asset certificati e documentati.',
+        nl: 'De Europese tech-assetmarkt bereikte in 2025 een structurele drempel. SaaS M&A-volumes groeiden met 42% op jaarbasis, gedreven door een combinatie van factoren: rentevoetnormalisatie na de verhogingscyclus, volwassenheid van gespecialiseerde micro-PE-fondsen en groeiende institutionele vraag naar gecertificeerde, gedocumenteerde assets.',
       }},
       { type: 'stats', items: [
-        { value: '+42%',    label: { fr: 'Volume M&A SaaS Europe 2025 (YoY)',         en: 'European SaaS M&A volume 2025 (YoY)'      } },
-        { value: '14,2 Md€', label: { fr: 'Volume total de transactions 2025',         en: 'Total transaction volume 2025'            } },
-        { value: '3,1x ARR', label: { fr: 'Multiple médian — SaaS privé, mars 2026',   en: 'Median multiple — private SaaS, Mar 2026' } },
-        { value: '58%',     label: { fr: 'Part des acquéreurs PE dans les deals SaaS', en: 'Share of PE buyers in SaaS deals'         } },
+        { value: '+42%',    label: { fr: 'Volume M&A SaaS Europe 2025 (YoY)',         en: 'European SaaS M&A volume 2025 (YoY)',      de: 'Europäisches SaaS M&A-Volumen 2025 (YoY)',    es: 'Volumen M&A SaaS Europa 2025 (YoY)',        it: 'Volume M&A SaaS Europa 2025 (YoY)',        nl: 'Europees SaaS M&A-volume 2025 (YoY)'       } },
+        { value: '14,2 Md€', label: { fr: 'Volume total de transactions 2025',         en: 'Total transaction volume 2025',           de: 'Gesamttransaktionsvolumen 2025',              es: 'Volumen total de transacciones 2025',       it: 'Volume totale transazioni 2025',           nl: 'Totaal transactievolume 2025'              } },
+        { value: '3,1x ARR', label: { fr: 'Multiple médian — SaaS privé, mars 2026',   en: 'Median multiple — private SaaS, Mar 2026', de: 'Median-Multiplikator — privates SaaS, März 2026', es: 'Múltiplo mediano — SaaS privado, mar. 2026', it: 'Multiplo mediano — SaaS privato, mar. 2026', nl: 'Mediane multiple — privaat SaaS, mrt. 2026' } },
+        { value: '58%',     label: { fr: 'Part des acquéreurs PE dans les deals SaaS', en: 'Share of PE buyers in SaaS deals',         de: 'Anteil PE-Käufer an SaaS-Deals',             es: 'Cuota de compradores PE en deals SaaS',     it: 'Quota acquirenti PE nei deal SaaS',        nl: 'Aandeel PE-kopers in SaaS-deals'           } },
       ]},
-      { type: 'h2', text: { fr: 'SaaS B2B : la classe d\'actifs préférée des acquéreurs', en: 'B2B SaaS: the acquirers\' preferred asset class' } },
+      { type: 'h2', text: { fr: 'SaaS B2B : la classe d\'actifs préférée des acquéreurs', en: 'B2B SaaS: the acquirers\' preferred asset class', de: 'B2B SaaS: die bevorzugte Anlageklasse der Käufer', es: 'SaaS B2B: la clase de activos preferida de los compradores', it: 'SaaS B2B: la classe di asset preferita dagli acquirenti', nl: 'B2B SaaS: de favoriete activaklasse van kopers' } },
       { type: 'p', text: {
         fr: 'Avec un multiple médian de 3,1x ARR sur le marché privé européen (Aventis Advisors, mars 2026), le SaaS B2B consolide son statut de classe d\'actifs de référence. Les verticaux en tête : legal tech, HR tech, logistique et outils d\'automatisation. À noter : les actifs disposant d\'une documentation technique complète et d\'une certification indépendante traitent en moyenne 0,4 à 0,8x ARR au-dessus du multiple médian.',
         en: 'With a median multiple of 3.1x ARR on the European private market (Aventis Advisors, March 2026), B2B SaaS consolidates its status as the benchmark asset class. Leading verticals: legal tech, HR tech, logistics and automation tools. Notable: assets with complete technical documentation and independent certification trade an average of 0.4–0.8x ARR above the median multiple.',
+        de: 'Mit einem Median-Multiplikator von 3,1x ARR auf dem europäischen Privatmarkt (Aventis Advisors, März 2026) festigt B2B SaaS seinen Status als Referenz-Anlageklasse. Führende Vertikals: Legal Tech, HR Tech, Logistik und Automatisierungstools. Bemerkenswert: Assets mit vollständiger technischer Dokumentation und unabhängiger Zertifizierung werden im Durchschnitt 0,4–0,8x ARR über dem Median-Multiplikator gehandelt.',
+        es: 'Con un múltiplo mediano de 3,1x ARR en el mercado privado europeo (Aventis Advisors, marzo 2026), el SaaS B2B consolida su estatus de clase de activos de referencia. Verticales líderes: legal tech, HR tech, logística y herramientas de automatización. Notable: los activos con documentación técnica completa y certificación independiente cotizan en promedio 0,4–0,8x ARR por encima del múltiplo mediano.',
+        it: 'Con un multiplo mediano di 3,1x ARR sul mercato privato europeo (Aventis Advisors, marzo 2026), il SaaS B2B consolida il suo status di classe di asset di riferimento. Verticali leader: legal tech, HR tech, logistica e strumenti di automazione. Da notare: gli asset con documentazione tecnica completa e certificazione indipendente vengono scambiati in media 0,4–0,8x ARR sopra il multiplo mediano.',
+        nl: 'Met een mediane multiple van 3,1x ARR op de Europese private markt (Aventis Advisors, maart 2026) consolideert B2B SaaS zijn status als referentie-activaklasse. Toonaangevende verticalen: legal tech, HR tech, logistiek en automatiseringstools. Opmerkelijk: assets met volledige technische documentatie en onafhankelijke certificering worden gemiddeld 0,4–0,8x ARR boven de mediane multiple verhandeld.',
       }},
-      { type: 'h2', text: { fr: 'IA & verticaux spécialisés : une prime certification émerge', en: 'AI & specialist verticals: a certification premium emerges' } },
+      { type: 'h2', text: { fr: 'IA & verticaux spécialisés : une prime certification émerge', en: 'AI & specialist verticals: a certification premium emerges', de: 'KI & Spezialvertikals: eine Zertifizierungsprämie entsteht', es: 'IA y verticales especializados: emerge una prima de certificación', it: 'IA e verticali specializzati: emerge un premio di certificazione', nl: 'AI & gespecialiseerde verticalen: een certificeringspremie ontstaat' } },
       { type: 'p', text: {
         fr: 'Les actifs intégrant des briques IA propriétaires (modèles fine-tunés, pipelines de données exclusifs) subissent un écart de valorisation croissant selon qu\'ils disposent ou non d\'une IP formellement déposée. Les acquéreurs institutionnels — fonds PE en tête — exigent désormais systématiquement une revue technique indépendante avant de formuler une offre ferme. Un actif sans certification est un actif négocié à la baisse par principe.',
         en: 'Assets incorporating proprietary AI components (fine-tuned models, exclusive data pipelines) face a growing valuation gap depending on whether or not they hold formally filed IP. Institutional acquirers — PE funds in particular — now systematically require independent technical review before making a firm offer. An uncertified asset is one negotiated down as a default.',
+        de: 'Assets mit proprietären KI-Komponenten (fein abgestimmte Modelle, exklusive Datenpipelines) sehen eine wachsende Bewertungslücke, je nachdem ob sie über formal angemeldetes IP verfügen oder nicht. Institutionelle Käufer — insbesondere PE-Fonds — verlangen nun systematisch eine unabhängige technische Prüfung, bevor sie ein verbindliches Angebot abgeben. Ein nicht zertifiziertes Asset wird prinzipiell herunterverhandelt.',
+        es: 'Los activos que incorporan componentes de IA propietarios (modelos ajustados, pipelines de datos exclusivos) enfrentan una brecha de valoración creciente según tengan o no IP registrada formalmente. Los compradores institucionales — fondos PE en particular — ahora requieren sistemáticamente una revisión técnica independiente antes de presentar una oferta firme. Un activo no certificado es uno que se negocia a la baja por defecto.',
+        it: 'Gli asset che incorporano componenti IA proprietari (modelli fine-tuned, pipeline di dati esclusivi) affrontano un divario di valutazione crescente a seconda che dispongano o meno di IP formalmente depositata. Gli acquirenti istituzionali — fondi PE in particolare — ora richiedono sistematicamente una revisione tecnica indipendente prima di formulare un\'offerta ferma. Un asset non certificato è uno che viene negoziato al ribasso per principio.',
+        nl: 'Assets met propriëtaire AI-componenten (fijn-afgestelde modellen, exclusieve datapijplijnen) worden geconfronteerd met een groeiende waarderingskloof afhankelijk van of zij formeel ingediend IP bezitten of niet. Institutionele kopers — PE-fondsen in het bijzonder — eisen nu systematisch een onafhankelijke technische beoordeling voordat zij een bindend bod uitbrengen. Een niet-gecertificeerd asset wordt standaard neerwaarts onderhandeld.',
       }},
-      { type: 'h2', text: { fr: 'Qui achète, et pourquoi maintenant', en: 'Who is buying, and why now' } },
-      { type: 'h3', text: { fr: 'Private Equity (58% des deals)', en: 'Private Equity (58% of deals)' } },
+      { type: 'h2', text: { fr: 'Qui achète, et pourquoi maintenant', en: 'Who is buying, and why now', de: 'Wer kauft, und warum jetzt', es: '¿Quién compra, y por qué ahora?', it: 'Chi compra, e perché adesso', nl: 'Wie koopt, en waarom nu' } },
+      { type: 'h3', text: { fr: 'Private Equity (58% des deals)', en: 'Private Equity (58% of deals)', de: 'Private Equity (58% der Deals)', es: 'Private Equity (58% de los deals)', it: 'Private Equity (58% dei deal)', nl: 'Private Equity (58% van de deals)' } },
       { type: 'p', text: {
         fr: 'Les fonds PE et micro-PE représentent désormais 58% des acquéreurs sur les deals SaaS européens (SEG Annual Report 2026). Leur logique : constituer des portefeuilles d\'actifs récurrents, les consolider opérationnellement, et les revendre en platform deals à 3–5 ans. Ils achètent avec une discipline de due diligence élevée — et ne signent pas sans rapport de certification indépendant.',
         en: 'PE and micro-PE funds now represent 58% of acquirers in European SaaS deals (SEG Annual Report 2026). Their rationale: build portfolios of recurring-revenue assets, consolidate them operationally, and exit via platform deals at 3–5 years. They buy with high due diligence discipline — and will not sign without an independent certification report.',
+        de: 'PE- und Mikro-PE-Fonds repräsentieren nun 58% der Käufer bei europäischen SaaS-Deals (SEG Annual Report 2026). Ihre Logik: Portfolios aus wiederkehrenden Assets aufbauen, diese operativ konsolidieren und über Plattform-Deals in 3–5 Jahren weiterverkaufen. Sie kaufen mit hoher Due-Diligence-Disziplin — und unterzeichnen nicht ohne unabhängigen Zertifizierungsbericht.',
+        es: 'Los fondos PE y micro-PE representan ahora el 58% de los compradores en los deals SaaS europeos (SEG Annual Report 2026). Su lógica: construir carteras de activos recurrentes, consolidarlos operativamente y revenderlos en platform deals en 3–5 años. Compran con alta disciplina de due diligence — y no firman sin un informe de certificación independiente.',
+        it: 'I fondi PE e micro-PE rappresentano ora il 58% degli acquirenti nei deal SaaS europei (SEG Annual Report 2026). La loro logica: costruire portafogli di asset ricorrenti, consolidarli operativamente e rivenderli in platform deal a 3–5 anni. Acquistano con elevata disciplina di due diligence — e non firmano senza un rapporto di certificazione indipendente.',
+        nl: 'PE- en micro-PE-fondsen vertegenwoordigen nu 58% van de kopers bij Europese SaaS-deals (SEG Annual Report 2026). Hun logica: portefeuilles van terugkerende assets opbouwen, deze operationeel consolideren en via platform-deals binnen 3–5 jaar doorverkopen. Ze kopen met hoge due diligence-discipline — en ondertekenen niet zonder een onafhankelijk certificeringsrapport.',
       }},
-      { type: 'h3', text: { fr: 'Family Offices & gérants de fortune', en: 'Family Offices & wealth managers' } },
+      { type: 'h3', text: { fr: 'Family Offices & gérants de fortune', en: 'Family Offices & wealth managers', de: 'Family Offices & Vermögensverwalter', es: 'Family Offices y gestores de patrimonio', it: 'Family Office e gestori patrimoniali', nl: 'Family Offices & vermogensbeheerders' } },
       { type: 'p', text: {
         fr: 'Face à la compression des rendements obligataires et à la volatilité des marchés publics, les family offices européens se sont positionnés massivement sur les actifs tech privés. Ils privilégient les actifs de taille moyenne (0,5–5 M€ ARR), à revenus récurrents, avec un management en place. La transparence documentaire est leur premier critère de sélection — avant même le multiple.',
         en: 'Facing compressed bond yields and public market volatility, European family offices have moved massively into private tech assets. They favour mid-size assets (€0.5–5M ARR), with recurring revenues and management in place. Documentary transparency is their primary selection criterion — even before the multiple.',
+        de: 'Angesichts komprimierter Anleiherenditen und der Volatilität der öffentlichen Märkte haben sich europäische Family Offices massiv in private Tech-Assets positioniert. Sie bevorzugen mittelgroße Assets (0,5–5 M€ ARR) mit wiederkehrenden Einnahmen und vorhandenem Management. Dokumentarische Transparenz ist ihr primäres Auswahlkriterium — noch vor dem Multiplikator.',
+        es: 'Ante la compresión de los rendimientos de bonos y la volatilidad de los mercados públicos, los family offices europeos se han posicionado masivamente en activos tech privados. Prefieren activos de tamaño mediano (0,5–5 M€ ARR), con ingresos recurrentes y gestión en marcha. La transparencia documental es su primer criterio de selección — incluso antes que el múltiplo.',
+        it: 'Di fronte alla compressione dei rendimenti obbligazionari e alla volatilità dei mercati pubblici, i family office europei si sono posizionati massicciamente sugli asset tech privati. Prediligono asset di medie dimensioni (0,5–5 M€ ARR), con ricavi ricorrenti e management operativo. La trasparenza documentale è il loro primo criterio di selezione — ancora prima del multiplo.',
+        nl: 'Geconfronteerd met gecomprimeerde obligatierendementen en volatiliteit op openbare markten hebben Europese family offices zich massaal gepositioneerd in private tech-assets. Ze geven de voorkeur aan middelgrote assets (0,5–5 M€ ARR) met terugkerende inkomsten en aanwezig management. Documentaire transparantie is hun eerste selectiecriterium — zelfs vóór de multiple.',
       }},
-      { type: 'h2', text: { fr: 'Ce que ça signifie si vous envisagez de vendre', en: 'What this means if you are considering selling' } },
+      { type: 'h2', text: { fr: 'Ce que ça signifie si vous envisagez de vendre', en: 'What this means if you are considering selling', de: 'Was das bedeutet, wenn Sie einen Verkauf erwägen', es: 'Lo que significa si está considerando vender', it: 'Cosa significa se stai considerando di vendere', nl: 'Wat dit betekent als u overweegt te verkopen' } },
       { type: 'list', items: [
-        { fr: 'Le timing est structurellement favorable — la demande institutionnelle dépasse l\'offre d\'actifs certifiés.', en: 'The timing is structurally favourable — institutional demand exceeds the supply of certified assets.' },
-        { fr: 'Un actif non certifié sera systématiquement négocié à la baisse. La certification n\'est plus un différenciant — c\'est un prérequis.', en: 'An uncertified asset will be systematically negotiated down. Certification is no longer a differentiator — it is a prerequisite.' },
-        { fr: 'Les acheteurs les plus qualifiés (PE, family office) travaillent sur des listes shortlistées — si vous n\'êtes pas référencé, vous n\'êtes pas dans la conversation.', en: 'The most qualified buyers (PE, family office) work from shortlisted pipelines — if you are not referenced, you are not in the conversation.' },
-        { fr: 'La discrétion est une valeur, pas un luxe : un processus de vente visible détériore la valorisation opérationnelle de l\'actif.', en: 'Confidentiality is a value, not a luxury: a visible sale process deteriorates the operational valuation of the asset.' },
+        { fr: 'Le timing est structurellement favorable — la demande institutionnelle dépasse l\'offre d\'actifs certifiés.', en: 'The timing is structurally favourable — institutional demand exceeds the supply of certified assets.', de: 'Das Timing ist strukturell günstig — die institutionelle Nachfrage übersteigt das Angebot zertifizierter Assets.', es: 'El momento es estructuralmente favorable — la demanda institucional supera la oferta de activos certificados.', it: 'Il timing è strutturalmente favorevole — la domanda istituzionale supera l\'offerta di asset certificati.', nl: 'Het timing is structureel gunstig — de institutionele vraag overstijgt het aanbod van gecertificeerde assets.' },
+        { fr: 'Un actif non certifié sera systématiquement négocié à la baisse. La certification n\'est plus un différenciant — c\'est un prérequis.', en: 'An uncertified asset will be systematically negotiated down. Certification is no longer a differentiator — it is a prerequisite.', de: 'Ein nicht zertifiziertes Asset wird systematisch herunterverhandelt. Zertifizierung ist kein Differenzierungsmerkmal mehr — es ist eine Voraussetzung.', es: 'Un activo no certificado será sistemáticamente negociado a la baja. La certificación ya no es un diferenciador — es un requisito previo.', it: 'Un asset non certificato verrà sistematicamente negoziato al ribasso. La certificazione non è più un differenziatore — è un prerequisito.', nl: 'Een niet-gecertificeerd asset wordt systematisch neerwaarts onderhandeld. Certificering is niet langer een onderscheidend kenmerk — het is een vereiste.' },
+        { fr: 'Les acheteurs les plus qualifiés (PE, family office) travaillent sur des listes shortlistées — si vous n\'êtes pas référencé, vous n\'êtes pas dans la conversation.', en: 'The most qualified buyers (PE, family office) work from shortlisted pipelines — if you are not referenced, you are not in the conversation.', de: 'Die qualifiziertesten Käufer (PE, Family Office) arbeiten mit vorausgewählten Listen — wenn Sie nicht referenziert sind, sind Sie nicht im Gespräch.', es: 'Los compradores más calificados (PE, family office) trabajan con listas preseleccionadas — si no está referenciado, no está en la conversación.', it: 'Gli acquirenti più qualificati (PE, family office) lavorano su liste preselezionate — se non sei referenziato, non sei nella conversazione.', nl: 'De meest gekwalificeerde kopers (PE, family office) werken met voorgeselecteerde lijsten — als u niet gerefereerd bent, bent u niet in het gesprek.' },
+        { fr: 'La discrétion est une valeur, pas un luxe : un processus de vente visible détériore la valorisation opérationnelle de l\'actif.', en: 'Confidentiality is a value, not a luxury: a visible sale process deteriorates the operational valuation of the asset.', de: 'Diskretion ist ein Wert, kein Luxus: Ein sichtbarer Verkaufsprozess verschlechtert die operative Bewertung des Assets.', es: 'La discreción es un valor, no un lujo: un proceso de venta visible deteriora la valoración operativa del activo.', it: 'La discrezione è un valore, non un lusso: un processo di vendita visibile deteriora la valutazione operativa dell\'asset.', nl: 'Discretie is een waarde, geen luxe: een zichtbaar verkoopproces verslechtert de operationele waardering van het asset.' },
       ]},
       { type: 'quote', text: {
         fr: 'Le marché ne manque pas d\'acheteurs. Il manque d\'actifs documentés, certifiés et présentables avec confiance.',
         en: 'The market does not lack buyers. It lacks documented, certified assets that can be presented with confidence.',
+        de: 'Dem Markt mangelt es nicht an Käufern. Es mangelt an dokumentierten, zertifizierten Assets, die mit Zuversicht präsentiert werden können.',
+        es: 'Al mercado no le faltan compradores. Le faltan activos documentados, certificados y presentables con confianza.',
+        it: 'Al mercato non mancano acquirenti. Mancano asset documentati, certificati e presentabili con fiducia.',
+        nl: 'De markt heeft geen gebrek aan kopers. Het ontbreekt aan gedocumenteerde, gecertificeerde assets die met vertrouwen gepresenteerd kunnen worden.',
       }, author: 'AEGRYN Research, Q3 2026' },
     ],
   },
@@ -101,44 +138,80 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Les 5 erreurs qui font chuter la valorisation de votre SaaS',
       en: 'The 5 mistakes that destroy your SaaS valuation',
+      de: 'Die 5 Fehler, die Ihre SaaS-Bewertung zerstören',
+      es: 'Los 5 errores que destruyen la valoración de tu SaaS',
+      it: 'I 5 errori che distruggono la valutazione del tuo SaaS',
+      nl: 'De 5 fouten die uw SaaS-waardering vernietigen',
     },
     excerpt: {
       fr: 'Les erreurs les plus fréquentes identifiées lors des certifications AEGRYN — et comment les corriger avant de soumettre votre actif.',
       en: 'The most common mistakes identified during AEGRYN certifications — and how to fix them before submitting your asset.',
+      de: 'Die häufigsten Fehler, die bei AEGRYN-Zertifizierungen identifiziert werden — und wie man sie korrigiert, bevor man sein Asset einreicht.',
+      es: 'Los errores más frecuentes identificados durante las certificaciones AEGRYN — y cómo corregirlos antes de enviar tu activo.',
+      it: 'Gli errori più comuni identificati durante le certificazioni AEGRYN — e come correggerli prima di sottomettere il tuo asset.',
+      nl: 'De meest voorkomende fouten geidentificeerd tijdens AEGRYN-certificeringen — en hoe ze te corrigeren voordat u uw asset indient.',
     },
     body: [
       { type: 'p', text: {
         fr: 'Sur l\'ensemble des actifs soumis au protocole AEGRYN Grade, plus de 70% présentent au moins une anomalie structurelle qui comprime leur valorisation ou bloque la certification au premier passage. Ces anomalies ne sont pas des accidents — elles suivent des patterns récurrents. Voici les cinq plus courantes.',
         en: 'Of all assets submitted to the AEGRYN Grade protocol, over 70% present at least one structural anomaly that compresses their valuation or blocks certification at first pass. These anomalies are not accidents — they follow recurring patterns. Here are the five most common.',
+        de: 'Von allen beim AEGRYN Grade-Protokoll eingereichten Assets weisen über 70% mindestens eine strukturelle Anomalie auf, die ihre Bewertung komprimiert oder die Zertifizierung beim ersten Durchgang blockiert. Diese Anomalien sind keine Zufälle — sie folgen wiederkehrenden Mustern. Hier sind die fünf häufigsten.',
+        es: 'De todos los activos enviados al protocolo AEGRYN Grade, más del 70% presentan al menos una anomalía estructural que comprime su valoración o bloquea la certificación en el primer intento. Estas anomalías no son accidentes — siguen patrones recurrentes. Aquí están los cinco más comunes.',
+        it: 'Di tutti gli asset inviati al protocollo AEGRYN Grade, oltre il 70% presenta almeno un\'anomalia strutturale che comprime la loro valutazione o blocca la certificazione al primo passaggio. Queste anomalie non sono incidenti — seguono schemi ricorrenti. Ecco i cinque più comuni.',
+        nl: 'Van alle assets ingediend bij het AEGRYN Grade-protocol vertoont meer dan 70% ten minste een structurele anomalie die hun waardering comprimeert of de certificering bij de eerste doorgang blokkeert. Deze anomalieën zijn geen toevalligheden — ze volgen terugkerende patronen. Hier zijn de vijf meest voorkomende.',
       }},
-      { type: 'h2', text: { fr: '1. IP non déposée ou mal protégée', en: '1. IP not filed or poorly protected' } },
+      { type: 'h2', text: { fr: '1. IP non déposée ou mal protégée', en: '1. IP not filed or poorly protected', de: '1. IP nicht angemeldet oder schlecht geschützt', es: '1. IP no registrada o mal protegida', it: '1. IP non depositata o mal protetta', nl: '1. IP niet ingediend of slecht beschermd' } },
       { type: 'p', text: {
         fr: 'Un actif dont le code source n\'est pas protégé par un dépôt IP (INPI, EUIPO ou équivalent) expose l\'acquéreur à un risque juridique direct. Sans preuve d\'antériorité opposable, tout litige post-acquisition sur la propriété du code devient incontrôlable. Résultat : les acquéreurs institutionnels appliquent systématiquement une décote de 20 à 40% sur le multiple, ou exigent une clause de garantie élargie qui renchérit le coût du deal.',
         en: 'An asset whose source code is not protected by an IP filing (INPI, EUIPO or equivalent) exposes the acquirer to direct legal risk. Without enforceable evidence of prior creation, any post-acquisition dispute over code ownership becomes unmanageable. Result: institutional acquirers systematically apply a 20–40% discount to the multiple, or require an extended warranty clause that inflates deal cost.',
+        de: 'Ein Asset, dessen Quellcode nicht durch eine IP-Anmeldung (INPI, EUIPO oder äquivalent) geschützt ist, setzt den Käufer einem direkten rechtlichen Risiko aus. Ohne durchsetzbare Beweise der Voranmeldung wird jeder Streit nach der Akquisition über den Code-Besitz unkontrollierbar. Ergebnis: Institutionelle Käufer wenden systematisch einen Abschlag von 20–40% auf den Multiplikator an oder verlangen eine erweiterte Gewährleistungsklausel, die die Deal-Kosten erhöht.',
+        es: 'Un activo cuyo código fuente no está protegido por un registro de IP (INPI, EUIPO o equivalente) expone al comprador a un riesgo jurídico directo. Sin prueba de anterioridad ejecutable, cualquier disputa post-adquisición sobre la propiedad del código se vuelve incontrolable. Resultado: los compradores institucionales aplican sistemáticamente un descuento del 20–40% sobre el múltiplo, o exigen una cláusula de garantía ampliada que encarece el coste del deal.',
+        it: 'Un asset il cui codice sorgente non è protetto da un deposito IP (INPI, EUIPO o equivalente) espone l\'acquirente a un rischio legale diretto. Senza prove esecutive di anteriorità, qualsiasi controversia post-acquisizione sulla proprietà del codice diventa ingestibile. Risultato: gli acquirenti istituzionali applicano sistematicamente uno sconto del 20–40% sul multiplo, o richiedono una clausola di garanzia estesa che gonfia i costi del deal.',
+        nl: 'Een asset waarvan de broncode niet beschermd is door een IP-indiening (INPI, EUIPO of equivalent) stelt de koper bloot aan direct juridisch risico. Zonder afdwingbaar bewijs van eerdere aanmaak wordt elk geschil na acquisitie over code-eigendom onbeheersbaar. Resultaat: institutionele kopers passen systematisch een korting van 20–40% toe op de multiple, of eisen een uitgebreide garantieclausule die de dealkosten verhoogt.',
       }},
-      { type: 'h2', text: { fr: '2. Dette technique non documentée', en: '2. Undocumented technical debt' } },
+      { type: 'h2', text: { fr: '2. Dette technique non documentée', en: '2. Undocumented technical debt', de: '2. Nicht dokumentierte technische Schulden', es: '2. Deuda técnica no documentada', it: '2. Debito tecnico non documentato', nl: '2. Niet-gedocumenteerde technische schuld' } },
       { type: 'p', text: {
         fr: 'La dette technique existe dans tous les projets. Ce qui la rend pénalisante, c\'est l\'absence de documentation. Un acquéreur qui découvre en due diligence une architecture non documentée, des dépendances obsolètes ou un taux de couverture de tests insuffisant ne peut pas quantifier le risque — il l\'applique en totalité sur le prix. Documentez votre dette, priorisez-la, et présentez un plan de remédiation. C\'est la différence entre une décote acceptable et une offre annulée.',
         en: 'Technical debt exists in every project. What makes it penalising is the absence of documentation. An acquirer who discovers undocumented architecture, outdated dependencies or insufficient test coverage during due diligence cannot quantify the risk — so applies it in full to the price. Document your debt, prioritise it, and present a remediation plan. That is the difference between an acceptable discount and a cancelled offer.',
+        de: 'Technische Schulden existieren in jedem Projekt. Was sie bestrafend macht, ist das Fehlen von Dokumentation. Ein Käufer, der in der Due Diligence undokumentierte Architektur, veraltete Abhängigkeiten oder unzureichende Testabdeckung entdeckt, kann das Risiko nicht quantifizieren — also wendet er es vollständig auf den Preis an. Dokumentieren Sie Ihre Schulden, priorisieren Sie sie und präsentieren Sie einen Sanierungsplan. Das ist der Unterschied zwischen einem akzeptablen Abschlag und einem stornierten Angebot.',
+        es: 'La deuda técnica existe en todos los proyectos. Lo que la hace penalizadora es la ausencia de documentación. Un comprador que descubre en due diligence una arquitectura no documentada, dependencias obsoletas o una cobertura de pruebas insuficiente no puede cuantificar el riesgo — por lo que lo aplica en su totalidad al precio. Documenta tu deuda, prioriza y presenta un plan de remediación. Esa es la diferencia entre un descuento aceptable y una oferta cancelada.',
+        it: 'Il debito tecnico esiste in ogni progetto. Ciò che lo rende penalizzante è l\'assenza di documentazione. Un acquirente che scopre in due diligence un\'architettura non documentata, dipendenze obsolete o una copertura di test insufficiente non può quantificare il rischio — quindi lo applica interamente al prezzo. Documenta il tuo debito, stabilisci le priorità e presenta un piano di rimediazione. Questa è la differenza tra uno sconto accettabile e un\'offerta annullata.',
+        nl: 'Technische schuld bestaat in elk project. Wat het bestraffend maakt, is het ontbreken van documentatie. Een koper die bij due diligence ongedocumenteerde architectuur, verouderde afhankelijkheden of onvoldoende testdekking ontdekt, kan het risico niet kwantificeren — en past het daarom volledig toe op de prijs. Documenteer uw schuld, stel prioriteiten en presenteer een saneringsplan. Dat is het verschil tussen een acceptabele korting en een geannuleerd aanbod.',
       }},
-      { type: 'h2', text: { fr: '3. Métriques financières non auditées', en: '3. Unaudited financial metrics' } },
+      { type: 'h2', text: { fr: '3. Métriques financières non auditées', en: '3. Unaudited financial metrics', de: '3. Nicht geprüfte Finanzkennzahlen', es: '3. Métricas financieras no auditadas', it: '3. Metriche finanziarie non verificate', nl: '3. Niet-geauditeerde financiële maatstaven' } },
       { type: 'p', text: {
         fr: 'MRR auto-déclaré, churn calculé sans définition claire, NRR gonflé par des expansions non récurrentes : les métriques SaaS non auditées sont le premier signal d\'alarme pour un fonds PE. La règle est simple : si vos métriques ne peuvent pas être reconstruites depuis vos données brutes par un tiers indépendant, elles ne seront pas acceptées à leur valeur nominale. Faites réaliser un audit de métriques avant de soumettre — le coût est marginal au regard de la différence sur le multiple.',
         en: 'Self-reported MRR, churn calculated without a clear definition, NRR inflated by non-recurring expansions: unaudited SaaS metrics are the first red flag for a PE fund. The rule is simple: if your metrics cannot be reconstructed from your raw data by an independent third party, they will not be accepted at face value. Commission a metrics audit before submitting — the cost is marginal relative to the difference on the multiple.',
+        de: 'Selbst gemeldeter MRR, Churn ohne klare Definition berechnet, NRR aufgelängt durch nicht-wiederkehrende Expansionen: Nicht geprüfte SaaS-Kennzahlen sind das erste Warnsignal für einen PE-Fonds. Die Regel ist einfach: Wenn Ihre Kennzahlen nicht aus Ihren Rohdaten durch eine unabhängige Drittpartei rekonstruiert werden können, werden sie nicht zum Nennwert akzeptiert. Beauftragen Sie vor der Einreichung ein Kennzahlenaudit — die Kosten sind im Vergleich zum Unterschied beim Multiplikator marginal.',
+        es: 'MRR autodeclarado, churn calculado sin una definición clara, NRR inflado por expansiones no recurrentes: las métricas SaaS no auditadas son la primera señal de alarma para un fondo PE. La regla es simple: si tus métricas no pueden ser reconstruidas desde tus datos brutos por un tercero independiente, no serán aceptadas a su valor nominal. Encarga una auditoría de métricas antes de enviar — el coste es marginal en relación con la diferencia en el múltiplo.',
+        it: 'MRR autodichiarato, churn calcolato senza una definizione chiara, NRR gonfiato da espansioni non ricorrenti: le metriche SaaS non verificate sono il primo segnale di allerta per un fondo PE. La regola è semplice: se le tue metriche non possono essere ricostruite dai tuoi dati grezzi da una terza parte indipendente, non saranno accettate al loro valore nominale. Commissiona un audit delle metriche prima di inviare — il costo è marginale rispetto alla differenza sul multiplo.',
+        nl: 'Zelf gerapporteerde MRR, churn berekend zonder duidelijke definitie, NRR opgeblazen door niet-terugkerende uitbreidingen: niet-geauditeerde SaaS-maatstaven zijn het eerste rode vlaggetje voor een PE-fonds. De regel is eenvoudig: als uw maatstaven niet kunnen worden gereconstrueerd uit uw ruwe gegevens door een onafhankelijke derde partij, worden ze niet geaccepteerd tegen nominale waarde. Geef opdracht voor een maatstafaudit vóór indiening — de kosten zijn marginaal ten opzichte van het verschil op de multiple.',
       }},
-      { type: 'h2', text: { fr: '4. Non-conformité RGPD', en: '4. GDPR non-compliance' } },
+      { type: 'h2', text: { fr: '4. Non-conformité RGPD', en: '4. GDPR non-compliance', de: '4. DSGVO-Nichtkonformität', es: '4. Incumplimiento del RGPD', it: '4. Non conformità al GDPR', nl: '4. AVG-niet-naleving' } },
       { type: 'p', text: {
         fr: 'Un actif non conforme RGPD est un actif qui transfère un risque réglementaire chiffrable à l\'acquéreur. En Europe, cela se traduit par une clause de représentation et garantie élargie, ou plus simplement par un retrait de l\'offre. Les points les plus fréquemment bloquants : absence de DPA avec les sous-traitants, cookies non conformis, absence de registre des traitements. Tous sont corrigeables en 4 à 8 semaines — faites-le avant de soumettre.',
         en: 'A GDPR non-compliant asset transfers a quantifiable regulatory risk to the acquirer. In Europe, this translates into a widened representation and warranty clause, or more simply a withdrawal of the offer. The most frequently blocking points: missing DPAs with sub-processors, non-compliant cookies, absence of processing register. All are correctable in 4–8 weeks — do it before submitting.',
+        de: 'Ein DSGVO-nicht-konformes Asset überträgt ein quantifizierbares Regulierungsrisiko auf den Käufer. In Europa bedeutet das eine erweiterte Zusicherungs- und Gewährleistungsklausel oder schlicht einen Angebotsrückzug. Die am häufigsten blockierenden Punkte: fehlende DPAs mit Unterauftragnehmern, nicht-konforme Cookies, fehlendes Verarbeitungsverzeichnis. Alle sind in 4–8 Wochen korrigierbar — tun Sie es vor der Einreichung.',
+        es: 'Un activo no conforme con el RGPD transfiere un riesgo regulatorio cuantificable al comprador. En Europa, esto se traduce en una cláusula de representación y garantía ampliada, o más simplemente en una retirada de la oferta. Los puntos más frecuentemente bloqueantes: ausencia de DPA con subencargados, cookies no conformes, ausencia de registro de tratamientos. Todos son corregibles en 4–8 semanas — hágalo antes de enviar.',
+        it: 'Un asset non conforme al GDPR trasferisce un rischio normativo quantificabile all\'acquirente. In Europa, questo si traduce in una clausola di dichiarazione e garanzia estesa, o più semplicemente in un ritiro dell\'offerta. I punti più frequentemente bloccanti: mancanza di DPA con i sub-responsabili, cookie non conformi, assenza di registro dei trattamenti. Tutti sono correggibili in 4–8 settimane — fatelo prima di inviare.',
+        nl: 'Een niet-AVG-conform asset draagt een kwantificeerbaar regelgevingsrisico over aan de koper. In Europa vertaalt dit zich in een uitgebreide verklarings- en garantieclausule, of meer simpelweg een terugtrekking van het aanbod. De meest blokkerend frequente punten: ontbrekende DPA\'s met sub-verwerkers, niet-conforme cookies, ontbreken van verwerkingsregister. Alle zijn in 4–8 weken corrigeerbaar — doe het vóór indiening.',
       }},
-      { type: 'h2', text: { fr: '5. Mauvais timing de présentation', en: '5. Wrong timing of presentation' } },
+      { type: 'h2', text: { fr: '5. Mauvais timing de présentation', en: '5. Wrong timing of presentation', de: '5. Falsches Präsentationstiming', es: '5. Mal momento de presentación', it: '5. Tempistica di presentazione sbagliata', nl: '5. Verkeerd presentatietijdstip' } },
       { type: 'p', text: {
         fr: 'Présenter un actif en phase de décroissance MRR, post-départ d\'un cofondateur clé, ou en période de restructuration client est structurellement pénalisant — même si les fondamentaux sont solides. Le timing optimal pour céder est quand les métriques sont en croissance ou stable, que l\'équipe est en place, et que vous avez 6 à 12 mois de runway. Préparer une cession prend 3 à 6 mois. Ne commencez pas la réflexion quand vous êtes déjà en difficulté.',
         en: 'Presenting an asset during MRR decline, post-departure of a key co-founder, or during client restructuring is structurally penalising — even if the fundamentals are sound. The optimal timing to sell is when metrics are growing or stable, the team is in place, and you have 6–12 months of runway. Preparing a sale takes 3–6 months. Do not start thinking about it when you are already in difficulty.',
+        de: 'Ein Asset in einer Phase des MRR-Rückgangs, nach dem Abgang eines wichtigen Mitgründers oder in einer Kundenneustrukturierungsphase zu präsentieren, ist strukturell benachteiligend — selbst wenn die Fundamentaldaten solide sind. Das optimale Timing zum Verkauf ist, wenn die Kennzahlen wachsen oder stabil sind, das Team vorhanden ist und Sie eine Startbahn von 6–12 Monaten haben. Die Vorbereitung eines Verkaufs dauert 3–6 Monate. Beginnen Sie nicht nachzudenken, wenn Sie bereits in Schwierigkeiten sind.',
+        es: 'Presentar un activo en fase de declive del MRR, tras la salida de un cofundador clave, o en un período de reestructuración de clientes es estructuralmente penalizador — incluso si los fundamentales son sólidos. El momento óptimo para vender es cuando las métricas están creciendo o estables, el equipo está en marcha y tienes 6–12 meses de pista. Preparar una venta lleva 3–6 meses. No empieces a pensar en ello cuando ya estás en dificultades.',
+        it: 'Presentare un asset in una fase di calo del MRR, dopo la partenza di un co-fondatore chiave, o in un periodo di ristrutturazione clienti è strutturalmente penalizzante — anche se i fondamentali sono solidi. Il timing ottimale per vendere è quando le metriche sono in crescita o stabili, il team è in loco e hai 6–12 mesi di pista. Preparare una vendita richiede 3–6 mesi. Non iniziare a pensarci quando sei già in difficoltà.',
+        nl: 'Een asset presenteren tijdens een MRR-daling, na het vertrek van een sleutel-mede-oprichter, of tijdens een klantherstructureringsperiode is structureel bestraffend — zelfs als de fundamenten solide zijn. Het optimale moment om te verkopen is wanneer de maatstaven groeien of stabiel zijn, het team aanwezig is en u een startbaan van 6–12 maanden heeft. Een verkoop voorbereiden duurt 3–6 maanden. Begin er niet over na te denken wanneer u al in moeilijkheden zit.',
       }},
       { type: 'quote', text: {
         fr: 'La valorisation ne se négocie pas le jour de l\'offre. Elle se construit dans les 12 mois qui précèdent.',
         en: 'Valuation is not negotiated on the day of the offer. It is built in the 12 months before it.',
+        de: 'Die Bewertung wird nicht am Tag des Angebots verhandelt. Sie wird in den 12 Monaten davor aufgebaut.',
+        es: 'La valoración no se negocia el día de la oferta. Se construye en los 12 meses anteriores.',
+        it: 'La valutazione non si negozia il giorno dell\'offerta. Si costruisce nei 12 mesi precedenti.',
+        nl: 'De waardering wordt niet onderhandeld op de dag van het aanbod. Ze wordt opgebouwd in de 12 maanden ervoor.',
       }, author: 'AEGRYN Advisory' },
     ],
   },
@@ -151,57 +224,89 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Qu\'est-ce qu\'un actif tech vraiment certifiable ?',
       en: 'What makes a tech asset truly certifiable?',
+      de: 'Was macht ein Tech-Asset wirklich zertifizierbar?',
+      es: '¿Qué hace que un activo tech sea verdaderamente certificable?',
+      it: 'Cosa rende un asset tech veramente certificabile?',
+      nl: 'Wat maakt een tech-asset echt certificeerbaar?',
     },
     excerpt: {
       fr: 'Les critères objectifs qui distinguent un actif certifiable d\'un actif qui nécessite un plan de remédiation préalable selon le protocole AEGRYN Grade.',
       en: 'The objective criteria that distinguish a certifiable asset from one requiring a remediation plan, according to the AEGRYN Grade protocol.',
+      de: 'Die objektiven Kriterien, die ein zertifizierbares Asset von einem unterscheiden, das einen Sanierungsplan benötigt, gemäß dem AEGRYN Grade-Protokoll.',
+      es: 'Los criterios objetivos que distinguen un activo certificable de uno que requiere un plan de remediación previo según el protocolo AEGRYN Grade.',
+      it: 'I criteri oggettivi che distinguono un asset certificabile da uno che richiede un piano di rimediazione preventivo secondo il protocollo AEGRYN Grade.',
+      nl: 'De objectieve criteria die een certificeerbaar asset onderscheiden van een asset dat een saneringsplan vereist, volgens het AEGRYN Grade-protocol.',
     },
     body: [
       { type: 'p', text: {
         fr: '75% des actifs soumis au protocole AEGRYN Grade nécessitent un plan de remédiation avant d\'atteindre un grade publiable. Ce chiffre n\'est pas un aveu d\'échec du marché — c\'est le reflet d\'une réalité structurelle : la plupart des fondateurs construisent pour scale, pas pour cession. Certifier un actif, c\'est le rendre lisible, opposable, et transférable. Voici ce que ça signifie concrètement.',
         en: '75% of assets submitted to the AEGRYN Grade protocol require a remediation plan before reaching a publishable grade. This figure is not an indictment of the market — it reflects a structural reality: most founders build for scale, not for exit. Certifying an asset means making it readable, enforceable, and transferable. Here is what that means in practice.',
+        de: '75% der beim AEGRYN Grade-Protokoll eingereichten Assets benötigen einen Sanierungsplan, bevor sie eine veröffentlichbare Note erreichen. Diese Zahl ist kein Eingeständnis des Marktversagens — sie spiegelt eine strukturelle Realität wider: Die meisten Gründer bauen für das Wachstum, nicht für den Exit. Ein Asset zu zertifizieren bedeutet, es lesbar, durchsetzbar und übertragbar zu machen.',
+        es: 'El 75% de los activos presentados al protocolo AEGRYN Grade necesitan un plan de remediación antes de alcanzar una calificación publicable. Esta cifra no es una admisión del fracaso del mercado — refleja una realidad estructural: la mayoría de los fundadores construyen para escalar, no para ceder. Certificar un activo significa hacerlo legible, ejecutable y transferible.',
+        it: 'Il 75% degli asset inviati al protocollo AEGRYN Grade necessita di un piano di rimediazione prima di raggiungere un grado pubblicabile. Questo dato non è un\'ammissione di fallimento del mercato — riflette una realtà strutturale: la maggior parte dei fondatori costruisce per la crescita, non per la cessione. Certificare un asset significa renderlo leggibile, eseguibile e trasferibile.',
+        nl: '75% van de assets ingediend bij het AEGRYN Grade-protocol hebben een saneringsplan nodig voordat ze een publiceerbare graad bereiken. Dit cijfer is geen erkenning van marktfalen — het weerspiegelt een structurele realiteit: de meeste oprichters bouwen voor groei, niet voor exit. Een asset certificeren betekent het leesbaar, afdwingbaar en overdraagbaar maken.',
       }},
-      { type: 'h2', text: { fr: 'Les 4 dimensions du protocole AEGRYN Grade', en: 'The 4 dimensions of the AEGRYN Grade protocol' } },
-      { type: 'h3', text: { fr: 'C — Code & Architecture', en: 'C — Code & Architecture' } },
+      { type: 'h2', text: { fr: 'Les 4 dimensions du protocole AEGRYN Grade', en: 'The 4 dimensions of the AEGRYN Grade protocol', de: 'Die 4 Dimensionen des AEGRYN Grade-Protokolls', es: 'Las 4 dimensiones del protocolo AEGRYN Grade', it: 'Le 4 dimensioni del protocollo AEGRYN Grade', nl: 'De 4 dimensies van het AEGRYN Grade-protocol' } },
+      { type: 'h3', text: { fr: 'C — Code & Architecture', en: 'C — Code & Architecture', de: 'C — Code & Architektur', es: 'C — Código & Arquitectura', it: 'C — Codice & Architettura', nl: 'C — Code & Architectuur' } },
       { type: 'p', text: {
         fr: 'Qualité du code source (couverture tests, documentation, absence de hardcoded secrets), architecture (microservices vs monolithe, dette identifiée), dépendances (versions, licences, vulnérabilités), et dépôt IP (INPI, EUIPO ou équivalent). Un actif qui échoue en dimension C ne peut pas recevoir de grade supérieur à B.',
         en: 'Source code quality (test coverage, documentation, absence of hardcoded secrets), architecture (microservices vs monolith, identified debt), dependencies (versions, licences, vulnerabilities), and IP filing (INPI, EUIPO or equivalent). An asset failing on dimension C cannot receive a grade above B.',
+        de: 'Quellcodequalität (Testabdeckung, Dokumentation, keine hartcodierten Geheimnisse), Architektur (Microservices vs. Monolith, identifizierte Schulden), Abhängigkeiten (Versionen, Lizenzen, Schwachstellen) und IP-Anmeldung (INPI, EUIPO oder äquivalent). Ein Asset, das in Dimension C scheitert, kann keinen höheren Grade als B erhalten.',
+        es: 'Calidad del código fuente (cobertura de tests, documentación, ausencia de secretos hardcodeados), arquitectura (microservicios vs monolito, deuda identificada), dependencias (versiones, licencias, vulnerabilidades) y registro IP (INPI, EUIPO o equivalente). Un activo que falla en la dimensión C no puede recibir una calificación superior a B.',
+        it: 'Qualità del codice sorgente (copertura test, documentazione, assenza di segreti hardcoded), architettura (microservizi vs monolite, debito identificato), dipendenze (versioni, licenze, vulnerabilità) e deposito IP (INPI, EUIPO o equivalente). Un asset che fallisce nella dimensione C non può ricevere un grade superiore a B.',
+        nl: 'Broncodeekwaliteit (testdekking, documentatie, geen hardgecodeerde geheimen), architectuur (microservices vs. monoliet, geïdentificeerde schuld), afhankelijkheden (versies, licenties, kwetsbaarheden) en IP-indiening (INPI, EUIPO of equivalent). Een asset dat faalt op dimensie C kan geen grade boven B ontvangen.',
       }},
-      { type: 'h3', text: { fr: 'I — Infrastructure & Sécurité', en: 'I — Infrastructure & Security' } },
+      { type: 'h3', text: { fr: 'I — Infrastructure & Sécurité', en: 'I — Infrastructure & Security', de: 'I — Infrastruktur & Sicherheit', es: 'I — Infraestructura & Seguridad', it: 'I — Infrastruttura & Sicurezza', nl: 'I — Infrastructuur & Beveiliging' } },
       { type: 'p', text: {
         fr: 'Souveraineté de l\'hébergement (cloud provider, région de données, SLA), sécurité opérationnelle (WAF, accès MFA, logs d\'audit, backups testés), conformité (ISO 27001, SOC 2, ou équivalent documenté), et absence de single point of failure critique. L\'infrastructure non souveraine ou non documentée est la deuxième cause de blocage en certification.',
         en: 'Hosting sovereignty (cloud provider, data region, SLA), operational security (WAF, MFA access, audit logs, tested backups), compliance (ISO 27001, SOC 2, or documented equivalent), and absence of critical single point of failure. Non-sovereign or undocumented infrastructure is the second most common blocking point in certification.',
+        de: 'Hosting-Souveränität (Cloud-Anbieter, Datenregion, SLA), operative Sicherheit (WAF, MFA-Zugang, Audit-Logs, getestete Backups), Compliance (ISO 27001, SOC 2 oder dokumentiertes Äquivalent) und fehlender kritischer Single Point of Failure. Nicht-souveräne oder undokumentierte Infrastruktur ist der zweithäufigste Blockierungsgrund bei der Zertifizierung.',
+        es: 'Soberanía del alojamiento (proveedor cloud, región de datos, SLA), seguridad operacional (WAF, acceso MFA, logs de auditoría, backups probados), cumplimiento (ISO 27001, SOC 2 o equivalente documentado) y ausencia de punto único de fallo crítico. La infraestructura no soberana o no documentada es la segunda causa de bloqueo en certificación.',
+        it: 'Sovranità dell\'hosting (cloud provider, regione dati, SLA), sicurezza operativa (WAF, accesso MFA, log di audit, backup testati), conformità (ISO 27001, SOC 2 o equivalente documentato) e assenza di single point of failure critico. L\'infrastruttura non sovrana o non documentata è la seconda causa di blocco nella certificazione.',
+        nl: 'Hosting-soevereiniteit (cloud provider, datagebied, SLA), operationele beveiliging (WAF, MFA-toegang, auditlogs, geteste backups), compliance (ISO 27001, SOC 2 of gedocumenteerd equivalent) en afwezigheid van kritiek single point of failure. Niet-soevereine of ongedocumenteerde infrastructuur is de tweede meest voorkomende blokkeringsoorzaak bij certificering.',
       }},
-      { type: 'h3', text: { fr: 'F — Finance & Métriques', en: 'F — Finance & Metrics' } },
+      { type: 'h3', text: { fr: 'F — Finance & Métriques', en: 'F — Finance & Metrics', de: 'F — Finanzen & Kennzahlen', es: 'F — Finanzas & Métricas', it: 'F — Finanza & Metriche', nl: 'F — Financiën & Maatstaven' } },
       { type: 'p', text: {
         fr: 'MRR/ARR vérifiable depuis les données brutes (Stripe, Chargebee, ou export comptable), churn calculé selon une définition standard, NRR calculé sur base client sans expansions non récurrentes, et coûts d\'infrastructure documentés. Les métriques non auditables sont assimilées à des métriques inexistantes — elles ne peuvent pas servir de base de valorisation.',
         en: 'MRR/ARR verifiable from raw data (Stripe, Chargebee, or accounting export), churn calculated to a standard definition, NRR calculated on a customer basis without non-recurring expansions, and documented infrastructure costs. Non-auditable metrics are treated as non-existent — they cannot serve as a valuation basis.',
+        de: 'MRR/ARR aus Rohdaten verifizierbar (Stripe, Chargebee oder Buchhaltungsexport), Churn nach Standarddefinition berechnet, NRR kundenbezogen ohne nicht-wiederkehrende Expansionen berechnet, und dokumentierte Infrastrukturkosten. Nicht prüfbare Kennzahlen werden als nicht vorhandene behandelt — sie können nicht als Bewertungsgrundlage dienen.',
+        es: 'MRR/ARR verificable desde los datos brutos (Stripe, Chargebee o exportación contable), churn calculado según una definición estándar, NRR calculado sobre base de clientes sin expansiones no recurrentes, y costes de infraestructura documentados. Las métricas no auditables se asimilan a métricas inexistentes — no pueden servir de base de valoración.',
+        it: 'MRR/ARR verificabile dai dati grezzi (Stripe, Chargebee o export contabile), churn calcolato secondo una definizione standard, NRR calcolato su base clienti senza espansioni non ricorrenti, e costi infrastrutturali documentati. Le metriche non verificabili sono trattate come inesistenti — non possono servire da base di valutazione.',
+        nl: 'MRR/ARR verifieerbaar vanuit ruwe data (Stripe, Chargebee of boekhoudexport), churn berekend volgens een standaarddefinitie, NRR berekend per klant zonder niet-terugkerende uitbreidingen, en gedocumenteerde infrastructuurkosten. Niet-controleerbare maatstaven worden behandeld als niet-bestaande — ze kunnen niet dienen als waarderingsbasis.',
       }},
-      { type: 'h3', text: { fr: 'S — Stratégie & Transférabilité', en: 'S — Strategy & Transferability' } },
+      { type: 'h3', text: { fr: 'S — Stratégie & Transférabilité', en: 'S — Strategy & Transferability', de: 'S — Strategie & Übertragbarkeit', es: 'S — Estrategia & Transferibilidad', it: 'S — Strategia & Trasferibilità', nl: 'S — Strategie & Overdraagbaarheid' } },
       { type: 'p', text: {
         fr: 'Dépendance au fondateur (score 1–5), documentation opérationnelle (runbooks, onboarding, processus documentés), contractualisation clients (durée, conditions de résiliation, concentration client), et potentiel de croissance post-acquisition. Un actif dont l\'opération dépend entièrement d\'une seule personne non remplaçable reçoit un score S critique — même avec d\'excellentes métriques financières.',
         en: 'Founder dependency (score 1–5), operational documentation (runbooks, onboarding, documented processes), client contractualisation (duration, termination conditions, client concentration), and post-acquisition growth potential. An asset whose operation depends entirely on a single non-replaceable individual receives a critical S score — even with excellent financial metrics.',
+        de: 'Gründer-Abhängigkeit (Score 1–5), operative Dokumentation (Runbooks, Onboarding, dokumentierte Prozesse), Kundenkontraktualisierung (Laufzeit, Kündigungsbedingungen, Kundenkonzentration) und Post-Akquisitions-Wachstumspotenzial. Ein Asset, dessen Betrieb vollständig von einer einzigen nicht ersetzbaren Person abhängt, erhält einen kritischen S-Score — selbst bei hervorragenden Finanzkennzahlen.',
+        es: 'Dependencia del fundador (puntuación 1–5), documentación operacional (runbooks, onboarding, procesos documentados), contractualización de clientes (duración, condiciones de rescisión, concentración de clientes) y potencial de crecimiento post-adquisición. Un activo cuya operación depende enteramente de una sola persona no reemplazable recibe una puntuación S crítica — incluso con excelentes métricas financieras.',
+        it: 'Dipendenza dal fondatore (score 1–5), documentazione operativa (runbook, onboarding, processi documentati), contrattualizzazione clienti (durata, condizioni di risoluzione, concentrazione clienti) e potenziale di crescita post-acquisizione. Un asset la cui operazione dipende interamente da una singola persona non sostituibile riceve un punteggio S critico — anche con eccellenti metriche finanziarie.',
+        nl: 'Oprichterafhankelijkheid (score 1–5), operationele documentatie (runbooks, onboarding, gedocumenteerde processen), klantcontractualisering (looptijd, opzeggingsvoorwaarden, klantenconcentratie) en post-acquisitiegroeipotenziaal. Een asset waarvan de werking volledig afhangt van één niet-vervangbaar persoon ontvangt een kritische S-score — zelfs met uitstekende financiële maatstaven.',
       }},
-      { type: 'h2', text: { fr: 'Pourquoi 75% échouent au premier passage', en: 'Why 75% fail at first pass' } },
+      { type: 'h2', text: { fr: 'Pourquoi 75% échouent au premier passage', en: 'Why 75% fail at first pass', de: 'Warum 75% beim ersten Durchgang scheitern', es: 'Por qué el 75% falla en el primer intento', it: 'Perché il 75% fallisce al primo passaggio', nl: 'Waarom 75% bij de eerste doorgang faalt' } },
       { type: 'list', items: [
-        { fr: 'IP non déposée ou déposée tardivement (cause n°1)', en: 'IP not filed or filed late (cause #1)' },
-        { fr: 'Métriques financières auto-déclarées sans traçabilité', en: 'Self-reported financial metrics without traceability' },
-        { fr: 'Infrastructure hébergée sur compte personnel du fondateur', en: 'Infrastructure hosted on the founder\'s personal account' },
-        { fr: 'Dépendance opérationnelle totale au fondateur', en: 'Total operational dependency on the founder' },
-        { fr: 'Absence de contrats clients formalisés (paiements informels)', en: 'Absence of formalised client contracts (informal payments)' },
+        { fr: 'IP non déposée ou déposée tardivement (cause n°1)', en: 'IP not filed or filed late (cause #1)', de: 'IP nicht oder zu spät angemeldet (Ursache Nr. 1)', es: 'IP no registrada o registrada tardíamente (causa n.°1)', it: 'IP non depositata o depositata in ritardo (causa n.1)', nl: 'IP niet of te laat ingediend (oorzaak nr. 1)' },
+        { fr: 'Métriques financières auto-déclarées sans traçabilité', en: 'Self-reported financial metrics without traceability', de: 'Selbst gemeldete Finanzkennzahlen ohne Nachverfolgbarkeit', es: 'Métricas financieras autodeclaradas sin trazabilidad', it: 'Metriche finanziarie auto-dichiarate senza tracciabilità', nl: 'Zelf gerapporteerde financiële maatstaven zonder traceerbaarheid' },
+        { fr: 'Infrastructure hébergée sur compte personnel du fondateur', en: 'Infrastructure hosted on the founder\'s personal account', de: 'Infrastruktur auf dem persönlichen Konto des Gründers gehostet', es: 'Infraestructura alojada en la cuenta personal del fundador', it: 'Infrastruttura ospitata sull\'account personale del fondatore', nl: 'Infrastructuur gehost op het persoonlijke account van de oprichter' },
+        { fr: 'Dépendance opérationnelle totale au fondateur', en: 'Total operational dependency on the founder', de: 'Totale operative Abhängigkeit vom Gründer', es: 'Dependencia operacional total al fundador', it: 'Dipendenza operativa totale dal fondatore', nl: 'Totale operationele afhankelijkheid van de oprichter' },
+        { fr: 'Absence de contrats clients formalisés (paiements informels)', en: 'Absence of formalised client contracts (informal payments)', de: 'Fehlende formalisierte Kundenverträge (informelle Zahlungen)', es: 'Ausencia de contratos de clientes formalizados (pagos informales)', it: 'Assenza di contratti clienti formalizzati (pagamenti informali)', nl: 'Afwezigheid van geformaliseerde klantcontracten (informele betalingen)' },
       ]},
-      { type: 'h2', text: { fr: 'Checklist pré-soumission', en: 'Pre-submission checklist' } },
+      { type: 'h2', text: { fr: 'Checklist pré-soumission', en: 'Pre-submission checklist', de: 'Checkliste vor der Einreichung', es: 'Lista de verificación previa a la presentación', it: 'Checklist pre-invio', nl: 'Checklist vóór indiening' } },
       { type: 'list', items: [
-        { fr: '✓ Dépôt IP du code source réalisé', en: '✓ Source code IP filing completed' },
-        { fr: '✓ Tests automatisés couvrant ≥60% du codebase', en: '✓ Automated tests covering ≥60% of codebase' },
-        { fr: '✓ MRR exportable depuis la source de facturation', en: '✓ MRR exportable from billing source' },
-        { fr: '✓ Infrastructure hébergée sous compte entreprise (pas personnel)', en: '✓ Infrastructure hosted under company account (not personal)' },
-        { fr: '✓ Conformité RGPD documentée (registre traitements, DPA sous-traitants)', en: '✓ GDPR compliance documented (processing register, sub-processor DPAs)' },
-        { fr: '✓ Au moins un employé ou prestataire capable d\'opérer sans le fondateur', en: '✓ At least one employee or contractor capable of operating without the founder' },
+        { fr: '✓ Dépôt IP du code source réalisé', en: '✓ Source code IP filing completed', de: '✓ IP-Anmeldung des Quellcodes abgeschlossen', es: '✓ Registro IP del código fuente realizado', it: '✓ Deposito IP del codice sorgente effettuato', nl: '✓ IP-indiening van broncode voltooid' },
+        { fr: '✓ Tests automatisés couvrant ≥60% du codebase', en: '✓ Automated tests covering ≥60% of codebase', de: '✓ Automatisierte Tests mit ≥60% Codebase-Abdeckung', es: '✓ Tests automatizados cubriendo ≥60% del codebase', it: '✓ Test automatizzati che coprono ≥60% del codebase', nl: '✓ Geautomatiseerde tests met ≥60% codebase-dekking' },
+        { fr: '✓ MRR exportable depuis la source de facturation', en: '✓ MRR exportable from billing source', de: '✓ MRR aus der Abrechnungsquelle exportierbar', es: '✓ MRR exportable desde la fuente de facturación', it: '✓ MRR esportabile dalla fonte di fatturazione', nl: '✓ MRR exporteerbaar vanuit facturatiebron' },
+        { fr: '✓ Infrastructure hébergée sous compte entreprise (pas personnel)', en: '✓ Infrastructure hosted under company account (not personal)', de: '✓ Infrastruktur unter Unternehmenskonto (nicht persönlich) gehostet', es: '✓ Infraestructura alojada bajo cuenta de empresa (no personal)', it: '✓ Infrastruttura ospitata su account aziendale (non personale)', nl: '✓ Infrastructuur gehost onder bedrijfsaccount (niet persoonlijk)' },
+        { fr: '✓ Conformité RGPD documentée (registre traitements, DPA sous-traitants)', en: '✓ GDPR compliance documented (processing register, sub-processor DPAs)', de: '✓ DSGVO-Compliance dokumentiert (Verarbeitungsregister, Sub-Processor-DPAs)', es: '✓ Cumplimiento RGPD documentado (registro de tratamientos, DPA subprocesadores)', it: '✓ Conformità GDPR documentata (registro trattamenti, DPA sub-responsabili)', nl: '✓ AVG-naleving gedocumenteerd (verwerkingsregister, sub-verwerker DPA\'s)' },
+        { fr: '✓ Au moins un employé ou prestataire capable d\'opérer sans le fondateur', en: '✓ At least one employee or contractor capable of operating without the founder', de: '✓ Mindestens ein Mitarbeiter oder Auftragnehmer, der ohne den Gründer operieren kann', es: '✓ Al menos un empleado o proveedor capaz de operar sin el fundador', it: '✓ Almeno un dipendente o collaboratore in grado di operare senza il fondatore', nl: '✓ Minstens één werknemer of aannemer die zonder de oprichter kan werken' },
       ]},
       { type: 'quote', text: {
         fr: 'Un actif certifiable n\'est pas un actif parfait. C\'est un actif dont les forces et les failles sont documentées, mesurées et opposables.',
         en: 'A certifiable asset is not a perfect asset. It is an asset whose strengths and weaknesses are documented, measured, and enforceable.',
+        de: 'Ein zertifizierbares Asset ist kein perfektes Asset. Es ist ein Asset, dessen Stärken und Schwächen dokumentiert, gemessen und durchsetzbar sind.',
+        es: 'Un activo certificable no es un activo perfecto. Es un activo cuyas fortalezas y debilidades están documentadas, medidas y son ejecutables.',
+        it: 'Un asset certificabile non è un asset perfetto. È un asset le cui forze e debolezze sono documentate, misurate ed eseguibili.',
+        nl: 'Een certificeerbaar asset is geen perfect asset. Het is een asset waarvan de sterke en zwakke punten gedocumenteerd, gemeten en afdwingbaar zijn.',
       }, author: 'AEGRYN Grade Protocol — v2.1' },
     ],
   },
@@ -214,61 +319,89 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Comment les acquéreurs PE évaluent un SaaS en 2026',
       en: 'How PE acquirers evaluate a SaaS in 2026',
+      de: 'Wie PE-Käufer ein SaaS im Jahr 2026 bewerten',
+      es: 'Cómo los compradores PE evalúan un SaaS en 2026',
+      it: 'Come gli acquirenti PE valutano un SaaS nel 2026',
+      nl: 'Hoe PE-kopers een SaaS in 2026 evalueren',
     },
     excerpt: {
       fr: 'En 2026, les fonds PE représentent 58% des acquéreurs sur le marché SaaS européen. Leur processus d\'évaluation est plus rigoureux que jamais — comprendre leurs critères fait la différence.',
       en: 'In 2026, PE funds represent 58% of acquirers in the European SaaS market. Their evaluation process is more rigorous than ever — understanding their criteria makes the difference.',
+      de: 'Im Jahr 2026 repräsentieren PE-Fonds 58% der Käufer auf dem europäischen SaaS-Markt. Ihr Bewertungsprozess ist rigoros wie nie zuvor — ihre Kriterien zu verstehen macht den Unterschied.',
+      es: 'En 2026, los fondos PE representan el 58% de los compradores en el mercado SaaS europeo. Su proceso de evaluación es más riguroso que nunca — entender sus criterios marca la diferencia.',
+      it: 'Nel 2026, i fondi PE rappresentano il 58% degli acquirenti nel mercato SaaS europeo. Il loro processo di valutazione è più rigoroso che mai — comprendere i loro criteri fa la differenza.',
+      nl: 'In 2026 vertegenwoordigen PE-fondsen 58% van de kopers op de Europese SaaS-markt. Hun evaluatieproces is strenger dan ooit — hun criteria begrijpen maakt het verschil.',
     },
     body: [
       { type: 'p', text: {
         fr: 'En 2026, les fonds PE représentent 58% des acquéreurs sur le marché SaaS européen. Leur processus d\'évaluation est devenu plus rigoureux que jamais — et les fondateurs qui ne comprennent pas leurs critères laissent de la valeur sur la table.',
         en: 'In 2026, PE funds represent 58% of acquirers in the European SaaS market. Their evaluation process has become more rigorous than ever — and founders who do not understand their criteria leave value on the table.',
+        de: 'Im Jahr 2026 repräsentieren PE-Fonds 58% der Käufer auf dem europäischen SaaS-Markt. Ihr Bewertungsprozess ist rigoros wie nie zuvor — und Gründer, die ihre Kriterien nicht verstehen, lassen Wert auf dem Tisch liegen.',
+        es: 'En 2026, los fondos PE representan el 58% de los compradores en el mercado SaaS europeo. Su proceso de evaluación se ha vuelto más riguroso que nunca — y los fundadores que no comprenden sus criterios dejan valor sobre la mesa.',
+        it: 'Nel 2026, i fondi PE rappresentano il 58% degli acquirenti nel mercato SaaS europeo. Il loro processo di valutazione è diventato più rigoroso che mai — e i fondatori che non comprendono i loro criteri lasciano valore sul tavolo.',
+        nl: 'In 2026 vertegenwoordigen PE-fondsen 58% van de kopers op de Europese SaaS-markt. Hun evaluatieproces is strenger dan ooit — en oprichters die hun criteria niet begrijpen, laten waarde liggen.',
       }},
-      { type: 'h2', text: { fr: 'Les 4 métriques non-négociables', en: 'The 4 non-negotiable metrics' } },
+      { type: 'h2', text: { fr: 'Les 4 métriques non-négociables', en: 'The 4 non-negotiable metrics', de: 'Die 4 nicht verhandelbaren Kennzahlen', es: 'Las 4 métricas no negociables', it: 'Le 4 metriche non negoziabili', nl: 'De 4 niet-onderhandelbare maatstaven' } },
       { type: 'list', items: [
-        { fr: 'NRR (Net Revenue Retention) — Le seuil critique est 100%. En dessous, l\'actif perd de la valeur chaque année par attrition. Au-dessus de 110%, vous êtes dans le top quartile et le multiple monte en conséquence.', en: 'NRR (Net Revenue Retention) — The critical threshold is 100%. Below, the asset loses value each year through attrition. Above 110%, you are in the top quartile and the multiple rises accordingly.' },
-        { fr: 'Churn mensuel — Tout churn supérieur à 2% mensuel sur une base client B2B est rédhibitoire. Un PE qui achète avec un churn de 5% sait qu\'il perd 46% de sa base en 12 mois.', en: 'Monthly churn — Any churn above 2% monthly on a B2B client base is a deal-breaker. A PE buying at 5% churn knows it will lose 46% of its base in 12 months.' },
-        { fr: 'LTV:CAC ratio — Le minimum acceptable est 3:1. Les actifs premium sont à 5:1 ou plus. Un ratio inférieur signale un modèle d\'acquisition non scalable.', en: 'LTV:CAC ratio — The minimum acceptable is 3:1. Premium assets are at 5:1 or more. A lower ratio signals a non-scalable acquisition model.' },
-        { fr: 'Marges brutes — Seuil minimum 60% pour un SaaS B2B. Les multiples premium (6x+ ARR) sont réservés aux actifs avec des marges supérieures à 75%.', en: 'Gross margins — Minimum threshold 60% for B2B SaaS. Premium multiples (6x+ ARR) are reserved for assets with margins above 75%.' },
+        { fr: 'NRR (Net Revenue Retention) — Le seuil critique est 100%. En dessous, l\'actif perd de la valeur chaque année par attrition. Au-dessus de 110%, vous êtes dans le top quartile et le multiple monte en conséquence.', en: 'NRR (Net Revenue Retention) — The critical threshold is 100%. Below, the asset loses value each year through attrition. Above 110%, you are in the top quartile and the multiple rises accordingly.', de: 'NRR (Net Revenue Retention) — Der kritische Schwellenwert ist 100%. Darunter verliert das Asset jährlich an Wert durch Attrition. Über 110% sind Sie im Top-Quartil und der Multiplikator steigt entsprechend.', es: 'NRR (Net Revenue Retention) — El umbral crítico es 100%. Por debajo, el activo pierde valor cada año por desgaste. Por encima del 110%, está en el cuartil superior y el múltiplo sube en consecuencia.', it: 'NRR (Net Revenue Retention) — La soglia critica è 100%. Al di sotto, l\'asset perde valore ogni anno per attrito. Sopra il 110%, si è nel quartile superiore e il multiplo sale di conseguenza.', nl: 'NRR (Net Revenue Retention) — De kritische drempel is 100%. Daaronder verliest het asset jaarlijks waarde door uitval. Boven 110% bevindt u zich in het topkwartiel en stijgt de multiple dienovereenkomstig.' },
+        { fr: 'Churn mensuel — Tout churn supérieur à 2% mensuel sur une base client B2B est rédhibitoire. Un PE qui achète avec un churn de 5% sait qu\'il perd 46% de sa base en 12 mois.', en: 'Monthly churn — Any churn above 2% monthly on a B2B client base is a deal-breaker. A PE buying at 5% churn knows it will lose 46% of its base in 12 months.', de: 'Monatlicher Churn — Jeder Churn über 2% monatlich auf einer B2B-Kundenbasis ist ein K.O.-Kriterium. Ein PE, das bei 5% Churn kauft, weiß, dass es in 12 Monaten 46% seiner Basis verliert.', es: 'Churn mensual — Cualquier churn superior al 2% mensual sobre una base de clientes B2B es eliminatorio. Un PE que compra con un churn del 5% sabe que perderá el 46% de su base en 12 meses.', it: 'Churn mensile — Qualsiasi churn superiore al 2% mensile su una base clienti B2B è inaccettabile. Un PE che acquista con un churn del 5% sa che perderà il 46% della sua base in 12 mesi.', nl: 'Maandelijkse churn — Elke churn boven 2% maandelijks op een B2B-klantenbasis is een dealbreaker. Een PE dat koopt bij 5% churn weet dat het in 12 maanden 46% van zijn basis verliest.' },
+        { fr: 'LTV:CAC ratio — Le minimum acceptable est 3:1. Les actifs premium sont à 5:1 ou plus. Un ratio inférieur signale un modèle d\'acquisition non scalable.', en: 'LTV:CAC ratio — The minimum acceptable is 3:1. Premium assets are at 5:1 or more. A lower ratio signals a non-scalable acquisition model.', de: 'LTV:CAC-Verhältnis — Das akzeptable Minimum ist 3:1. Premium-Assets liegen bei 5:1 oder mehr. Ein niedrigeres Verhältnis signalisiert ein nicht skalierbares Akquisitionsmodell.', es: 'Ratio LTV:CAC — El mínimo aceptable es 3:1. Los activos premium están en 5:1 o más. Un ratio inferior señala un modelo de adquisición no escalable.', it: 'Rapporto LTV:CAC — Il minimo accettabile è 3:1. Gli asset premium sono a 5:1 o più. Un rapporto inferiore segnala un modello di acquisizione non scalabile.', nl: 'LTV:CAC-verhouding — Het aanvaardbare minimum is 3:1. Premium assets liggen op 5:1 of hoger. Een lagere verhouding signaleert een niet-schaalbaar acquisitiemodel.' },
+        { fr: 'Marges brutes — Seuil minimum 60% pour un SaaS B2B. Les multiples premium (6x+ ARR) sont réservés aux actifs avec des marges supérieures à 75%.', en: 'Gross margins — Minimum threshold 60% for B2B SaaS. Premium multiples (6x+ ARR) are reserved for assets with margins above 75%.', de: 'Bruttomargen — Mindestschwelle 60% für B2B SaaS. Premium-Multiplikatoren (6x+ ARR) sind Assets mit Margen über 75% vorbehalten.', es: 'Márgenes brutos — Umbral mínimo del 60% para un SaaS B2B. Los múltiplos premium (6x+ ARR) están reservados para activos con márgenes superiores al 75%.', it: 'Margini lordi — Soglia minima 60% per un SaaS B2B. I multipli premium (6x+ ARR) sono riservati agli asset con margini superiori al 75%.', nl: 'Bruttomarges — Minimumdrempel 60% voor B2B SaaS. Premium multiples (6x+ ARR) zijn gereserveerd voor assets met marges boven 75%.' },
       ]},
-      { type: 'h2', text: { fr: 'Ce que les PE regardent au-delà des métriques', en: 'What PE looks at beyond metrics' } },
+      { type: 'h2', text: { fr: 'Ce que les PE regardent au-delà des métriques', en: 'What PE looks at beyond metrics', de: 'Was PE jenseits der Kennzahlen betrachtet', es: 'Lo que los PE miran más allá de las métricas', it: 'Cosa guardano i PE oltre le metriche', nl: 'Wat PE kijkt voorbij de maatstaven' } },
       { type: 'p', text: {
         fr: 'Les métriques financières ne sont que le premier filtre. Ce qui détermine réellement la valorisation finale, c\'est la qualité des actifs sous-jacents — et c\'est là que la certification AEGRYN change la dynamique.',
         en: 'Financial metrics are only the first filter. What truly determines the final valuation is the quality of the underlying assets — and that is where AEGRYN certification changes the dynamic.',
+        de: 'Finanzkennzahlen sind nur der erste Filter. Was die endgültige Bewertung wirklich bestimmt, ist die Qualität der zugrunde liegenden Assets — und genau dort verändert die AEGRYN-Zertifizierung die Dynamik.',
+        es: 'Las métricas financieras son solo el primer filtro. Lo que realmente determina la valoración final es la calidad de los activos subyacentes — y ahí es donde la certificación AEGRYN cambia la dinámica.',
+        it: 'Le metriche finanziarie sono solo il primo filtro. Ciò che determina davvero la valutazione finale è la qualità degli asset sottostanti — ed è lì che la certificazione AEGRYN cambia la dinamica.',
+        nl: 'Financiële maatstaven zijn slechts het eerste filter. Wat de uiteindelijke waardering werkelijk bepaalt, is de kwaliteit van de onderliggende assets — en dat is waar AEGRYN-certificering de dynamiek verandert.',
       }},
       { type: 'list', items: [
-        { fr: 'IP maîtrisée — Marques déposées, droits logiciels formalisés, contrats prestataires avec cession de droits. Un actif sans IP propre ne peut pas être vendu à sa valeur réelle.', en: 'Controlled IP — Filed trademarks, formalised software rights, contractor agreements with rights assignment. An asset without its own IP cannot be sold at its real value.' },
-        { fr: 'Dette technique documentée — Un PE préfère une dette technique connue et chiffrée à une dette technique cachée. L\'opacité coûte entre 1x et 2x ARR à la valorisation finale.', en: 'Documented technical debt — A PE prefers known and quantified technical debt over hidden debt. Opacity costs between 1x and 2x ARR in final valuation.' },
-        { fr: 'Conformité RGPD — Aucun fonds institutionnel sérieux n\'acquiert un actif avec des lacunes RGPD documentées sans décote significative.', en: 'GDPR compliance — No serious institutional fund acquires an asset with documented GDPR gaps without a significant discount.' },
-        { fr: 'Concentration client — Un seul client représentant plus de 20% du revenu est un signal d\'alarme. Au-delà de 30%, certains fonds refusent catégoriquement.', en: 'Client concentration — A single client representing more than 20% of revenue is a red flag. Above 30%, some funds refuse outright.' },
+        { fr: 'IP maîtrisée — Marques déposées, droits logiciels formalisés, contrats prestataires avec cession de droits. Un actif sans IP propre ne peut pas être vendu à sa valeur réelle.', en: 'Controlled IP — Filed trademarks, formalised software rights, contractor agreements with rights assignment. An asset without its own IP cannot be sold at its real value.', de: 'Beherrschte IP — Eingetragene Marken, formalisierte Softwarerechte, Auftragnehmerverträge mit Rechtsübertragung. Ein Asset ohne eigene IP kann nicht zu seinem wahren Wert verkauft werden.', es: 'IP dominada — Marcas registradas, derechos de software formalizados, contratos de proveedores con cesión de derechos. Un activo sin IP propia no puede venderse a su valor real.', it: 'IP controllata — Marchi registrati, diritti software formalizzati, contratti appaltatori con cessione di diritti. Un asset senza IP propria non può essere venduto al suo valore reale.', nl: 'Beheerste IP — Geregistreerde merken, geformaliseerde softwarerechten, aannemersovereenkomsten met rechtsoverdracht. Een asset zonder eigen IP kan niet worden verkocht tegen zijn werkelijke waarde.' },
+        { fr: 'Dette technique documentée — Un PE préfère une dette technique connue et chiffrée à une dette technique cachée. L\'opacité coûte entre 1x et 2x ARR à la valorisation finale.', en: 'Documented technical debt — A PE prefers known and quantified technical debt over hidden debt. Opacity costs between 1x and 2x ARR in final valuation.', de: 'Dokumentierte technische Schulden — Ein PE bevorzugt bekannte und quantifizierte technische Schulden über versteckte Schulden. Opazität kostet zwischen 1x und 2x ARR in der endgültigen Bewertung.', es: 'Deuda técnica documentada — Un PE prefiere una deuda técnica conocida y cuantificada a una deuda técnica oculta. La opacidad cuesta entre 1x y 2x ARR en la valoración final.', it: 'Debito tecnico documentato — Un PE preferisce un debito tecnico noto e quantificato a uno nascosto. L\'opacità costa tra 1x e 2x ARR nella valutazione finale.', nl: 'Gedocumenteerde technische schuld — Een PE geeft de voorkeur aan bekende en gekwantificeerde technische schuld boven verborgen schuld. Ondoorzichtigheid kost tussen 1x en 2x ARR in de uiteindelijke waardering.' },
+        { fr: 'Conformité RGPD — Aucun fonds institutionnel sérieux n\'acquiert un actif avec des lacunes RGPD documentées sans décote significative.', en: 'GDPR compliance — No serious institutional fund acquires an asset with documented GDPR gaps without a significant discount.', de: 'DSGVO-Compliance — Kein seriöser institutioneller Fonds erwirbt ein Asset mit dokumentierten DSGVO-Lücken ohne erheblichen Abschlag.', es: 'Cumplimiento RGPD — Ningún fondo institucional serio adquiere un activo con lagunas RGPD documentadas sin un descuento significativo.', it: 'Conformità GDPR — Nessun fondo istituzionale serio acquisisce un asset con lacune GDPR documentate senza uno sconto significativo.', nl: 'AVG-naleving — Geen seriöus institutioneel fonds verwerft een asset met gedocumenteerde AVG-lacunes zonder aanzienlijke korting.' },
+        { fr: 'Concentration client — Un seul client représentant plus de 20% du revenu est un signal d\'alarme. Au-delà de 30%, certains fonds refusent catégoriquement.', en: 'Client concentration — A single client representing more than 20% of revenue is a red flag. Above 30%, some funds refuse outright.', de: 'Kundenkonzentration — Ein einziger Kunde, der mehr als 20% des Umsatzes repräsentiert, ist ein Warnsignal. Über 30% lehnen manche Fonds kategorisch ab.', es: 'Concentración de clientes — Un solo cliente que representa más del 20% de los ingresos es una señal de alarma. Por encima del 30%, algunos fondos rechazan categóricamente.', it: 'Concentrazione clienti — Un singolo cliente che rappresenta più del 20% del fatturato è un segnale d\'allarme. Oltre il 30%, alcuni fondi rifiutano categoricamente.', nl: 'Klantenconcentratie — Een enkele klant die meer dan 20% van de omzet vertegenwoordigt is een alarmsignaal. Boven 30% weigeren sommige fondsen categorisch.' },
       ]},
-      { type: 'h2', text: { fr: 'La due diligence technique — ce que vos acheteurs vont trouver', en: 'Technical due diligence — what your buyers will find' } },
+      { type: 'h2', text: { fr: 'La due diligence technique — ce que vos acheteurs vont trouver', en: 'Technical due diligence — what your buyers will find', de: 'Technische Due Diligence — was Ihre Käufer finden werden', es: 'Due diligence técnica — lo que sus compradores van a encontrar', it: 'Due diligence tecnica — cosa troveranno i vostri acquirenti', nl: 'Technische due diligence — wat uw kopers zullen vinden' } },
       { type: 'p', text: {
         fr: 'Tout PE sérieux mandate une due diligence technique avant closing. Les éléments systématiquement vérifiés : qualité du codebase (tests, documentation, CI/CD), architecture de sécurité, dépendances critiques, et la capacité de l\'actif à fonctionner sans son fondateur.',
         en: 'Every serious PE mandates a technical due diligence before closing. Items systematically verified: codebase quality (tests, documentation, CI/CD), security architecture, critical dependencies, and the asset\'s ability to operate without its founder.',
+        de: 'Jedes seriöse PE beauftragt eine technische Due Diligence vor dem Closing. Systematisch überprüfte Elemente: Codebase-Qualität (Tests, Dokumentation, CI/CD), Sicherheitsarchitektur, kritische Abhängigkeiten und die Fähigkeit des Assets, ohne seinen Gründer zu funktionieren.',
+        es: 'Todo PE serio encarga una due diligence técnica antes del closing. Elementos systemáticamente verificados: calidad del codebase (tests, documentación, CI/CD), arquitectura de seguridad, dependencias críticas y la capacidad del activo para funcionar sin su fundador.',
+        it: 'Ogni PE serio incarica una due diligence tecnica prima del closing. Elementi sistematicamente verificati: qualità del codebase (test, documentazione, CI/CD), architettura di sicurezza, dipendenze critiche e la capacità dell\'asset di funzionare senza il suo fondatore.',
+        nl: 'Elk seriöus PE geeft opdracht voor een technische due diligence voor het closing. Systematisch geverifieerde elementen: codebase-kwaliteit (tests, documentatie, CI/CD), beveiligingsarchitectuur, kritieke afhankelijkheden en het vermogen van het asset om te functioneren zonder zijn oprichter.',
       }},
       { type: 'quote', text: {
         fr: 'Un actif qui ne peut pas tourner 30 jours sans son créateur n\'est pas un actif — c\'est un emploi.',
         en: 'An asset that cannot run 30 days without its creator is not an asset — it is a job.',
+        de: 'Ein Asset, das 30 Tage nicht ohne seinen Schöpfer laufen kann, ist kein Asset — es ist ein Job.',
+        es: 'Un activo que no puede funcionar 30 días sin su creador no es un activo — es un empleo.',
+        it: 'Un asset che non può funzionare 30 giorni senza il suo creatore non è un asset — è un lavoro.',
+        nl: 'Een asset dat 30 dagen niet zonder zijn maker kan draaien is geen asset — het is een baan.',
       }, author: 'AEGRYN Advisory' },
-      { type: 'h2', text: { fr: 'Le calendrier d\'une acquisition PE type', en: 'Timeline of a typical PE acquisition' } },
+      { type: 'h2', text: { fr: 'Le calendrier d\'une acquisition PE type', en: 'Timeline of a typical PE acquisition', de: 'Zeitplan einer typischen PE-Akquisition', es: 'Calendario de una adquisición PE típica', it: 'Calendario di una tipica acquisizione PE', nl: 'Tijdlijn van een typische PE-acquisitie' } },
       { type: 'list', items: [
-        { fr: 'J0 : Premier contact ou soumission dossier', en: 'D0: First contact or file submission' },
-        { fr: 'J+7 à J+14 : Pré-qualification sur métriques clés', en: 'D+7 to D+14: Pre-qualification on key metrics' },
-        { fr: 'J+14 à J+21 : NDA signé, accès data room préliminaire', en: 'D+14 to D+21: NDA signed, preliminary data room access' },
-        { fr: 'J+21 à J+30 : LOI (Letter of Intent) non-engageante', en: 'D+21 to D+30: Non-binding LOI (Letter of Intent)' },
-        { fr: 'J+30 à J+60 : Due diligence complète (technique, juridique, financière)', en: 'D+30 to D+60: Full due diligence (technical, legal, financial)' },
-        { fr: 'J+60 à J+90 : Négociation SPA, conditions, garanties', en: 'D+60 to D+90: SPA negotiation, conditions, warranties' },
-        { fr: 'J+90 : Signing et closing', en: 'D+90: Signing and closing' },
+        { fr: 'J0 : Premier contact ou soumission dossier', en: 'D0: First contact or file submission', de: 'T0: Erstkontakt oder Einreichung der Unterlagen', es: 'D0: Primer contacto o presentación del expediente', it: 'G0: Primo contatto o invio del fascicolo', nl: 'D0: Eerste contact of indiening dossier' },
+        { fr: 'J+7 à J+14 : Pré-qualification sur métriques clés', en: 'D+7 to D+14: Pre-qualification on key metrics', de: 'T+7 bis T+14: Vorqualifizierung anhand der wichtigsten Kennzahlen', es: 'D+7 a D+14: Precalificación sobre métricas clave', it: 'G+7 a G+14: Pre-qualifica sulle metriche chiave', nl: 'D+7 tot D+14: Voorkwalificatie op basis van kernmaatstaven' },
+        { fr: 'J+14 à J+21 : NDA signé, accès data room préliminaire', en: 'D+14 to D+21: NDA signed, preliminary data room access', de: 'T+14 bis T+21: NDA unterzeichnet, vorläufiger Data-Room-Zugang', es: 'D+14 a D+21: NDA firmado, acceso preliminar a la data room', it: 'G+14 a G+21: NDA firmato, accesso preliminare alla data room', nl: 'D+14 tot D+21: NDA ondertekend, voorlopige data room-toegang' },
+        { fr: 'J+21 à J+30 : LOI (Letter of Intent) non-engageante', en: 'D+21 to D+30: Non-binding LOI (Letter of Intent)', de: 'T+21 bis T+30: Unverbindliche LOI (Letter of Intent)', es: 'D+21 a D+30: LOI (Letter of Intent) no vinculante', it: 'G+21 a G+30: LOI (Letter of Intent) non vincolante', nl: 'D+21 tot D+30: Niet-bindende LOI (Letter of Intent)' },
+        { fr: 'J+30 à J+60 : Due diligence complète (technique, juridique, financière)', en: 'D+30 to D+60: Full due diligence (technical, legal, financial)', de: 'T+30 bis T+60: Vollständige Due Diligence (technisch, rechtlich, finanziell)', es: 'D+30 a D+60: Due diligence completa (técnica, jurídica, financiera)', it: 'G+30 a G+60: Due diligence completa (tecnica, legale, finanziaria)', nl: 'D+30 tot D+60: Volledige due diligence (technisch, juridisch, financieel)' },
+        { fr: 'J+60 à J+90 : Négociation SPA, conditions, garanties', en: 'D+60 to D+90: SPA negotiation, conditions, warranties', de: 'T+60 bis T+90: SPA-Verhandlung, Bedingungen, Gewährleistungen', es: 'D+60 a D+90: Negociación SPA, condiciones, garantías', it: 'G+60 a G+90: Negoziazione SPA, condizioni, garanzie', nl: 'D+60 tot D+90: SPA-onderhandeling, voorwaarden, garanties' },
+        { fr: 'J+90 : Signing et closing', en: 'D+90: Signing and closing', de: 'T+90: Unterzeichnung und Closing', es: 'D+90: Firma y closing', it: 'G+90: Firma e closing', nl: 'D+90: Ondertekening en closing' },
       ]},
       { type: 'p', text: {
         fr: 'La certification AEGRYN compresse ce calendrier de 30 à 45 jours en fournissant une due diligence pré-validée. L\'acquéreur PE qui reçoit un rapport de grade AAA peut passer directement à la LOI.',
         en: 'AEGRYN certification compresses this timeline by 30–45 days by providing pre-validated due diligence. A PE acquirer receiving an AAA grade report can move directly to the LOI.',
+        de: 'Die AEGRYN-Zertifizierung komprimiert diesen Zeitplan um 30–45 Tage, indem sie eine vorab validierte Due Diligence bereitstellt. Ein PE-Erwerber, der einen AAA-Grade-Bericht erhält, kann direkt zur LOI übergehen.',
+        es: 'La certificación AEGRYN comprime este calendario en 30–45 días al proporcionar una due diligence pre-validada. El comprador PE que recibe un informe de grado AAA puede pasar directamente a la LOI.',
+        it: 'La certificazione AEGRYN comprime questo calendario di 30–45 giorni fornendo una due diligence pre-validata. Un acquirente PE che riceve un rapporto di grado AAA può passare direttamente alla LOI.',
+        nl: 'AEGRYN-certificering comprimeert dit tijdschema met 30–45 dagen door vooraf gevalideerde due diligence te verstrekken. Een PE-koper die een AAA-grade rapport ontvangt, kan direct naar de LOI gaan.',
       }},
       { type: 'stats', items: [
-        { value: '58%',  label: { fr: 'Part PE buyers dans les deals SaaS 2025', en: 'Share of PE buyers in SaaS deals 2025' } },
-        { value: '90j',  label: { fr: 'Durée moyenne d\'une acquisition PE mid-market', en: 'Average duration of a PE mid-market acquisition' } },
-        { value: '−30j', label: { fr: 'Gain de temps avec certification AEGRYN Grade', en: 'Time saved with AEGRYN Grade certification' } },
+        { value: '58%',  label: { fr: 'Part PE buyers dans les deals SaaS 2025', en: 'Share of PE buyers in SaaS deals 2025', de: 'Anteil PE-Käufer an SaaS-Deals 2025', es: 'Parte de compradores PE en deals SaaS 2025', it: 'Quota acquirenti PE nei deal SaaS 2025', nl: 'Aandeel PE-kopers in SaaS-deals 2025' } },
+        { value: '90j',  label: { fr: 'Durée moyenne d\'une acquisition PE mid-market', en: 'Average duration of a PE mid-market acquisition', de: 'Durchschnittliche Dauer einer PE-Mid-Market-Akquisition', es: 'Duración media de una adquisición PE mid-market', it: 'Durata media di un\'acquisizione PE mid-market', nl: 'Gemiddelde duur van een PE mid-market acquisitie' } },
+        { value: '−30j', label: { fr: 'Gain de temps avec certification AEGRYN Grade', en: 'Time saved with AEGRYN Grade certification', de: 'Zeitgewinn mit AEGRYN Grade-Zertifizierung', es: 'Ahorro de tiempo con certificación AEGRYN Grade', it: 'Risparmio di tempo con certificazione AEGRYN Grade', nl: 'Tijdwinst met AEGRYN Grade-certificering' } },
       ]},
     ],
   },
@@ -281,58 +414,98 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Le marché M&A tech européen a besoin de son Christie\'s',
       en: 'The European tech M&A market needs its own Christie\'s',
+      de: 'Der europäische Tech-M&A-Markt braucht sein eigenes Christie\'s',
+      es: 'El mercado de M&A tech europeo necesita su propio Christie\'s',
+      it: 'Il mercato M&A tech europeo ha bisogno del suo Christie\'s',
+      nl: 'De Europese tech M&A-markt heeft zijn eigen Christie\'s nodig',
     },
     excerpt: {
       fr: 'Le marché existe. Les acheteurs existent. Les vendeurs existent. Ce qui n\'existe pas, c\'est l\'infrastructure qui les connecte de façon fiable, certifiée, et confidentielle.',
       en: 'The market exists. The buyers exist. The sellers exist. What does not exist is the infrastructure that connects them reliably, certified, and confidentially.',
+      de: 'Der Markt existiert. Die Käufer existieren. Die Verkäufer existieren. Was nicht existiert, ist die Infrastruktur, die sie zuverlässig, zertifiziert und vertraulich verbindet.',
+      es: 'El mercado existe. Los compradores existen. Los vendedores existen. Lo que no existe es la infraestructura que los conecta de forma fiable, certificada y confidencial.',
+      it: 'Il mercato esiste. Gli acquirenti esistono. I venditori esistono. Ciò che non esiste è l\'infrastruttura che li collega in modo affidabile, certificato e riservato.',
+      nl: 'De markt bestaat. De kopers bestaan. De verkopers bestaan. Wat niet bestaat, is de infrastructuur die hen betrouwbaar, gecertificeerd en vertrouwelijk verbindt.',
     },
     body: [
       { type: 'p', text: {
         fr: 'En 2025, 2 698 transactions SaaS ont été enregistrées dans le monde. En Europe, le marché tech a représenté 14,2 milliards d\'euros de volume. Et pourtant, si vous demandez à un fondateur français ou suisse comment céder son actif, la réponse est invariablement la même : "je ne sais pas par où commencer."',
         en: 'In 2025, 2,698 SaaS transactions were recorded worldwide. In Europe, the tech market represented €14.2 billion in volume. And yet, if you ask a French or Swiss founder how to sell their asset, the answer is invariably the same: "I don\'t know where to start."',
+        de: 'Im Jahr 2025 wurden weltweit 2.698 SaaS-Transaktionen verzeichnet. In Europa repräsentierte der Tech-Markt ein Volumen von 14,2 Milliarden Euro. Und dennoch, wenn man einen französischen oder Schweizer Gründer fragt, wie er sein Asset veräußern soll, ist die Antwort invariabel dieselbe: "Ich weiß nicht, wo ich anfangen soll."',
+        es: 'En 2025, se registraron 2.698 transacciones SaaS en todo el mundo. En Europa, el mercado tech representó 14.200 millones de euros en volumen. Sin embargo, si le preguntas a un fundador francés o suizo cómo vender su activo, la respuesta es invariablemente la misma: "No sé por dónde empezar."',
+        it: 'Nel 2025, sono state registrate 2.698 transazioni SaaS in tutto il mondo. In Europa, il mercato tech ha rappresentato 14,2 miliardi di euro di volume. Eppure, se chiedi a un fondatore francese o svizzero come cedere il proprio asset, la risposta è invariabilmente la stessa: "Non so da dove cominciare."',
+        nl: 'In 2025 werden wereldwijd 2.698 SaaS-transacties geregistreerd. In Europa vertegenwoordigde de techmarkt een volume van 14,2 miljard euro. En toch, als u een Franse of Zwitserse oprichter vraagt hoe hij zijn asset moet verkopen, is het antwoord altijd hetzelfde: "Ik weet niet waar ik moet beginnen."',
       }},
-      { type: 'h2', text: { fr: 'Le paradoxe du marché M&A tech européen', en: 'The European tech M&A market paradox' } },
+      { type: 'h2', text: { fr: 'Le paradoxe du marché M&A tech européen', en: 'The European tech M&A market paradox', de: 'Das Paradox des europäischen Tech-M&A-Marktes', es: 'La paradoja del mercado M&A tech europeo', it: 'Il paradosso del mercato M&A tech europeo', nl: 'De paradox van de Europese tech M&A-markt' } },
       { type: 'p', text: {
         fr: 'Le marché existe. Les acheteurs existent. Les vendeurs existent. Ce qui n\'existe pas, c\'est l\'infrastructure qui les connecte de façon fiable, certifiée, et confidentielle.',
         en: 'The market exists. The buyers exist. The sellers exist. What does not exist is the infrastructure that connects them reliably, with certification, and in confidence.',
+        de: 'Der Markt existiert. Die Käufer existieren. Die Verkäufer existieren. Was nicht existiert, ist die Infrastruktur, die sie zuverlässig, zertifiziert und vertraulich verbindet.',
+        es: 'El mercado existe. Los compradores existen. Los vendedores existen. Lo que no existe es la infraestructura que los conecta de forma fiable, certificada y confidencial.',
+        it: 'Il mercato esiste. Gli acquirenti esistono. I venditori esistono. Ciò che non esiste è l\'infrastruttura che li collega in modo affidabile, certificato e riservato.',
+        nl: 'De markt bestaat. De kopers bestaan. De verkopers bestaan. Wat niet bestaat, is de infrastructuur die hen betrouwbaar, gecertificeerd en vertrouwelijk verbindt.',
       }},
       { type: 'p', text: {
         fr: 'Flippa liste n\'importe qui pour 29 dollars. Acquire.com a 500 000 acheteurs enregistrés — dont la majorité n\'ont jamais closé un deal. FE International et Quiet Light opèrent bien, mais depuis les États-Unis, pour le marché américain, avec des processus calibrés pour une culture M&A anglosaxonne.',
         en: 'Flippa lists anyone for $29. Acquire.com has 500,000 registered buyers — most of whom have never closed a deal. FE International and Quiet Light operate well, but from the United States, for the American market, with processes calibrated for an Anglo-Saxon M&A culture.',
+        de: 'Flippa listet jeden für 29 Dollar. Acquire.com hat 500.000 registrierte Käufer — die meisten haben noch nie einen Deal abgeschlossen. FE International und Quiet Light agieren gut, aber aus den USA, für den amerikanischen Markt, mit Prozessen, die auf eine angloamerikanische M&A-Kultur ausgerichtet sind.',
+        es: 'Flippa lista a cualquiera por 29 dólares. Acquire.com tiene 500.000 compradores registrados — la mayoría de los cuales nunca han cerrado un deal. FE International y Quiet Light operan bien, pero desde Estados Unidos, para el mercado americano, con procesos calibrados para una cultura M&A anglosajona.',
+        it: 'Flippa lista chiunque per 29 dollari. Acquire.com ha 500.000 acquirenti registrati — la maggior parte dei quali non ha mai chiuso un deal. FE International e Quiet Light operano bene, ma dagli Stati Uniti, per il mercato americano, con processi calibrati per una cultura M&A anglosassone.',
+        nl: 'Flippa lijst iedereen voor $ 29. Acquire.com heeft 500.000 geregistreerde kopers — van wie de meesten nooit een deal hebben gesloten. FE International en Quiet Light werken goed, maar vanuit de VS, voor de Amerikaanse markt, met processen gekalibreerd voor een Angelsaksische M&A-cultuur.',
       }},
       { type: 'quote', text: {
         fr: 'Le marché tech européen n\'a pas de Christie\'s. Il a des bazars.',
         en: 'The European tech market has no Christie\'s. It has bazaars.',
+        de: 'Der europäische Tech-Markt hat kein Christie\'s. Er hat Basare.',
+        es: 'El mercado tech europeo no tiene su Christie\'s. Tiene bazares.',
+        it: 'Il mercato tech europeo non ha il suo Christie\'s. Ha bazar.',
+        nl: 'De Europese techmarkt heeft geen Christie\'s. Het heeft bazaars.',
       }, author: 'AEGRYN Research' },
-      { type: 'h2', text: { fr: 'Ce que Christie\'s a compris que les marketplaces n\'ont pas', en: 'What Christie\'s understood that marketplaces have not' } },
+      { type: 'h2', text: { fr: 'Ce que Christie\'s a compris que les marketplaces n\'ont pas', en: 'What Christie\'s understood that marketplaces have not', de: 'Was Christie\'s verstanden hat, was Marktplätze nicht haben', es: 'Lo que Christie\'s entendió que las marketplaces no tienen', it: 'Ciò che Christie\'s ha capito che i marketplace non hanno', nl: 'Wat Christie\'s begreep wat marktplaatsen niet hebben' } },
       { type: 'p', text: {
         fr: 'Christie\'s ne liste pas des tableaux. Christie\'s sélectionne des œuvres, les authentifie, les provenance, et les présente à un cercle d\'acheteurs qui ont prouvé leur capacité et leur sérieux. Le refus est le produit. En 2023, Christie\'s a refusé plus de lots qu\'elle n\'en a acceptés — et c\'est exactement ce signal de sélectivité qui justifie les prix obtenus.',
         en: 'Christie\'s does not list paintings. Christie\'s selects works, authenticates them, establishes their provenance, and presents them to a circle of buyers who have proven their capacity and seriousness. The refusal is the product. In 2023, Christie\'s refused more lots than it accepted — and it is precisely this signal of selectivity that justifies the prices achieved.',
+        de: 'Christie\'s listet keine Gemälde. Christie\'s wählt Werke aus, authentifiziert sie, ermittelt ihre Provenienz und präsentiert sie einem Kreis von Käufern, die ihre Kompetenz und Seriosität bewiesen haben. Die Ablehnung ist das Produkt. Im Jahr 2023 lehnte Christie\'s mehr Lose ab als es akzeptierte — und genau dieses Selektivitätssignal rechtfertigt die erzielten Preise.',
+        es: 'Christie\'s no lista cuadros. Christie\'s selecciona obras, las autentica, establece su procedencia y las presenta a un círculo de compradores que han demostrado su capacidad y seriedad. El rechazo es el producto. En 2023, Christie\'s rechazó más lotes de los que aceptó — y es precisamente esa señal de selectividad lo que justifica los precios obtenidos.',
+        it: 'Christie\'s non lista dipinti. Christie\'s seleziona opere, le autentica, ne stabilisce la provenienza e le presenta a una cerchia di acquirenti che hanno dimostrato la loro capacità e serietà. Il rifiuto è il prodotto. Nel 2023, Christie\'s ha rifiutato più lotti di quanti ne abbia accettati — ed è proprio questo segnale di selettività a giustificare i prezzi ottenuti.',
+        nl: 'Christie\'s lijst geen schilderijen. Christie\'s selecteert werken, authenticeert ze, stelt hun herkomst vast en presenteert ze aan een kring van kopers die hun capaciteit en serieusheid hebben bewezen. De weigering is het product. In 2023 weigerde Christie\'s meer loten dan het accepteerde — en precies dit selectiviteitssignaal rechtvaardigt de behaalde prijzen.',
       }},
       { type: 'p', text: {
         fr: 'Antiquorum fait la même chose pour les montres de collection. Chaque lot reçoit un grade multi-dimensionnel émis par des experts indépendants selon un protocole reproductible. Ce n\'est pas une note — c\'est une certification. La différence est fondamentale : une note est une opinion, une certification est une responsabilité.',
         en: 'Antiquorum does the same for collectible watches. Each lot receives a multidimensional grade issued by independent experts following a reproducible protocol. It is not a rating — it is a certification. The difference is fundamental: a rating is an opinion, a certification is a responsibility.',
+        de: 'Antiquorum macht dasselbe für Sammeluhren. Jedes Los erhält eine mehrdimensionale Benotung, die von unabhängigen Experten nach einem reproduzierbaren Protokoll ausgestellt wird. Das ist keine Bewertung — das ist eine Zertifizierung. Der Unterschied ist grundlegend: Eine Bewertung ist eine Meinung, eine Zertifizierung ist eine Verantwortung.',
+        es: 'Antiquorum hace lo mismo con los relojes de colección. Cada lote recibe una calificación multidimensional emitida por expertos independientes según un protocolo reproducible. No es una valoración — es una certificación. La diferencia es fundamental: una valoración es una opinión, una certificación es una responsabilidad.',
+        it: 'Antiquorum fa lo stesso per gli orologi da collezione. Ogni lotto riceve un grado multidimensionale emesso da esperti indipendenti seguendo un protocollo riproducibile. Non è un giudizio — è una certificazione. La differenza è fondamentale: un giudizio è un\'opinione, una certificazione è una responsabilità.',
+        nl: 'Antiquorum doet hetzelfde voor verzamelhorloges. Elk lot ontvangt een meerdimensionaal cijfer dat door onafhankelijke experts wordt uitgegeven volgens een reproduceerbaar protocol. Het is geen beoordeling — het is een certificering. Het verschil is fundamenteel: een beoordeling is een mening, een certificering is een verantwoordelijkheid.',
       }},
-      { type: 'h2', text: { fr: 'La thèse AEGRYN', en: 'The AEGRYN thesis' } },
+      { type: 'h2', text: { fr: 'La thèse AEGRYN', en: 'The AEGRYN thesis', de: 'Die AEGRYN-These', es: 'La tesis AEGRYN', it: 'La tesi AEGRYN', nl: 'De AEGRYN-these' } },
       { type: 'p', text: {
         fr: 'Un actif tech mérite le même traitement qu\'une Rolex Daytona de 1963 ou qu\'un Picasso de la période bleue. Il a une provenance (son historique de build), un état (son grade C/I/F/S), une authenticité (sa certification indépendante documentée), et une valeur de marché (son multiple ARR ajusté).',
         en: 'A tech asset deserves the same treatment as a 1963 Rolex Daytona or a Picasso from the Blue Period. It has a provenance (its build history), a condition (its C/I/F/S grade), an authenticity (its independent documented certification), and a market value (its adjusted ARR multiple).',
+        de: 'Ein Tech-Asset verdient die gleiche Behandlung wie eine Rolex Daytona von 1963 oder ein Picasso aus der Blauen Periode. Es hat eine Provenienz (seine Build-Geschichte), einen Zustand (seinen C/I/F/S-Grade), eine Authentizität (seine unabhängige dokumentierte Zertifizierung) und einen Marktwert (seinen angepassten ARR-Multiplikator).',
+        es: 'Un activo tech merece el mismo tratamiento que un Rolex Daytona de 1963 o un Picasso del período azul. Tiene una procedencia (su historial de construcción), un estado (su grado C/I/F/S), una autenticidad (su certificación independiente documentada) y un valor de mercado (su múltiplo ARR ajustado).',
+        it: 'Un asset tech merita lo stesso trattamento di una Rolex Daytona del 1963 o di un Picasso del Periodo Blu. Ha una provenienza (la sua storia di build), uno stato (il suo grado C/I/F/S), un\'autenticità (la sua certificazione indipendente documentata) e un valore di mercato (il suo multiplo ARR aggiustato).',
+        nl: 'Een tech-asset verdient dezelfde behandeling als een Rolex Daytona uit 1963 of een Picasso uit de Blauwe Periode. Het heeft een herkomst (zijn bouwgeschiedenis), een conditie (zijn C/I/F/S-grade), een authenticiteit (zijn onafhankelijke gedocumenteerde certificering) en een marktwaarde (zijn aangepaste ARR-multiple).',
       }},
       { type: 'list', items: [
-        { fr: 'La certification remplace l\'estimation — chaque actif reçoit un grade AEG ★/AAA/AA/A/B émis par des analystes certifiés AEGRYN selon un protocole indépendant', en: 'Certification replaces estimation — each asset receives an AEG ★/AAA/AA/A/B grade issued by AEGRYN certified analysts following an independent protocol' },
-        { fr: 'Le cercle fermé remplace la marketplace — les acquéreurs sont pré-qualifiés avant d\'accéder au moindre dossier', en: 'The closed circle replaces the marketplace — acquirers are pre-qualified before accessing any file' },
-        { fr: 'Le séquestre remplace la promesse verbale — 10% du prix de transaction est versé à la signature de la Promesse de Transaction', en: 'Escrow replaces the verbal promise — 10% of the transaction price is paid upon signing the Transaction Promise' },
-        { fr: 'La documentation remplace la confiance aveugle — l\'état exact du codebase est documenté et versionné au transfert', en: 'Documentation replaces blind trust — the exact codebase state is documented and versioned at transfer' },
+        { fr: 'La certification remplace l\'estimation — chaque actif reçoit un grade AEG ★/AAA/AA/A/B émis par des analystes certifiés AEGRYN selon un protocole indépendant', en: 'Certification replaces estimation — each asset receives an AEG ★/AAA/AA/A/B grade issued by AEGRYN certified analysts following an independent protocol', de: 'Zertifizierung ersetzt Schätzung — jedes Asset erhält eine AEG ★/AAA/AA/A/B-Benotung, die von AEGRYN-zertifizierten Analysten nach einem unabhängigen Protokoll ausgestellt wird', es: 'La certificación reemplaza la estimación — cada activo recibe un grado AEG ★/AAA/AA/A/B emitido por analistas certificados AEGRYN según un protocolo independiente', it: 'La certificazione sostituisce la stima — ogni asset riceve un grado AEG ★/AAA/AA/A/B emesso da analisti certificati AEGRYN secondo un protocollo indipendente', nl: 'Certificering vervangt schatting — elk asset ontvangt een AEG ★/AAA/AA/A/B-graad uitgegeven door AEGRYN-gecertificeerde analisten volgens een onafhankelijk protocol' },
+        { fr: 'Le cercle fermé remplace la marketplace — les acquéreurs sont pré-qualifiés avant d\'accéder au moindre dossier', en: 'The closed circle replaces the marketplace — acquirers are pre-qualified before accessing any file', de: 'Der geschlossene Kreis ersetzt den Marktplatz — Erwerber werden vorqualifiziert, bevor sie auf einen Datensatz zugreifen', es: 'El círculo cerrado reemplaza al marketplace — los compradores son precalificados antes de acceder a cualquier expediente', it: 'Il cerchio chiuso sostituisce il marketplace — gli acquirenti sono pre-qualificati prima di accedere a qualsiasi fascicolo', nl: 'De gesloten kring vervangt de marktplaats — kopers worden voorgekwalificeerd voordat ze toegang krijgen tot enig dossier' },
+        { fr: 'Le séquestre remplace la promesse verbale — 10% du prix de transaction est versé à la signature de la Promesse de Transaction', en: 'Escrow replaces the verbal promise — 10% of the transaction price is paid upon signing the Transaction Promise', de: 'Treuhand ersetzt das mündliche Versprechen — 10% des Transaktionspreises wird bei Unterzeichnung des Transaktionsversprechens geleistet', es: 'El depósito en garantía reemplaza la promesa verbal — el 10% del precio de transacción se paga a la firma de la Promesa de Transacción', it: 'Il deposito fiduciario sostituisce la promessa verbale — il 10% del prezzo di transazione viene versato alla firma della Promessa di Transazione', nl: 'Escrow vervangt de mondelinge belofte — 10% van de transactieprijs wordt betaald bij ondertekening van de Transactiebelofte' },
+        { fr: 'La documentation remplace la confiance aveugle — l\'état exact du codebase est documenté et versionné au transfert', en: 'Documentation replaces blind trust — the exact codebase state is documented and versioned at transfer', de: 'Dokumentation ersetzt blindes Vertrauen — der genaue Codebase-Zustand wird beim Transfer dokumentiert und versioniert', es: 'La documentación reemplaza la confianza ciega — el estado exacto del codebase se documenta y versiona en el transfert', it: 'La documentazione sostituisce la fiducia cieca — lo stato esatto del codebase viene documentato e versionato al trasferimento', nl: 'Documentatie vervangt blind vertrouwen — de exacte codebase-toestand wordt gedocumenteerd en geversied bij overdracht' },
       ]},
-      { type: 'h2', text: { fr: 'Pourquoi la Suisse', en: 'Why Switzerland' } },
+      { type: 'h2', text: { fr: 'Pourquoi la Suisse', en: 'Why Switzerland', de: 'Warum die Schweiz', es: 'Por qué Suiza', it: 'Perché la Svizzera', nl: 'Waarom Zwitserland' } },
       { type: 'p', text: {
         fr: 'Ce n\'est pas du marketing. La Suisse est le hub de gestion de fortune le plus important au monde — 630 milliards de CHF gérés par des family offices suisses, avec 38% alloués aux actifs alternatifs. Les acquéreurs institutionnels les plus solvables d\'Europe ont leurs bureaux à Zurich, Genève, et Zoug. Être ancré en Suisse n\'est pas un signal de neutralité — c\'est un signal d\'accès.',
         en: 'This is not marketing. Switzerland is the world\'s most important wealth management hub — CHF 630 billion managed by Swiss family offices, with 38% allocated to alternative assets. The most creditworthy institutional acquirers in Europe have their offices in Zurich, Geneva, and Zug. Being anchored in Switzerland is not a signal of neutrality — it is a signal of access.',
+        de: 'Das ist kein Marketing. Die Schweiz ist der wichtigste Vermögensverwaltungs-Hub der Welt — 630 Milliarden CHF, verwaltet von Schweizer Family Offices, mit 38% in Alternativanlagen. Die solvabelsten institutionellen Erwerber Europas haben ihre Büros in Zürich, Genf und Zug. In der Schweiz verankert zu sein ist kein Neutralitätssignal — es ist ein Zugangssignal.',
+        es: 'Esto no es marketing. Suiza es el hub de gestión de patrimonios más importante del mundo — 630.000 millones de CHF gestionados por family offices suizos, con el 38% asignado a activos alternativos. Los compradores institucionales más solventes de Europa tienen sus oficinas en Zúrich, Ginebra y Zug. Estar anclado en Suiza no es una señal de neutralidad — es una señal de acceso.',
+        it: 'Questo non è marketing. La Svizzera è l\'hub di gestione patrimoniale più importante al mondo — 630 miliardi di CHF gestiti da family office svizzeri, con il 38% allocato in asset alternativi. Gli acquirenti istituzionali più solvibili d\'Europa hanno i loro uffici a Zurigo, Ginevra e Zugo. Essere radicati in Svizzera non è un segnale di neutralità — è un segnale di accesso.',
+        nl: 'Dit is geen marketing. Zwitserland is de belangrijkste vermogensbeheer-hub ter wereld — 630 miljard CHF beheerd door Zwitserse family offices, met 38% toegewezen aan alternatieve assets. De meest kredietwaardige institutionele kopers van Europa hebben hun kantoren in Zürich, Genève en Zug. Verankerd zijn in Zwitserland is geen neutraliteitssignaal — het is een toegangssignaal.',
       }},
       { type: 'stats', items: [
-        { value: '14,2 Md€',  label: { fr: 'Volume M&A SaaS Europe 2025', en: 'European SaaS M&A volume 2025' } },
-        { value: '630 Md CHF', label: { fr: 'Actifs sous gestion family offices suisses', en: 'Assets under management by Swiss family offices' } },
-        { value: '< 25%',     label: { fr: 'Taux d\'acceptation AEGRYN Grade', en: 'AEGRYN Grade acceptance rate' } },
+        { value: '14,2 Md€',  label: { fr: 'Volume M&A SaaS Europe 2025', en: 'European SaaS M&A volume 2025', de: 'Europäisches SaaS-M&A-Volumen 2025', es: 'Volumen M&A SaaS Europa 2025', it: 'Volume M&A SaaS Europa 2025', nl: 'Europees SaaS M&A-volume 2025' } },
+        { value: '630 Md CHF', label: { fr: 'Actifs sous gestion family offices suisses', en: 'Assets under management by Swiss family offices', de: 'Verwaltete Vermögen Schweizer Family Offices', es: 'Activos bajo gestión de family offices suizos', it: 'Asset in gestione family office svizzeri', nl: 'Vermogen beheerd door Zwitserse family offices' } },
+        { value: '< 25%',     label: { fr: 'Taux d\'acceptation AEGRYN Grade', en: 'AEGRYN Grade acceptance rate', de: 'AEGRYN Grade-Akzeptanzrate', es: 'Tasa de aceptación AEGRYN Grade', it: 'Tasso di accettazione AEGRYN Grade', nl: 'AEGRYN Grade acceptatiegraad' } },
       ]},
     ],
   },
@@ -345,52 +518,72 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'IP : la checklist complète avant de céder votre actif tech',
       en: 'IP: the complete checklist before selling your tech asset',
+      de: 'IP: die vollständige Checkliste vor dem Verkauf Ihres Tech-Assets',
+      es: 'IP: la lista de verificación completa antes de vender tu activo tech',
+      it: 'IP: la checklist completa prima di cedere il tuo asset tech',
+      nl: 'IP: de volledige checklist vóór de verkoop van uw tech-asset',
     },
     excerpt: {
       fr: 'L\'erreur la plus coûteuse en M&A tech n\'est pas un mauvais timing ni une valorisation trop ambitieuse. C\'est la découverte tardive d\'une lacune IP qui fait s\'effondrer le deal à J-15 du closing.',
       en: 'The most costly mistake in tech M&A is not bad timing or an overambitious valuation. It is the late discovery of an IP gap that collapses the deal 15 days before closing.',
+      de: 'Der kostspieligste Fehler in Tech-M&A ist nicht schlechtes Timing oder eine zu ambitionierte Bewertung. Es ist die späte Entdeckung einer IP-Lücke, die den Deal 15 Tage vor dem Closing zum Scheitern bringt.',
+      es: 'El error más costoso en M&A tech no es un mal timing ni una valoración demasiado ambiciosa. Es el descubrimiento tardío de una laguna de IP que hace colapsar el deal 15 días antes del cierre.',
+      it: 'L\'errore più costoso nel M&A tech non è un cattivo timing né una valutazione troppo ambiziosa. È la scoperta tardiva di una lacuna IP che fa crollare il deal a 15 giorni dal closing.',
+      nl: 'De kostbaarste fout in tech M&A is niet slecht timing of een te ambitieuze waardering. Het is de late ontdekking van een IP-leemte die de deal 15 dagen vóór het sluiten doet instorten.',
     },
     body: [
       { type: 'p', text: {
         fr: 'L\'erreur la plus coûteuse en M&A tech n\'est pas un mauvais timing ni une valorisation trop ambitieuse. C\'est la découverte tardive d\'une lacune IP qui fait s\'effondrer le deal — ou la valorisation — à J-15 du closing.',
         en: 'The most costly mistake in tech M&A is not bad timing or an overambitious valuation. It is the late discovery of an IP gap that collapses the deal — or the valuation — 15 days before closing.',
+        de: 'Der kostspieligste Fehler im Tech-M&A ist kein schlechtes Timing oder eine zu ambitionierte Bewertung. Es ist die späte Entdeckung einer IP-Lücke, die den Deal — oder die Bewertung — 15 Tage vor dem Closing zum Einsturz bringt.',
+        es: 'El error más costoso en M&A tech no es un mal timing ni una valoración demasiado ambiciosa. Es el descubrimiento tardío de una laguna de IP que hace colapsar el deal — o la valoración — 15 días antes del cierre.',
+        it: 'L\'errore più costoso nel M&A tech non è un cattivo timing né una valutazione troppo ambiziosa. È la scoperta tardiva di una lacuna IP che fa crollare il deal — o la valutazione — 15 giorni prima del closing.',
+        nl: 'De kostbaarste fout in tech M&A is niet slecht timing of een te ambitieuze waardering. Het is de late ontdekking van een IP-leemte die de deal — of de waardering — 15 dagen vóór het sluiten doet instorten.',
       }},
-      { type: 'h2', text: { fr: 'Les 5 questions IP que tout acquéreur posera', en: 'The 5 IP questions every acquirer will ask' } },
+      { type: 'h2', text: { fr: 'Les 5 questions IP que tout acquéreur posera', en: 'The 5 IP questions every acquirer will ask', de: 'Die 5 IP-Fragen, die jeder Käufer stellen wird', es: 'Las 5 preguntas de IP que todo comprador hará', it: 'Le 5 domande IP che ogni acquirente farà', nl: 'De 5 IP-vragen die elke koper zal stellen' } },
       { type: 'list', items: [
-        { fr: 'Qui détient réellement les droits sur le code ? Si des prestataires freelance ont contribué au codebase sans contrat de cession de droits, la propriété intellectuelle est partiellement chez eux — pas chez vous.', en: 'Who actually owns the rights to the code? If freelance contractors contributed to the codebase without rights assignment contracts, the intellectual property is partly theirs — not yours.' },
-        { fr: 'La marque est-elle déposée ? Un nom d\'actif non protégé peut être enregistré par un tiers dans un autre pays. La valeur de marque disparaît si elle n\'est pas ancrée dans un dépôt IPI, EUIPO, ou USPTO.', en: 'Is the trademark filed? An unprotected asset name can be registered by a third party in another country. Brand value disappears if it is not anchored in an IPI, EUIPO, or USPTO filing.' },
-        { fr: 'Les licences open source sont-elles compatibles avec une cession commerciale ? Une librairie GPL dans votre codebase peut imposer des obligations de divulgation du code source à l\'acquéreur.', en: 'Are open source licences compatible with a commercial sale? A GPL library in your codebase can impose source code disclosure obligations on the acquirer.' },
-        { fr: 'Les APIs tierces ont-elles des contrats en ordre ? Une dépendance critique à une API sans contrat formalisé est un risque opérationnel que l\'acquéreur décotera.', en: 'Do third-party APIs have proper contracts? A critical dependency on an API without a formalised contract is an operational risk the acquirer will discount.' },
-        { fr: 'Les données utilisateurs appartiennent-elles à l\'actif ou au fondateur ? La question RGPD sur la propriété des données lors d\'un transfert est complexe et mal anticipée.', en: 'Do user data belong to the asset or to the founder? The GDPR question of data ownership during a transfer is complex and poorly anticipated.' },
+        { fr: 'Qui détient réellement les droits sur le code ? Si des prestataires freelance ont contribué au codebase sans contrat de cession de droits, la propriété intellectuelle est partiellement chez eux — pas chez vous.', en: 'Who actually owns the rights to the code? If freelance contractors contributed to the codebase without rights assignment contracts, the intellectual property is partly theirs — not yours.', de: 'Wem gehören eigentlich die Rechte am Code? Wenn freiberufliche Auftragnehmer ohne Rechtsabtretungsvertrag zum Codebase beigetragen haben, liegt das geistige Eigentum teilweise bei ihnen — nicht bei Ihnen.', es: '¿Quién posee realmente los derechos sobre el código? Si los proveedores freelance contribuyeron al codebase sin contratos de cesión de derechos, la propiedad intelectual es parcialmente suya — no suya.', it: 'Chi detiene effettivamente i diritti sul codice? Se i liberi professionisti hanno contribuito al codebase senza contratti di cessione dei diritti, la proprietà intellettuale è in parte loro — non vostra.', nl: 'Wie bezit eigenlijk de rechten op de code? Als freelance aannemers hebben bijgedragen aan de codebase zonder rechtsovertrachtscontracten, is het intellectuele eigendom gedeeltelijk van hen — niet van u.' },
+        { fr: 'La marque est-elle déposée ? Un nom d\'actif non protégé peut être enregistré par un tiers dans un autre pays. La valeur de marque disparaît si elle n\'est pas ancrée dans un dépôt IPI, EUIPO, ou USPTO.', en: 'Is the trademark filed? An unprotected asset name can be registered by a third party in another country. Brand value disappears if it is not anchored in an IPI, EUIPO, or USPTO filing.', de: 'Ist die Marke eingetragen? Ein nicht geschützter Asset-Name kann von einem Dritten in einem anderen Land registriert werden. Der Markenwert verschwindet, wenn er nicht in einer IPI-, EUIPO- oder USPTO-Anmeldung verankert ist.', es: '¿Está registrada la marca? Un nombre de activo no protegido puede ser registrado por un tercero en otro país. El valor de marca desaparece si no está anclado en un registro IPI, EUIPO o USPTO.', it: 'Il marchio è depositato? Un nome di asset non protetto può essere registrato da terzi in un altro paese. Il valore del marchio scompare se non è ancorato a un deposito IPI, EUIPO o USPTO.', nl: 'Is het merk geregistreerd? Een onbeschermd assetnaam kan door een derde in een ander land worden geregistreerd. Merkwaarde verdwijnt als het niet verankerd is in een IPI-, EUIPO- of USPTO-indiening.' },
+        { fr: 'Les licences open source sont-elles compatibles avec une cession commerciale ? Une librairie GPL dans votre codebase peut imposer des obligations de divulgation du code source à l\'acquéreur.', en: 'Are open source licences compatible with a commercial sale? A GPL library in your codebase can impose source code disclosure obligations on the acquirer.', de: 'Sind Open-Source-Lizenzen mit einer kommerziellen Veräußerung kompatibel? Eine GPL-Bibliothek in Ihrem Codebase kann dem Erwerber Quellcode-Offenlegungspflichten auferlegen.', es: '¿Son las licencias de código abierto compatibles con una cesión comercial? Una librería GPL en su codebase puede imponer obligaciones de divulgación del código fuente al comprador.', it: 'Le licenze open source sono compatibili con una cessione commerciale? Una libreria GPL nel vostro codebase può imporre obblighi di divulgazione del codice sorgente all\'acquirente.', nl: 'Zijn open source-licenties compatibel met een commerciële verkoop? Een GPL-bibliotheek in uw codebase kan de koper verplichtingen tot openbaarmaking van broncode opleggen.' },
+        { fr: 'Les APIs tierces ont-elles des contrats en ordre ? Une dépendance critique à une API sans contrat formalisé est un risque opérationnel que l\'acquéreur décotera.', en: 'Do third-party APIs have proper contracts? A critical dependency on an API without a formalised contract is an operational risk the acquirer will discount.', de: 'Haben Drittanbieter-APIs ordnungsgemäße Verträge? Eine kritische Abhängigkeit von einer API ohne formalisierten Vertrag ist ein operatives Risiko, das der Erwerber abwerten wird.', es: '¿Tienen las APIs de terceros contratos en regla? Una dependencia crítica de una API sin contrato formalizado es un riesgo operacional que el comprador descontará.', it: 'Le API di terze parti hanno contratti in ordine? Una dipendenza critica da una API senza contratto formalizzato è un rischio operativo che l\'acquirente sconterà.', nl: 'Hebben externe API\'s correcte contracten? Een kritieke afhankelijkheid van een API zonder geformaliseerd contract is een operationeel risico dat de koper zal verdisconteren.' },
+        { fr: 'Les données utilisateurs appartiennent-elles à l\'actif ou au fondateur ? La question RGPD sur la propriété des données lors d\'un transfert est complexe et mal anticipée.', en: 'Do user data belong to the asset or to the founder? The GDPR question of data ownership during a transfer is complex and poorly anticipated.', de: 'Gehören Benutzerdaten dem Asset oder dem Gründer? Die DSGVO-Frage zur Dateneigentumsübertragung ist komplex und wird häufig schlecht antizipiert.', es: '¿Los datos de usuarios pertenecen al activo o al fundador? La pregunta RGPD sobre la propiedad de los datos durante una transferencia es compleja y mal anticipada.', it: 'I dati degli utenti appartengono all\'asset o al fondatore? La questione GDPR sulla proprietà dei dati durante un trasferimento è complessa e poco anticipata.', nl: 'Behoren gebruikersgegevens tot het asset of de oprichter? De AVG-vraag over gegevenseigendom bij een overdracht is complex en wordt slecht geanticipeerd.' },
       ]},
-      { type: 'h2', text: { fr: 'La checklist pré-cession en 12 points', en: 'The 12-point pre-sale checklist' } },
+      { type: 'h2', text: { fr: 'La checklist pré-cession en 12 points', en: 'The 12-point pre-sale checklist', de: 'Die 12-Punkte-Checkliste vor der Veräußerung', es: 'La lista de verificación pre-cesión de 12 puntos', it: 'La checklist pre-cessione in 12 punti', nl: 'De 12-punts checklist vóór de verkoop' } },
       { type: 'list', items: [
-        { fr: 'Contrats de cession de droits signés avec tous les prestataires ayant contribué au code', en: 'Rights assignment contracts signed with all contractors who contributed to the code' },
-        { fr: 'Marque verbale déposée dans le pays principal d\'opération', en: 'Verbal trademark filed in the principal country of operation' },
-        { fr: 'Extension marque en cours ou complète (EUIPO, WIPO selon ambition)', en: 'Trademark extension in progress or complete (EUIPO, WIPO depending on ambition)' },
-        { fr: 'Audit des licences open source (outil recommandé : FOSSA ou BlackDuck)', en: 'Open source licence audit (recommended tool: FOSSA or BlackDuck)' },
-        { fr: 'Contrats formalisés pour toutes les APIs tierces critiques', en: 'Formalised contracts for all critical third-party APIs' },
-        { fr: 'Politique de confidentialité RGPD à jour et DPA signé avec les sous-traitants', en: 'Up-to-date GDPR privacy policy and DPA signed with sub-processors' },
-        { fr: 'Documentation des données utilisateurs : nature, volume, localisation, durée de rétention', en: 'User data documentation: nature, volume, location, retention period' },
-        { fr: 'Accord de transfert de données prévu dans le SPA (Article 28 RGPD)', en: 'Data transfer agreement provided for in the SPA (Article 28 GDPR)' },
-        { fr: 'Nom de domaine détenu par l\'entité légale qui cède (pas par le fondateur en nom propre)', en: 'Domain name owned by the legal entity selling (not by the founder personally)' },
-        { fr: 'Comptes techniques (GitHub, AWS, Stripe, etc.) dissociés du compte personnel du fondateur', en: 'Technical accounts (GitHub, AWS, Stripe, etc.) dissociated from the founder\'s personal account' },
-        { fr: 'Secret et confidentialité : existence d\'un trade secret documenté si applicable', en: 'Secrecy and confidentiality: existence of a documented trade secret if applicable' },
-        { fr: 'Historique de versionnage complet et accessible (Git log clean, pas de force push destructeur)', en: 'Complete and accessible version history (clean Git log, no destructive force push)' },
+        { fr: 'Contrats de cession de droits signés avec tous les prestataires ayant contribué au code', en: 'Rights assignment contracts signed with all contractors who contributed to the code', de: 'Rechtsabtretungsverträge mit allen Auftragnehmern unterzeichnet, die zum Code beigetragen haben', es: 'Contratos de cesión de derechos firmados con todos los proveedores que contribuyeron al código', it: 'Contratti di cessione dei diritti firmati con tutti i fornitori che hanno contribuito al codice', nl: 'Rechtsovertrachtscontracten ondertekend met alle aannemers die hebben bijgedragen aan de code' },
+        { fr: 'Marque verbale déposée dans le pays principal d\'opération', en: 'Verbal trademark filed in the principal country of operation', de: 'Wortmarke im Hauptbetriebsland angemeldet', es: 'Marca verbal registrada en el país principal de operación', it: 'Marchio verbale depositato nel paese principale di operazione', nl: 'Woordmerk geregistreerd in het voornaamste land van activiteit' },
+        { fr: 'Extension marque en cours ou complète (EUIPO, WIPO selon ambition)', en: 'Trademark extension in progress or complete (EUIPO, WIPO depending on ambition)', de: 'Markenerweiterung laufend oder abgeschlossen (EUIPO, WIPO je nach Ambition)', es: 'Extensión de marca en curso o completa (EUIPO, WIPO según ambición)', it: 'Estensione del marchio in corso o completata (EUIPO, WIPO secondo ambizione)', nl: 'Merkuitbreiding lopend of voltooid (EUIPO, WIPO afhankelijk van ambitie)' },
+        { fr: 'Audit des licences open source (outil recommandé : FOSSA ou BlackDuck)', en: 'Open source licence audit (recommended tool: FOSSA or BlackDuck)', de: 'Open-Source-Lizenzprüfung (empfohlenes Tool: FOSSA oder BlackDuck)', es: 'Auditoría de licencias de código abierto (herramienta recomendada: FOSSA o BlackDuck)', it: 'Audit delle licenze open source (strumento consigliato: FOSSA o BlackDuck)', nl: 'Open source-licentieaudit (aanbevolen tool: FOSSA of BlackDuck)' },
+        { fr: 'Contrats formalisés pour toutes les APIs tierces critiques', en: 'Formalised contracts for all critical third-party APIs', de: 'Formalisierte Verträge für alle kritischen Drittanbieter-APIs', es: 'Contratos formalizados para todas las APIs de terceros críticas', it: 'Contratti formalizzati per tutte le API di terze parti critiche', nl: 'Geformaliseerde contracten voor alle kritieke externe API\'s' },
+        { fr: 'Politique de confidentialité RGPD à jour et DPA signé avec les sous-traitants', en: 'Up-to-date GDPR privacy policy and DPA signed with sub-processors', de: 'Aktuelle DSGVO-Datenschutzrichtlinie und DPA mit Unterauftragsverarbeitern unterzeichnet', es: 'Política de privacidad RGPD actualizada y DPA firmado con los subprocesadores', it: 'Informativa sulla privacy GDPR aggiornata e DPA firmato con i sub-responsabili', nl: 'Actuele AVG-privacybeleid en DPA ondertekend met sub-verwerkers' },
+        { fr: 'Documentation des données utilisateurs : nature, volume, localisation, durée de rétention', en: 'User data documentation: nature, volume, location, retention period', de: 'Dokumentation der Benutzerdaten: Art, Volumen, Speicherort, Aufbewahrungsdauer', es: 'Documentación de datos de usuarios: naturaleza, volumen, localización, duración de retención', it: 'Documentazione dei dati utente: natura, volume, localizzazione, durata di conservazione', nl: 'Documentatie van gebruikersgegevens: aard, volume, locatie, bewaartermijn' },
+        { fr: 'Accord de transfert de données prévu dans le SPA (Article 28 RGPD)', en: 'Data transfer agreement provided for in the SPA (Article 28 GDPR)', de: 'Im SPA vorgesehene Datenübertragungsvereinbarung (Artikel 28 DSGVO)', es: 'Acuerdo de transferencia de datos previsto en el SPA (Artículo 28 RGPD)', it: 'Accordo di trasferimento dati previsto nel SPA (Articolo 28 GDPR)', nl: 'In de SPA opgenomen gegevensoverdrachtsovereenkomst (Artikel 28 AVG)' },
+        { fr: 'Nom de domaine détenu par l\'entité légale qui cède (pas par le fondateur en nom propre)', en: 'Domain name owned by the legal entity selling (not by the founder personally)', de: 'Domainname im Besitz der veräußernden juristischen Person (nicht des Gründers persönlich)', es: 'Nombre de dominio propiedad de la entidad legal que cede (no del fundador a título personal)', it: 'Nome di dominio di proprietà dell\'entità legale che cede (non del fondatore a titolo personale)', nl: 'Domeinnaam eigendom van de rechtspersoon die verkoopt (niet van de oprichter persoonlijk)' },
+        { fr: 'Comptes techniques (GitHub, AWS, Stripe, etc.) dissociés du compte personnel du fondateur', en: 'Technical accounts (GitHub, AWS, Stripe, etc.) dissociated from the founder\'s personal account', de: 'Technische Konten (GitHub, AWS, Stripe usw.) vom persönlichen Konto des Gründers getrennt', es: 'Cuentas técnicas (GitHub, AWS, Stripe, etc.) disociadas de la cuenta personal del fundador', it: 'Account tecnici (GitHub, AWS, Stripe, ecc.) dissociati dall\'account personale del fondatore', nl: 'Technische accounts (GitHub, AWS, Stripe, enz.) losgekoppeld van het persoonlijke account van de oprichter' },
+        { fr: 'Secret et confidentialité : existence d\'un trade secret documenté si applicable', en: 'Secrecy and confidentiality: existence of a documented trade secret if applicable', de: 'Geheimhaltung und Vertraulichkeit: Existenz eines dokumentierten Geschäftsgeheimnisses wenn anwendbar', es: 'Secreto y confidencialidad: existencia de un secreto comercial documentado si aplica', it: 'Segreto e riservatezza: esistenza di un segreto commerciale documentato se applicabile', nl: 'Geheimhouding en vertrouwelijkheid: bestaan van een gedocumenteerd bedrijfsgeheim indien van toepassing' },
+        { fr: 'Historique de versionnage complet et accessible (Git log clean, pas de force push destructeur)', en: 'Complete and accessible version history (clean Git log, no destructive force push)', de: 'Vollständige und zugängliche Versionshistorie (sauberes Git-Log, kein destruktiver Force Push)', es: 'Historial de versiones completo y accesible (Git log limpio, sin force push destructivo)', it: 'Cronologia di versioning completa e accessibile (Git log pulito, nessun force push distruttivo)', nl: 'Volledige en toegankelijke versiegeschiedenis (schone Git-log, geen destructieve force push)' },
       ]},
       { type: 'quote', text: {
         fr: 'La dimension IP représente 25 points sur 100 dans le protocole AEGRYN Grade. C\'est la dimension qui génère le plus de réserves lors des certifications — et la plus facile à anticiper.',
         en: 'The IP dimension represents 25 points out of 100 in the AEGRYN Grade protocol. It is the dimension that generates the most reservations during certifications — and the easiest to anticipate.',
+        de: 'Die IP-Dimension umfasst 25 von 100 Punkten im AEGRYN Grade-Protokoll. Es ist die Dimension, die bei Zertifizierungen die meisten Vorbehalte generiert — und die am einfachsten zu antizipieren ist.',
+        es: 'La dimensión IP representa 25 puntos sobre 100 en el protocolo AEGRYN Grade. Es la dimensión que genera más reservas durante las certificaciones — y la más fácil de anticipar.',
+        it: 'La dimensione IP rappresenta 25 punti su 100 nel protocollo AEGRYN Grade. È la dimensione che genera le maggiori riserve durante le certificazioni — e la più facile da anticipare.',
+        nl: 'De IP-dimensie vertegenwoordigt 25 punten op 100 in het AEGRYN Grade-protocol. Het is de dimensie die de meeste voorbehouden genereert tijdens certificeringen — en het gemakkelijkst te anticiperen.',
       }, author: 'AEGRYN Grade Protocol' },
-      { type: 'h2', text: { fr: 'Ce que révèle la certification AEGRYN sur l\'IP', en: 'What AEGRYN certification reveals about IP' } },
+      { type: 'h2', text: { fr: 'Ce que révèle la certification AEGRYN sur l\'IP', en: 'What AEGRYN certification reveals about IP', de: 'Was die AEGRYN-Zertifizierung über IP enthüllt', es: 'Lo que revela la certificación AEGRYN sobre la IP', it: 'Cosa rivela la certificazione AEGRYN sull\'IP', nl: 'Wat AEGRYN-certificering onthult over IP' } },
       { type: 'p', text: {
         fr: 'Les lacunes les plus fréquentes identifiées lors des certifications : absence de cession de droits prestataires (43% des actifs soumis), marque non déposée (61%), et dépendances open source GPL non documentées (28%).',
         en: 'The most common gaps identified during certifications: absence of contractor rights assignment (43% of submitted assets), unfiled trademark (61%), and undocumented GPL open source dependencies (28%).',
+        de: 'Die häufigsten bei Zertifizierungen identifizierten Lücken: fehlende Rechtsabtretung durch Auftragnehmer (43% der eingereichten Assets), nicht eingetragene Marke (61%) und nicht dokumentierte GPL-Open-Source-Abhängigkeiten (28%).',
+        es: 'Las lagunas más frecuentes identificadas durante las certificaciones: ausencia de cesión de derechos de proveedores (43% de los activos presentados), marca no registrada (61%) y dependencias open source GPL no documentadas (28%).',
+        it: 'Le lacune più frequenti identificate durante le certificazioni: assenza di cessione dei diritti dei fornitori (43% degli asset inviati), marchio non depositato (61%) e dipendenze open source GPL non documentate (28%).',
+        nl: 'De meest voorkomende lacunes die tijdens certificeringen worden geïdentificeerd: ontbreken van aannemersrechtoverdracht (43% van de ingediende assets), niet-geregistreerd merk (61%) en niet-gedocumenteerde GPL open source-afhankelijkheden (28%).',
       }},
       { type: 'stats', items: [
-        { value: '43%', label: { fr: 'Actifs soumis sans cession de droits prestataires', en: 'Assets submitted without contractor rights assignment' } },
-        { value: '61%', label: { fr: 'Actifs soumis avec marque non déposée', en: 'Assets submitted with unfiled trademark' } },
-        { value: '28%', label: { fr: 'Actifs avec dépendances GPL non documentées', en: 'Assets with undocumented GPL dependencies' } },
+        { value: '43%', label: { fr: 'Actifs soumis sans cession de droits prestataires', en: 'Assets submitted without contractor rights assignment', de: 'Assets ohne Auftragnehmer-Rechtsabtretung eingereicht', es: 'Activos presentados sin cesión de derechos de proveedores', it: 'Asset inviati senza cessione dei diritti dei fornitori', nl: 'Assets ingediend zonder aannemersrechtoverdracht' } },
+        { value: '61%', label: { fr: 'Actifs soumis avec marque non déposée', en: 'Assets submitted with unfiled trademark', de: 'Assets mit nicht eingetragener Marke eingereicht', es: 'Activos presentados con marca no registrada', it: 'Asset inviati con marchio non depositato', nl: 'Assets ingediend met niet-geregistreerd merk' } },
+        { value: '28%', label: { fr: 'Actifs avec dépendances GPL non documentées', en: 'Assets with undocumented GPL dependencies', de: 'Assets mit nicht dokumentierten GPL-Abhängigkeiten', es: 'Activos con dependencias GPL no documentadas', it: 'Asset con dipendenze GPL non documentate', nl: 'Assets met niet-gedocumenteerde GPL-afhankelijkheden' } },
       ]},
     ],
   },
@@ -403,56 +596,68 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Glossaire M&A tech — Les 30 termes essentiels',
       en: 'Tech M&A Glossary — The 30 essential terms',
+      de: 'Tech-M&A-Glossar — Die 30 wesentlichen Begriffe',
+      es: 'Glosario de M&A tech — Los 30 términos esenciales',
+      it: 'Glossario M&A tech — I 30 termini essenziali',
+      nl: 'Tech M&A-glossarium — De 30 essentiële termen',
     },
     excerpt: {
       fr: 'Le marché M&A tech a son propre vocabulaire. Ce glossaire couvre les termes essentiels, des métriques SaaS aux mécanismes contractuels, pour que fondateurs et acquéreurs parlent le même langage.',
       en: 'The tech M&A market has its own vocabulary. This glossary covers the essential terms, from SaaS metrics to contractual mechanisms, so founders and acquirers speak the same language.',
+      de: 'Der Tech-M&A-Markt hat sein eigenes Vokabular. Dieses Glossar deckt die wesentlichen Begriffe ab, von SaaS-Kennzahlen bis zu vertraglichen Mechanismen, damit Gründer und Käufer dieselbe Sprache sprechen.',
+      es: 'El mercado de M&A tech tiene su propio vocabulario. Este glosario cubre los términos esenciales, desde las métricas SaaS hasta los mecanismos contractuales, para que fundadores y compradores hablen el mismo idioma.',
+      it: 'Il mercato M&A tech ha il suo vocabolario. Questo glossario copre i termini essenziali, dalle metriche SaaS ai meccanismi contrattuali, affinché fondatori e acquirenti parlino la stessa lingua.',
+      nl: 'De tech M&A-markt heeft zijn eigen vocabulaire. Dit glossarium behandelt de essentiële termen, van SaaS-maatstaven tot contractuele mechanismen, zodat oprichters en kopers dezelfde taal spreken.',
     },
     body: [
       { type: 'p', text: {
         fr: 'Le marché M&A tech a son propre vocabulaire — et la confusion terminologique est souvent la première barrière pour les fondateurs qui envisagent une cession. Ce glossaire couvre les termes essentiels, des métriques SaaS aux mécanismes contractuels.',
         en: 'The tech M&A market has its own vocabulary — and terminological confusion is often the first barrier for founders considering a sale. This glossary covers the essential terms, from SaaS metrics to contractual mechanisms.',
+        de: 'Der Tech-M&A-Markt hat sein eigenes Vokabular — und terminologische Verwirrung ist häufig die erste Hürde für Gründer, die einen Verkauf in Erwägung ziehen. Dieses Glossar behandelt die wesentlichen Begriffe, von SaaS-Kennzahlen bis zu vertraglichen Mechanismen.',
+        es: 'El mercado M&A tech tiene su propio vocabulario — y la confusión terminológica es a menudo la primera barrera para los fundadores que consideran una venta. Este glosario cubre los términos esenciales, desde las métricas SaaS hasta los mecanismos contractuales.',
+        it: 'Il mercato M&A tech ha il suo vocabolario — e la confusione terminologica è spesso la prima barriera per i fondatori che considerano una cessione. Questo glossario copre i termini essenziali, dalle metriche SaaS ai meccanismi contrattuali.',
+        nl: 'De tech M&A-markt heeft zijn eigen vocabulaire — en terminologische verwarring is vaak de eerste barrière voor oprichters die een verkoop overwegen. Dit glossarium behandelt de essentiële termen, van SaaS-maatstaven tot contractuele mechanismen.',
       }},
-      { type: 'h2', text: { fr: 'Métriques de valorisation', en: 'Valuation metrics' } },
+      { type: 'h2', text: { fr: 'Métriques de valorisation', en: 'Valuation metrics', de: 'Bewertungskennzahlen', es: 'Métricas de valoración', it: 'Metriche di valutazione', nl: 'Waarderingsmaatstaven' } },
       { type: 'list', items: [
-        { fr: 'ARR (Annual Recurring Revenue) — Le revenu annuel récurrent, base de calcul des multiples de valorisation SaaS. Ne pas confondre avec le revenu total qui inclut les revenus one-shot.', en: 'ARR (Annual Recurring Revenue) — The annual recurring revenue, basis for SaaS valuation multiples. Do not confuse with total revenue which includes one-shot revenues.' },
-        { fr: 'MRR (Monthly Recurring Revenue) — L\'ARR divisé par 12. Utile pour les actifs jeunes ou en forte croissance.', en: 'MRR (Monthly Recurring Revenue) — ARR divided by 12. Useful for young or fast-growing assets.' },
-        { fr: 'NRR (Net Revenue Retention) — Mesure l\'évolution du revenu sur une cohorte de clients existants. NRR > 100% = expansion nette. Indicateur critique pour les multiples premium.', en: 'NRR (Net Revenue Retention) — Measures revenue evolution on a cohort of existing clients. NRR > 100% = net expansion. Critical indicator for premium multiples.' },
-        { fr: 'Churn — Taux d\'attrition. Churn client (% de clients perdus) vs churn revenu (% de revenu perdu). Le churn revenu est plus significatif.', en: 'Churn — Attrition rate. Client churn (% of clients lost) vs revenue churn (% of revenue lost). Revenue churn is more significant.' },
-        { fr: 'LTV (Lifetime Value) — Revenu total généré par un client sur sa durée de vie. LTV = ARPU × 1/churn mensuel.', en: 'LTV (Lifetime Value) — Total revenue generated by a client over their lifetime. LTV = ARPU × 1/monthly churn.' },
-        { fr: 'CAC (Customer Acquisition Cost) — Coût d\'acquisition d\'un client. Ratio LTV:CAC > 3:1 est le seuil minimum pour un SaaS B2B sain.', en: 'CAC (Customer Acquisition Cost) — Cost of acquiring a client. LTV:CAC ratio > 3:1 is the minimum threshold for a healthy B2B SaaS.' },
-        { fr: 'Multiple ARR — Prix de cession exprimé en multiple de l\'ARR annuel. Exemple : actif avec 500K€ ARR vendu 2M€ = multiple de 4x ARR.', en: 'ARR multiple — Sale price expressed as a multiple of annual ARR. Example: asset with €500K ARR sold for €2M = 4x ARR multiple.' },
+        { fr: 'ARR (Annual Recurring Revenue) — Le revenu annuel récurrent, base de calcul des multiples de valorisation SaaS. Ne pas confondre avec le revenu total qui inclut les revenus one-shot.', en: 'ARR (Annual Recurring Revenue) — The annual recurring revenue, basis for SaaS valuation multiples. Do not confuse with total revenue which includes one-shot revenues.', de: 'ARR (Annual Recurring Revenue) — Der jährliche wiederkehrende Umsatz, Berechnungsgrundlage für SaaS-Bewertungsmultiplikatoren. Nicht mit dem Gesamtumsatz verwechseln, der Einmalumsätze enthält.', es: 'ARR (Annual Recurring Revenue) — El ingreso anual recurrente, base de cálculo de los múltiplos de valoración SaaS. No confundir con el ingreso total que incluye ingresos puntuales.', it: 'ARR (Annual Recurring Revenue) — Il ricavo annuo ricorrente, base di calcolo dei multipli di valutazione SaaS. Non confondere con il ricavo totale che include i ricavi una tantum.', nl: 'ARR (Annual Recurring Revenue) — De jaarlijkse terugkerende omzet, berekeningsbasis voor SaaS-waarderingsmultiples. Niet verwarren met totale omzet die eenmalige inkomsten omvat.' },
+        { fr: 'MRR (Monthly Recurring Revenue) — L\'ARR divisé par 12. Utile pour les actifs jeunes ou en forte croissance.', en: 'MRR (Monthly Recurring Revenue) — ARR divided by 12. Useful for young or fast-growing assets.', de: 'MRR (Monthly Recurring Revenue) — Der ARR dividiert durch 12. Nützlich für junge oder schnell wachsende Assets.', es: 'MRR (Monthly Recurring Revenue) — El ARR dividido entre 12. Útil para activos jóvenes o en fuerte crecimiento.', it: 'MRR (Monthly Recurring Revenue) — L\'ARR diviso per 12. Utile per gli asset giovani o in forte crescita.', nl: 'MRR (Monthly Recurring Revenue) — De ARR gedeeld door 12. Nuttig voor jonge of sterk groeiende assets.' },
+        { fr: 'NRR (Net Revenue Retention) — Mesure l\'évolution du revenu sur une cohorte de clients existants. NRR > 100% = expansion nette. Indicateur critique pour les multiples premium.', en: 'NRR (Net Revenue Retention) — Measures revenue evolution on a cohort of existing clients. NRR > 100% = net expansion. Critical indicator for premium multiples.', de: 'NRR (Net Revenue Retention) — Misst die Umsatzentwicklung bei einer Kohorte bestehender Kunden. NRR > 100% = Nettoexpansion. Kritischer Indikator für Premium-Multiplikatoren.', es: 'NRR (Net Revenue Retention) — Mide la evolución del ingreso en una cohorte de clientes existentes. NRR > 100% = expansión neta. Indicador crítico para los múltiplos premium.', it: 'NRR (Net Revenue Retention) — Misura l\'evoluzione del ricavo su una coorte di clienti esistenti. NRR > 100% = espansione netta. Indicatore critico per i multipli premium.', nl: 'NRR (Net Revenue Retention) — Meet de omzetontwikkeling bij een cohort bestaande klanten. NRR > 100% = netto-expansie. Kritische indicator voor premium multiples.' },
+        { fr: 'Churn — Taux d\'attrition. Churn client (% de clients perdus) vs churn revenu (% de revenu perdu). Le churn revenu est plus significatif.', en: 'Churn — Attrition rate. Client churn (% of clients lost) vs revenue churn (% of revenue lost). Revenue churn is more significant.', de: 'Churn — Abwanderungsrate. Kundenchurn (% der verlorenen Kunden) vs. Umsatzchurn (% des verlorenen Umsatzes). Der Umsatzchurn ist bedeutsamer.', es: 'Churn — Tasa de abandono. Churn de clientes (% de clientes perdidos) vs churn de ingresos (% de ingresos perdidos). El churn de ingresos es más significativo.', it: 'Churn — Tasso di abbandono. Churn clienti (% di clienti persi) vs churn ricavi (% di ricavi persi). Il churn ricavi è più significativo.', nl: 'Churn — Verlooppercentage. Klantenchurn (% verloren klanten) vs omzetechurn (% verloren omzet). Omzetechurn is significanter.' },
+        { fr: 'LTV (Lifetime Value) — Revenu total généré par un client sur sa durée de vie. LTV = ARPU × 1/churn mensuel.', en: 'LTV (Lifetime Value) — Total revenue generated by a client over their lifetime. LTV = ARPU × 1/monthly churn.', de: 'LTV (Lifetime Value) — Gesamtumsatz, der von einem Kunden über seine Lebensdauer generiert wird. LTV = ARPU × 1/monatlicher Churn.', es: 'LTV (Lifetime Value) — Ingreso total generado por un cliente durante su vida. LTV = ARPU × 1/churn mensual.', it: 'LTV (Lifetime Value) — Ricavo totale generato da un cliente nel corso della sua vita. LTV = ARPU × 1/churn mensile.', nl: 'LTV (Lifetime Value) — Totale omzet gegenereerd door een klant gedurende zijn levensduur. LTV = ARPU × 1/maandelijkse churn.' },
+        { fr: 'CAC (Customer Acquisition Cost) — Coût d\'acquisition d\'un client. Ratio LTV:CAC > 3:1 est le seuil minimum pour un SaaS B2B sain.', en: 'CAC (Customer Acquisition Cost) — Cost of acquiring a client. LTV:CAC ratio > 3:1 is the minimum threshold for a healthy B2B SaaS.', de: 'CAC (Customer Acquisition Cost) — Kosten für die Gewinnung eines Kunden. LTV:CAC-Verhältnis > 3:1 ist der Mindestschwellenwert für ein gesundes B2B SaaS.', es: 'CAC (Customer Acquisition Cost) — Coste de adquisición de un cliente. Ratio LTV:CAC > 3:1 es el umbral mínimo para un SaaS B2B sano.', it: 'CAC (Customer Acquisition Cost) — Costo di acquisizione di un cliente. Rapporto LTV:CAC > 3:1 è la soglia minima per un SaaS B2B sano.', nl: 'CAC (Customer Acquisition Cost) — Kosten voor het werven van een klant. LTV:CAC-verhouding > 3:1 is de minimumdrempel voor een gezonde B2B SaaS.' },
+        { fr: 'Multiple ARR — Prix de cession exprimé en multiple de l\'ARR annuel. Exemple : actif avec 500K€ ARR vendu 2M€ = multiple de 4x ARR.', en: 'ARR multiple — Sale price expressed as a multiple of annual ARR. Example: asset with €500K ARR sold for €2M = 4x ARR multiple.', de: 'ARR-Multiplikator — Verkaufspreis ausgedrückt als Vielfaches des jährlichen ARR. Beispiel: Asset mit 500K€ ARR, verkauft für 2M€ = 4x ARR-Multiplikator.', es: 'Múltiplo ARR — Precio de cesión expresado en múltiplo del ARR anual. Ejemplo: activo con 500K€ ARR vendido por 2M€ = múltiplo de 4x ARR.', it: 'Multiplo ARR — Prezzo di cessione espresso come multiplo dell\'ARR annuale. Esempio: asset con 500K€ ARR venduto per 2M€ = multiplo di 4x ARR.', nl: 'ARR-multiple — Verkoopprijs uitgedrukt als veelvoud van de jaarlijkse ARR. Voorbeeld: asset met 500K€ ARR verkocht voor 2M€ = 4x ARR-multiple.' },
       ]},
-      { type: 'h2', text: { fr: 'Mécanismes de transaction', en: 'Transaction mechanisms' } },
+      { type: 'h2', text: { fr: 'Mécanismes de transaction', en: 'Transaction mechanisms', de: 'Transaktionsmechanismen', es: 'Mecanismos de transacción', it: 'Meccanismi di transazione', nl: 'Transactiemechanismen' } },
       { type: 'list', items: [
-        { fr: 'LOI (Letter of Intent) — Lettre d\'intention non-engageante. Première formalisation de l\'accord entre acheteur et vendeur sur le prix indicatif et les conditions principales.', en: 'LOI (Letter of Intent) — Non-binding letter of intent. First formalisation of the agreement between buyer and seller on the indicative price and main conditions.' },
-        { fr: 'SPA (Share Purchase Agreement) — Acte de cession final dans le cas d\'un share deal (rachat de la société qui détient l\'actif).', en: 'SPA (Share Purchase Agreement) — Final transfer deed in the case of a share deal (acquisition of the company holding the asset).' },
-        { fr: 'Asset deal — Acquisition des actifs uniquement (code, IP, contrats, clients) sans reprendre la structure légale de la société.', en: 'Asset deal — Acquisition of assets only (code, IP, contracts, clients) without taking on the legal company structure.' },
-        { fr: 'Earnout — Complément de prix conditionnel versé après le closing, basé sur l\'atteinte d\'objectifs définis (ARR, croissance, rétention).', en: 'Earnout — Conditional price supplement paid after closing, based on achieving defined targets (ARR, growth, retention).' },
-        { fr: 'Séquestre (escrow) — Montant bloqué par une tierce partie (banque ou notaire) pendant la période entre la signature de la promesse et le closing.', en: 'Escrow — Amount held by a third party (bank or notary) during the period between signing the promise and closing.' },
-        { fr: 'Due diligence — Processus d\'audit approfondi mené par l\'acquéreur avant closing. Couvre les dimensions technique, juridique, financière, et commerciale.', en: 'Due diligence — In-depth audit process conducted by the acquirer before closing. Covers technical, legal, financial, and commercial dimensions.' },
-        { fr: 'Closing — Finalisation juridique et financière de la transaction. Signature du SPA + virement du solde + transfert des droits.', en: 'Closing — Legal and financial completion of the transaction. SPA signature + balance transfer + rights transfer.' },
+        { fr: 'LOI (Letter of Intent) — Lettre d\'intention non-engageante. Première formalisation de l\'accord entre acheteur et vendeur sur le prix indicatif et les conditions principales.', en: 'LOI (Letter of Intent) — Non-binding letter of intent. First formalisation of the agreement between buyer and seller on the indicative price and main conditions.', de: 'LOI (Letter of Intent) — Unverbindliche Absichtserklärung. Erste Formalisierung der Vereinbarung zwischen Käufer und Verkäufer über den Richtpreis und die wichtigsten Bedingungen.', es: 'LOI (Letter of Intent) — Carta de intención no vinculante. Primera formalización del acuerdo entre comprador y vendedor sobre el precio indicativo y las condiciones principales.', it: 'LOI (Letter of Intent) — Lettera di intenti non vincolante. Prima formalizzazione dell\'accordo tra acquirente e venditore sul prezzo indicativo e le condizioni principali.', nl: 'LOI (Letter of Intent) — Niet-bindende intentieverklaring. Eerste formalisering van het akkoord tussen koper en verkoper over de indicatieve prijs en de hoofdvoorwaarden.' },
+        { fr: 'SPA (Share Purchase Agreement) — Acte de cession final dans le cas d\'un share deal (rachat de la société qui détient l\'actif).', en: 'SPA (Share Purchase Agreement) — Final transfer deed in the case of a share deal (acquisition of the company holding the asset).', de: 'SPA (Share Purchase Agreement) — Abschließende Übertragungsurkunde im Fall eines Share Deals (Erwerb der das Asset haltenden Gesellschaft).', es: 'SPA (Share Purchase Agreement) — Escritura de cesión final en el caso de un share deal (compra de la sociedad que posee el activo).', it: 'SPA (Share Purchase Agreement) — Atto di cessione finale nel caso di uno share deal (acquisizione della società che detiene l\'asset).', nl: 'SPA (Share Purchase Agreement) — Definitieve overdrachtsakte in het geval van een share deal (overname van de vennootschap die het asset houdt).' },
+        { fr: 'Asset deal — Acquisition des actifs uniquement (code, IP, contrats, clients) sans reprendre la structure légale de la société.', en: 'Asset deal — Acquisition of assets only (code, IP, contracts, clients) without taking on the legal company structure.', de: 'Asset Deal — Erwerb nur der Assets (Code, IP, Verträge, Kunden) ohne Übernahme der Rechtsstruktur der Gesellschaft.', es: 'Asset deal — Adquisición solo de los activos (código, IP, contratos, clientes) sin asumir la estructura legal de la sociedad.', it: 'Asset deal — Acquisizione solo degli asset (codice, IP, contratti, clienti) senza assumere la struttura legale della società.', nl: 'Asset deal — Overname van alleen de activa (code, IP, contracten, klanten) zonder de juridische bedrijfsstructuur over te nemen.' },
+        { fr: 'Earnout — Complément de prix conditionnel versé après le closing, basé sur l\'atteinte d\'objectifs définis (ARR, croissance, rétention).', en: 'Earnout — Conditional price supplement paid after closing, based on achieving defined targets (ARR, growth, retention).', de: 'Earnout — Bedingter Preiszuschlag, der nach dem Closing gezahlt wird, basierend auf dem Erreichen definierter Ziele (ARR, Wachstum, Retention).', es: 'Earnout — Complemento de precio condicional pagado después del closing, basado en el logro de objetivos definidos (ARR, crecimiento, retención).', it: 'Earnout — Complemento di prezzo condizionale pagato dopo il closing, basato sul raggiungimento di obiettivi definiti (ARR, crescita, retention).', nl: 'Earnout — Voorwaardelijke prijsaanvulling betaald na het closing, gebaseerd op het behalen van gedefinieerde doelstellingen (ARR, groei, retentie).' },
+        { fr: 'Séquestre (escrow) — Montant bloqué par une tierce partie (banque ou notaire) pendant la période entre la signature de la promesse et le closing.', en: 'Escrow — Amount held by a third party (bank or notary) during the period between signing the promise and closing.', de: 'Treuhandkonto (Escrow) — Betrag, der von einer dritten Partei (Bank oder Notar) im Zeitraum zwischen der Unterzeichnung des Versprechens und dem Closing gesperrt ist.', es: 'Depósito en garantía (escrow) — Importe bloqueado por un tercero (banco o notario) durante el período entre la firma de la promesa y el closing.', it: 'Sequestro (escrow) — Importo bloccato da una terza parte (banca o notaio) nel periodo tra la firma della promessa e il closing.', nl: 'Escrow — Bedrag geblokkeerd door een derde partij (bank of notaris) gedurende de periode tussen de ondertekening van de belofte en het closing.' },
+        { fr: 'Due diligence — Processus d\'audit approfondi mené par l\'acquéreur avant closing. Couvre les dimensions technique, juridique, financière, et commerciale.', en: 'Due diligence — In-depth audit process conducted by the acquirer before closing. Covers technical, legal, financial, and commercial dimensions.', de: 'Due Diligence — Eingehender Prüfungsprozess, der vor dem Closing vom Erwerber durchgeführt wird. Deckt technische, rechtliche, finanzielle und kommerzielle Dimensionen ab.', es: 'Due diligence — Proceso de auditoría profunda realizado por el comprador antes del closing. Cubre las dimensiones técnica, jurídica, financiera y comercial.', it: 'Due diligence — Processo di audit approfondito condotto dall\'acquirente prima del closing. Copre le dimensioni tecnica, legale, finanziaria e commerciale.', nl: 'Due diligence — Diepgaand auditproces uitgevoerd door de koper vóór het closing. Omvat technische, juridische, financiële en commerciële dimensies.' },
+        { fr: 'Closing — Finalisation juridique et financière de la transaction. Signature du SPA + virement du solde + transfert des droits.', en: 'Closing — Legal and financial completion of the transaction. SPA signature + balance transfer + rights transfer.', de: 'Closing — Rechtliche und finanzielle Abwicklung der Transaktion. SPA-Unterzeichnung + Saldoüberweisung + Rechtsübertragung.', es: 'Closing — Finalización jurídica y financiera de la transacción. Firma del SPA + transferencia del saldo + transferencia de derechos.', it: 'Closing — Finalizzazione legale e finanziaria della transazione. Firma del SPA + bonifico del saldo + trasferimento dei diritti.', nl: 'Closing — Juridische en financiële afronding van de transactie. SPA-ondertekening + saldooverschrijving + rechtsoverdracht.' },
       ]},
-      { type: 'h2', text: { fr: 'Certification et grade', en: 'Certification and grade' } },
+      { type: 'h2', text: { fr: 'Certification et grade', en: 'Certification and grade', de: 'Zertifizierung und Grade', es: 'Certificación y grado', it: 'Certificazione e grado', nl: 'Certificering en graad' } },
       { type: 'list', items: [
-        { fr: 'Grade AEG — Certification indépendante des analystes AEGRYN sur un actif tech, émise selon un protocole reproductible. De ★ (Exceptionnel) à B (Correct). Non attribué = Refusé.', en: 'AEG Grade — Independent certification from AEGRYN analysts on a tech asset, issued following a reproducible protocol. From ★ (Exceptional) to B (Standard). Not assigned = Refused.' },
-        { fr: 'Dimension C (Code) — Qualité du codebase : dette technique, tests, documentation, CI/CD, sécurité applicative.', en: 'Dimension C (Code) — Codebase quality: technical debt, tests, documentation, CI/CD, application security.' },
-        { fr: 'Dimension I (IP) — Propriété intellectuelle : marques, droits logiciels, licences, contrats prestataires.', en: 'Dimension I (IP) — Intellectual property: trademarks, software rights, licences, contractor contracts.' },
-        { fr: 'Dimension F (Finance) — Métriques financières : ARR audité, NRR, churn, marges, croissance.', en: 'Dimension F (Finance) — Financial metrics: audited ARR, NRR, churn, margins, growth.' },
-        { fr: 'Dimension S (Sécurité) — Posture de sécurité : pentest, conformité RGPD/NIS2, architecture sécurité.', en: 'Dimension S (Security) — Security posture: pentest, GDPR/NIS2 compliance, security architecture.' },
-        { fr: 'Data room — Espace sécurisé de partage de documents entre vendeur et acquéreur qualifié, sous NDA. Contient les éléments d\'audit complets.', en: 'Data room — Secure document sharing space between seller and qualified acquirer, under NDA. Contains complete audit materials.' },
+        { fr: 'Grade AEG — Certification indépendante des analystes AEGRYN sur un actif tech, émise selon un protocole reproductible. De ★ (Exceptionnel) à B (Correct). Non attribué = Refusé.', en: 'AEG Grade — Independent certification from AEGRYN analysts on a tech asset, issued following a reproducible protocol. From ★ (Exceptional) to B (Standard). Not assigned = Refused.', de: 'AEG Grade — Unabhängige Zertifizierung von AEGRYN-Analysten für ein Tech-Asset, ausgestellt nach einem reproduzierbaren Protokoll. Von ★ (Außergewöhnlich) bis B (Standard). Nicht vergeben = Abgelehnt.', es: 'Grado AEG — Certificación independiente de los analistas AEGRYN sobre un activo tech, emitida según un protocolo reproducible. De ★ (Excepcional) a B (Estándar). No asignado = Rechazado.', it: 'Grado AEG — Certificazione indipendente degli analisti AEGRYN su un asset tech, emessa secondo un protocollo riproducibile. Da ★ (Eccezionale) a B (Standard). Non assegnato = Rifiutato.', nl: 'AEG Grade — Onafhankelijke certificering van AEGRYN-analisten voor een tech-asset, uitgegeven volgens een reproduceerbaar protocol. Van ★ (Uitzonderlijk) tot B (Standaard). Niet toegewezen = Geweigerd.' },
+        { fr: 'Dimension C (Code) — Qualité du codebase : dette technique, tests, documentation, CI/CD, sécurité applicative.', en: 'Dimension C (Code) — Codebase quality: technical debt, tests, documentation, CI/CD, application security.', de: 'Dimension C (Code) — Codebase-Qualität: technische Schulden, Tests, Dokumentation, CI/CD, Anwendungssicherheit.', es: 'Dimensión C (Código) — Calidad del codebase: deuda técnica, tests, documentación, CI/CD, seguridad de la aplicación.', it: 'Dimensione C (Codice) — Qualità del codebase: debito tecnico, test, documentazione, CI/CD, sicurezza applicativa.', nl: 'Dimensie C (Code) — Codebase-kwaliteit: technische schuld, tests, documentatie, CI/CD, applicatiebeveiliging.' },
+        { fr: 'Dimension I (IP) — Propriété intellectuelle : marques, droits logiciels, licences, contrats prestataires.', en: 'Dimension I (IP) — Intellectual property: trademarks, software rights, licences, contractor contracts.', de: 'Dimension I (IP) — Geistiges Eigentum: Marken, Softwarerechte, Lizenzen, Auftragnehmerverträge.', es: 'Dimensión I (IP) — Propiedad intelectual: marcas, derechos de software, licencias, contratos de proveedores.', it: 'Dimensione I (IP) — Proprietà intellettuale: marchi, diritti software, licenze, contratti fornitori.', nl: 'Dimensie I (IP) — Intellectueel eigendom: merken, softwarerechten, licenties, aannemerscontracten.' },
+        { fr: 'Dimension F (Finance) — Métriques financières : ARR audité, NRR, churn, marges, croissance.', en: 'Dimension F (Finance) — Financial metrics: audited ARR, NRR, churn, margins, growth.', de: 'Dimension F (Finanzen) — Finanzkennzahlen: geprüfter ARR, NRR, Churn, Margen, Wachstum.', es: 'Dimensión F (Finanzas) — Métricas financieras: ARR auditado, NRR, churn, márgenes, crecimiento.', it: 'Dimensione F (Finanza) — Metriche finanziarie: ARR auditato, NRR, churn, margini, crescita.', nl: 'Dimensie F (Financiën) — Financiële maatstaven: gecontroleerde ARR, NRR, churn, marges, groei.' },
+        { fr: 'Dimension S (Sécurité) — Posture de sécurité : pentest, conformité RGPD/NIS2, architecture sécurité.', en: 'Dimension S (Security) — Security posture: pentest, GDPR/NIS2 compliance, security architecture.', de: 'Dimension S (Sicherheit) — Sicherheitsposition: Pentest, DSGVO/NIS2-Compliance, Sicherheitsarchitektur.', es: 'Dimensión S (Seguridad) — Postura de seguridad: pentest, cumplimiento RGPD/NIS2, arquitectura de seguridad.', it: 'Dimensione S (Sicurezza) — Postura di sicurezza: pentest, conformità GDPR/NIS2, architettura di sicurezza.', nl: 'Dimensie S (Beveiliging) — Beveiligingspositie: pentest, AVG/NIS2-naleving, beveiligingsarchitectuur.' },
+        { fr: 'Data room — Espace sécurisé de partage de documents entre vendeur et acquéreur qualifié, sous NDA. Contient les éléments d\'audit complets.', en: 'Data room — Secure document sharing space between seller and qualified acquirer, under NDA. Contains complete audit materials.', de: 'Data Room — Sicherer Dokumentenaustauschraum zwischen Verkäufer und qualifiziertem Erwerber unter NDA. Enthält vollständige Prüfungsunterlagen.', es: 'Data room — Espacio seguro de intercambio de documentos entre vendedor y comprador cualificado, bajo NDA. Contiene los elementos de auditoría completos.', it: 'Data room — Spazio sicuro di condivisione documenti tra venditore e acquirente qualificato, sotto NDA. Contiene i materiali di audit completi.', nl: 'Data room — Beveiligde documentuitwisselingsruimte tussen verkoper en gekwalificeerde koper, onder NDA. Bevat volledig auditmateriaal.' },
       ]},
-      { type: 'h2', text: { fr: 'Profils d\'acquéreurs', en: 'Acquirer profiles' } },
+      { type: 'h2', text: { fr: 'Profils d\'acquéreurs', en: 'Acquirer profiles', de: 'Erwerberprofile', es: 'Perfiles de compradores', it: 'Profili degli acquirenti', nl: 'Kopersprofielen' } },
       { type: 'list', items: [
-        { fr: 'PE (Private Equity) — Fonds d\'investissement qui acquiert pour restructurer et revendre à horizon 3–7 ans. Représente 58% des acquéreurs SaaS en 2025.', en: 'PE (Private Equity) — Investment fund that acquires to restructure and resell at a 3–7 year horizon. Represents 58% of SaaS acquirers in 2025.' },
-        { fr: 'Family Office — Structure gérant la fortune d\'une famille. Horizon d\'investissement long terme, appétit pour des actifs stables et rentables.', en: 'Family Office — Structure managing a family\'s wealth. Long-term investment horizon, appetite for stable and profitable assets.' },
-        { fr: 'Search Fund — Véhicule créé par un entrepreneur (le searcher) pour lever du capital, trouver une entreprise à acquérir, et l\'opérer personnellement.', en: 'Search Fund — Vehicle created by an entrepreneur (the searcher) to raise capital, find a company to acquire, and operate it personally.' },
-        { fr: 'Strategic buyer — Acquéreur industriel qui intègre l\'actif à son activité existante (acqui-hire, intégration technique, expansion verticale).', en: 'Strategic buyer — Industrial acquirer who integrates the asset into their existing activity (acqui-hire, technical integration, vertical expansion).' },
+        { fr: 'PE (Private Equity) — Fonds d\'investissement qui acquérit pour restructurer et revendre à horizon 3–7 ans. Représente 58% des acquéreurs SaaS en 2025.', en: 'PE (Private Equity) — Investment fund that acquires to restructure and resell at a 3–7 year horizon. Represents 58% of SaaS acquirers in 2025.', de: 'PE (Private Equity) — Investmentfonds, der erwirbt, um zu restrukturieren und zu verkaufen im 3–7-Jahres-Horizont. Repräsentiert 58% der SaaS-Erwerber im Jahr 2025.', es: 'PE (Private Equity) — Fondo de inversión que adquiere para reestructurar y revender a horizonte 3–7 años. Representa el 58% de los compradores SaaS en 2025.', it: 'PE (Private Equity) — Fondo di investimento che acquisisce per ristrutturare e rivendere a orizzonte 3–7 anni. Rappresenta il 58% degli acquirenti SaaS nel 2025.', nl: 'PE (Private Equity) — Investeringsfonds dat verwerft om te herstructureren en door te verkopen op een horizon van 3–7 jaar. Vertegenwoordigt 58% van de SaaS-kopers in 2025.' },
+        { fr: 'Family Office — Structure gérant la fortune d\'une famille. Horizon d\'investissement long terme, appétit pour des actifs stables et rentables.', en: 'Family Office — Structure managing a family\'s wealth. Long-term investment horizon, appetite for stable and profitable assets.', de: 'Family Office — Struktur zur Verwaltung des Vermögens einer Familie. Langfristiger Anlagehorizont, Appetit auf stabile und rentable Assets.', es: 'Family Office — Estructura que gestiona el patrimonio de una familia. Horizonte de inversión a largo plazo, apetito por activos estables y rentables.', it: 'Family Office — Struttura che gestisce il patrimonio di una famiglia. Orizzonte di investimento a lungo termine, appetito per asset stabili e redditizi.', nl: 'Family Office — Structuur die het vermogen van een familie beheert. Langetermijnbeleggingshorizon, appetijt voor stabiele en rendabele assets.' },
+        { fr: 'Search Fund — Véhicule créé par un entrepreneur (le searcher) pour lever du capital, trouver une entreprise à acquérir, et l\'opérer personnellement.', en: 'Search Fund — Vehicle created by an entrepreneur (the searcher) to raise capital, find a company to acquire, and operate it personally.', de: 'Search Fund — Von einem Unternehmer (dem Searcher) gegründetes Vehikel, um Kapital aufzubringen, ein zu erwerbendes Unternehmen zu finden und es persönlich zu führen.', es: 'Search Fund — Vehículo creado por un emprendedor (el searcher) para recaudar capital, encontrar una empresa a adquirir y operarla personalmente.', it: 'Search Fund — Veicolo creato da un imprenditore (il searcher) per raccogliere capitale, trovare un\'azienda da acquisire e gestirla personalmente.', nl: 'Search Fund — Voertuig gecreëerd door een ondernemer (de searcher) om kapitaal aan te trekken, een te verwerven bedrijf te vinden en het persoonlijk te leiden.' },
+        { fr: 'Strategic buyer — Acquéreur industriel qui intègre l\'actif à son activité existante (acqui-hire, intégration technique, expansion verticale).', en: 'Strategic buyer — Industrial acquirer who integrates the asset into their existing activity (acqui-hire, technical integration, vertical expansion).', de: 'Strategic Buyer — Industrieller Erwerber, der das Asset in seine bestehende Tätigkeit integriert (Acqui-hire, technische Integration, vertikale Expansion).', es: 'Strategic buyer — Comprador industrial que integra el activo en su actividad existente (acqui-hire, integración técnica, expansión vertical).', it: 'Strategic buyer — Acquirente industriale che integra l\'asset nella sua attività esistente (acqui-hire, integrazione tecnica, espansione verticale).', nl: 'Strategic buyer — Industriële koper die het asset integreert in zijn bestaande activiteit (acqui-hire, technische integratie, verticale expansie).' },
       ]},
       { type: 'stats', items: [
-        { value: '3,1x ARR', label: { fr: 'Multiple médian SaaS privé Europe mars 2026', en: 'European private SaaS median multiple March 2026' } },
-        { value: '6,9x ARR', label: { fr: 'Multiple médian top quartile (NRR > 110%)', en: 'Top quartile median multiple (NRR > 110%)' } },
-        { value: '90j',      label: { fr: 'Durée moyenne d\'une cession M&A tech mid-market', en: 'Average duration of a tech M&A mid-market sale' } },
+        { value: '3,1x ARR', label: { fr: 'Multiple médian SaaS privé Europe mars 2026', en: 'European private SaaS median multiple March 2026', de: 'Europäischer privater SaaS-Medianmultiplikator März 2026', es: 'Múltiplo mediano SaaS privado Europa marzo 2026', it: 'Multiplo mediano SaaS privato Europa marzo 2026', nl: 'Europese private SaaS mediaan-multiple maart 2026' } },
+        { value: '6,9x ARR', label: { fr: 'Multiple médian top quartile (NRR > 110%)', en: 'Top quartile median multiple (NRR > 110%)', de: 'Top-Quartil-Medianmultiplikator (NRR > 110%)', es: 'Múltiplo mediano del cuartil superior (NRR > 110%)', it: 'Multiplo mediano top quartile (NRR > 110%)', nl: 'Top kwartiel mediaan-multiple (NRR > 110%)' } },
+        { value: '90j',      label: { fr: 'Durée moyenne d\'une cession M&A tech mid-market', en: 'Average duration of a tech M&A mid-market sale', de: 'Durchschnittliche Dauer einer Tech-M&A-Mid-Market-Cession', es: 'Duración media de una cesión M&A tech mid-market', it: 'Durata media di una cessione M&A tech mid-market', nl: 'Gemiddelde duur van een tech M&A mid-market transactie' } },
       ]},
     ],
   },
@@ -465,10 +670,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'LegalTech européenne en 2026 : valorisation, M&A et opportunités',
       en: 'European LegalTech in 2026: valuation, M&A and opportunities',
+      de: 'Europäische LegalTech 2026: Bewertung, M&A und Chancen',
+      es: 'LegalTech europea en 2026: valoración, M&A y oportunidades',
+      it: 'LegalTech europea nel 2026: valutazione, M&A e opportunità',
+      nl: 'Europese LegalTech in 2026: waardering, M&A en kansen',
     },
     excerpt: {
       fr: 'Multiples de valorisation, deals actifs et profils d\'acquéreurs sur le marché LegalTech en Europe — données 2026. Pourquoi le vertical LegalTech attire les fonds PE et comment certifier un actif dans ce domaine.',
       en: 'Valuation multiples, active deals and acquirer profiles in the European LegalTech market — 2026 data. Why the LegalTech vertical attracts PE funds and how to certify an asset in this space.',
+      de: 'Bewertungsmultiplikatoren, aktive Deals und Käuferprofile auf dem europäischen LegalTech-Markt — Daten 2026. Warum das LegalTech-Vertikal PE-Fonds anzieht und wie man ein Asset in diesem Bereich zertifiziert.',
+      es: 'Múltiplos de valoración, deals activos y perfiles de compradores en el mercado LegalTech europeo — datos 2026. Por qué el vertical LegalTech atrae a los fondos PE y cómo certificar un activo en este ámbito.',
+      it: 'Multipli di valutazione, deal attivi e profili di acquirenti nel mercato LegalTech europeo — dati 2026. Perché il verticale LegalTech attrae i fondi PE e come certificare un asset in questo settore.',
+      nl: 'Waarderingsmultiples, actieve deals en kopersprofielen op de Europese LegalTech-markt — gegevens 2026. Waarom het LegalTech-verticaal PE-fondsen aantrekt en hoe een asset in dit domein te certificeren.',
     },
     body: [
       { type: 'p', text: {
@@ -552,10 +765,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Comment vendre son SaaS en Europe en 2026 : le guide complet pour les fondateurs',
       en: 'How to sell your SaaS in Europe in 2026: the complete founder\'s guide',
+      de: 'Wie man sein SaaS in Europa 2026 verkauft: der vollständige Gründer-Leitfaden',
+      es: 'Cómo vender tu SaaS en Europa en 2026: la guía completa para fundadores',
+      it: 'Come vendere il tuo SaaS in Europa nel 2026: la guida completa per i fondatori',
+      nl: 'Hoe uw SaaS in Europa te verkopen in 2026: de complete oprichtergids',
     },
     excerpt: {
       fr: 'De la préparation à la signature du SPA — le parcours complet d\'une cession SaaS en Europe, avec délais réels, métriques décisives et erreurs à éviter.',
       en: 'From preparation to SPA signing — the complete journey of a SaaS sale in Europe, with real timelines, decisive metrics and mistakes to avoid.',
+      de: 'Von der Vorbereitung bis zur SPA-Unterzeichnung — der vollständige Ablauf eines SaaS-Verkaufs in Europa, mit realen Zeitplänen, entscheidenden Kennzahlen und zu vermeidenden Fehlern.',
+      es: 'Desde la preparación hasta la firma del SPA — el recorrido completo de una venta SaaS en Europa, con plazos reales, métricas decisivas y errores a evitar.',
+      it: 'Dalla preparazione alla firma del SPA — il percorso completo di una cessione SaaS in Europa, con tempistiche reali, metriche decisive ed errori da evitare.',
+      nl: 'Van voorbereiding tot SPA-ondertekening — de complete reis van een SaaS-verkoop in Europa, met echte tijdlijnen, beslissende maatstaven en te vermijden fouten.',
     },
     body: [
       { type: 'p', text: {
@@ -634,10 +855,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Quand vendre son SaaS ? Les 7 signaux qui indiquent que c\'est le bon moment',
       en: 'When to sell your SaaS? The 7 signals that indicate the right time',
+      de: 'Wann verkauft man sein SaaS? Die 7 Signale, die den richtigen Zeitpunkt anzeigen',
+      es: '¿Cuándo vender tu SaaS? Las 7 señales que indican el momento adecuado',
+      it: 'Quando vendere il tuo SaaS? I 7 segnali che indicano il momento giusto',
+      nl: 'Wanneer uw SaaS te verkopen? De 7 signalen die het juiste moment aangeven',
     },
     excerpt: {
       fr: 'Le timing d\'une cession impacte directement le multiple obtenu. Ces 7 signaux — marché, produit, personnel et réglementaire — vous aident à identifier la fenêtre optimale.',
       en: 'The timing of a sale directly impacts the multiple obtained. These 7 signals — market, product, personal and regulatory — help you identify the optimal window.',
+      de: 'Das Timing eines Verkaufs wirkt sich direkt auf den erzielten Multiplikator aus. Diese 7 Signale — Markt, Produkt, Personal und regulatorisch — helfen Ihnen, das optimale Fenster zu identifizieren.',
+      es: 'El timing de una venta impacta directamente el múltiplo obtenido. Estas 7 señales — mercado, producto, personal y regulatorio — le ayudan a identificar la ventana óptima.',
+      it: 'Il timing di una cessione impatta direttamente il multiplo ottenuto. Questi 7 segnali — mercato, prodotto, personale e normativo — ti aiutano a identificare la finestra ottimale.',
+      nl: 'Het timing van een verkoop beïnvloedt direct de verkregen multiple. Deze 7 signalen — markt, product, personeel en regelgeving — helpen u het optimale venster te identificeren.',
     },
     body: [
       { type: 'p', text: {
@@ -707,10 +936,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Transmettre son entreprise numérique : guide pour les fondateurs de 50 ans et plus',
       en: 'Handing over your digital business: a guide for founders aged 50 and over',
+      de: 'Ihr digitales Unternehmen übergeben: ein Leitfaden für Gründer ab 50 Jahren',
+      es: 'Transmitir tu empresa digital: guía para fundadores de 50 años y más',
+      it: 'Cedere la propria impresa digitale: guida per i fondatori di 50 anni e oltre',
+      nl: 'Uw digitale onderneming overdragen: een gids voor oprichters van 50 jaar en ouder',
     },
     excerpt: {
       fr: '46% des cessions tech européennes sont déclenchées par un motif de succession. Ce guide couvre les trois scénarios de transmission, la fiscalité selon le pays de résidence, et la préparation opérationnelle.',
       en: '46% of European tech sales are triggered by a succession motive. This guide covers the three transmission scenarios, taxation by country of residence, and operational preparation.',
+      de: '46% der europäischen Tech-Verkäufe werden durch ein Nachfolgemotiv ausgelöst. Dieser Leitfaden behandelt die drei Übertragungsszenarien, die Besteuerung nach Wohnsitzland und die operative Vorbereitung.',
+      es: 'El 46% de las cesiones tech europeas son desencadenadas por un motivo de sucesión. Esta guía cubre los tres escenarios de transmisión, la fiscalidad según el país de residencia y la preparación operacional.',
+      it: 'Il 46% delle cessioni tech europee è innescato da un motivo di successione. Questa guida copre i tre scenari di trasmissione, la fiscalità in base al paese di residenza e la preparazione operativa.',
+      nl: '46% van de Europese tech-verkopen wordt getriggerd door een opvolgingsmotief. Deze gids behandelt de drie overdrachtsscenario\'s, de belasting per woonland en de operationele voorbereiding.',
     },
     body: [
       { type: 'p', text: {
@@ -766,10 +1003,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Due diligence côté vendeur : ce que les acquéreurs vont examiner — et comment vous y préparer',
       en: 'Seller-side due diligence: what acquirers will examine — and how to prepare',
+      de: 'Due Diligence auf Verkäuferseite: was Käufer prüfen werden — und wie man sich vorbereitet',
+      es: 'Due diligence del lado vendedor: lo que los compradores examinarán — y cómo prepararse',
+      it: 'Due diligence lato venditore: cosa esamineranno gli acquirenti — e come prepararsi',
+      nl: 'Due diligence aan de verkoperskant: wat kopers zullen onderzoeken — en hoe u zich voorbereidt',
     },
     excerpt: {
       fr: 'La due diligence est la phase où 40% des deals se renégocient à la baisse. Ce guide vous prépare à chaque dimension — technique, IP, financière, sécurité — avant que l\'acquéreur ne commence.',
       en: 'Due diligence is the phase where 40% of deals are renegotiated downward. This guide prepares you for every dimension — technical, IP, financial, security — before the acquirer starts.',
+      de: 'Due Diligence ist die Phase, in der 40% der Deals nach unten neu verhandelt werden. Dieser Leitfaden bereitet Sie auf jede Dimension vor — technisch, IP, finanziell, Sicherheit — bevor der Käufer beginnt.',
+      es: 'La due diligence es la fase en la que el 40% de los deals se reneg ocian a la baja. Esta guía te prepara para cada dimensión — técnica, IP, financiera, seguridad — antes de que el comprador comience.',
+      it: 'La due diligence è la fase in cui il 40% dei deal viene rinegoziato al ribasso. Questa guida ti prepara per ogni dimensione — tecnica, IP, finanziaria, sicurezza — prima che l\'acquirente cominci.',
+      nl: 'Due diligence is de fase waarin 40% van de deals neerwaarts wordt heronderhandeld. Deze gids bereidt u voor op elke dimensie — technisch, IP, financieel, beveiliging — voordat de koper begint.',
     },
     body: [
       { type: 'p', text: {
@@ -820,10 +1065,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Comment valoriser une application mobile avant sa cession : métriques, multiples et pièges',
       en: 'How to value a mobile application before its sale: metrics, multiples and pitfalls',
+      de: 'Wie man eine mobile App vor dem Verkauf bewertet: Kennzahlen, Multiplikatoren und Fallen',
+      es: 'Cómo valorar una aplicación móvil antes de su venta: métricas, múltiplos y trampas',
+      it: 'Come valorizzare un\'app mobile prima della cessione: metriche, multipli e insidie',
+      nl: 'Hoe een mobiele app te waarderen voor de verkoop: maatstaven, multiples en valkuilen',
     },
     excerpt: {
       fr: 'Les applications mobiles obéissent à des logiques de valorisation différentes du SaaS B2B. DAU, MAU, ARPU et rétention D30 sont les métriques déterminantes — avec des multiples qui varient du simple au triple selon le modèle de monétisation.',
       en: 'Mobile applications follow different valuation logic from B2B SaaS. DAU, MAU, ARPU and D30 retention are the determining metrics — with multiples varying threefold depending on the monetisation model.',
+      de: 'Mobile Apps folgen einer anderen Bewertungslogik als B2B SaaS. DAU, MAU, ARPU und D30-Retention sind die entscheidenden Kennzahlen — mit Multiplikatoren, die je nach Monetarisierungsmodell bis zum Dreifachen variieren.',
+      es: 'Las apps móviles siguen lógicas de valoración diferentes a las del SaaS B2B. DAU, MAU, ARPU y retención D30 son las métricas determinantes — con múltiplos que varían del simple al triple según el modelo de monetización.',
+      it: 'Le app mobili seguono logiche di valorizzazione diverse dal SaaS B2B. DAU, MAU, ARPU e retention D30 sono le metriche determinanti — con multipli che variano dal semplice al triplo secondo il modello di monetizzazione.',
+      nl: 'Mobiele apps volgen andere waarderingslogica dan B2B SaaS. DAU, MAU, ARPU en D30-retentie zijn de bepalende maatstaven — met multiples die variëren van enkelvoudig tot drievoudig afhankelijk van het monetisatiemodel.',
     },
     body: [
       { type: 'p', text: {
@@ -878,10 +1131,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Acheter un SaaS rentable en Europe en 2026 : guide complet pour les acquéreurs',
       en: 'Buying a profitable SaaS in Europe in 2026: complete guide for acquirers',
+      de: 'Einen profitablen SaaS in Europa 2026 kaufen: vollständiger Leitfaden für Käufer',
+      es: 'Comprar un SaaS rentable en Europa en 2026: guía completa para compradores',
+      it: 'Comprare un SaaS redditizio in Europa nel 2026: guida completa per gli acquirenti',
+      nl: 'Een winstgevende SaaS in Europa kopen in 2026: complete gids voor kopers',
     },
     excerpt: {
       fr: 'Comment identifier, évaluer et acquérir un SaaS profitable en Europe — méthodes de sourcing, grilles d\'évaluation, pièges contractuels et gestion de la transition post-closing.',
       en: 'How to identify, evaluate and acquire a profitable SaaS in Europe — sourcing methods, evaluation frameworks, contractual pitfalls and post-closing transition management.',
+      de: 'Wie man einen profitablen SaaS in Europa identifiziert, bewertet und erwirbt — Sourcing-Methoden, Bewertungsrahmen, vertragliche Fallen und Post-Closing-Übergangsmanagement.',
+      es: 'Cómo identificar, evaluar y adquirir un SaaS rentable en Europa — métodos de sourcing, marcos de evaluación, trampas contractuales y gestión de la transición post-closing.',
+      it: 'Come identificare, valutare e acquisire un SaaS redditizio in Europa — metodi di sourcing, framework di valutazione, insidie contrattuali e gestione della transizione post-closing.',
+      nl: 'Hoe een winstgevende SaaS in Europa te identificeren, evalueren en verwerven — sourcingmethoden, evaluatiekaders, contractuele valkuilen en post-closing transitiebeheer.',
     },
     body: [
       { type: 'p', text: {
@@ -945,10 +1206,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Search fund et acquisition SaaS en Europe : le modèle qui redéfinit le M&A en 2026',
       en: 'Search fund and SaaS acquisition in Europe: the model redefining M&A in 2026',
+      de: 'Search Fund und SaaS-Akquisition in Europa: das Modell, das M&A 2026 neu definiert',
+      es: 'Search fund y adquisición SaaS en Europa: el modelo que redefine el M&A en 2026',
+      it: 'Search fund e acquisizione SaaS in Europa: il modello che ridefinisce il M&A nel 2026',
+      nl: 'Search fund en SaaS-acquisitie in Europa: het model dat M&A in 2026 herdefiniëert',
     },
     excerpt: {
       fr: 'Les search funds ont représenté +38% de croissance en Europe en 2025. Ce modèle permet à un entrepreneur de lever des fonds, acquérir un SaaS rentable et l\'opérer — sans avoir fondé quoi que ce soit. Guide complet.',
       en: 'Search funds grew +38% in Europe in 2025. This model allows an entrepreneur to raise funds, acquire a profitable SaaS and operate it — without having founded anything. Complete guide.',
+      de: 'Search Funds wuchsen 2025 um +38% in Europa. Dieses Modell ermöglicht es einem Unternehmer, Mittel zu beschaffen, einen profitablen SaaS zu erwerben und zu betreiben — ohne etwas gegründet zu haben. Vollständiger Leitfaden.',
+      es: 'Los search funds crecieron un +38% en Europa en 2025. Este modelo permite a un emprendedor recaudar fondos, adquirir un SaaS rentable y operarlo — sin haber fundado nada. Guía completa.',
+      it: 'I search fund hanno registrato una crescita del +38% in Europa nel 2025. Questo modello consente a un imprenditore di raccogliere fondi, acquisire un SaaS redditizio e gestirlo — senza aver fondato nulla. Guida completa.',
+      nl: 'Search funds groeiden met +38% in Europa in 2025. Dit model stelt een ondernemer in staat fondsen te werven, een winstgevende SaaS te verwerven en te exploiteren — zonder iets te hebben opgericht. Complete gids.',
     },
     body: [
       { type: 'p', text: {
@@ -1001,10 +1270,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Family offices et actifs tech : stratégies d\'investissement dans les SaaS européens en 2026',
       en: 'Family offices and tech assets: investment strategies in European SaaS in 2026',
+      de: 'Family Offices und Tech-Assets: Investitionsstrategien in europäische SaaS in 2026',
+      es: 'Family offices y activos tech: estrategias de inversión en SaaS europeos en 2026',
+      it: 'Family office e asset tech: strategie di investimento nei SaaS europei nel 2026',
+      nl: 'Family offices en tech-assets: investeringsstrategieën in Europese SaaS in 2026',
     },
     excerpt: {
       fr: 'Les family offices européens gèrent 630 Md CHF en Suisse seule. Ils s\'intéressent croissant aux actifs tech SaaS pour leur rendement récurrent et leur faible corrélation aux marchés cotés. Guide des stratégies et critères.',
       en: 'European family offices manage CHF 630 billion in Switzerland alone. They have growing interest in SaaS tech assets for their recurring yield and low correlation to listed markets. Guide to strategies and criteria.',
+      de: 'Europäische Family Offices verwalten allein in der Schweiz 630 Mrd. CHF. Sie interessieren sich zunehmend für SaaS-Tech-Assets wegen ihrer wiederkehrenden Rendite und geringen Korrelation zu notierten Märkten. Leitfaden zu Strategien und Kriterien.',
+      es: 'Los family offices europeos gestionan 630 Md CHF solo en Suiza. Muestran un interés creciente por los activos tech SaaS por su rendimiento recurrente y baja correlación con los mercados cotizados. Guía de estrategias y criterios.',
+      it: 'I family office europei gestiscono 630 Md CHF solo in Svizzera. Mostrano un interesse crescente per gli asset tech SaaS per il loro rendimento ricorrente e la bassa correlazione con i mercati quotati. Guida alle strategie e criteri.',
+      nl: 'Europese family offices beheren 630 Md CHF alleen al in Zwitserland. Ze tonen groeiende interesse in SaaS tech-assets vanwege hun terugkerende rendement en lage correlatie met genoteerde markten. Gids voor strategieën en criteria.',
     },
     body: [
       { type: 'p', text: {
@@ -1046,10 +1323,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Earnout dans les cessions tech : mécanisme, calcul et risques pour le vendeur',
       en: 'Earnout in tech disposals: mechanism, calculation and risks for the seller',
+      de: 'Earnout bei Tech-Verkäufen: Mechanismus, Berechnung und Risiken für den Verkäufer',
+      es: 'Earnout en las cesiones tech: mecanismo, cálculo y riesgos para el vendedor',
+      it: 'Earnout nelle cessioni tech: meccanismo, calcolo e rischi per il venditore',
+      nl: 'Earnout bij tech-verkopen: mechanisme, berekening en risico\'s voor de verkoper',
     },
     excerpt: {
       fr: 'L\'earnout est un complément de prix conditionnel post-closing de plus en plus utilisé dans les cessions SaaS. Ce guide explique comment il se calcule, comment le négocier, et les pièges qui piègent les fondateurs vendeurs.',
       en: 'The earnout is a conditional post-closing price supplement increasingly used in SaaS sales. This guide explains how it is calculated, how to negotiate it, and the traps that catch selling founders.',
+      de: 'Der Earnout ist eine bedingte Post-Closing-Preisergänzung, die zunehmend bei SaaS-Verkäufen eingesetzt wird. Dieser Leitfaden erklärt, wie er berechnet wird, wie man ihn verhandelt und die Fallen, in die verkaufende Gründer tappen.',
+      es: 'El earnout es un complemento de precio condicional post-closing cada vez más utilizado en las cesiones SaaS. Esta guía explica cómo se calcula, cómo negociarlo y las trampas que atrapan a los fundadores vendedores.',
+      it: 'L\'earnout è un complemento di prezzo condizionale post-closing sempre più utilizzato nelle cessioni SaaS. Questa guida spiega come viene calcolato, come negoziarlo e le trappole che colgono i fondatori venditori.',
+      nl: 'De earnout is een voorwaardelijke post-closing prijsaanvulling die steeds vaker wordt gebruikt bij SaaS-verkopen. Deze gids legt uit hoe hij wordt berekend, hoe men hem onderhandelt en de valkuilen die verkopende oprichters vangen.',
     },
     body: [
       { type: 'p', text: {
@@ -1110,10 +1395,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'État du marché M&A tech Europe — Q4 2026 : consolidation et retour des multiples premium',
       en: 'European Tech M&A Market — Q4 2026: consolidation and return of premium multiples',
+      de: 'Europäischer Tech-M&A-Markt — Q4 2026: Konsolidierung und Rückkehr der Premium-Multiplikatoren',
+      es: 'Estado del mercado M&A tech europeo — Q4 2026: consolidación y retorno de los múltiplos premium',
+      it: 'Stato del mercato M&A tech europeo — Q4 2026: consolidamento e ritorno dei multipli premium',
+      nl: 'Staat van de Europese tech M&A-markt — Q4 2026: consolidatie en terugkeer van premium multiples',
     },
     excerpt: {
       fr: 'Analyse des transactions Q3 2026, tendances des multiples par vertical et prévisions Q4. Les actifs IA-native et LegalTech dominent le deal flow européen avec des multiples en hausse de 15% vs Q2.',
       en: 'Q3 2026 transaction analysis, multiple trends by vertical and Q4 forecasts. AI-native and LegalTech assets dominate European deal flow with multiples up 15% vs Q2.',
+      de: 'Analyse der Q3 2026-Transaktionen, Multiple-Trends nach Vertikal und Q4-Prognosen. KI-native und LegalTech-Assets dominieren den europäischen Deal Flow mit Multiplikatoren, die 15% gegenüber Q2 gestiegen sind.',
+      es: 'Análisis de las transacciones del T3 2026, tendencias de los múltiplos por vertical y previsiones para el T4. Los activos IA-native y LegalTech dominan el deal flow europeo con múltiplos al alza del 15% vs T2.',
+      it: 'Analisi delle transazioni Q3 2026, tendenze dei multipli per verticale e previsioni Q4. Gli asset IA-native e LegalTech dominano il deal flow europeo con multipli in aumento del 15% vs Q2.',
+      nl: 'Analyse van Q3 2026-transacties, multiple-trends per verticaal en Q4-prognoses. AI-native en LegalTech-assets domineren de Europese deal flow met multiples die 15% gestegen zijn vs Q2.',
     },
     body: [
       { type: 'p', text: {
@@ -1148,10 +1441,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'FinTech B2B européenne en 2026 : valorisation, deal flow et opportunités M&A',
       en: 'European B2B FinTech in 2026: valuation, deal flow and M&A opportunities',
+      de: 'Europäische B2B FinTech 2026: Bewertung, Deal Flow und M&A-Chancen',
+      es: 'FinTech B2B europea en 2026: valoración, deal flow y oportunidades M&A',
+      it: 'FinTech B2B europea nel 2026: valutazione, deal flow e opportunità M&A',
+      nl: 'Europese B2B FinTech in 2026: waardering, deal flow en M&A-kansen',
     },
     excerpt: {
       fr: 'Le marché FinTech B2B européen pèse 180 Md€ en 2026. PSD3, DORA et Open Finance créent une vague de conformité qui génère de la demande pour les actifs RegTech et PayTech — multiples et profils acheteurs.',
       en: 'The European B2B FinTech market is worth €180B in 2026. PSD3, DORA and Open Finance create a compliance wave generating demand for RegTech and PayTech assets — multiples and buyer profiles.',
+      de: 'Der europäische B2B FinTech-Markt ist 2026 180 Mrd. € wert. PSD3, DORA und Open Finance schaffen eine Compliance-Welle, die Nachfrage nach RegTech- und PayTech-Assets erzeugt — Multiplikatoren und Käuferprofile.',
+      es: 'El mercado FinTech B2B europeo vale 180 Md€ en 2026. PSD3, DORA y Open Finance crean una oleada de cumplimiento que genera demanda para los activos RegTech y PayTech — múltiplos y perfiles compradores.',
+      it: 'Il mercato FinTech B2B europeo vale 180 Md€ nel 2026. PSD3, DORA e Open Finance creano un\'ondata di conformità che genera domanda per gli asset RegTech e PayTech — multipli e profili acquirenti.',
+      nl: 'De Europese B2B FinTech-markt is 180 Md€ waard in 2026. PSD3, DORA en Open Finance creëren een compliance-golf die vraag genereert naar RegTech- en PayTech-assets — multiples en kopersprofielen.',
     },
     body: [
       { type: 'p', text: {
@@ -1186,10 +1487,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'SaaS IA-native en 2026 : valorisation, multiples et ce qui différencie les actifs premium',
       en: 'AI-native SaaS in 2026: valuation, multiples and what differentiates premium assets',
+      de: 'KI-nativer SaaS 2026: Bewertung, Multiplikatoren und was Premium-Assets unterscheidet',
+      es: 'SaaS IA-native en 2026: valoración, múltiplos y lo que diferencia los activos premium',
+      it: 'SaaS IA-native nel 2026: valutazione, multipli e ciò che differenzia gli asset premium',
+      nl: 'AI-native SaaS in 2026: waardering, multiples en wat premium assets onderscheidt',
     },
     excerpt: {
       fr: 'Les SaaS IA-native affichent des multiples 7–10x ARR quand ils maîtrisent leur IP sur les modèles. Ce guide distingue les vrais actifs IA des "wrappers GPT" — une distinction critique pour la valorisation.',
       en: 'AI-native SaaS show 7–10x ARR multiples when they control their model IP. This guide distinguishes true AI assets from "GPT wrappers" — a critical valuation distinction.',
+      de: 'KI-native SaaS zeigen 7–10x ARR-Multiplikatoren, wenn sie ihre Modell-IP kontrollieren. Dieser Leitfaden unterscheidet echte KI-Assets von "GPT-Wrappern" — eine kritische Bewertungsunterscheidung.',
+      es: 'Los SaaS IA-native muestran múltiplos de 7–10x ARR cuando controlan su IP de modelos. Esta guía distingue los verdaderos activos IA de los "wrappers GPT" — una distinción crítica para la valoración.',
+      it: 'I SaaS IA-native mostrano multipli 7–10x ARR quando controllano la loro IP sui modelli. Questa guida distingue i veri asset IA dai "wrapper GPT" — una distinzione critica per la valutazione.',
+      nl: 'AI-native SaaS tonen 7–10x ARR multiples wanneer ze hun model-IP controleren. Deze gids onderscheidt echte AI-assets van "GPT-wrappers" — een kritisch waarderingsonderscheid.',
     },
     body: [
       { type: 'p', text: {
@@ -1230,10 +1539,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Pourquoi la Suisse est le meilleur hub pour céder un actif tech européen',
       en: 'Why Switzerland is the best hub for selling a European tech asset',
+      de: 'Warum die Schweiz der beste Hub für den Verkauf eines europäischen Tech-Assets ist',
+      es: 'Por qué Suiza es el mejor hub para ceder un activo tech europeo',
+      it: 'Perché la Svizzera è il miglior hub per cedere un asset tech europeo',
+      nl: 'Waarom Zwitserland de beste hub is voor de verkoop van een Europees tech-asset',
     },
     excerpt: {
       fr: 'Fiscalité favorable, confidentialité institutionnelle, concentration de family offices et neutralité cross-border : la Suisse offre un cadre unique pour les cessions d\'actifs tech mid-market. Analyse factuelle.',
       en: 'Favourable taxation, institutional confidentiality, family office concentration and cross-border neutrality: Switzerland offers a unique framework for mid-market tech asset sales.',
+      de: 'Günstige Besteuerung, institutionelle Vertraulichkeit, Konzentration von Family Offices und grenzüberschreitende Neutralität: Die Schweiz bietet einen einzigartigen Rahmen für Mid-Market-Tech-Asset-Verkäufe.',
+      es: 'Fiscalidad favorable, confidencialidad institucional, concentración de family offices y neutralidad cross-border: Suiza ofrece un marco único para las cesiones de activos tech mid-market.',
+      it: 'Fiscalità favorevole, riservatezza istituzionale, concentrazione di family office e neutralità cross-border: la Svizzera offre un quadro unico per le cessioni di asset tech mid-market.',
+      nl: 'Gunstige belasting, institutionele vertrouwelijkheid, concentratie van family offices en cross-border neutraliteit: Zwitserland biedt een uniek kader voor mid-market tech-assetverkopen.',
     },
     body: [
       { type: 'p', text: {
@@ -1268,10 +1585,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Marché M&A tech DACH 2026 : pourquoi l\'Allemagne, l\'Autriche et la Suisse offrent les meilleurs multiples d\'Europe',
       en: 'DACH tech M&A market 2026: why Germany, Austria and Switzerland offer Europe\'s best multiples',
+      de: 'DACH Tech-M&A-Markt 2026: warum Deutschland, Österreich und die Schweiz Europas beste Multiplikatoren bieten',
+      es: 'Mercado M&A tech DACH 2026: por qué Alemania, Austria y Suiza ofrecen los mejores múltiplos de Europa',
+      it: 'Mercato M&A tech DACH 2026: perché Germania, Austria e Svizzera offrono i migliori multipli d\'Europa',
+      nl: 'DACH tech M&A-markt 2026: waarom Duitsland, Oostenrijk en Zwitserland Europa\'s beste multiples bieden',
     },
     excerpt: {
       fr: 'Le marché DACH représente 28% du volume M&A tech européen avec des multiples 15–25% supérieurs vs l\'Europe du Sud. Mittelstand numérique, fonds PE sectoriels et SaaS B2B verticaux : analyse complète.',
       en: 'The DACH market represents 28% of European tech M&A volume with multiples 15–25% above Southern Europe. Digital Mittelstand, sector PE funds and vertical B2B SaaS: complete analysis.',
+      de: 'Der DACH-Markt repräsentiert 28% des europäischen Tech-M&A-Volumens mit Multiplikatoren 15–25% über Südeuropa. Digitaler Mittelstand, Branchen-PE-Fonds und vertikale B2B SaaS: vollständige Analyse.',
+      es: 'El mercado DACH representa el 28% del volumen M&A tech europeo con múltiplos un 15–25% superiores a los del sur de Europa. Mittelstand digital, fondos PE sectoriales y SaaS B2B verticales: análisis completo.',
+      it: 'Il mercato DACH rappresenta il 28% del volume M&A tech europeo con multipli 15–25% superiori all\'Europa del Sud. Mittelstand digitale, fondi PE settoriali e SaaS B2B verticali: analisi completa.',
+      nl: 'De DACH-markt vertegenwoordigt 28% van het Europese tech M&A-volume met multiples 15–25% boven Zuid-Europa. Digitale Mittelstand, sector PE-fondsen en verticale B2B SaaS: volledige analyse.',
     },
     body: [
       { type: 'p', text: {
@@ -1309,10 +1634,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'NRR, churn, LTV, CAC : les métriques SaaS qui déterminent votre valorisation en 2026',
       en: 'NRR, churn, LTV, CAC: the SaaS metrics that determine your valuation in 2026',
+      de: 'NRR, Churn, LTV, CAC: die SaaS-Kennzahlen, die Ihre Bewertung 2026 bestimmen',
+      es: 'NRR, churn, LTV, CAC: las métricas SaaS que determinan tu valoración en 2026',
+      it: 'NRR, churn, LTV, CAC: le metriche SaaS che determinano la tua valutazione nel 2026',
+      nl: 'NRR, churn, LTV, CAC: de SaaS-maatstaven die uw waardering in 2026 bepalen',
     },
     excerpt: {
       fr: 'Guide de référence sur les 8 métriques SaaS les plus importantes pour une valorisation M&A — définitions exactes, benchmarks sectoriels 2026, et leur impact direct sur le multiple obtenu.',
       en: 'Reference guide on the 8 most important SaaS metrics for M&A valuation — exact definitions, 2026 sector benchmarks, and their direct impact on the multiple obtained.',
+      de: 'Referenzleitfaden zu den 8 wichtigsten SaaS-Kennzahlen für eine M&A-Bewertung — genaue Definitionen, Branchen-Benchmarks 2026 und ihr direkter Einfluss auf den erzielten Multiplikator.',
+      es: 'Guía de referencia sobre las 8 métricas SaaS más importantes para una valoración M&A — definiciones exactas, benchmarks sectoriales 2026 y su impacto directo sobre el múltiplo obtenido.',
+      it: 'Guida di riferimento sulle 8 metriche SaaS più importanti per una valutazione M&A — definizioni precise, benchmark settoriali 2026 e il loro impatto diretto sul multiplo ottenuto.',
+      nl: 'Referentiegids over de 8 belangrijkste SaaS-maatstaven voor een M&A-waardering — exacte definities, sector-benchmarks 2026 en hun directe impact op de verkregen multiple.',
     },
     body: [
       { type: 'p', text: {
@@ -1368,10 +1701,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Certification indépendante avant cession SaaS : pourquoi c\'est devenu indispensable en 2026',
       en: 'Independent certification before SaaS sale: why it has become indispensable in 2026',
+      de: 'Unabhängige Zertifizierung vor SaaS-Verkauf: warum sie 2026 unentbehrlich geworden ist',
+      es: 'Certificación independiente antes de la cesión SaaS: por qué se ha vuelto indispensable en 2026',
+      it: 'Certificazione indipendente prima della cessione SaaS: perché è diventata indispensabile nel 2026',
+      nl: 'Onafhankelijke certificering vóór SaaS-verkoop: waarom het onmisbaar is geworden in 2026',
     },
     excerpt: {
       fr: 'Les actifs SaaS certifiés par un tiers indépendant avant la mise en vente se vendent 25–40% plus cher et 3× plus vite. Anatomie du processus de certification AEGRYN Grade et de son impact sur la négociation.',
       en: 'SaaS assets independently certified before sale sell for 25–40% more and 3× faster. Anatomy of the AEGRYN Grade certification process and its impact on negotiation.',
+      de: 'Unabhängig zertifizierte SaaS-Assets verkaufen sich 25–40% teurer und 3× schneller. Anatomie des AEGRYN Grade-Zertifizierungsprozesses und seiner Auswirkungen auf die Verhandlung.',
+      es: 'Los activos SaaS certificados por un tercero independiente antes de la puesta en venta se venden un 25–40% más caro y 3× más rápido. Anatomía del proceso de certificación AEGRYN Grade y su impacto en la negociación.',
+      it: 'Gli asset SaaS certificati da una terza parte indipendente prima della messa in vendita si vendono il 25–40% in più e 3× più velocemente. Anatomia del processo di certificazione AEGRYN Grade e del suo impatto sulla negoziazione.',
+      nl: 'Onafhankelijk gecertificeerde SaaS-assets verkopen 25–40% duurder en 3× sneller. Anatomie van het AEGRYN Grade-certificeringsproces en de impact ervan op de onderhandeling.',
     },
     body: [
       { type: 'p', text: {
@@ -1416,10 +1757,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Étude de cas : comment la certification AEGRYN a permis un exit à 4,8x ARR pour un SaaS B2B',
       en: 'Case study: how AEGRYN certification enabled a 4.8x ARR exit for a B2B SaaS',
+      de: 'Fallstudie: wie AEGRYN-Zertifizierung einen 4,8x ARR-Exit für ein B2B SaaS ermöglichte',
+      es: 'Caso de estudio: cómo la certificación AEGRYN permitió un exit de 4,8x ARR para un SaaS B2B',
+      it: 'Studio di caso: come la certificazione AEGRYN ha consentito un exit a 4,8x ARR per un SaaS B2B',
+      nl: 'Casestudy: hoe AEGRYN-certificering een 4,8x ARR exit mogelijk maakte voor een B2B SaaS',
     },
     excerpt: {
       fr: 'Un fondateur de SaaS RH bootstrapped (ARR 2,1M€) passait à 3x avant certification. Après protocole Grade A, il a closé à 4,8x ARR en 11 semaines. Déconstruction du processus, des résultats et des décisions clés.',
       en: 'A bootstrapped HR SaaS founder (ARR €2.1M) was at 3x before certification. After Grade A protocol, he closed at 4.8x ARR in 11 weeks. Deconstruction of the process, results and key decisions.',
+      de: 'Ein Bootstrapped HR SaaS-Gründer (ARR 2,1M€) lag vor der Zertifizierung bei 3x. Nach dem Grade A-Protokoll schloss er bei 4,8x ARR in 11 Wochen. Dekonstruktion des Prozesses, der Ergebnisse und der Schlüsselentscheidungen.',
+      es: 'Un fundador de SaaS RH bootstrapped (ARR 2,1M€) estaba a 3x antes de la certificación. Tras el protocolo Grade A, cerró a 4,8x ARR en 11 semanas. Deconstrucción del proceso, los resultados y las decisiones clave.',
+      it: 'Un fondatore di SaaS HR bootstrapped (ARR 2,1M€) era a 3x prima della certificazione. Dopo il protocollo Grade A, ha chiuso a 4,8x ARR in 11 settimane. Decostruzione del processo, dei risultati e delle decisioni chiave.',
+      nl: 'Een bootstrapped HR SaaS-oprichter (ARR 2,1M€) stond op 3x vóór certificering. Na het Grade A-protocol sloot hij op 4,8x ARR in 11 weken. Deconstructie van het proces, de resultaten en de sleutelbeslissingen.',
     },
     body: [
       { type: 'p', text: {
@@ -1469,10 +1818,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Share deal vs asset deal dans une cession SaaS : quelle structure choisir et pourquoi',
       en: 'Share deal vs asset deal in a SaaS sale: which structure to choose and why',
+      de: 'Share Deal vs. Asset Deal beim SaaS-Verkauf: Welche Struktur wählen und warum',
+      es: 'Share deal vs asset deal en una cesión SaaS: qué estructura elegir y por qué',
+      it: 'Share deal vs asset deal in una cessione SaaS: quale struttura scegliere e perché',
+      nl: 'Share deal vs asset deal bij een SaaS-verkoop: welke structuur kiezen en waarom',
     },
     excerpt: {
       fr: 'Le choix entre share deal et asset deal impacte directement la fiscalité du vendeur, la protection de l\'acquéreur et la complexité juridique. Guide complet avec cas pratiques.',
       en: 'The choice between share deal and asset deal directly impacts seller taxation, acquirer protection and legal complexity. Complete guide with case studies.',
+      de: 'Die Wahl zwischen Share Deal und Asset Deal wirkt sich direkt auf die Besteuerung des Verkäufers, den Käuferschutz und die rechtliche Komplexität aus. Vollständiger Leitfaden mit Fallstudien.',
+      es: 'La elección entre share deal y asset deal impacta directamente la fiscalidad del vendedor, la protección del comprador y la complejidad jurídica. Guía completa con casos prácticos.',
+      it: 'La scelta tra share deal e asset deal impatta direttamente la fiscalità del venditore, la protezione dell\'acquirente e la complessità giuridica. Guida completa con casi pratici.',
+      nl: 'De keuze tussen share deal en asset deal beïnvloedt direct de belasting van de verkoper, de bescherming van de koper en de juridische complexiteit. Complete gids met praktijkgevallen.',
     },
     body: [
       { type: 'p', text: {
@@ -1516,10 +1873,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'RGPD et cession d\'entreprise : comment gérer le transfert des données utilisateurs',
       en: 'GDPR and business disposal: how to manage the transfer of user data',
+      de: 'DSGVO und Unternehmensveräußerung: wie man den Transfer von Nutzerdaten verwaltet',
+      es: 'RGPD y cesión de empresa: cómo gestionar la transferencia de datos de usuarios',
+      it: 'GDPR e cessione d\'impresa: come gestire il trasferimento dei dati utenti',
+      nl: 'AVG en bedrijfsoverdracht: hoe de overdracht van gebruikersgegevens te beheren',
     },
     excerpt: {
       fr: 'Une cession SaaS implique un transfert de données personnelles à un tiers. Le RGPD encadre strictement ce transfert — les erreurs peuvent bloquer un deal ou exposer l\'acquéreur à des sanctions CNIL.',
       en: 'A SaaS sale involves transferring personal data to a third party. GDPR strictly governs this transfer — mistakes can block a deal or expose the acquirer to CNIL sanctions.',
+      de: 'Ein SaaS-Verkauf beinhaltet die Übertragung persönlicher Daten an Dritte. Die DSGVO regelt diese Übertragung streng — Fehler können einen Deal blockieren oder den Käufer DSGVO-Sanktionen aussetzen.',
+      es: 'Una cesión SaaS implica la transferencia de datos personales a un tercero. El RGPD regula estrictamente esta transferencia — los errores pueden bloquear un deal o exponer al comprador a sanciones de la CNIL.',
+      it: 'Una cessione SaaS implica un trasferimento di dati personali a terzi. Il GDPR disciplina rigorosamente questo trasferimento — gli errori possono bloccare un deal o esporre l\'acquirente a sanzioni del Garante.',
+      nl: 'Een SaaS-verkoop houdt een overdracht van persoonsgegevens aan een derde in. De AVG regelt deze overdracht streng — fouten kunnen een deal blokkeren of de koper blootstellen aan CNIL-sancties.',
     },
     body: [
       { type: 'p', text: {
@@ -1556,10 +1921,18 @@ export const ARTICLES: Article[] = [
     title: {
       fr: 'Fiscalité de l\'exit pour un fondateur tech : France, Suisse et Luxembourg comparés',
       en: 'Exit taxation for a tech founder: France, Switzerland and Luxembourg compared',
+      de: 'Exit-Besteuerung für einen Tech-Gründer: Frankreich, Schweiz und Luxemburg im Vergleich',
+      es: 'Fiscalidad del exit para un fundador tech: Francia, Suiza y Luxemburgo comparados',
+      it: 'Fiscalità dell\'exit per un fondatore tech: Francia, Svizzera e Lussemburgo a confronto',
+      nl: 'Exit-belasting voor een tech-oprichter: Frankrijk, Zwitserland en Luxemburg vergeleken',
     },
     excerpt: {
       fr: 'Un exit de 5M€ peut rapporter 3,5M€ net en France ou 4,9M€ net en Suisse — 1,4M€ d\'écart sur la même transaction. Comparaison factuelle des régimes 2026. Information à titre indicatif — consulter un fiscaliste.',
       en: 'A €5M exit can yield €3.5M net in France or €4.9M net in Switzerland — €1.4M gap on the same transaction. Factual 2026 regime comparison. For informational purposes — consult a tax advisor.',
+      de: 'Ein Exit von 5M€ kann 3,5M€ netto in Frankreich oder 4,9M€ netto in der Schweiz einbringen — 1,4M€ Unterschied bei der gleichen Transaktion. Faktischer Vergleich der 2026-Regime. Nur zu Informationszwecken — einen Steuerberater konsultieren.',
+      es: 'Un exit de 5M€ puede reportar 3,5M€ neto en Francia o 4,9M€ neto en Suiza — 1,4M€ de diferencia en la misma transacción. Comparación factual de los regímenes 2026. A título indicativo — consultar a un asesor fiscal.',
+      it: 'Un exit da 5M€ può fruttare 3,5M€ netto in Francia o 4,9M€ netto in Svizzera — 1,4M€ di differenza sulla stessa transazione. Confronto fattuale dei regimi 2026. A titolo informativo — consultare un fiscalista.',
+      nl: 'Een exit van 5M€ kan 3,5M€ netto opleveren in Frankrijk of 4,9M€ netto in Zwitserland — 1,4M€ verschil op dezelfde transactie. Feitelijke vergelijking van de 2026-regimes. Ter informatie — raadpleeg een belastingadviseur.',
     },
     body: [
       { type: 'p', text: {
@@ -1592,14 +1965,19 @@ export const ARTICLES: Article[] = [
 
 ]
 
-export const ARTICLE_CATEGORIES: Record<ArticleCategory, { fr: string; en: string }> = {
-  market:        { fr: 'Rapport marché',   en: 'Market report'   },
-  seller:        { fr: 'Guide vendeur',    en: 'Seller guide'    },
-  buyer:         { fr: 'Guide acquéreur',  en: 'Buyer guide'     },
-  certification: { fr: 'Certification',   en: 'Certification'   },
-  strategy:      { fr: 'Stratégie',        en: 'Strategy'        },
-  case_study:    { fr: 'Étude de cas',     en: 'Case Study'      },
-  legal:         { fr: 'Legal & Fiscal',   en: 'Legal & Tax'     },
-  vertical:      { fr: 'Verticaux',        en: 'Verticals'       },
-  dach:          { fr: 'Marché DACH',      en: 'DACH Market'     },
+export const ARTICLE_CATEGORIES: Record<ArticleCategory, LocaleText> = {
+  market:        { fr: 'Rapport marché',   en: 'Market report',   de: 'Marktbericht',       es: 'Informe de mercado',   it: 'Report mercato',     nl: 'Marktrapport'       },
+  seller:        { fr: 'Guide vendeur',    en: 'Seller guide',    de: 'Verkäufer-Leitfaden', es: 'Guía del vendedor',    it: 'Guida venditore',    nl: 'Verkopersgids'      },
+  buyer:         { fr: 'Guide acquéreur',  en: 'Buyer guide',     de: 'Käufer-Leitfaden',    es: 'Guía del comprador',   it: 'Guida acquirente',   nl: 'Kopersgids'         },
+  certification: { fr: 'Certification',   en: 'Certification',   de: 'Zertifizierung',      es: 'Certificación',        it: 'Certificazione',     nl: 'Certificering'      },
+  strategy:      { fr: 'Stratégie',        en: 'Strategy',        de: 'Strategie',            es: 'Estrategia',           it: 'Strategia',          nl: 'Strategie'          },
+  case_study:    { fr: 'Étude de cas',     en: 'Case Study',      de: 'Fallstudie',           es: 'Caso de estudio',      it: 'Studio di caso',     nl: 'Casestudy'          },
+  legal:         { fr: 'Legal & Fiscal',   en: 'Legal & Tax',     de: 'Recht & Steuer',       es: 'Legal y fiscal',       it: 'Legale e fiscale',   nl: 'Juridisch & fiscaal'},
+  vertical:      { fr: 'Verticaux',        en: 'Verticals',       de: 'Vertikals',            es: 'Verticales',           it: 'Verticali',          nl: 'Verticalen'         },
+  dach:          { fr: 'Marché DACH',      en: 'DACH Market',     de: 'DACH-Markt',           es: 'Mercado DACH',         it: 'Mercato DACH',       nl: 'DACH-markt'         },
+}
+
+export function getLocaleText(text: LocaleText, locale: string): string {
+  const key = locale as keyof LocaleText
+  return text[key] ?? text.en
 }
