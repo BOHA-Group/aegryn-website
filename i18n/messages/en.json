@@ -5,7 +5,7 @@
     "whatWeBuild": "Assets",
     "blog": "Blog",
     "advisory": "Advisory",
-    "growWithUs": "Alliances",
+    "growWithUs": "Partners",
     "career": "Careers",
     "contact": "Contact",
     "auction": "Auction",
@@ -2145,11 +2145,11 @@
   },
   "alliances": {
     "meta": {
-      "title": "Alliances — AEGRYN",
+      "title": "Partners — AEGRYN",
       "desc": "Certification, distribution and deal flow partners. AEGRYN selects its Alliances with the same rigour as its assets."
     },
     "hero": {
-      "label": "AEGRYN Alliances",
+      "label": "AEGRYN Partnerships",
       "title": "The partners that make\nthe grade irrefutable.",
       "desc": "AEGRYN certifies independently. Our partners intervene on distribution, deal flow and transaction structuring and, over time, may enrich certain reports with a complementary cross-review. This ecosystem is what makes us operational."
     },
@@ -2189,9 +2189,9 @@
       }
     },
     "form": {
-      "title": "Become an Alliance partner.",
+      "title": "Become a partner.",
       "structure": "Organisation",
-      "type": "Alliance type",
+      "type": "Type",
       "typePlaceholder": "Choose a type",
       "typeOptions": {
         "certification": "Certification (expert network)",
@@ -2207,7 +2207,20 @@
       "successTitle": "Application received",
       "successDesc": "Our teams will review your application and contact you for a qualification interview.",
       "errorMsg": "An error occurred. Please try again.",
-      "submitting": "Sending..."
+      "submitting": "Sending...",
+      "structureOpts": {
+        "law_firm": "Law firm / Attorneys",
+        "audit": "Audit / Accounting firm",
+        "bank": "Bank / Fiduciary",
+        "fund": "Fund (PE, VC, Family Office)",
+        "notary": "Notary",
+        "accelerator": "Accelerator / Incubator",
+        "platform": "Platform / Marketplace",
+        "other": "Other"
+      },
+      "typeOtherLabel": "Other",
+      "structurePlaceholder": "Choose a structure",
+      "organizationLabel": "Organisation"
     },
     "tabs": {
       "overview": "Overview",

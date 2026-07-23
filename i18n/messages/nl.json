@@ -5,7 +5,7 @@
     "whatWeBuild": "Wat we bouwen",
     "blog": "Blog",
     "advisory": "Advisory",
-    "growWithUs": "Groeien met ons",
+    "growWithUs": "Partners",
     "career": "Carrières",
     "contact": "Contact",
     "auction": "Veiling",
@@ -2187,11 +2187,11 @@
   },
   "alliances": {
     "meta": {
-      "title": "Allianties — AEGRYN",
+      "title": "Partners — AEGRYN",
       "desc": "Certificerings-, distributie- en deal flow-partners. AEGRYN selecteert zijn Allianties met dezelfde strengheid als zijn assets."
     },
     "hero": {
-      "label": "AEGRYN Allianties",
+      "label": "AEGRYN Partnerships",
       "title": "De partners die de grade\nonweerlegbaar maken.",
       "desc": "AEGRYN certificeert onafhankelijk. Onze partners nemen deel aan distributie, deal flow en transactiestructurering en kunnen op termijn bepaalde rapporten verrijken met een aanvullende kruisreview. Dit ecosysteem maakt ons operationeel."
     },
@@ -2231,9 +2231,9 @@
       }
     },
     "form": {
-      "title": "Alliance-partner worden.",
+      "title": "Partner worden.",
       "structure": "Organisatie",
-      "type": "Type alliantie",
+      "type": "Type",
       "typePlaceholder": "Kies een type",
       "typeOptions": {
         "certification": "Certificering (expertnetwerk)",
@@ -2249,7 +2249,20 @@
       "successTitle": "Aanmelding ontvangen",
       "successDesc": "Ons team beoordeelt uw aanvraag en neemt contact met u op voor een kwalificatiegesprek.",
       "errorMsg": "Er is een fout opgetreden. Probeer het opnieuw.",
-      "submitting": "Verzenden..."
+      "submitting": "Verzenden...",
+      "structureOpts": {
+        "law_firm": "Advocatenkantoor",
+        "audit": "Accountancy / Audit",
+        "bank": "Bank / Fiduciair",
+        "fund": "Fonds (PE, VC, Family Office)",
+        "notary": "Notaris",
+        "accelerator": "Accelerator / Incubator",
+        "platform": "Platform / Marketplace",
+        "other": "Overige"
+      },
+      "typeOtherLabel": "Overige",
+      "structurePlaceholder": "Kies een structuur",
+      "organizationLabel": "Organisatie"
     },
     "tabs": {
       "overview": "Overzicht",

@@ -103,7 +103,8 @@ export default function AlliancesContent() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          organization_name: raw.structure,
+          organization_name: raw.organization_name,
+          structure_type:    raw.structure_type,
           alliance_type:     raw.alliance_type,
           email:             raw.email,
           country:           raw.country || undefined,
@@ -280,21 +281,28 @@ export default function AlliancesContent() {
                 </div>
               ) : (
               <form onSubmit={handleApply} className="space-y-5">
+                <div>
+                    <label className={labelCls}>{t('form.organizationLabel')}</label>
+                    <input name="organization_name" type="text" required className={inputCls} />
+                  </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className={labelCls}>{t('form.structure')}</label>
-                    <input name="structure" type="text" required className={inputCls} />
+                    <select name="structure_type" required className={selectCls}>
+                      <option value="">{t('form.structurePlaceholder')}</option>
+                      {(['law_firm','audit','bank','fund','notary','accelerator','platform','other'] as const).map(k => (
+                        <option key={k} value={k}>{(t.raw('form.structureOpts') as Record<string,string>)[k]}</option>
+                      ))}
+                    </select>
                   </div>
                   <div>
                     <label className={labelCls}>{t('form.type')}</label>
                     <select name="alliance_type" required className={selectCls}>
                       <option value="">{t('form.typePlaceholder')}</option>
-                      <option value="certification">Certification (grade)</option>
-                      <option value="sequestre">Séquestre &amp; Juridique</option>
-                      <option value="dealflow">Financement &amp; Deal Flow</option>
-                      <option value="technique">Expertise technique</option>
-                      <option value="assurance">Assurance &amp; Conformité</option>
-                      <option value="other">Autre</option>
+                      {(['certification','sequestre','dealflow','technique','assurance'] as const).map(k => (
+                        <option key={k} value={k}>{t(`types.${k}.label`)}</option>
+                      ))}
+                      <option value="other">{t('form.typeOtherLabel')}</option>
                     </select>
                   </div>
                 </div>

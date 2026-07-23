@@ -4,7 +4,8 @@ import { captureLead }              from '@/lib/leadCapture'
 
 const schema = z.object({
   organization_name: z.string().min(2).max(150),
-  alliance_type:     z.enum(['certification', 'distribution', 'dealflow', 'technical', 'ecosystem']),
+  alliance_type:     z.enum(['certification', 'sequestre', 'dealflow', 'technique', 'assurance', 'other']),
+  structure_type:    z.string().max(100).optional(),
   country:           z.string().max(100).optional(),
   description:       z.string().max(2000).optional(),
   email:             z.string().email(),
@@ -21,6 +22,7 @@ export async function POST(req: NextRequest) {
       {
         organization_name: data.organization_name,
         alliance_type:     data.alliance_type,
+        structure_type:    data.structure_type,
         country:           data.country,
         description:       data.description,
         email:             data.email,
@@ -29,10 +31,10 @@ export async function POST(req: NextRequest) {
       },
       {
         to:              data.email,
-        subjectFounder:  'AEGRYN — Candidature Alliance reçue',
+        subjectFounder:  'AEGRYN — Candidature Partenariat reçue',
         textFounder:     `Bonjour,\n\nNous avons bien reçu la candidature de ${data.organization_name} pour un partenariat de type "${data.alliance_type}".\n\nNos équipes examineront votre dossier et vous contacteront pour un entretien de qualification.\n\nL'équipe AEGRYN\nhttps://aegryn.com/alliances`,
-        subjectInternal: `[Alliance] Candidature ${data.alliance_type} — ${data.organization_name}`,
-        textInternal:    `Nouvelle candidature Alliance\nOrganisation : ${data.organization_name}\nType : ${data.alliance_type}\nEmail : ${data.email}\nPays : ${data.country ?? '—'}\nSite : ${data.website ?? '—'}\nDescription : ${data.description ?? '—'}\nLocale : ${data.locale ?? '—'}`,
+        subjectInternal: `[Partenariat] Candidature ${data.alliance_type} — ${data.organization_name}`,
+        textInternal:    `Nouvelle candidature Partenariat\nOrganisation : ${data.organization_name}\nStructure : ${data.structure_type ?? '—'}\nType : ${data.alliance_type}\nEmail : ${data.email}\nPays : ${data.country ?? '—'}\nSite : ${data.website ?? '—'}\nDescription : ${data.description ?? '—'}\nLocale : ${data.locale ?? '—'}`,
       },
     )
 

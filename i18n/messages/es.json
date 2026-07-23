@@ -5,7 +5,7 @@
     "whatWeBuild": "Lo que construimos",
     "blog": "Blog",
     "advisory": "Advisory",
-    "growWithUs": "Crecer con nosotros",
+    "growWithUs": "Socios",
     "career": "Carreras",
     "contact": "Contacto",
     "auction": "Subasta",
@@ -2187,11 +2187,11 @@
   },
   "alliances": {
     "meta": {
-      "title": "Alianzas — AEGRYN",
+      "title": "Socios — AEGRYN",
       "desc": "Socios de certificación, distribución y deal flow. AEGRYN selecciona sus Alianzas con el mismo rigor que sus activos."
     },
     "hero": {
-      "label": "AEGRYN Alianzas",
+      "label": "AEGRYN Partnerships",
       "title": "Los socios que hacen\nel grade irrefutable.",
       "desc": "AEGRYN certifica de forma independiente. Nuestros socios intervienen en la distribución, el deal flow y la estructuración de transacciones y, a su debido tiempo, podrán enriquecer ciertos informes con una revisión cruzada complementaria. Este ecosistema es lo que nos hace operativos."
     },
@@ -2231,9 +2231,9 @@
       }
     },
     "form": {
-      "title": "Convertirse en socio Alliance.",
+      "title": "Convertirse en socio.",
       "structure": "Organización",
-      "type": "Tipo de alianza",
+      "type": "Tipo",
       "typePlaceholder": "Elegir un tipo",
       "typeOptions": {
         "certification": "Certificación (red de expertos)",
@@ -2249,7 +2249,20 @@
       "successTitle": "Candidatura recibida",
       "successDesc": "Nuestros equipos revisarán su solicitud y se pondrán en contacto con usted para una entrevista de cualificación.",
       "errorMsg": "Se ha producido un error. Por favor, inténtelo de nuevo.",
-      "submitting": "Enviando..."
+      "submitting": "Enviando...",
+      "structureOpts": {
+        "law_firm": "Despacho jurídico / Abogados",
+        "audit": "Auditoría / Contabilidad",
+        "bank": "Banco / Fiduciaria",
+        "fund": "Fondo (PE, VC, Family Office)",
+        "notary": "Notario",
+        "accelerator": "Acelerador / Incubadora",
+        "platform": "Plataforma / Marketplace",
+        "other": "Otro"
+      },
+      "typeOtherLabel": "Otro",
+      "structurePlaceholder": "Elegir una estructura",
+      "organizationLabel": "Organización"
     },
     "tabs": {
       "overview": "Presentación",

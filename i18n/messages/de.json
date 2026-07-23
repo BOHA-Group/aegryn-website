@@ -5,7 +5,7 @@
     "whatWeBuild": "Was wir bauen",
     "blog": "Blog",
     "advisory": "Advisory",
-    "growWithUs": "Mit uns wachsen",
+    "growWithUs": "Partner",
     "career": "Karriere",
     "contact": "Kontakt",
     "auction": "Auktion",
@@ -2187,11 +2187,11 @@
   },
   "alliances": {
     "meta": {
-      "title": "Allianzen — AEGRYN",
+      "title": "Partner — AEGRYN",
       "desc": "Zertifizierungs-, Distributions- und Deal-Flow-Partner. AEGRYN wählt seine Allianzen mit derselben Strenge aus wie seine Assets."
     },
     "hero": {
-      "label": "AEGRYN Allianzen",
+      "label": "AEGRYN Partnerships",
       "title": "Die Partner, die den\nGrade unwiderlegbar machen.",
       "desc": "AEGRYN zertifiziert unabhängig. Unsere Partner wirken bei Vertrieb, Deal-Flow und Transaktionsstrukturierung mit und können langfristig bestimmte Berichte mit einer ergänzenden Querprüfung anreichern. Dieses Ökosystem macht uns operationell."
     },
@@ -2231,9 +2231,9 @@
       }
     },
     "form": {
-      "title": "Alliance-Partner werden.",
+      "title": "Partner werden.",
       "structure": "Organisation",
-      "type": "Allianztyp",
+      "type": "Typ",
       "typePlaceholder": "Typ auswählen",
       "typeOptions": {
         "certification": "Zertifizierung (Expertennetzwerk)",
@@ -2249,7 +2249,20 @@
       "successTitle": "Bewerbung eingegangen",
       "successDesc": "Unser Team wird Ihre Unterlagen prüfen und sich für ein Qualifizierungsgespräch bei Ihnen melden.",
       "errorMsg": "Ein Fehler ist aufgetreten. Bitte erneut versuchen.",
-      "submitting": "Wird gesendet..."
+      "submitting": "Wird gesendet...",
+      "structureOpts": {
+        "law_firm": "Kanzlei / Anwälte",
+        "audit": "Wirtschaftsprüfung / Steuerberatung",
+        "bank": "Bank / Treuhand",
+        "fund": "Fonds (PE, VC, Family Office)",
+        "notary": "Notar",
+        "accelerator": "Accelerator / Inkubator",
+        "platform": "Plattform / Marketplace",
+        "other": "Sonstiges"
+      },
+      "typeOtherLabel": "Sonstiges",
+      "structurePlaceholder": "Struktur wählen",
+      "organizationLabel": "Organisation"
     },
     "tabs": {
       "overview": "Übersicht",

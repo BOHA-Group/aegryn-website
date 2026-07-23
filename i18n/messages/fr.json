@@ -5,7 +5,7 @@
     "whatWeBuild": "Actifs",
     "blog": "Blog",
     "advisory": "Advisory",
-    "growWithUs": "Alliances",
+    "growWithUs": "Partenaires",
     "career": "Carrières",
     "contact": "Contact",
     "auction": "Auction",
@@ -2153,11 +2153,11 @@
   },
   "alliances": {
     "meta": {
-      "title": "Alliances — AEGRYN",
+      "title": "Partenaires — AEGRYN",
       "desc": "Partenaires de certification, de distribution et de deal flow. AEGRYN sélectionne ses Alliances avec la même rigueur que ses actifs."
     },
     "hero": {
-      "label": "AEGRYN Alliances",
+      "label": "AEGRYN Partnerships",
       "title": "Les partenaires qui rendent\nle grade irréfutable.",
       "desc": "AEGRYN certifie de façon indépendante. Nos partenaires interviennent sur la distribution, le deal flow et la structuration des transactions et, à terme, pourront enrichir certains rapports d'une revue croisée complémentaire. C'est cet écosystème qui nous rend opérationnels."
     },
@@ -2197,9 +2197,9 @@
       }
     },
     "form": {
-      "title": "Devenir partenaire Alliance.",
+      "title": "Devenir partenaire.",
       "structure": "Structure",
-      "type": "Type d'alliance",
+      "type": "Type",
       "typePlaceholder": "Choisir un type",
       "typeOptions": {
         "certification": "Certification (réseau d'experts)",
@@ -2215,7 +2215,20 @@
       "successTitle": "Candidature reçue",
       "successDesc": "Nos équipes examineront votre dossier et vous contacteront pour un entretien de qualification.",
       "errorMsg": "Une erreur est survenue. Veuillez réessayer.",
-      "submitting": "Envoi en cours..."
+      "submitting": "Envoi en cours...",
+      "structureOpts": {
+        "law_firm": "Cabinet juridique / Avocats",
+        "audit": "Cabinet d'audit / Expertise comptable",
+        "bank": "Banque / Fiduciaire",
+        "fund": "Fonds (PE, VC, Family Office)",
+        "notary": "Notaire",
+        "accelerator": "Accélérateur / Incubateur",
+        "platform": "Plateforme / Marketplace",
+        "other": "Autre"
+      },
+      "typeOtherLabel": "Autre",
+      "structurePlaceholder": "Choisir une structure",
+      "organizationLabel": "Organisation"
     },
     "tabs": {
       "overview": "Présentation",
