@@ -40,7 +40,7 @@ export function DiscoverPreview() {
             </h2>
           </div>
           <Link
-            href="/discover"
+            href="/blog"
             className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.14em] uppercase text-ag-gray hover:text-ag-black transition-colors shrink-0"
           >
             {t('cta')}

@@ -60,7 +60,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
               {t('ctaPrimary')} <ArrowUpRight size={13} />
             </Link>
             <Link
-              href="/discover"
+              href="/blog"
               className="inline-flex items-center gap-2 border border-white/25 text-white/70 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
             >
               {t('ctaDiscover')}

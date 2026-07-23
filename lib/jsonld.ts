@@ -39,7 +39,7 @@ export function websiteJsonLd() {
     inLanguage: ['fr', 'en', 'de', 'it', 'es', 'nl'],
     potentialAction: {
       '@type':       'SearchAction',
-      target:        `${BASE}/discover?q={search_term_string}`,
+      target:        `${BASE}/blog?q={search_term_string}`,
       'query-input': 'required name=search_term_string',
     },
   }

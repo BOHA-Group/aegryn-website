@@ -60,6 +60,8 @@ export default async function NeediuLegalPage({ params }: Props) {
           <h2>{t('dpn.intro.h')}</h2>
           <p>{t('dpn.intro.p1')}</p>
           <p>{t('dpn.intro.p2')}</p>
+          <p>{t('dpn.intro.p3')}</p>
+          <p>{t('dpn.intro.p4')}</p>
           <p>{t('dpn.intro.defsTitle')}</p>
           <ul>
             {defKeys.map(key => {
@@ -76,6 +78,7 @@ export default async function NeediuLegalPage({ params }: Props) {
           <h2>{t('dpn.ourRole.h')}</h2>
           <p>{t('dpn.ourRole.p1')}</p>
           <p>{t('dpn.ourRole.p2')}</p>
+          <p>{t('dpn.ourRole.p3')}</p>
 
           <h2>{t('dpn.whenCollect.h')}</h2>
           <p>{t('dpn.whenCollect.p')}</p>
@@ -97,14 +100,14 @@ export default async function NeediuLegalPage({ params }: Props) {
           <h2>{t('dpn.sensitive.h')}</h2>
           <p>{t('dpn.sensitive.p')}</p>
 
+          <h2>{t('dpn.minors.h')}</h2>
+          <p>{t('dpn.minors.p')}</p>
+
           <h2>{t('dpn.why.h')}</h2>
-          <p>{t('dpn.why.pIntro')}</p>
-          <ul>
-            {(t.raw('dpn.why.items') as string[]).map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-          <p>{t('dpn.why.pNote')}</p>
+          <p>{t('dpn.why.p')}</p>
+
+          <h2>{t('dpn.automated.h')}</h2>
+          <p>{t('dpn.automated.p')}</p>
 
           <h2>{t('dpn.rights.h')}</h2>
           <p>{t('dpn.rights.pIntro')}</p>
@@ -114,6 +117,7 @@ export default async function NeediuLegalPage({ params }: Props) {
             ))}
           </ul>
           <p>{t('dpn.rights.pContact')}</p>
+          <p>{t('dpn.rights.pContact2')}</p>
 
           <h2>{t('dpn.security.h')}</h2>
           <p>{t('dpn.security.p')}</p>
@@ -122,7 +126,9 @@ export default async function NeediuLegalPage({ params }: Props) {
           <p>{t('dpn.storage.p')}</p>
 
           <h2>{t('dpn.sharing.h')}</h2>
-          <p>{t('dpn.sharing.p')}</p>
+          <p>{t('dpn.sharing.p1')}</p>
+          <p>{t('dpn.sharing.p2')}</p>
+          <p>{t('dpn.sharing.p3')}</p>
           <h3>{t('dpn.sharing.providersH')}</h3>
           <table>
             <thead>
@@ -165,9 +171,11 @@ export default async function NeediuLegalPage({ params }: Props) {
           <p><strong>{t('cgu.s3AccountTitle')}</strong> {t('cgu.s3Account')}</p>
           <p><strong>{t('cgu.s3MemberTitle')}</strong> {t('cgu.s3Member')}</p>
           <p><strong>{t('cgu.s3ConfidTitle')}</strong> {t('cgu.s3Confid')}</p>
+          <p><strong>{t('cgu.s3InfoTitle')}</strong> {t('cgu.s3Info')}</p>
           <p><strong>{t('cgu.s3KycTitle')}</strong> {t('cgu.s3Kyc')}</p>
 
           <h3>{t('cgu.s4H')}</h3>
+          <p><strong>{t('cgu.s4AccessTitle')}</strong> {t('cgu.s4Access')}</p>
           <p><strong>{t('cgu.s4InternetTitle')}</strong> {t('cgu.s4Internet')}</p>
           <p><strong>{t('cgu.s4TelecomTitle')}</strong> {t('cgu.s4Telecom')}</p>
 
@@ -179,20 +187,26 @@ export default async function NeediuLegalPage({ params }: Props) {
           <p><strong>{t('cgu.s6RestrictTitle')}</strong> {t('cgu.s6Restrict')}</p>
 
           <h3>{t('cgu.s7H')}</h3>
-          <p>{t('cgu.s7')}</p>
+          <p><strong>{t('cgu.s7ContentTitle')}</strong> {t('cgu.s7Content')}</p>
+          <p><strong>{t('cgu.s7ReviewTitle')}</strong> {t('cgu.s7Review')}</p>
+          <p><strong>{t('cgu.s7LicenseTitle')}</strong> {t('cgu.s7License')}</p>
+          <p><strong>{t('cgu.s7WarrantyTitle')}</strong> {t('cgu.s7Warranty')}</p>
 
           <h3>{t('cgu.s8H')}</h3>
           <p>{t('cgu.s8')}</p>
+          <p><strong>{t('cgu.s8ClientFeeTitle')}</strong> {t('cgu.s8ClientFee')}</p>
           <p><strong>{t('cgu.s8FeesTitle')}</strong> {t('cgu.s8FeesIntro')}</p>
           <ul>
             {(t.raw('cgu.s8Fees') as string[]).map((item, i) => (
               <li key={i}>{item}</li>
             ))}
           </ul>
+          <p><strong>{t('cgu.s8TierTitle')}</strong> {t('cgu.s8Tier')}</p>
           <p>{t('cgu.s8Payout')}</p>
 
           <h3>{t('cgu.s9H')}</h3>
           <p>{t('cgu.s9')}</p>
+          <p><strong>{t('cgu.s9DisputeTitle')}</strong> {t('cgu.s9Dispute')}</p>
 
           <h3>{t('cgu.s10H')}</h3>
           <p>{t('cgu.s10')}</p>
@@ -218,6 +232,9 @@ export default async function NeediuLegalPage({ params }: Props) {
           <h3>{t('cgu.s17H')}</h3>
           <p><strong>{t('cgu.s17DivTitle')}</strong> {t('cgu.s17Div')}</p>
           <p><strong>{t('cgu.s17ForceTitle')}</strong> {t('cgu.s17Force')}</p>
+          <p><strong>{t('cgu.s17AssignTitle')}</strong> {t('cgu.s17Assign')}</p>
+          <p><strong>{t('cgu.s17PromoTitle')}</strong> {t('cgu.s17Promo')}</p>
+          <p><strong>{t('cgu.s17AmicableTitle')}</strong> {t('cgu.s17Amicable')}</p>
           <p><strong>{t('cgu.s17LawTitle')}</strong> {t('cgu.s17Law')}</p>
           <p><strong>{t('cgu.s17JurisTitle')}</strong> {t('cgu.s17Juris')}</p>
 

@@ -89,7 +89,7 @@ export function DiscoverGrid({ locale }: Props) {
               {featured.map((article, i) => (
                 <Link
                   key={article.slug}
-                  href={`/discover/${article.slug}`}
+                  href={`/blog/${article.slug}`}
                   className={`group bg-ag-white p-8 flex flex-col gap-4 hover:bg-ag-off-white transition-colors ${i === 0 ? 'md:col-span-2' : ''}`}
                 >
                   <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex">
@@ -151,7 +151,7 @@ export function DiscoverGrid({ locale }: Props) {
                 {filtered.map(article => (
                   <Link
                     key={article.slug}
-                    href={`/discover/${article.slug}`}
+                    href={`/blog/${article.slug}`}
                     className="discover-card group bg-ag-white p-8 flex flex-col gap-4 hover:bg-ag-off-white transition-colors"
                   >
                     <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex">

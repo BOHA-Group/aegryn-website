@@ -25,9 +25,9 @@ export function DiscoverStrip() {
   }, [])
 
   const articles = [
-    { title: t('article1Title'), cat: t('article1Cat'), href: '/discover/marche-ma-tech-europe-q3-2026' },
-    { title: t('article2Title'), cat: t('article2Cat'), href: '/discover/5-erreurs-valorisation-saas'  },
-    { title: t('article3Title'), cat: t('article3Cat'), href: '/discover/actif-tech-certifiable'       },
+    { title: t('article1Title'), cat: t('article1Cat'), href: '/blog/marche-ma-tech-europe-q3-2026' },
+    { title: t('article2Title'), cat: t('article2Cat'), href: '/blog/5-erreurs-valorisation-saas'  },
+    { title: t('article3Title'), cat: t('article3Cat'), href: '/blog/actif-tech-certifiable'       },
   ]
 
   return (
@@ -48,7 +48,7 @@ export function DiscoverStrip() {
             </h2>
           </div>
           <Link
-            href="/discover"
+            href="/blog"
             className="shrink-0 hidden md:inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-5 py-3 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300"
           >
             {t('cta')} <ArrowUpRight size={12} />
@@ -81,7 +81,7 @@ export function DiscoverStrip() {
 
         <div className="mt-8 md:hidden">
           <Link
-            href="/discover"
+            href="/blog"
             className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-5 py-3 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300"
           >
             {t('cta')} <ArrowUpRight size={12} />

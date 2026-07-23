@@ -54,9 +54,8 @@ const GROUPS: SitemapGroup[] = [
   {
     labelKey: 'groupDiscover',
     links: [
-      { labelKey: 'discover',  href: '/discover' },
-      { labelKey: 'roadmap',   href: '/roadmap' },
       { labelKey: 'blog',      href: '/blog' },
+      { labelKey: 'roadmap',   href: '/roadmap' },
     ],
   },
   {
