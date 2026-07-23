@@ -3898,7 +3898,7 @@
       },
       "whoWeAre": {
         "h": "Wie zijn wij en hoe kunt u contact met ons opnemen?",
-        "p": "Aegryn Sàrl is de naam van ons bedrijf. Voor vragen over de gegevensverwerking met betrekking tot ons platform kunt u ons per post bereiken: Aegryn Sàrl, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland. U kunt ons ook per e-mail bereiken via legal@aegryn.com."
+        "p": "Aegryn (voorheen BOHA-Group) is de naam van ons bedrijf. Voor vragen over de gegevensverwerking met betrekking tot ons platform kunt u ons per post bereiken: Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland. U kunt ons ook per e-mail bereiken via legal@boha-group.com."
       },
       "ourRole": {
         "h": "Wat is onze rol op het gebied van gegevensbescherming?",
@@ -3954,7 +3954,7 @@
       },
       "security": {
         "h": "Hoe beschermen wij uw gegevens?",
-        "p": "Wij treffen passende beveiligingsmaatregelen, zoals versleuteling, om uw persoonsgegevens te beschermen. Als u vermoedt dat uw gegevens zijn gecompromitteerd, informeer ons dan onmiddellijk via legal@aegryn.com."
+        "p": "Wij treffen passende beveiligingsmaatregelen, zoals versleuteling, om uw persoonsgegevens te beschermen. Als u vermoedt dat uw gegevens zijn gecompromitteerd, informeer ons dan onmiddellijk via legal@boha-group.com."
       },
       "storage": {
         "h": "Waar en hoe lang worden uw gegevens bewaard?",
@@ -3982,9 +3982,9 @@
     },
     "cgu": {
       "sectionLabel": "(02)",
-      "h2": "Gebruiksvoorwaarden – AEGRYN neediu",
+      "h2": "Gebruiksvoorwaarden – neediu by AEGRYN",
       "disclaimer": "Disclaimer: Deze gegevensbeschermingsverklaring is een door AI gegenereerde vertaling en wordt uitsluitend ter informatie verstrekt. Bij afwijkingen of tegenstrijdigheden prevaleert de Engelse versie.",
-      "intro": "Deze Gebruiksvoorwaarden (GV) zijn van toepassing op elk gebruik van het Aegryn-platform, de mobiele applicatie neediu, alsmede op elke dienst die toegankelijk is via of geleverd wordt via het Platform (de Diensten), die worden geleverd en beheerd door Aegryn Sàrl, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland.",
+      "intro": "Deze Gebruiksvoorwaarden (GV) zijn van toepassing op elk gebruik van het Aegryn-platform, de mobiele applicatie neediu, alsmede op elke dienst die toegankelijk is via of geleverd wordt via het Platform (de Diensten), die worden geleverd en beheerd door Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland.",
       "s1H": "1. Algemeen",
       "s1AcceptTitle": "Aanvaarding.",
       "s1Accept": "Door toegang te krijgen tot of gebruik te maken van ons Platform, stemt u ermee in gebonden te zijn aan deze GV.",
@@ -4051,7 +4051,7 @@
       "s17JurisTitle": "Bevoegde rechtbank.",
       "s17Juris": "Elk geschil valt onder de exclusieve bevoegdheid van de bevoegde rechtbanken ter plaatse van de maatschappelijke zetel van Aegryn.",
       "s18H": "18. Contact",
-      "s18": "U kunt contact met ons opnemen via legal@aegryn.com."
+      "s18": "U kunt contact met ons opnemen via legal@boha-group.com."
     }
   }
 }

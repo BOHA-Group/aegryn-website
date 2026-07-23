@@ -3898,7 +3898,7 @@
       },
       "whoWeAre": {
         "h": "¿Quiénes somos y cómo contactarnos?",
-        "p": "Aegryn Sàrl es el nombre de nuestra empresa. Si tiene preguntas sobre el tratamiento de datos relacionado con nuestra plataforma, puede contactarnos por correo postal: Aegryn Sàrl, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suiza. También puede contactarnos por correo electrónico en legal@aegryn.com."
+        "p": "Aegryn (anteriormente BOHA-Group) es el nombre de nuestra empresa. Si tiene preguntas sobre el tratamiento de datos relacionado con nuestra plataforma, puede contactarnos por correo postal: Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suiza. También puede contactarnos por correo electrónico en legal@boha-group.com."
       },
       "ourRole": {
         "h": "¿Cuál es nuestro papel en materia de protección de datos?",
@@ -3954,7 +3954,7 @@
       },
       "security": {
         "h": "¿Cómo protegemos sus datos?",
-        "p": "Adoptamos medidas de seguridad adecuadas, como el cifrado, para proteger sus datos personales. Si cree que sus datos han sido comprometidos, infórmenos inmediatamente en legal@aegryn.com."
+        "p": "Adoptamos medidas de seguridad adecuadas, como el cifrado, para proteger sus datos personales. Si cree que sus datos han sido comprometidos, infórmenos inmediatamente en legal@boha-group.com."
       },
       "storage": {
         "h": "¿Dónde y durante cuánto tiempo se almacenan sus datos?",
@@ -3982,9 +3982,9 @@
     },
     "cgu": {
       "sectionLabel": "(02)",
-      "h2": "Condiciones de uso – AEGRYN neediu",
+      "h2": "Condiciones de uso – neediu by AEGRYN",
       "disclaimer": "Descargo de responsabilidad: Esta declaración de protección de datos es una traducción generada por IA y se proporciona únicamente con fines informativos. En caso de discrepancias o incoherencias, prevalecerá la versión inglesa.",
-      "intro": "Las presentes Condiciones de Uso (CdU) se aplican a cualquier uso de la Plataforma Aegryn, la aplicación móvil neediu, así como a cualquier servicio accesible o prestado a través de la Plataforma (los Servicios), proporcionados y gestionados por Aegryn Sàrl, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suiza.",
+      "intro": "Las presentes Condiciones de Uso (CdU) se aplican a cualquier uso de la Plataforma Aegryn, la aplicación móvil neediu, así como a cualquier servicio accesible o prestado a través de la Plataforma (los Servicios), proporcionados y gestionados por Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suiza.",
       "s1H": "1. Generalidades",
       "s1AcceptTitle": "Aceptación.",
       "s1Accept": "Al acceder a nuestra Plataforma o utilizarla, acepta quedar vinculado por las presentes CdU.",
@@ -4051,7 +4051,7 @@
       "s17JurisTitle": "Jurisdicción.",
       "s17Juris": "Cualquier disputa estará sujeta a la jurisdicción exclusiva de los tribunales competentes en el domicilio social de Aegryn.",
       "s18H": "18. Contacto",
-      "s18": "Puede contactarnos en legal@aegryn.com."
+      "s18": "Puede contactarnos en legal@boha-group.com."
     }
   }
 }

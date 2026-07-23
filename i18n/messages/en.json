@@ -3857,7 +3857,7 @@
       },
       "whoWeAre": {
         "h": "Who are we and how to contact us?",
-        "p": "Aegryn Sàrl is the name of our company. If you have questions about data processing related to our platform, you may contact us by post: Aegryn Sàrl, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland. You may also contact us by email at legal@aegryn.com."
+        "p": "Aegryn (formerly BOHA-Group) is the name of our company. If you have questions about data processing related to our platform, you may contact us by post: Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland. You may also contact us by email at legal@boha-group.com."
       },
       "ourRole": {
         "h": "What is our role in data protection?",
@@ -3913,7 +3913,7 @@
       },
       "security": {
         "h": "How do we protect your data?",
-        "p": "We take appropriate security measures, such as encryption, to protect your personal data. If you believe your data has been compromised, please inform us immediately at legal@aegryn.com."
+        "p": "We take appropriate security measures, such as encryption, to protect your personal data. If you believe your data has been compromised, please inform us immediately at legal@boha-group.com."
       },
       "storage": {
         "h": "Where and for how long is your data stored?",
@@ -3941,9 +3941,9 @@
     },
     "cgu": {
       "sectionLabel": "(02)",
-      "h2": "Terms of Use – AEGRYN neediu",
+      "h2": "Terms of Use – neediu by AEGRYN",
       "disclaimer": "Disclaimer: This data protection statement is an AI-generated translation provided for informational purposes only. In the event of any discrepancies or inconsistencies, the English version shall prevail.",
-      "intro": "These Terms of Use (the ToU) apply to any use of the Aegryn Platform, the neediu mobile application, and any service accessible or provided through the Platform (the Services), which are provided and managed by Aegryn Sàrl, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland.",
+      "intro": "These Terms of Use (the ToU) apply to any use of the Aegryn Platform, the neediu mobile application, and any service accessible or provided through the Platform (the Services), which are provided and managed by Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland.",
       "s1H": "1. General",
       "s1AcceptTitle": "Acceptance.",
       "s1Accept": "By accessing or using our Platform, you agree to be bound by these ToU.",
@@ -4010,7 +4010,7 @@
       "s17JurisTitle": "Jurisdiction.",
       "s17Juris": "Any dispute shall be subject to the exclusive jurisdiction of the competent courts at Aegryn's registered office.",
       "s18H": "18. Contact",
-      "s18": "You may contact us at legal@aegryn.com."
+      "s18": "You may contact us at legal@boha-group.com."
     }
   }
 }
