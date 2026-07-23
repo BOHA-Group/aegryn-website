@@ -3885,6 +3885,8 @@
         "h": "Inleiding",
         "p1": "neediu is een platform waarmee gebruikers snel vertrouwde professionals of particulieren kunnen vinden die hulp bieden bij huishoudelijke behoeften in hun regio. Omdat wij veel waarde hechten aan de bescherming van uw gegevens en uw privacy, hebben wij deze privacyverklaring opgesteld om uit te leggen wat wij met uw gegevens doen wanneer u ons platform gebruikt.",
         "p2": "Deze privacyverklaring heeft uitsluitend betrekking op de gegevensverwerking die verband houdt met ons platform. Ons doel is een adequate bescherming van persoonsgegevens te waarborgen in overeenstemming met alle toepasselijke gegevensbeschermingswetten, waaronder de Zwitserse federale wet op de gegevensbescherming (DSG) en de Algemene Verordening Gegevensbescherming (AVG).",
+        "p3": "In Zwitserland is de bescherming van uw gegevens met name gebaseerd op de federale wet van 25 september 2020 inzake gegevensbescherming (DSG) en de federale verordening van 31 augustus inzake gegevensbescherming (DSV). Onze privacyverklaring en onze praktijken zijn afgestemd op de wettelijke bepalingen uit deze wetgeving.",
+        "p4": "Hoewel wij ons best doen om onze privacyverklaring te vereenvoudigen, schuilt de begripmoeilijkheid in de specifieke taal van het juridisch kader. Daarom hebben wij het initiatief genomen om de voornaamste definities samen te vatten om de verklaring beter begrijpelijk te maken; deze zijn ontleend aan de DSG.",
         "defsTitle": "Belangrijkste definities uit de DSG:",
         "defs": {
           "dataSubject": ["Betrokkene:", "De natuurlijke persoon wiens persoonsgegevens worden verwerkt."],
@@ -3903,11 +3905,12 @@
       "ourRole": {
         "h": "Wat is onze rol op het gebied van gegevensbescherming?",
         "p1": "Wanneer u ons platform gebruikt, kunnen wij bepaalde persoonsgegevens van u verwerken. Conform de DSG zijn wij de verwerkingsverantwoordelijke. Wanneer persoonsgegevens worden gedeeld met een Dienstverlener voor de uitvoering van een opdracht, treedt de Dienstverlener op als onafhankelijke verwerkingsverantwoordelijke.",
-        "p2": "Als verwerkingsverantwoordelijke bepalen wij de doeleinden waarvoor wij uw persoonsgegevens verwerken, de wijze van verwerking en de beveiligingsmaatregelen. Gegevensbescherming is ieders verantwoordelijkheid. Wij moedigen u aan deze verklaring zorgvuldig te lezen."
+        "p2": "Als verwerkingsverantwoordelijke bepalen wij de doeleinden waarvoor wij uw persoonsgegevens verwerken, de wijze van verwerking en de beveiligingsmaatregelen. Wanneer wij samenwerken met externe leveranciers in het kader van onze activiteiten, zorgen wij ervoor dat zij ons engagement voor gegevensbescherming delen en dezelfde normen naleven.",
+        "p3": "Gegevensbescherming is ieders verantwoordelijkheid. Wij moedigen u daarom aan onze privacyverklaring zorgvuldig te lezen. Wij moedigen u ook aan, als u een van onze klanten bent, de contractuele documenten te raadplegen die ons binden, omdat deze aanvullende informatie kunnen bevatten over hoe wij uw gegevens verwerken."
       },
       "whenCollect": {
         "h": "Wanneer en hoe verzamelen wij uw gegevens?",
-        "p": "De gegevensverzameling begint zodra u ons Platform bezoekt of ermee interageert. Wij verzamelen gegevens rechtstreeks van u wanneer u het Platform gebruikt en wanneer u een Gebruikersaccount aanmaakt, of u nu Klant of Dienstverlener bent. Wij verzamelen geen gegevens van derden, behalve in het kader van gerichte marketingcampagnes."
+        "p": "De gegevensverzameling begint zodra u ons Platform bezoekt of ermee interageert. Wij verzamelen gegevens rechtstreeks van u wanneer u het Platform gebruikt en wanneer u een Gebruikersaccount aanmaakt, of u nu Klant of Dienstverlener bent. Wij verzamelen geen gegevens van derden, behalve in het kader van gerichte marketingcampagnes, waarbij een beperkte en indirecte verzameling van persoonsgegevens kan plaatsvinden. In dergelijke gevallen kunnen gegevens ons worden verstrekt door derden overeenkomstig hun eigen privacyverklaringen."
       },
       "categories": {
         "h": "Welke categorieën gegevens verwerken wij?",
@@ -3925,19 +3928,20 @@
         "otherP": "Type en omvang van de taak, grootte of toestand van de woning of het pand, gewenste datum en tijd, foto's of omschrijvingen ter verduidelijking van de opdracht, identificatiegegevens in het kader van de KYC-procedure."
       },
       "sensitive": {
-        "h": "Gevoelige gegevens en minderjarigen",
-        "p": "Wij verzamelen noch verwerken bijzondere categorieën persoonsgegevens. Onze diensten zijn uitsluitend bestemd voor volwassenen. Wij richten ons niet op minderjarigen en verzamelen bewust geen persoonsgegevens van hen."
+        "h": "Hoe zit het met bijzondere categorieën persoonsgegevens?",
+        "p": "Wij verzamelen noch verwerken bijzondere categorieën persoonsgegevens."
+      },
+      "minors": {
+        "h": "Hoe zit het met gegevens van minderjarigen?",
+        "p": "Onze diensten zijn uitsluitend bestemd voor volwassenen. Wij richten ons niet op minderjarigen en verzamelen bewust geen persoonsgegevens van hen."
       },
       "why": {
         "h": "Waarom verwerken wij uw gegevens?",
-        "pIntro": "Wij verwerken uw persoonsgegevens om:",
-        "items": [
-          "Toegang tot en gebruik van het Platform mogelijk te maken (aanmaken en beheren van accounts, koppeling, betalingsverwerking, berichten, weergave van relevante informatie).",
-          "Met u te communiceren, op uw verzoeken te reageren en uw rechten uit te oefenen.",
-          "Verkeersstatistieken te genereren die nuttig zijn voor de verbetering van het Platform.",
-          "Te voldoen aan toepasselijke wet- en regelgeving en aanbevelingen van autoriteiten."
-        ],
-        "pNote": "Wij nemen geen geautomatiseerde individuele beslissingen."
+        "p": "Wij verwerken uw persoonsgegevens om u toegang te geven tot de functionaliteiten van ons platform en de correcte levering van de aangeboden diensten te waarborgen. Dit omvat met name het aanmaken en beheren van uw account, de koppeling tussen Klanten en Dienstverleners, de betalingsverwerking, de verzending van berichten en de weergave van relevante informatie. Wij verwerken uw gegevens ook om met u te communiceren, op uw verzoeken te reageren, uw rechten uit te oefenen en gebruiksstatistieken te genereren die nuttig zijn voor de verbetering van het Platform. Ten slotte verwerken wij uw gegevens om te voldoen aan toepasselijke wet- en regelgeving en aanbevelingen van autoriteiten."
+      },
+      "automated": {
+        "h": "Nemen wij geautomatiseerde individuele beslissingen?",
+        "p": "Wij maken gebruik van diverse IT-tools om onze activiteiten te beheren. Deze tools zijn ontworpen om processen te centraliseren en te structureren, de efficiëntie te verbeteren en de kwaliteit van onze diensten te waarborgen. Het is belangrijk op te merken dat wij met behulp van deze IT-tools geen geautomatiseerde individuele beslissingen nemen."
       },
       "rights": {
         "h": "Wat zijn uw rechten?",
@@ -3950,11 +3954,12 @@
           "U heeft het recht verwijdering of vernietiging van uw gegevens te verzoeken.",
           "U heeft het recht te eisen dat een geautomatiseerde individuele beslissing door een natuurlijke persoon wordt herzien."
         ],
-        "pContact": "Om een van deze rechten uit te oefenen, kunt u contact met ons opnemen. Als u van mening bent dat wij uw gegevens verwerken in strijd met de gegevensbeschermingsbepalingen, kunt u ons melden bij de FDPIC."
+        "pContact": "Als u een van de bovengenoemde rechten wenst uit te oefenen, kunt u contact met ons opnemen. Om misbruik te voorkomen, moeten wij u eerst identificeren (bijvoorbeeld aan de hand van een kopie van uw identiteitsbewijs, als geen ander identificatiemiddel mogelijk is). Houd er rekening mee dat er voorwaarden, uitzonderingen en beperkingen van toepassing kunnen zijn op de uitoefening van deze rechten op grond van de DSG (bijvoorbeeld ter bescherming van derden of handelsgeheimen). Wij zullen u hierover informeren indien dit het geval is.",
+        "pContact2": "Als u van mening bent dat wij uw gegevens verwerken in strijd met de gegevensbeschermingsbepalingen, heeft u ook de mogelijkheid ons te melden bij de FDPIC. Wij moedigen u aan ons eerst te informeren, zodat wij uw zorgen kunnen aanpakken. Als wij dit niet kunnen doen, kunt u contact opnemen met de FDPIC via de instructies op zijn website."
       },
       "security": {
         "h": "Hoe beschermen wij uw gegevens?",
-        "p": "Wij treffen passende beveiligingsmaatregelen, zoals versleuteling, om uw persoonsgegevens te beschermen. Als u vermoedt dat uw gegevens zijn gecompromitteerd, informeer ons dan onmiddellijk via legal@boha-group.com."
+        "p": "Wij treffen passende beveiligingsmaatregelen, zoals versleuteling, om de vertrouwelijkheid, integriteit en beschikbaarheid van uw persoonsgegevens te waarborgen. Helaas kunnen wij niet garanderen dat uw gegevens altijd volledig veilig zijn. Als u vermoedt dat uw persoonsgegevens zijn gecompromitteerd, informeer ons dan onmiddellijk via legal@boha-group.com."
       },
       "storage": {
         "h": "Waar en hoe lang worden uw gegevens bewaard?",
@@ -3962,7 +3967,9 @@
       },
       "sharing": {
         "h": "Met wie delen wij uw gegevens?",
-        "p": "Het beheer van ons platform vereist samenwerking met gespecialiseerde externe leveranciers. Sommige persoonsgegevens worden ook rechtstreeks tussen gebruikers gedeeld wanneer dit noodzakelijk is voor de uitvoering van een gevraagde dienst. Al deze communicatie is strikt beperkt tot het noodzakelijke en voldoet aan het toepasselijke wettelijke kader. Bij overdracht van gegevens buiten Zwitserland of de EER maken wij gebruik van de herziene standaardcontractbepalingen van de Europese Commissie of andere passende waarborgen.",
+        "p1": "Het beheer van ons platform vereist samenwerking met gespecialiseerde externe leveranciers, met name voor de creatie, het onderhoud en de hosting ervan. Wij werken samen met externe leveranciers die erkend zijn in hun vakgebied om de goede werking van ons platform en de kwaliteit van onze diensten te waarborgen. In het kader van deze samenwerking kan het noodzakelijk zijn uw gegevens te communiceren aan onze externe leveranciers. Deze communicatie is strikt beperkt tot wat noodzakelijk is en wordt uitgevoerd in overeenstemming met het wettelijk kader.",
+        "p2": "Bovendien worden sommige persoonsgegevens ook rechtstreeks tussen gebruikers gedeeld wanneer dit noodzakelijk is voor de voorbereiding, uitvoering of follow-up van een gevraagde dienst. Deze uitwisselingen zijn essentieel voor de goede werking van het platform en de diensten die het faciliteert.",
+        "p3": "Wanneer persoonsgegevens worden overgedragen aan een externe leverancier die buiten Zwitserland of de Europese Economische Ruimte (EER) is gevestigd en geen adequaat beschermingsniveau biedt, vereisen wij dat de externe leverancier zich ertoe verbindt de toepasselijke gegevensbeschermingswetgeving na te leven (hiervoor maken wij gebruik van de herziene standaardcontractbepalingen van de Europese Commissie), tenzij de externe leverancier al onderworpen is aan een wettelijk aanvaard geheel van regels dat gegevensbescherming garandeert (Swiss-U.S. Data Privacy Framework) of wij een uitzondering kunnen inroepen.",
         "providersH": "Onze externe leveranciers",
         "tableHeaders": ["Leverancier", "Doel", "Verwerkingslocatie"],
         "providers": [
@@ -3999,9 +4006,13 @@
       "s3Member": "Er zijn twee categorieën Geregistreerde Gebruikers: (i) Klanten die het Platform gebruiken om diensten te zoeken en te ontvangen, en (ii) Dienstverleners die diensten aanbieden en uitvoeren voor Klanten.",
       "s3ConfidTitle": "Vertrouwelijkheid.",
       "s3Confid": "U bent als enige verantwoordelijk voor de vertrouwelijkheid van uw wachtwoord en alle activiteiten die plaatsvinden onder uw Account. Informeer ons onmiddellijk over elk frauduleus gebruik.",
+      "s3InfoTitle": "Informatie.",
+      "s3Info": "In het kader van uw registratie verbindt u zich ertoe waarheidsgetrouwe, nauwkeurige, actuele en volledige informatie te verstrekken, en deze zo vaak en zo snel als nodig bij te werken.",
       "s3KycTitle": "Identiteitsverificatie.",
-      "s3Kyc": "Om te voldoen aan wettelijke vereisten met betrekking tot financiële transacties en fraudepreventie, kunnen wij of onze externe leverancier identiteitsverificatieprocedures (KYC) uitvoeren.",
+      "s3Kyc": "Om te voldoen aan wettelijke vereisten met betrekking tot financiële transacties en fraudepreventie, kunnen wij of onze externe leverancier identiteitsverificatieprocedures (KYC) uitvoeren. U stemt ermee in op verzoek nauwkeurige en volledige informatie en documenten te verstrekken. Als u het identiteitsverificatieproces niet voltooit, kan uw toegang tot het Platform of bepaalde Diensten worden opgeschort of beëindigd.",
       "s4H": "4. Toegang, Internet en Telecommunicatie",
+      "s4AccessTitle": "Toegang.",
+      "s4Access": "U bent als enige verantwoordelijk voor de kwaliteit en vertrouwelijkheid van uw wachtwoord en gebruikersnaam, evenals voor alle activiteiten die plaatsvinden onder uw wachtwoord en uw Account. U verbindt zich ertoe ons onmiddellijk te informeren over frauduleus gebruik van uw wachtwoord of Account en over andere beveiligingsincidenten, en ervoor te zorgen dat u uw Account aan het einde van elke sessie afsluit (uitloggen).",
       "s4InternetTitle": "Internet.",
       "s4Internet": "Het gebruik van internet brengt risico's met zich mee (onderschepping, wijziging, verwijdering van gegevens). Door het Platform te gebruiken, aanvaardt u deze risico's.",
       "s4TelecomTitle": "Telecommunicatie.",
@@ -4014,9 +4025,18 @@
       "s6RestrictTitle": "Beperkingen.",
       "s6Restrict": "Het is ten strengste verboden om: (i) het Platform te gebruiken voor andere dan de beoogde doeleinden; (ii) het Platform te reproduceren, te wijzigen of er afgeleide werken van te maken; (iii) toegang te krijgen tot de broncode via decompilatie of reverse engineering; (iv) e-mailadressen te verzamelen voor spamming.",
       "s7H": "7. Gebruikersinhoud",
-      "s7": "Gebruikers kunnen inhoud plaatsen of aanmaken (teksten, afbeeldingen, foto's). Beoordelingen moeten eerlijk, respectvol en gebaseerd op echte ervaringen zijn. Gebruikers verlenen Aegryn een wereldwijde, royaltyvrije, eeuwigdurende licentie om Gebruikersinhoud te gebruiken in verband met de Diensten.",
+      "s7ContentTitle": "Gebruikersinhoud.",
+      "s7Content": "Gebruikers hebben de mogelijkheid om teksten, bestanden, afbeeldingen, foto's of andere materialen (Gebruikersinhoud) te tonen, te versturen of te linken via het Platform en/of de Diensten. In het bijzonder kan een Gebruiker andere Gebruikers schriftelijk een probleem beschrijven om een beschadigd artikel te illustreren of het type gevraagde dienst toe te lichten.",
+      "s7ReviewTitle": "Beoordelingen en recensies.",
+      "s7Review": "Na afloop van een dienst kunnen Gebruikers een openbare beoordeling en recensie over hun ervaring achterlaten. Beoordelingen moeten eerlijk, respectvol en gebaseerd op echte ervaringen zijn.",
+      "s7LicenseTitle": "Licentie.",
+      "s7License": "Gebruikers verlenen Aegryn een wereldwijde, royaltyvrije, eeuwigdurende, onherroepelijke, overdraagbare en voor sublicenties vatbare licentie, evenals alle gerelateerde eigendomsrechten, om Gebruikersinhoud te gebruiken in verband met de Diensten, het Platform en alle gerelateerde diensten. Wij behouden ons het recht voor (maar zijn niet verplicht) om Gebruikersinhoud op elk moment naar eigen inzicht te bewerken, te weigeren of te verwijderen.",
+      "s7WarrantyTitle": "Garantie.",
+      "s7Warranty": "Alle Gebruikersinhoud die op het Platform wordt geplaatst, verzonden of gerefereerd, valt onder de uitsluitende verantwoordelijkheid van de Gebruiker die deze heeft gecreëerd. Wij controleren Gebruikersinhoud niet stelselmatig, noch het gebruik van het Platform door andere Gebruikers. Wij bieden geen garantie, expliciet of impliciet, met betrekking tot de nauwkeurigheid, actualiteit of volledigheid van Gebruikersinhoud en aanvaarden daarvoor geen aansprakelijkheid.",
       "s8H": "8. Betalingen en kosten",
       "s8": "Alle betalingen via het Platform worden verwerkt door externe betalingsdienstaanbieders. Wij slaan uw betaalkaartgegevens niet op en verwerken deze niet rechtstreeks.",
+      "s8ClientFeeTitle": "Klantenkosten.",
+      "s8ClientFee": "Als Klant worden u alleen Diensten in rekening gebracht die u via het Platform heeft geselecteerd en uitdrukkelijk goedgekeurd. De totale prijs, inclusief alle toepasselijke belastingen, servicekosten of extra kosten, wordt duidelijk weergegeven voordat u uw aanvraag bevestigt.",
       "s8FeesTitle": "Kosten voor Dienstverleners.",
       "s8FeesIntro": "Als Dienstverlener bent u onderworpen aan een commissie voor elke succesvol voltooide dienst:",
       "s8Fees": [
@@ -4024,9 +4044,13 @@
         "Pro-niveau (150 tot 300 opdrachten): 17,5%",
         "Eliteniveau (meer dan 300 opdrachten): 15%"
       ],
-      "s8Payout": "Uitbetalingen worden doorgaans binnen 5 tot 7 werkdagen na voltooiing van de dienst verwerkt.",
+      "s8TierTitle": "Categorieniveau.",
+      "s8Tier": "Het categorieniveau wordt regelmatig opnieuw beoordeeld om een correcte toepassing van de commissietarieven te waarborgen. Herhaalde annuleringen na aankomst op de locatie, niet-naleving van ons beleid of andere inbreuken kunnen een negatieve invloed hebben op uw categorieniveau en uw toegang tot toekomstige opdrachten op het Platform. Ernstige of herhaalde inbreuken kunnen leiden tot een beoordeling van uw account en tot een schorsing of definitieve verwijdering.",
+      "s8Payout": "Uitbetalingen worden doorgaans binnen 5 tot 7 werkdagen na voltooiing van de dienst verwerkt, op voorwaarde dat de Klant geen geschil of terugbetalingsverzoek heeft ingediend. Wij behouden ons het recht voor uitbetalingen te vertragen of in te houden bij vermoeden van fraude, schending van deze GV of in afwachting van de oplossing van een geschil.",
       "s9H": "9. Terugbetalingen",
-      "s9": "Als een betaalde dienst niet zoals beloofd wordt geleverd, kunt u binnen 7 dagen na het geplande tijdstip een terugbetaling aanvragen met de bijbehorende gegevens. Wij beoordelen aanvragen van geval tot geval.",
+      "s9": "Als een dienst die u heeft betaald niet zoals beloofd wordt geleverd, kunt u rechtstreeks via het platform een terugbetaling aanvragen. Aanvragen moeten worden ingediend binnen 7 dagen na het geplande tijdstip van de dienst, vergezeld van de nodige bewijsstukken. Wij beoordelen terugbetalingsverzoeken van geval tot geval en behouden ons het recht voor een terugbetaling goed te keuren of te weigeren. Terugbetalingen worden, wanneer toegestaan, verwerkt via dezelfde betaalmethode als de oorspronkelijke transactie.",
+      "s9DisputeTitle": "Geschil tussen Gebruikers.",
+      "s9Dispute": "Wij zijn geen partij in de contractuele relatie tussen Klanten en Dienstverleners en treden niet op bij de uitvoering van de dienst. Wij kunnen echter de communicatie tussen de partijen bij een geschil faciliteren. Als er geen minnelijke schikking wordt bereikt, kunnen wij — zonder daartoe verplicht te zijn — een oplossing voorstellen of een gedeeltelijke of volledige terugbetaling doen, op basis van de beschikbare informatie en te goeder trouw.",
       "s10H": "10. Intellectueel eigendom",
       "s10": "Met uitzondering van Gebruikersinhoud blijft Aegryn de enige eigenaar van alle intellectuele eigendomsrechten op het Platform, de Diensten en de via het Platform toegankelijke inhoud.",
       "s11H": "11. Gebruiksbeperkingen",
@@ -4043,9 +4067,15 @@
       "s16": "U verbindt zich ertoe ons te vrijwaren voor elke aansprakelijkheid, verlies, schade of vordering die voortvloeit uit uw schending van deze GV.",
       "s17H": "17. Overige bepalingen",
       "s17DivTitle": "Scheidbaarheid.",
-      "s17Div": "Indien een bepaling nietig of niet-afdwingbaar is, blijven de overige bepalingen onverminderd van kracht.",
+      "s17Div": "Indien een bepaling van deze GV nietig of niet-afdwingbaar is of wordt, komen de partijen overeen dat hun bedoelingen, zoals weerspiegeld in de gebrekkige bepaling, zo veel mogelijk zullen worden uitgevoerd en dat de overige bepalingen van de GV onverminderd van kracht blijven.",
       "s17ForceTitle": "Overmacht.",
-      "s17Force": "Wij kunnen niet aansprakelijk worden gesteld voor niet-nakoming als gevolg van overmacht.",
+      "s17Force": "Wij kunnen niet aansprakelijk worden gesteld voor niet-nakoming of vertraging bij de nakoming van onze verplichtingen als gevolg van overmacht, zoals natuurrampen van bijzondere intensiteit, oorlogen, overheids- of overheidsmaatregelen, rellen, stakingen, epidemieën of pandemieën, of uitval van elektriciteits- of telecommunicatienetwerken. Indien een dergelijke gebeurtenis zich voordoet, zullen wij u onverwijld informeren.",
+      "s17AssignTitle": "Overdracht.",
+      "s17Assign": "U mag geen van uw rechten of verplichtingen uit hoofde van deze GV overdragen of cederen. Wij kunnen op elk moment, zonder uw voorafgaande toestemming, rechten of verplichtingen overdragen of cederen, of de uitvoering van een van onze verplichtingen uit hoofde van deze GV uitbesteden aan derden.",
+      "s17PromoTitle": "Promotie.",
+      "s17Promo": "Aegryn heeft het recht uw merk of logo als referentie te gebruiken om zijn Platformen en Diensten bij derden te promoten.",
+      "s17AmicableTitle": "Minnelijke schikking.",
+      "s17Amicable": "Wij moedigen Gebruikers aan rechtstreeks contact met ons op te nemen om geschillen op te lossen. Wij zullen redelijke inspanningen leveren om uw zorgen aan te pakken.",
       "s17LawTitle": "Toepasselijk recht.",
       "s17Law": "Deze GV worden beheerst door het materiële Zwitserse recht, zonder verwijzing naar de conflictrechtelijke bepalingen ervan.",
       "s17JurisTitle": "Bevoegde rechtbank.",

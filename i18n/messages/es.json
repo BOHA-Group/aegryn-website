@@ -3885,6 +3885,8 @@
         "h": "Introducción",
         "p1": "neediu es una plataforma que permite a los usuarios identificar y conectarse rápidamente con profesionales o particulares de confianza que ofrecen ayuda para necesidades del hogar en su región. Como concedemos gran importancia a la protección de sus datos y a su privacidad, hemos elaborado este aviso de protección de datos para explicarle qué hacemos con sus datos cuando utiliza nuestra plataforma.",
         "p2": "Este aviso de protección de datos cubre únicamente el tratamiento de datos relacionado con nuestra plataforma. Nuestro objetivo es garantizar una protección adecuada de los datos personales de conformidad con todas las leyes de protección de datos aplicables, incluidas la Ley Federal Suiza de Protección de Datos (FADP) y el Reglamento General de Protección de Datos (RGPD).",
+        "p3": "En Suiza, la protección de sus datos se basa en particular en la Ley Federal del 25 de septiembre de 2020 sobre Protección de Datos (LPD), así como en la Ordenanza Federal del 31 de agosto sobre Protección de Datos (OPD). Nuestro aviso de protección de datos y nuestras prácticas están alineados con las disposiciones legales contenidas en dicha legislación.",
+        "p4": "Aunque hacemos todo lo posible para simplificar nuestro aviso de protección de datos, la dificultad de comprensión proviene del lenguaje propio del marco jurídico. Por ello, hemos tomado la iniciativa de agrupar las principales definiciones para facilitar la comprensión del aviso, tomadas de la LPD.",
         "defsTitle": "Principales definiciones de la LPD:",
         "defs": {
           "dataSubject": ["Interesado:", "La persona física cuyos datos personales son objeto de tratamiento."],
@@ -3903,11 +3905,12 @@
       "ourRole": {
         "h": "¿Cuál es nuestro papel en materia de protección de datos?",
         "p1": "Cuando utiliza nuestra plataforma, podemos tratar determinados datos personales suyos. De conformidad con la LPD, somos el responsable del tratamiento. Cuando se comparten datos personales con un Proveedor de Servicios para la ejecución de una tarea, este actúa como responsable del tratamiento independiente.",
-        "p2": "Como responsable del tratamiento, determinamos los fines para los que tratamos sus datos personales, la forma en que se tratan y las medidas de seguridad aplicables. La protección de datos es responsabilidad de todos. Le recomendamos que lea este aviso detenidamente."
+        "p2": "Como responsable del tratamiento, determinamos los fines para los que tratamos sus datos personales, la forma en que se tratan y las medidas de seguridad aplicables. Cuando colaboramos con proveedores externos en el marco de nuestras actividades, nos aseguramos de que compartan nuestro compromiso con la protección de datos y cumplan los mismos estándares.",
+        "p3": "La protección de datos es responsabilidad de todos. Por ello, le recomendamos que lea nuestro aviso de protección de datos. Si es cliente nuestro, le recomendamos también que revise los documentos contractuales que nos vinculan, ya que pueden contener información adicional sobre cómo tratamos sus datos."
       },
       "whenCollect": {
         "h": "¿Cuándo y cómo recogemos sus datos?",
-        "p": "La recogida de datos comienza desde el momento en que accede a nuestra Plataforma o interactúa con ella. Recogemos datos directamente de usted cuando utiliza la Plataforma y cuando crea una Cuenta de Usuario, ya sea como Cliente o Proveedor de Servicios. No recogemos datos de terceros, salvo en el contexto de campañas de marketing dirigidas."
+        "p": "La recogida de datos comienza desde el momento en que accede a nuestra Plataforma o interactúa con ella. Recogemos datos directamente de usted cuando utiliza la Plataforma y cuando crea una Cuenta de Usuario, ya sea como Cliente o Proveedor de Servicios. No recogemos datos de terceros, salvo en el contexto de campañas de marketing dirigidas, donde puede producirse una recogida limitada e indirecta de datos personales. En tales casos, los datos pueden sernos comunicados por terceros de conformidad con sus respectivos avisos de protección de datos."
       },
       "categories": {
         "h": "¿Qué categorías de datos tratamos?",
@@ -3925,19 +3928,20 @@
         "otherP": "Tipo y alcance de la tarea, tamaño o estado del hogar o los locales, fecha y hora deseadas, fotos o descripciones que clarifiquen la naturaleza del encargo, datos de identificación en el marco del proceso KYC."
       },
       "sensitive": {
-        "h": "Datos sensibles y menores",
-        "p": "No recogemos ni tratamos datos personales sensibles. Nuestros servicios están destinados exclusivamente a adultos. No nos dirigimos a menores y no recogemos deliberadamente ningún dato personal relacionado con ellos."
+        "h": "¿Qué ocurre con los datos sensibles?",
+        "p": "No recogemos ni tratamos datos personales sensibles."
+      },
+      "minors": {
+        "h": "¿Qué ocurre con los datos relativos a menores?",
+        "p": "Nuestros servicios están destinados exclusivamente a adultos. No nos dirigimos a menores y no recogemos deliberadamente ningún dato personal relacionado con ellos."
       },
       "why": {
         "h": "¿Por qué tratamos sus datos?",
-        "pIntro": "Tratamos sus datos personales con el fin de:",
-        "items": [
-          "Permitir el acceso y el uso de la Plataforma (creación y gestión de cuentas, intermediación, procesamiento de pagos, mensajería, visualización de información relevante).",
-          "Comunicarnos con usted, responder a sus solicitudes y ejercer sus derechos.",
-          "Generar estadísticas de tráfico útiles para la mejora de la Plataforma.",
-          "Cumplir con las leyes, directivas y recomendaciones de las autoridades aplicables."
-        ],
-        "pNote": "No tomamos ninguna decisión individual automatizada."
+        "p": "Tratamos sus datos personales para permitirle acceder a las funcionalidades de nuestra plataforma y garantizar la correcta ejecución de los servicios ofrecidos. Esto incluye en particular la creación y gestión de su cuenta, la puesta en contacto entre Clientes y Proveedores de Servicios, el procesamiento de pagos, la transmisión de mensajes y la visualización de información relevante. También tratamos sus datos para comunicarnos con usted, responder a sus solicitudes y ejercer sus derechos, así como para generar estadísticas de uso útiles para la mejora de la Plataforma. Por último, tratamos sus datos para cumplir con las leyes, directivas y recomendaciones de las autoridades aplicables."
+      },
+      "automated": {
+        "h": "¿Tomamos decisiones individuales automatizadas?",
+        "p": "Utilizamos diversas herramientas informáticas para gestionar nuestras actividades. Estas herramientas están diseñadas para centralizar y estructurar los procesos, mejorar la eficiencia y garantizar la calidad de nuestros servicios. Es importante señalar que no tomamos ninguna decisión individual automatizada mediante estas herramientas informáticas."
       },
       "rights": {
         "h": "¿Cuáles son sus derechos?",
@@ -3950,11 +3954,12 @@
           "Tiene derecho a solicitar la supresión o destrucción de sus datos.",
           "Tiene derecho a exigir que una decisión individual automatizada sea revisada por una persona física."
         ],
-        "pContact": "Para ejercer cualquiera de estos derechos, póngase en contacto con nosotros. Si considera que tratamos sus datos en violación de las disposiciones de protección de datos, puede denunciarnos ante el PFPDT."
+        "pContact": "Si desea ejercer alguno de los derechos mencionados, póngase en contacto con nosotros. Para prevenir el uso indebido, debemos identificarle previamente (por ejemplo, mediante una copia de su documento de identidad, si no es posible ningún otro medio de identificación). Tenga en cuenta que pueden aplicarse condiciones, excepciones y restricciones al ejercicio de estos derechos en virtud de la LPD (por ejemplo, para proteger a terceros o secretos comerciales). Le informaremos si este fuera el caso.",
+        "pContact2": "Si considera que tratamos sus datos en violación de las disposiciones de protección de datos, también tiene la posibilidad de denunciarnos ante el PFPDT. Le animamos a informarnos primero para que podamos atender sus preocupaciones. Si no podemos hacerlo, puede contactar con el PFPDT siguiendo las instrucciones indicadas en su sitio web."
       },
       "security": {
         "h": "¿Cómo protegemos sus datos?",
-        "p": "Adoptamos medidas de seguridad adecuadas, como el cifrado, para proteger sus datos personales. Si cree que sus datos han sido comprometidos, infórmenos inmediatamente en legal@boha-group.com."
+        "p": "Adoptamos medidas de seguridad adecuadas, como el cifrado, para garantizar la confidencialidad, integridad y disponibilidad de sus datos personales. Lamentablemente, no podemos garantizar que sus datos estén siempre completamente seguros. Si cree que sus datos personales han sido comprometidos, infórmenos de inmediato en legal@boha-group.com."
       },
       "storage": {
         "h": "¿Dónde y durante cuánto tiempo se almacenan sus datos?",
@@ -3962,7 +3967,9 @@
       },
       "sharing": {
         "h": "¿Con quién compartimos sus datos?",
-        "p": "La gestión de nuestra plataforma implica la colaboración con proveedores terceros especializados. Algunos datos personales también se comparten directamente entre usuarios cuando es necesario para la ejecución de un servicio solicitado. Todas estas comunicaciones están estrictamente limitadas a lo necesario y se realizan de conformidad con el marco jurídico aplicable. Cuando los datos se transfieren fuera de Suiza o del EEE, utilizamos las cláusulas contractuales tipo revisadas de la Comisión Europea u otras garantías adecuadas.",
+        "p1": "La gestión de nuestra plataforma implica la colaboración con proveedores terceros externos especializados, en particular para su creación, mantenimiento y alojamiento. Colaboramos con proveedores terceros reconocidos en su campo de especialidad para garantizar el buen funcionamiento de nuestra plataforma y, en general, la calidad de nuestros servicios. En el marco de estas colaboraciones, puede ser necesario comunicar sus datos a nuestros proveedores terceros. Tenga la seguridad de que estas comunicaciones están estrictamente limitadas a lo necesario y se realizan de conformidad con el marco legal.",
+        "p2": "Además, determinados datos personales también se comparten directamente entre usuarios cuando es necesario para la preparación, ejecución o seguimiento de un servicio solicitado. Estos intercambios son esenciales para el correcto funcionamiento de la plataforma y los servicios que facilita.",
+        "p3": "Cuando los datos personales se transfieren a un proveedor tercero situado fuera de Suiza o del Espacio Económico Europeo (EEE) que no ofrece un nivel de protección adecuado, exigimos que el proveedor tercero se comprometa a cumplir la legislación de protección de datos aplicable (para ello, utilizamos las cláusulas contractuales tipo revisadas de la Comisión Europea), a menos que el proveedor tercero ya esté sujeto a un conjunto de normas legalmente aceptadas destinadas a garantizar la protección de datos (Swiss-U.S. Data Privacy Framework) o podamos invocar una excepción.",
         "providersH": "Nuestros proveedores terceros",
         "tableHeaders": ["Proveedor", "Finalidad", "Lugar de tratamiento"],
         "providers": [
@@ -3999,9 +4006,13 @@
       "s3Member": "Existen dos categorías de Usuarios Registrados: (i) los Clientes que utilizan la Plataforma para buscar y recibir servicios, y (ii) los Proveedores de Servicios que ofrecen y prestan servicios para los Clientes.",
       "s3ConfidTitle": "Confidencialidad.",
       "s3Confid": "Usted es el único responsable de la confidencialidad de su contraseña y de cualquier actividad que se produzca en su Cuenta. Notifíquenos inmediatamente cualquier uso fraudulento.",
+      "s3InfoTitle": "Información.",
+      "s3Info": "En el marco de su registro, se compromete a proporcionar información veraz, exacta, actualizada y completa, y a actualizar dicha información con la frecuencia y prontitud necesarias.",
       "s3KycTitle": "Verificación de identidad.",
-      "s3Kyc": "Para cumplir los requisitos legales relacionados con las transacciones financieras y la prevención del fraude, nosotros o nuestro proveedor tercero podemos llevar a cabo procedimientos de verificación de identidad (KYC).",
+      "s3Kyc": "Para cumplir los requisitos legales relacionados con las transacciones financieras y la prevención del fraude, nosotros o nuestro proveedor tercero podemos llevar a cabo procedimientos de verificación de identidad (KYC). Usted acepta proporcionar información y documentación exacta y completa cuando se le solicite. Si no completa el proceso de verificación de identidad, su acceso a la Plataforma o a determinados Servicios podrá ser suspendido o rescindido.",
       "s4H": "4. Acceso, Internet y Telecomunicaciones",
+      "s4AccessTitle": "Acceso.",
+      "s4Access": "Usted es el único responsable de la calidad y confidencialidad de su contraseña y nombre de usuario, así como de cualquier actividad que tenga lugar con su contraseña y su Cuenta. Se compromete a informarnos inmediatamente de cualquier uso fraudulento de su contraseña o Cuenta y de cualquier otra brecha de seguridad, y a cerrar su Cuenta al final de cada sesión (cierre de sesión).",
       "s4InternetTitle": "Internet.",
       "s4Internet": "El uso de Internet conlleva riesgos (interceptación, alteración, supresión de datos). Al utilizar la Plataforma, acepta estos riesgos.",
       "s4TelecomTitle": "Telecomunicaciones.",
@@ -4014,9 +4025,18 @@
       "s6RestrictTitle": "Restricciones.",
       "s6Restrict": "Está estrictamente prohibido: (i) utilizar la Plataforma para fines distintos a los previstos; (ii) reproducir, modificar o crear obras derivadas de la Plataforma; (iii) acceder al código fuente mediante descompilación o ingeniería inversa; (iv) recopilar direcciones de correo electrónico con fines de spam.",
       "s7H": "7. Contenido del usuario",
-      "s7": "Los Usuarios pueden publicar o crear contenido (textos, imágenes, fotos). Las reseñas deben ser honestas, respetuosas y basadas en experiencias reales. Los Usuarios conceden a Aegryn una licencia mundial, libre de regalías y perpetua para usar el Contenido del usuario en relación con los Servicios.",
+      "s7ContentTitle": "Contenido del usuario.",
+      "s7Content": "Los Usuarios tienen la posibilidad de mostrar, transmitir o crear enlaces desde la Plataforma y/o los Servicios, textos, archivos, imágenes, fotos u otros materiales (el Contenido del usuario). En particular, un Usuario puede describir por escrito a otros Usuarios un problema para ilustrar un artículo dañado o explicar el tipo de servicio requerido.",
+      "s7ReviewTitle": "Reseñas y valoraciones.",
+      "s7Review": "Tras la prestación de un servicio, los Usuarios pueden dejar una reseña pública y una valoración sobre su experiencia. Las reseñas deben ser honestas, respetuosas y basadas en experiencias reales.",
+      "s7LicenseTitle": "Licencia.",
+      "s7License": "Los Usuarios conceden a Aegryn una licencia mundial, libre de regalías, perpetua, irrevocable, transferible y cedible, susceptible de sublicencia, así como cualquier derecho de propiedad relacionado, para utilizar el Contenido del usuario en relación con los Servicios, la Plataforma y todos los servicios asociados. Nos reservamos el derecho (sin estar obligados a ello) de editar, rechazar o eliminar cualquier Contenido del usuario en cualquier momento, a nuestra entera discrección.",
+      "s7WarrantyTitle": "Garantía.",
+      "s7Warranty": "Cualquier Contenido del usuario publicado, transmitido o referenciado en la Plataforma es responsabilidad exclusiva del Usuario que lo ha creado. No supervisamos sistemáticamente el Contenido del usuario ni el uso de la Plataforma por parte de otros Usuarios. No ofrecemos ninguna garantía, expresa o implícita, sobre la exactitud, actualidad o exhaustividad del Contenido del usuario y no asumimos ninguna responsabilidad al respecto.",
       "s8H": "8. Pagos y tarifas",
       "s8": "Todos los pagos realizados a través de la Plataforma son procesados por proveedores de servicios de pago terceros. No almacenamos ni procesamos directamente la información de su tarjeta de pago.",
+      "s8ClientFeeTitle": "Tarifa del Cliente.",
+      "s8ClientFee": "Como Cliente, solo se le cobrará por los Servicios que haya seleccionado y aprobado expresamente a través de la Plataforma. El precio total, incluidos los impuestos aplicables, tarifas de servicio o cargos adicionales, se mostrará claramente antes de confirmar su solicitud.",
       "s8FeesTitle": "Tarifas del Proveedor de Servicios.",
       "s8FeesIntro": "Como Proveedor de Servicios, está sujeto a una comisión por cada servicio completado con éxito:",
       "s8Fees": [
@@ -4024,9 +4044,13 @@
         "Nivel Pro (150 a 300 misiones): 17,5 %",
         "Nivel Élite (más de 300 misiones): 15 %"
       ],
-      "s8Payout": "Los pagos se procesan generalmente en un plazo de 5 a 7 días hábiles tras la finalización del servicio.",
+      "s8TierTitle": "Nivel de categoría.",
+      "s8Tier": "El nivel de categoría se revisa periódicamente para garantizar una aplicación precisa de las tasas de comisión. Las cancelaciones reiteradas al llegar al trabajo, el incumplimiento de nuestras políticas u otras infracciones pueden afectar negativamente a su nivel y al acceso a futuras oportunidades en la Plataforma. Las infracciones graves o reiteradas pueden dar lugar a una revisión de su cuenta y a la suspensión o eliminación definitiva.",
+      "s8Payout": "Los pagos se procesan generalmente en un plazo de 5 a 7 días hábiles tras la finalización del servicio, siempre que el Cliente no haya iniciado ninguna disputa ni solicitud de reembolso. Nos reservamos el derecho de retrasar o retener los pagos en caso de sospecha de fraude, infracción de las presentes CdU o hasta la resolución de una disputa pendiente.",
       "s9H": "9. Reembolsos",
-      "s9": "Si un servicio pagado no se presta como se prometió, puede solicitar un reembolso en un plazo de 7 días desde la hora prevista del servicio, con los detalles justificativos. Evaluaremos las solicitudes caso por caso.",
+      "s9": "Si un servicio que ha pagado no se presta como se prometió, puede solicitar un reembolso directamente a través de la plataforma. Las solicitudes deben enviarse en un plazo de 7 días desde la hora prevista del servicio e incluir los detalles justificativos. Evaluaremos las solicitudes de reembolso caso por caso y nos reservamos el derecho de aprobar o rechazar un reembolso. Los reembolsos, cuando se concedan, se tramitarán mediante el mismo método de pago utilizado para la transacción original.",
+      "s9DisputeTitle": "Disputa entre Usuarios.",
+      "s9Dispute": "No somos parte en la relación contractual entre Clientes y Proveedores de Servicios y no intervenimos en la ejecución del servicio. Sin embargo, podemos facilitar la comunicación entre las partes en caso de disputa. Si no se llega a un acuerdo mutuo, podemos, sin estar obligados a ello, proponer una resolución o emitir un reembolso parcial o total, basado en las pruebas disponibles y de buena fe.",
       "s10H": "10. Propiedad intelectual",
       "s10": "A excepción del Contenido del usuario, Aegryn sigue siendo el único propietario de todos los derechos de propiedad intelectual sobre la Plataforma, los Servicios y el contenido accesible a través de la Plataforma.",
       "s11H": "11. Restricciones de uso",
@@ -4043,9 +4067,15 @@
       "s16": "Usted se compromete a indemnizarnos por cualquier responsabilidad, pérdida, daño o reclamación resultante de su incumplimiento de las presentes CdU.",
       "s17H": "17. Varios",
       "s17DivTitle": "Separabilidad.",
-      "s17Div": "Si alguna disposición es nula o inaplicable, las demás disposiciones permanecerán en plena vigencia.",
+      "s17Div": "Si alguna disposición de las presentes CdU fuera o deviniera nula o inaplicable, las partes acuerdan que sus intenciones, tal como se reflejan en la disposición defectuosa, se llevarán a cabo en la mayor medida posible y que las demás disposiciones de las CdU permanecerán en plena vigencia.",
       "s17ForceTitle": "Fuerza mayor.",
-      "s17Force": "No podemos ser considerados responsables por el incumplimiento debido a eventos de fuerza mayor.",
+      "s17Force": "No podemos ser considerados responsables por el incumplimiento o el retraso en el cumplimiento de nuestras obligaciones debido a eventos de fuerza mayor, como catastrofes naturales de especial intensidad, guerras, actos gubernamentales o de las autoridades, disturbios, huelgas, epidemias o pandemias, o averias en redes eléctricas o de telecomunicaciones. Si se produjera tal evento, le informaremos sin demora.",
+      "s17AssignTitle": "Cesión.",
+      "s17Assign": "No podrá ceder ni transferir ninguno de sus derechos u obligaciones en virtud de las presentes CdU. Podemos ceder o transferir cualquier derecho u obligación, o subcontratar la ejecución de cualquiera de nuestras obligaciones en virtud de las presentes CdU a cualquier tercero en cualquier momento, sin su previo consentimiento.",
+      "s17PromoTitle": "Promoción.",
+      "s17Promo": "Aegryn está autorizada a utilizar su marca o logotipo como referencia para promover sus Plataformas y Servicios ante terceros.",
+      "s17AmicableTitle": "Resolución amistosa.",
+      "s17Amicable": "Alentamos a los Usuarios a contactarnos directamente para resolver cualquier disputa. Realizaremos esfuerzos razonables para atender sus preocupaciones.",
       "s17LawTitle": "Ley aplicable.",
       "s17Law": "Las presentes CdU se rigen por el derecho material suizo, sin referencia a sus disposiciones en materia de conflicto de leyes.",
       "s17JurisTitle": "Jurisdicción.",

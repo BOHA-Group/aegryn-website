@@ -3885,6 +3885,8 @@
         "h": "Einleitung",
         "p1": "neediu ist eine Plattform, die es Nutzern ermöglicht, schnell vertrauenswürdige Fachleute oder Privatpersonen zu finden, die in ihrer Region Hilfe bei häuslichen Bedürfnissen anbieten. Da uns der Schutz Ihrer Daten und Ihrer Privatsphäre sehr wichtig ist, haben wir diesen Datenschutzhinweis erstellt, um zu erläutern, was wir mit Ihren Daten tun, wenn Sie unsere Plattform nutzen.",
         "p2": "Dieser Datenschutzhinweis betrifft ausschließlich die mit unserer Plattform verbundene Datenverarbeitung. Unser Ziel ist ein angemessener Schutz personenbezogener Daten gemäß allen anwendbaren Datenschutzgesetzen, einschließlich des Schweizer Datenschutzgesetzes (DSG) und der Datenschutz-Grundverordnung (DSGVO).",
+        "p3": "In der Schweiz beruht der Schutz Ihrer Daten insbesondere auf dem Bundesgesetz vom 25. September 2020 über den Datenschutz (DSG) sowie auf der Bundesverordnung vom 31. August über den Datenschutz (DSV). Unser Datenschutzhinweis und unsere Praktiken sind auf die in dieser Gesetzgebung enthaltenen Rechtsvorschriften abgestimmt.",
+        "p4": "Obwohl wir uns bemühen, unseren Datenschutzhinweis zu vereinfachen, liegt die Verständnisschwierigkeit in der spezifischen Sprache des rechtlichen Rahmens. Deshalb haben wir die wichtigsten Definitionen zusammengefasst, um den Hinweis leichter verständlich zu machen; diese Definitionen entstammen dem DSG.",
         "defsTitle": "Wichtige Definitionen aus dem DSG:",
         "defs": {
           "dataSubject": ["Betroffene Person:", "Die natürliche Person, deren personenbezogene Daten verarbeitet werden."],
@@ -3903,11 +3905,12 @@
       "ourRole": {
         "h": "Welche Rolle spielen wir beim Datenschutz?",
         "p1": "Wenn Sie unsere Plattform nutzen, verarbeiten wir möglicherweise bestimmte personenbezogene Daten von Ihnen. Gemäß dem DSG sind wir der Verantwortliche. Wenn personenbezogene Daten an einen Dienstleister zur Auftragsausführung weitergegeben werden, handelt dieser als eigenständiger Verantwortlicher.",
-        "p2": "Als Verantwortlicher legen wir die Zwecke und Mittel der Verarbeitung sowie die Sicherheitsmaßnahmen fest. Datenschutz ist eine gemeinsame Aufgabe. Wir empfehlen Ihnen, diesen Hinweis sorgfältig zu lesen."
+        "p2": "Als Verantwortlicher legen wir die Zwecke und Mittel der Verarbeitung sowie die Sicherheitsmaßnahmen fest. Wenn wir im Rahmen unserer Geschäftstätigkeit mit Drittanbietern zusammenarbeiten, stellen wir sicher, dass diese unser Engagement für den Datenschutz teilen und die gleichen Standards einhalten.",
+        "p3": "Datenschutz ist eine gemeinsame Aufgabe. Wir empfehlen Ihnen daher, unseren Datenschutzhinweis sorgfältig zu lesen. Wir empfehlen Ihnen auch, wenn Sie einer unserer Kunden sind, die Vertragsunterlagen zu prüfen, die uns binden, da diese zusätzliche Angaben zur Verarbeitung Ihrer Daten enthalten können."
       },
       "whenCollect": {
         "h": "Wann und wie erheben wir Ihre Daten?",
-        "p": "Die Datenerhebung beginnt, sobald Sie auf unsere Plattform zugreifen oder mit ihr interagieren. Wir erheben Daten direkt von Ihnen, wenn Sie die Plattform nutzen oder ein Nutzerkonto erstellen, ob als Kunde oder Dienstleister. Daten von Dritten erheben wir nur im Rahmen gezielter Marketingkampagnen."
+        "p": "Die Datenerhebung beginnt, sobald Sie auf unsere Plattform zugreifen oder mit ihr interagieren. Wir erheben Daten direkt von Ihnen, wenn Sie die Plattform nutzen oder ein Nutzerkonto erstellen, ob als Kunde oder Dienstleister. Daten von Dritten erheben wir nur im Rahmen gezielter Marketingkampagnen, bei denen eine begrenzte und indirekte Erhebung personenbezogener Daten stattfinden kann. In diesen Fällen können uns Daten von Dritten gemäß deren eigenen Datenschutzhinweisen übermittelt werden."
       },
       "categories": {
         "h": "Welche Datenkategorien verarbeiten wir?",
@@ -3925,19 +3928,20 @@
         "otherP": "Art und Umfang der Aufgabe, Größe oder Zustand des Hauses oder der Räumlichkeiten, gewünschter Termin, Fotos oder Beschreibungen zur Auftragsklärung, Identifikationsdaten im Rahmen des KYC-Verfahrens."
       },
       "sensitive": {
-        "h": "Sensible Daten und Minderjährige",
-        "p": "Wir erheben und verarbeiten keine besonderen Kategorien personenbezogener Daten. Unsere Dienste richten sich ausschließlich an Erwachsene. Wir sprechen keine Minderjährigen an und erheben wissentlich keine personenbezogenen Daten von ihnen."
+        "h": "Was gilt für besondere Kategorien personenbezogener Daten?",
+        "p": "Wir erheben und verarbeiten keine besonderen Kategorien personenbezogener Daten."
+      },
+      "minors": {
+        "h": "Was gilt für Daten Minderjähriger?",
+        "p": "Unsere Dienste richten sich ausschließlich an Erwachsene. Wir sprechen keine Minderjährigen an und erheben wissentlich keine personenbezogenen Daten von ihnen."
       },
       "why": {
         "h": "Warum verarbeiten wir Ihre Daten?",
-        "pIntro": "Wir verarbeiten Ihre personenbezogenen Daten, um:",
-        "items": [
-          "Den Zugang und die Nutzung der Plattform zu ermöglichen (Kontoerstellung und -verwaltung, Vermittlung, Zahlungsabwicklung, Nachrichtendienst, Anzeige relevanter Informationen).",
-          "Mit Ihnen zu kommunizieren, auf Ihre Anfragen zu reagieren und Ihre Rechte wahrzunehmen.",
-          "Verkehrsstatistiken zur Verbesserung der Plattform zu erstellen.",
-          "Geltende Gesetze, Richtlinien und Empfehlungen der Behörden einzuhalten."
-        ],
-        "pNote": "Wir treffen keine automatisierten Einzelentscheidungen."
+        "p": "Wir verarbeiten Ihre personenbezogenen Daten, um Ihnen den Zugang zu den Funktionen unserer Plattform zu ermöglichen und die ordnungsgemäße Erbringung der angebotenen Dienste zu gewährleisten. Dazu gehören insbesondere die Erstellung und Verwaltung Ihres Kontos, die Vermittlung zwischen Kunden und Dienstleistern, die Zahlungsabwicklung, die Übermittlung von Nachrichten und die Anzeige relevanter Informationen. Wir verarbeiten Ihre Daten auch, um mit Ihnen zu kommunizieren, auf Ihre Anfragen zu reagieren, Ihre Rechte wahrzunehmen und nützliche Nutzungsstatistiken zur Verbesserung der Plattform zu erstellen. Schließlich verarbeiten wir Ihre Daten, um geltende Gesetze, Richtlinien und Empfehlungen der Behörden einzuhalten."
+      },
+      "automated": {
+        "h": "Treffen wir automatisierte Einzelentscheidungen?",
+        "p": "Wir nutzen verschiedene IT-Tools zur Verwaltung unserer Aktivitäten. Diese Tools dienen dazu, Prozesse zu zentralisieren und zu strukturieren, die Effizienz zu verbessern und die Qualität unserer Dienste zu gewährleisten. Es ist wichtig zu betonen, dass wir mithilfe dieser IT-Tools keine automatisierten Einzelentscheidungen treffen."
       },
       "rights": {
         "h": "Welche Rechte haben Sie?",
@@ -3950,11 +3954,12 @@
           "Sie haben das Recht auf Löschung oder Vernichtung Ihrer Daten.",
           "Sie haben das Recht, eine automatisierte Einzelentscheidung durch eine natürliche Person überprüfen zu lassen."
         ],
-        "pContact": "Zur Ausübung dieser Rechte kontaktieren Sie uns bitte. Wenn Sie der Meinung sind, dass wir Ihre Daten unter Verletzung datenschutzrechtlicher Bestimmungen verarbeiten, können Sie uns beim EDÖB melden."
+        "pContact": "Wenn Sie eines der oben genannten Rechte ausüben möchten, kontaktieren Sie uns bitte. Um Missbrauch zu verhindern, müssen wir Sie zunächst identifizieren (z. B. anhand einer Kopie Ihres Ausweises, wenn keine andere Identifikationsmöglichkeit besteht). Bitte beachten Sie, dass bei der Ausübung dieser Rechte gemäß DSG Bedingungen, Ausnahmen und Einschränkungen gelten können (z. B. zum Schutz Dritter oder von Geschäftsgeheimnissen). Wir werden Sie darüber informieren, wenn dies der Fall ist.",
+        "pContact2": "Wenn Sie der Meinung sind, dass wir Ihre Daten unter Verletzung datenschutzrechtlicher Bestimmungen verarbeiten, haben Sie auch die Möglichkeit, uns beim EDÖB zu melden. Wir empfehlen Ihnen, uns zuerst zu informieren, damit wir Ihre Anliegen klären können. Wenn wir dies nicht tun können, können Sie den EDÖB gemäß den Anweisungen auf seiner Website kontaktieren."
       },
       "security": {
         "h": "Wie schützen wir Ihre Daten?",
-        "p": "Wir ergreifen angemessene Sicherheitsmaßnahmen, wie z. B. Verschlüsselung, zum Schutz Ihrer personenbezogenen Daten. Wenn Sie vermuten, dass Ihre Daten kompromittiert wurden, informieren Sie uns bitte umgehend unter legal@boha-group.com."
+        "p": "Wir ergreifen angemessene Sicherheitsmaßnahmen wie Verschlüsselung, um die Vertraulichkeit, Integrität und Verfügbarkeit Ihrer personenbezogenen Daten zu gewährleisten. Leider können wir nicht garantieren, dass Ihre Daten jederzeit vollständig sicher sind. Wenn Sie vermuten, dass Ihre personenbezogenen Daten kompromittiert wurden, informieren Sie uns bitte umgehend unter legal@boha-group.com."
       },
       "storage": {
         "h": "Wo und wie lange werden Ihre Daten gespeichert?",
@@ -3962,7 +3967,9 @@
       },
       "sharing": {
         "h": "Mit wem teilen wir Ihre Daten?",
-        "p": "Der Betrieb unserer Plattform erfordert die Zusammenarbeit mit spezialisierten Drittanbietern. Bestimmte personenbezogene Daten werden auch direkt zwischen Nutzern geteilt, wenn dies für die Erbringung einer angeforderten Leistung erforderlich ist. Alle diese Übermittlungen sind strikt auf das Notwendige beschränkt und erfolgen im Einklang mit den anwendbaren Rechtsvorschriften. Bei Übermittlungen außerhalb der Schweiz oder des EWR verwenden wir die überarbeiteten Standardvertragsklauseln der Europäischen Kommission oder andere geeignete Garantien.",
+        "p1": "Der Betrieb unserer Plattform erfordert die Zusammenarbeit mit spezialisierten externen Drittanbietern, insbesondere für die Erstellung, Wartung und das Hosting. Wir arbeiten mit in ihrem Fachbereich anerkannten Drittanbietern zusammen, um den reibungslosen Betrieb unserer Plattform und die Qualität unserer Dienste zu gewährleisten. Im Rahmen dieser Zusammenarbeit kann es erforderlich sein, Ihre Daten an unsere Drittanbieter zu übermitteln. Diese Übermittlungen sind strikt auf das Notwendige beschränkt und erfolgen im Einklang mit dem rechtlichen Rahmen.",
+        "p2": "Darüber hinaus werden bestimmte personenbezogene Daten auch direkt zwischen Nutzern geteilt, wenn dies für die Vorbereitung, Ausführung oder Nachbereitung eines angeforderten Dienstes erforderlich ist. Diese Austausche sind unerlässlich für das ordnungsgemäße Funktionieren der Plattform und der von ihr ermöglichten Dienste.",
+        "p3": "Wenn personenbezogene Daten an einen Drittanbieter außerhalb der Schweiz oder des Europäischen Wirtschaftsraums (EWR) übermittelt werden, der kein angemessenes Schutzniveau bietet, verlangen wir, dass sich der Drittanbieter verpflichtet, die anwendbare Datenschutzgesetzgebung einzuhalten (hierfür verwenden wir die überarbeiteten Standardvertragsklauseln der Europäischen Kommission), sofern der Drittanbieter nicht bereits einem rechtlich anerkannten Regelwerk unterliegt, das den Datenschutz gewährleistet (Swiss-U.S. Data Privacy Framework), oder wir eine Ausnahme geltend machen können.",
         "providersH": "Unsere Drittanbieter",
         "tableHeaders": ["Anbieter", "Zweck", "Verarbeitungsort"],
         "providers": [
@@ -3999,9 +4006,13 @@
       "s3Member": "Es gibt zwei Kategorien von registrierten Nutzern: (i) Kunden, die die Plattform nutzen, um Dienste zu suchen und zu erhalten, und (ii) Dienstleister, die Dienste für Kunden anbieten und erbringen.",
       "s3ConfidTitle": "Vertraulichkeit.",
       "s3Confid": "Sie sind allein verantwortlich für die Vertraulichkeit Ihres Passworts und alle Aktivitäten, die unter Ihrem Konto stattfinden. Informieren Sie uns sofort über jede missbräuchliche Nutzung.",
+      "s3InfoTitle": "Informationen.",
+      "s3Info": "Im Rahmen Ihrer Registrierung verpflichten Sie sich, wahre, genaue, aktuelle und vollständige Informationen bereitzustellen und diese so oft und so schnell wie nötig zu aktualisieren.",
       "s3KycTitle": "Identitätsprüfung.",
-      "s3Kyc": "Um gesetzlichen Anforderungen im Zusammenhang mit Finanztransaktionen und Betrugsprävention zu entsprechen, können wir oder unser Drittanbieter Identitätsprüfungsverfahren (KYC) durchführen.",
+      "s3Kyc": "Um gesetzlichen Anforderungen im Zusammenhang mit Finanztransaktionen und Betrugsprävention zu entsprechen, können wir oder unser Drittanbieter Identitätsprüfungsverfahren (KYC) durchführen. Sie erklären sich damit einverstanden, auf Verlangen genaue und vollständige Informationen und Dokumente bereitzustellen. Wenn Sie das Identitätsprüfungsverfahren nicht abschließen, kann Ihr Zugang zur Plattform oder zu bestimmten Diensten ausgesetzt oder gekündigt werden.",
       "s4H": "4. Zugang, Internet und Telekommunikation",
+      "s4AccessTitle": "Zugang.",
+      "s4Access": "Sie sind allein verantwortlich für die Qualität und Vertraulichkeit Ihres Passworts und Benutzernamens sowie für alle Aktivitäten, die unter Ihrem Passwort und Ihrem Konto stattfinden. Sie verpflichten sich, uns unverzüglich über jede missbräuchliche Nutzung Ihres Passworts oder Kontos und über andere Sicherheitsverstöße zu informieren und sicherzustellen, dass Sie Ihr Konto am Ende jeder Sitzung schließen (Abmeldung).",
       "s4InternetTitle": "Internet.",
       "s4Internet": "Die Nutzung des Internets birgt Risiken (Abfangen, Veränderung, Löschung von Daten). Durch die Nutzung der Plattform akzeptieren Sie diese Risiken.",
       "s4TelecomTitle": "Telekommunikation.",
@@ -4014,9 +4025,18 @@
       "s6RestrictTitle": "Einschränkungen.",
       "s6Restrict": "Es ist strengstens untersagt: (i) die Plattform für andere als die vorgesehenen Zwecke zu nutzen; (ii) die Plattform zu reproduzieren, zu modifizieren oder abgeleitete Werke zu erstellen; (iii) durch Dekompilierung oder Reverse Engineering auf den Quellcode zuzugreifen; (iv) E-Mail-Adressen für Spam-Zwecke zu sammeln.",
       "s7H": "7. Nutzerinhalte",
-      "s7": "Nutzer können Inhalte (Texte, Bilder, Fotos) veröffentlichen oder erstellen. Bewertungen müssen ehrlich, respektvoll und auf echten Erfahrungen basierend sein. Nutzer gewähren Aegryn eine weltweite, gebührenfreie, unbefristete Lizenz zur Nutzung von Nutzerinhalten im Zusammenhang mit den Diensten.",
+      "s7ContentTitle": "Nutzergenerierte Inhalte.",
+      "s7Content": "Nutzer haben die Möglichkeit, Texte, Dateien, Bilder, Fotos oder andere Materialien (Nutzerinhalte) auf der Plattform und/oder über die Dienste anzuzeigen, zu übermitteln oder zu verlinken. Insbesondere können Nutzer anderen Nutzern ein Problem in Textform beschreiben, um einen beschädigten Gegenstand zu veranschaulichen oder die Art der benötigten Dienstleistung zu erläutern.",
+      "s7ReviewTitle": "Bewertungen.",
+      "s7Review": "Nach Abschluss eines Dienstes können Nutzer eine öffentliche Bewertung über ihre Erfahrung abgeben. Bewertungen sollten ehrlich, respektvoll und auf echten Erfahrungen basierend sein.",
+      "s7LicenseTitle": "Lizenz.",
+      "s7License": "Nutzer gewähren Aegryn eine weltweite, gebührenfreie, dauerhafte, unwiderrufliche, übertragbare und abtretbare Lizenz mit Unterlizenzberechtigung sowie alle damit verbundenen Eigentumsrechte zur Nutzung der Nutzerinhalte im Zusammenhang mit den Diensten, der Plattform und allen damit verbundenen Diensten. Wir behalten uns das Recht vor (sind aber nicht dazu verpflichtet), Nutzerinhalte jederzeit nach eigenem Ermessen zu bearbeiten, abzulehnen oder zu entfernen.",
+      "s7WarrantyTitle": "Gewährleistung.",
+      "s7Warranty": "Für alle auf der Plattform veröffentlichten, übermittelten oder referenzierten Nutzerinhalte ist ausschließlich der Nutzer verantwortlich, der diese erstellt hat. Wir überwachen Nutzerinhalte nicht systematisch, ebenso wenig wie die Nutzung der Plattform durch andere Nutzer. Wir übernehmen keine ausdrückliche oder stillschweigende Gewährleistung für die Richtigkeit, Aktualität oder Vollständigkeit der Nutzerinhalte und haften nicht in dieser Hinsicht.",
       "s8H": "8. Zahlungen und Gebühren",
       "s8": "Alle über die Plattform getätigten Zahlungen werden von Drittanbietern für Zahlungsdienste abgewickelt. Wir speichern oder verarbeiten Ihre Zahlungskarteninformationen nicht direkt.",
+      "s8ClientFeeTitle": "Kundenentgelt.",
+      "s8ClientFee": "Als Kunde werden Ihnen nur Dienste in Rechnung gestellt, die Sie über die Plattform ausgewählt und ausdrücklich genehmigt haben. Der Gesamtpreis einschließlich aller anwendbaren Steuern, Servicegebühren oder zusätzlichen Kosten wird Ihnen klar angezeigt, bevor Sie Ihre Anfrage bestätigen.",
       "s8FeesTitle": "Gebühren für Dienstleister.",
       "s8FeesIntro": "Als Dienstleister unterliegen Sie einer Provision für jeden erfolgreich abgeschlossenen Dienst:",
       "s8Fees": [
@@ -4024,9 +4044,13 @@
         "Pro-Niveau (150 bis 300 Aufträge): 17,5 %",
         "Elite-Niveau (mehr als 300 Aufträge): 15 %"
       ],
-      "s8Payout": "Auszahlungen werden in der Regel innerhalb von 5 bis 7 Werktagen nach Abschluss des Dienstes verarbeitet.",
+      "s8TierTitle": "Statusniveau.",
+      "s8Tier": "Das Statusniveau wird regelmäßig überprüft, um eine korrekte Anwendung der Provisionssätze zu gewährleisten. Wiederholte Stornierungen nach Ankunft, Verstöße gegen unsere Richtlinien oder andere Verfehlungen können sich negativ auf Ihr Statusniveau und Ihren Zugang zu zukünftigen Aufträgen auf der Plattform auswirken. Schwerwiegende oder wiederholte Verstöße können zu einer Überprüfung Ihres Kontos und zu einer Sperrung oder dauerhaften Entfernung führen.",
+      "s8Payout": "Auszahlungen werden in der Regel innerhalb von 5 bis 7 Werktagen nach Abschluss des Dienstes verarbeitet, sofern kein Streit oder Erstattungsantrag vom Kunden eingeleitet wurde. Wir behalten uns das Recht vor, Auszahlungen bei Verdacht auf Betrug, Verstoß gegen diese NB oder ausstehender Streitbeilegung zu verzögern oder zurückzuhalten.",
       "s9H": "9. Rückerstattungen",
-      "s9": "Wenn ein bezahlter Dienst nicht wie versprochen erbracht wurde, können Sie innerhalb von 7 Tagen nach dem geplanten Termin eine Rückerstattung mit entsprechenden Nachweisen beantragen. Wir prüfen Anträge von Fall zu Fall.",
+      "s9": "Wenn ein von Ihnen bezahlter Dienst nicht wie versprochen erbracht wurde, können Sie direkt über die Plattform eine Rückerstattung beantragen. Anträge müssen innerhalb von 7 Tagen nach dem geplanten Diensttermin eingereicht werden und entsprechende Nachweise enthalten. Wir prüfen Rückerstattungsanträge von Fall zu Fall und behalten uns das Recht vor, eine Rückerstattung zu genehmigen oder abzulehnen. Genehmigte Rückerstattungen werden über dieselbe Zahlungsmethode verarbeitet, die für die ursprüngliche Transaktion verwendet wurde.",
+      "s9DisputeTitle": "Streitigkeiten zwischen Nutzern.",
+      "s9Dispute": "Wir sind keine Partei des Vertragsverhältnisses zwischen Kunden und Dienstleistern und greifen nicht in die Erbringung des Dienstes ein. Wir können jedoch die Kommunikation zwischen den Parteien im Streitfall erleichtern. Wenn keine gütliche Einigung erzielt wird, können wir — ohne dazu verpflichtet zu sein — eine Lösung vorschlagen oder eine teilweise oder vollständige Rückerstattung auf der Grundlage der verfügbaren Beweise und nach Treu und Glauben leisten.",
       "s10H": "10. Geistiges Eigentum",
       "s10": "Mit Ausnahme der Nutzerinhalte bleibt Aegryn alleiniger Inhaber aller Rechte des geistigen Eigentums an der Plattform, den Diensten und den über die Plattform zugänglichen Inhalten.",
       "s11H": "11. Nutzungseinschränkungen",
@@ -4043,9 +4067,15 @@
       "s16": "Sie verpflichten sich, uns für jede Haftung, jeden Verlust, Schaden oder Anspruch schadlos zu halten, der aus Ihrem Verstoß gegen diese NB entsteht.",
       "s17H": "17. Verschiedenes",
       "s17DivTitle": "Salvatorische Klausel.",
-      "s17Div": "Sollte eine Bestimmung nichtig oder nicht durchsetzbar sein, bleiben die übrigen Bestimmungen in vollem Umfang gültig.",
+      "s17Div": "Sollte eine Bestimmung dieser NB nichtig oder nicht durchsetzbar sein oder werden, vereinbaren die Parteien, dass ihre Absichten, wie sie in der fehlerhaften Bestimmung zum Ausdruck kommen, so weit wie möglich umgesetzt werden und die übrigen Bestimmungen der NB in vollem Umfang in Kraft bleiben.",
       "s17ForceTitle": "Höhere Gewalt.",
-      "s17Force": "Wir können nicht für eine Nichterfüllung haftbar gemacht werden, die auf Ereignisse höherer Gewalt zurückzuführen ist.",
+      "s17Force": "Wir können nicht für die Nichterfüllung oder Verzögerung bei der Erfüllung unserer Verpflichtungen aufgrund von Ereignissen höherer Gewalt haftbar gemacht werden, wie z. B. Naturkatastrophen besonderer Intensität, Kriege, staatliche oder behördliche Maßnahmen, Unruhen, Streiks, Epidemien oder Pandemien oder Ausfälle in Strom- oder Telekommunikationsnetzen. Tritt ein solches Ereignis ein, werden wir Sie unverzüglich informieren.",
+      "s17AssignTitle": "Abtretung.",
+      "s17Assign": "Sie dürfen keine Ihrer Rechte oder Pflichten aus diesen NB abtreten oder übertragen. Wir können jederzeit ohne Ihre vorherige Zustimmung Rechte oder Pflichten abtreten oder übertragen oder die Erfüllung unserer Verpflichtungen aus diesen NB an Dritte auslagern.",
+      "s17PromoTitle": "Werbung.",
+      "s17Promo": "Aegryn ist berechtigt, Ihre Marke oder Ihr Logo als Referenz zur Bewerbung ihrer Plattformen und Dienste gegenüber Dritten zu verwenden.",
+      "s17AmicableTitle": "Gütliche Streitbeilegung.",
+      "s17Amicable": "Wir ermutigen Nutzer, uns direkt zu kontaktieren, um Streitigkeiten beizulegen. Wir werden angemessene Bemühungen unternehmen, Ihre Anliegen zu lösen.",
       "s17LawTitle": "Anwendbares Recht.",
       "s17Law": "Diese NB unterliegen dem materiellen Schweizer Recht, ohne Berücksichtigung seiner kollisionsrechtlichen Bestimmungen.",
       "s17JurisTitle": "Gerichtsstand.",
