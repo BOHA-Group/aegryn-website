@@ -73,7 +73,7 @@ export function DiscoverStrip() {
                 {a.title}
               </p>
               <span className="mt-auto inline-flex items-center gap-1.5 font-sans font-semibold text-[11px] tracking-[0.12em] uppercase text-ag-gray group-hover:text-ag-black transition-colors">
-                Lire <ArrowUpRight size={11} />
+                {t('readMore')} <ArrowUpRight size={11} />
               </span>
             </Link>
           ))}

@@ -11,14 +11,49 @@ export async function generateStaticParams() {
   return ARTICLES.map(a => ({ slug: a.slug }))
 }
 
+const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')
+const OG_FALLBACK = `${BASE}/og/blog-default.png`
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params
   const article = ARTICLES.find(a => a.slug === slug)
   if (!article) return {}
   const lang = (locale === 'fr') ? 'fr' : 'en'
+  const title       = article.title[lang]
+  const description = article.excerpt[lang]
+  const ogImage     = article.ogImage ?? OG_FALLBACK
+  const canonical   = `${BASE}/${locale}/blog/${slug}`
   return {
-    title: article.title[lang],
-    description: article.excerpt[lang],
+    title,
+    description,
+    alternates: {
+      canonical,
+      languages: {
+        fr: `${BASE}/fr/blog/${slug}`,
+        en: `${BASE}/en/blog/${slug}`,
+        de: `${BASE}/de/blog/${slug}`,
+        es: `${BASE}/es/blog/${slug}`,
+        it: `${BASE}/it/blog/${slug}`,
+        nl: `${BASE}/nl/blog/${slug}`,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url:           canonical,
+      siteName:      'AEGRYN',
+      type:          'article',
+      publishedTime: new Date(article.date).toISOString(),
+      modifiedTime:  new Date(article.date).toISOString(),
+      authors:       ['AEGRYN'],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card:        'summary_large_image',
+      title,
+      description,
+      images:      [ogImage],
+    },
   }
 }
 
@@ -32,8 +67,34 @@ export default async function ArticlePage({ params }: Props) {
   const catLabel = ARTICLE_CATEGORIES[article.category][lang]
   const dateStr  = new Date(article.date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
 
+  const articleLd = {
+    '@context':         'https://schema.org',
+    '@type':            'Article',
+    headline:           article!.title[lang],
+    description:        article!.excerpt[lang],
+    datePublished:      new Date(article!.date).toISOString(),
+    dateModified:       new Date(article!.date).toISOString(),
+    author:             { '@type': 'Organization', name: 'AEGRYN', url: BASE },
+    publisher:          { '@type': 'Organization', name: 'AEGRYN', logo: { '@type': 'ImageObject', url: `${BASE}/images/og-logo.png` } },
+    mainEntityOfPage:   { '@type': 'WebPage', '@id': `${BASE}/${locale}/blog/${slug}` },
+    image:              article!.ogImage ?? OG_FALLBACK,
+    inLanguage:         locale === 'fr' ? 'fr-FR' : locale === 'en' ? 'en-GB' : locale,
+  }
+
+  const faqLd = article!.faq?.length ? {
+    '@context':  'https://schema.org',
+    '@type':     'FAQPage',
+    mainEntity:  article!.faq.map(item => ({
+      '@type':         'Question',
+      name:            item.q[lang],
+      acceptedAnswer:  { '@type': 'Answer', text: item.a[lang] },
+    })),
+  } : null
+
   return (
     <main id="main" className="bg-ag-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-20 px-6">
         <div className="max-w-3xl mx-auto">

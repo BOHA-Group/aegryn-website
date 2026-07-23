@@ -1596,6 +1596,10 @@
     "filterBuyer": "Kopersgids",
     "filterCertification": "Certificering",
     "filterStrategy": "Strategie",
+    "filterCaseStudy": "Casestudy",
+    "filterLegal": "Juridisch & Fiscaal",
+    "filterVertical": "Verticalen",
+    "filterDACH": "DACH-markt",
     "readMin": "min leestijd",
     "readMore": "Artikel lezen",
     "backToDiscover": "← Terug naar Discover",
@@ -2084,7 +2088,8 @@
     "article2Cat": "Gids voor verkopers",
     "article3Title": "Hoe PE-kopers een SaaS in 2026 beoordelen",
     "article3Cat": "Gids voor kopers",
-    "cta": "Bekijk alle insights"
+    "cta": "Bekijk alle insights",
+    "readMore": "Artikel lezen"
   },
   "pillars": {
     "build": {

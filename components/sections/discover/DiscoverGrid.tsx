@@ -49,14 +49,22 @@ export function DiscoverGrid({ locale }: Props) {
     return () => ctx.revert()
   }, [])
 
-  const filters: { key: Filter; label: string }[] = [
+  const allFilters: { key: Filter; label: string }[] = [
     { key: 'all',           label: t('filterAll')          },
     { key: 'market',        label: t('filterMarket')       },
     { key: 'seller',        label: t('filterSeller')       },
     { key: 'buyer',         label: t('filterBuyer')        },
     { key: 'certification', label: t('filterCertification') },
     { key: 'strategy',      label: t('filterStrategy')     },
+    { key: 'case_study',    label: t('filterCaseStudy')    },
+    { key: 'legal',         label: t('filterLegal')        },
+    { key: 'vertical',      label: t('filterVertical')     },
+    { key: 'dach',          label: t('filterDACH')         },
   ]
+
+  const filters = allFilters.filter(f =>
+    f.key === 'all' || ARTICLES.some(a => a.category === f.key)
+  )
 
   const formatDate = (dateStr: string) =>
     new Date(dateStr).toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' })

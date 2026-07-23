@@ -1,4 +1,13 @@
-export type ArticleCategory = 'market' | 'seller' | 'buyer' | 'certification' | 'strategy'
+export type ArticleCategory =
+  | 'market'
+  | 'seller'
+  | 'buyer'
+  | 'certification'
+  | 'strategy'
+  | 'case_study'
+  | 'legal'
+  | 'vertical'
+  | 'dach'
 
 export type ContentBlock =
   | { type: 'p';     text:  { fr: string; en: string } }
@@ -8,6 +17,8 @@ export type ContentBlock =
   | { type: 'quote'; text:  { fr: string; en: string }; author?: string }
   | { type: 'stats'; items: { value: string; label: { fr: string; en: string } }[] }
 
+export type FaqItem = { q: { fr: string; en: string }; a: { fr: string; en: string } }
+
 export interface Article {
   slug:        string
   category:    ArticleCategory
@@ -16,7 +27,9 @@ export interface Article {
   title:       { fr: string; en: string }
   excerpt:     { fr: string; en: string }
   featured:    boolean
+  ogImage?:    string
   body?:       ContentBlock[]
+  faq?:        FaqItem[]
 }
 
 export const ARTICLES: Article[] = [
@@ -134,7 +147,7 @@ export const ARTICLES: Article[] = [
     category: 'certification',
     date:     '2026-05-10',
     readMin:  6,
-    featured: true,
+    featured: false,
     title: {
       fr: 'Qu\'est-ce qu\'un actif tech vraiment certifiable ?',
       en: 'What makes a tech asset truly certifiable?',
@@ -197,7 +210,7 @@ export const ARTICLES: Article[] = [
     category: 'buyer',
     date:     '2026-06-01',
     readMin:  8,
-    featured: false,
+    featured: true,
     title: {
       fr: 'Comment les acquéreurs PE évaluent un SaaS en 2026',
       en: 'How PE acquirers evaluate a SaaS in 2026',
@@ -328,7 +341,7 @@ export const ARTICLES: Article[] = [
     category: 'seller',
     date:     '2026-04-20',
     readMin:  5,
-    featured: false,
+    featured: true,
     title: {
       fr: 'IP : la checklist complète avant de céder votre actif tech',
       en: 'IP: the complete checklist before selling your tech asset',
@@ -386,7 +399,7 @@ export const ARTICLES: Article[] = [
     category: 'strategy',
     date:     '2026-03-01',
     readMin:  10,
-    featured: false,
+    featured: true,
     title: {
       fr: 'Glossaire M&A tech — Les 30 termes essentiels',
       en: 'Tech M&A Glossary — The 30 essential terms',
@@ -443,6 +456,90 @@ export const ARTICLES: Article[] = [
       ]},
     ],
   },
+  {
+    slug:     'legaltech-europe-valorisation-ma-2026',
+    category: 'vertical',
+    date:     '2026-07-15',
+    readMin:  8,
+    featured: false,
+    title: {
+      fr: 'LegalTech européenne en 2026 : valorisation, M&A et opportunités',
+      en: 'European LegalTech in 2026: valuation, M&A and opportunities',
+    },
+    excerpt: {
+      fr: 'Multiples de valorisation, deals actifs et profils d\'acquéreurs sur le marché LegalTech en Europe — données 2026. Pourquoi le vertical LegalTech attire les fonds PE et comment certifier un actif dans ce domaine.',
+      en: 'Valuation multiples, active deals and acquirer profiles in the European LegalTech market — 2026 data. Why the LegalTech vertical attracts PE funds and how to certify an asset in this space.',
+    },
+    body: [
+      { type: 'p', text: {
+        fr: 'Le marché LegalTech européen connaît une transformation structurelle. Ce qui était autrefois perçu comme une niche conservatrice — la technologie appliquée au droit — est devenu l\'un des verticaux les plus convoités par les fonds de private equity en 2026. Les raisons sont multiples : revenus récurrents élevés, faible churn sur des clients captifs (cabinets, directions juridiques, greffes), et barrières réglementaires qui constituent des fossés défensifs naturels.',
+        en: 'The European LegalTech market is undergoing a structural transformation. What was once perceived as a conservative niche — technology applied to law — has become one of the most sought-after verticals by private equity funds in 2026. The reasons are multiple: high recurring revenues, low churn on captive clients (law firms, legal departments, court registries), and regulatory barriers that constitute natural defensive moats.',
+      }},
+      { type: 'h2', text: { fr: 'Pourquoi la LegalTech attire les acquéreurs PE en 2026', en: 'Why LegalTech attracts PE acquirers in 2026' } },
+      { type: 'p', text: {
+        fr: 'Trois facteurs structurels expliquent l\'intérêt croissant des fonds pour le vertical LegalTech. Premièrement, la transformation numérique des cabinets d\'avocats et des directions juridiques d\'entreprise est contrainte et irréversible — les outils LegalTech deviennent des infrastructures critiques, non des options. Deuxièmement, les acteurs établis (Thomson Reuters, Wolters Kluwer, LexisNexis) achètent activement des solutions complémentaires pour enrichir leurs plateformes. Troisièmement, la vague réglementaire européenne (IA Act, CSRD, DSA/DMA) crée une demande inélastique pour des outils de conformité et de monitoring.',
+        en: 'Three structural factors explain the growing interest of funds in the LegalTech vertical. First, the digital transformation of law firms and corporate legal departments is constrained and irreversible — LegalTech tools are becoming critical infrastructure, not options. Second, established players (Thomson Reuters, Wolters Kluwer, LexisNexis) are actively buying complementary solutions to enrich their platforms. Third, the European regulatory wave (AI Act, CSRD, DSA/DMA) creates inelastic demand for compliance and monitoring tools.',
+      }},
+      { type: 'h2', text: { fr: 'Les multiples observés en 2026 (9x–13x ARR en DACH)', en: 'Observed multiples in 2026 (9x–13x ARR in DACH)' } },
+      { type: 'stats', items: [
+        { value: '9x–13x', label: { fr: 'Multiple ARR médian — DACH LegalTech', en: 'Median ARR multiple — DACH LegalTech' } },
+        { value: '8x–11x', label: { fr: 'Multiple ARR médian — France LegalTech', en: 'Median ARR multiple — France LegalTech' } },
+        { value: '78%', label: { fr: 'Deals LegalTech avec NRR > 105%', en: 'LegalTech deals with NRR > 105%' } },
+        { value: '< 25%', label: { fr: 'Taux d\'acceptation certification AEGRYN', en: 'AEGRYN certification acceptance rate' } },
+      ]},
+      { type: 'p', text: {
+        fr: 'Les multiples LegalTech DACH (Allemagne, Autriche, Suisse) sont systématiquement plus élevés qu\'en France ou en Europe du Sud. Cette prime s\'explique par la taille du marché adressable (le droit DACH est plus formalisé et l\'adoption digitale plus rapide dans les cabinets), par la densité de fonds PE sectoriels actifs sur la zone, et par la qualité des actifs disponibles. En France, les multiples restent attractifs mais sont pénalisés par des structures de revenus souvent hybrides (SaaS + services).',
+        en: 'DACH LegalTech multiples (Germany, Austria, Switzerland) are systematically higher than in France or Southern Europe. This premium is explained by the addressable market size (DACH law is more formalised and digital adoption is faster in firms), the density of sector-specific PE funds active in the region, and the quality of available assets. In France, multiples remain attractive but are penalised by often hybrid revenue structures (SaaS + services).',
+      }},
+      { type: 'h2', text: { fr: 'Les sous-verticales les plus actives', en: 'The most active sub-verticals' } },
+      { type: 'list', items: [
+        { fr: 'Contract management & e-signature : segment le plus mature, dominé par des acteurs SaaS B2B avec NRR > 110%. Intègre des IA de revue contractuelle (résumé, anomalies, clauses risquées).', en: 'Contract management & e-signature: the most mature segment, dominated by B2B SaaS players with NRR > 110%. Includes AI-powered contract review (summaries, anomalies, risky clauses).' },
+        { fr: 'Compliance & regulatory monitoring : forte croissance post-IA Act. Les solutions qui alertent en temps réel sur les nouvelles obligations réglementaires sont en train de devenir des infrastructures d\'entreprise.', en: 'Compliance & regulatory monitoring: strong growth post-AI Act. Solutions that alert in real time on new regulatory obligations are becoming enterprise infrastructure.' },
+        { fr: 'Legal research AI : marché en consolidation rapide. Les acteurs capables de traiter les jurisprudences nationales (droit civil vs common law) ont un avantage compétitif structurel.', en: 'Legal research AI: market in rapid consolidation. Players capable of processing national case law (civil law vs common law) have a structural competitive advantage.' },
+        { fr: 'Court & arbitration tech : niche très défensive. Les solutions homologuées par les greffes ou les chambres arbitrales ont des cycles de vente longs mais des taux de churn proches de 0%.', en: 'Court & arbitration tech: very defensive niche. Solutions approved by court registries or arbitration chambers have long sales cycles but churn rates close to 0%.' },
+      ]},
+      { type: 'h2', text: { fr: 'Profils d\'acquéreurs types', en: 'Typical acquirer profiles' } },
+      { type: 'list', items: [
+        { fr: 'Éditeurs de logiciels métier (Legal ERP) : cherchent à enrichir leur suite par acquisition de modules complémentaires. Paient des primes de synergies (10–15% au-dessus du marché).', en: 'Business software publishers (Legal ERP): looking to enrich their suite by acquiring complementary modules. Pay synergy premiums (10–15% above market).' },
+        { fr: 'Fonds PE sectoriels (Hg Capital, Francisco Partners, Insight Partners) : ciblent des actifs avec ARR > 3M€, NRR > 105%, marges brutes > 70%. Portage 4–6 ans puis exit secondaire.', en: 'Sector-specific PE funds (Hg Capital, Francisco Partners, Insight Partners): targeting assets with ARR > €3M, NRR > 105%, gross margins > 70%. 4–6 year hold then secondary exit.' },
+        { fr: 'Cabinets d\'avocats en transformation digitale : rachats d\'actifs LegalTech pour internaliser la technologie (acqui-hire). Profil moins fréquent mais valorisations plus élevées quand la techno est stratégique.', en: 'Law firms undergoing digital transformation: acquiring LegalTech assets to internalise technology (acqui-hire). Less frequent profile but higher valuations when the tech is strategic.' },
+      ]},
+      { type: 'h2', text: { fr: 'Métriques prioritaires pour un actif LegalTech', en: 'Priority metrics for a LegalTech asset' } },
+      { type: 'list', items: [
+        { fr: 'NRR > 105% : indicateur critique. Les cabinets ne changent pas d\'outil facilement — un NRR < 100% est un signal d\'alarme majeur.', en: 'NRR > 105%: critical indicator. Law firms don\'t change tools easily — an NRR < 100% is a major red flag.' },
+        { fr: 'Marges brutes > 70% : les solutions avec composante services (implementation, formation) voient leurs marges compressées. Viser 75–80% pour un multiple premium.', en: 'Gross margins > 70%: solutions with a service component (implementation, training) see margins compressed. Target 75–80% for a premium multiple.' },
+        { fr: 'Conformité réglementaire documentée : RGPD (hébergement des données juridiques), secret professionnel, audits de sécurité. La dimension S du Grade AEGRYN est critique pour ce vertical.', en: 'Documented regulatory compliance: GDPR (legal data hosting), professional secrecy, security audits. The S dimension of the AEGRYN Grade is critical for this vertical.' },
+        { fr: 'IP propriétaire sur les modèles IA : si l\'actif inclut des modèles LLM fine-tunés sur du droit, la propriété des données d\'entraînement et des weights est un point de diligence majeur.', en: 'Proprietary IP on AI models: if the asset includes LLMs fine-tuned on law, ownership of training data and weights is a major diligence point.' },
+      ]},
+      { type: 'h2', text: { fr: 'Certifier un actif LegalTech : spécificités dimension I (IP)', en: 'Certifying a LegalTech asset: IP dimension specificities' } },
+      { type: 'p', text: {
+        fr: 'La dimension I (Propriété Intellectuelle) du protocole de certification AEGRYN prend une importance particulière dans le vertical LegalTech. Les points de vigilance spécifiques sont : (1) les contrats de prestation de services juridiques signés avec des cabinets incluent souvent des clauses de cession de droits ambiguës sur les données produites — ces clauses doivent être auditées précisément ; (2) les bases de données jurisprudentielles utilisées pour entraîner les modèles IA doivent être licenciées ou issues de sources open data vérifiées ; (3) la marque doit être déposée dans toutes les classes pertinentes (classe 42 pour les logiciels, classe 45 pour les services juridiques). Moins de 30% des actifs LegalTech soumis passent la certification AEGRYN au premier passage.',
+        en: 'The I (Intellectual Property) dimension of the AEGRYN certification protocol takes on particular importance in the LegalTech vertical. Specific points of vigilance are: (1) legal services contracts signed with law firms often include ambiguous rights assignment clauses on produced data — these clauses must be precisely audited; (2) case law databases used to train AI models must be licensed or derived from verified open data sources; (3) the brand must be registered in all relevant classes (class 42 for software, class 45 for legal services). Fewer than 30% of LegalTech assets submitted pass AEGRYN certification on the first attempt.',
+      }},
+    ],
+    faq: [
+      {
+        q: { fr: 'Quel est le multiple de valorisation moyen pour une LegalTech en Europe ?', en: 'What is the average valuation multiple for a LegalTech in Europe?' },
+        a: { fr: 'En 2026, les multiples observés varient de 8x à 13x l\'ARR annuel selon la géographie et la qualité de l\'actif. Le DACH affiche les multiples les plus élevés (9x–13x), suivi de la France (8x–11x). Ces multiples supposent un NRR > 105% et des marges brutes > 70%.', en: 'In 2026, observed multiples range from 8x to 13x annual ARR depending on geography and asset quality. DACH shows the highest multiples (9x–13x), followed by France (8x–11x). These multiples assume NRR > 105% and gross margins > 70%.' },
+      },
+      {
+        q: { fr: 'Quels acquéreurs achètent des actifs LegalTech en Europe ?', en: 'Which acquirers buy LegalTech assets in Europe?' },
+        a: { fr: 'Trois profils principaux : les éditeurs de logiciels métier qui cherchent à enrichir leur suite (Thomson Reuters, iManage, Clio), les fonds PE sectoriels spécialisés en vertical software (Hg Capital, Francisco Partners), et les cabinets d\'avocats en transformation digitale (acqui-hire). Les fonds PE représentent environ 60% des deals LegalTech en valeur.', en: 'Three main profiles: business software publishers looking to enrich their suite (Thomson Reuters, iManage, Clio), sector-specific PE funds specialising in vertical software (Hg Capital, Francisco Partners), and law firms undergoing digital transformation (acqui-hire). PE funds account for approximately 60% of LegalTech deals by value.' },
+      },
+      {
+        q: { fr: 'Quelles sont les métriques les plus importantes pour valoriser une LegalTech ?', en: 'What are the most important metrics for valuing a LegalTech?' },
+        a: { fr: 'Par ordre d\'importance : NRR (> 105% pour un multiple premium), marges brutes (> 70%), ARR audité, taux de renouvellement des contrats (> 90%), et conformité RGPD documentée. La propriété intellectuelle sur les modèles IA est un facteur différenciant croissant.', en: 'In order of importance: NRR (> 105% for a premium multiple), gross margins (> 70%), audited ARR, contract renewal rate (> 90%), and documented GDPR compliance. IP ownership on AI models is an increasingly differentiating factor.' },
+      },
+      {
+        q: { fr: 'Pourquoi si peu d\'actifs LegalTech passent la certification AEGRYN ?', en: 'Why do so few LegalTech assets pass AEGRYN certification?' },
+        a: { fr: 'Moins de 30% des actifs LegalTech soumis passent au premier passage. Les trois causes principales de refus : (1) IP insuffisamment documentée (contrats prestataires incomplets, marque non déposée), (2) revenus hybrides SaaS + services mal séparés dans la comptabilité (ARR non auditable), (3) absence de pentest ou de documentation RGPD sur le traitement des données juridiques clients.', en: 'Fewer than 30% of LegalTech assets submitted pass on the first attempt. The three main causes of rejection: (1) insufficiently documented IP (incomplete contractor contracts, unfiled trademark), (2) hybrid SaaS + services revenues poorly separated in accounting (non-auditable ARR), (3) absence of pentest or GDPR documentation on the processing of client legal data.' },
+      },
+      {
+        q: { fr: 'La Suisse est-elle un bon pays pour céder une LegalTech ?', en: 'Is Switzerland a good country for selling a LegalTech?' },
+        a: { fr: 'Oui — la Suisse est particulièrement adaptée pour trois raisons : (1) concentration de family offices et fonds PE actifs sur le vertical legal software, (2) cadre juridique favorable (droit suisse des obligations, confidentialité institutionnelle), (3) neutralité qui facilite les transactions cross-border entre acquéreurs européens. AEGRYN opère depuis Genève/Zurich et dispose d\'un deal flow qualifié sur ce segment.', en: 'Yes — Switzerland is particularly well-suited for three reasons: (1) concentration of family offices and PE funds active on the legal software vertical, (2) favourable legal framework (Swiss law of obligations, institutional confidentiality), (3) neutrality that facilitates cross-border transactions between European acquirers. AEGRYN operates from Geneva/Zurich and has qualified deal flow in this segment.' },
+      },
+    ],
+  },
 ]
 
 export const ARTICLE_CATEGORIES: Record<ArticleCategory, { fr: string; en: string }> = {
@@ -451,4 +548,8 @@ export const ARTICLE_CATEGORIES: Record<ArticleCategory, { fr: string; en: strin
   buyer:         { fr: 'Guide acquéreur',  en: 'Buyer guide'     },
   certification: { fr: 'Certification',   en: 'Certification'   },
   strategy:      { fr: 'Stratégie',        en: 'Strategy'        },
+  case_study:    { fr: 'Étude de cas',     en: 'Case Study'      },
+  legal:         { fr: 'Legal & Fiscal',   en: 'Legal & Tax'     },
+  vertical:      { fr: 'Verticaux',        en: 'Verticals'       },
+  dach:          { fr: 'Marché DACH',      en: 'DACH Market'     },
 }

@@ -1596,6 +1596,10 @@
     "filterBuyer": "Guía comprador",
     "filterCertification": "Certificación",
     "filterStrategy": "Estrategia",
+    "filterCaseStudy": "Caso práctico",
+    "filterLegal": "Legal & Fiscal",
+    "filterVertical": "Verticales",
+    "filterDACH": "Mercado DACH",
     "readMin": "min de lectura",
     "readMore": "Leer artículo",
     "backToDiscover": "← Volver a Discover",
@@ -2084,7 +2088,8 @@
     "article2Cat": "Guía para vendedores",
     "article3Title": "Cómo evalúan los compradores PE un SaaS en 2026",
     "article3Cat": "Guía para adquirentes",
-    "cta": "Ver todos los insights"
+    "cta": "Ver todos los insights",
+    "readMore": "Leer el artículo"
   },
   "pillars": {
     "build": {

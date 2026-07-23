@@ -961,6 +961,10 @@
     "filterBuyer": "Buyer guide",
     "filterCertification": "Certification",
     "filterStrategy": "Strategy",
+    "filterCaseStudy": "Case Study",
+    "filterLegal": "Legal & Tax",
+    "filterVertical": "Verticals",
+    "filterDACH": "DACH Market",
     "readMin": "min read",
     "readMore": "Read article",
     "backToDiscover": "← Back to Discover",
@@ -2141,7 +2145,8 @@
     "article2Cat": "Seller guide",
     "article3Title": "How PE buyers evaluate a SaaS in 2026",
     "article3Cat": "Buyer guide",
-    "cta": "View all insights"
+    "cta": "View all insights",
+    "readMore": "Read article"
   },
   "alliances": {
     "meta": {

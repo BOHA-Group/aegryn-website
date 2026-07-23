@@ -43,6 +43,11 @@
   ],
   "redirects": [
     {
+      "source": "/:locale/blog/glossaire",
+      "destination": "/:locale/glossaire",
+      "permanent": true
+    },
+    {
       "source": "/:locale/discover/:slug",
       "destination": "/:locale/blog/:slug",
       "permanent": true

@@ -1596,6 +1596,10 @@
     "filterBuyer": "Guida acquirente",
     "filterCertification": "Certificazione",
     "filterStrategy": "Strategia",
+    "filterCaseStudy": "Caso studio",
+    "filterLegal": "Legale & Fiscale",
+    "filterVertical": "Verticali",
+    "filterDACH": "Mercato DACH",
     "readMin": "min di lettura",
     "readMore": "Leggi articolo",
     "backToDiscover": "← Torna a Discover",
@@ -2084,7 +2088,8 @@
     "article2Cat": "Guida per venditori",
     "article3Title": "Come gli acquirenti PE valutano un SaaS nel 2026",
     "article3Cat": "Guida per acquirenti",
-    "cta": "Visualizza tutti gli insights"
+    "cta": "Visualizza tutti gli insights",
+    "readMore": "Leggi l'articolo"
   },
   "pillars": {
     "build": {

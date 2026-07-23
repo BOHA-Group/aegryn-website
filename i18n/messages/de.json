@@ -1596,6 +1596,10 @@
     "filterBuyer": "Käuferführer",
     "filterCertification": "Zertifizierung",
     "filterStrategy": "Strategie",
+    "filterCaseStudy": "Fallstudie",
+    "filterLegal": "Recht & Steuer",
+    "filterVertical": "Branchen",
+    "filterDACH": "DACH-Markt",
     "readMin": "Min. Lesezeit",
     "readMore": "Artikel lesen",
     "backToDiscover": "← Zurück zu Discover",
@@ -2084,7 +2088,8 @@
     "article2Cat": "Verkäufer-Guide",
     "article3Title": "Wie PE-Käufer ein SaaS im Jahr 2026 bewerten",
     "article3Cat": "Käufer-Guide",
-    "cta": "Alle Insights ansehen"
+    "cta": "Alle Insights ansehen",
+    "readMore": "Artikel lesen"
   },
   "pillars": {
     "build": {
