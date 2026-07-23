@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, ArrowUpRight } from 'lucide-react'
-import { ARTICLES, ARTICLE_CATEGORIES, type ContentBlock } from '@/data/articles'
+import { ARTICLES, ARTICLE_CATEGORIES, getLocaleText, type ContentBlock } from '@/data/articles'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -62,16 +62,15 @@ export default async function ArticlePage({ params }: Props) {
   const article = ARTICLES.find(a => a.slug === slug)
   if (!article) notFound()
 
-  const lang     = (locale === 'fr') ? 'fr' : 'en'
   const t        = await getTranslations({ locale, namespace: 'discover' })
-  const catLabel = ARTICLE_CATEGORIES[article.category][lang]
+  const catLabel = getLocaleText(ARTICLE_CATEGORIES[article.category], locale)
   const dateStr  = new Date(article.date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
 
   const articleLd = {
     '@context':         'https://schema.org',
     '@type':            'Article',
-    headline:           article!.title[lang],
-    description:        article!.excerpt[lang],
+    headline:           getLocaleText(article!.title, locale),
+    description:        getLocaleText(article!.excerpt, locale),
     datePublished:      new Date(article!.date).toISOString(),
     dateModified:       new Date(article!.date).toISOString(),
     author:             { '@type': 'Organization', name: 'AEGRYN', url: BASE },
@@ -86,8 +85,8 @@ export default async function ArticlePage({ params }: Props) {
     '@type':     'FAQPage',
     mainEntity:  article!.faq.map(item => ({
       '@type':         'Question',
-      name:            item.q[lang],
-      acceptedAnswer:  { '@type': 'Answer', text: item.a[lang] },
+      name:            getLocaleText(item.q, locale),
+      acceptedAnswer:  { '@type': 'Answer', text: getLocaleText(item.a, locale) },
     })),
   } : null
 
@@ -111,10 +110,10 @@ export default async function ArticlePage({ params }: Props) {
             className="font-sans font-bold text-white leading-[1.08] tracking-[-0.03em] mb-6"
             style={{ fontSize: 'clamp(28px,4vw,56px)' }}
           >
-            {article.title[lang]}
+            {getLocaleText(article.title, locale)}
           </h1>
           <p className="font-sans text-[15px] text-white/55 leading-relaxed mb-8">
-            {article.excerpt[lang]}
+            {getLocaleText(article.excerpt, locale)}
           </p>
           <div className="flex items-center gap-6 text-white/30">
             <span className="flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em]">
@@ -135,17 +134,17 @@ export default async function ArticlePage({ params }: Props) {
               {article.body.map((block: ContentBlock, i: number) => {
                 if (block.type === 'p') return (
                   <p key={i} className="font-sans text-[16px] text-ag-gray leading-[1.85]">
-                    {block.text[lang]}
+                    {getLocaleText(block.text, locale)}
                   </p>
                 )
                 if (block.type === 'h2') return (
                   <h2 key={i} className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] leading-snug pt-6 border-t border-ag-border">
-                    {block.text[lang]}
+                    {getLocaleText(block.text, locale)}
                   </h2>
                 )
                 if (block.type === 'h3') return (
                   <h3 key={i} className="font-sans font-semibold text-ag-black text-[17px] tracking-[-0.01em] leading-snug">
-                    {block.text[lang]}
+                    {getLocaleText(block.text, locale)}
                   </h3>
                 )
                 if (block.type === 'list') return (
@@ -153,7 +152,7 @@ export default async function ArticlePage({ params }: Props) {
                     {block.items.map((item, j) => (
                       <li key={j} className="flex items-start gap-3 font-sans text-[15px] text-ag-gray leading-relaxed">
                         <span className="shrink-0 mt-1.5 w-1.5 h-1.5 bg-ag-apex rounded-full" />
-                        {item[lang]}
+                        {getLocaleText(item, locale)}
                       </li>
                     ))}
                   </ul>
@@ -161,7 +160,7 @@ export default async function ArticlePage({ params }: Props) {
                 if (block.type === 'quote') return (
                   <blockquote key={i} className="border-l-2 border-ag-apex pl-6 my-8">
                     <p className="font-sans italic text-[17px] text-ag-black leading-[1.7] mb-3">
-                      &ldquo;{block.text[lang]}&rdquo;
+                      &ldquo;{getLocaleText(block.text, locale)}&rdquo;
                     </p>
                     {block.author && (
                       <cite className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light not-italic">
@@ -179,7 +178,7 @@ export default async function ArticlePage({ params }: Props) {
                           {stat.value}
                         </p>
                         <p className="font-sans text-[11px] text-ag-gray leading-snug">
-                          {stat.label[lang]}
+                          {getLocaleText(stat.label, locale)}
                         </p>
                       </div>
                     ))}
