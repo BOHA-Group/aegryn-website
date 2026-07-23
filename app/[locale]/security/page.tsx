@@ -2,13 +2,14 @@ import { getTranslations }    from 'next-intl/server'
 import type { Metadata }        from 'next'
 import Link                     from 'next/link'
 import { ShieldCheck, AlertTriangle, CheckCircle2, XCircle } from 'lucide-react'
+import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'security.meta' })
-  return { title: t('title'), description: t('desc') }
+  return generateAegrynMetadata({ title: t('title'), description: t('desc'), path: '/security', locale })
 }
 
 export default async function SecurityPage({ params }: Props) {

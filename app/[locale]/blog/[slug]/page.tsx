@@ -29,12 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical,
       languages: {
-        fr: `${BASE}/fr/blog/${slug}`,
-        en: `${BASE}/en/blog/${slug}`,
-        de: `${BASE}/de/blog/${slug}`,
-        es: `${BASE}/es/blog/${slug}`,
-        it: `${BASE}/it/blog/${slug}`,
-        nl: `${BASE}/nl/blog/${slug}`,
+        fr:          `${BASE}/fr/blog/${slug}`,
+        en:          `${BASE}/en/blog/${slug}`,
+        de:          `${BASE}/de/blog/${slug}`,
+        es:          `${BASE}/es/blog/${slug}`,
+        it:          `${BASE}/it/blog/${slug}`,
+        nl:          `${BASE}/nl/blog/${slug}`,
+        'x-default': `${BASE}/en/blog/${slug}`,
       },
     },
     openGraph: {

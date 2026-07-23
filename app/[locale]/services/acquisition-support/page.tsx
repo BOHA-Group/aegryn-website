@@ -3,13 +3,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowUpRight, Check, Shield, Lock } from 'lucide-react'
 import { serviceJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
+import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'acquisition.meta' })
-  return { title: t('title'), description: t('desc') }
+  return generateAegrynMetadata({ title: t('title'), description: t('desc'), path: '/services/acquisition-support', locale })
 }
 
 export default async function AcquisitionSupportPage({ params }: Props) {

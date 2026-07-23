@@ -43,6 +43,36 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "destination": "/en",
+      "permanent": false
+    },
+    {
+      "source": "/privacy",
+      "destination": "/en/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/terms/use",
+      "destination": "/en/terms/use",
+      "permanent": true
+    },
+    {
+      "source": "/terms/cgv",
+      "destination": "/en/terms/cgv",
+      "permanent": true
+    },
+    {
+      "source": "/security",
+      "destination": "/en/security",
+      "permanent": true
+    },
+    {
+      "source": "/help/faq",
+      "destination": "/en/help/faq",
+      "permanent": true
+    },
+    {
       "source": "/:locale/blog/glossaire",
       "destination": "/:locale/glossaire",
       "permanent": true

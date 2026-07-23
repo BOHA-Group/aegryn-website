@@ -7,13 +7,14 @@ import { GradeCards } from '@/components/sections/grade/GradeCards'
 import { GradeDimensions } from '@/components/sections/grade/GradeDimensions'
 import { GradeProcess } from '@/components/sections/grade/GradeProcess'
 import { serviceJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
+import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'grade.meta' })
-  return { title: t('title'), description: t('desc') }
+  return generateAegrynMetadata({ title: t('title'), description: t('desc'), path: '/grade', locale })
 }
 
 export default async function GradePage({ params }: Props) {

@@ -4,13 +4,14 @@ import Link                          from 'next/link'
 import { ArrowUpRight, Info }        from 'lucide-react'
 import { AssetHeroBannerVideo }      from '@/components/sections/AssetHeroBannerVideo'
 import { AssetsGrid }                from '@/components/sections/assets/AssetsGrid'
+import { generateAegrynMetadata }    from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'assets.page.meta' })
-  return { title: t('title'), description: t('desc') }
+  return generateAegrynMetadata({ title: t('title'), description: t('desc'), path: '/assets', locale })
 }
 
 export default async function AssetsPage({ params }: Props) {

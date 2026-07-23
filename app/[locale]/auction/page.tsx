@@ -6,16 +6,14 @@ import { AuctionHero } from '@/components/sections/auction/AuctionHero'
 import { AuctionStats } from '@/components/sections/auction/AuctionStats'
 import { AuctionSteps } from '@/components/sections/auction/AuctionSteps'
 import { serviceJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
+import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'auction.meta' })
-  return {
-    title: t('title'),
-    description: t('desc'),
-  }
+  return generateAegrynMetadata({ title: t('title'), description: t('desc'), path: '/auction', locale })
 }
 
 export default async function AuctionPage({ params }: Props) {

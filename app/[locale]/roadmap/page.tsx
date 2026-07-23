@@ -7,13 +7,14 @@ import {
   Landmark, Users, FileSearch, Handshake,
 } from 'lucide-react'
 import { breadcrumbJsonLd } from '@/lib/jsonld'
+import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'roadmapPage.meta' })
-  return { title: t('title'), description: t('desc') }
+  return generateAegrynMetadata({ title: t('title'), description: t('desc'), path: '/roadmap', locale })
 }
 
 const FEATURE_ICONS = [

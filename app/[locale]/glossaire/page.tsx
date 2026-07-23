@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata }   from 'next'
 import Link                from 'next/link'
+import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -82,31 +83,12 @@ const TERMS: { letter: string; terms: { id: string; name: string; def: { fr: str
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const isEn = locale !== 'fr'
-  const title       = isEn ? 'Tech M&A Glossary — 30 essential terms | AEGRYN' : 'Glossaire M&A tech — 30 termes essentiels | AEGRYN'
-  const description = isEn
-    ? 'Definitions of the 30 essential terms in European tech M&A: ARR, NRR, earnout, due diligence, AEGRYN Grade, share deal and more.'
-    : 'Définitions des 30 termes essentiels du M&A tech européen : ARR, NRR, earnout, due diligence, Grade AEGRYN, share deal et plus.'
-  const canonical = `${BASE}/${locale}/glossaire`
-  return {
-    title,
-    description,
-    alternates: {
-      canonical,
-      languages: {
-        fr: `${BASE}/fr/glossaire`,
-        en: `${BASE}/en/glossaire`,
-        de: `${BASE}/de/glossaire`,
-        es: `${BASE}/es/glossaire`,
-        it: `${BASE}/it/glossaire`,
-        nl: `${BASE}/nl/glossaire`,
-      },
-    },
-    openGraph: {
-      title, description, url: canonical, siteName: 'AEGRYN', type: 'website',
-      images: [{ url: `${BASE}/og/blog-default.png`, width: 1200, height: 630, alt: title }],
-    },
-  }
+  const isFr = locale === 'fr'
+  const title       = isFr ? 'Glossaire M&A tech — 30 termes essentiels | AEGRYN' : 'Tech M&A Glossary — 30 essential terms | AEGRYN'
+  const description = isFr
+    ? 'Définitions des 30 termes essentiels du M&A tech européen : ARR, NRR, earnout, due diligence, Grade AEGRYN, share deal et plus.'
+    : 'Definitions of the 30 essential terms in European tech M&A: ARR, NRR, earnout, due diligence, AEGRYN Grade, share deal and more.'
+  return generateAegrynMetadata({ title, description, path: '/glossaire', locale })
 }
 
 export default async function GlossairePage({ params }: Props) {
