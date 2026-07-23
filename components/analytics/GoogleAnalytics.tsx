@@ -1,33 +1,22 @@
-'use client'
-
 import Script from 'next/script'
-import { useCookieConsent } from '@/hooks/useCookieConsent'
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID
 
 export default function GoogleAnalytics() {
-  const { status } = useCookieConsent()
-
-  if (!GA_ID || status !== 'accepted') return null
+  if (!GTM_ID) return null
 
   return (
     <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="gtag-init" strategy="afterInteractive">
+      <Script id="gtm-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('consent', 'default', {
-            analytics_storage: 'granted',
-            ad_storage: 'denied',
-          });
-          gtag('config', '${GA_ID}', { anonymize_ip: true });
+          window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
         `}
       </Script>
+      <Script
+        src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
+        strategy="afterInteractive"
+      />
     </>
   )
 }
