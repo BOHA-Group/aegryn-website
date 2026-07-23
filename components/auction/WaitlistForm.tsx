@@ -1,107 +1,15 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { ArrowUpRight, CheckCircle2, ChevronRight, ChevronLeft } from 'lucide-react'
 
 type ProfileType = 'buyer' | 'seller' | 'partner' | 'undecided'
 type Step = 'profile' | 'qualify' | 'contact' | 'done'
 
 interface WaitlistFormProps {
-  locale: string  // reserved for i18n translations
+  locale: string
 }
-
-/* ── Options ────────────────────────────────────────────────────────── */
-
-const BUYER_CATEGORIES = [
-  { value: 'individual_hnw',     label: 'Particulier fortuné (HNW)' },
-  { value: 'family_office',      label: 'Family office' },
-  { value: 'search_fund',        label: 'Search fund / ETA' },
-  { value: 'pe_vc_fund',         label: 'Fonds PE / VC' },
-  { value: 'corporate_strategic', label: 'Acquéreur corporatif / stratégique' },
-  { value: 'holding',            label: 'Holding patrimoniale' },
-]
-
-const TICKET_RANGES = [
-  { value: '<500k',   label: '< 500K€' },
-  { value: '500k-2m', label: '500K€ – 2M€' },
-  { value: '2m-5m',   label: '2M€ – 5M€' },
-  { value: '5m-20m',  label: '5M€ – 20M€' },
-  { value: '20m+',    label: '> 20M€' },
-]
-
-const TIMELINES_BUYER = [
-  { value: 'immediate',    label: 'Immédiat (< 3 mois)' },
-  { value: '3-6m',         label: '3 – 6 mois' },
-  { value: '6-12m',        label: '6 – 12 mois' },
-  { value: 'opportunistic', label: 'Opportuniste / sans échéance' },
-]
-
-const ACQUISITION_INTENTS = [
-  { value: 'single_asset',     label: 'Acquisition unique ciblée' },
-  { value: 'portfolio_buildup', label: 'Constitution de portefeuille' },
-  { value: 'exploratory',      label: 'Exploration de marché' },
-]
-
-const SECTORS = [
-  'SaaS B2B', 'IA / ML', 'LegalTech', 'FinTech', 'EdTech', 'HealthTech',
-  'E-commerce', 'Marketplaces', 'Cybersécurité', 'PropTech', 'Logistique', 'Autre',
-]
-
-const SELLER_STAGES = [
-  { value: 'idea',               label: 'Idée / pré-lancement' },
-  { value: 'mvp',                label: 'MVP / beta' },
-  { value: 'revenue_generating', label: 'Génère des revenus' },
-  { value: 'scaling',            label: 'En croissance' },
-  { value: 'mature',             label: 'Mature / établi' },
-]
-
-const SELLER_ARR = [
-  { value: '<100k',     label: '< 100K€' },
-  { value: '100k-500k', label: '100K€ – 500K€' },
-  { value: '500k-2m',   label: '500K€ – 2M€' },
-  { value: '2m-10m',    label: '2M€ – 10M€' },
-  { value: '10m+',      label: '> 10M€' },
-]
-
-const SELLER_REASONS = [
-  { value: 'full_exit',       label: 'Cession totale' },
-  { value: 'partial',         label: 'Cession partielle / levée' },
-  { value: 'succession',      label: 'Transmission / succession' },
-  { value: 'burnout',         label: 'Fatigue / burnout fondateur' },
-  { value: 'strategic_pivot', label: 'Pivot stratégique' },
-]
-
-const SELLER_TIMELINES = [
-  { value: 'immediate', label: 'Immédiat (< 3 mois)' },
-  { value: '3-6m',      label: '3 – 6 mois' },
-  { value: '6-12m',     label: '6 – 12 mois' },
-  { value: 'flexible',  label: 'Flexible / selon offre' },
-]
-
-const PARTNER_CATEGORIES = [
-  { value: 'law_firm',     label: 'Cabinet d\'avocats' },
-  { value: 'accounting',   label: 'Cabinet d\'expertise comptable' },
-  { value: 'ma_boutique',  label: 'Boutique M&A / conseil' },
-  { value: 'vc_pe',        label: 'VC / PE' },
-  { value: 'accelerator',  label: 'Accélérateur / incubateur' },
-  { value: 'other',        label: 'Autre' },
-]
-
-const PARTNER_DEAL_FLOWS = [
-  { value: '<5_per_year',      label: '< 5 introductions / an' },
-  { value: '5-10_per_year',    label: '5 – 10 / an' },
-  { value: '10-20_per_year',   label: '10 – 20 / an' },
-  { value: '20+_per_year',     label: '> 20 / an' },
-]
-
-const SOURCES = [
-  { value: 'linkedin',       label: 'LinkedIn' },
-  { value: 'organic',        label: 'Recherche / bouche-à-oreille' },
-  { value: 'referral',       label: 'Recommandation' },
-  { value: 'event',          label: 'Événement / conférence' },
-  { value: 'partner_intro',  label: 'Introduction partenaire' },
-  { value: 'direct',         label: 'Contact direct AEGRYN' },
-]
 
 /* ── Helpers UI ─────────────────────────────────────────────────────── */
 
@@ -133,9 +41,17 @@ function Label({ children }: { children: React.ReactNode }) {
   )
 }
 
+/* ── Helper: build options from i18n record ─────────────────────────── */
+
+function objToOptions(record: Record<string, string>): { value: string; label: string }[] {
+  return Object.entries(record).map(([value, label]) => ({ value, label }))
+}
+
 /* ── Composant principal ────────────────────────────────────────────── */
 
 export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
+  const t = useTranslations('waitlist')
+
   const [step, setStep]               = useState<Step>('profile')
   const [loading, setLoading]         = useState(false)
   const [error, setError]             = useState('')
@@ -164,8 +80,24 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
   const [sellerTimeline, setSellerTimeline] = useState('')
 
   /* Partner */
-  const [partnerCategory, setPartnerCategory]       = useState('')
-  const [partnerDealFlow, setPartnerDealFlow]       = useState('')
+  const [partnerCategory, setPartnerCategory] = useState('')
+  const [partnerDealFlow, setPartnerDealFlow] = useState('')
+
+  /* ── i18n options ── */
+  const placeholder = t('placeholder')
+
+  const BUYER_CATEGORIES  = objToOptions(t.raw('step2.buyer.categories') as Record<string,string>)
+  const TICKET_RANGES     = objToOptions(t.raw('step2.buyer.tickets')    as Record<string,string>)
+  const TIMELINES_BUYER   = objToOptions(t.raw('step2.buyer.timelines')  as Record<string,string>)
+  const ACQUISITION_INTENTS = objToOptions(t.raw('step2.buyer.intents')  as Record<string,string>)
+  const SECTORS           = t.raw('sectors') as string[]
+  const SELLER_STAGES     = objToOptions(t.raw('step2.seller.stages')    as Record<string,string>)
+  const SELLER_ARR        = objToOptions(t.raw('step2.seller.arrRanges') as Record<string,string>)
+  const SELLER_REASONS    = objToOptions(t.raw('step2.seller.reasons')   as Record<string,string>)
+  const SELLER_TIMELINES  = objToOptions(t.raw('step2.seller.timelines') as Record<string,string>)
+  const PARTNER_CATEGORIES = objToOptions(t.raw('step2.partner.categories') as Record<string,string>)
+  const PARTNER_DEAL_FLOWS = objToOptions(t.raw('step2.partner.dealflows')  as Record<string,string>)
+  const SOURCES            = objToOptions(t.raw('sources')                   as Record<string,string>)
 
   function toggleSector(s: string) {
     setSectors(prev =>
@@ -223,10 +155,10 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
         setStep('done')
       } else {
         const data = await res.json()
-        setError(data?.error ?? 'Une erreur est survenue.')
+        setError(data?.error ?? t('errors.server'))
       }
     } catch {
-      setError('Erreur réseau. Veuillez réessayer.')
+      setError(t('errors.network'))
     } finally {
       setLoading(false)
     }
@@ -239,14 +171,13 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
       <div className="bg-ag-off-white border border-ag-border p-10 flex flex-col items-center gap-5 text-center">
         <CheckCircle2 size={36} className="text-ag-apex" />
         <div>
-          <p className="font-sans font-bold text-ag-black text-[18px] mb-2">Demande enregistrée</p>
+          <p className="font-sans font-bold text-ag-black text-[18px] mb-2">{t('done.title')}</p>
           <p className="font-sans text-[13px] text-ag-gray leading-relaxed max-w-md">
-            Notre équipe examinera votre profil et vous contactera sous 48h pour valider votre accès
-            à la prochaine session AEGRYN Auction.
+            {t('done.desc')}
           </p>
         </div>
         <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ag-gray-light">
-          Aucun accès sans invitation nominative.
+          {t('done.note')}
         </p>
       </div>
     )
@@ -258,10 +189,10 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
       <div className="bg-ag-navy px-8 py-6 flex items-start justify-between gap-4">
         <div>
           <p className="font-mono text-[9px] uppercase tracking-[0.24em] text-ag-apex mb-1.5">
-            Waiting list — Sessions Auction
+            {t('header.label')}
           </p>
           <p className="font-sans font-bold text-white text-[16px] leading-snug">
-            Rejoindre la liste d&apos;accès prioritaire
+            {t('header.title')}
           </p>
         </div>
         {/* Progress dots */}
@@ -284,14 +215,9 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
         {step === 'profile' && (
           <>
             <div>
-              <Label>Je suis *</Label>
+              <Label>{t('step1.profileLabel')}</Label>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                {([
-                  { v: 'buyer',    l: 'Acquéreur' },
-                  { v: 'seller',   l: 'Cédant' },
-                  { v: 'partner',  l: 'Partenaire' },
-                  { v: 'undecided', l: 'Non défini' },
-                ] as const).map(({ v, l }) => (
+                {(['buyer', 'seller', 'partner', 'undecided'] as const).map(v => (
                   <button
                     key={v}
                     type="button"
@@ -302,20 +228,20 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
                         : 'border-ag-border text-ag-gray hover:border-ag-black hover:text-ag-black'
                     }`}
                   >
-                    {l}
+                    {t(`step1.profiles.${v}`)}
                   </button>
                 ))}
               </div>
             </div>
 
             <div>
-              <Label>Comment avez-vous entendu parler d&apos;AEGRYN ?</Label>
+              <Label>{t('step1.sourceLabel')}</Label>
               <Select
                 name="source"
                 options={SOURCES}
                 value={source}
                 onChange={setSource}
-                placeholder="— Sélectionner —"
+                placeholder={placeholder}
               />
             </div>
 
@@ -325,7 +251,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
               onClick={() => setStep('qualify')}
               className="self-end inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-40"
             >
-              Suivant <ChevronRight size={13} />
+              {t('step1.next')} <ChevronRight size={13} />
             </button>
           </>
         )}
@@ -338,26 +264,26 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
               <div className="flex flex-col gap-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <Label>Profil acquéreur *</Label>
-                    <Select name="buyerCategory" options={BUYER_CATEGORIES} value={buyerCategory} onChange={setBuyerCategory} placeholder="— Sélectionner —" />
+                    <Label>{t('step2.buyer.categoryLabel')}</Label>
+                    <Select name="buyerCategory" options={BUYER_CATEGORIES} value={buyerCategory} onChange={setBuyerCategory} placeholder={placeholder} />
                   </div>
                   <div>
-                    <Label>Ticket d&apos;acquisition cible *</Label>
-                    <Select name="ticketRange" options={TICKET_RANGES} value={ticketRange} onChange={setTicketRange} placeholder="— Sélectionner —" />
+                    <Label>{t('step2.buyer.ticketLabel')}</Label>
+                    <Select name="ticketRange" options={TICKET_RANGES} value={ticketRange} onChange={setTicketRange} placeholder={placeholder} />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <Label>Horizon de déploiement *</Label>
-                    <Select name="timelineToDeploy" options={TIMELINES_BUYER} value={timelineToDeploy} onChange={setTimelineToDeploy} placeholder="— Sélectionner —" />
+                    <Label>{t('step2.buyer.timelineLabel')}</Label>
+                    <Select name="timelineToDeploy" options={TIMELINES_BUYER} value={timelineToDeploy} onChange={setTimelineToDeploy} placeholder={placeholder} />
                   </div>
                   <div>
-                    <Label>Nature de l&apos;acquisition</Label>
-                    <Select name="acquisitionIntent" options={ACQUISITION_INTENTS} value={acquisitionIntent} onChange={setAcquisitionIntent} placeholder="— Sélectionner —" />
+                    <Label>{t('step2.buyer.intentLabel')}</Label>
+                    <Select name="acquisitionIntent" options={ACQUISITION_INTENTS} value={acquisitionIntent} onChange={setAcquisitionIntent} placeholder={placeholder} />
                   </div>
                 </div>
                 <div>
-                  <Label>Secteurs d&apos;intérêt (5 max)</Label>
+                  <Label>{t('step2.buyer.sectorsLabel')}</Label>
                   <div className="flex flex-wrap gap-1.5 mt-1">
                     {SECTORS.map(s => (
                       <button
@@ -376,9 +302,9 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
                   </div>
                 </div>
                 <div>
-                  <Label>Financement sécurisé ?</Label>
+                  <Label>{t('step2.buyer.financingLabel')}</Label>
                   <div className="flex gap-3">
-                    {[{ v: true, l: 'Oui' }, { v: false, l: 'Non / en cours' }].map(({ v, l }) => (
+                    {([true, false] as const).map(v => (
                       <button
                         key={String(v)}
                         type="button"
@@ -387,7 +313,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
                           hasFinancing === v ? 'border-ag-black bg-ag-black text-white' : 'border-ag-border text-ag-gray hover:border-ag-black'
                         }`}
                       >
-                        {l}
+                        {v ? t('step2.buyer.yes') : t('step2.buyer.noInProgress')}
                       </button>
                     ))}
                   </div>
@@ -400,22 +326,22 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
               <div className="flex flex-col gap-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <Label>Stade de l&apos;actif *</Label>
-                    <Select name="sellerStage" options={SELLER_STAGES} value={sellerStage} onChange={setSellerStage} placeholder="— Sélectionner —" />
+                    <Label>{t('step2.seller.stageLabel')}</Label>
+                    <Select name="sellerStage" options={SELLER_STAGES} value={sellerStage} onChange={setSellerStage} placeholder={placeholder} />
                   </div>
                   <div>
-                    <Label>ARR annuel estimé *</Label>
-                    <Select name="sellerArr" options={SELLER_ARR} value={sellerArr} onChange={setSellerArr} placeholder="— Sélectionner —" />
+                    <Label>{t('step2.seller.arrLabel')}</Label>
+                    <Select name="sellerArr" options={SELLER_ARR} value={sellerArr} onChange={setSellerArr} placeholder={placeholder} />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <Label>Raison de cession *</Label>
-                    <Select name="sellerReason" options={SELLER_REASONS} value={sellerReason} onChange={setSellerReason} placeholder="— Sélectionner —" />
+                    <Label>{t('step2.seller.reasonLabel')}</Label>
+                    <Select name="sellerReason" options={SELLER_REASONS} value={sellerReason} onChange={setSellerReason} placeholder={placeholder} />
                   </div>
                   <div>
-                    <Label>Horizon souhaité</Label>
-                    <Select name="sellerTimeline" options={SELLER_TIMELINES} value={sellerTimeline} onChange={setSellerTimeline} placeholder="— Sélectionner —" />
+                    <Label>{t('step2.seller.timelineLabel')}</Label>
+                    <Select name="sellerTimeline" options={SELLER_TIMELINES} value={sellerTimeline} onChange={setSellerTimeline} placeholder={placeholder} />
                   </div>
                 </div>
               </div>
@@ -426,12 +352,12 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
               <div className="flex flex-col gap-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <Label>Type de structure *</Label>
-                    <Select name="partnerCategory" options={PARTNER_CATEGORIES} value={partnerCategory} onChange={setPartnerCategory} placeholder="— Sélectionner —" />
+                    <Label>{t('step2.partner.categoryLabel')}</Label>
+                    <Select name="partnerCategory" options={PARTNER_CATEGORIES} value={partnerCategory} onChange={setPartnerCategory} placeholder={placeholder} />
                   </div>
                   <div>
-                    <Label>Volume d&apos;introductions estimé</Label>
-                    <Select name="partnerDealFlow" options={PARTNER_DEAL_FLOWS} value={partnerDealFlow} onChange={setPartnerDealFlow} placeholder="— Sélectionner —" />
+                    <Label>{t('step2.partner.dealflowLabel')}</Label>
+                    <Select name="partnerDealFlow" options={PARTNER_DEAL_FLOWS} value={partnerDealFlow} onChange={setPartnerDealFlow} placeholder={placeholder} />
                   </div>
                 </div>
               </div>
@@ -440,7 +366,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
             {/* UNDECIDED */}
             {profileType === 'undecided' && (
               <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
-                Aucun problème — renseignez simplement vos coordonnées et notre équipe prendra contact avec vous.
+                {t('step2.undecidedNote')}
               </p>
             )}
 
@@ -450,14 +376,14 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
                 onClick={() => setStep('profile')}
                 className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-ag-gray-light hover:text-ag-black transition-colors"
               >
-                <ChevronLeft size={13} /> Retour
+                <ChevronLeft size={13} /> {t('step2.back')}
               </button>
               <button
                 type="button"
                 onClick={() => setStep('contact')}
                 className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3 hover:bg-ag-black transition-colors"
               >
-                Suivant <ChevronRight size={13} />
+                {t('step2.next')} <ChevronRight size={13} />
               </button>
             </div>
           </>
@@ -468,29 +394,29 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
           <>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <Label>Prénom</Label>
+                <Label>{t('step3.firstNameLabel')}</Label>
                 <input
                   value={firstName} onChange={e => setFirstName(e.target.value)}
                   className="w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black bg-white"
-                  placeholder="Jean"
+                  placeholder={t('step3.firstNamePlaceholder')}
                 />
               </div>
               <div>
-                <Label>Nom *</Label>
+                <Label>{t('step3.lastNameLabel')}</Label>
                 <input
                   value={lastName} onChange={e => setLastName(e.target.value)}
                   className="w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black bg-white"
-                  placeholder="Dupont"
+                  placeholder={t('step3.lastNamePlaceholder')}
                 />
               </div>
             </div>
             <div>
-              <Label>Email *</Label>
+              <Label>{t('step3.emailLabel')}</Label>
               <input
                 type="email"
                 value={email} onChange={e => setEmail(e.target.value)}
                 className="w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black bg-white"
-                placeholder="vous@exemple.com"
+                placeholder={t('step3.emailPlaceholder')}
               />
             </div>
 
@@ -503,8 +429,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
                   className="mt-0.5 accent-ag-black"
                 />
                 <span className="font-sans text-[12px] text-ag-gray leading-relaxed">
-                  J&apos;accepte que mes données soient traitées par AEGRYN dans le cadre de ma demande d&apos;accès
-                  aux sessions auction, conformément au RGPD / nLPD. *
+                  {t('step3.gdprConsent')}
                 </span>
               </label>
               <label className="flex items-start gap-3 cursor-pointer">
@@ -515,7 +440,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
                   className="mt-0.5 accent-ag-black"
                 />
                 <span className="font-sans text-[12px] text-ag-gray leading-relaxed">
-                  J&apos;accepte de recevoir les communications AEGRYN (nouvelles sessions, actifs disponibles).
+                  {t('step3.marketingConsent')}
                 </span>
               </label>
             </div>
@@ -532,7 +457,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
                 onClick={() => setStep('qualify')}
                 className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-ag-gray-light hover:text-ag-black transition-colors"
               >
-                <ChevronLeft size={13} /> Retour
+                <ChevronLeft size={13} /> {t('step3.back')}
               </button>
               <button
                 type="button"
@@ -540,7 +465,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
                 onClick={handleSubmit}
                 className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-40"
               >
-                {loading ? 'Envoi...' : 'Soumettre'} {!loading && <ArrowUpRight size={12} />}
+                {loading ? t('step3.submitting') : t('step3.submit')} {!loading && <ArrowUpRight size={12} />}
               </button>
             </div>
           </>

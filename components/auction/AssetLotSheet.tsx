@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import {
   ShieldCheck, TrendingUp, Globe2, Layers,
   Users, AlertTriangle, FileText,
@@ -229,6 +230,7 @@ function CollapsibleSection({ numeral, title, icon: _icon, defaultOpen = true, c
 }
 
 export default function AssetLotSheet({ asset }: { asset: AssetLot }) {
+  const t = useTranslations('auctionSheet')
   const {
     lotNumber, name, tagline, catalogContext,
     heroStats, grade,
@@ -279,10 +281,10 @@ export default function AssetLotSheet({ asset }: { asset: AssetLot }) {
 
         {/* Executive summary */}
         <div className="mb-14 pb-10 border-b" style={{ borderColor: T.line }}>
-          <Kicker>Résumé exécutif · Lecture en un coup d&rsquo;œil</Kicker>
+          <Kicker>{t('executiveSummaryKicker')}</Kicker>
           <h2 className="text-[24px] font-bold mb-4"
             style={{ fontFamily: 'Georgia, serif', color: T.ink }}>
-            Synthèse de l&rsquo;actif
+            {t('executiveSummaryTitle')}
           </h2>
           <Body>{executiveSummary.intro}</Body>
           <SummaryBox items={executiveSummary.items} />
@@ -365,7 +367,7 @@ export default function AssetLotSheet({ asset }: { asset: AssetLot }) {
 
         {/* Legal mentions */}
         <div className="mt-14 pt-8 border-t" style={{ borderColor: T.line }}>
-          <Kicker>Mentions et conditions de diffusion</Kicker>
+          <Kicker>{t('disclosureKicker')}</Kicker>
           {mentions.body.map((p, i) => (
             <p key={i} className="text-[12px] leading-[1.6] mb-3"
               style={{ color: T.grey600, fontFamily: 'Arial, sans-serif' }}>

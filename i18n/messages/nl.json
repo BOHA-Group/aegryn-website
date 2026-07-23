@@ -2380,97 +2380,149 @@
   },
   "bidModels": {
     "meta": {
-      "title": "AEGRYN Bid-modellen — Club Deal, Corporate, Fondsen",
-      "desc": "Drie bid-modellen voor de verwerving van een gecertificeerd AEGRYN tech-asset: individueel met co-investeerders, bedrijf of investeringsfonds."
+      "title": "Acquisitiemodellen — AEGRYN Auction",
+      "desc": "Club Deal, Corporate, Fonds, Equity Stake — de 4 AEGRYN-acquisitiemodellen met de Tech Transactiebelofte in 5 stappen."
     },
     "hero": {
-      "label": "AEGRYN AUCTION — BID-MODELLEN",
-      "title": "Drie manieren om een\ngecertificeerd asset te verwerven.",
-      "desc": "AEGRYN structureert drie bid-modellen voor elk kopersprofiel. Elk model bevat een escrow-mechanisme en een gecertificeerde Transactiebelofte."
+      "back": "← Auction",
+      "label": "AEGRYN AUCTION",
+      "title": "Kies uw acquisitiemodel",
+      "desc": "Vier kopersprofielen, één vereiste: dealskwaliteit. Elk model is afgestemd op uw structuur en doelstellingen."
     },
-    "model1": {
-      "label": "MODEL 01",
-      "title": "Club Deal\n(Individueel + co-investeerders)",
-      "badge": "HNWI · Ondernemers",
-      "desc": "Een hoofdbiedende partij kan tot 4 gedeclareerde co-investeerders associëren. Één bod, één escrow betaald door de lead.",
-      "features": [
-        "Minimumticket: EUR 500.000",
-        "Tot 4 gedeclareerde co-investeerders",
-        "Escrow betaald door de lead bidder",
-        "Vrije interne verdeling tot ondertekening",
-        "Volledig lead KYC + vereenvoudigd co-inv. KYC"
-      ],
-      "cta": "Aanmelden — Club Deal"
-    },
-    "model2": {
-      "label": "MODEL 02",
-      "title": "Corporate\n(Bedrijf of Holding)",
-      "badge": "MKB · Holdings · Corporates",
-      "desc": "Een rechtspersoon verwerft het asset direct op zijn balans. Co-bid mogelijk tussen twee entiteiten in een gedeclareerde JV.",
-      "features": [
-        "Minimumticket: EUR 500.000",
-        "Directe balansverwerving",
-        "Asset deal of share deal beschikbaar",
-        "JV mogelijk (twee co-verwervende entiteiten)",
-        "Volledig B2B KYC"
-      ],
-      "cta": "Aanmelden — Corporate"
-    },
-    "model3": {
-      "label": "MODEL 03",
-      "title": "Fonds\n(PE · VC · Family Office)",
-      "badge": "PE · VC · Family Office · Search Fund",
-      "desc": "Institutionele fondsen krijgen een IC-periode van 5-10 dagen voor het indienen van een bindend bod. SPV beschikbaar voor directe LP-co-investering.",
-      "features": [
-        "Minimumticket: EUR 500.000 (geen maximum)",
-        "IC-periode van 5-10 werkdagen",
-        "SPV beschikbaar voor LP-co-investering",
-        "Management presentatie georganiseerd door AEGRYN",
-        "Institutioneel KYC"
-      ],
-      "cta": "Aanmelden — Fonds"
-    },
-    "escrow": {
-      "label": "GEMEENSCHAPPELIJK MECHANISME",
-      "title": "De Transactiebelofte\nmet institutionele escrow.",
-      "desc": "Ongeacht het bid-model steunt elke AEGRYN-transactie op ons PTT-mechanisme:",
+    "conditionsLabel": "Kernvoorwaarden",
+    "structuresLabel": "Beschikbare structuren",
+    "models": [
+      {
+        "badge": "HNWI · Ondernemers · Gekwalificeerde particulieren",
+        "label": "MODEL 01",
+        "title": "Club Deal",
+        "summary": "Een hoofdbieder kan tot 4 gedeclareerde co-investeerders associëren. Één bod, één escrow betaald door de lead. De interne verdeling blijft vertrouwelijk.",
+        "conditions": [
+          "Minimumticket: € 500.000",
+          "Volledig KYC hoofdbieder + vereenvoudigd KYC co-investeerders",
+          "10% escrow betaald door hoofdbieder binnen 5 werkdagen",
+          "Tot 4 gedeclareerde co-investeerders onder NDA",
+          "Interne verdeling aanpasbaar tot signing"
+        ],
+        "structures": [
+          "Volledige contante betaling",
+          "Contant + earnout (termijn en KPI's te specificeren)",
+          "Overig (te preciseren)"
+        ]
+      },
+      {
+        "badge": "KMO · Holdings · Corporates · Groepen",
+        "label": "MODEL 02",
+        "title": "Corporate",
+        "summary": "Een rechtspersoon verwerft het actief rechtstreeks op zijn balans. Twee entiteiten kunnen co-verwerven via een bij AEGRYN gedeclareerde JV. Asset deal of share deal afhankelijk van de gekozen structuur.",
+        "conditions": [
+          "Minimumticket: € 500.000",
+          "Volledig B2B KYC — KvK < 3 maanden, statuten, UBO ≥ 25%, identiteitsbewijs bestuurder",
+          "10% escrow betaald vanuit de rekening van de rechtspersoon",
+          "JV mogelijk: twee co-verwervende partijen, structuur te melden vóór bindend bod"
+        ],
+        "structures": [
+          "Asset deal (code, IP, contracten, klantenbasis)",
+          "Share deal (overname van de houdstermaatschappij)",
+          "Directe balansacquisitie",
+          "Acquisitie via specifieke dochteronderneming",
+          "Acqui-hire (team + technologie-integratie)"
+        ]
+      },
+      {
+        "badge": "PE · VC · Family Office · Search Fund · Staatsfondsen",
+        "label": "MODEL 03",
+        "title": "Fonds",
+        "summary": "Institutionele fondsen krijgen een IC-venster van 5 tot 10 werkdagen vóór het indienen van een bindend bod. SPV beschikbaar voor directe LP-co-investering bij specifieke deals.",
+        "conditions": [
+          "Minimumticket: € 500.000 (geen maximum)",
+          "Institutioneel KYC — regelgevende goedkeuring indien van toepassing (FINMA, AMF, FCA)",
+          "IC-venster: vertrouwelijke reservering 5–10 werkdagen zonder escrow",
+          "SPV mogelijk voor directe LP-co-investering",
+          "Managementpresentatie via AEGRYN, nooit rechtstreeks verkoper/koper"
+        ],
+        "structures": [
+          "Platformacquisitie (eerste actief in een PE roll-up)",
+          "Add-on (complementair actief aan een bestaand portfolio)",
+          "Volledige acquisitie (100%)",
+          "Minderheidsacquisitie (< 50%) met gestructureerde SHA",
+          "LMBO (met deelname huidig team)"
+        ]
+      },
+      {
+        "badge": "Strategische investeerders · Operationele partners",
+        "label": "MODEL 04",
+        "title": "Equity Stake",
+        "subBadge": "Geen cessie · Geen escrow",
+        "summary": "Voor investeerders of partners die een deelneming in het actief willen nemen zonder het volledig te verwerven — aandelen in ruil voor advisory fees, carried interest of operationele bijdrage. Directe verbintenis, zonder bankescrow.",
+        "conditions": [
+          "Geen vast minimumticket (waardering onderhandeld tussen partijen)",
+          "KYC op basis van profiel (vereenvoudigd voor gekwalificeerde particulieren, volledig voor entiteiten)",
+          "Geen escrow — verbintenis via SHA gezamenlijk opgesteld door de adviseurs van beide partijen",
+          "Directe verbintenis: SHA-ondertekening + eventueel warrant of BSA",
+          "AEGRYN ontvangt een bemiddelingsvergoeding op de overeengekomen waardering"
+        ],
+        "structures": [
+          "Advisory equity (X% in ruil voor advies/expertise gedurende N maanden)",
+          "Carried interest (X% op toekomstige winsten van het actief)",
+          "Gedeeltelijke contante minderheidsdeelneming + bestuurszetel",
+          "Warrant / BSA (recht om in de toekomst aandelen te verwerven)",
+          "Revenue share + toekomstige koopoptie"
+        ]
+      }
+    ],
+    "ptt": {
+      "label": "GEMEENSCHAPPELIJK PROCES — MODELLEN 01, 02, 03",
+      "title": "De Tech Transactiebelofte",
+      "desc": "5 gestructureerde stappen voor alle deals met reële acquisitie. Het Equity Stake Model volgt een dedicated SHA-proces zonder escrow.",
       "steps": [
         {
           "num": "01",
-          "title": "Intentieverklaring",
-          "desc": "Niet-bindend. Doorgestuurd naar verkoper binnen 48u. Geen storting vereist."
+          "title": "Intentieverklaring (IV)",
+          "desc": "Niet-bindend. Binnen 48 uur aan de verkoper doorgegeven. Geen aanbetaling vereist."
         },
         {
           "num": "02",
-          "title": "Principe-akkoord",
-          "desc": "Prijs en structuur overeengekomen. Ondertekening activeert de escrow-verplichting."
+          "title": "Principeakkoord (PA)",
+          "desc": "Prijs en structuur overeengekomen. De ondertekening van het PA activeert de escrowverplichting."
         },
         {
           "num": "03",
-          "title": "Escrow 10%",
-          "desc": "Gestort op derdenrekening binnen 5 werkdagen. AEGRYN heeft nooit toegang tot de fondsen."
+          "title": "10% Escrow",
+          "desc": "Gestort op een bankrekening van derden binnen 5 werkdagen. AEGRYN heeft nooit toegang tot de gelden. Partnerbank treedt op als bewaarder."
         },
         {
           "num": "04",
-          "title": "Due Diligence — 30 dagen",
-          "desc": "Volledige toegang data room. Q&A via AEGRYN."
+          "title": "Due Diligence — 30 dagen standaard",
+          "desc": "Volledige toegang tot de dataroom onder NDA. Q&A uitsluitend via AEGRYN (nooit rechtstreeks verkoper/koper). Verlenging mogelijk in onderling overleg (max. +30 dagen)."
         },
         {
           "num": "05",
           "title": "Signing & Closing",
-          "desc": "Documentatie van de code. Fondsen vrijgegeven. Asset overgedragen."
+          "desc": "KRYV Protocol certificeert de exacte staat van de code. Betaling van het saldo (resterende 90%). Overdracht van het actief + uitgifte van het AEGRYN Transactiecertificaat."
         }
       ],
-      "penaltiesTitle": "Bilaterale bescherming",
-      "penaltyBuyer": "Terugtrekking koper zonder reden -> escrow naar verkoper",
-      "penaltySeller": "Terugtrekking verkoper zonder reden -> escrow verdubbeld naar koper",
-      "penaltyCs": "Opschortende voorwaarde opgeheven -> escrow volledig teruggegeven"
+      "protection": {
+        "title": "Bilaterale bescherming",
+        "buyer": {
+          "title": "Kopers terugtrekking",
+          "desc": "Zonder geldige reden → escrow vervalt aan de verkoper."
+        },
+        "seller": {
+          "title": "Verkopers terugtrekking",
+          "desc": "Zonder geldige reden → escrow verdubbeld teruggegeven aan de koper."
+        },
+        "condition": {
+          "title": "Opschortende voorwaarde opgeheven",
+          "desc": "→ Escrow volledig teruggegeven aan de koper (no fault)."
+        }
+      }
     },
     "cta": {
       "title": "Klaar om een bod in te dienen?",
-      "desc": "Vul uw koperskwalificatiedossier in voor toegang tot de catalogus.",
-      "btn": "Mijn koperssollicitatie indienen",
-      "secondary": "Catalogus bekijken"
+      "desc": "Bekijk beschikbare activa of neem contact met ons op om uw acquisitieprofiel te bespreken.",
+      "btnGuide": "Kopershandleiding",
+      "btnCatalog": "Catalogus bekijken"
     }
   },
   "assessmentDays": {
@@ -3089,7 +3141,146 @@
     "authorityCH": "Zwitserland: FDPIC — www.edoeb.admin.ch",
     "authorityFR": "Frankrijk: CNIL — www.cnil.fr",
     "authorityEU": "EU: EDPB — www.edpb.europa.eu",
-    "contactEmail": "dataprivacy@aegryn.com"
+    "contactEmail": "dataprivacy@aegryn.com",
+    "content": {
+      "intro": {
+        "h": "Inleiding",
+        "p1": "Gezien het belang dat wij hechten aan de bescherming van uw gegevens en uw privacy, hebben wij dit gegevensbeschermingsbeleid opgesteld om uit te leggen wat wij doen wanneer u onze website aegryn.com bezoekt.",
+        "p2": "Dit gegevensbeschermingsbeleid heeft alleen betrekking op de gegevensverwerking in verband met onze website. Specifieke gegevensbeschermingsbeleidslijnen kunnen van toepassing zijn op andere diensten en aanbiedingen die wij verstrekken.",
+        "p3": "In Zwitserland is de bescherming van uw gegevens met name gebaseerd op de Federale Wet van 25 september 2020 inzake Gegevensbescherming (DSG) en de Federale Verordening inzake Gegevensbescherming (DSV) van 31 augustus. Ons gegevensbeschermingsbeleid en onze praktijken zijn afgestemd op de wettelijke bepalingen in die wetgeving.",
+        "defsTitle": "Wij hebben de belangrijkste definities samengebracht om het begrip van dit beleid te vergemakkelijken:",
+        "defs": {
+          "dataSubject": [
+            "Betrokkene:",
+            "de natuurlijke persoon wiens persoonsgegevens worden verwerkt."
+          ],
+          "personalData": [
+            "Persoonsgegevens:",
+            "alle informatie over een geïdentificeerde of identificeerbare natuurlijke persoon."
+          ],
+          "sensitiveData": [
+            "Gevoelige persoonsgegevens:",
+            "gegevens over religieuze, levensbeschouwelijke, politieke of vakbondsopvattingen of -activiteiten; gegevens over gezondheid, de persoonlijke levenssfeer of het behoren tot een ras of etnische groep; genetische gegevens; biometrische gegevens; gegevens over administratiefrechtelijke en strafrechtelijke vervolgingen of sancties; gegevens over maatschappelijke hulpmaatregelen."
+          ],
+          "processing": [
+            "Verwerking:",
+            "elke handeling met persoonsgegevens, ongeacht de gebruikte middelen en procedures."
+          ],
+          "controller": [
+            "Verwerkingsverantwoordelijke:",
+            "een privépersoon of federaal orgaan dat, alleen of samen met anderen, de doeleinden en middelen van de verwerking van persoonsgegevens vaststelt."
+          ],
+          "processor": [
+            "Verwerker:",
+            "de privépersoon of het federale orgaan die persoonsgegevens verwerkt namens de verwerkingsverantwoordelijke."
+          ],
+          "pfpdt": [
+            "FDPIC:",
+            "de Federale Gegevensbeschermings- en Openbaarheidscommissaris, belast met het toezicht op de juiste toepassing van de federale gegevensbeschermingsbepalingen."
+          ]
+        }
+      },
+      "whoWeAre": {
+        "h": "Wie zijn wij en hoe kunt u contact opnemen?",
+        "p": "Aegryn Sàrl is de naam van ons bedrijf. Voor vragen over de gegevensverwerking met betrekking tot onze website kunt u ons per post bereiken: Aegryn Sàrl, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. U kunt ook contact opnemen via e-mail op legal@aegryn.com of via ons contactformulier."
+      },
+      "ourRole": {
+        "h": "Wat is onze rol op het gebied van gegevensbescherming?",
+        "p1": "Wanneer u onze website bezoekt, kunnen wij sommige van uw persoonsgegevens verwerken. Overeenkomstig de DSG zijn wij de verwerkingsverantwoordelijke.",
+        "p2": "Als verwerkingsverantwoordelijke zijn wij verantwoordelijk voor het bepalen van de doeleinden waarvoor wij uw persoonsgegevens verwerken, de wijze van verwerking en de beveiligingsmaatregelen. Wanneer wij samenwerken met dienstverleners, zorgen wij ervoor dat zij ons gegevensbeschermingsengagement delen.",
+        "p3": "Gegevensbescherming is ieders zaak. Wij moedigen u aan dit beleid te lezen en, als u een van onze klanten bent, de contractuele documenten te raadplegen die ons binden."
+      },
+      "whenCollect": {
+        "h": "Wanneer en hoe verzamelen wij uw gegevens?",
+        "p": "Vanaf uw eerste interactie met onze website verzamelen wij gegevens (bijvoorbeeld om te bepalen of u instemt met het gebruik van cookies). U verstrekt ons ook uw gegevens wanneer u contact met ons opneemt via ons contactformulier."
+      },
+      "categories": {
+        "h": "Welke categorieën gegevens verwerken wij?",
+        "contactH": "Contactgegevens",
+        "contactP": "Wij verwerken uw contactgegevens, zoals uw voornaam, achternaam, adres, telefoonnummer of e-mailadres.",
+        "internetH": "Internet- en verbindingsgegevens",
+        "internetP": "Om technische redenen en om onze website te verbeteren, verwerken wij uw IP-adres, informatie over uw internetprovider en het besturingssysteem van uw apparaat, informatie over de verwijzende URL, de gebruikte browser, datum en tijdstip van toegang en de inhoud die tijdens uw bezoek is geraadpleegd."
+      },
+      "sensitive": {
+        "h": "Hoe zit het met gevoelige gegevens en minderjarigen?",
+        "p": "Wij verzamelen of verwerken geen gevoelige persoonsgegevens. Hoewel de toegang tot onze website voor iedereen open is, zijn onze diensten uitsluitend bestemd voor volwassenen. Wij richten ons niet op minderjarigen en verzamelen bewust geen persoonsgegevens over hen."
+      },
+      "why": {
+        "h": "Waarom verwerken wij uw gegevens?",
+        "pIntro": "Wij verwerken uw gegevens om:",
+        "items": [
+          "Met u te communiceren, met name om te reageren op uw verzoeken en uw rechten uit te oefenen.",
+          "U te informeren over onze diensten en aanbiedingen.",
+          "Verkeersstatistieken te genereren die nuttig zijn voor de verbetering van onze website.",
+          "Te voldoen aan wetten, richtlijnen en aanbevelingen van autoriteiten."
+        ],
+        "pNote": "Het is belangrijk te vermelden dat wij geen geautomatiseerde individuele beslissingen nemen."
+      },
+      "rights": {
+        "h": "Wat zijn uw rechten?",
+        "pIntro": "In het algemeen verleent de DSG u de volgende rechten:",
+        "items": [
+          "U heeft het recht om toegang te krijgen tot uw gegevens.",
+          "U heeft het recht om te verzoeken dat uw gegevens in een gangbaar elektronisch formaat worden verstrekt.",
+          "U heeft het recht om onjuiste gegevens te laten corrigeren.",
+          "U heeft het recht om bezwaar te maken tegen de verwerking van uw gegevens.",
+          "U heeft het recht om verwijdering of vernietiging van uw gegevens te verzoeken.",
+          "U heeft het recht om te eisen dat een geautomatiseerde individuele beslissing door een natuurlijke persoon wordt herzien."
+        ],
+        "pContact": "Om een van deze rechten uit te oefenen, neemt u contact met ons op. Als u van mening bent dat wij uw gegevens verwerken in strijd met de gegevensbeschermingsbepalingen, kunt u ons ook melden bij de FDPIC."
+      },
+      "security": {
+        "h": "Hoe beschermen wij uw gegevens?",
+        "p": "Wij nemen passende beveiligingsmaatregelen, zoals encryptie, om uw persoonsgegevens te beschermen. Als u denkt dat uw persoonsgegevens zijn gecompromitteerd, informeer ons dan onmiddellijk op legal@aegryn.com."
+      },
+      "storage": {
+        "h": "Waar worden uw gegevens opgeslagen en hoe lang?",
+        "p": "Gegevens worden opgeslagen in onze lokalen en in de verwerkingscentra die worden beheerd door onze dienstverleners. Wij verwerken uw gegevens zo lang als het doel van de verwerking dit vereist, wij een legitiem belang hebben om ze te bewaren, of de gegevens onderworpen zijn aan een wettelijke bewaarplicht (tot 10 jaar voor bepaalde gegevens)."
+      },
+      "sharing": {
+        "h": "Met wie delen wij uw gegevens?",
+        "p": "Het beheer van onze website impliceert samenwerking met gespecialiseerde externe dienstverleners (creatie, onderhoud, hosting). Wij zorgen ervoor dat deze communicatie strikt beperkt blijft tot wat noodzakelijk is. Wanneer gegevens buiten Zwitserland of de EER worden overgedragen, maken wij gebruik van de herziene standaardcontractbepalingen van de Europese Commissie of andere passende waarborgen.",
+        "providersH": "Onze dienstverleners",
+        "tableHeaders": [
+          "Aanbieder",
+          "Doel",
+          "Verwerkingslocatie"
+        ],
+        "providers": [
+          [
+            "Vercel",
+            "Website-hosting en -implementatie.",
+            "EER/VS"
+          ],
+          [
+            "Cloudflare",
+            "Beveiliging, beschikbaarheid en AVG-conforme analytics van de website.",
+            "EER/VS"
+          ],
+          [
+            "Resend",
+            "Transactioneel verzenden van contactmails.",
+            "EER/VS"
+          ]
+        ]
+      },
+      "cookies": {
+        "h": "Welke cookies gebruiken wij?",
+        "p": "Onze website gebruikt cookies. U heeft toegang tot de lijst met typen cookies via onze cookiebanner. U kunt cookies blokkeren door een instelling in uw browser in te schakelen of via onze cookiebanner."
+      },
+      "social": {
+        "h": "Sociale media",
+        "p": "Wij onderhouden onze aanwezigheid op sociale media (LinkedIn, Facebook, Instagram, TikTok, YouTube). Wanneer u met ons communiceert op deze platforms, verzamelen wij gegevens die voornamelijk worden gebruikt om met u te communiceren. Voor meer informatie raadpleegt u de gegevensbeschermingsbeleidslijnen van de betrokken exploitanten."
+      },
+      "comms": {
+        "h": "Contact- en communicatiediensten",
+        "p": "Aegryn Sàrl is geen aanbieder van telecommunicatiediensten. Communicatiefuncties binnen applicaties (gesprekken, chat) werken uitsluitend via internetprotocollen (VoIP en databerichten). Dit contactnummer en de communicatiefuncties van de applicaties zijn niet bedoeld voor nooddiensten."
+      },
+      "final": {
+        "h": "Slotbepalingen",
+        "p": "Wij behouden ons het recht voor om de voorwaarden van dit beleid naar eigen goeddunken te wijzigen. Elke gewijzigde versie zal op onze website worden gepubliceerd."
+      }
+    }
   },
   "security": {
     "meta": {
@@ -3519,5 +3710,348 @@
     "sectionSeller": "Verkopersruimte",
     "sectionPartner": "Partnerruimte",
     "disclaimer": "AEGRYN Auction · Genève · Zwitserland — Strikt vertrouwelijke toegang"
+  },
+  "waitlist": {
+    "header": {
+      "label": "Wachtlijst — Auction-sessies",
+      "title": "Deelnemen aan de prioritaire toegangslijst"
+    },
+    "step1": {
+      "profileLabel": "Ik ben *",
+      "sourceLabel": "Hoe heeft u van AEGRYN gehoord?",
+      "next": "Volgende",
+      "profiles": {
+        "buyer": "Koper",
+        "seller": "Verkoper",
+        "partner": "Partner",
+        "undecided": "Niet bepaald"
+      }
+    },
+    "step2": {
+      "buyer": {
+        "categoryLabel": "Kopersprofiel *",
+        "ticketLabel": "Doelovername-ticket *",
+        "timelineLabel": "Inzettijdshorizon *",
+        "intentLabel": "Aard van de overname",
+        "sectorsLabel": "Interessesectoren (max 5)",
+        "financingLabel": "Financiering gewaarborgd?",
+        "yes": "Ja",
+        "noInProgress": "Nee / in behandeling",
+        "categories": {
+          "individual_hnw": "Vermogende particulier (HNW)",
+          "family_office": "Family office",
+          "search_fund": "Search fund / ETA",
+          "pe_vc_fund": "PE / VC fonds",
+          "corporate_strategic": "Corporate / strategische koper",
+          "holding": "Patrimoniale holding"
+        },
+        "tickets": {
+          "<500k": "< € 500K",
+          "500k-2m": "€ 500K – € 2M",
+          "2m-5m": "€ 2M – € 5M",
+          "5m-20m": "€ 5M – € 20M",
+          "20m+": "> € 20M"
+        },
+        "timelines": {
+          "immediate": "Onmiddellijk (< 3 maanden)",
+          "3-6m": "3 – 6 maanden",
+          "6-12m": "6 – 12 maanden",
+          "opportunistic": "Opportunistisch / geen deadline"
+        },
+        "intents": {
+          "single_asset": "Gerichte enkele overname",
+          "portfolio_buildup": "Portfolioopbouw",
+          "exploratory": "Marktverkenning"
+        }
+      },
+      "seller": {
+        "stageLabel": "Activafase *",
+        "arrLabel": "Geschatte jaarlijkse ARR *",
+        "reasonLabel": "Reden voor verkoop *",
+        "timelineLabel": "Gewenste tijdshorizon",
+        "stages": {
+          "idea": "Idee / pre-lancering",
+          "mvp": "MVP / beta",
+          "revenue_generating": "Omzetgenererend",
+          "scaling": "In groei",
+          "mature": "Volwassen / gevestigd"
+        },
+        "arrRanges": {
+          "<100k": "< € 100K",
+          "100k-500k": "€ 100K – € 500K",
+          "500k-2m": "€ 500K – € 2M",
+          "2m-10m": "€ 2M – € 10M",
+          "10m+": "> € 10M"
+        },
+        "reasons": {
+          "full_exit": "Volledige exit",
+          "partial": "Gedeeltelijke exit / kapitaalverhoging",
+          "succession": "Overdracht / opvolging",
+          "burnout": "Oprichtersburnout",
+          "strategic_pivot": "Strategische pivot"
+        },
+        "timelines": {
+          "immediate": "Onmiddellijk (< 3 maanden)",
+          "3-6m": "3 – 6 maanden",
+          "6-12m": "6 – 12 maanden",
+          "flexible": "Flexibel / afhankelijk van bod"
+        }
+      },
+      "partner": {
+        "categoryLabel": "Structuurtype *",
+        "dealflowLabel": "Geschat introductievolume",
+        "categories": {
+          "law_firm": "Advocatenkantoor",
+          "accounting": "Accountantskantoor",
+          "ma_boutique": "M&A boutique / advies",
+          "vc_pe": "VC / PE",
+          "accelerator": "Accelerator / incubator",
+          "other": "Overige"
+        },
+        "dealflows": {
+          "<5_per_year": "< 5 introducties / jaar",
+          "5-10_per_year": "5 – 10 / jaar",
+          "10-20_per_year": "10 – 20 / jaar",
+          "20+_per_year": "> 20 / jaar"
+        }
+      },
+      "undecidedNote": "Geen probleem — vul gewoon uw contactgegevens in en ons team neemt contact met u op.",
+      "back": "Terug",
+      "next": "Volgende"
+    },
+    "step3": {
+      "firstNameLabel": "Voornaam",
+      "lastNameLabel": "Achternaam *",
+      "emailLabel": "E-mail *",
+      "firstNamePlaceholder": "Jan",
+      "lastNamePlaceholder": "de Vries",
+      "emailPlaceholder": "u@voorbeeld.nl",
+      "gdprConsent": "Ik ga ermee akkoord dat mijn gegevens worden verwerkt door AEGRYN in het kader van mijn verzoek om toegang tot de auction-sessies, conform de AVG / nDSG. *",
+      "marketingConsent": "Ik ga ermee akkoord AEGRYN-communicaties te ontvangen (nieuwe sessies, beschikbare activa).",
+      "back": "Terug",
+      "submit": "Versturen",
+      "submitting": "Bezig met verzenden..."
+    },
+    "sources": {
+      "linkedin": "LinkedIn",
+      "organic": "Zoeken / mond-tot-mondreclame",
+      "referral": "Aanbeveling",
+      "event": "Evenement / conferentie",
+      "partner_intro": "Partnerintroductie",
+      "direct": "Direct AEGRYN-contact"
+    },
+    "sectors": [
+      "B2B SaaS",
+      "AI / ML",
+      "LegalTech",
+      "FinTech",
+      "EdTech",
+      "HealthTech",
+      "E-commerce",
+      "Marktplaatsen",
+      "Cyberbeveiliging",
+      "PropTech",
+      "Logistiek",
+      "Overige"
+    ],
+    "placeholder": "— Selecteer —",
+    "done": {
+      "title": "Aanvraag geregistreerd",
+      "desc": "Ons team beoordeelt uw profiel en neemt binnen 48 uur contact met u op om uw toegang tot de volgende AEGRYN Auction-sessie te valideren.",
+      "note": "Geen toegang zonder nominatieve uitnodiging."
+    },
+    "errors": {
+      "server": "Er is een fout opgetreden.",
+      "network": "Netwerkfout. Probeer het opnieuw."
+    }
+  },
+  "auctionSheet": {
+    "executiveSummaryKicker": "Samenvatting · In één oogopslag",
+    "executiveSummaryTitle": "Asset-overzicht",
+    "disclosureKicker": "Vermeldingen en distributiepredikaten"
+  },
+  "neediuDpn": {
+    "meta": {
+      "title": "Privacyverklaring & Gebruiksvoorwaarden — neediu | Aegryn",
+      "desc": "Privacyverklaring en gebruiksvoorwaarden van het neediu-platform — Aegryn Sàrl, conform de Zwitserse DSG en de AVG."
+    },
+    "breadcrumb": "Legal",
+    "sectionDpn": "(01)",
+    "h1": "Privacyverklaring – AEGRYN neediu",
+    "disclaimer": "Disclaimer: Deze privacyverklaring is een door AI gegenereerde vertaling en wordt uitsluitend ter informatie verstrekt. Bij afwijkingen of tegenstrijdigheden prevaleert de Engelse versie.",
+    "updated": "Laatste update: 01/03/2026",
+    "dpn": {
+      "intro": {
+        "h": "Inleiding",
+        "p1": "neediu is een platform waarmee gebruikers snel vertrouwde professionals of particulieren kunnen vinden die hulp bieden bij huishoudelijke behoeften in hun regio. Omdat wij veel waarde hechten aan de bescherming van uw gegevens en uw privacy, hebben wij deze privacyverklaring opgesteld om uit te leggen wat wij met uw gegevens doen wanneer u ons platform gebruikt.",
+        "p2": "Deze privacyverklaring heeft uitsluitend betrekking op de gegevensverwerking die verband houdt met ons platform. Ons doel is een adequate bescherming van persoonsgegevens te waarborgen in overeenstemming met alle toepasselijke gegevensbeschermingswetten, waaronder de Zwitserse federale wet op de gegevensbescherming (DSG) en de Algemene Verordening Gegevensbescherming (AVG).",
+        "defsTitle": "Belangrijkste definities uit de DSG:",
+        "defs": {
+          "dataSubject": ["Betrokkene:", "De natuurlijke persoon wiens persoonsgegevens worden verwerkt."],
+          "personalData": ["Persoonsgegevens:", "Alle informatie betreffende een geïdentificeerde of identificeerbare natuurlijke persoon."],
+          "sensitiveData": ["Bijzondere categorieën persoonsgegevens:", "Gegevens over religieuze, levensbeschouwelijke, politieke of vakbondsopvattingen of -activiteiten; gegevens over gezondheid, de privésfeer of het behoren tot een ras of etnische groep; genetische gegevens; biometrische gegevens; gegevens over strafrechtelijke vervolgingen of sancties; gegevens over sociale bijstand."],
+          "processing": ["Verwerking:", "Elke handeling met betrekking tot persoonsgegevens, ongeacht de gebruikte middelen en procedures."],
+          "controller": ["Verwerkingsverantwoordelijke:", "Een natuurlijke persoon of federale instantie die, alleen of samen met anderen, het doel en de middelen van de verwerking van persoonsgegevens bepaalt."],
+          "processor": ["Verwerker:", "Een natuurlijke persoon of federale instantie die persoonsgegevens verwerkt namens de verwerkingsverantwoordelijke."],
+          "pfpdt": ["FDPIC:", "De Federale Commissaris voor Gegevensbescherming en Openbaarheid, belast met het toezicht op de correcte toepassing van de federale bepalingen inzake gegevensbescherming."]
+        }
+      },
+      "whoWeAre": {
+        "h": "Wie zijn wij en hoe kunt u contact met ons opnemen?",
+        "p": "Aegryn Sàrl is de naam van ons bedrijf. Voor vragen over de gegevensverwerking met betrekking tot ons platform kunt u ons per post bereiken: Aegryn Sàrl, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland. U kunt ons ook per e-mail bereiken via legal@aegryn.com."
+      },
+      "ourRole": {
+        "h": "Wat is onze rol op het gebied van gegevensbescherming?",
+        "p1": "Wanneer u ons platform gebruikt, kunnen wij bepaalde persoonsgegevens van u verwerken. Conform de DSG zijn wij de verwerkingsverantwoordelijke. Wanneer persoonsgegevens worden gedeeld met een Dienstverlener voor de uitvoering van een opdracht, treedt de Dienstverlener op als onafhankelijke verwerkingsverantwoordelijke.",
+        "p2": "Als verwerkingsverantwoordelijke bepalen wij de doeleinden waarvoor wij uw persoonsgegevens verwerken, de wijze van verwerking en de beveiligingsmaatregelen. Gegevensbescherming is ieders verantwoordelijkheid. Wij moedigen u aan deze verklaring zorgvuldig te lezen."
+      },
+      "whenCollect": {
+        "h": "Wanneer en hoe verzamelen wij uw gegevens?",
+        "p": "De gegevensverzameling begint zodra u ons Platform bezoekt of ermee interageert. Wij verzamelen gegevens rechtstreeks van u wanneer u het Platform gebruikt en wanneer u een Gebruikersaccount aanmaakt, of u nu Klant of Dienstverlener bent. Wij verzamelen geen gegevens van derden, behalve in het kader van gerichte marketingcampagnes."
+      },
+      "categories": {
+        "h": "Welke categorieën gegevens verwerken wij?",
+        "contactH": "Contactgegevens",
+        "contactP": "Naam, voornaam, adres, telefoonnummer of e-mailadres bij het aanmaken van een account.",
+        "privateH": "Privégegevens",
+        "privateP": "Gegevens over uw persoonlijke situatie: geslacht, geboortedatum, foto, herkomstplaats, contacttaal en woonland.",
+        "accountH": "Accountgegevens",
+        "accountP": "Accountstatus, aangeboden of gevraagde diensten, profielfoto en andere voorkeuren, dienstverleningshistorie, beschikbaarheidsinstellingen, deelname aan functies zoals beoordelingen of berichten.",
+        "economicH": "Economische gegevens",
+        "economicP": "Betaalmethode, betaalde of ontvangen bedragen, transactiegeschiedenis, toepasselijke commissies, factuuradres, bankgegevens voor uitbetalingen. Gegevens over betaalmethoden worden uitsluitend verwerkt door onze externe leveranciers — wij verwerken geen creditcardnummers of CVC-codes.",
+        "internetH": "Internet- en verbindingsgegevens",
+        "internetP": "IP-adres, informatie over uw internetprovider en het besturingssysteem van uw apparaat, verwijzings-URL, gebruikte browser, datum en tijdstip van toegang, bekeken inhoud.",
+        "otherH": "Overige gegevens",
+        "otherP": "Type en omvang van de taak, grootte of toestand van de woning of het pand, gewenste datum en tijd, foto's of omschrijvingen ter verduidelijking van de opdracht, identificatiegegevens in het kader van de KYC-procedure."
+      },
+      "sensitive": {
+        "h": "Gevoelige gegevens en minderjarigen",
+        "p": "Wij verzamelen noch verwerken bijzondere categorieën persoonsgegevens. Onze diensten zijn uitsluitend bestemd voor volwassenen. Wij richten ons niet op minderjarigen en verzamelen bewust geen persoonsgegevens van hen."
+      },
+      "why": {
+        "h": "Waarom verwerken wij uw gegevens?",
+        "pIntro": "Wij verwerken uw persoonsgegevens om:",
+        "items": [
+          "Toegang tot en gebruik van het Platform mogelijk te maken (aanmaken en beheren van accounts, koppeling, betalingsverwerking, berichten, weergave van relevante informatie).",
+          "Met u te communiceren, op uw verzoeken te reageren en uw rechten uit te oefenen.",
+          "Verkeersstatistieken te genereren die nuttig zijn voor de verbetering van het Platform.",
+          "Te voldoen aan toepasselijke wet- en regelgeving en aanbevelingen van autoriteiten."
+        ],
+        "pNote": "Wij nemen geen geautomatiseerde individuele beslissingen."
+      },
+      "rights": {
+        "h": "Wat zijn uw rechten?",
+        "pIntro": "De DSG kent u in het algemeen de volgende rechten toe:",
+        "items": [
+          "U heeft het recht op inzage in uw gegevens.",
+          "U heeft het recht te verzoeken dat uw gegevens in een gangbaar elektronisch formaat worden verstrekt.",
+          "U heeft het recht onjuiste gegevens te laten rectificeren.",
+          "U heeft het recht bezwaar te maken tegen de verwerking van uw gegevens.",
+          "U heeft het recht verwijdering of vernietiging van uw gegevens te verzoeken.",
+          "U heeft het recht te eisen dat een geautomatiseerde individuele beslissing door een natuurlijke persoon wordt herzien."
+        ],
+        "pContact": "Om een van deze rechten uit te oefenen, kunt u contact met ons opnemen. Als u van mening bent dat wij uw gegevens verwerken in strijd met de gegevensbeschermingsbepalingen, kunt u ons melden bij de FDPIC."
+      },
+      "security": {
+        "h": "Hoe beschermen wij uw gegevens?",
+        "p": "Wij treffen passende beveiligingsmaatregelen, zoals versleuteling, om uw persoonsgegevens te beschermen. Als u vermoedt dat uw gegevens zijn gecompromitteerd, informeer ons dan onmiddellijk via legal@aegryn.com."
+      },
+      "storage": {
+        "h": "Waar en hoe lang worden uw gegevens bewaard?",
+        "p": "Persoonsgegevens worden opgeslagen in onze faciliteiten en in de verwerkingscentra van onze externe leveranciers. Wij bewaren ze zolang het verwerkingsdoel dit vereist of zolang wij een gerechtvaardigd belang hebben om ze te bewaren. Voor bepaalde gegevens kan de bewaartermijn oplopen tot tien jaar."
+      },
+      "sharing": {
+        "h": "Met wie delen wij uw gegevens?",
+        "p": "Het beheer van ons platform vereist samenwerking met gespecialiseerde externe leveranciers. Sommige persoonsgegevens worden ook rechtstreeks tussen gebruikers gedeeld wanneer dit noodzakelijk is voor de uitvoering van een gevraagde dienst. Al deze communicatie is strikt beperkt tot het noodzakelijke en voldoet aan het toepasselijke wettelijke kader. Bij overdracht van gegevens buiten Zwitserland of de EER maken wij gebruik van de herziene standaardcontractbepalingen van de Europese Commissie of andere passende waarborgen.",
+        "providersH": "Onze externe leveranciers",
+        "tableHeaders": ["Leverancier", "Doel", "Verwerkingslocatie"],
+        "providers": [
+          ["Supabase", "Backend-as-a-service platform voor applicatieontwikkeling.", "EER"],
+          ["Stripe", "Wereldwijde betalingsinfrastructuur — veilige transactieverwerking en identiteitsverificatie.", "EER/VS"],
+          ["Google Analytics", "Analysedienst voor het monitoren van platformgebruik en het samenstellen van activiteitsrapporten.", "EER/VS"]
+        ]
+      },
+      "social": {
+        "h": "Sociale media",
+        "p": "Wij zijn aanwezig op sociale media (Facebook, Instagram, TikTok). Wanneer u via deze platforms met ons communiceert, verzamelen wij gegevens hoofdzakelijk om met u te communiceren. Raadpleeg voor meer informatie de privacyverklaringen van de betrokken exploitanten."
+      },
+      "final": {
+        "h": "Slotbepalingen (Verklaring)",
+        "p": "Wij behouden ons het recht voor de voorwaarden van deze verklaring naar eigen inzicht te wijzigen. Elke gewijzigde versie wordt op ons platform gepubliceerd."
+      }
+    },
+    "cgu": {
+      "sectionLabel": "(02)",
+      "h2": "Gebruiksvoorwaarden – AEGRYN neediu",
+      "disclaimer": "Disclaimer: Deze gegevensbeschermingsverklaring is een door AI gegenereerde vertaling en wordt uitsluitend ter informatie verstrekt. Bij afwijkingen of tegenstrijdigheden prevaleert de Engelse versie.",
+      "intro": "Deze Gebruiksvoorwaarden (GV) zijn van toepassing op elk gebruik van het Aegryn-platform, de mobiele applicatie neediu, alsmede op elke dienst die toegankelijk is via of geleverd wordt via het Platform (de Diensten), die worden geleverd en beheerd door Aegryn Sàrl, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland.",
+      "s1H": "1. Algemeen",
+      "s1AcceptTitle": "Aanvaarding.",
+      "s1Accept": "Door toegang te krijgen tot of gebruik te maken van ons Platform, stemt u ermee in gebonden te zijn aan deze GV.",
+      "s1ModifTitle": "Wijzigingen.",
+      "s1Modif": "Deze GV kunnen van tijd tot tijd worden gewijzigd, waarbij u op passende wijze wordt geïnformeerd (ook per e-mail of via het Platform). U dient de nieuwe GV te accepteren om het Platform te blijven gebruiken.",
+      "s2H": "2. Persoonlijke GV",
+      "s2": "Door het Platform of de Diensten te gebruiken, bevestigt en garandeert u dat u minimaal 18 jaar oud bent en, als u het Platform namens een rechtspersoon gebruikt, dat u daartoe naar behoren gemachtigd bent.",
+      "s3H": "3. Persoonlijk account",
+      "s3AccountTitle": "Account.",
+      "s3Account": "Om toegang te krijgen tot bepaalde functies, dient u een persoonlijk account aan te maken door de vereiste informatie te verstrekken en deze GV te accepteren.",
+      "s3MemberTitle": "Lidmaatschappen.",
+      "s3Member": "Er zijn twee categorieën Geregistreerde Gebruikers: (i) Klanten die het Platform gebruiken om diensten te zoeken en te ontvangen, en (ii) Dienstverleners die diensten aanbieden en uitvoeren voor Klanten.",
+      "s3ConfidTitle": "Vertrouwelijkheid.",
+      "s3Confid": "U bent als enige verantwoordelijk voor de vertrouwelijkheid van uw wachtwoord en alle activiteiten die plaatsvinden onder uw Account. Informeer ons onmiddellijk over elk frauduleus gebruik.",
+      "s3KycTitle": "Identiteitsverificatie.",
+      "s3Kyc": "Om te voldoen aan wettelijke vereisten met betrekking tot financiële transacties en fraudepreventie, kunnen wij of onze externe leverancier identiteitsverificatieprocedures (KYC) uitvoeren.",
+      "s4H": "4. Toegang, Internet en Telecommunicatie",
+      "s4InternetTitle": "Internet.",
+      "s4Internet": "Het gebruik van internet brengt risico's met zich mee (onderschepping, wijziging, verwijdering van gegevens). Door het Platform te gebruiken, aanvaardt u deze risico's.",
+      "s4TelecomTitle": "Telecommunicatie.",
+      "s4Telecom": "Wij zijn geen telecommunicatieaanbieder. De bel- en chatfuncties werken via internet (VoIP/data) en zijn niet gekoppeld aan mobiele of vaste netwerken. Gebruik ze niet voor nooddiensten.",
+      "s5H": "5. Functies en Diensten",
+      "s5": "Het Platform biedt een digitale dienst waarmee gebruikers in contact kunnen komen met professionals of particulieren die hulp bieden bij huishoudelijke behoeften. Het Platform faciliteert het eerste contact maar treedt niet op bij de uitvoering van de diensten. Wij aanvaarden geen verantwoordelijkheid voor de kwaliteit, tijdigheid of het resultaat van door derden uitgevoerde diensten.",
+      "s6H": "6. Gebruik van het Platform",
+      "s6RightTitle": "Gebruiksrecht.",
+      "s6Right": "U wordt een herroepbaar, niet-exclusief, niet-overdraagbaar recht verleend om het Platform uitsluitend te raadplegen en te gebruiken voor het zoeken, aanbieden of afnemen van huishoudelijke hulpdiensten.",
+      "s6RestrictTitle": "Beperkingen.",
+      "s6Restrict": "Het is ten strengste verboden om: (i) het Platform te gebruiken voor andere dan de beoogde doeleinden; (ii) het Platform te reproduceren, te wijzigen of er afgeleide werken van te maken; (iii) toegang te krijgen tot de broncode via decompilatie of reverse engineering; (iv) e-mailadressen te verzamelen voor spamming.",
+      "s7H": "7. Gebruikersinhoud",
+      "s7": "Gebruikers kunnen inhoud plaatsen of aanmaken (teksten, afbeeldingen, foto's). Beoordelingen moeten eerlijk, respectvol en gebaseerd op echte ervaringen zijn. Gebruikers verlenen Aegryn een wereldwijde, royaltyvrije, eeuwigdurende licentie om Gebruikersinhoud te gebruiken in verband met de Diensten.",
+      "s8H": "8. Betalingen en kosten",
+      "s8": "Alle betalingen via het Platform worden verwerkt door externe betalingsdienstaanbieders. Wij slaan uw betaalkaartgegevens niet op en verwerken deze niet rechtstreeks.",
+      "s8FeesTitle": "Kosten voor Dienstverleners.",
+      "s8FeesIntro": "Als Dienstverlener bent u onderworpen aan een commissie voor elke succesvol voltooide dienst:",
+      "s8Fees": [
+        "Startersniveau (minder dan 150 opdrachten): 20%",
+        "Pro-niveau (150 tot 300 opdrachten): 17,5%",
+        "Eliteniveau (meer dan 300 opdrachten): 15%"
+      ],
+      "s8Payout": "Uitbetalingen worden doorgaans binnen 5 tot 7 werkdagen na voltooiing van de dienst verwerkt.",
+      "s9H": "9. Terugbetalingen",
+      "s9": "Als een betaalde dienst niet zoals beloofd wordt geleverd, kunt u binnen 7 dagen na het geplande tijdstip een terugbetaling aanvragen met de bijbehorende gegevens. Wij beoordelen aanvragen van geval tot geval.",
+      "s10H": "10. Intellectueel eigendom",
+      "s10": "Met uitzondering van Gebruikersinhoud blijft Aegryn de enige eigenaar van alle intellectuele eigendomsrechten op het Platform, de Diensten en de via het Platform toegankelijke inhoud.",
+      "s11H": "11. Gebruiksbeperkingen",
+      "s11": "U verbindt zich ertoe: (i) alle toepasselijke wettelijke bepalingen na te leven; (ii) het Platform niet voor onrechtmatige doeleinden te gebruiken; (iii) geen valse, illegale of aanstootgevende informatie op te nemen; (iv) geen virussen of kwaadaardige software op te nemen.",
+      "s12H": "12. Gegevensbescherming",
+      "s12": "De Privacyverklaring, beschikbaar op deze pagina, maakt integraal deel uit van deze GV.",
+      "s13H": "13. Wijzigingen, schorsing en beëindiging",
+      "s13": "Wij behouden ons het recht voor het Platform op elk moment te wijzigen, te onderbreken of in te trekken. Wij kunnen uw Account naar eigen inzicht beperken, schorsen of beëindigen.",
+      "s14H": "14. Geen garantie",
+      "s14": "Het Platform, de Diensten en de Inhoud worden geleverd 'zoals ze zijn' en 'zoals beschikbaar'. Wij wijzen alle garanties, expliciet of impliciet, af.",
+      "s15H": "15. Beperking van aansprakelijkheid",
+      "s15": "Aegryn is niet aansprakelijk voor enige schade, waaronder winstderving, gegevensverlies of andere immateriële verliezen die voortvloeien uit het gebruik of de onmogelijkheid om het Platform te gebruiken. Onze aansprakelijkheid is beperkt tot maximaal de prijs die daadwerkelijk voor de Diensten is betaald.",
+      "s16H": "16. Vrijwaring",
+      "s16": "U verbindt zich ertoe ons te vrijwaren voor elke aansprakelijkheid, verlies, schade of vordering die voortvloeit uit uw schending van deze GV.",
+      "s17H": "17. Overige bepalingen",
+      "s17DivTitle": "Scheidbaarheid.",
+      "s17Div": "Indien een bepaling nietig of niet-afdwingbaar is, blijven de overige bepalingen onverminderd van kracht.",
+      "s17ForceTitle": "Overmacht.",
+      "s17Force": "Wij kunnen niet aansprakelijk worden gesteld voor niet-nakoming als gevolg van overmacht.",
+      "s17LawTitle": "Toepasselijk recht.",
+      "s17Law": "Deze GV worden beheerst door het materiële Zwitserse recht, zonder verwijzing naar de conflictrechtelijke bepalingen ervan.",
+      "s17JurisTitle": "Bevoegde rechtbank.",
+      "s17Juris": "Elk geschil valt onder de exclusieve bevoegdheid van de bevoegde rechtbanken ter plaatse van de maatschappelijke zetel van Aegryn.",
+      "s18H": "18. Contact",
+      "s18": "U kunt contact met ons opnemen via legal@aegryn.com."
+    }
   }
 }

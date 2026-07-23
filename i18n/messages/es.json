@@ -2380,97 +2380,149 @@
   },
   "bidModels": {
     "meta": {
-      "title": "Modelos de bid AEGRYN — Club Deal, Corporate, Fondos",
-      "desc": "Tres modelos de bid para adquirir un activo tech certificado AEGRYN: individual con co-inversores, empresa o fondo de inversión."
+      "title": "Modelos de adquisición — AEGRYN Auction",
+      "desc": "Club Deal, Corporate, Fondo, Equity Stake — los 4 modelos de adquisición AEGRYN con la Promesa de Transacción Tech en 5 pasos."
     },
     "hero": {
-      "label": "AEGRYN AUCTION — MODELOS DE BID",
-      "title": "Tres formas de adquirir\nun activo certificado.",
-      "desc": "AEGRYN estructura tres modelos de bid para cada perfil de adquirente. Cada modelo incluye un mecanismo de depósito en garantía y una Promesa de Transacción certificada."
+      "back": "← Auction",
+      "label": "AEGRYN AUCTION",
+      "title": "Elija su modelo de adquisición",
+      "desc": "Cuatro perfiles de compradores, un requisito: la calidad del deal. Cada modelo está adaptado a su estructura y objetivos."
     },
-    "model1": {
-      "label": "MODELO 01",
-      "title": "Club Deal\n(Individual + co-inversores)",
-      "badge": "HNWI · Emprendedores",
-      "desc": "Un adquirente principal puede asociar hasta 4 co-inversores declarados. Una sola oferta, un solo depósito pagado por el lead.",
-      "features": [
-        "Ticket mínimo: 500.000 EUR",
-        "Hasta 4 co-inversores declarados",
-        "Depósito pagado por el lead bidder",
-        "Asignación interna libre hasta la firma",
-        "KYC completo lead + KYC simplificado co-inv."
-      ],
-      "cta": "Solicitar — Club Deal"
-    },
-    "model2": {
-      "label": "MODELO 02",
-      "title": "Corporate\n(Empresa o Holding)",
-      "badge": "PYME · Holdings · Corporates",
-      "desc": "Una entidad legal adquiere el activo directamente en su balance. Co-bid posible entre dos entidades en JV declarada.",
-      "features": [
-        "Ticket mínimo: 500.000 EUR",
-        "Adquisición directa en balance",
-        "Asset deal o share deal disponible",
-        "JV posible (dos entidades co-adquirentes)",
-        "KYC completo B2B"
-      ],
-      "cta": "Solicitar — Corporate"
-    },
-    "model3": {
-      "label": "MODELO 03",
-      "title": "Fondo\n(PE · VC · Family Office)",
-      "badge": "PE · VC · Family Office · Search Fund",
-      "desc": "Los fondos institucionales se benefician de un plazo IC de 5 a 10 días antes de presentar una oferta firme. SPV disponible para co-inversión directa de LP.",
-      "features": [
-        "Ticket mínimo: 500.000 EUR (sin tope)",
-        "Plazo IC de 5-10 días hábiles",
-        "SPV disponible para co-inversión LP",
-        "Management presentation organizada por AEGRYN",
-        "KYC institucional"
-      ],
-      "cta": "Solicitar — Fondo"
-    },
-    "escrow": {
-      "label": "MECANISMO COMÚN",
-      "title": "La Promesa de Transacción\ncon depósito institucional.",
-      "desc": "Independientemente del modelo de bid, cada transacción AEGRYN se apoya en nuestro mecanismo PTT:",
+    "conditionsLabel": "Condiciones clave",
+    "structuresLabel": "Estructuras disponibles",
+    "models": [
+      {
+        "badge": "HNWI · Emprendedores · Particulares cualificados",
+        "label": "MODELO 01",
+        "title": "Club Deal",
+        "summary": "Un comprador principal (lead bidder) puede asociar hasta 4 co-inversores declarados. Una sola oferta, un solo depósito en garantía pagado por el lead. La distribución interna permanece confidencial.",
+        "conditions": [
+          "Ticket mínimo: 500.000 €",
+          "KYC completo del lead bidder + KYC simplificado de co-inversores",
+          "10% de garantía pagado por el lead bidder en 5 días hábiles",
+          "Hasta 4 co-inversores declarados bajo NDA",
+          "Distribución interna modificable hasta el signing"
+        ],
+        "structures": [
+          "Pago total en efectivo",
+          "Efectivo + earnout (plazo y KPIs a especificar)",
+          "Otro (a detallar)"
+        ]
+      },
+      {
+        "badge": "PYME · Holdings · Corporativos · Grupos",
+        "label": "MODELO 02",
+        "title": "Corporate",
+        "summary": "Una entidad legal adquiere el activo directamente en su balance. Dos entidades pueden co-adquirir a través de un JV declarado ante AEGRYN. Asset deal o share deal según la estructura elegida.",
+        "conditions": [
+          "Ticket mínimo: 500.000 €",
+          "KYC B2B completo — Kbis < 3 meses, estatutos, UBO ≥ 25%, identificación del director",
+          "10% de garantía pagado desde la cuenta de la entidad legal",
+          "JV posible: dos co-adquirentes, estructura a declarar antes de la oferta firme"
+        ],
+        "structures": [
+          "Asset deal (código, IP, contratos, base de clientes)",
+          "Share deal (adquisición de la sociedad titular)",
+          "Adquisición directa al balance",
+          "Adquisición mediante filial dedicada",
+          "Acqui-hire (integración de equipo + tecnología)"
+        ]
+      },
+      {
+        "badge": "PE · VC · Family Office · Search Fund · Fondos soberanos",
+        "label": "MODELO 03",
+        "title": "Fondo",
+        "summary": "Los fondos institucionales se benefician de un plazo IC de 5 a 10 días hábiles antes de presentar una oferta firme. SPV disponible para co-inversión directa de LP en deals específicos.",
+        "conditions": [
+          "Ticket mínimo: 500.000 € (sin techo)",
+          "KYC institucional — aprobación regulatoria si aplica (FINMA, AMF, FCA)",
+          "Plazo IC: reserva confidencial 5–10 días hábiles sin garantía",
+          "SPV posible para co-inversión directa de LP",
+          "Presentación de gestión a través de AEGRYN, nunca directamente vendedor/comprador"
+        ],
+        "structures": [
+          "Adquisición plataforma (primer activo en un roll-up PE)",
+          "Add-on (activo complementario a un portfolio existente)",
+          "Adquisición total (100%)",
+          "Adquisición minoritaria (< 50%) con SHA estructurado",
+          "LMBO (con participación del equipo actual)"
+        ]
+      },
+      {
+        "badge": "Inversores estratégicos · Socios operacionales",
+        "label": "MODELO 04",
+        "title": "Equity Stake",
+        "subBadge": "Sin cesión · Sin garantía",
+        "summary": "Para inversores o socios que desean tomar una participación en el activo sin adquirirlo totalmente — acciones a cambio de advisory fees, carried interest, o aportación operacional. Compromiso inmediato, sin garantía bancaria.",
+        "conditions": [
+          "Sin ticket mínimo fijo (valoración negociada entre las partes)",
+          "KYC según perfil (simplificado para particulares cualificados, completo para entidades)",
+          "Sin garantía — compromiso mediante SHA co-redactado con los asesores de ambas partes",
+          "Compromiso inmediato: firma SHA + eventualmente warrant o BSA",
+          "AEGRYN percibe una comisión de intermediación sobre la valoración acordada"
+        ],
+        "structures": [
+          "Advisory equity (X% a cambio de asesoría/experiencia durante N meses)",
+          "Carried interest (X% sobre los beneficios futuros del activo)",
+          "Inversión minoritaria en efectivo parcial + asiento en el consejo",
+          "Warrant / BSA (derecho a adquirir acciones en el futuro)",
+          "Revenue share + opción de compra futura"
+        ]
+      }
+    ],
+    "ptt": {
+      "label": "PROCESO COMÚN — MODELOS 01, 02, 03",
+      "title": "La Promesa de Transacción Tech",
+      "desc": "5 pasos estructurados para todos los deals con adquisición real. El Modelo Equity Stake sigue un proceso SHA dedicado sin garantía.",
       "steps": [
         {
           "num": "01",
-          "title": "Expresión de Interés",
-          "desc": "No vinculante. Transmitida al vendedor en 48h. No se requiere depósito."
+          "title": "Expresión de Interés (EI)",
+          "desc": "No vinculante. Transmitida al vendedor en 48h. Sin depósito requerido."
         },
         {
           "num": "02",
-          "title": "Acuerdo de Principio",
-          "desc": "Precio y estructura acordados. La firma del AP activa la obligación de depósito."
+          "title": "Acuerdo de Principio (AP)",
+          "desc": "Precio y estructura acordados. La firma del AP activa la obligación de garantía."
         },
         {
           "num": "03",
-          "title": "Depósito 10%",
-          "desc": "Pagado en cuenta bancaria de terceros en 5 días hábiles. AEGRYN nunca tiene acceso a los fondos."
+          "title": "Garantía 10%",
+          "desc": "Depositada en cuenta bancaria de terceros en 5 días hábiles. AEGRYN nunca tiene acceso a los fondos. Banco socio actúa como depositario."
         },
         {
           "num": "04",
-          "title": "Due Diligence — 30 días",
-          "desc": "Acceso completo a data room. Q&A vía AEGRYN."
+          "title": "Due Diligence — 30 días estándar",
+          "desc": "Acceso completo al data room bajo NDA. Q&A únicamente a través de AEGRYN (nunca directamente vendedor/comprador). Extensión posible por mutuo acuerdo (máx. +30 días)."
         },
         {
           "num": "05",
           "title": "Signing & Closing",
-          "desc": "Documentación del código. Fondos liberados. Transferencia del activo."
+          "desc": "KRYV Protocol certifica el estado exacto del código. Pago del saldo (90% restante). Transferencia del activo + emisión del Certificado de Transacción AEGRYN."
         }
       ],
-      "penaltiesTitle": "Protección bilateral",
-      "penaltyBuyer": "Retirada del comprador sin causa -> depósito al vendedor",
-      "penaltySeller": "Retirada del vendedor sin causa -> depósito doblado al comprador",
-      "penaltyCs": "Condición suspensiva levantada -> depósito íntegramente restituido"
+      "protection": {
+        "title": "Protección bilateral",
+        "buyer": {
+          "title": "Retractación del comprador",
+          "desc": "Sin motivo válido → garantía adquirida por el vendedor."
+        },
+        "seller": {
+          "title": "Retractación del vendedor",
+          "desc": "Sin motivo válido → garantía restituida doblada al comprador."
+        },
+        "condition": {
+          "title": "Condición suspensiva levantada",
+          "desc": "→ Garantía íntegramente restituida al comprador (sin culpa)."
+        }
+      }
     },
     "cta": {
       "title": "¿Listo para presentar una oferta?",
-      "desc": "Complete su expediente de calificación como adquirente para acceder al catálogo.",
-      "btn": "Presentar mi candidatura como adquirente",
-      "secondary": "Ver el catálogo"
+      "desc": "Consulte los activos disponibles o contáctenos para hablar de su perfil de adquisición.",
+      "btnGuide": "Guía del comprador",
+      "btnCatalog": "Ver el catálogo"
     }
   },
   "assessmentDays": {
@@ -3089,7 +3141,146 @@
     "authorityCH": "Suiza: PFPDT — www.edoeb.admin.ch",
     "authorityFR": "Francia: CNIL — www.cnil.fr",
     "authorityEU": "UE: EDPB — www.edpb.europa.eu",
-    "contactEmail": "dataprivacy@aegryn.com"
+    "contactEmail": "dataprivacy@aegryn.com",
+    "content": {
+      "intro": {
+        "h": "Introducción",
+        "p1": "Dada la importancia que otorgamos a la protección de sus datos y a su privacidad, hemos elaborado el presente aviso de protección de datos para explicarle qué hacemos cuando visita nuestro sitio web aegryn.com.",
+        "p2": "El presente aviso de protección de datos cubre únicamente el tratamiento de datos relacionado con nuestro sitio web. Pueden aplicarse avisos específicos de protección de datos a otros servicios y ofertas que proporcionamos.",
+        "p3": "En Suiza, la protección de sus datos se basa, en particular, en la Ley federal de 25 de septiembre de 2020 sobre protección de datos (LPD), así como en la Ordenanza federal sobre protección de datos (OPDa) del 31 de agosto. Nuestro aviso de protección de datos y nuestras prácticas están alineados con las disposiciones legales contenidas en dicha legislación.",
+        "defsTitle": "Hemos agrupado las principales definiciones para facilitar la comprensión de este aviso:",
+        "defs": {
+          "dataSubject": [
+            "Interesado:",
+            "la persona física cuyos datos personales son tratados."
+          ],
+          "personalData": [
+            "Datos personales:",
+            "toda información relativa a una persona física identificada o identificable."
+          ],
+          "sensitiveData": [
+            "Datos personales sensibles:",
+            "datos relativos a opiniones o actividades religiosas, filosóficas, políticas o sindicales; datos relativos a la salud, la esfera privada o la pertenencia a una raza o grupo étnico; datos genéticos; datos biométricos; datos relativos a procedimientos y sanciones administrativas y penales; datos relativos a medidas de asistencia social."
+          ],
+          "processing": [
+            "Tratamiento:",
+            "toda manipulación de datos personales, independientemente de los medios y procedimientos utilizados."
+          ],
+          "controller": [
+            "Responsable del tratamiento:",
+            "una persona privada u organismo federal que, solo o conjuntamente con otros, determina los fines y medios del tratamiento de datos personales."
+          ],
+          "processor": [
+            "Encargado del tratamiento:",
+            "la persona privada u organismo federal que trata datos personales por cuenta del responsable del tratamiento."
+          ],
+          "pfpdt": [
+            "PFPDT:",
+            "el Comisionado Federal de Protección de Datos e Información, responsable de velar por la correcta aplicación de las disposiciones federales de protección de datos."
+          ]
+        }
+      },
+      "whoWeAre": {
+        "h": "¿Quiénes somos y cómo puede contactarnos?",
+        "p": "Aegryn Sàrl es el nombre de nuestra empresa. Si tiene preguntas sobre el tratamiento de datos relacionado con nuestro sitio web, puede contactarnos por correo postal: Aegryn Sàrl, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. También puede contactarnos por correo electrónico en legal@aegryn.com o mediante nuestro formulario de contacto."
+      },
+      "ourRole": {
+        "h": "¿Cuál es nuestro papel en la protección de datos?",
+        "p1": "Cuando navega por nuestro sitio web, podemos tratar algunos de sus datos personales. De conformidad con la LPD, somos el responsable del tratamiento.",
+        "p2": "Como responsable del tratamiento, somos responsables de determinar los fines para los que tratamos sus datos personales, la forma en que se tratan y las medidas de seguridad. Cuando trabajamos con proveedores de servicios, nos aseguramos de que compartan nuestro compromiso con la protección de datos.",
+        "p3": "La protección de datos es responsabilidad de todos. Le animamos a leer este aviso y, si es uno de nuestros clientes, a consultar los documentos contractuales que nos vinculan."
+      },
+      "whenCollect": {
+        "h": "¿Cuándo y cómo recopilamos sus datos?",
+        "p": "Desde su primera interacción con nuestro sitio web, recopilamos datos (por ejemplo, para determinar si consiente el uso de cookies). También nos facilita sus datos cuando nos contacta a través de nuestro formulario de contacto."
+      },
+      "categories": {
+        "h": "¿Qué categorías de datos tratamos?",
+        "contactH": "Datos de contacto",
+        "contactP": "Tratamos sus datos de contacto, como su nombre, apellido, dirección, número de teléfono o dirección de correo electrónico.",
+        "internetH": "Datos de Internet y de conexión",
+        "internetP": "Por razones técnicas y para mejorar nuestro sitio web, tratamos su dirección IP, información sobre su proveedor de acceso a Internet y el sistema operativo de su dispositivo, información sobre la URL de referencia, el navegador utilizado, la fecha y hora de acceso y el contenido consultado durante su visita."
+      },
+      "sensitive": {
+        "h": "¿Qué ocurre con los datos sensibles y los menores?",
+        "p": "No recopilamos ni tratamos ningún dato personal sensible. Aunque el acceso a nuestro sitio web está abierto a todos, nuestros servicios están destinados exclusivamente a adultos. No nos dirigimos a menores ni recopilamos deliberadamente ningún dato personal sobre ellos."
+      },
+      "why": {
+        "h": "¿Por qué tratamos sus datos?",
+        "pIntro": "Tratamos sus datos para:",
+        "items": [
+          "Comunicarnos con usted, en particular para responder a sus solicitudes y ejercer sus derechos.",
+          "Informarle sobre nuestros servicios y ofertas.",
+          "Generar estadísticas de tráfico útiles para mejorar nuestro sitio web.",
+          "Cumplir con las leyes, directivas y recomendaciones de las autoridades."
+        ],
+        "pNote": "Es importante señalar que no tomamos ninguna decisión individual automatizada."
+      },
+      "rights": {
+        "h": "¿Cuáles son sus derechos?",
+        "pIntro": "En general, la LPD le otorga los siguientes derechos:",
+        "items": [
+          "Tiene derecho a acceder a sus datos.",
+          "Tiene derecho a solicitar que sus datos se proporcionen en un formato electrónico de uso común.",
+          "Tiene derecho a que se rectifiquen los datos inexactos.",
+          "Tiene derecho a oponerse al tratamiento de sus datos.",
+          "Tiene derecho a solicitar la supresión o destrucción de sus datos.",
+          "Tiene derecho a exigir que una decisión individual automatizada sea revisada por una persona física."
+        ],
+        "pContact": "Para ejercer cualquiera de estos derechos, póngase en contacto con nosotros. Si considera que tratamos sus datos en violación de las disposiciones de protección de datos, también puede denunciarnos ante el PFPDT."
+      },
+      "security": {
+        "h": "¿Cómo protegemos sus datos?",
+        "p": "Adoptamos medidas de seguridad adecuadas, como el cifrado, para proteger sus datos personales. Si cree que sus datos personales han sido comprometidos, infórmenos inmediatamente en legal@aegryn.com."
+      },
+      "storage": {
+        "h": "¿Dónde se almacenan sus datos y durante cuánto tiempo?",
+        "p": "Los datos se almacenan en nuestras instalaciones y en los centros de tratamiento operados por nuestros proveedores de servicios. Tratamos sus datos mientras lo exija la finalidad del tratamiento, tengamos un interés legítimo en conservarlos o los datos estén sujetos a una obligación legal de conservación (hasta 10 años para ciertos datos)."
+      },
+      "sharing": {
+        "h": "¿Con quién compartimos sus datos?",
+        "p": "La gestión de nuestro sitio web implica la colaboración con proveedores de servicios externos especializados (creación, mantenimiento, alojamiento). Nos aseguramos de que dichas comunicaciones estén estrictamente limitadas a lo necesario. Cuando los datos se transfieren fuera de Suiza o del EEE, utilizamos las cláusulas contractuales tipo revisadas de la Comisión Europea u otras garantías adecuadas.",
+        "providersH": "Nuestros proveedores de servicios",
+        "tableHeaders": [
+          "Proveedor",
+          "Finalidad",
+          "Lugar de tratamiento"
+        ],
+        "providers": [
+          [
+            "Vercel",
+            "Alojamiento y despliegue del sitio web.",
+            "EEE/USA"
+          ],
+          [
+            "Cloudflare",
+            "Seguridad, disponibilidad y analíticas conformes con el RGPD del sitio web.",
+            "EEE/USA"
+          ],
+          [
+            "Resend",
+            "Envío transaccional de correos electrónicos de contacto.",
+            "EEE/USA"
+          ]
+        ]
+      },
+      "cookies": {
+        "h": "¿Qué cookies utilizamos?",
+        "p": "Nuestro sitio web utiliza cookies. Puede acceder a la lista de tipos de cookies a través de nuestro banner de cookies. Puede bloquear las cookies activando un ajuste en su navegador o mediante nuestro banner de cookies."
+      },
+      "social": {
+        "h": "Redes sociales",
+        "p": "Mantenemos nuestra presencia en redes sociales (LinkedIn, Facebook, Instagram, TikTok, YouTube). Cuando se comunica con nosotros en estas plataformas, recopilamos datos utilizados principalmente para comunicarnos con usted. Para más información, consulte los avisos de protección de datos de los operadores correspondientes."
+      },
+      "comms": {
+        "h": "Servicios de contacto y comunicación",
+        "p": "Aegryn Sàrl no es un proveedor de servicios de telecomunicaciones. Las funciones de comunicación dentro de las aplicaciones (llamadas, chat) funcionan exclusivamente a través de protocolos de Internet (VoIP y mensajería de datos). Este número de contacto y las funciones de comunicación de las aplicaciones no están destinados a los servicios de emergencia."
+      },
+      "final": {
+        "h": "Disposiciones finales",
+        "p": "Nos reservamos el derecho de modificar los términos del presente aviso a nuestra entera discreción. Cualquier versión modificada se publicará en nuestro sitio web."
+      }
+    }
   },
   "security": {
     "meta": {
@@ -3519,5 +3710,348 @@
     "sectionSeller": "Espacio vendedor",
     "sectionPartner": "Espacio socio",
     "disclaimer": "AEGRYN Auction · Ginebra · Suiza — Acceso estrictamente confidencial"
+  },
+  "waitlist": {
+    "header": {
+      "label": "Lista de espera — Sesiones Auction",
+      "title": "Unirse a la lista de acceso prioritario"
+    },
+    "step1": {
+      "profileLabel": "Soy *",
+      "sourceLabel": "¿Cómo se enteró de AEGRYN?",
+      "next": "Siguiente",
+      "profiles": {
+        "buyer": "Comprador",
+        "seller": "Vendedor",
+        "partner": "Socio",
+        "undecided": "No definido"
+      }
+    },
+    "step2": {
+      "buyer": {
+        "categoryLabel": "Perfil comprador *",
+        "ticketLabel": "Ticket de adquisición objetivo *",
+        "timelineLabel": "Horizonte de despliegue *",
+        "intentLabel": "Naturaleza de la adquisición",
+        "sectorsLabel": "Sectores de interés (5 máx.)",
+        "financingLabel": "¿Financiación asegurada?",
+        "yes": "Sí",
+        "noInProgress": "No / en curso",
+        "categories": {
+          "individual_hnw": "Particular de alto patrimonio (HNW)",
+          "family_office": "Family office",
+          "search_fund": "Search fund / ETA",
+          "pe_vc_fund": "Fondo PE / VC",
+          "corporate_strategic": "Adquirente corporativo / estratégico",
+          "holding": "Holding patrimonial"
+        },
+        "tickets": {
+          "<500k": "< 500K€",
+          "500k-2m": "500K€ – 2M€",
+          "2m-5m": "2M€ – 5M€",
+          "5m-20m": "5M€ – 20M€",
+          "20m+": "> 20M€"
+        },
+        "timelines": {
+          "immediate": "Inmediato (< 3 meses)",
+          "3-6m": "3 – 6 meses",
+          "6-12m": "6 – 12 meses",
+          "opportunistic": "Oportunista / sin plazo"
+        },
+        "intents": {
+          "single_asset": "Adquisición única dirigida",
+          "portfolio_buildup": "Construcción de cartera",
+          "exploratory": "Exploración de mercado"
+        }
+      },
+      "seller": {
+        "stageLabel": "Etapa del activo *",
+        "arrLabel": "ARR anual estimado *",
+        "reasonLabel": "Motivo de venta *",
+        "timelineLabel": "Horizonte deseado",
+        "stages": {
+          "idea": "Idea / prelanzamiento",
+          "mvp": "MVP / beta",
+          "revenue_generating": "Genera ingresos",
+          "scaling": "En crecimiento",
+          "mature": "Maduro / establecido"
+        },
+        "arrRanges": {
+          "<100k": "< 100K€",
+          "100k-500k": "100K€ – 500K€",
+          "500k-2m": "500K€ – 2M€",
+          "2m-10m": "2M€ – 10M€",
+          "10m+": "> 10M€"
+        },
+        "reasons": {
+          "full_exit": "Cesión total",
+          "partial": "Cesión parcial / captación",
+          "succession": "Transmisión / sucesión",
+          "burnout": "Agotamiento / burnout fundador",
+          "strategic_pivot": "Giro estratégico"
+        },
+        "timelines": {
+          "immediate": "Inmediato (< 3 meses)",
+          "3-6m": "3 – 6 meses",
+          "6-12m": "6 – 12 meses",
+          "flexible": "Flexible / según oferta"
+        }
+      },
+      "partner": {
+        "categoryLabel": "Tipo de estructura *",
+        "dealflowLabel": "Volumen de introducciones estimado",
+        "categories": {
+          "law_firm": "Despacho de abogados",
+          "accounting": "Firma de contabilidad",
+          "ma_boutique": "Boutique M&A / asesoría",
+          "vc_pe": "VC / PE",
+          "accelerator": "Acelerador / incubadora",
+          "other": "Otro"
+        },
+        "dealflows": {
+          "<5_per_year": "< 5 introducciones / año",
+          "5-10_per_year": "5 – 10 / año",
+          "10-20_per_year": "10 – 20 / año",
+          "20+_per_year": "> 20 / año"
+        }
+      },
+      "undecidedNote": "Sin problema — simplemente rellene sus datos de contacto y nuestro equipo se pondrá en contacto con usted.",
+      "back": "Volver",
+      "next": "Siguiente"
+    },
+    "step3": {
+      "firstNameLabel": "Nombre",
+      "lastNameLabel": "Apellido *",
+      "emailLabel": "Correo electrónico *",
+      "firstNamePlaceholder": "Juan",
+      "lastNamePlaceholder": "García",
+      "emailPlaceholder": "usted@ejemplo.com",
+      "gdprConsent": "Acepto que mis datos sean tratados por AEGRYN en el marco de mi solicitud de acceso a las sesiones auction, de conformidad con el RGPD / nLPD. *",
+      "marketingConsent": "Acepto recibir comunicaciones de AEGRYN (nuevas sesiones, activos disponibles).",
+      "back": "Volver",
+      "submit": "Enviar",
+      "submitting": "Enviando..."
+    },
+    "sources": {
+      "linkedin": "LinkedIn",
+      "organic": "Búsqueda / boca a boca",
+      "referral": "Recomendación",
+      "event": "Evento / conferencia",
+      "partner_intro": "Introducción de socio",
+      "direct": "Contacto directo AEGRYN"
+    },
+    "sectors": [
+      "SaaS B2B",
+      "IA / ML",
+      "LegalTech",
+      "FinTech",
+      "EdTech",
+      "HealthTech",
+      "E-commerce",
+      "Marketplaces",
+      "Ciberseguridad",
+      "PropTech",
+      "Logística",
+      "Otro"
+    ],
+    "placeholder": "— Seleccionar —",
+    "done": {
+      "title": "Solicitud registrada",
+      "desc": "Nuestro equipo revisará su perfil y se pondrá en contacto en 48h para validar su acceso a la próxima sesión AEGRYN Auction.",
+      "note": "Sin acceso sin invitación nominativa."
+    },
+    "errors": {
+      "server": "Se ha producido un error.",
+      "network": "Error de red. Por favor, inténtelo de nuevo."
+    }
+  },
+  "auctionSheet": {
+    "executiveSummaryKicker": "Resumen ejecutivo · De un vistazo",
+    "executiveSummaryTitle": "Síntesis del activo",
+    "disclosureKicker": "Menciones y condiciones de distribución"
+  },
+  "neediuDpn": {
+    "meta": {
+      "title": "Aviso de Protección de Datos y CGU — neediu | Aegryn",
+      "desc": "Aviso de protección de datos y condiciones de uso de la plataforma neediu — Aegryn Sàrl, conforme a la LPD suiza y al RGPD."
+    },
+    "breadcrumb": "Legal",
+    "sectionDpn": "(01)",
+    "h1": "Aviso de Protección de Datos – AEGRYN neediu",
+    "disclaimer": "Descargo de responsabilidad: Este aviso de protección de datos es una traducción generada por inteligencia artificial y se proporciona únicamente con fines informativos. En caso de discrepancias o incoherencias, prevalecerá la versión inglesa.",
+    "updated": "Última actualización: 01/03/2026",
+    "dpn": {
+      "intro": {
+        "h": "Introducción",
+        "p1": "neediu es una plataforma que permite a los usuarios identificar y conectarse rápidamente con profesionales o particulares de confianza que ofrecen ayuda para necesidades del hogar en su región. Como concedemos gran importancia a la protección de sus datos y a su privacidad, hemos elaborado este aviso de protección de datos para explicarle qué hacemos con sus datos cuando utiliza nuestra plataforma.",
+        "p2": "Este aviso de protección de datos cubre únicamente el tratamiento de datos relacionado con nuestra plataforma. Nuestro objetivo es garantizar una protección adecuada de los datos personales de conformidad con todas las leyes de protección de datos aplicables, incluidas la Ley Federal Suiza de Protección de Datos (FADP) y el Reglamento General de Protección de Datos (RGPD).",
+        "defsTitle": "Principales definiciones de la LPD:",
+        "defs": {
+          "dataSubject": ["Interesado:", "La persona física cuyos datos personales son objeto de tratamiento."],
+          "personalData": ["Datos personales:", "Cualquier información relativa a una persona física identificada o identificable."],
+          "sensitiveData": ["Datos personales sensibles:", "Datos relativos a opiniones o actividades religiosas, filosóficas, políticas o sindicales; datos relativos a la salud, la esfera íntima o la pertenencia a una raza o etnia; datos genéticos; datos biométricos que identifiquen de forma única a una persona física; datos relativos a procedimientos o sanciones administrativas y penales; datos relativos a medidas de asistencia social."],
+          "processing": ["Tratamiento:", "Cualquier manipulación de datos personales, con independencia de los medios y procedimientos utilizados."],
+          "controller": ["Responsable del tratamiento:", "La persona privada u organismo federal que, solo o conjuntamente con otros, determina los fines y medios del tratamiento de datos personales."],
+          "processor": ["Encargado del tratamiento:", "La persona privada u organismo federal que trata datos personales por cuenta del responsable del tratamiento."],
+          "pfpdt": ["PFPDT:", "El Comisionado Federal de Protección de Datos y Transparencia, encargado de supervisar la correcta aplicación de las disposiciones federales de protección de datos."]
+        }
+      },
+      "whoWeAre": {
+        "h": "¿Quiénes somos y cómo contactarnos?",
+        "p": "Aegryn Sàrl es el nombre de nuestra empresa. Si tiene preguntas sobre el tratamiento de datos relacionado con nuestra plataforma, puede contactarnos por correo postal: Aegryn Sàrl, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suiza. También puede contactarnos por correo electrónico en legal@aegryn.com."
+      },
+      "ourRole": {
+        "h": "¿Cuál es nuestro papel en materia de protección de datos?",
+        "p1": "Cuando utiliza nuestra plataforma, podemos tratar determinados datos personales suyos. De conformidad con la LPD, somos el responsable del tratamiento. Cuando se comparten datos personales con un Proveedor de Servicios para la ejecución de una tarea, este actúa como responsable del tratamiento independiente.",
+        "p2": "Como responsable del tratamiento, determinamos los fines para los que tratamos sus datos personales, la forma en que se tratan y las medidas de seguridad aplicables. La protección de datos es responsabilidad de todos. Le recomendamos que lea este aviso detenidamente."
+      },
+      "whenCollect": {
+        "h": "¿Cuándo y cómo recogemos sus datos?",
+        "p": "La recogida de datos comienza desde el momento en que accede a nuestra Plataforma o interactúa con ella. Recogemos datos directamente de usted cuando utiliza la Plataforma y cuando crea una Cuenta de Usuario, ya sea como Cliente o Proveedor de Servicios. No recogemos datos de terceros, salvo en el contexto de campañas de marketing dirigidas."
+      },
+      "categories": {
+        "h": "¿Qué categorías de datos tratamos?",
+        "contactH": "Datos de contacto",
+        "contactP": "Nombre, apellido, dirección, número de teléfono o dirección de correo electrónico al crear una cuenta.",
+        "privateH": "Datos privados",
+        "privateP": "Datos relativos a su situación personal: sexo, fecha de nacimiento, foto, lugar de origen, idioma de contacto y país de residencia.",
+        "accountH": "Datos de cuenta",
+        "accountP": "Estado de la cuenta, servicios ofrecidos o solicitados, foto de perfil y otras preferencias, historial de servicios, configuración de disponibilidad, participación en funciones como reseñas o mensajería.",
+        "economicH": "Datos económicos",
+        "economicP": "Método de pago, importes pagados o recibidos, historial de transacciones, comisiones aplicables, dirección de facturación, datos bancarios para pagos. Los datos de métodos de pago son tratados únicamente por nuestros proveedores terceros — no tratamos números de tarjeta de crédito ni códigos CVC.",
+        "internetH": "Datos de Internet y conexión",
+        "internetP": "Dirección IP, información sobre su proveedor de acceso a Internet y sistema operativo del dispositivo, URL de referencia, navegador utilizado, fecha y hora de acceso, contenidos consultados.",
+        "otherH": "Otros datos",
+        "otherP": "Tipo y alcance de la tarea, tamaño o estado del hogar o los locales, fecha y hora deseadas, fotos o descripciones que clarifiquen la naturaleza del encargo, datos de identificación en el marco del proceso KYC."
+      },
+      "sensitive": {
+        "h": "Datos sensibles y menores",
+        "p": "No recogemos ni tratamos datos personales sensibles. Nuestros servicios están destinados exclusivamente a adultos. No nos dirigimos a menores y no recogemos deliberadamente ningún dato personal relacionado con ellos."
+      },
+      "why": {
+        "h": "¿Por qué tratamos sus datos?",
+        "pIntro": "Tratamos sus datos personales con el fin de:",
+        "items": [
+          "Permitir el acceso y el uso de la Plataforma (creación y gestión de cuentas, intermediación, procesamiento de pagos, mensajería, visualización de información relevante).",
+          "Comunicarnos con usted, responder a sus solicitudes y ejercer sus derechos.",
+          "Generar estadísticas de tráfico útiles para la mejora de la Plataforma.",
+          "Cumplir con las leyes, directivas y recomendaciones de las autoridades aplicables."
+        ],
+        "pNote": "No tomamos ninguna decisión individual automatizada."
+      },
+      "rights": {
+        "h": "¿Cuáles son sus derechos?",
+        "pIntro": "En general, la LPD le reconoce los siguientes derechos:",
+        "items": [
+          "Tiene derecho a acceder a sus datos.",
+          "Tiene derecho a solicitar que sus datos se proporcionen en un formato electrónico de uso común.",
+          "Tiene derecho a que se rectifiquen los datos inexactos.",
+          "Tiene derecho a oponerse al tratamiento de sus datos.",
+          "Tiene derecho a solicitar la supresión o destrucción de sus datos.",
+          "Tiene derecho a exigir que una decisión individual automatizada sea revisada por una persona física."
+        ],
+        "pContact": "Para ejercer cualquiera de estos derechos, póngase en contacto con nosotros. Si considera que tratamos sus datos en violación de las disposiciones de protección de datos, puede denunciarnos ante el PFPDT."
+      },
+      "security": {
+        "h": "¿Cómo protegemos sus datos?",
+        "p": "Adoptamos medidas de seguridad adecuadas, como el cifrado, para proteger sus datos personales. Si cree que sus datos han sido comprometidos, infórmenos inmediatamente en legal@aegryn.com."
+      },
+      "storage": {
+        "h": "¿Dónde y durante cuánto tiempo se almacenan sus datos?",
+        "p": "Los datos personales se almacenan en nuestras instalaciones y en los centros de tratamiento operados por nuestros proveedores terceros. Los conservamos durante el tiempo necesario para el cumplimiento de los fines del tratamiento o mientras tengamos un interés legítimo en conservarlos. Para determinados datos, el período de conservación puede ser de hasta diez años."
+      },
+      "sharing": {
+        "h": "¿Con quién compartimos sus datos?",
+        "p": "La gestión de nuestra plataforma implica la colaboración con proveedores terceros especializados. Algunos datos personales también se comparten directamente entre usuarios cuando es necesario para la ejecución de un servicio solicitado. Todas estas comunicaciones están estrictamente limitadas a lo necesario y se realizan de conformidad con el marco jurídico aplicable. Cuando los datos se transfieren fuera de Suiza o del EEE, utilizamos las cláusulas contractuales tipo revisadas de la Comisión Europea u otras garantías adecuadas.",
+        "providersH": "Nuestros proveedores terceros",
+        "tableHeaders": ["Proveedor", "Finalidad", "Lugar de tratamiento"],
+        "providers": [
+          ["Supabase", "Plataforma backend-as-a-service para el desarrollo de la aplicación.", "EEE"],
+          ["Stripe", "Infraestructura de pago global — procesamiento seguro de transacciones y verificación de identidad.", "EEE/EE.UU."],
+          ["Google Analytics", "Servicio de análisis para supervisar el uso de la plataforma y elaborar informes de actividad.", "EEE/EE.UU."]
+        ]
+      },
+      "social": {
+        "h": "Redes sociales",
+        "p": "Estamos presentes en redes sociales (Facebook, Instagram, TikTok). Cuando se comunica con nosotros en estas plataformas, recogemos datos principalmente para comunicarnos con usted. Para más información, consulte los avisos de protección de datos de los operadores correspondientes."
+      },
+      "final": {
+        "h": "Disposiciones finales (Aviso)",
+        "p": "Nos reservamos el derecho de modificar los términos de este aviso a nuestra entera discreción. Cualquier versión modificada se publicará en nuestra plataforma."
+      }
+    },
+    "cgu": {
+      "sectionLabel": "(02)",
+      "h2": "Condiciones de uso – AEGRYN neediu",
+      "disclaimer": "Descargo de responsabilidad: Esta declaración de protección de datos es una traducción generada por IA y se proporciona únicamente con fines informativos. En caso de discrepancias o incoherencias, prevalecerá la versión inglesa.",
+      "intro": "Las presentes Condiciones de Uso (CdU) se aplican a cualquier uso de la Plataforma Aegryn, la aplicación móvil neediu, así como a cualquier servicio accesible o prestado a través de la Plataforma (los Servicios), proporcionados y gestionados por Aegryn Sàrl, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suiza.",
+      "s1H": "1. Generalidades",
+      "s1AcceptTitle": "Aceptación.",
+      "s1Accept": "Al acceder a nuestra Plataforma o utilizarla, acepta quedar vinculado por las presentes CdU.",
+      "s1ModifTitle": "Modificaciones.",
+      "s1Modif": "Las presentes CdU podrán modificarse ocasionalmente, en cuyo caso será informado por cualquier medio apropiado (incluyendo por correo electrónico o a través de la Plataforma). Deberá aceptar las nuevas CdU para continuar utilizando la Plataforma.",
+      "s2H": "2. CdU personales",
+      "s2": "Al utilizar la Plataforma o los Servicios, confirma y garantiza que tiene al menos 18 años y, si utiliza la Plataforma en nombre de una entidad jurídica, que está debidamente autorizado para hacerlo.",
+      "s3H": "3. Cuenta personal",
+      "s3AccountTitle": "Cuenta.",
+      "s3Account": "Para acceder a determinadas funcionalidades, es necesario crear una cuenta personal proporcionando la información requerida y aceptando las presentes CdU.",
+      "s3MemberTitle": "Membresías.",
+      "s3Member": "Existen dos categorías de Usuarios Registrados: (i) los Clientes que utilizan la Plataforma para buscar y recibir servicios, y (ii) los Proveedores de Servicios que ofrecen y prestan servicios para los Clientes.",
+      "s3ConfidTitle": "Confidencialidad.",
+      "s3Confid": "Usted es el único responsable de la confidencialidad de su contraseña y de cualquier actividad que se produzca en su Cuenta. Notifíquenos inmediatamente cualquier uso fraudulento.",
+      "s3KycTitle": "Verificación de identidad.",
+      "s3Kyc": "Para cumplir los requisitos legales relacionados con las transacciones financieras y la prevención del fraude, nosotros o nuestro proveedor tercero podemos llevar a cabo procedimientos de verificación de identidad (KYC).",
+      "s4H": "4. Acceso, Internet y Telecomunicaciones",
+      "s4InternetTitle": "Internet.",
+      "s4Internet": "El uso de Internet conlleva riesgos (interceptación, alteración, supresión de datos). Al utilizar la Plataforma, acepta estos riesgos.",
+      "s4TelecomTitle": "Telecomunicaciones.",
+      "s4Telecom": "No somos un proveedor de telecomunicaciones. Las funcionalidades de llamada y chat funcionan a través de Internet (VoIP/datos) y no están vinculadas a redes móviles o fijas. No las utilice para servicios de emergencia.",
+      "s5H": "5. Funcionalidades y Servicios",
+      "s5": "La Plataforma proporciona un servicio digital que permite a los usuarios conectarse con profesionales o particulares que ofrecen ayuda para necesidades del hogar. La Plataforma facilita el contacto inicial pero no interviene en la ejecución de los servicios. No asumimos ninguna responsabilidad respecto a la calidad, puntualidad o resultado de los servicios prestados por terceros.",
+      "s6H": "6. Uso de la Plataforma",
+      "s6RightTitle": "Derecho de uso.",
+      "s6Right": "Se le otorga un derecho revocable, no exclusivo, intransferible de acceder y utilizar la Plataforma únicamente con el fin de buscar, ofrecer o beneficiarse de servicios de ayuda a domicilio.",
+      "s6RestrictTitle": "Restricciones.",
+      "s6Restrict": "Está estrictamente prohibido: (i) utilizar la Plataforma para fines distintos a los previstos; (ii) reproducir, modificar o crear obras derivadas de la Plataforma; (iii) acceder al código fuente mediante descompilación o ingeniería inversa; (iv) recopilar direcciones de correo electrónico con fines de spam.",
+      "s7H": "7. Contenido del usuario",
+      "s7": "Los Usuarios pueden publicar o crear contenido (textos, imágenes, fotos). Las reseñas deben ser honestas, respetuosas y basadas en experiencias reales. Los Usuarios conceden a Aegryn una licencia mundial, libre de regalías y perpetua para usar el Contenido del usuario en relación con los Servicios.",
+      "s8H": "8. Pagos y tarifas",
+      "s8": "Todos los pagos realizados a través de la Plataforma son procesados por proveedores de servicios de pago terceros. No almacenamos ni procesamos directamente la información de su tarjeta de pago.",
+      "s8FeesTitle": "Tarifas del Proveedor de Servicios.",
+      "s8FeesIntro": "Como Proveedor de Servicios, está sujeto a una comisión por cada servicio completado con éxito:",
+      "s8Fees": [
+        "Nivel Inicial (menos de 150 misiones): 20 %",
+        "Nivel Pro (150 a 300 misiones): 17,5 %",
+        "Nivel Élite (más de 300 misiones): 15 %"
+      ],
+      "s8Payout": "Los pagos se procesan generalmente en un plazo de 5 a 7 días hábiles tras la finalización del servicio.",
+      "s9H": "9. Reembolsos",
+      "s9": "Si un servicio pagado no se presta como se prometió, puede solicitar un reembolso en un plazo de 7 días desde la hora prevista del servicio, con los detalles justificativos. Evaluaremos las solicitudes caso por caso.",
+      "s10H": "10. Propiedad intelectual",
+      "s10": "A excepción del Contenido del usuario, Aegryn sigue siendo el único propietario de todos los derechos de propiedad intelectual sobre la Plataforma, los Servicios y el contenido accesible a través de la Plataforma.",
+      "s11H": "11. Restricciones de uso",
+      "s11": "Usted se compromete a: (i) respetar todas las disposiciones legales aplicables; (ii) no utilizar la Plataforma con fines ilícitos; (iii) no incluir información falsa, ilegal u ofensiva; (iv) no incluir virus ni programas maliciosos.",
+      "s12H": "12. Protección de datos",
+      "s12": "El Aviso de Protección de Datos, disponible en esta página, forma parte integrante de las presentes CdU.",
+      "s13H": "13. Modificaciones, suspensión y rescisión",
+      "s13": "Nos reservamos el derecho de modificar, interrumpir o retirar la Plataforma en cualquier momento. Podemos restringir, suspender o rescindir su Cuenta a nuestra entera discreción.",
+      "s14H": "14. Sin garantías",
+      "s14": "La Plataforma, los Servicios y el Contenido se proporcionan 'tal cual' y 'según disponibilidad'. Rechazamos todas las garantías, expresas o implícitas.",
+      "s15H": "15. Limitación de responsabilidad",
+      "s15": "Aegryn no será responsable de ningún daño, incluidas pérdidas de beneficios, pérdidas de datos u otras pérdidas intangibles resultantes del uso o la imposibilidad de uso de la Plataforma. Nuestra responsabilidad se limita al máximo al precio efectivamente pagado por los Servicios.",
+      "s16H": "16. Indemnización",
+      "s16": "Usted se compromete a indemnizarnos por cualquier responsabilidad, pérdida, daño o reclamación resultante de su incumplimiento de las presentes CdU.",
+      "s17H": "17. Varios",
+      "s17DivTitle": "Separabilidad.",
+      "s17Div": "Si alguna disposición es nula o inaplicable, las demás disposiciones permanecerán en plena vigencia.",
+      "s17ForceTitle": "Fuerza mayor.",
+      "s17Force": "No podemos ser considerados responsables por el incumplimiento debido a eventos de fuerza mayor.",
+      "s17LawTitle": "Ley aplicable.",
+      "s17Law": "Las presentes CdU se rigen por el derecho material suizo, sin referencia a sus disposiciones en materia de conflicto de leyes.",
+      "s17JurisTitle": "Jurisdicción.",
+      "s17Juris": "Cualquier disputa estará sujeta a la jurisdicción exclusiva de los tribunales competentes en el domicilio social de Aegryn.",
+      "s18H": "18. Contacto",
+      "s18": "Puede contactarnos en legal@aegryn.com."
+    }
   }
 }
