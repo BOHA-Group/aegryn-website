@@ -64,7 +64,7 @@ export default async function AuctionLotPage({ params }: Props) {
   const { data: { user } } = await supaUser.auth.getUser()
 
   if (!user) {
-    redirect(`/${locale}/client/login?next=/${locale}/auction/lot/${slug}`)
+    redirect(`/client/login?next=/${locale}/auction/lot/${slug}`)
   }
 
   /* ── 2. NDA + CGV check ── */

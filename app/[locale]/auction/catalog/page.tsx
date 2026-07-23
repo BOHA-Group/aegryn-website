@@ -152,13 +152,13 @@ export default async function AuctionCatalogPage({ params }: Props) {
               {!user && (
                 <div className="flex flex-col sm:flex-row gap-3 mt-4">
                   <Link
-                    href={`/${locale}/client/login?next=/${locale}/auction/catalog`}
+                    href={`/client/login?next=/${locale}/auction/catalog`}
                     className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-black transition-colors"
                   >
                     Se connecter <ArrowUpRight size={12} />
                   </Link>
                   <Link
-                    href={`/${locale}/client/register?next=/${locale}/auction/catalog`}
+                    href={`/client/register?next=/${locale}/auction/catalog`}
                     className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:border-ag-black hover:text-ag-black transition-all"
                   >
                     Créer un compte

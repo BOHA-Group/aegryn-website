@@ -130,7 +130,7 @@ export function AssetsGrid() {
                   </span>
                 )}
                 {asset.auctionEligible && (
-                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-apex">
+                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-navy bg-ag-apex/15 border border-ag-apex/30 px-2 py-0.5">
                     {t('auctionEligible')}
                   </span>
                 )}
