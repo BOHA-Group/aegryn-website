@@ -63,10 +63,21 @@ UPDATE public.partner_certifications SET status = 'rejected'  WHERE status = 'de
 
 -- Colonnes manquantes
 ALTER TABLE public.partner_certifications
-  ADD COLUMN IF NOT EXISTS validated_by     UUID        REFERENCES auth.users(id) ON DELETE SET NULL,
-  ADD COLUMN IF NOT EXISTS validated_at     TIMESTAMPTZ,
-  ADD COLUMN IF NOT EXISTS rejection_reason TEXT,
-  ADD COLUMN IF NOT EXISTS cosignature_amount_chf NUMERIC(10,2);
+  ADD COLUMN IF NOT EXISTS validated_by          UUID        REFERENCES auth.users(id) ON DELETE SET NULL,
+  ADD COLUMN IF NOT EXISTS validated_at          TIMESTAMPTZ,
+  ADD COLUMN IF NOT EXISTS rejection_reason      TEXT,
+  ADD COLUMN IF NOT EXISTS cosignature_amount_chf NUMERIC(10,2),
+  ADD COLUMN IF NOT EXISTS observations          TEXT;
+
+COMMENT ON COLUMN public.partner_certifications.observations IS
+  'Notes internes AEGRYN sur la contribution du partenaire — archivage, non visibles client.';
+
+-- Contrainte unique pour permettre l'upsert par (partenaire, actif, dimension)
+ALTER TABLE public.partner_certifications
+  DROP CONSTRAINT IF EXISTS partner_certifications_partner_asset_dim_unique;
+ALTER TABLE public.partner_certifications
+  ADD CONSTRAINT partner_certifications_partner_asset_dim_unique
+    UNIQUE (partner_id, asset_id, dimension);
 
 COMMENT ON COLUMN public.partner_certifications.validated_by IS
   'Admin AEGRYN ayant validé l''avis du partenaire (CAS 1).';

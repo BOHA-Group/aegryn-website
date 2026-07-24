@@ -46,7 +46,7 @@ export default function TransactionForm({ transaction, adminToken }: Props) {
 
   // CAS 2 — Apport d'affaires : AEGRYN reverse 20% de sa commission au partenaire introducteur
   const [partnerEmail, setPartnerEmail]     = useState(String(transaction.partner_email ?? ''))
-  const [partnerCommPct, setPartnerCommPct] = useState(String(transaction.partner_commission_pct ?? '20'))
+  const [partnerCommPct, setPartnerCommPct] = useState(String(transaction.partner_commission_pct ?? '10'))
   const [partnerCommChf, setPartnerCommChf] = useState(String(transaction.partner_commission_chf ?? ''))
   const [partnerSaved, setPartnerSaved]     = useState(false)
   const [partnerError, setPartnerError]     = useState('')
@@ -312,7 +312,7 @@ export default function TransactionForm({ transaction, adminToken }: Props) {
       <div className={sectionCls}>
         <div>
           <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Partenaire introducteur — CAS 2</h2>
-          <p className="text-[10px] text-gray-400 mt-0.5">AEGRYN reverse 20% de sa commission de transaction au partenaire apporteur, au closing effectif.</p>
+          <p className="text-[10px] text-gray-400 mt-0.5">Si un partenaire apporte l'affaire → AEGRYN reverse <strong>20%</strong> de sa commission au partenaire. Si AEGRYN apporte l'affaire → <strong>10%</strong> de la commission AEGRYN au partenaire (rémunération de closing). Déclenché au closing effectif uniquement.</p>
         </div>
 
         {partnerError && <div className="bg-red-50 border border-red-200 p-3 text-[11px] text-red-700">{partnerError}</div>}
@@ -340,7 +340,7 @@ export default function TransactionForm({ transaction, adminToken }: Props) {
               onChange={e => setPartnerCommPct(e.target.value)}
               placeholder="20"
             />
-            <p className="text-[9px] text-gray-400 mt-1">Standard AEGRYN : 20%</p>
+            <p className="text-[9px] text-gray-400 mt-1">AEGRYN apporte l'affaire : 10% · Partenaire apporte : 20%</p>
           </div>
           <div>
             <label className={labelCls}>Montant partenaire (CHF)</label>

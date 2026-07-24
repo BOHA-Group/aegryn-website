@@ -118,6 +118,54 @@ export default function GradeForm({
   const [benchmarkCategory,  setBenchmarkCategory]  = useState(initialAsset?.benchmark_category ?? '')
   const [aegOverride,        setAegOverride]        = useState<AEGGrade | ''>((initialAsset?.aeg_grade as AEGGrade) ?? '')
 
+  // Score partenaire — dimension P (0-25, même grille que CIFS)
+  const [partnerScore,       setPartnerScore]       = useState(0)
+  const [partnerEmail,       setPartnerEmail]       = useState('')
+  const [partnerDim,         setPartnerDim]         = useState<'code' | 'ip' | 'finance' | 'security'>('code')
+  const [partnerSubcodes,    setPartnerSubcodes]    = useState<string[]>([])
+  const [partnerObservations,setPartnerObservations]= useState('')
+  const [partnerSaving,      setPartnerSaving]      = useState(false)
+  const [partnerSaved,       setPartnerSaved]       = useState(false)
+  const [partnerError,       setPartnerError]       = useState('')
+
+  // Conformité partenaire — sous-codes dédiés
+  const PARTNER_CHECKS = [
+    { code: 'P-DOC-OK',   group: 'Documentation', fr: 'Documentation technique remise complète et lisible' },
+    { code: 'P-DOC-PART', group: 'Documentation', fr: 'Documentation partielle — manques identifiés' },
+    { code: 'P-DOC-KO',   group: 'Documentation', fr: 'Documentation absente ou insuffisante' },
+    { code: 'P-METH-OK',  group: 'Méthodologie',  fr: 'Méthodologie conforme au référentiel AEGRYN' },
+    { code: 'P-METH-DEV', group: 'Méthodologie',  fr: 'Déviation méthodologique signalée' },
+    { code: 'P-CON-OK',   group: 'Conclusion',    fr: 'Conclusions cohérentes avec les données fournies' },
+    { code: 'P-CON-WARN', group: 'Conclusion',    fr: 'Conclusions à nuancer — réserves formulées' },
+    { code: 'P-CON-KO',   group: 'Conclusion',    fr: 'Conclusions non cohérentes — à rejeter' },
+    { code: 'P-DELAY-OK', group: 'Délais',        fr: 'Rendu dans les délais convenus' },
+    { code: 'P-DELAY-KO', group: 'Délais',        fr: 'Délai dépassé sans justification' },
+  ]
+
+  async function savePartnerScore() {
+    setPartnerSaving(true)
+    setPartnerSaved(false)
+    setPartnerError('')
+    try {
+      const res = await fetch(`/api/admin/assets/${assetId}/partner-score`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          token: adminToken,
+          partner_email: partnerEmail,
+          dimension: partnerDim,
+          score: partnerScore,
+          subcodes: partnerSubcodes,
+          observations: partnerObservations || undefined,
+        }),
+      })
+      const json = await res.json() as { error?: string }
+      if (res.ok) setPartnerSaved(true)
+      else setPartnerError(json.error ?? 'Erreur')
+    } catch (err) { setPartnerError(String(err)) }
+    finally { setPartnerSaving(false) }
+  }
+
   const [cosigners, setCosigners] = useState({
     cosigner_legal: '', cosigner_legal_date: '',
     cosigner_account: '', cosigner_account_date: '',
@@ -476,6 +524,121 @@ export default function GradeForm({
           </div>
         </div>
       </div>
+
+      {/* ── Score partenaire — CAS 1 (co-certification CIFS) ── */}
+      {(isFull || isReviewPlus) && (
+        <div className={sectionCls}>
+          <div>
+            <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Score partenaire — Dimension P</h2>
+            <p className="text-[10px] text-gray-400 mt-0.5">
+              Évaluation de la contribution du partenaire co-signataire. Même grille 0-25 que les dimensions CIFS.
+              Documenter les points de conformité et observations pour archive AEGRYN.
+            </p>
+          </div>
+
+          {partnerError && <div className="bg-red-50 border border-red-200 p-3 text-[11px] text-red-700">{partnerError}</div>}
+          {partnerSaved && !partnerSaving && <div className="bg-emerald-50 border border-emerald-200 p-3 text-[11px] text-emerald-700">Score partenaire enregistré.</div>}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label className={labelCls}>Email / nom du partenaire</label>
+              <input
+                className={inputCls}
+                value={partnerEmail}
+                onChange={e => setPartnerEmail(e.target.value)}
+                placeholder="cabinet@exemple.com"
+              />
+            </div>
+            <div>
+              <label className={labelCls}>Dimension évaluée</label>
+              <select
+                className={`${inputCls} appearance-none`}
+                value={partnerDim}
+                onChange={e => setPartnerDim(e.target.value as typeof partnerDim)}
+              >
+                <option value="code">C — Code / technique</option>
+                <option value="ip">I — IP & Juridique</option>
+                <option value="finance">F — Finance / comptable</option>
+                <option value="security">S — Sécurité / cyber</option>
+              </select>
+            </div>
+          </div>
+
+          {/* Score 0-25 — même format que CIFS */}
+          <div>
+            <div className="flex items-center justify-between mb-1.5">
+              <label className={labelCls}>Score 0-25</label>
+              <span className="text-[10px] font-mono text-gray-400">
+                Note {scoreToNote(partnerScore)} — {GRADE_NOTE_LABEL[scoreToNote(partnerScore)].fr}
+              </span>
+            </div>
+            <div className="flex items-center gap-3">
+              <input
+                type="range" min={0} max={25} step={1}
+                value={partnerScore}
+                onChange={e => setPartnerScore(Number(e.target.value))}
+                className="flex-1 accent-gray-800"
+              />
+              <input
+                type="number" min={0} max={25}
+                value={partnerScore}
+                onChange={e => setPartnerScore(Math.min(25, Math.max(0, Number(e.target.value))))}
+                className="w-14 border border-gray-200 text-center font-mono text-[13px] py-1.5 focus:outline-none focus:border-gray-500"
+              />
+            </div>
+          </div>
+
+          {/* Sous-codes conformité partenaire */}
+          <div className="border border-gray-100 p-4">
+            <p className="text-[11px] font-semibold text-gray-700 mb-3">Points de conformité</p>
+            <div className="flex flex-col gap-4">
+              {Array.from(new Set(PARTNER_CHECKS.map(c => c.group))).map(group => (
+                <div key={group}>
+                  <p className="text-[9px] font-mono uppercase tracking-widest text-gray-400 mb-1.5">{group}</p>
+                  <div className="flex flex-col gap-1.5">
+                    {PARTNER_CHECKS.filter(c => c.group === group).map(c => (
+                      <label key={c.code} className="flex items-start gap-2 cursor-pointer group">
+                        <input
+                          type="checkbox"
+                          checked={partnerSubcodes.includes(c.code)}
+                          onChange={() => setPartnerSubcodes(prev =>
+                            prev.includes(c.code) ? prev.filter(x => x !== c.code) : [...prev, c.code]
+                          )}
+                          className="mt-0.5 accent-gray-800"
+                        />
+                        <span className="text-[11px] text-gray-600 group-hover:text-gray-900 leading-snug">
+                          <span className="font-mono font-semibold text-gray-800">{c.code}</span> — {c.fr}
+                        </span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Observations textuelles */}
+          <div>
+            <label className={labelCls}>Observations (archivées, non visibles client)</label>
+            <textarea
+              rows={4}
+              className={`${inputCls} resize-none`}
+              value={partnerObservations}
+              onChange={e => setPartnerObservations(e.target.value)}
+              placeholder="Points forts, réserves, recommandations internes…"
+            />
+          </div>
+
+          <button
+            type="button"
+            disabled={partnerSaving || !partnerEmail}
+            onClick={savePartnerScore}
+            className="border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors self-start disabled:opacity-40"
+          >
+            {partnerSaving ? 'Enregistrement…' : 'Enregistrer score partenaire'}
+          </button>
+        </div>
+      )}
 
       {/* ── Co-signataires (full_certification = 3 ; review_partner = 1 seul ; review = masqué) ── */}
       {!isReview && (
