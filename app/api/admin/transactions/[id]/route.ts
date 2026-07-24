@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
+import { getChfToEurRate }          from '@/lib/fxRate'
 
 const schema = z.object({
   token: z.string(),
@@ -24,7 +25,8 @@ const schema = z.object({
   commission_buyer_premium_pct: z.number().optional(),
   commission_referrer_chf:      z.number().optional(),
   net_seller_proceeds_chf:      z.number().optional(),
-  admin_note: z.string().max(2000).optional(),
+  admin_note:   z.string().max(2000).optional(),
+  audit_note:   z.string().max(1000).optional(),
   partner_email:          z.string().max(200).optional(),
   partner_commission_pct: z.number().optional(),
   partner_commission_chf: z.number().optional(),
@@ -77,6 +79,46 @@ export async function PATCH(
     if (body.net_seller_proceeds_chf      != null) update.net_seller_proceeds_chf      = body.net_seller_proceeds_chf
 
     if (body.admin_note) update.admin_note = body.admin_note
+
+    // ── Audit log enrichi pour escrow_amount_chf ───────────────────────
+    if (body.escrow_amount_chf != null || body.escrow_confirmed) {
+      const { data: txCurrent } = await supa
+        .from('transactions')
+        .select('escrow_amount_chf, status')
+        .eq('id', id)
+        .single()
+
+      const fx = await getChfToEurRate().catch(() => null)
+      const newAmount = body.escrow_amount_chf ?? (txCurrent?.escrow_amount_chf as number | null)
+
+      if (body.escrow_amount_chf != null) {
+        await supa.from('transaction_audit_log').insert({
+          transaction_id: id,
+          actor_role:     'admin',
+          event_type:     txCurrent?.escrow_amount_chf == null ? 'escrow_amount_set' : 'escrow_amount_updated',
+          old_amount_chf: txCurrent?.escrow_amount_chf ?? null,
+          new_amount_chf: body.escrow_amount_chf,
+          eur_rate:       fx?.eurPerChf ?? null,
+          eur_rate_date:  fx?.rateDate  ?? null,
+          amount_eur_approx: fx && newAmount ? Math.round(Number(newAmount) * fx.eurPerChf) : null,
+          note:           body.audit_note ?? body.admin_note ?? null,
+        })
+      }
+
+      if (body.escrow_confirmed) {
+        await supa.from('transaction_audit_log').insert({
+          transaction_id: id,
+          actor_role:     'admin',
+          event_type:     'escrow_confirmed',
+          new_amount_chf: newAmount,
+          eur_rate:       fx?.eurPerChf ?? null,
+          eur_rate_date:  fx?.rateDate  ?? null,
+          amount_eur_approx: fx && newAmount ? Math.round(Number(newAmount) * fx.eurPerChf) : null,
+          note:           'Séquestre confirmé — valeur contractuelle figée',
+        })
+      }
+    }
+    // ────────────────────────────────────────────────────────────
 
     if (body.partner_email          != null) update.partner_email          = body.partner_email
     if (body.partner_commission_pct != null) update.partner_commission_pct = body.partner_commission_pct

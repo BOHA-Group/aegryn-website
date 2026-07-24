@@ -265,7 +265,7 @@
     "cta": "Over Aegryn",
     "quote": "Een tech-asset zonder onafhankelijke certificering is een waarde zonder bewijs. AEGRYN levert het bewijs bij elk asset, bij elke overdracht.",
     "ceoName": "Yohann Bollack",
-    "ceoTitle": "Oprichter & CEO — AEGRYN Sàrl",
+    "ceoTitle": "Oprichter & CEO — AEGRYN",
     "stats": [
       {
         "val": "6",
@@ -641,7 +641,7 @@
     "privacy": "Privacy",
     "terms": "Voorwaarden",
     "dataProtection": "Gegevensbeschermingsverklaring",
-    "neediuLegal": "Neediu is een geregistreerd handelsmerk van Aegryn Sàrl. Alle rechten voorbehouden.",
+    "neediuLegal": "Neediu is een geregistreerd handelsmerk van Aegryn. Alle rechten voorbehouden.",
     "tagline": "CERTIFIED TO TRANSACT.",
     "swissTagline": "De gecertificeerde referentie voor premium tech-asset-transacties in Europa.",
     "navLabel": "Aegryn",
@@ -745,7 +745,7 @@
       "label": "Honoraria",
       "title": "Een succesfee,\nnul vaste kosten.",
       "desc": "Onze vergoeding is uitsluitend afhankelijk van een effectieve closing. Geen retainer, geen instapkosten. Gedetailleerde voorwaarden beschikbaar in onze AV.",
-      "note": "AEGRYN Sàrl is geen erkende financiële instelling. Deze service is een introductie bij onafhankelijke derde financiële partners. Het vormt geen beleggingsadvies in de zin van de MiFID II-richtlijn."
+      "note": "AEGRYN is geen erkende financiële instelling. Deze service is een introductie bij onafhankelijke derde financiële partners. Het vormt geen beleggingsadvies in de zin van de MiFID II-richtlijn."
     },
     "cta": {
       "title": "Interesse in een asset?",
@@ -2166,7 +2166,7 @@
     "title": "Uw volgende acquisitie verdient\nde juiste financiële partner.",
     "desc": "AEGRYN leent niet. AEGRYN verbindt. Ons netwerk van VC-partners en investeringsfondsen kan uw volgende gecertificeerde tech-asset-acquisitie co-financieren, co-investeren of structureren.",
     "cta": "Opties verkennen",
-    "legal": "AEGRYN Sàrl is geen financiële instelling. Deze dienst verbindt met onafhankelijke externe partners."
+    "legal": "AEGRYN is geen financiële instelling. Deze dienst verbindt met onafhankelijke externe partners."
   },
   "discoverSection": {
     "label": "AEGRYN Insights",
@@ -3012,9 +3012,9 @@
     },
     "label": "Gebruiksvoorwaarden",
     "version": "Versie: juli 2026",
-    "intro": "Deze Gebruiksvoorwaarden regelen de toegang tot en het gebruik van de AEGRYN-website op aegryn.com en alle bijbehorende websites. Door de website te bezoeken, aanvaardt u deze voorwaarden onvoorwaardelijk. AEGRYN Sàrl behoudt zich het recht voor deze op elk moment te wijzigen.",
+    "intro": "Deze Gebruiksvoorwaarden regelen de toegang tot en het gebruik van de AEGRYN-website op aegryn.com en alle bijbehorende websites. Door de website te bezoeken, aanvaardt u deze voorwaarden onvoorwaardelijk. AEGRYN behoudt zich het recht voor deze op elk moment te wijzigen.",
     "s1Title": "Website-inhoud",
-    "s1": "De website en al haar inhoud (teksten, grafische elementen, afbeeldingen, gegevens, code, scripts, methodologieën, beoordelingssystemen) zijn beschermd door intellectuele eigendomsrechten die van toepassing zijn in Zwitserland en de Europese Unie. Deze inhoud is uitsluitend eigendom van AEGRYN Sàrl of haar partners. Elke reproductie, wijziging, verspreiding of commercieel gebruik zonder voorafgaande schriftelijke toestemming is strikt verboden. Het gebruik van bots, scrapers of geautomatiseerde scripts voor gegevensextractie is verboden.",
+    "s1": "De website en al haar inhoud (teksten, grafische elementen, afbeeldingen, gegevens, code, scripts, methodologieën, beoordelingssystemen) zijn beschermd door intellectuele eigendomsrechten die van toepassing zijn in Zwitserland en de Europese Unie. Deze inhoud is uitsluitend eigendom van AEGRYN of haar partners. Elke reproductie, wijziging, verspreiding of commercieel gebruik zonder voorafgaande schriftelijke toestemming is strikt verboden. Het gebruik van bots, scrapers of geautomatiseerde scripts voor gegevensextractie is verboden.",
     "s2Title": "Toegestaan gebruik",
     "s2": "U mag de website raadplegen voor legitieme persoonlijke en professionele doeleinden. Elk gebruik voor frauduleuze doeleinden of in strijd met de openbare orde is verboden. AEGRYN behoudt zich het recht voor de toegang van elke gebruiker die deze voorwaarden schendt, op te schorten of te verwijderen.",
     "s3Title": "Registratie en gebruikersaccounts",
@@ -3026,9 +3026,9 @@
     "s6Title": "Externe links",
     "s6": "De website kan links bevatten naar websites van derden. AEGRYN is niet verantwoordelijk voor de inhoud van deze websites.",
     "s7Title": "Intellectueel eigendom",
-    "s7": "Het label AEGRYN Grade, het merk AEGRYN, het monogram AE, het C/I/F/S-protocol en alle methodologieën en rapporten die door AEGRYN zijn geproduceerd, zijn uitsluitend eigendom van AEGRYN Sàrl. Elk ongeoorloofd gebruik zal worden vervolgd.",
+    "s7": "Het label AEGRYN Grade, het merk AEGRYN, het monogram AE, het C/I/F/S-protocol en alle methodologieën en rapporten die door AEGRYN zijn geproduceerd, zijn uitsluitend eigendom van AEGRYN. Elk ongeoorloofd gebruik zal worden vervolgd.",
     "s8Title": "Toepasselijk recht en bevoegde rechter",
-    "s8": "Deze voorwaarden zijn onderworpen aan het Zwitserse recht. Elk geschil valt onder de exclusieve bevoegdheid van de rechtbanken van het kanton waar AEGRYN Sàrl gevestigd is. Indien een clausule ongeldig is, blijven de overige clausules van toepassing.",
+    "s8": "Deze voorwaarden zijn onderworpen aan het Zwitserse recht. Elk geschil valt onder de exclusieve bevoegdheid van de rechtbanken van het kanton waar AEGRYN gevestigd is. Indien een clausule ongeldig is, blijven de overige clausules van toepassing.",
     "ctaCgv": "Algemene voorwaarden bekijken",
     "ctaPrivacy": "Privacybeleid"
   },
@@ -3041,7 +3041,7 @@
     "version": "Versie: juli 2026",
     "note": "Dit document vormt de bindende contractuele referentie. De exacte tariefvoorwaarden worden gespecificeerd in het ondertekende mandaat of offerte tussen de partijen.",
     "s1Title": "Definities",
-    "defAegryn": "AEGRYN (formerly BOHA-Group Sàrl, in Zwitserland geregistreerde vennootschap).",
+    "defAegryn": "AEGRYN (formerly BOHA-Group, in Zwitserland geregistreerde vennootschap).",
     "defAsset": "Elk digitaal goed dat via AEGRYN kan worden gecertificeerd en/of overgedragen: software (SaaS, applicaties), codebases, digitaal intellectueel eigendom, merken gekoppeld aan een digitaal asset, protocollen.",
     "defGrade": "Officiële certificering van een tech-asset volgens het C/I/F/S-protocol, uitgegeven door gecertificeerde AEGRYN-analisten. Toegekende grades: ★, AAA, AA, A, B.",
     "defGradeEst": "Niet-gecertificeerde indicatieve opinie van een AEGRYN-analist zonder externe validatie. Nooit afdwingbaar jegens derden. Altijd voorzien van het achtervoegsel (geschat) in alle communicatie.",
@@ -3086,7 +3086,7 @@
     "s8Title": "Witwasbestrijding (AML/CFT)",
     "s8": "Overeenkomstig de Zwitserse witwasregelgeving en de AMLD6 is AEGRYN verplicht de identiteit van alle klanten te verifiëren (KYC), uiteindelijk begunstigden te identificeren (UBO >= 25%) en verdachte transacties te melden. Bij twijfel kan AEGRYN elk proces opschorten of annuleren zonder nadeel.",
     "s9Title": "Toepasselijk recht en geschillenbeslechting",
-    "s9": "Deze voorwaarden zijn onderworpen aan het materiële Zwitserse recht. Elk geschil valt onder de exclusieve bevoegdheid van de rechtbanken van het kanton waar AEGRYN Sàrl gevestigd is. Partijen zullen trachten elk geschil binnen 30 dagen in der minne te schikken voordat zij de rechter inschakelen.",
+    "s9": "Deze voorwaarden zijn onderworpen aan het materiële Zwitserse recht. Elk geschil valt onder de exclusieve bevoegdheid van de rechtbanken van het kanton waar AEGRYN gevestigd is. Partijen zullen trachten elk geschil binnen 30 dagen in der minne te schikken voordat zij de rechter inschakelen.",
     "ctaContact": "Contact opnemen met het AEGRYN-team",
     "ctaTermsUse": "Gebruiksvoorwaarden"
   },
@@ -3100,7 +3100,7 @@
     "langSelector": "Beschikbaar in",
     "intro": "Zoals de meeste bedrijven die actief zijn in de financiële en transactionele sector, verzamelt en verwerkt AEGRYN gegevens over zijn klanten, partners en andere personen die mogelijk geïnteresseerd zijn in zijn diensten. Dit beleid legt uit welk type gegevens we verwerken, waarom we ze verwerken en hoe dit u kan beïnvloeden.",
     "s1Title": "Wie zijn wij?",
-    "s1": "De verwerkingsverantwoordelijke voor uw gegevens is AEGRYN (formerly BOHA-Group Sàrl, een in Zwitserland geregistreerde vennootschap). Wanneer u onze diensten gebruikt (certificering, transactie, advisory, catalogus), is de verwerkingsverantwoordelijke AEGRYN (formerly BOHA-Group Sàrl).",
+    "s1": "De verwerkingsverantwoordelijke voor uw gegevens is AEGRYN (formerly BOHA-Group, een in Zwitserland geregistreerde vennootschap). Wanneer u onze diensten gebruikt (certificering, transactie, advisory, catalogus), is de verwerkingsverantwoordelijke AEGRYN (formerly BOHA-Group).",
     "s2Title": "Welke gegevens verzamelen we en hoe?",
     "s2DirectTitle": "Gegevens die u ons rechtstreeks verstrekt",
     "s2Direct": "Naam, professionele contactgegevens, informatie over de vertegenwoordigde entiteit, financiële informatie, identiteitsdocumenten, bedrijfsdocumenten, informatie over uiteindelijk begunstigden (UBO). Verzameld bij registratie, indiening van assets, Alliance-kandidatuur, reservering Assessment Day, gebruik van de waarderingscalculator of enige communicatie.",
@@ -3189,7 +3189,7 @@
       },
       "whoWeAre": {
         "h": "Wie zijn wij en hoe kunt u contact opnemen?",
-        "p": "Aegryn Sàrl is de naam van ons bedrijf. Voor vragen over de gegevensverwerking met betrekking tot onze website kunt u ons per post bereiken: Aegryn Sàrl, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. U kunt ook contact opnemen via e-mail op legal@aegryn.com of via ons contactformulier."
+        "p": "Aegryn is de naam van ons bedrijf. Voor vragen over de gegevensverwerking met betrekking tot onze website kunt u ons per post bereiken: Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. U kunt ook contact opnemen via e-mail op legal@aegryn.com of via ons contactformulier."
       },
       "ourRole": {
         "h": "Wat is onze rol op het gebied van gegevensbescherming?",
@@ -3281,7 +3281,7 @@
       },
       "comms": {
         "h": "Contact- en communicatiediensten",
-        "p": "Aegryn Sàrl is geen aanbieder van telecommunicatiediensten. Communicatiefuncties binnen applicaties (gesprekken, chat) werken uitsluitend via internetprotocollen (VoIP en databerichten). Dit contactnummer en de communicatiefuncties van de applicaties zijn niet bedoeld voor nooddiensten."
+        "p": "Aegryn is geen aanbieder van telecommunicatiediensten. Communicatiefuncties binnen applicaties (gesprekken, chat) werken uitsluitend via internetprotocollen (VoIP en databerichten). Dit contactnummer en de communicatiefuncties van de applicaties zijn niet bedoeld voor nooddiensten."
       },
       "final": {
         "h": "Slotbepalingen",
@@ -3883,7 +3883,7 @@
   "neediuDpn": {
     "meta": {
       "title": "Privacyverklaring & Gebruiksvoorwaarden — neediu | Aegryn",
-      "desc": "Privacyverklaring en gebruiksvoorwaarden van het neediu-platform — Aegryn Sàrl, conform de Zwitserse DSG en de AVG."
+      "desc": "Privacyverklaring en gebruiksvoorwaarden van het neediu-platform — Aegryn, conform de Zwitserse DSG en de AVG."
     },
     "breadcrumb": "Legal",
     "sectionDpn": "(01)",

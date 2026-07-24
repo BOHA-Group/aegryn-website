@@ -265,7 +265,7 @@
     "cta": "Über Aegryn",
     "quote": "Ein Tech-Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. AEGRYN liefert den Beweis bei jedem Asset, bei jedem Transfer.",
     "ceoName": "Yohann Bollack",
-    "ceoTitle": "Gründer & CEO — AEGRYN Sàrl",
+    "ceoTitle": "Gründer & CEO — AEGRYN",
     "stats": [
       {
         "val": "6",
@@ -641,7 +641,7 @@
     "privacy": "Datenschutz",
     "terms": "AGB",
     "dataProtection": "Datenschutzhinweis",
-    "neediuLegal": "Neediu ist eine eingetragene Marke der Aegryn Sàrl. Alle Rechte vorbehalten.",
+    "neediuLegal": "Neediu ist eine eingetragene Marke der Aegryn. Alle Rechte vorbehalten.",
     "tagline": "CERTIFIED TO TRANSACT.",
     "swissTagline": "Die zertifizierte Referenz für Premium-Tech-Asset-Transaktionen in Europa.",
     "navLabel": "Aegryn",
@@ -745,7 +745,7 @@
       "label": "Honorare",
       "title": "Eine Erfolgsprovision,\nkeine Fixkosten.",
       "desc": "Unsere Vergütung ist ausschließlich vom wirksamen Closing abhängig. Kein Retainer, keine Einstiegsgebühren. Detaillierte Bedingungen in unseren AGB.",
-      "note": "AEGRYN Sàrl ist kein zugelassenes Finanzinstitut. Dieser Service ist eine Vermittlung an unabhängige Drittfinanzpartner. Er stellt keine Anlageberatung im Sinne der MiFID-II-Richtlinie dar."
+      "note": "AEGRYN ist kein zugelassenes Finanzinstitut. Dieser Service ist eine Vermittlung an unabhängige Drittfinanzpartner. Er stellt keine Anlageberatung im Sinne der MiFID-II-Richtlinie dar."
     },
     "cta": {
       "title": "Interesse an einem Asset?",
@@ -2166,7 +2166,7 @@
     "title": "Ihr nächster Kauf verdient\nden richtigen Finanzpartner.",
     "desc": "AEGRYN leiht nicht. AEGRYN verbindet. Unser Netzwerk aus VC-Partnern und Investmentfonds kann Ihre nächste zertifizierte Tech-Asset-Akquisition ko-finanzieren, ko-investieren oder strukturieren.",
     "cta": "Optionen erkunden",
-    "legal": "AEGRYN Sàrl ist kein Finanzinstitut. Dieser Service vermittelt unabhängige Drittpartner."
+    "legal": "AEGRYN ist kein Finanzinstitut. Dieser Service vermittelt unabhängige Drittpartner."
   },
   "discoverSection": {
     "label": "AEGRYN Insights",
@@ -3012,9 +3012,9 @@
     },
     "label": "Nutzungsbedingungen",
     "version": "Version: Juli 2026",
-    "intro": "Diese Nutzungsbedingungen regeln den Zugang zur und die Nutzung der AEGRYN-Website unter aegryn.com sowie aller zugehoerigen Websites. Mit dem Zugriff auf die Website akzeptieren Sie diese Bedingungen vorbehaltlos. AEGRYN Sàrl behält sich das Recht vor, diese jederzeit zu ändern.",
+    "intro": "Diese Nutzungsbedingungen regeln den Zugang zur und die Nutzung der AEGRYN-Website unter aegryn.com sowie aller zugehoerigen Websites. Mit dem Zugriff auf die Website akzeptieren Sie diese Bedingungen vorbehaltlos. AEGRYN behält sich das Recht vor, diese jederzeit zu ändern.",
     "s1Title": "Website-Inhalte",
-    "s1": "Die Website und alle ihre Inhalte (Texte, Grafiken, Bilder, Daten, Code, Skripte, Methoden, Bewertungssysteme) sind durch das in der Schweiz und der Europäischen Union geltende Urheberrecht geschützt. Diese Inhalte sind ausschliessliches Eigentum von AEGRYN Sàrl oder ihren Partnern. Jede Vervielfältigung, Änderung, Verbreitung oder gewerbliche Nutzung ohne vorherige schriftliche Genehmigung ist streng verboten. Die Verwendung von Bots, Scrapern oder automatisierten Skripten zur Datenextraktion ist verboten.",
+    "s1": "Die Website und alle ihre Inhalte (Texte, Grafiken, Bilder, Daten, Code, Skripte, Methoden, Bewertungssysteme) sind durch das in der Schweiz und der Europäischen Union geltende Urheberrecht geschützt. Diese Inhalte sind ausschliessliches Eigentum von AEGRYN oder ihren Partnern. Jede Vervielfältigung, Änderung, Verbreitung oder gewerbliche Nutzung ohne vorherige schriftliche Genehmigung ist streng verboten. Die Verwendung von Bots, Scrapern oder automatisierten Skripten zur Datenextraktion ist verboten.",
     "s2Title": "Erlaubte Nutzung",
     "s2": "Sie dürfen die Website für legitime persönliche und berufliche Zwecke nutzen. Jede Nutzung zu betrügerischen Zwecken oder entgegen der öffentlichen Ordnung ist verboten. AEGRYN behält sich das Recht vor, den Zugang für jeden Nutzer, der gegen diese Bedingungen verstösst, zu sperren.",
     "s3Title": "Registrierung und Benutzerkonten",
@@ -3026,9 +3026,9 @@
     "s6Title": "Externe Links",
     "s6": "Die Website kann Links zu Websites Dritter enthalten. AEGRYN ist für den Inhalt dieser Websites nicht verantwortlich.",
     "s7Title": "Geistiges Eigentum",
-    "s7": "Das Label AEGRYN Grade, die Marke AEGRYN, das Monogramm AE, das C/I/F/S-Protokoll sowie alle von AEGRYN erstellten Methoden und Berichte sind ausschliessliches Eigentum von AEGRYN Sàrl. Jede unbefugte Nutzung wird verfolgt.",
+    "s7": "Das Label AEGRYN Grade, die Marke AEGRYN, das Monogramm AE, das C/I/F/S-Protokoll sowie alle von AEGRYN erstellten Methoden und Berichte sind ausschliessliches Eigentum von AEGRYN. Jede unbefugte Nutzung wird verfolgt.",
     "s8Title": "Anwendbares Recht und Gerichtsstand",
-    "s8": "Diese Bedingungen unterliegen dem Schweizer Recht. Jede Streitigkeit unterliegt der ausschliesslichen Zuständigkeit der Gerichte des Kantons, in dem AEGRYN Sàrl ansässig ist. Ist eine Klausel unwirksam, bleiben die übrigen Klauseln anwendbar.",
+    "s8": "Diese Bedingungen unterliegen dem Schweizer Recht. Jede Streitigkeit unterliegt der ausschliesslichen Zuständigkeit der Gerichte des Kantons, in dem AEGRYN ansässig ist. Ist eine Klausel unwirksam, bleiben die übrigen Klauseln anwendbar.",
     "ctaCgv": "AGB einsehen",
     "ctaPrivacy": "Datenschutzrichtlinie"
   },
@@ -3041,7 +3041,7 @@
     "version": "Version: Juli 2026",
     "note": "Dieses Dokument ist die verbindliche Vertragsgrundlage. Genaue Preisbedingungen sind im unterzeichneten Mandat oder Angebot festgelegt.",
     "s1Title": "Definitionen",
-    "defAegryn": "AEGRYN (formerly BOHA-Group Sàrl, in der Schweiz eingetragene Gesellschaft).",
+    "defAegryn": "AEGRYN (formerly BOHA-Group, in der Schweiz eingetragene Gesellschaft).",
     "defAsset": "Jedes digitale Gut, das über AEGRYN zertifiziert und/oder übertragen werden kann: Software (SaaS, Anwendungen), Codebases, digitales geistiges Eigentum, Marken, Protokolle.",
     "defGrade": "Offizielle Zertifizierung eines Tech-Assets nach dem C/I/F/S-Protokoll, ausgestellt von zertifizierten AEGRYN-Analysten. Vergebene Grade: ★, AAA, AA, A, B.",
     "defGradeEst": "Nicht zertifiziertes Gutachten eines AEGRYN-Analysten ohne externe Validierung. Gegenüber Dritten nie durchsetzbar. Immer mit dem Zusatz (geschätzt) versehen.",
@@ -3086,7 +3086,7 @@
     "s8Title": "Geldwäschebekämpfung (GwG/AMLD6)",
     "s8": "Gemäss dem Schweizer GwG und der AMLD6 ist AEGRYN verpflichtet, die Identität aller Kunden zu überprüfen (KYC), wirtschaftlich Berechtigte (UBO >= 25%) zu identifizieren und verdächtige Transaktionen zu melden. Im Zweifelsfall kann AEGRYN jeden Prozess aussetzen oder annullieren.",
     "s9Title": "Anwendbares Recht und Streitbeilegung",
-    "s9": "Diese AGB unterliegen dem materiellen Schweizer Recht. Jede Streitigkeit unterliegt der ausschliesslichen Zuständigkeit der Gerichte des Kantons, in dem AEGRYN Sàrl ansässig ist. Die Parteien versuchen, Meinungsverschiedenheiten innerhalb von 30 Tagen gütlich beizulegen.",
+    "s9": "Diese AGB unterliegen dem materiellen Schweizer Recht. Jede Streitigkeit unterliegt der ausschliesslichen Zuständigkeit der Gerichte des Kantons, in dem AEGRYN ansässig ist. Die Parteien versuchen, Meinungsverschiedenheiten innerhalb von 30 Tagen gütlich beizulegen.",
     "ctaContact": "AEGRYN-Team kontaktieren",
     "ctaTermsUse": "Nutzungsbedingungen"
   },
@@ -3100,7 +3100,7 @@
     "langSelector": "Verfügbar in",
     "intro": "Wie die meisten Unternehmen im Finanz- und Transaktionsbereich erhebt und verarbeitet AEGRYN Daten über seine Kunden, Partner und andere Personen, die an seinen Dienstleistungen interessiert sein könnten. Diese Richtlinie erläutert, welche Daten wir verarbeiten, warum wir sie verarbeiten und wie sich dies auf Sie auswirken kann.",
     "s1Title": "Wer sind wir?",
-    "s1": "Der für die Verarbeitung Ihrer Daten Verantwortliche ist AEGRYN (formerly BOHA-Group Sàrl, eine in der Schweiz eingetragene Gesellschaft). Wenn Sie unsere Dienste nutzen (Zertifizierung, Transaktion, Advisory, Katalog), ist der Verantwortliche AEGRYN (formerly BOHA-Group Sàrl).",
+    "s1": "Der für die Verarbeitung Ihrer Daten Verantwortliche ist AEGRYN (formerly BOHA-Group, eine in der Schweiz eingetragene Gesellschaft). Wenn Sie unsere Dienste nutzen (Zertifizierung, Transaktion, Advisory, Katalog), ist der Verantwortliche AEGRYN (formerly BOHA-Group).",
     "s2Title": "Welche Daten erheben wir und wie?",
     "s2DirectTitle": "Daten, die Sie uns direkt mitteilen",
     "s2Direct": "Name, berufliche Kontaktdaten, Angaben zur vertretenen Einheit, Finanzinformationen, Ausweisdokumente, Unternehmensdokumente, Angaben zu wirtschaftlich Berechtigten (UBO). Erhoben bei Registrierung, Asset-Einreichung, Alliance-Bewerbung, Assessment-Day-Buchung, Nutzung des Bewertungsrechners oder jeglicher Kommunikation.",
@@ -3189,7 +3189,7 @@
       },
       "whoWeAre": {
         "h": "Wer sind wir und wie können Sie uns kontaktieren?",
-        "p": "Aegryn Sàrl ist der Name unseres Unternehmens. Bei Fragen zur Datenverarbeitung bezüglich unserer Website können Sie uns per Post kontaktieren: Aegryn Sàrl, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. Sie können uns auch per E-Mail unter legal@aegryn.com oder über unser Kontaktformular erreichen."
+        "p": "Aegryn ist der Name unseres Unternehmens. Bei Fragen zur Datenverarbeitung bezüglich unserer Website können Sie uns per Post kontaktieren: Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. Sie können uns auch per E-Mail unter legal@aegryn.com oder über unser Kontaktformular erreichen."
       },
       "ourRole": {
         "h": "Welche Rolle spielen wir beim Datenschutz?",
@@ -3281,7 +3281,7 @@
       },
       "comms": {
         "h": "Kontakt- und Kommunikationsdienste",
-        "p": "Aegryn Sàrl ist kein Anbieter von Telekommunikationsdiensten. Kommunikationsfunktionen innerhalb von Anwendungen (Anrufe, Chat) funktionieren ausschliesslich über Internetprotokolle (VoIP und Datennachrichten). Diese Kontaktnummer und die Kommunikationsfunktionen der Anwendungen sind nicht für Notrufdienste bestimmt."
+        "p": "Aegryn ist kein Anbieter von Telekommunikationsdiensten. Kommunikationsfunktionen innerhalb von Anwendungen (Anrufe, Chat) funktionieren ausschliesslich über Internetprotokolle (VoIP und Datennachrichten). Diese Kontaktnummer und die Kommunikationsfunktionen der Anwendungen sind nicht für Notrufdienste bestimmt."
       },
       "final": {
         "h": "Schlussbestimmungen",
@@ -3883,7 +3883,7 @@
   "neediuDpn": {
     "meta": {
       "title": "Datenschutzhinweis & Nutzungsbedingungen — neediu | Aegryn",
-      "desc": "Datenschutzhinweis und Nutzungsbedingungen der neediu-Plattform — Aegryn Sàrl, konform mit dem Schweizer DSG und der DSGVO."
+      "desc": "Datenschutzhinweis und Nutzungsbedingungen der neediu-Plattform — Aegryn, konform mit dem Schweizer DSG und der DSGVO."
     },
     "breadcrumb": "Legal",
     "sectionDpn": "(01)",

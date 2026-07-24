@@ -39,8 +39,8 @@ export function generateAegrynMetadata({
     description,
     keywords: [...BASE_KEYWORDS, ...keywords],
     authors: [{ name: 'Yohann Bollack', url: 'https://aegryn.com' }],
-    creator: 'Aegryn Sàrl',
-    publisher: 'Aegryn Sàrl',
+    creator: 'Aegryn',
+    publisher: 'Aegryn',
     category: 'technology',
     metadataBase: new URL(BASE_URL),
     alternates: {
@@ -102,8 +102,8 @@ export function generateAegrynMetadata({
       'DC.title':      fullTitle,
       'DC.description': description,
       'DC.language':   locale,
-      'DC.publisher':  'Aegryn Sàrl',
-      'DC.rights':     'Copyright © 2026 Aegryn Sàrl',
+      'DC.publisher':  'Aegryn',
+      'DC.rights':     'Copyright © 2026 Aegryn',
       /* Rating / classification */
       'rating':        'general',
       'revisit-after': '7 days',
@@ -121,8 +121,8 @@ export const aegrynOrganizationSchema = {
   '@context':    'https://schema.org',
   '@type':       'Organization',
   '@id':         `${BASE_URL}/#organization`,
-  name:          'Aegryn Sàrl',
-  legalName:     'Aegryn Sàrl',
+  name:          'Aegryn',
+  legalName:     'Aegryn',
   url:           BASE_URL,
   logo: {
     '@type':     'ImageObject',

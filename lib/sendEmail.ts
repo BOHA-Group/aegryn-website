@@ -31,21 +31,11 @@ export async function sendEmail(
   if (!res.ok) console.error(`[sendEmail${tag ? ` ${tag}` : ''}] Resend error (${to})`, await res.text())
 }
 
-/* ── Logo AE — SVG inline light mode ──────────────────────────────────── */
-// Monogramme AE : Λ (lambda sans traverse) + cut apex #5ADDA4 + E 3 barres
-const LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="36" viewBox="0 0 48 36" fill="none" aria-label="AEGRYN">
-  <!-- Jambe gauche A (fine) -->
-  <line x1="4" y1="33" x2="22" y2="3" stroke="#0F1C3F" stroke-width="2.5" stroke-linecap="square"/>
-  <!-- Jambe droite A (épaisse) -->
-  <line x1="22" y1="3" x2="30" y2="33" stroke="#0F1C3F" stroke-width="4" stroke-linecap="square"/>
-  <!-- Cut apex triangle #5ADDA4 -->
-  <polygon points="17,13 22,3 27,13" fill="#5ADDA4"/>
-  <!-- E — barre haute -->
-  <rect x="33" y="4"  width="13" height="3" fill="#0F1C3F"/>
-  <!-- E — barre médiane (plus courte) -->
-  <rect x="33" y="15" width="10" height="3" fill="#0F1C3F"/>
-  <!-- E — barre basse -->
-  <rect x="33" y="26" width="13" height="3" fill="#0F1C3F"/>
+/* ── Logo AE officiel — coordonnées verbatim depuis AegrynLogo.tsx ────── */
+// viewBox="0 0 441.14 487.91" — identique au composant brand officiel
+const LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" viewBox="0 0 441.14 487.91" fill="none" aria-label="AEGRYN">
+  <polygon fill="#5adda4" points="297.96 171.32 266.09 100.56 220.57 0 191.6 64.14 254.09 127.04 297.96 171.32"/>
+  <polygon fill="#0F1C3F" points="317.41 214.36 246.64 143.18 184.15 80.28 175.05 100.56 0 487.91 90.63 487.91 220.57 201.12 350.51 487.91 441.14 487.91 317.41 214.36"/>
 </svg>`
 
 /* ── Squelette commun light mode ───────────────────────────────────────── */
@@ -53,7 +43,7 @@ const FOOTER = `
 <tr>
   <td style="padding:24px 32px 20px;border-top:1px solid #e2e8f0;">
     <p style="margin:0 0 4px 0;font-size:11px;color:#94a3b8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-      <strong style="color:#64748b;">AEGRYN Sàrl</strong> — Genève, Suisse
+      <strong style="color:#64748b;">AEGRYN</strong> — Genève, Suisse
     </p>
     <p style="margin:0;font-size:11px;color:#94a3b8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
       <a href="https://aegryn.com" style="color:#5ADDA4;text-decoration:none;">aegryn.com</a>
@@ -80,7 +70,7 @@ function WRAP(body: string): string {
                 <td style="padding-right:12px;">${LOGO_SVG}</td>
                 <td>
                   <p style="margin:0;font-size:18px;font-weight:700;color:#0F1C3F;letter-spacing:-0.02em;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">AEGRYN</p>
-                  <p style="margin:0;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#5ADDA4;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">Réseau Partenaires Alliance</p>
+                  <p style="margin:0;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#5ADDA4;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">Réseau Partenaires</p>
                 </td>
               </tr></table>
             </td>
