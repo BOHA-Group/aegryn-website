@@ -13,9 +13,10 @@ const COUNTRY_LOCALE: Record<string, Locale> = {
   IT: 'it', SM: 'it', VA: 'it',
   ES: 'es', MX: 'es', AR: 'es', CO: 'es', PE: 'es', VE: 'es',
   CL: 'es', EC: 'es', BO: 'es', PY: 'es', UY: 'es', CR: 'es',
+  GT: 'es', HN: 'es', SV: 'es', NI: 'es', PA: 'es', DO: 'es', CU: 'es',
   NL: 'nl',
   US: 'en', GB: 'en', CA: 'en', AU: 'en', NZ: 'en', IE: 'en',
-  ZA: 'en', IN: 'en', SG: 'en', HK: 'en', PH: 'en',
+  ZA: 'en', IN: 'en', SG: 'en', HK: 'en', PH: 'en', NG: 'en', KE: 'en', GH: 'en',
 }
 
 const LOCALES   = routing.locales as readonly Locale[]
@@ -137,8 +138,9 @@ export default function middleware(req: NextRequest) {
   if (preferred && LOCALES.includes(preferred)) {
     detectedLocale = preferred
   } else {
-    const country     = req.headers.get('x-vercel-ip-country') ?? ''
-    const fromCountry = COUNTRY_LOCALE[country.toUpperCase()]
+    // x-vercel-ip-country (Vercel) ou cf-ipcountry (Cloudflare) — même sémantique
+    const country     = (req.headers.get('x-vercel-ip-country') ?? req.headers.get('cf-ipcountry') ?? '').toUpperCase()
+    const fromCountry = COUNTRY_LOCALE[country]
     const fromBrowser = localeFromAcceptLanguage(req.headers.get('accept-language'))
     detectedLocale    = fromCountry ?? fromBrowser ?? (routing.defaultLocale as Locale)
   }
