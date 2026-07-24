@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { Briefcase, ArrowUpRight, Plus } from 'lucide-react'
+import { Briefcase, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Mandats clients — Espace Partenaire AEGRYN',

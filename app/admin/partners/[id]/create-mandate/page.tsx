@@ -1,6 +1,6 @@
 import { checkAdminAccess } from '@/lib/adminAuth'
 import { createServiceClient } from '@/lib/supabase'
-import { notFound, redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import CreateMandateForm from './CreateMandateForm'
