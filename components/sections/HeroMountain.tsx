@@ -136,7 +136,7 @@ export function HeroMountain() {
       <div className="absolute bottom-0 left-0 right-0 z-10">
         <div className="max-w-7xl mx-auto px-6 md:px-12 pb-14">
 
-          {/* H1 — Unbounded display */
+          {/* H1 — Unbounded display */}
           <h1
             ref={headingRef}
             id="hero-title"

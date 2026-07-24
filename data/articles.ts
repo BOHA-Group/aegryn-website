@@ -35,6 +35,7 @@ export interface Article {
   ogImage?:    string
   body?:       ContentBlock[]
   faq?:        FaqItem[]
+  keywords?:   string[]
 }
 
 export const ARTICLES: Article[] = [

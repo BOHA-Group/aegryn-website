@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, ArrowUpRight } from 'lucide-react'
-import { ARTICLES, ARTICLE_CATEGORIES, getLocaleText, type ContentBlock } from '@/data/articles'
+import { ARTICLES, ARTICLE_CATEGORIES, getLocaleText, type ContentBlock, type ArticleCategory } from '@/data/articles'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -14,6 +14,23 @@ export async function generateStaticParams() {
 const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')
 const OG_FALLBACK = `${BASE}/og/blog-default.png`
 
+const CATEGORY_KEYWORDS: Record<ArticleCategory, string[]> = {
+  market:        ['M&A tech Europe', 'transaction actifs numériques', 'multiple valorisation SaaS', 'marché cession tech', 'deal flow Europe'],
+  seller:        ['vendre son SaaS', 'cession startup tech', 'exit fondateur', 'valorisation SaaS', 'due diligence vendeur'],
+  buyer:         ['acheter un SaaS', 'acquisition tech Europe', 'search fund', 'family office tech', 'private equity SaaS'],
+  certification: ['certification actif tech', 'grade AEGRYN', 'audit SaaS', 'CIFS Protocol', 'due diligence indépendante'],
+  strategy:      ['stratégie cession tech', 'M&A stratégie', 'place de marché actifs tech', 'AEGRYN Auction', 'Swiss tech hub'],
+  case_study:    ['étude de cas SaaS', 'exit SaaS Europe', 'transaction certifiée', 'M&A case study tech', 'AEGRYN Grade'],
+  legal:         ['share deal asset deal', 'RGPD cession données', 'fiscalité exit fondateur', 'earnout SaaS', 'structuration juridique cession'],
+  vertical:      ['LegalTech valorisation', 'FinTech M&A', 'AI SaaS multiples', 'vertical software Europe', 'actif tech certifié'],
+  dach:          ['Tech M&A DACH', 'SaaS cession Allemagne', 'Suisse hub tech', 'Österreich startup exit', 'actif numérique DACH'],
+}
+
+const BASE_ARTICLE_KEYWORDS = [
+  'AEGRYN', 'actifs tech certifiés', 'Suisse', 'cession SaaS', 'transaction privée',
+  'Engineered to Last', 'certification indépendante', 'grade actif numérique',
+]
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params
   const article = ARTICLES.find(a => a.slug === slug)
@@ -22,9 +39,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description = getLocaleText(article.excerpt, locale)
   const ogImage     = article.ogImage ?? OG_FALLBACK
   const canonical   = `${BASE}/${locale}/blog/${slug}`
+  const keywords    = [
+    ...BASE_ARTICLE_KEYWORDS,
+    ...(CATEGORY_KEYWORDS[article.category] ?? []),
+    ...(article.keywords ?? []),
+  ]
   return {
     title,
     description,
+    keywords,
+    authors: [{ name: 'AEGRYN', url: BASE }],
+    creator: 'Aegryn Sàrl',
+    publisher: 'Aegryn Sàrl',
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index:               true,
+        follow:              true,
+        'max-image-preview': 'large',
+        'max-snippet':       -1,
+      },
+    },
     alternates: {
       canonical,
       languages: {
@@ -62,15 +98,22 @@ export default async function ArticlePage({ params }: Props) {
   const article = ARTICLES.find(a => a.slug === slug)
   if (!article) notFound()
 
-  const t        = await getTranslations({ locale, namespace: 'discover' })
-  const catLabel = getLocaleText(ARTICLE_CATEGORIES[article.category], locale)
-  const dateStr  = new Date(article.date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
+  const t           = await getTranslations({ locale, namespace: 'discover' })
+  const catLabel     = getLocaleText(ARTICLE_CATEGORIES[article.category], locale)
+  const dateStr      = new Date(article.date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
+  const articleTitle = getLocaleText(article!.title, locale)
+  const articleDesc  = getLocaleText(article!.excerpt, locale)
 
   const articleLd = {
     '@context':         'https://schema.org',
     '@type':            'Article',
-    headline:           getLocaleText(article!.title, locale),
-    description:        getLocaleText(article!.excerpt, locale),
+    headline:           articleTitle,
+    description:        articleDesc,
+    keywords:           [
+      ...BASE_ARTICLE_KEYWORDS,
+      ...(CATEGORY_KEYWORDS[article.category] ?? []),
+      ...(article.keywords ?? []),
+    ].join(', '),
     datePublished:      new Date(article!.date).toISOString(),
     dateModified:       new Date(article!.date).toISOString(),
     author:             { '@type': 'Organization', name: 'AEGRYN', url: BASE },
@@ -78,6 +121,16 @@ export default async function ArticlePage({ params }: Props) {
     mainEntityOfPage:   { '@type': 'WebPage', '@id': `${BASE}/${locale}/blog/${slug}` },
     image:              article!.ogImage ?? OG_FALLBACK,
     inLanguage:         locale === 'fr' ? 'fr-FR' : locale === 'en' ? 'en-GB' : locale,
+  }
+
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type':    'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'AEGRYN',         item: BASE },
+      { '@type': 'ListItem', position: 2, name: catLabel,          item: `${BASE}/${locale}/blog?category=${article.category}` },
+      { '@type': 'ListItem', position: 3, name: articleTitle,      item: `${BASE}/${locale}/blog/${slug}` },
+    ],
   }
 
   const faqLd = article!.faq?.length ? {
@@ -93,6 +146,7 @@ export default async function ArticlePage({ params }: Props) {
   return (
     <main id="main" className="bg-ag-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-20 px-6">

@@ -144,7 +144,7 @@ export const aegrynOrganizationSchema = {
   contactPoint: {
     '@type':            'ContactPoint',
     contactType:        'customer support',
-    email:              'hello@aegryn.com',
+    email:              'contact@boha-group.com',
     availableLanguage:  ['French', 'English', 'German', 'Italian', 'Spanish', 'Dutch'],
   },
   sameAs: [
