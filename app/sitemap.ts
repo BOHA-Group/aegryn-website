@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { ARTICLES } from '@/data/articles'
 
 const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')
 const LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
@@ -53,6 +54,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency:  route.changeFrequency,
         priority:         route.priority,
         alternates:       { languages: alternates },
+      })
+    }
+  }
+
+  // Blog articles — all 6 locales with hreflang alternates
+  for (const article of ARTICLES) {
+    const articleAlternates: Record<string, string> = {}
+    for (const locale of LOCALES) {
+      articleAlternates[locale] = `${BASE}/${locale}/blog/${article.slug}`
+    }
+    articleAlternates['x-default'] = `${BASE}/en/blog/${article.slug}`
+
+    for (const locale of LOCALES) {
+      entries.push({
+        url:             `${BASE}/${locale}/blog/${article.slug}`,
+        lastModified:    new Date(article.date),
+        changeFrequency: 'monthly' as const,
+        priority:        article.featured ? 0.8 : 0.7,
+        alternates:      { languages: articleAlternates },
       })
     }
   }

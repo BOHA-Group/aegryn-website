@@ -18,9 +18,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params
   const article = ARTICLES.find(a => a.slug === slug)
   if (!article) return {}
-  const lang = (locale === 'fr') ? 'fr' : 'en'
-  const title       = article.title[lang]
-  const description = article.excerpt[lang]
+  const title       = getLocaleText(article.title, locale)
+  const description = getLocaleText(article.excerpt, locale)
   const ogImage     = article.ogImage ?? OG_FALLBACK
   const canonical   = `${BASE}/${locale}/blog/${slug}`
   return {
