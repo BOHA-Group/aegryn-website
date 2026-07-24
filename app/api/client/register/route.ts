@@ -70,6 +70,28 @@ export async function POST(req: NextRequest) {
 </div>`,
       }),
     }).catch(() => {})
+
+    const adminEmail = process.env.AEGRYN_ADMIN_EMAIL ?? 'admin@boha-group.com'
+    await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${resendKey}` },
+      body: JSON.stringify({
+        from: `AEGRYN <${process.env.RESEND_FROM ?? 'contact@boha-group.com'}>`,
+        to: [adminEmail],
+        subject: `[AEGRYN] Nouveau compte ${roleLabel[role] ?? role} — ${fullName}`,
+        html: `<div style="font-family:monospace;max-width:480px;padding:24px;background:#f8fafc;border:1px solid #e2e8f0;">
+<p style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#5ADDA4;margin:0 0 16px 0;">AEGRYN ADMIN</p>
+<p style="font-size:16px;font-weight:700;margin:0 0 12px 0;">Nouveau compte créé</p>
+<table style="font-size:12px;color:#475569;border-collapse:collapse;width:100%;">
+  <tr><td style="padding:4px 0;font-weight:600;width:100px;">Nom</td><td>${fullName}</td></tr>
+  <tr><td style="padding:4px 0;font-weight:600;">Email</td><td>${normalizedEmail}</td></tr>
+  <tr><td style="padding:4px 0;font-weight:600;">Rôle</td><td>${roleLabel[role] ?? role}</td></tr>
+  <tr><td style="padding:4px 0;font-weight:600;">ID</td><td style="font-size:10px;">${userId}</td></tr>
+</table>
+<p style="margin:16px 0 0 0;"><a href="https://aegryn.com/admin/members" style="font-size:11px;color:#5ADDA4;">Voir dans l'admin →</a></p>
+</div>`,
+      }),
+    }).catch(() => {})
   }
 
   return NextResponse.json({ ok: true, userId })
