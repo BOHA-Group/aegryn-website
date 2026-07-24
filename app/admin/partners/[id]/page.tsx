@@ -3,6 +3,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { notFound }  from 'next/navigation'
 import type { Metadata }       from 'next'
 import Link                    from 'next/link'
+import CertValidation          from './CertValidation'
 
 export const metadata: Metadata = {
   title: 'Partenaire — AEGRYN Admin',
@@ -27,7 +28,7 @@ export default async function AdminPartnerDetailPage({
   if (!profile && !error) notFound()
 
   const [{ data: certs }, { data: refs }, { data: comms }, { data: mandates }] = await Promise.all([
-    supa.from('partner_certifications').select('*, assets(name, official_grade)').eq('partner_id', id).order('created_at', { ascending: false }),
+    supa.from('partner_certifications').select('id, dimension, status, score, subcodes, observations, deadline_at, cosignature_amount_chf, assets(name, company_name, official_grade)').eq('partner_id', id).order('created_at', { ascending: false }),
     supa.from('introductions').select('*').eq('partner_id', id).order('created_at', { ascending: false }),
     supa.from('commissions').select('*').eq('partner_id', id).order('created_at', { ascending: false }),
     supa.from('partner_mandates').select('id, client_name, mandate_type, status, retrocession_pct, created_at').eq('partner_id', id).order('created_at', { ascending: false }),
@@ -70,28 +71,11 @@ export default async function AdminPartnerDetailPage({
               </div>
             </div>
 
-            {/* Certifications assignées */}
-            <div className="bg-white border border-gray-200 mb-6">
-              <div className="px-6 py-4 bg-gray-50"><p className="text-[11px] font-semibold text-gray-600 uppercase tracking-wide">Co-signatures assignées ({(certs ?? []).length})</p></div>
-              {(certs ?? []).length === 0 ? (
-                <div className="p-8 text-center text-[12px] text-gray-400">Aucune assignation pour le moment.</div>
-              ) : (
-                <div className="divide-y divide-gray-100">
-                  {(certs ?? []).map((c: Record<string, unknown>) => {
-                    const asset = c.assets as Record<string, unknown> | null
-                    return (
-                      <div key={String(c.id)} className="px-6 py-4 flex items-center justify-between">
-                        <div>
-                          <p className="font-semibold text-gray-800 text-[13px]">{String(asset?.name ?? '—')} — Dimension {String(c.dimension).toUpperCase()}</p>
-                          <p className="text-[11px] text-gray-400">Délai : {c.deadline_at ? String(c.deadline_at).slice(0,10) : '—'}</p>
-                        </div>
-                        <span className="px-2 py-0.5 text-[10px] uppercase font-semibold bg-gray-100 text-gray-700">{String(c.status)}</span>
-                      </div>
-                    )
-                  })}
-                </div>
-              )}
-            </div>
+            {/* Certifications assignées — avec validation inline */}
+            <CertValidation
+              certs={(certs ?? []) as Parameters<typeof CertValidation>[0]['certs']}
+              adminToken={params.token ?? ''}
+            />
 
             {/* Apports d'affaires */}
             <div className="bg-white border border-gray-200 mb-6">

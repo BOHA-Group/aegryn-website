@@ -25,6 +25,9 @@ const schema = z.object({
   commission_referrer_chf:      z.number().optional(),
   net_seller_proceeds_chf:      z.number().optional(),
   admin_note: z.string().max(2000).optional(),
+  partner_email:          z.string().max(200).optional(),
+  partner_commission_pct: z.number().optional(),
+  partner_commission_chf: z.number().optional(),
 })
 
 export async function PATCH(
@@ -74,6 +77,49 @@ export async function PATCH(
     if (body.net_seller_proceeds_chf      != null) update.net_seller_proceeds_chf      = body.net_seller_proceeds_chf
 
     if (body.admin_note) update.admin_note = body.admin_note
+
+    if (body.partner_email          != null) update.partner_email          = body.partner_email
+    if (body.partner_commission_pct != null) update.partner_commission_pct = body.partner_commission_pct
+    if (body.partner_commission_chf != null) update.partner_commission_chf = body.partner_commission_chf
+
+    // ── CAS 2 : calcul auto commission partenaire au closing ────────────────
+    if (body.status === 'closed') {
+      const { data: tx } = await supa
+        .from('transactions')
+        .select('partner_email, partner_commission_pct, partner_commission_chf, escrow_amount_chf, commission_seller_pct')
+        .eq('id', id)
+        .single()
+
+      const email  = body.partner_email ?? tx?.partner_email
+      const pPct   = body.partner_commission_pct ?? tx?.partner_commission_pct
+      const escrow = tx?.escrow_amount_chf
+      const sPct   = tx?.commission_seller_pct
+      const alreadySet = body.partner_commission_chf ?? tx?.partner_commission_chf
+
+      if (email && pPct && escrow && sPct && !alreadySet) {
+        const aegrynComm = Number(escrow) * Number(sPct) / 100
+        const partnerComm = Math.round(aegrynComm * Number(pPct) / 100)
+        update.partner_commission_chf = partnerComm
+
+        // Retrouver le partner_id depuis son email
+        const { data: partnerProfile } = await supa
+          .from('profiles')
+          .select('id')
+          .eq('email', String(email))
+          .maybeSingle()
+
+        if (partnerProfile?.id) {
+          await supa.from('commissions').insert({
+            partner_id:     partnerProfile.id,
+            transaction_id: id,
+            type:           'introduction_asset',
+            amount_chf:     partnerComm,
+            status:         'due',
+          })
+        }
+      }
+    }
+    // ────────────────────────────────────────────────────────────────────────
 
     const { error } = await supa.from('transactions').update(update).eq('id', id)
 

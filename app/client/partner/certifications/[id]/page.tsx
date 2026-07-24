@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 }
 
 const DIMENSION_LABELS: Record<string, string> = {
+  code:     'Code & Architecture',
   ip:       'Propriété Intellectuelle',
   finance:  'Finance & Comptabilité',
   security: 'Sécurité & Conformité',
@@ -43,7 +44,9 @@ export default async function PartnerCertificationDetailPage({
     .from('partner_certifications')
     .select(`
       id, dimension, status, score, subcodes, summary, reserves, recommendation,
-      deadline_at, signed_by_checkbox, signed_at, created_at,
+      deadline_at, signed_by_checkbox, signed_at,
+      validated_at, rejection_reason, observations, cosignature_amount_chf,
+      created_at,
       assets(id, company_name, asset_type, official_grade, arr, public_summary)
     `)
     .eq('id', id)
@@ -61,6 +64,8 @@ export default async function PartnerCertificationDetailPage({
   } | null
 
   const canSubmit = cert.status === 'assigned' || cert.status === 'in_review'
+  const isValidated = cert.status === 'validated'
+  const isRejected  = cert.status === 'rejected'
 
   return (
     <div className="p-8 max-w-3xl">
@@ -106,32 +111,73 @@ export default async function PartnerCertificationDetailPage({
         </div>
       )}
 
-      {/* Statut actuel */}
-      {cert.status === 'signed' && (
+      {/* Statut : validated */}
+      {isValidated && (
         <div className="bg-emerald-50 border border-emerald-200 px-5 py-4 mb-6">
-          <p className="font-sans font-semibold text-emerald-700 text-[13px]">✓ Co-signature validée</p>
-          {cert.signed_at && (
-            <p className="font-sans text-[11px] text-emerald-600 mt-0.5">Signée le {fmtDate(cert.signed_at)}</p>
+          <p className="font-sans font-semibold text-emerald-700 text-[13px]">✓ Contribution validée par AEGRYN</p>
+          {!!cert.validated_at && (
+            <p className="font-sans text-[11px] text-emerald-600 mt-0.5">Validée le {fmtDate(cert.validated_at)}</p>
           )}
-          <div className="mt-3 grid grid-cols-2 gap-4">
+          <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-4">
             {cert.score != null && (
               <div>
-                <p className="font-mono text-[9px] uppercase tracking-widest text-emerald-500 mb-0.5">Score soumis</p>
-                <p className="font-sans font-bold text-[16px] text-emerald-700">{cert.score}/25</p>
+                <p className="font-mono text-[9px] uppercase tracking-widest text-emerald-500 mb-0.5">Score retenu</p>
+                <p className="font-sans font-bold text-[20px] text-emerald-700">{cert.score}<span className="text-[12px] opacity-60">/25</span></p>
+              </div>
+            )}
+            {cert.cosignature_amount_chf != null && (
+              <div>
+                <p className="font-mono text-[9px] uppercase tracking-widest text-emerald-500 mb-0.5">Honoraires dûs</p>
+                <p className="font-sans font-bold text-[20px] text-emerald-700">{Number(cert.cosignature_amount_chf).toLocaleString('fr-CH')} <span className="text-[12px] opacity-60">CHF</span></p>
               </div>
             )}
             {cert.recommendation && (
               <div>
                 <p className="font-mono text-[9px] uppercase tracking-widest text-emerald-500 mb-0.5">Recommandation</p>
-                <p className="font-sans text-[12px] text-emerald-700">{RECOMMENDATION_LABELS[cert.recommendation]}</p>
+                <p className="font-sans text-[12px] text-emerald-700">{RECOMMENDATION_LABELS[String(cert.recommendation)] ?? String(cert.recommendation)}</p>
               </div>
             )}
           </div>
-          {cert.summary && (
-            <div className="mt-3">
-              <p className="font-mono text-[9px] uppercase tracking-widest text-emerald-500 mb-1">Avis soumis</p>
-              <p className="font-sans text-[12px] text-emerald-700 leading-relaxed">{cert.summary}</p>
+          {!!cert.observations && (
+            <div className="mt-4 border-t border-emerald-200 pt-3">
+              <p className="font-mono text-[9px] uppercase tracking-widest text-emerald-500 mb-1">Observations AEGRYN</p>
+              <p className="font-sans text-[12px] text-emerald-800 leading-relaxed">{String(cert.observations)}</p>
             </div>
+          )}
+          {cert.summary && (
+            <div className="mt-3 border-t border-emerald-200 pt-3">
+              <p className="font-mono text-[9px] uppercase tracking-widest text-emerald-500 mb-1">Votre avis soumis</p>
+              <p className="font-sans text-[12px] text-emerald-700 leading-relaxed">{String(cert.summary)}</p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Statut : rejected */}
+      {isRejected && (
+        <div className="bg-red-50 border border-red-200 px-5 py-4 mb-6">
+          <p className="font-sans font-semibold text-red-700 text-[13px]">✗ Contribution refusée par AEGRYN</p>
+          {!!cert.rejection_reason && (
+            <div className="mt-2">
+              <p className="font-mono text-[9px] uppercase tracking-widest text-red-400 mb-1">Motif</p>
+              <p className="font-sans text-[12px] text-red-700 leading-relaxed">{String(cert.rejection_reason)}</p>
+            </div>
+          )}
+          {!!cert.observations && (
+            <div className="mt-3 border-t border-red-200 pt-3">
+              <p className="font-mono text-[9px] uppercase tracking-widest text-red-400 mb-1">Observations AEGRYN</p>
+              <p className="font-sans text-[12px] text-red-700 leading-relaxed">{String(cert.observations)}</p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Statut legacy signed (ancien schéma) */}
+      {cert.status === 'signed' && (
+        <div className="bg-emerald-50 border border-emerald-200 px-5 py-4 mb-6">
+          <p className="font-sans font-semibold text-emerald-700 text-[13px]">✓ Co-signature signée</p>
+          {!!cert.signed_at && (
+            <p className="font-sans text-[11px] text-emerald-600 mt-0.5">Signée le {fmtDate(cert.signed_at)}</p>
           )}
         </div>
       )}

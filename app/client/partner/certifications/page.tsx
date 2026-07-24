@@ -14,11 +14,13 @@ const STATUS_CONFIG: Record<string, { label: string; color: string }> = {
   assigned:  { label: 'Assignée',  color: 'text-gray-500 border-gray-200 bg-gray-50' },
   in_review: { label: 'En cours',  color: 'text-blue-600 border-blue-200 bg-blue-50' },
   submitted: { label: 'Soumise',   color: 'text-amber-600 border-amber-200 bg-amber-50' },
-  signed:    { label: 'Signée',    color: 'text-emerald-600 border-emerald-200 bg-emerald-50' },
-  declined:  { label: 'Refusée',   color: 'text-red-500 border-red-100 bg-red-50' },
+  validated: { label: 'Validée',   color: 'text-emerald-600 border-emerald-200 bg-emerald-50' },
+  rejected:  { label: 'Refusée',   color: 'text-red-500 border-red-100 bg-red-50' },
+  expired:   { label: 'Expirée',   color: 'text-gray-400 border-gray-200 bg-gray-50' },
 }
 
 const DIMENSION_LABELS: Record<string, string> = {
+  code:     'Code & Architecture',
   ip:       'Propriété Intellectuelle',
   finance:  'Finance & Comptabilité',
   security: 'Sécurité & Conformité',
@@ -36,6 +38,10 @@ type Cert = {
   score: number | null
   deadline_at: string | null
   signed_at: string | null
+  validated_at: string | null
+  rejection_reason: string | null
+  observations: string | null
+  cosignature_amount_chf: number | null
   created_at: string
   assets: { id: string; company_name: string | null; official_grade: string | null } | null
 }
@@ -47,7 +53,7 @@ export default async function PartnerCertificationsPage() {
   const supa = createServiceClient()
   const { data: certs } = await supa
     .from('partner_certifications')
-    .select('id, dimension, status, score, deadline_at, signed_at, created_at, assets(id, company_name, official_grade)')
+    .select('id, dimension, status, score, deadline_at, signed_at, validated_at, rejection_reason, observations, cosignature_amount_chf, created_at, assets(id, company_name, official_grade)')
     .eq('partner_id', user.id)
     .order('created_at', { ascending: false })
 
@@ -120,8 +126,14 @@ export default async function PartnerCertificationsPage() {
                   <div className="flex flex-wrap gap-5">
                     {cert.score != null && (
                       <div>
-                        <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Score soumis</p>
+                        <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Score</p>
                         <p className="font-sans font-bold text-[13px] text-gray-800">{cert.score}/25</p>
+                      </div>
+                    )}
+                    {cert.cosignature_amount_chf != null && (
+                      <div>
+                        <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Honoraires</p>
+                        <p className="font-sans font-bold text-[13px] text-emerald-700">{cert.cosignature_amount_chf.toLocaleString('fr-CH')} CHF</p>
                       </div>
                     )}
                     {cert.deadline_at && (
@@ -132,10 +144,16 @@ export default async function PartnerCertificationsPage() {
                         }`}>{fmtDate(cert.deadline_at)}</p>
                       </div>
                     )}
-                    {cert.signed_at && (
+                    {cert.validated_at && (
                       <div>
-                        <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Signée le</p>
-                        <p className="font-sans text-[12px] text-emerald-600">{fmtDate(cert.signed_at)}</p>
+                        <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Validée le</p>
+                        <p className="font-sans text-[12px] text-emerald-600">{fmtDate(cert.validated_at)}</p>
+                      </div>
+                    )}
+                    {cert.rejection_reason && (
+                      <div className="max-w-xs">
+                        <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Motif refus</p>
+                        <p className="font-sans text-[11px] text-red-500">{cert.rejection_reason}</p>
                       </div>
                     )}
                   </div>
