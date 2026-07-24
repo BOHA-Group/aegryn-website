@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
+import { sendEmail, emailPartnerMandateCreated } from '@/lib/sendEmail'
 
 export async function POST(req: NextRequest) {
   const body = await req.json() as Record<string, unknown>
@@ -39,6 +40,35 @@ export async function POST(req: NextRequest) {
     .single()
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+
+  // Email de notification au partenaire (best-effort)
+  const { data: profile } = await supa
+    .from('profiles')
+    .select('email, full_name')
+    .eq('id', String(partner_id))
+    .single()
+
+  if (profile?.email) {
+    let assetName: string | null = null
+    if (asset_id) {
+      const { data: asset } = await supa
+        .from('assets')
+        .select('company_name, name')
+        .eq('id', String(asset_id))
+        .single()
+      assetName = String(asset?.company_name ?? asset?.name ?? '')
+    }
+
+    const { subject, html } = emailPartnerMandateCreated({
+      partnerName:     String(profile.full_name ?? profile.email),
+      partnerEmail:    profile.email,
+      clientName:      String(client_name),
+      mandateType:     String(mandate_type ?? 'advisory'),
+      retrocessionPct: Number(retrocession_pct ?? 15),
+      assetName,
+    })
+    await sendEmail(profile.email, subject, html, 'mandate-created').catch(() => {})
+  }
 
   return NextResponse.json({ ok: true, id: data.id })
 }

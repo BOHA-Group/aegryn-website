@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
+import { sendEmail, emailPartnerScoreValidated, emailPartnerScoreRejected } from '@/lib/sendEmail'
 
 export async function PATCH(
   req: NextRequest,
@@ -41,6 +42,48 @@ export async function PATCH(
     .eq('id', id)
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+
+  // Récupérer les infos pour l'email (best-effort, sans bloquer la réponse)
+  const { data: cert } = await supa
+    .from('partner_certifications')
+    .select('partner_id, dimension, score, observations, rejection_reason, cosignature_amount_chf, assets(company_name, name)')
+    .eq('id', id)
+    .single()
+
+  if (cert) {
+    const { data: profile } = await supa
+      .from('profiles')
+      .select('email, full_name')
+      .eq('id', String(cert.partner_id))
+      .single()
+
+    if (profile?.email) {
+      const assetObj = Array.isArray(cert.assets) ? (cert.assets as Record<string, unknown>[])[0] : cert.assets as Record<string, unknown> | null
+      const assetName = String(assetObj?.company_name ?? assetObj?.name ?? 'Actif AEGRYN')
+      const partnerName = String(profile.full_name ?? profile.email)
+
+      if (action === 'validate') {
+        const { subject, html } = emailPartnerScoreValidated({
+          partnerName,
+          assetName,
+          dimension:    String(cert.dimension),
+          score:        Number(cert.score ?? 0),
+          amountChf:    cert.cosignature_amount_chf != null ? Number(cert.cosignature_amount_chf) : null,
+          observations: cert.observations ? String(cert.observations) : null,
+        })
+        await sendEmail(profile.email, subject, html, 'cert-validate').catch(() => {})
+      } else {
+        const { subject, html } = emailPartnerScoreRejected({
+          partnerName,
+          assetName,
+          dimension:       String(cert.dimension),
+          rejectionReason: cert.rejection_reason ? String(cert.rejection_reason) : null,
+          observations:    cert.observations ? String(cert.observations) : null,
+        })
+        await sendEmail(profile.email, subject, html, 'cert-reject').catch(() => {})
+      }
+    }
+  }
 
   return NextResponse.json({ ok: true })
 }
