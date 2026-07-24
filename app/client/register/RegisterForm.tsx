@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 import { supabase }        from '@/lib/supabase'
 import { ArrowUpRight, Eye, EyeOff, CheckCircle } from 'lucide-react'
 
-type Role = 'buyer' | 'seller' | 'partner'
+type Role = 'buyer' | 'seller'
 
 export default function RegisterForm() {
   const t      = useTranslations('clientArea.register')
@@ -15,7 +15,7 @@ export default function RegisterForm() {
   const [fullName,  setFullName]  = useState('')
   const [email,     setEmail]     = useState('')
   const [password,  setPassword]  = useState('')
-  const [role,      setRole]      = useState<Role>('buyer')
+  const [role,      setRole]      = useState<Role | null>(null)
   const [show,      setShow]      = useState(false)
   const [loading,   setLoading]   = useState(false)
   const [error,     setError]     = useState('')
@@ -33,10 +33,11 @@ export default function RegisterForm() {
     }
 
     try {
+      const effectiveRole: Role = role ?? 'buyer'
       const res = await fetch('/api/client/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password, fullName, role }),
+        body: JSON.stringify({ email, password, fullName, role: effectiveRole }),
       })
 
       const json = await res.json() as { error?: string; ok?: boolean }
@@ -54,10 +55,8 @@ export default function RegisterForm() {
       setSuccess(true)
 
       setTimeout(() => {
-        if (role === 'buyer')   router.push('/client/buyer')
-        else if (role === 'seller')  router.push('/client/seller')
-        else if (role === 'partner') router.push('/client/partner')
-        else                         router.push('/client/my-assets')
+        if (effectiveRole === 'seller') router.push('/client/seller')
+        else                            router.push('/client/buyer')
       }, 3000)
     } catch {
       setError(t('errorNetwork'))
@@ -76,10 +75,9 @@ export default function RegisterForm() {
     )
   }
 
-  const roles: { value: Role; label: string }[] = [
-    { value: 'buyer',   label: t('roleBuyer') },
-    { value: 'seller',  label: t('roleSeller') },
-    { value: 'partner', label: t('rolePartner') },
+  const roleOptions: { value: Role; label: string; desc: string }[] = [
+    { value: 'buyer',  label: t('roleBuyer'),  desc: t('roleBuyerDesc')  },
+    { value: 'seller', label: t('roleSeller'), desc: t('roleSellerDesc') },
   ]
 
   return (
@@ -147,16 +145,19 @@ export default function RegisterForm() {
         </div>
       </div>
 
-      {/* Rôle */}
+      {/* Rôle — optionnel, buyer par défaut */}
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/55 mb-2">
-          {t('roleLabel')}
-        </label>
+        <div className="flex items-baseline justify-between mb-2">
+          <label className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/55">
+            {t('roleLabel')}
+          </label>
+          <span className="font-sans text-[10px] text-white/25">{t('roleOptional')}</span>
+        </div>
         <div className="flex flex-col gap-2">
-          {roles.map(({ value, label }) => (
+          {roleOptions.map(({ value, label, desc }) => (
             <label
               key={value}
-              className={`flex items-center gap-3 px-4 py-3 border cursor-pointer transition-colors ${
+              className={`flex items-start gap-3 px-4 py-3 border cursor-pointer transition-colors ${
                 role === value
                   ? 'border-ag-apex bg-ag-apex/10 text-white'
                   : 'border-white/15 bg-white/5 text-white/50 hover:border-white/30 hover:text-white/80'
@@ -167,15 +168,18 @@ export default function RegisterForm() {
                 name="role"
                 value={value}
                 checked={role === value}
-                onChange={() => setRole(value)}
+                onChange={() => setRole(v => v === value ? null : value)}
                 className="sr-only"
               />
               <span
-                className={`w-3.5 h-3.5 rounded-full border-2 flex-shrink-0 transition-colors ${
+                className={`w-3.5 h-3.5 rounded-full border-2 flex-shrink-0 mt-0.5 transition-colors ${
                   role === value ? 'border-ag-apex bg-ag-apex' : 'border-white/30'
                 }`}
               />
-              <span className="font-sans text-[13px]">{label}</span>
+              <span className="flex flex-col">
+                <span className="font-sans font-semibold text-[13px]">{label}</span>
+                <span className="font-sans text-[11px] text-white/35 mt-0.5">{desc}</span>
+              </span>
             </label>
           ))}
         </div>

@@ -41,17 +41,13 @@ export default function LoginForm() {
           const { roles } = await res.json() as { roles: string[] }
           if (roles.includes('admin') || roles.includes('super_admin')) {
             router.push('/admin')
-          } else if (roles.includes('buyer')) {
-            router.push('/client/buyer')
-          } else if (roles.includes('seller')) {
+          } else if (roles.includes('seller') && !roles.includes('buyer')) {
             router.push('/client/seller')
-          } else if (roles.includes('partner')) {
-            router.push('/client/partner')
           } else {
-            router.push('/client/my-assets')
+            router.push('/client/buyer')
           }
         } else {
-          router.push('/client/my-assets')
+          router.push('/client/buyer')
         }
       } catch {
         router.push('/client/my-assets')

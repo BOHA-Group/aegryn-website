@@ -15,8 +15,9 @@ export default async function SellerLayout({ children }: { children: React.React
     .eq('id', user.id)
     .single()
 
-  const isSeller = Array.isArray(profile?.roles) && profile.roles.includes('seller')
-  if (!isSeller) redirect('/client/my-assets')
+  const roles = Array.isArray(profile?.roles) ? profile.roles as string[] : []
+  const canAccessSeller = roles.includes('seller')
+  if (!canAccessSeller) redirect('/client/buyer')
 
   const { count: unreadCount } = await supa
     .from('user_notifications')

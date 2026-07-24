@@ -6,7 +6,7 @@ const schema = z.object({
   email:    z.string().email(),
   password: z.string().min(8),
   fullName: z.string().min(1).max(120),
-  role:     z.enum(['buyer', 'seller', 'partner']),
+  role:     z.enum(['buyer', 'seller']).optional().default('buyer'),
 })
 
 export async function POST(req: NextRequest) {
@@ -46,16 +46,15 @@ export async function POST(req: NextRequest) {
   const resendKey = process.env.RESEND_API_KEY
   if (resendKey) {
     const roleLabel: Record<string, string> = {
-      buyer:   'Acquéreur',
-      seller:  'Cédant',
-      partner: 'Partenaire',
+      buyer:  'Acquéreur',
+      seller: 'Cédant',
     }
     await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${resendKey}` },
       body: JSON.stringify({
-        from: 'AEGRYN <noreply@aegryn.com>',
-        reply_to: 'contact@boha-group.com',
+        from: `AEGRYN <${process.env.RESEND_FROM ?? 'contact@boha-group.com'}>`,
+        reply_to: process.env.RESEND_REPLY_TO ?? 'contact@aegryn.com',
         to: [normalizedEmail],
         subject: 'Bienvenue dans l\'espace client AEGRYN',
         html: `<div style="font-family:sans-serif;max-width:560px;margin:0 auto;padding:32px 24px;background:#050a1a;color:#ffffff;">
