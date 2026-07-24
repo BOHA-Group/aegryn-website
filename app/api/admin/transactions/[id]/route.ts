@@ -112,7 +112,7 @@ export async function PATCH(
           await supa.from('commissions').insert({
             partner_id:     partnerProfile.id,
             transaction_id: id,
-            type:           'introduction_asset',
+            type:           'introduction',
             amount_chf:     partnerComm,
             status:         'due',
           })
