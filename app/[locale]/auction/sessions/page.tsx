@@ -117,7 +117,7 @@ export default async function AuctionSessionPage({ params }: Props) {
                       {t('sessionCardLocked')}
                     </p>
                     <Link
-                      href={`/${locale}/client/register`}
+                      href="/client/register"
                       className="font-sans text-[11px] font-semibold text-ag-apex-ink underline underline-offset-2 hover:text-ag-apex transition-colors"
                     >
                       {t('sessionCardLockedCta')} →
