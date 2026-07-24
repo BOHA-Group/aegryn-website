@@ -38,7 +38,7 @@ export function VisionMissionBlock({
         scrollTrigger: {
           trigger:       wrap,
           start:         'top top',
-          end:           '+=160%',
+          end:           '+=90%',
           pin:           true,
           scrub:         0.8,
           anticipatePin: 1,

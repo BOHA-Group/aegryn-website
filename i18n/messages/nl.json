@@ -41,7 +41,7 @@
     "title": "Rare by selection.",
     "sub": "De Europese referentie voor de certificering en de handel\nvan premium tech-assets. Discreet van nature. Streng qua eis.",
     "cta": "ONTDEK DE CATALOGUS",
-    "strip": "GECERTIFICEERDE TECH-ASSETTRANSACTIES — EUROPA",
+    "strip": "GECERTIFICEERDE TECH-ASSETTRANSACTIES",
     "geo": "Zwitserland · Europa · Global",
     "scroll": "Scrollen",
     "ctaSecondary": "EEN ASSET INDIENEN",
@@ -466,7 +466,7 @@
         },
         {
           "q": "Wat onderscheidt ons van de concurrentie?",
-          "a": "In tegenstelling tot adviesbureaus of agencies bouwen en beheren we onze eigen digitale ecosystemen. Elk advisory-inzicht, beveiligingsprotocol en groeiframework dat we aanbieden is gebaseerd op echte uitvoering, niet op theorie."
+          "a": "In tegenstelling tot adviesbureaus of agencies bouwen en beheren we onze eigen digitale ecosystemen. Elk strategisch advies, beveiligingsprotocol en groeiaanpak die we aanbieden is gebaseerd op echte uitvoering, niet op theorie. Wij verkopen geen algemene modellen door. Wij delen wat werkt omdat we het zelf gebruiken."
         },
         {
           "q": "Hoe kan ik investeren of partner worden?",
@@ -481,7 +481,7 @@
     "hero": {
       "label": "Contact opnemen",
       "title": "Laten we praten.",
-      "desc": "Advisory, certificering, veiling, partnerschap of algemene vraag — we reageren binnen 24u."
+      "desc": "Advies, certificering, veiling, partnerschap of algemene vraag — we reageren binnen 24u."
     },
     "responseTime": {
       "label": "Reactietijd",
@@ -2005,12 +2005,14 @@
       "noSessions": "Nog geen voltooide sessies.",
       "sessionCardKicker": "Online veiling",
       "sessionCardStatus": "Binnenkort",
-      "sessionCardCategory": "Legal-Tech · AEGRYN-eigen asset",
+      "sessionCardCategory": "Legal-Tech",
       "sessionCardTitle": "AI-contractintelligentie — Kavel nr. 001",
       "sessionCardLocation": "Online — Zwitserland",
       "sessionCardDateLabel": "Catalogus opent",
       "sessionCardDateValue": "Exacte datum 30 dagen vooraf gecommuniceerd",
       "sessionCardCtaPreview": "Kavel-preview",
+      "sessionCardLocked": "Toegang voorbehouden aan geverifieerde leden",
+      "sessionCardLockedCta": "Account aanmaken",
       "sessionCardCtaCatalog": "Catalogus",
       "sessionCardCtaNotify": "Op de hoogte blijven",
       "upcomingSessions": "Aankomende sessie"

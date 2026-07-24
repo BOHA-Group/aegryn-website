@@ -41,7 +41,7 @@
     "title": "Rare by selection.",
     "sub": "Die europäische Referenz für die Zertifizierung und den Handel\nvon Premium-Tech-Assets. Diskret von Natur aus. Streng nach Anspruch.",
     "cta": "KATALOG ENTDECKEN",
-    "strip": "ZERTIFIZIERTE TECH-ASSET-TRANSAKTIONEN — EUROPA",
+    "strip": "ZERTIFIZIERTE TECH-ASSET-TRANSAKTIONEN",
     "geo": "Schweiz · Europa · Global",
     "scroll": "Scrollen",
     "ctaSecondary": "ASSET EINREICHEN",
@@ -466,7 +466,7 @@
         },
         {
           "q": "Was unterscheidet uns von der Konkurrenz?",
-          "a": "Im Gegensatz zu Beratungsunternehmen oder Agenturen bauen und betreiben wir unsere eigenen digitalen Ökosysteme. Jeder Advisory-Einblick, jedes Sicherheitsprotokoll, jeder Wachstumsrahmen, den wir anbieten, stammt aus realer Ausführung — nicht aus der Theorie."
+          "a": "Im Gegensatz zu Beratungsunternehmen oder Agenturen bauen und betreiben wir unsere eigenen digitalen Ökosysteme. Jeder strategische Rat, jedes Sicherheitsprotokoll, jede Wachstumsstrategie, die wir anbieten, stammt aus realer Ausführung — nicht aus der Theorie. Wir verkaufen keine allgemeinen Modelle weiter. Wir teilen, was funktioniert, weil wir es selbst nutzen."
         },
         {
           "q": "Wie kann ich investieren oder Partner werden?",
@@ -481,7 +481,7 @@
     "hero": {
       "label": "Kontakt",
       "title": "Sprechen wir.",
-      "desc": "Advisory, Zertifizierung, Auktion, Partnerschaft oder allgemeine Anfragen — wir antworten innerhalb von 24h."
+      "desc": "Beratung, Zertifizierung, Versteigerung, Partnerschaft oder allgemeine Anfragen — wir antworten innerhalb von 24h."
     },
     "responseTime": {
       "label": "Antwortzeit",
@@ -2005,12 +2005,14 @@
       "noSessions": "Noch keine abgeschlossenen Sessions.",
       "sessionCardKicker": "Online-Verkauf",
       "sessionCardStatus": "Demnächst",
-      "sessionCardCategory": "Legal-Tech · AEGRYN-eigenes Asset",
+      "sessionCardCategory": "Legal-Tech",
       "sessionCardTitle": "KI-Vertragsintelligenz — Los Nr. 001",
       "sessionCardLocation": "Online — Schweiz",
       "sessionCardDateLabel": "Katalogeröffnung",
       "sessionCardDateValue": "Genaues Datum 30 Tage vorher mitgeteilt",
       "sessionCardCtaPreview": "Los-Vorschau",
+      "sessionCardLocked": "Zugang nur für verifizierte Mitglieder",
+      "sessionCardLockedCta": "Konto erstellen",
       "sessionCardCtaCatalog": "Katalog",
       "sessionCardCtaNotify": "Benachrichtigen lassen",
       "upcomingSessions": "Kommende Session"

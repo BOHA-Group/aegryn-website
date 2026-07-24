@@ -136,16 +136,7 @@ export function HeroMountain() {
       <div className="absolute bottom-0 left-0 right-0 z-10">
         <div className="max-w-7xl mx-auto px-6 md:px-12 pb-14">
 
-          {/* Eyebrow label */}
-          <p
-            ref={labelRef}
-            className="font-sans font-semibold text-[10px] tracking-[0.3em] uppercase text-white/75 mb-6 flex items-center gap-3"
-          >
-            <span className="w-10 h-px bg-white/30 inline-block" />
-            {t('eyebrow')}
-          </p>
-
-          {/* H1 — Unbounded display */}
+          {/* H1 — Unbounded display */
           <h1
             ref={headingRef}
             id="hero-title"

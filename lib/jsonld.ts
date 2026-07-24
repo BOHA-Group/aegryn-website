@@ -20,7 +20,7 @@ export function organizationJsonLd() {
     ],
     contactPoint: {
       '@type':            'ContactPoint',
-      email:              'contact@aegryn.com',
+      email:              'contact@boha-group.com',
       contactType:        'customer service',
       availableLanguage:  ['French', 'English', 'German', 'Italian', 'Spanish', 'Dutch'],
     },

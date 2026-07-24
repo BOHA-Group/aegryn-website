@@ -25,7 +25,7 @@ export const subblinkTeaser: AssetTeaser = {
 
   tags: [
     'Algorithme propriétaire unique',
-    'Early growth',
+    'Croissance initiale',
     'Autofinancé',
     'Marché non disputé',
     'Extension internationale prête',
@@ -39,5 +39,5 @@ export const subblinkTeaser: AssetTeaser = {
   ],
 
   investmentNote:
-    "Plus de 150 000 € de développement engagé à ce jour — algorithme propriétaire, infrastructure technique complète, conformité réglementaire (RGPD/nLPD), API Entreprise marque blanche — hors valorisation du potentiel de marché. Ce montant reflète le coût de reconstruction de l'actif, non sa valeur de cession.",
+    "Plus de 1 500 heures de développement engagé à ce jour — algorithme propriétaire, infrastructure technique complète, conformité réglementaire (RGPD/nLPD), API Entreprise marque blanche — hors valorisation du potentiel de marché. Ce montant reflète le coût de reconstruction de l'actif, non sa valeur de cession.",
 }

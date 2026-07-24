@@ -256,7 +256,7 @@ export default async function SellerTransactionDetailPage({
       <div className="bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
         <p className="font-sans text-[12px] text-gray-600">
           Pour toute question, contactez votre chargé de compte à{' '}
-          <a href="mailto:contact@aegryn.com" className="text-ag-navy underline">contact@aegryn.com</a>{' '}
+          <a href="mailto:contact@boha-group.com" className="text-ag-navy underline">contact@boha-group.com</a>{' '}
           — référence <span className="font-mono text-[10px]">{tx.id}</span>.
         </p>
       </div>

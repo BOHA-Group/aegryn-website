@@ -2,8 +2,10 @@ import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Calendar, MapPin, Users, ArrowUpRight, Bell } from 'lucide-react'
+import { Calendar, MapPin, Users, ArrowUpRight, Bell, Lock } from 'lucide-react'
 import WaitlistForm from '@/components/auction/WaitlistForm'
+import { getUser } from '@/lib/supabaseServer'
+import { checkAuctionCatalogAccess } from '@/lib/auctionAccess'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -16,6 +18,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AuctionSessionPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'auction.session' })
+
+  const user = await getUser()
+  const accessStatus = user
+    ? await checkAuctionCatalogAccess(user.id)
+    : 'not_authenticated'
+  const hasLotAccess = accessStatus === 'ok'
 
   const details = [
     { icon: Calendar, label: t('date'),   value: t('dateTbd')      },
@@ -93,12 +101,29 @@ export default async function AuctionSessionPage({ params }: Props) {
 
               {/* CTAs — équivalent Price List / Top Lots / Catalog */}
               <div className="flex flex-wrap items-center gap-2 shrink-0">
-                <Link
-                  href="/auction/teaser-preview"
-                  className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:bg-ag-navy-mid transition-colors"
-                >
-                  {t('sessionCardCtaPreview')}
-                </Link>
+                {hasLotAccess ? (
+                  <Link
+                    href="/auction/teaser-preview"
+                    className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:bg-ag-navy-mid transition-colors"
+                  >
+                    {t('sessionCardCtaPreview')}
+                  </Link>
+                ) : (
+                  <div className="flex flex-col gap-1.5">
+                    <span className="inline-flex items-center gap-2 bg-ag-off-white border border-ag-border text-ag-gray-light font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 cursor-not-allowed select-none">
+                      <Lock size={11} /> {t('sessionCardCtaPreview')}
+                    </span>
+                    <p className="font-sans text-[11px] text-ag-gray-light leading-tight">
+                      {t('sessionCardLocked')}
+                    </p>
+                    <Link
+                      href={`/${locale}/client/register`}
+                      className="font-sans text-[11px] font-semibold text-ag-apex-ink underline underline-offset-2 hover:text-ag-apex transition-colors"
+                    >
+                      {t('sessionCardLockedCta')} →
+                    </Link>
+                  </div>
+                )}
                 <Link
                   href="/auction/catalog"
                   className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:border-ag-black hover:text-ag-black transition-colors"

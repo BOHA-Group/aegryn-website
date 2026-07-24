@@ -241,7 +241,7 @@ export default async function SellerAssetDetailPage({
       <div className="bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
         <p className="font-sans text-[12px] text-gray-600">
           Pour toute question sur ce dossier, contactez votre chargé de compte à{' '}
-          <a href="mailto:contact@aegryn.com" className="text-ag-navy underline">contact@aegryn.com</a>{' '}
+          <a href="mailto:contact@boha-group.com" className="text-ag-navy underline">contact@boha-group.com</a>{' '}
           en mentionnant la référence <span className="font-mono text-[10px]">{id}</span>.
         </p>
       </div>

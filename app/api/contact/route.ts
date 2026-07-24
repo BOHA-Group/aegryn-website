@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     const data = schema.parse(body)
 
     const resendKey = process.env.RESEND_API_KEY
-    const fromEmail = process.env.RESEND_FROM ?? 'contact@aegryn.com'
+    const fromEmail = process.env.RESEND_FROM ?? 'contact@boha-group.com'
 
     if (!resendKey) {
       console.warn('[contact] RESEND_API_KEY not set — logging submission:', data)
@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         from: `${process.env.RESEND_FROM_NAME ?? 'AEGRYN'} <${fromEmail}>`,
-        to: ['contact@aegryn.com'],
+        to: ['contact@boha-group.com'],
         reply_to: data.email,
         subject: `[Aegryn] ${data.subject} — ${data.name}`,
         text: `

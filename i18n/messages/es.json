@@ -41,7 +41,7 @@
     "title": "Rare by selection.",
     "sub": "La referencia europea para la certificación y la transacción\nde activos tech premium. Discreto por naturaleza. Riguroso por exigencia.",
     "cta": "DESCUBRIR EL CATÁLOGO",
-    "strip": "TRANSACCIONES DE ACTIVOS TECH CERTIFICADAS — EUROPA",
+    "strip": "TRANSACCIONES DE ACTIVOS TECH CERTIFICADAS",
     "geo": "Suiza · Europa · Global",
     "scroll": "Desplazar",
     "ctaSecondary": "ENVIAR UN ACTIVO",
@@ -466,7 +466,7 @@
         },
         {
           "q": "¿Qué nos diferencia de la competencia?",
-          "a": "A diferencia de consultoras o agencias, construimos y operamos nuestros propios ecosistemas digitales. Cada insight advisory, protocolo de seguridad y marco de crecimiento que ofrecemos proviene de ejecución real, no de teoría."
+          "a": "A diferencia de consultoras o agencias, construimos y operamos nuestros propios ecosistemas digitales. Cada consejo estratégico, protocolo de seguridad y enfoque de crecimiento que ofrecemos proviene de ejecución real, no de teoría. No revendemos modelos genéricos. Compartimos lo que funciona porque lo usamos nosotros mismos."
         },
         {
           "q": "¿Cómo puedo invertir o asociarme?",
@@ -481,7 +481,7 @@
     "hero": {
       "label": "Contacto",
       "title": "Hablemos.",
-      "desc": "Advisory, certificación, subasta, asociación o consulta general — respondemos en 24h."
+      "desc": "Asesoramiento, certificación, subasta, asociación o consulta general — respondemos en 24h."
     },
     "responseTime": {
       "label": "Tiempo de respuesta",
@@ -2005,12 +2005,14 @@
       "noSessions": "Ninguna sesión completada todavía.",
       "sessionCardKicker": "Venta en línea",
       "sessionCardStatus": "Próximamente",
-      "sessionCardCategory": "Legal-Tech · Activo propio de AEGRYN",
+      "sessionCardCategory": "Legal-Tech",
       "sessionCardTitle": "Inteligencia contractual por IA — Lote N.º 001",
       "sessionCardLocation": "En línea — Suiza",
       "sessionCardDateLabel": "Apertura del catálogo",
       "sessionCardDateValue": "Fecha exacta anunciada 30 días antes",
       "sessionCardCtaPreview": "Vista previa del lote",
+      "sessionCardLocked": "Acceso reservado para miembros verificados",
+      "sessionCardLockedCta": "Crear una cuenta",
       "sessionCardCtaCatalog": "Catálogo",
       "sessionCardCtaNotify": "Recibir notificación",
       "upcomingSessions": "Próxima sesión"

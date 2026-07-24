@@ -48,7 +48,7 @@ export default function ForgotPasswordForm() {
           {t('sentValidity')}
         </p>
         <p className="font-sans text-[11px] text-white/25 mt-4">
-          {t('notReceived')} contact@aegryn.com
+          {t('notReceived')} contact@boha-group.com
         </p>
       </div>
     )

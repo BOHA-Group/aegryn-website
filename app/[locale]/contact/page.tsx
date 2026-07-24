@@ -52,10 +52,10 @@ export default async function ContactPage({ params }: Props) {
                 Email
               </p>
               <a
-                href="mailto:contact@aegryn.com"
+                href="mailto:contact@boha-group.com"
                 className="text-sm text-ag-gray hover:text-ag-black transition-colors"
               >
-                contact@aegryn.com
+                contact@boha-group.com
               </a>
             </div>
             <div>

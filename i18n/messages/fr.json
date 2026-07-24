@@ -8,8 +8,8 @@
     "growWithUs": "Partenaires",
     "career": "Carrières",
     "contact": "Contact",
-    "auction": "Auction",
-    "grade": "Grade",
+    "auction": "Enchères",
+    "grade": "Notation",
     "assets": "Actifs",
     "services": "Services",
     "discover": "Blog",
@@ -40,7 +40,7 @@
     "title": "Rare par sélection.",
     "sub": "La référence européenne pour la certification et la transaction\nd'actifs tech premium. Discret par nature. Rigoureux par exigence.",
     "cta": "DÉCOUVRIR LE CATALOGUE",
-    "strip": "TRANSACTIONS D'ACTIFS TECH CERTIFIÉES — EUROPE",
+    "strip": "TRANSACTIONS D'ACTIFS TECH CERTIFIÉES",
     "geo": "Suisse · Europe · Global",
     "scroll": "Défiler",
     "ctaPrimary": "Voir le catalogue",
@@ -347,11 +347,11 @@
         "desc": "Construire des actifs tech propriétaires, certifiables, transférables. IP déposée, codebase documentée, stack souveraine."
       },
       "simplify": {
-        "title": "GRADE",
-        "desc": "Certifier de façon indépendante et objective. Refuser plus qu'accepter. Un grade reproductible, traçable, concluant."
+        "title": "NOTATION",
+        "desc": "Certifier de façon indépendante et objective. Refuser plus qu'accepter. Une notation reproductible, traçable, concluante."
       },
       "embrace": {
-        "title": "AUCTION",
+        "title": "ENCHÈRES",
         "desc": "Transiger dans la discrétion, avec la certitude pour les deux parties. Séquestre institutionnel. Documentation complète à chaque transfert."
       }
     },
@@ -462,7 +462,7 @@
         },
         {
           "q": "Qu'est-ce qui nous différencie ?",
-          "a": "Contrairement aux cabinets de conseil ou agences, nous construisons et opérons nos propres écosystèmes numériques. Chaque insight advisory, chaque protocole de sécurité, chaque cadre de croissance que nous proposons est issu d'une exécution réelle — pas de la théorie. Nous ne revendons pas des frameworks. Nous partageons ce qui fonctionne parce que nous l'utilisons nous-mêmes."
+          "a": "Contrairement aux cabinets de conseil ou agences, nous construisons et opérons nos propres écosystèmes numériques. Chaque conseil stratégique, chaque protocole de sécurité, chaque approche de croissance que nous proposons est issu d'une exécution réelle — pas de la théorie. Nous ne revendons pas des modèles génériques. Nous partageons ce qui fonctionne parce que nous l'utilisons nous-mêmes."
         },
         {
           "q": "Comment investir ou devenir partenaire ?",
@@ -477,7 +477,7 @@
     "hero": {
       "label": "Nous contacter",
       "title": "Parlons.",
-      "desc": "Advisory, certification, auction, partenariat ou question générale — nous répondons sous 24h."
+      "desc": "Conseil, certification, enchères, partenariat ou question générale — nous répondons sous 24h."
     },
     "responseTime": {
       "label": "Délai de réponse",
@@ -2018,12 +2018,14 @@
       "noSessions": "Aucune session passée pour l'instant.",
       "sessionCardKicker": "Vente en ligne",
       "sessionCardStatus": "À venir",
-      "sessionCardCategory": "Legal-Tech · Actif propriétaire AEGRYN",
+      "sessionCardCategory": "Legal-Tech",
       "sessionCardTitle": "Intelligence contractuelle par IA — Lot N°001",
       "sessionCardLocation": "En ligne — Suisse",
       "sessionCardDateLabel": "Ouverture du catalogue",
       "sessionCardDateValue": "Date exacte communiquée 30 jours avant",
       "sessionCardCtaPreview": "Aperçu du lot",
+      "sessionCardLocked": "Accès réservé aux membres vérifiés",
+      "sessionCardLockedCta": "Créer un compte",
       "sessionCardCtaCatalog": "Catalogue",
       "sessionCardCtaNotify": "Être notifié",
       "upcomingSessions": "Session à venir"

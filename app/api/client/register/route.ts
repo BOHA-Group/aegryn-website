@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${resendKey}` },
       body: JSON.stringify({
         from: 'AEGRYN <noreply@aegryn.com>',
-        reply_to: 'contact@aegryn.com',
+        reply_to: 'contact@boha-group.com',
         to: [normalizedEmail],
         subject: 'Bienvenue dans l\'espace client AEGRYN',
         html: `<div style="font-family:sans-serif;max-width:560px;margin:0 auto;padding:32px 24px;background:#050a1a;color:#ffffff;">

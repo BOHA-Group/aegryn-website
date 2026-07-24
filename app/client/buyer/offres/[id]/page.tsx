@@ -149,7 +149,7 @@ export default async function BuyerOfferDetailPage({
       {bid.status === 'submitted' && (
         <div className="bg-gray-50 border border-gray-200 p-5">
           <p className="font-sans text-[12px] text-gray-500">
-            Votre offre est en attente d&apos;examen. L&apos;équipe AEGRYN vous répondra dans les <strong>48h ouvrables</strong>. En cas d&apos;urgence, contactez <a href="mailto:contact@aegryn.com" className="text-ag-navy underline">contact@aegryn.com</a>.
+            Votre offre est en attente d&apos;examen. L&apos;équipe AEGRYN vous répondra dans les <strong>48h ouvrables</strong>. En cas d&apos;urgence, contactez <a href="mailto:contact@boha-group.com" className="text-ag-navy underline">contact@boha-group.com</a>.
           </p>
         </div>
       )}

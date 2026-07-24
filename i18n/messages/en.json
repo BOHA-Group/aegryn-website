@@ -41,7 +41,7 @@
     "title": "Rare by selection.",
     "sub": "The European reference for the certification and transaction\nof premium tech assets. Discreet by nature. Rigorous by demand.",
     "cta": "DISCOVER THE CATALOGUE",
-    "strip": "CERTIFIED TECH ASSET TRANSACTIONS — EUROPE",
+    "strip": "CERTIFIED TECH ASSET TRANSACTIONS",
     "geo": "Switzerland · Europe · Global",
     "scroll": "Scroll",
     "ctaPrimary": "View catalog",
@@ -463,7 +463,7 @@
         },
         {
           "q": "What makes us unique compared to competitors?",
-          "a": "Unlike consultancies or agencies, we build and operate our own digital ecosystems. Every advisory insight, every security protocol, every growth framework we offer is derived from real execution — not theory. We do not resell frameworks. We share what works because we use it ourselves."
+          "a": "Unlike consultancies or agencies, we build and operate our own digital ecosystems. Every piece of strategic advice, every security protocol, every growth approach we offer is derived from real execution — not theory. We do not resell generic models. We share what works because we use it ourselves."
         },
         {
           "q": "How can I invest or partner with Aegryn?",
@@ -2010,12 +2010,14 @@
       "noSessions": "No past sessions yet.",
       "sessionCardKicker": "Online sale",
       "sessionCardStatus": "Upcoming",
-      "sessionCardCategory": "Legal-Tech · AEGRYN proprietary asset",
+      "sessionCardCategory": "Legal-Tech",
       "sessionCardTitle": "AI Contract Intelligence — Lot No.001",
       "sessionCardLocation": "Online — Switzerland",
       "sessionCardDateLabel": "Catalogue opens",
       "sessionCardDateValue": "Exact date announced 30 days prior",
       "sessionCardCtaPreview": "Lot preview",
+      "sessionCardLocked": "Access reserved for verified members",
+      "sessionCardLockedCta": "Create an account",
       "sessionCardCtaCatalog": "Catalogue",
       "sessionCardCtaNotify": "Get notified",
       "upcomingSessions": "Upcoming session"

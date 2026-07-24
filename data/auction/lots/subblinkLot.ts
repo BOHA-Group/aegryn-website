@@ -19,7 +19,7 @@ export const subblinkLot: AssetLot = {
   catalogContext: "Session de Cession Privée · Genève · Catalogue Phase 0",
 
   heroStats: [
-    { value: "EARLY GROWTH", label: "Stade de maturité" },
+    { value: "CROISSANCE INITIALE", label: "Stade de maturité" },
     { value: "26 665", label: "Lignes de code (core)" },
     { value: "87", label: "Endpoints serverless" },
     { value: "6", label: "Langues déployées" },
@@ -37,7 +37,7 @@ export const subblinkLot: AssetLot = {
     items: [
       { label: "Rareté", value: "Algorithme de grading propriétaire A–E (Nutri-Score appliqué au droit) — premier et seul du marché" },
       { label: "Marché adressé", value: "Particuliers, indépendants, PME, professionnels du droit — France, Suisse, Belgique, zone francophone UE" },
-      { label: "Stade", value: "Early growth — produit en production, premier partenariat signé, monétisation active" },
+      { label: "Stade", value: "Croissance initiale — produit en production, premier partenariat signé, monétisation active" },
       { label: "Différenciation", value: "Positionnement récepteur unique, paiement à l'acte, suppression des données par conception" },
       { label: "Croissance", value: "6 langues déjà déployées — extension UE et internationale activable sans refonte produit" },
       { label: "Infrastructure", value: "87 endpoints API, marque blanche entreprise livrée, charges fixes ≈ 28,56 $/mois hors IA" },
@@ -179,7 +179,7 @@ export const subblinkLot: AssetLot = {
 
   maturity: {
     specs: [
-      ["Stade", "Early growth — produit en production, traction qualifiée, monétisation activée"],
+      ["Stade", "Croissance initiale — produit en production, traction qualifiée, monétisation activée"],
       ["Revenus", "Modèle SaaS récurrent multi-palier en exploitation, premier partenariat de distribution signé"],
       ["Clientèle", "Particuliers, freelances, PME, professionnels du droit — France, Suisse, Belgique"],
       ["Acquisition", "Partenariats institutionnels et de plateforme — sans dépense média payante structurelle à ce stade"],

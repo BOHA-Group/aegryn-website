@@ -41,7 +41,7 @@
     "title": "Rare by selection.",
     "sub": "Il riferimento europeo per la certificazione e la transazione\ndi asset tech premium. Discreto per natura. Rigoroso per esigenza.",
     "cta": "SCOPRI IL CATALOGO",
-    "strip": "TRANSAZIONI DI ASSET TECH CERTIFICATE — EUROPA",
+    "strip": "TRANSAZIONI DI ASSET TECH CERTIFICATE",
     "geo": "Svizzera · Europa · Global",
     "scroll": "Scorri",
     "ctaSecondary": "INVIA UN ASSET",
@@ -466,7 +466,7 @@
         },
         {
           "q": "Cosa ci differenzia dalla concorrenza?",
-          "a": "A differenza di consulenze o agenzie, costruiamo e gestiamo i nostri ecosistemi digitali. Ogni insight advisory, protocollo di sicurezza e framework di crescita che offriamo deriva da vera esecuzione, non dalla teoria."
+          "a": "A differenza di consulenze o agenzie, costruiamo e gestiamo i nostri ecosistemi digitali. Ogni consiglio strategico, protocollo di sicurezza e approccio di crescita che offriamo deriva da vera esecuzione, non dalla teoria. Non riventiamo modelli generici. Condividiamo ciò che funziona perché lo usiamo noi stessi."
         },
         {
           "q": "Come posso investire o diventare partner?",
@@ -481,7 +481,7 @@
     "hero": {
       "label": "Contattaci",
       "title": "Parliamo.",
-      "desc": "Advisory, certificazione, asta, partnership o domanda generale — rispondiamo entro 24h."
+      "desc": "Consulenza, certificazione, asta, partnership o domanda generale — rispondiamo entro 24h."
     },
     "responseTime": {
       "label": "Tempo di risposta",
@@ -2005,12 +2005,14 @@
       "noSessions": "Nessuna sessione completata ancora.",
       "sessionCardKicker": "Vendita online",
       "sessionCardStatus": "In arrivo",
-      "sessionCardCategory": "Legal-Tech · Asset proprietario AEGRYN",
+      "sessionCardCategory": "Legal-Tech",
       "sessionCardTitle": "Intelligenza contrattuale IA — Lotto N. 001",
       "sessionCardLocation": "Online — Svizzera",
       "sessionCardDateLabel": "Apertura catalogo",
       "sessionCardDateValue": "Data esatta comunicata 30 giorni prima",
       "sessionCardCtaPreview": "Anteprima del lotto",
+      "sessionCardLocked": "Accesso riservato ai membri verificati",
+      "sessionCardLockedCta": "Crea un account",
       "sessionCardCtaCatalog": "Catalogo",
       "sessionCardCtaNotify": "Ricevi notifica",
       "upcomingSessions": "Sessione in arrivo"
