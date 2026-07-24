@@ -1,5 +1,7 @@
+import { formatChfEur } from '@/lib/fxRate'
+
 /**
- * Helper Resend centralisé — même pattern que les routes existantes.
+ * Helper Resend centralisé.
  * Variables d'env : RESEND_API_KEY, RESEND_FROM, RESEND_FROM_NAME, RESEND_REPLY_TO
  */
 export async function sendEmail(
@@ -29,107 +31,220 @@ export async function sendEmail(
   if (!res.ok) console.error(`[sendEmail${tag ? ` ${tag}` : ''}] Resend error (${to})`, await res.text())
 }
 
-/* ── Templates partenaires ─────────────────────────────────────────────── */
+/* ── Logo AE — SVG inline light mode ──────────────────────────────────── */
+// Monogramme AE : Λ (lambda sans traverse) + cut apex #5ADDA4 + E 3 barres
+const LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="36" viewBox="0 0 48 36" fill="none" aria-label="AEGRYN">
+  <!-- Jambe gauche A (fine) -->
+  <line x1="4" y1="33" x2="22" y2="3" stroke="#0F1C3F" stroke-width="2.5" stroke-linecap="square"/>
+  <!-- Jambe droite A (épaisse) -->
+  <line x1="22" y1="3" x2="30" y2="33" stroke="#0F1C3F" stroke-width="4" stroke-linecap="square"/>
+  <!-- Cut apex triangle #5ADDA4 -->
+  <polygon points="17,13 22,3 27,13" fill="#5ADDA4"/>
+  <!-- E — barre haute -->
+  <rect x="33" y="4"  width="13" height="3" fill="#0F1C3F"/>
+  <!-- E — barre médiane (plus courte) -->
+  <rect x="33" y="15" width="10" height="3" fill="#0F1C3F"/>
+  <!-- E — barre basse -->
+  <rect x="33" y="26" width="13" height="3" fill="#0F1C3F"/>
+</svg>`
 
+/* ── Squelette commun light mode ───────────────────────────────────────── */
 const FOOTER = `
-<hr style="border:none;border-top:1px solid #1e293b;margin:24px 0 12px 0;" />
-<p style="font-size:10px;color:#475569;font-family:monospace;margin:0;">
-  AEGRYN Sàrl — Suisse · <a href="https://aegryn.com" style="color:#475569;">aegryn.com</a>
-  · <a href="https://aegryn.com/client/partner/certifications" style="color:#475569;">Mon espace partenaire</a>
-</p>`
+<tr>
+  <td style="padding:24px 32px 20px;border-top:1px solid #e2e8f0;">
+    <p style="margin:0 0 4px 0;font-size:11px;color:#94a3b8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+      <strong style="color:#64748b;">AEGRYN Sàrl</strong> — Genève, Suisse
+    </p>
+    <p style="margin:0;font-size:11px;color:#94a3b8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+      <a href="https://aegryn.com" style="color:#5ADDA4;text-decoration:none;">aegryn.com</a>
+      &nbsp;·&nbsp;
+      <a href="https://aegryn.com/client/partner" style="color:#94a3b8;text-decoration:none;">Espace partenaire</a>
+    </p>
+  </td>
+</tr>`
 
-const WRAP = (body: string) =>
-  `<div style="font-family:sans-serif;max-width:560px;margin:0 auto;padding:32px 24px;background:#050a1a;color:#ffffff;">
-<p style="font-family:monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#5ADDA4;margin:0 0 20px 0;">AEGRYN · Réseau Partenaires</p>
-${body}
-${FOOTER}
-</div>`
+function WRAP(body: string): string {
+  return `<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/></head>
+<body style="margin:0;padding:0;background:#f1f5f9;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;padding:32px 0;">
+    <tr>
+      <td align="center">
+        <table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #e2e8f0;max-width:560px;width:100%;">
 
-export function emailPartnerScoreValidated(opts: {
+          <!-- Header logo -->
+          <tr>
+            <td style="padding:24px 32px 20px;border-bottom:1px solid #e2e8f0;">
+              <table cellpadding="0" cellspacing="0"><tr>
+                <td style="padding-right:12px;">${LOGO_SVG}</td>
+                <td>
+                  <p style="margin:0;font-size:18px;font-weight:700;color:#0F1C3F;letter-spacing:-0.02em;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">AEGRYN</p>
+                  <p style="margin:0;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#5ADDA4;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">Réseau Partenaires Alliance</p>
+                </td>
+              </tr></table>
+            </td>
+          </tr>
+
+          <!-- Corps -->
+          <tr><td style="padding:28px 32px;">
+            ${body}
+          </td></tr>
+
+          ${FOOTER}
+        </table>
+
+        <p style="font-size:10px;color:#94a3b8;margin:12px 0 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+          Cet email vous est adressé en tant que partenaire certifié AEGRYN.
+        </p>
+      </td>
+    </tr>
+  </table>
+</body></html>`
+}
+
+/* ── Helpers affichage montant ─────────────────────────────────────────── */
+function amountRow(label: string, chfFormatted: string): string {
+  return `<tr>
+    <td style="padding:6px 12px 6px 0;font-size:12px;font-weight:600;color:#64748b;white-space:nowrap;vertical-align:top;">${label}</td>
+    <td style="padding:6px 0;font-size:13px;font-weight:700;color:#0F1C3F;font-family:monospace;">${chfFormatted}</td>
+  </tr>`
+}
+
+function infoRow(label: string, value: string): string {
+  return `<tr>
+    <td style="padding:5px 12px 5px 0;font-size:12px;font-weight:600;color:#64748b;white-space:nowrap;">${label}</td>
+    <td style="padding:5px 0;font-size:13px;color:#1e293b;">${value}</td>
+  </tr>`
+}
+
+function ctaButton(label: string, href: string, accent = true): string {
+  return `<a href="${href}" style="display:inline-block;padding:11px 28px;background:${accent ? '#5ADDA4' : '#0F1C3F'};color:${accent ? '#0F1C3F' : '#ffffff'};text-decoration:none;font-weight:700;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">${label} →</a>`
+}
+
+/* ── Templates ─────────────────────────────────────────────────────────── */
+
+export async function emailPartnerScoreValidated(opts: {
   partnerName: string
   assetName: string
   dimension: string
   score: number
   amountChf?: number | null
   observations?: string | null
-}): { subject: string; html: string } {
+}): Promise<{ subject: string; html: string }> {
   const dim = opts.dimension.toUpperCase()
-  const subject = `[AEGRYN] Votre contribution ${dim} a été validée — ${opts.assetName}`
+  const subject = `[AEGRYN] Contribution ${dim} validée — ${opts.assetName}`
+
+  const amountLine = opts.amountChf
+    ? amountRow('Honoraires dus', await formatChfEur(Number(opts.amountChf)))
+    : ''
+
   const html = WRAP(`
-<p style="font-size:22px;font-weight:700;margin:0 0 8px 0;">Contribution validée ✓</p>
-<p style="font-size:14px;color:#94a3b8;line-height:1.6;margin:0 0 20px 0;">
-  Bonjour ${opts.partnerName},<br/>
-  Votre contribution à la co-certification de l'actif <strong style="color:#fff;">${opts.assetName}</strong>
-  (dimension <strong style="color:#5ADDA4;">${dim}</strong>) a été validée par l'équipe AEGRYN.
-</p>
-<table style="font-size:12px;color:#94a3b8;border-collapse:collapse;width:100%;margin-bottom:20px;">
-  <tr><td style="padding:4px 8px 4px 0;font-weight:600;color:#cbd5e1;">Score retenu</td><td style="color:#5ADDA4;font-family:monospace;font-size:16px;font-weight:700;">${opts.score}/25</td></tr>
-  ${opts.amountChf ? `<tr><td style="padding:4px 8px 4px 0;font-weight:600;color:#cbd5e1;">Honoraires dus</td><td style="color:#5ADDA4;font-family:monospace;font-size:16px;font-weight:700;">${Number(opts.amountChf).toLocaleString('fr-CH')} CHF</td></tr>` : ''}
-</table>
-${opts.observations ? `<p style="font-size:12px;color:#94a3b8;line-height:1.6;border-left:2px solid #5ADDA4;padding-left:12px;margin-bottom:20px;"><em>${opts.observations}</em></p>` : ''}
-<p style="margin:0 0 24px 0;">
-  <a href="https://aegryn.com/client/partner/certifications" style="display:inline-block;padding:10px 24px;background:#5ADDA4;color:#050a1a;text-decoration:none;font-weight:700;font-size:13px;font-family:monospace;letter-spacing:0.08em;">VOIR MON ESPACE →</a>
-</p>`)
+    <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">Certification CIFS — CAS 1</p>
+    <h1 style="margin:0 0 16px 0;font-size:22px;font-weight:700;color:#0F1C3F;line-height:1.25;">Contribution validée</h1>
+    <p style="margin:0 0 20px 0;font-size:14px;color:#475569;line-height:1.6;">
+      Bonjour <strong style="color:#0F1C3F;">${opts.partnerName}</strong>,<br/>
+      Votre contribution à la co-certification de l'actif <strong style="color:#0F1C3F;">${opts.assetName}</strong>
+      (dimension <strong style="color:#5ADDA4;">${dim}</strong>) a été <strong style="color:#16a34a;">validée</strong> par l'équipe AEGRYN.
+    </p>
+
+    <table cellpadding="0" cellspacing="0" style="border:1px solid #e2e8f0;padding:4px 16px;margin-bottom:20px;width:100%;">
+      ${infoRow('Actif', opts.assetName)}
+      ${infoRow('Dimension', dim)}
+      ${infoRow('Score retenu', `<span style="color:#5ADDA4;font-size:16px;font-weight:700;font-family:monospace;">${opts.score} / 25</span>`)}
+      ${amountLine}
+    </table>
+
+    ${opts.observations ? `
+    <div style="border-left:3px solid #5ADDA4;padding:10px 14px;background:#f0fdf4;margin-bottom:20px;">
+      <p style="margin:0;font-size:12px;color:#166534;line-height:1.5;font-style:italic;">${opts.observations}</p>
+    </div>` : ''}
+
+    <p style="margin:0 0 20px 0;font-size:13px;color:#64748b;">
+      Retrouvez le détail de cette certification et vos honoraires dans votre espace partenaire.
+    </p>
+    <p style="margin:0;">${ctaButton('Voir mon espace', 'https://aegryn.com/client/partner/certifications')}</p>
+  `)
+
   return { subject, html }
 }
 
-export function emailPartnerScoreRejected(opts: {
+export async function emailPartnerScoreRejected(opts: {
   partnerName: string
   assetName: string
   dimension: string
   rejectionReason?: string | null
   observations?: string | null
-}): { subject: string; html: string } {
+}): Promise<{ subject: string; html: string }> {
   const dim = opts.dimension.toUpperCase()
   const subject = `[AEGRYN] Retour sur votre contribution ${dim} — ${opts.assetName}`
+
   const html = WRAP(`
-<p style="font-size:22px;font-weight:700;margin:0 0 8px 0;">Retour sur votre contribution</p>
-<p style="font-size:14px;color:#94a3b8;line-height:1.6;margin:0 0 20px 0;">
-  Bonjour ${opts.partnerName},<br/>
-  Votre contribution à la co-certification de l'actif <strong style="color:#fff;">${opts.assetName}</strong>
-  (dimension <strong style="color:#fc8181;">${dim}</strong>) n'a pas pu être retenue en l'état.
-</p>
-${opts.rejectionReason ? `<p style="font-size:13px;color:#fc8181;border-left:2px solid #fc8181;padding-left:12px;margin-bottom:16px;"><strong>Motif :</strong> ${opts.rejectionReason}</p>` : ''}
-${opts.observations ? `<p style="font-size:12px;color:#94a3b8;line-height:1.6;border-left:2px solid #475569;padding-left:12px;margin-bottom:20px;"><em>${opts.observations}</em></p>` : ''}
-<p style="font-size:13px;color:#94a3b8;margin:0 0 24px 0;">Contactez votre référent AEGRYN pour discuter des points à corriger.</p>
-<p style="margin:0 0 24px 0;">
-  <a href="https://aegryn.com/client/partner/certifications" style="display:inline-block;padding:10px 24px;background:#334155;color:#ffffff;text-decoration:none;font-weight:700;font-size:13px;font-family:monospace;letter-spacing:0.08em;">MON ESPACE PARTENAIRE →</a>
-</p>`)
+    <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#94a3b8;font-weight:600;">Certification CIFS — CAS 1</p>
+    <h1 style="margin:0 0 16px 0;font-size:22px;font-weight:700;color:#0F1C3F;line-height:1.25;">Retour sur votre contribution</h1>
+    <p style="margin:0 0 20px 0;font-size:14px;color:#475569;line-height:1.6;">
+      Bonjour <strong style="color:#0F1C3F;">${opts.partnerName}</strong>,<br/>
+      Votre contribution à la co-certification de l'actif <strong style="color:#0F1C3F;">${opts.assetName}</strong>
+      (dimension <strong style="color:#dc2626;">${dim}</strong>) n'a pas pu être retenue en l'état.
+    </p>
+
+    ${opts.rejectionReason ? `
+    <div style="border-left:3px solid #dc2626;padding:10px 14px;background:#fef2f2;margin-bottom:16px;">
+      <p style="margin:0 0 2px 0;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#991b1b;">Motif</p>
+      <p style="margin:0;font-size:13px;color:#7f1d1d;line-height:1.5;">${opts.rejectionReason}</p>
+    </div>` : ''}
+
+    ${opts.observations ? `
+    <div style="border-left:3px solid #cbd5e1;padding:10px 14px;background:#f8fafc;margin-bottom:20px;">
+      <p style="margin:0;font-size:12px;color:#475569;line-height:1.5;font-style:italic;">${opts.observations}</p>
+    </div>` : ''}
+
+    <p style="margin:0 0 20px 0;font-size:13px;color:#64748b;">
+      Contactez votre référent AEGRYN pour discuter des ajustements à apporter avant une nouvelle soumission.
+    </p>
+    <p style="margin:0;">${ctaButton('Mon espace partenaire', 'https://aegryn.com/client/partner/certifications', false)}</p>
+  `)
+
   return { subject, html }
 }
 
-export function emailPartnerMandateCreated(opts: {
+export async function emailPartnerMandateCreated(opts: {
   partnerName: string
   partnerEmail: string
   clientName: string
   mandateType: string
   retrocessionPct: number
   assetName?: string | null
-}): { subject: string; html: string } {
+}): Promise<{ subject: string; html: string }> {
   const typeLabel: Record<string, string> = {
     advisory:      'Conseil stratégique',
     due_diligence: 'Due diligence',
     fundraising:   'Levée de fonds',
     other:         'Autre',
   }
-  const subject = `[AEGRYN] Nouveau mandat client créé — ${opts.clientName}`
+  const subject = `[AEGRYN] Mandat client activé — ${opts.clientName}`
+
   const html = WRAP(`
-<p style="font-size:22px;font-weight:700;margin:0 0 8px 0;">Mandat client activé</p>
-<p style="font-size:14px;color:#94a3b8;line-height:1.6;margin:0 0 20px 0;">
-  Bonjour ${opts.partnerName},<br/>
-  Un nouveau mandat client a été créé dans votre espace partenaire AEGRYN.
-</p>
-<table style="font-size:12px;color:#94a3b8;border-collapse:collapse;width:100%;margin-bottom:24px;">
-  <tr><td style="padding:5px 8px 5px 0;font-weight:600;color:#cbd5e1;">Client</td><td>${opts.clientName}</td></tr>
-  <tr><td style="padding:5px 8px 5px 0;font-weight:600;color:#cbd5e1;">Nature de la mission</td><td>${typeLabel[opts.mandateType] ?? opts.mandateType}</td></tr>
-  <tr><td style="padding:5px 8px 5px 0;font-weight:600;color:#cbd5e1;">Rétrocession AEGRYN</td><td style="color:#5ADDA4;font-family:monospace;">${opts.retrocessionPct}% de vos honoraires</td></tr>
-  ${opts.assetName ? `<tr><td style="padding:5px 8px 5px 0;font-weight:600;color:#cbd5e1;">Actif associé</td><td>${opts.assetName}</td></tr>` : ''}
-</table>
-<p style="font-size:13px;color:#94a3b8;margin:0 0 24px 0;">
-  Vous pouvez déclarer vos factures et suivre ce mandat directement dans votre espace partenaire.
-</p>
-<p style="margin:0 0 24px 0;">
-  <a href="https://aegryn.com/client/partner/mandates" style="display:inline-block;padding:10px 24px;background:#5ADDA4;color:#050a1a;text-decoration:none;font-weight:700;font-size:13px;font-family:monospace;letter-spacing:0.08em;">VOIR MES MANDATS →</a>
-</p>`)
+    <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">Mandat client — CAS 3</p>
+    <h1 style="margin:0 0 16px 0;font-size:22px;font-weight:700;color:#0F1C3F;line-height:1.25;">Nouveau mandat activé</h1>
+    <p style="margin:0 0 20px 0;font-size:14px;color:#475569;line-height:1.6;">
+      Bonjour <strong style="color:#0F1C3F;">${opts.partnerName}</strong>,<br/>
+      Un nouveau mandat client a été créé et activé dans votre espace partenaire AEGRYN.
+    </p>
+
+    <table cellpadding="0" cellspacing="0" style="border:1px solid #e2e8f0;padding:4px 16px;margin-bottom:24px;width:100%;">
+      ${infoRow('Client', opts.clientName)}
+      ${infoRow('Nature de la mission', typeLabel[opts.mandateType] ?? opts.mandateType)}
+      ${infoRow('Rétrocession AEGRYN', `<span style="color:#5ADDA4;font-weight:700;font-family:monospace;">${opts.retrocessionPct}%</span> de vos honoraires facturés`)}
+      ${opts.assetName ? infoRow('Actif associé', opts.assetName) : ''}
+    </table>
+
+    <p style="margin:0 0 20px 0;font-size:13px;color:#64748b;">
+      Vous pouvez déclarer vos factures et suivre l'avancement de ce mandat directement dans votre espace.
+      La rétrocession AEGRYN est calculée automatiquement à la validation de chaque facture.
+    </p>
+    <p style="margin:0;">${ctaButton('Voir mes mandats', 'https://aegryn.com/client/partner/mandates')}</p>
+  `)
+
   return { subject, html }
 }

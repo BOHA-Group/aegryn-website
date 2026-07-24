@@ -63,7 +63,7 @@ export async function PATCH(
       const partnerName = String(profile.full_name ?? profile.email)
 
       if (action === 'validate') {
-        const { subject, html } = emailPartnerScoreValidated({
+        const { subject, html } = await emailPartnerScoreValidated({
           partnerName,
           assetName,
           dimension:    String(cert.dimension),
@@ -73,7 +73,7 @@ export async function PATCH(
         })
         await sendEmail(profile.email, subject, html, 'cert-validate').catch(() => {})
       } else {
-        const { subject, html } = emailPartnerScoreRejected({
+        const { subject, html } = await emailPartnerScoreRejected({
           partnerName,
           assetName,
           dimension:       String(cert.dimension),

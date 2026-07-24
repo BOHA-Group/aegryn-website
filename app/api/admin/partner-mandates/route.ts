@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
       assetName = String(asset?.company_name ?? asset?.name ?? '')
     }
 
-    const { subject, html } = emailPartnerMandateCreated({
+    const { subject, html } = await emailPartnerMandateCreated({
       partnerName:     String(profile.full_name ?? profile.email),
       partnerEmail:    profile.email,
       clientName:      String(client_name),
