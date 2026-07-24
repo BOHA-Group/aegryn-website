@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server'
-import { LayoutDashboard, Award, Users, DollarSign, Bell, UserCircle, Settings } from 'lucide-react'
+import { LayoutDashboard, Award, Users, DollarSign, Briefcase, Bell, UserCircle, Settings } from 'lucide-react'
 import SideNav from '@/app/client/SideNav'
 import type { NavGroup } from '@/app/client/SideNav'
 
@@ -18,6 +18,7 @@ export default async function PartnerNav({ unreadCount }: { unreadCount: number 
       items: [
         { href: '/client/partner/certifications', label: t('navCosigning'),            icon: Award },
         { href: '/client/partner/introductions',  label: t('navIntroductions'),         icon: Users },
+        { href: '/client/partner/mandates',       label: t('navMandates'),              icon: Briefcase },
         { href: '/client/partner/commissions',    label: t('navPartnerCommissions'),    icon: DollarSign },
       ],
     },
