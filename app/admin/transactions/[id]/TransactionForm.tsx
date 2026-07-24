@@ -44,6 +44,45 @@ export default function TransactionForm({ transaction, adminToken }: Props) {
   const [netSeller, setNetSeller]     = useState(String(transaction.net_seller_proceeds_chf ?? ''))
   const [adminNote, setAdminNote]     = useState(String(transaction.admin_note ?? ''))
 
+  // CAS 2 — Apport d'affaires : AEGRYN reverse 20% de sa commission au partenaire introducteur
+  const [partnerEmail, setPartnerEmail]     = useState(String(transaction.partner_email ?? ''))
+  const [partnerCommPct, setPartnerCommPct] = useState(String(transaction.partner_commission_pct ?? '20'))
+  const [partnerCommChf, setPartnerCommChf] = useState(String(transaction.partner_commission_chf ?? ''))
+  const [partnerSaved, setPartnerSaved]     = useState(false)
+  const [partnerError, setPartnerError]     = useState('')
+
+  function calcPartnerShare() {
+    const sellerPct = parseFloat(commSeller)
+    const escrow    = parseFloat(escrowAmount)
+    const pPct      = parseFloat(partnerCommPct)
+    if (!isNaN(sellerPct) && !isNaN(escrow) && !isNaN(pPct)) {
+      const aegrynComm = escrow * sellerPct / 100
+      setPartnerCommChf((aegrynComm * pPct / 100).toFixed(0))
+    }
+  }
+
+  async function savePartnerComm() {
+    setSaving(true)
+    setPartnerSaved(false)
+    setPartnerError('')
+    try {
+      const res = await fetch(`/api/admin/transactions/${transaction.id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          token: adminToken ?? '',
+          partner_email: partnerEmail || undefined,
+          partner_commission_pct: partnerCommPct ? Number(partnerCommPct) : undefined,
+          partner_commission_chf: partnerCommChf ? Number(partnerCommChf) : undefined,
+        }),
+      })
+      const json = await res.json() as { error?: string }
+      if (res.ok) { setPartnerSaved(true); router.refresh() }
+      else { setPartnerError(json.error ?? 'Erreur') }
+    } catch (err) { setPartnerError(String(err)) }
+    finally { setSaving(false) }
+  }
+
   async function patch(payload: Record<string, unknown>) {
     setSaving(true)
     setSaved(false)
@@ -267,6 +306,83 @@ export default function TransactionForm({ transaction, adminToken }: Props) {
         >
           Sauvegarder
         </button>
+      </div>
+
+      {/* Commission partenaire — CAS 2 (Apport d'affaires) */}
+      <div className={sectionCls}>
+        <div>
+          <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Partenaire introducteur — CAS 2</h2>
+          <p className="text-[10px] text-gray-400 mt-0.5">AEGRYN reverse 20% de sa commission de transaction au partenaire apporteur, au closing effectif.</p>
+        </div>
+
+        {partnerError && <div className="bg-red-50 border border-red-200 p-3 text-[11px] text-red-700">{partnerError}</div>}
+        {partnerSaved && !saving && <div className="bg-emerald-50 border border-emerald-200 p-3 text-[11px] text-emerald-700">Enregistré.</div>}
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label className={labelCls}>Email du partenaire</label>
+            <input
+              className={inputCls}
+              value={partnerEmail}
+              onChange={e => setPartnerEmail(e.target.value)}
+              placeholder="partenaire@cabinet.com"
+            />
+          </div>
+          <div>
+            <label className={labelCls}>Part partenaire (%)</label>
+            <input
+              className={inputCls}
+              type="number"
+              min="0"
+              max="100"
+              step="0.5"
+              value={partnerCommPct}
+              onChange={e => setPartnerCommPct(e.target.value)}
+              placeholder="20"
+            />
+            <p className="text-[9px] text-gray-400 mt-1">Standard AEGRYN : 20%</p>
+          </div>
+          <div>
+            <label className={labelCls}>Montant partenaire (CHF)</label>
+            <div className="flex gap-2">
+              <input
+                className={inputCls}
+                type="number"
+                value={partnerCommChf}
+                onChange={e => setPartnerCommChf(e.target.value)}
+                placeholder="calculé auto"
+              />
+              <button
+                type="button"
+                onClick={calcPartnerShare}
+                title="Calculer automatiquement depuis commission vendeur × séquestre"
+                className="shrink-0 border border-gray-300 text-gray-500 text-[10px] font-semibold px-3 hover:border-gray-500 transition-colors"
+              >
+                Calc
+              </button>
+            </div>
+            {commSeller && escrowAmount && partnerCommPct && (
+              <p className="text-[9px] text-gray-400 mt-1">
+                = séquestre {escrowAmount} CHF × {commSeller}% (AEGRYN) × {partnerCommPct}% (partenaire)
+              </p>
+            )}
+          </div>
+        </div>
+
+        <div className="flex gap-3 items-center">
+          <button
+            disabled={saving || !partnerEmail}
+            onClick={savePartnerComm}
+            className="border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors disabled:opacity-40"
+          >
+            Sauvegarder
+          </button>
+          {!!transaction.partner_commission_chf && (
+            <span className="text-[11px] text-gray-500">
+              Commission enregistrée : <strong className="font-mono">{String(transaction.partner_commission_chf)} CHF</strong>
+            </span>
+          )}
+        </div>
       </div>
 
       {/* Note interne */}

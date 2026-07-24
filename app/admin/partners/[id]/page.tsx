@@ -26,10 +26,11 @@ export default async function AdminPartnerDetailPage({
   const { data: profile, error } = await supa.from('profiles').select('*').eq('id', id).maybeSingle()
   if (!profile && !error) notFound()
 
-  const [{ data: certs }, { data: refs }, { data: comms }] = await Promise.all([
+  const [{ data: certs }, { data: refs }, { data: comms }, { data: mandates }] = await Promise.all([
     supa.from('partner_certifications').select('*, assets(name, official_grade)').eq('partner_id', id).order('created_at', { ascending: false }),
     supa.from('introductions').select('*').eq('partner_id', id).order('created_at', { ascending: false }),
     supa.from('commissions').select('*').eq('partner_id', id).order('created_at', { ascending: false }),
+    supa.from('partner_mandates').select('id, client_name, mandate_type, status, retrocession_pct, created_at').eq('partner_id', id).order('created_at', { ascending: false }),
   ])
 
   return (
@@ -44,10 +45,29 @@ export default async function AdminPartnerDetailPage({
           <div className="bg-red-50 border border-red-200 p-4 text-[12px] text-red-700">Partenaire introuvable.</div>
         ) : (
           <>
-            <div className="mb-8">
-              <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">PARTENAIRE ALLIANCE</p>
-              <h1 className="text-[24px] font-bold text-gray-900 tracking-tight">{String(profile.full_name ?? '—')}</h1>
-              <p className="text-[12px] text-gray-400 mt-1">{String(profile.email ?? '')}</p>
+            <div className="flex items-start justify-between mb-8">
+              <div>
+                <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">PARTENAIRE ALLIANCE</p>
+                <h1 className="text-[24px] font-bold text-gray-900 tracking-tight">{String(profile.full_name ?? '—')}</h1>
+                <p className="text-[12px] text-gray-400 mt-1">{String(profile.email ?? '')}</p>
+              </div>
+
+              {/* Actions rapides */}
+              <div className="flex gap-2 shrink-0">
+                <Link
+                  href={`/admin/assets${tokenQs}`}
+                  className="border border-gray-300 text-gray-600 text-[10px] font-semibold uppercase tracking-wide px-3 py-2 hover:border-gray-500 transition-colors"
+                  title="Aller sur un actif pour assigner une co-certification CAS 1"
+                >
+                  + Assignation CIFS
+                </Link>
+                <Link
+                  href={`/admin/partners/${id}/create-mandate${tokenQs}`}
+                  className="bg-gray-900 text-white text-[10px] font-semibold uppercase tracking-wide px-3 py-2 hover:bg-gray-700 transition-colors"
+                >
+                  + Mandat client
+                </Link>
+              </div>
             </div>
 
             {/* Certifications assignées */}
@@ -87,6 +107,38 @@ export default async function AdminPartnerDetailPage({
                         <p className="text-[11px] text-gray-400">{String(r.contact_email)}</p>
                       </div>
                       <span className="px-2 py-0.5 text-[10px] uppercase font-semibold bg-gray-100 text-gray-700">{String(r.introduction_status)}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Mandats clients CAS 3 */}
+            <div className="bg-white border border-gray-200 mb-6">
+              <div className="px-6 py-4 bg-gray-50 flex items-center justify-between">
+                <p className="text-[11px] font-semibold text-gray-600 uppercase tracking-wide">Mandats clients — CAS 3 ({(mandates ?? []).length})</p>
+                <Link
+                  href={`/admin/partners/${id}/create-mandate${tokenQs}`}
+                  className="text-[10px] text-gray-400 hover:text-gray-700"
+                >
+                  + Nouveau →
+                </Link>
+              </div>
+              {(mandates ?? []).length === 0 ? (
+                <div className="p-8 text-center text-[12px] text-gray-400">Aucun mandat. Le partenaire facture son client directement et reverse 15% à AEGRYN.</div>
+              ) : (
+                <div className="divide-y divide-gray-100">
+                  {(mandates ?? []).map((m: Record<string, unknown>) => (
+                    <div key={String(m.id)} className="px-6 py-4 flex items-center justify-between">
+                      <div>
+                        <p className="font-semibold text-gray-800 text-[13px]">{String(m.client_name)}</p>
+                        <p className="text-[10px] text-gray-400 uppercase tracking-wide">{String(m.mandate_type)} · rétrocession {String(m.retrocession_pct)}%</p>
+                      </div>
+                      <span className={`px-2 py-0.5 text-[10px] uppercase font-semibold ${
+                        m.status === 'active' ? 'bg-emerald-100 text-emerald-700' :
+                        m.status === 'completed' ? 'bg-gray-100 text-gray-600' :
+                        'bg-red-100 text-red-600'
+                      }`}>{String(m.status)}</span>
                     </div>
                   ))}
                 </div>

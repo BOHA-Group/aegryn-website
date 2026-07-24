@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import BuyerNav from './BuyerNav'
+import ViewSwitcher from '@/app/client/ViewSwitcher'
 
 export default async function BuyerLayout({ children }: { children: React.ReactNode }) {
   const user = await getUser()
@@ -18,6 +19,8 @@ export default async function BuyerLayout({ children }: { children: React.ReactN
   const roles = Array.isArray(profile?.roles) ? profile.roles as string[] : []
   const canAccessBuyer = roles.includes('buyer') || roles.includes('partner')
   if (!canAccessBuyer) redirect('/client/seller')
+
+  const hasSeller = roles.includes('seller')
 
   const { count: unreadCount } = await supa
     .from('user_notifications')
@@ -38,6 +41,7 @@ export default async function BuyerLayout({ children }: { children: React.ReactN
             <p className="font-sans text-[11px] text-white/60 mt-0.5 truncate">{displayName}</p>
           </div>
 
+          <ViewSwitcher hasBuyer={true} hasSeller={hasSeller} />
           <BuyerNav unreadCount={unreadCount ?? 0} />
 
           <div className="mt-auto px-5 py-4 border-t border-white/10">
