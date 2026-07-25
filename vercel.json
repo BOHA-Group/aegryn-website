@@ -111,5 +111,11 @@
       "source": "/sitemap.xml",
       "destination": "/api/sitemap"
     }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/newsletter",
+      "schedule": "0 9 * * 1"
+    }
   ]
 }

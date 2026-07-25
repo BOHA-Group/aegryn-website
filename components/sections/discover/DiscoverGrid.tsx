@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import { ArrowUpRight, Calendar, Clock } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 import { ARTICLES, ARTICLE_CATEGORIES, type ArticleCategory } from '@/data/articles'
+import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubscribeForm'
 
 type Filter = 'all' | ArticleCategory
 
@@ -199,12 +200,7 @@ export function DiscoverGrid({ locale }: Props) {
               <p className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em] mb-1">{t('newsletterTitle')}</p>
               <p className="font-sans text-[13px] text-ag-gray">{t('newsletterDesc')}</p>
             </div>
-            <Link
-              href="/contact"
-              className="shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy-mid transition-colors"
-            >
-              {t('newsletterCta')} <ArrowUpRight size={12} />
-            </Link>
+            <NewsletterSubscribeForm locale={locale} />
           </div>
         </div>
       </section>

@@ -1605,6 +1605,10 @@
     "newsletterTitle": "Mis geen enkele analyse.",
     "newsletterDesc": "Ontvang AEGRYN-marktrapportages en gidsen rechtstreeks in uw inbox.",
     "newsletterCta": "Abonneren",
+    "newsletterEmailPlaceholder": "Uw e-mailadres",
+    "newsletterSubscribing": "Bezig met abonneren...",
+    "newsletterSuccess": "Bedankt! Controleer uw inbox.",
+    "newsletterError": "Er is een fout opgetreden. Probeer het opnieuw.",
     "bodyComingSoon": "Volledige inhoud binnenkort beschikbaar.",
     "ctaTeaser": "Klaar om uw actief in te dienen of de catalogus te raadplegen?"
   },

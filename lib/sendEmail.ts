@@ -1,4 +1,5 @@
 import { formatChfEur } from '@/lib/fxRate'
+import type { Article, LocaleText } from '@/data/articles'
 
 /**
  * Helper Resend centralisé.
@@ -234,6 +235,56 @@ export async function emailPartnerMandateCreated(opts: {
       La rétrocession AEGRYN est calculée automatiquement à la validation de chaque facture.
     </p>
     <p style="margin:0;">${ctaButton('Voir mes mandats', 'https://aegryn.com/client/partner/mandates')}</p>
+  `)
+
+  return { subject, html }
+}
+
+/* ── Newsletter blog — 1 article par semaine ─────────────────────────────── */
+const NEWSLETTER_CATEGORY_LABEL: Record<Article['category'], LocaleText> = {
+  market:        { fr: 'Marché',        en: 'Market' },
+  seller:        { fr: 'Vendeurs',      en: 'Sellers' },
+  buyer:         { fr: 'Acquéreurs',    en: 'Buyers' },
+  certification: { fr: 'Certification', en: 'Certification' },
+  strategy:      { fr: 'Stratégie',     en: 'Strategy' },
+  case_study:    { fr: 'Étude de cas',  en: 'Case study' },
+  legal:         { fr: 'Juridique',     en: 'Legal' },
+  vertical:      { fr: 'Vertical',      en: 'Vertical' },
+  dach:          { fr: 'DACH',          en: 'DACH' },
+}
+
+function pickLocale(text: LocaleText, locale: string): string {
+  return (text as Record<string, string | undefined>)[locale] ?? text.en ?? text.fr
+}
+
+export function emailNewsletterArticle(opts: {
+  article: Article
+  locale: string
+  unsubscribeToken: string
+}): { subject: string; html: string } {
+  const { article, locale, unsubscribeToken } = opts
+  const lang = ['fr', 'en', 'de', 'es', 'it', 'nl'].includes(locale) ? locale : 'fr'
+  const title      = pickLocale(article.title, lang)
+  const excerpt    = pickLocale(article.excerpt, lang)
+  const category   = pickLocale(NEWSLETTER_CATEGORY_LABEL[article.category], lang)
+  const articleUrl = `https://aegryn.com/${lang}/blog/${article.slug}`
+  const unsubUrl   = `https://aegryn.com/api/newsletter/unsubscribe?token=${unsubscribeToken}`
+
+  const isFr = lang === 'fr'
+  const subject = `[AEGRYN] ${title}`
+
+  const html = WRAP(`
+    <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">${category}</p>
+    <h1 style="margin:0 0 16px 0;font-size:22px;font-weight:700;color:#0F1C3F;line-height:1.25;">${title}</h1>
+    <p style="margin:0 0 24px 0;font-size:14px;color:#475569;line-height:1.6;">${excerpt}</p>
+    <p style="margin:0 0 28px 0;">${ctaButton(isFr ? 'Lire l\u2019article' : 'Read the article', articleUrl)}</p>
+    <p style="margin:0;font-size:11px;color:#94a3b8;line-height:1.6;">
+      ${isFr
+        ? 'Vous recevez cet email car vous êtes abonné à la newsletter AEGRYN (1 article par semaine).'
+        : 'You are receiving this email because you subscribed to the AEGRYN newsletter (1 article per week).'}
+      <br/>
+      <a href="${unsubUrl}" style="color:#94a3b8;text-decoration:underline;">${isFr ? 'Se désabonner' : 'Unsubscribe'}</a>
+    </p>
   `)
 
   return { subject, html }

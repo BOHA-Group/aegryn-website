@@ -970,6 +970,10 @@
     "newsletterTitle": "Never miss an analysis.",
     "newsletterDesc": "Receive AEGRYN market reports and guides directly in your inbox.",
     "newsletterCta": "Subscribe",
+    "newsletterEmailPlaceholder": "Your email address",
+    "newsletterSubscribing": "Subscribing...",
+    "newsletterSuccess": "Thanks! Check your inbox.",
+    "newsletterError": "Something went wrong. Please try again.",
     "bodyComingSoon": "Full content available soon.",
     "ctaTeaser": "Ready to submit your asset or access the catalogue?"
   },

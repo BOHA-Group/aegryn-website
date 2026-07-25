@@ -1605,6 +1605,10 @@
     "newsletterTitle": "Non perdere nessuna analisi.",
     "newsletterDesc": "Ricevi report e guide AEGRYN direttamente nella tua casella di posta.",
     "newsletterCta": "Iscriviti",
+    "newsletterEmailPlaceholder": "Il tuo indirizzo email",
+    "newsletterSubscribing": "Iscrizione in corso...",
+    "newsletterSuccess": "Grazie! Controlla la tua casella di posta.",
+    "newsletterError": "Si è verificato un errore. Riprova.",
     "bodyComingSoon": "Contenuto completo disponibile a breve.",
     "ctaTeaser": "Pronto a inviare il tuo asset o accedere al catalogo?"
   },

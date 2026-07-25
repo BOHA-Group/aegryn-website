@@ -969,6 +969,10 @@
     "newsletterTitle": "Ne manquez aucune analyse.",
     "newsletterDesc": "Recevez les rapports marché et guides AEGRYN directement dans votre boîte mail.",
     "newsletterCta": "S'abonner",
+    "newsletterEmailPlaceholder": "Votre adresse email",
+    "newsletterSubscribing": "Inscription...",
+    "newsletterSuccess": "Merci ! Vérifiez votre boîte mail.",
+    "newsletterError": "Une erreur est survenue. Réessayez.",
     "bodyComingSoon": "Contenu complet disponible prochainement.",
     "ctaTeaser": "Prêt à soumettre votre actif ou accéder au catalogue ?"
   },
