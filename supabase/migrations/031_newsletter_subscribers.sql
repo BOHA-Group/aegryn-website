@@ -51,3 +51,6 @@ CREATE POLICY "service_role_full_access_newsletter_subscribers"
   TO service_role
   USING (true)
   WITH CHECK (true);
+
+-- RLS ne suffit pas pour PostgREST — GRANT explicite requis (cf. migration 022)
+GRANT ALL ON public.newsletter_subscribers TO service_role;
