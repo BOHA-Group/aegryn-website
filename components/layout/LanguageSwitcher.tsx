@@ -31,7 +31,10 @@ export default function LanguageSwitcher() {
       segments[1] = newLocale
       router.push(segments.join('/'))
     } else {
-      router.refresh()
+      /* /client/* et /admin/* ne sont pas préfixés par la locale —
+         un simple refresh() ne relit pas le cookie côté serveur.
+         Un reload complet est nécessaire pour que getTranslations() voie la nouvelle valeur. */
+      window.location.reload()
     }
   }
 

@@ -3600,6 +3600,7 @@
       "successDesc": "Redirigiendo a su espacio en 3 segundos…",
       "errorEmailExists": "Este correo ya está en uso. Inicie sesión o restablezca su contraseña.",
       "errorTooShort": "La contraseña debe tener al menos 8 caracteres.",
+      "errorStrength": "La contraseña debe contener al menos una mayúscula, una minúscula y un número.",
       "errorInvalid": "Correo electrónico inválido.",
       "errorGeneric": "No se pudo crear la cuenta. Inténtelo de nuevo.",
       "errorNetwork": "No se pudo contactar con el servidor. Compruebe su conexión."

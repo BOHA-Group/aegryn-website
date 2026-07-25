@@ -3600,6 +3600,7 @@
       "successDesc": "Reindirizzamento al tuo spazio tra 3 secondi…",
       "errorEmailExists": "Questa email è già in uso. Accedi o reimposta la password.",
       "errorTooShort": "La password deve contenere almeno 8 caratteri.",
+      "errorStrength": "La password deve contenere almeno una maiuscola, una minuscola e un numero.",
       "errorInvalid": "Email non valida.",
       "errorGeneric": "Impossibile creare l'account. Riprova.",
       "errorNetwork": "Impossibile contattare il server. Controlla la connessione."

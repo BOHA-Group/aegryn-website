@@ -8,6 +8,17 @@ import { ArrowUpRight, Eye, EyeOff, CheckCircle } from 'lucide-react'
 
 type Role = 'buyer' | 'seller'
 
+function getPasswordStrength(pwd: string): { score: number; rules: boolean[] } {
+  const rules = [
+    pwd.length >= 8,
+    /[A-Z]/.test(pwd),
+    /[a-z]/.test(pwd),
+    /[0-9]/.test(pwd),
+    /[^A-Za-z0-9]/.test(pwd),
+  ]
+  return { score: rules.filter(Boolean).length, rules }
+}
+
 export default function RegisterForm() {
   const t      = useTranslations('clientArea.register')
   const router = useRouter()
@@ -21,6 +32,8 @@ export default function RegisterForm() {
   const [error,     setError]     = useState('')
   const [success,   setSuccess]   = useState(false)
 
+  const strength = getPasswordStrength(password)
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setLoading(true)
@@ -28,6 +41,11 @@ export default function RegisterForm() {
 
     if (password.length < 8) {
       setError(t('errorTooShort'))
+      setLoading(false)
+      return
+    }
+    if (strength.score < 3) {
+      setError(t('errorStrength'))
       setLoading(false)
       return
     }
@@ -51,7 +69,15 @@ export default function RegisterForm() {
         return
       }
 
-      await supabase.auth.signInWithPassword({ email, password })
+      /* Auto-login avec retry sur database error (GoTrue instabilité transitoire) */
+      let loginErr
+      for (let attempt = 0; attempt < 3; attempt++) {
+        if (attempt > 0) await new Promise(r => setTimeout(r, 1500))
+        const result = await supabase.auth.signInWithPassword({ email, password })
+        loginErr = result.error
+        if (!loginErr || !loginErr.message?.toLowerCase().includes('database error')) break
+      }
+
       setSuccess(true)
 
       setTimeout(() => {
@@ -144,6 +170,22 @@ export default function RegisterForm() {
           </button>
         </div>
       </div>
+
+      {/* Indicateur de force mot de passe */}
+      {password.length > 0 && (
+        <div className="flex gap-1 -mt-2">
+          {[1,2,3,4,5].map(i => (
+            <div
+              key={i}
+              className={`h-1 flex-1 transition-colors ${
+                strength.score >= i
+                  ? strength.score <= 2 ? 'bg-red-500' : strength.score <= 3 ? 'bg-yellow-500' : 'bg-ag-apex'
+                  : 'bg-white/10'
+              }`}
+            />
+          ))}
+        </div>
+      )}
 
       {/* Rôle — optionnel, buyer par défaut */}
       <div>

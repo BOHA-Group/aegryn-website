@@ -3559,6 +3559,7 @@
       "successDesc": "Redirecting to your space in 3 seconds…",
       "errorEmailExists": "This email is already in use. Sign in or reset your password.",
       "errorTooShort": "Password must be at least 8 characters.",
+      "errorStrength": "Password must contain at least one uppercase letter, one lowercase letter and one number.",
       "errorInvalid": "Invalid email.",
       "errorGeneric": "Unable to create account. Please try again.",
       "errorNetwork": "Unable to reach the server. Check your connection."
