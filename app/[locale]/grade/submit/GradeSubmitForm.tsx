@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { ArrowUpRight, CheckCircle2, ChevronLeft } from 'lucide-react'
 
 type EvalType = 'review_internal' | 'review_partner' | 'full_certification'
-type PartnerType = 'legal' | 'accounting'
+type PartnerType = 'legal' | 'accounting' | 'cyber'
 
 const IP_KEYS = ['yes', 'no', 'pending'] as const
 type IpKey = typeof IP_KEYS[number]
@@ -62,29 +62,13 @@ export default function GradeSubmitForm() {
       locale,
     }
     try {
-      /* full_certification → soumission directe */
-      if (evalType === 'full_certification') {
-        const res = await fetch('/api/grade/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        })
-        if (res.ok) setSubmitted(true)
-        else setError(true)
-      } else {
-        /* review → Stripe Checkout */
-        const res = await fetch('/api/grade/checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        })
-        const json = await res.json()
-        if (res.ok && json.redirect) {
-          window.location.href = json.redirect
-        } else {
-          setError(true)
-        }
-      }
+      const res = await fetch('/api/grade/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+      if (res.ok) setSubmitted(true)
+      else setError(true)
     } catch {
       setError(true)
     } finally {
@@ -137,18 +121,21 @@ export default function GradeSubmitForm() {
           {/* Left — grade scale reminder */}
           <div className="flex flex-col gap-10">
             <div className="border border-ag-border p-6 flex flex-col gap-3">
-              {([
-                { g: 'AEG ★', c: 'text-ag-apex',        d: 'Top 1% — Exceptionnel' },
-                { g: 'AAA',    c: 'text-ag-grade-aaa',   d: 'Premium — Prêt pour transaction' },
-                { g: 'AA',     c: 'text-ag-grade-aaa/70',d: 'Solide — Valorisation confirmée' },
-                { g: 'A',      c: 'text-ag-grade-a',     d: 'Standard — Potentiel identifié' },
-                { g: 'B',      c: 'text-ag-gray-light',  d: 'Early stage — Plan de remédiation' },
-              ] as const).map(({ g, c, d }) => (
-                <div key={g} className="flex items-center gap-4">
-                  <span className={`font-mono text-[11px] font-bold tracking-[0.08em] w-16 shrink-0 ${c}`}>{g}</span>
-                  <span className="font-sans text-[12px] text-ag-gray">{d}</span>
-                </div>
-              ))}
+              {(t.raw('gradeScale') as { g: string; d: string }[]).map(({ g, d }) => {
+                const colorMap: Record<string, string> = {
+                  'AEG ★': 'text-ag-apex',
+                  'AAA':   'text-ag-grade-aaa',
+                  'AA':    'text-ag-grade-aa',
+                  'A':     'text-ag-grade-a',
+                  'B':     'text-ag-gray-light',
+                }
+                return (
+                  <div key={g} className="flex items-center gap-4">
+                    <span className={`font-mono text-[11px] font-bold tracking-[0.08em] w-16 shrink-0 ${colorMap[g] ?? 'text-ag-gray'}`}>{g}</span>
+                    <span className="font-sans text-[12px] text-ag-gray">{d}</span>
+                  </div>
+                )
+              })}
             </div>
             <p className="font-sans text-[12px] text-ag-gray-light leading-relaxed border-t border-ag-border pt-6">
               {t('form.legalNote')}
@@ -158,7 +145,7 @@ export default function GradeSubmitForm() {
           {/* Right */}
           {params.get('cancelled') === 'true' && (
             <div className="col-span-full mb-4 border border-amber-200 bg-amber-50 px-5 py-4 text-[13px] text-amber-800">
-              Paiement annulé. Vous pouvez compléter votre soumission à nouveau.
+              {t('form.cancelledNote')}
             </div>
           )}
           {submitted ? (
@@ -223,7 +210,7 @@ export default function GradeSubmitForm() {
                       <div className="flex-1 min-w-0">
                         <div className="flex items-baseline gap-3 flex-wrap">
                           <span className="font-sans font-bold text-ag-black text-[13px]">{label}</span>
-                          <span className="font-mono text-[11px] text-ag-apex font-semibold">{price}</span>
+                          <span className="font-mono text-[11px] font-bold px-2 py-0.5" style={{ backgroundColor: '#5ADDA4', color: '#0A0F1E' }}>{price}</span>
                         </div>
                         <p className="font-sans text-[12px] text-ag-gray mt-1 leading-relaxed">{desc}</p>
                       </div>
@@ -233,8 +220,13 @@ export default function GradeSubmitForm() {
 
                 {/* Note déductibilité */}
                 {(evalType === 'review_internal' || evalType === 'review_partner') && (
-                  <div className="bg-emerald-50 border border-emerald-200 px-4 py-3 text-[12px] text-emerald-800 font-sans leading-relaxed">
-                    {t('form.evalDeductibleNote')}
+                  <div className="flex flex-col gap-2">
+                    <div className="bg-emerald-50 border border-emerald-200 px-4 py-3 text-[12px] text-emerald-800 font-sans leading-relaxed">
+                      {t('form.evalDeductibleNote')}
+                    </div>
+                    <div className="bg-ag-navy/5 border border-ag-navy/20 px-4 py-3 text-[12px] text-ag-navy font-sans leading-relaxed">
+                      {t('form.invoiceNote')}
+                    </div>
                   </div>
                 )}
 
@@ -244,8 +236,8 @@ export default function GradeSubmitForm() {
                     <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-3">
                       {t('form.partnerSelectLabel')}
                     </p>
-                    <div className="flex gap-4">
-                      {(['legal', 'accounting'] as PartnerType[]).map(pt => (
+                    <div className="flex flex-wrap gap-4">
+                      {(['legal', 'accounting', 'cyber'] as PartnerType[]).map(pt => (
                         <label key={pt} className="flex items-center gap-2 cursor-pointer">
                           <input
                             type="radio" name="partnerType" value={pt}
@@ -254,7 +246,7 @@ export default function GradeSubmitForm() {
                             className="accent-ag-navy"
                           />
                           <span className="font-sans text-[13px] text-ag-black">
-                            {pt === 'legal' ? t('form.partnerLegal') : t('form.partnerAccounting')}
+                            {pt === 'legal' ? t('form.partnerLegal') : pt === 'accounting' ? t('form.partnerAccounting') : t('form.partnerCyber')}
                           </span>
                         </label>
                       ))}

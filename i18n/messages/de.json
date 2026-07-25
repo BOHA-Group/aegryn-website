@@ -2346,7 +2346,7 @@
       "evalTypeTitle": "Welches Bewertungsniveau wünschen Sie?",
       "evalTypeFull": {
         "label": "Auction-Zertifizierung",
-        "desc": "Erfölgsbeteiligung. Vollständiges unabhängiges AEGRYN-Protokoll (4 Dimensionen C/I/F/S), 3–4 Wochen, für eine Transaktion über AEGRYN Auction.",
+        "desc": "Nur Erfolgsbeteiligung. Vollständiges unabhängiges AEGRYN-Protokoll (4 Dimensionen C/I/F/S), 3–4 Wochen, inklusive wenn die Transaktion über AEGRYN Auction abgeschlossen wird.",
         "price": "Kostenlos"
       },
       "evalTypeReview": {
@@ -2374,8 +2374,33 @@
       "foundedYear": "Gründungsjahr",
       "arrGrowth": "ARR-Wachstum YoY (%)",
       "grossMargin": "Bruttomarge (%)",
-      "nrr": "Net Revenue Retention — NRR (%)"
-    }
+      "nrr": "Net Revenue Retention — NRR (%)",
+      "partnerCyber": "Cybersicherheitskanzlei",
+      "cancelledNote": "Anfrage abgebrochen. Sie können Ihre Anfrage erneut einreichen.",
+      "invoiceNote": "Anfrage erhalten — Sie erhalten ein Angebot. Vorauszahlung per Rechnung ist vor Analysebeginn erforderlich."
+    },
+    "gradeScale": [
+      {
+        "g": "AEG ★",
+        "d": "Top 1 % — Außergewöhnlich"
+      },
+      {
+        "g": "AAA",
+        "d": "Premium — Transaktionsbereit"
+      },
+      {
+        "g": "AA",
+        "d": "Solide — Bestätigte Bewertung"
+      },
+      {
+        "g": "A",
+        "d": "Standard — Identifiziertes Potenzial"
+      },
+      {
+        "g": "B",
+        "d": "Frühphase — Sanierungsplan"
+      }
+    ]
   },
   "bidModels": {
     "meta": {
@@ -3892,13 +3917,34 @@
         "p4": "Obwohl wir uns bemühen, unseren Datenschutzhinweis zu vereinfachen, liegt die Verständnisschwierigkeit in der spezifischen Sprache des rechtlichen Rahmens. Deshalb haben wir die wichtigsten Definitionen zusammengefasst, um den Hinweis leichter verständlich zu machen; diese Definitionen entstammen dem DSG.",
         "defsTitle": "Wichtige Definitionen aus dem DSG:",
         "defs": {
-          "dataSubject": ["Betroffene Person:", "Die natürliche Person, deren personenbezogene Daten verarbeitet werden."],
-          "personalData": ["Personenbezogene Daten:", "Alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen."],
-          "sensitiveData": ["Besondere Kategorien personenbezogener Daten:", "Daten über religiöse, weltanschauliche, politische oder gewerkschaftliche Ansichten oder Tätigkeiten; Daten über Gesundheit, Intimsphäre oder Zugehörigkeit zu einer Rasse oder Ethnie; genetische Daten; biometrische Daten; Daten über Verfolgungen oder Sanktionen; Daten über Sozialhilfemaßnahmen."],
-          "processing": ["Verarbeitung:", "Jeder Umgang mit personenbezogenen Daten, unabhängig von den angewandten Mitteln und Verfahren."],
-          "controller": ["Verantwortlicher:", "Eine Privatperson oder Bundesbehörde, die allein oder gemeinsam mit anderen über den Zweck und die Mittel der Verarbeitung personenbezogener Daten entscheidet."],
-          "processor": ["Auftragsverarbeiter:", "Eine Privatperson oder Bundesbehörde, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet."],
-          "pfpdt": ["EDÖB:", "Der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte, zuständig für die Überwachung der Anwendung der bundesrechtlichen Datenschutzbestimmungen."]
+          "dataSubject": [
+            "Betroffene Person:",
+            "Die natürliche Person, deren personenbezogene Daten verarbeitet werden."
+          ],
+          "personalData": [
+            "Personenbezogene Daten:",
+            "Alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen."
+          ],
+          "sensitiveData": [
+            "Besondere Kategorien personenbezogener Daten:",
+            "Daten über religiöse, weltanschauliche, politische oder gewerkschaftliche Ansichten oder Tätigkeiten; Daten über Gesundheit, Intimsphäre oder Zugehörigkeit zu einer Rasse oder Ethnie; genetische Daten; biometrische Daten; Daten über Verfolgungen oder Sanktionen; Daten über Sozialhilfemaßnahmen."
+          ],
+          "processing": [
+            "Verarbeitung:",
+            "Jeder Umgang mit personenbezogenen Daten, unabhängig von den angewandten Mitteln und Verfahren."
+          ],
+          "controller": [
+            "Verantwortlicher:",
+            "Eine Privatperson oder Bundesbehörde, die allein oder gemeinsam mit anderen über den Zweck und die Mittel der Verarbeitung personenbezogener Daten entscheidet."
+          ],
+          "processor": [
+            "Auftragsverarbeiter:",
+            "Eine Privatperson oder Bundesbehörde, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet."
+          ],
+          "pfpdt": [
+            "EDÖB:",
+            "Der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte, zuständig für die Überwachung der Anwendung der bundesrechtlichen Datenschutzbestimmungen."
+          ]
         }
       },
       "whoWeAre": {
@@ -3974,11 +4020,27 @@
         "p2": "Darüber hinaus werden bestimmte personenbezogene Daten auch direkt zwischen Nutzern geteilt, wenn dies für die Vorbereitung, Ausführung oder Nachbereitung eines angeforderten Dienstes erforderlich ist. Diese Austausche sind unerlässlich für das ordnungsgemäße Funktionieren der Plattform und der von ihr ermöglichten Dienste.",
         "p3": "Wenn personenbezogene Daten an einen Drittanbieter außerhalb der Schweiz oder des Europäischen Wirtschaftsraums (EWR) übermittelt werden, der kein angemessenes Schutzniveau bietet, verlangen wir, dass sich der Drittanbieter verpflichtet, die anwendbare Datenschutzgesetzgebung einzuhalten (hierfür verwenden wir die überarbeiteten Standardvertragsklauseln der Europäischen Kommission), sofern der Drittanbieter nicht bereits einem rechtlich anerkannten Regelwerk unterliegt, das den Datenschutz gewährleistet (Swiss-U.S. Data Privacy Framework), oder wir eine Ausnahme geltend machen können.",
         "providersH": "Unsere Drittanbieter",
-        "tableHeaders": ["Anbieter", "Zweck", "Verarbeitungsort"],
+        "tableHeaders": [
+          "Anbieter",
+          "Zweck",
+          "Verarbeitungsort"
+        ],
         "providers": [
-          ["Supabase", "Backend-as-a-Service-Plattform für die App-Entwicklung.", "EWR"],
-          ["Stripe", "Globale Zahlungsinfrastruktur — sichere Transaktionsabwicklung und Identitätsprüfung.", "EWR/USA"],
-          ["Google Analytics", "Analysedienst zur Überwachung der Plattformnutzung und Erstellung von Aktivitätsberichten.", "EWR/USA"]
+          [
+            "Supabase",
+            "Backend-as-a-Service-Plattform für die App-Entwicklung.",
+            "EWR"
+          ],
+          [
+            "Stripe",
+            "Globale Zahlungsinfrastruktur — sichere Transaktionsabwicklung und Identitätsprüfung.",
+            "EWR/USA"
+          ],
+          [
+            "Google Analytics",
+            "Analysedienst zur Überwachung der Plattformnutzung und Erstellung von Aktivitätsberichten.",
+            "EWR/USA"
+          ]
         ]
       },
       "social": {

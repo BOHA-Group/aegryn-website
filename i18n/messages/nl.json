@@ -2346,7 +2346,7 @@
       "evalTypeTitle": "Welk evaluatieniveau wenst u?",
       "evalTypeFull": {
         "label": "Auction-certificering",
-        "desc": "Succesfee. Volledig proces via onafhankelijk AEGRYN-protocol (4 dimensies C/I/F/S), 3–4 weken, voor een transactie via AEGRYN Auction.",
+        "desc": "Alleen succesfee. Volledig proces via onafhankelijk AEGRYN-protocol (4 dimensies C/I/F/S), 3–4 weken, inbegrepen als de transactie via AEGRYN Auction plaatsvindt.",
         "price": "Gratis"
       },
       "evalTypeReview": {
@@ -2374,8 +2374,33 @@
       "foundedYear": "Oprichtingsjaar",
       "arrGrowth": "ARR-groei YoY (%)",
       "grossMargin": "Brutomarge (%)",
-      "nrr": "Net Revenue Retention — NRR (%)"
-    }
+      "nrr": "Net Revenue Retention — NRR (%)",
+      "partnerCyber": "Cyberbeveiligingskantoor",
+      "cancelledNote": "Aanvraag geannuleerd. U kunt uw aanvraag opnieuw indienen.",
+      "invoiceNote": "Aanvraag ontvangen — u ontvangt een offerte. Vooruitbetaling per factuur is vereist voordat de analyse begint."
+    },
+    "gradeScale": [
+      {
+        "g": "AEG ★",
+        "d": "Top 1% — Uitzonderlijk"
+      },
+      {
+        "g": "AAA",
+        "d": "Premium — Transactieklaar"
+      },
+      {
+        "g": "AA",
+        "d": "Solide — Bevestigde waardering"
+      },
+      {
+        "g": "A",
+        "d": "Standaard — Geïdentificeerd potentieel"
+      },
+      {
+        "g": "B",
+        "d": "Vroege fase — Herstelplan"
+      }
+    ]
   },
   "bidModels": {
     "meta": {
@@ -3892,13 +3917,34 @@
         "p4": "Hoewel wij ons best doen om onze privacyverklaring te vereenvoudigen, schuilt de begripmoeilijkheid in de specifieke taal van het juridisch kader. Daarom hebben wij het initiatief genomen om de voornaamste definities samen te vatten om de verklaring beter begrijpelijk te maken; deze zijn ontleend aan de DSG.",
         "defsTitle": "Belangrijkste definities uit de DSG:",
         "defs": {
-          "dataSubject": ["Betrokkene:", "De natuurlijke persoon wiens persoonsgegevens worden verwerkt."],
-          "personalData": ["Persoonsgegevens:", "Alle informatie betreffende een geïdentificeerde of identificeerbare natuurlijke persoon."],
-          "sensitiveData": ["Bijzondere categorieën persoonsgegevens:", "Gegevens over religieuze, levensbeschouwelijke, politieke of vakbondsopvattingen of -activiteiten; gegevens over gezondheid, de privésfeer of het behoren tot een ras of etnische groep; genetische gegevens; biometrische gegevens; gegevens over strafrechtelijke vervolgingen of sancties; gegevens over sociale bijstand."],
-          "processing": ["Verwerking:", "Elke handeling met betrekking tot persoonsgegevens, ongeacht de gebruikte middelen en procedures."],
-          "controller": ["Verwerkingsverantwoordelijke:", "Een natuurlijke persoon of federale instantie die, alleen of samen met anderen, het doel en de middelen van de verwerking van persoonsgegevens bepaalt."],
-          "processor": ["Verwerker:", "Een natuurlijke persoon of federale instantie die persoonsgegevens verwerkt namens de verwerkingsverantwoordelijke."],
-          "pfpdt": ["FDPIC:", "De Federale Commissaris voor Gegevensbescherming en Openbaarheid, belast met het toezicht op de correcte toepassing van de federale bepalingen inzake gegevensbescherming."]
+          "dataSubject": [
+            "Betrokkene:",
+            "De natuurlijke persoon wiens persoonsgegevens worden verwerkt."
+          ],
+          "personalData": [
+            "Persoonsgegevens:",
+            "Alle informatie betreffende een geïdentificeerde of identificeerbare natuurlijke persoon."
+          ],
+          "sensitiveData": [
+            "Bijzondere categorieën persoonsgegevens:",
+            "Gegevens over religieuze, levensbeschouwelijke, politieke of vakbondsopvattingen of -activiteiten; gegevens over gezondheid, de privésfeer of het behoren tot een ras of etnische groep; genetische gegevens; biometrische gegevens; gegevens over strafrechtelijke vervolgingen of sancties; gegevens over sociale bijstand."
+          ],
+          "processing": [
+            "Verwerking:",
+            "Elke handeling met betrekking tot persoonsgegevens, ongeacht de gebruikte middelen en procedures."
+          ],
+          "controller": [
+            "Verwerkingsverantwoordelijke:",
+            "Een natuurlijke persoon of federale instantie die, alleen of samen met anderen, het doel en de middelen van de verwerking van persoonsgegevens bepaalt."
+          ],
+          "processor": [
+            "Verwerker:",
+            "Een natuurlijke persoon of federale instantie die persoonsgegevens verwerkt namens de verwerkingsverantwoordelijke."
+          ],
+          "pfpdt": [
+            "FDPIC:",
+            "De Federale Commissaris voor Gegevensbescherming en Openbaarheid, belast met het toezicht op de correcte toepassing van de federale bepalingen inzake gegevensbescherming."
+          ]
         }
       },
       "whoWeAre": {
@@ -3974,11 +4020,27 @@
         "p2": "Bovendien worden sommige persoonsgegevens ook rechtstreeks tussen gebruikers gedeeld wanneer dit noodzakelijk is voor de voorbereiding, uitvoering of follow-up van een gevraagde dienst. Deze uitwisselingen zijn essentieel voor de goede werking van het platform en de diensten die het faciliteert.",
         "p3": "Wanneer persoonsgegevens worden overgedragen aan een externe leverancier die buiten Zwitserland of de Europese Economische Ruimte (EER) is gevestigd en geen adequaat beschermingsniveau biedt, vereisen wij dat de externe leverancier zich ertoe verbindt de toepasselijke gegevensbeschermingswetgeving na te leven (hiervoor maken wij gebruik van de herziene standaardcontractbepalingen van de Europese Commissie), tenzij de externe leverancier al onderworpen is aan een wettelijk aanvaard geheel van regels dat gegevensbescherming garandeert (Swiss-U.S. Data Privacy Framework) of wij een uitzondering kunnen inroepen.",
         "providersH": "Onze externe leveranciers",
-        "tableHeaders": ["Leverancier", "Doel", "Verwerkingslocatie"],
+        "tableHeaders": [
+          "Leverancier",
+          "Doel",
+          "Verwerkingslocatie"
+        ],
         "providers": [
-          ["Supabase", "Backend-as-a-service platform voor applicatieontwikkeling.", "EER"],
-          ["Stripe", "Wereldwijde betalingsinfrastructuur — veilige transactieverwerking en identiteitsverificatie.", "EER/VS"],
-          ["Google Analytics", "Analysedienst voor het monitoren van platformgebruik en het samenstellen van activiteitsrapporten.", "EER/VS"]
+          [
+            "Supabase",
+            "Backend-as-a-service platform voor applicatieontwikkeling.",
+            "EER"
+          ],
+          [
+            "Stripe",
+            "Wereldwijde betalingsinfrastructuur — veilige transactieverwerking en identiteitsverificatie.",
+            "EER/VS"
+          ],
+          [
+            "Google Analytics",
+            "Analysedienst voor het monitoren van platformgebruik en het samenstellen van activiteitsrapporten.",
+            "EER/VS"
+          ]
         ]
       },
       "social": {

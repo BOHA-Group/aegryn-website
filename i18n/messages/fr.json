@@ -2312,7 +2312,7 @@
       "evalTypeTitle": "Quel niveau d'évaluation souhaitez-vous ?",
       "evalTypeFull": {
         "label": "Certification Auction",
-        "desc": "Rémunération à la transaction. Processus complet par protocole indépendant AEGRYN (4 dimensions C/I/F/S), 3–4 semaines, en vue d'une cession via AEGRYN Auction.",
+        "desc": "Rémunération à la transaction uniquement. Processus complet par protocole indépendant AEGRYN (4 dimensions C/I/F/S), 3–4 semaines, inclus si la cession se réalise via AEGRYN Auction.",
         "price": "Gratuit"
       },
       "evalTypeReview": {
@@ -2340,8 +2340,33 @@
       "foundedYear": "Année de création",
       "arrGrowth": "Croissance ARR YoY (%)",
       "grossMargin": "Marge brute (%)",
-      "nrr": "Net Revenue Retention — NRR (%)"
-    }
+      "nrr": "Net Revenue Retention — NRR (%)",
+      "partnerCyber": "Cabinet cybersécurité",
+      "cancelledNote": "Paiement annulé. Vous pouvez soumettre à nouveau votre demande.",
+      "invoiceNote": "Demande reçue — un devis vous sera transmis. Le pré-paiement sur facture est requis avant démarrage de l'analyse."
+    },
+    "gradeScale": [
+      {
+        "g": "AEG ★",
+        "d": "Top 1 % — Exceptionnel"
+      },
+      {
+        "g": "AAA",
+        "d": "Premium — Prêt pour transaction"
+      },
+      {
+        "g": "AA",
+        "d": "Solide — Valorisation confirmée"
+      },
+      {
+        "g": "A",
+        "d": "Standard — Potentiel identifié"
+      },
+      {
+        "g": "B",
+        "d": "Early stage — Plan de remédiation"
+      }
+    ]
   },
   "bidModels": {
     "meta": {
@@ -3865,13 +3890,34 @@
         "p4": "Bien que nous fassions tout notre possible pour simplifier notre notice de protection des données, la difficulté de compréhension provient du langage propre au cadre juridique. C'est pourquoi nous avons pris l'initiative de regrouper les principales définitions afin de rendre notre notice plus compréhensible, celles-ci étant tirées de la LPD.",
         "defsTitle": "Principales définitions tirées de la LPD :",
         "defs": {
-          "dataSubject": ["Personne concernée :", "La personne physique dont les données personnelles sont traitées."],
-          "personalData": ["Données personnelles :", "Toute information se rapportant à une personne physique identifiée ou identifiable."],
-          "sensitiveData": ["Données personnelles sensibles :", "Données concernant les opinions ou activités religieuses, philosophiques, politiques ou syndicales ; les données concernant la santé, la sphère intime ou l'appartenance à une race ou une ethnie ; les données génétiques ; les données biométriques identifiant de manière unique une personne physique ; les données concernant les poursuites ou sanctions administratives et pénales ; les données concernant les mesures d'aide sociale."],
-          "processing": ["Traitement :", "Toute manipulation de données personnelles, notamment la collecte, l'enregistrement, la conservation, l'utilisation, la modification, la divulgation, l'archivage, l'effacement ou la destruction de données."],
-          "controller": ["Responsable du traitement :", "La personne privée ou l'organe fédéral qui, seul ou conjointement avec d'autres, détermine la finalité et les moyens du traitement des données personnelles."],
-          "processor": ["Sous-traitant :", "La personne privée ou l'organe fédéral qui traite des données personnelles pour le compte du responsable du traitement."],
-          "pfpdt": ["PFPDT (FDPIC) :", "Le Préposé fédéral à la protection des données et à la transparence, chargé de surveiller la bonne application des dispositions fédérales relatives à la protection des données."]
+          "dataSubject": [
+            "Personne concernée :",
+            "La personne physique dont les données personnelles sont traitées."
+          ],
+          "personalData": [
+            "Données personnelles :",
+            "Toute information se rapportant à une personne physique identifiée ou identifiable."
+          ],
+          "sensitiveData": [
+            "Données personnelles sensibles :",
+            "Données concernant les opinions ou activités religieuses, philosophiques, politiques ou syndicales ; les données concernant la santé, la sphère intime ou l'appartenance à une race ou une ethnie ; les données génétiques ; les données biométriques identifiant de manière unique une personne physique ; les données concernant les poursuites ou sanctions administratives et pénales ; les données concernant les mesures d'aide sociale."
+          ],
+          "processing": [
+            "Traitement :",
+            "Toute manipulation de données personnelles, notamment la collecte, l'enregistrement, la conservation, l'utilisation, la modification, la divulgation, l'archivage, l'effacement ou la destruction de données."
+          ],
+          "controller": [
+            "Responsable du traitement :",
+            "La personne privée ou l'organe fédéral qui, seul ou conjointement avec d'autres, détermine la finalité et les moyens du traitement des données personnelles."
+          ],
+          "processor": [
+            "Sous-traitant :",
+            "La personne privée ou l'organe fédéral qui traite des données personnelles pour le compte du responsable du traitement."
+          ],
+          "pfpdt": [
+            "PFPDT (FDPIC) :",
+            "Le Préposé fédéral à la protection des données et à la transparence, chargé de surveiller la bonne application des dispositions fédérales relatives à la protection des données."
+          ]
         }
       },
       "whoWeAre": {
@@ -3947,11 +3993,27 @@
         "p2": "Par ailleurs, certaines données personnelles sont également partagées directement entre utilisateurs lorsque cela est nécessaire pour la préparation, l'exécution ou le suivi d'un service demandé. Ces échanges sont indispensables pour permettre le bon fonctionnement de la plateforme et des services qu'elle facilite.",
         "p3": "Lorsque des données personnelles sont transférées à un prestataire tiers situé en dehors de la Suisse ou de l'Espace économique européen (EEE) et n'offrant pas un niveau de protection adéquat, nous exigeons que le prestataire tiers s'engage à respecter la législation applicable en matière de protection des données (à cette fin, nous utilisons les clauses contractuales types révisées de la Commission européenne), sauf si le prestataire tiers est déjà soumis à un ensemble de règles légalement acceptées garantissant la protection des données (Swiss-U.S. Data Privacy Framework) ou si nous pouvons invoquer une exception.",
         "providersH": "Nos prestataires tiers",
-        "tableHeaders": ["Prestataire", "Objectif", "Lieu de traitement"],
+        "tableHeaders": [
+          "Prestataire",
+          "Objectif",
+          "Lieu de traitement"
+        ],
         "providers": [
-          ["Supabase", "Plateforme backend-as-a-service pour le développement de l'application.", "EEE"],
-          ["Stripe", "Infrastructure de paiement mondial — traitement sécurisé des transactions et vérification d'identité.", "EEE/USA"],
-          ["Google Analytics", "Service d'analyse pour surveiller l'utilisation de la plateforme et compiler des rapports d'activité.", "EEE/USA"]
+          [
+            "Supabase",
+            "Plateforme backend-as-a-service pour le développement de l'application.",
+            "EEE"
+          ],
+          [
+            "Stripe",
+            "Infrastructure de paiement mondial — traitement sécurisé des transactions et vérification d'identité.",
+            "EEE/USA"
+          ],
+          [
+            "Google Analytics",
+            "Service d'analyse pour surveiller l'utilisation de la plateforme et compiler des rapports d'activité.",
+            "EEE/USA"
+          ]
         ]
       },
       "social": {

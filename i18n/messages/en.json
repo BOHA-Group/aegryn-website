@@ -2304,7 +2304,7 @@
       "evalTypeTitle": "What level of evaluation do you need?",
       "evalTypeFull": {
         "label": "Auction Certification",
-        "desc": "Success-fee only. Full independent AEGRYN protocol (4 C/I/F/S dimensions), 3–4 weeks, for a transaction via AEGRYN Auction.",
+        "desc": "Success-fee only. Full independent AEGRYN protocol (4 C/I/F/S dimensions), 3–4 weeks, included if the transaction completes via AEGRYN Auction.",
         "price": "Free"
       },
       "evalTypeReview": {
@@ -2332,8 +2332,33 @@
       "foundedYear": "Year founded",
       "arrGrowth": "ARR YoY growth (%)",
       "grossMargin": "Gross margin (%)",
-      "nrr": "Net Revenue Retention — NRR (%)"
-    }
+      "nrr": "Net Revenue Retention — NRR (%)",
+      "partnerCyber": "Cybersecurity firm",
+      "cancelledNote": "Request cancelled. You may resubmit your application.",
+      "invoiceNote": "Request received — a quote will be sent to you. Pre-payment by invoice is required before analysis begins."
+    },
+    "gradeScale": [
+      {
+        "g": "AEG ★",
+        "d": "Top 1% — Exceptional"
+      },
+      {
+        "g": "AAA",
+        "d": "Premium — Transaction-ready"
+      },
+      {
+        "g": "AA",
+        "d": "Solid — Confirmed valuation"
+      },
+      {
+        "g": "A",
+        "d": "Standard — Identified potential"
+      },
+      {
+        "g": "B",
+        "d": "Early stage — Remediation plan"
+      }
+    ]
   },
   "bidModels": {
     "meta": {
@@ -3851,13 +3876,34 @@
         "p4": "Although we make every effort to simplify our data protection notice, the difficulty of understanding it stems from the language specific to the legal framework. This is why we have taken the initiative of grouping together the main definitions to make our data protection notice easier to understand, as these are taken from the FADP.",
         "defsTitle": "Key definitions from the FADP:",
         "defs": {
-          "dataSubject": ["Data subject:", "The natural person whose personal data is being processed."],
-          "personalData": ["Personal data:", "Any information relating to an identified or identifiable natural person."],
-          "sensitiveData": ["Sensitive personal data:", "Data relating to religious, philosophical, political, or trade union opinions or activities; data relating to health, the private sphere, or racial or ethnic origin; genetic data; biometric data uniquely identifying a natural person; data relating to administrative and criminal prosecutions or penalties; data relating to social welfare measures."],
-          "processing": ["Processing:", "Any operation performed on personal data, including collection, recording, storage, use, modification, disclosure, archiving, erasure, or destruction."],
-          "controller": ["Controller:", "A private person or federal body that, alone or jointly with others, determines the purposes and means of processing personal data."],
-          "processor": ["Processor:", "A private person or federal body that processes personal data on behalf of the controller."],
-          "pfpdt": ["FDPIC:", "The Federal Data Protection and Information Commissioner, responsible for overseeing the proper application of federal data protection provisions."]
+          "dataSubject": [
+            "Data subject:",
+            "The natural person whose personal data is being processed."
+          ],
+          "personalData": [
+            "Personal data:",
+            "Any information relating to an identified or identifiable natural person."
+          ],
+          "sensitiveData": [
+            "Sensitive personal data:",
+            "Data relating to religious, philosophical, political, or trade union opinions or activities; data relating to health, the private sphere, or racial or ethnic origin; genetic data; biometric data uniquely identifying a natural person; data relating to administrative and criminal prosecutions or penalties; data relating to social welfare measures."
+          ],
+          "processing": [
+            "Processing:",
+            "Any operation performed on personal data, including collection, recording, storage, use, modification, disclosure, archiving, erasure, or destruction."
+          ],
+          "controller": [
+            "Controller:",
+            "A private person or federal body that, alone or jointly with others, determines the purposes and means of processing personal data."
+          ],
+          "processor": [
+            "Processor:",
+            "A private person or federal body that processes personal data on behalf of the controller."
+          ],
+          "pfpdt": [
+            "FDPIC:",
+            "The Federal Data Protection and Information Commissioner, responsible for overseeing the proper application of federal data protection provisions."
+          ]
         }
       },
       "whoWeAre": {
@@ -3933,11 +3979,27 @@
         "p2": "In addition, certain personal data is also shared directly between users when it is necessary for the preparation, execution, or follow-up of a requested service. Such exchanges are essential to enable the proper functioning of the platform and the services it facilitates.",
         "p3": "Where personal data is transferred to a third-party provider located outside Switzerland or the European Economic Area (EEA) and not offering an adequate level of protection, we require that the third-party provider undertakes to comply with the applicable data protection legislation (for this purpose, we use the revised standard contractual clauses of the European Commission), unless the third-party provider is already subject to a legally accepted set of rules designed to guarantee data protection (Swiss-U.S. Data Privacy Framework) or we can invoke an exception.",
         "providersH": "Our third-party providers",
-        "tableHeaders": ["Provider", "Purpose", "Processing location"],
+        "tableHeaders": [
+          "Provider",
+          "Purpose",
+          "Processing location"
+        ],
         "providers": [
-          ["Supabase", "Backend-as-a-service platform for application development.", "EEA"],
-          ["Stripe", "Global payment infrastructure — secure transaction processing and identity verification.", "EEA/USA"],
-          ["Google Analytics", "Analytics service to monitor platform usage and compile activity reports.", "EEA/USA"]
+          [
+            "Supabase",
+            "Backend-as-a-service platform for application development.",
+            "EEA"
+          ],
+          [
+            "Stripe",
+            "Global payment infrastructure — secure transaction processing and identity verification.",
+            "EEA/USA"
+          ],
+          [
+            "Google Analytics",
+            "Analytics service to monitor platform usage and compile activity reports.",
+            "EEA/USA"
+          ]
         ]
       },
       "social": {

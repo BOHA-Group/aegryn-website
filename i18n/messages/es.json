@@ -2346,7 +2346,7 @@
       "evalTypeTitle": "¿Qué nivel de evaluación necesita?",
       "evalTypeFull": {
         "label": "Certificación Auction",
-        "desc": "Honorarios éxito. Proceso completo por protocolo independiente AEGRYN (4 dimensiones C/I/F/S), 3–4 semanas, para una transacción vía AEGRYN Auction.",
+        "desc": "Solo honorarios de éxito. Proceso completo por protocolo independiente AEGRYN (4 dimensiones C/I/F/S), 3–4 semanas, incluido si la transacción se realiza vía AEGRYN Auction.",
         "price": "Gratuito"
       },
       "evalTypeReview": {
@@ -2374,8 +2374,33 @@
       "foundedYear": "Año de fundación",
       "arrGrowth": "Crecimiento ARR interanual (%)",
       "grossMargin": "Margen bruto (%)",
-      "nrr": "Net Revenue Retention — NRR (%)"
-    }
+      "nrr": "Net Revenue Retention — NRR (%)",
+      "partnerCyber": "Firma de ciberseguridad",
+      "cancelledNote": "Solicitud cancelada. Puede volver a enviar su solicitud.",
+      "invoiceNote": "Solicitud recibida — se le enviará un presupuesto. El prepago por factura es necesario antes del inicio del análisis."
+    },
+    "gradeScale": [
+      {
+        "g": "AEG ★",
+        "d": "Top 1 % — Excepcional"
+      },
+      {
+        "g": "AAA",
+        "d": "Premium — Listo para transacción"
+      },
+      {
+        "g": "AA",
+        "d": "Sólido — Valoración confirmada"
+      },
+      {
+        "g": "A",
+        "d": "Estándar — Potencial identificado"
+      },
+      {
+        "g": "B",
+        "d": "Etapa inicial — Plan de remediación"
+      }
+    ]
   },
   "bidModels": {
     "meta": {
@@ -3892,13 +3917,34 @@
         "p4": "Aunque hacemos todo lo posible para simplificar nuestro aviso de protección de datos, la dificultad de comprensión proviene del lenguaje propio del marco jurídico. Por ello, hemos tomado la iniciativa de agrupar las principales definiciones para facilitar la comprensión del aviso, tomadas de la LPD.",
         "defsTitle": "Principales definiciones de la LPD:",
         "defs": {
-          "dataSubject": ["Interesado:", "La persona física cuyos datos personales son objeto de tratamiento."],
-          "personalData": ["Datos personales:", "Cualquier información relativa a una persona física identificada o identificable."],
-          "sensitiveData": ["Datos personales sensibles:", "Datos relativos a opiniones o actividades religiosas, filosóficas, políticas o sindicales; datos relativos a la salud, la esfera íntima o la pertenencia a una raza o etnia; datos genéticos; datos biométricos que identifiquen de forma única a una persona física; datos relativos a procedimientos o sanciones administrativas y penales; datos relativos a medidas de asistencia social."],
-          "processing": ["Tratamiento:", "Cualquier manipulación de datos personales, con independencia de los medios y procedimientos utilizados."],
-          "controller": ["Responsable del tratamiento:", "La persona privada u organismo federal que, solo o conjuntamente con otros, determina los fines y medios del tratamiento de datos personales."],
-          "processor": ["Encargado del tratamiento:", "La persona privada u organismo federal que trata datos personales por cuenta del responsable del tratamiento."],
-          "pfpdt": ["PFPDT:", "El Comisionado Federal de Protección de Datos y Transparencia, encargado de supervisar la correcta aplicación de las disposiciones federales de protección de datos."]
+          "dataSubject": [
+            "Interesado:",
+            "La persona física cuyos datos personales son objeto de tratamiento."
+          ],
+          "personalData": [
+            "Datos personales:",
+            "Cualquier información relativa a una persona física identificada o identificable."
+          ],
+          "sensitiveData": [
+            "Datos personales sensibles:",
+            "Datos relativos a opiniones o actividades religiosas, filosóficas, políticas o sindicales; datos relativos a la salud, la esfera íntima o la pertenencia a una raza o etnia; datos genéticos; datos biométricos que identifiquen de forma única a una persona física; datos relativos a procedimientos o sanciones administrativas y penales; datos relativos a medidas de asistencia social."
+          ],
+          "processing": [
+            "Tratamiento:",
+            "Cualquier manipulación de datos personales, con independencia de los medios y procedimientos utilizados."
+          ],
+          "controller": [
+            "Responsable del tratamiento:",
+            "La persona privada u organismo federal que, solo o conjuntamente con otros, determina los fines y medios del tratamiento de datos personales."
+          ],
+          "processor": [
+            "Encargado del tratamiento:",
+            "La persona privada u organismo federal que trata datos personales por cuenta del responsable del tratamiento."
+          ],
+          "pfpdt": [
+            "PFPDT:",
+            "El Comisionado Federal de Protección de Datos y Transparencia, encargado de supervisar la correcta aplicación de las disposiciones federales de protección de datos."
+          ]
         }
       },
       "whoWeAre": {
@@ -3974,11 +4020,27 @@
         "p2": "Además, determinados datos personales también se comparten directamente entre usuarios cuando es necesario para la preparación, ejecución o seguimiento de un servicio solicitado. Estos intercambios son esenciales para el correcto funcionamiento de la plataforma y los servicios que facilita.",
         "p3": "Cuando los datos personales se transfieren a un proveedor tercero situado fuera de Suiza o del Espacio Económico Europeo (EEE) que no ofrece un nivel de protección adecuado, exigimos que el proveedor tercero se comprometa a cumplir la legislación de protección de datos aplicable (para ello, utilizamos las cláusulas contractuales tipo revisadas de la Comisión Europea), a menos que el proveedor tercero ya esté sujeto a un conjunto de normas legalmente aceptadas destinadas a garantizar la protección de datos (Swiss-U.S. Data Privacy Framework) o podamos invocar una excepción.",
         "providersH": "Nuestros proveedores terceros",
-        "tableHeaders": ["Proveedor", "Finalidad", "Lugar de tratamiento"],
+        "tableHeaders": [
+          "Proveedor",
+          "Finalidad",
+          "Lugar de tratamiento"
+        ],
         "providers": [
-          ["Supabase", "Plataforma backend-as-a-service para el desarrollo de la aplicación.", "EEE"],
-          ["Stripe", "Infraestructura de pago global — procesamiento seguro de transacciones y verificación de identidad.", "EEE/EE.UU."],
-          ["Google Analytics", "Servicio de análisis para supervisar el uso de la plataforma y elaborar informes de actividad.", "EEE/EE.UU."]
+          [
+            "Supabase",
+            "Plataforma backend-as-a-service para el desarrollo de la aplicación.",
+            "EEE"
+          ],
+          [
+            "Stripe",
+            "Infraestructura de pago global — procesamiento seguro de transacciones y verificación de identidad.",
+            "EEE/EE.UU."
+          ],
+          [
+            "Google Analytics",
+            "Servicio de análisis para supervisar el uso de la plataforma y elaborar informes de actividad.",
+            "EEE/EE.UU."
+          ]
         ]
       },
       "social": {
