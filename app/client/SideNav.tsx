@@ -2,12 +2,23 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import {
+  LayoutDashboard, BookOpen, Gavel, ArrowRightLeft, Receipt,
+  ShieldCheck, Bell, UserCircle, Settings, FileText,
+  Award, Users, DollarSign, Briefcase,
+} from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
+
+const ICON_MAP: Record<string, LucideIcon> = {
+  LayoutDashboard, BookOpen, Gavel, ArrowRightLeft, Receipt,
+  ShieldCheck, Bell, UserCircle, Settings, FileText,
+  Award, Users, DollarSign, Briefcase,
+}
 
 export type NavItem = {
   href:   string
   label:  string
-  icon:   LucideIcon
+  icon:   string
   badge?: number
 }
 
@@ -27,6 +38,8 @@ function NavLink({ item, rootHref }: { item: NavItem; rootHref: string }) {
     ? pathname === item.href
     : pathname.startsWith(item.href)
 
+  const Icon = ICON_MAP[item.icon] ?? LayoutDashboard
+
   return (
     <Link
       href={item.href}
@@ -36,7 +49,7 @@ function NavLink({ item, rootHref }: { item: NavItem; rootHref: string }) {
           : 'text-white/45 hover:text-white/80 hover:bg-white/5'
       }`}
     >
-      <item.icon size={13} className="shrink-0" />
+      <Icon size={13} className="shrink-0" />
       <span className="font-sans text-[12px] flex-1 leading-tight">{item.label}</span>
       {item.badge != null && item.badge > 0 && (
         <span className="bg-ag-apex text-ag-navy font-mono font-bold text-[9px] px-1.5 py-0.5 min-w-[18px] text-center leading-none">

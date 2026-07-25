@@ -1,5 +1,4 @@
 import { getTranslations } from 'next-intl/server'
-import { LayoutDashboard, BookOpen, Gavel, ArrowRightLeft, Receipt, ShieldCheck, Bell, UserCircle, Settings } from 'lucide-react'
 import SideNav from '@/app/client/SideNav'
 import type { NavGroup } from '@/app/client/SideNav'
 
@@ -10,30 +9,30 @@ export default async function BuyerNav({ unreadCount }: { unreadCount: number })
     {
       label: t('navGroupOverview'),
       items: [
-        { href: '/client/buyer', label: t('navDashboard'), icon: LayoutDashboard },
+        { href: '/client/buyer', label: t('navDashboard'), icon: 'LayoutDashboard' },
       ],
     },
     {
       label: t('navGroupAcquisitions'),
       items: [
-        { href: '/client/buyer/catalogue',    label: t('navCatalog'),      icon: BookOpen },
-        { href: '/client/buyer/offres',       label: t('navOffers'),       icon: Gavel },
-        { href: '/client/buyer/transactions', label: t('navTransactions'), icon: ArrowRightLeft },
-        { href: '/client/buyer/commissions',  label: t('navCommissions'),  icon: Receipt },
+        { href: '/client/buyer/catalogue',    label: t('navCatalog'),      icon: 'BookOpen' },
+        { href: '/client/buyer/offres',       label: t('navOffers'),       icon: 'Gavel' },
+        { href: '/client/buyer/transactions', label: t('navTransactions'), icon: 'ArrowRightLeft' },
+        { href: '/client/buyer/commissions',  label: t('navCommissions'),  icon: 'Receipt' },
       ],
     },
     {
       label: t('navGroupCompliance'),
       items: [
-        { href: '/client/buyer/kyc', label: t('navKyc'), icon: ShieldCheck },
+        { href: '/client/buyer/kyc', label: t('navKyc'), icon: 'ShieldCheck' },
       ],
     },
     {
       label: t('navGroupAccount'),
       items: [
-        { href: '/client/buyer/notifications', label: t('navNotifications'), icon: Bell,       badge: unreadCount },
-        { href: '/client/account',             label: t('navMyAccount'),     icon: UserCircle },
-        { href: '/client/account#settings',    label: t('navSettings'),     icon: Settings },
+        { href: '/client/buyer/notifications', label: t('navNotifications'), icon: 'Bell',       badge: unreadCount },
+        { href: '/client/account',             label: t('navMyAccount'),     icon: 'UserCircle' },
+        { href: '/client/account#settings',    label: t('navSettings'),     icon: 'Settings' },
       ],
     },
   ]
