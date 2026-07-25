@@ -53,10 +53,10 @@ export async function POST(req: NextRequest) {
     if (asset_id) {
       const { data: asset } = await supa
         .from('assets')
-        .select('company_name, name')
+        .select('company_name')
         .eq('id', String(asset_id))
         .single()
-      assetName = String(asset?.company_name ?? asset?.name ?? '')
+      assetName = String(asset?.company_name ?? '')
     }
 
     const { subject, html } = await emailPartnerMandateCreated({

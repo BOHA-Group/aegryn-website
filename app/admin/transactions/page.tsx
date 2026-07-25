@@ -45,7 +45,7 @@ export default async function AdminTransactionsPage({
 
   const { data, error } = await supa
     .from('transactions')
-    .select('id, status, escrow_amount_chf, dd_deadline_at, signing_date, closed_at, created_at, asset_id, assets(name, official_grade)')
+    .select('id, status, escrow_amount_chf, dd_deadline_at, signing_date, closed_at, created_at, asset_id, assets(company_name, official_grade)')
     .order('created_at', { ascending: false })
     .limit(200)
 
@@ -107,7 +107,7 @@ export default async function AdminTransactionsPage({
                   return (
                     <tr key={String(r.id)} className="hover:bg-gray-50">
                       <td className="px-4 py-3 font-mono text-gray-500 whitespace-nowrap">{fmtDate(r.created_at)}</td>
-                      <td className="px-4 py-3 font-semibold text-gray-800">{String(asset?.name ?? '—')}</td>
+                      <td className="px-4 py-3 font-semibold text-gray-800">{String(asset?.company_name ?? '—')}</td>
                       <td className="px-4 py-3 font-mono font-bold">{String(asset?.official_grade ?? '—')}</td>
                       <td className="px-4 py-3">
                         <span className={`px-2 py-0.5 text-[10px] uppercase font-semibold ${statusColor(String(r.status ?? ''))}`}>

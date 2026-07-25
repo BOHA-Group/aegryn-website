@@ -41,7 +41,7 @@ export default async function AdminOffersPage({
 
   const { data, error } = await supa
     .from('auction_bids')
-    .select('id, bid_amount_chf, bid_model, status, submitted_at, asset_id, auction_assets(name, official_grade)')
+    .select('id, bid_amount_chf, bid_model, status, submitted_at, asset_id, auction_assets(name, grade)')
     .order('submitted_at', { ascending: false })
     .limit(200)
 
@@ -110,7 +110,7 @@ export default async function AdminOffersPage({
                     <tr key={String(r.id)} className="hover:bg-gray-50">
                       <td className="px-4 py-3 font-mono text-gray-500 whitespace-nowrap">{fmtDate(r.submitted_at)}</td>
                       <td className="px-4 py-3 font-semibold text-gray-800">{String(asset?.name ?? '—')}</td>
-                      <td className="px-4 py-3 font-mono font-bold">{String(asset?.official_grade ?? '—')}</td>
+                      <td className="px-4 py-3 font-mono font-bold">{String((asset?.grade as Record<string, unknown>)?.letter ?? '—')}</td>
                       <td className="px-4 py-3 text-[10px] uppercase tracking-wide text-gray-500">{BID_MODEL_LABEL[String(r.bid_model)] ?? String(r.bid_model ?? '—')}</td>
                       <td className="px-4 py-3 font-mono text-gray-700">{r.bid_amount_chf ? `${r.bid_amount_chf} CHF` : '—'}</td>
                       <td className="px-4 py-3">

@@ -46,7 +46,7 @@ export async function PATCH(
   // Récupérer les infos pour l'email (best-effort, sans bloquer la réponse)
   const { data: cert } = await supa
     .from('partner_certifications')
-    .select('partner_id, dimension, score, observations, rejection_reason, cosignature_amount_chf, assets(company_name, name)')
+    .select('partner_id, dimension, score, observations, rejection_reason, cosignature_amount_chf, assets(company_name)')
     .eq('id', id)
     .single()
 
@@ -59,7 +59,7 @@ export async function PATCH(
 
     if (profile?.email) {
       const assetObj = Array.isArray(cert.assets) ? (cert.assets as Record<string, unknown>[])[0] : cert.assets as Record<string, unknown> | null
-      const assetName = String(assetObj?.company_name ?? assetObj?.name ?? 'Actif AEGRYN')
+      const assetName = String(assetObj?.company_name ?? 'Actif AEGRYN')
       const partnerName = String(profile.full_name ?? profile.email)
 
       if (action === 'validate') {

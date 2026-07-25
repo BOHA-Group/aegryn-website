@@ -26,7 +26,7 @@ export default async function AdminTransactionDetailPage({
 
   const { data: transaction, error } = await supa
     .from('transactions')
-    .select('*, assets(name, official_grade, asset_type)')
+    .select('*, assets(company_name, official_grade, asset_type)')
     .eq('id', id)
     .maybeSingle()
 
@@ -58,7 +58,7 @@ export default async function AdminTransactionDetailPage({
             <div className="mb-8">
               <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">TRANSACTION PTT</p>
               <h1 className="text-[24px] font-bold text-gray-900 tracking-tight">
-                {String(asset?.name ?? 'Actif')} <span className="font-mono text-gray-400 text-[16px]">— {String(asset?.official_grade ?? '')}</span>
+                {String(asset?.company_name ?? 'Actif')} <span className="font-mono text-gray-400 text-[16px]">— {String(asset?.official_grade ?? '')}</span>
               </h1>
               <p className="text-[12px] text-gray-400 mt-1 font-mono">{id}</p>
             </div>

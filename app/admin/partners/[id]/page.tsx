@@ -28,7 +28,7 @@ export default async function AdminPartnerDetailPage({
   if (!profile && !error) notFound()
 
   const [{ data: certs }, { data: refs }, { data: comms }, { data: mandates }] = await Promise.all([
-    supa.from('partner_certifications').select('id, dimension, status, score, subcodes, observations, deadline_at, cosignature_amount_chf, assets(name, company_name, official_grade)').eq('partner_id', id).order('created_at', { ascending: false }),
+    supa.from('partner_certifications').select('id, dimension, status, score, subcodes, observations, deadline_at, cosignature_amount_chf, assets(company_name, official_grade)').eq('partner_id', id).order('created_at', { ascending: false }),
     supa.from('introductions').select('*').eq('partner_id', id).order('created_at', { ascending: false }),
     supa.from('commissions').select('*').eq('partner_id', id).order('created_at', { ascending: false }),
     supa.from('partner_mandates').select('id, client_name, mandate_type, status, retrocession_pct, created_at').eq('partner_id', id).order('created_at', { ascending: false }),

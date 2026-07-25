@@ -58,7 +58,7 @@ export default async function AdminOfferDetailPage({
 
   const { data: bid, error } = await supa
     .from('auction_bids')
-    .select('*, auction_assets(name, official_grade, asset_type)')
+    .select('*, auction_assets(name, grade, asset_type)')
     .eq('id', id)
     .maybeSingle()
 
@@ -91,7 +91,7 @@ export default async function AdminOfferDetailPage({
 
             <div className="bg-white border border-gray-200 p-6 flex flex-col gap-4 mb-6">
               <div className="grid grid-cols-2 gap-4 text-[12px]">
-                <div><p className="text-gray-400 text-[10px] uppercase mb-1">Grade</p><p className="font-mono font-bold">{String(asset?.official_grade ?? '—')}</p></div>
+                <div><p className="text-gray-400 text-[10px] uppercase mb-1">Grade</p><p className="font-mono font-bold">{String((asset?.grade as Record<string, unknown>)?.letter ?? '—')}</p></div>
                 <div><p className="text-gray-400 text-[10px] uppercase mb-1">Montant</p><p className="font-mono">{bid.bid_amount_chf} CHF</p></div>
                 <div><p className="text-gray-400 text-[10px] uppercase mb-1">Statut</p><p className="font-semibold">{String(bid.status)}</p></div>
                 <div><p className="text-gray-400 text-[10px] uppercase mb-1">Soumise le</p><p className="font-mono">{String(bid.submitted_at ?? '').slice(0,10)}</p></div>
