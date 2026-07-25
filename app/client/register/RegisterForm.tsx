@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 import { supabase }        from '@/lib/supabase'
 import { ArrowUpRight, Eye, EyeOff, CheckCircle } from 'lucide-react'
 
-type Role = 'buyer' | 'seller'
+type Role = 'buyer' | 'seller' | 'partner'
 
 function getPasswordStrength(pwd: string): { score: number; rules: boolean[] } {
   const rules = [
@@ -52,10 +52,11 @@ export default function RegisterForm() {
 
     try {
       const effectiveRole: Role = role ?? 'buyer'
+      const apiRole = effectiveRole === 'partner' ? 'buyer' : effectiveRole
       const res = await fetch('/api/client/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password, fullName, role: effectiveRole }),
+        body: JSON.stringify({ email, password, fullName, role: apiRole }),
       })
 
       const json = await res.json() as { error?: string; ok?: boolean }
@@ -81,8 +82,9 @@ export default function RegisterForm() {
       setSuccess(true)
 
       setTimeout(() => {
-        if (effectiveRole === 'seller') router.push('/client/seller')
-        else                            router.push('/client/buyer')
+        if (effectiveRole === 'seller')       router.push('/client/seller')
+        else if (effectiveRole === 'partner') router.push('/client/partner')
+        else                                  router.push('/client/buyer')
       }, 3000)
     } catch {
       setError(t('errorNetwork'))
@@ -102,8 +104,9 @@ export default function RegisterForm() {
   }
 
   const roleOptions: { value: Role; label: string; desc: string }[] = [
-    { value: 'buyer',  label: t('roleBuyer'),  desc: t('roleBuyerDesc')  },
-    { value: 'seller', label: t('roleSeller'), desc: t('roleSellerDesc') },
+    { value: 'buyer',   label: t('roleBuyer'),   desc: t('roleBuyerDesc')   },
+    { value: 'seller',  label: t('roleSeller'),  desc: t('roleSellerDesc')  },
+    { value: 'partner', label: t('rolePartner'), desc: t('rolePartnerDesc') },
   ]
 
   return (
@@ -126,7 +129,7 @@ export default function RegisterForm() {
           value={fullName}
           onChange={e => setFullName(e.target.value)}
           placeholder={t('fullNamePlaceholder')}
-          className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
+          className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:bg-ag-navy [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[color:white] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
         />
       </div>
 
@@ -142,7 +145,7 @@ export default function RegisterForm() {
           value={email}
           onChange={e => setEmail(e.target.value)}
           placeholder={t('emailPlaceholder')}
-          className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
+          className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:bg-ag-navy [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[color:white] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
         />
       </div>
 
@@ -159,7 +162,7 @@ export default function RegisterForm() {
             value={password}
             onChange={e => setPassword(e.target.value)}
             placeholder={t('passwordPlaceholder')}
-            className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
+            className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
           />
           <button
             type="button"
@@ -230,7 +233,7 @@ export default function RegisterForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 font-semibold hover:bg-ag-apex/90 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+        className="w-full bg-white text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 font-semibold hover:bg-ag-apex hover:text-ag-navy transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
       >
         {loading ? t('submitting') : t('submit')}
         {!loading && <ArrowUpRight size={13} />}

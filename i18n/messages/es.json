@@ -3620,7 +3620,9 @@
       "errorStrength": "La contraseña debe contener al menos una mayúscula, una minúscula y un número.",
       "errorInvalid": "Correo electrónico inválido.",
       "errorGeneric": "No se pudo crear la cuenta. Inténtelo de nuevo.",
-      "errorNetwork": "No se pudo contactar con el servidor. Compruebe su conexión."
+      "errorNetwork": "No se pudo contactar con el servidor. Compruebe su conexión.",
+      "rolePartner": "Unirse a la red de socios",
+      "rolePartnerDesc": "Intermediarios de negocios, co-certificadores expertos — acceda al espacio socio AEGRYN."
     }
   },
   "clientSpace": {

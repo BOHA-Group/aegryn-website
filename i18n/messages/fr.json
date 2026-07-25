@@ -3593,7 +3593,9 @@
       "errorStrength": "Le mot de passe doit contenir au moins une majuscule, une minuscule et un chiffre.",
       "errorInvalid": "Email invalide.",
       "errorGeneric": "Impossible de créer le compte. Réessayez.",
-      "errorNetwork": "Impossible de contacter le serveur. Vérifiez votre connexion."
+      "errorNetwork": "Impossible de contacter le serveur. Vérifiez votre connexion.",
+      "rolePartner": "Rejoindre le réseau partenaires",
+      "rolePartnerDesc": "Apporteurs d'affaires, co-certificateurs experts — accédez à l'espace partenaire AEGRYN."
     }
   },
   "clientSpace": {

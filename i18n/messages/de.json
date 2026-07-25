@@ -3620,7 +3620,9 @@
       "errorStrength": "Das Passwort muss mindestens einen Großbuchstaben, einen Kleinbuchstaben und eine Zahl enthalten.",
       "errorInvalid": "Ungültige E-Mail-Adresse.",
       "errorGeneric": "Konto konnte nicht erstellt werden. Bitte versuchen Sie es erneut.",
-      "errorNetwork": "Server nicht erreichbar. Bitte Verbindung prüfen."
+      "errorNetwork": "Server nicht erreichbar. Bitte Verbindung prüfen.",
+      "rolePartner": "Dem Partnernetzwerk beitreten",
+      "rolePartnerDesc": "Geschäftsvermittler, Sachverständige — Zugang zum AEGRYN-Partnerbereich."
     }
   },
   "clientSpace": {

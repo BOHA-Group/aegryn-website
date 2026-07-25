@@ -3620,7 +3620,9 @@
       "errorStrength": "Het wachtwoord moet minimaal één hoofdletter, één kleine letter en één cijfer bevatten.",
       "errorInvalid": "Ongeldig e-mailadres.",
       "errorGeneric": "Account kon niet worden aangemaakt. Probeer opnieuw.",
-      "errorNetwork": "Kan geen verbinding maken met de server. Controleer uw verbinding."
+      "errorNetwork": "Kan geen verbinding maken met de server. Controleer uw verbinding.",
+      "rolePartner": "Lid worden van het partnernetwerk",
+      "rolePartnerDesc": "Zakelijke introducers, expert co-certificeerders — toegang tot de AEGRYN partnerruimte."
     }
   },
   "clientSpace": {

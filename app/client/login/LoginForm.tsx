@@ -41,6 +41,8 @@ export default function LoginForm() {
           const { roles } = await res.json() as { roles: string[] }
           if (roles.includes('admin') || roles.includes('super_admin')) {
             router.push('/admin')
+          } else if (roles.includes('partner')) {
+            router.push('/client/partner')
           } else if (roles.includes('seller') && !roles.includes('buyer')) {
             router.push('/client/seller')
           } else {
@@ -78,7 +80,7 @@ export default function LoginForm() {
           value={email}
           onChange={e => setEmail(e.target.value)}
           placeholder={t('emailPlaceholder')}
-          className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
+          className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
         />
       </div>
 
@@ -94,7 +96,7 @@ export default function LoginForm() {
             value={password}
             onChange={e => setPassword(e.target.value)}
             placeholder="••••••••••••"
-            className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
+            className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
           />
           <button
             type="button"
@@ -109,7 +111,7 @@ export default function LoginForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 font-semibold hover:bg-ag-apex/90 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+        className="w-full bg-white text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 font-semibold hover:bg-ag-apex hover:text-ag-navy transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
       >
         {loading ? t('submitting') : t('submit')}
         {!loading && <ArrowUpRight size={13} />}

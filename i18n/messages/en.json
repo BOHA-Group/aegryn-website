@@ -3579,7 +3579,9 @@
       "errorStrength": "Password must contain at least one uppercase letter, one lowercase letter and one number.",
       "errorInvalid": "Invalid email.",
       "errorGeneric": "Unable to create account. Please try again.",
-      "errorNetwork": "Unable to reach the server. Check your connection."
+      "errorNetwork": "Unable to reach the server. Check your connection.",
+      "rolePartner": "Join the partner network",
+      "rolePartnerDesc": "Business introducers, expert co-certifiers — access the AEGRYN partner space."
     }
   },
   "clientSpace": {

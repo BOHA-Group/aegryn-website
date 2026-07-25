@@ -23,7 +23,6 @@ export default async function ClientLoginPage({
     <main className="min-h-screen bg-ag-navy flex items-center justify-center px-6 pt-16 relative">
       <div className="w-full max-w-md">
         <div className="mb-10 text-center">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">AEGRYN</p>
           <h1 className="font-sans font-bold text-white text-[28px] tracking-[-0.03em] mb-2">
             {t('title')}
           </h1>
