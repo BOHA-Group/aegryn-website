@@ -4,7 +4,6 @@ import { HeroMountain }      from '@/components/sections/HeroMountain'
 import { PillarsSection }    from '@/components/sections/PillarsSection'
 import { ManifestoSection }  from '@/components/sections/ManifestoSection'
 import { GradeStrip }        from '@/components/sections/GradeStrip'
-import { GradeShowcase }     from '@/components/sections/GradeShowcase'
 import { MissionVideoSection } from '@/components/sections/MissionVideoSection'
 import { EcosystemDomains }  from '@/components/sections/EcosystemDomains'
 import { AuctionNarrative }  from '@/components/sections/AuctionNarrative'
@@ -41,7 +40,6 @@ export default async function HomePage({ params }: Props) {
       <PillarsSection />
       <ManifestoSection />
       <GradeStrip />
-      <GradeShowcase />
       <MissionVideoSection />
       <EcosystemDomains />
       <AuctionNarrative />

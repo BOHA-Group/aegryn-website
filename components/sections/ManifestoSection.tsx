@@ -195,8 +195,8 @@ export function ManifestoSection() {
                   &ldquo;
                 </span>
                 <p
-                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.35] mb-8 relative z-10"
-                  style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}
+                  className="font-sans font-normal italic text-ag-black tracking-[-0.01em] leading-[1.45] mb-8 relative z-10"
+                  style={{ fontSize: 'clamp(18px,2vw,26px)' }}
                 >
                   {tA('quote')}
                 </p>

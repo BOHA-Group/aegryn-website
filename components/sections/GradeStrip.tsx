@@ -82,10 +82,7 @@ export function GradeStrip() {
           ))}
         </div>
 
-        <div className="border-t border-ag-border pt-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <p className="font-sans italic text-[15px] text-ag-gray leading-relaxed max-w-xl">
-            &ldquo;{t('quote')}&rdquo;
-          </p>
+        <div className="border-t border-ag-border pt-10 flex justify-end">
           <Link
             href="/grade"
             className="shrink-0 inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-6 py-3 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300"
