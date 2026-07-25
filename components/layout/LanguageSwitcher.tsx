@@ -2,7 +2,9 @@
 
 import { useLocale } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
+import { useTransition } from 'react'
 import { Globe } from 'lucide-react'
+import { setLocaleCookie } from '@/app/actions/setLocale'
 
 const locales = [
   { code: 'fr', label: 'FR' },
@@ -14,38 +16,40 @@ const locales = [
 ]
 
 export default function LanguageSwitcher() {
-  const locale = useLocale()
+  const locale   = useLocale()
   const pathname = usePathname()
-  const router = useRouter()
+  const router   = useRouter()
+  const [pending, startTransition] = useTransition()
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value
-    /* Persist manual choice — overrides GeoIP for 1 year */
-    document.cookie = `ag-locale-pref=${newLocale}; max-age=${60 * 60 * 24 * 365}; path=/; samesite=lax`
-
-    const segments = pathname.split('/')
+    const segments  = pathname.split('/')
     const knownLocales = locales.map(l => l.code)
-    /* Public site: URL is locale-prefixed (/fr/...) → swap the segment.
-       Client / admin spaces: not prefixed → just refresh (cookie drives locale). */
+
     if (knownLocales.includes(segments[1])) {
+      /* Site public : URL préfixée — swap du segment + cookie via Server Action */
       segments[1] = newLocale
-      router.push(segments.join('/'))
+      const newPath = segments.join('/')
+      startTransition(async () => {
+        await setLocaleCookie(newLocale, newPath)
+        router.push(newPath)
+      })
     } else {
-      /* /client/* et /admin/* ne sont pas préfixés par la locale —
-         un simple refresh() ne relit pas le cookie côté serveur.
-         Un reload complet est nécessaire pour que getTranslations() voie la nouvelle valeur. */
-      window.location.reload()
+      /* /client/* et /admin/* : pas de préfixe URL — Server Action pose le cookie
+         et redirige vers la même URL. Pas de popup "Recharger la page ?". */
+      startTransition(() => setLocaleCookie(newLocale, pathname))
     }
   }
 
   return (
     <div className="flex items-center gap-1.5 text-ag-gray">
-      <Globe size={13} className="opacity-60" aria-hidden="true" />
+      <Globe size={13} className={`opacity-60 ${pending ? 'animate-spin' : ''}`} aria-hidden="true" />
       <select
         value={locale}
         onChange={handleChange}
+        disabled={pending}
         aria-label="Sélectionner la langue"
-        className="bg-transparent font-sans font-semibold text-[11px] uppercase tracking-[0.12em] text-ag-gray cursor-pointer hover:text-ag-black transition-colors appearance-none pr-1 focus:outline-none"
+        className="bg-transparent font-sans font-semibold text-[11px] uppercase tracking-[0.12em] text-ag-gray cursor-pointer hover:text-ag-black transition-colors appearance-none pr-1 focus:outline-none disabled:opacity-50"
       >
         {locales.map(({ code, label }) => (
           <option key={code} value={code} className="bg-white text-ag-dark">
