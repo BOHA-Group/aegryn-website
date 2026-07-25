@@ -65,7 +65,7 @@ export function GradeStrip() {
           {grades.map((g) => (
             <div
               key={g.grade}
-              className="grade-card bg-ag-white p-8 flex flex-col gap-4 w-1/2 sm:w-1/3 lg:w-1/5"
+              className="grade-card bg-ag-white p-4 sm:p-8 flex flex-col gap-4 w-1/2 sm:w-1/5"
               style={{ opacity: 0 }}
             >
               <span className={`inline-flex items-center justify-center w-10 h-10 font-sans font-bold text-[18px] ${GRADE_COLORS[g.grade]}`}>

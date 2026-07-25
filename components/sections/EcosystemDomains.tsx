@@ -86,7 +86,7 @@ export function EcosystemDomains() {
             return (
               <div
                 key={domain.id}
-                className={`domain-card-${i} group relative flex flex-col justify-between overflow-hidden p-8 transition-all duration-500
+                className={`domain-card-${i} group relative flex flex-col justify-start overflow-hidden p-8 transition-all duration-500
                   bg-ag-white hover:bg-ag-navy border-b border-ag-border
                   ${borderRight} ${borderRightSm}`}
                 style={{ minHeight: '220px', opacity: 0 }}

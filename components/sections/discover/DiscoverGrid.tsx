@@ -98,16 +98,16 @@ export function DiscoverGrid({ locale }: Props) {
               {t('featuredLabel')}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
-              {featured.map((article, i) => (
+              {featured.map((article) => (
                 <Link
                   key={article.slug}
                   href={`/blog/${article.slug}`}
-                  className={`group bg-ag-white p-8 flex flex-col gap-4 hover:bg-ag-off-white transition-colors ${i === 0 ? 'md:col-span-2' : ''}`}
+                  className="group bg-ag-white p-8 flex flex-col gap-4 hover:bg-ag-off-white transition-colors"
                 >
                   <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex">
                     {ARTICLE_CATEGORIES[article.category][lang]}
                   </p>
-                  <h2 className={`font-sans font-bold text-ag-black tracking-[-0.02em] leading-snug group-hover:text-ag-navy transition-colors ${i === 0 ? 'text-[22px]' : 'text-[17px]'}`}>
+                  <h2 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.02em] leading-snug group-hover:text-ag-navy transition-colors">
                     {article.title[lang]}
                   </h2>
                   <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">

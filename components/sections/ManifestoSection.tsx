@@ -187,13 +187,6 @@ export function ManifestoSection() {
             {/* Right col */}
             <div className="py-24 md:pl-16 flex flex-col justify-between gap-16">
               <blockquote className="about-quote relative" style={{ opacity: 0 }}>
-                <span
-                  className="font-sans font-bold text-ag-black/5 absolute -top-4 -left-2 select-none"
-                  style={{ fontSize: '120px', lineHeight: 1 }}
-                  aria-hidden="true"
-                >
-                  &ldquo;
-                </span>
                 <p
                   className="font-sans font-normal italic text-ag-black tracking-[-0.01em] leading-[1.45] mb-8 relative z-10"
                   style={{ fontSize: 'clamp(18px,2vw,26px)' }}
