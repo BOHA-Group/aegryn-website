@@ -198,13 +198,10 @@ export function ManifestoSection() {
                   className="font-sans font-normal italic text-ag-black tracking-[-0.01em] leading-[1.45] mb-8 relative z-10"
                   style={{ fontSize: 'clamp(18px,2vw,26px)' }}
                 >
-                  {tA('quote')}
+                  &ldquo;{tA('quote')}&rdquo;
                 </p>
                 <footer>
-                  <p className="font-sans font-semibold text-[11px] tracking-[0.2em] uppercase text-ag-black">
-                    {tA('ceoName')}
-                  </p>
-                  <p className="font-sans font-normal text-[11px] text-ag-gray-light mt-0.5">
+                  <p className="font-sans font-normal text-[11px] text-ag-gray-light">
                     {tA('ceoTitle')}
                   </p>
                 </footer>

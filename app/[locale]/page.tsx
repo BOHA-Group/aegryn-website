@@ -1,7 +1,6 @@
 import { getTranslations }  from 'next-intl/server'
 import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
 import { HeroMountain }      from '@/components/sections/HeroMountain'
-import { PillarsSection }    from '@/components/sections/PillarsSection'
 import { ManifestoSection }  from '@/components/sections/ManifestoSection'
 import { GradeStrip }        from '@/components/sections/GradeStrip'
 import { MissionVideoSection } from '@/components/sections/MissionVideoSection'
@@ -37,7 +36,6 @@ export default async function HomePage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynOrganizationSchema) }}
       />
       <HeroMountain />
-      <PillarsSection />
       <ManifestoSection />
       <GradeStrip />
       <MissionVideoSection />

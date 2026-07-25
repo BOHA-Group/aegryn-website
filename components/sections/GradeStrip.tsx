@@ -12,7 +12,6 @@ const GRADE_COLORS: Record<string, string> = {
   'AA': 'bg-ag-grade-aa text-white',
   'A':  'bg-ag-grade-a text-white',
   'B':  'bg-ag-grade-b text-white',
-  '✕':  'bg-ag-grade-refused text-white',
 }
 
 export function GradeStrip() {
@@ -62,11 +61,11 @@ export function GradeStrip() {
           </p>
         </div>
 
-        <div className="grade-cards-row grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-ag-border mb-14">
+        <div className="grade-cards-row flex flex-wrap justify-center gap-px bg-ag-border mb-14">
           {grades.map((g) => (
             <div
               key={g.grade}
-              className="grade-card bg-ag-white p-8 flex flex-col gap-4"
+              className="grade-card bg-ag-white p-8 flex flex-col gap-4 w-1/2 sm:w-1/3 lg:w-1/5"
               style={{ opacity: 0 }}
             >
               <span className={`inline-flex items-center justify-center w-10 h-10 font-sans font-bold text-[18px] ${GRADE_COLORS[g.grade]}`}>
