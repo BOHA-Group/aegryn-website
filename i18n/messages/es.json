@@ -28,7 +28,7 @@
     "gradeSubmit": "Enviar para certificación",
     "gradePartners": "Red de expertos",
     "servicesAdvisory": "Advisory",
-    "servicesAlliances": "Alianzas",
+    "servicesAlliances": "Socios",
     "servicesAcquisition": "Apoyo a la adquisición",
     "gradeDimC": "Código",
     "gradeDimI": "IP",
@@ -220,39 +220,32 @@
       {
         "id": "ai",
         "label": "IA & Inteligencia Artificial",
-        "tag": "Sesiones activas",
         "desc": "Modelos propietarios, herramientas de automatización vertical, SaaS AI-native. El segmento más activo del M&A tech en Europa."
       },
       {
         "id": "saas",
         "label": "SaaS B2B & Vertical Software",
-        "tag": "Sesiones activas",
-        "desc": "CRMs sectoriales, RegTech, LegalTech, HealthTech, herramientas de cumplimiento regulatorio UE. Múltiplos 10x–14x ARR para los líderes."
+        "desc": "CRMs sectoriales, RegTech, LegalTech, HealthTech, herramientas de cumplimiento regulatorio UE. Múltiplos elevados para los líderes verticales."
       },
       {
         "id": "marketplace",
         "label": "Marketplaces & Plataformas",
-        "tag": "Sesiones activas",
         "desc": "Plataformas bilaterales, agregadores sectoriales, marketplaces B2B. La liquidez en ambos lados y la retención definen los múltiplos."
       },
       {
         "id": "fintech",
         "label": "Fintech & Servicios Financieros",
-        "tag": "Sesiones activas",
         "desc": "Infraestructura de pagos, cumplimiento financiero, análisis de riesgo. Fuerte demanda de bancos privados y fondos institucionales suizos."
       },
       {
         "id": "ip",
         "label": "IP Tech & Protocolos",
-        "tag": "Sesiones activas",
         "desc": "Patentes de software, protocolos propietarios, datasets exclusivos, APIs de alto valor. La dimensión I del Grade AEGRYN evalúa cada componente."
       },
       {
         "id": "web3",
         "label": "Digital Art & Web3",
-        "tag": "Roadmap 2027",
-        "tagVariant": "coming-soon",
-        "desc": "Activos creativos digitales, smart contracts de alto valor IP. Extensión del label AEGRYN Grade a los activos Web3 prevista para 2027."
+        "desc": "Activos creativos digitales, smart contracts de alto valor IP. Extensión del label AEGRYN Grade a los activos Web3 en estudio."
       }
     ],
     "cta": "Presenta tu activo para certificación"
@@ -269,11 +262,11 @@
     "stats": [
       {
         "val": "6",
-        "label": "Activos"
+        "label": "Activos propietarios"
       },
       {
-        "val": "★ AAA AA A B",
-        "label": "Grades"
+        "val": "5",
+        "label": "Grados de certificación"
       },
       {
         "val": "< 25%",
@@ -649,7 +642,7 @@
     "servicesLabel": "Servicios",
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosistema",
-    "advisoryLabel": "Advisory",
+    "advisoryLabel": "Consultoría",
     "advisoryDesc": "Remediación y asesoramiento para activos que aún no han alcanzado el Grade A.",
     "advisoryBook": "Reservar sesión ↗",
     "medallionText": "Hablemos . Contáctenos . Hablemos . Contáctenos .",
@@ -2048,12 +2041,7 @@
       {
         "grade": "B",
         "label": "Correcto",
-        "desc": "Advisory recomendado antes de la transacción. No elegible para las sesiones principales de AEGRYN."
-      },
-      {
-        "grade": "✕",
-        "label": "Rechazado",
-        "desc": "Rechazo motivado por escrito. Informe de pre-screening entregado."
+        "desc": "Asesoría recomendada antes de la transacción. No elegible para las sesiones principales de AEGRYN."
       }
     ]
   },
@@ -2116,7 +2104,7 @@
     "premium": "Premium",
     "standard": "Estándar",
     "developing": "En desarrollo",
-    "earlyStage": "Early stage",
+    "earlyStage": "Fase inicial",
     "grades": {
       "star": {
         "label": "AEG ★",

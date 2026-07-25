@@ -10,8 +10,6 @@ import { gsap, SplitText }   from '@/lib/gsap'
 interface Domain {
   id: string
   label: string
-  tag: string
-  tagVariant?: 'coming-soon'
   desc: string
 }
 
@@ -84,7 +82,6 @@ export function EcosystemDomains() {
           {domains.map((domain, i) => {
             const borderRight   = i % 3 !== 2 ? 'lg:border-r border-ag-border' : ''
             const borderRightSm = i % 2 !== 1 ? 'sm:border-r border-ag-border' : ''
-            const isComingSoon  = domain.tagVariant === 'coming-soon'
             const image         = DOMAIN_IMAGES[domain.id]
             return (
               <div
@@ -107,16 +104,7 @@ export function EcosystemDomains() {
                   </>
                 )}
 
-                <div className="relative z-10 w-full flex items-center justify-between mb-6">
-                  <span
-                    className={`font-sans font-semibold text-[9px] tracking-[0.14em] uppercase transition-colors duration-500 ${
-                      isComingSoon
-                        ? 'text-orange-600 group-hover:text-orange-300'
-                        : 'text-ag-apex-ink group-hover:text-ag-apex'
-                    }`}
-                  >
-                    {domain.tag}
-                  </span>
+                <div className="relative z-10 w-full flex items-center justify-end mb-6">
                   <ArrowUpRight size={14} className="text-ag-gray-light group-hover:text-white/60 opacity-0 group-hover:opacity-100 transition-all duration-500" />
                 </div>
 

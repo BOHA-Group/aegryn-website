@@ -28,7 +28,7 @@
     "gradeSubmit": "Zur Zertifizierung einreichen",
     "gradePartners": "Expertennetzwerk",
     "servicesAdvisory": "Advisory",
-    "servicesAlliances": "Allianzen",
+    "servicesAlliances": "Partner",
     "servicesAcquisition": "Akquisitionsunterstützung",
     "gradeDimC": "Code",
     "gradeDimI": "IP",
@@ -220,39 +220,32 @@
       {
         "id": "ai",
         "label": "KI & Künstliche Intelligenz",
-        "tag": "Aktive Sessions",
         "desc": "Proprietäre Modelle, vertikale Automatisierungstools, AI-native SaaS. Das aktivste Segment des europäischen Tech-M&A."
       },
       {
         "id": "saas",
         "label": "SaaS B2B & Vertical Software",
-        "tag": "Aktive Sessions",
-        "desc": "Sektorspezifische CRMs, RegTech, LegalTech, HealthTech, EU-Compliance-Tools. 10x–14x ARR-Multiplikatoren für Marktführer."
+        "desc": "Sektorspezifische CRMs, RegTech, LegalTech, HealthTech, EU-Compliance-Tools. Hohe Multiplikatoren für Vertikalmarktführer."
       },
       {
         "id": "marketplace",
         "label": "Marketplaces & Plattformen",
-        "tag": "Aktive Sessions",
         "desc": "Zweiseitige Plattformen, sektorale Aggregatoren, B2B-Marktplätze. Liquidität auf beiden Seiten und Retention bestimmen die Multiplikatoren."
       },
       {
         "id": "fintech",
         "label": "Fintech & Finanzdienstleistungen",
-        "tag": "Aktive Sessions",
         "desc": "Payment-Infrastruktur, Finanz-Compliance, Risikoanalyse. Starke Nachfrage von Schweizer Privatbanken und institutionellen Fonds."
       },
       {
         "id": "ip",
         "label": "IP Tech & Protokolle",
-        "tag": "Aktive Sessions",
         "desc": "Softwarepatente, proprietäre Protokolle, exklusive Datensätze, hochwertige APIs. Die I-Dimension des AEGRYN Grade bewertet jede Komponente."
       },
       {
         "id": "web3",
         "label": "Digital Art & Web3",
-        "tag": "Roadmap 2027",
-        "tagVariant": "coming-soon",
-        "desc": "Digitale kreative Assets, Smart Contracts mit hohem IP-Wert. Erweiterung des AEGRYN Grade Labels auf Web3-Assets für 2027 geplant."
+        "desc": "Digitale kreative Assets, Smart Contracts mit hohem IP-Wert. Erweiterung des AEGRYN Grade Labels auf Web3-Assets in Prüfung."
       }
     ],
     "cta": "Reichen Sie Ihr Asset zur Zertifizierung ein"
@@ -269,11 +262,11 @@
     "stats": [
       {
         "val": "6",
-        "label": "Assets"
+        "label": "Eigene Assets"
       },
       {
-        "val": "★ AAA AA A B",
-        "label": "Grades"
+        "val": "5",
+        "label": "Zertifizierungsgrades"
       },
       {
         "val": "< 25%",
@@ -649,7 +642,7 @@
     "servicesLabel": "Dienstleistungen",
     "blogLink": "Blog",
     "ecosystemLabel": "Ökosystem",
-    "advisoryLabel": "Advisory",
+    "advisoryLabel": "Beratung",
     "advisoryDesc": "Sanierung und Beratung für Assets, die Grade A noch nicht erreicht haben.",
     "advisoryBook": "Gespräch vereinbaren ↗",
     "medallionText": "Sprechen wir . Kontaktieren Sie uns . Sprechen wir . Kontaktieren Sie uns .",
@@ -2049,11 +2042,6 @@
         "grade": "B",
         "label": "Korrekt",
         "desc": "Advisory vor der Transaktion empfohlen. Nicht für AEGRYN-Hauptsessions zugelassen."
-      },
-      {
-        "grade": "✕",
-        "label": "Abgelehnt",
-        "desc": "Ablehnung mit schriftlicher Begründung. Pre-Screening-Bericht übergeben."
       }
     ]
   },

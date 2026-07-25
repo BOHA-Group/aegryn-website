@@ -28,7 +28,7 @@
     "gradeSubmit": "Indienen voor certificering",
     "gradePartners": "Expertnetwerk",
     "servicesAdvisory": "Advisory",
-    "servicesAlliances": "Allianties",
+    "servicesAlliances": "Partners",
     "servicesAcquisition": "Acquisitieondersteuning",
     "gradeDimC": "Code",
     "gradeDimI": "IP",
@@ -220,39 +220,32 @@
       {
         "id": "ai",
         "label": "AI & Kunstmatige Intelligentie",
-        "tag": "Actieve sessies",
         "desc": "Propriëtaire modellen, verticale automatiseringstools, AI-native SaaS. Het meest actieve segment van Europese tech-M&A."
       },
       {
         "id": "saas",
         "label": "SaaS B2B & Vertical Software",
-        "tag": "Actieve sessies",
-        "desc": "Sectorspecifieke CRM's, RegTech, LegalTech, HealthTech, EU-compliancetools. 10x–14x ARR-multiples voor de leiders."
+        "desc": "Sectorspecifieke CRM's, RegTech, LegalTech, HealthTech, EU-compliancetools. Hoge multiples voor verticale marktleiders."
       },
       {
         "id": "marketplace",
         "label": "Marketplaces & Platformen",
-        "tag": "Actieve sessies",
         "desc": "Tweezijdige platformen, sectorale aggregatoren, B2B-marketplaces. Liquiditeit aan beide zijden en retentie bepalen de multiples."
       },
       {
         "id": "fintech",
         "label": "Fintech & Financiële Diensten",
-        "tag": "Actieve sessies",
         "desc": "Payment-infrastructuur, financiële compliance, risicoanalyse. Sterke vraag van Zwitserse privébanken en institutionele fondsen."
       },
       {
         "id": "ip",
         "label": "IP Tech & Protocollen",
-        "tag": "Actieve sessies",
         "desc": "Softwarepatenten, propriëtaire protocollen, exclusieve datasets, hoogwaardige API's. De I-dimensie van de AEGRYN Grade evalueert elk component."
       },
       {
         "id": "web3",
         "label": "Digital Art & Web3",
-        "tag": "Roadmap 2027",
-        "tagVariant": "coming-soon",
-        "desc": "Digitale creatieve assets, smart contracts met hoge IP-waarde. Uitbreiding van het AEGRYN Grade-label naar Web3-assets gepland voor 2027."
+        "desc": "Digitale creatieve assets, smart contracts met hoge IP-waarde. Uitbreiding van het AEGRYN Grade-label naar Web3-assets in onderzoek."
       }
     ],
     "cta": "Dien uw asset in voor certificering"
@@ -269,11 +262,11 @@
     "stats": [
       {
         "val": "6",
-        "label": "Assets"
+        "label": "Eigen assets"
       },
       {
-        "val": "★ AAA AA A B",
-        "label": "Grades"
+        "val": "5",
+        "label": "Certificeringsgraden"
       },
       {
         "val": "< 25%",
@@ -649,7 +642,7 @@
     "servicesLabel": "Diensten",
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosysteem",
-    "advisoryLabel": "Advisory",
+    "advisoryLabel": "Advies",
     "advisoryDesc": "Sanering en advies voor assets die Grade A nog niet hebben bereikt.",
     "advisoryBook": "Sessie boeken ↗",
     "medallionText": "Laten we praten . Neem contact op . Laten we praten . Neem contact op .",
@@ -2048,12 +2041,7 @@
       {
         "grade": "B",
         "label": "Correct",
-        "desc": "Advisory aanbevolen vóór transactie. Niet in aanmerking voor de belangrijkste AEGRYN-sessies."
-      },
-      {
-        "grade": "✕",
-        "label": "Geweigerd",
-        "desc": "Weigering met schriftelijke motivering. Pre-screening rapport geleverd."
+        "desc": "Advies aanbevolen vóór transactie. Niet in aanmerking voor de belangrijkste AEGRYN-sessies."
       }
     ]
   },
@@ -2116,7 +2104,7 @@
     "premium": "Premium",
     "standard": "Standaard",
     "developing": "In ontwikkeling",
-    "earlyStage": "Early stage",
+    "earlyStage": "Vroege ontwikkelingsfase",
     "grades": {
       "star": {
         "label": "AEG ★",

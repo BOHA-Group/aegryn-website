@@ -28,7 +28,7 @@
     "gradeSubmit": "Submit for certification",
     "gradePartners": "Expert network",
     "servicesAdvisory": "Advisory",
-    "servicesAlliances": "Alliances",
+    "servicesAlliances": "Partners",
     "servicesAcquisition": "Acquisition Support",
     "gradeDimC": "Code",
     "gradeDimI": "IP",
@@ -220,39 +220,32 @@
       {
         "id": "ai",
         "label": "AI & Artificial Intelligence",
-        "tag": "Active sessions",
         "desc": "Proprietary models, vertical automation tools, AI-native SaaS. The most active segment of European tech M&A."
       },
       {
         "id": "saas",
         "label": "SaaS B2B & Vertical Software",
-        "tag": "Active sessions",
-        "desc": "Sector CRMs, RegTech, LegalTech, HealthTech, EU regulatory compliance tools. 10x–14x ARR multiples for leaders."
+        "desc": "Sector CRMs, RegTech, LegalTech, HealthTech, EU regulatory compliance tools. High multiples for vertical leaders."
       },
       {
         "id": "marketplace",
         "label": "Marketplaces & Platforms",
-        "tag": "Active sessions",
         "desc": "Two-sided platforms, sector aggregators, B2B marketplaces. Liquidity on both sides and retention define multiples."
       },
       {
         "id": "fintech",
         "label": "Fintech & Financial Services",
-        "tag": "Active sessions",
         "desc": "Payment infrastructure, financial compliance, risk analysis. Strong demand from Swiss private banks and institutional funds."
       },
       {
         "id": "ip",
         "label": "IP Tech & Protocols",
-        "tag": "Active sessions",
         "desc": "Software patents, proprietary protocols, exclusive datasets, high-value APIs. The I dimension of the AEGRYN Grade evaluates every component."
       },
       {
         "id": "web3",
         "label": "Digital Art & Web3",
-        "tag": "Roadmap 2027",
-        "tagVariant": "coming-soon",
-        "desc": "Digital creative assets, high-IP-value smart contracts. Extension of the AEGRYN Grade label to Web3 assets planned for 2027."
+        "desc": "Digital creative assets, high-IP-value smart contracts. Extension of the AEGRYN Grade label to Web3 assets under study."
       }
     ],
     "cta": "Submit your asset for certification"
@@ -269,11 +262,11 @@
     "stats": [
       {
         "val": "6",
-        "label": "Assets"
+        "label": "Proprietary assets"
       },
       {
-        "val": "★ AAA AA A B",
-        "label": "Grades"
+        "val": "5",
+        "label": "Certification grades"
       },
       {
         "val": "< 25%",
@@ -646,7 +639,7 @@
     "servicesLabel": "Services",
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosystem",
-    "advisoryLabel": "Advisory",
+    "advisoryLabel": "Consulting",
     "advisoryDesc": "Remediation and advisory for assets that have not yet reached Grade A.",
     "advisoryBook": "Book a session ↗",
     "medallionText": "Let's talk . Contact us . Let's talk . Contact us .",
@@ -687,7 +680,7 @@
     "premium": "Premium",
     "standard": "Standard",
     "developing": "Developing",
-    "earlyStage": "Early stage",
+    "earlyStage": "Early development",
     "grades": {
       "star": {
         "label": "AEG ★",
@@ -759,7 +752,7 @@
     "legal": "AEGRYN is not a financial institution. This service connects you with independent third-party partners."
   },
   "discoverSection": {
-    "label": "Discover",
+    "label": "Insights",
     "title": "Market intelligence.\nAccessible to all.",
     "cta": "View all articles",
     "articles": [
@@ -2121,11 +2114,6 @@
         "grade": "B",
         "label": "Correct",
         "desc": "Advisory recommended before transaction. Not eligible for main AEGRYN sessions."
-      },
-      {
-        "grade": "✕",
-        "label": "Refused",
-        "desc": "Refusal with written reasoning. Pre-screening report delivered."
       }
     ]
   },
@@ -2153,7 +2141,7 @@
   "alliances": {
     "meta": {
       "title": "Partners — AEGRYN",
-      "desc": "Certification, distribution and deal flow partners. AEGRYN selects its Alliances with the same rigour as its assets."
+      "desc": "Certification, distribution and transaction flow partners. AEGRYN selects its partners with the same rigour as its assets."
     },
     "hero": {
       "label": "AEGRYN Partnerships",
