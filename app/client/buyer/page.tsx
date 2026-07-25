@@ -52,14 +52,7 @@ export default async function BuyerDashboardPage() {
 
   const supa = createServiceClient()
 
-  const [
-    { data: profile },
-    { count: catalogCount },
-    { data: bids },
-    { data: transactions },
-    { count: kycPending },
-    { data: notifications },
-  ] = await Promise.all([
+  const results = await Promise.allSettled([
     supa.from('profiles').select('full_name, roles').eq('id', user.id).single(),
     supa.from('assets').select('id', { count: 'exact', head: true }).eq('status', 'published'),
     supa.from('auction_bids').select('id, amount_chf, status, created_at, asset_id, assets(company_name)').eq('bidder_id', user.id).order('created_at', { ascending: false }).limit(3),
@@ -67,6 +60,13 @@ export default async function BuyerDashboardPage() {
     supa.from('kyc_documents').select('id', { count: 'exact', head: true }).eq('user_id', user.id).in('status', ['pending', 'in_review', 'rejected']),
     supa.from('user_notifications').select('id, title, body, link, created_at, read_at').eq('user_id', user.id).order('created_at', { ascending: false }).limit(5),
   ])
+
+  const profile      = results[0].status === 'fulfilled' ? results[0].value.data : null
+  const catalogCount = results[1].status === 'fulfilled' ? results[1].value.count : null
+  const bids         = results[2].status === 'fulfilled' ? results[2].value.data : null
+  const transactions = results[3].status === 'fulfilled' ? results[3].value.data : null
+  const kycPending   = results[4].status === 'fulfilled' ? results[4].value.count : null
+  const notifications= results[5].status === 'fulfilled' ? results[5].value.data : null
 
   const displayName = profile?.full_name ?? user.email ?? ''
 
