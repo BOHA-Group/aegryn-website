@@ -1,13 +1,20 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowUpRight, Scale, Calculator, ShieldCheck } from 'lucide-react'
+import { ArrowUpRight, Scale, Calculator, ShieldCheck, Code2 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Réseau d\'experts — AEGRYN Grade',
-  description: 'AEGRYN Grade est une certification standalone. Les experts indépendants (juridique IP, expert-comptable, cybersécurité) peuvent candidater pour s\'adosser à la certification ou accompagner vendeurs et acquéreurs.',
+  description: 'AEGRYN Grade est une certification indépendante. Les experts indépendants (juridique IP, expert-comptable, cybersécurité, audit code) peuvent candidater pour s\'adosser à la certification ou accompagner vendeurs et acquéreurs.',
 }
 
 const PARTNER_TYPES = [
+  {
+    icon: Code2,
+    label: 'AUDIT CODE & TECH',
+    title: 'Candidatures ouvertes',
+    desc: 'CTO freelance senior ou cabinet indépendant spécialisé revue de code et dette technique, en support sur la dimension C (Code) pour les vendeurs et acquéreurs qui le souhaitent.',
+    dimension: 'Dimension C — Code',
+  },
   {
     icon: Scale,
     label: 'JURIDIQUE IP',
@@ -49,7 +56,7 @@ export default function GradePartnersPage() {
             Un réseau d'experts en support, pas une obligation
           </h1>
           <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl mb-8">
-            L'AEGRYN Grade est une certification standalone : AEGRYN évalue et note la qualité des actifs tech mis en vente sans dépendre d'un tiers pour émettre son grade. Nos vendeurs se font par ailleurs accompagner de façon indépendante dans leur processus de vente.
+            L'AEGRYN Grade est une certification indépendante : AEGRYN évalue et note la qualité des actifs tech mis en vente sans dépendre d'un tiers pour émettre son grade. Nos vendeurs se font par ailleurs accompagner de façon indépendante dans leur processus de vente.
           </p>
           <p className="font-sans text-[13px] text-ag-gray-light max-w-xl">
             Nous restons ouverts aux candidatures d'experts indépendants souhaitant s'adosser à la certification ou rejoindre notre réseau, mobilisable à la demande avant, pendant et après une transaction.
@@ -59,7 +66,7 @@ export default function GradePartnersPage() {
 
       {/* 3 colonnes — placeholders */}
       <section className="py-20 px-6 border-b border-ag-border">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {PARTNER_TYPES.map((p) => {
             const Icon = p.icon
             return (
@@ -73,11 +80,6 @@ export default function GradePartnersPage() {
                   <p className="font-sans text-[11px] uppercase tracking-[0.12em] text-ag-apex">{p.dimension}</p>
                 </div>
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{p.desc}</p>
-                <div className="mt-auto pt-4 border-t border-ag-border/50">
-                  <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-ag-gray-light">
-                    Annonce dès le premier partenariat formalisé
-                  </span>
-                </div>
               </div>
             )
           })}

@@ -24,6 +24,7 @@ const TYPE_DATA: Record<string, { label: string; title: string; desc: string; pr
     title: 'Partenaires du réseau d\'experts AEGRYN',
     desc: 'Le label AEGRYN Grade est émis de façon indépendante par nos analystes certifiés. Nous construisons un réseau de partenaires experts appelés à enrichir certains rapports d\'une revue croisée complémentaire, à mesure que ce dispositif se déploie.',
     profiles: [
+      'CTO freelance senior / cabinets tech — experts de la dimension C (Code)',
       'Cabinets juridiques tech & IP — experts de la dimension I (IP & Droits)',
       'Experts-comptables / Cabinets d\'audit — experts de la dimension F (Finance)',
       'Partenaires cybersécurité — experts de la dimension S (Sécurité)',

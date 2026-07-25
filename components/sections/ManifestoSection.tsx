@@ -121,7 +121,13 @@ export function ManifestoSection() {
               className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.3] mx-auto"
               style={{ fontSize: 'clamp(20px,2.5vw,30px)', maxWidth: '800px' }}
             >
-              {tW('conviction')}
+              {tW('conviction').split('\n').map((line, i, arr) => (
+                <span key={i}>
+                  {line}
+                  {i < arr.length - 1 && <br className="hidden md:block" />}
+                  {i < arr.length - 1 && <span className="md:hidden"> </span>}
+                </span>
+              ))}
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-ag-border">
