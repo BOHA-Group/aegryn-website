@@ -511,57 +511,57 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "Subblink analiza todos sus contratos en segundos con una IA calibrada para el derecho suizo y europeo. Riesgos, cláusulas críticas, obligaciones ocultas, todo se identifica y explica en lenguaje claro.",
-        "audience": "Particulares, autónomos, PYME, despachos jurídicos",
+        "longDesc": "Analiza todos sus contratos en segundos con una IA calibrada para el derecho suizo y europeo. Riesgos, cláusulas críticas, obligaciones ocultas — todo se identifica y explica en lenguaje claro.",
+        "audience": "Particulares, autónomos, PYME, profesionales del derecho",
         "features": [
           "Análisis de contratos en 60 segundos",
           "Conformidad con el derecho suizo (CO) y europeo",
           "Detección automática de cláusulas de riesgo",
           "Resumen ejecutivo con puntos de acción priorizados",
           "Propuestas de actualización de cláusulas y plan de acción",
-          "Exportación PDF anotada y certificada. Traducción multilingüe",
+          "Exportación PDF anotada y certificada, traducción multilingüe",
           "API disponible para integración B2B"
         ]
       },
       "neediu": {
-        "longDesc": "Neediu conecta a particulares con los mejores proveedores de servicios del hogar. Limpieza, jardinería, bricolaje, cuidado de niños, conexión inteligente basada en ubicación y reseñas verificadas.",
-        "audience": "Particulares, propietarios, inquilinos",
+        "longDesc": "Conecta a particulares con los mejores proveedores de servicios del hogar. Limpieza, jardinería, bricolaje, cuidado de niños — conexión inteligente basada en ubicación y reseñas verificadas.",
+        "audience": "Particulares, profesionales",
         "features": [
           "Conexión en tiempo real",
           "Proveedores verificados y valorados",
           "Pago seguro integrado",
           "Seguimiento de servicio en directo",
           "Seguro de prestación incluido",
-          "Disponible en Île-de-France"
+          "Cobertura Suiza y Europa"
         ]
       },
       "primiom": {
-        "longDesc": "Primiom reinventa las transacciones inmobiliarias situando la IA en el centro del proceso de compra y venta. Valoración precisa, análisis de mercado en tiempo real y acompañamiento personalizado de A a Z.",
-        "audience": "Compradores, vendedores, inversores inmobiliarios",
+        "longDesc": "Reinventa las transacciones inmobiliarias situando al vendedor en el centro del proceso de compra y venta. Valoración precisa, análisis de mercado en tiempo real y acompañamiento personalizado de A a Z.",
+        "audience": "Compradores, vendedores, autónomos, profesionales inmobiliarios",
         "features": [
-          "Valoración IA en menos de 2 minutos",
+          "Valoración en menos de 2 minutos",
           "Análisis de precios del mercado local",
           "Acompañamiento comprador/vendedor integrado",
           "Simulación de financiación",
-          "Conexión con notarios asociados",
-          "Cobertura Suiza y Francia"
+          "Conexión con socios",
+          "Cobertura Suiza y Europa"
         ]
       },
       "movtoo": {
-        "longDesc": "Movtoo es una plataforma de entrega inmediata impulsada por inteligencia artificial. Recados, comidas, paquetes, entrega a demanda optimizada para zonas urbanas densas.",
-        "audience": "Particulares, restauradores, comercios locales",
+        "longDesc": "Plataforma de transporte inmediato impulsada por inteligencia artificial. Transporte a demanda optimizado para zonas urbanas densas.",
+        "audience": "Particulares, profesionales",
         "features": [
-          "Entrega en menos de 45 minutos",
+          "Entrega rápida",
           "Despacho IA en tiempo real",
-          "Seguimiento GPS del repartidor",
-          "Multricategoría: alimentación, paquetes, documentos",
-          "Repartidores independientes verificados",
-          "API para comerciantes disponible"
+          "Seguimiento GPS del transportista",
+          "Multicategoría: alimentación, paquetes, documentos, mudanzas",
+          "Transportistas independientes verificados",
+          "API disponible"
         ]
       },
       "hobconnect": {
-        "longDesc": "Hobconnect crea comunidades auténticas en torno a pasiones compartidas. Fotografía, cocina, deporte, música, una red social centrada en el interés común más que en los seguidores.",
-        "audience": "Aficionados, creadores de contenido, asociaciones",
+        "longDesc": "Crea comunidades auténticas en torno a pasiones compartidas. Fotografía, cocina, deporte, música — una red social centrada en el interés común más que en los seguidores.",
+        "audience": "Aficionados, profesionales, creadores de contenido, asociaciones",
         "features": [
           "Comunidades temáticas por pasión",
           "Feed de noticias sin algoritmo publicitario",

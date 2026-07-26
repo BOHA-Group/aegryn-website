@@ -511,57 +511,57 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "Subblink analysiert alle Ihre Verträge in Sekunden mit einer KI, die auf das Schweizer und europäische Recht kalibriert ist. Risiken, kritische Klauseln, versteckte Verpflichtungen, alles wird identifiziert und in klarer Sprache erklärt.",
-        "audience": "Privatpersonen, Freiberufler, KMU, Kanzleien",
+        "longDesc": "Subblink analysiert alle Ihre Verträge in Sekunden mit einer KI, die auf das Schweizer und europäische Recht kalibriert ist. Risiken, kritische Klauseln, versteckte Verpflichtungen — alles wird identifiziert und in klarer Sprache erklärt.",
+        "audience": "Privatpersonen, Freiberufler, KMU, Rechtsfachleute",
         "features": [
           "Vertragsanalyse in 60 Sekunden",
           "Konformität mit Schweizer Recht (OR) und EU-Recht",
           "Automatische Erkennung riskanter Klauseln",
           "Executive Summary mit priorisierten Handlungspunkten",
           "Vorschläge zur Klauselaktualisierung und Aktionsplan",
-          "Kommentierter und zertifizierter PDF-Export. Mehrsprachige Übersetzung",
+          "Kommentierter und zertifizierter PDF-Export, mehrsprachige Übersetzung",
           "API für B2B-Integration verfügbar"
         ]
       },
       "neediu": {
-        "longDesc": "Neediu verbindet Privatpersonen mit den besten Haushaltsdienstleistern. Reinigung, Gartenarbeit, Heimwerken, Babysitting, intelligente Vermittlung auf Basis von Standort und verifizierten Bewertungen.",
-        "audience": "Privatpersonen, Eigentümer, Mieter",
+        "longDesc": "Verbindet Privatpersonen mit den besten Haushaltsdienstleistern. Reinigung, Gartenarbeit, Heimwerken, Babysitting — intelligente Vermittlung auf Basis von Standort und verifizierten Bewertungen.",
+        "audience": "Privatpersonen, Fachleute",
         "features": [
           "Echtzeit-Vermittlung",
           "Verifizierte und bewertete Dienstleister",
           "Integrierte sichere Zahlung",
           "Live-Auftragsverfolgung",
           "Leistungsversicherung inbegriffen",
-          "Verfügbar in Île-de-France"
+          "Abdeckung Schweiz und Europa"
         ]
       },
       "primiom": {
-        "longDesc": "Primiom erfindet Immobilientransaktionen neu, indem es KI in den Mittelpunkt des Kauf- und Verkaufsprozesses stellt. Präzise Bewertung, Echtzeit-Marktanalyse und persönliche Begleitung von A bis Z.",
-        "audience": "Käufer, Verkäufer, Immobilieninvestoren",
+        "longDesc": "Erfindet Immobilientransaktionen neu, indem der Verkäufer in den Mittelpunkt des Kauf- und Verkaufsprozesses gestellt wird. Präzise Bewertung, Echtzeit-Marktanalyse und persönliche Begleitung von A bis Z.",
+        "audience": "Käufer, Verkäufer, Selbstständige, Immobilienfachleute",
         "features": [
-          "KI-Bewertung in unter 2 Minuten",
+          "Bewertung in unter 2 Minuten",
           "Analyse der lokalen Marktpreise",
           "Integrierte Käufer-/Verkäuferbegleitung",
           "Finanzierungssimulation",
-          "Anbindung an Partnernotare",
-          "Abdeckung Schweiz und Frankreich"
+          "Anbindung an Partner",
+          "Abdeckung Schweiz und Europa"
         ]
       },
       "movtoo": {
-        "longDesc": "Movtoo ist eine On-Demand-Lieferplattform, die von künstlicher Intelligenz angetrieben wird. Einkäufe, Mahlzeiten, Pakete, bedarfsgesteuerte Lieferung optimiert für dichte städtische Gebiete.",
-        "audience": "Privatpersonen, Gastronomen, lokale Geschäfte",
+        "longDesc": "On-Demand-Transportplattform, angetrieben durch künstliche Intelligenz. Bedarfsgesteuerter Transport optimiert für dichte städtische Gebiete.",
+        "audience": "Privatpersonen, Fachleute",
         "features": [
-          "Lieferung in unter 45 Minuten",
+          "Schnelle Lieferung",
           "Echtzeit-KI-Dispatch",
-          "GPS-Verfolgung des Zustellers",
-          "Multikategorie: Lebensmittel, Pakete, Dokumente",
-          "Verifizierte unabhängige Zusteller",
-          "Händler-API verfügbar"
+          "GPS-Verfolgung des Transporteurs",
+          "Multikategorie: Lebensmittel, Pakete, Dokumente, Umzug",
+          "Verifizierte unabhängige Transporteure",
+          "API verfügbar"
         ]
       },
       "hobconnect": {
-        "longDesc": "Hobconnect baut authentische Gemeinschaften rund um gemeinsame Leidenschaften. Fotografie, Kochen, Sport, Musik, ein soziales Netzwerk, das auf gemeinsamen Interessen statt auf Followern basiert.",
-        "audience": "Leidenschaftliche Privatpersonen, Content-Creator, Vereine",
+        "longDesc": "Baut authentische Gemeinschaften rund um gemeinsame Leidenschaften. Fotografie, Kochen, Sport, Musik — ein soziales Netzwerk, das auf gemeinsamen Interessen statt auf Followern basiert.",
+        "audience": "Leidenschaftliche Privatpersonen, Fachleute, Content-Creator, Vereine",
         "features": [
           "Thematische Communitys nach Leidenschaft",
           "Newsfeed ohne Werbealgorithmus",

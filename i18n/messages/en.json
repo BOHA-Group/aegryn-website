@@ -511,57 +511,57 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "Subblink analyses all your contracts in seconds using AI calibrated for Swiss and European law. Risks, critical clauses, hidden obligations, everything is identified and explained in plain language.",
-        "audience": "Individuals, freelancers, SMEs, law firms",
+        "longDesc": "Subblink analyses all your contracts in seconds using AI calibrated for Swiss and European law. Risks, critical clauses, hidden obligations — everything is identified and explained in plain language.",
+        "audience": "Individuals, freelancers, SMEs, legal professionals",
         "features": [
           "Contract analysis in 60 seconds",
           "Swiss (CO) and European law compliance",
           "Automatic detection of risky clauses",
           "Executive summary with prioritised action points",
           "Clause update proposals and action plan",
-          "Annotated and certified PDF export. Multilingual translation",
+          "Annotated and certified PDF export, multilingual translation",
           "API available for B2B integration"
         ]
       },
       "neediu": {
-        "longDesc": "Neediu connects individuals with the best home service providers. Cleaning, gardening, DIY, babysitting, smart matching based on location and verified reviews.",
-        "audience": "Individuals, homeowners, tenants",
+        "longDesc": "Connects individuals with the best home service providers. Cleaning, gardening, DIY, babysitting — smart matching based on location and verified reviews.",
+        "audience": "Individuals, professionals",
         "features": [
           "Real-time matching",
           "Verified and rated providers",
           "Integrated secure payment",
           "Live mission tracking",
           "Service insurance included",
-          "Available in Île-de-France"
+          "Coverage Switzerland and Europe"
         ]
       },
       "primiom": {
-        "longDesc": "Primiom reinvents real estate transactions by placing AI at the heart of the buying and selling process. Precise valuation, real-time market analysis and personalised guidance from A to Z.",
-        "audience": "Buyers, sellers, real estate investors",
+        "longDesc": "Reinvents real estate transactions by placing the seller at the heart of the buying and selling process. Precise valuation, real-time market analysis and personalised guidance from A to Z.",
+        "audience": "Buyers, sellers, freelancers, real estate professionals",
         "features": [
-          "AI valuation in under 2 minutes",
+          "Valuation in under 2 minutes",
           "Local market price analysis",
           "Integrated buyer/seller support",
           "Financing simulation",
-          "Connection to partner notaries",
-          "Coverage Switzerland and France"
+          "Connection to partners",
+          "Coverage Switzerland and Europe"
         ]
       },
       "movtoo": {
-        "longDesc": "Movtoo is an on-demand delivery platform powered by artificial intelligence. Errands, meals, parcels, demand-driven delivery optimised for dense urban areas.",
-        "audience": "Individuals, restaurateurs, local businesses",
+        "longDesc": "On-demand transport platform powered by artificial intelligence. Transport on demand optimised for dense urban areas.",
+        "audience": "Individuals, professionals",
         "features": [
-          "Delivery in under 45 minutes",
+          "Fast delivery",
           "Real-time AI dispatch",
-          "GPS tracking of the courier",
-          "Multi-category: food, parcels, documents",
-          "Verified independent couriers",
-          "Merchant API available"
+          "GPS tracking of the carrier",
+          "Multi-category: food, parcels, documents, moving",
+          "Verified independent carriers",
+          "API available"
         ]
       },
       "hobconnect": {
-        "longDesc": "Hobconnect builds authentic communities around shared passions. Photography, cooking, sport, music, a social network centred on common interest rather than follower counts.",
-        "audience": "Passionate individuals, content creators, associations",
+        "longDesc": "Builds authentic communities around shared passions. Photography, cooking, sport, music — a social network centred on common interest rather than follower counts.",
+        "audience": "Passionate individuals, professionals, content creators, associations",
         "features": [
           "Thematic communities by passion",
           "Ad-algorithm-free news feed",

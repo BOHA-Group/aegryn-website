@@ -511,56 +511,56 @@
     "assets": {
       "subblink": {
         "longDesc": "Subblink analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées, tout est identifié et expliqué en langage clair.",
-        "audience": "Particuliers, indépendants, PME, cabinets juridiques",
+        "audience": "Particuliers, indépendants, PME, professionnels du droit",
         "features": [
           "Analyse de contrats en 60 secondes",
-          "Conformité droit suisse (CO) et droit européen",
+          "Conformité droit suisse (CO) et européen",
           "Détection automatique des clauses à risque",
           "Résumé exécutif et points d'attention priorisés",
           "Proposition de mise à jour de clauses et plan d'actions",
-          "Export PDF annoté et certifié. Traduction multilingue",
+          "Export PDF annoté et certifié, traduction multilingue",
           "API disponible pour intégration B2B"
         ]
       },
       "neediu": {
-        "longDesc": "Neediu connecte les particuliers aux meilleurs prestataires de services à domicile. Ménage, jardinage, bricolage, baby-sitting, une mise en relation intelligente basée sur la localisation et les avis vérifiés.",
-        "audience": "Particuliers, propriétaires, locataires",
+        "longDesc": "Connecte les particuliers aux meilleurs prestataires de services à domicile. Ménage, jardinage, bricolage, baby-sitting — mise en relation intelligente basée sur la localisation et les avis vérifiés.",
+        "audience": "Particuliers, professionnels",
         "features": [
           "Mise en relation en temps réel",
           "Prestataires vérifiés et notés",
           "Paiement sécurisé intégré",
           "Suivi de mission en direct",
           "Assurance prestation incluse",
-          "Disponible Île-de-France"
+          "Couverture Suisse et Europe"
         ]
       },
       "primiom": {
-        "longDesc": "Primiom réinvente la transaction immobilière en plaçant l'IA au cœur du processus d'achat et de vente. Estimation précise, analyse de marché en temps réel et accompagnement personnalisé de A à Z.",
-        "audience": "Acheteurs, vendeurs, investisseurs immobiliers",
+        "longDesc": "Réinvente la transaction immobilière en plaçant le vendeur au cœur du processus d'achat et de vente. Estimation précise, analyse de marché en temps réel et accompagnement personnalisé de A à Z.",
+        "audience": "Acheteurs, vendeurs, indépendants, professionnels de l'immobilier",
         "features": [
-          "Estimation IA en moins de 2 minutes",
+          "Estimation en moins de 2 minutes",
           "Analyse des prix du marché local",
           "Accompagnement acheteur/vendeur intégré",
           "Simulation de financement",
-          "Connexion aux notaires partenaires",
-          "Couverture Suisse et France"
+          "Connexion aux partenaires",
+          "Couverture Suisse et Europe"
         ]
       },
       "movtoo": {
-        "longDesc": "Movtoo est une plateforme de livraison immédiate pilotée par l'intelligence artificielle. Courses, repas, colis, la livraison à la demande optimisée pour les zones urbaines denses.",
-        "audience": "Particuliers, restaurateurs, commerces de proximité",
+        "longDesc": "Plateforme de transport immédiat pilotée par l'intelligence artificielle. Transport à la demande optimisé pour les zones urbaines denses.",
+        "audience": "Particuliers, professionnels",
         "features": [
-          "Livraison en moins de 45 minutes",
+          "Livraison rapide",
           "Dispatch IA en temps réel",
-          "Suivi GPS du livreur",
-          "Multi-catégories : alimentaire, colis, documents",
-          "Livreurs indépendants vérifiés",
-          "API marchands disponible"
+          "Suivi GPS du transporteur",
+          "Multi-catégories : alimentaire, colis, documents, déménagement",
+          "Transporteurs indépendants vérifiés",
+          "API disponible"
         ]
       },
       "hobconnect": {
-        "longDesc": "Hobconnect crée des communautés authentiques autour des passions partagées. Photographie, cuisine, sport, musique, un réseau social centré sur l'intérêt commun plutôt que sur les abonnés.",
-        "audience": "Particuliers passionnés, créateurs de contenu, associations",
+        "longDesc": "Crée des communautés authentiques autour des passions partagées. Photographie, cuisine, sport, musique — un réseau social centré sur l'intérêt commun plutôt que sur les abonnés.",
+        "audience": "Particuliers passionnés, professionnels, créateurs de contenu, associations",
         "features": [
           "Communautés thématiques par passion",
           "Fil d'actualité sans algorithme publicitaire",

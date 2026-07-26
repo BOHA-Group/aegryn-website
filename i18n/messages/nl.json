@@ -511,57 +511,57 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "Subblink analyseert al uw contracten in seconden met een AI gecalibreerd voor het Zwitserse en Europese recht. Risico's, kritieke clausules, verborgen verplichtingen, alles wordt geïdentificeerd en uitgelegd in duidelijke taal.",
-        "audience": "Particulieren, zelfstandigen, kmo's, juridische kantoren",
+        "longDesc": "Analyseert al uw contracten in seconden met een AI gecalibreerd voor het Zwitserse en Europese recht. Risico's, kritieke clausules, verborgen verplichtingen — alles wordt geïdentificeerd en uitgelegd in duidelijke taal.",
+        "audience": "Particulieren, zelfstandigen, kmo's, juridische professionals",
         "features": [
           "Contractanalyse in 60 seconden",
           "Conformiteit met Zwitsers recht (CO) en Europees recht",
           "Automatische detectie van risicovolle clausules",
           "Managementsamenvatting met geprioriteerde actiepunten",
           "Voorstellen voor clausuleherziening en actieplan",
-          "Geannoteerde en gecertificeerde PDF-export. Meertalige vertaling",
+          "Geannoteerde en gecertificeerde PDF-export, meertalige vertaling",
           "API beschikbaar voor B2B-integratie"
         ]
       },
       "neediu": {
-        "longDesc": "Neediu verbindt particulieren met de beste thuisserviceproviders. Schoonmaken, tuinieren, klussen, kinderopvang, slimme koppeling op basis van locatie en geverifieerde beoordelingen.",
-        "audience": "Particulieren, eigenaren, huurders",
+        "longDesc": "Verbindt particulieren met de beste thuisserviceproviders. Schoonmaken, tuinieren, klussen, kinderopvang — slimme koppeling op basis van locatie en geverifieerde beoordelingen.",
+        "audience": "Particulieren, professionals",
         "features": [
           "Real-time koppeling",
           "Geverifieerde en beoordeelde aanbieders",
           "Geïntegreerde veilige betaling",
           "Live opdrachttracking",
           "Prestatieverzekering inbegrepen",
-          "Beschikbaar in Île-de-France"
+          "Dekking Zwitserland en Europa"
         ]
       },
       "primiom": {
-        "longDesc": "Primiom hervindt vastgoedtransacties door AI centraal te stellen in het koop- en verkoopproces. Nauwkeurige waardering, real-time marktanalyse en persoonlijke begeleiding van A tot Z.",
-        "audience": "Kopers, verkopers, vastgoedinvesteerders",
+        "longDesc": "Hervindt vastgoedtransacties door de verkoper centraal te stellen in het koop- en verkoopproces. Nauwkeurige waardering, real-time marktanalyse en persoonlijke begeleiding van A tot Z.",
+        "audience": "Kopers, verkopers, zelfstandigen, vastgoedprofessionals",
         "features": [
-          "AI-waardering in minder dan 2 minuten",
+          "Waardering in minder dan 2 minuten",
           "Analyse van lokale marktprijzen",
           "Geïntegreerde koper-/verkoperbegeleiding",
           "Financieringssimulatie",
-          "Verbinding met partnernotarissen",
-          "Dekking Zwitserland en Frankrijk"
+          "Verbinding met partners",
+          "Dekking Zwitserland en Europa"
         ]
       },
       "movtoo": {
-        "longDesc": "Movtoo is een on-demand bezorgplatform aangedreven door kunstmatige intelligentie. Boodschappen, maaltijden, pakketten, vraaggestuurde bezorging geoptimaliseerd voor dichte stedelijke gebieden.",
-        "audience": "Particulieren, restauranthouders, lokale winkels",
+        "longDesc": "On-demand transportplatform aangedreven door kunstmatige intelligentie. Transport op aanvraag geoptimaliseerd voor dichte stedelijke gebieden.",
+        "audience": "Particulieren, professionals",
         "features": [
-          "Bezorging in minder dan 45 minuten",
+          "Snelle bezorging",
           "Real-time AI-dispatch",
-          "GPS-tracking van de koerier",
-          "Multi-categorie: voeding, pakketten, documenten",
-          "Geverifieerde onafhankelijke koeriers",
-          "Merchant API beschikbaar"
+          "GPS-tracking van de transporteur",
+          "Multi-categorie: voeding, pakketten, documenten, verhuizing",
+          "Geverifieerde onafhankelijke transporteurs",
+          "API beschikbaar"
         ]
       },
       "hobconnect": {
-        "longDesc": "Hobconnect bouwt authentieke gemeenschappen rond gedeelde passies. Fotografie, koken, sport, muziek, een sociaal netwerk gericht op gemeenschappelijk belang in plaats van volgersaantallen.",
-        "audience": "Gepassioneerde particulieren, content creators, verenigingen",
+        "longDesc": "Bouwt authentieke gemeenschappen rond gedeelde passies. Fotografie, koken, sport, muziek — een sociaal netwerk gericht op gemeenschappelijk belang in plaats van volgersaantallen.",
+        "audience": "Gepassioneerde particulieren, professionals, content creators, verenigingen",
         "features": [
           "Thematische gemeenschappen per passie",
           "Nieuwsfeed zonder reclame-algoritme",
