@@ -83,9 +83,15 @@ interface TransactionComp {
   closed_at: string
 }
 
+interface BlockingAlert {
+  document_code: string | null
+  admin_quality: string
+  file_name: string
+}
+
 export default function GradeForm({
   assetId, adminToken, initialStatus, evaluationType, partnerReviewerType,
-  initialAsset, benchmarkRows = [], transactionComps = [],
+  initialAsset, benchmarkRows = [], transactionComps = [], blockingAlerts = [],
 }: {
   assetId: string
   adminToken: string
@@ -95,6 +101,7 @@ export default function GradeForm({
   initialAsset?: InitialAsset
   benchmarkRows?: BenchmarkRow[]
   transactionComps?: TransactionComp[]
+  blockingAlerts?: BlockingAlert[]
 }) {
   const router = useRouter()
 
@@ -269,6 +276,34 @@ export default function GradeForm({
 
   return (
     <form onSubmit={onSubmit} className="flex flex-col gap-6">
+
+      {/* ── Alerte documents bloquants ── */}
+      {blockingAlerts.length > 0 && (
+        <div className="bg-amber-50 border border-amber-300 px-5 py-4">
+          <div className="flex items-start gap-3">
+            <AlertTriangle size={15} className="shrink-0 mt-0.5 text-amber-600" />
+            <div>
+              <p className="text-[12px] font-semibold text-amber-800 mb-2">
+                {blockingAlerts.length} document{blockingAlerts.length > 1 ? 's' : ''} bloquant{blockingAlerts.length > 1 ? 's' : ''} insuffisant{blockingAlerts.length > 1 ? 's' : ''} ou manquant{blockingAlerts.length > 1 ? 's' : ''}
+              </p>
+              <ul className="space-y-1">
+                {blockingAlerts.map((a, i) => (
+                  <li key={i} className="text-[11px] text-amber-700 flex items-center gap-2">
+                    <span className="font-mono font-bold">{a.document_code ?? '—'}</span>
+                    <span>{a.file_name}</span>
+                    <span className={`font-mono text-[9px] uppercase font-bold ${
+                      a.admin_quality === 'missing' ? 'text-red-500' : 'text-amber-600'
+                    }`}>{a.admin_quality}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-[10px] text-amber-600 mt-2">
+                Vous pouvez poursuivre la saisie du grade — ce n&apos;est pas un blocage dur. Corrigez les documents dans l&apos;onglet Documents avant d&apos;émettre le rapport officiel.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ── Bandeau type d'évaluation ── */}
       {!isFull && (

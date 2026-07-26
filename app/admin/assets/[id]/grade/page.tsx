@@ -54,16 +54,34 @@ export default async function AdminAssetGradePage({
     .order('closed_at', { ascending: false })
     .limit(50)
 
+  /* ── Alertes documents bloquants ── */
+  const { data: blockingDocs } = await supa
+    .from('data_room_documents')
+    .select('document_code, admin_quality, file_name')
+    .eq('asset_id', id)
+    .eq('required_level', 'blocking')
+    .in('admin_quality', ['missing', 'insufficient'])
+
+  const blockingAlerts = (blockingDocs ?? []) as {
+    document_code: string | null
+    admin_quality: string
+    file_name: string
+  }[]
+
   return (
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">
       <div className="max-w-4xl mx-auto">
 
         {/* Header */}
         <div className="mb-8">
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center gap-3 mb-4 flex-wrap">
             <Link href={`/admin/assets${tokenQs}`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
               ← Assets
+            </Link>
+            <Link href={`/admin/assets/${id}/documents${tokenQs}`}
+              className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
+              Documents {blockingAlerts.length > 0 && <span className="text-amber-500">({blockingAlerts.length})</span>}
             </Link>
             <Link href={`/admin/leads${tokenQs}`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
@@ -109,6 +127,7 @@ export default async function AdminAssetGradePage({
         <GradeForm
           assetId={id}
           adminToken={token ?? ''}
+          blockingAlerts={blockingAlerts}
           initialStatus={String(a.status ?? 'submitted')}
           evaluationType={String(a.evaluation_type ?? 'full_certification')}
           partnerReviewerType={a.partner_reviewer_type ? String(a.partner_reviewer_type) : undefined}

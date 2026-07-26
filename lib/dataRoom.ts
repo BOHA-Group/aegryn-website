@@ -10,6 +10,12 @@ export type DataRoomCategory = 'code' | 'ip' | 'finance' | 'security' | 'transve
 
 export type DataRoomVisibility = 'admin_only' | 'assigned_partner' | 'nda_buyers'
 
+export type DocumentRequiredLevel = 'blocking' | 'recommended' | 'optional'
+
+export type DocumentAdminQuality = 'pending_review' | 'sufficient' | 'insufficient' | 'missing'
+
+export type DocumentDimension = 'C' | 'I' | 'F' | 'S' | 'T'
+
 export interface DataRoomDocument {
   id: string
   asset_id: string
@@ -25,6 +31,60 @@ export interface DataRoomDocument {
   notes: string | null
   uploaded_at: string
   expires_at: string | null
+  document_code: string | null
+  required_level: DocumentRequiredLevel
+  admin_quality: DocumentAdminQuality
+  admin_note: string | null
+  blocks_grading: boolean
+}
+
+export interface DocumentCatalogEntry {
+  code: string
+  dimension: DocumentDimension
+  label_fr: string
+  label_en: string
+  required_level: DocumentRequiredLevel
+  format_hint: string | null
+  note_seller: string | null
+  note_admin: string | null
+  sort_order: number
+}
+
+/* ── Mapping dimension → catégorie data_room ─────────────────────── */
+export const DIMENSION_TO_CATEGORY: Record<DocumentDimension, DataRoomCategory> = {
+  C: 'code',
+  I: 'ip',
+  F: 'finance',
+  S: 'security',
+  T: 'transversal',
+}
+
+export const DIMENSION_LABELS: Record<DocumentDimension, string> = {
+  C: 'C — Code & Architecture',
+  I: 'I — IP & Droits',
+  F: 'F — Finance',
+  S: 'S — Sécurité',
+  T: 'T — Transversal',
+}
+
+export const ADMIN_QUALITY_LABELS: Record<DocumentAdminQuality, string> = {
+  pending_review: 'À évaluer',
+  sufficient:     'Suffisant',
+  insufficient:   'Insuffisant',
+  missing:        'Manquant',
+}
+
+export const ADMIN_QUALITY_COLORS: Record<DocumentAdminQuality, string> = {
+  pending_review: 'bg-gray-50 text-gray-500',
+  sufficient:     'bg-emerald-50 text-emerald-700',
+  insufficient:   'bg-amber-50 text-amber-700',
+  missing:        'bg-red-50 text-red-600',
+}
+
+export const REQUIRED_LEVEL_LABELS: Record<DocumentRequiredLevel, string> = {
+  blocking:    'Bloquant',
+  recommended: 'Recommandé',
+  optional:    'Optionnel',
 }
 
 export interface DataRoomAccessLog {
