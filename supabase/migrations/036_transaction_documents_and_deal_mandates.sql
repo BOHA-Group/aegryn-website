@@ -109,9 +109,12 @@ VALUES
 ON CONFLICT (code) DO NOTHING;
 
 -- ── 2. Vue mise à jour : v_document_completeness avec phase ──────────────
--- On recrée la vue pour ajouter la colonne phase (grading vs transaction)
+-- DROP + CREATE obligatoire : CREATE OR REPLACE interdit de changer l'ordre
+-- ou le nom des colonnes existantes (erreur 42P16).
 
-CREATE OR REPLACE VIEW public.v_document_completeness AS
+DROP VIEW IF EXISTS public.v_document_completeness;
+
+CREATE VIEW public.v_document_completeness AS
 SELECT
   d.asset_id,
   c.dimension,
@@ -196,10 +199,17 @@ CREATE TABLE IF NOT EXISTS public.partner_deal_requests (
       END
     ) STORED,
 
-  -- Preuve de facture déposée par le prestataire
-  invoice_proof_url TEXT,                      -- URL Cloudflare R2
-  invoice_ref       TEXT,                      -- Référence facture prestataire
-  invoice_date      DATE,
+  -- Preuve de facture déposée par le PRESTATAIRE (côté mandaté)
+  invoice_proof_url      TEXT,                 -- URL Cloudflare R2
+  invoice_ref            TEXT,                 -- Référence facture prestataire
+  invoice_date           DATE,
+
+  -- Preuve de facture déposée par le MANDANT (côté qui a payé)
+  -- Permet le contrôle croisé admin : si écart → alerte automatique
+  client_invoice_url     TEXT,                 -- URL Cloudflare R2 — côté mandant
+  client_invoice_ref     TEXT,                 -- Référence facture côté mandant
+  client_invoice_date    DATE,
+  client_invoice_amount_chf NUMERIC(14,2),     -- Montant déclaré par le mandant
 
   -- Suivi commission AEGRYN
   commission_status TEXT        NOT NULL DEFAULT 'pending'
@@ -208,6 +218,10 @@ CREATE TABLE IF NOT EXISTS public.partner_deal_requests (
                                   'declared',    -- prestataire a déclaré avoir payé
                                   'received'     -- AEGRYN a confirmé la réception
                                 )),
+
+  -- Alerte écart de montant (calculée par trigger)
+  invoice_mismatch       BOOLEAN NOT NULL DEFAULT false,
+  invoice_mismatch_note  TEXT,                 -- détail de l'écart — admin uniquement
 
   -- Notes
   admin_note        TEXT,        -- note interne AEGRYN (jamais visible client)
@@ -227,7 +241,16 @@ COMMENT ON COLUMN public.partner_deal_requests.commission_amount_chf IS
   'Calculé automatiquement : fees_chf × commission_pct / 100. Non contractuel tant que invoice_proof_url est NULL.';
 
 COMMENT ON COLUMN public.partner_deal_requests.invoice_proof_url IS
-  'URL R2 de la preuve de facture déposée par le prestataire. Déclencheur de la vérification admin.';
+  'URL R2 de la preuve de facture déposée par le prestataire (mandaté). Croiser avec client_invoice_url.'
+;
+
+COMMENT ON COLUMN public.partner_deal_requests.client_invoice_url IS
+  'URL R2 de la preuve de paiement déposée par le mandant (vendeur/acheteur). Contrôle croisé admin.'
+;
+
+COMMENT ON COLUMN public.partner_deal_requests.invoice_mismatch IS
+  'TRUE si écart détecté entre fees_chf (prestataire) et client_invoice_amount_chf (mandant). Déclenché par trigger.'
+;
 
 CREATE INDEX IF NOT EXISTS idx_pdr_asset       ON public.partner_deal_requests(asset_id);
 CREATE INDEX IF NOT EXISTS idx_pdr_requester   ON public.partner_deal_requests(requester_id, status);
@@ -279,11 +302,55 @@ CREATE POLICY "requester_insert_deal_request"
   TO authenticated
   WITH CHECK (auth.uid() = requester_id);
 
--- ── 5. Trigger updated_at ─────────────────────────────────────────────────
+-- ── 5. Trigger updated_at + détection écart de factures ─────────────────
 
 CREATE TRIGGER trg_partner_deal_requests_updated_at
   BEFORE UPDATE ON public.partner_deal_requests
   FOR EACH ROW EXECUTE FUNCTION public.set_profiles_updated_at();
+
+-- Trigger : détecte l'écart entre la facture prestataire (fees_chf) et
+-- la facture mandant (client_invoice_amount_chf) dès que les deux sont renseignées.
+-- Écart toléré : 2% (arrondis, TVA, frais bancaires).
+-- Si écart > 2% → invoice_mismatch = TRUE + note admin automatique.
+
+CREATE OR REPLACE FUNCTION public.fn_check_invoice_mismatch()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+DECLARE
+  diff_pct NUMERIC;
+BEGIN
+  IF NEW.fees_chf IS NOT NULL AND NEW.client_invoice_amount_chf IS NOT NULL THEN
+    diff_pct := ABS(NEW.fees_chf - NEW.client_invoice_amount_chf)
+                / NULLIF(NEW.fees_chf, 0) * 100;
+
+    IF diff_pct > 2 THEN
+      NEW.invoice_mismatch := TRUE;
+      NEW.invoice_mismatch_note :=
+        'ALERTE écart factures : prestataire déclare CHF '
+        || NEW.fees_chf::TEXT
+        || ' — mandant déclare CHF '
+        || NEW.client_invoice_amount_chf::TEXT
+        || ' — écart '
+        || ROUND(diff_pct, 1)::TEXT
+        || '% (seuil 2%)';
+    ELSE
+      NEW.invoice_mismatch := FALSE;
+      NEW.invoice_mismatch_note := NULL;
+    END IF;
+  ELSE
+    NEW.invoice_mismatch := FALSE;
+  END IF;
+
+  RETURN NEW;
+END;
+$$;
+
+CREATE TRIGGER trg_invoice_mismatch_check
+  BEFORE INSERT OR UPDATE ON public.partner_deal_requests
+  FOR EACH ROW EXECUTE FUNCTION public.fn_check_invoice_mismatch();
 
 -- ── 6. Vue admin synthétique des demandes en attente ─────────────────────
 
@@ -301,6 +368,10 @@ SELECT
   pdr.invoice_proof_url,
   pdr.invoice_ref,
   pdr.invoice_date,
+  pdr.client_invoice_url,
+  pdr.client_invoice_amount_chf,
+  pdr.invoice_mismatch,
+  pdr.invoice_mismatch_note,
   a.company_name,
   a.seller_email,
   a.official_grade,
