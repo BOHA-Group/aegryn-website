@@ -11,7 +11,7 @@ export default function GoogleAnalytics() {
           Cookie-Script met à jour ces valeurs via gtag('consent','update',...)
           quand l'utilisateur accepte ou refuse dans la bannière.
           GTM / GA4 respectent ces signaux automatiquement. */}
-      <Script id="gtm-consent-defaults" strategy="beforeInteractive">
+      <Script id="gtm-consent-defaults" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
