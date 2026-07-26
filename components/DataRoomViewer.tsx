@@ -34,7 +34,7 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [blacked, setBlacked] = useState(false)
-  const [blackReason, setBlackReason] = useState('')
+  const [_blackReason, setBlackReason] = useState('')
   const viewStartRef = useRef<number>(Date.now())
   const blackTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 

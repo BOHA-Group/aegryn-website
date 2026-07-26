@@ -23,7 +23,7 @@ interface Props {
 
 export default function AdminDocumentsClient({ assetId, adminToken, catalog, documents }: Props) {
   const router = useRouter()
-  const [isPending, startTransition] = useTransition()
+  const [_isPending, startTransition] = useTransition()
   const [openDims, setOpenDims] = useState<Set<DocumentDimension>>(new Set(DIMENSIONS))
   const [noteOpen, setNoteOpen] = useState<Record<string, boolean>>({})
   const [noteValues, setNoteValues] = useState<Record<string, string>>({})

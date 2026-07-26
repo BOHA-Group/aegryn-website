@@ -16,7 +16,7 @@ const DOT: Record<DataRoomVisibility, string> = {
 export function DataRoomVisibilityToggle({
   documentId,
   current,
-  assetId,
+  assetId: _assetId,
 }: {
   documentId: string
   current: DataRoomVisibility
