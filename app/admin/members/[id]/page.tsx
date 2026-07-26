@@ -57,6 +57,13 @@ export default async function AdminMemberDetailPage({
     .eq('buyer_email', profile.email)
     .order('created_at', { ascending: false })
 
+  /* ── NDA Auction signatures (plateforme) ── */
+  const { data: ndaSignatures } = await supa
+    .from('nda_signatures')
+    .select('id, nda_version, signed_at, ip_address, user_agent, scope, asset_id')
+    .eq('buyer_id', id)
+    .order('signed_at', { ascending: false })
+
   /* ── KYC documents ── */
   const { data: kycDocs } = await supa
     .from('kyc_documents')
@@ -129,6 +136,7 @@ export default async function AdminMemberDetailPage({
           currentRoles={(profile.roles as string[]) ?? []}
           adminNote={profile.admin_note ?? ''}
           ndaRows={(ndaRows ?? []) as Record<string, unknown>[]}
+          ndaSignatures={(ndaSignatures ?? []) as Record<string, unknown>[]}
           kycDocs={(kycDocs ?? []) as Record<string, unknown>[]}
           introductions={(introductions ?? []) as Record<string, unknown>[]}
           commissions={(commissions ?? []) as Record<string, unknown>[]}

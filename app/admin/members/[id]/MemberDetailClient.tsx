@@ -35,23 +35,24 @@ function fmtChf(n: unknown) {
 }
 
 type Props = {
-  profileId:    string
-  currentRoles: string[]
-  adminNote:    string
-  ndaRows:      Record<string, unknown>[]
-  kycDocs:      Record<string, unknown>[]
+  profileId:     string
+  currentRoles:  string[]
+  adminNote:     string
+  ndaRows:       Record<string, unknown>[]
+  ndaSignatures: Record<string, unknown>[]
+  kycDocs:       Record<string, unknown>[]
   introductions: Record<string, unknown>[]
-  commissions:  Record<string, unknown>[]
-  sellerAssets: Record<string, unknown>[]
-  token:        string
-  tokenQs:      string
+  commissions:   Record<string, unknown>[]
+  sellerAssets:  Record<string, unknown>[]
+  token:         string
+  tokenQs:       string
 }
 
 type Tab = 'roles' | 'nda' | 'kyc' | 'assets' | 'partner'
 
 export default function MemberDetailClient({
   profileId, currentRoles, adminNote: initNote,
-  ndaRows, kycDocs, introductions, commissions, sellerAssets,
+  ndaRows, ndaSignatures, kycDocs, introductions, commissions, sellerAssets,
   token, tokenQs,
 }: Props) {
   const router = useRouter()
@@ -203,10 +204,56 @@ export default function MemberDetailClient({
 
       {/* ─── ONGLET NDA ───────────────────────────────────────────── */}
       {tab === 'nda' && (
-        <div className="bg-white border border-gray-200">
+        <div className="space-y-6">
+
+          {/* NDA Auction — signature plateforme */}
+          <div className="bg-white border border-gray-200">
+            <div className="px-5 py-3 border-b border-gray-100 flex items-center justify-between">
+              <p className="font-mono text-[9px] uppercase tracking-widest text-gray-500">NDA Auction — Signature plateforme</p>
+              {ndaSignatures.length > 0 && (
+                <span className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-emerald-50 text-emerald-700 font-bold">
+                  Signé
+                </span>
+              )}
+            </div>
+            {ndaSignatures.length === 0 ? (
+              <div className="px-5 py-6">
+                <p className="font-sans text-[12px] text-gray-400">Aucune signature NDA plateforme enregistrée.</p>
+              </div>
+            ) : (
+              <table className="w-full text-[12px]">
+                <thead className="bg-gray-50 border-b border-gray-100">
+                  <tr>
+                    {['Date signature', 'Version', 'Scope', 'IP', 'User Agent'].map(h => (
+                      <th key={h} className="text-left px-4 py-2.5 font-mono text-[9px] uppercase tracking-widest text-gray-400">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-50">
+                  {ndaSignatures.map((s, i) => (
+                    <tr key={i} className="hover:bg-gray-50/50">
+                      <td className="px-4 py-3 font-mono text-emerald-700 font-semibold">{fmtDate(s.signed_at)}</td>
+                      <td className="px-4 py-3 font-mono text-[10px] text-gray-500">{String(s.nda_version ?? '—')}</td>
+                      <td className="px-4 py-3 font-mono text-[10px] text-gray-500 uppercase">{String(s.scope ?? '—')}</td>
+                      <td className="px-4 py-3 font-mono text-[10px] text-gray-400">{String(s.ip_address ?? '—')}</td>
+                      <td className="px-4 py-3 font-mono text-[10px] text-gray-300 max-w-[200px] truncate" title={String(s.user_agent ?? '')}>
+                        {String(s.user_agent ?? '—').slice(0, 60)}{String(s.user_agent ?? '').length > 60 ? '…' : ''}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
+          </div>
+
+          {/* NDA requests legacy */}
+          <div className="bg-white border border-gray-200">
+            <div className="px-5 py-3 border-b border-gray-100">
+              <p className="font-mono text-[9px] uppercase tracking-widest text-gray-500">Demandes NDA legacy (pré-plateforme)</p>
+            </div>
           {ndaRows.length === 0 ? (
-            <div className="p-12 text-center">
-              <p className="font-sans text-[13px] text-gray-400">Aucune demande NDA pour cet utilisateur.</p>
+            <div className="px-5 py-6">
+              <p className="font-sans text-[12px] text-gray-400">Aucune demande NDA legacy.</p>
             </div>
           ) : (
             <table className="w-full text-[12px]">
@@ -276,6 +323,7 @@ export default function MemberDetailClient({
               </tbody>
             </table>
           )}
+          </div>
         </div>
       )}
 
