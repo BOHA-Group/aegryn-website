@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
       if (error) console.error('[stripe/webhook] asset update error (non-blocking):', error)
 
       /* Emails — Point 4 : erreurs email non-bloquantes */
-      const internal  = process.env.AEGRYN_INTERNAL_EMAIL ?? 'tech@aegryn.com'
+      const internal  = process.env.AEGRYN_INTERNAL_EMAIL ?? 'tech@boha-group.com'
       const typeLabel = meta.evaluationType === 'review_partner' ? 'AEGRYN Review+' : 'AEGRYN Review'
 
       await Promise.allSettled([

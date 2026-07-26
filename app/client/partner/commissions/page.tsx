@@ -139,7 +139,7 @@ export default async function PartnerCommissionsPage() {
                   <div className="mt-3 bg-amber-50 border border-amber-200 px-4 py-2.5">
                     <p className="font-sans text-[11px] text-amber-800">
                       ⚠️ Cette commission est à facturer. Transmettez votre facture à{' '}
-                      <a href="mailto:finance@aegryn.com" className="underline">finance@aegryn.com</a>{' '}
+                      <a href="mailto:finance@boha-group.com" className="underline">finance@boha-group.com</a>{' '}
                       en mentionnant la référence <span className="font-mono text-[10px]">{c.id}</span>.
                     </p>
                   </div>
@@ -159,7 +159,7 @@ export default async function PartnerCommissionsPage() {
 
       <div className="mt-8 px-5 py-4 border border-gray-200 bg-gray-50">
         <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
-          Les commissions sont calculées conformément à votre contrat de partenariat AEGRYN et deviennent éligibles à la date de closing de la transaction. Pour toute question, contactez <a href="mailto:finance@aegryn.com" className="text-ag-navy underline">finance@aegryn.com</a>.
+          Les commissions sont calculées conformément à votre contrat de partenariat AEGRYN et deviennent éligibles à la date de closing de la transaction. Pour toute question, contactez <a href="mailto:finance@boha-group.com" className="text-ag-navy underline">finance@boha-group.com</a>.
         </p>
       </div>
     </div>

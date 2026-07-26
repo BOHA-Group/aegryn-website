@@ -55,7 +55,7 @@ export async function captureLead(
     console.error(`[leadCapture] Supabase insert error (${table})`, error)
   }
 
-  const internalEmail = process.env.AEGRYN_INTERNAL_EMAIL ?? 'team@aegryn.com'
+  const internalEmail = process.env.AEGRYN_INTERNAL_EMAIL ?? 'team@boha-group.com'
 
   await Promise.allSettled([
     sendEmail(email.to, email.subjectFounder, email.textFounder),

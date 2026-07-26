@@ -107,7 +107,7 @@ export default async function PartnerMandatesPage() {
             Aucun mandat enregistré pour le moment.
           </p>
           <p className="font-sans text-[12px] text-gray-300">
-            Contactez <a href="mailto:partners@aegryn.com" className="underline">partners@aegryn.com</a> pour ouvrir un mandat.
+            Contactez <a href="mailto:partnerships@boha-group.com" className="underline">partnerships@boha-group.com</a> pour ouvrir un mandat.
           </p>
         </div>
       ) : (
@@ -173,7 +173,7 @@ export default async function PartnerMandatesPage() {
 
       <div className="mt-8 px-5 py-4 border border-gray-200 bg-gray-50">
         <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
-          Pour ouvrir un nouveau mandat client, contactez <a href="mailto:partners@aegryn.com" className="text-ag-navy underline">partners@aegryn.com</a>.
+          Pour ouvrir un nouveau mandat client, contactez <a href="mailto:partnerships@boha-group.com" className="text-ag-navy underline">partnerships@boha-group.com</a>.
           L&apos;équipe AEGRYN créera le mandat et vous l&apos;associera dans votre espace.
         </p>
       </div>

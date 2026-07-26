@@ -3465,7 +3465,7 @@
     "s6": "Wir speichern Ihre Daten so lange, wie es für die Dienstleistungserbringung, die Einhaltung gesetzlicher Vorschriften (GwG-Pflichten: mindestens 10 Jahre nach Ende der Geschäftsbeziehung) und den Schutz vor Ansprüchen erforderlich ist.",
     "s7Title": "Ihre Rechte",
     "s7": "Gemäss dem Schweizer DSG und der DSGVO haben Sie das Recht auf Auskunft, Berichtigung, Löschung, Widerspruch, Einschränkung und Datenübertragbarkeit.",
-    "s7Contact": "Zur Ausübung dieser Rechte: dataprivacy@aegryn.com",
+    "s7Contact": "Zur Ausübung dieser Rechte: legal@boha-group.com",
     "s8Title": "Datensicherheit",
     "s8": "Technische und organisatorische Massnahmen: Verschlüsselung sensibler Daten im Ruhezustand und bei der Übertragung, rollenbasierte Zugangskontrolle (Supabase RLS), Protokollierung der Datenraumzugriffe, 2FA für den Admin-Zugang. Bei einem Verstoss: Benachrichtigung der Behörden und der betroffenen Personen gemäss dem Schweizer DSG und der DSGVO.",
     "s9Title": "Cookies",
@@ -3475,7 +3475,7 @@
     "authorityCH": "Schweiz: EDÖB — www.edoeb.admin.ch",
     "authorityFR": "Frankreich: CNIL — www.cnil.fr",
     "authorityEU": "EU: EDPB — www.edpb.europa.eu",
-    "contactEmail": "dataprivacy@aegryn.com",
+    "contactEmail": "legal@boha-group.com",
     "content": {
       "intro": {
         "h": "Einleitung",
@@ -3516,7 +3516,7 @@
       },
       "whoWeAre": {
         "h": "Wer sind wir und wie können Sie uns kontaktieren?",
-        "p": "Aegryn ist der Name unseres Unternehmens. Bei Fragen zur Datenverarbeitung bezüglich unserer Website können Sie uns per Post kontaktieren: Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. Sie können uns auch per E-Mail unter legal@aegryn.com oder über unser Kontaktformular erreichen."
+        "p": "Aegryn ist der Name unseres Unternehmens. Bei Fragen zur Datenverarbeitung bezüglich unserer Website können Sie uns per Post kontaktieren: Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. Sie können uns auch per E-Mail unter legal@boha-group.com oder über unser Kontaktformular erreichen."
       },
       "ourRole": {
         "h": "Welche Rolle spielen wir beim Datenschutz?",
@@ -3565,7 +3565,7 @@
       },
       "security": {
         "h": "Wie schützen wir Ihre Daten?",
-        "p": "Wir ergreifen geeignete Sicherheitsmassnahmen wie Verschlüsselung, um Ihre Personendaten zu schützen. Falls Sie glauben, dass Ihre Personendaten kompromittiert wurden, informieren Sie uns bitte unverzüglich unter legal@aegryn.com."
+        "p": "Wir ergreifen geeignete Sicherheitsmassnahmen wie Verschlüsselung, um Ihre Personendaten zu schützen. Falls Sie glauben, dass Ihre Personendaten kompromittiert wurden, informieren Sie uns bitte unverzüglich unter legal@boha-group.com."
       },
       "storage": {
         "h": "Wo werden Ihre Daten gespeichert und wie lange?",

@@ -63,7 +63,7 @@ export default function AdminForgotPasswordPage() {
                 required
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                placeholder="admin@aegryn.com"
+                placeholder="admin@boha-group.com"
                 className="w-full border border-gray-200 bg-white text-gray-900 px-4 py-3 text-[14px] focus:outline-none focus:border-gray-600 transition-colors"
               />
             </div>

@@ -71,7 +71,7 @@ export default async function BuyerCommissionsPage() {
             <p className="font-sans font-bold text-[22px] text-amber-700">{fmtAmount(totalDue)}</p>
           </div>
           <p className="font-sans text-[11px] text-amber-600 max-w-[200px] text-right">
-            Contactez <a href="mailto:finance@aegryn.com" className="underline">finance@aegryn.com</a> pour régulariser.
+            Contactez <a href="mailto:finance@boha-group.com" className="underline">finance@boha-group.com</a> pour régulariser.
           </p>
         </div>
       )}
@@ -130,7 +130,7 @@ export default async function BuyerCommissionsPage() {
       <p className="font-sans text-[11px] text-gray-400 mt-8 leading-relaxed">
         Ces frais correspondent à la commission de transaction due à AEGRYN conformément aux conditions
         générales d&apos;intermédiation. Pour toute contestation, contactez{' '}
-        <a href="mailto:finance@aegryn.com" className="text-ag-navy underline">finance@aegryn.com</a>.
+        <a href="mailto:finance@boha-group.com" className="text-ag-navy underline">finance@boha-group.com</a>.
       </p>
     </div>
   )

@@ -74,7 +74,7 @@ export async function POST(req: NextRequest) {
 
     if (insertError) console.error('[auction/submit] insert error:', insertError)
 
-    const internal = process.env.AEGRYN_INTERNAL_EMAIL ?? 'team@aegryn.com'
+    const internal = process.env.AEGRYN_INTERNAL_EMAIL ?? 'team@boha-group.com'
     await Promise.allSettled([
       sendEmail(
         body.email,

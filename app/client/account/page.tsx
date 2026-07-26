@@ -160,7 +160,7 @@ export default async function AccountPage() {
           </div>
           <p className="font-sans text-[11px] text-gray-400 leading-relaxed border-t border-gray-100 pt-3">
             Pour demander la suppression ou l&apos;anonymisation de votre compte, contactez{' '}
-            <a href="mailto:privacy@aegryn.com" className="text-ag-navy underline">privacy@aegryn.com</a>.
+            <a href="mailto:legal@boha-group.com" className="text-ag-navy underline">legal@boha-group.com</a>.
           </p>
         </div>
       </div>

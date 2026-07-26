@@ -97,7 +97,7 @@ export default function AccountForm({ currentName, currentEmail }: Props) {
               className="w-full bg-gray-100 border border-gray-200 px-4 py-2.5 font-sans text-[13px] text-gray-400 cursor-not-allowed"
             />
             <p className="font-sans text-[10px] text-gray-400 mt-1">
-              Pour changer d&apos;email, contactez <a href="mailto:support@aegryn.com" className="text-ag-navy underline">support@aegryn.com</a>.
+              Pour changer d&apos;email, contactez <a href="mailto:support@boha-group.com" className="text-ag-navy underline">support@boha-group.com</a>.
             </p>
           </div>
 

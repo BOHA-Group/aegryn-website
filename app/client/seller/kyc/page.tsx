@@ -164,7 +164,7 @@ export default async function SellerKycPage() {
 
       <div className="mt-8 px-5 py-4 border border-gray-200 bg-gray-50">
         <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
-          <strong>Protection des données :</strong> Vos documents sont traités dans le respect de la réglementation LBA et des obligations KYC/AML suisses. Suppression sur demande à <a href="mailto:privacy@aegryn.com" className="text-ag-navy underline">privacy@aegryn.com</a>.
+          <strong>Protection des données :</strong> Vos documents sont traités dans le respect de la réglementation LBA et des obligations KYC/AML suisses. Suppression sur demande à <a href="mailto:legal@boha-group.com" className="text-ag-navy underline">legal@boha-group.com</a>.
         </p>
       </div>
     </div>
