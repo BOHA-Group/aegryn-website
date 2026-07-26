@@ -47,10 +47,39 @@ export default async function BuyerCataloguePage({
   const user = await getUser()
   if (!user) redirect('/client/login')
 
-  const t = await getTranslations('clientSpace')
-  const { grade, type } = await searchParams
-
+  const t    = await getTranslations('clientSpace')
   const supa = createServiceClient()
+
+  /* Vérification KYC — accès bloqué si non approuvé */
+  const { data: profileKyc } = await supa
+    .from('profiles')
+    .select('kyc_status')
+    .eq('id', user.id)
+    .single()
+
+  const kycStatus = (profileKyc as { kyc_status?: string } | null)?.kyc_status ?? 'pending'
+  if (kycStatus !== 'approved') {
+    return (
+      <div className="p-8 max-w-2xl">
+        <div className="border border-amber-200 bg-amber-50 p-8 text-center">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-amber-600 mb-3">Accès restreint</p>
+          <h2 className="font-sans font-bold text-gray-900 text-[20px] mb-3">Vérification KYC requise</h2>
+          <p className="font-sans text-[13px] text-gray-600 mb-6">
+            L&apos;accès au catalogue AEGRYN nécessite la validation complète de votre dossier KYC.
+            {kycStatus === 'in_review' && ' Votre dossier est en cours d\'examen — vous serez notifié dès qu\'il sera traité.'}
+            {kycStatus === 'rejected'  && ' Votre dossier a été rejeté. Consultez votre espace KYC pour voir les motifs et soumettre les documents corrigés.'}
+            {kycStatus === 'pending'   && ' Veuillez compléter et soumettre votre dossier KYC pour accéder au catalogue.'}
+          </p>
+          <a href="/client/buyer/kyc"
+            className="inline-block bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors">
+            Accéder à mon espace KYC →
+          </a>
+        </div>
+      </div>
+    )
+  }
+
+  const { grade, type } = await searchParams
 
   let query = supa
     .from('assets')

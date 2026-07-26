@@ -3,6 +3,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { redirect }            from 'next/navigation'
 import type { Metadata }       from 'next'
 import Link                    from 'next/link'
+import SignedDocLink            from './SignedDocLink'
 
 export const metadata: Metadata = {
   title: 'Dossier KYC — AEGRYN Admin',
@@ -15,10 +16,12 @@ const DOC_LABELS: Record<string, string> = {
   proof_of_funds:          'Justificatif de capacité financière',
   kbis:                    'Kbis / extrait registre',
   articles_of_association: 'Statuts',
-  director_id:             'Pièce d\'identité dirigeant',
-  delegation:               'Délégation de signature',
-  ubo:                      'UBO — Bénéficiaire effectif',
-  regulatory_approval:      'Agrément régulateur',
+  director_id:             'Identité co-dirigeants / associés',
+  delegation:              'Délégation de signature',
+  ubo:                     'UBO — Bénéficiaire effectif',
+  regulatory_approval:     'Agrément régulateur',
+  asset_ownership:         'Justificatif de propriété de l\'actif',
+  professional_insurance:  'RC Pro / Assurance professionnelle',
 }
 
 function fmtDate(d: unknown) {
@@ -53,18 +56,35 @@ export default async function AdminKycMemberPage({
   }
 
   if (params.action === 'global' && params.global) {
+    const now = new Date().toISOString()
+    /* Mettre à jour buyer_kyc_verifications (historique) */
     await supa.from('buyer_kyc_verifications').update({
       kyc_status:  params.global,
       reviewed_by: 'admin',
-      reviewed_at: new Date().toISOString(),
+      reviewed_at: now,
     }).eq('user_id', memberId)
+    /* Sync sur profiles.kyc_status — source de vérité pour les accès */
+    await supa.from('profiles').update({
+      kyc_status: params.global,
+    }).eq('id', memberId)
     redirect(`/admin/kyc/${memberId}${tokenQs}`)
   }
 
-  const [{ data: kyc }, { data: docs }] = await Promise.all([
+  const [{ data: kyc }, { data: docs }, { data: profile }] = await Promise.all([
     supa.from('buyer_kyc_verifications').select('*').eq('user_id', memberId).maybeSingle(),
     supa.from('kyc_documents').select('*').eq('user_id', memberId).order('created_at', { ascending: true }),
+    supa.from('profiles').select('full_name, roles, kyc_status').eq('id', memberId).maybeSingle(),
   ])
+
+  /* Rôle affiché dans l'en-tête */
+  const roles: string[] = Array.isArray(profile?.roles) ? profile.roles : []
+  const roleLabel = roles.includes('partner') ? 'Partenaire'
+    : roles.includes('seller') ? 'Cédant'
+    : roles.includes('buyer')  ? 'Acquéreur'
+    : 'Membre'
+
+  /* kyc_status sur profiles (source de vérité) */
+  const profileKycStatus = (profile as { kyc_status?: string } | null)?.kyc_status ?? 'pending'
 
   const documents = (docs ?? []) as Record<string, unknown>[]
   const validatedCount = documents.filter(d => d.status === 'validated').length
@@ -83,7 +103,10 @@ export default async function AdminKycMemberPage({
           <h1 className="text-[24px] font-bold text-gray-900 tracking-tight">
             {String(kyc?.full_name ?? 'Membre')} {kyc?.company_name ? `— ${String(kyc.company_name)}` : ''}
           </h1>
-          <p className="text-[12px] text-gray-400 mt-1 font-mono">{memberId}</p>
+          <div className="flex items-center gap-3 mt-1">
+            <span className="font-mono text-[10px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">{roleLabel}</span>
+            <p className="text-[11px] text-gray-300 font-mono">{memberId}</p>
+          </div>
         </div>
 
         {/* Barre de progression */}
@@ -96,9 +119,14 @@ export default async function AdminKycMemberPage({
             <div className="h-2 bg-emerald-500" style={{ width: `${progress}%` }} />
           </div>
           <div className="flex items-center gap-3 mt-5">
-            <p className="text-[11px] text-gray-500">Statut global :</p>
-            <span className="px-2 py-0.5 text-[10px] uppercase font-semibold bg-gray-100 text-gray-700">
-              {String(kyc?.kyc_status ?? 'pending')}
+            <p className="text-[11px] text-gray-500">Statut profil :</p>
+            <span className={`px-2 py-0.5 text-[10px] uppercase font-semibold ${
+              profileKycStatus === 'approved' ? 'bg-emerald-50 text-emerald-700'
+              : profileKycStatus === 'rejected' ? 'bg-red-50 text-red-600'
+              : profileKycStatus === 'in_review' ? 'bg-blue-50 text-blue-700'
+              : 'bg-yellow-50 text-yellow-700'
+            }`}>
+              {profileKycStatus}
             </span>
             <div className="flex gap-2 ml-auto">
               {['in_review', 'approved', 'rejected'].map(s => (
@@ -139,9 +167,10 @@ export default async function AdminKycMemberPage({
                   <p className="text-[11px] text-red-500 mt-1">Motif : {String(d.rejection_reason)}</p>
                 )}
                 {d.file_url ? (
-                  <a href={String(d.file_url)} target="_blank" rel="noopener" className="text-[10px] text-blue-500 hover:underline mt-1 inline-block">
-                    Voir le document ↗
-                  </a>
+                  <SignedDocLink
+                    filePath={String(d.file_url)}
+                    token={params.token}
+                  />
                 ) : (
                   <p className="text-[10px] text-gray-300 mt-1">Aucun fichier lié</p>
                 )}
