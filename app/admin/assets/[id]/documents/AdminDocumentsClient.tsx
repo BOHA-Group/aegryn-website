@@ -32,7 +32,7 @@ export default function AdminDocumentsClient({ assetId, adminToken, catalog, doc
   function toggleDim(dim: DocumentDimension) {
     setOpenDims((prev) => {
       const next = new Set(prev)
-      next.has(dim) ? next.delete(dim) : next.add(dim)
+      if (next.has(dim)) { next.delete(dim) } else { next.add(dim) }
       return next
     })
   }
