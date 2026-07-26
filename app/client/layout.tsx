@@ -44,11 +44,11 @@ export default async function ClientLayout({ children }: { children: React.React
         .from('profiles').select('full_name, roles').eq('id', user.id).single()
       const roles: string[] = Array.isArray(profile?.roles) ? profile.roles : []
       const t = await getTranslations({ locale, namespace: 'clientSpace' })
-      let label = t('spaceNameBuyer')
-      if (roles.includes('admin') || roles.includes('super_admin')) label = 'Admin'
-      else if (roles.includes('seller'))  label = t('spaceNameSeller')
+      let label: string
+      if (roles.includes('admin') || roles.includes('super_admin'))    label = 'Admin'
       else if (roles.includes('partner')) label = t('spaceNamePartner')
-      else if (roles.includes('buyer'))   label = t('spaceNameBuyer')
+      else if (roles.includes('seller') && !roles.includes('buyer'))   label = t('spaceNameSeller')
+      else                                                               label = t('spaceNameBuyer')
       navUser = { name: profile?.full_name ?? user.email ?? '', label }
     }
   } catch { /* pages auth : pas de session, navbar publique */ }

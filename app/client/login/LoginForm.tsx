@@ -1,14 +1,12 @@
 'use client'
 
 import { useState }          from 'react'
-import { useRouter }         from 'next/navigation'
 import { useTranslations }   from 'next-intl'
 import { supabase }          from '@/lib/supabase'
 import { ArrowUpRight, Eye, EyeOff } from 'lucide-react'
 
 export default function LoginForm() {
   const t        = useTranslations('clientArea.login')
-  const router   = useRouter()
   const [email,    setEmail]    = useState('')
   const [password, setPassword] = useState('')
   const [show,     setShow]     = useState(false)
@@ -34,25 +32,27 @@ export default function LoginForm() {
         return
       }
 
-      // Récupérer les rôles via l'API pour rediriger vers le bon espace
+      /* window.location.assign force un rechargement SSR complet :
+         le layout Server Component re-lit la session et affiche
+         immédiatement l'identité dans la navbar, sans refresh manuel. */
       try {
         const res = await fetch('/api/client/me/roles')
         if (res.ok) {
           const { roles } = await res.json() as { roles: string[] }
           if (roles.includes('admin') || roles.includes('super_admin')) {
-            router.push('/admin')
+            window.location.assign('/admin')
           } else if (roles.includes('partner')) {
-            router.push('/client/partner')
+            window.location.assign('/client/partner')
           } else if (roles.includes('seller') && !roles.includes('buyer')) {
-            router.push('/client/seller')
+            window.location.assign('/client/seller')
           } else {
-            router.push('/client/buyer')
+            window.location.assign('/client/buyer')
           }
         } else {
-          router.push('/client/buyer')
+          window.location.assign('/client/buyer')
         }
       } catch {
-        router.push('/client/my-assets')
+        window.location.assign('/client/my-assets')
       }
     } catch {
       setError(t('errorNetwork'))
