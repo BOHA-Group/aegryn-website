@@ -23,13 +23,7 @@ export function WhyUseApps() {
         if (titleEl) {
           const split = new SplitText(titleEl, { type: 'lines', linesClass: 'why-line' })
           splits.push(split)
-          split.lines.forEach((line) => {
-            const w = document.createElement('span')
-            w.style.display = 'block'
-            w.style.overflow = 'hidden'
-            ;(line as HTMLElement).parentNode?.insertBefore(w, line)
-            w.appendChild(line)
-          })
+          gsap.set(split.lines, { display: 'block', overflow: 'hidden' })
 
           const tl = gsap.timeline({
             scrollTrigger: { trigger: col, start: 'top 82%', once: true },

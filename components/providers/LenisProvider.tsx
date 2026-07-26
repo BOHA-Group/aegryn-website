@@ -7,6 +7,7 @@ type Props = { children: React.ReactNode }
 
 export default function LenisProvider({ children }: Props) {
   const lenisRef = useRef<{ destroy: () => void; scrollTo: (target: number, opts?: object) => void } | null>(null)
+  const rafFnRef = useRef<((time: number) => void) | null>(null)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -23,10 +24,12 @@ export default function LenisProvider({ children }: Props) {
       })
 
       lenis.on('scroll', ScrollTrigger.update)
-      gsap.ticker.add((time: number) => lenis.raf(time * 1000))
+      const rafFn = (time: number) => lenis.raf(time * 1000)
+      gsap.ticker.add(rafFn)
       gsap.ticker.lagSmoothing(0)
 
       lenisRef.current = lenis
+      rafFnRef.current = rafFn
     }
 
     if (typeof window !== 'undefined') {
@@ -34,6 +37,9 @@ export default function LenisProvider({ children }: Props) {
     }
 
     return () => {
+      if (rafFnRef.current) {
+        import('gsap').then(({ gsap }) => gsap.ticker.remove(rafFnRef.current!))
+      }
       lenisRef.current?.destroy()
     }
   }, [])

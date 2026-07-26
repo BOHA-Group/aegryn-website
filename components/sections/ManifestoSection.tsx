@@ -25,16 +25,11 @@ export function ManifestoSection() {
       type: 'words',
       wordsClass: 'about-word-inner',
     })
-    splitAbout.words.forEach((word) => {
-      const w = word as HTMLElement
-      const wrap = document.createElement('span')
-      wrap.style.display = 'inline-block'
-      wrap.style.overflow = 'hidden'
-      wrap.style.verticalAlign = 'bottom'
-      wrap.style.marginRight = '0.22em'
-      w.parentNode?.insertBefore(wrap, w)
-      wrap.appendChild(w)
-      w.style.display = 'inline-block'
+    gsap.set(splitAbout.words, {
+      display: 'inline-block',
+      overflow: 'hidden',
+      verticalAlign: 'bottom',
+      marginRight: '0.22em',
     })
 
     const ctx = gsap.context(() => {

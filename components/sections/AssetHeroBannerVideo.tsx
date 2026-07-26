@@ -37,13 +37,6 @@ export function AssetHeroBannerVideo({ label, title, sub }: AssetHeroBannerVideo
 
     /* ── SplitText lignes ── */
     const split = new SplitText(heading, { type: 'lines', linesClass: 'ahb-line' })
-    split.lines.forEach((line) => {
-      const w = document.createElement('div')
-      w.style.overflow = 'hidden'
-      w.style.display  = 'block'
-      ;(line as HTMLElement).parentNode?.insertBefore(w, line)
-      w.appendChild(line)
-    })
 
     const ctx = gsap.context(() => {
       /*
@@ -171,7 +164,7 @@ export function AssetHeroBannerVideo({ label, title, sub }: AssetHeroBannerVideo
           </p>
           <h2
             ref={headingRef}
-            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] mb-6 overflow-hidden whitespace-pre-line"
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] mb-6 overflow-hidden whitespace-pre-line [&_.ahb-line]:overflow-hidden"
             style={{ fontSize: 'clamp(40px,5.5vw,80px)' }}
           >
             {title ?? 'Ce que nous\nconstruisons.'}

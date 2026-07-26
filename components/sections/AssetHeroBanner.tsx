@@ -27,13 +27,7 @@ export function AssetHeroBanner() {
       linesClass: 'ab-line',
     })
 
-    split.lines.forEach((line) => {
-      const wrap = document.createElement('div')
-      wrap.style.overflow = 'hidden'
-      wrap.style.display  = 'block'
-      line.parentNode?.insertBefore(wrap, line)
-      wrap.appendChild(line)
-    })
+    gsap.set(split.lines, { overflow: 'hidden' })
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'expo.out' } })

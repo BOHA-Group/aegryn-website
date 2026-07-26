@@ -42,14 +42,7 @@ export function HeroMountain() {
       linesClass: 'hero-line-inner',
     })
 
-    /* Wrap each line in a clip container */
-    split.lines.forEach((line) => {
-      const wrapper = document.createElement('div')
-      wrapper.style.overflow = 'hidden'
-      wrapper.style.display  = 'block'
-      line.parentNode?.insertBefore(wrapper, line)
-      wrapper.appendChild(line)
-    })
+    gsap.set(split.lines, { overflow: 'hidden', display: 'block' })
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'expo.out' } })
