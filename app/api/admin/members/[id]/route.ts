@@ -124,13 +124,54 @@ export async function DELETE(
 
   const supa = createServiceClient()
 
-  /* Supprime toutes les données liées au profil (NDA, KYC, notifications) */
-  await supa.from('nda_requests').delete().eq('buyer_email', id)
+  /* ── Récupérer email avant suppression (pour NDA + audit) ── */
+  const { data: profile } = await supa
+    .from('profiles')
+    .select('email')
+    .eq('id', id)
+    .single()
+  const userEmail: string = (profile as { email?: string } | null)?.email ?? ''
+
+  /* ── 1. Dissocier les actifs vendeur (conservation légale) ── */
+  await supa.from('assets').update({ seller_uid: null }).eq('seller_uid', id)
+
+  /* ── 2. Dissocier les offres acheteur (conservation historique) ── */
+  await supa.from('offers').update({ buyer_id: null }).eq('buyer_id', id)
+
+  /* ── 3. Supprimer documents KYC ── */
   await supa.from('kyc_documents').delete().eq('user_id', id)
+
+  /* ── 4. Supprimer demandes NDA (par email) ── */
+  if (userEmail) await supa.from('nda_requests').delete().eq('buyer_email', userEmail)
+
+  /* ── 5. Supprimer notifications ── */
   await supa.from('user_notifications').delete().eq('user_id', id)
+
+  /* ── 6. Commissions et introductions partenaire ── */
   await supa.from('introductions').delete().eq('partner_id', id)
   await supa.from('commissions').delete().eq('partner_id', id)
+
+  /* ── 7. Certifications partenaire ── */
   await supa.from('partner_certifications').delete().eq('partner_id', id)
 
-  return NextResponse.json({ ok: true, deleted_profile_data: id })
+  /* ── 8. Supprimer le compte Auth (cascade → profiles) ── */
+  const { error: deleteErr } = await supa.auth.admin.deleteUser(id)
+  if (deleteErr) {
+    console.error('[admin/members/delete] deleteUser:', deleteErr)
+    return NextResponse.json({ error: deleteErr.message }, { status: 500 })
+  }
+
+  /* ── 9. Audit trail RGPD (fire-and-forget) ── */
+  supa.from('rgpd_requests').insert({
+    user_id:      null,
+    user_email:   userEmail || null,
+    type:         'delete_full',
+    status:       'completed',
+    admin_note:   'Admin-initiated deletion',
+    processed_at: new Date().toISOString(),
+  }).then(({ error }) => {
+    if (error) console.error('[admin/members/delete] rgpd_requests insert:', error)
+  })
+
+  return NextResponse.json({ ok: true, deleted_user: id })
 }
