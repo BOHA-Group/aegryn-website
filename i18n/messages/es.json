@@ -2239,9 +2239,9 @@
         }
       ],
       "cta": "Enviar mi activo",
-      "feesDesc": "Las condiciones financieras de la transacción se detallan en nuestras Condiciones Generales de Venta, disponibles previa solicitud tras la cualificación.",
-      "feesCertValue": "Condiciones financieras disponibles en CGV",
-      "feesSuccessValue": "Condiciones en CGV"
+      "feesDesc": "Nuestra remuneración se estructura en dos componentes, alineados con la calidad del expediente y su éxito.",
+      "feesCertValue": "Honorarios fijos de gestión y auditoría que cubren todo el proceso de certificación CIFS, independientemente del resultado de la transacción.",
+      "feesSuccessValue": "Comisión sobre el precio final de la cesión, pagadera únicamente al cierre. Importe negociado caso por caso durante la cualificación."
     },
     "buy": {
       "label": "Comprador",

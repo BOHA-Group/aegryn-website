@@ -2239,9 +2239,9 @@
         }
       ],
       "cta": "Mein Asset einreichen",
-      "feesDesc": "Die finanziellen Bedingungen der Transaktion sind in unseren Allgemeinen Geschäftsbedingungen aufgeführt, die auf Anfrage nach Qualifizierung erhältlich sind.",
-      "feesCertValue": "Finanzielle Konditionen in den AGB",
-      "feesSuccessValue": "Bedingungen in AGB"
+      "feesDesc": "Unser Vergütungsmodell besteht aus zwei Komponenten, ausgerichtet auf die Qualität Ihrer Unterlagen und Ihren Erfolg.",
+      "feesCertValue": "Feste Bearbeitungs- und Prüfgebühr für den gesamten CIFS-Zertifizierungsprozess, unabhängig vom Transaktionsergebnis.",
+      "feesSuccessValue": "Provision auf den endgültigen Veräußerungserlös, fällig ausschließlich beim Closing. Betrag wird individuell während der Qualifizierung ausgehandelt."
     },
     "buy": {
       "label": "Käufer",

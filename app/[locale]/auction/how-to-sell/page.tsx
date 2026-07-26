@@ -78,11 +78,11 @@ export default function HowToSellPage() {
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="border border-ag-border bg-ag-white p-8 flex-1">
               <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light mb-3">{t('feesCert')}</p>
-              <p className="font-sans font-bold text-ag-black text-[22px]">{t('feesCertValue')}</p>
+              <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('feesCertValue')}</p>
             </div>
             <div className="border border-ag-apex/30 bg-ag-white p-8 flex-1">
               <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex mb-3">{t('feesSuccess')}</p>
-              <p className="font-sans font-bold text-ag-black text-[22px]">{t('feesSuccessValue')}</p>
+              <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('feesSuccessValue')}</p>
             </div>
           </div>
         </div>

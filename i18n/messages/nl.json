@@ -2239,9 +2239,9 @@
         }
       ],
       "cta": "Mijn asset indienen",
-      "feesDesc": "De financiële voorwaarden van de transactie zijn gedetailleerd in onze Algemene Verkoopvoorwaarden, beschikbaar op verzoek na kwalificatie.",
-      "feesCertValue": "Financiële voorwaarden beschikbaar in AVV",
-      "feesSuccessValue": "Voorwaarden in AVV"
+      "feesDesc": "Onze vergoeding bestaat uit twee componenten, afgestemd op de kwaliteit van het dossier en uw succes.",
+      "feesCertValue": "Vaste dossier- en auditkosten voor het volledige CIFS-certificeringsproces, ongeacht de uitkomst van de transactie.",
+      "feesSuccessValue": "Commissie op de definitieve overdrachtswaarde, uitsluitend betaald bij closing. Bedrag wordt per dossier onderhandeld tijdens de kwalificatie."
     },
     "buy": {
       "label": "Koper",

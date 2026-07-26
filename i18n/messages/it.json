@@ -2239,9 +2239,9 @@
         }
       ],
       "cta": "Invia il mio asset",
-      "feesDesc": "Le condizioni finanziarie della transazione sono dettagliate nelle nostre Condizioni Generali di Vendita, disponibili su richiesta dopo la qualifica.",
-      "feesCertValue": "Condizioni finanziarie disponibili nelle CGV",
-      "feesSuccessValue": "Condizioni nelle CGV"
+      "feesDesc": "La nostra remunerazione è strutturata in due componenti, allineate alla qualità del dossier e al vostro successo.",
+      "feesCertValue": "Onorari fissi di istruzione e audit che coprono l'intero processo di certificazione CIFS, indipendentemente dall'esito della transazione.",
+      "feesSuccessValue": "Commissione sul prezzo finale di cessione, versata esclusivamente al closing. Importo negoziato caso per caso durante la qualifica."
     },
     "buy": {
       "label": "Acquirente",

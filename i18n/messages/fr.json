@@ -2362,11 +2362,11 @@
       "step4Title": "Transaction",
       "step4Desc": "Négociation encadrée par nos équipes. Escrow institutionnel. Transfert sécurisé des droits.",
       "feesTitle": "Notre modèle de rémunération",
-      "feesDesc": "Les conditions financières de la transaction sont détaillées dans nos Conditions Générales de Vente, disponibles sur demande après qualification.",
+      "feesDesc": "Notre rémunération est structurée en deux composantes, alignées sur la qualité du dossier et sur votre succès.",
       "feesCert": "Certification",
-      "feesCertValue": "Conditions financières disponibles en CGV",
+      "feesCertValue": "Frais fixes de dossier et d'audit couvrant l'ensemble du processus de certification CIFS, indépendamment de l'issue de la transaction.",
       "feesSuccess": "Success fee",
-      "feesSuccessValue": "Conditions en CGV",
+      "feesSuccessValue": "Commission sur la valeur finale de cession, versée uniquement à closing. Montant négocié au dossier lors de la qualification.",
       "cta": "Soumettre mon actif maintenant"
     },
     "buy": {

@@ -2363,11 +2363,11 @@
       "step4Title": "Transaction",
       "step4Desc": "Negotiation supervised by our teams. Institutional escrow. Secure transfer of rights.",
       "feesTitle": "Our fee structure",
-      "feesDesc": "The financial terms of the transaction are detailed in our General Terms and Conditions, available upon request after qualification.",
+      "feesDesc": "Our fee structure is built on two components, aligned with the quality of your file and your success.",
       "feesCert": "Certification",
-      "feesCertValue": "Financial terms available in GTC",
+      "feesCertValue": "Fixed filing and audit fee covering the full CIFS certification process, regardless of the transaction outcome.",
       "feesSuccess": "Success fee",
-      "feesSuccessValue": "Conditions in GTC",
+      "feesSuccessValue": "Commission on the final sale price, paid at closing only. Amount negotiated on a case-by-case basis during qualification.",
       "cta": "Submit my asset now"
     },
     "buy": {
