@@ -70,10 +70,10 @@ export default async function BuyerCataloguePage({
             {kycStatus === 'rejected'  && ' Votre dossier a été rejeté. Consultez votre espace KYC pour voir les motifs et soumettre les documents corrigés.'}
             {kycStatus === 'pending'   && ' Veuillez compléter et soumettre votre dossier KYC pour accéder au catalogue.'}
           </p>
-          <a href="/client/buyer/kyc"
+          <Link href="/client/buyer/kyc"
             className="inline-block bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors">
             Accéder à mon espace KYC →
-          </a>
+          </Link>
         </div>
       </div>
     )
