@@ -219,8 +219,8 @@
     "tagline": "CERTIFIÉ EN SUISSE. RÉFÉRENCE EN EUROPE.",
     "cta": "À propos d'Aegryn",
     "quote": "Un actif tech sans certification indépendante, c'est une valeur sans preuve. AEGRYN apporte la preuve sur chaque actif, à chaque transfert.",
-    "ceoName": "Yohann Bollack",
-    "ceoTitle": "Fondateur AEGRYN",
+    "ceoName": "",
+    "ceoTitle": "AEGRYN",
     "stats": [
       {
         "val": "6",
@@ -326,25 +326,67 @@
     "hero": {
       "label": "À propos d'AEGRYN",
       "title": "L'infrastructure de confiance\ndu M&A tech européen.",
-      "desc": "AEGRYN construit des actifs tech propriétaires, les certifie selon un label indépendant, et les transige via un processus confidentiel entre vendeurs et acquéreurs qualifiés."
+      "desc": "Certification. Discrétion. Permanence.\nTrois principes qui ont forgé un nom — et une entreprise."
+    },
+    "name": {
+      "label": "Le nom",
+      "title": "Trois mots anciens.\nUne identité.",
+      "roots": [
+        {
+          "word": "AEGIS",
+          "meaning": "Le bouclier divin. Symbole de protection, d'autorité et de légitimité. Agir sous l'égide de quelque chose, c'est agir sous une autorité de certification — dont le standard fait foi."
+        },
+        {
+          "word": "AEGIR",
+          "meaning": "La divinité qui commandait les mers et leurs courants. Maître des flux — de ce qui circule entre les rives, entre les parties, entre la valeur et sa reconnaissance."
+        },
+        {
+          "word": "AEON",
+          "meaning": "L'éternité. La longue durée. Ce qui perdure au-delà des cycles, des tendances et des tours de table."
+        }
+      ],
+      "synthesis": "Trois mots issus de trois civilisations. Une synthèse : une entité qui protège (AEGIS), facilite les flux (AEGIR), et construit pour la permanence (AEON). AEGRYN.",
+      "formerly": "AEGRYN s'appelait autrefois BOHA-Group. À mesure que le positionnement de l'entreprise s'est affiné — de constructeur d'actifs numériques à infrastructure de certification et de transaction — son identité s'est affinée avec lui. Le nom a changé. La conviction, non."
     },
     "vision": {
       "label": "Notre vision",
-      "text": "La valeur d'un actif tech est structurellement sous-évaluée faute d'un référentiel de certification crédible. Les vendeurs ne savent pas à quel prix céder. Les acquéreurs ne savent pas ce qu'ils achètent. AEGRYN est ce référentiel — construit avec IP propriétaire et un protocole d'évaluation indépendant."
+      "text": "Le marché du M&A tech européen repose sur des fondations sérieuses — des conseils expérimentés, une due diligence rigoureuse, des capitaux institutionnels. Ce qui lui manquait : un référentiel de certification standardisé et indépendant — une référence commune et vérifiable sur laquelle les deux parties d'une transaction peuvent s'appuyer avant même d'entamer les négociations.\n\nAEGRYN est ce référentiel — non pas un remplacement de ce qui fonctionne déjà, mais la couche d'infrastructure qui était structurellement absente."
+    },
+    "contribution": {
+      "label": "Notre contribution",
+      "title": "Pas un remplacement.\nUne couche d'infrastructure.",
+      "desc": "Les transactions M&A tech rigoureuses existent déjà. AEGRYN ne remplace pas les conseillers, avocats et experts-comptables qui les structurent. Il apporte ce qui manquait structurellement : une notation indépendante, émise avant toute mise en marché, qui donne aux deux parties un point de départ certifié et documenté. Moins de temps à débattre de la valeur fondamentale. Plus de temps à closer.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Une notation avant un prix",
+          "desc": "La notation C/I/F/S d'AEGRYN est établie avant toute mise en marché, avant toute négociation. Pas un avis de valorisation — une certification de ce que l'actif est réellement, documentée, versionnée et reproductible. Le prix suit la notation. La notation n'en dépend pas."
+        },
+        {
+          "num": "02",
+          "title": "Un cercle fermé, pas une marketplace",
+          "desc": "Chaque vendeur dans le catalogue AEGRYN a passé la certification. Chaque acquéreur a démontré sa capacité financière. La discrétion est structurelle — ce n'est pas une fonctionnalité ajoutée en surface, c'est la condition opératoire à partir de laquelle tout le reste découle."
+        },
+        {
+          "num": "03",
+          "title": "Standards institutionnels suisses",
+          "desc": "Le droit suisse régit chaque transaction. Le séquestre est détenu par une banque tierce — AEGRYN ne touche jamais les fonds. La documentation est complète à chaque transfert. Ce sont des conditions opératoires, pas des promesses."
+        }
+      ]
     },
     "mission": {
-      "label": "Notre mission",
-      "title": "Trois métiers. Un standard de marché.",
+      "label": "Trois disciplines",
+      "title": "Trois disciplines.\nUn standard de marché.",
       "create": {
         "title": "BUILD",
-        "desc": "Construire des actifs tech propriétaires, certifiables, transférables. IP déposée, codebase documentée, stack souveraine."
+        "desc": "Actifs tech propriétaires, certifiables, transférables. IP déposée, codebase documentée, stack souveraine."
       },
       "simplify": {
-        "title": "NOTATION",
-        "desc": "Certifier de façon indépendante et objective. Refuser plus qu'accepter. Une notation reproductible, traçable, concluante."
+        "title": "GRADE",
+        "desc": "Certifier de façon indépendante. Refuser plus qu'accepter. Une notation reproductible, traçable et définitive."
       },
       "embrace": {
-        "title": "ENCHÈRES",
+        "title": "AUCTION",
         "desc": "Transiger dans la discrétion, avec la certitude pour les deux parties. Séquestre institutionnel. Documentation complète à chaque transfert."
       }
     },
@@ -355,35 +397,63 @@
       "precision": {
         "label": "01",
         "title": "Précision",
-        "desc": "Chaque décision est documentée, mesurée et traçable."
+        "desc": "Chaque décision est documentée, mesurée et traçable. Le Grade AEGRYN n'est pas un avis — c'est un protocole. Deux analystes, même protocole, même grade."
       },
       "durability": {
         "label": "02",
         "title": "Durabilité",
-        "desc": "Nous construisons pour le long terme, pas pour le prochain funding."
+        "desc": "Nous construisons pour la décennie, pas pour le trimestre. Chaque actif de l'écosystème AEGRYN est conçu pour être certifiable dans dix ans — pas seulement aujourd'hui."
       },
       "sovereignty": {
         "label": "03",
         "title": "Souveraineté",
-        "desc": "Nos actifs, notre infrastructure, nos données. Aucune dépendance externe critique."
+        "desc": "Nos actifs, notre infrastructure, nos données. Aucune dépendance externe critique. Droit suisse. Hébergement européen. Contrôle total."
       },
-      "transparency": {
+      "independence": {
         "label": "04",
-        "title": "Transparence",
-        "desc": "Vis-à-vis de nos partenaires, utilisateurs et du marché."
+        "title": "Indépendance",
+        "desc": "L'analyste qui certifie un actif n'a aucun intérêt financier dans la transaction qui suit. Cette séparation n'est pas une politique — c'est la condition structurelle qui donne sa valeur au grade."
       }
-    },
-    "founder": {
-      "label": "Le fondateur",
-      "role": "Fondateur — AEGRYN",
-      "bio1": "Yohann Bollack est entrepreneur, builder et stratège M&A tech. Il fonde AEGRYN avec une conviction simple : le marché tech européen mérite une infrastructure de confiance propre — certification indépendante, transactions confidentielles, transferts documentés.",
-      "bio2": "Il pilote un écosystème d'actifs propriétaires couvrant l'IA, les marketplaces, la logistique et les réseaux sociaux — tous conçus dès l'origine pour être certifiables et transférables.",
-      "cta": "Prendre contact"
     },
     "swiss": {
       "groupLabel": "AEGRYN",
-      "title": "Ancré en Suisse. Référence en Europe.",
+      "title": "Ancré en Suisse.\nLa référence européenne.",
+      "desc": "La Suisse a été choisie délibérément — non pour ses avantages d'incorporation, mais pour ses standards institutionnels : la rigueur du droit suisse, la discrétion de son écosystème financier, et la neutralité qui en fait une ancre crédible pour les transactions transfrontalières entre un vendeur français, un acquéreur allemand et un fonds luxembourgeois. Chaque transaction AEGRYN est régie par le droit suisse, quelle que soit la nationalité des parties ou l'origine de l'actif.",
       "cta": "Voir le catalogue"
+    },
+    "founder": {
+      "label": "La conviction fondatrice",
+      "title": "Construit de l'intérieur.",
+      "bio1": "AEGRYN a été fondé par un builder qui a passé des années à construire, auditer et structurer des actifs numériques — et à observer à chaque fois le même vide : l'absence d'un référentiel standardisé et indépendant auquel les deux parties d'une transaction tech pouvaient également faire confiance.",
+      "bio2": "Le choix d'ancrer ce référentiel en Suisse, sous droit suisse et standards institutionnels, était délibéré. Pas un détail d'incorporation — un choix de positionnement. Les actifs propriétaires qu'AEGRYN construit sont conçus pour répondre à ce standard dès leur première ligne de code.",
+      "cta": "Prendre contact"
+    },
+    "whatsnext": {
+      "label": "Ce qui vient ensuite",
+      "title": "Le protocole évolue.\nLe standard tient.",
+      "desc": "AEGRYN certifie et transige actuellement des SaaS, applications et marketplaces sous le protocole CIFS v2.1. Nous construisons progressivement un réseau de partenaires experts — cabinets juridiques, experts-comptables, spécialistes cybersécurité — qui enrichiront certains rapports d'une revue croisée. Une couche d'ancrage blockchain renforcera la traçabilité du registre dans le temps.\n\nLes extensions futures — actifs Web3, datasets propriétaires — sont au roadmap. Aucune date n'est fixée. Chaque catégorie sera ouverte lorsque le protocole pourra la certifier avec la même rigueur que l'actuelle.",
+      "cta": "Voir les sessions en cours"
+    },
+    "cta": {
+      "label": "Travailler avec AEGRYN",
+      "seller": {
+        "title": "Vous cédez un actif tech.",
+        "desc": "Un advisor AEGRYN vous répondra sous 24h.",
+        "btn": "Soumettre votre actif à la certification",
+        "href": "/grade/submit"
+      },
+      "buyer": {
+        "title": "Vous cherchez à acquérir.",
+        "desc": "Notre catalogue est réservé aux acquéreurs qualifiés.",
+        "btn": "Déposer une candidature acquéreur",
+        "href": "/auction/buy"
+      },
+      "partner": {
+        "title": "Vous êtes partenaire potentiel.",
+        "desc": "Cabinets juridiques, experts-comptables, spécialistes cybersécurité, boutiques M&A, fonds PE.",
+        "btn": "Découvrir les partenariats",
+        "href": "/alliances"
+      }
     }
   },
   "career": {
@@ -3310,7 +3380,7 @@
     "s5Title": "Responsabilité",
     "s5": "AEGRYN agit exclusivement comme intermédiaire et opérateur de processus. AEGRYN ne garantit ni l'issue d'une transaction, ni la valeur future d'un actif, ni la performance post-cession. En cas de divergence entre les données déclarées et la réalité constatée lors de la DD, la responsabilité d'AEGRYN est limitée au remboursement des honoraires de certification perçus pour l'actif concerné. En aucun cas AEGRYN ne sera responsable des dommages indirects, manque à gagner ou dommages consécutifs.",
     "s6Title": "Contestation du Grade",
-    "s6": "Toute contestation du Grade officiel doit être notifiée à AEGRYN par écrit (contact@boha-group.com) dans les 30 jours calendaires suivant la remise du rapport. AEGRYN s'engage à répondre sous 15 jours ouvrés.",
+    "s6": "Toute contestation du Grade officiel doit être notifiée à AEGRYN par écrit via le formulaire de contact sur aegryn.com/contact dans les 30 jours calendaires suivant la remise du rapport. AEGRYN s'engage à répondre sous 15 jours ouvrés.",
     "s7Title": "Confidentialité des transactions",
     "s7": "AEGRYN ne révèle jamais l'identité du vendeur à l'acquéreur, ni l'identité de l'acquéreur au vendeur, sans accord explicite des deux parties. Les données de transactions publiées dans le catalogue de résultats sont systématiquement anonymisées.",
     "s8Title": "Lutte contre le blanchiment (LCB-FT)",
@@ -3528,7 +3598,7 @@
     },
     "label": "Sécurité en ligne",
     "subtitle": "Comment vous protéger contre la fraude",
-    "contactEmail": "contact@boha-group.com",
+    "contactEmail": "keepsecure@aegryn.com",
     "intro": "Lorsque vous utilisez nos services, nous pouvons vous demander des informations relatives à votre identité, vos coordonnées bancaires et vos documents d'entité. Nous utilisons des technologies avancées pour protéger vos données, mais nous vous recommandons également d'adopter des pratiques de sécurité élémentaires.",
     "s1Title": "Usurpation d'identité de marque",
     "s1": "Des fraudeurs peuvent créer de faux sites, profils sur les réseaux sociaux ou emails semblant provenir d'AEGRYN dans le but de vous inciter à effectuer des paiements frauduleux.",
@@ -3539,7 +3609,7 @@
     "s1Never3": "Vos identifiants de connexion par email ou téléphone",
     "s2Title": "Identifier les communications frauduleuses",
     "s2": "Vérifiez que l'adresse email expéditeur est exactement @aegryn.com (pas @aegryn.net, @aegryn-group.com ou toute variante), que les liens dans les emails pointent bien vers aegryn.com, et que les demandes de paiement correspondent à ce qui est prévu dans votre mandat ou contrat signé.",
-    "s2Doubt": "En cas de doute, contactez-nous directement via contact@boha-group.com — ne répondez pas à l'email suspect.",
+    "s2Doubt": "En cas de doute, utilisez le formulaire de contact sur aegryn.com/contact — ne répondez pas à l'email suspect.",
     "s3Title": "Sécuriser votre compte AEGRYN",
     "s3Items": [
       "Utilisez un mot de passe fort et unique pour votre compte AEGRYN",
@@ -4167,7 +4237,7 @@
       },
       "whoWeAre": {
         "h": "Qui sommes-nous et comment nous contacter ?",
-        "p": "Aegryn (anciennement BOHA-Group) est le nom de notre entreprise. Si vous avez des questions concernant le traitement des données relatives à notre plateforme, vous pouvez nous contacter par courrier : Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suisse. Vous pouvez également nous contacter par e-mail à legal@boha-group.com."
+        "p": "Aegryn (anciennement BOHA-Group) est le nom de notre entreprise. Si vous avez des questions concernant le traitement des données relatives à notre plateforme, vous pouvez nous contacter par courrier : Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suisse. Vous pouvez également nous contacter via le formulaire de contact disponible sur notre plateforme."
       },
       "ourRole": {
         "h": "Quel est notre rôle en matière de protection des données ?",
@@ -4364,7 +4434,7 @@
       "s17JurisTitle": "Juridiction.",
       "s17Juris": "Tout litige sera soumis à la juridiction exclusive des tribunaux compétents du siège d'Aegryn.",
       "s18H": "18. Contact",
-      "s18": "Vous pouvez nous contacter à l'adresse legal@boha-group.com."
+      "s18": "Vous pouvez nous contacter via le formulaire de contact disponible sur notre plateforme."
     }
   },
   "nda": {

@@ -327,25 +327,64 @@
     "hero": {
       "label": "Über AEGRYN",
       "title": "Die Vertrauensinfrastruktur\nfür europäisches Tech-M&A.",
-      "desc": "AEGRYN baut proprietäre Tech-Assets, zertifiziert sie unter einem unabhängigen Label und transagiert sie über einen vertraulichen Prozess zwischen qualifizierten Verkäufern und Käufern."
+      "desc": "Zertifizierung. Diskretion. Beständigkeit.\nDrei Prinzipien, die einen Namen — und ein Unternehmen — geprägt haben."
+    },
+    "name": {
+      "label": "Der Name",
+      "title": "Drei uralte Wörter.\nEine Identität.",
+      "roots": [
+        {
+          "word": "AEGIS",
+          "meaning": "Der göttliche Schild. Symbol für Schutz, Autorität und Legitimität. Unter der Ägide von etwas zu handeln bedeutet, unter einer zertifizierenden Autorität zu handeln — deren Standard anderen Vertrauen einflößt."
+        },
+        {
+          "word": "AEGIR",
+          "meaning": "Die Gottheit, die die Meere und ihre Strömungen beherrschte. Meister der Flüsse — dessen, was sich zwischen Ufern, zwischen Parteien, zwischen Wert und seiner Anerkennung bewegt."
+        },
+        {
+          "word": "AEON",
+          "meaning": "Ewigkeit. Die lange Spanne. Was über Zyklen, Trends und Finanzierungsrunden hinaus Bestand hat."
+        }
+      ],
+      "synthesis": "Drei Wörter aus drei Zivilisationen. Eine Synthese: eine Einheit, die schützt (AEGIS), Flüsse ermöglicht (AEGIR) und für die Dauer baut (AEON). AEGRYN.",
+      "formerly": "AEGRYN war früher als BOHA-Group bekannt. Als sich die Positionierung des Unternehmens schärfte — vom Erbauer digitaler Assets zur Zertifizierungs- und Transaktionsinfrastruktur — schärfte sich auch seine Identität. Der Name änderte sich. Die Überzeugung nicht."
     },
     "vision": {
       "label": "Unsere Vision",
-      "text": "Der Wert eines Tech-Assets wird strukturell unterschätzt, weil es kein glaubwürdiges Zertifizierungsreferenzrahmen gibt. Verkäufer wissen nicht, zu welchem Preis sie verkaufen sollen. Käufer wissen nicht, was sie kaufen. AEGRYN ist dieser Rahmen — mit proprietärem IP und einem unabhängigen Bewertungsprotokoll."
+      "text": "Der europäische Tech-M&A-Markt hat solide Grundlagen — erfahrene Berater, rigorose Due Diligence, institutionelles Kapital. Was fehlte, war ein standardisierter, unabhängiger Zertifizierungsrahmen: eine gemeinsame, überprüfbare Referenz, auf die sich beide Seiten einer Transaktion verlassen können, bevor die Verhandlungen beginnen.\n\nAEGRYN ist dieser Rahmen — kein Ersatz für das, was bereits funktioniert, sondern die Infrastrukturschicht, die strukturell fehlte."
+    },
+    "contribution": {
+      "label": "Unser Beitrag",
+      "title": "Kein Ersatz.\nEine Infrastrukturschicht.",
+      "desc": "Rigorose Tech-M&A-Transaktionen existieren bereits. AEGRYN ersetzt nicht die Berater, Anwälte und Wirtschaftsprüfer, die sie strukturieren. Es fügt hinzu, was strukturell fehlte: ein unabhängiger Grade, ausgestellt vor jeder Listung, der beiden Seiten einen zertifizierten, dokumentierten Ausgangspunkt gibt. Weniger Zeit für Debatten über den Grundwert. Mehr Zeit zum Abschließen.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Ein Grade vor einem Preis",
+          "desc": "Der AEGRYN C/I/F/S Grade wird vor jeder Listung, vor jeder Verhandlung festgestellt. Kein Bewertungsgutachten — eine Zertifizierung dessen, was der Asset tatsächlich ist, dokumentiert, versioniert und reproduzierbar. Der Preis folgt dem Grade. Der Grade hängt nicht davon ab."
+        },
+        {
+          "num": "02",
+          "title": "Ein geschlossener Kreis, kein Marktplatz",
+          "desc": "Jeder Verkäufer im AEGRYN-Katalog hat die Zertifizierung bestanden. Jeder Käufer hat seine finanzielle Kapazität nachgewiesen. Diskretion ist strukturell — kein nachträglich hinzugefügtes Merkmal, sondern die Betriebsbedingung, aus der alles andere folgt."
+        },
+        {
+          "num": "03",
+          "title": "Schweizer institutionelle Standards",
+          "desc": "Schweizer Recht regelt jede Transaktion. Der Escrow wird von einer Drittbank gehalten — AEGRYN berührt niemals die Mittel. Die Dokumentation ist bei jeder Übertragung vollständig. Das sind Betriebsbedingungen, keine Versprechen."
+        }
+      ]
     },
     "mission": {
-      "label": "Unsere Mission",
-      "title": "Drei Geschäftsfelder. Ein Marktstandard.",
-      "p1": "Aegryn verkauft keine Projekte. Wir bauen Assets. Jedes Produkt, das wir starten, ist für Langlebigkeit, Wertschöpfung und Widerstandsfähigkeit ausgelegt.",
-      "p2": "Unser Modell basiert auf vollständigem Eigentum unserer digitalen Assets, betrieben in einer souveränen Umgebung.",
-      "p3": "Die Schweiz ist nicht nur eine Adresse. Es ist unser Standard: Neutralität, Präzision, Beständigkeit.",
+      "label": "Drei Disziplinen",
+      "title": "Drei Disziplinen.\nEin Marktstandard.",
       "create": {
         "title": "BUILD",
-        "desc": "Proprietäre, zertifizierbare, übertragbare Tech-Assets aufbauen. Eingetragenes IP, dokumentierte Codebasis, souveräner Stack."
+        "desc": "Proprietäre, zertifizierbare, übertragbare Tech-Assets. Eingetragenes IP, dokumentierte Codebasis, souveräner Stack."
       },
       "simplify": {
         "title": "GRADE",
-        "desc": "Unabhängig und objektiv zertifizieren. Mehr ablehnen als annehmen. Ein reproduzierbarer, nachvollziehbarer, schlüssiger Grade."
+        "desc": "Unabhängig zertifizieren. Mehr ablehnen als annehmen. Ein reproduzierbarer, nachvollziehbarer und definitiver Grade."
       },
       "embrace": {
         "title": "AUCTION",
@@ -359,35 +398,63 @@
       "precision": {
         "label": "01",
         "title": "Präzision",
-        "desc": "Jede Entscheidung ist dokumentiert, gemessen und nachvollziehbar."
+        "desc": "Jede Entscheidung ist dokumentiert, gemessen und nachvollziehbar. Der AEGRYN Grade ist keine Meinung — er ist ein Protokoll. Zwei Analysten, gleiches Protokoll, gleicher Grade."
       },
       "durability": {
         "label": "02",
         "title": "Beständigkeit",
-        "desc": "Wir bauen für die Zukunft, nicht für die nächste Finanzierungsrunde."
+        "desc": "Wir bauen für die Dekade, nicht für das Quartal. Jeder Asset im AEGRYN-Ökosystem ist darauf ausgelegt, in zehn Jahren zertifizierbar zu sein — nicht nur heute."
       },
       "sovereignty": {
         "label": "03",
         "title": "Souveränität",
-        "desc": "Unsere Assets, unsere Infrastruktur, unsere Daten. Keine kritischen externen Abhängigkeiten."
+        "desc": "Unsere Assets, unsere Infrastruktur, unsere Daten. Keine kritischen externen Abhängigkeiten. Schweizer Recht. Europäisches Hosting. Vollständige Kontrolle."
       },
-      "transparency": {
+      "independence": {
         "label": "04",
-        "title": "Transparenz",
-        "desc": "Gegenüber unseren Partnern, Nutzern und dem Markt."
+        "title": "Unabhängigkeit",
+        "desc": "Der Analyst, der einen Asset zertifiziert, hat kein finanzielles Interesse an der darauf folgenden Transaktion. Diese Trennung ist keine Richtlinie — sie ist die strukturelle Bedingung, die den Grade überhaupt wertvoll macht."
       }
-    },
-    "founder": {
-      "label": "Der Gründer",
-      "role": "Gründer — AEGRYN",
-      "bio1": "Yohann Bollack ist Unternehmer, Builder und Tech-M&A-Stratege. Er gründet AEGRYN mit einer einfachen Überzeugung: Der europäische Tech-Markt verdient eine eigene Vertrauensinfrastruktur — unabhängige Zertifizierung, vertrauliche Transaktionen, dokumentierte Übertragungen.",
-      "bio2": "Er leitet ein proprietäres Asset-Ökosystem aus KI, Marktplätzen, Logistik und sozialen Netzwerken — alle von Anfang an so konzipiert, dass sie zertifizierbar und übertragbar sind.",
-      "cta": "Kontakt aufnehmen"
     },
     "swiss": {
       "groupLabel": "AEGRYN",
-      "title": "Verwurzelt in der Schweiz. Europäische Referenz.",
+      "title": "Verwurzelt in der Schweiz.\nDie europäische Referenz.",
+      "desc": "Die Schweiz wurde bewusst gewählt — nicht wegen ihrer Gründungsvorteile, sondern wegen ihrer institutionellen Standards: die Strenge des Schweizer Rechts, die Diskretion ihres Finanzökosystems und die Neutralität, die sie zu einem glaubwürdigen Anker für grenzüberschreitende Transaktionen zwischen einem französischen Verkäufer, einem deutschen Käufer und einem luxemburgischen Fonds macht. Jede AEGRYN-Transaktion unterliegt Schweizer Recht, unabhängig von der Nationalität der Parteien oder der Herkunft des Assets.",
       "cta": "Katalog ansehen"
+    },
+    "founder": {
+      "label": "Die Gründungsüberzeugung",
+      "title": "Von innen heraus gebaut.",
+      "bio1": "AEGRYN wurde von einem Builder gegründet, der jahrelang digitale Assets aufgebaut, auditiert und strukturiert hatte — und dabei immer wieder dieselbe Lücke beobachtete: das Fehlen einer standardisierten, unabhängigen Referenz, der beide Seiten einer Tech-Transaktion gleichermaßen vertrauen konnten.",
+      "bio2": "Die Entscheidung, diese Referenz in der Schweiz zu verankern, unter Schweizer Recht und institutionellen Standards, war bewusst. Kein Detail der Gründung — eine Positionierungsentscheidung. Die proprietären Assets, die AEGRYN aufbaut, sind darauf ausgelegt, diesen Standard von ihrer ersten Codezeile an zu erfüllen.",
+      "cta": "Kontakt aufnehmen"
+    },
+    "whatsnext": {
+      "label": "Was als Nächstes kommt",
+      "title": "Das Protokoll entwickelt sich.\nDer Standard hält.",
+      "desc": "AEGRYN zertifiziert und transagiert derzeit SaaS, Anwendungen und Marktplätze unter dem CIFS v2.1-Protokoll. Wir bauen schrittweise ein Netzwerk von Expertenpartnern auf — Anwaltskanzleien, Wirtschaftsprüfer, Cybersicherheitsspezialisten — die bestimmte Berichte mit einer kreuzvalidierten Überprüfung anreichern werden. Eine Blockchain-Verankerungsschicht wird die Nachvollziehbarkeit des Registers im Laufe der Zeit stärken.\n\nZukünftige Erweiterungen — Web3-Assets, proprietäre Datensätze — sind auf der Roadmap. Kein Datum ist festgelegt. Jede Kategorie wird geöffnet, wenn das Protokoll sie mit derselben Strenge wie die aktuelle zertifizieren kann.",
+      "cta": "Aktuelle Sitzungen ansehen"
+    },
+    "cta": {
+      "label": "Mit AEGRYN arbeiten",
+      "seller": {
+        "title": "Sie verkaufen einen Tech-Asset.",
+        "desc": "Ein AEGRYN-Berater antwortet innerhalb von 24 Stunden.",
+        "btn": "Asset zur Zertifizierung einreichen",
+        "href": "/grade/submit"
+      },
+      "buyer": {
+        "title": "Sie suchen eine Akquisition.",
+        "desc": "Unser Katalog ist qualifizierten Käufern vorbehalten.",
+        "btn": "Käuferbewerbung einreichen",
+        "href": "/auction/buy"
+      },
+      "partner": {
+        "title": "Sie sind potenzieller Partner.",
+        "desc": "Anwaltskanzleien, Wirtschaftsprüfer, Cybersicherheitsspezialisten, M&A-Boutiquen, PE-Fonds.",
+        "btn": "Partnerschaften entdecken",
+        "href": "/alliances"
+      }
     }
   },
   "career": {

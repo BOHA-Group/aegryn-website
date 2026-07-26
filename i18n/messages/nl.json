@@ -327,25 +327,64 @@
     "hero": {
       "label": "Over AEGRYN",
       "title": "De vertrouwensinfrastructuur\nvoor Europees tech-M&A.",
-      "desc": "AEGRYN bouwt propriëtaire tech-assets, certificeert ze onder een onafhankelijk label en transageert ze via een vertrouwelijk proces tussen gekwalificeerde verkopers en kopers."
+      "desc": "Certificering. Discretie. Permanentie.\nDrie principes die een naam — en een bedrijf — hebben gevormd."
+    },
+    "name": {
+      "label": "De naam",
+      "title": "Drie oeroude woorden.\nEén identiteit.",
+      "roots": [
+        {
+          "word": "AEGIS",
+          "meaning": "Het goddelijke schild. Symbool van bescherming, autoriteit en legitimiteit. Handelen onder de aegis van iets betekent handelen onder een certificerende autoriteit — wiens standaard anderen vertrouwen."
+        },
+        {
+          "word": "AEGIR",
+          "meaning": "De godheid die de zeeën en hun stromen beheerste. Meester van de stromen — van wat zich beweegt tussen oevers, tussen partijen, tussen waarde en de erkenning ervan."
+        },
+        {
+          "word": "AEON",
+          "meaning": "Eeuwigheid. De lange tijdspanne. Wat voortduurt voorbij cycli, trends en financieringsrondes."
+        }
+      ],
+      "synthesis": "Drie woorden uit drie beschavingen. Één synthese: een entiteit die beschermt (AEGIS), stromen faciliteert (AEGIR) en bouwt voor permanentie (AEON). AEGRYN.",
+      "formerly": "AEGRYN was voorheen bekend als BOHA-Group. Naarmate de positionering van het bedrijf scherper werd — van bouwer van digitale assets naar certificerings- en transactie-infrastructuur — deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet."
     },
     "vision": {
       "label": "Onze visie",
-      "text": "De waarde van een tech-asset wordt structureel onderschat bij gebrek aan een geloofwaardig certificeringsreferentiekader. Verkopers weten niet tegen welke prijs te verkopen. Kopers weten niet wat ze kopen. AEGRYN is dat kader — gebouwd met propriëtair IP en een onafhankelijk evaluatieprotocol."
+      "text": "De Europese tech-M&A-markt heeft solide fundamenten — ervaren adviseurs, rigoureuze due diligence, institutioneel kapitaal. Wat ontbrak was een gestandaardiseerd, onafhankelijk certificeringskader: een gemeenschappelijke, verifieerbare referentie waarop beide kanten van een transactie kunnen vertrouwen voordat de onderhandelingen beginnen.\n\nAEGRYN is dat kader — geen vervanging van wat al werkt, maar de infrastructuurlaag die structureel ontbrak."
+    },
+    "contribution": {
+      "label": "Onze bijdrage",
+      "title": "Geen vervanging.\nEen infrastructuurlaag.",
+      "desc": "Rigoureuze tech-M&A-transacties bestaan al. AEGRYN vervangt niet de adviseurs, advocaten en accountants die ze structureren. Het voegt toe wat structureel ontbrak: een onafhankelijke grade, uitgegeven vóór elke notering, die beide partijen een gecertificeerd, gedocumenteerd startpunt geeft. Minder tijd debatteren over fundamentele waarde. Meer tijd om te sluiten.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Een grade vóór een prijs",
+          "desc": "De AEGRYN C/I/F/S grade wordt vastgesteld vóór elke notering, vóór elke onderhandeling. Geen waarderingsopinie — een certificering van wat de asset daadwerkelijk is, gedocumenteerd, geversioneerd en reproduceerbaar. De prijs volgt de grade. De grade hangt er niet van af."
+        },
+        {
+          "num": "02",
+          "title": "Een gesloten kring, geen marktplaats",
+          "desc": "Elke verkoper in de AEGRYN-catalogus heeft de certificering doorstaan. Elke koper heeft financiële capaciteit aangetoond. Discretie is structureel — geen bovenop toegevoegde functie, maar de bedrijfscondities waaruit alles voortkomt."
+        },
+        {
+          "num": "03",
+          "title": "Zwitserse institutionele standaarden",
+          "desc": "Zwitsers recht regelt elke transactie. Escrow wordt aangehouden door een derde bank — AEGRYN raakt de fondsen nooit aan. Documentatie is bij elke overdracht volledig. Dit zijn bedrijfscondities, geen beloften."
+        }
+      ]
     },
     "mission": {
-      "label": "Onze missie",
-      "title": "Drie activiteiten. Eén marktstandaard.",
-      "p1": "Aegryn verkoopt geen projecten. We bouwen assets. Elk product dat we lanceren is ontworpen om te duren, langetermijnwaarde te genereren en economische cycli te doorstaan.",
-      "p2": "Ons model is gebaseerd op volledig eigendom van onze digitale assets, beheerd in een soevereine omgeving.",
-      "p3": "Zwitserland is niet alleen een adres. Het is onze standaard: neutraliteit, precisie, duurzaamheid.",
+      "label": "Drie disciplines",
+      "title": "Drie disciplines.\nEén marktstandaard.",
       "create": {
         "title": "BUILD",
-        "desc": "Propriëtaire, certificeerbare, overdraagbare tech-assets bouwen. Geregistreerd IP, gedocumenteerde codebase, soevereine stack."
+        "desc": "Propriëtaire, certificeerbare, overdraagbare tech-assets. Geregistreerd IP, gedocumenteerde codebase, soevereine stack."
       },
       "simplify": {
         "title": "GRADE",
-        "desc": "Onafhankelijk en objectief certificeren. Meer weigeren dan accepteren. Een reproduceerbare, traceerbare, conclusieve grade."
+        "desc": "Onafhankelijk certificeren. Meer weigeren dan accepteren. Een reproduceerbare, traceerbare en definitieve grade."
       },
       "embrace": {
         "title": "AUCTION",
@@ -359,35 +398,63 @@
       "precision": {
         "label": "01",
         "title": "Precisie",
-        "desc": "Elke beslissing is gedocumenteerd, gemeten en traceerbaar."
+        "desc": "Elke beslissing is gedocumenteerd, gemeten en traceerbaar. De AEGRYN Grade is geen mening — het is een protocol. Twee analisten, hetzelfde protocol, dezelfde grade."
       },
       "durability": {
         "label": "02",
         "title": "Duurzaamheid",
-        "desc": "We bouwen voor de lange termijn, niet voor de volgende financieringsronde."
+        "desc": "We bouwen voor het decennium, niet voor het kwartaal. Elk asset in het AEGRYN-ecosysteem is ontworpen om over tien jaar certificeerbaar te zijn — niet alleen vandaag."
       },
       "sovereignty": {
         "label": "03",
         "title": "Soevereiniteit",
-        "desc": "Onze assets, onze infrastructuur, onze data. Geen kritieke externe afhankelijkheden."
+        "desc": "Onze assets, onze infrastructuur, onze data. Geen kritieke externe afhankelijkheden. Zwitsers recht. Europese hosting. Volledige controle."
       },
-      "transparency": {
+      "independence": {
         "label": "04",
-        "title": "Transparantie",
-        "desc": "Naar onze partners, gebruikers en de markt."
+        "title": "Onafhankelijkheid",
+        "desc": "De analist die een asset certificeert heeft geen financieel belang bij de transactie die volgt. Deze scheiding is geen beleid — het is de structurele voorwaarde die de grade überhaupt waardevol maakt."
       }
-    },
-    "founder": {
-      "label": "De oprichter",
-      "role": "Oprichter — AEGRYN",
-      "bio1": "Yohann Bollack is ondernemer, builder en tech-M&A-strateeg. Hij richtte AEGRYN op met een eenvoudige overtuiging: de Europese techmarkt verdient zijn eigen vertrouwensinfrastructuur — onafhankelijke certificering, vertrouwelijke transacties, gedocumenteerde overdrachten.",
-      "bio2": "Hij leidt een propriëtair asset-ecosysteem dat AI, marktplaatsen, logistiek en sociale netwerken omvat — allemaal van meet af aan ontworpen om certificeerbaar en overdraagbaar te zijn.",
-      "cta": "Contact opnemen"
     },
     "swiss": {
       "groupLabel": "AEGRYN",
-      "title": "Geworteld in Zwitserland. Europese referentie.",
+      "title": "Geworteld in Zwitserland.\nDe Europese referentie.",
+      "desc": "Zwitserland werd bewust gekozen — niet voor zijn incorporatievoordelen, maar voor zijn institutionele standaarden: de strengheid van het Zwitserse recht, de discretie van zijn financieel ecosysteem en de neutraliteit die het tot een geloofwaardig anker maakt voor grensoverschrijdende transacties tussen een Franse verkoper, een Duitse koper en een Luxemburgs fonds. Elke AEGRYN-transactie valt onder Zwitsers recht, ongeacht de nationaliteit van de partijen of de herkomst van de asset.",
       "cta": "Catalogus bekijken"
+    },
+    "founder": {
+      "label": "De oprichtende overtuiging",
+      "title": "Van binnenuit gebouwd.",
+      "bio1": "AEGRYN werd opgericht door een builder die jaren had besteed aan het bouwen, auditen en structureren van digitale assets — en herhaaldelijk dezelfde kloof observeerde: het ontbreken van een gestandaardiseerde, onafhankelijke referentie waarop beide kanten van een tech-transactie gelijkelijk konden vertrouwen.",
+      "bio2": "De keuze om die referentie in Zwitserland te verankeren, onder Zwitsers recht en institutionele standaarden, was bewust. Geen detail van incorporatie — een positioneringskeuze. De propriëtaire assets die AEGRYN bouwt zijn ontworpen om aan die standaard te voldoen vanaf hun eerste coderegel.",
+      "cta": "Contact opnemen"
+    },
+    "whatsnext": {
+      "label": "Wat er hierna komt",
+      "title": "Het protocol evolueert.\nDe standaard houdt stand.",
+      "desc": "AEGRYN certificeert en transageert momenteel SaaS, applicaties en marktplaatsen onder het CIFS v2.1-protocol. We bouwen progressief een netwerk van expertpartners op — advocatenkantoren, gecertificeerde accountants, cyberbeveiligingsspecialisten — die bepaalde rapporten zullen verrijken met een kruisgevalideerde beoordeling. Een blockchain-verankeringslaag zal de traceerbaarheid van het register in de loop der tijd versterken.\n\nToekomstige uitbreidingen — Web3-assets, propriëtaire datasets — staan op de roadmap. Er is geen datum vastgesteld. Elke categorie wordt geopend wanneer het protocol het met dezelfde strengheid als de huidige kan certificeren.",
+      "cta": "Huidige sessies bekijken"
+    },
+    "cta": {
+      "label": "Werken met AEGRYN",
+      "seller": {
+        "title": "U verkoopt een tech-asset.",
+        "desc": "Een AEGRYN-adviseur reageert binnen 24u.",
+        "btn": "Uw asset indienen voor certificering",
+        "href": "/grade/submit"
+      },
+      "buyer": {
+        "title": "U wilt acquiseren.",
+        "desc": "Onze catalogus is voorbehouden aan gekwalificeerde kopers.",
+        "btn": "Een kopersaanvraag indienen",
+        "href": "/auction/buy"
+      },
+      "partner": {
+        "title": "U bent een potentiële partner.",
+        "desc": "Advocatenkantoren, accountants, cyberbeveiligingsspecialisten, M&A-boutiques, PE-fondsen.",
+        "btn": "Partnerschappen ontdekken",
+        "href": "/alliances"
+      }
     }
   },
   "career": {

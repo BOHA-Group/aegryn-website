@@ -327,25 +327,64 @@
     "hero": {
       "label": "Sobre AEGRYN",
       "title": "La infraestructura de confianza\ndel M&A tech europeo.",
-      "desc": "AEGRYN construye activos tech propietarios, los certifica bajo un label independiente, y los transacciona a través de un proceso confidencial entre vendedores cualificados y adquirentes."
+      "desc": "Certificación. Discreción. Permanencia.\nTres principios que forjaron un nombre — y una empresa."
+    },
+    "name": {
+      "label": "El nombre",
+      "title": "Tres palabras antiguas.\nUna identidad.",
+      "roots": [
+        {
+          "word": "AEGIS",
+          "meaning": "El escudo divino. Símbolo de protección, autoridad y legitimidad. Actuar bajo la égida de algo es actuar bajo una autoridad certificadora — cuyo estándar otros confían."
+        },
+        {
+          "word": "AEGIR",
+          "meaning": "La deidad que comandaba los mares y sus corrientes. Maestro de los flujos — de lo que se mueve entre orillas, entre partes, entre el valor y su reconocimiento."
+        },
+        {
+          "word": "AEON",
+          "meaning": "Eternidad. El largo plazo. Lo que perdura más allá de los ciclos, las tendencias y las rondas de financiación."
+        }
+      ],
+      "synthesis": "Tres palabras de tres civilizaciones. Una síntesis: una entidad que protege (AEGIS), facilita flujos (AEGIR) y construye para la permanencia (AEON). AEGRYN.",
+      "formerly": "AEGRYN era conocida anteriormente como BOHA-Group. A medida que el posicionamiento de la empresa se afiló — de constructor de activos digitales a infraestructura de certificación y transacción — también lo hizo su identidad. El nombre cambió. La convicción no."
     },
     "vision": {
       "label": "Nuestra visión",
-      "text": "El valor de un activo tech está estructuralmente subestimado por falta de un referencial de certificación creíble. Los vendedores no saben a qué precio ceder. Los adquirentes no saben qué están comprando. AEGRYN es ese referencial — construido con IP propietaria y un protocolo de evaluación independiente."
+      "text": "El mercado europeo de M&A tech tiene bases sólidas — asesores experimentados, due diligence rigurosa, capital institucional. Lo que le faltaba era un marco de certificación estandarizado e independiente: una referencia común y verificable en la que ambas partes de una transacción puedan apoyarse antes de que comiencen las negociaciones.\n\nAEGRYN es ese marco — no un reemplazo de lo que ya funciona, sino la capa de infraestructura que estaba estructuralmente ausente."
+    },
+    "contribution": {
+      "label": "Nuestra contribución",
+      "title": "No un reemplazo.\nUna capa de infraestructura.",
+      "desc": "Las transacciones rigurosas de M&A tech ya existen. AEGRYN no reemplaza a los asesores, abogados y contables que las estructuran. Añade lo que faltaba estructuralmente: un grade independiente, emitido antes de cualquier listado, que da a ambas partes un punto de partida certificado y documentado. Menos tiempo debatiendo el valor fundamental. Más tiempo cerrando.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Un grade antes que un precio",
+          "desc": "El grade C/I/F/S de AEGRYN se establece antes de cualquier listado, antes de cualquier negociación. No es una opinión de valoración — es una certificación de lo que el activo realmente es, documentada, versionada y reproducible. El precio sigue al grade. El grade no depende de él."
+        },
+        {
+          "num": "02",
+          "title": "Un círculo cerrado, no un marketplace",
+          "desc": "Cada vendedor en el catálogo AEGRYN ha pasado la certificación. Cada comprador ha demostrado capacidad financiera. La discreción es estructural — no una característica añadida encima, sino la condición operativa de la que todo lo demás se deriva."
+        },
+        {
+          "num": "03",
+          "title": "Estándares institucionales suizos",
+          "desc": "El derecho suizo rige cada transacción. El escrow lo mantiene un banco tercero — AEGRYN nunca toca los fondos. La documentación está completa en cada transferencia. Estas son condiciones operativas, no promesas."
+        }
+      ]
     },
     "mission": {
-      "label": "Nuestra misión",
-      "title": "Tres negocios. Un estándar de mercado.",
-      "p1": "Aegryn no vende proyectos. Construimos activos. Cada producto que lanzamos está diseñado para durar, generar valor a largo plazo y resistir los ciclos económicos.",
-      "p2": "Nuestro modelo se basa en la propiedad total de nuestros activos digitales, operados en un entorno soberano.",
-      "p3": "Suiza no es solo una dirección. Es nuestro estándar: neutralidad, precisión, durabilidad.",
+      "label": "Tres disciplinas",
+      "title": "Tres disciplinas.\nUn estándar de mercado.",
       "create": {
         "title": "BUILD",
-        "desc": "Construir activos tech propietarios, certificables, transferibles. IP registrada, codebase documentada, stack soberana."
+        "desc": "Activos tech propietarios, certificables, transferibles. IP registrada, codebase documentada, stack soberana."
       },
       "simplify": {
         "title": "GRADE",
-        "desc": "Certificar de forma independiente y documentada. Rechazar más que aceptar. Un grade objetivo, reproducible, oponible."
+        "desc": "Certificar de forma independiente. Rechazar más que aceptar. Un grade reproducible, trazable y definitivo."
       },
       "embrace": {
         "title": "AUCTION",
@@ -359,35 +398,63 @@
       "precision": {
         "label": "01",
         "title": "Precisión",
-        "desc": "Cada decisión está documentada, medida y trazable."
+        "desc": "Cada decisión está documentada, medida y trazable. El Grade AEGRYN no es una opinión — es un protocolo. Dos analistas, mismo protocolo, mismo grade."
       },
       "durability": {
         "label": "02",
         "title": "Durabilidad",
-        "desc": "Construimos para el largo plazo, no para la próxima ronda de financiación."
+        "desc": "Construimos para la década, no para el trimestre. Cada activo en el ecosistema AEGRYN está diseñado para ser certificable en diez años — no solo hoy."
       },
       "sovereignty": {
         "label": "03",
         "title": "Soberanía",
-        "desc": "Nuestros activos, nuestra infraestructura, nuestros datos. Sin dependencias externas críticas."
+        "desc": "Nuestros activos, nuestra infraestructura, nuestros datos. Sin dependencias externas críticas. Derecho suizo. Alojamiento europeo. Control total."
       },
-      "transparency": {
+      "independence": {
         "label": "04",
-        "title": "Transparencia",
-        "desc": "Hacia nuestros socios, usuarios y el mercado."
+        "title": "Independencia",
+        "desc": "El analista que certifica un activo no tiene ningún interés financiero en la transacción que sigue. Esta separación no es una política — es la condición estructural que hace que el grade valga algo."
       }
-    },
-    "founder": {
-      "label": "El fundador",
-      "role": "Fundador — AEGRYN",
-      "bio1": "Yohann Bollack es emprendedor, builder y estratega de M&A tech. Funda AEGRYN con una convicción simple: el mercado tech europeo merece su propia infraestructura de confianza — certificación independiente, transacciones confidenciales, transferencias documentadas.",
-      "bio2": "Dirige un ecosistema de activos propietarios que abarca IA, marketplaces, logística y redes sociales — todos diseñados desde el origen para ser certificables y transferibles.",
-      "cta": "Ponerse en contacto"
     },
     "swiss": {
       "groupLabel": "AEGRYN",
-      "title": "Arraigado en Suiza. Referencia en Europa.",
+      "title": "Arraigado en Suiza.\nLa referencia europea.",
+      "desc": "Suiza fue elegida deliberadamente — no por sus ventajas de constitución, sino por sus estándares institucionales: el rigor del derecho suizo, la discreción de su ecosistema financiero y la neutralidad que la convierte en un ancla creíble para transacciones transfronterizas entre un vendedor francés, un comprador alemán y un fondo luxemburgués. Cada transacción AEGRYN se rige por el derecho suizo, independientemente de la nacionalidad de las partes o el origen del activo.",
       "cta": "Ver el catálogo"
+    },
+    "founder": {
+      "label": "La convicción fundadora",
+      "title": "Construido desde dentro.",
+      "bio1": "AEGRYN fue fundada por un builder que había pasado años construyendo, auditando y estructurando activos digitales — y observando repetidamente la misma brecha: la ausencia de una referencia estandarizada e independiente en la que ambas partes de una transacción tech pudieran confiar igualmente.",
+      "bio2": "La elección de anclar esa referencia en Suiza, bajo el derecho suizo y los estándares institucionales, fue deliberada. No un detalle de constitución — una elección de posicionamiento. Los activos propietarios que construye AEGRYN están diseñados para cumplir ese estándar desde su primera línea de código.",
+      "cta": "Ponerse en contacto"
+    },
+    "whatsnext": {
+      "label": "Lo que viene después",
+      "title": "El protocolo evoluciona.\nEl estándar se mantiene.",
+      "desc": "AEGRYN certifica y transacciona actualmente SaaS, aplicaciones y marketplaces bajo el protocolo CIFS v2.1. Estamos construyendo progresivamente una red de socios expertos — bufetes de abogados, contables certificados, especialistas en ciberseguridad — que enriquecerán ciertos informes con una revisión de validación cruzada. Una capa de anclaje blockchain reforzará la trazabilidad del registro con el tiempo.\n\nExtensiones futuras — activos Web3, conjuntos de datos propietarios — están en el roadmap. No hay fecha fijada. Cada categoría se abrirá cuando el protocolo pueda certificarla con el mismo rigor que la actual.",
+      "cta": "Ver sesiones actuales"
+    },
+    "cta": {
+      "label": "Trabajar con AEGRYN",
+      "seller": {
+        "title": "Está vendiendo un activo tech.",
+        "desc": "Un asesor AEGRYN responderá en 24h.",
+        "btn": "Enviar su activo para certificación",
+        "href": "/grade/submit"
+      },
+      "buyer": {
+        "title": "Está buscando adquirir.",
+        "desc": "Nuestro catálogo está reservado para compradores cualificados.",
+        "btn": "Enviar una solicitud de comprador",
+        "href": "/auction/buy"
+      },
+      "partner": {
+        "title": "Es un socio potencial.",
+        "desc": "Bufetes de abogados, contables, especialistas en ciberseguridad, boutiques M&A, fondos PE.",
+        "btn": "Descubrir asociaciones",
+        "href": "/alliances"
+      }
     }
   },
   "career": {

@@ -11,15 +11,16 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
-    title: 'About Aegryn | Structuring the Digital Economy',
-    description: 'Learn how we build and operate digital ecosystems and provide selective advisory in Data, AI and Cybersecurity across Europe.',
+    title: 'About Aegryn | The trust infrastructure for European tech M&A',
+    description: 'Certification. Discretion. Permanence. Three principles that shaped a name — and a company. AEGRYN is the independent certification and transaction infrastructure for European tech M&A.',
     path: '/about',
     locale,
   })
 }
 
-const values = ['precision', 'durability', 'sovereignty', 'transparency'] as const
+const values = ['precision', 'durability', 'sovereignty', 'independence'] as const
 const missionPillars = ['create', 'simplify', 'embrace'] as const
+const ctaProfiles = ['seller', 'buyer', 'partner'] as const
 
 export default function AboutPage() {
   const t = useTranslations('about')
@@ -40,17 +41,51 @@ export default function AboutPage() {
                 {t('hero.label')}
               </p>
               <h1
-                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8"
+                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8 whitespace-pre-line"
                 style={{ fontSize: 'clamp(52px,6.5vw,88px)' }}
               >
                 {t('hero.title')}
               </h1>
-              <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl">
+              <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl whitespace-pre-line">
                 {t('hero.desc')}
               </p>
             </div>
-            {/* Aegryn logo — floated right of title block, animated scroll zoom-in */}
             <AboutHeroLogo />
+          </div>
+        </div>
+      </section>
+
+      {/* Name — Etymology */}
+      <section className="border-b border-ag-border">
+        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
+            / {t('name.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] max-w-2xl mb-16 whitespace-pre-line"
+            style={{ fontSize: 'clamp(32px,4vw,56px)' }}
+          >
+            {t('name.title')}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border mb-16">
+            {([0, 1, 2] as const).map((i) => (
+              <div key={i} className="bg-ag-white p-10">
+                <p className="font-sans font-bold text-ag-black tracking-[0.08em] text-[22px] mb-4">
+                  {t(`name.roots.${i}.word`)}
+                </p>
+                <p className="text-[14px] text-ag-gray leading-relaxed">
+                  {t(`name.roots.${i}.meaning`)}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="max-w-3xl space-y-5">
+            <p className="text-[16px] text-ag-black leading-relaxed font-semibold">
+              {t('name.synthesis')}
+            </p>
+            <p className="text-[14px] text-ag-gray leading-relaxed">
+              {t('name.formerly')}
+            </p>
           </div>
         </div>
       </section>
@@ -63,7 +98,7 @@ export default function AboutPage() {
         }
         visionText={
           <p
-            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15]"
+            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15] whitespace-pre-line"
             style={{ fontSize: 'clamp(22px,2.5vw,32px)' }}
           >
             {t('vision.text')}
@@ -125,26 +160,150 @@ export default function AboutPage() {
         }
       />
 
-      {/* CTA */}
-      <section className="bg-ag-navy py-28 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
-          <div>
-            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">
-              {t('swiss.groupLabel')}
-            </p>
+      {/* Contribution */}
+      <section className="border-b border-ag-border">
+        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
+            / {t('contribution.label')}
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
             <h2
-              className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl"
-              style={{ fontSize: 'clamp(26px,3vw,48px)' }}
+              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] whitespace-pre-line"
+              style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
             >
-              {t('swiss.title')}
+              {t('contribution.title')}
             </h2>
+            <p className="text-[15px] text-ag-gray leading-relaxed self-end">
+              {t('contribution.desc')}
+            </p>
           </div>
-          <Link
-            href="/what-we-build"
-            className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
-          >
-            {t('swiss.cta')} <ArrowUpRight size={14} />
-          </Link>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border">
+            {([0, 1, 2] as const).map((i) => (
+              <div key={i} className="bg-ag-white p-10">
+                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-6">
+                  {t(`contribution.items.${i}.num`)}
+                </p>
+                <h3 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-snug mb-4">
+                  {t(`contribution.items.${i}.title`)}
+                </h3>
+                <p className="text-[13px] text-ag-gray leading-relaxed">
+                  {t(`contribution.items.${i}.desc`)}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Swiss */}
+      <section className="bg-ag-navy py-28 px-6 md:px-12 border-b border-ag-navy">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">
+                {t('swiss.groupLabel')}
+              </p>
+              <h2
+                className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] whitespace-pre-line mb-8"
+                style={{ fontSize: 'clamp(26px,3vw,48px)' }}
+              >
+                {t('swiss.title')}
+              </h2>
+              <Link
+                href="/auction"
+                className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+              >
+                {t('swiss.cta')} <ArrowUpRight size={14} />
+              </Link>
+            </div>
+            <p className="text-[15px] text-white/70 leading-relaxed self-center">
+              {t('swiss.desc')}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder */}
+      <section className="border-b border-ag-border">
+        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
+            / {t('founder.label')}
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <h2
+              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
+              style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+            >
+              {t('founder.title')}
+            </h2>
+            <div className="space-y-5">
+              <p className="text-[15px] text-ag-gray leading-relaxed">{t('founder.bio1')}</p>
+              <p className="text-[15px] text-ag-gray leading-relaxed">{t('founder.bio2')}</p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all mt-4"
+              >
+                {t('founder.cta')} <ArrowUpRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What's next */}
+      <section className="border-b border-ag-border bg-ag-off-white/60">
+        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
+            / {t('whatsnext.label')}
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <h2
+              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] whitespace-pre-line"
+              style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+            >
+              {t('whatsnext.title')}
+            </h2>
+            <div className="space-y-5">
+              <p className="text-[15px] text-ag-gray leading-relaxed whitespace-pre-line">
+                {t('whatsnext.desc')}
+              </p>
+              <Link
+                href="/auction"
+                className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+              >
+                {t('whatsnext.cta')} <ArrowUpRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA tripartite */}
+      <section className="border-b border-ag-border">
+        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-16">
+            / {t('cta.label')}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border">
+            {ctaProfiles.map((profile) => (
+              <div key={profile} className="bg-ag-white p-10 flex flex-col gap-6">
+                <div className="flex-1">
+                  <h3 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-snug mb-3">
+                    {t(`cta.${profile}.title`)}
+                  </h3>
+                  <p className="text-[13px] text-ag-gray leading-relaxed">
+                    {t(`cta.${profile}.desc`)}
+                  </p>
+                </div>
+                <Link
+                  href={t(`cta.${profile}.href`)}
+                  className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-5 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all self-start"
+                >
+                  {t(`cta.${profile}.btn`)} <ArrowUpRight size={13} />
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>
