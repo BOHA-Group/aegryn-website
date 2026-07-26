@@ -3440,7 +3440,7 @@
     "s6": "Nous conservons vos données aussi longtemps que nécessaire pour l'exécution des services, le respect de nos obligations légales (obligations LCB-FT : 10 ans minimum après la fin de la relation commerciale), et la protection contre d'éventuelles réclamations. Les données anonymisées du catalogue historique sont conservées indéfiniment.",
     "s7Title": "Vos droits",
     "s7": "Conformément à la LPD suisse et au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité.",
-    "s7Contact": "Pour exercer ces droits : dataprivacy@aegryn.com",
+    "s7Contact": "Pour exercer ces droits : legal@boha-group.com",
     "s8Title": "Sécurité de vos données",
     "s8": "Mesures techniques et organisationnelles : chiffrement des données sensibles au repos et en transit, contrôle d'accès strict par rôle (RLS Supabase), journalisation des accès à la data room, authentification forte (2FA) pour l'accès admin. En cas de violation, notification des autorités et des personnes concernées conformément à la LPD et au RGPD.",
     "s9Title": "Cookies",
@@ -3450,7 +3450,7 @@
     "authorityCH": "Suisse : PFPDT — www.edoeb.admin.ch",
     "authorityFR": "France : CNIL — www.cnil.fr",
     "authorityEU": "UE : EDPB — www.edpb.europa.eu",
-    "contactEmail": "dataprivacy@aegryn.com",
+    "contactEmail": "legal@boha-group.com",
     "content": {
       "intro": {
         "h": "Introduction",
@@ -3491,7 +3491,7 @@
       },
       "whoWeAre": {
         "h": "Qui sommes-nous et comment nous contacter ?",
-        "p": "Aegryn est le nom de notre entreprise. Si vous avez des questions sur le traitement des données relatives à notre site web, vous pouvez nous contacter par courrier : Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. Vous pouvez également nous contacter par e-mail à legal@aegryn.com ou via notre formulaire de contact."
+        "p": "Aegryn est le nom de notre entreprise. Si vous avez des questions sur le traitement des données relatives à notre site web, vous pouvez nous contacter par courrier : Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. Vous pouvez également nous contacter par e-mail à legal@boha-group.com ou via notre formulaire de contact."
       },
       "ourRole": {
         "h": "Quel est notre rôle en matière de protection des données ?",
@@ -3540,7 +3540,7 @@
       },
       "security": {
         "h": "Comment protégeons-nous vos données ?",
-        "p": "Nous prenons des mesures de sécurité appropriées, telles que le chiffrement, pour protéger vos données personnelles. Si vous pensez que vos données personnelles ont été compromises, veuillez nous en informer immédiatement à legal@aegryn.com."
+        "p": "Nous prenons des mesures de sécurité appropriées, telles que le chiffrement, pour protéger vos données personnelles. Si vous pensez que vos données personnelles ont été compromises, veuillez nous en informer immédiatement à legal@boha-group.com."
       },
       "storage": {
         "h": "Où vos données sont-elles stockées et combien de temps ?",
@@ -3598,17 +3598,17 @@
     },
     "label": "Sécurité en ligne",
     "subtitle": "Comment vous protéger contre la fraude",
-    "contactEmail": "keepsecure@aegryn.com",
+    "contactEmail": "contact@boha-group.com",
     "intro": "Lorsque vous utilisez nos services, nous pouvons vous demander des informations relatives à votre identité, vos coordonnées bancaires et vos documents d'entité. Nous utilisons des technologies avancées pour protéger vos données, mais nous vous recommandons également d'adopter des pratiques de sécurité élémentaires.",
     "s1Title": "Usurpation d'identité de marque",
     "s1": "Des fraudeurs peuvent créer de faux sites, profils sur les réseaux sociaux ou emails semblant provenir d'AEGRYN dans le but de vous inciter à effectuer des paiements frauduleux.",
-    "s1Official": "Nos emails officiels proviennent exclusivement du domaine @aegryn.com. Toute demande de paiement provenant d'un autre domaine est frauduleuse.",
+    "s1Official": "Nos emails officiels proviennent exclusivement du domaine @boha-group.com. Toute demande de paiement provenant d'un autre domaine est frauduleuse.",
     "s1NeverTitle": "AEGRYN ne demande jamais :",
     "s1Never1": "De versement de dépôt à un compte personnel",
     "s1Never2": "De paiement anticipé non prévu dans le mandat signé",
     "s1Never3": "Vos identifiants de connexion par email ou téléphone",
     "s2Title": "Identifier les communications frauduleuses",
-    "s2": "Vérifiez que l'adresse email expéditeur est exactement @aegryn.com (pas @aegryn.net, @aegryn-group.com ou toute variante), que les liens dans les emails pointent bien vers aegryn.com, et que les demandes de paiement correspondent à ce qui est prévu dans votre mandat ou contrat signé.",
+    "s2": "Vérifiez que l'adresse email expéditeur est exactement @boha-group.com (pas @boha-group.net ou toute variante), que les liens dans les emails pointent bien vers aegryn.com, et que les demandes de paiement correspondent à ce qui est prévu dans votre mandat ou contrat signé.",
     "s2Doubt": "En cas de doute, utilisez le formulaire de contact sur aegryn.com/contact — ne répondez pas à l'email suspect.",
     "s3Title": "Sécuriser votre compte AEGRYN",
     "s3Items": [

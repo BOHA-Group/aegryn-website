@@ -3426,7 +3426,7 @@
     "s6": "We retain your data as long as necessary for service delivery, legal and regulatory compliance (AML obligations: minimum 10 years after end of commercial relationship), and protection against claims. Anonymised historical catalogue data is retained indefinitely.",
     "s7Title": "Your rights",
     "s7": "Under Swiss LPD and GDPR: rights of access, rectification, erasure, objection, restriction and portability.",
-    "s7Contact": "To exercise these rights: dataprivacy@aegryn.com",
+    "s7Contact": "To exercise these rights: legal@boha-group.com",
     "s8Title": "Data security",
     "s8": "Technical and organisational measures: encryption of sensitive data at rest and in transit, role-based access control (Supabase RLS), data room access logging, 2FA for admin access. In case of breach, notification of authorities and affected persons in accordance with Swiss LPD and GDPR.",
     "s9Title": "Cookies",
@@ -3436,7 +3436,7 @@
     "authorityCH": "Switzerland: FDPIC — www.edoeb.admin.ch",
     "authorityFR": "France: CNIL — www.cnil.fr",
     "authorityEU": "EU: EDPB — www.edpb.europa.eu",
-    "contactEmail": "dataprivacy@aegryn.com",
+    "contactEmail": "legal@boha-group.com",
     "content": {
       "intro": {
         "h": "Introduction",
@@ -3477,7 +3477,7 @@
       },
       "whoWeAre": {
         "h": "Who are we and how can you contact us?",
-        "p": "Aegryn is the name of our company. If you have questions about the data processing related to our website, you can contact us by mail: Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. You can also contact us by email at legal@aegryn.com or via our contact form."
+        "p": "Aegryn is the name of our company. If you have questions about the data processing related to our website, you can contact us by mail: Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. You can also contact us by email at legal@boha-group.com or via our contact form."
       },
       "ourRole": {
         "h": "What is our role regarding data protection?",
@@ -3526,7 +3526,7 @@
       },
       "security": {
         "h": "How do we protect your data?",
-        "p": "We take appropriate security measures, such as encryption, to protect your personal data. If you believe your personal data has been compromised, please inform us immediately at legal@aegryn.com."
+        "p": "We take appropriate security measures, such as encryption, to protect your personal data. If you believe your personal data has been compromised, please inform us immediately at legal@boha-group.com."
       },
       "storage": {
         "h": "Where is your data stored and for how long?",
@@ -3584,17 +3584,17 @@
     },
     "label": "Staying secure online",
     "subtitle": "How to protect yourself against fraud",
-    "contactEmail": "keepsecure@aegryn.com",
+    "contactEmail": "contact@boha-group.com",
     "intro": "When using our services, we may ask you for identity, banking and entity documents. We use advanced technology to protect your data, and we recommend you also adopt basic security practices.",
     "s1Title": "Brand impersonation",
     "s1": "Fraudsters may create fake websites, social media profiles or emails appearing to come from AEGRYN to induce you to make fraudulent payments.",
-    "s1Official": "Our official emails come exclusively from the @aegryn.com domain. Any payment request from another domain is fraudulent.",
+    "s1Official": "Our official emails come exclusively from the @boha-group.com domain. Any payment request from another domain is fraudulent.",
     "s1NeverTitle": "AEGRYN will never ask you to:",
     "s1Never1": "Make a deposit payment to a personal account",
     "s1Never2": "Make advance payments not specified in your signed mandate",
     "s1Never3": "Share your login credentials by email or phone",
     "s2Title": "Identifying fraudulent communications",
-    "s2": "Check that: the sender email is exactly @aegryn.com (not @aegryn.net, @aegryn-group.com or any variant), links in emails point to aegryn.com, and payment requests match what is specified in your signed mandate or contract.",
+    "s2": "Check that: the sender email is exactly @boha-group.com (not @boha-group.net or any variant), links in emails point to aegryn.com, and payment requests match what is specified in your signed mandate or contract.",
     "s2Doubt": "If in doubt, use the contact form on aegryn.com/contact — do not reply to the suspicious email.",
     "s3Title": "Securing your AEGRYN account",
     "s3Items": [
