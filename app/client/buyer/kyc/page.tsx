@@ -10,14 +10,28 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-const REQUIRED_DOCS = [
-  { type: 'id_card',                label: 'Pièce d\'identité', desc: 'Carte d\'identité ou passeport en cours de validité.' },
-  { type: 'proof_of_address',       label: 'Justificatif de domicile', desc: 'Moins de 3 mois (facture, relevé bancaire).' },
-  { type: 'proof_of_funds',         label: 'Justificatif de capacité financière', desc: 'Relevé bancaire, attestation de fonds propres ou LOI bancaire.' },
-  { type: 'kbis',                   label: 'Extrait KBIS / RC', desc: 'Si acquisition au nom d\'une entité juridique. Moins de 3 mois.' },
-  { type: 'articles_of_association',label: 'Statuts de la société', desc: 'Document constitutif de l\'entité acquéreuse.' },
-  { type: 'ubo',                    label: 'Bénéficiaires effectifs (UBO)', desc: 'Déclaration des ayants-droits économiques si > 25% des parts.' },
-] as const
+type DocDef = {
+  type: string
+  label: string
+  desc: string
+  conditional?: boolean
+}
+
+const BASE_DOCS: DocDef[] = [
+  { type: 'id_card',                label: 'Pièce d\'identité',                    desc: 'Carte d\'identité ou passeport en cours de validité.' },
+  { type: 'proof_of_address',       label: 'Justificatif de domicile',              desc: 'Moins de 3 mois (facture, relevé bancaire).' },
+  { type: 'proof_of_funds',         label: 'Justificatif de capacité financière',   desc: 'Relevé bancaire, attestation de fonds propres ou LOI bancaire. Doit couvrir le ticket d\'acquisition déclaré à l\'inscription.' },
+  { type: 'kbis',                   label: 'Extrait KBIS / RC',                    desc: 'Si acquisition au nom d\'une entité juridique. Moins de 3 mois.' },
+  { type: 'articles_of_association',label: 'Statuts de la société',                 desc: 'Document constitutif de l\'entité acquéreuse.' },
+  { type: 'ubo',                    label: 'Bénéficiaires effectifs (UBO)',         desc: 'Déclaration des ayants-droits économiques détenant plus de 25% des parts.' },
+]
+
+const REGULATORY_DOC: DocDef = {
+  type:        'regulatory_approval',
+  label:       'Agrément régulateur',
+  desc:        'Agrément FINMA / AMF / FCA ou équivalent. Requis si vous gérez des capitaux tiers (fonds PE/VC, family office).',
+  conditional: true,
+}
 
 const STATUS_CONFIG: Record<string, { label: string; renderIcon: () => React.ReactNode; color: string }> = {
   pending:   { label: 'En attente',         renderIcon: () => <Clock        size={14} className="text-gray-400"    />, color: 'text-gray-400'    },
@@ -48,6 +62,19 @@ export default async function BuyerKycPage() {
   if (!user) redirect('/client/login')
 
   const supa = createServiceClient()
+
+  /* Charger le profil pour d\u00e9tecter la cat\u00e9gorie acqu\u00e9reur */
+  const { data: profile } = await supa
+    .from('profiles')
+    .select('buyer_category')
+    .eq('id', user.id)
+    .single()
+
+  const isPeFund = profile?.buyer_category === 'pe_vc_fund'
+  const REQUIRED_DOCS: DocDef[] = isPeFund
+    ? [...BASE_DOCS, REGULATORY_DOC]
+    : [...BASE_DOCS, { ...REGULATORY_DOC, label: REGULATORY_DOC.label + ' (si applicable)', desc: REGULATORY_DOC.desc + ' Si applicable \u00e0 votre profil.' }]
+
   const { data: docs } = await supa
     .from('kyc_documents')
     .select('id, doc_type, status, rejection_reason, expires_at, file_url, created_at, validated_at')
@@ -64,8 +91,9 @@ export default async function BuyerKycPage() {
   const validatedTypes = new Set(
     (docs ?? []).filter((d) => (d as KycDoc).status === 'validated').map((d) => (d as KycDoc).doc_type)
   )
-  const completedCount = REQUIRED_DOCS.filter(r => validatedTypes.has(r.type)).length
-  const totalRequired  = REQUIRED_DOCS.length
+  const mandatoryDocs  = REQUIRED_DOCS.filter(d => !d.conditional || isPeFund)
+  const completedCount  = mandatoryDocs.filter(r => validatedTypes.has(r.type)).length
+  const totalRequired   = mandatoryDocs.length
   const progressPct    = Math.round((completedCount / totalRequired) * 100)
   const isComplete     = completedCount === totalRequired
 
@@ -107,7 +135,7 @@ export default async function BuyerKycPage() {
 
       {/* Documents */}
       <div className="flex flex-col gap-4">
-        {REQUIRED_DOCS.map(({ type, label, desc }) => {
+        {REQUIRED_DOCS.map(({ type, label, desc, conditional }) => { // eslint-disable-line @typescript-eslint/no-unused-vars
           const latestDoc = docsByType[type]?.[0] ?? null
           const status = latestDoc?.status ?? 'missing'
           const statusCfg = STATUS_CONFIG[status]
@@ -120,6 +148,11 @@ export default async function BuyerKycPage() {
                   <div className="flex items-center gap-2 mb-1">
                     {statusCfg ? statusCfg.renderIcon() : <AlertCircle size={14} className="text-gray-300" />}
                     <p className="font-sans font-semibold text-gray-900 text-[13px]">{label}</p>
+                    {conditional && !isPeFund && (
+                      <span className="font-mono text-[8px] uppercase tracking-widest text-gray-400 border border-gray-200 px-1.5 py-0.5">
+                        Si applicable
+                      </span>
+                    )}
                   </div>
                   <p className="font-sans text-[11px] text-gray-400">{desc}</p>
                   {latestDoc && (

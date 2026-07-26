@@ -24,6 +24,7 @@ export default async function PartnerNav({ unreadCount }: { unreadCount: number 
     {
       label: t('navGroupAccount'),
       items: [
+        { href: '/client/partner/kyc',           label: t('navKyc'),          icon: 'ShieldCheck' },
         { href: '/client/partner/notifications', label: t('navNotifications'), icon: 'Bell',       badge: unreadCount },
         { href: '/client/account',               label: t('navMyAccount'),     icon: 'UserCircle' },
         { href: '/client/account#settings',      label: t('navSettings'),     icon: 'Settings' },

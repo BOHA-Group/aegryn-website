@@ -3,10 +3,10 @@ import { redirect } from 'next/navigation'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { CheckCircle2, Clock, XCircle, AlertCircle, ShieldCheck } from 'lucide-react'
-import SellerKycUploadForm from './SellerKycUploadForm'
+import PartnerKycUploadForm from './PartnerKycUploadForm'
 
 export const metadata: Metadata = {
-  title: 'KYC — Espace Cédant AEGRYN',
+  title: 'KYC — Espace Partenaire AEGRYN',
   robots: { index: false, follow: false },
 }
 
@@ -14,18 +14,50 @@ type DocDef = {
   type: string
   label: string
   desc: string
-  conditional?: boolean
+  optional?: boolean
+  recommended?: boolean
 }
 
 const REQUIRED_DOCS: DocDef[] = [
-  { type: 'id_card',                label: 'Pièce d\'identité du dirigeant',         desc: 'Carte d\'identité ou passeport en cours de validité du représentant légal.' },
-  { type: 'proof_of_address',       label: 'Justificatif de domicile',                desc: 'Moins de 3 mois (facture, relevé bancaire).' },
-  { type: 'kbis',                   label: 'Extrait KBIS / RC',                       desc: 'Extrait officiel du registre du commerce. Moins de 3 mois.' },
-  { type: 'articles_of_association',label: 'Statuts de la société',                   desc: 'Document constitutif de l\'entité cédante.' },
-  { type: 'director_id',            label: 'Identité des co-dirigeants',              desc: 'Pièces d\'identité de tous les dirigeants autres que le contact principal, si applicable.' },
-  { type: 'ubo',                    label: 'Bénéficiaires effectifs (UBO)',           desc: 'Déclaration des ayants-droits économiques détenant plus de 25% des parts.' },
-  { type: 'asset_ownership',        label: 'Justificatif de propriété de l\'actif',  desc: 'Cap table actuelle ou attestation de propriété des actifs incorporels. Requis si l\'actif est porté par une entité différente de la société inscrite.', conditional: true },
+  {
+    type:  'id_card',
+    label: 'Pièce d\'identité du représentant',
+    desc:  'Carte d\'identité nationale ou passeport en cours de validité du contact désigné.',
+  },
+  {
+    type:  'proof_of_address',
+    label: 'Justificatif de domicile',
+    desc:  'Moins de 3 mois (facture, relevé bancaire).',
+  },
+  {
+    type:  'kbis',
+    label: 'Extrait KBIS / RC',
+    desc:  'Extrait officiel du registre du commerce de votre cabinet ou société. Moins de 3 mois.',
+  },
+  {
+    type:  'articles_of_association',
+    label: 'Statuts de la société',
+    desc:  'Document constitutif de votre entité partenaire.',
+  },
+  {
+    type:  'director_id',
+    label: 'Identité des associés / dirigeants',
+    desc:  'Pièces d\'identité des associés ou dirigeants détenant plus de 25% des parts, si différents du contact principal.',
+  },
+  {
+    type:  'ubo',
+    label: 'Bénéficiaires effectifs (UBO)',
+    desc:  'Déclaration des ayants-droits économiques détenant plus de 25% des parts.',
+  },
+  {
+    type:        'professional_insurance',
+    label:       'RC Pro / Assurance professionnelle',
+    desc:        'Attestation d\'assurance responsabilité civile professionnelle. Requis pour les partenaires impliqués dans la co-validation de grade.',
+    recommended: true,
+  },
 ]
+
+const REQUIRED_COUNT = REQUIRED_DOCS.filter(d => !d.recommended).length
 
 const STATUS_CONFIG: Record<string, { label: string; renderIcon: () => React.ReactNode; color: string }> = {
   pending:   { label: 'En attente',         renderIcon: () => <Clock        size={14} className="text-gray-400"    />, color: 'text-gray-400'    },
@@ -36,7 +68,7 @@ const STATUS_CONFIG: Record<string, { label: string; renderIcon: () => React.Rea
 }
 
 function fmtDate(d: unknown) {
-  if (!d || typeof d !== 'string') return '—'
+  if (!d || typeof d !== 'string') return ''
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
 }
 
@@ -51,7 +83,7 @@ type KycDoc = {
   validated_at: string | null
 }
 
-export default async function SellerKycPage() {
+export default async function PartnerKycPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
 
@@ -64,28 +96,27 @@ export default async function SellerKycPage() {
 
   const docsByType = (docs ?? []).reduce<Record<string, KycDoc[]>>((acc, d) => {
     const doc = d as KycDoc
-    const bucket = acc[doc.doc_type] ?? []
-    bucket.push(doc)
-    return { ...acc, [doc.doc_type]: bucket }
-  }, {} as Record<string, KycDoc[]>)
+    acc[doc.doc_type] = [...(acc[doc.doc_type] ?? []), doc]
+    return acc
+  }, {})
 
   const validatedTypes = new Set(
     (docs ?? []).filter(d => (d as KycDoc).status === 'validated').map(d => (d as KycDoc).doc_type)
   )
-  const mandatoryDocs  = REQUIRED_DOCS.filter(d => !d.conditional)
+
+  const mandatoryDocs   = REQUIRED_DOCS.filter(d => !d.recommended)
   const completedCount  = mandatoryDocs.filter(r => validatedTypes.has(r.type)).length
-  const totalRequired   = mandatoryDocs.length
-  const progressPct    = Math.round((completedCount / totalRequired) * 100)
-  const isComplete     = completedCount === totalRequired
+  const progressPct     = Math.round((completedCount / REQUIRED_COUNT) * 100)
+  const isComplete      = completedCount === REQUIRED_COUNT
 
   return (
     <div className="p-8 max-w-3xl">
 
       <div className="mb-8">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Cédant</p>
-        <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">KYC — Vérification cédant</h1>
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
+        <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">KYC — Vérification partenaire</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
-          Documents requis pour valider votre identité et accéder au processus de cession.
+          Documents requis pour valider votre identité et activer votre compte partenaire AEGRYN.
         </p>
       </div>
 
@@ -98,7 +129,7 @@ export default async function SellerKycPage() {
               {isComplete ? 'Dossier KYC complet' : 'Dossier KYC en cours'}
             </p>
           </div>
-          <p className="font-mono text-[11px] text-gray-600">{completedCount}/{totalRequired} validés</p>
+          <p className="font-mono text-[11px] text-gray-600">{completedCount}/{REQUIRED_COUNT} validés</p>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-1.5">
           <div
@@ -108,28 +139,28 @@ export default async function SellerKycPage() {
         </div>
         {!isComplete && (
           <p className="font-sans text-[11px] text-amber-700 mt-2">
-            Complétez votre dossier KYC pour que l&apos;équipe AEGRYN puisse traiter votre dossier de cession.
+            Complétez votre dossier KYC pour que l&apos;équipe AEGRYN puisse activer votre espace partenaire.
           </p>
         )}
       </div>
 
       {/* Documents */}
       <div className="flex flex-col gap-4">
-        {REQUIRED_DOCS.map(({ type, label, desc, conditional }) => {
+        {REQUIRED_DOCS.map(({ type, label, desc, recommended }) => {
           const latestDoc = docsByType[type]?.[0] ?? null
           const status    = latestDoc?.status ?? 'missing'
           const statusCfg = STATUS_CONFIG[status]
 
           return (
-            <div key={type} className="bg-white border border-gray-200">
+            <div key={type} className={`bg-white border ${recommended ? 'border-blue-100' : 'border-gray-200'}`}>
               <div className="p-5 flex items-start justify-between gap-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
                     {statusCfg ? statusCfg.renderIcon() : <AlertCircle size={14} className="text-gray-300" />}
                     <p className="font-sans font-semibold text-gray-900 text-[13px]">{label}</p>
-                    {conditional && (
-                      <span className="font-mono text-[8px] uppercase tracking-widest text-gray-400 border border-gray-200 px-1.5 py-0.5">
-                        Si applicable
+                    {recommended && (
+                      <span className="font-mono text-[8px] uppercase tracking-widest text-blue-500 border border-blue-200 px-1.5 py-0.5">
+                        Recommandé
                       </span>
                     )}
                   </div>
@@ -168,7 +199,7 @@ export default async function SellerKycPage() {
 
               {(status === 'missing' || status === 'rejected' || status === 'expired') && (
                 <div className="border-t border-gray-100 p-5 bg-gray-50">
-                  <SellerKycUploadForm docType={type} userId={user.id} />
+                  <PartnerKycUploadForm docType={type} userId={user.id} />
                 </div>
               )}
             </div>
