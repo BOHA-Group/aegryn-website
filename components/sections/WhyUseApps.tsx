@@ -79,7 +79,7 @@ export function WhyUseApps() {
                 {item.num}
               </p>
               <h3
-                className="why-title font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.1] mb-4 overflow-hidden"
+                className="why-title font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2] pb-[0.15em] mb-4 overflow-hidden"
                 style={{ fontSize: 'clamp(14px,1.15vw,16px)' }}
               >
                 {item.title}

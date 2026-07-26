@@ -164,7 +164,7 @@ export function AssetHeroBannerVideo({ label, title, sub }: AssetHeroBannerVideo
           </p>
           <h2
             ref={headingRef}
-            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] mb-6 overflow-hidden whitespace-pre-line [&_.ahb-line]:overflow-hidden"
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.2] mb-6 pb-[0.2em] whitespace-pre-line [&_.ahb-line]:overflow-hidden"
             style={{ fontSize: 'clamp(40px,5.5vw,80px)' }}
           >
             {title ?? 'Ce que nous\nconstruisons.'}

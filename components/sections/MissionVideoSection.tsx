@@ -139,7 +139,7 @@ export function MissionVideoSection() {
                   {String(i + 1).padStart(2, '0')}
                 </p>
                 <h3
-                  className="mv-title font-sans font-bold tracking-[-0.02em] leading-[1.05] mb-5 overflow-hidden"
+                  className="mv-title font-sans font-bold tracking-[-0.02em] leading-[1.2] pb-[0.15em] mb-5 overflow-hidden"
                   style={{ fontSize: 'clamp(22px,2vw,28px)' }}
                 >
                   {item.title}

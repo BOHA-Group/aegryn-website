@@ -158,7 +158,7 @@ export function ManifestoSection() {
               </p>
               <h2
                 ref={aboutH2Ref}
-                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.12] mb-12 overflow-hidden"
+                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] pb-[0.15em] mb-12 overflow-hidden"
                 style={{ fontSize: 'clamp(34px,4.5vw,58px)' }}
               >
                 {tA('title').split('\n').map((line, i) => (
