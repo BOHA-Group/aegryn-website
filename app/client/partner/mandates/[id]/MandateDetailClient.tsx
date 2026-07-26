@@ -148,7 +148,7 @@ export default function MandateDetailClient({
         <div className="bg-white border border-gray-200 p-6">
           {!isActive ? (
             <p className="font-sans text-[13px] text-gray-400 text-center py-8">
-              Ce mandat est {mandateStatus === 'completed' ? 'terminé' : 'annulé'} — plus de déclaration possible.
+              Ce mandat est {mandateStatus === 'completed' ? 'terminé' : 'annulé'}. Plus de déclaration possible.
             </p>
           ) : (
             <>

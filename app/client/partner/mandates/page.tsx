@@ -96,7 +96,7 @@ export default async function PartnerMandatesPage() {
         <p className="font-sans text-[12px] text-blue-800 leading-relaxed">
           <strong>Comment ça fonctionne :</strong> Vous facturez votre client directement pour vos prestations.
           Pour chaque facture émise, vous déclarez le montant ci-dessous et reversez{' '}
-          <strong>15%</strong> à AEGRYN. AEGRYN ne facture rien au client — vous êtes l&apos;interlocuteur unique.
+          <strong>15%</strong> à AEGRYN. AEGRYN ne facture rien au client : vous êtes l&apos;interlocuteur unique.
         </p>
       </div>
 

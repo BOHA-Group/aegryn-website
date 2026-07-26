@@ -49,7 +49,7 @@ export default function KycUploadForm({ docType }: Props) {
     return (
       <div className="flex items-center gap-2 text-emerald-600">
         <CheckCircle2 size={14} />
-        <span className="font-sans text-[12px]">Document envoyé — en attente de validation.</span>
+        <span className="font-sans text-[12px]">Document envoyé, en attente de validation.</span>
       </div>
     )
   }

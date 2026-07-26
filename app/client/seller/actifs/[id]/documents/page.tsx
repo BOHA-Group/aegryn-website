@@ -118,7 +118,7 @@ export default async function SellerDataRoomPage({ params }: Props) {
           <p className="mt-3 text-[11px] text-gray-400 leading-relaxed">
             Les documents <span className="font-semibold text-red-500">bloquants</span> sont requis pour que l'équipe AEGRYN puisse émettre le rapport de grade.
             Les documents <span className="font-semibold text-amber-600">recommandés</span> impactent positivement votre score.
-            Par défaut, tout document uploadé est <span className="font-semibold">masqué</span> — vous contrôlez la visibilité.
+            Par défaut, tout document uploadé est <span className="font-semibold">masqué</span>. Vous contrôlez la visibilité.
           </p>
         </div>
 

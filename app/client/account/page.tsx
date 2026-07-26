@@ -3,6 +3,8 @@ import { redirect } from 'next/navigation'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import AccountForm from './AccountForm'
+import AnonymiseButton from './AnonymiseButton'
+import DeleteAccountSection from './DeleteAccountSection'
 
 export const metadata: Metadata = {
   title: 'Mon compte — AEGRYN',
@@ -142,26 +144,46 @@ export default async function AccountPage() {
           </form>
         </div>
 
-        {/* RGPD — export + contact */}
+        {/* RGPD — gestion des données personnelles */}
         <div className="bg-white border border-gray-200 p-5 mt-4">
-          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">Données personnelles</p>
-          <div className="flex items-start justify-between gap-4 mb-4">
+          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-4">Gestion des données personnelles</p>
+
+          {/* Export */}
+          <div className="flex items-start justify-between gap-4 pb-4 border-b border-gray-100">
             <div>
               <p className="font-sans text-[13px] text-gray-700">Exporter mes données</p>
               <p className="font-sans text-[11px] text-gray-400 mt-0.5">
-                Art. 20 RGPD / Art. 28 nLPD — fichier JSON téléchargeable.
+                Art. 20 RGPD / Art. 28 nLPD. Fichier JSON de vos données personnelles.
               </p>
             </div>
             {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a href="/api/client/account/export"
               className="font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0">
-              Télécharger
+              Exporter
             </a>
           </div>
-          <p className="font-sans text-[11px] text-gray-400 leading-relaxed border-t border-gray-100 pt-3">
-            Pour demander la suppression ou l&apos;anonymisation de votre compte, contactez{' '}
-            <a href="mailto:legal@boha-group.com" className="text-ag-navy underline">legal@boha-group.com</a>.
-          </p>
+
+          {/* Anonymisation partielle */}
+          <div className="flex items-start justify-between gap-4 py-4 border-b border-gray-100">
+            <div>
+              <p className="font-sans text-[13px] text-gray-700">Anonymiser mes données</p>
+              <p className="font-sans text-[11px] text-gray-400 mt-0.5">
+                Art. 17 RGPD / Art. 30 nLPD. Votre nom et email sont remplacés par des valeurs anonymes.
+                Vos dossiers de certification sont conservés pour raison légale sans lien avec votre identité.
+              </p>
+            </div>
+            <AnonymiseButton userId={user.id} />
+          </div>
+
+          {/* Suppression totale */}
+          <div className="pt-4">
+            <p className="font-sans text-[13px] text-gray-700 mb-1">Supprimer mon compte</p>
+            <p className="font-sans text-[11px] text-gray-400 mb-3">
+              Art. 17 RGPD / Art. 30 nLPD. Suppression définitive de votre compte et de vos données personnelles.
+              Les dossiers de certification déjà engagés sont conservés à des fins légales, sans lien avec votre identité.
+            </p>
+            <DeleteAccountSection />
+          </div>
         </div>
       </div>
     </div>

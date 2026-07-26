@@ -56,7 +56,7 @@ export default async function PartnerIntroductionsPage() {
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
           <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Introductions</h1>
           <p className="font-sans text-[13px] text-gray-400 mt-1">
-            Apports d&apos;affaires soumis à l&apos;équipe AEGRYN — actifs ou acquéreurs.
+            Apports d&apos;affaires soumis à l&apos;équipe AEGRYN : actifs ou acquéreurs.
           </p>
         </div>
       </div>

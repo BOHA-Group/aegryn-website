@@ -2,7 +2,7 @@
 
 import { useLocale } from 'next-intl'
 import { usePathname as useNextPathname } from 'next/navigation'
-import { useTransition } from 'react'
+import { useState } from 'react'
 import { Globe } from 'lucide-react'
 import { setLocaleCookie } from '@/app/actions/setLocale'
 
@@ -20,17 +20,14 @@ const KNOWN_LOCALES = locales.map(l => l.code)
 export default function LanguageSwitcher() {
   const locale       = useLocale()
   const nextPathname = useNextPathname()
-  const [pending, startTransition] = useTransition()
+  const [pending, setPending] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = async (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value
+    setPending(true)
 
-    /* Swap du segment de locale dans le pathname :
-       /fr/a-propos → /en/a-propos (le middleware proxy.ts gère la redirection
-       vers le bon pathname localisé via next-intl intlMiddleware) */
     const segments = nextPathname.split('/')
     let targetPath: string
-
     if (KNOWN_LOCALES.includes(segments[1])) {
       segments[1] = newLocale
       targetPath = segments.join('/')
@@ -38,10 +35,11 @@ export default function LanguageSwitcher() {
       targetPath = nextPathname
     }
 
-    /* setLocaleCookie pose le cookie + appelle redirect(targetPath) côté serveur.
-       Pas de router.replace() supplémentaire — évite le double redirect qui
-       provoque "This page couldn't load" en preview. */
-    startTransition(() => setLocaleCookie(newLocale, targetPath))
+    /* setLocaleCookie pose le cookie et retourne le chemin.
+       On navigue ensuite avec window.location.assign pour un rechargement
+       propre sans popup "Recharger la page ?" et sans NEXT_REDIRECT crash. */
+    const path = await setLocaleCookie(newLocale, targetPath)
+    window.location.assign(path)
   }
 
   return (
