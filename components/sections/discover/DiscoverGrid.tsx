@@ -98,7 +98,7 @@ export function DiscoverGrid({ locale }: Props) {
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
               {t('featuredLabel')}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+            <div className="grid grid-cols-1 md:grid-cols-3 border border-ag-border divide-y md:divide-y-0 md:divide-x divide-ag-border">
               {featured.map((article) => (
                 <Link
                   key={article.slug}
@@ -160,12 +160,14 @@ export function DiscoverGrid({ locale }: Props) {
             {filtered.length === 0 ? (
               <p className="font-sans text-[14px] text-ag-gray py-12 text-center">{t('noArticles')}</p>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
-                {filtered.map(article => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-ag-border divide-y md:divide-y-0">
+                {filtered.map((article, idx) => (
                   <Link
                     key={article.slug}
                     href={`/blog/${article.slug}`}
-                    className="discover-card group bg-ag-white p-8 flex flex-col gap-4 hover:bg-ag-off-white transition-colors"
+                    className={`discover-card group bg-ag-white p-8 flex flex-col gap-4 hover:bg-ag-off-white transition-colors border-ag-border ${
+                      idx % 3 !== 2 ? 'md:border-r' : ''
+                    } ${idx >= 3 ? 'border-t' : ''}`}
                   >
                     <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex">
                       {ARTICLE_CATEGORIES[article.category][lang]}

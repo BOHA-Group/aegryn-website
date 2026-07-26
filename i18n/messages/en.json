@@ -432,7 +432,7 @@
     "whatsnext": {
       "label": "What comes next",
       "title": "The protocol evolves.\nThe standard holds.",
-      "desc": "AEGRYN currently certifies and transacts SaaS, applications and marketplaces under the CIFS v2.1 protocol. We are progressively building a network of expert partners — law firms, chartered accountants, cybersecurity specialists — who will enrich certain reports with a cross-validated review. A blockchain anchoring layer will reinforce the traceability of the register over time.\n\nFuture extensions — Web3 assets, proprietary datasets — are on the roadmap. No date is fixed. Each category will be opened when the protocol can certify it with the same rigour as the current one.",
+      "desc": "AEGRYN currently certifies and transacts SaaS, applications, marketplaces, IP-based assets and Web3 / Digital Art assets under the CIFS protocol.\n\nThe primary roadmap item is blockchain anchoring: a KRYV Protocol layer that will seal each certified codebase at the exact date of transfer — making every grade permanently verifiable on-chain. This layer will complement the independent protocol already fully operational, never replace it.\n\nIn parallel, we are building a network of expert partners — law firms, chartered accountants, cybersecurity specialists — who will enrich certain reports with a cross-validated review.",
       "cta": "View current sessions"
     },
     "cta": {

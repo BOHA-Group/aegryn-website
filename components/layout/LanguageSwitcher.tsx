@@ -1,7 +1,6 @@
 'use client'
 
 import { useLocale } from 'next-intl'
-import { usePathname, useRouter } from '@/i18n/navigation'
 import { usePathname as useNextPathname } from 'next/navigation'
 import { useTransition } from 'react'
 import { Globe } from 'lucide-react'
@@ -20,32 +19,29 @@ const KNOWN_LOCALES = locales.map(l => l.code)
 
 export default function LanguageSwitcher() {
   const locale       = useLocale()
-  const pathname     = usePathname()        // next-intl: chemin sans préfixe locale
-  const nextPathname = useNextPathname()    // next/navigation: chemin complet avec préfixe
-  const router       = useRouter()          // next-intl: traduit les pathnames localisés
+  const nextPathname = useNextPathname()
   const [pending, startTransition] = useTransition()
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLocale = e.target.value as 'fr' | 'en' | 'de' | 'it' | 'es' | 'nl'
+    const newLocale = e.target.value
 
-    const isPublicRoute = KNOWN_LOCALES.some(
-      (l) => nextPathname === `/${l}` || nextPathname.startsWith(`/${l}/`)
-    )
+    /* Swap du segment de locale dans le pathname :
+       /fr/a-propos → /en/a-propos (le middleware proxy.ts gère la redirection
+       vers le bon pathname localisé via next-intl intlMiddleware) */
+    const segments = nextPathname.split('/')
+    let targetPath: string
 
-    if (isPublicRoute) {
-      /* Site public : next-intl router.replace traduit le pathname vers la nouvelle locale */
-      startTransition(async () => {
-        await setLocaleCookie(newLocale, nextPathname)
-        router.replace(
-          pathname as Parameters<typeof router.replace>[0],
-          { locale: newLocale }
-        )
-      })
+    if (KNOWN_LOCALES.includes(segments[1])) {
+      segments[1] = newLocale
+      targetPath = segments.join('/')
     } else {
-      /* /client/* et /admin/* : pas de préfixe URL — Server Action pose le cookie
-         et redirige vers la même URL. Pas de popup "Recharger la page ?". */
-      startTransition(() => setLocaleCookie(newLocale, nextPathname))
+      targetPath = nextPathname
     }
+
+    /* setLocaleCookie pose le cookie + appelle redirect(targetPath) côté serveur.
+       Pas de router.replace() supplémentaire — évite le double redirect qui
+       provoque "This page couldn't load" en preview. */
+    startTransition(() => setLocaleCookie(newLocale, targetPath))
   }
 
   return (

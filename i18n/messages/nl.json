@@ -432,7 +432,7 @@
     "whatsnext": {
       "label": "Wat er hierna komt",
       "title": "Het protocol evolueert.\nDe standaard houdt stand.",
-      "desc": "AEGRYN certificeert en transageert momenteel SaaS, applicaties en marktplaatsen onder het CIFS v2.1-protocol. We bouwen progressief een netwerk van expertpartners op — advocatenkantoren, gecertificeerde accountants, cyberbeveiligingsspecialisten — die bepaalde rapporten zullen verrijken met een kruisgevalideerde beoordeling. Een blockchain-verankeringslaag zal de traceerbaarheid van het register in de loop der tijd versterken.\n\nToekomstige uitbreidingen — Web3-assets, propriëtaire datasets — staan op de roadmap. Er is geen datum vastgesteld. Elke categorie wordt geopend wanneer het protocol het met dezelfde strengheid als de huidige kan certificeren.",
+      "desc": "AEGRYN certificeert en transageert momenteel SaaS, applicaties, marktplaatsen, IP-gebaseerde assets en Web3 / Digital Art assets onder het CIFS-protocol.\n\nHet belangrijkste roadmap-element is blockchain-verankering: een KRYV Protocol-laag die elke gecertificeerde codebase op de exacte datum van overdracht verzegelt — waardoor elk grade permanent on-chain verifieerbaar is. Deze laag zal het reeds volledig operationele onafhankelijke protocol aanvullen, niet vervangen.\n\nTegelijkertijd bouwen we een netwerk van expertpartners op — advocatenkantoren, gecertificeerde accountants, cyberbeveiligingsspecialisten — die bepaalde rapporten zullen verrijken met een kruisgevalideerde beoordeling.",
       "cta": "Huidige sessies bekijken"
     },
     "cta": {

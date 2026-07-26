@@ -431,7 +431,7 @@
     "whatsnext": {
       "label": "Ce qui vient ensuite",
       "title": "Le protocole évolue.\nLe standard tient.",
-      "desc": "AEGRYN certifie et transige actuellement des SaaS, applications et marketplaces sous le protocole CIFS v2.1. Nous construisons progressivement un réseau de partenaires experts — cabinets juridiques, experts-comptables, spécialistes cybersécurité — qui enrichiront certains rapports d'une revue croisée. Une couche d'ancrage blockchain renforcera la traçabilité du registre dans le temps.\n\nLes extensions futures — actifs Web3, datasets propriétaires — sont au roadmap. Aucune date n'est fixée. Chaque catégorie sera ouverte lorsque le protocole pourra la certifier avec la même rigueur que l'actuelle.",
+      "desc": "AEGRYN certifie et transige actuellement des SaaS, applications, marketplaces, actifs à base d'IP et actifs Web3 / Digital Art sous le protocole CIFS.\n\nLe principal chantier du roadmap est l'ancrage blockchain : une couche KRYV Protocol qui scellera chaque codebase certifié à la date exacte du transfert — rendant chaque grade définitivement vérifiable on-chain. Cette couche complétera le protocole indépendant déjà pleinement opérationnel, sans jamais le remplacer.\n\nEn parallèle, nous construisons un réseau de partenaires experts — cabinets juridiques, experts-comptables, spécialistes cybersécurité — qui enrichiront certains rapports d'une revue croisée.",
       "cta": "Voir les sessions en cours"
     },
     "cta": {
