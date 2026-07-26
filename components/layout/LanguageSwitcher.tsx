@@ -1,7 +1,8 @@
 'use client'
 
 import { useLocale } from 'next-intl'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname, useRouter } from '@/i18n/navigation'
+import { usePathname as useNextPathname } from 'next/navigation'
 import { useTransition } from 'react'
 import { Globe } from 'lucide-react'
 import { setLocaleCookie } from '@/app/actions/setLocale'
@@ -15,29 +16,35 @@ const locales = [
   { code: 'nl', label: 'NL' },
 ]
 
+const KNOWN_LOCALES = locales.map(l => l.code)
+
 export default function LanguageSwitcher() {
-  const locale   = useLocale()
-  const pathname = usePathname()
-  const router   = useRouter()
+  const locale       = useLocale()
+  const pathname     = usePathname()        // next-intl: chemin sans préfixe locale
+  const nextPathname = useNextPathname()    // next/navigation: chemin complet avec préfixe
+  const router       = useRouter()          // next-intl: traduit les pathnames localisés
   const [pending, startTransition] = useTransition()
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLocale = e.target.value
-    const segments  = pathname.split('/')
-    const knownLocales = locales.map(l => l.code)
+    const newLocale = e.target.value as 'fr' | 'en' | 'de' | 'it' | 'es' | 'nl'
 
-    if (knownLocales.includes(segments[1])) {
-      /* Site public : URL préfixée — swap du segment + cookie via Server Action */
-      segments[1] = newLocale
-      const newPath = segments.join('/')
+    const isPublicRoute = KNOWN_LOCALES.some(
+      (l) => nextPathname === `/${l}` || nextPathname.startsWith(`/${l}/`)
+    )
+
+    if (isPublicRoute) {
+      /* Site public : next-intl router.replace traduit le pathname vers la nouvelle locale */
       startTransition(async () => {
-        await setLocaleCookie(newLocale, newPath)
-        router.push(newPath)
+        await setLocaleCookie(newLocale, nextPathname)
+        router.replace(
+          pathname as Parameters<typeof router.replace>[0],
+          { locale: newLocale }
+        )
       })
     } else {
       /* /client/* et /admin/* : pas de préfixe URL — Server Action pose le cookie
          et redirige vers la même URL. Pas de popup "Recharger la page ?". */
-      startTransition(() => setLocaleCookie(newLocale, pathname))
+      startTransition(() => setLocaleCookie(newLocale, nextPathname))
     }
   }
 
