@@ -1,6 +1,6 @@
 import { notFound }          from 'next/navigation'
 import Link                   from 'next/link'
-import { ArrowUpRight, ArrowLeft } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
 import { getTranslations }    from 'next-intl/server'
@@ -61,18 +61,6 @@ export default async function AssetPage({ params }: Props) {
 
   return (
     <>
-      {/* Back nav */}
-      <div className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-4">
-          <Link
-            href="/what-we-build"
-            className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-gray-light hover:text-ag-black transition-colors"
-          >
-            <ArrowLeft size={12} />
-            {t('back')}
-          </Link>
-        </div>
-      </div>
 
       {/* Hero */}
       <section className="border-b border-ag-border">

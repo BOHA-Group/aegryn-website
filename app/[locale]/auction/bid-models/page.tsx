@@ -32,9 +32,6 @@ export default async function BidModelsPage({ params }: Props) {
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <Link href="/auction" className="inline-flex items-center gap-2 font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 hover:text-ag-apex transition-colors mb-10">
-            {t('hero.back')}
-          </Link>
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('hero.label')}
