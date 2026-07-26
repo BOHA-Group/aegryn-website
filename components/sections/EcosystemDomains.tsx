@@ -70,7 +70,7 @@ export function EcosystemDomains() {
         </p>
         <h2
           ref={h2Ref}
-          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.0] whitespace-pre-line overflow-hidden"
+          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] whitespace-pre-line overflow-hidden"
           style={{ fontSize: 'clamp(42px,5.5vw,80px)' }}
         >
           {t('title')}

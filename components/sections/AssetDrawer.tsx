@@ -39,17 +39,17 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
     if (assetKey === 'movtoo') return [
       { label: t('highlights.market'),   value: t('assets.movtoo.market') },
       { label: t('highlights.tech'),     value: t('assets.movtoo.tech') },
-      { label: t('highlights.status'),   value: tStatus('dev') },
+      { label: t('highlights.status'),   value: tStatus('notStarted') },
     ]
     if (assetKey === 'primiom') return [
       { label: t('highlights.market'),   value: t('assets.primiom.market') },
       { label: t('highlights.zones'),    value: t('assets.primiom.zones') },
-      { label: t('highlights.status'),   value: tStatus('dev') },
+      { label: t('highlights.status'),   value: tStatus('notStarted') },
     ]
     if (assetKey === 'hobconnect') return [
       { label: t('highlights.market'),   value: t('assets.hobconnect.market') },
       { label: t('highlights.model'),    value: t('assets.hobconnect.model') },
-      { label: t('highlights.status'),   value: tStatus('dev') },
+      { label: t('highlights.status'),   value: tStatus('notStarted') },
     ]
     return []
   }
