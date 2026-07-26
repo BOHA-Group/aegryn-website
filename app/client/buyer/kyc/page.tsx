@@ -135,7 +135,7 @@ export default async function BuyerKycPage() {
 
       {/* Documents */}
       <div className="flex flex-col gap-4">
-        {REQUIRED_DOCS.map(({ type, label, desc, conditional }) => { // eslint-disable-line @typescript-eslint/no-unused-vars
+        {REQUIRED_DOCS.map(({ type, label, desc, conditional }) => {
           const latestDoc = docsByType[type]?.[0] ?? null
           const status = latestDoc?.status ?? 'missing'
           const statusCfg = STATUS_CONFIG[status]
