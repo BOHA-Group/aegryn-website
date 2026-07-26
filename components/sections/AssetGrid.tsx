@@ -40,12 +40,6 @@ export function AssetGrid() {
     if (!h2) return
 
     const split = new SplitText(h2, { type: 'lines', linesClass: 'ag-line-inner' })
-    split.lines.forEach((line) => {
-      const w = document.createElement('div')
-      w.style.overflow = 'hidden'
-      ;(line as HTMLElement).parentNode?.insertBefore(w, line)
-      w.appendChild(line)
-    })
 
     const ctx = gsap.context(() => {
       if (labelRef.current) {
