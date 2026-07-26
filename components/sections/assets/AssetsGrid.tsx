@@ -115,7 +115,11 @@ export function AssetsGrid() {
                   className="font-mono text-[11px] tracking-[0.1em] font-semibold shrink-0 mt-0.5"
                   style={{ color: GRADE_COLORS[asset.grade] ?? '#6B6B6B' }}
                 >
-                  {asset.grade === 'pending' ? t('gradePending') : asset.grade === 'refused' ? tStatus('refused') : GRADE_LABELS[asset.grade]}
+                  {asset.grade === 'pending'
+                    ? (asset.id === 'subblink' ? t('gradePending') : null)
+                    : asset.grade === 'refused'
+                      ? tStatus('refused')
+                      : GRADE_LABELS[asset.grade]}
                 </span>
               </div>
 
