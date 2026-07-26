@@ -2663,7 +2663,7 @@
         "title": "Club Deal",
         "summary": "Een hoofdbieder kan tot 4 gedeclareerde co-investeerders associëren. Één bod, één escrow betaald door de lead. De interne verdeling blijft vertrouwelijk.",
         "conditions": [
-          "Minimumticket: € 500.000",
+          "Minimumticket: € 100.000",
           "Volledig KYC hoofdbieder + vereenvoudigd KYC co-investeerders",
           "10% escrow betaald door hoofdbieder binnen 5 werkdagen",
           "Tot 4 gedeclareerde co-investeerders onder NDA",
@@ -2681,7 +2681,7 @@
         "title": "Corporate",
         "summary": "Een rechtspersoon verwerft het actief rechtstreeks op zijn balans. Twee entiteiten kunnen co-verwerven via een bij AEGRYN gedeclareerde JV. Asset deal of share deal afhankelijk van de gekozen structuur.",
         "conditions": [
-          "Minimumticket: € 500.000",
+          "Minimumticket: € 100.000",
           "Volledig B2B KYC — KvK < 3 maanden, statuten, UBO ≥ 25%, identiteitsbewijs bestuurder",
           "10% escrow betaald vanuit de rekening van de rechtspersoon",
           "JV mogelijk: twee co-verwervende partijen, structuur te melden vóór bindend bod"
@@ -2700,7 +2700,7 @@
         "title": "Fonds",
         "summary": "Institutionele fondsen krijgen een IC-venster van 5 tot 10 werkdagen vóór het indienen van een bindend bod. SPV beschikbaar voor directe LP-co-investering bij specifieke deals.",
         "conditions": [
-          "Minimumticket: € 500.000 (geen maximum)",
+          "Minimumticket: € 100.000 (geen maximum)",
           "Institutioneel KYC — regelgevende goedkeuring indien van toepassing (FINMA, AMF, FCA)",
           "IC-venster: vertrouwelijke reservering 5–10 werkdagen zonder escrow",
           "SPV mogelijk voor directe LP-co-investering",
@@ -3657,7 +3657,7 @@
           "sellers"
         ],
         "q": "Welke typen assets kan ik indienen?",
-        "a": "AEGRYN certificeert en verhandelt digitale tech-assets: B2B SaaS, mobiele apps, marktplaatsen, AI-protocollen, digitaal intellectueel eigendom. Minimumticket: 500.000 EUR geschatte waardering."
+        "a": "AEGRYN certificeert en verhandelt digitale tech-assets: B2B SaaS, mobiele apps, marktplaatsen, AI-protocollen, digitaal intellectueel eigendom. Minimumticket: 100.000 EUR geschatte waardering."
       },
       {
         "id": "seller-identity",
@@ -3689,7 +3689,7 @@
           "buyers"
         ],
         "q": "Wat is het minimale acquisitieticket?",
-        "a": "500.000 EUR."
+        "a": "100.000 EUR."
       },
       {
         "id": "bid-models",

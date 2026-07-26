@@ -2663,7 +2663,7 @@
         "title": "Club Deal",
         "summary": "Un acquirente principale (lead bidder) può associare fino a 4 co-investitori dichiarati. Un'unica offerta, un unico deposito a garanzia pagato dal lead. La ripartizione interna rimane confidenziale.",
         "conditions": [
-          "Ticket minimo: 500.000 €",
+          "Ticket minimo: 100.000 €",
           "KYC completo del lead bidder + KYC semplificato dei co-investitori",
           "10% di garanzia pagato dal lead bidder entro 5 giorni lavorativi",
           "Fino a 4 co-investitori dichiarati sotto NDA",
@@ -2681,7 +2681,7 @@
         "title": "Corporate",
         "summary": "Un'entità legale acquisisce il bene direttamente nel proprio bilancio. Due entità possono co-acquisire tramite un JV dichiarato ad AEGRYN. Asset deal o share deal secondo la struttura scelta.",
         "conditions": [
-          "Ticket minimo: 500.000 €",
+          "Ticket minimo: 100.000 €",
           "KYC B2B completo — visura camerale < 3 mesi, statuto, UBO ≥ 25%, documento d'identità del dirigente",
           "10% di garanzia pagato dal conto dell'entità legale",
           "JV possibile: due co-acquirenti, struttura da dichiarare prima dell'offerta ferma"
@@ -2700,7 +2700,7 @@
         "title": "Fondo",
         "summary": "I fondi istituzionali beneficiano di una finestra IC di 5-10 giorni lavorativi prima di presentare un'offerta ferma. SPV disponibile per co-investimento diretto degli LP su deal specifici.",
         "conditions": [
-          "Ticket minimo: 500.000 € (nessun massimale)",
+          "Ticket minimo: 100.000 € (nessun massimale)",
           "KYC istituzionale — autorizzazione regolatoria se applicabile (FINMA, AMF, FCA)",
           "Finestra IC: prenotazione riservata 5–10 giorni lavorativi senza garanzia",
           "SPV possibile per co-investimento diretto LP",
@@ -3657,7 +3657,7 @@
           "sellers"
         ],
         "q": "Quali tipi di asset posso inviare?",
-        "a": "AEGRYN certifica e transige asset tech digitali: SaaS B2B, applicazioni mobili, marketplace, protocolli IA, proprietà intellettuale digitale. Ticket minimo: 500.000 EUR di valorizzazione stimata."
+        "a": "AEGRYN certifica e transige asset tech digitali: SaaS B2B, applicazioni mobili, marketplace, protocolli IA, proprietà intellettuale digitale. Ticket minimo: 100.000 EUR di valorizzazione stimata."
       },
       {
         "id": "seller-identity",
@@ -3689,7 +3689,7 @@
           "buyers"
         ],
         "q": "Qual è il ticket minimo di acquisizione?",
-        "a": "500.000 EUR."
+        "a": "100.000 EUR."
       },
       {
         "id": "bid-models",
