@@ -1,5 +1,20 @@
 # Parking Lot — Éléments archivés (à réactiver sur décision)
 
+## Meta Pixel — ID à configurer
+
+**Archivé le :** 26/07/2026  
+**Statut :** Composant prêt (`components/analytics/MetaPixel.tsx`) — en attente de l'ID
+
+### Pour activer
+Dans Vercel → Environment Variables :
+```
+NEXT_PUBLIC_META_PIXEL_ID = <ID depuis Meta Business Manager>
+```
+Le composant se charge automatiquement après consentement cookie (cookie_consent_updated).  
+Aucune modification de code requise.
+
+---
+
 ## Section "/ THE FOUNDER" — Page About
 
 **Archivé le :** 26/07/2026  
