@@ -39,7 +39,7 @@ export default async function AccountPage() {
   const emailNotifEnabled = profile?.email_notifications_enabled !== false
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-16 pb-12 px-4">
+    <div className="pb-12 px-4 pt-10">
       <div className="max-w-xl mx-auto">
 
         {/* Header */}
