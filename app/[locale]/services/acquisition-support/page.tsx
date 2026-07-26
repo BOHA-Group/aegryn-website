@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowUpRight, Check, Shield, Lock } from 'lucide-react'
+import { ArrowUpRight, Check, Shield, Info } from 'lucide-react'
 import { serviceJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
 import { generateAegrynMetadata } from '@/lib/seo'
 
@@ -67,6 +67,9 @@ export default async function AcquisitionSupportPage({ params }: Props) {
               {t('ctaDiscover')}
             </Link>
           </div>
+          <p className="font-sans text-[13px] text-ag-apex/70 mt-10 max-w-xl leading-relaxed border-t border-white/10 pt-8">
+            {t('advisorNote')}
+          </p>
         </div>
       </section>
 
@@ -150,8 +153,16 @@ export default async function AcquisitionSupportPage({ params }: Props) {
             <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-6">{t('fees.desc')}</p>
           </div>
           <div className="border border-ag-border bg-ag-white p-8 flex gap-4">
-            <Lock size={14} className="text-ag-gray-light shrink-0 mt-0.5" />
-            <p className="font-sans text-[13px] text-ag-gray leading-relaxed italic">{t('fees.note')}</p>
+            <Info size={14} className="text-ag-gray-light shrink-0 mt-1" />
+            <div>
+              <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">Important notice</p>
+              <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
+                {t('fees.note')}{' '}
+                <Link href="/terms/cgv" className="underline underline-offset-2 hover:text-ag-black transition-colors">
+                  Terms of Service
+                </Link>.
+              </p>
+            </div>
           </div>
         </div>
       </section>

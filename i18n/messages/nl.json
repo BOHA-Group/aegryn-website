@@ -62,7 +62,7 @@
       "desc": "Elk AEGRYN-asset wordt intern ontworpen, gebouwd en beheerd. Volledig eigendom, absolute soevereiniteit.",
       "meta": {
         "title": "AEGRYN Assets — Eigen ecosysteem",
-        "desc": "Ontdek de propriëtaire assets van AEGRYN: Subblink, Neediu, Primiom, Movtoo en Hobconnect — ontworpen om certificeerbaar en overdraagbaar te zijn."
+        "desc": "Ontdek de propriëtaire assets van AEGRYN: Subblink, Neediu, Primiom, Movtoo en Hobconnect, ontworpen om certificeerbaar en overdraagbaar te zijn."
       },
       "filterAll": "Alle",
       "filterAI": "AI & Protocollen",
@@ -153,7 +153,7 @@
     "hero": {
       "label": "AEGRYN Portfolio",
       "title": "Zes propriëtaire assets.\nEén gemeenschappelijke visie.",
-      "desc": "Elk AEGRYN-asset is van meet af aan ontworpen om certificeerbaar en overdraagbaar te zijn — geregistreerd IP, propriëtaire codebase, gedocumenteerde stack."
+      "desc": "Elk AEGRYN-asset is van meet af aan ontworpen om certificeerbaar en overdraagbaar te zijn, geregistreerd IP, propriëtaire codebase, gedocumenteerde stack."
     },
     "categories": {
       "ai": "AI & Protocollen",
@@ -199,7 +199,7 @@
       {
         "num": "01",
         "title": "De certificering ontbrak.",
-        "desc": "Een tech-asset kopen zonder onafhankelijke certificering is als een horloge kopen zonder papieren. AEGRYN levert de papieren — gecertificeerd, verifieerbaar, gedocumenteerd."
+        "desc": "Een tech-asset kopen zonder onafhankelijke certificering is als een horloge kopen zonder papieren. AEGRYN levert de papieren, gecertificeerd, verifieerbaar, gedocumenteerd."
       },
       {
         "num": "02",
@@ -258,7 +258,7 @@
     "cta": "Over Aegryn",
     "quote": "Een tech-asset zonder onafhankelijke certificering is een waarde zonder bewijs. AEGRYN levert het bewijs bij elk asset, bij elke overdracht.",
     "ceoName": "Yohann Bollack",
-    "ceoTitle": "Oprichter AEGRYN",
+    "ceoTitle": "Oprichter, AEGRYN",
     "stats": [
       {
         "val": "6",
@@ -280,15 +280,15 @@
     "items": [
       {
         "title": "BUILD",
-        "desc": "We bouwen propriëtaire tech-assets die vanaf de basis zijn ontworpen om certificeerbaar en overdraagbaar te zijn — SaaS, marktplaatsen, AI-protocollen. Elk asset is gestructureerd om de strengste audit te doorstaan."
+        "desc": "We bouwen propriëtaire tech-assets die vanaf de basis zijn ontworpen om certificeerbaar en overdraagbaar te zijn, SaaS, marktplaatsen, AI-protocollen. Elk asset is gestructureerd om de strengste audit te doorstaan."
       },
       {
         "title": "GRADE",
-        "desc": "We certificeren assets van derden en propriëtaire assets onder een onafhankelijk label, gestructureerd over 4 analysedimensies — Code, IP, Financiën, Beveiliging. Een reproduceerbaar, traceerbaar en conclusief protocol."
+        "desc": "We certificeren assets van derden en propriëtaire assets onder een onafhankelijk label, gestructureerd over 4 analysedimensies, Code, IP, Financiën, Beveiliging. Een reproduceerbaar, traceerbaar en conclusief protocol."
       },
       {
         "title": "AUCTION",
-        "desc": "We transigeren gecertificeerde assets via een vertrouwelijk proces — institutioneel depot, kring van vooraf gekwalificeerde kopers, exclusief mandaat van 60 dagen. Minder dan 25% van de ingediende assets wordt geaccepteerd."
+        "desc": "We transigeren gecertificeerde assets via een vertrouwelijk proces, institutioneel depot, kring van vooraf gekwalificeerde kopers, exclusief mandaat van 60 dagen. Minder dan 25% van de ingediende assets wordt geaccepteerd."
       }
     ]
   },
@@ -299,12 +299,12 @@
       {
         "num": "01",
         "title": "ONAFHANKELIJKE CERTIFICERING",
-        "desc": "Elk AEGRYN-grade-rapport wordt uitgegeven door onze gecertificeerde analisten, volgens een reproduceerbaar en traceerbaar protocol. Geen mening — een certificering."
+        "desc": "Elk AEGRYN-grade-rapport wordt uitgegeven door onze gecertificeerde analisten, volgens een reproduceerbaar en traceerbaar protocol. Geen mening, een certificering."
       },
       {
         "num": "02",
         "title": "TRACEERBAARHEID BIJ OVERDRACHT",
-        "desc": "Elke asset-overdracht wordt nauwkeurig gedocumenteerd — staat van de codebase, datum, exact perimeter. Een blockchain-certificeringslaag zal deze traceerbaarheid op termijn versterken."
+        "desc": "Elke asset-overdracht wordt nauwkeurig gedocumenteerd, staat van de codebase, datum, exact perimeter. Een blockchain-certificeringslaag zal deze traceerbaarheid op termijn versterken."
       },
       {
         "num": "03",
@@ -327,7 +327,7 @@
     "hero": {
       "label": "Over AEGRYN",
       "title": "De vertrouwensinfrastructuur\nvoor Europees tech-M&A.",
-      "desc": "Certificering. Discretie. Permanentie.\nDrie principes die een naam — en een bedrijf — hebben gevormd."
+      "desc": "Certificering. Discretie. Permanentie.\nDrie principes die een naam, en een bedrijf, hebben gevormd."
     },
     "name": {
       "label": "De naam",
@@ -335,11 +335,11 @@
       "roots": [
         {
           "word": "AEGIS",
-          "meaning": "Het goddelijke schild. Symbool van bescherming, autoriteit en legitimiteit. Handelen onder de aegis van iets betekent handelen onder een certificerende autoriteit — wiens standaard anderen vertrouwen."
+          "meaning": "Het goddelijke schild. Symbool van bescherming, autoriteit en legitimiteit. Handelen onder de aegis van iets betekent handelen onder een certificerende autoriteit, wiens standaard anderen vertrouwen."
         },
         {
           "word": "AEGIR",
-          "meaning": "De godheid die de zeeën en hun stromen beheerste. Meester van de stromen — van wat zich beweegt tussen oevers, tussen partijen, tussen waarde en de erkenning ervan."
+          "meaning": "De godheid die de zeeën en hun stromen beheerste. Meester van de stromen, van wat zich beweegt tussen oevers, tussen partijen, tussen waarde en de erkenning ervan."
         },
         {
           "word": "AEON",
@@ -347,11 +347,11 @@
         }
       ],
       "synthesis": "Drie woorden uit drie beschavingen. Één synthese: een entiteit die beschermt (AEGIS), stromen faciliteert (AEGIR) en bouwt voor permanentie (AEON). AEGRYN.",
-      "formerly": "AEGRYN was voorheen bekend als BOHA-Group. Naarmate de positionering van het bedrijf scherper werd — van bouwer van digitale assets naar certificerings- en transactie-infrastructuur — deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet."
+      "formerly": "AEGRYN was voorheen bekend als BOHA-Group. Naarmate de positionering van het bedrijf scherper werd, van bouwer van digitale assets naar certificerings- en transactie-infrastructuur, deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet."
     },
     "vision": {
       "label": "Onze visie",
-      "text": "De Europese tech-M&A-markt heeft solide fundamenten — ervaren adviseurs, rigoureuze due diligence, institutioneel kapitaal. Wat ontbrak was een gestandaardiseerd, onafhankelijk certificeringskader: een gemeenschappelijke, verifieerbare referentie waarop beide kanten van een transactie kunnen vertrouwen voordat de onderhandelingen beginnen.\n\nAEGRYN is dat kader — geen vervanging van wat al werkt, maar de infrastructuurlaag die structureel ontbrak."
+      "text": "De Europese tech-M&A-markt heeft solide fundamenten, ervaren adviseurs, rigoureuze due diligence, institutioneel kapitaal. Wat ontbrak was een gestandaardiseerd, onafhankelijk certificeringskader: een gemeenschappelijke, verifieerbare referentie waarop beide kanten van een transactie kunnen vertrouwen voordat de onderhandelingen beginnen.\n\nAEGRYN is dat kader, geen vervanging van wat al werkt, maar de infrastructuurlaag die structureel ontbrak."
     },
     "contribution": {
       "label": "Onze bijdrage",
@@ -361,17 +361,17 @@
         {
           "num": "01",
           "title": "Een grade vóór een prijs",
-          "desc": "De AEGRYN C/I/F/S grade wordt vastgesteld vóór elke notering, vóór elke onderhandeling. Geen waarderingsopinie — een certificering van wat de asset daadwerkelijk is, gedocumenteerd, geversioneerd en reproduceerbaar. De prijs volgt de grade. De grade hangt er niet van af."
+          "desc": "De AEGRYN C/I/F/S grade wordt vastgesteld vóór elke notering, vóór elke onderhandeling. Geen waarderingsopinie, een certificering van wat de asset daadwerkelijk is, gedocumenteerd, geversioneerd en reproduceerbaar. De prijs volgt de grade. De grade hangt er niet van af."
         },
         {
           "num": "02",
           "title": "Een gesloten kring, geen marktplaats",
-          "desc": "Elke verkoper in de AEGRYN-catalogus heeft de certificering doorstaan. Elke koper heeft financiële capaciteit aangetoond. Discretie is structureel — geen bovenop toegevoegde functie, maar de bedrijfscondities waaruit alles voortkomt."
+          "desc": "Elke verkoper in de AEGRYN-catalogus heeft de certificering doorstaan. Elke koper heeft financiële capaciteit aangetoond. Discretie is structureel, geen bovenop toegevoegde functie, maar de bedrijfscondities waaruit alles voortkomt."
         },
         {
           "num": "03",
           "title": "Zwitserse institutionele standaarden",
-          "desc": "Zwitsers recht regelt elke transactie. Escrow wordt aangehouden door een derde bank — AEGRYN raakt de fondsen nooit aan. Documentatie is bij elke overdracht volledig. Dit zijn bedrijfscondities, geen beloften."
+          "desc": "Zwitsers recht regelt elke transactie. Escrow wordt aangehouden door een derde bank, AEGRYN raakt de fondsen nooit aan. Documentatie is bij elke overdracht volledig. Dit zijn bedrijfscondities, geen beloften."
         }
       ]
     },
@@ -398,12 +398,12 @@
       "precision": {
         "label": "01",
         "title": "Precisie",
-        "desc": "Elke beslissing is gedocumenteerd, gemeten en traceerbaar. De AEGRYN Grade is geen mening — het is een protocol. Twee analisten, hetzelfde protocol, dezelfde grade."
+        "desc": "Elke beslissing is gedocumenteerd, gemeten en traceerbaar. De AEGRYN Grade is geen mening, het is een protocol. Twee analisten, hetzelfde protocol, dezelfde grade."
       },
       "durability": {
         "label": "02",
         "title": "Duurzaamheid",
-        "desc": "We bouwen voor het decennium, niet voor het kwartaal. Elk asset in het AEGRYN-ecosysteem is ontworpen om over tien jaar certificeerbaar te zijn — niet alleen vandaag."
+        "desc": "We bouwen voor het decennium, niet voor het kwartaal. Elk asset in het AEGRYN-ecosysteem is ontworpen om over tien jaar certificeerbaar te zijn, niet alleen vandaag."
       },
       "sovereignty": {
         "label": "03",
@@ -413,26 +413,26 @@
       "independence": {
         "label": "04",
         "title": "Onafhankelijkheid",
-        "desc": "De analist die een asset certificeert heeft geen financieel belang bij de transactie die volgt. Deze scheiding is geen beleid — het is de structurele voorwaarde die de grade überhaupt waardevol maakt."
+        "desc": "De analist die een asset certificeert heeft geen financieel belang bij de transactie die volgt. Deze scheiding is geen beleid, het is de structurele voorwaarde die de grade überhaupt waardevol maakt."
       }
     },
     "swiss": {
       "groupLabel": "AEGRYN",
       "title": "Geworteld in Zwitserland.\nDe Europese referentie.",
-      "desc": "Zwitserland werd bewust gekozen — niet voor zijn incorporatievoordelen, maar voor zijn institutionele standaarden: de strengheid van het Zwitserse recht, de discretie van zijn financieel ecosysteem en de neutraliteit die het tot een geloofwaardig anker maakt voor grensoverschrijdende transacties tussen een Franse verkoper, een Duitse koper en een Luxemburgs fonds. Elke AEGRYN-transactie valt onder Zwitsers recht, ongeacht de nationaliteit van de partijen of de herkomst van de asset.",
+      "desc": "Zwitserland werd bewust gekozen, niet voor zijn incorporatievoordelen, maar voor zijn institutionele standaarden: de strengheid van het Zwitserse recht, de discretie van zijn financieel ecosysteem en de neutraliteit die het tot een geloofwaardig anker maakt voor grensoverschrijdende transacties tussen een Franse verkoper, een Duitse koper en een Luxemburgs fonds. Elke AEGRYN-transactie valt onder Zwitsers recht, ongeacht de nationaliteit van de partijen of de herkomst van de asset.",
       "cta": "Catalogus bekijken"
     },
     "founder": {
       "label": "De oprichtende overtuiging",
       "title": "Van binnenuit gebouwd.",
-      "bio1": "AEGRYN werd opgericht door een builder die jaren had besteed aan het bouwen, auditen en structureren van digitale assets — en herhaaldelijk dezelfde kloof observeerde: het ontbreken van een gestandaardiseerde, onafhankelijke referentie waarop beide kanten van een tech-transactie gelijkelijk konden vertrouwen.",
-      "bio2": "De keuze om die referentie in Zwitserland te verankeren, onder Zwitsers recht en institutionele standaarden, was bewust. Geen detail van incorporatie — een positioneringskeuze. De propriëtaire assets die AEGRYN bouwt zijn ontworpen om aan die standaard te voldoen vanaf hun eerste coderegel.",
+      "bio1": "AEGRYN werd opgericht door een builder die jaren had besteed aan het bouwen, auditen en structureren van digitale assets, en herhaaldelijk dezelfde kloof observeerde: het ontbreken van een gestandaardiseerde, onafhankelijke referentie waarop beide kanten van een tech-transactie gelijkelijk konden vertrouwen.",
+      "bio2": "De keuze om die referentie in Zwitserland te verankeren, onder Zwitsers recht en institutionele standaarden, was bewust. Geen detail van incorporatie, een positioneringskeuze. De propriëtaire assets die AEGRYN bouwt zijn ontworpen om aan die standaard te voldoen vanaf hun eerste coderegel.",
       "cta": "Contact opnemen"
     },
     "whatsnext": {
       "label": "Wat er hierna komt",
       "title": "Het protocol evolueert.\nDe standaard houdt stand.",
-      "desc": "AEGRYN certificeert en transageert momenteel SaaS, applicaties, marktplaatsen, IP-gebaseerde assets en Web3 / Digital Art assets onder het CIFS-protocol.\n\nHet belangrijkste roadmap-element is blockchain-verankering: een KRYV Protocol-laag die elke gecertificeerde codebase op de exacte datum van overdracht verzegelt — waardoor elk grade permanent on-chain verifieerbaar is. Deze laag zal het reeds volledig operationele onafhankelijke protocol aanvullen, niet vervangen.\n\nTegelijkertijd bouwen we een netwerk van expertpartners op — advocatenkantoren, gecertificeerde accountants, cyberbeveiligingsspecialisten — die bepaalde rapporten zullen verrijken met een kruisgevalideerde beoordeling.",
+      "desc": "AEGRYN certificeert en transageert momenteel SaaS, applicaties, marktplaatsen, IP-gebaseerde assets en Web3 / Digital Art assets onder het CIFS-protocol.\n\nHet belangrijkste roadmap-element is blockchain-verankering: een KRYV Protocol-laag die elke gecertificeerde codebase op de exacte datum van overdracht verzegelt, waardoor elk grade permanent on-chain verifieerbaar is. Deze laag zal het reeds volledig operationele onafhankelijke protocol aanvullen, niet vervangen.\n\nTegelijkertijd bouwen we een netwerk van expertpartners op, advocatenkantoren, gecertificeerde accountants, cyberbeveiligingsspecialisten, die bepaalde rapporten zullen verrijken met een kruisgevalideerde beoordeling.",
       "cta": "Huidige sessies bekijken"
     },
     "cta": {
@@ -461,7 +461,7 @@
     "hero": {
       "label": "Aegryn Advisory & Carrières",
       "title": "Advisory & Experts in Digitale Ecosystemen",
-      "desc": "Aegryn zoekt Senior Advisors — operationele experts in Data, AI en Cyberbeveiliging voor duurzame digitale ecosystemen."
+      "desc": "Aegryn zoekt Senior Advisors, operationele experts in Data, AI en Cyberbeveiliging voor duurzame digitale ecosystemen."
     },
     "positions": {
       "label": "Aankomende functies",
@@ -510,7 +510,7 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "Subblink analyseert al uw contracten in seconden met een AI gecalibreerd voor het Zwitserse en Europese recht. Risico's, kritieke clausules, verborgen verplichtingen — alles wordt geïdentificeerd en uitgelegd in duidelijke taal.",
+        "longDesc": "Subblink analyseert al uw contracten in seconden met een AI gecalibreerd voor het Zwitserse en Europese recht. Risico's, kritieke clausules, verborgen verplichtingen, alles wordt geïdentificeerd en uitgelegd in duidelijke taal.",
         "audience": "Particulieren, zelfstandigen, kmo's, juridische kantoren",
         "features": [
           "Contractanalyse in 60 seconden",
@@ -523,7 +523,7 @@
         ]
       },
       "neediu": {
-        "longDesc": "Neediu verbindt particulieren met de beste thuisserviceproviders. Schoonmaken, tuinieren, klussen, kinderopvang — slimme koppeling op basis van locatie en geverifieerde beoordelingen.",
+        "longDesc": "Neediu verbindt particulieren met de beste thuisserviceproviders. Schoonmaken, tuinieren, klussen, kinderopvang, slimme koppeling op basis van locatie en geverifieerde beoordelingen.",
         "audience": "Particulieren, eigenaren, huurders",
         "features": [
           "Real-time koppeling",
@@ -547,7 +547,7 @@
         ]
       },
       "movtoo": {
-        "longDesc": "Movtoo is een on-demand bezorgplatform aangedreven door kunstmatige intelligentie. Boodschappen, maaltijden, pakketten — vraaggestuurde bezorging geoptimaliseerd voor dichte stedelijke gebieden.",
+        "longDesc": "Movtoo is een on-demand bezorgplatform aangedreven door kunstmatige intelligentie. Boodschappen, maaltijden, pakketten, vraaggestuurde bezorging geoptimaliseerd voor dichte stedelijke gebieden.",
         "audience": "Particulieren, restauranthouders, lokale winkels",
         "features": [
           "Bezorging in minder dan 45 minuten",
@@ -559,7 +559,7 @@
         ]
       },
       "hobconnect": {
-        "longDesc": "Hobconnect bouwt authentieke gemeenschappen rond gedeelde passies. Fotografie, koken, sport, muziek — een sociaal netwerk gericht op gemeenschappelijk belang in plaats van volgersaantallen.",
+        "longDesc": "Hobconnect bouwt authentieke gemeenschappen rond gedeelde passies. Fotografie, koken, sport, muziek, een sociaal netwerk gericht op gemeenschappelijk belang in plaats van volgersaantallen.",
         "audience": "Gepassioneerde particulieren, content creators, verenigingen",
         "features": [
           "Thematische gemeenschappen per passie",
@@ -594,7 +594,7 @@
     "assets": {
       "subblink": {
         "headline": "De AI die uw contracten voor u leest.",
-        "p1": "Subblink analyseert onmiddellijk elk type contract — NDA's, algemene voorwaarden, huurovereenkomsten, dienstverleningscontracten — en identificeert risicovolle clausules, verborgen verplichtingen en onderhandelingspunten.",
+        "p1": "Subblink analyseert onmiddellijk elk type contract, NDA's, algemene voorwaarden, huurovereenkomsten, dienstverleningscontracten, en identificeert risicovolle clausules, verborgen verplichtingen en onderhandelingspunten.",
         "p2": "Gecalibreerd voor het Zwitserse en Europese recht richt de oplossing zich op particulieren, zelfstandigen, kmo's en juridische afdelingen die de controle over hun contractuele verplichtingen willen herwinnen.",
         "market": "B2B — SaaS",
         "tech": "Generatieve AI + juridische NLP",
@@ -621,7 +621,7 @@
       "movtoo": {
         "headline": "On-demand bezorging, aangedreven door AI.",
         "p1": "Movtoo hervindt de last-mile logistiek met een direct bezorgplatform geoptimaliseerd door kunstmatige intelligentie.",
-        "p2": "Afzenders en ontvangers profiteren van volledige transparantie over route, levertijd en kosten — in real time.",
+        "p2": "Afzenders en ontvangers profiteren van volledige transparantie over route, levertijd en kosten, in real time.",
         "market": "B2C — Bezorging",
         "tech": "AI-routing + vlootoptimalisatie",
         "status": "In ontwikkeling"
@@ -629,14 +629,14 @@
       "primiom": {
         "headline": "Vastgoed herdacht door AI.",
         "p1": "Primiom ondersteunt kopers, verkopers en vastgoedinvesteerders met op AI gebaseerde marktanalyse- en beslissingsondersteunende tools.",
-        "p2": "Voorspellende waardering, opportuniteitsdetectie, rentabiliteitssimulatie — alles wat u nodig hebt om met vertrouwen te beslissen.",
+        "p2": "Voorspellende waardering, opportuniteitsdetectie, rentabiliteitssimulatie, alles wat u nodig hebt om met vertrouwen te beslissen.",
         "market": "B2C — Vastgoed",
         "zones": "Frankrijk · Europa",
         "status": "In ontwikkeling"
       },
       "hobconnect": {
         "headline": "Het sociale netwerk dat passies samenbrengt.",
-        "p1": "Hobconnect bouwt authentieke gemeenschappen rond gedeelde interesses — sport, muziek, kunst, gaming, reizen en meer.",
+        "p1": "Hobconnect bouwt authentieke gemeenschappen rond gedeelde interesses, sport, muziek, kunst, gaming, reizen en meer.",
         "p2": "Een alternatief voor generalistische netwerken, gericht op de diepte van uitwisseling in plaats van het volume van interacties.",
         "market": "B2C — Sociaal",
         "model": "Freemium — privé/openbare gemeenschappen",
@@ -782,7 +782,7 @@
     "hero": {
       "label": "Contact opnemen",
       "title": "Laten we praten.",
-      "desc": "Advies, certificering, veiling, partnerschap of algemene vraag — we reageren binnen 24u."
+      "desc": "Advies, certificering, veiling, partnerschap of algemene vraag, we reageren binnen 24u."
     },
     "responseTime": {
       "label": "Reactietijd",
@@ -817,7 +817,7 @@
     },
     "meta": {
       "title": "Contact — AEGRYN",
-      "desc": "Neem contact op met AEGRYN — Advisory, certificering, veiling, partnerschap of algemene vraag."
+      "desc": "Neem contact op met AEGRYN, Advisory, certificering, veiling, partnerschap of algemene vraag."
     },
     "info": {
       "baseLabel": "Hoofdkantoor",
@@ -971,11 +971,11 @@
   "acquisition": {
     "meta": {
       "title": "Acquisition Support — AEGRYN",
-      "desc": "Co-investering, bridge, gestructureerde earnout — AEGRYN verbindt gekwalificeerde overnemers met financiële partners om deals te sluiten die het verdienen."
+      "desc": "Gecertificeerde deal flow, introducties bij financiële partners, gestructureerde earnout: AEGRYN verbindt gekwalificeerde overnemers met de juiste tegenpartijen om deals te sluiten die het verdienen."
     },
     "label": "Services — Acquisition Support",
-    "title": "U heeft\nhet asset geïdentificeerd.\nWij financieren de closing.",
-    "desc": "Co-investering, bridge, gestructureerde earnout — AEGRYN verbindt gekwalificeerde overnemers met financiële partners om deals te sluiten die het verdienen.",
+    "title": "U heeft\nhet asset geïdentificeerd.\nWij structureren de closing.",
+    "desc": "Gecertificeerde deal flow, introducties bij financiële partners, gestructureerde earnout: AEGRYN verbindt gekwalificeerde overnemers met de juiste tegenpartijen om deals te sluiten die het verdienen.",
     "ctaPrimary": "Mijn acquisitie bespreken",
     "ctaDiscover": "Onze analyses lezen",
     "forWhom": {
@@ -992,7 +992,7 @@
         },
         {
           "title": "Eerste overnemers",
-          "desc": "U voert uw eerste tech-acquisitie uit. Wij begeleiden u bij waardering, due diligence en onderhandeling — zonder u bloot te stellen aan verborgen risico's."
+          "desc": "U voert uw eerste tech-acquisitie uit en wenst een gestructureerd, gedocumenteerd proces van waardering tot overdracht. AEGRYN begeleidt u door due diligence, onderhandeling en closing, met volledige certificering van wat u koopt."
         }
       ]
     },
@@ -1007,17 +1007,17 @@
         {
           "num": "02",
           "title": "Pipeline matching",
-          "desc": "Prioriteitstoegang tot de AEGRYN-catalogus en off-market flow — alleen Grade A en hoger gecertificeerde assets."
+          "desc": "Prioriteitstoegang tot de AEGRYN-catalogus en off-market flow: gecertificeerde assets Grade AA en hoger. Grade-A-assets beschikbaar op specifiek verzoek met remediëringsplan inbegrepen."
         },
         {
           "num": "03",
           "title": "Financiële structurering",
-          "desc": "Indien nodig, introductie bij financiële partners (bridge, co-invest, earnout) voor optimalisatie van de closing-financiering."
+          "desc": "Wanneer de acquisitie externe financiering vereist, introduceert AEGRYN gekwalificeerde financiële partners: bridge-financiering om de closing te versnellen, co-investering om blootstelling te delen, of gestructureerde earnout om de prijs af te stemmen op toekomstige performance. Elke introductie is specifiek voor uw deal-profiel."
         },
         {
           "num": "04",
           "title": "Veilige closing",
-          "desc": "Institutionele escrow, volledige documentatie bij overdracht, AGV inbegrepen."
+          "desc": "Institutionele escrow, volledige documentatie bij overdracht, AV inbegrepen."
         }
       ]
     },
@@ -1026,11 +1026,11 @@
       "items": [
         {
           "title": "Gecertificeerde assets, minder risico",
-          "desc": "Elk pipeline-asset is vóór listung beoordeeld op 4 dimensies (C/I/F/S). U onderhandelt niet op verklaringen — u koopt op geverifieerde grades."
+          "desc": "Elk pipeline-asset is vóór listung beoordeeld op 4 dimensies (C/I/F/S). U onderhandelt niet op verklaringen, u koopt op geverifieerde grades."
         },
         {
           "title": "Off-market eerst",
-          "desc": "De meeste AEGRYN-assets worden nooit publiek gelistet. Gekwalificeerde overnemer-leden krijgen toegang vóór enige publieke listung — of exclusief."
+          "desc": "De meeste AEGRYN-assets worden nooit publiek gelistet. Gekwalificeerde overnemer-leden krijgen toegang vóór enige publieke listung, of exclusief."
         },
         {
           "title": "Structurering inbegrepen",
@@ -1038,21 +1038,22 @@
         },
         {
           "title": "Aansprakelijkheid ingezet",
-          "desc": "Onze grade wordt uitgegeven door gecertificeerde analisten volgens een rigoureus onafhankelijk protocol. Als de grade onjuist is, is onze aansprakelijkheid in het geding."
+          "desc": "Onze grade wordt uitgegeven door gecertificeerde analisten volgens een onafhankelijk, rigoureus protocol. De professionele aansprakelijkheid van AEGRYN is betrokken bij de integriteit van het certificeringsproces, binnen de grenzen van onze Algemene Voorwaarden."
         }
       ]
     },
     "fees": {
       "label": "Honoraria",
       "title": "Een succesfee,\nnul vaste kosten.",
-      "desc": "Onze vergoeding is uitsluitend afhankelijk van een effectieve closing. Geen retainer, geen instapkosten. Gedetailleerde voorwaarden beschikbaar in onze AV.",
-      "note": "AEGRYN is geen erkende financiële instelling. Deze service is een introductie bij onafhankelijke derde financiële partners. Het vormt geen beleggingsadvies in de zin van de MiFID II-richtlijn."
+      "desc": "Onze vergoeding is uitsluitend afhankelijk van een effectieve closing. Geen retainer, geen instapkosten. Gedetailleerde voorwaarden beschikbaar in onze Algemene Voorwaarden.",
+      "note": "AEGRYN handelt als gecertificeerde tussenpersoon, niet als financiële instelling. De op deze pagina gepresenteerde financieringsopties betreffen onafhankelijke derde partners. Deze service vormt geen beleggingsadvies in de zin van de MiFID II-richtlijn."
     },
     "cta": {
       "title": "Interesse in een asset?",
       "desc": "Vertel ons over uw acquisitieproject. Wij reageren binnen 48u met een haalbaarheidsanalyse.",
       "btn": "Ons contacteren"
-    }
+    },
+    "advisorNote": "Een AEGRYN-adviseur wordt toegewezen aan uw dossier van het eerste contact tot de closing. Één persoon. Directe lijn."
   },
   "gradingSystem": {
     "meta": {
@@ -1240,22 +1241,22 @@
       {
         "code": "01",
         "label": "Referentie",
-        "desc": "Sectoraal referentieniveau — top 5%"
+        "desc": "Sectoraal referentieniveau, top 5%"
       },
       {
         "code": "02",
         "label": "Solide",
-        "desc": "Boven de mediaan — fundamenten beheerst"
+        "desc": "Boven de mediaan, fundamenten beheerst"
       },
       {
         "code": "03",
         "label": "In uitvoering",
-        "desc": "Onder de mediaan — verbeterpunten geïdentificeerd"
+        "desc": "Onder de mediaan, verbeterpunten geïdentificeerd"
       },
       {
         "code": "04",
         "label": "Remediatie",
-        "desc": "Onvoldoende niveau — remediatieplan vereist"
+        "desc": "Onvoldoende niveau, remediatieplan vereist"
       }
     ],
     "exampleTitle": "Volledig codevoorbeeld",
@@ -1322,7 +1323,7 @@
       },
       {
         "title": "Toekomstige versterking",
-        "desc": "AEGRYN bouwt geleidelijk een netwerk van expertpartners op die bepaalde rapporten kunnen verrijken met een aanvullende kruisreview, evenals een blockchain-certificeringslaag om de traceerbaarheid van het register te versterken. Deze bouwstenen zullen het reeds volledig operationele onafhankelijke protocol aanvullen — nooit vervangen."
+        "desc": "AEGRYN bouwt geleidelijk een netwerk van expertpartners op die bepaalde rapporten kunnen verrijken met een aanvullende kruisreview, evenals een blockchain-certificeringslaag om de traceerbaarheid van het register te versterken. Deze bouwstenen zullen het reeds volledig operationele onafhankelijke protocol aanvullen, nooit vervangen."
       }
     ],
     "ctaTitle": "Certificeer uw asset",
@@ -1443,7 +1444,7 @@
         "dim": "C",
         "code": "C-31",
         "label": "Maintainability",
-        "desc": "Ease of onboarding a new developer — estimated time documented."
+        "desc": "Ease of onboarding a new developer, estimated time documented."
       },
       {
         "dim": "C",
@@ -1479,7 +1480,7 @@
         "dim": "C",
         "code": "C-41",
         "label": "Code ownership",
-        "desc": "All code owned by the selling entity — no external contribution not assigned."
+        "desc": "All code owned by the selling entity, no external contribution not assigned."
       },
       {
         "dim": "I",
@@ -1497,7 +1498,7 @@
         "dim": "I",
         "code": "I-13",
         "label": "Patents",
-        "desc": "Patents filed or pending — value and scope documented."
+        "desc": "Patents filed or pending, value and scope documented."
       },
       {
         "dim": "I",
@@ -1563,13 +1564,13 @@
         "dim": "I",
         "code": "I-32",
         "label": "Reputation & reviews",
-        "desc": "Public reviews, NPS or documented customer feedback — no structural bad buzz."
+        "desc": "Public reviews, NPS or documented customer feedback, no structural bad buzz."
       },
       {
         "dim": "I",
         "code": "I-39",
         "label": "Chain of title",
-        "desc": "Clear ownership history since incorporation — no gap in chain of title."
+        "desc": "Clear ownership history since incorporation, no gap in chain of title."
       },
       {
         "dim": "F",
@@ -1629,7 +1630,7 @@
         "dim": "F",
         "code": "F-22",
         "label": "Customer concentration",
-        "desc": "Top customer share of total revenue — concentration risk assessed."
+        "desc": "Top customer share of total revenue, concentration risk assessed."
       },
       {
         "dim": "F",
@@ -1671,13 +1672,13 @@
         "dim": "F",
         "code": "F-42",
         "label": "Founder dependency",
-        "desc": "Share of revenue personally carried by founder(s) — key-person risk assessed."
+        "desc": "Share of revenue personally carried by founder(s), key-person risk assessed."
       },
       {
         "dim": "F",
         "code": "F-43",
         "label": "Verifiable data",
-        "desc": "All financial metrics verifiable on evidence — no blocking refusal. Blocking if refused."
+        "desc": "All financial metrics verifiable on evidence, no blocking refusal. Blocking if refused."
       },
       {
         "dim": "F",
@@ -2208,7 +2209,7 @@
         {
           "num": "04",
           "title": "Closing",
-          "desc": "Onderhandeling, escrow, overdracht — alles begeleid door AEGRYN."
+          "desc": "Onderhandeling, escrow, overdracht, alles begeleid door AEGRYN."
         }
       ],
       "step1Title": "Indienen",
@@ -2420,23 +2421,23 @@
     "grades": {
       "star": {
         "label": "AEG ★",
-        "desc": "Uitzonderlijk — top 1%"
+        "desc": "Uitzonderlijk, top 1%"
       },
       "aaa": {
         "label": "AAA",
-        "desc": "Premium — transactieklaar"
+        "desc": "Premium, transactieklaar"
       },
       "aa": {
         "label": "AA",
-        "desc": "Solide — waardering bevestigd"
+        "desc": "Solide, waardering bevestigd"
       },
       "a": {
         "label": "A",
-        "desc": "Standaard — potentieel geïdentificeerd"
+        "desc": "Standaard, potentieel geïdentificeerd"
       },
       "b": {
         "label": "B",
-        "desc": "Correct — advisory aanbevolen"
+        "desc": "Correct, advisory aanbevolen"
       }
     }
   },
@@ -2488,7 +2489,7 @@
       {
         "category": "Casestudy",
         "title": "Een B2B SaaS beoordelen: een methodologische oefening op een publieke transactie",
-        "desc": "Illustratieve toepassing van het CIFS-protocol op een gepubliceerde tech-transactie — om te begrijpen hoe elke C/I/F/S-dimensie het eindcijfer beïnvloedt. Pedagogische oefening, niet bindend."
+        "desc": "Illustratieve toepassing van het CIFS-protocol op een gepubliceerde tech-transactie, om te begrijpen hoe elke C/I/F/S-dimensie het eindcijfer beïnvloedt. Pedagogische oefening, niet bindend."
       }
     ]
   },
@@ -2713,7 +2714,7 @@
   "bidModels": {
     "meta": {
       "title": "Acquisitiemodellen — AEGRYN Auction",
-      "desc": "Club Deal, Corporate, Fonds, Equity Stake — de 4 AEGRYN-acquisitiemodellen met de Tech Transactiebelofte in 5 stappen."
+      "desc": "Club Deal, Corporate, Fonds, Equity Stake, de 4 AEGRYN-acquisitiemodellen met de Tech Transactiebelofte in 5 stappen."
     },
     "hero": {
       "back": "← Auction",
@@ -2786,7 +2787,7 @@
         "label": "MODEL 04",
         "title": "Equity Stake",
         "subBadge": "Geen cessie · Geen escrow",
-        "summary": "Voor investeerders of partners die een deelneming in het actief willen nemen zonder het volledig te verwerven — aandelen in ruil voor advisory fees, carried interest of operationele bijdrage. Directe verbintenis, zonder bankescrow.",
+        "summary": "Voor investeerders of partners die een deelneming in het actief willen nemen zonder het volledig te verwerven, aandelen in ruil voor advisory fees, carried interest of operationele bijdrage. Directe verbintenis, zonder bankescrow.",
         "conditions": [
           "Geen vast minimumticket (waardering onderhandeld tussen partijen)",
           "KYC op basis van profiel (vereenvoudigd voor gekwalificeerde particulieren, volledig voor entiteiten)",
@@ -3001,7 +3002,7 @@
     "hero": {
       "label": "AEGRYN VALUATION",
       "title": "Schat de waarde\nvan uw asset.",
-      "desc": "Onze calculator simuleert het AEGRYN-gradeprotocol over 4 dimensies — Financiën, Code, IP, Beveiliging — en geeft een waarderingsbereik op basis van de marktmultiples 2026. Gratis. Vertrouwelijk. Geen verplichting."
+      "desc": "Onze calculator simuleert het AEGRYN-gradeprotocol over 4 dimensies, Financiën, Code, IP, Beveiliging, en geeft een waarderingsbereik op basis van de marktmultiples 2026. Gratis. Vertrouwelijk. Geen verplichting."
     },
     "progress": {
       "step": "Stap",
@@ -3232,7 +3233,7 @@
       {
         "num": "04",
         "title": "Transactie",
-        "desc": "Begeleide onderhandeling — escrow — overdracht van rechten."
+        "desc": "Begeleide onderhandeling, escrow, overdracht van rechten."
       }
     ],
     "form": {
@@ -4213,7 +4214,7 @@
   "neediuDpn": {
     "meta": {
       "title": "Privacyverklaring & Gebruiksvoorwaarden — neediu | Aegryn",
-      "desc": "Privacyverklaring en gebruiksvoorwaarden van het neediu-platform — Aegryn, conform de Zwitserse DSG en de AVG."
+      "desc": "Privacyverklaring en gebruiksvoorwaarden van het neediu-platform, Aegryn, conform de Zwitserse DSG en de AVG."
     },
     "breadcrumb": "Legal",
     "sectionDpn": "(01)",
@@ -4511,7 +4512,7 @@
     "a7Title": "Toepasselijk recht en bevoegde rechter",
     "a7": "Deze NDA is onderworpen aan Zwitsers recht. Elk geschil voortvloeiend uit deze NDA wordt voorgelegd aan de exclusieve bevoegdheid van de rechtbanken van het kanton waar AEGRYN gevestigd is.",
     "a8Title": "Aanvaarding",
-    "a8": "Door de onderstaande vakjes aan te vinken en te klikken op \u00abAanvaarden en toegang tot de catalogus\u00bb, verklaart de Koper alle bepalingen van deze NDA te hebben gelezen, begrepen en zonder voorbehoud aanvaard.",
+    "a8": "Door de onderstaande vakjes aan te vinken en te klikken op «Aanvaarden en toegang tot de catalogus», verklaart de Koper alle bepalingen van deze NDA te hebben gelezen, begrepen en zonder voorbehoud aanvaard.",
     "acceptSectionLabel": "Artikel 8 — Aanvaarding",
     "check1": "Ik heb de bovenstaande vertrouwelijkheidsvoorwaarden volledig gelezen en aanvaard.",
     "check2": "Ik erken dat elke poging om technische beveiligingsmaatregelen te omzeilen zal worden geregistreerd en als bewijs kan dienen in geval van schending van deze overeenkomst.",

@@ -61,7 +61,7 @@
       "desc": "Chaque actif AEGRYN est conçu, construit et opéré en interne. Propriété totale, souveraineté absolue, durabilité garantie.",
       "meta": {
         "title": "Actifs AEGRYN — Écosystème propriétaire",
-        "desc": "Découvrez les actifs propriétaires d'AEGRYN : Subblink, Neediu, Primiom, Movtoo, Hobconnect — conçus pour durer, certifiables et transférables."
+        "desc": "Découvrez les actifs propriétaires d'AEGRYN : Subblink, Neediu, Primiom, Movtoo, Hobconnect, conçus pour durer, certifiables et transférables."
       },
       "filterAll": "Tous",
       "filterAI": "AI & Protocoles",
@@ -152,7 +152,7 @@
     "hero": {
       "label": "Portefeuille AEGRYN",
       "title": "Six actifs propriétaires.\nUne vision commune.",
-      "desc": "Chaque actif AEGRYN est conçu dès l'origine pour être certifiable et transférable — IP déposée, codebase propriétaire, stack documentée."
+      "desc": "Chaque actif AEGRYN est conçu dès l'origine pour être certifiable et transférable, IP déposée, codebase propriétaire, stack documentée."
     },
     "categories": {
       "ai": "IA & Protocoles",
@@ -198,7 +198,7 @@
       {
         "num": "01",
         "title": "La certification manquait.",
-        "desc": "Acheter un actif tech sans certification indépendante, c'est acheter une montre sans papiers. AEGRYN apporte les papiers — certifiés, vérifiables, documentés."
+        "desc": "Acheter un actif tech sans certification indépendante, c'est acheter une montre sans papiers. AEGRYN apporte les papiers, certifiés, vérifiables, documentés."
       },
       {
         "num": "02",
@@ -220,7 +220,7 @@
     "cta": "À propos d'Aegryn",
     "quote": "Un actif tech sans certification indépendante, c'est une valeur sans preuve. AEGRYN apporte la preuve sur chaque actif, à chaque transfert.",
     "ceoName": "",
-    "ceoTitle": "AEGRYN",
+    "ceoTitle": "Fondateur, AEGRYN",
     "stats": [
       {
         "val": "6",
@@ -242,15 +242,15 @@
     "items": [
       {
         "title": "BUILD",
-        "desc": "Nous construisons des actifs tech propriétaires conçus dès l'origine pour être certifiables et transférables — SaaS, marketplaces, protocoles IA. Chaque actif est structuré pour résister à l'audit le plus exigeant."
+        "desc": "Nous construisons des actifs tech propriétaires conçus dès l'origine pour être certifiables et transférables, SaaS, marketplaces, protocoles IA. Chaque actif est structuré pour résister à l'audit le plus exigeant."
       },
       {
         "title": "GRADE",
-        "desc": "Nous certifions des actifs tiers et propres selon un label indépendant, structuré sur 4 dimensions d'analyse — Code, IP, Finance, Sécurité. Un protocole reproductible, traçable et concluant."
+        "desc": "Nous certifions des actifs tiers et propres selon un label indépendant, structuré sur 4 dimensions d'analyse, Code, IP, Finance, Sécurité. Un protocole reproductible, traçable et concluant."
       },
       {
         "title": "AUCTION",
-        "desc": "Nous transigeons des actifs certifiés via un processus confidentiel — séquestre institutionnel, cercle d'acquéreurs pré-qualifiés, mandat exclusif 60 jours. Moins de 25% des actifs soumis sont acceptés."
+        "desc": "Nous transigeons des actifs certifiés via un processus confidentiel, séquestre institutionnel, cercle d'acquéreurs pré-qualifiés, mandat exclusif 60 jours. Moins de 25% des actifs soumis sont acceptés."
       }
     ]
   },
@@ -261,12 +261,12 @@
       {
         "num": "01",
         "title": "CERTIFICATION INDÉPENDANTE",
-        "desc": "Chaque rapport de grade AEGRYN est émis par nos analystes certifiés, selon un protocole reproductible et traçable. Pas une opinion — une certification."
+        "desc": "Chaque rapport de grade AEGRYN est émis par nos analystes certifiés, selon un protocole reproductible et traçable. Pas une opinion, une certification."
       },
       {
         "num": "02",
         "title": "TRAÇABILITÉ AU TRANSFERT",
-        "desc": "Chaque transfert d'actif est documenté avec précision — état du codebase, date, périmètre exact. Une couche de certification blockchain viendra renforcer cette traçabilité à terme."
+        "desc": "Chaque transfert d'actif est documenté avec précision, état du codebase, date, périmètre exact. Une couche de certification blockchain viendra renforcer cette traçabilité à terme."
       },
       {
         "num": "03",
@@ -326,7 +326,7 @@
     "hero": {
       "label": "À propos d'AEGRYN",
       "title": "L'infrastructure de confiance\ndu M&A tech européen.",
-      "desc": "Certification. Discrétion. Permanence.\nTrois principes qui ont forgé un nom — et une entreprise."
+      "desc": "Certification. Discrétion. Permanence.\nTrois principes qui ont forgé un nom, et une entreprise."
     },
     "name": {
       "label": "Le nom",
@@ -334,11 +334,11 @@
       "roots": [
         {
           "word": "AEGIS",
-          "meaning": "Le bouclier divin. Symbole de protection, d'autorité et de légitimité. Agir sous l'égide de quelque chose, c'est agir sous une autorité de certification — dont le standard fait foi."
+          "meaning": "Le bouclier divin. Symbole de protection, d'autorité et de légitimité. Agir sous l'égide de quelque chose, c'est agir sous une autorité de certification, dont le standard fait foi."
         },
         {
           "word": "AEGIR",
-          "meaning": "La divinité qui commandait les mers et leurs courants. Maître des flux — de ce qui circule entre les rives, entre les parties, entre la valeur et sa reconnaissance."
+          "meaning": "La divinité qui commandait les mers et leurs courants. Maître des flux, de ce qui circule entre les rives, entre les parties, entre la valeur et sa reconnaissance."
         },
         {
           "word": "AEON",
@@ -346,11 +346,11 @@
         }
       ],
       "synthesis": "Trois mots issus de trois civilisations. Une synthèse : une entité qui protège (AEGIS), facilite les flux (AEGIR), et construit pour la permanence (AEON). AEGRYN.",
-      "formerly": "AEGRYN s'appelait autrefois BOHA-Group. À mesure que le positionnement de l'entreprise s'est affiné — de constructeur d'actifs numériques à infrastructure de certification et de transaction — son identité s'est affinée avec lui. Le nom a changé. La conviction, non."
+      "formerly": "AEGRYN s'appelait autrefois BOHA-Group. À mesure que le positionnement de l'entreprise s'est affiné, de constructeur d'actifs numériques à infrastructure de certification et de transaction, son identité s'est affinée avec lui. Le nom a changé. La conviction, non."
     },
     "vision": {
       "label": "Notre vision",
-      "text": "Le marché du M&A tech européen repose sur des fondations sérieuses — des conseils expérimentés, une due diligence rigoureuse, des capitaux institutionnels. Ce qui lui manquait : un référentiel de certification standardisé et indépendant — une référence commune et vérifiable sur laquelle les deux parties d'une transaction peuvent s'appuyer avant même d'entamer les négociations.\n\nAEGRYN est ce référentiel — non pas un remplacement de ce qui fonctionne déjà, mais la couche d'infrastructure qui était structurellement absente."
+      "text": "Le marché du M&A tech européen repose sur des fondations sérieuses, des conseils expérimentés, une due diligence rigoureuse, des capitaux institutionnels. Ce qui lui manquait : un référentiel de certification standardisé et indépendant, une référence commune et vérifiable sur laquelle les deux parties d'une transaction peuvent s'appuyer avant même d'entamer les négociations.\n\nAEGRYN est ce référentiel, non pas un remplacement de ce qui fonctionne déjà, mais la couche d'infrastructure qui était structurellement absente."
     },
     "contribution": {
       "label": "Notre contribution",
@@ -360,17 +360,17 @@
         {
           "num": "01",
           "title": "Une notation avant un prix",
-          "desc": "La notation C/I/F/S d'AEGRYN est établie avant toute mise en marché, avant toute négociation. Pas un avis de valorisation — une certification de ce que l'actif est réellement, documentée, versionnée et reproductible. Le prix suit la notation. La notation n'en dépend pas."
+          "desc": "La notation C/I/F/S d'AEGRYN est établie avant toute mise en marché, avant toute négociation. Pas un avis de valorisation, une certification de ce que l'actif est réellement, documentée, versionnée et reproductible. Le prix suit la notation. La notation n'en dépend pas."
         },
         {
           "num": "02",
           "title": "Un cercle fermé, pas une marketplace",
-          "desc": "Chaque vendeur dans le catalogue AEGRYN a passé la certification. Chaque acquéreur a démontré sa capacité financière. La discrétion est structurelle — ce n'est pas une fonctionnalité ajoutée en surface, c'est la condition opératoire à partir de laquelle tout le reste découle."
+          "desc": "Chaque vendeur dans le catalogue AEGRYN a passé la certification. Chaque acquéreur a démontré sa capacité financière. La discrétion est structurelle, ce n'est pas une fonctionnalité ajoutée en surface, c'est la condition opératoire à partir de laquelle tout le reste découle."
         },
         {
           "num": "03",
           "title": "Standards institutionnels suisses",
-          "desc": "Le droit suisse régit chaque transaction. Le séquestre est détenu par une banque tierce — AEGRYN ne touche jamais les fonds. La documentation est complète à chaque transfert. Ce sont des conditions opératoires, pas des promesses."
+          "desc": "Le droit suisse régit chaque transaction. Le séquestre est détenu par une banque tierce, AEGRYN ne touche jamais les fonds. La documentation est complète à chaque transfert. Ce sont des conditions opératoires, pas des promesses."
         }
       ]
     },
@@ -397,12 +397,12 @@
       "precision": {
         "label": "01",
         "title": "Précision",
-        "desc": "Chaque décision est documentée, mesurée et traçable. Le Grade AEGRYN n'est pas un avis — c'est un protocole. Deux analystes, même protocole, même grade."
+        "desc": "Chaque décision est documentée, mesurée et traçable. Le Grade AEGRYN n'est pas un avis, c'est un protocole. Deux analystes, même protocole, même grade."
       },
       "durability": {
         "label": "02",
         "title": "Durabilité",
-        "desc": "Nous construisons pour la décennie, pas pour le trimestre. Chaque actif de l'écosystème AEGRYN est conçu pour être certifiable dans dix ans — pas seulement aujourd'hui."
+        "desc": "Nous construisons pour la décennie, pas pour le trimestre. Chaque actif de l'écosystème AEGRYN est conçu pour être certifiable dans dix ans, pas seulement aujourd'hui."
       },
       "sovereignty": {
         "label": "03",
@@ -412,26 +412,26 @@
       "independence": {
         "label": "04",
         "title": "Indépendance",
-        "desc": "L'analyste qui certifie un actif n'a aucun intérêt financier dans la transaction qui suit. Cette séparation n'est pas une politique — c'est la condition structurelle qui donne sa valeur au grade."
+        "desc": "L'analyste qui certifie un actif n'a aucun intérêt financier dans la transaction qui suit. Cette séparation n'est pas une politique, c'est la condition structurelle qui donne sa valeur au grade."
       }
     },
     "swiss": {
       "groupLabel": "AEGRYN",
       "title": "Ancré en Suisse.\nLa référence européenne.",
-      "desc": "La Suisse a été choisie délibérément — non pour ses avantages d'incorporation, mais pour ses standards institutionnels : la rigueur du droit suisse, la discrétion de son écosystème financier, et la neutralité qui en fait une ancre crédible pour les transactions transfrontalières entre un vendeur français, un acquéreur allemand et un fonds luxembourgeois. Chaque transaction AEGRYN est régie par le droit suisse, quelle que soit la nationalité des parties ou l'origine de l'actif.",
+      "desc": "La Suisse a été choisie délibérément, non pour ses avantages d'incorporation, mais pour ses standards institutionnels : la rigueur du droit suisse, la discrétion de son écosystème financier, et la neutralité qui en fait une ancre crédible pour les transactions transfrontalières entre un vendeur français, un acquéreur allemand et un fonds luxembourgeois. Chaque transaction AEGRYN est régie par le droit suisse, quelle que soit la nationalité des parties ou l'origine de l'actif.",
       "cta": "Voir le catalogue"
     },
     "founder": {
       "label": "La conviction fondatrice",
       "title": "Construit de l'intérieur.",
-      "bio1": "AEGRYN a été fondé par un builder qui a passé des années à construire, auditer et structurer des actifs numériques — et à observer à chaque fois le même vide : l'absence d'un référentiel standardisé et indépendant auquel les deux parties d'une transaction tech pouvaient également faire confiance.",
-      "bio2": "Le choix d'ancrer ce référentiel en Suisse, sous droit suisse et standards institutionnels, était délibéré. Pas un détail d'incorporation — un choix de positionnement. Les actifs propriétaires qu'AEGRYN construit sont conçus pour répondre à ce standard dès leur première ligne de code.",
+      "bio1": "AEGRYN a été fondé par un builder qui a passé des années à construire, auditer et structurer des actifs numériques, et à observer à chaque fois le même vide : l'absence d'un référentiel standardisé et indépendant auquel les deux parties d'une transaction tech pouvaient également faire confiance.",
+      "bio2": "Le choix d'ancrer ce référentiel en Suisse, sous droit suisse et standards institutionnels, était délibéré. Pas un détail d'incorporation, un choix de positionnement. Les actifs propriétaires qu'AEGRYN construit sont conçus pour répondre à ce standard dès leur première ligne de code.",
       "cta": "Prendre contact"
     },
     "whatsnext": {
       "label": "Ce qui vient ensuite",
       "title": "Le protocole évolue.\nLe standard tient.",
-      "desc": "AEGRYN certifie et transige actuellement des SaaS, applications, marketplaces, actifs à base d'IP et actifs Web3 / Digital Art sous le protocole CIFS.\n\nLe principal chantier du roadmap est l'ancrage blockchain : une couche KRYV Protocol qui scellera chaque codebase certifié à la date exacte du transfert — rendant chaque grade définitivement vérifiable on-chain. Cette couche complétera le protocole indépendant déjà pleinement opérationnel, sans jamais le remplacer.\n\nEn parallèle, nous construisons un réseau de partenaires experts — cabinets juridiques, experts-comptables, spécialistes cybersécurité — qui enrichiront certains rapports d'une revue croisée.",
+      "desc": "AEGRYN certifie et transige actuellement des SaaS, applications, marketplaces, actifs à base d'IP et actifs Web3 / Digital Art sous le protocole CIFS.\n\nLe principal chantier du roadmap est l'ancrage blockchain : une couche KRYV Protocol qui scellera chaque codebase certifié à la date exacte du transfert, rendant chaque grade définitivement vérifiable on-chain. Cette couche complétera le protocole indépendant déjà pleinement opérationnel, sans jamais le remplacer.\n\nEn parallèle, nous construisons un réseau de partenaires experts, cabinets juridiques, experts-comptables, spécialistes cybersécurité, qui enrichiront certains rapports d'une revue croisée.",
       "cta": "Voir les sessions en cours"
     },
     "cta": {
@@ -460,7 +460,7 @@
     "hero": {
       "label": "Aegryn Advisory & Carrières",
       "title": "Advisory & Experts Écosystèmes Numériques",
-      "desc": "Aegryn recrute des Senior Advisors — des experts opérationnels en Data, IA et Cybersécurité pour structurer des écosystèmes numériques durables."
+      "desc": "Aegryn recrute des Senior Advisors, des experts opérationnels en Data, IA et Cybersécurité pour structurer des écosystèmes numériques durables."
     },
     "positions": {
       "label": "Postes à venir",
@@ -509,7 +509,7 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "Subblink analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées — tout est identifié et expliqué en langage clair.",
+        "longDesc": "Subblink analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées, tout est identifié et expliqué en langage clair.",
         "audience": "Particuliers, indépendants, PME, cabinets juridiques",
         "features": [
           "Analyse de contrats en 60 secondes",
@@ -522,7 +522,7 @@
         ]
       },
       "neediu": {
-        "longDesc": "Neediu connecte les particuliers aux meilleurs prestataires de services à domicile. Ménage, jardinage, bricolage, baby-sitting — une mise en relation intelligente basée sur la localisation et les avis vérifiés.",
+        "longDesc": "Neediu connecte les particuliers aux meilleurs prestataires de services à domicile. Ménage, jardinage, bricolage, baby-sitting, une mise en relation intelligente basée sur la localisation et les avis vérifiés.",
         "audience": "Particuliers, propriétaires, locataires",
         "features": [
           "Mise en relation en temps réel",
@@ -546,7 +546,7 @@
         ]
       },
       "movtoo": {
-        "longDesc": "Movtoo est une plateforme de livraison immédiate pilotée par l'intelligence artificielle. Courses, repas, colis — la livraison à la demande optimisée pour les zones urbaines denses.",
+        "longDesc": "Movtoo est une plateforme de livraison immédiate pilotée par l'intelligence artificielle. Courses, repas, colis, la livraison à la demande optimisée pour les zones urbaines denses.",
         "audience": "Particuliers, restaurateurs, commerces de proximité",
         "features": [
           "Livraison en moins de 45 minutes",
@@ -558,7 +558,7 @@
         ]
       },
       "hobconnect": {
-        "longDesc": "Hobconnect crée des communautés authentiques autour des passions partagées. Photographie, cuisine, sport, musique — un réseau social centré sur l'intérêt commun plutôt que sur les abonnés.",
+        "longDesc": "Hobconnect crée des communautés authentiques autour des passions partagées. Photographie, cuisine, sport, musique, un réseau social centré sur l'intérêt commun plutôt que sur les abonnés.",
         "audience": "Particuliers passionnés, créateurs de contenu, associations",
         "features": [
           "Communautés thématiques par passion",
@@ -578,7 +578,7 @@
     "assets": {
       "subblink": {
         "headline": "L'IA qui lit vos contrats à votre place.",
-        "p1": "Subblink analyse instantanément tout type de contrat — NDAs, CGV, baux, contrats de prestation — et identifie les clauses à risque, les engagements cachés et les points de négociation.",
+        "p1": "Subblink analyse instantanément tout type de contrat, NDAs, CGV, baux, contrats de prestation, et identifie les clauses à risque, les engagements cachés et les points de négociation.",
         "p2": "Calibrée pour le droit suisse et européen, la solution s'adresse aux particuliers, indépendants, PME et directions juridiques qui veulent reprendre le contrôle de leurs obligations contractuelles.",
         "market": "B2B — SaaS",
         "tech": "IA générative + NLP juridique",
@@ -605,7 +605,7 @@
       "movtoo": {
         "headline": "La livraison à la demande, pilotée par l'IA.",
         "p1": "Movtoo réinvente la logistique du dernier kilomètre avec une plateforme de livraison immédiate optimisée par l'intelligence artificielle.",
-        "p2": "Les expéditeurs et destinataires bénéficient d'une transparence totale sur le trajet, le délai et le coût — en temps réel.",
+        "p2": "Les expéditeurs et destinataires bénéficient d'une transparence totale sur le trajet, le délai et le coût, en temps réel.",
         "market": "B2C — Livraison",
         "tech": "IA routage + optimisation flotte",
         "status": "En développement"
@@ -613,14 +613,14 @@
       "primiom": {
         "headline": "L'immobilier réinventé par l'IA.",
         "p1": "Primiom accompagne acheteurs, vendeurs et investisseurs immobiliers avec des outils d'analyse de marché et d'aide à la décision basés sur l'IA.",
-        "p2": "Évaluation prédictive, détection des opportunités, simulation de rentabilité — tout ce dont vous avez besoin pour décider avec confiance.",
+        "p2": "Évaluation prédictive, détection des opportunités, simulation de rentabilité, tout ce dont vous avez besoin pour décider avec confiance.",
         "market": "B2C — Immobilier",
         "zones": "France · Europe",
         "status": "En développement"
       },
       "hobconnect": {
         "headline": "Le réseau social qui rassemble autour des passions.",
-        "p1": "Hobconnect crée des communautés authentiques autour des centres d'intérêt partagés — sport, musique, art, gaming, voyages et bien d'autres.",
+        "p1": "Hobconnect crée des communautés authentiques autour des centres d'intérêt partagés, sport, musique, art, gaming, voyages et bien d'autres.",
         "p2": "Une alternative aux réseaux généralistes, centrée sur la profondeur des échanges plutôt que sur la quantité d'interactions.",
         "market": "B2C — Social",
         "model": "Freemium — communautés privées/publiques",
@@ -781,7 +781,7 @@
     "hero": {
       "label": "Nous contacter",
       "title": "Parlons.",
-      "desc": "Conseil, certification, enchères, partenariat ou question générale — nous répondons sous 24h."
+      "desc": "Conseil, certification, enchères, partenariat ou question générale, nous répondons sous 24h."
     },
     "responseTime": {
       "label": "Délai de réponse",
@@ -816,7 +816,7 @@
     },
     "meta": {
       "title": "Contact — AEGRYN",
-      "desc": "Prenez contact avec AEGRYN — advisory, certification d'actif, session auction, partenariat ou question générale."
+      "desc": "Prenez contact avec AEGRYN, advisory, certification d'actif, session auction, partenariat ou question générale."
     },
     "info": {
       "baseLabel": "Siège",
@@ -994,23 +994,23 @@
     "grades": {
       "star": {
         "label": "AEG ★",
-        "desc": "Exceptionnel — top 1%"
+        "desc": "Exceptionnel, top 1%"
       },
       "aaa": {
         "label": "AAA",
-        "desc": "Premium — prêt pour transaction"
+        "desc": "Premium, prêt pour transaction"
       },
       "aa": {
         "label": "AA",
-        "desc": "Solide — valorisation confirmée"
+        "desc": "Solide, valorisation confirmée"
       },
       "a": {
         "label": "A",
-        "desc": "Standard — potentiel identifié"
+        "desc": "Standard, potentiel identifié"
       },
       "b": {
         "label": "B",
-        "desc": "Correct — advisory recommandé"
+        "desc": "Correct, advisory recommandé"
       }
     }
   },
@@ -1057,7 +1057,7 @@
   "acquisitionSupport": {
     "label": "Acquisition Support",
     "title": "Vous avez identifié\nl'actif. Nous finançons\nle closing.",
-    "desc": "Co-investissement, bridge, earnout structuré — AEGRYN connecte les acquéreurs qualifiés à des partenaires financiers pour fermer les deals qui méritent de l'être.",
+    "desc": "Co-investissement, bridge, earnout structuré, AEGRYN connecte les acquéreurs qualifiés à des partenaires financiers pour fermer les deals qui méritent de l'être.",
     "cta": "Découvrir l'Acquisition Support",
     "legal": "AEGRYN n'est pas un établissement financier. Ce service est une mise en relation avec des partenaires tiers indépendants."
   },
@@ -1074,7 +1074,7 @@
       {
         "category": "Guide vendeur",
         "title": "Les 5 erreurs qui font chuter la valorisation de votre SaaS",
-        "desc": "Les erreurs les plus fréquentes identifiées lors des certifications AEGRYN — et comment les corriger avant de soumettre."
+        "desc": "Les erreurs les plus fréquentes identifiées lors des certifications AEGRYN, et comment les corriger avant de soumettre."
       },
       {
         "category": "Certification",
@@ -1084,18 +1084,18 @@
       {
         "category": "Étude de cas",
         "title": "Grader un SaaS B2B : exercice méthodologique sur une cession publique",
-        "desc": "Application illustrative du protocole CIFS sur une transaction tech publiée — pour comprendre comment chaque dimension C/I/F/S influence le grade final. Exercice pédagogique, non contractuel."
+        "desc": "Application illustrative du protocole CIFS sur une transaction tech publiée, pour comprendre comment chaque dimension C/I/F/S influence le grade final. Exercice pédagogique, non contractuel."
       }
     ]
   },
   "acquisition": {
     "meta": {
       "title": "Acquisition Support — AEGRYN",
-      "desc": "Co-investissement, bridge, earnout structuré — AEGRYN connecte les acquéreurs qualifiés à des partenaires financiers pour fermer les deals qui méritent de l'être."
+      "desc": "Deal flow certifié, introductions à des partenaires financiers, earnout structuré : AEGRYN connecte les acquéreurs qualifiés aux bons interlocuteurs pour fermer les deals qui méritent de l'être."
     },
     "label": "Services — Acquisition Support",
-    "title": "Vous avez identifié\nl'actif. Nous finançons\nle closing.",
-    "desc": "Co-investissement, bridge, earnout structuré — AEGRYN connecte les acquéreurs qualifiés à des partenaires financiers pour fermer les deals qui méritent de l'être.",
+    "title": "Vous avez identifié\nl'actif. Nous structurons\nle closing.",
+    "desc": "Deal flow certifié, introductions à des partenaires financiers, earnout structuré : AEGRYN connecte les acquéreurs qualifiés aux bons interlocuteurs pour fermer les deals qui méritent de l'être.",
     "ctaPrimary": "Discuter de mon acquisition",
     "ctaDiscover": "Lire nos analyses",
     "forWhom": {
@@ -1112,7 +1112,7 @@
         },
         {
           "title": "Primo-acquéreurs",
-          "desc": "Vous réalisez votre première acquisition tech. Nous vous accompagnons sur la valorisation, la due diligence et la négociation — sans vous exposer à des risques cachés."
+          "desc": "Vous réalisez votre première acquisition tech et souhaitez un processus structuré et documenté, de la valorisation au transfert. AEGRYN vous accompagne sur la due diligence, la négociation et le closing, avec une certification complète de ce que vous achetez."
         }
       ]
     },
@@ -1127,17 +1127,17 @@
         {
           "num": "02",
           "title": "Matching pipeline",
-          "desc": "Accès prioritaire au catalogue AEGRYN et au flux off-market — actifs certifiés Grade A et au-dessus uniquement."
+          "desc": "Accès prioritaire au catalogue AEGRYN et au flux off-market : actifs certifiés Grade AA et au-dessus. Les actifs Grade A sont disponibles sur demande spécifique avec un plan de remédiation inclus."
         },
         {
           "num": "03",
           "title": "Structuration financière",
-          "desc": "Si besoin, mise en relation avec des partenaires financiers (bridge, co-invest, earnout) pour optimiser le financement du closing."
+          "desc": "Lorsque l'acquisition nécessite un financement externe, AEGRYN met en relation avec des partenaires financiers qualifiés : bridge financing pour accélérer le closing, co-investissement pour partager l'exposition, ou earnout structuré pour aligner le prix sur la performance future. Chaque mise en relation est spécifique à votre profil de deal."
         },
         {
           "num": "04",
           "title": "Closing sécurisé",
-          "desc": "Séquestre institutionnel, documentation complète au transfert, CGV fournie."
+          "desc": "Séquestre institutionnel, documentation complète au transfert, CGV fournies."
         }
       ]
     },
@@ -1146,11 +1146,11 @@
       "items": [
         {
           "title": "Actifs certifiés, risque réduit",
-          "desc": "Chaque actif du pipeline a été audité sur 4 dimensions (C/I/F/S) avant d'y figurer. Vous ne négociez pas sur des déclaratifs — vous achetez sur des grades vérifiés."
+          "desc": "Chaque actif du pipeline a été audité sur 4 dimensions (C/I/F/S) avant d'y figurer. Vous ne négociez pas sur des déclaratifs, vous achetez sur des grades vérifiés."
         },
         {
           "title": "Off-market en priorité",
-          "desc": "La majorité des actifs AEGRYN n'est jamais listée publiquement. Les membres acquéreurs qualifiés y accèdent avant tout listing — ou exclusivement."
+          "desc": "La majorité des actifs AEGRYN n'est jamais listée publiquement. Les membres acquéreurs qualifiés y accèdent avant tout listing, ou exclusivement."
         },
         {
           "title": "Structuration incluse",
@@ -1158,21 +1158,22 @@
         },
         {
           "title": "Responsabilité engagée",
-          "desc": "Notre grade est émis par nos analystes certifiés selon un protocole indépendant et rigoureux. Si le grade est faux, notre responsabilité est engagée — pas seulement notre réputation."
+          "desc": "Notre grade est émis par des analystes certifiés selon un protocole indépendant et rigoureux. La responsabilité professionnelle d'AEGRYN est engagée sur l'intégrité du processus de certification, dans les limites définies dans nos Conditions Générales de Vente."
         }
       ]
     },
     "fees": {
       "label": "Honoraires",
       "title": "Une commission de succès,\nzéro frais fixe.",
-      "desc": "Notre rémunération est exclusivement conditionnée au closing effectif. Pas de retainer, pas de frais d'entrée. Les conditions détaillées sont disponibles dans nos CGV.",
-      "note": "AEGRYN n'est pas un établissement financier agréé. Ce service est une mise en relation avec des partenaires financiers tiers indépendants. Il ne constitue pas un conseil en investissement au sens de la directive MiFID II."
+      "desc": "Notre rémunération est exclusivement conditionnée au closing effectif. Pas de retainer, pas de frais d'entrée. Les conditions détaillées sont disponibles dans nos Conditions Générales de Vente.",
+      "note": "AEGRYN agit en qualité d'intermédiaire certifié, et non d'établissement financier. Les options de financement présentées sur cette page impliquent des partenaires tiers indépendants. Ce service ne constitue pas un conseil en investissement au sens de la directive MiFID II."
     },
     "cta": {
       "title": "Un actif vous intéresse ?",
       "desc": "Parlez-nous de votre projet d'acquisition. Nous revenons sous 48h avec une analyse de faisabilité.",
       "btn": "Nous contacter"
-    }
+    },
+    "advisorNote": "Un conseiller AEGRYN est assigné à votre dossier du premier contact au closing. Une seule personne. Ligne directe."
   },
   "roadmapPage": {
     "meta": {
@@ -1253,11 +1254,11 @@
   "discover": {
     "meta": {
       "title": "Discover — Intelligence de marché AEGRYN",
-      "desc": "Rapports marché, guides vendeurs et acquéreurs, analyses certification — l'intelligence du marché tech européen par AEGRYN."
+      "desc": "Rapports marché, guides vendeurs et acquéreurs, analyses certification, l'intelligence du marché tech européen par AEGRYN."
     },
     "label": "AEGRYN Discover",
     "title": "Intelligence de marché.\nAccessible à tous.",
-    "desc": "Rapports, guides et analyses pour comprendre le marché des actifs tech européens — rédigés par les équipes AEGRYN.",
+    "desc": "Rapports, guides et analyses pour comprendre le marché des actifs tech européens, rédigés par les équipes AEGRYN.",
     "filterAll": "Tous",
     "filterMarket": "Rapport marché",
     "filterSeller": "Guide vendeur",
@@ -1635,22 +1636,22 @@
       {
         "code": "01",
         "label": "Référence",
-        "desc": "Niveau de référence sectorielle — top 5%"
+        "desc": "Niveau de référence sectorielle, top 5%"
       },
       {
         "code": "02",
         "label": "Solide",
-        "desc": "Au-dessus de la médiane — fondamentaux maîtrisés"
+        "desc": "Au-dessus de la médiane, fondamentaux maîtrisés"
       },
       {
         "code": "03",
         "label": "En cours",
-        "desc": "Sous la médiane — axes d'amélioration identifiés"
+        "desc": "Sous la médiane, axes d'amélioration identifiés"
       },
       {
         "code": "04",
         "label": "Remédiation",
-        "desc": "Niveau insuffisant — plan de remédiation requis"
+        "desc": "Niveau insuffisant, plan de remédiation requis"
       }
     ],
     "exampleTitle": "Exemple de code complet",
@@ -1717,7 +1718,7 @@
       },
       {
         "title": "Renforcement à venir",
-        "desc": "AEGRYN construit progressivement un réseau de partenaires experts pouvant enrichir certains rapports d'une revue croisée complémentaire, ainsi qu'une couche de certification blockchain pour renforcer la traçabilité du registre. Ces briques viendront s'ajouter au protocole indépendant déjà pleinement opérant — jamais s'y substituer."
+        "desc": "AEGRYN construit progressivement un réseau de partenaires experts pouvant enrichir certains rapports d'une revue croisée complémentaire, ainsi qu'une couche de certification blockchain pour renforcer la traçabilité du registre. Ces briques viendront s'ajouter au protocole indépendant déjà pleinement opérant, jamais s'y substituer."
       }
     ],
     "ctaTitle": "Certifier votre actif",
@@ -1838,7 +1839,7 @@
         "dim": "C",
         "code": "C-31",
         "label": "Maintenabilité",
-        "desc": "Facilité d'onboarding d'un nouveau développeur — temps estimé documenté."
+        "desc": "Facilité d'onboarding d'un nouveau développeur, temps estimé documenté."
       },
       {
         "dim": "C",
@@ -1874,7 +1875,7 @@
         "dim": "C",
         "code": "C-41",
         "label": "Ownership du code",
-        "desc": "Tout le code appartient à l'entité vendeuse — pas de contribution externe non cédée."
+        "desc": "Tout le code appartient à l'entité vendeuse, pas de contribution externe non cédée."
       },
       {
         "dim": "I",
@@ -1892,7 +1893,7 @@
         "dim": "I",
         "code": "I-13",
         "label": "Brevets",
-        "desc": "Brevets déposés ou en cours — valeur et périmètre documentés."
+        "desc": "Brevets déposés ou en cours, valeur et périmètre documentés."
       },
       {
         "dim": "I",
@@ -1958,13 +1959,13 @@
         "dim": "I",
         "code": "I-32",
         "label": "Réputation & avis",
-        "desc": "Avis publics, NPS ou retours clients documentés — absence de bad buzz structurel."
+        "desc": "Avis publics, NPS ou retours clients documentés, absence de bad buzz structurel."
       },
       {
         "dim": "I",
         "code": "I-39",
         "label": "Chaîne de titre",
-        "desc": "Historique de propriété clair depuis la création — pas de gap dans la chaîne de titre."
+        "desc": "Historique de propriété clair depuis la création, pas de gap dans la chaîne de titre."
       },
       {
         "dim": "F",
@@ -2024,7 +2025,7 @@
         "dim": "F",
         "code": "F-22",
         "label": "Concentration clients",
-        "desc": "Part du top client dans le CA total — risque de concentration évalué."
+        "desc": "Part du top client dans le CA total, risque de concentration évalué."
       },
       {
         "dim": "F",
@@ -2066,13 +2067,13 @@
         "dim": "F",
         "code": "F-42",
         "label": "Dépendance fondateur",
-        "desc": "Part du CA portée personnellement par le(s) fondateur(s) — risque clé évalué."
+        "desc": "Part du CA portée personnellement par le(s) fondateur(s), risque clé évalué."
       },
       {
         "dim": "F",
         "code": "F-43",
         "label": "Données vérifiables",
-        "desc": "Toutes les métriques financières sont vérifiables sur pièces — absence de blocage. Bloquant si refus."
+        "desc": "Toutes les métriques financières sont vérifiables sur pièces, absence de blocage. Bloquant si refus."
       },
       {
         "dim": "F",
@@ -2341,7 +2342,7 @@
     "results": {
       "label": "Résultats des sessions",
       "title": "Transparence totale\nsur les transactions clôturées.",
-      "desc": "Chaque session clôturée fait l'objet d'un compte-rendu public anonymisé. Montants, grades, durées de négociation — le marché mérite de la clarté.",
+      "desc": "Chaque session clôturée fait l'objet d'un compte-rendu public anonymisé. Montants, grades, durées de négociation, le marché mérite de la clarté.",
       "noResults": "Aucun résultat disponible. Les résultats de la première session seront publiés ici.",
       "sessionLabel": "Session",
       "assetsTransacted": "Actifs transactés",
@@ -2351,7 +2352,7 @@
     "sell": {
       "label": "Vendre via AEGRYN",
       "title": "Votre actif mérite\nmieux qu'un broker.",
-      "desc": "Un processus transparent, un grade objectif, des acquéreurs pré-qualifiés. Notre rémunération est alignée sur votre succès — conditions en CGV. Un conseiller AEGRYN vous répond directement par email sous 24h.",
+      "desc": "Un processus transparent, un grade objectif, des acquéreurs pré-qualifiés. Notre rémunération est alignée sur votre succès, conditions en CGV. Un conseiller AEGRYN vous répond directement par email sous 24h.",
       "step1Title": "Soumettez",
       "step1Desc": "Remplissez le formulaire de soumission. Informations de base sur l'actif, métriques clés, documentation disponible.",
       "step2Title": "Certification",
@@ -2682,7 +2683,7 @@
   "bidModels": {
     "meta": {
       "title": "Modèles d'acquisition — AEGRYN Auction",
-      "desc": "Club Deal, Corporate, Fonds, Equity Stake — les 4 modèles d'acquisition AEGRYN avec la Promesse de Transaction Tech en 5 étapes."
+      "desc": "Club Deal, Corporate, Fonds, Equity Stake, les 4 modèles d'acquisition AEGRYN avec la Promesse de Transaction Tech en 5 étapes."
     },
     "hero": {
       "back": "← Auction",
@@ -2755,7 +2756,7 @@
         "label": "MODÈLE 04",
         "title": "Equity Stake",
         "subBadge": "Sans séquestre",
-        "summary": "Pour les investisseurs ou partenaires qui souhaitent prendre une participation dans l'actif sans l'acquérir totalement — shares contre advisory fees, carried interest, ou apport opérationnel. Engagement live, sans séquestre bancaire.",
+        "summary": "Pour les investisseurs ou partenaires qui souhaitent prendre une participation dans l'actif sans l'acquérir totalement, shares contre advisory fees, carried interest, ou apport opérationnel. Engagement live, sans séquestre bancaire.",
         "conditions": [
           "Aucun ticket minimum fixe (valorisation négociée entre parties)",
           "KYC selon profil (simplifié particuliers qualifiés, complet entités)",
@@ -2970,7 +2971,7 @@
     "hero": {
       "label": "AEGRYN VALUATION",
       "title": "Estimez la valeur\nde votre actif.",
-      "desc": "Notre calculatrice simule le protocole de grade AEGRYN sur 4 dimensions — Finance, Code, IP, Sécurité — et vous donne une fourchette de valorisation calibrée sur les multiples du marché 2026. Gratuit. Confidentiel. Sans engagement."
+      "desc": "Notre calculatrice simule le protocole de grade AEGRYN sur 4 dimensions, Finance, Code, IP, Sécurité, et vous donne une fourchette de valorisation calibrée sur les multiples du marché 2026. Gratuit. Confidentiel. Sans engagement."
     },
     "progress": {
       "step": "Étape",
@@ -3201,7 +3202,7 @@
       {
         "num": "04",
         "title": "Transaction",
-        "desc": "Négociation encadrée — escrow — transfert de droits."
+        "desc": "Négociation encadrée, escrow, transfert de droits."
       }
     ],
     "form": {
@@ -4189,7 +4190,7 @@
   "neediuDpn": {
     "meta": {
       "title": "Notice de Protection des Données & CGU — neediu | Aegryn",
-      "desc": "Notice de protection des données et Conditions d'utilisation de la plateforme neediu — Aegryn, conformité LPD suisse et RGPD."
+      "desc": "Notice de protection des données et Conditions d'utilisation de la plateforme neediu, Aegryn, conformité LPD suisse et RGPD."
     },
     "breadcrumb": "Legal",
     "sectionDpn": "(01)",
