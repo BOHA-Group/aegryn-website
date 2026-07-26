@@ -22,16 +22,17 @@ const ASSET_DETAILS: Record<string, {
   tech: string[]
 }> = {
   subblink: {
-    longDesc: "Subblink analyse vos contrats d'entreprise en quelques secondes grâce à une IA calibrée pour le droit suisse et français. Risques, clauses critiques, obligations cachées — tout est identifié et expliqué en langage clair.",
+    longDesc: "Subblink analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées — tout est identifié et expliqué en langage clair.",
     features: [
-      'Analyse de contrats en moins de 30 secondes',
+      'Analyse de contrats en 60 secondes',
+      'Conformité droit suisse (CO) et droit européen',
       'Détection automatique des clauses à risque',
-      'Conformité droit suisse (CO) et droit français',
       'Résumé exécutif et points d\'attention priorisés',
-      'Export PDF annoté',
+      'Proposition de mise à jour de clauses et plan d\'actions',
+      'Export PDF annoté et certifié. Traduction multilingue',
       'API disponible pour intégration B2B',
     ],
-    audience: 'Freelances, consultants, PME, cabinets juridiques',
+    audience: 'Particuliers, indépendants, PME, cabinets juridiques',
     tech: ['IA générative', 'NLP juridique', 'Swiss Law', 'SaaS B2B'],
   },
   neediu: {

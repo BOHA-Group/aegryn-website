@@ -127,16 +127,7 @@ export default function SitemapPage() {
           ))}
         </div>
 
-        <div className="mt-16 pt-8 border-t border-ag-border">
-          <a
-            href="/sitemap.xml"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-mono text-[10px] uppercase tracking-[0.16em] text-ag-gray-light hover:text-ag-apex transition-colors"
-          >
-            sitemap.xml →
-          </a>
-        </div>
+        <div className="mt-16 pt-8 border-t border-ag-border" />
       </div>
     </main>
   )

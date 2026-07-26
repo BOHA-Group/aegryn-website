@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
 import { VisionMissionBlock } from '@/components/sections/VisionMissionBlock'
-import { FounderSection }      from '@/components/sections/FounderSection'
 import { AboutHeroLogo }       from '@/components/brand/AboutHeroLogo'
 import type { Metadata } from 'next'
 
@@ -125,9 +124,6 @@ export default function AboutPage() {
           </div>
         }
       />
-
-      {/* Founder — Rolex-style scroll reveal */}
-      <FounderSection />
 
       {/* CTA */}
       <section className="bg-ag-navy py-28 px-6 md:px-12">
