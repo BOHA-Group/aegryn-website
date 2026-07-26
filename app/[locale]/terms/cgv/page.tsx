@@ -151,6 +151,7 @@ export default async function TermsCgvPage({ params }: Props) {
           ['VII', 's7Title', 's7'],
           ['VIII', 's8Title', 's8'],
           ['IX', 's9Title', 's9'],
+          ['X', 's10Title', 's10'],
         ] as const).map(([num, titleKey, bodyKey]) => (
           <section key={num} className="border-t border-ag-border pt-8">
             <h2 className="font-sans font-semibold text-[13px] uppercase tracking-[0.18em] text-ag-black mb-4">
