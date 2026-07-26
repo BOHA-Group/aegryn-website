@@ -21,7 +21,7 @@ interface Props {
   documents:  DataRoomDocument[]
 }
 
-export default function AdminDocumentsClient({ assetId, adminToken, catalog, documents }: Props) {
+export default function AdminDocumentsClient({ assetId: _assetId, adminToken, catalog, documents }: Props) {
   const router = useRouter()
   const [_isPending, startTransition] = useTransition()
   const [openDims, setOpenDims] = useState<Set<DocumentDimension>>(new Set(DIMENSIONS))
