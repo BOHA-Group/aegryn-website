@@ -10,6 +10,7 @@ import LenisProvider from '@/components/providers/LenisProvider'
 import { ScrollToTop } from '@/components/ui/ScrollToTop'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import CookieBanner from '@/components/analytics/CookieBanner'
+import MetaPixel from '@/components/analytics/MetaPixel'
 import { aegrynOrganizationSchema, aegrynWebSiteSchema } from '@/lib/seo'
 import '@/styles/globals.css'
 
@@ -90,6 +91,9 @@ export const metadata: Metadata = {
     description: 'Swiss Tech Asset Builder.',
     images:  ['/og/default.jpg'],
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? '',
+  },
   other: {
     'msapplication-TileColor': '#050505',
     'msapplication-config':    '/browserconfig.xml',
@@ -148,6 +152,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             <ScrollToTop />
             <CookieBanner />
             <GoogleAnalytics />
+            <MetaPixel />
           </LenisProvider>
         </NextIntlClientProvider>
       </body>
