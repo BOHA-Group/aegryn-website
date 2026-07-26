@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import AccountForm from './AccountForm'
-import AnonymiseButton from './AnonymiseButton'
+import DeletePartialSection from './DeletePartialSection'
 import DeleteAccountSection from './DeleteAccountSection'
 
 export const metadata: Metadata = {
@@ -163,16 +163,14 @@ export default async function AccountPage() {
             </a>
           </div>
 
-          {/* Anonymisation partielle */}
-          <div className="flex items-start justify-between gap-4 py-4 border-b border-gray-100">
-            <div>
-              <p className="font-sans text-[13px] text-gray-700">Anonymiser mes données</p>
-              <p className="font-sans text-[11px] text-gray-400 mt-0.5">
-                Art. 17 RGPD / Art. 30 nLPD. Votre nom et email sont remplacés par des valeurs anonymes.
-                Vos dossiers de certification sont conservés pour raison légale sans lien avec votre identité.
-              </p>
-            </div>
-            <AnonymiseButton userId={user.id} />
+          {/* Suppression partielle sélective */}
+          <div className="py-4 border-b border-gray-100">
+            <p className="font-sans text-[13px] text-gray-700 mb-1">Supprimer des données sélectionnées</p>
+            <p className="font-sans text-[11px] text-gray-400 mb-3">
+              Art. 17 RGPD / Art. 30 nLPD. Choisissez les catégories de données personnelles à supprimer.
+              Votre compte et vos dossiers de certification engagés sont conservés.
+            </p>
+            <DeletePartialSection />
           </div>
 
           {/* Suppression totale */}
