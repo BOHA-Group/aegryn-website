@@ -1,13 +1,17 @@
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { Shield } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { NdaAcceptForm } from '@/components/buyer/NdaAcceptForm'
 
-export const metadata: Metadata = {
-  title: 'Accord de confidentialité — Espace Acquéreur AEGRYN',
-  robots: { index: false, follow: false },
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('nda')
+  return {
+    title: t('pageTitle'),
+    robots: { index: false, follow: false },
+  }
 }
 
 const NDA_VERSION = 'v1.0-2026-07'
@@ -18,7 +22,6 @@ export default async function NdaRequiredPage() {
 
   const supa = createServiceClient()
 
-  /* Si déjà signé, rediriger directement */
   const { data: existing } = await supa
     .from('nda_signatures')
     .select('signed_at')
@@ -29,6 +32,8 @@ export default async function NdaRequiredPage() {
 
   if (existing) redirect('/client/buyer/catalogue')
 
+  const t = await getTranslations('nda')
+
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -36,8 +41,8 @@ export default async function NdaRequiredPage() {
         <div className="max-w-3xl mx-auto flex items-center gap-3">
           <Shield size={16} className="text-ag-apex shrink-0" />
           <div>
-            <p className="text-[10px] font-mono tracking-[0.22em] uppercase text-ag-apex font-bold">Étape requise</p>
-            <p className="text-[13px] font-semibold text-white/90">Accord de confidentialité — AEGRYN Auction</p>
+            <p className="text-[10px] font-mono tracking-[0.22em] uppercase text-ag-apex font-bold">{t('stepLabel')}</p>
+            <p className="text-[13px] font-semibold text-white/90">{t('stepTitle')}</p>
           </div>
         </div>
       </div>
@@ -46,12 +51,7 @@ export default async function NdaRequiredPage() {
 
         {/* Intro */}
         <div className="bg-white border border-gray-200 px-8 py-6">
-          <p className="text-[13px] text-gray-600 leading-relaxed">
-            Avant d'accéder au catalogue AEGRYN Auction, vous devez lire et accepter l'accord de
-            confidentialité ci-dessous. Cet accord est <strong className="text-gray-900">obligatoire</strong> et
-            constitue un engagement contractuel de confidentialité envers AEGRYN et les vendeurs.
-            Votre signature est horodatée et journalisée à des fins légales.
-          </p>
+          <p className="text-[13px] text-gray-600 leading-relaxed">{t('introText')}</p>
         </div>
 
         {/* Texte NDA complet */}
@@ -59,153 +59,100 @@ export default async function NdaRequiredPage() {
 
           {/* Titre */}
           <div className="border-b border-gray-100 pb-6">
-            <p className="text-[10px] font-mono tracking-[0.22em] uppercase text-gray-400 mb-2">NDA — Version {NDA_VERSION}</p>
-            <h1 className="text-[17px] font-bold text-gray-900 leading-snug">
-              Conditions de Confidentialité Acquéreur
-            </h1>
-            <p className="text-[12px] text-gray-500 mt-1">AEGRYN (formerly BOHA-Group Sàrl)</p>
+            <p className="text-[10px] font-mono tracking-[0.22em] uppercase text-gray-400 mb-2">{t('versionLabel')} {NDA_VERSION}</p>
+            <h1 className="text-[17px] font-bold text-gray-900 leading-snug">{t('mainTitle')}</h1>
+            <p className="text-[12px] text-gray-500 mt-1">{t('mainSubtitle')}</p>
           </div>
 
           {/* Parties */}
           <div className="bg-gray-50 px-5 py-4 text-[12px] space-y-2">
-            <p><strong>Entre les soussignés :</strong></p>
-            <p>
-              <strong>AEGRYN (formerly BOHA-Group Sàrl)</strong>, société enregistrée en Suisse,
-              ci-après « AEGRYN »,
-            </p>
-            <p className="text-gray-400">Et</p>
-            <p>
-              L'utilisateur identifié par les informations renseignées lors de son inscription sur
-              la plateforme AEGRYN (nom, prénom ou raison sociale, email professionnel),
-              ci-après « l'Acquéreur »,
-            </p>
+            <p><strong>{t('partiesLabel')}</strong></p>
+            <p><strong>{t('mainSubtitle')}</strong>, {t('partiesAegryn').split(', ').slice(1).join(', ')}</p>
+            <p className="text-gray-400">{t('partiesAnd')}</p>
+            <p>{t('partiesBuyer')}</p>
           </div>
 
-          <NdaArticle num="1" title="Objet">
-            Le présent accord de confidentialité (« NDA ») encadre l'accès de l'Acquéreur au catalogue
-            AEGRYN Auction, aux fiches d'actifs, aux rapports de grade, et à tout document de la data
-            room mis à disposition dans le cadre du processus de certification et de transaction AEGRYN.
-            <br /><br />
-            L'acceptation du présent NDA est une condition préalable et obligatoire à tout accès au
-            catalogue, quel que soit le niveau d'accès (aperçu anonymisé ou dossier complet
-            post-qualification).
+          <NdaArticle num="1" title={t('a1Title')}>
+            {t('a1')}
           </NdaArticle>
 
-          <NdaArticle num="2" title="Définition des informations confidentielles">
-            Sont considérées comme informations confidentielles :
+          <NdaArticle num="2" title={t('a2Title')}>
+            {t('a2Intro')}
             <ul className="mt-3 space-y-2 list-none">
-              {[
-                "Toute information relative à l'identité du vendeur ou de l'entité cédante, avant décision explicite de mise en relation par AEGRYN",
-                "Toute donnée financière, technique, commerciale ou juridique contenue dans une fiche d'actif ou un document de data room",
-                "Le contenu des rapports de grade AEGRYN, y compris les scores, sous-codes et réserves",
-                "Toute information relative à d'autres acquéreurs, à leurs offres, ou à l'état d'avancement d'une négociation",
-                "L'existence même d'un processus de cession en cours sur un actif donné",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-2">
+              {(['a2i1', 'a2i2', 'a2i3', 'a2i4', 'a2i5'] as const).map((key) => (
+                <li key={key} className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-ag-navy mt-1.5 shrink-0" />
-                  {item}
+                  {t(key)}
                 </li>
               ))}
             </ul>
           </NdaArticle>
 
-          <NdaArticle num="3" title="Engagements de l'Acquéreur">
+          <NdaArticle num="3" title={t('a3Title')}>
             <div className="space-y-4 mt-2">
-              <SubSection label="3.1 Confidentialité stricte">
-                Ne divulguer aucune information confidentielle à un tiers, y compris à ses conseils,
-                employés ou partenaires, sauf si ceux-ci sont eux-mêmes tenus par une obligation de
-                confidentialité équivalente et strictement nécessaire à l'évaluation de l'opportunité.
-              </SubSection>
-              <SubSection label="3.2 Usage limité">
-                N'utiliser les informations confidentielles qu'aux seules fins d'évaluer une opportunité
-                d'acquisition via AEGRYN — jamais à des fins concurrentielles, commerciales, de
-                recrutement, ou de reproduction technique.
-              </SubSection>
-              <SubSection label="3.3 Non-reproduction">
-                Ne pas télécharger, copier, capturer, photographier, ou reproduire par quelque moyen
-                que ce soit tout document consulté dans la data room AEGRYN, y compris par capture
-                d'écran, photographie d'écran, ou tout autre moyen de contournement des mesures de
-                protection technique mises en place.
-              </SubSection>
-              <SubSection label="3.4 Reconnaissance des limites techniques">
-                L'Acquéreur reconnaît que les documents consultés sont protégés par des mesures
-                techniques de dissuasion (blocage de téléchargement, détection de tentative de
-                capture d'écran, filigrane nominatif). L'Acquéreur reconnaît que ces mesures
-                constituent une dissuasion raisonnable dont l'efficacité ne peut être garantie à 100%
-                face à des moyens de contournement externes, et accepte que son engagement de
-                confidentialité au titre du présent NDA s'applique indépendamment de l'efficacité de
-                ces mesures techniques.
-              </SubSection>
-              <SubSection label="3.5 Non-contournement">
-                Ne pas contacter directement, ni tenter de contacter, le vendeur ou toute partie liée
-                à un actif consulté via AEGRYN, en dehors du processus AEGRYN, pendant une durée de
-                24 mois à compter de la première consultation.
-              </SubSection>
-              <SubSection label="3.6 Non-divulgation de l'existence du processus">
-                Ne pas révéler à un tiers l'existence même d'un processus de cession en cours sur un
-                actif consulté, y compris son secteur, sa taille approximative, ou toute donnée
-                permettant son identification.
-              </SubSection>
+              <SubSection label={t('a3s1Title')}>{t('a3s1')}</SubSection>
+              <SubSection label={t('a3s2Title')}>{t('a3s2')}</SubSection>
+              <SubSection label={t('a3s3Title')}>{t('a3s3')}</SubSection>
+              <SubSection label={t('a3s4Title')}>{t('a3s4')}</SubSection>
+              <SubSection label={t('a3s5Title')}>{t('a3s5')}</SubSection>
+              <SubSection label={t('a3s6Title')}>{t('a3s6')}</SubSection>
             </div>
           </NdaArticle>
 
-          <NdaArticle num="4" title="Traçabilité et consentement à la journalisation">
-            L'Acquéreur reconnaît et accepte que :
+          <NdaArticle num="4" title={t('a4Title')}>
+            {t('a4Intro')}
             <ul className="mt-3 space-y-2 list-none">
-              {[
-                "Chaque consultation de document est horodatée et journalisée (identité, date, heure, adresse IP)",
-                "Toute tentative de capture d'écran ou de contournement des protections techniques est détectée et journalisée",
-                "Ces journaux peuvent être utilisés comme preuve en cas de manquement au présent NDA",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-2">
+              {(['a4i1', 'a4i2', 'a4i3'] as const).map((key) => (
+                <li key={key} className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-ag-navy mt-1.5 shrink-0" />
-                  {item}
+                  {t(key)}
                 </li>
               ))}
             </ul>
           </NdaArticle>
 
-          <NdaArticle num="5" title="Durée">
-            Les obligations de confidentialité du présent NDA restent en vigueur pendant une durée de
-            <strong className="text-gray-900"> 5 ans</strong> à compter de la première consultation d'un
-            document via la plateforme AEGRYN, y compris après la clôture, l'abandon, ou le refus d'une
-            opportunité d'acquisition, et y compris après la suppression du compte de l'Acquéreur.
+          <NdaArticle num="5" title={t('a5Title')}>
+            {t('a5').replace(t('a5Years'), '')}
+            <strong className="text-gray-900"> {t('a5Years')}</strong>
+            {t('a5').split(t('a5Years'))[1] ?? ''}
           </NdaArticle>
 
-          <NdaArticle num="6" title="Sanctions en cas de manquement">
-            En cas de violation du présent NDA, l'Acquéreur s'expose à :
+          <NdaArticle num="6" title={t('a6Title')}>
+            {t('a6Intro')}
             <ul className="mt-3 space-y-2 list-none">
-              {[
-                "La suspension immédiate et définitive de son accès à la plateforme AEGRYN",
-                "Une indemnisation des préjudices subis par AEGRYN et/ou le vendeur concerné",
-                "Toute action judiciaire que AEGRYN ou le vendeur jugerait utile d'engager",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-2">
+              {(['a6i1', 'a6i2', 'a6i3'] as const).map((key) => (
+                <li key={key} className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-1.5 shrink-0" />
-                  {item}
+                  {t(key)}
                 </li>
               ))}
             </ul>
           </NdaArticle>
 
-          <NdaArticle num="7" title="Droit applicable et juridiction">
-            Le présent NDA est soumis au droit suisse. Tout litige relevant du présent NDA sera soumis
-            à la compétence exclusive des tribunaux du canton de domicile d'AEGRYN.
+          <NdaArticle num="7" title={t('a7Title')}>
+            {t('a7')}
           </NdaArticle>
 
-          <NdaArticle num="8" title="Acceptation">
-            En cochant les cases ci-dessous et en cliquant sur « Accepter et accéder au catalogue »,
-            l'Acquéreur reconnaît avoir lu, compris et accepté sans réserve l'intégralité des
-            dispositions du présent NDA.
+          <NdaArticle num="8" title={t('a8Title')}>
+            {t('a8')}
           </NdaArticle>
         </div>
 
         {/* Formulaire d'acceptation */}
         <div className="bg-white border border-ag-navy/20 px-8 py-6 space-y-4">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ag-navy">
-            Article 8 — Acceptation
+            {t('acceptSectionLabel')}
           </p>
-          <NdaAcceptForm redirectTo="/client/buyer/catalogue" ndaVersion={NDA_VERSION} />
+          <NdaAcceptForm
+            redirectTo="/client/buyer/catalogue"
+            ndaVersion={NDA_VERSION}
+            check1Label={t('check1')}
+            check2Label={t('check2')}
+            signingBtn={t('signingBtn')}
+            acceptBtn={t('acceptBtn')}
+            versionFooter={t('versionFooter')}
+            errorFallback="Error"
+          />
         </div>
 
       </div>

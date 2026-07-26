@@ -5,11 +5,21 @@ import { useRouter } from 'next/navigation'
 import { CheckSquare, Square, Loader2, ShieldCheck } from 'lucide-react'
 
 interface Props {
-  redirectTo: string
-  ndaVersion: string
+  redirectTo:    string
+  ndaVersion:    string
+  check1Label:   string
+  check2Label:   string
+  signingBtn:    string
+  acceptBtn:     string
+  versionFooter: string
+  errorFallback: string
 }
 
-export function NdaAcceptForm({ redirectTo, ndaVersion }: Props) {
+export function NdaAcceptForm({
+  redirectTo, ndaVersion,
+  check1Label, check2Label,
+  signingBtn, acceptBtn, versionFooter, errorFallback,
+}: Props) {
   const [check1, setCheck1] = useState(false)
   const [check2, setCheck2] = useState(false)
   const [error, setError]   = useState<string | null>(null)
@@ -29,7 +39,7 @@ export function NdaAcceptForm({ redirectTo, ndaVersion }: Props) {
       })
       if (!res.ok) {
         const d = await res.json() as { error?: string }
-        setError(d.error ?? 'Une erreur est survenue.')
+        setError(d.error ?? errorFallback)
         return
       }
       router.push(redirectTo)
@@ -53,9 +63,7 @@ export function NdaAcceptForm({ redirectTo, ndaVersion }: Props) {
             : <Square size={18} className="text-gray-300 group-hover:text-gray-400 transition-colors" />
           }
         </button>
-        <span className="text-[13px] text-gray-700 leading-relaxed">
-          J'ai lu et j'accepte les conditions de confidentialité ci-dessus dans leur intégralité.
-        </span>
+        <span className="text-[13px] text-gray-700 leading-relaxed">{check1Label}</span>
       </label>
 
       {/* Checkbox 2 */}
@@ -72,10 +80,7 @@ export function NdaAcceptForm({ redirectTo, ndaVersion }: Props) {
             : <Square size={18} className="text-gray-300 group-hover:text-gray-400 transition-colors" />
           }
         </button>
-        <span className="text-[13px] text-gray-700 leading-relaxed">
-          Je reconnais que toute tentative de contournement des mesures techniques de protection
-          sera journalisée et pourra constituer une preuve en cas de manquement au présent accord.
-        </span>
+        <span className="text-[13px] text-gray-700 leading-relaxed">{check2Label}</span>
       </label>
 
       {error && (
@@ -94,13 +99,13 @@ export function NdaAcceptForm({ redirectTo, ndaVersion }: Props) {
         }`}
       >
         {isPending
-          ? <><Loader2 size={14} className="animate-spin" /> Signature en cours…</>
-          : <><ShieldCheck size={14} /> Accepter et accéder au catalogue</>
+          ? <><Loader2 size={14} className="animate-spin" /> {signingBtn}</>
+          : <><ShieldCheck size={14} /> {acceptBtn}</>
         }
       </button>
 
       <p className="text-[10px] text-gray-400 text-center leading-relaxed">
-        Version NDA : {ndaVersion} — Signature horodatée et journalisée (IP, user agent)
+        {versionFooter} — {ndaVersion}
       </p>
     </div>
   )
