@@ -155,12 +155,18 @@ export function AssetsGrid() {
 
               {/* Actions */}
               <div className="flex items-center gap-4 pt-2 border-t border-ag-border">
-                <Link
-                  href={`/assets/${asset.slug}`}
-                  className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black hover:text-ag-apex transition-colors flex items-center gap-1"
-                >
-                  {t('viewDetails')} <ArrowUpRight size={11} />
-                </Link>
+                {asset.internalOnly ? (
+                  <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light cursor-default select-none flex items-center gap-1">
+                    {t('confidential')}
+                  </span>
+                ) : (
+                  <Link
+                    href={`/assets/${asset.slug}`}
+                    className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black hover:text-ag-apex transition-colors flex items-center gap-1"
+                  >
+                    {t('viewDetails')} <ArrowUpRight size={11} />
+                  </Link>
+                )}
                 {asset.url && (
                   <a
                     href={asset.url}
