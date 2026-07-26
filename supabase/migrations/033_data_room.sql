@@ -73,7 +73,11 @@ AS $$
   SELECT EXISTS (
     SELECT 1 FROM public.profiles
     WHERE id = uid
-      AND (is_admin = true OR 'admin' = ANY(roles) OR 'super_admin' = ANY(roles))
+      AND (
+        role = 'admin'
+        OR 'admin'       = ANY(roles)
+        OR 'super_admin' = ANY(roles)
+      )
   );
 $$;
 

@@ -84,13 +84,13 @@ async function checkAccess(
   /* Admin : toujours autorisé */
   const { data: profile } = await supa
     .from('profiles')
-    .select('is_admin, roles, email')
+    .select('role, roles, email')
     .eq('id', userId)
-    .single() as { data: { is_admin: boolean; roles: string[] | null; email: string } | null }
+    .single() as { data: { role: string; roles: string[] | null; email: string } | null }
 
   if (!profile) return false
 
-  const isAdmin = profile.is_admin || (profile.roles ?? []).some((r) => ['admin', 'super_admin'].includes(r))
+  const isAdmin = profile.role === 'admin' || (profile.roles ?? []).some((r) => ['admin', 'super_admin'].includes(r))
   if (isAdmin) return true
 
   /* Vendeur : email match sur assets.seller_email */

@@ -76,13 +76,13 @@ export async function POST(req: NextRequest) {
 
   const { data: profile } = await supa
     .from('profiles')
-    .select('email, is_admin, roles')
+    .select('email, role, roles')
     .eq('id', user.id)
-    .single() as { data: { email: string; is_admin: boolean; roles: string[] | null } | null }
+    .single() as { data: { email: string; role: string; roles: string[] | null } | null }
 
   if (!profile) return NextResponse.json({ error: 'Profil introuvable.' }, { status: 403 })
 
-  const isAdmin = profile.is_admin || (profile.roles ?? []).some((r) => ['admin', 'super_admin'].includes(r))
+  const isAdmin = profile.role === 'admin' || (profile.roles ?? []).some((r) => ['admin', 'super_admin'].includes(r))
   if (!isAdmin && profile.email !== asset.seller_email) {
     return NextResponse.json({ error: 'Accès interdit.' }, { status: 403 })
   }
