@@ -421,6 +421,13 @@
       "product": "Producto"
     }
   },
+  "assetStatus": {
+    "live": "Live",
+    "beta": "Beta",
+    "dev": "En desarrollo",
+    "notStarted": "No iniciado",
+    "refused": "Rechazado"
+  },
   "assetPage": {
     "back": "← Volver a los activos",
     "presentation": "Presentación",
@@ -433,6 +440,69 @@
       "title": "Hablemos de su adquisición",
       "allAssets": "Ver todos los activos",
       "contact": "Contactar AEGRYN"
+    },
+    "assets": {
+      "subblink": {
+        "longDesc": "Subblink analiza todos sus contratos en segundos con una IA calibrada para el derecho suizo y europeo. Riesgos, cláusulas críticas, obligaciones ocultas — todo se identifica y explica en lenguaje claro.",
+        "audience": "Particulares, autónomos, PYME, despachos jurídicos",
+        "features": [
+          "Análisis de contratos en 60 segundos",
+          "Conformidad con el derecho suizo (CO) y europeo",
+          "Detección automática de cláusulas de riesgo",
+          "Resumen ejecutivo con puntos de acción priorizados",
+          "Propuestas de actualización de cláusulas y plan de acción",
+          "Exportación PDF anotada y certificada. Traducción multilingüe",
+          "API disponible para integración B2B"
+        ]
+      },
+      "neediu": {
+        "longDesc": "Neediu conecta a particulares con los mejores proveedores de servicios del hogar. Limpieza, jardinería, bricolaje, cuidado de niños — conexión inteligente basada en ubicación y reseñas verificadas.",
+        "audience": "Particulares, propietarios, inquilinos",
+        "features": [
+          "Conexión en tiempo real",
+          "Proveedores verificados y valorados",
+          "Pago seguro integrado",
+          "Seguimiento de servicio en directo",
+          "Seguro de prestación incluido",
+          "Disponible en Île-de-France"
+        ]
+      },
+      "primiom": {
+        "longDesc": "Primiom reinventa las transacciones inmobiliarias situando la IA en el centro del proceso de compra y venta. Valoración precisa, análisis de mercado en tiempo real y acompañamiento personalizado de A a Z.",
+        "audience": "Compradores, vendedores, inversores inmobiliarios",
+        "features": [
+          "Valoración IA en menos de 2 minutos",
+          "Análisis de precios del mercado local",
+          "Acompañamiento comprador/vendedor integrado",
+          "Simulación de financiación",
+          "Conexión con notarios asociados",
+          "Cobertura Suiza y Francia"
+        ]
+      },
+      "movtoo": {
+        "longDesc": "Movtoo es una plataforma de entrega inmediata impulsada por inteligencia artificial. Recados, comidas, paquetes — entrega a demanda optimizada para zonas urbanas densas.",
+        "audience": "Particulares, restauradores, comercios locales",
+        "features": [
+          "Entrega en menos de 45 minutos",
+          "Despacho IA en tiempo real",
+          "Seguimiento GPS del repartidor",
+          "Multricategoría: alimentación, paquetes, documentos",
+          "Repartidores independientes verificados",
+          "API para comerciantes disponible"
+        ]
+      },
+      "hobconnect": {
+        "longDesc": "Hobconnect crea comunidades auténticas en torno a pasiones compartidas. Fotografía, cocina, deporte, música — una red social centrada en el interés común más que en los seguidores.",
+        "audience": "Aficionados, creadores de contenido, asociaciones",
+        "features": [
+          "Comunidades temáticas por pasión",
+          "Feed de noticias sin algoritmo publicitario",
+          "Eventos locales y en línea",
+          "Mensajes privados entre entusiastas",
+          "Talleres y encuentros organizados",
+          "Sin publicidad intrusiva"
+        ]
+      }
     }
   },
   "assetCarousel": {
@@ -447,7 +517,178 @@
     },
     "restricted": "Restringido",
     "classifiedLabel": "CLASIFICADO",
-    "classifiedDesc": "Protocolo en desarrollo confidencial.\nAcceso restringido a socios acreditados."
+    "classifiedDesc": "Protocolo en desarrollo confidencial.\nAcceso restringido a socios acreditados.",
+    "statusNotStarted": "No iniciado"
+  },
+  "assetDrawer": {
+    "contactUs": "Contáctenos",
+    "accessRestricted": "Solo por invitación",
+    "allAssets": "/ Todos los activos",
+    "assets": {
+      "subblink": {
+        "headline": "La IA que lee sus contratos por usted.",
+        "p1": "Subblink analiza instantáneamente cualquier tipo de contrato — NDAs, CGV, arrendamientos, contratos de servicio — e identifica cláusulas de riesgo, compromisos ocultos y puntos de negociación.",
+        "p2": "Calibrada para el derecho suizo y europeo, la solución está dirigida a particulares, autónomos, PYME y departamentos jurídicos que desean recuperar el control de sus obligaciones contractuales.",
+        "market": "B2B — SaaS",
+        "tech": "IA generativa + NLP jurídico",
+        "zones": "Suiza · Europa",
+        "status": "Live",
+        "cta": "Acceder a Subblink"
+      },
+      "kryv": {
+        "headline": "El SSL del código IA — cada despliegue, sellado de forma inmutable.",
+        "p1": "KRYV Protocol es un protocolo blockchain para certificar la integridad del código IA. Garantiza que un modelo desplegado es exactamente el que fue auditado y aprobado, sin alteración.",
+        "p2": "En un mundo donde la IA se convierte en infraestructura crítica, KRYV sienta las bases de una certificación de confianza verificable on-chain.",
+        "category": "Protocolo — Blockchain",
+        "useCase": "Certificación IA, auditoría on-chain",
+        "status": "Restringido — solo por invitación"
+      },
+      "neediu": {
+        "headline": "Conexión inteligente para servicios del hogar.",
+        "p1": "Neediu conecta a particulares con proveedores cualificados para todas sus necesidades del hogar: limpieza, jardinería, bricolaje, cuidado de niños y más.",
+        "p2": "El algoritmo analiza disponibilidad, ubicación y valoraciones para sugerir el proveedor ideal en segundos.",
+        "market": "B2C — Marketplace",
+        "zone": "Región de París → Francia",
+        "status": "En desarrollo"
+      },
+      "movtoo": {
+        "headline": "Entrega a demanda, impulsada por IA.",
+        "p1": "Movtoo reinventa la logística de última milla con una plataforma de entrega inmediata optimizada por inteligencia artificial.",
+        "p2": "Remitentes y destinatarios disfrutan de transparencia total sobre la ruta, el plazo y el coste — en tiempo real.",
+        "market": "B2C — Entrega",
+        "tech": "IA de rutas + optimización de flota",
+        "status": "En desarrollo"
+      },
+      "primiom": {
+        "headline": "El sector inmobiliario reinventado por la IA.",
+        "p1": "Primiom apoya a compradores, vendedores e inversores inmobiliarios con herramientas de análisis de mercado y apoyo a la decisión basadas en IA.",
+        "p2": "Valoración predictiva, detección de oportunidades, simulación de rentabilidad — todo lo que necesita para decidir con confianza.",
+        "market": "B2C — Inmobiliario",
+        "zones": "Francia · Europa",
+        "status": "En desarrollo"
+      },
+      "hobconnect": {
+        "headline": "La red social que une a través de las pasiones.",
+        "p1": "Hobconnect crea comunidades auténticas en torno a intereses compartidos — deporte, música, arte, gaming, viajes y más.",
+        "p2": "Una alternativa a las redes generalistas, centrada en la profundidad del intercambio más que en el volumen de interacciones.",
+        "market": "B2C — Social",
+        "model": "Freemium — comunidades privadas/públicas",
+        "status": "En desarrollo"
+      }
+    },
+    "highlights": {
+      "market": "Mercado",
+      "tech": "Tecnología",
+      "zones": "Zonas",
+      "zone": "Zona",
+      "status": "Estado",
+      "category": "Categoría",
+      "useCase": "Caso de uso",
+      "model": "Modelo"
+    }
+  },
+  "ndaForm": {
+    "requestBtn": "Solicitar acceso NDA",
+    "doneTitle": "Solicitud recibida",
+    "doneDesc": "Nuestro equipo se pondrá en contacto con usted en 24-48h para validar su perfil y enviarle el NDA.",
+    "formTitle": "Solicitud de acceso NDA",
+    "labelName": "Nombre completo *",
+    "labelEmail": "Correo electrónico *",
+    "labelCompany": "Empresa",
+    "labelBuyerType": "Perfil comprador",
+    "labelCapacity": "Capacidad de adquisición declarada",
+    "labelMessage": "Mensaje (opcional)",
+    "placeholderName": "Juan Pérez",
+    "placeholderEmail": "usted@ejemplo.com",
+    "placeholderCompany": "Nombre de su empresa",
+    "placeholderMessage": "Contexto de su interés en este activo...",
+    "selectDefault": "— Seleccionar —",
+    "submit": "Enviar mi solicitud",
+    "sending": "Enviando...",
+    "disclaimer": "Acceso condicionado a la validación de su perfil por nuestro equipo.",
+    "errorGeneric": "Se ha producido un error. Inténtelo de nuevo.",
+    "errorNetwork": "Error de red. Inténtelo de nuevo.",
+    "buyerTypes": {
+      "pe": "Fondo PE / VC",
+      "strategic": "Comprador estratégico",
+      "family_office": "Family office",
+      "individual": "Particular / Autónomo"
+    }
+  },
+  "accessForm": {
+    "doneTitle": "Solicitud recibida",
+    "doneDesc": "Nuestro equipo se pondrá en contacto con usted en 24–48h para validar su perfil y enviarle el NDA y las CGV de AEGRYN Auction para firmar.",
+    "doneNote": "Sin acceso sin firma de ambos documentos.",
+    "restrictedTitle": "Acceso al catálogo restringido",
+    "restrictedDesc": "Los expedientes de activos y nombres de empresas son accesibles solo tras crear una cuenta, firmar el NDA de AEGRYN Auction y aceptar las CGV.",
+    "pendingCgvDesc": "Su NDA está registrado. Las CGV le serán enviadas en breve.",
+    "pendingNdaDesc": "Envíe su solicitud a continuación. Le enviaremos el NDA y las CGV para su firma.",
+    "ndaSignedTitle": "NDA firmado — pendiente CGV",
+    "ndaSignedDesc": "Nuestro equipo le enviará las Condiciones Generales de Venta en breve.",
+    "formLabel": "Solicitud de acceso al catálogo",
+    "labelName": "Nombre completo *",
+    "labelEmail": "Correo electrónico *",
+    "labelCompany": "Empresa",
+    "labelBuyerType": "Perfil comprador",
+    "labelCapacity": "Capacidad de adquisición declarada",
+    "labelMessage": "Mensaje (opcional)",
+    "placeholderName": "Juan Pérez",
+    "placeholderEmail": "usted@ejemplo.com",
+    "placeholderCompany": "Nombre de su empresa",
+    "placeholderMessage": "Contexto de su interés en la próxima sesión...",
+    "selectDefault": "— Seleccionar —",
+    "submit": "Enviar mi solicitud",
+    "sending": "Enviando...",
+    "disclaimer": "Acceso condicionado a la validación del perfil, firma del NDA y aceptación de las CGV.",
+    "errorGeneric": "Se ha producido un error. Inténtelo de nuevo.",
+    "errorNetwork": "Error de red. Inténtelo de nuevo.",
+    "buyerTypes": {
+      "pe": "Fondo PE / VC",
+      "strategic": "Comprador estratégico",
+      "family_office": "Family office",
+      "individual": "Particular / Autónomo"
+    }
+  },
+  "gradePartners": {
+    "back": "← AEGRYN Grade",
+    "eyebrow": "AEGRYN GRADE",
+    "title": "Una red de expertos de apoyo, no una obligación",
+    "intro1": "El AEGRYN Grade es una certificación independiente: AEGRYN evalúa y califica la calidad de los activos tech en venta sin depender de terceros para emitir su grade. Nuestros vendedores reciben acompañamiento independiente durante su proceso de venta.",
+    "intro2": "Permanecemos abiertos a candidaturas de expertos independientes que deseen unirse a la certificación o a nuestra red, movilizable a demanda antes, durante y después de una transacción.",
+    "openApps": "Candidaturas abiertas",
+    "types": {
+      "code": {
+        "label": "AUDITORÍA CÓDIGO & TECH",
+        "desc": "CTO freelance senior o firma independiente especializada en revisión de código y deuda técnica, apoyando la dimensión C (Código) para vendedores y compradores que lo deseen.",
+        "dimension": "Dimensión C — Código"
+      },
+      "legal": {
+        "label": "LEGAL IP",
+        "desc": "Despacho jurídico especializado en tech & IP, apoyando la dimensión I (IP & Derechos) para vendedores y compradores que lo deseen.",
+        "dimension": "Dimensión I — IP & Derechos"
+      },
+      "finance": {
+        "label": "AUDITOR FINANCIERO",
+        "desc": "Firma de auditoría o auditor financiero especializado en SaaS/tech, apoyando la dimensión F (Finanzas) para vendedores y compradores que lo deseen.",
+        "dimension": "Dimensión F — Finanzas"
+      },
+      "security": {
+        "label": "CIBERSEGURIDAD",
+        "desc": "Especialista en ciberseguridad acreditado (PASSI o CREST), apoyando la dimensión S (Seguridad) para vendedores y compradores que lo deseen.",
+        "dimension": "Dimensión S — Seguridad"
+      }
+    },
+    "ctaLabel": "PARA EXPERTOS",
+    "ctaTitle": "¿Es usted un despacho jurídico, auditor financiero o especialista en ciberseguridad?",
+    "ctaDesc": "Solicite unirse a la red de expertos AEGRYN: acceso a un flujo regular de activos tech que requieren su experiencia, visibilidad institucional, clientela cualificada.",
+    "ctaBtn": "Solicitar unirse a la red de expertos",
+    "benefitsLabel": "LO QUE OBTIENE",
+    "benefits": [
+      "Acceso a un flujo regular de activos tech que requieren su experiencia",
+      "Visibilidad como socio de la red AEGRYN (desde los primeros mandatos)",
+      "Clientela institucional cualificada — compradores PE, VC, Family Office",
+      "Remuneración definida en el marco de la asociación"
+    ]
   },
   "contact": {
     "faq": {

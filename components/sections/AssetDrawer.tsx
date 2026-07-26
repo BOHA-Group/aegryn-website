@@ -7,95 +7,52 @@ import { gsap }                          from '@/lib/gsap'
 import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
 import type { Asset }                    from '@/data/assets'
 import { BadgePill, StatusIndicator }    from '@/components/ui/AssetIndicators'
-
-/* ── Contenu détaillé par actif ─────────────────────────────────── */
-const ASSET_DETAILS: Record<string, {
-  headline: string
-  paragraphs: string[]
-  highlights: { label: string; value: string }[]
-  cta?: { label: string; href: string; external?: boolean }
-}> = {
-  subblink: {
-    headline: 'L\'IA qui lit vos contrats à votre place.',
-    paragraphs: [
-      'Subblink analyse instantanément tout type de contrat — NDAs, CGV, baux, contrats de prestation — et identifie les clauses à risque, les engagements cachés et les points de négociation.',
-      'Calibrée pour le droit suisse et français, la solution s\'adresse aux freelances, consultants, PME et directions juridiques qui veulent reprendre le contrôle de leurs obligations contractuelles.',
-    ],
-    highlights: [
-      { label: 'Marché', value: 'B2B — SaaS' },
-      { label: 'Technologie', value: 'IA générative + NLP juridique' },
-      { label: 'Zones', value: 'Suisse · France · Europe' },
-      { label: 'Statut', value: 'Live' },
-    ],
-    cta: { label: 'Accéder à Subblink', href: 'https://subblink.boha-group.com', external: true },
-  },
-  kryv: {
-    headline: 'Le SSL du code IA — chaque déploiement, immuablement scellé.',
-    paragraphs: [
-      'KRYV Protocol est un protocole blockchain de certification de l\'intégrité du code IA. Il garantit qu\'un modèle déployé est exactement celui qui a été audité et approuvé, sans altération.',
-      'Dans un monde où l\'IA devient infrastructure critique, KRYV pose les bases d\'une certification de confiance vérifiable on-chain.',
-    ],
-    highlights: [
-      { label: 'Catégorie', value: 'Protocole — Blockchain' },
-      { label: 'Cas d\'usage', value: 'Certification IA, audit on-chain' },
-      { label: 'Statut', value: 'Restricted — accès sur invitation' },
-    ],
-  },
-  neediu: {
-    headline: 'La mise en relation intelligente pour les services à domicile.',
-    paragraphs: [
-      'Neediu connecte les particuliers aux prestataires qualifiés pour tous leurs besoins à domicile : ménage, jardinage, bricolage, garde d\'enfants et bien plus.',
-      'L\'algorithme analyse la disponibilité, la localisation et les évaluations pour proposer le prestataire idéal en quelques secondes.',
-    ],
-    highlights: [
-      { label: 'Marché', value: 'B2C — Marketplace' },
-      { label: 'Zone', value: 'Région parisienne → France' },
-      { label: 'Statut', value: 'En développement' },
-    ],
-  },
-  movtoo: {
-    headline: 'La livraison à la demande, pilotée par l\'IA.',
-    paragraphs: [
-      'Movtoo réinvente la logistique du dernier kilomètre avec une plateforme de livraison immédiate optimisée par l\'intelligence artificielle.',
-      'Les expéditeurs et destinataires bénéficient d\'une transparence totale sur le trajet, le délai et le coût — en temps réel.',
-    ],
-    highlights: [
-      { label: 'Marché', value: 'B2C — Livraison' },
-      { label: 'Technologie', value: 'IA routage + optimisation flotte' },
-      { label: 'Statut', value: 'En développement' },
-    ],
-  },
-  primiom: {
-    headline: 'L\'immobilier réinventé par l\'IA.',
-    paragraphs: [
-      'Primiom accompagne acheteurs, vendeurs et investisseurs immobiliers avec des outils d\'analyse de marché et d\'aide à la décision basés sur l\'IA.',
-      'Évaluation prédictive, détection des opportunités, simulation de rentabilité — tout ce dont vous avez besoin pour décider avec confiance.',
-    ],
-    highlights: [
-      { label: 'Marché', value: 'B2C — Immobilier' },
-      { label: 'Zones', value: 'France · Europe' },
-      { label: 'Statut', value: 'En développement' },
-    ],
-  },
-  hobconnect: {
-    headline: 'Le réseau social qui rassemble autour des passions.',
-    paragraphs: [
-      'Hobconnect crée des communautés authentiques autour des centres d\'intérêt partagés — sport, musique, art, gaming, voyages et bien d\'autres.',
-      'Une alternative aux réseaux généralistes, centrée sur la profondeur des échanges plutôt que sur la quantité d\'interactions.',
-    ],
-    highlights: [
-      { label: 'Marché', value: 'B2C — Social' },
-      { label: 'Modèle', value: 'Freemium — communautés privées/publiques' },
-      { label: 'Statut', value: 'En développement' },
-    ],
-  },
-}
+import { useTranslations }              from 'next-intl'
 
 /* ── Drawer ──────────────────────────────────────────────────────── */
 function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
+  const t = useTranslations('assetDrawer')
+  const tStatus = useTranslations('assetStatus')
   const panelRef = useRef<HTMLDivElement>(null)
   const backdropRef = useRef<HTMLDivElement>(null)
-  const details = ASSET_DETAILS[asset.id]
+
+  const assetKey = asset.id
+  const hasDetails = ['subblink', 'kryv', 'neediu', 'movtoo', 'primiom', 'hobconnect'].includes(assetKey)
+
+  const getHighlights = (): { label: string; value: string }[] => {
+    if (assetKey === 'subblink') return [
+      { label: t('highlights.market'),   value: t('assets.subblink.market') },
+      { label: t('highlights.tech'),     value: t('assets.subblink.tech') },
+      { label: t('highlights.zones'),    value: t('assets.subblink.zones') },
+      { label: t('highlights.status'),   value: tStatus('live') },
+    ]
+    if (assetKey === 'kryv') return [
+      { label: t('highlights.category'), value: t('assets.kryv.category') },
+      { label: t('highlights.useCase'),  value: t('assets.kryv.useCase') },
+      { label: t('highlights.status'),   value: t('assets.kryv.status') },
+    ]
+    if (assetKey === 'neediu') return [
+      { label: t('highlights.market'),   value: t('assets.neediu.market') },
+      { label: t('highlights.zone'),     value: t('assets.neediu.zone') },
+      { label: t('highlights.status'),   value: tStatus('dev') },
+    ]
+    if (assetKey === 'movtoo') return [
+      { label: t('highlights.market'),   value: t('assets.movtoo.market') },
+      { label: t('highlights.tech'),     value: t('assets.movtoo.tech') },
+      { label: t('highlights.status'),   value: tStatus('dev') },
+    ]
+    if (assetKey === 'primiom') return [
+      { label: t('highlights.market'),   value: t('assets.primiom.market') },
+      { label: t('highlights.zones'),    value: t('assets.primiom.zones') },
+      { label: t('highlights.status'),   value: tStatus('dev') },
+    ]
+    if (assetKey === 'hobconnect') return [
+      { label: t('highlights.market'),   value: t('assets.hobconnect.market') },
+      { label: t('highlights.model'),    value: t('assets.hobconnect.model') },
+      { label: t('highlights.status'),   value: tStatus('dev') },
+    ]
+    return []
+  }
 
   /* Animate in */
   useEffect(() => {
@@ -162,17 +119,17 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
 
         {/* Body */}
         <div className="flex-1 p-8 space-y-8">
-          {details ? (
+          {hasDetails ? (
             <>
               <p
                 className="font-sans font-bold text-ag-black leading-[1.15] tracking-[-0.02em]"
                 style={{ fontSize: 'clamp(16px,1.6vw,20px)' }}
               >
-                {details.headline}
+                {t(`assets.${assetKey}.headline`)}
               </p>
 
               <div className="space-y-4">
-                {details.paragraphs.map((p, i) => (
+                {[t(`assets.${assetKey}.p1`), t(`assets.${assetKey}.p2`)].map((p, i) => (
                   <p key={i} className="font-sans font-normal text-[14px] text-ag-gray leading-[1.8]">
                     {p}
                   </p>
@@ -181,7 +138,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
 
               {/* Highlights grid */}
               <div className="grid grid-cols-2 gap-px bg-ag-border">
-                {details.highlights.map((h) => (
+                {getHighlights().map((h) => (
                   <div key={h.label} className="bg-ag-off-white p-4">
                     <p className="font-sans font-semibold text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">
                       {h.label}
@@ -205,18 +162,18 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
 
         {/* Footer CTA */}
         <div className="p-8 border-t border-ag-border">
-          {details?.cta ? (
+          {assetKey === 'subblink' ? (
             <a
-              href={details.cta.href}
-              target={details.cta.external ? '_blank' : undefined}
-              rel={details.cta.external ? 'noopener noreferrer' : undefined}
+              href="https://subblink.app"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full inline-flex items-center justify-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-6 py-4 hover:bg-ag-apex hover:text-ag-navy transition-all duration-300"
             >
-              {details.cta.label} <ArrowUpRight size={13} />
+              {t('assets.subblink.cta')} <ArrowUpRight size={13} />
             </a>
           ) : asset.id === 'kryv' ? (
             <p className="font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-gray-light text-center">
-              Accès sur invitation uniquement
+              {t('accessRestricted')}
             </p>
           ) : (
             <Link
@@ -224,7 +181,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
               className="w-full inline-flex items-center justify-center gap-3 border border-ag-border text-ag-black font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-6 py-4 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300"
               onClick={close}
             >
-              Nous contacter <ArrowUpRight size={13} />
+              {t('contactUs')} <ArrowUpRight size={13} />
             </Link>
           )}
         </div>
@@ -235,6 +192,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
 
 /* ── Grille principale avec drawers ─────────────────────────────── */
 export function AssetGridWithDrawer() {
+  const t = useTranslations('assetDrawer')
   const [openId, setOpenId] = useState<string | null>(null)
   const openAsset = AEGRYN_ASSETS.find((a) => a.id === openId) ?? null
 
@@ -252,7 +210,7 @@ export function AssetGridWithDrawer() {
           {/* Header row avec compteur */}
           <div className="flex items-center justify-between border-y border-ag-border py-4 mb-0">
             <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-              / Tous les actifs
+              {t('allAssets')}
             </span>
             <span className="font-sans font-semibold text-[10px] text-ag-gray-light">
               {String(AEGRYN_ASSETS.length).padStart(2, '0')}

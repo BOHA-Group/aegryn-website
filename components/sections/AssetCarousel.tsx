@@ -5,12 +5,13 @@ import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 import { AEGRYN_ASSETS } from '@/data/assets'
+import { useTranslations } from 'next-intl'
 
-const STATUS_CONFIG = {
-  live:        { label: 'Live',         dot: 'bg-ag-live',        pulse: true  },
-  beta:        { label: 'Beta',         dot: 'bg-ag-beta',        pulse: true  },
-  dev:         { label: 'Dev',          dot: 'bg-ag-dev',         pulse: false },
-  not_started: { label: 'Non démarré', dot: 'bg-ag-gray-light',  pulse: false },
+const STATUS_DOT_CONFIG = {
+  live:        { dot: 'bg-ag-live',       pulse: true  },
+  beta:        { dot: 'bg-ag-beta',       pulse: true  },
+  dev:         { dot: 'bg-ag-dev',        pulse: false },
+  not_started: { dot: 'bg-ag-gray-light', pulse: false },
 } as const
 
 const VISIBLE = AEGRYN_ASSETS.slice()
@@ -21,6 +22,8 @@ const VISIBLE = AEGRYN_ASSETS.slice()
  * through asset cards, then unpins to continue page scroll.
  */
 export function AssetCarousel() {
+  const t = useTranslations('assetCarousel')
+  const tStatus = useTranslations('assetStatus')
   const sectionRef = useRef<HTMLElement>(null)
   const trackRef   = useRef<HTMLDivElement>(null)
   const headerRef  = useRef<HTMLDivElement>(null)
@@ -74,17 +77,17 @@ export function AssetCarousel() {
       <div ref={headerRef} className="max-w-7xl mx-auto px-6 md:px-12 pt-20 pb-10 flex items-end justify-between">
         <div>
           <p className="font-sans font-semibold text-[11px] tracking-[0.2em] uppercase text-ag-gray-light mb-3">
-            Notre écosystème
+            {t('label')}
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
             style={{ fontSize: 'clamp(32px,4vw,56px)' }}
           >
-            Ce que nous construisons.
+            {t('title')}
           </h2>
         </div>
         <span className="hidden md:block font-sans font-semibold text-[11px] tracking-[0.18em] uppercase text-ag-gray-light">
-          ← scroll →
+          {t('scrollHint')}
         </span>
       </div>
 
@@ -95,7 +98,12 @@ export function AssetCarousel() {
         style={{ width: `${(VISIBLE.length + 1) * 340}px` }}
       >
         {VISIBLE.map((asset) => {
-          const status = STATUS_CONFIG[asset.status]
+          const statusKey = asset.status as keyof typeof STATUS_DOT_CONFIG
+          const statusDot = STATUS_DOT_CONFIG[statusKey] ?? STATUS_DOT_CONFIG.not_started
+          const statusLabel = statusKey === 'live' ? tStatus('live')
+            : statusKey === 'beta' ? tStatus('beta')
+            : statusKey === 'dev'  ? tStatus('dev')
+            : tStatus('notStarted')
           const isKryv = asset.id === 'kryv'
 
           if (isKryv) {
@@ -113,7 +121,7 @@ export function AssetCarousel() {
                 />
                 <div className="flex justify-between items-start mb-auto relative z-10">
                   <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-apex/60 border border-ag-apex/30 px-2.5 py-1">
-                    CLASSIFIÉ
+                    {t('classifiedLabel')}
                   </span>
                   <span className="w-8 h-8 border border-white/20 flex items-center justify-center text-white/30">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -133,13 +141,14 @@ export function AssetCarousel() {
                     {asset.tagline}
                   </p>
                   <p className="font-sans font-normal text-[12px] text-white/30 leading-relaxed mb-5">
-                    Protocole en développement confidentiel.
-                    <br />Accès restreint aux partenaires accrédités.
+                    {t('classifiedDesc').split('\n').map((line, i) => (
+                      <span key={i}>{line}{i === 0 && <br />}</span>
+                    ))}
                   </p>
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-ag-apex animate-pulse" />
                     <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-apex/60">
-                      Restricted
+                      {t('restricted')}
                     </span>
                   </div>
                 </div>
@@ -182,9 +191,9 @@ export function AssetCarousel() {
                   {asset.description}
                 </p>
                 <div className="flex items-center gap-2">
-                  <span className={`w-1.5 h-1.5 rounded-full ${status.dot} ${status.pulse ? 'animate-pulse' : ''}`} />
+                  <span className={`w-1.5 h-1.5 rounded-full ${statusDot.dot} ${statusDot.pulse ? 'animate-pulse' : ''}`} />
                   <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
-                    {status.label}
+                    {statusLabel}
                   </span>
                 </div>
               </div>
@@ -198,19 +207,21 @@ export function AssetCarousel() {
           style={{ width: '340px', minHeight: '420px' }}
         >
           <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4 text-center">
-            Aegryn Group
+            {t('cta.label')}
           </p>
           <p
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] text-center mb-8"
             style={{ fontSize: 'clamp(22px,2vw,30px)' }}
           >
-            All our assets.<br />Built to last.
+            {t('cta.title').split('\n').map((line, i) => (
+              <span key={i}>{line}{i === 0 && <br />}</span>
+            ))}
           </p>
           <Link
             href="/what-we-build"
             className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white hover:bg-white hover:text-ag-navy transition-all"
           >
-            View all
+            {t('cta.button')}
             <ArrowUpRight size={14} />
           </Link>
         </div>
@@ -219,7 +230,7 @@ export function AssetCarousel() {
       {/* Mobile scroll hint */}
       <div className="md:hidden px-6 pb-6">
         <p className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light">
-          Swipe to explore →
+          {t('swipeHint')}
         </p>
       </div>
     </section>

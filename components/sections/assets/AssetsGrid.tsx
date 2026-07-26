@@ -26,11 +26,11 @@ const GRADE_LABELS: Record<string, string> = {
   a:       'A',
   b:       'B',
   pending: '—',
-  refused: 'Refusé',
 }
 
 export function AssetsGrid() {
   const t = useTranslations('assets.page')
+  const tStatus = useTranslations('assetStatus')
   const [active, setActive] = useState<Category>('all')
   const gridRef = useRef<HTMLDivElement>(null)
 
@@ -56,9 +56,12 @@ export function AssetsGrid() {
   ]
 
   const statusLabel = (status: string) => {
-    if (status === 'live')  return t('statusLive')
-    if (status === 'beta')  return t('statusBeta')
-    return t('statusDev')
+    if (status === 'live')        return tStatus('live')
+    if (status === 'beta')        return tStatus('beta')
+    if (status === 'dev')         return tStatus('dev')
+    if (status === 'not_started') return tStatus('notStarted')
+    if (status === 'refused')     return tStatus('refused')
+    return tStatus('dev')
   }
 
   const statusColor = (status: string) => {
@@ -112,7 +115,7 @@ export function AssetsGrid() {
                   className="font-mono text-[11px] tracking-[0.1em] font-semibold shrink-0 mt-0.5"
                   style={{ color: GRADE_COLORS[asset.grade] ?? '#6B6B6B' }}
                 >
-                  {asset.grade === 'pending' ? t('gradePending') : GRADE_LABELS[asset.grade]}
+                  {asset.grade === 'pending' ? t('gradePending') : asset.grade === 'refused' ? tStatus('refused') : GRADE_LABELS[asset.grade]}
                 </span>
               </div>
 

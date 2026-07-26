@@ -8,86 +8,12 @@ import type { Metadata }      from 'next'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
-const STATUS_CONFIG = {
-  live:        { label: 'Live',              dot: 'bg-ag-live',       text: 'text-ag-live'       },
-  beta:        { label: 'Bêta',             dot: 'bg-ag-beta',       text: 'text-ag-beta'       },
-  dev:         { label: 'En développement', dot: 'bg-ag-gray-light', text: 'text-ag-gray-light' },
-  not_started: { label: 'Non démarré',     dot: 'bg-ag-gray-light', text: 'text-ag-gray-light' },
+const STATUS_DOT: Record<string, { dot: string; text: string }> = {
+  live:        { dot: 'bg-ag-live',       text: 'text-ag-live'       },
+  beta:        { dot: 'bg-ag-beta',       text: 'text-ag-beta'       },
+  dev:         { dot: 'bg-ag-gray-light', text: 'text-ag-gray-light' },
+  not_started: { dot: 'bg-ag-gray-light', text: 'text-ag-gray-light' },
 } as const
-
-const ASSET_DETAILS: Record<string, {
-  longDesc: string
-  features: string[]
-  audience: string
-  tech: string[]
-}> = {
-  subblink: {
-    longDesc: "Subblink analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées — tout est identifié et expliqué en langage clair.",
-    features: [
-      'Analyse de contrats en 60 secondes',
-      'Conformité droit suisse (CO) et droit européen',
-      'Détection automatique des clauses à risque',
-      'Résumé exécutif et points d\'attention priorisés',
-      'Proposition de mise à jour de clauses et plan d\'actions',
-      'Export PDF annoté et certifié. Traduction multilingue',
-      'API disponible pour intégration B2B',
-    ],
-    audience: 'Particuliers, indépendants, PME, cabinets juridiques',
-    tech: ['IA générative', 'NLP juridique', 'Swiss Law', 'SaaS B2B'],
-  },
-  neediu: {
-    longDesc: "Neediu connecte les particuliers aux meilleurs prestataires de services à domicile. Ménage, jardinage, bricolage, baby-sitting — une mise en relation intelligente basée sur la localisation et les avis vérifiés.",
-    features: [
-      'Mise en relation en temps réel',
-      'Prestataires vérifiés et notés',
-      'Paiement sécurisé intégré',
-      'Suivi de mission en direct',
-      'Assurance prestation incluse',
-      'Disponible Île-de-France',
-    ],
-    audience: 'Particuliers, propriétaires, locataires',
-    tech: ['Marketplace B2C', 'Géolocalisation', 'Paiement en ligne', 'Mobile-first'],
-  },
-  primiom: {
-    longDesc: "Primiom réinvente la transaction immobilière en plaçant l'IA au cœur du processus d'achat et de vente. Estimation précise, analyse de marché en temps réel et accompagnement personnalisé de A à Z.",
-    features: [
-      'Estimation IA en moins de 2 minutes',
-      'Analyse des prix du marché local',
-      'Accompagnement acheteur/vendeur intégré',
-      'Simulation de financement',
-      'Connexion aux notaires partenaires',
-      'Couverture Suisse et France',
-    ],
-    audience: 'Acheteurs, vendeurs, investisseurs immobiliers',
-    tech: ['IA prédictive', 'Data immobilière', 'Proptech', 'CH/FR'],
-  },
-  movtoo: {
-    longDesc: "Movtoo est une plateforme de livraison immédiate pilotée par l'intelligence artificielle. Courses, repas, colis — la livraison à la demande optimisée pour les zones urbaines denses.",
-    features: [
-      'Livraison en moins de 45 minutes',
-      'Dispatch IA en temps réel',
-      'Suivi GPS du livreur',
-      'Multi-catégories : alimentaire, colis, documents',
-      'Livreurs indépendants vérifiés',
-      'API marchands disponible',
-    ],
-    audience: 'Particuliers, restaurateurs, commerces de proximité',
-    tech: ['IA logistique', 'Géoptimisation', 'Last-mile delivery', 'On-demand'],
-  },
-  hobconnect: {
-    longDesc: "Hobconnect crée des communautés authentiques autour des passions partagées. Photographie, cuisine, sport, musique — un réseau social centré sur l'intérêt commun plutôt que sur les abonnés.",
-    features: [
-      'Communautés thématiques par passion',
-      'Fil d\'actualité sans algorithme publicitaire',
-      'Événements locaux et en ligne',
-      'Messagerie privée entre passionnés',
-      'Ateliers et rencontres organisés',
-      'Sans publicité intrusive',
-    ],
-    audience: 'Particuliers passionnés, créateurs de contenu, associations',
-    tech: ['Réseau social B2C', 'Communautés', 'Événementiel', 'Privacy-first'],
-  },
-}
 
 const LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl']
 
@@ -113,12 +39,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AssetPage({ params }: Props) {
   const { locale, slug } = await params
   const t       = await getTranslations({ locale, namespace: 'assetPage' })
+  const tStatus = await getTranslations({ locale, namespace: 'assetStatus' })
   const tFooter  = await getTranslations({ locale, namespace: 'footer' })
   const asset = AEGRYN_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) notFound()
 
-  const details  = ASSET_DETAILS[asset.id]
-  const status   = STATUS_CONFIG[asset.status]
+  const assetId = asset.id as 'subblink' | 'neediu' | 'primiom' | 'movtoo' | 'hobconnect'
+  const hasAssetI18n = ['subblink', 'neediu', 'primiom', 'movtoo', 'hobconnect'].includes(assetId)
+  const longDesc  = hasAssetI18n ? t(`assets.${assetId}.longDesc`) : asset.description
+  const audience  = hasAssetI18n ? t(`assets.${assetId}.audience`) : ''
+  const features  = hasAssetI18n ? (t.raw(`assets.${assetId}.features`) as string[]) : []
+
+  const statusKey = asset.status as keyof typeof STATUS_DOT
+  const statusDot = STATUS_DOT[statusKey] ?? STATUS_DOT.not_started
+  const statusLabel = statusKey === 'live' ? tStatus('live')
+    : statusKey === 'beta' ? tStatus('beta')
+    : statusKey === 'dev'  ? tStatus('dev')
+    : tStatus('notStarted')
   const category = ASSET_CATEGORIES[asset.category]
   const isLive   = !!asset.url
 
@@ -148,9 +85,9 @@ export default async function AssetPage({ params }: Props) {
               {asset.badge}
             </span>
             <span className="flex items-center gap-1.5">
-              <span className={`w-1.5 h-1.5 rounded-full ${status.dot}`} />
-              <span className={`font-sans font-semibold text-[10px] tracking-[0.14em] uppercase ${status.text}`}>
-                {status.label}
+              <span className={`w-1.5 h-1.5 rounded-full ${statusDot.dot}`} />
+              <span className={`font-sans font-semibold text-[10px] tracking-[0.14em] uppercase ${statusDot.text}`}>
+                {statusLabel}
               </span>
             </span>
           </div>
@@ -197,14 +134,14 @@ export default async function AssetPage({ params }: Props) {
                 {t('presentation')}
               </p>
               <p className="text-[15px] text-ag-dark leading-[1.8]">
-                {details?.longDesc ?? asset.description}
+                {longDesc}
               </p>
-              {details?.audience && (
+              {audience && (
                 <div className="mt-10 pt-8 border-t border-ag-border">
                   <p className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
                     {t('audience')}
                   </p>
-                  <p className="text-[14px] text-ag-gray">{details.audience}</p>
+                  <p className="text-[14px] text-ag-gray">{audience}</p>
                 </div>
               )}
             </div>
@@ -215,7 +152,7 @@ export default async function AssetPage({ params }: Props) {
                 {t('features')}
               </p>
               <ul className="space-y-4">
-                {(details?.features ?? []).map((f, i) => (
+                {features.map((f, i) => (
                   <li key={i} className="flex items-start gap-4">
                     <span className="mt-[3px] w-4 h-4 shrink-0 flex items-center justify-center">
                       <span className="w-1.5 h-1.5 rounded-full bg-ag-apex" />
@@ -225,15 +162,6 @@ export default async function AssetPage({ params }: Props) {
                 ))}
               </ul>
 
-              {details?.tech && (
-                <div className="mt-12 flex flex-wrap gap-2">
-                  {details.tech.map((tag) => (
-                    <span key={tag} className="font-sans font-semibold text-[10px] tracking-[0.12em] uppercase border border-ag-border px-3 py-1.5 text-ag-gray-light">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              )}
             </div>
           </div>
         </div>

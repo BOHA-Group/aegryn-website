@@ -421,6 +421,13 @@
       "product": "Product"
     }
   },
+  "assetStatus": {
+    "live": "Live",
+    "beta": "Beta",
+    "dev": "In ontwikkeling",
+    "notStarted": "Niet gestart",
+    "refused": "Geweigerd"
+  },
   "assetPage": {
     "back": "← Terug naar activa",
     "presentation": "Overzicht",
@@ -433,6 +440,69 @@
       "title": "Laten we uw acquisitie bespreken",
       "allAssets": "Alle activa bekijken",
       "contact": "Contact AEGRYN"
+    },
+    "assets": {
+      "subblink": {
+        "longDesc": "Subblink analyseert al uw contracten in seconden met een AI gecalibreerd voor het Zwitserse en Europese recht. Risico's, kritieke clausules, verborgen verplichtingen — alles wordt geïdentificeerd en uitgelegd in duidelijke taal.",
+        "audience": "Particulieren, zelfstandigen, kmo's, juridische kantoren",
+        "features": [
+          "Contractanalyse in 60 seconden",
+          "Conformiteit met Zwitsers recht (CO) en Europees recht",
+          "Automatische detectie van risicovolle clausules",
+          "Managementsamenvatting met geprioriteerde actiepunten",
+          "Voorstellen voor clausuleherziening en actieplan",
+          "Geannoteerde en gecertificeerde PDF-export. Meertalige vertaling",
+          "API beschikbaar voor B2B-integratie"
+        ]
+      },
+      "neediu": {
+        "longDesc": "Neediu verbindt particulieren met de beste thuisserviceproviders. Schoonmaken, tuinieren, klussen, kinderopvang — slimme koppeling op basis van locatie en geverifieerde beoordelingen.",
+        "audience": "Particulieren, eigenaren, huurders",
+        "features": [
+          "Real-time koppeling",
+          "Geverifieerde en beoordeelde aanbieders",
+          "Geïntegreerde veilige betaling",
+          "Live opdrachttracking",
+          "Prestatieverzekering inbegrepen",
+          "Beschikbaar in Île-de-France"
+        ]
+      },
+      "primiom": {
+        "longDesc": "Primiom hervindt vastgoedtransacties door AI centraal te stellen in het koop- en verkoopproces. Nauwkeurige waardering, real-time marktanalyse en persoonlijke begeleiding van A tot Z.",
+        "audience": "Kopers, verkopers, vastgoedinvesteerders",
+        "features": [
+          "AI-waardering in minder dan 2 minuten",
+          "Analyse van lokale marktprijzen",
+          "Geïntegreerde koper-/verkoperbegeleiding",
+          "Financieringssimulatie",
+          "Verbinding met partnernotarissen",
+          "Dekking Zwitserland en Frankrijk"
+        ]
+      },
+      "movtoo": {
+        "longDesc": "Movtoo is een on-demand bezorgplatform aangedreven door kunstmatige intelligentie. Boodschappen, maaltijden, pakketten — vraaggestuurde bezorging geoptimaliseerd voor dichte stedelijke gebieden.",
+        "audience": "Particulieren, restauranthouders, lokale winkels",
+        "features": [
+          "Bezorging in minder dan 45 minuten",
+          "Real-time AI-dispatch",
+          "GPS-tracking van de koerier",
+          "Multi-categorie: voeding, pakketten, documenten",
+          "Geverifieerde onafhankelijke koeriers",
+          "Merchant API beschikbaar"
+        ]
+      },
+      "hobconnect": {
+        "longDesc": "Hobconnect bouwt authentieke gemeenschappen rond gedeelde passies. Fotografie, koken, sport, muziek — een sociaal netwerk gericht op gemeenschappelijk belang in plaats van volgersaantallen.",
+        "audience": "Gepassioneerde particulieren, content creators, verenigingen",
+        "features": [
+          "Thematische gemeenschappen per passie",
+          "Nieuwsfeed zonder reclame-algoritme",
+          "Lokale en online evenementen",
+          "Privéberichten tussen enthousiastelingen",
+          "Georganiseerde workshops en bijeenkomsten",
+          "Geen opdringerige reclame"
+        ]
+      }
     }
   },
   "assetCarousel": {
@@ -447,7 +517,178 @@
     },
     "restricted": "Beperkt",
     "classifiedLabel": "VERTROUWELIJK",
-    "classifiedDesc": "Protocol in vertrouwelijke ontwikkeling.\nToegang beperkt tot geaccrediteerde partners."
+    "classifiedDesc": "Protocol in vertrouwelijke ontwikkeling.\nToegang beperkt tot geaccrediteerde partners.",
+    "statusNotStarted": "Niet gestart"
+  },
+  "assetDrawer": {
+    "contactUs": "Neem contact op",
+    "accessRestricted": "Alleen op uitnodiging",
+    "allAssets": "/ Alle activa",
+    "assets": {
+      "subblink": {
+        "headline": "De AI die uw contracten voor u leest.",
+        "p1": "Subblink analyseert onmiddellijk elk type contract — NDA's, algemene voorwaarden, huurovereenkomsten, dienstverleningscontracten — en identificeert risicovolle clausules, verborgen verplichtingen en onderhandelingspunten.",
+        "p2": "Gecalibreerd voor het Zwitserse en Europese recht richt de oplossing zich op particulieren, zelfstandigen, kmo's en juridische afdelingen die de controle over hun contractuele verplichtingen willen herwinnen.",
+        "market": "B2B — SaaS",
+        "tech": "Generatieve AI + juridische NLP",
+        "zones": "Zwitserland · Europa",
+        "status": "Live",
+        "cta": "Toegang tot Subblink"
+      },
+      "kryv": {
+        "headline": "De SSL van AI-code — elke deployment, onveranderlijk verzegeld.",
+        "p1": "KRYV Protocol is een blockchain-protocol voor de certificering van AI-code-integriteit. Het garandeert dat een ingezet model exact het model is dat werd geauditeerd en goedgekeurd, zonder wijziging.",
+        "p2": "In een wereld waar AI kritieke infrastructuur wordt, legt KRYV de basis voor on-chain verifieerbare vertrouwenscertificering.",
+        "category": "Protocol — Blockchain",
+        "useCase": "AI-certificering, on-chain audit",
+        "status": "Beperkt — alleen op uitnodiging"
+      },
+      "neediu": {
+        "headline": "Slimme koppeling voor thuisservices.",
+        "p1": "Neediu verbindt particulieren met gekwalificeerde aanbieders voor al hun thuisbehoeften: schoonmaken, tuinieren, klussen, kinderopvang en meer.",
+        "p2": "Het algoritme analyseert beschikbaarheid, locatie en beoordelingen om de ideale aanbieder in seconden voor te stellen.",
+        "market": "B2C — Marktplaats",
+        "zone": "Regio Parijs → Frankrijk",
+        "status": "In ontwikkeling"
+      },
+      "movtoo": {
+        "headline": "On-demand bezorging, aangedreven door AI.",
+        "p1": "Movtoo hervindt de last-mile logistiek met een direct bezorgplatform geoptimaliseerd door kunstmatige intelligentie.",
+        "p2": "Afzenders en ontvangers profiteren van volledige transparantie over route, levertijd en kosten — in real time.",
+        "market": "B2C — Bezorging",
+        "tech": "AI-routing + vlootoptimalisatie",
+        "status": "In ontwikkeling"
+      },
+      "primiom": {
+        "headline": "Vastgoed herdacht door AI.",
+        "p1": "Primiom ondersteunt kopers, verkopers en vastgoedinvesteerders met op AI gebaseerde marktanalyse- en beslissingsondersteunende tools.",
+        "p2": "Voorspellende waardering, opportuniteitsdetectie, rentabiliteitssimulatie — alles wat u nodig hebt om met vertrouwen te beslissen.",
+        "market": "B2C — Vastgoed",
+        "zones": "Frankrijk · Europa",
+        "status": "In ontwikkeling"
+      },
+      "hobconnect": {
+        "headline": "Het sociale netwerk dat passies samenbrengt.",
+        "p1": "Hobconnect bouwt authentieke gemeenschappen rond gedeelde interesses — sport, muziek, kunst, gaming, reizen en meer.",
+        "p2": "Een alternatief voor generalistische netwerken, gericht op de diepte van uitwisseling in plaats van het volume van interacties.",
+        "market": "B2C — Sociaal",
+        "model": "Freemium — privé/openbare gemeenschappen",
+        "status": "In ontwikkeling"
+      }
+    },
+    "highlights": {
+      "market": "Markt",
+      "tech": "Technologie",
+      "zones": "Zones",
+      "zone": "Zone",
+      "status": "Status",
+      "category": "Categorie",
+      "useCase": "Gebruiksscenario",
+      "model": "Model"
+    }
+  },
+  "ndaForm": {
+    "requestBtn": "NDA-toegang aanvragen",
+    "doneTitle": "Aanvraag ontvangen",
+    "doneDesc": "Ons team neemt binnen 24-48u contact met u op om uw profiel te valideren en u de NDA te sturen.",
+    "formTitle": "NDA-toegangsaanvraag",
+    "labelName": "Volledige naam *",
+    "labelEmail": "E-mail *",
+    "labelCompany": "Bedrijf",
+    "labelBuyerType": "Kopersprofiel",
+    "labelCapacity": "Gedeclareerde acquisitiecapaciteit",
+    "labelMessage": "Bericht (optioneel)",
+    "placeholderName": "Jan Janssen",
+    "placeholderEmail": "u@voorbeeld.nl",
+    "placeholderCompany": "Naam van uw bedrijf",
+    "placeholderMessage": "Context van uw interesse in dit actief...",
+    "selectDefault": "— Selecteren —",
+    "submit": "Mijn aanvraag indienen",
+    "sending": "Verzenden...",
+    "disclaimer": "Toegang afhankelijk van profielvalidatie door ons team.",
+    "errorGeneric": "Er is een fout opgetreden. Probeer het opnieuw.",
+    "errorNetwork": "Netwerkfout. Probeer het opnieuw.",
+    "buyerTypes": {
+      "pe": "PE / VC Fonds",
+      "strategic": "Strategische koper",
+      "family_office": "Family office",
+      "individual": "Particulier / Zelfstandige"
+    }
+  },
+  "accessForm": {
+    "doneTitle": "Aanvraag ontvangen",
+    "doneDesc": "Ons team neemt binnen 24–48u contact met u op om uw profiel te valideren en u de NDA en AEGRYN Auction AV te sturen voor ondertekening.",
+    "doneNote": "Geen toegang zonder ondertekening van beide documenten.",
+    "restrictedTitle": "Beperkte catalogustoegang",
+    "restrictedDesc": "Actiefdossiers en bedrijfsnamen zijn alleen toegankelijk na accountaanmaak, ondertekening van de AEGRYN Auction NDA en aanvaarding van de AV.",
+    "pendingCgvDesc": "Uw NDA is geregistreerd. De AV worden u binnenkort toegestuurd.",
+    "pendingNdaDesc": "Dien hieronder uw aanvraag in. Wij sturen u de NDA en AV ter ondertekening.",
+    "ndaSignedTitle": "NDA ondertekend — AV in afwachting",
+    "ndaSignedDesc": "Ons team stuurt u de Algemene Verkoopvoorwaarden binnenkort toe.",
+    "formLabel": "Catalogustoegangsaanvraag",
+    "labelName": "Volledige naam *",
+    "labelEmail": "E-mail *",
+    "labelCompany": "Bedrijf",
+    "labelBuyerType": "Kopersprofiel",
+    "labelCapacity": "Gedeclareerde acquisitiecapaciteit",
+    "labelMessage": "Bericht (optioneel)",
+    "placeholderName": "Jan Janssen",
+    "placeholderEmail": "u@voorbeeld.nl",
+    "placeholderCompany": "Naam van uw bedrijf",
+    "placeholderMessage": "Context van uw interesse in de volgende sessie...",
+    "selectDefault": "— Selecteren —",
+    "submit": "Mijn aanvraag indienen",
+    "sending": "Verzenden...",
+    "disclaimer": "Toegang afhankelijk van profielvalidatie, NDA-ondertekening en aanvaarding van de AV.",
+    "errorGeneric": "Er is een fout opgetreden. Probeer het opnieuw.",
+    "errorNetwork": "Netwerkfout. Probeer het opnieuw.",
+    "buyerTypes": {
+      "pe": "PE / VC Fonds",
+      "strategic": "Strategische koper",
+      "family_office": "Family office",
+      "individual": "Particulier / Zelfstandige"
+    }
+  },
+  "gradePartners": {
+    "back": "← AEGRYN Grade",
+    "eyebrow": "AEGRYN GRADE",
+    "title": "Een expertnetwerk ter ondersteuning, geen verplichting",
+    "intro1": "De AEGRYN Grade is een onafhankelijke certificering: AEGRYN evalueert en beoordeelt de kwaliteit van te verkopen tech-activa zonder een derde partij nodig te hebben om zijn grade uit te geven. Onze verkopers worden onafhankelijk begeleid in hun verkoopproces.",
+    "intro2": "Wij staan open voor kandidaturen van onafhankelijke experts die zich willen aansluiten bij de certificering of ons netwerk willen vervoegen, op aanvraag inzetbaar voor, tijdens en na een transactie.",
+    "openApps": "Kandidaturen open",
+    "types": {
+      "code": {
+        "label": "CODE & TECH AUDIT",
+        "desc": "Senior freelance CTO of onafhankelijk kantoor gespecialiseerd in code review en technische schuld, ter ondersteuning van dimensie C (Code) voor verkopers en kopers die dat wensen.",
+        "dimension": "Dimensie C — Code"
+      },
+      "legal": {
+        "label": "IP JURIDISCH",
+        "desc": "Advocatenkantoor gespecialiseerd in tech & IP, ter ondersteuning van dimensie I (IP & Rechten) voor verkopers en kopers die dat wensen.",
+        "dimension": "Dimensie I — IP & Rechten"
+      },
+      "finance": {
+        "label": "ACCOUNTANT",
+        "desc": "Auditkantoor of accountant gespecialiseerd in SaaS/tech, ter ondersteuning van dimensie F (Financieel) voor verkopers en kopers die dat wensen.",
+        "dimension": "Dimensie F — Financieel"
+      },
+      "security": {
+        "label": "CYBERBEVEILIGING",
+        "desc": "Geaccrediteerde cyberbeveiligingsspecialist (PASSI of CREST), ter ondersteuning van dimensie S (Beveiliging) voor verkopers en kopers die dat wensen.",
+        "dimension": "Dimensie S — Beveiliging"
+      }
+    },
+    "ctaLabel": "VOOR EXPERTS",
+    "ctaTitle": "Bent u een advocatenkantoor, accountant of cyberbeveiligingsspecialist?",
+    "ctaDesc": "Solliciteer om deel uit te maken van het AEGRYN expertnetwerk: toegang tot een regelmatige stroom van tech-activa die uw expertise vereisen, institutionele zichtbaarheid, gekwalificeerde cliëntele.",
+    "ctaBtn": "Solliciteren voor het expertnetwerk",
+    "benefitsLabel": "WAT U KRIJGT",
+    "benefits": [
+      "Toegang tot een regelmatige stroom van tech-activa die uw expertise vereisen",
+      "Zichtbaarheid als AEGRYN-netwerkpartner (vanaf de eerste mandaten)",
+      "Gekwalificeerde institutionele cliëntele — PE-, VC-, Family Office-kopers",
+      "Vergoeding bepaald binnen het partnerschapskader"
+    ]
   },
   "contact": {
     "faq": {
