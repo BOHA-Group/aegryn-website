@@ -132,8 +132,9 @@ CREATE POLICY "partner_assigned_documents"
   );
 
 -- Acheteur NDA : SELECT sur nda_buyers seulement
--- NDA Auction → profiles.auction_nda_signed_at non null
--- + accès au lot via auction_asset_access
+-- Le NDA Auction est global (pas par actif) : tout acheteur ayant signé
+-- le NDA (auction_nda_signed_at non null) accède aux documents nda_buyers.
+-- Le vendeur contrôle la granularité via le toggle visible_to.
 CREATE POLICY "buyer_nda_documents"
   ON public.data_room_documents FOR SELECT
   TO authenticated
@@ -143,14 +144,6 @@ CREATE POLICY "buyer_nda_documents"
       SELECT 1 FROM public.profiles p
       WHERE p.id = auth.uid()
         AND p.auction_nda_signed_at IS NOT NULL
-    )
-    AND EXISTS (
-      SELECT 1 FROM public.auction_asset_access aaa
-      JOIN public.auction_assets aa ON aa.id = aaa.asset_id
-      JOIN public.assets a ON a.slug = aa.slug
-      WHERE a.id = data_room_documents.asset_id
-        AND aaa.user_id = auth.uid()
-        AND aaa.status = 'active'
     )
   );
 

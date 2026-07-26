@@ -114,7 +114,7 @@ async function checkAccess(
     if (cert) return true
   }
 
-  /* Acheteur NDA */
+  /* Acheteur NDA : le NDA est global — auction_nda_signed_at suffit */
   if (doc.visible_to === 'nda_buyers') {
     const { data: ndaProfile } = await supa
       .from('profiles')
@@ -122,16 +122,7 @@ async function checkAccess(
       .eq('id', userId)
       .single() as { data: { auction_nda_signed_at: string | null } | null }
 
-    if (ndaProfile?.auction_nda_signed_at) {
-      /* Vérifier accès actif au lot correspondant */
-      const { data: access } = await supa
-        .from('auction_asset_access')
-        .select('id')
-        .eq('user_id', userId)
-        .eq('status', 'active')
-        .maybeSingle()
-      if (access) return true
-    }
+    if (ndaProfile?.auction_nda_signed_at) return true
   }
 
   return false
