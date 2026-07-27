@@ -993,6 +993,18 @@
           "num": "05",
           "title": "Blockchaincertificering & digitale notariëring",
           "desc": "Tijdstempeling van de codebase op ondertekeningsdatum, authenticiteitsbewijs, vertrouwelijke escrow. KRYV Protocol in uitrol."
+        },
+        {
+          "num": "06",
+          "title": "HR & arbeidsrechtelijke due diligence",
+          "desc": "Beoordeling van sleutelcontracten, BSPCE, change-of-control-clausules, latente arbeidsverplichtingen. Menselijk kapitaal geauditeerd op hetzelfde niveau als code. In uitrol.",
+          "badge": "in_deployment"
+        },
+        {
+          "num": "07",
+          "title": "Warranty & Indemnity Insurance",
+          "desc": "Introductie bij W&I-partnerverzekeraar voor transacties boven de € 500.000. Faciliteert de volledige prijsvrijgave bij closing en vermindert het restrisico voor de overnemer. In uitrol.",
+          "badge": "in_deployment"
         }
       ]
     },
@@ -1080,6 +1092,51 @@
       "partnerNote": "Wilt u uitgaande deal flow in het AEGRYN-ecosysteem inbrengen?",
       "partnerCta": "Deal Flow-partnerschappen ontdekken",
       "partnerHref": "/alliances?tab=dealflow"
+    },
+    "roadmap": {
+      "label": "Services in ontwikkeling",
+      "title": "Wat eraan komt.",
+      "desc": "AEGRYN breidt zijn transactieaanbod geleidelijk uit. Deze services worden ingezet met onze Alliance-partners.",
+      "ctaLabel": "Ons contacteren",
+      "ctaHref": "/contact",
+      "items": [
+        {
+          "phase": "Beschikbaar op aanvraag",
+          "title": "Vendor Readiness",
+          "desc": "Volledige voorbereiding van het verkopersdossier vóór Grade-indiening — contractaudit, HR-beoordeling, data room-structurering. Verkort de certificeringstijd met 30 tot 50%.",
+          "status": "available_on_request"
+        },
+        {
+          "phase": "In uitrol",
+          "title": "HR & arbeidsrechtelijke due diligence",
+          "desc": "Beoordeling van sleutelcontracten, BSPCE, change-of-control-clausules, latente arbeidsverplichtingen. Geproduceerd tijdens de standaard due diligence-periode.",
+          "status": "in_deployment"
+        },
+        {
+          "phase": "In uitrol",
+          "title": "Warranty & Indemnity Insurance",
+          "desc": "Introductie bij W&I-partnerverzekeraar voor transacties boven de € 500.000. Faciliteert de volledige prijsvrijgave bij closing.",
+          "status": "in_deployment"
+        },
+        {
+          "phase": "Roadmap 12 maanden",
+          "title": "Earn-out Design & KPI Framework",
+          "desc": "Ontwerp van earnout-mechanismen, definitie van meetcriteria en contractuele beschermingen. Voorkomt post-acquisitiegeschillen.",
+          "status": "roadmap"
+        },
+        {
+          "phase": "Roadmap 12 maanden",
+          "title": "Post-acquisitie integratie",
+          "desc": "100-dagen integratieplan: technisch, HR, klanten en leverancierscontracten. Maximaliseert de na de closing behouden waarde.",
+          "status": "roadmap"
+        },
+        {
+          "phase": "Roadmap 24 maanden",
+          "title": "Sectorale regelgevende due diligence",
+          "desc": "Sectorspecifieke compliance-audit voor FinTech (DORA, AFM), HealthTech (AVG gezondheid, HDS), native AI (EU AI Act). Onmisbaar voor gereguleerde verticalen.",
+          "status": "roadmap_long"
+        }
+      ]
     }
   },
   "gradingSystem": {

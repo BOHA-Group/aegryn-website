@@ -1113,6 +1113,18 @@
           "num": "05",
           "title": "Certification blockchain & Notariat numérique",
           "desc": "Horodatage de l'état du codebase à la date de signing, preuve d'authenticité, séquestre confidentiel. KRYV Protocol en déploiement."
+        },
+        {
+          "num": "06",
+          "title": "Due diligence RH & Social",
+          "desc": "Revue des contrats clés, BSPCE, clauses de changement de contrôle, passifs sociaux latents. Capital humain audité au même titre que le code. En déploiement.",
+          "badge": "in_deployment"
+        },
+        {
+          "num": "07",
+          "title": "Warranty & Indemnity Insurance",
+          "desc": "Mise en relation avec les assureurs W&I partenaires pour les transactions > 500 000 €. Facilite la libération totale du prix au closing et réduit le risque résiduel pour l'acquéreur. En déploiement.",
+          "badge": "in_deployment"
         }
       ]
     },
@@ -1200,6 +1212,51 @@
       "partnerNote": "Vous souhaitez référencer du deal flow sortant dans l'écosystème AEGRYN ?",
       "partnerCta": "Découvrir les partenariats Deal Flow",
       "partnerHref": "/alliances?tab=dealflow"
+    },
+    "roadmap": {
+      "label": "Services en développement",
+      "title": "Ce qui arrive.",
+      "desc": "AEGRYN enrichit progressivement son offre transactionnelle. Ces services sont en cours de déploiement avec nos partenaires Alliance.",
+      "ctaLabel": "Nous contacter",
+      "ctaHref": "/contact",
+      "items": [
+        {
+          "phase": "Disponible sur demande",
+          "title": "Vendor Readiness",
+          "desc": "Préparation complète du dossier vendeur avant soumission au Grade — audit contractuel, revue RH, structuration de la data room. Réduit le délai de certification de 30 à 50%.",
+          "status": "available_on_request"
+        },
+        {
+          "phase": "Déploiement en cours",
+          "title": "Due diligence RH & Social",
+          "desc": "Revue des contrats clés, BSPCE, clauses de changement de contrôle, passifs sociaux latents. Produit pendant la période de due diligence standard.",
+          "status": "in_deployment"
+        },
+        {
+          "phase": "Déploiement en cours",
+          "title": "Warranty & Indemnity Insurance",
+          "desc": "Mise en relation avec les assureurs W&I partenaires pour les transactions supérieures à 500 000 €. Facilite la libération totale du prix au closing.",
+          "status": "in_deployment"
+        },
+        {
+          "phase": "Roadmap 12 mois",
+          "title": "Earn-out Design & KPI Framework",
+          "desc": "Conception des mécanismes d'earnout, définition des métriques et des protections contractuelles. Prévient les litiges post-acquisition.",
+          "status": "roadmap"
+        },
+        {
+          "phase": "Roadmap 12 mois",
+          "title": "Intégration post-acquisition",
+          "desc": "Plan d'intégration à 100 jours : technique, RH, clients et contrats fournisseurs. Maximise la valeur préservée après le closing.",
+          "status": "roadmap"
+        },
+        {
+          "phase": "Roadmap 24 mois",
+          "title": "Due diligence réglementaire sectorielle",
+          "desc": "Audit de conformité sectorielle pour FinTech (DORA, ACPR), HealthTech (HDS, RGPD santé), IA native (EU AI Act). Indispensable pour les verticaux réglementés.",
+          "status": "roadmap_long"
+        }
+      ]
     }
   },
   "roadmapPage": {

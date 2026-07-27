@@ -993,6 +993,18 @@
           "num": "05",
           "title": "Certificazione blockchain e notarizzazione digitale",
           "desc": "Marcatura temporale del codebase alla data di firma, prova di autenticità, deposito fiduciario riservato. KRYV Protocol in distribuzione."
+        },
+        {
+          "num": "06",
+          "title": "Due diligence HR & Lavoro",
+          "desc": "Revisione dei contratti chiave, BSPCE, clausole di cambio di controllo, passivi latenti del lavoro. Il capitale umano auditato allo stesso livello del codice. In distribuzione.",
+          "badge": "in_deployment"
+        },
+        {
+          "num": "07",
+          "title": "Warranty & Indemnity Insurance",
+          "desc": "Presentazione ad assicuratori W&I partner per transazioni superiori a 500.000 €. Facilita il rilascio totale del prezzo alla chiusura e riduce il rischio residuo per l'acquirente. In distribuzione.",
+          "badge": "in_deployment"
         }
       ]
     },
@@ -1080,6 +1092,51 @@
       "partnerNote": "Volete convogliare deal flow uscente nell'ecosistema AEGRYN?",
       "partnerCta": "Scoprire le partnership Deal Flow",
       "partnerHref": "/alliances?tab=dealflow"
+    },
+    "roadmap": {
+      "label": "Servizi in sviluppo",
+      "title": "Cosa arriva.",
+      "desc": "AEGRYN amplia progressivamente la sua offerta transazionale. Questi servizi sono in fase di distribuzione con i nostri partner Alliance.",
+      "ctaLabel": "Contattarci",
+      "ctaHref": "/contact",
+      "items": [
+        {
+          "phase": "Disponibile su richiesta",
+          "title": "Vendor Readiness",
+          "desc": "Preparazione completa del dossier venditore prima della presentazione al Grade — audit contrattuale, revisione HR, strutturazione della data room. Riduce il tempo di certificazione del 30-50%.",
+          "status": "available_on_request"
+        },
+        {
+          "phase": "In distribuzione",
+          "title": "Due diligence HR & Lavoro",
+          "desc": "Revisione dei contratti chiave, BSPCE, clausole di cambio di controllo, passivi latenti del lavoro. Prodotto durante il periodo standard di due diligence.",
+          "status": "in_deployment"
+        },
+        {
+          "phase": "In distribuzione",
+          "title": "Warranty & Indemnity Insurance",
+          "desc": "Presentazione ad assicuratori W&I partner per transazioni superiori a 500.000 €. Facilita il rilascio totale del prezzo alla chiusura.",
+          "status": "in_deployment"
+        },
+        {
+          "phase": "Roadmap 12 mesi",
+          "title": "Earn-out Design & KPI Framework",
+          "desc": "Progettazione dei meccanismi di earnout, definizione delle metriche e delle protezioni contrattuali. Previene le controversie post-acquisizione.",
+          "status": "roadmap"
+        },
+        {
+          "phase": "Roadmap 12 mesi",
+          "title": "Integrazione post-acquisizione",
+          "desc": "Piano di integrazione a 100 giorni: tecnico, HR, clienti e contratti fornitori. Massimizza il valore preservato dopo la chiusura.",
+          "status": "roadmap"
+        },
+        {
+          "phase": "Roadmap 24 mesi",
+          "title": "Due diligence regolamentare settoriale",
+          "desc": "Audit di conformità settoriale per FinTech (DORA, Banca d'Italia), HealthTech (GDPR salute, HDS), IA nativa (EU AI Act). Indispensabile per i verticali regolamentati.",
+          "status": "roadmap_long"
+        }
+      ]
     }
   },
   "gradingSystem": {

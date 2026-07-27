@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ArrowUpRight, Check, Shield, Info } from 'lucide-react'
 import { serviceJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
 import { generateAegrynMetadata } from '@/lib/seo'
+import AcquisitionRoadmap from '@/components/sections/AcquisitionRoadmap'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -19,7 +20,8 @@ export default async function AcquisitionSupportPage({ params }: Props) {
   const forWhom    = t.raw('forWhom.items')   as { title: string; desc: string }[]
   const steps      = t.raw('offer.steps')     as { num: string; title: string; desc: string }[]
   const diffItems  = t.raw('diff.items')      as { title: string; desc: string }[]
-  const expertItems = t.raw('experts.items')  as { num: string; title: string; desc: string }[]
+  const expertItems    = t.raw('experts.items')   as { num: string; title: string; desc: string; badge?: string }[]
+  const roadmapItems    = t.raw('roadmap.items')   as { phase: string; title: string; desc: string; status: string }[]
 
   const serviceLd = serviceJsonLd({
     name:        'AEGRYN — Conseil Transaction & M&A',
@@ -90,9 +92,16 @@ export default async function AcquisitionSupportPage({ params }: Props) {
             {t('experts.desc')}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
-            {expertItems.map(({ num, title, desc }) => (
+            {expertItems.map(({ num, title, desc, badge }) => (
               <div key={num} className="bg-ag-white p-8 flex flex-col gap-3">
-                <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex">{num}</span>
+                <div className="flex items-center justify-between gap-2">
+                  <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex">{num}</span>
+                  {badge === 'in_deployment' && (
+                    <span className="font-mono text-[9px] tracking-[0.14em] uppercase px-2 py-0.5 bg-amber-50 text-amber-600 border border-amber-200">
+                      {roadmapItems.find((i) => i.status === 'in_deployment')?.phase ?? 'In deployment'}
+                    </span>
+                  )}
+                </div>
                 <h3 className="font-sans font-semibold text-ag-black text-[16px] leading-snug">{title}</h3>
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
               </div>
@@ -164,6 +173,16 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* ── Roadmap services ── */}
+      <AcquisitionRoadmap
+        label={t('roadmap.label')}
+        title={t('roadmap.title')}
+        desc={t('roadmap.desc')}
+        ctaLabel={t('roadmap.ctaLabel')}
+        ctaHref={t('roadmap.ctaHref')}
+        items={roadmapItems as Parameters<typeof AcquisitionRoadmap>[0]['items']}
+      />
 
       {/* ── Fees ── */}
       <section className="py-20 px-6 border-t border-ag-border">

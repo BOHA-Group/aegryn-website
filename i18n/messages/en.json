@@ -1114,6 +1114,18 @@
           "num": "05",
           "title": "Blockchain Certification & Digital Notarization",
           "desc": "Codebase timestamping at signing date, proof of authenticity, confidential escrow. KRYV Protocol in deployment."
+        },
+        {
+          "num": "06",
+          "title": "HR & Employment Due Diligence",
+          "desc": "Review of key contracts, stock options (BSPCE), change-of-control clauses, latent employment liabilities. Human capital audited on the same basis as code. In deployment.",
+          "badge": "in_deployment"
+        },
+        {
+          "num": "07",
+          "title": "Warranty & Indemnity Insurance",
+          "desc": "Introduction to W&I partner insurers for transactions above €500,000. Facilitates full price release at closing and reduces residual risk for the acquirer. In deployment.",
+          "badge": "in_deployment"
         }
       ]
     },
@@ -1201,6 +1213,51 @@
       "partnerNote": "Looking to source outgoing deal flow into the AEGRYN ecosystem?",
       "partnerCta": "Discover Deal Flow partnerships",
       "partnerHref": "/alliances?tab=dealflow"
+    },
+    "roadmap": {
+      "label": "Services in development",
+      "title": "What's coming.",
+      "desc": "AEGRYN is progressively expanding its transaction offering. These services are being deployed with our Alliance partners.",
+      "ctaLabel": "Contact us",
+      "ctaHref": "/contact",
+      "items": [
+        {
+          "phase": "Available on request",
+          "title": "Vendor Readiness",
+          "desc": "Complete preparation of the seller's file before Grade submission — contract audit, HR review, data room structuring. Reduces certification timeline by 30 to 50%.",
+          "status": "available_on_request"
+        },
+        {
+          "phase": "In deployment",
+          "title": "HR & Employment Due Diligence",
+          "desc": "Review of key contracts, stock options, change-of-control clauses, latent employment liabilities. Produced during the standard due diligence period.",
+          "status": "in_deployment"
+        },
+        {
+          "phase": "In deployment",
+          "title": "Warranty & Indemnity Insurance",
+          "desc": "Introduction to W&I partner insurers for transactions above €500,000. Facilitates full price release at closing.",
+          "status": "in_deployment"
+        },
+        {
+          "phase": "12-month roadmap",
+          "title": "Earn-out Design & KPI Framework",
+          "desc": "Design of earnout mechanisms, definition of metrics and contractual protections. Prevents post-acquisition disputes.",
+          "status": "roadmap"
+        },
+        {
+          "phase": "12-month roadmap",
+          "title": "Post-acquisition integration",
+          "desc": "100-day integration plan: technical, HR, client and supplier contracts. Maximises value preserved after closing.",
+          "status": "roadmap"
+        },
+        {
+          "phase": "24-month roadmap",
+          "title": "Sectoral regulatory due diligence",
+          "desc": "Sector-specific compliance audit for FinTech (DORA, FCA), HealthTech (HIPAA, GDPR health), native AI (EU AI Act). Essential for regulated verticals.",
+          "status": "roadmap_long"
+        }
+      ]
     }
   },
   "roadmapPage": {

@@ -993,6 +993,18 @@
           "num": "05",
           "title": "Blockchain-Zertifizierung & digitale Beurkundung",
           "desc": "Zeitstempel des Codebase-Zustands zum Signing-Datum, Echtheitsnachweis, vertraulicher Treuhand. KRYV Protocol in Einsatz."
+        },
+        {
+          "num": "06",
+          "title": "HR & arbeitsrechtliche Due Diligence",
+          "desc": "Prüfung der Schlüsselverträge, BSPCE, Kontrollwechselklauseln, latente Arbeitsverpflichtungen. Humankapital wird ebenso geprüft wie der Code. Im Einsatz.",
+          "badge": "in_deployment"
+        },
+        {
+          "num": "07",
+          "title": "Warranty & Indemnity Insurance",
+          "desc": "Vermittlung zu W&I-Partnerversicherern für Transaktionen über 500.000 €. Ermöglicht die vollständige Kaufpreisfreigabe beim Closing und reduziert das Restrisiko für den Erwerber. Im Einsatz.",
+          "badge": "in_deployment"
         }
       ]
     },
@@ -1080,6 +1092,51 @@
       "partnerNote": "Möchten Sie ausgehenden Deal Flow in das AEGRYN-Ökosystem einbringen?",
       "partnerCta": "Deal-Flow-Partnerschaften entdecken",
       "partnerHref": "/alliances?tab=dealflow"
+    },
+    "roadmap": {
+      "label": "Services in Entwicklung",
+      "title": "Was kommt.",
+      "desc": "AEGRYN erweitert schrittweise sein Transaktionsangebot. Diese Services werden mit unseren Alliance-Partnern eingesetzt.",
+      "ctaLabel": "Kontakt aufnehmen",
+      "ctaHref": "/contact",
+      "items": [
+        {
+          "phase": "Auf Anfrage verfügbar",
+          "title": "Vendor Readiness",
+          "desc": "Vollständige Vorbereitung der Verkäuferakte vor Grade-Einreichung — Vertragsaudit, HR-Prüfung, Data-Room-Strukturierung. Reduziert den Zertifizierungszeitraum um 30 bis 50%.",
+          "status": "available_on_request"
+        },
+        {
+          "phase": "Im Einsatz",
+          "title": "HR & arbeitsrechtliche Due Diligence",
+          "desc": "Prüfung der Schlüsselverträge, BSPCE, Kontrollwechselklauseln, latente Arbeitsverpflichtungen. Wird während der Standard-Due-Diligence-Periode produziert.",
+          "status": "in_deployment"
+        },
+        {
+          "phase": "Im Einsatz",
+          "title": "Warranty & Indemnity Insurance",
+          "desc": "Vermittlung zu W&I-Partnerversicherern für Transaktionen über 500.000 €. Ermöglicht die vollständige Kaufpreisfreigabe beim Closing.",
+          "status": "in_deployment"
+        },
+        {
+          "phase": "Roadmap 12 Monate",
+          "title": "Earn-out Design & KPI Framework",
+          "desc": "Gestaltung der Earnout-Mechanismen, Definition der Metriken und vertraglichen Schutzmaßnahmen. Verhindert Post-Akquisitions-Streitigkeiten.",
+          "status": "roadmap"
+        },
+        {
+          "phase": "Roadmap 12 Monate",
+          "title": "Post-Akquisitions-Integration",
+          "desc": "100-Tage-Integrationsplan: Technik, HR, Kunden und Lieferantenverträge. Maximiert den nach dem Closing erhaltenen Wert.",
+          "status": "roadmap"
+        },
+        {
+          "phase": "Roadmap 24 Monate",
+          "title": "Sektorale regulatorische Due Diligence",
+          "desc": "Sektorspezifische Compliance-Prüfung für FinTech (DORA, BaFin), HealthTech (DSGVO Gesundheit, HDS), native KI (EU AI Act). Unentbehrlich für regulierte Vertikalen.",
+          "status": "roadmap_long"
+        }
+      ]
     }
   },
   "gradingSystem": {
