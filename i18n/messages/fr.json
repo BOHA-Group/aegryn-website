@@ -4602,12 +4602,65 @@
       "title": "Les experts qui font les transactions.",
       "desc": "AEGRYN constitue un réseau de référence d'experts transactionnels tech — juristes M&A, CDDs techniques, fiscalistes, assureurs W&I. Chaque fiche est validée par l'équipe AEGRYN."
     },
+    "showcase": {
+      "label": "Domaines d'expertise",
+      "title": "Tous types d'experts\ntransactionnels",
+      "desc": "Du conseil ponctuel à l'accompagnement approfondi — la communauté couvre l'ensemble des spécialités M&A tech."
+    },
+    "categories": {
+      "tech": "Advisory Tech",
+      "techDesc": "Cybersécurité, audit IA, stratégie digitale",
+      "transaction": "Advisory Transaction",
+      "transactionDesc": "M&A, valorisation, structuration financière",
+      "network": "Réseau partenaires",
+      "networkDesc": "Partenaires certifiés AEGRYN"
+    },
+    "domains": {
+      "cybersecurity": "Cybersécurité",
+      "cybersecurityDesc": "RGPD, ISO 27001, pentest, audit sécurité",
+      "ai": "Intelligence artificielle",
+      "aiDesc": "Audit IA, gouvernance, LLM, stratégie data",
+      "ma": "M&A",
+      "maDesc": "Transactions, buy-side, sell-side, due diligence",
+      "m_and_a": "M&A",
+      "valuation": "Valorisation",
+      "valuationDesc": "Méthodes DCF, comparables, PPA, fairness opinion",
+      "tax": "Fiscalité",
+      "taxDesc": "Fiscalité internationale, restructuration, holdings",
+      "law": "Droit",
+      "lawDesc": "Droit des sociétés, SPA, SHA, IP, licences",
+      "accounting": "Expertise comptable",
+      "hr": "RH & Droit social",
+      "insurance": "Assurance W&I",
+      "real_estate": "Immobilier",
+      "finance": "Finance",
+      "financeDesc": "Financement, LBO, structuration, dette senior",
+      "other": "Autre"
+    },
     "filters": {
       "profession": "Spécialité",
       "all": "Toutes",
+      "allCategories": "Toutes catégories",
+      "allDomains": "Tous domaines",
+      "allCountries": "Tous pays",
+      "allLanguages": "Toutes langues",
+      "count": "experts",
       "country": "Pays",
       "language": "Langue",
       "specialty": "Domaine"
+    },
+    "langs": {
+      "fr": "Français",
+      "en": "Anglais",
+      "de": "Allemand",
+      "es": "Espagnol",
+      "it": "Italien",
+      "nl": "Néerlandais"
+    },
+    "placeholder": {
+      "badge": "Arrive bientôt",
+      "title": "Les premiers experts arrivent bientôt.",
+      "desc": "Le réseau AEGRYN ouvre ses portes. Voici un aperçu des profils qui vous accompagneront dans vos transactions."
     },
     "card": {
       "contact": "Contacter",
@@ -4627,6 +4680,7 @@
       "fieldNom": "Nom",
       "fieldEmail": "Email professionnel",
       "fieldProfession": "Spécialité principale",
+      "fieldCategory": "Catégorie",
       "fieldOrg": "Cabinet / Organisation",
       "fieldCity": "Ville",
       "fieldCountry": "Pays",

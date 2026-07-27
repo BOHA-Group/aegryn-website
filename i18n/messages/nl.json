@@ -4626,12 +4626,65 @@
       "title": "De experts die deals sluiten.",
       "desc": "AEGRYN bouwt een referentienetwerk van transactionele tech-experts — M&A-advocaten, technische due diligence-specialisten, belastingadviseurs, W&I-verzekeraars. Elk profiel wordt gevalideerd door het AEGRYN-team."
     },
+    "showcase": {
+      "label": "Expertisegebieden",
+      "title": "Alle soorten transactie-experts",
+      "desc": "Van eenmalig advies tot grondige dealondersteuning — de community dekt alle M&A tech-specialisaties."
+    },
+    "categories": {
+      "tech": "Advisory Tech",
+      "techDesc": "Cyberbeveiliging, AI-audit, digitale strategie",
+      "transaction": "Advisory Transaction",
+      "transactionDesc": "M&A, waardering, financieel structureren",
+      "network": "Partnernetwerk",
+      "networkDesc": "AEGRYN-gecertificeerde partners"
+    },
+    "domains": {
+      "cybersecurity": "Cyberbeveiliging",
+      "cybersecurityDesc": "AVG, ISO 27001, pentest, beveiligingsaudit",
+      "ai": "Kunstmatige intelligentie",
+      "aiDesc": "AI-audit, governance, LLM, datastrategie",
+      "ma": "M&A",
+      "maDesc": "Transacties, buy-side, sell-side, due diligence",
+      "m_and_a": "M&A",
+      "valuation": "Waardering",
+      "valuationDesc": "DCF, vergelijkbaren, PPA, fairness opinion",
+      "tax": "Fiscaal",
+      "taxDesc": "Internationaal belastingrecht, herstructurering, holdings",
+      "law": "Recht",
+      "lawDesc": "Vennootschapsrecht, SPA, SHA, IE, licenties",
+      "accounting": "Boekhouding",
+      "hr": "HR & Arbeidsrecht",
+      "insurance": "W&I-verzekering",
+      "real_estate": "Vastgoed",
+      "finance": "Financiering",
+      "financeDesc": "Financiering, LBO, structurering, senior schuld",
+      "other": "Overig"
+    },
     "filters": {
       "profession": "Specialiteit",
       "all": "Alle",
+      "allCategories": "Alle categorieën",
+      "allDomains": "Alle domeinen",
+      "allCountries": "Alle landen",
+      "allLanguages": "Alle talen",
+      "count": "experts",
       "country": "Land",
       "language": "Taal",
       "specialty": "Domein"
+    },
+    "langs": {
+      "fr": "Frans",
+      "en": "Engels",
+      "de": "Duits",
+      "es": "Spaans",
+      "it": "Italiaans",
+      "nl": "Nederlands"
+    },
+    "placeholder": {
+      "badge": "Binnenkort beschikbaar",
+      "title": "Eerste experts komen binnenkort.",
+      "desc": "Het AEGRYN-netwerk opent zijn deuren. Hier een voorproefje van de profielen die u bij uw transacties zullen begeleiden."
     },
     "card": {
       "contact": "Contacteren",
@@ -4651,6 +4704,7 @@
       "fieldNom": "Achternaam",
       "fieldEmail": "Professioneel e-mailadres",
       "fieldProfession": "Hoofdspecialiteit",
+      "fieldCategory": "Categorie",
       "fieldOrg": "Kantoor / Organisatie",
       "fieldCity": "Stad",
       "fieldCountry": "Land",

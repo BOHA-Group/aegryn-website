@@ -11,6 +11,8 @@ export async function GET(req: NextRequest) {
     const specialty  = searchParams.get('specialty')  ?? ''
     const language   = searchParams.get('language')   ?? ''
     const country    = searchParams.get('country')    ?? ''
+    const category   = searchParams.get('category')   ?? ''
+    const domain     = searchParams.get('domain')     ?? ''
 
     const supa = createServiceClient()
     let query = supa
@@ -19,7 +21,7 @@ export async function GET(req: NextRequest) {
         id, first_name, last_name, profession, specialties,
         city, country_code, bio, organization, email_public,
         phone, website, min_rate_eur, languages, avatar_url,
-        verified_at
+        verified_at, category, domain
       `)
       .eq('is_visible', true)
       .order('verified_at', { ascending: false })
@@ -29,6 +31,8 @@ export async function GET(req: NextRequest) {
     if (country)    query = query.eq('country_code', country)
     if (language)   query = query.contains('languages', [language])
     if (specialty)  query = query.contains('specialties', [specialty])
+    if (category)   query = query.eq('category', category)
+    if (domain)     query = query.contains('domain', [domain])
 
     const { data, error } = await query
 

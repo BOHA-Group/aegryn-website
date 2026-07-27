@@ -4603,12 +4603,65 @@
       "title": "The experts who close deals.",
       "desc": "AEGRYN builds a reference network of transactional tech experts — M&A lawyers, technical DDers, tax advisors, W&I insurers. Every profile is vetted by the AEGRYN team."
     },
+    "showcase": {
+      "label": "Areas of expertise",
+      "title": "Every type of transactional expert",
+      "desc": "From ad-hoc advice to deep deal support — the community covers every M&A tech specialty."
+    },
+    "categories": {
+      "tech": "Advisory Tech",
+      "techDesc": "Cybersecurity, AI audit, digital strategy",
+      "transaction": "Advisory Transaction",
+      "transactionDesc": "M&A, valuation, financial structuring",
+      "network": "Partner Network",
+      "networkDesc": "AEGRYN-certified partners"
+    },
+    "domains": {
+      "cybersecurity": "Cybersecurity",
+      "cybersecurityDesc": "GDPR, ISO 27001, pentest, security audit",
+      "ai": "Artificial Intelligence",
+      "aiDesc": "AI audit, governance, LLM, data strategy",
+      "ma": "M&A",
+      "maDesc": "Transactions, buy-side, sell-side, due diligence",
+      "m_and_a": "M&A",
+      "valuation": "Valuation",
+      "valuationDesc": "DCF, comparables, PPA, fairness opinion",
+      "tax": "Tax",
+      "taxDesc": "International tax, restructuring, holding structures",
+      "law": "Law",
+      "lawDesc": "Corporate law, SPA, SHA, IP, licences",
+      "accounting": "Accounting",
+      "hr": "HR & Employment Law",
+      "insurance": "W&I Insurance",
+      "real_estate": "Real Estate",
+      "finance": "Finance",
+      "financeDesc": "Financing, LBO, structuring, senior debt",
+      "other": "Other"
+    },
     "filters": {
       "profession": "Specialty",
       "all": "All",
+      "allCategories": "All categories",
+      "allDomains": "All domains",
+      "allCountries": "All countries",
+      "allLanguages": "All languages",
+      "count": "experts",
       "country": "Country",
       "language": "Language",
       "specialty": "Domain"
+    },
+    "langs": {
+      "fr": "French",
+      "en": "English",
+      "de": "German",
+      "es": "Spanish",
+      "it": "Italian",
+      "nl": "Dutch"
+    },
+    "placeholder": {
+      "badge": "Coming soon",
+      "title": "First experts arriving soon.",
+      "desc": "The AEGRYN network is opening its doors. Here is a preview of the profiles that will support your transactions."
     },
     "card": {
       "contact": "Contact",
@@ -4628,6 +4681,7 @@
       "fieldNom": "Last name",
       "fieldEmail": "Professional email",
       "fieldProfession": "Main specialty",
+      "fieldCategory": "Category",
       "fieldOrg": "Firm / Organisation",
       "fieldCity": "City",
       "fieldCountry": "Country",

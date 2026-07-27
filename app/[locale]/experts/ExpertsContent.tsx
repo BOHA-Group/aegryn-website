@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
-import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star } from 'lucide-react'
+import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter } from 'lucide-react'
 
 type ExpertProfile = {
   id:           string
@@ -22,21 +22,48 @@ type ExpertProfile = {
   languages:    string[]
   avatar_url:   string | null
   verified_at:  string | null
+  category:     string | null
+  domain:       string[]
 }
 
-const PROFESSIONS = [
-  'M&A Advisor', 'Lawyer', 'Accountant', 'CTO',
-  'Cybersecurity', 'HR & Social', 'Insurance', 'Tax', 'Investor', 'Other',
+const CATEGORIES = [
+  { key: 'advisory_tech',         labelKey: 'categories.tech',         descKey: 'categories.techDesc'         },
+  { key: 'advisory_transaction',  labelKey: 'categories.transaction',  descKey: 'categories.transactionDesc'  },
+  { key: 'network',               labelKey: 'categories.network',      descKey: 'categories.networkDesc'      },
+] as const
+
+const DOMAINS = [
+  'cybersecurity', 'ai', 'm_and_a', 'valuation', 'tax',
+  'law', 'accounting', 'hr', 'insurance', 'real_estate', 'finance', 'other',
+] as const
+
+const COUNTRIES = ['CH', 'FR', 'DE', 'BE', 'LU', 'GB', 'ES', 'IT', 'NL', 'US'] as const
+const LANGUAGES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
+
+const PLACEHOLDERS: ExpertProfile[] = [
+  { id: 'ph1', first_name: 'Sophie', last_name: 'M.', profession: 'M&A Advisor', specialties: ['Due diligence', 'Valorisation'], city: 'Genève', country_code: 'CH', bio: 'Spécialiste des transactions M&A tech en Suisse romande. 12 ans d\'expérience en structuration et accompagnement de cédants.', organization: 'Aegryn Advisory', email_public: null, phone: null, website: null, min_rate_eur: 350, languages: ['fr', 'en'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['m_and_a', 'valuation'] },
+  { id: 'ph2', first_name: 'Thomas', last_name: 'B.', profession: 'Cybersecurity', specialties: ['Audit sécurité', 'ISO 27001'], city: 'Zurich', country_code: 'CH', bio: 'Expert en cybersécurité et audit de conformité pour entreprises tech. Certifié CISSP et ISO 27001 Lead Auditor.', organization: 'SecureAxis GmbH', email_public: null, phone: null, website: null, min_rate_eur: 280, languages: ['de', 'en'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_tech', domain: ['cybersecurity', 'ai'] },
+  { id: 'ph3', first_name: 'Pierre', last_name: 'D.', profession: 'Tax', specialties: ['Fiscalité internationale', 'Restructuration'], city: 'Paris', country_code: 'FR', bio: 'Conseil fiscal international spécialisé dans les opérations transfrontalières et la restructuration de holdings tech.', organization: 'Cabinet Dumont & Partners', email_public: null, phone: null, website: null, min_rate_eur: 320, languages: ['fr', 'en', 'es'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['tax', 'law'] },
+  { id: 'ph4', first_name: 'Lena', last_name: 'K.', profession: 'CTO', specialties: ['Architecture cloud', 'IA / LLM'], city: 'Berlin', country_code: 'DE', bio: 'CTO fractional spécialisée dans la modernisation de stack technique et l\'intégration IA pour startups B2B.', organization: 'TechLead GmbH', email_public: null, phone: null, website: null, min_rate_eur: 300, languages: ['de', 'en', 'fr'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_tech', domain: ['ai', 'cybersecurity'] },
+  { id: 'ph5', first_name: 'Marco', last_name: 'R.', profession: 'Lawyer', specialties: ['Droit des sociétés', 'M&A', 'IP'], city: 'Milan', country_code: 'IT', bio: 'Avocat d\'affaires spécialisé en droit des sociétés et transactions M&A. Intervient sur les opérations cross-border Europe.', organization: 'Studio Ricci', email_public: null, phone: null, website: null, min_rate_eur: 290, languages: ['it', 'en', 'fr'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['law', 'm_and_a'] },
+  { id: 'ph6', first_name: 'Elena', last_name: 'V.', profession: 'Accountant', specialties: ['Audit', 'Finance d\'entreprise'], city: 'Bruxelles', country_code: 'BE', bio: 'Expert-comptable et auditeur certifié. Accompagnement des PME tech en croissance sur leur structuration financière.', organization: 'Verdu Audit', email_public: null, phone: null, website: null, min_rate_eur: 240, languages: ['fr', 'nl', 'en'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['accounting', 'finance'] },
 ]
 
 const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
-const selectCls = inputCls + ' appearance-none'
+const selectCls = 'w-full border border-ag-border bg-ag-white px-4 py-2.5 pr-10 font-sans text-[12px] text-ag-black appearance-none focus:outline-none focus:border-ag-black transition-colors cursor-pointer'
 const labelCls  = 'block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-2'
 
-function ExpertCard({ profile, t }: { profile: ExpertProfile; t: ReturnType<typeof useTranslations> }) {
+function ExpertCard({ profile, t, blurred = false }: { profile: ExpertProfile; t: ReturnType<typeof useTranslations>; blurred?: boolean }) {
   const initials = `${profile.first_name[0] ?? ''}${profile.last_name[0] ?? ''}`.toUpperCase()
   return (
-    <div className="bg-ag-white border border-ag-border p-6 flex flex-col gap-4">
+    <div className={`bg-ag-white border border-ag-border p-6 flex flex-col gap-4 relative ${blurred ? 'select-none' : ''}`}>
+      {blurred && (
+        <div className="absolute inset-0 backdrop-blur-[6px] bg-ag-white/60 z-10 flex flex-col items-center justify-center gap-3">
+          <span className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.22em] uppercase px-3 py-1.5 border border-ag-apex/40 bg-ag-apex/10 text-ag-apex-ink">
+            <Star size={9} className="text-ag-apex" /> {t('placeholder.badge')}
+          </span>
+        </div>
+      )}
       <div className="flex items-start gap-4">
         {profile.avatar_url ? (
           <Image
@@ -56,7 +83,7 @@ function ExpertCard({ profile, t }: { profile: ExpertProfile; t: ReturnType<type
             <h3 className="font-sans font-semibold text-ag-black text-[15px] leading-tight">
               {profile.first_name} {profile.last_name}
             </h3>
-            {profile.verified_at && (
+            {profile.verified_at && !blurred && (
               <span className="inline-flex items-center gap-1 font-mono text-[9px] tracking-[0.14em] uppercase px-2 py-0.5 bg-ag-apex/10 text-ag-apex border border-ag-apex/30">
                 <CheckCircle2 size={9} /> {t('card.verifiedBadge')}
               </span>
@@ -97,26 +124,28 @@ function ExpertCard({ profile, t }: { profile: ExpertProfile; t: ReturnType<type
         )}
       </div>
 
-      <div className="flex gap-3">
-        {profile.email_public && (
-          <a
-            href={`mailto:${profile.email_public}`}
-            className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-navy text-ag-navy hover:bg-ag-navy hover:text-white transition-colors"
-          >
-            <Mail size={10} /> {t('card.contact')}
-          </a>
-        )}
-        {profile.website && (
-          <a
-            href={profile.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-border text-ag-gray hover:border-ag-black hover:text-ag-black transition-colors"
-          >
-            <Globe size={10} /> Site
-          </a>
-        )}
-      </div>
+      {!blurred && (
+        <div className="flex gap-3">
+          {profile.email_public && (
+            <a
+              href={`mailto:${profile.email_public}`}
+              className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-navy text-ag-navy hover:bg-ag-navy hover:text-white transition-colors"
+            >
+              <Mail size={10} /> {t('card.contact')}
+            </a>
+          )}
+          {profile.website && (
+            <a
+              href={profile.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-border text-ag-gray hover:border-ag-black hover:text-ag-black transition-colors"
+            >
+              <Globe size={10} /> Site
+            </a>
+          )}
+        </div>
+      )}
     </div>
   )
 }
@@ -140,6 +169,7 @@ function WaitlistForm({ t }: { t: ReturnType<typeof useTranslations> }) {
           nom:          raw.nom,
           email:        raw.email,
           profession:   raw.profession,
+          category:     raw.category   || undefined,
           organization: raw.organization || undefined,
           city:         raw.city         || undefined,
           country:      raw.country      || undefined,
@@ -186,13 +216,16 @@ function WaitlistForm({ t }: { t: ReturnType<typeof useTranslations> }) {
           <input name="email" type="email" required className={inputCls} />
         </div>
         <div>
-          <label className={labelCls}>{t('waitlist.fieldProfession')} *</label>
-          <select name="profession" required className={selectCls}>
-            <option value="">—</option>
-            {PROFESSIONS.map(p => (
-              <option key={p} value={p}>{p}</option>
-            ))}
-          </select>
+          <label className={labelCls}>{t('waitlist.fieldCategory')} *</label>
+          <div className="relative">
+            <select name="category" required className={selectCls}>
+              <option value="">—</option>
+              {CATEGORIES.map(c => (
+                <option key={c.key} value={c.key}>{t(c.labelKey)}</option>
+              ))}
+            </select>
+            <ChevronDown size={13} className="absolute right-3 top-1/2 -translate-y-1/2 text-ag-gray pointer-events-none" />
+          </div>
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -225,27 +258,64 @@ function WaitlistForm({ t }: { t: ReturnType<typeof useTranslations> }) {
   )
 }
 
+function SelectFilter({
+  value, onChange, placeholder, options,
+}: {
+  value: string
+  onChange: (v: string) => void
+  placeholder: string
+  options: { value: string; label: string }[]
+}) {
+  return (
+    <div className="relative flex-1 min-w-[160px]">
+      <select
+        value={value}
+        onChange={e => onChange(e.target.value)}
+        className={selectCls}
+      >
+        <option value="">{placeholder}</option>
+        {options.map(o => (
+          <option key={o.value} value={o.value}>{o.label}</option>
+        ))}
+      </select>
+      <ChevronDown size={12} className="absolute right-3 top-1/2 -translate-y-1/2 text-ag-gray pointer-events-none" />
+    </div>
+  )
+}
+
 export default function ExpertsContent() {
   const t = useTranslations('experts')
-  const [profiles,   setProfiles]   = useState<ExpertProfile[]>([])
+  const [profiles,    setProfiles]    = useState<ExpertProfile[]>([])
   const [loadingGrid, setLoadingGrid] = useState(true)
-  const [profession, setProfession] = useState('')
+  const [category,    setCategory]    = useState('')
+  const [domain,      setDomain]      = useState('')
+  const [country,     setCountry]     = useState('')
+  const [language,    setLanguage]    = useState('')
 
   useEffect(() => {
     setLoadingGrid(true)
-    const qs = profession ? `?profession=${encodeURIComponent(profession)}` : ''
-    fetch(`/api/experts/profiles${qs}`)
+    const params = new URLSearchParams()
+    if (category) params.set('category', category)
+    if (domain)   params.set('domain',   domain)
+    if (country)  params.set('country',  country)
+    if (language) params.set('language', language)
+    fetch(`/api/experts/profiles${params.toString() ? `?${params}` : ''}`)
       .then(r => r.json())
       .then(d => setProfiles(d.profiles ?? []))
       .catch(() => setProfiles([]))
       .finally(() => setLoadingGrid(false))
-  }, [profession])
+  }, [category, domain, country, language])
+
+  const isFiltered   = !!(category || domain || country || language)
+  const showGrid     = !loadingGrid
+  const isEmpty      = showGrid && profiles.length === 0 && isFiltered
+  const showPlaceholders = showGrid && profiles.length === 0 && !isFiltered
 
   return (
     <>
-      {/* Hero */}
+      {/* ── Hero ─────────────────────────────────────────────────────── */}
       <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-28 md:py-36">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
             {t('hero.label')}
           </p>
@@ -261,48 +331,122 @@ export default function ExpertsContent() {
         </div>
       </section>
 
-      {/* Filtres + grille */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-        {/* Filtre professions */}
-        <div className="flex flex-wrap gap-2 mb-10">
-          <button
-            onClick={() => setProfession('')}
-            className={`font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2 border transition-colors ${
-              profession === ''
-                ? 'border-ag-black bg-ag-black text-white'
-                : 'border-ag-border text-ag-gray hover:border-ag-black hover:text-ag-black'
-            }`}
+      {/* ── Showcase catégories — éventail de cartes ─────────────────── */}
+      <section className="border-b border-ag-border bg-ag-off-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-4 text-center">
+          <p className="font-mono text-[9px] tracking-[0.30em] uppercase text-ag-gray-light mb-4">
+            {t('showcase.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-3"
+            style={{ fontSize: 'clamp(24px,3.5vw,44px)' }}
           >
-            {t('filters.all')}
-          </button>
-          {PROFESSIONS.map(p => (
-            <button
-              key={p}
-              onClick={() => setProfession(p)}
-              className={`font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2 border transition-colors ${
-                profession === p
-                  ? 'border-ag-black bg-ag-black text-white'
-                  : 'border-ag-border text-ag-gray hover:border-ag-black hover:text-ag-black'
-              }`}
-            >
-              {p}
-            </button>
-          ))}
+            {t('showcase.title')}
+          </h2>
+          <p className="font-sans text-[13px] text-ag-gray max-w-lg mx-auto mb-10">
+            {t('showcase.desc')}
+          </p>
         </div>
 
-        {/* Grille */}
-        {loadingGrid ? (
+        {/* Cards éventail */}
+        <div className="relative flex items-end justify-center gap-2 pb-0 px-4 min-h-[260px]">
+          {[
+            { angle: -18, labelKey: 'domains.cybersecurity',  descKey: 'domains.cybersecurityDesc',  z: 10, tx: -20 },
+            { angle: -10, labelKey: 'domains.ma',             descKey: 'domains.maDesc',             z: 20, tx: -10 },
+            { angle: -4,  labelKey: 'domains.valuation',      descKey: 'domains.valuationDesc',      z: 30, tx:  -4 },
+            { angle:  0,  labelKey: 'domains.ai',             descKey: 'domains.aiDesc',             z: 40, tx:   0 },
+            { angle:  4,  labelKey: 'domains.tax',            descKey: 'domains.taxDesc',            z: 30, tx:   4 },
+            { angle: 10,  labelKey: 'domains.law',            descKey: 'domains.lawDesc',            z: 20, tx:  10 },
+            { angle: 18,  labelKey: 'domains.finance',        descKey: 'domains.financeDesc',        z: 10, tx:  20 },
+          ].map((card, i) => (
+            <div
+              key={i}
+              className="absolute bottom-0 w-[120px] md:w-[150px] bg-ag-white border border-ag-border/60 shadow-sm p-4 flex flex-col gap-2 origin-bottom"
+              style={{
+                transform: `translateX(${card.tx * 10}px) rotate(${card.angle}deg)`,
+                zIndex: card.z,
+                bottom: '0px',
+              }}
+            >
+              <p className="font-sans font-bold text-ag-black text-[13px] leading-snug">{t(card.labelKey)}</p>
+              <p className="font-sans text-[10px] text-ag-gray leading-snug line-clamp-3">{t(card.descKey)}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Filtres + compteur ───────────────────────────────────────── */}
+      <section className="border-b border-ag-border bg-ag-white sticky top-16 z-30">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-4">
+          <div className="flex flex-wrap items-center gap-3">
+            <Filter size={13} className="text-ag-gray-light shrink-0" />
+            <SelectFilter
+              value={category}
+              onChange={setCategory}
+              placeholder={t('filters.allCategories')}
+              options={CATEGORIES.map(c => ({ value: c.key, label: t(c.labelKey) }))}
+            />
+            <SelectFilter
+              value={domain}
+              onChange={setDomain}
+              placeholder={t('filters.allDomains')}
+              options={DOMAINS.map(d => ({ value: d, label: t(`domains.${d}`) }))}
+            />
+            <SelectFilter
+              value={country}
+              onChange={setCountry}
+              placeholder={t('filters.allCountries')}
+              options={COUNTRIES.map(c => ({ value: c, label: c }))}
+            />
+            <SelectFilter
+              value={language}
+              onChange={setLanguage}
+              placeholder={t('filters.allLanguages')}
+              options={LANGUAGES.map(l => ({ value: l, label: t(`langs.${l}`) }))}
+            />
+            <span className="font-mono text-[10px] tracking-[0.14em] text-ag-gray-light ml-auto shrink-0">
+              {loadingGrid ? '…' : profiles.length} {t('filters.count')}
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Grille experts ───────────────────────────────────────────── */}
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+
+        {loadingGrid && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
             {Array.from({ length: 6 }).map((_, i) => (
               <div key={i} className="bg-ag-white h-64 animate-pulse" />
             ))}
           </div>
-        ) : profiles.length === 0 ? (
+        )}
+
+        {isEmpty && (
           <div className="border border-ag-border bg-ag-off-white p-16 text-center">
             <p className="font-sans font-semibold text-ag-black text-[16px] mb-2">{t('empty.title')}</p>
             <p className="font-sans text-[13px] text-ag-gray">{t('empty.desc')}</p>
           </div>
-        ) : (
+        )}
+
+        {showPlaceholders && (
+          <>
+            <div className="flex flex-col items-center gap-2 mb-10 text-center">
+              <span className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.24em] uppercase px-4 py-2 border border-ag-apex/40 bg-ag-apex/8 text-ag-apex-ink mb-1">
+                <Star size={10} className="text-ag-apex" /> {t('placeholder.badge')}
+              </span>
+              <p className="font-sans font-bold text-ag-black text-[20px] leading-tight">{t('placeholder.title')}</p>
+              <p className="font-sans text-[13px] text-ag-gray max-w-md">{t('placeholder.desc')}</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+              {PLACEHOLDERS.map(p => (
+                <ExpertCard key={p.id} profile={p} t={t} blurred />
+              ))}
+            </div>
+          </>
+        )}
+
+        {!loadingGrid && profiles.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
             {profiles.map(p => (
               <ExpertCard key={p.id} profile={p} t={t} />
@@ -311,7 +455,7 @@ export default function ExpertsContent() {
         )}
       </section>
 
-      {/* Section liste d'attente / candidature */}
+      {/* ── Section candidature ──────────────────────────────────────── */}
       <section className="bg-ag-off-white border-t border-ag-border py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16">
           <div>
