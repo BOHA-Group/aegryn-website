@@ -15,21 +15,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function AcquisitionSupportPage({ params }: Props) {
   const { locale } = await params
-  const t        = await getTranslations({ locale, namespace: 'acquisition' })
-  const forWhom  = t.raw('forWhom.items')  as { title: string; desc: string }[]
-  const steps    = t.raw('offer.steps')    as { num: string; title: string; desc: string }[]
-  const diffItems = t.raw('diff.items')    as { title: string; desc: string }[]
+  const t          = await getTranslations({ locale, namespace: 'acquisition' })
+  const forWhom    = t.raw('forWhom.items')   as { title: string; desc: string }[]
+  const steps      = t.raw('offer.steps')     as { num: string; title: string; desc: string }[]
+  const diffItems  = t.raw('diff.items')      as { title: string; desc: string }[]
+  const expertItems = t.raw('experts.items')  as { num: string; title: string; desc: string }[]
 
   const serviceLd = serviceJsonLd({
-    name:        'AEGRYN Advisory — Acquisition Support',
-    description: 'Dedicated acquisition service for investors and funds seeking certified tech assets in Europe. Off-market pipeline, performance-based fees.',
+    name:        'AEGRYN — Conseil Transaction & M&A',
+    description: 'Accompagnement complet des acquisitions d\'actifs tech certifiés : due diligence, structuration juridique et fiscale, financement, signing et closing sécurisé.',
     url:         'https://aegryn.com/services/acquisition-support',
-    serviceType: 'Investment Advisory',
+    serviceType: 'M&A Advisory',
   })
   const breadcrumbLd = breadcrumbJsonLd([
     { name: 'AEGRYN',               url: 'https://aegryn.com' },
     { name: 'Services',             url: 'https://aegryn.com/services' },
-    { name: 'Acquisition Support',  url: 'https://aegryn.com/services/acquisition-support' },
+    { name: 'Conseil Transaction',  url: 'https://aegryn.com/services/acquisition-support' },
   ])
 
   return (
@@ -73,8 +74,35 @@ export default async function AcquisitionSupportPage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── For whom ── */}
+      {/* ── Expertises transactionnelles ── */}
       <section className="py-24 px-6 border-t border-ag-border">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
+            {t('experts.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line"
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
+          >
+            {t('experts.title')}
+          </h2>
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-14 max-w-xl">
+            {t('experts.desc')}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+            {expertItems.map(({ num, title, desc }) => (
+              <div key={num} className="bg-ag-white p-8 flex flex-col gap-3">
+                <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex">{num}</span>
+                <h3 className="font-sans font-semibold text-ag-black text-[16px] leading-snug">{title}</h3>
+                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── For whom ── */}
+      <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
             {t('forWhom.label')}
@@ -100,12 +128,12 @@ export default async function AcquisitionSupportPage({ params }: Props) {
       </section>
 
       {/* ── Process ── */}
-      <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="py-24 px-6 border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-14">
             {t('offer.label')}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-ag-border border border-ag-border">
             {steps.map(({ num, title, desc }) => (
               <div key={num} className="bg-ag-white p-8 flex flex-col gap-4">
                 <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex">{num}</span>
@@ -118,7 +146,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
       </section>
 
       {/* ── Differentiators ── */}
-      <section className="py-24 px-6 border-t border-ag-border">
+      <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-14">
             {t('diff.label')}
@@ -138,14 +166,14 @@ export default async function AcquisitionSupportPage({ params }: Props) {
       </section>
 
       {/* ── Fees ── */}
-      <section className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="py-20 px-6 border-t border-ag-border">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
               {t('fees.label')}
             </p>
             <h2
-              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4"
+              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line"
               style={{ fontSize: 'clamp(24px,2.5vw,38px)' }}
             >
               {t('fees.title')}
@@ -158,8 +186,8 @@ export default async function AcquisitionSupportPage({ params }: Props) {
               <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">Important notice</p>
               <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
                 {t('fees.note')}{' '}
-                <Link href="/terms/cgv" className="underline underline-offset-2 hover:text-ag-black transition-colors">
-                  Terms of Service
+                <Link href={t('fees.noteHref')} className="underline underline-offset-2 hover:text-ag-black transition-colors">
+                  {t('fees.noteLink')}
                 </Link>.
               </p>
             </div>
@@ -177,7 +205,13 @@ export default async function AcquisitionSupportPage({ params }: Props) {
             >
               {t('cta.title')}
             </h2>
-            <p className="font-sans text-[14px] text-white/50 max-w-md">{t('cta.desc')}</p>
+            <p className="font-sans text-[14px] text-white/50 max-w-md mb-6">{t('cta.desc')}</p>
+            <p className="font-sans text-[12px] text-white/40 max-w-md">
+              {t('cta.partnerNote')}{' '}
+              <Link href={t('cta.partnerHref')} className="text-ag-apex/70 underline underline-offset-2 hover:text-ag-apex transition-colors">
+                {t('cta.partnerCta')}
+              </Link>
+            </p>
           </div>
           <Link
             href="/contact"

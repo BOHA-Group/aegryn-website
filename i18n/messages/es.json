@@ -859,7 +859,7 @@
     },
     "experts": {
       "label": "Experiencia movilizada",
-      "desc": "Al servicio de nuestros clientes, acompañados antes, durante y después de la transacción, nuestros expertos cubren todos los ámbitos necesarios para una certificación de activos conforme a los estándares AEGRYN.",
+      "desc": "Aegryn Advisory interviene en los ámbitos técnicos que definen la robustez y certificabilidad de un activo digital — antes, durante o independientemente de cualquier transacción.",
       "items": [
         {
           "title": "Auditoría de seguridad y ciberseguridad",
@@ -872,22 +872,6 @@
         {
           "title": "Datos e inteligencia artificial",
           "desc": "Estrategia de IA, automatización, gobernanza de datos."
-        },
-        {
-          "title": "Derecho digital y propiedad intelectual",
-          "desc": "Cumplimiento normativo, protección de PI, estructuración legal de activos digitales."
-        },
-        {
-          "title": "Derecho transaccional y M&A",
-          "desc": "Due diligence, estructuración de operaciones, acompañamiento contractual antes, durante y después de la transacción."
-        },
-        {
-          "title": "Certificación blockchain y notarización digital",
-          "desc": "Sellado de tiempo, prueba de autenticidad, custodia confidencial de transacciones."
-        },
-        {
-          "title": "Fiscalidad y estructuración corporativa",
-          "desc": "Optimización fiscal suiza y europea, estructuración de holdings."
         },
         {
           "title": "Diseño y experiencia de usuario",
@@ -971,29 +955,62 @@
   },
   "acquisition": {
     "meta": {
-      "title": "Acquisition Support — AEGRYN",
-      "desc": "Flujo de deals certificado, presentaciones a socios financieros, earnout estructurado: AEGRYN conecta adquirentes cualificados con los interlocutores adecuados para cerrar los deals que lo merecen."
+      "title": "Asesoría de transacciones y M&A — AEGRYN",
+      "desc": "Acompañamiento completo para la adquisición de activos tech certificados: due diligence, estructuración jurídica y fiscal, financiación, firma y cierre seguros. AEGRYN moviliza a los expertos adecuados para su deal."
     },
-    "label": "Servicios — Acquisition Support",
-    "title": "Ha identificado\nel activo. Estructuramos\nel cierre.",
-    "desc": "Flujo de deals certificado, presentaciones a socios financieros, earnout estructurado: AEGRYN conecta adquirentes cualificados con los interlocutores adecuados para cerrar los deals que lo merecen.",
+    "label": "Servicios — Asesoría de transacciones",
+    "title": "Su adquisición.\nEstructurada para cerrar.",
+    "desc": "Cuando la adquisición de un activo certificado requiere una estructuración financiera, jurídica o fiscal específica — AEGRYN moviliza a los expertos adecuados para su perfil y la naturaleza del deal.",
     "ctaPrimary": "Hablar de mi adquisición",
     "ctaDiscover": "Leer nuestros análisis",
+    "advisorNote": "Un asesor AEGRYN es asignado a su expediente desde el primer contacto hasta el cierre. Una persona. Línea directa.",
+    "experts": {
+      "label": "Experiencia movilizada",
+      "title": "Los expertos adecuados.\nPara cada etapa del deal.",
+      "desc": "Según su expediente, AEGRYN moviliza a los expertos socios adecuados.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Derecho transaccional y M&A",
+          "desc": "Due diligence jurídica, estructuración del deal, redacción y negociación de los documentos de transacción — SPA, SHA, condiciones suspensivas. Acompañamiento antes, durante y después de la transacción."
+        },
+        {
+          "num": "02",
+          "title": "Derecho digital y propiedad intelectual",
+          "desc": "Verificación de la cadena de títulos IP, auditorías de licencias open source, protección de los derechos sobre el codebase. Crítico para la dimensión I del grade AEGRYN."
+        },
+        {
+          "num": "03",
+          "title": "Fiscalidad y estructuración corporativa",
+          "desc": "Optimización fiscal del exit para vendedores, estructuración de la adquisición para compradores — holding, SPV, earnout, Luxemburgo/Suiza/Francia."
+        },
+        {
+          "num": "04",
+          "title": "Financiación y socios financieros",
+          "desc": "Financiación bridge para acelerar el cierre, co-inversión para compartir la exposición, earnout estructurado para alinear el precio con el rendimiento futuro."
+        },
+        {
+          "num": "05",
+          "title": "Certificación blockchain y notarización digital",
+          "desc": "Sellado de tiempo del codebase en la fecha de firma, prueba de autenticidad, depósito confidencial. KRYV Protocol en despliegue."
+        }
+      ]
+    },
     "forWhom": {
       "label": "Para quién",
-      "title": "Un servicio dedicado a adquirentes serios.",
+      "title": "Cuando el proceso estándar no es suficiente.",
       "items": [
         {
           "title": "Fondos y family offices",
-          "desc": "Despliega capital y busca activos tech recurrentes y auditados con documentación completa. AEGRYN le da acceso al pipeline off-market."
+          "desc": "Ha identificado un activo en el catálogo pero el deal requiere un SPV, co-inversión LP o plazo IC. AEGRYN estructura el envoltorio alrededor de su oferta."
         },
         {
           "title": "Compradores estratégicos",
-          "desc": "Integra un activo en su oferta existente. Estructuramos la adquisición (earnout, integración, depósito) para que el cierre sea limpio."
+          "desc": "Integra un activo en su oferta existente. Estructuramos el earnout, las condiciones de integración y la protección post-adquisición para que el cierre sea defendible."
         },
         {
           "title": "Primeros adquirentes",
-          "desc": "Realiza su primera adquisición tech y desea un proceso estructurado y documentado desde la valoración hasta la transferencia. AEGRYN le acompaña en la due diligence, negociación y cierre, con certificación completa de lo que está comprando."
+          "desc": "Realiza su primera adquisición tech y necesita acompañamiento completo — valoración, due diligence, negociación, estructuración de la financiación. AEGRYN le guía desde la primera conversación hasta la transferencia."
         }
       ]
     },
@@ -1002,23 +1019,28 @@
       "steps": [
         {
           "num": "01",
-          "title": "Briefing del inversor",
-          "desc": "Definición de criterios: sector, ARR objetivo, geografía, múltiplo máximo, formato de deal deseado."
+          "title": "Briefing y cualificación",
+          "desc": "Definición de criterios: sector, ARR objetivo, geografía, múltiplo máximo, perfil del adquirente, restricciones de financiación. Identificación del modelo de bid adecuado (Club Deal, Corporativo, Fondo)."
         },
         {
           "num": "02",
-          "title": "Matching de pipeline",
-          "desc": "Acceso prioritario al catálogo AEGRYN y flujo off-market: activos certificados Grade AA y superiores. Activos Grade A disponibles bajo solicitud específica con plan de remediación incluido."
+          "title": "Acceso al pipeline certificado",
+          "desc": "Acceso prioritario al catálogo AEGRYN y flujo off-market. Activos certificados Grade AA y superiores. Grade A disponible bajo solicitud con plan de remediación incluido."
         },
         {
           "num": "03",
-          "title": "Estructuración financiera",
-          "desc": "Cuando la adquisición requiere financiación externa, AEGRYN presenta socios financieros cualificados: financiación bridge para acelerar el cierre, co-inversión para compartir la exposición, o earnout estructurado para alinear el precio con el rendimiento futuro. Cada presentación es específica para su perfil de deal."
+          "title": "Due diligence y estructuración",
+          "desc": "Acceso al data room bajo NDA. El informe de grade AEGRYN reduce la DD entre 30 y 45 días. Movilización de expertos jurídicos, fiscales y financieros. Redacción de los documentos (SPA, SHA, LOI)."
         },
         {
           "num": "04",
-          "title": "Cierre seguro",
-          "desc": "Depósito institucional, documentación completa en la transferencia, CGV incluida."
+          "title": "Financiación",
+          "desc": "Si el deal requiere financiación complementaria: presentación a socios financieros cualificados (bridge, co-inversión, earnout). Cada presentación es específica para su perfil."
+        },
+        {
+          "num": "05",
+          "title": "Firma y cierre seguro",
+          "desc": "Depósito institucional (10 % del precio en la LOI). Documentación completa del codebase en la fecha de firma. Transferencia de derechos. Emisión del certificado de transacción AEGRYN."
         }
       ]
     },
@@ -1027,19 +1049,19 @@
       "items": [
         {
           "title": "Activos certificados, riesgo reducido",
-          "desc": "Cada activo del pipeline ha sido auditado en 4 dimensiones (C/I/F/S) antes de figurar. No negocia sobre declaraciones, compra sobre grades verificados."
+          "desc": "Cada activo del pipeline ha sido auditado en 4 dimensiones (C/I/F/S) antes de figurar. Negocia sobre grades verificados, no sobre declaraciones."
         },
         {
           "title": "Off-market primero",
-          "desc": "La mayoría de los activos AEGRYN nunca se listan públicamente. Los miembros adquirentes cualificados acceden antes de cualquier listado público, o exclusivamente."
+          "desc": "La mayoría de los activos AEGRYN nunca se listan públicamente. Los miembros adquirentes cualificados acceden antes de cualquier listado público — o exclusivamente."
         },
         {
-          "title": "Estructuración incluida",
-          "desc": "AEGRYN no se limita a las presentaciones. Intervenimos en la estructuración del deal para que la transacción sea viable y defendible."
+          "title": "Expertos movilizados en el momento justo",
+          "desc": "AEGRYN no lo hace todo. Coordinamos a los expertos adecuados (jurídico, fiscal, financiero) en el momento oportuno del proceso — ni demasiado pronto para no sobrecargar, ni demasiado tarde para no fragilizar."
         },
         {
-          "title": "Responsabilidad comprometida",
-          "desc": "Nuestro grade es emitido por analistas certificados siguiendo un protocolo independiente riguroso. La responsabilidad profesional de AEGRYN está comprometida con la integridad del proceso de certificación, dentro de los límites definidos en nuestras Condiciones Generales."
+          "title": "Responsabilidad sobre el grade",
+          "desc": "Nuestro grade es emitido por analistas certificados siguiendo un protocolo independiente y riguroso. La responsabilidad profesional de AEGRYN está comprometida con la integridad del proceso de certificación, dentro de los límites de nuestras Condiciones Generales."
         }
       ]
     },
@@ -1047,14 +1069,18 @@
       "label": "Honorarios",
       "title": "Una comisión de éxito,\ncero costes fijos.",
       "desc": "Nuestra remuneración está exclusivamente condicionada al cierre efectivo. Sin retainer, sin gastos de entrada. Las condiciones detalladas están disponibles en nuestras Condiciones Generales.",
-      "note": "AEGRYN actúa como intermediario certificado, no como institución financiera. Las opciones de financiación presentadas en esta página involucran socios terceros independientes. Este servicio no constituye asesoramiento en inversión en el sentido de la directiva MiFID II."
+      "note": "AEGRYN actúa como intermediario certificado, no como institución financiera. Las opciones de financiación presentadas implican socios terceros independientes. Este servicio no constituye asesoramiento en inversión en el sentido de MiFID II.",
+      "noteLink": "Consultar las Condiciones Generales",
+      "noteHref": "/terms/cgv"
     },
     "cta": {
       "title": "¿Le interesa un activo?",
       "desc": "Cuéntenos su proyecto de adquisición. Le respondemos en 48h con un análisis de viabilidad.",
-      "btn": "Contactarnos"
-    },
-    "advisorNote": "Un asesor AEGRYN es asignado a su expediente desde el primer contacto hasta el cierre. Una persona. Línea directa."
+      "btn": "Contactarnos",
+      "partnerNote": "¿Desea referenciar deal flow saliente en el ecosistema AEGRYN?",
+      "partnerCta": "Descubrir los partenariados Deal Flow",
+      "partnerHref": "/alliances?tab=dealflow"
+    }
   },
   "gradingSystem": {
     "meta": {

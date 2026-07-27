@@ -859,7 +859,7 @@
     },
     "experts": {
       "label": "Ingezette expertise",
-      "desc": "Ten dienste van onze klanten, begeleid voor, tijdens en na de transactie, dekken onze experts alle domeinen die nodig zijn voor een activacertificering die voldoet aan de AEGRYN-normen.",
+      "desc": "Aegryn Advisory grijpt in op de technische domeinen die de robuustheid en certificeerbaarheid van een digitaal actief bepalen — voor, tijdens of onafhankelijk van een transactie.",
       "items": [
         {
           "title": "Beveiligingsaudit & Cybersecurity",
@@ -872,22 +872,6 @@
         {
           "title": "Data & Kunstmatige Intelligentie",
           "desc": "AI-strategie, automatisering, datagovernance."
-        },
-        {
-          "title": "Digitaal recht & Intellectueel eigendom",
-          "desc": "Compliance, IP-bescherming, juridische structurering van digitale activa."
-        },
-        {
-          "title": "Transactierecht & M&A",
-          "desc": "Due diligence, dealstructurering, contractuele begeleiding voor, tijdens en na een transactie."
-        },
-        {
-          "title": "Blockchaincertificering & digitale notariëring",
-          "desc": "Tijdstempeling, authenticiteitsbewijs, vertrouwelijk transactie-escrow."
-        },
-        {
-          "title": "Fiscaliteit & bedrijfsstructurering",
-          "desc": "Zwitserse en Europese fiscale optimalisatie, holdingstructurering."
         },
         {
           "title": "Design & gebruikerservaring",
@@ -971,29 +955,62 @@
   },
   "acquisition": {
     "meta": {
-      "title": "Acquisition Support — AEGRYN",
-      "desc": "Gecertificeerde deal flow, introducties bij financiële partners, gestructureerde earnout: AEGRYN verbindt gekwalificeerde overnemers met de juiste tegenpartijen om deals te sluiten die het verdienen."
+      "title": "Transactie-advies & M&A — AEGRYN",
+      "desc": "Volledige begeleiding bij de overname van gecertificeerde tech-assets: due diligence, juridische en fiscale structurering, financiering, veilige ondertekening en closing. AEGRYN mobiliseert de juiste experts voor uw deal."
     },
-    "label": "Services — Acquisition Support",
-    "title": "U heeft\nhet asset geïdentificeerd.\nWij structureren de closing.",
-    "desc": "Gecertificeerde deal flow, introducties bij financiële partners, gestructureerde earnout: AEGRYN verbindt gekwalificeerde overnemers met de juiste tegenpartijen om deals te sluiten die het verdienen.",
+    "label": "Services — Transactie-advies",
+    "title": "Uw overname.\nGestructureerd om te sluiten.",
+    "desc": "Wanneer de overname van een gecertificeerd asset een specifieke financiële, juridische of fiscale structurering vereist — mobiliseert AEGRYN de juiste experts voor uw profiel en de aard van de deal.",
     "ctaPrimary": "Mijn acquisitie bespreken",
     "ctaDiscover": "Onze analyses lezen",
+    "advisorNote": "Een AEGRYN-adviseur wordt toegewezen aan uw dossier van het eerste contact tot de closing. Één persoon. Directe lijn.",
+    "experts": {
+      "label": "Ingezette expertise",
+      "title": "De juiste experts.\nVoor elke fase van de deal.",
+      "desc": "Afhankelijk van uw dossier mobiliseert AEGRYN de meest geschikte partnerexperts.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Transactierecht & M&A",
+          "desc": "Juridische due diligence, dealstructurering, opstelling en onderhandeling van transactiedocumenten — SPA, SHA, opschortende voorwaarden. Begeleiding voor, tijdens en na de transactie."
+        },
+        {
+          "num": "02",
+          "title": "Digitaal recht & Intellectueel eigendom",
+          "desc": "Verificatie van de IP-eigendomsketen, audits van open-sourcelicenties, bescherming van codebase-rechten. Kritisch voor de I-dimensie van de AEGRYN-grade."
+        },
+        {
+          "num": "03",
+          "title": "Fiscaliteit & bedrijfsstructurering",
+          "desc": "Fiscale optimalisatie van de exit voor verkopers, acquisitiestructurering voor kopers — holding, SPV, earnout, Luxemburg/Zwitserland/Frankrijk."
+        },
+        {
+          "num": "04",
+          "title": "Financiering & financiële partners",
+          "desc": "Bridge-financiering om de closing te versnellen, co-investering om blootstelling te delen, gestructureerde earnout om prijs op toekomstige performance af te stemmen."
+        },
+        {
+          "num": "05",
+          "title": "Blockchaincertificering & digitale notariëring",
+          "desc": "Tijdstempeling van de codebase op ondertekeningsdatum, authenticiteitsbewijs, vertrouwelijke escrow. KRYV Protocol in uitrol."
+        }
+      ]
+    },
     "forWhom": {
       "label": "Voor wie",
-      "title": "Een dedicated service voor serieuze overnemers.",
+      "title": "Wanneer het standaardproces niet volstaat.",
       "items": [
         {
           "title": "Fondsen en family offices",
-          "desc": "U zet kapitaal in en zoekt terugkerende, geauditeerde tech-assets met volledige documentatie. AEGRYN geeft u toegang tot de off-market pipeline."
+          "desc": "U heeft een asset in de catalogus geïdentificeerd maar de deal vereist een SPV, LP-co-investering of IC-tijdlijn. AEGRYN structureert de enveloppe rond uw bod."
         },
         {
           "title": "Strategische kopers",
-          "desc": "U integreert een asset in uw bestaand aanbod. Wij structureren de acquisitie (earnout, integratie, escrow) zodat de closing schoon verloopt."
+          "desc": "U integreert een asset in uw bestaand aanbod. Wij structureren de earnout, integratievoorwaarden en post-acquisitie bescherming zodat de closing verdedigbaar is."
         },
         {
           "title": "Eerste overnemers",
-          "desc": "U voert uw eerste tech-acquisitie uit en wenst een gestructureerd, gedocumenteerd proces van waardering tot overdracht. AEGRYN begeleidt u door due diligence, onderhandeling en closing, met volledige certificering van wat u koopt."
+          "desc": "U voert uw eerste tech-acquisitie uit en heeft volledige begeleiding nodig — waardering, due diligence, onderhandeling, financieringsstructurering. AEGRYN begeleidt u van het eerste gesprek tot de overdracht."
         }
       ]
     },
@@ -1002,23 +1019,28 @@
       "steps": [
         {
           "num": "01",
-          "title": "Investor briefing",
-          "desc": "Criteria: sector, doel-ARR, geografie, maximaal multiple, gewenst deal-formaat."
+          "title": "Briefing & kwalificatie",
+          "desc": "Definitie van de acquisitiecriteria: sector, doel-ARR, geografie, maximaal multiple, overnemersprofiel, financieringsbeperkingen. Identificatie van het juiste bid-model (Club Deal, Corporate, Fonds)."
         },
         {
           "num": "02",
-          "title": "Pipeline matching",
-          "desc": "Prioriteitstoegang tot de AEGRYN-catalogus en off-market flow: gecertificeerde assets Grade AA en hoger. Grade-A-assets beschikbaar op specifiek verzoek met remediëringsplan inbegrepen."
+          "title": "Toegang tot de gecertificeerde pipeline",
+          "desc": "Prioriteitstoegang tot de AEGRYN-catalogus en off-market flow. Gecertificeerde assets Grade AA en hoger. Grade A op aanvraag met remediëringsplan inbegrepen."
         },
         {
           "num": "03",
-          "title": "Financiële structurering",
-          "desc": "Wanneer de acquisitie externe financiering vereist, introduceert AEGRYN gekwalificeerde financiële partners: bridge-financiering om de closing te versnellen, co-investering om blootstelling te delen, of gestructureerde earnout om de prijs af te stemmen op toekomstige performance. Elke introductie is specifiek voor uw deal-profiel."
+          "title": "Due diligence & structurering",
+          "desc": "Toegang tot de data room onder NDA. Het AEGRYN-grade-rapport reduceert de DD met 30 tot 45 dagen. Inzet van juridische, fiscale en financiële experts. Opstelling van de transactiedocumenten (SPA, SHA, LOI)."
         },
         {
           "num": "04",
-          "title": "Veilige closing",
-          "desc": "Institutionele escrow, volledige documentatie bij overdracht, AV inbegrepen."
+          "title": "Financiering",
+          "desc": "Als de deal aanvullende financiering vereist: introductie bij gekwalificeerde financiële partners (bridge, co-investering, earnout). Elke introductie is specifiek voor uw profiel."
+        },
+        {
+          "num": "05",
+          "title": "Ondertekening & veilige closing",
+          "desc": "Institutionele escrow (10 % van de prijs bij LOI). Volledige codebасedocumentatie op ondertekeningsdatum. Overdracht van rechten. Uitgifte van het AEGRYN-transactiecertificaat."
         }
       ]
     },
@@ -1027,18 +1049,18 @@
       "items": [
         {
           "title": "Gecertificeerde assets, minder risico",
-          "desc": "Elk pipeline-asset is vóór listung beoordeeld op 4 dimensies (C/I/F/S). U onderhandelt niet op verklaringen, u koopt op geverifieerde grades."
+          "desc": "Elk pipeline-asset is beoordeeld op 4 dimensies (C/I/F/S) vóór opname. U onderhandelt op geverifieerde grades, niet op verklaringen."
         },
         {
           "title": "Off-market eerst",
-          "desc": "De meeste AEGRYN-assets worden nooit publiek gelistet. Gekwalificeerde overnemer-leden krijgen toegang vóór enige publieke listung, of exclusief."
+          "desc": "De meeste AEGRYN-assets worden nooit publiek gelistet. Gekwalificeerde overnemer-leden krijgen toegang vóór enige publieke listung — of exclusief."
         },
         {
-          "title": "Structurering inbegrepen",
-          "desc": "AEGRYN beperkt zich niet tot introducties. Wij grijpen in op de deal-structurering zodat de transactie haalbaar en verdedigbaar is."
+          "title": "Experts op het juiste moment",
+          "desc": "AEGRYN doet niet alles. Wij coördineren de juiste experts (juridisch, fiscaal, financieel) op het juiste moment — niet te vroeg om niet te verzwaren, niet te laat om niet te fragiliseren."
         },
         {
-          "title": "Aansprakelijkheid ingezet",
+          "title": "Aansprakelijkheid op de grade",
           "desc": "Onze grade wordt uitgegeven door gecertificeerde analisten volgens een onafhankelijk, rigoureus protocol. De professionele aansprakelijkheid van AEGRYN is betrokken bij de integriteit van het certificeringsproces, binnen de grenzen van onze Algemene Voorwaarden."
         }
       ]
@@ -1047,14 +1069,18 @@
       "label": "Honoraria",
       "title": "Een succesfee,\nnul vaste kosten.",
       "desc": "Onze vergoeding is uitsluitend afhankelijk van een effectieve closing. Geen retainer, geen instapkosten. Gedetailleerde voorwaarden beschikbaar in onze Algemene Voorwaarden.",
-      "note": "AEGRYN handelt als gecertificeerde tussenpersoon, niet als financiële instelling. De op deze pagina gepresenteerde financieringsopties betreffen onafhankelijke derde partners. Deze service vormt geen beleggingsadvies in de zin van de MiFID II-richtlijn."
+      "note": "AEGRYN handelt als gecertificeerde tussenpersoon, niet als financiële instelling. De gepresenteerde financieringsopties betreffen onafhankelijke derde partners. Deze service vormt geen beleggingsadvies in de zin van MiFID II.",
+      "noteLink": "Algemene Voorwaarden raadplegen",
+      "noteHref": "/terms/cgv"
     },
     "cta": {
       "title": "Interesse in een asset?",
       "desc": "Vertel ons over uw acquisitieproject. Wij reageren binnen 48u met een haalbaarheidsanalyse.",
-      "btn": "Ons contacteren"
-    },
-    "advisorNote": "Een AEGRYN-adviseur wordt toegewezen aan uw dossier van het eerste contact tot de closing. Één persoon. Directe lijn."
+      "btn": "Ons contacteren",
+      "partnerNote": "Wilt u uitgaande deal flow in het AEGRYN-ecosysteem inbrengen?",
+      "partnerCta": "Deal Flow-partnerschappen ontdekken",
+      "partnerHref": "/alliances?tab=dealflow"
+    }
   },
   "gradingSystem": {
     "meta": {
