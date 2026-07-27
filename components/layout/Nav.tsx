@@ -24,16 +24,14 @@ const AUCTION_LINKS: { labelKey: string; href: LinkHref }[] = [
 const GRADE_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'gradeSystem',     href: '/grade' },
   { labelKey: 'gradeMethod',     href: '/grade/methodology' },
-  { labelKey: 'gradePartners',   href: '/grade/partners' },
   { labelKey: 'gradeSubmit',     href: '/grade/submit' },
 ]
 
 const SERVICES_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'servicesBuild',       href: '/services/build' },
   { labelKey: 'servicesAdvisory',    href: '/advisory' },
   { labelKey: 'servicesAcquisition', href: '/services/acquisition-support' },
-  { labelKey: 'servicesValuation',   href: '/valuation' },
   { labelKey: 'servicesAlliances',   href: '/alliances' },
-  { labelKey: 'servicesExperts',     href: '/experts' },
 ]
 
 function DropdownMenu({ links, t }: { links: { labelKey: string; href: LinkHref }[]; t: ReturnType<typeof useTranslations> }) {
@@ -352,7 +350,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               {isServicesActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
             </button>
-            {activeDropdown === 'services' && <ServicesMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
+            {activeDropdown === 'services' && <DropdownMenu links={SERVICES_LINKS} t={t} />}
           </div>
 
           {/* Blog */}
@@ -539,24 +537,12 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'services' ? 'rotate-180' : ''}`} />
               </button>
               {mobileAccordion === 'services' && (
-                <div className="py-3 flex flex-col gap-4">
-                  {[
-                    { labelKey: 'servicesSectionTech',        links: [{ labelKey: 'servicesAdvisory', href: '/advisory' }] },
-                    { labelKey: 'servicesSectionTransaction', links: [{ labelKey: 'servicesAcquisition', href: '/services/acquisition-support' }, { labelKey: 'servicesValuation', href: '/valuation' }] },
-                    { labelKey: 'servicesSectionNetwork',     links: [{ labelKey: 'servicesAlliances', href: '/alliances' }, { labelKey: 'servicesExperts', href: '/experts' }] },
-                  ].map((section) => (
-                    <div key={section.labelKey}>
-                      <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-ag-apex mb-1 pl-1">{t(section.labelKey)}</p>
-                      <div className="flex flex-col gap-0">
-                        {section.links.map(({ labelKey, href }) => (
-                          <Link key={labelKey} href={href as LinkHref} onClick={closeMobile}
-                            className="flex items-center justify-between py-2.5 pl-2 font-sans text-[13px] text-white/50 hover:text-white transition-colors border-b border-white/5 last:border-0">
-                            {t(labelKey)}
-                            <span className="text-ag-apex text-[10px]">→</span>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
+                <div className="py-2 pl-4 flex flex-col gap-1">
+                  {SERVICES_LINKS.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href as LinkHref} onClick={closeMobile}
+                      className="py-2.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
+                      {t(labelKey)}
+                    </Link>
                   ))}
                 </div>
               )}

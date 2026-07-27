@@ -77,11 +77,13 @@ const companyLinks: { navKey: 'about' | 'career' | 'contact'; href: LinkHref }[]
   { navKey: 'contact', href: '/contact' },
 ]
 
-const servicesLinks: { navKey: 'auction' | 'grade' | 'advisory' | 'growWithUs'; href: LinkHref }[] = [
-  { navKey: 'auction',    href: '/auction' },
-  { navKey: 'grade',      href: '/grade' },
-  { navKey: 'advisory',   href: '/advisory' },
-  { navKey: 'growWithUs', href: '/alliances' },
+const servicesLinks: { navKey: 'auction' | 'grade' | 'advisory' | 'growWithUs' | 'servicesBuild' | 'servicesAdvisory' | 'servicesAcquisition' | 'servicesAlliances'; href: LinkHref }[] = [
+  { navKey: 'servicesBuild',       href: '/services/build' },
+  { navKey: 'servicesAdvisory',    href: '/advisory' },
+  { navKey: 'servicesAcquisition', href: '/services/acquisition-support' },
+  { navKey: 'servicesAlliances',   href: '/alliances' },
+  { navKey: 'auction',             href: '/auction' },
+  { navKey: 'grade',               href: '/grade' },
 ]
 
 export default function Footer() {

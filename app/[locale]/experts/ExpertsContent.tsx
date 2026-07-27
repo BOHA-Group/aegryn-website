@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
+import { motion } from 'framer-motion'
 import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter } from 'lucide-react'
 
 type ExpertProfile = {
@@ -27,18 +28,30 @@ type ExpertProfile = {
 }
 
 const CATEGORIES = [
-  { key: 'advisory_tech',         labelKey: 'categories.tech',         descKey: 'categories.techDesc'         },
-  { key: 'advisory_transaction',  labelKey: 'categories.transaction',  descKey: 'categories.transactionDesc'  },
-  { key: 'network',               labelKey: 'categories.network',      descKey: 'categories.networkDesc'      },
+  { key: 'advisory_tech',        labelKey: 'categories.tech',        descKey: 'categories.techDesc'        },
+  { key: 'advisory_transaction', labelKey: 'categories.transaction', descKey: 'categories.transactionDesc' },
 ] as const
 
-const DOMAINS = [
-  'cybersecurity', 'ai', 'm_and_a', 'valuation', 'tax',
-  'law', 'accounting', 'hr', 'insurance', 'real_estate', 'finance', 'other',
-] as const
+type CategoryKey = typeof CATEGORIES[number]['key']
 
-const COUNTRIES = ['CH', 'FR', 'DE', 'BE', 'LU', 'GB', 'ES', 'IT', 'NL', 'US'] as const
-const LANGUAGES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
+const DOMAINS_BY_CATEGORY: Record<CategoryKey, readonly string[]> = {
+  advisory_tech:        ['cybersecurity', 'ai', 'law', 'hr', 'other'],
+  advisory_transaction: ['m_and_a', 'valuation', 'tax', 'law', 'accounting', 'insurance', 'real_estate', 'finance'],
+}
+
+const ALL_DOMAINS = ['cybersecurity', 'ai', 'm_and_a', 'valuation', 'tax', 'law', 'accounting', 'hr', 'insurance', 'real_estate', 'finance', 'other'] as const
+
+const COUNTRIES = ['CH', 'FR', 'DE', 'BE', 'LU', 'ES', 'IT', 'NL', 'PT', 'AT', 'PL', 'SE', 'DK', 'FI', 'NO', 'IE', 'CZ', 'HU', 'RO'] as const
+
+const FAN_CARDS = [
+  { angle: -18, domainKey: 'cybersecurity', tx: -20, z: 10 },
+  { angle: -10, domainKey: 'm_and_a',       tx: -10, z: 20 },
+  { angle: -4,  domainKey: 'valuation',     tx: -4,  z: 30 },
+  { angle:  0,  domainKey: 'ai',            tx:  0,  z: 40 },
+  { angle:  4,  domainKey: 'tax',           tx:  4,  z: 30 },
+  { angle:  10, domainKey: 'law',           tx:  10, z: 20 },
+  { angle:  18, domainKey: 'finance',       tx:  20, z: 10 },
+] as const
 
 const PLACEHOLDERS: ExpertProfile[] = [
   { id: 'ph1', first_name: 'Sophie', last_name: 'M.', profession: 'M&A Advisor', specialties: ['Due diligence', 'Valorisation'], city: 'Genève', country_code: 'CH', bio: 'Spécialiste des transactions M&A tech en Suisse romande. 12 ans d\'expérience en structuration et accompagnement de cédants.', organization: 'Aegryn Advisory', email_public: null, phone: null, website: null, min_rate_eur: 350, languages: ['fr', 'en'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['m_and_a', 'valuation'] },
@@ -290,7 +303,6 @@ export default function ExpertsContent() {
   const [category,    setCategory]    = useState('')
   const [domain,      setDomain]      = useState('')
   const [country,     setCountry]     = useState('')
-  const [language,    setLanguage]    = useState('')
 
   useEffect(() => {
     setLoadingGrid(true)
@@ -298,15 +310,14 @@ export default function ExpertsContent() {
     if (category) params.set('category', category)
     if (domain)   params.set('domain',   domain)
     if (country)  params.set('country',  country)
-    if (language) params.set('language', language)
     fetch(`/api/experts/profiles${params.toString() ? `?${params}` : ''}`)
       .then(r => r.json())
       .then(d => setProfiles(d.profiles ?? []))
       .catch(() => setProfiles([]))
       .finally(() => setLoadingGrid(false))
-  }, [category, domain, country, language])
+  }, [category, domain, country])
 
-  const isFiltered   = !!(category || domain || country || language)
+  const isFiltered   = !!(category || domain || country)
   const showGrid     = !loadingGrid
   const isEmpty      = showGrid && profiles.length === 0 && isFiltered
   const showPlaceholders = showGrid && profiles.length === 0 && !isFiltered
@@ -348,29 +359,30 @@ export default function ExpertsContent() {
           </p>
         </div>
 
-        {/* Cards éventail */}
-        <div className="relative flex items-end justify-center gap-2 pb-0 px-4 min-h-[260px]">
-          {[
-            { angle: -18, labelKey: 'domains.cybersecurity',  descKey: 'domains.cybersecurityDesc',  z: 10, tx: -20 },
-            { angle: -10, labelKey: 'domains.ma',             descKey: 'domains.maDesc',             z: 20, tx: -10 },
-            { angle: -4,  labelKey: 'domains.valuation',      descKey: 'domains.valuationDesc',      z: 30, tx:  -4 },
-            { angle:  0,  labelKey: 'domains.ai',             descKey: 'domains.aiDesc',             z: 40, tx:   0 },
-            { angle:  4,  labelKey: 'domains.tax',            descKey: 'domains.taxDesc',            z: 30, tx:   4 },
-            { angle: 10,  labelKey: 'domains.law',            descKey: 'domains.lawDesc',            z: 20, tx:  10 },
-            { angle: 18,  labelKey: 'domains.finance',        descKey: 'domains.financeDesc',        z: 10, tx:  20 },
-          ].map((card, i) => (
-            <div
+        {/* Cards éventail — cliquables, activent le filtre domaine */}
+        <div className="relative flex items-end justify-center gap-2 pb-0 px-4 min-h-[280px]">
+          {FAN_CARDS.map((card, i) => (
+            <motion.button
               key={i}
-              className="absolute bottom-0 w-[120px] md:w-[150px] bg-ag-white border border-ag-border/60 shadow-sm p-4 flex flex-col gap-2 origin-bottom"
-              style={{
-                transform: `translateX(${card.tx * 10}px) rotate(${card.angle}deg)`,
-                zIndex: card.z,
-                bottom: '0px',
+              onClick={() => {
+                setDomain(prev => prev === card.domainKey ? '' : card.domainKey)
+                setCategory('')
               }}
+              className="absolute bottom-0 w-[120px] md:w-[150px] bg-ag-white border border-ag-border/60 shadow-sm p-4 flex flex-col gap-2 origin-bottom cursor-pointer text-left"
+              style={{
+                translateX: card.tx * 10,
+                rotate: card.angle,
+                zIndex: card.z,
+                bottom: 0,
+              }}
+              whileHover={{ y: -16, scale: 1.04, zIndex: 50 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 22 }}
+              animate={domain === card.domainKey ? { y: -20, scale: 1.06, borderColor: '#5ADDA4' } : {}}
             >
-              <p className="font-sans font-bold text-ag-black text-[13px] leading-snug">{t(card.labelKey)}</p>
-              <p className="font-sans text-[10px] text-ag-gray leading-snug line-clamp-3">{t(card.descKey)}</p>
-            </div>
+              <p className="font-sans font-bold text-ag-black text-[13px] leading-snug">{t(`domains.${card.domainKey}`)}</p>
+              <p className="font-sans text-[10px] text-ag-gray leading-snug line-clamp-3">{t(`domains.${card.domainKey}Desc`)}</p>
+            </motion.button>
           ))}
         </div>
       </section>
@@ -382,7 +394,7 @@ export default function ExpertsContent() {
             <Filter size={13} className="text-ag-gray-light shrink-0" />
             <SelectFilter
               value={category}
-              onChange={setCategory}
+              onChange={v => { setCategory(v); setDomain('') }}
               placeholder={t('filters.allCategories')}
               options={CATEGORIES.map(c => ({ value: c.key, label: t(c.labelKey) }))}
             />
@@ -390,19 +402,16 @@ export default function ExpertsContent() {
               value={domain}
               onChange={setDomain}
               placeholder={t('filters.allDomains')}
-              options={DOMAINS.map(d => ({ value: d, label: t(`domains.${d}`) }))}
+              options={(category && DOMAINS_BY_CATEGORY[category as CategoryKey]
+                ? DOMAINS_BY_CATEGORY[category as CategoryKey]
+                : ALL_DOMAINS
+              ).map(d => ({ value: d, label: t(`domains.${d}`) }))}
             />
             <SelectFilter
               value={country}
               onChange={setCountry}
               placeholder={t('filters.allCountries')}
               options={COUNTRIES.map(c => ({ value: c, label: c }))}
-            />
-            <SelectFilter
-              value={language}
-              onChange={setLanguage}
-              placeholder={t('filters.allLanguages')}
-              options={LANGUAGES.map(l => ({ value: l, label: t(`langs.${l}`) }))}
             />
             <span className="font-mono text-[10px] tracking-[0.14em] text-ag-gray-light ml-auto shrink-0">
               {loadingGrid ? '…' : profiles.length} {t('filters.count')}

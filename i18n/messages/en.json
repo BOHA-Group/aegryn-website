@@ -27,6 +27,7 @@
     "gradeMethod": "Methodology",
     "gradeSubmit": "Submit for certification",
     "gradePartners": "Expert network",
+    "servicesBuild": "Asset Engineering",
     "servicesAdvisory": "Advisory Tech",
     "servicesAlliances": "Partner Network",
     "servicesAcquisition": "Advisory Transaction",
@@ -2709,6 +2710,79 @@
       "sequestre": "Escrow",
       "technique": "Technical",
       "assurance": "Insurance"
+    }
+  },
+  "build_service": {
+    "meta": {
+      "title": "Digital Asset Engineering - AEGRYN",
+      "desc": "AEGRYN designs B2B SaaS, AI applications and proprietary mobile apps with an exit logic integrated from day one. Early-stage sale, at maturity, or on-demand maintenance."
+    },
+    "label": "Services - Asset Engineering",
+    "title": "Your digital asset.\nBuilt to last.\nStructured to sell.",
+    "desc": "AEGRYN designs proprietary digital assets - B2B SaaS, vertical AI, mobile application - with an exit logic integrated from day one. You start from scratch. You end up with a certifiable, maintainable and transferable asset on your timeline.",
+    "difference": {
+      "label": "Not an agency. Not a studio.",
+      "title": "The AEGRYN difference.",
+      "items": [
+        { "num": "01", "title": "Certifiable from day one", "desc": "Every asset is built to CIFS protocol standards. The grade is not a post-production audit: it is the architecture from day one." },
+        { "num": "02", "title": "You stay the owner", "desc": "No dilution. No equity taken by AEGRYN. The asset is 100% yours. AEGRYN can act as a co-investor on request: that is your decision, not ours." },
+        { "num": "03", "title": "The exit is planned from the start", "desc": "Early-stage sale, at maturity, or long-term maintenance: the exit plan is defined before the first sprint, not at the last moment." }
+      ]
+    },
+    "assetTypes": {
+      "label": "What we build",
+      "title": "Three typologies.\nOne standard of excellence.",
+      "items": [
+        { "badge": "B2B SaaS", "title": "Vertical SaaS solution", "desc": "Business tools, management platforms, RegTech, LegalTech, FinTech - SaaS designed for precise markets with measurable ARR/NRR metrics from launch.", "stack": "Next.js - TypeScript - Supabase - Vercel", "gradeTarget": "Target grade: AA to AAA" },
+        { "badge": "Vertical AI", "title": "Native AI product", "desc": "AI agents, sector automation, document analysis - built on models with proprietary data. The real certifiable moat of an AI asset.", "stack": "Python - LangChain - Supabase - Vercel", "gradeTarget": "Target grade: A to AAA by maturity" },
+        { "badge": "Mobile App", "title": "Mobile application", "desc": "iOS/Android for services, marketplaces or mobile-first business tools. Retention metrics (D1/D7/D30) as design criteria, not as after-the-fact indicators.", "stack": "React Native - Expo - Supabase", "gradeTarget": "Target grade: A to AA by revenue" }
+      ]
+    },
+    "exits": {
+      "label": "The exit is your choice",
+      "title": "Three paths.\nOne asset built for all of them.",
+      "items": [
+        { "phase": "Early stage - 6 to 18 months", "title": "Early-stage sale", "desc": "Your asset has a solid architecture and early traction. AEGRYN structures the sale via an Auction session or a direct confidential transaction.", "grade": "Target grade: A - ticket 100K to 500K EUR", "cta": "View acquisition models", "href": "/auction/bid-models" },
+        { "phase": "Market maturity - 18 to 36 months", "title": "Maturity sale", "desc": "The asset has documented recurring revenues and an established customer base. Eligible for AAA to AEG grades. Transaction within the closed circle of institutional buyers.", "grade": "Target grade: AA to AEG - ticket 500K to 5M EUR", "cta": "Submit for certification", "href": "/grade/submit" },
+        { "phase": "Retention", "title": "Evolutionary and corrective maintenance", "desc": "You do not wish to sell. AEGRYN maintains the asset technically: updates, new features, security. The exit remains open on your timeline.", "grade": "Monthly retainer or per deliverable", "cta": "Discuss maintenance", "href": "/contact" }
+      ]
+    },
+    "process": {
+      "label": "Our process",
+      "title": "From brief to closing.\nOne point of contact.",
+      "steps": [
+        { "num": "01", "title": "Discovery and Brief", "desc": "Definition of the value proposition, target market, stack and exit plan. Output: certifiable specification. Duration: 1 to 2 weeks." },
+        { "num": "02", "title": "Architecture and Grade Design", "desc": "The asset is architected to CIFS criteria: documented code, registered IP, security by design, tracked metrics. The grade is the construction plan." },
+        { "num": "03", "title": "Build and Iterations", "desc": "Sprint-based development with measurable milestones, code review and continuous documentation. AEGRYN proprietary stack or client stack." },
+        { "num": "04", "title": "Launch and Traction", "desc": "Deployment, first-user acquisition, ARR/NRR/churn metrics setup. Time to certifiable Grade A: 6 to 12 months." },
+        { "num": "05", "title": "Certification and Exit", "desc": "CIFS protocol submission, official grade issued, transaction via AEGRYN Auction or confidential. Or retention with maintenance per your choice." }
+      ]
+    },
+    "maintenance": {
+      "label": "On-demand maintenance",
+      "title": "The asset lives.\nWe keep it running.",
+      "desc": "After launch or after a partial sale, AEGRYN offers maintenance at two levels.",
+      "corrective": { "title": "Corrective maintenance", "desc": "Bug fixes, incident resolution, security updates, CVE management, monitoring and alerts. SLA defined in contract.", "format": "Monthly retainer or on-demand tickets" },
+      "evolutive": { "title": "Evolutionary maintenance", "desc": "New features, refactoring, version upgrades, integrations, regulatory adaptation (GDPR, EU AI Act, NIS2). The asset remains certifiable at all times.", "format": "Monthly retainer or per-sprint deliverable" },
+      "note": "AEGRYN maintenance ensures the asset retains or improves its grade at every cycle: the condition for an exit to remain possible at any time."
+    },
+    "fees": {
+      "label": "Fees",
+      "title": "Transparent from the brief.",
+      "items": [
+        { "title": "Design and Build", "desc": "Fixed fee defined at Discovery. No equity taken. No dilution.", "format": "Quote on request" },
+        { "title": "Maintenance", "desc": "Monthly retainer or per-deliverable fee. Conditions defined in contract.", "format": "Monthly retainer defined in contract" },
+        { "title": "Transaction", "desc": "If the exit goes through AEGRYN Auction or a confidential transaction, the standard AEGRYN transaction commission applies.", "format": "Success fee - conditions in T&Cs", "href": "/terms/cgv" }
+      ],
+      "coInvestNote": "AEGRYN may act as a minority co-investor on select projects: equity in exchange for a reduction in build fees. Assessed on a case-by-case basis."
+    },
+    "cta": {
+      "title": "A project in mind?",
+      "desc": "Describe your idea or target market. We get back to you within 48h with a feasibility analysis and an estimate of the target grade at maturity.",
+      "primary": "Start a project",
+      "href": "/contact",
+      "secondary": "See our proprietary assets",
+      "secondaryHref": "/assets"
     }
   },
   "gradeSubmit": {

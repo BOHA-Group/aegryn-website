@@ -26,6 +26,7 @@
     "gradeMethod": "Méthodologie",
     "gradeSubmit": "Soumettre pour certification",
     "gradePartners": "Réseau d'experts",
+    "servicesBuild": "Conception d'actifs",
     "servicesAdvisory": "Advisory Tech",
     "servicesAlliances": "Réseau de partenaires",
     "servicesAcquisition": "Advisory Transaction",
@@ -2708,6 +2709,79 @@
       "sequestre": "Séquestre",
       "technique": "Technique",
       "assurance": "Assurance"
+    }
+  },
+  "build_service": {
+    "meta": {
+      "title": "Conception d'actifs numériques - AEGRYN",
+      "desc": "AEGRYN conçoit des SaaS B2B, applications IA et apps mobiles propriétaires avec une logique de sortie intégrée dès la conception. Cession early stage, à maturité, ou maintenance évolutive à la demande."
+    },
+    "label": "Services - Conception d'actifs",
+    "title": "Votre actif numérique.\nConçu pour durer.\nStructuré pour céder.",
+    "desc": "AEGRYN conçoit des actifs numériques propriétaires - SaaS B2B, IA verticale, application mobile - avec une logique de sortie intégrée dès le premier jour. Vous partez de zéro. Vous arrivez avec un actif certifiable, maintenable et cessible selon votre calendrier.",
+    "difference": {
+      "label": "Pas une agence. Pas un studio.",
+      "title": "La différence AEGRYN.",
+      "items": [
+        { "num": "01", "title": "Certifiable dès la conception", "desc": "Chaque actif est construit selon les standards du protocole CIFS. Le grade n'est pas un audit post-production : c'est l'architecture du premier jour." },
+        { "num": "02", "title": "Vous restez propriétaire", "desc": "Aucune dilution. Aucune part prise par AEGRYN. L'actif vous appartient à 100%. AEGRYN peut intervenir comme co-investisseur sur demande : c'est votre décision, pas la nôtre." },
+        { "num": "03", "title": "La sortie est prévue dès le départ", "desc": "Cession early stage, à maturité, ou maintenance long terme : le plan de sortie est défini avant le premier sprint, pas au dernier moment." }
+      ]
+    },
+    "assetTypes": {
+      "label": "Ce que nous construisons",
+      "title": "Trois typologies.\nUne même exigence.",
+      "items": [
+        { "badge": "SaaS B2B", "title": "Solution SaaS verticale", "desc": "Outils métier, plateformes de gestion, RegTech, LegalTech, FinTech - des SaaS conçus pour des marchés précis avec des métriques ARR/NRR mesurables dès le lancement.", "stack": "Next.js · TypeScript · Supabase · Vercel", "gradeTarget": "Grade cible : AA à AAA" },
+        { "badge": "IA Verticale", "title": "Produit IA natif", "desc": "Agents IA, automatisation sectorielle, analyse documentaire - construits sur des modèles avec données exclusives. Le vrai moat certifiable d'un actif IA.", "stack": "Python · LangChain · Supabase · Vercel", "gradeTarget": "Grade cible : A à AAA selon ancienneté" },
+        { "badge": "App Mobile", "title": "Application mobile", "desc": "iOS/Android pour services, marketplaces ou outils métiers mobiles-first. Métriques de rétention (D1/D7/D30) comme critères de design, pas comme indicateurs a posteriori.", "stack": "React Native · Expo · Supabase", "gradeTarget": "Grade cible : A à AA selon revenus" }
+      ]
+    },
+    "exits": {
+      "label": "La sortie est votre choix",
+      "title": "Trois chemins.\nUn actif conçu pour tous les suivre.",
+      "items": [
+        { "phase": "Early stage - 6 à 18 mois", "title": "Cession early stage", "desc": "Votre actif a une architecture solide et une première traction. AEGRYN structure la cession via une session Auction ou une transaction confidentielle directe.", "grade": "Grade cible : A - ticket 100K à 500K euros", "cta": "Voir les modèles d'acquisition", "href": "/auction/bid-models" },
+        { "phase": "Maturité marché - 18 à 36 mois", "title": "Cession à maturité", "desc": "L'actif a des revenus récurrents documentés et une base clients établie. Eligible aux grades AAA à AEG. Transaction dans le cercle fermé des acquéreurs institutionnels.", "grade": "Grade cible : AA à AEG - ticket 500K à 5M euros", "cta": "Soumettre pour certification", "href": "/grade/submit" },
+        { "phase": "Conservation", "title": "Maintenance évolutive et corrective", "desc": "Vous ne souhaitez pas céder. AEGRYN maintient l'actif techniquement : mises à jour, nouvelles fonctionnalités, sécurité. La sortie reste ouverte selon votre calendrier.", "grade": "Forfait mensuel ou au livrable", "cta": "Discuter de la maintenance", "href": "/contact" }
+      ]
+    },
+    "process": {
+      "label": "Notre process",
+      "title": "Du brief au closing.\nUn seul interlocuteur.",
+      "steps": [
+        { "num": "01", "title": "Discovery et Brief", "desc": "Définition de la proposition de valeur, du marché cible, de la stack et du plan de sortie. Output : cahier des charges certifiable. Durée : 1 à 2 semaines." },
+        { "num": "02", "title": "Architecture et Grade Design", "desc": "L'actif est architecturé selon les critères CIFS : code documenté, IP déposée, sécurité by design, métriques trackées. Le grade est le plan de construction." },
+        { "num": "03", "title": "Build et Itérations", "desc": "Développement en sprints avec jalons mesurables, revue de code et documentation continue. Stack propriétaire AEGRYN ou stack client." },
+        { "num": "04", "title": "Lancement et Traction", "desc": "Déploiement, acquisition des premiers utilisateurs, mise en place des métriques ARR/NRR/churn. Durée avant Grade A certifiable : 6 à 12 mois." },
+        { "num": "05", "title": "Certification et Sortie", "desc": "Soumission au protocole CIFS, grade officiel émis, transaction via AEGRYN Auction ou confidentielle. Ou maintien avec maintenance selon votre choix." }
+      ]
+    },
+    "maintenance": {
+      "label": "Maintenance à la demande",
+      "title": "L'actif vit.\nNous le maintenons.",
+      "desc": "Après le lancement ou après une cession partielle, AEGRYN propose une maintenance à deux niveaux.",
+      "corrective": { "title": "Maintenance corrective", "desc": "Correction de bugs, résolution d'incidents, mises à jour de sécurité, gestion des CVE, monitoring et alertes. SLA défini au contrat.", "format": "Forfait mensuel ou tickets à la demande" },
+      "evolutive": { "title": "Maintenance évolutive", "desc": "Nouvelles fonctionnalités, refactoring, montées de version, intégrations, adaptation réglementaire (RGPD, EU AI Act, NIS2). L'actif reste certifiable à tout moment.", "format": "Forfait mensuel ou livrable au sprint" },
+      "note": "La maintenance AEGRYN garantit que l'actif conserve son grade ou améliore son score à chaque cycle : condition pour qu'une sortie reste possible à tout moment."
+    },
+    "fees": {
+      "label": "Honoraires",
+      "title": "Transparent dès le brief.",
+      "items": [
+        { "title": "Conception et Build", "desc": "Forfait défini lors du Discovery. Aucune part prise. Aucune dilution.", "format": "Devis sur demande" },
+        { "title": "Maintenance", "desc": "Forfait mensuel ou rémunération au livrable. Conditions définies au contrat.", "format": "Forfait mensuel défini au contrat" },
+        { "title": "Transaction", "desc": "Si la sortie passe par AEGRYN Auction ou une transaction confidentielle, la commission de transaction standard s'applique.", "format": "Commission de succès - conditions en CGV", "href": "/terms/cgv" }
+      ],
+      "coInvestNote": "AEGRYN peut intervenir en co-investisseur minoritaire sur certains projets : prise de part en échange d'une réduction des honoraires de build. Examiné au cas par cas."
+    },
+    "cta": {
+      "title": "Un projet en tête ?",
+      "desc": "Décrivez votre idée ou votre marché cible. Nous revenons sous 48h avec une analyse de faisabilité et une estimation du grade cible à maturité.",
+      "primary": "Démarrer un projet",
+      "href": "/contact",
+      "secondary": "Voir nos actifs propriétaires",
+      "secondaryHref": "/assets"
     }
   },
   "gradeSubmit": {
