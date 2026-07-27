@@ -55,16 +55,18 @@ const GROUPS: SitemapGroup[] = [
   {
     labelKey: 'groupDiscover',
     links: [
-      { labelKey: 'blog',      href: '/blog' },
-      { labelKey: 'roadmap',   href: '/roadmap' },
+      { labelKey: 'blog',       href: '/blog' },
+      { labelKey: 'roadmap',    href: '/roadmap' },
+      { labelKey: 'glossaire',  href: '/glossaire' },
     ],
   },
   {
     labelKey: 'groupCompany',
     links: [
-      { labelKey: 'about',   href: '/about' },
-      { labelKey: 'career',  href: '/career' },
-      { labelKey: 'contact', href: '/contact' },
+      { labelKey: 'about',        href: '/about' },
+      { labelKey: 'whatWeBuild',  href: '/what-we-build' },
+      { labelKey: 'career',       href: '/career' },
+      { labelKey: 'contact',      href: '/contact' },
     ],
   },
   {

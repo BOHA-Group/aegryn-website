@@ -27,6 +27,43 @@ Synthesis: "Aegryn protects what endures."
 
 Each asset operates independently and carries the tagline: "An Aegryn company."
 
+## What We Build
+
+Aegryn designs, funds and operates proprietary digital ecosystems across five verticals:
+- **Subblink** (subblink.app) — B2B SaaS, AI-powered contract analysis
+- **Neediu** (neediu.com) — B2C marketplace, home services
+- **Primiom** (primiom.com) — B2C, AI-assisted real estate
+- **Movtoo** (movtoo.com) — B2C, on-demand urban delivery
+- **Hobconnect** (hobconnect.com) — B2C, social network around passions
+- Aegryn Advisory — cybersecurity, AI audit, digital strategy
+
+## M&A Auction Platform — AEGRYN Auction
+
+AEGRYN operates a structured auction platform for the sale and acquisition of digital tech assets (SaaS, B2C platforms, infrastructure):
+- Sellers submit assets → graded by AEGRYN team
+- Buyers become members, sign NDA, access confidential dossiers
+- Competitive bidding with structured closing process
+- Session-based model (calendar of auction sessions)
+- Focus: European-market tech assets, €500K–€50M range
+- Key pages: /auction/catalog, /auction/how-to-sell, /auction/how-to-buy, /auction/sessions
+
+## Grade System — AEGRYN Grade
+
+AEGRYN developed a proprietary grading methodology for digital assets, equivalent to a credit rating for tech companies:
+- AEG ★ — Apex (absolute excellence)
+- AAA — Gold (premium)
+- AA  — Silver (solid)
+- A   — Blue (standard)
+- B   — Amber (early stage)
+Graded assets are eligible for the AEGRYN auction. Grade methodology: /grade/methodology
+
+## Valuation — AEGRYN Valuation
+
+AEGRYN provides free, instant preliminary valuation of digital assets using proprietary SaaS and tech scoring models.
+- Multi-criteria: ARR, NRR, churn, TAM, tech stack, team
+- Benchmarked against European comparable transactions
+- Tool available at: /valuation
+
 ## Expert Network — Aegryn Experts
 
 Aegryn operates a curated network of transactional tech experts available to buyers and sellers engaged in M&A processes:
@@ -76,8 +113,14 @@ French (fr), English (en), German (de), Italian (it), Spanish (es), Dutch (nl)
 
 - [Home](https://aegryn.com)
 - [What We Build](https://aegryn.com/en/what-we-build)
+- [Auction Catalog](https://aegryn.com/en/auction/catalog)
+- [How to Sell](https://aegryn.com/en/auction/how-to-sell)
+- [How to Buy](https://aegryn.com/en/auction/how-to-buy)
+- [Grade System](https://aegryn.com/en/grade)
+- [Valuation Tool](https://aegryn.com/en/valuation)
 - [Advisory](https://aegryn.com/en/advisory)
 - [Expert Network](https://aegryn.com/en/experts)
+- [Blog](https://aegryn.com/en/blog)
 - [About](https://aegryn.com/en/about)
 - [Contact](https://aegryn.com/en/contact)
 - [Subblink](https://subblink.app)

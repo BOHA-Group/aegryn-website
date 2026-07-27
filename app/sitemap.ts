@@ -36,6 +36,15 @@ const STATIC_ROUTES = [
   { path: '/help/faq',                          priority: 0.6,  changeFrequency: 'monthly' as const },
 ]
 
+const WHAT_WE_BUILD_SLUG: Record<string, string> = {
+  fr: '/ce-que-nous-construisons',
+  en: '/what-we-build',
+  de: '/was-wir-bauen',
+  es: '/lo-que-construimos',
+  it: '/cosa-costruiamo',
+  nl: '/wat-we-bouwen',
+}
+
 const EXPERTS_SLUG: Record<string, string> = {
   fr: '/experts',
   en: '/experts',
@@ -65,6 +74,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates:       { languages: alternates },
       })
     }
+  }
+
+  // /what-we-build — slugs localisés
+  const wwbAlternates: Record<string, string> = {}
+  for (const locale of LOCALES) {
+    wwbAlternates[locale] = `${BASE}/${locale}${WHAT_WE_BUILD_SLUG[locale]}`
+  }
+  wwbAlternates['x-default'] = `${BASE}/en/what-we-build`
+  for (const locale of LOCALES) {
+    entries.push({
+      url:             `${BASE}/${locale}${WHAT_WE_BUILD_SLUG[locale]}`,
+      lastModified:    now,
+      changeFrequency: 'monthly' as const,
+      priority:        0.8,
+      alternates:      { languages: wwbAlternates },
+    })
   }
 
   // /experts — slugs localisés (fr+en+nl: /experts, de: /experten, es: /expertos, it: /esperti)
