@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star } from 'lucide-react'
@@ -38,9 +39,11 @@ function ExpertCard({ profile, t }: { profile: ExpertProfile; t: ReturnType<type
     <div className="bg-ag-white border border-ag-border p-6 flex flex-col gap-4">
       <div className="flex items-start gap-4">
         {profile.avatar_url ? (
-          <img
+          <Image
             src={profile.avatar_url}
             alt={`${profile.first_name} ${profile.last_name}`}
+            width={48}
+            height={48}
             className="w-12 h-12 object-cover shrink-0"
           />
         ) : (

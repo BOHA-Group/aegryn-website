@@ -1,4 +1,5 @@
 import { redirect } from 'next/navigation'
+import Link          from 'next/link'
 import { getUser }  from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 
@@ -29,18 +30,18 @@ export default async function ExpertClientLayout({ children }: { children: React
 
           <nav className="flex-1 px-3 py-4 flex flex-col gap-5 overflow-y-auto">
             <div className="flex flex-col gap-0.5">
-              <a
+              <Link
                 href="/client/expert"
                 className="flex items-center px-3 py-2 font-sans text-[12px] text-white/70 hover:text-white hover:bg-white/5 transition-colors"
               >
                 Ma fiche expert
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/client/account"
                 className="flex items-center px-3 py-2 font-sans text-[12px] text-white/50 hover:text-white/80 hover:bg-white/5 transition-colors"
               >
                 Mon compte
-              </a>
+              </Link>
             </div>
           </nav>
 
