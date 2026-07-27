@@ -22,7 +22,6 @@ export default async function AdvisoryPage({ params }: Props) {
 
   const whoFor  = t.raw('whoFor.items')  as { title: string; desc: string }[]
   const experts = t.raw('experts.items') as { title: string; desc: string }[]
-  const domains = t.raw('domains.items') as { title: string; desc: string }[]
 
   return (
     <>
@@ -140,27 +139,26 @@ export default async function AdvisoryPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Domains */}
+      {/* Valuation CTA */}
       <section className="border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-          <div className="flex items-center justify-between mb-12">
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-              / {t('domains.label')}
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <div>
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
+              / {t('valuationCta.label')}
+            </p>
+            <p
+              className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2] max-w-xl"
+              style={{ fontSize: 'clamp(18px,2vw,28px)' }}
+            >
+              {t('valuationCta.title')}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border">
-            {domains.map((d, i) => (
-              <div key={i} className="bg-ag-off-white p-8 hover:bg-ag-white transition-colors">
-                <h3
-                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-3"
-                  style={{ fontSize: 'clamp(15px,1.3vw,18px)' }}
-                >
-                  {d.title}
-                </h3>
-                <p className="text-[13px] text-ag-gray leading-relaxed">{d.desc}</p>
-              </div>
-            ))}
-          </div>
+          <Link
+            href={t('valuationCta.href')}
+            className="shrink-0 inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex hover:text-ag-navy transition-colors"
+          >
+            {t('valuationCta.cta')} <ArrowUpRight size={14} />
+          </Link>
         </div>
       </section>
 

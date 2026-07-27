@@ -20,7 +20,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
   const forWhom    = t.raw('forWhom.items')   as { title: string; desc: string }[]
   const steps      = t.raw('offer.steps')     as { num: string; title: string; desc: string }[]
   const diffItems  = t.raw('diff.items')      as { title: string; desc: string }[]
-  const expertItems    = t.raw('experts.items')   as { num: string; title: string; desc: string; badge?: string }[]
+  const expertPhases   = t.raw('experts.phases')  as { label: string; items: { num: string; title: string; desc: string; badge?: string }[] }[]
   const roadmapItems    = t.raw('roadmap.items')   as { phase: string; title: string; desc: string; status: string }[]
 
   const serviceLd = serviceJsonLd({
@@ -91,19 +91,22 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-14 max-w-xl">
             {t('experts.desc')}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
-            {expertItems.map(({ num, title, desc, badge }) => (
-              <div key={num} className="bg-ag-white p-8 flex flex-col gap-3">
-                <div className="flex items-center justify-between gap-2">
-                  <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex">{num}</span>
-                  {badge === 'in_deployment' && (
-                    <span className="font-mono text-[9px] tracking-[0.14em] uppercase px-2 py-0.5 bg-amber-50 text-amber-600 border border-amber-200">
-                      {roadmapItems.find((i) => i.status === 'in_deployment')?.phase ?? 'In deployment'}
-                    </span>
-                  )}
+          <div className="flex flex-col gap-12">
+            {expertPhases.map((phase) => (
+              <div key={phase.label}>
+                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-5 flex items-center gap-3">
+                  <span className="w-6 h-px bg-ag-apex/50 inline-block" />
+                  {phase.label}
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+                  {phase.items.map(({ num, title, desc }) => (
+                    <div key={num} className="bg-ag-white p-8 flex flex-col gap-3">
+                      <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex">{num}</span>
+                      <h3 className="font-sans font-semibold text-ag-black text-[16px] leading-snug">{title}</h3>
+                      <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
+                    </div>
+                  ))}
                 </div>
-                <h3 className="font-sans font-semibold text-ag-black text-[16px] leading-snug">{title}</h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>

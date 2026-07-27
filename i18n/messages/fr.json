@@ -2699,6 +2699,8 @@
     },
     "tabs": {
       "overview": "Présentation",
+      "advisory_tech": "Advisory Tech",
+      "advisory_transaction": "Advisory Transaction",
       "certification": "Certification",
       "distribution": "Distribution",
       "dealflow": "Deal Flow",

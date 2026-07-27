@@ -2730,6 +2730,8 @@
     },
     "tabs": {
       "overview": "Presentación",
+      "advisory_tech": "Advisory Tech",
+      "advisory_transaction": "Advisory Transaction",
       "certification": "Certificación",
       "distribution": "Distribución",
       "dealflow": "Deal Flow",
