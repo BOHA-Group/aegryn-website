@@ -4579,5 +4579,66 @@
     "signingBtn": "Signature en cours…",
     "acceptBtn": "Accepter et accéder au catalogue",
     "versionFooter": "Signature horodatée et journalisée (IP, user agent)"
+  },
+  "experts": {
+    "meta": {
+      "title": "Réseau d'experts — AEGRYN",
+      "desc": "Accédez aux meilleurs experts M&A tech : conseil transactionnel, due diligence RH, juridique, cybersécurité, W&I Insurance. Un réseau sélectionné par AEGRYN."
+    },
+    "hero": {
+      "label": "Réseau d'experts AEGRYN",
+      "title": "Les experts qui font les transactions.",
+      "desc": "AEGRYN constitue un réseau de référence d'experts transactionnels tech — juristes M&A, CDDs techniques, fiscalistes, assureurs W&I. Chaque fiche est validée par l'équipe AEGRYN."
+    },
+    "filters": {
+      "profession": "Spécialité",
+      "all": "Toutes",
+      "country": "Pays",
+      "language": "Langue",
+      "specialty": "Domaine"
+    },
+    "card": {
+      "contact": "Contacter",
+      "verifiedBadge": "Vérifié AEGRYN",
+      "rateFrom": "À partir de",
+      "rateUnit": "€/h"
+    },
+    "empty": {
+      "title": "Aucun expert disponible pour le moment.",
+      "desc": "Le réseau est en cours de constitution. Revenez prochainement ou candidatez ci-dessous."
+    },
+    "waitlist": {
+      "label": "Vous êtes expert ?",
+      "title": "Rejoignez le réseau.",
+      "desc": "Le réseau d'experts AEGRYN est en cours d'ouverture. Déposez votre candidature — notre équipe examine chaque profil et vous contactera pour un entretien de qualification. L'accès au réseau se fera via un abonnement mensuel de référencement (89 € HT/mois).",
+      "fieldPrenom": "Prénom",
+      "fieldNom": "Nom",
+      "fieldEmail": "Email professionnel",
+      "fieldProfession": "Spécialité principale",
+      "fieldOrg": "Cabinet / Organisation",
+      "fieldCity": "Ville",
+      "fieldCountry": "Pays",
+      "fieldBio": "Présentation courte (facultatif)",
+      "fieldWebsite": "Site web (facultatif)",
+      "fieldSpecialties": "Domaines d'expertise (facultatif)",
+      "submit": "Soumettre ma candidature",
+      "submitting": "Envoi…",
+      "successTitle": "Candidature reçue.",
+      "successDesc": "Nous l'examinerons sous 5 jours ouvrés et vous contacterons pour un entretien de qualification.",
+      "errorMsg": "Une erreur s'est produite. Merci de réessayer.",
+      "duplicateMsg": "Un profil existe déjà pour cet email."
+    },
+    "professions": {
+      "M&A Advisor": "Conseil M&A",
+      "Lawyer": "Juriste / Avocat",
+      "Accountant": "Expert-comptable / Auditeur",
+      "CTO": "CTO / Architecte technique",
+      "Cybersecurity": "Cybersécurité",
+      "HR & Social": "RH & Droit social",
+      "Insurance": "Assurance (W&I)",
+      "Tax": "Fiscaliste",
+      "Investor": "Investisseur / Family Office",
+      "Other": "Autre"
+    }
   }
 }

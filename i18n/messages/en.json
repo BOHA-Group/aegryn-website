@@ -4580,5 +4580,66 @@
     "signingBtn": "Signing…",
     "acceptBtn": "Accept and access the catalogue",
     "versionFooter": "Timestamped and logged signature (IP, user agent)"
+  },
+  "experts": {
+    "meta": {
+      "title": "Expert Network — AEGRYN",
+      "desc": "Access top M&A tech experts: transactional advisory, HR due diligence, legal, cybersecurity, W&I Insurance. A network curated by AEGRYN."
+    },
+    "hero": {
+      "label": "AEGRYN Expert Network",
+      "title": "The experts who close deals.",
+      "desc": "AEGRYN builds a reference network of transactional tech experts — M&A lawyers, technical DDers, tax advisors, W&I insurers. Every profile is vetted by the AEGRYN team."
+    },
+    "filters": {
+      "profession": "Specialty",
+      "all": "All",
+      "country": "Country",
+      "language": "Language",
+      "specialty": "Domain"
+    },
+    "card": {
+      "contact": "Contact",
+      "verifiedBadge": "AEGRYN Verified",
+      "rateFrom": "From",
+      "rateUnit": "€/h"
+    },
+    "empty": {
+      "title": "No experts available yet.",
+      "desc": "The network is being built. Come back soon or apply below."
+    },
+    "waitlist": {
+      "label": "Are you an expert?",
+      "title": "Join the network.",
+      "desc": "The AEGRYN expert network is opening. Submit your application — our team reviews every profile and will contact you for a qualification interview. Access is via a monthly listing subscription (€89 excl. VAT/month).",
+      "fieldPrenom": "First name",
+      "fieldNom": "Last name",
+      "fieldEmail": "Professional email",
+      "fieldProfession": "Main specialty",
+      "fieldOrg": "Firm / Organisation",
+      "fieldCity": "City",
+      "fieldCountry": "Country",
+      "fieldBio": "Short bio (optional)",
+      "fieldWebsite": "Website (optional)",
+      "fieldSpecialties": "Areas of expertise (optional)",
+      "submit": "Submit my application",
+      "submitting": "Sending…",
+      "successTitle": "Application received.",
+      "successDesc": "We will review it within 5 business days and contact you for a qualification interview.",
+      "errorMsg": "An error occurred. Please try again.",
+      "duplicateMsg": "A profile already exists for this email."
+    },
+    "professions": {
+      "M&A Advisor": "M&A Advisor",
+      "Lawyer": "Lawyer / Attorney",
+      "Accountant": "Accountant / Auditor",
+      "CTO": "CTO / Tech Architect",
+      "Cybersecurity": "Cybersecurity",
+      "HR & Social": "HR & Employment Law",
+      "Insurance": "Insurance (W&I)",
+      "Tax": "Tax Advisor",
+      "Investor": "Investor / Family Office",
+      "Other": "Other"
+    }
   }
 }

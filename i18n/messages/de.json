@@ -4603,5 +4603,66 @@
     "signingBtn": "Unterzeichnung läuft…",
     "acceptBtn": "Akzeptieren und auf den Katalog zugreifen",
     "versionFooter": "Zeitgestempelte und protokollierte Unterschrift (IP, User Agent)"
+  },
+  "experts": {
+    "meta": {
+      "title": "Expertennetzwerk — AEGRYN",
+      "desc": "Zugang zu führenden M&A-Tech-Experten: Transaktionsberatung, HR-Due-Diligence, Recht, Cybersicherheit, W&I-Versicherung. Ein von AEGRYN kuratiertes Netzwerk."
+    },
+    "hero": {
+      "label": "AEGRYN Expertennetzwerk",
+      "title": "Die Experten, die Deals abschliessen.",
+      "desc": "AEGRYN baut ein Referenznetzwerk transaktionaler Tech-Experten auf — M&A-Anwälte, technische Due-Diligence-Spezialisten, Steuerberater, W&I-Versicherer. Jedes Profil wird vom AEGRYN-Team geprüft."
+    },
+    "filters": {
+      "profession": "Fachgebiet",
+      "all": "Alle",
+      "country": "Land",
+      "language": "Sprache",
+      "specialty": "Bereich"
+    },
+    "card": {
+      "contact": "Kontakt",
+      "verifiedBadge": "AEGRYN Verifiziert",
+      "rateFrom": "Ab",
+      "rateUnit": "€/Std"
+    },
+    "empty": {
+      "title": "Noch keine Experten verfügbar.",
+      "desc": "Das Netzwerk wird aufgebaut. Kommen Sie bald wieder oder bewerben Sie sich unten."
+    },
+    "waitlist": {
+      "label": "Sind Sie Experte?",
+      "title": "Treten Sie dem Netzwerk bei.",
+      "desc": "Das AEGRYN-Expertennetzwerk öffnet sich. Reichen Sie Ihre Bewerbung ein — unser Team prüft jedes Profil und kontaktiert Sie für ein Qualifikationsgespräch. Der Zugang erfolgt über ein monatliches Listing-Abonnement (89 € zzgl. MwSt./Monat).",
+      "fieldPrenom": "Vorname",
+      "fieldNom": "Nachname",
+      "fieldEmail": "Geschäftliche E-Mail",
+      "fieldProfession": "Hauptspezialisierung",
+      "fieldOrg": "Kanzlei / Organisation",
+      "fieldCity": "Stadt",
+      "fieldCountry": "Land",
+      "fieldBio": "Kurze Vorstellung (optional)",
+      "fieldWebsite": "Website (optional)",
+      "fieldSpecialties": "Fachgebiete (optional)",
+      "submit": "Bewerbung einreichen",
+      "submitting": "Wird gesendet…",
+      "successTitle": "Bewerbung erhalten.",
+      "successDesc": "Wir prüfen diese innerhalb von 5 Werktagen und kontaktieren Sie für ein Qualifikationsgespräch.",
+      "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+      "duplicateMsg": "Für diese E-Mail-Adresse existiert bereits ein Profil."
+    },
+    "professions": {
+      "M&A Advisor": "M&A-Berater",
+      "Lawyer": "Anwalt / Rechtsanwalt",
+      "Accountant": "Wirtschaftsprüfer / Steuerberater",
+      "CTO": "CTO / Technischer Architekt",
+      "Cybersecurity": "Cybersicherheit",
+      "HR & Social": "HR & Arbeitsrecht",
+      "Insurance": "Versicherung (W&I)",
+      "Tax": "Steuerberater",
+      "Investor": "Investor / Family Office",
+      "Other": "Sonstiges"
+    }
   }
 }

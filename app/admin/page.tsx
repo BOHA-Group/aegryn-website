@@ -55,6 +55,7 @@ export default async function AdminIndexPage({
     { count: offersSubmitted },
     { count: transactionsOpen },
     { count: commissionsDue },
+    { count: expertsPending },
   ] = await Promise.all([
     supa.from('assets').select('*', { count: 'exact', head: true }).eq('status', 'submitted'),
     supa.from('assets').select('*', { count: 'exact', head: true }).eq('status', 'graded'),
@@ -64,6 +65,7 @@ export default async function AdminIndexPage({
     supa.from('auction_bids').select('*', { count: 'exact', head: true }).eq('status', 'submitted'),
     supa.from('transactions').select('*', { count: 'exact', head: true }).not('status', 'in', '(closed,cancelled)'),
     supa.from('commissions').select('*', { count: 'exact', head: true }).neq('status', 'paid'),
+    supa.from('expert_applications').select('*', { count: 'exact', head: true }).eq('status', 'pending'),
   ])
 
   const domains: Domain[] = [
@@ -147,6 +149,13 @@ export default async function AdminIndexPage({
           desc:  'Cabinets juridiques, experts-comptables, cybersécurité, apporteurs d\'affaires.',
           badge: null,
         },
+        {
+          href:       `/admin/experts${qs}`,
+          title:      '🧑‍💼 Experts réseau',
+          desc:       'Candidatures experts + fiches publiées. Abonnement 89 € HT/mois.',
+          badge:      expertsPending ?? 0,
+          badgeLabel: 'en attente',
+        },
       ],
     },
     {
@@ -191,7 +200,7 @@ export default async function AdminIndexPage({
   ]
 
   const totalActionRequired =
-    (assetsNew ?? 0) + (offersSubmitted ?? 0) + (kycPending ?? 0) + (ndaPending ?? 0) + (valLeads ?? 0)
+    (assetsNew ?? 0) + (offersSubmitted ?? 0) + (kycPending ?? 0) + (ndaPending ?? 0) + (valLeads ?? 0) + (expertsPending ?? 0)
 
   return (
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">

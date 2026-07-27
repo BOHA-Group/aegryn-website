@@ -4603,5 +4603,66 @@
     "signingBtn": "Firma in corso…",
     "acceptBtn": "Accetta e accedi al catalogo",
     "versionFooter": "Firma marcata temporalmente e registrata (IP, user agent)"
+  },
+  "experts": {
+    "meta": {
+      "title": "Rete di esperti — AEGRYN",
+      "desc": "Accedi ai migliori esperti M&A tech: consulenza transazionale, due diligence HR, legale, cybersicurezza, W&I Insurance. Una rete selezionata da AEGRYN."
+    },
+    "hero": {
+      "label": "Rete di esperti AEGRYN",
+      "title": "Gli esperti che chiudono le operazioni.",
+      "desc": "AEGRYN costruisce una rete di riferimento di esperti transazionali tech — avvocati M&A, specialisti in due diligence tecnica, consulenti fiscali, assicuratori W&I. Ogni profilo è validato dal team AEGRYN."
+    },
+    "filters": {
+      "profession": "Specialità",
+      "all": "Tutte",
+      "country": "Paese",
+      "language": "Lingua",
+      "specialty": "Area"
+    },
+    "card": {
+      "contact": "Contattare",
+      "verifiedBadge": "Verificato AEGRYN",
+      "rateFrom": "A partire da",
+      "rateUnit": "€/h"
+    },
+    "empty": {
+      "title": "Nessun esperto disponibile per il momento.",
+      "desc": "La rete è in costruzione. Tornate presto o candidate di seguito."
+    },
+    "waitlist": {
+      "label": "Sei un esperto?",
+      "title": "Unisciti alla rete.",
+      "desc": "La rete di esperti AEGRYN sta aprendo. Invia la tua candidatura — il nostro team esamina ogni profilo e ti contatterà per un colloquio di qualificazione. L'accesso avviene tramite un abbonamento mensile di referenziazione (89 € + IVA/mese).",
+      "fieldPrenom": "Nome",
+      "fieldNom": "Cognome",
+      "fieldEmail": "Email professionale",
+      "fieldProfession": "Specialità principale",
+      "fieldOrg": "Studio / Organizzazione",
+      "fieldCity": "Città",
+      "fieldCountry": "Paese",
+      "fieldBio": "Breve presentazione (opzionale)",
+      "fieldWebsite": "Sito web (opzionale)",
+      "fieldSpecialties": "Aree di competenza (opzionale)",
+      "submit": "Invia la mia candidatura",
+      "submitting": "Invio in corso…",
+      "successTitle": "Candidatura ricevuta.",
+      "successDesc": "La esamineremo entro 5 giorni lavorativi e ti contatteremo per un colloquio di qualificazione.",
+      "errorMsg": "Si è verificato un errore. Si prega di riprovare.",
+      "duplicateMsg": "Esiste già un profilo per questa email."
+    },
+    "professions": {
+      "M&A Advisor": "Consulente M&A",
+      "Lawyer": "Avvocato / Giurista",
+      "Accountant": "Revisore / Commercialista",
+      "CTO": "CTO / Architetto tecnico",
+      "Cybersecurity": "Cybersicurezza",
+      "HR & Social": "HR e Diritto del lavoro",
+      "Insurance": "Assicurazione (W&I)",
+      "Tax": "Consulente fiscale",
+      "Investor": "Investitore / Family Office",
+      "Other": "Altro"
+    }
   }
 }

@@ -17,12 +17,14 @@ const ROLE_LABELS: Record<string, string> = {
   partner:     'Partenaire',
   admin:       'Administrateur',
   super_admin: 'Super Admin',
+  expert:      'Expert réseau',
 }
 
 const ROLE_LINKS: Record<string, string> = {
   buyer:   '/client/buyer',
   seller:  '/client/seller',
   partner: '/client/partner',
+  expert:  '/client/expert',
   admin:   '/admin',
 }
 

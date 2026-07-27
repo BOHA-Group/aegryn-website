@@ -4603,5 +4603,66 @@
     "signingBtn": "Firmando…",
     "acceptBtn": "Aceptar y acceder al catálogo",
     "versionFooter": "Firma con marca de tiempo registrada (IP, user agent)"
+  },
+  "experts": {
+    "meta": {
+      "title": "Red de expertos — AEGRYN",
+      "desc": "Acceda a los mejores expertos en M&A tech: asesoría transaccional, due diligence RR.HH., legal, ciberseguridad, W&I Insurance. Una red seleccionada por AEGRYN."
+    },
+    "hero": {
+      "label": "Red de expertos AEGRYN",
+      "title": "Los expertos que cierran operaciones.",
+      "desc": "AEGRYN construye una red de referencia de expertos transaccionales tech — abogados M&A, especialistas en due diligence técnica, asesores fiscales, aseguradores W&I. Cada perfil es validado por el equipo AEGRYN."
+    },
+    "filters": {
+      "profession": "Especialidad",
+      "all": "Todas",
+      "country": "País",
+      "language": "Idioma",
+      "specialty": "Área"
+    },
+    "card": {
+      "contact": "Contactar",
+      "verifiedBadge": "Verificado AEGRYN",
+      "rateFrom": "Desde",
+      "rateUnit": "€/h"
+    },
+    "empty": {
+      "title": "Ningún experto disponible por el momento.",
+      "desc": "La red está en construcción. Vuelva pronto o candidátese a continuación."
+    },
+    "waitlist": {
+      "label": "¿Es usted experto?",
+      "title": "Únase a la red.",
+      "desc": "La red de expertos AEGRYN está abriéndose. Envíe su candidatura — nuestro equipo revisa cada perfil y le contactará para una entrevista de cualificación. El acceso se realiza mediante una suscripción mensual de referenciación (89 € + IVA/mes).",
+      "fieldPrenom": "Nombre",
+      "fieldNom": "Apellido",
+      "fieldEmail": "Email profesional",
+      "fieldProfession": "Especialidad principal",
+      "fieldOrg": "Despacho / Organización",
+      "fieldCity": "Ciudad",
+      "fieldCountry": "País",
+      "fieldBio": "Presentación breve (opcional)",
+      "fieldWebsite": "Sitio web (opcional)",
+      "fieldSpecialties": "Áreas de experiencia (opcional)",
+      "submit": "Enviar mi candidatura",
+      "submitting": "Enviando…",
+      "successTitle": "Candidatura recibida.",
+      "successDesc": "La revisaremos en 5 días hábiles y le contactaremos para una entrevista de cualificación.",
+      "errorMsg": "Se ha producido un error. Por favor, inténtelo de nuevo.",
+      "duplicateMsg": "Ya existe un perfil para este email."
+    },
+    "professions": {
+      "M&A Advisor": "Asesor M&A",
+      "Lawyer": "Abogado / Jurista",
+      "Accountant": "Auditor / Contable",
+      "CTO": "CTO / Arquitecto técnico",
+      "Cybersecurity": "Ciberseguridad",
+      "HR & Social": "RR.HH. y Derecho laboral",
+      "Insurance": "Seguro (W&I)",
+      "Tax": "Asesor fiscal",
+      "Investor": "Inversor / Family Office",
+      "Other": "Otro"
+    }
   }
 }

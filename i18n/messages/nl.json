@@ -4603,5 +4603,66 @@
     "signingBtn": "Handtekening wordt geplaatst…",
     "acceptBtn": "Aanvaarden en toegang tot de catalogus",
     "versionFooter": "Tijdgestempelde en geregistreerde handtekening (IP, user agent)"
+  },
+  "experts": {
+    "meta": {
+      "title": "Expertennetwerk — AEGRYN",
+      "desc": "Toegang tot de beste M&A tech-experts: transactieadvies, HR due diligence, juridisch, cybersecurity, W&I Insurance. Een netwerk samengesteld door AEGRYN."
+    },
+    "hero": {
+      "label": "AEGRYN Expertennetwerk",
+      "title": "De experts die deals sluiten.",
+      "desc": "AEGRYN bouwt een referentienetwerk van transactionele tech-experts — M&A-advocaten, technische due diligence-specialisten, belastingadviseurs, W&I-verzekeraars. Elk profiel wordt gevalideerd door het AEGRYN-team."
+    },
+    "filters": {
+      "profession": "Specialiteit",
+      "all": "Alle",
+      "country": "Land",
+      "language": "Taal",
+      "specialty": "Domein"
+    },
+    "card": {
+      "contact": "Contacteren",
+      "verifiedBadge": "AEGRYN Geverifieerd",
+      "rateFrom": "Vanaf",
+      "rateUnit": "€/u"
+    },
+    "empty": {
+      "title": "Nog geen experts beschikbaar.",
+      "desc": "Het netwerk wordt opgebouwd. Kom binnenkort terug of kandidateer hieronder."
+    },
+    "waitlist": {
+      "label": "Bent u een expert?",
+      "title": "Doe mee met het netwerk.",
+      "desc": "Het AEGRYN-expertennetwerk opent zijn deuren. Dien uw kandidatuur in — ons team bekijkt elk profiel en neemt contact met u op voor een kwalificatiegesprek. Toegang via een maandelijks referentieabonnement (€ 89 excl. btw/maand).",
+      "fieldPrenom": "Voornaam",
+      "fieldNom": "Achternaam",
+      "fieldEmail": "Professioneel e-mailadres",
+      "fieldProfession": "Hoofdspecialiteit",
+      "fieldOrg": "Kantoor / Organisatie",
+      "fieldCity": "Stad",
+      "fieldCountry": "Land",
+      "fieldBio": "Korte voorstelling (optioneel)",
+      "fieldWebsite": "Website (optioneel)",
+      "fieldSpecialties": "Expertisegebieden (optioneel)",
+      "submit": "Mijn kandidatuur indienen",
+      "submitting": "Verzenden…",
+      "successTitle": "Kandidatuur ontvangen.",
+      "successDesc": "We beoordelen deze binnen 5 werkdagen en nemen contact met u op voor een kwalificatiegesprek.",
+      "errorMsg": "Er is een fout opgetreden. Probeer het opnieuw.",
+      "duplicateMsg": "Er bestaat al een profiel voor dit e-mailadres."
+    },
+    "professions": {
+      "M&A Advisor": "M&A-adviseur",
+      "Lawyer": "Advocaat / Jurist",
+      "Accountant": "Accountant / Auditor",
+      "CTO": "CTO / Technisch architect",
+      "Cybersecurity": "Cybersecurity",
+      "HR & Social": "HR & Arbeidsrecht",
+      "Insurance": "Verzekering (W&I)",
+      "Tax": "Belastingadviseur",
+      "Investor": "Investeerder / Family Office",
+      "Other": "Overige"
+    }
   }
 }
