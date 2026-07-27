@@ -29,9 +29,11 @@ const GRADE_LINKS: { labelKey: string; href: LinkHref }[] = [
 ]
 
 const SERVICES_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'servicesAdvisory',   href: '/advisory' },
-  { labelKey: 'servicesAlliances',  href: '/alliances' },
-  { labelKey: 'servicesAcquisition',href: '/services/acquisition-support' },
+  { labelKey: 'servicesAdvisory',    href: '/advisory' },
+  { labelKey: 'servicesAcquisition', href: '/services/acquisition-support' },
+  { labelKey: 'servicesValuation',   href: '/valuation' },
+  { labelKey: 'servicesAlliances',   href: '/alliances' },
+  { labelKey: 'servicesExperts',     href: '/experts' },
 ]
 
 function DropdownMenu({ links, t }: { links: { labelKey: string; href: LinkHref }[]; t: ReturnType<typeof useTranslations> }) {
@@ -46,6 +48,81 @@ function DropdownMenu({ links, t }: { links: { labelKey: string; href: LinkHref 
           {t(labelKey)}
         </Link>
       ))}
+    </div>
+  )
+}
+
+function ServicesMegaMenu({
+  t,
+  onClose,
+}: {
+  t: ReturnType<typeof useTranslations>
+  onClose: () => void
+}) {
+  type Section = {
+    labelKey: string
+    desc: string
+    links: { labelKey: string; href: LinkHref }[]
+  }
+  const SECTIONS: Section[] = [
+    {
+      labelKey: 'servicesSectionTech',
+      desc:     'servicesSectionTechDesc',
+      links: [
+        { labelKey: 'servicesAdvisory', href: '/advisory' },
+      ],
+    },
+    {
+      labelKey: 'servicesSectionTransaction',
+      desc:     'servicesSectionTransactionDesc',
+      links: [
+        { labelKey: 'servicesAcquisition', href: '/services/acquisition-support' },
+        { labelKey: 'servicesValuation',   href: '/valuation' },
+      ],
+    },
+    {
+      labelKey: 'servicesSectionNetwork',
+      desc:     'servicesSectionNetworkDesc',
+      links: [
+        { labelKey: 'servicesAlliances', href: '/alliances' },
+        { labelKey: 'servicesExperts',   href: '/experts' },
+      ],
+    },
+  ]
+  return (
+    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[560px] bg-ag-white border border-ag-border shadow-lg z-50">
+      <div className="px-5 py-3 border-b border-ag-border">
+        <p className="font-mono text-[9px] tracking-[0.30em] uppercase text-ag-gray-light">
+          {t('servicesMenuLabel')}
+        </p>
+      </div>
+      <div className="grid grid-cols-3 divide-x divide-ag-border">
+        {SECTIONS.map((section) => (
+          <div key={section.labelKey} className="p-4 flex flex-col gap-3">
+            <div>
+              <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex-ink font-semibold mb-0.5">
+                {t(section.labelKey)}
+              </p>
+              <p className="font-sans text-[10px] text-ag-gray-light leading-snug">
+                {t(section.desc)}
+              </p>
+            </div>
+            <div className="flex flex-col gap-0">
+              {section.links.map(({ labelKey, href }) => (
+                <Link
+                  key={labelKey}
+                  href={href}
+                  onClick={onClose}
+                  className="flex items-center justify-between py-2 font-sans text-[12px] text-ag-gray hover:text-ag-black border-b border-ag-border/40 last:border-0 transition-colors"
+                >
+                  {t(labelKey)}
+                  <span className="text-ag-apex-ink text-[10px]">→</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
@@ -275,7 +352,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               {isServicesActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
             </button>
-            {activeDropdown === 'services' && <DropdownMenu links={SERVICES_LINKS} t={t} />}
+            {activeDropdown === 'services' && <ServicesMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
           </div>
 
           {/* Blog */}
@@ -462,12 +539,24 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'services' ? 'rotate-180' : ''}`} />
               </button>
               {mobileAccordion === 'services' && (
-                <div className="py-2 pl-4 flex flex-col gap-1">
-                  {SERVICES_LINKS.map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-2.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
-                      {t(labelKey)}
-                    </Link>
+                <div className="py-3 flex flex-col gap-4">
+                  {[
+                    { labelKey: 'servicesSectionTech',        links: [{ labelKey: 'servicesAdvisory', href: '/advisory' }] },
+                    { labelKey: 'servicesSectionTransaction', links: [{ labelKey: 'servicesAcquisition', href: '/services/acquisition-support' }, { labelKey: 'servicesValuation', href: '/valuation' }] },
+                    { labelKey: 'servicesSectionNetwork',     links: [{ labelKey: 'servicesAlliances', href: '/alliances' }, { labelKey: 'servicesExperts', href: '/experts' }] },
+                  ].map((section) => (
+                    <div key={section.labelKey}>
+                      <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-ag-apex mb-1 pl-1">{t(section.labelKey)}</p>
+                      <div className="flex flex-col gap-0">
+                        {section.links.map(({ labelKey, href }) => (
+                          <Link key={labelKey} href={href as LinkHref} onClick={closeMobile}
+                            className="flex items-center justify-between py-2.5 pl-2 font-sans text-[13px] text-white/50 hover:text-white transition-colors border-b border-white/5 last:border-0">
+                            {t(labelKey)}
+                            <span className="text-ag-apex text-[10px]">→</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
               )}
