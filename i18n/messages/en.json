@@ -868,52 +868,47 @@
     },
     "experts": {
       "label": "Expertise mobilised",
-      "desc": "Aegryn Advisory intervenes on the technical domains that define the robustness and certifiability of a digital asset — before, during, or independently of any transaction.",
+      "desc": "AEGRYN Advisory Tech intervenes on the technical dimensions that define the robustness and certifiability of a digital asset — before, during, or independently of any transaction.",
       "items": [
         {
           "title": "Security Audit & Cybersecurity",
-          "desc": "Penetration testing, risk management, application and cloud infrastructure security."
+          "desc": "Penetration testing (black/grey/white box), attack surface audit, application security, cloud infrastructure, NIS2 compliance."
         },
         {
           "title": "Technical Architecture & Engineering",
-          "desc": "CTO as a service, full-stack architecture, platform scalability."
+          "desc": "CTO as a service, full-stack architecture review, scalability, migration, stack selection, technical documentation."
+        },
+        {
+          "title": "DevSecOps & Software Quality",
+          "desc": "CI/CD, test coverage, technical debt reduction, QA automation, observability — logs, monitoring, alerts. Directly improves the Code score (dimension C) of the AEGRYN grade."
         },
         {
           "title": "Data & Artificial Intelligence",
-          "desc": "AI strategy, automation, data governance."
+          "desc": "AI strategy, process automation, ML/MLOps pipelines, model evaluation, data governance."
+        },
+        {
+          "title": "EU AI Act Compliance & AI Ethics",
+          "desc": "AI system classification by risk level, regulatory technical documentation, AI system register, LLM red-teaming, algorithmic bias audit."
+        },
+        {
+          "title": "Data Engineering & Data Architecture",
+          "desc": "Data modelling, data warehouse, data lake, data governance and quality, portability and sovereignty of proprietary datasets."
         },
         {
           "title": "Design & User Experience",
-          "desc": "UX/UI, product identity, user journeys."
-        }
-      ]
-    },
-    "domains": {
-      "label": "Our areas of intervention",
-      "items": [
-        {
-          "title": "Digital Products",
-          "desc": "Mobile applications, web platforms, SaaS, technology choices, digital project management."
+          "desc": "UX/UI, design system, product identity, user journeys, usability testing."
         },
         {
-          "title": "Audit & Application Security",
-          "desc": "Evaluation of digital solutions, recommendations, compliance and awarding of an annual trust label."
+          "title": "Product Management & Roadmap",
+          "desc": "Product definition, backlog prioritisation, activation and retention metrics, roadmap coherence with certifiable value."
         },
         {
-          "title": "Artificial Intelligence & Automation",
-          "desc": "AI agents, process automation, productivity, integration of AI into products and organisations."
+          "title": "GDPR/LPD Compliance & Privacy by Design",
+          "desc": "Processing register, vendor DPAs, privacy policy, right to erasure, transfers outside the EU, Swiss LPD compliance."
         },
         {
-          "title": "Digital Law & Intellectual Property",
-          "desc": "Terms of Service, digital compliance, IP protection, legal structuring of digital products."
-        },
-        {
-          "title": "Design & User Experience",
-          "desc": "UX/UI, product identity, user journeys."
-        },
-        {
-          "title": "Business Strategy",
-          "desc": "Business architecture, revenue logic, capital efficiency, scalable models, market positioning."
+          "title": "Digital Accessibility",
+          "desc": "WCAG 2.1 AA audit, European Accessibility Act compliance (mandatory EU since June 2025). Critical for HealthTech and EdTech."
         }
       ]
     },
@@ -922,6 +917,12 @@
       "title": "Making the right decision starts with the right conversation.",
       "desc": "We offer qualified senior time, direct exchanges with the right experts, and immediately actionable recommendations. You pay for expertise and experience, not for structure.",
       "cta": "Book a session"
+    },
+    "valuationCta": {
+      "label": "Asset valuation",
+      "title": "Want to estimate the value of your asset before starting a remediation process?",
+      "cta": "Estimate my asset",
+      "href": "/valuation"
     }
   },
   "stats": {
@@ -945,7 +946,7 @@
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosystem",
     "advisoryLabel": "Consulting",
-    "advisoryDesc": "Remediation and advisory for assets that have not yet reached Grade A.",
+    "advisoryDesc": "Tech advisory and transaction support for AEGRYN-certified digital assets.",
     "advisoryBook": "Book a session ↗",
     "medallionText": "Let's talk . Contact us . Let's talk . Contact us .",
     "contactLabel": "Contact us",
@@ -1097,44 +1098,92 @@
     "experts": {
       "label": "Expertise mobilised",
       "title": "The right experts.\nFor every stage of the deal.",
-      "desc": "Depending on your file, AEGRYN mobilises the right partner experts.",
-      "items": [
+      "desc": "Depending on your file and the transaction phase, AEGRYN mobilises the right partner experts.",
+      "phases": [
         {
-          "num": "01",
-          "title": "Transaction Law & M&A",
-          "desc": "Legal due diligence, deal structuring, drafting and negotiating transaction documents — SPA, SHA, conditions precedent. Support before, during and after the transaction."
+          "label": "Pre-transaction",
+          "items": [
+            {
+              "num": "01",
+              "title": "Valuation & Market Benchmark",
+              "desc": "ARR multiple estimation, Quality of Earnings, sector comparables, defensible valuation range. The foundation of any serious negotiation."
+            },
+            {
+              "num": "02",
+              "title": "Vendor Readiness — Sale Preparation",
+              "desc": "Seller file audit before submission: data room, contracts, registers, GDPR compliance, technical debt. Reduces certification timeline by 30 to 50%."
+            },
+            {
+              "num": "03",
+              "title": "Digital Law & Intellectual Property",
+              "desc": "IP chain of title, open-source licences, assignment of founder and contractor rights, trademark protection, client contract compliance. Covers dimension I of the AEGRYN grade."
+            }
+          ]
         },
         {
-          "num": "02",
-          "title": "Digital Law & Intellectual Property",
-          "desc": "IP chain of title verification, open-source licence audits, codebase rights protection. Critical for the I dimension of the AEGRYN grade."
+          "label": "Due diligence & negotiation",
+          "items": [
+            {
+              "num": "04",
+              "title": "Transaction Law & M&A",
+              "desc": "SPA, SHA, LOI, APA, conditions precedent, reps & warranties, price mechanisms (locked box vs completion accounts). Support before, during and after the transaction."
+            },
+            {
+              "num": "05",
+              "title": "HR & Employment Due Diligence",
+              "desc": "Review of key contracts, BSPCE and change of control, latent employment liabilities, freelancer vs employee classification, non-compete and non-solicitation clauses."
+            },
+            {
+              "num": "06",
+              "title": "Sectoral Regulatory Due Diligence",
+              "desc": "FinTech (DORA, ACPR/FINMA authorisation), HealthTech (HDS, health GDPR), AI-native (EU AI Act), LegalTech (UPL), EdTech (COPPA). Essential for regulated verticals."
+            },
+            {
+              "num": "07",
+              "title": "Warranty & Indemnity Insurance",
+              "desc": "Introduction to W&I insurers for transactions above €500,000. Facilitates full price release at closing and covers reps & warranties."
+            }
+          ]
         },
         {
-          "num": "03",
-          "title": "Tax & Corporate Structuring",
-          "desc": "Exit tax optimisation for sellers, acquisition structuring for buyers — holding, SPV, earnout, Luxembourg/Switzerland/France."
+          "label": "Structuring & financing",
+          "items": [
+            {
+              "num": "08",
+              "title": "Tax & Corporate Structuring",
+              "desc": "Exit optimisation for sellers, acquisition structuring for buyers — holding, SPV, Luxembourg, Switzerland, France. Contribution-exchange and tax deferral."
+            },
+            {
+              "num": "09",
+              "title": "Financing & Financial Partners",
+              "desc": "Bridge financing to accelerate closing, co-investment to share exposure, mezzanine debt. Each introduction is specific to your deal profile."
+            },
+            {
+              "num": "10",
+              "title": "Earn-out Design & KPI Framework",
+              "desc": "Earnout mechanism design, metric definition, contractual seller protections against post-acquisition manipulation, dispute resolution clauses."
+            }
+          ]
         },
         {
-          "num": "04",
-          "title": "Financing & Financial Partners",
-          "desc": "Bridge financing to accelerate closing, co-investment to share exposure, structured earnout to align price with future performance."
-        },
-        {
-          "num": "05",
-          "title": "Blockchain Certification & Digital Notarization",
-          "desc": "Codebase timestamping at signing date, proof of authenticity, confidential escrow. KRYV Protocol in deployment."
-        },
-        {
-          "num": "06",
-          "title": "HR & Employment Due Diligence",
-          "desc": "Review of key contracts, stock options (BSPCE), change-of-control clauses, latent employment liabilities. Human capital audited on the same basis as code. In deployment.",
-          "badge": "in_deployment"
-        },
-        {
-          "num": "07",
-          "title": "Warranty & Indemnity Insurance",
-          "desc": "Introduction to W&I partner insurers for transactions above €500,000. Facilitates full price release at closing and reduces residual risk for the acquirer. In deployment.",
-          "badge": "in_deployment"
+          "label": "Post-closing",
+          "items": [
+            {
+              "num": "11",
+              "title": "Post-acquisition Integration",
+              "desc": "30/60/100-day integration plan: tech stack, HR, client communications, supplier contract migration. Maximises value preserved after closing."
+            },
+            {
+              "num": "12",
+              "title": "Executive HR Support",
+              "desc": "Post-sale management contract, non-compete (with financial consideration), leadership transition, golden parachute. Specific to founders who remain operational."
+            },
+            {
+              "num": "13",
+              "title": "Exit Tax Filing",
+              "desc": "Capital gains declaration, CH/FR/LU regimes by tax domicile, contribution-exchange, reinvestment of sale proceeds, PEA-PME. Distinct from pre-transaction structuring."
+            }
+          ]
         }
       ]
     },
@@ -2587,6 +2636,20 @@
         "desc": "VC/PE funds, M&A boutiques, tech accelerators. Source assets for sale or active acquirers. Partnership terms defined during the qualification interview.",
         "profiles": "Micro-PE funds · Boutique M&A firms · Tech accelerators · FONGIT",
         "cta": "Source an asset or acquirer"
+      },
+      "advisory_tech": {
+        "label": "Advisory Tech",
+        "title": "Certified technical experts",
+        "desc": "Partners mobilised to improve the robustness and certifiability of assets before or during the AEGRYN grade process.",
+        "profiles": "Cybersecurity firms (PASSI/CREST/OSCP) · Senior freelance CTOs (architecture, DevSecOps) · Data & AI experts (MLOps, governance) · Accredited external DPOs (GDPR/LPD) · EU AI Act compliance experts · Digital accessibility auditors (WCAG)",
+        "cta": "Become an Advisory Tech partner"
+      },
+      "advisory_transaction": {
+        "label": "Advisory Transaction",
+        "title": "M&A tech experts",
+        "desc": "Partners mobilised at every stage of the transaction cycle — from sale preparation to closing and post-acquisition integration.",
+        "profiles": "IP & tech law firms (chain of title, licences) · M&A transactional lawyers (SPA, SHA, APA) · Chartered accountants & statutory auditors · Corporate tax advisors (CH/FR/LU) · HR & employment law firms · W&I insurers (AIG, Tokio Marine) · Sectoral due diligence experts (FinTech, HealthTech, AI)",
+        "cta": "Become an Advisory Transaction partner"
       },
       "sequestre": {
         "label": "ESCROW & LEGAL",

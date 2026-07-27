@@ -868,52 +868,47 @@
     },
     "experts": {
       "label": "Ingezette expertise",
-      "desc": "Aegryn Advisory grijpt in op de technische domeinen die de robuustheid en certificeerbaarheid van een digitaal actief bepalen — voor, tijdens of onafhankelijk van een transactie.",
+      "desc": "AEGRYN Advisory Tech grijpt in op de technische dimensies die de robuustheid en certificeerbaarheid van een digitaal actief bepalen — voor, tijdens of onafhankelijk van een transactie.",
       "items": [
         {
           "title": "Beveiligingsaudit & Cybersecurity",
-          "desc": "Penetratietests, risicobeheer, applicatie- en cloudinfrastructuurbeveiliging."
+          "desc": "Penetratietests (black/grey/white box), audit van het aanvalsoppervlak, applicatiebeveiliging, cloudinfrastructuur, NIS2-conformiteit."
         },
         {
           "title": "Technische architectuur & Engineering",
-          "desc": "CTO as a service, full-stack architectuur, schaalbaarheid van platforms."
+          "desc": "CTO as a service, review van full-stack architectuur, schaalbaarheid, migratie, stackkeuze, technische documentatie."
+        },
+        {
+          "title": "DevSecOps & Softwarekwaliteit",
+          "desc": "CI/CD, testdekking, reductie van technische schuld, QA-automatisering, observability — logs, monitoring, alerts. Verbetert rechtstreeks de Code-score (dimensie C) van de AEGRYN-grade."
         },
         {
           "title": "Data & Kunstmatige Intelligentie",
-          "desc": "AI-strategie, automatisering, datagovernance."
+          "desc": "AI-strategie, procesautomatisering, ML/MLOps-pipelines, modelevaluatie, datagovernance."
         },
         {
-          "title": "Design & gebruikerservaring",
-          "desc": "UX/UI, productidentiteit, gebruikerstrajecten."
-        }
-      ]
-    },
-    "domains": {
-      "label": "Onze interventiegebieden",
-      "items": [
-        {
-          "title": "Digitale Producten",
-          "desc": "Mobiele applicaties, webplatforms, SaaS, technologiekeuzes, digitaal projectmanagement."
+          "title": "EU AI Act-conformiteit & AI-ethiek",
+          "desc": "Classificatie van AI-systemen op risiconiveau, regulatoire technische documentatie, AI-systeemregister, LLM-red-teaming, audit van algoritmische bias."
         },
         {
-          "title": "Audit & Applicatiebeveiliging",
-          "desc": "Evaluatie van digitale oplossingen, aanbevelingen, compliance en toekenning van een jaarlijks vertrouwenslabel."
-        },
-        {
-          "title": "Kunstmatige Intelligentie & Automatisering",
-          "desc": "AI-agenten, procesautomatisering, productiviteit, integratie van AI in producten en organisaties."
-        },
-        {
-          "title": "Digitaal Recht & Intellectueel Eigendom",
-          "desc": "Servicevoorwaarden, digitale compliance, IP-bescherming, juridische structurering van digitale producten."
+          "title": "Data Engineering & Dataarchitectuur",
+          "desc": "Datamodellering, data warehouse, data lake, datagovernance en -kwaliteit, portabiliteit en soevereiniteit van eigen datasets."
         },
         {
           "title": "Design & Gebruikerservaring",
-          "desc": "UX/UI, productidentiteit, gebruikersreizen."
+          "desc": "UX/UI, design system, productidentiteit, gebruikersreizen, usabilitytests."
         },
         {
-          "title": "Bedrijfsstrategie",
-          "desc": "Bedrijfsarchitectuur, inkomstenlogica, kapitaalefficiëntie, schaalbare modellen, marktpositionering."
+          "title": "Product Management & Roadmap",
+          "desc": "Productdefinitie, backlogprioritering, activerings- en retentiemetrics, coherentie van de roadmap met de certificeerbare waarde."
+        },
+        {
+          "title": "AVG/LPD-conformiteit & Privacy by Design",
+          "desc": "Verwerkingsregister, leveranciers-DPA's, privacyverklaring, recht op vergetelheid, overdrachten buiten de EU, Zwitserse LPD-conformiteit."
+        },
+        {
+          "title": "Digitale toegankelijkheid",
+          "desc": "WCAG 2.1 AA-audit, conformiteit met de European Accessibility Act (verplicht in de EU sinds juni 2025). Kritisch voor HealthTech en EdTech."
         }
       ]
     },
@@ -922,6 +917,12 @@
       "title": "De juiste beslissing begint met het juiste gesprek.",
       "desc": "Wij bieden gekwalificeerde senior tijd, directe uitwisselingen met de juiste experts en onmiddellijk uitvoerbare aanbevelingen. U betaalt voor expertise en ervaring, niet voor structuur.",
       "cta": "Sessie boeken"
+    },
+    "valuationCta": {
+      "label": "Activawaardering",
+      "title": "Wilt u de waarde van uw actief schatten voordat u een remediatieproces start?",
+      "cta": "Mijn actief waarderen",
+      "href": "/valuation"
     }
   },
   "stats": {
@@ -945,7 +946,7 @@
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosysteem",
     "advisoryLabel": "Advies",
-    "advisoryDesc": "Sanering en advies voor assets die Grade A nog niet hebben bereikt.",
+    "advisoryDesc": "Tech-advies en transactiebegeleiding voor AEGRYN-gecertificeerde digitale activa.",
     "advisoryBook": "Sessie boeken ↗",
     "medallionText": "Laten we praten . Neem contact op . Laten we praten . Neem contact op .",
     "contactLabel": "Neem contact op",
@@ -976,44 +977,92 @@
     "experts": {
       "label": "Ingezette expertise",
       "title": "De juiste experts.\nVoor elke fase van de deal.",
-      "desc": "Afhankelijk van uw dossier mobiliseert AEGRYN de meest geschikte partnerexperts.",
-      "items": [
+      "desc": "Afhankelijk van uw dossier en de transactiefase mobiliseert AEGRYN de meest geschikte partnerexperts.",
+      "phases": [
         {
-          "num": "01",
-          "title": "Transactierecht & M&A",
-          "desc": "Juridische due diligence, dealstructurering, opstelling en onderhandeling van transactiedocumenten — SPA, SHA, opschortende voorwaarden. Begeleiding voor, tijdens en na de transactie."
+          "label": "Pre-transactie",
+          "items": [
+            {
+              "num": "01",
+              "title": "Waardering & Marktbenchmark",
+              "desc": "ARR-multiplicatieschatting, Quality of Earnings, sectorvergelijkingen, verdedigbare waarderingsbandband. De basis van elke serieuze onderhandeling."
+            },
+            {
+              "num": "02",
+              "title": "Vendor Readiness — Verkoopvoorbereiding",
+              "desc": "Audit van het verkopersdossier vóór indiening: data room, contracten, registers, AVG-conformiteit, technische schuld. Verkort de certificeringstermijn met 30 tot 50%."
+            },
+            {
+              "num": "03",
+              "title": "Digitaal recht & Intellectueel eigendom",
+              "desc": "IP-eigendomsketen, open-sourcelicenties, overdracht van rechten van oprichters en onderaannemers, merkenrechtbescherming, contractuele naleving met klanten. Dekt dimensie I van de AEGRYN-grade."
+            }
+          ]
         },
         {
-          "num": "02",
-          "title": "Digitaal recht & Intellectueel eigendom",
-          "desc": "Verificatie van de IP-eigendomsketen, audits van open-sourcelicenties, bescherming van codebase-rechten. Kritisch voor de I-dimensie van de AEGRYN-grade."
+          "label": "Due diligence & onderhandeling",
+          "items": [
+            {
+              "num": "04",
+              "title": "Transactierecht & M&A",
+              "desc": "SPA, SHA, LOI, APA, opschortende voorwaarden, reps & warranties, prijsmechanismen (locked box vs. completion accounts). Begeleiding voor, tijdens en na de transactie."
+            },
+            {
+              "num": "05",
+              "title": "HR & arbeidsrechtelijke due diligence",
+              "desc": "Beoordeling van sleutelcontracten, BSPCE en controlewisseling, latente arbeidsverplichtingen, freelance vs. werknemer-classificatie, concurrentie- en niet-wervingsclausules."
+            },
+            {
+              "num": "06",
+              "title": "Sectorale regulatoire due diligence",
+              "desc": "FinTech (DORA, ACPR/FINMA-vergunning), HealthTech (HDS, gezondheids-AVG), AI-native (EU AI Act), LegalTech (UPL), EdTech (COPPA). Onmisbaar voor gereguleerde sectoren."
+            },
+            {
+              "num": "07",
+              "title": "Warranty & Indemnity Insurance",
+              "desc": "Introductie bij W&I-verzekeraars voor transacties boven € 500.000. Faciliteert de volledige prijsvrijgave bij closing en dekt reps & warranties."
+            }
+          ]
         },
         {
-          "num": "03",
-          "title": "Fiscaliteit & bedrijfsstructurering",
-          "desc": "Fiscale optimalisatie van de exit voor verkopers, acquisitiestructurering voor kopers — holding, SPV, earnout, Luxemburg/Zwitserland/Frankrijk."
+          "label": "Structurering & financiering",
+          "items": [
+            {
+              "num": "08",
+              "title": "Fiscaliteit & bedrijfsstructurering",
+              "desc": "Exit-optimalisatie voor verkopers, acquisitiestructurering voor kopers — holding, SPV, Luxemburg, Zwitserland, Frankrijk. Inbreng-ruil en belastinguitstel."
+            },
+            {
+              "num": "09",
+              "title": "Financiering & financiële partners",
+              "desc": "Bridge-financiering om de closing te versnellen, co-investering om blootstelling te delen, mezzanineschuld. Elke introductie is specifiek voor uw dealprofiel."
+            },
+            {
+              "num": "10",
+              "title": "Earn-out Design & KPI Framework",
+              "desc": "Ontwerp van earnout-mechanismen, metricdefinitie, contractuele verkopersbeschermingen tegen post-acquisitiemanipulatie, geschillenbeslechtingsclausules."
+            }
+          ]
         },
         {
-          "num": "04",
-          "title": "Financiering & financiële partners",
-          "desc": "Bridge-financiering om de closing te versnellen, co-investering om blootstelling te delen, gestructureerde earnout om prijs op toekomstige performance af te stemmen."
-        },
-        {
-          "num": "05",
-          "title": "Blockchaincertificering & digitale notariëring",
-          "desc": "Tijdstempeling van de codebase op ondertekeningsdatum, authenticiteitsbewijs, vertrouwelijke escrow. KRYV Protocol in uitrol."
-        },
-        {
-          "num": "06",
-          "title": "HR & arbeidsrechtelijke due diligence",
-          "desc": "Beoordeling van sleutelcontracten, BSPCE, change-of-control-clausules, latente arbeidsverplichtingen. Menselijk kapitaal geauditeerd op hetzelfde niveau als code. In uitrol.",
-          "badge": "in_deployment"
-        },
-        {
-          "num": "07",
-          "title": "Warranty & Indemnity Insurance",
-          "desc": "Introductie bij W&I-partnerverzekeraar voor transacties boven de € 500.000. Faciliteert de volledige prijsvrijgave bij closing en vermindert het restrisico voor de overnemer. In uitrol.",
-          "badge": "in_deployment"
+          "label": "Post-closing",
+          "items": [
+            {
+              "num": "11",
+              "title": "Post-acquisitie-integratie",
+              "desc": "30/60/100-dagenintegratieplan: tech-stack, HR, klantencommunicatie, migratie van leverancierscontracten. Maximaliseert de na de closing bewaarde waarde."
+            },
+            {
+              "num": "12",
+              "title": "Directie-HR-ondersteuning",
+              "desc": "Managementcontract na verkoop, concurrentiebeding (met financiële tegenprestatie), leiderschapstransitie, golden parachute. Specifiek voor oprichters die operationeel blijven."
+            },
+            {
+              "num": "13",
+              "title": "Belastingaangifte bij exit",
+              "desc": "Aangifte van de vermogenswinst, CH/FR/LU-regimes op basis van fiscale domicilie, inbreng-ruil, herinvestering van de verkoopopbrengst, PEA-PME. Afzonderlijke dienst vs. pre-transactiestructurering."
+            }
+          ]
         }
       ]
     },
@@ -2617,6 +2666,20 @@
         "desc": "VC/PE-fondsen, M&A-boutiques, tech-acceleratoren. Breng assets te koop of actieve kopers aan. Partnerschapsvoorwaarden vastgesteld tijdens het kwalificatiegesprek.",
         "profiles": "Micro-PE-fondsen · M&A-boutiques · Tech-acceleratoren · FONGIT",
         "cta": "Een asset of koper aanbrengen"
+      },
+      "advisory_tech": {
+        "label": "Advisory Tech",
+        "title": "Gecertificeerde technische experts",
+        "desc": "Partners gemobiliseerd om de robuustheid en certificeerbaarheid van activa te verbeteren vóór of tijdens het AEGRYN-gradeproces.",
+        "profiles": "Cybersecuritybedrijven (PASSI/CREST/OSCP) · Senior freelance CTO's (architectuur, DevSecOps) · Data & AI-experts (MLOps, governance) · Geaccrediteerde externe DPO's (AVG/LPD) · EU AI Act-conformiteitsexperts · Digitale toegankelijkheidsauditors (WCAG)",
+        "cta": "Advisory Tech-partner worden"
+      },
+      "advisory_transaction": {
+        "label": "Advisory Transaction",
+        "title": "M&A tech-experts",
+        "desc": "Partners gemobiliseerd in elke fase van de transactiecyclus — van verkoopvoorbereiding tot closing en post-acquisitie-integratie.",
+        "profiles": "IP & tech-kantoren (eigendomsketen, licenties) · M&A-transactieadvocaten (SPA, SHA, APA) · Accountants en commissarissen · Corporate belastingadviseurs (CH/FR/LU) · HR & arbeidsrechtskantoren · W&I-verzekeraars (AIG, Tokio Marine) · Sectorale due diligence-experts (FinTech, HealthTech, AI)",
+        "cta": "Advisory Transaction-partner worden"
       },
       "sequestre": {
         "label": "ESCROW EN JURIDISCH",
