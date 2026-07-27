@@ -36,6 +36,15 @@ const STATIC_ROUTES = [
   { path: '/help/faq',                          priority: 0.6,  changeFrequency: 'monthly' as const },
 ]
 
+const EXPERTS_SLUG: Record<string, string> = {
+  fr: '/experts',
+  en: '/experts',
+  de: '/experten',
+  es: '/expertos',
+  it: '/esperti',
+  nl: '/experts',
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
   const now = new Date()
@@ -56,6 +65,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates:       { languages: alternates },
       })
     }
+  }
+
+  // /experts — slugs localisés (fr+en+nl: /experts, de: /experten, es: /expertos, it: /esperti)
+  const expertsAlternates: Record<string, string> = {}
+  for (const locale of LOCALES) {
+    expertsAlternates[locale] = `${BASE}/${locale}${EXPERTS_SLUG[locale]}`
+  }
+  expertsAlternates['x-default'] = `${BASE}/en/experts`
+  for (const locale of LOCALES) {
+    entries.push({
+      url:             `${BASE}/${locale}${EXPERTS_SLUG[locale]}`,
+      lastModified:    now,
+      changeFrequency: 'weekly' as const,
+      priority:        0.8,
+      alternates:      { languages: expertsAlternates },
+    })
   }
 
   // Blog articles — all 6 locales with hreflang alternates

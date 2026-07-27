@@ -27,6 +27,21 @@ Synthesis: "Aegryn protects what endures."
 
 Each asset operates independently and carries the tagline: "An Aegryn company."
 
+## Expert Network — Aegryn Experts
+
+Aegryn operates a curated network of transactional tech experts available to buyers and sellers engaged in M&A processes:
+- M&A Advisors — strategic advisory, deal structuring, valuation
+- Lawyers & Attorneys — tech IP, SPA, share deal / asset deal
+- Accountants & Auditors — financial due diligence, SaaS metrics
+- CTO / Tech Architects — technical due diligence, code audit
+- Cybersecurity — PASSI/CREST auditors, penetration testing, ISO 27001
+- HR & Employment Law — HR due diligence, social audits, GDPR
+- W&I Insurance — warranty & indemnity, transactional risk insurance
+- Tax Advisors — exit structuring, cross-border taxation
+- Each expert profile is vetted and validated by the AEGRYN team.
+- Listing requires an active subscription (€89/month excl. VAT).
+- Access: https://aegryn.com/en/experts
+
 ## Advisory — Aegryn Advisory
 
 Aegryn Advisory provides institutional-grade digital protection for enterprises:
@@ -62,6 +77,7 @@ French (fr), English (en), German (de), Italian (it), Spanish (es), Dutch (nl)
 - [Home](https://aegryn.com)
 - [What We Build](https://aegryn.com/en/what-we-build)
 - [Advisory](https://aegryn.com/en/advisory)
+- [Expert Network](https://aegryn.com/en/experts)
 - [About](https://aegryn.com/en/about)
 - [Contact](https://aegryn.com/en/contact)
 - [Subblink](https://subblink.app)

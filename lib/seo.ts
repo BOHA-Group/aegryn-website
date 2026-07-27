@@ -12,6 +12,8 @@ const BASE_KEYWORDS = [
   'Aegryn', 'Swiss Tech', 'digital assets', 'actifs numériques',
   'ecosystem engineering', 'Switzerland startup', 'SaaS', 'AI',
   'cybersecurity', 'advisory', 'Engineered to Last',
+  'M&A experts', 'expert network', 'réseau experts M&A',
+  'due diligence tech', 'transactional experts', 'W&I insurance',
 ]
 
 export function generateAegrynMetadata({
