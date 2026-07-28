@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import { Loader2, Upload, Camera, CheckCircle2 } from 'lucide-react'
+import { Loader2, Upload, CheckCircle2 } from 'lucide-react'
 
 type Props = {
   docType: string
@@ -10,22 +10,16 @@ type Props = {
 
 export default function KycUploadForm({ docType }: Props) {
   const fileRef   = useRef<HTMLInputElement>(null)
-  const cameraRef = useRef<HTMLInputElement>(null)
   const [loading,  setLoading]  = useState(false)
   const [success,  setSuccess]  = useState(false)
   const [error,    setError]    = useState('')
   const [fileName, setFileName] = useState('')
 
-  function onFileChange(ref: React.RefObject<HTMLInputElement | null>) {
-    const f = ref.current?.files?.[0]
-    if (f) setFileName(f.name)
-  }
-
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setError('')
-    const file = fileRef.current?.files?.[0] ?? cameraRef.current?.files?.[0]
-    if (!file) { setError('Veuillez sélectionner un fichier ou prendre une photo.'); return }
+    const file = fileRef.current?.files?.[0]
+    if (!file) { setError('Veuillez sélectionner un fichier.'); return }
     if (file.size > 10 * 1024 * 1024) { setError('Fichier trop volumineux (max 10 Mo).'); return }
 
     const allowed = ['application/pdf', 'image/jpeg', 'image/png', 'image/webp']
@@ -64,35 +58,18 @@ export default function KycUploadForm({ docType }: Props) {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
       <div className="flex flex-wrap items-center gap-2">
-        {/* Fichier local */}
         <input
           ref={fileRef}
           type="file"
           accept=".pdf,.jpg,.jpeg,.png,.webp"
           className="hidden"
           id={`kyc-file-${docType}`}
-          onChange={() => { if (cameraRef.current) cameraRef.current.value = ''; onFileChange(fileRef) }}
+          onChange={() => { const f = fileRef.current?.files?.[0]; if (f) setFileName(f.name) }}
         />
         <label htmlFor={`kyc-file-${docType}`}
           className="flex items-center gap-2 cursor-pointer font-mono text-[10px] uppercase tracking-widest text-gray-500 hover:text-gray-800 border border-gray-300 hover:border-gray-500 px-4 py-2 transition-colors">
           <Upload size={11} />
-          Fichier
-        </label>
-
-        {/* Photo caméra (mobile) */}
-        <input
-          ref={cameraRef}
-          type="file"
-          accept="image/*"
-          capture="environment"
-          className="hidden"
-          id={`kyc-camera-${docType}`}
-          onChange={() => { if (fileRef.current) fileRef.current.value = ''; onFileChange(cameraRef) }}
-        />
-        <label htmlFor={`kyc-camera-${docType}`}
-          className="flex items-center gap-2 cursor-pointer font-mono text-[10px] uppercase tracking-widest text-gray-500 hover:text-gray-800 border border-gray-300 hover:border-gray-500 px-4 py-2 transition-colors">
-          <Camera size={11} />
-          Photo
+          Choisir un fichier
         </label>
 
         <button
