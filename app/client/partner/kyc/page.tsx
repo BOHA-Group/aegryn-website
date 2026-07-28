@@ -4,6 +4,7 @@ import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { CheckCircle2, Clock, XCircle, AlertCircle, ShieldCheck } from 'lucide-react'
 import PartnerKycUploadForm from './PartnerKycUploadForm'
+import KycViewButton        from '@/app/client/buyer/kyc/KycViewButton'
 
 export const metadata: Metadata = {
   title: 'KYC — Espace Partenaire AEGRYN',
@@ -188,20 +189,24 @@ export default async function PartnerKycPage() {
                       {statusCfg.label}
                     </span>
                   )}
-                  {latestDoc?.file_url && status === 'validated' && (
-                    <a href={latestDoc.file_url} target="_blank" rel="noopener noreferrer"
-                      className="font-mono text-[9px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors">
-                      Voir →
-                    </a>
+                  {latestDoc?.file_url && latestDoc.id && (
+                    <KycViewButton docId={latestDoc.id} />
                   )}
                 </div>
               </div>
 
-              {(status === 'missing' || status === 'rejected' || status === 'expired') && (
-                <div className="border-t border-gray-100 p-5 bg-gray-50">
-                  <PartnerKycUploadForm docType={type} userId={user.id} />
-                </div>
-              )}
+              <div className="border-t border-gray-100 p-5 bg-gray-50">
+                {status === 'pending' || status === 'in_review' ? (
+                  <p className="font-sans text-[11px] text-gray-400 mb-3">
+                    Document en cours d&apos;examen. Vous pouvez soumettre une version corrigée si nécessaire.
+                  </p>
+                ) : status === 'validated' ? (
+                  <p className="font-sans text-[11px] text-amber-600 mb-3">
+                    Ce document est validé. Un nouveau dépôt remplacera la version actuelle et relancera la validation.
+                  </p>
+                ) : null}
+                <PartnerKycUploadForm docType={type} userId={user.id} />
+              </div>
             </div>
           )
         })}
