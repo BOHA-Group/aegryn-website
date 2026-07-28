@@ -161,7 +161,7 @@ export function AssetsGrid() {
                   </span>
                 ) : (
                   <Link
-                    href={`/assets/${asset.slug}`}
+                    href={`/assets/${asset.slug}` as never}
                     className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black hover:text-ag-apex transition-colors flex items-center gap-1"
                   >
                     {t('viewDetails')} <ArrowUpRight size={11} />

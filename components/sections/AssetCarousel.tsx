@@ -159,7 +159,7 @@ export function AssetCarousel() {
           return (
             <Link
               key={asset.id}
-              href={`/assets/${asset.slug}`}
+              href={`/assets/${asset.slug}` as never}
               className="group relative flex flex-col shrink-0 border-r border-ag-border p-10 bg-ag-white hover:bg-ag-off-white transition-colors duration-300 overflow-hidden"
               style={{ width: '340px', minHeight: '420px' }}
             >

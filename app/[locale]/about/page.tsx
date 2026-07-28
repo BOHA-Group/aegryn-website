@@ -296,7 +296,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <Link
-                  href={t(`cta.${profile}.href`)}
+                  href={t(`cta.${profile}.href`) as never}
                   className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-5 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all self-start"
                 >
                   {t(`cta.${profile}.btn`)} <ArrowUpRight size={13} />

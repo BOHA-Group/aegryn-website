@@ -109,7 +109,7 @@ export default function AcquisitionRoadmap({
                       </p>
                       {hasCta && (
                         <Link
-                          href={`${ctaHref}?subject=${encodeURIComponent(itemTitle)}`}
+                          href={`${ctaHref}?subject=${encodeURIComponent(itemTitle)}` as never}
                           className="mt-2 inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.16em] uppercase text-ag-apex hover:text-ag-black transition-colors"
                         >
                           {ctaLabel} <ArrowUpRight size={11} />

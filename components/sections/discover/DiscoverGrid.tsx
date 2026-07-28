@@ -102,7 +102,7 @@ export function DiscoverGrid({ locale }: Props) {
               {featured.map((article) => (
                 <Link
                   key={article.slug}
-                  href={`/blog/${article.slug}`}
+                  href={`/blog/${article.slug}` as never}
                   className="group bg-ag-white p-8 flex flex-col gap-4 hover:bg-ag-off-white transition-colors"
                 >
                   <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex">
@@ -164,7 +164,7 @@ export function DiscoverGrid({ locale }: Props) {
                 {filtered.map((article, idx) => (
                   <Link
                     key={article.slug}
-                    href={`/blog/${article.slug}`}
+                    href={`/blog/${article.slug}` as never}
                     className={`discover-card group bg-ag-white p-8 flex flex-col gap-4 hover:bg-ag-off-white transition-colors border-ag-border ${
                       idx % 3 !== 2 ? 'md:border-r' : ''
                     } ${idx >= 3 ? 'border-t' : ''}`}

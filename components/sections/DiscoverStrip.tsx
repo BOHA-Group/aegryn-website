@@ -59,7 +59,7 @@ export function DiscoverStrip() {
           {articles.map((a, i) => (
             <Link
               key={i}
-              href={a.href}
+              href={a.href as never}
               className="discover-strip-card group bg-ag-white p-8 flex flex-col gap-5 hover:bg-ag-off-white transition-colors"
               style={{ opacity: 0 }}
             >

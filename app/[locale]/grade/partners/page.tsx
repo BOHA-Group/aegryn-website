@@ -80,7 +80,7 @@ export default async function GradePartnersPage() {
               {t('ctaDesc')}
             </p>
             <Link
-              href="/alliances?tab=certification"
+              href={"/alliances?tab=certification" as never}
               className="inline-flex items-center gap-2 bg-ag-black text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-navy transition-colors"
             >
               {t('ctaBtn')} <ArrowUpRight size={13} />

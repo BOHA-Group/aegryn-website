@@ -56,7 +56,7 @@ export function AcqSupportStrip() {
           </div>
 
           <Link
-            href="/contact?subject=acquisition"
+            href={"/contact?subject=acquisition" as never}
             className="shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:bg-ag-black transition-colors"
           >
             {t('cta')} <ArrowUpRight size={13} />

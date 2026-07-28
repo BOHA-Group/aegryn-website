@@ -77,7 +77,7 @@ export function StatementStrip({ label, title, cta, href }: Props) {
         </h2>
         <Link
           ref={ctaRef}
-          href={href}
+          href={href as never}
           className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-black transition-all duration-300"
         >
           {cta}
