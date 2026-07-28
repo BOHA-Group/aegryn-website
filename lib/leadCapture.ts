@@ -65,6 +65,19 @@ export async function captureLead(
   return { dbError: error?.message ?? null }
 }
 
+/* ─── Email seul (sans insert Supabase) ─────────────────── */
+/**
+ * Envoie uniquement les deux emails (demandeur + interne),
+ * sans insérer en base. Utile quand l'insert est fait en amont.
+ */
+export async function sendLeadEmails(email: EmailConfig): Promise<void> {
+  const internalEmail = process.env.AEGRYN_INTERNAL_EMAIL ?? 'team@boha-group.com'
+  await Promise.allSettled([
+    sendEmail(email.to, email.subjectFounder, email.textFounder),
+    sendEmail(internalEmail, email.subjectInternal, email.textInternal),
+  ])
+}
+
 /* ─── Formatters partagés ────────────────────────────────── */
 export function fmtEur(n?: number | null): string {
   if (!n) return '—'

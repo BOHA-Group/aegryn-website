@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
+import { sendLeadEmails }           from '@/lib/leadCapture'
 
 const PROFESSIONS = [
   'M&A Advisor', 'Lawyer', 'Accountant', 'CTO', 'Cybersecurity',
@@ -46,17 +47,13 @@ export async function POST(req: NextRequest) {
       throw error
     }
 
-    const adminEmail = process.env.ADMIN_NOTIFICATION_EMAIL
-    if (adminEmail) {
-      const { Resend } = await import('resend')
-      const resend = new Resend(process.env.RESEND_API_KEY)
-      await resend.emails.send({
-        from:    'AEGRYN <no-reply@aegryn.com>',
-        to:      adminEmail,
-        subject: `[Expert] Candidature — ${data.prenom} ${data.nom} (${data.profession})`,
-        text:    `Nouvelle candidature réseau expert\n\nNom : ${data.prenom} ${data.nom}\nEmail : ${data.email}\nProfession : ${data.profession}\nOrganisation : ${data.organization ?? '—'}\nVille : ${data.city ?? '—'} ${data.country ?? ''}\nSite : ${data.website ?? '—'}\n\nBio :\n${data.bio ?? '—'}\n\nSpécialités : ${(data.specialties ?? []).join(', ') || '—'}\n\nGérer sur /admin/experts`,
-      }).catch(console.error)
-    }
+    await sendLeadEmails({
+      to:              data.email,
+      subjectFounder:  'AEGRYN — Candidature réseau d\'experts reçue',
+      textFounder:     `Bonjour ${data.prenom},\n\nVotre candidature au réseau d'experts AEGRYN a bien été reçue.\n\nProfil : ${data.profession}${data.organization ? ` · ${data.organization}` : ''}\n\nNos équipes examineront votre dossier et vous contacteront pour un entretien de qualification. L'accès au réseau se fait via un abonnement mensuel de référencement (89 € HT/mois).\n\nPour toute question : contact@boha-group.com\n\nL'équipe AEGRYN\nhttps://aegryn.com/experts`,
+      subjectInternal: `[Réseau Experts] Candidature — ${data.prenom} ${data.nom} (${data.profession})`,
+      textInternal:    `Nouvelle candidature réseau expert\n\nNom : ${data.prenom} ${data.nom}\nEmail : ${data.email}\nProfession : ${data.profession}\nOrganisation : ${data.organization ?? '—'}\nVille : ${data.city ?? '—'} ${data.country ?? ''}\nSite : ${data.website ?? '—'}\n\nBio :\n${data.bio ?? '—'}\n\nSpécialités : ${(data.specialties ?? []).join(', ') || '—'}\n\nGérer : /admin/experts`,
+    })
 
     return NextResponse.json({ ok: true })
   } catch (err) {

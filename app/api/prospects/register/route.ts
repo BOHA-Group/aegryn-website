@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
+import { sendLeadEmails }           from '@/lib/leadCapture'
 
 const baseSchema = z.object({
   email:        z.string().email(),
@@ -102,6 +103,22 @@ export async function POST(req: NextRequest) {
     console.error('[prospects/register]', error)
     return NextResponse.json({ error: error.message }, { status: 500 })
   }
+
+  const profileLabels: Record<string, string> = {
+    buyer:     'Acquéreur',
+    seller:    'Cédant',
+    partner:   'Partenaire',
+    undecided: 'Non défini',
+  }
+  const label = profileLabels[body.profileType] ?? body.profileType
+
+  await sendLeadEmails({
+    to:              body.email,
+    subjectFounder:  'AEGRYN — Votre inscription à la liste d\'accès prioritaire',
+    textFounder:     `Bonjour${body.firstName ? ` ${body.firstName}` : ''},\n\nVotre inscription à la liste d'accès prioritaire AEGRYN a bien été enregistrée (profil : ${label}).\n\nVous serez contacté en priorité lors de l'ouverture de la prochaine session.\n\nPour toute question : contact@boha-group.com\n\nL'équipe AEGRYN\nhttps://aegryn.com`,
+    subjectInternal: `[Waitlist Session] Nouveau prospect ${label} — ${body.email}`,
+    textInternal:    `Nouveau prospect waitlist session\n\nProfil : ${label}\nEmail : ${body.email}\nNom : ${body.firstName ?? '—'} ${body.lastName ?? ''}\nSource : ${body.source ?? '—'}\nMarketing consent : ${body.marketingConsent ? 'oui' : 'non'}`,
+  })
 
   return NextResponse.json({ ok: true })
 }
