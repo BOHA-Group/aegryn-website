@@ -15,6 +15,31 @@ Aucune modification de code requise.
 
 ---
 
+## Assessment Days — Page & Feature complète
+
+**Archivé le :** 28/07/2026  
+**Statut :** Masqué — page prête, namespace i18n complet × 6 langues, pas de route active
+
+### Description
+Journées d'expertise gratuites sur rendez-vous dans 4 villes européennes. Pre-screening confidentiel 45 min, estimation de grade indicatif, fourchette de valorisation.
+
+### Pour réactiver
+1. Créer `app/[locale]/auction/assessment-days/page.tsx` (ou renommer le dossier si créé)
+2. Supprimer la redirection dans `next.config.ts` : `{ source: '/:locale/auction/assessment-days', destination: '/:locale/auction/sessions', permanent: true }`
+3. Ajouter le lien dans `Nav.tsx` (menu Enchères) avec la clé `nav.auctionAssessment`
+4. Ajouter le lien dans `i18n/routing.ts` pathnames
+
+### Clés i18n
+- Namespace : `assessmentDays` (complet × 6 langues dans les fichiers JSON)
+- Clé nav : `nav.auctionAssessment` = `"Assessment Days"` (identique × 6 langues)
+- Clé gradeEngine : `gradeEngine.ngNote` contient un CTA vers Assessment Day
+- Clé gradeEngine : `gradeEngine.ctaAssessment` = bouton de réservation
+
+### Note
+`nav.auctionAssessment` a été retiré des 6 fichiers JSON le 28/07/2026 car non référencé dans Nav.tsx. À rétablir lors de la réactivation.
+
+---
+
 ## Section "/ THE FOUNDER" — Page About
 
 **Archivé le :** 26/07/2026  
