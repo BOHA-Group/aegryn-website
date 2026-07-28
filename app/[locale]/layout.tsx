@@ -60,8 +60,8 @@ export const metadata: Metadata = {
   description: 'Aegryn is a Swiss technology holding company. We design, fund and operate proprietary digital ecosystems — Subblink, Neediu, Primiom, Movtoo, Hobconnect — engineered to last. Headquartered in Switzerland.',
   keywords: ['Aegryn', 'Swiss Tech', 'digital assets', 'ecosystem engineering', 'cybersecurity', 'AI', 'SaaS', 'Switzerland startup'],
   authors: [{ name: 'Yohann Bollack', url: 'https://aegryn.com' }],
-  creator: 'Aegryn Sàrl',
-  publisher: 'Aegryn Sàrl',
+  creator: 'Aegryn',
+  publisher: 'Aegryn',
   icons: {
     icon: [
       { url: '/favicon.svg',        type: 'image/svg+xml' },

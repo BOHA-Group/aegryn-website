@@ -124,7 +124,7 @@ export const aegrynOrganizationSchema = {
   '@type':       'Organization',
   '@id':         `${BASE_URL}/#organization`,
   name:          'Aegryn',
-  legalName:     'Aegryn Sàrl',
+  legalName:     'Aegryn',
   url:           BASE_URL,
   logo: {
     '@type':     'ImageObject',
@@ -147,7 +147,7 @@ export const aegrynOrganizationSchema = {
   contactPoint: {
     '@type':            'ContactPoint',
     contactType:        'customer support',
-    email:              'contact@aegryn.com',
+    email:              'contact@boha-group.com',
     availableLanguage:  ['French', 'English', 'German', 'Italian', 'Spanish', 'Dutch'],
   },
   sameAs: [
