@@ -2827,17 +2827,17 @@
       "evalTypeTitle": "Welk evaluatieniveau wenst u?",
       "evalTypeFull": {
         "label": "Auction-certificering",
-        "desc": "Alleen succesfee. Volledig proces via onafhankelijk AEGRYN-protocol (4 dimensies C/I/F/S), 3–4 weken, inbegrepen als de transactie via AEGRYN Auction plaatsvindt.",
+        "desc": "Alleen succesfee. Volledig proces via onafhankelijk AEGRYN-protocol (4 dimensies C/I/F/S), inbegrepen als de transactie via AEGRYN Auction plaatsvindt.",
         "price": "Gratis"
       },
       "evalTypeReview": {
         "label": "AEGRYN Review",
-        "desc": "Schriftelijk advies van een AEGRYN-analist binnen 5 werkdagen. Geen externe partnerreview. Niet publiceerbaar in de catalogus, zonder externe validatie.",
+        "desc": "Schriftelijk advies van een AEGRYN-analist binnen 15 werkdagen. Geen externe partnerreview. Niet publiceerbaar in de catalogus, zonder externe validatie.",
         "price": "2.000 € excl. btw"
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
-        "desc": "Schriftelijk advies + review door een externe partner (juridisch kantoor of accountant) binnen 10 werkdagen. Kruisverwijzingen met onze Alliance-partners.",
+        "desc": "Schriftelijk advies + review door een externe partner (juridisch kantoor of accountant) op verzoek binnen 20 werkdagen. Kruisverwijzingen met onze Alliance-partners.",
         "price": "5.000 € excl. btw"
       },
       "evalDeductibleNote": "Dit bedrag is volledig aftrekbaar van de certificeringskosten als u binnen 6 maanden na ontvangst van uw Review een volledig Auction-proces start.",

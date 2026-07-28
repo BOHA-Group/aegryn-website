@@ -2827,17 +2827,17 @@
       "evalTypeTitle": "Welches Bewertungsniveau wünschen Sie?",
       "evalTypeFull": {
         "label": "Auction-Zertifizierung",
-        "desc": "Nur Erfolgsbeteiligung. Vollständiges unabhängiges AEGRYN-Protokoll (4 Dimensionen C/I/F/S), 3–4 Wochen, inklusive wenn die Transaktion über AEGRYN Auction abgeschlossen wird.",
+        "desc": "Nur Erfolgsbeteiligung. Vollständiges unabhängiges AEGRYN-Protokoll (4 Dimensionen C/I/F/S), inklusive wenn die Transaktion über AEGRYN Auction abgeschlossen wird.",
         "price": "Kostenlos"
       },
       "evalTypeReview": {
         "label": "AEGRYN Review",
-        "desc": "Schriftliches Gutachten eines AEGRYN-Analysten innerhalb von 5 Werktagen. Keine externe Partnerprüfung. Nicht im Katalog veröffentlichbar, ohne externe Validierung.",
+        "desc": "Schriftliches Gutachten eines AEGRYN-Analysten innerhalb von 15 Werktagen. Keine externe Partnerprüfung. Nicht im Katalog veröffentlichbar, ohne externe Validierung.",
         "price": "2.000 € zzgl. MwSt."
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
-        "desc": "Schriftliches Gutachten + Prüfung durch einen externen Partner (Kanzlei oder Wirtschaftsprüfer) innerhalb von 10 Werktagen. Querverweise mit unseren Alliance-Partnern.",
+        "desc": "Schriftliches Gutachten + Prüfung durch einen externen Partner (Kanzlei oder Wirtschaftsprüfer) auf Anfrage innerhalb von 20 Werktagen. Querverweise mit unseren Alliance-Partnern.",
         "price": "5.000 € zzgl. MwSt."
       },
       "evalDeductibleNote": "Dieser Betrag wird vollständig von den Zertifizierungskosten abgezogen, wenn Sie innerhalb von 6 Monaten nach Erhalt Ihres Reviews einen vollständigen Auction-Prozess einleiten.",

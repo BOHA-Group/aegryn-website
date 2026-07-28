@@ -2827,17 +2827,17 @@
       "evalTypeTitle": "¿Qué nivel de evaluación necesita?",
       "evalTypeFull": {
         "label": "Certificación Auction",
-        "desc": "Solo honorarios de éxito. Proceso completo por protocolo independiente AEGRYN (4 dimensiones C/I/F/S), 3–4 semanas, incluido si la transacción se realiza vía AEGRYN Auction.",
+        "desc": "Solo honorarios de éxito. Proceso completo por protocolo independiente AEGRYN (4 dimensiones C/I/F/S), incluido si la transacción se realiza vía AEGRYN Auction.",
         "price": "Gratuito"
       },
       "evalTypeReview": {
         "label": "AEGRYN Review",
-        "desc": "Opinión escrita de un analista AEGRYN en 5 días hábiles. Sin revisión de socio externo. No publicable en el catálogo, sin validación externa.",
+        "desc": "Opinión escrita de un analista AEGRYN en 15 días hábiles. Sin revisión de socio externo. No publicable en el catálogo, sin validación externa.",
         "price": "2.000 € sin IVA"
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
-        "desc": "Opinión escrita + revisión por un socio externo (bufete jurídico o contador) en 10 días hábiles. Referencia cruzada con nuestros socios Alliance.",
+        "desc": "Opinión escrita + revisión por un socio externo (bufete jurídico o contador) a petición en 20 días hábiles. Referencia cruzada con nuestros socios Alliance.",
         "price": "5.000 € sin IVA"
       },
       "evalDeductibleNote": "Este importe es íntegramente deducible del costo de certificación si inicia un proceso completo de Auction en los 6 meses siguientes a la recepción de su Review.",
