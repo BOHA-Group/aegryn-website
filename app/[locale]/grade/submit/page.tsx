@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import GradeSubmitForm from './GradeSubmitForm'
 
@@ -17,5 +18,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function GradeSubmitPage() {
-  return <GradeSubmitForm />
+  return (
+    <Suspense>
+      <GradeSubmitForm />
+    </Suspense>
+  )
 }
