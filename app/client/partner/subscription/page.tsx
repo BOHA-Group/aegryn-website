@@ -29,15 +29,17 @@ export default async function PartnerSubscriptionPage({
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, expert_plan, expert_plan_start, expert_plan_end, stripe_subscription_id')
+    .select('full_name, expert_plan, expert_plan_start, expert_plan_end, stripe_subscription_id, kyc_status')
     .eq('id', user.id)
     .single()
 
-  const p          = profile as Record<string, unknown> | null
-  const plan       = p?.expert_plan as string | null
-  const planStart  = p?.expert_plan_start as string | null
-  const planEnd    = p?.expert_plan_end as string | null
-  const isActive   = plan === 'active'
+  const p            = profile as Record<string, unknown> | null
+  const plan         = p?.expert_plan as string | null
+  const planStart    = p?.expert_plan_start as string | null
+  const planEnd      = p?.expert_plan_end as string | null
+  const isActive     = plan === 'active'
+  const kycStatus    = (p?.kyc_status as string | null) ?? 'pending'
+  const kycApproved  = kycStatus === 'approved'
 
   return (
     <div className="p-8 max-w-2xl">
@@ -48,6 +50,22 @@ export default async function PartnerSubscriptionPage({
           Votre fiche expert est visible dans l&apos;annuaire AEGRYN tant que votre abonnement est actif.
         </p>
       </div>
+
+      {/* Guard KYC */}
+      {!kycApproved && (
+        <div className="bg-amber-50 border border-amber-200 px-5 py-4 flex items-start gap-3 mb-6">
+          <CreditCard size={16} className="text-amber-600 shrink-0 mt-0.5" />
+          <div>
+            <p className="font-sans font-semibold text-amber-900 text-[13px] mb-1">
+              KYC requis avant l&apos;activation de l&apos;abonnement
+            </p>
+            <p className="font-sans text-[12px] text-amber-700">
+              Votre dossier KYC doit être approuvé par l&apos;équipe AEGRYN pour activer votre fiche expert.{' '}
+              <Link href="/client/partner/kyc" className="underline font-medium">Compléter mon KYC →</Link>
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* Feedback paiement */}
       {success === '1' && (
@@ -127,7 +145,7 @@ export default async function PartnerSubscriptionPage({
             </p>
           </div>
         ) : (
-          <SubscribeButtons />
+          <SubscribeButtons disabled={!kycApproved} />
         )}
       </div>
 

@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { createServiceClient } from '@/lib/supabase'
+import { getAdminUser }        from '@/lib/adminAuth'
 
 const ALLOWED_ROLES = ['buyer', 'seller', 'partner', 'admin', 'super_admin'] as const
 
 const schema = z.object({
-  token: z.string(),
+  token: z.string().optional().default(''),
 
   /* Profil — champs non-personnels éditables */
   roles: z.array(z.enum(ALLOWED_ROLES)).optional(),
@@ -25,9 +26,12 @@ const schema = z.object({
   delete_kyc_doc_id: z.string().uuid().optional(),
 })
 
-function checkToken(body: { token: string }) {
+async function checkAuth(token: string): Promise<boolean> {
   const adminToken = process.env.ADMIN_LEADS_TOKEN
-  return !adminToken || body.token === adminToken
+  if (adminToken && token === adminToken) return true
+  /* Fallback session admin */
+  const adminUser = await getAdminUser()
+  return !!adminUser
 }
 
 export async function PATCH(
@@ -39,7 +43,8 @@ export async function PATCH(
 
   try {
     const body = schema.parse(await req.json())
-    if (!checkToken(body)) {
+    const authorized = await checkAuth(body.token ?? '')
+    if (!authorized) {
       return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
     }
 

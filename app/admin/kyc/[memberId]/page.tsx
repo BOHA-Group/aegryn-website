@@ -4,6 +4,7 @@ import { redirect }            from 'next/navigation'
 import type { Metadata }       from 'next'
 import Link                    from 'next/link'
 import SignedDocLink            from './SignedDocLink'
+import DocActions               from './DocActions'
 import { sendEmail, emailKycApproved } from '@/lib/sendEmail'
 
 export const metadata: Metadata = {
@@ -204,16 +205,11 @@ export default async function AdminKycMemberPage({
                 }`}>
                   {String(d.status)}
                 </span>
-                <div className="flex gap-1.5">
-                  <Link href={`/admin/kyc/${memberId}?action=doc&docId=${d.id}&status=validated${params.token ? `&token=${params.token}` : ''}`}
-                    className="text-[10px] font-semibold text-emerald-600 border border-emerald-200 px-2 py-1 hover:border-emerald-400 transition-colors">
-                    Valider
-                  </Link>
-                  <Link href={`/admin/kyc/${memberId}?action=doc&docId=${d.id}&status=rejected&reason=Document%20illisible${params.token ? `&token=${params.token}` : ''}`}
-                    className="text-[10px] font-semibold text-red-500 border border-red-200 px-2 py-1 hover:border-red-400 transition-colors">
-                    Rejeter
-                  </Link>
-                </div>
+                <DocActions
+                  memberId={memberId}
+                  docId={String(d.id)}
+                  token={params.token}
+                />
               </div>
             </div>
           ))}

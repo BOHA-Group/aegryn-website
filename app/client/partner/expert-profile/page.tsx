@@ -137,6 +137,7 @@ export default async function PartnerExpertProfilePage() {
 
       {/* Formulaire — toujours affiché pour permettre la saisie, mais submission bloquée si prérequis manquants */}
       <ExpertProfileForm
+        canPublish={kycApproved && subscriptionActive}
         existing={existingExpertProfile as {
           id?: string
           first_name: string

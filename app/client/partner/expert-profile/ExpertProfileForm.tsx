@@ -47,10 +47,11 @@ type ExpertProfileData = {
 }
 
 type Props = {
-  existing: ExpertProfileData | null
+  existing:   ExpertProfileData | null
+  canPublish: boolean
 }
 
-export default function ExpertProfileForm({ existing }: Props) {
+export default function ExpertProfileForm({ existing, canPublish }: Props) {
   const [form, setForm] = useState({
     first_name:   existing?.first_name   ?? '',
     last_name:    existing?.last_name    ?? '',
@@ -333,10 +334,21 @@ export default function ExpertProfileForm({ existing }: Props) {
         </div>
       )}
 
+      {!canPublish && (
+        <div className="bg-amber-50 border border-amber-200 px-4 py-3 text-[12px] text-amber-700">
+          Complétez votre KYC et activez votre abonnement pour soumettre votre fiche.
+          Vous pouvez dès maintenant préparer et enregistrer vos informations en brouillon.
+        </div>
+      )}
+
       <button
         type="submit"
-        disabled={saving}
-        className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-gray-800 disabled:opacity-50 transition-colors"
+        disabled={saving || !canPublish}
+        className={`flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 transition-colors ${
+          canPublish
+            ? 'bg-ag-navy text-white hover:bg-gray-800 disabled:opacity-50'
+            : 'bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200'
+        }`}
       >
         {saving && <Loader2 size={13} className="animate-spin" />}
         {isNew ? 'Soumettre ma fiche' : 'Enregistrer les modifications'}

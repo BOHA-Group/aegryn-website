@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { CreditCard, Loader2 } from 'lucide-react'
 
-export default function SubscribeButtons() {
+export default function SubscribeButtons({ disabled: kycBlocked = false }: { disabled?: boolean }) {
   const [loading, setLoading] = useState<'monthly' | 'yearly' | null>(null)
 
   async function checkout(plan: 'monthly' | 'yearly') {
@@ -32,7 +32,7 @@ export default function SubscribeButtons() {
       {/* Mensuel */}
       <button
         onClick={() => checkout('monthly')}
-        disabled={loading !== null}
+        disabled={loading !== null || kycBlocked}
         className="flex-1 flex items-center justify-between px-5 py-4 border-2 border-ag-navy text-ag-navy hover:bg-ag-navy hover:text-white transition-colors disabled:opacity-50 group"
       >
         <div className="text-left">
@@ -48,7 +48,7 @@ export default function SubscribeButtons() {
       {/* Annuel */}
       <button
         onClick={() => checkout('yearly')}
-        disabled={loading !== null}
+        disabled={loading !== null || kycBlocked}
         className="flex-1 flex items-center justify-between px-5 py-4 border-2 border-emerald-700 text-emerald-700 hover:bg-emerald-700 hover:text-white transition-colors disabled:opacity-50 group relative"
       >
         <div className="text-left">
