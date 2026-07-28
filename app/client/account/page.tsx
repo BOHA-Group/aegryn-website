@@ -42,6 +42,12 @@ export default async function AccountPage() {
   const roles: string[] = Array.isArray(profile?.roles) ? profile.roles : []
   const emailNotifEnabled = profile?.email_notifications_enabled !== false
 
+  const { data: ndaSignatures } = await supa
+    .from('nda_signatures')
+    .select('nda_version, signed_at, scope')
+    .eq('buyer_id', user.id)
+    .order('signed_at', { ascending: false })
+
   return (
     <div className="pb-12 px-4 pt-10">
       <div className="max-w-xl mx-auto">
@@ -135,6 +141,38 @@ export default async function AccountPage() {
             )}
           </div>
         </div>
+
+        {/* NDA signés */}
+        {ndaSignatures && ndaSignatures.length > 0 && (
+          <div className="bg-white border border-gray-200 p-5 mt-6">
+            <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">Accords de confidentialité signés</p>
+            <div className="flex flex-col gap-3">
+              {ndaSignatures.map((sig, i) => (
+                <div key={i} className="flex items-start justify-between gap-4 border border-gray-100 px-4 py-3">
+                  <div>
+                    <p className="font-sans text-[13px] text-gray-700 font-medium">
+                      NDA Catalogue AEGRYN
+                      <span className="ml-2 font-mono text-[10px] text-ag-apex bg-ag-navy px-1.5 py-0.5 uppercase tracking-wider">
+                        Signé
+                      </span>
+                    </p>
+                    <p className="font-mono text-[10px] text-gray-400 mt-0.5">
+                      Version {String(sig.nda_version ?? '—')} · {sig.signed_at
+                        ? new Date(sig.signed_at as string).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
+                        : '—'}
+                    </p>
+                  </div>
+                  <a
+                    href="/client/buyer/nda-view"
+                    className="font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0"
+                  >
+                    Consulter →
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Déconnexion */}
         <div className="mt-6 flex items-center justify-between">
