@@ -2732,9 +2732,9 @@
       "label": "Ce que nous construisons",
       "title": "Trois typologies.\nUne même exigence.",
       "items": [
-        { "badge": "SaaS B2B", "title": "Solution SaaS verticale", "desc": "Outils métier, plateformes de gestion, RegTech, LegalTech, FinTech - des SaaS conçus pour des marchés précis avec des métriques ARR/NRR mesurables dès le lancement.", "stack": "Next.js · TypeScript · Supabase · Vercel", "gradeTarget": "Grade cible : AA à AAA" },
-        { "badge": "IA Verticale", "title": "Produit IA natif", "desc": "Agents IA, automatisation sectorielle, analyse documentaire - construits sur des modèles avec données exclusives. Le vrai moat certifiable d'un actif IA.", "stack": "Python · LangChain · Supabase · Vercel", "gradeTarget": "Grade cible : A à AAA selon ancienneté" },
-        { "badge": "App Mobile", "title": "Application mobile", "desc": "iOS/Android pour services, marketplaces ou outils métiers mobiles-first. Métriques de rétention (D1/D7/D30) comme critères de design, pas comme indicateurs a posteriori.", "stack": "React Native · Expo · Supabase", "gradeTarget": "Grade cible : A à AA selon revenus" }
+        { "badge": "SaaS B2B", "title": "Solution SaaS verticale", "desc": "Outils métier, plateformes de gestion, RegTech, LegalTech, FinTech - des SaaS conçus pour des marchés précis avec des métriques ARR/NRR mesurables dès le lancement." },
+        { "badge": "IA Verticale", "title": "Produit IA natif", "desc": "Agents IA, automatisation sectorielle, analyse documentaire - construits sur des modèles avec données exclusives. Le vrai moat certifiable d'un actif IA." },
+        { "badge": "App Mobile", "title": "Application mobile", "desc": "iOS/Android pour services, marketplaces ou outils métiers mobiles-first. Métriques de rétention (D1/D7/D30) comme critères de design, pas comme indicateurs a posteriori." }
       ]
     },
     "exits": {

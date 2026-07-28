@@ -39,7 +39,7 @@ export default async function BuildServicePage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'build_service' })
 
   const differenceItems = t.raw('difference.items') as { num: string; title: string; desc: string }[]
-  const assetTypeItems  = t.raw('assetTypes.items')  as { badge: string; title: string; desc: string; stack: string; gradeTarget: string }[]
+  const assetTypeItems  = t.raw('assetTypes.items')  as { badge: string; title: string; desc: string }[]
   const exitItems       = t.raw('exits.items')       as { phase: string; title: string; desc: string; grade: string; cta: string; href: string }[]
   const processSteps    = t.raw('process.steps')     as { num: string; title: string; desc: string }[]
   const feeItems        = t.raw('fees.items')        as { title: string; desc: string; format: string; href?: string }[]
@@ -109,10 +109,6 @@ export default async function BuildServicePage({ params }: Props) {
                 </span>
                 <h3 className="font-sans font-bold text-ag-black text-[18px] leading-snug">{item.title}</h3>
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{item.desc}</p>
-                <div className="border-t border-ag-border pt-4 flex flex-col gap-1.5 mt-auto">
-                  <p className="font-mono text-[9px] tracking-[0.14em] text-ag-gray-light">{item.stack}</p>
-                  <p className="font-mono text-[10px] tracking-[0.14em] text-ag-apex-ink font-semibold">{item.gradeTarget}</p>
-                </div>
               </div>
             ))}
           </div>
