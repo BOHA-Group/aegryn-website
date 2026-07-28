@@ -21,6 +21,7 @@
     "auctionBuy": "Diventare acquirente",
     "auctionBidModels": "Modelli di bid",
     "auctionSession": "Prossima sessione",
+    "auctionAssessment": "Assessment Days",
     "auctionResults": "Risultati",
     "gradeSystem": "Sistema di grade",
     "gradeMethod": "Metodologia",
@@ -2257,6 +2258,7 @@
           "label": "Riservatezza sistematica"
         }
       ],
+      "stepsLabel": "Come funziona una sessione",
       "steps": [
         {
           "num": "01",
@@ -2282,16 +2284,7 @@
       "marketLabel": "Il mercato nel 2026",
       "marketTitle": "Un mercato in biforcazione.",
       "marketDesc": "Gli asset tech certificati e quelli non certificati non giocano più nella stessa categoria. Il divario di multiplo si è ampliato di 2,5x in 3 anni — e continua.",
-      "marketCta": "Stimare il valore del mio asset",
-      "segmentLabel": "IL NOSTRO SEGMENTO",
-      "segmentTitle": "100K€ — 2,5M€.\nDove gli asset tech hanno valore reale ma restano invisibili.",
-      "segmentDesc": "Troppo grandi per una rivendita informale. Troppo piccoli per le banche d'affari. AEGRYN struttura transazioni che nessun altro certifica — con il rigore istituzionale che questo segmento merita.",
-      "segmentItems": [
-        "Asset tra 100.000€ e 2.500.000€ di valutazione",
-        "SaaS B2B, marketplace, IP digitale, protocolli IA",
-        "Venditori: fondatori, studi, holding operative",
-        "Acquirenti: imprenditori, corporate, family office"
-      ]
+      "marketCta": "Stimare il valore del mio asset"
     },
     "catalog": {
       "label": "Catalogo AEGRYN",
@@ -2300,7 +2293,9 @@
       "filterAll": "Tutti i grade",
       "filterStar": "AEG ★",
       "filterAAA": "AAA",
+      "filterAaa": "AAA",
       "filterAA": "AA",
+      "filterAa": "AA",
       "filterA": "A",
       "filterB": "B",
       "emptyTitle": "Catalogo in preparazione.",
@@ -2312,7 +2307,13 @@
       "assetAsk": "Prezzo del venditore",
       "viewAsset": "Vedi il dossier",
       "confidential": "Riservato — NDA richiesto",
-      "thirdPartyNote": "Questi asset sono proposti da venditori indipendenti. AEGRYN agisce come intermediario certificato e organizzatore della transazione — non come venditore.",
+      "empty": "Nessun asset corrisponde a questo filtro.",
+      "emptyAll": "Il catalogo è vuoto.",
+      "emptyNote": "La prossima sessione apre Q3 2026.",
+      "notifyBtn": "Ricevi notifica",
+      "sellerTitle": "Vuoi vendere il tuo asset?",
+      "sellerDesc": "Invia il tuo asset per la certificazione e accedi al prossimo catalogo.",
+      "sellerCta": "Invia per certificazione",
       "notifyEmail": "La sua email",
       "notifyEmailPlaceholder": "fondatore@esempio.com",
       "notifyType": "Lei è",
@@ -2332,6 +2333,28 @@
       "label": "Venditore",
       "title": "Vendi il tuo asset\nall'acquirente giusto.",
       "desc": "AEGRYN trova l'acquirente ottimale per il tuo asset certificato.",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Invio",
+          "desc": "Modulo + documentazione. Prequalificazione in 5 giorni."
+        },
+        {
+          "num": "02",
+          "title": "Certificazione",
+          "desc": "Valutazione in 4 dimensioni. Report AEGRYN Grade."
+        },
+        {
+          "num": "03",
+          "title": "Sessione",
+          "desc": "Il tuo asset viene presentato nel prossimo catalogo."
+        },
+        {
+          "num": "04",
+          "title": "Chiusura",
+          "desc": "Negoziazione, escrow, trasferimento, tutto con AEGRYN."
+        }
+      ],
       "step1Title": "Invia",
       "step1Desc": "Compila il modulo di invio. Informazioni di base sull'asset, metriche chiave, documentazione disponibile.",
       "step2Title": "Certificazione",
@@ -2343,6 +2366,21 @@
       "feesCert": "Certificazione",
       "feesSuccess": "Commissione di successo",
       "feesTitle": "Struttura compensi",
+      "feesNote": "Commissione solo in caso di chiusura riuscita.",
+      "fees": [
+        {
+          "item": "Certificazione",
+          "value": "Tariffa fissa"
+        },
+        {
+          "item": "Commissione",
+          "value": "% del prezzo di transazione"
+        },
+        {
+          "item": "Retainer",
+          "value": "Nessuno"
+        }
+      ],
       "cta": "Invia il mio asset",
       "feesDesc": "La nostra remunerazione è strutturata in due componenti, allineate alla qualità del dossier e al vostro successo.",
       "feesCertValue": "Onorari fissi di istruzione e audit che coprono l'intero processo di certificazione CIFS, indipendentemente dall'esito della transazione.",
@@ -2705,169 +2743,17 @@
     }
   },
   "build_service": {
-    "meta": {
-      "title": "Sviluppo di asset digitali - AEGRYN",
-      "desc": "AEGRYN progetta SaaS B2B, applicazioni IA e app mobile proprietarie con logica di uscita integrata dal primo giorno."
-    },
+    "meta": { "title": "Sviluppo di asset digitali - AEGRYN", "desc": "AEGRYN progetta SaaS B2B, applicazioni IA e app mobile proprietarie con logica di uscita integrata dal primo giorno." },
     "label": "Servizi - Sviluppo di asset",
     "title": "Il vostro asset digitale.\nProgettato per durare.\nStrutturato per cedere.",
     "desc": "AEGRYN progetta asset digitali proprietari - SaaS B2B, IA verticale, app mobile - con logica di uscita integrata dal primo giorno.",
-    "difference": {
-      "label": "Non un'agenzia. Non uno studio.",
-      "title": "La differenza AEGRYN.",
-      "items": [
-        {
-          "num": "01",
-          "title": "Certificabile dal primo giorno",
-          "desc": "Ogni asset è costruito secondo gli standard CIFS. Il grade non è un audit post-produzione: è l'architettura del primo giorno."
-        },
-        {
-          "num": "02",
-          "title": "Rimanete proprietari",
-          "desc": "Nessuna diluizione. Nessuna quota presa da AEGRYN. L'asset è al 100% vostro."
-        },
-        {
-          "num": "03",
-          "title": "L'uscita è prevista fin dall'inizio",
-          "desc": "Cessione early stage, a maturità o manutenzione a lungo termine: il piano di uscita è definito prima del primo sprint."
-        }
-      ]
-    },
-    "assetTypes": {
-      "label": "Cosa costruiamo",
-      "title": "Tre tipologie.\nUn'unica esigenza.",
-      "items": [
-        {
-          "badge": "SaaS B2B",
-          "title": "Soluzione SaaS verticale",
-          "desc": "Strumenti aziendali, piattaforme di gestione, RegTech, LegalTech, FinTech con metriche ARR/NRR misurabili dal lancio.",
-          "stack": "Next.js - TypeScript - Supabase - Vercel",
-          "gradeTarget": "Grade target: AA a AAA"
-        },
-        {
-          "badge": "IA Verticale",
-          "title": "Prodotto IA nativo",
-          "desc": "Agenti IA, automazione settoriale, analisi documentale costruiti su modelli con dati proprietari.",
-          "stack": "Python - LangChain - Supabase - Vercel",
-          "gradeTarget": "Grade target: A a AAA secondo maturità"
-        },
-        {
-          "badge": "App Mobile",
-          "title": "Applicazione mobile",
-          "desc": "iOS/Android per servizi, marketplace o strumenti business mobile-first. Metriche di retention (D1/D7/D30) come criteri di design.",
-          "stack": "React Native - Expo - Supabase",
-          "gradeTarget": "Grade target: A a AA secondo ricavi"
-        }
-      ]
-    },
-    "exits": {
-      "label": "L'uscita è la vostra scelta",
-      "title": "Tre percorsi.\nUn asset per tutti.",
-      "items": [
-        {
-          "phase": "Early stage - 6 a 18 mesi",
-          "title": "Cessione early stage",
-          "desc": "Il vostro asset ha un'architettura solida e una prima trazione. AEGRYN struttura la cessione tramite Auction o transazione confidenziale.",
-          "grade": "Grade target: A - ticket 100K a 500K EUR",
-          "cta": "Vedere i modelli di acquisizione",
-          "href": "/auction/bid-models"
-        },
-        {
-          "phase": "Maturità di mercato - 18 a 36 mesi",
-          "title": "Cessione a maturità",
-          "desc": "L'asset ha ricavi ricorrenti documentati e una base clienti consolidata. Idoneo ai grade AAA a AEG.",
-          "grade": "Grade target: AA a AEG - ticket 500K a 5M EUR",
-          "cta": "Invia per certificazione",
-          "href": "/grade/submit"
-        },
-        {
-          "phase": "Conservazione",
-          "title": "Manutenzione evolutiva e correttiva",
-          "desc": "Non desiderate cedere. AEGRYN mantiene l'asset tecnicamente. L'uscita rimane aperta.",
-          "grade": "Canone mensile o per consegna",
-          "cta": "Discutere la manutenzione",
-          "href": "/contact"
-        }
-      ]
-    },
-    "process": {
-      "label": "Il nostro processo",
-      "title": "Dal brief al closing.\nUn solo interlocutore.",
-      "steps": [
-        {
-          "num": "01",
-          "title": "Discovery e Brief",
-          "desc": "Definizione della proposta di valore, mercato target, stack e piano di uscita. Output: capitolato certificabile. Durata: 1-2 settimane."
-        },
-        {
-          "num": "02",
-          "title": "Architettura e Grade Design",
-          "desc": "L'asset è architettato secondo i criteri CIFS: codice documentato, IP registrata, sicurezza by design."
-        },
-        {
-          "num": "03",
-          "title": "Build e Iterazioni",
-          "desc": "Sviluppo a sprint con milestone misurabili, revisione del codice e documentazione continua."
-        },
-        {
-          "num": "04",
-          "title": "Lancio e Trazione",
-          "desc": "Deployment, primi utenti, metriche ARR/NRR/churn. Tempo al Grade A certificabile: 6-12 mesi."
-        },
-        {
-          "num": "05",
-          "title": "Certificazione e Uscita",
-          "desc": "Invio al protocollo CIFS, grade ufficiale, transazione via AEGRYN Auction o confidenziale."
-        }
-      ]
-    },
-    "maintenance": {
-      "label": "Manutenzione su richiesta",
-      "title": "L'asset vive.\nNoi lo manteniamo.",
-      "desc": "Dopo il lancio, AEGRYN offre manutenzione a due livelli.",
-      "corrective": {
-        "title": "Manutenzione correttiva",
-        "desc": "Correzione bug, risoluzione incidenti, aggiornamenti sicurezza, CVE, monitoraggio. SLA definito nel contratto.",
-        "format": "Canone mensile o ticket"
-      },
-      "evolutive": {
-        "title": "Manutenzione evolutiva",
-        "desc": "Nuove funzionalità, refactoring, aggiornamenti versione, adattamento normativo (GDPR, EU AI Act, NIS2).",
-        "format": "Canone mensile o per sprint"
-      },
-      "note": "La manutenzione AEGRYN garantisce che l'asset conservi o migliori il suo grade."
-    },
-    "fees": {
-      "label": "Onorari",
-      "title": "Trasparente dal brief.",
-      "items": [
-        {
-          "title": "Concezione e Build",
-          "desc": "Forfait definito al Discovery. Nessuna quota presa. Nessuna diluizione.",
-          "format": "Preventivo su richiesta"
-        },
-        {
-          "title": "Manutenzione",
-          "desc": "Canone mensile o per consegna. Condizioni nel contratto.",
-          "format": "Canone mensile definito nel contratto"
-        },
-        {
-          "title": "Transazione",
-          "desc": "Se l'uscita avviene tramite AEGRYN Auction o transazione confidenziale, si applica la commissione standard.",
-          "format": "Commissione di successo - condizioni in CGV",
-          "href": "/terms/cgv"
-        }
-      ],
-      "coInvestNote": "AEGRYN può agire come co-investitore minoritario su certi progetti. Valutato caso per caso."
-    },
-    "cta": {
-      "title": "Un progetto in mente?",
-      "desc": "Descrivete la vostra idea o mercato target. Rispondiamo entro 48h con un'analisi di fattibilità.",
-      "primary": "Avviare un progetto",
-      "href": "/contact",
-      "secondary": "Vedere i nostri asset proprietari",
-      "secondaryHref": "/assets"
-    }
+    "difference": { "label": "Non un'agenzia. Non uno studio.", "title": "La differenza AEGRYN.", "items": [ { "num": "01", "title": "Certificabile dal primo giorno", "desc": "Ogni asset è costruito secondo gli standard CIFS. Il grade non è un audit post-produzione: è l'architettura del primo giorno." }, { "num": "02", "title": "Rimanete proprietari", "desc": "Nessuna diluizione. Nessuna quota presa da AEGRYN. L'asset è al 100% vostro." }, { "num": "03", "title": "L'uscita è prevista fin dall'inizio", "desc": "Cessione early stage, a maturità o manutenzione a lungo termine: il piano di uscita è definito prima del primo sprint." } ] },
+    "assetTypes": { "label": "Cosa costruiamo", "title": "Tre tipologie.\nUn'unica esigenza.", "items": [ { "badge": "SaaS B2B", "title": "Soluzione SaaS verticale", "desc": "Strumenti aziendali, piattaforme di gestione, RegTech, LegalTech, FinTech con metriche ARR/NRR misurabili dal lancio.", "stack": "Next.js - TypeScript - Supabase - Vercel", "gradeTarget": "Grade target: AA a AAA" }, { "badge": "IA Verticale", "title": "Prodotto IA nativo", "desc": "Agenti IA, automazione settoriale, analisi documentale costruiti su modelli con dati proprietari.", "stack": "Python - LangChain - Supabase - Vercel", "gradeTarget": "Grade target: A a AAA secondo maturità" }, { "badge": "App Mobile", "title": "Applicazione mobile", "desc": "iOS/Android per servizi, marketplace o strumenti business mobile-first. Metriche di retention (D1/D7/D30) come criteri di design.", "stack": "React Native - Expo - Supabase", "gradeTarget": "Grade target: A a AA secondo ricavi" } ] },
+    "exits": { "label": "L'uscita è la vostra scelta", "title": "Tre percorsi.\nUn asset per tutti.", "items": [ { "phase": "Early stage - 6 a 18 mesi", "title": "Cessione early stage", "desc": "Il vostro asset ha un'architettura solida e una prima trazione. AEGRYN struttura la cessione tramite Auction o transazione confidenziale.", "grade": "Grade target: A - ticket 100K a 500K EUR", "cta": "Vedere i modelli di acquisizione", "href": "/auction/bid-models" }, { "phase": "Maturità di mercato - 18 a 36 mesi", "title": "Cessione a maturità", "desc": "L'asset ha ricavi ricorrenti documentati e una base clienti consolidata. Idoneo ai grade AAA a AEG.", "grade": "Grade target: AA a AEG - ticket 500K a 5M EUR", "cta": "Invia per certificazione", "href": "/grade/submit" }, { "phase": "Conservazione", "title": "Manutenzione evolutiva e correttiva", "desc": "Non desiderate cedere. AEGRYN mantiene l'asset tecnicamente. L'uscita rimane aperta.", "grade": "Canone mensile o per consegna", "cta": "Discutere la manutenzione", "href": "/contact" } ] },
+    "process": { "label": "Il nostro processo", "title": "Dal brief al closing.\nUn solo interlocutore.", "steps": [ { "num": "01", "title": "Discovery e Brief", "desc": "Definizione della proposta di valore, mercato target, stack e piano di uscita. Output: capitolato certificabile. Durata: 1-2 settimane." }, { "num": "02", "title": "Architettura e Grade Design", "desc": "L'asset è architettato secondo i criteri CIFS: codice documentato, IP registrata, sicurezza by design." }, { "num": "03", "title": "Build e Iterazioni", "desc": "Sviluppo a sprint con milestone misurabili, revisione del codice e documentazione continua." }, { "num": "04", "title": "Lancio e Trazione", "desc": "Deployment, primi utenti, metriche ARR/NRR/churn. Tempo al Grade A certificabile: 6-12 mesi." }, { "num": "05", "title": "Certificazione e Uscita", "desc": "Invio al protocollo CIFS, grade ufficiale, transazione via AEGRYN Auction o confidenziale." } ] },
+    "maintenance": { "label": "Manutenzione su richiesta", "title": "L'asset vive.\nNoi lo manteniamo.", "desc": "Dopo il lancio, AEGRYN offre manutenzione a due livelli.", "corrective": { "title": "Manutenzione correttiva", "desc": "Correzione bug, risoluzione incidenti, aggiornamenti sicurezza, CVE, monitoraggio. SLA definito nel contratto.", "format": "Canone mensile o ticket" }, "evolutive": { "title": "Manutenzione evolutiva", "desc": "Nuove funzionalità, refactoring, aggiornamenti versione, adattamento normativo (GDPR, EU AI Act, NIS2).", "format": "Canone mensile o per sprint" }, "note": "La manutenzione AEGRYN garantisce che l'asset conservi o migliori il suo grade." },
+    "fees": { "label": "Onorari", "title": "Trasparente dal brief.", "items": [ { "title": "Concezione e Build", "desc": "Forfait definito al Discovery. Nessuna quota presa. Nessuna diluizione.", "format": "Preventivo su richiesta" }, { "title": "Manutenzione", "desc": "Canone mensile o per consegna. Condizioni nel contratto.", "format": "Canone mensile definito nel contratto" }, { "title": "Transazione", "desc": "Se l'uscita avviene tramite AEGRYN Auction o transazione confidenziale, si applica la commissione standard.", "format": "Commissione di successo - condizioni in CGV", "href": "/terms/cgv" } ], "coInvestNote": "AEGRYN può agire come co-investitore minoritario su certi progetti. Valutato caso per caso." },
+    "cta": { "title": "Un progetto in mente?", "desc": "Descrivete la vostra idea o mercato target. Rispondiamo entro 48h con un'analisi di fattibilità.", "primary": "Avviare un progetto", "href": "/contact", "secondary": "Vedere i nostri asset proprietari", "secondaryHref": "/assets" }
   },
   "gradeSubmit": {
     "meta": {
@@ -3551,10 +3437,7 @@
       "sectionFinancial": "Dati finanziari",
       "arr": "ARR / MRR annualizzato (€ o CHF)",
       "arrPlaceholder": "es. 150000",
-      "askPrice": "Prezzo di vendita desiderato",
-      "askPriceCurrency": "Valuta",
-      "askPriceCurrencyEur": "EUR (€)",
-      "askPriceCurrencyChf": "CHF (Fr.)",
+      "askPrice": "Prezzo di vendita desiderato (€ o CHF)",
       "askPricePlaceholder": "es. 1200000",
       "ipFiled": "Proprietà intellettuale depositata",
       "ipYes": "Sì",
@@ -3582,10 +3465,8 @@
         "q3_2026": "Q3 2026",
         "q4_2026": "Q4 2026",
         "q1_2027": "T1 2027",
-        "q2_2027": "T2 2027 (apr. — giu. 2027)",
         "flexible": "Flessibile"
       },
-      "targetSessionHelper": "La sua selezione determina il trimestre e l'anno di eleggibilità per il prossimo catalogo di vendita.",
       "sectionContact": "I suoi dati di contatto",
       "fullName": "Nome completo",
       "email": "Email professionale",
@@ -4141,8 +4022,7 @@
       "contact": "Contatta",
       "errorInvalid": "Email o password errati.",
       "errorNetwork": "Impossibile contattare il server. Controlla la connessione e riprova.",
-      "backToSite": "Torna al sito",
-      "createAccount": "Crea un account →"
+      "backToSite": "Torna al sito"
     },
     "forgotPassword": {
       "title": "Reimposta password",
