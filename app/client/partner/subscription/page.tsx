@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
+import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { CheckCircle2, CreditCard, Clock, XCircle } from 'lucide-react'
@@ -54,7 +55,7 @@ export default async function PartnerSubscriptionPage({
           <CheckCircle2 size={16} className="text-emerald-600 shrink-0 mt-0.5" />
           <p className="font-sans text-[13px] text-emerald-800">
             Paiement confirmé — votre abonnement est en cours d&apos;activation (quelques secondes).{' '}
-            <a href="/client/partner/subscription" className="underline font-medium">Rafraîchissez</a>{' '}
+            <Link href="/client/partner/subscription" className="underline font-medium">Rafraîchissez</Link>{' '}
             la page si le statut n&apos;a pas changé.
           </p>
         </div>
