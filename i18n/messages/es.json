@@ -4756,6 +4756,7 @@
       "fieldEmail": "Email profesional",
       "fieldProfession": "Especialidad principal",
       "fieldCategory": "Categoría",
+      "fieldDomain": "Área de especialización principal",
       "fieldOrg": "Despacho / Organización",
       "fieldCity": "Ciudad",
       "fieldCountry": "País",

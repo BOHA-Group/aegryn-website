@@ -4823,6 +4823,7 @@
       "fieldEmail": "Professional email",
       "fieldProfession": "Main specialty",
       "fieldCategory": "Category",
+      "fieldDomain": "Main area of expertise",
       "fieldOrg": "Firm / Organisation",
       "fieldCity": "City",
       "fieldCountry": "Country",

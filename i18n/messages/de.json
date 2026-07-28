@@ -4756,6 +4756,7 @@
       "fieldEmail": "Geschäftliche E-Mail",
       "fieldProfession": "Hauptspezialisierung",
       "fieldCategory": "Kategorie",
+      "fieldDomain": "Hauptfachgebiet",
       "fieldOrg": "Kanzlei / Organisation",
       "fieldCity": "Stadt",
       "fieldCountry": "Land",

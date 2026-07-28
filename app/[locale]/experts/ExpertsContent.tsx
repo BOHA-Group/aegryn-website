@@ -284,8 +284,9 @@ function WaitlistForm({ t }: { t: ReturnType<typeof useTranslations> }) {
           prenom:       raw.prenom,
           nom:          raw.nom,
           email:        raw.email,
-          profession:   raw.profession,
+          profession:   raw.profession  || undefined,
           category:     raw.category   || undefined,
+          domain:       raw.domain     || undefined,
           organization: raw.organization || undefined,
           city:         raw.city         || undefined,
           country:      raw.country      || undefined,
@@ -338,6 +339,32 @@ function WaitlistForm({ t }: { t: ReturnType<typeof useTranslations> }) {
               <option value="">—</option>
               {CATEGORIES.map(c => (
                 <option key={c.key} value={c.key}>{t(c.labelKey)}</option>
+              ))}
+            </select>
+            <ChevronDown size={13} className="absolute right-3 top-1/2 -translate-y-1/2 text-ag-gray pointer-events-none" />
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+          <label className={labelCls}>{t('waitlist.fieldDomain')} *</label>
+          <div className="relative">
+            <select name="domain" required className={selectCls}>
+              <option value="">—</option>
+              {ALL_DOMAINS.map(d => (
+                <option key={d} value={d}>{t(`domains.${d}`)}</option>
+              ))}
+            </select>
+            <ChevronDown size={13} className="absolute right-3 top-1/2 -translate-y-1/2 text-ag-gray pointer-events-none" />
+          </div>
+        </div>
+        <div>
+          <label className={labelCls}>{t('waitlist.fieldCountry')} *</label>
+          <div className="relative">
+            <select name="country" required className={selectCls}>
+              <option value="">—</option>
+              {COUNTRIES.map(c => (
+                <option key={c} value={c}>{c}</option>
               ))}
             </select>
             <ChevronDown size={13} className="absolute right-3 top-1/2 -translate-y-1/2 text-ag-gray pointer-events-none" />

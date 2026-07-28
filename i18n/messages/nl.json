@@ -4756,6 +4756,7 @@
       "fieldEmail": "Professioneel e-mailadres",
       "fieldProfession": "Hoofdspecialiteit",
       "fieldCategory": "Categorie",
+      "fieldDomain": "Hoofdexpertisegebied",
       "fieldOrg": "Kantoor / Organisatie",
       "fieldCity": "Stad",
       "fieldCountry": "Land",
