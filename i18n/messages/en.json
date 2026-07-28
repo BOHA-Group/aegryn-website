@@ -3583,9 +3583,9 @@
     "defBuyer": "Any qualified AEGRYN member authorised to access the catalogue and submit offers.",
     "s2Title": "Services Covered",
     "s2ReviewTitle": "AEGRYN Review",
-    "s2Review": "Written opinion from an AEGRYN analyst on a submitted tech asset. Timeline: 10 working days. No external validation, not publishable in the catalogue. Indicative value only. Fully deductible from certification fees if the full process is started within 6 months.",
+    "s2Review": "Written opinion from an AEGRYN analyst on a submitted tech asset. Timeline: 15 working days. No external validation, not publishable in the catalogue. Indicative value only. Fully deductible from certification fees if the full process is started within 6 months.",
     "s2ReviewPlusTitle": "AEGRYN Review+",
-    "s2ReviewPlus": "Written opinion from an AEGRYN analyst supplemented by an external partner review. Timeline: 15 working days. Not official in the sense of full certification, not publishable. Fully deductible under the same conditions.",
+    "s2ReviewPlus": "Written opinion from an AEGRYN analyst supplemented by an external partner review. Timeline: 20 working days. Not official in the sense of full certification, not publishable. Fully deductible under the same conditions.",
     "s2CertTitle": "Auction Certification",
     "s2Cert": "Full multi-dimensional audit process across all 4 C/I/F/S dimensions. Conducted by certified AEGRYN analysts according to the official protocol. Official AEG Grade awarded and publishable in the catalogue. Fees: success-based (commission on sale).",
     "s2AdvisoryTitle": "AEGRYN Advisory",
@@ -3897,7 +3897,7 @@
           "certification"
         ],
         "q": "How long does the certification process take?",
-        "a": "AEGRYN Review: 5 working days after confirmed payment. AEGRYN Review+: 10 working days. Full Auction Certification: 3 to 5 weeks depending on asset complexity."
+        "a": "AEGRYN Review: 15 working days after confirmed payment. AEGRYN Review+: 20 working days. Full Auction Certification: 3 to 5 weeks depending on asset complexity."
       },
       {
         "id": "cert-cost",

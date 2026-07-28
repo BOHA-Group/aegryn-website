@@ -3583,9 +3583,9 @@
     "defBuyer": "Tout membre qualifié AEGRYN autorisé à accéder au catalogue et à soumettre des offres.",
     "s2Title": "Services couverts",
     "s2ReviewTitle": "AEGRYN Review",
-    "s2Review": "Avis écrit d'un analyste AEGRYN sur un actif tech soumis. Délai : 10 jours ouvrés. Sans validation externe, non publiable au catalogue. Valeur indicative uniquement. Déductible intégralement des honoraires de certification si le processus complet est engagé dans les 6 mois.",
+    "s2Review": "Avis écrit d'un analyste AEGRYN sur un actif tech soumis. Délai : 15 jours ouvrés. Sans validation externe, non publiable au catalogue. Valeur indicative uniquement. Déductible intégralement des honoraires de certification si le processus complet est engagé dans les 6 mois.",
     "s2ReviewPlusTitle": "AEGRYN Review+",
-    "s2ReviewPlus": "Avis écrit d'un analyste AEGRYN complété par la revue d'un partenaire externe. Délai : 15 jours ouvrés. Non officiel au sens de la certification complète, non publiable. Déductible intégralement si certification complète engagée dans les 6 mois.",
+    "s2ReviewPlus": "Avis écrit d'un analyste AEGRYN complété par la revue d'un partenaire externe. Délai : 20 jours ouvrés. Non officiel au sens de la certification complète, non publiable. Déductible intégralement si certification complète engagée dans les 6 mois.",
     "s2CertTitle": "Certification Auction",
     "s2Cert": "Processus d'audit multi-dimensionnel complet sur les 4 dimensions C/I/F/S. Réalisé par les analystes certifiés AEGRYN selon le protocole officiel. Grade officiel AEG attribué et publiable au catalogue. Honoraires : rémunération à la transaction.",
     "s2AdvisoryTitle": "AEGRYN Advisory",
@@ -3897,7 +3897,7 @@
           "certification"
         ],
         "q": "Combien de temps dure le processus de certification ?",
-        "a": "AEGRYN Review (évaluation interne) : 5 jours ouvrés après paiement confirmé. AEGRYN Review+ (avec partenaire externe) : 10 jours ouvrés. Certification Auction complète : 3 à 5 semaines selon la complexité de l'actif."
+        "a": "AEGRYN Review (évaluation interne) : 15 jours ouvrés après paiement confirmé. AEGRYN Review+ (avec partenaire externe) : 20 jours ouvrés. Certification Auction complète : 3 à 5 semaines selon la complexité de l'actif."
       },
       {
         "id": "cert-cost",

@@ -3516,9 +3516,9 @@
     "defBuyer": "Elk gekwalificeerd AEGRYN-lid dat bevoegd is toegang te krijgen tot de catalogus en biedingen in te dienen.",
     "s2Title": "Gedekte diensten",
     "s2ReviewTitle": "AEGRYN Review",
-    "s2Review": "Schriftelijke opinie van een AEGRYN-analist over een ingediend tech-asset. Doorlooptijd: 10 werkdagen. Zonder externe validatie, niet publiceerbaar in de catalogus. Slechts indicatieve waarde. Volledig aftrekbaar van de certificeringsvergoedingen als het volledige proces binnen 6 maanden wordt gestart.",
+    "s2Review": "Schriftelijke opinie van een AEGRYN-analist over een ingediend tech-asset. Doorlooptijd: 15 werkdagen. Zonder externe validatie, niet publiceerbaar in de catalogus. Slechts indicatieve waarde. Volledig aftrekbaar van de certificeringsvergoedingen als het volledige proces binnen 6 maanden wordt gestart.",
     "s2ReviewPlusTitle": "AEGRYN Review+",
-    "s2ReviewPlus": "Schriftelijke opinie van een AEGRYN-analist aangevuld met de beoordeling van een externe partner. Doorlooptijd: 15 werkdagen. Niet officieel in de zin van de volledige certificering, niet publiceerbaar. Volledig aftrekbaar onder dezelfde voorwaarden.",
+    "s2ReviewPlus": "Schriftelijke opinie van een AEGRYN-analist aangevuld met de beoordeling van een externe partner. Doorlooptijd: 20 werkdagen. Niet officieel in de zin van de volledige certificering, niet publiceerbaar. Volledig aftrekbaar onder dezelfde voorwaarden.",
     "s2CertTitle": "Auction-certificering",
     "s2Cert": "Volledig multidimensionaal auditproces over alle 4 C/I/F/S-dimensies. Uitgevoerd door gecertificeerde AEGRYN-analisten volgens het officiële protocol. Officieel AEG-grade toegekend en publiceerbaar in de catalogus. Vergoeding: op basis van succes (commissie bij verkoop).",
     "s2AdvisoryTitle": "AEGRYN Advisory",
@@ -3830,7 +3830,7 @@
           "certification"
         ],
         "q": "Hoe lang duurt het certificeringsproces?",
-        "a": "AEGRYN Review: 5 werkdagen na bevestigde betaling. AEGRYN Review+: 10 werkdagen. Volledige Auction-certificering: 3 tot 5 weken afhankelijk van de complexiteit van het asset."
+        "a": "AEGRYN Review: 15 werkdagen na bevestigde betaling. AEGRYN Review+: 20 werkdagen. Volledige Auction-certificering: 3 tot 5 weken afhankelijk van de complexiteit van het asset."
       },
       {
         "id": "cert-cost",
