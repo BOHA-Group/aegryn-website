@@ -359,35 +359,33 @@ export function emailKycDocSubmitted(opts: {
   return { subject, html }
 }
 
-/* ── KYC : notification membre après décision admin ────────────────────── */
-export function emailKycDocDecision(opts: {
+/* ── KYC : email final profil approuvé (buyer ou seller) ───────────────── */
+export function emailKycApproved(opts: {
   memberName: string
-  docLabel: string
-  status: 'validated' | 'rejected'
-  rejectionReason?: string
+  role: 'buyer' | 'seller'
 }): { subject: string; html: string } {
-  const isOk = opts.status === 'validated'
-  const subject = isOk
-    ? `[AEGRYN KYC] Document validé — ${opts.docLabel}`
-    : `[AEGRYN KYC] Document rejeté — ${opts.docLabel}`
+  const isBuyer = opts.role === 'buyer'
+  const subject = '[AEGRYN] Votre profil KYC est validé'
+  const ctaLabel = isBuyer ? 'Accéder aux sessions d\'acquisition' : 'Soumettre un actif'
+  const ctaHref  = isBuyer ? 'https://aegryn.com/client/buyer/catalogue' : 'https://aegryn.com/client/seller/actifs'
+  const roleAction = isBuyer
+    ? 'vous pouvez désormais <strong>vous inscrire et accéder aux sessions de vente AEGRYN</strong>.'
+    : 'vous pouvez désormais <strong>soumettre un actif pour certification et mise en vente</strong>.'
 
   const html = WRAP(`
-    <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:${isOk ? '#5ADDA4' : '#ef4444'};font-weight:600;">
-      KYC — ${isOk ? 'Document validé' : 'Document rejeté'}
+    <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">
+      KYC — Profil vérifié et conforme
     </p>
-    <h1 style="margin:0 0 16px 0;font-size:20px;font-weight:700;color:#0F1C3F;line-height:1.25;">${opts.docLabel}</h1>
+    <h1 style="margin:0 0 16px 0;font-size:22px;font-weight:700;color:#0F1C3F;line-height:1.25;">Votre dossier KYC est validé</h1>
     <p style="margin:0 0 20px 0;font-size:14px;color:#475569;line-height:1.6;">
-      Bonjour <strong style="color:#0F1C3F;">${opts.memberName}</strong>,<br/>
-      ${isOk
-        ? `Votre document <strong>${opts.docLabel}</strong> a été <strong style="color:#16a34a;">validé</strong> par l'équipe AEGRYN.`
-        : `Votre document <strong>${opts.docLabel}</strong> a été <strong style="color:#dc2626;">rejeté</strong> par l'équipe AEGRYN.`}
+      Bonjour <strong style="color:#0F1C3F;">${opts.memberName}</strong>,<br/><br/>
+      Votre dossier KYC a été examiné et <strong style="color:#16a34a;">approuvé</strong> par l'équipe AEGRYN. Votre identité et vos documents sont conformes à nos exigences réglementaires.<br/><br/>
+      En tant que ${isBuyer ? 'acquéreur' : 'cédant'}, ${roleAction}
     </p>
-    ${!isOk && opts.rejectionReason ? `
-    <div style="background:#fef2f2;border:1px solid #fecaca;padding:16px;margin:0 0 20px 0;">
-      <p style="margin:0;font-size:13px;color:#dc2626;"><strong>Motif :</strong> ${opts.rejectionReason}</p>
-      <p style="margin:8px 0 0 0;font-size:12px;color:#64748b;">Vous pouvez soumettre un nouveau document depuis votre espace KYC.</p>
-    </div>` : ''}
-    <p style="margin:0;">${ctaButton('Accéder à mon espace KYC', 'https://aegryn.com/client/buyer/kyc')}</p>
+    <p style="margin:0 0 28px 0;">${ctaButton(ctaLabel, ctaHref)}</p>
+    <p style="margin:0;font-size:11px;color:#94a3b8;line-height:1.6;">
+      Pour toute question : <a href="mailto:contact@boha-group.com" style="color:#5ADDA4;text-decoration:none;">contact@boha-group.com</a>
+    </p>
   `)
   return { subject, html }
 }

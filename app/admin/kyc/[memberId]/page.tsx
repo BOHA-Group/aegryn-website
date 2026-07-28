@@ -4,7 +4,7 @@ import { redirect }            from 'next/navigation'
 import type { Metadata }       from 'next'
 import Link                    from 'next/link'
 import SignedDocLink            from './SignedDocLink'
-import { sendEmail, emailKycDocDecision } from '@/lib/sendEmail'
+import { sendEmail, emailKycApproved } from '@/lib/sendEmail'
 
 export const metadata: Metadata = {
   title: 'Dossier KYC — AEGRYN Admin',
@@ -53,42 +53,38 @@ export default async function AdminKycMemberPage({
     }
     if (params.status === 'rejected' && params.reason) update.rejection_reason = params.reason
     await supa.from('kyc_documents').update(update).eq('id', params.docId)
-
-    /* Email au membre */
-    if (params.status === 'validated' || params.status === 'rejected') {
-      const [{ data: docRow }, { data: memberProfile }] = await Promise.all([
-        supa.from('kyc_documents').select('doc_type').eq('id', params.docId).single(),
-        supa.from('profiles').select('full_name').eq('id', memberId).single(),
-      ])
-      const memberAuthData = await supa.auth.admin.getUserById(memberId)
-      const memberEmail = memberAuthData.data.user?.email
-      if (memberEmail) {
-        const docLabel = DOC_LABELS[String(docRow?.doc_type ?? '')] ?? String(docRow?.doc_type ?? '')
-        const { subject, html } = emailKycDocDecision({
-          memberName:      memberProfile?.full_name ?? memberEmail,
-          docLabel,
-          status:          params.status as 'validated' | 'rejected',
-          rejectionReason: params.reason,
-        })
-        await sendEmail(memberEmail, subject, html, 'kyc-member')
-      }
-    }
-
     redirect(`/admin/kyc/${memberId}${tokenQs}`)
   }
 
   if (params.action === 'global' && params.global) {
     const now = new Date().toISOString()
-    /* Mettre à jour buyer_kyc_verifications (historique) */
     await supa.from('buyer_kyc_verifications').update({
       kyc_status:  params.global,
       reviewed_by: 'admin',
       reviewed_at: now,
     }).eq('user_id', memberId)
-    /* Sync sur profiles.kyc_status — source de vérité pour les accès */
     await supa.from('profiles').update({
       kyc_status: params.global,
     }).eq('id', memberId)
+
+    /* Email final si approbation complète */
+    if (params.global === 'approved') {
+      const [{ data: memberProfile }, memberAuthData] = await Promise.all([
+        supa.from('profiles').select('full_name, roles').eq('id', memberId).single(),
+        supa.auth.admin.getUserById(memberId),
+      ])
+      const memberEmail = memberAuthData.data.user?.email
+      if (memberEmail) {
+        const roles: string[] = Array.isArray(memberProfile?.roles) ? memberProfile.roles : []
+        const role = roles.includes('seller') ? 'seller' : 'buyer'
+        const { subject, html } = emailKycApproved({
+          memberName: memberProfile?.full_name ?? memberEmail,
+          role,
+        })
+        await sendEmail(memberEmail, subject, html, 'kyc-approved')
+      }
+    }
+
     redirect(`/admin/kyc/${memberId}${tokenQs}`)
   }
 

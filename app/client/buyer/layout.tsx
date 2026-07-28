@@ -4,6 +4,7 @@ import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import BuyerNav from './BuyerNav'
 import ViewSwitcher from '@/app/client/ViewSwitcher'
+import KycBanner from '@/components/client/KycBanner'
 
 export default async function BuyerLayout({ children }: { children: React.ReactNode }) {
   const user = await getUser()
@@ -12,7 +13,7 @@ export default async function BuyerLayout({ children }: { children: React.ReactN
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, roles')
+    .select('full_name, roles, kyc_status')
     .eq('id', user.id)
     .single()
 
@@ -59,6 +60,7 @@ export default async function BuyerLayout({ children }: { children: React.ReactN
 
         {/* Content — offset for fixed sidebar */}
         <main className="flex-1 ml-56 overflow-y-auto min-h-[calc(100vh-4rem)]">
+          <KycBanner kycStatus={(profile as { kyc_status?: string } | null)?.kyc_status} role="buyer" kycPath="/client/buyer/kyc" />
           {children}
         </main>
       </div>
