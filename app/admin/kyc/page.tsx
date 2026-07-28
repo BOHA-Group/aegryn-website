@@ -33,17 +33,52 @@ export default async function AdminKycPage({
   const supa    = createServiceClient()
   const tokenQs = params.token ? `?token=${params.token}` : ''
 
-  const { data, error } = await supa
-    .from('buyer_kyc_verifications')
-    .select('id, user_id, full_name, company_name, country, kyc_status, declared_capacity_min_chf, declared_capacity_max_chf, created_at')
-    .order('created_at', { ascending: false })
-    .limit(200)
+  const [
+    { data: kycData, error },
+    { data: docCounts },
+    { data: partnerDocs },
+  ] = await Promise.all([
+    supa
+      .from('buyer_kyc_verifications')
+      .select('id, user_id, full_name, company_name, country, kyc_status, declared_capacity_min_chf, declared_capacity_max_chf, created_at')
+      .order('created_at', { ascending: false })
+      .limit(200),
+    supa.from('kyc_documents').select('user_id, status'),
+    supa.from('kyc_documents').select('user_id').eq('status', 'pending'),
+  ])
 
-  const rows = (data ?? []) as Record<string, unknown>[]
+  /* IDs de partenaires avec docs pending mais sans entrée buyer_kyc_verifications */
+  const kycUserIds = new Set((kycData ?? []).map((r: Record<string, unknown>) => String(r.user_id)))
+  const partnerOnlyIds = [...new Set(
+    (partnerDocs ?? [])
+      .map((d: Record<string, unknown>) => String(d.user_id))
+      .filter(uid => !kycUserIds.has(uid))
+  )]
 
-  const { data: docCounts } = await supa
-    .from('kyc_documents')
-    .select('user_id, status')
+  /* Profiles partenaires sans buyer_kyc_verifications */
+  const { data: partnerProfiles } = partnerOnlyIds.length
+    ? await supa.from('profiles').select('id, full_name, kyc_status, roles').in('id', partnerOnlyIds)
+    : { data: [] }
+
+  const partnerRows: Record<string, unknown>[] = (partnerProfiles ?? [])
+    .filter((p: Record<string, unknown>) => {
+      const roles = Array.isArray(p.roles) ? p.roles : []
+      return roles.includes('partner') || roles.includes('seller') || roles.includes('buyer')
+    })
+    .map((p: Record<string, unknown>) => ({
+      id:          null,
+      user_id:     p.id,
+      full_name:   p.full_name ?? '—',
+      company_name: null,
+      country:     null,
+      kyc_status:  p.kyc_status ?? 'pending',
+      declared_capacity_min_chf: null,
+      declared_capacity_max_chf: null,
+      created_at:  null,
+      _partnerOnly: true,
+    }))
+
+  const rows = [...(kycData ?? []) as Record<string, unknown>[], ...partnerRows]
 
   const docsByUser = new Map<string, { total: number; validated: number }>()
   for (const d of (docCounts ?? []) as { user_id: string; status: string }[]) {
@@ -115,9 +150,14 @@ export default async function AdminKycPage({
                 {rows.map((r) => {
                   const docs = docsByUser.get(String(r.user_id)) ?? { total: 0, validated: 0 }
                   return (
-                    <tr key={String(r.id)} className="hover:bg-gray-50">
+                    <tr key={String(r.id ?? r.user_id)} className="hover:bg-gray-50">
                       <td className="px-4 py-3 font-mono text-gray-500 whitespace-nowrap">{fmtDate(r.created_at)}</td>
-                      <td className="px-4 py-3 font-semibold text-gray-800">{String(r.full_name ?? '—')}</td>
+                      <td className="px-4 py-3 font-semibold text-gray-800">
+                        {String(r.full_name ?? '—')}
+                        {Boolean(r._partnerOnly) && (
+                          <span className="ml-2 font-mono text-[9px] uppercase tracking-widest text-ag-apex border border-ag-apex/30 px-1 py-0.5">Partenaire</span>
+                        )}
+                      </td>
                       <td className="px-4 py-3 text-gray-600">{String(r.company_name ?? '—')}</td>
                       <td className="px-4 py-3 font-mono text-[11px] text-gray-500">{String(r.country ?? '—')}</td>
                       <td className="px-4 py-3 font-mono text-[11px] text-gray-500">

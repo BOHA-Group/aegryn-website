@@ -60,6 +60,20 @@ function AdminSideNavInner({ adminEmail }: { adminEmail: string }) {
         <p className="font-sans text-[11px] text-white/70 truncate">{adminEmail}</p>
       </div>
 
+      {/* Dashboard global */}
+      <div className="mb-1">
+        <Link
+          href={`/admin${tokenSuffix}`}
+          className={`flex items-center px-5 py-2 font-sans text-[12px] transition-colors ${
+            pathname === '/admin'
+              ? 'bg-white/10 text-white font-semibold border-l-2 border-ag-apex'
+              : 'text-white/50 hover:text-white/90 hover:bg-white/5 border-l-2 border-transparent'
+          }`}
+        >
+          Dashboard
+        </Link>
+      </div>
+
       {SECTIONS.map(section => (
         <div key={section.label} className="mb-1">
           <p className="font-mono text-[8px] uppercase tracking-[0.2em] text-white/25 px-5 py-2">

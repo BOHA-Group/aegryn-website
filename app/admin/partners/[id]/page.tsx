@@ -27,12 +27,20 @@ export default async function AdminPartnerDetailPage({
   const { data: profile, error } = await supa.from('profiles').select('*').eq('id', id).maybeSingle()
   if (!profile && !error) notFound()
 
-  const [{ data: certs }, { data: refs }, { data: comms }, { data: mandates }] = await Promise.all([
+  const [{ data: certs }, { data: refs }, { data: comms }, { data: mandates }, { data: kycDocs }] = await Promise.all([
     supa.from('partner_certifications').select('id, dimension, status, score, subcodes, observations, deadline_at, cosignature_amount_chf, assets(company_name, official_grade)').eq('partner_id', id).order('created_at', { ascending: false }),
     supa.from('introductions').select('*').eq('partner_id', id).order('created_at', { ascending: false }),
     supa.from('commissions').select('*').eq('partner_id', id).order('created_at', { ascending: false }),
     supa.from('partner_mandates').select('id, client_name, mandate_type, status, retrocession_pct, created_at').eq('partner_id', id).order('created_at', { ascending: false }),
+    supa.from('kyc_documents').select('id, doc_type, status, created_at').eq('user_id', id).order('created_at', { ascending: false }),
   ])
+
+  const DOC_LABELS: Record<string, string> = {
+    id_card: 'Pièce d\'identité', proof_of_address: 'Justificatif domicile',
+    kbis: 'Kbis', articles_of_association: 'Statuts',
+    director_id: 'Identité dirigeants', ubo: 'UBO', professional_insurance: 'RC Pro',
+  }
+  const kycPending = (kycDocs ?? []).filter((d: Record<string, unknown>) => d.status === 'pending').length
 
   return (
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">
@@ -123,6 +131,44 @@ export default async function AdminPartnerDetailPage({
                         m.status === 'completed' ? 'bg-gray-100 text-gray-600' :
                         'bg-red-100 text-red-600'
                       }`}>{String(m.status)}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Documents KYC */}
+            <div className="bg-white border border-gray-200 mb-6">
+              <div className="px-6 py-4 bg-gray-50 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <p className="text-[11px] font-semibold text-gray-600 uppercase tracking-wide">
+                    Documents KYC ({(kycDocs ?? []).length})
+                  </p>
+                  {kycPending > 0 && (
+                    <span className="font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 bg-yellow-50 text-yellow-700 border border-yellow-200">
+                      {kycPending} en attente
+                    </span>
+                  )}
+                </div>
+                <Link
+                  href={`/admin/kyc/${id}${tokenQs}`}
+                  className="text-[10px] font-semibold text-gray-400 hover:text-gray-700"
+                >
+                  Ouvrir dossier KYC complet →
+                </Link>
+              </div>
+              {(kycDocs ?? []).length === 0 ? (
+                <div className="p-8 text-center text-[12px] text-gray-400">Aucun document KYC soumis.</div>
+              ) : (
+                <div className="divide-y divide-gray-100">
+                  {(kycDocs ?? []).map((d: Record<string, unknown>) => (
+                    <div key={String(d.id)} className="px-6 py-3 flex items-center justify-between">
+                      <p className="text-[12px] text-gray-700">{DOC_LABELS[String(d.doc_type)] ?? String(d.doc_type)}</p>
+                      <span className={`px-2 py-0.5 text-[10px] uppercase font-semibold ${
+                        d.status === 'validated' ? 'bg-emerald-50 text-emerald-700'
+                        : d.status === 'rejected' ? 'bg-red-50 text-red-600'
+                        : 'bg-yellow-50 text-yellow-700'
+                      }`}>{String(d.status)}</span>
                     </div>
                   ))}
                 </div>

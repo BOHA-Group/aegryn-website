@@ -51,11 +51,12 @@ export default async function AdminIndexPage({
     { count: assetsGraded },
     { count: ndaPending },
     { count: valLeads },
-    { count: kycPending },
+    { count: kycBuyerPending },
     { count: offersSubmitted },
     { count: transactionsOpen },
     { count: commissionsDue },
     { count: expertsPending },
+    { data: kycDocsPending },
   ] = await Promise.all([
     supa.from('assets').select('*', { count: 'exact', head: true }).eq('status', 'submitted'),
     supa.from('assets').select('*', { count: 'exact', head: true }).eq('status', 'graded'),
@@ -66,7 +67,19 @@ export default async function AdminIndexPage({
     supa.from('transactions').select('*', { count: 'exact', head: true }).not('status', 'in', '(closed,cancelled)'),
     supa.from('commissions').select('*', { count: 'exact', head: true }).neq('status', 'paid'),
     supa.from('expert_applications').select('*', { count: 'exact', head: true }).eq('status', 'pending'),
+    supa.from('kyc_documents').select('user_id').eq('status', 'pending'),
   ])
+
+  /* Partenaires avec docs pending mais sans ligne buyer_kyc_verifications */
+  const { data: kycBuyerIds } = await supa
+    .from('buyer_kyc_verifications').select('user_id').eq('kyc_status', 'pending')
+  const buyerKycSet = new Set((kycBuyerIds ?? []).map((r: Record<string, unknown>) => String(r.user_id)))
+  const partnerOnlyPending = new Set(
+    (kycDocsPending ?? [])
+      .map((d: Record<string, unknown>) => String(d.user_id))
+      .filter(uid => !buyerKycSet.has(uid))
+  ).size
+  const kycPending = (kycBuyerPending ?? 0) + partnerOnlyPending
 
   const domains: Domain[] = [
     {
