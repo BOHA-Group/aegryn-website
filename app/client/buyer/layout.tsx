@@ -18,7 +18,9 @@ export default async function BuyerLayout({ children }: { children: React.ReactN
     .single()
 
   const roles = Array.isArray(profile?.roles) ? profile.roles as string[] : []
-  const canAccessBuyer = roles.includes('buyer') || roles.includes('partner')
+  /* Un partenaire sans rôle buyer doit aller vers son espace partner */
+  if (!roles.includes('buyer') && roles.includes('partner')) redirect('/client/partner')
+  const canAccessBuyer = roles.includes('buyer')
   if (!canAccessBuyer) redirect('/client/seller')
 
   const hasSeller = roles.includes('seller')
