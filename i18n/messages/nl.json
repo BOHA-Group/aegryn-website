@@ -21,6 +21,7 @@
     "auctionBuy": "Koper worden",
     "auctionBidModels": "Bid-modellen",
     "auctionSession": "Volgende sessie",
+    "auctionAssessment": "Assessment Days",
     "auctionResults": "Resultaten",
     "gradeSystem": "Grade-systeem",
     "gradeMethod": "Methodologie",
@@ -2257,6 +2258,7 @@
           "label": "Systematische vertrouwelijkheid"
         }
       ],
+      "stepsLabel": "Verloop van een sessie",
       "steps": [
         {
           "num": "01",
@@ -2282,16 +2284,7 @@
       "marketLabel": "De markt in 2026",
       "marketTitle": "Een bifurcerende markt.",
       "marketDesc": "Gecertificeerde en niet-gecertificeerde tech-assets spelen niet meer in dezelfde categorie. Het multiple-verschil is in 3 jaar met 2,5x gegroeid — en blijft groeien.",
-      "marketCta": "Mijn asset waarderen",
-      "segmentLabel": "ONS SEGMENT",
-      "segmentTitle": "100K€ — 2,5M€.\nWaar tech-assets echte waarde hebben maar onzichtbaar blijven.",
-      "segmentDesc": "Te groot voor een informele doorverkoop. Te klein voor zakenbanken. AEGRYN structureert transacties die niemand anders certificeert — met de institutionele nauwkeurigheid die dit segment verdient.",
-      "segmentItems": [
-        "Assets tussen 100.000€ en 2.500.000€ waardering",
-        "B2B SaaS, marktplaatsen, digitaal IP, AI-protocollen",
-        "Verkopers: oprichters, studio's, operationele holdings",
-        "Kopers: ondernemers, corporates, family offices"
-      ]
+      "marketCta": "Mijn asset waarderen"
     },
     "catalog": {
       "label": "AEGRYN Catalogus",
@@ -2300,7 +2293,9 @@
       "filterAll": "Alle grades",
       "filterStar": "AEG ★",
       "filterAAA": "AAA",
+      "filterAaa": "AAA",
       "filterAA": "AA",
+      "filterAa": "AA",
       "filterA": "A",
       "filterB": "B",
       "emptyTitle": "Catalogus in voorbereiding.",
@@ -2312,7 +2307,13 @@
       "assetAsk": "Verkoopprijs",
       "viewAsset": "Dossier bekijken",
       "confidential": "Vertrouwelijk — NDA vereist",
-      "thirdPartyNote": "Deze assets worden aangeboden door onafhankelijke verkopers. AEGRYN treedt op als gecertificeerd tussenpersoon en transactieorganisator — niet als verkoper.",
+      "empty": "Geen asset komt overeen met dit filter.",
+      "emptyAll": "De catalogus is leeg.",
+      "emptyNote": "De volgende sessie opent Q3 2026.",
+      "notifyBtn": "Melding ontvangen",
+      "sellerTitle": "Uw asset verkopen?",
+      "sellerDesc": "Dien uw asset in voor certificering en krijg toegang tot de volgende catalogus.",
+      "sellerCta": "Indienen voor certificering",
       "notifyEmail": "Uw e-mail",
       "notifyEmailPlaceholder": "oprichter@voorbeeld.com",
       "notifyType": "U bent",
@@ -2332,6 +2333,28 @@
       "label": "Verkoper",
       "title": "Verkoop uw asset\naan de juiste koper.",
       "desc": "AEGRYN vindt de optimale koper voor uw gecertificeerde asset.",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Indiening",
+          "desc": "Formulier + documentatie. Voorkwalificatie in 5 werkdagen."
+        },
+        {
+          "num": "02",
+          "title": "Certificering",
+          "desc": "Beoordeling op 4 dimensies. AEGRYN Grade-rapport."
+        },
+        {
+          "num": "03",
+          "title": "Sessie",
+          "desc": "Uw asset wordt gepresenteerd in de volgende catalogus."
+        },
+        {
+          "num": "04",
+          "title": "Closing",
+          "desc": "Onderhandeling, escrow, overdracht, alles begeleid door AEGRYN."
+        }
+      ],
       "step1Title": "Indienen",
       "step1Desc": "Vul het indieningsformulier in. Basisinformatie over het asset, kernstatistieken, beschikbare documentatie.",
       "step2Title": "Certificering",
@@ -2343,6 +2366,21 @@
       "feesCert": "Certificering",
       "feesSuccess": "Succesvergoeding",
       "feesTitle": "Vergoedingsstructuur",
+      "feesNote": "Commissie alleen bij succesvolle closing.",
+      "fees": [
+        {
+          "item": "Certificering",
+          "value": "Vaste vergoeding"
+        },
+        {
+          "item": "Commissie",
+          "value": "% van transactieprijs"
+        },
+        {
+          "item": "Retainer",
+          "value": "Geen"
+        }
+      ],
       "cta": "Mijn asset indienen",
       "feesDesc": "Onze vergoeding bestaat uit twee componenten, afgestemd op de kwaliteit van het dossier en uw succes.",
       "feesCertValue": "Vaste dossier- en auditkosten voor het volledige CIFS-certificeringsproces, ongeacht de uitkomst van de transactie.",
@@ -2789,17 +2827,17 @@
       "evalTypeTitle": "Welk evaluatieniveau wenst u?",
       "evalTypeFull": {
         "label": "Auction-certificering",
-        "desc": "Alleen succesfee. Volledig proces via onafhankelijk AEGRYN-protocol (4 dimensies C/I/F/S), inbegrepen als de transactie via AEGRYN Auction plaatsvindt.",
+        "desc": "Alleen succesfee. Volledig proces via onafhankelijk AEGRYN-protocol (4 dimensies C/I/F/S), 3–4 weken, inbegrepen als de transactie via AEGRYN Auction plaatsvindt.",
         "price": "Gratis"
       },
       "evalTypeReview": {
         "label": "AEGRYN Review",
-        "desc": "Schriftelijk advies van een AEGRYN-analist binnen 15 werkdagen. Geen externe partnerreview. Niet publiceerbaar in de catalogus, zonder externe validatie.",
+        "desc": "Schriftelijk advies van een AEGRYN-analist binnen 5 werkdagen. Geen externe partnerreview. Niet publiceerbaar in de catalogus, zonder externe validatie.",
         "price": "2.000 € excl. btw"
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
-        "desc": "Schriftelijk advies + review door een externe partner (juridisch kantoor of accountant) op verzoek binnen 20 werkdagen. Kruisverwijzingen met onze Alliance-partners.",
+        "desc": "Schriftelijk advies + review door een externe partner (juridisch kantoor of accountant) binnen 10 werkdagen. Kruisverwijzingen met onze Alliance-partners.",
         "price": "5.000 € excl. btw"
       },
       "evalDeductibleNote": "Dit bedrag is volledig aftrekbaar van de certificeringskosten als u binnen 6 maanden na ontvangst van uw Review een volledig Auction-proces start.",
@@ -3399,10 +3437,7 @@
       "sectionFinancial": "Financiële gegevens",
       "arr": "Geannualiseerde ARR / MRR (€ of CHF)",
       "arrPlaceholder": "bijv. 150000",
-      "askPrice": "Gewenste verkoopprijs",
-      "askPriceCurrency": "Valuta",
-      "askPriceCurrencyEur": "EUR (€)",
-      "askPriceCurrencyChf": "CHF (Fr.)",
+      "askPrice": "Gewenste verkoopprijs (€ of CHF)",
       "askPricePlaceholder": "bijv. 1200000",
       "ipFiled": "Intellectueel eigendom geregistreerd",
       "ipYes": "Ja",
@@ -3430,10 +3465,8 @@
         "q3_2026": "Q3 2026",
         "q4_2026": "Q4 2026",
         "q1_2027": "Q1 2027",
-        "q2_2027": "Q2 2027 (apr. — jun. 2027)",
         "flexible": "Flexibel"
       },
-      "targetSessionHelper": "Uw selectie bepaalt het kwartaal en jaar van geschiktheid voor de volgende verkoopcatalogus.",
       "sectionContact": "Uw contactgegevens",
       "fullName": "Volledige naam",
       "email": "Zakelijk e-mailadres",
@@ -3989,8 +4022,7 @@
       "contact": "Neem contact op met",
       "errorInvalid": "Onjuiste gebruikersnaam of wachtwoord.",
       "errorNetwork": "Kan geen verbinding maken met de server. Controleer uw verbinding en probeer opnieuw.",
-      "backToSite": "Terug naar de site",
-      "createAccount": "Account aanmaken →"
+      "backToSite": "Terug naar de site"
     },
     "forgotPassword": {
       "title": "Wachtwoord opnieuw instellen",

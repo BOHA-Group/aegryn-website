@@ -21,6 +21,7 @@
     "auctionBuy": "Käufer werden",
     "auctionBidModels": "Bid-Modelle",
     "auctionSession": "Nächste Session",
+    "auctionAssessment": "Assessment Days",
     "auctionResults": "Ergebnisse",
     "gradeSystem": "Grade-System",
     "gradeMethod": "Methodik",
@@ -2257,6 +2258,7 @@
           "label": "Systematische Vertraulichkeit"
         }
       ],
+      "stepsLabel": "Ablauf einer Session",
       "steps": [
         {
           "num": "01",
@@ -2282,16 +2284,7 @@
       "marketLabel": "Der Markt 2026",
       "marketTitle": "Ein bifurkierender Markt.",
       "marketDesc": "Zertifizierte und nicht zertifizierte Tech-Assets spielen nicht mehr in der gleichen Liga. Der Multiple-Unterschied hat sich in 3 Jahren um 2,5x vergrößert — und wächst weiter.",
-      "marketCta": "Meinen Asset bewerten",
-      "segmentLabel": "UNSER SEGMENT",
-      "segmentTitle": "100K€ — 2,5M€.\nWo Tech-Assets einen realen Wert haben, aber unsichtbar bleiben.",
-      "segmentDesc": "Zu groß für einen informellen Weiterverkauf. Zu klein für Investmentbanken. AEGRYN strukturiert Transaktionen, die niemand sonst zertifiziert — mit der institutionellen Genauigkeit, die dieses Segment verdient.",
-      "segmentItems": [
-        "Assets zwischen 100.000€ und 2.500.000€ Bewertung",
-        "B2B SaaS, Marktplätze, digitales IP, KI-Protokolle",
-        "Verkäufer: Gründer, Studios, operative Holdings",
-        "Käufer: Unternehmer, Corporates, Family Offices"
-      ]
+      "marketCta": "Meinen Asset bewerten"
     },
     "catalog": {
       "label": "AEGRYN Katalog",
@@ -2300,7 +2293,9 @@
       "filterAll": "Alle Grades",
       "filterStar": "AEG ★",
       "filterAAA": "AAA",
+      "filterAaa": "AAA",
       "filterAA": "AA",
+      "filterAa": "AA",
       "filterA": "A",
       "filterB": "B",
       "emptyTitle": "Katalog in Vorbereitung.",
@@ -2312,7 +2307,13 @@
       "assetAsk": "Verkäuferpreis",
       "viewAsset": "Zum Dossier",
       "confidential": "Vertraulich — NDA erforderlich",
-      "thirdPartyNote": "Diese Assets werden von unabhängigen Verkäufern angeboten. AEGRYN fungiert als zertifizierter Vermittler und Transaktionsorganisator — nicht als Verkäufer.",
+      "empty": "Kein Asset entspricht diesem Filter.",
+      "emptyAll": "Der Katalog ist noch leer.",
+      "emptyNote": "Die nächste Session öffnet Q3 2026.",
+      "notifyBtn": "Benachrichtigt werden",
+      "sellerTitle": "Ihr Asset verkaufen?",
+      "sellerDesc": "Reichen Sie Ihr Asset zur Zertifizierung ein und erhalten Sie Zugang zum nächsten Katalog.",
+      "sellerCta": "Zur Zertifizierung einreichen",
       "notifyEmail": "Ihre E-Mail",
       "notifyEmailPlaceholder": "gründer@beispiel.com",
       "notifyType": "Sie sind",
@@ -2332,6 +2333,28 @@
       "label": "Verkäufer",
       "title": "Verkaufen Sie Ihr Asset\nan den richtigen Käufer.",
       "desc": "AEGRYN findet den optimalen Käufer für Ihr zertifiziertes Asset.",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Einreichung",
+          "desc": "Formular + Dokumentation. Vorqualifikation in 5 Werktagen."
+        },
+        {
+          "num": "02",
+          "title": "Zertifizierung",
+          "desc": "Bewertung auf 4 Dimensionen. AEGRYN Grade-Bericht."
+        },
+        {
+          "num": "03",
+          "title": "Session",
+          "desc": "Ihr Asset wird im nächsten Katalog präsentiert."
+        },
+        {
+          "num": "04",
+          "title": "Closing",
+          "desc": "Verhandlung, Escrow, Übertragung, alles begleitet von AEGRYN."
+        }
+      ],
       "step1Title": "Einreichen",
       "step1Desc": "Füllen Sie das Einreichungsformular aus. Grundlegende Informationen zum Asset, Schlüsselkennzahlen, verfügbare Dokumentation.",
       "step2Title": "Zertifizierung",
@@ -2343,6 +2366,21 @@
       "feesCert": "Zertifizierung",
       "feesSuccess": "Erfolgshonorar",
       "feesTitle": "Gebührenstruktur",
+      "feesNote": "Provision nur bei erfolgreichem Closing.",
+      "fees": [
+        {
+          "item": "Zertifizierung",
+          "value": "Festgebühr"
+        },
+        {
+          "item": "Provision",
+          "value": "% des Transaktionspreises"
+        },
+        {
+          "item": "Retainer",
+          "value": "Keine"
+        }
+      ],
       "cta": "Mein Asset einreichen",
       "feesDesc": "Unser Vergütungsmodell besteht aus zwei Komponenten, ausgerichtet auf die Qualität Ihrer Unterlagen und Ihren Erfolg.",
       "feesCertValue": "Feste Bearbeitungs- und Prüfgebühr für den gesamten CIFS-Zertifizierungsprozess, unabhängig vom Transaktionsergebnis.",
@@ -2789,17 +2827,17 @@
       "evalTypeTitle": "Welches Bewertungsniveau wünschen Sie?",
       "evalTypeFull": {
         "label": "Auction-Zertifizierung",
-        "desc": "Nur Erfolgsbeteiligung. Vollständiges unabhängiges AEGRYN-Protokoll (4 Dimensionen C/I/F/S), inklusive wenn die Transaktion über AEGRYN Auction abgeschlossen wird.",
+        "desc": "Nur Erfolgsbeteiligung. Vollständiges unabhängiges AEGRYN-Protokoll (4 Dimensionen C/I/F/S), 3–4 Wochen, inklusive wenn die Transaktion über AEGRYN Auction abgeschlossen wird.",
         "price": "Kostenlos"
       },
       "evalTypeReview": {
         "label": "AEGRYN Review",
-        "desc": "Schriftliches Gutachten eines AEGRYN-Analysten innerhalb von 15 Werktagen. Keine externe Partnerprüfung. Nicht im Katalog veröffentlichbar, ohne externe Validierung.",
+        "desc": "Schriftliches Gutachten eines AEGRYN-Analysten innerhalb von 5 Werktagen. Keine externe Partnerprüfung. Nicht im Katalog veröffentlichbar, ohne externe Validierung.",
         "price": "2.000 € zzgl. MwSt."
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
-        "desc": "Schriftliches Gutachten + Prüfung durch einen externen Partner (Kanzlei oder Wirtschaftsprüfer) auf Anfrage innerhalb von 20 Werktagen. Querverweise mit unseren Alliance-Partnern.",
+        "desc": "Schriftliches Gutachten + Prüfung durch einen externen Partner (Kanzlei oder Wirtschaftsprüfer) innerhalb von 10 Werktagen. Querverweise mit unseren Alliance-Partnern.",
         "price": "5.000 € zzgl. MwSt."
       },
       "evalDeductibleNote": "Dieser Betrag wird vollständig von den Zertifizierungskosten abgezogen, wenn Sie innerhalb von 6 Monaten nach Erhalt Ihres Reviews einen vollständigen Auction-Prozess einleiten.",
@@ -3399,10 +3437,7 @@
       "sectionFinancial": "Finanzdaten",
       "arr": "Annualisierter ARR / MRR (€ oder CHF)",
       "arrPlaceholder": "z.B. 150000",
-      "askPrice": "Gewünschter Verkaufspreis",
-      "askPriceCurrency": "Währung",
-      "askPriceCurrencyEur": "EUR (€)",
-      "askPriceCurrencyChf": "CHF (Fr.)",
+      "askPrice": "Gewünschter Verkaufspreis (€ oder CHF)",
       "askPricePlaceholder": "z.B. 1200000",
       "ipFiled": "Geistiges Eigentum eingetragen",
       "ipYes": "Ja",
@@ -3430,10 +3465,8 @@
         "q3_2026": "Q3 2026",
         "q4_2026": "Q4 2026",
         "q1_2027": "Q1 2027",
-        "q2_2027": "Q2 2027 (Apr. — Juni 2027)",
         "flexible": "Flexibel"
       },
-      "targetSessionHelper": "Ihre Auswahl bestimmt das Quartal und Jahr der Zulassung für den nächsten Verkaufskatalog.",
       "sectionContact": "Ihre Kontaktdaten",
       "fullName": "Vollständiger Name",
       "email": "Geschäftliche E-Mail",
@@ -3989,8 +4022,7 @@
       "contact": "Kontaktieren Sie",
       "errorInvalid": "Falsche E-Mail-Adresse oder falsches Passwort.",
       "errorNetwork": "Server nicht erreichbar. Bitte Verbindung prüfen und erneut versuchen.",
-      "backToSite": "Zurück zur Website",
-      "createAccount": "Konto erstellen →"
+      "backToSite": "Zurück zur Website"
     },
     "forgotPassword": {
       "title": "Passwort zurücksetzen",
