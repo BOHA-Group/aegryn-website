@@ -91,7 +91,9 @@ export function MissionVideoSection() {
 
     return () => {
       ctx.revert()
-      splits.forEach(s => s.revert())
+      splits.forEach(s => {
+        try { s.revert() } catch { /* nœud déjà unmounté */ }
+      })
     }
   }, [])
 
