@@ -21,7 +21,6 @@
     "auctionBuy": "Diventare acquirente",
     "auctionBidModels": "Modelli di bid",
     "auctionSession": "Prossima sessione",
-    "auctionAssessment": "Assessment Days",
     "auctionResults": "Risultati",
     "gradeSystem": "Sistema di grade",
     "gradeMethod": "Metodologia",
@@ -2239,26 +2238,6 @@
       "ctaSession": "Prossima sessione",
       "ctaSubmit": "Invia un asset",
       "howLabel": "Come funziona",
-      "statsLabel": "In numeri",
-      "stats": [
-        {
-          "value": "<25%",
-          "label": "Tasso di accettazione"
-        },
-        {
-          "value": "100%",
-          "label": "Asset certificati"
-        },
-        {
-          "value": "Escrow",
-          "label": "Sicurezza fondi"
-        },
-        {
-          "value": "NDA",
-          "label": "Riservatezza sistematica"
-        }
-      ],
-      "stepsLabel": "Come funziona una sessione",
       "steps": [
         {
           "num": "01",
@@ -2281,10 +2260,38 @@
           "desc": "Escrow, firma del contratto, trasferimento di proprietà."
         }
       ],
+      "statsLabel": "In numeri",
+      "stats": [
+        {
+          "value": "<25%",
+          "label": "Tasso di accettazione"
+        },
+        {
+          "value": "100%",
+          "label": "Asset certificati"
+        },
+        {
+          "value": "Escrow",
+          "label": "Sicurezza fondi"
+        },
+        {
+          "value": "NDA",
+          "label": "Riservatezza sistematica"
+        }
+      ],
       "marketLabel": "Il mercato nel 2026",
       "marketTitle": "Un mercato in biforcazione.",
       "marketDesc": "Gli asset tech certificati e quelli non certificati non giocano più nella stessa categoria. Il divario di multiplo si è ampliato di 2,5x in 3 anni — e continua.",
-      "marketCta": "Stimare il valore del mio asset"
+      "marketCta": "Stimare il valore del mio asset",
+      "segmentLabel": "IL NOSTRO SEGMENTO",
+      "segmentTitle": "100K€ — 2,5M€.\nDove gli asset tech hanno un valore reale ma rimangono invisibili.",
+      "segmentDesc": "Troppo grandi per una rivendita informale. Troppo piccoli per le banche d'affari. AEGRYN struttura transazioni che nessun altro certifica — con il rigore istituzionale che questo segmento merita.",
+      "segmentItems": [
+        "Asset tra 100.000€ e 2.500.000€ di valutazione",
+        "SaaS B2B, marketplace, IP digitale, protocolli IA",
+        "Venditori: fondatori, studi, holding operative",
+        "Acquirenti: imprenditori, corporate, family office"
+      ]
     },
     "catalog": {
       "label": "Catalogo AEGRYN",
@@ -2293,9 +2300,7 @@
       "filterAll": "Tutti i grade",
       "filterStar": "AEG ★",
       "filterAAA": "AAA",
-      "filterAaa": "AAA",
       "filterAA": "AA",
-      "filterAa": "AA",
       "filterA": "A",
       "filterB": "B",
       "emptyTitle": "Catalogo in preparazione.",
@@ -2307,13 +2312,7 @@
       "assetAsk": "Prezzo del venditore",
       "viewAsset": "Vedi il dossier",
       "confidential": "Riservato — NDA richiesto",
-      "empty": "Nessun asset corrisponde a questo filtro.",
-      "emptyAll": "Il catalogo è vuoto.",
-      "emptyNote": "La prossima sessione apre Q3 2026.",
-      "notifyBtn": "Ricevi notifica",
-      "sellerTitle": "Vuoi vendere il tuo asset?",
-      "sellerDesc": "Invia il tuo asset per la certificazione e accedi al prossimo catalogo.",
-      "sellerCta": "Invia per certificazione",
+      "thirdPartyNote": "Questi asset sono proposti da venditori indipendenti. AEGRYN agisce come intermediario certificato e organizzatore della transazione — non come venditore.",
       "notifyEmail": "La sua email",
       "notifyEmailPlaceholder": "fondatore@esempio.com",
       "notifyType": "Lei è",
@@ -2333,28 +2332,6 @@
       "label": "Venditore",
       "title": "Vendi il tuo asset\nall'acquirente giusto.",
       "desc": "AEGRYN trova l'acquirente ottimale per il tuo asset certificato.",
-      "steps": [
-        {
-          "num": "01",
-          "title": "Invio",
-          "desc": "Modulo + documentazione. Prequalificazione in 5 giorni."
-        },
-        {
-          "num": "02",
-          "title": "Certificazione",
-          "desc": "Valutazione in 4 dimensioni. Report AEGRYN Grade."
-        },
-        {
-          "num": "03",
-          "title": "Sessione",
-          "desc": "Il tuo asset viene presentato nel prossimo catalogo."
-        },
-        {
-          "num": "04",
-          "title": "Chiusura",
-          "desc": "Negoziazione, escrow, trasferimento, tutto con AEGRYN."
-        }
-      ],
       "step1Title": "Invia",
       "step1Desc": "Compila il modulo di invio. Informazioni di base sull'asset, metriche chiave, documentazione disponibile.",
       "step2Title": "Certificazione",
@@ -2366,21 +2343,6 @@
       "feesCert": "Certificazione",
       "feesSuccess": "Commissione di successo",
       "feesTitle": "Struttura compensi",
-      "feesNote": "Commissione solo in caso di chiusura riuscita.",
-      "fees": [
-        {
-          "item": "Certificazione",
-          "value": "Tariffa fissa"
-        },
-        {
-          "item": "Commissione",
-          "value": "% del prezzo di transazione"
-        },
-        {
-          "item": "Retainer",
-          "value": "Nessuno"
-        }
-      ],
       "cta": "Invia il mio asset",
       "feesDesc": "La nostra remunerazione è strutturata in due componenti, allineate alla qualità del dossier e al vostro successo.",
       "feesCertValue": "Onorari fissi di istruzione e audit che coprono l'intero processo di certificazione CIFS, indipendentemente dall'esito della transazione.",
@@ -2827,17 +2789,17 @@
       "evalTypeTitle": "Quale livello di valutazione desidera?",
       "evalTypeFull": {
         "label": "Certificazione Auction",
-        "desc": "Solo success fee. Processo completo con protocollo indipendente AEGRYN (4 dimensioni C/I/F/S), 3–4 settimane, incluso se la transazione avviene tramite AEGRYN Auction.",
+        "desc": "Solo success fee. Processo completo con protocollo indipendente AEGRYN (4 dimensioni C/I/F/S), incluso se la transazione avviene tramite AEGRYN Auction.",
         "price": "Gratuito"
       },
       "evalTypeReview": {
         "label": "AEGRYN Review",
-        "desc": "Parere scritto di un analista AEGRYN entro 5 giorni lavorativi. Senza revisione da partner esterno. Non pubblicabile nel catalogo, senza validazione esterna.",
+        "desc": "Parere scritto di un analista AEGRYN entro 15 giorni lavorativi. Senza revisione da partner esterno. Non pubblicabile nel catalogo, senza validazione esterna.",
         "price": "2.000 € IVA esclusa"
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
-        "desc": "Parere scritto + revisione da un partner esterno (studio legale o commercialista) entro 10 giorni lavorativi. Riferimenti incrociati con i nostri partner Alliance.",
+        "desc": "Parere scritto + revisione da un partner esterno (studio legale o commercialista) su richiesta entro 20 giorni lavorativi. Riferimenti incrociati con i nostri partner Alliance.",
         "price": "5.000 € IVA esclusa"
       },
       "evalDeductibleNote": "Questo importo è interamente deducibile dal costo di certificazione se avvia un processo completo di Auction entro 6 mesi dalla ricezione della sua Review.",
@@ -3437,7 +3399,10 @@
       "sectionFinancial": "Dati finanziari",
       "arr": "ARR / MRR annualizzato (€ o CHF)",
       "arrPlaceholder": "es. 150000",
-      "askPrice": "Prezzo di vendita desiderato (€ o CHF)",
+      "askPrice": "Prezzo di vendita desiderato",
+      "askPriceCurrency": "Valuta",
+      "askPriceCurrencyEur": "EUR (€)",
+      "askPriceCurrencyChf": "CHF (Fr.)",
       "askPricePlaceholder": "es. 1200000",
       "ipFiled": "Proprietà intellettuale depositata",
       "ipYes": "Sì",
@@ -3465,8 +3430,10 @@
         "q3_2026": "Q3 2026",
         "q4_2026": "Q4 2026",
         "q1_2027": "T1 2027",
+        "q2_2027": "T2 2027 (apr. — giu. 2027)",
         "flexible": "Flessibile"
       },
+      "targetSessionHelper": "La sua selezione determina il trimestre e l'anno di idoneità per il prossimo catalogo di vendita.",
       "sectionContact": "I suoi dati di contatto",
       "fullName": "Nome completo",
       "email": "Email professionale",
@@ -4022,7 +3989,8 @@
       "contact": "Contatta",
       "errorInvalid": "Email o password errati.",
       "errorNetwork": "Impossibile contattare il server. Controlla la connessione e riprova.",
-      "backToSite": "Torna al sito"
+      "backToSite": "Torna al sito",
+      "createAccount": "Crea un account →"
     },
     "forgotPassword": {
       "title": "Reimposta password",
