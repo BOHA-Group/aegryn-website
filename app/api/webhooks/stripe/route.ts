@@ -53,16 +53,19 @@ export async function POST(req: NextRequest) {
   /* ── Point 7 : log systématique ── */
   console.log(`[stripe/webhook] event.type=${event.type} event.id=${event.id}`)
 
+  const supa = createServiceClient()
+
+  /* ══════════════════════════════════════════════════════════════════
+   * 1. PAIEMENT ACTIF (évaluation vendeur — one-time)
+   * ══════════════════════════════════════════════════════════════════ */
   if (event.type === 'checkout.session.completed') {
     const session  = event.data.object as Stripe.Checkout.Session
     const meta     = session.metadata ?? {}
     const assetId  = meta.draft_asset_id
     const email    = session.customer_email ?? ''
     const paymentIntentId = session.payment_intent as string | null ?? null
-    const supa     = createServiceClient()
 
     if (assetId) {
-      /* ── Point 5 : idempotence — ignorer si déjà payé ── */
       const { data: existing } = await supa
         .from('assets')
         .select('id, evaluation_fee_paid')
@@ -74,7 +77,6 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ received: true })
       }
 
-      /* ── Point 4 : erreur Supabase → 200 quand même, logger ── */
       const { error } = await supa
         .from('assets')
         .update({
@@ -87,7 +89,6 @@ export async function POST(req: NextRequest) {
 
       if (error) console.error('[stripe/webhook] asset update error (non-blocking):', error)
 
-      /* Emails — Point 4 : erreurs email non-bloquantes */
       const internal  = process.env.AEGRYN_INTERNAL_EMAIL ?? 'tech@boha-group.com'
       const typeLabel = meta.evaluationType === 'review_partner' ? 'AEGRYN Review+' : 'AEGRYN Review'
 
@@ -104,11 +105,69 @@ export async function POST(req: NextRequest) {
         ),
       ])
     } else {
-      /* Test webhook Stripe sans metadata.draft_asset_id — ignorer silencieusement */
-      console.log(`[stripe/webhook] no draft_asset_id in metadata — test event, ignoring`)
+      console.log(`[stripe/webhook] no draft_asset_id in metadata — may be subscription checkout, ignoring`)
     }
   }
 
-  /* ── Point 4 : toujours 200 après vérification de signature réussie ── */
+  /* ══════════════════════════════════════════════════════════════════
+   * 2. ABONNEMENT EXPERT PARTENAIRE
+   * ══════════════════════════════════════════════════════════════════ */
+  if (
+    event.type === 'customer.subscription.created' ||
+    event.type === 'customer.subscription.updated'
+  ) {
+    const sub  = event.data.object as Stripe.Subscription
+    const meta = sub.metadata ?? {}
+    const uid  = meta.supabase_uid
+
+    if (uid) {
+      const isActive = sub.status === 'active' || sub.status === 'trialing'
+      const patch: Record<string, unknown> = {
+        expert_plan:             isActive ? 'active' : 'inactive',
+        stripe_subscription_id:  sub.id,
+      }
+      if (isActive) {
+        patch.expert_plan_start = new Date(sub.start_date * 1000).toISOString()
+      }
+      /* current_period_end est sur chaque item dans l'API Stripe 2026 */
+      const periodEnd = (sub.items?.data?.[0] as unknown as Record<string, unknown> | undefined)?.current_period_end
+      if (typeof periodEnd === 'number') {
+        patch.expert_plan_end = new Date(periodEnd * 1000).toISOString()
+      }
+
+      const { error } = await supa.from('profiles').update(patch).eq('id', uid)
+      if (error) console.error('[stripe/webhook] subscription update error:', error)
+      else console.log(`[stripe/webhook] expert_plan=${patch.expert_plan} for uid=${uid}`)
+
+      /* Email de confirmation à l'activation */
+      if (event.type === 'customer.subscription.created' && isActive) {
+        const { data: profile } = await supa.from('profiles').select('email').eq('id', uid).single()
+        const email = (profile as Record<string, unknown> | null)?.email as string | undefined
+        if (email) {
+          await sendEmail(
+            email,
+            'AEGRYN — Votre abonnement expert est activé',
+            `Bonjour,\n\nVotre abonnement expert AEGRYN est maintenant actif.\nVotre fiche expert est visible dans l'annuaire et les clients peuvent vous contacter directement.\n\nAccédez à votre espace partenaire : https://aegryn.com/client/partner\n\nL'équipe AEGRYN`
+          )
+        }
+      }
+    }
+  }
+
+  if (event.type === 'customer.subscription.deleted') {
+    const sub = event.data.object as Stripe.Subscription
+    const uid = sub.metadata?.supabase_uid
+
+    if (uid) {
+      const { error } = await supa.from('profiles').update({
+        expert_plan:    'inactive',
+        expert_plan_end: new Date().toISOString(),
+      }).eq('id', uid)
+      if (error) console.error('[stripe/webhook] subscription delete error:', error)
+      else console.log(`[stripe/webhook] expert_plan=inactive (deleted) for uid=${uid}`)
+    }
+  }
+
+  /* ── Toujours 200 après vérification signature ── */
   return NextResponse.json({ received: true })
 }

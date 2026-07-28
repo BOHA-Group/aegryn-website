@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { CheckCircle2, CreditCard, Clock, Mail } from 'lucide-react'
+import { CheckCircle2, CreditCard, Clock, XCircle } from 'lucide-react'
+import SubscribeButtons from './SubscribeButtons'
 
 export const metadata: Metadata = {
   title: 'Abonnement — Espace Partenaire AEGRYN',
@@ -14,20 +15,28 @@ function fmtDate(d: unknown) {
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
 }
 
-export default async function PartnerSubscriptionPage() {
+export default async function PartnerSubscriptionPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ success?: string; canceled?: string }>
+}) {
   const user = await getUser()
   if (!user) redirect('/client/login')
+
+  const { success, canceled } = await searchParams
 
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, expert_plan, expert_plan_start')
+    .select('full_name, expert_plan, expert_plan_start, expert_plan_end, stripe_subscription_id')
     .eq('id', user.id)
     .single()
 
-  const plan      = (profile as Record<string, unknown> | null)?.expert_plan as string | null
-  const planStart = (profile as Record<string, unknown> | null)?.expert_plan_start as string | null
-  const isActive  = plan === 'active'
+  const p          = profile as Record<string, unknown> | null
+  const plan       = p?.expert_plan as string | null
+  const planStart  = p?.expert_plan_start as string | null
+  const planEnd    = p?.expert_plan_end as string | null
+  const isActive   = plan === 'active'
 
   return (
     <div className="p-8 max-w-2xl">
@@ -38,6 +47,26 @@ export default async function PartnerSubscriptionPage() {
           Votre fiche expert est visible dans l&apos;annuaire AEGRYN tant que votre abonnement est actif.
         </p>
       </div>
+
+      {/* Feedback paiement */}
+      {success === '1' && (
+        <div className="bg-emerald-50 border border-emerald-200 px-5 py-4 flex items-start gap-3 mb-6">
+          <CheckCircle2 size={16} className="text-emerald-600 shrink-0 mt-0.5" />
+          <p className="font-sans text-[13px] text-emerald-800">
+            Paiement confirmé — votre abonnement est en cours d&apos;activation (quelques secondes).{' '}
+            <a href="/client/partner/subscription" className="underline font-medium">Rafraîchissez</a>{' '}
+            la page si le statut n&apos;a pas changé.
+          </p>
+        </div>
+      )}
+      {canceled === '1' && (
+        <div className="bg-red-50 border border-red-200 px-5 py-4 flex items-start gap-3 mb-6">
+          <XCircle size={16} className="text-red-500 shrink-0 mt-0.5" />
+          <p className="font-sans text-[13px] text-red-700">
+            Paiement annulé — aucun montant n&apos;a été prélevé.
+          </p>
+        </div>
+      )}
 
       {/* Statut */}
       <div className={`border p-6 mb-6 ${isActive ? 'bg-emerald-50 border-emerald-200' : 'bg-amber-50 border-amber-200'}`}>
@@ -53,6 +82,7 @@ export default async function PartnerSubscriptionPage() {
         {isActive && planStart && (
           <p className="font-sans text-[12px] text-emerald-700">
             Actif depuis le {fmtDate(planStart)}
+            {planEnd && ` — renouvellement le ${fmtDate(planEnd)}`}
           </p>
         )}
         {!isActive && (
@@ -62,17 +92,17 @@ export default async function PartnerSubscriptionPage() {
         )}
       </div>
 
-      {/* Offre */}
+      {/* Offre + boutons ou résumé abonné */}
       <div className="bg-white border border-gray-200 p-6 mb-6">
         <div className="flex items-start justify-between mb-4">
           <div>
             <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-1">Plan Expert</p>
-            <p className="font-sans font-bold text-gray-900 text-[22px]">89 € <span className="text-[14px] font-normal text-gray-400">HT / mois</span></p>
+            <p className="font-sans font-bold text-gray-900 text-[22px]">89 CHF <span className="text-[14px] font-normal text-gray-400">HT / mois</span></p>
           </div>
           <CreditCard size={20} className="text-gray-300 mt-1" />
         </div>
 
-        <ul className="flex flex-col gap-2 mb-5">
+        <ul className="flex flex-col gap-2 mb-6">
           {[
             'Fiche expert visible dans l\'annuaire AEGRYN',
             'Contact direct par les clients acheteurs et vendeurs',
@@ -87,20 +117,21 @@ export default async function PartnerSubscriptionPage() {
           ))}
         </ul>
 
-        <div className="bg-gray-50 border border-gray-200 px-4 py-3 flex items-start gap-3">
-          <Mail size={14} className="text-gray-400 shrink-0 mt-0.5" />
-          <p className="font-sans text-[12px] text-gray-500 leading-relaxed">
-            Pour activer ou modifier votre abonnement, contactez{' '}
-            <a href="mailto:contact@boha-group.com" className="text-ag-navy underline font-medium">
-              contact@boha-group.com
-            </a>{' '}
-            en mentionnant votre email expert. L&apos;équipe AEGRYN activera votre accès manuellement dans les 24h ouvrées.
-          </p>
-        </div>
+        {isActive ? (
+          <div className="bg-emerald-50 border border-emerald-200 px-4 py-3">
+            <p className="font-sans text-[12px] text-emerald-700">
+              Votre abonnement se renouvelle automatiquement.{' '}
+              Pour le résilier, contactez{' '}
+              <a href="mailto:contact@boha-group.com" className="underline font-medium">contact@boha-group.com</a>.
+            </p>
+          </div>
+        ) : (
+          <SubscribeButtons />
+        )}
       </div>
 
       <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
-        L&apos;abonnement est sans engagement, résiliable à tout moment. La fiche expert sera retirée de l&apos;annuaire à la date d&apos;expiration.
+        Sans engagement, résiliable à tout moment. La fiche expert sera retirée à la date d&apos;expiration.
         Les clients vous contactent directement — AEGRYN ne prélève aucune commission sur vos missions.
       </p>
     </div>
