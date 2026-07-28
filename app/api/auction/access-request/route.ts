@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
+import { sendLeadEmails }           from '@/lib/leadCapture'
 
 const schema = z.object({
   userId:    z.string().uuid().nullable().optional(),
@@ -36,6 +37,14 @@ export async function POST(req: NextRequest) {
       console.error('[auction/access-request]', error)
       return NextResponse.json({ error: error.message }, { status: 500 })
     }
+
+    await sendLeadEmails({
+      to:              body.email,
+      subjectFounder:  'AEGRYN — Demande d\'accès catalogue reçue',
+      textFounder:     `Bonjour ${body.fullName},\n\nVotre demande d'accès au catalogue de vente aux enchères AEGRYN a bien été enregistrée.\n\nNos équipes l'examineront et vous contacteront rapidement pour finaliser votre profil acquéreur.\n\nPour toute question : contact@boha-group.com\n\nL'équipe AEGRYN\nhttps://aegryn.com/auction`,
+      subjectInternal: `[Catalogue] Demande d'accès — ${body.fullName} (${body.buyerType ?? 'non précisé'})`,
+      textInternal:    `Nouvelle demande d'accès catalogue\n\nNom : ${body.fullName}\nEmail : ${body.email}\nSociété : ${body.company ?? '—'}\nProfil : ${body.buyerType ?? '—'}\nCapacité : ${body.capacity ?? '—'}\nMessage : ${body.message ?? '—'}\nLocale : ${body.locale}`,
+    })
 
     return NextResponse.json({ ok: true })
   } catch (err) {
