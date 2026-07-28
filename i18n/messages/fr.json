@@ -2714,18 +2714,18 @@
   "build_service": {
     "meta": {
       "title": "Conception d'actifs numériques - AEGRYN",
-      "desc": "AEGRYN conçoit des SaaS B2B, applications IA et apps mobiles propriétaires avec une logique de sortie intégrée dès la conception. Cession early stage, à maturité, ou maintenance évolutive à la demande."
+      "desc": "AEGRYN conçoit des SaaS B2B, applications IA et apps mobiles propriétaires selon les standards du protocole CIFS. La cession est possible si souhaitée, dès lors que l'actif atteint les critères de grade requis."
     },
     "label": "Services - Conception d'actifs",
     "title": "Votre actif numérique.\nConçu pour durer.\nStructuré pour céder.",
-    "desc": "AEGRYN conçoit des actifs numériques propriétaires - SaaS B2B, IA verticale, application mobile - avec une logique de sortie intégrée dès le premier jour. Vous partez de zéro. Vous arrivez avec un actif certifiable, maintenable et cessible selon votre calendrier.",
+    "desc": "AEGRYN conçoit des actifs numériques propriétaires - SaaS B2B, IA verticale, application mobile - selon les standards du protocole CIFS. Vous partez de zéro. Vous arrivez avec un actif certifiable et maintenable. La cession est une option, pas une obligation : elle dépend de votre souhait et du grade atteint.",
     "difference": {
       "label": "Pas une agence. Pas un studio.",
       "title": "La différence AEGRYN.",
       "items": [
         { "num": "01", "title": "Certifiable dès la conception", "desc": "Chaque actif est construit selon les standards du protocole CIFS. Le grade n'est pas un audit post-production : c'est l'architecture du premier jour." },
         { "num": "02", "title": "Vous restez propriétaire", "desc": "Aucune dilution. Aucune part prise par AEGRYN. L'actif vous appartient à 100%. AEGRYN peut intervenir comme co-investisseur sur demande : c'est votre décision, pas la nôtre." },
-        { "num": "03", "title": "La sortie est prévue dès le départ", "desc": "Cession early stage, à maturité, ou maintenance long terme : le plan de sortie est défini avant le premier sprint, pas au dernier moment." }
+        { "num": "03", "title": "La sortie est une option, pas une obligation", "desc": "Cession early stage, à maturité, ou maintenance long terme : le scénario de sortie est anticipé dans l'architecture, mais il n'est engagé que si vous le souhaitez et si l'actif remplit les critères de grade requis." }
       ]
     },
     "assetTypes": {
@@ -2754,7 +2754,7 @@
         { "num": "02", "title": "Architecture et Grade Design", "desc": "L'actif est architecturé selon les critères CIFS : code documenté, IP déposée, sécurité by design, métriques trackées. Le grade est le plan de construction." },
         { "num": "03", "title": "Build et Itérations", "desc": "Développement en sprints avec jalons mesurables, revue de code et documentation continue. Stack propriétaire AEGRYN ou stack client." },
         { "num": "04", "title": "Lancement et Traction", "desc": "Déploiement, acquisition des premiers utilisateurs, mise en place des métriques ARR/NRR/churn. Durée avant Grade A certifiable : 6 à 12 mois." },
-        { "num": "05", "title": "Certification et Sortie", "desc": "Soumission au protocole CIFS, grade officiel émis, transaction via AEGRYN Auction ou confidentielle. Ou maintien avec maintenance selon votre choix." }
+        { "num": "05", "title": "Certification (et sortie optionnelle)", "desc": "Soumission au protocole CIFS si souhaité. Grade officiel émis si les critères sont remplis. La transaction via AEGRYN Auction ou confidentielle n'est engagée que sur votre décision. L'actif peut aussi être conservé avec maintenance." }
       ]
     },
     "maintenance": {

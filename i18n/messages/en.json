@@ -2714,18 +2714,18 @@
   "build_service": {
     "meta": {
       "title": "Digital Asset Engineering - AEGRYN",
-      "desc": "AEGRYN designs B2B SaaS, AI applications and proprietary mobile apps with an exit logic integrated from day one. Early-stage sale, at maturity, or on-demand maintenance."
+      "desc": "AEGRYN designs B2B SaaS, AI applications and proprietary mobile apps to CIFS protocol standards. A sale is possible if desired, provided the asset meets the required grade criteria."
     },
     "label": "Services - Asset Engineering",
     "title": "Your digital asset.\nBuilt to last.\nStructured to sell.",
-    "desc": "AEGRYN designs proprietary digital assets - B2B SaaS, vertical AI, mobile application - with an exit logic integrated from day one. You start from scratch. You end up with a certifiable, maintainable and transferable asset on your timeline.",
+    "desc": "AEGRYN designs proprietary digital assets - B2B SaaS, vertical AI, mobile application - to CIFS protocol standards. You start from scratch. You end up with a certifiable, maintainable asset. A sale is an option, not an obligation: it depends on your decision and the grade achieved.",
     "difference": {
       "label": "Not an agency. Not a studio.",
       "title": "The AEGRYN difference.",
       "items": [
         { "num": "01", "title": "Certifiable from day one", "desc": "Every asset is built to CIFS protocol standards. The grade is not a post-production audit: it is the architecture from day one." },
         { "num": "02", "title": "You stay the owner", "desc": "No dilution. No equity taken by AEGRYN. The asset is 100% yours. AEGRYN can act as a co-investor on request: that is your decision, not ours." },
-        { "num": "03", "title": "The exit is planned from the start", "desc": "Early-stage sale, at maturity, or long-term maintenance: the exit plan is defined before the first sprint, not at the last moment." }
+        { "num": "03", "title": "The exit is an option, not an obligation", "desc": "Early-stage sale, at maturity, or long-term maintenance: the exit scenario is anticipated in the architecture, but only engaged if you wish to and if the asset meets the required grade criteria." }
       ]
     },
     "assetTypes": {
@@ -2754,7 +2754,7 @@
         { "num": "02", "title": "Architecture and Grade Design", "desc": "The asset is architected to CIFS criteria: documented code, registered IP, security by design, tracked metrics. The grade is the construction plan." },
         { "num": "03", "title": "Build and Iterations", "desc": "Sprint-based development with measurable milestones, code review and continuous documentation. AEGRYN proprietary stack or client stack." },
         { "num": "04", "title": "Launch and Traction", "desc": "Deployment, first-user acquisition, ARR/NRR/churn metrics setup. Time to certifiable Grade A: 6 to 12 months." },
-        { "num": "05", "title": "Certification and Exit", "desc": "CIFS protocol submission, official grade issued, transaction via AEGRYN Auction or confidential. Or retention with maintenance per your choice." }
+        { "num": "05", "title": "Certification (and optional exit)", "desc": "CIFS protocol submission if desired. Official grade issued if criteria are met. A transaction via AEGRYN Auction or confidential channel is only engaged on your decision. The asset may also be retained with maintenance." }
       ]
     },
     "maintenance": {
