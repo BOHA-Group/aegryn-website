@@ -345,11 +345,11 @@
       "roots": [
         {
           "word": "AEGIS",
-          "meaning": "Le bouclier divin. Symbole de protection, d'autorité et de légitimité. Agir sous l'égide de quelque chose, c'est agir sous une autorité de certification, dont le standard fait foi."
+          "meaning": "Symbole de protection, d'autorité et de légitimité. Agir sous l'égide de quelque chose, c'est agir sous une autorité de certification, dont le standard fait foi."
         },
         {
           "word": "AEGIR",
-          "meaning": "La divinité qui commandait les mers et leurs courants. Maître des flux, de ce qui circule entre les rives, entre les parties, entre la valeur et sa reconnaissance."
+          "meaning": "Maître des flux, de ce qui circule entre les rives, entre les parties, entre la valeur et sa reconnaissance."
         },
         {
           "word": "AEON",
@@ -435,14 +435,14 @@
     "founder": {
       "label": "La conviction fondatrice",
       "title": "Construit de l'intérieur.",
-      "bio1": "AEGRYN a été fondé par un builder qui a passé des années à construire, auditer et structurer des actifs numériques, et à observer à chaque fois le même vide : l'absence d'un référentiel standardisé et indépendant auquel les deux parties d'une transaction tech pouvaient également faire confiance.",
+      "bio1": "AEGRYN a été fondé par quelqu'un qui construit. Des années à bâtir, auditer et structurer des actifs numériques et à observer, à chaque fois, le même vide : l'absence d'un référentiel standardisé et indépendant auquel les deux parties d'une transaction tech pouvaient également faire confiance.",
       "bio2": "Le choix d'ancrer ce référentiel en Suisse, sous droit suisse et standards institutionnels, était délibéré. Pas un détail d'incorporation, un choix de positionnement. Les actifs propriétaires qu'AEGRYN construit sont conçus pour répondre à ce standard dès leur première ligne de code.",
       "cta": "Prendre contact"
     },
     "whatsnext": {
       "label": "Ce qui vient ensuite",
       "title": "Le protocole évolue.\nLe standard tient.",
-      "desc": "AEGRYN certifie et transige actuellement des SaaS, applications, marketplaces, actifs à base d'IP et actifs Web3 / Digital Art sous le protocole CIFS.\n\nLe principal chantier du roadmap est l'ancrage blockchain : une couche KRYV Protocol qui scellera chaque codebase certifié à la date exacte du transfert, rendant chaque grade définitivement vérifiable on-chain. Cette couche complétera le protocole indépendant déjà pleinement opérationnel, sans jamais le remplacer.\n\nEn parallèle, nous construisons un réseau de partenaires experts, cabinets juridiques, experts-comptables, spécialistes cybersécurité, qui enrichiront certains rapports d'une revue croisée.",
+      "desc": "AEGRYN certifie et transige aujourd'hui des SaaS, applications, marketplaces, actifs IP et actifs Web3 sous le protocole CIFS.\n\nLe principal chantier de la feuille de route est la certification blockchain : une couche d'ancrage qui scellera chaque codebase certifié à la date exacte du transfert, rendant chaque grade définitivement vérifiable et permanent. Cette couche s'ajoutera au protocole indépendant déjà pleinement opérationnel.\n\nEn parallèle, nous constituons un réseau de partenaires experts, cabinets juridiques, experts-comptables, spécialistes cybersécurité, architectes techniques pour accompagner acheteurs et vendeurs à chaque étape : conseil tech avant la certification, structuration juridique et financière pendant la transaction, intégration après le closing.",
       "cta": "Voir les sessions en cours"
     },
     "cta": {

@@ -345,11 +345,11 @@
       "roots": [
         {
           "word": "AEGIS",
-          "meaning": "Lo scudo divino. Simbolo di protezione, autorità e legittimità. Agire sotto l'egida di qualcosa significa agire sotto un'autorità di certificazione, il cui standard è affidabile per gli altri."
+          "meaning": "Simbolo di protezione, autorità e legittimità. Agire sotto l'egida di qualcosa significa agire sotto un'autorità di certificazione, il cui standard è affidabile per gli altri."
         },
         {
           "word": "AEGIR",
-          "meaning": "La divinità che comandava i mari e le loro correnti. Maestro dei flussi, di ciò che si muove tra le rive, tra le parti, tra il valore e il suo riconoscimento."
+          "meaning": "Maestro dei flussi, di ciò che si muove tra le rive, tra le parti, tra il valore e il suo riconoscimento."
         },
         {
           "word": "AEON",
@@ -435,14 +435,14 @@
     "founder": {
       "label": "La convinzione fondatrice",
       "title": "Costruito dall'interno.",
-      "bio1": "AEGRYN è stata fondata da un builder che aveva trascorso anni a costruire, auditare e strutturare asset digitali, e ad osservare ripetutamente la stessa lacuna: l'assenza di un riferimento standardizzato e indipendente di cui entrambe le parti di una transazione tech potessero fidarsi ugualmente.",
+      "bio1": "AEGRYN è stata fondata da qualcuno che costruisce. Anni trascorsi a costruire, auditare e strutturare asset digitali e ad osservare ripetutamente la stessa lacuna: l'assenza di un riferimento standardizzato e indipendente di cui entrambe le parti di una transazione tech potessero fidarsi ugualmente.",
       "bio2": "La scelta di ancorare quel riferimento in Svizzera, sotto il diritto svizzero e gli standard istituzionali, è stata deliberata. Non un dettaglio di costituzione, una scelta di posizionamento. Gli asset proprietari che AEGRYN costruisce sono progettati per soddisfare quello standard dalla loro prima riga di codice.",
       "cta": "Contattaci"
     },
     "whatsnext": {
       "label": "Cosa viene dopo",
       "title": "Il protocollo evolve.\nLo standard tiene.",
-      "desc": "AEGRYN certifica e transige attualmente SaaS, applicazioni, marketplace, asset basati su IP e asset Web3 / Digital Art sotto il protocollo CIFS.\n\nIl principale elemento del roadmap è l'ancoraggio blockchain: uno strato del Protocollo KRYV che sigillerà ogni codebase certificata alla data esatta del trasferimento, rendendo ogni grade definitivamente verificabile on-chain. Questo strato complementerà il protocollo indipendente già pienamente operativo, senza mai sostituirlo.\n\nIn parallelo, stiamo costruendo una rete di partner esperti, studi legali, commercialisti, specialisti in cybersicurezza, che arricchiranno certi rapporti con una revisione a validazione incrociata.",
+      "desc": "AEGRYN certifica e transige oggi SaaS, applicazioni, marketplace, asset IP e asset Web3 sotto il protocollo CIFS.\n\nIl principale elemento della roadmap è la certificazione blockchain: uno strato di ancoraggio che sigillerà ogni codebase certificata alla data esatta del trasferimento, rendendo ogni grade definitivamente verificabile e permanente. Questo strato si aggiungerà al protocollo indipendente già pienamente operativo.\n\nIn parallelo, stiamo costituendo una rete di partner esperti, studi legali, commercialisti, specialisti in cybersicurezza e architetti tecnici per accompagnare acquirenti e venditori in ogni fase: consulenza tech prima della certificazione, strutturazione legale e finanziaria durante la transazione, integrazione dopo il closing.",
       "cta": "Vedi le sessioni attuali"
     },
     "cta": {

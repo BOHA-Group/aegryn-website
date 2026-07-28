@@ -345,11 +345,11 @@
       "roots": [
         {
           "word": "AEGIS",
-          "meaning": "Het goddelijke schild. Symbool van bescherming, autoriteit en legitimiteit. Handelen onder de aegis van iets betekent handelen onder een certificerende autoriteit, wiens standaard anderen vertrouwen."
+          "meaning": "Symbool van bescherming, autoriteit en legitimiteit. Handelen onder de aegis van iets betekent handelen onder een certificerende autoriteit, wiens standaard anderen vertrouwen."
         },
         {
           "word": "AEGIR",
-          "meaning": "De godheid die de zeeën en hun stromen beheerste. Meester van de stromen, van wat zich beweegt tussen oevers, tussen partijen, tussen waarde en de erkenning ervan."
+          "meaning": "Meester van de stromen, van wat zich beweegt tussen oevers, tussen partijen, tussen waarde en de erkenning ervan."
         },
         {
           "word": "AEON",
@@ -435,14 +435,14 @@
     "founder": {
       "label": "De oprichtende overtuiging",
       "title": "Van binnenuit gebouwd.",
-      "bio1": "AEGRYN werd opgericht door een builder die jaren had besteed aan het bouwen, auditen en structureren van digitale assets, en herhaaldelijk dezelfde kloof observeerde: het ontbreken van een gestandaardiseerde, onafhankelijke referentie waarop beide kanten van een tech-transactie gelijkelijk konden vertrouwen.",
+      "bio1": "AEGRYN werd opgericht door iemand die bouwt. Jaren besteed aan het bouwen, auditen en structureren van digitale assets en herhaaldelijk dezelfde kloof observeren: het ontbreken van een gestandaardiseerde, onafhankelijke referentie waarop beide kanten van een tech-transactie gelijkelijk konden vertrouwen.",
       "bio2": "De keuze om die referentie in Zwitserland te verankeren, onder Zwitsers recht en institutionele standaarden, was bewust. Geen detail van incorporatie, een positioneringskeuze. De propriëtaire assets die AEGRYN bouwt zijn ontworpen om aan die standaard te voldoen vanaf hun eerste coderegel.",
       "cta": "Contact opnemen"
     },
     "whatsnext": {
       "label": "Wat er hierna komt",
       "title": "Het protocol evolueert.\nDe standaard houdt stand.",
-      "desc": "AEGRYN certificeert en transageert momenteel SaaS, applicaties, marktplaatsen, IP-gebaseerde assets en Web3 / Digital Art assets onder het CIFS-protocol.\n\nHet belangrijkste roadmap-element is blockchain-verankering: een KRYV Protocol-laag die elke gecertificeerde codebase op de exacte datum van overdracht verzegelt, waardoor elk grade permanent on-chain verifieerbaar is. Deze laag zal het reeds volledig operationele onafhankelijke protocol aanvullen, niet vervangen.\n\nTegelijkertijd bouwen we een netwerk van expertpartners op, advocatenkantoren, gecertificeerde accountants, cyberbeveiligingsspecialisten, die bepaalde rapporten zullen verrijken met een kruisgevalideerde beoordeling.",
+      "desc": "AEGRYN certificeert en transageert vandaag SaaS, applicaties, marktplaatsen, IP-assets en Web3-assets onder het CIFS-protocol.\n\nHet belangrijkste element van de roadmap is blockchain-certificering: een verankeringslaag die elke gecertificeerde codebase op de exacte datum van overdracht verzegelt, waardoor elk grade permanent en onveranderlijk verifieerbaar is. Deze laag wordt toegevoegd aan het reeds volledig operationele onafhankelijke protocol.\n\nTegelijkertijd bouwen we een netwerk van expertpartners op, advocatenkantoren, gecertificeerde accountants, cyberbeveiligingsspecialisten en technische architecten om kopers en verkopers in elke fase te begeleiden: technisch advies vóór de certificering, juridische en financiële structurering tijdens de transactie, en integratie na het closing.",
       "cta": "Huidige sessies bekijken"
     },
     "cta": {
