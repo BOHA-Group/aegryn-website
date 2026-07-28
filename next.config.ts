@@ -41,6 +41,20 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      /* boha-group.com → aegryn.com (301 permanent, SEO-safe) */
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'boha-group.com' }],
+        destination: 'https://aegryn.com/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.boha-group.com' }],
+        destination: 'https://aegryn.com/:path*',
+        permanent: true,
+      },
+      /* Anciennes URLs internes aegryn.com */
       { source: '/:locale/grow-with-us',             destination: '/:locale/alliances',              permanent: true },
       { source: '/:locale/auction/session',          destination: '/:locale/auction/sessions',        permanent: true },
       { source: '/:locale/what-we-build',             destination: '/:locale/assets',                 permanent: true },
