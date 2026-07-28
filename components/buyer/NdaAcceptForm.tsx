@@ -50,38 +50,40 @@ export function NdaAcceptForm({
   return (
     <div className="space-y-5">
       {/* Checkbox 1 */}
-      <label className="flex items-start gap-3 cursor-pointer group">
-        <button
-          type="button"
-          onClick={() => setCheck1((v) => !v)}
-          className="shrink-0 mt-0.5 text-ag-navy"
-          aria-checked={check1}
-          role="checkbox"
-        >
+      <div
+        role="checkbox"
+        aria-checked={check1}
+        tabIndex={0}
+        onClick={() => setCheck1((v) => !v)}
+        onKeyDown={(e) => (e.key === ' ' || e.key === 'Enter') && setCheck1((v) => !v)}
+        className="flex items-start gap-3 cursor-pointer group"
+      >
+        <span className="shrink-0 mt-0.5">
           {check1
             ? <CheckSquare size={18} className="text-ag-navy" />
             : <Square size={18} className="text-gray-300 group-hover:text-gray-400 transition-colors" />
           }
-        </button>
+        </span>
         <span className="text-[13px] text-gray-700 leading-relaxed">{check1Label}</span>
-      </label>
+      </div>
 
       {/* Checkbox 2 */}
-      <label className="flex items-start gap-3 cursor-pointer group">
-        <button
-          type="button"
-          onClick={() => setCheck2((v) => !v)}
-          className="shrink-0 mt-0.5 text-ag-navy"
-          aria-checked={check2}
-          role="checkbox"
-        >
+      <div
+        role="checkbox"
+        aria-checked={check2}
+        tabIndex={0}
+        onClick={() => setCheck2((v) => !v)}
+        onKeyDown={(e) => (e.key === ' ' || e.key === 'Enter') && setCheck2((v) => !v)}
+        className="flex items-start gap-3 cursor-pointer group"
+      >
+        <span className="shrink-0 mt-0.5">
           {check2
             ? <CheckSquare size={18} className="text-ag-navy" />
             : <Square size={18} className="text-gray-300 group-hover:text-gray-400 transition-colors" />
           }
-        </button>
+        </span>
         <span className="text-[13px] text-gray-700 leading-relaxed">{check2Label}</span>
-      </label>
+      </div>
 
       {error && (
         <p className="text-[12px] text-red-600 font-medium">{error}</p>
