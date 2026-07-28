@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     default: 'Aegryn — Engineered to Last',
     template: '%s — Aegryn',
   },
-  description: 'Aegryn is a Swiss Tech Asset Builder. We design, fund and operate proprietary digital ecosystems engineered to last.',
+  description: 'Aegryn is a Swiss technology holding company. We design, fund and operate proprietary digital ecosystems — Subblink, Neediu, Primiom, Movtoo, Hobconnect — engineered to last. Headquartered in Switzerland.',
   keywords: ['Aegryn', 'Swiss Tech', 'digital assets', 'ecosystem engineering', 'cybersecurity', 'AI', 'SaaS', 'Switzerland startup'],
   authors: [{ name: 'Yohann Bollack', url: 'https://aegryn.com' }],
   creator: 'Aegryn Sàrl',

@@ -40,37 +40,37 @@ function localeFromAcceptLanguage(header: string | null): Locale | null {
 
 const intlMiddleware = createIntlMiddleware(routing)
 
-/* ── Supabase Auth check (edge-compatible, sync cookies) ── */
-function getSupabaseUser(req: NextRequest): { hasSession: boolean; res: NextResponse } {
-  const res = NextResponse.next({ request: req })
+/* ── Supabase Auth check + token refresh ── */
+async function refreshAndCheckSession(
+  req: NextRequest
+): Promise<{ hasSession: boolean; response: NextResponse }> {
+  let response = NextResponse.next({ request: req })
 
-  const _supabase = createServerClient(
+  const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
       cookies: {
         getAll: () => req.cookies.getAll(),
         setAll: (toSet) => {
-          toSet.forEach(({ name, value, options }) => {
-            req.cookies.set(name, value)
-            res.cookies.set(name, value, options)
-          })
+          toSet.forEach(({ name, value }) => req.cookies.set(name, value))
+          response = NextResponse.next({ request: req })
+          toSet.forEach(({ name, value, options }) =>
+            response.cookies.set(name, value, options)
+          )
         },
       },
     }
   )
 
-  /* Supabase stocke la session dans sb-<ref>-auth-token */
-  const sessionCookie = req.cookies.getAll().find(
-    (c) => c.name.startsWith('sb-') && c.name.endsWith('-auth-token')
-  )
+  /* getUser() rafraîchit automatiquement le access_token si expiré
+     (utilise le refresh_token stocké dans le cookie) */
+  const { data: { user } } = await supabase.auth.getUser()
 
-  /* Pour l'edge on ne peut pas appeler getUser() (async) —
-     on vérifie la présence du cookie de session comme signal fiable */
-  return { hasSession: !!sessionCookie, res }
+  return { hasSession: !!user, response }
 }
 
-export default function middleware(req: NextRequest) {
+export default async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl
 
   /* ── 1. Protection /client/* ──────────────────────────── */
@@ -83,7 +83,7 @@ export default function middleware(req: NextRequest) {
     '/client/set-password',
   ]
   if (pathname.startsWith('/client/') && !PUBLIC_CLIENT_PATHS.includes(pathname)) {
-    const { hasSession } = getSupabaseUser(req)
+    const { hasSession, response } = await refreshAndCheckSession(req)
     if (!hasSession) {
       const loginUrl = req.nextUrl.clone()
       loginUrl.pathname = '/client/login'
@@ -91,9 +91,8 @@ export default function middleware(req: NextRequest) {
     }
     const preferred = req.cookies.get(PREF_COOKIE)?.value as Locale | undefined
     const locale: Locale = preferred && LOCALES.includes(preferred) ? preferred : (routing.defaultLocale as Locale)
-    const clientRes = NextResponse.next()
-    clientRes.headers.set('x-next-intl-locale', locale)
-    return clientRes
+    response.headers.set('x-next-intl-locale', locale)
+    return response
   }
 
   /* /client/login accessible sans session → pass-through */
@@ -115,7 +114,7 @@ export default function middleware(req: NextRequest) {
     ) return NextResponse.next()
 
     /* Toutes les autres routes admin requièrent une session */
-    const { hasSession } = getSupabaseUser(req)
+    const { hasSession, response } = await refreshAndCheckSession(req)
     if (!hasSession) {
       const loginUrl = req.nextUrl.clone()
       loginUrl.pathname = '/admin/login'
@@ -124,9 +123,8 @@ export default function middleware(req: NextRequest) {
     }
     const preferred = req.cookies.get(PREF_COOKIE)?.value as Locale | undefined
     const locale: Locale = preferred && LOCALES.includes(preferred) ? preferred : (routing.defaultLocale as Locale)
-    const adminRes = NextResponse.next()
-    adminRes.headers.set('x-next-intl-locale', locale)
-    return adminRes
+    response.headers.set('x-next-intl-locale', locale)
+    return response
   }
 
   /* ── 3. Routes API — pass-through ── */

@@ -124,7 +124,7 @@ export const aegrynOrganizationSchema = {
   '@type':       'Organization',
   '@id':         `${BASE_URL}/#organization`,
   name:          'Aegryn',
-  legalName:     'Aegryn',
+  legalName:     'Aegryn Sàrl',
   url:           BASE_URL,
   logo: {
     '@type':     'ImageObject',
@@ -133,7 +133,8 @@ export const aegrynOrganizationSchema = {
     height:      50,
   },
   image:         `${BASE_URL}/og/default.jpg`,
-  description:   'Swiss Tech Asset Builder — Engineered to Last',
+  description:   'Aegryn is a Swiss technology holding company that designs, funds, and operates proprietary digital ecosystems across SaaS, AI, real estate, mobility, and social platforms. Headquartered in Switzerland, Aegryn builds long-lasting digital assets engineered to last.',
+  slogan:        'Engineered to Last',
   foundingDate:  '2023',
   numberOfEmployees: { '@type': 'QuantitativeValue', value: 5 },
   address: {
@@ -146,7 +147,7 @@ export const aegrynOrganizationSchema = {
   contactPoint: {
     '@type':            'ContactPoint',
     contactType:        'customer support',
-    email:              'contact@boha-group.com',
+    email:              'contact@aegryn.com',
     availableLanguage:  ['French', 'English', 'German', 'Italian', 'Spanish', 'Dutch'],
   },
   sameAs: [
@@ -180,7 +181,7 @@ export const aegrynWebSiteSchema = {
   '@id':        `${BASE_URL}/#website`,
   url:          BASE_URL,
   name:         'Aegryn',
-  description:  'Swiss Tech Asset Builder — Engineered to Last',
+  description:  'Aegryn — Swiss technology holding. Designs, funds and operates proprietary digital ecosystems: Subblink (AI contracts), Neediu (home services), Primiom (real estate AI), Movtoo (delivery), Hobconnect (social). Engineered to Last.',
   publisher:    { '@id': `${BASE_URL}/#organization` },
   inLanguage:   ['fr', 'en', 'de', 'it', 'es', 'nl'],
   potentialAction: {
