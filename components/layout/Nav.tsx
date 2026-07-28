@@ -4,7 +4,7 @@ import { Link, usePathname } from '@/i18n/navigation'
 import NextLink          from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useState, useRef, useEffect, type ComponentProps } from 'react'
-import { Menu, X, ChevronDown, User, UserCircle, LogOut } from 'lucide-react'
+import { Menu, X, ChevronDown, User, UserCircle } from 'lucide-react'
 import LanguageSwitcher  from '@/components/layout/LanguageSwitcher'
 import { AegrynLogo }   from '@/components/brand/AegrynLogo'
 import { gsap }          from '@/lib/gsap'
@@ -319,15 +319,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                   <p className="font-sans text-[12px] font-semibold text-ag-black truncate max-w-[150px] group-hover:text-ag-apex-ink transition-colors">{user.name}</p>
                 </div>
               </NextLink>
-              <form action="/api/client/logout" method="POST">
-                <button
-                  type="submit"
-                  className="flex items-center gap-1.5 font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors duration-200"
-                >
-                  <LogOut size={13} />
-                  {t('logout')}
-                </button>
-              </form>
             </>
           ) : (
             <>
@@ -504,15 +495,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                       <p className="font-sans text-[13px] font-semibold text-white truncate max-w-[200px]">{user.name}</p>
                     </div>
                   </div>
-                  <form action="/api/client/logout" method="POST">
-                    <button
-                      type="submit"
-                      className="w-full flex items-center justify-center gap-2 border border-white/20 px-4 py-3 font-mono text-[11px] tracking-[0.14em] uppercase text-white/70 hover:border-white/50 hover:text-white transition-all"
-                    >
-                      <LogOut size={13} />
-                      {t('logout')}
-                    </button>
-                  </form>
                 </>
               ) : (
                 <>
