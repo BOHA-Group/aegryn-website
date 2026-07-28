@@ -30,7 +30,6 @@ export default async function SellerNav({ unreadCount }: { unreadCount: number }
       items: [
         { href: '/client/seller/notifications', label: t('navNotifications'), icon: 'Bell',       badge: unreadCount },
         { href: '/client/account',              label: t('navMyAccount'),     icon: 'UserCircle' },
-        { href: '/client/account#settings',     label: t('navSettings'),     icon: 'Settings' },
       ],
     },
   ]

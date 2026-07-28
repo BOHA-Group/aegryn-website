@@ -31,7 +31,6 @@ export default async function AccountNav({ roles, unreadCount, rootHref }: Props
       items: [
         { href: notifHref,              label: t('navNotifications'), icon: 'Bell',       badge: unreadCount },
         { href: '/client/account',      label: t('navMyAccount'),     icon: 'UserCircle' },
-        { href: '/client/account#settings', label: t('navSettings'),  icon: 'Settings' },
       ],
     },
   ]
