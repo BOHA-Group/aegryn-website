@@ -359,18 +359,24 @@ export function emailKycDocSubmitted(opts: {
   return { subject, html }
 }
 
-/* ── KYC : email final profil approuvé (buyer ou seller) ───────────────── */
+/* ── KYC : email final profil approuvé (buyer, seller ou partner) ──────── */
 export function emailKycApproved(opts: {
   memberName: string
-  role: 'buyer' | 'seller'
+  role: 'buyer' | 'seller' | 'partner'
 }): { subject: string; html: string } {
-  const isBuyer = opts.role === 'buyer'
+  const { role } = opts
   const subject = '[AEGRYN] Votre profil KYC est validé'
-  const ctaLabel = isBuyer ? 'Accéder aux sessions d\'acquisition' : 'Soumettre un actif'
-  const ctaHref  = isBuyer ? 'https://aegryn.com/client/buyer/catalogue' : 'https://aegryn.com/client/seller/actifs'
-  const roleAction = isBuyer
-    ? 'vous pouvez désormais <strong>vous inscrire et accéder aux sessions de vente AEGRYN</strong>.'
-    : 'vous pouvez désormais <strong>soumettre un actif pour certification et mise en vente</strong>.'
+
+  const roleLabel  = role === 'buyer' ? 'acquéreur' : role === 'seller' ? 'cédant' : 'partenaire expert'
+  const ctaLabel   = role === 'buyer'   ? 'Accéder aux sessions d\'acquisition'
+                   : role === 'seller'  ? 'Soumettre un actif'
+                   : 'Mon espace partenaire'
+  const ctaHref    = role === 'buyer'   ? 'https://aegryn.com/client/buyer/catalogue'
+                   : role === 'seller'  ? 'https://aegryn.com/client/seller/actifs'
+                   : 'https://aegryn.com/client/partner'
+  const roleAction = role === 'buyer'   ? 'vous pouvez désormais <strong>vous inscrire et accéder aux sessions de vente AEGRYN</strong>.'
+                   : role === 'seller'  ? 'vous pouvez désormais <strong>soumettre un actif pour certification et mise en vente</strong>.'
+                   : 'vous pouvez désormais <strong>publier votre fiche profil expert et recevoir des mandats clients AEGRYN</strong>.'
 
   const html = WRAP(`
     <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">
@@ -380,7 +386,7 @@ export function emailKycApproved(opts: {
     <p style="margin:0 0 20px 0;font-size:14px;color:#475569;line-height:1.6;">
       Bonjour <strong style="color:#0F1C3F;">${opts.memberName}</strong>,<br/><br/>
       Votre dossier KYC a été examiné et <strong style="color:#16a34a;">approuvé</strong> par l'équipe AEGRYN. Votre identité et vos documents sont conformes à nos exigences réglementaires.<br/><br/>
-      En tant que ${isBuyer ? 'acquéreur' : 'cédant'}, ${roleAction}
+      En tant que ${roleLabel}, ${roleAction}
     </p>
     <p style="margin:0 0 28px 0;">${ctaButton(ctaLabel, ctaHref)}</p>
     <p style="margin:0;font-size:11px;color:#94a3b8;line-height:1.6;">

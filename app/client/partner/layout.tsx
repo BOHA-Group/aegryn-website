@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import PartnerNav from './PartnerNav'
+import KycBanner from '@/components/client/KycBanner'
 
 export default async function PartnerLayout({ children }: { children: React.ReactNode }) {
   const user = await getUser()
@@ -11,7 +12,7 @@ export default async function PartnerLayout({ children }: { children: React.Reac
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, roles')
+    .select('full_name, roles, kyc_status')
     .eq('id', user.id)
     .single()
 
@@ -51,6 +52,7 @@ export default async function PartnerLayout({ children }: { children: React.Reac
         </aside>
 
         <main className="flex-1 ml-56 overflow-y-auto min-h-[calc(100vh-4rem)]">
+          <KycBanner kycStatus={(profile as { kyc_status?: string } | null)?.kyc_status} role="partner" kycPath="/client/partner/kyc" />
           {children}
         </main>
       </div>

@@ -5,20 +5,22 @@ type KycStatus = 'pending' | 'in_review' | 'approved' | 'rejected' | string | nu
 
 type Props = {
   kycStatus: KycStatus
-  role: 'buyer' | 'seller'
+  role: 'buyer' | 'seller' | 'partner'
   kycPath: string
 }
 
 export default function KycBanner({ kycStatus, role, kycPath }: Props) {
+  const approvedMsg =
+    role === 'buyer'   ? 'Vous pouvez vous inscrire et accéder aux sessions d\'acquisition.'
+    : role === 'seller'  ? 'Vous pouvez soumettre un actif pour certification.'
+    : 'Vous pouvez publier votre fiche profil expert et recevoir des mandats clients.'
+
   if (kycStatus === 'approved') {
     return (
       <div className="flex items-center gap-3 bg-emerald-50 border-b border-emerald-200 px-6 py-3">
         <ShieldCheck size={15} className="text-emerald-600 shrink-0" />
         <p className="font-sans text-[12px] text-emerald-800 flex-1">
-          <strong>Profil KYC vérifié et conforme.</strong>{' '}
-          {role === 'buyer'
-            ? 'Vous pouvez vous inscrire et accéder aux sessions d\'acquisition.'
-            : 'Vous pouvez soumettre un actif pour certification.'}
+          <strong>Profil KYC vérifié et conforme.</strong>{' '}{approvedMsg}
         </p>
       </div>
     )
@@ -54,9 +56,10 @@ export default function KycBanner({ kycStatus, role, kycPath }: Props) {
   }
 
   /* pending ou non renseigné */
-  const reason = role === 'buyer'
-    ? 'Vous ne pouvez pas encore accéder aux sessions d\'acquisition.'
-    : 'Vous ne pouvez pas encore soumettre d\'actif.'
+  const reason =
+    role === 'buyer'  ? 'Vous ne pouvez pas encore accéder aux sessions d\'acquisition.'
+    : role === 'seller' ? 'Vous ne pouvez pas encore soumettre d\'actif.'
+    : 'Vous ne pouvez pas encore publier votre fiche profil expert ni recevoir de mandats clients.'
 
   return (
     <div className="flex items-center justify-between gap-3 bg-amber-50 border-b border-amber-300 px-6 py-3">

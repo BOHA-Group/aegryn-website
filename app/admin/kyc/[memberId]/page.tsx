@@ -76,7 +76,9 @@ export default async function AdminKycMemberPage({
       const memberEmail = memberAuthData.data.user?.email
       if (memberEmail) {
         const roles: string[] = Array.isArray(memberProfile?.roles) ? memberProfile.roles : []
-        const role = roles.includes('seller') ? 'seller' : 'buyer'
+        const role: 'buyer' | 'seller' | 'partner' = roles.includes('partner') ? 'partner'
+          : roles.includes('seller') ? 'seller'
+          : 'buyer'
         const { subject, html } = emailKycApproved({
           memberName: memberProfile?.full_name ?? memberEmail,
           role,
