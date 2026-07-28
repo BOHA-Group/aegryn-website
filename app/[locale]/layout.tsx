@@ -9,7 +9,6 @@ import Footer from '@/components/layout/Footer'
 import LenisProvider from '@/components/providers/LenisProvider'
 import { ScrollToTop } from '@/components/ui/ScrollToTop'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
-import CookieBanner from '@/components/analytics/CookieBanner'
 import MetaPixel from '@/components/analytics/MetaPixel'
 import { aegrynOrganizationSchema, aegrynWebSiteSchema } from '@/lib/seo'
 import '@/styles/globals.css'
@@ -150,7 +149,6 @@ export default async function LocaleLayout({ children, params }: Props) {
             </main>
             <Footer />
             <ScrollToTop />
-            <CookieBanner />
             <GoogleAnalytics />
             <MetaPixel />
           </LenisProvider>
