@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { Check, ArrowUpRight } from 'lucide-react'
 
 type Props = { params: Promise<{ locale: string }> }

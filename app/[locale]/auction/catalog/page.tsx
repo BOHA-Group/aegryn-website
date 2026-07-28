@@ -1,6 +1,7 @@
 import { getTranslations }        from 'next-intl/server'
 import type { Metadata }           from 'next'
-import Link                        from 'next/link'
+import NextLink                    from 'next/link'
+import { Link }                    from '@/i18n/navigation'
 import { cookies }                 from 'next/headers'
 import { createServerClient }      from '@supabase/ssr'
 import { ArrowUpRight, Info, Lock } from 'lucide-react'
@@ -98,7 +99,7 @@ export default async function AuctionCatalogPage({ params }: Props) {
           </p>
         </div>
         <Link
-          href={`/${locale}/assets`}
+          href="/assets"
           className="shrink-0 inline-flex items-center gap-2 font-sans font-semibold text-[10px] uppercase tracking-[0.16em] text-ag-gray-light border border-ag-border px-4 py-2 hover:border-ag-black hover:text-ag-black transition-colors whitespace-nowrap"
         >
           Portfolio AEGRYN <ArrowUpRight size={11} />
@@ -151,18 +152,18 @@ export default async function AuctionCatalogPage({ params }: Props) {
 
               {!user && (
                 <div className="flex flex-col sm:flex-row gap-3 mt-4">
-                  <Link
+                  <NextLink
                     href={`/client/login?next=/${locale}/auction/catalog`}
                     className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-black transition-colors"
                   >
                     Se connecter <ArrowUpRight size={12} />
-                  </Link>
-                  <Link
+                  </NextLink>
+                  <NextLink
                     href={`/client/register?next=/${locale}/auction/catalog`}
                     className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:border-ag-black hover:text-ag-black transition-all"
                   >
                     Créer un compte
-                  </Link>
+                  </NextLink>
                 </div>
               )}
             </div>
@@ -186,7 +187,7 @@ export default async function AuctionCatalogPage({ params }: Props) {
               Vous souhaitez lister votre actif dans le prochain catalogue ?
             </p>
             <Link
-              href={`/${locale}/auction/how-to-sell`}
+              href="/auction/how-to-sell"
               className="shrink-0 inline-flex items-center gap-2 bg-ag-black text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy transition-colors"
             >
               {t('viewAsset')} →
@@ -283,12 +284,12 @@ export default async function AuctionCatalogPage({ params }: Props) {
                     )}
 
                     <div className="mt-auto pt-4 border-t border-ag-border">
-                      <Link
+                      <NextLink
                         href={`/${locale}/client/buyer/catalogue`}
                         className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ag-black hover:text-ag-apex transition-colors"
                       >
                         Accéder au dossier complet <ArrowUpRight size={10} />
-                      </Link>
+                      </NextLink>
                     </div>
                   </div>
                 ))}
@@ -308,7 +309,7 @@ export default async function AuctionCatalogPage({ params }: Props) {
             Vous souhaitez lister votre actif dans le prochain catalogue ?
           </p>
           <Link
-            href={`/${locale}/auction/how-to-sell`}
+            href="/auction/how-to-sell"
             className="shrink-0 inline-flex items-center gap-2 bg-ag-black text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy transition-colors"
           >
             {t('viewAsset')} →

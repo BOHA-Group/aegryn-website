@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import { useSearchParams } from 'next/navigation'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, CheckCircle2, ChevronLeft } from 'lucide-react'
 
 type EvalType = 'review_internal' | 'review_partner' | 'full_certification'

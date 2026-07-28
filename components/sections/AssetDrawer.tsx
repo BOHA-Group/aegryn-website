@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import Link                              from 'next/link'
+import { Link }                          from '@/i18n/navigation'
 import { X, ArrowUpRight }              from 'lucide-react'
 import { gsap }                          from '@/lib/gsap'
 import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'

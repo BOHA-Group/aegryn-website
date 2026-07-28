@@ -18,7 +18,8 @@ import { redirect }         from 'next/navigation'
 import { createServerClient } from '@supabase/ssr'
 import { getTranslations }  from 'next-intl/server'
 import type { Metadata }    from 'next'
-import Link                 from 'next/link'
+import NextLink             from 'next/link'
+import { Link }             from '@/i18n/navigation'
 import { Lock, ArrowUpRight, ClockAlert } from 'lucide-react'
 
 import AssetLotSheet   from '@/components/auction/AssetLotSheet'
@@ -172,14 +173,14 @@ function AccessDeniedScreen({
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-          <Link
-            href={`/${locale}/client/auction`}
+          <NextLink
+            href="/client/auction"
             className="inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors"
           >
             Mon espace acquéreur <ArrowUpRight size={12} />
-          </Link>
+          </NextLink>
           <Link
-            href={`/${locale}/auction/catalog`}
+            href="/auction/catalog"
             className="inline-flex items-center justify-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:border-ag-black hover:text-ag-black transition-all"
           >
             {t('backToCatalog')}

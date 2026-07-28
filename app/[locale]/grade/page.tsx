@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { ArrowUpRight } from 'lucide-react'
 import { GradeHero } from '@/components/sections/grade/GradeHero'
 import { GradeCards } from '@/components/sections/grade/GradeCards'

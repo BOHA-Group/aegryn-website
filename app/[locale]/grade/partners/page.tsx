@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, Scale, Calculator, ShieldCheck, Code2 } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 

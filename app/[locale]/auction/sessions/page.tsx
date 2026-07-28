@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import NextLink from 'next/link'
+import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
 import { Calendar, MapPin, Users, ArrowUpRight, Bell, Lock } from 'lucide-react'
 import WaitlistForm from '@/components/auction/WaitlistForm'
@@ -116,12 +117,12 @@ export default async function AuctionSessionPage({ params }: Props) {
                     <p className="font-sans text-[11px] text-ag-gray-light leading-tight">
                       {t('sessionCardLocked')}
                     </p>
-                    <Link
+                    <NextLink
                       href="/client/register"
                       className="font-sans text-[11px] font-semibold text-ag-apex-ink underline underline-offset-2 hover:text-ag-apex transition-colors"
                     >
                       {t('sessionCardLockedCta')} →
-                    </Link>
+                    </NextLink>
                   </div>
                 )}
                 <Link
@@ -169,7 +170,7 @@ export default async function AuctionSessionPage({ params }: Props) {
               </p>
               <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('sellerDesc')}</p>
               <Link
-                href={`/${locale}/auction/how-to-sell`}
+                href="/auction/how-to-sell"
                 className="self-start inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
               >
                 {t('sellerCta')} <ArrowUpRight size={13} />

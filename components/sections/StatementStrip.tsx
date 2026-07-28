@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { ArrowUpRight } from 'lucide-react'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { gsap, SplitText } from '@/lib/gsap'
 
 type Props = {

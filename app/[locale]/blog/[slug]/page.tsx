@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { Calendar, Clock, ArrowUpRight } from 'lucide-react'
 import { ARTICLES, ARTICLE_CATEGORIES, getLocaleText, type ContentBlock, type ArticleCategory } from '@/data/articles'
 

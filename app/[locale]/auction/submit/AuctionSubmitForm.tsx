@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, CheckCircle2, ChevronLeft, Scale } from 'lucide-react'
 
 type IpKey = 'yes' | 'no' | 'pending'

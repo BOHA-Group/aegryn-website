@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import Link              from 'next/link'
+import NextLink          from 'next/link'
+import { Link }          from '@/i18n/navigation'
 import { CheckCircle2 }  from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -29,12 +30,12 @@ export default function GradeSubmitSuccessPage() {
           >
             Retour au Grade
           </Link>
-          <Link
+          <NextLink
             href="/client/login"
             className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             Accéder à mon espace
-          </Link>
+          </NextLink>
         </div>
       </div>
     </main>

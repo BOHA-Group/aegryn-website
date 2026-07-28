@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, Check, Shield, Info } from 'lucide-react'
 import { serviceJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
 import { generateAegrynMetadata } from '@/lib/seo'

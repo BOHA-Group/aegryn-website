@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, TrendingUp } from 'lucide-react'
 import { AuctionHero } from '@/components/sections/auction/AuctionHero'
 import { AuctionStats } from '@/components/sections/auction/AuctionStats'
