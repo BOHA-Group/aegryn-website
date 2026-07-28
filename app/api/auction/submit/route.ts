@@ -46,6 +46,22 @@ export async function POST(req: NextRequest) {
     const body = schema.parse(await req.json())
 
     const supa = createServiceClient()
+
+    /* ── Doublon check (seller_email + company_name) ── */
+    const { data: existing } = await supa
+      .from('assets')
+      .select('id')
+      .eq('seller_email', body.email)
+      .ilike('company_name', body.assetName)
+      .maybeSingle()
+
+    if (existing) {
+      return NextResponse.json(
+        { error: 'duplicate', message: 'Un actif avec ce nom a déjà été soumis pour cet email.', assetId: existing.id },
+        { status: 409 }
+      )
+    }
+
     const { data: asset, error: insertError } = await supa
       .from('assets')
       .insert({

@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { Award, Users, DollarSign, Bell, ArrowUpRight } from 'lucide-react'
+import { Award, Users, Bell, ArrowUpRight, CreditCard } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Tableau de bord — Espace Partenaire AEGRYN',
@@ -18,36 +18,10 @@ const CERT_STATUS_LABELS: Record<string, string> = {
   declined:   'Refusée',
 }
 
-const COMMISSION_STATUS_LABELS: Record<string, string> = {
-  pending:    'En attente',
-  to_invoice: 'À facturer',
-  invoiced:   'Facturée',
-  paid:       'Payée',
-}
-
-const COMMISSION_STATUS_COLOR: Record<string, string> = {
-  pending:    'text-gray-400',
-  to_invoice: 'text-amber-600',
-  invoiced:   'text-blue-600',
-  paid:       'text-emerald-600',
-}
-
-function fmtChf(n: number | null) {
-  if (n == null) return '—'
-  return new Intl.NumberFormat('fr-CH', { style: 'currency', currency: 'CHF', maximumFractionDigits: 0 }).format(n)
-}
 
 function fmtDate(d: unknown) {
   if (!d || typeof d !== 'string') return '—'
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
-}
-
-type Commission = {
-  id: string
-  type: string
-  amount_chf: number | null
-  status: string
-  eligible_at: string | null
 }
 
 type Certification = {
@@ -76,10 +50,9 @@ export default async function PartnerDashboardPage() {
     { data: profile },
     { data: certifications },
     { data: introductions },
-    { data: commissions },
     { data: notifications },
   ] = await Promise.all([
-    supa.from('profiles').select('full_name').eq('id', user.id).single(),
+    supa.from('profiles').select('full_name, expert_plan, expert_plan_start').eq('id', user.id).single(),
     supa.from('partner_certifications')
       .select('id, dimension, status, deadline_at, assets(company_name)')
       .eq('partner_id', user.id)
@@ -91,11 +64,6 @@ export default async function PartnerDashboardPage() {
       .eq('partner_id', user.id)
       .order('created_at', { ascending: false })
       .limit(3),
-    supa.from('commissions')
-      .select('id, type, amount_chf, status, eligible_at')
-      .eq('partner_id', user.id)
-      .order('created_at', { ascending: false })
-      .limit(5),
     supa.from('user_notifications')
       .select('id, title, body, created_at, read_at')
       .eq('user_id', user.id)
@@ -105,14 +73,7 @@ export default async function PartnerDashboardPage() {
 
   const displayName = profile?.full_name ?? user.email ?? ''
   const unreadCount = (notifications ?? []).filter(n => !n.read_at).length
-
-  const totalEarned = (commissions ?? [])
-    .filter(c => (c as Commission).status === 'paid')
-    .reduce((sum, c) => sum + ((c as Commission).amount_chf ?? 0), 0)
-
-  const pendingAmount = (commissions ?? [])
-    .filter(c => ['pending', 'to_invoice', 'invoiced'].includes((c as Commission).status))
-    .reduce((sum, c) => sum + ((c as Commission).amount_chf ?? 0), 0)
+  const expertPlan  = (profile as Record<string, unknown> | null)?.expert_plan as string | null
 
   const activeCertCount = (certifications as unknown[] ?? []).filter(c =>
     ['assigned', 'in_review'].includes((c as Certification).status)
@@ -166,24 +127,16 @@ export default async function PartnerDashboardPage() {
           <p className="font-sans text-[11px] text-gray-400 mt-0.5">Introductions</p>
         </Link>
 
-        <Link href="/client/partner/commissions"
-          className="bg-white border border-gray-200 p-5 hover:border-gray-300 transition-colors group">
+        <Link href="/client/partner/subscription"
+          className="bg-white border border-gray-200 p-5 hover:border-gray-300 transition-colors group col-span-2">
           <div className="flex items-center justify-between mb-3">
-            <DollarSign size={16} className="text-gray-400 group-hover:text-ag-navy transition-colors" />
+            <CreditCard size={16} className="text-gray-400 group-hover:text-ag-navy transition-colors" />
             <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
           </div>
-          <p className="font-mono font-bold text-[16px] text-emerald-600">{fmtChf(totalEarned || null)}</p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">Commissions perçues</p>
-        </Link>
-
-        <Link href="/client/partner/commissions"
-          className="bg-white border border-gray-200 p-5 hover:border-gray-300 transition-colors group">
-          <div className="flex items-center justify-between mb-3">
-            <DollarSign size={16} className="text-amber-400" />
-            <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
-          </div>
-          <p className="font-mono font-bold text-[16px] text-amber-600">{fmtChf(pendingAmount || null)}</p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">En attente</p>
+          <p className={`font-mono font-bold text-[13px] ${expertPlan === 'active' ? 'text-emerald-600' : 'text-amber-600'}`}>
+            {expertPlan === 'active' ? 'Abonnement actif' : 'Abonnement inactif'}
+          </p>
+          <p className="font-sans text-[11px] text-gray-400 mt-0.5">Fiche expert — 89 €/mois</p>
         </Link>
       </div>
 
@@ -221,41 +174,6 @@ export default async function PartnerDashboardPage() {
                   <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
                 </div>
               </Link>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Commissions récentes */}
-      {commissions && commissions.length > 0 && (
-        <div className="mb-8">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="font-sans font-semibold text-gray-900 text-[14px]">Commissions récentes</h2>
-            <Link href="/client/partner/commissions"
-              className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 flex items-center gap-1">
-              Voir tout <ArrowUpRight size={10} />
-            </Link>
-          </div>
-          <div className="flex flex-col gap-2">
-            {(commissions as Commission[]).map(c => (
-              <div key={c.id} className="bg-white border border-gray-200 px-5 py-3 flex items-center justify-between">
-                <div>
-                  <p className="font-sans text-[12px] text-gray-700">
-                    {c.type === 'cosignature' ? 'Co-signature'
-                      : c.type === 'introduction_asset' ? 'Introduction actif'
-                      : 'Introduction acquéreur'}
-                  </p>
-                  {c.eligible_at && (
-                    <p className="font-mono text-[9px] text-gray-400 mt-0.5">Éligible le {fmtDate(c.eligible_at)}</p>
-                  )}
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="font-mono font-bold text-[13px] text-gray-800">{fmtChf(c.amount_chf)}</span>
-                  <span className={`font-mono text-[9px] uppercase tracking-widest ${COMMISSION_STATUS_COLOR[c.status] ?? 'text-gray-400'}`}>
-                    {COMMISSION_STATUS_LABELS[c.status] ?? c.status}
-                  </span>
-                </div>
-              </div>
             ))}
           </div>
         </div>

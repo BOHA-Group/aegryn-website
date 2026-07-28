@@ -154,7 +154,7 @@ export default function MandateDetailClient({
             <>
               <p className="font-sans text-[12px] text-gray-500 mb-5 leading-relaxed">
                 Déclarez chaque facture émise à votre client. La rétrocession AEGRYN ({retrocessionPct}%) est calculée automatiquement.
-                Transmettez ensuite le virement à <a href="mailto:finance@boha-group.com" className="underline text-ag-navy">finance@boha-group.com</a>.
+                Transmettez ensuite le virement à <a href="mailto:contact@boha-group.com" className="underline text-ag-navy">contact@boha-group.com</a>.
               </p>
 
               {invSuccess && (

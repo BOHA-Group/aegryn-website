@@ -15,10 +15,10 @@ export default async function PartnerNav({ unreadCount }: { unreadCount: number 
     {
       label: t('navGroupActivity'),
       items: [
-        { href: '/client/partner/certifications', label: t('navCosigning'),            icon: 'Award' },
-        { href: '/client/partner/introductions',  label: t('navIntroductions'),         icon: 'Users' },
-        { href: '/client/partner/mandates',       label: t('navMandates'),              icon: 'Briefcase' },
-        { href: '/client/partner/commissions',    label: t('navPartnerCommissions'),    icon: 'DollarSign' },
+        { href: '/client/partner/certifications', label: t('navCosigning'),          icon: 'Award' },
+        { href: '/client/partner/introductions',  label: t('navIntroductions'),       icon: 'Users' },
+        { href: '/client/partner/mandates',       label: t('navMandates'),            icon: 'Briefcase' },
+        { href: '/client/partner/subscription',   label: t('navPartnerSubscription'), icon: 'CreditCard' },
       ],
     },
     {

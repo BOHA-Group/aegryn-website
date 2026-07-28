@@ -48,7 +48,7 @@ export default async function ExpertClientPage() {
               Aucun abonnement actif. Votre fiche ne sera pas visible publiquement.
             </p>
             <p className="font-sans text-[11px] text-amber-700">
-              Le paiement par abonnement sera disponible prochainement (89 € HT/mois). Contactez-nous pour activer votre accès manuellement : <a href="mailto:contact@aegryn.com" className="underline">contact@aegryn.com</a>
+              Le paiement par abonnement sera disponible prochainement (89 € HT/mois). Contactez-nous pour activer votre accès manuellement : <a href="mailto:contact@boha-group.com" className="underline">contact@boha-group.com</a>
             </p>
           </div>
         )}
