@@ -2283,14 +2283,14 @@
       "marketTitle": "Ein bifurkierender Markt.",
       "marketDesc": "Zertifizierte und nicht zertifizierte Tech-Assets spielen nicht mehr in der gleichen Liga. Der Multiple-Unterschied hat sich in 3 Jahren um 2,5x vergrößert — und wächst weiter.",
       "marketCta": "Meinen Asset bewerten",
-      "segmentLabel": "NOTRE SEGMENT",
-      "segmentTitle": "100K€ — 2,5M€.\nLà où les actifs tech ont une valeur réelle mais restent invisibles.",
-      "segmentDesc": "Trop grands pour une revente informelle. Trop petits pour les banques d'affaires. AEGRYN structure les transactions que personne d'autre ne certifie — avec la rigueur institutionnelle que ce segment mérite.",
+      "segmentLabel": "UNSER SEGMENT",
+      "segmentTitle": "100K€ — 2,5M€.\nWo Tech-Assets echten Wert haben, aber unsichtbar bleiben.",
+      "segmentDesc": "Zu groß für einen informellen Weiterverkauf. Zu klein für Investmentbanken. AEGRYN strukturiert Transaktionen, die sonst niemand zertifiziert — mit der institutionellen Sorgfalt, die dieses Segment verdient.",
       "segmentItems": [
-        "Actifs entre 100 000€ et 2 500 000€ de valorisation",
-        "SaaS B2B, marketplaces, IP numérique, protocoles IA",
-        "Vendeurs : fondateurs, studios, holdings opérationnelles",
-        "Acquéreurs : entrepreneurs, corporates, family offices"
+        "Assets zwischen 100.000€ und 2.500.000€ Bewertung",
+        "B2B SaaS, Marktplätze, digitales IP, KI-Protokolle",
+        "Verkäufer: Gründer, Studios, operative Holdings",
+        "Käufer: Unternehmer, Corporates, Family Offices"
       ]
     },
     "catalog": {
@@ -2312,6 +2312,7 @@
       "assetAsk": "Verkäuferpreis",
       "viewAsset": "Zum Dossier",
       "confidential": "Vertraulich — NDA erforderlich",
+      "thirdPartyNote": "Diese Assets werden von unabhängigen Verkäufern angeboten. AEGRYN agiert als zertifizierter Vermittler und Transaktionsorganisator — nicht als Verkäufer.",
       "notifyEmail": "Ihre E-Mail",
       "notifyEmailPlaceholder": "gründer@beispiel.com",
       "notifyType": "Sie sind",
@@ -2325,8 +2326,7 @@
       "notifyError": "Ein Fehler ist aufgetreten. Bitte erneut versuchen.",
       "notifySuccessTitle": "Anmeldung bestätigt",
       "notifySuccessDesc": "Sie werden vorrangig kontaktiert, sobald der Katalog für Mitglieder geöffnet wird.",
-      "notifySuccessCta": "Mein Asset zur Zertifizierung einreichen",
-      "thirdPartyNote": "Ces actifs sont proposés par des vendeurs indépendants. AEGRYN agit comme intermédiaire certifié et organisateur de la transaction — pas comme vendeur."
+      "notifySuccessCta": "Mein Asset zur Zertifizierung einreichen"
     },
     "sell": {
       "label": "Verkäufer",
@@ -2941,17 +2941,17 @@
       "evalTypeTitle": "Welches Bewertungsniveau wünschen Sie?",
       "evalTypeFull": {
         "label": "Auction-Zertifizierung",
-        "desc": "Nur Erfolgsbeteiligung. Vollständiges unabhängiges AEGRYN-Protokoll (4 Dimensionen C/I/F/S), inklusive wenn die Transaktion über AEGRYN Auction abgeschlossen wird.",
+        "desc": "Nur Erfolgsbeteiligung. Vollständiges unabhängiges AEGRYN-Protokoll (4 Dimensionen C/I/F/S), 3–4 Wochen, inklusive wenn die Transaktion über AEGRYN Auction abgeschlossen wird.",
         "price": "Kostenlos"
       },
       "evalTypeReview": {
         "label": "AEGRYN Review",
-        "desc": "Schriftliches Gutachten eines AEGRYN-Analysten innerhalb von 15 Werktagen. Keine externe Partnerprüfung. Nicht im Katalog veröffentlichbar, ohne externe Validierung.",
+        "desc": "Schriftliches Gutachten eines AEGRYN-Analysten innerhalb von 5 Werktagen. Keine externe Partnerprüfung. Nicht im Katalog veröffentlichbar, ohne externe Validierung.",
         "price": "2.000 € zzgl. MwSt."
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
-        "desc": "Schriftliches Gutachten + Prüfung durch einen externen Partner (Kanzlei oder Wirtschaftsprüfer) auf Anfrage innerhalb von 20 Werktagen. Querverweise mit unseren Alliance-Partnern.",
+        "desc": "Schriftliches Gutachten + Prüfung durch einen externen Partner (Kanzlei oder Wirtschaftsprüfer) innerhalb von 10 Werktagen. Querverweise mit unseren Alliance-Partnern.",
         "price": "5.000 € zzgl. MwSt."
       },
       "evalDeductibleNote": "Dieser Betrag wird vollständig von den Zertifizierungskosten abgezogen, wenn Sie innerhalb von 6 Monaten nach Erhalt Ihres Reviews einen vollständigen Auction-Prozess einleiten.",
@@ -3551,7 +3551,10 @@
       "sectionFinancial": "Finanzdaten",
       "arr": "Annualisierter ARR / MRR (€ oder CHF)",
       "arrPlaceholder": "z.B. 150000",
-      "askPrice": "Gewünschter Verkaufspreis (€ oder CHF)",
+      "askPrice": "Gewünschter Verkaufspreis",
+      "askPriceCurrency": "Währung",
+      "askPriceCurrencyEur": "EUR (€)",
+      "askPriceCurrencyChf": "CHF (Fr.)",
       "askPricePlaceholder": "z.B. 1200000",
       "ipFiled": "Geistiges Eigentum eingetragen",
       "ipYes": "Ja",
@@ -3579,9 +3582,10 @@
         "q3_2026": "Q3 2026",
         "q4_2026": "Q4 2026",
         "q1_2027": "Q1 2027",
-        "flexible": "Flexibel",
-        "q2_2027": "T2 2027 (avr. — juin 2027)"
+        "q2_2027": "Q2 2027 (Apr. — Juni 2027)",
+        "flexible": "Flexibel"
       },
+      "targetSessionHelper": "Ihre Auswahl bestimmt das Quartal und Jahr der Zulassung für den nächsten Verkaufskatalog.",
       "sectionContact": "Ihre Kontaktdaten",
       "fullName": "Vollständiger Name",
       "email": "Geschäftliche E-Mail",
@@ -3594,11 +3598,7 @@
       "submitting": "Wird gesendet…",
       "successTitle": "Dossier erhalten.",
       "successDesc": "Unser Team meldet sich innerhalb von 48–72 Werktagen, um die Zertifizierungsphase einzuleiten.",
-      "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
-      "askPriceCurrency": "Devise",
-      "askPriceCurrencyEur": "EUR (€)",
-      "askPriceCurrencyChf": "CHF (Fr.)",
-      "targetSessionHelper": "Votre sélection détermine le quarter et l'année d'éligibilité pour le prochain catalogue de vente."
+      "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt."
     }
   },
   "auctionLot": {
@@ -4142,7 +4142,7 @@
       "errorInvalid": "Falsche E-Mail-Adresse oder falsches Passwort.",
       "errorNetwork": "Server nicht erreichbar. Bitte Verbindung prüfen und erneut versuchen.",
       "backToSite": "Zurück zur Website",
-      "createAccount": "Créer un compte →"
+      "createAccount": "Konto erstellen →"
     },
     "forgotPassword": {
       "title": "Passwort zurücksetzen",

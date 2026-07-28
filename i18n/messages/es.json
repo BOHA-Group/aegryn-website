@@ -2283,14 +2283,14 @@
       "marketTitle": "Un mercado en bifurcación.",
       "marketDesc": "Los activos tech certificados y los no certificados ya no juegan en la misma liga. La brecha de múltiplo se ha ampliado 2,5x en 3 años — y sigue creciendo.",
       "marketCta": "Estimar el valor de mi activo",
-      "segmentLabel": "NOTRE SEGMENT",
-      "segmentTitle": "100K€ — 2,5M€.\nLà où les actifs tech ont une valeur réelle mais restent invisibles.",
-      "segmentDesc": "Trop grands pour une revente informelle. Trop petits pour les banques d'affaires. AEGRYN structure les transactions que personne d'autre ne certifie — avec la rigueur institutionnelle que ce segment mérite.",
+      "segmentLabel": "NUESTRO SEGMENTO",
+      "segmentTitle": "100K€ — 2,5M€.\nDonde los activos tech tienen valor real pero permanecen invisibles.",
+      "segmentDesc": "Demasiado grandes para una reventa informal. Demasiado pequeños para los bancos de inversión. AEGRYN estructura transacciones que nadie más certifica — con el rigor institucional que este segmento merece.",
       "segmentItems": [
-        "Actifs entre 100 000€ et 2 500 000€ de valorisation",
-        "SaaS B2B, marketplaces, IP numérique, protocoles IA",
-        "Vendeurs : fondateurs, studios, holdings opérationnelles",
-        "Acquéreurs : entrepreneurs, corporates, family offices"
+        "Activos entre 100.000€ y 2.500.000€ de valoración",
+        "SaaS B2B, marketplaces, IP digital, protocolos IA",
+        "Vendedores: fundadores, estudios, holdings operativas",
+        "Compradores: emprendedores, corporates, family offices"
       ]
     },
     "catalog": {
@@ -2312,6 +2312,7 @@
       "assetAsk": "Precio vendedor",
       "viewAsset": "Ver el dossier",
       "confidential": "Confidencial — NDA requerido",
+      "thirdPartyNote": "Estos activos son ofrecidos por vendedores independientes. AEGRYN actúa como intermediario certificado y organizador de la transacción — no como vendedor.",
       "notifyEmail": "Su email",
       "notifyEmailPlaceholder": "fundador@ejemplo.com",
       "notifyType": "Usted es",
@@ -2325,8 +2326,7 @@
       "notifyError": "Se ha producido un error. Por favor, inténtelo de nuevo.",
       "notifySuccessTitle": "Registro confirmado",
       "notifySuccessDesc": "Será contactado con prioridad en cuanto el catálogo se abra a los miembros.",
-      "notifySuccessCta": "Enviar mi activo para certificación",
-      "thirdPartyNote": "Ces actifs sont proposés par des vendeurs indépendants. AEGRYN agit comme intermédiaire certifié et organisateur de la transaction — pas comme vendeur."
+      "notifySuccessCta": "Enviar mi activo para certificación"
     },
     "sell": {
       "label": "Vendedor",
@@ -2941,17 +2941,17 @@
       "evalTypeTitle": "¿Qué nivel de evaluación necesita?",
       "evalTypeFull": {
         "label": "Certificación Auction",
-        "desc": "Solo honorarios de éxito. Proceso completo por protocolo independiente AEGRYN (4 dimensiones C/I/F/S), incluido si la transacción se realiza vía AEGRYN Auction.",
+        "desc": "Solo honorarios de éxito. Proceso completo por protocolo independiente AEGRYN (4 dimensiones C/I/F/S), 3–4 semanas, incluido si la transacción se realiza vía AEGRYN Auction.",
         "price": "Gratuito"
       },
       "evalTypeReview": {
         "label": "AEGRYN Review",
-        "desc": "Opinión escrita de un analista AEGRYN en 15 días hábiles. Sin revisión de socio externo. No publicable en el catálogo, sin validación externa.",
+        "desc": "Opinión escrita de un analista AEGRYN en 5 días hábiles. Sin revisión de socio externo. No publicable en el catálogo, sin validación externa.",
         "price": "2.000 € sin IVA"
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
-        "desc": "Opinión escrita + revisión por un socio externo (bufete jurídico o contador) a petición en 20 días hábiles. Referencia cruzada con nuestros socios Alliance.",
+        "desc": "Opinión escrita + revisión por un socio externo (bufete jurídico o contador) en 10 días hábiles. Referencia cruzada con nuestros socios Alliance.",
         "price": "5.000 € sin IVA"
       },
       "evalDeductibleNote": "Este importe es íntegramente deducible del costo de certificación si inicia un proceso completo de Auction en los 6 meses siguientes a la recepción de su Review.",
@@ -3551,7 +3551,10 @@
       "sectionFinancial": "Datos financieros",
       "arr": "ARR / MRR anualizado (€ o CHF)",
       "arrPlaceholder": "ej. 150000",
-      "askPrice": "Precio de venta deseado (€ o CHF)",
+      "askPrice": "Precio de venta deseado",
+      "askPriceCurrency": "Divisa",
+      "askPriceCurrencyEur": "EUR (€)",
+      "askPriceCurrencyChf": "CHF (Fr.)",
       "askPricePlaceholder": "ej. 1200000",
       "ipFiled": "Propiedad intelectual registrada",
       "ipYes": "Sí",
@@ -3579,9 +3582,10 @@
         "q3_2026": "Q3 2026",
         "q4_2026": "Q4 2026",
         "q1_2027": "T1 2027",
-        "flexible": "Flexible",
-        "q2_2027": "T2 2027 (avr. — juin 2027)"
+        "q2_2027": "T2 2027 (abr. — jun. 2027)",
+        "flexible": "Flexible"
       },
+      "targetSessionHelper": "Su selección determina el trimestre y año de elegibilidad para el próximo catálogo de venta.",
       "sectionContact": "Sus datos de contacto",
       "fullName": "Nombre completo",
       "email": "Email profesional",
@@ -3594,11 +3598,7 @@
       "submitting": "Enviando…",
       "successTitle": "Dossier recibido.",
       "successDesc": "Nuestro equipo le responderá en 48–72 horas hábiles para iniciar el proceso de certificación.",
-      "errorMsg": "Se ha producido un error. Por favor, inténtelo de nuevo o contáctenos directamente.",
-      "askPriceCurrency": "Devise",
-      "askPriceCurrencyEur": "EUR (€)",
-      "askPriceCurrencyChf": "CHF (Fr.)",
-      "targetSessionHelper": "Votre sélection détermine le quarter et l'année d'éligibilité pour le prochain catalogue de vente."
+      "errorMsg": "Se ha producido un error. Por favor, inténtelo de nuevo o contáctenos directamente."
     }
   },
   "auctionLot": {
@@ -4142,7 +4142,7 @@
       "errorInvalid": "Correo o contraseña incorrectos.",
       "errorNetwork": "No se pudo contactar con el servidor. Compruebe su conexión e inténtelo de nuevo.",
       "backToSite": "Volver al sitio",
-      "createAccount": "Créer un compte →"
+      "createAccount": "Crear una cuenta →"
     },
     "forgotPassword": {
       "title": "Restablecer contraseña",
