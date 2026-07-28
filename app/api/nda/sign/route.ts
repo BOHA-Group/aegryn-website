@@ -28,31 +28,40 @@ export async function POST(req: NextRequest) {
 
   const supa = createServiceClient()
 
-  /* Vérifier que l'utilisateur a le rôle buyer */
+  /* Vérifier que le profil existe (tout utilisateur authentifié peut signer) */
   const { data: profile } = await supa
     .from('profiles')
-    .select('roles')
+    .select('id, roles, role')
     .eq('id', user.id)
-    .single() as { data: { roles: string[] | null } | null }
+    .maybeSingle() as { data: { id: string; roles: string[] | null; role: string | null } | null }
 
-  const roles = profile?.roles ?? []
-  if (!roles.includes('buyer') && !roles.includes('partner')) {
-    return NextResponse.json({ error: 'Rôle acheteur requis.' }, { status: 403 })
+  if (!profile) {
+    return NextResponse.json({ error: 'Profil introuvable.' }, { status: 403 })
   }
 
-  /* Upsert — UNIQUE(buyer_id, scope, asset_id) avec asset_id NULL */
-  const { error } = await supa.from('nda_signatures').upsert(
-    {
-      buyer_id:    user.id,
-      nda_version: ndaVersion,
-      signed_at:   new Date().toISOString(),
-      ip_address:  ip,
-      user_agent:  userAgent,
-      scope:       'catalog_general',
-      asset_id:    null,
-    },
-    { onConflict: 'buyer_id,scope,asset_id', ignoreDuplicates: false }
-  )
+  /* Vérifier si une signature catalog_general existe déjà */
+  const { data: existing } = await supa
+    .from('nda_signatures')
+    .select('id')
+    .eq('buyer_id', user.id)
+    .eq('scope', 'catalog_general')
+    .is('asset_id', null)
+    .maybeSingle()
+
+  if (existing) {
+    /* Déjà signé — succès silencieux */
+    return NextResponse.json({ ok: true })
+  }
+
+  const { error } = await supa.from('nda_signatures').insert({
+    buyer_id:    user.id,
+    nda_version: ndaVersion,
+    signed_at:   new Date().toISOString(),
+    ip_address:  ip,
+    user_agent:  userAgent,
+    scope:       'catalog_general',
+    asset_id:    null,
+  })
 
   if (error) {
     console.error('[NDA sign]', error)
