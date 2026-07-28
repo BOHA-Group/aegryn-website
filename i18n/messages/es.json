@@ -457,7 +457,7 @@
         "title": "Está buscando adquirir.",
         "desc": "Nuestro catálogo está reservado para compradores cualificados.",
         "btn": "Enviar una solicitud de comprador",
-        "href": "/auction/buy"
+        "href": "/auction/how-to-buy"
       },
       "partner": {
         "title": "Es un socio potencial.",
@@ -954,6 +954,8 @@
       "title": "Plataforma",
       "link": "Hoja de ruta"
     },
+    "assetsLink": "Catálogo de activos",
+    "glossaryLink": "Glosario",
     "ecosystemCatalogLink": "Nuestros activos propietarios"
   },
   "cookie": {

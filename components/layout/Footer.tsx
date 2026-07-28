@@ -165,8 +165,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/assets" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('assetsLink')}
+                </Link>
+              </li>
+              <li>
                 <Link href="/blog" className="text-sm text-white/75 hover:text-white transition-colors">
                   {t('blogLink')}
+                </Link>
+              </li>
+              <li>
+                <Link href={"/glossaire" as never} className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('glossaryLink')}
                 </Link>
               </li>
               <li>

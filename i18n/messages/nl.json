@@ -457,7 +457,7 @@
         "title": "U wilt acquiseren.",
         "desc": "Onze catalogus is voorbehouden aan gekwalificeerde kopers.",
         "btn": "Een kopersaanvraag indienen",
-        "href": "/auction/buy"
+        "href": "/auction/how-to-buy"
       },
       "partner": {
         "title": "U bent een potentiële partner.",
@@ -954,6 +954,8 @@
       "title": "Platform",
       "link": "Routekaart"
     },
+    "assetsLink": "Activacatalogus",
+    "glossaryLink": "Woordenlijst",
     "ecosystemCatalogLink": "Onze propriëtaire assets"
   },
   "cookie": {

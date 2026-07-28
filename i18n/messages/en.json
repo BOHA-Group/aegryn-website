@@ -457,7 +457,7 @@
         "title": "You are looking to acquire.",
         "desc": "Our catalogue is reserved for qualified buyers.",
         "btn": "Submit a buyer application",
-        "href": "/auction/buy"
+        "href": "/auction/how-to-buy"
       },
       "partner": {
         "title": "You are a potential partner.",
@@ -954,6 +954,8 @@
       "title": "Platform",
       "link": "Product roadmap"
     },
+    "assetsLink": "Asset Catalogue",
+    "glossaryLink": "Glossary",
     "ecosystemCatalogLink": "Our proprietary assets"
   },
   "cookie": {

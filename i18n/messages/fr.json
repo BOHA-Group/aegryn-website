@@ -457,7 +457,7 @@
         "title": "Vous cherchez à acquérir.",
         "desc": "Notre catalogue est réservé aux acquéreurs qualifiés.",
         "btn": "Déposer une candidature acquéreur",
-        "href": "/auction/buy"
+        "href": "/auction/how-to-buy"
       },
       "partner": {
         "title": "Vous êtes partenaire potentiel.",
@@ -954,6 +954,8 @@
       "title": "Plateforme",
       "link": "Feuille de route"
     },
+    "assetsLink": "Catalogue d'actifs",
+    "glossaryLink": "Glossaire",
     "ecosystemCatalogLink": "Nos actifs propriétaires"
   },
   "cookie": {
