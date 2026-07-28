@@ -32,7 +32,8 @@ const SECTIONS = [
   {
     label: 'Acquisition',
     items: [
-      { href: '/admin/leads', label: 'Leads' },
+      { href: '/admin/leads',       label: 'Leads' },
+      { href: '/admin/newsletter',  label: 'Newsletter' },
     ],
   },
   {
