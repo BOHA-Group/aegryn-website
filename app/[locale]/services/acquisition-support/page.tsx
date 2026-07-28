@@ -94,8 +94,8 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           <div className="flex flex-col gap-12">
             {expertPhases.map((phase) => (
               <div key={phase.label}>
-                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-5 flex items-center gap-3">
-                  <span className="w-6 h-px bg-ag-apex/50 inline-block" />
+                <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-ag-apex font-semibold mb-5 flex items-center gap-3">
+                  <span className="w-6 h-px bg-ag-apex inline-block" />
                   {phase.label}
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
@@ -114,7 +114,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
       </section>
 
       {/* ── For whom ── */}
-      <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
             {t('forWhom.label')}
@@ -158,7 +158,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
       </section>
 
       {/* ── Differentiators ── */}
-      <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-14">
             {t('diff.label')}
@@ -208,7 +208,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
               <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">Important notice</p>
               <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
                 {t('fees.note')}{' '}
-                <Link href={t('fees.noteHref')} className="underline underline-offset-2 hover:text-ag-black transition-colors">
+                <Link href={t('fees.noteHref') as never} className="underline underline-offset-2 hover:text-ag-black transition-colors">
                   {t('fees.noteLink')}
                 </Link>.
               </p>
@@ -230,7 +230,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
             <p className="font-sans text-[14px] text-white/50 max-w-md mb-6">{t('cta.desc')}</p>
             <p className="font-sans text-[12px] text-white/40 max-w-md">
               {t('cta.partnerNote')}{' '}
-              <Link href={t('cta.partnerHref')} className="text-ag-apex/70 underline underline-offset-2 hover:text-ag-apex transition-colors">
+              <Link href={t('cta.partnerHref') as never} className="text-ag-apex/70 underline underline-offset-2 hover:text-ag-apex transition-colors">
                 {t('cta.partnerCta')}
               </Link>
             </p>

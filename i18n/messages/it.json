@@ -868,7 +868,7 @@
     },
     "experts": {
       "label": "Competenze mobilitate",
-      "desc": "AEGRYN Advisory Tech interviene nelle dimensioni tecniche che definiscono la robustezza e la certificabilità di un asset digitale — prima, durante o indipendentemente da qualsiasi transazione.",
+      "desc": "AEGRYN Advisory Tech interviene nelle dimensioni tecniche che definiscono la robustezza e la certificabilità di un asset digitale: prima, durante o indipendentemente da qualsiasi transazione.",
       "items": [
         {
           "title": "Audit di sicurezza e Cybersecurity",
@@ -880,7 +880,7 @@
         },
         {
           "title": "DevSecOps & Qualità del software",
-          "desc": "CI/CD, copertura dei test, riduzione del debito tecnico, automazione QA, observability — log, monitoring, alert. Migliora direttamente il punteggio Code (dimensione C) del grade AEGRYN."
+          "desc": "CI/CD, copertura dei test, riduzione del debito tecnico, automazione QA, observability (log, monitoring, alert). Migliora direttamente il punteggio Code (dimensione C) del grade AEGRYN."
         },
         {
           "title": "Dati e Intelligenza Artificiale",
@@ -970,7 +970,7 @@
     },
     "label": "Servizi — Consulenza transazionale",
     "title": "La vostra acquisizione.\nStrutturata per chiudere.",
-    "desc": "Quando l'acquisizione di un asset certificato richiede una strutturazione finanziaria, legale o fiscale specifica — AEGRYN mobilita gli esperti adatti al vostro profilo e alla natura del deal.",
+    "desc": "Quando l'acquisizione di un asset certificato richiede una strutturazione finanziaria, legale o fiscale specifica, AEGRYN mobilita gli esperti adatti al vostro profilo e alla natura del deal.",
     "ctaPrimary": "Discutere la mia acquisizione",
     "ctaDiscover": "Leggere le nostre analisi",
     "advisorNote": "Un consulente AEGRYN è assegnato al suo fascicolo dal primo contatto alla chiusura. Una persona. Linea diretta.",
@@ -1080,7 +1080,7 @@
         },
         {
           "title": "Primi acquirenti",
-          "desc": "Realizzate la vostra prima acquisizione tech e avete bisogno di un accompagnamento completo — valutazione, due diligence, negoziazione, strutturazione del finanziamento. AEGRYN vi guida dalla prima conversazione al trasferimento."
+          "desc": "Realizzate la vostra prima acquisizione tech e avete bisogno di un accompagnamento completo: valutazione, due diligence, negoziazione, strutturazione del finanziamento. AEGRYN vi guida dalla prima conversazione al trasferimento."
         }
       ]
     },
@@ -1161,7 +1161,7 @@
         {
           "phase": "Disponibile su richiesta",
           "title": "Vendor Readiness",
-          "desc": "Preparazione completa del dossier venditore prima della presentazione al Grade — audit contrattuale, revisione HR, strutturazione della data room. Riduce il tempo di certificazione del 30-50%.",
+          "desc": "Preparazione completa del dossier venditore prima della presentazione al Grade: audit contrattuale, revisione HR, strutturazione della data room. Riduce il tempo di certificazione del 30-50%.",
           "status": "available_on_request"
         },
         {

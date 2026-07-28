@@ -49,8 +49,9 @@ ${data.message}
     })
 
     if (!res.ok) {
-      console.error('[contact] Resend error', await res.text())
-      return NextResponse.json({ error: 'send_failed' }, { status: 500 })
+      const errBody = await res.text()
+      console.error('[contact] Resend error', res.status, errBody)
+      return NextResponse.json({ error: 'send_failed', detail: errBody }, { status: 500 })
     }
 
     return NextResponse.json({ ok: true })

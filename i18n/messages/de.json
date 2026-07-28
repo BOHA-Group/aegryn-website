@@ -868,7 +868,7 @@
     },
     "experts": {
       "label": "Eingesetzte Expertise",
-      "desc": "AEGRYN Advisory Tech interveniert in den technischen Dimensionen, die die Robustheit und Zertifizierbarkeit eines digitalen Assets definieren — vor, während oder unabhängig von einer Transaktion.",
+      "desc": "AEGRYN Advisory Tech interveniert in den technischen Dimensionen, die die Robustheit und Zertifizierbarkeit eines digitalen Assets definieren: vor, während oder unabhängig von einer Transaktion.",
       "items": [
         {
           "title": "Sicherheitsaudit & Cybersicherheit",
@@ -880,7 +880,7 @@
         },
         {
           "title": "DevSecOps & Softwarequalität",
-          "desc": "CI/CD, Testabdeckung, Abbau technischer Schulden, QA-Automatisierung, Observability — Logs, Monitoring, Alerts. Verbessert direkt den Code-Score (Dimension C) des AEGRYN-Grades."
+          "desc": "CI/CD, Testabdeckung, Abbau technischer Schulden, QA-Automatisierung, Observability (Logs, Monitoring, Alerts). Verbessert direkt den Code-Score (Dimension C) des AEGRYN-Grades."
         },
         {
           "title": "Daten & Künstliche Intelligenz",
@@ -1161,7 +1161,7 @@
         {
           "phase": "Auf Anfrage verfügbar",
           "title": "Vendor Readiness",
-          "desc": "Vollständige Vorbereitung der Verkäuferakte vor Grade-Einreichung — Vertragsaudit, HR-Prüfung, Data-Room-Strukturierung. Reduziert den Zertifizierungszeitraum um 30 bis 50%.",
+          "desc": "Vollständige Vorbereitung der Verkäuferakte vor Grade-Einreichung: Vertragsaudit, HR-Prüfung, Data-Room-Strukturierung. Reduziert den Zertifizierungszeitraum um 30 bis 50%.",
           "status": "available_on_request"
         },
         {

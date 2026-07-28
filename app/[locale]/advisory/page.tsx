@@ -80,7 +80,7 @@ export default async function AdvisoryPage({ params }: Props) {
       </section>
 
       {/* Who is it for */}
-      <section className="border-b border-ag-border bg-ag-off-white">
+      <section className="border-b border-ag-border bg-ag-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex items-center border-b border-ag-border py-4">
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
@@ -140,7 +140,7 @@ export default async function AdvisoryPage({ params }: Props) {
       </section>
 
       {/* Valuation CTA */}
-      <section className="border-b border-ag-border bg-ag-off-white">
+      <section className="border-b border-ag-border bg-ag-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">

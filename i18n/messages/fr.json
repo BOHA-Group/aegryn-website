@@ -868,7 +868,7 @@
     },
     "experts": {
       "label": "Expertises mobilisées",
-      "desc": "AEGRYN Advisory Tech intervient sur les dimensions techniques qui définissent la robustesse et la certifiabilité d'un actif numérique — avant, pendant ou indépendamment de toute transaction.",
+      "desc": "AEGRYN Advisory Tech intervient sur les dimensions techniques qui définissent la robustesse et la certifiabilité d'un actif numérique : avant, pendant ou indépendamment de toute transaction.",
       "items": [
         {
           "title": "Audit de sécurité & Cybersécurité",
@@ -880,7 +880,7 @@
         },
         {
           "title": "DevSecOps & Qualité logicielle",
-          "desc": "CI/CD, couverture de tests, réduction de la dette technique, automatisation QA, observabilité — logs, monitoring, alertes. Améliore directement le score Code (dimension C) du grade AEGRYN."
+          "desc": "CI/CD, couverture de tests, réduction de la dette technique, automatisation QA, observabilité (logs, monitoring, alertes). Améliore directement le score Code (dimension C) du grade AEGRYN."
         },
         {
           "title": "Data & Intelligence Artificielle",
@@ -1091,7 +1091,7 @@
     },
     "label": "Services — Conseil Transaction",
     "title": "Votre acquisition.\nStructurée pour aboutir.",
-    "desc": "Lorsque l'acquisition d'un actif certifié nécessite une structuration financière, juridique ou fiscale spécifique — AEGRYN mobilise les experts adaptés à votre profil et à la nature du deal.",
+    "desc": "Lorsque l'acquisition d'un actif certifié nécessite une structuration financière, juridique ou fiscale spécifique, AEGRYN mobilise les experts adaptés à votre profil et à la nature du deal.",
     "ctaPrimary": "Discuter de mon acquisition",
     "ctaDiscover": "Lire nos analyses",
     "advisorNote": "Un conseiller AEGRYN est assigné à votre dossier du premier contact au closing. Une seule personne. Ligne directe.",
@@ -1151,7 +1151,7 @@
             {
               "num": "08",
               "title": "Fiscalité & Structuration corporate",
-              "desc": "Optimisation de l'exit côté vendeur, structuration de l'acquisition côté acquéreur — holding, SPV, Luxembourg, Suisse, France. Apport-cession et report d'imposition."
+              "desc": "Optimisation de l'exit côté vendeur, structuration de l'acquisition côté acquéreur : holding, SPV, Luxembourg, Suisse, France. Apport-cession et report d'imposition."
             },
             {
               "num": "09",
@@ -1201,7 +1201,7 @@
         },
         {
           "title": "Primo-acquéreurs",
-          "desc": "Vous réalisez votre première acquisition tech et avez besoin d'un accompagnement complet — valorisation, due diligence, négociation, structuration du financement. AEGRYN vous guide de la première conversation au transfert."
+          "desc": "Vous réalisez votre première acquisition tech et avez besoin d'un accompagnement complet : valorisation, due diligence, négociation, structuration du financement. AEGRYN vous guide de la première conversation au transfert."
         }
       ]
     },

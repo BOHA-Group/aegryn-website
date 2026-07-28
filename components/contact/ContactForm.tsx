@@ -10,8 +10,9 @@ const MSG_LIMIT  = 250
 
 export default function ContactForm({ locale }: Props) {
   const t = useTranslations('contact.form')
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
-  const [msgLen, setMsgLen] = useState(0)
+  const [status, setStatus]   = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [msgLen, setMsgLen]   = useState(0)
+  const [errorCode, setErrorCode] = useState<string | null>(null)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -25,11 +26,17 @@ export default function ContactForm({ locale }: Props) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...data, locale }),
       })
-      if (!res.ok) throw new Error()
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}))
+        setErrorCode(body?.error ?? 'send_failed')
+        setStatus('error')
+        return
+      }
       setStatus('sent')
       setMsgLen(0)
       form.reset()
     } catch {
+      setErrorCode('network')
       setStatus('error')
     }
   }
@@ -132,7 +139,18 @@ export default function ContactForm({ locale }: Props) {
       </div>
 
       {status === 'error' && (
-        <p className="font-sans font-semibold text-xs text-red-400">{t('error')}</p>
+        <p className="font-sans text-xs text-red-400">
+          {t('error')}{' '}
+          <a
+            href="mailto:contact@aegryn.com"
+            className="underline underline-offset-2 hover:text-red-300 transition-colors"
+          >
+            contact@aegryn.com
+          </a>
+          {errorCode && process.env.NODE_ENV === 'development' && (
+            <span className="ml-2 opacity-50">({errorCode})</span>
+          )}
+        </p>
       )}
 
       <button

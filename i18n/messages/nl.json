@@ -868,7 +868,7 @@
     },
     "experts": {
       "label": "Ingezette expertise",
-      "desc": "AEGRYN Advisory Tech grijpt in op de technische dimensies die de robuustheid en certificeerbaarheid van een digitaal actief bepalen — voor, tijdens of onafhankelijk van een transactie.",
+      "desc": "AEGRYN Advisory Tech grijpt in op de technische dimensies die de robuustheid en certificeerbaarheid van een digitaal actief bepalen: voor, tijdens of onafhankelijk van een transactie.",
       "items": [
         {
           "title": "Beveiligingsaudit & Cybersecurity",
@@ -880,7 +880,7 @@
         },
         {
           "title": "DevSecOps & Softwarekwaliteit",
-          "desc": "CI/CD, testdekking, reductie van technische schuld, QA-automatisering, observability — logs, monitoring, alerts. Verbetert rechtstreeks de Code-score (dimensie C) van de AEGRYN-grade."
+          "desc": "CI/CD, testdekking, reductie van technische schuld, QA-automatisering, observability (logs, monitoring, alerts). Verbetert rechtstreeks de Code-score (dimensie C) van de AEGRYN-grade."
         },
         {
           "title": "Data & Kunstmatige Intelligentie",
@@ -1161,7 +1161,7 @@
         {
           "phase": "Beschikbaar op aanvraag",
           "title": "Vendor Readiness",
-          "desc": "Volledige voorbereiding van het verkopersdossier vóór Grade-indiening — contractaudit, HR-beoordeling, data room-structurering. Verkort de certificeringstijd met 30 tot 50%.",
+          "desc": "Volledige voorbereiding van het verkopersdossier vóór Grade-indiening: contractaudit, HR-beoordeling, data room-structurering. Verkort de certificeringstijd met 30 tot 50%.",
           "status": "available_on_request"
         },
         {

@@ -868,7 +868,7 @@
     },
     "experts": {
       "label": "Expertise mobilised",
-      "desc": "AEGRYN Advisory Tech intervenes on the technical dimensions that define the robustness and certifiability of a digital asset — before, during, or independently of any transaction.",
+      "desc": "AEGRYN Advisory Tech intervenes on the technical dimensions that define the robustness and certifiability of a digital asset: before, during, or independently of any transaction.",
       "items": [
         {
           "title": "Security Audit & Cybersecurity",
@@ -880,7 +880,7 @@
         },
         {
           "title": "DevSecOps & Software Quality",
-          "desc": "CI/CD, test coverage, technical debt reduction, QA automation, observability — logs, monitoring, alerts. Directly improves the Code score (dimension C) of the AEGRYN grade."
+          "desc": "CI/CD, test coverage, technical debt reduction, QA automation, observability (logs, monitoring, alerts). Directly improves the Code score (dimension C) of the AEGRYN grade."
         },
         {
           "title": "Data & Artificial Intelligence",
@@ -1091,7 +1091,7 @@
     },
     "label": "Services — Transaction Advisory",
     "title": "Your acquisition.\nStructured to close.",
-    "desc": "When acquiring a certified asset requires specific financial, legal or tax structuring — AEGRYN mobilises the right experts for your profile and the nature of the deal.",
+    "desc": "When acquiring a certified asset requires specific financial, legal or tax structuring, AEGRYN mobilises the right experts for your profile and the nature of the deal.",
     "ctaPrimary": "Discuss my acquisition",
     "ctaDiscover": "Read our analyses",
     "advisorNote": "An AEGRYN advisor is assigned to your file from first contact to closing. One person. Direct line.",
@@ -1151,7 +1151,7 @@
             {
               "num": "08",
               "title": "Tax & Corporate Structuring",
-              "desc": "Exit optimisation for sellers, acquisition structuring for buyers — holding, SPV, Luxembourg, Switzerland, France. Contribution-exchange and tax deferral."
+              "desc": "Exit optimisation for sellers, acquisition structuring for buyers: holding, SPV, Luxembourg, Switzerland, France. Contribution-exchange and tax deferral."
             },
             {
               "num": "09",
@@ -1201,7 +1201,7 @@
         },
         {
           "title": "First-time acquirers",
-          "desc": "You are completing your first tech acquisition and need full support — valuation, due diligence, negotiation, financing structuring. AEGRYN guides you from the first conversation to transfer."
+          "desc": "You are completing your first tech acquisition and need full support: valuation, due diligence, negotiation, financing structuring. AEGRYN guides you from the first conversation to transfer."
         }
       ]
     },
