@@ -631,9 +631,9 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
               className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors">
               {t('result.ctaGrade')} <ArrowUpRight size={12} />
             </Link>
-            <Link href="/auction/assessment-days"
+            <Link href="/contact"
               className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:border-ag-black transition-colors">
-              {t('result.ctaAssessment')} <ArrowUpRight size={12} />
+              {t('result.ctaContact')} <ArrowUpRight size={12} />
             </Link>
           </div>
         )

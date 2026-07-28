@@ -3371,7 +3371,7 @@
       "ngNote": "Votre score actuel est en dessous du seuil de gradabilité. Un Assessment Day gratuit vous permettra d'identifier les 3 actions prioritaires.",
       "disclaimer": "Cette estimation est générée par un algorithme à partir de données que vous déclarez sans vérification. Elle ne constitue pas un Grade AEGRYN officiel. Le Grade AEGRYN n'est attribué qu'après audit réel par nos équipes d'analystes certifiés AEGRYN.",
       "ctaGrade": "Démarrer ma certification officielle",
-      "ctaAssessment": "Réserver un Assessment Day gratuit",
+      "ctaContact": "Prendre contact avec un advisor",
       "emailTitle": "Recevoir mon rapport détaillé par email.",
       "emailDesc": "Score détaillé par dimension, fourchette complète, et les 3 actions prioritaires pour améliorer votre grade.",
       "emailPlaceholder": "Email professionnel",
