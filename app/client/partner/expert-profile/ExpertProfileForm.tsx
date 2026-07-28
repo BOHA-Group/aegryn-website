@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import Image from 'next/image'
 import { CheckCircle2, Loader2, Upload } from 'lucide-react'
 
 const SPECIALTIES_OPTIONS = [
@@ -169,9 +170,9 @@ export default function ExpertProfileForm({ existing }: Props) {
       <div>
         <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">Photo de profil</p>
         <div className="flex items-center gap-5">
-          <div className="w-20 h-20 border border-gray-200 bg-gray-50 flex items-center justify-center overflow-hidden shrink-0">
+          <div className="relative w-20 h-20 border border-gray-200 bg-gray-50 flex items-center justify-center overflow-hidden shrink-0">
             {avatarUrl
-              ? <img src={avatarUrl} alt="avatar" className="w-full h-full object-cover" />
+              ? <Image src={avatarUrl} alt="avatar" fill className="object-cover" unoptimized />
               : <span className="font-mono text-[10px] text-gray-300">Photo</span>
             }
           </div>
