@@ -25,9 +25,9 @@ export function DiscoverStrip() {
   }, [])
 
   const articles = [
-    { title: t('article1Title'), cat: t('article1Cat'), href: '/blog/marche-ma-tech-europe-q3-2026' },
-    { title: t('article2Title'), cat: t('article2Cat'), href: '/blog/5-erreurs-valorisation-saas'  },
-    { title: t('article3Title'), cat: t('article3Cat'), href: '/blog/actif-tech-certifiable'       },
+    { title: t('article1Title'), cat: t('article1Cat'), href: '/blog' },
+    { title: t('article2Title'), cat: t('article2Cat'), href: '/blog' },
+    { title: t('article3Title'), cat: t('article3Cat'), href: '/blog' },
   ]
 
   return (

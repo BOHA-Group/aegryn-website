@@ -82,7 +82,10 @@ export function HeroMountain() {
       })
     }, sectionRef)
 
-    return () => { ctx.revert(); split.revert() }
+    return () => {
+      ctx.revert()
+      if (headingRef.current) split.revert()
+    }
   }, [])
 
   return (
@@ -158,7 +161,7 @@ export function HeroMountain() {
 
             <div ref={ctasRef} className="flex items-center gap-4 shrink-0">
               <Link
-                href="/auction"
+                href="/auction/catalog"
                 className="inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-3.5 hover:bg-ag-apex transition-colors duration-300"
               >
                 {t('cta')}

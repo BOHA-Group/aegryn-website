@@ -44,8 +44,12 @@ export default function LenisProvider({ children }: Props) {
     }
   }, [])
 
-  /* Reset scroll position on route change */
+  /* Reset scroll position on route change — kill stale ScrollTriggers first */
   useEffect(() => {
+    import('gsap/ScrollTrigger').then(({ ScrollTrigger }) => {
+      ScrollTrigger.getAll().forEach(st => st.kill())
+      ScrollTrigger.clearScrollMemory()
+    })
     if (lenisRef.current) {
       lenisRef.current.scrollTo(0, { immediate: true })
     }
