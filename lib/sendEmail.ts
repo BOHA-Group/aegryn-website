@@ -54,6 +54,53 @@ const FOOTER = `
   </td>
 </tr>`
 
+const FOOTER_NEWSLETTER = `
+<tr>
+  <td style="padding:24px 32px 20px;border-top:1px solid #e2e8f0;">
+    <p style="margin:0;font-size:11px;color:#94a3b8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+      <a href="https://aegryn.com" style="color:#5ADDA4;text-decoration:none;">aegryn.com</a>
+      &nbsp;·&nbsp;
+      <a href="https://aegryn.com/blog" style="color:#94a3b8;text-decoration:none;">Articles blog</a>
+    </p>
+  </td>
+</tr>`
+
+function WRAP_NEWSLETTER(body: string): string {
+  return `<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/></head>
+<body style="margin:0;padding:0;background:#f1f5f9;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;padding:32px 0;">
+    <tr>
+      <td align="center">
+        <table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #e2e8f0;max-width:560px;width:100%;">
+
+          <!-- Header logo -->
+          <tr>
+            <td style="padding:24px 32px 20px;border-bottom:1px solid #e2e8f0;">
+              <table cellpadding="0" cellspacing="0"><tr>
+                <td style="padding-right:12px;">${LOGO_SVG}</td>
+                <td>
+                  <p style="margin:0;font-size:18px;font-weight:700;color:#0F1C3F;letter-spacing:-0.02em;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">AEGRYN</p>
+                  <p style="margin:0;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#5ADDA4;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">Newsletter</p>
+                </td>
+              </tr></table>
+            </td>
+          </tr>
+
+          <!-- Corps -->
+          <tr><td style="padding:28px 32px;">
+            ${body}
+          </td></tr>
+
+          ${FOOTER_NEWSLETTER}
+        </table>
+      </td>
+    </tr>
+  </table>
+</body></html>`
+}
+
 function WRAP(body: string): string {
   return `<!DOCTYPE html>
 <html lang="fr">
@@ -87,7 +134,7 @@ function WRAP(body: string): string {
 
         <p style="font-size:10px;color:#94a3b8;margin:12px 0 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
           Cet email vous est adressé en tant que partenaire certifié AEGRYN.
-        </p>
+        </p><!-- /WRAP -->
       </td>
     </tr>
   </table>
@@ -273,7 +320,7 @@ export function emailNewsletterArticle(opts: {
   const isFr = lang === 'fr'
   const subject = `[AEGRYN] ${title}`
 
-  const html = WRAP(`
+  const html = WRAP_NEWSLETTER(`
     <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">${category}</p>
     <h1 style="margin:0 0 16px 0;font-size:22px;font-weight:700;color:#0F1C3F;line-height:1.25;">${title}</h1>
     <p style="margin:0 0 24px 0;font-size:14px;color:#475569;line-height:1.6;">${excerpt}</p>
