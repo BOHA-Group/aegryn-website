@@ -12,7 +12,7 @@ export async function sendEmail(
   tag?: string,
 ): Promise<void> {
   const key  = process.env.RESEND_API_KEY
-  const from = process.env.RESEND_FROM ?? 'contact@boha-group.com'
+  const from = process.env.RESEND_FROM ?? 'no-reply@boha-group.com'
   const name = process.env.RESEND_FROM_NAME ?? 'AEGRYN'
   if (!key) {
     console.warn(`[sendEmail] RESEND_API_KEY manquant — skip email to ${to}`)

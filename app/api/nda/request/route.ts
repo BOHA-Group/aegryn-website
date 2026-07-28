@@ -19,7 +19,7 @@ const schema = z.object({
 
 async function sendEmail(to: string, subject: string, text: string) {
   const key  = process.env.RESEND_API_KEY
-  const from = process.env.RESEND_FROM ?? 'contact@boha-group.com'
+  const from = process.env.RESEND_FROM ?? 'no-reply@boha-group.com'
   const name = process.env.RESEND_FROM_NAME ?? 'AEGRYN'
   if (!key) return
   const res = await fetch('https://api.resend.com/emails', {

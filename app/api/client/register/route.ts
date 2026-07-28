@@ -53,7 +53,7 @@ export async function POST(req: NextRequest) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${resendKey}` },
       body: JSON.stringify({
-        from: `AEGRYN <${process.env.RESEND_FROM ?? 'contact@boha-group.com'}>`,
+        from: `AEGRYN <${process.env.RESEND_FROM ?? 'no-reply@boha-group.com'}>`,
         reply_to: process.env.RESEND_REPLY_TO ?? 'contact@boha-group.com',
         to: [normalizedEmail],
         subject: 'Bienvenue dans l\'espace client AEGRYN',
@@ -81,7 +81,7 @@ export async function POST(req: NextRequest) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${resendKey}` },
       body: JSON.stringify({
-        from: `AEGRYN <${process.env.RESEND_FROM ?? 'contact@boha-group.com'}>`,
+        from: `AEGRYN <${process.env.RESEND_FROM ?? 'no-reply@boha-group.com'}>`,
         to: [adminEmail],
         subject: `[AEGRYN] Nouveau compte ${roleLabel[role] ?? role} — ${fullName}`,
         html: `<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:480px;margin:0 auto;background:#ffffff;border:1px solid #e5e7eb;">
