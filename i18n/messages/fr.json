@@ -2856,17 +2856,17 @@
       "evalTypeTitle": "Quel niveau d'évaluation souhaitez-vous ?",
       "evalTypeFull": {
         "label": "Certification Auction",
-        "desc": "Rémunération à la transaction uniquement. Processus complet par protocole indépendant AEGRYN (4 dimensions C/I/F/S), 3–4 semaines, inclus si la cession se réalise via AEGRYN Auction.",
+        "desc": "Rémunération à la transaction uniquement. Processus complet par protocole indépendant AEGRYN (4 dimensions C/I/F/S), inclus si la cession se réalise via AEGRYN Auction.",
         "price": "Gratuit"
       },
       "evalTypeReview": {
         "label": "AEGRYN Review",
-        "desc": "Avis écrit d'un analyste AEGRYN sous 5 jours ouvrés. Sans revue partenaire externe. Non publiable au catalogue, sans validation externe.",
+        "desc": "Avis écrit d'un analyste AEGRYN sous 15 jours ouvrés. Sans revue partenaire externe. Non publiable au catalogue, sans validation externe.",
         "price": "2 000 € HT"
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
-        "desc": "Avis écrit + revue d'un partenaire externe (cabinet juridique ou expert-comptable) sous 10 jours ouvrés. Référence croisée avec nos partenaires Alliance.",
+        "desc": "Avis écrit + revue d'un partenaire externe (cabinet juridique ou expert-comptable) à la demande sous 20 jours ouvrés. Référence croisée avec nos partenaires Alliance.",
         "price": "5 000 € HT"
       },
       "evalDeductibleNote": "Ce montant est intégralement déductible du coût de certification si vous engagez un processus complet vers l'Auction dans les 6 mois suivant la remise de votre Review.",
@@ -3470,7 +3470,6 @@
       "askPriceCurrency": "Devise",
       "askPriceCurrencyEur": "EUR (€)",
       "askPriceCurrencyChf": "CHF (Fr.)",
-      "askPriceCurrencyUsd": "USD ($)",
       "askPricePlaceholder": "ex. 1 200 000",
       "ipFiled": "Propriété intellectuelle déposée",
       "ipYes": "Oui",
