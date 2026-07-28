@@ -70,7 +70,7 @@ export async function PATCH(req: NextRequest) {
     if (status === 'approved') {
       const { data: app } = await supa
         .from('expert_applications')
-        .select('email')
+        .select('email, prenom, nom')
         .eq('id', id)
         .single()
 
@@ -82,6 +82,7 @@ export async function PATCH(req: NextRequest) {
           .maybeSingle()
 
         if (userRow) {
+          /* Compte existant → ajouter le rôle expert */
           const currentRoles: string[] = Array.isArray(userRow.roles) ? userRow.roles : []
           if (!currentRoles.includes('expert')) {
             await supa
@@ -89,6 +90,20 @@ export async function PATCH(req: NextRequest) {
               .update({ roles: [...currentRoles, 'expert'] })
               .eq('id', userRow.id)
           }
+        } else {
+          /* Pas de compte → envoyer une invitation magic link → /client/partner */
+          const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'
+          const { error: inviteError } = await supa.auth.admin.inviteUserByEmail(
+            app.email,
+            {
+              redirectTo: `${siteUrl}/api/auth/callback?next=/client/set-password`,
+              data: {
+                full_name: [app.prenom, app.nom].filter(Boolean).join(' '),
+                role:      'partner',
+              },
+            }
+          )
+          if (inviteError) console.error('[experts/approve] invite:', inviteError)
         }
       }
     }

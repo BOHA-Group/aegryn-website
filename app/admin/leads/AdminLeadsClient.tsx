@@ -69,18 +69,42 @@ function ValuationTable({ rows }: { rows: Record<string, unknown>[] }) {
   )
 }
 
-function InviteButton({ id, email, adminToken }: { id: string; email: string; adminToken?: string }) {
+function InviteButton({
+  id, email, adminToken, profileType, table,
+}: {
+  id: string
+  email: string
+  adminToken?: string
+  profileType?: string
+  table?: 'catalog_waitlist' | 'prospects' | 'auction_access_requests'
+}) {
   const router = useRouter()
   const [state, setState] = useState<'idle' | 'loading' | 'done' | 'error'>('idle')
 
+  /* Partenaire → pas de magic link, lien admin manuel */
+  if (profileType === 'partner') {
+    return (
+      <a
+        href={`/admin/members/new?email=${encodeURIComponent(email)}`}
+        className="px-3 py-1 text-[10px] font-semibold uppercase tracking-wide border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors whitespace-nowrap"
+      >
+        Créer membre
+      </a>
+    )
+  }
+
+  const role = profileType === 'seller' ? 'seller' : 'buyer'
+  const waitlistField = table === 'prospects' ? 'prospectId' : 'waitlistId'
+
   async function onInvite() {
-    if (!confirm(`Créer un compte acquéreur pour ${email} et envoyer l'invitation par email ?`)) return
+    const roleLabel = role === 'seller' ? 'cédant' : 'acquéreur'
+    if (!confirm(`Créer un compte ${roleLabel} pour ${email} et envoyer l'invitation par email ?`)) return
     setState('loading')
     try {
       const res = await fetch('/api/client/invite', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, role: 'buyer', waitlistId: id, token: adminToken ?? '' }),
+        body: JSON.stringify({ email, role, [waitlistField]: id, token: adminToken ?? '' }),
       })
       if (res.ok) {
         setState('done')
@@ -179,9 +203,9 @@ function ProspectsTable({ rows, adminToken }: { rows: Record<string, unknown>[];
             <Td>{r.marketing_consent ? '✓' : '—'}</Td>
             <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
             <Td>
-              {r.status === 'converted'
-                ? <span className="text-[10px] font-semibold text-emerald-600">Converti ✓</span>
-                : <InviteButton id={String(r.id)} email={String(r.email)} adminToken={adminToken} />}
+              {r.status === 'converted' || r.status === 'invited'
+                ? <span className="text-[10px] font-semibold text-emerald-600">{r.status === 'invited' ? 'Invité ✓' : 'Converti ✓'}</span>
+                : <InviteButton id={String(r.id)} email={String(r.email)} adminToken={adminToken} profileType={String(r.profile_type ?? '')} table="prospects" />}
             </Td>
           </tr>
         ))}
@@ -190,13 +214,50 @@ function ProspectsTable({ rows, adminToken }: { rows: Record<string, unknown>[];
   )
 }
 
-function AuctionAccessTable({ rows }: { rows: Record<string, unknown>[] }) {
+function ApproveAccessButton({ id, email, adminToken }: { id: string; email: string; adminToken?: string }) {
+  const router = useRouter()
+  const [state, setState] = useState<'idle' | 'loading' | 'done' | 'error'>('idle')
+
+  async function onApprove() {
+    if (!confirm(`Approuver l'accès catalogue pour ${email} et envoyer un lien d'accès ?`)) return
+    setState('loading')
+    try {
+      const res = await fetch('/api/client/invite', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, role: 'buyer', accessRequestId: id, token: adminToken ?? '' }),
+      })
+      if (res.ok) {
+        setState('done')
+        router.refresh()
+      } else {
+        setState('error')
+      }
+    } catch {
+      setState('error')
+    }
+  }
+
+  if (state === 'done') return <span className="text-[10px] font-semibold text-emerald-600">Approuvé ✓</span>
+
+  return (
+    <button
+      onClick={onApprove}
+      disabled={state === 'loading'}
+      className="px-3 py-1 text-[10px] font-semibold uppercase tracking-wide border border-emerald-700 text-emerald-700 hover:bg-emerald-700 hover:text-white transition-colors disabled:opacity-50 whitespace-nowrap"
+    >
+      {state === 'loading' ? '...' : state === 'error' ? 'Réessayer' : 'Approuver'}
+    </button>
+  )
+}
+
+function AuctionAccessTable({ rows, adminToken }: { rows: Record<string, unknown>[]; adminToken?: string }) {
   if (!rows.length) return <EmptyState />
   const BUYER_LABELS: Record<string, string> = { pe: 'PE/VC', strategic: 'Stratégique', family_office: 'Family Office', individual: 'Particulier' }
   return (
     <table className="w-full text-[12px] bg-white border border-gray-200">
       <thead className="bg-gray-50 border-b border-gray-200">
-        <tr>{['Date','Nom','Email','Société','Profil','Capacité','Message','Statut'].map(h => <Th key={h}>{h}</Th>)}</tr>
+        <tr>{['Date','Nom','Email','Société','Profil','Capacité','Message','Statut','Action'].map(h => <Th key={h}>{h}</Th>)}</tr>
       </thead>
       <tbody className="divide-y divide-gray-100">
         {rows.map((r, i) => (
@@ -209,6 +270,11 @@ function AuctionAccessTable({ rows }: { rows: Record<string, unknown>[] }) {
             <Td>{String(r.capacity ?? '—')}</Td>
             <Td small>{r.message ? String(r.message).slice(0, 60) + (String(r.message).length > 60 ? '…' : '') : '—'}</Td>
             <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
+            <Td>
+              {r.status === 'approved'
+                ? <span className="text-[10px] font-semibold text-emerald-600">Approuvé ✓</span>
+                : <ApproveAccessButton id={String(r.id)} email={String(r.email)} adminToken={adminToken} />}
+            </Td>
           </tr>
         ))}
       </tbody>
@@ -332,7 +398,7 @@ export default function AdminLeadsClient({
         {source === 'assessment'       && <AssessmentTable   rows={rows} />}
         {source === 'alliances'        && <AlliancesTable    rows={rows} />}
         {source === 'prospects'        && <ProspectsTable    rows={rows} adminToken={adminToken} />}
-        {source === 'auction_access'   && <AuctionAccessTable rows={rows} />}
+        {source === 'auction_access'   && <AuctionAccessTable rows={rows} adminToken={adminToken} />}
       </div>
     </div>
   )

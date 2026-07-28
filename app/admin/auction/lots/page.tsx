@@ -17,10 +17,10 @@ const GRADE_COLORS: Record<string, string> = {
 export default async function AuctionLotsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ status?: string }>
+  searchParams: Promise<{ status?: string; grade?: string }>
 }) {
   await requireAdmin()
-  const { status = 'all' } = await searchParams
+  const { status = 'all', grade = 'all' } = await searchParams
 
   const qs   = ''
   const supa = createServiceClient()
@@ -31,6 +31,7 @@ export default async function AuctionLotsPage({
     .order('session_opens_at', { ascending: false, nullsFirst: false })
 
   if (status !== 'all') q = q.eq('status', status)
+  if (grade  !== 'all') q = q.eq('grade', grade)
 
   const { data: lots } = await q as unknown as { data: Record<string, unknown>[] | null }
 
@@ -56,18 +57,35 @@ export default async function AuctionLotsPage({
         </div>
 
         {/* Filtres statut */}
-        <div className="flex gap-2 mb-6 flex-wrap">
+        <div className="flex gap-2 mb-3 flex-wrap">
           {['all', 'draft', 'published', 'archived', 'withdrawn'].map(s => (
             <Link
               key={s}
-              href={`/admin/auction/lots?status=${s}`}
+              href={`/admin/auction/lots?status=${s}&grade=${grade}`}
               className={`text-[11px] font-mono uppercase tracking-wider px-3 py-1.5 border transition-colors ${
                 status === s
                   ? 'bg-gray-900 text-white border-gray-900'
                   : 'bg-white text-gray-500 border-gray-200 hover:border-gray-400'
               }`}
             >
-              {s === 'all' ? 'Tous' : s}
+              {s === 'all' ? 'Tous statuts' : s}
+            </Link>
+          ))}
+        </div>
+
+        {/* Filtres grade */}
+        <div className="flex gap-2 mb-6 flex-wrap">
+          {[['all', 'Tous grades'], ['AAA', 'AAA'], ['AA', 'AA'], ['A', 'A'], ['B', 'B'], ['star', 'AEG ★']].map(([g, label]) => (
+            <Link
+              key={g}
+              href={`/admin/auction/lots?status=${status}&grade=${g}`}
+              className={`text-[11px] font-mono uppercase tracking-wider px-3 py-1.5 border transition-colors ${
+                grade === g
+                  ? 'bg-emerald-700 text-white border-emerald-700'
+                  : 'bg-white text-gray-500 border-gray-200 hover:border-gray-400'
+              }`}
+            >
+              {label}
             </Link>
           ))}
         </div>
