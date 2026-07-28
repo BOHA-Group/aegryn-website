@@ -19,6 +19,8 @@ const CSP = [
   "upgrade-insecure-requests",
 ].join('; ')
 
+const isProduction = process.env.VERCEL_ENV === 'production'
+
 const securityHeaders = [
   { key: 'X-DNS-Prefetch-Control',        value: 'on' },
   { key: 'X-Frame-Options',               value: 'SAMEORIGIN' },
@@ -28,7 +30,12 @@ const securityHeaders = [
   { key: 'Strict-Transport-Security',     value: 'max-age=63072000; includeSubDomains; preload' },
   { key: 'Permissions-Policy',            value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
   { key: 'Content-Security-Policy',       value: CSP },
-  { key: 'X-Robots-Tag',                  value: 'index, follow, max-image-preview:large, max-snippet:-1' },
+  {
+    key:   'X-Robots-Tag',
+    value: isProduction
+      ? 'index, follow, max-image-preview:large, max-snippet:-1'
+      : 'noindex, nofollow',
+  },
   { key: 'Cross-Origin-Opener-Policy',    value: 'same-origin-allow-popups' },
   { key: 'Cross-Origin-Resource-Policy',  value: 'same-origin' },
   { key: 'Cross-Origin-Embedder-Policy',  value: 'unsafe-none' },
