@@ -142,10 +142,10 @@ export default function ContactForm({ locale }: Props) {
         <p className="font-sans text-xs text-red-400">
           {t('error')}{' '}
           <a
-            href="mailto:contact@aegryn.com"
+            href="mailto:contact@boha-group.com"
             className="underline underline-offset-2 hover:text-red-300 transition-colors"
           >
-            contact@aegryn.com
+            contact@boha-group.com
           </a>
           {errorCode && process.env.NODE_ENV === 'development' && (
             <span className="ml-2 opacity-50">({errorCode})</span>

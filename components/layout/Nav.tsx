@@ -32,6 +32,7 @@ const SERVICES_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'servicesAdvisory',    href: '/advisory' },
   { labelKey: 'servicesAcquisition', href: '/services/acquisition-support' },
   { labelKey: 'servicesAlliances',   href: '/alliances' },
+  { labelKey: 'servicesExperts',     href: '/experts' },
 ]
 
 function DropdownMenu({ links, t }: { links: { labelKey: string; href: LinkHref }[]; t: ReturnType<typeof useTranslations> }) {

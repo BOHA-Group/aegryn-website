@@ -1542,7 +1542,7 @@
       "title": "Un protocole reproductible.\nPas une appréciation subjective.",
       "desc": "La méthodologie AEGRYN Grade est documentée, versionnée et auditée. Chaque analyste suit le même protocole.",
       "versionLabel": "Version du protocole",
-      "version": "AEGRYN Grade Protocol v2.1 — 2026",
+      "version": "AEGRYN Grade 2026",
       "principlesLabel": "Principes fondamentaux",
       "principles": [
         {
@@ -1599,7 +1599,7 @@
       "desc": "Le protocole AEGRYN Grade : grille CIFS, définitions des grades AEG ★ à AEG B, sous-codes, processus d'analyse et principes d'indépendance."
     },
     "label": "AEGRYN — Grading System",
-    "version": "Protocol v2.1 — 2026",
+    "version": "2026",
     "title": "AEGRYN\nGrading System.",
     "intro": "AEGRYN introduit son propre système de certification pour les actifs tech, avec une transparence totale sur les 4 dimensions fondamentales de la valeur.",
     "downloadLabel": "Documentation complète",

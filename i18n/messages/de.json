@@ -1203,7 +1203,7 @@
       "desc": "Das AEGRYN Grade-Protokoll: CIFS-Rahmen, AEG ★ bis B Definitionen, Untercodes, Analyseprozess und Unabhängigkeitsprinzipien."
     },
     "label": "AEGRYN — Grading System",
-    "version": "Protocol v2.1 — 2026",
+    "version": "2026",
     "title": "AEGRYN\nGrading System.",
     "intro": "AEGRYN führt sein eigenes Zertifizierungssystem für Tech-Assets ein — mit voller Transparenz über die 4 grundlegenden Wertdimensionen.",
     "downloadLabel": "Vollständige Dokumentation",
@@ -2174,7 +2174,7 @@
       "title": "Ein reproduzierbares Protokoll.\nKeine subjektive Meinung.",
       "desc": "Die AEGRYN Grade-Methodik ist dokumentiert, versioniert und auditiert.",
       "versionLabel": "Protokollversion",
-      "version": "AEGRYN Grade Protocol v2.1 — 2026",
+      "version": "AEGRYN Grade 2026",
       "principlesLabel": "Grundprinzipien",
       "principles": [
         {

@@ -4,7 +4,7 @@ import { captureLead }              from '@/lib/leadCapture'
 
 const schema = z.object({
   organization_name: z.string().min(2).max(150),
-  alliance_type:     z.enum(['certification', 'sequestre', 'dealflow', 'technique', 'assurance', 'other']),
+  alliance_type:     z.enum(['advisory_tech', 'advisory_transaction', 'certification', 'sequestre', 'dealflow', 'technique', 'assurance', 'other']),
   structure_type:    z.string().max(100).optional(),
   country:           z.string().max(100).optional(),
   description:       z.string().max(2000).optional(),
