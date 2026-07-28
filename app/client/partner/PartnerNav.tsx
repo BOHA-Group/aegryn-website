@@ -19,6 +19,7 @@ export default async function PartnerNav({ unreadCount }: { unreadCount: number 
         { href: '/client/partner/introductions',  label: t('navIntroductions'),       icon: 'Users' },
         { href: '/client/partner/mandates',       label: t('navMandates'),            icon: 'Briefcase' },
         { href: '/client/partner/subscription',   label: t('navPartnerSubscription'), icon: 'CreditCard' },
+        { href: '/client/partner/expert-profile', label: t('navExpertProfile'),        icon: 'BadgeCheck' },
       ],
     },
     {

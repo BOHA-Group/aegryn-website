@@ -5,14 +5,14 @@ import { usePathname } from 'next/navigation'
 import {
   LayoutDashboard, BookOpen, Gavel, ArrowRightLeft, Receipt,
   ShieldCheck, Bell, UserCircle, Settings, FileText,
-  Award, Users, DollarSign, Briefcase,
+  Award, Users, DollarSign, Briefcase, BadgeCheck, CreditCard,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 const ICON_MAP: Record<string, LucideIcon> = {
   LayoutDashboard, BookOpen, Gavel, ArrowRightLeft, Receipt,
   ShieldCheck, Bell, UserCircle, Settings, FileText,
-  Award, Users, DollarSign, Briefcase,
+  Award, Users, DollarSign, Briefcase, BadgeCheck, CreditCard,
 }
 
 export type NavItem = {

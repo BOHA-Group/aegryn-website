@@ -17,6 +17,7 @@ const updateSchema = z.object({
   website:       z.string().url().optional().or(z.literal('')),
   min_rate_eur:  z.number().int().min(0).max(99999).optional().nullable(),
   languages:     z.array(z.string().max(30)).max(10).optional(),
+  avatar_url:    z.string().url().optional().nullable(),
 })
 
 export async function GET() {
