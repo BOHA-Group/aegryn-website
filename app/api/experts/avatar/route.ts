@@ -19,6 +19,18 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'file_too_large' }, { status: 413 })
 
   const supa  = createServiceClient()
+
+  /* Guard rôle partner */
+  const { data: profile } = await supa
+    .from('profiles')
+    .select('roles')
+    .eq('id', user.id)
+    .single() as { data: { roles: string[] | null } | null }
+  const roles = profile?.roles ?? []
+  if (!roles.includes('partner')) {
+    return NextResponse.json({ error: 'R\u00f4le partenaire requis.' }, { status: 403 })
+  }
+
   const ext   = file.type === 'image/png' ? 'png' : file.type === 'image/webp' ? 'webp' : 'jpg'
   const path  = `avatars/${user.id}.${ext}`
   const buffer = Buffer.from(await file.arrayBuffer())

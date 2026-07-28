@@ -47,10 +47,25 @@ export async function checkAdminAccess(token?: string): Promise<void> {
   }
 }
 
-/** Retourne l'user admin connecté ou null (sans redirection) */
+/** Retourne l'user admin connecté ou null (sans redirection — utilisable dans API routes) */
 export async function getAdminUser() {
   try {
-    return await requireAdmin()
+    const client = await createAuthClient()
+    const { data: { user } } = await client.auth.getUser()
+    if (!user) return null
+
+    if (user.app_metadata?.role === 'admin') return user
+
+    const supa = createServiceClient()
+    const { data: profile } = await supa
+      .from('profiles')
+      .select('roles')
+      .eq('id', user.id)
+      .single()
+
+    const roles = (profile?.roles ?? []) as string[]
+    if (roles.includes('admin') || roles.includes('super_admin')) return user
+    return null
   } catch {
     return null
   }

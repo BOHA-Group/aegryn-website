@@ -35,9 +35,33 @@ export async function GET() {
   return NextResponse.json({ profile: data })
 }
 
+async function requirePartnerWithPrereqs(userId: string) {
+  const supa = createServiceClient()
+  const { data: profile } = await supa
+    .from('profiles')
+    .select('roles, kyc_status, expert_plan')
+    .eq('id', userId)
+    .single() as { data: { roles: string[] | null; kyc_status: string | null; expert_plan: string | null } | null }
+
+  const roles = profile?.roles ?? []
+  if (!roles.includes('partner')) {
+    return { error: NextResponse.json({ error: 'Rôle partenaire requis.' }, { status: 403 }) }
+  }
+  if (profile?.kyc_status !== 'approved') {
+    return { error: NextResponse.json({ error: 'KYC non approuvé.' }, { status: 403 }) }
+  }
+  if (profile?.expert_plan !== 'active') {
+    return { error: NextResponse.json({ error: 'Abonnement expert inactif.' }, { status: 403 }) }
+  }
+  return { error: null }
+}
+
 export async function POST(req: NextRequest) {
   const user = await getUser()
   if (!user) return NextResponse.json({ error: 'unauthenticated' }, { status: 401 })
+
+  const { error: guardErr } = await requirePartnerWithPrereqs(user.id)
+  if (guardErr) return guardErr
 
   const supa = createServiceClient()
 
@@ -73,6 +97,9 @@ export async function POST(req: NextRequest) {
 export async function PATCH(req: NextRequest) {
   const user = await getUser()
   if (!user) return NextResponse.json({ error: 'unauthenticated' }, { status: 401 })
+
+  const { error: guardErr } = await requirePartnerWithPrereqs(user.id)
+  if (guardErr) return guardErr
 
   const supa = createServiceClient()
 
