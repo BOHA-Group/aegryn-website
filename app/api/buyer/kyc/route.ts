@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
+import { sendEmail, emailKycDocSubmitted } from '@/lib/sendEmail'
 
 const ALLOWED_TYPES = ['id_card', 'proof_of_address', 'proof_of_funds', 'kbis', 'articles_of_association', 'director_id', 'delegation', 'ubo', 'regulatory_approval', 'asset_ownership', 'professional_insurance']
 const MAX_SIZE_BYTES = 10 * 1024 * 1024
@@ -51,6 +52,29 @@ export async function POST(req: NextRequest) {
     console.error('[buyer/kyc] insert error:', insertError)
     return NextResponse.json({ error: 'Failed to record document' }, { status: 500 })
   }
+
+  /* Notification admin */
+  const { data: profile } = await supa
+    .from('profiles')
+    .select('full_name')
+    .eq('id', user.id)
+    .single()
+
+  const DOC_LABELS: Record<string, string> = {
+    id_card: 'Pièce d\'identité', proof_of_address: 'Justificatif de domicile',
+    proof_of_funds: 'Justificatif de capacité financière', kbis: 'Extrait KBIS / RC',
+    articles_of_association: 'Statuts', director_id: 'Identité co-dirigeants',
+    delegation: 'Délégation de signature', ubo: 'UBO — Bénéficiaire effectif',
+    regulatory_approval: 'Agrément régulateur', asset_ownership: 'Justificatif de propriété',
+    professional_insurance: 'RC Pro / Assurance',
+  }
+  const adminEmail = process.env.ADMIN_KYC_EMAIL ?? process.env.RESEND_REPLY_TO ?? 'contact@boha-group.com'
+  const { subject, html } = emailKycDocSubmitted({
+    memberName: profile?.full_name ?? user.email ?? user.id,
+    memberId:   user.id,
+    docLabel:   DOC_LABELS[docType] ?? docType,
+  })
+  await sendEmail(adminEmail, subject, html, 'kyc-admin')
 
   return NextResponse.json({ id: doc.id }, { status: 201 })
 }

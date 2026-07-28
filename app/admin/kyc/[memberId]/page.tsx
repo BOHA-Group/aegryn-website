@@ -4,6 +4,7 @@ import { redirect }            from 'next/navigation'
 import type { Metadata }       from 'next'
 import Link                    from 'next/link'
 import SignedDocLink            from './SignedDocLink'
+import { sendEmail, emailKycDocDecision } from '@/lib/sendEmail'
 
 export const metadata: Metadata = {
   title: 'Dossier KYC — AEGRYN Admin',
@@ -52,6 +53,27 @@ export default async function AdminKycMemberPage({
     }
     if (params.status === 'rejected' && params.reason) update.rejection_reason = params.reason
     await supa.from('kyc_documents').update(update).eq('id', params.docId)
+
+    /* Email au membre */
+    if (params.status === 'validated' || params.status === 'rejected') {
+      const [{ data: docRow }, { data: memberProfile }] = await Promise.all([
+        supa.from('kyc_documents').select('doc_type').eq('id', params.docId).single(),
+        supa.from('profiles').select('full_name').eq('id', memberId).single(),
+      ])
+      const memberAuthData = await supa.auth.admin.getUserById(memberId)
+      const memberEmail = memberAuthData.data.user?.email
+      if (memberEmail) {
+        const docLabel = DOC_LABELS[String(docRow?.doc_type ?? '')] ?? String(docRow?.doc_type ?? '')
+        const { subject, html } = emailKycDocDecision({
+          memberName:      memberProfile?.full_name ?? memberEmail,
+          docLabel,
+          status:          params.status as 'validated' | 'rejected',
+          rejectionReason: params.reason,
+        })
+        await sendEmail(memberEmail, subject, html, 'kyc-member')
+      }
+    }
+
     redirect(`/admin/kyc/${memberId}${tokenQs}`)
   }
 
