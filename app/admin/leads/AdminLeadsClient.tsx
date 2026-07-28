@@ -4,10 +4,12 @@ import { useRouter, useSearchParams, usePathname } from 'next/navigation'
 import { useCallback, useState } from 'react'
 
 const SOURCES = [
-  { key: 'valuation',  label: 'Valuation'    },
-  { key: 'catalog',    label: 'Catalogue'    },
-  { key: 'assessment', label: 'Assessment Day' },
-  { key: 'alliances',  label: 'Alliances'    },
+  { key: 'valuation',      label: 'Valuation'       },
+  { key: 'catalog',        label: 'Catalogue'       },
+  { key: 'assessment',     label: 'Assessment Day'  },
+  { key: 'alliances',      label: 'Alliances'       },
+  { key: 'prospects',      label: 'Waitlist Session'},
+  { key: 'auction_access', label: 'Accès Catalogue' },
 ] as const
 
 const GRADES   = ['all', '★', 'AAA', 'AA', 'A', 'B', 'NG'] as const
@@ -157,6 +159,63 @@ function AssessmentTable({ rows }: { rows: Record<string, unknown>[] }) {
   )
 }
 
+function ProspectsTable({ rows, adminToken }: { rows: Record<string, unknown>[]; adminToken?: string }) {
+  if (!rows.length) return <EmptyState />
+  const PROFILE_LABELS: Record<string, string> = { buyer: 'Acquéreur', seller: 'Cédant', partner: 'Partenaire', undecided: 'Non défini' }
+  return (
+    <table className="w-full text-[12px] bg-white border border-gray-200">
+      <thead className="bg-gray-50 border-b border-gray-200">
+        <tr>{['Date','Nom','Email','Profil','Ticket','Secteurs','Marketing','Statut','Action'].map(h => <Th key={h}>{h}</Th>)}</tr>
+      </thead>
+      <tbody className="divide-y divide-gray-100">
+        {rows.map((r, i) => (
+          <tr key={i} className="hover:bg-gray-50">
+            <Td mono>{fmtDate(r.created_at)}</Td>
+            <Td>{[r.first_name, r.last_name].filter(Boolean).join(' ') || '—'}</Td>
+            <Td><a href={`mailto:${r.email}`} className="hover:text-blue-600">{String(r.email)}</a></Td>
+            <Td><span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-[10px] font-semibold uppercase">{PROFILE_LABELS[String(r.profile_type ?? '')] ?? String(r.profile_type ?? '—')}</span></Td>
+            <Td>{String(r.ticket_range ?? '—')}</Td>
+            <Td small>{Array.isArray(r.sectors_interest) ? r.sectors_interest.join(', ') : '—'}</Td>
+            <Td>{r.marketing_consent ? '✓' : '—'}</Td>
+            <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
+            <Td>
+              {r.status === 'converted'
+                ? <span className="text-[10px] font-semibold text-emerald-600">Converti ✓</span>
+                : <InviteButton id={String(r.id)} email={String(r.email)} adminToken={adminToken} />}
+            </Td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}
+
+function AuctionAccessTable({ rows }: { rows: Record<string, unknown>[] }) {
+  if (!rows.length) return <EmptyState />
+  const BUYER_LABELS: Record<string, string> = { pe: 'PE/VC', strategic: 'Stratégique', family_office: 'Family Office', individual: 'Particulier' }
+  return (
+    <table className="w-full text-[12px] bg-white border border-gray-200">
+      <thead className="bg-gray-50 border-b border-gray-200">
+        <tr>{['Date','Nom','Email','Société','Profil','Capacité','Message','Statut'].map(h => <Th key={h}>{h}</Th>)}</tr>
+      </thead>
+      <tbody className="divide-y divide-gray-100">
+        {rows.map((r, i) => (
+          <tr key={i} className="hover:bg-gray-50">
+            <Td mono>{fmtDate(r.created_at)}</Td>
+            <Td>{String(r.full_name ?? '—')}</Td>
+            <Td><a href={`mailto:${r.email}`} className="hover:text-blue-600">{String(r.email)}</a></Td>
+            <Td>{String(r.company ?? '—')}</Td>
+            <Td><span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-[10px] font-semibold uppercase">{BUYER_LABELS[String(r.buyer_type ?? '')] ?? String(r.buyer_type ?? '—')}</span></Td>
+            <Td>{String(r.capacity ?? '—')}</Td>
+            <Td small>{r.message ? String(r.message).slice(0, 60) + (String(r.message).length > 60 ? '…' : '') : '—'}</Td>
+            <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}
+
 function AlliancesTable({ rows }: { rows: Record<string, unknown>[] }) {
   if (!rows.length) return <EmptyState />
   return (
@@ -268,10 +327,12 @@ export default function AdminLeadsClient({
 
       {/* Table */}
       <div className="overflow-x-auto">
-        {source === 'valuation'  && <ValuationTable  rows={rows} />}
-        {source === 'catalog'    && <CatalogTable    rows={rows} adminToken={adminToken} />}
-        {source === 'assessment' && <AssessmentTable rows={rows} />}
-        {source === 'alliances'  && <AlliancesTable  rows={rows} />}
+        {source === 'valuation'      && <ValuationTable    rows={rows} />}
+        {source === 'catalog'          && <CatalogTable      rows={rows} adminToken={adminToken} />}
+        {source === 'assessment'       && <AssessmentTable   rows={rows} />}
+        {source === 'alliances'        && <AlliancesTable    rows={rows} />}
+        {source === 'prospects'        && <ProspectsTable    rows={rows} adminToken={adminToken} />}
+        {source === 'auction_access'   && <AuctionAccessTable rows={rows} />}
       </div>
     </div>
   )

@@ -77,6 +77,28 @@ export default async function AdminLeadsPage({
       if (error) fetchError = error.message
       rows = (data ?? []) as Record<string, unknown>[]
     }
+
+    if (source === 'prospects') {
+      let q = supa
+        .from('prospects')
+        .select('id, first_name, last_name, email, profile_type, ticket_range, sectors_interest, marketing_consent, status, source, created_at')
+        .order('created_at', { ascending: false }).limit(200)
+      if (params.status && params.status !== 'all') q = q.eq('status', params.status)
+      const { data, error } = await q
+      if (error) fetchError = error.message
+      rows = (data ?? []) as Record<string, unknown>[]
+    }
+
+    if (source === 'auction_access') {
+      let q = supa
+        .from('auction_access_requests')
+        .select('id, full_name, email, company, buyer_type, capacity, message, status, locale, created_at')
+        .order('created_at', { ascending: false }).limit(200)
+      if (params.status && params.status !== 'all') q = q.eq('status', params.status)
+      const { data, error } = await q
+      if (error) fetchError = error.message
+      rows = (data ?? []) as Record<string, unknown>[]
+    }
   } catch (e) {
     fetchError = String(e)
   }
@@ -85,10 +107,12 @@ export default async function AdminLeadsPage({
   const counts: Record<string, number> = {}
   try {
     const tables = [
-      { key: 'valuation', table: 'valuation_leads' },
-      { key: 'catalog',   table: 'catalog_waitlist' },
-      { key: 'assessment',table: 'assessment_day_bookings' },
-      { key: 'alliances', table: 'alliance_applications' },
+      { key: 'valuation',     table: 'valuation_leads'          },
+      { key: 'catalog',       table: 'catalog_waitlist'          },
+      { key: 'assessment',    table: 'assessment_day_bookings'   },
+      { key: 'alliances',     table: 'alliance_applications'     },
+      { key: 'prospects',     table: 'prospects'                 },
+      { key: 'auction_access',table: 'auction_access_requests'   },
     ]
     await Promise.all(tables.map(async ({ key, table }) => {
       const { count } = await supa.from(table).select('id', { count: 'exact', head: true })
