@@ -32,7 +32,6 @@ const SERVICES_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'servicesAdvisory',    href: '/advisory' },
   { labelKey: 'servicesAcquisition', href: '/services/acquisition-support' },
   { labelKey: 'servicesAlliances',   href: '/alliances' },
-  { labelKey: 'servicesExperts',     href: '/experts' },
 ]
 
 function DropdownMenu({ links, t }: { links: { labelKey: string; href: LinkHref }[]; t: ReturnType<typeof useTranslations> }) {
@@ -145,6 +144,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const isAuctionActive  = AUCTION_LINKS.some(({ href }) => isActive(href as string))
   const isGradeActive    = GRADE_LINKS.some(({ href }) => isActive(href as string))
   const isServicesActive = SERVICES_LINKS.some(({ href }) => isActive(href as string))
+  const isExpertsActive  = isActive('/experts')
   const [mobileOpen, setMobileOpen]   = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<DropdownKey>(null)
   const [mobileAccordion, setMobileAccordion] = useState<DropdownKey>(null)
@@ -261,6 +261,18 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
           >
             {t('assets')}
             {isActive('/assets') && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
+          </Link>
+
+          {/* Experts */}
+          <Link
+            href="/experts"
+            aria-current={isExpertsActive ? 'page' : undefined}
+            className={`nav-link-item relative font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
+              isExpertsActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
+            }`}
+          >
+            {t('servicesExperts')}
+            {isExpertsActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
           </Link>
 
           {/* Services dropdown */}
@@ -449,6 +461,15 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 isActive('/assets') ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
               }`}>
               {t('assets')}
+            </Link>
+
+            {/* Experts */}
+            <Link href="/experts" onClick={closeMobile}
+              aria-current={isExpertsActive ? 'page' : undefined}
+              className={`mobile-nav-item py-4 font-mono text-[12px] tracking-[0.18em] uppercase transition-colors border-b ${
+                isExpertsActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+              }`}>
+              {t('servicesExperts')}
             </Link>
 
             {/* Services accordion */}
