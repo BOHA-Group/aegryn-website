@@ -71,7 +71,7 @@ export default function KycUploadForm({ docType }: Props) {
           accept=".pdf,.jpg,.jpeg,.png,.webp"
           className="hidden"
           id={`kyc-file-${docType}`}
-          onChange={() => { cameraRef.current && (cameraRef.current.value = ''); onFileChange(fileRef) }}
+          onChange={() => { if (cameraRef.current) cameraRef.current.value = ''; onFileChange(fileRef) }}
         />
         <label htmlFor={`kyc-file-${docType}`}
           className="flex items-center gap-2 cursor-pointer font-mono text-[10px] uppercase tracking-widest text-gray-500 hover:text-gray-800 border border-gray-300 hover:border-gray-500 px-4 py-2 transition-colors">
@@ -87,7 +87,7 @@ export default function KycUploadForm({ docType }: Props) {
           capture="environment"
           className="hidden"
           id={`kyc-camera-${docType}`}
-          onChange={() => { fileRef.current && (fileRef.current.value = ''); onFileChange(cameraRef) }}
+          onChange={() => { if (fileRef.current) fileRef.current.value = ''; onFileChange(cameraRef) }}
         />
         <label htmlFor={`kyc-camera-${docType}`}
           className="flex items-center gap-2 cursor-pointer font-mono text-[10px] uppercase tracking-widest text-gray-500 hover:text-gray-800 border border-gray-300 hover:border-gray-500 px-4 py-2 transition-colors">

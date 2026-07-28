@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
+import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import AccountForm from './AccountForm'
@@ -162,12 +163,12 @@ export default async function AccountPage() {
                         : '—'}
                     </p>
                   </div>
-                  <a
+                  <Link
                     href="/client/buyer/nda-view"
                     className="font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0"
                   >
                     Consulter →
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
