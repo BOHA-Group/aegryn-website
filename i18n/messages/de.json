@@ -4694,6 +4694,7 @@
       "ma": "M&A",
       "maDesc": "Transaktionen, Buy-side, Sell-side, Due Diligence",
       "m_and_a": "M&A",
+      "m_and_aDesc": "M&A-Transaktionen, Buy-side, Sell-side, Tech-Due-Diligence.",
       "valuation": "Bewertung",
       "valuationDesc": "DCF, Vergleichswerte, PPA, Fairness Opinion",
       "tax": "Steuerrecht",

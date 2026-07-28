@@ -3,8 +3,7 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
-import { motion } from 'framer-motion'
-import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter } from 'lucide-react'
+import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, TrendingUp, Scale, Calculator, FileSearch, Lock } from 'lucide-react'
 
 type ExpertProfile = {
   id:           string
@@ -43,14 +42,14 @@ const ALL_DOMAINS = ['cybersecurity', 'ai', 'm_and_a', 'valuation', 'tax', 'law'
 
 const COUNTRIES = ['CH', 'FR', 'DE', 'BE', 'LU', 'ES', 'IT', 'NL', 'PT', 'AT', 'PL', 'SE', 'DK', 'FI', 'NO', 'IE', 'CZ', 'HU', 'RO'] as const
 
-const FAN_CARDS = [
-  { angle: -18, domainKey: 'cybersecurity', tx: -20, z: 10 },
-  { angle: -10, domainKey: 'm_and_a',       tx: -10, z: 20 },
-  { angle: -4,  domainKey: 'valuation',     tx: -4,  z: 30 },
-  { angle:  0,  domainKey: 'ai',            tx:  0,  z: 40 },
-  { angle:  4,  domainKey: 'tax',           tx:  4,  z: 30 },
-  { angle:  10, domainKey: 'law',           tx:  10, z: 20 },
-  { angle:  18, domainKey: 'finance',       tx:  20, z: 10 },
+const EXPERT_DOMAINS = [
+  { Icon: ShieldCheck,  domainKey: 'cybersecurity', color: '#5ADDA4' },
+  { Icon: Scale,        domainKey: 'm_and_a',       color: '#a78bfa' },
+  { Icon: TrendingUp,   domainKey: 'valuation',     color: '#60a5fa' },
+  { Icon: BrainCircuit, domainKey: 'ai',            color: '#5ADDA4' },
+  { Icon: Calculator,   domainKey: 'tax',           color: '#f59e0b' },
+  { Icon: FileSearch,   domainKey: 'law',           color: '#818cf8' },
+  { Icon: Lock,         domainKey: 'finance',       color: '#34d399' },
 ] as const
 
 const PLACEHOLDERS: ExpertProfile[] = [
@@ -61,6 +60,110 @@ const PLACEHOLDERS: ExpertProfile[] = [
   { id: 'ph5', first_name: 'Marco', last_name: 'R.', profession: 'Lawyer', specialties: ['Droit des sociétés', 'M&A', 'IP'], city: 'Milan', country_code: 'IT', bio: 'Avocat d\'affaires spécialisé en droit des sociétés et transactions M&A. Intervient sur les opérations cross-border Europe.', organization: 'Studio Ricci', email_public: null, phone: null, website: null, min_rate_eur: 290, languages: ['it', 'en', 'fr'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['law', 'm_and_a'] },
   { id: 'ph6', first_name: 'Elena', last_name: 'V.', profession: 'Accountant', specialties: ['Audit', 'Finance d\'entreprise'], city: 'Bruxelles', country_code: 'BE', bio: 'Expert-comptable et auditeur certifié. Accompagnement des PME tech en croissance sur leur structuration financière.', organization: 'Verdu Audit', email_public: null, phone: null, website: null, min_rate_eur: 240, languages: ['fr', 'nl', 'en'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['accounting', 'finance'] },
 ]
+
+type DomainCard = {
+  readonly Icon: React.ComponentType<{ size?: number; style?: React.CSSProperties }>
+  readonly domainKey: string
+  readonly color: string
+}
+
+function FanCards({
+  domains, activeDomain, onSelect, t,
+}: {
+  domains: readonly DomainCard[]
+  activeDomain: string
+  onSelect: (key: string) => void
+  t: ReturnType<typeof useTranslations>
+}) {
+  const [hovered, setHovered] = useState<number | null>(null)
+  const n = domains.length
+  const SPREAD   = 52          // degrés total de l'éventail
+  const SHIFT_PX = 138         // espacement horizontal entre cartes
+
+  return (
+    <div
+      style={{
+        position: 'relative',
+        height: 280,
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+        overflow: 'visible',
+        paddingBottom: 0,
+      }}
+    >
+      {domains.map(({ Icon, domainKey, color }, i) => {
+        const rotDeg = -SPREAD / 2 + (i / (n - 1)) * SPREAD
+        const arcY   = Math.abs(rotDeg) * 1.4
+        const shiftX = (i - (n - 1) / 2) * SHIFT_PX
+        const isActive  = activeDomain === domainKey
+        const isHovered = hovered === i
+
+        const restTransform  = `translateX(calc(-50% + ${shiftX}px)) translateY(${arcY}px) rotate(${rotDeg}deg)`
+        const liftTransform  = `translateX(calc(-50% + ${shiftX}px)) translateY(-28px) rotate(0deg)`
+
+        return (
+          <button
+            key={domainKey}
+            onClick={() => onSelect(domainKey)}
+            onMouseEnter={() => setHovered(i)}
+            onMouseLeave={() => setHovered(null)}
+            style={{
+              position:       'absolute',
+              bottom:         0,
+              left:           '50%',
+              width:          168,
+              minHeight:      210,
+              borderRadius:   14,
+              border:         `1.5px solid ${isActive || isHovered ? color + 'aa' : color + '40'}`,
+              background:     '#FFFFFF',
+              padding:        '20px 14px',
+              textAlign:      'center',
+              transformOrigin:'bottom center',
+              transform:      isHovered || isActive ? liftTransform : restTransform,
+              transition:     'transform 0.38s cubic-bezier(0.22,1,0.36,1), box-shadow 0.38s cubic-bezier(0.22,1,0.36,1), border-color 0.2s',
+              zIndex:         isHovered || isActive ? 20 : i + 1,
+              boxShadow:      isHovered || isActive
+                ? `0 16px 48px rgba(0,0,0,0.18), 0 0 0 2px ${color}60`
+                : `0 4px 24px rgba(0,0,0,0.08), 0 0 0 0 ${color}`,
+              cursor:         'pointer',
+            }}
+          >
+            {/* Icône dans cercle coloré */}
+            <div style={{
+              width: 44, height: 44, borderRadius: '50%',
+              background: `${color}18`,
+              border: `1px solid ${color}35`,
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              margin: '0 auto 14px',
+            }}>
+              <Icon size={18} style={{ color }} />
+            </div>
+            {/* Titre */}
+            <div style={{
+              fontSize: 13, fontWeight: 700,
+              color: '#0A0C14',
+              marginBottom: 6, lineHeight: 1.3,
+            }}>
+              {t(`domains.${domainKey}`)}
+            </div>
+            {/* Description */}
+            <div style={{
+              fontSize: 11, color: '#6B7280',
+              lineHeight: 1.6, opacity: 0.85,
+              display: '-webkit-box',
+              WebkitLineClamp: 3,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+            }}>
+              {t(`domains.${domainKey}Desc`)}
+            </div>
+          </button>
+        )
+      })}
+    </div>
+  )
+}
 
 const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
 const selectCls = 'w-full border border-ag-border bg-ag-white px-4 py-2.5 pr-10 font-sans text-[12px] text-ag-black appearance-none focus:outline-none focus:border-ag-black transition-colors cursor-pointer'
@@ -359,32 +462,13 @@ export default function ExpertsContent() {
           </p>
         </div>
 
-        {/* Cards éventail — cliquables, activent le filtre domaine */}
-        <div className="relative flex items-end justify-center gap-2 pb-0 px-4 min-h-[280px]">
-          {FAN_CARDS.map((card, i) => (
-            <motion.button
-              key={i}
-              onClick={() => {
-                setDomain(prev => prev === card.domainKey ? '' : card.domainKey)
-                setCategory('')
-              }}
-              className="absolute bottom-0 w-[120px] md:w-[150px] bg-ag-white border border-ag-border/60 shadow-sm p-4 flex flex-col gap-2 origin-bottom cursor-pointer text-left"
-              style={{
-                translateX: card.tx * 10,
-                rotate: card.angle,
-                zIndex: card.z,
-                bottom: 0,
-              }}
-              whileHover={{ y: -16, scale: 1.04, zIndex: 50 }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-              animate={domain === card.domainKey ? { y: -20, scale: 1.06, borderColor: '#5ADDA4' } : {}}
-            >
-              <p className="font-sans font-bold text-ag-black text-[13px] leading-snug">{t(`domains.${card.domainKey}`)}</p>
-              <p className="font-sans text-[10px] text-ag-gray leading-snug line-clamp-3">{t(`domains.${card.domainKey}Desc`)}</p>
-            </motion.button>
-          ))}
-        </div>
+        {/* Cards éventail — mécanique Subblink: arcY + shiftX + pivot bottom center */}
+        <FanCards
+          domains={EXPERT_DOMAINS}
+          activeDomain={domain}
+          onSelect={(key) => { setDomain(prev => prev === key ? '' : key); setCategory('') }}
+          t={t}
+        />
       </section>
 
       {/* ── Filtres + compteur ───────────────────────────────────────── */}
