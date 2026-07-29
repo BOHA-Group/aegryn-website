@@ -1,5 +1,5 @@
 import { getTranslations }  from 'next-intl/server'
-import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
+import { generateAegrynMetadata } from '@/lib/seo'
 import { HeroMountain }      from '@/components/sections/HeroMountain'
 import { ManifestoSection }  from '@/components/sections/ManifestoSection'
 import { GradeStrip }        from '@/components/sections/GradeStrip'

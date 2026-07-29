@@ -4,8 +4,6 @@ import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
-const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')
-
 /* ── Glossary data — FR + EN ───────────────────────────────────────────── */
 const TERMS: { letter: string; terms: { id: string; name: string; def: { fr: string; en: string } }[] }[] = [
   {

@@ -2,7 +2,6 @@ import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, Check, Shield, Info } from 'lucide-react'
-import { serviceJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
 import { generateAegrynMetadata } from '@/lib/seo'
 import AcquisitionRoadmap from '@/components/sections/AcquisitionRoadmap'
 
@@ -22,18 +21,6 @@ export default async function AcquisitionSupportPage({ params }: Props) {
   const diffItems  = t.raw('diff.items')      as { title: string; desc: string }[]
   const expertPhases   = t.raw('experts.phases')  as { label: string; items: { num: string; title: string; desc: string; badge?: string }[] }[]
   const roadmapItems    = t.raw('roadmap.items')   as { phase: string; title: string; desc: string; status: string }[]
-
-  const serviceLd = serviceJsonLd({
-    name:        'AEGRYN — Conseil Transaction & M&A',
-    description: 'Accompagnement complet des acquisitions d\'actifs tech certifiés : due diligence, structuration juridique et fiscale, financement, signing et closing sécurisé.',
-    url:         'https://aegryn.com/services/acquisition-support',
-    serviceType: 'M&A Advisory',
-  })
-  const breadcrumbLd = breadcrumbJsonLd([
-    { name: 'AEGRYN',               url: 'https://aegryn.com' },
-    { name: 'Services',             url: 'https://aegryn.com/services' },
-    { name: 'Conseil Transaction',  url: 'https://aegryn.com/services/acquisition-support' },
-  ])
 
   return (
     <main className="bg-ag-white">
