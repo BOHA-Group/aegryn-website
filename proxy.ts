@@ -68,12 +68,11 @@ async function refreshAndCheckSession(
     }
   )
 
-  /* getSession() déclenche le refresh du access_token via refresh_token si expiré */
-  const { data: { session }, error: sessionError } = await supabase.auth.getSession()
-  const sbCookies = req.cookies.getAll().filter(c => c.name.startsWith('sb-')).map(c => c.name)
-  console.log('[proxy] refreshAndCheckSession —', { hasSession: !!session?.user, sbCookies, error: sessionError?.message ?? null })
+  /* getUser() valide le JWT côté serveur Supabase — pas de rotation sauf si access_token
+     réellement expiré, et dans ce cas Supabase gère la rotation atomiquement. */
+  const { data: { user } } = await supabase.auth.getUser()
 
-  return { hasSession: !!session?.user, response }
+  return { hasSession: !!user, response }
 }
 
 export default async function middleware(req: NextRequest) {
