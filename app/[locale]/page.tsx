@@ -31,10 +31,6 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynOrganizationSchema) }}
-      />
       <HeroMountain />
       <ManifestoSection />
       <GradeStrip />

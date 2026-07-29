@@ -37,9 +37,6 @@ export default async function AcquisitionSupportPage({ params }: Props) {
 
   return (
     <main className="bg-ag-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
-
       {/* ── Hero ── */}
       <section className="bg-ag-navy pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">

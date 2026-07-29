@@ -20,10 +20,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AlliancesPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynOrganizationSchema) }}
-      />
       <Suspense>
         <AlliancesContent />
       </Suspense>

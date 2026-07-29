@@ -37,8 +37,6 @@ export default async function GradePage({ params }: Props) {
 
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <GradeHero />
       <GradeCards />
       <GradeDimensions />

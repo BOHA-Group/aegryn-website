@@ -145,9 +145,6 @@ export default async function ArticlePage({ params }: Props) {
 
   return (
     <main className="bg-ag-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
-      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-20 px-6">
         <div className="max-w-3xl mx-auto">

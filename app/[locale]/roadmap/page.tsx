@@ -45,11 +45,6 @@ export default async function RoadmapPage({ params }: Props) {
 
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
-      />
-
       {/* ── Hero ── */}
       <section className="bg-ag-navy pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">

@@ -115,8 +115,6 @@ export default async function GlossairePage({ params }: Props) {
 
   return (
     <main className="bg-ag-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermsLd) }} />
-
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-16 px-6">
         <div className="max-w-4xl mx-auto">

@@ -27,11 +27,6 @@ export default function AboutPage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynOrganizationSchema) }}
-      />
-
       {/* Hero */}
       <section className="border-b border-ag-border">
         <div className="mx-auto max-w-7xl px-6 md:px-12 py-32">

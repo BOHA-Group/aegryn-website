@@ -35,8 +35,6 @@ export default async function AuctionPage({ params }: Props) {
 
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <AuctionHero />
       <AuctionStats />
       <AuctionSteps />
