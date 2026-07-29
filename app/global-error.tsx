@@ -9,7 +9,7 @@ export default function GlobalError({
   error: Error & { digest?: string }
   reset: () => void
 }) {
-  const isProd = process.env.NODE_ENV === 'production'
+  const isProd = process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
 
   useEffect(() => {
     if (isProd) {
