@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import { Suspense }        from 'react'
-import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
+import { generateAegrynMetadata } from '@/lib/seo'
 import type { Metadata }  from 'next'
 import AlliancesContent   from './AlliancesContent'
 

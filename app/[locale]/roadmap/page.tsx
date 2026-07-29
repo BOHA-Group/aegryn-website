@@ -6,7 +6,6 @@ import {
   ShieldCheck, Scale, Globe, Lock,
   Landmark, Users, FileSearch, Handshake,
 } from 'lucide-react'
-import { breadcrumbJsonLd } from '@/lib/jsonld'
 import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -34,11 +33,6 @@ export default async function RoadmapPage({ params }: Props) {
 
   const items   = t.raw('items')   as { phase: string; title: string; desc: string; status: string }[]
   const current = t.raw('current') as string[]
-
-  const breadcrumbLd = breadcrumbJsonLd([
-    { name: 'AEGRYN', url: 'https://aegryn.com' },
-    { name: t('label'), url: `https://aegryn.com/${locale}/roadmap` },
-  ])
 
   const isDev = (s: string) =>
     /développement|development|sviluppo|entwicklung|ontwikkeling|desarrollo/i.test(s)

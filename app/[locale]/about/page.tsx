@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight } from 'lucide-react'
-import { generateAegrynMetadata, aegrynOrganizationSchema } from '@/lib/seo'
+import { generateAegrynMetadata } from '@/lib/seo'
 import { VisionMissionBlock } from '@/components/sections/VisionMissionBlock'
 import { AboutHeroLogo }       from '@/components/brand/AboutHeroLogo'
 import type { Metadata } from 'next'

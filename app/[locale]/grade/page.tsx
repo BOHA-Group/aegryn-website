@@ -6,7 +6,6 @@ import { GradeHero } from '@/components/sections/grade/GradeHero'
 import { GradeCards } from '@/components/sections/grade/GradeCards'
 import { GradeDimensions } from '@/components/sections/grade/GradeDimensions'
 import { GradeProcess } from '@/components/sections/grade/GradeProcess'
-import { serviceJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
 import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -23,17 +22,6 @@ export default async function GradePage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'grade.index' })
   const tValuation = await getTranslations({ locale, namespace: 'valuation.marketContext' })
   const marketItems = tValuation.raw('items') as { value: string; label: string }[]
-
-  const serviceLd = serviceJsonLd({
-    name:        'AEGRYN Grade — Tech Asset Certification',
-    description: 'Independent certification of digital tech assets across 4 dimensions: Code, IP, Finance, Security.',
-    url:         'https://aegryn.com/grade',
-    serviceType: 'Asset Certification',
-  })
-  const breadcrumbLd = breadcrumbJsonLd([
-    { name: 'AEGRYN', url: 'https://aegryn.com' },
-    { name: 'Grade',  url: 'https://aegryn.com/grade' },
-  ])
 
   return (
     <main>

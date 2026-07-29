@@ -5,7 +5,6 @@ import { ArrowUpRight, TrendingUp } from 'lucide-react'
 import { AuctionHero } from '@/components/sections/auction/AuctionHero'
 import { AuctionStats } from '@/components/sections/auction/AuctionStats'
 import { AuctionSteps } from '@/components/sections/auction/AuctionSteps'
-import { serviceJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
 import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -21,17 +20,6 @@ export default async function AuctionPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'auction.index' })
   const tValuation = await getTranslations({ locale, namespace: 'valuation.marketContext' })
   const marketItems = tValuation.raw('items') as { value: string; label: string }[]
-
-  const serviceLd = serviceJsonLd({
-    name:        'AEGRYN Auction — Certified Tech Asset Transactions',
-    description: 'Private auction sessions for certified tech assets. Institutional escrow. NDA. Less than 25% acceptance rate.',
-    url:         'https://aegryn.com/auction',
-    serviceType: 'Asset Transaction',
-  })
-  const breadcrumbLd = breadcrumbJsonLd([
-    { name: 'AEGRYN',  url: 'https://aegryn.com' },
-    { name: 'Auction', url: 'https://aegryn.com/auction' },
-  ])
 
   return (
     <main>

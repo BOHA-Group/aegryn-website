@@ -94,23 +94,6 @@ export default async function GlossairePage({ params }: Props) {
   const { locale } = await params
   const lang = locale === 'fr' ? 'fr' : 'en'
 
-  const definedTermsLd = {
-    '@context': 'https://schema.org',
-    '@graph': TERMS.flatMap(group =>
-      group.terms.map(term => ({
-        '@type':       'DefinedTerm',
-        '@id':         `${BASE}/${locale}/glossaire#${term.id}`,
-        name:          term.name,
-        description:   term.def[lang],
-        inDefinedTermSet: {
-          '@type': 'DefinedTermSet',
-          name:    lang === 'fr' ? 'Glossaire M&A tech AEGRYN' : 'AEGRYN Tech M&A Glossary',
-          url:     `${BASE}/${locale}/glossaire`,
-        },
-      }))
-    ),
-  }
-
   const letters = TERMS.map(g => g.letter)
 
   return (

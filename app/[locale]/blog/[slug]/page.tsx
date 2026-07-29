@@ -99,49 +99,8 @@ export default async function ArticlePage({ params }: Props) {
   if (!article) notFound()
 
   const t           = await getTranslations({ locale, namespace: 'discover' })
-  const catLabel     = getLocaleText(ARTICLE_CATEGORIES[article.category], locale)
-  const dateStr      = new Date(article.date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
-  const articleTitle = getLocaleText(article!.title, locale)
-  const articleDesc  = getLocaleText(article!.excerpt, locale)
-
-  const articleLd = {
-    '@context':         'https://schema.org',
-    '@type':            'Article',
-    headline:           articleTitle,
-    description:        articleDesc,
-    keywords:           [
-      ...BASE_ARTICLE_KEYWORDS,
-      ...(CATEGORY_KEYWORDS[article.category] ?? []),
-      ...(article.keywords ?? []),
-    ].join(', '),
-    datePublished:      new Date(article!.date).toISOString(),
-    dateModified:       new Date(article!.date).toISOString(),
-    author:             { '@type': 'Organization', name: 'AEGRYN', url: BASE },
-    publisher:          { '@type': 'Organization', name: 'AEGRYN', logo: { '@type': 'ImageObject', url: `${BASE}/images/og-logo.png` } },
-    mainEntityOfPage:   { '@type': 'WebPage', '@id': `${BASE}/${locale}/blog/${slug}` },
-    image:              article!.ogImage ?? OG_FALLBACK,
-    inLanguage:         locale === 'fr' ? 'fr-FR' : locale === 'en' ? 'en-GB' : locale,
-  }
-
-  const breadcrumbLd = {
-    '@context': 'https://schema.org',
-    '@type':    'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'AEGRYN',         item: BASE },
-      { '@type': 'ListItem', position: 2, name: catLabel,          item: `${BASE}/${locale}/blog?category=${article.category}` },
-      { '@type': 'ListItem', position: 3, name: articleTitle,      item: `${BASE}/${locale}/blog/${slug}` },
-    ],
-  }
-
-  const faqLd = article!.faq?.length ? {
-    '@context':  'https://schema.org',
-    '@type':     'FAQPage',
-    mainEntity:  article!.faq.map(item => ({
-      '@type':         'Question',
-      name:            getLocaleText(item.q, locale),
-      acceptedAnswer:  { '@type': 'Answer', text: getLocaleText(item.a, locale) },
-    })),
-  } : null
+  const catLabel = getLocaleText(ARTICLE_CATEGORIES[article.category], locale)
+  const dateStr  = new Date(article.date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
 
   return (
     <main className="bg-ag-white">
