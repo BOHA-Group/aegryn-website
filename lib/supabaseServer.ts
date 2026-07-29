@@ -31,13 +31,19 @@ export async function getSession() {
 }
 
 /** Retourne l'utilisateur courant ou null.
- *  Appelle getSession() en premier pour forcer le refresh du access_token
- *  via le refresh_token si expiré — sans ça, getUser() retourne null
- *  après 1h d'inactivité même si la session est toujours valide.
+ *  Utilise auth.getUser() (vérification réseau JWT, stateless) plutôt que
+ *  getSession() (qui déclenche un refresh réseau si token expiré).
+ *  Raison : plusieurs layouts imbriqués appellent getUser() en parallèle dans
+ *  la même requête RSC. Si chacun tentait un refresh via getSession(), ils
+ *  consommeraient le même refresh_token (rotation Supabase → 1 seul usage
+ *  valide) → race condition → le 2e layout obtient null → redirect login.
+ *  Le refresh est fait UNE SEULE FOIS dans proxy.ts (middleware) et propagé
+ *  dans la requête via req.cookies.set(). Les Server Components lisent le
+ *  token frais via cookies() et getUser() le valide sans retenter de refresh.
  */
 export async function getUser() {
   const client = await createAuthClient()
-  const { data: { session } } = await client.auth.getSession()
-  if (!session) return null
-  return session.user
+  const { data: { user }, error } = await client.auth.getUser()
+  if (error || !user) return null
+  return user
 }

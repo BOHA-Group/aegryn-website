@@ -133,6 +133,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
       </head>
       <body
+        suppressHydrationWarning
         className={`${plusJakartaSans.variable} font-sans bg-ag-white text-ag-dark antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
