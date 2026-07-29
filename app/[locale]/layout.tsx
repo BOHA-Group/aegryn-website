@@ -123,20 +123,20 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} dir="ltr" suppressHydrationWarning>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynOrganizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynWebSiteSchema) }}
-        />
-      </head>
       <body
         suppressHydrationWarning
         className={`${plusJakartaSans.variable} font-sans bg-ag-white text-ag-dark antialiased`}
       >
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynOrganizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynWebSiteSchema) }}
+        />
         <NextIntlClientProvider messages={messages}>
           <LenisProvider>
             <a

@@ -34,7 +34,7 @@ export function HeroMountain() {
   }, [])
 
   useEffect(() => {
-    if (!headingRef.current || !sectionRef.current) return
+    if (!headingRef.current || !sectionRef.current || !labelRef.current || !ruleRef.current || !subtitleRef.current) return
 
     /* Split by LINES — boha-group.com style: each line clips up from below */
     const split = new SplitText(headingRef.current, {
