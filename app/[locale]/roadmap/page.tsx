@@ -44,7 +44,7 @@ export default async function RoadmapPage({ params }: Props) {
     /développement|development|sviluppo|entwicklung|ontwikkeling|desarrollo/i.test(s)
 
   return (
-    <main id="main">
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}

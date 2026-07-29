@@ -44,8 +44,6 @@ const intlMiddleware = createIntlMiddleware(routing)
 async function refreshAndCheckSession(
   req: NextRequest
 ): Promise<{ hasSession: boolean; response: NextResponse }> {
-  /* On accumule les cookies à écrire séparément pour éviter
-     de recréer la response et perdre des cookies en cours de route */
   const cookiesToSet: { name: string; value: string; options: Record<string, unknown> }[] = []
 
   const supabase = createServerClient(
@@ -54,20 +52,27 @@ async function refreshAndCheckSession(
     {
       cookies: {
         getAll: () => req.cookies.getAll(),
-        setAll: (toSet) => {
-          toSet.forEach(c => cookiesToSet.push(c))
-        },
+        setAll: (toSet) => { toSet.forEach(c => cookiesToSet.push(c)) },
       },
     }
   )
 
-  /* getSession() utilise le refresh_token pour renouveler le access_token
-     expiré côté Edge, sans appel réseau supplémentaire.
-     getUser() valide ensuite le token côté serveur Supabase (sécurité). */
+  /* getSession() déclenche le refresh du access_token via refresh_token si expiré */
   const { data: { session } } = await supabase.auth.getSession()
 
-  /* Construire la response APRÈS le refresh pour y inclure les nouveaux cookies */
-  const response = NextResponse.next({ request: req })
+  /* CRITIQUE : propager les cookies rafraîchis dans la requête transmise
+     au Server Component. Sans ça, getUser() dans les layouts lit l'ancien
+     access_token expiré depuis les cookies de la requête originale → null → redirect login. */
+  const requestHeaders = new Headers(req.headers)
+  if (cookiesToSet.length > 0) {
+    const merged = new Map(req.cookies.getAll().map(c => [c.name, c.value] as [string, string]))
+    cookiesToSet.forEach(c => merged.set(c.name, c.value))
+    requestHeaders.set('cookie', Array.from(merged.entries()).map(([k, v]) => `${k}=${v}`).join('; '))
+  }
+
+  const response = NextResponse.next({ request: { headers: requestHeaders } })
+
+  /* Persister aussi dans Set-Cookie de la réponse pour le navigateur */
   cookiesToSet.forEach(({ name, value, options }) =>
     response.cookies.set(name, value, options as Parameters<typeof response.cookies.set>[2])
   )

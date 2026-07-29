@@ -114,7 +114,7 @@ export default async function GlossairePage({ params }: Props) {
   const letters = TERMS.map(g => g.letter)
 
   return (
-    <main id="main" className="bg-ag-white">
+    <main className="bg-ag-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermsLd) }} />
 
       {/* Hero */}

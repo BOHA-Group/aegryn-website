@@ -144,9 +144,9 @@ export default async function LocaleLayout({ children, params }: Props) {
               Skip to content
             </a>
             <Nav />
-            <main id="main" role="main" className="pt-16">
+            <div id="main" className="pt-16">
               {children}
-            </main>
+            </div>
             <Footer />
             <ScrollToTop />
             <GoogleAnalytics />

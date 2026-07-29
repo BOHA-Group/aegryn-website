@@ -34,7 +34,7 @@ export default function FaqPage() {
     : items.filter(item => item.cat.includes(active))
 
   return (
-    <main id="main" className="bg-ag-white min-h-screen">
+    <main className="bg-ag-white min-h-screen">
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-14 px-6">
         <div className="max-w-4xl mx-auto">

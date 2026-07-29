@@ -25,7 +25,7 @@ export default async function GradePartnersPage() {
   const benefits = t.raw('benefits') as string[]
 
   return (
-    <main id="main" className="bg-ag-white">
+    <main className="bg-ag-white">
 
       {/* Hero */}
       <section className="border-b border-ag-border pt-24 pb-20 px-6">

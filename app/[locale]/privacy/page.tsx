@@ -17,7 +17,7 @@ export default async function PrivacyPage({ params }: Props) {
   const tP = await getTranslations({ locale, namespace: 'privacy' })
 
   return (
-    <main id="main" className="bg-white min-h-screen">
+    <main className="bg-white min-h-screen">
 
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-14 px-6">

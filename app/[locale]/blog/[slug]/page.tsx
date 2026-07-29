@@ -144,7 +144,7 @@ export default async function ArticlePage({ params }: Props) {
   } : null
 
   return (
-    <main id="main" className="bg-ag-white">
+    <main className="bg-ag-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}

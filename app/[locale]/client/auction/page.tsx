@@ -90,7 +90,7 @@ export default async function ClientAuctionPage({ params }: Props) {
   )
 
   return (
-    <main id="main" className="bg-ag-off-white min-h-screen py-16 px-4">
+    <main className="bg-ag-off-white min-h-screen py-16 px-4">
       <div className="max-w-3xl mx-auto">
 
         {/* Header */}

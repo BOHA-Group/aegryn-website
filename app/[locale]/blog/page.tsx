@@ -15,7 +15,7 @@ export default async function BlogPage({ params }: Props) {
   const { locale } = await params
 
   return (
-    <main id="main">
+    <main>
       <DiscoverGrid locale={locale} />
     </main>
   )

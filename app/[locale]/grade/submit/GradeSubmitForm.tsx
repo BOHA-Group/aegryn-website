@@ -87,7 +87,7 @@ export default function GradeSubmitForm() {
   }
 
   return (
-    <main id="main" className="bg-ag-white">
+    <main className="bg-ag-white">
 
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-20 px-6">

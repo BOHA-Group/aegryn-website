@@ -18,7 +18,7 @@ export default function HowToBuyPage() {
   const processSteps = t.raw('processSteps') as { num: string; title: string; desc: string }[]
 
   return (
-    <main id="main" className="bg-ag-white">
+    <main className="bg-ag-white">
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">

@@ -111,7 +111,7 @@ export default async function AuctionCatalogPage({ params }: Props) {
   /* ── Écran accès requis (non connecté ou NDA/CGV non signés) ── */
   if (accessStatus !== 'ok') {
     return (
-      <main id="main" className="bg-ag-white min-h-screen">
+      <main className="bg-ag-white min-h-screen">
         {Header}
         {ThirdPartyBanner}
 
@@ -219,7 +219,7 @@ export default async function AuctionCatalogPage({ params }: Props) {
   }[]
 
   return (
-    <main id="main" className="bg-ag-white min-h-screen">
+    <main className="bg-ag-white min-h-screen">
       {Header}
       {ThirdPartyBanner}
 

@@ -137,7 +137,7 @@ export default async function AuctionLotPage({ params }: Props) {
   }).catch(() => { /* non-blocking */ })
 
   return (
-    <main id="main" className="min-h-screen py-12 px-4" style={{ backgroundColor: '#FAF8F3' }}>
+    <main className="min-h-screen py-12 px-4" style={{ backgroundColor: '#FAF8F3' }}>
       <AssetLotSheet asset={asset} />
     </main>
   )
@@ -154,7 +154,7 @@ function AccessDeniedScreen({
   const isExpired = state === 'expired'
 
   return (
-    <main id="main" className="min-h-[80vh] flex items-center justify-center px-6 bg-ag-white">
+    <main className="min-h-[80vh] flex items-center justify-center px-6 bg-ag-white">
       <div className="max-w-lg text-center flex flex-col items-center gap-6">
         <div className="w-16 h-16 border border-ag-border flex items-center justify-center">
           {isExpired

@@ -67,7 +67,7 @@ export default function AuctionSubmitForm() {
   const steps = t.raw('steps') as { num: string; title: string; desc: string }[]
 
   return (
-    <main id="main" className="bg-ag-white">
+    <main className="bg-ag-white">
 
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-20 px-6">

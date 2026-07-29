@@ -19,7 +19,7 @@ export default async function AssetsPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'assets.page' })
 
   return (
-    <main id="main">
+    <main>
       <AssetHeroBannerVideo
         label={t('heroLabel')}
         title={t('heroTitle')}

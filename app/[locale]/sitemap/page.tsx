@@ -108,7 +108,7 @@ function SitemapSection({ group }: { group: SitemapGroup }) {
 export default function SitemapPage() {
   const t = useTranslations('sitemap')
   return (
-    <main id="main" className="bg-ag-off-white min-h-screen pt-32 pb-24 px-6">
+    <main className="bg-ag-off-white min-h-screen pt-32 pb-24 px-6">
       <div className="max-w-5xl mx-auto">
 
         <div className="mb-12">

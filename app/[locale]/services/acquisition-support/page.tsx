@@ -36,7 +36,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
   ])
 
   return (
-    <main id="main" className="bg-ag-white">
+    <main className="bg-ag-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
 

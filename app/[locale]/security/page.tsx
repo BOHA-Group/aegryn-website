@@ -22,7 +22,7 @@ export default async function SecurityPage({ params }: Props) {
   const steps = [t('s5Step1'), t('s5Step2'), t('s5Step3')] as string[]
 
   return (
-    <main id="main" className="bg-ag-white min-h-screen">
+    <main className="bg-ag-white min-h-screen">
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-14 px-6">
         <div className="max-w-4xl mx-auto">
