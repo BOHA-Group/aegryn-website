@@ -1,56 +1,10 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
-import Nav from '@/components/layout/Nav'
-import Footer from '@/components/layout/Footer'
-import LenisProvider from '@/components/providers/LenisProvider'
-import { ScrollToTop } from '@/components/ui/ScrollToTop'
-import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
-import MetaPixel from '@/components/analytics/MetaPixel'
-import { aegrynOrganizationSchema, aegrynWebSiteSchema } from '@/lib/seo'
-import DebugOverlay from '@/components/debug/DebugOverlay'
 import '@/styles/globals.css'
 
-const plusJakartaSans = localFont({
-  src: [
-    {
-      path: '../../public/fonts/PlusJakartaSans/PlusJakartaSans-Light-300.woff2',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/PlusJakartaSans/PlusJakartaSans-Regular-400.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/PlusJakartaSans/PlusJakartaSans-Medium-500.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/PlusJakartaSans/PlusJakartaSans-SemiBold-600.woff2',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/PlusJakartaSans/PlusJakartaSans-Bold-700.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/PlusJakartaSans/PlusJakartaSans-ExtraBold-800.woff2',
-      weight: '800',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-body',
-  display: 'swap',
-  fallback: ['system-ui', '-apple-system', 'sans-serif'],
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aegryn.com'),
@@ -122,39 +76,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages()
 
   return (
-    <html lang={locale} dir="ltr" suppressHydrationWarning>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynOrganizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynWebSiteSchema) }}
-        />
-      </head>
-      <body
-        suppressHydrationWarning
-        className={`${plusJakartaSans.variable} font-sans bg-ag-white text-ag-dark antialiased`}
-      >
+    <html lang={locale} dir="ltr">
+      <body>
         <NextIntlClientProvider messages={messages}>
-          <LenisProvider>
-            <a
-              href="#main"
-              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-ag-navy px-4 py-2 text-sm font-bold text-white"
-            >
-              Skip to content
-            </a>
-            <Nav />
-            <div id="main" className="pt-16">
-              {children}
-            </div>
-            <Footer />
-            <ScrollToTop />
-            <GoogleAnalytics />
-            <MetaPixel />
-            <DebugOverlay />
-          </LenisProvider>
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>
