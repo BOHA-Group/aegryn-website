@@ -30,9 +30,14 @@ export async function getSession() {
   return session
 }
 
-/** Retourne l'utilisateur courant ou null */
+/** Retourne l'utilisateur courant ou null.
+ *  Appelle getSession() en premier pour forcer le refresh du access_token
+ *  via le refresh_token si expiré — sans ça, getUser() retourne null
+ *  après 1h d'inactivité même si la session est toujours valide.
+ */
 export async function getUser() {
   const client = await createAuthClient()
-  const { data: { user } } = await client.auth.getUser()
-  return user
+  const { data: { session } } = await client.auth.getSession()
+  if (!session) return null
+  return session.user
 }
