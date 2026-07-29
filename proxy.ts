@@ -51,6 +51,20 @@ async function refreshAndCheckSession(
 ): Promise<{ hasSession: boolean; response: NextResponse }> {
   let response = NextResponse.next({ request: req })
 
+  /* Next.js déclenche un prefetch automatique de tous les <Link> visibles au
+     scroll/mount (SideNav affiche 6-8 liens simultanément). Chaque prefetch
+     traverse ce middleware — si plusieurs partent en parallèle et que
+     l'access_token est expiré, ils tentent tous de rafraîchir avec le MÊME
+     refresh_token (rotation Supabase = usage unique) → un seul réussit, les
+     autres invalident la session → déconnexion aléatoire au clic suivant.
+     On ignore donc le refresh pour les requêtes de prefetch : elles n'ont pas
+     besoin de contenu authentifié, seulement de peupler le cache RSC. */
+  const isPrefetch = req.headers.get('next-router-prefetch') === '1' || req.headers.get('purpose') === 'prefetch'
+  if (isPrefetch) {
+    const sbCookie = req.cookies.getAll().some(c => c.name.startsWith('sb-') && c.name.includes('auth-token'))
+    return { hasSession: sbCookie, response }
+  }
+
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
@@ -68,11 +82,15 @@ async function refreshAndCheckSession(
     }
   )
 
-  /* getUser() valide le JWT côté serveur Supabase — pas de rotation sauf si access_token
-     réellement expiré, et dans ce cas Supabase gère la rotation atomiquement. */
-  const { data: { user } } = await supabase.auth.getUser()
+  /* getSession() déclenche le refresh du access_token via refresh_token si expiré.
+     C'est volontaire et c'est le SEUL endroit où ce refresh doit avoir lieu — une
+     seule fois par requête, ici dans le middleware. Les Server Components (layouts
+     imbriqués) utilisent getUser() (lib/supabaseServer.ts) qui NE rafraîchit PAS,
+     pour éviter que plusieurs layouts consomment le même refresh_token en parallèle
+     (rotation Supabase → un seul usage valide → race condition). */
+  const { data: { session } } = await supabase.auth.getSession()
 
-  return { hasSession: !!user, response }
+  return { hasSession: !!session?.user, response }
 }
 
 export default async function middleware(req: NextRequest) {

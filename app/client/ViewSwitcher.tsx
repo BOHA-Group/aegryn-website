@@ -38,6 +38,7 @@ export default function ViewSwitcher({ hasBuyer, hasSeller, hasPartner }: Props)
           <Link
             key={href}
             href={href}
+            prefetch={false}
             className={`flex items-center gap-2.5 px-3 py-2 transition-colors ${
               active
                 ? 'bg-white/10 text-white'

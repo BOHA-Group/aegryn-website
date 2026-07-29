@@ -43,6 +43,7 @@ function NavLink({ item, rootHref }: { item: NavItem; rootHref: string }) {
   return (
     <Link
       href={item.href}
+      prefetch={false}
       className={`flex items-center gap-2.5 px-3 py-2 transition-colors ${
         isActive
           ? 'bg-white/10 text-white'
