@@ -2,6 +2,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { redirect }            from 'next/navigation'
 import { headers }             from 'next/headers'
 import type { Metadata }       from 'next'
+import { Suspense }            from 'react'
 import AdminLeadsClient        from './AdminLeadsClient'
 
 export const metadata: Metadata = {
@@ -136,14 +137,16 @@ export default async function AdminLeadsPage({
           </div>
         )}
 
-        <AdminLeadsClient
-          rows={rows}
-          source={source}
-          counts={counts}
-          currentGrade={params.grade ?? 'all'}
-          currentStatus={params.status ?? 'all'}
-          adminToken={params.token}
-        />
+        <Suspense fallback={<div className="h-32 flex items-center justify-center text-gray-400 text-sm">Chargement…</div>}>
+          <AdminLeadsClient
+            rows={rows}
+            source={source}
+            counts={counts}
+            currentGrade={params.grade ?? 'all'}
+            currentStatus={params.status ?? 'all'}
+            adminToken={params.token}
+          />
+        </Suspense>
       </div>
     </main>
   )
