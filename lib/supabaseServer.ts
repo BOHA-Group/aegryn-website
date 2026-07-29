@@ -8,12 +8,15 @@
  */
 import { createServerClient } from '@supabase/ssr'
 import { cookies }            from 'next/headers'
+import { cache }              from 'react'
 
 const url     = process.env.NEXT_PUBLIC_SUPABASE_URL!
 const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 
-/** Client auth-aware pour Server Components (lit/écrit les cookies auth) */
-export async function createAuthClient() {
+/** Client auth-aware pour Server Components (lit/écrit les cookies auth).
+ *  cache() garantit une seule instance par requête RSC, peu importe
+ *  combien de layouts appellent cette fonction. */
+export const createAuthClient = cache(async () => {
   const cookieStore = await cookies()
   return createServerClient(url, anonKey, {
     cookies: {
@@ -21,7 +24,7 @@ export async function createAuthClient() {
       setAll(toSet)       { try { toSet.forEach(({ name, value, options }) => cookieStore.set(name, value, options)) } catch { /* lecture seule en Server Component */ } },
     },
   })
-}
+})
 
 /** Retourne la session courante ou null */
 export async function getSession() {
@@ -41,9 +44,9 @@ export async function getSession() {
  *  dans la requête via req.cookies.set(). Les Server Components lisent le
  *  token frais via cookies() et getUser() le valide sans retenter de refresh.
  */
-export async function getUser() {
+export const getUser = cache(async () => {
   const client = await createAuthClient()
   const { data: { user }, error } = await client.auth.getUser()
   if (error || !user) return null
   return user
-}
+})
