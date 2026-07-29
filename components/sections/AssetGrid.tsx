@@ -28,7 +28,7 @@ export function AssetGrid() {
   const tStatus = useTranslations('build.status')
   const wrapRef    = useRef<HTMLDivElement>(null)
   const headerRef  = useRef<HTMLDivElement>(null)
-  const h2Ref      = useRef<HTMLHeadingElement>(null)
+  const h2Ref = useRef<HTMLHeadingElement>(null)
   const labelRef   = useRef<HTMLParagraphElement>(null)
 
   const visibleAssets = AEGRYN_ASSETS.filter((a) => a.showOnHomepage !== false)
@@ -133,6 +133,7 @@ export function AssetGrid() {
         </p>
         <h2
           ref={h2Ref}
+          suppressHydrationWarning
           className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] whitespace-pre-line overflow-hidden"
           style={{ fontSize: 'clamp(42px,5.5vw,80px)' }}
         >

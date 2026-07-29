@@ -70,6 +70,7 @@ export function StatementStrip({ label, title, cta, href }: Props) {
         </p>
         <h2
           ref={titleRef}
+          suppressHydrationWarning
           className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.2] max-w-2xl mb-12"
           style={{ fontSize: 'clamp(32px,4vw,60px)' }}
         >

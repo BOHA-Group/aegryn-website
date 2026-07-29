@@ -15,7 +15,7 @@ export function WhyUseApps() {
     const ctx = gsap.context(() => {
 
       /* Each column: title clip-reveal + num ScrambleText */
-      document.querySelectorAll<HTMLElement>('.why-col').forEach((col, i) => {
+      ;(sectionRef.current ?? document).querySelectorAll<HTMLElement>('.why-col').forEach((col, i) => {
         const titleEl = col.querySelector<HTMLElement>('.why-title')
         const numEl   = col.querySelector<HTMLElement>('.why-num')
         const descEl  = col.querySelector<HTMLElement>('.why-desc')
@@ -79,6 +79,7 @@ export function WhyUseApps() {
                 {item.num}
               </p>
               <h3
+                suppressHydrationWarning
                 className="why-title font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2] pb-[0.15em] mb-4 overflow-hidden"
                 style={{ fontSize: 'clamp(14px,1.15vw,16px)' }}
               >
