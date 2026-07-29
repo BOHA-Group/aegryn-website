@@ -12,7 +12,7 @@
  * - Aucun téléchargement direct (Content-Disposition: inline côté storage)
  */
 
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import { X, ChevronLeft, ChevronRight, Loader2, AlertTriangle, Lock } from 'lucide-react'
 
@@ -135,8 +135,11 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
     onClose()
   }, [documentId, onClose])
 
-  /* ── Watermark text ── */
-  const watermarkText = `AEGRYN CONFIDENTIEL — ${userName} <${userEmail}> — ${new Date().toLocaleDateString('fr-CH')}`
+  /* ── Watermark text — initialisé côté client uniquement pour éviter mismatch hydratation ── */
+  const watermarkText = useMemo(
+    () => `AEGRYN CONFIDENTIEL — ${userName} <${userEmail}> — ${new Date().toLocaleDateString('fr-CH')}`,
+    [userName, userEmail]
+  )
 
   /* ── Rendu ── */
   return (
@@ -218,7 +221,7 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
             >
               <Page
                 pageNumber={page}
-                width={Math.min(window?.innerWidth ? window.innerWidth - 64 : 800, 900)}
+                width={900}
                 renderTextLayer={false}
                 renderAnnotationLayer={false}
               />

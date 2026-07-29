@@ -11,7 +11,7 @@ export default function GoogleAnalytics() {
           Cookie-Script met à jour ces valeurs via gtag('consent','update',...)
           quand l'utilisateur accepte ou refuse dans la bannière.
           GTM / GA4 respectent ces signaux automatiquement. */}
-      <Script id="gtm-consent-defaults" strategy="afterInteractive">
+      <Script id="gtm-consent-defaults" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -29,7 +29,7 @@ export default function GoogleAnalytics() {
       </Script>
 
       {/* GTM — se charge après le consent default ci-dessus */}
-      <Script id="gtm-init" strategy="afterInteractive">
+      <Script id="gtm-init" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
@@ -37,7 +37,7 @@ export default function GoogleAnalytics() {
       </Script>
       <Script
         src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
     </>
   )

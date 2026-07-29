@@ -55,8 +55,8 @@ export default async function ClientLayout({ children }: { children: React.React
   } catch { /* pages auth : pas de session, navbar publique */ }
 
   return (
-    <html lang={locale} className={`${plusJakartaSans.variable}`}>
-      <body className="font-sans antialiased">
+    <html lang={locale} className={`${plusJakartaSans.variable}`} suppressHydrationWarning>
+      <body className="font-sans antialiased" suppressHydrationWarning>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Nav user={navUser} />
           {children}
