@@ -18,6 +18,8 @@ const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
  *  combien de layouts appellent cette fonction. */
 export const createAuthClient = cache(async () => {
   const cookieStore = await cookies()
+  const cookieNames = cookieStore.getAll().map(c => c.name)
+  console.log('[supabase] createAuthClient — cookies présents:', cookieNames)
   return createServerClient(url, anonKey, {
     cookies: {
       getAll()            { return cookieStore.getAll() },
@@ -47,6 +49,7 @@ export async function getSession() {
 export const getUser = cache(async () => {
   const client = await createAuthClient()
   const { data: { user }, error } = await client.auth.getUser()
+  console.log('[supabase] getUser —', { hasUser: !!user, error: error?.message ?? null })
   if (error || !user) return null
   return user
 })

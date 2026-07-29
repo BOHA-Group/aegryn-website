@@ -69,7 +69,9 @@ async function refreshAndCheckSession(
   )
 
   /* getSession() déclenche le refresh du access_token via refresh_token si expiré */
-  const { data: { session } } = await supabase.auth.getSession()
+  const { data: { session }, error: sessionError } = await supabase.auth.getSession()
+  const sbCookies = req.cookies.getAll().filter(c => c.name.startsWith('sb-')).map(c => c.name)
+  console.log('[proxy] refreshAndCheckSession —', { hasSession: !!session?.user, sbCookies, error: sessionError?.message ?? null })
 
   return { hasSession: !!session?.user, response }
 }
