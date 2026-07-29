@@ -30,12 +30,14 @@ export default function GradeSubmitSuccessPage() {
           >
             Retour au Grade
           </Link>
-          <NextLink
-            href="/client/login"
-            className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
-          >
-            Accéder à mon espace
-          </NextLink>
+          {process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' && (
+            <NextLink
+              href="/client/login"
+              className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
+            >
+              Accéder à mon espace
+            </NextLink>
+          )}
         </div>
       </div>
     </main>

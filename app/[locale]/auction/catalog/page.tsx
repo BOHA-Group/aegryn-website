@@ -150,7 +150,7 @@ export default async function AuctionCatalogPage({ params }: Props) {
                 ))}
               </div>
 
-              {!user && (
+              {!user && process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' && (
                 <div className="flex flex-col sm:flex-row gap-3 mt-4">
                   <NextLink
                     href={`/client/login?next=/${locale}/auction/catalog`}

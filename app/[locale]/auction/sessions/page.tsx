@@ -117,12 +117,14 @@ export default async function AuctionSessionPage({ params }: Props) {
                     <p className="font-sans text-[11px] text-ag-gray-light leading-tight">
                       {t('sessionCardLocked')}
                     </p>
-                    <NextLink
-                      href="/client/register"
-                      className="font-sans text-[11px] font-semibold text-ag-apex-ink underline underline-offset-2 hover:text-ag-apex transition-colors"
-                    >
-                      {t('sessionCardLockedCta')} →
-                    </NextLink>
+                    {process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' && (
+                      <NextLink
+                        href="/client/register"
+                        className="font-sans text-[11px] font-semibold text-ag-apex-ink underline underline-offset-2 hover:text-ag-apex transition-colors"
+                      >
+                        {t('sessionCardLockedCta')} →
+                      </NextLink>
+                    )}
                   </div>
                 )}
                 <Link
