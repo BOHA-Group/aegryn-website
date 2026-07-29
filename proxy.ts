@@ -41,29 +41,23 @@ function localeFromAcceptLanguage(header: string | null): Locale | null {
 const intlMiddleware = createIntlMiddleware(routing)
 
 /* ── Supabase Auth check + token refresh ──
-   Pattern officiel Supabase SSR middleware : on mute request.cookies directement
-   (API native NextRequest) puis on reconstruit la NextResponse à partir de cette
-   requête mutée. C'est la seule façon fiable de propager les cookies rafraîchis
-   aux Server Components dans la même requête — reconstruire un header "Cookie"
-   à la main (ancienne implémentation) ne suffisait pas. */
+   Pattern officiel Supabase 2025 (doc: supabase.com/docs/guides/auth/server-side/creating-a-client)
+
+   POURQUOI getClaims() et non getSession() / getUser() :
+   - getSession() : lit le cookie, déclenche un refresh réseau si expiré → si plusieurs
+     prefetch Next.js arrivent en parallèle (SideNav = 6-8 <Link>) → plusieurs requêtes
+     tentent de consommer le même refresh_token (rotation Supabase = usage unique) →
+     les requêtes suivantes invalident la session → déconnexion aléatoire.
+   - getUser() : valide le JWT via appel réseau sans rotation → sécurisé mais ne rafraîchit
+     jamais le token → déconnexion certaine après expiration de l'access_token (~1h).
+   - getClaims() : valide le JWT LOCALEMENT via WebCrypto + JWKS cached → AUCUN appel
+     réseau, AUCUNE rotation possible → thread-safe, idempotent, zéro race condition.
+     C'est la méthode recommandée par Supabase pour protéger des routes en middleware.
+     Le refresh du token reste géré automatiquement par le SDK côté navigateur. */
 async function refreshAndCheckSession(
   req: NextRequest
 ): Promise<{ hasSession: boolean; response: NextResponse }> {
   let response = NextResponse.next({ request: req })
-
-  /* Next.js déclenche un prefetch automatique de tous les <Link> visibles au
-     scroll/mount (SideNav affiche 6-8 liens simultanément). Chaque prefetch
-     traverse ce middleware — si plusieurs partent en parallèle et que
-     l'access_token est expiré, ils tentent tous de rafraîchir avec le MÊME
-     refresh_token (rotation Supabase = usage unique) → un seul réussit, les
-     autres invalident la session → déconnexion aléatoire au clic suivant.
-     On ignore donc le refresh pour les requêtes de prefetch : elles n'ont pas
-     besoin de contenu authentifié, seulement de peupler le cache RSC. */
-  const isPrefetch = req.headers.get('next-router-prefetch') === '1' || req.headers.get('purpose') === 'prefetch'
-  if (isPrefetch) {
-    const sbCookie = req.cookies.getAll().some(c => c.name.startsWith('sb-') && c.name.includes('auth-token'))
-    return { hasSession: sbCookie, response }
-  }
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -82,15 +76,9 @@ async function refreshAndCheckSession(
     }
   )
 
-  /* getSession() déclenche le refresh du access_token via refresh_token si expiré.
-     C'est volontaire et c'est le SEUL endroit où ce refresh doit avoir lieu — une
-     seule fois par requête, ici dans le middleware. Les Server Components (layouts
-     imbriqués) utilisent getUser() (lib/supabaseServer.ts) qui NE rafraîchit PAS,
-     pour éviter que plusieurs layouts consomment le même refresh_token en parallèle
-     (rotation Supabase → un seul usage valide → race condition). */
-  const { data: { session } } = await supabase.auth.getSession()
+  const { data } = await supabase.auth.getClaims()
 
-  return { hasSession: !!session?.user, response }
+  return { hasSession: !!data?.claims, response }
 }
 
 export default async function middleware(req: NextRequest) {

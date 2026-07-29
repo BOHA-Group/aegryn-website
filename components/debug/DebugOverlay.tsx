@@ -14,11 +14,14 @@ type Info = {
   sbCookies: string[]
 }
 
+const IS_PREVIEW = process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview' || process.env.NODE_ENV === 'development'
+
 export default function DebugOverlay() {
   const [info, setInfo] = useState<Info | null>(null)
   const pathname = usePathname()
 
   useEffect(() => {
+    if (!IS_PREVIEW) return
     const run = async () => {
       try {
         const supabase = createBrowserClient(
@@ -57,7 +60,7 @@ export default function DebugOverlay() {
     run()
   }, [pathname])
 
-  if (!info) return null
+  if (!IS_PREVIEW || !info) return null
 
   const ok = info.hasUser && !info.expired
 

@@ -127,12 +127,19 @@ export default async function LocaleLayout({ children, params }: Props) {
         suppressHydrationWarning
         className={`${plusJakartaSans.variable} font-sans bg-ag-white text-ag-dark antialiased`}
       >
+        {/* JSON-LD : Next.js 15 App Router ne supporte pas de <head> manuel.
+            Le pattern officiel est de placer les scripts JSON-LD comme enfants
+            directs du body avant le contenu — les moteurs de recherche les détectent
+            correctement. suppressHydrationWarning évite les warnings React 19
+            liés aux différences de rendu SSR/CSR sur le contenu de ces scripts. */}
         <script
+          key="jsonld-org"
           type="application/ld+json"
           suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynOrganizationSchema) }}
         />
         <script
+          key="jsonld-web"
           type="application/ld+json"
           suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynWebSiteSchema) }}
