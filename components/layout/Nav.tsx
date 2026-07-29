@@ -168,21 +168,29 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
     /* Logo — toujours pleinement opaque, sans animation d'entrée ni filtre */
     if (logoRef.current) gsap.set(logoRef.current, { opacity: 1, x: 0, clearProps: 'opacity,transform,filter' })
 
-    const tl = gsap.timeline({ defaults: { ease: 'expo.out', duration: 0.6 } })
-    tl.from('.nav-link-item', { opacity: 0, y: -8, stagger: 0.06, delay: 0.1 })
-      .from(rightRef.current, { opacity: 0, x: 12 }, '-=0.4')
-      .call(() => {
-        gsap.set('.nav-link-item', { clearProps: 'opacity,transform' })
-        if (rightRef.current) gsap.set(rightRef.current, { clearProps: 'opacity,transform' })
-      })
+    if (!linksRef.current || !rightRef.current) return
 
-    return () => { tl.kill() }
+    /* gsap.context() scope les sélecteurs au conteneur ref — évite que GSAP
+       sélectionne des nœuds en dehors du composant ou avant la fin de l'hydratation
+       React 19, ce qui provoquait le crash removeChild. */
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ defaults: { ease: 'expo.out', duration: 0.6 } })
+      tl.from('.nav-link-item', { opacity: 0, y: -8, stagger: 0.06, delay: 0.1 })
+        .from(rightRef.current, { opacity: 0, x: 12 }, '-=0.4')
+        .call(() => {
+          gsap.set('.nav-link-item', { clearProps: 'opacity,transform' })
+          if (rightRef.current) gsap.set(rightRef.current, { clearProps: 'opacity,transform' })
+        })
+    }, linksRef)
+
+    return () => { ctx.revert() }
   }, [])
 
   useEffect(() => {
     if (!drawerRef.current || !mobileOpen) return
+    const el = drawerRef.current
     const ctx = gsap.context(() => {
-      gsap.fromTo(drawerRef.current!,
+      gsap.fromTo(el,
         { opacity: 0, y: -16 },
         { opacity: 1, y: 0, duration: 0.35, ease: 'expo.out' }
       )
@@ -190,7 +198,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
         opacity: 0, x: -16, stagger: 0.05,
         duration: 0.35, ease: 'expo.out', delay: 0.1,
       })
-    }, drawerRef)
+    }, el)
     return () => ctx.revert()
   }, [mobileOpen])
 
