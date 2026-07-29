@@ -21,7 +21,8 @@ export default async function SellerLayout({ children }: { children: React.React
   const canAccessSeller = roles.includes('seller')
   if (!canAccessSeller) redirect('/client/buyer')
 
-  const hasBuyer = roles.includes('buyer') || roles.includes('partner')
+  const hasBuyer   = roles.includes('buyer')
+  const hasPartner = roles.includes('partner')
 
   const { count: unreadCount } = await supa
     .from('user_notifications')
@@ -41,7 +42,7 @@ export default async function SellerLayout({ children }: { children: React.React
             <p className="font-sans text-[11px] text-white/60 mt-0.5 truncate">{displayName}</p>
           </div>
 
-          <ViewSwitcher hasBuyer={hasBuyer} hasSeller={true} />
+          <ViewSwitcher hasBuyer={hasBuyer} hasSeller={true} hasPartner={hasPartner} />
           <SellerNav unreadCount={unreadCount ?? 0} />
 
           <div className="mt-auto px-5 py-4 border-t border-white/10">

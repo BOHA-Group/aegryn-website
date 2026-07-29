@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import PartnerNav from './PartnerNav'
+import ViewSwitcher from '@/app/client/ViewSwitcher'
 import KycBanner from '@/components/client/KycBanner'
 
 export default async function PartnerLayout({ children }: { children: React.ReactNode }) {
@@ -16,8 +17,12 @@ export default async function PartnerLayout({ children }: { children: React.Reac
     .eq('id', user.id)
     .single()
 
-  const isPartner = Array.isArray(profile?.roles) && profile.roles.includes('partner')
+  const roles     = Array.isArray(profile?.roles) ? profile.roles as string[] : []
+  const isPartner  = roles.includes('partner')
   if (!isPartner) redirect('/client/my-assets')
+
+  const hasBuyer  = roles.includes('buyer')
+  const hasSeller = roles.includes('seller')
 
   const { count: unreadCount } = await supa
     .from('user_notifications')
@@ -37,6 +42,7 @@ export default async function PartnerLayout({ children }: { children: React.Reac
             <p className="font-sans text-[11px] text-white/60 mt-0.5 truncate">{displayName}</p>
           </div>
 
+          <ViewSwitcher hasBuyer={hasBuyer} hasSeller={hasSeller} hasPartner={true} />
           <PartnerNav unreadCount={unreadCount ?? 0} />
 
           <div className="mt-auto px-5 py-4 border-t border-white/10">

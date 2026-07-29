@@ -23,7 +23,8 @@ export default async function BuyerLayout({ children }: { children: React.ReactN
   const canAccessBuyer = roles.includes('buyer')
   if (!canAccessBuyer) redirect('/client/seller')
 
-  const hasSeller = roles.includes('seller')
+  const hasSeller  = roles.includes('seller')
+  const hasPartner = roles.includes('partner')
 
   const { count: unreadCount } = await supa
     .from('user_notifications')
@@ -45,7 +46,7 @@ export default async function BuyerLayout({ children }: { children: React.ReactN
             <p className="font-sans text-[11px] text-white/60 mt-0.5 truncate">{displayName}</p>
           </div>
 
-          <ViewSwitcher hasBuyer={true} hasSeller={hasSeller} />
+          <ViewSwitcher hasBuyer={true} hasSeller={hasSeller} hasPartner={hasPartner} />
           <BuyerNav unreadCount={unreadCount ?? 0} />
 
           <div className="mt-auto px-5 py-4 border-t border-white/10">
