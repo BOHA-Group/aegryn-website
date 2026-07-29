@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { ShoppingBag, Briefcase, Users, CheckCircle2, Loader2, ArrowUpRight } from 'lucide-react'
+import { ShoppingBag, Briefcase, Users, Loader2, ArrowUpRight } from 'lucide-react'
 
 type Role = 'buyer' | 'seller' | 'partner'
 
