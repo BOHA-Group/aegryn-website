@@ -44,7 +44,9 @@ const intlMiddleware = createIntlMiddleware(routing)
 async function refreshAndCheckSession(
   req: NextRequest
 ): Promise<{ hasSession: boolean; response: NextResponse }> {
-  let response = NextResponse.next({ request: req })
+  /* On accumule les cookies à écrire séparément pour éviter
+     de recréer la response et perdre des cookies en cours de route */
+  const cookiesToSet: { name: string; value: string; options: Record<string, unknown> }[] = []
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -53,21 +55,24 @@ async function refreshAndCheckSession(
       cookies: {
         getAll: () => req.cookies.getAll(),
         setAll: (toSet) => {
-          toSet.forEach(({ name, value }) => req.cookies.set(name, value))
-          response = NextResponse.next({ request: req })
-          toSet.forEach(({ name, value, options }) =>
-            response.cookies.set(name, value, options)
-          )
+          toSet.forEach(c => cookiesToSet.push(c))
         },
       },
     }
   )
 
-  /* getUser() rafraîchit automatiquement le access_token si expiré
-     (utilise le refresh_token stocké dans le cookie) */
-  const { data: { user } } = await supabase.auth.getUser()
+  /* getSession() utilise le refresh_token pour renouveler le access_token
+     expiré côté Edge, sans appel réseau supplémentaire.
+     getUser() valide ensuite le token côté serveur Supabase (sécurité). */
+  const { data: { session } } = await supabase.auth.getSession()
 
-  return { hasSession: !!user, response }
+  /* Construire la response APRÈS le refresh pour y inclure les nouveaux cookies */
+  const response = NextResponse.next({ request: req })
+  cookiesToSet.forEach(({ name, value, options }) =>
+    response.cookies.set(name, value, options as Parameters<typeof response.cookies.set>[2])
+  )
+
+  return { hasSession: !!session?.user, response }
 }
 
 export default async function middleware(req: NextRequest) {
