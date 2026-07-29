@@ -11,6 +11,7 @@ import { ScrollToTop } from '@/components/ui/ScrollToTop'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import MetaPixel from '@/components/analytics/MetaPixel'
 import { aegrynOrganizationSchema, aegrynWebSiteSchema } from '@/lib/seo'
+import DebugOverlay from '@/components/debug/DebugOverlay'
 import '@/styles/globals.css'
 
 const plusJakartaSans = localFont({
@@ -152,6 +153,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             <ScrollToTop />
             <GoogleAnalytics />
             <MetaPixel />
+            <DebugOverlay />
           </LenisProvider>
         </NextIntlClientProvider>
       </body>

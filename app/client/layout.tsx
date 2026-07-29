@@ -5,6 +5,7 @@ import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import Nav, { type NavUser } from '@/components/layout/Nav'
+import DebugOverlay          from '@/components/debug/DebugOverlay'
 import '@/styles/globals.css'
 
 const SUPPORTED_LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
@@ -59,6 +60,7 @@ export default async function ClientLayout({ children }: { children: React.React
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Nav user={navUser} />
           {children}
+          <DebugOverlay />
         </NextIntlClientProvider>
       </body>
     </html>
