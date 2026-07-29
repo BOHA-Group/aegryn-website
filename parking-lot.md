@@ -1,5 +1,44 @@
 # Parking Lot — Éléments archivés (à réactiver sur décision)
 
+---
+
+## Espace Client — Chemins bloqués en production
+
+**Bloqué le :** 29/07/2026  
+**Condition :** `VERCEL_ENV === 'production'` (serveur) ou `NEXT_PUBLIC_VERCEL_ENV === 'production'` (client)  
+**Raison :** Problèmes d'hydratation React + navigation compte non résolus — à réouvrir après stabilisation
+
+### Chemins bloqués et mécanisme
+
+| Chemin / Élément | Fichier | Mécanisme |
+|---|---|---|
+| `/client/login` (URL directe) | `app/client/login/page.tsx:18` | `if (process.env.VERCEL_ENV === 'production') redirect('/')` |
+| `/client/register` (URL directe) | `app/client/register/page.tsx:14` | `if (process.env.VERCEL_ENV === 'production') redirect('/')` |
+| Nav desktop — bouton connexion | `components/layout/Nav.tsx:333` | `process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'` → `<span>` grisé + badge "Soon" |
+| Nav mobile — bouton connexion | `components/layout/Nav.tsx:521` | idem |
+| `/auction/catalog` — CTA login + register | `app/[locale]/auction/catalog/page.tsx:153` | `process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` |
+| `/auction/sessions` — lien register | `app/[locale]/auction/sessions/page.tsx:120` | `process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` |
+| `/grade/submit/success` — bouton "Accéder à mon espace" | `app/[locale]/grade/submit/success/page.tsx:33` | `process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` |
+
+### Pour réouvrir (tout ou partie)
+
+**Réouvrir login + register (URLs directes) :**
+- `app/client/login/page.tsx` : supprimer la ligne `if (process.env.VERCEL_ENV === 'production') redirect('/')`
+- `app/client/register/page.tsx` : idem
+
+**Réouvrir le bouton connexion dans la Nav :**
+- `components/layout/Nav.tsx` : remplacer les deux blocs `{process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' ? (<span>...) : (<NextLink>...)}` par directement `<NextLink href="/client/login">` (desktop ligne ~333, mobile ligne ~521)
+
+**Réouvrir les CTA dans les pages marketing :**
+- `auction/catalog/page.tsx` : retirer la condition `&& process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` ligne 153
+- `auction/sessions/page.tsx` : retirer le `{process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' && (...)}` autour du lien register
+- `grade/submit/success/page.tsx` : retirer le `{process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' && (...)}` autour du NextLink
+
+### Global-error en production
+`app/global-error.tsx` : `useEffect` déclenche `window.location.reload()` automatiquement si `NEXT_PUBLIC_VERCEL_ENV === 'production'`. Pour désactiver, supprimer le `useEffect` et le `if (isProd)` dans ce fichier.
+
+---
+
 ## Meta Pixel — ID à configurer
 
 **Archivé le :** 26/07/2026  
