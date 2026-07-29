@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 import { supabase }        from '@/lib/supabase'
 import { ArrowUpRight, Eye, EyeOff, CheckCircle } from 'lucide-react'
 
-type Role = 'buyer' | 'seller'
+type Role = 'buyer' | 'seller' | 'partner'
 
 function getPasswordStrength(pwd: string): { score: number; rules: boolean[] } {
   const rules = [
@@ -82,8 +82,9 @@ export default function RegisterForm() {
       setSuccess(true)
 
       setTimeout(() => {
-        if (effectiveRole === 'seller') router.push('/client/seller')
-        else                            router.push('/client/buyer')
+        if (effectiveRole === 'seller')       router.push('/client/seller')
+        else if (effectiveRole === 'partner') router.push('/client/partner')
+        else                                  router.push('/client/buyer')
       }, 3000)
     } catch {
       setError(t('errorNetwork'))
@@ -103,8 +104,9 @@ export default function RegisterForm() {
   }
 
   const roleOptions: { value: Role; label: string; desc: string }[] = [
-    { value: 'buyer',  label: t('roleBuyer'),  desc: t('roleBuyerDesc')  },
-    { value: 'seller', label: t('roleSeller'), desc: t('roleSellerDesc') },
+    { value: 'buyer',   label: t('roleBuyer'),   desc: t('roleBuyerDesc')   },
+    { value: 'seller',  label: t('roleSeller'),  desc: t('roleSellerDesc')  },
+    { value: 'partner', label: t('rolePartner'), desc: t('rolePartnerDesc') },
   ]
 
   return (

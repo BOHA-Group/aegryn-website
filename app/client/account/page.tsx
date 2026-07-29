@@ -6,6 +6,7 @@ import { createServiceClient } from '@/lib/supabase'
 import AccountForm from './AccountForm'
 import DeletePartialSection from './DeletePartialSection'
 import DeleteAccountSection from './DeleteAccountSection'
+import ActivateProfileSection from './ActivateProfileSection'
 
 export const metadata: Metadata = {
   title: 'Mon compte — AEGRYN',
@@ -82,6 +83,9 @@ export default async function AccountPage() {
             </div>
           </div>
         )}
+
+        {/* Activer un profil supplémentaire */}
+        <ActivateProfileSection currentRoles={roles} />
 
         {/* Formulaire profil */}
         <AccountForm
