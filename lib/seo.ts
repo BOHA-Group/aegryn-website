@@ -81,11 +81,11 @@ export function generateAegrynMetadata({
       images:      [`${BASE_URL}${image}`],
     },
     robots: {
-      index:  true,
-      follow: true,
+      index:  process.env.VERCEL_ENV === 'production',
+      follow: process.env.VERCEL_ENV === 'production',
       googleBot: {
-        index:               true,
-        follow:              true,
+        index:               process.env.VERCEL_ENV === 'production',
+        follow:              process.env.VERCEL_ENV === 'production',
         'max-image-preview': 'large',
         'max-snippet':       -1,
         'max-video-preview': -1,

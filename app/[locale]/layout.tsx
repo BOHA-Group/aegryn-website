@@ -52,7 +52,9 @@ const plusJakartaSans = localFont({
   fallback: ['system-ui', '-apple-system', 'sans-serif'],
 })
 
-export const metadata: Metadata = {
+export function generateMetadata(): Metadata {
+const isProd = process.env.VERCEL_ENV === 'production'
+return {
   metadataBase: new URL('https://aegryn.com'),
   title: {
     default: 'Aegryn — Engineered to Last',
@@ -94,6 +96,11 @@ export const metadata: Metadata = {
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? '',
   },
+  robots: {
+    index:  isProd,
+    follow: isProd,
+    googleBot: { index: isProd, follow: isProd },
+  },
   other: {
     'msapplication-TileColor': '#050505',
     'msapplication-config':    '/browserconfig.xml',
@@ -101,6 +108,7 @@ export const metadata: Metadata = {
     'color-scheme':            'light',
     'format-detection':        'telephone=no',
   },
+}
 }
 
 type Props = {
