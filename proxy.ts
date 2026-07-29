@@ -40,11 +40,16 @@ function localeFromAcceptLanguage(header: string | null): Locale | null {
 
 const intlMiddleware = createIntlMiddleware(routing)
 
-/* ── Supabase Auth check + token refresh ── */
+/* ── Supabase Auth check + token refresh ──
+   Pattern officiel Supabase SSR middleware : on mute request.cookies directement
+   (API native NextRequest) puis on reconstruit la NextResponse à partir de cette
+   requête mutée. C'est la seule façon fiable de propager les cookies rafraîchis
+   aux Server Components dans la même requête — reconstruire un header "Cookie"
+   à la main (ancienne implémentation) ne suffisait pas. */
 async function refreshAndCheckSession(
   req: NextRequest
 ): Promise<{ hasSession: boolean; response: NextResponse }> {
-  const cookiesToSet: { name: string; value: string; options: Record<string, unknown> }[] = []
+  let response = NextResponse.next({ request: req })
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -52,30 +57,19 @@ async function refreshAndCheckSession(
     {
       cookies: {
         getAll: () => req.cookies.getAll(),
-        setAll: (toSet) => { toSet.forEach(c => cookiesToSet.push(c)) },
+        setAll: (toSet) => {
+          toSet.forEach(({ name, value }) => req.cookies.set(name, value))
+          response = NextResponse.next({ request: req })
+          toSet.forEach(({ name, value, options }) =>
+            response.cookies.set(name, value, options as Parameters<typeof response.cookies.set>[2])
+          )
+        },
       },
     }
   )
 
   /* getSession() déclenche le refresh du access_token via refresh_token si expiré */
   const { data: { session } } = await supabase.auth.getSession()
-
-  /* CRITIQUE : propager les cookies rafraîchis dans la requête transmise
-     au Server Component. Sans ça, getUser() dans les layouts lit l'ancien
-     access_token expiré depuis les cookies de la requête originale → null → redirect login. */
-  const requestHeaders = new Headers(req.headers)
-  if (cookiesToSet.length > 0) {
-    const merged = new Map(req.cookies.getAll().map(c => [c.name, c.value] as [string, string]))
-    cookiesToSet.forEach(c => merged.set(c.name, c.value))
-    requestHeaders.set('cookie', Array.from(merged.entries()).map(([k, v]) => `${k}=${v}`).join('; '))
-  }
-
-  const response = NextResponse.next({ request: { headers: requestHeaders } })
-
-  /* Persister aussi dans Set-Cookie de la réponse pour le navigateur */
-  cookiesToSet.forEach(({ name, value, options }) =>
-    response.cookies.set(name, value, options as Parameters<typeof response.cookies.set>[2])
-  )
 
   return { hasSession: !!session?.user, response }
 }
