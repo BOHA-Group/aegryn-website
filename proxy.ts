@@ -69,7 +69,12 @@ async function refreshAndCheckSession(
     }
   )
 
+  const allCookies = req.cookies.getAll()
+  const sbCookies = allCookies.filter(c => c.name.startsWith('sb-'))
+  console.log(`[MW] ${req.nextUrl.pathname} cookies=${allCookies.length} sb=${sbCookies.map(c=>c.name).join('|')||'NONE'}`)
+
   const { data: { session } } = await supabase.auth.getSession()
+  console.log(`[MW] getSession=${!!session}`)
 
   return { hasSession: !!session, response }
 }
