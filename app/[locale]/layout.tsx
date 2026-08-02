@@ -132,6 +132,27 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} dir="ltr" suppressHydrationWarning>
       <head>
+        {/* Consent Mode v2 — DOIT être inline et en premier dans <head>,
+            avant tout script GTM/GA4/Cookie-Script.
+            Garantit que les defaults "denied" sont lus par GTM dès son init. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                ad_storage:              'denied',
+                ad_user_data:            'denied',
+                ad_personalization:      'denied',
+                analytics_storage:       'denied',
+                functionality_storage:   'granted',
+                personalization_storage: 'denied',
+                security_storage:        'granted',
+                wait_for_update:         500
+              });
+            `,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynOrganizationSchema) }}

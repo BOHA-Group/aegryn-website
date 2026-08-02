@@ -7,28 +7,7 @@ export default function GoogleAnalytics() {
 
   return (
     <>
-      {/* Consent Mode v2 — defaults refusés avant tout chargement GTM.
-          Cookie-Script met à jour ces valeurs via gtag('consent','update',...)
-          quand l'utilisateur accepte ou refuse dans la bannière.
-          GTM / GA4 respectent ces signaux automatiquement. */}
-      <Script id="gtm-consent-defaults" strategy="lazyOnload">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('consent', 'default', {
-            ad_storage:              'denied',
-            ad_user_data:            'denied',
-            ad_personalization:      'denied',
-            analytics_storage:       'denied',
-            functionality_storage:   'granted',
-            personalization_storage: 'denied',
-            security_storage:        'granted',
-            wait_for_update:         500
-          });
-        `}
-      </Script>
-
-      {/* GTM — se charge après le consent default ci-dessus */}
+      {/* GTM — consent default géré inline dans layout.tsx <head> (avant ce script) */}
       <Script id="gtm-init" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
