@@ -47,10 +47,12 @@ export async function POST(req: NextRequest) {
     .single()
 
   const stripe    = new Stripe(stripeKey, { apiVersion: '2026-06-24.dahlia' })
-  const siteUrl   = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'
+  /* VERCEL_URL est l'URL exacte du déploiement (preview ou prod) — pas de https:// préfixé par Vercel */
+  const vercelUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null
+  const siteUrl   = vercelUrl ?? process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'
   const productId = PRODUCT_IDS[body.plan]
 
-  console.log(`[SUBSCRIBE] plan=${body.plan} productId=${productId} keyPrefix=${stripeKey.slice(0, 12)}...`)
+  console.log(`[SUBSCRIBE] plan=${body.plan} productId=${productId} keyPrefix=${stripeKey.slice(0, 12)}... siteUrl=${siteUrl}`)
 
   /* Récupérer le price actif du produit */
   let prices: Awaited<ReturnType<typeof stripe.prices.list>>
