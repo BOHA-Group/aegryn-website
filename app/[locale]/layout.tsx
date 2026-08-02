@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import Script from 'next/script'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
@@ -183,6 +184,12 @@ export default async function LocaleLayout({ children, params }: Props) {
             <GoogleAnalytics />
             <MetaPixel />
             <DebugOverlay />
+            {/* Cookie-Script — afterInteractive pour détecter dans le HTML et éviter crash hydration */}
+            <Script
+              id="cookie-script"
+              src="https://cdn.cookie-script.com/s/95c60815b4306b9e3350caa17fee93a8.js"
+              strategy="afterInteractive"
+            />
           </LenisProvider>
         </NextIntlClientProvider>
       </body>
