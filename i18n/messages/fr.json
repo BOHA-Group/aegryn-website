@@ -1401,7 +1401,7 @@
       "title": "Discover — Intelligence de marché AEGRYN",
       "desc": "Rapports marché, guides vendeurs et acquéreurs, analyses certification, l'intelligence du marché tech européen par AEGRYN."
     },
-    "label": "AEGRYN Discover",
+    "label": "Blog AEGRYN",
     "title": "Intelligence de marché.\nAccessible à tous.",
     "desc": "Rapports, guides et analyses pour comprendre le marché des actifs tech européens, rédigés par les équipes AEGRYN.",
     "filterAll": "Tous",
@@ -1416,11 +1416,12 @@
     "filterDACH": "Marché DACH",
     "readMin": "min de lecture",
     "readMore": "Lire l'article",
-    "backToDiscover": "← Retour à Discover",
+    "backToDiscover": "← Retour au Blog",
     "featuredLabel": "À la une",
     "allArticles": "Tous les articles",
     "ctaGrade": "Certifier mon actif",
     "ctaAuction": "Voir les sessions",
+    "searchPlaceholder": "Rechercher un article...",
     "noArticles": "Aucun article dans cette catégorie pour l'instant.",
     "newsletterLabel": "Lettre d'information",
     "newsletterTitle": "Ne manquez aucune analyse.",
@@ -1671,7 +1672,7 @@
     "grades": [
       {
         "grade": "AEG ★",
-        "label": "Stellar",
+        "label": "Exceptionnel",
         "range": "90–100 / 100",
         "color": "#5ADDA4",
         "rarity": "< 5% des actifs certifiés",
@@ -1692,7 +1693,7 @@
       },
       {
         "grade": "AAA",
-        "label": "Premium",
+        "label": "Excellent",
         "range": "75–89 / 100",
         "color": "#C9A84C",
         "rarity": "10–15% des actifs certifiés",
@@ -1713,7 +1714,7 @@
       },
       {
         "grade": "AA",
-        "label": "Standard",
+        "label": "Solide",
         "range": "60–74 / 100",
         "color": "#9BA8B0",
         "rarity": "25–30% des actifs certifiés",
@@ -1734,7 +1735,7 @@
       },
       {
         "grade": "A",
-        "label": "Developing",
+        "label": "En développement",
         "range": "45–59 / 100",
         "color": "#4A90D9",
         "rarity": "30–35% des actifs certifiés",
@@ -1755,7 +1756,7 @@
       },
       {
         "grade": "B",
-        "label": "Early Stage",
+        "label": "Émergent",
         "range": "30–44 / 100",
         "color": "#D4820A",
         "rarity": "15–20% des actifs certifiés",
@@ -2910,7 +2911,7 @@
       },
       {
         "g": "B",
-        "d": "Early stage — Plan de remédiation"
+        "d": "Early Stage — Plan de remédiation"
       }
     ]
   },

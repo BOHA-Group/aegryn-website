@@ -1275,7 +1275,7 @@
     "grades": [
       {
         "grade": "AEG ★",
-        "label": "Stellar",
+        "label": "Außergewöhnlich",
         "range": "90–100 / 100",
         "color": "#5ADDA4",
         "rarity": "< 5% der zertifizierten Assets",
@@ -1296,7 +1296,7 @@
       },
       {
         "grade": "AAA",
-        "label": "Premium",
+        "label": "Exzellent",
         "range": "75–89 / 100",
         "color": "#C9A84C",
         "rarity": "10–15% der zertifizierten Assets",
@@ -1317,7 +1317,7 @@
       },
       {
         "grade": "AA",
-        "label": "Standard",
+        "label": "Solide",
         "range": "60–74 / 100",
         "color": "#9BA8B0",
         "rarity": "25–30% der zertifizierten Assets",
@@ -1338,7 +1338,7 @@
       },
       {
         "grade": "A",
-        "label": "Developing",
+        "label": "In Entwicklung",
         "range": "45–59 / 100",
         "color": "#4A90D9",
         "rarity": "30–35% der zertifizierten Assets",
@@ -1359,7 +1359,7 @@
       },
       {
         "grade": "B",
-        "label": "Early Stage",
+        "label": "Aufstrebend",
         "range": "30–44 / 100",
         "color": "#D4820A",
         "rarity": "15–20% der zertifizierten Assets",
@@ -2033,7 +2033,7 @@
       "title": "Discover — AEGRYN Marktintelligenz",
       "desc": "Marktberichte, Verkäufer- und Käuferführer, Zertifizierungsanalysen von AEGRYN."
     },
-    "label": "AEGRYN Discover",
+    "label": "AEGRYN Blog",
     "title": "Marktintelligenz.\nFür alle zugänglich.",
     "desc": "Berichte, Leitfäden und Analysen zum europäischen Tech-Asset-Markt, von den AEGRYN-Teams.",
     "filterAll": "Alle",
@@ -2048,11 +2048,12 @@
     "filterDACH": "DACH-Markt",
     "readMin": "Min. Lesezeit",
     "readMore": "Artikel lesen",
-    "backToDiscover": "← Zurück zu Discover",
+    "backToDiscover": "← Zurück zum Blog",
     "featuredLabel": "Empfohlen",
     "allArticles": "Alle Artikel",
     "ctaGrade": "Mein Asset zertifizieren",
     "ctaAuction": "Sessions ansehen",
+    "searchPlaceholder": "Artikel suchen...",
     "noArticles": "Noch keine Artikel in dieser Kategorie.",
     "newsletterLabel": "Newsletter",
     "newsletterTitle": "Keine Analyse verpassen.",
@@ -2843,7 +2844,7 @@
       },
       {
         "g": "B",
-        "d": "Frühphase — Sanierungsplan"
+        "d": "Early Stage — Sanierungsplan"
       }
     ]
   },

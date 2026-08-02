@@ -1275,7 +1275,7 @@
     "grades": [
       {
         "grade": "AEG ★",
-        "label": "Stellar",
+        "label": "Uitzonderlijk",
         "range": "90–100 / 100",
         "color": "#5ADDA4",
         "rarity": "< 5% van gecertificeerde activa",
@@ -1296,7 +1296,7 @@
       },
       {
         "grade": "AAA",
-        "label": "Premium",
+        "label": "Uitstekend",
         "range": "75–89 / 100",
         "color": "#C9A84C",
         "rarity": "10–15% van gecertificeerde activa",
@@ -1317,7 +1317,7 @@
       },
       {
         "grade": "AA",
-        "label": "Standard",
+        "label": "Solide",
         "range": "60–74 / 100",
         "color": "#9BA8B0",
         "rarity": "25–30% van gecertificeerde activa",
@@ -1338,7 +1338,7 @@
       },
       {
         "grade": "A",
-        "label": "Developing",
+        "label": "In ontwikkeling",
         "range": "45–59 / 100",
         "color": "#4A90D9",
         "rarity": "30–35% van gecertificeerde activa",
@@ -1359,7 +1359,7 @@
       },
       {
         "grade": "B",
-        "label": "Early Stage",
+        "label": "Opkomend",
         "range": "30–44 / 100",
         "color": "#D4820A",
         "rarity": "15–20% van gecertificeerde activa",
@@ -2033,7 +2033,7 @@
       "title": "Discover — AEGRYN Marktintelligentie",
       "desc": "Marktrapportages, verkoper- en kopershandleidingen, certificeringsanalyses van AEGRYN."
     },
-    "label": "AEGRYN Discover",
+    "label": "AEGRYN Blog",
     "title": "Marktintelligentie.\nVoor iedereen toegankelijk.",
     "desc": "Rapporten, gidsen en analyses om de Europese tech-assetmarkt te begrijpen.",
     "filterAll": "Alle",
@@ -2048,11 +2048,12 @@
     "filterDACH": "DACH-markt",
     "readMin": "min leestijd",
     "readMore": "Artikel lezen",
-    "backToDiscover": "← Terug naar Discover",
+    "backToDiscover": "← Terug naar Blog",
     "featuredLabel": "Uitgelicht",
     "allArticles": "Alle artikelen",
     "ctaGrade": "Mijn asset certificeren",
     "ctaAuction": "Sessies bekijken",
+    "searchPlaceholder": "Artikelen zoeken...",
     "noArticles": "Nog geen artikelen in deze categorie.",
     "newsletterLabel": "Nieuwsbrief",
     "newsletterTitle": "Mis geen enkele analyse.",
@@ -2103,7 +2104,7 @@
       },
       {
         "code": "A",
-        "name": "Standaard",
+        "name": "Standard",
         "color": "grade-a",
         "desc": "Potentieel geïdentificeerd, verbeterpunten gedocumenteerd. Waardeplan voorgesteld."
       },
@@ -2839,11 +2840,11 @@
       },
       {
         "g": "A",
-        "d": "Standaard — Geïdentificeerd potentieel"
+        "d": "Standard — Geïdentificeerd potentieel"
       },
       {
         "g": "B",
-        "d": "Vroege fase — Herstelplan"
+        "d": "Early Stage — Herstelplan"
       }
     ]
   },

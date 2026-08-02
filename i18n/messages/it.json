@@ -1275,7 +1275,7 @@
     "grades": [
       {
         "grade": "AEG ★",
-        "label": "Stellar",
+        "label": "Eccezionale",
         "range": "90–100 / 100",
         "color": "#5ADDA4",
         "rarity": "< 5% degli asset certificati",
@@ -1296,7 +1296,7 @@
       },
       {
         "grade": "AAA",
-        "label": "Premium",
+        "label": "Eccellente",
         "range": "75–89 / 100",
         "color": "#C9A84C",
         "rarity": "10–15% degli asset certificati",
@@ -1317,7 +1317,7 @@
       },
       {
         "grade": "AA",
-        "label": "Standard",
+        "label": "Solido",
         "range": "60–74 / 100",
         "color": "#9BA8B0",
         "rarity": "25–30% degli asset certificati",
@@ -1338,7 +1338,7 @@
       },
       {
         "grade": "A",
-        "label": "Developing",
+        "label": "In sviluppo",
         "range": "45–59 / 100",
         "color": "#4A90D9",
         "rarity": "30–35% degli asset certificati",
@@ -1359,7 +1359,7 @@
       },
       {
         "grade": "B",
-        "label": "Early Stage",
+        "label": "Emergente",
         "range": "30–44 / 100",
         "color": "#D4820A",
         "rarity": "15–20% degli asset certificati",
@@ -2033,7 +2033,7 @@
       "title": "Discover — Intelligenza di mercato AEGRYN",
       "desc": "Report di mercato, guide venditori e acquirenti, analisi di certificazione da AEGRYN."
     },
-    "label": "AEGRYN Discover",
+    "label": "AEGRYN Blog",
     "title": "Intelligenza di mercato.\nAperta a tutti.",
     "desc": "Report, guide e analisi per comprendere il mercato europeo degli asset tech.",
     "filterAll": "Tutti",
@@ -2048,11 +2048,12 @@
     "filterDACH": "Mercato DACH",
     "readMin": "min di lettura",
     "readMore": "Leggi articolo",
-    "backToDiscover": "← Torna a Discover",
+    "backToDiscover": "← Torna al Blog",
     "featuredLabel": "In evidenza",
     "allArticles": "Tutti gli articoli",
     "ctaGrade": "Certifica il mio asset",
     "ctaAuction": "Vedi sessioni",
+    "searchPlaceholder": "Cerca articoli...",
     "noArticles": "Nessun articolo in questa categoria ancora.",
     "newsletterLabel": "Newsletter",
     "newsletterTitle": "Non perdere nessuna analisi.",
@@ -2843,7 +2844,7 @@
       },
       {
         "g": "B",
-        "d": "Early stage — Piano di rimedio"
+        "d": "Early Stage — Piano di rimedio"
       }
     ]
   },
