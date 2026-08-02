@@ -131,7 +131,7 @@ export default async function PartnerExpertProfilePage() {
           <p className="font-sans text-[12px] text-blue-700">
             Votre fiche sera publiée dans l&apos;annuaire dès que votre abonnement expert sera actif.
             Activez-le depuis la page{' '}
-            <a href="/client/partner/subscription" className="underline font-medium">Abonnement →</a>
+            <Link href="/client/partner/subscription" className="underline font-medium">Abonnement →</Link>
           </p>
         </div>
       )}
