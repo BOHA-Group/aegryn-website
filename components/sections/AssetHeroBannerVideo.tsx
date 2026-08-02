@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import Image                  from 'next/image'
 import { gsap, SplitText }    from '@/lib/gsap'
 
@@ -30,7 +30,7 @@ export function AssetHeroBannerVideo({ label, title, sub }: AssetHeroBannerVideo
   const subRef     = useRef<HTMLParagraphElement>(null)
   const labelRef   = useRef<HTMLParagraphElement>(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const wrap    = wrapRef.current
     const heading = headingRef.current
     if (!wrap || !heading) return

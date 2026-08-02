@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { gsap }              from '@/lib/gsap'
 
 /**
@@ -26,7 +26,7 @@ export function VisionMissionBlock({
   const wrapRef    = useRef<HTMLDivElement>(null)
   const missionRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const wrap    = wrapRef.current
     const mission = missionRef.current
     if (!wrap || !mission) return

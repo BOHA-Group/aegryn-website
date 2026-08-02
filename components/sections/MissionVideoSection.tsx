@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { useTranslations }   from 'next-intl'
 import { gsap, SplitText }   from '@/lib/gsap'
 
@@ -23,7 +23,7 @@ export function MissionVideoSection() {
   const tM = useTranslations('missionSection')
   const missionItems = tM.raw('items') as { title: string; desc: string }[]
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const wrap    = wrapRef.current
     const section = sectionRef.current
     if (!wrap || !section) return
