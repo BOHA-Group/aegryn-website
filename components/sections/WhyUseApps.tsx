@@ -55,8 +55,8 @@ export function WhyUseApps() {
     }, sectionRef)
 
     return () => {
-      ctx.revert()
       splits.forEach((s) => s.revert())
+      ctx.revert()
     }
   }, [])
 
@@ -79,12 +79,10 @@ export function WhyUseApps() {
                 {item.num}
               </p>
               <h3
-                suppressHydrationWarning
                 className="why-title font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2] pb-[0.15em] mb-4 overflow-hidden"
                 style={{ fontSize: 'clamp(14px,1.15vw,16px)' }}
-              >
-                {item.title}
-              </h3>
+                dangerouslySetInnerHTML={{ __html: item.title }}
+              />
               <p className="why-desc font-sans font-normal text-[12px] text-ag-gray leading-[1.7]" style={{ opacity: 0 }}>
                 {item.desc}
               </p>

@@ -23,7 +23,7 @@ export function GradeHero() {
         .from(descRef.current,   { opacity: 0, y: 14, duration: 0.6 }, '-=0.4')
         .from(ctaRef.current,    { opacity: 0, y: 10, duration: 0.5 }, '-=0.3')
     }, sectionRef)
-    return () => { ctx.revert(); split.revert() }
+    return () => { split.revert(); ctx.revert() }
   }, [])
 
   return (
@@ -35,12 +35,10 @@ export function GradeHero() {
         </p>
         <h1
           ref={headingRef}
-          suppressHydrationWarning
-          className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-3xl mb-6 whitespace-pre-line"
+          className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-3xl mb-6"
           style={{ fontSize: 'clamp(36px,5vw,76px)' }}
-        >
-          {t('title')}
-        </h1>
+          dangerouslySetInnerHTML={{ __html: t('title').replace(/\n/g, '<br>') }}
+        />
         <p ref={descRef} className="font-sans text-[16px] text-white/55 leading-relaxed max-w-xl mb-10">
           {t('desc')}
         </p>

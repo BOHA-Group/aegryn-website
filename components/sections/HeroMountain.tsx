@@ -83,8 +83,8 @@ export function HeroMountain() {
     }, sectionRef)
 
     return () => {
+      split.revert()
       ctx.revert()
-      if (headingRef.current) split.revert()
     }
   }, [])
 
@@ -136,14 +136,10 @@ export function HeroMountain() {
           <h1
             ref={headingRef}
             id="hero-title"
-            suppressHydrationWarning
             className="font-sans font-bold text-white leading-[1.28] tracking-[-0.03em] max-w-4xl mb-6"
             style={{ fontSize: 'clamp(56px,7.5vw,116px)' }}
-          >
-            {t('title').split('\n').map((line, i, arr) => (
-              <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
-            ))}
-          </h1>
+            dangerouslySetInnerHTML={{ __html: t('title').replace(/\n/g, '<br>') }}
+          />
 
           {/* Horizontal rule — Rolex signature separator */}
           <div
