@@ -1,5 +1,6 @@
 import createIntlMiddleware from 'next-intl/middleware'
 import { createServerClient } from '@supabase/ssr'
+import type { JWK } from '@supabase/auth-js'
 import { NextRequest, NextResponse } from 'next/server'
 import { routing } from '@/i18n/routing'
 
@@ -41,14 +42,31 @@ function localeFromAcceptLanguage(header: string | null): Locale | null {
 const intlMiddleware = createIntlMiddleware(routing)
 
 /* ── Supabase Auth check + token refresh ──
-   POURQUOI getUser() et non getClaims() / getSession() :
-   - getClaims() : valide le JWT LOCALEMENT via JWKS — mais le JWKS endpoint Supabase
-     de ce projet exige une API key (non standard) → getClaims() retourne toujours null
-     → redirect login systématique même avec une session valide.
-   - getSession() : lit le cookie + refresh réseau si expiré → race condition possible
-     si plusieurs prefetch parallèles tentent de consommer le même refresh_token.
-   - getUser() : valide le JWT via appel réseau direct à Supabase Auth → sécurisé,
-     pas de rotation de token, fonctionne sans JWKS → solution retenue. */
+   getClaims() valide le JWT localement via JWKS (WebCrypto, zéro rotation de token).
+   Le SDK cherche /.well-known/jwks.json mais ce projet Supabase l'expose sous
+   /auth/v1/.well-known/jwks.json — on pré-charge les clés et on les injecte
+   directement dans getClaims({ keys }) pour court-circuiter le fetch réseau. */
+
+let _jwksCache: JWK[] | null = null
+let _jwksCachedAt = 0
+const JWKS_TTL = 60 * 60 * 1000 // 1h
+
+async function getJwks(): Promise<JWK[]> {
+  const now = Date.now()
+  if (_jwksCache && now - _jwksCachedAt < JWKS_TTL) return _jwksCache
+  try {
+    const url  = process.env.NEXT_PUBLIC_SUPABASE_URL!
+    const key  = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    const res  = await fetch(`${url}/auth/v1/.well-known/jwks.json`, { headers: { apikey: key } })
+    const data = await res.json() as { keys?: JWK[] }
+    if (data.keys?.length) {
+      _jwksCache    = data.keys
+      _jwksCachedAt = now
+    }
+  } catch { /* ignore — fallback getUser */ }
+  return _jwksCache ?? []
+}
+
 async function refreshAndCheckSession(
   req: NextRequest
 ): Promise<{ hasSession: boolean; response: NextResponse }> {
@@ -71,9 +89,18 @@ async function refreshAndCheckSession(
     }
   )
 
-  const { data: { user } } = await supabase.auth.getUser()
+  const jwks = await getJwks()
+  const { data, error } = await supabase.auth.getClaims(
+    undefined,
+    jwks.length ? { jwks: { keys: jwks } } : {}
+  )
+  if (error || !data?.claims) {
+    /* Fallback réseau si JWKS indisponible ou token expiré non rafraîchi */
+    const { data: { user } } = await supabase.auth.getUser()
+    return { hasSession: !!user, response }
+  }
 
-  return { hasSession: !!user, response }
+  return { hasSession: true, response }
 }
 
 export default async function middleware(req: NextRequest) {
