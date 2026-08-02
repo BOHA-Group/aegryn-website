@@ -52,8 +52,6 @@ export async function POST(req: NextRequest) {
   const siteUrl   = vercelUrl ?? process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'
   const productId = PRODUCT_IDS[body.plan]
 
-  console.log(`[SUBSCRIBE] plan=${body.plan} productId=${productId} keyPrefix=${stripeKey.slice(0, 12)}... siteUrl=${siteUrl}`)
-
   /* Récupérer le price actif du produit */
   let prices: Awaited<ReturnType<typeof stripe.prices.list>>
   try {
@@ -64,7 +62,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: `stripe_error: ${msg}` }, { status: 500 })
   }
 
-  console.log(`[SUBSCRIBE] prices found=${prices.data.length} for product=${productId}`)
   if (!prices.data.length) {
     return NextResponse.json({ error: 'no_price_found' }, { status: 500 })
   }
@@ -111,6 +108,5 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: `stripe_checkout_error: ${msg}` }, { status: 500 })
   }
 
-  console.log(`[SUBSCRIBE] session created url=${session.url?.slice(0, 60)}...`)
   return NextResponse.json({ url: session.url })
 }
