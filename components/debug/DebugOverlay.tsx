@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { usePathname }         from 'next/navigation'
-import { createBrowserClient } from '@supabase/ssr'
+import { supabase }            from '@/lib/supabase'
 
 type Info = {
   path:      string
@@ -24,15 +24,28 @@ export default function DebugOverlay() {
     if (!IS_PREVIEW) return
     const run = async () => {
       try {
-        const supabase = createBrowserClient(
-          process.env.NEXT_PUBLIC_SUPABASE_URL!,
-          process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-        )
         const { data: { session }, error } = await supabase.auth.getSession()
-        const sbCookies = document.cookie
+        const allCookieNames = document.cookie
           .split(';')
           .map(c => c.trim().split('=')[0])
-          .filter(c => c.startsWith('sb-'))
+          .filter(Boolean)
+        const sbCookies = allCookieNames.filter(c => c.startsWith('sb-'))
+
+        /* Traçabilité preview : envoie l'état vu par le navigateur au serveur
+           pour le corréler avec les logs [MW] du middleware sur la même nav. */
+        fetch('/api/debug/trace', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            path: pathname,
+            allCookieNames,
+            sbCookieNames: sbCookies,
+            hasSession: !!session,
+            email: session?.user?.email ?? null,
+          }),
+          keepalive: true,
+        }).catch(() => {})
+
         const expiresAt = session?.expires_at
           ? new Date(session.expires_at * 1000).toISOString().slice(11, 19) + ' UTC'
           : null

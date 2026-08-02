@@ -1,5 +1,6 @@
 import createIntlMiddleware from 'next-intl/middleware'
 import { createServerClient } from '@supabase/ssr'
+
 import { NextRequest, NextResponse } from 'next/server'
 import { routing } from '@/i18n/routing'
 
@@ -40,28 +41,25 @@ function localeFromAcceptLanguage(header: string | null): Locale | null {
 
 const intlMiddleware = createIntlMiddleware(routing)
 
-/* ── Supabase Auth check + token refresh ──
-   Pattern officiel Supabase 2025 (doc: supabase.com/docs/guides/auth/server-side/creating-a-client)
+/* ── Supabase Auth check ──
+   getSession() lit le cookie localement (sans réseau, sans WebCrypto) pour vérifier
+   qu'une session existe. La validation sécurisée du JWT est déléguée aux Server
+   Component layouts (getUser() via supabaseServer.ts) qui font un appel réseau.
+   getClaims() échoue en Edge Runtime Vercel (crypto.subtle.importKey EC instable). */
 
-   POURQUOI getClaims() et non getSession() / getUser() :
-   - getSession() : lit le cookie, déclenche un refresh réseau si expiré → si plusieurs
-     prefetch Next.js arrivent en parallèle (SideNav = 6-8 <Link>) → plusieurs requêtes
-     tentent de consommer le même refresh_token (rotation Supabase = usage unique) →
-     les requêtes suivantes invalident la session → déconnexion aléatoire.
-   - getUser() : valide le JWT via appel réseau sans rotation → sécurisé mais ne rafraîchit
-     jamais le token → déconnexion certaine après expiration de l'access_token (~1h).
-   - getClaims() : valide le JWT LOCALEMENT via WebCrypto + JWKS cached → AUCUN appel
-     réseau, AUCUNE rotation possible → thread-safe, idempotent, zéro race condition.
-     C'est la méthode recommandée par Supabase pour protéger des routes en middleware.
-     Le refresh du token reste géré automatiquement par le SDK côté navigateur. */
 async function refreshAndCheckSession(
   req: NextRequest
 ): Promise<{ hasSession: boolean; response: NextResponse }> {
   let response = NextResponse.next({ request: req })
 
+  const rawUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? ''
+  const rawKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? ''
+  const supaUrl = rawUrl.trim()
+  const supaKey = rawKey.trim()
+
   const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    supaUrl,
+    supaKey,
     {
       cookies: {
         getAll: () => req.cookies.getAll(),
@@ -76,9 +74,9 @@ async function refreshAndCheckSession(
     }
   )
 
-  const { data } = await supabase.auth.getClaims()
+  const { data: { session } } = await supabase.auth.getSession()
 
-  return { hasSession: !!data?.claims, response }
+  return { hasSession: !!session, response }
 }
 
 export default async function middleware(req: NextRequest) {
@@ -94,16 +92,21 @@ export default async function middleware(req: NextRequest) {
     '/client/set-password',
   ]
   if (pathname.startsWith('/client/') && !PUBLIC_CLIENT_PATHS.includes(pathname)) {
-    const { hasSession, response } = await refreshAndCheckSession(req)
-    if (!hasSession) {
-      const loginUrl = req.nextUrl.clone()
-      loginUrl.pathname = '/client/login'
-      return NextResponse.redirect(loginUrl)
+    /* Les prefetch RSC (Next-Router-Prefetch: 1) n'envoient pas les cookies navigateur
+       → on les laisse passer, les layouts Server Component gèrent leur propre auth. */
+    const isPrefetch = req.headers.get('Next-Router-Prefetch') === '1'
+    if (!isPrefetch) {
+      const { hasSession, response } = await refreshAndCheckSession(req)
+      if (!hasSession) {
+        const loginUrl = req.nextUrl.clone()
+        loginUrl.pathname = '/client/login'
+        return NextResponse.redirect(loginUrl)
+      }
+      const preferred = req.cookies.get(PREF_COOKIE)?.value as Locale | undefined
+      const locale: Locale = preferred && LOCALES.includes(preferred) ? preferred : (routing.defaultLocale as Locale)
+      response.headers.set('x-next-intl-locale', locale)
+      return response
     }
-    const preferred = req.cookies.get(PREF_COOKIE)?.value as Locale | undefined
-    const locale: Locale = preferred && LOCALES.includes(preferred) ? preferred : (routing.defaultLocale as Locale)
-    response.headers.set('x-next-intl-locale', locale)
-    return response
   }
 
   /* /client/login accessible sans session → pass-through */
