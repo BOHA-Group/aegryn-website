@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation'
 import localFont  from 'next/font/local'
 import { cookies } from 'next/headers'
 import { NextIntlClientProvider } from 'next-intl'
@@ -7,6 +8,8 @@ import { createServiceClient } from '@/lib/supabase'
 import Nav, { type NavUser } from '@/components/layout/Nav'
 import DebugOverlay          from '@/components/debug/DebugOverlay'
 import '@/styles/globals.css'
+
+const CLIENT_SPACE_OPEN = process.env.NEXT_PUBLIC_CLIENT_SPACE_OPEN === 'true'
 
 const SUPPORTED_LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
 type SupportedLocale = typeof SUPPORTED_LOCALES[number]
@@ -30,6 +33,8 @@ const plusJakartaSans = localFont({
 })
 
 export default async function ClientLayout({ children }: { children: React.ReactNode }) {
+  if (!CLIENT_SPACE_OPEN) notFound()
+
   const cookieStore   = await cookies()
   const preferred      = cookieStore.get('ag-locale-pref')?.value
   const locale: SupportedLocale = isSupportedLocale(preferred) ? preferred : 'fr'
