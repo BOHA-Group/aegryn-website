@@ -61,7 +61,7 @@ export function AssetGrid() {
       })
     }, wrapRef)
 
-    return () => { ctx.revert(); split.revert() }
+    return () => { split.revert(); ctx.revert() }
   }, [])
 
   const AssetCard = ({ asset, i }: { asset: typeof AEGRYN_ASSETS[0]; i: number }) => {
@@ -133,12 +133,10 @@ export function AssetGrid() {
         </p>
         <h2
           ref={h2Ref}
-          suppressHydrationWarning
-          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] whitespace-pre-line overflow-hidden"
+          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] overflow-hidden"
           style={{ fontSize: 'clamp(42px,5.5vw,80px)' }}
-        >
-          {t('sectionTitle')}
-        </h2>
+          dangerouslySetInnerHTML={{ __html: t('sectionTitle').replace(/\n/g, '<br>') }}
+        />
       </div>
 
       <div ref={wrapRef} className="max-w-7xl mx-auto px-6 md:px-12 pb-20">

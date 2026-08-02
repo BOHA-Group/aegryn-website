@@ -93,8 +93,8 @@ export function ManifestoSection() {
     })
 
     return () => {
-      ctx.revert()
       splitAbout.revert()
+      ctx.revert()
     }
   }, [])
 
@@ -158,14 +158,10 @@ export function ManifestoSection() {
               </p>
               <h2
                 ref={aboutH2Ref}
-                suppressHydrationWarning
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] pb-[0.15em] mb-12 overflow-hidden"
                 style={{ fontSize: 'clamp(34px,4.5vw,58px)' }}
-              >
-                {tA('title').split('\n').map((line, i) => (
-                  <span key={i}>{line}{i === 0 && <br />}</span>
-                ))}
-              </h2>
+                dangerouslySetInnerHTML={{ __html: tA('title').replace(/\n/g, '<br>') }}
+              />
               <div className="about-body space-y-8">
                 <p className="font-sans font-normal text-[15px] text-ag-gray leading-[1.85] max-w-lg">
                   {tA('desc')}

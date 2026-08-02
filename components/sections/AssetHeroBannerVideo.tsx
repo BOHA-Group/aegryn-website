@@ -164,12 +164,10 @@ export function AssetHeroBannerVideo({ label, title, sub }: AssetHeroBannerVideo
           </p>
           <h2
             ref={headingRef}
-            suppressHydrationWarning
-            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.2] mb-6 pb-[0.2em] whitespace-pre-line [&_.ahb-line]:overflow-hidden"
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.2] mb-6 pb-[0.2em] [&_.ahb-line]:overflow-hidden"
             style={{ fontSize: 'clamp(40px,5.5vw,80px)' }}
-          >
-            {title ?? 'Ce que nous\nconstruisons.'}
-          </h2>
+            dangerouslySetInnerHTML={{ __html: (title ?? 'Ce que nous\nconstruisons.').replace(/\n/g, '<br>') }}
+          />
           <p
             ref={subRef}
             className="font-sans font-normal text-[14px] text-white/75 leading-relaxed max-w-sm"

@@ -89,12 +89,10 @@ export function AssetHeroBanner() {
 
           <h2
             ref={headingRef}
-            suppressHydrationWarning
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] mb-6"
             style={{ fontSize: 'clamp(40px,5.5vw,80px)' }}
-          >
-            Ce que nous<br />construisons.
-          </h2>
+            dangerouslySetInnerHTML={{ __html: 'Ce que nous<br>construisons.' }}
+          />
 
           <p
             ref={subRef}
