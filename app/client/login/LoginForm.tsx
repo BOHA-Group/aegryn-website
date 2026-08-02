@@ -32,27 +32,42 @@ export default function LoginForm() {
         return
       }
 
-      /* window.location.assign force un rechargement SSR complet :
-         le layout Server Component re-lit la session et affiche
-         immédiatement l'identité dans la navbar, sans refresh manuel. */
+      /* Lire les rôles depuis la session locale (pas de fetch serveur) pour éviter
+         la race condition : createBrowserClient pose les cookies sb-* de façon
+         asynchrone — un fetch immédiat vers /api/client/me/roles arriverait avant
+         que les cookies soient persistés → getUser() côté serveur retourne null →
+         NO SESSION au prochain chargement de page.
+         window.location.assign force un rechargement SSR complet dès que les
+         cookies sont posés, garantissant que le Server Component re-lit la session. */
       try {
-        const res = await fetch('/api/client/me/roles')
-        if (res.ok) {
-          const { roles } = await res.json() as { roles: string[] }
-          if (roles.includes('admin') || roles.includes('super_admin')) {
-            window.location.assign('/admin')
-          } else if (roles.includes('partner')) {
-            window.location.assign('/client/partner')
-          } else if (roles.includes('seller') && !roles.includes('buyer')) {
-            window.location.assign('/client/seller')
-          } else {
-            window.location.assign('/client/buyer')
+        const { data: { session: freshSession } } = await supabase.auth.getSession()
+        const roles: string[] = (freshSession?.user?.app_metadata?.roles as string[]) ??
+          (freshSession?.user?.user_metadata?.roles as string[]) ?? []
+
+        /* Fallback : fetch serveur si les rôles ne sont pas dans les claims JWT */
+        if (roles.length === 0) {
+          const res = await fetch('/api/client/me/roles')
+          if (res.ok) {
+            const data = await res.json() as { roles: string[] }
+            roles.push(...data.roles)
           }
+        }
+
+        /* Délai minimal : garantit que createBrowserClient a fini d'écrire
+           tous les cookies chunked sb-* avant le rechargement SSR. */
+        await new Promise(r => setTimeout(r, 150))
+
+        if (roles.includes('admin') || roles.includes('super_admin')) {
+          window.location.assign('/admin')
+        } else if (roles.includes('partner')) {
+          window.location.assign('/client/partner')
+        } else if (roles.includes('seller') && !roles.includes('buyer')) {
+          window.location.assign('/client/seller')
         } else {
           window.location.assign('/client/buyer')
         }
       } catch {
-        window.location.assign('/client/my-assets')
+        window.location.assign('/client/buyer')
       }
     } catch {
       setError(t('errorNetwork'))
