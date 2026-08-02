@@ -35,7 +35,28 @@
 - `grade/submit/success/page.tsx` : retirer le `{process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' && (...)}` autour du NextLink
 
 ### Global-error en production
-`app/global-error.tsx` : `useEffect` déclenche `window.location.reload()` automatiquement si `NEXT_PUBLIC_VERCEL_ENV === 'production'`. Pour désactiver, supprimer le `useEffect` et le `if (isProd)` dans ce fichier.
+~~`app/global-error.tsx` : `useEffect` déclenche `window.location.reload()` automatiquement si `NEXT_PUBLIC_VERCEL_ENV === 'production'`.~~
+
+**✅ RÉSOLU le 02/08/2026** — Workaround supprimé. Cause racine corrigée (voir section ci-dessous).
+
+---
+
+## ✅ Fix hydration NotFoundError — RÉSOLU (02/08/2026)
+
+**Problème :** `NotFoundError: removeChild` au démontage de composants à la navigation SPA (React 19 + GSAP).
+
+**Cause racine double :**
+1. **SplitText** wrap les nœuds texte dans des `<div>` intermédiaires — React perdait la référence à ses nœuds enfants au démontage. Corrigé avec `dangerouslySetInnerHTML` sur les éléments ciblés par SplitText.
+2. **ScrollTrigger `pin: true`** reparente physiquement le nœud dans un `pin-spacer` GSAP. Le cleanup `ctx.revert()` dans `useEffect` arrivait trop tard (asynchrone) — React tentait déjà `removeChild`. Corrigé en passant à `useLayoutEffect` (synchrone).
+
+**Commits :**
+- `9d02043` — dangerouslySetInnerHTML + ordre split.revert() avant ctx.revert() (11 composants)
+- `c19b009` — useLayoutEffect sur 6 composants pin:true
+
+**Fichiers modifiés :**
+- `components/sections/HeroMountain.tsx`, `ManifestoSection.tsx`, `AssetHeroBanner.tsx`, `AssetHeroBannerVideo.tsx`, `AssetGrid.tsx`, `EcosystemDomains.tsx`, `StatementStrip.tsx`, `AuctionHero.tsx`, `GradeHero.tsx`, `WhyUseApps.tsx`, `MissionVideoSection.tsx`
+- `components/sections/AssetCarousel.tsx`, `HomeVideoSection.tsx`, `LogoZoomSection.tsx`, `VisionMissionBlock.tsx`
+- `app/global-error.tsx` — suppression du workaround `window.location.reload()`
 
 ---
 
