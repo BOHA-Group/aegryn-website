@@ -41,19 +41,14 @@ function localeFromAcceptLanguage(header: string | null): Locale | null {
 const intlMiddleware = createIntlMiddleware(routing)
 
 /* ── Supabase Auth check + token refresh ──
-   Pattern officiel Supabase 2025 (doc: supabase.com/docs/guides/auth/server-side/creating-a-client)
-
-   POURQUOI getClaims() et non getSession() / getUser() :
-   - getSession() : lit le cookie, déclenche un refresh réseau si expiré → si plusieurs
-     prefetch Next.js arrivent en parallèle (SideNav = 6-8 <Link>) → plusieurs requêtes
-     tentent de consommer le même refresh_token (rotation Supabase = usage unique) →
-     les requêtes suivantes invalident la session → déconnexion aléatoire.
-   - getUser() : valide le JWT via appel réseau sans rotation → sécurisé mais ne rafraîchit
-     jamais le token → déconnexion certaine après expiration de l'access_token (~1h).
-   - getClaims() : valide le JWT LOCALEMENT via WebCrypto + JWKS cached → AUCUN appel
-     réseau, AUCUNE rotation possible → thread-safe, idempotent, zéro race condition.
-     C'est la méthode recommandée par Supabase pour protéger des routes en middleware.
-     Le refresh du token reste géré automatiquement par le SDK côté navigateur. */
+   POURQUOI getUser() et non getClaims() / getSession() :
+   - getClaims() : valide le JWT LOCALEMENT via JWKS — mais le JWKS endpoint Supabase
+     de ce projet exige une API key (non standard) → getClaims() retourne toujours null
+     → redirect login systématique même avec une session valide.
+   - getSession() : lit le cookie + refresh réseau si expiré → race condition possible
+     si plusieurs prefetch parallèles tentent de consommer le même refresh_token.
+   - getUser() : valide le JWT via appel réseau direct à Supabase Auth → sécurisé,
+     pas de rotation de token, fonctionne sans JWKS → solution retenue. */
 async function refreshAndCheckSession(
   req: NextRequest
 ): Promise<{ hasSession: boolean; response: NextResponse }> {
@@ -76,9 +71,9 @@ async function refreshAndCheckSession(
     }
   )
 
-  const { data } = await supabase.auth.getClaims()
+  const { data: { user } } = await supabase.auth.getUser()
 
-  return { hasSession: !!data?.claims, response }
+  return { hasSession: !!user, response }
 }
 
 export default async function middleware(req: NextRequest) {
