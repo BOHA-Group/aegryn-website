@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { gsap } from '@/lib/gsap'
 
 /**
@@ -21,7 +21,7 @@ export function HomeVideoSection({ children }: { children: React.ReactNode }) {
   const blurRef    = useRef<HTMLDivElement>(null)
   const nextRef    = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const wrap = wrapRef.current
     if (!wrap) return
 

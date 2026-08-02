@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { gsap }              from '@/lib/gsap'
 import { AegrynLogo }        from '@/components/brand/AegrynLogo'
 
@@ -21,7 +21,7 @@ export function LogoZoomSection({ missionSlot }: { missionSlot?: React.ReactNode
   const overlayRef = useRef<HTMLDivElement>(null)
   const nextRef    = useRef<HTMLDivElement>(null)   // section suivante qui monte
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const wrap  = wrapRef.current
     const stage = stageRef.current
     const logo  = logoRef.current
