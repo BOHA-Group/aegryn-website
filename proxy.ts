@@ -47,14 +47,26 @@ const intlMiddleware = createIntlMiddleware(routing)
    Component layouts (getUser() via supabaseServer.ts) qui font un appel réseau.
    getClaims() échoue en Edge Runtime Vercel (crypto.subtle.importKey EC instable). */
 
+let _envChecked = false
+
 async function refreshAndCheckSession(
   req: NextRequest
 ): Promise<{ hasSession: boolean; response: NextResponse }> {
   let response = NextResponse.next({ request: req })
 
+  const rawUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? ''
+  const rawKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? ''
+  if (!_envChecked) {
+    _envChecked = true
+    console.log(`[ENV] url=${JSON.stringify(rawUrl)} urlLen=${rawUrl.length}`)
+    console.log(`[ENV] keyLen=${rawKey.length} keyStart=${JSON.stringify(rawKey.slice(0,20))} keyEnd=${JSON.stringify(rawKey.slice(-10))}`)
+  }
+  const supaUrl = rawUrl.trim()
+  const supaKey = rawKey.trim()
+
   const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    supaUrl,
+    supaKey,
     {
       cookies: {
         getAll: () => req.cookies.getAll(),
