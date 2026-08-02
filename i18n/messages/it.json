@@ -2092,25 +2092,25 @@
       },
       {
         "code": "AAA",
-        "name": "Premium",
+        "name": "Eccellente",
         "color": "grade-aaa",
         "desc": "Asset maturo e documentato. Valutazione affidabile. Transazione standard senza riserve."
       },
       {
         "code": "AA",
-        "name": "Solido",
+        "name": "Molto buono",
         "color": "grade-aa",
         "desc": "Buone metriche, alcune ottimizzazioni raccomandate. Valutazione confermata."
       },
       {
         "code": "A",
-        "name": "Standard",
+        "name": "Buono",
         "color": "grade-a",
         "desc": "Potenziale identificato, aree di miglioramento documentate. Piano di valore proposto."
       },
       {
         "code": "B",
-        "name": "Early Stage",
+        "name": "Corretto",
         "color": "grade-b",
         "desc": "Asset in sviluppo. Piano di rimedio richiesto prima della transazione."
       }
@@ -2832,19 +2832,19 @@
       },
       {
         "g": "AAA",
-        "d": "Premium — Pronto per la transazione"
+        "d": "Eccellente — Pronto per la transazione"
       },
       {
         "g": "AA",
-        "d": "Solido — Valorizzazione confermata"
+        "d": "Molto buono — Valorizzazione confermata"
       },
       {
         "g": "A",
-        "d": "Standard — Potenziale identificato"
+        "d": "Buono — Potenziale identificato"
       },
       {
         "g": "B",
-        "d": "Early Stage — Piano di rimedio"
+        "d": "Corretto — Piano di rimedio"
       }
     ]
   },

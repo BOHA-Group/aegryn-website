@@ -2092,25 +2092,25 @@
       },
       {
         "code": "AAA",
-        "name": "Premium",
+        "name": "Uitstekend",
         "color": "grade-aaa",
         "desc": "Volwassen, gedocumenteerd asset. Betrouwbare waardering. Standaardtransactie zonder voorbehoud."
       },
       {
         "code": "AA",
-        "name": "Solide",
+        "name": "Zeer goed",
         "color": "grade-aa",
         "desc": "Goede metrieken, enkele optimalisaties aanbevolen. Waardering bevestigd."
       },
       {
         "code": "A",
-        "name": "Standard",
+        "name": "Goed",
         "color": "grade-a",
         "desc": "Potentieel geïdentificeerd, verbeterpunten gedocumenteerd. Waardeplan voorgesteld."
       },
       {
         "code": "B",
-        "name": "Early Stage",
+        "name": "Correct",
         "color": "grade-b",
         "desc": "Asset in ontwikkeling. Saneringsplan vereist vóór transactie."
       }
@@ -2832,19 +2832,19 @@
       },
       {
         "g": "AAA",
-        "d": "Premium — Transactieklaar"
+        "d": "Uitstekend — Transactieklaar"
       },
       {
         "g": "AA",
-        "d": "Solide — Bevestigde waardering"
+        "d": "Zeer goed — Bevestigde waardering"
       },
       {
         "g": "A",
-        "d": "Standard — Geïdentificeerd potentieel"
+        "d": "Goed — Geïdentificeerd potentieel"
       },
       {
         "g": "B",
-        "d": "Early Stage — Herstelplan"
+        "d": "Correct — Herstelplan"
       }
     ]
   },

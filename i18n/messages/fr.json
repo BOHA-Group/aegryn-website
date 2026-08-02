@@ -1460,25 +1460,25 @@
       },
       {
         "code": "AAA",
-        "name": "Premium",
+        "name": "Excellent",
         "color": "grade-aaa",
         "desc": "Actif mature, documenté, valorisation fiable. Transaction standard sans réserve."
       },
       {
         "code": "AA",
-        "name": "Solide",
+        "name": "Très bon",
         "color": "grade-aa",
         "desc": "Bonnes métriques, quelques optimisations recommandées. Valorisation confirmée."
       },
       {
         "code": "A",
-        "name": "Standard",
+        "name": "Bon",
         "color": "grade-a",
         "desc": "Potentiel identifié, axes d'amélioration documentés. Plan de valeur proposé."
       },
       {
         "code": "B",
-        "name": "Early Stage",
+        "name": "Correct",
         "color": "grade-b",
         "desc": "Actif en développement. Plan de remédiation requis avant transaction."
       }
@@ -2899,19 +2899,19 @@
       },
       {
         "g": "AAA",
-        "d": "Premium — Prêt pour transaction"
+        "d": "Excellent — Prêt pour transaction"
       },
       {
         "g": "AA",
-        "d": "Solide — Valorisation confirmée"
+        "d": "Très bon — Valorisation confirmée"
       },
       {
         "g": "A",
-        "d": "Standard — Potentiel identifié"
+        "d": "Bon — Potentiel identifié"
       },
       {
         "g": "B",
-        "d": "Early Stage — Plan de remédiation"
+        "d": "Correct — Plan de remédiation"
       }
     ]
   },

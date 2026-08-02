@@ -1460,25 +1460,25 @@
       },
       {
         "code": "AAA",
-        "name": "Premium",
+        "name": "Excellent",
         "color": "grade-aaa",
         "desc": "Mature, documented asset. Reliable valuation. Standard transaction without reservation."
       },
       {
         "code": "AA",
-        "name": "Solid",
+        "name": "Very good",
         "color": "grade-aa",
         "desc": "Strong metrics, some optimisations recommended. Confirmed valuation."
       },
       {
         "code": "A",
-        "name": "Standard",
+        "name": "Good",
         "color": "grade-a",
         "desc": "Identified potential, documented improvement areas. Value plan proposed."
       },
       {
         "code": "B",
-        "name": "Early Stage",
+        "name": "Correct",
         "color": "grade-b",
         "desc": "Asset in development. Remediation plan required before transaction."
       }
@@ -2899,19 +2899,19 @@
       },
       {
         "g": "AAA",
-        "d": "Premium — Transaction-ready"
+        "d": "Excellent — Transaction-ready"
       },
       {
         "g": "AA",
-        "d": "Solid — Confirmed valuation"
+        "d": "Very good — Confirmed valuation"
       },
       {
         "g": "A",
-        "d": "Standard — Identified potential"
+        "d": "Good — Identified potential"
       },
       {
         "g": "B",
-        "d": "Early Stage — Remediation plan"
+        "d": "Correct — Remediation plan"
       }
     ]
   },
