@@ -83,7 +83,17 @@ async function refreshAndCheckSession(
 
   const allCookies = req.cookies.getAll()
   const sbCookies = allCookies.filter(c => c.name.startsWith('sb-'))
-  console.log(`[MW] ${req.nextUrl.pathname} cookies=${allCookies.length} sb=${sbCookies.map(c=>c.name).join('|')||'NONE'}`)
+  const rawCookieHeader = req.headers.get('cookie') ?? ''
+  console.log(
+    `[MW] ${req.nextUrl.pathname} cookies=${allCookies.length} sb=${sbCookies.map(c=>c.name).join('|')||'NONE'} ` +
+    `names=${JSON.stringify(allCookies.map(c=>c.name))} ` +
+    `rawCookieHeaderLen=${rawCookieHeader.length} ` +
+    `sec-fetch-site=${req.headers.get('sec-fetch-site')} ` +
+    `sec-fetch-mode=${req.headers.get('sec-fetch-mode')} ` +
+    `sec-fetch-dest=${req.headers.get('sec-fetch-dest')} ` +
+    `referer=${req.headers.get('referer')} ` +
+    `host=${req.headers.get('host')}`
+  )
 
   const { data: { session } } = await supabase.auth.getSession()
   console.log(`[MW] getSession=${!!session}`)
