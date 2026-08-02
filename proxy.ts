@@ -1,6 +1,6 @@
 import createIntlMiddleware from 'next-intl/middleware'
 import { createServerClient } from '@supabase/ssr'
-import type { JWK } from '@supabase/auth-js'
+
 import { NextRequest, NextResponse } from 'next/server'
 import { routing } from '@/i18n/routing'
 
@@ -41,31 +41,11 @@ function localeFromAcceptLanguage(header: string | null): Locale | null {
 
 const intlMiddleware = createIntlMiddleware(routing)
 
-/* ── Supabase Auth check + token refresh ──
-   getClaims() valide le JWT localement via JWKS (WebCrypto, zéro rotation de token).
-   Le SDK cherche /.well-known/jwks.json mais ce projet Supabase l'expose sous
-   /auth/v1/.well-known/jwks.json — on pré-charge les clés et on les injecte
-   directement dans getClaims({ keys }) pour court-circuiter le fetch réseau. */
-
-let _jwksCache: JWK[] | null = null
-let _jwksCachedAt = 0
-const JWKS_TTL = 60 * 60 * 1000 // 1h
-
-async function getJwks(): Promise<JWK[]> {
-  const now = Date.now()
-  if (_jwksCache && now - _jwksCachedAt < JWKS_TTL) return _jwksCache
-  try {
-    const url  = process.env.NEXT_PUBLIC_SUPABASE_URL!
-    const key  = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-    const res  = await fetch(`${url}/auth/v1/.well-known/jwks.json`, { headers: { apikey: key } })
-    const data = await res.json() as { keys?: JWK[] }
-    if (data.keys?.length) {
-      _jwksCache    = data.keys
-      _jwksCachedAt = now
-    }
-  } catch { /* ignore — fallback getUser */ }
-  return _jwksCache ?? []
-}
+/* ── Supabase Auth check ──
+   getSession() lit le cookie localement (sans réseau, sans WebCrypto) pour vérifier
+   qu'une session existe. La validation sécurisée du JWT est déléguée aux Server
+   Component layouts (getUser() via supabaseServer.ts) qui font un appel réseau.
+   getClaims() échoue en Edge Runtime Vercel (crypto.subtle.importKey EC instable). */
 
 async function refreshAndCheckSession(
   req: NextRequest
@@ -89,18 +69,9 @@ async function refreshAndCheckSession(
     }
   )
 
-  const jwks = await getJwks()
-  const { data, error } = await supabase.auth.getClaims(
-    undefined,
-    jwks.length ? { jwks: { keys: jwks } } : {}
-  )
-  if (error || !data?.claims) {
-    /* Fallback réseau si JWKS indisponible ou token expiré non rafraîchi */
-    const { data: { user } } = await supabase.auth.getUser()
-    return { hasSession: !!user, response }
-  }
+  const { data: { session } } = await supabase.auth.getSession()
 
-  return { hasSession: true, response }
+  return { hasSession: !!session, response }
 }
 
 export default async function middleware(req: NextRequest) {
@@ -116,16 +87,21 @@ export default async function middleware(req: NextRequest) {
     '/client/set-password',
   ]
   if (pathname.startsWith('/client/') && !PUBLIC_CLIENT_PATHS.includes(pathname)) {
-    const { hasSession, response } = await refreshAndCheckSession(req)
-    if (!hasSession) {
-      const loginUrl = req.nextUrl.clone()
-      loginUrl.pathname = '/client/login'
-      return NextResponse.redirect(loginUrl)
+    /* Les prefetch RSC (Next-Router-Prefetch: 1) n'envoient pas les cookies navigateur
+       → on les laisse passer, les layouts Server Component gèrent leur propre auth. */
+    const isPrefetch = req.headers.get('Next-Router-Prefetch') === '1'
+    if (!isPrefetch) {
+      const { hasSession, response } = await refreshAndCheckSession(req)
+      if (!hasSession) {
+        const loginUrl = req.nextUrl.clone()
+        loginUrl.pathname = '/client/login'
+        return NextResponse.redirect(loginUrl)
+      }
+      const preferred = req.cookies.get(PREF_COOKIE)?.value as Locale | undefined
+      const locale: Locale = preferred && LOCALES.includes(preferred) ? preferred : (routing.defaultLocale as Locale)
+      response.headers.set('x-next-intl-locale', locale)
+      return response
     }
-    const preferred = req.cookies.get(PREF_COOKIE)?.value as Locale | undefined
-    const locale: Locale = preferred && LOCALES.includes(preferred) ? preferred : (routing.defaultLocale as Locale)
-    response.headers.set('x-next-intl-locale', locale)
-    return response
   }
 
   /* /client/login accessible sans session → pass-through */
