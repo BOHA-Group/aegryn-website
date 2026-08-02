@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { usePathname }         from 'next/navigation'
-import { createBrowserClient } from '@supabase/ssr'
+import { supabase }            from '@/lib/supabase'
 
 type Info = {
   path:      string
@@ -24,10 +24,6 @@ export default function DebugOverlay() {
     if (!IS_PREVIEW) return
     const run = async () => {
       try {
-        const supabase = createBrowserClient(
-          process.env.NEXT_PUBLIC_SUPABASE_URL!,
-          process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-        )
         const { data: { session }, error } = await supabase.auth.getSession()
         const allCookieNames = document.cookie
           .split(';')
