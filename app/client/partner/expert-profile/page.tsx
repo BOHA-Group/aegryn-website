@@ -122,22 +122,35 @@ export default async function PartnerExpertProfilePage() {
         </div>
       </div>
 
-      {/* Guard : les deux prérequis non remplis */}
-      {(!kycApproved || !subscriptionActive) && (
+      {/* Info abonnement si KYC ok mais abonnement inactif */}
+      {kycApproved && !subscriptionActive && (
+        <div className="bg-blue-50 border border-blue-200 px-5 py-4 mb-8">
+          <p className="font-sans font-semibold text-blue-900 text-[13px] mb-1">
+            Fiche soumise — publication conditionnée à l&apos;abonnement
+          </p>
+          <p className="font-sans text-[12px] text-blue-700">
+            Votre fiche sera publiée dans l&apos;annuaire dès que votre abonnement expert sera actif.
+            Activez-le depuis la page{' '}
+            <a href="/client/partner/subscription" className="underline font-medium">Abonnement →</a>
+          </p>
+        </div>
+      )}
+      {/* Guard KYC non approuvé */}
+      {!kycApproved && (
         <div className="bg-amber-50 border border-amber-200 px-5 py-4 mb-8">
           <p className="font-sans font-semibold text-amber-900 text-[13px] mb-1">
-            Formulaire disponible après validation des prérequis
+            KYC requis pour soumettre votre fiche
           </p>
           <p className="font-sans text-[12px] text-amber-700">
-            Complétez votre KYC et activez votre abonnement pour remplir et publier votre fiche expert.
-            Vous pouvez dès maintenant préparer vos informations.
+            Complétez et faites approuver votre KYC pour pouvoir soumettre votre fiche expert.
+            Vous pouvez dès maintenant remplir et préparer vos informations.
           </p>
         </div>
       )}
 
       {/* Formulaire — toujours affiché pour permettre la saisie, mais submission bloquée si prérequis manquants */}
       <ExpertProfileForm
-        canPublish={kycApproved && subscriptionActive}
+        canPublish={kycApproved}
         existing={existingExpertProfile as {
           id?: string
           first_name: string
@@ -152,7 +165,9 @@ export default async function PartnerExpertProfilePage() {
           phone: string
           website: string
           min_rate_eur: number | null
+          rate_currency: string
           languages: string[]
+          phone_country: string
           avatar_url: string | null
           is_visible: boolean
           verified_at: string | null
