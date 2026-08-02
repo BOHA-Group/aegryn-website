@@ -2092,25 +2092,25 @@
       },
       {
         "code": "AAA",
-        "name": "Premium",
+        "name": "Exzellent",
         "color": "grade-aaa",
         "desc": "Reifes, dokumentiertes Asset. Zuverlässige Bewertung. Standardtransaktion ohne Vorbehalt."
       },
       {
         "code": "AA",
-        "name": "Solide",
+        "name": "Sehr gut",
         "color": "grade-aa",
         "desc": "Gute Metriken, einige Optimierungen empfohlen. Bewertung bestätigt."
       },
       {
         "code": "A",
-        "name": "Standard",
+        "name": "Gut",
         "color": "grade-a",
         "desc": "Potenzial identifiziert, Verbesserungsbereiche dokumentiert. Wertplan vorgeschlagen."
       },
       {
         "code": "B",
-        "name": "Early Stage",
+        "name": "Korrekt",
         "color": "grade-b",
         "desc": "Asset in Entwicklung. Sanierungsplan vor Transaktion erforderlich."
       }
@@ -2832,19 +2832,19 @@
       },
       {
         "g": "AAA",
-        "d": "Premium — Transaktionsbereit"
+        "d": "Exzellent — Transaktionsbereit"
       },
       {
         "g": "AA",
-        "d": "Solide — Bestätigte Bewertung"
+        "d": "Sehr gut — Bestätigte Bewertung"
       },
       {
         "g": "A",
-        "d": "Standard — Identifiziertes Potenzial"
+        "d": "Gut — Identifiziertes Potenzial"
       },
       {
         "g": "B",
-        "d": "Early Stage — Sanierungsplan"
+        "d": "Korrekt — Sanierungsplan"
       }
     ]
   },
