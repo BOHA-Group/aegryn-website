@@ -4,26 +4,46 @@ import { useState, useRef } from 'react'
 import Image from 'next/image'
 import { CheckCircle2, Loader2, Upload } from 'lucide-react'
 
-const SPECIALTIES_OPTIONS = [
-  'Cybersécurité', 'Intelligence artificielle', 'M&A', 'Valorisation',
-  'Droit des affaires', 'Expertise comptable', 'Due diligence',
-  'Audit technique', 'Propriété intellectuelle', 'Finance structurée',
-  'Fiscalité', 'Immobilier', 'Assurance', 'ESG / RSE',
+const SPECIALTIES_TECH = [
+  'Cybersécurité', 'Intelligence artificielle', 'Audit technique',
+  'Propriété intellectuelle', 'ESG / RSE',
+]
+
+const SPECIALTIES_TRANSACTION = [
+  'M&A', 'Valorisation', 'Droit des affaires', 'Expertise comptable',
+  'Due diligence', 'Finance structurée', 'Fiscalité', 'Immobilier', 'Assurance',
 ]
 
 const COUNTRY_OPTIONS = [
-  { code: 'CH', label: 'Suisse' }, { code: 'FR', label: 'France' },
-  { code: 'DE', label: 'Allemagne' }, { code: 'BE', label: 'Belgique' },
-  { code: 'LU', label: 'Luxembourg' }, { code: 'GB', label: 'Royaume-Uni' },
-  { code: 'US', label: 'États-Unis' }, { code: 'CA', label: 'Canada' },
-  { code: 'ES', label: 'Espagne' }, { code: 'IT', label: 'Italie' },
-  { code: 'NL', label: 'Pays-Bas' }, { code: 'AE', label: 'EAU' },
-  { code: 'SG', label: 'Singapour' }, { code: 'OTHER', label: 'Autre' },
+  { code: 'CH', label: 'Suisse',      dial: '+41',  maxLen: 9  },
+  { code: 'FR', label: 'France',      dial: '+33',  maxLen: 9  },
+  { code: 'DE', label: 'Allemagne',   dial: '+49',  maxLen: 11 },
+  { code: 'BE', label: 'Belgique',    dial: '+32',  maxLen: 9  },
+  { code: 'LU', label: 'Luxembourg',  dial: '+352', maxLen: 9  },
+  { code: 'ES', label: 'Espagne',     dial: '+34',  maxLen: 9  },
+  { code: 'IT', label: 'Italie',      dial: '+39',  maxLen: 10 },
+  { code: 'NL', label: 'Pays-Bas',    dial: '+31',  maxLen: 9  },
+  { code: 'AT', label: 'Autriche',    dial: '+43',  maxLen: 13 },
+  { code: 'PT', label: 'Portugal',    dial: '+351', maxLen: 9  },
+  { code: 'PL', label: 'Pologne',     dial: '+48',  maxLen: 9  },
+  { code: 'SE', label: 'Suède',       dial: '+46',  maxLen: 9  },
+  { code: 'DK', label: 'Danemark',    dial: '+45',  maxLen: 8  },
+  { code: 'FI', label: 'Finlande',    dial: '+358', maxLen: 12 },
+  { code: 'NO', label: 'Norvège',     dial: '+47',  maxLen: 8  },
+  { code: 'IE', label: 'Irlande',     dial: '+353', maxLen: 9  },
+  { code: 'CZ', label: 'Tchéquie',    dial: '+420', maxLen: 9  },
+  { code: 'HU', label: 'Hongrie',     dial: '+36',  maxLen: 9  },
+  { code: 'RO', label: 'Roumanie',    dial: '+40',  maxLen: 9  },
+  { code: 'GR', label: 'Grèce',       dial: '+30',  maxLen: 10 },
 ]
 
 const LANGUAGE_OPTIONS = [
-  'Français', 'Anglais', 'Allemand', 'Espagnol', 'Italien',
-  'Néerlandais', 'Portugais', 'Arabe', 'Mandarin', 'Japonais',
+  { code: 'fr', label: 'Français'   },
+  { code: 'en', label: 'Anglais'    },
+  { code: 'de', label: 'Allemand'   },
+  { code: 'es', label: 'Espagnol'   },
+  { code: 'it', label: 'Italien'    },
+  { code: 'nl', label: 'Néerlandais'},
 ]
 
 type ExpertProfileData = {
@@ -38,8 +58,10 @@ type ExpertProfileData = {
   organization: string
   email_public: string
   phone: string
+  phone_country: string
   website: string
   min_rate_eur: number | null
+  rate_currency: string
   languages: string[]
   avatar_url: string | null
   is_visible: boolean
@@ -53,19 +75,21 @@ type Props = {
 
 export default function ExpertProfileForm({ existing, canPublish }: Props) {
   const [form, setForm] = useState({
-    first_name:   existing?.first_name   ?? '',
-    last_name:    existing?.last_name    ?? '',
-    profession:   existing?.profession   ?? '',
-    specialties:  existing?.specialties  ?? [] as string[],
-    city:         existing?.city         ?? '',
-    country_code: existing?.country_code ?? 'CH',
-    bio:          existing?.bio          ?? '',
-    organization: existing?.organization ?? '',
-    email_public: existing?.email_public ?? '',
-    phone:        existing?.phone        ?? '',
-    website:      existing?.website      ?? '',
-    min_rate_eur: existing?.min_rate_eur ?? null as number | null,
-    languages:    existing?.languages    ?? [] as string[],
+    first_name:    existing?.first_name    ?? '',
+    last_name:     existing?.last_name     ?? '',
+    profession:    existing?.profession    ?? '',
+    specialties:   existing?.specialties   ?? [] as string[],
+    city:          existing?.city          ?? '',
+    country_code:  existing?.country_code  ?? 'CH',
+    bio:           existing?.bio           ?? '',
+    organization:  existing?.organization  ?? '',
+    email_public:  existing?.email_public  ?? '',
+    phone:         existing?.phone         ?? '',
+    phone_country: existing?.phone_country ?? 'CH',
+    website:       existing?.website       ?? '',
+    min_rate_eur:  existing?.min_rate_eur  ?? null as number | null,
+    rate_currency: existing?.rate_currency ?? 'CHF',
+    languages:     existing?.languages     ?? [] as string[],
   })
 
   const [saving,        setSaving]        = useState(false)
@@ -77,6 +101,9 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
 
   const isNew = !existing?.id
 
+  /* Indicatif du pays de téléphone sélectionné */
+  const phoneCountryData = COUNTRY_OPTIONS.find(c => c.code === form.phone_country) ?? COUNTRY_OPTIONS[0]
+
   function toggleSpecialty(s: string) {
     setForm(prev => ({
       ...prev,
@@ -86,12 +113,12 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
     }))
   }
 
-  function toggleLanguage(l: string) {
+  function toggleLanguage(code: string) {
     setForm(prev => ({
       ...prev,
-      languages: prev.languages.includes(l)
-        ? prev.languages.filter(x => x !== l)
-        : [...prev.languages, l],
+      languages: prev.languages.includes(code)
+        ? prev.languages.filter(x => x !== code)
+        : [...prev.languages, code],
     }))
   }
 
@@ -103,7 +130,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
     const fd = new FormData()
     fd.append('file', file)
     const res = await fetch('/api/experts/avatar', { method: 'POST', body: fd })
-    const json = await res.json()
+    const json = await res.json() as { url?: string; error?: string }
     setAvatarLoading(false)
     if (res.ok && json.url) {
       setAvatarUrl(json.url)
@@ -118,8 +145,13 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
     setSaved(false)
     setError(null)
 
+    const phoneFormatted = form.phone
+      ? `${phoneCountryData.dial} ${form.phone.replace(/\s/g, '')}`
+      : ''
+
     const payload = {
       ...form,
+      phone:        phoneFormatted,
       min_rate_eur: form.min_rate_eur ?? null,
     }
 
@@ -128,7 +160,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify(payload),
     })
-    const json = await res.json()
+    const json = await res.json() as { error?: string }
     setSaving(false)
 
     if (res.ok) {
@@ -139,25 +171,32 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
     }
   }
 
-  const isVerified  = Boolean(existing?.verified_at)
-  const isVisible   = Boolean(existing?.is_visible)
+  const isVerified = Boolean(existing?.verified_at)
+  const isVisible  = Boolean(existing?.is_visible)
+
+  /* Soumission possible dès que le KYC est approuvé (canPublish).
+     Publication effective conditionnée à l'abonnement actif (géré côté page). */
+  const canSubmit = canPublish
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
 
-      {/* Statut publication */}
+      {/* Statut */}
       <div className={`border p-4 flex items-start gap-3 ${
-        isVisible ? 'border-emerald-200 bg-emerald-50'
+        isVisible   ? 'border-emerald-200 bg-emerald-50'
         : isVerified ? 'border-blue-200 bg-blue-50'
         : 'border-amber-200 bg-amber-50'
       }`}>
         <CheckCircle2 size={15} className={isVisible ? 'text-emerald-500 mt-0.5' : 'text-amber-500 mt-0.5'} />
         <div>
           <p className={`font-sans font-semibold text-[12px] ${isVisible ? 'text-emerald-800' : isVerified ? 'text-blue-800' : 'text-amber-800'}`}>
-            {isVisible ? 'Fiche publiée dans l\'annuaire'
-             : isVerified ? 'Fiche soumise — en attente de validation admin'
-             : isNew ? 'Nouvelle fiche — sera soumise pour validation après enregistrement'
-             : 'Fiche enregistrée — en attente de validation admin'}
+            {isVisible
+              ? 'Fiche publiée dans l\'annuaire'
+              : isVerified
+              ? 'Fiche soumise — en attente de validation admin'
+              : isNew
+              ? 'Nouvelle fiche — sera soumise pour validation après enregistrement'
+              : 'Fiche enregistrée — en attente de validation admin'}
           </p>
           {!isVerified && !isNew && (
             <p className="font-sans text-[11px] text-amber-700 mt-0.5">
@@ -174,8 +213,13 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
           <div className="relative w-20 h-20 border border-gray-200 bg-gray-50 flex items-center justify-center overflow-hidden shrink-0">
             {avatarUrl
               ? <Image src={avatarUrl} alt="avatar" fill className="object-cover" unoptimized />
-              : <span className="font-mono text-[10px] text-gray-300">Photo</span>
+              : <span className="font-mono text-[10px] text-gray-300">avatar</span>
             }
+            {avatarLoading && (
+              <div className="absolute inset-0 bg-white/70 flex items-center justify-center">
+                <Loader2 size={16} className="animate-spin text-gray-400" />
+              </div>
+            )}
           </div>
           <div>
             <button
@@ -184,7 +228,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
               disabled={avatarLoading}
               className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-widest border border-gray-200 px-3 py-2 text-gray-600 hover:border-gray-400 disabled:opacity-50 transition-colors"
             >
-              {avatarLoading ? <Loader2 size={12} className="animate-spin" /> : <Upload size={12} />}
+              <Upload size={12} />
               {avatarUrl ? 'Changer la photo' : 'Ajouter une photo'}
             </button>
             <p className="font-sans text-[11px] text-gray-400 mt-1">JPG ou PNG · max 5 MB · format carré recommandé</p>
@@ -249,39 +293,55 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
           className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white resize-none" />
       </div>
 
-      {/* Spécialités */}
+      {/* Spécialités — 2 catégories */}
       <div>
         <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">Spécialités</p>
-        <div className="flex flex-wrap gap-2">
-          {SPECIALTIES_OPTIONS.map(s => (
-            <button
-              key={s} type="button" onClick={() => toggleSpecialty(s)}
-              className={`font-sans text-[11px] px-3 py-1.5 border transition-colors ${
-                form.specialties.includes(s)
-                  ? 'border-ag-navy bg-ag-navy text-white'
-                  : 'border-gray-200 text-gray-600 hover:border-gray-400'
-              }`}
-            >
-              {s}
-            </button>
-          ))}
+        <div className="space-y-4">
+          <div>
+            <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-2">Advisory Tech</p>
+            <div className="flex flex-wrap gap-2">
+              {SPECIALTIES_TECH.map(s => (
+                <button key={s} type="button" onClick={() => toggleSpecialty(s)}
+                  className={`font-sans text-[11px] px-3 py-1.5 border transition-colors ${
+                    form.specialties.includes(s)
+                      ? 'border-ag-navy bg-ag-navy text-white'
+                      : 'border-gray-200 text-gray-600 hover:border-gray-400'
+                  }`}>
+                  {s}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-2">Advisory Transaction</p>
+            <div className="flex flex-wrap gap-2">
+              {SPECIALTIES_TRANSACTION.map(s => (
+                <button key={s} type="button" onClick={() => toggleSpecialty(s)}
+                  className={`font-sans text-[11px] px-3 py-1.5 border transition-colors ${
+                    form.specialties.includes(s)
+                      ? 'border-ag-navy bg-ag-navy text-white'
+                      : 'border-gray-200 text-gray-600 hover:border-gray-400'
+                  }`}>
+                  {s}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Langues */}
+      {/* Langues — 6 langues UI */}
       <div>
         <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">Langues pratiquées</p>
         <div className="flex flex-wrap gap-2">
           {LANGUAGE_OPTIONS.map(l => (
-            <button
-              key={l} type="button" onClick={() => toggleLanguage(l)}
+            <button key={l.code} type="button" onClick={() => toggleLanguage(l.code)}
               className={`font-sans text-[11px] px-3 py-1.5 border transition-colors ${
-                form.languages.includes(l)
+                form.languages.includes(l.code)
                   ? 'border-ag-apex bg-ag-apex/10 text-ag-apex'
                   : 'border-gray-200 text-gray-600 hover:border-gray-400'
-              }`}
-            >
-              {l}
+              }`}>
+              {l.label}
             </button>
           ))}
         </div>
@@ -297,28 +357,67 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
               placeholder="contact@cabinet.ch"
               className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="font-sans text-[11px] text-gray-600 block mb-1">Téléphone</label>
-              <input type="tel" value={form.phone} onChange={e => setForm(p => ({ ...p, phone: e.target.value }))}
-                maxLength={30}
-                className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
-            </div>
-            <div>
-              <label className="font-sans text-[11px] text-gray-600 block mb-1">Site web</label>
-              <input type="url" value={form.website} onChange={e => setForm(p => ({ ...p, website: e.target.value }))}
-                placeholder="https://…"
-                className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
-            </div>
-          </div>
+
+          {/* Téléphone avec indicatif */}
           <div>
-            <label className="font-sans text-[11px] text-gray-600 block mb-1">Honoraires indicatifs <span className="text-gray-400">(€/heure — optionnel)</span></label>
-            <input
-              type="number" min={0} max={9999}
-              value={form.min_rate_eur ?? ''}
-              onChange={e => setForm(p => ({ ...p, min_rate_eur: e.target.value ? Number(e.target.value) : null }))}
-              placeholder="ex: 250"
+            <label className="font-sans text-[11px] text-gray-600 block mb-1">Téléphone</label>
+            <div className="flex gap-2">
+              <select
+                value={form.phone_country}
+                onChange={e => setForm(p => ({ ...p, phone_country: e.target.value, phone: '' }))}
+                className="border border-gray-200 px-2 py-2 font-sans text-[12px] focus:outline-none focus:border-gray-400 bg-white shrink-0"
+              >
+                {COUNTRY_OPTIONS.map(c => (
+                  <option key={c.code} value={c.code}>{c.dial} {c.label}</option>
+                ))}
+              </select>
+              <input
+                type="tel"
+                value={form.phone}
+                onChange={e => {
+                  const digits = e.target.value.replace(/[^\d\s]/g, '')
+                  if (digits.replace(/\s/g, '').length <= phoneCountryData.maxLen) {
+                    setForm(p => ({ ...p, phone: digits }))
+                  }
+                }}
+                placeholder={`${phoneCountryData.maxLen} chiffres max`}
+                maxLength={phoneCountryData.maxLen + 4}
+                className="flex-1 border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white"
+              />
+            </div>
+            <p className="font-sans text-[10px] text-gray-400 mt-1">
+              Indicatif : {phoneCountryData.dial} — {phoneCountryData.maxLen} chiffres max
+            </p>
+          </div>
+
+          <div>
+            <label className="font-sans text-[11px] text-gray-600 block mb-1">Site web</label>
+            <input type="url" value={form.website} onChange={e => setForm(p => ({ ...p, website: e.target.value }))}
+              placeholder="https://…"
               className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
+          </div>
+
+          {/* Honoraires EUR ou CHF */}
+          <div>
+            <label className="font-sans text-[11px] text-gray-600 block mb-1">
+              Honoraires indicatifs <span className="text-gray-400">(par heure — optionnel)</span>
+            </label>
+            <div className="flex gap-2">
+              <select
+                value={form.rate_currency}
+                onChange={e => setForm(p => ({ ...p, rate_currency: e.target.value }))}
+                className="border border-gray-200 px-2 py-2 font-sans text-[12px] focus:outline-none focus:border-gray-400 bg-white shrink-0"
+              >
+                <option value="CHF">CHF</option>
+                <option value="EUR">EUR</option>
+              </select>
+              <input
+                type="number" min={0} max={9999}
+                value={form.min_rate_eur ?? ''}
+                onChange={e => setForm(p => ({ ...p, min_rate_eur: e.target.value ? Number(e.target.value) : null }))}
+                placeholder="ex: 250"
+                className="flex-1 border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
+            </div>
           </div>
         </div>
       </div>
@@ -334,18 +433,18 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
         </div>
       )}
 
-      {!canPublish && (
+      {!canSubmit && (
         <div className="bg-amber-50 border border-amber-200 px-4 py-3 text-[12px] text-amber-700">
-          Complétez votre KYC et activez votre abonnement pour soumettre votre fiche.
-          Vous pouvez dès maintenant préparer et enregistrer vos informations en brouillon.
+          Votre KYC doit être approuvé pour soumettre votre fiche.
+          Vous pouvez dès maintenant préparer vos informations — la publication sera effective après souscription à l&apos;abonnement.
         </div>
       )}
 
       <button
         type="submit"
-        disabled={saving || !canPublish}
+        disabled={saving || !canSubmit}
         className={`flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 transition-colors ${
-          canPublish
+          canSubmit
             ? 'bg-ag-navy text-white hover:bg-gray-800 disabled:opacity-50'
             : 'bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200'
         }`}

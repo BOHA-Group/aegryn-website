@@ -14,9 +14,11 @@ const updateSchema = z.object({
   organization:  z.string().max(150).optional(),
   email_public:  z.string().email().optional().or(z.literal('')),
   phone:         z.string().max(30).optional(),
+  phone_country: z.string().max(4).optional(),
   website:       z.string().url().optional().or(z.literal('')),
   min_rate_eur:  z.number().int().min(0).max(99999).optional().nullable(),
-  languages:     z.array(z.string().max(30)).max(10).optional(),
+  rate_currency: z.enum(['CHF', 'EUR']).optional(),
+  languages:     z.array(z.string().max(10)).max(6).optional(),
   avatar_url:    z.string().url().optional().nullable(),
 })
 
@@ -50,9 +52,7 @@ async function requirePartnerWithPrereqs(userId: string) {
   if (profile?.kyc_status !== 'approved') {
     return { error: NextResponse.json({ error: 'KYC non approuvé.' }, { status: 403 }) }
   }
-  if (profile?.expert_plan !== 'active') {
-    return { error: NextResponse.json({ error: 'Abonnement expert inactif.' }, { status: 403 }) }
-  }
+  /* Abonnement non requis pour soumettre — la publication est conditionnée à l'abonnement actif (côté admin). */
   return { error: null }
 }
 

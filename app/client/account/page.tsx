@@ -198,7 +198,7 @@ export default async function AccountPage() {
             <div>
               <p className="font-sans text-[13px] text-gray-700">Exporter mes données</p>
               <p className="font-sans text-[11px] text-gray-400 mt-0.5">
-                Art. 20 RGPD / Art. 28 nLPD. Fichier JSON de vos données personnelles.
+                Art. 20 RGPD / Art. 28 nLPD. Fichier texte (.txt) lisible sous Windows et macOS.
               </p>
             </div>
             {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}

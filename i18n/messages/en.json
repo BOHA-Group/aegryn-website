@@ -1401,7 +1401,7 @@
       "title": "Discover — AEGRYN Market Intelligence",
       "desc": "Market reports, seller and buyer guides, certification analyses, European tech market intelligence by AEGRYN."
     },
-    "label": "AEGRYN Discover",
+    "label": "AEGRYN Blog",
     "title": "Market intelligence.\nOpen to all.",
     "desc": "Reports, guides and analyses to understand the European tech asset market, written by the AEGRYN teams.",
     "filterAll": "All",
@@ -1416,11 +1416,12 @@
     "filterDACH": "DACH Market",
     "readMin": "min read",
     "readMore": "Read article",
-    "backToDiscover": "← Back to Discover",
+    "backToDiscover": "← Back to Blog",
     "featuredLabel": "Featured",
     "allArticles": "All articles",
     "ctaGrade": "Certify my asset",
     "ctaAuction": "View sessions",
+    "searchPlaceholder": "Search articles...",
     "noArticles": "No articles in this category yet.",
     "newsletterLabel": "Newsletter",
     "newsletterTitle": "Never miss an analysis.",
@@ -1671,7 +1672,7 @@
     "grades": [
       {
         "grade": "AEG ★",
-        "label": "Stellar",
+        "label": "Exceptional",
         "range": "90–100 / 100",
         "color": "#5ADDA4",
         "rarity": "< 5% of certified assets",
@@ -1692,7 +1693,7 @@
       },
       {
         "grade": "AAA",
-        "label": "Premium",
+        "label": "Excellent",
         "range": "75–89 / 100",
         "color": "#C9A84C",
         "rarity": "10–15% of certified assets",
@@ -1713,7 +1714,7 @@
       },
       {
         "grade": "AA",
-        "label": "Standard",
+        "label": "Solid",
         "range": "60–74 / 100",
         "color": "#9BA8B0",
         "rarity": "25–30% of certified assets",
@@ -1755,7 +1756,7 @@
       },
       {
         "grade": "B",
-        "label": "Early Stage",
+        "label": "Emerging",
         "range": "30–44 / 100",
         "color": "#D4820A",
         "rarity": "15–20% of certified assets",
@@ -2910,7 +2911,7 @@
       },
       {
         "g": "B",
-        "d": "Early stage — Remediation plan"
+        "d": "Early Stage — Remediation plan"
       }
     ]
   },

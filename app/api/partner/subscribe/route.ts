@@ -47,11 +47,21 @@ export async function POST(req: NextRequest) {
     .single()
 
   const stripe    = new Stripe(stripeKey, { apiVersion: '2026-06-24.dahlia' })
-  const siteUrl   = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'
+  /* VERCEL_URL est l'URL exacte du déploiement (preview ou prod) — pas de https:// préfixé par Vercel */
+  const vercelUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null
+  const siteUrl   = vercelUrl ?? process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'
   const productId = PRODUCT_IDS[body.plan]
 
   /* Récupérer le price actif du produit */
-  const prices = await stripe.prices.list({ product: productId, active: true, limit: 1 })
+  let prices: Awaited<ReturnType<typeof stripe.prices.list>>
+  try {
+    prices = await stripe.prices.list({ product: productId, active: true, limit: 1 })
+  } catch (stripeErr: unknown) {
+    const msg = stripeErr instanceof Error ? stripeErr.message : String(stripeErr)
+    console.error(`[SUBSCRIBE] stripe.prices.list error: ${msg}`)
+    return NextResponse.json({ error: `stripe_error: ${msg}` }, { status: 500 })
+  }
+
   if (!prices.data.length) {
     return NextResponse.json({ error: 'no_price_found' }, { status: 500 })
   }
@@ -72,24 +82,31 @@ export async function POST(req: NextRequest) {
   }
 
   /* Créer la Checkout Session */
-  const session = await stripe.checkout.sessions.create({
-    mode:                'subscription',
-    customer:            customerId,
-    line_items:          [{ price: priceId, quantity: 1 }],
-    success_url:         `${siteUrl}/client/partner/subscription?success=1`,
-    cancel_url:          `${siteUrl}/client/partner/subscription?canceled=1`,
-    metadata: {
-      supabase_uid: user.id,
-      plan:         body.plan,
-    },
-    subscription_data: {
+  let session: Awaited<ReturnType<typeof stripe.checkout.sessions.create>>
+  try {
+    session = await stripe.checkout.sessions.create({
+      mode:                'subscription',
+      customer:            customerId,
+      line_items:          [{ price: priceId, quantity: 1 }],
+      success_url:         `${siteUrl}/client/partner/subscription?success=1`,
+      cancel_url:          `${siteUrl}/client/partner/subscription?canceled=1`,
       metadata: {
         supabase_uid: user.id,
         plan:         body.plan,
       },
-    },
-    allow_promotion_codes: true,
-  })
+      subscription_data: {
+        metadata: {
+          supabase_uid: user.id,
+          plan:         body.plan,
+        },
+      },
+      allow_promotion_codes: true,
+    })
+  } catch (stripeErr: unknown) {
+    const msg = stripeErr instanceof Error ? stripeErr.message : String(stripeErr)
+    console.error(`[SUBSCRIBE] checkout.sessions.create error: ${msg}`)
+    return NextResponse.json({ error: `stripe_checkout_error: ${msg}` }, { status: 500 })
+  }
 
   return NextResponse.json({ url: session.url })
 }

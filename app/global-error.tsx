@@ -1,7 +1,5 @@
 'use client'
 
-import { useEffect } from 'react'
-
 export default function GlobalError({
   error,
   reset,
@@ -9,22 +7,6 @@ export default function GlobalError({
   error: Error & { digest?: string }
   reset: () => void
 }) {
-  const isProd = process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
-
-  useEffect(() => {
-    if (isProd) {
-      window.location.reload()
-    }
-  }, [isProd])
-
-  if (isProd) {
-    return (
-      <html>
-        <body style={{ margin: 0, background: '#fff' }} />
-      </html>
-    )
-  }
-
   return (
     <html>
       <body style={{ margin: 0, background: '#0a0a0a', color: '#fff', fontFamily: 'monospace', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', padding: 24 }}>

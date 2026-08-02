@@ -31,12 +31,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'R\u00f4le partenaire requis.' }, { status: 403 })
   }
 
-  const ext   = file.type === 'image/png' ? 'png' : file.type === 'image/webp' ? 'webp' : 'jpg'
-  const path  = `avatars/${user.id}.${ext}`
+  const ext    = file.type === 'image/png' ? 'png' : file.type === 'image/webp' ? 'webp' : 'jpg'
+  const path   = `${user.id}.${ext}`
   const buffer = Buffer.from(await file.arrayBuffer())
 
   const { error: uploadError } = await supa.storage
-    .from('kyc-documents')
+    .from('expert-avatars')
     .upload(path, buffer, { contentType: file.type, upsert: true })
 
   if (uploadError) {
@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'upload_failed' }, { status: 500 })
   }
 
-  const { data: { publicUrl } } = supa.storage.from('kyc-documents').getPublicUrl(path)
+  const { data: { publicUrl } } = supa.storage.from('expert-avatars').getPublicUrl(path)
 
   /* Persister l'url sur expert_profiles si la fiche existe */
   await supa.from('expert_profiles')

@@ -210,6 +210,18 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       </section>
 
+      {/* Back to Blog */}
+      <section className="py-8 px-6 border-t border-ag-border">
+        <div className="max-w-3xl mx-auto">
+          <Link
+            href="/blog"
+            className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light hover:text-ag-black transition-colors inline-block"
+          >
+            {t('backToDiscover')}
+          </Link>
+        </div>
+      </section>
+
       {/* Related CTA */}
       <section className="py-16 px-6 border-t border-ag-border bg-ag-off-white">
         <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">

@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
-import { ArrowUpRight, Calendar, Clock } from 'lucide-react'
+import { ArrowUpRight, Calendar, Clock, Search } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 import { ARTICLES, ARTICLE_CATEGORIES, type ArticleCategory } from '@/data/articles'
 import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubscribeForm'
@@ -16,12 +16,20 @@ export function DiscoverGrid({ locale }: Props) {
   const t    = useTranslations('discover')
   const lang = locale === 'fr' ? 'fr' : 'en'
   const [active, setActive] = useState<Filter>('all')
+  const [query, setQuery]   = useState('')
   const gridRef = useRef<HTMLDivElement>(null)
   const heroRef = useRef<HTMLElement>(null)
 
-  const filtered = active === 'all'
-    ? ARTICLES
-    : ARTICLES.filter(a => a.category === active)
+  const filtered = ARTICLES
+    .filter(a => active === 'all' || a.category === active)
+    .filter(a => {
+      if (!query.trim()) return true
+      const q = query.toLowerCase()
+      const title   = (a.title[lang]   ?? '').toLowerCase()
+      const excerpt = (a.excerpt[lang] ?? '').toLowerCase()
+      const cat     = (ARTICLE_CATEGORIES[a.category][lang] ?? '').toLowerCase()
+      return title.includes(q) || excerpt.includes(q) || cat.includes(q)
+    })
 
   const featured   = ARTICLES.filter(a => a.featured).slice(0, 3)
   const showFeatured = active === 'all'
@@ -135,6 +143,20 @@ export function DiscoverGrid({ locale }: Props) {
       {/* All articles with filter */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
         <div className="max-w-7xl mx-auto">
+          {/* Search bar */}
+          <div className="mb-6">
+            <div className="relative max-w-lg">
+              <Search size={13} className="absolute left-4 top-1/2 -translate-y-1/2 text-ag-gray-light pointer-events-none" />
+              <input
+                type="text"
+                value={query}
+                onChange={e => setQuery(e.target.value)}
+                placeholder={t('searchPlaceholder')}
+                className="w-full pl-10 pr-4 py-3 border border-ag-border bg-ag-white font-sans text-[13px] text-ag-black placeholder-ag-gray-light focus:outline-none focus:border-ag-black transition-colors"
+              />
+            </div>
+          </div>
+
           {/* Filter bar */}
           <div className="flex items-center gap-1 flex-wrap mb-10 pb-6 border-b border-ag-border">
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mr-4 w-full mb-3 sm:w-auto sm:mb-0">

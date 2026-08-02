@@ -1,17 +1,7 @@
-import CookieBanner from '@/components/analytics/CookieBanner'
-
 /**
- * Root layout — le seul niveau où Next.js App Router accepte
- * strategy="beforeInteractive". CookieScript est placé ici pour
- * garantir qu'il s'exécute avant tout autre script tiers (GA, Stripe…).
- * Le <html> et <body> réels sont définis dans [locale]/layout.tsx ;
- * ce root layout enveloppe silencieusement avec le Script beforeInteractive.
+ * Root layout — enveloppe silencieusement [locale]/layout.tsx.
+ * CookieScript est chargé via GTM (tag CMP CookieScript) — pas de script direct ici.
  */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <CookieBanner />
-      {children}
-    </>
-  )
+  return <>{children}</>
 }

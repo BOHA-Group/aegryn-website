@@ -50,9 +50,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'invalid_signature' }, { status: 400 })
   }
 
-  /* ── Point 7 : log systématique ── */
-  console.log(`[stripe/webhook] event.type=${event.type} event.id=${event.id}`)
-
   const supa = createServiceClient()
 
   /* ══════════════════════════════════════════════════════════════════
@@ -73,7 +70,6 @@ export async function POST(req: NextRequest) {
         .maybeSingle()
 
       if (existing?.evaluation_fee_paid === true) {
-        console.log(`[stripe/webhook] idempotent skip — asset ${assetId} already paid`)
         return NextResponse.json({ received: true })
       }
 
@@ -104,8 +100,26 @@ export async function POST(req: NextRequest) {
           `Nouveau paiement reçu\n\nType : ${typeLabel}\nEmail : ${email}\nPartner type : ${meta.partnerType || '—'}\nAsset ID : ${assetId}\nStripe session : ${session.id}`
         ),
       ])
-    } else {
-      console.log(`[stripe/webhook] no draft_asset_id in metadata — may be subscription checkout, ignoring`)
+    } else if (session.mode === 'subscription' && meta.supabase_uid) {
+      /* Checkout abonnement expert — activation immédiate en attente du webhook subscription */
+      const uid = meta.supabase_uid
+      const sub = session.subscription
+        ? await (new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: '2026-06-24.dahlia' }))
+            .subscriptions.retrieve(session.subscription as string)
+        : null
+
+      const patch: Record<string, unknown> = {
+        expert_plan:            'active',
+        expert_plan_start:      new Date().toISOString(),
+        stripe_subscription_id: sub?.id ?? (session.subscription as string | null),
+      }
+      if (sub) {
+        const periodEnd = (sub.items?.data?.[0] as unknown as Record<string, unknown> | undefined)?.current_period_end
+        if (typeof periodEnd === 'number') patch.expert_plan_end = new Date(periodEnd * 1000).toISOString()
+      }
+
+      const { error } = await supa.from('profiles').update(patch).eq('id', uid)
+      if (error) console.error('[stripe/webhook] subscription checkout activation error:', error)
     }
   }
 
@@ -122,9 +136,11 @@ export async function POST(req: NextRequest) {
 
     if (uid) {
       const isActive = sub.status === 'active' || sub.status === 'trialing'
+      const interval = (sub.items?.data?.[0]?.plan?.interval as string | undefined) ?? null
       const patch: Record<string, unknown> = {
         expert_plan:             isActive ? 'active' : 'inactive',
         stripe_subscription_id:  sub.id,
+        expert_plan_interval:    interval,
       }
       if (isActive) {
         patch.expert_plan_start = new Date(sub.start_date * 1000).toISOString()
@@ -137,7 +153,6 @@ export async function POST(req: NextRequest) {
 
       const { error } = await supa.from('profiles').update(patch).eq('id', uid)
       if (error) console.error('[stripe/webhook] subscription update error:', error)
-      else console.log(`[stripe/webhook] expert_plan=${patch.expert_plan} for uid=${uid}`)
 
       /* Email de confirmation à l'activation */
       if (event.type === 'customer.subscription.created' && isActive) {
@@ -164,7 +179,6 @@ export async function POST(req: NextRequest) {
         expert_plan_end: new Date().toISOString(),
       }).eq('id', uid)
       if (error) console.error('[stripe/webhook] subscription delete error:', error)
-      else console.log(`[stripe/webhook] expert_plan=inactive (deleted) for uid=${uid}`)
     }
   }
 

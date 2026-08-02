@@ -1,15 +1,17 @@
 'use client'
 
 import { useState } from 'react'
-import { CreditCard, Loader2 } from 'lucide-react'
+import { CreditCard, Loader2, AlertCircle } from 'lucide-react'
 
 export default function SubscribeButtons({ disabled: kycBlocked = false }: { disabled?: boolean }) {
   const [loading, setLoading] = useState<'monthly' | 'yearly' | null>(null)
+  const [error,   setError]   = useState<string | null>(null)
 
   async function checkout(plan: 'monthly' | 'yearly') {
     setLoading(plan)
+    setError(null)
     try {
-      const res = await fetch('/api/partner/subscribe', {
+      const res  = await fetch('/api/partner/subscribe', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ plan }),
@@ -18,11 +20,13 @@ export default function SubscribeButtons({ disabled: kycBlocked = false }: { dis
       if (data.url) {
         window.location.href = data.url
       } else {
-        alert(`Erreur : ${data.error ?? 'Une erreur est survenue.'}`)
+        console.error('[SubscribeButtons] API error:', res.status, data)
+        setError(`Erreur ${res.status} : ${data.error ?? 'Une erreur est survenue.'}`)
         setLoading(null)
       }
-    } catch {
-      alert('Impossible de contacter le serveur de paiement.')
+    } catch (err) {
+      console.error('[SubscribeButtons] fetch error:', err)
+      setError('Impossible de contacter le serveur de paiement.')
       setLoading(null)
     }
   }
@@ -67,6 +71,12 @@ export default function SubscribeButtons({ disabled: kycBlocked = false }: { dis
           }
         </div>
       </button>
+      {error && (
+        <div className="flex items-start gap-2 mt-3 p-3 bg-red-50 border border-red-200 text-red-700">
+          <AlertCircle size={14} className="shrink-0 mt-0.5" />
+          <p className="font-sans text-[12px]">{error}</p>
+        </div>
+      )}
     </div>
   )
 }

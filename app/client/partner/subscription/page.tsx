@@ -3,8 +3,9 @@ import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { CheckCircle2, CreditCard, Clock, XCircle } from 'lucide-react'
+import { CheckCircle2, CreditCard, Clock, XCircle, CalendarClock } from 'lucide-react'
 import SubscribeButtons from './SubscribeButtons'
+import CancelButton     from './CancelButton'
 
 export const metadata: Metadata = {
   title: 'Abonnement — Espace Partenaire AEGRYN',
@@ -29,7 +30,7 @@ export default async function PartnerSubscriptionPage({
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, expert_plan, expert_plan_start, expert_plan_end, stripe_subscription_id, kyc_status')
+    .select('full_name, expert_plan, expert_plan_start, expert_plan_end, expert_plan_interval, stripe_subscription_id, kyc_status')
     .eq('id', user.id)
     .single()
 
@@ -37,9 +38,11 @@ export default async function PartnerSubscriptionPage({
   const plan         = p?.expert_plan as string | null
   const planStart    = p?.expert_plan_start as string | null
   const planEnd      = p?.expert_plan_end as string | null
+  const planInterval = p?.expert_plan_interval as 'month' | 'year' | null
   const isActive     = plan === 'active'
   const kycStatus    = (p?.kyc_status as string | null) ?? 'pending'
   const kycApproved  = kycStatus === 'approved'
+  const intervalLabel = planInterval === 'year' ? 'Annuel' : 'Mensuel'
 
   return (
     <div className="p-8 max-w-2xl">
@@ -95,14 +98,28 @@ export default async function PartnerSubscriptionPage({
             : <Clock size={18} className="text-amber-600 shrink-0" />
           }
           <p className={`font-sans font-semibold text-[15px] ${isActive ? 'text-emerald-800' : 'text-amber-800'}`}>
-            {isActive ? 'Abonnement actif' : 'Abonnement inactif'}
+            {isActive ? `Abonnement actif — ${intervalLabel}` : 'Abonnement inactif'}
           </p>
         </div>
-        {isActive && planStart && (
-          <p className="font-sans text-[12px] text-emerald-700">
-            Actif depuis le {fmtDate(planStart)}
-            {planEnd && ` — renouvellement le ${fmtDate(planEnd)}`}
-          </p>
+        {isActive && (
+          <div className="flex flex-col gap-1.5">
+            {planStart && (
+              <div className="flex items-center gap-2">
+                <CalendarClock size={13} className="text-emerald-500 shrink-0" />
+                <p className="font-sans text-[12px] text-emerald-700">
+                  Actif depuis le {fmtDate(planStart)}
+                </p>
+              </div>
+            )}
+            {planEnd && (
+              <div className="flex items-center gap-2">
+                <CalendarClock size={13} className="text-emerald-500 shrink-0" />
+                <p className="font-sans text-[12px] text-emerald-700">
+                  Prochain renouvellement : {fmtDate(planEnd)}
+                </p>
+              </div>
+            )}
+          </div>
         )}
         {!isActive && (
           <p className="font-sans text-[12px] text-amber-700">
@@ -137,12 +154,14 @@ export default async function PartnerSubscriptionPage({
         </ul>
 
         {isActive ? (
-          <div className="bg-emerald-50 border border-emerald-200 px-4 py-3">
-            <p className="font-sans text-[12px] text-emerald-700">
-              Votre abonnement se renouvelle automatiquement.{' '}
-              Pour le résilier, contactez{' '}
-              <a href="mailto:contact@boha-group.com" className="underline font-medium">contact@boha-group.com</a>.
-            </p>
+          <div>
+            <div className="bg-emerald-50 border border-emerald-200 px-4 py-3 mb-2">
+              <p className="font-sans text-[12px] text-emerald-700">
+                Abonnement <strong>{intervalLabel.toLowerCase()}</strong> — renouvellement automatique.
+                {planEnd && <> Prochaine échéance : <strong>{fmtDate(planEnd)}</strong>.</>}
+              </p>
+            </div>
+            <CancelButton />
           </div>
         ) : (
           <SubscribeButtons disabled={!kycApproved} />
