@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS commission_tiers (
   id           SERIAL PRIMARY KEY,
   min_amount   NUMERIC(14,2) NOT NULL,
   max_amount   NUMERIC(14,2),            -- NULL = pas de plafond (dernière tranche)
-  rate         NUMERIC(5,4) NOT NULL,    -- ex: 0.10 = 10%
+  rate         NUMERIC(5,4),              -- NULL = taux convenu au mandat (ex: > 5M€)
   minimum_fee  NUMERIC(14,2) NOT NULL DEFAULT 25000,
   label        TEXT,
   active       BOOLEAN NOT NULL DEFAULT TRUE,
