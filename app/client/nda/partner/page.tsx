@@ -75,10 +75,10 @@ export default async function PartnerNdaPage() {
             <p>Le Partenaire s'engage à :</p>
             <ul className="list-disc pl-5 mt-2 space-y-1">
               <li>Ne pas contacter directement les cédants ou acquéreurs introduits par AEGRYN en dehors du cadre formel de la relation partenariale</li>
-              <li>Ne pas reproduire, transmettre ou exploiter à titre personnel les informations confidentielles auxquelles il a accès</li>
-              <li>Ne pas utiliser les connexions et introductions réalisées via AEGRYN pour contourner le processus AEGRYN et percevoir une commission directe</li>
-              <li>Informer immédiatement AEGRYN de tout contact direct initié par un cédant ou acquéreur introduit</li>
-              <li>Respecter l'exclusivité territoriale ou sectorielle éventuellement accordée par AEGRYN</li>
+              <li>Ne pas reproduire, transmettre ou exploiter à titre personnel les informations confidentielles auxquelles il a accès dans l'annuaire expert ou via les mandats</li>
+              <li>Ne pas utiliser les mises en relation AEGRYN pour contourner le processus et percevoir directement une rétrocession ou contrepartie de toute nature</li>
+              <li>Informer immédiatement AEGRYN de tout contact direct initié par un cédant ou acquéreur introduit dans le cadre d'un mandat AEGRYN</li>
+              <li>Respecter l'exclusivité territoriale ou sectorielle éventuellement accordée par AEGRYN dans le cadre d'un mandat signé</li>
             </ul>
           </section>
 
@@ -86,30 +86,56 @@ export default async function PartnerNdaPage() {
             <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">4. Introductions et apports d'affaires</h2>
             <p>
               Le Partenaire reconnaît que les introductions soumises via la plateforme AEGRYN sont
-              propriété d'AEGRYN dès leur enregistrement. Toute introduction non formalisée via la
-              plateforme n'ouvre droit à aucune contrepartie de la part d'AEGRYN.
+              enregistrées au nom du Partenaire dès leur formalisation. Toute introduction non
+              formalisée via la plateforme n'ouvre droit à aucune contrepartie de la part d'AEGRYN.
+              La rétrocession éventuelle sur les honoraires de cession est définie dans le mandat
+              de partenariat signé séparément et est distincte du présent accord.
             </p>
           </section>
 
           <section>
-            <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">5. Durée</h2>
+            <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">5. Programme de parrainage — Fiche Expert</h2>
+            <p>
+              Dans le cadre de son programme de développement réseau, AEGRYN offre au Partenaire
+              détenant un abonnement Fiche Expert actif la possibilité de parrainer d'autres professionnels :
+            </p>
+            <ul className="list-disc pl-5 mt-2 space-y-1">
+              <li>
+                <strong>Parrain :</strong> tout Partenaire AEGRYN dont un filleul souscrit un abonnement
+                Fiche Expert bénéficie de <strong>1 mois offert</strong> sur son propre abonnement en cours,
+                crédité automatiquement à la première échéance suivant la souscription du filleul.
+              </li>
+              <li>
+                <strong>Filleul :</strong> tout nouveau Partenaire s'inscrivant avec un code de parrainage
+                valide bénéficie de <strong>1 mois offert</strong> dès la souscription de sa Fiche Expert,
+                déduction faite sur la première facture.
+              </li>
+              <li>Le programme est réservé aux Partenaires disposant d'un abonnement Fiche Expert actif au moment de l'attribution du crédit.</li>
+              <li>AEGRYN se réserve le droit de modifier ou de suspendre le programme de parrainage avec un préavis de 30 jours.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">6. Durée</h2>
             <p>
               Les présentes obligations s'appliquent pendant toute la durée de la relation partenariale
               et pendant <strong>3 ans</strong> après sa cessation, quelle qu'en soit la cause.
+              Les crédits de parrainage acquis restent valables jusqu'à leur utilisation effective.
             </p>
           </section>
 
           <section>
-            <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">6. Sanctions</h2>
+            <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">7. Sanctions</h2>
             <p>
               Tout manquement expose le Partenaire à la résiliation immédiate de la relation partenariale,
-              à la restitution des avantages perçus et à des dommages-intérêts incluant une indemnité
-              forfaitaire minimale de 25 000 € HT, sans préjudice de tout autre préjudice démontré.
+              à la perte des crédits de parrainage acquis, à la suspension de la Fiche Expert et à des
+              dommages-intérêts incluant une indemnité forfaitaire minimale de 25 000 € HT,
+              sans préjudice de tout autre préjudice démontré.
             </p>
           </section>
 
           <section>
-            <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">7. Droit applicable</h2>
+            <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">8. Droit applicable</h2>
             <p>
               Le présent accord est soumis au droit suisse. Tout litige sera soumis aux tribunaux
               du canton de domicile d'AEGRYN, après tentative de résolution amiable sous 30 jours.
