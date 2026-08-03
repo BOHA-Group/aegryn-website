@@ -83,13 +83,23 @@ export default async function PartnerNdaPage() {
           </section>
 
           <section>
-            <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">4. Introductions et apports d'affaires</h2>
+            <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">4. Modèle économique — Absence de commission</h2>
             <p>
-              Le Partenaire reconnaît que les introductions soumises via la plateforme AEGRYN sont
-              enregistrées au nom du Partenaire dès leur formalisation. Toute introduction non
-              formalisée via la plateforme n'ouvre droit à aucune contrepartie de la part d'AEGRYN.
-              La rétrocession éventuelle sur les honoraires de cession est définie dans le mandat
-              de partenariat signé séparément et est distincte du présent accord.
+              Le Partenaire reconnaît et accepte expressément que son accès au réseau AEGRYN est
+              exclusivement conditionné au paiement d'un abonnement Fiche Expert (89 € HT/mois ou
+              tarif annuel en vigueur). AEGRYN ne perçoit <strong>aucune commission</strong> sur les
+              honoraires facturés par le Partenaire à ses clients, quelle que soit la nature de la
+              mission (conseil, due diligence, assistance juridique, audit technique, etc.).
+            </p>
+            <p className="mt-3">
+              Le Partenaire est un prestataire indépendant. Il n'est pas mandataire d'AEGRYN, ne représente
+              pas AEGRYN dans ses relations avec les clients, et reste seul responsable de ses prestations
+              et de sa tarification. Les mises en relation AEGRYN constituent un service de référencement,
+              non un apport d'affaires donnant lieu à rétrocession.
+            </p>
+            <p className="mt-3 text-[12px] text-gray-500">
+              Les conditions complètes de l'abonnement Fiche Expert et du programme de parrainage sont
+              détaillées en Section XII des CGV AEGRYN disponibles sur aegryn.com/terms/cgv.
             </p>
           </section>
 

@@ -26,6 +26,7 @@ export default async function TermsCgvPage({ params }: Props) {
     ['Séquestre', 'defEscrow'],
     ['Vendeur', 'defSeller'],
     ['Acquéreur', 'defBuyer'],
+    ['Partenaire', 'defPartner'],
   ] as const
 
   return (
@@ -188,6 +189,25 @@ export default async function TermsCgvPage({ params }: Props) {
           </div>
           <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-4">{t('s11Earnout')}</p>
           <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('s11Payment')}</p>
+        </section>
+
+        {/* Section XII — Réseau d'experts */}
+        <section className="border-t border-ag-border pt-8">
+          <h2 className="font-sans font-semibold text-[13px] uppercase tracking-[0.18em] text-ag-black mb-6">
+            Section XII — {t('s12Title')}
+          </h2>
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-6">{t('s12Intro')}</p>
+          {([
+            ['s12SubTitle',      's12Sub'],
+            ['s12AbonTitle',     's12Abon'],
+            ['s12ReferralTitle', 's12Referral'],
+            ['s12NoCommTitle',   's12NoComm'],
+          ] as const).map(([titleKey, bodyKey]) => (
+            <div key={titleKey} className="mb-6 pl-4 border-l-2 border-ag-border">
+              <h3 className="font-sans font-semibold text-[13px] text-ag-black mb-2">{t(titleKey)}</h3>
+              <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t(bodyKey)}</p>
+            </div>
+          ))}
         </section>
 
         {/* CTAs */}
