@@ -1,11 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { requireAdmin }      from '@/lib/adminAuth'
+import { getAdminUser }      from '@/lib/adminAuth'
 import { createServiceClient } from '@/lib/supabase'
 
 /** POST /api/admin/sessions — créer une session */
 export async function POST(req: NextRequest) {
-  try { await requireAdmin() }
-  catch { return NextResponse.json({ error: 'Unauthorized' }, { status: 401 }) }
+  if (!(await getAdminUser())) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const body = await req.json().catch(() => ({}))
   const { name, type, theme, session_date, location, format, status, notes } = body

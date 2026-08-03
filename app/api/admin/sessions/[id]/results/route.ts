@@ -1,13 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { requireAdmin }      from '@/lib/adminAuth'
+import { getAdminUser }      from '@/lib/adminAuth'
 import { createServiceClient } from '@/lib/supabase'
 
 type Ctx = { params: Promise<{ id: string }> }
 
 /** GET /api/admin/sessions/[id]/results — charger session + lots */
 export async function GET(_req: NextRequest, { params }: Ctx) {
-  try { await requireAdmin() }
-  catch { return NextResponse.json({ error: 'Unauthorized' }, { status: 401 }) }
+  if (!(await getAdminUser())) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const { id } = await params
   const supa = createServiceClient()
@@ -27,8 +26,7 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
 
 /** POST /api/admin/sessions/[id]/results — enregistrer résultats + publier */
 export async function POST(req: NextRequest, { params }: Ctx) {
-  try { await requireAdmin() }
-  catch { return NextResponse.json({ error: 'Unauthorized' }, { status: 401 }) }
+  if (!(await getAdminUser())) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const { id } = await params
   const body = await req.json().catch(() => ({}))

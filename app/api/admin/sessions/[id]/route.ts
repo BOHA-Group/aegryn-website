@@ -1,13 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { requireAdmin }      from '@/lib/adminAuth'
+import { getAdminUser }      from '@/lib/adminAuth'
 import { createServiceClient } from '@/lib/supabase'
 
 type Ctx = { params: Promise<{ id: string }> }
 
 /** PATCH /api/admin/sessions/[id] — mettre à jour */
 export async function PATCH(req: NextRequest, { params }: Ctx) {
-  try { await requireAdmin() }
-  catch { return NextResponse.json({ error: 'Unauthorized' }, { status: 401 }) }
+  if (!(await getAdminUser())) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const { id } = await params
   const body = await req.json().catch(() => ({}))
@@ -30,8 +29,7 @@ export async function PATCH(req: NextRequest, { params }: Ctx) {
 
 /** DELETE /api/admin/sessions/[id] */
 export async function DELETE(_req: NextRequest, { params }: Ctx) {
-  try { await requireAdmin() }
-  catch { return NextResponse.json({ error: 'Unauthorized' }, { status: 401 }) }
+  if (!(await getAdminUser())) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const { id } = await params
   const supa = createServiceClient()
