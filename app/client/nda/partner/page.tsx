@@ -114,13 +114,13 @@ export default async function PartnerNdaPage() {
             <ul className="list-disc pl-5 mt-2 space-y-1">
               <li>
                 <strong>Parrain :</strong> tout Partenaire AEGRYN dont un filleul souscrit un abonnement
-                Fiche Expert bénéficie de <strong>1 mois offert</strong> sur son propre abonnement en cours,
-                crédité automatiquement à la première échéance suivant la souscription du filleul.
+                Fiche Expert bénéficie de <strong>1 mois offert</strong> sur son propre abonnement,
+                crédité en extension à la fin de la période d'abonnement en cours.
               </li>
               <li>
                 <strong>Filleul :</strong> tout nouveau Partenaire s'inscrivant avec un code de parrainage
                 valide bénéficie de <strong>1 mois offert</strong> dès la souscription de sa Fiche Expert,
-                déduction faite sur la première facture.
+                crédité en extension à la fin de la période d'abonnement souscrite.
               </li>
               <li>Le programme est réservé aux Partenaires disposant d'un abonnement Fiche Expert actif au moment de l'attribution du crédit.</li>
               <li>AEGRYN se réserve le droit de modifier ou de suspendre le programme de parrainage avec un préavis de 30 jours.</li>
