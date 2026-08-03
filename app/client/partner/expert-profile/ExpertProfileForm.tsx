@@ -98,7 +98,7 @@ type Props = {
 }
 
 /* Supprime l'indicatif préfixé en DB (ex: "+33 633...") pour n'afficher que les chiffres locaux */
-function stripDial(phone: string | undefined, dial: string): string {
+function stripDial(phone: string | undefined, _dial: string): string {
   if (!phone) return ''
   const stripped = phone.replace(/^\+\d{1,4}\s?/, '').trim()
   /* Sécurité : si l'indicatif avait déjà été strippé, on renvoie tel quel */

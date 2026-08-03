@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
-import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, TrendingUp, Scale, FileSearch, Cpu, Building2, ClipboardCheck, Gavel, Wallet, CalendarClock, Merge, Users } from 'lucide-react'
+import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, TrendingUp, Scale, FileSearch, Cpu, ClipboardCheck } from 'lucide-react'
 
 type ExpertProfile = {
   id:           string
