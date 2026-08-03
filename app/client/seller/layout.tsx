@@ -13,13 +13,18 @@ export default async function SellerLayout({ children }: { children: React.React
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, roles, kyc_status')
+    .select('full_name, roles, kyc_status, seller_nda_accepted_at, seller_nda_version')
     .eq('id', user.id)
     .single()
 
   const roles = Array.isArray(profile?.roles) ? profile.roles as string[] : []
   const canAccessSeller = roles.includes('seller')
   if (!canAccessSeller) redirect('/client/buyer')
+
+  const NDA_VERSION_SELLER = '2026-08'
+  const ndaOk = (profile as Record<string,unknown> | null)?.seller_nda_accepted_at
+    && (profile as Record<string,unknown> | null)?.seller_nda_version === NDA_VERSION_SELLER
+  if (!ndaOk) redirect('/client/nda/seller')
 
   const hasBuyer   = roles.includes('buyer')
   const hasPartner = roles.includes('partner')

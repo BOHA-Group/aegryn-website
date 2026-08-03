@@ -34,13 +34,20 @@ function fmtChf(n: unknown) {
   return new Intl.NumberFormat('fr-CH', { style: 'currency', currency: 'CHF', maximumFractionDigits: 0 }).format(Number(n))
 }
 
+const NDA_TYPE_LABELS: Record<string, string> = {
+  seller:  'Cédant',
+  buyer:   'Acquéreur',
+  partner: 'Partenaire',
+}
+
 type Props = {
-  profileId:     string
-  currentRoles:  string[]
-  adminNote:     string
-  ndaRows:       Record<string, unknown>[]
-  ndaSignatures: Record<string, unknown>[]
-  kycDocs:       Record<string, unknown>[]
+  profileId:       string
+  currentRoles:    string[]
+  adminNote:       string
+  ndaRows:         Record<string, unknown>[]
+  ndaSignatures:   Record<string, unknown>[]
+  ndaAcceptances:  Record<string, unknown>[]
+  kycDocs:         Record<string, unknown>[]
   introductions: Record<string, unknown>[]
   commissions:   Record<string, unknown>[]
   sellerAssets:  Record<string, unknown>[]
@@ -52,7 +59,7 @@ type Tab = 'roles' | 'nda' | 'kyc' | 'assets' | 'partner'
 
 export default function MemberDetailClient({
   profileId, currentRoles, adminNote: initNote,
-  ndaRows, ndaSignatures, kycDocs, introductions, commissions, sellerAssets,
+  ndaRows, ndaSignatures, ndaAcceptances, kycDocs, introductions, commissions, sellerAssets,
   token, tokenQs,
 }: Props) {
   const router = useRouter()
@@ -205,6 +212,50 @@ export default function MemberDetailClient({
       {/* ─── ONGLET NDA ───────────────────────────────────────────── */}
       {tab === 'nda' && (
         <div className="space-y-6">
+
+          {/* NDA profil — acceptations en ligne (seller/buyer/partner) */}
+          <div className="bg-white border border-gray-200">
+            <div className="px-5 py-3 border-b border-gray-100 flex items-center justify-between">
+              <p className="font-mono text-[9px] uppercase tracking-widest text-gray-500">NDA profil — Acceptations en ligne</p>
+              {ndaAcceptances.length > 0 && (
+                <span className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-emerald-50 text-emerald-700 font-bold">
+                  {ndaAcceptances.length} signature{ndaAcceptances.length > 1 ? 's' : ''}
+                </span>
+              )}
+            </div>
+            {ndaAcceptances.length === 0 ? (
+              <div className="px-5 py-6">
+                <p className="font-sans text-[12px] text-gray-400">Aucun NDA profil accepté en ligne.</p>
+              </div>
+            ) : (
+              <table className="w-full text-[12px]">
+                <thead className="bg-gray-50 border-b border-gray-100">
+                  <tr>
+                    {['Rôle', 'Version', 'Date acceptation', 'IP', 'User Agent'].map(h => (
+                      <th key={h} className="text-left px-4 py-2.5 font-mono text-[9px] uppercase tracking-widest text-gray-400">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-50">
+                  {ndaAcceptances.map((a, i) => (
+                    <tr key={i} className="hover:bg-gray-50/50">
+                      <td className="px-4 py-3">
+                        <span className="font-mono text-[10px] font-semibold uppercase px-2 py-0.5 bg-ag-navy/10 text-ag-navy">
+                          {NDA_TYPE_LABELS[String(a.nda_type)] ?? String(a.nda_type)}
+                        </span>
+                      </td>
+                      <td className="px-4 py-3 font-mono text-[10px] text-gray-500">{String(a.nda_version ?? '—')}</td>
+                      <td className="px-4 py-3 font-mono text-emerald-700 font-semibold">{fmtDate(a.accepted_at)}</td>
+                      <td className="px-4 py-3 font-mono text-[10px] text-gray-400">{String(a.ip_address ?? '—')}</td>
+                      <td className="px-4 py-3 font-mono text-[10px] text-gray-300 max-w-[200px] truncate" title={String(a.user_agent ?? '')}>
+                        {String(a.user_agent ?? '—').slice(0, 60)}{String(a.user_agent ?? '').length > 60 ? '…' : ''}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
+          </div>
 
           {/* NDA Auction — signature plateforme */}
           <div className="bg-white border border-gray-200">

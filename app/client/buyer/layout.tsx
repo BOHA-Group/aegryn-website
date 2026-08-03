@@ -13,7 +13,7 @@ export default async function BuyerLayout({ children }: { children: React.ReactN
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, roles, kyc_status')
+    .select('full_name, roles, kyc_status, buyer_nda_accepted_at, buyer_nda_version')
     .eq('id', user.id)
     .single()
 
@@ -22,6 +22,11 @@ export default async function BuyerLayout({ children }: { children: React.ReactN
   if (!roles.includes('buyer') && roles.includes('partner')) redirect('/client/partner')
   const canAccessBuyer = roles.includes('buyer')
   if (!canAccessBuyer) redirect('/client/seller')
+
+  const NDA_VERSION_BUYER = '2026-08'
+  const ndaOk = (profile as Record<string,unknown> | null)?.buyer_nda_accepted_at
+    && (profile as Record<string,unknown> | null)?.buyer_nda_version === NDA_VERSION_BUYER
+  if (!ndaOk) redirect('/client/nda/buyer')
 
   const hasSeller  = roles.includes('seller')
   const hasPartner = roles.includes('partner')
