@@ -4,6 +4,7 @@ import { notFound }  from 'next/navigation'
 import type { Metadata }       from 'next'
 import Link                    from 'next/link'
 import CertValidation          from './CertValidation'
+import DeletePartnerButton     from './DeletePartnerButton'
 
 export const metadata: Metadata = {
   title: 'Partenaire — AEGRYN Admin',
@@ -197,6 +198,9 @@ export default async function AdminPartnerDetailPage({
             </div>
           </>
         )}
+
+        {/* Zone de danger */}
+        <DeletePartnerButton partnerId={id} tokenQs={tokenQs} />
 
       </div>
     </main>

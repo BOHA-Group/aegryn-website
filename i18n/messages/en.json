@@ -3624,6 +3624,20 @@
     "s9": "These Terms are governed by Swiss substantive law. Any dispute shall be submitted to the exclusive jurisdiction of the courts of AEGRYN's registered canton. The parties will endeavour to resolve any dispute amicably within 30 days before any legal proceedings.",
     "s10Title": "Data Room and Access to Due Diligence Documents",
     "s10": "As part of the certification and transaction process, AEGRYN provides a secure data room enabling the seller to upload the documents required for CIFS analysis. Access to these documents is strictly controlled through a three-tier authorisation system: administrator/seller, assigned certified partner, and buyer who has signed the Auction NDA.\n\nEvery consultation is logged (identity, IP address, timestamp, duration). Technical deterrence measures are in place (download blocking, screenshot detection attempts, dynamic watermarking). These measures constitute a serious deterrent and a logged record in the event of a dispute, but cannot guarantee 100% prevention of capture via external means (photography, third-party device capture).\n\nThe buyer acknowledges and accepts that documents viewed in the data room are protected by these Terms and the signed Auction NDA. The buyer contractually undertakes not to reproduce, transmit or disclose any document viewed, under penalty of damages and legal proceedings. AEGRYN's liability in the event of a leak resulting from a circumvention of the technical protections is expressly excluded; contractual liability is borne by the NDA and these Terms.",
+    "s11Title": "Transaction Fees",
+    "s11Charge": "AEGRYN's transaction commission is borne entirely by the seller (transferor). It is deducted directly by AEGRYN from the escrowed funds at closing, before the net proceeds are remitted to the seller. The buyer does not pay any commission to AEGRYN in connection with the transaction. Access to the catalogue and the acquisition process is free of charge for qualified buyer members.",
+    "s11Grid": "AEGRYN's transaction commission is calculated on the firm transaction price effectively paid at closing, according to the following degressive schedule:",
+    "s11Tiers": [
+      "€100,000 – €250,000: 10% excl. VAT",
+      "€250,001 – €500,000: 9% excl. VAT",
+      "€500,001 – €1,000,000: 8% excl. VAT",
+      "€1,000,001 – €2,500,000: 7% excl. VAT",
+      "€2,500,001 – €5,000,000: 6% excl. VAT",
+      "> €5,000,000: rate agreed in the mandate"
+    ],
+    "s11Minimum": "Minimum commission: €25,000 excl. VAT, regardless of the applicable rate and the final transaction price.",
+    "s11Earnout": "In the event of an earnout, an additional commission of 5% is levied on each earnout payment effectively received by the seller, up to the rate applicable to the total price bracket.",
+    "s11Payment": "The commission is due on the date the escrow is released and is deducted directly by AEGRYN from the escrowed funds before the net balance is remitted to the seller. AEGRYN is never the custodian of these funds — the escrow is held by a third-party bank designated by AEGRYN.",
     "ctaContact": "Contact the AEGRYN team",
     "ctaTermsUse": "Terms of Use"
   },

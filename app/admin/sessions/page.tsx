@@ -135,25 +135,25 @@ export default async function AdminSessionsPage() {
                           {lots.length}
                         </td>
                         <td className="px-6 py-4">
-                          <div className="flex items-center gap-3">
+                          <div className="flex items-center gap-3 flex-wrap">
                             <Link
                               href={`/admin/sessions/${session.id}`}
                               className="font-sans text-[11px] text-[#0A1D2E] hover:underline font-semibold"
                             >
-                              Voir les lots
+                              Modifier
                             </Link>
                             <Link
-                              href={`/admin/sessions/${session.id}/participants`}
-                              className="font-sans text-[11px] text-gray-400 hover:text-gray-700 transition-colors"
+                              href={`/admin/auction/lots`}
+                              className="font-sans text-[11px] text-gray-500 hover:text-gray-800 transition-colors"
                             >
-                              Participants
+                              Lots
                             </Link>
-                            {session.status === 'closed' && (
+                            {(session.status === 'closed' || session.status === 'published') && (
                               <Link
                                 href={`/admin/sessions/${session.id}/results`}
                                 className="font-sans text-[11px] text-emerald-600 hover:underline font-semibold"
                               >
-                                Publier résultats
+                                Résultats
                               </Link>
                             )}
                           </div>

@@ -3,7 +3,8 @@ import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import SellerNav from './SellerNav'
-import ViewSwitcher from '@/app/client/ViewSwitcher'
+import ViewSwitcher    from '@/app/client/ViewSwitcher'
+import { NDA_VERSIONS } from '@/lib/ndaVersions'
 import KycBanner from '@/components/client/KycBanner'
 
 export default async function SellerLayout({ children }: { children: React.ReactNode }) {
@@ -13,13 +14,17 @@ export default async function SellerLayout({ children }: { children: React.React
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, roles, kyc_status')
+    .select('full_name, roles, kyc_status, seller_nda_accepted_at, seller_nda_version')
     .eq('id', user.id)
     .single()
 
   const roles = Array.isArray(profile?.roles) ? profile.roles as string[] : []
   const canAccessSeller = roles.includes('seller')
   if (!canAccessSeller) redirect('/client/buyer')
+
+  const ndaOk = (profile as Record<string,unknown> | null)?.seller_nda_accepted_at
+    && (profile as Record<string,unknown> | null)?.seller_nda_version === NDA_VERSIONS.seller
+  if (!ndaOk) redirect('/client/nda/seller')
 
   const hasBuyer   = roles.includes('buyer')
   const hasPartner = roles.includes('partner')

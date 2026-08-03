@@ -4,8 +4,9 @@ import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { CheckCircle2, CreditCard, Clock, XCircle, CalendarClock } from 'lucide-react'
-import SubscribeButtons from './SubscribeButtons'
-import CancelButton     from './CancelButton'
+import SubscribeButtons   from './SubscribeButtons'
+import CancelButton       from './CancelButton'
+import ReferralSection    from './ReferralSection'
 
 export const metadata: Metadata = {
   title: 'Abonnement — Espace Partenaire AEGRYN',
@@ -16,6 +17,8 @@ function fmtDate(d: unknown) {
   if (!d || typeof d !== 'string') return '—'
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
 }
+
+function isActiveCheck(p: string | null) { return p === 'active' }
 
 export default async function PartnerSubscriptionPage({
   searchParams,
@@ -30,18 +33,20 @@ export default async function PartnerSubscriptionPage({
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, expert_plan, expert_plan_start, expert_plan_end, expert_plan_interval, stripe_subscription_id, kyc_status')
+    .select('full_name, expert_plan, expert_plan_start, expert_plan_end, expert_plan_interval, expert_plan_cancel_at, stripe_subscription_id, kyc_status')
     .eq('id', user.id)
     .single()
 
-  const p            = profile as Record<string, unknown> | null
-  const plan         = p?.expert_plan as string | null
-  const planStart    = p?.expert_plan_start as string | null
-  const planEnd      = p?.expert_plan_end as string | null
-  const planInterval = p?.expert_plan_interval as 'month' | 'year' | null
-  const isActive     = plan === 'active'
-  const kycStatus    = (p?.kyc_status as string | null) ?? 'pending'
-  const kycApproved  = kycStatus === 'approved'
+  const p             = profile as Record<string, unknown> | null
+  const plan          = p?.expert_plan as string | null
+  const planStart     = p?.expert_plan_start as string | null
+  const planEnd       = p?.expert_plan_end as string | null
+  const planInterval  = p?.expert_plan_interval as 'month' | 'year' | null
+  const cancelAt      = p?.expert_plan_cancel_at as string | null
+  const isCanceling   = isActiveCheck(plan) && !!cancelAt
+  const isActive      = isActiveCheck(plan)
+  const kycStatus     = (p?.kyc_status as string | null) ?? 'pending'
+  const kycApproved   = kycStatus === 'approved'
   const intervalLabel = planInterval === 'year' ? 'Annuel' : 'Mensuel'
 
   return (
@@ -91,33 +96,54 @@ export default async function PartnerSubscriptionPage({
       )}
 
       {/* Statut */}
-      <div className={`border p-6 mb-6 ${isActive ? 'bg-emerald-50 border-emerald-200' : 'bg-amber-50 border-amber-200'}`}>
+      <div className={`border p-6 mb-6 ${
+        isCanceling
+          ? 'bg-orange-50 border-orange-200'
+          : isActive
+            ? 'bg-emerald-50 border-emerald-200'
+            : 'bg-amber-50 border-amber-200'
+      }`}>
         <div className="flex items-center gap-3 mb-3">
-          {isActive
-            ? <CheckCircle2 size={18} className="text-emerald-600 shrink-0" />
-            : <Clock size={18} className="text-amber-600 shrink-0" />
+          {isCanceling
+            ? <Clock size={18} className="text-orange-500 shrink-0" />
+            : isActive
+              ? <CheckCircle2 size={18} className="text-emerald-600 shrink-0" />
+              : <Clock size={18} className="text-amber-600 shrink-0" />
           }
-          <p className={`font-sans font-semibold text-[15px] ${isActive ? 'text-emerald-800' : 'text-amber-800'}`}>
-            {isActive ? `Abonnement actif — ${intervalLabel}` : 'Abonnement inactif'}
+          <p className={`font-sans font-semibold text-[15px] ${
+            isCanceling ? 'text-orange-700' : isActive ? 'text-emerald-800' : 'text-amber-800'
+          }`}>
+            {isCanceling
+              ? `Résiliation programmée — actif jusqu'au ${fmtDate(cancelAt)}`
+              : isActive
+                ? `Abonnement actif — ${intervalLabel}`
+                : 'Abonnement inactif'
+            }
           </p>
         </div>
         {isActive && (
           <div className="flex flex-col gap-1.5">
             {planStart && (
               <div className="flex items-center gap-2">
-                <CalendarClock size={13} className="text-emerald-500 shrink-0" />
-                <p className="font-sans text-[12px] text-emerald-700">
+                <CalendarClock size={13} className={isCanceling ? 'text-orange-400 shrink-0' : 'text-emerald-500 shrink-0'} />
+                <p className={`font-sans text-[12px] ${isCanceling ? 'text-orange-700' : 'text-emerald-700'}`}>
                   Actif depuis le {fmtDate(planStart)}
                 </p>
               </div>
             )}
-            {planEnd && (
+            {!isCanceling && planEnd && (
               <div className="flex items-center gap-2">
                 <CalendarClock size={13} className="text-emerald-500 shrink-0" />
                 <p className="font-sans text-[12px] text-emerald-700">
-                  Prochain renouvellement : {fmtDate(planEnd)}
+                  Prochain renouvellement : {fmtDate(planEnd)}
                 </p>
               </div>
+            )}
+            {isCanceling && (
+              <p className="font-sans text-[12px] text-orange-700 mt-1">
+                Votre fiche expert reste visible et active jusqu&apos;à cette date.
+                Aucun renouvellement ne sera effectué.
+              </p>
             )}
           </div>
         )}
@@ -172,6 +198,10 @@ export default async function PartnerSubscriptionPage({
         Sans engagement, résiliable à tout moment. La fiche expert sera retirée à la date d&apos;expiration.
         Les clients vous contactent directement — AEGRYN ne prélève aucune commission sur vos missions.
       </p>
+
+      {/* Parrainage */}
+      <ReferralSection isActive={isActive} />
+
     </div>
   )
 }

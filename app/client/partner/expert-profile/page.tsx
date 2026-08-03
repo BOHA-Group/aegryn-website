@@ -183,6 +183,7 @@ export default async function PartnerExpertProfilePage() {
           avatar_url: string | null
           is_visible: boolean
           verified_at: string | null
+          hidden_reason: string | null
         } | null}
       />
 

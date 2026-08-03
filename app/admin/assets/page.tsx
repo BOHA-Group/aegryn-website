@@ -2,8 +2,7 @@ import { checkAdminAccess } from '@/lib/adminAuth'
 import { createServiceClient } from '@/lib/supabase'
 import type { Metadata }       from 'next'
 import Link                    from 'next/link'
-import { ArrowUpRight }        from 'lucide-react'
-import InviteButton            from './InviteButton'
+import AssetsAdminClient       from './AssetsAdminClient'
 
 export const metadata: Metadata = {
   title: 'Assets — AEGRYN Admin',
@@ -13,13 +12,6 @@ export const metadata: Metadata = {
 const STATUS_ORDER  = ['submitted', 'under_review', 'graded', 'published', 'sold', 'withdrawn']
 const EVAL_TYPES    = ['full_certification', 'review_internal', 'review_partner'] as const
 
-function evalColor(e: string) {
-  return e === 'full_certification' ? 'bg-gray-100 text-gray-600'
-    : e === 'review_internal'       ? 'bg-blue-50 text-blue-700'
-    : e === 'review_partner'        ? 'bg-indigo-50 text-indigo-700'
-    : 'bg-gray-50 text-gray-400'
-}
-
 function evalLabel(e: string) {
   return e === 'full_certification' ? 'Certification'
     : e === 'review_internal'       ? 'Review'
@@ -27,34 +19,10 @@ function evalLabel(e: string) {
     : e
 }
 
-function statusColor(s: string) {
-  return s === 'submitted'    ? 'bg-blue-50 text-blue-700'
-    : s === 'under_review'    ? 'bg-yellow-50 text-yellow-700'
-    : s === 'graded'          ? 'bg-purple-50 text-purple-700'
-    : s === 'published'       ? 'bg-emerald-50 text-emerald-700'
-    : s === 'sold'            ? 'bg-green-100 text-green-800'
-    : 'bg-gray-100 text-gray-500'
-}
-
-function gradeColor(g: string) {
-  return g === '★'   ? 'bg-emerald-100 text-emerald-800'
-    : g === 'AAA'    ? 'bg-blue-100 text-blue-800'
-    : g === 'AA'     ? 'bg-green-100 text-green-800'
-    : g === 'A'      ? 'bg-yellow-100 text-yellow-800'
-    : g === 'B'      ? 'bg-gray-100 text-gray-700'
-    : g              ? 'bg-red-50 text-red-600'
-    : 'bg-gray-50 text-gray-400'
-}
-
-function fmtDate(d: unknown) {
-  if (!d || typeof d !== 'string') return '—'
-  return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: '2-digit', year: '2-digit' })
-}
-
 export default async function AdminAssetsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ token?: string; status?: string; eval?: string }>
+  searchParams: Promise<{ token?: string; status?: string; eval?: string; delete?: string }>
 }) {
   const params = await searchParams
 
@@ -113,6 +81,13 @@ export default async function AdminAssetsPage({
           </div>
         )}
 
+        {/* Sélection totale rapide */}
+        {rows.length > 0 && (
+          <div className="flex items-center gap-3 mb-4 text-[11px] text-gray-500">
+            <span className="font-mono">{rows.length} actif{rows.length > 1 ? 's' : ''} affiché{rows.length > 1 ? 's' : ''}</span>
+          </div>
+        )}
+
         {/* Filtres statut */}
         <div className="flex flex-wrap gap-2 mb-3">
           {[{ key: 'all', label: 'Tous', count: Object.values(counts).reduce((a, b) => a + b, 0) }, ...STATUS_ORDER.map(s => ({ key: s, label: s, count: counts[s] ?? 0 }))].map(({ key, label, count }) => (
@@ -140,79 +115,12 @@ export default async function AdminAssetsPage({
           ))}
         </div>
 
-        {/* Table */}
-        {rows.length === 0 ? (
-          <div className="bg-white border border-gray-200 p-16 text-center">
-            <p className="text-[13px] text-gray-400">Aucun actif {status !== 'all' ? `au statut "${status}"` : ''}.</p>
-            <p className="text-[11px] text-gray-300 mt-2">Les soumissions via /grade/submit apparaîtront ici une fois la table Supabase déployée.</p>
-          </div>
-        ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-[12px] bg-white border border-gray-200">
-              <thead className="bg-gray-50 border-b border-gray-200">
-                <tr>
-                  {['Soumis', 'Vendeur', 'Société', 'Type', 'ARR', 'Grade', 'Score', 'Évaluation', 'Statut', 'Accès client', 'Actions'].map(h => (
-                    <th key={h} className="text-left px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500 whitespace-nowrap">{h}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-100">
-                {rows.map((r, i) => (
-                  <tr key={i} className="hover:bg-gray-50">
-                    <td className="px-4 py-3 font-mono text-gray-500">{fmtDate(r.submitted_at)}</td>
-                    <td className="px-4 py-3">
-                      <div>{String(r.seller_name ?? '—')}</div>
-                      <div className="text-[11px] text-gray-400">{String(r.seller_email ?? '')}</div>
-                    </td>
-                    <td className="px-4 py-3 text-gray-600">{String(r.company_name ?? '—')}</td>
-                    <td className="px-4 py-3 text-gray-600 uppercase text-[10px]">{String(r.asset_type ?? '—')}</td>
-                    <td className="px-4 py-3 font-mono">
-                      {r.arr ? `${Math.round(Number(r.arr) / 1000)}K€` : <em className="text-gray-300">—</em>}
-                    </td>
-                    <td className="px-4 py-3">
-                      {r.official_grade
-                        ? <span className={`px-2 py-0.5 text-[11px] font-bold ${gradeColor(String(r.official_grade))}`}>{String(r.official_grade)}</span>
-                        : <span className="text-gray-300 text-[10px]">non gradé</span>}
-                    </td>
-                    <td className="px-4 py-3 font-mono">{r.score_total != null ? String(r.score_total) : '—'}</td>
-                    <td className="px-4 py-3">
-                      <span className={`px-2 py-0.5 text-[10px] font-semibold ${evalColor(String(r.evaluation_type ?? 'full_certification'))}`}>
-                        {evalLabel(String(r.evaluation_type ?? 'full_certification'))}
-                      </span>
-                    </td>
-                    <td className="px-4 py-3">
-                      <span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>
-                        {String(r.status ?? '—')}
-                      </span>
-                    </td>
-                    <td className="px-4 py-3">
-                      <InviteButton
-                        assetId={String(r.id)}
-                        sellerEmail={String(r.seller_email ?? '')}
-                        sellerName={String(r.seller_name ?? '')}
-                        adminToken={params.token ?? ''}
-                      />
-                    </td>
-                    <td className="px-4 py-3">
-                      <div className="flex flex-col gap-1.5">
-                        <Link
-                          href={`/admin/assets/${r.id}/grade${tokenQs}`}
-                          className="inline-flex items-center gap-1 text-[10px] font-semibold text-blue-600 hover:text-blue-800">
-                          Grader <ArrowUpRight size={10} />
-                        </Link>
-                        <Link
-                          href={`/admin/assets/${r.id}/grade-engine`}
-                          className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-600 hover:text-emerald-800">
-                          Moteur <ArrowUpRight size={10} />
-                        </Link>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
+        {/* Table avec sélection + suppression */}
+        <AssetsAdminClient
+          rows={rows}
+          adminToken={params.token ?? ''}
+          tokenQs={tokenQs}
+        />
       </div>
     </main>
   )
