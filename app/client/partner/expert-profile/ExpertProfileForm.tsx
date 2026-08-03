@@ -74,7 +74,17 @@ type Props = {
   canPublish: boolean
 }
 
+/* Supprime l'indicatif préfixé en DB (ex: "+33 633...") pour n'afficher que les chiffres locaux */
+function stripDial(phone: string | undefined, dial: string): string {
+  if (!phone) return ''
+  const stripped = phone.replace(/^\+\d{1,4}\s?/, '').trim()
+  /* Sécurité : si l'indicatif avait déjà été strippé, on renvoie tel quel */
+  return stripped
+}
+
 export default function ExpertProfileForm({ existing, canPublish }: Props) {
+  const initDial = COUNTRY_OPTIONS.find(c => c.code === (existing?.phone_country ?? 'CH'))?.dial ?? '+41'
+
   const [form, setForm] = useState({
     first_name:    existing?.first_name    ?? '',
     last_name:     existing?.last_name     ?? '',
@@ -85,7 +95,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
     bio:           existing?.bio           ?? '',
     organization:  existing?.organization  ?? '',
     email_public:  existing?.email_public  ?? '',
-    phone:         existing?.phone         ?? '',
+    phone:         stripDial(existing?.phone, initDial),
     phone_country: existing?.phone_country ?? 'CH',
     website:       existing?.website       ?? '',
     min_rate_eur:  existing?.min_rate_eur  ?? null as number | null,
@@ -95,6 +105,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
 
   const [saving,        setSaving]        = useState(false)
   const [saved,         setSaved]         = useState(false)
+  const [pendingReview, setPendingReview] = useState(false)
   const [error,         setError]         = useState<string | null>(null)
   const [avatarUrl,     setAvatarUrl]     = useState<string | null>(existing?.avatar_url ?? null)
   const [avatarLoading, setAvatarLoading] = useState(false)
@@ -150,10 +161,12 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
       ? `${phoneCountryData.dial} ${form.phone.replace(/\s/g, '')}`
       : ''
 
-    const payload = {
+    const payload: Record<string, unknown> = {
       ...form,
       phone:        phoneFormatted,
       min_rate_eur: form.min_rate_eur ?? null,
+      /* Force le retour en validation sur chaque mise à jour */
+      ...(!isNew ? { hidden_reason: null } : {}),
     }
 
     const res = await fetch('/api/experts/profile', {
@@ -166,16 +179,17 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
 
     if (res.ok) {
       setSaved(true)
+      if (!isNew) setPendingReview(true)
       setTimeout(() => setSaved(false), 4000)
     } else {
       setError(json.error ?? 'Erreur lors de la sauvegarde')
     }
   }
 
-  const isVisible     = Boolean(existing?.is_visible)
-  const hiddenReason  = existing?.hidden_reason ?? null
-  const isPending     = !isNew && !isVisible && !hiddenReason
-  const isRefused     = !isNew && !isVisible && Boolean(hiddenReason)
+  const isVisible     = Boolean(existing?.is_visible) && !pendingReview
+  const hiddenReason  = pendingReview ? null : (existing?.hidden_reason ?? null)
+  const isPending     = pendingReview || (!isNew && !Boolean(existing?.is_visible) && !existing?.hidden_reason)
+  const isRefused     = !pendingReview && !isNew && !Boolean(existing?.is_visible) && Boolean(existing?.hidden_reason)
 
   /* Soumission possible dès que le KYC est approuvé (canPublish).
      Publication effective conditionnée à l'abonnement actif (géré côté page). */
@@ -208,7 +222,10 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
           </p>
           {isPending && (
             <p className="font-sans text-[11px] text-blue-600 mt-0.5">
-              L&apos;équipe AEGRYN validera votre fiche sous 48h. La publication est conditionnée à un abonnement actif.
+              {pendingReview
+                ? <>Vos modifications ont \u00e9t\u00e9 enregistr\u00e9es et soumises \u00e0 validation. L&apos;\u00e9quipe AEGRYN reviendra vers vous sous 48h.</>
+                : <>L&apos;\u00e9quipe AEGRYN validera votre fiche sous 48h. La publication est conditionn\u00e9e \u00e0 un abonnement actif.</>
+              }
             </p>
           )}
           {isRefused && hiddenReason && hiddenReason !== 'admin_hidden' && (

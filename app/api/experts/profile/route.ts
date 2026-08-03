@@ -119,8 +119,9 @@ export async function PATCH(req: NextRequest) {
       .from('expert_profiles')
       .update({
         ...body,
-        is_visible:  false,
-        verified_at: null,
+        is_visible:    false,
+        verified_at:   null,
+        hidden_reason: null,
       })
       .eq('user_id', user.id)
 
@@ -130,7 +131,6 @@ export async function PATCH(req: NextRequest) {
     if (err instanceof z.ZodError) {
       return NextResponse.json({ error: 'validation', issues: err.issues }, { status: 400 })
     }
-    console.error('[experts/profile PATCH]', err)
     return NextResponse.json({ error: 'internal' }, { status: 500 })
   }
 }
