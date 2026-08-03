@@ -92,10 +92,12 @@ export default async function PartnerNdaPage() {
               mission (conseil, due diligence, assistance juridique, audit technique, etc.).
             </p>
             <p className="mt-3">
-              Le Partenaire est un prestataire indépendant. Il n'est pas mandataire d'AEGRYN, ne représente
-              pas AEGRYN dans ses relations avec les clients, et reste seul responsable de ses prestations
-              et de sa tarification. Les mises en relation AEGRYN constituent un service de référencement,
-              non un apport d'affaires donnant lieu à rétrocession.
+              Le Partenaire est un prestataire indépendant. Il fixe <strong>librement ses honoraires</strong>,
+              ses conditions d'intervention et ses modalités contractuelles avec ses clients. Il n'est pas
+              mandataire d'AEGRYN, ne représente pas AEGRYN dans ses relations clients, et reste seul
+              responsable de ses prestations et de sa tarification. AEGRYN n'intervient à aucun moment dans
+              la relation commerciale entre le Partenaire et ses clients. Les mises en relation AEGRYN
+              constituent un service de référencement, non un apport d'affaires donnant lieu à rétrocession.
             </p>
             <p className="mt-3 text-[12px] text-gray-500">
               Les conditions complètes de l'abonnement Fiche Expert et du programme de parrainage sont
