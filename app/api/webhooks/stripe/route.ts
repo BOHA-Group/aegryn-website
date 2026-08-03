@@ -101,21 +101,23 @@ export async function POST(req: NextRequest) {
         ),
       ])
     } else if (session.mode === 'subscription' && meta.supabase_uid) {
-      /* Checkout abonnement expert — activation immédiate en attente du webhook subscription */
+      /* Checkout abonnement expert — activation immédiate dès paiement confirmé */
       const uid = meta.supabase_uid
+      const stripe2 = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: '2026-06-24.dahlia' })
       const sub = session.subscription
-        ? await (new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: '2026-06-24.dahlia' }))
-            .subscriptions.retrieve(session.subscription as string)
+        ? await stripe2.subscriptions.retrieve(session.subscription as string)
         : null
 
       const patch: Record<string, unknown> = {
         expert_plan:            'active',
-        expert_plan_start:      new Date().toISOString(),
+        expert_plan_start:      sub ? new Date(((sub as unknown as Record<string, unknown>).start_date as number) * 1000).toISOString() : new Date().toISOString(),
         stripe_subscription_id: sub?.id ?? (session.subscription as string | null),
       }
       if (sub) {
         const periodEnd = (sub.items?.data?.[0] as unknown as Record<string, unknown> | undefined)?.current_period_end
         if (typeof periodEnd === 'number') patch.expert_plan_end = new Date(periodEnd * 1000).toISOString()
+        const interval = (sub.items?.data?.[0]?.plan?.interval as string | undefined) ?? null
+        if (interval) patch.expert_plan_interval = interval
       }
 
       const { error } = await supa.from('profiles').update(patch).eq('id', uid)

@@ -123,13 +123,25 @@ export default async function PartnerExpertProfilePage() {
       </div>
 
       {/* Info abonnement si KYC ok mais abonnement inactif */}
-      {kycApproved && !subscriptionActive && (
+      {kycApproved && !subscriptionActive && existingExpertProfile && (
         <div className="bg-blue-50 border border-blue-200 px-5 py-4 mb-8">
           <p className="font-sans font-semibold text-blue-900 text-[13px] mb-1">
-            Fiche soumise — publication conditionnée à l&apos;abonnement
+            Fiche enregistrée — publication conditionnée à l&apos;abonnement
           </p>
           <p className="font-sans text-[12px] text-blue-700">
             Votre fiche sera publiée dans l&apos;annuaire dès que votre abonnement expert sera actif.
+            Activez-le depuis la page{' '}
+            <Link href="/client/partner/subscription" className="underline font-medium">Abonnement →</Link>
+          </p>
+        </div>
+      )}
+      {kycApproved && !subscriptionActive && !existingExpertProfile && (
+        <div className="bg-gray-50 border border-gray-200 px-5 py-4 mb-8">
+          <p className="font-sans font-semibold text-gray-700 text-[13px] mb-1">
+            Abonnement requis pour publier votre fiche
+          </p>
+          <p className="font-sans text-[12px] text-gray-500">
+            Remplissez votre fiche ci-dessous et activez votre abonnement pour apparaître dans l&apos;annuaire.
             Activez-le depuis la page{' '}
             <Link href="/client/partner/subscription" className="underline font-medium">Abonnement →</Link>
           </p>
