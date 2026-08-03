@@ -11,10 +11,8 @@
 **Type:** Swiss technology holding company + M&A auction platform for digital assets
 **Tagline:** "Engineered to Last" / "Building What Endures"
 **Slogan:** "Aegryn protects what endures."
-**Founder & CEO:** Yohann Bollack
-**LinkedIn:** https://www.linkedin.com/in/yohannbollack/
-**Incorporated:** Switzerland (Sàrl, Geneva, 2023)
-**HQ:** Geneva, Switzerland (GE, CH)
+**Incorporated:** Switzerland (BOHA-Group Sàrl)
+**HQ:** St-Sulpice, Switzerland (VD, CH)
 **Contact:** contact@boha-group.com
 **Website:** https://aegryn.com
 **Languages:** French, English, German, Italian, Spanish, Dutch
@@ -47,12 +45,12 @@ Europe's structured auction platform for buying and selling digital tech assets:
 
 | Asset | URL | Type | Description |
 |---|---|---|---|
-| Subblink | subblink.app | B2B SaaS | AI-powered contract analysis — risk detection, obligation mapping, anomaly alerts |
-| Neediu | neediu.com | B2C Marketplace | Home services — cleaning, plumbing, childcare, vetted providers |
-| Primiom | primiom.com | B2C PropTech | AI-assisted real estate — buy, rent, estimate property value across Europe |
-| Movtoo | movtoo.com | B2C Logistics | On-demand urban delivery for individuals and small businesses |
-| Hobconnect | hobconnect.com | B2C Social | Social network built around shared passions and hobbies |
-| Aegryn Advisory | aegryn.com/advisory | B2B Advisory | Cybersecurity, AI audit, digital strategy for enterprises |
+| Subblink | https://subblink.boha-group.com | B2B SaaS | AI-powered contract analysis — risk detection, obligation mapping, anomaly alerts |
+| Neediu | — | B2C Marketplace | Home services — cleaning, plumbing, childcare, vetted providers |
+| Primiom | — | B2C PropTech | AI-assisted real estate — buy, rent, estimate property value across Europe |
+| Movtoo | — | B2C Logistics | On-demand urban delivery for individuals and small businesses |
+| Hobconnect | — | B2C Social | Social network built around shared passions and hobbies |
+| Aegryn Advisory | https://www.aegryn.com/fr/advisory | B2B Advisory | Cybersecurity, AI audit, digital strategy for enterprises |
 
 Each asset carries: "An Aegryn company."
 
@@ -161,11 +159,11 @@ Page: /advisory
 
 ## Compliance & Geography
 
-Headquarters: Geneva, Switzerland
-Coordinates: 46.818188, 8.227512
+Headquarters: St-Sulpice, Switzerland (VD)
+Coordinates: 46.5147, 6.5600
 Markets: CH, FR, DE, BE, LU, IT, ES, NL, EU
 Regulatory: GDPR, Swiss FADP (LPD), EU AI Act aligned
-Incorporated: 2023
+Incorporated: BOHA-Group Sàrl
 
 ---
 
@@ -211,11 +209,10 @@ Incorporated: 2023
 ## Social Media
 
 - LinkedIn: https://www.linkedin.com/company/106273747/
-- Instagram: https://www.instagram.com/aegryn/
-- TikTok: https://www.tiktok.com/@aegryn
-- YouTube: https://www.youtube.com/@aegryn
-- Facebook: https://www.facebook.com/aegryn
-- X/Twitter: https://twitter.com/aegryn
+- Instagram: https://www.instagram.com/boha_group/
+- TikTok: https://www.tiktok.com/@aegryn.auction
+- YouTube: https://www.youtube.com/@aegryn.auction
+- Facebook: https://www.facebook.com/BOHA-Group
 
 ---
 

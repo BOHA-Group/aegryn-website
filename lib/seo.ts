@@ -120,10 +120,10 @@ export function generateAegrynMetadata({
     },
     other: {
       /* GEO tags */
-      'geo.region':    'CH',
-      'geo.placename': 'Switzerland',
-      'geo.position':  '46.818188;8.227512',
-      'ICBM':          '46.818188, 8.227512',
+      'geo.region':    'CH-VD',
+      'geo.placename': 'St-Sulpice, Switzerland',
+      'geo.position':  '46.5147;6.5600',
+      'ICBM':          '46.5147, 6.5600',
       /* Dublin Core */
       'DC.title':      fullTitle,
       'DC.description': description,
@@ -148,7 +148,7 @@ export const aegrynOrganizationSchema = {
   '@type':       'Organization',
   '@id':         `${BASE_URL}/#organization`,
   name:          'Aegryn',
-  legalName:     'Aegryn',
+  legalName:     'BOHA-Group Sàrl',
   url:           BASE_URL,
   logo: {
     '@type':     'ImageObject',
@@ -163,10 +163,10 @@ export const aegrynOrganizationSchema = {
   numberOfEmployees: { '@type': 'QuantitativeValue', value: 5 },
   address: {
     '@type':           'PostalAddress',
-    addressLocality:   'Geneva',
-    addressRegion:     'GE',
+    addressLocality:   'St-Sulpice',
+    addressRegion:     'VD',
     addressCountry:    'CH',
-    postalCode:        '1201',
+    postalCode:        '1025',
   },
   contactPoint: {
     '@type':            'ContactPoint',
@@ -176,11 +176,10 @@ export const aegrynOrganizationSchema = {
   },
   sameAs: [
     'https://www.linkedin.com/company/106273747/',
-    'https://www.instagram.com/aegryn/',
-    'https://www.tiktok.com/@aegryn',
-    'https://www.youtube.com/@aegryn',
-    'https://www.facebook.com/aegryn',
-    'https://twitter.com/aegryn',
+    'https://www.instagram.com/boha_group/',
+    'https://www.tiktok.com/@aegryn.auction',
+    'https://www.youtube.com/@aegryn.auction',
+    'https://www.facebook.com/BOHA-Group',
   ],
   founder: {
     '@type':    'Person',

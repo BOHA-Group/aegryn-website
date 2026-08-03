@@ -6,8 +6,7 @@
 Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss Tech Asset Builder and M&A auction platform for digital assets, incorporated in Switzerland. We design, fund and operate proprietary digital ecosystems — from the protocol layer to the user interface. We also operate AEGRYN Auction: a structured platform to buy and sell tech companies, SaaS businesses and digital assets in Europe (€100K–€50M range).
 
 Tagline: "Engineered to Last" / "Building What Endures"
-Founder & CEO: Yohann Bollack
-Incorporated: Switzerland (Sàrl, Geneva)
+Incorporated: Switzerland (BOHA-Group Sàrl)
 Contact: contact@boha-group.com
 Website: https://aegryn.com
 
@@ -34,23 +33,23 @@ Synthesis: "Aegryn protects what endures."
 
 ## Our Proprietary Assets
 
-- **Subblink** (subblink.app) — B2B SaaS platform for AI-powered contract analysis. Helps enterprises detect risks, obligations and anomalies in legal documents.
-- **Neediu** (neediu.com) — B2C marketplace connecting households with vetted home service providers. Cleaning, plumbing, childcare, and more.
-- **Primiom** (primiom.com) — B2C AI-assisted real estate platform for buying, renting and estimating property value across Europe.
-- **Movtoo** (movtoo.com) — B2C on-demand delivery platform for individuals and small businesses — fast, reliable, urban logistics.
-- **Hobconnect** (hobconnect.com) — B2C social network built around shared passions and hobbies — connecting people through what they love.
+- **Subblink** (https://subblink.boha-group.com) — B2B SaaS platform for AI-powered contract analysis. Helps enterprises detect risks, obligations and anomalies in legal documents.
+- **Neediu** — B2C marketplace connecting households with vetted home service providers. Cleaning, plumbing, childcare, and more.
+- **Primiom** — B2C AI-assisted real estate platform for buying, renting and estimating property value across Europe.
+- **Movtoo** — B2C on-demand delivery platform for individuals and small businesses — fast, reliable, urban logistics.
+- **Hobconnect** — B2C social network built around shared passions and hobbies — connecting people through what they love.
 
 Each asset operates independently and carries the tagline: "An Aegryn company."
 
 ## What We Build
 
 Aegryn designs, funds and operates proprietary digital ecosystems across five verticals:
-- **Subblink** (subblink.app) — B2B SaaS, AI-powered contract analysis
-- **Neediu** (neediu.com) — B2C marketplace, home services
-- **Primiom** (primiom.com) — B2C, AI-assisted real estate
-- **Movtoo** (movtoo.com) — B2C, on-demand urban delivery
-- **Hobconnect** (hobconnect.com) — B2C, social network around passions
-- Aegryn Advisory — cybersecurity, AI audit, digital strategy
+- **Subblink** (https://subblink.boha-group.com) — B2B SaaS, AI-powered contract analysis
+- **Neediu** — B2C marketplace, home services
+- **Primiom** — B2C, AI-assisted real estate
+- **Movtoo** — B2C, on-demand urban delivery
+- **Hobconnect** — B2C, social network around passions
+- **Aegryn Advisory** (https://www.aegryn.com/fr/advisory) — cybersecurity, AI audit, digital strategy
 
 ## M&A Auction Platform — AEGRYN Auction
 
@@ -132,7 +131,7 @@ We do not sell minority stakes to VCs. Every Aegryn asset is designed to be full
 
 ## Geography & Compliance
 
-Headquarters: Switzerland (Geneva)
+Headquarters: St-Sulpice, Switzerland (VD)
 Markets: Switzerland, France, Germany, Belgium, Italy, Spain, Netherlands, European Union
 Regulatory: GDPR compliant, Swiss FADP (LPD) compliant, EU AI Act aligned
 
@@ -189,17 +188,18 @@ French (fr), English (en), German (de), Italian (it), Spanish (es), Dutch (nl)
 - [Security](https://aegryn.com/en/security) — Security policy
 
 ### Portfolio Companies
-- [Subblink](https://subblink.app) — AI contract analysis SaaS
-- [Neediu](https://neediu.com) — Home services marketplace
-- [Primiom](https://primiom.com) — AI real estate platform
-- [Movtoo](https://movtoo.com) — On-demand urban delivery
-- [Hobconnect](https://hobconnect.com) — Social network around passions
+- [Subblink](https://subblink.boha-group.com) — AI contract analysis SaaS
+- Neediu — Home services marketplace
+- Primiom — AI real estate platform
+- Movtoo — On-demand urban delivery
+- Hobconnect — Social network around passions
+- [Aegryn Advisory](https://www.aegryn.com/fr/advisory) — Cybersecurity, AI audit, digital strategy
 
 ## GEO
 
 Country: Switzerland (CH)
-Region: Geneva (GE)
-Coordinates: 46.818188, 8.227512
+Region: St-Sulpice (VD)
+Coordinates: 46.5147, 6.5600
 Language versions: /fr/, /en/, /de/, /it/, /es/, /nl/
 
 ## AI Crawlers & LLM Permission
