@@ -226,9 +226,13 @@ function ProfileRow({
       >
         <div className="flex items-center gap-4 min-w-0">
           <span className={`font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 border ${
-            profile.is_visible ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-gray-50 text-gray-400 border-gray-200'
+            profile.is_visible
+              ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+              : !profile.hidden_reason
+              ? 'bg-blue-50 text-blue-700 border-blue-200'
+              : 'bg-gray-50 text-gray-400 border-gray-200'
           }`}>
-            {profile.is_visible ? 'Publiée' : 'Masquée'}
+            {profile.is_visible ? 'Publiée' : !profile.hidden_reason ? 'En attente' : 'Masquée'}
           </span>
           <span className={`font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 border ${
             plan === 'active' ? 'bg-ag-apex/10 text-ag-apex border-ag-apex/30' : 'bg-amber-50 text-amber-600 border-amber-200'
@@ -418,7 +422,14 @@ export default function ExpertsAdminClient({ applications, profiles, tokenQs }: 
 
         {/* Section 2 — Fiches experts */}
         <div>
-          <h2 className="font-sans font-bold text-gray-900 text-[15px] mb-4">Fiches experts</h2>
+          <div className="flex items-center gap-3 mb-4">
+            <h2 className="font-sans font-bold text-gray-900 text-[15px]">Fiches experts</h2>
+            {profs.filter(p => !p.is_visible && !p.hidden_reason).length > 0 && (
+              <span className="bg-blue-600 text-white font-mono text-[9px] font-bold px-2 py-0.5">
+                {profs.filter(p => !p.is_visible && !p.hidden_reason).length} en attente
+              </span>
+            )}
+          </div>
 
           {/* Stat cards */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">

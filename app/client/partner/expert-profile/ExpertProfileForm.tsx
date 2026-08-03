@@ -66,6 +66,7 @@ type ExpertProfileData = {
   avatar_url: string | null
   is_visible: boolean
   verified_at: string | null
+  hidden_reason: string | null
 }
 
 type Props = {
@@ -171,8 +172,10 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
     }
   }
 
-  const isVerified = Boolean(existing?.verified_at)
-  const isVisible  = Boolean(existing?.is_visible)
+  const isVisible     = Boolean(existing?.is_visible)
+  const hiddenReason  = existing?.hidden_reason ?? null
+  const isPending     = !isNew && !isVisible && !hiddenReason
+  const isRefused     = !isNew && !isVisible && Boolean(hiddenReason)
 
   /* Soumission possible dès que le KYC est approuvé (canPublish).
      Publication effective conditionnée à l'abonnement actif (géré côté page). */
@@ -183,24 +186,34 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
 
       {/* Statut */}
       <div className={`border p-4 flex items-start gap-3 ${
-        isVisible   ? 'border-emerald-200 bg-emerald-50'
-        : isVerified ? 'border-blue-200 bg-blue-50'
+        isVisible  ? 'border-emerald-200 bg-emerald-50'
+        : isPending ? 'border-blue-200 bg-blue-50'
+        : isRefused ? 'border-red-200 bg-red-50'
         : 'border-amber-200 bg-amber-50'
       }`}>
-        <CheckCircle2 size={15} className={isVisible ? 'text-emerald-500 mt-0.5' : 'text-amber-500 mt-0.5'} />
+        <CheckCircle2 size={15} className={`mt-0.5 ${
+          isVisible ? 'text-emerald-500' : isPending ? 'text-blue-500' : isRefused ? 'text-red-400' : 'text-amber-500'
+        }`} />
         <div>
-          <p className={`font-sans font-semibold text-[12px] ${isVisible ? 'text-emerald-800' : isVerified ? 'text-blue-800' : 'text-amber-800'}`}>
+          <p className={`font-sans font-semibold text-[12px] ${
+            isVisible ? 'text-emerald-800' : isPending ? 'text-blue-800' : isRefused ? 'text-red-700' : 'text-amber-800'
+          }`}>
             {isVisible
               ? 'Fiche publiée dans l\'annuaire'
-              : isVerified
+              : isPending
               ? 'Fiche soumise — en attente de validation admin'
-              : isNew
-              ? 'Nouvelle fiche — sera soumise pour validation après enregistrement'
-              : 'Fiche enregistrée — en attente de validation admin'}
+              : isRefused
+              ? 'Fiche refusée par l\'équipe AEGRYN'
+              : 'Nouvelle fiche — sera soumise pour validation après enregistrement'}
           </p>
-          {!isVerified && !isNew && (
-            <p className="font-sans text-[11px] text-amber-700 mt-0.5">
-              L&apos;équipe AEGRYN validera votre fiche sous 48h après la soumission.
+          {isPending && (
+            <p className="font-sans text-[11px] text-blue-600 mt-0.5">
+              L&apos;équipe AEGRYN validera votre fiche sous 48h. La publication est conditionnée à un abonnement actif.
+            </p>
+          )}
+          {isRefused && hiddenReason && hiddenReason !== 'admin_hidden' && (
+            <p className="font-sans text-[11px] text-red-600 mt-0.5">
+              Motif : {hiddenReason}
             </p>
           )}
         </div>
