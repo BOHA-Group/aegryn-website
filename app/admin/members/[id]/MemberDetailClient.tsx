@@ -3,7 +3,7 @@
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { Check, Trash2, Save, ExternalLink } from 'lucide-react'
+import { Check, Trash2, Save, ExternalLink, AlertTriangle } from 'lucide-react'
 
 const ALL_ROLES = ['buyer', 'seller', 'partner', 'admin', 'super_admin'] as const
 type Role = typeof ALL_ROLES[number]
@@ -68,8 +68,27 @@ export default function MemberDetailClient({
   const [tab, setTab] = useState<Tab>('roles')
   const [roles, setRoles] = useState<Role[]>(currentRoles as Role[])
   const [note, setNote] = useState(initNote)
-  const [saving, setSaving] = useState(false)
-  const [savedMsg, setSavedMsg] = useState('')
+  const [saving,      setSaving]      = useState(false)
+  const [savedMsg,    setSavedMsg]    = useState('')
+  const [deleting,    setDeleting]    = useState(false)
+  const [deleteError, setDeleteError] = useState('')
+
+  async function deleteAccount() {
+    const confirmed = window.confirm(
+      'Supprimer définitivement ce compte ?\n\nCette action est IRRÉVERSIBLE.\nToutes les données associées seront effacées (KYC, NDA, notifications, introductions, commissions).\nLes actifs et offres seront dissociés mais conservés.'
+    )
+    if (!confirmed) return
+    setDeleting(true)
+    setDeleteError('')
+    const res = await fetch(`/api/admin/members/${profileId}${tokenQs ? `?${tokenQs.slice(1)}` : ''}`, { method: 'DELETE' })
+    const data = await res.json() as { ok?: boolean; error?: string }
+    if (data.ok) {
+      router.push(`/admin/members${tokenQs}`)
+    } else {
+      setDeleteError(data.error ?? 'Erreur inconnue.')
+      setDeleting(false)
+    }
+  }
 
   /* ── Patch helper ── */
   async function patch(body: Record<string, unknown>) {
@@ -156,6 +175,7 @@ export default function MemberDetailClient({
 
       {/* ─── ONGLET RÔLES ─────────────────────────────────────────── */}
       {tab === 'roles' && (
+        <>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Rôles */}
           <div className="bg-white border border-gray-200 p-6">
@@ -207,6 +227,32 @@ export default function MemberDetailClient({
             </div>
           </div>
         </div>
+
+        {/* Zone de danger */}
+        <div className="mt-6 border border-red-200 bg-red-50 p-5">
+          <div className="flex items-start gap-3 mb-4">
+            <AlertTriangle size={16} className="text-red-500 shrink-0 mt-0.5" />
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-widest text-red-600 font-bold">Zone de danger</p>
+              <p className="font-sans text-[12px] text-red-700 mt-1">
+                La suppression efface définitivement le compte Auth, le profil, les documents KYC, les demandes NDA, les notifications et les données partenaire.
+                Les actifs et offres sont dissociés mais <strong>conservés</strong>. Action irréversible.
+              </p>
+            </div>
+          </div>
+          <button
+            onClick={deleteAccount}
+            disabled={deleting}
+            className="flex items-center gap-2 bg-red-600 text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <Trash2 size={12} />
+            {deleting ? 'Suppression…' : 'Supprimer le compte'}
+          </button>
+          {deleteError && (
+            <p className="font-sans text-[12px] text-red-700 mt-3">{deleteError}</p>
+          )}
+        </div>
+        </>
       )}
 
       {/* ─── ONGLET NDA ───────────────────────────────────────────── */}

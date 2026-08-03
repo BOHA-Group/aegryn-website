@@ -14,6 +14,7 @@ const ALLOWED_TABLES = [
   'commissions',
   'partner_certifications',
   'partner_mandates',
+  'newsletter_subscribers',
 ] as const
 
 type AllowedTable = typeof ALLOWED_TABLES[number]
