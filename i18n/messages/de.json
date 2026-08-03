@@ -3557,6 +3557,20 @@
     "s9": "Diese AGB unterliegen dem materiellen Schweizer Recht. Jede Streitigkeit unterliegt der ausschliesslichen Zuständigkeit der Gerichte des Kantons, in dem AEGRYN ansässig ist. Die Parteien versuchen, Meinungsverschiedenheiten innerhalb von 30 Tagen gütlich beizulegen.",
     "s10Title": "Data Room und Zugang zu Due-Diligence-Dokumenten",
     "s10": "Im Rahmen des Zertifizierungs- und Transaktionsprozesses stellt AEGRYN einen sicheren Data Room zur Verfügung, in dem der Verkäufer die für die CIFS-Analyse erforderlichen Dokumente hochladen kann. Der Zugang zu diesen Dokumenten wird über ein dreistufiges Berechtigungssystem streng kontrolliert: Administrator/Verkäufer, zugewiesener zertifizierter Partner und Käufer, der das Auction-NDA unterzeichnet hat.\n\nJede Einsichtnahme wird protokolliert (Identität, IP-Adresse, Zeitstempel, Dauer). Technische Abschreckungsmassnahmen sind implementiert (Download-Sperre, Erkennung von Screenshot-Versuchen, dynamisches Wasserzeichen). Diese Massnahmen stellen eine ernsthafte Abschreckung und einen protokollierten Nachweis im Streitfall dar, können jedoch nicht zu 100% verhindern, dass Dokumente mit externen Mitteln (Fotografieren, Erfassung durch ein Drittgerät) abgegriffen werden.\n\nDer Käufer erkennt an, dass die im Data Room eingesehenen Dokumente durch diese AGB und das unterzeichnete Auction-NDA geschützt sind. Er verpflichtet sich vertraglich, kein eingesehenes Dokument zu reproduzieren, weiterzugeben oder offenzulegen, widrigenfalls Schadensersatz und rechtliche Schritte drohen. Die Haftung von AEGRYN bei einem Leck infolge einer Umgehung der technischen Schutzmassnahmen ist ausdrücklich ausgeschlossen.",
+    "s11Title": "Transaktionshonorar",
+    "s11Charge": "Die Transaktionsprovision von AEGRYN wird vollständig vom Veräusserer (Verkäufer) getragen. Sie wird von AEGRYN direkt beim Closing vom hinterlegten Betrag einbehalten, bevor der Nettoerlös an den Verkäufer ausgezahlt wird. Der Erwerber zahlt im Rahmen der Transaktion keine Provision an AEGRYN. Der Zugang zum Katalog und zum Akquisitionsprozess ist für qualifizierte Käufermitglieder kostenlos.",
+    "s11Grid": "Die Transaktionsprovision von AEGRYN wird auf den beim Closing tatsächlich gezahlten Festkaufpreis berechnet, gemäss folgender degressiver Staffelung:",
+    "s11Tiers": [
+      "100.000 € – 250.000 €: 10% zzgl. MwSt.",
+      "250.001 € – 500.000 €: 9% zzgl. MwSt.",
+      "500.001 € – 1.000.000 €: 8% zzgl. MwSt.",
+      "1.000.001 € – 2.500.000 €: 7% zzgl. MwSt.",
+      "2.500.001 € – 5.000.000 €: 6% zzgl. MwSt.",
+      "> 5.000.000 €: im Mandat vereinbarter Satz"
+    ],
+    "s11Minimum": "Mindestprovision: 25.000 € zzgl. MwSt., unabhängig vom anwendbaren Satz und dem endgültigen Transaktionspreis.",
+    "s11Earnout": "Bei einem Earnout wird auf jede vom Veräusserer tatsächlich empfangene Earnout-Zahlung eine zusätzliche Provision von 5% erhoben, begrenzt auf den für die Gesamtpreisklasse geltenden Satz.",
+    "s11Payment": "Die Provision ist am Tag der Freigabe des Hinterlegungsbetrags fällig und wird von AEGRYN direkt vom hinterlegten Betrag einbehalten, bevor der Nettosaldo an den Verkäufer überwiesen wird. AEGRYN ist niemals Verwahrer dieser Gelder — der Hinterlegungsbetrag wird von einer von AEGRYN benannten Drittbank gehalten.",
     "ctaContact": "AEGRYN-Team kontaktieren",
     "ctaTermsUse": "Nutzungsbedingungen"
   },

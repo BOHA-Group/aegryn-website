@@ -3557,6 +3557,20 @@
     "s9": "Le presenti CGV sono soggette al diritto materiale svizzero. Qualsiasi controversia sarà sottoposta alla giurisdizione esclusiva dei tribunali del cantone di domicilio di AEGRYN. Le parti si adopereranno per risolvere amichevolmente qualsiasi controversia entro 30 giorni prima di adire le vie legali.",
     "s10Title": "Data Room e accesso ai documenti di due diligence",
     "s10": "Nell'ambito del processo di certificazione e transazione, AEGRYN mette a disposizione una data room sicura che consente al venditore di depositare i documenti necessari per l'analisi CIFS. L'accesso a questi documenti è strettamente controllato mediante un sistema di autorizzazione a tre livelli: amministratore/venditore, partner certificato assegnato e acquirente che ha firmato il NDA Auction.\n\nOgni consultazione è registrata (identità, indirizzo IP, timestamp, durata). Sono implementate misure tecniche di dissuasione (blocco del download, rilevamento di tentativi di acquisizione schermo, watermarking dinamico). Tali misure costituiscono una seria deterrenza e una prova documentata in caso di controversia, ma non possono garantire al 100% l'impossibilità di acquisizione tramite mezzi esterni.\n\nL'acquirente riconosce che i documenti consultati nella data room sono protetti dalle presenti CGV e dal NDA Auction firmato. Si impegna contrattualmente a non riprodurre, trasmettere o divulgare alcun documento consultato, pena il risarcimento danni e azioni legali. La responsabilità di AEGRYN in caso di fuga derivante da un aggiramento delle protezioni tecniche è espressamente esclusa.",
+    "s11Title": "Onorari di transazione",
+    "s11Charge": "La commissione di transazione AEGRYN è interamente a carico del cedente (venditore). Viene trattenuta direttamente da AEGRYN dai fondi depositati in garanzia alla data del closing, prima della rimessa del saldo netto al cedente. L'acquirente non paga alcuna commissione ad AEGRYN in relazione alla transazione. L'accesso al catalogo e al processo di acquisizione è gratuito per i membri acquirenti qualificati.",
+    "s11Grid": "La commissione di transazione AEGRYN è calcolata sul prezzo fermo di cessione effettivamente pagato alla data del closing, secondo la seguente griglia degressiva:",
+    "s11Tiers": [
+      "100.000 € – 250.000 €: 10% IVA esclusa",
+      "250.001 € – 500.000 €: 9% IVA esclusa",
+      "500.001 € – 1.000.000 €: 8% IVA esclusa",
+      "1.000.001 € – 2.500.000 €: 7% IVA esclusa",
+      "2.500.001 € – 5.000.000 €: 6% IVA esclusa",
+      "> 5.000.000 €: tasso concordato nel mandato"
+    ],
+    "s11Minimum": "Commissione minima: 25.000 € IVA esclusa, indipendentemente dal tasso applicabile e dal prezzo finale di cessione.",
+    "s11Earnout": "In caso di earnout, viene applicata una commissione aggiuntiva del 5% su ogni pagamento di earnout effettivamente ricevuto dal cedente, nel limite del tasso applicabile alla fascia del prezzo totale.",
+    "s11Payment": "La commissione è dovuta alla data di svincolo del deposito cauzionale ed è trattenuta direttamente da AEGRYN dai fondi depositati prima della rimessa del saldo netto al venditore. AEGRYN non è mai depositario di tali fondi — il deposito è detenuto da una banca terza designata da AEGRYN.",
     "ctaContact": "Contattare il team AEGRYN",
     "ctaTermsUse": "Condizioni d'uso"
   },

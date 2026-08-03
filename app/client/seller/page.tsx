@@ -3,7 +3,8 @@ import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { FileText, ArrowRightLeft, ShieldCheck, Bell, ArrowUpRight } from 'lucide-react'
+import { FileText, ArrowRightLeft, ShieldCheck, Bell, ArrowUpRight, Calculator } from 'lucide-react'
+import { calcCommission, fmtEur } from '@/lib/calcCommission'
 
 export const metadata: Metadata = {
   title: 'Tableau de bord — Espace Cédant AEGRYN',
@@ -59,7 +60,7 @@ export default async function SellerDashboardPage() {
       .order('submitted_at', { ascending: false })
       .limit(5),
     supa.from('transactions')
-      .select('id, status, created_at, escrow_amount_chf, assets(company_name)')
+      .select('id, status, created_at, escrow_amount_chf, transaction_price, assets(company_name, arr)')
       .eq('seller_id', user.id)
       .order('created_at', { ascending: false })
       .limit(3),
@@ -219,26 +220,43 @@ export default async function SellerDashboardPage() {
             </Link>
           </div>
           <div className="flex flex-col gap-2">
-            {(transactions as unknown as { id: string; status: string; created_at: string; escrow_amount_chf: number | null; assets: { company_name: string | null } | null }[]).map(tx => (
-              <Link key={tx.id} href={`/client/seller/transactions/${tx.id}`}
-                className="bg-white border border-gray-200 px-5 py-4 flex items-center justify-between hover:border-gray-300 transition-colors group">
-                <div>
-                  <p className="font-sans font-medium text-gray-900 text-[13px]">
-                    {tx.assets?.company_name ?? `Transaction #${tx.id.slice(0, 8)}`}
-                  </p>
-                  <p className="font-mono text-[10px] text-gray-400 mt-0.5">{fmtDate(tx.created_at)}</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  {tx.escrow_amount_chf != null && (
-                    <span className="font-mono font-semibold text-[12px] text-gray-700">{fmtChf(tx.escrow_amount_chf)}</span>
+            {(transactions as unknown as { id: string; status: string; created_at: string; escrow_amount_chf: number | null; transaction_price: number | null; assets: { company_name: string | null; arr: number | null } | null }[]).map(tx => {
+              const priceRef = tx.transaction_price ?? (tx.escrow_amount_chf != null ? tx.escrow_amount_chf * 10 : null) ?? tx.assets?.arr ?? null
+              const commResult = priceRef != null ? calcCommission(priceRef) : null
+              return (
+                <Link key={tx.id} href={`/client/seller/transactions/${tx.id}`}
+                  className="bg-white border border-gray-200 hover:border-gray-300 transition-colors group block">
+                  <div className="px-5 py-4 flex items-center justify-between">
+                    <div>
+                      <p className="font-sans font-medium text-gray-900 text-[13px]">
+                        {tx.assets?.company_name ?? `Transaction #${tx.id.slice(0, 8)}`}
+                      </p>
+                      <p className="font-mono text-[10px] text-gray-400 mt-0.5">{fmtDate(tx.created_at)}</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      {tx.escrow_amount_chf != null && (
+                        <span className="font-mono font-semibold text-[12px] text-gray-700">{fmtChf(tx.escrow_amount_chf)}</span>
+                      )}
+                      <span className="font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">
+                        {TX_STATUS_LABELS[tx.status] ?? tx.status}
+                      </span>
+                      <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
+                    </div>
+                  </div>
+                  {commResult?.type === 'calculated' && tx.status !== 'closed' && tx.status !== 'cancelled' && (
+                    <div className="border-t border-gray-100 px-5 py-2.5 flex items-center gap-2 bg-gray-50/60">
+                      <Calculator size={11} className="text-gray-400 shrink-0" />
+                      <p className="font-sans text-[11px] text-gray-500">
+                        Commission estimée AEGRYN :
+                        <span className="font-semibold text-gray-700 mx-1">{fmtEur(commResult.commission)}</span>
+                        — Net cédant estimé :
+                        <span className="font-semibold text-emerald-700 ml-1">{fmtEur(commResult.netSeller)}</span>
+                      </p>
+                    </div>
                   )}
-                  <span className="font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">
-                    {TX_STATUS_LABELS[tx.status] ?? tx.status}
-                  </span>
-                  <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
-                </div>
-              </Link>
-            ))}
+                </Link>
+              )
+            })}
           </div>
         </div>
       )}

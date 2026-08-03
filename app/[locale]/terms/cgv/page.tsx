@@ -161,6 +161,35 @@ export default async function TermsCgvPage({ params }: Props) {
           </section>
         ))}
 
+        {/* Section XI — Honoraires */}
+        <section className="border-t border-ag-border pt-8">
+          <h2 className="font-sans font-semibold text-[13px] uppercase tracking-[0.18em] text-ag-black mb-6">
+            Section XI — {t('s11Title')}
+          </h2>
+          <div className="mb-6 pl-4 border-l-2 border-ag-border">
+            <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('s11Charge')}</p>
+          </div>
+          <div className="mb-6">
+            <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-4">{t('s11Grid')}</p>
+            <div className="border border-ag-border divide-y divide-ag-border">
+              {(t.raw('s11Tiers') as string[]).map((tier: string, i: number) => {
+                const [range, rate] = tier.split(':')
+                return (
+                  <div key={i} className="grid grid-cols-[1fr_auto] px-5 py-3">
+                    <span className="font-sans text-[13px] text-ag-gray">{range?.trim()}</span>
+                    <span className="font-mono text-[13px] font-semibold text-ag-black">{rate?.trim()}</span>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+          <div className="bg-ag-off-white border border-ag-border px-5 py-4 mb-4">
+            <p className="font-sans text-[13px] text-ag-black font-semibold">{t('s11Minimum')}</p>
+          </div>
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-4">{t('s11Earnout')}</p>
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('s11Payment')}</p>
+        </section>
+
         {/* CTAs */}
         <div className="pt-6 border-t border-ag-border flex flex-wrap gap-4">
           <Link
