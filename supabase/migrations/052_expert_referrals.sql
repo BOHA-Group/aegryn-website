@@ -43,6 +43,9 @@ COMMENT ON COLUMN public.expert_subscription_credits.applied        IS 'TRUE qua
 -- RLS
 ALTER TABLE public.expert_subscription_credits ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "credits_own_read"  ON public.expert_subscription_credits;
+DROP POLICY IF EXISTS "credits_service_all" ON public.expert_subscription_credits;
+
 CREATE POLICY "credits_own_read" ON public.expert_subscription_credits
   FOR SELECT USING (user_id = auth.uid());
 
@@ -82,11 +85,16 @@ COMMENT ON COLUMN public.expert_referrals.status       IS 'pending → rewarded 
 
 -- FK vers credits (ajoutée après création de la table)
 ALTER TABLE public.expert_subscription_credits
+  DROP CONSTRAINT IF EXISTS fk_credit_referral;
+ALTER TABLE public.expert_subscription_credits
   ADD CONSTRAINT fk_credit_referral
   FOREIGN KEY (referral_id) REFERENCES public.expert_referrals(id) ON DELETE SET NULL;
 
 -- RLS
 ALTER TABLE public.expert_referrals ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "referrals_own_read"   ON public.expert_referrals;
+DROP POLICY IF EXISTS "referrals_service_all" ON public.expert_referrals;
 
 CREATE POLICY "referrals_own_read" ON public.expert_referrals
   FOR SELECT USING (referrer_id = auth.uid() OR referred_id = auth.uid());
