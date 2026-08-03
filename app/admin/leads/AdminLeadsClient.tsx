@@ -1,7 +1,8 @@
 'use client'
 
 import { useRouter, useSearchParams, usePathname } from 'next/navigation'
-import { useCallback, useState } from 'react'
+import { useCallback, useState, useTransition } from 'react'
+import { Trash2, CheckSquare, Square, Loader2 } from 'lucide-react'
 
 const SOURCES = [
   { key: 'valuation',      label: 'Valuation'       },
@@ -322,7 +323,7 @@ function EmptyState() {
 
 /* ── Main client component ── */
 export default function AdminLeadsClient({
-  rows, source, counts, currentGrade, currentStatus, adminToken,
+  rows: initialRows, source, counts, currentGrade, currentStatus, adminToken,
 }: {
   rows: Record<string, unknown>[]
   source: string
@@ -334,11 +335,48 @@ export default function AdminLeadsClient({
   const router   = useRouter()
   const pathname = usePathname()
   const sp       = useSearchParams()
+  const [, startTransition] = useTransition()
+
+  const [rows, setRows]       = useState<Record<string, unknown>[]>(initialRows)
+  const [selected, setSelected] = useState<Set<string>>(new Set())
+  const [deleting, setDeleting] = useState(false)
+  const [deleteError, setDeleteError] = useState<string | null>(null)
+
+  const allIds = rows.map(r => String(r.id))
+  const allSelected = allIds.length > 0 && allIds.every(id => selected.has(id))
+
+  function toggleAll() {
+    setSelected(allSelected ? new Set() : new Set(allIds))
+  }
+  async function deleteSelected() {
+    const ids = [...selected]
+    if (!ids.length) return
+    if (!window.confirm(`Supprimer définitivement ${ids.length} enregistrement${ids.length > 1 ? 's' : ''} ? Action irréversible.`)) return
+    setDeleting(true)
+    setDeleteError(null)
+    try {
+      const res = await fetch(`/api/admin/leads${adminToken ? `?token=${adminToken}` : ''}`, {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ source, ids }),
+      })
+      const data = await res.json()
+      if (!res.ok) throw new Error(data?.error ?? 'Erreur inconnue')
+      setRows(prev => prev.filter(r => !ids.includes(String(r.id))))
+      setSelected(new Set())
+      startTransition(() => router.refresh())
+    } catch (e) {
+      setDeleteError(e instanceof Error ? e.message : 'Erreur inconnue')
+    } finally {
+      setDeleting(false)
+    }
+  }
 
   const nav = useCallback((key: string, val: string) => {
     const p = new URLSearchParams(sp.toString())
     p.set(key, val)
     if (adminToken) p.set('token', adminToken)
+    setSelected(new Set())
     router.push(`${pathname}?${p.toString()}`)
   }, [sp, router, pathname, adminToken])
 
@@ -391,6 +429,41 @@ export default function AdminLeadsClient({
         </div>
       </div>
 
+      {/* Barre sélection + suppression */}
+      {rows.length > 0 && (
+        <div className="flex items-center gap-3 bg-white border border-gray-200 px-4 py-2.5">
+          <button onClick={toggleAll} className="flex items-center gap-1.5 font-mono text-[10px] text-gray-500 hover:text-gray-800">
+            {allSelected
+              ? <CheckSquare size={14} className="text-red-600" />
+              : <Square size={14} />}
+            {allSelected ? 'Tout désélectionner' : 'Tout sélectionner'}
+          </button>
+          {selected.size > 0 && (
+            <>
+              <span className="font-mono text-[11px] text-red-700 font-semibold">
+                {selected.size} sélectionné{selected.size > 1 ? 's' : ''}
+              </span>
+              <button
+                onClick={deleteSelected}
+                disabled={deleting}
+                className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-white bg-red-600 hover:bg-red-700 px-3 py-1.5 transition-colors disabled:opacity-50"
+              >
+                {deleting ? <Loader2 size={11} className="animate-spin" /> : <Trash2 size={11} />}
+                Supprimer
+              </button>
+              <button onClick={() => setSelected(new Set())} className="font-mono text-[10px] text-red-400 hover:text-red-600 underline">
+                Annuler
+              </button>
+            </>
+          )}
+          <span className="ml-auto font-mono text-[11px] text-gray-400">{rows.length} enregistrement{rows.length !== 1 ? 's' : ''}</span>
+        </div>
+      )}
+
+      {deleteError && (
+        <div className="bg-red-50 border border-red-200 px-4 py-3 text-[12px] text-red-700">{deleteError}</div>
+      )}
+
       {/* Table */}
       <div className="overflow-x-auto">
         {source === 'valuation'      && <ValuationTable    rows={rows} />}
@@ -400,6 +473,7 @@ export default function AdminLeadsClient({
         {source === 'prospects'        && <ProspectsTable    rows={rows} adminToken={adminToken} />}
         {source === 'auction_access'   && <AuctionAccessTable rows={rows} adminToken={adminToken} />}
       </div>
+
     </div>
   )
 }
