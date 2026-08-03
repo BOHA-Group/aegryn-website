@@ -29,6 +29,7 @@ export async function POST(req: NextRequest) {
 
   const { error: insertErr } = await supa.from('nda_acceptances').insert({
     user_id:    user.id,
+    email:      user.email ?? null,
     nda_type:   type,
     nda_version: version,
     ip_address:  ip,

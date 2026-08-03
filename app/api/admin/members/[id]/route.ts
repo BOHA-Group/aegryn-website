@@ -109,7 +109,6 @@ export async function PATCH(
     if (err instanceof z.ZodError) {
       return NextResponse.json({ error: 'validation', issues: err.issues }, { status: 400 })
     }
-    console.error('[admin/members/patch]', err)
     return NextResponse.json({ error: 'internal' }, { status: 500 })
   }
 }
@@ -146,7 +145,10 @@ export async function DELETE(
   /* ── 3. Supprimer documents KYC ── */
   await supa.from('kyc_documents').delete().eq('user_id', id)
 
-  /* ── 4. Supprimer demandes NDA (par email) ── */
+  /* ── 4. Conservation légale NDA — marquer deleted_account_at (ne pas supprimer) ── */
+  const now = new Date().toISOString()
+  await supa.from('nda_acceptances').update({ deleted_account_at: now }).eq('user_id', id)
+  await supa.from('nda_signatures').update({ deleted_account_at: now }).eq('buyer_id', id)
   if (userEmail) await supa.from('nda_requests').delete().eq('buyer_email', userEmail)
 
   /* ── 5. Supprimer notifications ── */
@@ -162,7 +164,6 @@ export async function DELETE(
   /* ── 8. Supprimer le compte Auth (cascade → profiles) ── */
   const { error: deleteErr } = await supa.auth.admin.deleteUser(id)
   if (deleteErr) {
-    console.error('[admin/members/delete] deleteUser:', deleteErr)
     return NextResponse.json({ error: deleteErr.message }, { status: 500 })
   }
 
@@ -174,9 +175,7 @@ export async function DELETE(
     status:       'completed',
     admin_note:   'Admin-initiated deletion',
     processed_at: new Date().toISOString(),
-  }).then(({ error }) => {
-    if (error) console.error('[admin/members/delete] rgpd_requests insert:', error)
-  })
+  }).then(() => {})
 
   return NextResponse.json({ ok: true, deleted_user: id })
 }
