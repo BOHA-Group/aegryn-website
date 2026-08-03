@@ -1,12 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getUser }             from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
+import { NDA_VERSIONS }        from '@/lib/ndaVersions'
 
-export const NDA_VERSIONS = {
-  seller:  '2026-08',
-  buyer:   '2026-08',
-  partner: '2026-08',
-} as const
+export { NDA_VERSIONS }
 
 type NdaType = keyof typeof NDA_VERSIONS
 

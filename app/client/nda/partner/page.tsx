@@ -1,7 +1,7 @@
 import { redirect }          from 'next/navigation'
 import { getUser }            from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { NDA_VERSIONS }       from '@/app/api/client/nda/accept/route'
+import { NDA_VERSIONS }       from '@/lib/ndaVersions'
 import NdaAcceptForm          from '../NdaAcceptForm'
 import { ShieldCheck }        from 'lucide-react'
 

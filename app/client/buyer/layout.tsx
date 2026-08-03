@@ -3,7 +3,8 @@ import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import BuyerNav from './BuyerNav'
-import ViewSwitcher from '@/app/client/ViewSwitcher'
+import ViewSwitcher    from '@/app/client/ViewSwitcher'
+import { NDA_VERSIONS } from '@/lib/ndaVersions'
 import KycBanner from '@/components/client/KycBanner'
 
 export default async function BuyerLayout({ children }: { children: React.ReactNode }) {
@@ -23,9 +24,8 @@ export default async function BuyerLayout({ children }: { children: React.ReactN
   const canAccessBuyer = roles.includes('buyer')
   if (!canAccessBuyer) redirect('/client/seller')
 
-  const NDA_VERSION_BUYER = '2026-08'
   const ndaOk = (profile as Record<string,unknown> | null)?.buyer_nda_accepted_at
-    && (profile as Record<string,unknown> | null)?.buyer_nda_version === NDA_VERSION_BUYER
+    && (profile as Record<string,unknown> | null)?.buyer_nda_version === NDA_VERSIONS.buyer
   if (!ndaOk) redirect('/client/nda/buyer')
 
   const hasSeller  = roles.includes('seller')

@@ -3,7 +3,8 @@ import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import PartnerNav from './PartnerNav'
-import ViewSwitcher from '@/app/client/ViewSwitcher'
+import ViewSwitcher    from '@/app/client/ViewSwitcher'
+import { NDA_VERSIONS } from '@/lib/ndaVersions'
 import KycBanner from '@/components/client/KycBanner'
 
 export default async function PartnerLayout({ children }: { children: React.ReactNode }) {
@@ -21,9 +22,8 @@ export default async function PartnerLayout({ children }: { children: React.Reac
   const isPartner  = roles.includes('partner')
   if (!isPartner) redirect('/client/my-assets')
 
-  const NDA_VERSION_PARTNER = '2026-08'
   const ndaOk = (profile as Record<string,unknown> | null)?.partner_nda_accepted_at
-    && (profile as Record<string,unknown> | null)?.partner_nda_version === NDA_VERSION_PARTNER
+    && (profile as Record<string,unknown> | null)?.partner_nda_version === NDA_VERSIONS.partner
   if (!ndaOk) redirect('/client/nda/partner')
 
   const hasBuyer  = roles.includes('buyer')
