@@ -4,8 +4,9 @@ import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { CheckCircle2, CreditCard, Clock, XCircle, CalendarClock } from 'lucide-react'
-import SubscribeButtons from './SubscribeButtons'
-import CancelButton     from './CancelButton'
+import SubscribeButtons   from './SubscribeButtons'
+import CancelButton       from './CancelButton'
+import ReferralSection    from './ReferralSection'
 
 export const metadata: Metadata = {
   title: 'Abonnement — Espace Partenaire AEGRYN',
@@ -172,6 +173,10 @@ export default async function PartnerSubscriptionPage({
         Sans engagement, résiliable à tout moment. La fiche expert sera retirée à la date d&apos;expiration.
         Les clients vous contactent directement — AEGRYN ne prélève aucune commission sur vos missions.
       </p>
+
+      {/* Parrainage */}
+      <ReferralSection isActive={isActive} />
+
     </div>
   )
 }

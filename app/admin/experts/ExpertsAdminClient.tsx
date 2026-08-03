@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronDown, ChevronUp } from 'lucide-react'
+import { ChevronDown, ChevronUp, Loader2, PlusCircle } from 'lucide-react'
 
 type Application = {
   id:           string
@@ -342,6 +342,135 @@ function ProfileRow({
   )
 }
 
+/* ─────────────────────────────────────────────────────────────────────────────
+ * AdminSubscriptionPanel — attribution manuelle de mois d'abonnement expert
+ * ───────────────────────────────────────────────────────────────────────────── */
+
+function AdminSubscriptionPanel({ profiles }: { profiles: ExpertProfile[] }) {
+  const [open,      setOpen]      = useState(false)
+  const [userId,    setUserId]    = useState('')
+  const [months,    setMonths]    = useState('1')
+  const [note,      setNote]      = useState('')
+  const [loading,   setLoading]   = useState(false)
+  const [msg,       setMsg]       = useState<{ ok: boolean; text: string } | null>(null)
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (!userId || !months) return
+    setLoading(true)
+    setMsg(null)
+    const res  = await fetch('/api/admin/expert/subscription', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ user_id: userId, months: parseInt(months, 10), note: note || undefined }),
+    })
+    const data = await res.json() as { ok?: boolean; error?: string; expert_plan_end?: string }
+    if (data.ok) {
+      setMsg({ ok: true, text: `Abonnement prolongé jusqu'au ${data.expert_plan_end ? new Date(data.expert_plan_end).toLocaleDateString('fr-CH') : '—'}.` })
+      setNote('')
+    } else {
+      setMsg({ ok: false, text: data.error ?? 'Erreur inconnue.' })
+    }
+    setLoading(false)
+  }
+
+  const sortedProfiles = [...profiles].sort((a, b) =>
+    (a.profile?.email ?? '').localeCompare(b.profile?.email ?? '')
+  )
+
+  return (
+    <div className="bg-white border border-gray-200">
+      <button
+        onClick={() => setOpen(v => !v)}
+        className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-50 transition-colors"
+      >
+        <div className="flex items-center gap-2">
+          <PlusCircle size={14} className="text-ag-navy" />
+          <h2 className="font-sans font-bold text-gray-900 text-[14px]">Attribution manuelle d&apos;abonnement</h2>
+        </div>
+        {open ? <ChevronUp size={14} className="text-gray-400" /> : <ChevronDown size={14} className="text-gray-400" />}
+      </button>
+
+      {open && (
+        <div className="px-5 pb-6 border-t border-gray-100">
+          <p className="font-sans text-[12px] text-gray-500 mt-4 mb-5">
+            Crédite N mois sur un partenaire (avec ou sans abonnement Stripe actif).
+            L&apos;admin peut agir même si le partenaire n&apos;a jamais souscrit via Stripe.
+          </p>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-lg">
+            <div>
+              <label className="font-mono text-[10px] uppercase tracking-widest text-gray-400 block mb-1">
+                Partenaire
+              </label>
+              <select
+                value={userId}
+                onChange={e => setUserId(e.target.value)}
+                className="w-full border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
+                required
+              >
+                <option value="">— Sélectionner —</option>
+                {sortedProfiles.map(p => (
+                  <option key={p.user_id} value={p.user_id}>
+                    {p.first_name} {p.last_name} — {p.profile?.email ?? p.user_id}
+                    {p.profile?.expert_plan === 'active' ? ' ✓ actif' : ' ✗ inactif'}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="flex gap-4">
+              <div>
+                <label className="font-mono text-[10px] uppercase tracking-widest text-gray-400 block mb-1">
+                  Mois à créditer
+                </label>
+                <input
+                  type="number"
+                  min={1}
+                  max={24}
+                  value={months}
+                  onChange={e => setMonths(e.target.value)}
+                  className="w-24 border border-gray-300 px-3 py-2 font-mono text-[14px] focus:outline-none focus:border-ag-navy"
+                  required
+                />
+              </div>
+              <div className="flex-1">
+                <label className="font-mono text-[10px] uppercase tracking-widest text-gray-400 block mb-1">
+                  Note (facultatif)
+                </label>
+                <input
+                  type="text"
+                  maxLength={300}
+                  value={note}
+                  onChange={e => setNote(e.target.value)}
+                  placeholder="Raison du crédit…"
+                  className="w-full border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
+                />
+              </div>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                disabled={loading || !userId}
+                className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest bg-ag-navy text-white px-5 py-3 hover:bg-ag-black transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                {loading && <Loader2 size={12} className="animate-spin" />}
+                Créditer les mois
+              </button>
+            </div>
+
+            {msg && (
+              <p className={`font-sans text-[12px] ${msg.ok ? 'text-emerald-700' : 'text-red-600'}`}>
+                {msg.text}
+              </p>
+            )}
+          </form>
+        </div>
+      )}
+    </div>
+  )
+}
+
 type Props = {
   applications: Application[]
   profiles:     ExpertProfile[]
@@ -420,7 +549,10 @@ export default function ExpertsAdminClient({ applications, profiles, tokenQs }: 
           )}
         </div>
 
-        {/* Section 2 — Fiches experts */}
+        {/* Section 2 — Attribution manuelle abonnement */}
+        <AdminSubscriptionPanel profiles={profs} />
+
+        {/* Section 3 — Fiches experts */}
         <div>
           <div className="flex items-center gap-3 mb-4">
             <h2 className="font-sans font-bold text-gray-900 text-[15px]">Fiches experts</h2>
