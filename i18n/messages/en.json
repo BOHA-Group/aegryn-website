@@ -2935,7 +2935,7 @@
         "title": "Club Deal",
         "summary": "A lead bidder may associate up to 4 declared co-investors. A single offer, a single escrow paid by the lead. Internal allocation remains confidential.",
         "conditions": [
-          "Minimum ticket: €100,000",
+          "Recommended minimum ticket: €100,000",
           "Full lead bidder KYC + simplified co-investor KYC (ID + proof of address only — the lead assumes financial responsibility for the full escrow)",
           "10% escrow paid by lead bidder within 5 business days",
           "Up to 4 declared co-investors, each signing the AEGRYN NDA individually. Internal allocation remains confidential to AEGRYN.",
@@ -2953,7 +2953,7 @@
         "title": "Corporate",
         "summary": "A legal entity acquires the asset directly onto its balance sheet. Two entities may co-acquire via a JV declared to AEGRYN. Asset deal or share deal depending on the structure chosen.",
         "conditions": [
-          "Minimum ticket: €250,000",
+          "Recommended minimum ticket: €250,000",
           "Full B2B KYC — Kbis < 3 months, articles of association, UBO ≥ 25%, director ID",
           "10% escrow paid from the legal entity's account",
           "JV possible: the JV entity must be incorporated or in final incorporation before the Heads of Agreement signature."
@@ -2972,7 +2972,7 @@
         "title": "Fund",
         "summary": "Institutional funds benefit from an IC window of 5 to 10 business days before submitting a firm offer. SPV available for direct LP co-investment on specific deals.",
         "conditions": [
-          "Minimum ticket: €500,000 (no cap)",
+          "Recommended minimum ticket: €500,000 (no cap)",
           "Institutional KYC — regulatory approval if applicable (FINMA, AMF, FCA)",
           "IC window: confidential reservation 5–10 business days without escrow",
           "SPV possible for direct LP co-investment",
@@ -2993,7 +2993,7 @@
         "subBadge": "No escrow",
         "summary": "For investors or partners who wish to take a stake in the asset without acquiring it outright, shares for advisory fees, carried interest, or operational contribution. Live commitment, without bank escrow.",
         "conditions": [
-          "No fixed minimum ticket (valuation negotiated between parties)",
+          "No fixed recommended minimum ticket (valuation negotiated between parties)",
           "KYC according to profile (simplified for qualified individuals, full for entities)",
           "No escrow — commitment via SHA co-drafted with both parties' advisors",
           "Live commitment: SHA signing + possibly warrant or BSA",
@@ -3948,7 +3948,7 @@
           "sellers"
         ],
         "q": "What types of assets can I submit?",
-        "a": "AEGRYN certifies and transacts digital tech assets: B2B SaaS, mobile apps, marketplaces, AI protocols, digital intellectual property. Minimum ticket: €100,000 estimated valuation."
+        "a": "AEGRYN certifies and transacts digital tech assets: B2B SaaS, mobile apps, marketplaces, AI protocols, digital intellectual property. Recommended minimum ticket: €100,000 estimated valuation."
       },
       {
         "id": "seller-identity",
@@ -3979,7 +3979,7 @@
         "cat": [
           "buyers"
         ],
-        "q": "What is the minimum acquisition ticket?",
+        "q": "What is the recommended minimum acquisition ticket?",
         "a": "€100,000."
       },
       {
@@ -4840,6 +4840,7 @@
       "allCategories": "All categories",
       "allDomains": "All domains",
       "allCountries": "All countries",
+      "allSpecialties": "All specialties",
       "allLanguages": "All languages",
       "count": "experts",
       "country": "Country",

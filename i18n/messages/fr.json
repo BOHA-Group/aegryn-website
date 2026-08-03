@@ -2935,7 +2935,7 @@
         "title": "Club Deal",
         "summary": "Un acquéreur principal (lead bidder) peut associer jusqu'à 4 co-investisseurs déclarés. Une seule offre, un seul séquestre versé par le lead. La répartition interne reste confidentielle.",
         "conditions": [
-          "Ticket minimum : 100 000 €",
+          "Ticket minimum recommandé : 100 000 €",
           "KYC lead bidder complet + KYC co-investisseurs simplifié (pièce d'identité + justificatif de domicile uniquement — le lead assume la responsabilité financière du séquestre intégral)",
           "Séquestre 10% versé par le lead bidder sous 5 jours ouvrés",
           "Jusqu'à 4 co-investisseurs déclarés, chacun signant le NDA AEGRYN individuellement. La répartition interne reste confidentielle vis-à-vis d'AEGRYN.",
@@ -2953,7 +2953,7 @@
         "title": "Corporate",
         "summary": "Une entité légale acquiert l'actif directement dans son bilan. Deux entités peuvent co-acquérir via une JV déclarée à AEGRYN. Asset deal ou share deal selon la structure retenue.",
         "conditions": [
-          "Ticket minimum : 250 000 €",
+          "Ticket minimum recommandé : 250 000 €",
           "KYC B2B complet — Kbis < 3 mois, statuts, UBO ≥ 25%, pièce d'identité du dirigeant",
           "Séquestre 10% versé depuis le compte de l'entité légale",
           "JV possible : l'entité JV doit être constituée ou en cours de constitution finale avant la signature des Heads of Agreement."
@@ -2972,7 +2972,7 @@
         "title": "Fonds",
         "summary": "Les fonds institutionnels bénéficient d'un délai IC de 5 à 10 jours ouvrés avant de soumettre une offre ferme. SPV disponible pour co-investissement direct des LP sur des deals spécifiques.",
         "conditions": [
-          "Ticket minimum : 500 000 € (pas de plafond)",
+          "Ticket minimum recommandé : 500 000 € (pas de plafond)",
           "KYC institutionnel — agrément régulateur si applicable (FINMA, AMF, FCA)",
           "Délai IC : réservation confidentielle 5–10 jours ouvrés sans séquestre",
           "SPV possible pour co-investissement LP direct",
@@ -2993,7 +2993,7 @@
         "subBadge": "Sans séquestre",
         "summary": "Pour les investisseurs ou partenaires qui souhaitent prendre une participation dans l'actif sans l'acquérir totalement, shares contre advisory fees, carried interest, ou apport opérationnel. Engagement live, sans séquestre bancaire.",
         "conditions": [
-          "Aucun ticket minimum fixe (valorisation négociée entre parties)",
+          "Aucun ticket minimum recommandé fixe (valorisation négociée entre parties)",
           "KYC selon profil (simplifié particuliers qualifiés, complet entités)",
           "Pas de séquestre — engagement via SHA co-rédigée avec les conseils des deux parties",
           "Engagement live : signature SHA + éventuellement warrant ou BSA",
@@ -3959,7 +3959,7 @@
           "sellers"
         ],
         "q": "Quels types d'actifs puis-je soumettre ?",
-        "a": "AEGRYN certifie et transige des actifs tech numériques : SaaS B2B, applications mobiles, marketplaces, protocoles IA, propriété intellectuelle numérique. Ticket minimum : 100 000 € de valorisation estimée."
+        "a": "AEGRYN certifie et transige des actifs tech numériques : SaaS B2B, applications mobiles, marketplaces, protocoles IA, propriété intellectuelle numérique. Ticket minimum recommandé : 100 000 € de valorisation estimée."
       },
       {
         "id": "seller-identity",
@@ -3990,7 +3990,7 @@
         "cat": [
           "buyers"
         ],
-        "q": "Quel est le ticket minimum d'acquisition ?",
+        "q": "Quel est le ticket minimum recommandé d'acquisition ?",
         "a": "100 000 €."
       },
       {
@@ -4851,6 +4851,7 @@
       "allCategories": "Toutes catégories",
       "allDomains": "Tous domaines",
       "allCountries": "Tous pays",
+      "allSpecialties": "Toutes expertises",
       "allLanguages": "Toutes langues",
       "count": "experts",
       "country": "Pays",

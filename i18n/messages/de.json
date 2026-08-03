@@ -2868,7 +2868,7 @@
         "title": "Club Deal",
         "summary": "Ein Hauptbieter kann bis zu 4 erklärte Co-Investoren einbeziehen. Ein einziges Angebot, ein einziges Treuhandkonto, das vom Lead bezahlt wird. Die interne Aufteilung bleibt vertraulich.",
         "conditions": [
-          "Mindestticket: 100.000 €",
+          "Empfohlenes Mindestticket: 100.000 €",
           "Vollständiges KYC Hauptbieter + vereinfachtes KYC Co-Investoren",
           "10% Treuhand vom Hauptbieter innerhalb von 5 Werktagen",
           "Bis zu 4 erklärte Co-Investoren unter NDA",
@@ -2886,7 +2886,7 @@
         "title": "Corporate",
         "summary": "Eine juristische Person erwirbt den Vermögenswert direkt in ihrer Bilanz. Zwei Unternehmen können über ein bei AEGRYN gemeldetes JV co-erwerben. Asset Deal oder Share Deal je nach gewählter Struktur.",
         "conditions": [
-          "Mindestticket: 100.000 €",
+          "Empfohlenes Mindestticket: 250.000 €",
           "Vollständiges B2B-KYC — Handelsregisterauszug < 3 Monate, Satzung, UBO ≥ 25%, Lichtbildausweis des Geschäftsführers",
           "10% Treuhand vom Konto der juristischen Person",
           "JV möglich: zwei Co-Erwerber, Struktur vor verbindlichem Angebot zu melden"
@@ -2905,7 +2905,7 @@
         "title": "Fonds",
         "summary": "Institutionelle Fonds erhalten ein IC-Fenster von 5 bis 10 Werktagen vor der Einreichung eines verbindlichen Angebots. SPV für direktes LP-Co-Investment bei bestimmten Deals verfügbar.",
         "conditions": [
-          "Mindestticket: 100.000 € (kein Maximum)",
+          "Empfohlenes Mindestticket: 500.000 € (kein Maximum)",
           "Institutionelles KYC — regulatorische Zulassung falls zutreffend (FINMA, AMF, FCA)",
           "IC-Fenster: vertrauliche Reservierung 5–10 Werktage ohne Treuhand",
           "SPV für direktes LP-Co-Investment möglich",
@@ -2926,7 +2926,7 @@
         "subBadge": "Kein Verkauf · Kein Treuhand",
         "summary": "Für Investoren oder Partner, die eine Beteiligung am Vermögenswert erwerben möchten, ohne ihn vollständig zu übernehmen, Anteile gegen Advisory Fees, Carried Interest oder operativen Beitrag. Sofortige Bindung, ohne Banktreuhand.",
         "conditions": [
-          "Kein festes Mindestticket (Bewertung zwischen den Parteien verhandelt)",
+          "Kein festes empfohlenes Mindestticket (Bewertung zwischen den Parteien verhandelt)",
           "KYC nach Profil (vereinfacht für qualifizierte Privatpersonen, vollständig für Unternehmen)",
           "Kein Treuhand — Bindung via SHA, gemeinsam von den Beratern beider Parteien erstellt",
           "Sofortige Bindung: SHA-Unterzeichnung + ggf. Warrant oder BSA",
@@ -4773,6 +4773,7 @@
       "allCategories": "Alle Kategorien",
       "allDomains": "Alle Bereiche",
       "allCountries": "Alle Länder",
+      "allSpecialties": "Alle Expertisen",
       "allLanguages": "Alle Sprachen",
       "count": "Experten",
       "country": "Land",

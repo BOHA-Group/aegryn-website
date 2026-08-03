@@ -58,6 +58,37 @@ const ALL_DOMAINS = [
 
 const COUNTRIES = ['CH', 'FR', 'DE', 'BE', 'LU', 'ES', 'IT', 'NL', 'PT', 'AT', 'PL', 'SE', 'DK', 'FI', 'NO', 'IE', 'CZ', 'HU', 'RO'] as const
 
+// Spécialités libres du formulaire ExpertProfileForm (strings stockées en DB)
+const SPECIALTIES_ALL = [
+  'Cybersécurité',
+  'Architecture technique & Engineering',
+  'DevSecOps & Qualité logicielle',
+  'Intelligence artificielle & Data',
+  'Conformité EU AI Act & IA éthique',
+  'Data Engineering & Architecture data',
+  'Propriété intellectuelle & Droit du numérique',
+  'Design & Expérience utilisateur',
+  'Product Management & Roadmap',
+  'Conformité RGPD / LPD',
+  'Accessibilité numérique',
+  'ESG / RSE',
+  'M&A & Droit des transactions',
+  'Valorisation & Benchmark',
+  'Vendor Readiness — Préparation cession',
+  'Due diligence RH & Social',
+  'Due diligence réglementaire sectorielle',
+  'Warranty & Indemnity Insurance',
+  'Fiscalité & Structuration corporate',
+  'Financement & Partenaires financiers',
+  'Earn-out Design & KPI Framework',
+  'Intégration post-acquisition',
+  'Accompagnement RH dirigeant',
+  'Finance structurée',
+  'Expertise comptable',
+  'Immobilier',
+  'Assurance',
+] as const
+
 const EXPERT_DOMAINS = [
   { Icon: ShieldCheck,    domainKey: 'cybersecurity',    color: '#5ADDA4' },
   { Icon: BrainCircuit,   domainKey: 'ai',               color: '#a78bfa' },
@@ -471,22 +502,24 @@ export default function ExpertsContent() {
   const [loadingGrid, setLoadingGrid] = useState(true)
   const [category,    setCategory]    = useState('')
   const [domain,      setDomain]      = useState('')
+  const [specialty,   setSpecialty]   = useState('')
   const [country,     setCountry]     = useState('')
 
   useEffect(() => {
     setLoadingGrid(true)
     const params = new URLSearchParams()
-    if (category) params.set('category', category)
-    if (domain)   params.set('domain',   domain)
-    if (country)  params.set('country',  country)
+    if (category)  params.set('category',  category)
+    if (domain)    params.set('domain',    domain)
+    if (specialty) params.set('specialty', specialty)
+    if (country)   params.set('country',   country)
     fetch(`/api/experts/profiles${params.toString() ? `?${params}` : ''}`)
       .then(r => r.json())
       .then(d => setProfiles(d.profiles ?? []))
       .catch(() => setProfiles([]))
       .finally(() => setLoadingGrid(false))
-  }, [category, domain, country])
+  }, [category, domain, specialty, country])
 
-  const isFiltered   = !!(category || domain || country)
+  const isFiltered   = !!(category || domain || specialty || country)
   const showGrid     = !loadingGrid
   const isEmpty      = showGrid && profiles.length === 0 && isFiltered
   const showPlaceholders = showGrid && profiles.length === 0 && !isFiltered
@@ -556,6 +589,12 @@ export default function ExpertsContent() {
                 ? DOMAINS_BY_CATEGORY[category as CategoryKey]
                 : ALL_DOMAINS
               ).map(d => ({ value: d, label: t(`domains.${d}`) }))}
+            />
+            <SelectFilter
+              value={specialty}
+              onChange={setSpecialty}
+              placeholder={t('filters.allSpecialties')}
+              options={SPECIALTIES_ALL.map(s => ({ value: s, label: s }))}
             />
             <SelectFilter
               value={country}
