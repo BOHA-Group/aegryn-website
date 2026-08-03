@@ -5,13 +5,36 @@ import Image from 'next/image'
 import { CheckCircle2, Loader2, Upload } from 'lucide-react'
 
 const SPECIALTIES_TECH = [
-  'Cybersécurité', 'Intelligence artificielle', 'Audit technique',
-  'Propriété intellectuelle', 'ESG / RSE',
+  'Cybersécurité',
+  'Architecture technique & Engineering',
+  'DevSecOps & Qualité logicielle',
+  'Intelligence artificielle & Data',
+  'Conformité EU AI Act & IA éthique',
+  'Data Engineering & Architecture data',
+  'Propriété intellectuelle & Droit du numérique',
+  'Design & Expérience utilisateur',
+  'Product Management & Roadmap',
+  'Conformité RGPD / LPD',
+  'Accessibilité numérique',
+  'ESG / RSE',
 ]
 
 const SPECIALTIES_TRANSACTION = [
-  'M&A', 'Valorisation', 'Droit des affaires', 'Expertise comptable',
-  'Due diligence', 'Finance structurée', 'Fiscalité', 'Immobilier', 'Assurance',
+  'M&A & Droit des transactions',
+  'Valorisation & Benchmark',
+  'Vendor Readiness — Préparation cession',
+  'Due diligence RH & Social',
+  'Due diligence réglementaire sectorielle',
+  'Warranty & Indemnity Insurance',
+  'Fiscalité & Structuration corporate',
+  'Financement & Partenaires financiers',
+  'Earn-out Design & KPI Framework',
+  'Intégration post-acquisition',
+  'Accompagnement RH dirigeant',
+  'Finance structurée',
+  'Expertise comptable',
+  'Immobilier',
+  'Assurance',
 ]
 
 const COUNTRY_OPTIONS = [
