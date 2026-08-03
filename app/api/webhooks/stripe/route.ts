@@ -228,10 +228,19 @@ export async function POST(req: NextRequest) {
     const isActive = sub.status === 'active' || sub.status === 'trialing'
     const interval = (sub.items?.data?.[0]?.plan?.interval as string | undefined) ?? null
 
+    /* Résiliation programmée : cancel_at_period_end=true → reste actif jusqu'à current_period_end */
+    const cancelAtPeriodEnd = (sub as unknown as Record<string, unknown>).cancel_at_period_end === true
+    const cancelAt          = (sub as unknown as Record<string, unknown>).cancel_at
+    const cancelAtDate      = typeof cancelAt === 'number'
+      ? new Date(cancelAt * 1000).toISOString()
+      : null
+
     const patch: Record<string, unknown> = {
-      expert_plan:            isActive ? 'active' : 'inactive',
-      stripe_subscription_id: sub.id,
-      expert_plan_interval:   interval,
+      expert_plan:             isActive ? 'active' : 'inactive',
+      stripe_subscription_id:  sub.id,
+      expert_plan_interval:    interval,
+      /* NULL si renouvellement actif, date si résiliation programmée */
+      expert_plan_cancel_at:   cancelAtPeriodEnd ? cancelAtDate : null,
     }
     if (isActive) patch.expert_plan_start = new Date(sub.start_date * 1000).toISOString()
 
@@ -254,15 +263,28 @@ export async function POST(req: NextRequest) {
   }
 
   /* ══════════════════════════════════════════════════════════════════
-   * 3. RÉSILIATION ABONNEMENT EXPERT
+   * 3. RÉSILIATION ABONNEMENT EXPERT — fin effective
+   * Stripe envoie cet événement quand la période payée est réellement
+   * écoulée (après cancel_at_period_end). On utilise la date Stripe
+   * (ended_at ou current_period_end) et non now() pour ne pas tronquer
+   * la période déjà payée.
    * ══════════════════════════════════════════════════════════════════ */
   if (event.type === 'customer.subscription.deleted') {
     const sub = event.data.object as Stripe.Subscription
     const uid = sub.metadata?.supabase_uid
     if (uid) {
+      const subRaw    = sub as unknown as Record<string, unknown>
+      const endedAt   = typeof subRaw.ended_at === 'number'
+        ? new Date(subRaw.ended_at * 1000).toISOString()
+        : null
+      const periodEnd = (sub.items?.data?.[0] as unknown as Record<string, unknown> | undefined)?.current_period_end
+      const finalEnd  = endedAt
+        ?? (typeof periodEnd === 'number' ? new Date(periodEnd * 1000).toISOString() : new Date().toISOString())
+
       await supa.from('profiles').update({
-        expert_plan:     'inactive',
-        expert_plan_end: new Date().toISOString(),
+        expert_plan:           'inactive',
+        expert_plan_end:       finalEnd,
+        expert_plan_cancel_at: null,
       }).eq('id', uid)
     }
   }
