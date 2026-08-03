@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getTranslations } from 'next-intl/server'
+import { generateAegrynMetadata } from '@/lib/seo'
 import { ArrowUpRight, Users, Building2, BarChart3, TrendingUp, ShieldCheck, CheckCircle2 } from "lucide-react"
 
 type Props = { params: Promise<{ locale: string }> }
@@ -10,7 +11,17 @@ const MODEL_ICONS = [Users, Building2, BarChart3, TrendingUp]
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'bidModels.meta' })
-  return { title: t('title'), description: t('desc') }
+  return generateAegrynMetadata({
+    title: t('title'),
+    description: t('desc'),
+    path: '/auction/bid-models',
+    locale,
+    keywords: [
+      'club deal acquisition', 'modèles offre acquisition', 'bid model', 'offer model M&A',
+      'equity stake', 'share deal', 'asset deal', 'earnout', 'SPV co-investment',
+      'minimum ticket acquisition', 'ticket minimum recommandé', 'fund acquisition',
+    ],
+  })
 }
 
 export default async function BidModelsPage({ params }: Props) {

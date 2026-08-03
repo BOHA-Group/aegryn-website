@@ -1,4 +1,5 @@
 import { getTranslations }        from 'next-intl/server'
+import { generateAegrynMetadata } from '@/lib/seo'
 import type { Metadata }           from 'next'
 import NextLink                    from 'next/link'
 import { Link }                    from '@/i18n/navigation'
@@ -15,7 +16,18 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'auction.meta' })
-  return { title: t('title'), description: t('desc') }
+  return generateAegrynMetadata({
+    title: t('title'),
+    description: t('desc'),
+    path: '/auction/catalog',
+    locale,
+    image: '/og/auction.jpg',
+    keywords: [
+      'auction catalog', 'catalogue enchères tech', 'buy SaaS company', 'acheter SaaS',
+      'digital asset for sale', 'actif numérique à vendre', 'tech M&A deal', 'SaaS for sale',
+      'sell digital business', 'acquire tech startup', 'NDA dossier',
+    ],
+  })
 }
 
 function gradeColor(g: string) {

@@ -16,11 +16,19 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        allow: ['/', '/llms.txt', '/llms-full.txt'],
         disallow: ['/api/', '/admin/', '/client/'],
       },
+      /* Explicit allow for major AI crawlers */
+      { userAgent: 'GPTBot',       allow: '/' },
+      { userAgent: 'ClaudeBot',    allow: '/' },
+      { userAgent: 'PerplexityBot',allow: '/' },
+      { userAgent: 'Applebot',     allow: '/' },
+      { userAgent: 'Googlebot',    allow: '/' },
+      { userAgent: 'Bingbot',      allow: '/' },
+      { userAgent: 'OAI-SearchBot',allow: '/' },
     ],
-    sitemap: `${base}/sitemap.xml`,
+    sitemap: [`${base}/sitemap.xml`],
     host:    base,
   }
 }

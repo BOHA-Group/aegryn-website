@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
+import { generateAegrynMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight } from 'lucide-react'
@@ -9,7 +10,17 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'auction.sell' })
-  return { title: t('title'), description: t('desc') }
+  return generateAegrynMetadata({
+    title: t('title'),
+    description: t('desc'),
+    path: '/auction/how-to-sell',
+    locale,
+    keywords: [
+      'sell tech company', 'vendre entreprise tech', 'sell SaaS', 'cession actif numérique',
+      'sell digital asset', 'vendre startup', 'exit tech', 'M&A exit', 'auction sell digital business',
+      'how to sell SaaS', 'structured sale tech asset', 'vente structurée actif tech',
+    ],
+  })
 }
 
 export default function HowToSellPage() {

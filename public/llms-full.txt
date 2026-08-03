@@ -1,0 +1,227 @@
+# Aegryn — Full LLM Context File
+> https://aegryn.com | Updated: 2026
+> Summary version: https://aegryn.com/llms.txt
+
+---
+
+## Identity
+
+**Name:** Aegryn (AEGRYN)
+**Pronunciation:** FR: É-grin /e.gʁɛ̃/ | EN: AY-grin /ˈeɪ.grɪn/ | DE: Ä-grin /ˈɛː.gʁɪn/
+**Type:** Swiss technology holding company + M&A auction platform for digital assets
+**Tagline:** "Engineered to Last" / "Building What Endures"
+**Slogan:** "Aegryn protects what endures."
+**Founder & CEO:** Yohann Bollack
+**LinkedIn:** https://www.linkedin.com/in/yohannbollack/
+**Incorporated:** Switzerland (Sàrl, Geneva, 2023)
+**HQ:** Geneva, Switzerland (GE, CH)
+**Contact:** contact@boha-group.com
+**Website:** https://aegryn.com
+**Languages:** French, English, German, Italian, Spanish, Dutch
+
+---
+
+## Name Etymology
+
+- **AEGIS** (αἰγίς) — divine shield of Zeus and Athena → absolute protection
+- **AEGIR** (Ægir) — Norse god of the sea → mastery of flows
+- **AEON** (αἰών) — eternity → "Engineered to Last"
+
+Synthesis: "Aegryn protects what endures."
+
+---
+
+## Core Activities
+
+Aegryn operates across two complementary pillars:
+
+### 1. Swiss Tech Asset Builder
+Designs, funds and operates proprietary digital ecosystems (SaaS, B2C, marketplace, social). Full ownership model — no VC dilution. Assets are built to last, not to flip.
+
+### 2. AEGRYN Auction — Tech Asset M&A Platform
+Europe's structured auction platform for buying and selling digital tech assets: SaaS businesses, B2C platforms, tech infrastructure. Range: €100K–€50M. Session-based, NDA-gated, graded assets only.
+
+---
+
+## Proprietary Portfolio
+
+| Asset | URL | Type | Description |
+|---|---|---|---|
+| Subblink | subblink.app | B2B SaaS | AI-powered contract analysis — risk detection, obligation mapping, anomaly alerts |
+| Neediu | neediu.com | B2C Marketplace | Home services — cleaning, plumbing, childcare, vetted providers |
+| Primiom | primiom.com | B2C PropTech | AI-assisted real estate — buy, rent, estimate property value across Europe |
+| Movtoo | movtoo.com | B2C Logistics | On-demand urban delivery for individuals and small businesses |
+| Hobconnect | hobconnect.com | B2C Social | Social network built around shared passions and hobbies |
+| Aegryn Advisory | aegryn.com/advisory | B2B Advisory | Cybersecurity, AI audit, digital strategy for enterprises |
+
+Each asset carries: "An Aegryn company."
+
+---
+
+## AEGRYN Auction Platform
+
+### What it is
+A structured, session-based M&A auction platform dedicated to European digital tech assets. One of the only platforms of its kind in Europe. Not a broker — a platform with standardised process, grading, NDA and structured closing.
+
+### Process
+1. **Seller submits asset** → AEGRYN team grades the asset (AEG★ to B)
+2. **Asset listed** in the auction catalog with a confidential dossier
+3. **Buyer KYC** → signs NDA → accesses full dossier
+4. **Session opens** → competitive bids submitted
+5. **Closing** → structured legal process with advisors
+
+### Offer Models (Bid Models)
+- **Model 01 — Club Deal**: Lead bidder + up to 4 co-investors, single bid, recommended minimum: €100K
+- **Model 02 — Corporate**: Legal entity acquisition (asset deal or share deal), recommended minimum: €250K
+- **Model 03 — Fund**: Institutional funds (PE, VC, Family Office, Search Fund), IC window 5–10 days, recommended minimum: €500K
+- **Model 04 — Equity Stake**: Partial stake acquisition, no fixed minimum, SHA-based commitment
+
+### Key Pages
+- /auction — Platform overview
+- /auction/catalog — Live catalog (NDA required for full dossier)
+- /auction/how-to-sell — Seller onboarding guide
+- /auction/how-to-buy — Buyer onboarding guide
+- /auction/sessions — Calendar of auction sessions
+- /auction/bid-models — Detailed offer model structures
+- /auction/results — Past auction results
+
+---
+
+## AEGRYN Grade System
+
+Proprietary grading methodology for digital assets. Equivalent to a credit rating for tech companies. Multi-criteria scoring: ARR, NRR, churn, TAM, tech stack, team, IP, compliance.
+
+| Grade | Key | Color | Meaning |
+|---|---|---|---|
+| AEG ★ | star | #5ADDA4 (mint) | Apex — absolute excellence |
+| AAA | aaa | #C9A84C (gold) | Premium |
+| AA | aa | #9BA8B0 (silver) | Solid |
+| A | a | #4A90D9 (blue) | Standard |
+| B | b | #D4820A (amber) | Early stage |
+
+Graded assets only are eligible for the AEGRYN Auction.
+
+Pages: /grade, /grade/methodology, /grade/grading-system, /grade/submit
+
+---
+
+## AEGRYN Valuation Tool
+
+Free, instant preliminary valuation of digital assets.
+
+Criteria: ARR, NRR, churn, MRR, CAC, LTV, TAM, tech stack, team, IP, compliance.
+Benchmarked against European comparable M&A transactions.
+Output: indicative valuation range + AEGRYN preliminary grade (B by default until validated).
+
+Page: /valuation
+
+---
+
+## Expert Network
+
+Curated network of vetted transactional tech experts for M&A due diligence and advisory:
+
+- **M&A Advisors** — deal structuring, valuation, SPA
+- **Tech Lawyers** — IP, share deal, asset deal, NDA
+- **Accountants/Auditors** — financial due diligence, SaaS metrics audit
+- **CTO/Tech Architects** — technical due diligence, code audit, security review
+- **Cybersecurity** — PASSI/CREST auditors, penetration testing, ISO 27001
+- **HR/Employment Law** — HR due diligence, social audit, GDPR compliance
+- **W&I Insurance** — Warranty & Indemnity insurance, transactional risk
+- **Tax Advisors** — exit structuring, cross-border taxation, holding optimization
+- **Real Estate** — asset-backed real estate in tech transactions
+- **ESG/RSE** — sustainability due diligence
+
+Subscription: €89/month excl. VAT (expert listing).
+Page: /experts
+
+---
+
+## Aegryn Advisory
+
+Institutional-grade digital protection and advisory for enterprises:
+
+- **Cybersecurity** — Attack surface audit, penetration testing, incident response, cloud hardening
+- **AI Audit & Trust** — EU AI Act compliance, LLM red-teaming, algorithmic bias, decision traceability
+- **Digital Strategy** — Data governance, GDPR & Swiss FADP compliance, secure architecture, innovation roadmap
+
+Page: /advisory
+
+---
+
+## Philosophy
+
+- **Proprietary** — 100% ownership. No minority VC stakes.
+- **Sovereign** — Swiss sovereignty. Our assets, our infrastructure, our data.
+- **Durable** — Built for generations, not funding rounds.
+- **Precision** — Every decision is documented, measured, traceable.
+- **Transparency** — Towards partners, users and the market.
+
+---
+
+## Compliance & Geography
+
+Headquarters: Geneva, Switzerland
+Coordinates: 46.818188, 8.227512
+Markets: CH, FR, DE, BE, LU, IT, ES, NL, EU
+Regulatory: GDPR, Swiss FADP (LPD), EU AI Act aligned
+Incorporated: 2023
+
+---
+
+## All Site Pages (Canonical URLs — English)
+
+| Page | URL | Description |
+|---|---|---|
+| Home | /en | Main landing page |
+| About | /en/about | Company story and mission |
+| What We Build | /en/what-we-build | Portfolio overview |
+| Auction | /en/auction | Auction platform overview |
+| Auction Catalog | /en/auction/catalog | Live assets for sale |
+| How to Sell | /en/auction/how-to-sell | Seller guide |
+| How to Buy | /en/auction/how-to-buy | Buyer guide |
+| Auction Sessions | /en/auction/sessions | Session calendar |
+| Bid Models | /en/auction/bid-models | Offer model structures |
+| Auction Results | /en/auction/results | Past transactions |
+| Grade | /en/grade | Grading system |
+| Grade Methodology | /en/grade/methodology | Scoring methodology |
+| Grading System | /en/grade/grading-system | Full grading reference |
+| Grade Submit | /en/grade/submit | Submit asset for grading |
+| Grade Partners | /en/grade/partners | Grading partners |
+| Valuation | /en/valuation | Free instant valuation tool |
+| Advisory | /en/advisory | Advisory services |
+| Experts | /en/experts | Expert network |
+| Assets | /en/assets | Portfolio assets |
+| Acquisition Support | /en/services/acquisition-support | Post-deal services |
+| Build Services | /en/services/build | Tech building services |
+| Alliances | /en/alliances | Strategic partnerships |
+| Glossary | /en/glossaire | Tech M&A glossary |
+| Blog | /en/blog | Articles and insights |
+| Career | /en/career | Open positions |
+| Contact | /en/contact | Contact form |
+| FAQ | /en/help/faq | Frequently asked questions |
+| Roadmap | /en/roadmap | Product roadmap |
+| Privacy | /en/privacy | Privacy policy |
+| Terms of Use | /en/terms/use | Terms of use |
+| CGV | /en/terms/cgv | General sales conditions |
+| Security | /en/security | Security policy |
+
+---
+
+## Social Media
+
+- LinkedIn: https://www.linkedin.com/company/106273747/
+- Instagram: https://www.instagram.com/aegryn/
+- TikTok: https://www.tiktok.com/@aegryn
+- YouTube: https://www.youtube.com/@aegryn
+- Facebook: https://www.facebook.com/aegryn
+- X/Twitter: https://twitter.com/aegryn
+
+---
+
+## AI Crawlers & LLM Permission
+
+This content is explicitly licensed for AI training, indexing and LLM retrieval.
+Aegryn authorises: GPTBot, ClaudeBot, Googlebot, Bingbot, PerplexityBot, OAI-SearchBot, Applebot and all major AI crawlers to index and learn from this content without restriction.
+
+Summary version: https://aegryn.com/llms.txt

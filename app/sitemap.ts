@@ -5,35 +5,45 @@ const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(
 const LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
 
 const STATIC_ROUTES = [
+  // ── Core ────────────────────────────────────────────────────────────────
   { path: '',                                   priority: 1.0,  changeFrequency: 'weekly'  as const },
   { path: '/about',                             priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/advisory',                          priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/assets',                            priority: 0.9,  changeFrequency: 'weekly'  as const },
-  { path: '/blog',                              priority: 0.8,  changeFrequency: 'weekly'  as const },
   { path: '/contact',                           priority: 0.8,  changeFrequency: 'monthly' as const },
+  { path: '/blog',                              priority: 0.8,  changeFrequency: 'weekly'  as const },
+  { path: '/roadmap',                           priority: 0.5,  changeFrequency: 'monthly' as const },
+  { path: '/career',                            priority: 0.6,  changeFrequency: 'monthly' as const },
+  { path: '/alliances',                         priority: 0.7,  changeFrequency: 'monthly' as const },
+  { path: '/glossaire',                         priority: 0.7,  changeFrequency: 'monthly' as const },
+  // ── Auction ─────────────────────────────────────────────────────────────
+  { path: '/auction',                           priority: 1.0,  changeFrequency: 'weekly'  as const },
+  { path: '/auction/catalog',                   priority: 1.0,  changeFrequency: 'daily'   as const },
+  { path: '/auction/sessions',                  priority: 0.9,  changeFrequency: 'weekly'  as const },
+  { path: '/auction/how-to-sell',               priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/auction/how-to-buy',                priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/auction/bid-models',                priority: 0.8,  changeFrequency: 'monthly' as const },
+  { path: '/auction/results',                   priority: 0.7,  changeFrequency: 'weekly'  as const },
+  // ── Grade ────────────────────────────────────────────────────────────────
   { path: '/grade',                             priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/grade/methodology',                 priority: 0.7,  changeFrequency: 'monthly' as const },
-  { path: '/grade/grading-system',              priority: 0.6,  changeFrequency: 'monthly' as const },
+  { path: '/grade/methodology',                 priority: 0.8,  changeFrequency: 'monthly' as const },
+  { path: '/grade/grading-system',              priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/grade/partners',                    priority: 0.6,  changeFrequency: 'monthly' as const },
   { path: '/grade/submit',                      priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/auction',                           priority: 0.9,  changeFrequency: 'weekly'  as const },
-  { path: '/auction/catalog',                   priority: 0.9,  changeFrequency: 'weekly'  as const },
-  { path: '/auction/how-to-sell',               priority: 0.7,  changeFrequency: 'monthly' as const },
-  { path: '/auction/how-to-buy',                priority: 0.7,  changeFrequency: 'monthly' as const },
-  { path: '/auction/sessions',                  priority: 0.8,  changeFrequency: 'weekly'  as const },
-  { path: '/auction/bid-models',                priority: 0.7,  changeFrequency: 'monthly' as const },
-  { path: '/auction/results',                   priority: 0.6,  changeFrequency: 'weekly'  as const },
+  // ── Valuation ────────────────────────────────────────────────────────────
   { path: '/valuation',                         priority: 0.9,  changeFrequency: 'monthly' as const },
+  // ── Advisory ─────────────────────────────────────────────────────────────
+  { path: '/advisory',                          priority: 0.9,  changeFrequency: 'monthly' as const },
+  // ── Assets ───────────────────────────────────────────────────────────────
+  { path: '/assets',                            priority: 0.8,  changeFrequency: 'weekly'  as const },
+  // ── Services ─────────────────────────────────────────────────────────────
   { path: '/services/acquisition-support',      priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/alliances',                         priority: 0.7,  changeFrequency: 'monthly' as const },
-  { path: '/career',                            priority: 0.6,  changeFrequency: 'monthly' as const },
-  { path: '/roadmap',                           priority: 0.5,  changeFrequency: 'monthly' as const },
-  { path: '/glossaire',                         priority: 0.6,  changeFrequency: 'monthly' as const },
+  { path: '/services/build',                    priority: 0.7,  changeFrequency: 'monthly' as const },
+  // ── Help / FAQ ────────────────────────────────────────────────────────────
+  { path: '/help/faq',                          priority: 0.7,  changeFrequency: 'monthly' as const },
+  // ── Legal ─────────────────────────────────────────────────────────────────
   { path: '/terms/use',                         priority: 0.3,  changeFrequency: 'yearly'  as const },
   { path: '/terms/cgv',                         priority: 0.3,  changeFrequency: 'yearly'  as const },
   { path: '/privacy',                           priority: 0.3,  changeFrequency: 'yearly'  as const },
   { path: '/security',                          priority: 0.4,  changeFrequency: 'monthly' as const },
-  { path: '/help/faq',                          priority: 0.6,  changeFrequency: 'monthly' as const },
 ]
 
 const WHAT_WE_BUILD_SLUG: Record<string, string> = {

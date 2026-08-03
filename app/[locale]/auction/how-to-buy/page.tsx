@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
+import { generateAegrynMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
 import { Check, ArrowUpRight } from 'lucide-react'
@@ -9,7 +10,17 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'auction.buy' })
-  return { title: t('title'), description: t('desc') }
+  return generateAegrynMetadata({
+    title: t('title'),
+    description: t('desc'),
+    path: '/auction/how-to-buy',
+    locale,
+    keywords: [
+      'buy tech company', 'acheter entreprise tech', 'acquire SaaS', 'acquisition numérique',
+      'buy digital asset', 'comment acheter startup', 'M&A buyer', 'KYC investor',
+      'NDA dossier confidentiel', 'offre ferme', 'club deal buyer', 'how to buy SaaS company',
+    ],
+  })
 }
 
 export default function HowToBuyPage() {

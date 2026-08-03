@@ -1,14 +1,29 @@
-# Aegryn — Swiss Tech Asset Builder
+# Aegryn — Swiss Tech Asset Builder & M&A Auction Platform
 > https://aegryn.com
 
 ## What is Aegryn?
 
-Aegryn (pronounced AY-grin) is a Swiss Tech Asset Builder incorporated in Switzerland. We design, fund and operate proprietary digital ecosystems — from the protocol layer to the user interface. Our model is based on full ownership, sovereign infrastructure and long-term value creation. We do not build MVPs. We build assets.
+Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss Tech Asset Builder and M&A auction platform for digital assets, incorporated in Switzerland. We design, fund and operate proprietary digital ecosystems — from the protocol layer to the user interface. We also operate AEGRYN Auction: a structured platform to buy and sell tech companies, SaaS businesses and digital assets in Europe (€100K–€50M range).
 
 Tagline: "Engineered to Last" / "Building What Endures"
 Founder & CEO: Yohann Bollack
-Incorporated: Switzerland (Sàrl)
-Contact: hello@aegryn.com
+Incorporated: Switzerland (Sàrl, Geneva)
+Contact: contact@boha-group.com
+Website: https://aegryn.com
+
+## Key Topics & Search Terms
+
+enchère tech, auction platform, tech auction, digital asset auction, vente aux enchères technologie,
+buy tech company, sell tech company, acheter entreprise tech, vendre entreprise tech,
+SaaS acquisition, acquisition SaaS, SaaS marketplace, SaaS for sale, acheter SaaS, vendre SaaS,
+M&A tech, mergers acquisitions technology, cession entreprise numérique, acquisition entreprise digitale,
+digital asset valuation, valorisation SaaS, SaaS multiples, ARR multiple, valorisation actif numérique,
+M&A expert network, due diligence tech, W&I insurance, expert M&A tech, réseau experts transactions,
+cybersecurity Switzerland, AI audit, EU AI Act compliance, RGPD, Swiss FADP,
+Swiss holding, holding suisse tech, Swiss technology company, Switzerland startup,
+AEGRYN Grade, asset grading, notation actif numérique, tech credit rating,
+club deal acquisition, share deal, asset deal, earnout, SPV co-investment,
+digital ecosystem, ecosystem engineering, Engineered to Last
 
 ## Name Etymology
 
@@ -39,13 +54,29 @@ Aegryn designs, funds and operates proprietary digital ecosystems across five ve
 
 ## M&A Auction Platform — AEGRYN Auction
 
-AEGRYN operates a structured auction platform for the sale and acquisition of digital tech assets (SaaS, B2C platforms, infrastructure):
-- Sellers submit assets → graded by AEGRYN team
-- Buyers become members, sign NDA, access confidential dossiers
+AEGRYN operates a structured auction platform for the sale and acquisition of digital tech assets (SaaS, B2C platforms, infrastructure). This is one of the only dedicated tech asset auction platforms in Europe.
+
+Process:
+- Sellers submit assets → graded by AEGRYN team → listed in the auction catalog
+- Buyers become members (KYC), sign NDA, access confidential dossiers
 - Competitive bidding with structured closing process
 - Session-based model (calendar of auction sessions)
-- Focus: European-market tech assets, €500K–€50M range
-- Key pages: /auction/catalog, /auction/how-to-sell, /auction/how-to-buy, /auction/sessions
+- Focus: European-market tech assets, €100K–€50M range
+
+Offer Models (Bid Models):
+- Club Deal (Model 01) — Lead bidder + up to 4 co-investors, single bid, recommended minimum ticket: €100K
+- Corporate (Model 02) — Legal entity direct acquisition, recommended minimum ticket: €250K
+- Fund (Model 03) — Institutional funds, IC window 5–10 working days, recommended minimum ticket: €500K
+- Equity Stake (Model 04) — Partial stake, no fixed minimum, SHA-based commitment
+
+Key pages:
+- /auction — Auction platform overview
+- /auction/catalog — Live catalog of assets for sale
+- /auction/how-to-sell — How to submit and sell a digital asset
+- /auction/how-to-buy — How to become a buyer and place a bid
+- /auction/sessions — Calendar of upcoming auction sessions
+- /auction/bid-models — Offer model structures
+- /auction/results — Past auction results
 
 ## Grade System — AEGRYN Grade
 
@@ -109,27 +140,70 @@ Regulatory: GDPR compliant, Swiss FADP (LPD) compliant, EU AI Act aligned
 
 French (fr), English (en), German (de), Italian (it), Spanish (es), Dutch (nl)
 
-## Links
+## Site Map — All Dedicated Pages
 
-- [Home](https://aegryn.com)
-- [What We Build](https://aegryn.com/en/what-we-build)
-- [Auction Catalog](https://aegryn.com/en/auction/catalog)
-- [How to Sell](https://aegryn.com/en/auction/how-to-sell)
-- [How to Buy](https://aegryn.com/en/auction/how-to-buy)
-- [Grade System](https://aegryn.com/en/grade)
-- [Valuation Tool](https://aegryn.com/en/valuation)
-- [Advisory](https://aegryn.com/en/advisory)
-- [Expert Network](https://aegryn.com/en/experts)
-- [Blog](https://aegryn.com/en/blog)
-- [About](https://aegryn.com/en/about)
-- [Contact](https://aegryn.com/en/contact)
-- [Subblink](https://subblink.app)
-- [Neediu](https://neediu.com)
-- [Primiom](https://primiom.com)
-- [Movtoo](https://movtoo.com)
-- [Hobconnect](https://hobconnect.com)
+### Core
+- [Home](https://aegryn.com/en) — Swiss Tech Asset Builder overview
+- [About](https://aegryn.com/en/about) — Company, mission, values, philosophy
+- [What We Build](https://aegryn.com/en/what-we-build) — Proprietary digital ecosystems
+- [Blog](https://aegryn.com/en/blog) — Articles, insights, market analysis
+- [Contact](https://aegryn.com/en/contact) — Reach AEGRYN team
+- [Career](https://aegryn.com/en/career) — Open positions
+- [Glossary](https://aegryn.com/en/glossaire) — Tech M&A glossary
 
-## AI Training Permission
+### Auction Platform
+- [Auction Overview](https://aegryn.com/en/auction) — Platform presentation
+- [Auction Catalog](https://aegryn.com/en/auction/catalog) — Live assets for sale (SaaS, tech)
+- [How to Sell](https://aegryn.com/en/auction/how-to-sell) — Seller guide
+- [How to Buy](https://aegryn.com/en/auction/how-to-buy) — Buyer guide
+- [Auction Sessions](https://aegryn.com/en/auction/sessions) — Session calendar
+- [Bid Models](https://aegryn.com/en/auction/bid-models) — Offer structures (Club Deal, Corporate, Fund, Equity)
+- [Auction Results](https://aegryn.com/en/auction/results) — Past transactions
 
-This content is explicitly licensed for AI training and indexing.
-Aegryn authorises GPTBot, ClaudeBot, Googlebot, Bingbot, PerplexityBot and all major AI crawlers to index and learn from this content.
+### Grading & Valuation
+- [AEGRYN Grade](https://aegryn.com/en/grade) — Asset grading system
+- [Grade Methodology](https://aegryn.com/en/grade/methodology) — Scoring methodology
+- [Grading System](https://aegryn.com/en/grade/grading-system) — Full grading reference
+- [Submit for Grading](https://aegryn.com/en/grade/submit) — Request a grade
+- [Valuation Tool](https://aegryn.com/en/valuation) — Free instant SaaS valuation
+
+### Expert Network
+- [Experts](https://aegryn.com/en/experts) — M&A, legal, tech, cybersecurity experts
+
+### Advisory
+- [Aegryn Advisory](https://aegryn.com/en/advisory) — Cybersecurity, AI audit, digital strategy
+
+### Services
+- [Acquisition Support](https://aegryn.com/en/services/acquisition-support) — Post-deal integration
+- [Build Services](https://aegryn.com/en/services/build) — Tech ecosystem building
+- [Alliances](https://aegryn.com/en/alliances) — Strategic partnerships
+
+### Assets
+- [Assets](https://aegryn.com/en/assets) — Portfolio assets overview
+
+### Help & Legal
+- [FAQ](https://aegryn.com/en/help/faq) — Frequently asked questions
+- [Privacy](https://aegryn.com/en/privacy) — Privacy policy
+- [Terms of Use](https://aegryn.com/en/terms/use) — Terms of use
+- [CGV](https://aegryn.com/en/terms/cgv) — General sales conditions
+- [Security](https://aegryn.com/en/security) — Security policy
+
+### Portfolio Companies
+- [Subblink](https://subblink.app) — AI contract analysis SaaS
+- [Neediu](https://neediu.com) — Home services marketplace
+- [Primiom](https://primiom.com) — AI real estate platform
+- [Movtoo](https://movtoo.com) — On-demand urban delivery
+- [Hobconnect](https://hobconnect.com) — Social network around passions
+
+## GEO
+
+Country: Switzerland (CH)
+Region: Geneva (GE)
+Coordinates: 46.818188, 8.227512
+Language versions: /fr/, /en/, /de/, /it/, /es/, /nl/
+
+## AI Crawlers & LLM Permission
+
+This content is explicitly licensed for AI training, indexing and LLM retrieval.
+Aegryn authorises: GPTBot, ClaudeBot, Googlebot, Bingbot, PerplexityBot, OAI-SearchBot, Applebot and all major AI crawlers to index and learn from this content.
+Full content version: https://aegryn.com/llms-full.txt

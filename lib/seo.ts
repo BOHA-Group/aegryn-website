@@ -9,11 +9,35 @@ const OG_LOCALE: Record<string, string> = {
 }
 
 const BASE_KEYWORDS = [
-  'Aegryn', 'Swiss Tech', 'digital assets', 'actifs numériques',
-  'ecosystem engineering', 'Switzerland startup', 'SaaS', 'AI',
-  'cybersecurity', 'advisory', 'Engineered to Last',
-  'M&A experts', 'expert network', 'réseau experts M&A',
+  // Brand
+  'Aegryn', 'aegryn.com', 'Engineered to Last', 'Swiss Tech',
+  // Core business
+  'digital assets', 'actifs numériques', 'digital asset auction', 'enchère tech',
+  'auction platform', 'tech auction', 'vente aux enchères technologie',
+  'buy tech company', 'sell tech company', 'acheter entreprise tech', 'vendre entreprise tech',
+  'SaaS acquisition', 'acquisition SaaS', 'SaaS marketplace',
+  // M&A
+  'M&A tech', 'mergers acquisitions technology', 'cession entreprise numérique',
+  'acquisition entreprise digitale', 'transaction tech Europe',
+  'deal structuring', 'club deal acquisition', 'share deal', 'asset deal',
+  // Valuation
+  'SaaS valuation', 'valorisation SaaS', 'digital asset valuation',
+  'valorisation actif numérique', 'ARR multiple', 'SaaS multiples Europe',
+  // Experts
+  'M&A experts', 'expert network', 'réseau experts M&A', 'expert M&A tech',
   'due diligence tech', 'transactional experts', 'W&I insurance',
+  'cybersecurity expert', 'AI audit', 'expert technique M&A',
+  // Advisory
+  'cybersecurity', 'advisory', 'AI advisory', 'EU AI Act',
+  'RGPD compliance', 'Swiss FADP', 'digital strategy',
+  // Geography
+  'Switzerland startup', 'Swiss holding', 'holding suisse tech',
+  'Europe tech market', 'marché tech européen',
+  // Products
+  'Subblink', 'Neediu', 'Primiom', 'Movtoo', 'Hobconnect',
+  'ecosystem engineering', 'digital ecosystem',
+  // Grade
+  'AEGRYN Grade', 'asset grading', 'notation actif numérique',
 ]
 
 export function generateAegrynMetadata({
@@ -172,7 +196,67 @@ export const aegrynOrganizationSchema = {
     'Artificial Intelligence',
     'SaaS',
     'Swiss Technology',
+    'M&A Advisory',
+    'Digital Asset Valuation',
+    'Tech Asset Auction',
+    'Due Diligence',
+    'EU AI Act Compliance',
+    'GDPR Compliance',
+    'SaaS Acquisition',
+    'Expert Network',
+    'Asset Grading',
   ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Aegryn Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'AEGRYN Auction',
+          description: 'Structured auction platform for buying and selling digital tech assets (SaaS, B2C, infrastructure) in Europe. €100K–€50M range.',
+          url: `${BASE_URL}/en/auction`,
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'AEGRYN Valuation',
+          description: 'Free instant preliminary valuation of digital assets using proprietary SaaS scoring models benchmarked against European comparable transactions.',
+          url: `${BASE_URL}/en/valuation`,
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'AEGRYN Grade',
+          description: 'Proprietary grading methodology for digital assets, equivalent to a credit rating for tech companies. 5 grades: AEG★, AAA, AA, A, B.',
+          url: `${BASE_URL}/en/grade`,
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Aegryn Expert Network',
+          description: 'Curated network of M&A, legal, technical and cybersecurity experts for due diligence and transaction support.',
+          url: `${BASE_URL}/en/experts`,
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Aegryn Advisory',
+          description: 'Institutional-grade cybersecurity, AI audit (EU AI Act), and digital strategy advisory for enterprises.',
+          url: `${BASE_URL}/en/advisory`,
+        },
+      },
+    ],
+  },
 }
 
 export const aegrynWebSiteSchema = {
@@ -181,7 +265,8 @@ export const aegrynWebSiteSchema = {
   '@id':        `${BASE_URL}/#website`,
   url:          BASE_URL,
   name:         'Aegryn',
-  description:  'Aegryn — Swiss technology holding. Designs, funds and operates proprietary digital ecosystems: Subblink (AI contracts), Neediu (home services), Primiom (real estate AI), Movtoo (delivery), Hobconnect (social). Engineered to Last.',
+  alternateName: ['AEGRYN', 'Aegryn Swiss', 'Aegryn Advisory', 'AEGRYN Auction'],
+  description:  'Aegryn — Swiss technology holding and M&A auction platform. Buy and sell digital tech assets (SaaS, B2C, infrastructure) in Europe. Free valuation, proprietary grading, curated expert network, cybersecurity and AI advisory. Engineered to Last.',
   publisher:    { '@id': `${BASE_URL}/#organization` },
   inLanguage:   ['fr', 'en', 'de', 'it', 'es', 'nl'],
   potentialAction: {
@@ -189,6 +274,82 @@ export const aegrynWebSiteSchema = {
     target:        { '@type': 'EntryPoint', urlTemplate: `${BASE_URL}/en/search?q={search_term_string}` },
     'query-input': 'required name=search_term_string',
   },
+}
+
+/* ── Auction-specific JSON-LD ───────────────────────────────────── */
+
+export function generateAuctionSchema({
+  name,
+  description,
+  url,
+  startDate,
+  endDate,
+}: {
+  name: string
+  description: string
+  url: string
+  startDate?: string
+  endDate?: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    '@id': `${url}#event`,
+    name,
+    description,
+    url,
+    organizer: { '@id': `${BASE_URL}/#organization` },
+    eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
+    eventStatus: 'https://schema.org/EventScheduled',
+    location: {
+      '@type': 'VirtualLocation',
+      url: `${BASE_URL}/en/auction`,
+    },
+    ...(startDate ? { startDate } : {}),
+    ...(endDate   ? { endDate }   : {}),
+  }
+}
+
+/* ── FAQ JSON-LD ───────────────────────────────────────────────── */
+
+export function generateFAQSchema(faqs: Array<{ question: string; answer: string }>) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: { '@type': 'Answer', text: answer },
+    })),
+  }
+}
+
+/* ── Service JSON-LD ───────────────────────────────────────────── */
+
+export function generateServiceSchema({
+  name,
+  description,
+  url,
+  serviceType,
+  areaServed = 'Europe',
+}: {
+  name: string
+  description: string
+  url: string
+  serviceType: string
+  areaServed?: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${url}#service`,
+    name,
+    description,
+    url,
+    serviceType,
+    areaServed,
+    provider: { '@id': `${BASE_URL}/#organization` },
+  }
 }
 
 export function generateWebPageSchema({
