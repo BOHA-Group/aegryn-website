@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
-import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, TrendingUp, Scale, Calculator, FileSearch, Lock } from 'lucide-react'
+import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, TrendingUp, Scale, Calculator, FileSearch, Lock, Cpu, BarChart2, Palette, Package, Fingerprint, Eye, Bot, Landmark, Leaf, Building2, ClipboardCheck, Gavel, Wallet, CalendarClock, Merge, Users } from 'lucide-react'
 
 type ExpertProfile = {
   id:           string
@@ -34,22 +34,38 @@ const CATEGORIES = [
 type CategoryKey = typeof CATEGORIES[number]['key']
 
 const DOMAINS_BY_CATEGORY: Record<CategoryKey, readonly string[]> = {
-  advisory_tech:        ['cybersecurity', 'ai', 'law', 'hr', 'other'],
-  advisory_transaction: ['m_and_a', 'valuation', 'tax', 'law', 'accounting', 'insurance', 'real_estate', 'finance'],
+  advisory_tech: [
+    'cybersecurity', 'ai', 'architecture', 'devsecops', 'data_engineering',
+    'design_ux', 'product_management', 'rgpd', 'accessibility', 'eu_ai_act',
+    'ip_law', 'esg', 'law', 'hr', 'other',
+  ],
+  advisory_transaction: [
+    'm_and_a', 'valuation', 'vendor_readiness', 'dd_hr', 'dd_regulatory',
+    'wi_insurance', 'tax_corporate', 'financing', 'earnout', 'post_acquisition',
+    'exec_hr', 'tax', 'law', 'accounting', 'insurance', 'real_estate', 'finance',
+  ],
 }
 
-const ALL_DOMAINS = ['cybersecurity', 'ai', 'm_and_a', 'valuation', 'tax', 'law', 'accounting', 'hr', 'insurance', 'real_estate', 'finance', 'other'] as const
+const ALL_DOMAINS = [
+  'cybersecurity', 'ai', 'architecture', 'devsecops', 'data_engineering',
+  'design_ux', 'product_management', 'rgpd', 'accessibility', 'eu_ai_act',
+  'ip_law', 'esg',
+  'm_and_a', 'valuation', 'vendor_readiness', 'dd_hr', 'dd_regulatory',
+  'wi_insurance', 'tax_corporate', 'financing', 'earnout', 'post_acquisition',
+  'exec_hr',
+  'tax', 'law', 'accounting', 'hr', 'insurance', 'real_estate', 'finance', 'other',
+] as const
 
 const COUNTRIES = ['CH', 'FR', 'DE', 'BE', 'LU', 'ES', 'IT', 'NL', 'PT', 'AT', 'PL', 'SE', 'DK', 'FI', 'NO', 'IE', 'CZ', 'HU', 'RO'] as const
 
 const EXPERT_DOMAINS = [
-  { Icon: ShieldCheck,  domainKey: 'cybersecurity', color: '#5ADDA4' },
-  { Icon: Scale,        domainKey: 'm_and_a',       color: '#a78bfa' },
-  { Icon: TrendingUp,   domainKey: 'valuation',     color: '#60a5fa' },
-  { Icon: BrainCircuit, domainKey: 'ai',            color: '#5ADDA4' },
-  { Icon: Calculator,   domainKey: 'tax',           color: '#f59e0b' },
-  { Icon: FileSearch,   domainKey: 'law',           color: '#818cf8' },
-  { Icon: Lock,         domainKey: 'finance',       color: '#34d399' },
+  { Icon: ShieldCheck,    domainKey: 'cybersecurity',    color: '#5ADDA4' },
+  { Icon: BrainCircuit,   domainKey: 'ai',               color: '#a78bfa' },
+  { Icon: Cpu,            domainKey: 'architecture',     color: '#60a5fa' },
+  { Icon: Scale,          domainKey: 'm_and_a',          color: '#818cf8' },
+  { Icon: ClipboardCheck, domainKey: 'vendor_readiness', color: '#f472b6' },
+  { Icon: FileSearch,     domainKey: 'dd_hr',            color: '#fb923c' },
+  { Icon: TrendingUp,     domainKey: 'valuation',        color: '#34d399' },
 ] as const
 
 const PLACEHOLDERS: ExpertProfile[] = [
@@ -169,8 +185,14 @@ const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-san
 const selectCls = 'w-full border border-ag-border bg-ag-white px-4 py-2.5 pr-10 font-sans text-[12px] text-ag-black appearance-none focus:outline-none focus:border-ag-black transition-colors cursor-pointer'
 const labelCls  = 'block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-2'
 
+const CATEGORY_COLORS: Record<string, { bg: string; border: string; text: string }> = {
+  advisory_tech:        { bg: 'bg-[#5ADDA4]/10', border: 'border-[#5ADDA4]/40', text: 'text-[#0e7a52]' },
+  advisory_transaction: { bg: 'bg-[#818cf8]/10', border: 'border-[#818cf8]/40', text: 'text-[#4338ca]' },
+}
+
 function ExpertCard({ profile, t, blurred = false }: { profile: ExpertProfile; t: ReturnType<typeof useTranslations>; blurred?: boolean }) {
   const initials = `${profile.first_name[0] ?? ''}${profile.last_name[0] ?? ''}`.toUpperCase()
+  const catColors = profile.category ? CATEGORY_COLORS[profile.category] : null
   return (
     <div className={`bg-ag-white border border-ag-border p-6 flex flex-col gap-4 relative ${blurred ? 'select-none' : ''}`}>
       {blurred && (
@@ -180,6 +202,23 @@ function ExpertCard({ profile, t, blurred = false }: { profile: ExpertProfile; t
           </span>
         </div>
       )}
+
+      {/* Badges catégorie + domaines */}
+      {(profile.category || profile.domain.length > 0) && (
+        <div className="flex flex-wrap gap-1.5">
+          {profile.category && catColors && (
+            <span className={`inline-flex items-center gap-1 font-mono text-[9px] tracking-[0.14em] uppercase px-2 py-0.5 border ${catColors.bg} ${catColors.border} ${catColors.text} font-semibold`}>
+              {t(profile.category === 'advisory_tech' ? 'categories.tech' : 'categories.transaction')}
+            </span>
+          )}
+          {profile.domain.slice(0, 2).map(d => (
+            <span key={d} className="font-mono text-[9px] tracking-[0.12em] uppercase px-2 py-0.5 bg-ag-off-white border border-ag-border text-ag-gray">
+              {t(`domains.${d}`)}
+            </span>
+          ))}
+        </div>
+      )}
+
       <div className="flex items-start gap-4">
         {profile.avatar_url ? (
           <Image
@@ -218,7 +257,7 @@ function ExpertCard({ profile, t, blurred = false }: { profile: ExpertProfile; t
 
       {profile.specialties.length > 0 && (
         <div className="flex flex-wrap gap-1.5">
-          {profile.specialties.slice(0, 4).map(s => (
+          {profile.specialties.slice(0, 3).map(s => (
             <span key={s} className="font-mono text-[9px] tracking-[0.12em] uppercase px-2 py-0.5 bg-ag-off-white border border-ag-border text-ag-gray">
               {s}
             </span>
