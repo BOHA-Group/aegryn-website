@@ -336,40 +336,69 @@ export default function GradeForm({
     <div className="flex flex-col gap-6">
 
       {/* ── Onglets Grader / Moteur ── */}
-      <div className="flex items-stretch border-b border-gray-200 bg-white">
-        <button
-          type="button"
-          onClick={() => setActiveTab('grader')}
-          className={`flex items-center gap-2 px-5 py-3 text-[11px] font-semibold border-b-2 transition-colors ${
-            activeTab === 'grader'
-              ? 'border-ag-navy text-ag-navy'
-              : 'border-transparent text-gray-400 hover:text-gray-700'
-          }`}
-        >
-          <ClipboardList size={13} /> Grade officiel
-        </button>
-        <button
-          type="button"
-          onClick={() => setActiveTab('moteur')}
-          className={`flex items-center gap-2 px-5 py-3 text-[11px] font-semibold border-b-2 transition-colors ${
-            activeTab === 'moteur'
-              ? 'border-amber-500 text-amber-700'
-              : 'border-transparent text-gray-400 hover:text-gray-700'
-          }`}
-        >
-          <Calculator size={13} /> Moteur algorithmique
-          <span className="ml-1 text-[9px] font-mono uppercase tracking-widest bg-amber-100 text-amber-600 px-1.5 py-0.5">Algo</span>
-        </button>
+      <div className="bg-white border border-gray-200">
+        <div className="flex items-stretch border-b border-gray-200">
+          <button
+            type="button"
+            onClick={() => setActiveTab('grader')}
+            className={`flex items-center gap-2 px-5 py-3 text-[11px] font-semibold border-b-2 transition-colors ${
+              activeTab === 'grader'
+                ? 'border-ag-navy text-ag-navy'
+                : 'border-transparent text-gray-400 hover:text-gray-700'
+            }`}
+          >
+            <ClipboardList size={13} /> Grade officiel
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveTab('moteur')}
+            className={`flex items-center gap-2 px-5 py-3 text-[11px] font-semibold border-b-2 transition-colors ${
+              activeTab === 'moteur'
+                ? 'border-amber-500 text-amber-700'
+                : 'border-transparent text-gray-400 hover:text-gray-700'
+            }`}
+          >
+            <Calculator size={13} /> Moteur algorithmique
+            <span className="ml-1 text-[9px] font-mono uppercase tracking-widest bg-amber-100 text-amber-600 px-1.5 py-0.5">Algo</span>
+          </button>
+        </div>
+        {/* Légende des onglets */}
+        <div className="grid grid-cols-2 divide-x divide-gray-100 bg-gray-50 px-0">
+          <div className={`px-5 py-2.5 ${ activeTab === 'grader' ? 'bg-white' : ''}`}>
+            <p className="text-[10px] text-gray-500 leading-snug">
+              <span className="font-semibold text-gray-700">Grade officiel</span> — Saisie manuelle des scores CIFS (0–25/dim). Chaque sous-code coché ajuste le score automatiquement. Le grade live se calcule en temps réel.
+            </p>
+          </div>
+          <div className={`px-5 py-2.5 ${ activeTab === 'moteur' ? 'bg-white' : ''}`}>
+            <p className="text-[10px] text-gray-500 leading-snug">
+              <span className="font-semibold text-amber-700">Moteur algorithmique</span> — Saisie des métriques brutes (ARR, NRR, couverture tests…). Le moteur calcule un grade suggéré. Indique aussi les documents data room manquants.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* ── Panneau Moteur ── */}
       {activeTab === 'moteur' && (
-        <div className="bg-amber-50/40 border border-amber-200 p-1">
-          <div className="bg-amber-50 border-b border-amber-200 px-5 py-3 flex items-center justify-between">
+        <div className="bg-amber-50/40 border border-amber-200">
+          <div className="bg-amber-50 border-b border-amber-200 px-5 py-3 flex items-center justify-between gap-4">
             <div>
-              <p className="font-mono text-[9px] uppercase tracking-widest text-amber-600">Usage interne — logique propriétaire</p>
-              <p className="text-[12px] text-amber-800 mt-0.5">Le score ci-dessous est une suggestion algorithmique. Utilisez-le pour guider votre saisie manuelle dans l&apos;onglet Grade officiel.</p>
+              <p className="font-mono text-[9px] uppercase tracking-widest text-amber-600">Usage interne — logique propriétaire AEGRYN</p>
+              <p className="text-[12px] text-amber-800 mt-0.5">
+                Saisissez les métriques brutes de l&apos;actif. Le moteur calcule un <strong>grade suggéré par dimension</strong>.
+                Utilisez ce résultat pour alimenter votre saisie dans l&apos;onglet <em>Grade officiel</em>.
+              </p>
             </div>
+            <a
+              href={`/admin/assets/${assetId}/documents${adminToken ? `?token=${adminToken}` : ''}`}
+              className="shrink-0 inline-flex items-center gap-1.5 text-[10px] font-semibold text-amber-700 border border-amber-300 bg-white px-3 py-1.5 hover:border-amber-500 transition-colors whitespace-nowrap"
+            >
+              Documents / Data Room
+              {blockingAlerts.length > 0 && (
+                <span className="ml-1 bg-red-500 text-white text-[9px] font-mono px-1.5 py-0.5 rounded-full">
+                  {blockingAlerts.length}
+                </span>
+              )}
+            </a>
           </div>
           <div className="p-4">
             <Suspense fallback={<div className="text-[12px] text-gray-400 py-8 text-center">Chargement du moteur…</div>}>

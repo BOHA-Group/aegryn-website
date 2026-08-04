@@ -28,20 +28,17 @@ export default async function AdminPartnersPage({
   const rows = (data ?? []) as Record<string, unknown>[]
 
   const partnerIds = rows.map(r => String(r.id))
-  const [{ data: certs }, { data: refs }, { data: comms }] = await Promise.all([
+  const [{ data: certs }, { data: refs }] = await Promise.all([
     partnerIds.length ? supa.from('partner_certifications').select('partner_id, status').in('partner_id', partnerIds) : Promise.resolve({ data: [] }),
     partnerIds.length ? supa.from('introductions').select('partner_id, introduction_status').in('partner_id', partnerIds) : Promise.resolve({ data: [] }),
-    partnerIds.length ? supa.from('commissions').select('partner_id, amount_chf, status').in('partner_id', partnerIds) : Promise.resolve({ data: [] }),
   ])
 
   function statsFor(id: string) {
     const c = (certs ?? []).filter((x: Record<string, unknown>) => x.partner_id === id)
     const r = (refs ?? []).filter((x: Record<string, unknown>) => x.partner_id === id)
-    const m = (comms ?? []).filter((x: Record<string, unknown>) => x.partner_id === id)
     return {
       pendingCerts: c.filter((x: Record<string, unknown>) => x.status === 'assigned' || x.status === 'in_review').length,
       introductions: r.length,
-      commissionsDue: m.filter((x: Record<string, unknown>) => x.status !== 'paid').reduce((s: number, x: Record<string, unknown>) => s + Number(x.amount_chf ?? 0), 0),
     }
   }
 
@@ -52,7 +49,7 @@ export default async function AdminPartnersPage({
         <div className="mb-8 flex items-start justify-between gap-4">
           <div>
             <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">AEGRYN ADMIN</p>
-            <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Partenaires Alliance</h1>
+            <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Partenaires</h1>
             <p className="text-[12px] text-gray-400 mt-1">Cabinets juridiques, experts-comptables, cybersécurité et apporteurs d'affaires</p>
           </div>
           <Link href={`/admin${tokenQs}`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
@@ -76,7 +73,7 @@ export default async function AdminPartnersPage({
             <table className="w-full text-[12px] bg-white border border-gray-200">
               <thead className="bg-gray-50 border-b border-gray-200">
                 <tr>
-                  {['Nom', 'Email', 'Dossiers en cours', 'Apports', 'Commissions dues', 'Action'].map(h => (
+                  {['Nom', 'Email', 'Dossiers en cours', 'Apports', 'Action'].map(h => (
                     <th key={h} className="text-left px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500 whitespace-nowrap">{h}</th>
                   ))}
                 </tr>
@@ -90,7 +87,6 @@ export default async function AdminPartnersPage({
                       <td className="px-4 py-3 text-gray-500">{String(r.email ?? '—')}</td>
                       <td className="px-4 py-3 font-mono text-[11px]">{s.pendingCerts}</td>
                       <td className="px-4 py-3 font-mono text-[11px]">{s.introductions}</td>
-                      <td className="px-4 py-3 font-mono text-[11px]">{s.commissionsDue.toLocaleString('fr-CH')} CHF</td>
                       <td className="px-4 py-3">
                         <Link href={`/admin/partners/${r.id}${tokenQs}`}
                           className="text-[10px] font-semibold text-gray-700 border border-gray-300 px-2 py-1 hover:border-gray-500 transition-colors">

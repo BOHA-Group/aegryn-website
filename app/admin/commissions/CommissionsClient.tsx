@@ -91,7 +91,7 @@ export default function CommissionsClient({ transactions, tiers, tokenQs }: Prop
           </div>
         </div>
 
-        <div className="grid grid-cols-1 xl:grid-cols-[1fr_380px] gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-[1fr_380px] gap-8 items-start">
 
           {/* Table transactions */}
           <div>
@@ -167,8 +167,17 @@ export default function CommissionsClient({ transactions, tiers, tokenQs }: Prop
             )}
           </div>
 
-          {/* Calculateur + grille */}
-          <div className="space-y-6">
+          {/* Calculateur + grille — panneau flottant */}
+          <div className="sticky top-6 space-y-6">
+
+            {/* Note partenaires */}
+            <div className="bg-blue-50 border border-blue-200 px-4 py-3">
+              <p className="font-mono text-[9px] uppercase tracking-widest text-blue-500 mb-1">Nota bene</p>
+              <p className="font-sans text-[11px] text-blue-700 leading-snug">
+                Les partenaires paient un abonnement fixe (89 CHF/mois) pour afficher leur fiche expert.
+                Aucune commission ne leur est due sur les transactions.
+              </p>
+            </div>
 
             {/* Calculateur */}
             <div className="bg-white border border-gray-200 p-6">

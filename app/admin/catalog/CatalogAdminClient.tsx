@@ -266,6 +266,12 @@ export default function CatalogAdminClient({ rows: initial, adminToken, tokenQs 
                       </>
                     ) : (
                       <>
+                        <Link
+                          href={`/admin/assets/${r.id}/grade${tokenQs}`}
+                          className="flex items-center gap-1 text-[10px] font-semibold text-indigo-600 hover:text-indigo-800 border border-indigo-100 px-2 py-1 hover:border-indigo-300 transition-colors"
+                        >
+                          Grader →
+                        </Link>
                         <button
                           onClick={() => openEdit(r)}
                           className="flex items-center gap-1 text-[10px] font-semibold text-blue-500 hover:text-blue-700 border border-blue-100 px-2 py-1 hover:border-blue-300 transition-colors"
