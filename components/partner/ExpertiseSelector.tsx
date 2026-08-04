@@ -33,7 +33,7 @@ const DIMENSION_OPTIONS: { id: Dimension; labels: Record<LocaleKey, string>; sub
   {
     id: 'transaction',
     labels: { fr: 'Advisory Transaction', en: 'Advisory Transaction', de: 'Advisory Transaction', es: 'Advisory Transaction', it: 'Advisory Transaction', nl: 'Advisory Transaction' },
-    subs:   { fr: '1 catégorie', en: '1 category', de: '1 Kategorie', es: '1 categoría', it: '1 categoria', nl: '1 categorie' },
+    subs:   { fr: '13 expertises', en: '13 expertises', de: '13 Fachgebiete', es: '13 especialidades', it: '13 competenze', nl: '13 expertises' },
   },
   {
     id: 'both',
@@ -43,76 +43,76 @@ const DIMENSION_OPTIONS: { id: Dimension; labels: Record<LocaleKey, string>; sub
 ]
 
 const UI_LABELS: Record<LocaleKey, {
-  step1: string; step2: string; step3: string; summary: string
+  step1: string; step2: string; summary: string
   selectCats: string; selectedCount: (n: number, max: number) => string
-  selectSpecs: string; selectedSpecCount: (n: number, max: number) => string
-  regulatory: string
+  selectExperts: string; selectedExpertCount: (n: number, max: number) => string
+  regulatory: string; expertises: string
 }> = {
   fr: {
     step1: 'Étape 1 — Dimension advisory',
-    step2: 'Étape 2 — Catégories',
-    step3: 'Étape 3 — Spécialités',
+    step2: 'Étape 2 — Catégories & Expertises',
     summary: 'Récapitulatif de votre profil d\'expertise',
     selectCats: `Sélectionnez 1 à ${MAX_CATEGORIES} catégories`,
     selectedCount: (n, max) => `${n}/${max} sélectionnée${n > 1 ? 's' : ''}`,
-    selectSpecs: `Sélectionnez vos spécialités (max ${MAX_SPECIALTIES})`,
-    selectedSpecCount: (n, max) => `${n}/${max} sélectionnée${n > 1 ? 's' : ''}`,
+    selectExperts: `Sélectionnez vos expertises (max ${MAX_SPECIALTIES})`,
+    selectedExpertCount: (n, max) => `${n}/${max} sélectionnée${n > 1 ? 's' : ''}`,
     regulatory: 'Réglementaire',
+    expertises: 'Expertises',
   },
   en: {
     step1: 'Step 1 — Advisory dimension',
-    step2: 'Step 2 — Categories',
-    step3: 'Step 3 — Specialties',
+    step2: 'Step 2 — Categories & Expertises',
     summary: 'Your expertise profile summary',
     selectCats: `Select 1 to ${MAX_CATEGORIES} categories`,
     selectedCount: (n, max) => `${n}/${max} selected`,
-    selectSpecs: `Select your specialties (max ${MAX_SPECIALTIES})`,
-    selectedSpecCount: (n, max) => `${n}/${max} selected`,
+    selectExperts: `Select your expertises (max ${MAX_SPECIALTIES})`,
+    selectedExpertCount: (n, max) => `${n}/${max} selected`,
     regulatory: 'Regulatory',
+    expertises: 'Expertises',
   },
   de: {
     step1: 'Schritt 1 — Advisory-Dimension',
-    step2: 'Schritt 2 — Kategorien',
-    step3: 'Schritt 3 — Spezialgebiete',
+    step2: 'Schritt 2 — Kategorien & Fachgebiete',
     summary: 'Zusammenfassung Ihres Expertenprofils',
     selectCats: `Wählen Sie 1 bis ${MAX_CATEGORIES} Kategorien`,
     selectedCount: (n, max) => `${n}/${max} ausgewählt`,
-    selectSpecs: `Wählen Sie Ihre Spezialgebiete (max. ${MAX_SPECIALTIES})`,
-    selectedSpecCount: (n, max) => `${n}/${max} ausgewählt`,
+    selectExperts: `Wählen Sie Ihre Fachgebiete (max. ${MAX_SPECIALTIES})`,
+    selectedExpertCount: (n, max) => `${n}/${max} ausgewählt`,
     regulatory: 'Regulatorisch',
+    expertises: 'Fachgebiete',
   },
   es: {
     step1: 'Paso 1 — Dimensión advisory',
-    step2: 'Paso 2 — Categorías',
-    step3: 'Paso 3 — Especialidades',
+    step2: 'Paso 2 — Categorías & Especialidades',
     summary: 'Resumen de su perfil de expertise',
     selectCats: `Seleccione 1 a ${MAX_CATEGORIES} categorías`,
     selectedCount: (n, max) => `${n}/${max} seleccionada${n > 1 ? 's' : ''}`,
-    selectSpecs: `Seleccione sus especialidades (máx. ${MAX_SPECIALTIES})`,
-    selectedSpecCount: (n, max) => `${n}/${max} seleccionada${n > 1 ? 's' : ''}`,
+    selectExperts: `Seleccione sus especialidades (máx. ${MAX_SPECIALTIES})`,
+    selectedExpertCount: (n, max) => `${n}/${max} seleccionada${n > 1 ? 's' : ''}`,
     regulatory: 'Regulatorio',
+    expertises: 'Especialidades',
   },
   it: {
     step1: 'Fase 1 — Dimensione advisory',
-    step2: 'Fase 2 — Categorie',
-    step3: 'Fase 3 — Specialità',
+    step2: 'Fase 2 — Categorie & Competenze',
     summary: 'Riepilogo del profilo di expertise',
     selectCats: `Seleziona da 1 a ${MAX_CATEGORIES} categorie`,
     selectedCount: (n, max) => `${n}/${max} selezionata${n > 1 ? 'e' : ''}`,
-    selectSpecs: `Seleziona le tue specialità (max ${MAX_SPECIALTIES})`,
-    selectedSpecCount: (n, max) => `${n}/${max} selezionata${n > 1 ? 'e' : ''}`,
+    selectExperts: `Seleziona le tue competenze (max ${MAX_SPECIALTIES})`,
+    selectedExpertCount: (n, max) => `${n}/${max} selezionata${n > 1 ? 'e' : ''}`,
     regulatory: 'Normativo',
+    expertises: 'Competenze',
   },
   nl: {
     step1: 'Stap 1 — Advisory-dimensie',
-    step2: 'Stap 2 — Categorieën',
-    step3: 'Stap 3 — Specialisaties',
+    step2: 'Stap 2 — Categorieën & Expertises',
     summary: 'Overzicht van uw expertiseprofiel',
     selectCats: `Selecteer 1 tot ${MAX_CATEGORIES} categorieën`,
     selectedCount: (n, max) => `${n}/${max} geselecteerd`,
-    selectSpecs: `Selecteer uw specialisaties (max ${MAX_SPECIALTIES})`,
-    selectedSpecCount: (n, max) => `${n}/${max} geselecteerd`,
+    selectExperts: `Selecteer uw expertises (max ${MAX_SPECIALTIES})`,
+    selectedExpertCount: (n, max) => `${n}/${max} geselecteerd`,
     regulatory: 'Regelgevend',
+    expertises: 'Expertises',
   },
 }
 
@@ -121,11 +121,22 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
   const locale    = ((['fr','en','de','es','it','nl'].includes(rawLocale) ? rawLocale : 'fr')) as LocaleKey
   const ui        = UI_LABELS[locale]
 
+  const availableCategories = value.dimension ? getCategoriesByDimension(value.dimension) : []
+
+  // Pour transaction (1 seule catégorie) : auto-sélection transparente
+  const isSingleCat = availableCategories.length === 1
+
   const handleDimension = (dim: Dimension) => {
-    onChange({ dimension: dim, categories: [], specialties: [] })
+    const cats = getCategoriesByDimension(dim)
+    if (cats.length === 1) {
+      onChange({ dimension: dim, categories: [cats[0].id], specialties: [] })
+    } else {
+      onChange({ dimension: dim, categories: [], specialties: [] })
+    }
   }
 
   const toggleCategory = (catId: string) => {
+    if (isSingleCat) return // auto-sélectionnée, non décocher
     const current    = value.categories
     const isSelected = current.includes(catId)
     let next: string[]
@@ -158,12 +169,10 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
     }
   }
 
-  const availableCategories = value.dimension ? getCategoriesByDimension(value.dimension) : []
-
   return (
     <div className="space-y-8">
 
-      {/* ── Étape 1 ── */}
+      {/* ── Étape 1 — Dimension ── */}
       <div>
         <p className="font-mono text-[11px] tracking-[0.16em] uppercase text-ag-gray mb-3">
           {ui.step1}
@@ -191,133 +200,122 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
         </div>
       </div>
 
-      {/* ── Étape 2 ── */}
+      {/* ── Étape 2 — Catégories + Expertises en accordion inline ── */}
       {value.dimension && (
         <div>
           <p className="font-mono text-[11px] tracking-[0.16em] uppercase text-ag-gray mb-1">
             {ui.step2}
           </p>
           <p className="font-mono text-[11px] text-ag-gray-light mb-3">
-            {ui.selectCats}
-            {value.categories.length > 0 && ` — ${ui.selectedCount(value.categories.length, MAX_CATEGORIES)}`}
+            {isSingleCat
+              ? `${ui.selectExperts}${value.specialties.length > 0 ? ` — ${ui.selectedExpertCount(value.specialties.length, MAX_SPECIALTIES)}` : ''}`
+              : `${ui.selectCats}${value.categories.length > 0 ? ` — ${ui.selectedCount(value.categories.length, MAX_CATEGORIES)}` : ''}${value.specialties.length > 0 ? ` · ${ui.selectedExpertCount(value.specialties.length, MAX_SPECIALTIES)} ${ui.expertises.toLowerCase()}` : ''}`
+            }
           </p>
+
           <div className="space-y-2">
             {availableCategories.map(cat => {
               const isSelected = value.categories.includes(cat.id)
-              const isDisabled = !isSelected && value.categories.length >= MAX_CATEGORIES
+              const isDisabled = !isSelected && !isSingleCat && value.categories.length >= MAX_CATEGORIES
 
               return (
-                <button
-                  key={cat.id}
-                  type="button"
-                  disabled={isDisabled}
-                  onClick={() => toggleCategory(cat.id)}
-                  className={`w-full border p-4 text-left transition-all duration-200 flex items-center justify-between ${
-                    isSelected
-                      ? 'border-ag-black bg-ag-off-white'
-                      : isDisabled
-                        ? 'border-ag-border opacity-40 cursor-not-allowed'
-                        : 'border-ag-border hover:border-ag-black'
-                  }`}
-                >
-                  <div>
-                    <span className="block font-sans font-bold text-[13px] text-ag-black">
-                      {getCategoryLabel(cat, locale)}
-                    </span>
-                    <span className="block font-mono text-[10px] tracking-[0.1em] uppercase text-ag-gray-light mt-1">
-                      {cat.specialties.length} spécialité{cat.specialties.length > 1 ? 's' : ''}
-                      {cat.dimension === 'tech' ? ' · Advisory Tech' : ' · Advisory Transaction'}
-                    </span>
-                  </div>
+                <div key={cat.id}>
+                  {/* ── En-tête catégorie ── */}
+                  <button
+                    type="button"
+                    disabled={isDisabled}
+                    onClick={() => toggleCategory(cat.id)}
+                    className={`w-full border p-4 text-left transition-all duration-200 flex items-center justify-between ${
+                      isSelected
+                        ? 'border-ag-black bg-ag-off-white'
+                        : isDisabled
+                          ? 'border-ag-border opacity-40 cursor-not-allowed'
+                          : 'border-ag-border hover:border-ag-black'
+                    }`}
+                  >
+                    <div>
+                      <span className="block font-sans font-bold text-[13px] text-ag-black">
+                        {getCategoryLabel(cat, locale)}
+                      </span>
+                      <span className="block font-mono text-[10px] tracking-[0.1em] uppercase text-ag-gray-light mt-1">
+                        {cat.specialties.length} {ui.expertises.toLowerCase()}
+                        {!isSingleCat && (cat.dimension === 'tech' ? ' · Advisory Tech' : ' · Advisory Transaction')}
+                      </span>
+                    </div>
+                    {isSingleCat ? null : isSelected ? (
+                      <span className="w-5 h-5 border border-ag-black bg-ag-black flex items-center justify-center shrink-0">
+                        <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                          <path d="M1 4L3.5 6.5L9 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </span>
+                    ) : (
+                      <span className="w-5 h-5 border border-ag-border flex items-center justify-center shrink-0" />
+                    )}
+                  </button>
+
+                  {/* ── Expertises inline sous la catégorie sélectionnée ── */}
                   {isSelected && (
-                    <span className="w-5 h-5 border border-ag-black bg-ag-black flex items-center justify-center shrink-0">
-                      <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
-                        <path d="M1 4L3.5 6.5L9 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </span>
+                    <div className="border border-t-0 border-ag-black bg-ag-white p-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        {cat.specialties.map(spec => {
+                          const specSelected = value.specialties.includes(spec.id)
+                          const specDisabled = !specSelected && value.specialties.length >= MAX_SPECIALTIES
+
+                          return (
+                            <button
+                              key={spec.id}
+                              type="button"
+                              disabled={specDisabled}
+                              onClick={() => toggleSpecialty(spec.id)}
+                              className={`border p-3 text-left transition-all duration-200 ${
+                                specSelected
+                                  ? 'border-ag-black bg-ag-off-white'
+                                  : specDisabled
+                                    ? 'border-ag-border opacity-40 cursor-not-allowed'
+                                    : 'border-ag-border hover:border-ag-black'
+                              }`}
+                            >
+                              <div className="flex items-start justify-between gap-2">
+                                <div className="flex-1 min-w-0">
+                                  <span className="block font-sans text-[13px] font-semibold text-ag-black leading-snug">
+                                    {getSpecialtyLabel(spec, locale)}
+                                  </span>
+                                  <span className="block font-mono text-[11px] text-ag-gray leading-relaxed mt-1">
+                                    {locale === 'fr' ? spec.descriptionFr : spec.description}
+                                  </span>
+                                  {(spec.cifs && spec.cifs.length > 0) || spec.regulatory ? (
+                                    <div className="flex flex-wrap items-center gap-1 mt-2">
+                                      {spec.cifs?.map(dim => (
+                                        <span key={dim} className="font-mono text-[9px] tracking-[0.1em] border border-ag-border px-1.5 py-0.5 text-ag-gray-light">
+                                          {dim}
+                                        </span>
+                                      ))}
+                                      {spec.regulatory && (
+                                        <span className="font-mono text-[9px] tracking-[0.1em] uppercase text-ag-apex border border-ag-apex px-1.5 py-0.5">
+                                          {ui.regulatory}
+                                        </span>
+                                      )}
+                                    </div>
+                                  ) : null}
+                                </div>
+                                {specSelected && (
+                                  <span className="w-4 h-4 border border-ag-black bg-ag-black flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none">
+                                      <path d="M1 3L2.8 5L7 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                  </span>
+                                )}
+                              </div>
+                            </button>
+                          )
+                        })}
+                      </div>
+                    </div>
                   )}
-                </button>
+                </div>
               )
             })}
           </div>
-        </div>
-      )}
-
-      {/* ── Étape 3 ── */}
-      {value.categories.length > 0 && (
-        <div>
-          <p className="font-mono text-[11px] tracking-[0.16em] uppercase text-ag-gray mb-1">
-            {ui.step3}
-          </p>
-          <p className="font-mono text-[11px] text-ag-gray-light mb-3">
-            {ui.selectSpecs}
-            {value.specialties.length > 0 && ` — ${ui.selectedSpecCount(value.specialties.length, MAX_SPECIALTIES)}`}
-          </p>
-
-          {availableCategories
-            .filter(cat => value.categories.includes(cat.id))
-            .map(cat => (
-              <div key={cat.id} className="mb-6">
-                <p className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border-t border-ag-border pt-3 mb-3">
-                  {getCategoryLabel(cat, locale)}
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {cat.specialties.map(spec => {
-                    const isSelected = value.specialties.includes(spec.id)
-                    const isDisabled = !isSelected && value.specialties.length >= MAX_SPECIALTIES
-
-                    return (
-                      <button
-                        key={spec.id}
-                        type="button"
-                        disabled={isDisabled}
-                        onClick={() => toggleSpecialty(spec.id)}
-                        className={`border p-3 text-left transition-all duration-200 ${
-                          isSelected
-                            ? 'border-ag-black bg-ag-off-white'
-                            : isDisabled
-                              ? 'border-ag-border opacity-40 cursor-not-allowed'
-                              : 'border-ag-border hover:border-ag-black'
-                        }`}
-                      >
-                        <div className="flex items-start justify-between gap-2">
-                          <div className="flex-1">
-                            <span className="block font-sans text-[13px] font-medium text-ag-black">
-                              {getSpecialtyLabel(spec, locale)}
-                            </span>
-                            <span className="block font-mono text-[11px] text-ag-gray-light leading-relaxed mt-1">
-                              {locale === 'fr' ? spec.descriptionFr : spec.description}
-                            </span>
-                            {spec.cifs && spec.cifs.length > 0 && (
-                              <div className="flex gap-1 mt-2">
-                                {spec.cifs.map(dim => (
-                                  <span key={dim} className="font-mono text-[9px] tracking-[0.1em] border border-ag-border px-1.5 py-0.5 text-ag-gray-light">
-                                    {dim}
-                                  </span>
-                                ))}
-                              </div>
-                            )}
-                            {spec.regulatory && (
-                              <span className="inline-block font-mono text-[9px] tracking-[0.1em] uppercase mt-2 text-ag-apex border border-ag-apex px-1.5 py-0.5">
-                                {ui.regulatory}
-                              </span>
-                            )}
-                          </div>
-                          {isSelected && (
-                            <span className="w-4 h-4 border border-ag-black bg-ag-black flex items-center justify-center shrink-0 mt-0.5">
-                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none">
-                                <path d="M1 3L2.8 5L7 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                              </svg>
-                            </span>
-                          )}
-                        </div>
-                      </button>
-                    )
-                  })}
-                </div>
-              </div>
-            ))
-          }
         </div>
       )}
 

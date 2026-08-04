@@ -494,6 +494,22 @@ export function getCategoriesByDimension(dim: Dimension): Category[] {
   return EXPERTISE_TAXONOMY.filter(c => c.dimension === dim || c.dimension === 'both')
 }
 
+export function getCategoryIdsByDimension(dim: Dimension): string[] {
+  return getCategoriesByDimension(dim).map(c => c.id)
+}
+
+export function getSpecialtyIdsByDimension(dim: Dimension): string[] {
+  return getCategoriesByDimension(dim).flatMap(c => c.specialties.map(s => s.id))
+}
+
+export function getAllCategoryIds(): string[] {
+  return EXPERTISE_TAXONOMY.map(c => c.id)
+}
+
+export function getAllSpecialtyIds(): string[] {
+  return EXPERTISE_TAXONOMY.flatMap(c => c.specialties.map(s => s.id))
+}
+
 export function getSpecialtyById(id: string): Specialty | undefined {
   for (const cat of EXPERTISE_TAXONOMY) {
     const found = cat.specialties.find(s => s.id === id)

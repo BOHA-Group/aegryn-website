@@ -4,6 +4,12 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, TrendingUp, Scale, FileSearch, Cpu, ClipboardCheck } from 'lucide-react'
+import {
+  EXPERTISE_TAXONOMY,
+  getCategoryIdsByDimension,
+  getAllCategoryIds,
+  getAllSpecialtyIds,
+} from '@/lib/expertiseTaxonomy'
 
 type ExpertProfile = {
   id:           string
@@ -26,68 +32,25 @@ type ExpertProfile = {
   domain:       string[]
 }
 
-const CATEGORIES = [
-  { key: 'advisory_tech',        labelKey: 'categories.tech',        descKey: 'categories.techDesc'        },
-  { key: 'advisory_transaction', labelKey: 'categories.transaction', descKey: 'categories.transactionDesc' },
+const DIMENSIONS = [
+  { key: 'tech',        labelKey: 'categories.tech'        },
+  { key: 'transaction', labelKey: 'categories.transaction' },
 ] as const
 
-type CategoryKey = typeof CATEGORIES[number]['key']
+type DimensionKey = typeof DIMENSIONS[number]['key']
 
-const DOMAINS_BY_CATEGORY: Record<CategoryKey, readonly string[]> = {
-  advisory_tech: [
-    'cybersecurity', 'ai', 'architecture', 'devsecops', 'data_engineering',
-    'design_ux', 'product_management', 'rgpd', 'accessibility', 'eu_ai_act',
-    'ip_law', 'esg', 'law', 'hr', 'other',
-  ],
-  advisory_transaction: [
-    'm_and_a', 'valuation', 'vendor_readiness', 'dd_hr', 'dd_regulatory',
-    'wi_insurance', 'tax_corporate', 'financing', 'earnout', 'post_acquisition',
-    'exec_hr', 'tax', 'law', 'accounting', 'insurance', 'real_estate', 'finance',
-  ],
+// Domaines = catégorie ids par dimension, dérivés de la taxonomie
+const DOMAINS_BY_DIMENSION: Record<DimensionKey, readonly string[]> = {
+  tech:        getCategoryIdsByDimension('tech'),
+  transaction: getCategoryIdsByDimension('transaction'),
 }
 
-const ALL_DOMAINS = [
-  'cybersecurity', 'ai', 'architecture', 'devsecops', 'data_engineering',
-  'design_ux', 'product_management', 'rgpd', 'accessibility', 'eu_ai_act',
-  'ip_law', 'esg',
-  'm_and_a', 'valuation', 'vendor_readiness', 'dd_hr', 'dd_regulatory',
-  'wi_insurance', 'tax_corporate', 'financing', 'earnout', 'post_acquisition',
-  'exec_hr',
-  'tax', 'law', 'accounting', 'hr', 'insurance', 'real_estate', 'finance', 'other',
-] as const
+const ALL_DOMAINS = getAllCategoryIds()
+
+// Expertises = specialty ids de toute la taxonomie
+const ALL_EXPERTISES = getAllSpecialtyIds()
 
 const COUNTRIES = ['CH', 'FR', 'DE', 'BE', 'LU', 'ES', 'IT', 'NL', 'PT', 'AT', 'PL', 'SE', 'DK', 'FI', 'NO', 'IE', 'CZ', 'HU', 'RO'] as const
-
-// Spécialités libres du formulaire ExpertProfileForm (strings stockées en DB)
-const SPECIALTIES_ALL = [
-  'Cybersécurité',
-  'Architecture technique & Engineering',
-  'DevSecOps & Qualité logicielle',
-  'Intelligence artificielle & Data',
-  'Conformité EU AI Act & IA éthique',
-  'Data Engineering & Architecture data',
-  'Propriété intellectuelle & Droit du numérique',
-  'Design & Expérience utilisateur',
-  'Product Management & Roadmap',
-  'Conformité RGPD / LPD',
-  'Accessibilité numérique',
-  'ESG / RSE',
-  'M&A & Droit des transactions',
-  'Valorisation & Benchmark',
-  'Vendor Readiness — Préparation cession',
-  'Due diligence RH & Social',
-  'Due diligence réglementaire sectorielle',
-  'Warranty & Indemnity Insurance',
-  'Fiscalité & Structuration corporate',
-  'Financement & Partenaires financiers',
-  'Earn-out Design & KPI Framework',
-  'Intégration post-acquisition',
-  'Accompagnement RH dirigeant',
-  'Finance structurée',
-  'Expertise comptable',
-  'Immobilier',
-  'Assurance',
-] as const
 
 const EXPERT_DOMAINS = [
   { Icon: ShieldCheck,    domainKey: 'cybersecurity',    color: '#5ADDA4' },
@@ -407,8 +370,8 @@ function WaitlistForm({ t }: { t: ReturnType<typeof useTranslations> }) {
           <div className="relative">
             <select name="category" required className={selectCls}>
               <option value="">—</option>
-              {CATEGORIES.map(c => (
-                <option key={c.key} value={c.key}>{t(c.labelKey)}</option>
+              {DIMENSIONS.map(d => (
+                <option key={d.key} value={d.key}>{t(d.labelKey)}</option>
               ))}
             </select>
             <ChevronDown size={13} className="absolute right-3 top-1/2 -translate-y-1/2 text-ag-gray pointer-events-none" />
@@ -421,9 +384,10 @@ function WaitlistForm({ t }: { t: ReturnType<typeof useTranslations> }) {
           <div className="relative">
             <select name="domain" required className={selectCls}>
               <option value="">—</option>
-              {ALL_DOMAINS.map(d => (
-                <option key={d} value={d}>{t(`domains.${d}`)}</option>
-              ))}
+              {ALL_DOMAINS.map(d => {
+                const cat = EXPERTISE_TAXONOMY.find(c => c.id === d)
+                return <option key={d} value={d}>{cat?.labelFr ?? d}</option>
+              })}
             </select>
             <ChevronDown size={13} className="absolute right-3 top-1/2 -translate-y-1/2 text-ag-gray pointer-events-none" />
           </div>
@@ -565,7 +529,7 @@ export default function ExpertsContent() {
         <FanCards
           domains={EXPERT_DOMAINS}
           activeDomain={domain}
-          onSelect={(key) => { setDomain(prev => prev === key ? '' : key); setCategory('') }}
+          onSelect={(key) => { setDomain(prev => prev === key ? '' : key); setCategory('') }} // key = specialty id dans éventail, filtre domaine
           t={t}
         />
       </section>
@@ -579,22 +543,28 @@ export default function ExpertsContent() {
               value={category}
               onChange={v => { setCategory(v); setDomain('') }}
               placeholder={t('filters.allCategories')}
-              options={CATEGORIES.map(c => ({ value: c.key, label: t(c.labelKey) }))}
+              options={DIMENSIONS.map(d => ({ value: d.key, label: t(d.labelKey) }))}
             />
             <SelectFilter
               value={domain}
               onChange={setDomain}
               placeholder={t('filters.allDomains')}
-              options={(category && DOMAINS_BY_CATEGORY[category as CategoryKey]
-                ? DOMAINS_BY_CATEGORY[category as CategoryKey]
+              options={(category && DOMAINS_BY_DIMENSION[category as DimensionKey]
+                ? DOMAINS_BY_DIMENSION[category as DimensionKey]
                 : ALL_DOMAINS
-              ).map(d => ({ value: d, label: t(`domains.${d}`) }))}
+              ).map(d => {
+                const cat = EXPERTISE_TAXONOMY.find(c => c.id === d)
+                return { value: d, label: cat?.labelFr ?? d }
+              })}
             />
             <SelectFilter
               value={specialty}
               onChange={setSpecialty}
               placeholder={t('filters.allSpecialties')}
-              options={SPECIALTIES_ALL.map(s => ({ value: s, label: s }))}
+              options={ALL_EXPERTISES.map(id => {
+                const spec = EXPERTISE_TAXONOMY.flatMap(c => c.specialties).find(s => s.id === id)
+                return { value: id, label: spec?.labelFr ?? id }
+              })}
             />
             <SelectFilter
               value={country}

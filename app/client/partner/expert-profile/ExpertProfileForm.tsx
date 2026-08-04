@@ -293,7 +293,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
           <div>
             <label className="font-sans text-[11px] text-gray-600 block mb-1">Pays</label>
             <select value={form.country_code} onChange={e => setForm(p => ({ ...p, country_code: e.target.value }))}
-              className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white truncate">
+              className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white appearance-none">
               {COUNTRY_OPTIONS.map(c => <option key={c.code} value={c.code}>{c.label}</option>)}
             </select>
           </div>
