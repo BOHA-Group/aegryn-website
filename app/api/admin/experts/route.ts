@@ -129,6 +129,7 @@ export async function PATCH(req: NextRequest) {
       patch.is_visible    = is_visible
       patch.verified_at   = is_visible ? new Date().toISOString() : null
       patch.hidden_reason = is_visible ? null : (hidden_reason ?? null)
+      patch.review_status = is_visible ? null : (hidden_reason ? 'rejected' : null)
     }
 
     const { error } = await supa.from('expert_profiles').update(patch).eq('id', id)

@@ -2,9 +2,10 @@
 
 import { useState, useRef } from 'react'
 import Image from 'next/image'
-import { CheckCircle2, Loader2, Upload } from 'lucide-react'
+import { CheckCircle2, Loader2, Upload, Eye, EyeOff } from 'lucide-react'
 import { ExpertiseSelector, type ExpertiseValue } from '@/components/partner/ExpertiseSelector'
 import type { Dimension } from '@/lib/expertiseTaxonomy'
+import { ExpertCardPreview, type ExpertCardPreviewData } from '@/components/experts/ExpertCardPreview'
 
 const COUNTRY_OPTIONS = [
   { code: 'CH', label: 'Suisse',      dial: '+41',  maxLen: 9  },
@@ -103,7 +104,26 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
   const [error,         setError]         = useState<string | null>(null)
   const [avatarUrl,     setAvatarUrl]     = useState<string | null>(existing?.avatar_url ?? null)
   const [avatarLoading, setAvatarLoading] = useState(false)
+  const [showPreview,   setShowPreview]   = useState(true)
   const fileRef = useRef<HTMLInputElement>(null)
+
+  const previewData: ExpertCardPreviewData = {
+    first_name:             form.first_name,
+    last_name:              form.last_name,
+    profession:             form.profession,
+    organization:           form.organization,
+    city:                   form.city,
+    country_code:           form.country_code,
+    bio:                    form.bio,
+    email_public:           form.email_public,
+    website:                form.website,
+    min_rate_eur:           form.min_rate_eur,
+    languages:              form.languages,
+    avatar_url:             avatarUrl,
+    expertise_dimension:    expertise.dimension,
+    expertise_categories:   expertise.categories,
+    expertise_specialties:  expertise.specialties,
+  }
 
   const isNew = !existing?.id
 
@@ -185,6 +205,9 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
   const canSubmit = canPublish
 
   return (
+    <div className="xl:grid xl:grid-cols-[1fr_340px] xl:gap-8 xl:items-start">
+
+    {/* ── Colonne formulaire ── */}
     <form onSubmit={handleSubmit} className="space-y-8">
 
       {/* Statut */}
@@ -445,5 +468,34 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
         {isNew ? 'Soumettre ma fiche' : 'Enregistrer les modifications'}
       </button>
     </form>
+
+    {/* ── Colonne preview sticky ── */}
+    <div className="hidden xl:block">
+      <div className="sticky top-24 space-y-3">
+        <div className="flex items-center justify-between">
+          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">
+            Aperçu de votre fiche publiée
+          </p>
+          <button
+            type="button"
+            onClick={() => setShowPreview(v => !v)}
+            className="flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-widest text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            {showPreview ? <EyeOff size={11} /> : <Eye size={11} />}
+            {showPreview ? 'Masquer' : 'Afficher'}
+          </button>
+        </div>
+        {showPreview && (
+          <>
+            <ExpertCardPreview data={previewData} locale="fr" />
+            <p className="font-mono text-[9px] text-gray-300 text-center">
+              Rendu temps réel · non sauvegardé
+            </p>
+          </>
+        )}
+      </div>
+    </div>
+
+    </div>
   )
 }

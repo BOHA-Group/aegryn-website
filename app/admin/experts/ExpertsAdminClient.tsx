@@ -33,6 +33,7 @@ type ExpertProfile = {
   organization:  string | null
   is_visible:    boolean
   hidden_reason: string | null
+  review_status: string | null
   verified_at:   string | null
   created_at:    string
   profile: {
@@ -228,11 +229,19 @@ function ProfileRow({
           <span className={`font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 border ${
             profile.is_visible
               ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+              : profile.review_status === 'pending_review'
+              ? 'bg-orange-50 text-orange-700 border-orange-200'
               : !profile.hidden_reason
               ? 'bg-blue-50 text-blue-700 border-blue-200'
               : 'bg-gray-50 text-gray-400 border-gray-200'
           }`}>
-            {profile.is_visible ? 'Publiée' : !profile.hidden_reason ? 'En attente' : 'Masquée'}
+            {profile.is_visible
+              ? 'Publiée'
+              : profile.review_status === 'pending_review'
+              ? 'À réviser'
+              : !profile.hidden_reason
+              ? 'En attente'
+              : 'Masquée'}
           </span>
           <span className={`font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 border ${
             plan === 'active' ? 'bg-ag-apex/10 text-ag-apex border-ag-apex/30' : 'bg-amber-50 text-amber-600 border-amber-200'
@@ -494,18 +503,22 @@ export default function ExpertsAdminClient({ applications, profiles, tokenQs }: 
 
   const pendingCount = apps.filter(a => a.status === 'pending').length
 
+  // «En attente» = fiche non publiée sans motif de refus OU fiche soumise/resoumise (review_status = pending_review)
+  const isPending = (p: ExpertProfile) =>
+    (!p.is_visible && !p.hidden_reason) || p.review_status === 'pending_review'
+
   const filteredProfs = profs.filter(p => {
-    if (filter === 'pending') return !p.is_visible && !p.hidden_reason
+    if (filter === 'pending') return isPending(p)
     if (filter === 'visible') return p.is_visible
     if (filter === 'hidden')  return !p.is_visible
     return true
   })
 
   const statCards = [
-    { label: 'Total fiches',     value: profs.length,                        key: 'all' },
-    { label: 'En attente',       value: profs.filter(p => !p.is_visible && !p.hidden_reason).length, key: 'pending' },
-    { label: 'Publiées',         value: profs.filter(p => p.is_visible).length,  key: 'visible' },
-    { label: 'Masquées / admin', value: profs.filter(p => !p.is_visible).length, key: 'hidden' },
+    { label: 'Total fiches',         value: profs.length,                          key: 'all' },
+    { label: 'En attente / révision', value: profs.filter(p => isPending(p)).length, key: 'pending' },
+    { label: 'Publiées',             value: profs.filter(p => p.is_visible).length, key: 'visible' },
+    { label: 'Masquées / admin',     value: profs.filter(p => !p.is_visible).length, key: 'hidden' },
   ]
 
   return (
@@ -556,9 +569,9 @@ export default function ExpertsAdminClient({ applications, profiles, tokenQs }: 
         <div>
           <div className="flex items-center gap-3 mb-4">
             <h2 className="font-sans font-bold text-gray-900 text-[15px]">Fiches experts</h2>
-            {profs.filter(p => !p.is_visible && !p.hidden_reason).length > 0 && (
-              <span className="bg-blue-600 text-white font-mono text-[9px] font-bold px-2 py-0.5">
-                {profs.filter(p => !p.is_visible && !p.hidden_reason).length} en attente
+            {profs.filter(p => isPending(p)).length > 0 && (
+              <span className="bg-orange-500 text-white font-mono text-[9px] font-bold px-2 py-0.5">
+                {profs.filter(p => isPending(p)).length} à réviser
               </span>
             )}
           </div>
