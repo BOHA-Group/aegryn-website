@@ -3,39 +3,8 @@
 import { useState, useRef } from 'react'
 import Image from 'next/image'
 import { CheckCircle2, Loader2, Upload } from 'lucide-react'
-
-const SPECIALTIES_TECH = [
-  'Cybersécurité',
-  'Architecture technique & Engineering',
-  'DevSecOps & Qualité logicielle',
-  'Intelligence artificielle & Data',
-  'Conformité EU AI Act & IA éthique',
-  'Data Engineering & Architecture data',
-  'Propriété intellectuelle & Droit du numérique',
-  'Design & Expérience utilisateur',
-  'Product Management & Roadmap',
-  'Conformité RGPD / LPD',
-  'Accessibilité numérique',
-  'ESG / RSE',
-]
-
-const SPECIALTIES_TRANSACTION = [
-  'M&A & Droit des transactions',
-  'Valorisation & Benchmark',
-  'Vendor Readiness — Préparation cession',
-  'Due diligence RH & Social',
-  'Due diligence réglementaire sectorielle',
-  'Warranty & Indemnity Insurance',
-  'Fiscalité & Structuration corporate',
-  'Financement & Partenaires financiers',
-  'Earn-out Design & KPI Framework',
-  'Intégration post-acquisition',
-  'Accompagnement RH dirigeant',
-  'Finance structurée',
-  'Expertise comptable',
-  'Immobilier',
-  'Assurance',
-]
+import { ExpertiseSelector, type ExpertiseValue } from '@/components/partner/ExpertiseSelector'
+import type { Dimension } from '@/lib/expertiseTaxonomy'
 
 const COUNTRY_OPTIONS = [
   { code: 'CH', label: 'Suisse',      dial: '+41',  maxLen: 9  },
@@ -97,17 +66,13 @@ type Props = {
   canPublish: boolean
 }
 
-/* Supprime l'indicatif préfixé en DB (ex: "+33 633...") pour n'afficher que les chiffres locaux */
-function stripDial(phone: string | undefined, _dial: string): string {
+/* Supprime l'indicatif préfixé en DB (ex: "+33 633..." ou "+33633...") pour n'afficher que les chiffres locaux */
+function stripDial(phone: string | undefined): string {
   if (!phone) return ''
-  const stripped = phone.replace(/^\+\d{1,4}\s?/, '').trim()
-  /* Sécurité : si l'indicatif avait déjà été strippé, on renvoie tel quel */
-  return stripped
+  return phone.replace(/^\+\d{1,4}\s*/, '').trim()
 }
 
 export default function ExpertProfileForm({ existing, canPublish }: Props) {
-  const initDial = COUNTRY_OPTIONS.find(c => c.code === (existing?.phone_country ?? 'CH'))?.dial ?? '+41'
-
   const [form, setForm] = useState({
     first_name:    existing?.first_name    ?? '',
     last_name:     existing?.last_name     ?? '',
@@ -118,12 +83,18 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
     bio:           existing?.bio           ?? '',
     organization:  existing?.organization  ?? '',
     email_public:  existing?.email_public  ?? '',
-    phone:         stripDial(existing?.phone, initDial),
+    phone:         stripDial(existing?.phone),
     phone_country: existing?.phone_country ?? 'CH',
     website:       existing?.website       ?? '',
     min_rate_eur:  existing?.min_rate_eur  ?? null as number | null,
     rate_currency: existing?.rate_currency ?? 'CHF',
     languages:     existing?.languages     ?? [] as string[],
+  })
+
+  const [expertise, setExpertise] = useState<ExpertiseValue>({
+    dimension:   ((existing as Record<string, unknown>)?.expertise_dimension as Dimension | null) ?? null,
+    categories:  ((existing as Record<string, unknown>)?.expertise_categories as string[]) ?? [],
+    specialties: ((existing as Record<string, unknown>)?.expertise_specialties as string[]) ?? [],
   })
 
   const [saving,        setSaving]        = useState(false)
@@ -138,15 +109,6 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
 
   /* Indicatif du pays de téléphone sélectionné */
   const phoneCountryData = COUNTRY_OPTIONS.find(c => c.code === form.phone_country) ?? COUNTRY_OPTIONS[0]
-
-  function toggleSpecialty(s: string) {
-    setForm(prev => ({
-      ...prev,
-      specialties: prev.specialties.includes(s)
-        ? prev.specialties.filter(x => x !== s)
-        : [...prev.specialties, s],
-    }))
-  }
 
   function toggleLanguage(code: string) {
     setForm(prev => ({
@@ -180,14 +142,18 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
     setSaved(false)
     setError(null)
 
-    const phoneFormatted = form.phone
-      ? `${phoneCountryData.dial} ${form.phone.replace(/\s/g, '')}`
+    const localDigits = form.phone.replace(/\s/g, '')
+    const phoneFormatted = localDigits
+      ? `${phoneCountryData.dial} ${localDigits}`
       : ''
 
     const payload: Record<string, unknown> = {
       ...form,
-      phone:        phoneFormatted,
-      min_rate_eur: form.min_rate_eur ?? null,
+      phone:                  phoneFormatted,
+      min_rate_eur:           form.min_rate_eur ?? null,
+      expertise_dimension:    expertise.dimension,
+      expertise_categories:   expertise.categories,
+      expertise_specialties:  expertise.specialties,
       /* Force le retour en validation sur chaque mise à jour */
       ...(!isNew ? { hidden_reason: null } : {}),
     }
@@ -327,7 +293,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
           <div>
             <label className="font-sans text-[11px] text-gray-600 block mb-1">Pays</label>
             <select value={form.country_code} onChange={e => setForm(p => ({ ...p, country_code: e.target.value }))}
-              className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white">
+              className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white truncate">
               {COUNTRY_OPTIONS.map(c => <option key={c.code} value={c.code}>{c.label}</option>)}
             </select>
           </div>
@@ -346,41 +312,14 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
           className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white resize-none" />
       </div>
 
-      {/* Spécialités — 2 catégories */}
+      {/* Domaines d'expertise — sélecteur 3 étapes */}
       <div>
-        <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">Spécialités</p>
-        <div className="space-y-4">
-          <div>
-            <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-2">Advisory Tech</p>
-            <div className="flex flex-wrap gap-2">
-              {SPECIALTIES_TECH.map(s => (
-                <button key={s} type="button" onClick={() => toggleSpecialty(s)}
-                  className={`font-sans text-[11px] px-3 py-1.5 border transition-colors ${
-                    form.specialties.includes(s)
-                      ? 'border-ag-navy bg-ag-navy text-white'
-                      : 'border-gray-200 text-gray-600 hover:border-gray-400'
-                  }`}>
-                  {s}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div>
-            <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-2">Advisory Transaction</p>
-            <div className="flex flex-wrap gap-2">
-              {SPECIALTIES_TRANSACTION.map(s => (
-                <button key={s} type="button" onClick={() => toggleSpecialty(s)}
-                  className={`font-sans text-[11px] px-3 py-1.5 border transition-colors ${
-                    form.specialties.includes(s)
-                      ? 'border-ag-navy bg-ag-navy text-white'
-                      : 'border-gray-200 text-gray-600 hover:border-gray-400'
-                  }`}>
-                  {s}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
+        <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-1">Domaines d&apos;expertise</p>
+        <p className="font-sans text-[11px] text-gray-400 mb-4">
+          Ces informations déterminent les mandats qui vous seront proposés.
+          Soyez précis — vous pouvez les modifier ultérieurement.
+        </p>
+        <ExpertiseSelector value={expertise} onChange={setExpertise} />
       </div>
 
       {/* Langues — 6 langues UI */}

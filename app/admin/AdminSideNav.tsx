@@ -1,8 +1,8 @@
 'use client'
 
-import { Suspense } from 'react'
+import { Suspense, useCallback } from 'react'
 import Link from 'next/link'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname, useSearchParams, useRouter } from 'next/navigation'
 
 const SECTIONS = [
   {
@@ -47,10 +47,17 @@ const SECTIONS = [
 ]
 
 function AdminSideNavInner({ adminEmail }: { adminEmail: string }) {
-  const pathname = usePathname()
+  const pathname    = usePathname()
   const searchParams = useSearchParams()
-  const token = searchParams.get('token')
+  const router      = useRouter()
+  const token       = searchParams.get('token')
   const tokenSuffix = token ? `?token=${token}` : ''
+
+  const handleLogout = useCallback(async () => {
+    await fetch('/api/admin/auth/logout', { method: 'POST' })
+    router.push('/admin/login')
+    router.refresh()
+  }, [router])
 
   return (
     <nav className="flex flex-col flex-1 overflow-y-auto py-3">
@@ -100,14 +107,13 @@ function AdminSideNavInner({ adminEmail }: { adminEmail: string }) {
 
       {/* Logout */}
       <div className="mt-auto px-5 py-4 border-t border-white/10">
-        <form action="/api/admin/auth/logout" method="POST">
-          <button
-            type="submit"
-            className="font-mono text-[9px] uppercase tracking-widest text-white/25 hover:text-white/60 transition-colors"
-          >
-            Déconnexion
-          </button>
-        </form>
+        <button
+          type="button"
+          onClick={handleLogout}
+          className="font-mono text-[9px] uppercase tracking-widest text-white/25 hover:text-white/60 transition-colors"
+        >
+          Déconnexion
+        </button>
       </div>
     </nav>
   )
