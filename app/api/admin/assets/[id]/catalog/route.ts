@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
 
 const ALLOWED = ['public_summary', 'company_name', 'official_grade', 'score_total', 'asset_type'] as const
-type AllowedField = typeof ALLOWED[number]
 
 export async function PATCH(
   req: NextRequest,
