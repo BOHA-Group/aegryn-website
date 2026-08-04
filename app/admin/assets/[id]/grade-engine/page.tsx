@@ -35,7 +35,7 @@ export default async function GradeEnginePage({
   // Charger la fiche actif
   const { data: asset } = await supa
     .from('assets')
-    .select('id, name, aeg_grade, status')
+    .select('id, company_name, seller_name, aeg_grade, status')
     .eq('id', id)
     .single()
 
@@ -51,6 +51,23 @@ export default async function GradeEnginePage({
 
   const adminToken = sp.token ?? process.env.ADMIN_LEADS_TOKEN ?? ''
 
+  // Documents data room pour contre-vérification CIFS
+  const { data: dataRoomDocs } = await supa
+    .from('data_room_documents')
+    .select('id, category, document_type, file_name, admin_quality, required_level, document_code, notes')
+    .eq('asset_id', id)
+    .order('category', { ascending: true })
+
+  const docsByCategory = (dataRoomDocs ?? []).reduce<Record<string, {
+    id: string; document_type: string; file_name: string;
+    admin_quality: string; required_level: string; document_code: string | null;
+  }[]>>((acc, d) => {
+    const cat = String(d.category)
+    if (!acc[cat]) acc[cat] = []
+    acc[cat].push(d as never)
+    return acc
+  }, {})
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-6 py-10">
@@ -64,7 +81,7 @@ export default async function GradeEnginePage({
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 mb-1">Moteur de calcul grade</p>
-              <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">{asset.name}</h1>
+              <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">{(asset.company_name as string | null) ?? (asset.seller_name as string | null) ?? `Actif ${id.slice(0, 8)}`}</h1>
               <p className="font-sans text-[13px] text-gray-400 mt-0.5">
                 Grade actuel : <strong>{asset.aeg_grade ? GRADE_LABELS[asset.aeg_grade] ?? asset.aeg_grade : '—'}</strong>
               </p>
@@ -77,7 +94,7 @@ export default async function GradeEnginePage({
         </div>
 
         {/* Formulaire principal */}
-        <GradeEngineForm assetId={id} adminToken={adminToken} />
+        <GradeEngineForm assetId={id} adminToken={adminToken} docsByCategory={docsByCategory} />
 
         {/* Historique */}
         {assessments && assessments.length > 0 && (

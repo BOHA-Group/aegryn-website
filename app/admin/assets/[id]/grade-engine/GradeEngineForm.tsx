@@ -3,7 +3,29 @@
 import { useState, useMemo } from 'react'
 import type { GradeInput, GradeResult, GradeLetter } from '@/lib/gradeEngine'
 import { runGradeEngine } from '@/lib/gradeEngine'
-import { ChevronDown, ChevronUp, AlertTriangle, CheckCircle2, Calculator, Send, Zap } from 'lucide-react'
+import { ChevronDown, ChevronUp, AlertTriangle, CheckCircle2, Calculator, Send, Zap, FileText, XCircle } from 'lucide-react'
+
+export type DataRoomDocEntry = {
+  id: string
+  document_type: string
+  file_name: string
+  admin_quality: string
+  required_level: string
+  document_code: string | null
+}
+
+const DOC_QUALITY_COLORS: Record<string, string> = {
+  sufficient:     'text-emerald-700 bg-emerald-50 border-emerald-200',
+  pending_review: 'text-gray-500 bg-gray-50 border-gray-200',
+  insufficient:   'text-amber-700 bg-amber-50 border-amber-200',
+  missing:        'text-red-600 bg-red-50 border-red-200',
+}
+const DOC_QUALITY_LABELS: Record<string, string> = {
+  sufficient: 'Suffisant', pending_review: 'À évaluer', insufficient: 'Insuffisant', missing: 'Manquant',
+}
+const CIFS_TO_CATEGORY: Record<string, string> = {
+  C: 'code', I: 'ip', F: 'finance', S: 'security',
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types locaux
@@ -199,7 +221,39 @@ function LiveScorePanel({ live }: { live: ReturnType<typeof runGradeEngine> }) {
 // COMPOSANT PRINCIPAL
 // ─────────────────────────────────────────────────────────────────────────────
 
-export default function GradeEngineForm({ assetId, adminToken }: { assetId: string; adminToken: string }) {
+function DocBadge({ doc }: { doc: DataRoomDocEntry }) {
+  const cls = DOC_QUALITY_COLORS[doc.admin_quality] ?? DOC_QUALITY_COLORS.pending_review
+  const label = DOC_QUALITY_LABELS[doc.admin_quality] ?? doc.admin_quality
+  return (
+    <span className={`inline-flex items-center gap-1 text-[10px] px-1.5 py-0.5 border font-mono ${cls}`}>
+      <FileText size={9} />
+      {doc.file_name.length > 28 ? doc.file_name.slice(0, 28) + '…' : doc.file_name}
+      <span className="opacity-60">· {label}</span>
+    </span>
+  )
+}
+
+function DocList({ dims, docsByCategory }: { dims: string[]; docsByCategory: Record<string, DataRoomDocEntry[]> }) {
+  const docs = dims.flatMap(d => docsByCategory[CIFS_TO_CATEGORY[d]] ?? [])
+  if (!docs.length) return (
+    <p className="flex items-center gap-1 text-[10px] text-red-500 mt-1">
+      <XCircle size={10} /> Aucun justificatif en data room pour cette dimension
+    </p>
+  )
+  return (
+    <div className="flex flex-wrap gap-1 mt-1">
+      {docs.map(d => <DocBadge key={d.id} doc={d} />)}
+    </div>
+  )
+}
+
+export default function GradeEngineForm({
+  assetId, adminToken, docsByCategory = {},
+}: {
+  assetId: string
+  adminToken: string
+  docsByCategory?: Record<string, DataRoomDocEntry[]>
+}) {
   const [step, setStep] = useState<FormStep>('input')
   const [open, setOpen] = useState({ code: true, ip: false, finance: false, security: false })
   const [input, setInput] = useState<GradeInput>(defaultInput())
@@ -459,9 +513,11 @@ export default function GradeEngineForm({ assetId, adminToken }: { assetId: stri
 
           {/* C — Code */}
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-3 border-b border-gray-100 pb-2">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1 border-b border-gray-100 pb-2">
               C — Code
             </p>
+            <DocList dims={['C']} docsByCategory={docsByCategory} />
+            <div className="mb-3" />
             <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">Tests</p>
             {([
               { id: 'C-11', label: 'Tests unitaires complets (>80% coverage)', field: 'testCoverage', value: 85, op: 'set' },
@@ -522,9 +578,11 @@ export default function GradeEngineForm({ assetId, adminToken }: { assetId: stri
 
           {/* I — IP & Droits */}
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-3 border-b border-gray-100 pb-2">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1 border-b border-gray-100 pb-2">
               I — IP & Droits
             </p>
+            <DocList dims={['I']} docsByCategory={docsByCategory} />
+            <div className="mb-3" />
             <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">Marques & Identité</p>
             {([
               { id: 'I-11', label: 'Marque verbale déposée (pays principal)',           action: () => setIP('trademarksJurisdictions', Math.max(1, input.ip.trademarksJurisdictions)) },
@@ -588,9 +646,11 @@ export default function GradeEngineForm({ assetId, adminToken }: { assetId: stri
 
           {/* F — Finance */}
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-3 border-b border-gray-100 pb-2">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1 border-b border-gray-100 pb-2">
               F — Finance
             </p>
+            <DocList dims={['F']} docsByCategory={docsByCategory} />
+            <div className="mb-3" />
             <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">ARR & Audit</p>
             {([
               { id: 'F-11', label: 'ARR audité par commissaire aux comptes',   action: () => setFin('arrAudited', 'yes') },
@@ -630,9 +690,11 @@ export default function GradeEngineForm({ assetId, adminToken }: { assetId: stri
 
           {/* S — Sécurité */}
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-3 border-b border-gray-100 pb-2">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1 border-b border-gray-100 pb-2">
               S — Sécurité
             </p>
+            <DocList dims={['S']} docsByCategory={docsByCategory} />
+            <div className="mb-3" />
             <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">Pentest & MFA</p>
             {([
               { id: 'S-11', label: 'Pentest < 12 mois',   action: () => setSec('lastPentestMonthsAgo', 6) },

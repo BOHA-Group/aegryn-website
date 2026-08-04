@@ -22,7 +22,8 @@ export default async function SellerNav({ unreadCount }: { unreadCount: number }
     {
       label: t('navGroupCompliance'),
       items: [
-        { href: '/client/seller/kyc', label: t('navKyc'), icon: 'ShieldCheck' },
+        { href: '/client/seller/kyc',      label: t('navKyc'), icon: 'ShieldCheck' },
+        { href: '/client/seller/nda-view', label: 'Mon NDA',   icon: 'FileText' },
       ],
     },
     {
