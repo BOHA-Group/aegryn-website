@@ -235,8 +235,8 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
           {isPending && (
             <p className="font-sans text-[11px] text-blue-600 mt-0.5">
               {pendingReview
-                ? <>Vos modifications ont \u00e9t\u00e9 enregistr\u00e9es et soumises \u00e0 validation. L&apos;\u00e9quipe AEGRYN reviendra vers vous sous 48h.</>
-                : <>L&apos;\u00e9quipe AEGRYN validera votre fiche sous 48h. La publication est conditionn\u00e9e \u00e0 un abonnement actif.</>
+                ? <>Vos modifications ont été enregistrées et soumises à validation. L&apos;équipe AEGRYN reviendra vers vous sous 48h.</>
+                : <>L&apos;équipe AEGRYN validera votre fiche sous 48h. La publication est conditionnée à un abonnement actif.</>
               }
             </p>
           )}
@@ -471,7 +471,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
 
     {/* ── Colonne preview sticky ── */}
     <div className="hidden xl:block">
-      <div className="sticky top-24 space-y-3">
+      <div className="sticky top-20 space-y-3">
         <div className="flex items-center justify-between">
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">
             Aperçu de votre fiche publiée

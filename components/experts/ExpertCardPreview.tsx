@@ -28,9 +28,17 @@ export type ExpertCardPreviewData = {
   expertise_specialties:  string[]
 }
 
-const CATEGORY_COLORS: Record<string, { bg: string; border: string; text: string }> = {
+const DIMENSION_COLORS: Record<string, { bg: string; border: string; text: string }> = {
   tech:        { bg: 'bg-[#5ADDA4]/10', border: 'border-[#5ADDA4]/40', text: 'text-[#0e7a52]' },
   transaction: { bg: 'bg-[#818cf8]/10', border: 'border-[#818cf8]/40', text: 'text-[#4338ca]' },
+  both:        { bg: 'bg-ag-apex/8',    border: 'border-ag-apex/30',    text: 'text-ag-apex'   },
+}
+
+// Couleur d'une catégorie taxonomy selon sa dimension
+function getCatColor(catId: string): { bg: string; border: string; text: string } {
+  const cat = EXPERTISE_TAXONOMY.find(c => c.id === catId)
+  if (!cat) return { bg: 'bg-gray-50', border: 'border-gray-200', text: 'text-gray-500' }
+  return DIMENSION_COLORS[cat.dimension] ?? { bg: 'bg-ag-off-white', border: 'border-ag-border', text: 'text-ag-gray' }
 }
 
 const DIMENSION_LABELS: Record<string, string> = {
@@ -45,7 +53,6 @@ const LANG_LABELS: Record<string, string> = {
 
 export function ExpertCardPreview({ data, locale = 'fr' }: { data: ExpertCardPreviewData; locale?: LocaleKey }) {
   const initials = `${data.first_name[0] ?? ''}${data.last_name[0] ?? ''}`.toUpperCase()
-  const dimColors = data.expertise_dimension ? CATEGORY_COLORS[data.expertise_dimension] : null
 
   const categoryNodes = EXPERTISE_TAXONOMY.filter(c =>
     data.expertise_categories.includes(c.id)
@@ -71,16 +78,19 @@ export function ExpertCardPreview({ data, locale = 'fr' }: { data: ExpertCardPre
       {/* Badge dimension + catégories */}
       {(data.expertise_dimension || categoryNodes.length > 0) && (
         <div className="flex flex-wrap gap-1.5">
-          {data.expertise_dimension && dimColors && (
-            <span className={`inline-flex items-center font-mono text-[9px] tracking-[0.14em] uppercase px-2 py-0.5 border font-semibold ${dimColors.bg} ${dimColors.border} ${dimColors.text}`}>
+          {data.expertise_dimension && (
+            <span className={`inline-flex items-center font-mono text-[9px] tracking-[0.14em] uppercase px-2 py-0.5 border font-semibold ${DIMENSION_COLORS[data.expertise_dimension]?.bg ?? 'bg-ag-off-white'} ${DIMENSION_COLORS[data.expertise_dimension]?.border ?? 'border-ag-border'} ${DIMENSION_COLORS[data.expertise_dimension]?.text ?? 'text-ag-gray'}`}>
               {DIMENSION_LABELS[data.expertise_dimension] ?? data.expertise_dimension}
             </span>
           )}
-          {categoryNodes.slice(0, 2).map(cat => (
-            <span key={cat.id} className="font-mono text-[9px] tracking-[0.12em] uppercase px-2 py-0.5 bg-ag-off-white border border-ag-border text-ag-gray">
-              {getCategoryLabel(cat, locale)}
-            </span>
-          ))}
+          {categoryNodes.map(cat => {
+            const cc = getCatColor(cat.id)
+            return (
+              <span key={cat.id} className={`font-mono text-[9px] tracking-[0.12em] uppercase px-2 py-0.5 border ${cc.bg} ${cc.border} ${cc.text}`}>
+                {getCategoryLabel(cat, locale)}
+              </span>
+            )
+          })}
         </div>
       )}
 

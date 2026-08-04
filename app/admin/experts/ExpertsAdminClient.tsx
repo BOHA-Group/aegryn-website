@@ -489,7 +489,7 @@ type Props = {
 export default function ExpertsAdminClient({ applications, profiles, tokenQs }: Props) {
   const [apps,     setApps]     = useState(applications)
   const [profs,    setProfs]    = useState(profiles)
-  const [filter,   setFilter]   = useState<'all' | 'pending' | 'visible' | 'hidden'>('all')
+  const [filter,   setFilter]   = useState<'all' | 'pending' | 'visible' | 'hidden'>('pending')
   const [loading,  setLoading]  = useState(false)
 
   async function refresh() {

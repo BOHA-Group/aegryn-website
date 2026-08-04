@@ -64,7 +64,7 @@ export default async function PartnerLayout({ children }: { children: React.Reac
           </div>
         </aside>
 
-        <main className="flex-1 ml-56 overflow-y-auto min-h-[calc(100vh-4rem)]">
+        <main className="flex-1 ml-56 min-h-[calc(100vh-4rem)]">
           <KycBanner kycStatus={(profile as { kyc_status?: string } | null)?.kyc_status} role="partner" kycPath="/client/partner/kyc" />
           {children}
         </main>

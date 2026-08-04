@@ -6,6 +6,7 @@ import SellerNav from './SellerNav'
 import ViewSwitcher    from '@/app/client/ViewSwitcher'
 import { NDA_VERSIONS } from '@/lib/ndaVersions'
 import KycBanner from '@/components/client/KycBanner'
+import { LogOut } from 'lucide-react'
 
 export default async function SellerLayout({ children }: { children: React.ReactNode }) {
   const user = await getUser()
@@ -50,19 +51,20 @@ export default async function SellerLayout({ children }: { children: React.React
           <ViewSwitcher hasBuyer={hasBuyer} hasSeller={true} hasPartner={hasPartner} />
           <SellerNav unreadCount={unreadCount ?? 0} />
 
-          <div className="mt-auto px-5 py-4 border-t border-white/10">
+          <div className="mt-auto px-4 py-4 border-t border-white/10">
             <form action="/api/client/logout" method="POST">
               <button
                 type="submit"
-                className="font-mono text-[10px] uppercase tracking-widest text-white/25 hover:text-white/60 transition-colors"
+                className="w-full flex items-center gap-2 px-3 py-2 font-mono text-[10px] uppercase tracking-widest text-red-400 hover:text-white hover:bg-red-600 border border-red-500/40 hover:border-red-600 transition-colors"
               >
+                <LogOut size={12} className="shrink-0" />
                 {t('logout')}
               </button>
             </form>
           </div>
         </aside>
 
-        <main className="flex-1 ml-56 overflow-y-auto min-h-[calc(100vh-4rem)]">
+        <main className="flex-1 ml-56 min-h-[calc(100vh-4rem)]">
           <KycBanner kycStatus={(profile as { kyc_status?: string } | null)?.kyc_status} role="seller" kycPath="/client/seller/kyc" />
           {children}
         </main>
