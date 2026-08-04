@@ -460,6 +460,24 @@ function SelectFilter({
   )
 }
 
+// Retourne les specialty ids disponibles selon les filtres actifs
+function getAvailableExpertises(category: string, domain: string): readonly string[] {
+  // Domaine sélectionné → expertises de cette catégorie-taxonomie uniquement
+  if (domain) {
+    const cat = EXPERTISE_TAXONOMY.find(c => c.id === domain)
+    return cat ? cat.specialties.map(s => s.id) : []
+  }
+  // Catégorie (dimension) sélectionnée → expertises de toutes ses catégories
+  if (category) {
+    const domainIds = DOMAINS_BY_DIMENSION[category as DimensionKey] ?? []
+    return EXPERTISE_TAXONOMY
+      .filter(c => domainIds.includes(c.id))
+      .flatMap(c => c.specialties.map(s => s.id))
+  }
+  // Aucun filtre → toutes
+  return ALL_EXPERTISES
+}
+
 export default function ExpertsContent() {
   const t = useTranslations('experts')
   const [profiles,    setProfiles]    = useState<ExpertProfile[]>([])
@@ -541,13 +559,13 @@ export default function ExpertsContent() {
             <Filter size={13} className="text-ag-gray-light shrink-0" />
             <SelectFilter
               value={category}
-              onChange={v => { setCategory(v); setDomain('') }}
+              onChange={v => { setCategory(v); setDomain(''); setSpecialty('') }}
               placeholder={t('filters.allCategories')}
               options={DIMENSIONS.map(d => ({ value: d.key, label: t(d.labelKey) }))}
             />
             <SelectFilter
               value={domain}
-              onChange={setDomain}
+              onChange={v => { setDomain(v); setSpecialty('') }}
               placeholder={t('filters.allDomains')}
               options={(category && DOMAINS_BY_DIMENSION[category as DimensionKey]
                 ? DOMAINS_BY_DIMENSION[category as DimensionKey]
@@ -561,7 +579,7 @@ export default function ExpertsContent() {
               value={specialty}
               onChange={setSpecialty}
               placeholder={t('filters.allSpecialties')}
-              options={ALL_EXPERTISES.map(id => {
+              options={getAvailableExpertises(category, domain).map(id => {
                 const spec = EXPERTISE_TAXONOMY.flatMap(c => c.specialties).find(s => s.id === id)
                 return { value: id, label: spec?.labelFr ?? id }
               })}
