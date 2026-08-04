@@ -3476,6 +3476,25 @@
     "faq": "FAQ",
     "sitemap": "Seitenübersicht"
   },
+  "aiUsage": {
+    "meta": {
+      "title": "KI-Nutzungsrichtlinie — AEGRYN",
+      "desc": "Transparenz über den Einsatz künstlicher Intelligenz in AEGRYN-Inhalten. Konformität mit EU-KI-Verordnung Artikel 50."
+    },
+    "label": "Richtlinie zur Nutzung künstlicher Intelligenz",
+    "version": "Gültig ab 2. August 2026 — EU-KI-Verordnung Art. 50",
+    "s1Title": "1. Regulatorischer Rahmen",
+    "s1Body": "Artikel 50 der Europäischen Verordnung über künstliche Intelligenz (EU KI-Gesetz, Verordnung EU 2024/1689) ist seit dem 2. August 2026 anwendbar. AEGRYN, als Betreiber von KI-Systemen zur Inhaltsgenerierung, verpflichtet sich zur Einhaltung der daraus resultierenden Transparenzpflichten.",
+    "s2Title": "2. Umfang des KI-Einsatzes bei AEGRYN",
+    "s2Body": "AEGRYN nutzt generative KI-Systeme zur Unterstützung der Erstellung redaktioneller Inhalte (Blog-Artikel, Marktberichte, Branchenanalysen). Diese Systeme werden nicht zur autonomen Erstellung von Inhalten von öffentlichem Informationsinteresse eingesetzt — jeder Inhalt wird vor der Veröffentlichung von Menschen geprüft.",
+    "s3Title": "3. Redaktionelle Verantwortung",
+    "s3Body": "Gemäß der Ausnahmeregelung in Artikel 50 Absatz 4 des EU-KI-Gesetzes unterliegen alle KI-unterstützten Inhalte, die auf aegryn.com veröffentlicht werden, einer menschlichen Prüfung und redaktionellen Kontrolle. AEGRYN übernimmt die volle redaktionelle Verantwortung für diese Veröffentlichungen.",
+    "s4Title": "4. Was wir tun und nicht tun",
+    "s4Do": "Wir prüfen systematisch alle KI-unterstützten Inhalte vor der Veröffentlichung. Wir fügen bei mit KI verfassten Artikeln einen redaktionellen Hinweis hinzu. Wir dokumentieren intern unseren Überprüfungsprozess.",
+    "s4Dont": "Wir veröffentlichen keine Deepfakes (KI-generierte Bilder, Audio oder Video, die reale Personen darstellen). Wir veröffentlichen keine ungeprüften Inhalte von öffentlichem Informationsinteresse. Wir übertragen unsere redaktionelle Verantwortung nicht an ein KI-System.",
+    "s5Title": "5. Kontakt",
+    "s5Body": "Bei Fragen zu unserer KI-Nutzungsrichtlinie: contact@boha-group.com"
+  },
   "termsUse": {
     "meta": {
       "title": "Nutzungsbedingungen — AEGRYN",

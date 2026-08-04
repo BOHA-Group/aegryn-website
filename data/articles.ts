@@ -46,6 +46,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-06-15',
     readMin:  7,
     featured: true,
+    aiAssisted: true,
     title: {
       fr: 'État du marché M&A tech Europe, Q3 2026',
       en: 'European Tech M&A Market, Q3 2026 Report',
@@ -137,6 +138,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-05-28',
     readMin:  5,
     featured: true,
+    aiAssisted: true,
     title: {
       fr: 'Les 5 erreurs qui font chuter la valorisation de votre SaaS',
       en: 'The 5 mistakes that destroy your SaaS valuation',
@@ -223,6 +225,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-05-10',
     readMin:  6,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Qu\'est-ce qu\'un actif tech vraiment certifiable ?',
       en: 'What makes a tech asset truly certifiable?',
@@ -318,6 +321,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-06-01',
     readMin:  8,
     featured: true,
+    aiAssisted: true,
     title: {
       fr: 'Comment les acquéreurs PE évaluent un SaaS en 2026',
       en: 'How PE acquirers evaluate a SaaS in 2026',
@@ -413,6 +417,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-05-15',
     readMin:  6,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Le marché M&A tech européen a besoin de son Christie\'s',
       en: 'The European tech M&A market needs its own Christie\'s',
@@ -517,6 +522,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-04-20',
     readMin:  5,
     featured: true,
+    aiAssisted: true,
     title: {
       fr: 'IP : la checklist complète avant de céder votre actif tech',
       en: 'IP: the complete checklist before selling your tech asset',
@@ -595,6 +601,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-03-01',
     readMin:  10,
     featured: true,
+    aiAssisted: true,
     title: {
       fr: 'Glossaire M&A tech, Les 30 termes essentiels',
       en: 'Tech M&A Glossary, The 30 essential terms',
@@ -669,6 +676,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-07-15',
     readMin:  8,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'LegalTech européenne en 2026 : valorisation, M&A et opportunités',
       en: 'European LegalTech in 2026: valuation, M&A and opportunities',
@@ -780,6 +788,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-07-20',
     readMin:  14,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Comment vendre son SaaS en Europe en 2026 : le guide complet pour les fondateurs',
       en: 'How to sell your SaaS in Europe in 2026: the complete founder\'s guide',
@@ -890,6 +899,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-07-18',
     readMin:  8,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Quand vendre son SaaS ? Les 7 signaux qui indiquent que c\'est le bon moment',
       en: 'When to sell your SaaS? The 7 signals that indicate the right time',
@@ -1003,6 +1013,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-07-10',
     readMin:  10,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Transmettre son entreprise numérique : guide pour les fondateurs de 50 ans et plus',
       en: 'Handing over your digital business: a guide for founders aged 50 and over',
@@ -1082,6 +1093,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-07-05',
     readMin:  10,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Due diligence côté vendeur : ce que les acquéreurs vont examiner, et comment vous y préparer',
       en: 'Seller-side due diligence: what acquirers will examine, and how to prepare',
@@ -1156,6 +1168,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-06-28',
     readMin:  8,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Comment valoriser une application mobile avant sa cession : métriques, multiples et pièges',
       en: 'How to value a mobile application before its sale: metrics, multiples and pitfalls',
@@ -1242,6 +1255,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-07-22',
     readMin:  12,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Acheter un SaaS rentable en Europe en 2026 : guide complet pour les acquéreurs',
       en: 'Buying a profitable SaaS in Europe in 2026: complete guide for acquirers',
@@ -1333,6 +1347,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-07-15',
     readMin:  10,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Search fund et acquisition SaaS en Europe : le modèle qui redéfinit le M&A en 2026',
       en: 'Search fund and SaaS acquisition in Europe: the model redefining M&A in 2026',
@@ -1409,6 +1424,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-07-08',
     readMin:  9,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Family offices et actifs tech : stratégies d\'investissement dans les SaaS européens en 2026',
       en: 'Family offices and tech assets: investment strategies in European SaaS in 2026',
@@ -1474,6 +1490,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-07-01',
     readMin:  9,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Earnout dans les cessions tech : mécanisme, calcul et risques pour le vendeur',
       en: 'Earnout in tech disposals: mechanism, calculation and risks for the seller',
@@ -1558,6 +1575,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-10-01',
     readMin:  7,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'État du marché M&A tech Europe, Q4 2026 : consolidation et retour des multiples premium',
       en: 'European Tech M&A Market, Q4 2026: consolidation and return of premium multiples',
@@ -1612,6 +1630,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-07-12',
     readMin:  9,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'FinTech B2B européenne en 2026 : valorisation, deal flow et opportunités M&A',
       en: 'European B2B FinTech in 2026: valuation, deal flow and M&A opportunities',
@@ -1666,6 +1685,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-06-20',
     readMin:  10,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'SaaS IA-native en 2026 : valorisation, multiples et ce qui différencie les actifs premium',
       en: 'AI-native SaaS in 2026: valuation, multiples and what differentiates premium assets',
@@ -1726,6 +1746,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-06-15',
     readMin:  8,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Pourquoi la Suisse est le meilleur hub pour céder un actif tech européen',
       en: 'Why Switzerland is the best hub for selling a European tech asset',
@@ -1784,6 +1805,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-07-25',
     readMin:  9,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Marché M&A tech DACH 2026 : pourquoi l\'Allemagne, l\'Autriche et la Suisse offrent les meilleurs multiples d\'Europe',
       en: 'DACH tech M&A market 2026: why Germany, Austria and Switzerland offer Europe\'s best multiples',
@@ -1841,6 +1863,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-07-24',
     readMin:  12,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'NRR, churn, LTV, CAC : les métriques SaaS qui déterminent votre valorisation en 2026',
       en: 'NRR, churn, LTV, CAC: the SaaS metrics that determine your valuation in 2026',
@@ -1932,6 +1955,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-07-18',
     readMin:  10,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Certification indépendante avant cession SaaS : pourquoi c\'est devenu indispensable en 2026',
       en: 'Independent certification before SaaS sale: why it has become indispensable in 2026',
@@ -1992,6 +2016,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-07-10',
     readMin:  8,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Étude de cas : comment la certification AEGRYN a permis un exit à 4,8x ARR pour un SaaS B2B',
       en: 'Case study: how AEGRYN certification enabled a 4.8x ARR exit for a B2B SaaS',
@@ -2065,6 +2090,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-06-25',
     readMin:  9,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Share deal vs asset deal dans une cession SaaS : quelle structure choisir et pourquoi',
       en: 'Share deal vs asset deal in a SaaS sale: which structure to choose and why',
@@ -2136,6 +2162,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-06-10',
     readMin:  8,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'RGPD et cession d\'entreprise : comment gérer le transfert des données utilisateurs',
       en: 'GDPR and business disposal: how to manage the transfer of user data',
@@ -2192,6 +2219,7 @@ export const ARTICLES: Article[] = [
     date:     '2026-06-05',
     readMin:  11,
     featured: false,
+    aiAssisted: true,
     title: {
       fr: 'Fiscalité de l\'exit pour un fondateur tech : France, Suisse et Luxembourg comparés',
       en: 'Exit taxation for a tech founder: France, Switzerland and Luxembourg compared',

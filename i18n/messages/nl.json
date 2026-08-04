@@ -3476,6 +3476,25 @@
     "faq": "FAQ",
     "sitemap": "Sitemap"
   },
+  "aiUsage": {
+    "meta": {
+      "title": "AI-gebruiksbeleid — AEGRYN",
+      "desc": "Transparantie over het gebruik van kunstmatige intelligentie in AEGRYN-inhoud. Naleving van de EU AI Act artikel 50."
+    },
+    "label": "Beleid voor het gebruik van kunstmatige intelligentie",
+    "version": "Van kracht vanaf 2 augustus 2026 — EU AI Act art. 50",
+    "s1Title": "1. Regelgevend kader",
+    "s1Body": "Artikel 50 van de Europese verordening inzake kunstmatige intelligentie (EU AI Act, Verordening EU 2024/1689) is van toepassing sinds 2 augustus 2026. AEGRYN, als deployer van AI-systemen die inhoud genereren, verbindt zich ertoe de daaruit voortvloeiende transparantieverplichtingen na te leven.",
+    "s2Title": "2. Toepassingsgebied van AI-gebruik bij AEGRYN",
+    "s2Body": "AEGRYN maakt gebruik van generatieve kunstmatige-intelligentiesystemen om de redactie van redactionele inhoud (blogartikelen, marktrapporten, sectoranalyses) te ondersteunen. Deze systemen worden niet gebruikt om autonoom inhoud van openbaar belang te genereren — elk stuk inhoud wordt vóór publicatie door een mens beoordeeld.",
+    "s3Title": "3. Redactionele verantwoordelijkheid",
+    "s3Body": "Overeenkomstig de uitzondering voorzien in artikel 50, lid 4, van de EU AI Act, wordt alle AI-ondersteunde inhoud gepubliceerd op aegryn.com onderworpen aan menselijke beoordeling en redactioneel toezicht. AEGRYN neemt de volledige redactionele verantwoordelijkheid voor deze publicaties op zich.",
+    "s4Title": "4. Wat wij doen en niet doen",
+    "s4Do": "Wij beoordelen systematisch alle AI-ondersteunde inhoud vóór publicatie. Wij voegen een redactionele vermelding toe aan artikelen die met AI-assistentie zijn geschreven. Wij documenteren intern ons beoordelingsproces.",
+    "s4Dont": "Wij publiceren geen deepfakes (door AI gegenereerde afbeeldingen, audio of video's die echte personen afbeelden). Wij publiceren geen niet-beoordeelde inhoud van openbaar informationeel belang. Wij delegeren onze redactionele verantwoordelijkheid niet aan een AI-systeem.",
+    "s5Title": "5. Contact",
+    "s5Body": "Voor vragen over ons AI-gebruiksbeleid: contact@boha-group.com"
+  },
   "termsUse": {
     "meta": {
       "title": "Gebruiksvoorwaarden — AEGRYN",

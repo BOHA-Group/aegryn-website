@@ -3543,6 +3543,25 @@
     "faq": "FAQ",
     "sitemap": "Sitemap"
   },
+  "aiUsage": {
+    "meta": {
+      "title": "AI Usage Policy — AEGRYN",
+      "desc": "Transparency on the use of artificial intelligence in AEGRYN content. EU AI Act article 50 compliance."
+    },
+    "label": "Artificial Intelligence Usage Policy",
+    "version": "Effective August 2, 2026 — EU AI Act art. 50",
+    "s1Title": "1. Regulatory Framework",
+    "s1Body": "Article 50 of the European Artificial Intelligence Regulation (EU AI Act, Regulation EU 2024/1689) has been applicable since August 2, 2026. AEGRYN, as a deployer of AI content-generating systems, commits to fulfilling the resulting transparency obligations.",
+    "s2Title": "2. Scope of AI Use at AEGRYN",
+    "s2Body": "AEGRYN uses generative artificial intelligence systems to assist the writing of editorial content (blog articles, market reports, sector analyses). These systems are not used to autonomously generate public information content — every piece of content undergoes human review before publication.",
+    "s3Title": "3. Editorial Responsibility",
+    "s3Body": "In accordance with the exception provided by Article 50, paragraph 4 of the EU AI Act, all AI-assisted content published on aegryn.com is subject to human review and editorial oversight. AEGRYN assumes full editorial responsibility for these publications.",
+    "s4Title": "4. What We Do and Do Not Do",
+    "s4Do": "We systematically review all AI-assisted content before publication. We add an editorial notice to articles written with AI assistance. We document our review process internally.",
+    "s4Dont": "We do not publish deepfakes (AI-generated images, audio or video depicting real people). We do not publish unreviewed public interest information content. We do not delegate our editorial responsibility to an AI system.",
+    "s5Title": "5. Contact",
+    "s5Body": "For any questions regarding our AI usage policy: contact@boha-group.com"
+  },
   "termsUse": {
     "meta": {
       "title": "Terms of Use — AEGRYN",

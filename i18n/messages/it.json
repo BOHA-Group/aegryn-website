@@ -3476,6 +3476,25 @@
     "faq": "FAQ",
     "sitemap": "Mappa del sito"
   },
+  "aiUsage": {
+    "meta": {
+      "title": "Politica sull'uso dell'IA — AEGRYN",
+      "desc": "Trasparenza sull'uso dell'intelligenza artificiale nei contenuti AEGRYN. Conformità al Regolamento UE sull'IA, articolo 50."
+    },
+    "label": "Politica sull'uso dell'intelligenza artificiale",
+    "version": "In vigore dal 2 agosto 2026 — Regolamento UE sull'IA art. 50",
+    "s1Title": "1. Quadro normativo",
+    "s1Body": "L'articolo 50 del Regolamento europeo sull'intelligenza artificiale (EU AI Act, Regolamento UE 2024/1689) è applicabile dal 2 agosto 2026. AEGRYN, in quanto responsabile del dispiegamento di sistemi IA generatori di contenuti, si impegna a rispettare gli obblighi di trasparenza che ne derivano.",
+    "s2Title": "2. Ambito di utilizzo dell'IA in AEGRYN",
+    "s2Body": "AEGRYN utilizza sistemi di intelligenza artificiale generativa per assistere la redazione di contenuti editoriali (articoli di blog, rapporti di mercato, analisi settoriali). Questi sistemi non vengono utilizzati per generare autonomamente contenuti di informazione pubblica — ogni contenuto è sottoposto a revisione umana prima della pubblicazione.",
+    "s3Title": "3. Responsabilità editoriale",
+    "s3Body": "Conformemente all'eccezione prevista dall'articolo 50, paragrafo 4, del Regolamento UE sull'IA, tutti i contenuti prodotti con assistenza IA pubblicati su aegryn.com sono sottoposti a revisione umana e controllo editoriale. AEGRYN si assume la piena responsabilità editoriale di queste pubblicazioni.",
+    "s4Title": "4. Cosa facciamo e cosa non facciamo",
+    "s4Do": "Revisioniamo sistematicamente tutti i contenuti assistiti dall'IA prima della pubblicazione. Apponiamo una menzione editoriale sugli articoli redatti con assistenza IA. Documentiamo internamente il nostro processo di revisione.",
+    "s4Dont": "Non pubblichiamo deepfake (immagini, audio o video generati dall'IA che rappresentano persone reali). Non pubblichiamo contenuti di informazione di interesse pubblico non revisionati. Non delegiamo la nostra responsabilità editoriale a un sistema IA.",
+    "s5Title": "5. Contatto",
+    "s5Body": "Per qualsiasi domanda relativa alla nostra politica sull'uso dell'IA: contact@boha-group.com"
+  },
   "termsUse": {
     "meta": {
       "title": "Condizioni d'uso — AEGRYN",
