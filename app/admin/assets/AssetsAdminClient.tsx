@@ -230,11 +230,6 @@ export default function AssetsAdminClient({ rows: initialRows, adminToken, token
                           className="inline-flex items-center gap-1 text-[10px] font-semibold text-blue-600 hover:text-blue-800">
                           Grader <ArrowUpRight size={10} />
                         </Link>
-                        <Link
-                          href={`/admin/assets/${id}/grade-engine${tokenQs}`}
-                          className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-600 hover:text-emerald-800">
-                          Moteur <ArrowUpRight size={10} />
-                        </Link>
                         <button
                           onClick={() => deleteOne(id, name)}
                           disabled={deleting}

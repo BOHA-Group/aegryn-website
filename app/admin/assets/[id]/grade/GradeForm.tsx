@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, lazy, Suspense } from 'react'
 import { useRouter }   from 'next/navigation'
 import { estimateGrade } from '@/lib/valuationEngine'
 import {
@@ -8,8 +8,11 @@ import {
   checkAutoRefusal, suggestAegFromScore, deriveMaturityTier, capAegByMaturity,
   MATURITY_RULES, AEG_LABEL, type AEGGrade, formatGradeNotation,
 } from '@/lib/gradingSystem'
-import { CheckCircle2, AlertTriangle } from 'lucide-react'
+import { CheckCircle2, AlertTriangle, Calculator, ClipboardList } from 'lucide-react'
 import ReviewBadge from '@/components/ui/ReviewBadge'
+import type { DataRoomDocEntry } from '@/app/admin/assets/[id]/grade-engine/GradeEngineForm'
+
+const GradeEngineForm = lazy(() => import('@/app/admin/assets/[id]/grade-engine/GradeEngineForm'))
 
 const DIMS = [
   { key: 'score_code',     dim: 'code'     as DimensionKey, label: 'C — Code',        desc: 'Qualité code, dette technique, tests, CI/CD' },
@@ -92,6 +95,7 @@ interface BlockingAlert {
 export default function GradeForm({
   assetId, adminToken, initialStatus, evaluationType, partnerReviewerType,
   initialAsset, benchmarkRows = [], transactionComps = [], blockingAlerts = [],
+  docsByCategory = {},
 }: {
   assetId: string
   adminToken: string
@@ -102,6 +106,7 @@ export default function GradeForm({
   benchmarkRows?: BenchmarkRow[]
   transactionComps?: TransactionComp[]
   blockingAlerts?: BlockingAlert[]
+  docsByCategory?: Record<string, DataRoomDocEntry[]>
 }) {
   const router = useRouter()
 
@@ -183,6 +188,8 @@ export default function GradeForm({
   const [public_summary, setPublicSummary]= useState('')
   const [internal_notes, setInternalNotes]= useState('')
   const [status,         setStatus]       = useState(initialStatus)
+
+  const [activeTab, setActiveTab] = useState<'grader' | 'moteur'>('grader')
 
   const [loading, setLoading] = useState(false)
   const [saved,   setSaved]   = useState(false)
@@ -275,6 +282,54 @@ export default function GradeForm({
   }
 
   return (
+    <div className="flex flex-col gap-6">
+
+      {/* ── Onglets Grader / Moteur ── */}
+      <div className="flex items-stretch border-b border-gray-200 bg-white">
+        <button
+          type="button"
+          onClick={() => setActiveTab('grader')}
+          className={`flex items-center gap-2 px-5 py-3 text-[11px] font-semibold border-b-2 transition-colors ${
+            activeTab === 'grader'
+              ? 'border-ag-navy text-ag-navy'
+              : 'border-transparent text-gray-400 hover:text-gray-700'
+          }`}
+        >
+          <ClipboardList size={13} /> Grade officiel
+        </button>
+        <button
+          type="button"
+          onClick={() => setActiveTab('moteur')}
+          className={`flex items-center gap-2 px-5 py-3 text-[11px] font-semibold border-b-2 transition-colors ${
+            activeTab === 'moteur'
+              ? 'border-amber-500 text-amber-700'
+              : 'border-transparent text-gray-400 hover:text-gray-700'
+          }`}
+        >
+          <Calculator size={13} /> Moteur algorithmique
+          <span className="ml-1 text-[9px] font-mono uppercase tracking-widest bg-amber-100 text-amber-600 px-1.5 py-0.5">Algo</span>
+        </button>
+      </div>
+
+      {/* ── Panneau Moteur ── */}
+      {activeTab === 'moteur' && (
+        <div className="bg-amber-50/40 border border-amber-200 p-1">
+          <div className="bg-amber-50 border-b border-amber-200 px-5 py-3 flex items-center justify-between">
+            <div>
+              <p className="font-mono text-[9px] uppercase tracking-widest text-amber-600">Usage interne — logique propriétaire</p>
+              <p className="text-[12px] text-amber-800 mt-0.5">Le score ci-dessous est une suggestion algorithmique. Utilisez-le pour guider votre saisie manuelle dans l&apos;onglet Grade officiel.</p>
+            </div>
+          </div>
+          <div className="p-4">
+            <Suspense fallback={<div className="text-[12px] text-gray-400 py-8 text-center">Chargement du moteur…</div>}>
+              <GradeEngineForm assetId={assetId} adminToken={adminToken} docsByCategory={docsByCategory} />
+            </Suspense>
+          </div>
+        </div>
+      )}
+
+      {/* ── Panneau Grader ── */}
+      {activeTab === 'grader' && (
     <form onSubmit={onSubmit} className="flex flex-col gap-6">
 
       {/* ── Alerte documents bloquants ── */}
@@ -760,5 +815,8 @@ export default function GradeForm({
       </div>
 
     </form>
+      )}
+
+    </div>
   )
 }

@@ -68,6 +68,23 @@ export default async function AdminAssetGradePage({
     file_name: string
   }[]
 
+  /* ── Tous les docs data room (pour le Moteur algorithmique) ── */
+  const { data: allDocs } = await supa
+    .from('data_room_documents')
+    .select('id, category, document_type, file_name, admin_quality, required_level, document_code')
+    .eq('asset_id', id)
+    .order('category', { ascending: true })
+
+  const docsByCategory = (allDocs ?? []).reduce<Record<string, {
+    id: string; document_type: string; file_name: string;
+    admin_quality: string; required_level: string; document_code: string | null;
+  }[]>>((acc, d) => {
+    const cat = String(d.category)
+    if (!acc[cat]) acc[cat] = []
+    acc[cat].push(d as never)
+    return acc
+  }, {})
+
   return (
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">
       <div className="max-w-4xl mx-auto">
@@ -128,6 +145,7 @@ export default async function AdminAssetGradePage({
           assetId={id}
           adminToken={token ?? ''}
           blockingAlerts={blockingAlerts}
+          docsByCategory={docsByCategory}
           initialStatus={String(a.status ?? 'submitted')}
           evaluationType={String(a.evaluation_type ?? 'full_certification')}
           partnerReviewerType={a.partner_reviewer_type ? String(a.partner_reviewer_type) : undefined}
