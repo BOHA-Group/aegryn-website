@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, lazy, Suspense } from 'react'
+import { useState, useMemo, lazy, Suspense, useEffect } from 'react'
 import { useRouter }   from 'next/navigation'
 import { estimateGrade } from '@/lib/valuationEngine'
 import {
@@ -8,9 +8,10 @@ import {
   checkAutoRefusal, suggestAegFromScore, deriveMaturityTier, capAegByMaturity,
   MATURITY_RULES, AEG_LABEL, type AEGGrade, formatGradeNotation,
 } from '@/lib/gradingSystem'
-import { CheckCircle2, AlertTriangle, Calculator, ClipboardList } from 'lucide-react'
+import { CheckCircle2, AlertTriangle, Calculator, ClipboardList, Database, RefreshCw } from 'lucide-react'
 import ReviewBadge from '@/components/ui/ReviewBadge'
 import type { DataRoomDocEntry } from '@/app/admin/assets/[id]/grade-engine/GradeEngineForm'
+import type { AutoFillResult } from '@/lib/gradeAutoFill'
 
 const GradeEngineForm = lazy(() => import('@/app/admin/assets/[id]/grade-engine/GradeEngineForm'))
 
@@ -194,6 +195,46 @@ export default function GradeForm({
   const [loading, setLoading] = useState(false)
   const [saved,   setSaved]   = useState(false)
   const [error,   setError]   = useState('')
+
+  /* ── Auto-fill data room ── */
+  const [autoFill,         setAutoFill]         = useState<AutoFillResult | null>(null)
+  const [autoFillLoading,  setAutoFillLoading]  = useState(false)
+  const [autoFillApplied,  setAutoFillApplied]  = useState(false)
+  /** Ensemble des sous-codes pré-cochés depuis la data room (pour affichage badge) */
+  const [docSubcodes,      setDocSubcodes]       = useState<Set<string>>(new Set())
+
+  async function loadAutoFill() {
+    setAutoFillLoading(true)
+    try {
+      const res  = await fetch(`/api/admin/assets/${assetId}/grade-autofill?token=${adminToken}`)
+      const data = await res.json() as AutoFillResult
+      setAutoFill(data)
+    } catch { /* silencieux */ }
+    finally { setAutoFillLoading(false) }
+  }
+
+  useEffect(() => { void loadAutoFill() }, [assetId]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  function applyAutoFill() {
+    if (!autoFill) return
+    const flat = {
+      subcodes_code:     autoFill.subcodes.code.map(s => s.subcode),
+      subcodes_ip:       autoFill.subcodes.ip.map(s => s.subcode),
+      subcodes_finance:  autoFill.subcodes.finance.map(s => s.subcode),
+      subcodes_security: autoFill.subcodes.security.map(s => s.subcode),
+    }
+    setSubcodes(prev => ({
+      subcodes_code:     [...new Set([...prev.subcodes_code,     ...flat.subcodes_code])],
+      subcodes_ip:       [...new Set([...prev.subcodes_ip,       ...flat.subcodes_ip])],
+      subcodes_finance:  [...new Set([...prev.subcodes_finance,  ...flat.subcodes_finance])],
+      subcodes_security: [...new Set([...prev.subcodes_security, ...flat.subcodes_security])],
+    }))
+    setDocSubcodes(new Set([
+      ...flat.subcodes_code, ...flat.subcodes_ip,
+      ...flat.subcodes_finance, ...flat.subcodes_security,
+    ]))
+    setAutoFillApplied(true)
+  }
 
   /* ── P3 : guard data room ── */
   const [blockingWarning, setBlockingWarning] = useState<string[]>([])
@@ -412,6 +453,58 @@ export default function GradeForm({
       {activeTab === 'grader' && (
     <form onSubmit={onSubmit} className="flex flex-col gap-6">
 
+      {/* ── Bandeau auto-fill data room ── */}
+      <div className="bg-indigo-50 border border-indigo-200 px-5 py-3.5 flex items-center justify-between gap-4">
+        <div className="flex items-start gap-3">
+          <Database size={14} className="shrink-0 mt-0.5 text-indigo-500" />
+          <div>
+            <p className="font-mono text-[9px] uppercase tracking-widest text-indigo-500 mb-0.5">Pré-remplissage data room</p>
+            {autoFillLoading && (
+              <p className="text-[11px] text-indigo-600">Analyse des documents en cours…</p>
+            )}
+            {!autoFillLoading && autoFill && (
+              <p className="text-[11px] text-indigo-800">
+                <strong>{autoFill.sufficientCount}</strong> doc{autoFill.sufficientCount !== 1 ? 's' : ''} validés sur {autoFill.docCount} évalués
+                {' — '}
+                {autoFill.sources.length > 0
+                  ? <><strong>{autoFill.sources.length}</strong> sous-code{autoFill.sources.length !== 1 ? 's' : ''} déductibles</>  
+                  : 'Aucun sous-code déductible'}
+                {autoFill.blockingDocs.length > 0 && (
+                  <span className="ml-2 text-red-600 font-semibold">
+                    · {autoFill.blockingDocs.length} doc{autoFill.blockingDocs.length !== 1 ? 's' : ''} bloquant{autoFill.blockingDocs.length !== 1 ? 's' : ''} insuffisant{autoFill.blockingDocs.length !== 1 ? 's' : ''}
+                  </span>
+                )}
+              </p>
+            )}
+            {!autoFillLoading && !autoFill && (
+              <p className="text-[11px] text-indigo-400">Impossible de charger les données data room.</p>
+            )}
+          </div>
+        </div>
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            type="button"
+            onClick={loadAutoFill}
+            className="flex items-center gap-1 text-[9px] font-mono uppercase tracking-wider text-indigo-400 hover:text-indigo-700 border border-indigo-200 px-2 py-1 hover:border-indigo-400 transition-colors"
+          >
+            <RefreshCw size={9} /> Actualiser
+          </button>
+          {autoFill && autoFill.sources.length > 0 && (
+            <button
+              type="button"
+              onClick={applyAutoFill}
+              className={`flex items-center gap-1.5 text-[10px] font-semibold px-3 py-1.5 border transition-colors ${
+                autoFillApplied
+                  ? 'border-indigo-300 bg-indigo-100 text-indigo-600 cursor-default'
+                  : 'border-indigo-400 bg-indigo-600 text-white hover:bg-indigo-700'
+              }`}
+            >
+              {autoFillApplied ? '✓ Appliqué' : 'Appliquer les sous-codes data room'}
+            </button>
+          )}
+        </div>
+      </div>
+
       {/* ── Alerte documents bloquants ── */}
       {blockingAlerts.length > 0 && (
         <div className="bg-amber-50 border border-amber-300 px-5 py-4">
@@ -521,8 +614,17 @@ export default function GradeForm({
 
       {/* ── Sous-codes par dimension ── */}
       <div className={sectionCls}>
-        <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Sous-codes détaillés</h2>
-        <p className="text-[11px] text-gray-400 -mt-2">Cochez toutes les remarques applicables pour chaque dimension — alimente la notation et le refus automatique.</p>
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Sous-codes détaillés</h2>
+            <p className="text-[11px] text-gray-400 mt-0.5">Cochez toutes les remarques applicables — alimente la notation et le refus automatique.</p>
+          </div>
+          {docSubcodes.size > 0 && (
+            <span className="shrink-0 text-[9px] font-mono uppercase tracking-widest text-indigo-500 bg-indigo-50 border border-indigo-200 px-2 py-1">
+              <Database size={8} className="inline mr-1" />{docSubcodes.size} depuis data room
+            </span>
+          )}
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {DIMS.map(({ key, dim, label }) => {
             const groups = Array.from(new Set(SUBCODES_BY_DIMENSION[dim].map(s => s.group)))
@@ -534,19 +636,28 @@ export default function GradeForm({
                     <div key={group}>
                       <p className="text-[9px] font-mono uppercase tracking-widest text-gray-400 mb-1.5">{group}</p>
                       <div className="flex flex-col gap-1.5">
-                        {SUBCODES_BY_DIMENSION[dim].filter(s => s.group === group).map(s => (
-                          <label key={s.code} className="flex items-start gap-2 cursor-pointer group">
-                            <input
-                              type="checkbox"
-                              checked={subcodes[SUBCODE_KEY[key]].includes(s.code)}
-                              onChange={() => toggleSubcode(key, s.code)}
-                              className="mt-0.5 accent-gray-800"
-                            />
-                            <span className="text-[11px] text-gray-600 group-hover:text-gray-900 leading-snug">
-                              <span className="font-mono font-semibold text-gray-800">{s.code}</span> — {s.fr}
-                            </span>
-                          </label>
-                        ))}
+                        {SUBCODES_BY_DIMENSION[dim].filter(s => s.group === group).map(s => {
+                          const isFromDoc = docSubcodes.has(s.code)
+                          return (
+                            <label key={s.code} className="flex items-start gap-2 cursor-pointer group">
+                              <input
+                                type="checkbox"
+                                checked={subcodes[SUBCODE_KEY[key]].includes(s.code)}
+                                onChange={() => toggleSubcode(key, s.code)}
+                                className="mt-0.5 accent-gray-800"
+                              />
+                              <span className="text-[11px] text-gray-600 group-hover:text-gray-900 leading-snug flex items-center gap-1.5 flex-wrap">
+                                <span className="font-mono font-semibold text-gray-800">{s.code}</span>
+                                {' — '}{s.fr}
+                                {isFromDoc && (
+                                  <span className="inline-flex items-center gap-0.5 text-[8px] font-mono uppercase tracking-wider text-indigo-500 bg-indigo-50 border border-indigo-200 px-1 py-0.5">
+                                    <Database size={7} />doc
+                                  </span>
+                                )}
+                              </span>
+                            </label>
+                          )
+                        })}
                       </div>
                     </div>
                   ))}
@@ -555,6 +666,28 @@ export default function GradeForm({
             )
           })}
         </div>
+
+        {/* Récapitulatif sources data room */}
+        {autoFillApplied && autoFill && autoFill.sources.length > 0 && (
+          <details className="border-t border-gray-100 pt-3">
+            <summary className="text-[9px] font-mono uppercase tracking-widest text-gray-400 cursor-pointer hover:text-gray-600">
+              Sources data room ({autoFill.sources.length} correspondances)
+            </summary>
+            <div className="mt-2 flex flex-col gap-1">
+              {autoFill.sources.map((src, i) => (
+                <p key={i} className="text-[10px] text-gray-500 flex items-center gap-2">
+                  <span className="font-mono text-indigo-600 w-12 shrink-0">{src.subcode}</span>
+                  <span className="text-gray-300">←</span>
+                  <span className="font-mono text-[9px] text-gray-400">{src.docCode}</span>
+                  <span className="truncate text-gray-400 italic">{src.docName}</span>
+                  <span className={`shrink-0 text-[8px] font-mono uppercase ${
+                    src.quality === 'sufficient' ? 'text-emerald-600' : 'text-amber-600'
+                  }`}>{src.quality}</span>
+                </p>
+              ))}
+            </div>
+          </details>
+        )}
       </div>
 
       {/* ── Refus automatique ── */}
