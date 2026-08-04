@@ -956,7 +956,8 @@
     },
     "assetsLink": "Catalogue d'actifs",
     "glossaryLink": "Glossaire",
-    "ecosystemCatalogLink": "Nos actifs propriétaires"
+    "ecosystemCatalogLink": "Nos actifs propriétaires",
+    "aiNotice": "Certains contenus de ce site sont produits avec l'assistance de systèmes d'intelligence artificielle et révisés sous responsabilité éditoriale AEGRYN — EU AI Act art. 50."
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
@@ -1432,7 +1433,8 @@
     "newsletterSuccess": "Merci ! Vérifiez votre boîte mail.",
     "newsletterError": "Une erreur est survenue. Réessayez.",
     "bodyComingSoon": "Contenu complet disponible prochainement.",
-    "ctaTeaser": "Prêt à soumettre votre actif ou accéder au catalogue ?"
+    "ctaTeaser": "Prêt à soumettre votre actif ou accéder au catalogue ?",
+    "aiEditorialNotice": "Cet article a été rédigé avec l'assistance de l'intelligence artificielle et révisé sous la responsabilité éditoriale d'AEGRYN. Conformément à l'article 50 du Règlement européen sur l'IA (EU AI Act), nous assumons la responsabilité éditoriale de ce contenu."
   },
   "grade": {
     "meta": {
@@ -3538,7 +3540,27 @@
     "privacy": "Confidentialité",
     "security": "Sécurité",
     "faq": "FAQ",
-    "sitemap": "Plan du site"
+    "sitemap": "Plan du site",
+    "aiUsage": "Politique IA"
+  },
+  "aiUsage": {
+    "meta": {
+      "title": "Politique d'usage de l'IA — AEGRYN",
+      "desc": "Transparence sur l'usage de l'intelligence artificielle dans les contenus AEGRYN. Conformité EU AI Act article 50."
+    },
+    "label": "Politique d'usage de l'intelligence artificielle",
+    "version": "En vigueur au 2 août 2026 — EU AI Act art. 50",
+    "s1Title": "1. Cadre réglementaire",
+    "s1Body": "L'article 50 du Règlement européen sur l'intelligence artificielle (EU AI Act, Règlement UE 2024/1689) est applicable depuis le 2 août 2026. AEGRYN, en tant que déployeur de systèmes IA générateurs de contenu, s'engage à respecter les obligations de transparence qui en découlent.",
+    "s2Title": "2. Périmètre d'usage de l'IA chez AEGRYN",
+    "s2Body": "AEGRYN utilise des systèmes d'intelligence artificielle générative pour assister la rédaction de contenus éditoriaux (articles de blog, rapports marché, analyses sectorielles). Ces systèmes ne sont pas utilisés pour générer des contenus d'information publique de manière autonome — chaque contenu fait l'objet d'une révision humaine avant publication.",
+    "s3Title": "3. Responsabilité éditoriale",
+    "s3Body": "Conformément à l'exception prévue à l'article 50 paragraphe 4 du EU AI Act, l'ensemble des contenus produits avec assistance IA publiés sur aegryn.com font l'objet d'un examen humain et d'un contrôle éditorial. AEGRYN assume la pleine responsabilité éditoriale de ces publications.",
+    "s4Title": "4. Ce que nous faisons et ne faisons pas",
+    "s4Do": "Nous révisons systématiquement tout contenu assisté par IA avant publication. Nous apposons une mention éditoriale sur les articles rédigés avec assistance IA. Nous documentons en interne notre processus de révision.",
+    "s4Dont": "Nous ne publions pas de deepfakes (images, audio ou vidéo générés par IA représentant des personnes réelles). Nous ne publions pas de contenus d'information d'intérêt public non révisés. Nous ne délèguons pas notre responsabilité éditoriale à un système IA.",
+    "s5Title": "5. Contact",
+    "s5Body": "Pour toute question relative à notre politique d'usage de l'IA : contact@boha-group.com"
   },
   "termsUse": {
     "meta": {

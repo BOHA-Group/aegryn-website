@@ -956,7 +956,8 @@
     },
     "assetsLink": "Anlagenkatalog",
     "glossaryLink": "Glossar",
-    "ecosystemCatalogLink": "Unsere proprietären Assets"
+    "ecosystemCatalogLink": "Unsere proprietären Assets",
+    "aiNotice": "Einige Inhalte auf dieser Website werden mit Unterstützung von KI-Systemen erstellt und unter der redaktionellen Verantwortung von AEGRYN geprüft — EU-KI-Verordnung Art. 50."
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
@@ -2064,7 +2065,8 @@
     "newsletterSuccess": "Danke! Bitte prüfen Sie Ihr Postfach.",
     "newsletterError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
     "bodyComingSoon": "Vollständiger Inhalt demnächst verfügbar.",
-    "ctaTeaser": "Bereit, Ihr Asset einzureichen oder den Katalog aufzurufen?"
+    "ctaTeaser": "Bereit, Ihr Asset einzureichen oder den Katalog aufzurufen?",
+    "aiEditorialNotice": "Dieser Artikel wurde mit Unterstützung künstlicher Intelligenz verfasst und unter der redaktionellen Verantwortung von AEGRYN überprüft. Gemäß Artikel 50 des EU-KI-Gesetzes übernehmen wir die redaktionelle Verantwortung für diesen Inhalt."
   },
   "grade": {
     "meta": {
@@ -3469,6 +3471,7 @@
     "termsUse": "Nutzungsbedingungen",
     "termsCgv": "AGB",
     "privacy": "Datenschutz",
+    "aiUsage": "KI-Richtlinie",
     "security": "Sicherheit",
     "faq": "FAQ",
     "sitemap": "Seitenübersicht"

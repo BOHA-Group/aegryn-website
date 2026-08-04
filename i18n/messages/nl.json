@@ -956,7 +956,8 @@
     },
     "assetsLink": "Activacatalogus",
     "glossaryLink": "Woordenlijst",
-    "ecosystemCatalogLink": "Onze propriëtaire assets"
+    "ecosystemCatalogLink": "Onze propriëtaire assets",
+    "aiNotice": "Sommige inhoud op deze site wordt geproduceerd met behulp van systemen voor kunstmatige intelligentie en beoordeeld onder de redactionele verantwoordelijkheid van AEGRYN — EU AI Act art. 50."
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
@@ -2064,7 +2065,8 @@
     "newsletterSuccess": "Bedankt! Controleer uw inbox.",
     "newsletterError": "Er is een fout opgetreden. Probeer het opnieuw.",
     "bodyComingSoon": "Volledige inhoud binnenkort beschikbaar.",
-    "ctaTeaser": "Klaar om uw actief in te dienen of de catalogus te raadplegen?"
+    "ctaTeaser": "Klaar om uw actief in te dienen of de catalogus te raadplegen?",
+    "aiEditorialNotice": "Dit artikel is geschreven met behulp van kunstmatige intelligentie en beoordeeld onder de redactionele verantwoordelijkheid van AEGRYN. Overeenkomstig artikel 50 van de EU AI Act nemen wij de redactionele verantwoordelijkheid voor deze inhoud op ons."
   },
   "grade": {
     "meta": {
@@ -3469,6 +3471,7 @@
     "termsUse": "Gebruiksvoorwaarden",
     "termsCgv": "Algemene voorwaarden",
     "privacy": "Privacy",
+    "aiUsage": "AI-beleid",
     "security": "Beveiliging",
     "faq": "FAQ",
     "sitemap": "Sitemap"

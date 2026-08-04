@@ -98,12 +98,13 @@ const socialLinks = [
 type LinkHref = ComponentProps<typeof Link>['href']
 
 const legal: { key: string; href: LinkHref; ns: string; external?: boolean }[] = [
-  { key: 'termsUse',  href: '/terms/use',  ns: 'legalNav' },
-  { key: 'termsCgv',  href: '/terms/cgv',  ns: 'legalNav' },
-  { key: 'privacy',   href: '/privacy',    ns: 'legalNav' },
-  { key: 'security',  href: '/security',   ns: 'legalNav' },
-  { key: 'faq',       href: '/help/faq',   ns: 'legalNav' },
-  { key: 'sitemap',   href: '/sitemap',    ns: 'legalNav' },
+  { key: 'termsUse',  href: '/terms/use',       ns: 'legalNav' },
+  { key: 'termsCgv',  href: '/terms/cgv',       ns: 'legalNav' },
+  { key: 'privacy',   href: '/privacy',         ns: 'legalNav' },
+  { key: 'aiUsage',   href: '/terms/ai-usage' as never,  ns: 'legalNav' },
+  { key: 'security',  href: '/security',        ns: 'legalNav' },
+  { key: 'faq',       href: '/help/faq',        ns: 'legalNav' },
+  { key: 'sitemap',   href: '/sitemap',         ns: 'legalNav' },
 ]
 
 const companyLinks: { navKey: 'about' | 'career' | 'contact'; href: LinkHref }[] = [
@@ -241,9 +242,14 @@ export default function Footer() {
 
         {/* Legal strip — compact, fused above marquee */}
         <div className="mt-8 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-4 sm:flex-row sm:items-center">
-          <p className="font-sans font-semibold text-[10px] text-white/45">
-            {t('legal')}
-          </p>
+          <div className="flex flex-col gap-1">
+            <p className="font-sans font-semibold text-[10px] text-white/45">
+              {t('legal')}
+            </p>
+            <p className="font-sans text-[10px] text-white/30">
+              {t('aiNotice')}
+            </p>
+          </div>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             {legal.map(({ key, href, external }) => (
               external ? (

@@ -956,7 +956,8 @@
     },
     "assetsLink": "Catálogo de activos",
     "glossaryLink": "Glosario",
-    "ecosystemCatalogLink": "Nuestros activos propietarios"
+    "ecosystemCatalogLink": "Nuestros activos propietarios",
+    "aiNotice": "Algunos contenidos de este sitio se producen con la asistencia de sistemas de inteligencia artificial y se revisan bajo la responsabilidad editorial de AEGRYN — Reglamento UE IA art. 50."
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
@@ -2064,7 +2065,8 @@
     "newsletterSuccess": "¡Gracias! Revise su bandeja de entrada.",
     "newsletterError": "Ha ocurrido un error. Inténtelo de nuevo.",
     "bodyComingSoon": "Contenido completo disponible próximamente.",
-    "ctaTeaser": "¿Listo para enviar su activo o acceder al catálogo?"
+    "ctaTeaser": "¿Listo para enviar su activo o acceder al catálogo?",
+    "aiEditorialNotice": "Este artículo fue redactado con la asistencia de la inteligencia artificial y revisado bajo la responsabilidad editorial de AEGRYN. De conformidad con el artículo 50 del Reglamento europeo de IA, asumimos la responsabilidad editorial de este contenido."
   },
   "grade": {
     "meta": {
@@ -3469,6 +3471,7 @@
     "termsUse": "Condiciones de uso",
     "termsCgv": "CGV",
     "privacy": "Privacidad",
+    "aiUsage": "Política IA",
     "security": "Seguridad",
     "faq": "FAQ",
     "sitemap": "Mapa del sitio"

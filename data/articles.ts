@@ -36,6 +36,7 @@ export interface Article {
   body?:       ContentBlock[]
   faq?:        FaqItem[]
   keywords?:   string[]
+  aiAssisted?: boolean
 }
 
 export const ARTICLES: Article[] = [

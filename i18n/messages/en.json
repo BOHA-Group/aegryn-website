@@ -956,7 +956,8 @@
     },
     "assetsLink": "Asset Catalogue",
     "glossaryLink": "Glossary",
-    "ecosystemCatalogLink": "Our proprietary assets"
+    "ecosystemCatalogLink": "Our proprietary assets",
+    "aiNotice": "Some content on this site is produced with the assistance of artificial intelligence systems and reviewed under AEGRYN editorial responsibility — EU AI Act art. 50."
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
@@ -1432,7 +1433,8 @@
     "newsletterSuccess": "Thanks! Check your inbox.",
     "newsletterError": "Something went wrong. Please try again.",
     "bodyComingSoon": "Full content available soon.",
-    "ctaTeaser": "Ready to submit your asset or access the catalogue?"
+    "ctaTeaser": "Ready to submit your asset or access the catalogue?",
+    "aiEditorialNotice": "This article was written with the assistance of artificial intelligence and reviewed under AEGRYN editorial responsibility. In accordance with Article 50 of the EU AI Act, we assume editorial responsibility for this content."
   },
   "grade": {
     "meta": {
@@ -3536,6 +3538,7 @@
     "termsUse": "Terms of Use",
     "termsCgv": "Terms of Service",
     "privacy": "Privacy",
+    "aiUsage": "AI Policy",
     "security": "Security",
     "faq": "FAQ",
     "sitemap": "Sitemap"

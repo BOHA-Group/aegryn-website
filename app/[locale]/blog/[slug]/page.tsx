@@ -210,6 +210,20 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       </section>
 
+      {/* AI Act art. 50 — mention éditoriale (si article assisté par IA) */}
+      {article.aiAssisted && (
+        <section className="py-6 px-6 border-t border-ag-border bg-ag-off-white">
+          <div className="max-w-3xl mx-auto flex items-start gap-3">
+            <span className="shrink-0 mt-0.5 font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light border border-ag-border px-2 py-0.5">
+              IA
+            </span>
+            <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
+              {t('aiEditorialNotice')}
+            </p>
+          </div>
+        </section>
+      )}
+
       {/* Back to Blog */}
       <section className="py-8 px-6 border-t border-ag-border">
         <div className="max-w-3xl mx-auto">
