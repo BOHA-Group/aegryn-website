@@ -87,14 +87,29 @@ function Section({ title, open, onToggle, children }: {
   )
 }
 
-function Field({ label, hint, children }: { label: string; hint?: string; children: React.ReactNode }) {
+function Field({ label, hint, source, children }: { label: string; hint?: string; source?: SourceType; children: React.ReactNode }) {
+  const srcInfo = source ? SOURCE_LABELS[source] : null
   return (
     <div>
-      <label className="block font-sans text-[12px] text-gray-700 mb-1">{label}</label>
+      <div className="flex items-center justify-between mb-1">
+        <label className="font-sans text-[12px] text-gray-700">{label}</label>
+        {srcInfo && (
+          <span className={`inline-flex items-center text-[9px] font-mono px-1.5 py-0.5 border ${srcInfo.cls}`}>
+            {srcInfo.label}
+          </span>
+        )}
+      </div>
       {hint && <p className="font-sans text-[10px] text-gray-400 mb-1">{hint}</p>}
       {children}
     </div>
   )
+}
+
+type SourceType = 'declarative' | 'verified' | 'subcode'
+const SOURCE_LABELS: Record<SourceType, { label: string; cls: string }> = {
+  declarative: { label: 'Déclaratif vendeur',   cls: 'bg-gray-100 text-gray-500 border-gray-200' },
+  verified:    { label: 'Data room vérifié',     cls: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
+  subcode:     { label: 'Calculé par sous-code', cls: 'bg-amber-50 text-amber-700 border-amber-200' },
 }
 
 const inputCls = 'w-full border border-gray-200 px-3 py-1.5 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy'
@@ -257,6 +272,26 @@ export default function GradeEngineForm({
   const [step, setStep] = useState<FormStep>('input')
   const [open, setOpen] = useState({ code: true, ip: false, finance: false, security: false })
   const [input, setInput] = useState<GradeInput>(defaultInput())
+  const [inputSources, setInputSources] = useState<Record<string, SourceType>>(() => {
+    const defaults: Record<string, SourceType> = {}
+    const keys = [
+      'testCoverage','techDebtDocumented','criticalVulnOpen','majorVulnOpen','architecture',
+      'ciCdFunctional','apiDocumentation','obsoleteDependencies','lastCodeAuditMonthsAgo',
+      'trademarksJurisdictions','activeIPLitigation','employeeIPRights','openSourceRisk',
+      'thirdPartyAPIContracted','moat','rgpdCompliance',
+      'arr','revenueAgeMonths','arrAudited','nrr','monthlyChurn','grossMargin','yoyGrowth',
+      'topClientConcentration','runwayMonths',
+      'lastPentestMonthsAgo','criticalVulnsResolved','mfaOnAdminAccess','encryption',
+      'rgpdDocumented','activeSecurityIncident','externalCertification',
+    ]
+    keys.forEach(k => { defaults[k] = 'declarative' })
+    return defaults
+  })
+
+  function markSource(field: string, src: SourceType) {
+    setInputSources(p => ({ ...p, [field]: src }))
+  }
+
   const [computing, setComputing] = useState(false)
   const [result, setResult] = useState<GradeResult | null>(null)
   const [assessmentId, setAssessmentId] = useState<string | null>(null)
@@ -270,17 +305,21 @@ export default function GradeEngineForm({
   /* ── Score live recalculé à chaque changement d'input ── */
   const liveScore = useMemo(() => runGradeEngine(input), [input])
 
-  function setCode<K extends keyof GradeInput['code']>(k: K, v: GradeInput['code'][K]) {
+  function setCode<K extends keyof GradeInput['code']>(k: K, v: GradeInput['code'][K], src: SourceType = 'declarative') {
     setInput(p => ({ ...p, code: { ...p.code, [k]: v } }))
+    markSource(k, src)
   }
-  function setIP<K extends keyof GradeInput['ip']>(k: K, v: GradeInput['ip'][K]) {
+  function setIP<K extends keyof GradeInput['ip']>(k: K, v: GradeInput['ip'][K], src: SourceType = 'declarative') {
     setInput(p => ({ ...p, ip: { ...p.ip, [k]: v } }))
+    markSource(k, src)
   }
-  function setFin<K extends keyof GradeInput['finance']>(k: K, v: GradeInput['finance'][K]) {
+  function setFin<K extends keyof GradeInput['finance']>(k: K, v: GradeInput['finance'][K], src: SourceType = 'declarative') {
     setInput(p => ({ ...p, finance: { ...p.finance, [k]: v } }))
+    markSource(k, src)
   }
-  function setSec<K extends keyof GradeInput['security']>(k: K, v: GradeInput['security'][K]) {
+  function setSec<K extends keyof GradeInput['security']>(k: K, v: GradeInput['security'][K], src: SourceType = 'declarative') {
     setInput(p => ({ ...p, security: { ...p.security, [k]: v } }))
+    markSource(k, src)
   }
 
   async function compute() {
@@ -360,65 +399,65 @@ export default function GradeEngineForm({
 
       {/* DIMENSION CODE */}
       <Section title="Dimension C — Code (25 pts)" open={open.code} onToggle={() => setOpen(p => ({ ...p, code: !p.code }))}>
-        <Field label="Couverture de tests (%)" hint="0 = aucun test · 100 = couverture totale">
+        <Field label="Couverture de tests (%)" hint="0 = aucun test · 100 = couverture totale" source={inputSources['testCoverage'] as SourceType}>
           <NumInput value={input.code.testCoverage} onChange={v => setCode('testCoverage', v)} max={100} />
         </Field>
-        <Field label="Dette technique documentée">
+        <Field label="Dette technique documentée" source={inputSources['techDebtDocumented'] as SourceType}>
           <YesNoSelect value={input.code.techDebtDocumented} onChange={v => setCode('techDebtDocumented', v as 'yes' | 'no')} />
         </Field>
-        <Field label="Vulnérabilités critiques ouvertes" hint="0 = aucune (idéal)">
+        <Field label="Vulnérabilités critiques ouvertes" hint="0 = aucune (idéal)" source={inputSources['criticalVulnOpen'] as SourceType}>
           <NumInput value={input.code.criticalVulnOpen} onChange={v => setCode('criticalVulnOpen', v)} />
         </Field>
-        <Field label="Vulnérabilités majeures ouvertes">
+        <Field label="Vulnérabilités majeures ouvertes" source={inputSources['majorVulnOpen'] as SourceType}>
           <NumInput value={input.code.majorVulnOpen} onChange={v => setCode('majorVulnOpen', v)} />
         </Field>
-        <Field label="Architecture">
+        <Field label="Architecture" source={inputSources['architecture'] as SourceType}>
           <select value={input.code.architecture} onChange={e => setCode('architecture', e.target.value as 'decoupled' | 'partial' | 'monolithic')} className={selectCls}>
             <option value="decoupled">Découplée / scalable</option>
             <option value="partial">Partiellement découplée</option>
             <option value="monolithic">Monolithique</option>
           </select>
         </Field>
-        <Field label="CI/CD fonctionnel">
+        <Field label="CI/CD fonctionnel" source={inputSources['ciCdFunctional'] as SourceType}>
           <YesNoSelect value={input.code.ciCdFunctional} onChange={v => setCode('ciCdFunctional', v as 'yes' | 'no')} />
         </Field>
-        <Field label="Documentation API / technique">
+        <Field label="Documentation API / technique" source={inputSources['apiDocumentation'] as SourceType}>
           <select value={input.code.apiDocumentation} onChange={e => setCode('apiDocumentation', e.target.value as 'complete' | 'partial' | 'absent')} className={selectCls}>
             <option value="complete">Complète</option>
             <option value="partial">Partielle</option>
             <option value="absent">Absente</option>
           </select>
         </Field>
-        <Field label="Dépendances obsolètes (>24 mois)" hint="Nombre ou estimation">
+        <Field label="Dépendances obsolètes (>24 mois)" hint="Nombre ou estimation" source={inputSources['obsoleteDependencies'] as SourceType}>
           <NumInput value={input.code.obsoleteDependencies} onChange={v => setCode('obsoleteDependencies', v)} />
         </Field>
-        <Field label="Dernier audit de code externe (mois)" hint="9999 = jamais réalisé">
+        <Field label="Dernier audit de code externe (mois)" hint="9999 = jamais réalisé" source={inputSources['lastCodeAuditMonthsAgo'] as SourceType}>
           <NumInput value={input.code.lastCodeAuditMonthsAgo} onChange={v => setCode('lastCodeAuditMonthsAgo', v)} />
         </Field>
       </Section>
 
       {/* DIMENSION IP */}
       <Section title="Dimension I — IP & Droits (25 pts)" open={open.ip} onToggle={() => setOpen(p => ({ ...p, ip: !p.ip }))}>
-        <Field label="Marques déposées (nb de juridictions)">
+        <Field label="Marques déposées (nb de juridictions)" source={inputSources['trademarksJurisdictions'] as SourceType}>
           <NumInput value={input.ip.trademarksJurisdictions} onChange={v => setIP('trademarksJurisdictions', v)} />
         </Field>
-        <Field label="Litige IP actif">
+        <Field label="Litige IP actif" source={inputSources['activeIPLitigation'] as SourceType}>
           <YesNoSelect value={input.ip.activeIPLitigation} onChange={v => setIP('activeIPLitigation', v as 'yes' | 'no')} />
         </Field>
-        <Field label="Droits de cession employés / prestataires">
+        <Field label="Droits de cession employés / prestataires" source={inputSources['employeeIPRights'] as SourceType}>
           <select value={input.ip.employeeIPRights} onChange={e => setIP('employeeIPRights', e.target.value as 'complete' | 'partial' | 'absent')} className={selectCls}>
             <option value="complete">Complets</option>
             <option value="partial">Partiels</option>
             <option value="absent">Absents</option>
           </select>
         </Field>
-        <Field label="Risque open source GPL critique">
+        <Field label="Risque open source GPL critique" source={inputSources['openSourceRisk'] as SourceType}>
           <YesNoSelect value={input.ip.openSourceRisk} onChange={v => setIP('openSourceRisk', v as 'yes' | 'no')} />
         </Field>
-        <Field label="API tierce critique contractualisée">
+        <Field label="API tierce critique contractualisée" source={inputSources['thirdPartyAPIContracted'] as SourceType}>
           <YesNoSelect value={input.ip.thirdPartyAPIContracted} onChange={v => setIP('thirdPartyAPIContracted', v as 'yes' | 'no')} />
         </Field>
-        <Field label="Moat défensif identifié">
+        <Field label="Moat défensif identifié" source={inputSources['moat'] as SourceType}>
           <select value={input.ip.moat} onChange={e => setIP('moat', e.target.value as 'network' | 'data' | 'regulatory' | 'none')} className={selectCls}>
             <option value="network">Effet réseau</option>
             <option value="data">Data propriétaire</option>
@@ -426,7 +465,7 @@ export default function GradeEngineForm({
             <option value="none">Aucun</option>
           </select>
         </Field>
-        <Field label="Conformité RGPD / LPD">
+        <Field label="Conformité RGPD / LPD" source={inputSources['rgpdCompliance'] as SourceType}>
           <select value={input.ip.rgpdCompliance} onChange={e => setIP('rgpdCompliance', e.target.value as 'complete' | 'partial' | 'absent')} className={selectCls}>
             <option value="complete">Complète</option>
             <option value="partial">Partielle</option>
@@ -437,60 +476,60 @@ export default function GradeEngineForm({
 
       {/* DIMENSION FINANCE */}
       <Section title="Dimension F — Finance (25 pts)" open={open.finance} onToggle={() => setOpen(p => ({ ...p, finance: !p.finance }))}>
-        <Field label="ARR (€)">
+        <Field label="ARR (€)" source={inputSources['arr'] as SourceType}>
           <NumInput value={input.finance.arr} onChange={v => setFin('arr', v)} step={1000} />
         </Field>
-        <Field label="Ancienneté des revenus (mois)">
+        <Field label="Ancienneté des revenus (mois)" source={inputSources['revenueAgeMonths'] as SourceType}>
           <NumInput value={input.finance.revenueAgeMonths} onChange={v => setFin('revenueAgeMonths', v)} />
         </Field>
-        <Field label="ARR audité par un tiers">
+        <Field label="ARR audité par un tiers" source={inputSources['arrAudited'] as SourceType}>
           <YesNoSelect value={input.finance.arrAudited} onChange={v => setFin('arrAudited', v as 'yes' | 'no')} />
         </Field>
-        <Field label="NRR (%)" hint="Laisser à 0 si non applicable (<12 mois d'historique)">
+        <Field label="NRR (%)" hint="Laisser à 0 si non applicable (<12 mois d'historique)" source={inputSources['nrr'] as SourceType}>
           <NumInput value={input.finance.nrr ?? 0} onChange={v => setFin('nrr', v === 0 ? null : v)} />
         </Field>
-        <Field label="Churn mensuel (%)">
+        <Field label="Churn mensuel (%)" source={inputSources['monthlyChurn'] as SourceType}>
           <NumInput value={input.finance.monthlyChurn} onChange={v => setFin('monthlyChurn', v)} step={0.1} />
         </Field>
-        <Field label="Marge brute (%)">
+        <Field label="Marge brute (%)" source={inputSources['grossMargin'] as SourceType}>
           <NumInput value={input.finance.grossMargin} onChange={v => setFin('grossMargin', v)} />
         </Field>
-        <Field label="Croissance YoY (%)">
+        <Field label="Croissance YoY (%)" source={inputSources['yoyGrowth'] as SourceType}>
           <NumInput value={input.finance.yoyGrowth} onChange={v => setFin('yoyGrowth', v)} />
         </Field>
-        <Field label="Concentration client — top 1 (%)">
+        <Field label="Concentration client — top 1 (%)" source={inputSources['topClientConcentration'] as SourceType}>
           <NumInput value={input.finance.topClientConcentration} onChange={v => setFin('topClientConcentration', v)} max={100} />
         </Field>
-        <Field label="Runway (mois)">
+        <Field label="Runway (mois)" source={inputSources['runwayMonths'] as SourceType}>
           <NumInput value={input.finance.runwayMonths} onChange={v => setFin('runwayMonths', v)} />
         </Field>
       </Section>
 
       {/* DIMENSION SECURITE */}
       <Section title="Dimension S — Sécurité (25 pts)" open={open.security} onToggle={() => setOpen(p => ({ ...p, security: !p.security }))}>
-        <Field label="Dernier pentest (mois)" hint="9999 = jamais réalisé">
+        <Field label="Dernier pentest (mois)" hint="9999 = jamais réalisé" source={inputSources['lastPentestMonthsAgo'] as SourceType}>
           <NumInput value={input.security.lastPentestMonthsAgo} onChange={v => setSec('lastPentestMonthsAgo', v)} />
         </Field>
-        <Field label="Vulnérabilités critiques résolues">
+        <Field label="Vulnérabilités critiques résolues" source={inputSources['criticalVulnsResolved'] as SourceType}>
           <YesNoNASelect value={input.security.criticalVulnsResolved} onChange={v => setSec('criticalVulnsResolved', v as 'yes' | 'no' | 'na')} />
         </Field>
-        <Field label="MFA sur tous les accès admin">
+        <Field label="MFA sur tous les accès admin" source={inputSources['mfaOnAdminAccess'] as SourceType}>
           <YesNoSelect value={input.security.mfaOnAdminAccess} onChange={v => setSec('mfaOnAdminAccess', v as 'yes' | 'no')} />
         </Field>
-        <Field label="Chiffrement (repos + transit)">
+        <Field label="Chiffrement (repos + transit)" source={inputSources['encryption'] as SourceType}>
           <select value={input.security.encryption} onChange={e => setSec('encryption', e.target.value as 'full' | 'partial' | 'none')} className={selectCls}>
             <option value="full">Complet</option>
             <option value="partial">Partiel</option>
             <option value="none">Absent</option>
           </select>
         </Field>
-        <Field label="Conformité RGPD documentée">
+        <Field label="Conformité RGPD documentée" source={inputSources['rgpdDocumented'] as SourceType}>
           <YesNoSelect value={input.security.rgpdDocumented} onChange={v => setSec('rgpdDocumented', v as 'yes' | 'no')} />
         </Field>
-        <Field label="Incident de sécurité actif en cours">
+        <Field label="Incident de sécurité actif en cours" source={inputSources['activeSecurityIncident'] as SourceType}>
           <YesNoSelect value={input.security.activeSecurityIncident} onChange={v => setSec('activeSecurityIncident', v as 'yes' | 'no')} />
         </Field>
-        <Field label="Certification externe (ISO 27001 / SOC 2)">
+        <Field label="Certification externe (ISO 27001 / SOC 2)" source={inputSources['externalCertification'] as SourceType}>
           <select value={input.security.externalCertification} onChange={e => setSec('externalCertification', e.target.value as 'yes' | 'in_progress' | 'no')} className={selectCls}>
             <option value="yes">Obtenue</option>
             <option value="in_progress">En cours</option>
@@ -520,10 +559,10 @@ export default function GradeEngineForm({
             <div className="mb-3" />
             <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">Tests</p>
             {([
-              { id: 'C-11', label: 'Tests unitaires complets (>80% coverage)', field: 'testCoverage', value: 85, op: 'set' },
-              { id: 'C-12', label: 'Tests partiels (40-80% coverage)',          field: 'testCoverage', value: 60, op: 'set' },
-              { id: 'C-13', label: 'Tests insuffisants (<40% coverage)',         field: 'testCoverage', value: 20, op: 'set' },
-              { id: 'C-14', label: 'Tests absents',                              field: 'testCoverage', value: 0,  op: 'set' },
+              { id: 'C-11', label: 'Tests unitaires complets (>80% coverage)', field: 'testCoverage', value: 85 },
+              { id: 'C-12', label: 'Tests partiels (40-80% coverage)',          field: 'testCoverage', value: 60 },
+              { id: 'C-13', label: 'Tests insuffisants (<40% coverage)',         field: 'testCoverage', value: 20 },
+              { id: 'C-14', label: 'Tests absents',                              field: 'testCoverage', value: 0 },
             ] as const).map(item => {
               const isChecked = (() => {
                 if (item.id === 'C-11') return input.code.testCoverage >= 80
@@ -534,7 +573,7 @@ export default function GradeEngineForm({
               return (
                 <label key={item.id} className="flex items-start gap-2 cursor-pointer mb-1.5">
                   <input type="checkbox" checked={isChecked}
-                    onChange={() => setCode('testCoverage', item.value)}
+                    onChange={() => setCode('testCoverage', item.value, 'subcode')}
                     className="mt-0.5 w-4 h-4 border border-gray-300 accent-ag-navy shrink-0"
                   />
                   <span className="font-sans text-[11px] text-gray-700">
@@ -547,11 +586,11 @@ export default function GradeEngineForm({
 
             <p className="font-sans text-[10px] text-gray-400 mt-3 mb-2 uppercase tracking-widest">CI/CD & Architecture</p>
             {([
-              { id: 'C-21', label: 'CI/CD fonctionnel et automatisé',        action: () => setCode('ciCdFunctional', 'yes') },
-              { id: 'C-22', label: 'CI/CD absent',                            action: () => setCode('ciCdFunctional', 'no') },
-              { id: 'C-31', label: 'Architecture découplée / scalable',       action: () => setCode('architecture', 'decoupled') },
-              { id: 'C-32', label: 'Architecture partiellement découplée',    action: () => setCode('architecture', 'partial') },
-              { id: 'C-33', label: 'Architecture monolithique',               action: () => setCode('architecture', 'monolithic') },
+              { id: 'C-21', label: 'CI/CD fonctionnel et automatisé',        action: () => setCode('ciCdFunctional', 'yes', 'subcode') },
+              { id: 'C-22', label: 'CI/CD absent',                            action: () => setCode('ciCdFunctional', 'no', 'subcode') },
+              { id: 'C-31', label: 'Architecture découplée / scalable',       action: () => setCode('architecture', 'decoupled', 'subcode') },
+              { id: 'C-32', label: 'Architecture partiellement découplée',    action: () => setCode('architecture', 'partial', 'subcode') },
+              { id: 'C-33', label: 'Architecture monolithique',               action: () => setCode('architecture', 'monolithic', 'subcode') },
             ] as const).map(item => {
               const isChecked = (() => {
                 if (item.id === 'C-21') return input.code.ciCdFunctional === 'yes'
@@ -585,10 +624,10 @@ export default function GradeEngineForm({
             <div className="mb-3" />
             <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">Marques & Identité</p>
             {([
-              { id: 'I-11', label: 'Marque verbale déposée (pays principal)',           action: () => setIP('trademarksJurisdictions', Math.max(1, input.ip.trademarksJurisdictions)) },
-              { id: 'I-12', label: 'Marque combinée déposée',                           action: () => setIP('trademarksJurisdictions', Math.max(2, input.ip.trademarksJurisdictions)) },
-              { id: 'I-13', label: 'Marque déposée — extension internationale (EUIPO/WIPO)', action: () => setIP('trademarksJurisdictions', Math.max(3, input.ip.trademarksJurisdictions)) },
-              { id: 'I-14', label: 'Marque en cours de dépôt',                          action: () => setIP('trademarksJurisdictions', 0) },
+              { id: 'I-11', label: 'Marque verbale déposée (pays principal)',           action: () => setIP('trademarksJurisdictions', Math.max(1, input.ip.trademarksJurisdictions), 'subcode') },
+              { id: 'I-12', label: 'Marque combinée déposée',                           action: () => setIP('trademarksJurisdictions', Math.max(2, input.ip.trademarksJurisdictions), 'subcode') },
+              { id: 'I-13', label: 'Marque déposée — extension internationale (EUIPO/WIPO)', action: () => setIP('trademarksJurisdictions', Math.max(3, input.ip.trademarksJurisdictions), 'subcode') },
+              { id: 'I-14', label: 'Marque en cours de dépôt',                          action: () => setIP('trademarksJurisdictions', 0, 'subcode') },
             ] as const).map(item => {
               const isChecked = (() => {
                 if (item.id === 'I-11') return input.ip.trademarksJurisdictions >= 1
@@ -613,12 +652,12 @@ export default function GradeEngineForm({
 
             <p className="font-sans text-[10px] text-gray-400 mt-3 mb-2 uppercase tracking-widest">Droits & RGPD</p>
             {([
-              { id: 'I-21', label: 'Droits IP employés complets',      action: () => setIP('employeeIPRights', 'complete') },
-              { id: 'I-22', label: 'Droits IP partiels',               action: () => setIP('employeeIPRights', 'partial') },
-              { id: 'I-23', label: 'Droits IP absents',                action: () => setIP('employeeIPRights', 'absent') },
-              { id: 'I-31', label: 'Conformité RGPD complète',         action: () => setIP('rgpdCompliance', 'complete') },
-              { id: 'I-32', label: 'Conformité RGPD partielle',        action: () => setIP('rgpdCompliance', 'partial') },
-              { id: 'I-33', label: 'Conformité RGPD absente',          action: () => setIP('rgpdCompliance', 'absent') },
+              { id: 'I-21', label: 'Droits IP employés complets',      action: () => setIP('employeeIPRights', 'complete', 'subcode') },
+              { id: 'I-22', label: 'Droits IP partiels',               action: () => setIP('employeeIPRights', 'partial', 'subcode') },
+              { id: 'I-23', label: 'Droits IP absents',                action: () => setIP('employeeIPRights', 'absent', 'subcode') },
+              { id: 'I-31', label: 'Conformité RGPD complète',         action: () => setIP('rgpdCompliance', 'complete', 'subcode') },
+              { id: 'I-32', label: 'Conformité RGPD partielle',        action: () => setIP('rgpdCompliance', 'partial', 'subcode') },
+              { id: 'I-33', label: 'Conformité RGPD absente',          action: () => setIP('rgpdCompliance', 'absent', 'subcode') },
             ] as const).map(item => {
               const isChecked = (() => {
                 if (item.id === 'I-21') return input.ip.employeeIPRights === 'complete'
@@ -653,14 +692,14 @@ export default function GradeEngineForm({
             <div className="mb-3" />
             <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">ARR & Audit</p>
             {([
-              { id: 'F-11', label: 'ARR audité par commissaire aux comptes',   action: () => setFin('arrAudited', 'yes') },
-              { id: 'F-12', label: 'ARR non audité',                           action: () => setFin('arrAudited', 'no') },
-              { id: 'F-21', label: 'Marge brute >70%',    action: () => setFin('grossMargin', 75) },
-              { id: 'F-22', label: 'Marge brute 40-70%',  action: () => setFin('grossMargin', 55) },
-              { id: 'F-23', label: 'Marge brute <40%',    action: () => setFin('grossMargin', 25) },
-              { id: 'F-31', label: 'Churn mensuel <1%',   action: () => setFin('monthlyChurn', 0.5) },
-              { id: 'F-32', label: 'Churn mensuel 1-3%',  action: () => setFin('monthlyChurn', 2) },
-              { id: 'F-33', label: 'Churn mensuel >3%',   action: () => setFin('monthlyChurn', 5) },
+              { id: 'F-11', label: 'ARR audité par commissaire aux comptes',   action: () => setFin('arrAudited', 'yes', 'subcode') },
+              { id: 'F-12', label: 'ARR non audité',                           action: () => setFin('arrAudited', 'no', 'subcode') },
+              { id: 'F-21', label: 'Marge brute >70%',    action: () => setFin('grossMargin', 75, 'subcode') },
+              { id: 'F-22', label: 'Marge brute 40-70%',  action: () => setFin('grossMargin', 55, 'subcode') },
+              { id: 'F-23', label: 'Marge brute <40%',    action: () => setFin('grossMargin', 25, 'subcode') },
+              { id: 'F-31', label: 'Churn mensuel <1%',   action: () => setFin('monthlyChurn', 0.5, 'subcode') },
+              { id: 'F-32', label: 'Churn mensuel 1-3%',  action: () => setFin('monthlyChurn', 2, 'subcode') },
+              { id: 'F-33', label: 'Churn mensuel >3%',   action: () => setFin('monthlyChurn', 5, 'subcode') },
             ] as const).map(item => {
               const isChecked = (() => {
                 if (item.id === 'F-11') return input.finance.arrAudited === 'yes'
@@ -697,18 +736,18 @@ export default function GradeEngineForm({
             <div className="mb-3" />
             <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">Pentest & MFA</p>
             {([
-              { id: 'S-11', label: 'Pentest < 12 mois',   action: () => setSec('lastPentestMonthsAgo', 6) },
-              { id: 'S-12', label: 'Pentest 12-24 mois',  action: () => setSec('lastPentestMonthsAgo', 18) },
-              { id: 'S-13', label: 'Pentest > 24 mois',   action: () => setSec('lastPentestMonthsAgo', 36) },
-              { id: 'S-14', label: 'Jamais de pentest',   action: () => setSec('lastPentestMonthsAgo', 9999) },
-              { id: 'S-21', label: 'MFA sur tous les accès admin',    action: () => setSec('mfaOnAdminAccess', 'yes') },
-              { id: 'S-22', label: 'MFA absent ou partiel',           action: () => setSec('mfaOnAdminAccess', 'no') },
-              { id: 'S-31', label: 'Chiffrement complet (repos + transit)', action: () => setSec('encryption', 'full') },
-              { id: 'S-32', label: 'Chiffrement partiel',             action: () => setSec('encryption', 'partial') },
-              { id: 'S-33', label: 'Chiffrement absent',              action: () => setSec('encryption', 'none') },
-              { id: 'S-41', label: 'Certification ISO 27001 / SOC 2 obtenue', action: () => setSec('externalCertification', 'yes') },
-              { id: 'S-42', label: 'Certification en cours',          action: () => setSec('externalCertification', 'in_progress') },
-              { id: 'S-43', label: 'Aucune certification',            action: () => setSec('externalCertification', 'no') },
+              { id: 'S-11', label: 'Pentest < 12 mois',   action: () => setSec('lastPentestMonthsAgo', 6, 'subcode') },
+              { id: 'S-12', label: 'Pentest 12-24 mois',  action: () => setSec('lastPentestMonthsAgo', 18, 'subcode') },
+              { id: 'S-13', label: 'Pentest > 24 mois',   action: () => setSec('lastPentestMonthsAgo', 36, 'subcode') },
+              { id: 'S-14', label: 'Jamais de pentest',   action: () => setSec('lastPentestMonthsAgo', 9999, 'subcode') },
+              { id: 'S-21', label: 'MFA sur tous les accès admin',    action: () => setSec('mfaOnAdminAccess', 'yes', 'subcode') },
+              { id: 'S-22', label: 'MFA absent ou partiel',           action: () => setSec('mfaOnAdminAccess', 'no', 'subcode') },
+              { id: 'S-31', label: 'Chiffrement complet (repos + transit)', action: () => setSec('encryption', 'full', 'subcode') },
+              { id: 'S-32', label: 'Chiffrement partiel',             action: () => setSec('encryption', 'partial', 'subcode') },
+              { id: 'S-33', label: 'Chiffrement absent',              action: () => setSec('encryption', 'none', 'subcode') },
+              { id: 'S-41', label: 'Certification ISO 27001 / SOC 2 obtenue', action: () => setSec('externalCertification', 'yes', 'subcode') },
+              { id: 'S-42', label: 'Certification en cours',          action: () => setSec('externalCertification', 'in_progress', 'subcode') },
+              { id: 'S-43', label: 'Aucune certification',            action: () => setSec('externalCertification', 'no', 'subcode') },
             ] as const).map(item => {
               const isChecked = (() => {
                 if (item.id === 'S-11') return input.security.lastPentestMonthsAgo < 12
@@ -742,6 +781,9 @@ export default function GradeEngineForm({
 
         </div>
       </div>
+
+      {/* Hidden input pour pont vers GradeForm (P4) */}
+      <input type="hidden" id="__engine_grade__" value={liveScore.grade} />
 
       {/* CTA */}
       <div className="pt-2">

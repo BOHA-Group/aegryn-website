@@ -195,6 +195,19 @@ export default function GradeForm({
   const [saved,   setSaved]   = useState(false)
   const [error,   setError]   = useState('')
 
+  /* ── P3 : guard data room ── */
+  const [blockingWarning, setBlockingWarning] = useState<string[]>([])
+  const [blockingJustif,  setBlockingJustif]  = useState('')
+  const [showBlockingModal, setShowBlockingModal] = useState(false)
+
+  /* ── P4 : modal divergence moteur/grader ── */
+  const [showDivergenceModal, setShowDivergenceModal] = useState(false)
+  const [divergenceJustif, setDivergenceJustif] = useState('')
+  const [divergenceLevel,  setDivergenceLevel]  = useState(0)
+
+  /* Rang des grades pour calcul écart */
+  const AEG_RANK_MAP: Record<string, number> = { refused: 0, b: 1, a: 2, aa: 3, aaa: 4, star: 5 }
+
   const evalType    = evaluationType ?? 'full_certification'
   const isReview    = evalType === 'review_internal'
   const isReviewPlus = evalType === 'review_partner'
@@ -248,17 +261,22 @@ export default function GradeForm({
     })
   }
 
-  async function onSubmit(e: React.FormEvent) {
-    e.preventDefault()
+  async function submitGrade(blockingOverride?: string, divergenceOverride?: string) {
     setLoading(true)
     setSaved(false)
     setError('')
     try {
+      const notesAppend = [
+        blockingOverride  ? `[DOCS BLOQUANTS] ${blockingOverride}` : '',
+        divergenceOverride ? `[DIVERGENCE MOTEUR] ${divergenceOverride}` : '',
+      ].filter(Boolean).join('\n')
       const res = await fetch(`/api/admin/assets/${assetId}/grade`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          ...scores, ...subcodes, ...cosigners, kryv_hash, public_summary, internal_notes, status,
+          ...scores, ...subcodes, ...cosigners, kryv_hash, public_summary,
+          internal_notes: [internal_notes, notesAppend].filter(Boolean).join('\n'),
+          status,
           revenue_track_months: revenueTrackMonths === '' ? undefined : revenueTrackMonths,
           gross_margin:         grossMargin        === '' ? undefined : grossMargin,
           nrr:                  nrr                === '' ? undefined : nrr,
@@ -279,6 +297,39 @@ export default function GradeForm({
     } finally {
       setLoading(false)
     }
+  }
+
+  async function onSubmit(e: React.FormEvent) {
+    e.preventDefault()
+
+    /* ── P3 : vérifier documents bloquants non validés ── */
+    const unvalidatedBlocking = blockingAlerts.filter(d => d.admin_quality !== 'sufficient')
+    if (unvalidatedBlocking.length > 0 && !showBlockingModal) {
+      setBlockingWarning(unvalidatedBlocking.map(d => d.document_code ? `${d.document_code} — ${d.file_name}` : d.file_name))
+      setShowBlockingModal(true)
+      return
+    }
+
+    /* ── P4 : vérifier divergence moteur/grader > 1 grade ── */
+    /* On récupère le dernier grade moteur stocké si dispo via data attribute */
+    const lastEngineGrade = (document.getElementById('__engine_grade__') as HTMLInputElement | null)?.value ?? ''
+    if (lastEngineGrade && finalAeg !== lastEngineGrade) {
+      const diff = Math.abs((AEG_RANK_MAP[finalAeg] ?? 0) - (AEG_RANK_MAP[lastEngineGrade] ?? 0))
+      if (diff > 1 && !showDivergenceModal) {
+        setDivergenceLevel(diff)
+        setShowDivergenceModal(true)
+        return
+      }
+    }
+
+    await submitGrade(
+      showBlockingModal  ? blockingJustif  : undefined,
+      showDivergenceModal ? divergenceJustif : undefined,
+    )
+    setShowBlockingModal(false)
+    setShowDivergenceModal(false)
+    setBlockingJustif('')
+    setDivergenceJustif('')
   }
 
   return (
@@ -730,10 +781,11 @@ export default function GradeForm({
         </div>
       )}
 
-      {/* ── Co-signataires (full_certification = 3 ; review_partner = 1 seul ; review = masqué) ── */}
+      {/* ── Experts consultés (full_certification = 3 ; review_partner = 1 seul ; review = masqué) ── */}
       {!isReview && (
         <div className={sectionCls}>
-          <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Co-signataires</h2>
+          <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Experts consultés <span className="font-normal normal-case tracking-normal text-gray-400">(optionnel)</span></h2>
+          <p className="text-[11px] text-gray-400 -mt-2">La mention de ces experts apparaîtra dans le rapport de grade uniquement si le champ est rempli. Leur contribution enrichit l&apos;analyse mais n&apos;implique pas de co-signature du grade AEGRYN.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               { nKey: 'cosigner_legal',   dKey: 'cosigner_legal_date',   label: 'Cabinet juridique',     show: isFull || (isReviewPlus && partnerReviewerType === 'legal') },
@@ -754,21 +806,21 @@ export default function GradeForm({
         </div>
       )}
 
-      {/* ── KRYV + Publication (full_certification seulement) ── */}
+      {/* ── Code d'ancrage + Publication (full_certification seulement) ── */}
       <div className={sectionCls}>
         <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">
-          {isFull ? 'KRYV Protocol & Publication' : 'Rapport interne'}
+          {isFull ? 'Code d\'ancrage & Publication' : 'Rapport interne'}
         </h2>
         {isFull && (
           <div>
-            <label className={labelCls}>Hash KRYV (saisie manuelle MVP)</label>
+            <label className={labelCls}>Code d'ancrage (saisie manuelle MVP)</label>
             <input type="text" value={kryv_hash} onChange={e => setKryvHash(e.target.value)}
               placeholder="0x..." className={inputCls} />
           </div>
         )}
         {!isFull && (
           <div className="bg-blue-50 border border-blue-100 px-4 py-2 text-[11px] text-blue-600">
-            Hash KRYV et publication catalogue non disponibles pour ce type d’évaluation.
+            Code d'ancrage et publication catalogue non disponibles pour ce type d'évaluation.
           </div>
         )}
         <div>
@@ -815,6 +867,85 @@ export default function GradeForm({
       </div>
 
     </form>
+      )}
+
+      {/* ── P3 : Modal docs bloquants non validés ── */}
+      {showBlockingModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+          <div className="bg-white border border-amber-300 shadow-xl max-w-lg w-full mx-4 p-6 flex flex-col gap-4">
+            <div className="flex items-center gap-2">
+              <AlertTriangle size={16} className="text-amber-600 shrink-0" />
+              <p className="text-[12px] font-semibold text-amber-800 uppercase tracking-widest">Documents bloquants non validés</p>
+            </div>
+            <p className="text-[12px] text-gray-600">Les documents suivants ont un statut non validé (<code className="text-[11px] bg-gray-100 px-1">sufficient</code> requis) :</p>
+            <ul className="list-disc list-inside text-[12px] text-amber-800 bg-amber-50 border border-amber-200 px-4 py-3">
+              {blockingWarning.map(d => <li key={d}>{d}</li>)}
+            </ul>
+            <p className="text-[12px] text-gray-600">Vous pouvez tout de même enregistrer le grade en fournissant une justification documentée.</p>
+            <div>
+              <label className={labelCls}>Justification obligatoire <span className="text-red-500">*</span></label>
+              <textarea
+                rows={3}
+                value={blockingJustif}
+                onChange={e => setBlockingJustif(e.target.value)}
+                placeholder="Ex : les documents financiers sont en cours de finalisation — ARR auto-déclaré vérifié par notre analyste via extraits bancaires..."
+                className={`${inputCls} resize-none`}
+              />
+              <p className="text-[10px] text-gray-400 mt-1">{blockingJustif.length} / 80 caractères min</p>
+            </div>
+            <div className="flex items-center gap-3 pt-2 border-t border-gray-100">
+              <button type="button" onClick={() => { setShowBlockingModal(false); setBlockingWarning([]) }}
+                className="text-[11px] text-gray-500 border border-gray-300 px-4 py-2 hover:border-gray-500 transition-colors">
+                Annuler
+              </button>
+              <button type="button"
+                disabled={blockingJustif.trim().length < 80 || loading}
+                onClick={() => submitGrade(blockingJustif, undefined).then(() => { setShowBlockingModal(false); setBlockingJustif('') })}
+                className="flex-1 bg-amber-600 text-white text-[11px] font-semibold uppercase tracking-widest px-4 py-2 hover:bg-amber-700 transition-colors disabled:opacity-40">
+                {loading ? 'Enregistrement…' : 'Confirmer et enregistrer malgré tout'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── P4 : Modal divergence moteur/grader ── */}
+      {showDivergenceModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+          <div className="bg-white border border-red-300 shadow-xl max-w-lg w-full mx-4 p-6 flex flex-col gap-4">
+            <div className="flex items-center gap-2">
+              <AlertTriangle size={16} className="text-red-600 shrink-0" />
+              <p className="text-[12px] font-semibold text-red-700 uppercase tracking-widest">Divergence moteur / grade officiel</p>
+            </div>
+            <p className="text-[12px] text-gray-600">
+              Le grade officiel <strong>{AEG_LABEL[finalAeg].symbol}</strong> diverge de <strong>{divergenceLevel} niveau{divergenceLevel > 1 ? 'x' : ''}</strong> avec le score algorithmique du Moteur.
+              Cette divergence doit être documentée.
+            </p>
+            <div>
+              <label className={labelCls}>Justification interne <span className="text-red-500">*</span></label>
+              <textarea
+                rows={4}
+                value={divergenceJustif}
+                onChange={e => setDivergenceJustif(e.target.value)}
+                placeholder="Ex : le moteur ne capture pas la qualité de l'équipe fondatrice ni le pipeline commercial. Le grade officiel intègre ces éléments qualitatifs..."
+                className={`${inputCls} resize-none`}
+              />
+              <p className="text-[10px] text-gray-400 mt-1">{divergenceJustif.length} / 100 caractères min</p>
+            </div>
+            <div className="flex items-center gap-3 pt-2 border-t border-gray-100">
+              <button type="button" onClick={() => { setShowDivergenceModal(false); setDivergenceJustif('') }}
+                className="text-[11px] text-gray-500 border border-gray-300 px-4 py-2 hover:border-gray-500 transition-colors">
+                Annuler
+              </button>
+              <button type="button"
+                disabled={divergenceJustif.trim().length < 100 || loading}
+                onClick={() => submitGrade(showBlockingModal ? blockingJustif : undefined, divergenceJustif).then(() => { setShowDivergenceModal(false); setDivergenceJustif('') })}
+                className="flex-1 bg-gray-900 text-white text-[11px] font-semibold uppercase tracking-widest px-4 py-2 hover:bg-gray-700 transition-colors disabled:opacity-40">
+                {loading ? 'Enregistrement…' : 'Confirmer avec justification'}
+              </button>
+            </div>
+          </div>
+        </div>
       )}
 
     </div>
