@@ -124,27 +124,71 @@ export default async function SellerDataRoomPage({ params }: Props) {
 
         {/* Section par dimension CIFS+T */}
         {DIMENSIONS.map((dim) => {
-          const dimCatalog = catalog.filter((c) => c.dimension === dim)
+          const dimCatalog   = catalog.filter((c) => c.dimension === dim)
           if (dimCatalog.length === 0) return null
-          const category = DIMENSION_TO_CATEGORY[dim]
-          const existing  = docs.filter((d) => d.category === category)
-          const blocking  = dimCatalog.filter((c) => c.required_level === 'blocking')
-          const uploaded  = existing.length
+          const category     = DIMENSION_TO_CATEGORY[dim]
+          const existing = docs.filter((d) => d.category === category)
+
+          /* Progression bloquants pour cette dimension */
+          const blockingDim        = dimCatalog.filter((c) => c.required_level === 'blocking')
+          const blockingDimDone    = blockingDim.filter((c) => existing.some((d) => d.document_code === c.code && (d.admin_quality === 'sufficient' || d.admin_quality === 'pending_review'))).length
+          const blockingDimPct     = blockingDim.length > 0 ? Math.round((blockingDimDone / blockingDim.length) * 100) : 100
+
+          /* Progression recommandés */
+          const recommendedDim     = dimCatalog.filter((c) => c.required_level === 'recommended')
+          const recommendedDimDone = recommendedDim.filter((c) => existing.some((d) => d.document_code === c.code)).length
+
+          /* Statut validation admin */
+          const validatedCount = existing.filter((d) => d.admin_quality === 'sufficient').length
+          const insufficientCount = existing.filter((d) => d.admin_quality === 'insufficient').length
+
+          const dimComplete = blockingDim.length > 0 && blockingDimDone >= blockingDim.length
 
           return (
             <section key={dim} className="bg-white border border-gray-200">
               {/* En-tête dimension */}
-              <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
-                <h2 className="text-[14px] font-semibold text-gray-900">{DIMENSION_LABELS[dim]}</h2>
-                <span className={`text-[11px] font-semibold px-2.5 py-1 ${
-                  uploaded >= blocking.length && blocking.length > 0
-                    ? 'bg-emerald-50 text-emerald-700'
-                    : uploaded > 0
-                    ? 'bg-amber-50 text-amber-700'
-                    : 'bg-gray-50 text-gray-500'
-                }`}>
-                  {uploaded} déposé{uploaded !== 1 ? 's' : ''}
-                </span>
+              <div className="px-6 py-4 border-b border-gray-100">
+                <div className="flex items-start justify-between gap-4 mb-2">
+                  <h2 className="text-[14px] font-semibold text-gray-900">{DIMENSION_LABELS[dim]}</h2>
+                  <div className="flex items-center gap-2 shrink-0 flex-wrap justify-end">
+                    {/* Bloquants */}
+                    <span className={`text-[10px] font-mono px-2 py-0.5 border ${
+                      dimComplete ? 'border-emerald-200 bg-emerald-50 text-emerald-700'
+                      : blockingDimDone > 0 ? 'border-amber-200 bg-amber-50 text-amber-700'
+                      : 'border-red-100 bg-red-50 text-red-500'
+                    }`}>
+                      {blockingDimDone}/{blockingDim.length} bloquant{blockingDim.length !== 1 ? 's' : ''}
+                    </span>
+                    {/* Recommandés */}
+                    {recommendedDim.length > 0 && (
+                      <span className="text-[10px] font-mono px-2 py-0.5 border border-gray-200 bg-gray-50 text-gray-500">
+                        {recommendedDimDone}/{recommendedDim.length} recommandé{recommendedDim.length !== 1 ? 's' : ''}
+                      </span>
+                    )}
+                    {/* Validation admin */}
+                    {validatedCount > 0 && (
+                      <span className="text-[10px] font-mono px-2 py-0.5 border border-emerald-200 bg-emerald-50 text-emerald-600">
+                        ✓ {validatedCount} validé{validatedCount !== 1 ? 's' : ''}
+                      </span>
+                    )}
+                    {insufficientCount > 0 && (
+                      <span className="text-[10px] font-mono px-2 py-0.5 border border-amber-200 bg-amber-50 text-amber-600">
+                        ⚠ {insufficientCount} insuffisant{insufficientCount !== 1 ? 's' : ''}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                {/* Mini barre progression bloquants */}
+                {blockingDim.length > 0 && (
+                  <div className="h-1 bg-gray-100 overflow-hidden">
+                    <div
+                      className={`h-full transition-all duration-300 ${
+                        dimComplete ? 'bg-emerald-500' : blockingDimPct > 0 ? 'bg-amber-400' : 'bg-gray-200'
+                      }`}
+                      style={{ width: `${blockingDimPct}%` }}
+                    />
+                  </div>
+                )}
               </div>
 
               {/* Checklist catalogue */}

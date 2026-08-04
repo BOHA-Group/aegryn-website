@@ -1,9 +1,11 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import type { GradeInput, GradeResult, GradeLetter } from '@/lib/gradeEngine'
 import { runGradeEngine } from '@/lib/gradeEngine'
 import { ChevronDown, ChevronUp, AlertTriangle, CheckCircle2, Calculator, Send, Zap, FileText, XCircle } from 'lucide-react'
+import type { AutoFillResult } from '@/lib/gradeAutoFill'
+import { applyAutoFillToGradeInput } from '@/lib/gradeAutoFill'
 
 export type DataRoomDocEntry = {
   id: string
@@ -263,11 +265,12 @@ function DocList({ dims, docsByCategory }: { dims: string[]; docsByCategory: Rec
 }
 
 export default function GradeEngineForm({
-  assetId, adminToken, docsByCategory = {},
+  assetId, adminToken, docsByCategory = {}, autoFillOverrides,
 }: {
   assetId: string
   adminToken: string
   docsByCategory?: Record<string, DataRoomDocEntry[]>
+  autoFillOverrides?: AutoFillResult['gradeInputOverrides']
 }) {
   const [step, setStep] = useState<FormStep>('input')
   const [open, setOpen] = useState({ code: true, ip: false, finance: false, security: false })
@@ -291,6 +294,28 @@ export default function GradeEngineForm({
   function markSource(field: string, src: SourceType) {
     setInputSources(p => ({ ...p, [field]: src }))
   }
+
+  /* ── Injection auto-fill depuis data room au mount ── */
+  useEffect(() => {
+    if (!autoFillOverrides) return
+    const overrides = autoFillOverrides
+    setInput(prev => applyAutoFillToGradeInput(prev, overrides))
+    // Marquer les champs injectés comme "data room vérifié"
+    const OVERRIDE_KEYS: (keyof typeof autoFillOverrides)[] = [
+      'techDebtDocumented', 'ciCdFunctional', 'apiDocumentation', 'architecture',
+      'activeIPLitigation', 'employeeIPRights', 'openSourceRisk', 'thirdPartyAPIContracted', 'rgpdCompliance',
+      'arrAudited',
+      'mfaOnAdminAccess', 'encryption', 'rgpdDocumented', 'activeSecurityIncident', 'externalCertification', 'criticalVulnsResolved',
+    ]
+    setInputSources(prev => {
+      const next = { ...prev }
+      for (const k of OVERRIDE_KEYS) {
+        if (overrides[k] !== undefined) next[k] = 'verified'
+      }
+      return next
+    })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const [computing, setComputing] = useState(false)
   const [result, setResult] = useState<GradeResult | null>(null)

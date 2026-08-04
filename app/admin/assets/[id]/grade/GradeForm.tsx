@@ -443,7 +443,7 @@ export default function GradeForm({
           </div>
           <div className="p-4">
             <Suspense fallback={<div className="text-[12px] text-gray-400 py-8 text-center">Chargement du moteur…</div>}>
-              <GradeEngineForm assetId={assetId} adminToken={adminToken} docsByCategory={docsByCategory} />
+              <GradeEngineForm assetId={assetId} adminToken={adminToken} docsByCategory={docsByCategory} autoFillOverrides={autoFill?.gradeInputOverrides} />
             </Suspense>
           </div>
         </div>
