@@ -231,7 +231,7 @@ export default function AssetsAdminClient({ rows: initialRows, adminToken, token
                           Grader <ArrowUpRight size={10} />
                         </Link>
                         <Link
-                          href={`/admin/assets/${id}/grade-engine`}
+                          href={`/admin/assets/${id}/grade-engine${tokenQs}`}
                           className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-600 hover:text-emerald-800">
                           Moteur <ArrowUpRight size={10} />
                         </Link>

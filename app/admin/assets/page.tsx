@@ -22,7 +22,7 @@ function evalLabel(e: string) {
 export default async function AdminAssetsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ token?: string; status?: string; eval?: string; delete?: string }>
+  searchParams: Promise<{ token?: string; status?: string; eval?: string; delete?: string; partner_id?: string }>
 }) {
   const params = await searchParams
 
@@ -114,6 +114,25 @@ export default async function AdminAssetsPage({
             </Link>
           ))}
         </div>
+
+        {/* Bannière contextuelle CIFS si provenance partenaire */}
+        {params.partner_id && (
+          <div className="mb-4 bg-indigo-50 border border-indigo-200 px-4 py-3 flex items-center justify-between gap-4">
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-widest text-indigo-600 mb-0.5">Assignation CIFS en cours</p>
+              <p className="font-sans text-[12px] text-indigo-800">
+                Ouvrez le <strong>Moteur Grade</strong> d&apos;un actif pour co-certifier avec le partenaire sélectionné.
+                La co-certification CIFS s&apos;enregistre dans la fiche partenaire via l&apos;onglet Certifications.
+              </p>
+            </div>
+            <Link
+              href={`/admin/partners/${params.partner_id}${tokenQs}`}
+              className="font-mono text-[10px] uppercase tracking-widest text-indigo-600 border border-indigo-300 px-3 py-1.5 hover:border-indigo-500 transition-colors shrink-0"
+            >
+              ← Retour partenaire
+            </Link>
+          </div>
+        )}
 
         {/* Table avec sélection + suppression */}
         <AssetsAdminClient

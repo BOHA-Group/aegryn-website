@@ -45,12 +45,12 @@ function fmtDate(d: unknown) {
 }
 
 /* ── Tables par source ── */
-function ValuationTable({ rows }: { rows: Record<string, unknown>[] }) {
+function ValuationTable({ rows, onDelete }: { rows: Record<string, unknown>[]; onDelete: (id: string) => void }) {
   if (!rows.length) return <EmptyState />
   return (
     <table className="w-full text-[12px] bg-white border border-gray-200">
       <thead className="bg-gray-50 border-b border-gray-200">
-        <tr>{['Date','Email','Grade','Score /100','ARR','Valorisation','Statut','Locale'].map(h => <Th key={h}>{h}</Th>)}</tr>
+        <tr>{['Date','Email','Grade','Score /100','ARR','Valorisation','Statut','Locale',''].map(h => <Th key={h}>{h}</Th>)}</tr>
       </thead>
       <tbody className="divide-y divide-gray-100">
         {rows.map((r, i) => (
@@ -63,6 +63,11 @@ function ValuationTable({ rows }: { rows: Record<string, unknown>[] }) {
             <Td>{r.valuation_low && r.valuation_high ? `${fmtEur(r.valuation_low)} — ${fmtEur(r.valuation_high)}` : '—'}</Td>
             <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
             <Td mono small>{String(r.locale ?? '—')}</Td>
+            <td className="px-4 py-3">
+              <button onClick={() => onDelete(String(r.id))} className="text-[10px] text-red-400 hover:text-red-700 font-mono transition-colors">
+                <Trash2 size={11} />
+              </button>
+            </td>
           </tr>
         ))}
       </tbody>
@@ -131,12 +136,12 @@ function InviteButton({
   )
 }
 
-function CatalogTable({ rows, adminToken }: { rows: Record<string, unknown>[]; adminToken?: string }) {
+function CatalogTable({ rows, adminToken, onDelete }: { rows: Record<string, unknown>[]; adminToken?: string; onDelete: (id: string) => void }) {
   if (!rows.length) return <EmptyState />
   return (
     <table className="w-full text-[12px] bg-white border border-gray-200">
       <thead className="bg-gray-50 border-b border-gray-200">
-        <tr>{['Date','Email','Type','Capacité','Secteurs','Statut','Action'].map(h => <Th key={h}>{h}</Th>)}</tr>
+        <tr>{['Date','Email','Type','Capacité','Secteurs','Statut','Action',''].map(h => <Th key={h}>{h}</Th>)}</tr>
       </thead>
       <tbody className="divide-y divide-gray-100">
         {rows.map((r, i) => (
@@ -152,6 +157,9 @@ function CatalogTable({ rows, adminToken }: { rows: Record<string, unknown>[]; a
                 ? <span className="text-[10px] font-semibold text-emerald-600">Invité ✓</span>
                 : <InviteButton id={String(r.id)} email={String(r.email)} adminToken={adminToken} />}
             </Td>
+            <td className="px-4 py-3">
+              <button onClick={() => onDelete(String(r.id))} className="text-red-400 hover:text-red-700 transition-colors"><Trash2 size={11} /></button>
+            </td>
           </tr>
         ))}
       </tbody>
@@ -159,12 +167,12 @@ function CatalogTable({ rows, adminToken }: { rows: Record<string, unknown>[]; a
   )
 }
 
-function AssessmentTable({ rows }: { rows: Record<string, unknown>[] }) {
+function AssessmentTable({ rows, onDelete }: { rows: Record<string, unknown>[]; onDelete: (id: string) => void }) {
   if (!rows.length) return <EmptyState />
   return (
     <table className="w-full text-[12px] bg-white border border-gray-200">
       <thead className="bg-gray-50 border-b border-gray-200">
-        <tr>{['Date','Nom','Email','Entreprise','Ville','Format','ARR','Statut'].map(h => <Th key={h}>{h}</Th>)}</tr>
+        <tr>{['Date','Nom','Email','Entreprise','Ville','Format','ARR','Statut',''].map(h => <Th key={h}>{h}</Th>)}</tr>
       </thead>
       <tbody className="divide-y divide-gray-100">
         {rows.map((r, i) => (
@@ -177,6 +185,9 @@ function AssessmentTable({ rows }: { rows: Record<string, unknown>[] }) {
             <Td>{String(r.preferred_format ?? '—')}</Td>
             <Td>{String(r.arr_range ?? '—')}</Td>
             <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
+            <td className="px-4 py-3">
+              <button onClick={() => onDelete(String(r.id))} className="text-red-400 hover:text-red-700 transition-colors"><Trash2 size={11} /></button>
+            </td>
           </tr>
         ))}
       </tbody>
@@ -184,13 +195,13 @@ function AssessmentTable({ rows }: { rows: Record<string, unknown>[] }) {
   )
 }
 
-function ProspectsTable({ rows, adminToken }: { rows: Record<string, unknown>[]; adminToken?: string }) {
+function ProspectsTable({ rows, adminToken, onDelete }: { rows: Record<string, unknown>[]; adminToken?: string; onDelete: (id: string) => void }) {
   if (!rows.length) return <EmptyState />
   const PROFILE_LABELS: Record<string, string> = { buyer: 'Acquéreur', seller: 'Cédant', partner: 'Partenaire', undecided: 'Non défini' }
   return (
     <table className="w-full text-[12px] bg-white border border-gray-200">
       <thead className="bg-gray-50 border-b border-gray-200">
-        <tr>{['Date','Nom','Email','Profil','Ticket','Secteurs','Marketing','Statut','Action'].map(h => <Th key={h}>{h}</Th>)}</tr>
+        <tr>{['Date','Nom','Email','Profil','Ticket','Secteurs','Marketing','Statut','Action',''].map(h => <Th key={h}>{h}</Th>)}</tr>
       </thead>
       <tbody className="divide-y divide-gray-100">
         {rows.map((r, i) => (
@@ -208,6 +219,9 @@ function ProspectsTable({ rows, adminToken }: { rows: Record<string, unknown>[];
                 ? <span className="text-[10px] font-semibold text-emerald-600">{r.status === 'invited' ? 'Invité ✓' : 'Converti ✓'}</span>
                 : <InviteButton id={String(r.id)} email={String(r.email)} adminToken={adminToken} profileType={String(r.profile_type ?? '')} table="prospects" />}
             </Td>
+            <td className="px-4 py-3">
+              <button onClick={() => onDelete(String(r.id))} className="text-red-400 hover:text-red-700 transition-colors"><Trash2 size={11} /></button>
+            </td>
           </tr>
         ))}
       </tbody>
@@ -252,13 +266,13 @@ function ApproveAccessButton({ id, email, adminToken }: { id: string; email: str
   )
 }
 
-function AuctionAccessTable({ rows, adminToken }: { rows: Record<string, unknown>[]; adminToken?: string }) {
+function AuctionAccessTable({ rows, adminToken, onDelete }: { rows: Record<string, unknown>[]; adminToken?: string; onDelete: (id: string) => void }) {
   if (!rows.length) return <EmptyState />
   const BUYER_LABELS: Record<string, string> = { pe: 'PE/VC', strategic: 'Stratégique', family_office: 'Family Office', individual: 'Particulier' }
   return (
     <table className="w-full text-[12px] bg-white border border-gray-200">
       <thead className="bg-gray-50 border-b border-gray-200">
-        <tr>{['Date','Nom','Email','Société','Profil','Capacité','Message','Statut','Action'].map(h => <Th key={h}>{h}</Th>)}</tr>
+        <tr>{['Date','Nom','Email','Société','Profil','Capacité','Message','Statut','Action',''].map(h => <Th key={h}>{h}</Th>)}</tr>
       </thead>
       <tbody className="divide-y divide-gray-100">
         {rows.map((r, i) => (
@@ -276,6 +290,9 @@ function AuctionAccessTable({ rows, adminToken }: { rows: Record<string, unknown
                 ? <span className="text-[10px] font-semibold text-emerald-600">Approuvé ✓</span>
                 : <ApproveAccessButton id={String(r.id)} email={String(r.email)} adminToken={adminToken} />}
             </Td>
+            <td className="px-4 py-3">
+              <button onClick={() => onDelete(String(r.id))} className="text-red-400 hover:text-red-700 transition-colors"><Trash2 size={11} /></button>
+            </td>
           </tr>
         ))}
       </tbody>
@@ -283,12 +300,12 @@ function AuctionAccessTable({ rows, adminToken }: { rows: Record<string, unknown
   )
 }
 
-function AlliancesTable({ rows }: { rows: Record<string, unknown>[] }) {
+function AlliancesTable({ rows, onDelete }: { rows: Record<string, unknown>[]; onDelete: (id: string) => void }) {
   if (!rows.length) return <EmptyState />
   return (
     <table className="w-full text-[12px] bg-white border border-gray-200">
       <thead className="bg-gray-50 border-b border-gray-200">
-        <tr>{['Date','Organisation','Type','Email','Pays','Statut'].map(h => <Th key={h}>{h}</Th>)}</tr>
+        <tr>{['Date','Organisation','Type','Email','Pays','Statut',''].map(h => <Th key={h}>{h}</Th>)}</tr>
       </thead>
       <tbody className="divide-y divide-gray-100">
         {rows.map((r, i) => (
@@ -299,6 +316,9 @@ function AlliancesTable({ rows }: { rows: Record<string, unknown>[] }) {
             <Td><a href={`mailto:${r.email}`} className="hover:text-blue-600">{String(r.email)}</a></Td>
             <Td>{String(r.country ?? '—')}</Td>
             <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
+            <td className="px-4 py-3">
+              <button onClick={() => onDelete(String(r.id))} className="text-red-400 hover:text-red-700 transition-colors"><Trash2 size={11} /></button>
+            </td>
           </tr>
         ))}
       </tbody>
@@ -364,6 +384,28 @@ export default function AdminLeadsClient({
       if (!res.ok) throw new Error(data?.error ?? 'Erreur inconnue')
       setRows(prev => prev.filter(r => !ids.includes(String(r.id))))
       setSelected(new Set())
+      startTransition(() => router.refresh())
+    } catch (e) {
+      setDeleteError(e instanceof Error ? e.message : 'Erreur inconnue')
+    } finally {
+      setDeleting(false)
+    }
+  }
+
+  async function deleteOne(id: string) {
+    if (!window.confirm('Supprimer cet enregistrement ? Action irréversible.')) return
+    setDeleting(true)
+    setDeleteError(null)
+    try {
+      const res = await fetch(`/api/admin/leads${adminToken ? `?token=${adminToken}` : ''}`, {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ source, ids: [id] }),
+      })
+      const data = await res.json()
+      if (!res.ok) throw new Error(data?.error ?? 'Erreur inconnue')
+      setRows(prev => prev.filter(r => String(r.id) !== id))
+      setSelected(prev => { const n = new Set(prev); n.delete(id); return n })
       startTransition(() => router.refresh())
     } catch (e) {
       setDeleteError(e instanceof Error ? e.message : 'Erreur inconnue')
@@ -466,12 +508,12 @@ export default function AdminLeadsClient({
 
       {/* Table */}
       <div className="overflow-x-auto">
-        {source === 'valuation'      && <ValuationTable    rows={rows} />}
-        {source === 'catalog'          && <CatalogTable      rows={rows} adminToken={adminToken} />}
-        {source === 'assessment'       && <AssessmentTable   rows={rows} />}
-        {source === 'alliances'        && <AlliancesTable    rows={rows} />}
-        {source === 'prospects'        && <ProspectsTable    rows={rows} adminToken={adminToken} />}
-        {source === 'auction_access'   && <AuctionAccessTable rows={rows} adminToken={adminToken} />}
+        {source === 'valuation'      && <ValuationTable    rows={rows} onDelete={deleteOne} />}
+        {source === 'catalog'        && <CatalogTable      rows={rows} adminToken={adminToken} onDelete={deleteOne} />}
+        {source === 'assessment'     && <AssessmentTable   rows={rows} onDelete={deleteOne} />}
+        {source === 'alliances'      && <AlliancesTable    rows={rows} onDelete={deleteOne} />}
+        {source === 'prospects'      && <ProspectsTable    rows={rows} adminToken={adminToken} onDelete={deleteOne} />}
+        {source === 'auction_access' && <AuctionAccessTable rows={rows} adminToken={adminToken} onDelete={deleteOne} />}
       </div>
 
     </div>

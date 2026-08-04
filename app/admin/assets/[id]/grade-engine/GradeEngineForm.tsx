@@ -445,6 +445,242 @@ export default function GradeEngineForm({ assetId, adminToken }: { assetId: stri
         </Field>
       </Section>
 
+      {/* SOUS-CODES DÉTAILLÉS CIFS */}
+      <div className="border border-gray-200 bg-white">
+        <div className="px-5 py-3 bg-gray-50 flex items-center justify-between">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-gray-600 font-semibold">
+            Sous-codes détaillés
+          </p>
+          <p className="font-sans text-[10px] text-gray-400">
+            Cochez toutes les remarques applicables — alimente la notation et le refus automatique.
+          </p>
+        </div>
+        <div className="px-5 py-4 grid grid-cols-1 gap-6 sm:grid-cols-2">
+
+          {/* C — Code */}
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-3 border-b border-gray-100 pb-2">
+              C — Code
+            </p>
+            <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">Tests</p>
+            {([
+              { id: 'C-11', label: 'Tests unitaires complets (>80% coverage)', field: 'testCoverage', value: 85, op: 'set' },
+              { id: 'C-12', label: 'Tests partiels (40-80% coverage)',          field: 'testCoverage', value: 60, op: 'set' },
+              { id: 'C-13', label: 'Tests insuffisants (<40% coverage)',         field: 'testCoverage', value: 20, op: 'set' },
+              { id: 'C-14', label: 'Tests absents',                              field: 'testCoverage', value: 0,  op: 'set' },
+            ] as const).map(item => {
+              const isChecked = (() => {
+                if (item.id === 'C-11') return input.code.testCoverage >= 80
+                if (item.id === 'C-12') return input.code.testCoverage >= 40 && input.code.testCoverage < 80
+                if (item.id === 'C-13') return input.code.testCoverage > 0 && input.code.testCoverage < 40
+                return input.code.testCoverage === 0
+              })()
+              return (
+                <label key={item.id} className="flex items-start gap-2 cursor-pointer mb-1.5">
+                  <input type="checkbox" checked={isChecked}
+                    onChange={() => setCode('testCoverage', item.value)}
+                    className="mt-0.5 w-4 h-4 border border-gray-300 accent-ag-navy shrink-0"
+                  />
+                  <span className="font-sans text-[11px] text-gray-700">
+                    <span className="font-mono text-[10px] text-gray-400 mr-1">{item.id}</span>
+                    {item.label}
+                  </span>
+                </label>
+              )
+            })}
+
+            <p className="font-sans text-[10px] text-gray-400 mt-3 mb-2 uppercase tracking-widest">CI/CD & Architecture</p>
+            {([
+              { id: 'C-21', label: 'CI/CD fonctionnel et automatisé',        action: () => setCode('ciCdFunctional', 'yes') },
+              { id: 'C-22', label: 'CI/CD absent',                            action: () => setCode('ciCdFunctional', 'no') },
+              { id: 'C-31', label: 'Architecture découplée / scalable',       action: () => setCode('architecture', 'decoupled') },
+              { id: 'C-32', label: 'Architecture partiellement découplée',    action: () => setCode('architecture', 'partial') },
+              { id: 'C-33', label: 'Architecture monolithique',               action: () => setCode('architecture', 'monolithic') },
+            ] as const).map(item => {
+              const isChecked = (() => {
+                if (item.id === 'C-21') return input.code.ciCdFunctional === 'yes'
+                if (item.id === 'C-22') return input.code.ciCdFunctional === 'no'
+                if (item.id === 'C-31') return input.code.architecture === 'decoupled'
+                if (item.id === 'C-32') return input.code.architecture === 'partial'
+                if (item.id === 'C-33') return input.code.architecture === 'monolithic'
+                return false
+              })()
+              return (
+                <label key={item.id} className="flex items-start gap-2 cursor-pointer mb-1.5">
+                  <input type="checkbox" checked={isChecked}
+                    onChange={() => item.action()}
+                    className="mt-0.5 w-4 h-4 border border-gray-300 accent-ag-navy shrink-0"
+                  />
+                  <span className="font-sans text-[11px] text-gray-700">
+                    <span className="font-mono text-[10px] text-gray-400 mr-1">{item.id}</span>
+                    {item.label}
+                  </span>
+                </label>
+              )
+            })}
+          </div>
+
+          {/* I — IP & Droits */}
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-3 border-b border-gray-100 pb-2">
+              I — IP & Droits
+            </p>
+            <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">Marques & Identité</p>
+            {([
+              { id: 'I-11', label: 'Marque verbale déposée (pays principal)',           action: () => setIP('trademarksJurisdictions', Math.max(1, input.ip.trademarksJurisdictions)) },
+              { id: 'I-12', label: 'Marque combinée déposée',                           action: () => setIP('trademarksJurisdictions', Math.max(2, input.ip.trademarksJurisdictions)) },
+              { id: 'I-13', label: 'Marque déposée — extension internationale (EUIPO/WIPO)', action: () => setIP('trademarksJurisdictions', Math.max(3, input.ip.trademarksJurisdictions)) },
+              { id: 'I-14', label: 'Marque en cours de dépôt',                          action: () => setIP('trademarksJurisdictions', 0) },
+            ] as const).map(item => {
+              const isChecked = (() => {
+                if (item.id === 'I-11') return input.ip.trademarksJurisdictions >= 1
+                if (item.id === 'I-12') return input.ip.trademarksJurisdictions >= 2
+                if (item.id === 'I-13') return input.ip.trademarksJurisdictions >= 3
+                if (item.id === 'I-14') return input.ip.trademarksJurisdictions === 0
+                return false
+              })()
+              return (
+                <label key={item.id} className="flex items-start gap-2 cursor-pointer mb-1.5">
+                  <input type="checkbox" checked={isChecked}
+                    onChange={() => item.action()}
+                    className="mt-0.5 w-4 h-4 border border-gray-300 accent-ag-navy shrink-0"
+                  />
+                  <span className="font-sans text-[11px] text-gray-700">
+                    <span className="font-mono text-[10px] text-gray-400 mr-1">{item.id}</span>
+                    {item.label}
+                  </span>
+                </label>
+              )
+            })}
+
+            <p className="font-sans text-[10px] text-gray-400 mt-3 mb-2 uppercase tracking-widest">Droits & RGPD</p>
+            {([
+              { id: 'I-21', label: 'Droits IP employés complets',      action: () => setIP('employeeIPRights', 'complete') },
+              { id: 'I-22', label: 'Droits IP partiels',               action: () => setIP('employeeIPRights', 'partial') },
+              { id: 'I-23', label: 'Droits IP absents',                action: () => setIP('employeeIPRights', 'absent') },
+              { id: 'I-31', label: 'Conformité RGPD complète',         action: () => setIP('rgpdCompliance', 'complete') },
+              { id: 'I-32', label: 'Conformité RGPD partielle',        action: () => setIP('rgpdCompliance', 'partial') },
+              { id: 'I-33', label: 'Conformité RGPD absente',          action: () => setIP('rgpdCompliance', 'absent') },
+            ] as const).map(item => {
+              const isChecked = (() => {
+                if (item.id === 'I-21') return input.ip.employeeIPRights === 'complete'
+                if (item.id === 'I-22') return input.ip.employeeIPRights === 'partial'
+                if (item.id === 'I-23') return input.ip.employeeIPRights === 'absent'
+                if (item.id === 'I-31') return input.ip.rgpdCompliance === 'complete'
+                if (item.id === 'I-32') return input.ip.rgpdCompliance === 'partial'
+                if (item.id === 'I-33') return input.ip.rgpdCompliance === 'absent'
+                return false
+              })()
+              return (
+                <label key={item.id} className="flex items-start gap-2 cursor-pointer mb-1.5">
+                  <input type="checkbox" checked={isChecked}
+                    onChange={() => item.action()}
+                    className="mt-0.5 w-4 h-4 border border-gray-300 accent-ag-navy shrink-0"
+                  />
+                  <span className="font-sans text-[11px] text-gray-700">
+                    <span className="font-mono text-[10px] text-gray-400 mr-1">{item.id}</span>
+                    {item.label}
+                  </span>
+                </label>
+              )
+            })}
+          </div>
+
+          {/* F — Finance */}
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-3 border-b border-gray-100 pb-2">
+              F — Finance
+            </p>
+            <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">ARR & Audit</p>
+            {([
+              { id: 'F-11', label: 'ARR audité par commissaire aux comptes',   action: () => setFin('arrAudited', 'yes') },
+              { id: 'F-12', label: 'ARR non audité',                           action: () => setFin('arrAudited', 'no') },
+              { id: 'F-21', label: 'Marge brute >70%',    action: () => setFin('grossMargin', 75) },
+              { id: 'F-22', label: 'Marge brute 40-70%',  action: () => setFin('grossMargin', 55) },
+              { id: 'F-23', label: 'Marge brute <40%',    action: () => setFin('grossMargin', 25) },
+              { id: 'F-31', label: 'Churn mensuel <1%',   action: () => setFin('monthlyChurn', 0.5) },
+              { id: 'F-32', label: 'Churn mensuel 1-3%',  action: () => setFin('monthlyChurn', 2) },
+              { id: 'F-33', label: 'Churn mensuel >3%',   action: () => setFin('monthlyChurn', 5) },
+            ] as const).map(item => {
+              const isChecked = (() => {
+                if (item.id === 'F-11') return input.finance.arrAudited === 'yes'
+                if (item.id === 'F-12') return input.finance.arrAudited === 'no'
+                if (item.id === 'F-21') return input.finance.grossMargin >= 70
+                if (item.id === 'F-22') return input.finance.grossMargin >= 40 && input.finance.grossMargin < 70
+                if (item.id === 'F-23') return input.finance.grossMargin < 40
+                if (item.id === 'F-31') return input.finance.monthlyChurn < 1
+                if (item.id === 'F-32') return input.finance.monthlyChurn >= 1 && input.finance.monthlyChurn <= 3
+                if (item.id === 'F-33') return input.finance.monthlyChurn > 3
+                return false
+              })()
+              return (
+                <label key={item.id} className="flex items-start gap-2 cursor-pointer mb-1.5">
+                  <input type="checkbox" checked={isChecked}
+                    onChange={() => item.action()}
+                    className="mt-0.5 w-4 h-4 border border-gray-300 accent-ag-navy shrink-0"
+                  />
+                  <span className="font-sans text-[11px] text-gray-700">
+                    <span className="font-mono text-[10px] text-gray-400 mr-1">{item.id}</span>
+                    {item.label}
+                  </span>
+                </label>
+              )
+            })}
+          </div>
+
+          {/* S — Sécurité */}
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-3 border-b border-gray-100 pb-2">
+              S — Sécurité
+            </p>
+            <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">Pentest & MFA</p>
+            {([
+              { id: 'S-11', label: 'Pentest < 12 mois',   action: () => setSec('lastPentestMonthsAgo', 6) },
+              { id: 'S-12', label: 'Pentest 12-24 mois',  action: () => setSec('lastPentestMonthsAgo', 18) },
+              { id: 'S-13', label: 'Pentest > 24 mois',   action: () => setSec('lastPentestMonthsAgo', 36) },
+              { id: 'S-14', label: 'Jamais de pentest',   action: () => setSec('lastPentestMonthsAgo', 9999) },
+              { id: 'S-21', label: 'MFA sur tous les accès admin',    action: () => setSec('mfaOnAdminAccess', 'yes') },
+              { id: 'S-22', label: 'MFA absent ou partiel',           action: () => setSec('mfaOnAdminAccess', 'no') },
+              { id: 'S-31', label: 'Chiffrement complet (repos + transit)', action: () => setSec('encryption', 'full') },
+              { id: 'S-32', label: 'Chiffrement partiel',             action: () => setSec('encryption', 'partial') },
+              { id: 'S-33', label: 'Chiffrement absent',              action: () => setSec('encryption', 'none') },
+              { id: 'S-41', label: 'Certification ISO 27001 / SOC 2 obtenue', action: () => setSec('externalCertification', 'yes') },
+              { id: 'S-42', label: 'Certification en cours',          action: () => setSec('externalCertification', 'in_progress') },
+              { id: 'S-43', label: 'Aucune certification',            action: () => setSec('externalCertification', 'no') },
+            ] as const).map(item => {
+              const isChecked = (() => {
+                if (item.id === 'S-11') return input.security.lastPentestMonthsAgo < 12
+                if (item.id === 'S-12') return input.security.lastPentestMonthsAgo >= 12 && input.security.lastPentestMonthsAgo < 24
+                if (item.id === 'S-13') return input.security.lastPentestMonthsAgo >= 24 && input.security.lastPentestMonthsAgo < 9999
+                if (item.id === 'S-14') return input.security.lastPentestMonthsAgo >= 9999
+                if (item.id === 'S-21') return input.security.mfaOnAdminAccess === 'yes'
+                if (item.id === 'S-22') return input.security.mfaOnAdminAccess === 'no'
+                if (item.id === 'S-31') return input.security.encryption === 'full'
+                if (item.id === 'S-32') return input.security.encryption === 'partial'
+                if (item.id === 'S-33') return input.security.encryption === 'none'
+                if (item.id === 'S-41') return input.security.externalCertification === 'yes'
+                if (item.id === 'S-42') return input.security.externalCertification === 'in_progress'
+                if (item.id === 'S-43') return input.security.externalCertification === 'no'
+                return false
+              })()
+              return (
+                <label key={item.id} className="flex items-start gap-2 cursor-pointer mb-1.5">
+                  <input type="checkbox" checked={isChecked}
+                    onChange={() => item.action()}
+                    className="mt-0.5 w-4 h-4 border border-gray-300 accent-ag-navy shrink-0"
+                  />
+                  <span className="font-sans text-[11px] text-gray-700">
+                    <span className="font-mono text-[10px] text-gray-400 mr-1">{item.id}</span>
+                    {item.label}
+                  </span>
+                </label>
+              )
+            })}
+          </div>
+
+        </div>
+      </div>
+
       {/* CTA */}
       <div className="pt-2">
         <button type="button" onClick={compute} disabled={computing}
