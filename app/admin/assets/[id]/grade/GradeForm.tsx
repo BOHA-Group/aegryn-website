@@ -213,8 +213,7 @@ export default function GradeForm({
     finally { setAutoFillLoading(false) }
   }
 
-  // eslint-disable-next-line
-  useEffect(() => { void loadAutoFill() }, [assetId])
+  useEffect(() => { void loadAutoFill() }, [assetId]) // mount only — loadAutoFill is stable
 
   function applyAutoFill() {
     if (!autoFill) return

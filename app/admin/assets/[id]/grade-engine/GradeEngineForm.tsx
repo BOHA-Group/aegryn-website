@@ -314,8 +314,7 @@ export default function GradeEngineForm({
       }
       return next
     })
-  // eslint-disable-next-line
-  }, [])
+  }, []) // mount only — applies initial overrides once
 
   const [computing, setComputing] = useState(false)
   const [result, setResult] = useState<GradeResult | null>(null)
