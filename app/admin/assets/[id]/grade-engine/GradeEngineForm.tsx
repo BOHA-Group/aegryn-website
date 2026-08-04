@@ -314,7 +314,7 @@ export default function GradeEngineForm({
       }
       return next
     })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line
   }, [])
 
   const [computing, setComputing] = useState(false)
