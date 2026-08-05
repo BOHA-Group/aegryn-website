@@ -208,7 +208,7 @@ export default async function SellerNdaViewPage() {
 
           <Article num="5" title="Durée">
             Les présentes obligations s&apos;appliquent pendant toute la durée du processus AEGRYN et pendant
-            une période de <strong>3 ans</strong> suivant la conclusion ou l&apos;abandon du processus.
+            une période de <strong>3 ans</strong>{' '}suivant la conclusion ou l&apos;abandon du processus.
             L&apos;obligation de paiement des honoraires survit à toute résiliation.
           </Article>
 
