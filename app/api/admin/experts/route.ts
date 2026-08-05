@@ -125,6 +125,31 @@ export async function PATCH(req: NextRequest) {
     }
 
     const patch: Record<string, unknown> = { ...rest }
+
+    // Si on tente de publier, vérifier que le KYC du partenaire est approuvé
+    if (is_visible === true) {
+      const { data: ep } = await supa
+        .from('expert_profiles')
+        .select('user_id')
+        .eq('id', id)
+        .maybeSingle()
+
+      if (ep?.user_id) {
+        const { data: ownerProfile } = await supa
+          .from('profiles')
+          .select('kyc_status')
+          .eq('id', ep.user_id)
+          .maybeSingle() as { data: { kyc_status: string | null } | null }
+
+        if (ownerProfile?.kyc_status !== 'approved') {
+          return NextResponse.json(
+            { error: 'kyc_not_approved', message: 'Le KYC du partenaire doit être approuvé avant la publication de la fiche.' },
+            { status: 422 }
+          )
+        }
+      }
+    }
+
     if (is_visible !== undefined) {
       patch.is_visible    = is_visible
       patch.verified_at   = is_visible ? new Date().toISOString() : null

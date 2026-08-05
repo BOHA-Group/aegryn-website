@@ -30,6 +30,7 @@ export default async function AdminExpertsPage({
         profile:user_id (
           email,
           roles,
+          kyc_status,
           expert_plan,
           expert_plan_start
         )

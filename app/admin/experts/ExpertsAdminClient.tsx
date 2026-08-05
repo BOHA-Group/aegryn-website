@@ -39,6 +39,7 @@ type ExpertProfile = {
   profile: {
     email:              string
     roles:              string[]
+    kyc_status:         string | null
     expert_plan:        string | null
     expert_plan_start:  string | null
   } | null
@@ -181,14 +182,22 @@ function ProfileRow({
   const [loading,      setLoading]      = useState(false)
   const [refuseReason, setRefuseReason] = useState('')
   const [showRefuse,   setShowRefuse]   = useState(false)
+  const [patchError,   setPatchError]   = useState<string | null>(null)
 
   async function patchProfile(updates: Record<string, unknown>) {
     setLoading(true)
-    await fetch(`/api/admin/experts${tokenQs}`, {
+    setPatchError(null)
+    const res  = await fetch(`/api/admin/experts${tokenQs}`, {
       method:  'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ table: 'expert_profiles', id: profile.id, ...updates }),
     })
+    if (!res.ok) {
+      const data = await res.json() as { error?: string; message?: string }
+      setPatchError(data.message ?? data.error ?? 'Erreur inconnue.')
+      setLoading(false)
+      return
+    }
     setLoading(false)
     onRefresh()
   }
@@ -217,7 +226,9 @@ function ProfileRow({
     onRefresh()
   }
 
-  const plan = profile.profile?.expert_plan ?? null
+  const plan       = profile.profile?.expert_plan ?? null
+  const kycStatus  = profile.profile?.kyc_status ?? null
+  const kycOk      = kycStatus === 'approved'
 
   return (
     <div className="border border-gray-200 bg-white">
@@ -252,6 +263,13 @@ function ProfileRow({
             {profile.first_name} {profile.last_name}
           </span>
           <span className="font-mono text-[10px] text-ag-apex shrink-0 hidden sm:block">{profile.profession}</span>
+          <span className={`font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 border ${
+            kycOk
+              ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+              : 'bg-amber-50 text-amber-600 border-amber-200'
+          }`}>
+            KYC {kycOk ? '✓' : kycStatus ?? 'pending'}
+          </span>
           <span className="font-sans text-[12px] text-gray-400 truncate hidden md:block">{profile.profile?.email ?? '—'}</span>
         </div>
         <div className="flex items-center gap-3 shrink-0">
@@ -281,11 +299,23 @@ function ProfileRow({
           </div>
 
           {/* Actions fiche */}
+          {patchError && (
+            <div className="mb-3 bg-red-50 border border-red-200 px-3 py-2 text-[11px] text-red-700">
+              {patchError}
+            </div>
+          )}
           <div className="flex flex-wrap gap-2 mb-3">
             {!profile.is_visible && (
-              <button onClick={() => patchProfile({ is_visible: true })} disabled={loading}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-emerald-200 text-emerald-700 hover:bg-emerald-50 disabled:opacity-50 transition-colors">
-                ✓ Approuver la fiche
+              <button
+                onClick={() => patchProfile({ is_visible: true })}
+                disabled={loading || !kycOk}
+                title={!kycOk ? 'KYC du partenaire non approuvé — publication impossible' : undefined}
+                className={`font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border transition-colors ${
+                  kycOk
+                    ? 'border-emerald-200 text-emerald-700 hover:bg-emerald-50 disabled:opacity-50'
+                    : 'border-amber-200 text-amber-500 cursor-not-allowed opacity-60'
+                }`}>
+                ✓ Approuver{!kycOk ? ' (KYC requis)' : ''}
               </button>
             )}
             {profile.is_visible && (
