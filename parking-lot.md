@@ -45,3 +45,45 @@ des événements qui mériteraient des notifications in-app pour les deux partie
 - Intégrer dans le webhook Stripe (`applyReferralReward`) et dans l'API admin (`/api/admin/expert/subscription`)
 
 **Priorité :** Moyenne — à traiter après stabilisation du flux Stripe + parrainage.
+
+---
+
+## Factures admin — Bouton "Enregistrer et envoyer" + email amélioré
+
+**Contexte :**
+Le bouton "Enregistrer + Envoyer email" a été temporairement supprimé (workflow manuel). À remettre.
+
+**Ce qui est à faire :**
+1. Remettre le bouton "Enregistrer et envoyer" dans `InvoiceEditor.tsx`
+2. L'appel API existe déjà (`send_email: true` dans le PATCH) — câblage à rétablir
+3. **Email :** adresse expéditeur = `finance@boha-group.com` (pas `no-reply@boha-group.com`)
+4. **Contenu email :** ne pas mentionner IBAN/BOHA-Group — inclure à la place un **lien de paiement Stripe** directement dans le corps de l'email
+5. Ajouter une phrase de remerciement et salutation avant la signature (ex: "Nous vous remercions de votre confiance. N'hésitez pas à nous contacter pour toute question.")
+6. **Template PDF :** retirer aussi toute mention IBAN — remplacer par "Règlement par lien de paiement transmis séparément"
+
+**Fichiers concernés :**
+- `app/admin/invoices/[id]/InvoiceEditor.tsx` — remettre le bouton + état `sent`
+- `app/api/admin/invoices/[id]/route.ts` — modifier `send_email` block (from, contenu, lien Stripe)
+- `app/api/admin/invoices/[id]/pdf/route.ts` — retirer mention IBAN du template HTML
+
+**Priorité :** Haute — à traiter prochainement.
+
+---
+
+## Liens de paiement Stripe — Certifications AEGRYN
+
+**Contexte :**
+Créer deux liens de paiement Stripe pour les certifications partenaires (CAS 3 / accréditation).
+
+**À créer dans Stripe Dashboard (mode production) :**
+| Produit | Montant | Usage |
+|---|---|---|
+| Certification AEGRYN — Niveau 1 | CHF 2 000 | Accréditation partenaire standard |
+| Certification AEGRYN — Niveau 2 | CHF 5 000 | Accréditation partenaire premium |
+
+**Actions :**
+1. Créer les Payment Links dans le Stripe Dashboard (production)
+2. Stocker les URLs dans les variables d'environnement (ex: `STRIPE_CERT_2000_URL`, `STRIPE_CERT_5000_URL`)
+3. Intégrer les liens dans les emails de facturation certification (voir point ci-dessus)
+
+**Priorité :** Haute — nécessaire pour monétiser les certifications partenaires.
