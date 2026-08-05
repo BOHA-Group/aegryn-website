@@ -49,7 +49,7 @@ export default async function PartnerNdaPage() {
   const fullName = (p?.full_name as string | null) ?? user.email
 
   return (
-    <div className="p-8 max-w-3xl">
+    <div className="max-w-3xl mx-auto px-6 py-10 space-y-6">
 
       <div className="mb-8">
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
