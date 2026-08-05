@@ -35,7 +35,6 @@ export async function POST(req: NextRequest) {
     .single()
 
   if (error) {
-    console.error('[partner/introductions] insert error:', error)
     return NextResponse.json({ error: 'Failed to create introduction' }, { status: 500 })
   }
 

@@ -75,7 +75,7 @@ export default async function AdminKycPage({
       declared_capacity_min_chf: null,
       declared_capacity_max_chf: null,
       created_at:  null,
-      _partnerOnly: true,
+      _roles:      Array.isArray(p.roles) ? p.roles : [],
     }))
 
   const rows = [...(kycData ?? []) as Record<string, unknown>[], ...partnerRows]
@@ -103,7 +103,7 @@ export default async function AdminKycPage({
           <div>
             <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">AEGRYN ADMIN</p>
             <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">KYC — File à traiter</h1>
-            <p className="text-[12px] text-gray-400 mt-1">Validation des documents d'identité, KYC et UBO (buyer + seller)</p>
+            <p className="text-[12px] text-gray-400 mt-1">Validation des documents d&apos;identité, KYC et UBO — Acquéreurs, Cédants et Partenaires</p>
           </div>
           <div className="flex gap-2">
             <Link href={`/admin${tokenQs}`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
@@ -154,9 +154,17 @@ export default async function AdminKycPage({
                       <td className="px-4 py-3 font-mono text-gray-500 whitespace-nowrap">{fmtDate(r.created_at)}</td>
                       <td className="px-4 py-3 font-semibold text-gray-800">
                         {String(r.full_name ?? '—')}
-                        {Boolean(r._partnerOnly) && (
-                          <span className="ml-2 font-mono text-[9px] uppercase tracking-widest text-ag-apex border border-ag-apex/30 px-1 py-0.5">Partenaire</span>
-                        )}
+                        {Array.isArray(r._roles) && (r._roles as string[]).length > 0 && (() => {
+                          const roles = r._roles as string[]
+                          const label = roles.includes('seller') && !roles.includes('buyer') ? 'Cédant'
+                            : roles.includes('partner') ? 'Partenaire'
+                            : roles.includes('seller') ? 'Cédant'
+                            : 'Utilisateur'
+                          const cls = roles.includes('seller') && !roles.includes('partner')
+                            ? 'text-amber-700 border-amber-300'
+                            : 'text-ag-apex border-ag-apex/30'
+                          return <span className={`ml-2 font-mono text-[9px] uppercase tracking-widest border px-1 py-0.5 ${cls}`}>{label}</span>
+                        })()}
                       </td>
                       <td className="px-4 py-3 text-gray-600">{String(r.company_name ?? '—')}</td>
                       <td className="px-4 py-3 font-mono text-[11px] text-gray-500">{String(r.country ?? '—')}</td>
