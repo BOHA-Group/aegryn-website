@@ -51,8 +51,8 @@ export default async function AccountPage() {
     .order('signed_at', { ascending: false })
 
   return (
-    <div className="pb-12 px-4 pt-10">
-      <div className="max-w-xl mx-auto">
+    <div className="p-8">
+      <div className="max-w-2xl">
 
         {/* Header */}
         <div className="mb-10">

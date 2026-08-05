@@ -4,7 +4,6 @@ import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import PartnerNav from './PartnerNav'
 import ViewSwitcher    from '@/app/client/ViewSwitcher'
-import { NDA_VERSIONS } from '@/lib/ndaVersions'
 import KycBanner from '@/components/client/KycBanner'
 import { LogOut } from 'lucide-react'
 
@@ -23,9 +22,8 @@ export default async function PartnerLayout({ children }: { children: React.Reac
   const isPartner  = roles.includes('partner')
   if (!isPartner) redirect('/client/my-assets')
 
-  const ndaOk = (profile as Record<string,unknown> | null)?.partner_nda_accepted_at
-    && (profile as Record<string,unknown> | null)?.partner_nda_version === NDA_VERSIONS.partner
-  if (!ndaOk) redirect('/client/nda/partner')
+  const ndaSigned = Boolean((profile as Record<string,unknown> | null)?.partner_nda_accepted_at)
+  if (!ndaSigned) redirect('/client/nda/partner')
 
   const hasBuyer  = roles.includes('buyer')
   const hasSeller = roles.includes('seller')

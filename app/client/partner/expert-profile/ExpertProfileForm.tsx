@@ -205,7 +205,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
   const canSubmit = canPublish
 
   return (
-    <div className="xl:grid xl:grid-cols-[1fr_340px] xl:gap-8 xl:items-start">
+    <div className="xl:grid xl:grid-cols-[1fr_340px] xl:gap-8 xl:items-start xl:min-h-full">
 
     {/* ── Colonne formulaire ── */}
     <form onSubmit={handleSubmit} className="space-y-8">
@@ -470,7 +470,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
     </form>
 
     {/* ── Colonne preview sticky ── */}
-    <div className="hidden xl:block">
+    <div className="hidden xl:block xl:self-start">
       <div className="sticky top-[calc(4rem+1.5rem)] space-y-3">
         <div className="flex items-center justify-between">
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">

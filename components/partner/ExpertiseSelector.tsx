@@ -127,6 +127,9 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
   const isSingleCat = availableCategories.length === 1
 
   const handleDimension = (dim: Dimension) => {
+    // Ne rien faire si on reclique sur la même dimension — évite de purger les sélections
+    if (value.dimension === dim) return
+
     const cats        = getCategoriesByDimension(dim)
     const catIds      = new Set(cats.map(c => c.id))
     // Conserver les catégories déjà sélectionnées si elles existent dans la nouvelle dimension
@@ -135,12 +138,9 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
       ? [cats[0].id]
       : keptCats
 
-    // Conserver les spécialités dont la catégorie parente est dans finalCats
-    const keptCatSet  = new Set(finalCats)
-    const keptSpecs   = value.specialties.filter(specId => {
-      const cat = EXPERTISE_TAXONOMY.find(c => c.specialties.some(s => s.id === specId))
-      return cat && keptCatSet.has(cat.id)
-    })
+    // Conserver les spécialités dont la catégorie parente est valide dans la nouvelle dimension
+    const validSpecIds = new Set(cats.flatMap(c => c.specialties.map(s => s.id)))
+    const keptSpecs   = value.specialties.filter(specId => validSpecIds.has(specId))
 
     onChange({ dimension: dim, categories: finalCats, specialties: keptSpecs })
   }
