@@ -15,9 +15,10 @@ const SECTIONS = [
   {
     label: 'Transaction',
     items: [
-      { href: '/admin/offers',       label: 'Offres' },
-      { href: '/admin/transactions', label: 'Pipeline PTT' },
-      { href: '/admin/commissions',  label: 'Commissions' },
+      { href: '/admin/offers',         label: 'Offres' },
+      { href: '/admin/transactions',   label: 'Pipeline PTT' },
+      { href: '/admin/introductions',  label: 'Introductions' },
+      { href: '/admin/commissions',    label: 'Commissions' },
     ],
   },
   {

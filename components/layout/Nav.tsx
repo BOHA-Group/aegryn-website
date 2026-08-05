@@ -5,7 +5,8 @@ import NextLink          from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useState, useRef, useEffect, type ComponentProps } from 'react'
 import { Menu, X, ChevronDown, User, UserCircle } from 'lucide-react'
-import LanguageSwitcher  from '@/components/layout/LanguageSwitcher'
+import LanguageSwitcher   from '@/components/layout/LanguageSwitcher'
+import NotificationBell   from '@/components/client/NotificationBell'
 import { AegrynLogo }   from '@/components/brand/AegrynLogo'
 import { gsap }          from '@/lib/gsap'
 
@@ -315,6 +316,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
 
         {/* Right side: locale + client + CTA */}
         <div ref={rightRef} className="hidden lg:flex items-center gap-5">
+          {user && <NotificationBell />}
           <LanguageSwitcher />
 
           {user ? (

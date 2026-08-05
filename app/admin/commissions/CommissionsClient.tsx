@@ -168,7 +168,7 @@ export default function CommissionsClient({ transactions, tiers, tokenQs }: Prop
           </div>
 
           {/* Calculateur + grille — panneau flottant */}
-          <div className="sticky top-6 space-y-6">
+          <div className="sticky top-[calc(4rem+1.5rem)] space-y-6">
 
             {/* Note partenaires */}
             <div className="bg-blue-50 border border-blue-200 px-4 py-3">

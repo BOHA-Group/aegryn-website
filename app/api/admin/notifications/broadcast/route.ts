@@ -92,7 +92,6 @@ export async function POST(req: NextRequest) {
   const { data: broadcast, error: bcErr } = await supa
     .from('email_broadcasts')
     .insert({
-      admin_id:       null,
       target_role,
       subject,
       title,
