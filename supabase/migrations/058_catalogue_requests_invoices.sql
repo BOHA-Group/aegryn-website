@@ -21,13 +21,9 @@ CREATE TABLE IF NOT EXISTS public.catalogue_requests (
   admin_note       TEXT,
   -- Délais contractuels
   -- Admission = J0, catalogue ouvert à J+15, visible acquéreurs à J+45
-  admitted_at      TIMESTAMPTZ,
-  catalogue_open_at  TIMESTAMPTZ GENERATED ALWAYS AS (
-    CASE WHEN admitted_at IS NOT NULL THEN admitted_at + INTERVAL '15 days' ELSE NULL END
-  ) STORED,
-  buyer_visible_at TIMESTAMPTZ GENERATED ALWAYS AS (
-    CASE WHEN admitted_at IS NOT NULL THEN admitted_at + INTERVAL '45 days' ELSE NULL END
-  ) STORED,
+  admitted_at        TIMESTAMPTZ,
+  catalogue_open_at  TIMESTAMPTZ,   -- calculé par trigger : admitted_at + 15 jours
+  buyer_visible_at   TIMESTAMPTZ,   -- calculé par trigger : admitted_at + 45 jours
   created_at       TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at       TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
@@ -36,14 +32,24 @@ CREATE INDEX IF NOT EXISTS idx_cat_req_seller_uid   ON public.catalogue_requests
 CREATE INDEX IF NOT EXISTS idx_cat_req_asset_id     ON public.catalogue_requests(asset_id);
 CREATE INDEX IF NOT EXISTS idx_cat_req_status       ON public.catalogue_requests(status);
 
--- Trigger updated_at
-CREATE OR REPLACE FUNCTION update_catalogue_requests_updated_at()
+-- Trigger : updated_at + calcul des délais catalogue
+CREATE OR REPLACE FUNCTION trg_fn_catalogue_requests()
 RETURNS TRIGGER LANGUAGE plpgsql AS $$
-BEGIN NEW.updated_at = NOW(); RETURN NEW; END;
+BEGIN
+  NEW.updated_at = NOW();
+  IF NEW.admitted_at IS NOT NULL THEN
+    NEW.catalogue_open_at = NEW.admitted_at + INTERVAL '15 days';
+    NEW.buyer_visible_at  = NEW.admitted_at + INTERVAL '45 days';
+  ELSE
+    NEW.catalogue_open_at = NULL;
+    NEW.buyer_visible_at  = NULL;
+  END IF;
+  RETURN NEW;
+END;
 $$;
 CREATE TRIGGER trg_cat_req_updated_at
-  BEFORE UPDATE ON public.catalogue_requests
-  FOR EACH ROW EXECUTE FUNCTION update_catalogue_requests_updated_at();
+  BEFORE INSERT OR UPDATE ON public.catalogue_requests
+  FOR EACH ROW EXECUTE FUNCTION trg_fn_catalogue_requests();
 
 -- ── 2. Table invoices ────────────────────────────────────────────────────────
 

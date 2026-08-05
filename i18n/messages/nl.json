@@ -3853,190 +3853,61 @@
         "id": "who-we-are",
         "cat": ["certification", "sellers", "buyers"],
         "q": "Wie is AEGRYN en wat doet u?",
-        "a": "Aegryn is een Zwitserse tech-asset-bouwer die propriet aire digitale ecosystemen ontwerpt en exploiteert — omgevingen waar technologie het dagelijkse leven structureert van individuen, professionals en de markten waarin zij opereren. Wij certificeren, verhandelen en begeleiden technologie-assets via een onafhankelijk en reproduceerbaar protocol."
+        "a": "Aegryn is een Zwitserse tech-asset-bouwer die proprietaire digitale ecosystemen ontwerpt en exploiteert. Wij certificeren, verhandelen en begeleiden technologie-assets via een onafhankelijk en reproduceerbaar protocol."
       },
       {
         "id": "what-differentiates",
         "cat": ["certification"],
         "q": "Wat onderscheidt u?",
-        "a": "In tegenstelling tot adviesbureaus of agentschappen bouwen en exploiteren wij onze eigen digitale ecosystemen. Elke strategische aanbeveling, elk veiligheidsprotocol, elke groeiaanpak die wij voorstellen, is gebaseerd op echte uitvoering — niet op theorie. Wij verkopen geen generieke modellen. Wij delen wat werkt omdat wij het zelf gebruiken."
+        "a": "In tegenstelling tot adviesbureaus of agentschappen bouwen en exploiteren wij onze eigen digitale ecosystemen. Elke aanbeveling, elk protocol, elke aanpak die wij voorstellen is gebaseerd op echte uitvoering. Wij verkopen geen generieke modellen. Wij delen wat werkt omdat wij het zelf gebruiken."
       },
       {
-        "id": "invest-partner",
-        "cat": ["account"],
-        "q": "Hoe kan ik investeren of partner worden?",
-        "a": "Wij verwelkomen visionaire investeerders en strategische partners die ons langetermijnperspectief delen. Gebruik het contactformulier op /contact, selecteer \"Partnerschap\" als onderwerp, en ons team reageert binnen 24 uur om een eerste gesprek te plannen."
-      },
-      {
-        "id": "where-based",
-        "cat": ["account"],
-        "q": "Waar bent u gevestigd?",
-        "a": "Aegryn heeft zijn hoofdkantoor in Zwitserland. Onze digitale ecosystemen zijn actief in heel Europa, en onze advisory-praktijk bedient kliënten in Zwitserland, Frankrijk en de EU."
-      },
-      {
-        "id": "cert-only-vs-catalogue",
+        "id": "cert-options",
         "cat": ["certification", "sellers"],
-        "q": "Kan ik een certificering krijgen zonder mijn asset te koop aan te bieden?",
-        "a": "Ja. Het aanmaken van een vervreemderaccount impliceert geen verkoopverplichting. Bij de indiening van uw asset kunt u kiezen tussen: (1) Alleen certificering — een officiële AEGRYN Grade verkrijgen zonder catalogusopname (AEGRYN Review voor € 2.000 excl. btw of Review+ voor € 5.000 excl. btw, aftrekbaar als u binnen 6 maanden een Certification Auction start), of (2) Certificering + Catalogus — volledig proces met verkooplisting, AEGRYN wordt uitsluitend bij transactie beloond (CHF 2.000 excl. btw niet-verkoopkosten van toepassing bij terugtrekking zonder transactie)."
+        "q": "Wat zijn de certificeringsopties en hun tarieven?",
+        "a": "Er zijn twee paden beschikbaar. Alleen certificering (AEGRYN Review): een officiële Grade verkrijgen zonder catalogusopname, voor 2.000 EUR excl. btw (interne Review) of 5.000 EUR excl. btw (co-ondertekende Review+), aftrekbaar als een Certification Auction binnen 6 maanden wordt gestart. Certification Auction: volledig proces met catalogusopname en AEGRYN-commissie uitsluitend bij transactie. Een publicatiekosten van CHF 2.000 excl. btw gelden, aftrekbaar van de commissie bij verkoop en ingehouden zonder transactie."
       },
       {
         "id": "what-grade",
-        "cat": [
-          "certification"
-        ],
+        "cat": ["certification"],
         "q": "Wat is de AEGRYN Grade?",
-        "a": "De AEGRYN Grade is een officiële multidimensionale certificering die 4 dimensies beoordeelt: Code (C), IP en Rechten (I), Financiën (F), Beveiliging (S). Elke dimensie wordt beoordeeld op 25 punten. De totale score (op 100) bepaalt de officiële Grade: Ster Uitzonderlijk (>=90), AAA Uitstekend (>=75), AA Zeer goed (>=60), A Goed (>=45), B Voldoende (>=30)."
-      },
-      {
-        "id": "grade-vs-estimate",
-        "cat": [
-          "certification"
-        ],
-        "q": "Wat is het verschil tussen een officiële Grade en een geschatte grade?",
-        "a": "Een officiële Grade wordt toegekend na een echte audit door AEGRYN-analisten en volgens een onafhankelijk en reproduceerbaar protocol waarvoor AEGRYN de verantwoordelijkheid draagt. Een geschatte grade (via /valuation of AEGRYN Review) is een indicatieve opinie op basis van verklaarbare gegevens, altijd voorzien van het achtervoegsel (geschat) en zonder contractuele waarde."
-      },
-      {
-        "id": "cert-duration",
-        "cat": [
-          "certification"
-        ],
-        "q": "Hoe lang duurt het certificeringsproces?",
-        "a": "AEGRYN Review: 15 werkdagen na bevestigde betaling. AEGRYN Review+: 20 werkdagen. Volledige Auction-certificering: 3 tot 5 weken afhankelijk van de complexiteit van het asset."
-      },
-      {
-        "id": "cert-cost",
-        "cat": [
-          "certification"
-        ],
-        "q": "Wat kost de certificering?",
-        "a": "AEGRYN Review: 2.000 EUR excl. btw — aftrekbaar als de volledige certificering binnen 6 maanden wordt gestart. AEGRYN Review+: 5.000 EUR excl. btw — zelfde voorwaarden. Auction-certificering: gratis bij transactie (AEGRYN verdient commissie bij verkoop). Exacte voorwaarden in het ondertekende mandaat."
-      },
-      {
-        "id": "refusal-resubmit",
-        "cat": [
-          "certification",
-          "sellers"
-        ],
-        "q": "Mijn asset is afgewezen. Kan ik het opnieuw indienen?",
-        "a": "Ja. Elke afwijzing gaat vergezeld van een gedetailleerd schriftelijk rapport met verbeterpunten. Onze Advisory-dienst kan u begeleiden bij het herstelproces. Een afgewezen asset kan op elk moment opnieuw worden ingediend als gedocumenteerde verbeteringen zijn aangebracht."
-      },
-      {
-        "id": "kryv",
-        "cat": [
-          "certification",
-          "transactions"
-        ],
-        "q": "Hoe garandeert AEGRYN de traceerbaarheid van een grade?",
-        "a": "Elke grade wordt gedocumenteerd, geversioneerd en opgeslagen in het AEGRYN-register. Elke wijziging aan een gecertificeerde codebase na uitgifte genereert een nieuwe versie. Dit maakt het mogelijk om op elk moment te verifiëren dat de ontvangen code exact overeenkomt met de gecertificeerde code."
+        "a": "De AEGRYN Grade is een officiële multidimensionale certificering die 4 dimensies beoordeelt: Code (C), IP en Rechten (I), Financiën (F), Beveiliging (S). Elke dimensie wordt beoordeeld op 25 punten. De totale score bepaalt de officiële Grade: AEG Ster Uitzonderlijk (90 en meer), AAA Uitstekend (75 en meer), AA Zeer goed (60 en meer), A Goed (45 en meer), B Voldoende (30 en meer)."
       },
       {
         "id": "what-assets",
-        "cat": [
-          "sellers"
-        ],
+        "cat": ["sellers"],
         "q": "Welke typen assets kan ik indienen?",
-        "a": "AEGRYN certificeert en verhandelt digitale tech-assets: B2B SaaS, mobiele apps, marktplaatsen, AI-protocollen, digitaal intellectueel eigendom. Minimumticket: 100.000 EUR geschatte waardering."
+        "a": "AEGRYN certificeert en verhandelt digitale tech-assets: B2B SaaS, mobiele apps, marktplaatsen, AI-protocollen, digitaal intellectueel eigendom. Aanbevolen minimumticket: 100.000 EUR geschatte waardering."
       },
       {
         "id": "seller-identity",
-        "cat": [
-          "sellers"
-        ],
+        "cat": ["sellers"],
         "q": "Wordt mijn identiteit bekend gemaakt aan kopers?",
-        "a": "Nee. AEGRYN beschermt uw identiteit gedurende het hele proces. Deze wordt alleen aan de koper onthuld na uitdrukkelijke instemming van beide partijen en de introductiebeslissing van AEGRYN."
-      },
-      {
-        "id": "mandate-duration",
-        "cat": [
-          "sellers"
-        ],
-        "q": "Hoe lang duurt het exclusieve mandaat?",
-        "a": "60 dagen, verlengbaar bij onderlinge overeenkomst. Na deze periode zonder afgesloten transactie herneemt u uw volledige contractuele vrijheid."
+        "a": "AEGRYN beschermt de vertrouwelijkheid van alle partijen gedurende het hele proces. De identiteit van de verkoper is voor geen enkele koper toegankelijk voordat AEGRYN de introductie beslist. Evenmin is de identiteit van de koper beschikbaar tot zijn bod is aanvaard. Alleen het AEGRYN-team heeft toegang tot persoonlijke informatie voor KYC-verificaties en dossierbeheer."
       },
       {
         "id": "become-buyer",
-        "cat": [
-          "buyers"
-        ],
+        "cat": ["buyers"],
         "q": "Hoe word ik ledenkoper?",
-        "a": "Via het sollicitatieformulier op /auction#membership. Uw sollicitatie wordt door AEGRYN beoordeeld binnen 10 werkdagen. Een kwalificatiegesprek van 20-30 minuten is vereist. Documenten die de financiële capaciteit aantonen zijn noodzakelijk."
-      },
-      {
-        "id": "min-ticket",
-        "cat": [
-          "buyers"
-        ],
-        "q": "Wat is het minimale acquisitieticket?",
-        "a": "100.000 EUR."
-      },
-      {
-        "id": "bid-models",
-        "cat": [
-          "buyers",
-          "transactions"
-        ],
-        "q": "Welke biedmodellen zijn beschikbaar?",
-        "a": "AEGRYN biedt 4 biedmodellen: Club Deal (individueel + maximaal 4 mede-investeerders), Corporate (rechtspersoon of JV), Fonds (PE/VC/Family Office, IC-tijdlijn mogelijk), Equity Stake (aandelenparticipatie zonder volledige overdracht). Zie /auction/bid-models voor alle details."
-      },
-      {
-        "id": "escrow",
-        "cat": [
-          "buyers",
-          "transactions"
-        ],
-        "q": "Hoe werkt de escrow?",
-        "a": "Na een ondertekend principe-akkoord stort de koper 10% van de overeengekomen prijs bij een externe partnerbank. AEGRYN houdt deze middelen nooit vast. Zie /terms/cgv voor de herroepingsregels."
+        "a": "Via het sollicitatieformulier op /auction#membership. Uw sollicitatie wordt beoordeeld binnen 10 werkdagen."
       },
       {
         "id": "kyc-docs",
-        "cat": [
-          "buyers",
-          "sellers"
-        ],
+        "cat": ["buyers", "sellers"],
         "q": "Welke KYC-documenten zijn vereist?",
-        "a": "Particulieren: geldig identiteitsbewijs + bewijs van woonplaats (minder dan 3 maanden oud) + bewijs van financiële capaciteit. Entiteiten (bedrijven, fondsen): uittreksel uit het handelsregister (minder dan 3 maanden oud) + statuten + identiteitsbewijs van de wettelijke vertegenwoordiger + UBO-verklaring (>=25%) + regulerende licentie indien van toepassing."
+        "a": "Particulieren: geldig identiteitsbewijs, bewijs van woonplaats van minder dan 3 maanden oud, bewijs van financiële capaciteit. Entiteiten (bedrijven, fondsen): uittreksel uit het handelsregister van minder dan 3 maanden oud, statuten, identiteitsbewijs van de wettelijke vertegenwoordiger, UBO-verklaring (25% en meer), regulerende licentie indien van toepassing."
       },
       {
-        "id": "data-room",
-        "cat": [
-          "buyers",
-          "transactions"
-        ],
-        "q": "Wat is de data room?",
-        "a": "De data room is een beveiligde ruimte met de volledige documenten van het asset (grade-rapport, gecontroleerde financiële overzichten, IP-contracten, technische documentatie). Alleen toegankelijk voor ledenkoper die de asset-specifieke NDA hebben ondertekend. Elke raadpleging wordt voorzien van een tijdstempel."
+        "id": "escrow",
+        "cat": ["buyers", "transactions"],
+        "q": "Hoe werkt de escrow?",
+        "a": "Na ondertekening van het NDA en aanvaarding van het ingediende bod, stort de koper 10% van de overeengekomen prijs bij een externe partnerinstelling van AEGRYN. AEGRYN houdt deze middelen nooit vast. De herroepingsregels zijn opgenomen in de Algemene Verkoopvoorwaarden."
       },
       {
-        "id": "results-publication",
-        "cat": [
-          "transactions"
-        ],
-        "q": "Wanneer en hoe worden sessieresultaten gepubliceerd?",
-        "a": "Resultaten worden gepubliceerd op /auction/results binnen 30 dagen na sluiting van elke sessie, in geanonimiseerde vorm: grade, categorie, sector, waarderingsbandbreedte (+-20%), procesduur. Er worden geen identiteiten bekendgemaakt."
-      },
-      {
-        "id": "sessions",
-        "cat": [
-          "transactions",
-          "buyers"
-        ],
-        "q": "Wat is een AEGRYN Sessie?",
-        "a": "AEGRYN Sessies zijn private transactie-evenementen die twee keer per jaar in Zwitserland worden georganiseerd. 6 tot 10 gecertificeerde assets met Grade A of hoger worden gepresenteerd aan een gesloten kring van gekwalificeerde ledenkoper. Toegang is uitsluitend op uitnodiging."
-      },
-      {
-        "id": "forgot-password",
-        "cat": [
-          "account"
-        ],
-        "q": "Ik ben mijn wachtwoord vergeten.",
-        "a": "Gebruik de link Wachtwoord vergeten op /client/login. Er wordt binnen 5 minuten een herstel-e-mail verstuurd."
-      },
-      {
-        "id": "update-kyc",
-        "cat": [
-          "account"
-        ],
-        "q": "Hoe update ik mijn KYC-informatie?",
-        "a": "Via de sectie Mijn profiel in uw klantenomgeving. Bijgewerkte documenten worden ter hervalidatie ingediend bij AEGRYN."
+        "id": "kryv",
+        "cat": ["certification", "transactions"],
+        "q": "Hoe garandeert AEGRYN de traceerbaarheid van een grade?",
+        "a": "Elke grade wordt gedocumenteerd, geversioneerd en opgeslagen in het AEGRYN-register. Elke wijziging aan een gecertificeerde codebase na uitgifte genereert een nieuwe versie. Dit maakt het mogelijk om op elk moment te verifiëren dat de ontvangen code exact overeenkomt met de gecertificeerde code."
       }
     ]
   },

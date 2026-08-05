@@ -67,8 +67,7 @@ function buildHtml(inv: Record<string, unknown>): string {
 <body>
   <div class="header">
     <div class="logo-block">
-      <h1>AEGRYN</h1>
-      <p style="margin-top:3px">Aegryn (par BOHA-Group Sàrl)</p>
+      <p style="font-weight:600;font-size:12px">Aegryn (par BOHA-Group Sàrl)</p>
       <p>Rue du Centre 142, 1025 Saint-Sulpice, Suisse.</p>
       <p>CHE-402.011.821 TVA.</p>
       <p style="margin-top:3px">finance@boha-group.com</p>

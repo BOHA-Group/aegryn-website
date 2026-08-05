@@ -3853,190 +3853,61 @@
         "id": "who-we-are",
         "cat": ["certification", "sellers", "buyers"],
         "q": "¿Quién es AEGRYN y qué hace?",
-        "a": "Aegryn es un constructor de activos tech suizo que diseña y opera ecosistemas digitales propietarios — entornos donde la tecnología estructura el día a día de personas, profesionales y mercados. Certificamos, intermediamos y acompañamos activos tecnológicos a través de un protocolo independiente y reproducible."
+        "a": "Aegryn es un constructor de activos tech suizo que diseña y opera ecosistemas digitales propietarios. Certificamos, intermediamos y acompañamos activos tecnológicos a través de un protocolo independiente y reproducible."
       },
       {
         "id": "what-differentiates",
         "cat": ["certification"],
         "q": "¿Qué les diferencia?",
-        "a": "A diferencia de firmas de consultoría o agencias, construimos y operamos nuestros propios ecosistemas digitales. Cada recomendación estratégica, cada protocolo de seguridad, cada enfoque de crecimiento que proponemos proviene de una ejecución real — no de la teoría. No revendemos modelos genéricos. Compartimos lo que funciona porque nosotros mismos lo utilizamos."
+        "a": "A diferencia de firmas de consultoría o agencias, construimos y operamos nuestros propios ecosistemas digitales. Cada recomendación, cada protocolo, cada enfoque que proponemos proviene de una ejecución real. No revendemos modelos genéricos. Compartimos lo que funciona porque nosotros mismos lo utilizamos."
       },
       {
-        "id": "invest-partner",
-        "cat": ["account"],
-        "q": "¿Cómo invertir o convertirse en socio?",
-        "a": "Damos la bienvenida a inversores visionarios y socios estratégicos que comparten nuestra perspectiva a largo plazo. Utilice el formulario de contacto en /contact, seleccione \"Partnership\" como asunto, y nuestro equipo le responderá en 24 horas para organizar un primer intercambio."
-      },
-      {
-        "id": "where-based",
-        "cat": ["account"],
-        "q": "¿Dónde están ubicados?",
-        "a": "Aegryn tiene su sede en Suiza. Nuestros ecosistemas digitales operan en toda Europa, y nuestra práctica advisory acompaña a clientes en Suiza, Francia y la UE."
-      },
-      {
-        "id": "cert-only-vs-catalogue",
+        "id": "cert-options",
         "cat": ["certification", "sellers"],
-        "q": "¿Puedo obtener una certificación sin poner mi activo a la venta?",
-        "a": "Sí. Crear una cuenta de cedente no implica compromiso de cesión. Al enviar su activo puede elegir entre: (1) Solo certificación — obtener un Grade AEGRYN oficial sin inclusión en catálogo (AEGRYN Review a 2.000 € sin IVA o Review+ a 5.000 € sin IVA, deducibles si inicia una Certification Auction en los 6 meses siguientes), o (2) Certificación + Catálogo — proceso completo con puesta en venta, remuneración de AEGRYN solo en la transacción (honorarios de no-venta de CHF 2.000 sin IVA aplicables si se retira sin transacción)."
+        "q": "¿Cuáles son las opciones de certificación y sus tarifas?",
+        "a": "Hay dos recorridos disponibles. Solo certificación (AEGRYN Review): obtener un Grade oficial sin inclusión en catálogo, a 2.000 EUR sin IVA (Review interna) o 5.000 EUR sin IVA (Review+ co-firmada), deducibles si se inicia una Certification Auction en los 6 meses siguientes. Certification Auction: proceso completo con inclusión en catálogo y comisión AEGRYN solo en la transacción. Se aplica una tarifa de publicación de CHF 2.000 sin IVA, deducible de la comisión en caso de venta y retenida sin transacción."
       },
       {
         "id": "what-grade",
-        "cat": [
-          "certification"
-        ],
+        "cat": ["certification"],
         "q": "¿Qué es el Grade AEGRYN?",
-        "a": "El Grade AEGRYN es una certificación oficial multidimensional que evalúa 4 dimensiones: Código (C), PI y Derechos (I), Finanzas (F), Seguridad (S). Cada dimensión se puntúa sobre 25. La puntuación total (sobre 100) determina el Grade oficial: Estrella Excepcional (>=90), AAA Excelente (>=75), AA Muy bueno (>=60), A Bueno (>=45), B Correcto (>=30)."
-      },
-      {
-        "id": "grade-vs-estimate",
-        "cat": [
-          "certification"
-        ],
-        "q": "¿Cuál es la diferencia entre un Grade oficial y un Grade estimado?",
-        "a": "Un Grade oficial se asigna tras una auditoría real realizada por analistas AEGRYN según un protocolo independiente y reproducible, del que AEGRYN asume la responsabilidad. Puede publicarse en el catálogo. Un Grade estimado (de /valuation o AEGRYN Review) es una opinión indicativa basada en datos declarados, siempre con el sufijo (estimado) y sin valor contractual."
-      },
-      {
-        "id": "cert-duration",
-        "cat": [
-          "certification"
-        ],
-        "q": "¿Cuánto dura el proceso de certificación?",
-        "a": "AEGRYN Review: 15 días hábiles tras el pago confirmado. AEGRYN Review+: 20 días hábiles. Certificación Auction completa: 3 a 5 semanas según la complejidad del activo."
-      },
-      {
-        "id": "cert-cost",
-        "cat": [
-          "certification"
-        ],
-        "q": "¿Cuánto cuesta la certificación?",
-        "a": "AEGRYN Review: 2.000 EUR sin IVA — deducible si la certificación completa se inicia en los 6 meses siguientes. AEGRYN Review+: 5.000 EUR sin IVA — mismas condiciones. Certificación Auction: gratuita si hay transacción (AEGRYN cobra comisión sobre la venta). Condiciones precisas en el mandato firmado."
-      },
-      {
-        "id": "refusal-resubmit",
-        "cat": [
-          "certification",
-          "sellers"
-        ],
-        "q": "Mi activo fue rechazado. ¿Puedo volver a presentarlo?",
-        "a": "Sí. Cada rechazo va acompañado de un informe escrito detallado con los puntos a mejorar. Nuestro servicio Advisory puede acompañarle en la remediación. Un activo rechazado puede resubmitirse en cualquier momento si se han realizado mejoras documentadas."
-      },
-      {
-        "id": "kryv",
-        "cat": [
-          "certification",
-          "transactions"
-        ],
-        "q": "¿Cómo garantiza AEGRYN la trazabilidad de un grade?",
-        "a": "Cada grade es documentado, versionado y almacenado en el registro AEGRYN. Cualquier modificación de la codebase certificada tras la emisión genera una nueva versión. Esto permite demostrar en cualquier momento que el código recibido corresponde exactamente al código certificado."
+        "a": "El Grade AEGRYN es una certificación oficial multidimensional que evalúa 4 dimensiones: Código (C), PI y Derechos (I), Finanzas (F), Seguridad (S). Cada dimensión se puntúa sobre 25. La puntuación total determina el Grade oficial: AEG Estrella Excepcional (90 y más), AAA Excelente (75 y más), AA Muy bueno (60 y más), A Bueno (45 y más), B Correcto (30 y más)."
       },
       {
         "id": "what-assets",
-        "cat": [
-          "sellers"
-        ],
+        "cat": ["sellers"],
         "q": "¿Qué tipos de activos puedo enviar?",
-        "a": "AEGRYN certifica y transacciona activos tech digitales: SaaS B2B, aplicaciones móviles, marketplaces, protocolos de IA, propiedad intelectual digital. Ticket mínimo: 100.000 EUR de valoración estimada."
+        "a": "AEGRYN certifica y transacciona activos tech digitales: SaaS B2B, aplicaciones móviles, marketplaces, protocolos de IA, propiedad intelectual digital. Ticket mínimo recomendado: 100.000 EUR de valoración estimada."
       },
       {
         "id": "seller-identity",
-        "cat": [
-          "sellers"
-        ],
+        "cat": ["sellers"],
         "q": "¿Se revelará mi identidad a los compradores?",
-        "a": "No. AEGRYN mantiene la confidencialidad de su identidad durante todo el proceso. Solo se revela al comprador tras el acuerdo explícito de ambas partes y la decisión de presentación de AEGRYN."
-      },
-      {
-        "id": "mandate-duration",
-        "cat": [
-          "sellers"
-        ],
-        "q": "¿Cuánto dura el mandato exclusivo?",
-        "a": "60 días, renovable por acuerdo mutuo. Pasado este plazo sin transacción cerrada, recupera su plena libertad contractual."
+        "a": "AEGRYN mantiene la confidencialidad de todas las partes durante todo el proceso. La identidad del cedente no es accesible a ningún comprador antes de que AEGRYN decida la presentación. Del mismo modo, la identidad del comprador permanece confidencial hasta la aceptación de su oferta. Solo el equipo AEGRYN tiene acceso a la información personal en el marco de las verificaciones KYC y la gestión del expediente."
       },
       {
         "id": "become-buyer",
-        "cat": [
-          "buyers"
-        ],
+        "cat": ["buyers"],
         "q": "¿Cómo me convierto en comprador miembro?",
-        "a": "A través del formulario de candidatura en /auction#membership. Su candidatura es examinada por AEGRYN en 10 días hábiles. Se requiere una entrevista de cualificación de 20 a 30 minutos. Son necesarios justificantes de capacidad financiera."
-      },
-      {
-        "id": "min-ticket",
-        "cat": [
-          "buyers"
-        ],
-        "q": "¿Cuál es el ticket mínimo de adquisición?",
-        "a": "100.000 EUR."
-      },
-      {
-        "id": "bid-models",
-        "cat": [
-          "buyers",
-          "transactions"
-        ],
-        "q": "¿Qué modelos de oferta están disponibles?",
-        "a": "AEGRYN ofrece 4 modelos de bid: Club Deal (individual + hasta 4 co-inversores), Corporate (entidad legal o JV), Fondo (PE/VC/Family Office, plazo IC posible), Equity Stake (participación accionarial sin cesión completa). Ver /auction/bid-models para los detalles completos."
-      },
-      {
-        "id": "escrow",
-        "cat": [
-          "buyers",
-          "transactions"
-        ],
-        "q": "¿Cómo funciona el depósito en garantía?",
-        "a": "Tras un Acuerdo de principio firmado, el comprador deposita el 10% del precio acordado en un banco socio tercero. AEGRYN nunca retiene estos fondos. Ver /terms/cgv para las reglas de desistimiento."
+        "a": "A través del formulario de candidatura en /auction#membership. Su candidatura es examinada en 10 días hábiles."
       },
       {
         "id": "kyc-docs",
-        "cat": [
-          "buyers",
-          "sellers"
-        ],
+        "cat": ["buyers", "sellers"],
         "q": "¿Qué documentos KYC se requieren?",
-        "a": "Particulares: documento de identidad válido + justificante de domicilio (menos de 3 meses) + justificante de capacidad financiera. Entidades (empresas, fondos): extracto de registro mercantil (menos de 3 meses) + estatutos + documento de identidad del representante legal + declaración de beneficiarios efectivos (UBO >=25%) + licencia regulatoria si aplica."
+        "a": "Particulares: documento de identidad válido, justificante de domicilio de menos de 3 meses, justificante de capacidad financiera. Entidades (empresas, fondos): extracto de registro mercantil de menos de 3 meses, estatutos, documento de identidad del representante legal, declaración de beneficiarios efectivos (UBO al 25% y más), licencia regulatoria si aplica."
       },
       {
-        "id": "data-room",
-        "cat": [
-          "buyers",
-          "transactions"
-        ],
-        "q": "¿Qué es el data room?",
-        "a": "El data room es un espacio seguro con los documentos completos del activo (informe de grade, estados financieros auditados, contratos IP, documentación técnica). Accesible solo para compradores miembro que hayan firmado el NDA específico del activo. Cada consulta queda registrada con fecha y hora."
+        "id": "escrow",
+        "cat": ["buyers", "transactions"],
+        "q": "¿Cómo funciona el depósito en garantía?",
+        "a": "Tras la firma del NDA y la aceptación de la oferta presentada, el comprador deposita el 10% del precio acordado en un establecimiento tercero socio de AEGRYN. AEGRYN nunca retiene estos fondos. Las reglas de desistimiento se especifican en las Condiciones Generales de Venta."
       },
       {
-        "id": "results-publication",
-        "cat": [
-          "transactions"
-        ],
-        "q": "¿Cuándo y cómo se publican los resultados de las sesiones?",
-        "a": "Los resultados se publican en /auction/results en los 30 días siguientes al cierre de cada sesión, de forma anonimizada: grade, categoría, sector, horquilla de valoración (+-20%), duración del proceso. No se divulga ninguna identidad."
-      },
-      {
-        "id": "sessions",
-        "cat": [
-          "transactions",
-          "buyers"
-        ],
-        "q": "¿Qué es una Sesión AEGRYN?",
-        "a": "Las Sesiones AEGRYN son eventos privados de transacción organizados dos veces al año en Suiza. De 6 a 10 activos certificados con Grade A o superior se presentan a un círculo cerrado de compradores miembro cualificados. El acceso es solo por invitación."
-      },
-      {
-        "id": "forgot-password",
-        "cat": [
-          "account"
-        ],
-        "q": "Olvidé mi contraseña.",
-        "a": "Use el enlace Contraseña olvidada en /client/login. Se le enviará un correo de restablecimiento en 5 minutos."
-      },
-      {
-        "id": "update-kyc",
-        "cat": [
-          "account"
-        ],
-        "q": "¿Cómo actualizo mi información KYC?",
-        "a": "A través de la sección Mi perfil en su espacio de cliente. Los documentos actualizados se envían a AEGRYN para su revalidación."
+        "id": "kryv",
+        "cat": ["certification", "transactions"],
+        "q": "¿Cómo garantiza AEGRYN la trazabilidad de un grade?",
+        "a": "Cada grade es documentado, versionado y almacenado en el registro AEGRYN. Cualquier modificación de la codebase certificada tras la emisión genera una nueva versión. Esto permite demostrar en cualquier momento que el código recibido corresponde exactamente al código certificado."
       }
     ]
   },

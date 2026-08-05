@@ -351,8 +351,7 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
           <div className="bg-white border border-gray-200 p-6 space-y-4 text-[11px]">
             <div className="flex items-start justify-between">
               <div>
-                <p className="font-sans font-bold text-[15px] text-gray-900">AEGRYN</p>
-                <p className="font-sans text-[10px] text-gray-500 mt-0.5">Aegryn (par BOHA-Group Sàrl)</p>
+                <p className="font-sans font-semibold text-[12px] text-gray-900">Aegryn (par BOHA-Group Sàrl)</p>
                 <p className="font-sans text-[10px] text-gray-400">Rue du Centre 142, 1025 Saint-Sulpice, Suisse.</p>
                 <p className="font-sans text-[10px] text-gray-400">CHE-402.011.821 TVA.</p>
                 <p className="font-sans text-[10px] text-gray-400 mt-0.5">finance@boha-group.com · +41 (0) 79 590 18 81</p>
