@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { useLocale } from 'next-intl'
 import {
   EXPERTISE_TAXONOMY,
@@ -134,6 +135,11 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
   const locale    = ((['fr','en','de','es','it','nl'].includes(rawLocale) ? rawLocale : 'fr')) as LocaleKey
   const ui        = UI_LABELS[locale]
 
+  // État d'ouverture de l'accordéon, INDÉPENDANT de la sélection
+  const [openCategories, setOpenCategories] = useState<Set<string>>(
+    () => new Set(value.categories)
+  )
+
   const availableCategories = value.dimension ? getCategoriesByDimension(value.dimension) : []
 
   // Pour transaction (1 seule catégorie) : auto-sélection transparente
@@ -155,7 +161,17 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
     const validSpecIds = new Set(cats.flatMap(c => c.specialties.map(s => s.id)))
     const keptSpecs   = value.specialties.filter(specId => validSpecIds.has(specId))
 
+    setOpenCategories(new Set(finalCats))
     onChange({ dimension: dim, categories: finalCats, specialties: keptSpecs })
+  }
+
+  const toggleCategoryOpen = (catId: string) => {
+    setOpenCategories(prev => {
+      const next = new Set(prev)
+      if (next.has(catId)) next.delete(catId)
+      else next.add(catId)
+      return next
+    })
   }
 
   const toggleCategory = (catId: string) => {
@@ -166,11 +182,16 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
 
     if (isSelected) {
       next = current.filter(c => c !== catId)
+      // Fermer l'accordéon si la catégorie est désélectionnée
+      setOpenCategories(prev => { const s = new Set(prev); s.delete(catId); return s })
     } else {
       if (current.length >= MAX_CATEGORIES) return
       next = [...current, catId]
+      // Ouvrir automatiquement l'accordéon à la sélection
+      setOpenCategories(prev => new Set([...prev, catId]))
     }
 
+    // Ne supprimer les spécialités que des catégories explicitement désélectionnées
     const validCatIds = new Set(next)
     const filteredSpecialties = value.specialties.filter(sId => {
       const cat = EXPERTISE_TAXONOMY.find(c => c.specialties.some(s => s.id === sId))
@@ -239,50 +260,74 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
           <div className="space-y-2">
             {availableCategories.map(cat => {
               const isSelected = value.categories.includes(cat.id)
+              const isOpen     = isSingleCat || openCategories.has(cat.id)
               const isDisabled = !isSelected && !isSingleCat && value.categories.length >= MAX_CATEGORIES
 
               return (
                 <div key={cat.id}>
                   {/* ── En-tête catégorie ── */}
-                  <button
-                    type="button"
-                    disabled={isDisabled}
-                    onClick={() => toggleCategory(cat.id)}
-                    className={`w-full border p-4 text-left transition-all duration-200 flex items-center justify-between ${
-                      isSelected
-                        ? 'border-ag-black bg-ag-off-white'
-                        : isDisabled
-                          ? 'border-ag-border opacity-40 cursor-not-allowed'
-                          : 'border-ag-border hover:border-ag-black'
-                    }`}
-                  >
-                    <div>
-                      <span className="block font-sans font-bold text-[13px] text-ag-black">
-                        {getCategoryLabel(cat, locale)}
-                      </span>
-                      <span className="block font-mono text-[10px] tracking-[0.1em] uppercase text-ag-gray-light mt-1">
-                        {cat.specialties.length} {ui.expertises.toLowerCase()}
-                        {!isSingleCat && (cat.dimension === 'tech' ? ' · Advisory Tech' : ' · Advisory Transaction')}
-                      </span>
-                    </div>
-                    {isSingleCat ? null : isSelected ? (
-                      <span className="w-5 h-5 border border-ag-black bg-ag-black flex items-center justify-center shrink-0">
-                        <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
-                          <path d="M1 4L3.5 6.5L9 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <div className={`w-full border transition-all duration-200 flex items-center justify-between ${
+                    isSelected
+                      ? 'border-ag-black bg-ag-off-white'
+                      : isDisabled
+                        ? 'border-ag-border opacity-40'
+                        : 'border-ag-border hover:border-ag-black'
+                  }`}>
+                    {/* Zone checkbox sélection */}
+                    <button
+                      type="button"
+                      disabled={isDisabled}
+                      onClick={() => toggleCategory(cat.id)}
+                      className="flex items-center gap-3 p-4 flex-1 text-left"
+                    >
+                      {!isSingleCat && (
+                        isSelected ? (
+                          <span className="w-5 h-5 border border-ag-black bg-ag-black flex items-center justify-center shrink-0">
+                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                              <path d="M1 4L3.5 6.5L9 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </span>
+                        ) : (
+                          <span className="w-5 h-5 border border-ag-border flex items-center justify-center shrink-0" />
+                        )
+                      )}
+                      <div>
+                        <span className="block font-sans font-bold text-[13px] text-ag-black">
+                          {getCategoryLabel(cat, locale)}
+                        </span>
+                        <span className="block font-mono text-[10px] tracking-[0.1em] uppercase text-ag-gray-light mt-1">
+                          {cat.specialties.length} {ui.expertises.toLowerCase()}
+                          {!isSingleCat && (cat.dimension === 'tech' ? ' · Advisory Tech' : ' · Advisory Transaction')}
+                        </span>
+                      </div>
+                    </button>
+                    {/* Bouton accordéon toggle — indépendant du checkbox */}
+                    {!isDisabled && (
+                      <button
+                        type="button"
+                        onClick={() => toggleCategoryOpen(cat.id)}
+                        className="px-4 py-4 text-ag-gray-light hover:text-ag-black transition-colors shrink-0"
+                        aria-label={isOpen ? 'Réduire' : 'Développer'}
+                      >
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" className={`transition-transform ${isOpen ? 'rotate-180' : ''}`}>
+                          <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
-                      </span>
-                    ) : (
-                      <span className="w-5 h-5 border border-ag-border flex items-center justify-center shrink-0" />
+                      </button>
                     )}
-                  </button>
+                  </div>
 
-                  {/* ── Expertises inline sous la catégorie sélectionnée ── */}
-                  {isSelected && (
-                    <div className="border border-t-0 border-ag-black bg-ag-white p-4">
+                  {/* ── Expertises inline sous la catégorie ouverte ── */}
+                  {isOpen && (
+                    <div className={`border border-t-0 bg-ag-white p-4 ${isSelected ? 'border-ag-black' : 'border-ag-border'}`}>
+                      {!isSelected && !isSingleCat && (
+                        <p className="font-mono text-[10px] text-ag-gray-light mb-3 italic">
+                          Cochez cette catégorie pour pouvoir sélectionner ses expertises.
+                        </p>
+                      )}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                         {cat.specialties.map(spec => {
                           const specSelected = value.specialties.includes(spec.id)
-                          const specDisabled = !specSelected && value.specialties.length >= MAX_SPECIALTIES
+                          const specDisabled = !isSelected || (!specSelected && value.specialties.length >= MAX_SPECIALTIES)
 
                           return (
                             <button
