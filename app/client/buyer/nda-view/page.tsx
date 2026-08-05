@@ -41,6 +41,11 @@ export default async function NdaViewPage() {
         day: '2-digit', month: 'long', year: 'numeric',
       })
     : '—'
+  const signedTime = sig.signed_at
+    ? new Date(sig.signed_at as string).toLocaleTimeString('fr-CH', {
+        hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Zurich',
+      })
+    : '—'
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -71,7 +76,7 @@ export default async function NdaViewPage() {
               NDA accepté le {signedDate}
             </p>
             <p className="font-mono text-[10px] text-emerald-600 mt-0.5">
-              Version {String(sig.nda_version ?? NDA_VERSIONS.buyer)} — Signature électronique enregistrée
+              {signedDate} à {signedTime} — Version {String(sig.nda_version ?? NDA_VERSIONS.buyer)}
             </p>
           </div>
         </div>
@@ -156,14 +161,18 @@ export default async function NdaViewPage() {
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ag-navy mb-3">
             Signature électronique enregistrée
           </p>
-          <div className="grid grid-cols-2 gap-4 text-[11px] text-gray-500 font-mono">
+          <div className="grid grid-cols-3 gap-4 text-[11px] text-gray-500 font-mono">
             <div>
-              <p className="text-gray-400 mb-0.5">Date</p>
-              <p className="text-gray-700">{signedDate}</p>
+              <p className="text-gray-400 mb-0.5">Date et heure</p>
+              <p className="text-gray-700">{signedDate} à {signedTime}</p>
             </div>
             <div>
               <p className="text-gray-400 mb-0.5">Version</p>
               <p className="text-gray-700">{String(sig.nda_version ?? NDA_VERSIONS.buyer)}</p>
+            </div>
+            <div>
+              <p className="text-gray-400 mb-0.5">Signataire</p>
+              <p className="text-gray-700">{user.email}</p>
             </div>
           </div>
         </div>

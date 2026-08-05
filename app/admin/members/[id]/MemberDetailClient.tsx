@@ -29,6 +29,13 @@ function fmtDate(d: unknown) {
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: '2-digit', year: '2-digit' })
 }
 
+function fmtDateTime(d: unknown) {
+  if (!d || typeof d !== 'string') return '—'
+  const dt = new Date(d)
+  return dt.toLocaleDateString('fr-CH', { day: '2-digit', month: '2-digit', year: '2-digit' })
+    + ' ' + dt.toLocaleTimeString('fr-CH', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Zurich' })
+}
+
 function fmtChf(n: unknown) {
   if (n == null) return '—'
   return new Intl.NumberFormat('fr-CH', { style: 'currency', currency: 'CHF', maximumFractionDigits: 0 }).format(Number(n))
@@ -291,7 +298,7 @@ export default function MemberDetailClient({
                         </span>
                       </td>
                       <td className="px-4 py-3 font-mono text-[10px] text-gray-500">{String(a.nda_version ?? '—')}</td>
-                      <td className="px-4 py-3 font-mono text-emerald-700 font-semibold">{fmtDate(a.accepted_at)}</td>
+                      <td className="px-4 py-3 font-mono text-emerald-700 font-semibold">{fmtDateTime(a.accepted_at)}</td>
                       <td className="px-4 py-3 font-mono text-[10px] text-gray-400">{String(a.ip_address ?? '—')}</td>
                       <td className="px-4 py-3 font-mono text-[10px] text-gray-300 max-w-[200px] truncate" title={String(a.user_agent ?? '')}>
                         {String(a.user_agent ?? '—').slice(0, 60)}{String(a.user_agent ?? '').length > 60 ? '…' : ''}
@@ -329,7 +336,7 @@ export default function MemberDetailClient({
                 <tbody className="divide-y divide-gray-50">
                   {ndaSignatures.map((s, i) => (
                     <tr key={i} className="hover:bg-gray-50/50">
-                      <td className="px-4 py-3 font-mono text-emerald-700 font-semibold">{fmtDate(s.signed_at)}</td>
+                      <td className="px-4 py-3 font-mono text-emerald-700 font-semibold">{fmtDateTime(s.signed_at)}</td>
                       <td className="px-4 py-3 font-mono text-[10px] text-gray-500">{String(s.nda_version ?? '—')}</td>
                       <td className="px-4 py-3 font-mono text-[10px] text-gray-500 uppercase">{String(s.scope ?? '—')}</td>
                       <td className="px-4 py-3 font-mono text-[10px] text-gray-400">{String(s.ip_address ?? '—')}</td>
