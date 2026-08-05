@@ -42,6 +42,7 @@ type ExpertProfile = {
     kyc_status:         string | null
     expert_plan:        string | null
     expert_plan_start:  string | null
+    expert_plan_end:    string | null
   } | null
 }
 
@@ -226,9 +227,12 @@ function ProfileRow({
     onRefresh()
   }
 
-  const plan       = profile.profile?.expert_plan ?? null
-  const kycStatus  = profile.profile?.kyc_status ?? null
-  const kycOk      = kycStatus === 'approved'
+  const plan        = profile.profile?.expert_plan ?? null
+  const planEnd     = profile.profile?.expert_plan_end ?? null
+  const kycStatus   = profile.profile?.kyc_status ?? null
+  const kycOk       = kycStatus === 'approved'
+  const hasCredit   = planEnd ? new Date(planEnd) > new Date() : false
+  const planOk      = plan === 'active' || hasCredit
 
   return (
     <div className="border border-gray-200 bg-white">
@@ -255,9 +259,11 @@ function ProfileRow({
               : 'Masquée'}
           </span>
           <span className={`font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 border ${
-            plan === 'active' ? 'bg-ag-apex/10 text-ag-apex border-ag-apex/30' : 'bg-amber-50 text-amber-600 border-amber-200'
+            plan === 'active'  ? 'bg-ag-apex/10 text-ag-apex border-ag-apex/30'
+            : hasCredit        ? 'bg-blue-50 text-blue-600 border-blue-200'
+            : 'bg-amber-50 text-amber-600 border-amber-200'
           }`}>
-            {plan === 'active' ? 'Plan actif' : 'Sans plan'}
+            {plan === 'active' ? 'Plan actif' : hasCredit ? 'Crédit admin' : 'Sans plan'}
           </span>
           <span className="font-sans font-semibold text-[13px] text-gray-900 truncate">
             {profile.first_name} {profile.last_name}
@@ -308,14 +314,18 @@ function ProfileRow({
             {!profile.is_visible && (
               <button
                 onClick={() => patchProfile({ is_visible: true })}
-                disabled={loading || !kycOk}
-                title={!kycOk ? 'KYC du partenaire non approuvé — publication impossible' : undefined}
+                disabled={loading || !kycOk || !planOk}
+                title={
+                  !kycOk   ? 'KYC non approuvé — publication impossible'
+                  : !planOk ? 'Abonnement inactif (ni plan actif ni crédit admin) — publication impossible'
+                  : undefined
+                }
                 className={`font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border transition-colors ${
-                  kycOk
+                  kycOk && planOk
                     ? 'border-emerald-200 text-emerald-700 hover:bg-emerald-50 disabled:opacity-50'
                     : 'border-amber-200 text-amber-500 cursor-not-allowed opacity-60'
                 }`}>
-                ✓ Approuver{!kycOk ? ' (KYC requis)' : ''}
+                ✓ Approuver{!kycOk ? ' (KYC requis)' : !planOk ? ' (abo. requis)' : ''}
               </button>
             )}
             {profile.is_visible && (

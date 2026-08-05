@@ -32,7 +32,8 @@ export default async function AdminExpertsPage({
           roles,
           kyc_status,
           expert_plan,
-          expert_plan_start
+          expert_plan_start,
+          expert_plan_end
         )
       `)
       .order('created_at', { ascending: false }),

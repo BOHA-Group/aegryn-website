@@ -126,7 +126,7 @@ export async function PATCH(req: NextRequest) {
 
     const patch: Record<string, unknown> = { ...rest }
 
-    // Si on tente de publier, vérifier que le KYC du partenaire est approuvé
+    // Guards de publication : KYC approuvé + abonnement actif (ou crédit manuel valide)
     if (is_visible === true) {
       const { data: ep } = await supa
         .from('expert_profiles')
@@ -135,15 +135,33 @@ export async function PATCH(req: NextRequest) {
         .maybeSingle()
 
       if (ep?.user_id) {
-        const { data: ownerProfile } = await supa
+        const { data: owner } = await supa
           .from('profiles')
-          .select('kyc_status')
+          .select('kyc_status, expert_plan, expert_plan_end')
           .eq('id', ep.user_id)
-          .maybeSingle() as { data: { kyc_status: string | null } | null }
+          .maybeSingle() as {
+            data: {
+              kyc_status:     string | null
+              expert_plan:    string | null
+              expert_plan_end: string | null
+            } | null
+          }
 
-        if (ownerProfile?.kyc_status !== 'approved') {
+        if (owner?.kyc_status !== 'approved') {
           return NextResponse.json(
-            { error: 'kyc_not_approved', message: 'Le KYC du partenaire doit être approuvé avant la publication de la fiche.' },
+            { error: 'kyc_not_approved', message: 'Le KYC du partenaire doit être approuvé avant la publication.' },
+            { status: 422 }
+          )
+        }
+
+        const hasActivePlan  = owner?.expert_plan === 'active'
+        const hasCreditUntil = owner?.expert_plan_end
+          ? new Date(owner.expert_plan_end) > new Date()
+          : false
+
+        if (!hasActivePlan && !hasCreditUntil) {
+          return NextResponse.json(
+            { error: 'no_active_plan', message: 'Le partenaire doit avoir un abonnement actif (ou un crédit admin valide) pour que sa fiche soit publiée.' },
             { status: 422 }
           )
         }
