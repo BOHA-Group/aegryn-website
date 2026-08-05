@@ -58,7 +58,7 @@ export default async function PartnerExpertProfilePage() {
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
         <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Fiche expert</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
-          Votre fiche est visible dans l&apos;annuaire AEGRYN une fois le KYC validé et l&apos;abonnement activé.
+          Remplissez et soumettez votre fiche — l&apos;équipe AEGRYN la valide avant publication dans l&apos;annuaire.
         </p>
       </div>
 
@@ -66,7 +66,7 @@ export default async function PartnerExpertProfilePage() {
       <div className="max-w-2xl">
       <div className="bg-white border border-gray-200 divide-y divide-gray-100 mb-8">
         <div className="px-5 py-4">
-          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Prérequis à la publication</p>
+          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Prérequis à la publication (informatif)</p>
         </div>
 
         {/* KYC */}
@@ -123,40 +123,27 @@ export default async function PartnerExpertProfilePage() {
         </div>
       </div>
 
-      {/* Info abonnement si KYC ok mais abonnement inactif */}
-      {kycApproved && !subscriptionActive && existingExpertProfile && (
+      {/* Info : abonnement requis pour la publication finale */}
+      {!subscriptionActive && existingExpertProfile && (
         <div className="bg-blue-50 border border-blue-200 px-5 py-4 mb-8">
           <p className="font-sans font-semibold text-blue-900 text-[13px] mb-1">
-            Fiche enregistrée — publication conditionnée à l&apos;abonnement
+            Fiche soumise — publication conditionnée à la validation admin et à l&apos;abonnement
           </p>
           <p className="font-sans text-[12px] text-blue-700">
-            Votre fiche sera publiée dans l&apos;annuaire dès que votre abonnement expert sera actif.
-            Activez-le depuis la page{' '}
-            <Link href="/client/partner/subscription" className="underline font-medium">Abonnement →</Link>
+            Votre fiche est en cours d&apos;examen. Une fois validée et votre abonnement actif, elle apparaîtra dans l&apos;annuaire.{' '}
+            <Link href="/client/partner/subscription" className="underline font-medium">Activer l&apos;abonnement →</Link>
           </p>
         </div>
       )}
-      {kycApproved && !subscriptionActive && !existingExpertProfile && (
+      {!subscriptionActive && !existingExpertProfile && (
         <div className="bg-gray-50 border border-gray-200 px-5 py-4 mb-8">
           <p className="font-sans font-semibold text-gray-700 text-[13px] mb-1">
-            Abonnement requis pour publier votre fiche
+            Soumettez votre fiche pour examen
           </p>
           <p className="font-sans text-[12px] text-gray-500">
-            Remplissez votre fiche ci-dessous et activez votre abonnement pour apparaître dans l&apos;annuaire.
-            Activez-le depuis la page{' '}
-            <Link href="/client/partner/subscription" className="underline font-medium">Abonnement →</Link>
-          </p>
-        </div>
-      )}
-      {/* Guard KYC non approuvé */}
-      {!kycApproved && (
-        <div className="bg-amber-50 border border-amber-200 px-5 py-4 mb-8">
-          <p className="font-sans font-semibold text-amber-900 text-[13px] mb-1">
-            KYC requis pour soumettre votre fiche
-          </p>
-          <p className="font-sans text-[12px] text-amber-700">
-            Complétez et faites approuver votre KYC pour pouvoir soumettre votre fiche expert.
-            Vous pouvez dès maintenant remplir et préparer vos informations.
+            Remplissez et soumettez votre fiche. L&apos;équipe AEGRYN la validera sous 48h.
+            La publication dans l&apos;annuaire requiert un abonnement actif.{' '}
+            <Link href="/client/partner/subscription" className="underline font-medium">Activer l&apos;abonnement →</Link>
           </p>
         </div>
       )}
@@ -164,7 +151,7 @@ export default async function PartnerExpertProfilePage() {
 
       {/* Formulaire — toujours affiché pour permettre la saisie, mais submission bloquée si prérequis manquants */}
       <ExpertProfileForm
-        canPublish={kycApproved}
+        canPublish={true}
         existing={existingExpertProfile as {
           id?: string
           first_name: string

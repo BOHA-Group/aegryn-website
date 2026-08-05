@@ -200,8 +200,9 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
   const isPending     = pendingReview || (!isNew && !Boolean(existing?.is_visible) && !existing?.hidden_reason)
   const isRefused     = !pendingReview && !isNew && !Boolean(existing?.is_visible) && Boolean(existing?.hidden_reason)
 
-  /* Soumission possible dès que le KYC est approuvé (canPublish).
-     Publication effective conditionnée à l'abonnement actif (géré côté page). */
+  /* Soumission toujours autorisée pour un partenaire authentifié.
+     La validation (et donc la publication) est gérée par l'admin.
+     canPublish est passé à true depuis la page parent. */
   const canSubmit = canPublish
 
   return (
@@ -450,8 +451,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
 
       {!canSubmit && (
         <div className="bg-amber-50 border border-amber-200 px-4 py-3 text-[12px] text-amber-700">
-          Votre KYC doit être approuvé pour soumettre votre fiche.
-          Vous pouvez dès maintenant préparer vos informations — la publication sera effective après souscription à l&apos;abonnement.
+          La soumission est temporairement indisponible. Contactez l&apos;équipe AEGRYN.
         </div>
       )}
 

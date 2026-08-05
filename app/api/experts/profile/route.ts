@@ -75,18 +75,15 @@ async function requirePartnerWithPrereqs(userId: string) {
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('roles, kyc_status, expert_plan')
+    .select('roles')
     .eq('id', userId)
-    .single() as { data: { roles: string[] | null; kyc_status: string | null; expert_plan: string | null } | null }
+    .single() as { data: { roles: string[] | null } | null }
 
   const roles = profile?.roles ?? []
   if (!roles.includes('partner')) {
     return { error: NextResponse.json({ error: 'Rôle partenaire requis.' }, { status: 403 }) }
   }
-  if (profile?.kyc_status !== 'approved') {
-    return { error: NextResponse.json({ error: 'KYC non approuvé.' }, { status: 403 }) }
-  }
-  /* Abonnement non requis pour soumettre — la publication est conditionnée à l'abonnement actif (côté admin). */
+  /* KYC et abonnement non requis pour soumettre — la validation et publication sont gérées par l'admin. */
   return { error: null }
 }
 
