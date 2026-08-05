@@ -21,7 +21,8 @@ export async function GET(req: NextRequest) {
         id, first_name, last_name, profession, specialties,
         city, country_code, bio, organization, email_public,
         phone, website, min_rate_eur, languages, avatar_url,
-        verified_at, category, domain
+        verified_at, category, domain,
+        expertise_dimension, expertise_categories, expertise_specialties
       `)
       .eq('is_visible', true)
       .order('verified_at', { ascending: false })
@@ -30,7 +31,7 @@ export async function GET(req: NextRequest) {
     if (profession) query = query.eq('profession', profession)
     if (country)    query = query.eq('country_code', country)
     if (language)   query = query.contains('languages', [language])
-    if (specialty)  query = query.contains('specialties', [specialty])
+    if (specialty)  query = query.contains('expertise_specialties', [specialty])
     if (category)   query = query.eq('category', category)
     if (domain)     query = query.contains('domain', [domain])
 

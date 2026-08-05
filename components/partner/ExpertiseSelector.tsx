@@ -22,7 +22,7 @@ interface ExpertiseSelectorProps {
 }
 
 const MAX_CATEGORIES  = 3
-const MAX_SPECIALTIES = 6
+const MAX_SPECIALTIES = 5
 
 const DIMENSION_OPTIONS: { id: Dimension; labels: Record<LocaleKey, string>; subs: Record<LocaleKey, string> }[] = [
   {
@@ -46,6 +46,7 @@ const UI_LABELS: Record<LocaleKey, {
   step1: string; step2: string; summary: string
   selectCats: string; selectedCount: (n: number, max: number) => string
   selectExperts: string; selectedExpertCount: (n: number, max: number) => string
+  maxReachedTitle: string; maxReachedDesc: string
   regulatory: string; expertises: string
 }> = {
   fr: {
@@ -56,6 +57,8 @@ const UI_LABELS: Record<LocaleKey, {
     selectedCount: (n, max) => `${n}/${max} sélectionnée${n > 1 ? 's' : ''}`,
     selectExperts: `Sélectionnez vos expertises (max ${MAX_SPECIALTIES})`,
     selectedExpertCount: (n, max) => `${n}/${max} sélectionnée${n > 1 ? 's' : ''}`,
+    maxReachedTitle: 'Maximum atteint',
+    maxReachedDesc: 'Vous avez sélectionné 5 expertises. Choisissez les plus représentatives de votre profil pour maximiser votre visibilité.',
     regulatory: 'Réglementaire',
     expertises: 'Expertises',
   },
@@ -67,6 +70,8 @@ const UI_LABELS: Record<LocaleKey, {
     selectedCount: (n, max) => `${n}/${max} selected`,
     selectExperts: `Select your expertises (max ${MAX_SPECIALTIES})`,
     selectedExpertCount: (n, max) => `${n}/${max} selected`,
+    maxReachedTitle: 'Maximum reached',
+    maxReachedDesc: 'You have selected 5 expertises. Choose the most representative ones to maximize your visibility.',
     regulatory: 'Regulatory',
     expertises: 'Expertises',
   },
@@ -78,6 +83,8 @@ const UI_LABELS: Record<LocaleKey, {
     selectedCount: (n, max) => `${n}/${max} ausgewählt`,
     selectExperts: `Wählen Sie Ihre Fachgebiete (max. ${MAX_SPECIALTIES})`,
     selectedExpertCount: (n, max) => `${n}/${max} ausgewählt`,
+    maxReachedTitle: 'Maximum erreicht',
+    maxReachedDesc: 'Sie haben 5 Fachgebiete ausgewählt. Wählen Sie die repräsentativsten aus.',
     regulatory: 'Regulatorisch',
     expertises: 'Fachgebiete',
   },
@@ -89,6 +96,8 @@ const UI_LABELS: Record<LocaleKey, {
     selectedCount: (n, max) => `${n}/${max} seleccionada${n > 1 ? 's' : ''}`,
     selectExperts: `Seleccione sus especialidades (máx. ${MAX_SPECIALTIES})`,
     selectedExpertCount: (n, max) => `${n}/${max} seleccionada${n > 1 ? 's' : ''}`,
+    maxReachedTitle: 'Máximo alcanzado',
+    maxReachedDesc: 'Ha seleccionado 5 especialidades. Elija las más representativas de su perfil.',
     regulatory: 'Regulatorio',
     expertises: 'Especialidades',
   },
@@ -100,6 +109,8 @@ const UI_LABELS: Record<LocaleKey, {
     selectedCount: (n, max) => `${n}/${max} selezionata${n > 1 ? 'e' : ''}`,
     selectExperts: `Seleziona le tue competenze (max ${MAX_SPECIALTIES})`,
     selectedExpertCount: (n, max) => `${n}/${max} selezionata${n > 1 ? 'e' : ''}`,
+    maxReachedTitle: 'Massimo raggiunto',
+    maxReachedDesc: 'Hai selezionato 5 competenze. Scegli quelle più rappresentative del tuo profilo.',
     regulatory: 'Normativo',
     expertises: 'Competenze',
   },
@@ -111,6 +122,8 @@ const UI_LABELS: Record<LocaleKey, {
     selectedCount: (n, max) => `${n}/${max} geselecteerd`,
     selectExperts: `Selecteer uw expertises (max ${MAX_SPECIALTIES})`,
     selectedExpertCount: (n, max) => `${n}/${max} geselecteerd`,
+    maxReachedTitle: 'Maximum bereikt',
+    maxReachedDesc: 'U heeft 5 expertises geselecteerd. Kies de meest representatieve voor uw profiel.',
     regulatory: 'Regelgevend',
     expertises: 'Expertises',
   },
@@ -335,6 +348,20 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
           <p className="font-mono text-[11px] tracking-[0.16em] uppercase text-ag-gray mb-3">
             {ui.summary}
           </p>
+
+          {/* Banner max atteint */}
+          {value.specialties.length >= MAX_SPECIALTIES && (
+            <div className="mb-4 flex items-start gap-3 border border-amber-200 bg-amber-50 px-4 py-3">
+              <span className="font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 bg-amber-100 text-amber-700 border border-amber-300 shrink-0 mt-0.5">
+                {value.specialties.length}/{MAX_SPECIALTIES}
+              </span>
+              <div>
+                <p className="font-sans font-semibold text-amber-800 text-[12px]">{ui.maxReachedTitle}</p>
+                <p className="font-sans text-[11px] text-amber-700 mt-0.5 leading-relaxed">{ui.maxReachedDesc}</p>
+              </div>
+            </div>
+          )}
+
           <div className="flex flex-wrap gap-2">
             {value.specialties.map(specId => {
               const cat  = EXPERTISE_TAXONOMY.find(c => c.specialties.some(s => s.id === specId))

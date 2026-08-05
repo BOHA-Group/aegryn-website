@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { CheckCircle2, Mail, Globe, MapPin, Star } from 'lucide-react'
+import { CheckCircle2, Mail, Globe, MapPin, Star, AlertTriangle } from 'lucide-react'
 import {
   EXPERTISE_TAXONOMY,
   getCategoryLabel,
@@ -75,22 +75,55 @@ export function ExpertCardPreview({ data, locale = 'fr' }: { data: ExpertCardPre
         </div>
       )}
 
-      {/* Badge dimension + catégories */}
-      {(data.expertise_dimension || categoryNodes.length > 0) && (
-        <div className="flex flex-wrap gap-1.5">
+      {/* ── Badges hiérarchiques : Dimension → Catégories → Expertises ── */}
+      {(data.expertise_dimension || categoryNodes.length > 0 || specialtyNodes.length > 0) && (
+        <div className="space-y-1.5">
+
+          {/* Niveau 1 — Dimension */}
           {data.expertise_dimension && (
-            <span className={`inline-flex items-center font-mono text-[9px] tracking-[0.14em] uppercase px-2 py-0.5 border font-semibold ${DIMENSION_COLORS[data.expertise_dimension]?.bg ?? 'bg-ag-off-white'} ${DIMENSION_COLORS[data.expertise_dimension]?.border ?? 'border-ag-border'} ${DIMENSION_COLORS[data.expertise_dimension]?.text ?? 'text-ag-gray'}`}>
-              {DIMENSION_LABELS[data.expertise_dimension] ?? data.expertise_dimension}
-            </span>
-          )}
-          {categoryNodes.map(cat => {
-            const cc = getCatColor(cat.id)
-            return (
-              <span key={cat.id} className={`font-mono text-[9px] tracking-[0.12em] uppercase px-2 py-0.5 border ${cc.bg} ${cc.border} ${cc.text}`}>
-                {getCategoryLabel(cat, locale)}
+            <div className="flex flex-wrap gap-1.5">
+              <span className={`inline-flex items-center font-mono text-[9px] tracking-[0.14em] uppercase px-2 py-0.5 border font-bold ${
+                DIMENSION_COLORS[data.expertise_dimension]?.bg ?? 'bg-ag-off-white'
+              } ${
+                DIMENSION_COLORS[data.expertise_dimension]?.border ?? 'border-ag-border'
+              } ${
+                DIMENSION_COLORS[data.expertise_dimension]?.text ?? 'text-ag-gray'
+              }`}>
+                {DIMENSION_LABELS[data.expertise_dimension] ?? data.expertise_dimension}
               </span>
-            )
-          })}
+            </div>
+          )}
+
+          {/* Niveau 2 — Catégories */}
+          {categoryNodes.length > 0 && (
+            <div className="flex flex-wrap gap-1.5 pl-2 border-l-2 border-ag-border ml-1">
+              {categoryNodes.map(cat => {
+                const cc = getCatColor(cat.id)
+                return (
+                  <span key={cat.id} className={`font-mono text-[9px] tracking-[0.12em] uppercase px-2 py-0.5 border ${cc.bg} ${cc.border} ${cc.text}`}>
+                    {getCategoryLabel(cat, locale)}
+                  </span>
+                )
+              })}
+            </div>
+          )}
+
+          {/* Niveau 3 — Expertises (max 5) */}
+          {specialtyNodes.length > 0 && (
+            <div className="flex flex-wrap gap-1.5 pl-4 border-l-2 border-ag-border/50 ml-1">
+              {specialtyNodes.slice(0, 5).map(s => (
+                <span key={s.id} className="font-mono text-[9px] tracking-[0.12em] uppercase px-2 py-0.5 bg-ag-off-white border border-ag-border text-ag-gray">
+                  {getSpecialtyLabel(s, locale)}
+                </span>
+              ))}
+              {specialtyNodes.length > 5 && (
+                <span className="font-mono text-[9px] text-ag-gray-light px-1 py-0.5">
+                  +{specialtyNodes.length - 5}
+                </span>
+              )}
+            </div>
+          )}
+
         </div>
       )}
 
@@ -136,14 +169,13 @@ export function ExpertCardPreview({ data, locale = 'fr' }: { data: ExpertCardPre
         <p className="font-sans text-[12px] text-ag-gray leading-relaxed line-clamp-3">{data.bio}</p>
       )}
 
-      {/* Expertises sélectionnées */}
-      {specialtyNodes.length > 0 && (
-        <div className="flex flex-wrap gap-1.5">
-          {specialtyNodes.slice(0, 6).map(s => (
-            <span key={s.id} className="font-mono text-[9px] tracking-[0.12em] uppercase px-2 py-0.5 bg-ag-off-white border border-ag-border text-ag-gray">
-              {getSpecialtyLabel(s, locale)}
-            </span>
-          ))}
+      {/* Banner max expertises atteint */}
+      {specialtyNodes.length >= 5 && (
+        <div className="flex items-center gap-2 px-3 py-2 bg-amber-50 border border-amber-200">
+          <AlertTriangle size={10} className="text-amber-500 shrink-0" />
+          <p className="font-mono text-[9px] text-amber-700">
+            Max 5 expertises — choisissez les plus représentatives
+          </p>
         </div>
       )}
 

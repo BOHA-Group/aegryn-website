@@ -9,6 +9,8 @@ import {
   getCategoryIdsByDimension,
   getAllCategoryIds,
   getAllSpecialtyIds,
+  getCategoryLabel,
+  getSpecialtyLabel,
 } from '@/lib/expertiseTaxonomy'
 
 type ExpertProfile = {
@@ -30,6 +32,9 @@ type ExpertProfile = {
   verified_at:  string | null
   category:     string | null
   domain:       string[]
+  expertise_dimension:   string | null
+  expertise_categories:  string[]
+  expertise_specialties: string[]
 }
 
 const DIMENSIONS = [
@@ -63,12 +68,12 @@ const EXPERT_DOMAINS = [
 ] as const
 
 const PLACEHOLDERS: ExpertProfile[] = [
-  { id: 'ph1', first_name: 'Sophie', last_name: 'M.', profession: 'M&A Advisor', specialties: ['Due diligence', 'Valorisation'], city: 'Genève', country_code: 'CH', bio: 'Spécialiste des transactions M&A tech en Suisse romande. 12 ans d\'expérience en structuration et accompagnement de cédants.', organization: 'Aegryn Advisory', email_public: null, phone: null, website: null, min_rate_eur: 350, languages: ['fr', 'en'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['m_and_a', 'valuation'] },
-  { id: 'ph2', first_name: 'Thomas', last_name: 'B.', profession: 'Cybersecurity', specialties: ['Audit sécurité', 'ISO 27001'], city: 'Zurich', country_code: 'CH', bio: 'Expert en cybersécurité et audit de conformité pour entreprises tech. Certifié CISSP et ISO 27001 Lead Auditor.', organization: 'SecureAxis GmbH', email_public: null, phone: null, website: null, min_rate_eur: 280, languages: ['de', 'en'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_tech', domain: ['cybersecurity', 'ai'] },
-  { id: 'ph3', first_name: 'Pierre', last_name: 'D.', profession: 'Tax', specialties: ['Fiscalité internationale', 'Restructuration'], city: 'Paris', country_code: 'FR', bio: 'Conseil fiscal international spécialisé dans les opérations transfrontalières et la restructuration de holdings tech.', organization: 'Cabinet Dumont & Partners', email_public: null, phone: null, website: null, min_rate_eur: 320, languages: ['fr', 'en', 'es'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['tax', 'law'] },
-  { id: 'ph4', first_name: 'Lena', last_name: 'K.', profession: 'CTO', specialties: ['Architecture cloud', 'IA / LLM'], city: 'Berlin', country_code: 'DE', bio: 'CTO fractional spécialisée dans la modernisation de stack technique et l\'intégration IA pour startups B2B.', organization: 'TechLead GmbH', email_public: null, phone: null, website: null, min_rate_eur: 300, languages: ['de', 'en', 'fr'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_tech', domain: ['ai', 'cybersecurity'] },
-  { id: 'ph5', first_name: 'Marco', last_name: 'R.', profession: 'Lawyer', specialties: ['Droit des sociétés', 'M&A', 'IP'], city: 'Milan', country_code: 'IT', bio: 'Avocat d\'affaires spécialisé en droit des sociétés et transactions M&A. Intervient sur les opérations cross-border Europe.', organization: 'Studio Ricci', email_public: null, phone: null, website: null, min_rate_eur: 290, languages: ['it', 'en', 'fr'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['law', 'm_and_a'] },
-  { id: 'ph6', first_name: 'Elena', last_name: 'V.', profession: 'Accountant', specialties: ['Audit', 'Finance d\'entreprise'], city: 'Bruxelles', country_code: 'BE', bio: 'Expert-comptable et auditeur certifié. Accompagnement des PME tech en croissance sur leur structuration financière.', organization: 'Verdu Audit', email_public: null, phone: null, website: null, min_rate_eur: 240, languages: ['fr', 'nl', 'en'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['accounting', 'finance'] },
+  { id: 'ph1', first_name: 'Sophie', last_name: 'M.', profession: 'M&A Advisor', specialties: ['Due diligence', 'Valorisation'], city: 'Genève', country_code: 'CH', bio: 'Spécialiste des transactions M&A tech en Suisse romande. 12 ans d\'expérience en structuration et accompagnement de cédants.', organization: 'Aegryn Advisory', email_public: null, phone: null, website: null, min_rate_eur: 350, languages: ['fr', 'en'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['m_and_a', 'valuation'], expertise_dimension: 'transaction', expertise_categories: [], expertise_specialties: [] },
+  { id: 'ph2', first_name: 'Thomas', last_name: 'B.', profession: 'Cybersecurity', specialties: ['Audit sécurité', 'ISO 27001'], city: 'Zurich', country_code: 'CH', bio: 'Expert en cybersécurité et audit de conformité pour entreprises tech. Certifié CISSP et ISO 27001 Lead Auditor.', organization: 'SecureAxis GmbH', email_public: null, phone: null, website: null, min_rate_eur: 280, languages: ['de', 'en'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_tech', domain: ['cybersecurity', 'ai'], expertise_dimension: 'tech', expertise_categories: [], expertise_specialties: [] },
+  { id: 'ph3', first_name: 'Pierre', last_name: 'D.', profession: 'Tax', specialties: ['Fiscalité internationale', 'Restructuration'], city: 'Paris', country_code: 'FR', bio: 'Conseil fiscal international spécialisé dans les opérations transfrontalières et la restructuration de holdings tech.', organization: 'Cabinet Dumont & Partners', email_public: null, phone: null, website: null, min_rate_eur: 320, languages: ['fr', 'en', 'es'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['tax', 'law'], expertise_dimension: 'transaction', expertise_categories: [], expertise_specialties: [] },
+  { id: 'ph4', first_name: 'Lena', last_name: 'K.', profession: 'CTO', specialties: ['Architecture cloud', 'IA / LLM'], city: 'Berlin', country_code: 'DE', bio: 'CTO fractional spécialisée dans la modernisation de stack technique et l\'intégration IA pour startups B2B.', organization: 'TechLead GmbH', email_public: null, phone: null, website: null, min_rate_eur: 300, languages: ['de', 'en', 'fr'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_tech', domain: ['ai', 'cybersecurity'], expertise_dimension: 'tech', expertise_categories: [], expertise_specialties: [] },
+  { id: 'ph5', first_name: 'Marco', last_name: 'R.', profession: 'Lawyer', specialties: ['Droit des sociétés', 'M&A', 'IP'], city: 'Milan', country_code: 'IT', bio: 'Avocat d\'affaires spécialisé en droit des sociétés et transactions M&A. Intervient sur les opérations cross-border Europe.', organization: 'Studio Ricci', email_public: null, phone: null, website: null, min_rate_eur: 290, languages: ['it', 'en', 'fr'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['law', 'm_and_a'], expertise_dimension: 'transaction', expertise_categories: [], expertise_specialties: [] },
+  { id: 'ph6', first_name: 'Elena', last_name: 'V.', profession: 'Accountant', specialties: ['Audit', 'Finance d\'entreprise'], city: 'Bruxelles', country_code: 'BE', bio: 'Expert-comptable et auditeur certifié. Accompagnement des PME tech en croissance sur leur structuration financière.', organization: 'Verdu Audit', email_public: null, phone: null, website: null, min_rate_eur: 240, languages: ['fr', 'nl', 'en'], avatar_url: null, verified_at: new Date().toISOString(), category: 'advisory_transaction', domain: ['accounting', 'finance'], expertise_dimension: 'transaction', expertise_categories: [], expertise_specialties: [] },
 ]
 
 type DomainCard = {
@@ -184,6 +189,24 @@ const CATEGORY_COLORS: Record<string, { bg: string; border: string; text: string
   advisory_transaction: { bg: 'bg-[#818cf8]/10', border: 'border-[#818cf8]/40', text: 'text-[#4338ca]' },
 }
 
+const DIMENSION_LABELS_PUBLIC: Record<string, string> = {
+  tech:        'Advisory Tech',
+  transaction: 'Advisory Transaction',
+  both:        'Advisory Tech & Transaction',
+}
+
+const DIMENSION_COLORS_PUBLIC: Record<string, { bg: string; border: string; text: string }> = {
+  tech:        { bg: 'bg-[#5ADDA4]/10', border: 'border-[#5ADDA4]/40', text: 'text-[#0e7a52]' },
+  transaction: { bg: 'bg-[#818cf8]/10', border: 'border-[#818cf8]/40', text: 'text-[#4338ca]' },
+  both:        { bg: 'bg-ag-apex/8',    border: 'border-ag-apex/30',    text: 'text-ag-apex'   },
+}
+
+function getCatColorPublic(catId: string) {
+  const cat = EXPERTISE_TAXONOMY.find(c => c.id === catId)
+  if (!cat) return { bg: 'bg-ag-off-white', border: 'border-ag-border', text: 'text-ag-gray' }
+  return DIMENSION_COLORS_PUBLIC[cat.dimension] ?? { bg: 'bg-ag-off-white', border: 'border-ag-border', text: 'text-ag-gray' }
+}
+
 type ActiveFilters = { category: string; domain: string; specialty: string; country: string }
 
 function trackClick(expertId: string, clickType: 'email' | 'website', filters: ActiveFilters) {
@@ -203,7 +226,14 @@ function trackClick(expertId: string, clickType: 'email' | 'website', filters: A
 
 function ExpertCard({ profile, t, blurred = false, filters = { category: '', domain: '', specialty: '', country: '' } }: { profile: ExpertProfile; t: ReturnType<typeof useTranslations>; blurred?: boolean; filters?: ActiveFilters }) {
   const initials = `${profile.first_name[0] ?? ''}${profile.last_name[0] ?? ''}`.toUpperCase()
-  const catColors = profile.category ? CATEGORY_COLORS[profile.category] : null
+
+  const categoryNodes = EXPERTISE_TAXONOMY.filter(c =>
+    (profile.expertise_categories ?? []).includes(c.id)
+  )
+  const specialtyNodes = EXPERTISE_TAXONOMY
+    .flatMap(c => c.specialties)
+    .filter(s => (profile.expertise_specialties ?? []).includes(s.id))
+
   return (
     <div className={`bg-ag-white border border-ag-border p-6 flex flex-col gap-4 relative ${blurred ? 'select-none' : ''}`}>
       {blurred && (
@@ -214,21 +244,41 @@ function ExpertCard({ profile, t, blurred = false, filters = { category: '', dom
         </div>
       )}
 
-      {/* Badges catégorie + domaines */}
-      {(profile.category || profile.domain.length > 0) && (
-        <div className="flex flex-wrap gap-1.5">
-          {profile.category && catColors && (
-            <span className={`inline-flex items-center gap-1 font-mono text-[9px] tracking-[0.14em] uppercase px-2 py-0.5 border ${catColors.bg} ${catColors.border} ${catColors.text} font-semibold`}>
-              {t(profile.category === 'advisory_tech' ? 'categories.tech' : 'categories.transaction')}
-            </span>
+      {/* Badges hiérarchiques : Dimension → Catégories → Expertises */}
+      {(profile.expertise_dimension || categoryNodes.length > 0 || specialtyNodes.length > 0) ? (
+        <div className="space-y-1.5">
+          {profile.expertise_dimension && (
+            <div className="flex flex-wrap gap-1.5">
+              {(() => { const dc = DIMENSION_COLORS_PUBLIC[profile.expertise_dimension]; return (
+                <span className={`inline-flex items-center font-mono text-[9px] tracking-[0.14em] uppercase px-2 py-0.5 border font-bold ${dc?.bg ?? 'bg-ag-off-white'} ${dc?.border ?? 'border-ag-border'} ${dc?.text ?? 'text-ag-gray'}`}>
+                  {DIMENSION_LABELS_PUBLIC[profile.expertise_dimension] ?? profile.expertise_dimension}
+                </span>
+              )})()}
+            </div>
           )}
-          {profile.domain.slice(0, 2).map(d => (
-            <span key={d} className="font-mono text-[9px] tracking-[0.12em] uppercase px-2 py-0.5 bg-ag-off-white border border-ag-border text-ag-gray">
-              {t(`domains.${d}`)}
-            </span>
-          ))}
+          {categoryNodes.length > 0 && (
+            <div className="flex flex-wrap gap-1.5 pl-2 border-l-2 border-ag-border ml-1">
+              {categoryNodes.map(cat => {
+                const cc = getCatColorPublic(cat.id)
+                return (
+                  <span key={cat.id} className={`font-mono text-[9px] tracking-[0.12em] uppercase px-2 py-0.5 border ${cc.bg} ${cc.border} ${cc.text}`}>
+                    {getCategoryLabel(cat, 'fr')}
+                  </span>
+                )
+              })}
+            </div>
+          )}
+          {specialtyNodes.length > 0 && (
+            <div className="flex flex-wrap gap-1.5 pl-4 border-l-2 border-ag-border/50 ml-1">
+              {specialtyNodes.slice(0, 5).map(s => (
+                <span key={s.id} className="font-mono text-[9px] tracking-[0.12em] uppercase px-2 py-0.5 bg-ag-off-white border border-ag-border text-ag-gray">
+                  {getSpecialtyLabel(s, 'fr')}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
-      )}
+      ) : null}
 
       <div className="flex items-start gap-4">
         {profile.avatar_url ? (
