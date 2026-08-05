@@ -4793,6 +4793,20 @@
       "rateFrom": "From",
       "rateUnit": "€/h"
     },
+    "contactModal": {
+      "label": "Contact request",
+      "fieldFirstName": "First name",
+      "fieldLastName": "Last name",
+      "fieldEmail": "Email",
+      "consentText": "I agree that my personal information (first name, last name, email) may be shared with AEGRYN and the contacted expert for the purpose of making an introduction, in accordance with GDPR and Swiss LPD. I may exercise my rights at any time at contact@boha-group.com.",
+      "submit": "Reveal contact",
+      "submitting": "Sending…",
+      "successTitle": "Contact revealed.",
+      "successDesc": "Your information has been recorded. You can now write directly to the expert.",
+      "rgpdNote": "Data processed by BOHA-Group Sàrl (Aegryn). Your GDPR/LPD rights are guaranteed.",
+      "errorConsent": "Please accept the consent before continuing.",
+      "errorGeneric": "An error occurred. Please try again."
+    },
     "empty": {
       "title": "No experts available yet.",
       "desc": "The network is being built. Come back soon or apply below."

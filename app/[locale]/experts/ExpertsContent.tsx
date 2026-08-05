@@ -1,9 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
-import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, TrendingUp, Scale, FileSearch, Cpu, ClipboardCheck } from 'lucide-react'
+import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, TrendingUp, Scale, FileSearch, Cpu, ClipboardCheck, X } from 'lucide-react'
 import {
   EXPERTISE_TAXONOMY,
   getCategoryIdsByDimension,
@@ -205,6 +205,161 @@ function getCatColorPublic(catId: string) {
 
 type ActiveFilters = { category: string; domain: string; specialty: string; country: string }
 
+type ContactLeadModalProps = {
+  expert: ExpertProfile
+  filters: ActiveFilters
+  onClose: () => void
+}
+
+function ContactLeadModal({ expert, filters, onClose }: ContactLeadModalProps) {
+  const t = useTranslations('experts')
+  const backdropRef = useRef<HTMLDivElement>(null)
+  const [firstName, setFirstName] = useState('')
+  const [lastName,  setLastName]  = useState('')
+  const [email,     setEmail]     = useState('')
+  const [consent,   setConsent]   = useState(false)
+  const [loading,   setLoading]   = useState(false)
+  const [error,     setError]     = useState<string | null>(null)
+  const [done,      setDone]      = useState(false)
+  const [revealedEmail, setRevealedEmail] = useState<string | null>(null)
+
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') onClose() }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (!consent) { setError(t('contactModal.errorConsent')); return }
+    setLoading(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/experts/contact-lead', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          expert_id:        expert.id,
+          first_name:       firstName.trim(),
+          last_name:        lastName.trim(),
+          email:            email.trim(),
+          consent_given:    true,
+          filter_category:  filters.category  || undefined,
+          filter_domain:    filters.domain    || undefined,
+          filter_specialty: filters.specialty || undefined,
+          filter_country:   filters.country   || undefined,
+        }),
+      })
+      const data = await res.json()
+      if (!res.ok) { setError(data.error ?? t('contactModal.errorGeneric')); return }
+      setRevealedEmail(data.email_public ?? null)
+      setDone(true)
+    } catch { setError(t('contactModal.errorGeneric')) }
+    finally  { setLoading(false) }
+  }
+
+  return (
+    <div
+      ref={backdropRef}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-ag-black/60 backdrop-blur-[3px] p-4"
+      onClick={e => { if (e.target === backdropRef.current) onClose() }}
+    >
+      <div className="bg-ag-white border border-ag-border w-full max-w-md relative">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-ag-gray-light hover:text-ag-black transition-colors"
+          aria-label="Fermer"
+        >
+          <X size={16} />
+        </button>
+
+        <div className="p-8">
+          {done ? (
+            <div className="flex flex-col gap-4">
+              <CheckCircle2 size={28} className="text-ag-apex" />
+              <p className="font-sans font-bold text-ag-black text-[18px]">{t('contactModal.successTitle')}</p>
+              <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('contactModal.successDesc')}</p>
+              {revealedEmail && (
+                <a
+                  href={`mailto:${revealedEmail}`}
+                  className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 bg-ag-navy text-white hover:bg-ag-black transition-colors mt-2"
+                >
+                  <Mail size={11} /> {revealedEmail}
+                </a>
+              )}
+            </div>
+          ) : (
+            <>
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.24em] text-ag-gray-light mb-1">
+                {t('contactModal.label')}
+              </p>
+              <h3 className="font-sans font-bold text-ag-black text-[18px] leading-tight mb-1">
+                {expert.first_name} {expert.last_name}
+              </h3>
+              <p className="font-sans text-[12px] text-ag-apex font-semibold mb-6">{expert.profession}</p>
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className={labelCls}>{t('contactModal.fieldFirstName')} *</label>
+                    <input
+                      type="text" required value={firstName}
+                      onChange={e => setFirstName(e.target.value)}
+                      className={inputCls}
+                    />
+                  </div>
+                  <div>
+                    <label className={labelCls}>{t('contactModal.fieldLastName')} *</label>
+                    <input
+                      type="text" required value={lastName}
+                      onChange={e => setLastName(e.target.value)}
+                      className={inputCls}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className={labelCls}>{t('contactModal.fieldEmail')} *</label>
+                  <input
+                    type="email" required value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    className={inputCls}
+                  />
+                </div>
+
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input
+                    type="checkbox" checked={consent}
+                    onChange={e => setConsent(e.target.checked)}
+                    className="mt-0.5 shrink-0 accent-ag-navy"
+                  />
+                  <span className="font-sans text-[11px] text-ag-gray leading-relaxed">
+                    {t('contactModal.consentText')}
+                  </span>
+                </label>
+
+                {error && <p className="font-sans text-[11px] text-red-500">{error}</p>}
+
+                <button
+                  type="submit"
+                  disabled={loading || !consent}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-50"
+                >
+                  {loading ? t('contactModal.submitting') : t('contactModal.submit')}
+                  {!loading && <ArrowUpRight size={12} />}
+                </button>
+
+                <p className="font-sans text-[10px] text-ag-gray-light text-center leading-relaxed">
+                  {t('contactModal.rgpdNote')}
+                </p>
+              </form>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function trackClick(expertId: string, clickType: 'email' | 'website', filters: ActiveFilters) {
   fetch('/api/experts/track-click', {
     method:  'POST',
@@ -220,7 +375,7 @@ function trackClick(expertId: string, clickType: 'email' | 'website', filters: A
   }).catch(() => {})
 }
 
-function ExpertCard({ profile, t, blurred = false, filters = { category: '', domain: '', specialty: '', country: '' } }: { profile: ExpertProfile; t: ReturnType<typeof useTranslations>; blurred?: boolean; filters?: ActiveFilters }) {
+function ExpertCard({ profile, t, blurred = false, filters = { category: '', domain: '', specialty: '', country: '' }, onContactClick }: { profile: ExpertProfile; t: ReturnType<typeof useTranslations>; blurred?: boolean; filters?: ActiveFilters; onContactClick?: (profile: ExpertProfile) => void }) {
   const initials = `${profile.first_name[0] ?? ''}${profile.last_name[0] ?? ''}`.toUpperCase()
 
   const categoryNodes = EXPERTISE_TAXONOMY.filter(c =>
@@ -350,13 +505,12 @@ function ExpertCard({ profile, t, blurred = false, filters = { category: '', dom
       {!blurred && (
         <div className="flex gap-3">
           {profile.email_public && (
-            <a
-              href={`mailto:${profile.email_public}`}
-              onClick={() => trackClick(profile.id, 'email', filters)}
+            <button
+              onClick={() => onContactClick?.(profile)}
               className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-navy text-ag-navy hover:bg-ag-navy hover:text-white transition-colors"
             >
               <Mail size={10} /> {t('card.contact')}
-            </a>
+            </button>
           )}
           {profile.website && (
             <a
@@ -556,12 +710,13 @@ function getAvailableExpertises(category: string, domain: string): readonly stri
 
 export default function ExpertsContent() {
   const t = useTranslations('experts')
-  const [profiles,    setProfiles]    = useState<ExpertProfile[]>([])
-  const [loadingGrid, setLoadingGrid] = useState(true)
-  const [category,    setCategory]    = useState('')
-  const [domain,      setDomain]      = useState('')
-  const [specialty,   setSpecialty]   = useState('')
-  const [country,     setCountry]     = useState('')
+  const [profiles,       setProfiles]       = useState<ExpertProfile[]>([])
+  const [loadingGrid,    setLoadingGrid]    = useState(true)
+  const [category,       setCategory]       = useState('')
+  const [domain,         setDomain]         = useState('')
+  const [specialty,      setSpecialty]      = useState('')
+  const [country,        setCountry]        = useState('')
+  const [contactTarget,  setContactTarget]  = useState<ExpertProfile | null>(null)
 
   useEffect(() => {
     setLoadingGrid(true)
@@ -711,9 +866,23 @@ export default function ExpertsContent() {
         {!loadingGrid && profiles.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
             {profiles.map(p => (
-              <ExpertCard key={p.id} profile={p} t={t} filters={{ category, domain, specialty, country }} />
+              <ExpertCard
+                key={p.id}
+                profile={p}
+                t={t}
+                filters={{ category, domain, specialty, country }}
+                onContactClick={setContactTarget}
+              />
             ))}
           </div>
+        )}
+
+        {contactTarget && (
+          <ContactLeadModal
+            expert={contactTarget}
+            filters={{ category, domain, specialty, country }}
+            onClose={() => setContactTarget(null)}
+          />
         )}
       </section>
 

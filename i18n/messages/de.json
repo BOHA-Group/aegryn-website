@@ -4726,6 +4726,20 @@
       "rateFrom": "Ab",
       "rateUnit": "€/Std"
     },
+    "contactModal": {
+      "label": "Kontaktanfrage",
+      "fieldFirstName": "Vorname",
+      "fieldLastName": "Nachname",
+      "fieldEmail": "E-Mail",
+      "consentText": "Ich stimme zu, dass meine persönlichen Daten (Vorname, Nachname, E-Mail) an AEGRYN und den kontaktierten Experten zum Zweck der Vermittlung übermittelt werden, gemäß DSGVO und Schweizer DSG. Ich kann meine Rechte jederzeit unter contact@boha-group.com ausüben.",
+      "submit": "Kontakt freischalten",
+      "submitting": "Senden…",
+      "successTitle": "Kontakt freigegeben.",
+      "successDesc": "Ihre Daten wurden gespeichert. Sie können dem Experten jetzt direkt schreiben.",
+      "rgpdNote": "Daten verarbeitet von BOHA-Group Sàrl (Aegryn). Ihre DSGVO/DSG-Rechte sind garantiert.",
+      "errorConsent": "Bitte akzeptieren Sie die Einwilligung, bevor Sie fortfahren.",
+      "errorGeneric": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    },
     "empty": {
       "title": "Noch keine Experten verfügbar.",
       "desc": "Das Netzwerk wird aufgebaut. Kommen Sie bald wieder oder bewerben Sie sich unten."

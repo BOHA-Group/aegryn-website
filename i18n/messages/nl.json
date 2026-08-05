@@ -4726,6 +4726,20 @@
       "rateFrom": "Vanaf",
       "rateUnit": "€/u"
     },
+    "contactModal": {
+      "label": "Contactverzoek",
+      "fieldFirstName": "Voornaam",
+      "fieldLastName": "Achternaam",
+      "fieldEmail": "E-mail",
+      "consentText": "Ik ga ermee akkoord dat mijn persoonsgegevens (voornaam, achternaam, e-mail) worden gedeeld met AEGRYN en de gecontacteerde expert ten behoeve van een introductie, overeenkomstig de AVG en de Zwitserse DSG. Ik kan mijn rechten te allen tijde uitoefenen via contact@boha-group.com.",
+      "submit": "Contact vrijgeven",
+      "submitting": "Verzenden…",
+      "successTitle": "Contact onthuld.",
+      "successDesc": "Uw gegevens zijn geregistreerd. U kunt nu rechtstreeks aan de expert schrijven.",
+      "rgpdNote": "Gegevens verwerkt door BOHA-Group Sàrl (Aegryn). Uw AVG/DSG-rechten zijn gegarandeerd.",
+      "errorConsent": "Accepteer de toestemming voordat u verdergaat.",
+      "errorGeneric": "Er is een fout opgetreden. Probeer het opnieuw."
+    },
     "empty": {
       "title": "Nog geen experts beschikbaar.",
       "desc": "Het netwerk wordt opgebouwd. Kom binnenkort terug of kandidateer hieronder."
