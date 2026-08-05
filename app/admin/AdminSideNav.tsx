@@ -18,16 +18,17 @@ const SECTIONS = [
       { href: '/admin/offers',         label: 'Offres' },
       { href: '/admin/transactions',   label: 'Pipeline PTT' },
       { href: '/admin/introductions',  label: 'Introductions' },
-      { href: '/admin/commissions',    label: 'Commissions' },
+      // { href: '/admin/commissions', label: 'Commissions' }, // parking-lot
     ],
   },
   {
     label: 'Utilisateurs',
     items: [
-      { href: '/admin/members', label: 'Membres & NDA' },
-      { href: '/admin/kyc',     label: 'KYC' },
-      { href: '/admin/partners',label: 'Partenaires' },
-      { href: '/admin/experts', label: 'Experts réseau' },
+      { href: '/admin/members',   label: 'Membres & NDA' },
+      { href: '/admin/kyc',       label: 'KYC' },
+      { href: '/admin/partners',  label: 'Partenaires' },
+      { href: '/admin/experts',   label: 'Experts réseau' },
+      { href: '/admin/referrals', label: 'Parrainages' },
     ],
   },
   {

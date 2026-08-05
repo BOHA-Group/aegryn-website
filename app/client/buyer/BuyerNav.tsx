@@ -18,7 +18,7 @@ export default async function BuyerNav({ unreadCount }: { unreadCount: number })
         { href: '/client/buyer/catalogue',    label: t('navCatalog'),      icon: 'BookOpen' },
         { href: '/client/buyer/offres',       label: t('navOffers'),       icon: 'Gavel' },
         { href: '/client/buyer/transactions', label: t('navTransactions'), icon: 'ArrowRightLeft' },
-        { href: '/client/buyer/commissions',  label: t('navCommissions'),  icon: 'Receipt' },
+        // { href: '/client/buyer/commissions', label: t('navCommissions'), icon: 'Receipt' }, // parking-lot
       ],
     },
     {

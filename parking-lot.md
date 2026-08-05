@@ -1,5 +1,29 @@
 # Parking-lot — fonctionnalités en attente
 
+---
+
+## Commissions — Espace Acquéreur (masqué)
+
+**Contexte :**
+La page `/client/buyer/commissions` affiche les frais de transaction dus par l'acquéreur à AEGRYN.
+Fonctionnalité non activée pour l'instant — le flux de facturation n'est pas encore opérationnel.
+
+**Ce qui existe (archivé, ne pas supprimer) :**
+- Page : `app/client/buyer/commissions/page.tsx` — liste complète avec statuts pending/invoiced/paid
+- Table Supabase : `buyer_commission_dues` (colonnes : transaction_id, amount_chf, status, eligible_at)
+- Nav : entrée `navCommissions` dans `BuyerNav.tsx` (commentée)
+- Admin : page `/admin/commissions` + `CommissionsClient.tsx` (également masquée)
+- Admin nav : entrée "Commissions" dans `AdminSideNav.tsx` (commentée)
+
+**Pour réactiver :**
+1. Décommenter les entrées nav dans `BuyerNav.tsx` et `AdminSideNav.tsx`
+2. Vérifier que la table `buyer_commission_dues` est correctement alimentée par le webhook Stripe
+3. Activer la génération de factures Stripe pour les commissions
+
+**Priorité :** Basse — à traiter après stabilisation complète du pipeline de transaction PTT.
+
+---
+
 ## Notifications in-app — Parrainage expert
 
 **Contexte :**
