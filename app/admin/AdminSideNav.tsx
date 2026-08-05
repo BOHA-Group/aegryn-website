@@ -18,6 +18,7 @@ const SECTIONS = [
       { href: '/admin/offers',         label: 'Offres' },
       { href: '/admin/transactions',   label: 'Pipeline PTT' },
       { href: '/admin/introductions',  label: 'Introductions' },
+      { href: '/admin/invoices',       label: 'Factures' },
       // { href: '/admin/commissions', label: 'Commissions' }, // parking-lot
     ],
   },

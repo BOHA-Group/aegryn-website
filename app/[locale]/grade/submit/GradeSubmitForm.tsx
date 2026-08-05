@@ -26,6 +26,10 @@ export default function GradeSubmitForm() {
   const [error, setError]         = useState(false)
   const [loading, setLoading]     = useState(false)
 
+  /* ── Accord catalogue (full_certification uniquement) ── */
+  const [catalogueAgreed, setCatalogueAgreed] = useState(false)
+  const [feeAgreed, setFeeAgreed]             = useState(false)
+
   useEffect(() => {
     const suggested = params.get('suggested') as EvalType | null
     const lead      = params.get('source_lead')
@@ -67,8 +71,26 @@ export default function GradeSubmitForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       })
-      if (res.ok) setSubmitted(true)
-      else setError(true)
+      if (!res.ok) { setError(true); return }
+
+      const json = await res.json().catch(() => ({}))
+      const assetId = json?.assetId ?? undefined
+
+      /* ── Demande catalogue pour full_certification avec accord ── */
+      if (evalType === 'full_certification' && catalogueAgreed && feeAgreed) {
+        await fetch('/api/grade/catalogue-request', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            assetId,
+            assetName:       String(data.assetName),
+            catalogueAgreed: true,
+            feeAgreed:       true,
+          }),
+        })
+      }
+
+      setSubmitted(true)
     } catch {
       setError(true)
     } finally {
@@ -427,14 +449,56 @@ export default function GradeSubmitForm() {
                 </div>
               </div>
 
+              {/* ── Accord mise au catalogue (full_certification uniquement) ── */}
+              {evalType === 'full_certification' && (
+                <div className="border border-ag-navy/30 bg-ag-navy/5 p-6 flex flex-col gap-4">
+                  <p className="font-sans font-bold text-ag-black text-[13px] tracking-[-0.01em]">
+                    Accord de mise au catalogue AEGRYN
+                  </p>
+                  <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
+                    La <strong>Certification Auction</strong> inclut la mise au catalogue d&apos;AEGRYN et l&apos;ouverture aux acquéreurs membres qualifiés. Votre actif sera préparé à <strong>J+15</strong> après admission et visible aux acquéreurs à <strong>J+45 minimum</strong> (session bi-annuelle).
+                  </p>
+                  <div className="bg-amber-50 border border-amber-200 px-4 py-3 text-[12px] text-amber-800 font-sans leading-relaxed">
+                    <strong>Frais de publication : CHF 2 000 HT</strong> — Cet acompte est déduit de la commission AEGRYN en cas de vente. Il est conservé par AEGRYN si aucune transaction n&apos;est réalisée (cf. CGV § 11 et NDA signé). Une facture sera émise par virement bancaire après validation de votre dossier par notre équipe.
+                  </div>
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={catalogueAgreed}
+                      onChange={e => setCatalogueAgreed(e.target.checked)}
+                      className="mt-0.5 accent-ag-navy shrink-0 w-4 h-4"
+                    />
+                    <span className="font-sans text-[13px] text-ag-black leading-snug">
+                      J&apos;accepte la mise au catalogue AEGRYN et les conditions contractuelles associées (NDA, CGV, délais de 45 jours minimum).
+                    </span>
+                  </label>
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={feeAgreed}
+                      onChange={e => setFeeAgreed(e.target.checked)}
+                      className="mt-0.5 accent-ag-navy shrink-0 w-4 h-4"
+                    />
+                    <span className="font-sans text-[13px] text-ag-black leading-snug">
+                      J&apos;accepte le versement des frais de publication de <strong>CHF 2 000 HT</strong> par virement bancaire sur présentation de facture, déductibles de la commission en cas de vente.
+                    </span>
+                  </label>
+                  {evalType === 'full_certification' && (!catalogueAgreed || !feeAgreed) && (
+                    <p className="font-sans text-[11px] text-amber-700">
+                      Les deux cases doivent être cochées pour soumettre une demande de Certification Auction.
+                    </p>
+                  )}
+                </div>
+              )}
+
               {error && (
                 <p className="font-sans text-[12px] text-red-600">{t('form.errorMsg')}</p>
               )}
 
               <button
                 type="submit"
-                disabled={loading}
-                className="inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-8 py-4 hover:bg-ag-navy-mid transition-colors disabled:opacity-60"
+                disabled={loading || (evalType === 'full_certification' && (!catalogueAgreed || !feeAgreed))}
+                className="inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-8 py-4 hover:bg-ag-navy-mid transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {loading ? t('form.submitting') : t('form.submit')}
                 {!loading && <ArrowUpRight size={13} />}

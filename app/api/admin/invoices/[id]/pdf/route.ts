@@ -1,0 +1,165 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { createServiceClient }      from '@/lib/supabase'
+import { getUser }                  from '@/lib/supabaseServer'
+
+type Params = { params: Promise<{ id: string }> }
+
+function fmtMoney(n: number, currency = 'CHF') {
+  return new Intl.NumberFormat('fr-CH', {
+    style: 'currency', currency, minimumFractionDigits: 2,
+  }).format(n)
+}
+
+function fmtDate(d: string | null) {
+  if (!d) return '—'
+  return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
+}
+
+function buildHtml(inv: Record<string, unknown>): string {
+  const items = (inv.line_items as { description: string; unit: string; qty: number; unit_price_ht: number }[]) ?? []
+  const currency = String(inv.currency ?? 'CHF')
+
+  const rows = items.map(l => `
+    <tr>
+      <td style="padding:8px 10px;border-bottom:1px solid #eee;font-size:12px;color:#374151">${l.description || '—'}</td>
+      <td style="padding:8px 10px;border-bottom:1px solid #eee;font-size:12px;color:#374151;text-align:center">${l.unit}</td>
+      <td style="padding:8px 10px;border-bottom:1px solid #eee;font-size:12px;color:#374151;text-align:center">${l.qty}</td>
+      <td style="padding:8px 10px;border-bottom:1px solid #eee;font-size:12px;color:#374151;text-align:right;font-family:monospace">${fmtMoney(l.unit_price_ht, currency)}</td>
+      <td style="padding:8px 10px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;text-align:right;font-family:monospace">${fmtMoney(l.qty * l.unit_price_ht, currency)}</td>
+    </tr>
+  `).join('')
+
+  return `<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Facture ${inv.invoice_number}</title>
+<style>
+  @media print {
+    @page { size: A4; margin: 20mm 18mm; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #111; background: #fff; padding: 40px; max-width: 740px; margin: 0 auto; }
+  .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; }
+  .logo-block h1 { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; }
+  .logo-block p { font-size: 10px; color: #9ca3af; margin-top: 2px; font-family: monospace; }
+  .invoice-meta { text-align: right; }
+  .invoice-meta .num { font-size: 14px; font-weight: 700; color: #1a3c5e; font-family: monospace; }
+  .invoice-meta p { font-size: 10px; color: #6b7280; margin-top: 2px; }
+  .section-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.18em; color: #9ca3af; margin-bottom: 6px; font-family: monospace; }
+  .divider { border: none; border-top: 1px solid #e5e7eb; margin: 24px 0; }
+  .recipient { margin-bottom: 30px; }
+  .recipient .name { font-size: 13px; font-weight: 600; color: #111; }
+  .recipient .sub { font-size: 12px; color: #6b7280; margin-top: 2px; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+  thead tr { border-bottom: 2px solid #111; }
+  thead th { font-size: 9px; text-transform: uppercase; letter-spacing: 0.14em; color: #6b7280; padding: 6px 10px; font-family: monospace; font-weight: 600; }
+  .totals { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; margin-bottom: 30px; }
+  .totals .row { display: flex; gap: 80px; justify-content: flex-end; font-size: 12px; color: #374151; }
+  .totals .row.grand { font-size: 15px; font-weight: 700; color: #111; border-top: 1px solid #e5e7eb; padding-top: 8px; margin-top: 4px; }
+  .bank { background: #f9fafb; border: 1px solid #e5e7eb; padding: 16px; margin-top: 24px; }
+  .bank p { font-size: 11px; color: #374151; margin-top: 4px; }
+  .bank .iban { font-family: monospace; font-size: 12px; font-weight: 600; color: #111; }
+  .footer { margin-top: 40px; border-top: 1px solid #e5e7eb; padding-top: 12px; font-size: 10px; color: #9ca3af; text-align: center; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-block">
+      <h1>AEGRYN</h1>
+      <p>BOHA-Group · Suisse · aegryn.com</p>
+      <p style="margin-top:4px;font-size:10px;color:#9ca3af">contact@boha-group.com</p>
+    </div>
+    <div class="invoice-meta">
+      <div class="num">${inv.invoice_number}</div>
+      <p>Émise le ${fmtDate(String(inv.issued_at ?? ''))}</p>
+      ${inv.due_date ? `<p>Échéance : ${fmtDate(String(inv.due_date))}</p>` : ''}
+      <p style="margin-top:6px;font-size:10px;background:#f3f4f6;padding:2px 6px;display:inline-block;text-transform:uppercase;letter-spacing:0.1em">
+        ${inv.status === 'paid' ? '✓ Payée' : inv.status === 'sent' ? 'Envoyée' : inv.status === 'cancelled' ? 'Annulée' : 'Brouillon'}
+      </p>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <div class="recipient">
+    <div class="section-label">Facturer à</div>
+    <div class="name">${inv.recipient_name || '—'}</div>
+    ${inv.recipient_company ? `<div class="sub">${inv.recipient_company}</div>` : ''}
+    ${inv.recipient_address ? `<div class="sub" style="white-space:pre-line">${inv.recipient_address}</div>` : ''}
+    <div class="sub">${inv.recipient_email}</div>
+    ${inv.recipient_vat_num ? `<div class="sub">N° TVA : ${inv.recipient_vat_num}</div>` : ''}
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:left">Description</th>
+        <th style="text-align:center">Unité</th>
+        <th style="text-align:center">Qté</th>
+        <th style="text-align:right">P.U. HT</th>
+        <th style="text-align:right">Total HT</th>
+      </tr>
+    </thead>
+    <tbody>${rows}</tbody>
+  </table>
+
+  <div class="totals">
+    <div class="row"><span>Sous-total HT</span><span style="font-family:monospace">${fmtMoney(Number(inv.subtotal_ht ?? 0), currency)}</span></div>
+    <div class="row"><span>TVA (${inv.vat_rate ?? 0}%)</span><span style="font-family:monospace">${fmtMoney(Number(inv.vat_amount ?? 0), currency)}</span></div>
+    <div class="row grand"><span>Total TTC</span><span style="font-family:monospace">${fmtMoney(Number(inv.total_ttc ?? 0), currency)}</span></div>
+    ${Number(inv.vat_rate ?? 0) === 0 ? '<p style="font-size:10px;color:#9ca3af;margin-top:6px">TVA non applicable — prestation exonérée ou opération hors champ.</p>' : ''}
+  </div>
+
+  ${(inv.iban || inv.bic) ? `
+  <div class="bank">
+    <div class="section-label">Paiement par virement bancaire</div>
+    <p>Titulaire : <strong>${inv.account_holder ?? '—'}</strong></p>
+    ${inv.bank_name ? `<p>Banque : ${inv.bank_name}</p>` : ''}
+    ${inv.iban ? `<p class="iban">IBAN : ${inv.iban}</p>` : ''}
+    ${inv.bic ? `<p>BIC / SWIFT : <strong style="font-family:monospace">${inv.bic}</strong></p>` : ''}
+    <p style="margin-top:8px">Référence à indiquer : <strong>${inv.invoice_number}</strong></p>
+  </div>` : ''}
+
+  <div class="footer">
+    AEGRYN / BOHA-Group — Suisse — aegryn.com — contact@boha-group.com<br/>
+    Ce document tient lieu de facture conformément aux dispositions légales applicables.
+  </div>
+</body>
+</html>`
+}
+
+export async function POST(_req: NextRequest, { params }: Params) {
+  const { id } = await params
+  try {
+    const user = await getUser()
+    if (!user) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+
+    const supa = createServiceClient()
+    const { data: profile } = await supa.from('profiles').select('roles').eq('id', user.id).single()
+    if (!profile?.roles?.includes('admin')) {
+      return NextResponse.json({ error: 'forbidden' }, { status: 403 })
+    }
+
+    const { data: inv, error } = await supa.from('invoices').select('*').eq('id', id).single()
+    if (error || !inv) return NextResponse.json({ error: 'not_found' }, { status: 404 })
+
+    const html = buildHtml(inv as Record<string, unknown>)
+
+    /* Stocker le chemin PDF en DB (référence) */
+    const storagePath = `invoices/${inv.invoice_number}.html`
+    await supa.from('invoices').update({ pdf_storage_path: storagePath }).eq('id', id)
+
+    /* Retourner le HTML imprimable (l'admin l'imprime en PDF via le navigateur) */
+    return new NextResponse(html, {
+      headers: {
+        'Content-Type': 'text/html; charset=utf-8',
+        'Content-Disposition': `inline; filename="${inv.invoice_number}.html"`,
+      },
+    })
+  } catch {
+    return NextResponse.json({ error: 'internal' }, { status: 500 })
+  }
+}
