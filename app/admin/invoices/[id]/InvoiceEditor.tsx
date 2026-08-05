@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import { Plus, Trash2, Download, Send, Save } from 'lucide-react'
 
 /* ── Types ─────────────────────────────────────────────────────────────────── */
@@ -404,9 +405,9 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
             </div>
           </div>
 
-          <a href="/admin/invoices" className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700">
+          <Link href="/admin/invoices" className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700">
             ← Toutes les factures
-          </a>
+          </Link>
         </div>
       </div>
     </div>
