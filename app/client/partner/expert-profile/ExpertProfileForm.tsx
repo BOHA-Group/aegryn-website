@@ -118,6 +118,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
     email_public:           form.email_public,
     website:                form.website,
     min_rate_eur:           form.min_rate_eur,
+    rate_currency:          form.rate_currency,
     languages:              form.languages,
     avatar_url:             avatarUrl,
     expertise_dimension:    expertise.dimension,

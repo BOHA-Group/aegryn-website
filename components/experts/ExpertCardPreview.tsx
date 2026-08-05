@@ -19,9 +19,10 @@ export type ExpertCardPreviewData = {
   bio:          string
   email_public: string
   website:      string
-  min_rate_eur: number | null
-  languages:    string[]
-  avatar_url:   string | null
+  min_rate_eur:   number | null
+  rate_currency:  string
+  languages:      string[]
+  avatar_url:     string | null
   /* taxonomy */
   expertise_dimension:    string | null
   expertise_categories:   string[]
@@ -198,7 +199,7 @@ export function ExpertCardPreview({ data, locale = 'fr' }: { data: ExpertCardPre
         )}
         {data.min_rate_eur != null && (
           <span className="inline-flex items-center gap-1 font-mono text-[10px] text-ag-gray-light ml-auto">
-            <Star size={9} /> Dès {data.min_rate_eur} /h
+            <Star size={9} /> Dès {data.min_rate_eur} {data.rate_currency || 'CHF'} /h
           </span>
         )}
       </div>

@@ -51,8 +51,8 @@ const UI_LABELS: Record<LocaleKey, {
   regulatory: string; expertises: string
 }> = {
   fr: {
-    step1: 'Étape 1 — Dimension advisory',
-    step2: 'Étape 2 — Catégories & Expertises',
+    step1: 'Étape 1 — Catégorie advisory',
+    step2: 'Étape 2 — Domaines & Expertises',
     summary: 'Récapitulatif de votre profil d\'expertise',
     selectCats: `Sélectionnez 1 à ${MAX_CATEGORIES} catégories`,
     selectedCount: (n, max) => `${n}/${max} sélectionnée${n > 1 ? 's' : ''}`,
@@ -64,8 +64,8 @@ const UI_LABELS: Record<LocaleKey, {
     expertises: 'Expertises',
   },
   en: {
-    step1: 'Step 1 — Advisory dimension',
-    step2: 'Step 2 — Categories & Expertises',
+    step1: 'Step 1 — Advisory category',
+    step2: 'Step 2 — Domains & Expertises',
     summary: 'Your expertise profile summary',
     selectCats: `Select 1 to ${MAX_CATEGORIES} categories`,
     selectedCount: (n, max) => `${n}/${max} selected`,
@@ -77,8 +77,8 @@ const UI_LABELS: Record<LocaleKey, {
     expertises: 'Expertises',
   },
   de: {
-    step1: 'Schritt 1 — Advisory-Dimension',
-    step2: 'Schritt 2 — Kategorien & Fachgebiete',
+    step1: 'Schritt 1 — Advisory-Kategorie',
+    step2: 'Schritt 2 — Domänen & Fachgebiete',
     summary: 'Zusammenfassung Ihres Expertenprofils',
     selectCats: `Wählen Sie 1 bis ${MAX_CATEGORIES} Kategorien`,
     selectedCount: (n, max) => `${n}/${max} ausgewählt`,
@@ -90,8 +90,8 @@ const UI_LABELS: Record<LocaleKey, {
     expertises: 'Fachgebiete',
   },
   es: {
-    step1: 'Paso 1 — Dimensión advisory',
-    step2: 'Paso 2 — Categorías & Especialidades',
+    step1: 'Paso 1 — Categoría advisory',
+    step2: 'Paso 2 — Dominios & Especialidades',
     summary: 'Resumen de su perfil de expertise',
     selectCats: `Seleccione 1 a ${MAX_CATEGORIES} categorías`,
     selectedCount: (n, max) => `${n}/${max} seleccionada${n > 1 ? 's' : ''}`,
@@ -103,8 +103,8 @@ const UI_LABELS: Record<LocaleKey, {
     expertises: 'Especialidades',
   },
   it: {
-    step1: 'Fase 1 — Dimensione advisory',
-    step2: 'Fase 2 — Categorie & Competenze',
+    step1: 'Fase 1 — Categoria advisory',
+    step2: 'Fase 2 — Domini & Competenze',
     summary: 'Riepilogo del profilo di expertise',
     selectCats: `Seleziona da 1 a ${MAX_CATEGORIES} categorie`,
     selectedCount: (n, max) => `${n}/${max} selezionata${n > 1 ? 'e' : ''}`,
@@ -116,8 +116,8 @@ const UI_LABELS: Record<LocaleKey, {
     expertises: 'Competenze',
   },
   nl: {
-    step1: 'Stap 1 — Advisory-dimensie',
-    step2: 'Stap 2 — Categorieën & Expertises',
+    step1: 'Stap 1 — Advisory-categorie',
+    step2: 'Stap 2 — Domeinen & Expertises',
     summary: 'Overzicht van uw expertiseprofiel',
     selectCats: `Selecteer 1 tot ${MAX_CATEGORIES} categorieën`,
     selectedCount: (n, max) => `${n}/${max} geselecteerd`,
