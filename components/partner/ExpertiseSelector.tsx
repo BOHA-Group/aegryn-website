@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { useLocale } from 'next-intl'
 import {
   EXPERTISE_TAXONOMY,
@@ -140,6 +140,12 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
     () => new Set(value.categories)
   )
 
+  // Snapshots des sélections par dimension — persist quand on switche
+  type DimSnapshot = { categories: string[]; specialties: string[] }
+  const snapshots = useRef<Partial<Record<Dimension, DimSnapshot>>>({
+    ...(value.dimension ? { [value.dimension]: { categories: value.categories, specialties: value.specialties } } : {}),
+  })
+
   const availableCategories = value.dimension ? getCategoriesByDimension(value.dimension) : []
 
   // Pour transaction (1 seule catégorie) : auto-sélection transparente
@@ -149,20 +155,36 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
     // Ne rien faire si on reclique sur la même dimension — évite de purger les sélections
     if (value.dimension === dim) return
 
-    const cats        = getCategoriesByDimension(dim)
-    const catIds      = new Set(cats.map(c => c.id))
-    // Conserver les catégories déjà sélectionnées si elles existent dans la nouvelle dimension
-    const keptCats    = value.categories.filter(id => catIds.has(id))
-    const finalCats   = cats.length === 1
-      ? [cats[0].id]
-      : keptCats
+    // Sauvegarder l'état courant avant de changer de dimension
+    if (value.dimension) {
+      snapshots.current[value.dimension] = {
+        categories:  value.categories,
+        specialties: value.specialties,
+      }
+    }
 
-    // Conserver les spécialités dont la catégorie parente est valide dans la nouvelle dimension
+    const cats = getCategoriesByDimension(dim)
+    const catIds = new Set(cats.map(c => c.id))
     const validSpecIds = new Set(cats.flatMap(c => c.specialties.map(s => s.id)))
-    const keptSpecs   = value.specialties.filter(specId => validSpecIds.has(specId))
+
+    // Restaurer le snapshot de la nouvelle dimension si disponible
+    const snap = snapshots.current[dim]
+    let finalCats: string[]
+    let finalSpecs: string[]
+
+    if (snap) {
+      // Restaurer les sélections précédentes filtrées sur les catégories valides
+      finalCats  = cats.length === 1 ? [cats[0].id] : snap.categories.filter(id => catIds.has(id))
+      finalSpecs = snap.specialties.filter(specId => validSpecIds.has(specId))
+    } else {
+      // Première visite de cette dimension : conserver ce qui est compatible
+      const keptCats = value.categories.filter(id => catIds.has(id))
+      finalCats  = cats.length === 1 ? [cats[0].id] : keptCats
+      finalSpecs = value.specialties.filter(specId => validSpecIds.has(specId))
+    }
 
     setOpenCategories(new Set(finalCats))
-    onChange({ dimension: dim, categories: finalCats, specialties: keptSpecs })
+    onChange({ dimension: dim, categories: finalCats, specialties: finalSpecs })
   }
 
   const toggleCategoryOpen = (catId: string) => {
@@ -198,19 +220,30 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
       return cat && validCatIds.has(cat.id)
     })
 
+    // Mettre à jour le snapshot courant
+    if (value.dimension) {
+      snapshots.current[value.dimension] = { categories: next, specialties: filteredSpecialties }
+    }
     onChange({ ...value, categories: next, specialties: filteredSpecialties })
   }
 
   const toggleSpecialty = (specId: string) => {
     const current    = value.specialties
     const isSelected = current.includes(specId)
+    let nextSpecs: string[]
 
     if (isSelected) {
-      onChange({ ...value, specialties: current.filter(s => s !== specId) })
+      nextSpecs = current.filter(s => s !== specId)
     } else {
       if (current.length >= MAX_SPECIALTIES) return
-      onChange({ ...value, specialties: [...current, specId] })
+      nextSpecs = [...current, specId]
     }
+
+    // Mettre à jour le snapshot courant
+    if (value.dimension) {
+      snapshots.current[value.dimension] = { categories: value.categories, specialties: nextSpecs }
+    }
+    onChange({ ...value, specialties: nextSpecs })
   }
 
   return (

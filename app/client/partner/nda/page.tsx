@@ -15,16 +15,26 @@ export default async function PartnerNdaPage() {
   if (!user) redirect('/client/login')
 
   const supa = createServiceClient()
-  const { data: profile } = await supa
-    .from('profiles')
-    .select('full_name, partner_nda_accepted_at, partner_nda_version, partner_nda_ip')
-    .eq('id', user.id)
-    .single()
+  const [{ data: profile }, { data: ndaAcceptance }] = await Promise.all([
+    supa
+      .from('profiles')
+      .select('full_name, partner_nda_accepted_at, partner_nda_version')
+      .eq('id', user.id)
+      .single(),
+    supa
+      .from('nda_acceptances')
+      .select('ip_address')
+      .eq('user_id', user.id)
+      .eq('nda_type', 'partner')
+      .order('created_at', { ascending: false })
+      .limit(1)
+      .maybeSingle(),
+  ])
 
   const p          = profile as Record<string, unknown> | null
   const acceptedAt = p?.partner_nda_accepted_at as string | null
   const version    = p?.partner_nda_version     as string | null
-  const ip         = p?.partner_nda_ip          as string | null
+  const ip         = (ndaAcceptance as Record<string, unknown> | null)?.ip_address as string | null
   const currentVer = NDA_VERSIONS.partner
   const isUpToDate = version === currentVer
 
