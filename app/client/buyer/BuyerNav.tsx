@@ -24,7 +24,8 @@ export default async function BuyerNav({ unreadCount }: { unreadCount: number })
     {
       label: t('navGroupCompliance'),
       items: [
-        { href: '/client/buyer/kyc', label: t('navKyc'), icon: 'ShieldCheck' },
+        { href: '/client/buyer/kyc',      label: t('navKyc'),       icon: 'ShieldCheck' },
+        { href: '/client/buyer/nda-view', label: t('navBuyerNda'),  icon: 'FileText'    },
       ],
     },
     {
