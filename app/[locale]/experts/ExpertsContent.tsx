@@ -184,11 +184,6 @@ const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-san
 const selectCls = 'w-full border border-ag-border bg-ag-white px-4 py-2.5 pr-10 font-sans text-[12px] text-ag-black appearance-none focus:outline-none focus:border-ag-black transition-colors cursor-pointer'
 const labelCls  = 'block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-2'
 
-const CATEGORY_COLORS: Record<string, { bg: string; border: string; text: string }> = {
-  advisory_tech:        { bg: 'bg-[#5ADDA4]/10', border: 'border-[#5ADDA4]/40', text: 'text-[#0e7a52]' },
-  advisory_transaction: { bg: 'bg-[#818cf8]/10', border: 'border-[#818cf8]/40', text: 'text-[#4338ca]' },
-}
-
 const DIMENSION_LABELS_PUBLIC: Record<string, string> = {
   tech:        'Advisory Tech',
   transaction: 'Advisory Transaction',
