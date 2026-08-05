@@ -306,31 +306,12 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
             </button>
           </div>
 
-          {/* Coordonnées bancaires */}
-          <div className="bg-white border border-gray-200 p-5 space-y-4">
-            <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-gray-400">Coordonnées bancaires AEGRYN</p>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className={labelCls}>Titulaire du compte</label>
-                <input className={inputCls} value={inv.account_holder ?? ''}
-                  onChange={e => setInv(p => ({ ...p, account_holder: e.target.value || null }))} />
-              </div>
-              <div>
-                <label className={labelCls}>Banque</label>
-                <input className={inputCls} value={inv.bank_name ?? ''}
-                  onChange={e => setInv(p => ({ ...p, bank_name: e.target.value || null }))} />
-              </div>
-              <div>
-                <label className={labelCls}>IBAN</label>
-                <input className={inputCls} value={inv.iban ?? ''}
-                  onChange={e => setInv(p => ({ ...p, iban: e.target.value || null }))} />
-              </div>
-              <div>
-                <label className={labelCls}>BIC / SWIFT</label>
-                <input className={inputCls} value={inv.bic ?? ''}
-                  onChange={e => setInv(p => ({ ...p, bic: e.target.value || null }))} />
-              </div>
-            </div>
+          {/* RIB — note sécurité */}
+          <div className="bg-amber-50 border border-amber-200 p-4">
+            <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-amber-700 mb-1">RIB / Coordonnées bancaires</p>
+            <p className="font-sans text-[12px] text-amber-800 leading-relaxed">
+              Les coordonnées bancaires AEGRYN sont transmises <strong>séparément</strong> au destinataire par l&apos;équipe, par email sécurisé, afin de prévenir tout risque de fraude ou d&apos;interception. Elles <strong>n&apos;apparaissent pas</strong> sur la facture générée.
+            </p>
           </div>
         </div>
 
@@ -415,16 +396,16 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
               <p className="font-sans font-bold text-[13px] text-gray-900">Total TTC : {fmtCHF(inv.total_ttc, inv.currency)}</p>
             </div>
 
-            {(inv.iban || inv.bic) && (
-              <div className="border-t border-gray-100 pt-3 space-y-0.5">
-                <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Paiement par virement</p>
-                <p className="font-sans text-gray-700">Titulaire : {inv.account_holder ?? '—'}</p>
-                {inv.bank_name && <p className="font-sans text-gray-600">Banque : {inv.bank_name}</p>}
-                {inv.iban && <p className="font-mono text-gray-700">IBAN : {inv.iban}</p>}
-                {inv.bic  && <p className="font-mono text-gray-600">BIC : {inv.bic}</p>}
-                <p className="font-sans text-gray-500">Référence : {inv.invoice_number}</p>
-              </div>
-            )}
+            <div className="border-t border-gray-100 pt-3 space-y-0.5">
+              <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Modalités de paiement</p>
+              <p className="font-sans text-[11px] text-gray-500">Les coordonnées bancaires seront transmises séparément. Référence à indiquer : <strong>{inv.invoice_number}</strong></p>
+            </div>
+          </div>
+
+          <div className="bg-gray-50 border border-gray-200 px-4 py-3">
+            <p className="font-sans text-[10px] text-gray-400 leading-relaxed">
+              Aegryn (par BOHA-Group Sàrl), Rue du Centre 142, 1025 Saint-Sulpice, Suisse. CHE-402.011.821 TVA.
+            </p>
           </div>
 
           <a href="/admin/invoices" className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700">

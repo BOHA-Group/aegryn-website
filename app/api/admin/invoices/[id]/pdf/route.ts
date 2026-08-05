@@ -113,18 +113,14 @@ function buildHtml(inv: Record<string, unknown>): string {
     ${Number(inv.vat_rate ?? 0) === 0 ? '<p style="font-size:10px;color:#9ca3af;margin-top:6px">TVA non applicable — prestation exonérée ou opération hors champ.</p>' : ''}
   </div>
 
-  ${(inv.iban || inv.bic) ? `
   <div class="bank">
-    <div class="section-label">Paiement par virement bancaire</div>
-    <p>Titulaire : <strong>${inv.account_holder ?? '—'}</strong></p>
-    ${inv.bank_name ? `<p>Banque : ${inv.bank_name}</p>` : ''}
-    ${inv.iban ? `<p class="iban">IBAN : ${inv.iban}</p>` : ''}
-    ${inv.bic ? `<p>BIC / SWIFT : <strong style="font-family:monospace">${inv.bic}</strong></p>` : ''}
-    <p style="margin-top:8px">Référence à indiquer : <strong>${inv.invoice_number}</strong></p>
-  </div>` : ''}
+    <div class="section-label">Modalités de paiement</div>
+    <p>Les coordonnées bancaires pour le virement vous seront transmises séparément par l&apos;équipe AEGRYN.</p>
+    <p style="margin-top:6px">Référence à indiquer lors du virement : <strong>${inv.invoice_number}</strong></p>
+  </div>
 
   <div class="footer">
-    AEGRYN / BOHA-Group — Suisse — aegryn.com — contact@boha-group.com<br/>
+    Aegryn (par BOHA-Group Sàrl), Rue du Centre 142, 1025 Saint-Sulpice, Suisse. CHE-402.011.821 TVA.<br/>
     Ce document tient lieu de facture conformément aux dispositions légales applicables.
   </div>
 </body>
