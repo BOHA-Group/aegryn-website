@@ -52,7 +52,7 @@ export default async function PartnerExpertProfilePage() {
   const kycProgress = PARTNER_REQUIRED.filter(t => validated.has(t)).length
 
   return (
-    <div className="p-8 max-w-3xl">
+    <div className="p-8 max-w-6xl">
 
       <div className="mb-8">
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
@@ -63,6 +63,7 @@ export default async function PartnerExpertProfilePage() {
       </div>
 
       {/* Checklist prérequis */}
+      <div className="max-w-2xl">
       <div className="bg-white border border-gray-200 divide-y divide-gray-100 mb-8">
         <div className="px-5 py-4">
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Prérequis à la publication</p>
@@ -159,6 +160,7 @@ export default async function PartnerExpertProfilePage() {
           </p>
         </div>
       )}
+      </div> {/* end max-w-2xl */}
 
       {/* Formulaire — toujours affiché pour permettre la saisie, mais submission bloquée si prérequis manquants */}
       <ExpertProfileForm

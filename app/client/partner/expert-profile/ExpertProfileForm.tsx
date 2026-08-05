@@ -471,7 +471,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
 
     {/* ── Colonne preview sticky ── */}
     <div className="hidden xl:block">
-      <div className="sticky top-20 space-y-3">
+      <div className="sticky top-[calc(4rem+1.5rem)] space-y-3">
         <div className="flex items-center justify-between">
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">
             Aperçu de votre fiche publiée

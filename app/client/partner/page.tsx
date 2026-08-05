@@ -191,7 +191,7 @@ export default async function PartnerDashboardPage() {
           </div>
           <div className="flex flex-col gap-2">
             {(introductions as Introduction[]).map(intro => (
-              <Link key={intro.id} href={`/client/partner/introductions/${intro.id}`}
+              <Link key={intro.id} href="/client/partner/introductions"
                 className="bg-white border border-gray-200 px-5 py-3 flex items-center justify-between hover:border-gray-300 transition-colors group">
                 <div>
                   <p className="font-sans text-[13px] text-gray-800 font-medium">{intro.contact_name}</p>

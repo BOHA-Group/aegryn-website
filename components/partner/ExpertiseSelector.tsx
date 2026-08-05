@@ -127,12 +127,22 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
   const isSingleCat = availableCategories.length === 1
 
   const handleDimension = (dim: Dimension) => {
-    const cats = getCategoriesByDimension(dim)
-    if (cats.length === 1) {
-      onChange({ dimension: dim, categories: [cats[0].id], specialties: [] })
-    } else {
-      onChange({ dimension: dim, categories: [], specialties: [] })
-    }
+    const cats        = getCategoriesByDimension(dim)
+    const catIds      = new Set(cats.map(c => c.id))
+    // Conserver les catégories déjà sélectionnées si elles existent dans la nouvelle dimension
+    const keptCats    = value.categories.filter(id => catIds.has(id))
+    const finalCats   = cats.length === 1
+      ? [cats[0].id]
+      : keptCats
+
+    // Conserver les spécialités dont la catégorie parente est dans finalCats
+    const keptCatSet  = new Set(finalCats)
+    const keptSpecs   = value.specialties.filter(specId => {
+      const cat = EXPERTISE_TAXONOMY.find(c => c.specialties.some(s => s.id === specId))
+      return cat && keptCatSet.has(cat.id)
+    })
+
+    onChange({ dimension: dim, categories: finalCats, specialties: keptSpecs })
   }
 
   const toggleCategory = (catId: string) => {
