@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient }      from '@/lib/supabase'
 import { getUser }                  from '@/lib/supabaseServer'
+import chromium                     from '@sparticuz/chromium-min'
+import puppeteer                    from 'puppeteer-core'
 
 type Params = { params: Promise<{ id: string }> }
 
@@ -126,6 +128,7 @@ function buildHtml(inv: Record<string, unknown>): string {
 
 export async function POST(_req: NextRequest, { params }: Params) {
   const { id } = await params
+  let browser: Awaited<ReturnType<typeof puppeteer.launch>> | null = null
   try {
     const user = await getUser()
     if (!user) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
@@ -141,18 +144,36 @@ export async function POST(_req: NextRequest, { params }: Params) {
 
     const html = buildHtml(inv as Record<string, unknown>)
 
-    /* Stocker le chemin PDF en DB (référence) */
-    const storagePath = `invoices/${inv.invoice_number}.html`
+    /* Génération PDF via headless Chrome */
+    const executablePath = await chromium.executablePath(
+      'https://github.com/Sparticuz/chromium/releases/download/v131.0.1/chromium-v131.0.1-pack.tar'
+    )
+    browser = await puppeteer.launch({
+      args:           chromium.args,
+      executablePath,
+      headless:       true,
+    })
+    const page = await browser.newPage()
+    await page.setContent(html, { waitUntil: 'load' })
+    const pdfBuffer = await page.pdf({
+      format:            'A4',
+      margin:            { top: '20mm', bottom: '20mm', left: '18mm', right: '18mm' },
+      printBackground:   true,
+    })
+
+    const invoiceNum = String(inv.invoice_number ?? id)
+    const storagePath = `invoices/${invoiceNum}.pdf`
     await supa.from('invoices').update({ pdf_storage_path: storagePath }).eq('id', id)
 
-    /* Retourner le HTML imprimable (l'admin l'imprime en PDF via le navigateur) */
-    return new NextResponse(html, {
+    return new NextResponse(Buffer.from(pdfBuffer), {
       headers: {
-        'Content-Type': 'text/html; charset=utf-8',
-        'Content-Disposition': `inline; filename="${inv.invoice_number}.html"`,
+        'Content-Type':        'application/pdf',
+        'Content-Disposition': `attachment; filename="${invoiceNum}.pdf"`,
       },
     })
   } catch {
     return NextResponse.json({ error: 'internal' }, { status: 500 })
+  } finally {
+    if (browser) await browser.close()
   }
 }

@@ -74,6 +74,7 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
   const [saving, setSaving]   = useState(false)
   const [pdfing, setPdfing]   = useState(false)
   const [saved,  setSaved]    = useState(false)
+  const [sent,   setSent]     = useState(false)
   const [error,  setError]    = useState<string | null>(null)
 
   /* ── Recalcul automatique des totaux ── */
@@ -125,29 +126,32 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
       if (json.id) setInv(p => ({ ...p, id: json.id }))
       setSaved(true)
       setTimeout(() => setSaved(false), 3000)
+      if (andSend) { setSent(true); setTimeout(() => setSent(false), 4000) }
       if (isNew && json.id) router.replace(`/admin/invoices/${json.id}`)
     } finally {
       setSaving(false)
     }
   }
 
-  /* ── Génération PDF via impression navigateur ── */
+  /* ── Génération PDF et téléchargement direct ── */
   async function downloadPdf() {
     setPdfing(true)
+    setError(null)
     try {
       /* Sauvegarder d'abord si nouveau ou non persisté */
       if (!inv.id) { await save(); return }
-      /* Appel API → reçoit un HTML imprimable */
+      /* Appel API → reçoit le binaire PDF */
       const res = await fetch(`/api/admin/invoices/${inv.id}/pdf`, { method: 'POST' })
       if (!res.ok) { setError('Erreur génération PDF.'); return }
-      const html = await res.text()
-      const win  = window.open('', '_blank')
-      if (win) {
-        win.document.write(html)
-        win.document.close()
-        /* Déclenche l'impression (Ctrl+P → Enregistrer en PDF) */
-        win.setTimeout(() => win.print(), 400)
-      }
+      const blob = await res.blob()
+      const url  = URL.createObjectURL(blob)
+      const a    = document.createElement('a')
+      a.href     = url
+      a.download = `${inv.invoice_number || 'facture'}.pdf`
+      document.body.appendChild(a)
+      a.click()
+      a.remove()
+      URL.revokeObjectURL(url)
     } finally {
       setPdfing(false)
     }
@@ -177,9 +181,10 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
           <button
             onClick={() => save(true)}
             disabled={saving}
+            title="Sauvegarde la facture ET envoie un email au destinataire. Passe automatiquement le statut en 'Envoyée'."
             className="inline-flex items-center gap-2 border border-blue-300 text-blue-600 font-mono text-[10px] uppercase tracking-widest px-3 py-2 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-colors disabled:opacity-50"
           >
-            <Send size={11} /> Enregistrer + Envoyer
+            <Send size={11} /> {sent ? '✓ Email envoyé' : 'Enreg. + Envoyer email'}
           </button>
           <button
             onClick={() => save()}

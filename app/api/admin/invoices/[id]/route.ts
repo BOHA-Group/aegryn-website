@@ -103,3 +103,14 @@ export async function GET(_req: NextRequest, { params }: Params) {
   if (error) return NextResponse.json({ error: error.message }, { status: 404 })
   return NextResponse.json(data)
 }
+
+export async function DELETE(_req: NextRequest, { params }: Params) {
+  const { id } = await params
+  const user = await requireAdmin()
+  if (!user) return NextResponse.json({ error: 'forbidden' }, { status: 403 })
+
+  const supa = createServiceClient()
+  const { error } = await supa.from('invoices').delete().eq('id', id)
+  if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+  return NextResponse.json({ ok: true })
+}
