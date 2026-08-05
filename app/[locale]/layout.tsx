@@ -5,8 +5,10 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
-import Nav from '@/components/layout/Nav'
-import Footer from '@/components/layout/Footer'
+import Nav,  { type NavUser } from '@/components/layout/Nav'
+import Footer                 from '@/components/layout/Footer'
+import { getUser }            from '@/lib/supabaseServer'
+import { createServiceClient } from '@/lib/supabase'
 import LenisProvider from '@/components/providers/LenisProvider'
 import { ScrollToTop } from '@/components/ui/ScrollToTop'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
@@ -140,6 +142,23 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   const messages = await getMessages()
 
+  let navUser: NavUser | null = null
+  try {
+    const authUser = await getUser()
+    if (authUser) {
+      const supa = createServiceClient()
+      const { data: profile } = await supa
+        .from('profiles').select('full_name, roles').eq('id', authUser.id).single()
+      const roles: string[] = Array.isArray(profile?.roles) ? profile.roles : []
+      let label: string
+      if (roles.includes('admin') || roles.includes('super_admin'))  label = 'Admin'
+      else if (roles.includes('partner'))                             label = 'Partenaire'
+      else if (roles.includes('seller') && !roles.includes('buyer')) label = 'Vendeur'
+      else                                                            label = 'Acquéreur'
+      navUser = { name: profile?.full_name ?? authUser.email ?? '', label }
+    }
+  } catch { /* pas de session — navbar publique */ }
+
   return (
     <html lang={locale} dir="ltr" suppressHydrationWarning>
       <head>
@@ -185,7 +204,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             >
               Skip to content
             </a>
-            <Nav />
+            <Nav user={navUser} />
             <div id="main" className="pt-16">
               {children}
             </div>
