@@ -45,17 +45,17 @@
     "gradeDimS": "Security"
   },
   "hero": {
-    "tagline": "Certified Tech Asset Transactions — Europe",
-    "eyebrow": "SWISS CERTIFIED TECH ASSET TRANSACTIONS — SWITZERLAND",
+    "tagline": "We refuse to let a solid asset disappear into a poorly prepared transaction.",
+    "eyebrow": "TECH CERTIFICATION AND TRANSACTION INFRASTRUCTURE",
     "title": "Rare by selection.",
-    "sub": "The European reference for the certification and transaction\nof premium tech assets. Discreet by nature. Rigorous by demand.",
+    "sub": "Most transactions fail not from lack of capital but from lack of trust. We are here to change that.",
     "cta": "DISCOVER THE CATALOGUE",
-    "strip": "CERTIFIED TECH ASSET TRANSACTIONS",
+    "strip": "TECH CERTIFICATION AND TRANSACTION INFRASTRUCTURE",
     "geo": "Switzerland · Europe · Global",
     "scroll": "Scroll",
     "ctaPrimary": "View catalog",
-    "ctaSecondary": "SUBMIT AN ASSET",
-    "chip2": "CERTIFIED GRADE — INDEPENDENT"
+    "ctaSecondary": "PROPOSE AN ASSET",
+    "chip2": "INDEPENDENT CERTIFIED GRADE"
   },
   "assets": {
     "title": "Our proprietary ecosystem.",
@@ -98,11 +98,11 @@
     }
   },
   "advisory": {
-    "strip": "Aegryn Advisory — We protect what you build",
+    "strip": "Aegryn Advisory — We protect what you spent years building",
     "cta": "Get in touch",
     "hero": {
       "title": "Protecting what you build.",
-      "desc": "Cybersecurity protocols, AI auditing and digital strategy for companies that refuse to be vulnerable."
+      "desc": "We believe companies that build for the long term deserve protection that matches their ambition. Not reports. Real presence before the risk becomes real."
     },
     "services": {
       "cyber": {
@@ -336,8 +336,8 @@
   "about": {
     "hero": {
       "label": "About AEGRYN",
-      "title": "The trust infrastructure\nfor European tech M&A.",
-      "desc": "Certification. Discretion. Permanence.\nThree principles that shaped a name, and a company."
+      "title": "We do not sell deals.\nWe protect what lasts.",
+      "desc": "We believe the real value of a tech asset is not negotiated under pressure. It is built with rigour, certified in transparency, and transferred in trust."
     },
     "name": {
       "label": "The name",
@@ -4777,12 +4777,12 @@
   "experts": {
     "meta": {
       "title": "Expert Network — AEGRYN",
-      "desc": "Access top M&A tech experts: transactional advisory, HR due diligence, legal, cybersecurity, W&I Insurance. A network curated by AEGRYN."
+      "desc": "We believe every transaction deserves the right people at the right moment. Not a directory. A verified network selected so that nothing essential is left to chance."
     },
     "hero": {
       "label": "AEGRYN Expert Network",
-      "title": "The experts who close deals.",
-      "desc": "AEGRYN builds a reference network of transactional tech experts — M&A lawyers, technical DDers, tax advisors, W&I insurers. Every profile is vetted by the AEGRYN team."
+      "title": "Great transactions are never done alone.",
+      "desc": "Behind every successful deal there is an M&A lawyer who saw the risk, an accountant who held the numbers, a CTO who validated the stack. We found them and verified them for you."
     },
     "showcase": {
       "label": "Areas of expertise",

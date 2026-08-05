@@ -45,16 +45,16 @@
     "gradeDimS": "Beveiliging"
   },
   "hero": {
-    "tagline": "Gecertificeerde tech-assettransacties — Europa",
-    "eyebrow": "GECERTIFICEERDE TECH-ASSETTRANSACTIES — ZWITSERLAND",
+    "tagline": "Wij weigeren dat een solide asset verdwijnt in een slecht voorbereide transactie.",
+    "eyebrow": "INFRASTRUCTUUR VOOR TECH-CERTIFICERING EN TRANSACTIE",
     "title": "Rare by selection.",
-    "sub": "De Europese referentie voor de certificering en de handel\nvan premium tech-assets. Discreet van nature. Streng qua eis.",
+    "sub": "De meeste transacties mislukken niet door gebrek aan kapitaal maar door gebrek aan vertrouwen. Wij zijn er om dat te veranderen.",
     "cta": "ONTDEK DE CATALOGUS",
-    "strip": "GECERTIFICEERDE TECH-ASSETTRANSACTIES",
+    "strip": "INFRASTRUCTUUR VOOR TECH-CERTIFICERING EN TRANSACTIE",
     "geo": "Zwitserland · Europa · Global",
     "scroll": "Scrollen",
-    "ctaSecondary": "EEN ASSET INDIENEN",
-    "chip2": "GECERTIFICEERDE GRADE — ONAFHANKELIJK",
+    "ctaSecondary": "EEN ASSET VOORSTELLEN",
+    "chip2": "ONAFHANKELIJKE GECERTIFICEERDE GRADE",
     "ctaPrimary": "Catalogus bekijken"
   },
   "assets": {
@@ -98,11 +98,11 @@
     }
   },
   "advisory": {
-    "strip": "Aegryn Advisory — Wij beschermen wat jij bouwt",
+    "strip": "Aegryn Advisory — Wij beschermen wat je jaren hebt opgebouwd",
     "cta": "Contact opnemen",
     "hero": {
       "title": "Beschermen wat jij bouwt.",
-      "desc": "Cyberbeveiligingsprotocollen, AI-audits en digitale strategie voor bedrijven die geen risico's willen nemen."
+      "desc": "Wij geloven dat bedrijven die op de lange termijn bouwen een bescherming verdienen die past bij hun ambitie. Geen rapporten. Echte aanwezigheid voordat het risico werkelijkheid wordt."
     },
     "services": {
       "cyber": {
@@ -336,8 +336,8 @@
   "about": {
     "hero": {
       "label": "Over AEGRYN",
-      "title": "De vertrouwensinfrastructuur\nvoor Europees tech-M&A.",
-      "desc": "Certificering. Discretie. Permanentie.\nDrie principes die een naam, en een bedrijf, hebben gevormd."
+      "title": "Wij verkopen geen deals.\nWij beschermen wat blijft.",
+      "desc": "Wij geloven dat de echte waarde van een tech-asset niet onder druk wordt onderhandeld. Ze wordt gebouwd met precisie, gecertificeerd in transparantie en overgedragen in vertrouwen."
     },
     "name": {
       "label": "De naam",
@@ -4710,12 +4710,12 @@
   "experts": {
     "meta": {
       "title": "Expertennetwerk — AEGRYN",
-      "desc": "Toegang tot de beste M&A tech-experts: transactieadvies, HR due diligence, juridisch, cybersecurity, W&I Insurance. Een netwerk samengesteld door AEGRYN."
+      "desc": "Wij geloven dat elke transactie de juiste mensen op het juiste moment verdient. Geen gids. Een geverifieerd netwerk samengesteld zodat niets essentieels aan het toeval wordt overgelaten."
     },
     "hero": {
       "label": "AEGRYN Expertennetwerk",
-      "title": "De experts die deals sluiten.",
-      "desc": "AEGRYN bouwt een referentienetwerk van transactionele tech-experts — M&A-advocaten, technische due diligence-specialisten, belastingadviseurs, W&I-verzekeraars. Elk profiel wordt gevalideerd door het AEGRYN-team."
+      "title": "Grote transacties doe je nooit alleen.",
+      "desc": "Achter elke succesvolle deal staat een M&A-advocaat die het risico zag, een accountant die de cijfers vasthield, een CTO die de stack valideerde. Wij hebben ze gevonden en geverifieerd voor jou."
     },
     "showcase": {
       "label": "Expertisegebieden",

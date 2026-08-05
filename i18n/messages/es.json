@@ -45,16 +45,16 @@
     "gradeDimS": "Seguridad"
   },
   "hero": {
-    "tagline": "Transacciones de activos tech certificadas — Europa",
-    "eyebrow": "TRANSACCIONES DE ACTIVOS TECH CERTIFICADAS — SUIZA",
+    "tagline": "Nos negamos a que un activo sólido desaparezca en una transacción mal preparada.",
+    "eyebrow": "INFRAESTRUCTURA DE CERTIFICACIÓN Y TRANSACCIÓN TECH",
     "title": "Rare by selection.",
-    "sub": "La referencia europea para la certificación y la transacción\nde activos tech premium. Discreto por naturaleza. Riguroso por exigencia.",
+    "sub": "La mayoría de las transacciones fracasan no por falta de capital sino por falta de confianza. Estamos aquí para cambiar eso.",
     "cta": "DESCUBRIR EL CATÁLOGO",
-    "strip": "TRANSACCIONES DE ACTIVOS TECH CERTIFICADAS",
+    "strip": "INFRAESTRUCTURA DE CERTIFICACIÓN Y TRANSACCIÓN TECH",
     "geo": "Suiza · Europa · Global",
     "scroll": "Desplazar",
-    "ctaSecondary": "ENVIAR UN ACTIVO",
-    "chip2": "GRADE CERTIFICADO — INDEPENDIENTE",
+    "ctaSecondary": "PROPONER UN ACTIVO",
+    "chip2": "GRADE CERTIFICADO INDEPENDIENTE",
     "ctaPrimary": "Ver el catálogo"
   },
   "assets": {
@@ -98,11 +98,11 @@
     }
   },
   "advisory": {
-    "strip": "Aegryn Advisory — Protegemos lo que construyes",
+    "strip": "Aegryn Advisory — Protegemos lo que tardaste años en construir",
     "cta": "Ponerse en contacto",
     "hero": {
       "title": "Proteger lo que construyes.",
-      "desc": "Protocolos de ciberseguridad, auditoría IA y estrategia digital para empresas que se niegan a ser vulnerables."
+      "desc": "Creemos que las empresas que construyen para el largo plazo merecen una protección a la altura de su ambición. No informes. Una presencia real antes de que el riesgo se materialice."
     },
     "services": {
       "cyber": {
@@ -336,8 +336,8 @@
   "about": {
     "hero": {
       "label": "Sobre AEGRYN",
-      "title": "La infraestructura de confianza\ndel M&A tech europeo.",
-      "desc": "Certificación. Discreción. Permanencia.\nTres principios que forjaron un nombre, y una empresa."
+      "title": "No vendemos deals.\nProtegemos lo que dura.",
+      "desc": "Creemos que el valor real de un activo tech no se negocia bajo presión. Se construye con rigor, se certifica en transparencia y se transfiere en confianza."
     },
     "name": {
       "label": "El nombre",
@@ -4710,12 +4710,12 @@
   "experts": {
     "meta": {
       "title": "Red de expertos — AEGRYN",
-      "desc": "Acceda a los mejores expertos en M&A tech: asesoría transaccional, due diligence RR.HH., legal, ciberseguridad, W&I Insurance. Una red seleccionada por AEGRYN."
+      "desc": "Creemos que cada transacción merece las personas adecuadas en el momento adecuado. No un directorio. Una red verificada y seleccionada para que nada esencial se deje al azar."
     },
     "hero": {
       "label": "Red de expertos AEGRYN",
-      "title": "Los expertos que cierran operaciones.",
-      "desc": "AEGRYN construye una red de referencia de expertos transaccionales tech — abogados M&A, especialistas en due diligence técnica, asesores fiscales, aseguradores W&I. Cada perfil es validado por el equipo AEGRYN."
+      "title": "Las grandes operaciones no se hacen solas.",
+      "desc": "Detrás de cada deal exitoso hay un abogado M&A que vio el riesgo, un auditor que sostuvo los números, un CTO que validó la stack. Los encontramos y los verificamos por ti."
     },
     "showcase": {
       "label": "Áreas de experiencia",
