@@ -150,7 +150,18 @@ export default async function middleware(req: NextRequest) {
   const hasLocalePrefix = LOCALES.some(
     (l) => pathname === `/${l}` || pathname.startsWith(`/${l}/`)
   )
-  if (hasLocalePrefix) return intlMiddleware(req)
+  if (hasLocalePrefix) {
+    /* Rafraîchir silencieusement le token si une session existe —
+       sans ça, le JWT expire pendant la navigation publique et force
+       une reconnexion dès que l'utilisateur va sur /client/*. */
+    const { response: refreshedRes } = await refreshAndCheckSession(req)
+    const intlRes = intlMiddleware(req)
+    /* Copier les cookies de refresh (sb-*) dans la réponse i18n */
+    refreshedRes.cookies.getAll().forEach(({ name, value, ...opts }) => {
+      intlRes.cookies.set(name, value, opts as Parameters<typeof intlRes.cookies.set>[2])
+    })
+    return intlRes
+  }
 
   const preferred = req.cookies.get(PREF_COOKIE)?.value as Locale | undefined
   let detectedLocale: Locale
