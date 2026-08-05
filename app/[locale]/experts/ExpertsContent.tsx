@@ -184,7 +184,24 @@ const CATEGORY_COLORS: Record<string, { bg: string; border: string; text: string
   advisory_transaction: { bg: 'bg-[#818cf8]/10', border: 'border-[#818cf8]/40', text: 'text-[#4338ca]' },
 }
 
-function ExpertCard({ profile, t, blurred = false }: { profile: ExpertProfile; t: ReturnType<typeof useTranslations>; blurred?: boolean }) {
+type ActiveFilters = { category: string; domain: string; specialty: string; country: string }
+
+function trackClick(expertId: string, clickType: 'email' | 'website', filters: ActiveFilters) {
+  fetch('/api/experts/track-click', {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify({
+      expert_id:        expertId,
+      click_type:       clickType,
+      filter_category:  filters.category  || undefined,
+      filter_domain:    filters.domain    || undefined,
+      filter_specialty: filters.specialty || undefined,
+      filter_country:   filters.country   || undefined,
+    }),
+  }).catch(() => {})
+}
+
+function ExpertCard({ profile, t, blurred = false, filters = { category: '', domain: '', specialty: '', country: '' } }: { profile: ExpertProfile; t: ReturnType<typeof useTranslations>; blurred?: boolean; filters?: ActiveFilters }) {
   const initials = `${profile.first_name[0] ?? ''}${profile.last_name[0] ?? ''}`.toUpperCase()
   const catColors = profile.category ? CATEGORY_COLORS[profile.category] : null
   return (
@@ -278,6 +295,7 @@ function ExpertCard({ profile, t, blurred = false }: { profile: ExpertProfile; t
           {profile.email_public && (
             <a
               href={`mailto:${profile.email_public}`}
+              onClick={() => trackClick(profile.id, 'email', filters)}
               className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-navy text-ag-navy hover:bg-ag-navy hover:text-white transition-colors"
             >
               <Mail size={10} /> {t('card.contact')}
@@ -288,6 +306,7 @@ function ExpertCard({ profile, t, blurred = false }: { profile: ExpertProfile; t
               href={profile.website}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackClick(profile.id, 'website', filters)}
               className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-border text-ag-gray hover:border-ag-black hover:text-ag-black transition-colors"
             >
               <Globe size={10} /> Site
@@ -635,7 +654,7 @@ export default function ExpertsContent() {
         {!loadingGrid && profiles.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
             {profiles.map(p => (
-              <ExpertCard key={p.id} profile={p} t={t} />
+              <ExpertCard key={p.id} profile={p} t={t} filters={{ category, domain, specialty, country }} />
             ))}
           </div>
         )}

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronDown, ChevronUp, Loader2, PlusCircle } from 'lucide-react'
+import { ChevronDown, ChevronUp, Loader2, PlusCircle, TrendingUp, Mail, Globe, Clock } from 'lucide-react'
 
 type Application = {
   id:           string
@@ -480,13 +480,137 @@ function AdminSubscriptionPanel({ profiles }: { profiles: ExpertProfile[] }) {
   )
 }
 
+type ClickStat = {
+  expert_id:      string
+  first_name:     string
+  last_name:      string
+  profession:     string
+  is_visible:     boolean
+  total_clicks:   number
+  email_clicks:   number
+  website_clicks: number
+  clicks_7d:      number
+  clicks_30d:     number
+  last_click_at:  string | null
+}
+
 type Props = {
   applications: Application[]
   profiles:     ExpertProfile[]
+  clickStats:   ClickStat[]
   tokenQs:      string
 }
 
-export default function ExpertsAdminClient({ applications, profiles, tokenQs }: Props) {
+function TractionPanel({ stats }: { stats: ClickStat[] }) {
+  const [open, setOpen] = useState(true)
+
+  const totalClicks  = stats.reduce((s, r) => s + (r.total_clicks ?? 0), 0)
+  const total7d      = stats.reduce((s, r) => s + (r.clicks_7d ?? 0), 0)
+  const total30d     = stats.reduce((s, r) => s + (r.clicks_30d ?? 0), 0)
+  const sorted       = [...stats].sort((a, b) => (b.total_clicks ?? 0) - (a.total_clicks ?? 0))
+  const activeExperts = stats.filter(r => (r.total_clicks ?? 0) > 0).length
+
+  return (
+    <div className="bg-white border border-gray-200 mb-6">
+      <button
+        onClick={() => setOpen(v => !v)}
+        className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-50 transition-colors"
+      >
+        <div className="flex items-center gap-2">
+          <TrendingUp size={14} className="text-ag-apex" />
+          <h2 className="font-sans font-bold text-gray-900 text-[14px]">Traction réseau — Suivi des clics fiches</h2>
+          {totalClicks > 0 && (
+            <span className="font-mono text-[9px] font-bold px-2 py-0.5 bg-ag-apex/10 text-ag-apex border border-ag-apex/30">
+              {totalClicks} clics total
+            </span>
+          )}
+        </div>
+        {open ? <ChevronUp size={14} className="text-gray-400" /> : <ChevronDown size={14} className="text-gray-400" />}
+      </button>
+
+      {open && (
+        <div className="px-5 pb-6 border-t border-gray-100">
+
+          {/* KPIs globaux */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-5 mb-6">
+            {[
+              { label: 'Clics totaux',      value: totalClicks,    color: 'text-gray-900' },
+              { label: 'Clics 30 derniers jours', value: total30d, color: 'text-blue-700' },
+              { label: 'Clics 7 derniers jours',  value: total7d,  color: 'text-ag-apex'  },
+              { label: 'Experts sollicités',       value: activeExperts, color: 'text-emerald-700' },
+            ].map(kpi => (
+              <div key={kpi.label} className="border border-gray-100 bg-gray-50 p-4">
+                <p className={`font-mono text-[22px] font-bold leading-none ${kpi.color}`}>{kpi.value}</p>
+                <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mt-1.5">{kpi.label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Tableau par expert */}
+          {sorted.length === 0 ? (
+            <p className="font-sans text-[12px] text-gray-400 py-4">Aucun clic enregistré pour l&apos;instant.</p>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full text-[12px]">
+                <thead className="bg-gray-50 border-b border-gray-100">
+                  <tr>
+                    {['Expert', 'Profession', 'Statut', 'Total', '7j', '30j', 'Email', 'Site', 'Dernier clic'].map(h => (
+                      <th key={h} className="text-left px-4 py-2.5 font-mono text-[9px] uppercase tracking-widest text-gray-400 whitespace-nowrap">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-50">
+                  {sorted.filter(r => (r.total_clicks ?? 0) > 0).map(r => (
+                    <tr key={r.expert_id} className="hover:bg-gray-50/60">
+                      <td className="px-4 py-3 font-semibold text-gray-800 whitespace-nowrap">
+                        {r.first_name} {r.last_name}
+                      </td>
+                      <td className="px-4 py-3 font-mono text-[10px] text-ag-apex">{r.profession}</td>
+                      <td className="px-4 py-3">
+                        <span className={`font-mono text-[9px] uppercase px-2 py-0.5 border ${
+                          r.is_visible
+                            ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                            : 'bg-gray-50 text-gray-400 border-gray-200'
+                        }`}>
+                          {r.is_visible ? 'Publiée' : 'Masquée'}
+                        </span>
+                      </td>
+                      <td className="px-4 py-3 font-mono font-bold text-gray-900">{r.total_clicks}</td>
+                      <td className="px-4 py-3 font-mono text-ag-apex font-semibold">{r.clicks_7d}</td>
+                      <td className="px-4 py-3 font-mono text-blue-700">{r.clicks_30d}</td>
+                      <td className="px-4 py-3">
+                        <span className="inline-flex items-center gap-1 font-mono text-[10px] text-gray-500">
+                          <Mail size={9} /> {r.email_clicks}
+                        </span>
+                      </td>
+                      <td className="px-4 py-3">
+                        <span className="inline-flex items-center gap-1 font-mono text-[10px] text-gray-500">
+                          <Globe size={9} /> {r.website_clicks}
+                        </span>
+                      </td>
+                      <td className="px-4 py-3">
+                        {r.last_click_at ? (
+                          <span className="inline-flex items-center gap-1 font-mono text-[10px] text-gray-400">
+                            <Clock size={9} />
+                            {new Date(r.last_click_at).toLocaleDateString('fr-CH', { day: '2-digit', month: '2-digit', year: '2-digit' })}
+                            {' '}
+                            {new Date(r.last_click_at).toLocaleTimeString('fr-CH', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Zurich' })}
+                          </span>
+                        ) : '—'}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
+
+export default function ExpertsAdminClient({ applications, profiles, clickStats, tokenQs }: Props) {
   const [apps,     setApps]     = useState(applications)
   const [profs,    setProfs]    = useState(profiles)
   const [filter,   setFilter]   = useState<'all' | 'pending' | 'visible' | 'hidden'>('pending')
@@ -562,10 +686,13 @@ export default function ExpertsAdminClient({ applications, profiles, tokenQs }: 
           )}
         </div>
 
-        {/* Section 2 — Attribution manuelle abonnement */}
+        {/* Section 2 — Traction réseau (clics) */}
+        <TractionPanel stats={clickStats} />
+
+        {/* Section 3 — Attribution manuelle abonnement */}
         <AdminSubscriptionPanel profiles={profs} />
 
-        {/* Section 3 — Fiches experts */}
+        {/* Section 4 — Fiches experts */}
         <div>
           <div className="flex items-center gap-3 mb-4">
             <h2 className="font-sans font-bold text-gray-900 text-[15px]">Fiches experts</h2>

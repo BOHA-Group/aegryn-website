@@ -18,7 +18,7 @@ export default async function AdminExpertsPage({
 
   const supa = createServiceClient()
 
-  const [{ data: applications }, { data: profiles }] = await Promise.all([
+  const [{ data: applications }, { data: profiles }, { data: clickStats }] = await Promise.all([
     supa
       .from('expert_applications')
       .select('*')
@@ -35,6 +35,9 @@ export default async function AdminExpertsPage({
         )
       `)
       .order('created_at', { ascending: false }),
+    supa
+      .from('expert_click_stats')
+      .select('*'),
   ])
 
   const tokenQs = params.token ? `?token=${params.token}` : ''
@@ -43,6 +46,7 @@ export default async function AdminExpertsPage({
     <ExpertsAdminClient
       applications={applications ?? []}
       profiles={profiles ?? []}
+      clickStats={clickStats ?? []}
       tokenQs={tokenQs}
     />
   )
