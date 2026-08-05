@@ -134,6 +134,36 @@ export async function PATCH(req: NextRequest) {
 
     const { error } = await supa.from('expert_profiles').update(patch).eq('id', id)
     if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+
+    // Notif in-app vers le partenaire propriétaire de la fiche
+    if (is_visible !== undefined) {
+      const { data: ep } = await supa
+        .from('expert_profiles')
+        .select('user_id')
+        .eq('id', id)
+        .maybeSingle()
+
+      if (ep?.user_id) {
+        const notifTitle = is_visible
+          ? 'Votre fiche expert a été validée et publiée'
+          : hidden_reason
+            ? 'Votre fiche expert a été refusée'
+            : 'Votre fiche expert a été masquée'
+        const notifBody = is_visible
+          ? 'Votre profil est maintenant visible dans l\'annuaire AEGRYN.'
+          : hidden_reason
+            ? `Motif : ${hidden_reason}. Mettez à jour votre fiche et soumettez à nouveau.`
+            : 'Votre fiche a été temporairement masquée par l\'administration.'
+        await supa.from('user_notifications').insert({
+          user_id: ep.user_id,
+          type:    is_visible ? 'broadcast_info' : 'broadcast_alert',
+          title:   notifTitle,
+          body:    notifBody,
+          link:    '/client/partner/expert-profile',
+        })
+      }
+    }
+
     return NextResponse.json({ ok: true })
   }
 

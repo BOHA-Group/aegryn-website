@@ -55,7 +55,8 @@ export default async function AdminIndexPage({
     { count: offersSubmitted },
     { count: transactionsOpen },
     { count: commissionsDue },
-    { count: expertsPending },
+    { count: expertAppsPending },
+    { count: expertProfilesPending },
     { data: kycDocsPending },
   ] = await Promise.all([
     supa.from('assets').select('*', { count: 'exact', head: true }).eq('status', 'submitted'),
@@ -67,8 +68,11 @@ export default async function AdminIndexPage({
     supa.from('transactions').select('*', { count: 'exact', head: true }).not('status', 'in', '(closed,cancelled)'),
     supa.from('commissions').select('*', { count: 'exact', head: true }).neq('status', 'paid'),
     supa.from('expert_applications').select('*', { count: 'exact', head: true }).eq('status', 'pending'),
+    supa.from('expert_profiles').select('*', { count: 'exact', head: true }).eq('review_status', 'pending_review'),
     supa.from('kyc_documents').select('user_id').eq('status', 'pending'),
   ])
+
+  const expertsPending = (expertAppsPending ?? 0) + (expertProfilesPending ?? 0)
 
   /* Partenaires avec docs pending mais sans ligne buyer_kyc_verifications */
   const { data: kycBuyerIds } = await supa
@@ -165,9 +169,9 @@ export default async function AdminIndexPage({
         {
           href:       `/admin/experts${qs}`,
           title:      '🧑‍💼 Experts réseau',
-          desc:       'Candidatures experts + fiches publiées. Abonnement 89 € HT/mois.',
+          desc:       'Candidatures formulaire + fiches partenaires à réviser. Abonnement 89 € HT/mois.',
           badge:      expertsPending ?? 0,
-          badgeLabel: 'en attente',
+          badgeLabel: 'à traiter',
         },
       ],
     },

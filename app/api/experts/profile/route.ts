@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
 import { getUser }                  from '@/lib/supabaseServer'
-import { sendEmail }                from '@/lib/sendEmail'
 
 const updateSchema = z.object({
   first_name:             z.string().min(1).max(80),
@@ -26,33 +25,35 @@ const updateSchema = z.object({
   avatar_url:             z.string().url().optional().nullable(),
 })
 
-async function notifyAdminNewSubmission(
+async function notifyAdminExpertSubmission(
+  supa: ReturnType<typeof createServiceClient>,
   partnerName: string,
-  partnerEmail: string,
   isNew: boolean,
 ) {
-  const adminEmail = process.env.AEGRYN_ADMIN_EMAIL ?? 'contact@boha-group.com'
-  const subject    = isNew
-    ? `[AEGRYN] Nouvelle fiche expert soumise — ${partnerName}`
-    : `[AEGRYN] Fiche expert mise à jour — ${partnerName} (en attente de validation)`
-  const html = `
-    <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;max-width:560px;margin:0 auto;padding:32px;background:#fff;border:1px solid #e2e8f0;">
-      <p style="margin:0 0 8px 0;font-size:13px;font-weight:700;color:#0F1C3F;">AEGRYN — Espace Admin</p>
-      <p style="margin:0 0 24px 0;font-size:20px;font-weight:700;color:#0F1C3F;">
-        ${isNew ? 'Nouvelle fiche expert soumise' : 'Fiche expert mise à jour'}
-      </p>
-      <p style="font-size:13px;color:#475569;margin:0 0 8px 0;"><strong>Partenaire :</strong> ${partnerName}</p>
-      <p style="font-size:13px;color:#475569;margin:0 0 24px 0;"><strong>Email :</strong> ${partnerEmail}</p>
-      <p style="font-size:13px;color:#475569;margin:0 0 24px 0;">
-        La fiche est en attente de validation. Rendez-vous dans l'espace admin pour examiner et valider.
-      </p>
-      <a href="${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'}/admin/experts"
-         style="display:inline-block;background:#0F1C3F;color:#fff;font-size:12px;font-weight:700;padding:12px 24px;text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;">
-        Voir dans l'admin →
-      </a>
-    </div>
-  `
-  await sendEmail(adminEmail, subject, html, 'expert-review').catch(() => {})
+  const title = isNew
+    ? `Nouvelle fiche expert soumise — ${partnerName}`
+    : `Fiche expert mise à jour — ${partnerName}`
+  const body = isNew
+    ? `${partnerName} a soumis sa fiche expert. À valider dans l'espace Experts réseau.`
+    : `${partnerName} a modifié sa fiche expert. Elle est en attente de révision.`
+
+  // Récupérer tous les admins
+  const { data: admins } = await supa
+    .from('profiles')
+    .select('id')
+    .contains('roles', ['admin'])
+
+  if (admins && admins.length > 0) {
+    await supa.from('user_notifications').insert(
+      admins.map(a => ({
+        user_id: a.id,
+        type:    'broadcast_action',
+        title,
+        body,
+        link:    '/admin/experts',
+      }))
+    )
+  }
 }
 
 export async function GET() {
@@ -125,9 +126,9 @@ export async function POST(req: NextRequest) {
       .eq('id', user.id)
       .maybeSingle() as { data: { full_name?: string; email?: string } | null }
 
-    await notifyAdminNewSubmission(
+    await notifyAdminExpertSubmission(
+      supa,
       profile?.full_name ?? `${body.first_name} ${body.last_name}`,
-      profile?.email ?? user.email ?? '',
       true,
     )
 
@@ -180,9 +181,9 @@ export async function PATCH(req: NextRequest) {
       .eq('id', user.id)
       .maybeSingle() as { data: { full_name?: string; email?: string } | null }
 
-    await notifyAdminNewSubmission(
+    await notifyAdminExpertSubmission(
+      supa,
       profile?.full_name ?? `${body.first_name ?? ''} ${body.last_name ?? ''}`.trim(),
-      profile?.email ?? user.email ?? '',
       false,
     )
 

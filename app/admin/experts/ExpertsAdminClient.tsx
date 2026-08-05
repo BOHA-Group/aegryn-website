@@ -504,11 +504,13 @@ type Props = {
 function TractionPanel({ stats }: { stats: ClickStat[] }) {
   const [open, setOpen] = useState(true)
 
-  const totalClicks  = stats.reduce((s, r) => s + (r.total_clicks ?? 0), 0)
-  const total7d      = stats.reduce((s, r) => s + (r.clicks_7d ?? 0), 0)
-  const total30d     = stats.reduce((s, r) => s + (r.clicks_30d ?? 0), 0)
+  // Ne comptabiliser que les clics sur fiches publiées (is_visible=true)
+  const publishedStats = stats.filter(r => r.is_visible)
+  const totalClicks  = publishedStats.reduce((s, r) => s + (r.total_clicks ?? 0), 0)
+  const total7d      = publishedStats.reduce((s, r) => s + (r.clicks_7d ?? 0), 0)
+  const total30d     = publishedStats.reduce((s, r) => s + (r.clicks_30d ?? 0), 0)
   const sorted       = [...stats].sort((a, b) => (b.total_clicks ?? 0) - (a.total_clicks ?? 0))
-  const activeExperts = stats.filter(r => (r.total_clicks ?? 0) > 0).length
+  const activeExperts = publishedStats.filter(r => (r.total_clicks ?? 0) > 0).length
 
   return (
     <div className="bg-white border border-gray-200 mb-6">
@@ -627,9 +629,12 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
 
   const pendingCount = apps.filter(a => a.status === 'pending').length
 
-  // «En attente» = fiche non publiée sans motif de refus OU fiche soumise/resoumise (review_status = pending_review)
+  // «En attente / à réviser» :
+  //   - review_status = 'pending_review' (soumission initiale ou re-soumission)
+  //   - OU fiche non publiée sans motif de refus ni review_status (draft non encore soumis écarté)
   const isPending = (p: ExpertProfile) =>
-    (!p.is_visible && !p.hidden_reason) || p.review_status === 'pending_review'
+    p.review_status === 'pending_review' ||
+    (!p.is_visible && !p.hidden_reason && p.review_status !== 'rejected')
 
   const filteredProfs = profs.filter(p => {
     if (filter === 'pending') return isPending(p)
@@ -642,7 +647,7 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
     { label: 'Total fiches',         value: profs.length,                          key: 'all' },
     { label: 'En attente / révision', value: profs.filter(p => isPending(p)).length, key: 'pending' },
     { label: 'Publiées',             value: profs.filter(p => p.is_visible).length, key: 'visible' },
-    { label: 'Masquées / admin',     value: profs.filter(p => !p.is_visible).length, key: 'hidden' },
+    { label: 'Masquées / admin',     value: profs.filter(p => !p.is_visible && !!p.hidden_reason).length, key: 'hidden' },
   ]
 
   return (
