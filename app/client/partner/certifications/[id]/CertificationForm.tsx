@@ -7,6 +7,7 @@ import { Loader2, CheckCircle2, XCircle } from 'lucide-react'
 type Props = {
   certId: string
   currentStatus: string
+  dimension: string
 }
 
 const SUBCODES: Record<string, { label: string; code: string }[]> = {
@@ -33,7 +34,7 @@ const SUBCODES: Record<string, { label: string; code: string }[]> = {
   ],
 }
 
-export default function CertificationForm({ certId, currentStatus }: Props) {
+export default function CertificationForm({ certId, currentStatus, dimension }: Props) {
   const router = useRouter()
   const [score, setScore] = useState('')
   const [selectedSubcodes, setSelectedSubcodes] = useState<string[]>([])
@@ -112,7 +113,7 @@ export default function CertificationForm({ certId, currentStatus }: Props) {
             Critères validés (sous-codes CIFS)
           </p>
           <div className="flex flex-col gap-2">
-            {(SUBCODES.ip).map(({ code, label }) => (
+            {(SUBCODES[dimension as keyof typeof SUBCODES] ?? SUBCODES.ip).map(({ code, label }) => (
               <label key={code} className="flex items-start gap-3 cursor-pointer group">
                 <input
                   type="checkbox"

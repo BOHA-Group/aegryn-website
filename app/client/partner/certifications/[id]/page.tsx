@@ -190,7 +190,7 @@ export default async function PartnerCertificationDetailPage({
 
       {/* Formulaire de soumission */}
       {canSubmit && (
-        <CertificationForm certId={id} currentStatus={cert.status} />
+        <CertificationForm certId={id} currentStatus={cert.status} dimension={cert.dimension} />
       )}
 
       {/* Info processus */}

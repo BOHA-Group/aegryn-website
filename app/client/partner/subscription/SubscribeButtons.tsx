@@ -20,12 +20,10 @@ export default function SubscribeButtons({ disabled: kycBlocked = false }: { dis
       if (data.url) {
         window.location.href = data.url
       } else {
-        console.error('[SubscribeButtons] API error:', res.status, data)
         setError(`Erreur ${res.status} : ${data.error ?? 'Une erreur est survenue.'}`)
         setLoading(null)
       }
-    } catch (err) {
-      console.error('[SubscribeButtons] fetch error:', err)
+    } catch {
       setError('Impossible de contacter le serveur de paiement.')
       setLoading(null)
     }
