@@ -21,6 +21,15 @@ function buildHtml(inv: Record<string, unknown>): string {
   const items = (inv.line_items as { description: string; unit: string; qty: number; unit_price_ht: number }[]) ?? []
   const currency = String(inv.currency ?? 'CHF')
 
+  /* Échéance : utilise due_date ou calcule +30 jours depuis issued_at */
+  const dueDate: string | null = inv.due_date
+    ? String(inv.due_date)
+    : (() => {
+        const base = inv.issued_at ? new Date(String(inv.issued_at)) : new Date()
+        base.setDate(base.getDate() + 30)
+        return base.toISOString().split('T')[0]
+      })()
+
   const rows = items.map(l => `
     <tr>
       <td style="padding:8px 10px;border-bottom:1px solid #eee;font-size:12px;color:#374151">${l.description || '—'}</td>
@@ -78,7 +87,7 @@ function buildHtml(inv: Record<string, unknown>): string {
     <div class="invoice-meta">
       <div class="num">${inv.invoice_number}</div>
       <p>Émise le ${fmtDate(String(inv.issued_at ?? ''))}</p>
-      ${inv.due_date ? `<p>Échéance : ${fmtDate(String(inv.due_date))}</p>` : ''}
+      <p>Échéance : ${fmtDate(dueDate)}</p>
       <p style="margin-top:6px;font-size:10px;background:#f3f4f6;padding:2px 6px;display:inline-block;text-transform:uppercase;letter-spacing:0.1em">
         ${inv.status === 'paid' ? '✓ Payée' : inv.status === 'sent' ? 'Envoyée' : inv.status === 'cancelled' ? 'Annulée' : 'Brouillon'}
       </p>

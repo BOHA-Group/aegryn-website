@@ -3,7 +3,7 @@
 import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { Plus, Trash2, Download, Send, Save } from 'lucide-react'
+import { Plus, Trash2, Download, Save, ArrowLeft } from 'lucide-react'
 
 /* ── Types ─────────────────────────────────────────────────────────────────── */
 
@@ -74,7 +74,6 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
   const [saving, setSaving]   = useState(false)
   const [pdfing, setPdfing]   = useState(false)
   const [saved,  setSaved]    = useState(false)
-  const [sent,   setSent]     = useState(false)
   const [error,  setError]    = useState<string | null>(null)
 
   /* ── Recalcul automatique des totaux ── */
@@ -126,7 +125,6 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
       if (json.id) setInv(p => ({ ...p, id: json.id }))
       setSaved(true)
       setTimeout(() => setSaved(false), 3000)
-      if (andSend) { setSent(true); setTimeout(() => setSent(false), 4000) }
       if (isNew && json.id) router.replace(`/admin/invoices/${json.id}`)
     } finally {
       setSaving(false)
@@ -171,20 +169,18 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
           </h1>
         </div>
         <div className="flex items-center gap-2">
+          <Link
+            href="/admin/invoices"
+            className="inline-flex items-center gap-1.5 border border-gray-200 text-gray-500 font-mono text-[10px] uppercase tracking-widest px-3 py-2 hover:border-gray-400 hover:text-gray-800 transition-colors"
+          >
+            <ArrowLeft size={10} /> Toutes les factures
+          </Link>
           <button
             onClick={() => downloadPdf()}
             disabled={pdfing}
             className="inline-flex items-center gap-2 border border-gray-300 text-gray-600 font-mono text-[10px] uppercase tracking-widest px-3 py-2 hover:border-gray-500 hover:text-gray-900 transition-colors disabled:opacity-50"
           >
             <Download size={11} /> {pdfing ? 'PDF…' : 'Télécharger PDF'}
-          </button>
-          <button
-            onClick={() => save(true)}
-            disabled={saving}
-            title="Sauvegarde la facture ET envoie un email au destinataire. Passe automatiquement le statut en 'Envoyée'."
-            className="inline-flex items-center gap-2 border border-blue-300 text-blue-600 font-mono text-[10px] uppercase tracking-widest px-3 py-2 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-colors disabled:opacity-50"
-          >
-            <Send size={11} /> {sent ? '✓ Email envoyé' : 'Enreg. + Envoyer email'}
           </button>
           <button
             onClick={() => save()}
@@ -410,9 +406,6 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
             </div>
           </div>
 
-          <Link href="/admin/invoices" className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700">
-            ← Toutes les factures
-          </Link>
         </div>
       </div>
     </div>
