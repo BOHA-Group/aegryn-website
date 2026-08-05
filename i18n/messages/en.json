@@ -2871,13 +2871,11 @@
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
-        "desc": "Written opinion + review by an external partner (law firm or chartered accountant) on request within 20 business days. Cross-referenced with our Alliance partners.",
+        "desc": "Written opinion + review by an external partner (of your choice) on request within 20 business days. Cross-referenced with our partners.",
         "price": "5,000 € excl. VAT"
       },
       "evalDeductibleNote": "This amount is fully deductible from the certification fee if you engage a full Auction process within 6 months of receiving your Review.",
-      "partnerSelectLabel": "Partner to involve",
-      "partnerLegal": "Law firm",
-      "partnerAccounting": "Chartered accountant",
+      "partnerSelectLabel": "External partner to involve",
       "analysisDataTitle": "Data for analysis (AEGRYN Grading System)",
       "analysisDataDesc": "This information speeds up our internal analysis and market benchmarking of your asset. Optional but recommended.",
       "sector": "Sector",
@@ -2890,7 +2888,6 @@
       "arrGrowth": "ARR YoY growth (%)",
       "grossMargin": "Gross margin (%)",
       "nrr": "Net Revenue Retention — NRR (%)",
-      "partnerCyber": "Cybersecurity firm",
       "cancelledNote": "Request cancelled. You may resubmit your application.",
       "invoiceNote": "Request received — a quote will be sent to you. Pre-payment by invoice is required before analysis begins."
     },

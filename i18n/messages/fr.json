@@ -2871,13 +2871,11 @@
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
-        "desc": "Avis écrit + revue d'un partenaire externe (cabinet juridique ou expert-comptable) à la demande sous 20 jours ouvrés. Référence croisée avec nos partenaires Alliance.",
+        "desc": "Avis écrit + revue d'un partenaire externe (de votre choix) à la demande sous 20 jours ouvrés. Référence croisée avec nos partenaires.",
         "price": "5 000 € HT"
       },
       "evalDeductibleNote": "Ce montant est intégralement déductible du coût de certification si vous engagez un processus complet vers l'Auction dans les 6 mois suivant la remise de votre Review.",
-      "partnerSelectLabel": "Partenaire à associer",
-      "partnerLegal": "Cabinet juridique",
-      "partnerAccounting": "Expert-comptable",
+      "partnerSelectLabel": "Partenaire externe à associer",
       "analysisDataTitle": "Données pour l'analyse (AEGRYN Grading System)",
       "analysisDataDesc": "Ces informations accélèrent l'analyse interne et le benchmark marché de votre actif. Optionnelles mais recommandées.",
       "sector": "Secteur d'activité",
@@ -2890,7 +2888,6 @@
       "arrGrowth": "Croissance ARR YoY (%)",
       "grossMargin": "Marge brute (%)",
       "nrr": "Net Revenue Retention — NRR (%)",
-      "partnerCyber": "Cabinet cybersécurité",
       "cancelledNote": "Paiement annulé. Vous pouvez soumettre à nouveau votre demande.",
       "invoiceNote": "Demande reçue — un devis vous sera transmis. Le pré-paiement sur facture est requis avant démarrage de l'analyse."
     },

@@ -5,9 +5,9 @@ import { useTranslations } from 'next-intl'
 import { useSearchParams } from 'next/navigation'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, CheckCircle2, ChevronLeft } from 'lucide-react'
+import { EXPERTISE_TAXONOMY } from '@/lib/expertiseTaxonomy'
 
 type EvalType = 'review_internal' | 'review_partner' | 'full_certification'
-type PartnerType = 'legal' | 'accounting' | 'cyber'
 
 const IP_KEYS = ['yes', 'no', 'pending'] as const
 type IpKey = typeof IP_KEYS[number]
@@ -17,9 +17,14 @@ export default function GradeSubmitForm() {
   const tNav       = useTranslations('nav')
   const params     = useSearchParams()
 
-  const [evalType,    setEvalType]    = useState<EvalType>('full_certification')
-  const [partnerType, setPartnerType] = useState<PartnerType>('legal')
-  const [sourceLeadId, setSourceLeadId] = useState<string | null>(null)
+  const [evalType,       setEvalType]       = useState<EvalType>('full_certification')
+  const [partnerCatId,   setPartnerCatId]   = useState('')
+  const [partnerSpecId,  setPartnerSpecId]  = useState('')
+  const [partnerOther,   setPartnerOther]   = useState('')
+  const [sourceLeadId,   setSourceLeadId]   = useState<string | null>(null)
+
+  const partnerCat      = EXPERTISE_TAXONOMY.find(c => c.id === partnerCatId)
+  const partnerSpecList = partnerCat?.specialties ?? []
 
   const [ipChoice, setIpChoice] = useState<IpKey | ''>('')
   const [submitted, setSubmitted] = useState(false)
@@ -61,7 +66,9 @@ export default function GradeSubmitForm() {
       timeline:        data.timeline         || undefined,
       message:         data.message          || undefined,
       evaluationType:  evalType,
-      partnerType:     evalType === 'review_partner' ? partnerType : undefined,
+      partnerCatId:    evalType === 'review_partner' ? (partnerCatId || undefined) : undefined,
+      partnerSpecId:   evalType === 'review_partner' ? (partnerSpecId || undefined) : undefined,
+      partnerOther:    evalType === 'review_partner' ? (partnerOther || undefined) : undefined,
       sourceLeadId:    sourceLeadId ?? undefined,
       locale,
     }
@@ -252,27 +259,42 @@ export default function GradeSubmitForm() {
                   </div>
                 )}
 
-                {/* Sélecteur partenaire (Review+ seulement) */}
+                {/* Sélecteur partenaire (Review+ seulement) — taxonomie cascadée */}
                 {evalType === 'review_partner' && (
-                  <div className="mt-1">
-                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-3">
+                  <div className="mt-1 flex flex-col gap-3">
+                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light">
                       {t('form.partnerSelectLabel')}
                     </p>
-                    <div className="flex flex-wrap gap-4">
-                      {(['legal', 'accounting', 'cyber'] as PartnerType[]).map(pt => (
-                        <label key={pt} className="flex items-center gap-2 cursor-pointer">
-                          <input
-                            type="radio" name="partnerType" value={pt}
-                            checked={partnerType === pt}
-                            onChange={() => setPartnerType(pt)}
-                            className="accent-ag-navy"
-                          />
-                          <span className="font-sans text-[13px] text-ag-black">
-                            {pt === 'legal' ? t('form.partnerLegal') : pt === 'accounting' ? t('form.partnerAccounting') : t('form.partnerCyber')}
-                          </span>
-                        </label>
-                      ))}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <select
+                        className={selectCls}
+                        value={partnerCatId}
+                        onChange={e => { setPartnerCatId(e.target.value); setPartnerSpecId('') }}
+                      >
+                        <option value="">— Catégorie / domaine —</option>
+                        {EXPERTISE_TAXONOMY.map(cat => (
+                          <option key={cat.id} value={cat.id}>{cat.labelFr}</option>
+                        ))}
+                      </select>
+                      <select
+                        className={selectCls}
+                        value={partnerSpecId}
+                        onChange={e => setPartnerSpecId(e.target.value)}
+                        disabled={partnerSpecList.length === 0}
+                      >
+                        <option value="">{partnerCatId ? '— Expertise —' : '— Choisir une catégorie d\'abord —'}</option>
+                        {partnerSpecList.map(s => (
+                          <option key={s.id} value={s.id}>{s.labelFr}</option>
+                        ))}
+                      </select>
                     </div>
+                    <input
+                      type="text"
+                      className={inputCls}
+                      value={partnerOther}
+                      onChange={e => setPartnerOther(e.target.value)}
+                      placeholder="Autre / précision libre (optionnel)"
+                    />
                   </div>
                 )}
               </div>
@@ -323,60 +345,6 @@ export default function GradeSubmitForm() {
                 </div>
               </div>
 
-              {/* Données pour l'analyse interne (AEGRYN Grading System v1.0) */}
-              {evalType === 'full_certification' && (
-                <div className="border border-ag-border p-6 flex flex-col gap-5 bg-ag-off-white">
-                  <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-black">
-                    {t('form.analysisDataTitle')}
-                  </p>
-                  <p className="font-sans text-[12px] text-ag-gray -mt-2 leading-relaxed">
-                    {t('form.analysisDataDesc')}
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className={labelCls}>{t('form.sector')}</label>
-                      <input name="sector" type="text" placeholder={t('form.sectorPlaceholder')} className={inputCls} />
-                    </div>
-                    <div>
-                      <label className={labelCls}>{t('form.benchmarkCategory')}</label>
-                      <select name="benchmarkCategory" className={selectCls}>
-                        <option value="">{t('form.benchmarkCategoryPlaceholder')}</option>
-                        {(['saas_vertical','saas_horizontal','ai_native','marketplace','mobile_app','fintech','legaltech','healthtech','regtech','web3'] as const).map(k => (
-                          <option key={k} value={k}>{k}</option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                    <div>
-                      <label className={labelCls}>{t('form.revenueTrackMonths')}</label>
-                      <input name="revenueTrackMonths" type="number" min="0" className={inputCls} />
-                    </div>
-                    <div>
-                      <label className={labelCls}>{t('form.teamSize')}</label>
-                      <input name="teamSize" type="number" min="0" className={inputCls} />
-                    </div>
-                    <div>
-                      <label className={labelCls}>{t('form.foundedYear')}</label>
-                      <input name="foundedYear" type="number" min="1990" max="2030" className={inputCls} />
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                    <div>
-                      <label className={labelCls}>{t('form.arrGrowth')}</label>
-                      <input name="arrGrowth" type="number" step="0.1" className={inputCls} />
-                    </div>
-                    <div>
-                      <label className={labelCls}>{t('form.grossMargin')}</label>
-                      <input name="grossMargin" type="number" step="0.1" className={inputCls} />
-                    </div>
-                    <div>
-                      <label className={labelCls}>{t('form.nrr')}</label>
-                      <input name="nrr" type="number" step="0.1" className={inputCls} />
-                    </div>
-                  </div>
-                </div>
-              )}
 
               {/* IP filed */}
               <div>
@@ -456,10 +424,10 @@ export default function GradeSubmitForm() {
                     Accord de mise au catalogue AEGRYN
                   </p>
                   <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
-                    La <strong>Certification Auction</strong> inclut la mise au catalogue d&apos;AEGRYN et l&apos;ouverture aux acquéreurs membres qualifiés. Votre actif sera préparé à <strong>J+15</strong> après admission et visible aux acquéreurs à <strong>J+45 minimum</strong> (session bi-annuelle).
+                    La <strong>Certification Auction</strong> inclut la mise au catalogue d&apos;AEGRYN et l&apos;ouverture aux acquéreurs membres qualifiés. Votre actif sera préparé à <strong>J+15</strong> après admission et visible aux acquéreurs à <strong>J+45 minimum</strong>.
                   </p>
                   <div className="bg-amber-50 border border-amber-200 px-4 py-3 text-[12px] text-amber-800 font-sans leading-relaxed">
-                    <strong>Frais de publication : CHF 2 000 HT</strong> — Cet acompte est déduit de la commission AEGRYN en cas de vente. Il est conservé par AEGRYN si aucune transaction n&apos;est réalisée (cf. CGV § 11 et NDA signé). Une facture sera émise par virement bancaire après validation de votre dossier par notre équipe.
+                    <strong>Frais de publication : CHF 2 000 HT</strong> — Cet acompte est déduit de la commission AEGRYN en cas de vente. Il est conservé par AEGRYN si aucune transaction n&apos;est réalisée (cf. CGV § 11 et NDA signé). Une facture sera émise après validation de votre dossier par notre équipe.
                   </div>
                   <label className="flex items-start gap-3 cursor-pointer">
                     <input
@@ -480,7 +448,7 @@ export default function GradeSubmitForm() {
                       className="mt-0.5 accent-ag-navy shrink-0 w-4 h-4"
                     />
                     <span className="font-sans text-[13px] text-ag-black leading-snug">
-                      J&apos;accepte le versement des frais de publication de <strong>CHF 2 000 HT</strong> par virement bancaire sur présentation de facture, déductibles de la commission en cas de vente.
+                      J&apos;accepte le versement des frais de publication de <strong>CHF 2 000 HT</strong> sur présentation de facture, déductibles de la commission en cas de vente.
                     </span>
                   </label>
                   {evalType === 'full_certification' && (!catalogueAgreed || !feeAgreed) && (
