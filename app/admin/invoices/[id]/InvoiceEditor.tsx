@@ -351,8 +351,11 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
           <div className="bg-white border border-gray-200 p-6 space-y-4 text-[11px]">
             <div className="flex items-start justify-between">
               <div>
-                <p className="font-sans font-bold text-[15px] text-gray-900">AEGRYN / BOHA-Group</p>
-                <p className="font-mono text-[10px] text-gray-400">Suisse · aegryn.com</p>
+                <p className="font-sans font-bold text-[15px] text-gray-900">AEGRYN</p>
+                <p className="font-sans text-[10px] text-gray-500 mt-0.5">Aegryn (par BOHA-Group Sàrl)</p>
+                <p className="font-sans text-[10px] text-gray-400">Rue du Centre 142, 1025 Saint-Sulpice, Suisse.</p>
+                <p className="font-sans text-[10px] text-gray-400">CHE-402.011.821 TVA.</p>
+                <p className="font-sans text-[10px] text-gray-400 mt-0.5">finance@boha-group.com · +41 (0) 79 590 18 81</p>
               </div>
               <div className="text-right">
                 <p className="font-mono font-bold text-[13px] text-ag-navy">{inv.invoice_number}</p>
@@ -400,12 +403,6 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
               <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Modalités de paiement</p>
               <p className="font-sans text-[11px] text-gray-500">Les coordonnées bancaires seront transmises séparément. Référence à indiquer : <strong>{inv.invoice_number}</strong></p>
             </div>
-          </div>
-
-          <div className="bg-gray-50 border border-gray-200 px-4 py-3">
-            <p className="font-sans text-[10px] text-gray-400 leading-relaxed">
-              Aegryn (par BOHA-Group Sàrl), Rue du Centre 142, 1025 Saint-Sulpice, Suisse. CHE-402.011.821 TVA.
-            </p>
           </div>
 
           <a href="/admin/invoices" className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700">

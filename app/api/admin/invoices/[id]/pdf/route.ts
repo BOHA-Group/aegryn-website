@@ -62,15 +62,17 @@ function buildHtml(inv: Record<string, unknown>): string {
   .bank { background: #f9fafb; border: 1px solid #e5e7eb; padding: 16px; margin-top: 24px; }
   .bank p { font-size: 11px; color: #374151; margin-top: 4px; }
   .bank .iban { font-family: monospace; font-size: 12px; font-weight: 600; color: #111; }
-  .footer { margin-top: 40px; border-top: 1px solid #e5e7eb; padding-top: 12px; font-size: 10px; color: #9ca3af; text-align: center; }
 </style>
 </head>
 <body>
   <div class="header">
     <div class="logo-block">
       <h1>AEGRYN</h1>
-      <p>BOHA-Group · Suisse · aegryn.com</p>
-      <p style="margin-top:4px;font-size:10px;color:#9ca3af">contact@boha-group.com</p>
+      <p style="margin-top:3px">Aegryn (par BOHA-Group Sàrl)</p>
+      <p>Rue du Centre 142, 1025 Saint-Sulpice, Suisse.</p>
+      <p>CHE-402.011.821 TVA.</p>
+      <p style="margin-top:3px">finance@boha-group.com</p>
+      <p>+41 (0) 79 590 18 81</p>
     </div>
     <div class="invoice-meta">
       <div class="num">${inv.invoice_number}</div>
@@ -119,10 +121,6 @@ function buildHtml(inv: Record<string, unknown>): string {
     <p style="margin-top:6px">Référence à indiquer lors du virement : <strong>${inv.invoice_number}</strong></p>
   </div>
 
-  <div class="footer">
-    Aegryn (par BOHA-Group Sàrl), Rue du Centre 142, 1025 Saint-Sulpice, Suisse. CHE-402.011.821 TVA.<br/>
-    Ce document tient lieu de facture conformément aux dispositions légales applicables.
-  </div>
 </body>
 </html>`
 }
