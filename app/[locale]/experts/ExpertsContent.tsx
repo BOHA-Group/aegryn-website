@@ -322,18 +322,29 @@ function ExpertCard({ profile, t, blurred = false, filters = { category: '', dom
         </div>
       )}
 
-      <div className="flex items-center gap-4 pt-2 border-t border-ag-border mt-auto">
-        {(profile.city || profile.country_code) && (
-          <span className="inline-flex items-center gap-1 font-sans text-[11px] text-ag-gray-light">
-            <MapPin size={10} />
-            {[profile.city, profile.country_code].filter(Boolean).join(', ')}
-          </span>
+      <div className="pt-2 border-t border-ag-border mt-auto space-y-1.5">
+        {profile.languages.length > 0 && (
+          <div className="flex flex-wrap gap-1">
+            {profile.languages.map(l => (
+              <span key={l} className="font-mono text-[9px] text-ag-gray-light border border-ag-border px-1.5 py-0.5">
+                {l.toUpperCase()}
+              </span>
+            ))}
+          </div>
         )}
-        {profile.min_rate_eur != null && (
-          <span className="inline-flex items-center gap-1 font-mono text-[10px] text-ag-gray-light ml-auto">
-            <Star size={9} /> {t('card.rateFrom')} {profile.min_rate_eur} {profile.rate_currency ?? 'CHF'} /h
-          </span>
-        )}
+        <div className="flex items-center justify-between gap-2">
+          {(profile.city || profile.country_code) ? (
+            <span className="inline-flex items-center gap-1 font-sans text-[11px] text-ag-gray-light min-w-0 truncate">
+              <MapPin size={10} className="shrink-0" />
+              <span className="truncate">{[profile.city, profile.country_code].filter(Boolean).join(', ')}</span>
+            </span>
+          ) : <span />}
+          {profile.min_rate_eur != null && (
+            <span className="inline-flex items-center gap-1 font-mono text-[10px] text-ag-gray-light shrink-0">
+              <Star size={9} /> {t('card.rateFrom')} {profile.min_rate_eur} {profile.rate_currency ?? 'CHF'} /h
+            </span>
+          )}
+        </div>
       </div>
 
       {!blurred && (

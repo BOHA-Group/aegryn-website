@@ -180,28 +180,32 @@ export function ExpertCardPreview({ data, locale = 'fr' }: { data: ExpertCardPre
         </div>
       )}
 
-      {/* Footer */}
-      <div className="flex items-center gap-4 pt-2 border-t border-ag-border mt-auto">
-        {(data.city || data.country_code) && (
-          <span className="inline-flex items-center gap-1 font-sans text-[11px] text-ag-gray-light">
-            <MapPin size={10} />
-            {[data.city, data.country_code].filter(Boolean).join(', ')}
-          </span>
-        )}
+      {/* Footer — deux lignes pour éviter l'écrasement avec de nombreuses langues */}
+      <div className="pt-2 border-t border-ag-border mt-auto space-y-1.5">
+        {/* Ligne 1 : langues */}
         {data.languages.length > 0 && (
-          <span className="flex items-center gap-1 ml-auto">
+          <div className="flex flex-wrap gap-1">
             {data.languages.map(l => (
               <span key={l} className="font-mono text-[9px] text-ag-gray-light border border-ag-border px-1.5 py-0.5">
                 {LANG_LABELS[l] ?? l.toUpperCase()}
               </span>
             ))}
-          </span>
+          </div>
         )}
-        {data.min_rate_eur != null && (
-          <span className="inline-flex items-center gap-1 font-mono text-[10px] text-ag-gray-light ml-auto">
-            <Star size={9} /> Dès {data.min_rate_eur} {data.rate_currency || 'CHF'} /h
-          </span>
-        )}
+        {/* Ligne 2 : ville + taux */}
+        <div className="flex items-center justify-between gap-2">
+          {(data.city || data.country_code) ? (
+            <span className="inline-flex items-center gap-1 font-sans text-[11px] text-ag-gray-light min-w-0 truncate">
+              <MapPin size={10} className="shrink-0" />
+              <span className="truncate">{[data.city, data.country_code].filter(Boolean).join(', ')}</span>
+            </span>
+          ) : <span />}
+          {data.min_rate_eur != null && (
+            <span className="inline-flex items-center gap-1 font-mono text-[10px] text-ag-gray-light shrink-0">
+              <Star size={9} /> Dès {data.min_rate_eur} {data.rate_currency || 'CHF'} /h
+            </span>
+          )}
+        </div>
       </div>
 
       {/* Liens contact */}
