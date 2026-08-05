@@ -37,7 +37,7 @@ export default async function ExpertClientLayout({ children }: { children: React
                 Ma fiche expert
               </Link>
               <Link
-                href="/client/account"
+                href="/client/expert/account"
                 className="flex items-center px-3 py-2 font-sans text-[12px] text-white/50 hover:text-white/80 hover:bg-white/5 transition-colors"
               >
                 Mon compte

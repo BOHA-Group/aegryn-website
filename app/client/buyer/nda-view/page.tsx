@@ -10,6 +10,7 @@ import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import Link from 'next/link'
+import { NDA_VERSIONS } from '@/lib/ndaVersions'
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -17,8 +18,6 @@ export async function generateMetadata(): Promise<Metadata> {
     robots: { index: false, follow: false },
   }
 }
-
-const NDA_VERSION = 'v1.0-2026-07'
 
 export default async function NdaViewPage() {
   const user = await getUser()
@@ -55,9 +54,9 @@ export default async function NdaViewPage() {
               <p className="text-[13px] font-semibold text-white/90">Lecture seule — document signé</p>
             </div>
           </div>
-          <Link href="/client/account"
+          <Link href="/client/buyer"
             className="font-mono text-[10px] uppercase tracking-widest text-white/60 hover:text-white transition-colors border border-white/20 px-3 py-1.5">
-            ← Mon compte
+            ← Tableau de bord
           </Link>
         </div>
       </div>
@@ -72,7 +71,7 @@ export default async function NdaViewPage() {
               NDA accepté le {signedDate}
             </p>
             <p className="font-mono text-[10px] text-emerald-600 mt-0.5">
-              Version {String(sig.nda_version ?? NDA_VERSION)} — Signature électronique enregistrée
+              Version {String(sig.nda_version ?? NDA_VERSIONS.buyer)} — Signature électronique enregistrée
             </p>
           </div>
         </div>
@@ -81,7 +80,7 @@ export default async function NdaViewPage() {
         <div className="bg-white border border-gray-200 px-8 py-8 space-y-8 text-[13px] text-gray-700 leading-relaxed">
 
           <div className="border-b border-gray-100 pb-6">
-            <p className="text-[10px] font-mono tracking-[0.22em] uppercase text-gray-400 mb-2">{t('versionLabel')} {String(sig.nda_version ?? NDA_VERSION)}</p>
+            <p className="text-[10px] font-mono tracking-[0.22em] uppercase text-gray-400 mb-2">{t('versionLabel')} {String(sig.nda_version ?? NDA_VERSIONS.buyer)}</p>
             <h1 className="text-[17px] font-bold text-gray-900 leading-snug">{t('mainTitle')}</h1>
             <p className="text-[12px] text-gray-500 mt-1">{t('mainSubtitle')}</p>
           </div>
@@ -164,7 +163,7 @@ export default async function NdaViewPage() {
             </div>
             <div>
               <p className="text-gray-400 mb-0.5">Version</p>
-              <p className="text-gray-700">{String(sig.nda_version ?? NDA_VERSION)}</p>
+              <p className="text-gray-700">{String(sig.nda_version ?? NDA_VERSIONS.buyer)}</p>
             </div>
           </div>
         </div>
