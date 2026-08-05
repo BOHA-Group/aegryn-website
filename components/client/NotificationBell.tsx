@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { Bell, X, Check, CheckCheck } from 'lucide-react'
+import { useLocale } from 'next-intl'
 
 type Notification = {
   id:          string
@@ -15,27 +16,52 @@ type Notification = {
   payload:     Record<string, unknown> | null
 }
 
-function relativeDate(iso: string): string {
+const REL_LABELS: Record<string, { now: string; minAgo: (n: number) => string; hAgo: (n: number) => string; dAgo: (n: number) => string }> = {
+  fr: { now: "à l'instant",    minAgo: n => `il y a ${n} min`, hAgo: n => `il y a ${n}h`,  dAgo: n => `il y a ${n}j`  },
+  en: { now: 'just now',        minAgo: n => `${n} min ago`,    hAgo: n => `${n}h ago`,      dAgo: n => `${n}d ago`      },
+  de: { now: 'gerade eben',     minAgo: n => `vor ${n} Min`,    hAgo: n => `vor ${n}h`,      dAgo: n => `vor ${n}T`      },
+  es: { now: 'ahora mismo',     minAgo: n => `hace ${n} min`,   hAgo: n => `hace ${n}h`,     dAgo: n => `hace ${n}d`     },
+  it: { now: 'adesso',          minAgo: n => `${n} min fa`,     hAgo: n => `${n}h fa`,       dAgo: n => `${n}g fa`       },
+  nl: { now: 'zojuist',         minAgo: n => `${n} min geleden`,hAgo: n => `${n}u geleden`,  dAgo: n => `${n}d geleden`  },
+}
+
+function relativeDate(iso: string, locale: string): string {
+  const l    = REL_LABELS[locale] ?? REL_LABELS.fr
   const diff = Date.now() - new Date(iso).getTime()
   const min  = Math.floor(diff / 60000)
-  if (min < 1)   return "à l'instant"
-  if (min < 60)  return `il y a ${min} min`
+  if (min < 1)  return l.now
+  if (min < 60) return l.minAgo(min)
   const h = Math.floor(min / 60)
-  if (h < 24)    return `il y a ${h}h`
+  if (h < 24)   return l.hAgo(h)
   const d = Math.floor(h / 24)
-  if (d < 30)    return `il y a ${d}j`
-  return new Date(iso).toLocaleDateString('fr-CH', { day: '2-digit', month: 'short' })
+  if (d < 30)   return l.dAgo(d)
+  return new Date(iso).toLocaleDateString(locale === 'fr' ? 'fr-CH' : locale, { day: '2-digit', month: 'short' })
 }
 
 const URGENCY_DOT: Record<string, string> = {
-  broadcast_alert:  'bg-amber-500',
-  broadcast_action: 'bg-emerald-500',
-  broadcast_info:   'bg-blue-500',
+  critical:         'bg-[#f87171]',
+  warning:          'bg-[#fb923c]',
+  success:          'bg-[#34d399]',
+  info:             'bg-[#60a5fa]',
+  broadcast_alert:  'bg-[#fb923c]',
+  broadcast_action: 'bg-[#34d399]',
+  broadcast_info:   'bg-[#60a5fa]',
+}
+
+const URGENCY_BG: Record<string, string> = {
+  critical:         'bg-[rgba(239,68,68,0.06)]',
+  warning:          'bg-[rgba(251,146,60,0.05)]',
+  success:          'bg-[rgba(52,211,153,0.04)]',
+  info:             'bg-[rgba(96,165,250,0.04)]',
+  broadcast_alert:  'bg-[rgba(251,146,60,0.05)]',
+  broadcast_action: 'bg-[rgba(52,211,153,0.04)]',
+  broadcast_info:   'bg-[rgba(96,165,250,0.04)]',
 }
 
 const POLL_INTERVAL = 30_000
 
 export default function NotificationBell() {
+  const locale = useLocale()
   const [open,         setOpen]         = useState(false)
   const [notifs,       setNotifs]       = useState<Notification[]>([])
   const [unread,       setUnread]       = useState(0)
@@ -115,9 +141,12 @@ export default function NotificationBell() {
         className="relative flex items-center justify-center w-8 h-8 text-ag-gray hover:text-ag-black transition-colors"
         aria-label="Notifications"
       >
-        <Bell size={16} className={unread > 0 ? 'text-ag-apex animate-[bell-ring_0.5s_ease-in-out]' : ''} />
+        <Bell
+          size={16}
+          className={unread > 0 ? 'text-ag-apex animate-bell-ring' : 'text-ag-gray'}
+        />
         {unread > 0 && (
-          <span className="absolute -top-0.5 -right-0.5 min-w-[16px] h-4 bg-red-500 text-white font-mono font-bold text-[9px] flex items-center justify-center px-1 leading-none">
+          <span className="absolute -top-1 -right-1 min-w-[16px] h-4 bg-ag-apex text-ag-navy font-mono font-bold text-[9px] flex items-center justify-center px-1 leading-none pointer-events-none">
             {unread > 9 ? '9+' : unread}
           </span>
         )}
@@ -125,14 +154,14 @@ export default function NotificationBell() {
 
       {/* Panel */}
       {open && (
-        <div className="absolute right-0 top-full mt-2 w-[340px] bg-white border border-gray-200 shadow-lg z-50 flex flex-col max-h-[480px]">
+        <div className="absolute right-0 top-full mt-2 w-[320px] bg-ag-white border border-ag-border shadow-[0_8px_40px_rgba(0,0,0,0.13)] z-50 flex flex-col max-h-[80vh]">
 
           {/* Header */}
-          <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
+          <div className="flex items-center justify-between px-4 py-3 border-b border-ag-border">
             <div className="flex items-center gap-3">
-              <p className="font-mono text-[10px] uppercase tracking-widest text-gray-700 font-semibold">Notifications</p>
+              <p className="font-mono text-[10px] uppercase tracking-widest text-ag-black font-semibold">Notifications</p>
               {unread > 0 && (
-                <span className="bg-red-500 text-white font-mono text-[8px] font-bold px-1.5 py-0.5 min-w-[18px] text-center">
+                <span className="bg-ag-apex text-ag-navy font-mono text-[8px] font-bold px-1.5 py-0.5 min-w-[18px] text-center">
                   {unread}
                 </span>
               )}
@@ -164,7 +193,7 @@ export default function NotificationBell() {
                 type="button"
                 onClick={() => setFilter(f)}
                 className={`flex-1 py-2 font-mono text-[9px] uppercase tracking-widest transition-colors ${
-                  filter === f ? 'text-ag-navy border-b-2 border-ag-navy' : 'text-gray-400 hover:text-gray-700'
+                  filter === f ? 'text-ag-navy border-b-2 border-ag-navy' : 'text-ag-gray-light hover:text-ag-black'
                 }`}
               >
                 {f === 'all' ? 'Toutes' : `Non lues (${unread})`}
@@ -187,8 +216,10 @@ export default function NotificationBell() {
                 return (
                   <div
                     key={n.id}
-                    className={`flex items-start gap-3 px-4 py-3 border-b border-gray-50 transition-colors ${
-                      isUnread ? 'bg-blue-50/40' : 'bg-white hover:bg-gray-50'
+                    className={`flex items-start gap-3 px-4 py-3 border-b border-ag-border/50 transition-colors ${
+                      isUnread
+                        ? (URGENCY_BG[n.type] ?? 'bg-[rgba(96,165,250,0.04)]')
+                        : 'bg-ag-white hover:bg-ag-off-white'
                     }`}
                   >
                     {/* Dot urgence */}
@@ -203,7 +234,7 @@ export default function NotificationBell() {
                         <p className="font-sans text-[11px] text-gray-500 mt-0.5 line-clamp-2">{n.body}</p>
                       )}
                       <div className="flex items-center gap-3 mt-1.5 flex-wrap">
-                        <span className="font-mono text-[9px] text-gray-400">{relativeDate(n.created_at)}</span>
+                        <span className="font-mono text-[9px] text-ag-gray-light">{relativeDate(n.created_at, locale)}</span>
                         {n.link && (
                           <a
                             href={n.link}

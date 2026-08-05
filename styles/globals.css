@@ -148,9 +148,21 @@ button, input, select, textarea,
   to   { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes bell-ring {
+  0%, 100% { transform: rotate(0deg); }
+  10%      { transform: rotate(-15deg); }
+  20%      { transform: rotate(15deg); }
+  30%      { transform: rotate(-10deg); }
+  40%      { transform: rotate(10deg); }
+  50%      { transform: rotate(-5deg); }
+  60%      { transform: rotate(5deg); }
+  70%, 90% { transform: rotate(0deg); }
+}
+
 /* ── Utilities ────────────────────────────────────────── */
 .animate-apex-pulse { animation: apex-pulse 2.5s ease-in-out infinite; }
 .animate-fade-up    { animation: fade-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-bell-ring  { animation: bell-ring 2s ease infinite; transform-origin: top center; }
 
 /* ── Rolex-style global transitions ───────────────────── */
 a, button {
