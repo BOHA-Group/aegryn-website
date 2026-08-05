@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { EXPERTISE_TAXONOMY } from '@/lib/expertiseTaxonomy'
 
 type Props = {
   partnerId: string
@@ -10,19 +11,29 @@ type Props = {
   backHref: string
 }
 
+const DIMENSION_LABELS: Record<string, string> = {
+  tech:        'Advisory Tech',
+  transaction: 'Advisory Transaction',
+  both:        'Advisory Tech & Transaction',
+}
+
 export default function CreateMandateForm({ partnerId, adminToken, assets, backHref }: Props) {
   const router = useRouter()
   const [saving, setSaving] = useState(false)
   const [error, setError]   = useState('')
 
-  const [clientName,  setClientName]  = useState('')
-  const [clientEmail, setClientEmail] = useState('')
-  const [clientType,  setClientType]  = useState<'seller' | 'buyer' | 'other'>('seller')
-  const [mandateType, setMandateType] = useState<'advisory' | 'due_diligence' | 'fundraising' | 'other'>('advisory')
-  const [description, setDescription] = useState('')
-  const [assetId,     setAssetId]     = useState('')
-  const [retroPct,    setRetroPct]    = useState('15')
-  const [startedAt,   setStartedAt]   = useState('')
+  const [clientName,    setClientName]    = useState('')
+  const [clientEmail,   setClientEmail]   = useState('')
+  const [clientType,    setClientType]    = useState<'seller' | 'buyer' | 'other'>('seller')
+  const [missionCatId,  setMissionCatId]  = useState('')
+  const [mandateType,   setMandateType]   = useState('')
+  const [description,   setDescription]   = useState('')
+  const [assetId,       setAssetId]       = useState('')
+  const [retroPct,      setRetroPct]      = useState('15')
+  const [startedAt,     setStartedAt]     = useState('')
+
+  const selectedCat = EXPERTISE_TAXONOMY.find(c => c.id === missionCatId)
+  const specialties = selectedCat?.specialties ?? []
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -59,8 +70,9 @@ export default function CreateMandateForm({ partnerId, adminToken, assets, backH
     router.refresh()
   }
 
-  const inputCls = 'w-full border border-gray-200 bg-white px-3 py-2.5 text-[12px] font-mono focus:outline-none focus:border-gray-500 transition-colors'
-  const labelCls = 'block text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-1.5'
+  const inputCls  = 'w-full h-10 border border-gray-200 bg-white px-3 text-[12px] font-mono focus:outline-none focus:border-gray-500 transition-colors'
+  const selectCls = 'w-full h-10 border border-gray-200 bg-white px-3 text-[12px] font-mono focus:outline-none focus:border-gray-500 transition-colors appearance-none cursor-pointer'
+  const labelCls  = 'block text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-1.5'
 
   return (
     <form onSubmit={handleSubmit} className="bg-white border border-gray-200 p-6 flex flex-col gap-5">
@@ -82,36 +94,10 @@ export default function CreateMandateForm({ partnerId, adminToken, assets, backH
       <div className="grid grid-cols-2 gap-4">
         <div>
           <label className={labelCls}>Type de client</label>
-          <select className={inputCls} value={clientType} onChange={e => setClientType(e.target.value as typeof clientType)}>
+          <select className={selectCls} value={clientType} onChange={e => setClientType(e.target.value as typeof clientType)}>
             <option value="seller">Vendeur</option>
             <option value="buyer">Acquéreur</option>
             <option value="other">Autre</option>
-          </select>
-        </div>
-        <div>
-          <label className={labelCls}>Nature de la mission</label>
-          <select className={inputCls} value={mandateType} onChange={e => setMandateType(e.target.value as typeof mandateType)}>
-            <option value="advisory">Conseil stratégique</option>
-            <option value="due_diligence">Due diligence</option>
-            <option value="fundraising">Levée de fonds</option>
-            <option value="other">Autre</option>
-          </select>
-        </div>
-      </div>
-
-      <div>
-        <label className={labelCls}>Description de la mission</label>
-        <textarea className={inputCls} rows={3} value={description} onChange={e => setDescription(e.target.value)} placeholder="Détail de la mission…" />
-      </div>
-
-      <div className="grid grid-cols-2 gap-4">
-        <div>
-          <label className={labelCls}>Actif AEGRYN associé (optionnel)</label>
-          <select className={inputCls} value={assetId} onChange={e => setAssetId(e.target.value)}>
-            <option value="">— Aucun —</option>
-            {assets.map(a => (
-              <option key={a.id} value={a.id}>{a.name}</option>
-            ))}
           </select>
         </div>
         <div>
@@ -120,18 +106,73 @@ export default function CreateMandateForm({ partnerId, adminToken, assets, backH
         </div>
       </div>
 
+      {/* Nature de la mission — taxonomie en cascade */}
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className={labelCls}>Catégorie (dimension)</label>
+          <select
+            className={selectCls}
+            value={missionCatId}
+            onChange={e => { setMissionCatId(e.target.value); setMandateType('') }}
+          >
+            <option value="">— Sélectionner —</option>
+            {EXPERTISE_TAXONOMY.map(cat => (
+              <option key={cat.id} value={cat.id}>
+                [{DIMENSION_LABELS[cat.dimension] ?? cat.dimension}] {cat.labelFr}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label className={labelCls}>Nature de la mission (expertise)</label>
+          <select
+            className={selectCls}
+            value={mandateType}
+            onChange={e => setMandateType(e.target.value)}
+            disabled={specialties.length === 0}
+          >
+            <option value="">— {missionCatId ? 'Sélectionner' : 'Choisir une catégorie d\'abord'} —</option>
+            {specialties.map(s => (
+              <option key={s.id} value={s.id}>{s.labelFr}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+
       <div>
-        <label className={labelCls}>Rétrocession AEGRYN (%)</label>
-        <input
-          type="number"
-          min="0"
-          max="100"
-          step="0.5"
-          className={inputCls}
-          value={retroPct}
-          onChange={e => setRetroPct(e.target.value)}
+        <label className={labelCls}>Description de la mission</label>
+        <textarea
+          className="w-full border border-gray-200 bg-white px-3 py-2.5 text-[12px] font-mono focus:outline-none focus:border-gray-500 transition-colors"
+          rows={3}
+          value={description}
+          onChange={e => setDescription(e.target.value)}
+          placeholder="Détail de la mission…"
         />
-        <p className="text-[10px] text-gray-400 mt-1">Standard CAS 3 : 15% des honoraires facturés par le partenaire à son client.</p>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className={labelCls}>Actif AEGRYN associé (optionnel)</label>
+          <select className={selectCls} value={assetId} onChange={e => setAssetId(e.target.value)}>
+            <option value="">— Aucun —</option>
+            {assets.map(a => (
+              <option key={a.id} value={a.id}>{a.name}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label className={labelCls}>Rétrocession AEGRYN (%)</label>
+          <input
+            type="number"
+            min="0"
+            max="100"
+            step="0.5"
+            className={inputCls}
+            value={retroPct}
+            onChange={e => setRetroPct(e.target.value)}
+          />
+          <p className="text-[10px] text-gray-400 mt-1">Standard CAS 3 : 15% des honoraires facturés par le partenaire à son client.</p>
+        </div>
       </div>
 
       <div className="flex gap-3 pt-2">

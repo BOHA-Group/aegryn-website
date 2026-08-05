@@ -541,8 +541,21 @@ type Props = {
   tokenQs:      string
 }
 
-function TractionPanel({ stats }: { stats: ClickStat[] }) {
+function TractionPanel({ stats, tokenQs, onRefresh }: { stats: ClickStat[]; tokenQs: string; onRefresh: () => void }) {
   const [open, setOpen] = useState(true)
+  const [deletingId, setDeletingId] = useState<string | null>(null)
+
+  async function delExpert(expertId: string, name: string) {
+    if (!confirm(`Supprimer définitivement la fiche de ${name} ?`)) return
+    setDeletingId(expertId)
+    await fetch(`/api/admin/experts${tokenQs}`, {
+      method:  'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ table: 'expert_profiles', id: expertId }),
+    })
+    setDeletingId(null)
+    onRefresh()
+  }
 
   // Ne comptabiliser que les clics sur fiches publiées (is_visible=true)
   const publishedStats = stats.filter(r => r.is_visible)
@@ -596,7 +609,7 @@ function TractionPanel({ stats }: { stats: ClickStat[] }) {
               <table className="w-full text-[12px]">
                 <thead className="bg-gray-50 border-b border-gray-100">
                   <tr>
-                    {['Expert', 'Profession', 'Statut', 'Total', '7j', '30j', 'Email', 'Site', 'Dernier clic'].map(h => (
+                    {['Expert', 'Profession', 'Statut', 'Total', '7j', '30j', 'Email', 'Site', 'Dernier clic', ''].map(h => (
                       <th key={h} className="text-left px-4 py-2.5 font-mono text-[9px] uppercase tracking-widest text-gray-400 whitespace-nowrap">{h}</th>
                     ))}
                   </tr>
@@ -640,6 +653,15 @@ function TractionPanel({ stats }: { stats: ClickStat[] }) {
                           </span>
                         ) : '—'}
                       </td>
+                      <td className="px-4 py-3">
+                        <button
+                          onClick={() => delExpert(r.expert_id, `${r.first_name} ${r.last_name}`)}
+                          disabled={deletingId === r.expert_id}
+                          className="font-mono text-[9px] uppercase tracking-widest px-2 py-1 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-50 transition-colors"
+                        >
+                          {deletingId === r.expert_id ? '…' : 'Supprimer'}
+                        </button>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -655,7 +677,7 @@ function TractionPanel({ stats }: { stats: ClickStat[] }) {
 export default function ExpertsAdminClient({ applications, profiles, clickStats, tokenQs }: Props) {
   const [apps,     setApps]     = useState(applications)
   const [profs,    setProfs]    = useState(profiles)
-  const [filter,   setFilter]   = useState<'all' | 'pending' | 'visible' | 'hidden'>('pending')
+  const [filter,   setFilter]   = useState<'all' | 'pending' | 'visible' | 'hidden'>('all')
   const [loading,  setLoading]  = useState(false)
 
   async function refresh() {
@@ -732,7 +754,7 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
         </div>
 
         {/* Section 2 — Traction réseau (clics) */}
-        <TractionPanel stats={clickStats} />
+        <TractionPanel stats={clickStats} tokenQs={tokenQs} onRefresh={refresh} />
 
         {/* Section 3 — Attribution manuelle abonnement */}
         <AdminSubscriptionPanel profiles={profs} />
