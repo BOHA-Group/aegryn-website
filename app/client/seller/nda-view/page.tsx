@@ -206,6 +206,19 @@ export default async function SellerNdaViewPage() {
             </table>
           </Article>
 
+          <Article num="4bis" title="Frais en cas de non-réalisation de la transaction">
+            <p>
+              Dans le cas où l&apos;actif admis en Certification Auction serait retiré du catalogue ou
+              qu&apos;aucune transaction ne se réalise à l&apos;issue du processus AEGRYN, des frais fixes
+              minimaux de <strong>CHF 2 000 HT</strong> sont dus à AEGRYN en contrepartie du travail
+              engagé par ses équipes : analyse C/I/F/S, attribution du grade officiel, préparation du
+              dossier catalogue, communication, marketing, et visibilité produit acquise durant la présence
+              de l&apos;actif au catalogue. Ces frais sont exigibles à la date de retrait ou de clôture
+              sans transaction, facturés directement au Cédant. Non applicable en cas de condition
+              suspensive non levée dûment documentée.
+            </p>
+          </Article>
+
           <Article num="5" title="Durée">
             Les présentes obligations s&apos;appliquent pendant toute la durée du processus AEGRYN et pendant
             une période de <strong>3 ans</strong>{' '}suivant la conclusion ou l&apos;abandon du processus.

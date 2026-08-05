@@ -187,6 +187,10 @@ export default async function TermsCgvPage({ params }: Props) {
           <div className="bg-ag-off-white border border-ag-border px-5 py-4 mb-4">
             <p className="font-sans text-[13px] text-ag-black font-semibold">{t('s11Minimum')}</p>
           </div>
+          <div className="bg-amber-50 border border-amber-200 px-5 py-4 mb-4">
+            <h3 className="font-sans font-semibold text-[12px] uppercase tracking-[0.14em] text-amber-900 mb-2">{t('s11NonSaleTitle')}</h3>
+            <p className="font-sans text-[13px] text-amber-800 leading-relaxed">{t('s11NonSale')}</p>
+          </div>
           <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-4">{t('s11Earnout')}</p>
           <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('s11Payment')}</p>
         </section>

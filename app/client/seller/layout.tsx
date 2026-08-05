@@ -8,6 +8,8 @@ import { NDA_VERSIONS } from '@/lib/ndaVersions'
 import KycBanner from '@/components/client/KycBanner'
 import { LogOut } from 'lucide-react'
 
+type AssetSummary = { id: string; company_name: string | null }
+
 export default async function SellerLayout({ children }: { children: React.ReactNode }) {
   const user = await getUser()
   if (!user) redirect('/client/login')
@@ -30,11 +32,18 @@ export default async function SellerLayout({ children }: { children: React.React
   const hasBuyer   = roles.includes('buyer')
   const hasPartner = roles.includes('partner')
 
-  const { count: unreadCount } = await supa
-    .from('user_notifications')
-    .select('id', { count: 'exact', head: true })
-    .eq('user_id', user.id)
-    .is('read_at', null)
+  const [{ count: unreadCount }, { data: byEmail }, { data: byUid }] = await Promise.all([
+    supa.from('user_notifications').select('id', { count: 'exact', head: true }).eq('user_id', user.id).is('read_at', null),
+    supa.from('assets').select('id, company_name').eq('seller_email', user.email!).not('status', 'eq', 'pending_payment').order('submitted_at', { ascending: false }),
+    supa.from('assets').select('id, company_name').eq('seller_uid', user.id).not('status', 'eq', 'pending_payment').order('submitted_at', { ascending: false }),
+  ])
+
+  const seen = new Set<string>()
+  const assets = ([...(byEmail ?? []), ...(byUid ?? [])] as AssetSummary[]).filter(a => {
+    if (seen.has(a.id)) return false
+    seen.add(a.id)
+    return true
+  })
 
   const displayName = profile?.full_name ?? user.email ?? ''
   const t = await getTranslations('clientSpace')
@@ -49,7 +58,7 @@ export default async function SellerLayout({ children }: { children: React.React
           </div>
 
           <ViewSwitcher hasBuyer={hasBuyer} hasSeller={true} hasPartner={hasPartner} />
-          <SellerNav unreadCount={unreadCount ?? 0} />
+          <SellerNav unreadCount={unreadCount ?? 0} assets={assets} />
 
           <div className="mt-auto px-4 py-4 border-t border-white/10">
             <form action="/api/client/logout" method="POST">

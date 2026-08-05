@@ -3591,6 +3591,8 @@
       "> 5.000.000 €: tasa acordada en el mandato"
     ],
     "s11Minimum": "Comisión mínima: 25.000 € sin IVA, independientemente de la tasa aplicable y del precio final de cesión.",
+    "s11NonSaleTitle": "Honorarios en caso de no realización de la transacción",
+    "s11NonSale": "En el caso de que un activo admitido al proceso de certificación completa (Certification Auction) sea retirado del catálogo o no se concrete ninguna transacción al término del proceso AEGRYN, se adeudan a AEGRYN honorarios fijos mínimos de CHF 2.000 sin IVA en contraprestación al trabajo realizado por sus equipos: análisis C/I/F/S, atribución del grade oficial, preparación del dossier de catálogo, acciones de comunicación y marketing, así como la visibilidad del producto adquirida durante la presencia del activo en el catálogo AEGRYN. Dichos honorarios son debidos con independencia del resultado comercial y son exigibles en la fecha de retiro o cierre sin transacción. Se facturan directamente al cedente. Esta cláusula no se aplica en caso de condición suspensiva no cumplida debidamente documentada.",
     "s11Earnout": "En caso de earnout, se aplica una comisión adicional del 5% sobre cada pago de earnout efectivamente recibido por el cedente, con el límite de la tasa aplicable a la franja del precio total.",
     "s11Payment": "La comisión se devenga en la fecha de liberación del depósito en garantía y es deducida directamente por AEGRYN de los fondos en depósito antes de la remisión del saldo neto al vendedor. AEGRYN nunca es depositario de dichos fondos: el depósito en garantía está en poder de un banco tercero designado por AEGRYN.",
     "ctaContact": "Contactar al equipo AEGRYN",
@@ -3847,6 +3849,36 @@
     "filterTransactions": "Transacciones",
     "filterAccount": "Cuenta",
     "items": [
+      {
+        "id": "who-we-are",
+        "cat": ["certification", "sellers", "buyers"],
+        "q": "¿Quién es AEGRYN y qué hace?",
+        "a": "Aegryn es un constructor de activos tech suizo que diseña y opera ecosistemas digitales propietarios — entornos donde la tecnología estructura el día a día de personas, profesionales y mercados. Certificamos, intermediamos y acompañamos activos tecnológicos a través de un protocolo independiente y reproducible."
+      },
+      {
+        "id": "what-differentiates",
+        "cat": ["certification"],
+        "q": "¿Qué les diferencia?",
+        "a": "A diferencia de firmas de consultoría o agencias, construimos y operamos nuestros propios ecosistemas digitales. Cada recomendación estratégica, cada protocolo de seguridad, cada enfoque de crecimiento que proponemos proviene de una ejecución real — no de la teoría. No revendemos modelos genéricos. Compartimos lo que funciona porque nosotros mismos lo utilizamos."
+      },
+      {
+        "id": "invest-partner",
+        "cat": ["account"],
+        "q": "¿Cómo invertir o convertirse en socio?",
+        "a": "Damos la bienvenida a inversores visionarios y socios estratégicos que comparten nuestra perspectiva a largo plazo. Utilice el formulario de contacto en /contact, seleccione \"Partnership\" como asunto, y nuestro equipo le responderá en 24 horas para organizar un primer intercambio."
+      },
+      {
+        "id": "where-based",
+        "cat": ["account"],
+        "q": "¿Dónde están ubicados?",
+        "a": "Aegryn tiene su sede en Suiza. Nuestros ecosistemas digitales operan en toda Europa, y nuestra práctica advisory acompaña a clientes en Suiza, Francia y la UE."
+      },
+      {
+        "id": "cert-only-vs-catalogue",
+        "cat": ["certification", "sellers"],
+        "q": "¿Puedo obtener una certificación sin poner mi activo a la venta?",
+        "a": "Sí. Crear una cuenta de cedente no implica compromiso de cesión. Al enviar su activo puede elegir entre: (1) Solo certificación — obtener un Grade AEGRYN oficial sin inclusión en catálogo (AEGRYN Review a 2.000 € sin IVA o Review+ a 5.000 € sin IVA, deducibles si inicia una Certification Auction en los 6 meses siguientes), o (2) Certificación + Catálogo — proceso completo con puesta en venta, remuneración de AEGRYN solo en la transacción (honorarios de no-venta de CHF 2.000 sin IVA aplicables si se retira sin transacción)."
+      },
       {
         "id": "what-grade",
         "cat": [

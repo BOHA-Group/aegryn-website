@@ -3591,6 +3591,8 @@
       "> € 5.000.000: tarief overeengekomen in het mandaat"
     ],
     "s11Minimum": "Minimumvergoeding: € 25.000 excl. btw, ongeacht het toepasselijke tarief en de definitieve transactieprijs.",
+    "s11NonSaleTitle": "Kosten bij niet-realisatie van de transactie",
+    "s11NonSale": "Ingeval een asset die is toegelaten tot het volledige certificeringsproces (Certification Auction) uit de catalogus wordt teruggetrokken of er aan het einde van het AEGRYN-proces geen transactie tot stand komt, zijn aan AEGRYN minimale vaste kosten van CHF 2.000 excl. btw verschuldigd als vergoeding voor het werk dat zijn teams hebben verricht: C/I/F/S-analyse, toekenning van het officiële grade, voorbereiding van het catalogusdossier, communicatie- en marketingactiviteiten, alsmede de productvisibiliteit die is verworven tijdens de aanwezigheid van het asset in de AEGRYN-catalogus. Deze kosten zijn verschuldigd ongeacht de commerciële uitkomst en zijn opeisbaar op de datum van terugtrekking of afsluiting zonder transactie. Ze worden rechtstreeks aan de vervreemder gefactureerd. Deze clausule is niet van toepassing bij een behoorlijk gedocumenteerde niet-vervulde opschortende voorwaarde.",
     "s11Earnout": "Bij een earnout wordt op elke door de vervreemder effectief ontvangen earnout-betaling een bijkomende vergoeding van 5% aangerekend, met als maximum het tarief dat van toepassing is op de schijf van de totale prijs.",
     "s11Payment": "De vergoeding is verschuldigd op de datum van vrijgave van de geblokkeerde fondsen en wordt door AEGRYN rechtstreeks ingehouden op de geblokkeerde fondsen vóór de uitbetaling van het nettosaldo aan de verkoper. AEGRYN is nooit bewaarder van deze fondsen — de geblokkeerde bedragen worden aangehouden door een door AEGRYN aangewezen derde bank.",
     "ctaContact": "Contact opnemen met het AEGRYN-team",
@@ -3847,6 +3849,36 @@
     "filterTransactions": "Transacties",
     "filterAccount": "Account",
     "items": [
+      {
+        "id": "who-we-are",
+        "cat": ["certification", "sellers", "buyers"],
+        "q": "Wie is AEGRYN en wat doet u?",
+        "a": "Aegryn is een Zwitserse tech-asset-bouwer die propriet aire digitale ecosystemen ontwerpt en exploiteert — omgevingen waar technologie het dagelijkse leven structureert van individuen, professionals en de markten waarin zij opereren. Wij certificeren, verhandelen en begeleiden technologie-assets via een onafhankelijk en reproduceerbaar protocol."
+      },
+      {
+        "id": "what-differentiates",
+        "cat": ["certification"],
+        "q": "Wat onderscheidt u?",
+        "a": "In tegenstelling tot adviesbureaus of agentschappen bouwen en exploiteren wij onze eigen digitale ecosystemen. Elke strategische aanbeveling, elk veiligheidsprotocol, elke groeiaanpak die wij voorstellen, is gebaseerd op echte uitvoering — niet op theorie. Wij verkopen geen generieke modellen. Wij delen wat werkt omdat wij het zelf gebruiken."
+      },
+      {
+        "id": "invest-partner",
+        "cat": ["account"],
+        "q": "Hoe kan ik investeren of partner worden?",
+        "a": "Wij verwelkomen visionaire investeerders en strategische partners die ons langetermijnperspectief delen. Gebruik het contactformulier op /contact, selecteer \"Partnerschap\" als onderwerp, en ons team reageert binnen 24 uur om een eerste gesprek te plannen."
+      },
+      {
+        "id": "where-based",
+        "cat": ["account"],
+        "q": "Waar bent u gevestigd?",
+        "a": "Aegryn heeft zijn hoofdkantoor in Zwitserland. Onze digitale ecosystemen zijn actief in heel Europa, en onze advisory-praktijk bedient kliënten in Zwitserland, Frankrijk en de EU."
+      },
+      {
+        "id": "cert-only-vs-catalogue",
+        "cat": ["certification", "sellers"],
+        "q": "Kan ik een certificering krijgen zonder mijn asset te koop aan te bieden?",
+        "a": "Ja. Het aanmaken van een vervreemderaccount impliceert geen verkoopverplichting. Bij de indiening van uw asset kunt u kiezen tussen: (1) Alleen certificering — een officiële AEGRYN Grade verkrijgen zonder catalogusopname (AEGRYN Review voor € 2.000 excl. btw of Review+ voor € 5.000 excl. btw, aftrekbaar als u binnen 6 maanden een Certification Auction start), of (2) Certificering + Catalogus — volledig proces met verkooplisting, AEGRYN wordt uitsluitend bij transactie beloond (CHF 2.000 excl. btw niet-verkoopkosten van toepassing bij terugtrekking zonder transactie)."
+      },
       {
         "id": "what-grade",
         "cat": [

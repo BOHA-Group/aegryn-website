@@ -3659,6 +3659,8 @@
       "> 5 000 000 € : taux convenu au mandat"
     ],
     "s11Minimum": "Commission minimum : 25 000 € HT, quels que soient le taux applicable et le prix final de cession.",
+    "s11NonSaleTitle": "Frais en cas de non-réalisation de la transaction",
+    "s11NonSale": "Dans le cas où un actif admis en certification complète (Certification Auction) ferait l'objet d'une décision de retrait du catalogue ou d'une absence de transaction à l'issue du processus AEGRYN, des frais fixes minimaux de CHF 2 000 HT sont dus à AEGRYN en contrepartie du travail engagé par ses équipes : analyse C/I/F/S, attribution du grade officiel, préparation du dossier catalogue, actions de communication et de marketing, ainsi que la visibilité produit acquise durant la présence de l'actif au catalogue AEGRYN. Ces frais sont dus indépendamment de l'issue commerciale et sont exigibles à la date de retrait ou de clôture sans transaction. Ils sont facturés directement au cédant. Cette clause ne s'applique pas en cas de condition suspensive non levée dûment documentée.",
     "s11Earnout": "En cas d'earnout, une commission complémentaire de 5% est prélevée sur chaque versement d'earnout effectivement reçu par le cédant, dans la limite du taux applicable à la tranche du prix total.",
     "s11Payment": "La commission est due à la date de libération du séquestre et est prélevée directement par AEGRYN sur les fonds séquestrés avant reversement du solde net au vendeur. AEGRYN n'est jamais dépositaire de ces fonds — le séquestre est détenu par une banque tierce désignée par AEGRYN.",
     "s12Title": "Réseau d'experts AEGRYN — Abonnement Fiche Expert",
@@ -3925,6 +3927,36 @@
     "filterTransactions": "Transactions",
     "filterAccount": "Compte",
     "items": [
+      {
+        "id": "who-we-are",
+        "cat": ["certification", "sellers", "buyers"],
+        "q": "Qui est AEGRYN et que faites-vous ?",
+        "a": "Aegryn est un constructeur d'actifs tech suisse qui conçoit et opère des écosystèmes numériques propriétaires — des environnements où la technologie structure le quotidien des individus, des professionnels et des marchés dans lesquels ils évoluent. Nous certifions, transigeons et accompagnons les actifs technologiques via un protocole indépendant et reproductible."
+      },
+      {
+        "id": "what-differentiates",
+        "cat": ["certification"],
+        "q": "Qu'est-ce qui vous différencie ?",
+        "a": "Contrairement aux cabinets de conseil ou agences, nous construisons et opérons nos propres écosystèmes numériques. Chaque conseil stratégique, chaque protocole de sécurité, chaque approche de croissance que nous proposons est issu d'une exécution réelle — pas de la théorie. Nous ne revendons pas des modèles génériques. Nous partageons ce qui fonctionne parce que nous l'utilisons nous-mêmes."
+      },
+      {
+        "id": "invest-partner",
+        "cat": ["account"],
+        "q": "Comment investir ou devenir partenaire ?",
+        "a": "Nous accueillons les investisseurs visionnaires et partenaires stratégiques qui partagent notre perspective long terme. Utilisez le formulaire de contact sur /contact, sélectionnez \"Partenariat\" comme sujet, et notre équipe vous répondra sous 24h pour organiser un premier échange."
+      },
+      {
+        "id": "where-based",
+        "cat": ["account"],
+        "q": "Où êtes-vous basés ?",
+        "a": "Aegryn a son siège en Suisse. Nos écosystèmes numériques opèrent à travers l'Europe, et notre practice advisory accompagne des clients en Suisse, en France et dans l'UE."
+      },
+      {
+        "id": "cert-only-vs-catalogue",
+        "cat": ["certification", "sellers"],
+        "q": "Puis-je obtenir une certification sans mettre mon actif en vente ?",
+        "a": "Oui. La création d'un compte cédant ne signifie pas engagement de cession. Lors de la soumission de votre actif, vous pouvez choisir entre : (1) Certification uniquement — obtenir un Grade AEGRYN officiel sans mise au catalogue (AEGRYN Review à 2 000 € HT ou Review+ à 5 000 € HT, déductibles si vous engagez ensuite une Certification Auction dans les 6 mois), ou (2) Certification + Catalogue — processus complet avec mise en vente, rémunération d'AEGRYN à la transaction uniquement (frais de non-vente de CHF 2 000 HT applicables si retrait sans transaction)."
+      },
       {
         "id": "what-grade",
         "cat": [

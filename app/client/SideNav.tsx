@@ -6,6 +6,7 @@ import {
   LayoutDashboard, BookOpen, Gavel, ArrowRightLeft, Receipt,
   ShieldCheck, Bell, UserCircle, Settings, FileText,
   Award, Users, DollarSign, Briefcase, BadgeCheck, CreditCard,
+  FolderLock, FolderOpen,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
@@ -13,13 +14,15 @@ const ICON_MAP: Record<string, LucideIcon> = {
   LayoutDashboard, BookOpen, Gavel, ArrowRightLeft, Receipt,
   ShieldCheck, Bell, UserCircle, Settings, FileText,
   Award, Users, DollarSign, Briefcase, BadgeCheck, CreditCard,
+  FolderLock, FolderOpen,
 }
 
 export type NavItem = {
-  href:   string
-  label:  string
-  icon:   string
-  badge?: number
+  href:     string
+  label:    string
+  icon:     string
+  badge?:   number
+  disabled?: boolean
 }
 
 export type NavGroup = {
@@ -39,6 +42,19 @@ function NavLink({ item, rootHref }: { item: NavItem; rootHref: string }) {
     : pathname.startsWith(item.href)
 
   const Icon = ICON_MAP[item.icon] ?? LayoutDashboard
+
+  if (item.disabled) {
+    return (
+      <span
+        title="Soumettez d'abord votre actif pour accéder à la Data Room"
+        className="flex items-center gap-2.5 px-3 py-2 text-white/20 cursor-not-allowed select-none"
+      >
+        <Icon size={13} className="shrink-0" />
+        <span className="font-sans text-[12px] flex-1 leading-tight">{item.label}</span>
+        <span className="font-mono text-[8px] uppercase tracking-widest text-white/20 border border-white/10 px-1 py-px">Requis</span>
+      </span>
+    )
+  }
 
   return (
     <Link
