@@ -205,10 +205,10 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
   const canSubmit = canPublish
 
   return (
-    <div className="xl:grid xl:grid-cols-[1fr_340px] xl:gap-8 xl:items-start">
+    <div>
 
-    {/* ── Colonne formulaire ── */}
-    <form onSubmit={handleSubmit} className="space-y-8">
+    {/* ── Formulaire ── */}
+    <form onSubmit={handleSubmit} className="space-y-8 max-w-2xl">
 
       {/* Statut */}
       <div className={`border p-4 flex items-start gap-3 ${
@@ -469,31 +469,35 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
       </button>
     </form>
 
-    {/* ── Colonne preview sticky ── */}
-    <div className="xl:self-start">
-      <div className="sticky top-20 max-h-[calc(100vh-5.5rem)] overflow-y-auto space-y-3 pb-4">
-        <div className="flex items-center justify-between">
-          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">
-            Aperçu de votre fiche publiée
-          </p>
-          <button
-            type="button"
-            onClick={() => setShowPreview(v => !v)}
-            className="flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-widest text-gray-400 hover:text-gray-600 transition-colors"
-          >
-            {showPreview ? <EyeOff size={11} /> : <Eye size={11} />}
-            {showPreview ? 'Masquer' : 'Afficher'}
-          </button>
-        </div>
-        {showPreview && (
-          <>
-            <ExpertCardPreview data={previewData} locale="fr" />
-            <p className="font-mono text-[9px] text-gray-300 text-center">
-              Rendu temps réel · non sauvegardé
+    {/* ── Preview flottante fixe ── */}
+    <div
+      className={`fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 transition-all duration-300`}
+      style={{ maxWidth: '340px', width: 'calc(100vw - 1.5rem)' }}
+    >
+      {/* Bouton toggle */}
+      <button
+        type="button"
+        onClick={() => setShowPreview(v => !v)}
+        className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-widest bg-ag-navy text-white px-3 py-2 shadow-lg hover:bg-gray-800 transition-colors"
+      >
+        {showPreview ? <EyeOff size={11} /> : <Eye size={11} />}
+        {showPreview ? 'Masquer l\'aperçu' : 'Voir l\'aperçu'}
+      </button>
+
+      {/* Panneau preview */}
+      {showPreview && (
+        <div className="w-full bg-white border border-gray-200 shadow-2xl overflow-hidden flex flex-col"
+          style={{ maxHeight: 'calc(100vh - 8rem)' }}>
+          <div className="flex items-center justify-between px-3 py-2 border-b border-gray-100 shrink-0">
+            <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">
+              Aperçu · non sauvegardé
             </p>
-          </>
-        )}
-      </div>
+          </div>
+          <div className="overflow-y-auto flex-1">
+            <ExpertCardPreview data={previewData} locale="fr" />
+          </div>
+        </div>
+      )}
     </div>
 
     </div>
