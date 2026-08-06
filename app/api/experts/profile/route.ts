@@ -29,6 +29,7 @@ async function notifyAdminExpertSubmission(
   supa: ReturnType<typeof createServiceClient>,
   partnerName: string,
   isNew: boolean,
+  userId: string,
 ) {
   const title = isNew
     ? `Nouvelle fiche expert soumise — ${partnerName}`
@@ -50,7 +51,7 @@ async function notifyAdminExpertSubmission(
         type:    'broadcast_action',
         title,
         body,
-        link:    '/admin/experts',
+        link:    `/admin/experts#expert-${userId}`,
       }))
     )
   }
@@ -127,6 +128,7 @@ export async function POST(req: NextRequest) {
       supa,
       profile?.full_name ?? `${body.first_name} ${body.last_name}`,
       true,
+      user.id,
     )
 
     return NextResponse.json({ ok: true })
@@ -182,6 +184,7 @@ export async function PATCH(req: NextRequest) {
       supa,
       profile?.full_name ?? `${body.first_name ?? ''} ${body.last_name ?? ''}`.trim(),
       false,
+      user.id,
     )
 
     return NextResponse.json({ ok: true })

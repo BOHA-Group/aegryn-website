@@ -235,7 +235,7 @@ function ProfileRow({
   const planOk      = plan === 'active' || hasCredit
 
   return (
-    <div className="border border-gray-200 bg-white">
+    <div id={`expert-${profile.user_id}`} className="border border-gray-200 bg-white scroll-mt-4">
       <div
         className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer hover:bg-gray-50 transition-colors"
         onClick={() => setExpanded(e => !e)}

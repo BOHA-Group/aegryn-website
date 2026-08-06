@@ -3,6 +3,7 @@
 import { Suspense, useCallback } from 'react'
 import Link from 'next/link'
 import { usePathname, useSearchParams, useRouter } from 'next/navigation'
+import { LogOut } from 'lucide-react'
 
 const SECTIONS = [
   {
@@ -109,12 +110,13 @@ function AdminSideNavInner({ adminEmail }: { adminEmail: string }) {
       ))}
 
       {/* Logout */}
-      <div className="mt-auto px-5 py-4 border-t border-white/10">
+      <div className="mt-auto px-4 py-4 border-t border-white/10">
         <button
           type="button"
           onClick={handleLogout}
-          className="font-mono text-[9px] uppercase tracking-widest text-white/25 hover:text-white/60 transition-colors"
+          className="w-full flex items-center gap-2 px-3 py-2 font-mono text-[10px] uppercase tracking-widest text-red-400 hover:text-white hover:bg-red-600 border border-red-500/40 hover:border-red-600 transition-colors"
         >
+          <LogOut size={12} className="shrink-0" />
           Déconnexion
         </button>
       </div>
