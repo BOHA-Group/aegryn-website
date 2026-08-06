@@ -289,5 +289,52 @@ export async function POST(req: NextRequest) {
     }
   }
 
+  /* ══════════════════════════════════════════════════════════════════
+   * 4. PAIEMENT ÉCHOUÉ — alerte expert + statut past_due
+   * ══════════════════════════════════════════════════════════════════ */
+  if (event.type === 'invoice.payment_failed') {
+    const invoice = event.data.object as Stripe.Invoice
+    const invoiceRaw = invoice as unknown as Record<string, unknown>
+    const subId = (invoiceRaw.subscription as string | null) ?? null
+    if (subId) {
+      const { data: profile } = await supa
+        .from('profiles')
+        .select('id, email')
+        .eq('stripe_subscription_id', subId)
+        .maybeSingle()
+
+      if (profile) {
+        const uid   = (profile as Record<string, unknown>).id   as string
+        const email = (profile as Record<string, unknown>).email as string | undefined
+
+        await supa.from('profiles').update({ expert_plan: 'past_due' }).eq('id', uid)
+
+        if (email) {
+          await sendEmail(
+            email,
+            'AEGRYN — Échec de paiement de votre abonnement expert',
+            `Bonjour,\n\nNous n'avons pas pu encaisser le paiement de votre abonnement expert AEGRYN.\n\nVeuillez mettre à jour votre moyen de paiement dans votre espace partenaire pour éviter la suspension de votre fiche expert.\n\nAccédez à votre espace : https://aegryn.com/client/partner/subscription\n\nL'équipe AEGRYN`
+          )
+        }
+      }
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════════════
+   * 5. ABONNEMENT EN PAUSE — masquer la fiche expert
+   * ══════════════════════════════════════════════════════════════════ */
+  if (event.type === 'customer.subscription.paused') {
+    const sub = event.data.object as Stripe.Subscription
+    const uid = sub.metadata?.supabase_uid
+    if (uid) {
+      await supa.from('profiles').update({ expert_plan: 'paused' }).eq('id', uid)
+
+      await supa
+        .from('expert_profiles')
+        .update({ is_visible: false, hidden_reason: 'subscription_paused' })
+        .eq('user_id', uid)
+    }
+  }
+
   return NextResponse.json({ received: true })
 }
