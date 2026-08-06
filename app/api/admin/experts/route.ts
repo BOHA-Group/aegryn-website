@@ -2,14 +2,52 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient }      from '@/lib/supabase'
 import { checkAdminAccess }         from '@/lib/adminAuth'
 
+const PERIOD_INTERVALS: Record<string, string | null> = {
+  '1d':  '1 day',
+  '1w':  '7 days',
+  '1m':  '1 month',
+  '3m':  '3 months',
+  '6m':  '6 months',
+  'ytd': null,
+  '1y':  '1 year',
+  '2y':  '2 years',
+  '5y':  '5 years',
+  '10y': '10 years',
+  'all': null,
+}
+
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl
-  const token = searchParams.get('token') ?? undefined
+  const token  = searchParams.get('token')  ?? undefined
+  const period = searchParams.get('period') ?? 'all'
   await checkAdminAccess(token)
 
   const supa = createServiceClient()
 
-  const [{ data: applications }, { data: profiles }] = await Promise.all([
+  const now = new Date()
+  let since: string | null = null
+  if (period === 'ytd') {
+    since = new Date(now.getFullYear(), 0, 1).toISOString()
+  } else if (period !== 'all' && PERIOD_INTERVALS[period]) {
+    const ms: Record<string, number> = {
+      '1d': 1, '1w': 7, '1m': 30, '3m': 91, '6m': 183,
+      '1y': 365, '2y': 730, '5y': 1825, '10y': 3650,
+    }
+    const days = ms[period]
+    if (days) {
+      const d = new Date(now)
+      d.setDate(d.getDate() - days)
+      since = d.toISOString()
+    }
+  }
+
+  const clicksQuery = supa
+    .from('expert_contact_clicks')
+    .select('expert_id, click_type, clicked_at')
+  if (since) clicksQuery.gte('clicked_at', since)
+  const { data: rawClicks } = await clicksQuery
+
+  const [{ data: applications }, { data: profiles }, { data: epList }] = await Promise.all([
     supa
       .from('expert_applications')
       .select('*')
@@ -26,9 +64,35 @@ export async function GET(req: NextRequest) {
         )
       `)
       .order('created_at', { ascending: false }),
+    supa
+      .from('expert_profiles')
+      .select('id, first_name, last_name, profession, is_visible'),
   ])
 
-  return NextResponse.json({ applications: applications ?? [], profiles: profiles ?? [] })
+  const clicks = rawClicks ?? []
+  type ClickRow = { expert_id: string; click_type: string; clicked_at: string }
+  const statsMap = new Map<string, {
+    total_clicks: number; email_clicks: number; website_clicks: number; last_click_at: string | null
+  }>()
+  for (const c of clicks as ClickRow[]) {
+    const s = statsMap.get(c.expert_id) ?? { total_clicks: 0, email_clicks: 0, website_clicks: 0, last_click_at: null }
+    s.total_clicks++
+    if (c.click_type === 'email')   s.email_clicks++
+    if (c.click_type === 'website') s.website_clicks++
+    if (!s.last_click_at || c.clicked_at > s.last_click_at) s.last_click_at = c.clicked_at
+    statsMap.set(c.expert_id, s)
+  }
+
+  const clickStats = (epList ?? []).map((ep: { id: string; first_name: string; last_name: string; profession: string; is_visible: boolean }) => ({
+    expert_id:      ep.id,
+    first_name:     ep.first_name,
+    last_name:      ep.last_name,
+    profession:     ep.profession,
+    is_visible:     ep.is_visible,
+    ...(statsMap.get(ep.id) ?? { total_clicks: 0, email_clicks: 0, website_clicks: 0, last_click_at: null }),
+  }))
+
+  return NextResponse.json({ applications: applications ?? [], profiles: profiles ?? [], clickStats, period })
 }
 
 export async function PATCH(req: NextRequest) {
@@ -218,19 +282,34 @@ export async function DELETE(req: NextRequest) {
   const token = searchParams.get('token') ?? undefined
   await checkAdminAccess(token)
 
-  const { table, id } = await req.json() as { table: string; id: string }
+  const body = await req.json() as { table: string; id?: string; expert_id?: string; purge_all?: boolean }
+  const { table, id, expert_id, purge_all } = body
   const supa = createServiceClient()
 
   if (table === 'expert_applications') {
-    const { error } = await supa.from('expert_applications').delete().eq('id', id)
+    const { error } = await supa.from('expert_applications').delete().eq('id', id!)
     if (error) return NextResponse.json({ error: error.message }, { status: 500 })
     return NextResponse.json({ ok: true })
   }
 
   if (table === 'expert_profiles') {
-    const { error } = await supa.from('expert_profiles').delete().eq('id', id)
+    const { error } = await supa.from('expert_profiles').delete().eq('id', id!)
     if (error) return NextResponse.json({ error: error.message }, { status: 500 })
     return NextResponse.json({ ok: true })
+  }
+
+  if (table === 'expert_contact_clicks') {
+    if (purge_all) {
+      const { error } = await supa.from('expert_contact_clicks').delete().neq('id', '00000000-0000-0000-0000-000000000000')
+      if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+      return NextResponse.json({ ok: true, purged: 'all' })
+    }
+    if (expert_id) {
+      const { error } = await supa.from('expert_contact_clicks').delete().eq('expert_id', expert_id)
+      if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+      return NextResponse.json({ ok: true, purged: expert_id })
+    }
+    return NextResponse.json({ error: 'expert_id or purge_all required' }, { status: 400 })
   }
 
   return NextResponse.json({ error: 'unknown_table' }, { status: 400 })

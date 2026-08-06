@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronDown, ChevronUp, Loader2, PlusCircle, TrendingUp, Mail, Globe, Clock } from 'lucide-react'
+import { ChevronDown, ChevronUp, Loader2, PlusCircle, TrendingUp, Mail, Globe, Clock, Trash2 } from 'lucide-react'
 
 type Application = {
   id:           string
@@ -529,41 +529,71 @@ type ClickStat = {
   total_clicks:   number
   email_clicks:   number
   website_clicks: number
-  clicks_7d:      number
-  clicks_30d:     number
   last_click_at:  string | null
 }
+
+const PERIODS: { key: string; label: string }[] = [
+  { key: '1d',  label: '1J'  },
+  { key: '1w',  label: '1S'  },
+  { key: '1m',  label: '1M'  },
+  { key: '3m',  label: '3M'  },
+  { key: '6m',  label: '6M'  },
+  { key: 'ytd', label: 'AAJ' },
+  { key: '1y',  label: '1A'  },
+  { key: '2y',  label: '2A'  },
+  { key: '5y',  label: '5A'  },
+  { key: '10y', label: '10A' },
+  { key: 'all', label: 'Tout'},
+]
 
 type Props = {
   applications: Application[]
   profiles:     ExpertProfile[]
   clickStats:   ClickStat[]
   tokenQs:      string
+  initialPeriod?: string
 }
 
-function TractionPanel({ stats, tokenQs, onRefresh }: { stats: ClickStat[]; tokenQs: string; onRefresh: () => void }) {
-  const [open, setOpen] = useState(true)
-  const [deletingId, setDeletingId] = useState<string | null>(null)
+function TractionPanel({
+  stats, tokenQs, onRefresh, period, onPeriodChange,
+}: {
+  stats: ClickStat[]; tokenQs: string; onRefresh: () => void
+  period: string; onPeriodChange: (p: string) => void
+}) {
+  const [open,       setOpen]       = useState(true)
+  const [purgingId,  setPurgingId]  = useState<string | null>(null)
+  const [purgingAll, setPurgingAll] = useState(false)
 
-  async function delExpert(expertId: string, name: string) {
-    if (!confirm(`Supprimer définitivement la fiche de ${name} ?`)) return
-    setDeletingId(expertId)
+  async function purgeClicks(expertId: string, name: string) {
+    if (!confirm(`Supprimer tous les clics de ${name} sur cette période ?`)) return
+    setPurgingId(expertId)
     await fetch(`/api/admin/experts${tokenQs}`, {
       method:  'DELETE',
       headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify({ table: 'expert_profiles', id: expertId }),
+      body:    JSON.stringify({ table: 'expert_contact_clicks', expert_id: expertId }),
     })
-    setDeletingId(null)
+    setPurgingId(null)
     onRefresh()
   }
 
-  // Ne comptabiliser que les clics sur fiches publiées (is_visible=true)
+  async function purgeAll() {
+    if (!confirm('Supprimer TOUS les clics enregistrés ? Cette action est irréversible.')) return
+    setPurgingAll(true)
+    await fetch(`/api/admin/experts${tokenQs}`, {
+      method:  'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ table: 'expert_contact_clicks', purge_all: true }),
+    })
+    setPurgingAll(false)
+    onRefresh()
+  }
+
   const publishedStats = stats.filter(r => r.is_visible)
-  const totalClicks  = publishedStats.reduce((s, r) => s + (r.total_clicks ?? 0), 0)
-  const total7d      = publishedStats.reduce((s, r) => s + (r.clicks_7d ?? 0), 0)
-  const total30d     = publishedStats.reduce((s, r) => s + (r.clicks_30d ?? 0), 0)
-  const sorted       = [...stats].sort((a, b) => (b.total_clicks ?? 0) - (a.total_clicks ?? 0))
+  const totalClicks   = publishedStats.reduce((s, r) => s + (r.total_clicks ?? 0), 0)
+  const totalAll      = stats.reduce((s, r) => s + (r.total_clicks ?? 0), 0)
+  const sorted        = [...stats].sort((a, b) => (b.total_clicks ?? 0) - (a.total_clicks ?? 0))
   const activeExperts = publishedStats.filter(r => (r.total_clicks ?? 0) > 0).length
+  const periodLabel   = PERIODS.find(p => p.key === period)?.label ?? period
 
   return (
     <div className="bg-white border border-gray-200 mb-6">
@@ -586,13 +616,39 @@ function TractionPanel({ stats, tokenQs, onRefresh }: { stats: ClickStat[]; toke
       {open && (
         <div className="px-5 pb-6 border-t border-gray-100">
 
+          {/* Sélecteur de période */}
+          <div className="flex flex-wrap items-center gap-2 mt-5 mb-5">
+            <span className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mr-1">Période :</span>
+            {PERIODS.map(p => (
+              <button
+                key={p.key}
+                onClick={() => onPeriodChange(p.key)}
+                className={`font-mono text-[10px] px-2.5 py-1 border transition-colors ${
+                  period === p.key
+                    ? 'border-ag-navy bg-ag-navy text-white'
+                    : 'border-gray-200 text-gray-500 hover:border-gray-400'
+                }`}
+              >
+                {p.label}
+              </button>
+            ))}
+            <button
+              onClick={purgeAll}
+              disabled={purgingAll || totalAll === 0}
+              className="ml-auto flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-40 transition-colors"
+            >
+              {purgingAll ? <Loader2 size={9} className="animate-spin" /> : <Trash2 size={9} />}
+              Purger tous les clics
+            </button>
+          </div>
+
           {/* KPIs globaux */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-5 mb-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
             {[
-              { label: 'Clics totaux',      value: totalClicks,    color: 'text-gray-900' },
-              { label: 'Clics 30 derniers jours', value: total30d, color: 'text-blue-700' },
-              { label: 'Clics 7 derniers jours',  value: total7d,  color: 'text-ag-apex'  },
-              { label: 'Experts sollicités',       value: activeExperts, color: 'text-emerald-700' },
+              { label: `Clics (${periodLabel})`,   value: totalClicks,   color: 'text-gray-900' },
+              { label: 'Fiches publiées',           value: publishedStats.length, color: 'text-blue-700' },
+              { label: 'Experts sollicités',        value: activeExperts, color: 'text-ag-apex'  },
+              { label: 'Clics total (toutes périodes)', value: totalAll,  color: 'text-emerald-700' },
             ].map(kpi => (
               <div key={kpi.label} className="border border-gray-100 bg-gray-50 p-4">
                 <p className={`font-mono text-[22px] font-bold leading-none ${kpi.color}`}>{kpi.value}</p>
@@ -609,7 +665,7 @@ function TractionPanel({ stats, tokenQs, onRefresh }: { stats: ClickStat[]; toke
               <table className="w-full text-[12px]">
                 <thead className="bg-gray-50 border-b border-gray-100">
                   <tr>
-                    {['Expert', 'Profession', 'Statut', 'Total', '7j', '30j', 'Email', 'Site', 'Dernier clic', ''].map(h => (
+                    {['Expert', 'Profession', 'Statut', `Clics (${periodLabel})`, 'Email', 'Site', 'Dernier clic', ''].map(h => (
                       <th key={h} className="text-left px-4 py-2.5 font-mono text-[9px] uppercase tracking-widest text-gray-400 whitespace-nowrap">{h}</th>
                     ))}
                   </tr>
@@ -631,8 +687,6 @@ function TractionPanel({ stats, tokenQs, onRefresh }: { stats: ClickStat[]; toke
                         </span>
                       </td>
                       <td className="px-4 py-3 font-mono font-bold text-gray-900">{r.total_clicks}</td>
-                      <td className="px-4 py-3 font-mono text-ag-apex font-semibold">{r.clicks_7d}</td>
-                      <td className="px-4 py-3 font-mono text-blue-700">{r.clicks_30d}</td>
                       <td className="px-4 py-3">
                         <span className="inline-flex items-center gap-1 font-mono text-[10px] text-gray-500">
                           <Mail size={9} /> {r.email_clicks}
@@ -655,11 +709,12 @@ function TractionPanel({ stats, tokenQs, onRefresh }: { stats: ClickStat[]; toke
                       </td>
                       <td className="px-4 py-3">
                         <button
-                          onClick={() => delExpert(r.expert_id, `${r.first_name} ${r.last_name}`)}
-                          disabled={deletingId === r.expert_id}
-                          className="font-mono text-[9px] uppercase tracking-widest px-2 py-1 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-50 transition-colors"
+                          onClick={() => purgeClicks(r.expert_id, `${r.first_name} ${r.last_name}`)}
+                          disabled={purgingId === r.expert_id || r.total_clicks === 0}
+                          title="Supprimer les clics de cet expert"
+                          className="inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-widest px-2 py-1 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-30 transition-colors"
                         >
-                          {deletingId === r.expert_id ? '…' : 'Supprimer'}
+                          {purgingId === r.expert_id ? <Loader2 size={9} className="animate-spin" /> : <Trash2 size={9} />}
                         </button>
                       </td>
                     </tr>
@@ -674,19 +729,31 @@ function TractionPanel({ stats, tokenQs, onRefresh }: { stats: ClickStat[]; toke
   )
 }
 
-export default function ExpertsAdminClient({ applications, profiles, clickStats, tokenQs }: Props) {
-  const [apps,     setApps]     = useState(applications)
-  const [profs,    setProfs]    = useState(profiles)
-  const [filter,   setFilter]   = useState<'all' | 'pending' | 'visible' | 'hidden'>('all')
-  const [loading,  setLoading]  = useState(false)
+export default function ExpertsAdminClient({ applications, profiles, clickStats, tokenQs, initialPeriod }: Props) {
+  const [apps,    setApps]    = useState(applications)
+  const [profs,   setProfs]   = useState(profiles)
+  const [stats,   setStats]   = useState(clickStats)
+  const [period,  setPeriod]  = useState(initialPeriod ?? 'all')
+  const [filter,  setFilter]  = useState<'all' | 'pending' | 'visible' | 'hidden'>('all')
+  const [loading, setLoading] = useState(false)
 
-  async function refresh() {
+  async function refresh(p?: string) {
+    const activePeriod = p ?? period
     setLoading(true)
-    const res  = await fetch(`/api/admin/experts${tokenQs}`)
+    const qs  = tokenQs
+      ? `${tokenQs}&period=${activePeriod}`
+      : `?period=${activePeriod}`
+    const res  = await fetch(`/api/admin/experts${qs}`)
     const data = await res.json()
-    setApps(data.applications  ?? [])
-    setProfs(data.profiles ?? [])
+    setApps(data.applications ?? [])
+    setProfs(data.profiles    ?? [])
+    setStats(data.clickStats  ?? [])
     setLoading(false)
+  }
+
+  async function handlePeriodChange(p: string) {
+    setPeriod(p)
+    await refresh(p)
   }
 
   const pendingCount = apps.filter(a => a.status === 'pending').length
@@ -723,7 +790,7 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
             <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Réseau d&apos;experts</h1>
           </div>
           <button
-            onClick={refresh}
+            onClick={() => refresh()}
             disabled={loading}
             className="font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-3 py-1.5 hover:border-gray-400 disabled:opacity-50 transition-colors"
           >
@@ -754,7 +821,13 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
         </div>
 
         {/* Section 2 — Traction réseau (clics) */}
-        <TractionPanel stats={clickStats} tokenQs={tokenQs} onRefresh={refresh} />
+        <TractionPanel
+          stats={stats}
+          tokenQs={tokenQs}
+          onRefresh={refresh}
+          period={period}
+          onPeriodChange={handlePeriodChange}
+        />
 
         {/* Section 3 — Attribution manuelle abonnement */}
         <AdminSubscriptionPanel profiles={profs} />
