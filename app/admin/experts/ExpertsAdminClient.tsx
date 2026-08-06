@@ -798,7 +798,7 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
           </button>
         </div>
 
-        {/* Section 1 — Candidatures */}
+        {/* Section 1 — Candidatures formulaire */}
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-4">
             <h2 className="font-sans font-bold text-gray-900 text-[15px]">Candidatures formulaire</h2>
@@ -820,20 +820,8 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
           )}
         </div>
 
-        {/* Section 2 — Traction réseau (clics) */}
-        <TractionPanel
-          stats={stats}
-          tokenQs={tokenQs}
-          onRefresh={refresh}
-          period={period}
-          onPeriodChange={handlePeriodChange}
-        />
-
-        {/* Section 3 — Attribution manuelle abonnement */}
-        <AdminSubscriptionPanel profiles={profs} />
-
-        {/* Section 4 — Fiches experts */}
-        <div>
+        {/* Section 2 — Fiches experts */}
+        <div className="mb-10">
           <div className="flex items-center gap-3 mb-4">
             <h2 className="font-sans font-bold text-gray-900 text-[15px]">Fiches experts</h2>
             {profs.filter(p => isPending(p)).length > 0 && (
@@ -871,6 +859,18 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
             </div>
           )}
         </div>
+
+        {/* Section 3 — Attribution manuelle abonnement */}
+        <AdminSubscriptionPanel profiles={profs} />
+
+        {/* Section 4 — Traction réseau (clics) */}
+        <TractionPanel
+          stats={stats}
+          tokenQs={tokenQs}
+          onRefresh={refresh}
+          period={period}
+          onPeriodChange={handlePeriodChange}
+        />
 
       </div>
     </main>

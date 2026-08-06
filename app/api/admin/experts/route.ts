@@ -66,7 +66,7 @@ export async function GET(req: NextRequest) {
       .order('created_at', { ascending: false }),
     supa
       .from('expert_profiles')
-      .select('id, first_name, last_name, profession, is_visible'),
+      .select('id, user_id, first_name, last_name, profession, is_visible'),
   ])
 
   const clicks = rawClicks ?? []
@@ -83,13 +83,13 @@ export async function GET(req: NextRequest) {
     statsMap.set(c.expert_id, s)
   }
 
-  const clickStats = (epList ?? []).map((ep: { id: string; first_name: string; last_name: string; profession: string; is_visible: boolean }) => ({
-    expert_id:      ep.id,
+  const clickStats = (epList ?? []).map((ep: { id: string; user_id: string; first_name: string; last_name: string; profession: string; is_visible: boolean }) => ({
+    expert_id:      ep.user_id,
     first_name:     ep.first_name,
     last_name:      ep.last_name,
     profession:     ep.profession,
     is_visible:     ep.is_visible,
-    ...(statsMap.get(ep.id) ?? { total_clicks: 0, email_clicks: 0, website_clicks: 0, last_click_at: null }),
+    ...(statsMap.get(ep.user_id) ?? { total_clicks: 0, email_clicks: 0, website_clicks: 0, last_click_at: null }),
   }))
 
   return NextResponse.json({ applications: applications ?? [], profiles: profiles ?? [], clickStats, period })
