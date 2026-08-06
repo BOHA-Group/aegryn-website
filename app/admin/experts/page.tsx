@@ -3,6 +3,8 @@ import { createServiceClient } from '@/lib/supabase'
 import type { Metadata } from 'next'
 import ExpertsAdminClient from './ExpertsAdminClient'
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Experts — AEGRYN Admin',
   robots: { index: false, follow: false },

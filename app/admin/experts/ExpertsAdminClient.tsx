@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ChevronDown, ChevronUp, Loader2, PlusCircle, TrendingUp, Mail, Globe, Clock, Trash2 } from 'lucide-react'
 
 type Application = {
@@ -736,6 +736,16 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
   const [period,  setPeriod]  = useState(initialPeriod ?? 'all')
   const [filter,  setFilter]  = useState<'all' | 'pending' | 'visible' | 'hidden'>('all')
   const [loading, setLoading] = useState(false)
+
+  /* Scroll vers anchor après hydratation (ex: lien notif /admin/experts#expert-xxx) */
+  useEffect(() => {
+    const hash = window.location.hash
+    if (!hash) return
+    const el = document.querySelector(hash)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [])
 
   async function refresh(p?: string) {
     const activePeriod = p ?? period
