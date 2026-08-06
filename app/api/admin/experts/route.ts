@@ -134,7 +134,7 @@ export async function PATCH(req: NextRequest) {
     if (status === 'approved') {
       const { data: app } = await supa
         .from('expert_applications')
-        .select('email, prenom, nom')
+        .select('email, prenom, nom, profession, specialties, city, country, bio, organization, website')
         .eq('id', id)
         .single()
 
@@ -146,18 +146,39 @@ export async function PATCH(req: NextRequest) {
           .maybeSingle()
 
         if (userRow) {
-          /* Compte existant → ajouter le rôle expert */
+          /* Compte existant → ajouter les rôles partner + expert */
           const currentRoles: string[] = Array.isArray(userRow.roles) ? userRow.roles : []
-          if (!currentRoles.includes('expert')) {
-            await supa
-              .from('profiles')
-              .update({ roles: [...currentRoles, 'expert'] })
-              .eq('id', userRow.id)
+          const newRoles = [...new Set([...currentRoles, 'partner', 'expert'])]
+          await supa.from('profiles').update({ roles: newRoles }).eq('id', userRow.id)
+
+          /* Pré-créer la fiche expert si elle n'existe pas encore */
+          const { data: existingProfile } = await supa
+            .from('expert_profiles')
+            .select('id')
+            .eq('user_id', userRow.id)
+            .maybeSingle()
+
+          if (!existingProfile) {
+            await supa.from('expert_profiles').insert({
+              user_id:       userRow.id,
+              first_name:    app.prenom,
+              last_name:     app.nom,
+              profession:    app.profession ?? '',
+              specialties:   app.specialties ?? [],
+              city:          app.city        ?? null,
+              country_code:  app.country     ?? 'CH',
+              bio:           app.bio         ?? null,
+              organization:  app.organization ?? null,
+              website:       app.website     ?? null,
+              is_visible:    false,
+              verified_at:   null,
+              review_status: 'pending_review',
+            })
           }
         } else {
           /* Pas de compte → envoyer une invitation magic link → /client/partner */
           const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'
-          const { error: inviteError } = await supa.auth.admin.inviteUserByEmail(
+          await supa.auth.admin.inviteUserByEmail(
             app.email,
             {
               redirectTo: `${siteUrl}/api/auth/callback?next=/client/set-password`,
@@ -167,7 +188,6 @@ export async function PATCH(req: NextRequest) {
               },
             }
           )
-          if (inviteError) console.error('[experts/approve] invite:', inviteError)
         }
       }
     }
