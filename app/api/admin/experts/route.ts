@@ -181,10 +181,11 @@ export async function PATCH(req: NextRequest) {
           await supa.auth.admin.inviteUserByEmail(
             app.email,
             {
-              redirectTo: `${siteUrl}/api/auth/callback?next=/client/set-password`,
+              redirectTo: `${siteUrl}/api/auth/callback?next=/client/set-password&expert_app_id=${id}`,
               data: {
-                full_name: [app.prenom, app.nom].filter(Boolean).join(' '),
-                role:      'partner',
+                full_name:      [app.prenom, app.nom].filter(Boolean).join(' '),
+                role:           'partner',
+                expert_app_id:  id,
               },
             }
           )
