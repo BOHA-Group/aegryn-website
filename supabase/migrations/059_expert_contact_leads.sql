@@ -37,6 +37,7 @@ CREATE INDEX IF NOT EXISTS idx_ecl_consent     ON public.expert_contact_leads(co
 ALTER TABLE public.expert_contact_leads ENABLE ROW LEVEL SECURITY;
 
 -- Insert public (page publique, pas d'auth requise)
+DROP POLICY IF EXISTS ecl_insert_public ON public.expert_contact_leads;
 CREATE POLICY "ecl_insert_public"
   ON public.expert_contact_leads FOR INSERT
   TO anon, authenticated
