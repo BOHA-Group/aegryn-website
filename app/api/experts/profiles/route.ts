@@ -18,7 +18,7 @@ export async function GET(req: NextRequest) {
     let query = supa
       .from('expert_profiles')
       .select(`
-        id, first_name, last_name, profession, specialties,
+        id, user_id, first_name, last_name, profession, specialties,
         city, country_code, bio, organization, email_public,
         phone, website, min_rate_eur, rate_currency, languages, avatar_url,
         verified_at, category, domain,
