@@ -6,7 +6,7 @@ const schema = z.object({
   email:    z.string().email(),
   password: z.string().min(8),
   fullName: z.string().min(1).max(120),
-  role:     z.enum(['buyer', 'seller']).optional().default('buyer'),
+  role:     z.enum(['buyer', 'seller', 'partner']).optional().default('buyer'),
 })
 
 export async function POST(req: NextRequest) {
@@ -46,8 +46,9 @@ export async function POST(req: NextRequest) {
   const resendKey = process.env.RESEND_API_KEY
   if (resendKey) {
     const roleLabel: Record<string, string> = {
-      buyer:  'Acquéreur',
-      seller: 'Cédant',
+      buyer:   'Acquéreur',
+      seller:  'Cédant',
+      partner: 'Partenaire',
     }
     await fetch('https://api.resend.com/emails', {
       method: 'POST',
