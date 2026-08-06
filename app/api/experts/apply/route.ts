@@ -51,6 +51,23 @@ export async function POST(req: NextRequest) {
       throw error
     }
 
+    const { data: admins } = await supa
+      .from('profiles')
+      .select('id')
+      .contains('roles', ['admin'])
+
+    if (admins && admins.length > 0) {
+      await supa.from('user_notifications').insert(
+        admins.map(a => ({
+          user_id: a.id,
+          type:    'broadcast_action',
+          title:   `Candidature réseau expert — ${data.prenom} ${data.nom}`,
+          body:    `${data.profession ?? 'Profil inconnu'}${data.organization ? ` · ${data.organization}` : ''}. À traiter dans l'espace Experts réseau.`,
+          link:    '/admin/experts',
+        }))
+      )
+    }
+
     await sendLeadEmails({
       to:              data.email,
       subjectFounder:  'AEGRYN — Candidature réseau d\'experts reçue',
@@ -64,7 +81,6 @@ export async function POST(req: NextRequest) {
     if (err instanceof z.ZodError) {
       return NextResponse.json({ error: 'validation', issues: err.issues }, { status: 400 })
     }
-    console.error('[experts/apply]', err)
     return NextResponse.json({ error: 'internal' }, { status: 500 })
   }
 }
