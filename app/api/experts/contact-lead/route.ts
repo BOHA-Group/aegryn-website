@@ -41,6 +41,17 @@ export async function POST(req: NextRequest) {
 
   const supa = createServiceClient()
 
+  /* Rejeter silencieusement si la fiche n'est pas publiée */
+  const { data: ep } = await supa
+    .from('expert_profiles')
+    .select('is_visible')
+    .eq('user_id', expert_id)
+    .maybeSingle()
+
+  if (!ep?.is_visible) {
+    return NextResponse.json({ error: 'Expert not found' }, { status: 404 })
+  }
+
   // 1. Insérer le clic KPI (type email) dans la table existante
   const { data: clickData } = await supa.from('expert_contact_clicks').insert({
     expert_id,

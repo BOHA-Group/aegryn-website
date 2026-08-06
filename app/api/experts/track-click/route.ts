@@ -24,6 +24,18 @@ export async function POST(req: NextRequest) {
   const referrer = req.headers.get('referer') ?? null
 
   const supa = createServiceClient()
+
+  /* Ne tracer que si la fiche est publiée */
+  const { data: ep } = await supa
+    .from('expert_profiles')
+    .select('is_visible')
+    .eq('user_id', expert_id)
+    .maybeSingle()
+
+  if (!ep?.is_visible) {
+    return NextResponse.json({ ok: true })
+  }
+
   const { error } = await supa.from('expert_contact_clicks').insert({
     expert_id,
     click_type,
