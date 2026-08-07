@@ -54,6 +54,9 @@ export const routing = defineRouting({
     '/auction/sessions':                  '/auction/sessions',
     '/auction/submit':                    '/auction/submit',
     '/auction/teaser-preview':            '/auction/teaser-preview',
+    '/auction/sell':                      '/auction/sell',
+    '/auction/buyers':                    '/auction/buyers',
+    '/auction/how-it-works':              '/auction/how-it-works',
     '/assets':                            '/assets',
     '/assets/[slug]':                     '/assets/[slug]',
     '/experts': {
