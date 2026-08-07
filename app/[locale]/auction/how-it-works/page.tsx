@@ -154,7 +154,7 @@ export default async function HowItWorksPage({ params }: Props) {
           </h2>
 
           <div className="flex flex-col gap-0 border border-ag-border divide-y divide-ag-border">
-            {PROCESS_STEPS.map(({ num, icon, title, label, desc, detail, cta, side }) => (
+            {PROCESS_STEPS.map(({ num, icon, title, label: _label, desc, detail, cta, side }) => (
               <div key={num} className="grid grid-cols-1 lg:grid-cols-[80px_1fr_280px] gap-0">
                 {/* Num */}
                 <div className="flex items-start justify-center pt-8 pb-4 lg:py-8 lg:border-r border-ag-border">

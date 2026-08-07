@@ -1,6 +1,5 @@
 import type { Metadata }      from 'next'
 import { generateAegrynMetadata } from '@/lib/seo'
-import { getTranslations }    from 'next-intl/server'
 import { Link }               from '@/i18n/navigation'
 import { ArrowUpRight, ShieldCheck, BarChart3, FileText, Users, Lock, Landmark } from 'lucide-react'
 import ReadinessScore         from './ReadinessScore'
@@ -69,8 +68,7 @@ const GUARANTEES = [
   },
 ]
 
-export default async function AuctionSellPage({ params }: Props) {
-  await params
+export default async function AuctionSellPage({ params: _ }: Props) {
 
   return (
     <main className="bg-ag-white">
