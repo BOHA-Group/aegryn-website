@@ -43,13 +43,32 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
+    },
+    {
+      "source": "/videos/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
     }
   ],
   "redirects": [
     {
       "source": "/",
-      "destination": "/en",
-      "permanent": false
+      "destination": "/fr",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.aegryn.com" }],
+      "destination": "https://aegryn.com/:path*",
+      "permanent": true
     },
     {
       "source": "/privacy",

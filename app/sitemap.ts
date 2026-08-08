@@ -18,8 +18,10 @@ const STATIC_ROUTES = [
   { path: '/auction',                           priority: 1.0,  changeFrequency: 'weekly'  as const },
   { path: '/auction/catalog',                   priority: 1.0,  changeFrequency: 'daily'   as const },
   { path: '/auction/sessions',                  priority: 0.9,  changeFrequency: 'weekly'  as const },
-  { path: '/auction/how-to-sell',               priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/auction/how-to-buy',                priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/auction/sell',                      priority: 1.0,  changeFrequency: 'monthly' as const },
+  { path: '/auction/buyers',                    priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/auction/how-it-works',              priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/auction/how-to-buy',                priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/auction/bid-models',                priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/auction/results',                   priority: 0.7,  changeFrequency: 'weekly'  as const },
   // ── Grade ────────────────────────────────────────────────────────────────
@@ -73,7 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const locale of LOCALES) {
       alternates[locale] = `${BASE}/${locale}${route.path}`
     }
-    alternates['x-default'] = `${BASE}/en${route.path}`
+    alternates['x-default'] = `${BASE}/fr${route.path}`
 
     for (const locale of LOCALES) {
       entries.push({
@@ -91,7 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const locale of LOCALES) {
     wwbAlternates[locale] = `${BASE}/${locale}${WHAT_WE_BUILD_SLUG[locale]}`
   }
-  wwbAlternates['x-default'] = `${BASE}/en/what-we-build`
+  wwbAlternates['x-default'] = `${BASE}/fr${WHAT_WE_BUILD_SLUG['fr']}`
   for (const locale of LOCALES) {
     entries.push({
       url:             `${BASE}/${locale}${WHAT_WE_BUILD_SLUG[locale]}`,
@@ -107,7 +109,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const locale of LOCALES) {
     expertsAlternates[locale] = `${BASE}/${locale}${EXPERTS_SLUG[locale]}`
   }
-  expertsAlternates['x-default'] = `${BASE}/en/experts`
+  expertsAlternates['x-default'] = `${BASE}/fr/experts`
   for (const locale of LOCALES) {
     entries.push({
       url:             `${BASE}/${locale}${EXPERTS_SLUG[locale]}`,
@@ -124,7 +126,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const locale of LOCALES) {
       articleAlternates[locale] = `${BASE}/${locale}/blog/${article.slug}`
     }
-    articleAlternates['x-default'] = `${BASE}/en/blog/${article.slug}`
+    articleAlternates['x-default'] = `${BASE}/fr/blog/${article.slug}`
 
     for (const locale of LOCALES) {
       entries.push({

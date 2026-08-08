@@ -69,6 +69,7 @@ const nextConfig: NextConfig = {
       { source: '/what-we-build',                     destination: '/assets',                         permanent: true },
       { source: '/grow-with-us',                      destination: '/alliances',                      permanent: true },
       { source: '/:locale/auction/assessment-days',   destination: '/:locale/auction/sessions',        permanent: true },
+      { source: '/:locale/auction/how-to-sell',         destination: '/:locale/auction/sell',            permanent: true },
     ]
   },
   async headers() {
@@ -96,6 +97,13 @@ const nextConfig: NextConfig = {
       {
         source: '/manifest.webmanifest',
         headers: [{ key: 'Content-Type', value: 'application/manifest+json' }],
+      },
+      {
+        source: '/videos/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'X-Robots-Tag', value: 'noindex' },
+        ],
       },
     ]
   },
