@@ -65,18 +65,6 @@
       "permanent": true
     },
     {
-      "source": "/",
-      "has": [{ "type": "host", "value": "www.aegryn.com" }],
-      "destination": "https://aegryn.com/fr",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.aegryn.com" }],
-      "destination": "https://aegryn.com/:path*",
-      "permanent": true
-    },
-    {
       "source": "/privacy",
       "destination": "/fr/privacy",
       "permanent": true
