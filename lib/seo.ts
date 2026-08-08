@@ -10,19 +10,35 @@ const OG_LOCALE: Record<string, string> = {
 
 const BASE_KEYWORDS = [
   // Brand
-  'Aegryn', 'aegryn.com', 'Engineered to Last', 'Swiss Tech',
+  'Aegryn', 'aegryn.com', 'Engineered to Last', 'Swiss Tech', 'BOHA-Group',
   // Core business
   'digital assets', 'actifs numériques', 'digital asset auction', 'enchère tech',
   'auction platform', 'tech auction', 'vente aux enchères technologie',
   'buy tech company', 'sell tech company', 'acheter entreprise tech', 'vendre entreprise tech',
-  'SaaS acquisition', 'acquisition SaaS', 'SaaS marketplace',
+  'SaaS acquisition', 'acquisition SaaS', 'SaaS marketplace', 'SaaS for sale',
+  // Seller funnel
+  'céder SaaS', 'cession SaaS Europe', 'vendre SaaS', 'vendre entreprise SaaS',
+  'funnel cédant', 'céder entreprise numérique', 'mandat cession tech',
+  'comment vendre entreprise tech', 'vente SaaS structurée', 'plateforme cession tech Europe',
+  'how to sell SaaS', 'sell SaaS Europe', 'SaaS exit Europe', 'SaaS exit strategy',
+  // Buyer funnel
+  'acheteur tech qualifié', 'pré-qualification acheteur', 'acquérir SaaS',
+  'acheter SaaS Europe', 'deal flow tech Europe', 'acquisition SaaS structurée',
+  'family office tech acquisition', 'fund SaaS acquisition', 'buy SaaS business Europe',
+  // Certification & process
+  'certification CIFS', 'audit code indépendant', 'CIFS tech audit',
+  'séquestre suisse M&A', 'séquestre bancaire institutionnel', 'Swiss escrow M&A',
+  'closing tech sécurisé', 'NDA cession tech', 'data room cession',
   // M&A
   'M&A tech', 'mergers acquisitions technology', 'cession entreprise numérique',
   'acquisition entreprise digitale', 'transaction tech Europe',
   'deal structuring', 'club deal acquisition', 'share deal', 'asset deal',
+  'earnout', 'SPV co-investment', 'heads of terms tech',
   // Valuation
   'SaaS valuation', 'valorisation SaaS', 'digital asset valuation',
   'valorisation actif numérique', 'ARR multiple', 'SaaS multiples Europe',
+  'calcul valorisation SaaS', 'outil valorisation gratuit tech',
+  'SaaS valuation tool free', 'SaaS valuation calculator',
   // Experts
   'M&A experts', 'expert network', 'réseau experts M&A', 'expert M&A tech',
   'due diligence tech', 'transactional experts', 'W&I insurance',
@@ -33,11 +49,13 @@ const BASE_KEYWORDS = [
   // Geography
   'Switzerland startup', 'Swiss holding', 'holding suisse tech',
   'Europe tech market', 'marché tech européen',
+  'plateforme M&A suisse', 'Swiss M&A platform', 'cession tech Suisse',
   // Products
   'Subblink', 'Neediu', 'Primiom', 'Movtoo', 'Hobconnect',
   'ecosystem engineering', 'digital ecosystem',
   // Grade
   'AEGRYN Grade', 'asset grading', 'notation actif numérique',
+  'grade SaaS', 'certification actif numérique', 'tech credit rating',
 ]
 
 export function generateAegrynMetadata({
@@ -256,6 +274,26 @@ export const aegrynOrganizationSchema = {
       },
     ],
   },
+}
+
+export const aegrynSiteNavigationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Aegryn Site Navigation',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1,  name: 'Accueil',              url: `${BASE_URL}/fr` },
+    { '@type': 'ListItem', position: 2,  name: 'AEGRYN Auction',       url: `${BASE_URL}/fr/auction` },
+    { '@type': 'ListItem', position: 3,  name: 'Céder un actif',       url: `${BASE_URL}/fr/auction/sell` },
+    { '@type': 'ListItem', position: 4,  name: 'Accès acheteurs',      url: `${BASE_URL}/fr/auction/buyers` },
+    { '@type': 'ListItem', position: 5,  name: 'Comment ça marche',    url: `${BASE_URL}/fr/auction/how-it-works` },
+    { '@type': 'ListItem', position: 6,  name: 'Catalogue',            url: `${BASE_URL}/fr/auction/catalog` },
+    { '@type': 'ListItem', position: 7,  name: 'Valorisation',         url: `${BASE_URL}/fr/valuation` },
+    { '@type': 'ListItem', position: 8,  name: 'AEGRYN Grade',         url: `${BASE_URL}/fr/grade` },
+    { '@type': 'ListItem', position: 9,  name: 'Experts',              url: `${BASE_URL}/fr/experts` },
+    { '@type': 'ListItem', position: 10, name: 'Advisory',             url: `${BASE_URL}/fr/advisory` },
+    { '@type': 'ListItem', position: 11, name: 'Blog',                 url: `${BASE_URL}/fr/blog` },
+    { '@type': 'ListItem', position: 12, name: 'Contact',              url: `${BASE_URL}/fr/contact` },
+  ],
 }
 
 export const aegrynWebSiteSchema = {

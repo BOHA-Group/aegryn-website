@@ -70,9 +70,11 @@ Offer Models (Bid Models):
 
 Key pages:
 - /auction — Auction platform overview
-- /auction/catalog — Live catalog of assets for sale
-- /auction/how-to-sell — How to submit and sell a digital asset
-- /auction/how-to-buy — How to become a buyer and place a bid
+- /auction/sell — Seller funnel: valuation, readiness score, mandate submission
+- /auction/buyers — Buyer pre-qualification form (KYC + proof of funds)
+- /auction/how-it-works — Full 6-step process: valuation → mandate → CIFS → matching → session → closing
+- /auction/catalog — Live catalog of assets for sale (NDA required for full dossier)
+- /auction/how-to-buy — How to become a qualified buyer
 - /auction/sessions — Calendar of upcoming auction sessions
 - /auction/bid-models — Offer model structures
 - /auction/results — Past auction results
@@ -142,50 +144,52 @@ French (fr), English (en), German (de), Italian (it), Spanish (es), Dutch (nl)
 ## Site Map — All Dedicated Pages
 
 ### Core
-- [Home](https://aegryn.com/en) — Swiss Tech Asset Builder overview
-- [About](https://aegryn.com/en/about) — Company, mission, values, philosophy
-- [What We Build](https://aegryn.com/en/what-we-build) — Proprietary digital ecosystems
-- [Blog](https://aegryn.com/en/blog) — Articles, insights, market analysis
-- [Contact](https://aegryn.com/en/contact) — Reach AEGRYN team
-- [Career](https://aegryn.com/en/career) — Open positions
-- [Glossary](https://aegryn.com/en/glossaire) — Tech M&A glossary
+- [Home](https://aegryn.com/fr) — Swiss Tech Asset Builder overview
+- [About](https://aegryn.com/fr/a-propos) — Company, mission, values, philosophy
+- [What We Build](https://aegryn.com/fr/ce-que-nous-construisons) — Proprietary digital ecosystems
+- [Blog](https://aegryn.com/fr/blog) — Articles, insights, market analysis
+- [Contact](https://aegryn.com/fr/contact) — Reach AEGRYN team
+- [Career](https://aegryn.com/fr/career) — Open positions
+- [Glossary](https://aegryn.com/fr/glossaire) — Tech M&A glossary
 
 ### Auction Platform
-- [Auction Overview](https://aegryn.com/en/auction) — Platform presentation
-- [Auction Catalog](https://aegryn.com/en/auction/catalog) — Live assets for sale (SaaS, tech)
-- [How to Sell](https://aegryn.com/en/auction/how-to-sell) — Seller guide
-- [How to Buy](https://aegryn.com/en/auction/how-to-buy) — Buyer guide
-- [Auction Sessions](https://aegryn.com/en/auction/sessions) — Session calendar
-- [Bid Models](https://aegryn.com/en/auction/bid-models) — Offer structures (Club Deal, Corporate, Fund, Equity)
-- [Auction Results](https://aegryn.com/en/auction/results) — Past transactions
+- [Auction Overview](https://aegryn.com/fr/auction) — Platform presentation
+- [Céder un actif / Sell](https://aegryn.com/fr/auction/sell) — Seller funnel: valuation, readiness score, mandate
+- [Acheteurs / Buyers](https://aegryn.com/fr/auction/buyers) — Buyer pre-qualification
+- [Comment ça marche](https://aegryn.com/fr/auction/how-it-works) — Full 6-step process
+- [Auction Catalog](https://aegryn.com/fr/auction/catalog) — Live assets for sale (SaaS, tech)
+- [How to Buy](https://aegryn.com/fr/auction/how-to-buy) — Buyer guide
+- [Auction Sessions](https://aegryn.com/fr/auction/sessions) — Session calendar
+- [Bid Models](https://aegryn.com/fr/auction/bid-models) — Offer structures (Club Deal, Corporate, Fund, Equity)
+- [Auction Results](https://aegryn.com/fr/auction/results) — Past transactions
 
 ### Grading & Valuation
-- [AEGRYN Grade](https://aegryn.com/en/grade) — Asset grading system
-- [Grade Methodology](https://aegryn.com/en/grade/methodology) — Scoring methodology
-- [Grading System](https://aegryn.com/en/grade/grading-system) — Full grading reference
-- [Submit for Grading](https://aegryn.com/en/grade/submit) — Request a grade
-- [Valuation Tool](https://aegryn.com/en/valuation) — Free instant SaaS valuation
+- [AEGRYN Grade](https://aegryn.com/fr/grade) — Asset grading system
+- [Grade Methodology](https://aegryn.com/fr/grade/methodology) — Scoring methodology
+- [Grading System](https://aegryn.com/fr/grade/grading-system) — Full grading reference
+- [Submit for Grading](https://aegryn.com/fr/grade/submit) — Request a grade
+- [Valuation Tool](https://aegryn.com/fr/valuation) — Free instant SaaS valuation
 
 ### Expert Network
-- [Experts](https://aegryn.com/en/experts) — M&A, legal, tech, cybersecurity experts
+- [Experts](https://aegryn.com/fr/experts) — M&A, legal, tech, cybersecurity experts
 
 ### Advisory
-- [Aegryn Advisory](https://aegryn.com/en/advisory) — Cybersecurity, AI audit, digital strategy
+- [Aegryn Advisory](https://aegryn.com/fr/advisory) — Cybersecurity, AI audit, digital strategy
 
 ### Services
-- [Acquisition Support](https://aegryn.com/en/services/acquisition-support) — Post-deal integration
-- [Build Services](https://aegryn.com/en/services/build) — Tech ecosystem building
-- [Alliances](https://aegryn.com/en/alliances) — Strategic partnerships
+- [Acquisition Support](https://aegryn.com/fr/services/acquisition-support) — Post-deal integration
+- [Build Services](https://aegryn.com/fr/services/build) — Tech ecosystem building
+- [Alliances](https://aegryn.com/fr/alliances) — Strategic partnerships
 
 ### Assets
-- [Assets](https://aegryn.com/en/assets) — Portfolio assets overview
+- [Assets](https://aegryn.com/fr/assets) — Portfolio assets overview
 
 ### Help & Legal
-- [FAQ](https://aegryn.com/en/help/faq) — Frequently asked questions
-- [Privacy](https://aegryn.com/en/privacy) — Privacy policy
-- [Terms of Use](https://aegryn.com/en/terms/use) — Terms of use
-- [CGV](https://aegryn.com/en/terms/cgv) — General sales conditions
-- [Security](https://aegryn.com/en/security) — Security policy
+- [FAQ](https://aegryn.com/fr/help/faq) — Frequently asked questions
+- [Privacy](https://aegryn.com/fr/privacy) — Privacy policy
+- [Terms of Use](https://aegryn.com/fr/terms/use) — Terms of use
+- [CGV](https://aegryn.com/fr/terms/cgv) — General sales conditions
+- [Security](https://aegryn.com/fr/security) — Security policy
 
 ### Portfolio Companies
 - [Subblink](https://subblink.boha-group.com) — AI contract analysis SaaS

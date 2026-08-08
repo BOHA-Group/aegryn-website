@@ -13,7 +13,7 @@ import LenisProvider from '@/components/providers/LenisProvider'
 import { ScrollToTop } from '@/components/ui/ScrollToTop'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import MetaPixel from '@/components/analytics/MetaPixel'
-import { aegrynOrganizationSchema, aegrynWebSiteSchema } from '@/lib/seo'
+import { aegrynOrganizationSchema, aegrynWebSiteSchema, aegrynSiteNavigationSchema } from '@/lib/seo'
 import '@/styles/globals.css'
 
 const plusJakartaSans = localFont({
@@ -67,13 +67,16 @@ return {
     'Aegryn', 'Swiss Tech', 'digital assets', 'actifs numériques',
     'digital asset auction', 'enchère tech', 'auction platform', 'tech auction',
     'buy tech company', 'sell tech company', 'SaaS acquisition', 'SaaS for sale',
+    'céder SaaS', 'cession SaaS Europe', 'vendre SaaS', 'SaaS exit Europe',
     'M&A tech', 'mergers acquisitions technology', 'cession entreprise numérique',
     'SaaS valuation', 'valorisation SaaS', 'ARR multiple',
+    'certification CIFS', 'séquestre suisse M&A', 'Swiss escrow M&A',
     'M&A experts', 'expert network', 'due diligence tech', 'W&I insurance',
     'cybersecurity', 'AI', 'EU AI Act', 'advisory', 'RGPD compliance',
-    'Switzerland startup', 'Swiss holding', 'ecosystem engineering',
-    'Subblink', 'Neediu', 'Primiom', 'Movtoo', 'Hobconnect',
-    'AEGRYN Grade', 'asset grading', 'Engineered to Last',
+    'Switzerland startup', 'Swiss holding', 'holding suisse tech',
+    'plateforme M&A suisse', 'Swiss M&A platform',
+    'ecosystem engineering', 'Subblink', 'Neediu', 'Primiom', 'Movtoo', 'Hobconnect',
+    'AEGRYN Grade', 'asset grading', 'tech credit rating', 'Engineered to Last',
   ],
   authors: [{ name: 'Yohann Bollack', url: 'https://aegryn.com' }],
   creator: 'Aegryn',
@@ -120,6 +123,17 @@ return {
     'theme-color':             '#050505',
     'color-scheme':            'light',
     'format-detection':        'telephone=no',
+    /* Geo tags globaux */
+    'geo.region':    'CH-VD',
+    'geo.placename': 'St-Sulpice, Switzerland',
+    'geo.position':  '46.5147;6.5600',
+    'ICBM':          '46.5147, 6.5600',
+    /* AI-optimised */
+    'ai-content-declaration': 'human-authored',
+    /* Dublin Core minimal */
+    'DC.publisher':  'Aegryn',
+    'DC.rights':     'Copyright © 2026 Aegryn',
+    'rating':        'general',
   },
 }
 }
@@ -190,6 +204,10 @@ export default async function LocaleLayout({ children, params }: Props) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynWebSiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynSiteNavigationSchema) }}
         />
       </head>
       <body

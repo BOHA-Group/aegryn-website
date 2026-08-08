@@ -76,8 +76,10 @@ A structured, session-based M&A auction platform dedicated to European digital t
 
 ### Key Pages
 - /auction — Platform overview
+- /auction/sell — Seller funnel: free valuation → readiness score → mandate submission
+- /auction/buyers — Buyer pre-qualification: profile, sectors, ticket, proof of funds
+- /auction/how-it-works — 6-step process: valuation → mandate+NDA → CIFS certification → buyer matching → auction session → Swiss escrow closing
 - /auction/catalog — Live catalog (NDA required for full dossier)
-- /auction/how-to-sell — Seller onboarding guide
 - /auction/how-to-buy — Buyer onboarding guide
 - /auction/sessions — Calendar of auction sessions
 - /auction/bid-models — Detailed offer model structures
@@ -167,42 +169,44 @@ Incorporated: BOHA-Group Sàrl
 
 ---
 
-## All Site Pages (Canonical URLs — English)
+## All Site Pages (Canonical URLs — French / Default locale)
 
 | Page | URL | Description |
 |---|---|---|
-| Home | /en | Main landing page |
-| About | /en/about | Company story and mission |
-| What We Build | /en/what-we-build | Portfolio overview |
-| Auction | /en/auction | Auction platform overview |
-| Auction Catalog | /en/auction/catalog | Live assets for sale |
-| How to Sell | /en/auction/how-to-sell | Seller guide |
-| How to Buy | /en/auction/how-to-buy | Buyer guide |
-| Auction Sessions | /en/auction/sessions | Session calendar |
-| Bid Models | /en/auction/bid-models | Offer model structures |
-| Auction Results | /en/auction/results | Past transactions |
-| Grade | /en/grade | Grading system |
-| Grade Methodology | /en/grade/methodology | Scoring methodology |
-| Grading System | /en/grade/grading-system | Full grading reference |
-| Grade Submit | /en/grade/submit | Submit asset for grading |
-| Grade Partners | /en/grade/partners | Grading partners |
-| Valuation | /en/valuation | Free instant valuation tool |
-| Advisory | /en/advisory | Advisory services |
-| Experts | /en/experts | Expert network |
-| Assets | /en/assets | Portfolio assets |
-| Acquisition Support | /en/services/acquisition-support | Post-deal services |
-| Build Services | /en/services/build | Tech building services |
-| Alliances | /en/alliances | Strategic partnerships |
-| Glossary | /en/glossaire | Tech M&A glossary |
-| Blog | /en/blog | Articles and insights |
-| Career | /en/career | Open positions |
-| Contact | /en/contact | Contact form |
-| FAQ | /en/help/faq | Frequently asked questions |
-| Roadmap | /en/roadmap | Product roadmap |
-| Privacy | /en/privacy | Privacy policy |
-| Terms of Use | /en/terms/use | Terms of use |
-| CGV | /en/terms/cgv | General sales conditions |
-| Security | /en/security | Security policy |
+| Home | /fr | Main landing page |
+| About | /fr/a-propos | Company story and mission |
+| What We Build | /fr/ce-que-nous-construisons | Proprietary digital ecosystems |
+| Auction | /fr/auction | Auction platform overview |
+| Céder un actif | /fr/auction/sell | Seller funnel: valuation, readiness score, mandate |
+| Acheteurs | /fr/auction/buyers | Buyer pre-qualification form |
+| Comment ça marche | /fr/auction/how-it-works | Full 6-step process |
+| Auction Catalog | /fr/auction/catalog | Live assets for sale |
+| How to Buy | /fr/auction/how-to-buy | Buyer guide |
+| Auction Sessions | /fr/auction/sessions | Session calendar |
+| Bid Models | /fr/auction/bid-models | Offer model structures |
+| Auction Results | /fr/auction/results | Past transactions |
+| Grade | /fr/grade | Grading system |
+| Grade Methodology | /fr/grade/methodology | Scoring methodology |
+| Grading System | /fr/grade/grading-system | Full grading reference |
+| Grade Submit | /fr/grade/submit | Submit asset for grading |
+| Grade Partners | /fr/grade/partners | Grading partners |
+| Valuation | /fr/valuation | Free instant valuation tool |
+| Advisory | /fr/advisory | Advisory services |
+| Experts | /fr/experts | Expert network |
+| Assets | /fr/assets | Portfolio assets |
+| Acquisition Support | /fr/services/acquisition-support | Post-deal services |
+| Build Services | /fr/services/build | Tech building services |
+| Alliances | /fr/alliances | Strategic partnerships |
+| Glossary | /fr/glossaire | Tech M&A glossary |
+| Blog | /fr/blog | Articles and insights |
+| Career | /fr/career | Open positions |
+| Contact | /fr/contact | Contact form |
+| FAQ | /fr/help/faq | Frequently asked questions |
+| Roadmap | /fr/roadmap | Product roadmap |
+| Privacy | /fr/privacy | Privacy policy |
+| Terms of Use | /fr/terms/use | Terms of use |
+| CGV | /fr/terms/cgv | General sales conditions |
+| Security | /fr/security | Security policy |
 
 ---
 
