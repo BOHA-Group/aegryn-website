@@ -65,6 +65,12 @@
       "permanent": true
     },
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.aegryn.com" }],
+      "destination": "https://aegryn.com/fr",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.aegryn.com" }],
       "destination": "https://aegryn.com/:path*",
@@ -72,27 +78,27 @@
     },
     {
       "source": "/privacy",
-      "destination": "/en/privacy",
+      "destination": "/fr/privacy",
       "permanent": true
     },
     {
       "source": "/terms/use",
-      "destination": "/en/terms/use",
+      "destination": "/fr/terms/use",
       "permanent": true
     },
     {
       "source": "/terms/cgv",
-      "destination": "/en/terms/cgv",
+      "destination": "/fr/terms/cgv",
       "permanent": true
     },
     {
       "source": "/security",
-      "destination": "/en/security",
+      "destination": "/fr/security",
       "permanent": true
     },
     {
       "source": "/help/faq",
-      "destination": "/en/help/faq",
+      "destination": "/fr/help/faq",
       "permanent": true
     },
     {
