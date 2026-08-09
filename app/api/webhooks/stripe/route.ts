@@ -15,6 +15,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe                        from 'stripe'
 import { createServiceClient }       from '@/lib/supabase'
+import { syncExpertVisibility }      from '@/lib/expertVisibility'
 
 export const runtime = 'nodejs'
 
@@ -211,6 +212,9 @@ export async function POST(req: NextRequest) {
 
       /* Hook parrainage : filleul vient de payer → appliquer les crédits */
       await applyReferralReward(uid, periodEnd)
+
+      /* Sync visibilité fiche expert */
+      await syncExpertVisibility(supa, uid)
     }
   }
 
@@ -248,6 +252,9 @@ export async function POST(req: NextRequest) {
     if (typeof periodEnd === 'number') patch.expert_plan_end = new Date(periodEnd * 1000).toISOString()
 
     await supa.from('profiles').update(patch).eq('id', uid)
+
+    /* Sync visibilité fiche expert */
+    await syncExpertVisibility(supa, uid)
 
     if (event.type === 'customer.subscription.created' && isActive) {
       const { data: profile } = await supa.from('profiles').select('email').eq('id', uid).single()
