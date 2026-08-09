@@ -10,6 +10,8 @@ import AdminSideNav from './AdminSideNav'
 const SUPPORTED_LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
 type SupportedLocale = typeof SUPPORTED_LOCALES[number]
 
+export const dynamic = 'force-dynamic'
+
 function isSupportedLocale(value: string | undefined): value is SupportedLocale {
   return !!value && (SUPPORTED_LOCALES as readonly string[]).includes(value)
 }
