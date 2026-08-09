@@ -239,7 +239,8 @@ function ContactLeadModal({ expert, filters, onClose }: ContactLeadModalProps) {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          expert_id:        expert.user_id,
+          expert_id:        expert.id,
+          expert_user_id:   expert.user_id,
           first_name:       firstName.trim(),
           last_name:        lastName.trim(),
           email:            email.trim(),
@@ -850,7 +851,7 @@ export default function ExpertsContent() {
         )}
 
         {!loadingGrid && profiles.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px">
             {profiles.map(p => (
               <ExpertCard
                 key={p.id}

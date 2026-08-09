@@ -6,6 +6,7 @@ export async function POST(req: NextRequest) {
 
   const {
     expert_id,
+    expert_user_id,
     first_name,
     last_name,
     email,
@@ -16,6 +17,7 @@ export async function POST(req: NextRequest) {
     filter_country,
   } = body as {
     expert_id:        string
+    expert_user_id:   string
     first_name:       string
     last_name:        string
     email:            string
@@ -26,7 +28,7 @@ export async function POST(req: NextRequest) {
     filter_country?:  string
   }
 
-  if (!expert_id || !first_name?.trim() || !last_name?.trim() || !email?.trim()) {
+  if (!expert_id || !expert_user_id || !first_name?.trim() || !last_name?.trim() || !email?.trim()) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
   }
   if (!consent_given) {
@@ -45,16 +47,16 @@ export async function POST(req: NextRequest) {
   const { data: ep } = await supa
     .from('expert_profiles')
     .select('is_visible')
-    .eq('user_id', expert_id)
+    .eq('id', expert_id)
     .maybeSingle()
 
   if (!ep?.is_visible) {
     return NextResponse.json({ error: 'Expert not found' }, { status: 404 })
   }
 
-  // 1. Insérer le clic KPI (type email) dans la table existante
+  // 1. Insérer le clic KPI (type email) dans la table existante (expert_id = user_id historique)
   const { data: clickData } = await supa.from('expert_contact_clicks').insert({
-    expert_id,
+    expert_id: expert_user_id,
     click_type:       'email',
     ip_address:       ip,
     user_agent:       ua,
