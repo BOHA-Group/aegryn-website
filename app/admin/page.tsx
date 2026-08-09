@@ -56,7 +56,7 @@ export default async function AdminIndexPage({
     { count: transactionsOpen },
     { count: commissionsDue },
     { count: expertAppsPending },
-    { count: expertProfilesPending },
+    { data: expertProfilesData },
     { data: kycDocsPending },
   ] = await Promise.all([
     supa.from('assets').select('*', { count: 'exact', head: true }).eq('status', 'submitted'),
@@ -68,11 +68,16 @@ export default async function AdminIndexPage({
     supa.from('transactions').select('*', { count: 'exact', head: true }).not('status', 'in', '(closed,cancelled)'),
     supa.from('commissions').select('*', { count: 'exact', head: true }).neq('status', 'paid'),
     supa.from('expert_applications').select('*', { count: 'exact', head: true }).eq('status', 'pending'),
-    supa.from('expert_profiles').select('*', { count: 'exact', head: true }).eq('review_status', 'pending_review'),
+    supa.from('expert_profiles').select('id, is_visible, hidden_reason, review_status'),
     supa.from('kyc_documents').select('user_id').eq('status', 'pending'),
   ])
 
-  const expertsPending = (expertAppsPending ?? 0) + (expertProfilesPending ?? 0)
+  const expertProfilesPendingCount = (expertProfilesData ?? []).filter(
+    (p: { is_visible: boolean; hidden_reason: string | null; review_status: string | null }) =>
+      p.review_status === 'pending_review' ||
+      (!p.is_visible && !p.hidden_reason && p.review_status !== 'rejected')
+  ).length
+  const expertsPending = (expertAppsPending ?? 0) + expertProfilesPendingCount
 
   /* Partenaires avec docs pending mais sans ligne buyer_kyc_verifications */
   const { data: kycBuyerIds } = await supa
