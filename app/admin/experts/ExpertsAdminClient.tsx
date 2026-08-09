@@ -204,18 +204,6 @@ function ProfileRow({
     onRefresh()
   }
 
-  async function patchPlan(plan: 'active' | 'suspended' | null) {
-    if (!profile.user_id) return
-    setLoading(true)
-    await fetch(`/api/admin/experts${tokenQs}`, {
-      method:  'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify({ table: 'expert_plan', id: profile.user_id, plan }),
-    })
-    setLoading(false)
-    onRefresh()
-  }
-
   async function del() {
     if (!confirm('Supprimer définitivement cette fiche ?')) return
     setLoading(true)
@@ -385,27 +373,11 @@ function ProfileRow({
             </div>
           )}
 
-          {/* Actions plan */}
+          {/* Actions plan — lecture seule, l'admin ne contrôle pas l'abonnement Stripe */}
           <div className="flex flex-wrap gap-2 pt-3 border-t border-gray-100">
-            <p className="w-full font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-1">Abonnement</p>
-            {plan !== 'active' && (
-              <button onClick={() => patchPlan('active')} disabled={loading}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-ag-apex/30 text-ag-apex hover:bg-ag-apex/10 disabled:opacity-50 transition-colors">
-                Activer plan
-              </button>
-            )}
-            {plan === 'active' && (
-              <button onClick={() => patchPlan('suspended')} disabled={loading}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-amber-200 text-amber-600 hover:bg-amber-50 disabled:opacity-50 transition-colors">
-                Suspendre plan
-              </button>
-            )}
-            {plan && (
-              <button onClick={() => patchPlan(null)} disabled={loading}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-gray-200 text-gray-400 hover:border-gray-400 disabled:opacity-50 transition-colors">
-                Annuler plan
-              </button>
-            )}
+            <p className="w-full font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-1">
+              Abonnement — <span className="text-gray-400 normal-case tracking-normal">géré par le partenaire via Stripe. Les crédits manuels sont dans le bloc ci-dessous.</span>
+            </p>
             <button onClick={del} disabled={loading}
               className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-50 transition-colors ml-auto">
               Supprimer fiche

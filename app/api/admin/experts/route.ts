@@ -122,17 +122,12 @@ export async function PATCH(req: NextRequest) {
   const supa = createServiceClient()
 
   if (table === 'expert_plan') {
-    const { plan } = body as { plan: 'active' | 'suspended' | null }
-    const { error } = await supa
-      .from('profiles')
-      .update({
-        expert_plan:       plan,
-        expert_plan_start: plan === 'active' ? new Date().toISOString() : null,
-      })
-      .eq('id', id)
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
-    const isVisible = await syncExpertVisibility(supa, id)
-    return NextResponse.json({ ok: true, is_visible: isVisible })
+    // L'abonnement expert est géré exclusivement par Stripe (côté partenaire).
+    // L'admin peut uniquement créditer des mois via /api/admin/expert/subscription.
+    return NextResponse.json(
+      { error: 'forbidden', message: 'L\'abonnement expert est géré par Stripe. Utilisez l\'attribution manuelle de crédits.' },
+      { status: 403 }
+    )
   }
 
   if (table === 'expert_applications') {
@@ -277,23 +272,26 @@ export async function PATCH(req: NextRequest) {
     if (before?.user_id && (review_status !== undefined || hidden_reason !== undefined)) {
       const becamePublished = finalVisible === true && !before.is_visible
       const wasRejected      = review_status === 'rejected'
-      const wasSilentHidden  = hidden_reason === 'admin_hidden'
+      // Masquage silencieux : hidden_reason posé ET pas un refus
+      const wasSilentHidden  = hidden_reason === 'admin_hidden' && review_status !== 'rejected'
+      // Fiche approuvée par l'admin mais publication en attente (KYC et/ou abonnement manquants)
       const approvedPending  = review_status === 'approved' && finalVisible === false
 
       let notifTitle: string | null = null
       let notifBody = ''
       if (becamePublished) {
-        notifTitle = 'Votre fiche expert a été validée et publiée'
-        notifBody  = 'Votre profil est maintenant visible dans l\'annuaire AEGRYN.'
-      } else if (wasRejected) {
-        notifTitle = 'Votre fiche expert a été refusée'
-        notifBody  = `Motif : ${hidden_reason}. Mettez à jour votre fiche et soumettez à nouveau.`
-      } else if (wasSilentHidden) {
-        notifTitle = 'Votre fiche expert a été masquée'
-        notifBody  = 'Votre fiche a été temporairement masquée par l\'administration.'
+        // La publication est automatique — l'admin a approuvé la fiche ET tous les prérequis étaient déjà réunis
+        notifTitle = 'Votre fiche expert est publiée dans l\'annuaire AEGRYN'
+        notifBody  = 'Votre contenu a été validé par notre équipe. Votre profil est désormais visible dans l\'annuaire.'
       } else if (approvedPending) {
         notifTitle = 'Votre fiche expert a été validée par l\'équipe AEGRYN'
-        notifBody  = 'Elle sera publiée automatiquement dès que votre KYC et votre abonnement seront actifs.'
+        notifBody  = 'Elle sera publiée automatiquement dès que votre abonnement sera actif. Activez votre abonnement depuis votre espace partenaire.'
+      } else if (wasRejected) {
+        notifTitle = 'Votre fiche expert a été refusée'
+        notifBody  = `Motif : ${hidden_reason ?? 'non précisé'}. Corrigez votre fiche et soumettez à nouveau.`
+      } else if (wasSilentHidden) {
+        notifTitle = 'Votre fiche expert a été temporairement masquée'
+        notifBody  = 'Votre fiche a été masquée par l\'administration. Contactez l\'équipe AEGRYN pour plus d\'informations.'
       }
 
       if (notifTitle) {
