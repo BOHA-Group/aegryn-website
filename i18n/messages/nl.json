@@ -4818,6 +4818,14 @@
       "networkDesc": "AEGRYN-gecertificeerde partners"
     },
     "domains": {
+      "security": "Beveiliging & Cyberbeveiliging",
+      "securityDesc": "Pentest, cloudbeveiliging, NIS2-naleving, audit applicatiebeveiliging.",
+      "data-ai": "Data & Kunstmatige intelligentie",
+      "data-aiDesc": "AI-strategie, MLOps, data governance, EU AI Act-naleving.",
+      "transaction": "M&A transactieadvies",
+      "transactionDesc": "Waardering, voorbereiding verkoopdossier, due diligence, transactierecht.",
+      "product-ux": "Product & Gebruikerservaring",
+      "product-uxDesc": "Productmanagement, UX/UI-ontwerp, digitale toegankelijkheid, AVG & Privacy.",
       "cybersecurity": "Cyberbeveiliging",
       "cybersecurityDesc": "AVG, ISO 27001, pentest, beveiligingsaudit",
       "ai": "Kunstmatige intelligentie",

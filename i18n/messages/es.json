@@ -4818,6 +4818,14 @@
       "networkDesc": "Socios certificados AEGRYN"
     },
     "domains": {
+      "security": "Seguridad & Ciberseguridad",
+      "securityDesc": "Pentest, seguridad en la nube, conformidad NIS2, auditoría de seguridad de aplicaciones.",
+      "data-ai": "Datos & Inteligencia Artificial",
+      "data-aiDesc": "Estrategia IA, MLOps, gobernanza de datos, conformidad EU AI Act.",
+      "transaction": "Asesoría en transacciones M&A",
+      "transactionDesc": "Valoración, preparación del vendedor, due diligence, derecho de transacciones.",
+      "product-ux": "Producto & Experiencia de usuario",
+      "product-uxDesc": "Gestión de producto, diseño UX/UI, accesibilidad digital, RGPD & Privacidad.",
       "cybersecurity": "Ciberseguridad",
       "cybersecurityDesc": "RGPD, ISO 27001, pentest, auditoría de seguridad",
       "ai": "Inteligencia artificial",

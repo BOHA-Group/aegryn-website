@@ -4821,6 +4821,14 @@
       "networkDesc": "Partenaires certifiés AEGRYN"
     },
     "domains": {
+      "security": "Sécurité & Cybersécurité",
+      "securityDesc": "Pentest, sécurité cloud, conformité NIS2, audit sécurité applicative.",
+      "data-ai": "Data & Intelligence Artificielle",
+      "data-aiDesc": "Stratégie IA, MLOps, gouvernance data, conformité EU AI Act.",
+      "transaction": "Advisory Transaction M&A",
+      "transactionDesc": "Valorisation, préparation cession, due diligence, droit des transactions.",
+      "product-ux": "Produit & Expérience utilisateur",
+      "product-uxDesc": "Product management, UX/UI, accessibilité numérique, RGPD & Privacy.",
       "cybersecurity": "Cybersécurité",
       "cybersecurityDesc": "RGPD, ISO 27001, pentest, audit sécurité",
       "ai": "Intelligence artificielle",

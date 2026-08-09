@@ -60,13 +60,11 @@ const ALL_EXPERTISES = getAllSpecialtyIds()
 const COUNTRIES = ['CH', 'FR', 'DE', 'BE', 'LU', 'ES', 'IT', 'NL', 'PT', 'AT', 'PL', 'SE', 'DK', 'FI', 'NO', 'IE', 'CZ', 'HU', 'RO'] as const
 
 const EXPERT_DOMAINS = [
-  { Icon: ShieldCheck,    domainKey: 'cybersecurity',    color: '#5ADDA4' },
-  { Icon: BrainCircuit,   domainKey: 'ai',               color: '#a78bfa' },
-  { Icon: Cpu,            domainKey: 'architecture',     color: '#60a5fa' },
-  { Icon: Scale,          domainKey: 'm_and_a',          color: '#818cf8' },
-  { Icon: ClipboardCheck, domainKey: 'vendor_readiness', color: '#f472b6' },
-  { Icon: FileSearch,     domainKey: 'dd_hr',            color: '#fb923c' },
-  { Icon: TrendingUp,     domainKey: 'valuation',        color: '#34d399' },
+  { Icon: ShieldCheck,    domainKey: 'security',     color: '#5ADDA4' },
+  { Icon: BrainCircuit,   domainKey: 'data-ai',      color: '#a78bfa' },
+  { Icon: Cpu,            domainKey: 'architecture', color: '#60a5fa' },
+  { Icon: Scale,          domainKey: 'transaction',  color: '#818cf8' },
+  { Icon: ClipboardCheck, domainKey: 'product-ux',   color: '#f472b6' },
 ] as const
 
 const PLACEHOLDERS: ExpertProfile[] = [

@@ -31,9 +31,12 @@ export async function GET(req: NextRequest) {
     if (profession) query = query.eq('profession', profession)
     if (country)    query = query.eq('country_code', country)
     if (language)   query = query.contains('languages', [language])
+    // category = valeur de expertise_dimension (tech | transaction | both)
+    if (category)   query = query.eq('expertise_dimension', category)
+    // domain = category id de la taxonomie, stocké dans expertise_categories[]
+    if (domain)     query = query.contains('expertise_categories', [domain])
+    // specialty = specialty id de la taxonomie, stocké dans expertise_specialties[]
     if (specialty)  query = query.contains('expertise_specialties', [specialty])
-    if (category)   query = query.eq('category', category)
-    if (domain)     query = query.contains('domain', [domain])
 
     const { data, error } = await query
 
