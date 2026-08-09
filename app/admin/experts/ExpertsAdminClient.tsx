@@ -245,19 +245,27 @@ function ProfileRow({
           <span className={`font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 border ${
             profile.is_visible
               ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+              : profile.review_status === 'rejected'
+              ? 'bg-red-50 text-red-600 border-red-200'
+              : profile.hidden_reason === 'admin_hidden'
+              ? 'bg-gray-50 text-gray-400 border-gray-200'
+              : profile.review_status === 'approved'
+              ? 'bg-blue-50 text-blue-700 border-blue-200'
               : profile.review_status === 'pending_review'
               ? 'bg-orange-50 text-orange-700 border-orange-200'
-              : !profile.hidden_reason
-              ? 'bg-blue-50 text-blue-700 border-blue-200'
               : 'bg-gray-50 text-gray-400 border-gray-200'
           }`}>
             {profile.is_visible
               ? 'Publiée'
+              : profile.review_status === 'rejected'
+              ? 'Refusée'
+              : profile.hidden_reason === 'admin_hidden'
+              ? 'Masquée (admin)'
+              : profile.review_status === 'approved'
+              ? 'Approuvée — en attente'
               : profile.review_status === 'pending_review'
               ? 'À réviser'
-              : !profile.hidden_reason
-              ? 'En attente'
-              : 'Masquée'}
+              : 'Brouillon'}
           </span>
           <span className={`font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 border ${
             plan === 'active'  ? 'bg-ag-apex/10 text-ag-apex border-ag-apex/30'
@@ -311,34 +319,45 @@ function ProfileRow({
               {patchError}
             </div>
           )}
+          {profile.review_status === 'approved' && !profile.is_visible && profile.hidden_reason !== 'admin_hidden' && (
+            <p className="mb-3 font-sans text-[11px] text-blue-600 bg-blue-50 border border-blue-100 px-3 py-2">
+              Fiche approuvée par l&apos;admin — publication automatique dès que {!kycOk && 'le KYC'}{!kycOk && !planOk && ' et '}{!planOk && 'l\'abonnement'} {!kycOk || !planOk ? 'seront actifs.' : ''}
+            </p>
+          )}
+
           <div className="flex flex-wrap gap-2 mb-3">
-            {!profile.is_visible && (
+            {profile.review_status !== 'approved' && profile.review_status !== 'rejected' && (
               <button
-                onClick={() => patchProfile({ is_visible: true })}
-                disabled={loading || !kycOk || !planOk}
-                title={
-                  !kycOk   ? 'KYC non approuvé — publication impossible'
-                  : !planOk ? 'Abonnement inactif (ni plan actif ni crédit admin) — publication impossible'
-                  : undefined
-                }
-                className={`font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border transition-colors ${
-                  kycOk && planOk
-                    ? 'border-emerald-200 text-emerald-700 hover:bg-emerald-50 disabled:opacity-50'
-                    : 'border-amber-200 text-amber-500 cursor-not-allowed opacity-60'
-                }`}>
-                ✓ Approuver{!kycOk ? ' (KYC requis)' : !planOk ? ' (abo. requis)' : ''}
+                onClick={() => patchProfile({ review_status: 'approved', hidden_reason: null })}
+                disabled={loading}
+                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-emerald-200 text-emerald-700 hover:bg-emerald-50 disabled:opacity-50 transition-colors">
+                ✓ Approuver la fiche
               </button>
             )}
             {profile.is_visible && (
-              <button onClick={() => patchProfile({ is_visible: false, hidden_reason: 'admin_hidden', skip_email: true })} disabled={loading}
+              <button onClick={() => patchProfile({ hidden_reason: 'admin_hidden', skip_email: true })} disabled={loading}
                 className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-gray-200 text-gray-500 hover:border-gray-400 disabled:opacity-50 transition-colors">
                 Masquer (silencieux)
               </button>
             )}
-            <button onClick={() => setShowRefuse(v => !v)} disabled={loading}
-              className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-200 text-red-600 hover:bg-red-50 disabled:opacity-50 transition-colors">
-              Refuser avec motif
-            </button>
+            {!profile.is_visible && profile.hidden_reason === 'admin_hidden' && (
+              <button onClick={() => patchProfile({ hidden_reason: null })} disabled={loading}
+                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-blue-200 text-blue-600 hover:bg-blue-50 disabled:opacity-50 transition-colors">
+                Réafficher
+              </button>
+            )}
+            {profile.review_status !== 'rejected' && (
+              <button onClick={() => setShowRefuse(v => !v)} disabled={loading}
+                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-200 text-red-600 hover:bg-red-50 disabled:opacity-50 transition-colors">
+                Refuser avec motif
+              </button>
+            )}
+            {profile.review_status === 'rejected' && (
+              <button onClick={() => patchProfile({ review_status: 'pending_review', hidden_reason: null })} disabled={loading}
+                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-gray-200 text-gray-500 hover:border-gray-400 disabled:opacity-50 transition-colors">
+                Réinitialiser (repasser en révision)
+              </button>
+            )}
           </div>
 
           {showRefuse && (
@@ -351,7 +370,7 @@ function ProfileRow({
                 className="flex-1 border border-gray-200 px-3 py-2 font-sans text-[12px] focus:outline-none focus:border-gray-400"
               />
               <button
-                onClick={() => { patchProfile({ is_visible: false, hidden_reason: refuseReason }); setShowRefuse(false) }}
+                onClick={() => { patchProfile({ review_status: 'rejected', hidden_reason: refuseReason }); setShowRefuse(false) }}
                 disabled={loading || !refuseReason}
                 className="font-mono text-[9px] uppercase tracking-widest px-3 py-2 bg-red-500 text-white hover:bg-red-600 disabled:opacity-50 transition-colors"
               >
@@ -397,7 +416,7 @@ function ProfileRow({
  * ───────────────────────────────────────────────────────────────────────────── */
 
 function AdminSubscriptionPanel({ profiles }: { profiles: ExpertProfile[] }) {
-  const [open,      setOpen]      = useState(false)
+  const [open,      setOpen]      = useState(true)
   const [userId,    setUserId]    = useState('')
   const [months,    setMonths]    = useState('1')
   const [note,      setNote]      = useState('')
@@ -766,12 +785,9 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
 
   const pendingCount = apps.filter(a => a.status === 'pending').length
 
-  // «En attente / à réviser» :
-  //   - review_status = 'pending_review' (soumission initiale ou re-soumission)
-  //   - OU fiche non publiée sans motif de refus ni review_status (draft non encore soumis écarté)
-  const isPending = (p: ExpertProfile) =>
-    p.review_status === 'pending_review' ||
-    (!p.is_visible && !p.hidden_reason && p.review_status !== 'rejected')
+  // «En attente / à réviser» : uniquement les fiches soumises par le partenaire
+  // et pas encore traitées par un admin (approuvées ou refusées).
+  const isPending = (p: ExpertProfile) => p.review_status === 'pending_review'
 
   const filteredProfs = profs.filter(p => {
     if (filter === 'pending') return isPending(p)
@@ -870,6 +886,8 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
 
         {/* Section 3 — Attribution manuelle abonnement */}
         <AdminSubscriptionPanel profiles={profs} />
+
+        <div className="mb-10" />
 
         {/* Section 4 — Traction réseau (clics) */}
         <TractionPanel

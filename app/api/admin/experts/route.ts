@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient }      from '@/lib/supabase'
 import { checkAdminAccess }         from '@/lib/adminAuth'
+import { syncExpertVisibility }     from '@/lib/expertVisibility'
 
 const PERIOD_INTERVALS: Record<string, string | null> = {
   '1d':  '1 day',
@@ -129,7 +130,8 @@ export async function PATCH(req: NextRequest) {
       })
       .eq('id', id)
     if (error) return NextResponse.json({ error: error.message }, { status: 500 })
-    return NextResponse.json({ ok: true })
+    const isVisible = await syncExpertVisibility(supa, id)
+    return NextResponse.json({ ok: true, is_visible: isVisible })
   }
 
   if (table === 'expert_applications') {
@@ -208,93 +210,70 @@ export async function PATCH(req: NextRequest) {
 
   if (table === 'expert_profiles') {
     const {
-      is_visible,
       hidden_reason,
+      review_status,
       skip_email: _skip,
       ...rest
     } = updates as {
-      is_visible?:    boolean
       hidden_reason?: string | null
+      review_status?: 'pending_review' | 'approved' | 'rejected'
       skip_email?:    boolean
       [k: string]:    unknown
     }
 
+    const { data: before } = await supa
+      .from('expert_profiles')
+      .select('user_id, is_visible')
+      .eq('id', id)
+      .maybeSingle()
+
     const patch: Record<string, unknown> = { ...rest }
+    if (review_status !== undefined) patch.review_status = review_status
+    if (hidden_reason  !== undefined) patch.hidden_reason  = hidden_reason
 
-    // Guards de publication : KYC approuvé + abonnement actif (ou crédit manuel valide)
-    if (is_visible === true) {
-      const { data: ep } = await supa
-        .from('expert_profiles')
-        .select('user_id')
-        .eq('id', id)
-        .maybeSingle()
-
-      if (ep?.user_id) {
-        const { data: owner } = await supa
-          .from('profiles')
-          .select('kyc_status, expert_plan, expert_plan_end')
-          .eq('id', ep.user_id)
-          .maybeSingle() as {
-            data: {
-              kyc_status:     string | null
-              expert_plan:    string | null
-              expert_plan_end: string | null
-            } | null
-          }
-
-        if (owner?.kyc_status !== 'approved') {
-          return NextResponse.json(
-            { error: 'kyc_not_approved', message: 'Le KYC du partenaire doit être approuvé avant la publication.' },
-            { status: 422 }
-          )
-        }
-
-        const hasActivePlan  = owner?.expert_plan === 'active'
-        const hasCreditUntil = owner?.expert_plan_end
-          ? new Date(owner.expert_plan_end) > new Date()
-          : false
-
-        if (!hasActivePlan && !hasCreditUntil) {
-          return NextResponse.json(
-            { error: 'no_active_plan', message: 'Le partenaire doit avoir un abonnement actif (ou un crédit admin valide) pour que sa fiche soit publiée.' },
-            { status: 422 }
-          )
-        }
-      }
-    }
-
-    if (is_visible !== undefined) {
-      patch.is_visible    = is_visible
-      patch.verified_at   = is_visible ? new Date().toISOString() : null
-      patch.hidden_reason = is_visible ? null : (hidden_reason ?? null)
-      patch.review_status = is_visible ? null : (hidden_reason ? 'rejected' : null)
+    // Refus explicite : la fiche est immédiatement masquée, aucune republication auto tant que non re-soumise
+    if (review_status === 'rejected') {
+      patch.is_visible  = false
+      patch.verified_at = null
     }
 
     const { error } = await supa.from('expert_profiles').update(patch).eq('id', id)
     if (error) return NextResponse.json({ error: error.message }, { status: 500 })
 
-    // Notif in-app vers le partenaire propriétaire de la fiche
-    if (is_visible !== undefined) {
-      const { data: ep } = await supa
-        .from('expert_profiles')
-        .select('user_id')
-        .eq('id', id)
-        .maybeSingle()
+    // Publication automatique : recalcule is_visible selon les 3 prérequis
+    // (review approuvé + KYC approuvé + abonnement actif), sauf en cas de refus explicite
+    let finalVisible: boolean | null = review_status === 'rejected' ? false : null
+    if (before?.user_id && review_status !== 'rejected') {
+      finalVisible = await syncExpertVisibility(supa, before.user_id)
+    }
 
-      if (ep?.user_id) {
-        const notifTitle = is_visible
-          ? 'Votre fiche expert a été validée et publiée'
-          : hidden_reason
-            ? 'Votre fiche expert a été refusée'
-            : 'Votre fiche expert a été masquée'
-        const notifBody = is_visible
-          ? 'Votre profil est maintenant visible dans l\'annuaire AEGRYN.'
-          : hidden_reason
-            ? `Motif : ${hidden_reason}. Mettez à jour votre fiche et soumettez à nouveau.`
-            : 'Votre fiche a été temporairement masquée par l\'administration.'
+    // Notif in-app vers le partenaire propriétaire de la fiche
+    if (before?.user_id && (review_status !== undefined || hidden_reason !== undefined)) {
+      const becamePublished = finalVisible === true && !before.is_visible
+      const wasRejected      = review_status === 'rejected'
+      const wasSilentHidden  = hidden_reason === 'admin_hidden'
+      const approvedPending  = review_status === 'approved' && finalVisible === false
+
+      let notifTitle: string | null = null
+      let notifBody = ''
+      if (becamePublished) {
+        notifTitle = 'Votre fiche expert a été validée et publiée'
+        notifBody  = 'Votre profil est maintenant visible dans l\'annuaire AEGRYN.'
+      } else if (wasRejected) {
+        notifTitle = 'Votre fiche expert a été refusée'
+        notifBody  = `Motif : ${hidden_reason}. Mettez à jour votre fiche et soumettez à nouveau.`
+      } else if (wasSilentHidden) {
+        notifTitle = 'Votre fiche expert a été masquée'
+        notifBody  = 'Votre fiche a été temporairement masquée par l\'administration.'
+      } else if (approvedPending) {
+        notifTitle = 'Votre fiche expert a été validée par l\'équipe AEGRYN'
+        notifBody  = 'Elle sera publiée automatiquement dès que votre KYC et votre abonnement seront actifs.'
+      }
+
+      if (notifTitle) {
         await supa.from('user_notifications').insert({
-          user_id: ep.user_id,
-          type:    is_visible ? 'broadcast_info' : 'broadcast_alert',
+          user_id: before.user_id,
+          type:    (becamePublished || approvedPending) ? 'broadcast_info' : 'broadcast_alert',
           title:   notifTitle,
           body:    notifBody,
           link:    '/client/partner/expert-profile',
@@ -302,7 +281,7 @@ export async function PATCH(req: NextRequest) {
       }
     }
 
-    return NextResponse.json({ ok: true })
+    return NextResponse.json({ ok: true, is_visible: finalVisible })
   }
 
   return NextResponse.json({ error: 'unknown_table' }, { status: 400 })

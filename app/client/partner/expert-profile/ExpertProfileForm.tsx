@@ -231,8 +231,9 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
   const isVisible    = Boolean(existing?.is_visible) && !pendingReview
   const hiddenReason = pendingReview ? null : (existing?.hidden_reason ?? null)
   const isPending    = pendingReview
-  const isRefused    = !pendingReview && !isNew && !Boolean(existing?.is_visible) && Boolean(existing?.hidden_reason)
-  const isDraft      = !isNew && !isPending && !isVisible && !isRefused
+  const isRefused    = !pendingReview && !isNew && !Boolean(existing?.is_visible) && existing?.review_status === 'rejected'
+  const isApprovedWaiting = !pendingReview && !isNew && !isVisible && !isRefused && existing?.review_status === 'approved'
+  const isDraft      = !isNew && !isPending && !isVisible && !isRefused && !isApprovedWaiting
 
   const canSubmit = canPublish
 
@@ -245,20 +246,23 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
       {/* Statut */}
       <div className={`border p-4 flex items-start gap-3 ${
         isVisible  ? 'border-emerald-200 bg-emerald-50'
+        : isApprovedWaiting ? 'border-blue-200 bg-blue-50'
         : isPending ? 'border-blue-200 bg-blue-50'
         : isRefused ? 'border-red-200 bg-red-50'
         : isDraft   ? 'border-gray-200 bg-gray-50'
         : 'border-amber-200 bg-amber-50'
       }`}>
         <CheckCircle2 size={15} className={`mt-0.5 shrink-0 ${
-          isVisible ? 'text-emerald-500' : isPending ? 'text-blue-500' : isRefused ? 'text-red-400' : 'text-gray-400'
+          isVisible ? 'text-emerald-500' : isPending || isApprovedWaiting ? 'text-blue-500' : isRefused ? 'text-red-400' : 'text-gray-400'
         }`} />
         <div>
           <p className={`font-sans font-semibold text-[12px] ${
-            isVisible ? 'text-emerald-800' : isPending ? 'text-blue-800' : isRefused ? 'text-red-700' : 'text-gray-700'
+            isVisible ? 'text-emerald-800' : isPending || isApprovedWaiting ? 'text-blue-800' : isRefused ? 'text-red-700' : 'text-gray-700'
           }`}>
             {isVisible
               ? 'Fiche publiée dans l\'annuaire'
+              : isApprovedWaiting
+              ? 'Fiche validée par AEGRYN — en attente de publication'
               : isPending
               ? 'Fiche soumise — en attente de validation AEGRYN'
               : isRefused
@@ -267,6 +271,11 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
               ? 'Fiche enregistrée en brouillon — non soumise à l\'admin'
               : 'Nouvelle fiche — enregistrez puis soumettez pour validation'}
           </p>
+          {isApprovedWaiting && (
+            <p className="font-sans text-[11px] text-blue-600 mt-0.5">
+              Votre contenu a été validé. La publication se fera automatiquement dès que votre KYC et votre abonnement seront actifs.
+            </p>
+          )}
           {isPending && (
             <p className="font-sans text-[11px] text-blue-600 mt-0.5">
               L&apos;équipe AEGRYN examinera votre fiche sous 48h. Vous recevrez une notification dès la décision.

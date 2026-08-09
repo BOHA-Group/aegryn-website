@@ -73,9 +73,7 @@ export default async function AdminIndexPage({
   ])
 
   const expertProfilesPendingCount = (expertProfilesData ?? []).filter(
-    (p: { is_visible: boolean; hidden_reason: string | null; review_status: string | null }) =>
-      p.review_status === 'pending_review' ||
-      (!p.is_visible && !p.hidden_reason && p.review_status !== 'rejected')
+    (p: { review_status: string | null }) => p.review_status === 'pending_review'
   ).length
   const expertsPending = (expertAppsPending ?? 0) + expertProfilesPendingCount
 

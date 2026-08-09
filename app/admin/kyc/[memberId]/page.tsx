@@ -6,6 +6,7 @@ import Link                    from 'next/link'
 import SignedDocLink            from './SignedDocLink'
 import DocActions               from './DocActions'
 import { sendEmail, emailKycApproved } from '@/lib/sendEmail'
+import { syncExpertVisibility } from '@/lib/expertVisibility'
 
 export const metadata: Metadata = {
   title: 'Dossier KYC — AEGRYN Admin',
@@ -67,6 +68,8 @@ export default async function AdminKycMemberPage({
     await supa.from('profiles').update({
       kyc_status: params.global,
     }).eq('id', memberId)
+
+    await syncExpertVisibility(supa, memberId)
 
     /* Email final si approbation complète */
     if (params.global === 'approved') {
