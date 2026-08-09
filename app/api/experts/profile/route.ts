@@ -207,13 +207,25 @@ export async function PATCH(req: NextRequest) {
 
     const body = updateSchema.partial().parse(rawBody)
 
+    const { data: currentEp } = await supa
+      .from('expert_profiles')
+      .select('review_status')
+      .eq('user_id', user.id)
+      .maybeSingle()
+
+    const alreadyApproved = currentEp?.review_status === 'approved'
+
     const updatePayload: Record<string, unknown> = { ...body }
 
     if (isSubmit) {
-      updatePayload.is_visible    = false
-      updatePayload.verified_at   = null
       updatePayload.hidden_reason = null
-      updatePayload.review_status = 'pending_review'
+      if (alreadyApproved) {
+        updatePayload.review_status = 'approved'
+      } else {
+        updatePayload.is_visible    = false
+        updatePayload.verified_at   = null
+        updatePayload.review_status = 'pending_review'
+      }
     }
 
     const { error } = await supa
@@ -223,7 +235,9 @@ export async function PATCH(req: NextRequest) {
 
     if (error) throw error
 
-    if (isSubmit) {
+    if (isSubmit && alreadyApproved) {
+      await syncExpertVisibility(supa, user.id)
+    } else if (isSubmit) {
       const { data: profile } = await supa
         .from('profiles')
         .select('full_name, email')
@@ -238,7 +252,7 @@ export async function PATCH(req: NextRequest) {
       )
     }
 
-    return NextResponse.json({ ok: true, submitted: isSubmit })
+    return NextResponse.json({ ok: true, submitted: isSubmit, auto_published: isSubmit && alreadyApproved })
   } catch (err) {
     if (err instanceof z.ZodError) {
       return NextResponse.json({ error: 'validation', issues: err.issues }, { status: 400 })

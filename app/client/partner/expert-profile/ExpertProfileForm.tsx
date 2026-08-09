@@ -597,7 +597,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
             }`}
           >
             {submitting && <Loader2 size={13} className="animate-spin" />}
-            {isPending ? 'Soumise — en attente' : 'Soumettre pour publication'}
+            {isPending ? 'Soumise — en attente' : isApprovedWaiting ? 'Publier ma fiche' : 'Soumettre pour publication'}
           </button>
         )}
 
