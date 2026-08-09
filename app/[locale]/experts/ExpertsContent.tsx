@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
-import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, TrendingUp, Scale, FileSearch, Cpu, ClipboardCheck, X } from 'lucide-react'
+import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, Scale, Cpu, ClipboardCheck, X } from 'lucide-react'
 import {
   EXPERTISE_TAXONOMY,
   getCategoryIdsByDimension,
