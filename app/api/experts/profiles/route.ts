@@ -31,8 +31,8 @@ export async function GET(req: NextRequest) {
     if (profession) query = query.eq('profession', profession)
     if (country)    query = query.eq('country_code', country)
     if (language)   query = query.contains('languages', [language])
-    // category = valeur de expertise_dimension (tech | transaction | both)
-    if (category)   query = query.eq('expertise_dimension', category)
+    // category = valeur de expertise_dimension — inclure 'both' dans les deux dimensions
+    if (category)   query = query.in('expertise_dimension', [category, 'both'])
     // domain = category id de la taxonomie, stocké dans expertise_categories[]
     if (domain)     query = query.contains('expertise_categories', [domain])
     // specialty = specialty id de la taxonomie, stocké dans expertise_specialties[]
