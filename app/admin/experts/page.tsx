@@ -44,7 +44,11 @@ export default async function AdminExpertsPage({
       .select('*'),
   ])
 
-  console.log('[admin/experts] profiles count:', profiles?.length, 'errProfs:', errProfs, 'apps count:', applications?.length, 'errApps:', errApps)
+  const { count: rawCount, error: rawErr } = await supa
+    .from('expert_profiles')
+    .select('*', { count: 'exact', head: true })
+  console.log('[admin/experts] raw count:', rawCount, 'rawErr:', rawErr)
+  console.log('[admin/experts] profiles count:', profiles?.length, 'errProfs:', errProfs?.message, 'apps count:', applications?.length, 'errApps:', errApps?.message)
 
   const tokenQs = params.token ? `?token=${params.token}` : ''
 

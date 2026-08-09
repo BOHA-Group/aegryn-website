@@ -4963,5 +4963,13 @@
       "Investor": "Inversor / Family Office",
       "Other": "Otro"
     }
+  },
+  "assetGrid": {
+    "notStarted": "No iniciado",
+    "sectionLabel": "Nuestro ecosistema",
+    "sectionTitle": "Lo que\nconstruimos.",
+    "tier1Label": "Activos principales",
+    "tier2Label": "En desarrollo",
+    "cta": "Enviar un activo"
   }
 }

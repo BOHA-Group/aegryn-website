@@ -4967,5 +4967,13 @@
       "Investor": "Investor / Family Office",
       "Other": "Other"
     }
+  },
+  "assetGrid": {
+    "notStarted": "Not started",
+    "sectionLabel": "Our ecosystem",
+    "sectionTitle": "What we\nbuild.",
+    "tier1Label": "Core assets",
+    "tier2Label": "In development",
+    "cta": "Submit an asset"
   }
 }

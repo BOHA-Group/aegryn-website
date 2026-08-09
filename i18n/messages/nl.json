@@ -4963,5 +4963,13 @@
       "Investor": "Investeerder / Family Office",
       "Other": "Overige"
     }
+  },
+  "assetGrid": {
+    "notStarted": "Niet gestart",
+    "sectionLabel": "Ons ecosysteem",
+    "sectionTitle": "Wat we\nbouwen.",
+    "tier1Label": "Kernactiva",
+    "tier2Label": "In ontwikkeling",
+    "cta": "Actief indienen"
   }
 }
