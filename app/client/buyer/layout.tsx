@@ -37,6 +37,7 @@ export default async function BuyerLayout({ children }: { children: React.ReactN
     .select('id', { count: 'exact', head: true })
     .eq('user_id', user.id)
     .is('read_at', null)
+    .is('dismissed_at', null)
     .then(r => r.error ? { count: 0 } : r)
 
   const displayName = profile?.full_name ?? user.email ?? ''

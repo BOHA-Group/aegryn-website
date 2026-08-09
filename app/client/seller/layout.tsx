@@ -33,7 +33,7 @@ export default async function SellerLayout({ children }: { children: React.React
   const hasPartner = roles.includes('partner')
 
   const [{ count: unreadCount }, { data: byEmail }, { data: byUid }] = await Promise.all([
-    supa.from('user_notifications').select('id', { count: 'exact', head: true }).eq('user_id', user.id).is('read_at', null),
+    supa.from('user_notifications').select('id', { count: 'exact', head: true }).eq('user_id', user.id).is('read_at', null).is('dismissed_at', null),
     supa.from('assets').select('id, company_name').eq('seller_email', user.email!).not('status', 'eq', 'pending_payment').order('submitted_at', { ascending: false }),
     supa.from('assets').select('id, company_name').eq('seller_uid', user.id).not('status', 'eq', 'pending_payment').order('submitted_at', { ascending: false }),
   ])

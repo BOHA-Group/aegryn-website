@@ -33,6 +33,7 @@ export default async function PartnerLayout({ children }: { children: React.Reac
     .select('id', { count: 'exact', head: true })
     .eq('user_id', user.id)
     .is('read_at', null)
+    .is('dismissed_at', null)
 
   const displayName = profile?.full_name ?? user.email ?? ''
   const t = await getTranslations('clientSpace')
