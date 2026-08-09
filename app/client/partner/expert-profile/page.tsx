@@ -123,35 +123,11 @@ export default async function PartnerExpertProfilePage() {
         </div>
       </div>
 
-      {/* Info : abonnement requis pour la publication finale */}
-      {!subscriptionActive && existingExpertProfile && (
-        <div className="bg-blue-50 border border-blue-200 px-5 py-4 mb-8">
-          <p className="font-sans font-semibold text-blue-900 text-[13px] mb-1">
-            Fiche soumise — publication conditionnée à la validation admin et à l&apos;abonnement
-          </p>
-          <p className="font-sans text-[12px] text-blue-700">
-            Votre fiche est en cours d&apos;examen. Une fois validée et votre abonnement actif, elle apparaîtra dans l&apos;annuaire.{' '}
-            <Link href="/client/partner/subscription" className="underline font-medium">Activer l&apos;abonnement →</Link>
-          </p>
-        </div>
-      )}
-      {!subscriptionActive && !existingExpertProfile && (
-        <div className="bg-gray-50 border border-gray-200 px-5 py-4 mb-8">
-          <p className="font-sans font-semibold text-gray-700 text-[13px] mb-1">
-            Soumettez votre fiche pour examen
-          </p>
-          <p className="font-sans text-[12px] text-gray-500">
-            Remplissez et soumettez votre fiche. L&apos;équipe AEGRYN la validera sous 48h.
-            La publication dans l&apos;annuaire requiert un abonnement actif.{' '}
-            <Link href="/client/partner/subscription" className="underline font-medium">Activer l&apos;abonnement →</Link>
-          </p>
-        </div>
-      )}
       </div> {/* end max-w-2xl */}
 
-      {/* Formulaire — toujours affiché pour permettre la saisie, mais submission bloquée si prérequis manquants */}
       <ExpertProfileForm
-        canPublish={true}
+        kycApproved={kycApproved}
+        subscriptionActive={subscriptionActive}
         existing={existingExpertProfile as {
           id?: string
           first_name: string

@@ -64,8 +64,9 @@ type ExpertProfileData = {
 }
 
 type Props = {
-  existing:   ExpertProfileData | null
-  canPublish: boolean
+  existing:            ExpertProfileData | null
+  kycApproved:         boolean
+  subscriptionActive:  boolean
 }
 
 /* Supprime l'indicatif préfixé en DB (ex: "+33 633..." ou "+33633...") pour n'afficher que les chiffres locaux */
@@ -74,7 +75,7 @@ function stripDial(phone: string | undefined): string {
   return phone.replace(/^\+\d{1,4}\s*/, '').trim()
 }
 
-export default function ExpertProfileForm({ existing, canPublish }: Props) {
+export default function ExpertProfileForm({ existing, kycApproved, subscriptionActive }: Props) {
   const [form, setForm] = useState({
     first_name:    existing?.first_name    ?? '',
     last_name:     existing?.last_name     ?? '',
@@ -287,12 +288,14 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
   const isVisible    = Boolean(existing?.is_visible) && !pendingReview
   const hiddenReason = pendingReview ? null : (existing?.hidden_reason ?? null)
   const isPending    = pendingReview
-  const isRefused    = !pendingReview && !isNew && !Boolean(existing?.is_visible) && existing?.review_status === 'rejected'
+  const isRefused    = !pendingReview && !isNew && !isVisible && existing?.review_status === 'rejected'
   const isSelfHidden = !pendingReview && !isNew && !isVisible && hiddenReason === 'self_hidden'
-  const isApprovedWaiting = !pendingReview && !isNew && !isVisible && !isRefused && !isSelfHidden && existing?.review_status === 'approved'
-  const isDraft      = !isNew && !isPending && !isVisible && !isRefused && !isApprovedWaiting && !isSelfHidden
-
-  const canSubmit = canPublish
+  const isApproved   = !pendingReview && !isNew && existing?.review_status === 'approved'
+  // Validée admin, prérequis manquants (KYC ou abonnement)
+  const isApprovedMissingPrereqs = isApproved && !isVisible && !isSelfHidden && (!kycApproved || !subscriptionActive)
+  // Validée admin, tous prérequis OK, prête à publier (ou masquée volontairement)
+  const isApprovedReady = isApproved && !isVisible && !isSelfHidden && kycApproved && subscriptionActive
+  const isDraft      = !isNew && !isPending && !isVisible && !isRefused && !isApproved && !isSelfHidden
 
   return (
     <div>
@@ -300,64 +303,85 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
     {/* ── Formulaire ── */}
     <form onSubmit={handleSave} className="space-y-8 max-w-2xl">
 
-      {/* Statut */}
-      <div className={`border p-4 flex items-start gap-3 ${
-        isVisible       ? 'border-emerald-200 bg-emerald-50'
-        : isSelfHidden  ? 'border-gray-200 bg-gray-50'
-        : isApprovedWaiting ? 'border-blue-200 bg-blue-50'
-        : isPending     ? 'border-blue-200 bg-blue-50'
-        : isRefused     ? 'border-red-200 bg-red-50'
-        : isDraft       ? 'border-gray-200 bg-gray-50'
-        : 'border-amber-200 bg-amber-50'
-      }`}>
-        <CheckCircle2 size={15} className={`mt-0.5 shrink-0 ${
-          isVisible ? 'text-emerald-500' : isPending || isApprovedWaiting ? 'text-blue-500' : isRefused ? 'text-red-400' : 'text-gray-400'
-        }`} />
-        <div>
-          <p className={`font-sans font-semibold text-[12px] ${
-            isVisible ? 'text-emerald-800' : isPending || isApprovedWaiting ? 'text-blue-800' : isRefused ? 'text-red-700' : 'text-gray-700'
-          }`}>
-            {isVisible
-              ? 'Fiche publiée dans l\'annuaire'
-              : isSelfHidden
-              ? 'Fiche masquée de l\'annuaire'
-              : isApprovedWaiting
-              ? 'Fiche validée par AEGRYN — en attente de publication'
-              : isPending
-              ? 'Fiche soumise — en attente de validation AEGRYN'
-              : isRefused
-              ? 'Fiche refusée par l\'équipe AEGRYN'
-              : isDraft
-              ? 'Fiche enregistrée en brouillon — non soumise à l\'admin'
-              : 'Nouvelle fiche — enregistrez puis soumettez pour validation'}
-          </p>
-          {isSelfHidden && (
-            <p className="font-sans text-[11px] text-gray-500 mt-0.5">
-              Vous avez masqué votre fiche. Cliquez sur <strong>Réafficher ma fiche</strong> pour la republier dans l\'annuaire.
-            </p>
-          )}
-          {isApprovedWaiting && (
-            <p className="font-sans text-[11px] text-blue-600 mt-0.5">
-              Votre contenu a été validé. La publication se fera automatiquement dès que votre KYC et votre abonnement seront actifs.
-            </p>
-          )}
-          {isPending && (
-            <p className="font-sans text-[11px] text-blue-600 mt-0.5">
-              L&apos;équipe AEGRYN examinera votre fiche sous 48h. Vous recevrez une notification dès la décision.
-            </p>
-          )}
-          {isDraft && (
-            <p className="font-sans text-[11px] text-gray-500 mt-0.5">
-              Enregistrez vos modifications puis cliquez sur <strong>Soumettre pour publication</strong> pour déclencher la revue admin.
-            </p>
-          )}
-          {isRefused && hiddenReason && hiddenReason !== 'admin_hidden' && (
-            <p className="font-sans text-[11px] text-red-600 mt-0.5">
-              Motif : {hiddenReason}. Corrigez puis soumettez à nouveau.
-            </p>
-          )}
+      {/* ── Banner dynamique ── */}
+      {isVisible && (
+        <div className="border border-emerald-200 bg-emerald-50 px-4 py-3 flex items-start gap-3">
+          <CheckCircle2 size={15} className="text-emerald-500 mt-0.5 shrink-0" />
+          <div>
+            <p className="font-sans font-semibold text-[12px] text-emerald-800">Fiche publiée dans l&apos;annuaire</p>
+            <p className="font-sans text-[11px] text-emerald-700 mt-0.5">Votre profil est visible publiquement. Vous pouvez le masquer à tout moment.</p>
+          </div>
         </div>
-      </div>
+      )}
+      {isSelfHidden && (
+        <div className="border border-gray-200 bg-gray-50 px-4 py-3 flex items-start gap-3">
+          <CheckCircle2 size={15} className="text-gray-400 mt-0.5 shrink-0" />
+          <div>
+            <p className="font-sans font-semibold text-[12px] text-gray-700">Fiche masquée</p>
+            <p className="font-sans text-[11px] text-gray-500 mt-0.5">Vous avez masqué votre fiche. Cliquez sur <strong>Réafficher ma fiche</strong> pour la republier.</p>
+          </div>
+        </div>
+      )}
+      {isApprovedMissingPrereqs && (
+        <div className="border border-amber-200 bg-amber-50 px-4 py-3 flex items-start gap-3">
+          <CheckCircle2 size={15} className="text-amber-500 mt-0.5 shrink-0" />
+          <div>
+            <p className="font-sans font-semibold text-[12px] text-amber-800">Fiche validée — prérequis manquants avant publication</p>
+            <p className="font-sans text-[11px] text-amber-700 mt-0.5">
+              {!kycApproved && !subscriptionActive && 'Complétez votre KYC et activez votre abonnement pour publier votre fiche.'}
+              {!kycApproved && subscriptionActive && 'Complétez votre vérification KYC pour publier votre fiche.'}
+              {kycApproved && !subscriptionActive && 'Activez votre abonnement expert pour publier votre fiche.'}
+            </p>
+          </div>
+        </div>
+      )}
+      {isApprovedReady && (
+        <div className="border border-blue-200 bg-blue-50 px-4 py-3 flex items-start gap-3">
+          <CheckCircle2 size={15} className="text-blue-500 mt-0.5 shrink-0" />
+          <div>
+            <p className="font-sans font-semibold text-[12px] text-blue-800">Fiche validée — prête à publier</p>
+            <p className="font-sans text-[11px] text-blue-600 mt-0.5">Votre contenu est validé, votre KYC et abonnement sont actifs. Cliquez sur <strong>Publier ma fiche</strong>.</p>
+          </div>
+        </div>
+      )}
+      {isPending && (
+        <div className="border border-blue-200 bg-blue-50 px-4 py-3 flex items-start gap-3">
+          <CheckCircle2 size={15} className="text-blue-500 mt-0.5 shrink-0" />
+          <div>
+            <p className="font-sans font-semibold text-[12px] text-blue-800">Fiche soumise — en attente de validation AEGRYN</p>
+            <p className="font-sans text-[11px] text-blue-600 mt-0.5">L&apos;équipe AEGRYN examinera votre fiche sous 48h. Vous recevrez une notification dès la décision.</p>
+          </div>
+        </div>
+      )}
+      {isRefused && (
+        <div className="border border-red-200 bg-red-50 px-4 py-3 flex items-start gap-3">
+          <CheckCircle2 size={15} className="text-red-400 mt-0.5 shrink-0" />
+          <div>
+            <p className="font-sans font-semibold text-[12px] text-red-700">Fiche refusée par l&apos;équipe AEGRYN</p>
+            {hiddenReason && hiddenReason !== 'admin_hidden' && (
+              <p className="font-sans text-[11px] text-red-600 mt-0.5">Motif : {hiddenReason}. Corrigez votre fiche puis soumettez à nouveau.</p>
+            )}
+          </div>
+        </div>
+      )}
+      {isDraft && (
+        <div className="border border-gray-200 bg-gray-50 px-4 py-3 flex items-start gap-3">
+          <CheckCircle2 size={15} className="text-gray-400 mt-0.5 shrink-0" />
+          <div>
+            <p className="font-sans font-semibold text-[12px] text-gray-700">Brouillon — fiche non soumise</p>
+            <p className="font-sans text-[11px] text-gray-500 mt-0.5">Enregistrez vos modifications puis cliquez sur <strong>Soumettre pour revue</strong> pour déclencher la validation admin.</p>
+          </div>
+        </div>
+      )}
+      {isNew && (
+        <div className="border border-gray-200 bg-gray-50 px-4 py-3 flex items-start gap-3">
+          <CheckCircle2 size={15} className="text-gray-400 mt-0.5 shrink-0" />
+          <div>
+            <p className="font-sans font-semibold text-[12px] text-gray-700">Nouvelle fiche</p>
+            <p className="font-sans text-[11px] text-gray-500 mt-0.5">Remplissez votre fiche et cliquez sur <strong>Soumettre pour revue</strong> — l&apos;équipe AEGRYN la valide sous 48h.</p>
+          </div>
+        </div>
+      )}
 
       {/* Photo de profil */}
       <div>
@@ -555,7 +579,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
       {saved && (
         <div className="bg-gray-50 border border-gray-200 px-4 py-3 text-[12px] text-gray-700 flex items-center gap-2">
           <CheckCircle2 size={14} className="text-gray-400" />
-          Modifications enregistrées en brouillon. Cliquez sur &quot;Soumettre pour publication&quot; pour déclencher la revue admin.
+          Modifications enregistrées. Cliquez sur <strong className="ml-1">Soumettre pour revue</strong> pour déclencher la validation admin.
         </div>
       )}
       {submitted && (
@@ -565,14 +589,8 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
         </div>
       )}
 
-      {!canSubmit && (
-        <div className="bg-amber-50 border border-amber-200 px-4 py-3 text-[12px] text-amber-700">
-          La soumission est temporairement indisponible. Contactez l&apos;équipe AEGRYN.
-        </div>
-      )}
-
-      {/* 2 boutons distincts pour les fiches existantes */}
       <div className="flex flex-wrap items-center gap-3">
+        {/* Enregistrer — toujours présent */}
         <button
           type="submit"
           disabled={saving || submitting}
@@ -582,26 +600,8 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
           {isNew ? 'Enregistrer la fiche' : 'Enregistrer les modifications'}
         </button>
 
-        {!isNew && (
-          <button
-            type="button"
-            disabled={saving || submitting || isPending}
-            onClick={handleSubmitForReview}
-            title={isPending ? 'Fiche déjà soumise — en attente de validation' : undefined}
-            className={`flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 transition-colors ${
-              isPending
-                ? 'bg-blue-50 text-blue-400 border border-blue-200 cursor-not-allowed opacity-70'
-                : canSubmit
-                ? 'bg-ag-navy text-white hover:bg-gray-800 disabled:opacity-50'
-                : 'bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200'
-            }`}
-          >
-            {submitting && <Loader2 size={13} className="animate-spin" />}
-            {isPending ? 'Soumise — en attente' : isApprovedWaiting ? 'Publier ma fiche' : 'Soumettre pour publication'}
-          </button>
-        )}
-
-        {isNew && (
+        {/* Soumettre pour revue admin — nouvelle fiche, brouillon ou refusée */}
+        {(isNew || isDraft || isRefused) && (
           <button
             type="button"
             disabled={saving || submitting}
@@ -609,10 +609,47 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
             className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 bg-ag-navy text-white hover:bg-gray-800 disabled:opacity-50 transition-colors"
           >
             {submitting && <Loader2 size={13} className="animate-spin" />}
-            Soumettre pour publication
+            Soumettre pour revue
           </button>
         )}
 
+        {/* En attente de validation — désactivé */}
+        {isPending && (
+          <button
+            type="button"
+            disabled
+            className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 bg-blue-50 text-blue-400 border border-blue-200 cursor-not-allowed opacity-70"
+          >
+            En attente de validation…
+          </button>
+        )}
+
+        {/* Validée mais prérequis manquants — désactivé avec indication */}
+        {isApprovedMissingPrereqs && (
+          <button
+            type="button"
+            disabled
+            className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 bg-gray-100 text-gray-400 border border-gray-200 cursor-not-allowed"
+            title={!kycApproved ? 'KYC requis' : 'Abonnement requis'}
+          >
+            Publier ma fiche {!kycApproved ? '— KYC requis' : '— Abonnement requis'}
+          </button>
+        )}
+
+        {/* Prête à publier — actif */}
+        {isApprovedReady && (
+          <button
+            type="button"
+            disabled={saving || submitting}
+            onClick={handleSubmitForReview}
+            className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 bg-ag-navy text-white hover:bg-gray-800 disabled:opacity-50 transition-colors"
+          >
+            {submitting && <Loader2 size={13} className="animate-spin" />}
+            Publier ma fiche
+          </button>
+        )}
+
+        {/* Publiée — masquer */}
         {isVisible && (
           <button
             type="button"
@@ -624,6 +661,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
           </button>
         )}
 
+        {/* Masquée — réafficher */}
         {isSelfHidden && (
           <button
             type="button"
@@ -635,6 +673,7 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
           </button>
         )}
 
+        {/* Repartir de zéro */}
         {!isNew && (
           <button
             type="button"
