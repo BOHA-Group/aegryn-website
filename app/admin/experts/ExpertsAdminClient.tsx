@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useTransition } from 'react'
+import { useRouter } from 'next/navigation'
 import { ChevronDown, ChevronUp, Loader2, PlusCircle, TrendingUp, Mail, Globe, Clock, Trash2 } from 'lucide-react'
 
 type Application = {
@@ -736,6 +737,8 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
   const [period,  setPeriod]  = useState(initialPeriod ?? 'all')
   const [filter,  setFilter]  = useState<'all' | 'pending' | 'visible' | 'hidden'>('all')
   const [loading, setLoading] = useState(false)
+  const router = useRouter()
+  const [isRefreshing, startTransition] = useTransition()
 
   /* Scroll vers anchor après hydratation (ex: lien notif /admin/experts#expert-xxx) */
   useEffect(() => {
@@ -747,28 +750,9 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
     }
   }, [])
 
-  async function refresh(p?: string) {
-    const activePeriod = p ?? period
-    setLoading(true)
-    try {
-      const qs  = tokenQs
-        ? `${tokenQs}&period=${activePeriod}`
-        : `?period=${activePeriod}`
-      const res  = await fetch(`/api/admin/experts${qs}`)
-      if (!res.ok) {
-        console.error('[admin/experts] refresh HTTP', res.status, await res.text())
-        setLoading(false)
-        return
-      }
-      const data = await res.json()
-      setApps(data.applications ?? [])
-      setProfs(data.profiles    ?? [])
-      setStats(data.clickStats  ?? [])
-    } catch (err) {
-      console.error('[admin/experts] refresh error', err)
-    } finally {
-      setLoading(false)
-    }
+  function refresh(p?: string) {
+    void (p ?? period)
+    startTransition(() => { router.refresh() })
   }
 
   async function handlePeriodChange(p: string) {
@@ -811,10 +795,10 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
           </div>
           <button
             onClick={() => refresh()}
-            disabled={loading}
+            disabled={loading || isRefreshing}
             className="font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-3 py-1.5 hover:border-gray-400 disabled:opacity-50 transition-colors"
           >
-            {loading ? 'Chargement…' : 'Actualiser'}
+            {loading || isRefreshing ? 'Chargement…' : 'Actualiser'}
           </button>
         </div>
 
