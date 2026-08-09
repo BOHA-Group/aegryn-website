@@ -60,6 +60,7 @@ type ExpertProfileData = {
   is_visible: boolean
   verified_at: string | null
   hidden_reason: string | null
+  review_status: string | null
 }
 
 type Props = {
@@ -99,8 +100,12 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
   })
 
   const [saving,        setSaving]        = useState(false)
+  const [submitting,    setSubmitting]    = useState(false)
   const [saved,         setSaved]         = useState(false)
-  const [pendingReview, setPendingReview] = useState(false)
+  const [submitted,     setSubmitted]     = useState(false)
+  const [pendingReview, setPendingReview] = useState(
+    existing?.review_status === 'pending_review'
+  )
   const [error,         setError]         = useState<string | null>(null)
   const [avatarUrl,     setAvatarUrl]     = useState<string | null>(existing?.avatar_url ?? null)
   const [avatarLoading, setAvatarLoading] = useState(false)
@@ -157,94 +162,124 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
     }
   }
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    setSaving(true)
-    setSaved(false)
-    setError(null)
-
-    const localDigits = form.phone.replace(/\s/g, '')
-    const phoneFormatted = localDigits
-      ? `${phoneCountryData.dial} ${localDigits}`
-      : ''
-
-    const payload: Record<string, unknown> = {
+  function buildPayload() {
+    const localDigits    = form.phone.replace(/\s/g, '')
+    const phoneFormatted = localDigits ? `${phoneCountryData.dial} ${localDigits}` : ''
+    return {
       ...form,
       phone:                  phoneFormatted,
       min_rate_eur:           form.min_rate_eur ?? null,
       expertise_dimension:    expertise.dimension,
       expertise_categories:   expertise.categories,
       expertise_specialties:  expertise.specialties,
-      /* Force le retour en validation sur chaque mise à jour */
-      ...(!isNew ? { hidden_reason: null } : {}),
+      avatar_url:             avatarUrl,
     }
+  }
 
-    const res = await fetch('/api/experts/profile', {
+  /* Enregistrer en brouillon — sans notification admin, sans changer review_status */
+  async function handleSave(e: React.FormEvent) {
+    e.preventDefault()
+    setSaving(true)
+    setSaved(false)
+    setSubmitted(false)
+    setError(null)
+
+    const payload = buildPayload()
+
+    const res  = await fetch('/api/experts/profile', {
       method:  isNew ? 'POST' : 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify(payload),
+      body:    JSON.stringify(isNew ? payload : { ...payload, submit: false }),
     })
     const json = await res.json() as { error?: string }
     setSaving(false)
 
     if (res.ok) {
       setSaved(true)
-      if (!isNew) setPendingReview(true)
       setTimeout(() => setSaved(false), 4000)
     } else {
       setError(json.error ?? 'Erreur lors de la sauvegarde')
     }
   }
 
-  const isVisible     = Boolean(existing?.is_visible) && !pendingReview
-  const hiddenReason  = pendingReview ? null : (existing?.hidden_reason ?? null)
-  const isPending     = pendingReview || (!isNew && !Boolean(existing?.is_visible) && !existing?.hidden_reason)
-  const isRefused     = !pendingReview && !isNew && !Boolean(existing?.is_visible) && Boolean(existing?.hidden_reason)
+  /* Soumettre pour validation admin — pose review_status=pending_review + notifie */
+  async function handleSubmitForReview() {
+    setSubmitting(true)
+    setSubmitted(false)
+    setSaved(false)
+    setError(null)
 
-  /* Soumission toujours autorisée pour un partenaire authentifié.
-     La validation (et donc la publication) est gérée par l'admin.
-     canPublish est passé à true depuis la page parent. */
+    const payload = buildPayload()
+
+    const res  = await fetch('/api/experts/profile', {
+      method:  isNew ? 'POST' : 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ ...payload, submit: true }),
+    })
+    const json = await res.json() as { error?: string }
+    setSubmitting(false)
+
+    if (res.ok) {
+      setSubmitted(true)
+      setPendingReview(true)
+      setTimeout(() => setSubmitted(false), 6000)
+    } else {
+      setError(json.error ?? 'Erreur lors de la soumission')
+    }
+  }
+
+  const isVisible    = Boolean(existing?.is_visible) && !pendingReview
+  const hiddenReason = pendingReview ? null : (existing?.hidden_reason ?? null)
+  const isPending    = pendingReview
+  const isRefused    = !pendingReview && !isNew && !Boolean(existing?.is_visible) && Boolean(existing?.hidden_reason)
+  const isDraft      = !isNew && !isPending && !isVisible && !isRefused
+
   const canSubmit = canPublish
 
   return (
     <div>
 
     {/* ── Formulaire ── */}
-    <form onSubmit={handleSubmit} className="space-y-8 max-w-2xl">
+    <form onSubmit={handleSave} className="space-y-8 max-w-2xl">
 
       {/* Statut */}
       <div className={`border p-4 flex items-start gap-3 ${
         isVisible  ? 'border-emerald-200 bg-emerald-50'
         : isPending ? 'border-blue-200 bg-blue-50'
         : isRefused ? 'border-red-200 bg-red-50'
+        : isDraft   ? 'border-gray-200 bg-gray-50'
         : 'border-amber-200 bg-amber-50'
       }`}>
-        <CheckCircle2 size={15} className={`mt-0.5 ${
-          isVisible ? 'text-emerald-500' : isPending ? 'text-blue-500' : isRefused ? 'text-red-400' : 'text-amber-500'
+        <CheckCircle2 size={15} className={`mt-0.5 shrink-0 ${
+          isVisible ? 'text-emerald-500' : isPending ? 'text-blue-500' : isRefused ? 'text-red-400' : 'text-gray-400'
         }`} />
         <div>
           <p className={`font-sans font-semibold text-[12px] ${
-            isVisible ? 'text-emerald-800' : isPending ? 'text-blue-800' : isRefused ? 'text-red-700' : 'text-amber-800'
+            isVisible ? 'text-emerald-800' : isPending ? 'text-blue-800' : isRefused ? 'text-red-700' : 'text-gray-700'
           }`}>
             {isVisible
               ? 'Fiche publiée dans l\'annuaire'
               : isPending
-              ? 'Fiche soumise — en attente de validation admin'
+              ? 'Fiche soumise — en attente de validation AEGRYN'
               : isRefused
               ? 'Fiche refusée par l\'équipe AEGRYN'
-              : 'Nouvelle fiche — sera soumise pour validation après enregistrement'}
+              : isDraft
+              ? 'Fiche enregistrée en brouillon — non soumise à l\'admin'
+              : 'Nouvelle fiche — enregistrez puis soumettez pour validation'}
           </p>
           {isPending && (
             <p className="font-sans text-[11px] text-blue-600 mt-0.5">
-              {pendingReview
-                ? <>Vos modifications ont été enregistrées et soumises à validation. L&apos;équipe AEGRYN reviendra vers vous sous 48h.</>
-                : <>L&apos;équipe AEGRYN validera votre fiche sous 48h. La publication est conditionnée à un abonnement actif.</>
-              }
+              L&apos;équipe AEGRYN examinera votre fiche sous 48h. Vous recevrez une notification dès la décision.
+            </p>
+          )}
+          {isDraft && (
+            <p className="font-sans text-[11px] text-gray-500 mt-0.5">
+              Enregistrez vos modifications puis cliquez sur <strong>Soumettre pour publication</strong> pour déclencher la revue admin.
             </p>
           )}
           {isRefused && hiddenReason && hiddenReason !== 'admin_hidden' && (
             <p className="font-sans text-[11px] text-red-600 mt-0.5">
-              Motif : {hiddenReason}
+              Motif : {hiddenReason}. Corrigez puis soumettez à nouveau.
             </p>
           )}
         </div>
@@ -444,9 +479,15 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
         <div className="bg-red-50 border border-red-200 px-4 py-3 text-[12px] text-red-700">{error}</div>
       )}
       {saved && (
-        <div className="bg-emerald-50 border border-emerald-200 px-4 py-3 text-[12px] text-emerald-700 flex items-center gap-2">
-          <CheckCircle2 size={14} className="text-emerald-500" />
-          Fiche {isNew ? 'soumise' : 'mise à jour'} — l&apos;équipe AEGRYN validera votre fiche sous 48h.
+        <div className="bg-gray-50 border border-gray-200 px-4 py-3 text-[12px] text-gray-700 flex items-center gap-2">
+          <CheckCircle2 size={14} className="text-gray-400" />
+          Modifications enregistrées en brouillon. Cliquez sur &quot;Soumettre pour publication&quot; pour déclencher la revue admin.
+        </div>
+      )}
+      {submitted && (
+        <div className="bg-blue-50 border border-blue-200 px-4 py-3 text-[12px] text-blue-700 flex items-center gap-2">
+          <CheckCircle2 size={14} className="text-blue-500" />
+          Fiche soumise pour validation — l&apos;équipe AEGRYN vous répondra sous 48h.
         </div>
       )}
 
@@ -456,18 +497,48 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
         </div>
       )}
 
-      <button
-        type="submit"
-        disabled={saving || !canSubmit}
-        className={`flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 transition-colors ${
-          canSubmit
-            ? 'bg-ag-navy text-white hover:bg-gray-800 disabled:opacity-50'
-            : 'bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200'
-        }`}
-      >
-        {saving && <Loader2 size={13} className="animate-spin" />}
-        {isNew ? 'Soumettre ma fiche' : 'Enregistrer les modifications'}
-      </button>
+      {/* 2 boutons distincts pour les fiches existantes */}
+      <div className="flex flex-wrap items-center gap-3">
+        <button
+          type="submit"
+          disabled={saving || submitting}
+          className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 border border-gray-300 bg-white text-gray-700 hover:border-gray-500 disabled:opacity-50 transition-colors"
+        >
+          {saving && <Loader2 size={13} className="animate-spin" />}
+          {isNew ? 'Enregistrer la fiche' : 'Enregistrer les modifications'}
+        </button>
+
+        {!isNew && (
+          <button
+            type="button"
+            disabled={saving || submitting || isPending}
+            onClick={handleSubmitForReview}
+            title={isPending ? 'Fiche déjà soumise — en attente de validation' : undefined}
+            className={`flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 transition-colors ${
+              isPending
+                ? 'bg-blue-50 text-blue-400 border border-blue-200 cursor-not-allowed opacity-70'
+                : canSubmit
+                ? 'bg-ag-navy text-white hover:bg-gray-800 disabled:opacity-50'
+                : 'bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200'
+            }`}
+          >
+            {submitting && <Loader2 size={13} className="animate-spin" />}
+            {isPending ? 'Soumise — en attente' : 'Soumettre pour publication'}
+          </button>
+        )}
+
+        {isNew && (
+          <button
+            type="button"
+            disabled={saving || submitting}
+            onClick={handleSubmitForReview}
+            className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 bg-ag-navy text-white hover:bg-gray-800 disabled:opacity-50 transition-colors"
+          >
+            {submitting && <Loader2 size={13} className="animate-spin" />}
+            Soumettre pour publication
+          </button>
+        )}
+      </div>
     </form>
 
     {/* ── Preview flottante fixe ── */}

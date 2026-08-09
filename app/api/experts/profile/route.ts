@@ -160,34 +160,44 @@ export async function PATCH(req: NextRequest) {
   }
 
   try {
-    const body = updateSchema.partial().parse(await req.json())
+    const rawBody = await req.json() as Record<string, unknown>
+    const isSubmit = rawBody.submit === true
+    delete rawBody.submit
+
+    const body = updateSchema.partial().parse(rawBody)
+
+    const updatePayload: Record<string, unknown> = { ...body }
+
+    if (isSubmit) {
+      updatePayload.is_visible    = false
+      updatePayload.verified_at   = null
+      updatePayload.hidden_reason = null
+      updatePayload.review_status = 'pending_review'
+    }
+
     const { error } = await supa
       .from('expert_profiles')
-      .update({
-        ...body,
-        is_visible:    false,
-        verified_at:   null,
-        hidden_reason: null,
-        review_status: 'pending_review',
-      })
+      .update(updatePayload)
       .eq('user_id', user.id)
 
     if (error) throw error
 
-    const { data: profile } = await supa
-      .from('profiles')
-      .select('full_name, email')
-      .eq('id', user.id)
-      .maybeSingle() as { data: { full_name?: string; email?: string } | null }
+    if (isSubmit) {
+      const { data: profile } = await supa
+        .from('profiles')
+        .select('full_name, email')
+        .eq('id', user.id)
+        .maybeSingle() as { data: { full_name?: string; email?: string } | null }
 
-    await notifyAdminExpertSubmission(
-      supa,
-      profile?.full_name ?? `${body.first_name ?? ''} ${body.last_name ?? ''}`.trim(),
-      false,
-      user.id,
-    )
+      await notifyAdminExpertSubmission(
+        supa,
+        profile?.full_name ?? `${body.first_name ?? ''} ${body.last_name ?? ''}`.trim(),
+        false,
+        user.id,
+      )
+    }
 
-    return NextResponse.json({ ok: true })
+    return NextResponse.json({ ok: true, submitted: isSubmit })
   } catch (err) {
     if (err instanceof z.ZodError) {
       return NextResponse.json({ error: 'validation', issues: err.issues }, { status: 400 })
