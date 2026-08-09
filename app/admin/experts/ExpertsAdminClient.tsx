@@ -731,14 +731,18 @@ function TractionPanel({
 }
 
 export default function ExpertsAdminClient({ applications, profiles, clickStats, tokenQs, initialPeriod }: Props) {
-  const [apps,    _setApps]    = useState(applications)
-  const [profs,   _setProfs]   = useState(profiles)
-  const [stats,   _setStats]   = useState(clickStats)
-  const [period,  setPeriod]  = useState(initialPeriod ?? 'all')
-  const [filter,  setFilter]  = useState<'all' | 'pending' | 'visible' | 'hidden'>('all')
-  const [loading, _setLoading] = useState(false)
+  const [apps,   setApps]   = useState(applications)
+  const [profs,  setProfs]  = useState(profiles)
+  const [stats,  setStats]  = useState(clickStats)
+  const [period, setPeriod] = useState(initialPeriod ?? 'all')
+  const [filter, setFilter] = useState<'all' | 'pending' | 'visible' | 'hidden'>('all')
   const router = useRouter()
   const [isRefreshing, startTransition] = useTransition()
+
+  /* Sync state quand router.refresh() pousse de nouvelles props SSR */
+  useEffect(() => { setApps(applications) },  [applications])
+  useEffect(() => { setProfs(profiles) },     [profiles])
+  useEffect(() => { setStats(clickStats) },   [clickStats])
 
   /* Scroll vers anchor après hydratation (ex: lien notif /admin/experts#expert-xxx) */
   useEffect(() => {
@@ -795,10 +799,10 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
           </div>
           <button
             onClick={() => refresh()}
-            disabled={loading || isRefreshing}
+            disabled={isRefreshing}
             className="font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-3 py-1.5 hover:border-gray-400 disabled:opacity-50 transition-colors"
           >
-            {loading || isRefreshing ? 'Chargement…' : 'Actualiser'}
+            {isRefreshing ? 'Chargement…' : 'Actualiser'}
           </button>
         </div>
 
