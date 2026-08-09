@@ -108,30 +108,37 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const body = updateSchema.parse(await req.json())
+    const rawBody = await req.json() as Record<string, unknown>
+    const isSubmit = rawBody.submit === true
+    delete rawBody.submit
+
+    const body = updateSchema.parse(rawBody)
+
     const { error } = await supa.from('expert_profiles').insert({
       user_id:       user.id,
       ...body,
       is_visible:    false,
       verified_at:   null,
-      review_status: 'pending_review',
+      review_status: isSubmit ? 'pending_review' : 'draft',
     })
     if (error) throw error
 
-    const { data: profile } = await supa
-      .from('profiles')
-      .select('full_name, email')
-      .eq('id', user.id)
-      .maybeSingle() as { data: { full_name?: string; email?: string } | null }
+    if (isSubmit) {
+      const { data: profile } = await supa
+        .from('profiles')
+        .select('full_name, email')
+        .eq('id', user.id)
+        .maybeSingle() as { data: { full_name?: string; email?: string } | null }
 
-    await notifyAdminExpertSubmission(
-      supa,
-      profile?.full_name ?? `${body.first_name} ${body.last_name}`,
-      true,
-      user.id,
-    )
+      await notifyAdminExpertSubmission(
+        supa,
+        profile?.full_name ?? `${body.first_name} ${body.last_name}`,
+        true,
+        user.id,
+      )
+    }
 
-    return NextResponse.json({ ok: true })
+    return NextResponse.json({ ok: true, submitted: isSubmit })
   } catch (err) {
     if (err instanceof z.ZodError) {
       return NextResponse.json({ error: 'validation', issues: err.issues }, { status: 400 })
