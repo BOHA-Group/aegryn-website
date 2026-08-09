@@ -3,6 +3,7 @@ import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
 import { getUser }                  from '@/lib/supabaseServer'
 import { EXPERT_PROFILE_BLANK }     from '@/lib/expertProfileDefaults'
+import { syncExpertVisibility }     from '@/lib/expertVisibility'
 
 const updateSchema = z.object({
   first_name:             z.string().min(1).max(80),
@@ -177,6 +178,28 @@ export async function PATCH(req: NextRequest) {
         .eq('user_id', user.id)
       if (resetErr) throw resetErr
       return NextResponse.json({ ok: true, reset: true })
+    }
+
+    if (rawBody.unpublish === true) {
+      /* Le partenaire masque volontairement sa fiche — review_status inchangé */
+      const { error: hideErr } = await supa
+        .from('expert_profiles')
+        .update({ is_visible: false, hidden_reason: 'self_hidden' })
+        .eq('user_id', user.id)
+      if (hideErr) throw hideErr
+      return NextResponse.json({ ok: true, unpublished: true })
+    }
+
+    if (rawBody.republish === true) {
+      /* Le partenaire souhaite réafficher sa fiche — lever le masquage self_hidden */
+      const { error: showErr } = await supa
+        .from('expert_profiles')
+        .update({ hidden_reason: null })
+        .eq('user_id', user.id)
+      if (showErr) throw showErr
+      /* Recalculer la visibilité : publie automatiquement si tous les prérequis sont réunis */
+      const visible = await syncExpertVisibility(supa, user.id)
+      return NextResponse.json({ ok: true, is_visible: visible })
     }
 
     const isSubmit = rawBody.submit === true

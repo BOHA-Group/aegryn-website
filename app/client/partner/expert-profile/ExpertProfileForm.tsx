@@ -202,6 +202,43 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
     }
   }
 
+  /* Dépublier volontairement la fiche (masquage self_hidden) */
+  async function handleUnpublish() {
+    if (!confirm('Masquer votre fiche de l\'annuaire ? Elle ne sera plus visible jusqu\'à ce que vous la réafficherez.')) return
+    setSaving(true)
+    setError(null)
+    const res = await fetch('/api/experts/profile', {
+      method:  'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ unpublish: true }),
+    })
+    setSaving(false)
+    if (res.ok) {
+      window.location.reload()
+    } else {
+      const json = await res.json() as { error?: string }
+      setError(json.error ?? 'Erreur lors du masquage')
+    }
+  }
+
+  /* Réafficher la fiche après un masquage self_hidden */
+  async function handleRepublish() {
+    setSaving(true)
+    setError(null)
+    const res = await fetch('/api/experts/profile', {
+      method:  'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ republish: true }),
+    })
+    setSaving(false)
+    if (res.ok) {
+      window.location.reload()
+    } else {
+      const json = await res.json() as { error?: string }
+      setError(json.error ?? 'Erreur lors de la réactivation')
+    }
+  }
+
   /* Réinitialiser complètement la fiche — repartir d'une fiche vierge */
   async function handleReset() {
     if (!confirm('Vider toute votre fiche expert pour repartir de zéro ? Cette action est irréversible.')) return
@@ -251,8 +288,9 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
   const hiddenReason = pendingReview ? null : (existing?.hidden_reason ?? null)
   const isPending    = pendingReview
   const isRefused    = !pendingReview && !isNew && !Boolean(existing?.is_visible) && existing?.review_status === 'rejected'
-  const isApprovedWaiting = !pendingReview && !isNew && !isVisible && !isRefused && existing?.review_status === 'approved'
-  const isDraft      = !isNew && !isPending && !isVisible && !isRefused && !isApprovedWaiting
+  const isSelfHidden = !pendingReview && !isNew && !isVisible && hiddenReason === 'self_hidden'
+  const isApprovedWaiting = !pendingReview && !isNew && !isVisible && !isRefused && !isSelfHidden && existing?.review_status === 'approved'
+  const isDraft      = !isNew && !isPending && !isVisible && !isRefused && !isApprovedWaiting && !isSelfHidden
 
   const canSubmit = canPublish
 
@@ -264,11 +302,12 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
 
       {/* Statut */}
       <div className={`border p-4 flex items-start gap-3 ${
-        isVisible  ? 'border-emerald-200 bg-emerald-50'
+        isVisible       ? 'border-emerald-200 bg-emerald-50'
+        : isSelfHidden  ? 'border-gray-200 bg-gray-50'
         : isApprovedWaiting ? 'border-blue-200 bg-blue-50'
-        : isPending ? 'border-blue-200 bg-blue-50'
-        : isRefused ? 'border-red-200 bg-red-50'
-        : isDraft   ? 'border-gray-200 bg-gray-50'
+        : isPending     ? 'border-blue-200 bg-blue-50'
+        : isRefused     ? 'border-red-200 bg-red-50'
+        : isDraft       ? 'border-gray-200 bg-gray-50'
         : 'border-amber-200 bg-amber-50'
       }`}>
         <CheckCircle2 size={15} className={`mt-0.5 shrink-0 ${
@@ -280,6 +319,8 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
           }`}>
             {isVisible
               ? 'Fiche publiée dans l\'annuaire'
+              : isSelfHidden
+              ? 'Fiche masquée de l\'annuaire'
               : isApprovedWaiting
               ? 'Fiche validée par AEGRYN — en attente de publication'
               : isPending
@@ -290,6 +331,11 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
               ? 'Fiche enregistrée en brouillon — non soumise à l\'admin'
               : 'Nouvelle fiche — enregistrez puis soumettez pour validation'}
           </p>
+          {isSelfHidden && (
+            <p className="font-sans text-[11px] text-gray-500 mt-0.5">
+              Vous avez masqué votre fiche. Cliquez sur <strong>Réafficher ma fiche</strong> pour la republier dans l\'annuaire.
+            </p>
+          )}
           {isApprovedWaiting && (
             <p className="font-sans text-[11px] text-blue-600 mt-0.5">
               Votre contenu a été validé. La publication se fera automatiquement dès que votre KYC et votre abonnement seront actifs.
@@ -564,6 +610,28 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
           >
             {submitting && <Loader2 size={13} className="animate-spin" />}
             Soumettre pour publication
+          </button>
+        )}
+
+        {isVisible && (
+          <button
+            type="button"
+            disabled={saving || submitting}
+            onClick={handleUnpublish}
+            className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-gray-200 text-gray-500 hover:border-gray-400 disabled:opacity-50 transition-colors"
+          >
+            Masquer ma fiche
+          </button>
+        )}
+
+        {isSelfHidden && (
+          <button
+            type="button"
+            disabled={saving || submitting}
+            onClick={handleRepublish}
+            className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-emerald-200 text-emerald-700 hover:bg-emerald-50 disabled:opacity-50 transition-colors"
+          >
+            Réafficher ma fiche
           </button>
         )}
 
