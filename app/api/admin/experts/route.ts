@@ -49,29 +49,33 @@ export async function GET(req: NextRequest) {
   if (since) clicksQuery.gte('clicked_at', since)
   const { data: rawClicks } = await clicksQuery
 
-  const [{ data: applications }, { data: profiles }, { data: epList }] = await Promise.all([
+  const [{ data: applications }, { data: rawProfiles }, { data: epList }] = await Promise.all([
     supa
       .from('expert_applications')
       .select('*')
       .order('created_at', { ascending: false }),
     supa
       .from('expert_profiles')
-      .select(`
-        *,
-        profile:user_id (
-          email,
-          roles,
-          kyc_status,
-          expert_plan,
-          expert_plan_start,
-          expert_plan_end
-        )
-      `)
+      .select('*')
       .order('created_at', { ascending: false }),
     supa
       .from('expert_profiles')
       .select('id, user_id, first_name, last_name, profession, is_visible'),
   ])
+
+  const userIds = (rawProfiles ?? []).map(p => p.user_id)
+  const { data: relatedProfiles } = userIds.length
+    ? await supa
+        .from('profiles')
+        .select('id, email, roles, kyc_status, expert_plan, expert_plan_start, expert_plan_end')
+        .in('id', userIds)
+    : { data: [] }
+
+  const profileMap = new Map((relatedProfiles ?? []).map(p => [p.id, p]))
+  const profiles = (rawProfiles ?? []).map(ep => ({
+    ...ep,
+    profile: profileMap.get(ep.user_id) ?? null,
+  }))
 
   const clicks = rawClicks ?? []
   type ClickRow = { expert_id: string; click_type: string; clicked_at: string }
@@ -96,7 +100,7 @@ export async function GET(req: NextRequest) {
     ...(statsMap.get(ep.user_id) ?? { total_clicks: 0, email_clicks: 0, website_clicks: 0, last_click_at: null }),
   }))
 
-  return NextResponse.json({ applications: applications ?? [], profiles: profiles ?? [], clickStats, period })
+  return NextResponse.json({ applications: applications ?? [], profiles, clickStats, period })
 }
 
 export async function PATCH(req: NextRequest) {

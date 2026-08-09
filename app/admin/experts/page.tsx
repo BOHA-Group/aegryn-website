@@ -20,42 +20,40 @@ export default async function AdminExpertsPage({
 
   const supa = createServiceClient()
 
-  const [{ data: applications, error: errApps }, { data: profiles, error: errProfs }, { data: clickStats }] = await Promise.all([
+  const [{ data: applications }, { data: rawProfiles }, { data: clickStats }] = await Promise.all([
     supa
       .from('expert_applications')
       .select('*')
       .order('created_at', { ascending: false }),
     supa
       .from('expert_profiles')
-      .select(`
-        *,
-        profile:user_id (
-          email,
-          roles,
-          kyc_status,
-          expert_plan,
-          expert_plan_start,
-          expert_plan_end
-        )
-      `)
+      .select('*')
       .order('created_at', { ascending: false }),
     supa
       .from('expert_click_stats')
       .select('*'),
   ])
 
-  const { count: rawCount, error: rawErr } = await supa
-    .from('expert_profiles')
-    .select('*', { count: 'exact', head: true })
-  console.log('[admin/experts] raw count:', rawCount, 'rawErr:', rawErr)
-  console.log('[admin/experts] profiles count:', profiles?.length, 'errProfs:', errProfs?.message, 'apps count:', applications?.length, 'errApps:', errApps?.message)
+  const userIds = (rawProfiles ?? []).map(p => p.user_id)
+  const { data: relatedProfiles } = userIds.length
+    ? await supa
+        .from('profiles')
+        .select('id, email, roles, kyc_status, expert_plan, expert_plan_start, expert_plan_end')
+        .in('id', userIds)
+    : { data: [] }
+
+  const profileMap = new Map((relatedProfiles ?? []).map(p => [p.id, p]))
+  const profiles = (rawProfiles ?? []).map(ep => ({
+    ...ep,
+    profile: profileMap.get(ep.user_id) ?? null,
+  }))
 
   const tokenQs = params.token ? `?token=${params.token}` : ''
 
   return (
     <ExpertsAdminClient
       applications={applications ?? []}
-      profiles={profiles ?? []}
+      profiles={profiles}
       clickStats={clickStats ?? []}
       tokenQs={tokenQs}
     />
