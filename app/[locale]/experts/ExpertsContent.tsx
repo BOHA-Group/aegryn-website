@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, Scale, Cpu, ClipboardCheck, X } from 'lucide-react'
 import {
   EXPERTISE_TAXONOMY,
@@ -11,6 +11,7 @@ import {
   getAllSpecialtyIds,
   getCategoryLabel,
   getSpecialtyLabel,
+  type LocaleKey,
 } from '@/lib/expertiseTaxonomy'
 
 type ExpertProfile = {
@@ -374,7 +375,7 @@ function trackClick(expertId: string, clickType: 'email' | 'website', filters: A
   }).catch(() => {})
 }
 
-function ExpertCard({ profile, t, blurred = false, filters = { category: '', domain: '', specialty: '', country: '' }, onContactClick }: { profile: ExpertProfile; t: ReturnType<typeof useTranslations>; blurred?: boolean; filters?: ActiveFilters; onContactClick?: (profile: ExpertProfile) => void }) {
+function ExpertCard({ profile, t, locale = 'fr', blurred = false, filters = { category: '', domain: '', specialty: '', country: '' }, onContactClick }: { profile: ExpertProfile; t: ReturnType<typeof useTranslations>; locale?: string; blurred?: boolean; filters?: ActiveFilters; onContactClick?: (profile: ExpertProfile) => void }) {
   const initials = `${profile.first_name[0] ?? ''}${profile.last_name[0] ?? ''}`.toUpperCase()
 
   const categoryNodes = EXPERTISE_TAXONOMY.filter(c =>
@@ -445,7 +446,7 @@ function ExpertCard({ profile, t, blurred = false, filters = { category: '', dom
                 const cc = getCatColorPublic(cat.id)
                 return (
                   <span key={cat.id} className={`font-mono text-[8px] tracking-[0.10em] uppercase px-1.5 py-0.5 border ${cc.bg} ${cc.border} ${cc.text}`}>
-                    {getCategoryLabel(cat, 'fr')}
+                    {getCategoryLabel(cat, locale as LocaleKey)}
                   </span>
                 )
               })}
@@ -455,7 +456,7 @@ function ExpertCard({ profile, t, blurred = false, filters = { category: '', dom
             <div className="flex flex-wrap gap-1 pl-3 border-l border-ag-border/40 ml-0.5">
               {specialtyNodes.slice(0, 6).map(s => (
                 <span key={s.id} className="font-sans text-[10px] px-1.5 py-0.5 bg-ag-off-white border border-ag-border text-ag-gray">
-                  {getSpecialtyLabel(s, 'fr')}
+                  {getSpecialtyLabel(s, locale as LocaleKey)}
                 </span>
               ))}
               {specialtyNodes.length > 6 && (
@@ -702,7 +703,8 @@ function getAvailableExpertises(category: string, domain: string): readonly stri
 }
 
 export default function ExpertsContent() {
-  const t = useTranslations('experts')
+  const t      = useTranslations('experts')
+  const locale = useLocale()
   const [profiles,       setProfiles]       = useState<ExpertProfile[]>([])
   const [loadingGrid,    setLoadingGrid]    = useState(true)
   const [category,       setCategory]       = useState('')
@@ -850,7 +852,7 @@ export default function ExpertsContent() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
               {PLACEHOLDERS.map(p => (
-                <ExpertCard key={p.id} profile={p} t={t} blurred />
+                <ExpertCard key={p.id} profile={p} t={t} locale={locale} blurred />
               ))}
             </div>
           </>
@@ -863,6 +865,7 @@ export default function ExpertsContent() {
                 key={p.id}
                 profile={p}
                 t={t}
+                locale={locale}
                 filters={{ category, domain, specialty, country }}
                 onContactClick={setContactTarget}
               />
