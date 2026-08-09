@@ -58,9 +58,8 @@ function AdminSideNavInner({ adminEmail }: { adminEmail: string }) {
   const tokenSuffix = token ? `?token=${token}` : ''
 
   const handleLogout = useCallback(async () => {
-    await fetch('/api/admin/auth/logout', { method: 'POST' })
-    router.push('/admin/login')
-    router.refresh()
+    await fetch('/api/client/logout', { method: 'POST' })
+    router.push('/client/login')
   }, [router])
 
   return (
