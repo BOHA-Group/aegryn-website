@@ -2710,17 +2710,163 @@
     }
   },
   "build_service": {
-    "meta": { "title": "Digitale asset ontwikkeling - AEGRYN", "desc": "AEGRYN ontwerpt B2B SaaS, AI-applicaties en mobiele apps volgens CIFS-protocolnormen. Een verkoop is mogelijk indien gewenst, mits het asset aan de vereiste gradecriteria voldoet." },
+    "meta": {
+      "title": "Digitale asset ontwikkeling - AEGRYN",
+      "desc": "AEGRYN ontwerpt B2B SaaS, AI-applicaties en mobiele apps volgens CIFS-protocolnormen. Een verkoop is mogelijk indien gewenst, mits het asset aan de vereiste gradecriteria voldoet."
+    },
     "label": "Services - Asset ontwikkeling",
     "title": "Uw digitale asset.\nGebouwd om te blijven.\nGestructureerd om te verkopen.",
     "desc": "AEGRYN ontwerpt propriëtaire digitale assets - B2B SaaS, verticale AI, mobiele app - volgens CIFS-protocolnormen. U start van nul. U eindigt met een certificeerbaar en onderhoudbaar asset. Een verkoop is een optie, geen verplichting: het hangt af van uw wens en het behaalde grade.",
-    "difference": { "label": "Geen bureau. Geen studio.", "title": "Het AEGRYN-verschil.", "items": [ { "num": "01", "title": "Certificeerbaar vanaf dag één", "desc": "Elk asset wordt gebouwd volgens CIFS-normen. Het grade is geen audit achteraf: het is de architectuur van dag één." }, { "num": "02", "title": "U blijft eigenaar", "desc": "Geen verwatering. Geen aandeel van AEGRYN. Het asset is 100% van u." }, { "num": "03", "title": "De exit is een optie, geen verplichting", "desc": "Vroegtijdige overdracht, op rijpheid of langdurig onderhoud: het exitscenario is geanticipeerd in de architectuur, maar wordt alleen geactiveerd als u dat wenst en als het asset aan de vereiste gradecriteria voldoet." } ] },
-    "assetTypes": { "label": "Wat we bouwen", "title": "Drie typologieën.\nEén maatstaf.", "items": [ { "badge": "B2B SaaS", "title": "Verticale SaaS-oplossing", "desc": "Bedrijfstools, beheerplatforms, RegTech, LegalTech, FinTech met meetbare ARR/NRR-statistieken vanaf de lancering." }, { "badge": "Verticale AI", "title": "Natief AI-product", "desc": "AI-agenten, sectorautomatisering, documentanalyse met propriëtaire gegevens." }, { "badge": "Mobiele App", "title": "Mobiele applicatie", "desc": "iOS/Android voor diensten, marktplaatsen of mobiele bedrijfstools. Retentiestatistieken (D1/D7/D30) als ontwerpcriteria." } ] },
-    "exits": { "label": "De exit is uw keuze", "title": "Drie paden.\nEén asset voor alle.", "items": [ { "phase": "Vroeg stadium - 6 tot 18 maanden", "title": "Vroege overdracht", "desc": "Uw asset heeft een solide architectuur en eerste tractie. AEGRYN structureert de verkoop via Auction of directe vertrouwelijke transactie.", "grade": "Doelgrade: A - ticket 100K tot 500K EUR", "cta": "Acquisitiemodellen bekijken", "href": "/auction/bid-models" }, { "phase": "Marktrijpheid - 18 tot 36 maanden", "title": "Overdracht op rijpheid", "desc": "Het asset heeft gedocumenteerde terugkerende inkomsten en een gevestigde klantenbasis. In aanmerking voor AAA tot AEG grades.", "grade": "Doelgrade: AA tot AEG - ticket 500K tot 5M EUR", "cta": "Indienen voor certificering", "href": "/grade/submit" }, { "phase": "Behoud", "title": "Evolutief en correctief onderhoud", "desc": "U wilt niet verkopen. AEGRYN onderhoudt het asset technisch. De exit blijft open.", "grade": "Maandelijks abonnement of per levering", "cta": "Onderhoud bespreken", "href": "/contact" } ] },
-    "process": { "label": "Ons proces", "title": "Van brief tot closing.\nEén aanspreekpunt.", "steps": [ { "num": "01", "title": "Discovery en Brief", "desc": "Definitie van de waardepropositie, doelmarkt, stack en exitplan. Output: certificeerbaar bestek. Duur: 1 tot 2 weken." }, { "num": "02", "title": "Architectuur en Grade Design", "desc": "Het asset wordt opgebouwd volgens CIFS-criteria: gedocumenteerde code, geregistreerd IP, security by design." }, { "num": "03", "title": "Build en Iteraties", "desc": "Sprintontwikkeling met meetbare mijlpalen en continue documentatie." }, { "num": "04", "title": "Lancering en Tractie", "desc": "Deployment, eerste gebruikers, ARR/NRR/churn-statistieken. Tijd tot certificeerbaar Grade A: 6 tot 12 maanden." }, { "num": "05", "title": "Certificering (en optionele exit)", "desc": "CIFS-protocol indiening indien gewenst. Officieel grade toegekend als aan de criteria is voldaan. Een transactie via AEGRYN Auction of vertrouwelijk kanaal wordt alleen op uw beslissing ingezet. Het asset kan ook worden behouden met onderhoud." } ] },
-    "maintenance": { "label": "Onderhoud op aanvraag", "title": "Het asset leeft.\nWij onderhouden het.", "desc": "Na de lancering biedt AEGRYN onderhoud op twee niveaus.", "corrective": { "title": "Correctief onderhoud", "desc": "Bugfixes, incidentoplossing, beveiligingsupdates, CVE-beheer, monitoring. SLA in contract.", "format": "Maandelijks abonnement of tickets" }, "evolutive": { "title": "Evolutief onderhoud", "desc": "Nieuwe functies, refactoring, versie-upgrades, integraties, regelgevingsaanpassing (AVG, EU AI Act, NIS2).", "format": "Maandelijks abonnement of per sprint" }, "note": "AEGRYN-onderhoud garandeert dat het asset zijn grade behoudt of verbetert." },
-    "fees": { "label": "Honoraria", "title": "Transparant vanaf het brief.", "items": [ { "title": "Ontwerp en Build", "desc": "Vaste prijs bij Discovery. Geen aandeel. Geen verwatering.", "format": "Offerte op aanvraag" }, { "title": "Onderhoud", "desc": "Maandelijks abonnement of per levering. Voorwaarden in contract.", "format": "Maandelijks abonnement" }, { "title": "Transactie", "desc": "Als de exit via AEGRYN Auction of vertrouwelijke transactie verloopt, geldt de standaardcommissie.", "format": "Succesvergoeding - voorwaarden in CGV", "href": "/terms/cgv" } ], "coInvestNote": "AEGRYN kan optreden als minderheids-co-investeerder. Per geval beoordeeld." },
-    "cta": { "title": "Een project in gedachten?", "desc": "Beschrijf uw idee of doelmarkt. Wij antwoorden binnen 48u met een haalbaarheidsanalyse.", "primary": "Project starten", "href": "/contact", "secondary": "Onze propriëtaire assets bekijken", "secondaryHref": "/assets" }
+    "difference": {
+      "label": "Geen bureau. Geen studio.",
+      "title": "Het AEGRYN-verschil.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Certificeerbaar vanaf dag één",
+          "desc": "Elk asset wordt gebouwd volgens CIFS-normen. Het grade is geen audit achteraf: het is de architectuur van dag één."
+        },
+        {
+          "num": "02",
+          "title": "U blijft eigenaar",
+          "desc": "Geen verwatering. Geen aandeel van AEGRYN. Het asset is 100% van u."
+        },
+        {
+          "num": "03",
+          "title": "De exit is een optie, geen verplichting",
+          "desc": "Vroegtijdige overdracht, op rijpheid of langdurig onderhoud: het exitscenario is geanticipeerd in de architectuur, maar wordt alleen geactiveerd als u dat wenst en als het asset aan de vereiste gradecriteria voldoet."
+        }
+      ]
+    },
+    "assetTypes": {
+      "label": "Wat we bouwen",
+      "title": "Drie typologieën.\nEén maatstaf.",
+      "items": [
+        {
+          "badge": "B2B SaaS",
+          "title": "Verticale SaaS-oplossing",
+          "desc": "Bedrijfstools, beheerplatforms, RegTech, LegalTech, FinTech met meetbare ARR/NRR-statistieken vanaf de lancering."
+        },
+        {
+          "badge": "Verticale AI",
+          "title": "Natief AI-product",
+          "desc": "AI-agenten, sectorautomatisering, documentanalyse met propriëtaire gegevens."
+        },
+        {
+          "badge": "Mobiele App",
+          "title": "Mobiele applicatie",
+          "desc": "iOS/Android voor diensten, marktplaatsen of mobiele bedrijfstools. Retentiestatistieken (D1/D7/D30) als ontwerpcriteria."
+        }
+      ]
+    },
+    "exits": {
+      "label": "De exit is uw keuze",
+      "title": "Drie paden.\nEén asset voor alle.",
+      "items": [
+        {
+          "phase": "Vroeg stadium - 6 tot 18 maanden",
+          "title": "Vroege overdracht",
+          "desc": "Uw asset heeft een solide architectuur en eerste tractie. AEGRYN structureert de verkoop via Auction of directe vertrouwelijke transactie.",
+          "grade": "Doelgrade: A - ticket 100K tot 500K EUR",
+          "cta": "Acquisitiemodellen bekijken",
+          "href": "/auction/bid-models"
+        },
+        {
+          "phase": "Marktrijpheid - 18 tot 36 maanden",
+          "title": "Overdracht op rijpheid",
+          "desc": "Het asset heeft gedocumenteerde terugkerende inkomsten en een gevestigde klantenbasis. In aanmerking voor AAA tot AEG grades.",
+          "grade": "Doelgrade: AA tot AEG - ticket 500K tot 5M EUR",
+          "cta": "Indienen voor certificering",
+          "href": "/grade/submit"
+        },
+        {
+          "phase": "Behoud",
+          "title": "Evolutief en correctief onderhoud",
+          "desc": "U wilt niet verkopen. AEGRYN onderhoudt het asset technisch. De exit blijft open.",
+          "grade": "Maandelijks abonnement of per levering",
+          "cta": "Onderhoud bespreken",
+          "href": "/contact"
+        }
+      ]
+    },
+    "process": {
+      "label": "Ons proces",
+      "title": "Van brief tot closing.\nEén aanspreekpunt.",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Discovery en Brief",
+          "desc": "Definitie van de waardepropositie, doelmarkt, stack en exitplan. Output: certificeerbaar bestek. Duur: 1 tot 2 weken."
+        },
+        {
+          "num": "02",
+          "title": "Architectuur en Grade Design",
+          "desc": "Het asset wordt opgebouwd volgens CIFS-criteria: gedocumenteerde code, geregistreerd IP, security by design."
+        },
+        {
+          "num": "03",
+          "title": "Build en Iteraties",
+          "desc": "Sprintontwikkeling met meetbare mijlpalen en continue documentatie."
+        },
+        {
+          "num": "04",
+          "title": "Lancering en Tractie",
+          "desc": "Deployment, eerste gebruikers, ARR/NRR/churn-statistieken. Tijd tot certificeerbaar Grade A: 6 tot 12 maanden."
+        },
+        {
+          "num": "05",
+          "title": "Certificering (en optionele exit)",
+          "desc": "CIFS-protocol indiening indien gewenst. Officieel grade toegekend als aan de criteria is voldaan. Een transactie via AEGRYN Auction of vertrouwelijk kanaal wordt alleen op uw beslissing ingezet. Het asset kan ook worden behouden met onderhoud."
+        }
+      ]
+    },
+    "maintenance": {
+      "label": "Onderhoud op aanvraag",
+      "title": "Het asset leeft.\nWij onderhouden het.",
+      "desc": "Na de lancering biedt AEGRYN onderhoud op twee niveaus.",
+      "corrective": {
+        "title": "Correctief onderhoud",
+        "desc": "Bugfixes, incidentoplossing, beveiligingsupdates, CVE-beheer, monitoring. SLA in contract.",
+        "format": "Maandelijks abonnement of tickets"
+      },
+      "evolutive": {
+        "title": "Evolutief onderhoud",
+        "desc": "Nieuwe functies, refactoring, versie-upgrades, integraties, regelgevingsaanpassing (AVG, EU AI Act, NIS2).",
+        "format": "Maandelijks abonnement of per sprint"
+      },
+      "note": "AEGRYN-onderhoud garandeert dat het asset zijn grade behoudt of verbetert."
+    },
+    "fees": {
+      "label": "Honoraria",
+      "title": "Transparant vanaf het brief.",
+      "items": [
+        {
+          "title": "Ontwerp en Build",
+          "desc": "Vaste prijs bij Discovery. Geen aandeel. Geen verwatering.",
+          "format": "Offerte op aanvraag"
+        },
+        {
+          "title": "Onderhoud",
+          "desc": "Maandelijks abonnement of per levering. Voorwaarden in contract.",
+          "format": "Maandelijks abonnement"
+        },
+        {
+          "title": "Transactie",
+          "desc": "Als de exit via AEGRYN Auction of vertrouwelijke transactie verloopt, geldt de standaardcommissie.",
+          "format": "Succesvergoeding - voorwaarden in CGV",
+          "href": "/terms/cgv"
+        }
+      ],
+      "coInvestNote": "AEGRYN kan optreden als minderheids-co-investeerder. Per geval beoordeeld."
+    },
+    "cta": {
+      "title": "Een project in gedachten?",
+      "desc": "Beschrijf uw idee of doelmarkt. Wij antwoorden binnen 48u met een haalbaarheidsanalyse.",
+      "primary": "Project starten",
+      "href": "/contact",
+      "secondary": "Onze propriëtaire assets bekijken",
+      "secondaryHref": "/assets"
+    }
   },
   "gradeSubmit": {
     "meta": {
@@ -3318,7 +3464,8 @@
       "restart": "Nieuwe schatting",
       "estimated": "geschat",
       "disclaimerLabel": "Niet-officiële schatting",
-      "disclaimerCta": "Een officiële certificering starten"
+      "disclaimerCta": "Een officiële certificering starten",
+      "ctaContact": "Contact opnemen met een advisor"
     },
     "marketContext": {
       "label": "Marktcontext 2026",
@@ -3596,7 +3743,18 @@
     "s11Earnout": "Bij een earnout wordt op elke door de vervreemder effectief ontvangen earnout-betaling een bijkomende vergoeding van 5% aangerekend, met als maximum het tarief dat van toepassing is op de schijf van de totale prijs.",
     "s11Payment": "De vergoeding is verschuldigd op de datum van vrijgave van de geblokkeerde fondsen en wordt door AEGRYN rechtstreeks ingehouden op de geblokkeerde fondsen vóór de uitbetaling van het nettosaldo aan de verkoper. AEGRYN is nooit bewaarder van deze fondsen — de geblokkeerde bedragen worden aangehouden door een door AEGRYN aangewezen derde bank.",
     "ctaContact": "Contact opnemen met het AEGRYN-team",
-    "ctaTermsUse": "Gebruiksvoorwaarden"
+    "ctaTermsUse": "Gebruiksvoorwaarden",
+    "s12Title": "AEGRYN Expertennetwerk — Expertprofiel-abonnement",
+    "s12Intro": "AEGRYN beheert een netwerk van geregistreerde professionals (hierna \"Partners\") die toegankelijk zijn via de sectie Expertennetwerk van het platform. Dit netwerk staat los van het transactieproces en vormt geen bemiddelingsdienst in financiële zin.",
+    "s12AbonTitle": "Expertprofiel-abonnement",
+    "s12Abon": "Toegang tot het netwerk is afhankelijk van het afsluiten van een Expertprofiel-abonnement (€89 excl. btw/maand of geldend jaartarief). Dit abonnement geeft recht op: publicatie en bijwerking van een expertprofiel zichtbaar op aegryn.com/grade/partners, directe toegang tot contactverzoeken van AEGRYN-verkopers of -kopers die behoefte hebben aangegeven aan begeleiding op de in het profiel vermelde expertisegebieden, en deelname aan AEGRYN-netwerkevenementen. Het abonnement heeft geen minimale looptijd en kan op elk moment worden opgezegd met ingang van het einde van de lopende periode.",
+    "s12SubTitle": "Aard van de relatie",
+    "s12Sub": "De Partner is een onafhankelijke dienstverlener die op persoonlijke titel of namens zijn organisatie is geregistreerd. Hij stelt zijn honoraria, intervenieningsvoorwaarden en contractuele voorwaarden met zijn klanten vrij vast. AEGRYN ontvangt geen commissie op de honoraria die de Partner aan zijn klanten in rekening brengt en treedt niet op in de commerciële relatie tussen de Partner en zijn klanten. De Partner is in het kader van zijn diensten op geen enkele wijze werknemer, gevolmachtigde of medecontractant van AEGRYN.",
+    "s12NoCommTitle": "Geen commissie aan AEGRYN",
+    "s12NoComm": "Partners betalen AEGRYN geen commissie op hun dienstverleningshonoraria, ongeacht de aard van de uitgevoerde opdracht (advies, due diligence, juridische bijstand, technische expertise, enz.). De enige financiële tegenprestatie verschuldigd aan AEGRYN is het maandelijkse Expertprofiel-abonnement. Deze bepaling is dwingend en kan niet worden gewijzigd door een afzonderlijke overeenkomst.",
+    "s12ReferralTitle": "Referralprogramma",
+    "s12Referral": "Elke Partner met een actief Expertprofiel-abonnement kan andere professionals doorverwijzen. Voor elke doorverwezen professional die een Expertprofiel abonneert, ontvangt de verwijzer een tegoed van één maand op zijn eigen abonnement, gecrediteerd bij de volgende vervaldatum. De doorverwezen professional ontvangt ook één gratis maand afgetrokken van zijn eerste factuur. AEGRYN behoudt zich het recht voor dit programma te wijzigen met een opzegtermijn van 30 dagen.",
+    "defPartner": "Professional geregistreerd in de AEGRYN-directory via een actief Expertprofiel-abonnement. Begeleidt verkopers en/of kopers bij hun transacties (tech-advies, M&A, juridisch, HR, cyber, financiën, W&I-verzekering, enz.). Is geen partij bij de transactie en ontvangt geen commissie van AEGRYN."
   },
   "privacy": {
     "meta": {
@@ -3851,61 +4009,87 @@
     "items": [
       {
         "id": "who-we-are",
-        "cat": ["certification", "sellers", "buyers"],
+        "cat": [
+          "certification",
+          "sellers",
+          "buyers"
+        ],
         "q": "Wie is AEGRYN en wat doet u?",
         "a": "Aegryn is een Zwitserse tech-asset-bouwer die proprietaire digitale ecosystemen ontwerpt en exploiteert. Wij certificeren, verhandelen en begeleiden technologie-assets via een onafhankelijk en reproduceerbaar protocol."
       },
       {
         "id": "what-differentiates",
-        "cat": ["certification"],
+        "cat": [
+          "certification"
+        ],
         "q": "Wat onderscheidt u?",
         "a": "In tegenstelling tot adviesbureaus of agentschappen bouwen en exploiteren wij onze eigen digitale ecosystemen. Elke aanbeveling, elk protocol, elke aanpak die wij voorstellen is gebaseerd op echte uitvoering. Wij verkopen geen generieke modellen. Wij delen wat werkt omdat wij het zelf gebruiken."
       },
       {
         "id": "cert-options",
-        "cat": ["certification", "sellers"],
+        "cat": [
+          "certification",
+          "sellers"
+        ],
         "q": "Wat zijn de certificeringsopties en hun tarieven?",
         "a": "Er zijn twee paden beschikbaar. Alleen certificering (AEGRYN Review): een officiële Grade verkrijgen zonder catalogusopname, voor 2.000 EUR excl. btw (interne Review) of 5.000 EUR excl. btw (co-ondertekende Review+), aftrekbaar als een Certification Auction binnen 6 maanden wordt gestart. Certification Auction: volledig proces met catalogusopname en AEGRYN-commissie uitsluitend bij transactie. Een publicatiekosten van CHF 2.000 excl. btw gelden, aftrekbaar van de commissie bij verkoop en ingehouden zonder transactie."
       },
       {
         "id": "what-grade",
-        "cat": ["certification"],
+        "cat": [
+          "certification"
+        ],
         "q": "Wat is de AEGRYN Grade?",
         "a": "De AEGRYN Grade is een officiële multidimensionale certificering die 4 dimensies beoordeelt: Code (C), IP en Rechten (I), Financiën (F), Beveiliging (S). Elke dimensie wordt beoordeeld op 25 punten. De totale score bepaalt de officiële Grade: AEG Ster Uitzonderlijk (90 en meer), AAA Uitstekend (75 en meer), AA Zeer goed (60 en meer), A Goed (45 en meer), B Voldoende (30 en meer)."
       },
       {
         "id": "what-assets",
-        "cat": ["sellers"],
+        "cat": [
+          "sellers"
+        ],
         "q": "Welke typen assets kan ik indienen?",
         "a": "AEGRYN certificeert en verhandelt digitale tech-assets: B2B SaaS, mobiele apps, marktplaatsen, AI-protocollen, digitaal intellectueel eigendom. Aanbevolen minimumticket: 100.000 EUR geschatte waardering."
       },
       {
         "id": "seller-identity",
-        "cat": ["sellers"],
+        "cat": [
+          "sellers"
+        ],
         "q": "Wordt mijn identiteit bekend gemaakt aan kopers?",
         "a": "AEGRYN beschermt de vertrouwelijkheid van alle partijen gedurende het hele proces. De identiteit van de verkoper is voor geen enkele koper toegankelijk voordat AEGRYN de introductie beslist. Evenmin is de identiteit van de koper beschikbaar tot zijn bod is aanvaard. Alleen het AEGRYN-team heeft toegang tot persoonlijke informatie voor KYC-verificaties en dossierbeheer."
       },
       {
         "id": "become-buyer",
-        "cat": ["buyers"],
+        "cat": [
+          "buyers"
+        ],
         "q": "Hoe word ik ledenkoper?",
         "a": "Via het sollicitatieformulier op /auction#membership. Uw sollicitatie wordt beoordeeld binnen 10 werkdagen."
       },
       {
         "id": "kyc-docs",
-        "cat": ["buyers", "sellers"],
+        "cat": [
+          "buyers",
+          "sellers"
+        ],
         "q": "Welke KYC-documenten zijn vereist?",
         "a": "Particulieren: geldig identiteitsbewijs, bewijs van woonplaats van minder dan 3 maanden oud, bewijs van financiële capaciteit. Entiteiten (bedrijven, fondsen): uittreksel uit het handelsregister van minder dan 3 maanden oud, statuten, identiteitsbewijs van de wettelijke vertegenwoordiger, UBO-verklaring (25% en meer), regulerende licentie indien van toepassing."
       },
       {
         "id": "escrow",
-        "cat": ["buyers", "transactions"],
+        "cat": [
+          "buyers",
+          "transactions"
+        ],
         "q": "Hoe werkt de escrow?",
         "a": "Na ondertekening van het NDA en aanvaarding van het ingediende bod, stort de koper 10% van de overeengekomen prijs bij een externe partnerinstelling van AEGRYN. AEGRYN houdt deze middelen nooit vast. De herroepingsregels zijn opgenomen in de Algemene Verkoopvoorwaarden."
       },
       {
         "id": "kryv",
-        "cat": ["certification", "transactions"],
+        "cat": [
+          "certification",
+          "transactions"
+        ],
         "q": "Hoe garandeert AEGRYN de traceerbaarheid van een grade?",
         "a": "Elke grade wordt gedocumenteerd, geversioneerd en opgeslagen in het AEGRYN-register. Elke wijziging aan een gecertificeerde codebase na uitgifte genereert een nieuwe versie. Dit maakt het mogelijk om op elk moment te verifiëren dat de ontvangen code exact overeenkomt met de gecertificeerde code."
       }

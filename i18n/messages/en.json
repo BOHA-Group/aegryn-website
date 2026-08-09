@@ -2728,55 +2728,141 @@
       "label": "Not an agency. Not a studio.",
       "title": "The AEGRYN difference.",
       "items": [
-        { "num": "01", "title": "Certifiable from day one", "desc": "Every asset is built to CIFS protocol standards. The grade is not a post-production audit: it is the architecture from day one." },
-        { "num": "02", "title": "You stay the owner", "desc": "No dilution. No equity taken by AEGRYN. The asset is 100% yours. AEGRYN can act as a co-investor on request: that is your decision, not ours." },
-        { "num": "03", "title": "The exit is an option, not an obligation", "desc": "Early-stage sale, at maturity, or long-term maintenance: the exit scenario is anticipated in the architecture, but only engaged if you wish to and if the asset meets the required grade criteria." }
+        {
+          "num": "01",
+          "title": "Certifiable from day one",
+          "desc": "Every asset is built to CIFS protocol standards. The grade is not a post-production audit: it is the architecture from day one."
+        },
+        {
+          "num": "02",
+          "title": "You stay the owner",
+          "desc": "No dilution. No equity taken by AEGRYN. The asset is 100% yours. AEGRYN can act as a co-investor on request: that is your decision, not ours."
+        },
+        {
+          "num": "03",
+          "title": "The exit is an option, not an obligation",
+          "desc": "Early-stage sale, at maturity, or long-term maintenance: the exit scenario is anticipated in the architecture, but only engaged if you wish to and if the asset meets the required grade criteria."
+        }
       ]
     },
     "assetTypes": {
       "label": "What we build",
       "title": "Three typologies.\nOne standard of excellence.",
       "items": [
-        { "badge": "B2B SaaS", "title": "Vertical SaaS solution", "desc": "Business tools, management platforms, RegTech, LegalTech, FinTech - SaaS designed for precise markets with measurable ARR/NRR metrics from launch." },
-        { "badge": "Vertical AI", "title": "Native AI product", "desc": "AI agents, sector automation, document analysis - built on models with proprietary data. The real certifiable moat of an AI asset." },
-        { "badge": "Mobile App", "title": "Mobile application", "desc": "iOS/Android for services, marketplaces or mobile-first business tools. Retention metrics (D1/D7/D30) as design criteria, not as after-the-fact indicators." }
+        {
+          "badge": "B2B SaaS",
+          "title": "Vertical SaaS solution",
+          "desc": "Business tools, management platforms, RegTech, LegalTech, FinTech - SaaS designed for precise markets with measurable ARR/NRR metrics from launch."
+        },
+        {
+          "badge": "Vertical AI",
+          "title": "Native AI product",
+          "desc": "AI agents, sector automation, document analysis - built on models with proprietary data. The real certifiable moat of an AI asset."
+        },
+        {
+          "badge": "Mobile App",
+          "title": "Mobile application",
+          "desc": "iOS/Android for services, marketplaces or mobile-first business tools. Retention metrics (D1/D7/D30) as design criteria, not as after-the-fact indicators."
+        }
       ]
     },
     "exits": {
       "label": "The exit is your choice",
       "title": "Three paths.\nOne asset built for all of them.",
       "items": [
-        { "phase": "Early stage - 6 to 18 months", "title": "Early-stage sale", "desc": "Your asset has a solid architecture and early traction. AEGRYN structures the sale via an Auction session or a direct confidential transaction.", "grade": "Target grade: A - ticket 100K to 500K EUR", "cta": "View acquisition models", "href": "/auction/bid-models" },
-        { "phase": "Market maturity - 18 to 36 months", "title": "Maturity sale", "desc": "The asset has documented recurring revenues and an established customer base. Eligible for AAA to AEG grades. Transaction within the closed circle of institutional buyers.", "grade": "Target grade: AA to AEG - ticket 500K to 5M EUR", "cta": "Submit for certification", "href": "/grade/submit" },
-        { "phase": "Retention", "title": "Evolutionary and corrective maintenance", "desc": "You do not wish to sell. AEGRYN maintains the asset technically: updates, new features, security. The exit remains open on your timeline.", "grade": "Monthly retainer or per deliverable", "cta": "Discuss maintenance", "href": "/contact" }
+        {
+          "phase": "Early stage - 6 to 18 months",
+          "title": "Early-stage sale",
+          "desc": "Your asset has a solid architecture and early traction. AEGRYN structures the sale via an Auction session or a direct confidential transaction.",
+          "grade": "Target grade: A - ticket 100K to 500K EUR",
+          "cta": "View acquisition models",
+          "href": "/auction/bid-models"
+        },
+        {
+          "phase": "Market maturity - 18 to 36 months",
+          "title": "Maturity sale",
+          "desc": "The asset has documented recurring revenues and an established customer base. Eligible for AAA to AEG grades. Transaction within the closed circle of institutional buyers.",
+          "grade": "Target grade: AA to AEG - ticket 500K to 5M EUR",
+          "cta": "Submit for certification",
+          "href": "/grade/submit"
+        },
+        {
+          "phase": "Retention",
+          "title": "Evolutionary and corrective maintenance",
+          "desc": "You do not wish to sell. AEGRYN maintains the asset technically: updates, new features, security. The exit remains open on your timeline.",
+          "grade": "Monthly retainer or per deliverable",
+          "cta": "Discuss maintenance",
+          "href": "/contact"
+        }
       ]
     },
     "process": {
       "label": "Our process",
       "title": "From brief to closing.\nOne point of contact.",
       "steps": [
-        { "num": "01", "title": "Discovery and Brief", "desc": "Definition of the value proposition, target market, stack and exit plan. Output: certifiable specification. Duration: 1 to 2 weeks." },
-        { "num": "02", "title": "Architecture and Grade Design", "desc": "The asset is architected to CIFS criteria: documented code, registered IP, security by design, tracked metrics. The grade is the construction plan." },
-        { "num": "03", "title": "Build and Iterations", "desc": "Sprint-based development with measurable milestones, code review and continuous documentation. AEGRYN proprietary stack or client stack." },
-        { "num": "04", "title": "Launch and Traction", "desc": "Deployment, first-user acquisition, ARR/NRR/churn metrics setup. Time to certifiable Grade A: 6 to 12 months." },
-        { "num": "05", "title": "Certification (and optional exit)", "desc": "CIFS protocol submission if desired. Official grade issued if criteria are met. A transaction via AEGRYN Auction or confidential channel is only engaged on your decision. The asset may also be retained with maintenance." }
+        {
+          "num": "01",
+          "title": "Discovery and Brief",
+          "desc": "Definition of the value proposition, target market, stack and exit plan. Output: certifiable specification. Duration: 1 to 2 weeks."
+        },
+        {
+          "num": "02",
+          "title": "Architecture and Grade Design",
+          "desc": "The asset is architected to CIFS criteria: documented code, registered IP, security by design, tracked metrics. The grade is the construction plan."
+        },
+        {
+          "num": "03",
+          "title": "Build and Iterations",
+          "desc": "Sprint-based development with measurable milestones, code review and continuous documentation. AEGRYN proprietary stack or client stack."
+        },
+        {
+          "num": "04",
+          "title": "Launch and Traction",
+          "desc": "Deployment, first-user acquisition, ARR/NRR/churn metrics setup. Time to certifiable Grade A: 6 to 12 months."
+        },
+        {
+          "num": "05",
+          "title": "Certification (and optional exit)",
+          "desc": "CIFS protocol submission if desired. Official grade issued if criteria are met. A transaction via AEGRYN Auction or confidential channel is only engaged on your decision. The asset may also be retained with maintenance."
+        }
       ]
     },
     "maintenance": {
       "label": "On-demand maintenance",
       "title": "The asset lives.\nWe keep it running.",
       "desc": "After launch or after a partial sale, AEGRYN offers maintenance at two levels.",
-      "corrective": { "title": "Corrective maintenance", "desc": "Bug fixes, incident resolution, security updates, CVE management, monitoring and alerts. SLA defined in contract.", "format": "Monthly retainer or on-demand tickets" },
-      "evolutive": { "title": "Evolutionary maintenance", "desc": "New features, refactoring, version upgrades, integrations, regulatory adaptation (GDPR, EU AI Act, NIS2). The asset remains certifiable at all times.", "format": "Monthly retainer or per-sprint deliverable" },
+      "corrective": {
+        "title": "Corrective maintenance",
+        "desc": "Bug fixes, incident resolution, security updates, CVE management, monitoring and alerts. SLA defined in contract.",
+        "format": "Monthly retainer or on-demand tickets"
+      },
+      "evolutive": {
+        "title": "Evolutionary maintenance",
+        "desc": "New features, refactoring, version upgrades, integrations, regulatory adaptation (GDPR, EU AI Act, NIS2). The asset remains certifiable at all times.",
+        "format": "Monthly retainer or per-sprint deliverable"
+      },
       "note": "AEGRYN maintenance ensures the asset retains or improves its grade at every cycle: the condition for an exit to remain possible at any time."
     },
     "fees": {
       "label": "Fees",
       "title": "Transparent from the brief.",
       "items": [
-        { "title": "Design and Build", "desc": "Fixed fee defined at Discovery. No equity taken. No dilution.", "format": "Quote on request" },
-        { "title": "Maintenance", "desc": "Monthly retainer or per-deliverable fee. Conditions defined in contract.", "format": "Monthly retainer defined in contract" },
-        { "title": "Transaction", "desc": "If the exit goes through AEGRYN Auction or a confidential transaction, the standard AEGRYN transaction commission applies.", "format": "Success fee - conditions in T&Cs", "href": "/terms/cgv" }
+        {
+          "title": "Design and Build",
+          "desc": "Fixed fee defined at Discovery. No equity taken. No dilution.",
+          "format": "Quote on request"
+        },
+        {
+          "title": "Maintenance",
+          "desc": "Monthly retainer or per-deliverable fee. Conditions defined in contract.",
+          "format": "Monthly retainer defined in contract"
+        },
+        {
+          "title": "Transaction",
+          "desc": "If the exit goes through AEGRYN Auction or a confidential transaction, the standard AEGRYN transaction commission applies.",
+          "format": "Success fee - conditions in T&Cs",
+          "href": "/terms/cgv"
+        }
       ],
       "coInvestNote": "AEGRYN may act as a minority co-investor on select projects: equity in exchange for a reduction in build fees. Assessed on a case-by-case basis."
     },
@@ -3382,7 +3468,8 @@
       "restart": "New estimate",
       "estimated": "estimated",
       "disclaimerLabel": "Non-official estimate",
-      "disclaimerCta": "Start an official certification"
+      "disclaimerCta": "Start an official certification",
+      "ctaContact": "Contact an advisor"
     },
     "marketContext": {
       "label": "Market context 2026",
@@ -3660,7 +3747,18 @@
     "s11Earnout": "In the event of an earnout, an additional commission of 5% is levied on each earnout payment effectively received by the seller, up to the rate applicable to the total price bracket.",
     "s11Payment": "The commission is due on the date the escrow is released and is deducted directly by AEGRYN from the escrowed funds before the net balance is remitted to the seller. AEGRYN is never the custodian of these funds — the escrow is held by a third-party bank designated by AEGRYN.",
     "ctaContact": "Contact the AEGRYN team",
-    "ctaTermsUse": "Terms of Use"
+    "ctaTermsUse": "Terms of Use",
+    "s12Title": "AEGRYN Expert Network — Expert Profile Subscription",
+    "s12Intro": "AEGRYN operates a network of listed professionals (hereinafter \"Partners\") accessible from the Expert Network section of the platform. This network is distinct from the transaction process and does not constitute an intermediation service in the financial sense.",
+    "s12AbonTitle": "Expert Profile Subscription",
+    "s12Abon": "Access to the network is conditional on subscribing to an Expert Profile subscription (€89 excl. VAT/month or current annual rate). This subscription entitles the holder to: publication and update of an expert profile visible on aegryn.com/grade/partners, direct access to referral requests initiated by AEGRYN sellers or buyers who have expressed a need for support in the areas of expertise listed in the profile, and participation in AEGRYN network events. The subscription has no minimum commitment and can be cancelled at any time with effect at the end of the current period.",
+    "s12SubTitle": "Nature of the relationship",
+    "s12Sub": "The Partner is an independent service provider listed in a personal capacity or in the name of their organisation. They freely set their fees, terms of engagement and contractual terms with their clients. AEGRYN does not receive any commission on fees charged by the Partner to their clients and does not intervene in the commercial relationship between the Partner and their clients. The Partner is in no way an employee, agent or co-contractor of AEGRYN in the context of their services.",
+    "s12NoCommTitle": "No commission paid to AEGRYN",
+    "s12NoComm": "Partners do not pay any commission to AEGRYN on their service fees, regardless of the nature of the engagement performed (advisory, due diligence, legal assistance, technical expertise, etc.). The sole financial consideration owed to AEGRYN is the monthly Expert Profile subscription. This provision is mandatory and cannot be modified by individual agreement.",
+    "s12ReferralTitle": "Referral programme",
+    "s12Referral": "Any Partner holding an active Expert Profile subscription may refer other professionals. For each referred professional subscribing to an Expert Profile, the referrer receives a one-month credit on their own subscription, credited at the next billing date. The referred professional also receives one free month deducted from their first invoice. AEGRYN reserves the right to modify this programme with 30 days' notice.",
+    "defPartner": "Professional listed in the AEGRYN directory via an active Expert Profile subscription. Supports sellers and/or buyers in their transactions (tech advisory, M&A, legal, HR, cyber, finance, W&I insurance, etc.). Is not a party to the transaction and receives no commission from AEGRYN."
   },
   "privacy": {
     "meta": {
@@ -3915,61 +4013,87 @@
     "items": [
       {
         "id": "who-we-are",
-        "cat": ["certification", "sellers", "buyers"],
+        "cat": [
+          "certification",
+          "sellers",
+          "buyers"
+        ],
         "q": "Who is AEGRYN and what do you do?",
         "a": "Aegryn is a Swiss tech asset builder that designs and operates proprietary digital ecosystems. We certify, transact and support technology assets through an independent and reproducible protocol."
       },
       {
         "id": "what-differentiates",
-        "cat": ["certification"],
+        "cat": [
+          "certification"
+        ],
         "q": "What sets you apart?",
         "a": "Unlike consulting firms or agencies, we build and operate our own digital ecosystems. Every recommendation, every protocol, every approach we propose comes from real execution. We don't resell generic models. We share what works because we use it ourselves."
       },
       {
         "id": "cert-options",
-        "cat": ["certification", "sellers"],
+        "cat": [
+          "certification",
+          "sellers"
+        ],
         "q": "What are the certification options and their pricing?",
         "a": "Two paths are available. Certification only (AEGRYN Review): obtain an official Grade without catalogue listing, at €2,000 excl. VAT (internal Review) or €5,000 excl. VAT (co-signed Review+), deductible if a Certification Auction is started within 6 months. Certification Auction: full process with catalogue listing and AEGRYN commission at transaction only. A CHF 2,000 excl. VAT publication fee applies, deductible from the commission if sold and retained without transaction."
       },
       {
         "id": "what-grade",
-        "cat": ["certification"],
+        "cat": [
+          "certification"
+        ],
         "q": "What is the AEGRYN Grade?",
         "a": "The AEGRYN Grade is an official multi-dimensional certification evaluating 4 dimensions: Code (C), IP and Rights (I), Finance (F), Security (S). Each dimension is scored out of 25. The total score determines the official Grade: AEG Star Exceptional (90 and above), AAA Excellent (75 and above), AA Very Good (60 and above), A Good (45 and above), B Correct (30 and above)."
       },
       {
         "id": "what-assets",
-        "cat": ["sellers"],
+        "cat": [
+          "sellers"
+        ],
         "q": "What types of assets can I submit?",
         "a": "AEGRYN certifies and transacts digital tech assets: B2B SaaS, mobile apps, marketplaces, AI protocols, digital intellectual property. Recommended minimum ticket: 100,000 euros estimated valuation."
       },
       {
         "id": "seller-identity",
-        "cat": ["sellers"],
+        "cat": [
+          "sellers"
+        ],
         "q": "Will my identity be disclosed to buyers?",
         "a": "AEGRYN maintains the confidentiality of all parties throughout the process. The seller's identity is not accessible to any buyer before AEGRYN decides to introduce the parties. Equally, the buyer's identity remains confidential until their offer is accepted. Only the AEGRYN team has access to personal information for KYC checks and case management."
       },
       {
         "id": "become-buyer",
-        "cat": ["buyers"],
+        "cat": [
+          "buyers"
+        ],
         "q": "How do I become a member buyer?",
         "a": "Via the application form at /auction#membership. Your application is reviewed within 10 working days."
       },
       {
         "id": "kyc-docs",
-        "cat": ["buyers", "sellers"],
+        "cat": [
+          "buyers",
+          "sellers"
+        ],
         "q": "What KYC documents are required?",
         "a": "Individuals: valid ID, proof of address under 3 months, proof of financial capacity. Entities (companies, funds): company registration equivalent under 3 months, articles of association, representative ID, UBO declaration (25% and above), regulatory licence if applicable."
       },
       {
         "id": "escrow",
-        "cat": ["buyers", "transactions"],
+        "cat": [
+          "buyers",
+          "transactions"
+        ],
         "q": "How does the escrow work?",
         "a": "After a signed NDA and acceptance of the submitted offer, the buyer deposits 10% of the agreed price with a third-party partner institution. AEGRYN never holds these funds. Withdrawal rules are set out in the Terms of Sale."
       },
       {
         "id": "kryv",
-        "cat": ["certification", "transactions"],
+        "cat": [
+          "certification",
+          "transactions"
+        ],
         "q": "How does AEGRYN guarantee the traceability of a grade?",
         "a": "Every grade is documented, versioned, and stored in the AEGRYN registry. Any modification to a certified codebase after issuance generates a new version. This makes it possible to prove at any point that the code received matches exactly the certified code."
       }
