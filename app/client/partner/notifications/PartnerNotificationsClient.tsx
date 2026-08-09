@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Bell, CheckCheck, ArrowUpRight, X } from 'lucide-react'
 import type { Notification } from './page'
@@ -23,6 +24,7 @@ function fmtDate(d: string) {
 }
 
 export default function PartnerNotificationsClient({ notifications }: { notifications: Notification[] }) {
+  const router = useRouter()
   const [items, setItems]               = useState(notifications)
   const [markingAll, setMarkingAll]     = useState(false)
   const [dismissingAll, setDismissingAll] = useState(false)
@@ -33,20 +35,26 @@ export default function PartnerNotificationsClient({ notifications }: { notifica
   async function markAllRead() {
     setMarkingAll(true)
     try {
-      await fetch('/api/buyer/notifications/read-all', { method: 'POST' })
+      await fetch('/api/client/notifications', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'read_all' }),
+      })
       setItems(prev => prev.map(n => ({ ...n, read_at: n.read_at ?? new Date().toISOString() })))
+      router.refresh()
     } finally {
       setMarkingAll(false)
     }
   }
 
   async function markRead(id: string) {
-    await fetch('/api/buyer/notifications/read', {
-      method: 'POST',
+    await fetch('/api/client/notifications', {
+      method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id }),
+      body: JSON.stringify({ action: 'read', id }),
     })
     setItems(prev => prev.map(n => n.id === id ? { ...n, read_at: new Date().toISOString() } : n))
+    router.refresh()
   }
 
   async function dismiss(id: string) {
@@ -56,6 +64,7 @@ export default function PartnerNotificationsClient({ notifications }: { notifica
       body: JSON.stringify({ id }),
     })
     setItems(prev => prev.filter(n => n.id !== id))
+    router.refresh()
   }
 
   async function dismissAllRead() {
@@ -67,6 +76,7 @@ export default function PartnerNotificationsClient({ notifications }: { notifica
         body: JSON.stringify({ all: true }),
       })
       setItems(prev => prev.filter(n => !n.read_at))
+      router.refresh()
     } finally {
       setDismissingAll(false)
     }
