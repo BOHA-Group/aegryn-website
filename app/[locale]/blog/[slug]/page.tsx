@@ -70,7 +70,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         es:          `${BASE}/es/blog/${slug}`,
         it:          `${BASE}/it/blog/${slug}`,
         nl:          `${BASE}/nl/blog/${slug}`,
-        'x-default': `${BASE}/en/blog/${slug}`,
+        'x-default': `${BASE}/fr/blog/${slug}`,
       },
     },
     openGraph: {

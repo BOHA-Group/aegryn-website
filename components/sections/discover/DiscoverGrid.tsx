@@ -14,9 +14,13 @@ interface Props { locale: string }
 
 export function DiscoverGrid({ locale }: Props) {
   const t    = useTranslations('discover')
-  const lang = locale === 'fr' ? 'fr' : 'en'
+  const VALID_LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
+  type ValidLocale = typeof VALID_LOCALES[number]
+  const lang: ValidLocale = (VALID_LOCALES as readonly string[]).includes(locale) ? locale as ValidLocale : 'en'
   const [active, setActive] = useState<Filter>('all')
   const [query, setQuery]   = useState('')
+  const [page, setPage]     = useState(1)
+  const PAGE_SIZE = 12
   const gridRef = useRef<HTMLDivElement>(null)
   const heroRef = useRef<HTMLElement>(null)
 
@@ -25,14 +29,19 @@ export function DiscoverGrid({ locale }: Props) {
     .filter(a => {
       if (!query.trim()) return true
       const q = query.toLowerCase()
-      const title   = (a.title[lang]   ?? '').toLowerCase()
-      const excerpt = (a.excerpt[lang] ?? '').toLowerCase()
-      const cat     = (ARTICLE_CATEGORIES[a.category][lang] ?? '').toLowerCase()
+      const title   = (a.title[lang]   ?? a.title.en ?? '').toLowerCase()
+      const excerpt = (a.excerpt[lang] ?? a.excerpt.en ?? '').toLowerCase()
+      const cat     = (ARTICLE_CATEGORIES[a.category][lang] ?? ARTICLE_CATEGORIES[a.category].en ?? '').toLowerCase()
       return title.includes(q) || excerpt.includes(q) || cat.includes(q)
     })
 
+  const totalPages  = Math.ceil(filtered.length / PAGE_SIZE)
+  const paginated   = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
+
   const featured   = ARTICLES.filter(a => a.featured).slice(0, 3)
   const showFeatured = active === 'all'
+
+  useEffect(() => { setPage(1) }, [active, query])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -44,7 +53,7 @@ export function DiscoverGrid({ locale }: Props) {
       })
     }, gridRef)
     return () => ctx.revert()
-  }, [active])
+  }, [active, page])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -183,7 +192,7 @@ export function DiscoverGrid({ locale }: Props) {
               <p className="font-sans text-[14px] text-ag-gray py-12 text-center">{t('noArticles')}</p>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-ag-border divide-y md:divide-y-0">
-                {filtered.map((article, idx) => (
+                {paginated.map((article, idx) => (
                   <Link
                     key={article.slug}
                     href={`/blog/${article.slug}` as never}
@@ -192,13 +201,13 @@ export function DiscoverGrid({ locale }: Props) {
                     } ${idx >= 3 ? 'border-t' : ''}`}
                   >
                     <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex">
-                      {ARTICLE_CATEGORIES[article.category][lang]}
+                      {ARTICLE_CATEGORIES[article.category][lang] ?? ARTICLE_CATEGORIES[article.category].en}
                     </p>
                     <h3 className="font-sans font-semibold text-ag-black text-[17px] tracking-[-0.02em] leading-snug group-hover:text-ag-navy transition-colors">
-                      {article.title[lang]}
+                      {article.title[lang] ?? article.title.en}
                     </h3>
                     <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
-                      {article.excerpt[lang]}
+                      {article.excerpt[lang] ?? article.excerpt.en}
                     </p>
                     <div className="flex items-center justify-between pt-3 border-t border-ag-border">
                       <div className="flex items-center gap-4 text-ag-gray-light">
@@ -216,6 +225,39 @@ export function DiscoverGrid({ locale }: Props) {
               </div>
             )}
           </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-2 mt-12 pb-4">
+              <button
+                onClick={() => setPage(p => Math.max(1, p - 1))}
+                disabled={page === 1}
+                className="font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2 border border-ag-border bg-ag-white text-ag-gray hover:border-ag-black hover:text-ag-black disabled:opacity-30 disabled:pointer-events-none transition-colors"
+              >
+                ←
+              </button>
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(n => (
+                <button
+                  key={n}
+                  onClick={() => setPage(n)}
+                  className={`font-mono text-[10px] tracking-[0.14em] uppercase w-9 h-9 border transition-colors ${
+                    n === page
+                      ? 'border-ag-black bg-ag-black text-white'
+                      : 'border-ag-border bg-ag-white text-ag-gray hover:border-ag-black hover:text-ag-black'
+                  }`}
+                >
+                  {n}
+                </button>
+              ))}
+              <button
+                onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+                disabled={page === totalPages}
+                className="font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2 border border-ag-border bg-ag-white text-ag-gray hover:border-ag-black hover:text-ag-black disabled:opacity-30 disabled:pointer-events-none transition-colors"
+              >
+                →
+              </button>
+            </div>
+          )}
 
           {/* Newsletter strip */}
           <div className="mt-16 border border-ag-border bg-ag-white p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
