@@ -731,12 +731,12 @@ function TractionPanel({
 }
 
 export default function ExpertsAdminClient({ applications, profiles, clickStats, tokenQs, initialPeriod }: Props) {
-  const [apps,    setApps]    = useState(applications)
-  const [profs,   setProfs]   = useState(profiles)
-  const [stats,   setStats]   = useState(clickStats)
+  const [apps,    _setApps]    = useState(applications)
+  const [profs,   _setProfs]   = useState(profiles)
+  const [stats,   _setStats]   = useState(clickStats)
   const [period,  setPeriod]  = useState(initialPeriod ?? 'all')
   const [filter,  setFilter]  = useState<'all' | 'pending' | 'visible' | 'hidden'>('all')
-  const [loading, setLoading] = useState(false)
+  const [loading, _setLoading] = useState(false)
   const router = useRouter()
   const [isRefreshing, startTransition] = useTransition()
 
