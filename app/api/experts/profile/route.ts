@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
 import { getUser }                  from '@/lib/supabaseServer'
+import { EXPERT_PROFILE_BLANK }     from '@/lib/expertProfileDefaults'
 
 const updateSchema = z.object({
   first_name:             z.string().min(1).max(80),
@@ -168,6 +169,16 @@ export async function PATCH(req: NextRequest) {
 
   try {
     const rawBody = await req.json() as Record<string, unknown>
+
+    if (rawBody.reset === true) {
+      const { error: resetErr } = await supa
+        .from('expert_profiles')
+        .update(EXPERT_PROFILE_BLANK)
+        .eq('user_id', user.id)
+      if (resetErr) throw resetErr
+      return NextResponse.json({ ok: true, reset: true })
+    }
+
     const isSubmit = rawBody.submit === true
     delete rawBody.submit
 

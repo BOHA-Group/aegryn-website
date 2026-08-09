@@ -358,6 +358,12 @@ function ProfileRow({
                 Réinitialiser (repasser en révision)
               </button>
             )}
+            <button
+              onClick={() => { if (confirm('Vider tout le contenu de cette fiche ? Le partenaire devra la reconstruire depuis zéro.')) patchProfile({ reset: true }) }}
+              disabled={loading}
+              className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-50 transition-colors">
+              Vider la fiche
+            </button>
           </div>
 
           {showRefuse && (

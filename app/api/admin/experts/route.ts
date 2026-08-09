@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient }      from '@/lib/supabase'
 import { checkAdminAccess }         from '@/lib/adminAuth'
 import { syncExpertVisibility }     from '@/lib/expertVisibility'
+import { EXPERT_PROFILE_BLANK }     from '@/lib/expertProfileDefaults'
 
 const PERIOD_INTERVALS: Record<string, string | null> = {
   '1d':  '1 day',
@@ -209,6 +210,31 @@ export async function PATCH(req: NextRequest) {
   }
 
   if (table === 'expert_profiles') {
+    const { reset } = updates as { reset?: boolean }
+
+    if (reset === true) {
+      const { data: target } = await supa
+        .from('expert_profiles')
+        .select('user_id')
+        .eq('id', id)
+        .maybeSingle()
+
+      const { error } = await supa.from('expert_profiles').update(EXPERT_PROFILE_BLANK).eq('id', id)
+      if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+
+      if (target?.user_id) {
+        await supa.from('user_notifications').insert({
+          user_id: target.user_id,
+          type:    'broadcast_alert',
+          title:   'Votre fiche expert a été réinitialisée',
+          body:    'Un administrateur a vidé votre fiche expert. Vous pouvez la reconstruire depuis votre espace partenaire.',
+          link:    '/client/partner/expert-profile',
+        })
+      }
+
+      return NextResponse.json({ ok: true, is_visible: false })
+    }
+
     const {
       hidden_reason,
       review_status,

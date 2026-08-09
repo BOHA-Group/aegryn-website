@@ -202,6 +202,25 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
     }
   }
 
+  /* Réinitialiser complètement la fiche — repartir d'une fiche vierge */
+  async function handleReset() {
+    if (!confirm('Vider toute votre fiche expert pour repartir de zéro ? Cette action est irréversible.')) return
+    setSaving(true)
+    setError(null)
+    const res = await fetch('/api/experts/profile', {
+      method:  'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ reset: true }),
+    })
+    if (res.ok) {
+      window.location.reload()
+    } else {
+      const json = await res.json() as { error?: string }
+      setError(json.error ?? 'Erreur lors de la réinitialisation')
+      setSaving(false)
+    }
+  }
+
   /* Soumettre pour validation admin — pose review_status=pending_review + notifie */
   async function handleSubmitForReview() {
     setSubmitting(true)
@@ -545,6 +564,17 @@ export default function ExpertProfileForm({ existing, canPublish }: Props) {
           >
             {submitting && <Loader2 size={13} className="animate-spin" />}
             Soumettre pour publication
+          </button>
+        )}
+
+        {!isNew && (
+          <button
+            type="button"
+            disabled={saving || submitting}
+            onClick={handleReset}
+            className="ml-auto font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-50 transition-colors"
+          >
+            Repartir de zéro
           </button>
         )}
       </div>
