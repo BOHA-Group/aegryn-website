@@ -20,7 +20,9 @@ export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl
   const token  = searchParams.get('token')  ?? undefined
   const period = searchParams.get('period') ?? 'all'
-  await checkAdminAccess(token)
+  try { await checkAdminAccess(token) } catch {
+    return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+  }
 
   const supa = createServiceClient()
 
@@ -100,7 +102,9 @@ export async function GET(req: NextRequest) {
 export async function PATCH(req: NextRequest) {
   const { searchParams } = req.nextUrl
   const token = searchParams.get('token') ?? undefined
-  await checkAdminAccess(token)
+  try { await checkAdminAccess(token) } catch {
+    return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+  }
 
   const body = await req.json()
   const { table, id, ...updates } = body as {
@@ -303,7 +307,9 @@ export async function PATCH(req: NextRequest) {
 export async function DELETE(req: NextRequest) {
   const { searchParams } = req.nextUrl
   const token = searchParams.get('token') ?? undefined
-  await checkAdminAccess(token)
+  try { await checkAdminAccess(token) } catch {
+    return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+  }
 
   const body = await req.json() as { table: string; id?: string; expert_id?: string; purge_all?: boolean }
   const { table, id, expert_id, purge_all } = body

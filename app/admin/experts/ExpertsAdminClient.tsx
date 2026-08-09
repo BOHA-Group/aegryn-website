@@ -750,15 +750,25 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
   async function refresh(p?: string) {
     const activePeriod = p ?? period
     setLoading(true)
-    const qs  = tokenQs
-      ? `${tokenQs}&period=${activePeriod}`
-      : `?period=${activePeriod}`
-    const res  = await fetch(`/api/admin/experts${qs}`)
-    const data = await res.json()
-    setApps(data.applications ?? [])
-    setProfs(data.profiles    ?? [])
-    setStats(data.clickStats  ?? [])
-    setLoading(false)
+    try {
+      const qs  = tokenQs
+        ? `${tokenQs}&period=${activePeriod}`
+        : `?period=${activePeriod}`
+      const res  = await fetch(`/api/admin/experts${qs}`)
+      if (!res.ok) {
+        console.error('[admin/experts] refresh HTTP', res.status, await res.text())
+        setLoading(false)
+        return
+      }
+      const data = await res.json()
+      setApps(data.applications ?? [])
+      setProfs(data.profiles    ?? [])
+      setStats(data.clickStats  ?? [])
+    } catch (err) {
+      console.error('[admin/experts] refresh error', err)
+    } finally {
+      setLoading(false)
+    }
   }
 
   async function handlePeriodChange(p: string) {
