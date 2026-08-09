@@ -428,47 +428,38 @@ function ExpertCard({ profile, t, locale = 'fr', blurred = false, filters = { ca
         </div>
       </div>
 
-      {/* Taxonomie : Dimension → Catégories → Spécialités */}
-      {(profile.expertise_dimension || categoryNodes.length > 0 || specialtyNodes.length > 0) ? (
-        <div className="space-y-1">
-          {profile.expertise_dimension && (
-            <div className="flex flex-wrap gap-1">
-              {(() => { const dc = DIMENSION_COLORS_PUBLIC[profile.expertise_dimension]; return (
-                <span className={`inline-flex items-center font-mono text-[8px] tracking-[0.12em] uppercase px-1.5 py-0.5 border font-bold ${dc?.bg ?? 'bg-ag-off-white'} ${dc?.border ?? 'border-ag-border'} ${dc?.text ?? 'text-ag-gray'}`}>
-                  {DIMENSION_LABELS_PUBLIC[profile.expertise_dimension] ?? profile.expertise_dimension}
-                </span>
-              )})()}
-            </div>
-          )}
-          {categoryNodes.length > 0 && (
-            <div className="flex flex-wrap gap-1 pl-2 border-l border-ag-border ml-0.5">
-              {categoryNodes.map(cat => {
-                const cc = getCatColorPublic(cat.id)
-                return (
-                  <span key={cat.id} className={`font-mono text-[8px] tracking-[0.10em] uppercase px-1.5 py-0.5 border ${cc.bg} ${cc.border} ${cc.text}`}>
-                    {getCategoryLabel(cat, locale as LocaleKey)}
-                  </span>
-                )
-              })}
-            </div>
-          )}
-          {specialtyNodes.length > 0 && (
-            <div className="flex flex-wrap gap-1 pl-3 border-l border-ag-border/40 ml-0.5">
-              {specialtyNodes.slice(0, 6).map(s => (
-                <span key={s.id} className="font-sans text-[10px] px-1.5 py-0.5 bg-ag-off-white border border-ag-border text-ag-gray">
-                  {getSpecialtyLabel(s, locale as LocaleKey)}
-                </span>
-              ))}
-              {specialtyNodes.length > 6 && (
-                <span className="font-sans text-[10px] text-ag-gray-light px-1 py-0.5">+{specialtyNodes.length - 6}</span>
-              )}
-            </div>
-          )}
-        </div>
-      ) : null}
-
       {profile.bio && (
         <p className="font-sans text-[12px] text-ag-gray leading-relaxed line-clamp-3">{profile.bio}</p>
+      )}
+
+      {/* ── Taxonomie — pied de fiche compact ── */}
+      {(profile.expertise_dimension || categoryNodes.length > 0 || specialtyNodes.length > 0) && (
+        <div className="pt-2 border-t border-ag-border flex flex-wrap gap-1 items-center">
+          {profile.expertise_dimension && (() => {
+            const dc = DIMENSION_COLORS_PUBLIC[profile.expertise_dimension]
+            return (
+              <span className={`inline-flex items-center font-mono text-[7px] tracking-[0.12em] uppercase px-1.5 py-0.5 border font-bold ${dc?.bg ?? 'bg-ag-off-white'} ${dc?.border ?? 'border-ag-border'} ${dc?.text ?? 'text-ag-gray'}`}>
+                {DIMENSION_LABELS_PUBLIC[profile.expertise_dimension] ?? profile.expertise_dimension}
+              </span>
+            )
+          })()}
+          {categoryNodes.map(cat => {
+            const cc = getCatColorPublic(cat.id)
+            return (
+              <span key={cat.id} className={`font-mono text-[7px] tracking-[0.08em] uppercase px-1.5 py-0.5 border ${cc.bg} ${cc.border} ${cc.text}`}>
+                {getCategoryLabel(cat, locale as LocaleKey)}
+              </span>
+            )
+          })}
+          {specialtyNodes.slice(0, 5).map(s => (
+            <span key={s.id} className="font-sans text-[10px] px-1.5 py-0.5 bg-ag-off-white border border-ag-border text-ag-gray">
+              {getSpecialtyLabel(s, locale as LocaleKey)}
+            </span>
+          ))}
+          {specialtyNodes.length > 5 && (
+            <span className="font-sans text-[10px] text-ag-gray-light px-1 py-0.5">+{specialtyNodes.length - 5}</span>
+          )}
+        </div>
       )}
 
       <div className="pt-2 border-t border-ag-border mt-auto space-y-1.5">
