@@ -48,12 +48,31 @@ export default async function AdminExpertsPage({
     profile: profileMap.get(ep.user_id) ?? null,
   }))
 
+  // Comptes éligibles à un crédit d'abonnement expert : rôle "expert" ou
+  // expert_plan déjà renseigné — même sans fiche expert_profiles associée
+  // (ex: abonnement actif mais fiche jamais soumise ou supprimée depuis).
+  const { data: creditableProfiles } = await supa
+    .from('profiles')
+    .select('id, email, full_name, expert_plan, expert_plan_end')
+    .or('roles.cs.{expert},expert_plan.not.is.null')
+    .order('email', { ascending: true })
+
+  const expertProfileNameMap = new Map(
+    (rawProfiles ?? []).map(ep => [ep.user_id, `${ep.first_name ?? ''} ${ep.last_name ?? ''}`.trim()])
+  )
+  const creditablePartners = (creditableProfiles ?? []).map(p => ({
+    user_id:     p.id,
+    email:       p.email,
+    display_name: expertProfileNameMap.get(p.id) || p.full_name || p.email,
+    expert_plan: p.expert_plan,
+  }))
 
   return (
     <ExpertsAdminClient
       applications={applications ?? []}
       profiles={profiles}
       clickStats={clickStats ?? []}
+      creditablePartners={creditablePartners}
     />
   )
 }

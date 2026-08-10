@@ -397,7 +397,7 @@ function ProfileRow({
  * AdminSubscriptionPanel — attribution manuelle de mois d'abonnement expert
  * ───────────────────────────────────────────────────────────────────────────── */
 
-function AdminSubscriptionPanel({ profiles }: { profiles: ExpertProfile[] }) {
+function AdminSubscriptionPanel({ partners }: { partners: CreditablePartner[] }) {
   const [open,      setOpen]      = useState(true)
   const [userId,    setUserId]    = useState('')
   const [months,    setMonths]    = useState('1')
@@ -425,8 +425,8 @@ function AdminSubscriptionPanel({ profiles }: { profiles: ExpertProfile[] }) {
     setLoading(false)
   }
 
-  const sortedProfiles = [...profiles].sort((a, b) =>
-    (a.profile?.email ?? '').localeCompare(b.profile?.email ?? '')
+  const sortedPartners = [...partners].sort((a, b) =>
+    a.email.localeCompare(b.email)
   )
 
   return (
@@ -460,10 +460,10 @@ function AdminSubscriptionPanel({ profiles }: { profiles: ExpertProfile[] }) {
                 required
               >
                 <option value="">— Sélectionner —</option>
-                {sortedProfiles.map(p => (
+                {sortedPartners.map(p => (
                   <option key={p.user_id} value={p.user_id}>
-                    {p.first_name} {p.last_name} — {p.profile?.email ?? p.user_id}
-                    {p.profile?.expert_plan === 'active' ? ' ✓ actif' : ' ✗ inactif'}
+                    {p.display_name} — {p.email}
+                    {p.expert_plan === 'active' ? ' ✓ actif' : ' ✗ inactif'}
                   </option>
                 ))}
               </select>
@@ -548,11 +548,19 @@ const PERIODS: { key: string; label: string }[] = [
   { key: 'all', label: 'Tout'},
 ]
 
+type CreditablePartner = {
+  user_id:      string
+  email:        string
+  display_name: string
+  expert_plan:  string | null
+}
+
 type Props = {
-  applications: Application[]
-  profiles:     ExpertProfile[]
-  clickStats:   ClickStat[]
-  initialPeriod?: string
+  applications:       Application[]
+  profiles:           ExpertProfile[]
+  clickStats:         ClickStat[]
+  initialPeriod?:     string
+  creditablePartners: CreditablePartner[]
 }
 
 function TractionPanel({
@@ -730,7 +738,7 @@ function TractionPanel({
   )
 }
 
-export default function ExpertsAdminClient({ applications, profiles, clickStats, initialPeriod }: Props) {
+export default function ExpertsAdminClient({ applications, profiles, clickStats, initialPeriod, creditablePartners }: Props) {
   const [apps,   setApps]   = useState(applications)
   const [profs,  setProfs]  = useState(profiles)
   const [stats,  setStats]  = useState(clickStats)
@@ -866,7 +874,7 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
         </div>
 
         {/* Section 3 — Attribution manuelle abonnement */}
-        <AdminSubscriptionPanel profiles={profs} />
+        <AdminSubscriptionPanel partners={creditablePartners} />
 
         <div className="mb-10" />
 
