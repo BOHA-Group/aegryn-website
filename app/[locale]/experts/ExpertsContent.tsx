@@ -402,13 +402,13 @@ function ExpertCard({ profile, t, locale = 'fr', blurred = false, filters = { ca
           <Image
             src={profile.avatar_url}
             alt={`${profile.first_name} ${profile.last_name}`}
-            width={48}
-            height={48}
-            className="w-12 h-12 object-cover shrink-0"
+            width={96}
+            height={96}
+            className="w-24 h-24 object-cover shrink-0"
           />
         ) : (
-          <div className="w-12 h-12 bg-ag-off-white border border-ag-border flex items-center justify-center shrink-0">
-            <span className="font-mono text-[13px] font-bold text-ag-gray">{initials}</span>
+          <div className="w-24 h-24 bg-ag-off-white border border-ag-border flex items-center justify-center shrink-0">
+            <span className="font-mono text-[18px] font-bold text-ag-gray">{initials}</span>
           </div>
         )}
         <div className="flex-1 min-w-0">
