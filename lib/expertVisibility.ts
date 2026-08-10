@@ -25,8 +25,8 @@ export async function syncExpertVisibility(
 
   if (!ep) return null
 
-  // Blocage explicite : refus admin ou masquage silencieux → jamais republié automatiquement
-  if (ep.review_status === 'rejected' || ep.hidden_reason === 'admin_hidden') {
+  // Blocage explicite : refus admin, masquage admin, ou masquage volontaire partner → jamais republié automatiquement
+  if (ep.review_status === 'rejected' || ep.hidden_reason === 'admin_hidden' || ep.hidden_reason === 'self_hidden') {
     if (ep.is_visible) {
       await supa.from('expert_profiles').update({ is_visible: false }).eq('id', ep.id)
     }
