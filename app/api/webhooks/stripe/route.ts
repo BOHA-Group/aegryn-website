@@ -263,7 +263,7 @@ export async function POST(req: NextRequest) {
         await sendEmail(
           email,
           'Aegryn — Votre abonnement expert est activé',
-          `Bonjour,\n\nVotre abonnement expert Aegryn est maintenant actif.\nVotre fiche expert est visible dans l'annuaire et les clients peuvent vous contacter directement.\n\nAccédez à votre espace partenaire : https://aegryn.com/client/partner\n\nL'équipe Aegryn`
+          `Bonjour,\n\nVotre abonnement expert Aegryn est maintenant actif.\nVotre fiche expert sera visible dans l'annuaire et les clients pourront vous contacter directement dès que votre fiche expert et votre vérification KYC seront validées.\n\nSi ces étapes sont déjà complétées, votre fiche est publiée automatiquement.\n\nAccédez à votre espace partenaire : https://aegryn.com/client/partner\n\nL'équipe Aegryn`
         )
       }
     }
