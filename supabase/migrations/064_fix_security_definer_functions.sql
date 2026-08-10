@@ -43,10 +43,15 @@ CREATE OR REPLACE FUNCTION public.trg_fn_catalogue_requests()
 RETURNS trigger LANGUAGE plpgsql SECURITY INVOKER SET search_path = '' AS $$
 BEGIN NEW.updated_at = now(); RETURN NEW; END; $$;
 
+-- rls_auto_enable est une event trigger function (pas un trigger table)
+DROP EVENT TRIGGER IF EXISTS ensure_rls;
 DROP FUNCTION IF EXISTS public.rls_auto_enable();
 CREATE OR REPLACE FUNCTION public.rls_auto_enable()
-RETURNS trigger LANGUAGE plpgsql SECURITY INVOKER SET search_path = '' AS $$
-BEGIN RETURN NEW; END; $$;
+RETURNS event_trigger LANGUAGE plpgsql SECURITY INVOKER SET search_path = '' AS $$
+BEGIN
+END; $$;
+CREATE EVENT TRIGGER ensure_rls ON ddl_command_end
+  EXECUTE FUNCTION public.rls_auto_enable();
 
 -- ── update_blocks_grading ────────────────────────────────────────────────────
 
