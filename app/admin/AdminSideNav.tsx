@@ -78,6 +78,16 @@ function AdminSideNavInner({ adminEmail }: { adminEmail: string }) {
         >
           Dashboard
         </Link>
+        <Link
+          href="/client/account"
+          className={`flex items-center px-5 py-2 font-sans text-[12px] transition-colors ${
+            pathname === '/client/account'
+              ? 'bg-white/10 text-white font-semibold border-l-2 border-ag-apex'
+              : 'text-white/50 hover:text-white/90 hover:bg-white/5 border-l-2 border-transparent'
+          }`}
+        >
+          Mon compte
+        </Link>
       </div>
 
       {SECTIONS.map(section => (
