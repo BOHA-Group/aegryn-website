@@ -183,7 +183,7 @@ export default async function PartnerSubscriptionPage({
       </p>
 
       {/* Parrainage */}
-      <ReferralSection isActive={isActive} />
+      <ReferralSection isActive={isActive} initialPlanEnd={planEnd} />
 
     </div>
   )

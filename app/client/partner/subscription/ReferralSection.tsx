@@ -54,14 +54,15 @@ const STATUS_LABELS: Record<string, { label: string; cls: string }> = {
   cancelled: { label: 'Annulé',     cls: 'text-gray-500 bg-gray-50 border-gray-200' },
 }
 
-export default function ReferralSection({ isActive }: { isActive: boolean }) {
-  const [data,       setData]       = useState<ReferralData | null>(null)
-  const [loading,    setLoading]    = useState(true)
-  const [copied,     setCopied]     = useState(false)
-  const [codeInput,  setCodeInput]  = useState('')
-  const [submitting, setSubmitting] = useState(false)
-  const [submitMsg,  setSubmitMsg]  = useState<{ ok: boolean; text: string } | null>(null)
+export default function ReferralSection({ isActive, initialPlanEnd }: { isActive: boolean; initialPlanEnd: string | null }) {
+  const [data,        setData]        = useState<ReferralData | null>(null)
+  const [loading,     setLoading]     = useState(true)
+  const [copied,      setCopied]      = useState(false)
+  const [codeInput,   setCodeInput]   = useState('')
+  const [submitting,  setSubmitting]  = useState(false)
+  const [submitMsg,   setSubmitMsg]   = useState<{ ok: boolean; text: string } | null>(null)
   const [showCredits, setShowCredits] = useState(false)
+  const [planEnd,     setPlanEnd]     = useState<string | null>(initialPlanEnd)
 
   const load = useCallback(async () => {
     setLoading(true)
@@ -89,9 +90,13 @@ export default function ReferralSection({ isActive }: { isActive: boolean }) {
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ code: codeInput.trim().toUpperCase(), consent: true }),
     })
-    const json = await res.json() as { ok?: boolean; error?: string; code?: string }
+    const json = await res.json() as { ok?: boolean; error?: string; code?: string; already_active?: boolean; new_plan_end?: string | null }
     if (json.ok) {
-      setSubmitMsg({ ok: true, text: 'Code validé — votre parrain a été enregistré.' })
+      const msg = json.already_active
+        ? 'Code validé — 1 mois offert crédité sur votre prochain renouvellement.'
+        : 'Code validé — votre mois offert sera crédité dès activation de votre abonnement.'
+      setSubmitMsg({ ok: true, text: msg })
+      if (json.new_plan_end) setPlanEnd(json.new_plan_end)
       setCodeInput('')
       load()
     } else {
@@ -137,8 +142,12 @@ export default function ReferralSection({ isActive }: { isActive: boolean }) {
           <p className="font-sans text-[12px] text-blue-800">
             <strong>Vous avez été parrainé.</strong>{' '}
             {data.filleul_status.status === 'pending'
-              ? 'Votre mois offert sera crédité dès activation de votre abonnement.'
-              : 'Statut : ' + data.filleul_status.status}
+              ? isActive
+                ? planEnd
+                  ? <>1 mois offert crédité — prochain renouvellement le <strong>{fmtDate(planEnd)}</strong>.</>
+                  : '1 mois offert crédité sur votre prochain renouvellement.'
+                : 'Votre mois offert sera crédité dès activation de votre abonnement.'
+              : 'Statut : ' + data.filleul_status.status}
           </p>
         </div>
       )}

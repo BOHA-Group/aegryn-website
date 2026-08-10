@@ -155,7 +155,32 @@ export async function POST(req: NextRequest) {
   /* Stocker le parrain sur le profil filleul */
   await supa.from('profiles').update({ referred_by: sponsor.id }).eq('id', user.id)
 
-  return NextResponse.json({ ok: true })
+  /* Si filleul a déjà un abonnement actif → crédit +1 mois immédiat */
+  let newPlanEnd: string | null = null
+  if (myProfile.expert_plan === 'active') {
+    const { data: currentProfile } = await supa
+      .from('profiles')
+      .select('expert_plan_end')
+      .eq('id', user.id)
+      .single()
+    const base = currentProfile?.expert_plan_end
+      ? new Date(currentProfile.expert_plan_end)
+      : new Date()
+    base.setMonth(base.getMonth() + 1)
+    newPlanEnd = base.toISOString()
+    await supa.from('profiles').update({ expert_plan_end: newPlanEnd }).eq('id', user.id)
+    await supa.from('expert_subscription_credits').insert({
+      user_id:    user.id,
+      source:     'referral_referred',
+      months:     1,
+      note:       `Mois offert — parrainage par ${sponsor.id}`,
+      expires_at: newPlanEnd,
+      applied:    true,
+      applied_at: new Date().toISOString(),
+    })
+  }
+
+  return NextResponse.json({ ok: true, already_active: myProfile.expert_plan === 'active', new_plan_end: newPlanEnd })
 }
 
 /* ── DELETE — révocation d'un referral pending par le parrain ── */
