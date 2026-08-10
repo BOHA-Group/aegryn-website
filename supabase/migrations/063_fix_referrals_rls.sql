@@ -10,7 +10,9 @@
 -- ── expert_referrals ──────────────────────────────────────────────────────────
 DROP POLICY IF EXISTS "referrals_service_all" ON public.expert_referrals;
 ALTER TABLE public.expert_referrals ENABLE ROW LEVEL SECURITY;
+GRANT INSERT, UPDATE, DELETE, SELECT ON public.expert_referrals TO service_role;
 
 -- ── expert_subscription_credits ───────────────────────────────────────────────
 DROP POLICY IF EXISTS "credits_service_all" ON public.expert_subscription_credits;
 ALTER TABLE public.expert_subscription_credits ENABLE ROW LEVEL SECURITY;
+GRANT INSERT, UPDATE, DELETE, SELECT ON public.expert_subscription_credits TO service_role;
