@@ -21,15 +21,8 @@ const ALLOWED_TABLES = [
 type AllowedTable = typeof ALLOWED_TABLES[number]
 
 export async function DELETE(req: NextRequest) {
-  const { searchParams } = req.nextUrl
-  const token = searchParams.get('token') ?? ''
-
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
-  const tokenOk = !!adminToken && token === adminToken
-  if (!tokenOk) {
-    const adminUser = await getAdminUser()
-    if (!adminUser) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
-  }
+  const adminUser = await getAdminUser()
+  if (!adminUser) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
 
   let body: { table: string; ids: string[] }
   try {

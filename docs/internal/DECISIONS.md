@@ -88,6 +88,19 @@
 
 ---
 
+### D-012 — Confirmed no Supabase-side caller for bulk-delete/update-lot — token removed entirely
+**Date:** 2026-08  
+**Decision:** Investigated whether Supabase (database triggers, Database Webhooks, `pg_cron`, `pg_net`/`http` extensions, or Edge Functions) could be calling `/api/admin/bulk-delete` or `/api/admin/auction/update-lot`. Verified via `supabase db query` (linked to project `aegryn-auction`, ref `regdgeodxwpqekhcfmmp`) and `supabase functions list`:
+- Installed extensions: `pg_stat_statements`, `pgcrypto`, `plpgsql`, `supabase_vault`, `uuid-ossp` — **no `pg_net`/`http`**, so Postgres cannot issue outbound HTTP calls.
+- Schemas `cron` and `supabase_functions` (used by `pg_cron` and Database Webhooks respectively) **do not exist** in this project.
+- Zero Edge Functions deployed.
+- No function/trigger source code (`pg_proc.prosrc`) references `bulk-delete`, `update-lot`, or `aegryn`.
+- Full repo grep (root + `aegryn-site`, excluding `node_modules`) found zero matches outside the 2 route files themselves.
+Conclusion: no technical path exists for Supabase to call these routes, and no other automation was found. User confirmed no external script/tool (Postman, Zapier, etc.) depends on them. `ADMIN_LEADS_TOKEN` fallback removed entirely from both routes — they now authenticate via `getAdminUser()` session cookie only. Verified live: token (old or new) rejected with 401; session cookie succeeds with 200.  
+**Status:** ✅ Implemented — token fully removed from these 2 routes
+
+---
+
 ## Pending Decisions
 
 | # | Topic | Context | Due |

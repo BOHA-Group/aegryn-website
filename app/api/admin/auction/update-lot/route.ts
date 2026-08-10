@@ -1,14 +1,12 @@
 /**
  * PATCH /api/admin/auction/update-lot
  * Met à jour un lot auction : status, session dates, reserve_price, grade, buyer_premium_pct.
- * Auth : service_role uniquement (appelé par l'admin dashboard avec token).
+ * Auth : session admin (cookie) uniquement.
  */
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient }       from '@/lib/supabase'
 import { z }                         from 'zod'
 import { getAdminUser }              from '@/lib/adminAuth'
-
-const ADMIN_TOKEN = process.env.ADMIN_LEADS_TOKEN
 
 const schema = z.object({
   id:               z.string().uuid(),
@@ -22,13 +20,8 @@ const schema = z.object({
 })
 
 export async function PATCH(req: NextRequest) {
-  /* Token auth (fallback automation) OU session admin */
-  const auth = req.headers.get('x-admin-token')
-  const tokenOk = !!ADMIN_TOKEN && auth === ADMIN_TOKEN
-  if (!tokenOk) {
-    const adminUser = await getAdminUser()
-    if (!adminUser) return NextResponse.json({ error: 'Non autorisé.' }, { status: 401 })
-  }
+  const adminUser = await getAdminUser()
+  if (!adminUser) return NextResponse.json({ error: 'Non autorisé.' }, { status: 401 })
 
   const body   = await req.json()
   const parsed = schema.safeParse(body)
