@@ -1,14 +1,16 @@
 -- ── Migration 063 — Fix RLS expert_referrals + expert_subscription_credits ──
 --
--- Le service_role Supabase bypass normalement la RLS automatiquement,
--- mais seulement si le client est créé avec auth.persistSession = false
--- ET que la policy n'utilise pas auth.role() qui renvoie 'anon' côté server.
--- Solution : désactiver RLS sur ces tables et se reposer sur le service_role.
--- Les données sont protégées par le fait que seul le service_role y accède.
--- Les utilisateurs ne peuvent lire que via les API routes (pas d'accès direct).
+-- Le service_role Supabase bypass la RLS nativement sans policy dédiée.
+-- Les policies *_service_all avec auth.role() étaient incorrectes (auth.role()
+-- renvoie 'anon' côté API Next.js même avec la service key).
+-- Solution : réactiver RLS + supprimer les policies service_role inutiles.
+-- Le service_role bypasse toujours RLS nativement — pas besoin de policy pour lui.
+-- Les utilisateurs authentifiés peuvent lire leurs propres données via *_own_read.
 
--- Désactiver RLS sur expert_referrals
-ALTER TABLE public.expert_referrals DISABLE ROW LEVEL SECURITY;
+-- ── expert_referrals ──────────────────────────────────────────────────────────
+DROP POLICY IF EXISTS "referrals_service_all" ON public.expert_referrals;
+ALTER TABLE public.expert_referrals ENABLE ROW LEVEL SECURITY;
 
--- Désactiver RLS sur expert_subscription_credits
-ALTER TABLE public.expert_subscription_credits DISABLE ROW LEVEL SECURITY;
+-- ── expert_subscription_credits ───────────────────────────────────────────────
+DROP POLICY IF EXISTS "credits_service_all" ON public.expert_subscription_credits;
+ALTER TABLE public.expert_subscription_credits ENABLE ROW LEVEL SECURITY;
