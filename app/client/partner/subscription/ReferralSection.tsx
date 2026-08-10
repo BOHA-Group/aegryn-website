@@ -90,11 +90,11 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ code: codeInput.trim().toUpperCase(), consent: true }),
     })
-    const json = await res.json() as { ok?: boolean; error?: string; code?: string; already_active?: boolean; new_plan_end?: string | null }
+    const json = await res.json() as { ok?: boolean; error?: string; code?: string; already_active?: boolean; new_plan_end?: string | null; credit_pending?: boolean }
     if (json.ok) {
       const msg = json.already_active
-        ? 'Code validé — 1 mois offert crédité sur votre prochain renouvellement.'
-        : 'Code validé — votre mois offert sera crédité dès activation de votre abonnement.'
+        ? `Code validé — 1 mois offert crédité. Prochain renouvellement le ${json.new_plan_end ? fmtDate(json.new_plan_end) : '—'}.`
+        : 'Code validé — 1 mois offert enregistré. Il sera activé automatiquement lors de votre premier abonnement.'
       setSubmitMsg({ ok: true, text: msg })
       if (json.new_plan_end) setPlanEnd(json.new_plan_end)
       setCodeInput('')
@@ -146,8 +146,20 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
                 ? planEnd
                   ? <>1 mois offert crédité — prochain renouvellement le <strong>{fmtDate(planEnd)}</strong>.</>
                   : '1 mois offert crédité sur votre prochain renouvellement.'
-                : 'Votre mois offert sera crédité dès activation de votre abonnement.'
-              : 'Statut : ' + data.filleul_status.status}
+                : '1 mois offert enregistré — il sera activé automatiquement lors de votre premier abonnement.'
+              : 'Statut : ' + data.filleul_status.status}
+          </p>
+        </div>
+      )}
+
+      {/* ── Bannière crédit admin en attente ── */}
+      {data.credits.some(c => !c.applied && c.source === 'admin') && (
+        <div className="bg-emerald-50 border border-emerald-200 px-5 py-4">
+          <p className="font-sans text-[12px] text-emerald-800">
+            <strong>Crédit offert par Aegryn.</strong>{' '}
+            {isActive
+              ? 'Des mois ont été crédités sur votre abonnement.'
+              : 'Des mois ont été offerts par Aegryn — ils seront activés automatiquement lors de votre premier abonnement.'}
           </p>
         </div>
       )}
@@ -253,7 +265,7 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
       </div>
 
       {/* ── Formulaire saisir un code ami ── */}
-      {!data.filleul_status && isActive && (
+      {!data.filleul_status && (
         <div className="bg-white border border-gray-200 p-6">
           <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 mb-4">Saisir un code parrain</p>
           <form onSubmit={submitCode} className="flex gap-3 items-start flex-wrap">
