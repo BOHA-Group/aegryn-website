@@ -33,7 +33,7 @@ export default async function PartnerSubscriptionPage({
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, expert_plan, expert_plan_start, expert_plan_end, expert_plan_interval, expert_plan_cancel_at, stripe_subscription_id, kyc_status')
+    .select('full_name, expert_plan, expert_plan_start, expert_plan_end, expert_plan_interval, expert_plan_cancel_at, stripe_subscription_id')
     .eq('id', user.id)
     .single()
 
@@ -45,8 +45,6 @@ export default async function PartnerSubscriptionPage({
   const cancelAt      = p?.expert_plan_cancel_at as string | null
   const isCanceling   = isActiveCheck(plan) && !!cancelAt
   const isActive      = isActiveCheck(plan)
-  const kycStatus     = (p?.kyc_status as string | null) ?? 'pending'
-  const kycApproved   = kycStatus === 'approved'
   const intervalLabel = planInterval === 'year' ? 'Annuel' : 'Mensuel'
 
   return (
@@ -59,21 +57,6 @@ export default async function PartnerSubscriptionPage({
         </p>
       </div>
 
-      {/* Guard KYC */}
-      {!kycApproved && (
-        <div className="bg-amber-50 border border-amber-200 px-5 py-4 flex items-start gap-3 mb-6">
-          <CreditCard size={16} className="text-amber-600 shrink-0 mt-0.5" />
-          <div>
-            <p className="font-sans font-semibold text-amber-900 text-[13px] mb-1">
-              KYC requis avant l&apos;activation de l&apos;abonnement
-            </p>
-            <p className="font-sans text-[12px] text-amber-700">
-              Votre dossier KYC doit être approuvé par l&apos;équipe AEGRYN pour activer votre fiche expert.{' '}
-              <Link href="/client/partner/kyc" className="underline font-medium">Compléter mon KYC →</Link>
-            </p>
-          </div>
-        </div>
-      )}
 
       {/* Feedback paiement */}
       {success === '1' && (
@@ -190,7 +173,7 @@ export default async function PartnerSubscriptionPage({
             <CancelButton />
           </div>
         ) : (
-          <SubscribeButtons disabled={!kycApproved} />
+          <SubscribeButtons disabled={false} />
         )}
       </div>
 
