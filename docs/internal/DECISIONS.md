@@ -72,6 +72,14 @@
 
 ---
 
+### D-010 — Admin token no longer propagated via URLs/props/bodies
+**Date:** 2026-08  
+**Decision:** All `/admin/**` pages and client components stopped passing `tokenQs`/`adminToken` through URLs, React props, or client fetch bodies. Admin API routes now authenticate primarily via Supabase httpOnly session cookie (`getAdminUser()` / `checkAdminAccess()`), with `ADMIN_LEADS_TOKEN` kept only as an optional secondary credential in request bodies for external automation. Verified via live tests: cookie-only auth succeeds (200) on all modified routes; missing/invalid session returns 401; middleware (`proxy.ts`) redirects unauthenticated `/admin` page loads.  
+**Residual risk:** `ADMIN_LEADS_TOKEN` does not expire or rotate — tracked in `AUDIT_CHECKLIST.md` §Priority Actions.  
+**Status:** ✅ Implemented — see commits on `main` (security: remove adminToken/tokenQs propagation)
+
+---
+
 ## Pending Decisions
 
 | # | Topic | Context | Due |

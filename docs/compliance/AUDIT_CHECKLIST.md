@@ -71,7 +71,7 @@ For each item:
 | 4.2 | Row-Level Security (RLS) enforced on all tables | Supabase migrations | ✅ |
 | 4.3 | No UUIDs or internal IDs in client API responses | Code audit 2026-08 | ✅ |
 | 4.4 | No Postgres error messages exposed to clients | Code audit 2026-08 | ✅ |
-| 4.5 | Admin routes protected (auth check on all /admin/*) | Code review needed | ⚠️ |
+| 4.5 | Admin routes protected (auth check on all /admin/*) | Code audit 2026-08 — `proxy.ts` + `requireAdmin()`, no token in URLs/props/bodies | ✅ |
 | 4.6 | MFA available for user accounts | Supabase Auth | ⚠️ Available but not enforced |
 | 4.7 | Referral cross-data blocked (no UUID leakage) | Commits 82866af, cb44003 | ✅ |
 | 4.8 | grade engine admin-only, not importable client-side | `lib/gradeEngine.ts` | ✅ |
@@ -109,6 +109,6 @@ For each item:
 | 🟡 | Review `/privacy` content for GDPR Art. 13/14 completeness (referral, CIFS, NDA processing) |
 | 🟡 | Verify export/anonymise/delete-partial APIs cover all tables in GDPR_REGISTER |
 | 🟡 | Enforce MFA on admin accounts |
-| 🟡 | Remove URL token fallback from `checkAdminAccess` — use `requireAdmin()` only |
+| 🟡 | `ADMIN_LEADS_TOKEN` still accepted as secondary credential in some API routes (automation use) — never expires/rotates. Evaluate removing entirely or adding expiry/rotation |
 | 🟢 | Designate Data Protection Advisor (LPD) |
 | 🟢 | Schedule annual AI Act review |

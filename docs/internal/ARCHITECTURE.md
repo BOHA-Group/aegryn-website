@@ -94,6 +94,12 @@ github.com/BOHA-Group/aegryn-website
 | `/admin/experts` | Partner/expert review |
 | `/admin/invoices` | Invoice generation |
 
+### Admin authentication
+- **Primary:** Supabase session cookie (httpOnly, set at `/admin/login`). Verified server-side via `requireAdmin()` / `getAdminUser()` (`lib/adminAuth.ts`), which checks `app_metadata.role` or the `profiles.roles` table.
+- **Perimeter defense:** `proxy.ts` (Next.js middleware) blocks `/admin/*` and `/client/*` at the network layer before any page/API code runs.
+- **No token in URLs, props, or fetch bodies** — as of 2026-08, all admin `page.tsx` and client components were audited and cleaned of `tokenQs`/`adminToken` propagation. Admin API routes (`/api/admin/**`) authenticate via session cookie by default.
+- **Legacy fallback:** `ADMIN_LEADS_TOKEN` (env var) remains accepted as an optional secondary credential in some API route bodies (for external automation/scripts), verified via `checkAdminAccess(token)`. It is never required and never propagated by the UI. See `AUDIT_CHECKLIST.md` §4.5 for residual risk tracking.
+
 ---
 
 ## 5. Code Conventions
