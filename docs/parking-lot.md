@@ -90,7 +90,78 @@ Fonctionnalité non activée — le flux de facturation n'est pas encore opérat
 
 ---
 
-## 🔵 ARCHIVÉ — À réactiver sur décision
+## � INFRA & CONFIGURATION
+
+### DNS & Domaines — aegryn.com
+
+**Statut :** À valider/compléter
+
+- [ ] Vérifier que `aegryn.com` est dans le compte OVH (Domaines → liste)
+- [ ] Ajouter `aegryn.com` dans Vercel → Settings → Domains → Add `aegryn.com` + `www.aegryn.com`
+  - Type A `76.76.21.21` + CNAME `www → cname.vercel-dns.com`
+- [ ] Saisir les records DNS dans OVH pour `aegryn.com` :
+  - **Supprimer** : `@` A `213.186.33.5`, `www` A, `ftp` CNAME, MX OVH, SPF OVH, TXT parking
+  - **Ajouter** :
+    - `@` A → `76.76.21.21`
+    - `www` CNAME → `cname.vercel-dns.com.`
+    - `@` TXT SPF → `v=spf1 include:_spf.google.com include:spf.resend.com -all`
+    - `_dmarc` TXT → `v=DMARC1; p=quarantine; pct=100; aspf=r`
+    - `resend._domainkey` TXT → clé DKIM Resend (copier depuis boha-group.com)
+    - `@` TXT Google verification → `google-site-verification=mvJBVtITTwiGgUnI1JmQcZzZuklIyAs4nDUhGUl9vjU`
+    - MX Google → seulement si Google Workspace activé sur aegryn.com
+  - **Garder** : NS `dns200.anycast.me` + `ns200.anycast.me`
+- [x] Mettre à jour le CNAME `aegryn` dans `boha-group.com` ✅ — transitoire jusqu'à bascule complète
+
+---
+
+### Webflow — Migration boha-group.com → aegryn.com
+
+- [x] Redirection Webflow 301 : `/*` → `https://aegryn.com/$1` ✅ active
+- [ ] Couper l'abonnement Webflow → Account → Plans → Cancel  
+  *(Les MX Google Workspace dans OVH ne bougent pas — emails `@boha-group.com` non impactés)*
+- [ ] **Après coupure Webflow — séquence exacte :**
+  1. Webflow → retirer domaine custom `boha-group.com`
+  2. Vercel → projet `aegryn-website` → Settings → Domains → Add `boha-group.com` → Redirect to `aegryn.com` (301)
+  3. OVH → `boha-group.com` → Zone DNS → `www` CNAME : `cdn.webflow.com.` → `cname.vercel-dns.com.`
+  4. OVH → `boha-group.com` → `@` A → `76.76.21.21`
+  - ⚠️ Ne pas activer avant d'avoir retiré le domaine de Webflow
+  - ⚠️ Bien être dans le projet `aegryn-website` dans Vercel, pas `boha-group`
+
+---
+
+### Variables d'environnement Vercel
+
+- [ ] `NEXT_PUBLIC_SITE_URL` = `https://aegryn.com`
+- [ ] Supabase → Authentication → URL Configuration :
+  - Site URL : `https://aegryn.com`
+  - Redirect URLs : `https://aegryn.com/**`
+- [ ] Stripe → Developers → Webhooks :
+  - Endpoint : `https://aegryn.com/api/webhooks/stripe`
+  - `STRIPE_WEBHOOK_SECRET` dans Vercel (Production)
+
+---
+
+### Emails transactionnels (Resend)
+
+- [ ] `RESEND_FROM` = `contact@boha-group.com`
+- [ ] `RESEND_REPLY_TO` = `contact@boha-group.com`
+- [ ] `RESEND_FROM_NAME` = `AEGRYN`
+- [ ] `AEGRYN_INTERNAL_EMAIL` = adresse interne `@boha-group.com`
+- [ ] Vérifier que `boha-group.com` est **Verified** dans resend.com/domains
+- Note : basculer vers `@aegryn.com` uniquement quand Google Workspace sera actif sur `aegryn.com`
+
+---
+
+### Code — tâches mineures
+
+- [ ] **URL Subblink** : remplacer `https://subblink.boha-group.com` par `https://subblink.app`
+  - `components/sections/AssetDrawer.tsx:30`
+  - `data/assets.ts:29`
+  - À faire quand `subblink.app` sera live
+
+---
+
+## �🔵 ARCHIVÉ — À réactiver sur décision
 
 ---
 
