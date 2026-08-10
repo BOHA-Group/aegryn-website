@@ -1,51 +1,54 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { Check }    from 'lucide-react'
 
 type Category = 'notifications' | 'kyc_documents' | 'offers' | 'nda_requests' | 'commissions' | 'introductions' | 'partner_certs'
 
-const ITEMS: { id: Category; label: string; desc: string; warn?: boolean }[] = [
-  {
-    id:    'notifications',
-    label: 'Notifications',
-    desc:  'Toutes vos notifications in-app (alertes, mises à jour dossier).',
-  },
-  {
-    id:    'nda_requests',
-    label: 'Demandes NDA',
-    desc:  'Vos demandes d\'accès aux dossiers sous NDA.',
-  },
-  {
-    id:    'offers',
-    label: 'Offres d\'acquisition',
-    desc:  'Vos offres soumises sur des actifs. L\'historique de transaction est conservé pour raison légale.',
-  },
-  {
-    id:    'kyc_documents',
-    label: 'Documents KYC',
-    desc:  'Vos pièces KYC soumises. Votre statut KYC sera réinitialisé.',
-    warn:  true,
-  },
-  {
-    id:    'commissions',
-    label: 'Commissions partenaire',
-    desc:  'Historique de vos commissions.',
-  },
-  {
-    id:    'introductions',
-    label: 'Introductions partenaire',
-    desc:  'Vos introductions client enregistrées.',
-  },
-  {
-    id:    'partner_certs',
-    label: 'Certifications partenaire',
-    desc:  'Vos contributions aux certifications CIFS.',
-    warn:  true,
-  },
-]
-
 export default function DeletePartialSection() {
+  const t = useTranslations('clientArea.account')
+
+  const ITEMS: { id: Category; label: string; desc: string; warn?: boolean }[] = [
+    {
+      id:    'notifications',
+      label: t('itemNotificationsLabel'),
+      desc:  t('itemNotificationsDesc'),
+    },
+    {
+      id:    'nda_requests',
+      label: t('itemNdaRequestsLabel'),
+      desc:  t('itemNdaRequestsDesc'),
+    },
+    {
+      id:    'offers',
+      label: t('itemOffersLabel'),
+      desc:  t('itemOffersDesc'),
+    },
+    {
+      id:    'kyc_documents',
+      label: t('itemKycLabel'),
+      desc:  t('itemKycDesc'),
+      warn:  true,
+    },
+    {
+      id:    'commissions',
+      label: t('itemCommissionsLabel'),
+      desc:  t('itemCommissionsDesc'),
+    },
+    {
+      id:    'introductions',
+      label: t('itemIntroductionsLabel'),
+      desc:  t('itemIntroductionsDesc'),
+    },
+    {
+      id:    'partner_certs',
+      label: t('itemPartnerCertsLabel'),
+      desc:  t('itemPartnerCertsDesc'),
+      warn:  true,
+    },
+  ]
+
   const [open, setOpen]           = useState(false)
   const [selected, setSelected]   = useState<Set<Category>>(new Set())
   const [confirming, setConfirming] = useState(false)
@@ -73,7 +76,10 @@ export default function DeletePartialSection() {
       })
       const data = await res.json().catch(() => ({}))
       if (!res.ok) {
-        setError(data.error || 'Une erreur est survenue.')
+        setError(data.error || t('deletePartialErrorGeneric'))
+        setOpen(false)
+        setConfirming(false)
+        setSelected(new Set())
       } else {
         setDone(data.deleted ?? [...selected])
         setOpen(false)
@@ -81,7 +87,7 @@ export default function DeletePartialSection() {
         setSelected(new Set())
       }
     } catch {
-      setError('Impossible de contacter le serveur.')
+      setError(t('deletePartialErrorNetwork'))
     } finally {
       setLoading(false)
     }
@@ -90,7 +96,7 @@ export default function DeletePartialSection() {
   if (done.length > 0 && !open) {
     return (
       <p className="font-sans text-[12px] text-emerald-600">
-        Données supprimées : {done.join(', ')}.
+        {t('deletePartialDone', { list: done.join(', ') })}
       </p>
     )
   }
@@ -102,7 +108,7 @@ export default function DeletePartialSection() {
         onClick={() => setOpen(true)}
         className="font-mono text-[10px] uppercase tracking-widest text-orange-500 border border-orange-200 px-3 py-1.5 hover:bg-orange-50 transition-colors"
       >
-        Choisir les données à supprimer
+        {t('deletePartialChoose')}
       </button>
     )
   }
@@ -110,7 +116,7 @@ export default function DeletePartialSection() {
   return (
     <div className="border border-orange-200 bg-orange-50/40 p-4 mt-2">
       <p className="font-mono text-[9px] uppercase tracking-widest text-orange-600 mb-3">
-        Sélectionnez les catégories à supprimer
+        {t('deletePartialSelectCategories')}
       </p>
 
       <div className="flex flex-col gap-2 mb-4">
@@ -153,20 +159,20 @@ export default function DeletePartialSection() {
             disabled={selected.size === 0}
             className="bg-orange-500 text-white font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:bg-orange-600 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
           >
-            Supprimer ({selected.size} catégorie{selected.size > 1 ? 's' : ''})
+            {t('deletePartialSubmit', { count: selected.size })}
           </button>
           <button
             type="button"
             onClick={() => { setOpen(false); setSelected(new Set()) }}
             className="border border-gray-300 text-gray-500 font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:border-gray-500 transition-colors"
           >
-            Annuler
+            {t('deletePartialCancel')}
           </button>
         </div>
       ) : (
         <div className="bg-white border border-orange-300 p-3">
           <p className="font-sans text-[12px] text-orange-800 mb-3">
-            Cette suppression est irréversible. Confirmer ?
+            {t('deletePartialConfirmWarning')}
           </p>
           <div className="flex gap-2">
             <button
@@ -175,7 +181,7 @@ export default function DeletePartialSection() {
               disabled={loading}
               className="bg-orange-600 text-white font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:bg-orange-700 transition-colors disabled:opacity-50"
             >
-              {loading ? 'Suppression...' : 'Confirmer'}
+              {loading ? t('deletePartialConfirming') : t('deletePartialConfirm')}
             </button>
             <button
               type="button"
@@ -183,7 +189,7 @@ export default function DeletePartialSection() {
               disabled={loading}
               className="border border-gray-300 text-gray-500 font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:border-gray-500 transition-colors disabled:opacity-50"
             >
-              Retour
+              {t('deletePartialBack')}
             </button>
           </div>
         </div>

@@ -1,12 +1,14 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { Loader2, CheckCircle2, ShieldCheck, ShieldOff } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 
 type Factor = { id: string; friendly_name?: string | null; factor_type: string; status: string }
 
 export default function MfaSection() {
+  const t = useTranslations('clientArea.account')
   const [loading,     setLoading]     = useState(true)
   const [factor,      setFactor]      = useState<Factor | null>(null)
 
@@ -51,7 +53,7 @@ export default function MfaSection() {
     const { data, error: err } = await supabase.auth.mfa.enroll({ factorType: 'totp' })
     setBusy(false)
     if (err || !data) {
-      setError(err?.message ?? 'Impossible de démarrer l\u2019activation.')
+      setError(err?.message ?? t('mfaEnableError'))
       return
     }
     setFactorId(data.id)
@@ -68,7 +70,7 @@ export default function MfaSection() {
     const { data: challenge, error: challengeErr } = await supabase.auth.mfa.challenge({ factorId })
     if (challengeErr || !challenge) {
       setBusy(false)
-      setError(challengeErr?.message ?? 'Erreur lors de la vérification.')
+      setError(challengeErr?.message ?? t('mfaChallengeError'))
       return
     }
     const { error: verifyErr } = await supabase.auth.mfa.verify({
@@ -78,14 +80,14 @@ export default function MfaSection() {
     })
     setBusy(false)
     if (verifyErr) {
-      setError('Code invalide. Vérifiez votre application d\u2019authentification.')
+      setError(t('mfaInvalidCode'))
       return
     }
     setEnrolling(false)
     setCode('')
     setQrCode(null)
     setSecret(null)
-    setSuccess('Double authentification activée.')
+    setSuccess(t('mfaActivatedMsg'))
     await loadFactors()
   }
 
@@ -100,7 +102,7 @@ export default function MfaSection() {
 
   async function disableMfa() {
     if (!factor) return
-    if (!window.confirm('Désactiver la double authentification ? Votre compte sera moins protégé.')) return
+    if (!window.confirm(t('mfaDisableConfirm'))) return
     setError('')
     setBusy(true)
     const { error: err } = await supabase.auth.mfa.unenroll({ factorId: factor.id })
@@ -109,7 +111,7 @@ export default function MfaSection() {
       setError(err.message)
       return
     }
-    setSuccess('Double authentification désactivée.')
+    setSuccess(t('mfaDisabledMsg'))
     setFactor(null)
   }
 
@@ -117,7 +119,7 @@ export default function MfaSection() {
     return (
       <div className="bg-white border border-gray-200 p-5 mt-4 flex items-center gap-2 text-gray-400">
         <Loader2 size={14} className="animate-spin" />
-        <span className="font-sans text-[12px]">Chargement…</span>
+        <span className="font-sans text-[12px]">{t('mfaLoading')}</span>
       </div>
     )
   }
@@ -125,7 +127,7 @@ export default function MfaSection() {
   return (
     <div className="bg-white border border-gray-200 p-5 mt-4">
       <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-4">
-        Double authentification (MFA)
+        {t('mfaTitle')}
       </p>
 
       {error && (
@@ -143,9 +145,9 @@ export default function MfaSection() {
           <div className="flex items-center gap-2">
             <ShieldCheck size={16} className="text-emerald-600 shrink-0" />
             <div>
-              <p className="font-sans text-[13px] text-gray-700">Activée</p>
+              <p className="font-sans text-[13px] text-gray-700">{t('mfaEnabledTitle')}</p>
               <p className="font-sans text-[11px] text-gray-400 mt-0.5">
-                Application d&apos;authentification (TOTP) — un code à 6 chiffres est demandé à chaque connexion.
+                {t('mfaEnabledDesc')}
               </p>
             </div>
           </div>
@@ -155,7 +157,7 @@ export default function MfaSection() {
             className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-red-500 border border-red-200 px-3 py-1.5 hover:bg-red-50 transition-colors disabled:opacity-50 shrink-0"
           >
             {busy ? <Loader2 size={11} className="animate-spin" /> : <ShieldOff size={12} />}
-            Désactiver
+            {t('mfaDisableButton')}
           </button>
         </div>
       )}
@@ -163,9 +165,9 @@ export default function MfaSection() {
       {!enrolling && !factor && (
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="font-sans text-[13px] text-gray-700">Non activée</p>
+            <p className="font-sans text-[13px] text-gray-700">{t('mfaDisabledTitle')}</p>
             <p className="font-sans text-[11px] text-gray-400 mt-0.5">
-              Sécurisez votre compte avec un code à usage unique (Google Authenticator, 1Password, Authy…).
+              {t('mfaDisabledDesc')}
             </p>
           </div>
           <button
@@ -174,7 +176,7 @@ export default function MfaSection() {
             className="flex items-center gap-1.5 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-black transition-colors disabled:opacity-50 shrink-0"
           >
             {busy && <Loader2 size={11} className="animate-spin" />}
-            Activer
+            {t('mfaActivateButton')}
           </button>
         </div>
       )}
@@ -182,7 +184,7 @@ export default function MfaSection() {
       {enrolling && (
         <form onSubmit={confirmEnrollment} className="flex flex-col gap-4">
           <p className="font-sans text-[12px] text-gray-500">
-            Scannez ce QR code avec votre application d&apos;authentification, puis saisissez le code affiché.
+            {t('mfaScanInstructions')}
           </p>
 
           {qrCode && (
@@ -199,13 +201,13 @@ export default function MfaSection() {
 
           {secret && (
             <p className="font-mono text-[11px] text-gray-400 text-center break-all">
-              Clé manuelle : <span className="text-gray-600">{secret}</span>
+              {t('mfaManualKey')} <span className="text-gray-600">{secret}</span>
             </p>
           )}
 
           <div>
             <label className="font-mono text-[9px] uppercase tracking-widest text-gray-500 block mb-2">
-              Code à 6 chiffres
+              {t('mfaCodeLabel')}
             </label>
             <input
               type="text"
@@ -226,7 +228,7 @@ export default function MfaSection() {
               className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors disabled:opacity-50"
             >
               {busy && <Loader2 size={11} className="animate-spin" />}
-              Confirmer
+              {t('mfaConfirm')}
             </button>
             <button
               type="button"
@@ -234,7 +236,7 @@ export default function MfaSection() {
               disabled={busy}
               className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors"
             >
-              Annuler
+              {t('mfaCancel')}
             </button>
           </div>
         </form>
