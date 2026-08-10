@@ -15,6 +15,15 @@ export default function AdminLoginForm({ errorParam }: { errorParam?: string }) 
     errorParam === 'not_admin' ? 'Ce compte n\'a pas les droits administrateur.' : ''
   )
 
+  /* Étape MFA (double authentification) */
+  const [mfaStep,     setMfaStep]     = useState(false)
+  const [mfaFactorId, setMfaFactorId] = useState('')
+  const [mfaCode,     setMfaCode]     = useState('')
+
+  async function finishLogin() {
+    router.push('/admin/auction')
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setLoading(true)
@@ -44,7 +53,78 @@ export default function AdminLoginForm({ errorParam }: { errorParam?: string }) 
       return
     }
 
-    router.push('/admin/auction')
+    /* Vérifie si le compte a activé la double authentification (TOTP) et si
+       la session actuelle n'a pas encore atteint le niveau AAL2 requis. */
+    const { data: aal } = await supabase.auth.mfa.getAuthenticatorAssuranceLevel()
+    if (aal && aal.nextLevel === 'aal2' && aal.currentLevel !== aal.nextLevel) {
+      const { data: factorsData } = await supabase.auth.mfa.listFactors()
+      const factor = factorsData?.totp?.find(f => f.status === 'verified')
+      if (factor) {
+        setMfaFactorId(factor.id)
+        setMfaStep(true)
+        setLoading(false)
+        return
+      }
+    }
+
+    setLoading(false)
+    await finishLogin()
+  }
+
+  async function handleMfaSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (mfaCode.length !== 6) return
+    setLoading(true)
+    setError('')
+    const { error: err } = await supabase.auth.mfa.challengeAndVerify({
+      factorId: mfaFactorId,
+      code:     mfaCode,
+    })
+    if (err) {
+      setLoading(false)
+      setError('Code invalide.')
+      return
+    }
+    setLoading(false)
+    await finishLogin()
+  }
+
+  if (mfaStep) {
+    return (
+      <form onSubmit={handleMfaSubmit} className="flex flex-col gap-5">
+        {error && (
+          <div className="bg-red-50 border border-red-200 text-red-700 text-[12px] px-4 py-3">
+            {error}
+          </div>
+        )}
+
+        <div>
+          <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">
+            Code de double authentification
+          </label>
+          <input
+            type="text"
+            inputMode="numeric"
+            autoComplete="one-time-code"
+            maxLength={6}
+            autoFocus
+            required
+            value={mfaCode}
+            onChange={e => setMfaCode(e.target.value.replace(/\D/g, ''))}
+            placeholder="123456"
+            className="w-full border border-gray-200 bg-white text-gray-900 px-4 py-3 text-[16px] text-center tracking-widest font-mono focus:outline-none focus:border-gray-600 transition-colors"
+          />
+        </div>
+
+        <button
+          type="submit"
+          disabled={loading || mfaCode.length !== 6}
+          className="w-full bg-[#0C0C0C] text-white text-[11px] font-bold uppercase tracking-[0.18em] px-6 py-4 hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2"
+        >
+          {loading ? 'Vérification...' : 'Vérifier'}
+        </button>
+      </form>
+    )
   }
 
   return (

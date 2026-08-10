@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import AccountForm from './AccountForm'
+import MfaSection from './MfaSection'
 import DeletePartialSection from './DeletePartialSection'
 import DeleteAccountSection from './DeleteAccountSection'
 import ActivateProfileSection from './ActivateProfileSection'
@@ -96,6 +97,9 @@ export default async function AccountPage() {
           currentName={profile?.full_name ?? ''}
           currentEmail={user.email ?? ''}
         />
+
+        {/* Double authentification */}
+        <MfaSection />
 
         {/* Préférences email */}
         <div className="bg-white border border-gray-200 p-5 mt-4">
