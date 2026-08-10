@@ -66,7 +66,7 @@ const securityInputSchema = z.object({
 })
 
 const bodySchema = z.object({
-  token:           z.string(),
+  token:           z.string().optional(),
   action:          z.enum(['compute', 'validate', 'publish']).default('compute'),
   input:           z.object({
     code:     codeInputSchema,

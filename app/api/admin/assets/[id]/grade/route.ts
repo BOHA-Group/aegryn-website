@@ -35,7 +35,7 @@ const schema = z.object({
   public_summary:  z.string().max(2000).optional(),
   internal_notes:  z.string().max(2000).optional(),
   status:          z.enum(['submitted', 'under_review', 'graded', 'published', 'sold', 'withdrawn']).optional(),
-  token:           z.string(),
+  token:           z.string().optional(),
 })
 
 const AEG_TO_SYMBOL: Record<AEGGrade, string> = {
