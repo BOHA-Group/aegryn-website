@@ -37,6 +37,17 @@ export default function MfaSection() {
     setError('')
     setSuccess('')
     setBusy(true)
+
+    // Nettoyage des facteurs TOTP non vérifiés laissés par une tentative
+    // précédente (ex: fermeture de l'onglet en plein enrollment). Supabase
+    // refuse un nouvel enroll si un facteur avec le même friendly_name
+    // (même vide) existe déjà, même non vérifié.
+    const { data: existing } = await supabase.auth.mfa.listFactors()
+    const stale = existing?.totp?.filter(f => f.status !== 'verified') ?? []
+    for (const f of stale) {
+      await supabase.auth.mfa.unenroll({ factorId: f.id })
+    }
+
     const { data, error: err } = await supabase.auth.mfa.enroll({ factorType: 'totp' })
     setBusy(false)
     if (err || !data) {
