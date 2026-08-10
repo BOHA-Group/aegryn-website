@@ -72,6 +72,7 @@ For each item:
 | 4.3 | No UUIDs or internal IDs in client API responses | Code audit 2026-08 | ✅ |
 | 4.4 | No Postgres error messages exposed to clients | Code audit 2026-08 | ✅ |
 | 4.5 | Admin routes protected (auth check on all /admin/*) | Code audit 2026-08 — `proxy.ts` + `requireAdmin()`, no token in URLs/props/bodies | ✅ |
+| 4.5b | Column-level access control on sensitive fields (admin-only notes) | Migration `065_restrict_profiles_admin_note.sql` — `profiles.admin_note` was readable by any user for their own row via direct REST call; fixed via GRANT/REVOKE column privileges | ✅ Fixed 2026-08 |
 | 4.6 | MFA available for user accounts | Supabase Auth | ⚠️ Available but not enforced |
 | 4.7 | Referral cross-data blocked (no UUID leakage) | Commits 82866af, cb44003 | ✅ |
 | 4.8 | grade engine admin-only, not importable client-side | `lib/gradeEngine.ts` | ✅ |

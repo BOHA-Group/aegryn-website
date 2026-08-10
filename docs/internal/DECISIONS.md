@@ -101,6 +101,15 @@ Conclusion: no technical path exists for Supabase to call these routes, and no o
 
 ---
 
+### D-013 — Fix profiles.admin_note column exposure (RLS row-level ≠ column-level)
+**Date:** 2026-08  
+**Decision:** Found and fixed a live vulnerability: `profiles.admin_note` (internal admin-only notes) was readable by any authenticated user for their own row via direct PostgREST calls (anon key + own JWT), bypassing all app code. Root cause: `profiles_self_read` RLS policy (`auth.uid() = id`) is row-level only and does not restrict columns; the existing `admin_note — only service_role` policy was a RESTRICTIVE policy with `qual = true`, a no-op. Additionally, `authenticated` held a **table-level** SELECT grant covering all columns — a column-level `REVOKE SELECT (admin_note)` has no effect against a table-level GRANT (Postgres has no "all columns except X" REVOKE primitive).  
+**Fix (migration `065_restrict_profiles_admin_note.sql`):** `REVOKE SELECT ON public.profiles FROM authenticated`, then `GRANT SELECT` explicitly on all columns except `admin_note`. `service_role` (all `app/admin/**` server code) is unaffected — it bypasses RLS and column grants natively.  
+**Verified live:** direct REST query for `admin_note` → `permission denied for table profiles`. Normal columns (`email`, `full_name`, `kyc_status`, etc.) still readable. Admin UI unaffected.  
+**Status:** ✅ Implemented and verified
+
+---
+
 ## Pending Decisions
 
 | # | Topic | Context | Due |
