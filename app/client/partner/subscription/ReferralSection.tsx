@@ -89,21 +89,24 @@ export default function ReferralSection({ isActive }: { isActive: boolean }) {
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ code: codeInput.trim().toUpperCase(), consent: true }),
     })
-    const json = await res.json() as { ok?: boolean; error?: string }
+    const json = await res.json() as { ok?: boolean; error?: string; code?: string }
     if (json.ok) {
       setSubmitMsg({ ok: true, text: 'Code validé — votre parrain a été enregistré.' })
       setCodeInput('')
       load()
     } else {
       const ERRORS: Record<string, string> = {
-        already_referred:               'Vous avez déjà un parrain.',
+        already_referred:                 'Vous avez déjà un parrain.',
         already_referred_by_this_sponsor: 'Ce parrain vous a déjà parrainé.',
-        self_referral:                  'Vous ne pouvez pas vous auto-parrainer.',
-        cross_referral:                 'Parrainage croisé interdit.',
-        invalid_code:                   'Code invalide ou introuvable.',
-        sponsor_not_active:             'Le parrain doit avoir une fiche active.',
+        self_referral:                    'Vous ne pouvez pas vous auto-parrainer.',
+        cross_referral:                   'Parrainage croisé interdit.',
+        invalid_code:                     'Code invalide ou introuvable.',
+        sponsor_not_active:               'Le parrain doit avoir un abonnement actif.',
+        profile_not_found:                'Profil introuvable.',
+        validation:                       'Code invalide (8 caractères requis).',
       }
-      setSubmitMsg({ ok: false, text: ERRORS[json.error ?? ''] ?? 'Erreur inconnue.' })
+      const errKey = json.error ?? ''
+      setSubmitMsg({ ok: false, text: ERRORS[errKey] ?? `Erreur : ${errKey || json.code || 'inconnue'}` })
     }
     setSubmitting(false)
   }

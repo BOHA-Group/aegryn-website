@@ -117,7 +117,7 @@ export async function POST(req: NextRequest) {
   /* Trouver le parrain par code */
   const { data: sponsor } = await supa
     .from('profiles')
-    .select('id, referral_code, expert_plan')
+    .select('id, referral_code, expert_plan, expert_plan_end')
     .eq('referral_code', code.toUpperCase())
     .maybeSingle()
 
@@ -135,8 +135,10 @@ export async function POST(req: NextRequest) {
     .maybeSingle()
   if (crossCheck) return NextResponse.json({ error: 'cross_referral' }, { status: 400 })
 
-  /* Parrain doit avoir fiche active */
-  if (sponsor.expert_plan !== 'active') return NextResponse.json({ error: 'sponsor_not_active' }, { status: 400 })
+  /* Parrain doit avoir abonnement actif OU crédit admin valide */
+  const sponsorHasCredit = sponsor.expert_plan_end ? new Date(sponsor.expert_plan_end) > new Date() : false
+  const sponsorPlanOk    = sponsor.expert_plan === 'active' || sponsorHasCredit
+  if (!sponsorPlanOk) return NextResponse.json({ error: 'sponsor_not_active' }, { status: 400 })
 
   /* Créer le referral */
   const { error: insertError } = await supa.from('expert_referrals').insert({
