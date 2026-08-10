@@ -151,7 +151,7 @@ export default async function NdaAssetPage({
             <p>
               Tout manquement expose l'Acquéreur à la révocation immédiate de son accès à la plateforme,
               à des dommages-intérêts calculés sur le préjudice réel subi par Aegryn et/ou le cédant,
-              assortis d'une indemnité forfaitaire minimale de <strong>75 000 € HT</strong> pour toute
+              assortis d'une indemnité forfaitaire minimale de <strong>75 000 CHF HT</strong> pour toute
               violation avérée. Aegryn se réserve le droit d'engager toute action judiciaire en référé.
             </p>
           </section>

@@ -239,7 +239,7 @@ export default function CommissionsClient({ transactions, tiers, tokenQs }: Prop
                 ))}
                 <div className="flex items-center justify-between pt-3">
                   <span className="font-sans text-[11px] text-gray-400">Commission minimum</span>
-                  <span className="font-mono text-[12px] font-semibold text-gray-700">25 000 € HT</span>
+                  <span className="font-mono text-[12px] font-semibold text-gray-700">25 000 CHF HT</span>
                 </div>
                 <div className="flex items-center justify-between pt-2 pb-0">
                   <span className="font-sans text-[11px] text-gray-400">Earnout</span>

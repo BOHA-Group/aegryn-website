@@ -3741,7 +3741,7 @@
       "2 500 001 € – 5 000 000 € : 6% HT",
       "> 5 000 000 € : taux convenu au mandat"
     ],
-    "s11Minimum": "Commission minimum : 25 000 € HT, quels que soient le taux applicable et le prix final de cession.",
+    "s11Minimum": "Commission minimum : 25 000 CHF HT, quels que soient le taux applicable et le prix final de cession.",
     "s11NonSaleTitle": "Frais en cas de non-réalisation de la transaction",
     "s11NonSale": "Dans le cas où un actif admis en certification complète (Certification Auction) ferait l'objet d'une décision de retrait du catalogue ou d'une absence de transaction à l'issue du processus Aegryn, des frais fixes minimaux de CHF 2 000 HT sont dus à Aegryn en contrepartie du travail engagé par ses équipes : analyse C/I/F/S, attribution du grade officiel, préparation du dossier catalogue, actions de communication et de marketing, ainsi que la visibilité produit acquise durant la présence de l'actif au catalogue Aegryn. Ces frais sont dus indépendamment de l'issue commerciale et sont exigibles à la date de retrait ou de clôture sans transaction. Ils sont facturés directement au cédant. Cette clause ne s'applique pas en cas de condition suspensive non levée dûment documentée.",
     "s11Earnout": "En cas d'earnout, une commission complémentaire de 5% est prélevée sur chaque versement d'earnout effectivement reçu par le cédant, dans la limite du taux applicable à la tranche du prix total.",

@@ -103,7 +103,7 @@ export default async function BuyerNdaPage() {
             <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">6. Sanctions</h2>
             <p>
               Tout manquement expose l'Acquéreur à des dommages-intérêts calculés sur le préjudice réel subi
-              par Aegryn et/ou le cédant, assortis d'une indemnité forfaitaire minimale de 50 000 € HT.
+              par Aegryn et/ou le cédant, assortis d'une indemnité forfaitaire minimale de 50 000 CHF HT.
               Aegryn se réserve le droit de suspendre immédiatement l'accès à la plateforme.
             </p>
           </section>

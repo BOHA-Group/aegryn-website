@@ -2,8 +2,8 @@
  * POST /api/grade/checkout
  *
  * full_certification → passe directement à /api/grade/submit (pas de paiement)
- * review_internal    → Stripe Checkout 2 000 € HT
- * review_partner     → Stripe Checkout 5 000 € HT
+ * review_internal    → Stripe Checkout 2 000 CHF HT
+ * review_partner     → Stripe Checkout 5 000 CHF HT
  *
  * Le formulaire envoie un draft dans assets (status='pending_payment')
  * AVANT la redirection Stripe — pour ne pas perdre les données.
@@ -36,8 +36,8 @@ const schema = z.object({
 })
 
 const PRICES: Record<string, number> = {
-  review_internal: 200000,  // 2 000 € en centimes
-  review_partner:  500000,  // 5 000 € en centimes
+  review_internal: 200000,  // 2 000 CHF en centimes
+  review_partner:  500000,  // 5 000 CHF en centimes
 }
 
 const LABELS: Record<string, string> = {

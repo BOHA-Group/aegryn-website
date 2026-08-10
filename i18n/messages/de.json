@@ -3737,7 +3737,7 @@
       "2.500.001 € – 5.000.000 €: 6% zzgl. MwSt.",
       "> 5.000.000 €: im Mandat vereinbarter Satz"
     ],
-    "s11Minimum": "Mindestprovision: 25.000 € zzgl. MwSt., unabhängig vom anwendbaren Satz und dem endgültigen Transaktionspreis.",
+    "s11Minimum": "Mindestprovision: 25.000 CHF zzgl. MwSt., unabhängig vom anwendbaren Satz und dem endgültigen Transaktionspreis.",
     "s11NonSaleTitle": "Gebühren bei Nichtzustandekommen der Transaktion",
     "s11NonSale": "Für den Fall, dass ein zum vollständigen Zertifizierungsprozess (Certification Auction) zugelassenes Asset aus dem Katalog zurückgezogen wird oder am Ende des Aegryn-Prozesses keine Transaktion zustande kommt, sind Aegryn Mindestpauschalgebühren von CHF 2.000 zzgl. MwSt. als Gegenleistung für die von seinen Teams erbrachten Leistungen geschuldet: C/I/F/S-Analyse, Vergabe des offiziellen Grades, Vorbereitung der Katalogakte, Kommunikations- und Marketingmaßnahmen sowie die während der Präsenz des Assets im Aegryn-Katalog erlangte Produktsichtbarkeit. Diese Gebühren sind unabhängig vom kommerziellen Ergebnis fällig und am Tag des Rückzugs oder Abschlusses ohne Transaktion exigibel. Sie werden dem Veräußerer direkt in Rechnung gestellt. Diese Klausel gilt nicht bei einer ordnungsgemäß dokumentierten nicht erfüllten aufschiebenden Bedingung.",
     "s11Earnout": "Bei einem Earnout wird auf jede vom Veräusserer tatsächlich empfangene Earnout-Zahlung eine zusätzliche Provision von 5% erhoben, begrenzt auf den für die Gesamtpreisklasse geltenden Satz.",

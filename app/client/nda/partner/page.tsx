@@ -141,7 +141,7 @@ export default async function PartnerNdaPage() {
             <p>
               Tout manquement expose le Partenaire à la résiliation immédiate de la relation partenariale,
               à la perte des crédits de parrainage acquis, à la suspension de la Fiche Expert et à des
-              dommages-intérêts incluant une indemnité forfaitaire minimale de 25 000 € HT,
+              dommages-intérêts incluant une indemnité forfaitaire minimale de 25 000 CHF HT,
               sans préjudice de tout autre préjudice démontré.
             </p>
           </section>

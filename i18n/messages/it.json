@@ -3737,7 +3737,7 @@
       "2.500.001 € – 5.000.000 €: 6% IVA esclusa",
       "> 5.000.000 €: tasso concordato nel mandato"
     ],
-    "s11Minimum": "Commissione minima: 25.000 € IVA esclusa, indipendentemente dal tasso applicabile e dal prezzo finale di cessione.",
+    "s11Minimum": "Commissione minima: 25.000 CHF IVA esclusa, indipendentemente dal tasso applicabile e dal prezzo finale di cessione.",
     "s11NonSaleTitle": "Onorari in caso di mancata realizzazione della transazione",
     "s11NonSale": "Nel caso in cui un asset ammesso al processo di certificazione completa (Certification Auction) venga ritirato dal catalogo o non venga conclusa alcuna transazione al termine del processo Aegryn, sono dovuti ad Aegryn onorari fissi minimi di CHF 2.000 IVA esclusa in corrispettivo del lavoro svolto dai suoi team: analisi C/I/F/S, attribuzione del grade ufficiale, preparazione del dossier di catalogo, attività di comunicazione e marketing, nonché la visibilità del prodotto acquisita durante la presenza dell'asset nel catalogo Aegryn. Tali onorari sono dovuti indipendentemente dall'esito commerciale e sono esigibili alla data di ritiro o chiusura senza transazione. Vengono fatturati direttamente al cedente. Questa clausola non si applica in caso di condizione sospensiva non avverata debitamente documentata.",
     "s11Earnout": "In caso di earnout, viene applicata una commissione aggiuntiva del 5% su ogni pagamento di earnout effettivamente ricevuto dal cedente, nel limite del tasso applicabile alla fascia del prezzo totale.",

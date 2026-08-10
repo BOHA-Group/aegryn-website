@@ -3741,7 +3741,7 @@
       "€2,500,001 – €5,000,000: 6% excl. VAT",
       "> €5,000,000: rate agreed in the mandate"
     ],
-    "s11Minimum": "Minimum commission: €25,000 excl. VAT, regardless of the applicable rate and the final transaction price.",
+    "s11Minimum": "Minimum commission: CHF 25,000 excl. VAT, regardless of the applicable rate and the final transaction price.",
     "s11NonSaleTitle": "Fees in the event of non-completion of the transaction",
     "s11NonSale": "In the event that an asset admitted to the full certification process (Certification Auction) is withdrawn from the catalogue or no transaction is completed at the end of the Aegryn process, a minimum fixed fee of CHF 2,000 excl. VAT is due to Aegryn in consideration of the work carried out by its teams: C/I/F/S analysis, attribution of the official grade, preparation of the catalogue file, communication and marketing activities, and the product visibility acquired during the asset's presence in the Aegryn catalogue. These fees are due regardless of the commercial outcome and are payable on the date of withdrawal or closure without transaction. They are invoiced directly to the seller. This clause does not apply in the event of a duly documented unfulfilled condition precedent.",
     "s11Earnout": "In the event of an earnout, an additional commission of 5% is levied on each earnout payment effectively received by the seller, up to the rate applicable to the total price bracket.",

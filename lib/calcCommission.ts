@@ -1,6 +1,6 @@
 /**
  * Calcul de la commission Aegryn sur une transaction PTT
- * Grille dégressive juillet 2026 — minimum 25 000 € HT
+ * Grille dégressive juillet 2026 — minimum 25 000 CHF HT
  *
  * En dessous de 100 000 € : taux convenu au mandat (retourne null)
  * Au-dessus de 5 000 000 € : taux convenu au mandat (retourne null)

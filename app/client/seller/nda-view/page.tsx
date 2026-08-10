@@ -189,12 +189,12 @@ export default async function SellerNdaViewPage() {
               </thead>
               <tbody className="text-gray-700">
                 {[
-                  ['100 000 € – 250 000 €', '10 %', '25 000 €'],
-                  ['250 001 € – 500 000 €', '9 %', '25 000 €'],
-                  ['500 001 € – 1 000 000 €', '8 %', '25 000 €'],
-                  ['1 000 001 € – 2 500 000 €', '7 %', '25 000 €'],
-                  ['2 500 001 € – 5 000 000 €', '6 %', '25 000 €'],
-                  ['> 5 000 000 €', 'taux convenu au mandat', '25 000 €'],
+                  ['100 000 € – 250 000 €', '10 %', '25 000 CHF'],
+                  ['250 001 € – 500 000 €', '9 %', '25 000 CHF'],
+                  ['500 001 € – 1 000 000 €', '8 %', '25 000 CHF'],
+                  ['1 000 001 € – 2 500 000 €', '7 %', '25 000 CHF'],
+                  ['2 500 001 € – 5 000 000 €', '6 %', '25 000 CHF'],
+                  ['> 5 000 000 €', 'taux convenu au mandat', '25 000 CHF'],
                 ].map(([t, tx, m]) => (
                   <tr key={t}>
                     <td className="px-3 py-1.5 border border-gray-200">{t}</td>
@@ -228,7 +228,7 @@ export default async function SellerNdaViewPage() {
           <Article num="6" title="Sanctions">
             Tout manquement aux présentes obligations expose le Cédant à des dommages-intérêts,
             incluant notamment le paiement immédiat des honoraires de succès majorés, la perte du
-            bénéfice du processus Aegryn et une indemnité forfaitaire minimale de <strong>25 000 € HT</strong>,
+            bénéfice du processus Aegryn et une indemnité forfaitaire minimale de <strong>25 000 CHF HT</strong>,
             sans préjudice de tout autre préjudice démontré.
           </Article>
 
