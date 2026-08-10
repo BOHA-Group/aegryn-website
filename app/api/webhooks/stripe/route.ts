@@ -20,6 +20,7 @@ import { syncExpertVisibility }      from '@/lib/expertVisibility'
 export const runtime = 'nodejs'
 
 const REFERRAL_MONTHS_CAP = 6
+const CREDITS_CAP = 6
 
 async function sendEmail(to: string, subject: string, text: string) {
   const key  = process.env.RESEND_API_KEY
@@ -58,26 +59,48 @@ async function applyReferralReward(uid: string, periodEnd: string | null) {
 
   const now = new Date()
 
-  /* Crédit filleul */
+  /* Vérifier quota global filleul */
+  const { data: filleulCredits } = await supa
+    .from('expert_subscription_credits')
+    .select('id, months, applied')
+    .eq('user_id', uid)
+  const filleulCreditsTotal = (filleulCredits ?? []).reduce((s, c) => s + (c.months ?? 0), 0)
+
+  /* Crédit filleul — appliquer les pending existants OU créer si quota non atteint */
+  const pendingCredits = (filleulCredits ?? []).filter(c => !c.applied)
   const filleulEnd = periodEnd ? new Date(periodEnd) : now
   filleulEnd.setDate(filleulEnd.getDate() + 30)
 
-  await Promise.allSettled([
-    supa.from('expert_subscription_credits').insert({
-      user_id:     uid,
-      months:      1,
-      source:      'referral_referred',
-      referral_id: referral.id,
-      note:        'Mois offert parrainage — filleul',
-      applied:     true,
-      applied_at:  now.toISOString(),
-    }),
-    supa.from('profiles')
+  if (pendingCredits.length > 0) {
+    /* Appliquer les crédits pending existants (codés lors saisie code sans abonnement) */
+    for (const pc of pendingCredits) {
+      await supa.from('expert_subscription_credits').update({
+        applied:    true,
+        applied_at: now.toISOString(),
+      }).eq('id', pc.id)
+    }
+    await supa.from('profiles')
       .update({ expert_plan_end: filleulEnd.toISOString() })
-      .eq('id', uid),
-  ])
+      .eq('id', uid)
+  } else if (filleulCreditsTotal < CREDITS_CAP) {
+    /* Pas de crédit pending → créer directement si quota non atteint */
+    await Promise.allSettled([
+      supa.from('expert_subscription_credits').insert({
+        user_id:     uid,
+        months:      1,
+        source:      'referral_referred',
+        referral_id: referral.id,
+        note:        'Mois offert parrainage — filleul',
+        applied:     true,
+        applied_at:  now.toISOString(),
+      }),
+      supa.from('profiles')
+        .update({ expert_plan_end: filleulEnd.toISOString() })
+        .eq('id', uid),
+    ])
+  }
 
-  /* Crédit parrain — si cap non atteint */
+  /* Crédit parrain — si cap non atteint et abonnement actif */
   const { data: sponsorProfile } = await supa
     .from('profiles')
     .select('referral_months_credit, expert_plan, expert_plan_end, email')
@@ -87,7 +110,14 @@ async function applyReferralReward(uid: string, periodEnd: string | null) {
   const currentCredit = (sponsorProfile as Record<string, unknown> | null)?.referral_months_credit as number ?? 0
   const sponsorActive = (sponsorProfile as Record<string, unknown> | null)?.expert_plan === 'active'
 
-  if (currentCredit < REFERRAL_MONTHS_CAP && sponsorActive) {
+  /* Vérifier quota global parrain aussi */
+  const { data: sponsorAllCredits } = await supa
+    .from('expert_subscription_credits')
+    .select('months')
+    .eq('user_id', referral.referrer_id)
+  const sponsorCreditsTotal = (sponsorAllCredits ?? []).reduce((s, c) => s + (c.months ?? 0), 0)
+
+  if (currentCredit < REFERRAL_MONTHS_CAP && sponsorActive && sponsorCreditsTotal < CREDITS_CAP) {
     const sponsorEnd = (sponsorProfile as Record<string, unknown> | null)?.expert_plan_end as string | null
     const newSponsorEnd = sponsorEnd ? new Date(sponsorEnd) : now
     newSponsorEnd.setDate(newSponsorEnd.getDate() + 30)
