@@ -108,7 +108,7 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
         already_referred:                 'Vous avez déjà un parrain.',
         already_referred_by_this_sponsor: 'Ce parrain vous a déjà parrainé.',
         self_referral:                    'Vous ne pouvez pas vous auto-parrainer.',
-        cross_referral:                   'Parrainage croisé interdit.',
+        cross_referral:                   'Parrainage croisé interdit — vous ne pouvez pas parrainer votre propre parrain.',
         invalid_code:                     'Code invalide ou introuvable.',
         sponsor_not_active:               'Le parrain doit avoir un abonnement actif.',
         profile_not_found:                'Profil introuvable.',
@@ -357,7 +357,6 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
                     <span className="font-sans text-gray-700">
                       +{c.months} mois — {SOURCE_LABELS[c.source] ?? c.source}
                     </span>
-                    {c.note && <span className="font-sans text-gray-400 text-[11px]">{c.note}</span>}
                     <span className="font-mono text-[10px] text-gray-400">{fmtDate(c.created_at)}</span>
                   </div>
                   <span className={`font-mono text-[9px] uppercase tracking-widest border px-2 py-0.5 ${

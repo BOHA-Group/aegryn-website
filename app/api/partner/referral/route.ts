@@ -142,14 +142,25 @@ export async function POST(req: NextRequest) {
   /* Auto-parrainage interdit */
   if (sponsor.id === user.id) return NextResponse.json({ error: 'self_referral' }, { status: 400 })
 
-  /* Parrainage croisé interdit : vérifier que le sponsor n'est pas filleul du user */
-  const { data: crossCheck } = await supa
+  /* Parrainage croisé interdit dans les deux sens :
+     - user a déjà parrainé ce sponsor (user → sponsor existe)
+     - sponsor est lui-même filleul du user, i.e. user est parrain de sponsor (sponsor → user existe) */
+  const { data: crossCheckA } = await supa
     .from('expert_referrals')
     .select('id')
     .eq('referrer_id', user.id)
     .eq('referred_id', sponsor.id)
     .maybeSingle()
-  if (crossCheck) return NextResponse.json({ error: 'cross_referral' }, { status: 400 })
+  if (crossCheckA) return NextResponse.json({ error: 'cross_referral' }, { status: 400 })
+
+  /* Cas symétrique : le parrain vouloir parrainer son propre filleul */
+  const { data: crossCheckB } = await supa
+    .from('expert_referrals')
+    .select('id')
+    .eq('referrer_id', sponsor.id)
+    .eq('referred_id', user.id)
+    .maybeSingle()
+  if (crossCheckB) return NextResponse.json({ error: 'cross_referral' }, { status: 400 })
 
   /* Parrain doit avoir un abonnement Stripe actif (expert_plan = 'active') */
   if (sponsor.expert_plan !== 'active') return NextResponse.json({ error: 'sponsor_not_active' }, { status: 400 })
@@ -191,7 +202,7 @@ export async function POST(req: NextRequest) {
       user_id:    user.id,
       source:     'referral_referred',
       months:     1,
-      note:       `Mois offert — parrainage par ${sponsor.id}`,
+      note:       'Mois offert — parrainage (filleul)',
       applied:    true,
       applied_at: new Date().toISOString(),
     })
@@ -201,7 +212,7 @@ export async function POST(req: NextRequest) {
       user_id: user.id,
       source:  'referral_referred',
       months:  1,
-      note:    `Mois offert — parrainage par ${sponsor.id}`,
+      note:    'Mois offert — parrainage (filleul)',
       applied: false,
     })
   }
