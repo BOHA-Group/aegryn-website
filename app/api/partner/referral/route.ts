@@ -293,7 +293,7 @@ export async function DELETE(req: NextRequest) {
 
   const { data: referral } = await supa
     .from('expert_referrals')
-    .select('id, referrer_id, status')
+    .select('id, referrer_id, referred_id, status')
     .eq('id', id)
     .maybeSingle()
 
@@ -305,6 +305,18 @@ export async function DELETE(req: NextRequest) {
     status:       'cancelled',
     cancelled_at: new Date().toISOString(),
   }).eq('id', id)
+
+  /* Libérer le filleul : sans ça il reste lié à ce parrain (referred_by)
+     et ne peut plus jamais saisir un nouveau code, en plus de perdre
+     1 mois de son quota pour un crédit "en attente" jamais récompensé. */
+  await Promise.allSettled([
+    supa.from('profiles').update({ referred_by: null }).eq('id', referral.referred_id),
+    supa.from('expert_subscription_credits')
+      .delete()
+      .eq('user_id', referral.referred_id)
+      .eq('source', 'referral_referred')
+      .eq('applied', false),
+  ])
 
   return NextResponse.json({ ok: true })
 }
