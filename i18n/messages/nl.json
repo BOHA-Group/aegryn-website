@@ -3892,6 +3892,9 @@
         "items": [
           "Met u te communiceren, met name om te reageren op uw verzoeken en uw rechten uit te oefenen.",
           "U te informeren over onze diensten en aanbiedingen.",
+          "Uw account en abonnement te beheren (registratie, facturering, doorverwijsprogramma).",
+          "NDA-toegangsverzoeken voor activadossiers te verwerken en handtekeningbewijzen te bewaren.",
+          "CIFS-certificeringsmissies uit te voeren (verzameling en evaluatie van verkopersdossiers).",
           "Verkeersstatistieken te genereren die nuttig zijn voor de verbetering van onze website.",
           "Te voldoen aan wetten, richtlijnen en aanbevelingen van autoriteiten."
         ],
@@ -3929,6 +3932,16 @@
         ],
         "providers": [
           [
+            "Supabase",
+            "Database, authenticatie en dossieropslag (accounts, KYC, NDA, CIFS-certificering).",
+            "EER/VS"
+          ],
+          [
+            "Stripe",
+            "Betalingsverwerking en beheer van Expert-abonnementen.",
+            "EER/VS"
+          ],
+          [
             "Vercel",
             "Website-hosting en -implementatie.",
             "EER/VS"
@@ -3940,7 +3953,7 @@
           ],
           [
             "Resend",
-            "Transactioneel verzenden van contactmails.",
+            "Transactioneel verzenden van contactmails en meldingen.",
             "EER/VS"
           ]
         ]

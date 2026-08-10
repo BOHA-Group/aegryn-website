@@ -1,6 +1,5 @@
 import { createServiceClient } from '@/lib/supabase'
-import { getUser }             from '@/lib/supabaseServer'
-import { redirect }            from 'next/navigation'
+import { checkAdminAccess }    from '@/lib/adminAuth'
 import type { Metadata }       from 'next'
 import Link                    from 'next/link'
 
@@ -29,22 +28,11 @@ export default async function AdminIndexPage({
 }: {
   searchParams: Promise<{ token?: string }>
 }) {
-  const params     = await searchParams
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
+  const params = await searchParams
+  await checkAdminAccess(params.token)
 
-  const hasToken = adminToken && params.token === adminToken
-  if (!hasToken) {
-    const user = await getUser()
-    if (!user) redirect('/client/login')
-    const supa = createServiceClient()
-    const { data: profile } = await supa
-      .from('profiles').select('roles').eq('id', user.id).single()
-    const roles = (profile?.roles ?? []) as string[]
-    if (!roles.includes('admin') && !roles.includes('super_admin')) redirect('/')
-  }
-
-  const supa    = createServiceClient()
-  const qs      = params.token ? `?token=${params.token}` : ''
+  const supa = createServiceClient()
+  const qs   = ''
 
   const [
     { count: assetsNew },

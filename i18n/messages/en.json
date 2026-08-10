@@ -3896,6 +3896,9 @@
         "items": [
           "Communicate with you, in particular to respond to your requests and exercise your rights.",
           "Inform you about our services and offerings.",
+          "Manage your account and subscription (registration, billing, referral programme).",
+          "Process NDA access requests for asset dossiers and retain signature records.",
+          "Conduct CIFS certification missions (collection and evaluation of seller dossiers).",
           "Generate traffic statistics useful for improving our website.",
           "Comply with laws, directives and recommendations from authorities."
         ],
@@ -3933,6 +3936,16 @@
         ],
         "providers": [
           [
+            "Supabase",
+            "Database, authentication and dossier storage (accounts, KYC, NDA, CIFS certification).",
+            "EEA/USA"
+          ],
+          [
+            "Stripe",
+            "Payment processing and Expert subscription management.",
+            "EEA/USA"
+          ],
+          [
             "Vercel",
             "Website hosting and deployment.",
             "EEA/USA"
@@ -3944,7 +3957,7 @@
           ],
           [
             "Resend",
-            "Transactional sending of contact emails.",
+            "Transactional sending of contact emails and notifications.",
             "EEA/USA"
           ]
         ]

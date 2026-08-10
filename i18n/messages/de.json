@@ -3892,6 +3892,9 @@
         "items": [
           "Mit Ihnen zu kommunizieren, insbesondere um auf Ihre Anfragen zu antworten und Ihre Rechte auszuüben.",
           "Sie über unsere Dienstleistungen und Angebote zu informieren.",
+          "Ihr Konto und Ihr Abonnement zu verwalten (Registrierung, Abrechnung, Empfehlungsprogramm).",
+          "NDA-Zugriffsanfragen für Asset-Dossiers zu bearbeiten und Unterschriftsnachweise aufzubewahren.",
+          "CIFS-Zertifizierungsmissionen durchzuführen (Sammlung und Bewertung von Verkäufer-Dossiers).",
           "Verkehrsstatistiken zu erstellen, die zur Verbesserung unserer Website nützlich sind.",
           "Gesetzen, Richtlinien und Empfehlungen von Behörden zu entsprechen."
         ],
@@ -3929,6 +3932,16 @@
         ],
         "providers": [
           [
+            "Supabase",
+            "Datenbank, Authentifizierung und Dossier-Speicherung (Konten, KYC, NDA, CIFS-Zertifizierung).",
+            "EWR/USA"
+          ],
+          [
+            "Stripe",
+            "Zahlungsabwicklung und Verwaltung von Expert-Abonnements.",
+            "EWR/USA"
+          ],
+          [
             "Vercel",
             "Website-Hosting und -Bereitstellung.",
             "EWR/USA"
@@ -3940,7 +3953,7 @@
           ],
           [
             "Resend",
-            "Transaktionaler Versand von Kontakt-E-Mails.",
+            "Transaktionaler Versand von Kontakt-E-Mails und Benachrichtigungen.",
             "EWR/USA"
           ]
         ]

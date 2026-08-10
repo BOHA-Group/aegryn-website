@@ -3895,6 +3895,9 @@
         "items": [
           "Communiquer avec vous, notamment pour répondre à vos demandes et exercer vos droits.",
           "Vous informer sur nos services et offres.",
+          "Gérer votre compte et votre abonnement (inscription, facturation, parrainage).",
+          "Traiter les demandes d'accès NDA aux dossiers d'actifs et conserver les traces de signature.",
+          "Conduire les missions de certification CIFS (collecte et évaluation des dossiers vendeur).",
           "Générer des statistiques de trafic utiles à l'amélioration de notre site web.",
           "Nous conformer aux lois, directives et recommandations des autorités."
         ],
@@ -3932,6 +3935,16 @@
         ],
         "providers": [
           [
+            "Supabase",
+            "Base de données, authentification, stockage des dossiers (comptes, KYC, NDA, certification CIFS).",
+            "EEE/USA"
+          ],
+          [
+            "Stripe",
+            "Traitement des paiements et gestion des abonnements Expert.",
+            "EEE/USA"
+          ],
+          [
             "Vercel",
             "Hébergement et déploiement du site web.",
             "EEE/USA"
@@ -3943,7 +3956,7 @@
           ],
           [
             "Resend",
-            "Envoi transactionnel des e-mails de contact.",
+            "Envoi transactionnel des e-mails de contact et notifications.",
             "EEE/USA"
           ]
         ]

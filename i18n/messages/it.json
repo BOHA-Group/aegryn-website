@@ -3892,6 +3892,9 @@
         "items": [
           "Comunicare con voi, in particolare per rispondere alle vostre richieste e per esercitare i vostri diritti.",
           "Informarvi sui nostri servizi e offerte.",
+          "Gestire il vostro account e abbonamento (registrazione, fatturazione, programma referral).",
+          "Gestire le richieste di accesso NDA ai dossier di attivi e conservare le prove di firma.",
+          "Condurre missioni di certificazione CIFS (raccolta e valutazione dei dossier del venditore).",
           "Generare statistiche di traffico utili per migliorare il nostro sito web.",
           "Conformarci a leggi, direttive e raccomandazioni delle autorità."
         ],
@@ -3929,6 +3932,16 @@
         ],
         "providers": [
           [
+            "Supabase",
+            "Database, autenticazione e archiviazione dossier (account, KYC, NDA, certificazione CIFS).",
+            "SEE/USA"
+          ],
+          [
+            "Stripe",
+            "Elaborazione dei pagamenti e gestione degli abbonamenti Expert.",
+            "SEE/USA"
+          ],
+          [
             "Vercel",
             "Hosting e distribuzione del sito web.",
             "SEE/USA"
@@ -3940,7 +3953,7 @@
           ],
           [
             "Resend",
-            "Invio transazionale delle e-mail di contatto.",
+            "Invio transazionale delle e-mail di contatto e notifiche.",
             "SEE/USA"
           ]
         ]
