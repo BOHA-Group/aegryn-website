@@ -43,6 +43,7 @@ CREATE OR REPLACE FUNCTION public.trg_fn_catalogue_requests()
 RETURNS trigger LANGUAGE plpgsql SECURITY INVOKER SET search_path = '' AS $$
 BEGIN NEW.updated_at = now(); RETURN NEW; END; $$;
 
+DROP FUNCTION IF EXISTS public.rls_auto_enable();
 CREATE OR REPLACE FUNCTION public.rls_auto_enable()
 RETURNS trigger LANGUAGE plpgsql SECURITY INVOKER SET search_path = '' AS $$
 BEGIN RETURN NEW; END; $$;
