@@ -4,7 +4,7 @@ import type { Metadata }       from 'next'
 import Link                    from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Transactions — AEGRYN Admin',
+  title: 'Transactions — Aegryn Admin',
   robots: { index: false, follow: false },
 }
 
@@ -62,7 +62,7 @@ export default async function AdminTransactionsPage({
 
         <div className="mb-8 flex items-start justify-between gap-4">
           <div>
-            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">AEGRYN ADMIN</p>
+            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN</p>
             <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Transactions — Pipeline PTT</h1>
             <p className="text-[12px] text-gray-400 mt-1">Suivi manuel des transactions : EI → AP → Séquestre → DD → Signing → Closing</p>
           </div>

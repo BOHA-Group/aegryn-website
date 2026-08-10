@@ -47,7 +47,7 @@ export default function BroadcastEmail({
 
           {/* Header */}
           <Section style={styles.header}>
-            <Text style={styles.logoText}>AEGRYN</Text>
+            <Text style={styles.logoText}>Aegryn</Text>
             <Text style={styles.roleTag}>{roleLabel}</Text>
           </Section>
 
@@ -76,10 +76,10 @@ export default function BroadcastEmail({
           {/* Footer */}
           <Section style={styles.footer}>
             <Text style={styles.footerText}>
-              Ce message vous a été envoyé par l&apos;équipe AEGRYN dans le cadre de votre espace client.
+              Ce message vous a été envoyé par l&apos;équipe Aegryn dans le cadre de votre espace client.
             </Text>
             <Text style={styles.footerText}>
-              AEGRYN Group SA · Rue du Commerce · Genève, Suisse
+              Aegryn Group SA · Rue du Commerce · Genève, Suisse
             </Text>
             <Text style={styles.footerUnsubscribe}>
               <Link href={unsubscribeUrl} style={styles.unsubLink}>

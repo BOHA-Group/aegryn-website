@@ -9,8 +9,8 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
-    title: 'Céder votre actif — AEGRYN Auction',
-    description: 'Parcours cédant AEGRYN : valorisation indicative, readiness score, dépôt de mandat. Certification CIFS, confidentialité absolue, séquestre institutionnel suisse.',
+    title: 'Céder votre actif — Aegryn Auction',
+    description: 'Parcours cédant Aegryn : valorisation indicative, readiness score, dépôt de mandat. Certification CIFS, confidentialité absolue, séquestre institutionnel suisse.',
     path: '/auction/sell',
     locale,
     keywords: [
@@ -26,7 +26,7 @@ const STEPS = [
     num:   '01',
     icon:  <BarChart3 size={20} className="text-ag-apex" />,
     title: 'Valorisation indicative',
-    desc:  'Obtenez une fourchette de valorisation en 4 étapes (finance, code, IP, sécurité) et un grade estimé AEGRYN. Gratuit, confidentiel, sans engagement.',
+    desc:  'Obtenez une fourchette de valorisation en 4 étapes (finance, code, IP, sécurité) et un grade estimé Aegryn. Gratuit, confidentiel, sans engagement.',
     cta:   { label: 'Estimer la valeur →', href: '/valuation' },
   },
   {
@@ -40,7 +40,7 @@ const STEPS = [
     num:   '03',
     icon:  <ShieldCheck size={20} className="text-ag-apex" />,
     title: 'Dépôt de mandat',
-    desc:  "Soumettez votre actif à l'équipe AEGRYN. Certification CIFS indépendante, attribution de grade officiel, entrée en session auction sous mandat exclusif 60 jours.",
+    desc:  "Soumettez votre actif à l'équipe Aegryn. Certification CIFS indépendante, attribution de grade officiel, entrée en session auction sous mandat exclusif 60 jours.",
     cta:   { label: 'Déposer votre mandat →', href: '/auction/submit' },
   },
 ]
@@ -87,7 +87,7 @@ export default async function AuctionSellPage({ params: _ }: Props) {
             Votre actif mérite{'\n'}une cession à sa valeur réelle.
           </h1>
           <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-xl mb-10">
-            AEGRYN certifie, grade et met en compétition des acheteurs institutionnels pré-qualifiés — dans un cadre confidentiel, structuré, sous droit suisse.
+            Aegryn certifie, grade et met en compétition des acheteurs institutionnels pré-qualifiés — dans un cadre confidentiel, structuré, sous droit suisse.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
@@ -161,7 +161,7 @@ export default async function AuctionSellPage({ params: _ }: Props) {
         <div className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-3 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-gray-light/50 inline-block" />
-            Engagements AEGRYN
+            Engagements Aegryn
           </p>
           <h2 className="font-sans font-bold text-ag-black text-[24px] tracking-[-0.02em] mb-12">
             Ce que vous n&apos;obtenez pas ailleurs.

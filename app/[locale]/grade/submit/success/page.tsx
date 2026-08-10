@@ -4,7 +4,7 @@ import { Link }          from '@/i18n/navigation'
 import { CheckCircle2 }  from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Paiement confirmé — AEGRYN',
+  title: 'Paiement confirmé — Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -13,7 +13,7 @@ export default function GradeSubmitSuccessPage() {
     <main className="min-h-screen bg-ag-navy flex items-center justify-center px-6">
       <div className="w-full max-w-lg text-center">
         <CheckCircle2 size={40} className="text-ag-apex mx-auto mb-6" />
-        <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">AEGRYN</p>
+        <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">Aegryn</p>
         <h1 className="font-sans font-bold text-white text-[28px] tracking-[-0.03em] mb-4">
           Paiement confirmé
         </h1>

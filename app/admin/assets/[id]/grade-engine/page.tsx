@@ -7,7 +7,7 @@ import { ArrowLeft, Clock }    from 'lucide-react'
 import GradeEngineForm         from './GradeEngineForm'
 
 export const metadata: Metadata = {
-  title: 'Moteur Grade — Admin AEGRYN',
+  title: 'Moteur Grade — Admin Aegryn',
   robots: { index: false, follow: false },
 }
 

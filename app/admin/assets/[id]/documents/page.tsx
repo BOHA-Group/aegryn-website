@@ -9,7 +9,7 @@ import { DIMENSION_LABELS } from '@/lib/dataRoom'
 import AdminDocumentsClient from './AdminDocumentsClient'
 
 export const metadata: Metadata = {
-  title: 'Documents Data Room — AEGRYN Admin',
+  title: 'Documents Data Room — Aegryn Admin',
   robots: { index: false, follow: false },
 }
 
@@ -99,7 +99,7 @@ export default async function AdminAssetDocumentsPage({
             </Link>
           </div>
           <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">
-            AEGRYN ADMIN — Data Room Documents
+            Aegryn ADMIN — Data Room Documents
           </p>
           <h1 className="text-[22px] font-bold text-gray-900 tracking-tight">{assetName}</h1>
           <p className="text-[12px] text-gray-400 mt-1">

@@ -10,7 +10,7 @@ async function sendEmail(to: string, subject: string, text: string) {
     method:  'POST',
     headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      from:     `${process.env.RESEND_FROM_NAME ?? 'AEGRYN'} <${from}>`,
+      from:     `${process.env.RESEND_FROM_NAME ?? 'Aegryn'} <${from}>`,
       reply_to: process.env.RESEND_REPLY_TO ?? 'contact@boha-group.com',
       to:       [to],
       subject,
@@ -90,15 +90,15 @@ export async function POST(req: NextRequest) {
   /* Email confirmation acheteur */
   await sendEmail(
     data.email,
-    'AEGRYN — Demande d\'accès reçue',
-    `Bonjour ${data.full_name},\n\nVotre demande d'accès au deal flow AEGRYN a bien été reçue.\n\nNotre équipe examinera votre profil sous 48h ouvrées et vous contactera pour finaliser votre pré-qualification.\n\nPour toute question : contact@boha-group.com\n\nL'équipe AEGRYN\nhttps://aegryn.com`,
+    'Aegryn — Demande d\'accès reçue',
+    `Bonjour ${data.full_name},\n\nVotre demande d'accès au deal flow Aegryn a bien été reçue.\n\nNotre équipe examinera votre profil sous 48h ouvrées et vous contactera pour finaliser votre pré-qualification.\n\nPour toute question : contact@boha-group.com\n\nL'équipe Aegryn\nhttps://aegryn.com`,
   )
 
   /* Email interne */
   const internalEmail = process.env.RESEND_INTERNAL_TO ?? 'contact@boha-group.com'
   await sendEmail(
     internalEmail,
-    `[AEGRYN] Nouvel acheteur — ${data.full_name} (${data.buyer_type})`,
+    `[Aegryn] Nouvel acheteur — ${data.full_name} (${data.buyer_type})`,
     `Nouvelle demande d'accès acheteur\n\nNom : ${data.full_name}\nEmail : ${data.email}\nOrganisation : ${data.organization ?? '—'}\nPays : ${data.country}\nType : ${data.buyer_type}\nTicket : ${data.ticket_min_eur ? `€${data.ticket_min_eur.toLocaleString()}` : '?'} – ${data.ticket_max_eur ? `€${data.ticket_max_eur.toLocaleString()}` : '?'}\nSecteurs : ${data.sectors.join(', ') || '—'}\nGéographies : ${data.geographies.join(', ') || '—'}\nOpérations : ${data.operation_types.join(', ') || '—'}\nPreuve fonds : ${data.funds_proof}\nMontant : ${data.funds_amount ?? '—'}\n\nMessage :\n${data.message ?? '—'}`,
   )
 

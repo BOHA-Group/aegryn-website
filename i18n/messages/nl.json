@@ -32,7 +32,7 @@
     "servicesAcquisition": "Advisory Transaction",
     "servicesValuation": "Waardering",
     "servicesExperts": "Expertennetwerk",
-    "servicesMenuLabel": "AEGRYN Services",
+    "servicesMenuLabel": "Aegryn Services",
     "servicesSectionTech": "Advisory Tech",
     "servicesSectionTechDesc": "Technische audit, beveiliging, AI, compliance",
     "servicesSectionTransaction": "Advisory Transaction",
@@ -66,12 +66,12 @@
       "transactions": "Transacties & Netwerk"
     },
     "page": {
-      "label": "AEGRYN Ecosysteem",
+      "label": "Aegryn Ecosysteem",
       "title": "Zes eigen assets.\nÉén gedeelde visie.",
-      "desc": "Elk AEGRYN-asset wordt intern ontworpen, gebouwd en beheerd. Volledig eigendom, absolute soevereiniteit.",
+      "desc": "Elk Aegryn-asset wordt intern ontworpen, gebouwd en beheerd. Volledig eigendom, absolute soevereiniteit.",
       "meta": {
-        "title": "AEGRYN Assets — Eigen ecosysteem",
-        "desc": "Ontdek de propriëtaire assets van AEGRYN: Subblink, Neediu, Primiom, Movtoo en Hobconnect, ontworpen om certificeerbaar en overdraagbaar te zijn."
+        "title": "Aegryn Assets — Eigen ecosysteem",
+        "desc": "Ontdek de propriëtaire assets van Aegryn: Subblink, Neediu, Primiom, Movtoo en Hobconnect, ontworpen om certificeerbaar en overdraagbaar te zijn."
       },
       "filterAll": "Alle",
       "filterAI": "AI & Protocollen",
@@ -80,17 +80,17 @@
       "statusLive": "Live",
       "statusBeta": "Beta",
       "statusDev": "In ontwikkeling",
-      "gradeLabel": "AEGRYN Grade",
+      "gradeLabel": "Aegryn Grade",
       "gradePending": "Certificering loopt",
       "visitSite": "Bezoek site",
       "viewDetails": "Bekijk details",
       "auctionEligible": "Veiling-geschikt",
       "internalOnly": "Intern gebruik",
       "confidential": "Vertrouwelijk",
-      "heroLabel": "AEGRYN — Eigen ecosysteem",
+      "heroLabel": "Aegryn — Eigen ecosysteem",
       "heroTitle": "Wat we\nbouwen.",
       "heroSub": "6 activa · 3 categorieën · Zwitserland & Europa",
-      "ownedNote": "Deze activa behoren tot de AEGRYN-groep. Ze staan standaard niet te koop. Sommige kunnen uitzonderlijk worden geveild op strategische beslissing van de groep.",
+      "ownedNote": "Deze activa behoren tot de Aegryn-groep. Ze staan standaard niet te koop. Sommige kunnen uitzonderlijk worden geveild op strategische beslissing van de groep.",
       "auctionEligibleNote": "Activum geschikt voor veiling — investeerderscontact op verzoek.",
       "ctaBottom": "Wilt u uw eigen asset indienen voor certificering?",
       "ctaGrade": "Een extern asset indienen",
@@ -161,9 +161,9 @@
   },
   "build": {
     "hero": {
-      "label": "AEGRYN Portfolio",
+      "label": "Aegryn Portfolio",
       "title": "Zes propriëtaire assets.\nEén gemeenschappelijke visie.",
-      "desc": "Elk AEGRYN-asset is van meet af aan ontworpen om certificeerbaar en overdraagbaar te zijn, geregistreerd IP, propriëtaire codebase, gedocumenteerde stack."
+      "desc": "Elk Aegryn-asset is van meet af aan ontworpen om certificeerbaar en overdraagbaar te zijn, geregistreerd IP, propriëtaire codebase, gedocumenteerde stack."
     },
     "categories": {
       "ai": "AI & Protocollen",
@@ -197,7 +197,7 @@
       }
     },
     "advisoryCta": {
-      "label": "AEGRYN Advisory",
+      "label": "Aegryn Advisory",
       "text": "Heeft uw asset Grade A nog niet bereikt?",
       "button": "Ontdek Advisory"
     }
@@ -209,12 +209,12 @@
       {
         "num": "01",
         "title": "De certificering ontbrak.",
-        "desc": "Een tech-asset kopen zonder onafhankelijke certificering is als een horloge kopen zonder papieren. AEGRYN levert de papieren, gecertificeerd, verifieerbaar, gedocumenteerd."
+        "desc": "Een tech-asset kopen zonder onafhankelijke certificering is als een horloge kopen zonder papieren. Aegryn levert de papieren, gecertificeerd, verifieerbaar, gedocumenteerd."
       },
       {
         "num": "02",
         "title": "Discretie werd opgeofferd.",
-        "desc": "De beste overdrachten vinden niet publiekelijk plaats. Ze vinden plaats in een besloten kring, tussen partijen die weten wat ze zoeken. AEGRYN is die kring."
+        "desc": "De beste overdrachten vinden niet publiekelijk plaats. Ze vinden plaats in een besloten kring, tussen partijen die weten wat ze zoeken. Aegryn is die kring."
       },
       {
         "num": "03",
@@ -224,8 +224,8 @@
     ]
   },
   "ecosystemDomains": {
-    "label": "De AEGRYN-markten",
-    "title": "Welke thema's\nlopen via AEGRYN Auction.",
+    "label": "De Aegryn-markten",
+    "title": "Welke thema's\nlopen via Aegryn Auction.",
     "domains": [
       {
         "id": "ai",
@@ -250,12 +250,12 @@
       {
         "id": "ip",
         "label": "IP Tech & Protocollen",
-        "desc": "Softwarepatenten, propriëtaire protocollen, exclusieve datasets, hoogwaardige API's. De I-dimensie van de AEGRYN Grade evalueert elk component."
+        "desc": "Softwarepatenten, propriëtaire protocollen, exclusieve datasets, hoogwaardige API's. De I-dimensie van de Aegryn Grade evalueert elk component."
       },
       {
         "id": "web3",
         "label": "Digital Art & Web3",
-        "desc": "Digitale creatieve assets, smart contracts met hoge IP-waarde. Uitbreiding van het AEGRYN Grade-label naar Web3-assets in onderzoek."
+        "desc": "Digitale creatieve assets, smart contracts met hoge IP-waarde. Uitbreiding van het Aegryn Grade-label naar Web3-assets in onderzoek."
       }
     ],
     "cta": "Dien uw asset in voor certificering"
@@ -263,12 +263,12 @@
   "aboutSection": {
     "label": "Over Aegryn",
     "title": "Drie disciplines.\nEén marktstandaard.",
-    "desc": "AEGRYN bouwt propriëtaire tech-assets, certificeert ze onder een onafhankelijk label en transageert ze via een vertrouwelijk proces tussen gekwalificeerde verkopers en kopers. De eerste vertrouwensinfrastructuur voor tech-M&A in Europa.",
+    "desc": "Aegryn bouwt propriëtaire tech-assets, certificeert ze onder een onafhankelijk label en transageert ze via een vertrouwelijk proces tussen gekwalificeerde verkopers en kopers. De eerste vertrouwensinfrastructuur voor tech-M&A in Europa.",
     "tagline": "GECERTIFICEERD IN ZWITSERLAND. REFERENTIE IN EUROPA.",
     "cta": "Over Aegryn",
-    "quote": "Een tech-asset zonder onafhankelijke certificering is een waarde zonder bewijs. AEGRYN levert het bewijs bij elk asset, bij elke overdracht.",
+    "quote": "Een tech-asset zonder onafhankelijke certificering is een waarde zonder bewijs. Aegryn levert het bewijs bij elk asset, bij elke overdracht.",
     "ceoName": "Yohann Bollack",
-    "ceoTitle": "Oprichter, AEGRYN",
+    "ceoTitle": "Oprichter, Aegryn",
     "stats": [
       {
         "val": "6",
@@ -285,7 +285,7 @@
     ]
   },
   "missionSection": {
-    "label": "Het AEGRYN-model",
+    "label": "Het Aegryn-model",
     "sub": "Drie disciplines. Één geïntegreerd ecosysteem.",
     "items": [
       {
@@ -303,13 +303,13 @@
     ]
   },
   "whyapps": {
-    "label": "Waarom AEGRYN",
+    "label": "Waarom Aegryn",
     "count": "05",
     "items": [
       {
         "num": "01",
         "title": "ONAFHANKELIJKE CERTIFICERING",
-        "desc": "Elk AEGRYN-grade-rapport wordt uitgegeven door onze gecertificeerde analisten, volgens een reproduceerbaar en traceerbaar protocol. Geen mening, een certificering."
+        "desc": "Elk Aegryn-grade-rapport wordt uitgegeven door onze gecertificeerde analisten, volgens een reproduceerbaar en traceerbaar protocol. Geen mening, een certificering."
       },
       {
         "num": "02",
@@ -319,7 +319,7 @@
       {
         "num": "03",
         "title": "INSTITUTIONEEL DEPOT",
-        "desc": "10% van de transactieprijs wordt bij ondertekening van de Hoofdovereenkomst op een bankrekening gestort. De verkoper is beschermd. De koper is gebonden. AEGRYN raakt de fondsen nooit aan."
+        "desc": "10% van de transactieprijs wordt bij ondertekening van de Hoofdovereenkomst op een bankrekening gestort. De verkoper is beschermd. De koper is gebonden. Aegryn raakt de fondsen nooit aan."
       },
       {
         "num": "04",
@@ -335,7 +335,7 @@
   },
   "about": {
     "hero": {
-      "label": "Over AEGRYN",
+      "label": "Over Aegryn",
       "title": "Wij verkopen geen deals.\nWij beschermen wat blijft.",
       "desc": "Wij geloven dat de echte waarde van een tech-asset niet onder druk wordt onderhandeld. Ze wordt gebouwd met precisie, gecertificeerd in transparantie en overgedragen in vertrouwen."
     },
@@ -356,32 +356,32 @@
           "meaning": "Eeuwigheid. De lange tijdspanne. Wat voortduurt voorbij cycli, trends en financieringsrondes."
         }
       ],
-      "synthesis": "Drie woorden uit drie beschavingen. Één synthese: een entiteit die beschermt (AEGIS), stromen faciliteert (AEGIR) en bouwt voor permanentie (AEON). AEGRYN.",
-      "formerly": "AEGRYN was voorheen bekend als BOHA-Group. Naarmate de positionering van het bedrijf scherper werd, van bouwer van digitale assets naar certificerings- en transactie-infrastructuur, deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet."
+      "synthesis": "Drie woorden uit drie beschavingen. Één synthese: een entiteit die beschermt (AEGIS), stromen faciliteert (AEGIR) en bouwt voor permanentie (AEON). Aegryn.",
+      "formerly": "Aegryn was voorheen bekend als BOHA-Group. Naarmate de positionering van het bedrijf scherper werd, van bouwer van digitale assets naar certificerings- en transactie-infrastructuur, deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet."
     },
     "vision": {
       "label": "Onze visie",
-      "text": "De Europese tech-M&A-markt heeft solide fundamenten, ervaren adviseurs, rigoureuze due diligence, institutioneel kapitaal. Wat ontbrak was een gestandaardiseerd, onafhankelijk certificeringskader: een gemeenschappelijke, verifieerbare referentie waarop beide kanten van een transactie kunnen vertrouwen voordat de onderhandelingen beginnen.\n\nAEGRYN is dat kader, geen vervanging van wat al werkt, maar de infrastructuurlaag die structureel ontbrak."
+      "text": "De Europese tech-M&A-markt heeft solide fundamenten, ervaren adviseurs, rigoureuze due diligence, institutioneel kapitaal. Wat ontbrak was een gestandaardiseerd, onafhankelijk certificeringskader: een gemeenschappelijke, verifieerbare referentie waarop beide kanten van een transactie kunnen vertrouwen voordat de onderhandelingen beginnen.\n\nAegryn is dat kader, geen vervanging van wat al werkt, maar de infrastructuurlaag die structureel ontbrak."
     },
     "contribution": {
       "label": "Onze bijdrage",
       "title": "Geen vervanging.\nEen infrastructuurlaag.",
-      "desc": "Rigoureuze tech-M&A-transacties bestaan al. AEGRYN vervangt niet de adviseurs, advocaten en accountants die ze structureren. Het voegt toe wat structureel ontbrak: een onafhankelijke grade, uitgegeven vóór elke notering, die beide partijen een gecertificeerd, gedocumenteerd startpunt geeft. Minder tijd debatteren over fundamentele waarde. Meer tijd om te sluiten.",
+      "desc": "Rigoureuze tech-M&A-transacties bestaan al. Aegryn vervangt niet de adviseurs, advocaten en accountants die ze structureren. Het voegt toe wat structureel ontbrak: een onafhankelijke grade, uitgegeven vóór elke notering, die beide partijen een gecertificeerd, gedocumenteerd startpunt geeft. Minder tijd debatteren over fundamentele waarde. Meer tijd om te sluiten.",
       "items": [
         {
           "num": "01",
           "title": "Een grade vóór een prijs",
-          "desc": "De AEGRYN C/I/F/S grade wordt vastgesteld vóór elke notering, vóór elke onderhandeling. Geen waarderingsopinie, een certificering van wat de asset daadwerkelijk is, gedocumenteerd, geversioneerd en reproduceerbaar. De prijs volgt de grade. De grade hangt er niet van af."
+          "desc": "De Aegryn C/I/F/S grade wordt vastgesteld vóór elke notering, vóór elke onderhandeling. Geen waarderingsopinie, een certificering van wat de asset daadwerkelijk is, gedocumenteerd, geversioneerd en reproduceerbaar. De prijs volgt de grade. De grade hangt er niet van af."
         },
         {
           "num": "02",
           "title": "Een gesloten kring, geen marktplaats",
-          "desc": "Elke verkoper in de AEGRYN-catalogus heeft de certificering doorstaan. Elke koper heeft financiële capaciteit aangetoond. Discretie is structureel, geen bovenop toegevoegde functie, maar de bedrijfscondities waaruit alles voortkomt."
+          "desc": "Elke verkoper in de Aegryn-catalogus heeft de certificering doorstaan. Elke koper heeft financiële capaciteit aangetoond. Discretie is structureel, geen bovenop toegevoegde functie, maar de bedrijfscondities waaruit alles voortkomt."
         },
         {
           "num": "03",
           "title": "Zwitserse institutionele standaarden",
-          "desc": "Zwitsers recht regelt elke transactie. Escrow wordt aangehouden door een derde bank, AEGRYN raakt de fondsen nooit aan. Documentatie is bij elke overdracht volledig. Dit zijn bedrijfscondities, geen beloften."
+          "desc": "Zwitsers recht regelt elke transactie. Escrow wordt aangehouden door een derde bank, Aegryn raakt de fondsen nooit aan. Documentatie is bij elke overdracht volledig. Dit zijn bedrijfscondities, geen beloften."
         }
       ]
     },
@@ -408,12 +408,12 @@
       "precision": {
         "label": "01",
         "title": "Precisie",
-        "desc": "Elke beslissing is gedocumenteerd, gemeten en traceerbaar. De AEGRYN Grade is geen mening, het is een protocol. Twee analisten, hetzelfde protocol, dezelfde grade."
+        "desc": "Elke beslissing is gedocumenteerd, gemeten en traceerbaar. De Aegryn Grade is geen mening, het is een protocol. Twee analisten, hetzelfde protocol, dezelfde grade."
       },
       "durability": {
         "label": "02",
         "title": "Duurzaamheid",
-        "desc": "We bouwen voor het decennium, niet voor het kwartaal. Elk asset in het AEGRYN-ecosysteem is ontworpen om over tien jaar certificeerbaar te zijn, niet alleen vandaag."
+        "desc": "We bouwen voor het decennium, niet voor het kwartaal. Elk asset in het Aegryn-ecosysteem is ontworpen om over tien jaar certificeerbaar te zijn, niet alleen vandaag."
       },
       "sovereignty": {
         "label": "03",
@@ -427,29 +427,29 @@
       }
     },
     "swiss": {
-      "groupLabel": "AEGRYN",
+      "groupLabel": "Aegryn",
       "title": "Geworteld in Zwitserland.\nDe Europese referentie.",
-      "desc": "Zwitserland werd bewust gekozen, niet voor zijn incorporatievoordelen, maar voor zijn institutionele standaarden: de strengheid van het Zwitserse recht, de discretie van zijn financieel ecosysteem en de neutraliteit die het tot een geloofwaardig anker maakt voor grensoverschrijdende transacties tussen een Franse verkoper, een Duitse koper en een Luxemburgs fonds. Elke AEGRYN-transactie valt onder Zwitsers recht, ongeacht de nationaliteit van de partijen of de herkomst van de asset.",
+      "desc": "Zwitserland werd bewust gekozen, niet voor zijn incorporatievoordelen, maar voor zijn institutionele standaarden: de strengheid van het Zwitserse recht, de discretie van zijn financieel ecosysteem en de neutraliteit die het tot een geloofwaardig anker maakt voor grensoverschrijdende transacties tussen een Franse verkoper, een Duitse koper en een Luxemburgs fonds. Elke Aegryn-transactie valt onder Zwitsers recht, ongeacht de nationaliteit van de partijen of de herkomst van de asset.",
       "cta": "Catalogus bekijken"
     },
     "founder": {
       "label": "De oprichtende overtuiging",
       "title": "Van binnenuit gebouwd.",
-      "bio1": "AEGRYN werd opgericht door iemand die bouwt. Jaren besteed aan het bouwen, auditen en structureren van digitale assets en herhaaldelijk dezelfde kloof observeren: het ontbreken van een gestandaardiseerde, onafhankelijke referentie waarop beide kanten van een tech-transactie gelijkelijk konden vertrouwen.",
-      "bio2": "De keuze om die referentie in Zwitserland te verankeren, onder Zwitsers recht en institutionele standaarden, was bewust. Geen detail van incorporatie, een positioneringskeuze. De propriëtaire assets die AEGRYN bouwt zijn ontworpen om aan die standaard te voldoen vanaf hun eerste coderegel.",
+      "bio1": "Aegryn werd opgericht door iemand die bouwt. Jaren besteed aan het bouwen, auditen en structureren van digitale assets en herhaaldelijk dezelfde kloof observeren: het ontbreken van een gestandaardiseerde, onafhankelijke referentie waarop beide kanten van een tech-transactie gelijkelijk konden vertrouwen.",
+      "bio2": "De keuze om die referentie in Zwitserland te verankeren, onder Zwitsers recht en institutionele standaarden, was bewust. Geen detail van incorporatie, een positioneringskeuze. De propriëtaire assets die Aegryn bouwt zijn ontworpen om aan die standaard te voldoen vanaf hun eerste coderegel.",
       "cta": "Contact opnemen"
     },
     "whatsnext": {
       "label": "Wat er hierna komt",
       "title": "Het protocol evolueert.\nDe standaard houdt stand.",
-      "desc": "AEGRYN certificeert en transageert vandaag SaaS, applicaties, marktplaatsen, IP-assets en Web3-assets onder het CIFS-protocol.\n\nHet belangrijkste element van de roadmap is blockchain-certificering: een verankeringslaag die elke gecertificeerde codebase op de exacte datum van overdracht verzegelt, waardoor elk grade permanent en onveranderlijk verifieerbaar is. Deze laag wordt toegevoegd aan het reeds volledig operationele onafhankelijke protocol.\n\nTegelijkertijd bouwen we een netwerk van expertpartners op, advocatenkantoren, gecertificeerde accountants, cyberbeveiligingsspecialisten en technische architecten om kopers en verkopers in elke fase te begeleiden: technisch advies vóór de certificering, juridische en financiële structurering tijdens de transactie, en integratie na het closing.",
+      "desc": "Aegryn certificeert en transageert vandaag SaaS, applicaties, marktplaatsen, IP-assets en Web3-assets onder het CIFS-protocol.\n\nHet belangrijkste element van de roadmap is blockchain-certificering: een verankeringslaag die elke gecertificeerde codebase op de exacte datum van overdracht verzegelt, waardoor elk grade permanent en onveranderlijk verifieerbaar is. Deze laag wordt toegevoegd aan het reeds volledig operationele onafhankelijke protocol.\n\nTegelijkertijd bouwen we een netwerk van expertpartners op, advocatenkantoren, gecertificeerde accountants, cyberbeveiligingsspecialisten en technische architecten om kopers en verkopers in elke fase te begeleiden: technisch advies vóór de certificering, juridische en financiële structurering tijdens de transactie, en integratie na het closing.",
       "cta": "Huidige sessies bekijken"
     },
     "cta": {
-      "label": "Werken met AEGRYN",
+      "label": "Werken met Aegryn",
       "seller": {
         "title": "U verkoopt een tech-asset.",
-        "desc": "Een AEGRYN-adviseur reageert binnen 24u.",
+        "desc": "Een Aegryn-adviseur reageert binnen 24u.",
         "btn": "Uw asset indienen voor certificering",
         "href": "/grade/submit"
       },
@@ -516,7 +516,7 @@
       "label": "Geïnteresseerd in dit actief?",
       "title": "Laten we uw acquisitie bespreken",
       "allAssets": "Alle activa bekijken",
-      "contact": "Contact AEGRYN"
+      "contact": "Contact Aegryn"
     },
     "assets": {
       "subblink": {
@@ -694,10 +694,10 @@
   },
   "accessForm": {
     "doneTitle": "Aanvraag ontvangen",
-    "doneDesc": "Ons team neemt binnen 24–48u contact met u op om uw profiel te valideren en u de NDA en AEGRYN Auction AV te sturen voor ondertekening.",
+    "doneDesc": "Ons team neemt binnen 24–48u contact met u op om uw profiel te valideren en u de NDA en Aegryn Auction AV te sturen voor ondertekening.",
     "doneNote": "Geen toegang zonder ondertekening van beide documenten.",
     "restrictedTitle": "Beperkte catalogustoegang",
-    "restrictedDesc": "Actiefdossiers en bedrijfsnamen zijn alleen toegankelijk na accountaanmaak, ondertekening van de AEGRYN Auction NDA en aanvaarding van de AV.",
+    "restrictedDesc": "Actiefdossiers en bedrijfsnamen zijn alleen toegankelijk na accountaanmaak, ondertekening van de Aegryn Auction NDA en aanvaarding van de AV.",
     "pendingCgvDesc": "Uw NDA is geregistreerd. De AV worden u binnenkort toegestuurd.",
     "pendingNdaDesc": "Dien hieronder uw aanvraag in. Wij sturen u de NDA en AV ter ondertekening.",
     "ndaSignedTitle": "NDA ondertekend — AV in afwachting",
@@ -727,10 +727,10 @@
     }
   },
   "gradePartners": {
-    "back": "← AEGRYN Grade",
-    "eyebrow": "AEGRYN GRADE",
+    "back": "← Aegryn Grade",
+    "eyebrow": "Aegryn GRADE",
     "title": "Een expertnetwerk ter ondersteuning, geen verplichting",
-    "intro1": "De AEGRYN Grade is een onafhankelijke certificering: AEGRYN evalueert en beoordeelt de kwaliteit van te verkopen tech-activa zonder een derde partij nodig te hebben om zijn grade uit te geven. Onze verkopers worden onafhankelijk begeleid in hun verkoopproces.",
+    "intro1": "De Aegryn Grade is een onafhankelijke certificering: Aegryn evalueert en beoordeelt de kwaliteit van te verkopen tech-activa zonder een derde partij nodig te hebben om zijn grade uit te geven. Onze verkopers worden onafhankelijk begeleid in hun verkoopproces.",
     "intro2": "Wij staan open voor kandidaturen van onafhankelijke experts die zich willen aansluiten bij de certificering of ons netwerk willen vervoegen, op aanvraag inzetbaar voor, tijdens en na een transactie.",
     "openApps": "Kandidaturen open",
     "types": {
@@ -757,12 +757,12 @@
     },
     "ctaLabel": "VOOR EXPERTS",
     "ctaTitle": "Bent u een advocatenkantoor, accountant of cyberbeveiligingsspecialist?",
-    "ctaDesc": "Solliciteer om deel uit te maken van het AEGRYN expertnetwerk: toegang tot een regelmatige stroom van tech-activa die uw expertise vereisen, institutionele zichtbaarheid, gekwalificeerde cliëntele.",
+    "ctaDesc": "Solliciteer om deel uit te maken van het Aegryn expertnetwerk: toegang tot een regelmatige stroom van tech-activa die uw expertise vereisen, institutionele zichtbaarheid, gekwalificeerde cliëntele.",
     "ctaBtn": "Solliciteren voor het expertnetwerk",
     "benefitsLabel": "WAT U KRIJGT",
     "benefits": [
       "Toegang tot een regelmatige stroom van tech-activa die uw expertise vereisen",
-      "Zichtbaarheid als AEGRYN-netwerkpartner (vanaf de eerste mandaten)",
+      "Zichtbaarheid als Aegryn-netwerkpartner (vanaf de eerste mandaten)",
       "Gekwalificeerde institutionele cliëntele — PE-, VC-, Family Office-kopers",
       "Vergoeding bepaald binnen het partnerschapskader"
     ]
@@ -826,8 +826,8 @@
       }
     },
     "meta": {
-      "title": "Contact — AEGRYN",
-      "desc": "Neem contact op met AEGRYN, Advisory, certificering, veiling, partnerschap of algemene vraag."
+      "title": "Contact — Aegryn",
+      "desc": "Neem contact op met Aegryn, Advisory, certificering, veiling, partnerschap of algemene vraag."
     },
     "info": {
       "baseLabel": "Hoofdkantoor",
@@ -868,7 +868,7 @@
     },
     "experts": {
       "label": "Ingezette expertise",
-      "desc": "AEGRYN Advisory Tech grijpt in op de technische dimensies die de robuustheid en certificeerbaarheid van een digitaal actief bepalen: voor, tijdens of onafhankelijk van een transactie.",
+      "desc": "Aegryn Advisory Tech grijpt in op de technische dimensies die de robuustheid en certificeerbaarheid van een digitaal actief bepalen: voor, tijdens of onafhankelijk van een transactie.",
       "items": [
         {
           "title": "Beveiligingsaudit & Cybersecurity",
@@ -880,7 +880,7 @@
         },
         {
           "title": "DevSecOps & Softwarekwaliteit",
-          "desc": "CI/CD, testdekking, reductie van technische schuld, QA-automatisering, observability (logs, monitoring, alerts). Verbetert rechtstreeks de Code-score (dimensie C) van de AEGRYN-grade."
+          "desc": "CI/CD, testdekking, reductie van technische schuld, QA-automatisering, observability (logs, monitoring, alerts). Verbetert rechtstreeks de Code-score (dimensie C) van de Aegryn-grade."
         },
         {
           "title": "Data & Kunstmatige Intelligentie",
@@ -931,8 +931,8 @@
     "base": "Zwitserse basis"
   },
   "footer": {
-    "groupLabel": "AEGRYN",
-    "legal": "© 2026 AEGRYN (formerly BOHA-Group) — Alle rechten voorbehouden",
+    "groupLabel": "Aegryn",
+    "legal": "© 2026 Aegryn (formerly BOHA-Group) — Alle rechten voorbehouden",
     "company": "An Aegryn company",
     "privacy": "Privacy",
     "terms": "Voorwaarden",
@@ -946,7 +946,7 @@
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosysteem",
     "advisoryLabel": "Advies",
-    "advisoryDesc": "Tech-advies en transactiebegeleiding voor AEGRYN-gecertificeerde digitale activa.",
+    "advisoryDesc": "Tech-advies en transactiebegeleiding voor Aegryn-gecertificeerde digitale activa.",
     "advisoryBook": "Sessie boeken ↗",
     "medallionText": "Laten we praten . Neem contact op . Laten we praten . Neem contact op .",
     "contactLabel": "Neem contact op",
@@ -957,7 +957,7 @@
     "assetsLink": "Activacatalogus",
     "glossaryLink": "Woordenlijst",
     "ecosystemCatalogLink": "Onze propriëtaire assets",
-    "aiNotice": "Sommige inhoud op deze site wordt geproduceerd met behulp van systemen voor kunstmatige intelligentie en beoordeeld onder de redactionele verantwoordelijkheid van AEGRYN — EU AI Act art. 50."
+    "aiNotice": "Sommige inhoud op deze site wordt geproduceerd met behulp van systemen voor kunstmatige intelligentie en beoordeeld onder de redactionele verantwoordelijkheid van Aegryn — EU AI Act art. 50."
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
@@ -968,19 +968,19 @@
   },
   "acquisition": {
     "meta": {
-      "title": "Transactie-advies & M&A — AEGRYN",
-      "desc": "Volledige begeleiding bij de overname van gecertificeerde tech-assets: due diligence, juridische en fiscale structurering, financiering, veilige ondertekening en closing. AEGRYN mobiliseert de juiste experts voor uw deal."
+      "title": "Transactie-advies & M&A — Aegryn",
+      "desc": "Volledige begeleiding bij de overname van gecertificeerde tech-assets: due diligence, juridische en fiscale structurering, financiering, veilige ondertekening en closing. Aegryn mobiliseert de juiste experts voor uw deal."
     },
     "label": "Services — Transactie-advies",
     "title": "Uw overname.\nGestructureerd om te sluiten.",
-    "desc": "Wanneer de overname van een gecertificeerd asset een specifieke financiële, juridische of fiscale structurering vereist — mobiliseert AEGRYN de juiste experts voor uw profiel en de aard van de deal.",
+    "desc": "Wanneer de overname van een gecertificeerd asset een specifieke financiële, juridische of fiscale structurering vereist — mobiliseert Aegryn de juiste experts voor uw profiel en de aard van de deal.",
     "ctaPrimary": "Mijn acquisitie bespreken",
     "ctaDiscover": "Onze analyses lezen",
-    "advisorNote": "Een AEGRYN-adviseur wordt toegewezen aan uw dossier van het eerste contact tot de closing. Één persoon. Directe lijn.",
+    "advisorNote": "Een Aegryn-adviseur wordt toegewezen aan uw dossier van het eerste contact tot de closing. Één persoon. Directe lijn.",
     "experts": {
       "label": "Ingezette expertise",
       "title": "De juiste experts.\nVoor elke fase van de deal.",
-      "desc": "Afhankelijk van uw dossier en de transactiefase mobiliseert AEGRYN de meest geschikte partnerexperts.",
+      "desc": "Afhankelijk van uw dossier en de transactiefase mobiliseert Aegryn de meest geschikte partnerexperts.",
       "phases": [
         {
           "label": "Pre-transactie",
@@ -998,7 +998,7 @@
             {
               "num": "03",
               "title": "Digitaal recht & Intellectueel eigendom",
-              "desc": "IP-eigendomsketen, open-sourcelicenties, overdracht van rechten van oprichters en onderaannemers, merkenrechtbescherming, contractuele naleving met klanten. Dekt dimensie I van de AEGRYN-grade."
+              "desc": "IP-eigendomsketen, open-sourcelicenties, overdracht van rechten van oprichters en onderaannemers, merkenrechtbescherming, contractuele naleving met klanten. Dekt dimensie I van de Aegryn-grade."
             }
           ]
         },
@@ -1075,7 +1075,7 @@
       "items": [
         {
           "title": "Fondsen en family offices",
-          "desc": "U heeft een asset in de catalogus geïdentificeerd maar de deal vereist een SPV, LP-co-investering of IC-tijdlijn. AEGRYN structureert de enveloppe rond uw bod."
+          "desc": "U heeft een asset in de catalogus geïdentificeerd maar de deal vereist een SPV, LP-co-investering of IC-tijdlijn. Aegryn structureert de enveloppe rond uw bod."
         },
         {
           "title": "Strategische kopers",
@@ -1083,7 +1083,7 @@
         },
         {
           "title": "Eerste overnemers",
-          "desc": "U voert uw eerste tech-acquisitie uit en heeft volledige begeleiding nodig — waardering, due diligence, onderhandeling, financieringsstructurering. AEGRYN begeleidt u van het eerste gesprek tot de overdracht."
+          "desc": "U voert uw eerste tech-acquisitie uit en heeft volledige begeleiding nodig — waardering, due diligence, onderhandeling, financieringsstructurering. Aegryn begeleidt u van het eerste gesprek tot de overdracht."
         }
       ]
     },
@@ -1098,12 +1098,12 @@
         {
           "num": "02",
           "title": "Toegang tot de gecertificeerde pipeline",
-          "desc": "Prioriteitstoegang tot de AEGRYN-catalogus en off-market flow. Gecertificeerde assets Grade AA en hoger. Grade A op aanvraag met remediëringsplan inbegrepen."
+          "desc": "Prioriteitstoegang tot de Aegryn-catalogus en off-market flow. Gecertificeerde assets Grade AA en hoger. Grade A op aanvraag met remediëringsplan inbegrepen."
         },
         {
           "num": "03",
           "title": "Due diligence & structurering",
-          "desc": "Toegang tot de data room onder NDA. Het AEGRYN-grade-rapport reduceert de DD met 30 tot 45 dagen. Inzet van juridische, fiscale en financiële experts. Opstelling van de transactiedocumenten (SPA, SHA, LOI)."
+          "desc": "Toegang tot de data room onder NDA. Het Aegryn-grade-rapport reduceert de DD met 30 tot 45 dagen. Inzet van juridische, fiscale en financiële experts. Opstelling van de transactiedocumenten (SPA, SHA, LOI)."
         },
         {
           "num": "04",
@@ -1113,12 +1113,12 @@
         {
           "num": "05",
           "title": "Ondertekening & veilige closing",
-          "desc": "Institutionele escrow (10 % van de prijs bij LOI). Volledige codebасedocumentatie op ondertekeningsdatum. Overdracht van rechten. Uitgifte van het AEGRYN-transactiecertificaat."
+          "desc": "Institutionele escrow (10 % van de prijs bij LOI). Volledige codebасedocumentatie op ondertekeningsdatum. Overdracht van rechten. Uitgifte van het Aegryn-transactiecertificaat."
         }
       ]
     },
     "diff": {
-      "label": "Waarom AEGRYN",
+      "label": "Waarom Aegryn",
       "items": [
         {
           "title": "Gecertificeerde assets, minder risico",
@@ -1126,15 +1126,15 @@
         },
         {
           "title": "Off-market eerst",
-          "desc": "De meeste AEGRYN-assets worden nooit publiek gelistet. Gekwalificeerde overnemer-leden krijgen toegang vóór enige publieke listung — of exclusief."
+          "desc": "De meeste Aegryn-assets worden nooit publiek gelistet. Gekwalificeerde overnemer-leden krijgen toegang vóór enige publieke listung — of exclusief."
         },
         {
           "title": "Experts op het juiste moment",
-          "desc": "AEGRYN doet niet alles. Wij coördineren de juiste experts (juridisch, fiscaal, financieel) op het juiste moment — niet te vroeg om niet te verzwaren, niet te laat om niet te fragiliseren."
+          "desc": "Aegryn doet niet alles. Wij coördineren de juiste experts (juridisch, fiscaal, financieel) op het juiste moment — niet te vroeg om niet te verzwaren, niet te laat om niet te fragiliseren."
         },
         {
           "title": "Aansprakelijkheid op de grade",
-          "desc": "Onze grade wordt uitgegeven door gecertificeerde analisten volgens een onafhankelijk, rigoureus protocol. De professionele aansprakelijkheid van AEGRYN is betrokken bij de integriteit van het certificeringsproces, binnen de grenzen van onze Algemene Voorwaarden."
+          "desc": "Onze grade wordt uitgegeven door gecertificeerde analisten volgens een onafhankelijk, rigoureus protocol. De professionele aansprakelijkheid van Aegryn is betrokken bij de integriteit van het certificeringsproces, binnen de grenzen van onze Algemene Voorwaarden."
         }
       ]
     },
@@ -1142,7 +1142,7 @@
       "label": "Honoraria",
       "title": "Een succesfee,\nnul vaste kosten.",
       "desc": "Onze vergoeding is uitsluitend afhankelijk van een effectieve closing. Geen retainer, geen instapkosten. Gedetailleerde voorwaarden beschikbaar in onze Algemene Voorwaarden.",
-      "note": "AEGRYN handelt als gecertificeerde tussenpersoon, niet als financiële instelling. De gepresenteerde financieringsopties betreffen onafhankelijke derde partners. Deze service vormt geen beleggingsadvies in de zin van MiFID II.",
+      "note": "Aegryn handelt als gecertificeerde tussenpersoon, niet als financiële instelling. De gepresenteerde financieringsopties betreffen onafhankelijke derde partners. Deze service vormt geen beleggingsadvies in de zin van MiFID II.",
       "noteLink": "Algemene Voorwaarden raadplegen",
       "noteHref": "/terms/cgv"
     },
@@ -1150,14 +1150,14 @@
       "title": "Interesse in een asset?",
       "desc": "Vertel ons over uw acquisitieproject. Wij reageren binnen 48u met een haalbaarheidsanalyse.",
       "btn": "Ons contacteren",
-      "partnerNote": "Wilt u uitgaande deal flow in het AEGRYN-ecosysteem inbrengen?",
+      "partnerNote": "Wilt u uitgaande deal flow in het Aegryn-ecosysteem inbrengen?",
       "partnerCta": "Deal Flow-partnerschappen ontdekken",
       "partnerHref": "/alliances?tab=dealflow"
     },
     "roadmap": {
       "label": "Services in ontwikkeling",
       "title": "Wat eraan komt.",
-      "desc": "AEGRYN breidt zijn transactieaanbod geleidelijk uit. Deze services worden ingezet met onze Alliance-partners.",
+      "desc": "Aegryn breidt zijn transactieaanbod geleidelijk uit. Deze services worden ingezet met onze Alliance-partners.",
       "ctaLabel": "Ons contacteren",
       "ctaHref": "/contact",
       "items": [
@@ -1202,13 +1202,13 @@
   },
   "gradingSystem": {
     "meta": {
-      "title": "Beoordelingssysteem — AEGRYN Grade Protocol",
-      "desc": "Het AEGRYN Grade-protocol: CIFS-kader, definities van AEG ★ tot B, subcodes, analyseproces en onafhankelijkheidsprincipes."
+      "title": "Beoordelingssysteem — Aegryn Grade Protocol",
+      "desc": "Het Aegryn Grade-protocol: CIFS-kader, definities van AEG ★ tot B, subcodes, analyseproces en onafhankelijkheidsprincipes."
     },
-    "label": "AEGRYN — Grading System",
+    "label": "Aegryn — Grading System",
     "version": "2026",
-    "title": "AEGRYN\nGrading System.",
-    "intro": "AEGRYN introduceert zijn eigen certificeringssysteem voor tech-assets, met volledige transparantie over de 4 fundamentele waardedimensies.",
+    "title": "Aegryn\nGrading System.",
+    "intro": "Aegryn introduceert zijn eigen certificeringssysteem voor tech-assets, met volledige transparantie over de 4 fundamentele waardedimensies.",
     "downloadLabel": "Volledige documentatie",
     "downloadCta": "Protocol PDF downloaden",
     "cifsTitle": "Het CIFS-kader",
@@ -1271,7 +1271,7 @@
         ]
       }
     ],
-    "gradesTitle": "AEGRYN Grades",
+    "gradesTitle": "Aegryn Grades",
     "gradesDesc": "Elk grade correspondeert met een nauwkeurig scorebereik en een gedefinieerd assetprofiel. AEG ★ en AAA worden toegekend aan minder dan 15% van de ingediende activa.",
     "grades": [
       {
@@ -1434,7 +1434,7 @@
       {
         "num": "02",
         "title": "Technische analyse (Code + Security)",
-        "desc": "Coderevue door twee AEGRYN-gecertificeerde senior ingenieurs. Geautomatiseerde beveiligingsscan gevolgd door handmatige beoordeling. Duur: 5–10 dagen."
+        "desc": "Coderevue door twee Aegryn-gecertificeerde senior ingenieurs. Geautomatiseerde beveiligingsscan gevolgd door handmatige beoordeling. Duur: 5–10 dagen."
       },
       {
         "num": "03",
@@ -1449,14 +1449,14 @@
       {
         "num": "05",
         "title": "Uitgifte & publicatie",
-        "desc": "Het grade wordt uitgegeven, gedocumenteerd en geversioneerd. Het certificaat wordt overgemaakt aan de houder en gepubliceerd in het AEGRYN-register. Een blockchain-certificeringslaag zal de verankering van dit register op termijn versterken."
+        "desc": "Het grade wordt uitgegeven, gedocumenteerd en geversioneerd. Het certificaat wordt overgemaakt aan de houder en gepubliceerd in het Aegryn-register. Een blockchain-certificeringslaag zal de verankering van dit register op termijn versterken."
       }
     ],
     "principlesTitle": "Onafhankelijkheidsprincipes",
     "principles": [
       {
         "title": "Strikte scheiding",
-        "desc": "AEGRYN-analisten hebben geen financieel belang bij de activa die zij certificeren. Elke relatie met de houder activeert automatische wraking."
+        "desc": "Aegryn-analisten hebben geen financieel belang bij de activa die zij certificeren. Elke relatie met de houder activeert automatische wraking."
       },
       {
         "title": "Reproduceerbaarheid",
@@ -1468,15 +1468,15 @@
       },
       {
         "title": "Toekomstige versterking",
-        "desc": "AEGRYN bouwt geleidelijk een netwerk van expertpartners op die bepaalde rapporten kunnen verrijken met een aanvullende kruisreview, evenals een blockchain-certificeringslaag om de traceerbaarheid van het register te versterken. Deze bouwstenen zullen het reeds volledig operationele onafhankelijke protocol aanvullen, nooit vervangen."
+        "desc": "Aegryn bouwt geleidelijk een netwerk van expertpartners op die bepaalde rapporten kunnen verrijken met een aanvullende kruisreview, evenals een blockchain-certificeringslaag om de traceerbaarheid van het register te versterken. Deze bouwstenen zullen het reeds volledig operationele onafhankelijke protocol aanvullen, nooit vervangen."
       }
     ],
     "ctaTitle": "Certificeer uw asset",
-    "ctaDesc": "Klaar om uw asset in te dienen bij het AEGRYN Grade-protocol?",
+    "ctaDesc": "Klaar om uw asset in te dienen bij het Aegryn Grade-protocol?",
     "ctaPrimary": "Certificering starten",
     "ctaSecondary": "Ontdek de volledige methodologie",
     "disclaimerTitle": "Verplichte vermelding",
-    "disclaimerText": "Hoewel alles in het werk is gesteld om objectief te blijven, worden klanten geïnformeerd dat elke certificering een element van deskundig oordeel bevat. De informatie in een AEGRYN Grade-rapport wordt verstrekt als professionele certificering, uitgegeven door gecertificeerde AEGRYN-analisten. Dit vormt geen garantie voor marktwaarde.",
+    "disclaimerText": "Hoewel alles in het werk is gesteld om objectief te blijven, worden klanten geïnformeerd dat elke certificering een element van deskundig oordeel bevat. De informatie in een Aegryn Grade-rapport wordt verstrekt als professionele certificering, uitgegeven door gecertificeerde Aegryn-analisten. Dit vormt geen garantie voor marktwaarde.",
     "refusalTitle": "Voorwaarden voor automatische afwijzing",
     "refusalDesc": "Bepaalde configuraties leiden tot automatische afwijzing, ongeacht de totaalscore — het algoritme levert een score, de expert geeft het uiteindelijke oordeel, maar een automatische afwijzing kan nooit worden overruled.",
     "refusalConditions": [
@@ -1487,7 +1487,7 @@
       "Weigering om mee te werken tijdens de audit → Globale afwijzing van de certificering"
     ],
     "maturityTitle": "Catalogusgeschiktheid naar volwassenheid",
-    "maturityDesc": "AEGRYN past zijn beoordelingscriteria aan op basis van de volwassenheid van het asset.",
+    "maturityDesc": "Aegryn past zijn beoordelingscriteria aan op basis van de volwassenheid van het asset.",
     "maturityRules": [
       {
         "tier": "Pre-revenue / < 6 maanden tractie",
@@ -1955,17 +1955,17 @@
   },
   "roadmapPage": {
     "meta": {
-      "title": "Platform — AEGRYN Auction Switzerland",
-      "desc": "Het AEGRYN Auction Switzerland platform: certificering, private sessies, Zwitsers recht, internationale openheid."
+      "title": "Platform — Aegryn Auction Switzerland",
+      "desc": "Het Aegryn Auction Switzerland platform: certificering, private sessies, Zwitsers recht, internationale openheid."
     },
-    "label": "AEGRYN Auction Switzerland",
+    "label": "Aegryn Auction Switzerland",
     "title": "Het platform.\nZijn functies.",
-    "desc": "Elke verkoop vindt uitsluitend plaats via AEGRYN Auction Switzerland. Zwitsers recht is van toepassing. Verkopers en kopers van over de hele wereld zijn welkom.",
+    "desc": "Elke verkoop vindt uitsluitend plaats via Aegryn Auction Switzerland. Zwitsers recht is van toepassing. Verkopers en kopers van over de hele wereld zijn welkom.",
     "swissNote": "Zwitsers recht is van toepassing op elke transactie — ongeacht de herkomst van het asset of de nationaliteit van de partijen.",
     "featuresLabel": "Wat het platform biedt",
     "features": {
       "certification": {
-        "title": "AEGRYN Grade Certificering",
+        "title": "Aegryn Grade Certificering",
         "desc": "Elk asset dat te koop wordt aangeboden, is gecertificeerd volgens het CIFS-protocol vóór elke sessie. Geen niet-gecertificeerd asset wordt toegelaten."
       },
       "swissLaw": {
@@ -1982,7 +1982,7 @@
       },
       "escrow": {
         "title": "Institutionele escrow",
-        "desc": "Gelden worden op een door AEGRYN beheerde institutionele derdenrekening bewaard tot closing."
+        "desc": "Gelden worden op een door Aegryn beheerde institutionele derdenrekening bewaard tot closing."
       },
       "buyers": {
         "title": "Gekwalificeerde kopers",
@@ -1990,11 +1990,11 @@
       },
       "dueDiligence": {
         "title": "Voorgevalideerde due diligence",
-        "desc": "Het AEGRYN Grade-rapport vervangt gedeeltelijk de due diligence en verkort de tijdlijn met 30 tot 45 dagen."
+        "desc": "Het Aegryn Grade-rapport vervangt gedeeltelijk de due diligence en verkort de tijdlijn met 30 tot 45 dagen."
       },
       "transaction": {
         "title": "Begeleide transactie",
-        "desc": "AEGRYN coördineert de onderhandeling, zorgt voor de overdracht van rechten en garandeert de procedure van A tot Z."
+        "desc": "Aegryn coördineert de onderhandeling, zorgt voor de overdracht van rechten en garandeert de procedure van A tot Z."
       }
     },
     "roadmapLabel": "Komende functies",
@@ -2007,7 +2007,7 @@
       },
       {
         "phase": "Q1 2027",
-        "title": "AEGRYN partner-API",
+        "title": "Aegryn partner-API",
         "desc": "Programmatische toegang tot gepubliceerde grades en marktgegevens voor partnerplatforms en institutionele fondsen.",
         "status": "Gepland"
       },
@@ -2021,7 +2021,7 @@
     "currentLabel": "Vandaag beschikbaar",
     "current": [
       "Private verkoopsessies — Q3 2026",
-      "AEGRYN Grade certificering inbegrepen",
+      "Aegryn Grade certificering inbegrepen",
       "Institutionele escrow",
       "Geautomatiseerde NDA",
       "Internationale gekwalificeerde kopers"
@@ -2031,10 +2031,10 @@
   },
   "discover": {
     "meta": {
-      "title": "Discover — AEGRYN Marktintelligentie",
-      "desc": "Marktrapportages, verkoper- en kopershandleidingen, certificeringsanalyses van AEGRYN."
+      "title": "Discover — Aegryn Marktintelligentie",
+      "desc": "Marktrapportages, verkoper- en kopershandleidingen, certificeringsanalyses van Aegryn."
     },
-    "label": "AEGRYN Blog",
+    "label": "Aegryn Blog",
     "title": "Marktintelligentie.\nVoor iedereen toegankelijk.",
     "desc": "Rapporten, gidsen en analyses om de Europese tech-assetmarkt te begrijpen.",
     "filterAll": "Alle",
@@ -2058,7 +2058,7 @@
     "noArticles": "Nog geen artikelen in deze categorie.",
     "newsletterLabel": "Nieuwsbrief",
     "newsletterTitle": "Mis geen enkele analyse.",
-    "newsletterDesc": "Ontvang AEGRYN-marktrapportages en gidsen rechtstreeks in uw inbox.",
+    "newsletterDesc": "Ontvang Aegryn-marktrapportages en gidsen rechtstreeks in uw inbox.",
     "newsletterCta": "Abonneren",
     "newsletterEmailPlaceholder": "Uw e-mailadres",
     "newsletterSubscribing": "Bezig met abonneren...",
@@ -2066,15 +2066,15 @@
     "newsletterError": "Er is een fout opgetreden. Probeer het opnieuw.",
     "bodyComingSoon": "Volledige inhoud binnenkort beschikbaar.",
     "ctaTeaser": "Klaar om uw actief in te dienen of de catalogus te raadplegen?",
-    "aiEditorialNotice": "Dit artikel is geschreven met behulp van kunstmatige intelligentie en beoordeeld onder de redactionele verantwoordelijkheid van AEGRYN. Overeenkomstig artikel 50 van de EU AI Act nemen wij de redactionele verantwoordelijkheid voor deze inhoud op ons."
+    "aiEditorialNotice": "Dit artikel is geschreven met behulp van kunstmatige intelligentie en beoordeeld onder de redactionele verantwoordelijkheid van Aegryn. Overeenkomstig artikel 50 van de EU AI Act nemen wij de redactionele verantwoordelijkheid voor deze inhoud op ons."
   },
   "grade": {
     "meta": {
-      "title": "AEGRYN Grade-systeem — Tech-assetcertificering",
-      "desc": "Het AEGRYN Grade-protocol certificeert elk tech-asset objectief op 4 dimensies."
+      "title": "Aegryn Grade-systeem — Tech-assetcertificering",
+      "desc": "Het Aegryn Grade-protocol certificeert elk tech-asset objectief op 4 dimensies."
     },
     "index": {
-      "label": "AEGRYN Grade-systeem",
+      "label": "Aegryn Grade-systeem",
       "title": "Objectieve waarheid\nover elk tech-asset.",
       "desc": "Geen schatting. Geen gevoel. Een rigoureus 4-dimensie-beoordelingsprotocol.",
       "ctaSubmit": "Indienen voor certificering",
@@ -2164,22 +2164,22 @@
         {
           "num": "04",
           "title": "Publicatie",
-          "desc": "De grade wordt gepubliceerd in de AEGRYN-catalogus en geversioneerd in het officiële register."
+          "desc": "De grade wordt gepubliceerd in de Aegryn-catalogus en geversioneerd in het officiële register."
         }
       ]
     },
     "submit": {
       "label": "Asset indienen",
       "title": "Ontvang de grade die\nwaarde geeft aan uw asset.",
-      "desc": "De AEGRYN-certificering is het paspoort van uw asset naar institutionele kopers.",
+      "desc": "De Aegryn-certificering is het paspoort van uw asset naar institutionele kopers.",
       "cta": "Indiening starten"
     },
     "methodology": {
       "label": "Methodologie",
       "title": "Een reproduceerbaar protocol.\nGeen subjectieve mening.",
-      "desc": "De AEGRYN Grade-methodologie is gedocumenteerd, geversioneerd en geauditeerd.",
+      "desc": "De Aegryn Grade-methodologie is gedocumenteerd, geversioneerd en geauditeerd.",
       "versionLabel": "Protocolversie",
-      "version": "AEGRYN Grade 2026",
+      "version": "Aegryn Grade 2026",
       "principlesLabel": "Grondbeginselen",
       "principles": [
         {
@@ -2233,10 +2233,10 @@
   "auction": {
     "meta": {
       "title": "Veiling — Gecertificeerde tech-assettransacties",
-      "desc": "AEGRYN-sessies: gecertificeerde tech-assets kopen of verkopen."
+      "desc": "Aegryn-sessies: gecertificeerde tech-assets kopen of verkopen."
     },
     "index": {
-      "label": "AEGRYN Veilingsessies",
+      "label": "Aegryn Veilingsessies",
       "title": "De Europese marktplaats voor\ngecertificeerde tech-assets.",
       "desc": "Geen open biedingen. Private, rigoureuze sessies voor gecertificeerde verkopers en gekwalificeerde kopers.",
       "ctaCatalog": "Catalogus bekijken",
@@ -2247,7 +2247,7 @@
         {
           "num": "01",
           "title": "Certificering",
-          "desc": "Elk gepresenteerd asset heeft een AEGRYN Grade."
+          "desc": "Elk gepresenteerd asset heeft een Aegryn Grade."
         },
         {
           "num": "02",
@@ -2290,7 +2290,7 @@
       "marketCta": "Mijn asset waarderen",
       "segmentLabel": "ONS SEGMENT",
       "segmentTitle": "100K€ — 2,5M€.\nWaar tech-assets echte waarde hebben maar onzichtbaar blijven.",
-      "segmentDesc": "Te groot voor informele doorverkoop. Te klein voor investeringsbanken. AEGRYN structureert transacties die niemand anders certificeert — met de institutionele nauwkeurigheid die dit segment verdient.",
+      "segmentDesc": "Te groot voor informele doorverkoop. Te klein voor investeringsbanken. Aegryn structureert transacties die niemand anders certificeert — met de institutionele nauwkeurigheid die dit segment verdient.",
       "segmentItems": [
         "Assets tussen 100.000€ en 2.500.000€ waardering",
         "B2B SaaS, marktplaatsen, digitaal IP, AI-protocollen",
@@ -2299,9 +2299,9 @@
       ]
     },
     "catalog": {
-      "label": "AEGRYN Catalogus",
+      "label": "Aegryn Catalogus",
       "title": "Nu beschikbare\ngecertificeerde assets.",
-      "desc": "Elk vermeld asset heeft het AEGRYN-certificeringsprotocol doorstaan.",
+      "desc": "Elk vermeld asset heeft het Aegryn-certificeringsprotocol doorstaan.",
       "filterAll": "Alle grades",
       "filterStar": "AEG ★",
       "filterAAA": "AAA",
@@ -2317,7 +2317,7 @@
       "assetAsk": "Verkoopprijs",
       "viewAsset": "Dossier bekijken",
       "confidential": "Vertrouwelijk — NDA vereist",
-      "thirdPartyNote": "Deze assets worden aangeboden door onafhankelijke verkopers. AEGRYN treedt op als gecertificeerd tussenpersoon en transactieorganisator — niet als verkoper.",
+      "thirdPartyNote": "Deze assets worden aangeboden door onafhankelijke verkopers. Aegryn treedt op als gecertificeerd tussenpersoon en transactieorganisator — niet als verkoper.",
       "notifyEmail": "Uw e-mail",
       "notifyEmailPlaceholder": "oprichter@voorbeeld.com",
       "notifyType": "U bent",
@@ -2336,11 +2336,11 @@
     "sell": {
       "label": "Verkoper",
       "title": "Verkoop uw asset\naan de juiste koper.",
-      "desc": "AEGRYN vindt de optimale koper voor uw gecertificeerde asset.",
+      "desc": "Aegryn vindt de optimale koper voor uw gecertificeerde asset.",
       "step1Title": "Indienen",
       "step1Desc": "Vul het indieningsformulier in. Basisinformatie over het asset, kernstatistieken, beschikbare documentatie.",
       "step2Title": "Certificering",
-      "step2Desc": "Ons team beoordeelt uw asset op 4 dimensies. U ontvangt een volledig certificeringsrapport met de AEGRYN Grade.",
+      "step2Desc": "Ons team beoordeelt uw asset op 4 dimensies. U ontvangt een volledig certificeringsrapport met de Aegryn Grade.",
       "step3Title": "Sessievoorbereiding",
       "step3Desc": "U ondertekent de verkoper-AV en stelt uw minimumprijs vast. Uw asset wordt dan toegankelijk voor de gekwalificeerde kopers die voor de sessie zijn ingeschreven.",
       "step4Title": "Transactie",
@@ -2358,7 +2358,7 @@
       "title": "Verwerf een gecertificeerd\ntech-asset.",
       "desc": "Toegang tot geverifieerde opportuniteiten buiten de open markt.",
       "qualifTitle": "Kopersprofiel",
-      "qualifDesc": "AEGRYN-sessies zijn gereserveerd voor gekwalificeerde kopers.",
+      "qualifDesc": "Aegryn-sessies zijn gereserveerd voor gekwalificeerde kopers.",
       "qualifItems": [
         "Institutionele of professionele investeerder",
         "Aangetoonde acquisitie-ervaring",
@@ -2402,7 +2402,7 @@
     },
     "session": {
       "label": "Volgende sessie",
-      "title": "Volgende AEGRYN-sessie",
+      "title": "Volgende Aegryn-sessie",
       "date": "Datum",
       "dateTbd": "Datum nog te bevestigen",
       "format": "Formaat",
@@ -2435,10 +2435,10 @@
     }
   },
   "gradeStrip": {
-    "label": "AEGRYN Grade-systeem",
+    "label": "Aegryn Grade-systeem",
     "title": "Geen cijfer.\nEen certificering.",
-    "desc": "Er is een fundamenteel verschil tussen een cijfer geven en certificeren. AEGRYN certificeert via een onafhankelijk, reproduceerbaar en traceerbaar protocol.",
-    "quote": "Een asset zonder onafhankelijke certificering is een waarde zonder bewijs. Een AEGRYN Grade AAA asset is een gedocumenteerde en traceerbare zekerheid.",
+    "desc": "Er is een fundamenteel verschil tussen een cijfer geven en certificeren. Aegryn certificeert via een onafhankelijk, reproduceerbaar en traceerbaar protocol.",
+    "quote": "Een asset zonder onafhankelijke certificering is een waarde zonder bewijs. Een Aegryn Grade AAA asset is een gedocumenteerde en traceerbare zekerheid.",
     "cta": "Lees de volledige methodologie",
     "grades": [
       {
@@ -2464,14 +2464,14 @@
       {
         "grade": "B",
         "label": "Correct",
-        "desc": "Advies aanbevolen vóór transactie. Niet in aanmerking voor de belangrijkste AEGRYN-sessies."
+        "desc": "Advies aanbevolen vóór transactie. Niet in aanmerking voor de belangrijkste Aegryn-sessies."
       }
     ]
   },
   "auctionNarrative": {
-    "label": "AEGRYN Auction",
+    "label": "Aegryn Auction",
     "title": "Sommige assets verdienen meer\ndan een publieke vermelding.",
-    "desc": "AEGRYN Auction is geen open platform. Het is een vertrouwelijk overdrachtsproces tussen verkopers die onze certificering hebben doorstaan en kopers die hun capaciteit hebben bewezen.\n\nMinder dan 25% van de ingediende assets wordt geaccepteerd. 100% van de kopers is vooraf gekwalificeerd. Elke transactie is volledig gedocumenteerd en beveiligd.",
+    "desc": "Aegryn Auction is geen open platform. Het is een vertrouwelijk overdrachtsproces tussen verkopers die onze certificering hebben doorstaan en kopers die hun capaciteit hebben bewezen.\n\nMinder dan 25% van de ingediende assets wordt geaccepteerd. 100% van de kopers is vooraf gekwalificeerd. Elke transactie is volledig gedocumenteerd en beveiligd.",
     "stat1Val": "< 25%",
     "stat1Label": "Acceptatiegraad ingediende assets",
     "stat2Val": "60 d max",
@@ -2486,14 +2486,14 @@
   "acqStrip": {
     "label": "Acquisitieondersteuning",
     "title": "Uw volgende acquisitie verdient de juiste financiële partner.",
-    "desc": "AEGRYN leent niet. AEGRYN verbindt. Ons netwerk van VC-partners en investeringsfondsen kan de financiering van uw volgende gecertificeerde tech-asset-acquisitie co-financieren of structureren.",
+    "desc": "Aegryn leent niet. Aegryn verbindt. Ons netwerk van VC-partners en investeringsfondsen kan de financiering van uw volgende gecertificeerde tech-asset-acquisitie co-financieren of structureren.",
     "chip1": "VC co-investering",
     "chip2": "Bridge financing",
     "chip3": "Earnout-structuur",
     "cta": "Opties verkennen"
   },
   "discoverStrip": {
-    "label": "AEGRYN Insights",
+    "label": "Aegryn Insights",
     "title": "De Europese tech M&A-markt.\nDoor degenen die het doen.",
     "article1Title": "Stand van de Europese tech M&A-markt — Q2 2026",
     "article1Cat": "Marktrapport",
@@ -2519,7 +2519,7 @@
     }
   },
   "gradeShowcase": {
-    "label": "Het AEGRYN Grade systeem",
+    "label": "Het Aegryn Grade systeem",
     "title": "Een asset zonder grade\nis een asset zonder prijs.",
     "desc": "Ons certificeringsprotocol evalueert elk asset op 4 dimensies: Code, IP & Rechten, Financiën, Beveiliging. Een objectieve, reproduceerbare, betwistbare grade.",
     "cta": "Het grade-systeem begrijpen",
@@ -2575,12 +2575,12 @@
   "acquisitionSupport": {
     "label": "Acquisition Support",
     "title": "Uw volgende acquisitie verdient\nde juiste financiële partner.",
-    "desc": "AEGRYN leent niet. AEGRYN verbindt. Ons netwerk van VC-partners en investeringsfondsen kan uw volgende gecertificeerde tech-asset-acquisitie co-financieren, co-investeren of structureren.",
+    "desc": "Aegryn leent niet. Aegryn verbindt. Ons netwerk van VC-partners en investeringsfondsen kan uw volgende gecertificeerde tech-asset-acquisitie co-financieren, co-investeren of structureren.",
     "cta": "Opties verkennen",
-    "legal": "AEGRYN is geen financiële instelling. Deze dienst verbindt met onafhankelijke externe partners."
+    "legal": "Aegryn is geen financiële instelling. Deze dienst verbindt met onafhankelijke externe partners."
   },
   "discoverSection": {
-    "label": "AEGRYN Insights",
+    "label": "Aegryn Insights",
     "title": "De tech-M&A-markt in Europa.\nDoor degenen die het doen.",
     "cta": "Alle insights bekijken",
     "articles": [
@@ -2605,19 +2605,19 @@
   },
   "alliances": {
     "meta": {
-      "title": "Partners — AEGRYN",
-      "desc": "Certificerings-, distributie- en deal flow-partners. AEGRYN selecteert zijn Allianties met dezelfde strengheid als zijn assets."
+      "title": "Partners — Aegryn",
+      "desc": "Certificerings-, distributie- en deal flow-partners. Aegryn selecteert zijn Allianties met dezelfde strengheid als zijn assets."
     },
     "hero": {
-      "label": "AEGRYN Partnerships",
+      "label": "Aegryn Partnerships",
       "title": "De partners die de grade\nonweerlegbaar maken.",
-      "desc": "AEGRYN certificeert onafhankelijk. Onze partners nemen deel aan distributie, deal flow en transactiestructurering en kunnen op termijn bepaalde rapporten verrijken met een aanvullende kruisreview. Dit ecosysteem maakt ons operationeel."
+      "desc": "Aegryn certificeert onafhankelijk. Onze partners nemen deel aan distributie, deal flow en transactiestructurering en kunnen op termijn bepaalde rapporten verrijken met een aanvullende kruisreview. Dit ecosysteem maakt ons operationeel."
     },
     "types": {
       "certification": {
         "label": "Certificering",
-        "title": "Expertnetwerk AEGRYN",
-        "desc": "Tech-advocatenkantoren, accountants, cybersecuritypartners. Sluit u aan bij de eerste kring van partners die het AEGRYN Grade-protocol zullen verrijken met een kruisreview, naarmate dit systeem wordt ingevoerd.",
+        "title": "Expertnetwerk Aegryn",
+        "desc": "Tech-advocatenkantoren, accountants, cybersecuritypartners. Sluit u aan bij de eerste kring van partners die het Aegryn Grade-protocol zullen verrijken met een kruisreview, naarmate dit systeem wordt ingevoerd.",
         "profiles": "IP & tech-kantoren · Accountants · Cybersecuritypartners",
         "cta": "Certificeringspartner worden"
       },
@@ -2638,7 +2638,7 @@
       "advisory_tech": {
         "label": "Advisory Tech",
         "title": "Gecertificeerde technische experts",
-        "desc": "Partners gemobiliseerd om de robuustheid en certificeerbaarheid van activa te verbeteren vóór of tijdens het AEGRYN-gradeproces.",
+        "desc": "Partners gemobiliseerd om de robuustheid en certificeerbaarheid van activa te verbeteren vóór of tijdens het Aegryn-gradeproces.",
         "profiles": "Cybersecuritybedrijven (PASSI/CREST/OSCP) · Senior freelance CTO's (architectuur, DevSecOps) · Data & AI-experts (MLOps, governance) · Geaccrediteerde externe DPO's (AVG/LPD) · EU AI Act-conformiteitsexperts · Digitale toegankelijkheidsauditors (WCAG)",
         "cta": "Advisory Tech-partner worden"
       },
@@ -2711,15 +2711,15 @@
   },
   "build_service": {
     "meta": {
-      "title": "Digitale asset ontwikkeling - AEGRYN",
-      "desc": "AEGRYN ontwerpt B2B SaaS, AI-applicaties en mobiele apps volgens CIFS-protocolnormen. Een verkoop is mogelijk indien gewenst, mits het asset aan de vereiste gradecriteria voldoet."
+      "title": "Digitale asset ontwikkeling - Aegryn",
+      "desc": "Aegryn ontwerpt B2B SaaS, AI-applicaties en mobiele apps volgens CIFS-protocolnormen. Een verkoop is mogelijk indien gewenst, mits het asset aan de vereiste gradecriteria voldoet."
     },
     "label": "Services - Asset ontwikkeling",
     "title": "Uw digitale asset.\nGebouwd om te blijven.\nGestructureerd om te verkopen.",
-    "desc": "AEGRYN ontwerpt propriëtaire digitale assets - B2B SaaS, verticale AI, mobiele app - volgens CIFS-protocolnormen. U start van nul. U eindigt met een certificeerbaar en onderhoudbaar asset. Een verkoop is een optie, geen verplichting: het hangt af van uw wens en het behaalde grade.",
+    "desc": "Aegryn ontwerpt propriëtaire digitale assets - B2B SaaS, verticale AI, mobiele app - volgens CIFS-protocolnormen. U start van nul. U eindigt met een certificeerbaar en onderhoudbaar asset. Een verkoop is een optie, geen verplichting: het hangt af van uw wens en het behaalde grade.",
     "difference": {
       "label": "Geen bureau. Geen studio.",
-      "title": "Het AEGRYN-verschil.",
+      "title": "Het Aegryn-verschil.",
       "items": [
         {
           "num": "01",
@@ -2729,7 +2729,7 @@
         {
           "num": "02",
           "title": "U blijft eigenaar",
-          "desc": "Geen verwatering. Geen aandeel van AEGRYN. Het asset is 100% van u."
+          "desc": "Geen verwatering. Geen aandeel van Aegryn. Het asset is 100% van u."
         },
         {
           "num": "03",
@@ -2766,7 +2766,7 @@
         {
           "phase": "Vroeg stadium - 6 tot 18 maanden",
           "title": "Vroege overdracht",
-          "desc": "Uw asset heeft een solide architectuur en eerste tractie. AEGRYN structureert de verkoop via Auction of directe vertrouwelijke transactie.",
+          "desc": "Uw asset heeft een solide architectuur en eerste tractie. Aegryn structureert de verkoop via Auction of directe vertrouwelijke transactie.",
           "grade": "Doelgrade: A - ticket 100K tot 500K EUR",
           "cta": "Acquisitiemodellen bekijken",
           "href": "/auction/bid-models"
@@ -2782,7 +2782,7 @@
         {
           "phase": "Behoud",
           "title": "Evolutief en correctief onderhoud",
-          "desc": "U wilt niet verkopen. AEGRYN onderhoudt het asset technisch. De exit blijft open.",
+          "desc": "U wilt niet verkopen. Aegryn onderhoudt het asset technisch. De exit blijft open.",
           "grade": "Maandelijks abonnement of per levering",
           "cta": "Onderhoud bespreken",
           "href": "/contact"
@@ -2816,14 +2816,14 @@
         {
           "num": "05",
           "title": "Certificering (en optionele exit)",
-          "desc": "CIFS-protocol indiening indien gewenst. Officieel grade toegekend als aan de criteria is voldaan. Een transactie via AEGRYN Auction of vertrouwelijk kanaal wordt alleen op uw beslissing ingezet. Het asset kan ook worden behouden met onderhoud."
+          "desc": "CIFS-protocol indiening indien gewenst. Officieel grade toegekend als aan de criteria is voldaan. Een transactie via Aegryn Auction of vertrouwelijk kanaal wordt alleen op uw beslissing ingezet. Het asset kan ook worden behouden met onderhoud."
         }
       ]
     },
     "maintenance": {
       "label": "Onderhoud op aanvraag",
       "title": "Het asset leeft.\nWij onderhouden het.",
-      "desc": "Na de lancering biedt AEGRYN onderhoud op twee niveaus.",
+      "desc": "Na de lancering biedt Aegryn onderhoud op twee niveaus.",
       "corrective": {
         "title": "Correctief onderhoud",
         "desc": "Bugfixes, incidentoplossing, beveiligingsupdates, CVE-beheer, monitoring. SLA in contract.",
@@ -2834,7 +2834,7 @@
         "desc": "Nieuwe functies, refactoring, versie-upgrades, integraties, regelgevingsaanpassing (AVG, EU AI Act, NIS2).",
         "format": "Maandelijks abonnement of per sprint"
       },
-      "note": "AEGRYN-onderhoud garandeert dat het asset zijn grade behoudt of verbetert."
+      "note": "Aegryn-onderhoud garandeert dat het asset zijn grade behoudt of verbetert."
     },
     "fees": {
       "label": "Honoraria",
@@ -2852,12 +2852,12 @@
         },
         {
           "title": "Transactie",
-          "desc": "Als de exit via AEGRYN Auction of vertrouwelijke transactie verloopt, geldt de standaardcommissie.",
+          "desc": "Als de exit via Aegryn Auction of vertrouwelijke transactie verloopt, geldt de standaardcommissie.",
           "format": "Succesvergoeding - voorwaarden in CGV",
           "href": "/terms/cgv"
         }
       ],
-      "coInvestNote": "AEGRYN kan optreden als minderheids-co-investeerder. Per geval beoordeeld."
+      "coInvestNote": "Aegryn kan optreden als minderheids-co-investeerder. Per geval beoordeeld."
     },
     "cta": {
       "title": "Een project in gedachten?",
@@ -2870,13 +2870,13 @@
   },
   "gradeSubmit": {
     "meta": {
-      "title": "Asset indienen — AEGRYN Certificering",
-      "desc": "Start het AEGRYN-certificeringsproces. Vertrouwelijk voorindiening formulier. Geen verplichting voor overeenstemming over de methodologie."
+      "title": "Asset indienen — Aegryn Certificering",
+      "desc": "Start het Aegryn-certificeringsproces. Vertrouwelijk voorindiening formulier. Geen verplichting voor overeenstemming over de methodologie."
     },
     "hero": {
-      "label": "AEGRYN GRADE — CERTIFICERING",
+      "label": "Aegryn GRADE — CERTIFICERING",
       "title": "Het certificerings-\nproces starten.",
-      "desc": "Elk AEGRYN-certificeringsproces is uniek omdat elk asset dat is. Dit voorindiening formulier stelt ons in staat uw asset te kwalificeren en een op maat gemaakt stappenplan voor te stellen. Geen verplichting voor overeenstemming over de methodologie."
+      "desc": "Elk Aegryn-certificeringsproces is uniek omdat elk asset dat is. Dit voorindiening formulier stelt ons in staat uw asset te kwalificeren en een op maat gemaakt stappenplan voor te stellen. Geen verplichting voor overeenstemming over de methodologie."
     },
     "form": {
       "title": "Uw asset",
@@ -2940,16 +2940,16 @@
       "evalTypeTitle": "Welk evaluatieniveau wenst u?",
       "evalTypeFull": {
         "label": "Auction-certificering",
-        "desc": "Alleen succesfee. Volledig proces via onafhankelijk AEGRYN-protocol (4 dimensies C/I/F/S), inbegrepen als de transactie via AEGRYN Auction plaatsvindt.",
+        "desc": "Alleen succesfee. Volledig proces via onafhankelijk Aegryn-protocol (4 dimensies C/I/F/S), inbegrepen als de transactie via Aegryn Auction plaatsvindt.",
         "price": "Gratis"
       },
       "evalTypeReview": {
-        "label": "AEGRYN Review",
-        "desc": "Schriftelijk advies van een AEGRYN-analist binnen 15 werkdagen. Geen externe partnerreview. Niet publiceerbaar in de catalogus, zonder externe validatie.",
+        "label": "Aegryn Review",
+        "desc": "Schriftelijk advies van een Aegryn-analist binnen 15 werkdagen. Geen externe partnerreview. Niet publiceerbaar in de catalogus, zonder externe validatie.",
         "price": "2.000 CHF excl. btw"
       },
       "evalTypeReviewPlus": {
-        "label": "AEGRYN Review+",
+        "label": "Aegryn Review+",
         "desc": "Schriftelijk advies + review door een externe partner (juridisch kantoor of accountant) op verzoek binnen 20 werkdagen. Kruisverwijzingen met onze Alliance-partners.",
         "price": "5.000 CHF excl. btw"
       },
@@ -2957,7 +2957,7 @@
       "partnerSelectLabel": "Te betrekken partner",
       "partnerLegal": "Juridisch kantoor",
       "partnerAccounting": "Accountant",
-      "analysisDataTitle": "Gegevens voor analyse (AEGRYN Grading System)",
+      "analysisDataTitle": "Gegevens voor analyse (Aegryn Grading System)",
       "analysisDataDesc": "Deze informatie versnelt onze interne analyse en marktbenchmark van uw asset. Optioneel maar aanbevolen.",
       "sector": "Sector",
       "sectorPlaceholder": "bijv. LegalTech, FinTech, HR & Payroll...",
@@ -2998,12 +2998,12 @@
   },
   "bidModels": {
     "meta": {
-      "title": "Acquisitiemodellen — AEGRYN Auction",
-      "desc": "Club Deal, Corporate, Fonds, Equity Stake, de 4 AEGRYN-acquisitiemodellen met de Tech Transactiebelofte in 5 stappen."
+      "title": "Acquisitiemodellen — Aegryn Auction",
+      "desc": "Club Deal, Corporate, Fonds, Equity Stake, de 4 Aegryn-acquisitiemodellen met de Tech Transactiebelofte in 5 stappen."
     },
     "hero": {
       "back": "← Auction",
-      "label": "AEGRYN AUCTION",
+      "label": "Aegryn AUCTION",
       "title": "Kies uw acquisitiemodel",
       "desc": "Vier kopersprofielen, één vereiste: dealskwaliteit. Elk model is afgestemd op uw structuur en doelstellingen."
     },
@@ -3032,7 +3032,7 @@
         "badge": "KMO · Holdings · Corporates · Groepen",
         "label": "MODEL 02",
         "title": "Corporate",
-        "summary": "Een rechtspersoon verwerft het actief rechtstreeks op zijn balans. Twee entiteiten kunnen co-verwerven via een bij AEGRYN gedeclareerde JV. Asset deal of share deal afhankelijk van de gekozen structuur.",
+        "summary": "Een rechtspersoon verwerft het actief rechtstreeks op zijn balans. Twee entiteiten kunnen co-verwerven via een bij Aegryn gedeclareerde JV. Asset deal of share deal afhankelijk van de gekozen structuur.",
         "conditions": [
           "Aanbevolen minimumticket: € 250.000",
           "Volledig B2B KYC — KvK < 3 maanden, statuten, UBO ≥ 25%, identiteitsbewijs bestuurder",
@@ -3057,7 +3057,7 @@
           "Institutioneel KYC — regelgevende goedkeuring indien van toepassing (FINMA, AMF, FCA)",
           "IC-venster: vertrouwelijke reservering 5–10 werkdagen zonder escrow",
           "SPV mogelijk voor directe LP-co-investering",
-          "Managementpresentatie via AEGRYN, nooit rechtstreeks verkoper/koper"
+          "Managementpresentatie via Aegryn, nooit rechtstreeks verkoper/koper"
         ],
         "structures": [
           "Platformacquisitie (eerste actief in een PE roll-up)",
@@ -3078,7 +3078,7 @@
           "KYC op basis van profiel (vereenvoudigd voor gekwalificeerde particulieren, volledig voor entiteiten)",
           "Geen escrow — verbintenis via SHA gezamenlijk opgesteld door de adviseurs van beide partijen",
           "Directe verbintenis: SHA-ondertekening + eventueel warrant of BSA",
-          "AEGRYN ontvangt een bemiddelingsvergoeding op de overeengekomen waardering"
+          "Aegryn ontvangt een bemiddelingsvergoeding op de overeengekomen waardering"
         ],
         "structures": [
           "Advisory equity (X% in ruil voor advies/expertise gedurende N maanden)",
@@ -3107,17 +3107,17 @@
         {
           "num": "03",
           "title": "10% Escrow",
-          "desc": "Gestort op een bankrekening van derden binnen 5 werkdagen. AEGRYN heeft nooit toegang tot de gelden. Partnerbank treedt op als bewaarder."
+          "desc": "Gestort op een bankrekening van derden binnen 5 werkdagen. Aegryn heeft nooit toegang tot de gelden. Partnerbank treedt op als bewaarder."
         },
         {
           "num": "04",
           "title": "Due Diligence — 30 dagen standaard",
-          "desc": "Volledige toegang tot de dataroom onder NDA. Q&A uitsluitend via AEGRYN (nooit rechtstreeks verkoper/koper). Verlenging mogelijk in onderling overleg (max. +30 dagen)."
+          "desc": "Volledige toegang tot de dataroom onder NDA. Q&A uitsluitend via Aegryn (nooit rechtstreeks verkoper/koper). Verlenging mogelijk in onderling overleg (max. +30 dagen)."
         },
         {
           "num": "05",
           "title": "Signing & Closing",
-          "desc": "KRYV Protocol certificeert de exacte staat van de code. Betaling van het saldo (resterende 90%). Overdracht van het actief + uitgifte van het AEGRYN Transactiecertificaat."
+          "desc": "KRYV Protocol certificeert de exacte staat van de code. Betaling van het saldo (resterende 90%). Overdracht van het actief + uitgifte van het Aegryn Transactiecertificaat."
         }
       ],
       "protection": {
@@ -3145,11 +3145,11 @@
   },
   "assessmentDays": {
     "meta": {
-      "title": "AEGRYN Assessment Days — Gratis expertise voor uw tech-asset",
+      "title": "Aegryn Assessment Days — Gratis expertise voor uw tech-asset",
       "desc": "Gratis expertsessies op afspraak. Presenteer uw tech-asset in 45 minuten. Grade-schatting en waarderingsbereik. Geen verplichting."
     },
     "hero": {
-      "label": "AEGRYN ASSESSMENT DAYS",
+      "label": "Aegryn ASSESSMENT DAYS",
       "title": "45 minuten om te weten\nwat uw asset waard is.",
       "desc": "Op afspraak, in 4 Europese steden, voeren onze advisors een vertrouwelijke pre-screening uit. Gratis. Zonder verplichting."
     },
@@ -3163,7 +3163,7 @@
         },
         {
           "title": "Waarderingsbereik",
-          "desc": "Schatting op basis van ARR-multiples uit AEGRYN-transacties en marktdata 2026."
+          "desc": "Schatting op basis van ARR-multiples uit Aegryn-transacties en marktdata 2026."
         },
         {
           "title": "Concrete aanbevelingen",
@@ -3270,7 +3270,7 @@
         },
         {
           "q": "Is de pre-screening vertrouwelijk?",
-          "a": "Volledig. Gedekt door een AEGRYN-kader NDA."
+          "a": "Volledig. Gedekt door een Aegryn-kader NDA."
         },
         {
           "q": "Wat gebeurt er na de Assessment Day?",
@@ -3281,13 +3281,13 @@
   },
   "valuation": {
     "meta": {
-      "title": "Schat de waarde van uw tech-asset — AEGRYN Valuation",
-      "desc": "B2B SaaS-waarderingscalculator op basis van het AEGRYN-gradeprotocol. 4 dimensies, score op 100, geschat grade en waarderingsbereik. Gratis. Vertrouwelijk."
+      "title": "Schat de waarde van uw tech-asset — Aegryn Valuation",
+      "desc": "B2B SaaS-waarderingscalculator op basis van het Aegryn-gradeprotocol. 4 dimensies, score op 100, geschat grade en waarderingsbereik. Gratis. Vertrouwelijk."
     },
     "hero": {
-      "label": "AEGRYN VALUATION",
+      "label": "Aegryn VALUATION",
       "title": "Schat de waarde\nvan uw asset.",
-      "desc": "Onze calculator simuleert het AEGRYN-gradeprotocol over 4 dimensies, Financiën, Code, IP, Beveiliging, en geeft een waarderingsbereik op basis van de marktmultiples 2026. Gratis. Vertrouwelijk. Geen verplichting."
+      "desc": "Onze calculator simuleert het Aegryn-gradeprotocol over 4 dimensies, Financiën, Code, IP, Beveiliging, en geeft een waarderingsbereik op basis van de marktmultiples 2026. Gratis. Vertrouwelijk. Geen verplichting."
     },
     "progress": {
       "step": "Stap",
@@ -3449,9 +3449,9 @@
       "preRevenueTitle": "Pre-revenue asset",
       "preRevenueDesc": "Zonder ARR is de waardering gebaseerd op de gecombineerde IP- en Code-score.",
       "preRevenueRange": "Indicatief bereik",
-      "preRevenueNote": "Voor een pre-revenue asset is AEGRYN Grade C de volgende logische stap.",
+      "preRevenueNote": "Voor een pre-revenue asset is Aegryn Grade C de volgende logische stap.",
       "ngNote": "Uw score ligt onder de gradeerbaarheidsdrempel. Een gratis Assessment Day identificeert de 3 prioritaire acties.",
-      "disclaimer": "Deze schatting wordt gegenereerd door een algoritme op basis van gegevens die u opgeeft zonder verificatie. Het vormt geen officieel AEGRYN Grade. Het AEGRYN Grade wordt alleen toegekend na een echte audit door gecertificeerde AEGRYN-analisten.",
+      "disclaimer": "Deze schatting wordt gegenereerd door een algoritme op basis van gegevens die u opgeeft zonder verificatie. Het vormt geen officieel Aegryn Grade. Het Aegryn Grade wordt alleen toegekend na een echte audit door gecertificeerde Aegryn-analisten.",
       "ctaGrade": "Mijn officiële certificering starten",
       "ctaAssessment": "Gratis Assessment Day boeken",
       "emailTitle": "Mijn gedetailleerd rapport per e-mail ontvangen.",
@@ -3491,13 +3491,13 @@
   },
   "auctionSubmit": {
     "meta": {
-      "title": "Asset indienen — AEGRYN Auction Switzerland",
-      "desc": "Dien uw tech-asset in voor een AEGRYN Auction Switzerland sessie. Zwitsers recht. Internationaal open."
+      "title": "Asset indienen — Aegryn Auction Switzerland",
+      "desc": "Dien uw tech-asset in voor een Aegryn Auction Switzerland sessie. Zwitsers recht. Internationaal open."
     },
     "hero": {
-      "label": "AEGRYN Auction Switzerland",
+      "label": "Aegryn Auction Switzerland",
       "title": "Een asset indienen\nvoor verkoop.",
-      "desc": "Elke verkoop is exclusief via AEGRYN Auction Switzerland. Zwitsers recht is van toepassing. Verkopers van over de hele wereld zijn welkom."
+      "desc": "Elke verkoop is exclusief via Aegryn Auction Switzerland. Zwitsers recht is van toepassing. Verkopers van over de hele wereld zijn welkom."
     },
     "swissNote": "Zwitsers recht is van toepassing op elke transactie — ongeacht de herkomst van de verkoper of het asset.",
     "steps": [
@@ -3509,7 +3509,7 @@
       {
         "num": "02",
         "title": "Certificering",
-        "desc": "Ons team certificeert uw asset (AEGRYN Grade)."
+        "desc": "Ons team certificeert uw asset (Aegryn Grade)."
       },
       {
         "num": "03",
@@ -3593,7 +3593,7 @@
       "countryPlaceholder": "bijv. Frankrijk, Zwitserland, Duitsland",
       "company": "Bedrijf / Structuur (optioneel)",
       "message": "Aanvullend bericht (optioneel)",
-      "swissLawLabel": "Ik erken dat het Zwitserse recht van toepassing is op elke transactie via AEGRYN Auction Switzerland.",
+      "swissLawLabel": "Ik erken dat het Zwitserse recht van toepassing is op elke transactie via Aegryn Auction Switzerland.",
       "submit": "Mijn dossier indienen",
       "submitting": "Verzenden…",
       "successTitle": "Dossier ontvangen.",
@@ -3625,17 +3625,17 @@
   },
   "aiUsage": {
     "meta": {
-      "title": "AI-gebruiksbeleid — AEGRYN",
-      "desc": "Transparantie over het gebruik van kunstmatige intelligentie in AEGRYN-inhoud. Naleving van de EU AI Act artikel 50."
+      "title": "AI-gebruiksbeleid — Aegryn",
+      "desc": "Transparantie over het gebruik van kunstmatige intelligentie in Aegryn-inhoud. Naleving van de EU AI Act artikel 50."
     },
     "label": "Beleid voor het gebruik van kunstmatige intelligentie",
     "version": "Van kracht vanaf 2 augustus 2026 — EU AI Act art. 50",
     "s1Title": "1. Regelgevend kader",
-    "s1Body": "Artikel 50 van de Europese verordening inzake kunstmatige intelligentie (EU AI Act, Verordening EU 2024/1689) is van toepassing sinds 2 augustus 2026. AEGRYN, als deployer van AI-systemen die inhoud genereren, verbindt zich ertoe de daaruit voortvloeiende transparantieverplichtingen na te leven.",
-    "s2Title": "2. Toepassingsgebied van AI-gebruik bij AEGRYN",
-    "s2Body": "AEGRYN maakt gebruik van generatieve kunstmatige-intelligentiesystemen om de redactie van redactionele inhoud (blogartikelen, marktrapporten, sectoranalyses) te ondersteunen. Deze systemen worden niet gebruikt om autonoom inhoud van openbaar belang te genereren — elk stuk inhoud wordt vóór publicatie door een mens beoordeeld.",
+    "s1Body": "Artikel 50 van de Europese verordening inzake kunstmatige intelligentie (EU AI Act, Verordening EU 2024/1689) is van toepassing sinds 2 augustus 2026. Aegryn, als deployer van AI-systemen die inhoud genereren, verbindt zich ertoe de daaruit voortvloeiende transparantieverplichtingen na te leven.",
+    "s2Title": "2. Toepassingsgebied van AI-gebruik bij Aegryn",
+    "s2Body": "Aegryn maakt gebruik van generatieve kunstmatige-intelligentiesystemen om de redactie van redactionele inhoud (blogartikelen, marktrapporten, sectoranalyses) te ondersteunen. Deze systemen worden niet gebruikt om autonoom inhoud van openbaar belang te genereren — elk stuk inhoud wordt vóór publicatie door een mens beoordeeld.",
     "s3Title": "3. Redactionele verantwoordelijkheid",
-    "s3Body": "Overeenkomstig de uitzondering voorzien in artikel 50, lid 4, van de EU AI Act, wordt alle AI-ondersteunde inhoud gepubliceerd op aegryn.com onderworpen aan menselijke beoordeling en redactioneel toezicht. AEGRYN neemt de volledige redactionele verantwoordelijkheid voor deze publicaties op zich.",
+    "s3Body": "Overeenkomstig de uitzondering voorzien in artikel 50, lid 4, van de EU AI Act, wordt alle AI-ondersteunde inhoud gepubliceerd op aegryn.com onderworpen aan menselijke beoordeling en redactioneel toezicht. Aegryn neemt de volledige redactionele verantwoordelijkheid voor deze publicaties op zich.",
     "s4Title": "4. Wat wij doen en niet doen",
     "s4Do": "Wij beoordelen systematisch alle AI-ondersteunde inhoud vóór publicatie. Wij voegen een redactionele vermelding toe aan artikelen die met AI-assistentie zijn geschreven. Wij documenteren intern ons beoordelingsproces.",
     "s4Dont": "Wij publiceren geen deepfakes (door AI gegenereerde afbeeldingen, audio of video's die echte personen afbeelden). Wij publiceren geen niet-beoordeelde inhoud van openbaar informationeel belang. Wij delegeren onze redactionele verantwoordelijkheid niet aan een AI-systeem.",
@@ -3644,91 +3644,91 @@
   },
   "termsUse": {
     "meta": {
-      "title": "Gebruiksvoorwaarden — AEGRYN",
+      "title": "Gebruiksvoorwaarden — Aegryn",
       "desc": "Voorwaarden voor toegang tot en gebruik van de website aegryn.com."
     },
     "label": "Gebruiksvoorwaarden",
     "version": "Versie: juli 2026",
-    "intro": "Deze Gebruiksvoorwaarden regelen de toegang tot en het gebruik van de AEGRYN-website op aegryn.com en alle bijbehorende websites. Door de website te bezoeken, aanvaardt u deze voorwaarden onvoorwaardelijk. AEGRYN behoudt zich het recht voor deze op elk moment te wijzigen.",
+    "intro": "Deze Gebruiksvoorwaarden regelen de toegang tot en het gebruik van de Aegryn-website op aegryn.com en alle bijbehorende websites. Door de website te bezoeken, aanvaardt u deze voorwaarden onvoorwaardelijk. Aegryn behoudt zich het recht voor deze op elk moment te wijzigen.",
     "s1Title": "Website-inhoud",
-    "s1": "De website en al haar inhoud (teksten, grafische elementen, afbeeldingen, gegevens, code, scripts, methodologieën, beoordelingssystemen) zijn beschermd door intellectuele eigendomsrechten die van toepassing zijn in Zwitserland en de Europese Unie. Deze inhoud is uitsluitend eigendom van AEGRYN of haar partners. Elke reproductie, wijziging, verspreiding of commercieel gebruik zonder voorafgaande schriftelijke toestemming is strikt verboden. Het gebruik van bots, scrapers of geautomatiseerde scripts voor gegevensextractie is verboden.",
+    "s1": "De website en al haar inhoud (teksten, grafische elementen, afbeeldingen, gegevens, code, scripts, methodologieën, beoordelingssystemen) zijn beschermd door intellectuele eigendomsrechten die van toepassing zijn in Zwitserland en de Europese Unie. Deze inhoud is uitsluitend eigendom van Aegryn of haar partners. Elke reproductie, wijziging, verspreiding of commercieel gebruik zonder voorafgaande schriftelijke toestemming is strikt verboden. Het gebruik van bots, scrapers of geautomatiseerde scripts voor gegevensextractie is verboden.",
     "s2Title": "Toegestaan gebruik",
-    "s2": "U mag de website raadplegen voor legitieme persoonlijke en professionele doeleinden. Elk gebruik voor frauduleuze doeleinden of in strijd met de openbare orde is verboden. AEGRYN behoudt zich het recht voor de toegang van elke gebruiker die deze voorwaarden schendt, op te schorten of te verwijderen.",
+    "s2": "U mag de website raadplegen voor legitieme persoonlijke en professionele doeleinden. Elk gebruik voor frauduleuze doeleinden of in strijd met de openbare orde is verboden. Aegryn behoudt zich het recht voor de toegang van elke gebruiker die deze voorwaarden schendt, op te schorten of te verwijderen.",
     "s3Title": "Registratie en gebruikersaccounts",
-    "s3": "De toegang tot de AEGRYN-klantenomgeving is voorbehouden aan gekwalificeerde leden die vooraf door AEGRYN zijn geautoriseerd. U verbindt zich ertoe nauwkeurige informatie te verstrekken en up-to-date te houden. U bent verantwoordelijk voor de vertrouwelijkheid van uw inloggegevens.",
+    "s3": "De toegang tot de Aegryn-klantenomgeving is voorbehouden aan gekwalificeerde leden die vooraf door Aegryn zijn geautoriseerd. U verbindt zich ertoe nauwkeurige informatie te verstrekken en up-to-date te houden. U bent verantwoordelijk voor de vertrouwelijkheid van uw inloggegevens.",
     "s4Title": "Juistheid van informatie",
     "s4": "De op de website gepubliceerde informatie heeft slechts indicatieve waarde. Bij tegenstrijdigheid tussen de website-inhoud en ondertekende contractuele documenten, prevaleren de laatste.",
     "s5Title": "Beperking van aansprakelijkheid",
-    "s5": "AEGRYN garandeert niet dat de website zonder onderbreking of foutloos toegankelijk is. De website wordt aangeboden zoals deze is. AEGRYN wijst alle aansprakelijkheid voor directe of indirecte schade als gevolg van het gebruik van de website af.",
+    "s5": "Aegryn garandeert niet dat de website zonder onderbreking of foutloos toegankelijk is. De website wordt aangeboden zoals deze is. Aegryn wijst alle aansprakelijkheid voor directe of indirecte schade als gevolg van het gebruik van de website af.",
     "s6Title": "Externe links",
-    "s6": "De website kan links bevatten naar websites van derden. AEGRYN is niet verantwoordelijk voor de inhoud van deze websites.",
+    "s6": "De website kan links bevatten naar websites van derden. Aegryn is niet verantwoordelijk voor de inhoud van deze websites.",
     "s7Title": "Intellectueel eigendom",
-    "s7": "Het label AEGRYN Grade, het merk AEGRYN, het monogram AE, het C/I/F/S-protocol en alle methodologieën en rapporten die door AEGRYN zijn geproduceerd, zijn uitsluitend eigendom van AEGRYN. Elk ongeoorloofd gebruik zal worden vervolgd.",
+    "s7": "Het label Aegryn Grade, het merk Aegryn, het monogram AE, het C/I/F/S-protocol en alle methodologieën en rapporten die door Aegryn zijn geproduceerd, zijn uitsluitend eigendom van Aegryn. Elk ongeoorloofd gebruik zal worden vervolgd.",
     "s8Title": "Toepasselijk recht en bevoegde rechter",
-    "s8": "Deze voorwaarden zijn onderworpen aan het Zwitserse recht. Elk geschil valt onder de exclusieve bevoegdheid van de rechtbanken van het kanton waar AEGRYN gevestigd is. Indien een clausule ongeldig is, blijven de overige clausules van toepassing.",
+    "s8": "Deze voorwaarden zijn onderworpen aan het Zwitserse recht. Elk geschil valt onder de exclusieve bevoegdheid van de rechtbanken van het kanton waar Aegryn gevestigd is. Indien een clausule ongeldig is, blijven de overige clausules van toepassing.",
     "ctaCgv": "Algemene voorwaarden bekijken",
     "ctaPrivacy": "Privacybeleid"
   },
   "termsCgv": {
     "meta": {
-      "title": "Algemene Verkoopvoorwaarden — AEGRYN",
-      "desc": "Contractuele voorwaarden voor AEGRYN-certificering, transacties en diensten."
+      "title": "Algemene Verkoopvoorwaarden — Aegryn",
+      "desc": "Contractuele voorwaarden voor Aegryn-certificering, transacties en diensten."
     },
     "label": "Algemene Verkoop- en Servicevoorwaarden",
     "version": "Versie: juli 2026",
     "note": "Dit document vormt de bindende contractuele referentie. De exacte tariefvoorwaarden worden gespecificeerd in het ondertekende mandaat of offerte tussen de partijen.",
     "s1Title": "Definities",
-    "defAegryn": "AEGRYN (formerly BOHA-Group, in Zwitserland geregistreerde vennootschap).",
-    "defAsset": "Elk digitaal goed dat via AEGRYN kan worden gecertificeerd en/of overgedragen: software (SaaS, applicaties), codebases, digitaal intellectueel eigendom, merken gekoppeld aan een digitaal asset, protocollen.",
-    "defGrade": "Officiële certificering van een tech-asset volgens het C/I/F/S-protocol, uitgegeven door gecertificeerde AEGRYN-analisten. Toegekende grades: ★, AAA, AA, A, B.",
-    "defGradeEst": "Niet-gecertificeerde indicatieve opinie van een AEGRYN-analist zonder externe validatie. Nooit afdwingbaar jegens derden. Altijd voorzien van het achtervoegsel (geschat) in alle communicatie.",
+    "defAegryn": "Aegryn (formerly BOHA-Group, in Zwitserland geregistreerde vennootschap).",
+    "defAsset": "Elk digitaal goed dat via Aegryn kan worden gecertificeerd en/of overgedragen: software (SaaS, applicaties), codebases, digitaal intellectueel eigendom, merken gekoppeld aan een digitaal asset, protocollen.",
+    "defGrade": "Officiële certificering van een tech-asset volgens het C/I/F/S-protocol, uitgegeven door gecertificeerde Aegryn-analisten. Toegekende grades: ★, AAA, AA, A, B.",
+    "defGradeEst": "Niet-gecertificeerde indicatieve opinie van een Aegryn-analist zonder externe validatie. Nooit afdwingbaar jegens derden. Altijd voorzien van het achtervoegsel (geschat) in alle communicatie.",
     "defPtt": "Contractueel mechanisme voor de overdracht van een gecertificeerd asset, inclusief een bankgarantie van 10% van de overeengekomen prijs.",
-    "defEscrow": "Bedrag dat door de koper is gestort bij een door AEGRYN aangewezen externe bank. AEGRYN is nooit bewaarder van deze middelen.",
-    "defSeller": "Elke natuurlijke of rechtspersoon die een tech-asset in het AEGRYN-proces indient.",
-    "defBuyer": "Elk gekwalificeerd AEGRYN-lid dat bevoegd is toegang te krijgen tot de catalogus en biedingen in te dienen.",
+    "defEscrow": "Bedrag dat door de koper is gestort bij een door Aegryn aangewezen externe bank. Aegryn is nooit bewaarder van deze middelen.",
+    "defSeller": "Elke natuurlijke of rechtspersoon die een tech-asset in het Aegryn-proces indient.",
+    "defBuyer": "Elk gekwalificeerd Aegryn-lid dat bevoegd is toegang te krijgen tot de catalogus en biedingen in te dienen.",
     "s2Title": "Gedekte diensten",
-    "s2ReviewTitle": "AEGRYN Review",
-    "s2Review": "Schriftelijke opinie van een AEGRYN-analist over een ingediend tech-asset. Doorlooptijd: 15 werkdagen. Zonder externe validatie, niet publiceerbaar in de catalogus. Slechts indicatieve waarde. Volledig aftrekbaar van de certificeringsvergoedingen als het volledige proces binnen 6 maanden wordt gestart.",
-    "s2ReviewPlusTitle": "AEGRYN Review+",
-    "s2ReviewPlus": "Schriftelijke opinie van een AEGRYN-analist aangevuld met de beoordeling van een externe partner. Doorlooptijd: 20 werkdagen. Niet officieel in de zin van de volledige certificering, niet publiceerbaar. Volledig aftrekbaar onder dezelfde voorwaarden.",
+    "s2ReviewTitle": "Aegryn Review",
+    "s2Review": "Schriftelijke opinie van een Aegryn-analist over een ingediend tech-asset. Doorlooptijd: 15 werkdagen. Zonder externe validatie, niet publiceerbaar in de catalogus. Slechts indicatieve waarde. Volledig aftrekbaar van de certificeringsvergoedingen als het volledige proces binnen 6 maanden wordt gestart.",
+    "s2ReviewPlusTitle": "Aegryn Review+",
+    "s2ReviewPlus": "Schriftelijke opinie van een Aegryn-analist aangevuld met de beoordeling van een externe partner. Doorlooptijd: 20 werkdagen. Niet officieel in de zin van de volledige certificering, niet publiceerbaar. Volledig aftrekbaar onder dezelfde voorwaarden.",
     "s2CertTitle": "Auction-certificering",
-    "s2Cert": "Volledig multidimensionaal auditproces over alle 4 C/I/F/S-dimensies. Uitgevoerd door gecertificeerde AEGRYN-analisten volgens het officiële protocol. Officieel AEG-grade toegekend en publiceerbaar in de catalogus. Vergoeding: op basis van succes (commissie bij verkoop).",
-    "s2AdvisoryTitle": "AEGRYN Advisory",
+    "s2Cert": "Volledig multidimensionaal auditproces over alle 4 C/I/F/S-dimensies. Uitgevoerd door gecertificeerde Aegryn-analisten volgens het officiële protocol. Officieel AEG-grade toegekend en publiceerbaar in de catalogus. Vergoeding: op basis van succes (commissie bij verkoop).",
+    "s2AdvisoryTitle": "Aegryn Advisory",
     "s2Advisory": "Strategische en operationele begeleiding van assets voor herstel en herindiening. Vergoeding op offerte.",
     "s3Title": "Indieningsvoorwaarden",
-    "s3": "Alle assets worden ingediend via /grade/submit. De indiening vormt geen contractuele verbintenis. AEGRYN heeft 5 werkdagen om te reageren met een voorafgaande selectie. Minder dan 25% van de ingediende assets wordt geaccepteerd voor het volledige certificeringsproces.",
+    "s3": "Alle assets worden ingediend via /grade/submit. De indiening vormt geen contractuele verbintenis. Aegryn heeft 5 werkdagen om te reageren met een voorafgaande selectie. Minder dan 25% van de ingediende assets wordt geaccepteerd voor het volledige certificeringsproces.",
     "s3ObligTitle": "Verplichtingen van de indiener",
     "s3Oblig": "De verkoper verbindt zich ertoe nauwkeurige en volledige informatie te verstrekken, te garanderen dat hij de nodige rechten heeft om het asset over te dragen, de vertrouwelijkheid van het evaluatieproces te bewaren en het asset tijdens het exclusieve mandaat niet aan derden over te dragen.",
     "s4Title": "De Tech-transactiebelofte (PTT)",
     "s4EiTitle": "Intentieverklaring (IV)",
-    "s4Ei": "Niet-bindend. Binnen 48 uur door AEGRYN aan de verkoper doorgegeven. Geen storting vereist.",
+    "s4Ei": "Niet-bindend. Binnen 48 uur door Aegryn aan de verkoper doorgegeven. Geen storting vereist.",
     "s4ApTitle": "Principe-akkoord (PA)",
     "s4Ap": "Formalisering van de overeengekomen prijs en de transactiestructuur. De ondertekening van het PA schept de verplichting van de koper om de escrow te betalen.",
     "s4EscrowTitle": "Escrow",
-    "s4Escrow": "Bedrag: 10% van de overeengekomen transactieprijs. Betalingstermijn: 5 werkdagen na ondertekening van het PA. Bewaarder: externe bank aangewezen door AEGRYN. Dubbele handtekening vereist voor elke vrijgave.",
+    "s4Escrow": "Bedrag: 10% van de overeengekomen transactieprijs. Betalingstermijn: 5 werkdagen na ondertekening van het PA. Bewaarder: externe bank aangewezen door Aegryn. Dubbele handtekening vereist voor elke vrijgave.",
     "s4RetractTitle": "Herroepingsregels",
-    "s4RetractBuyer": "Herroeping door de koper zonder geldige reden: de escrow wordt toegewezen aan de verkoper, verminderd met de beheercommissie van AEGRYN.",
+    "s4RetractBuyer": "Herroeping door de koper zonder geldige reden: de escrow wordt toegewezen aan de verkoper, verminderd met de beheercommissie van Aegryn.",
     "s4RetractSeller": "Herroeping door de verkoper zonder geldige reden: de escrow wordt volledig terugbetaald aan de koper. De verkoper betaalt bovendien een vergoeding gelijk aan het escrow-bedrag.",
-    "s4RetractSusp": "Niet-vervulde opschortende voorwaarde (gedocumenteerde geldige reden): de escrow wordt volledig terugbetaald aan de koper. De reeds betaalde auditcommissie blijft bij AEGRYN.",
+    "s4RetractSusp": "Niet-vervulde opschortende voorwaarde (gedocumenteerde geldige reden): de escrow wordt volledig terugbetaald aan de koper. De reeds betaalde auditcommissie blijft bij Aegryn.",
     "s4DdTitle": "Due Diligence (DD)",
     "s4Dd": "Standaardduur: 30 kalenderdagen vanaf de bevestiging van de escrow. De koper krijgt toegang tot de volledige data room onder NDA. Verlenging mogelijk bij wederzijds schriftelijk akkoord (maximum 30 extra dagen).",
     "s4SigningTitle": "Ondertekening en afsluiting",
-    "s4Signing": "Op de datum van ondertekening: de exacte staat van de codebase wordt gedocumenteerd en geversioneerd. Indien van toepassing, wordt de overdracht gedocumenteerd en geversioneerd in het AEGRYN-register. Het saldo (90%) wordt door de koper betaald. De bank geeft de escrow vrij. AEGRYN trekt zijn commissie af en betaalt het nettosaldo aan de verkoper. AEGRYN geeft het officiële Transactiecertificaat af.",
+    "s4Signing": "Op de datum van ondertekening: de exacte staat van de codebase wordt gedocumenteerd en geversioneerd. Indien van toepassing, wordt de overdracht gedocumenteerd en geversioneerd in het Aegryn-register. Het saldo (90%) wordt door de koper betaald. De bank geeft de escrow vrij. Aegryn trekt zijn commissie af en betaalt het nettosaldo aan de verkoper. Aegryn geeft het officiële Transactiecertificaat af.",
     "s5Title": "Aansprakelijkheid",
-    "s5": "AEGRYN handelt uitsluitend als tussenpersoon en procesoperator. AEGRYN garandeert noch de uitkomst van een transactie, noch de toekomstige waarde van een asset, noch de prestaties na overdracht. De aansprakelijkheid van AEGRYN is beperkt tot de terugbetaling van de ontvangen certificeringsvergoedingen voor het betrokken asset. AEGRYN is in geen geval aansprakelijk voor indirecte schade, gederfde winst of gevolgschade.",
+    "s5": "Aegryn handelt uitsluitend als tussenpersoon en procesoperator. Aegryn garandeert noch de uitkomst van een transactie, noch de toekomstige waarde van een asset, noch de prestaties na overdracht. De aansprakelijkheid van Aegryn is beperkt tot de terugbetaling van de ontvangen certificeringsvergoedingen voor het betrokken asset. Aegryn is in geen geval aansprakelijk voor indirecte schade, gederfde winst of gevolgschade.",
     "s6Title": "Betwisting van de Grade",
-    "s6": "Elke betwisting van de officiële Grade moet schriftelijk aan AEGRYN worden gemeld (contact@boha-group.com) binnen 30 kalenderdagen na afgifte van het rapport. AEGRYN verbindt zich ertoe binnen 15 werkdagen te antwoorden.",
+    "s6": "Elke betwisting van de officiële Grade moet schriftelijk aan Aegryn worden gemeld (contact@boha-group.com) binnen 30 kalenderdagen na afgifte van het rapport. Aegryn verbindt zich ertoe binnen 15 werkdagen te antwoorden.",
     "s7Title": "Vertrouwelijkheid van transacties",
-    "s7": "AEGRYN maakt de identiteit van de verkoper nooit bekend aan de koper, noch de identiteit van de koper aan de verkoper, zonder uitdrukkelijke instemming van beide partijen. Transactiegegevens die in de resultatencatalogus worden gepubliceerd, worden systematisch geanonimiseerd.",
+    "s7": "Aegryn maakt de identiteit van de verkoper nooit bekend aan de koper, noch de identiteit van de koper aan de verkoper, zonder uitdrukkelijke instemming van beide partijen. Transactiegegevens die in de resultatencatalogus worden gepubliceerd, worden systematisch geanonimiseerd.",
     "s8Title": "Witwasbestrijding (AML/CFT)",
-    "s8": "Overeenkomstig de Zwitserse witwasregelgeving en de AMLD6 is AEGRYN verplicht de identiteit van alle klanten te verifiëren (KYC), uiteindelijk begunstigden te identificeren (UBO >= 25%) en verdachte transacties te melden. Bij twijfel kan AEGRYN elk proces opschorten of annuleren zonder nadeel.",
+    "s8": "Overeenkomstig de Zwitserse witwasregelgeving en de AMLD6 is Aegryn verplicht de identiteit van alle klanten te verifiëren (KYC), uiteindelijk begunstigden te identificeren (UBO >= 25%) en verdachte transacties te melden. Bij twijfel kan Aegryn elk proces opschorten of annuleren zonder nadeel.",
     "s9Title": "Toepasselijk recht en geschillenbeslechting",
-    "s9": "Deze voorwaarden zijn onderworpen aan het materiële Zwitserse recht. Elk geschil valt onder de exclusieve bevoegdheid van de rechtbanken van het kanton waar AEGRYN gevestigd is. Partijen zullen trachten elk geschil binnen 30 dagen in der minne te schikken voordat zij de rechter inschakelen.",
+    "s9": "Deze voorwaarden zijn onderworpen aan het materiële Zwitserse recht. Elk geschil valt onder de exclusieve bevoegdheid van de rechtbanken van het kanton waar Aegryn gevestigd is. Partijen zullen trachten elk geschil binnen 30 dagen in der minne te schikken voordat zij de rechter inschakelen.",
     "s10Title": "Data Room en toegang tot due diligence-documenten",
-    "s10": "In het kader van het certificerings- en transactieproces stelt AEGRYN een beveiligde data room ter beschikking waarmee de verkoper de voor de CIFS-analyse vereiste documenten kan uploaden. De toegang tot deze documenten wordt strikt gecontroleerd via een drieniveausysteem: beheerder/verkoper, toegewezen gecertificeerde partner en koper die het Auction-NDA heeft ondertekend.\n\nElke raadpleging wordt gelogd (identiteit, IP-adres, tijdstempel, duur). Technische ontmoedigingsmaatregelen zijn geïmplementeerd (downloadblokkering, detectie van screenshot-pogingen, dynamisch watermerk). Deze maatregelen vormen een serieuze afschrikking en een gelogd bewijs bij geschillen, maar kunnen niet voor 100% voorkomen dat documenten via externe middelen worden vastgelegd.\n\nDe koper erkent dat de in de data room geraadpleegde documenten worden beschermd door deze voorwaarden en het ondertekende Auction-NDA. Hij verbindt zich er contractueel toe geen geraadpleegd document te reproduceren, door te sturen of openbaar te maken, op straffe van schadevergoeding en juridische stappen. De aansprakelijkheid van AEGRYN bij een lek als gevolg van omzeiling van de technische beveiligingen is uitdrukkelijk uitgesloten.",
+    "s10": "In het kader van het certificerings- en transactieproces stelt Aegryn een beveiligde data room ter beschikking waarmee de verkoper de voor de CIFS-analyse vereiste documenten kan uploaden. De toegang tot deze documenten wordt strikt gecontroleerd via een drieniveausysteem: beheerder/verkoper, toegewezen gecertificeerde partner en koper die het Auction-NDA heeft ondertekend.\n\nElke raadpleging wordt gelogd (identiteit, IP-adres, tijdstempel, duur). Technische ontmoedigingsmaatregelen zijn geïmplementeerd (downloadblokkering, detectie van screenshot-pogingen, dynamisch watermerk). Deze maatregelen vormen een serieuze afschrikking en een gelogd bewijs bij geschillen, maar kunnen niet voor 100% voorkomen dat documenten via externe middelen worden vastgelegd.\n\nDe koper erkent dat de in de data room geraadpleegde documenten worden beschermd door deze voorwaarden en het ondertekende Auction-NDA. Hij verbindt zich er contractueel toe geen geraadpleegd document te reproduceren, door te sturen of openbaar te maken, op straffe van schadevergoeding en juridische stappen. De aansprakelijkheid van Aegryn bij een lek als gevolg van omzeiling van de technische beveiligingen is uitdrukkelijk uitgesloten.",
     "s11Title": "Transactiekosten",
-    "s11Charge": "De transactievergoeding van AEGRYN is volledig ten laste van de vervreemder (verkoper). Zij wordt door AEGRYN rechtstreeks ingehouden op de geblokkeerde fondsen op de datum van sluiting, vóór de uitbetaling van het nettosaldo aan de vervreemder. De overnemer (koper) betaalt geen vergoeding aan AEGRYN in verband met de transactie. De toegang tot de catalogus en het acquisitieproces is gratis voor gekwalificeerde kopersleden.",
-    "s11Grid": "De transactievergoeding van AEGRYN wordt berekend op de vaste overnameprijs die effectief is betaald op de datum van sluiting, volgens de volgende degressieve schaal:",
+    "s11Charge": "De transactievergoeding van Aegryn is volledig ten laste van de vervreemder (verkoper). Zij wordt door Aegryn rechtstreeks ingehouden op de geblokkeerde fondsen op de datum van sluiting, vóór de uitbetaling van het nettosaldo aan de vervreemder. De overnemer (koper) betaalt geen vergoeding aan Aegryn in verband met de transactie. De toegang tot de catalogus en het acquisitieproces is gratis voor gekwalificeerde kopersleden.",
+    "s11Grid": "De transactievergoeding van Aegryn wordt berekend op de vaste overnameprijs die effectief is betaald op de datum van sluiting, volgens de volgende degressieve schaal:",
     "s11Tiers": [
       "€ 100.000 – € 250.000: 10% excl. btw",
       "€ 250.001 – € 500.000: 9% excl. btw",
@@ -3739,34 +3739,34 @@
     ],
     "s11Minimum": "Minimumvergoeding: € 25.000 excl. btw, ongeacht het toepasselijke tarief en de definitieve transactieprijs.",
     "s11NonSaleTitle": "Kosten bij niet-realisatie van de transactie",
-    "s11NonSale": "Ingeval een asset die is toegelaten tot het volledige certificeringsproces (Certification Auction) uit de catalogus wordt teruggetrokken of er aan het einde van het AEGRYN-proces geen transactie tot stand komt, zijn aan AEGRYN minimale vaste kosten van CHF 2.000 excl. btw verschuldigd als vergoeding voor het werk dat zijn teams hebben verricht: C/I/F/S-analyse, toekenning van het officiële grade, voorbereiding van het catalogusdossier, communicatie- en marketingactiviteiten, alsmede de productvisibiliteit die is verworven tijdens de aanwezigheid van het asset in de AEGRYN-catalogus. Deze kosten zijn verschuldigd ongeacht de commerciële uitkomst en zijn opeisbaar op de datum van terugtrekking of afsluiting zonder transactie. Ze worden rechtstreeks aan de vervreemder gefactureerd. Deze clausule is niet van toepassing bij een behoorlijk gedocumenteerde niet-vervulde opschortende voorwaarde.",
+    "s11NonSale": "Ingeval een asset die is toegelaten tot het volledige certificeringsproces (Certification Auction) uit de catalogus wordt teruggetrokken of er aan het einde van het Aegryn-proces geen transactie tot stand komt, zijn aan Aegryn minimale vaste kosten van CHF 2.000 excl. btw verschuldigd als vergoeding voor het werk dat zijn teams hebben verricht: C/I/F/S-analyse, toekenning van het officiële grade, voorbereiding van het catalogusdossier, communicatie- en marketingactiviteiten, alsmede de productvisibiliteit die is verworven tijdens de aanwezigheid van het asset in de Aegryn-catalogus. Deze kosten zijn verschuldigd ongeacht de commerciële uitkomst en zijn opeisbaar op de datum van terugtrekking of afsluiting zonder transactie. Ze worden rechtstreeks aan de vervreemder gefactureerd. Deze clausule is niet van toepassing bij een behoorlijk gedocumenteerde niet-vervulde opschortende voorwaarde.",
     "s11Earnout": "Bij een earnout wordt op elke door de vervreemder effectief ontvangen earnout-betaling een bijkomende vergoeding van 5% aangerekend, met als maximum het tarief dat van toepassing is op de schijf van de totale prijs.",
-    "s11Payment": "De vergoeding is verschuldigd op de datum van vrijgave van de geblokkeerde fondsen en wordt door AEGRYN rechtstreeks ingehouden op de geblokkeerde fondsen vóór de uitbetaling van het nettosaldo aan de verkoper. AEGRYN is nooit bewaarder van deze fondsen — de geblokkeerde bedragen worden aangehouden door een door AEGRYN aangewezen derde bank.",
-    "ctaContact": "Contact opnemen met het AEGRYN-team",
+    "s11Payment": "De vergoeding is verschuldigd op de datum van vrijgave van de geblokkeerde fondsen en wordt door Aegryn rechtstreeks ingehouden op de geblokkeerde fondsen vóór de uitbetaling van het nettosaldo aan de verkoper. Aegryn is nooit bewaarder van deze fondsen — de geblokkeerde bedragen worden aangehouden door een door Aegryn aangewezen derde bank.",
+    "ctaContact": "Contact opnemen met het Aegryn-team",
     "ctaTermsUse": "Gebruiksvoorwaarden",
-    "s12Title": "AEGRYN Expertennetwerk — Expertprofiel-abonnement",
-    "s12Intro": "AEGRYN beheert een netwerk van geregistreerde professionals (hierna \"Partners\") die toegankelijk zijn via de sectie Expertennetwerk van het platform. Dit netwerk staat los van het transactieproces en vormt geen bemiddelingsdienst in financiële zin.",
+    "s12Title": "Aegryn Expertennetwerk — Expertprofiel-abonnement",
+    "s12Intro": "Aegryn beheert een netwerk van geregistreerde professionals (hierna \"Partners\") die toegankelijk zijn via de sectie Expertennetwerk van het platform. Dit netwerk staat los van het transactieproces en vormt geen bemiddelingsdienst in financiële zin.",
     "s12AbonTitle": "Expertprofiel-abonnement",
-    "s12Abon": "Toegang tot het netwerk is afhankelijk van het afsluiten van een Expertprofiel-abonnement (CHF 89 excl. btw/maand of geldend jaartarief). Dit abonnement geeft recht op: publicatie en bijwerking van een expertprofiel zichtbaar op aegryn.com/grade/partners, directe toegang tot contactverzoeken van AEGRYN-verkopers of -kopers die behoefte hebben aangegeven aan begeleiding op de in het profiel vermelde expertisegebieden, en deelname aan AEGRYN-netwerkevenementen. Het abonnement heeft geen minimale looptijd en kan op elk moment worden opgezegd met ingang van het einde van de lopende periode.",
+    "s12Abon": "Toegang tot het netwerk is afhankelijk van het afsluiten van een Expertprofiel-abonnement (CHF 89 excl. btw/maand of geldend jaartarief). Dit abonnement geeft recht op: publicatie en bijwerking van een expertprofiel zichtbaar op aegryn.com/grade/partners, directe toegang tot contactverzoeken van Aegryn-verkopers of -kopers die behoefte hebben aangegeven aan begeleiding op de in het profiel vermelde expertisegebieden, en deelname aan Aegryn-netwerkevenementen. Het abonnement heeft geen minimale looptijd en kan op elk moment worden opgezegd met ingang van het einde van de lopende periode.",
     "s12SubTitle": "Aard van de relatie",
-    "s12Sub": "De Partner is een onafhankelijke dienstverlener die op persoonlijke titel of namens zijn organisatie is geregistreerd. Hij stelt zijn honoraria, intervenieningsvoorwaarden en contractuele voorwaarden met zijn klanten vrij vast. AEGRYN ontvangt geen commissie op de honoraria die de Partner aan zijn klanten in rekening brengt en treedt niet op in de commerciële relatie tussen de Partner en zijn klanten. De Partner is in het kader van zijn diensten op geen enkele wijze werknemer, gevolmachtigde of medecontractant van AEGRYN.",
-    "s12NoCommTitle": "Geen commissie aan AEGRYN",
-    "s12NoComm": "Partners betalen AEGRYN geen commissie op hun dienstverleningshonoraria, ongeacht de aard van de uitgevoerde opdracht (advies, due diligence, juridische bijstand, technische expertise, enz.). De enige financiële tegenprestatie verschuldigd aan AEGRYN is het maandelijkse Expertprofiel-abonnement. Deze bepaling is dwingend en kan niet worden gewijzigd door een afzonderlijke overeenkomst.",
+    "s12Sub": "De Partner is een onafhankelijke dienstverlener die op persoonlijke titel of namens zijn organisatie is geregistreerd. Hij stelt zijn honoraria, intervenieningsvoorwaarden en contractuele voorwaarden met zijn klanten vrij vast. Aegryn ontvangt geen commissie op de honoraria die de Partner aan zijn klanten in rekening brengt en treedt niet op in de commerciële relatie tussen de Partner en zijn klanten. De Partner is in het kader van zijn diensten op geen enkele wijze werknemer, gevolmachtigde of medecontractant van Aegryn.",
+    "s12NoCommTitle": "Geen commissie aan Aegryn",
+    "s12NoComm": "Partners betalen Aegryn geen commissie op hun dienstverleningshonoraria, ongeacht de aard van de uitgevoerde opdracht (advies, due diligence, juridische bijstand, technische expertise, enz.). De enige financiële tegenprestatie verschuldigd aan Aegryn is het maandelijkse Expertprofiel-abonnement. Deze bepaling is dwingend en kan niet worden gewijzigd door een afzonderlijke overeenkomst.",
     "s12ReferralTitle": "Referralprogramma",
-    "s12Referral": "Elke Partner met een actief Expertprofiel-abonnement kan andere professionals doorverwijzen. Voor elke doorverwezen professional die een Expertprofiel abonneert, ontvangt de verwijzer een tegoed van één maand op zijn eigen abonnement, gecrediteerd bij de volgende vervaldatum. De doorverwezen professional ontvangt ook één gratis maand afgetrokken van zijn eerste factuur. AEGRYN behoudt zich het recht voor dit programma te wijzigen met een opzegtermijn van 30 dagen.",
-    "defPartner": "Professional geregistreerd in de AEGRYN-directory via een actief Expertprofiel-abonnement. Begeleidt verkopers en/of kopers bij hun transacties (tech-advies, M&A, juridisch, HR, cyber, financiën, W&I-verzekering, enz.). Is geen partij bij de transactie en ontvangt geen commissie van AEGRYN."
+    "s12Referral": "Elke Partner met een actief Expertprofiel-abonnement kan andere professionals doorverwijzen. Voor elke doorverwezen professional die een Expertprofiel abonneert, ontvangt de verwijzer een tegoed van één maand op zijn eigen abonnement, gecrediteerd bij de volgende vervaldatum. De doorverwezen professional ontvangt ook één gratis maand afgetrokken van zijn eerste factuur. Aegryn behoudt zich het recht voor dit programma te wijzigen met een opzegtermijn van 30 dagen.",
+    "defPartner": "Professional geregistreerd in de Aegryn-directory via een actief Expertprofiel-abonnement. Begeleidt verkopers en/of kopers bij hun transacties (tech-advies, M&A, juridisch, HR, cyber, financiën, W&I-verzekering, enz.). Is geen partij bij de transactie en ontvangt geen commissie van Aegryn."
   },
   "privacy": {
     "meta": {
-      "title": "Privacybeleid — AEGRYN",
-      "desc": "Hoe AEGRYN uw persoonsgegevens verzamelt, verwerkt en beschermt. Conform de Zwitserse DSG en de AVG."
+      "title": "Privacybeleid — Aegryn",
+      "desc": "Hoe Aegryn uw persoonsgegevens verzamelt, verwerkt en beschermt. Conform de Zwitserse DSG en de AVG."
     },
     "label": "Privacybeleid",
     "updated": "Laatste update: juli 2026",
     "langSelector": "Beschikbaar in",
-    "intro": "Zoals de meeste bedrijven die actief zijn in de financiële en transactionele sector, verzamelt en verwerkt AEGRYN gegevens over zijn klanten, partners en andere personen die mogelijk geïnteresseerd zijn in zijn diensten. Dit beleid legt uit welk type gegevens we verwerken, waarom we ze verwerken en hoe dit u kan beïnvloeden.",
+    "intro": "Zoals de meeste bedrijven die actief zijn in de financiële en transactionele sector, verzamelt en verwerkt Aegryn gegevens over zijn klanten, partners en andere personen die mogelijk geïnteresseerd zijn in zijn diensten. Dit beleid legt uit welk type gegevens we verwerken, waarom we ze verwerken en hoe dit u kan beïnvloeden.",
     "s1Title": "Wie zijn wij?",
-    "s1": "De verwerkingsverantwoordelijke voor uw gegevens is AEGRYN (formerly BOHA-Group, een in Zwitserland geregistreerde vennootschap). Wanneer u onze diensten gebruikt (certificering, transactie, advisory, catalogus), is de verwerkingsverantwoordelijke AEGRYN (formerly BOHA-Group).",
+    "s1": "De verwerkingsverantwoordelijke voor uw gegevens is Aegryn (formerly BOHA-Group, een in Zwitserland geregistreerde vennootschap). Wanneer u onze diensten gebruikt (certificering, transactie, advisory, catalogus), is de verwerkingsverantwoordelijke Aegryn (formerly BOHA-Group).",
     "s2Title": "Welke gegevens verzamelen we en hoe?",
     "s2DirectTitle": "Gegevens die u ons rechtstreeks verstrekt",
     "s2Direct": "Naam, professionele contactgegevens, informatie over de vertegenwoordigde entiteit, financiële informatie, identiteitsdocumenten, bedrijfsdocumenten, informatie over uiteindelijk begunstigden (UBO). Verzameld bij registratie, indiening van assets, Alliance-kandidatuur, reservering Assessment Day, gebruik van de waarderingscalculator of enige communicatie.",
@@ -3797,7 +3797,7 @@
     "s3Row6Data": "Geanonimiseerde gegevens",
     "s3Row6Basis": "Gerechtvaardigd belang / Algemeen belang",
     "s4Title": "Wie heeft toegang tot uw gegevens?",
-    "s4": "Binnen AEGRYN: teamleden met een legitieme operationele behoefte. Certificeringspartners (onderworpen aan strikte vertrouwelijkheidsverplichtingen). Bewaarbank. Technische dienstverleners: hosting, e-mail, betaling via Stripe. Autoriteiten: wanneer wettelijk vereist. AEGRYN verkoopt uw gegevens nooit aan derden.",
+    "s4": "Binnen Aegryn: teamleden met een legitieme operationele behoefte. Certificeringspartners (onderworpen aan strikte vertrouwelijkheidsverplichtingen). Bewaarbank. Technische dienstverleners: hosting, e-mail, betaling via Stripe. Autoriteiten: wanneer wettelijk vereist. Aegryn verkoopt uw gegevens nooit aan derden.",
     "s5Title": "Internationale overdrachten",
     "s5": "Gegevens worden opgeslagen op servers in de Europese Unie of Zwitserland. Voor overdrachten naar derde landen passen we passende waarborgen toe (goedgekeurde standaardcontractbepalingen).",
     "s6Title": "Bewaring",
@@ -3957,33 +3957,33 @@
   },
   "security": {
     "meta": {
-      "title": "Online veiligheid — AEGRYN",
-      "desc": "Hoe u zichzelf beschermt tegen fraude en identiteitsmisbruik gerelateerd aan AEGRYN."
+      "title": "Online veiligheid — Aegryn",
+      "desc": "Hoe u zichzelf beschermt tegen fraude en identiteitsmisbruik gerelateerd aan Aegryn."
     },
     "label": "Online veiligheid",
     "subtitle": "Hoe u zichzelf beschermt tegen fraude",
     "contactEmail": "contact@boha-group.com",
     "intro": "Wanneer u onze diensten gebruikt, kunnen wij u vragen om informatie over uw identiteit, bankgegevens en bedrijfsdocumenten. Wij gebruiken geavanceerde technologieën om uw gegevens te beschermen en raden u aan ook elementaire beveiligingspraktijken toe te passen.",
     "s1Title": "Merkmisbruik",
-    "s1": "Fraudeurs kunnen nep-websites, socialemediaprofielen of e-mails aanmaken die lijken te komen van AEGRYN, met als doel u ertoe te verleiden frauduleuze betalingen te doen.",
+    "s1": "Fraudeurs kunnen nep-websites, socialemediaprofielen of e-mails aanmaken die lijken te komen van Aegryn, met als doel u ertoe te verleiden frauduleuze betalingen te doen.",
     "s1Official": "Onze officiële e-mails zijn uitsluitend afkomstig van het domein @boha-group.com. Elk betalingsverzoek van een ander domein is frauduleus.",
-    "s1NeverTitle": "AEGRYN vraagt nooit om:",
+    "s1NeverTitle": "Aegryn vraagt nooit om:",
     "s1Never1": "Een storting op een persoonlijk account",
     "s1Never2": "Vooruitbetalingen die niet zijn voorzien in uw ondertekend mandaat",
     "s1Never3": "Uw inloggegevens via e-mail of telefoon",
     "s2Title": "Frauduleuze communicatie herkennen",
     "s2": "Controleer of: het e-mailadres van de afzender exact @boha-group.com is (niet @boha-group.net of een variant), links in e-mails naar aegryn.com verwijzen, en betalingsverzoeken overeenkomen met wat in uw ondertekend mandaat of contract is voorzien.",
     "s2Doubt": "Neem bij twijfel rechtstreeks contact met ons op via contact@boha-group.com — reageer niet op de verdachte e-mail.",
-    "s3Title": "Uw AEGRYN-account beveiligen",
+    "s3Title": "Uw Aegryn-account beveiligen",
     "s3Items": [
-      "Gebruik een sterk en uniek wachtwoord voor uw AEGRYN-account",
+      "Gebruik een sterk en uniek wachtwoord voor uw Aegryn-account",
       "Activeer tweefactorauthenticatie (2FA) indien beschikbaar",
       "Deel nooit uw inloggegevens",
       "Log na elke sessie uit"
     ],
     "s4Title": "Betalingsprocessen — normaal versus frauduleus",
     "s4NormalTitle": "Normaal",
-    "s4Normal1": "Betaling van AEGRYN Review-honoraria (2.000 EUR) of Review+ (5.000 EUR) via Stripe Checkout op aegryn.com",
+    "s4Normal1": "Betaling van Aegryn Review-honoraria (2.000 EUR) of Review+ (5.000 EUR) via Stripe Checkout op aegryn.com",
     "s4Normal2": "Escrow-betaling (10% van de overeengekomen prijs) per bankoverschrijving naar het IBAN van de aangewezen partnerbank met transactiereferentie",
     "s4FraudTitle": "Frauduleus",
     "s4Fraud1": "Elk betalingsverzoek naar een persoonlijk account",
@@ -3996,8 +3996,8 @@
   },
   "faq": {
     "meta": {
-      "title": "FAQ — Veelgestelde vragen — AEGRYN",
-      "desc": "Antwoorden op veelgestelde vragen over AEGRYN Grade-certificering, transacties, sessies en accounts."
+      "title": "FAQ — Veelgestelde vragen — Aegryn",
+      "desc": "Antwoorden op veelgestelde vragen over Aegryn Grade-certificering, transacties, sessies en accounts."
     },
     "label": "Veelgestelde vragen",
     "filterAll": "Alle",
@@ -4014,7 +4014,7 @@
           "sellers",
           "buyers"
         ],
-        "q": "Wie is AEGRYN en wat doet u?",
+        "q": "Wie is Aegryn en wat doet u?",
         "a": "Aegryn is een Zwitserse tech-asset-bouwer die proprietaire digitale ecosystemen ontwerpt en exploiteert. Wij certificeren, verhandelen en begeleiden technologie-assets via een onafhankelijk en reproduceerbaar protocol."
       },
       {
@@ -4032,15 +4032,15 @@
           "sellers"
         ],
         "q": "Wat zijn de certificeringsopties en hun tarieven?",
-        "a": "Er zijn twee paden beschikbaar. Alleen certificering (AEGRYN Review): een officiële Grade verkrijgen zonder catalogusopname, voor 2.000 EUR excl. btw (interne Review) of 5.000 EUR excl. btw (co-ondertekende Review+), aftrekbaar als een Certification Auction binnen 6 maanden wordt gestart. Certification Auction: volledig proces met catalogusopname en AEGRYN-commissie uitsluitend bij transactie. Een publicatiekosten van CHF 2.000 excl. btw gelden, aftrekbaar van de commissie bij verkoop en ingehouden zonder transactie."
+        "a": "Er zijn twee paden beschikbaar. Alleen certificering (Aegryn Review): een officiële Grade verkrijgen zonder catalogusopname, voor 2.000 EUR excl. btw (interne Review) of 5.000 EUR excl. btw (co-ondertekende Review+), aftrekbaar als een Certification Auction binnen 6 maanden wordt gestart. Certification Auction: volledig proces met catalogusopname en Aegryn-commissie uitsluitend bij transactie. Een publicatiekosten van CHF 2.000 excl. btw gelden, aftrekbaar van de commissie bij verkoop en ingehouden zonder transactie."
       },
       {
         "id": "what-grade",
         "cat": [
           "certification"
         ],
-        "q": "Wat is de AEGRYN Grade?",
-        "a": "De AEGRYN Grade is een officiële multidimensionale certificering die 4 dimensies beoordeelt: Code (C), IP en Rechten (I), Financiën (F), Beveiliging (S). Elke dimensie wordt beoordeeld op 25 punten. De totale score bepaalt de officiële Grade: AEG Ster Uitzonderlijk (90 en meer), AAA Uitstekend (75 en meer), AA Zeer goed (60 en meer), A Goed (45 en meer), B Voldoende (30 en meer)."
+        "q": "Wat is de Aegryn Grade?",
+        "a": "De Aegryn Grade is een officiële multidimensionale certificering die 4 dimensies beoordeelt: Code (C), IP en Rechten (I), Financiën (F), Beveiliging (S). Elke dimensie wordt beoordeeld op 25 punten. De totale score bepaalt de officiële Grade: AEG Ster Uitzonderlijk (90 en meer), AAA Uitstekend (75 en meer), AA Zeer goed (60 en meer), A Goed (45 en meer), B Voldoende (30 en meer)."
       },
       {
         "id": "what-assets",
@@ -4048,7 +4048,7 @@
           "sellers"
         ],
         "q": "Welke typen assets kan ik indienen?",
-        "a": "AEGRYN certificeert en verhandelt digitale tech-assets: B2B SaaS, mobiele apps, marktplaatsen, AI-protocollen, digitaal intellectueel eigendom. Aanbevolen minimumticket: 100.000 EUR geschatte waardering."
+        "a": "Aegryn certificeert en verhandelt digitale tech-assets: B2B SaaS, mobiele apps, marktplaatsen, AI-protocollen, digitaal intellectueel eigendom. Aanbevolen minimumticket: 100.000 EUR geschatte waardering."
       },
       {
         "id": "seller-identity",
@@ -4056,7 +4056,7 @@
           "sellers"
         ],
         "q": "Wordt mijn identiteit bekend gemaakt aan kopers?",
-        "a": "AEGRYN beschermt de vertrouwelijkheid van alle partijen gedurende het hele proces. De identiteit van de verkoper is voor geen enkele koper toegankelijk voordat AEGRYN de introductie beslist. Evenmin is de identiteit van de koper beschikbaar tot zijn bod is aanvaard. Alleen het AEGRYN-team heeft toegang tot persoonlijke informatie voor KYC-verificaties en dossierbeheer."
+        "a": "Aegryn beschermt de vertrouwelijkheid van alle partijen gedurende het hele proces. De identiteit van de verkoper is voor geen enkele koper toegankelijk voordat Aegryn de introductie beslist. Evenmin is de identiteit van de koper beschikbaar tot zijn bod is aanvaard. Alleen het Aegryn-team heeft toegang tot persoonlijke informatie voor KYC-verificaties en dossierbeheer."
       },
       {
         "id": "become-buyer",
@@ -4082,7 +4082,7 @@
           "transactions"
         ],
         "q": "Hoe werkt de escrow?",
-        "a": "Na ondertekening van het NDA en aanvaarding van het ingediende bod, stort de koper 10% van de overeengekomen prijs bij een externe partnerinstelling van AEGRYN. AEGRYN houdt deze middelen nooit vast. De herroepingsregels zijn opgenomen in de Algemene Verkoopvoorwaarden."
+        "a": "Na ondertekening van het NDA en aanvaarding van het ingediende bod, stort de koper 10% van de overeengekomen prijs bij een externe partnerinstelling van Aegryn. Aegryn houdt deze middelen nooit vast. De herroepingsregels zijn opgenomen in de Algemene Verkoopvoorwaarden."
       },
       {
         "id": "kryv",
@@ -4090,20 +4090,20 @@
           "certification",
           "transactions"
         ],
-        "q": "Hoe garandeert AEGRYN de traceerbaarheid van een grade?",
-        "a": "Elke grade wordt gedocumenteerd, geversioneerd en opgeslagen in het AEGRYN-register. Elke wijziging aan een gecertificeerde codebase na uitgifte genereert een nieuwe versie. Dit maakt het mogelijk om op elk moment te verifiëren dat de ontvangen code exact overeenkomt met de gecertificeerde code."
+        "q": "Hoe garandeert Aegryn de traceerbaarheid van een grade?",
+        "a": "Elke grade wordt gedocumenteerd, geversioneerd en opgeslagen in het Aegryn-register. Elke wijziging aan een gecertificeerde codebase na uitgifte genereert een nieuwe versie. Dit maakt het mogelijk om op elk moment te verifiëren dat de ontvangen code exact overeenkomt met de gecertificeerde code."
       }
     ]
   },
   "blogPage": {
     "label": "Blog",
     "title": "Inzichten & perspectieven.",
-    "desc": "Onze visie op activacertificering, techtransacties en AEGRYN-normen. Eerste artikelen volgen binnenkort."
+    "desc": "Onze visie op activacertificering, techtransacties en Aegryn-normen. Eerste artikelen volgen binnenkort."
   },
   "clientArea": {
     "login": {
       "title": "Klantenzone",
-      "subtitle": "Toegang voorbehouden aan door AEGRYN gecertificeerde verkopers en kopers.",
+      "subtitle": "Toegang voorbehouden aan door Aegryn gecertificeerde verkopers en kopers.",
       "linkExpired": "Verlopen of ongeldige link. Vraag een nieuwe aan.",
       "emailLabel": "E-mailadres",
       "emailPlaceholder": "u@voorbeeld.com",
@@ -4173,7 +4173,7 @@
     },
     "register": {
       "title": "Account aanmaken",
-      "subtitle": "Word lid van het AEGRYN-klantengebied — gecertificeerde kopers, verkopers en partners.",
+      "subtitle": "Word lid van het Aegryn-klantengebied — gecertificeerde kopers, verkopers en partners.",
       "fullNameLabel": "Volledige naam",
       "fullNamePlaceholder": "Voornaam Achternaam",
       "emailLabel": "E-mailadres",
@@ -4199,7 +4199,7 @@
       "errorGeneric": "Account kon niet worden aangemaakt. Probeer opnieuw.",
       "errorNetwork": "Kan geen verbinding maken met de server. Controleer uw verbinding.",
       "rolePartner": "Lid worden van het partnernetwerk",
-      "rolePartnerDesc": "Zakelijke introducers, expert co-certificeerders — toegang tot de AEGRYN partnerruimte."
+      "rolePartnerDesc": "Zakelijke introducers, expert co-certificeerders — toegang tot de Aegryn partnerruimte."
     }
   },
   "clientSpace": {
@@ -4247,10 +4247,10 @@
     "metricsTitle": "Financiële indicatoren",
     "grossMargin": "Bruto marge",
     "trackRecordMonths": "{n} maanden",
-    "certifiedSummary": "AEGRYN gecertificeerde samenvatting",
+    "certifiedSummary": "Aegryn gecertificeerde samenvatting",
     "existingBidLabel": "U heeft al een aanbod ingediend",
     "submitInterestLabel": "Dien een Interesseverklaring in",
-    "offerReviewTime": "Uw EI zal binnen 48 werkuren door het AEGRYN-team worden beoordeeld.",
+    "offerReviewTime": "Uw EI zal binnen 48 werkuren door het Aegryn-team worden beoordeeld.",
     "offerAmountStatus": "Aanbod van {amount} — status: {status}",
     "confidentialityTitle": "Vertrouwelijkheid",
     "confidentialityText": "De informatie in dit dossier is uitsluitend voorbehouden aan gekwalificeerde kopers die een NDA hebben ondertekend. Elke openbaarmaking is verboden.",
@@ -4262,8 +4262,8 @@
     "descSection": "De sectie \"{section}\" is in opbouw. Ze zal zeer binnenkort beschikbaar zijn."
   },
   "sitemap": {
-    "metaTitle": "Sitemap — AEGRYN",
-    "metaDesc": "Overzicht van alle pagina's op de AEGRYN-website.",
+    "metaTitle": "Sitemap — Aegryn",
+    "metaDesc": "Overzicht van alle pagina's op de Aegryn-website.",
     "title": "Sitemap",
     "subtitle": "Overzicht van alle pagina's en secties van de site.",
     "groupAuction": "Veiling",
@@ -4305,7 +4305,7 @@
   },
   "clientAuction": {
     "eyebrow": "Kopersruimte",
-    "title": "Mijn AEGRYN Auction-dossiers",
+    "title": "Mijn Aegryn Auction-dossiers",
     "subtitle": "Toegangslinks naar volledige dossiers worden nooit per e-mail verstuurd. Ze verschijnen hier pas na validatie van uw kandidatuur.",
     "empty": "Geen lopende toegangsaanvraag.",
     "viewCatalog": "Catalogus bekijken",
@@ -4318,13 +4318,13 @@
     "accessConfidential": "Deze link is strikt persoonlijk en vertrouwelijk.",
     "openDossier": "Dossier openen",
     "accessExpired": "De toegangsperiode is verlopen of de veilingsessie is gesloten.",
-    "pendingReview": "Uw aanvraag wordt onderzocht door het AEGRYN-team (binnen 48 werkuren). De link verschijnt hier bij goedkeuring.",
+    "pendingReview": "Uw aanvraag wordt onderzocht door het Aegryn-team (binnen 48 werkuren). De link verschijnt hier bij goedkeuring.",
     "rejected": "Uw aanvraag werd niet geselecteerd voor deze sessie.",
     "requestedOn": "Aanvraag ingediend op",
     "upcomingTitle": "Ruimtes in opbouw",
     "sectionSeller": "Verkopersruimte",
     "sectionPartner": "Partnerruimte",
-    "disclaimer": "AEGRYN Auction · Genève · Zwitserland — Strikt vertrouwelijke toegang"
+    "disclaimer": "Aegryn Auction · Genève · Zwitserland — Strikt vertrouwelijke toegang"
   },
   "waitlist": {
     "header": {
@@ -4333,7 +4333,7 @@
     },
     "step1": {
       "profileLabel": "Ik ben *",
-      "sourceLabel": "Hoe heeft u van AEGRYN gehoord?",
+      "sourceLabel": "Hoe heeft u van Aegryn gehoord?",
       "next": "Volgende",
       "profiles": {
         "buyer": "Koper",
@@ -4441,8 +4441,8 @@
       "firstNamePlaceholder": "Jan",
       "lastNamePlaceholder": "de Vries",
       "emailPlaceholder": "u@voorbeeld.nl",
-      "gdprConsent": "Ik ga ermee akkoord dat mijn gegevens worden verwerkt door AEGRYN in het kader van mijn verzoek om toegang tot de auction-sessies, conform de AVG / nDSG. *",
-      "marketingConsent": "Ik ga ermee akkoord AEGRYN-communicaties te ontvangen (nieuwe sessies, beschikbare activa).",
+      "gdprConsent": "Ik ga ermee akkoord dat mijn gegevens worden verwerkt door Aegryn in het kader van mijn verzoek om toegang tot de auction-sessies, conform de AVG / nDSG. *",
+      "marketingConsent": "Ik ga ermee akkoord Aegryn-communicaties te ontvangen (nieuwe sessies, beschikbare activa).",
       "back": "Terug",
       "submit": "Versturen",
       "submitting": "Bezig met verzenden..."
@@ -4453,7 +4453,7 @@
       "referral": "Aanbeveling",
       "event": "Evenement / conferentie",
       "partner_intro": "Partnerintroductie",
-      "direct": "Direct AEGRYN-contact"
+      "direct": "Direct Aegryn-contact"
     },
     "sectors": [
       "B2B SaaS",
@@ -4472,7 +4472,7 @@
     "placeholder": "— Selecteer —",
     "done": {
       "title": "Aanvraag geregistreerd",
-      "desc": "Ons team beoordeelt uw profiel en neemt binnen 48 uur contact met u op om uw toegang tot de volgende AEGRYN Auction-sessie te valideren.",
+      "desc": "Ons team beoordeelt uw profiel en neemt binnen 48 uur contact met u op om uw toegang tot de volgende Aegryn Auction-sessie te valideren.",
       "note": "Geen toegang zonder nominatieve uitnodiging."
     },
     "errors": {
@@ -4492,7 +4492,7 @@
     },
     "breadcrumb": "Legal",
     "sectionDpn": "(01)",
-    "h1": "Privacyverklaring – AEGRYN neediu",
+    "h1": "Privacyverklaring – Aegryn neediu",
     "disclaimer": "Disclaimer: Deze privacyverklaring is een door AI gegenereerde vertaling en wordt uitsluitend ter informatie verstrekt. Bij afwijkingen of tegenstrijdigheden prevaleert de Engelse versie.",
     "updated": "Laatste update: 01/03/2026",
     "dpn": {
@@ -4641,7 +4641,7 @@
     },
     "cgu": {
       "sectionLabel": "(02)",
-      "h2": "Gebruiksvoorwaarden – neediu by AEGRYN",
+      "h2": "Gebruiksvoorwaarden – neediu by Aegryn",
       "disclaimer": "Disclaimer: Deze gegevensbeschermingsverklaring is een door AI gegenereerde vertaling en wordt uitsluitend ter informatie verstrekt. Bij afwijkingen of tegenstrijdigheden prevaleert de Engelse versie.",
       "intro": "Deze Gebruiksvoorwaarden (GV) zijn van toepassing op elk gebruik van het Aegryn-platform, de mobiele applicatie neediu, alsmede op elke dienst die toegankelijk is via of geleverd wordt via het Platform (de Diensten), die worden geleverd en beheerd door Aegryn (BOHA-Group sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland.",
       "s1H": "1. Algemeen",
@@ -4737,37 +4737,37 @@
     }
   },
   "nda": {
-    "pageTitle": "Geheimhoudingsovereenkomst — AEGRYN Kopersruimte",
+    "pageTitle": "Geheimhoudingsovereenkomst — Aegryn Kopersruimte",
     "stepLabel": "Verplichte stap",
-    "stepTitle": "Geheimhoudingsovereenkomst — AEGRYN Auction",
-    "introText": "Voordat u toegang krijgt tot de AEGRYN Auction-catalogus, moet u de onderstaande geheimhoudingsovereenkomst lezen en accepteren. Deze overeenkomst is verplicht en vormt een contractuele vertrouwelijkheidsverplichting jegens AEGRYN en de verkopers. Uw handtekening wordt voorzien van een tijdstempel en geregistreerd voor juridische doeleinden.",
+    "stepTitle": "Geheimhoudingsovereenkomst — Aegryn Auction",
+    "introText": "Voordat u toegang krijgt tot de Aegryn Auction-catalogus, moet u de onderstaande geheimhoudingsovereenkomst lezen en accepteren. Deze overeenkomst is verplicht en vormt een contractuele vertrouwelijkheidsverplichting jegens Aegryn en de verkopers. Uw handtekening wordt voorzien van een tijdstempel en geregistreerd voor juridische doeleinden.",
     "versionLabel": "NDA — Versie",
     "mainTitle": "Vertrouwelijkheidsvoorwaarden voor Kopers",
-    "mainSubtitle": "AEGRYN (voorheen BOHA-Group Sàrl)",
+    "mainSubtitle": "Aegryn (voorheen BOHA-Group Sàrl)",
     "partiesLabel": "Tussen de ondergetekenden:",
-    "partiesAegryn": "AEGRYN (voorheen BOHA-Group Sàrl), een in Zwitserland geregistreerde vennootschap, hierna « AEGRYN » genoemd,",
+    "partiesAegryn": "Aegryn (voorheen BOHA-Group Sàrl), een in Zwitserland geregistreerde vennootschap, hierna « Aegryn » genoemd,",
     "partiesAnd": "En",
-    "partiesBuyer": "De gebruiker die is geïdentificeerd aan de hand van de bij registratie op het AEGRYN-platform verstrekte gegevens (naam, voornaam of handelsnaam, zakelijk e-mailadres), hierna « de Koper » genoemd,",
+    "partiesBuyer": "De gebruiker die is geïdentificeerd aan de hand van de bij registratie op het Aegryn-platform verstrekte gegevens (naam, voornaam of handelsnaam, zakelijk e-mailadres), hierna « de Koper » genoemd,",
     "a1Title": "Onderwerp",
-    "a1": "Deze geheimhoudingsovereenkomst («NDA») regelt de toegang van de Koper tot de AEGRYN Auction-catalogus, activafiches, grade-rapporten en alle documenten in de dataroom die beschikbaar zijn gesteld in het kader van het certificerings- en transactieproces van AEGRYN. Aanvaarding van deze NDA is een verplichte voorwaarde voor elke toegang tot de catalogus, ongeacht het toegangsniveau.",
+    "a1": "Deze geheimhoudingsovereenkomst («NDA») regelt de toegang van de Koper tot de Aegryn Auction-catalogus, activafiches, grade-rapporten en alle documenten in de dataroom die beschikbaar zijn gesteld in het kader van het certificerings- en transactieproces van Aegryn. Aanvaarding van deze NDA is een verplichte voorwaarde voor elke toegang tot de catalogus, ongeacht het toegangsniveau.",
     "a2Title": "Definitie van vertrouwelijke informatie",
     "a2Intro": "De volgende informatie wordt als vertrouwelijk beschouwd:",
-    "a2i1": "Alle informatie over de identiteit van de verkoper of de overdragende entiteit, vóór een uitdrukkelijke introductiebeslissing van AEGRYN",
+    "a2i1": "Alle informatie over de identiteit van de verkoper of de overdragende entiteit, vóór een uitdrukkelijke introductiebeslissing van Aegryn",
     "a2i2": "Alle financiële, technische, commerciële of juridische gegevens in een activafiche of een dataroom-document",
-    "a2i3": "De inhoud van AEGRYN grade-rapporten, inclusief scores, subcodes en voorbehouden",
+    "a2i3": "De inhoud van Aegryn grade-rapporten, inclusief scores, subcodes en voorbehouden",
     "a2i4": "Alle informatie over andere kopers, hun biedingen of de stand van een onderhandeling",
     "a2i5": "Het loutere bestaan van een lopend verkoopproces voor een bepaald actief",
     "a3Title": "Verplichtingen van de Koper",
     "a3s1Title": "3.1 Strikte vertrouwelijkheid",
     "a3s1": "Geen vertrouwelijke informatie aan derden bekendmaken, inclusief adviseurs, werknemers of partners, tenzij zij zelf gebonden zijn door een gelijkwaardige vertrouwelijkheidsverplichting die strikt noodzakelijk is voor de beoordeling van de opportuniteit.",
     "a3s2Title": "3.2 Beperkt gebruik",
-    "a3s2": "Vertrouwelijke informatie uitsluitend gebruiken voor het beoordelen van een acquisitionsmogelijkheid via AEGRYN — nooit voor concurrerende, commerciële, wervings- of technische reproductiedoeleinden.",
+    "a3s2": "Vertrouwelijke informatie uitsluitend gebruiken voor het beoordelen van een acquisitionsmogelijkheid via Aegryn — nooit voor concurrerende, commerciële, wervings- of technische reproductiedoeleinden.",
     "a3s3Title": "3.3 Niet-reproductie",
-    "a3s3": "Geen in de AEGRYN-dataroom geraadpleegde documenten te downloaden, kopiëren, vastleggen, fotograferen of op enigerlei wijze te reproduceren, inclusief via schermafbeelding, schermphotografie of andere methoden om technische beveiligingsmaatregelen te omzeilen.",
+    "a3s3": "Geen in de Aegryn-dataroom geraadpleegde documenten te downloaden, kopiëren, vastleggen, fotograferen of op enigerlei wijze te reproduceren, inclusief via schermafbeelding, schermphotografie of andere methoden om technische beveiligingsmaatregelen te omzeilen.",
     "a3s4Title": "3.4 Erkenning van technische beperkingen",
     "a3s4": "De Koper erkent dat geraadpleegde documenten beschermd zijn door technische afschrikkingsmaatregelen (downloadblokkering, detectie van pogingen tot schermafbeelding, gepersonaliseerd watermerk). De Koper aanvaardt dat zijn vertrouwelijkheidsverplichting geldt ongeacht de doeltreffendheid van deze technische maatregelen.",
     "a3s5Title": "3.5 Niet-omzeiling",
-    "a3s5": "De verkoper of enige partij die verbonden is aan een via AEGRYN geraadpleegd actief niet rechtstreeks te contacteren of daartoe te proberen, buiten het AEGRYN-proces, gedurende een periode van 24 maanden vanaf de eerste raadpleging.",
+    "a3s5": "De verkoper of enige partij die verbonden is aan een via Aegryn geraadpleegd actief niet rechtstreeks te contacteren of daartoe te proberen, buiten het Aegryn-proces, gedurende een periode van 24 maanden vanaf de eerste raadpleging.",
     "a3s6Title": "3.6 Niet-openbaarmaking van het proces",
     "a3s6": "Het loutere bestaan van een lopend verkoopproces voor een geraadpleegd actief niet aan derden bekendmaken, inclusief de sector, de geschatte omvang of identificerende gegevens.",
     "a4Title": "Traceerbaarheid en toestemming voor registratie",
@@ -4776,15 +4776,15 @@
     "a4i2": "Elke poging tot het maken van schermafbeeldingen of het omzeilen van technische beveiligingen wordt gedetecteerd en geregistreerd",
     "a4i3": "Deze registraties kunnen worden gebruikt als bewijs in geval van schending van deze NDA",
     "a5Title": "Duur",
-    "a5": "De vertrouwelijkheidsverplichtingen van deze NDA blijven gedurende 5 jaar van kracht vanaf de eerste raadpleging van een document via het AEGRYN-platform, ook na afsluiting, opgave of afwijzing van een acquisitionsmogelijkheid, en ook na verwijdering van het account van de Koper.",
+    "a5": "De vertrouwelijkheidsverplichtingen van deze NDA blijven gedurende 5 jaar van kracht vanaf de eerste raadpleging van een document via het Aegryn-platform, ook na afsluiting, opgave of afwijzing van een acquisitionsmogelijkheid, en ook na verwijdering van het account van de Koper.",
     "a5Years": "5 jaar",
     "a6Title": "Sancties bij schending",
     "a6Intro": "Bij schending van deze NDA kan de Koper worden blootgesteld aan:",
-    "a6i1": "De onmiddellijke en definitieve opschorting van zijn toegang tot het AEGRYN-platform",
-    "a6i2": "Vergoeding van schade geleden door AEGRYN en/of de betrokken verkoper",
-    "a6i3": "Elke juridische actie die AEGRYN of de verkoper gepast acht",
+    "a6i1": "De onmiddellijke en definitieve opschorting van zijn toegang tot het Aegryn-platform",
+    "a6i2": "Vergoeding van schade geleden door Aegryn en/of de betrokken verkoper",
+    "a6i3": "Elke juridische actie die Aegryn of de verkoper gepast acht",
     "a7Title": "Toepasselijk recht en bevoegde rechter",
-    "a7": "Deze NDA is onderworpen aan Zwitsers recht. Elk geschil voortvloeiend uit deze NDA wordt voorgelegd aan de exclusieve bevoegdheid van de rechtbanken van het kanton waar AEGRYN gevestigd is.",
+    "a7": "Deze NDA is onderworpen aan Zwitsers recht. Elk geschil voortvloeiend uit deze NDA wordt voorgelegd aan de exclusieve bevoegdheid van de rechtbanken van het kanton waar Aegryn gevestigd is.",
     "a8Title": "Aanvaarding",
     "a8": "Door de onderstaande vakjes aan te vinken en te klikken op «Aanvaarden en toegang tot de catalogus», verklaart de Koper alle bepalingen van deze NDA te hebben gelezen, begrepen en zonder voorbehoud aanvaard.",
     "acceptSectionLabel": "Artikel 8 — Aanvaarding",
@@ -4796,11 +4796,11 @@
   },
   "experts": {
     "meta": {
-      "title": "Expertennetwerk — AEGRYN",
+      "title": "Expertennetwerk — Aegryn",
       "desc": "Wij geloven dat elke transactie de juiste mensen op het juiste moment verdient. Geen gids. Een geverifieerd netwerk samengesteld zodat niets essentieels aan het toeval wordt overgelaten."
     },
     "hero": {
-      "label": "AEGRYN Expertennetwerk",
+      "label": "Aegryn Expertennetwerk",
       "title": "Grote transacties doe je nooit alleen.",
       "desc": "Achter elke succesvolle deal staat een M&A-advocaat die het risico zag, een accountant die de cijfers vasthield, een CTO die de stack valideerde. Wij hebben ze gevonden en geverifieerd voor jou."
     },
@@ -4815,7 +4815,7 @@
       "transaction": "Advisory Transaction",
       "transactionDesc": "M&A, waardering, financieel structureren",
       "network": "Partnernetwerk",
-      "networkDesc": "AEGRYN-gecertificeerde partners"
+      "networkDesc": "Aegryn-gecertificeerde partners"
     },
     "domains": {
       "security": "Beveiliging & Cyberbeveiliging",
@@ -4910,11 +4910,11 @@
     "placeholder": {
       "badge": "Binnenkort beschikbaar",
       "title": "Eerste experts komen binnenkort.",
-      "desc": "Het AEGRYN-netwerk opent zijn deuren. Hier een voorproefje van de profielen die u bij uw transacties zullen begeleiden."
+      "desc": "Het Aegryn-netwerk opent zijn deuren. Hier een voorproefje van de profielen die u bij uw transacties zullen begeleiden."
     },
     "card": {
       "contact": "Contacteren",
-      "verifiedBadge": "AEGRYN Geverifieerd",
+      "verifiedBadge": "Aegryn Geverifieerd",
       "rateFrom": "Vanaf",
       "rateUnit": "€/u"
     },
@@ -4923,7 +4923,7 @@
       "fieldFirstName": "Voornaam",
       "fieldLastName": "Achternaam",
       "fieldEmail": "E-mail",
-      "consentText": "Ik ga ermee akkoord dat mijn persoonsgegevens (voornaam, achternaam, e-mail) worden gedeeld met AEGRYN en de gecontacteerde expert ten behoeve van een introductie, overeenkomstig de AVG en de Zwitserse DSG. Ik kan mijn rechten te allen tijde uitoefenen via contact@boha-group.com.",
+      "consentText": "Ik ga ermee akkoord dat mijn persoonsgegevens (voornaam, achternaam, e-mail) worden gedeeld met Aegryn en de gecontacteerde expert ten behoeve van een introductie, overeenkomstig de AVG en de Zwitserse DSG. Ik kan mijn rechten te allen tijde uitoefenen via contact@boha-group.com.",
       "submit": "Contact vrijgeven",
       "submitting": "Verzenden…",
       "successTitle": "Contact onthuld.",
@@ -4939,7 +4939,7 @@
     "waitlist": {
       "label": "Bent u een expert?",
       "title": "Doe mee met het netwerk.",
-      "desc": "Het AEGRYN-expertennetwerk opent zijn deuren. Dien uw kandidatuur in — ons team bekijkt elk profiel en neemt contact met u op voor een kwalificatiegesprek. Toegang via een maandelijks referentieabonnement (€ 89 excl. btw/maand).",
+      "desc": "Het Aegryn-expertennetwerk opent zijn deuren. Dien uw kandidatuur in — ons team bekijkt elk profiel en neemt contact met u op voor een kwalificatiegesprek. Toegang via een maandelijks referentieabonnement (€ 89 excl. btw/maand).",
       "fieldPrenom": "Voornaam",
       "fieldNom": "Achternaam",
       "fieldEmail": "Professioneel e-mailadres",

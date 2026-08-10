@@ -10,7 +10,7 @@ import { DataRoomUploadForm } from '@/components/seller/DataRoomUploadForm'
 import { DataRoomVisibilityToggle } from '@/components/seller/DataRoomVisibilityToggle'
 
 export const metadata: Metadata = {
-  title: 'Data Room — Espace Cédant AEGRYN',
+  title: 'Data Room — Espace Cédant Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -116,7 +116,7 @@ export default async function SellerDataRoomPage({ params }: Props) {
             />
           </div>
           <p className="mt-3 text-[11px] text-gray-400 leading-relaxed">
-            Les documents <span className="font-semibold text-red-500">bloquants</span> sont requis pour que l'équipe AEGRYN puisse émettre le rapport de grade.
+            Les documents <span className="font-semibold text-red-500">bloquants</span> sont requis pour que l'équipe Aegryn puisse émettre le rapport de grade.
             Les documents <span className="font-semibold text-amber-600">recommandés</span> impactent positivement votre score.
             Par défaut, tout document uploadé est <span className="font-semibold">masqué</span>. Vous contrôlez la visibilité.
           </p>

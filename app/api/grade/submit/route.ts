@@ -10,7 +10,7 @@ async function sendEmail(to: string, subject: string, text: string) {
     method: 'POST',
     headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      from: `${process.env.RESEND_FROM_NAME ?? 'AEGRYN'} <${from}>`,
+      from: `${process.env.RESEND_FROM_NAME ?? 'Aegryn'} <${from}>`,
       reply_to: process.env.RESEND_REPLY_TO ?? 'contact@boha-group.com',
       to: [to],
       subject,
@@ -108,17 +108,17 @@ export async function POST(req: NextRequest) {
     }
 
     /* ── 2. Emails ── */
-    const internal = process.env.AEGRYN_INTERNAL_EMAIL ?? 'team@boha-group.com'
+    const internal = process.env.Aegryn_INTERNAL_EMAIL ?? 'team@boha-group.com'
     await Promise.allSettled([
       sendEmail(
         body.email,
-        'AEGRYN — Votre dossier de certification a été reçu',
-        `Bonjour ${body.fullName},\n\nNous avons bien reçu votre dossier de certification pour "${body.assetName}".\n\nNotre équipe va l'examiner dans les prochaines 48-72h ouvrées et vous recontactera pour planifier la phase d'audit initiale.\n\nRéférence dossier : ${asset?.id ?? "en cours d'attribution"}\n\nL'équipe AEGRYN\nhttps://aegryn.com/grade`,
+        'Aegryn — Votre dossier de certification a été reçu',
+        `Bonjour ${body.fullName},\n\nNous avons bien reçu votre dossier de certification pour "${body.assetName}".\n\nNotre équipe va l'examiner dans les prochaines 48-72h ouvrées et vous recontactera pour planifier la phase d'audit initiale.\n\nRéférence dossier : ${asset?.id ?? "en cours d'attribution"}\n\nL'équipe Aegryn\nhttps://aegryn.com/grade`,
       ),
       sendEmail(
         internal,
         `[Grade Submit] Nouveau dossier — ${body.assetName} (${body.email}) [${body.evaluationType ?? 'full_certification'}]`,
-        `Nouveau dossier de certification\nType d'évaluation : ${body.evaluationType ?? 'full_certification'}${body.partnerType ? ` — partenaire : ${body.partnerType}` : ''}\nVendeur : ${body.fullName}\nEmail : ${body.email}\nActif : ${body.assetName} (${body.assetType})\nSite : ${body.assetUrl || '—'}\nARR : ${body.arr ? `${body.arr}€` : '—'}\nIP : ${body.ipFiled ?? '—'}\nMotivation : ${body.motivation ?? '—'}\nTimeline : ${body.timeline ?? '—'}\nValorisation cible : ${body.targetValuation ? `${body.targetValuation}€` : '—'}\nStack : ${body.techStack ?? '—'}\nMessage : ${body.message ?? '—'}\nLocale : ${body.locale ?? '—'}\nID Supabase : ${asset?.id ?? '—'}\n\n── Données pour analyse interne (AEGRYN Grading System v1.0) ──\nSecteur : ${body.sector ?? '\u26a0\ufe0f manquant'}\nCroissance ARR YoY : ${body.arrGrowth != null ? `${body.arrGrowth}%` : '\u26a0\ufe0f manquant'}\nÉquipe : ${body.teamSize != null ? `${body.teamSize} pers.` : '\u26a0\ufe0f manquant'}\nFondé en : ${body.foundedYear ?? '\u26a0\ufe0f manquant'}\nAncienneté revenus (mois) : ${body.revenueTrackMonths ?? '\u26a0\ufe0f manquant — requis pour règles de maturité (Partie 9)'}\nMarge brute : ${body.grossMargin != null ? `${body.grossMargin}%` : '\u26a0\ufe0f manquant — requis pour benchmark marché'}\nNRR : ${body.nrr != null ? `${body.nrr}%` : '\u26a0\ufe0f manquant — requis pour benchmark marché'}\nCatégorie benchmark : ${body.benchmarkCategory ?? '\u26a0\ufe0f à déterminer par l\'analyste avant grading'}\n\nRappel checklist avant attribution du grade (/admin/assets/${asset?.id ?? '[id]'}/grade) :\n- Sous-codes C/I/F/S à cocher par dimension\n- Vérifier les conditions de refus automatique (C-40+C-34, I-18, I-21, S-17, S-37)\n- Renseigner ancienneté des revenus pour appliquer le plafond de maturité\n- Sélectionner la catégorie de benchmark marché pour comparaison`,
+        `Nouveau dossier de certification\nType d'évaluation : ${body.evaluationType ?? 'full_certification'}${body.partnerType ? ` — partenaire : ${body.partnerType}` : ''}\nVendeur : ${body.fullName}\nEmail : ${body.email}\nActif : ${body.assetName} (${body.assetType})\nSite : ${body.assetUrl || '—'}\nARR : ${body.arr ? `${body.arr}€` : '—'}\nIP : ${body.ipFiled ?? '—'}\nMotivation : ${body.motivation ?? '—'}\nTimeline : ${body.timeline ?? '—'}\nValorisation cible : ${body.targetValuation ? `${body.targetValuation}€` : '—'}\nStack : ${body.techStack ?? '—'}\nMessage : ${body.message ?? '—'}\nLocale : ${body.locale ?? '—'}\nID Supabase : ${asset?.id ?? '—'}\n\n── Données pour analyse interne (Aegryn Grading System v1.0) ──\nSecteur : ${body.sector ?? '\u26a0\ufe0f manquant'}\nCroissance ARR YoY : ${body.arrGrowth != null ? `${body.arrGrowth}%` : '\u26a0\ufe0f manquant'}\nÉquipe : ${body.teamSize != null ? `${body.teamSize} pers.` : '\u26a0\ufe0f manquant'}\nFondé en : ${body.foundedYear ?? '\u26a0\ufe0f manquant'}\nAncienneté revenus (mois) : ${body.revenueTrackMonths ?? '\u26a0\ufe0f manquant — requis pour règles de maturité (Partie 9)'}\nMarge brute : ${body.grossMargin != null ? `${body.grossMargin}%` : '\u26a0\ufe0f manquant — requis pour benchmark marché'}\nNRR : ${body.nrr != null ? `${body.nrr}%` : '\u26a0\ufe0f manquant — requis pour benchmark marché'}\nCatégorie benchmark : ${body.benchmarkCategory ?? '\u26a0\ufe0f à déterminer par l\'analyste avant grading'}\n\nRappel checklist avant attribution du grade (/admin/assets/${asset?.id ?? '[id]'}/grade) :\n- Sous-codes C/I/F/S à cocher par dimension\n- Vérifier les conditions de refus automatique (C-40+C-34, I-18, I-21, S-17, S-37)\n- Renseigner ancienneté des revenus pour appliquer le plafond de maturité\n- Sélectionner la catégorie de benchmark marché pour comparaison`,
       ),
     ])
 

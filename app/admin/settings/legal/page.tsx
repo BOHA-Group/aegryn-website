@@ -2,7 +2,7 @@ import { checkAdminAccess } from '@/lib/adminAuth'
 import type { Metadata } from 'next'
 import Link              from 'next/link'
 
-export const metadata: Metadata = { title: 'Documents légaux — AEGRYN Admin', robots: { index: false, follow: false } }
+export const metadata: Metadata = { title: 'Documents légaux — Aegryn Admin', robots: { index: false, follow: false } }
 
 export default async function AdminSettingsLegalPage({ searchParams }: { searchParams: Promise<{ token?: string }> }) {
   const params = await searchParams

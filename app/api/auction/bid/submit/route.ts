@@ -1,6 +1,6 @@
 /**
  * POST /api/auction/bid/submit
- * Soumettre une offre scellée sur un lot de la session AEGRYN Auction.
+ * Soumettre une offre scellée sur un lot de la session Aegryn Auction.
  *
  * Règles appliquées côté serveur :
  *  1. Auth obligatoire + accès dossier actif (auction_asset_access)
@@ -38,7 +38,7 @@ async function sendEmail(to: string, subject: string, text: string) {
     method:  'POST',
     headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
     body:    JSON.stringify({
-      from:     `${process.env.RESEND_FROM_NAME ?? 'AEGRYN'} <${from}>`,
+      from:     `${process.env.RESEND_FROM_NAME ?? 'Aegryn'} <${from}>`,
       reply_to: process.env.RESEND_REPLY_TO ?? 'contact@boha-group.com',
       to:       [to],
       subject,
@@ -187,13 +187,13 @@ export async function POST(req: NextRequest) {
 
   const buyerEmail = (profile as Record<string, unknown> | null)?.email as string ?? user.email ?? ''
   const buyerName  = (profile as Record<string, unknown> | null)?.full_name as string ?? buyerEmail
-  const internal   = process.env.AEGRYN_INTERNAL_EMAIL ?? 'tech@boha-group.com'
+  const internal   = process.env.Aegryn_INTERNAL_EMAIL ?? 'tech@boha-group.com'
 
   await Promise.allSettled([
     sendEmail(
       buyerEmail,
-      `AEGRYN Auction — Votre offre sur "${asset.name}" a été reçue`,
-      `Bonjour ${buyerName},\n\nVotre offre scellée sur le lot "${asset.name}" a bien été enregistrée.\n\nRéférence : ${bid?.id}\n\nL'équipe AEGRYN vous contactera à l'issue de la session avec les résultats.\n\nL'équipe AEGRYN\nhttps://aegryn.com/auction`
+      `Aegryn Auction — Votre offre sur "${asset.name}" a été reçue`,
+      `Bonjour ${buyerName},\n\nVotre offre scellée sur le lot "${asset.name}" a bien été enregistrée.\n\nRéférence : ${bid?.id}\n\nL'équipe Aegryn vous contactera à l'issue de la session avec les résultats.\n\nL'équipe Aegryn\nhttps://aegryn.com/auction`
     ),
     sendEmail(
       internal,

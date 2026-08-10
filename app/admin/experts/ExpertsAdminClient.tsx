@@ -796,7 +796,7 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
         {/* Header */}
         <div className="mb-8 flex items-end justify-between">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 mb-1">AEGRYN Admin</p>
+            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 mb-1">Aegryn Admin</p>
             <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Réseau d&apos;experts</h1>
           </div>
           <button

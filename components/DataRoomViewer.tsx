@@ -137,7 +137,7 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
 
   /* ── Watermark text — initialisé côté client uniquement pour éviter mismatch hydratation ── */
   const watermarkText = useMemo(
-    () => `AEGRYN CONFIDENTIEL — ${userName} <${userEmail}> — ${new Date().toLocaleDateString('fr-CH')}`,
+    () => `Aegryn CONFIDENTIEL — ${userName} <${userEmail}> — ${new Date().toLocaleDateString('fr-CH')}`,
     [userName, userEmail]
   )
 
@@ -251,7 +251,7 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
       {/* Footer : rappel légal */}
       <div className="shrink-0 border-t border-white/10 px-6 py-2 bg-black/80">
         <p className="text-[10px] text-white/30 text-center">
-          Document confidentiel AEGRYN — consultation journalisée (IP, horodatage, durée) — reproduction interdite par NDA
+          Document confidentiel Aegryn — consultation journalisée (IP, horodatage, durée) — reproduction interdite par NDA
         </p>
       </div>
     </div>

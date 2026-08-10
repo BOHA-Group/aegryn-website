@@ -127,7 +127,7 @@ function buildHtml(inv: Record<string, unknown>): string {
 
   <div class="bank">
     <div class="section-label">Modalités de paiement</div>
-    <p>Les coordonnées bancaires pour le virement vous seront transmises séparément par l&apos;équipe AEGRYN.</p>
+    <p>Les coordonnées bancaires pour le virement vous seront transmises séparément par l&apos;équipe Aegryn.</p>
     <p style="margin-top:6px">Référence à indiquer lors du virement : <strong>${inv.invoice_number}</strong></p>
   </div>
 

@@ -9,8 +9,8 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
-    title: 'Accès acheteurs — AEGRYN Auction',
-    description: "Rejoignez le cercle d'acheteurs pré-qualifiés AEGRYN. Accédez en priorité au deal flow confidentiel d'actifs tech certifiés et gradés. Ticket €100K–€10M+.",
+    title: 'Accès acheteurs — Aegryn Auction',
+    description: "Rejoignez le cercle d'acheteurs pré-qualifiés Aegryn. Accédez en priorité au deal flow confidentiel d'actifs tech certifiés et gradés. Ticket €100K–€10M+.",
     path: '/auction/buyers',
     locale,
     keywords: [
@@ -35,7 +35,7 @@ const ACCESS_STEPS = [
   {
     num:   '03',
     title: 'Signature du NDA acheteur',
-    desc:  "Après validation, vous signez le NDA AEGRYN. Aucune information sur un actif n'est transmise avant cette étape.",
+    desc:  "Après validation, vous signez le NDA Aegryn. Aucune information sur un actif n'est transmise avant cette étape.",
   },
   {
     num:   '04',
@@ -87,7 +87,7 @@ export default async function AuctionBuyersPage({ params }: Props) {
             Accédez au deal flow{'\n'}avant tout le monde.
           </h1>
           <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-xl mb-10">
-            Rejoignez le cercle d'acheteurs pré-qualifiés AEGRYN et recevez en priorité les alertes sur les actifs tech certifiés correspondant à votre profil — en totale confidentialité.
+            Rejoignez le cercle d'acheteurs pré-qualifiés Aegryn et recevez en priorité les alertes sur les actifs tech certifiés correspondant à votre profil — en totale confidentialité.
           </p>
           <a
             href="#form"

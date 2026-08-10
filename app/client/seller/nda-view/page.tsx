@@ -11,7 +11,7 @@ import Link from 'next/link'
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Mon NDA Cédant — AEGRYN',
+    title: 'Mon NDA Cédant — Aegryn',
     robots: { index: false, follow: false },
   }
 }
@@ -122,29 +122,29 @@ export default async function SellerNdaViewPage() {
               Accord de Confidentialité et Conditions d'Engagement — Cédant
             </h1>
             <p className="text-[12px] text-gray-500 mt-1">
-              AEGRYN (formerly BOHA-Group, société enregistrée en Suisse) · contact@boha-group.com
+              Aegryn (formerly BOHA-Group, société enregistrée en Suisse) · contact@boha-group.com
             </p>
           </div>
 
           <div className="bg-gray-50 px-5 py-4 text-[12px] space-y-1">
-            <p><strong>Entre :</strong> AEGRYN (ci-après « AEGRYN »)</p>
+            <p><strong>Entre :</strong> Aegryn (ci-après « Aegryn »)</p>
             <p><strong>Et :</strong> {p.full_name ?? user.email} (ci-après « le Cédant »)</p>
           </div>
 
           <Article num="1" title="Objet">
-            Dans le cadre du processus de certification et de cession d&apos;un actif technologique via AEGRYN,
+            Dans le cadre du processus de certification et de cession d&apos;un actif technologique via Aegryn,
             le Cédant s&apos;engage à maintenir la stricte confidentialité de toutes les informations échangées
-            avec AEGRYN, ses analystes, ses partenaires certifiés et les acquéreurs qualifiés.
+            avec Aegryn, ses analystes, ses partenaires certifiés et les acquéreurs qualifiés.
           </Article>
 
           <Article num="2" title="Informations confidentielles">
             <p>Sont considérées comme confidentielles :</p>
             <ul className="list-none mt-3 space-y-2">
               {[
-                'Les rapports d\'analyse, grades et évaluations produits par AEGRYN',
+                'Les rapports d\'analyse, grades et évaluations produits par Aegryn',
                 'Les informations relatives aux acquéreurs qualifiés ayant exprimé un intérêt',
                 'Les conditions et modalités des offres reçues (Expression d\'Intérêt, Accord de Principe)',
-                'Les communications internes et notes d\'évaluation AEGRYN',
+                'Les communications internes et notes d\'évaluation Aegryn',
                 'L\'existence même du processus de cession jusqu\'à sa finalisation',
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2">
@@ -159,12 +159,12 @@ export default async function SellerNdaViewPage() {
             <p>Le Cédant s&apos;engage à :</p>
             <ul className="list-none mt-3 space-y-2">
               {[
-                'Ne pas divulguer à des tiers l\'existence du processus de certification ni les informations confidentielles sans accord préalable écrit d\'AEGRYN',
+                'Ne pas divulguer à des tiers l\'existence du processus de certification ni les informations confidentielles sans accord préalable écrit d\'Aegryn',
                 'Fournir des informations exactes, complètes et à jour sur l\'actif soumis, notamment ses états financiers, KPI, contrats et situation juridique',
                 'Garantir disposer de tous les droits, titres et autorisations nécessaires pour procéder à la cession',
-                'Ne pas engager de négociations parallèles avec des acquéreurs introduits ou identifiés par AEGRYN pendant la durée du mandat',
-                'Notifier immédiatement AEGRYN de toute approche directe d\'un acquéreur introduit par AEGRYN, sous peine d\'exigibilité immédiate des honoraires',
-                'Ne pas conclure de transaction avec un acquéreur présenté par AEGRYN en dehors du cadre formel du mandat',
+                'Ne pas engager de négociations parallèles avec des acquéreurs introduits ou identifiés par Aegryn pendant la durée du mandat',
+                'Notifier immédiatement Aegryn de toute approche directe d\'un acquéreur introduit par Aegryn, sous peine d\'exigibilité immédiate des honoraires',
+                'Ne pas conclure de transaction avec un acquéreur présenté par Aegryn en dehors du cadre formel du mandat',
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-ag-navy mt-1.5 shrink-0" />
@@ -177,7 +177,7 @@ export default async function SellerNdaViewPage() {
           <Article num="4" title="Honoraires de cession">
             <p>
               En contrepartie des services d&apos;intermédiation, de certification et de conduite du processus,
-              le Cédant s&apos;acquittera d&apos;un honoraire de succès selon la grille dégressive officielle AEGRYN :
+              le Cédant s&apos;acquittera d&apos;un honoraire de succès selon la grille dégressive officielle Aegryn :
             </p>
             <table className="mt-4 w-full text-[11px] font-mono border-collapse">
               <thead>
@@ -209,8 +209,8 @@ export default async function SellerNdaViewPage() {
           <Article num="4bis" title="Frais en cas de non-réalisation de la transaction">
             <p>
               Dans le cas où l&apos;actif admis en Certification Auction serait retiré du catalogue ou
-              qu&apos;aucune transaction ne se réalise à l&apos;issue du processus AEGRYN, des frais fixes
-              minimaux de <strong>CHF 2 000 HT</strong> sont dus à AEGRYN en contrepartie du travail
+              qu&apos;aucune transaction ne se réalise à l&apos;issue du processus Aegryn, des frais fixes
+              minimaux de <strong>CHF 2 000 HT</strong> sont dus à Aegryn en contrepartie du travail
               engagé par ses équipes : analyse C/I/F/S, attribution du grade officiel, préparation du
               dossier catalogue, communication, marketing, et visibilité produit acquise durant la présence
               de l&apos;actif au catalogue. Ces frais sont exigibles à la date de retrait ou de clôture
@@ -220,7 +220,7 @@ export default async function SellerNdaViewPage() {
           </Article>
 
           <Article num="5" title="Durée">
-            Les présentes obligations s&apos;appliquent pendant toute la durée du processus AEGRYN et pendant
+            Les présentes obligations s&apos;appliquent pendant toute la durée du processus Aegryn et pendant
             une période de <strong>3 ans</strong>{' '}suivant la conclusion ou l&apos;abandon du processus.
             L&apos;obligation de paiement des honoraires survit à toute résiliation.
           </Article>
@@ -228,13 +228,13 @@ export default async function SellerNdaViewPage() {
           <Article num="6" title="Sanctions">
             Tout manquement aux présentes obligations expose le Cédant à des dommages-intérêts,
             incluant notamment le paiement immédiat des honoraires de succès majorés, la perte du
-            bénéfice du processus AEGRYN et une indemnité forfaitaire minimale de <strong>25 000 € HT</strong>,
+            bénéfice du processus Aegryn et une indemnité forfaitaire minimale de <strong>25 000 € HT</strong>,
             sans préjudice de tout autre préjudice démontré.
           </Article>
 
           <Article num="7" title="Droit applicable">
             Le présent accord est soumis au droit suisse. Tout litige sera soumis aux tribunaux
-            du canton de domicile d&apos;AEGRYN, après tentative de résolution amiable sous 30 jours.
+            du canton de domicile d&apos;Aegryn, après tentative de résolution amiable sous 30 jours.
           </Article>
         </div>
 

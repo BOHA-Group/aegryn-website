@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 import MemberDetailClient from './MemberDetailClient'
 
 export const metadata: Metadata = {
-  title: 'Profil membre — AEGRYN Admin',
+  title: 'Profil membre — Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

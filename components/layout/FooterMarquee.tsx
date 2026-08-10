@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import { gsap } from '@/lib/gsap'
 import Link from 'next/link'
 
-const TEXT     = 'AEGRYN'
+const TEXT     = 'Aegryn'
 const REPEAT   = 20
 /** Duration in seconds — very slow drift */
 const DURATION = 90

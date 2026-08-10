@@ -5,7 +5,7 @@ import type { Metadata }       from 'next'
 import Link                    from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Offre — AEGRYN Admin',
+  title: 'Offre — Aegryn Admin',
   robots: { index: false, follow: false },
 }
 
@@ -133,7 +133,7 @@ export default async function AdminOfferDetailPage({
                 )}
               </div>
               <p className="text-[11px] text-gray-400">
-                Note : l'identité de l'acquéreur n'est révélée au vendeur qu'après accord des deux parties, décidé manuellement par l'équipe AEGRYN.
+                Note : l'identité de l'acquéreur n'est révélée au vendeur qu'après accord des deux parties, décidé manuellement par l'équipe Aegryn.
               </p>
             </div>
           </>

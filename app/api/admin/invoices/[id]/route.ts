@@ -70,16 +70,16 @@ export async function PATCH(req: NextRequest, { params }: Params) {
           method: 'POST',
           headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            from: `${process.env.RESEND_FROM_NAME ?? 'AEGRYN'} <${from}>`,
+            from: `${process.env.RESEND_FROM_NAME ?? 'Aegryn'} <${from}>`,
             reply_to: process.env.RESEND_REPLY_TO ?? 'contact@boha-group.com',
             to: [inv.recipient_email],
-            subject: `AEGRYN — Facture ${inv.invoice_number}`,
+            subject: `Aegryn — Facture ${inv.invoice_number}`,
             text:
               `Bonjour ${inv.recipient_name},\n\n` +
-              `Veuillez trouver votre facture AEGRYN.\n\n` +
+              `Veuillez trouver votre facture Aegryn.\n\n` +
               `Référence : ${inv.invoice_number}\nMontant : ${total}\n` +
               (inv.due_date ? `Échéance : ${inv.due_date}\n` : '') +
-              `\nMerci d'effectuer le virement à l'IBAN indiqué sur la facture en précisant la référence ${inv.invoice_number}.\n\nL'équipe AEGRYN`,
+              `\nMerci d'effectuer le virement à l'IBAN indiqué sur la facture en précisant la référence ${inv.invoice_number}.\n\nL'équipe Aegryn`,
           }),
         })
       }

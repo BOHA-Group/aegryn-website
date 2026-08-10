@@ -5,7 +5,7 @@
  *
  * En production, produit par mapRowToAsset() depuis auction_assets.
  *
- * ⚠️  grade.letter = "B+" est un grade préliminaire à confirmer par audit AEGRYN.
+ * ⚠️  grade.letter = "B+" est un grade préliminaire à confirmer par audit Aegryn.
  *     B+ n'est pas dans le barème officiel (★, AAA, AA, A, B) — couleur fallback
  *     (#9C7A3C) jusqu'à confirmation ou reclassement en "B" par le jury d'audit.
  */
@@ -28,7 +28,7 @@ export const subblinkLot: AssetLot = {
   grade: {
     letter: "B",
     label:
-      "Actif technologique mature, traction commerciale démontrée, marché non disputé. Grade préliminaire fondateur — à confirmer par audit AEGRYN Auction indépendant (KRYV Protocol + due diligence tierce) avant inscription définitive au catalogue.",
+      "Actif technologique mature, traction commerciale démontrée, marché non disputé. Grade préliminaire fondateur — à confirmer par audit Aegryn Auction indépendant (KRYV Protocol + due diligence tierce) avant inscription définitive au catalogue.",
   },
 
   executiveSummary: {
@@ -47,10 +47,10 @@ export const subblinkLot: AssetLot = {
 
   presentationNotice: {
     body: [
-      "subblink est une plateforme d'intelligence contractuelle par intelligence artificielle, conçue et développée intégralement en interne par AEGRYN Sàrl (Suisse). Le produit délivre en moins de soixante secondes une notation de risque contractuel — le ContractScore™, gradué de A à E selon un principe d'évaluation inspiré du Nutri-Score — accompagnée d'une analyse clause par clause, d'un verdict actionnable et d'une contre-proposition rédigée par l'IA.",
+      "subblink est une plateforme d'intelligence contractuelle par intelligence artificielle, conçue et développée intégralement en interne par Aegryn Sàrl (Suisse). Le produit délivre en moins de soixante secondes une notation de risque contractuel — le ContractScore™, gradué de A à E selon un principe d'évaluation inspiré du Nutri-Score — accompagnée d'une analyse clause par clause, d'un verdict actionnable et d'une contre-proposition rédigée par l'IA.",
       "L'actif se distingue par un positionnement de marché qu'aucun concurrent identifié — européen ou américain — n'occupe à ce jour : l'analyse contractuelle du point de vue du récepteur du contrat, et non de son émetteur. Cette inversion de perspective, validée sur huit catégories contractuelles distinctes et calibrée pour les droits français, suisse et de l'Union européenne, constitue la thèse de différenciation centrale de l'actif.",
     ],
-    meta: "Catégorie d'actif : SaaS vertical · Secteur : Legal-tech / Intelligence documentaire · Juridiction d'opération : France, Suisse, Belgique, zone francophone UE · Entité détentrice : AEGRYN Sàrl (Suisse)",
+    meta: "Catégorie d'actif : SaaS vertical · Secteur : Legal-tech / Intelligence documentaire · Juridiction d'opération : France, Suisse, Belgique, zone francophone UE · Entité détentrice : Aegryn Sàrl (Suisse)",
   },
 
   provenance: {
@@ -152,7 +152,7 @@ export const subblinkLot: AssetLot = {
       },
       {
         label: "Extension par API plutôt que par filiale",
-        text: "Le modèle d'API Entreprise marque blanche constitue un vecteur d'extension internationale à coût marginal quasi nul : un partenaire local intègre le ContractScore™ dans sa propre offre sans que AEGRYN n'ait à construire de présence commerciale directe sur le marché concerné.",
+        text: "Le modèle d'API Entreprise marque blanche constitue un vecteur d'extension internationale à coût marginal quasi nul : un partenaire local intègre le ContractScore™ dans sa propre offre sans que Aegryn n'ait à construire de présence commerciale directe sur le marché concerné.",
       },
     ],
     closing:
@@ -190,7 +190,7 @@ export const subblinkLot: AssetLot = {
 
   risks: {
     intro:
-      "Par souci de rigueur curatoriale, la présente notice expose sans réserve les facteurs de risque identifiés à ce stade, conformément au principe de transparence qui fonde la crédibilité du label AEGRYN.",
+      "Par souci de rigueur curatoriale, la présente notice expose sans réserve les facteurs de risque identifiés à ce stade, conformément au principe de transparence qui fonde la crédibilité du label Aegryn.",
     items: [
       {
         label: "Profondeur de traction",
@@ -216,14 +216,14 @@ export const subblinkLot: AssetLot = {
       "subblink s'adresse à un acquéreur recherchant un actif SaaS vertical pleinement opérationnel, sur un segment de marché structurellement non disputé, avec une infrastructure technique éprouvée et un coût de possession marginal. L'actif convient en particulier à trois profils d'acquéreur : un acteur du legal-tech établi cherchant une extension de gamme côté récepteur de contrat ; un groupe d'édition juridique ou de conformité cherchant à intégrer une couche d'intelligence contractuelle dans une offre existante ; ou un investisseur stratégique souhaitant accélérer le déploiement européen d'un produit déjà calibré sur trois juridictions.",
     ],
     closing:
-      "L'actif est présenté à un stade où la thèse est démontrée mais le potentiel d'échelle reste entier — c'est précisément l'équilibre que la maison AEGRYN recherche pour son catalogue inaugural.",
+      "L'actif est présenté à un stade où la thèse est démontrée mais le potentiel d'échelle reste entier — c'est précisément l'équilibre que la maison Aegryn recherche pour son catalogue inaugural.",
   },
 
   mentions: {
     body: [
-      "La présente notice constitue un document préparatoire de présentation d'actif établi à des fins d'information préliminaire. Elle ne constitue ni une offre, ni une sollicitation, ni un engagement contractuel de cession. Le grade préliminaire indiqué en première page est attribué par la maison AEGRYN sur la base des éléments déclaratifs fournis par le détenteur de l'actif et reste soumis à confirmation par un processus d'audit indépendant — incluant notamment une certification technique du code source par KRYV Protocol et une revue contractuelle par subblink elle-même, dans une démarche d'auto-cohérence méthodologique propre au catalogue AEGRYN.",
+      "La présente notice constitue un document préparatoire de présentation d'actif établi à des fins d'information préliminaire. Elle ne constitue ni une offre, ni une sollicitation, ni un engagement contractuel de cession. Le grade préliminaire indiqué en première page est attribué par la maison Aegryn sur la base des éléments déclaratifs fournis par le détenteur de l'actif et reste soumis à confirmation par un processus d'audit indépendant — incluant notamment une certification technique du code source par KRYV Protocol et une revue contractuelle par subblink elle-même, dans une démarche d'auto-cohérence méthodologique propre au catalogue Aegryn.",
       "Toute donnée chiffrée, métrique de traction ou élément de partenariat mentionné dans la présente notice est fourni par le détenteur de l'actif et n'a pas, à ce stade, fait l'objet d'une vérification indépendante exhaustive. Une data room sécurisée sera mise à disposition des acquéreurs qualifiés admis au troisième cercle d'accès, sur présentation d'un justificatif de capacité financière et signature préalable d'un accord de confidentialité.",
-      "Ce document est strictement confidentiel et destiné à la seule diffusion auprès des cercles d'accès définis par la maison AEGRYN. Toute reproduction, transmission ou divulgation à un tiers non autorisé est interdite.",
+      "Ce document est strictement confidentiel et destiné à la seule diffusion auprès des cercles d'accès définis par la maison Aegryn. Toute reproduction, transmission ou divulgation à un tiers non autorisé est interdite.",
     ],
   },
 };

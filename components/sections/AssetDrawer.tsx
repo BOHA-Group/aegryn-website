@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link }                          from '@/i18n/navigation'
 import { X, ArrowUpRight }              from 'lucide-react'
 import { gsap }                          from '@/lib/gsap'
-import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
+import { Aegryn_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
 import type { Asset }                    from '@/data/assets'
 import { BadgePill, StatusIndicator }    from '@/components/ui/AssetIndicators'
 import { useTranslations }              from 'next-intl'
@@ -194,7 +194,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
 export function AssetGridWithDrawer() {
   const t = useTranslations('assetDrawer')
   const [openId, setOpenId] = useState<string | null>(null)
-  const openAsset = AEGRYN_ASSETS.find((a) => a.id === openId) ?? null
+  const openAsset = Aegryn_ASSETS.find((a) => a.id === openId) ?? null
 
   /* Lock body scroll when drawer is open */
   useEffect(() => {
@@ -213,13 +213,13 @@ export function AssetGridWithDrawer() {
               {t('allAssets')}
             </span>
             <span className="font-sans font-semibold text-[10px] text-ag-gray-light">
-              {String(AEGRYN_ASSETS.length).padStart(2, '0')}
+              {String(Aegryn_ASSETS.length).padStart(2, '0')}
             </span>
           </div>
 
           {/* Grille 3 colonnes flat — toutes catégories mélangées */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-ag-border">
-            {AEGRYN_ASSETS.map((asset, i) => {
+            {Aegryn_ASSETS.map((asset, i) => {
               const isRestricted = asset.id === 'kryv'
               const colBorder = i % 3 !== 2 ? 'lg:border-r border-ag-border' : ''
               const colBorderSm = i % 2 !== 1 ? 'md:border-r border-ag-border' : ''

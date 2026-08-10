@@ -19,7 +19,7 @@ export interface AegrynAsset {
 
 export type AssetGrade    = 'star' | 'aaa' | 'aa' | 'a' | 'b' | 'pending' | 'refused'
 
-export const AEGRYN_ASSETS: AegrynAsset[] = [
+export const Aegryn_ASSETS: AegrynAsset[] = [
 
   // ── AI & PROTOCOLES ──────────────────────────────────────────
   {

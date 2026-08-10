@@ -85,7 +85,7 @@ export async function POST(req: NextRequest) {
 
   const supa    = createServiceClient()
   const resend  = new Resend(process.env.RESEND_API_KEY)
-  const FROM    = process.env.RESEND_FROM_EMAIL ?? 'AEGRYN <noreply@boha-group.com>'
+  const FROM    = process.env.RESEND_FROM_EMAIL ?? 'Aegryn <noreply@boha-group.com>'
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'
 
   // 1. Créer le broadcast en DB (status = sending)

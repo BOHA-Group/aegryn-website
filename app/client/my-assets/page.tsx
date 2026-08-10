@@ -7,14 +7,14 @@ import { createServiceClient } from '@/lib/supabase'
 import DeleteAccountButton    from './DeleteAccountButton'
 
 export const metadata: Metadata = {
-  title: 'Mes actifs — Espace client AEGRYN',
+  title: 'Mes actifs — Espace client Aegryn',
   robots: { index: false, follow: false },
 }
 
 const STATUS_STEPS = [
   { key: 'submitted',    label: 'Dossier reçu',            desc: 'Votre dossier a bien été soumis.' },
   { key: 'under_review', label: 'Analyse en cours',        desc: 'Nos analystes étudient votre dossier.' },
-  { key: 'graded',       label: 'Grade attribué',          desc: 'Votre actif a reçu un grade officiel AEGRYN.' },
+  { key: 'graded',       label: 'Grade attribué',          desc: 'Votre actif a reçu un grade officiel Aegryn.' },
   { key: 'published',    label: 'Publié au catalogue',     desc: 'Votre actif est visible par les acquéreurs qualifiés.' },
   { key: 'sold',         label: 'Transaction finalisée',   desc: 'La transaction a été clôturée avec succès.' },
 ]
@@ -98,7 +98,7 @@ export default async function ClientMyAssetsPage() {
       <header className="bg-ag-navy px-6 py-5 flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-apex font-bold">
-            AEGRYN
+            Aegryn
           </Link>
           <span className="text-white/20">|</span>
           <span className="font-sans text-[12px] text-white/50">Espace client</span>

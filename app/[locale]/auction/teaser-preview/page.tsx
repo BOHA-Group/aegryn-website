@@ -1,5 +1,5 @@
 /**
- * /auction/teaser-preview — aperçu public du lot en vente (teaser AEGRYN Auction).
+ * /auction/teaser-preview — aperçu public du lot en vente (teaser Aegryn Auction).
  * Désormais lié publiquement depuis /auction/sessions ("Aperçu du lot" — session à venir).
  *
  * ⚠️ SUBBLINK_ASSET_ID est un placeholder — à remplacer par l'UUID réel de la

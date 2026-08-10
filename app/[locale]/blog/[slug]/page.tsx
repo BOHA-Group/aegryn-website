@@ -18,16 +18,16 @@ const CATEGORY_KEYWORDS: Record<ArticleCategory, string[]> = {
   market:        ['M&A tech Europe', 'transaction actifs numériques', 'multiple valorisation SaaS', 'marché cession tech', 'deal flow Europe'],
   seller:        ['vendre son SaaS', 'cession startup tech', 'exit fondateur', 'valorisation SaaS', 'due diligence vendeur'],
   buyer:         ['acheter un SaaS', 'acquisition tech Europe', 'search fund', 'family office tech', 'private equity SaaS'],
-  certification: ['certification actif tech', 'grade AEGRYN', 'audit SaaS', 'CIFS Protocol', 'due diligence indépendante'],
-  strategy:      ['stratégie cession tech', 'M&A stratégie', 'place de marché actifs tech', 'AEGRYN Auction', 'Swiss tech hub'],
-  case_study:    ['étude de cas SaaS', 'exit SaaS Europe', 'transaction certifiée', 'M&A case study tech', 'AEGRYN Grade'],
+  certification: ['certification actif tech', 'grade Aegryn', 'audit SaaS', 'CIFS Protocol', 'due diligence indépendante'],
+  strategy:      ['stratégie cession tech', 'M&A stratégie', 'place de marché actifs tech', 'Aegryn Auction', 'Swiss tech hub'],
+  case_study:    ['étude de cas SaaS', 'exit SaaS Europe', 'transaction certifiée', 'M&A case study tech', 'Aegryn Grade'],
   legal:         ['share deal asset deal', 'RGPD cession données', 'fiscalité exit fondateur', 'earnout SaaS', 'structuration juridique cession'],
   vertical:      ['LegalTech valorisation', 'FinTech M&A', 'AI SaaS multiples', 'vertical software Europe', 'actif tech certifié'],
   dach:          ['Tech M&A DACH', 'SaaS cession Allemagne', 'Suisse hub tech', 'Österreich startup exit', 'actif numérique DACH'],
 }
 
 const BASE_ARTICLE_KEYWORDS = [
-  'AEGRYN', 'actifs tech certifiés', 'Suisse', 'cession SaaS', 'transaction privée',
+  'Aegryn', 'actifs tech certifiés', 'Suisse', 'cession SaaS', 'transaction privée',
   'Engineered to Last', 'certification indépendante', 'grade actif numérique',
 ]
 
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     keywords,
-    authors: [{ name: 'AEGRYN', url: BASE }],
+    authors: [{ name: 'Aegryn', url: BASE }],
     creator: 'Aegryn Sàrl',
     publisher: 'Aegryn Sàrl',
     robots: {
@@ -77,11 +77,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url:           canonical,
-      siteName:      'AEGRYN',
+      siteName:      'Aegryn',
       type:          'article',
       publishedTime: new Date(article.date).toISOString(),
       modifiedTime:  new Date(article.date).toISOString(),
-      authors:       ['AEGRYN'],
+      authors:       ['Aegryn'],
       images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },
     twitter: {
@@ -203,7 +203,7 @@ export default async function ArticlePage({ params }: Props) {
                 {t('bodyComingSoon')}
               </p>
               <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-ag-gray-light">
-                AEGRYN Editorial — Q3 2026
+                Aegryn Editorial — Q3 2026
               </p>
             </div>
           )}

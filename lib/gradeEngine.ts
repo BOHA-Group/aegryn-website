@@ -1,5 +1,5 @@
 /**
- * lib/gradeEngine.ts — Moteur de calcul AEGRYN Grade
+ * lib/gradeEngine.ts — Moteur de calcul Aegryn Grade
  *
  * USAGE ADMIN EXCLUSIVEMENT — NE JAMAIS IMPORTER CÔTÉ CLIENT PUBLIC.
  *

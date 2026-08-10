@@ -44,18 +44,18 @@ async function sendInvoiceEmail(to: string, name: string, invoiceNumber: string,
     method: 'POST',
     headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      from: `${process.env.RESEND_FROM_NAME ?? 'AEGRYN'} <${from}>`,
+      from: `${process.env.RESEND_FROM_NAME ?? 'Aegryn'} <${from}>`,
       reply_to: process.env.RESEND_REPLY_TO ?? 'contact@boha-group.com',
       to: [to],
-      subject: `AEGRYN — Facture ${invoiceNumber}`,
+      subject: `Aegryn — Facture ${invoiceNumber}`,
       text:
         `Bonjour ${name},\n\n` +
-        `Veuillez trouver ci-joint votre facture AEGRYN.\n\n` +
+        `Veuillez trouver ci-joint votre facture Aegryn.\n\n` +
         `Référence : ${invoiceNumber}\n` +
         `Montant : ${total}\n` +
         (dueDate ? `Échéance : ${dueDate}\n` : '') +
         `\nMerci d'effectuer le virement à l'IBAN indiqué sur la facture en précisant la référence ${invoiceNumber}.\n\n` +
-        `L'équipe AEGRYN\nhttps://aegryn.com`,
+        `L'équipe Aegryn\nhttps://aegryn.com`,
     }),
   })
 }

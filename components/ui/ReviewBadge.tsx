@@ -8,7 +8,7 @@
  */
 
 interface ReviewBadgeProps {
-  label:     'AEGRYN Review' | 'AEGRYN Review+'
+  label:     'Aegryn Review' | 'Aegryn Review+'
   sublabel?: string   // ex: "Co-revu — Cabinet juridique"
   score?:    number
   showNotPublishable?: boolean
@@ -20,7 +20,7 @@ export default function ReviewBadge({
   score,
   showNotPublishable = false,
 }: ReviewBadgeProps) {
-  const isPlus = label === 'AEGRYN Review+'
+  const isPlus = label === 'Aegryn Review+'
 
   return (
     <div className="inline-flex flex-col items-center gap-1">

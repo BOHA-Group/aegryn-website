@@ -6,7 +6,7 @@ export type EmailConfig = {
   to: string
   subjectFounder: string
   textFounder: string
-  /** Email interne équipe AEGRYN */
+  /** Email interne équipe Aegryn */
   subjectInternal: string
   textInternal: string
 }
@@ -23,7 +23,7 @@ async function sendEmail(to: string, subject: string, text: string) {
     method: 'POST',
     headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      from: `${process.env.RESEND_FROM_NAME ?? 'AEGRYN'} <${from}>`,
+      from: `${process.env.RESEND_FROM_NAME ?? 'Aegryn'} <${from}>`,
       reply_to: process.env.RESEND_REPLY_TO ?? 'contact@boha-group.com',
       to: [to],
       subject,
@@ -55,7 +55,7 @@ export async function captureLead(
     console.error(`[leadCapture] Supabase insert error (${table})`, error)
   }
 
-  const internalEmail = process.env.AEGRYN_INTERNAL_EMAIL ?? 'team@boha-group.com'
+  const internalEmail = process.env.Aegryn_INTERNAL_EMAIL ?? 'team@boha-group.com'
 
   await Promise.allSettled([
     sendEmail(email.to, email.subjectFounder, email.textFounder),
@@ -71,7 +71,7 @@ export async function captureLead(
  * sans insérer en base. Utile quand l'insert est fait en amont.
  */
 export async function sendLeadEmails(email: EmailConfig): Promise<void> {
-  const internalEmail = process.env.AEGRYN_INTERNAL_EMAIL ?? 'team@boha-group.com'
+  const internalEmail = process.env.Aegryn_INTERNAL_EMAIL ?? 'team@boha-group.com'
   await Promise.allSettled([
     sendEmail(email.to, email.subjectFounder, email.textFounder),
     sendEmail(internalEmail, email.subjectInternal, email.textInternal),

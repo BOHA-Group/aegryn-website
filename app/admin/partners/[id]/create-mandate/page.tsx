@@ -6,7 +6,7 @@ import Link from 'next/link'
 import CreateMandateForm from './CreateMandateForm'
 
 export const metadata: Metadata = {
-  title: 'Créer un mandat — AEGRYN Admin',
+  title: 'Créer un mandat — Aegryn Admin',
   robots: { index: false, follow: false },
 }
 
@@ -43,10 +43,10 @@ export default async function AdminCreateMandatePage({
         </Link>
 
         <div className="mb-8">
-          <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">AEGRYN Admin · CAS 3</p>
+          <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn Admin · CAS 3</p>
           <h1 className="text-[22px] font-bold text-gray-900 tracking-tight">Créer un mandat client</h1>
           <p className="text-[12px] text-gray-400 mt-1">
-            Pour <strong>{String(profile.full_name ?? profile.email)}</strong> — le partenaire facture son client directement et reverse 15% à AEGRYN.
+            Pour <strong>{String(profile.full_name ?? profile.email)}</strong> — le partenaire facture son client directement et reverse 15% à Aegryn.
           </p>
         </div>
 

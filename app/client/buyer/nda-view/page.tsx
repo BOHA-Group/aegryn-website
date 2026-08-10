@@ -14,7 +14,7 @@ import { NDA_VERSIONS } from '@/lib/ndaVersions'
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Mon NDA — AEGRYN',
+    title: 'Mon NDA — Aegryn',
     robots: { index: false, follow: false },
   }
 }

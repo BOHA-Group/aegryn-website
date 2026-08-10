@@ -312,7 +312,7 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
           <div className="bg-amber-50 border border-amber-200 p-4">
             <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-amber-700 mb-1">RIB / Coordonnées bancaires</p>
             <p className="font-sans text-[12px] text-amber-800 leading-relaxed">
-              Les coordonnées bancaires AEGRYN sont transmises <strong>séparément</strong> au destinataire par l&apos;équipe, par email sécurisé, afin de prévenir tout risque de fraude ou d&apos;interception. Elles <strong>n&apos;apparaissent pas</strong> sur la facture générée.
+              Les coordonnées bancaires Aegryn sont transmises <strong>séparément</strong> au destinataire par l&apos;équipe, par email sécurisé, afin de prévenir tout risque de fraude ou d&apos;interception. Elles <strong>n&apos;apparaissent pas</strong> sur la facture générée.
             </p>
           </div>
         </div>

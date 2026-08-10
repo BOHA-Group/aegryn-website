@@ -6,7 +6,7 @@ import { Bell } from 'lucide-react'
 import PartnerNotificationsClient from './PartnerNotificationsClient'
 
 export const metadata: Metadata = {
-  title: 'Notifications — Espace Partenaire AEGRYN',
+  title: 'Notifications — Espace Partenaire Aegryn',
   robots: { index: false, follow: false },
 }
 

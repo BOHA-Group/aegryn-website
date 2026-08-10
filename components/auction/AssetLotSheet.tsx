@@ -147,7 +147,7 @@ function GradeBadge({ grade, label }: { grade: string; label: string }) {
       <div className="px-5 py-4 flex flex-col justify-center" style={{ backgroundColor: T.paper }}>
         <span className="text-[10px] font-bold uppercase mb-1"
           style={{ color: T.gold, letterSpacing: '0.1em', fontFamily: 'Arial, sans-serif' }}>
-          Grade préliminaire AEGRYN
+          Grade préliminaire Aegryn
         </span>
         <p className="text-[13px] leading-[1.5]"
           style={{ color: T.ink, fontFamily: 'Georgia, serif' }}>
@@ -248,7 +248,7 @@ export default function AssetLotSheet({ asset }: { asset: AssetLot }) {
         style={{ borderColor: T.line, backgroundColor: 'rgba(255,255,255,0.92)' }}>
         <span className="text-[11px] font-bold"
           style={{ color: T.ink, letterSpacing: '0.14em', fontFamily: 'Arial, sans-serif' }}>
-          AEGRYN AUCTION
+          Aegryn AUCTION
         </span>
         <span className="text-[10px] hidden sm:inline"
           style={{ color: T.grey600, letterSpacing: '0.06em', fontFamily: 'Arial, sans-serif' }}>
@@ -381,7 +381,7 @@ export default function AssetLotSheet({ asset }: { asset: AssetLot }) {
           <div className="border-t-2 mb-4 mx-auto w-16" style={{ borderColor: T.gold }} />
           <p className="text-[12px] font-bold"
             style={{ color: T.ink, letterSpacing: '0.2em', fontFamily: 'Arial, sans-serif' }}>
-            AEGRYN AUCTION
+            Aegryn AUCTION
           </p>
           <p className="text-[10px] mt-1"
             style={{ color: T.grey600, letterSpacing: '0.08em', fontFamily: 'Arial, sans-serif' }}>

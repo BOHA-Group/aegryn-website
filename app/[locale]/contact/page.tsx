@@ -68,7 +68,7 @@ export default async function ContactPage({ params }: Props) {
                 rel="noopener noreferrer"
                 className="text-sm text-ag-gray hover:text-ag-black transition-colors"
               >
-                AEGRYN — LinkedIn ↗
+                Aegryn — LinkedIn ↗
               </a>
             </div>
             <div>

@@ -204,7 +204,7 @@ export default function AssetTeaserDocument({ teaser, assetId }: Props) {
           className="text-[10px] font-bold"
           style={{ color: T.ink, letterSpacing: '0.18em', fontFamily: 'Arial, sans-serif' }}
         >
-          AEGRYN AUCTION
+          Aegryn AUCTION
         </p>
         <p
           className="text-[9px] mt-0.5"

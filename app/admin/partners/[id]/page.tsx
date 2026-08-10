@@ -7,7 +7,7 @@ import CertValidation          from './CertValidation'
 import DeletePartnerButton     from './DeletePartnerButton'
 
 export const metadata: Metadata = {
-  title: 'Partenaire — AEGRYN Admin',
+  title: 'Partenaire — Aegryn Admin',
   robots: { index: false, follow: false },
 }
 
@@ -118,7 +118,7 @@ export default async function AdminPartnerDetailPage({
                 </Link>
               </div>
               {(mandates ?? []).length === 0 ? (
-                <div className="p-8 text-center text-[12px] text-gray-400">Aucun mandat. Le partenaire facture son client directement et reverse 15% à AEGRYN.</div>
+                <div className="p-8 text-center text-[12px] text-gray-400">Aucun mandat. Le partenaire facture son client directement et reverse 15% à Aegryn.</div>
               ) : (
                 <div className="divide-y divide-gray-100">
                   {(mandates ?? []).map((m: Record<string, unknown>) => (

@@ -33,7 +33,7 @@ const PROFILES: {
   {
     role:    'partner',
     label:   'Partenaire',
-    desc:    'Apporteur d\'affaires ou co-certificateur — accédez à l\'espace partenaire AEGRYN.',
+    desc:    'Apporteur d\'affaires ou co-certificateur — accédez à l\'espace partenaire Aegryn.',
     kycNote: 'KYC : pièce d\'identité + justificatif domicile + Kbis + assurance pro',
     icon:    <Users size={16} />,
     href:    '/client/partner',

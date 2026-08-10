@@ -39,7 +39,7 @@ type Payload = z.infer<typeof schema>
 /* ─── Email body builders ────────────────────────────────── */
 function reportText(d: Payload): string {
   return `
-AEGRYN VALUATION — RAPPORT INDICATIF
+Aegryn VALUATION — RAPPORT INDICATIF
 ======================================
 
 Grade estimé   : ${d.estimated_grade}
@@ -60,7 +60,7 @@ ${d.pre_revenue ? 'Mode pre-revenue — valorisation IP+Code uniquement' : `Four
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 AVERTISSEMENT : Cette estimation est indicative, générée par
 algorithme à partir de vos données déclarées sans vérification.
-Elle ne constitue pas un Grade AEGRYN officiel.
+Elle ne constitue pas un Grade Aegryn officiel.
 
 Pour démarrer une certification officielle :
 → https://aegryn.com/grade/submit
@@ -73,7 +73,7 @@ Pour réserver un Assessment Day gratuit :
 
 function internalNotifText(d: Payload): string {
   return `
-[AEGRYN] Nouveau lead Valuation
+[Aegryn] Nouveau lead Valuation
 ================================
 Email          : ${d.email}
 Grade estimé   : ${d.estimated_grade}
@@ -118,7 +118,7 @@ export async function POST(req: NextRequest) {
       },
       {
         to:              data.email,
-        subjectFounder:  `Votre estimation AEGRYN — Grade ${data.estimated_grade} (${data.score_total}/100)`,
+        subjectFounder:  `Votre estimation Aegryn — Grade ${data.estimated_grade} (${data.score_total}/100)`,
         textFounder:     reportText(data),
         subjectInternal: `[Lead Valuation] ${data.estimated_grade} — ${data.email}`,
         textInternal:    internalNotifText(data),

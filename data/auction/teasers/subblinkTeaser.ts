@@ -17,7 +17,7 @@ export const subblinkTeaser: AssetTeaser = {
   lotNumber:     '001',
   name:          'subblink',
   tagline:       "Intelligence contractuelle par IA — l'algorithme qui n'a pas d'équivalent",
-  catalogContext:'Aperçu privé · Catalogue AEGRYN Auction · Phase 0',
+  catalogContext:'Aperçu privé · Catalogue Aegryn Auction · Phase 0',
   recipientName:  null,
 
   pitch:

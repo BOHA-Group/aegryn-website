@@ -11,8 +11,8 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
-    title: 'Comment ça marche — AEGRYN Auction',
-    description: "Le processus AEGRYN en 6 étapes : certification CIFS, grade indépendant, data room confidentielle, matching acheteurs, session auction, séquestre bancaire suisse.",
+    title: 'Comment ça marche — Aegryn Auction',
+    description: "Le processus Aegryn en 6 étapes : certification CIFS, grade indépendant, data room confidentielle, matching acheteurs, session auction, séquestre bancaire suisse.",
     path: '/auction/how-it-works',
     locale,
     keywords: [
@@ -29,7 +29,7 @@ const PROCESS_STEPS = [
     icon:   <BarChart3 size={22} className="text-ag-apex" />,
     title:  'Valorisation indicative',
     label:  'Cédant',
-    desc:   "Le cédant complète le calculateur de valorisation AEGRYN (finance, code, IP, sécurité). Il obtient une fourchette indicative et un grade estimé. Gratuit, confidentiel, sans engagement.",
+    desc:   "Le cédant complète le calculateur de valorisation Aegryn (finance, code, IP, sécurité). Il obtient une fourchette indicative et un grade estimé. Gratuit, confidentiel, sans engagement.",
     detail: "Outil self-serve en 4 étapes · Grade estimé ★/AAA/AA/A/B · Email du rapport",
     cta:    { label: 'Estimer la valeur', href: '/valuation' as const },
     side:   'seller',
@@ -39,7 +39,7 @@ const PROCESS_STEPS = [
     icon:   <FileText size={22} className="text-ag-apex" />,
     title:  'Dépôt de mandat & NDA cédant',
     label:  'Cédant',
-    desc:   "Le cédant soumet son actif à l'équipe AEGRYN avec les éléments de base (nom interne, ARR, type, pays). Il signe le NDA AEGRYN avant tout traitement. Mandat exclusif 60 jours.",
+    desc:   "Le cédant soumet son actif à l'équipe Aegryn avec les éléments de base (nom interne, ARR, type, pays). Il signe le NDA Aegryn avant tout traitement. Mandat exclusif 60 jours.",
     detail: "Formulaire de soumission · Signature NDA cédant · Mandat exclusif 60 jours · Réponse sous 48h",
     cta:    { label: 'Déposer un mandat', href: '/auction/submit' as const },
     side:   'seller',
@@ -48,7 +48,7 @@ const PROCESS_STEPS = [
     num:    '03',
     icon:   <ShieldCheck size={22} className="text-ag-apex" />,
     title:  'Certification CIFS & attribution de grade',
-    label:  'AEGRYN',
+    label:  'Aegryn',
     desc:   "Un auditeur CIFS indépendant examine le code, les finances, l'IP et la sécurité. Un grade officiel ★/AAA/AA/A/B est attribué, documenté et opposable. C'est la différence fondamentale avec tout autre marketplace.",
     detail: "Audit indépendant · 4 dimensions · Grade officiel et opposable · Rapport complet remis",
     cta:    { label: 'Comprendre les grades', href: '/grade/grading-system' as const },
@@ -58,7 +58,7 @@ const PROCESS_STEPS = [
     num:    '04',
     icon:   <Users size={22} className="text-ag-apex" />,
     title:  'Matching acheteurs pré-qualifiés',
-    label:  'AEGRYN',
+    label:  'Aegryn',
     desc:   "Les acheteurs dont le profil correspond (secteur, ticket, géographie) reçoivent une alerte confidentielle — secteur générique et grade uniquement. Aucun nom, aucune métrique, aucune URL. L'identité n'est révélée qu'après NDA acheteur et ouverture de session.",
     detail: "Matching sur profil acheteur · Notification : secteur + grade uniquement · NDA acheteur requis avant toute information",
     cta:    { label: 'Accès acheteurs', href: '/auction/buyers' as const },
@@ -78,7 +78,7 @@ const PROCESS_STEPS = [
     num:    '06',
     icon:   <Landmark size={22} className="text-ag-apex" />,
     title:  'Closing & séquestre bancaire suisse',
-    label:  'AEGRYN',
+    label:  'Aegryn',
     desc:   "10% du prix de cession est versé en séquestre bancaire institutionnel suisse au moment du HoT (Heads of Terms). Les actifs ne sont transférés qu'après libération complète des fonds. Juridiction suisse, droit continental.",
     detail: "10% au HoT en séquestre · Bancaire institutionnel suisse · Transfert conditionné aux fonds · SPA sous droit suisse",
     cta:    null,
@@ -103,7 +103,7 @@ const SIDE_COLORS: Record<string, string> = {
 }
 const SIDE_LABELS: Record<string, string> = {
   seller: 'Cédant',
-  aegryn: 'AEGRYN',
+  aegryn: 'Aegryn',
   both:   'Cédant + Acheteurs',
 }
 
@@ -118,7 +118,7 @@ export default async function HowItWorksPage({ params }: Props) {
         <div className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
-            Processus AEGRYN
+            Processus Aegryn
           </p>
           <h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-2xl mb-6"
@@ -198,7 +198,7 @@ export default async function HowItWorksPage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── Comparatif AEGRYN vs autres ── */}
+      {/* ── Comparatif Aegryn vs autres ── */}
       <section className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-3 flex items-center gap-3">
@@ -206,13 +206,13 @@ export default async function HowItWorksPage({ params }: Props) {
             Positionnement
           </p>
           <h2 className="font-sans font-bold text-ag-black text-[24px] tracking-[-0.02em] mb-10">
-            AEGRYN vs autres marketplaces
+            Aegryn vs autres marketplaces
           </h2>
 
           <div className="border border-ag-border overflow-hidden">
             <div className="grid grid-cols-3 bg-ag-navy">
               <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50" />
-              <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex border-l border-white/10">AEGRYN</div>
+              <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex border-l border-white/10">Aegryn</div>
               <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50 border-l border-white/10">Autres marketplaces</div>
             </div>
             {COMPARE_ROWS.map(({ label, aegryn, other }, i) => (

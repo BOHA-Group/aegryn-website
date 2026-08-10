@@ -21,7 +21,7 @@ export async function PATCH(
 
   const supa = createServiceClient()
 
-  // Récupérer la facture + mandat pour calculer la commission AEGRYN
+  // Récupérer la facture + mandat pour calculer la commission Aegryn
   const { data: invoice } = await supa
     .from('partner_mandate_invoices')
     .select('id, amount_chf, status, mandate_id')
@@ -54,7 +54,7 @@ export async function PATCH(
 
   if (updateErr) return NextResponse.json({ error: updateErr.message }, { status: 500 })
 
-  // CAS 3 : à la validation, créer une commission due pour AEGRYN (retrocession_pct % du montant facturé)
+  // CAS 3 : à la validation, créer une commission due pour Aegryn (retrocession_pct % du montant facturé)
   if (action === 'validate' && invoice.amount_chf && mandate.retrocession_pct) {
     const aegrynDue = Math.round(Number(invoice.amount_chf) * Number(mandate.retrocession_pct) / 100)
 

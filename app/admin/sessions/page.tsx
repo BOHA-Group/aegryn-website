@@ -45,7 +45,7 @@ export default async function AdminSessionsPage() {
             ← Dashboard
           </Link>
           <span className="text-gray-200">|</span>
-          <h1 className="font-sans font-bold text-gray-900 text-[15px]">Sessions AEGRYN</h1>
+          <h1 className="font-sans font-bold text-gray-900 text-[15px]">Sessions Aegryn</h1>
         </div>
         <Link
           href="/admin/sessions/new"
@@ -88,7 +88,7 @@ export default async function AdminSessionsPage() {
             <div className="px-6 py-16 text-center">
               <Calendar size={28} className="text-gray-200 mx-auto mb-4" />
               <p className="font-sans text-[14px] text-gray-400 mb-2">Aucune session créée</p>
-              <p className="font-sans text-[12px] text-gray-300">Créez votre première session AEGRYN pour commencer.</p>
+              <p className="font-sans text-[12px] text-gray-300">Créez votre première session Aegryn pour commencer.</p>
             </div>
           ) : (
             <div className="overflow-x-auto">

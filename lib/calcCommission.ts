@@ -1,5 +1,5 @@
 /**
- * Calcul de la commission AEGRYN sur une transaction PTT
+ * Calcul de la commission Aegryn sur une transaction PTT
  * Grille dégressive juillet 2026 — minimum 25 000 € HT
  *
  * En dessous de 100 000 € : taux convenu au mandat (retourne null)

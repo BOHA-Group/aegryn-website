@@ -6,7 +6,7 @@ import { NDA_VERSIONS }        from '@/lib/ndaVersions'
 import { ShieldCheck }         from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Mon NDA Partenaire — AEGRYN',
+  title: 'Mon NDA Partenaire — Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -55,7 +55,7 @@ export default async function PartnerNdaPage() {
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
         <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Mon NDA Partenaire</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
-          Accord de confidentialité et conditions de partenariat AEGRYN — lecture seule.
+          Accord de confidentialité et conditions de partenariat Aegryn — lecture seule.
         </p>
       </div>
 
@@ -102,7 +102,7 @@ export default async function PartnerNdaPage() {
       {!isUpToDate && (
         <div className="bg-amber-50 border border-amber-200 px-5 py-4 mb-6 text-[12px] text-amber-800">
           Une nouvelle version du NDA Partenaire est disponible (version {currentVer}).
-          Votre signature porte sur la version {version}. Contactez AEGRYN pour toute question.
+          Votre signature porte sur la version {version}. Contactez Aegryn pour toute question.
         </div>
       )}
 
@@ -117,18 +117,18 @@ export default async function PartnerNdaPage() {
             Accord de Confidentialité et Conditions de Partenariat
           </h2>
           <p className="text-[12px] text-gray-500 mt-1">
-            AEGRYN (formerly BOHA-Group, société enregistrée en Suisse) · contact@boha-group.com
+            Aegryn (formerly BOHA-Group, société enregistrée en Suisse) · contact@boha-group.com
           </p>
         </div>
 
         <div className="bg-gray-50 px-5 py-4 text-[12px] space-y-1">
-          <p><strong>Entre :</strong> AEGRYN (ci-après « AEGRYN »)</p>
+          <p><strong>Entre :</strong> Aegryn (ci-après « Aegryn »)</p>
           <p><strong>Et :</strong> {fullName} (ci-après « le Partenaire »)</p>
         </div>
 
         <NdaArticle num="1" title="Objet">
-          Dans le cadre de la relation de partenariat avec AEGRYN — incluant sans limitation l&apos;accès
-          à l&apos;annuaire expert AEGRYN, la mise en relation avec des cédants et acquéreurs qualifiés,
+          Dans le cadre de la relation de partenariat avec Aegryn — incluant sans limitation l&apos;accès
+          à l&apos;annuaire expert Aegryn, la mise en relation avec des cédants et acquéreurs qualifiés,
           et la participation au réseau d&apos;introductions — le Partenaire s&apos;engage à la stricte
           confidentialité des informations auxquelles il a accès.
         </NdaArticle>
@@ -137,11 +137,11 @@ export default async function PartnerNdaPage() {
           <p>Sont considérées comme confidentielles :</p>
           <ul className="list-none mt-3 space-y-2">
             {[
-              'L\'identité et les coordonnées des cédants et acquéreurs introduits ou mis en relation via AEGRYN',
+              'L\'identité et les coordonnées des cédants et acquéreurs introduits ou mis en relation via Aegryn',
               'Les informations sur les actifs en cours de certification ou de cession',
-              'Les conditions financières des transactions et le détail des mandats AEGRYN',
-              'Les informations relatives aux autres partenaires du réseau AEGRYN',
-              'Les méthodes, processus et outils propriétaires AEGRYN (protocole C/I/F/S, grade engine)',
+              'Les conditions financières des transactions et le détail des mandats Aegryn',
+              'Les informations relatives aux autres partenaires du réseau Aegryn',
+              'Les méthodes, processus et outils propriétaires Aegryn (protocole C/I/F/S, grade engine)',
               'Toute information transmise dans le cadre d\'une introduction ou d\'un apport d\'affaires',
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
@@ -156,11 +156,11 @@ export default async function PartnerNdaPage() {
           <p>Le Partenaire s&apos;engage à :</p>
           <ul className="list-none mt-3 space-y-2">
             {[
-              'Ne pas contacter directement les cédants ou acquéreurs introduits par AEGRYN en dehors du cadre formel de la relation partenariale',
+              'Ne pas contacter directement les cédants ou acquéreurs introduits par Aegryn en dehors du cadre formel de la relation partenariale',
               'Ne pas reproduire, transmettre ou exploiter à titre personnel les informations confidentielles auxquelles il a accès dans l\'annuaire expert ou via les mandats',
-              'Ne pas utiliser les mises en relation AEGRYN pour contourner le processus et percevoir directement une rétrocession ou contrepartie de toute nature',
-              'Informer immédiatement AEGRYN de tout contact direct initié par un cédant ou acquéreur introduit dans le cadre d\'un mandat AEGRYN',
-              'Respecter l\'exclusivité territoriale ou sectorielle éventuellement accordée par AEGRYN dans le cadre d\'un mandat signé',
+              'Ne pas utiliser les mises en relation Aegryn pour contourner le processus et percevoir directement une rétrocession ou contrepartie de toute nature',
+              'Informer immédiatement Aegryn de tout contact direct initié par un cédant ou acquéreur introduit dans le cadre d\'un mandat Aegryn',
+              'Respecter l\'exclusivité territoriale ou sectorielle éventuellement accordée par Aegryn dans le cadre d\'un mandat signé',
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-ag-navy mt-1.5 shrink-0" />
@@ -172,28 +172,28 @@ export default async function PartnerNdaPage() {
 
         <NdaArticle num="4" title="Modèle économique — Absence de commission">
           <p>
-            Le Partenaire reconnaît et accepte expressément que son accès au réseau AEGRYN est
+            Le Partenaire reconnaît et accepte expressément que son accès au réseau Aegryn est
             exclusivement conditionné au paiement d&apos;un abonnement Fiche Expert (89 CHF HT/mois ou
-            tarif annuel en vigueur). AEGRYN ne perçoit <strong>aucune commission</strong> sur les
+            tarif annuel en vigueur). Aegryn ne perçoit <strong>aucune commission</strong> sur les
             honoraires facturés par le Partenaire à ses clients, quelle que soit la nature de la
             mission (conseil, due diligence, assistance juridique, audit technique, etc.).
           </p>
           <p className="mt-3">
             Le Partenaire est un prestataire indépendant. Il fixe <strong>librement ses honoraires</strong>,
             ses conditions d&apos;intervention et ses modalités contractuelles avec ses clients. Il n&apos;est pas
-            mandataire d&apos;AEGRYN et reste seul responsable de ses prestations.
+            mandataire d&apos;Aegryn et reste seul responsable de ses prestations.
           </p>
         </NdaArticle>
 
         <NdaArticle num="5" title="Programme de parrainage — Fiche Expert">
-          <p>Dans le cadre de son programme de développement réseau, AEGRYN offre au Partenaire
+          <p>Dans le cadre de son programme de développement réseau, Aegryn offre au Partenaire
           détenant un abonnement Fiche Expert actif la possibilité de parrainer d&apos;autres professionnels :</p>
           <ul className="list-none mt-3 space-y-2">
             {[
               'Parrain : 1 mois offert sur son propre abonnement pour chaque filleul souscrivant un abonnement Fiche Expert.',
               'Filleul : 1 mois offert dès la souscription avec un code de parrainage valide.',
               'Le programme est réservé aux Partenaires disposant d\'un abonnement actif au moment de l\'attribution du crédit.',
-              'AEGRYN se réserve le droit de modifier ou de suspendre le programme avec un préavis de 30 jours.',
+              'Aegryn se réserve le droit de modifier ou de suspendre le programme avec un préavis de 30 jours.',
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-ag-navy mt-1.5 shrink-0" />
@@ -218,7 +218,7 @@ export default async function PartnerNdaPage() {
 
         <NdaArticle num="8" title="Droit applicable">
           Le présent accord est soumis au droit suisse. Tout litige sera soumis aux tribunaux
-          du canton de domicile d&apos;AEGRYN, après tentative de résolution amiable sous 30 jours.
+          du canton de domicile d&apos;Aegryn, après tentative de résolution amiable sous 30 jours.
         </NdaArticle>
       </div>
 

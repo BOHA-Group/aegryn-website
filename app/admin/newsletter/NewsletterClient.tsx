@@ -201,7 +201,7 @@ export default function NewsletterClient({
       )}
 
       <div className="mt-6 bg-blue-50 border border-blue-100 p-4 text-[11px] text-blue-600">
-        <strong>Prospects</strong> = abonnés sans compte AEGRYN — inscrits via le formulaire newsletter public.<br />
+        <strong>Prospects</strong> = abonnés sans compte Aegryn — inscrits via le formulaire newsletter public.<br />
         <strong>Membres</strong> = abonnés avec un compte connecté au moment de l&apos;inscription.
       </div>
     </>

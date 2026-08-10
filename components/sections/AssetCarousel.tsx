@@ -4,7 +4,7 @@ import { useLayoutEffect, useRef } from 'react'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
-import { AEGRYN_ASSETS } from '@/data/assets'
+import { Aegryn_ASSETS } from '@/data/assets'
 import { useTranslations } from 'next-intl'
 
 const STATUS_DOT_CONFIG = {
@@ -14,7 +14,7 @@ const STATUS_DOT_CONFIG = {
   not_started: { dot: 'bg-ag-gray-light', pulse: false },
 } as const
 
-const VISIBLE = AEGRYN_ASSETS.slice()
+const VISIBLE = Aegryn_ASSETS.slice()
 
 /**
  * Horizontal scroll-snap carousel for assets.

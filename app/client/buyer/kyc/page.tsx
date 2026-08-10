@@ -7,7 +7,7 @@ import KycUploadForm  from './KycUploadForm'
 import KycViewButton  from './KycViewButton'
 
 export const metadata: Metadata = {
-  title: 'KYC — Espace Acquéreur AEGRYN',
+  title: 'KYC — Espace Acquéreur Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -106,7 +106,7 @@ export default async function BuyerKycPage() {
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Acquéreur</p>
         <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">KYC — Vérification d&apos;identité</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
-          Documents requis pour accéder au processus d&apos;acquisition AEGRYN.
+          Documents requis pour accéder au processus d&apos;acquisition Aegryn.
         </p>
       </div>
 

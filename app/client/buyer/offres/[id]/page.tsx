@@ -6,13 +6,13 @@ import { createServiceClient } from '@/lib/supabase'
 import { ArrowLeft, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Détail offre — Espace Acquéreur AEGRYN',
+  title: 'Détail offre — Espace Acquéreur Aegryn',
   robots: { index: false, follow: false },
 }
 
 const STATUS_LABELS: Record<string, { label: string; desc: string }> = {
   draft:     { label: 'Brouillon',    desc: 'Votre offre n\'a pas encore été soumise.' },
-  submitted: { label: 'Soumise',      desc: 'Votre offre est en cours d\'examen par l\'équipe AEGRYN.' },
+  submitted: { label: 'Soumise',      desc: 'Votre offre est en cours d\'examen par l\'équipe Aegryn.' },
   retained:  { label: 'Retenue',      desc: 'Votre offre a été retenue. Un deal manager va vous contacter.' },
   rejected:  { label: 'Non retenue',  desc: 'Votre offre n\'a pas été retenue pour ce dossier.' },
   withdrawn: { label: 'Retirée',      desc: 'Vous avez retiré cette offre.' },
@@ -127,7 +127,7 @@ export default async function BuyerOfferDetailPage({
       {/* Note admin */}
       {bid.admin_note && (
         <div className={`border px-5 py-4 mb-6 ${bid.status === 'rejected' ? 'border-red-200 bg-red-50' : 'border-gray-200 bg-gray-50'}`}>
-          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-2">Message de l&apos;équipe AEGRYN</p>
+          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-2">Message de l&apos;équipe Aegryn</p>
           <p className="font-sans text-[13px] text-gray-700 leading-relaxed">{bid.admin_note}</p>
         </div>
       )}
@@ -137,7 +137,7 @@ export default async function BuyerOfferDetailPage({
         <div className="bg-ag-navy p-5">
           <p className="font-mono text-[9px] uppercase tracking-widest text-white/40 mb-1">Prochaine étape</p>
           <p className="font-sans text-white text-[13px] mb-3">
-            Votre offre a été retenue. Un deal manager AEGRYN vous contactera par email pour organiser la suite du processus (data room, Accord de Principe).
+            Votre offre a été retenue. Un deal manager Aegryn vous contactera par email pour organiser la suite du processus (data room, Accord de Principe).
           </p>
           <Link href="/client/buyer/transactions"
             className="inline-flex items-center gap-1.5 bg-ag-apex text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-apex/90 transition-colors">
@@ -149,7 +149,7 @@ export default async function BuyerOfferDetailPage({
       {bid.status === 'submitted' && (
         <div className="bg-gray-50 border border-gray-200 p-5">
           <p className="font-sans text-[12px] text-gray-500">
-            Votre offre est en attente d&apos;examen. L&apos;équipe AEGRYN vous répondra dans les <strong>48h ouvrables</strong>. En cas d&apos;urgence, contactez <a href="mailto:contact@boha-group.com" className="text-ag-navy underline">contact@boha-group.com</a>.
+            Votre offre est en attente d&apos;examen. L&apos;équipe Aegryn vous répondra dans les <strong>48h ouvrables</strong>. En cas d&apos;urgence, contactez <a href="mailto:contact@boha-group.com" className="text-ag-navy underline">contact@boha-group.com</a>.
           </p>
         </div>
       )}

@@ -18,7 +18,7 @@ async function sendEmail(to: string, subject: string, text: string) {
     method: 'POST',
     headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      from: `${process.env.RESEND_FROM_NAME ?? 'AEGRYN'} <${from}>`,
+      from: `${process.env.RESEND_FROM_NAME ?? 'Aegryn'} <${from}>`,
       reply_to: process.env.RESEND_REPLY_TO ?? 'contact@boha-group.com',
       to: [to],
       subject,
@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
     }
 
     const supa  = createServiceClient()
-    const adminEmail = process.env.AEGRYN_INTERNAL_EMAIL ?? 'team@boha-group.com'
+    const adminEmail = process.env.Aegryn_INTERNAL_EMAIL ?? 'team@boha-group.com'
 
     /* ── Récupérer le profil cédant ── */
     const { data: profile } = await supa
@@ -90,7 +90,7 @@ export async function POST(req: NextRequest) {
       recipient_email:      user.email!,
       line_items: [
         {
-          description: `Frais de publication catalogue AEGRYN — "${body.assetName}"`,
+          description: `Frais de publication catalogue Aegryn — "${body.assetName}"`,
           unit:        'Forfait',
           qty:         1,
           unit_price_ht: 2000,
@@ -101,10 +101,10 @@ export async function POST(req: NextRequest) {
       vat_amount:   0,
       total_ttc:    2000,
       currency:     'CHF',
-      iban:         process.env.AEGRYN_IBAN ?? '',
-      bic:          process.env.AEGRYN_BIC ?? '',
-      bank_name:    process.env.AEGRYN_BANK_NAME ?? '',
-      account_holder: 'AEGRYN / BOHA-Group',
+      iban:         process.env.Aegryn_IBAN ?? '',
+      bic:          process.env.Aegryn_BIC ?? '',
+      bank_name:    process.env.Aegryn_BANK_NAME ?? '',
+      account_holder: 'Aegryn / BOHA-Group',
       status:       'draft',
       due_date:     new Date(Date.now() + 14 * 86400000).toISOString().slice(0, 10),
     })
@@ -114,7 +114,7 @@ export async function POST(req: NextRequest) {
     await sendEmail(
       adminEmail,
       `[Catalogue] Nouvelle demande de mise au catalogue — ${body.assetName} (${user.email})`,
-      `Nouvelle demande de mise au catalogue AEGRYN\n\n` +
+      `Nouvelle demande de mise au catalogue Aegryn\n\n` +
       `Cédant : ${sellerName}\n` +
       `Email : ${user.email}\n` +
       `Actif : ${body.assetName}\n` +
@@ -133,19 +133,19 @@ export async function POST(req: NextRequest) {
     /* ── Email cédant (accusé réception) ── */
     await sendEmail(
       user.email!,
-      'AEGRYN — Votre demande de mise au catalogue a été reçue',
+      'Aegryn — Votre demande de mise au catalogue a été reçue',
       `Bonjour ${sellerName},\n\n` +
       `Nous avons bien reçu votre demande de mise au catalogue pour l'actif "${body.assetName}".\n\n` +
       `Vous avez accepté :\n` +
-      `✓ La mise au catalogue AEGRYN\n` +
+      `✓ La mise au catalogue Aegryn\n` +
       `✓ Les frais de publication de CHF 2 000 HT (déductibles de la commission en cas de vente)\n\n` +
       `Prochaines étapes :\n` +
       `1. Notre équipe va examiner votre dossier (délai : 72h ouvrées max)\n` +
       `2. Vous recevrez une facture par email avec les instructions de virement\n` +
       `3. À réception du paiement, votre actif sera préparé pour le catalogue (15 jours)\n` +
-      `4. Votre actif sera visible aux acquéreurs membres AEGRYN à J+45 minimum\n\n` +
+      `4. Votre actif sera visible aux acquéreurs membres Aegryn à J+45 minimum\n\n` +
       `Référence demande : ${catReq!.id}\n\n` +
-      `L'équipe AEGRYN\nhttps://aegryn.com`
+      `L'équipe Aegryn\nhttps://aegryn.com`
     )
 
     return NextResponse.json({ ok: true, requestId: catReq!.id, invoiceNumber })

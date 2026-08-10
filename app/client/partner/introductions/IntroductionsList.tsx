@@ -255,7 +255,7 @@ export default function IntroductionsList({ initial }: { initial: Introduction[]
 
             {intro.admin_note && (
               <div className="bg-gray-50 border border-gray-200 px-3 py-2 mb-3">
-                <p className="font-mono text-[8px] uppercase tracking-widest text-gray-400 mb-1">Note AEGRYN</p>
+                <p className="font-mono text-[8px] uppercase tracking-widest text-gray-400 mb-1">Note Aegryn</p>
                 <p className="font-sans text-[11px] text-gray-600">{intro.admin_note}</p>
               </div>
             )}

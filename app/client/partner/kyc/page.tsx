@@ -7,7 +7,7 @@ import PartnerKycUploadForm from './PartnerKycUploadForm'
 import KycViewButton        from '@/app/client/buyer/kyc/KycViewButton'
 
 export const metadata: Metadata = {
-  title: 'KYC — Espace Partenaire AEGRYN',
+  title: 'KYC — Espace Partenaire Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -117,7 +117,7 @@ export default async function PartnerKycPage() {
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
         <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">KYC — Vérification partenaire</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
-          Documents requis pour valider votre identité et activer votre compte partenaire AEGRYN.
+          Documents requis pour valider votre identité et activer votre compte partenaire Aegryn.
         </p>
       </div>
 
@@ -140,7 +140,7 @@ export default async function PartnerKycPage() {
         </div>
         {!isComplete && (
           <p className="font-sans text-[11px] text-amber-700 mt-2">
-            Complétez votre dossier KYC pour que l&apos;équipe AEGRYN puisse activer votre espace partenaire.
+            Complétez votre dossier KYC pour que l&apos;équipe Aegryn puisse activer votre espace partenaire.
           </p>
         )}
       </div>

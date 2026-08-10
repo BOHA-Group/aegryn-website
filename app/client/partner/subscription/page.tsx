@@ -9,7 +9,7 @@ import CancelButton       from './CancelButton'
 import ReferralSection    from './ReferralSection'
 
 export const metadata: Metadata = {
-  title: 'Abonnement — Espace Partenaire AEGRYN',
+  title: 'Abonnement — Espace Partenaire Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -53,7 +53,7 @@ export default async function PartnerSubscriptionPage({
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
         <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Abonnement expert</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
-          Votre fiche expert est visible dans l&apos;annuaire AEGRYN tant que votre abonnement est actif.
+          Votre fiche expert est visible dans l&apos;annuaire Aegryn tant que votre abonnement est actif.
         </p>
       </div>
 
@@ -149,9 +149,9 @@ export default async function PartnerSubscriptionPage({
 
         <ul className="flex flex-col gap-2 mb-6">
           {[
-            'Fiche expert visible dans l\'annuaire AEGRYN',
+            'Fiche expert visible dans l\'annuaire Aegryn',
             'Contact direct par les clients acheteurs et vendeurs',
-            'Badge "Expert AEGRYN vérifié"',
+            'Badge "Expert Aegryn vérifié"',
             'Accès aux missions de co-certification (CIFS)',
             'Visibilité sur les introductions qualifiées',
           ].map((item) => (
@@ -179,7 +179,7 @@ export default async function PartnerSubscriptionPage({
 
       <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
         Sans engagement, résiliable à tout moment. La fiche expert sera retirée à la date d&apos;expiration.
-        Les clients vous contactent directement — AEGRYN ne prélève aucune commission sur vos missions.
+        Les clients vous contactent directement — Aegryn ne prélève aucune commission sur vos missions.
       </p>
 
       {/* Parrainage */}

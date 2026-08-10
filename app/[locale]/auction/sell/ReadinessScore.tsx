@@ -75,7 +75,7 @@ const LEVEL_CONFIG: Record<Level, { label: string; color: string; bg: string; bo
     bg:      'bg-emerald-50',
     border:  'border-emerald-200',
     icon:    <CheckCircle2 size={20} className="text-emerald-600 shrink-0" />,
-    message: "Votre actif présente les caractéristiques d'un dossier soumissible à une session auction AEGRYN. Nous vous recommandons de déposer votre mandat pour évaluation par notre équipe.",
+    message: "Votre actif présente les caractéristiques d'un dossier soumissible à une session auction Aegryn. Nous vous recommandons de déposer votre mandat pour évaluation par notre équipe.",
     cta:     'Déposer votre mandat →',
     ctaHref: '/auction/submit',
   },
@@ -136,7 +136,7 @@ export default function ReadinessScore() {
       {/* Header */}
       <div className="px-7 py-5 border-b border-ag-border flex items-center justify-between">
         <div>
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-0.5">Outil AEGRYN</p>
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-0.5">Outil Aegryn</p>
           <h3 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em]">Readiness Score</h3>
         </div>
         {done && (
@@ -149,7 +149,7 @@ export default function ReadinessScore() {
       {!done ? (
         <div className="px-7 py-6 flex flex-col gap-6">
           <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
-            Évaluez en 2 minutes si votre actif est prêt pour une soumission en session auction AEGRYN.
+            Évaluez en 2 minutes si votre actif est prêt pour une soumission en session auction Aegryn.
           </p>
 
           {QUESTIONS.map((q, i) => (

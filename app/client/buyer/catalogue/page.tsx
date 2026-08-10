@@ -7,7 +7,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { ArrowUpRight, SlidersHorizontal } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Catalogue — Espace Acquéreur AEGRYN',
+  title: 'Catalogue — Espace Acquéreur Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -65,7 +65,7 @@ export default async function BuyerCataloguePage({
           <p className="font-mono text-[10px] uppercase tracking-widest text-amber-600 mb-3">Accès restreint</p>
           <h2 className="font-sans font-bold text-gray-900 text-[20px] mb-3">Vérification KYC requise</h2>
           <p className="font-sans text-[13px] text-gray-600 mb-6">
-            L&apos;accès au catalogue AEGRYN nécessite la validation complète de votre dossier KYC.
+            L&apos;accès au catalogue Aegryn nécessite la validation complète de votre dossier KYC.
             {kycStatus === 'in_review' && ' Votre dossier est en cours d\'examen — vous serez notifié dès qu\'il sera traité.'}
             {kycStatus === 'rejected'  && ' Votre dossier a été rejeté. Consultez votre espace KYC pour voir les motifs et soumettre les documents corrigés.'}
             {kycStatus === 'pending'   && ' Veuillez compléter et soumettre votre dossier KYC pour accéder au catalogue.'}
@@ -100,7 +100,7 @@ export default async function BuyerCataloguePage({
       {/* Header */}
       <div className="mb-8">
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('spaceNameBuyer')}</p>
-        <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Catalogue AEGRYN</h1>
+        <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Catalogue Aegryn</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
           {t('catalogSubtitle')}
         </p>

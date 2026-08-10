@@ -146,7 +146,7 @@ export default function GradeForm({
     { code: 'P-DOC-OK',   group: 'Documentation', fr: 'Documentation technique remise complète et lisible' },
     { code: 'P-DOC-PART', group: 'Documentation', fr: 'Documentation partielle — manques identifiés' },
     { code: 'P-DOC-KO',   group: 'Documentation', fr: 'Documentation absente ou insuffisante' },
-    { code: 'P-METH-OK',  group: 'Méthodologie',  fr: 'Méthodologie conforme au référentiel AEGRYN' },
+    { code: 'P-METH-OK',  group: 'Méthodologie',  fr: 'Méthodologie conforme au référentiel Aegryn' },
     { code: 'P-METH-DEV', group: 'Méthodologie',  fr: 'Déviation méthodologique signalée' },
     { code: 'P-CON-OK',   group: 'Conclusion',    fr: 'Conclusions cohérentes avec les données fournies' },
     { code: 'P-CON-WARN', group: 'Conclusion',    fr: 'Conclusions à nuancer — réserves formulées' },
@@ -423,7 +423,7 @@ export default function GradeForm({
         <div className="bg-amber-50/40 border border-amber-200">
           <div className="bg-amber-50 border-b border-amber-200 px-5 py-3 flex items-center justify-between gap-4">
             <div>
-              <p className="font-mono text-[9px] uppercase tracking-widest text-amber-600">Usage interne — logique propriétaire AEGRYN</p>
+              <p className="font-mono text-[9px] uppercase tracking-widest text-amber-600">Usage interne — logique propriétaire Aegryn</p>
               <p className="text-[12px] text-amber-800 mt-0.5">
                 Saisissez les métriques brutes de l&apos;actif. Le moteur calcule un <strong>grade suggéré par dimension</strong>.
                 Utilisez ce résultat pour alimenter votre saisie dans l&apos;onglet <em>Grade officiel</em>.
@@ -540,12 +540,12 @@ export default function GradeForm({
             <p className="text-[10px] font-mono uppercase tracking-widest text-blue-500 mb-0.5">Type d’évaluation</p>
             <p className="text-[13px] font-semibold text-blue-800">
               {isReviewPlus
-                ? `AEGRYN Review+ — ${partnerReviewerType === 'legal' ? 'Cabinet juridique' : 'Expert-comptable'}`
-                : 'AEGRYN Review'}
+                ? `Aegryn Review+ — ${partnerReviewerType === 'legal' ? 'Cabinet juridique' : 'Expert-comptable'}`
+                : 'Aegryn Review'}
             </p>
           </div>
           <ReviewBadge
-            label={isReviewPlus ? 'AEGRYN Review+' : 'AEGRYN Review'}
+            label={isReviewPlus ? 'Aegryn Review+' : 'Aegryn Review'}
             sublabel={isReviewPlus
               ? (partnerReviewerType === 'legal' ? 'Co-revu — Cabinet juridique' : 'Co-revu — Expert-comptable')
               : undefined}
@@ -607,7 +607,7 @@ export default function GradeForm({
           })}
         </div>
         <div className="pt-3 border-t border-gray-100">
-          <p className="text-[9px] font-mono uppercase tracking-widest text-gray-400 mb-1">Notation AEGRYN Grade (style Antiquorum)</p>
+          <p className="text-[9px] font-mono uppercase tracking-widest text-gray-400 mb-1">Notation Aegryn Grade (style Antiquorum)</p>
           <p className="font-mono text-[13px] text-gray-800 tracking-wide">{notation}</p>
         </div>
       </div>
@@ -803,9 +803,9 @@ export default function GradeForm({
         )}
       </div>
 
-      {/* ── AEG — AEGRYN Expert Grade ── */}
+      {/* ── AEG — Aegryn Expert Grade ── */}
       <div className={`border p-6 flex flex-col gap-4 ${finalAeg === 'refused' ? 'bg-red-50 border-red-200' : 'bg-gray-50 border-gray-200'}`}>
-        <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">AEG — AEGRYN Expert Grade</h2>
+        <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">AEG — Aegryn Expert Grade</h2>
         <p className="text-[11px] text-gray-500 leading-relaxed">
           L'algorithme suggère <strong>{AEG_LABEL[suggestedAeg].symbol}</strong> ({AEG_LABEL[suggestedAeg].fr}) sur la base du score total et de la maturité.
           L'expert peut surclasser ou déclasser selon la rareté, l'unicité ou le potentiel stratégique de l'actif.
@@ -835,7 +835,7 @@ export default function GradeForm({
             <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Score partenaire — Dimension P</h2>
             <p className="text-[10px] text-gray-400 mt-0.5">
               Évaluation de la contribution du partenaire co-signataire. Même grille 0-25 que les dimensions CIFS.
-              Documenter les points de conformité et observations pour archive AEGRYN.
+              Documenter les points de conformité et observations pour archive Aegryn.
             </p>
           </div>
 
@@ -947,7 +947,7 @@ export default function GradeForm({
       {!isReview && (
         <div className={sectionCls}>
           <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Experts consultés <span className="font-normal normal-case tracking-normal text-gray-400">(optionnel)</span></h2>
-          <p className="text-[11px] text-gray-400 -mt-2">La mention de ces experts apparaîtra dans le rapport de grade uniquement si le champ est rempli. Leur contribution enrichit l&apos;analyse mais n&apos;implique pas de co-signature du grade AEGRYN.</p>
+          <p className="text-[11px] text-gray-400 -mt-2">La mention de ces experts apparaîtra dans le rapport de grade uniquement si le champ est rempli. Leur contribution enrichit l&apos;analyse mais n&apos;implique pas de co-signature du grade Aegryn.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               { nKey: 'cosigner_legal',   dKey: 'cosigner_legal_date',   label: 'Cabinet juridique',     show: isFull || (isReviewPlus && partnerReviewerType === 'legal') },

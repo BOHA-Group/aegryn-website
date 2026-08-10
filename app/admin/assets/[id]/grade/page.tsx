@@ -5,7 +5,7 @@ import Link                     from 'next/link'
 import GradeForm                from './GradeForm'
 
 export const metadata: Metadata = {
-  title: 'Attribution de grade — AEGRYN Admin',
+  title: 'Attribution de grade — Aegryn Admin',
   robots: { index: false, follow: false },
 }
 
@@ -105,7 +105,7 @@ export default async function AdminAssetGradePage({
               Leads
             </Link>
           </div>
-          <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">AEGRYN ADMIN — Attribution de grade officiel</p>
+          <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN — Attribution de grade officiel</p>
           <h1 className="text-[24px] font-bold text-gray-900 tracking-tight">
             {String(a.company_name ?? a.seller_name ?? 'Actif sans nom')}
           </h1>

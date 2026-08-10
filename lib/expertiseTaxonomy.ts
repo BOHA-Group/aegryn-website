@@ -339,7 +339,7 @@ export const EXPERTISE_TAXONOMY: Category[] = [
         labelIt: 'Preparazione dossier venditore',
         labelNl: 'Voorbereiding verkoopsdossier',
         description: 'Pre-submission audit, data room, compliance',
-        descriptionFr: 'Audit du dossier avant soumission AEGRYN, data room, conformité',
+        descriptionFr: 'Audit du dossier avant soumission Aegryn, data room, conformité',
         cifs: ['C', 'I', 'F', 'S'],
       },
       {

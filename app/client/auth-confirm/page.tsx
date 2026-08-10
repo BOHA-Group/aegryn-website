@@ -9,7 +9,7 @@ import { getTranslations } from 'next-intl/server'
 import Link              from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Connexion en cours — AEGRYN',
+  title: 'Connexion en cours — Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -27,7 +27,7 @@ export default async function AuthConfirmPage({
     return (
       <main className="min-h-screen bg-ag-navy flex items-center justify-center px-6">
         <div className="w-full max-w-md text-center">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-red-400 mb-4">AEGRYN</p>
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-red-400 mb-4">Aegryn</p>
           <h1 className="font-sans font-bold text-white text-[22px] tracking-tight mb-3">
             {t('linkExpired')}
           </h1>
@@ -46,7 +46,7 @@ export default async function AuthConfirmPage({
     <main className="min-h-screen bg-ag-navy flex items-center justify-center px-6">
       <div className="w-full max-w-md text-center">
         <div className="w-8 h-8 border-2 border-ag-apex border-t-transparent rounded-full animate-spin mx-auto mb-6" />
-        <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-3">AEGRYN</p>
+        <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-3">Aegryn</p>
         <h1 className="font-sans font-bold text-white text-[20px] tracking-tight mb-2">
           {t('submitting')}
         </h1>

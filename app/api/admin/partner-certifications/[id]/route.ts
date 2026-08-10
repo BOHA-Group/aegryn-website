@@ -59,7 +59,7 @@ export async function PATCH(
 
     if (profile?.email) {
       const assetObj = Array.isArray(cert.assets) ? (cert.assets as Record<string, unknown>[])[0] : cert.assets as Record<string, unknown> | null
-      const assetName = String(assetObj?.company_name ?? 'Actif AEGRYN')
+      const assetName = String(assetObj?.company_name ?? 'Actif Aegryn')
       const partnerName = String(profile.full_name ?? profile.email)
 
       if (action === 'validate') {

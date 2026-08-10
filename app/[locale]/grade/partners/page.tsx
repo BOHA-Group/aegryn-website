@@ -4,8 +4,8 @@ import { ArrowUpRight, Scale, Calculator, ShieldCheck, Code2 } from 'lucide-reac
 import { getTranslations } from 'next-intl/server'
 
 export const metadata: Metadata = {
-  title: 'Expert Network — AEGRYN Grade',
-  description: 'AEGRYN Grade is an independent certification. Independent experts (IP legal, chartered accountants, cybersecurity, code audit) can apply to align with the certification or support sellers and buyers.',
+  title: 'Expert Network — Aegryn Grade',
+  description: 'Aegryn Grade is an independent certification. Independent experts (IP legal, chartered accountants, cybersecurity, code audit) can apply to align with the certification or support sellers and buyers.',
 }
 
 const PARTNER_ICONS = [Code2, Scale, Calculator, ShieldCheck] as const

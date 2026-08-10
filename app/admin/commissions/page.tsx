@@ -6,7 +6,7 @@ import CommissionsClient        from './CommissionsClient'
 import type { CommissionTier }  from '@/lib/calcCommission'
 
 export const metadata: Metadata = {
-  title: 'Commissions AEGRYN — Admin',
+  title: 'Commissions Aegryn — Admin',
   robots: { index: false, follow: false },
 }
 

@@ -295,7 +295,7 @@ export default function ExpertProfileForm({ initialData }: { initialData: Expert
 
       {!isNew && (
         <p className="font-sans text-[11px] text-gray-400">
-          Toute modification remet votre fiche en attente de validation par l&apos;équipe AEGRYN.
+          Toute modification remet votre fiche en attente de validation par l&apos;équipe Aegryn.
         </p>
       )}
     </form>

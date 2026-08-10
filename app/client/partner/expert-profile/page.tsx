@@ -7,7 +7,7 @@ import { ShieldCheck, CreditCard, AlertCircle, CheckCircle2 } from 'lucide-react
 import ExpertProfileForm     from './ExpertProfileForm'
 
 export const metadata: Metadata = {
-  title: 'Fiche Expert — Espace Partenaire AEGRYN',
+  title: 'Fiche Expert — Espace Partenaire Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -58,7 +58,7 @@ export default async function PartnerExpertProfilePage() {
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
         <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Fiche expert</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
-          Remplissez et soumettez votre fiche — l&apos;équipe AEGRYN la valide avant publication dans l&apos;annuaire.
+          Remplissez et soumettez votre fiche — l&apos;équipe Aegryn la valide avant publication dans l&apos;annuaire.
         </p>
       </div>
 
@@ -155,9 +155,9 @@ export default async function PartnerExpertProfilePage() {
 
       <div className="mt-8 px-5 py-4 border border-gray-200 bg-gray-50">
         <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
-          <strong>Publication :</strong> votre fiche sera examinée par l&apos;équipe AEGRYN sous 48h après soumission.
+          <strong>Publication :</strong> votre fiche sera examinée par l&apos;équipe Aegryn sous 48h après soumission.
           Elle sera automatiquement retirée de l&apos;annuaire si votre abonnement expire.
-          Les clients vous contactent directement — AEGRYN ne prélève aucune commission sur vos missions.
+          Les clients vous contactent directement — Aegryn ne prélève aucune commission sur vos missions.
         </p>
       </div>
 

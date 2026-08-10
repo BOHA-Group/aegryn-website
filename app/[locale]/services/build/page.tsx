@@ -65,7 +65,7 @@ export default async function BuildServicePage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── Section 2 : La différence AEGRYN ─────────────────────────── */}
+      {/* ── Section 2 : La différence Aegryn ─────────────────────────── */}
       <section className="border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">

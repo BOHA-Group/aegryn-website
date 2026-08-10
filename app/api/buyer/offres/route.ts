@@ -60,7 +60,7 @@ export async function POST(req: NextRequest) {
     user_id: user.id,
     type:    'offer_submitted',
     title:   'Votre Expression d\'Intérêt a été soumise',
-    body:    `Montant : CHF ${amount_chf.toLocaleString('fr-CH')}. L'équipe AEGRYN vous répondra dans les 48h ouvrables.`,
+    body:    `Montant : CHF ${amount_chf.toLocaleString('fr-CH')}. L'équipe Aegryn vous répondra dans les 48h ouvrables.`,
     link:    `/client/buyer/offres/${bid.id}`,
     payload: { bid_id: bid.id, asset_id, amount_chf },
   })

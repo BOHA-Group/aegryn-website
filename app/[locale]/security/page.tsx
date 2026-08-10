@@ -26,7 +26,7 @@ export default async function SecurityPage({ params }: Props) {
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-14 px-6">
         <div className="max-w-4xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">AEGRYN — Legal</p>
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">Aegryn — Legal</p>
           <div className="flex items-start gap-4 mb-4">
             <ShieldCheck size={32} className="text-ag-apex shrink-0 mt-1" />
             <div>

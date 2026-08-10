@@ -47,7 +47,7 @@ export default function NewIntroductionForm() {
     return (
       <div className="flex items-center gap-2 text-emerald-600 py-2">
         <CheckCircle2 size={14} />
-        <span className="font-sans text-[13px]">Introduction soumise. L&apos;équipe AEGRYN prend contact sous 48h.</span>
+        <span className="font-sans text-[13px]">Introduction soumise. L&apos;équipe Aegryn prend contact sous 48h.</span>
       </div>
     )
   }

@@ -3,7 +3,7 @@ import Link               from 'next/link'
 import AdminLoginForm      from './AdminLoginForm'
 
 export const metadata: Metadata = {
-  title: 'Admin — AEGRYN',
+  title: 'Admin — Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -21,10 +21,10 @@ export default async function AdminLoginPage({
         {/* Logo / titre */}
         <div className="text-center mb-10">
           <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#9C7A3C] mb-2">
-            AEGRYN
+            Aegryn
           </p>
           <h1 className="text-2xl font-bold text-[#0C0C0C]">Administration</h1>
-          <p className="text-[12px] text-gray-400 mt-1">Accès réservé à l&apos;équipe AEGRYN</p>
+          <p className="text-[12px] text-gray-400 mt-1">Accès réservé à l&apos;équipe Aegryn</p>
         </div>
 
         <div className="bg-white border border-[#D9D2C2] p-8">

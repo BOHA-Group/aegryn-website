@@ -54,7 +54,7 @@ const BASE_KEYWORDS = [
   'Subblink', 'Neediu', 'Primiom', 'Movtoo', 'Hobconnect',
   'ecosystem engineering', 'digital ecosystem',
   // Grade
-  'AEGRYN Grade', 'asset grading', 'notation actif numérique',
+  'Aegryn Grade', 'asset grading', 'notation actif numérique',
   'grade SaaS', 'certification actif numérique', 'tech credit rating',
 ]
 
@@ -231,7 +231,7 @@ export const aegrynOrganizationSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'AEGRYN Auction',
+          name: 'Aegryn Auction',
           description: 'Structured auction platform for buying and selling digital tech assets (SaaS, B2C, infrastructure) in Europe. €100K–€50M range.',
           url: `${BASE_URL}/en/auction`,
         },
@@ -240,7 +240,7 @@ export const aegrynOrganizationSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'AEGRYN Valuation',
+          name: 'Aegryn Valuation',
           description: 'Free instant preliminary valuation of digital assets using proprietary SaaS scoring models benchmarked against European comparable transactions.',
           url: `${BASE_URL}/en/valuation`,
         },
@@ -249,7 +249,7 @@ export const aegrynOrganizationSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'AEGRYN Grade',
+          name: 'Aegryn Grade',
           description: 'Proprietary grading methodology for digital assets, equivalent to a credit rating for tech companies. 5 grades: AEG★, AAA, AA, A, B.',
           url: `${BASE_URL}/en/grade`,
         },
@@ -282,13 +282,13 @@ export const aegrynSiteNavigationSchema = {
   name: 'Aegryn Site Navigation',
   itemListElement: [
     { '@type': 'ListItem', position: 1,  name: 'Accueil',              url: `${BASE_URL}/fr` },
-    { '@type': 'ListItem', position: 2,  name: 'AEGRYN Auction',       url: `${BASE_URL}/fr/auction` },
+    { '@type': 'ListItem', position: 2,  name: 'Aegryn Auction',       url: `${BASE_URL}/fr/auction` },
     { '@type': 'ListItem', position: 3,  name: 'Céder un actif',       url: `${BASE_URL}/fr/auction/sell` },
     { '@type': 'ListItem', position: 4,  name: 'Accès acheteurs',      url: `${BASE_URL}/fr/auction/buyers` },
     { '@type': 'ListItem', position: 5,  name: 'Comment ça marche',    url: `${BASE_URL}/fr/auction/how-it-works` },
     { '@type': 'ListItem', position: 6,  name: 'Catalogue',            url: `${BASE_URL}/fr/auction/catalog` },
     { '@type': 'ListItem', position: 7,  name: 'Valorisation',         url: `${BASE_URL}/fr/valuation` },
-    { '@type': 'ListItem', position: 8,  name: 'AEGRYN Grade',         url: `${BASE_URL}/fr/grade` },
+    { '@type': 'ListItem', position: 8,  name: 'Aegryn Grade',         url: `${BASE_URL}/fr/grade` },
     { '@type': 'ListItem', position: 9,  name: 'Experts',              url: `${BASE_URL}/fr/experts` },
     { '@type': 'ListItem', position: 10, name: 'Advisory',             url: `${BASE_URL}/fr/advisory` },
     { '@type': 'ListItem', position: 11, name: 'Blog',                 url: `${BASE_URL}/fr/blog` },
@@ -302,7 +302,7 @@ export const aegrynWebSiteSchema = {
   '@id':        `${BASE_URL}/#website`,
   url:          BASE_URL,
   name:         'Aegryn',
-  alternateName: ['AEGRYN', 'Aegryn Swiss', 'Aegryn Advisory', 'AEGRYN Auction'],
+  alternateName: ['Aegryn', 'Aegryn Swiss', 'Aegryn Advisory', 'Aegryn Auction'],
   description:  'Aegryn — Swiss technology holding and M&A auction platform. Buy and sell digital tech assets (SaaS, B2C, infrastructure) in Europe. Free valuation, proprietary grading, curated expert network, cybersecurity and AI advisory. Engineered to Last.',
   publisher:    { '@id': `${BASE_URL}/#organization` },
   inLanguage:   ['fr', 'en', 'de', 'it', 'es', 'nl'],

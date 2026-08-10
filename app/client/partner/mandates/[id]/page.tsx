@@ -6,7 +6,7 @@ import { createServiceClient } from '@/lib/supabase'
 import MandateDetailClient from './MandateDetailClient'
 
 export const metadata: Metadata = {
-  title: 'Mandat — Espace Partenaire AEGRYN',
+  title: 'Mandat — Espace Partenaire Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -132,7 +132,7 @@ export default async function MandateDetailPage({
             <dd className="font-sans text-[11px] text-gray-400">{String(m.client_email ?? '')}</dd>
           </div>
           <div>
-            <dt className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Rétrocession AEGRYN</dt>
+            <dt className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Rétrocession Aegryn</dt>
             <dd className="font-sans text-[13px] font-semibold text-gray-800">{String(m.retrocession_pct ?? 15)}% de vos honoraires</dd>
           </div>
           {!!m.started_at && (

@@ -152,7 +152,7 @@ export default function CreateMandateForm({ partnerId, adminToken, assets, backH
 
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className={labelCls}>Actif AEGRYN associé (optionnel)</label>
+          <label className={labelCls}>Actif Aegryn associé (optionnel)</label>
           <select className={selectCls} value={assetId} onChange={e => setAssetId(e.target.value)}>
             <option value="">— Aucun —</option>
             {assets.map(a => (
@@ -161,7 +161,7 @@ export default function CreateMandateForm({ partnerId, adminToken, assets, backH
           </select>
         </div>
         <div>
-          <label className={labelCls}>Rétrocession AEGRYN (%)</label>
+          <label className={labelCls}>Rétrocession Aegryn (%)</label>
           <input
             type="number"
             min="0"

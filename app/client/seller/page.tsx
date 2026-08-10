@@ -7,7 +7,7 @@ import { FileText, ArrowRightLeft, ShieldCheck, Bell, ArrowUpRight, Calculator, 
 import { calcCommission, fmtEur } from '@/lib/calcCommission'
 
 export const metadata: Metadata = {
-  title: 'Tableau de bord — Espace Cédant AEGRYN',
+  title: 'Tableau de bord — Espace Cédant Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -180,12 +180,12 @@ export default async function SellerDashboardPage() {
                 <span className="ml-auto font-mono text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5">À partir de 2 000 CHF HT</span>
               </div>
               <p className="font-sans text-[12px] text-gray-500 leading-relaxed">
-                Obtenez un <strong>Grade AEGRYN officiel</strong> sans mise en vente. Idéal pour valoriser votre actif, rassurer des partenaires ou préparer une future cession.
+                Obtenez un <strong>Grade Aegryn officiel</strong> sans mise en vente. Idéal pour valoriser votre actif, rassurer des partenaires ou préparer une future cession.
               </p>
               <ul className="flex flex-col gap-1.5">
                 {[
-                  ['AEGRYN Review — Analyse interne : 2 000 CHF HT (15 j. ouvrés)', true],
-                  ['AEGRYN Review+ — Co-signé partenaire : 5 000 CHF HT (20 j. ouvrés)', true],
+                  ['Aegryn Review — Analyse interne : 2 000 CHF HT (15 j. ouvrés)', true],
+                  ['Aegryn Review+ — Co-signé partenaire : 5 000 CHF HT (20 j. ouvrés)', true],
                   ['Paiement à la commande (Stripe — disponible prochainement)', false],
                   ['Déductible si Certification Auction engagée dans les 6 mois', true],
                 ].map(([txt, ok]) => (
@@ -208,15 +208,15 @@ export default async function SellerDashboardPage() {
                 <span className="ml-auto font-mono text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5">Commission à la vente</span>
               </div>
               <p className="font-sans text-[12px] text-gray-500 leading-relaxed">
-                Processus complet : audit C/I/F/S, grade officiel, mise au catalogue privé AEGRYN, ouverture aux acquéreurs membres qualifiés.
+                Processus complet : audit C/I/F/S, grade officiel, mise au catalogue privé Aegryn, ouverture aux acquéreurs membres qualifiés.
               </p>
               <ul className="flex flex-col gap-1.5">
                 {[
                   'Frais de publication : CHF 2 000 HT (acompte — déduit de la commission en cas de vente)',
-                  'Paiement par virement sur facture (émise par AEGRYN après validation du dossier)',
+                  'Paiement par virement sur facture (émise par Aegryn après validation du dossier)',
                   'Préparation catalogue : J+15 après admission',
-                  'Visible acquéreurs : J+45 minimum (session bi-annuelle AEGRYN)',
-                  'Commission AEGRYN uniquement si transaction closée (grille dégressive 6–10%)',
+                  'Visible acquéreurs : J+45 minimum (session bi-annuelle Aegryn)',
+                  'Commission Aegryn uniquement si transaction closée (grille dégressive 6–10%)',
                 ].map(txt => (
                   <li key={txt} className="flex items-start gap-2">
                     <CheckCircle2 size={11} className="mt-0.5 shrink-0 text-ag-apex" />
@@ -320,7 +320,7 @@ export default async function SellerDashboardPage() {
                     <div className="border-t border-gray-100 px-5 py-2.5 flex items-center gap-2 bg-gray-50/60">
                       <Calculator size={11} className="text-gray-400 shrink-0" />
                       <p className="font-sans text-[11px] text-gray-500">
-                        Commission estimée AEGRYN :
+                        Commission estimée Aegryn :
                         <span className="font-semibold text-gray-700 mx-1">{fmtEur(commResult.commission)}</span>
                         — Net cédant estimé :
                         <span className="font-semibold text-emerald-700 ml-1">{fmtEur(commResult.netSeller)}</span>

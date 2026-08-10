@@ -5,7 +5,7 @@ import Link                    from 'next/link'
 import { ArrowUpRight }        from 'lucide-react'
 import { useTranslations }     from 'next-intl'
 import { gsap, SplitText }     from '@/lib/gsap'
-import { AEGRYN_ASSETS }       from '@/data/assets'
+import { Aegryn_ASSETS }       from '@/data/assets'
 
 const NOT_STARTED_IDS = ['movtoo', 'primiom', 'hobconnect']
 
@@ -31,7 +31,7 @@ export function AssetGrid() {
   const h2Ref = useRef<HTMLHeadingElement>(null)
   const labelRef   = useRef<HTMLParagraphElement>(null)
 
-  const visibleAssets = AEGRYN_ASSETS.filter((a) => a.showOnHomepage !== false)
+  const visibleAssets = Aegryn_ASSETS.filter((a) => a.showOnHomepage !== false)
   const tier1 = visibleAssets.filter((a) => a.tier === 1)
   const tier2 = visibleAssets.filter((a) => a.tier === 2)
 
@@ -64,7 +64,7 @@ export function AssetGrid() {
     return () => { split.revert(); ctx.revert() }
   }, [])
 
-  const AssetCard = ({ asset, i }: { asset: typeof AEGRYN_ASSETS[0]; i: number }) => {
+  const AssetCard = ({ asset, i }: { asset: typeof Aegryn_ASSETS[0]; i: number }) => {
     const isNotStarted = NOT_STARTED_IDS.includes(asset.id)
     const isLive       = asset.status === 'live'
     const borderRight   = i % 3 !== 2 ? 'lg:border-r border-ag-border' : ''

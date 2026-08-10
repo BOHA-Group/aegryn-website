@@ -61,7 +61,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             <aside className="w-56 bg-ag-navy flex-shrink-0 flex flex-col fixed top-16 left-0 bottom-0 z-40 overflow-y-auto">
               <div className="px-5 py-4 border-b border-white/10">
                 <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex font-bold">Admin</p>
-                <p className="font-sans text-[10px] text-white/50 mt-0.5">AEGRYN</p>
+                <p className="font-sans text-[10px] text-white/50 mt-0.5">Aegryn</p>
               </div>
               <AdminSideNav adminEmail={adminEmail} />
             </aside>

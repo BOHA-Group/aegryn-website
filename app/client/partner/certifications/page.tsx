@@ -6,7 +6,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { Award, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Co-signatures — Espace Partenaire AEGRYN',
+  title: 'Co-signatures — Espace Partenaire Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -69,7 +69,7 @@ export default async function PartnerCertificationsPage() {
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
         <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Co-signatures CIFS</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
-          Missions de co-certification par dimension attribuées par l&apos;équipe AEGRYN.
+          Missions de co-certification par dimension attribuées par l&apos;équipe Aegryn.
         </p>
       </div>
 

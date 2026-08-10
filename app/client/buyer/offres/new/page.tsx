@@ -7,7 +7,7 @@ import { ArrowLeft } from 'lucide-react'
 import NewOfferForm from './NewOfferForm'
 
 export const metadata: Metadata = {
-  title: 'Soumettre une offre — Espace Acquéreur AEGRYN',
+  title: 'Soumettre une offre — Espace Acquéreur Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -79,10 +79,10 @@ export default async function NewOfferPage({
 
       {/* Info processus */}
       <div className="bg-ag-navy/5 border border-ag-navy/20 px-5 py-4 mb-8">
-        <p className="font-mono text-[9px] uppercase tracking-widest text-ag-navy/60 mb-2">Processus AEGRYN</p>
+        <p className="font-mono text-[9px] uppercase tracking-widest text-ag-navy/60 mb-2">Processus Aegryn</p>
         <ol className="flex flex-col gap-1.5">
           {[
-            'Votre EI est transmise à l\'équipe AEGRYN',
+            'Votre EI est transmise à l\'équipe Aegryn',
             'Analyse de votre dossier KYC et de votre capacité d\'acquisition',
             'Réponse dans les 48h ouvrables',
             'Si retenue : accès à la data room et processus PTT',

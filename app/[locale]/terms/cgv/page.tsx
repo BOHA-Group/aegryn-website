@@ -18,9 +18,9 @@ export default async function TermsCgvPage({ params }: Props) {
   const tN = await getTranslations({ locale, namespace: 'legalNav' })
 
   const DEFS = [
-    ['AEGRYN', 'defAegryn'],
+    ['Aegryn', 'defAegryn'],
     ['Actif tech', 'defAsset'],
-    ['Grade AEGRYN', 'defGrade'],
+    ['Grade Aegryn', 'defGrade'],
     ['Grade estimé', 'defGradeEst'],
     ['PTT', 'defPtt'],
     ['Séquestre', 'defEscrow'],
@@ -35,7 +35,7 @@ export default async function TermsCgvPage({ params }: Props) {
       <section className="bg-ag-navy pt-24 pb-14 px-6">
         <div className="max-w-4xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">
-            AEGRYN — Legal
+            Aegryn — Legal
           </p>
           <h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] mb-4"

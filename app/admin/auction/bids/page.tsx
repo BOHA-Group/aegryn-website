@@ -70,7 +70,7 @@ export default async function AuctionBidsPage({
         <div className="bg-amber-50 border border-amber-200 rounded-sm px-5 py-4 mb-6 text-xs text-amber-800">
           <strong>Modèle sealed bid :</strong> Les montants des offres sont visibles uniquement par l'admin.
           La mise à prix (reserve_price) doit être atteinte pour qu'une offre soit éligible.
-          En cas d'égalité, AEGRYN sélectionne sur critères qualitatifs (conditions, capacité, KYC).
+          En cas d'égalité, Aegryn sélectionne sur critères qualitatifs (conditions, capacité, KYC).
         </div>
 
         {/* Filtres */}

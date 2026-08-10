@@ -1,7 +1,7 @@
 /**
  * POST /api/admin/assets/[id]/grade-engine
  *
- * Lance le moteur de calcul AEGRYN Grade à partir de données factuelles brutes.
+ * Lance le moteur de calcul Aegryn Grade à partir de données factuelles brutes.
  * Stocke le résultat complet dans grade_assessments (audit trail).
  *
  * Body : { input: GradeInput, finalGrade?: GradeLetter, overrideNote?: string,

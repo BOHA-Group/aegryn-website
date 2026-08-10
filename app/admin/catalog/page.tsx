@@ -6,7 +6,7 @@ import Link                    from 'next/link'
 import CatalogAdminClient      from './CatalogAdminClient'
 
 export const metadata: Metadata = {
-  title: 'Catalogue — AEGRYN Admin',
+  title: 'Catalogue — Aegryn Admin',
   robots: { index: false, follow: false },
 }
 
@@ -60,7 +60,7 @@ export default async function AdminCatalogPage({
 
         <div className="mb-8 flex items-start justify-between gap-4">
           <div>
-            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">AEGRYN ADMIN</p>
+            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN</p>
             <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Catalogue</h1>
             <p className="text-[12px] text-gray-400 mt-1">Publication des actifs gradés vers le catalogue public</p>
           </div>

@@ -24,7 +24,7 @@ const REFERRAL_MONTHS_CAP = 6
 async function sendEmail(to: string, subject: string, text: string) {
   const key  = process.env.RESEND_API_KEY
   const from = process.env.RESEND_FROM ?? 'no-reply@boha-group.com'
-  const name = process.env.RESEND_FROM_NAME ?? 'AEGRYN'
+  const name = process.env.RESEND_FROM_NAME ?? 'Aegryn'
   if (!key) return
   await fetch('https://api.resend.com/emails', {
     method:  'POST',
@@ -168,14 +168,14 @@ export async function POST(req: NextRequest) {
         stripe_payment_intent_id: paymentIntentId,
       }).eq('id', assetId)
 
-      const internal  = process.env.AEGRYN_INTERNAL_EMAIL ?? 'tech@boha-group.com'
-      const typeLabel = meta.evaluationType === 'review_partner' ? 'AEGRYN Review+' : 'AEGRYN Review'
+      const internal  = process.env.Aegryn_INTERNAL_EMAIL ?? 'tech@boha-group.com'
+      const typeLabel = meta.evaluationType === 'review_partner' ? 'Aegryn Review+' : 'Aegryn Review'
 
       await Promise.allSettled([
         sendEmail(
           email,
-          `AEGRYN — Paiement confirmé — ${typeLabel}`,
-          `Bonjour,\n\nVotre paiement ${typeLabel} a bien été reçu.\n\nNotre équipe va analyser votre dossier et vous contactera sous les délais convenus.\n\nL'équipe AEGRYN\nhttps://aegryn.com`
+          `Aegryn — Paiement confirmé — ${typeLabel}`,
+          `Bonjour,\n\nVotre paiement ${typeLabel} a bien été reçu.\n\nNotre équipe va analyser votre dossier et vous contactera sous les délais convenus.\n\nL'équipe Aegryn\nhttps://aegryn.com`
         ),
         sendEmail(
           internal,
@@ -262,8 +262,8 @@ export async function POST(req: NextRequest) {
       if (email) {
         await sendEmail(
           email,
-          'AEGRYN — Votre abonnement expert est activé',
-          `Bonjour,\n\nVotre abonnement expert AEGRYN est maintenant actif.\nVotre fiche expert est visible dans l'annuaire et les clients peuvent vous contacter directement.\n\nAccédez à votre espace partenaire : https://aegryn.com/client/partner\n\nL'équipe AEGRYN`
+          'Aegryn — Votre abonnement expert est activé',
+          `Bonjour,\n\nVotre abonnement expert Aegryn est maintenant actif.\nVotre fiche expert est visible dans l'annuaire et les clients peuvent vous contacter directement.\n\nAccédez à votre espace partenaire : https://aegryn.com/client/partner\n\nL'équipe Aegryn`
         )
       }
     }
@@ -319,8 +319,8 @@ export async function POST(req: NextRequest) {
         if (email) {
           await sendEmail(
             email,
-            'AEGRYN — Échec de paiement de votre abonnement expert',
-            `Bonjour,\n\nNous n'avons pas pu encaisser le paiement de votre abonnement expert AEGRYN.\n\nVeuillez mettre à jour votre moyen de paiement dans votre espace partenaire pour éviter la suspension de votre fiche expert.\n\nAccédez à votre espace : https://aegryn.com/client/partner/subscription\n\nL'équipe AEGRYN`
+            'Aegryn — Échec de paiement de votre abonnement expert',
+            `Bonjour,\n\nNous n'avons pas pu encaisser le paiement de votre abonnement expert Aegryn.\n\nVeuillez mettre à jour votre moyen de paiement dans votre espace partenaire pour éviter la suspension de votre fiche expert.\n\nAccédez à votre espace : https://aegryn.com/client/partner/subscription\n\nL'équipe Aegryn`
           )
         }
       }

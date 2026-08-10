@@ -4,7 +4,7 @@ import type { Metadata }       from 'next'
 import IntroductionsAdminClient, { type IntroductionAdmin } from './IntroductionsAdminClient'
 
 export const metadata: Metadata = {
-  title: 'Introductions — Admin AEGRYN',
+  title: 'Introductions — Admin Aegryn',
   robots: { index: false, follow: false },
 }
 

@@ -67,7 +67,7 @@ export default function NewOfferForm({ assetId, assetName }: Props) {
 
       <div>
         <label className="font-mono text-[9px] uppercase tracking-widest text-gray-500 block mb-2">
-          Message à l&apos;équipe AEGRYN (optionnel)
+          Message à l&apos;équipe Aegryn (optionnel)
         </label>
         <textarea
           rows={4}
@@ -94,7 +94,7 @@ export default function NewOfferForm({ assetId, assetName }: Props) {
           Soumettre l&apos;EI
         </button>
         <p className="font-sans text-[11px] text-gray-400">
-          En soumettant, vous confirmez avoir lu et accepté les conditions de confidentialité AEGRYN.
+          En soumettant, vous confirmez avoir lu et accepté les conditions de confidentialité Aegryn.
         </p>
       </div>
     </form>

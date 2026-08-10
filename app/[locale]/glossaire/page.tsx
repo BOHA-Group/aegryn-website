@@ -38,7 +38,7 @@ const TERMS: { letter: string; terms: { id: string; name: string; def: { fr: str
   {
     letter: 'G',
     terms: [
-      { id: 'grade-aeg', name: 'Grade AEG', def: { fr: 'Certification indépendante des analystes AEGRYN sur un actif tech, émise selon un protocole reproductible. De ★ (Exceptionnel) à B (Correct). Non attribué = Refusé. Basé sur 4 dimensions : Code, IP, Finance, Sécurité.', en: 'Independent certification from AEGRYN analysts on a tech asset, issued following a reproducible protocol. From ★ (Exceptional) to B (Standard). Not assigned = Refused. Based on 4 dimensions: Code, IP, Finance, Security.' } },
+      { id: 'grade-aeg', name: 'Grade AEG', def: { fr: 'Certification indépendante des analystes Aegryn sur un actif tech, émise selon un protocole reproductible. De ★ (Exceptionnel) à B (Correct). Non attribué = Refusé. Basé sur 4 dimensions : Code, IP, Finance, Sécurité.', en: 'Independent certification from Aegryn analysts on a tech asset, issued following a reproducible protocol. From ★ (Exceptional) to B (Standard). Not assigned = Refused. Based on 4 dimensions: Code, IP, Finance, Security.' } },
     ],
   },
   {
@@ -81,10 +81,10 @@ const TERMS: { letter: string; terms: { id: string; name: string; def: { fr: str
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const isFr = locale === 'fr'
-  const title       = isFr ? 'Glossaire M&A tech — 30 termes essentiels | AEGRYN' : 'Tech M&A Glossary — 30 essential terms | AEGRYN'
+  const title       = isFr ? 'Glossaire M&A tech — 30 termes essentiels | Aegryn' : 'Tech M&A Glossary — 30 essential terms | Aegryn'
   const description = isFr
-    ? 'Définitions des 30 termes essentiels du M&A tech européen : ARR, NRR, earnout, due diligence, Grade AEGRYN, share deal et plus.'
-    : 'Definitions of the 30 essential terms in European tech M&A: ARR, NRR, earnout, due diligence, AEGRYN Grade, share deal and more.'
+    ? 'Définitions des 30 termes essentiels du M&A tech européen : ARR, NRR, earnout, due diligence, Grade Aegryn, share deal et plus.'
+    : 'Definitions of the 30 essential terms in European tech M&A: ARR, NRR, earnout, due diligence, Aegryn Grade, share deal and more.'
   return generateAegrynMetadata({ title, description, path: '/glossaire', locale })
 }
 
@@ -101,7 +101,7 @@ export default async function GlossairePage({ params }: Props) {
         <div className="max-w-4xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
-            {lang === 'fr' ? 'AEGRYN — Ressources' : 'AEGRYN — Resources'}
+            {lang === 'fr' ? 'Aegryn — Ressources' : 'Aegryn — Resources'}
           </p>
           <h1
             className="font-sans font-bold text-white leading-[1.06] tracking-[-0.03em] mb-5"
@@ -162,7 +162,7 @@ export default async function GlossairePage({ params }: Props) {
       <section className="py-16 px-6 border-t border-ag-border bg-ag-off-white">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-2">AEGRYN Blog</p>
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-2">Aegryn Blog</p>
             <p className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em]">
               {lang === 'fr' ? 'Approfondir avec nos analyses' : 'Go deeper with our analyses'}
             </p>

@@ -1,5 +1,5 @@
 /**
- * AEGRYN Grading System — Adapté du système Antiquorum — Version 1.0 (Juillet 2026)
+ * Aegryn Grading System — Adapté du système Antiquorum — Version 1.0 (Juillet 2026)
  *
  * Référence : voir /grade/methodology pour le contenu public (storytelling).
  * Ce module centralise la logique interne (types, sous-codes, notation,
@@ -7,7 +7,7 @@
  *
  * Principe : Antiquorum a introduit son grading (C=Case, D=Dial, M=Movement
  * + Expert's Overall Opinion) dans ses catalogues d'enchères horlogères.
- * AEGRYN adapte ce format aux actifs tech avec 4 dimensions (C/I/F/S) au
+ * Aegryn adapte ce format aux actifs tech avec 4 dimensions (C/I/F/S) au
  * lieu de 3, la 4ème (Sécurité) n'ayant pas d'équivalent en horlogerie.
  */
 
@@ -141,9 +141,9 @@ export const IP_SUBCODES: SubcodeDef[] = [
   { code: 'I-35', group: 'RGPD & Données', fr: 'RGPD/LPD partiellement conforme', en: 'GDPR/LPD partially compliant' },
   { code: 'I-36', group: 'RGPD & Données', fr: 'RGPD/LPD non évalué', en: 'GDPR/LPD not assessed' },
   { code: 'I-37', group: 'RGPD & Données', fr: 'Transfert de données utilisateurs complexe', en: 'Complex user data transfer' },
-  // Outils AEGRYN
-  { code: 'I-38', group: 'Outils AEGRYN', fr: 'Analyse contractuelle Subblink réalisée', en: 'Subblink contractual analysis completed' },
-  { code: 'I-39', group: 'Outils AEGRYN', fr: 'Analyse Subblink partielle', en: 'Partial Subblink analysis' },
+  // Outils Aegryn
+  { code: 'I-38', group: 'Outils Aegryn', fr: 'Analyse contractuelle Subblink réalisée', en: 'Subblink contractual analysis completed' },
+  { code: 'I-39', group: 'Outils Aegryn', fr: 'Analyse Subblink partielle', en: 'Partial Subblink analysis' },
   // Spécial
   { code: 'I-*',  group: 'Spécial', fr: 'Régularisation IP recommandée, avant ou après signing', en: 'IP regularisation recommended, before or after signing' },
   { code: 'I-**', group: 'Spécial', fr: 'Régularisation IP requise avant tout transfert', en: 'IP regularisation required before any transfer' },
@@ -232,7 +232,7 @@ export const SECURITY_SUBCODES: SubcodeDef[] = [
   { code: 'S-37', group: 'Historique de sécurité', fr: 'Incident(s) en cours ou non résolu(s)', en: 'Ongoing or unresolved incident(s)' },
   { code: 'S-38', group: 'Historique de sécurité', fr: 'Plan de continuité (PCA/PRA) documenté', en: 'Business continuity plan (BCP/DRP) documented' },
   // Certification partenaire
-  { code: 'S-39', group: 'Certification partenaire', fr: 'Audit co-signé partenaire cybersécurité AEGRYN', en: 'Audit co-signed by AEGRYN cybersecurity partner' },
+  { code: 'S-39', group: 'Certification partenaire', fr: 'Audit co-signé partenaire cybersécurité Aegryn', en: 'Audit co-signed by Aegryn cybersecurity partner' },
   { code: 'S-40', group: 'Certification partenaire', fr: 'Audit partenaire en cours', en: 'Partner audit in progress' },
   // Spécial
   { code: 'S-*',  group: 'Spécial', fr: "Audit de sécurité approfondi recommandé, à la charge de l'acquéreur", en: "Detailed security audit recommended, at buyer's expense" },
@@ -249,7 +249,7 @@ export const SUBCODES_BY_DIMENSION = {
 export type DimensionKey = keyof typeof SUBCODES_BY_DIMENSION
 
 /* ─────────────────────────────────────────────────────────────────────────
- * AEG — AEGRYN EXPERT GRADE
+ * AEG — Aegryn EXPERT GRADE
  * ────────────────────────────────────────────────────────────────────── */
 
 export type AEGGrade = 'star' | 'aaa' | 'aa' | 'a' | 'b' | 'refused'

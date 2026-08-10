@@ -5,7 +5,7 @@ import { FilePlus } from 'lucide-react'
 import InvoicesTable, { type Invoice } from './InvoicesTable'
 
 export const metadata: Metadata = {
-  title: 'Factures — Admin AEGRYN',
+  title: 'Factures — Admin Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -22,7 +22,7 @@ export default async function AdminInvoicesPage() {
       <div className="flex items-center justify-between mb-8">
         <div>
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Admin</p>
-          <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Factures AEGRYN</h1>
+          <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Factures Aegryn</h1>
         </div>
         <Link
           href="/admin/invoices/new"

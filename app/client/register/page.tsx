@@ -6,7 +6,7 @@ import Link                 from 'next/link'
 import RegisterForm         from './RegisterForm'
 
 export const metadata: Metadata = {
-  title: 'Créer un compte — Espace client AEGRYN',
+  title: 'Créer un compte — Espace client Aegryn',
   robots: { index: false, follow: false },
 }
 

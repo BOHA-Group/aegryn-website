@@ -77,7 +77,7 @@ export default function DossierRequestModal({ assetId, assetName, onClose }: Pro
               <CheckCircle size={36} style={{ color: T.gold }} />
               <p className="text-[15px] leading-[1.6]"
                 style={{ fontFamily: 'Georgia, serif', color: T.ink }}>
-                Votre demande a été transmise à l'équipe AEGRYN.
+                Votre demande a été transmise à l'équipe Aegryn.
               </p>
               <p className="text-[12px]" style={{ color: T.grey6, fontFamily: 'Arial, sans-serif' }}>
                 Si votre candidature est retenue, le lien d'accès au dossier{' '}
@@ -95,7 +95,7 @@ export default function DossierRequestModal({ assetId, assetName, onClose }: Pro
           ) : state === 'error' ? (
             <div className="flex flex-col items-center gap-4 py-4 text-center">
               <p className="text-[14px]" style={{ color: '#C0392B', fontFamily: 'Georgia, serif' }}>
-                Une erreur est survenue. Veuillez réessayer ou contacter l'équipe AEGRYN.
+                Une erreur est survenue. Veuillez réessayer ou contacter l'équipe Aegryn.
               </p>
               <button onClick={() => setState('form')}
                 className="px-6 py-2.5 text-[11px] font-bold uppercase hover:opacity-80 transition-opacity"
@@ -109,7 +109,7 @@ export default function DossierRequestModal({ assetId, assetName, onClose }: Pro
                 style={{ fontFamily: 'Georgia, serif', color: T.ink }}>
                 Vous demandez l'accès au dossier complet de{' '}
                 <strong>{assetName}</strong>. Votre demande sera examinée
-                par l'équipe AEGRYN sous 48 heures ouvrées.
+                par l'équipe Aegryn sous 48 heures ouvrées.
               </p>
 
               {/* Note optionnelle */}
@@ -134,7 +134,7 @@ export default function DossierRequestModal({ assetId, assetName, onClose }: Pro
                   style={{ color: T.grey6, fontFamily: 'Arial, sans-serif' }}>
                   En soumettant cette demande, vous vous engagez à maintenir
                   la stricte confidentialité des informations contenues dans le dossier
-                  et à ne pas les divulguer à des tiers non autorisés par AEGRYN.
+                  et à ne pas les divulguer à des tiers non autorisés par Aegryn.
                 </p>
               </div>
 

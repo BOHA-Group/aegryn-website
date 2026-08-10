@@ -4,7 +4,7 @@ import type { Metadata }       from 'next'
 import Link                    from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'KYC — AEGRYN Admin',
+  title: 'KYC — Aegryn Admin',
   robots: { index: false, follow: false },
 }
 
@@ -101,7 +101,7 @@ export default async function AdminKycPage({
 
         <div className="mb-8 flex items-start justify-between gap-4">
           <div>
-            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">AEGRYN ADMIN</p>
+            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN</p>
             <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">KYC — File à traiter</h1>
             <p className="text-[12px] text-gray-400 mt-1">Validation des documents d&apos;identité, KYC et UBO — Acquéreurs, Cédants et Partenaires</p>
           </div>

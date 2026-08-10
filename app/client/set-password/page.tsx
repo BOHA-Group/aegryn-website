@@ -4,7 +4,7 @@ import { getTranslations } from 'next-intl/server'
 import SetPasswordForm   from './SetPasswordForm'
 
 export const metadata: Metadata = {
-  title: 'Activer votre compte — AEGRYN',
+  title: 'Activer votre compte — Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -17,7 +17,7 @@ export default async function SetPasswordPage() {
     <main className="min-h-screen bg-ag-navy flex items-center justify-center px-6 pt-16 relative">
       <div className="w-full max-w-md">
         <div className="mb-8 text-center">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">AEGRYN</p>
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">Aegryn</p>
           <h1 className="font-sans font-bold text-white text-[22px] tracking-tight mb-2">
             {t('title')}
           </h1>

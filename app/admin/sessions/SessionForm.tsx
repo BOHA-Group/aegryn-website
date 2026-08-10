@@ -99,7 +99,7 @@ export default function SessionForm({ mode, sessionId, initial }: Props) {
         <label className="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1.5">Nom de la session *</label>
         <input
           type="text" value={values.name} onChange={e => set('name', e.target.value)}
-          placeholder="ex: Session AEGRYN Q3 2026"
+          placeholder="ex: Session Aegryn Q3 2026"
           className="w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy"
         />
       </div>
@@ -161,7 +161,7 @@ export default function SessionForm({ mode, sessionId, initial }: Props) {
       <div>
         <label className="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1.5">Notes internes</label>
         <textarea rows={3} value={values.notes} onChange={e => set('notes', e.target.value)}
-          placeholder="Notes visibles uniquement par l'admin AEGRYN"
+          placeholder="Notes visibles uniquement par l'admin Aegryn"
           className="w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy resize-none"
         />
       </div>

@@ -87,7 +87,7 @@ export default function AdminResetPasswordPage() {
     <div className="min-h-screen bg-[#F5F3EE] flex items-center justify-center px-6">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#9C7A3C] mb-2">AEGRYN Admin</p>
+          <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#9C7A3C] mb-2">Aegryn Admin</p>
           <h1 className="text-2xl font-bold text-[#0C0C0C]">Nouveau mot de passe</h1>
         </div>
 

@@ -31,8 +31,8 @@ export async function POST(req: NextRequest) {
       },
       {
         to:              data.email,
-        subjectFounder:  'AEGRYN — Candidature Partenariat reçue',
-        textFounder:     `Bonjour,\n\nNous avons bien reçu la candidature de ${data.organization_name} pour un partenariat de type "${data.alliance_type}".\n\nNos équipes examineront votre dossier et vous contacteront pour un entretien de qualification.\n\nL'équipe AEGRYN\nhttps://aegryn.com/alliances`,
+        subjectFounder:  'Aegryn — Candidature Partenariat reçue',
+        textFounder:     `Bonjour,\n\nNous avons bien reçu la candidature de ${data.organization_name} pour un partenariat de type "${data.alliance_type}".\n\nNos équipes examineront votre dossier et vous contacteront pour un entretien de qualification.\n\nL'équipe Aegryn\nhttps://aegryn.com/alliances`,
         subjectInternal: `[Partenariat] Candidature ${data.alliance_type} — ${data.organization_name}`,
         textInternal:    `Nouvelle candidature Partenariat\nOrganisation : ${data.organization_name}\nStructure : ${data.structure_type ?? '—'}\nType : ${data.alliance_type}\nEmail : ${data.email}\nPays : ${data.country ?? '—'}\nSite : ${data.website ?? '—'}\nDescription : ${data.description ?? '—'}\nLocale : ${data.locale ?? '—'}`,
       },

@@ -98,7 +98,7 @@ export default async function NdaAssetPage({
           </div>
 
           <p className="font-sans font-semibold text-ag-black text-[14px]">
-            Entre AEGRYN (formerly BOHA-Group, société enregistrée en Suisse) et{' '}
+            Entre Aegryn (formerly BOHA-Group, société enregistrée en Suisse) et{' '}
             <span className="text-ag-navy">{fullName}</span> (ci-après « l'Acquéreur »),
             concernant l'actif <strong>{asset.name}</strong> (Lot #{asset.lot_number}).
           </p>
@@ -106,7 +106,7 @@ export default async function NdaAssetPage({
           <section>
             <h3 className="font-sans font-semibold text-[12px] uppercase tracking-widest text-ag-black mb-3">1. Objet spécifique</h3>
             <p>
-              Le présent accord complète le NDA général d'accès au catalogue AEGRYN déjà signé par l'Acquéreur.
+              Le présent accord complète le NDA général d'accès au catalogue Aegryn déjà signé par l'Acquéreur.
               Il régit l'accès aux documents de la data room de l'actif <strong>{asset.name}</strong>,
               incluant sans limitation : états financiers détaillés, code source, base de données clients,
               contrats commerciaux, indicateurs opérationnels, documentation technique et tout autre
@@ -121,9 +121,9 @@ export default async function NdaAssetPage({
               <li>Ne jamais reproduire, copier, photographier ou extraire tout ou partie des documents de la data room</li>
               <li>N'utiliser les informations que dans le seul but d'évaluer une acquisition potentielle de cet actif</li>
               <li>Restreindre l'accès aux seules personnes de son organisation ayant un besoin strict (need-to-know) et les soumettre au même niveau de confidentialité</li>
-              <li>Ne pas contacter directement le cédant, ses dirigeants, salariés, clients ou fournisseurs sans accord préalable écrit d'AEGRYN</li>
+              <li>Ne pas contacter directement le cédant, ses dirigeants, salariés, clients ou fournisseurs sans accord préalable écrit d'Aegryn</li>
               <li>Ne pas utiliser les informations pour développer ou améliorer un produit ou service concurrent</li>
-              <li>Restituer ou détruire tous les documents à première demande d'AEGRYN ou à l'issue du processus</li>
+              <li>Restituer ou détruire tous les documents à première demande d'Aegryn ou à l'issue du processus</li>
               <li>Signaler immédiatement tout accès non autorisé, perte ou divulgation accidentelle à legal@aegryn.com</li>
             </ul>
           </section>
@@ -150,9 +150,9 @@ export default async function NdaAssetPage({
             <h3 className="font-sans font-semibold text-[12px] uppercase tracking-widest text-ag-black mb-3">5. Sanctions</h3>
             <p>
               Tout manquement expose l'Acquéreur à la révocation immédiate de son accès à la plateforme,
-              à des dommages-intérêts calculés sur le préjudice réel subi par AEGRYN et/ou le cédant,
+              à des dommages-intérêts calculés sur le préjudice réel subi par Aegryn et/ou le cédant,
               assortis d'une indemnité forfaitaire minimale de <strong>75 000 € HT</strong> pour toute
-              violation avérée. AEGRYN se réserve le droit d'engager toute action judiciaire en référé.
+              violation avérée. Aegryn se réserve le droit d'engager toute action judiciaire en référé.
             </p>
           </section>
 
@@ -160,13 +160,13 @@ export default async function NdaAssetPage({
             <h3 className="font-sans font-semibold text-[12px] uppercase tracking-widest text-ag-black mb-3">6. Droit applicable</h3>
             <p>
               Le présent accord est soumis au droit suisse. Tout litige sera soumis aux tribunaux
-              du canton de domicile d'AEGRYN, après tentative de résolution amiable sous 30 jours.
+              du canton de domicile d'Aegryn, après tentative de résolution amiable sous 30 jours.
             </p>
           </section>
 
           <div className="bg-gray-50 border border-gray-200 px-5 py-3">
             <p className="font-mono text-[10px] text-gray-400">
-              Version {NDA_ASSET_VERSION} — AEGRYN Data Room NDA — Actif : {asset.name} (Lot #{asset.lot_number})
+              Version {NDA_ASSET_VERSION} — Aegryn Data Room NDA — Actif : {asset.name} (Lot #{asset.lot_number})
             </p>
           </div>
         </div>

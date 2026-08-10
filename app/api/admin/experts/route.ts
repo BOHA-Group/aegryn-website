@@ -281,17 +281,17 @@ export async function PATCH(req: NextRequest) {
       let notifBody = ''
       if (becamePublished) {
         // La publication est automatique — l'admin a approuvé la fiche ET tous les prérequis étaient déjà réunis
-        notifTitle = 'Votre fiche expert est publiée dans l\'annuaire AEGRYN'
+        notifTitle = 'Votre fiche expert est publiée dans l\'annuaire Aegryn'
         notifBody  = 'Votre contenu a été validé par notre équipe. Votre profil est désormais visible dans l\'annuaire.'
       } else if (approvedPending) {
-        notifTitle = 'Votre fiche expert a été validée par l\'équipe AEGRYN'
+        notifTitle = 'Votre fiche expert a été validée par l\'équipe Aegryn'
         notifBody  = 'Elle sera publiée automatiquement dès que votre abonnement sera actif. Activez votre abonnement depuis votre espace partenaire.'
       } else if (wasRejected) {
         notifTitle = 'Votre fiche expert a été refusée'
         notifBody  = `Motif : ${hidden_reason ?? 'non précisé'}. Corrigez votre fiche et soumettez à nouveau.`
       } else if (wasSilentHidden) {
         notifTitle = 'Votre fiche expert a été temporairement masquée'
-        notifBody  = 'Votre fiche a été masquée par l\'administration. Contactez l\'équipe AEGRYN pour plus d\'informations.'
+        notifBody  = 'Votre fiche a été masquée par l\'administration. Contactez l\'équipe Aegryn pour plus d\'informations.'
       }
 
       if (notifTitle) {

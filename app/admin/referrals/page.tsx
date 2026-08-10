@@ -4,7 +4,7 @@ import type { Metadata }       from 'next'
 import ReferralsAdminClient, { type ReferralRow, type CreditRow } from './ReferralsAdminClient'
 
 export const metadata: Metadata = {
-  title: 'Parrainages — Admin AEGRYN',
+  title: 'Parrainages — Admin Aegryn',
   robots: { index: false, follow: false },
 }
 

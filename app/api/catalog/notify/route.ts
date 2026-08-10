@@ -25,8 +25,8 @@ export async function POST(req: NextRequest) {
       },
       {
         to:              data.email,
-        subjectFounder:  'AEGRYN — Vous serez notifié en priorité',
-        textFounder:     `Bonjour,\n\nVotre inscription à la liste de notification du catalogue AEGRYN a bien été enregistrée.\n\nVous serez contacté en priorité dès l'ouverture du catalogue aux membres, avant tout listing public.\n\nPour toute question : contact@boha-group.com\n\nL'équipe AEGRYN`,
+        subjectFounder:  'Aegryn — Vous serez notifié en priorité',
+        textFounder:     `Bonjour,\n\nVotre inscription à la liste de notification du catalogue Aegryn a bien été enregistrée.\n\nVous serez contacté en priorité dès l'ouverture du catalogue aux membres, avant tout listing public.\n\nPour toute question : contact@boha-group.com\n\nL'équipe Aegryn`,
         subjectInternal: `[Catalogue] Nouveau waitlist — ${data.email}`,
         textInternal:    `Nouveau prospect catalogue\nEmail : ${data.email}\nType : ${data.acquirer_type ?? '—'}\nCapacité : ${data.capacity_range ?? '—'}\nSecteurs : ${(data.sectors_interest ?? []).join(', ') || '—'}\nLocale : ${data.locale ?? '—'}`,
       },

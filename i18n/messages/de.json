@@ -32,7 +32,7 @@
     "servicesAcquisition": "Advisory Transaction",
     "servicesValuation": "Bewertung",
     "servicesExperts": "Expertennetzwerk",
-    "servicesMenuLabel": "AEGRYN Services",
+    "servicesMenuLabel": "Aegryn Services",
     "servicesSectionTech": "Advisory Tech",
     "servicesSectionTechDesc": "Technischer Audit, Sicherheit, KI, Compliance",
     "servicesSectionTransaction": "Advisory Transaction",
@@ -66,12 +66,12 @@
       "transactions": "Transaktionen & Netzwerk"
     },
     "page": {
-      "label": "AEGRYN Ökosystem",
+      "label": "Aegryn Ökosystem",
       "title": "Sechs eigene Assets.\nEine gemeinsame Vision.",
-      "desc": "Jedes AEGRYN-Asset wird intern konzipiert, gebaut und betrieben. Vollständiges Eigentum, absolute Souveränität.",
+      "desc": "Jedes Aegryn-Asset wird intern konzipiert, gebaut und betrieben. Vollständiges Eigentum, absolute Souveränität.",
       "meta": {
-        "title": "AEGRYN Assets — Eigenes Ökosystem",
-        "desc": "Entdecken Sie die proprietären Assets von AEGRYN: Subblink, Neediu, Primiom, Movtoo und Hobconnect, konzipiert, um zertifizierbar und übertragbar zu sein."
+        "title": "Aegryn Assets — Eigenes Ökosystem",
+        "desc": "Entdecken Sie die proprietären Assets von Aegryn: Subblink, Neediu, Primiom, Movtoo und Hobconnect, konzipiert, um zertifizierbar und übertragbar zu sein."
       },
       "filterAll": "Alle",
       "filterAI": "KI & Protokolle",
@@ -80,17 +80,17 @@
       "statusLive": "Live",
       "statusBeta": "Beta",
       "statusDev": "In Entwicklung",
-      "gradeLabel": "AEGRYN Grade",
+      "gradeLabel": "Aegryn Grade",
       "gradePending": "Zertifizierung läuft",
       "visitSite": "Website besuchen",
       "viewDetails": "Details anzeigen",
       "auctionEligible": "Auktion-geeignet",
       "internalOnly": "Interne Nutzung",
       "confidential": "Vertraulich",
-      "heroLabel": "AEGRYN — Proprietäres Ökosystem",
+      "heroLabel": "Aegryn — Proprietäres Ökosystem",
       "heroTitle": "Was wir\nbauen.",
       "heroSub": "6 Assets · 3 Kategorien · Schweiz & Europa",
-      "ownedNote": "Diese Assets gehören zur AEGRYN-Gruppe. Sie stehen standardmäßig nicht zum Verkauf. Einige können ausnahmsweise auf strategischen Beschluss der Gruppe hin zur Auktion angeboten werden.",
+      "ownedNote": "Diese Assets gehören zur Aegryn-Gruppe. Sie stehen standardmäßig nicht zum Verkauf. Einige können ausnahmsweise auf strategischen Beschluss der Gruppe hin zur Auktion angeboten werden.",
       "auctionEligibleNote": "Asset für Auktion geeignet — Investorenkontakt auf Anfrage.",
       "ctaBottom": "Möchten Sie Ihr eigenes Asset zur Zertifizierung einreichen?",
       "ctaGrade": "Drittanbieter-Asset einreichen",
@@ -161,9 +161,9 @@
   },
   "build": {
     "hero": {
-      "label": "AEGRYN Portfolio",
+      "label": "Aegryn Portfolio",
       "title": "Sechs proprietäre Assets.\nEine gemeinsame Vision.",
-      "desc": "Jedes AEGRYN-Asset ist von Beginn an so konzipiert, dass es zertifizierbar und übertragbar ist, eingetragenes IP, proprietäre Codebasis, dokumentierter Stack."
+      "desc": "Jedes Aegryn-Asset ist von Beginn an so konzipiert, dass es zertifizierbar und übertragbar ist, eingetragenes IP, proprietäre Codebasis, dokumentierter Stack."
     },
     "categories": {
       "ai": "KI & Protokolle",
@@ -197,7 +197,7 @@
       }
     },
     "advisoryCta": {
-      "label": "AEGRYN Advisory",
+      "label": "Aegryn Advisory",
       "text": "Ihr Asset hat Grade A noch nicht erreicht?",
       "button": "Advisory entdecken"
     }
@@ -209,12 +209,12 @@
       {
         "num": "01",
         "title": "Die Zertifizierung fehlte.",
-        "desc": "Ein Tech-Asset ohne unabhängige Zertifizierung zu kaufen, ist wie eine Uhr ohne Papiere zu kaufen. AEGRYN liefert die Papiere, zertifiziert, verifizierbar, dokumentiert."
+        "desc": "Ein Tech-Asset ohne unabhängige Zertifizierung zu kaufen, ist wie eine Uhr ohne Papiere zu kaufen. Aegryn liefert die Papiere, zertifiziert, verifizierbar, dokumentiert."
       },
       {
         "num": "02",
         "title": "Die Diskretion wurde geopfert.",
-        "desc": "Die besten Transaktionen finden nicht öffentlich statt. Sie finden in einem geschlossenen Kreis statt, zwischen Parteien, die wissen, was sie suchen. AEGRYN ist dieser Kreis."
+        "desc": "Die besten Transaktionen finden nicht öffentlich statt. Sie finden in einem geschlossenen Kreis statt, zwischen Parteien, die wissen, was sie suchen. Aegryn ist dieser Kreis."
       },
       {
         "num": "03",
@@ -224,8 +224,8 @@
     ]
   },
   "ecosystemDomains": {
-    "label": "Die AEGRYN Märkte",
-    "title": "Welche Themen\nüber AEGRYN Auction laufen.",
+    "label": "Die Aegryn Märkte",
+    "title": "Welche Themen\nüber Aegryn Auction laufen.",
     "domains": [
       {
         "id": "ai",
@@ -250,12 +250,12 @@
       {
         "id": "ip",
         "label": "IP Tech & Protokolle",
-        "desc": "Softwarepatente, proprietäre Protokolle, exklusive Datensätze, hochwertige APIs. Die I-Dimension des AEGRYN Grade bewertet jede Komponente."
+        "desc": "Softwarepatente, proprietäre Protokolle, exklusive Datensätze, hochwertige APIs. Die I-Dimension des Aegryn Grade bewertet jede Komponente."
       },
       {
         "id": "web3",
         "label": "Digital Art & Web3",
-        "desc": "Digitale kreative Assets, Smart Contracts mit hohem IP-Wert. Erweiterung des AEGRYN Grade Labels auf Web3-Assets in Prüfung."
+        "desc": "Digitale kreative Assets, Smart Contracts mit hohem IP-Wert. Erweiterung des Aegryn Grade Labels auf Web3-Assets in Prüfung."
       }
     ],
     "cta": "Reichen Sie Ihr Asset zur Zertifizierung ein"
@@ -263,12 +263,12 @@
   "aboutSection": {
     "label": "Über Aegryn",
     "title": "Drei Disziplinen.\nEin Marktstandard.",
-    "desc": "AEGRYN baut proprietäre Tech-Assets, zertifiziert sie unter einem unabhängigen Label und transagiert sie über einen vertraulichen Prozess zwischen qualifizierten Verkäufern und Käufern. Die erste Vertrauensinfrastruktur für Tech-M&A in Europa.",
+    "desc": "Aegryn baut proprietäre Tech-Assets, zertifiziert sie unter einem unabhängigen Label und transagiert sie über einen vertraulichen Prozess zwischen qualifizierten Verkäufern und Käufern. Die erste Vertrauensinfrastruktur für Tech-M&A in Europa.",
     "tagline": "ZERTIFIZIERT IN DER SCHWEIZ. REFERENZ IN EUROPA.",
     "cta": "Über Aegryn",
-    "quote": "Ein Tech-Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. AEGRYN liefert den Beweis bei jedem Asset, bei jedem Transfer.",
+    "quote": "Ein Tech-Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. Aegryn liefert den Beweis bei jedem Asset, bei jedem Transfer.",
     "ceoName": "Yohann Bollack",
-    "ceoTitle": "Gründer, AEGRYN",
+    "ceoTitle": "Gründer, Aegryn",
     "stats": [
       {
         "val": "6",
@@ -285,7 +285,7 @@
     ]
   },
   "missionSection": {
-    "label": "Das AEGRYN-Modell",
+    "label": "Das Aegryn-Modell",
     "sub": "Drei Disziplinen. Ein integriertes Ökosystem.",
     "items": [
       {
@@ -303,13 +303,13 @@
     ]
   },
   "whyapps": {
-    "label": "Warum AEGRYN",
+    "label": "Warum Aegryn",
     "count": "05",
     "items": [
       {
         "num": "01",
         "title": "UNABHÄNGIGE ZERTIFIZIERUNG",
-        "desc": "Jeder AEGRYN-Grade-Bericht wird von unseren zertifizierten Analysten nach einem reproduzierbaren und nachvollziehbaren Protokoll ausgestellt. Keine Meinung, eine Zertifizierung."
+        "desc": "Jeder Aegryn-Grade-Bericht wird von unseren zertifizierten Analysten nach einem reproduzierbaren und nachvollziehbaren Protokoll ausgestellt. Keine Meinung, eine Zertifizierung."
       },
       {
         "num": "02",
@@ -319,7 +319,7 @@
       {
         "num": "03",
         "title": "INSTITUTIONELLES TREUHAND",
-        "desc": "10% des Transaktionspreises werden bei Unterzeichnung der Grundsatzvereinbarung auf einem Bankkonto hinterlegt. Der Verkäufer ist geschützt. Der Käufer ist verpflichtet. AEGRYN berührt die Gelder nie."
+        "desc": "10% des Transaktionspreises werden bei Unterzeichnung der Grundsatzvereinbarung auf einem Bankkonto hinterlegt. Der Verkäufer ist geschützt. Der Käufer ist verpflichtet. Aegryn berührt die Gelder nie."
       },
       {
         "num": "04",
@@ -335,7 +335,7 @@
   },
   "about": {
     "hero": {
-      "label": "Über AEGRYN",
+      "label": "Über Aegryn",
       "title": "Wir verkaufen keine Deals.\nWir schützen, was dauert.",
       "desc": "Wir glauben, dass der wahre Wert eines Tech-Assets nicht unter Druck verhandelt wird. Er wird mit Präzision aufgebaut, in Transparenz zertifiziert und in Vertrauen übertragen."
     },
@@ -356,32 +356,32 @@
           "meaning": "Ewigkeit. Die lange Spanne. Was über Zyklen, Trends und Finanzierungsrunden hinaus Bestand hat."
         }
       ],
-      "synthesis": "Drei Wörter aus drei Zivilisationen. Eine Synthese: eine Einheit, die schützt (AEGIS), Flüsse ermöglicht (AEGIR) und für die Dauer baut (AEON). AEGRYN.",
-      "formerly": "AEGRYN war früher als BOHA-Group bekannt. Als sich die Positionierung des Unternehmens schärfte, vom Erbauer digitaler Assets zur Zertifizierungs- und Transaktionsinfrastruktur, schärfte sich auch seine Identität. Der Name änderte sich. Die Überzeugung nicht."
+      "synthesis": "Drei Wörter aus drei Zivilisationen. Eine Synthese: eine Einheit, die schützt (AEGIS), Flüsse ermöglicht (AEGIR) und für die Dauer baut (AEON). Aegryn.",
+      "formerly": "Aegryn war früher als BOHA-Group bekannt. Als sich die Positionierung des Unternehmens schärfte, vom Erbauer digitaler Assets zur Zertifizierungs- und Transaktionsinfrastruktur, schärfte sich auch seine Identität. Der Name änderte sich. Die Überzeugung nicht."
     },
     "vision": {
       "label": "Unsere Vision",
-      "text": "Der europäische Tech-M&A-Markt hat solide Grundlagen, erfahrene Berater, rigorose Due Diligence, institutionelles Kapital. Was fehlte, war ein standardisierter, unabhängiger Zertifizierungsrahmen: eine gemeinsame, überprüfbare Referenz, auf die sich beide Seiten einer Transaktion verlassen können, bevor die Verhandlungen beginnen.\n\nAEGRYN ist dieser Rahmen, kein Ersatz für das, was bereits funktioniert, sondern die Infrastrukturschicht, die strukturell fehlte."
+      "text": "Der europäische Tech-M&A-Markt hat solide Grundlagen, erfahrene Berater, rigorose Due Diligence, institutionelles Kapital. Was fehlte, war ein standardisierter, unabhängiger Zertifizierungsrahmen: eine gemeinsame, überprüfbare Referenz, auf die sich beide Seiten einer Transaktion verlassen können, bevor die Verhandlungen beginnen.\n\nAegryn ist dieser Rahmen, kein Ersatz für das, was bereits funktioniert, sondern die Infrastrukturschicht, die strukturell fehlte."
     },
     "contribution": {
       "label": "Unser Beitrag",
       "title": "Kein Ersatz.\nEine Infrastrukturschicht.",
-      "desc": "Rigorose Tech-M&A-Transaktionen existieren bereits. AEGRYN ersetzt nicht die Berater, Anwälte und Wirtschaftsprüfer, die sie strukturieren. Es fügt hinzu, was strukturell fehlte: ein unabhängiger Grade, ausgestellt vor jeder Listung, der beiden Seiten einen zertifizierten, dokumentierten Ausgangspunkt gibt. Weniger Zeit für Debatten über den Grundwert. Mehr Zeit zum Abschließen.",
+      "desc": "Rigorose Tech-M&A-Transaktionen existieren bereits. Aegryn ersetzt nicht die Berater, Anwälte und Wirtschaftsprüfer, die sie strukturieren. Es fügt hinzu, was strukturell fehlte: ein unabhängiger Grade, ausgestellt vor jeder Listung, der beiden Seiten einen zertifizierten, dokumentierten Ausgangspunkt gibt. Weniger Zeit für Debatten über den Grundwert. Mehr Zeit zum Abschließen.",
       "items": [
         {
           "num": "01",
           "title": "Ein Grade vor einem Preis",
-          "desc": "Der AEGRYN C/I/F/S Grade wird vor jeder Listung, vor jeder Verhandlung festgestellt. Kein Bewertungsgutachten, eine Zertifizierung dessen, was der Asset tatsächlich ist, dokumentiert, versioniert und reproduzierbar. Der Preis folgt dem Grade. Der Grade hängt nicht davon ab."
+          "desc": "Der Aegryn C/I/F/S Grade wird vor jeder Listung, vor jeder Verhandlung festgestellt. Kein Bewertungsgutachten, eine Zertifizierung dessen, was der Asset tatsächlich ist, dokumentiert, versioniert und reproduzierbar. Der Preis folgt dem Grade. Der Grade hängt nicht davon ab."
         },
         {
           "num": "02",
           "title": "Ein geschlossener Kreis, kein Marktplatz",
-          "desc": "Jeder Verkäufer im AEGRYN-Katalog hat die Zertifizierung bestanden. Jeder Käufer hat seine finanzielle Kapazität nachgewiesen. Diskretion ist strukturell, kein nachträglich hinzugefügtes Merkmal, sondern die Betriebsbedingung, aus der alles andere folgt."
+          "desc": "Jeder Verkäufer im Aegryn-Katalog hat die Zertifizierung bestanden. Jeder Käufer hat seine finanzielle Kapazität nachgewiesen. Diskretion ist strukturell, kein nachträglich hinzugefügtes Merkmal, sondern die Betriebsbedingung, aus der alles andere folgt."
         },
         {
           "num": "03",
           "title": "Schweizer institutionelle Standards",
-          "desc": "Schweizer Recht regelt jede Transaktion. Der Escrow wird von einer Drittbank gehalten, AEGRYN berührt niemals die Mittel. Die Dokumentation ist bei jeder Übertragung vollständig. Das sind Betriebsbedingungen, keine Versprechen."
+          "desc": "Schweizer Recht regelt jede Transaktion. Der Escrow wird von einer Drittbank gehalten, Aegryn berührt niemals die Mittel. Die Dokumentation ist bei jeder Übertragung vollständig. Das sind Betriebsbedingungen, keine Versprechen."
         }
       ]
     },
@@ -408,12 +408,12 @@
       "precision": {
         "label": "01",
         "title": "Präzision",
-        "desc": "Jede Entscheidung ist dokumentiert, gemessen und nachvollziehbar. Der AEGRYN Grade ist keine Meinung, er ist ein Protokoll. Zwei Analysten, gleiches Protokoll, gleicher Grade."
+        "desc": "Jede Entscheidung ist dokumentiert, gemessen und nachvollziehbar. Der Aegryn Grade ist keine Meinung, er ist ein Protokoll. Zwei Analysten, gleiches Protokoll, gleicher Grade."
       },
       "durability": {
         "label": "02",
         "title": "Beständigkeit",
-        "desc": "Wir bauen für die Dekade, nicht für das Quartal. Jeder Asset im AEGRYN-Ökosystem ist darauf ausgelegt, in zehn Jahren zertifizierbar zu sein, nicht nur heute."
+        "desc": "Wir bauen für die Dekade, nicht für das Quartal. Jeder Asset im Aegryn-Ökosystem ist darauf ausgelegt, in zehn Jahren zertifizierbar zu sein, nicht nur heute."
       },
       "sovereignty": {
         "label": "03",
@@ -427,29 +427,29 @@
       }
     },
     "swiss": {
-      "groupLabel": "AEGRYN",
+      "groupLabel": "Aegryn",
       "title": "Verwurzelt in der Schweiz.\nDie europäische Referenz.",
-      "desc": "Die Schweiz wurde bewusst gewählt, nicht wegen ihrer Gründungsvorteile, sondern wegen ihrer institutionellen Standards: die Strenge des Schweizer Rechts, die Diskretion ihres Finanzökosystems und die Neutralität, die sie zu einem glaubwürdigen Anker für grenzüberschreitende Transaktionen zwischen einem französischen Verkäufer, einem deutschen Käufer und einem luxemburgischen Fonds macht. Jede AEGRYN-Transaktion unterliegt Schweizer Recht, unabhängig von der Nationalität der Parteien oder der Herkunft des Assets.",
+      "desc": "Die Schweiz wurde bewusst gewählt, nicht wegen ihrer Gründungsvorteile, sondern wegen ihrer institutionellen Standards: die Strenge des Schweizer Rechts, die Diskretion ihres Finanzökosystems und die Neutralität, die sie zu einem glaubwürdigen Anker für grenzüberschreitende Transaktionen zwischen einem französischen Verkäufer, einem deutschen Käufer und einem luxemburgischen Fonds macht. Jede Aegryn-Transaktion unterliegt Schweizer Recht, unabhängig von der Nationalität der Parteien oder der Herkunft des Assets.",
       "cta": "Katalog ansehen"
     },
     "founder": {
       "label": "Die Gründungsüberzeugung",
       "title": "Von innen heraus gebaut.",
-      "bio1": "AEGRYN wurde von jemandem gegründet, der baut. Jahre damit verbracht, digitale Assets aufzubauen, zu auditieren und zu strukturieren und dabei immer wieder dieselbe Lücke zu beobachten: das Fehlen einer standardisierten, unabhängigen Referenz, der beide Seiten einer Tech-Transaktion gleichermaßen vertrauen konnten.",
-      "bio2": "Die Entscheidung, diese Referenz in der Schweiz zu verankern, unter Schweizer Recht und institutionellen Standards, war bewusst. Kein Detail der Gründung, eine Positionierungsentscheidung. Die proprietären Assets, die AEGRYN aufbaut, sind darauf ausgelegt, diesen Standard von ihrer ersten Codezeile an zu erfüllen.",
+      "bio1": "Aegryn wurde von jemandem gegründet, der baut. Jahre damit verbracht, digitale Assets aufzubauen, zu auditieren und zu strukturieren und dabei immer wieder dieselbe Lücke zu beobachten: das Fehlen einer standardisierten, unabhängigen Referenz, der beide Seiten einer Tech-Transaktion gleichermaßen vertrauen konnten.",
+      "bio2": "Die Entscheidung, diese Referenz in der Schweiz zu verankern, unter Schweizer Recht und institutionellen Standards, war bewusst. Kein Detail der Gründung, eine Positionierungsentscheidung. Die proprietären Assets, die Aegryn aufbaut, sind darauf ausgelegt, diesen Standard von ihrer ersten Codezeile an zu erfüllen.",
       "cta": "Kontakt aufnehmen"
     },
     "whatsnext": {
       "label": "Was als Nächstes kommt",
       "title": "Das Protokoll entwickelt sich.\nDer Standard hält.",
-      "desc": "AEGRYN zertifiziert und transagiert heute SaaS, Anwendungen, Marktplätze, IP-Assets und Web3-Assets unter dem CIFS-Protokoll.\n\nDas wichtigste Element der Roadmap ist die Blockchain-Zertifizierung: eine Verankerungsschicht, die jede zertifizierte Codebasis zum genauen Zeitpunkt des Transfers versiegelt, wodurch jedes Grade dauerhaft und unveränderlich verifizierbar wird. Diese Schicht wird dem bereits vollständig operativen unabhängigen Protokoll hinzugefügt.\n\nParallel dazu bauen wir ein Netzwerk von Expertenpartnern auf, Anwaltskanzleien, Wirtschaftsprüfer, Cybersicherheitsspezialisten und technische Architekten, um Käufer und Verkäufer in jeder Phase zu begleiten: technische Beratung vor der Zertifizierung, rechtliche und finanzielle Strukturierung während der Transaktion und Integration nach dem Closing.",
+      "desc": "Aegryn zertifiziert und transagiert heute SaaS, Anwendungen, Marktplätze, IP-Assets und Web3-Assets unter dem CIFS-Protokoll.\n\nDas wichtigste Element der Roadmap ist die Blockchain-Zertifizierung: eine Verankerungsschicht, die jede zertifizierte Codebasis zum genauen Zeitpunkt des Transfers versiegelt, wodurch jedes Grade dauerhaft und unveränderlich verifizierbar wird. Diese Schicht wird dem bereits vollständig operativen unabhängigen Protokoll hinzugefügt.\n\nParallel dazu bauen wir ein Netzwerk von Expertenpartnern auf, Anwaltskanzleien, Wirtschaftsprüfer, Cybersicherheitsspezialisten und technische Architekten, um Käufer und Verkäufer in jeder Phase zu begleiten: technische Beratung vor der Zertifizierung, rechtliche und finanzielle Strukturierung während der Transaktion und Integration nach dem Closing.",
       "cta": "Aktuelle Sitzungen ansehen"
     },
     "cta": {
-      "label": "Mit AEGRYN arbeiten",
+      "label": "Mit Aegryn arbeiten",
       "seller": {
         "title": "Sie verkaufen einen Tech-Asset.",
-        "desc": "Ein AEGRYN-Berater antwortet innerhalb von 24 Stunden.",
+        "desc": "Ein Aegryn-Berater antwortet innerhalb von 24 Stunden.",
         "btn": "Asset zur Zertifizierung einreichen",
         "href": "/grade/submit"
       },
@@ -516,7 +516,7 @@
       "label": "Interesse an diesem Asset?",
       "title": "Sprechen wir über Ihre Akquisition",
       "allAssets": "Alle Assets anzeigen",
-      "contact": "AEGRYN kontaktieren"
+      "contact": "Aegryn kontaktieren"
     },
     "assets": {
       "subblink": {
@@ -694,10 +694,10 @@
   },
   "accessForm": {
     "doneTitle": "Anfrage eingegangen",
-    "doneDesc": "Unser Team meldet sich innerhalb von 24–48 Stunden, um Ihr Profil zu validieren und Ihnen das NDA und die AEGRYN Auction AGB zur Unterzeichnung zuzusenden.",
+    "doneDesc": "Unser Team meldet sich innerhalb von 24–48 Stunden, um Ihr Profil zu validieren und Ihnen das NDA und die Aegryn Auction AGB zur Unterzeichnung zuzusenden.",
     "doneNote": "Kein Zugang ohne Unterzeichnung beider Dokumente.",
     "restrictedTitle": "Eingeschränkter Katalogzugang",
-    "restrictedDesc": "Asset-Dateien und Firmennamen sind erst nach Kontoerstellung, Unterzeichnung des AEGRYN Auction NDA und Annahme der AGB zugänglich.",
+    "restrictedDesc": "Asset-Dateien und Firmennamen sind erst nach Kontoerstellung, Unterzeichnung des Aegryn Auction NDA und Annahme der AGB zugänglich.",
     "pendingCgvDesc": "Ihr NDA ist registriert. Die AGB werden Ihnen in Kürze zugesandt.",
     "pendingNdaDesc": "Reichen Sie unten Ihre Anfrage ein. Wir senden Ihnen das NDA und die AGB zur Unterzeichnung zu.",
     "ndaSignedTitle": "NDA unterzeichnet — AGB ausstehend",
@@ -727,10 +727,10 @@
     }
   },
   "gradePartners": {
-    "back": "← AEGRYN Grade",
-    "eyebrow": "AEGRYN GRADE",
+    "back": "← Aegryn Grade",
+    "eyebrow": "Aegryn GRADE",
     "title": "Ein Expertennetzwerk zur Unterstützung, keine Pflicht",
-    "intro1": "Das AEGRYN Grade ist eine unabhängige Zertifizierung: AEGRYN bewertet und benotet die Qualität von zum Verkauf stehenden Tech-Assets, ohne für die Ausstellung des Grades auf Dritte angewiesen zu sein. Unsere Verkäufer werden unabhängig in ihrem Verkaufsprozess begleitet.",
+    "intro1": "Das Aegryn Grade ist eine unabhängige Zertifizierung: Aegryn bewertet und benotet die Qualität von zum Verkauf stehenden Tech-Assets, ohne für die Ausstellung des Grades auf Dritte angewiesen zu sein. Unsere Verkäufer werden unabhängig in ihrem Verkaufsprozess begleitet.",
     "intro2": "Wir sind offen für Bewerbungen unabhängiger Experten, die sich der Zertifizierung anschließen oder unserem Netzwerk beitreten möchten, das vor, während und nach einer Transaktion auf Abruf mobilisierbar ist.",
     "openApps": "Bewerbungen offen",
     "types": {
@@ -757,12 +757,12 @@
     },
     "ctaLabel": "FÜR EXPERTEN",
     "ctaTitle": "Sind Sie eine Kanzlei, ein Wirtschaftsprüfer oder ein Cybersicherheitsspezialist?",
-    "ctaDesc": "Bewerben Sie sich für das AEGRYN Expertennetzwerk: Zugang zu einem regelmäßigen Strom von Tech-Assets, die Ihr Fachwissen erfordern, institutionelle Sichtbarkeit, qualifizierte Kundschaft.",
+    "ctaDesc": "Bewerben Sie sich für das Aegryn Expertennetzwerk: Zugang zu einem regelmäßigen Strom von Tech-Assets, die Ihr Fachwissen erfordern, institutionelle Sichtbarkeit, qualifizierte Kundschaft.",
     "ctaBtn": "Für das Expertennetzwerk bewerben",
     "benefitsLabel": "WAS SIE ERHALTEN",
     "benefits": [
       "Zugang zu einem regelmäßigen Strom von Tech-Assets, die Ihr Fachwissen erfordern",
-      "Sichtbarkeit als AEGRYN-Netzwerkpartner (ab den ersten Mandaten)",
+      "Sichtbarkeit als Aegryn-Netzwerkpartner (ab den ersten Mandaten)",
       "Qualifizierte institutionelle Kundschaft — PE-, VC-, Family-Office-Käufer",
       "Im Rahmen der Partnerschaft definierte Vergütung"
     ]
@@ -826,8 +826,8 @@
       }
     },
     "meta": {
-      "title": "Kontakt — AEGRYN",
-      "desc": "Kontaktieren Sie AEGRYN, Advisory, Zertifizierung, Auktion, Partnerschaft oder allgemeine Anfragen."
+      "title": "Kontakt — Aegryn",
+      "desc": "Kontaktieren Sie Aegryn, Advisory, Zertifizierung, Auktion, Partnerschaft oder allgemeine Anfragen."
     },
     "info": {
       "baseLabel": "Hauptsitz",
@@ -868,7 +868,7 @@
     },
     "experts": {
       "label": "Eingesetzte Expertise",
-      "desc": "AEGRYN Advisory Tech interveniert in den technischen Dimensionen, die die Robustheit und Zertifizierbarkeit eines digitalen Assets definieren: vor, während oder unabhängig von einer Transaktion.",
+      "desc": "Aegryn Advisory Tech interveniert in den technischen Dimensionen, die die Robustheit und Zertifizierbarkeit eines digitalen Assets definieren: vor, während oder unabhängig von einer Transaktion.",
       "items": [
         {
           "title": "Sicherheitsaudit & Cybersicherheit",
@@ -880,7 +880,7 @@
         },
         {
           "title": "DevSecOps & Softwarequalität",
-          "desc": "CI/CD, Testabdeckung, Abbau technischer Schulden, QA-Automatisierung, Observability (Logs, Monitoring, Alerts). Verbessert direkt den Code-Score (Dimension C) des AEGRYN-Grades."
+          "desc": "CI/CD, Testabdeckung, Abbau technischer Schulden, QA-Automatisierung, Observability (Logs, Monitoring, Alerts). Verbessert direkt den Code-Score (Dimension C) des Aegryn-Grades."
         },
         {
           "title": "Daten & Künstliche Intelligenz",
@@ -931,8 +931,8 @@
     "base": "Schweizer Basis"
   },
   "footer": {
-    "groupLabel": "AEGRYN",
-    "legal": "© 2026 AEGRYN (formerly BOHA-Group) — Alle Rechte vorbehalten",
+    "groupLabel": "Aegryn",
+    "legal": "© 2026 Aegryn (formerly BOHA-Group) — Alle Rechte vorbehalten",
     "company": "An Aegryn company",
     "privacy": "Datenschutz",
     "terms": "AGB",
@@ -946,7 +946,7 @@
     "blogLink": "Blog",
     "ecosystemLabel": "Ökosystem",
     "advisoryLabel": "Beratung",
-    "advisoryDesc": "Tech-Beratung und Transaktionsbegleitung für AEGRYN-zertifizierte digitale Assets.",
+    "advisoryDesc": "Tech-Beratung und Transaktionsbegleitung für Aegryn-zertifizierte digitale Assets.",
     "advisoryBook": "Gespräch vereinbaren ↗",
     "medallionText": "Sprechen wir . Kontaktieren Sie uns . Sprechen wir . Kontaktieren Sie uns .",
     "contactLabel": "Kontaktieren Sie uns",
@@ -957,7 +957,7 @@
     "assetsLink": "Anlagenkatalog",
     "glossaryLink": "Glossar",
     "ecosystemCatalogLink": "Unsere proprietären Assets",
-    "aiNotice": "Einige Inhalte auf dieser Website werden mit Unterstützung von KI-Systemen erstellt und unter der redaktionellen Verantwortung von AEGRYN geprüft — EU-KI-Verordnung Art. 50."
+    "aiNotice": "Einige Inhalte auf dieser Website werden mit Unterstützung von KI-Systemen erstellt und unter der redaktionellen Verantwortung von Aegryn geprüft — EU-KI-Verordnung Art. 50."
   },
   "cookie": {
     "title": "Aegryn — Cookies & Analytics",
@@ -968,19 +968,19 @@
   },
   "acquisition": {
     "meta": {
-      "title": "Transaktionsberatung & M&A — AEGRYN",
-      "desc": "Vollständige Begleitung beim Erwerb zertifizierter Tech-Assets: Due Diligence, rechtliche und steuerliche Strukturierung, Finanzierung, sicheres Signing und Closing. AEGRYN mobilisiert die richtigen Experten für Ihren Deal."
+      "title": "Transaktionsberatung & M&A — Aegryn",
+      "desc": "Vollständige Begleitung beim Erwerb zertifizierter Tech-Assets: Due Diligence, rechtliche und steuerliche Strukturierung, Finanzierung, sicheres Signing und Closing. Aegryn mobilisiert die richtigen Experten für Ihren Deal."
     },
     "label": "Services — Transaktionsberatung",
     "title": "Ihre Akquisition.\nStrukturiert für den Abschluss.",
-    "desc": "Wenn der Erwerb eines zertifizierten Assets eine spezifische finanzielle, rechtliche oder steuerliche Strukturierung erfordert — mobilisiert AEGRYN die richtigen Experten für Ihr Profil und die Art des Deals.",
+    "desc": "Wenn der Erwerb eines zertifizierten Assets eine spezifische finanzielle, rechtliche oder steuerliche Strukturierung erfordert — mobilisiert Aegryn die richtigen Experten für Ihr Profil und die Art des Deals.",
     "ctaPrimary": "Meine Akquisition besprechen",
     "ctaDiscover": "Unsere Analysen lesen",
-    "advisorNote": "Ein AEGRYN-Berater wird Ihrer Akte vom ersten Kontakt bis zum Closing zugewiesen. Eine Person. Direkte Leitung.",
+    "advisorNote": "Ein Aegryn-Berater wird Ihrer Akte vom ersten Kontakt bis zum Closing zugewiesen. Eine Person. Direkte Leitung.",
     "experts": {
       "label": "Eingesetzte Expertise",
       "title": "Die richtigen Experten.\nFür jede Phase des Deals.",
-      "desc": "Je nach Ihrer Akte und der Transaktionsphase mobilisiert AEGRYN die geeigneten Partnerexperten.",
+      "desc": "Je nach Ihrer Akte und der Transaktionsphase mobilisiert Aegryn die geeigneten Partnerexperten.",
       "phases": [
         {
           "label": "Prä-Transaktion",
@@ -998,7 +998,7 @@
             {
               "num": "03",
               "title": "Digitalrecht & geistiges Eigentum",
-              "desc": "IP-Eigentumskette, Open-Source-Lizenzen, Übertragung von Gründer- und Dienstleisterrechten, Markenschutz, Vertragskohärenz mit Kunden. Deckt Dimension I des AEGRYN-Grades ab."
+              "desc": "IP-Eigentumskette, Open-Source-Lizenzen, Übertragung von Gründer- und Dienstleisterrechten, Markenschutz, Vertragskohärenz mit Kunden. Deckt Dimension I des Aegryn-Grades ab."
             }
           ]
         },
@@ -1075,7 +1075,7 @@
       "items": [
         {
           "title": "Fonds und Family Offices",
-          "desc": "Sie haben einen Asset im Katalog identifiziert, aber der Deal erfordert ein SPV, ein LP-Co-Investment oder einen IC-Zeitplan. AEGRYN strukturiert die Hülle um Ihr Angebot."
+          "desc": "Sie haben einen Asset im Katalog identifiziert, aber der Deal erfordert ein SPV, ein LP-Co-Investment oder einen IC-Zeitplan. Aegryn strukturiert die Hülle um Ihr Angebot."
         },
         {
           "title": "Strategische Käufer",
@@ -1083,7 +1083,7 @@
         },
         {
           "title": "Erstmalige Erwerber",
-          "desc": "Sie tätigen Ihre erste Tech-Akquisition und benötigen vollständige Begleitung — Bewertung, Due Diligence, Verhandlung, Finanzierungsstrukturierung. AEGRYN führt Sie vom ersten Gespräch bis zum Transfer."
+          "desc": "Sie tätigen Ihre erste Tech-Akquisition und benötigen vollständige Begleitung — Bewertung, Due Diligence, Verhandlung, Finanzierungsstrukturierung. Aegryn führt Sie vom ersten Gespräch bis zum Transfer."
         }
       ]
     },
@@ -1098,12 +1098,12 @@
         {
           "num": "02",
           "title": "Zugang zur zertifizierten Pipeline",
-          "desc": "Prioritätszugang zum AEGRYN-Katalog und Off-Market-Flow. Zertifizierte Assets Grade AA und höher. Grade A auf Anfrage mit Abhilfeplan inklusive."
+          "desc": "Prioritätszugang zum Aegryn-Katalog und Off-Market-Flow. Zertifizierte Assets Grade AA und höher. Grade A auf Anfrage mit Abhilfeplan inklusive."
         },
         {
           "num": "03",
           "title": "Due Diligence & Strukturierung",
-          "desc": "Data-Room-Zugang unter NDA. Der AEGRYN-Grade-Bericht komprimiert die DD um 30 bis 45 Tage. Mobilisierung der für den Deal geeigneten Rechts-, Steuer- und Finanzexperten. Ausarbeitung der Transaktionsdokumente (SPA, SHA, LOI)."
+          "desc": "Data-Room-Zugang unter NDA. Der Aegryn-Grade-Bericht komprimiert die DD um 30 bis 45 Tage. Mobilisierung der für den Deal geeigneten Rechts-, Steuer- und Finanzexperten. Ausarbeitung der Transaktionsdokumente (SPA, SHA, LOI)."
         },
         {
           "num": "04",
@@ -1113,12 +1113,12 @@
         {
           "num": "05",
           "title": "Signing & sicherer Closing",
-          "desc": "Institutioneller Treuhand (10 % des Preises bei der LOI). Vollständige Dokumentation des Codebase-Zustands zum Signing-Datum. Rechtsübertragung. Ausstellung des AEGRYN-Transaktionszertifikats."
+          "desc": "Institutioneller Treuhand (10 % des Preises bei der LOI). Vollständige Dokumentation des Codebase-Zustands zum Signing-Datum. Rechtsübertragung. Ausstellung des Aegryn-Transaktionszertifikats."
         }
       ]
     },
     "diff": {
-      "label": "Warum AEGRYN",
+      "label": "Warum Aegryn",
       "items": [
         {
           "title": "Zertifizierte Assets, reduziertes Risiko",
@@ -1126,15 +1126,15 @@
         },
         {
           "title": "Off-Market zuerst",
-          "desc": "Die meisten AEGRYN-Assets sind nie öffentlich gelistet. Qualifizierte Erwerber-Mitglieder erhalten Zugang vor jedem Public Listing — oder exklusiv."
+          "desc": "Die meisten Aegryn-Assets sind nie öffentlich gelistet. Qualifizierte Erwerber-Mitglieder erhalten Zugang vor jedem Public Listing — oder exklusiv."
         },
         {
           "title": "Experten zum richtigen Zeitpunkt",
-          "desc": "AEGRYN erledigt nicht alles. Wir koordinieren die richtigen Experten (rechtlich, steuerlich, finanziell) zum richtigen Zeitpunkt im Prozess — nicht zu früh um nicht zu belasten, nicht zu spät um nicht zu gefährden."
+          "desc": "Aegryn erledigt nicht alles. Wir koordinieren die richtigen Experten (rechtlich, steuerlich, finanziell) zum richtigen Zeitpunkt im Prozess — nicht zu früh um nicht zu belasten, nicht zu spät um nicht zu gefährden."
         },
         {
           "title": "Haftung auf den Grade",
-          "desc": "Unser Grade wird von zertifizierten Analysten nach einem unabhängigen, strengen Protokoll ausgestellt. Die berufliche Haftung von AEGRYN ist für die Integrität des Zertifizierungsprozesses engagiert, im Rahmen der in unseren AGB festgelegten Grenzen."
+          "desc": "Unser Grade wird von zertifizierten Analysten nach einem unabhängigen, strengen Protokoll ausgestellt. Die berufliche Haftung von Aegryn ist für die Integrität des Zertifizierungsprozesses engagiert, im Rahmen der in unseren AGB festgelegten Grenzen."
         }
       ]
     },
@@ -1142,7 +1142,7 @@
       "label": "Honorare",
       "title": "Eine Erfolgsprovision,\nkeine Fixkosten.",
       "desc": "Unsere Vergütung ist ausschließlich vom wirksamen Closing abhängig. Kein Retainer, keine Einstiegsgebühren. Detaillierte Bedingungen in unseren AGB.",
-      "note": "AEGRYN handelt als zertifizierter Intermediär, nicht als Finanzinstitut. Die vorgestellten Finanzierungsoptionen betreffen unabhängige Drittpartner. Dieser Service stellt keine Anlageberatung im Sinne der MiFID-II-Richtlinie dar.",
+      "note": "Aegryn handelt als zertifizierter Intermediär, nicht als Finanzinstitut. Die vorgestellten Finanzierungsoptionen betreffen unabhängige Drittpartner. Dieser Service stellt keine Anlageberatung im Sinne der MiFID-II-Richtlinie dar.",
       "noteLink": "AGB einsehen",
       "noteHref": "/terms/cgv"
     },
@@ -1150,14 +1150,14 @@
       "title": "Interesse an einem Asset?",
       "desc": "Erzählen Sie uns von Ihrem Akquisitionsprojekt. Wir melden uns innerhalb von 48h mit einer Machbarkeitsanalyse.",
       "btn": "Kontakt aufnehmen",
-      "partnerNote": "Möchten Sie ausgehenden Deal Flow in das AEGRYN-Ökosystem einbringen?",
+      "partnerNote": "Möchten Sie ausgehenden Deal Flow in das Aegryn-Ökosystem einbringen?",
       "partnerCta": "Deal-Flow-Partnerschaften entdecken",
       "partnerHref": "/alliances?tab=dealflow"
     },
     "roadmap": {
       "label": "Services in Entwicklung",
       "title": "Was kommt.",
-      "desc": "AEGRYN erweitert schrittweise sein Transaktionsangebot. Diese Services werden mit unseren Alliance-Partnern eingesetzt.",
+      "desc": "Aegryn erweitert schrittweise sein Transaktionsangebot. Diese Services werden mit unseren Alliance-Partnern eingesetzt.",
       "ctaLabel": "Kontakt aufnehmen",
       "ctaHref": "/contact",
       "items": [
@@ -1202,13 +1202,13 @@
   },
   "gradingSystem": {
     "meta": {
-      "title": "Bewertungssystem — AEGRYN Grade Protocol",
-      "desc": "Das AEGRYN Grade-Protokoll: CIFS-Rahmen, AEG ★ bis B Definitionen, Untercodes, Analyseprozess und Unabhängigkeitsprinzipien."
+      "title": "Bewertungssystem — Aegryn Grade Protocol",
+      "desc": "Das Aegryn Grade-Protokoll: CIFS-Rahmen, AEG ★ bis B Definitionen, Untercodes, Analyseprozess und Unabhängigkeitsprinzipien."
     },
-    "label": "AEGRYN — Grading System",
+    "label": "Aegryn — Grading System",
     "version": "2026",
-    "title": "AEGRYN\nGrading System.",
-    "intro": "AEGRYN führt sein eigenes Zertifizierungssystem für Tech-Assets ein — mit voller Transparenz über die 4 grundlegenden Wertdimensionen.",
+    "title": "Aegryn\nGrading System.",
+    "intro": "Aegryn führt sein eigenes Zertifizierungssystem für Tech-Assets ein — mit voller Transparenz über die 4 grundlegenden Wertdimensionen.",
     "downloadLabel": "Vollständige Dokumentation",
     "downloadCta": "Protokoll-PDF herunterladen",
     "cifsTitle": "Der CIFS-Rahmen",
@@ -1271,7 +1271,7 @@
         ]
       }
     ],
-    "gradesTitle": "AEGRYN Grades",
+    "gradesTitle": "Aegryn Grades",
     "gradesDesc": "Jedes Grade entspricht einem genauen Punktebereich und einem definierten Asset-Profil. AEG ★ und AAA werden weniger als 15% der eingereichten Assets verliehen.",
     "grades": [
       {
@@ -1434,7 +1434,7 @@
       {
         "num": "02",
         "title": "Technische Analyse (Code + Security)",
-        "desc": "Code-Review durch zwei AEGRYN-zertifizierte Senior-Ingenieure. Automatisierter Sicherheitsscan gefolgt von manueller Überprüfung. Dauer: 5–10 Tage."
+        "desc": "Code-Review durch zwei Aegryn-zertifizierte Senior-Ingenieure. Automatisierter Sicherheitsscan gefolgt von manueller Überprüfung. Dauer: 5–10 Tage."
       },
       {
         "num": "03",
@@ -1449,14 +1449,14 @@
       {
         "num": "05",
         "title": "Ausgabe & Veröffentlichung",
-        "desc": "Das Grade wird ausgestellt, dokumentiert und versioniert. Das Zertifikat wird an den Inhaber übermittelt und im AEGRYN-Register veröffentlicht. Eine Blockchain-Zertifizierungsschicht wird die Verankerung dieses Registers langfristig verstärken."
+        "desc": "Das Grade wird ausgestellt, dokumentiert und versioniert. Das Zertifikat wird an den Inhaber übermittelt und im Aegryn-Register veröffentlicht. Eine Blockchain-Zertifizierungsschicht wird die Verankerung dieses Registers langfristig verstärken."
       }
     ],
     "principlesTitle": "Unabhängigkeitsprinzipien",
     "principles": [
       {
         "title": "Strikte Trennung",
-        "desc": "AEGRYN-Analysten haben kein finanzielles Interesse an den von ihnen zertifizierten Assets. Jede Beziehung zum Inhaber führt zur automatischen Ablehnung."
+        "desc": "Aegryn-Analysten haben kein finanzielles Interesse an den von ihnen zertifizierten Assets. Jede Beziehung zum Inhaber führt zur automatischen Ablehnung."
       },
       {
         "title": "Reproduzierbarkeit",
@@ -1468,15 +1468,15 @@
       },
       {
         "title": "Zukünftige Verstärkung",
-        "desc": "AEGRYN baut schrittweise ein Netzwerk von Expertenpartnern auf, die bestimmte Berichte mit einer ergänzenden Querprüfung anreichern können, sowie eine Blockchain-Zertifizierungsschicht zur Stärkung der Nachvollziehbarkeit des Registers. Diese Bausteine werden das bereits vollständig operative unabhängige Protokoll ergänzen, niemals ersetzen."
+        "desc": "Aegryn baut schrittweise ein Netzwerk von Expertenpartnern auf, die bestimmte Berichte mit einer ergänzenden Querprüfung anreichern können, sowie eine Blockchain-Zertifizierungsschicht zur Stärkung der Nachvollziehbarkeit des Registers. Diese Bausteine werden das bereits vollständig operative unabhängige Protokoll ergänzen, niemals ersetzen."
       }
     ],
     "ctaTitle": "Ihr Asset zertifizieren",
-    "ctaDesc": "Bereit, Ihr Asset dem AEGRYN Grade-Protokoll einzureichen?",
+    "ctaDesc": "Bereit, Ihr Asset dem Aegryn Grade-Protokoll einzureichen?",
     "ctaPrimary": "Zertifizierung starten",
     "ctaSecondary": "Vollständige Methodik entdecken",
     "disclaimerTitle": "Verpflichtender Hinweis",
-    "disclaimerText": "Obwohl alles unternommen wurde, um objektiv zu bleiben, werden Kunden darüber informiert, dass jede Zertifizierung ein Element fachlicher Beurteilung enthält. Die in einem AEGRYN Grade-Bericht enthaltenen Informationen werden als professionelle Zertifizierung bereitgestellt, ausgestellt von zertifizierten AEGRYN-Analysten. Sie stellen keine Garantie für den Marktwert dar.",
+    "disclaimerText": "Obwohl alles unternommen wurde, um objektiv zu bleiben, werden Kunden darüber informiert, dass jede Zertifizierung ein Element fachlicher Beurteilung enthält. Die in einem Aegryn Grade-Bericht enthaltenen Informationen werden als professionelle Zertifizierung bereitgestellt, ausgestellt von zertifizierten Aegryn-Analysten. Sie stellen keine Garantie für den Marktwert dar.",
     "refusalTitle": "Bedingungen für automatische Ablehnung",
     "refusalDesc": "Bestimmte Konfigurationen führen unabhängig von der Gesamtpunktzahl zu einer automatischen Ablehnung — der Algorithmus liefert eine Punktzahl, der Experte das endgültige Urteil, aber eine automatische Ablehnung kann niemals überstimmt werden.",
     "refusalConditions": [
@@ -1487,7 +1487,7 @@
       "Verweigerung der Zusammenarbeit während des Audits → Globale Ablehnung der Zertifizierung"
     ],
     "maturityTitle": "Katalog-Eignung nach Reifegrad",
-    "maturityDesc": "AEGRYN passt seine Bewertungskriterien an die Reife des Assets an.",
+    "maturityDesc": "Aegryn passt seine Bewertungskriterien an die Reife des Assets an.",
     "maturityRules": [
       {
         "tier": "Pre-Revenue / < 6 Monate Traktion",
@@ -1955,17 +1955,17 @@
   },
   "roadmapPage": {
     "meta": {
-      "title": "Plattform — AEGRYN Auction Switzerland",
-      "desc": "Die AEGRYN Auction Switzerland Plattform: Zertifizierung, private Sessions, Schweizer Recht, internationale Offenheit."
+      "title": "Plattform — Aegryn Auction Switzerland",
+      "desc": "Die Aegryn Auction Switzerland Plattform: Zertifizierung, private Sessions, Schweizer Recht, internationale Offenheit."
     },
-    "label": "AEGRYN Auction Switzerland",
+    "label": "Aegryn Auction Switzerland",
     "title": "Die Plattform.\nIhre Funktionen.",
-    "desc": "Jeder Verkauf wird ausschliesslich über AEGRYN Auction Switzerland abgewickelt. Schweizer Recht findet Anwendung. Verkäufer und Käufer aus aller Welt sind willkommen.",
+    "desc": "Jeder Verkauf wird ausschliesslich über Aegryn Auction Switzerland abgewickelt. Schweizer Recht findet Anwendung. Verkäufer und Käufer aus aller Welt sind willkommen.",
     "swissNote": "Schweizer Recht gilt für jede Transaktion — unabhängig von der Herkunft des Assets oder der Nationalität der Parteien.",
     "featuresLabel": "Was die Plattform bietet",
     "features": {
       "certification": {
-        "title": "AEGRYN Grade Zertifizierung",
+        "title": "Aegryn Grade Zertifizierung",
         "desc": "Jedes zum Verkauf gestellte Asset wird vor jeder Session nach dem CIFS-Protokoll zertifiziert. Nicht zertifizierte Assets werden nicht zugelassen."
       },
       "swissLaw": {
@@ -1982,7 +1982,7 @@
       },
       "escrow": {
         "title": "Institutionelles Escrow",
-        "desc": "Gelder werden auf einem von AEGRYN kontrollierten institutionellen Treuhandkonto bis zum Closing verwahrt."
+        "desc": "Gelder werden auf einem von Aegryn kontrollierten institutionellen Treuhandkonto bis zum Closing verwahrt."
       },
       "buyers": {
         "title": "Qualifizierte Käufer",
@@ -1990,11 +1990,11 @@
       },
       "dueDiligence": {
         "title": "Vorvalidierte Due Diligence",
-        "desc": "Der AEGRYN Grade-Bericht ersetzt teilweise die Due Diligence und verkürzt den Zeitplan um 30 bis 45 Tage."
+        "desc": "Der Aegryn Grade-Bericht ersetzt teilweise die Due Diligence und verkürzt den Zeitplan um 30 bis 45 Tage."
       },
       "transaction": {
         "title": "Begleitete Transaktion",
-        "desc": "AEGRYN koordiniert die Verhandlung, stellt den Rechtetransfer sicher und garantiert das Verfahren von A bis Z."
+        "desc": "Aegryn koordiniert die Verhandlung, stellt den Rechtetransfer sicher und garantiert das Verfahren von A bis Z."
       }
     },
     "roadmapLabel": "Kommende Funktionen",
@@ -2007,7 +2007,7 @@
       },
       {
         "phase": "Q1 2027",
-        "title": "AEGRYN Partner-API",
+        "title": "Aegryn Partner-API",
         "desc": "Programmatischer Zugang zu veröffentlichten Grades und Marktdaten für Partnerplattformen und institutionelle Fonds.",
         "status": "Geplant"
       },
@@ -2021,7 +2021,7 @@
     "currentLabel": "Heute verfügbar",
     "current": [
       "Private Verkaufssessionen — Q3 2026",
-      "AEGRYN Grade-Zertifizierung inklusive",
+      "Aegryn Grade-Zertifizierung inklusive",
       "Institutionelles Escrow",
       "Automatisiertes NDA",
       "Internationale qualifizierte Käufer"
@@ -2031,12 +2031,12 @@
   },
   "discover": {
     "meta": {
-      "title": "Discover — AEGRYN Marktintelligenz",
-      "desc": "Marktberichte, Verkäufer- und Käuferführer, Zertifizierungsanalysen von AEGRYN."
+      "title": "Discover — Aegryn Marktintelligenz",
+      "desc": "Marktberichte, Verkäufer- und Käuferführer, Zertifizierungsanalysen von Aegryn."
     },
-    "label": "AEGRYN Blog",
+    "label": "Aegryn Blog",
     "title": "Marktintelligenz.\nFür alle zugänglich.",
-    "desc": "Berichte, Leitfäden und Analysen zum europäischen Tech-Asset-Markt, von den AEGRYN-Teams.",
+    "desc": "Berichte, Leitfäden und Analysen zum europäischen Tech-Asset-Markt, von den Aegryn-Teams.",
     "filterAll": "Alle",
     "filterMarket": "Marktbericht",
     "filterSeller": "Verkäuferführer",
@@ -2058,7 +2058,7 @@
     "noArticles": "Noch keine Artikel in dieser Kategorie.",
     "newsletterLabel": "Newsletter",
     "newsletterTitle": "Keine Analyse verpassen.",
-    "newsletterDesc": "Erhalten Sie AEGRYN-Marktberichte und Leitfäden direkt in Ihr Postfach.",
+    "newsletterDesc": "Erhalten Sie Aegryn-Marktberichte und Leitfäden direkt in Ihr Postfach.",
     "newsletterCta": "Abonnieren",
     "newsletterEmailPlaceholder": "Ihre E-Mail-Adresse",
     "newsletterSubscribing": "Wird abonniert...",
@@ -2066,15 +2066,15 @@
     "newsletterError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
     "bodyComingSoon": "Vollständiger Inhalt demnächst verfügbar.",
     "ctaTeaser": "Bereit, Ihr Asset einzureichen oder den Katalog aufzurufen?",
-    "aiEditorialNotice": "Dieser Artikel wurde mit Unterstützung künstlicher Intelligenz verfasst und unter der redaktionellen Verantwortung von AEGRYN überprüft. Gemäß Artikel 50 des EU-KI-Gesetzes übernehmen wir die redaktionelle Verantwortung für diesen Inhalt."
+    "aiEditorialNotice": "Dieser Artikel wurde mit Unterstützung künstlicher Intelligenz verfasst und unter der redaktionellen Verantwortung von Aegryn überprüft. Gemäß Artikel 50 des EU-KI-Gesetzes übernehmen wir die redaktionelle Verantwortung für diesen Inhalt."
   },
   "grade": {
     "meta": {
-      "title": "AEGRYN Grade-System — Tech-Asset-Zertifizierung",
-      "desc": "Das AEGRYN Grade-Protokoll zertifiziert objektiv jedes Tech-Asset in 4 Dimensionen."
+      "title": "Aegryn Grade-System — Tech-Asset-Zertifizierung",
+      "desc": "Das Aegryn Grade-Protokoll zertifiziert objektiv jedes Tech-Asset in 4 Dimensionen."
     },
     "index": {
-      "label": "AEGRYN Grade-System",
+      "label": "Aegryn Grade-System",
       "title": "Objektive Wahrheit\nüber jedes Tech-Asset.",
       "desc": "Kein Schätzen. Kein Bauchgefühl. Ein rigoroses 4-Dimensionen-Bewertungsprotokoll.",
       "ctaSubmit": "Zur Zertifizierung einreichen",
@@ -2164,22 +2164,22 @@
         {
           "num": "04",
           "title": "Veröffentlichung",
-          "desc": "Der Grade wird im AEGRYN-Katalog veröffentlicht und im offiziellen Register versioniert."
+          "desc": "Der Grade wird im Aegryn-Katalog veröffentlicht und im offiziellen Register versioniert."
         }
       ]
     },
     "submit": {
       "label": "Asset einreichen",
       "title": "Erhalten Sie den Grade,\nder Ihrem Asset Wert verleiht.",
-      "desc": "Die AEGRYN-Zertifizierung ist der Pass Ihres Assets zu institutionellen Käufern.",
+      "desc": "Die Aegryn-Zertifizierung ist der Pass Ihres Assets zu institutionellen Käufern.",
       "cta": "Einreichung starten"
     },
     "methodology": {
       "label": "Methodik",
       "title": "Ein reproduzierbares Protokoll.\nKeine subjektive Meinung.",
-      "desc": "Die AEGRYN Grade-Methodik ist dokumentiert, versioniert und auditiert.",
+      "desc": "Die Aegryn Grade-Methodik ist dokumentiert, versioniert und auditiert.",
       "versionLabel": "Protokollversion",
-      "version": "AEGRYN Grade 2026",
+      "version": "Aegryn Grade 2026",
       "principlesLabel": "Grundprinzipien",
       "principles": [
         {
@@ -2233,10 +2233,10 @@
   "auction": {
     "meta": {
       "title": "Auktion — Zertifizierte Tech-Asset-Transaktionen",
-      "desc": "AEGRYN-Sessions: Zertifizierte Tech-Assets kaufen oder verkaufen."
+      "desc": "Aegryn-Sessions: Zertifizierte Tech-Assets kaufen oder verkaufen."
     },
     "index": {
-      "label": "AEGRYN Auktions-Sessions",
+      "label": "Aegryn Auktions-Sessions",
       "title": "Europas Marktplatz für\nzertifizierte Tech-Assets.",
       "desc": "Keine offenen Gebote. Private, rigorose Sessions für zertifizierte Verkäufer und qualifizierte Käufer.",
       "ctaCatalog": "Katalog ansehen",
@@ -2247,7 +2247,7 @@
         {
           "num": "01",
           "title": "Zertifizierung",
-          "desc": "Jedes präsentierte Asset verfügt über einen AEGRYN Grade."
+          "desc": "Jedes präsentierte Asset verfügt über einen Aegryn Grade."
         },
         {
           "num": "02",
@@ -2290,7 +2290,7 @@
       "marketCta": "Meinen Asset bewerten",
       "segmentLabel": "UNSER SEGMENT",
       "segmentTitle": "100K€ — 2,5M€.\nWo Tech-Assets einen realen Wert haben, aber unsichtbar bleiben.",
-      "segmentDesc": "Zu groß für einen informellen Weiterverkauf. Zu klein für Investmentbanken. AEGRYN strukturiert Transaktionen, die niemand sonst zertifiziert — mit der institutionellen Genauigkeit, die dieses Segment verdient.",
+      "segmentDesc": "Zu groß für einen informellen Weiterverkauf. Zu klein für Investmentbanken. Aegryn strukturiert Transaktionen, die niemand sonst zertifiziert — mit der institutionellen Genauigkeit, die dieses Segment verdient.",
       "segmentItems": [
         "Assets zwischen 100.000€ und 2.500.000€ Bewertung",
         "B2B SaaS, Marktplätze, digitales IP, KI-Protokolle",
@@ -2299,9 +2299,9 @@
       ]
     },
     "catalog": {
-      "label": "AEGRYN Katalog",
+      "label": "Aegryn Katalog",
       "title": "Jetzt verfügbare\nzertifizierte Assets.",
-      "desc": "Jedes im Katalog gelistete Asset hat das AEGRYN-Zertifizierungsprotokoll bestanden.",
+      "desc": "Jedes im Katalog gelistete Asset hat das Aegryn-Zertifizierungsprotokoll bestanden.",
       "filterAll": "Alle Grades",
       "filterStar": "AEG ★",
       "filterAAA": "AAA",
@@ -2317,7 +2317,7 @@
       "assetAsk": "Verkäuferpreis",
       "viewAsset": "Zum Dossier",
       "confidential": "Vertraulich — NDA erforderlich",
-      "thirdPartyNote": "Diese Assets werden von unabhängigen Verkäufern angeboten. AEGRYN fungiert als zertifizierter Vermittler und Transaktionsorganisator — nicht als Verkäufer.",
+      "thirdPartyNote": "Diese Assets werden von unabhängigen Verkäufern angeboten. Aegryn fungiert als zertifizierter Vermittler und Transaktionsorganisator — nicht als Verkäufer.",
       "notifyEmail": "Ihre E-Mail",
       "notifyEmailPlaceholder": "gründer@beispiel.com",
       "notifyType": "Sie sind",
@@ -2336,11 +2336,11 @@
     "sell": {
       "label": "Verkäufer",
       "title": "Verkaufen Sie Ihr Asset\nan den richtigen Käufer.",
-      "desc": "AEGRYN findet den optimalen Käufer für Ihr zertifiziertes Asset.",
+      "desc": "Aegryn findet den optimalen Käufer für Ihr zertifiziertes Asset.",
       "step1Title": "Einreichen",
       "step1Desc": "Füllen Sie das Einreichungsformular aus. Grundlegende Informationen zum Asset, Schlüsselkennzahlen, verfügbare Dokumentation.",
       "step2Title": "Zertifizierung",
-      "step2Desc": "Unser Team bewertet Ihr Asset auf 4 Dimensionen. Sie erhalten einen vollständigen Zertifizierungsbericht mit AEGRYN Grade.",
+      "step2Desc": "Unser Team bewertet Ihr Asset auf 4 Dimensionen. Sie erhalten einen vollständigen Zertifizierungsbericht mit Aegryn Grade.",
       "step3Title": "Session-Vorbereitung",
       "step3Desc": "Sie unterzeichnen die Verkäufer-AGB, legen Ihren Mindestpreis fest. Ihr Asset wird den für die Session registrierten qualifizierten Käufern zugänglich.",
       "step4Title": "Transaktion",
@@ -2358,7 +2358,7 @@
       "title": "Erwerben Sie ein zertifiziertes\nTech-Asset.",
       "desc": "Zugang zu geprüften Opportunitäten, die nicht auf dem offenen Markt sind.",
       "qualifTitle": "Käuferprofil",
-      "qualifDesc": "AEGRYN-Sessions sind für qualifizierte Käufer reserviert.",
+      "qualifDesc": "Aegryn-Sessions sind für qualifizierte Käufer reserviert.",
       "qualifItems": [
         "Institutioneller oder professioneller Investor",
         "Nachgewiesene Akquisitionserfahrung",
@@ -2402,7 +2402,7 @@
     },
     "session": {
       "label": "Nächste Session",
-      "title": "Nächste AEGRYN-Session",
+      "title": "Nächste Aegryn-Session",
       "date": "Datum",
       "dateTbd": "Datum wird noch bestätigt",
       "format": "Format",
@@ -2435,10 +2435,10 @@
     }
   },
   "gradeStrip": {
-    "label": "AEGRYN Grade-System",
+    "label": "Aegryn Grade-System",
     "title": "Keine Bewertung.\nEine Zertifizierung.",
-    "desc": "Es gibt einen grundlegenden Unterschied zwischen einer Bewertung und einer Zertifizierung. AEGRYN zertifiziert, nach einem unabhängigen, reproduzierbaren und nachvollziehbaren Protokoll.",
-    "quote": "Ein Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. Ein AEGRYN Grade AAA Asset ist eine dokumentierte und nachvollziehbare Gewissheit.",
+    "desc": "Es gibt einen grundlegenden Unterschied zwischen einer Bewertung und einer Zertifizierung. Aegryn zertifiziert, nach einem unabhängigen, reproduzierbaren und nachvollziehbaren Protokoll.",
+    "quote": "Ein Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. Ein Aegryn Grade AAA Asset ist eine dokumentierte und nachvollziehbare Gewissheit.",
     "cta": "Vollständige Methodik lesen",
     "grades": [
       {
@@ -2464,14 +2464,14 @@
       {
         "grade": "B",
         "label": "Korrekt",
-        "desc": "Advisory vor der Transaktion empfohlen. Nicht für AEGRYN-Hauptsessions zugelassen."
+        "desc": "Advisory vor der Transaktion empfohlen. Nicht für Aegryn-Hauptsessions zugelassen."
       }
     ]
   },
   "auctionNarrative": {
-    "label": "AEGRYN Auction",
+    "label": "Aegryn Auction",
     "title": "Manche Assets verdienen mehr\nals eine öffentliche Listung.",
-    "desc": "AEGRYN Auction ist keine offene Plattform. Es ist ein vertraulicher Veräußerungsprozess zwischen Verkäufern, die unsere Zertifizierung bestanden haben, und Käufern, die ihre Leistungsfähigkeit bewiesen haben.\n\nWeniger als 25% der eingereichten Assets werden akzeptiert. 100% der Käufer sind vorqualifiziert. Jede Transaktion wird vollständig dokumentiert und abgesichert.",
+    "desc": "Aegryn Auction ist keine offene Plattform. Es ist ein vertraulicher Veräußerungsprozess zwischen Verkäufern, die unsere Zertifizierung bestanden haben, und Käufern, die ihre Leistungsfähigkeit bewiesen haben.\n\nWeniger als 25% der eingereichten Assets werden akzeptiert. 100% der Käufer sind vorqualifiziert. Jede Transaktion wird vollständig dokumentiert und abgesichert.",
     "stat1Val": "< 25%",
     "stat1Label": "Akzeptanzrate",
     "stat2Val": "60 T max",
@@ -2486,14 +2486,14 @@
   "acqStrip": {
     "label": "Akquisitionsunterstützung",
     "title": "Ihre nächste Akquisition verdient den richtigen Finanzpartner.",
-    "desc": "AEGRYN verleiht nicht. AEGRYN verbindet. Unser Netzwerk aus VC-Partnern und Investmentfonds kann die Finanzierung Ihrer nächsten zertifizierten Tech-Asset-Akquisition ko-finanzieren oder strukturieren.",
+    "desc": "Aegryn verleiht nicht. Aegryn verbindet. Unser Netzwerk aus VC-Partnern und Investmentfonds kann die Finanzierung Ihrer nächsten zertifizierten Tech-Asset-Akquisition ko-finanzieren oder strukturieren.",
     "chip1": "VC-Koinvestition",
     "chip2": "Bridge-Finanzierung",
     "chip3": "Earnout-Struktur",
     "cta": "Optionen erkunden"
   },
   "discoverStrip": {
-    "label": "AEGRYN Insights",
+    "label": "Aegryn Insights",
     "title": "Der europäische Tech-M&A-Markt.\nVon denen, die ihn gestalten.",
     "article1Title": "Stand des europäischen Tech-M&A-Markts — Q2 2026",
     "article1Cat": "Marktbericht",
@@ -2519,7 +2519,7 @@
     }
   },
   "gradeShowcase": {
-    "label": "Das AEGRYN Grade System",
+    "label": "Das Aegryn Grade System",
     "title": "Ein Asset ohne Grade\nist ein Asset ohne Preis.",
     "desc": "Unser Zertifizierungsprotokoll bewertet jedes Asset auf 4 Dimensionen: Code, IP & Rechte, Finanzen, Sicherheit. Ein objektiver, reproduzierbarer, anfechtbarer Grade.",
     "cta": "Das Grade-System verstehen",
@@ -2575,12 +2575,12 @@
   "acquisitionSupport": {
     "label": "Acquisition Support",
     "title": "Ihr nächster Kauf verdient\nden richtigen Finanzpartner.",
-    "desc": "AEGRYN leiht nicht. AEGRYN verbindet. Unser Netzwerk aus VC-Partnern und Investmentfonds kann Ihre nächste zertifizierte Tech-Asset-Akquisition ko-finanzieren, ko-investieren oder strukturieren.",
+    "desc": "Aegryn leiht nicht. Aegryn verbindet. Unser Netzwerk aus VC-Partnern und Investmentfonds kann Ihre nächste zertifizierte Tech-Asset-Akquisition ko-finanzieren, ko-investieren oder strukturieren.",
     "cta": "Optionen erkunden",
-    "legal": "AEGRYN ist kein Finanzinstitut. Dieser Service vermittelt unabhängige Drittpartner."
+    "legal": "Aegryn ist kein Finanzinstitut. Dieser Service vermittelt unabhängige Drittpartner."
   },
   "discoverSection": {
-    "label": "AEGRYN Insights",
+    "label": "Aegryn Insights",
     "title": "Der Tech-M&A-Markt in Europa.\nVon denen, die ihn gestalten.",
     "cta": "Alle Insights ansehen",
     "articles": [
@@ -2605,19 +2605,19 @@
   },
   "alliances": {
     "meta": {
-      "title": "Partner — AEGRYN",
-      "desc": "Zertifizierungs-, Distributions- und Deal-Flow-Partner. AEGRYN wählt seine Allianzen mit derselben Strenge aus wie seine Assets."
+      "title": "Partner — Aegryn",
+      "desc": "Zertifizierungs-, Distributions- und Deal-Flow-Partner. Aegryn wählt seine Allianzen mit derselben Strenge aus wie seine Assets."
     },
     "hero": {
-      "label": "AEGRYN Partnerships",
+      "label": "Aegryn Partnerships",
       "title": "Die Partner, die den\nGrade unwiderlegbar machen.",
-      "desc": "AEGRYN zertifiziert unabhängig. Unsere Partner wirken bei Vertrieb, Deal-Flow und Transaktionsstrukturierung mit und können langfristig bestimmte Berichte mit einer ergänzenden Querprüfung anreichern. Dieses Ökosystem macht uns operationell."
+      "desc": "Aegryn zertifiziert unabhängig. Unsere Partner wirken bei Vertrieb, Deal-Flow und Transaktionsstrukturierung mit und können langfristig bestimmte Berichte mit einer ergänzenden Querprüfung anreichern. Dieses Ökosystem macht uns operationell."
     },
     "types": {
       "certification": {
         "label": "Zertifizierung",
         "title": "Partner des Expertennetzwerks",
-        "desc": "Tech-Anwaltskanzleien, Wirtschaftsprüfer, Cybersicherheitspartner. Treten Sie dem ersten Kreis von Partnern bei, die das AEGRYN Grade-Protokoll mit einer Querprüfung anreichern sollen, sobald sich dieses System entfaltet.",
+        "desc": "Tech-Anwaltskanzleien, Wirtschaftsprüfer, Cybersicherheitspartner. Treten Sie dem ersten Kreis von Partnern bei, die das Aegryn Grade-Protokoll mit einer Querprüfung anreichern sollen, sobald sich dieses System entfaltet.",
         "profiles": "IP & Tech-Kanzleien · Wirtschaftsprüfer · Cybersicherheitspartner",
         "cta": "Zertifizierungspartner werden"
       },
@@ -2638,7 +2638,7 @@
       "advisory_tech": {
         "label": "Advisory Tech",
         "title": "Zertifizierte technische Experten",
-        "desc": "Partner, die mobilisiert werden, um die Robustheit und Zertifizierbarkeit von Assets vor oder während des AEGRYN-Grade-Prozesses zu verbessern.",
+        "desc": "Partner, die mobilisiert werden, um die Robustheit und Zertifizierbarkeit von Assets vor oder während des Aegryn-Grade-Prozesses zu verbessern.",
         "profiles": "Cybersicherheitsfirmen (PASSI/CREST/OSCP) · Senior Freelance-CTOs (Architektur, DevSecOps) · Data & KI-Experten (MLOps, Governance) · Akkreditierte externe DPOs (DSGVO/DSG) · EU-KI-Gesetz-Compliance-Experten · Digitale Barrierefreiheits-Auditoren (WCAG)",
         "cta": "Advisory Tech-Partner werden"
       },
@@ -2711,15 +2711,15 @@
   },
   "build_service": {
     "meta": {
-      "title": "Digitale Asset-Entwicklung - AEGRYN",
-      "desc": "AEGRYN entwickelt B2B-SaaS, KI-Applikationen und mobile Apps nach CIFS-Protokollstandards. Ein Verkauf ist möglich, wenn gewünscht und sofern das Asset die erforderlichen Grade-Kriterien erfüllt."
+      "title": "Digitale Asset-Entwicklung - Aegryn",
+      "desc": "Aegryn entwickelt B2B-SaaS, KI-Applikationen und mobile Apps nach CIFS-Protokollstandards. Ein Verkauf ist möglich, wenn gewünscht und sofern das Asset die erforderlichen Grade-Kriterien erfüllt."
     },
     "label": "Services - Asset-Entwicklung",
     "title": "Ihr digitales Asset.\nFür Dauer gebaut.\nStrukturiert zum Verkauf.",
-    "desc": "AEGRYN entwickelt proprietäre digitale Assets - B2B SaaS, vertikale KI, mobile App - nach CIFS-Protokollstandards. Sie starten bei null. Sie erhalten ein zertifizierbares und wartbares Asset. Der Verkauf ist eine Option, keine Pflicht: er hängt von Ihrem Wunsch und dem erreichten Grade ab.",
+    "desc": "Aegryn entwickelt proprietäre digitale Assets - B2B SaaS, vertikale KI, mobile App - nach CIFS-Protokollstandards. Sie starten bei null. Sie erhalten ein zertifizierbares und wartbares Asset. Der Verkauf ist eine Option, keine Pflicht: er hängt von Ihrem Wunsch und dem erreichten Grade ab.",
     "difference": {
       "label": "Keine Agentur. Kein Studio.",
-      "title": "Der AEGRYN-Unterschied.",
+      "title": "Der Aegryn-Unterschied.",
       "items": [
         {
           "num": "01",
@@ -2729,7 +2729,7 @@
         {
           "num": "02",
           "title": "Sie bleiben Eigentümer",
-          "desc": "Keine Verwässerung. Kein Eigenkapital durch AEGRYN. Das Asset gehört Ihnen zu 100%. AEGRYN kann auf Wunsch als Co-Investor auftreten."
+          "desc": "Keine Verwässerung. Kein Eigenkapital durch Aegryn. Das Asset gehört Ihnen zu 100%. Aegryn kann auf Wunsch als Co-Investor auftreten."
         },
         {
           "num": "03",
@@ -2766,7 +2766,7 @@
         {
           "phase": "Frühphase - 6 bis 18 Monate",
           "title": "Frühphasiger Verkauf",
-          "desc": "Ihr Asset hat eine solide Architektur und erste Traktion. AEGRYN strukturiert den Verkauf via Auction-Session oder direkte vertrauliche Transaktion.",
+          "desc": "Ihr Asset hat eine solide Architektur und erste Traktion. Aegryn strukturiert den Verkauf via Auction-Session oder direkte vertrauliche Transaktion.",
           "grade": "Zielgrade: A - Ticket 100K bis 500K EUR",
           "cta": "Akquisitionsmodelle ansehen",
           "href": "/auction/bid-models"
@@ -2782,7 +2782,7 @@
         {
           "phase": "Halten",
           "title": "Evolutions- und Korrektivwartung",
-          "desc": "Sie möchten nicht verkaufen. AEGRYN wartet das Asset technisch: Updates, neue Funktionen, Sicherheit.",
+          "desc": "Sie möchten nicht verkaufen. Aegryn wartet das Asset technisch: Updates, neue Funktionen, Sicherheit.",
           "grade": "Monatliche Pauschale oder pro Lieferung",
           "cta": "Wartung besprechen",
           "href": "/contact"
@@ -2816,14 +2816,14 @@
         {
           "num": "05",
           "title": "Zertifizierung (und optionaler Exit)",
-          "desc": "CIFS-Protokoll-Einreichung wenn gewünscht. Offizielles Grade vergeben, wenn die Kriterien erfüllt sind. Eine Transaktion via AEGRYN Auction oder vertraulich wird nur auf Ihre Entscheidung hin eingeleitet. Das Asset kann auch mit Wartung behalten werden."
+          "desc": "CIFS-Protokoll-Einreichung wenn gewünscht. Offizielles Grade vergeben, wenn die Kriterien erfüllt sind. Eine Transaktion via Aegryn Auction oder vertraulich wird nur auf Ihre Entscheidung hin eingeleitet. Das Asset kann auch mit Wartung behalten werden."
         }
       ]
     },
     "maintenance": {
       "label": "Wartung auf Anfrage",
       "title": "Das Asset lebt.\nWir warten es.",
-      "desc": "Nach dem Launch bietet AEGRYN Wartung auf zwei Ebenen.",
+      "desc": "Nach dem Launch bietet Aegryn Wartung auf zwei Ebenen.",
       "corrective": {
         "title": "Korrektive Wartung",
         "desc": "Bug-Fixes, Vorfallsbehebung, Sicherheitsupdates, CVE-Management, Monitoring. SLA im Vertrag.",
@@ -2834,7 +2834,7 @@
         "desc": "Neue Features, Refactoring, Versions-Upgrades, Integrationen, regulatorische Anpassung (DSGVO, EU AI Act, NIS2).",
         "format": "Monatliche Pauschale oder Sprint-Lieferung"
       },
-      "note": "AEGRYN-Wartung garantiert, dass das Asset sein Grade behält oder verbessert."
+      "note": "Aegryn-Wartung garantiert, dass das Asset sein Grade behält oder verbessert."
     },
     "fees": {
       "label": "Honorare",
@@ -2852,12 +2852,12 @@
         },
         {
           "title": "Transaktion",
-          "desc": "Wenn der Exit über AEGRYN Auction oder eine vertrauliche Transaktion läuft, gilt die Standard-Provision.",
+          "desc": "Wenn der Exit über Aegryn Auction oder eine vertrauliche Transaktion läuft, gilt die Standard-Provision.",
           "format": "Erfolgsprovision - AGB",
           "href": "/terms/cgv"
         }
       ],
-      "coInvestNote": "AEGRYN kann als Minderheits-Co-Investor auftreten. Fallweise Prüfung."
+      "coInvestNote": "Aegryn kann als Minderheits-Co-Investor auftreten. Fallweise Prüfung."
     },
     "cta": {
       "title": "Ein Projekt im Kopf?",
@@ -2870,13 +2870,13 @@
   },
   "gradeSubmit": {
     "meta": {
-      "title": "Asset einreichen — AEGRYN Zertifizierung",
-      "desc": "Starten Sie den AEGRYN-Zertifizierungsprozess. Vertrauliches Voreinreichungsformular. Keine Verpflichtung vor Einigung auf die Methodik."
+      "title": "Asset einreichen — Aegryn Zertifizierung",
+      "desc": "Starten Sie den Aegryn-Zertifizierungsprozess. Vertrauliches Voreinreichungsformular. Keine Verpflichtung vor Einigung auf die Methodik."
     },
     "hero": {
-      "label": "AEGRYN GRADE — ZERTIFIZIERUNG",
+      "label": "Aegryn GRADE — ZERTIFIZIERUNG",
       "title": "Den Zertifizierungs-\nprozess starten.",
-      "desc": "Jeder AEGRYN-Zertifizierungsprozess ist einzigartig, weil es jedes Asset ist. Dieses Voreinreichungsformular ermöglicht uns, Ihr Asset zu qualifizieren und einen maßgeschneiderten Fahrplan vorzuschlagen. Keine Verpflichtung vor Einigung auf die Methodik."
+      "desc": "Jeder Aegryn-Zertifizierungsprozess ist einzigartig, weil es jedes Asset ist. Dieses Voreinreichungsformular ermöglicht uns, Ihr Asset zu qualifizieren und einen maßgeschneiderten Fahrplan vorzuschlagen. Keine Verpflichtung vor Einigung auf die Methodik."
     },
     "form": {
       "title": "Ihr Asset",
@@ -2940,16 +2940,16 @@
       "evalTypeTitle": "Welches Bewertungsniveau wünschen Sie?",
       "evalTypeFull": {
         "label": "Auction-Zertifizierung",
-        "desc": "Nur Erfolgsbeteiligung. Vollständiges unabhängiges AEGRYN-Protokoll (4 Dimensionen C/I/F/S), inklusive wenn die Transaktion über AEGRYN Auction abgeschlossen wird.",
+        "desc": "Nur Erfolgsbeteiligung. Vollständiges unabhängiges Aegryn-Protokoll (4 Dimensionen C/I/F/S), inklusive wenn die Transaktion über Aegryn Auction abgeschlossen wird.",
         "price": "Kostenlos"
       },
       "evalTypeReview": {
-        "label": "AEGRYN Review",
-        "desc": "Schriftliches Gutachten eines AEGRYN-Analysten innerhalb von 15 Werktagen. Keine externe Partnerprüfung. Nicht im Katalog veröffentlichbar, ohne externe Validierung.",
+        "label": "Aegryn Review",
+        "desc": "Schriftliches Gutachten eines Aegryn-Analysten innerhalb von 15 Werktagen. Keine externe Partnerprüfung. Nicht im Katalog veröffentlichbar, ohne externe Validierung.",
         "price": "2.000 CHF zzgl. MwSt."
       },
       "evalTypeReviewPlus": {
-        "label": "AEGRYN Review+",
+        "label": "Aegryn Review+",
         "desc": "Schriftliches Gutachten + Prüfung durch einen externen Partner (Kanzlei oder Wirtschaftsprüfer) auf Anfrage innerhalb von 20 Werktagen. Querverweise mit unseren Alliance-Partnern.",
         "price": "5.000 CHF zzgl. MwSt."
       },
@@ -2957,7 +2957,7 @@
       "partnerSelectLabel": "Einzubeziehender Partner",
       "partnerLegal": "Rechtsanwaltskanzlei",
       "partnerAccounting": "Wirtschaftsprüfer",
-      "analysisDataTitle": "Daten für die Analyse (AEGRYN Grading System)",
+      "analysisDataTitle": "Daten für die Analyse (Aegryn Grading System)",
       "analysisDataDesc": "Diese Angaben beschleunigen unsere interne Analyse und den Marktvergleich Ihres Assets. Optional, aber empfohlen.",
       "sector": "Branche",
       "sectorPlaceholder": "z.B. LegalTech, FinTech, HR & Payroll...",
@@ -2998,12 +2998,12 @@
   },
   "bidModels": {
     "meta": {
-      "title": "Akquisitionsmodelle — AEGRYN Auction",
-      "desc": "Club Deal, Corporate, Fonds, Equity Stake, die 4 AEGRYN-Akquisitionsmodelle mit dem Tech Transaction Promise in 5 Schritten."
+      "title": "Akquisitionsmodelle — Aegryn Auction",
+      "desc": "Club Deal, Corporate, Fonds, Equity Stake, die 4 Aegryn-Akquisitionsmodelle mit dem Tech Transaction Promise in 5 Schritten."
     },
     "hero": {
       "back": "← Auction",
-      "label": "AEGRYN AUCTION",
+      "label": "Aegryn AUCTION",
       "title": "Wählen Sie Ihr Akquisitionsmodell",
       "desc": "Vier Käuferprofile, eine Anforderung: Dealqualität. Jedes Modell ist auf Ihre Struktur und Ziele zugeschnitten."
     },
@@ -3032,7 +3032,7 @@
         "badge": "KMU · Holdings · Corporates · Gruppen",
         "label": "MODELL 02",
         "title": "Corporate",
-        "summary": "Eine juristische Person erwirbt den Vermögenswert direkt in ihrer Bilanz. Zwei Unternehmen können über ein bei AEGRYN gemeldetes JV co-erwerben. Asset Deal oder Share Deal je nach gewählter Struktur.",
+        "summary": "Eine juristische Person erwirbt den Vermögenswert direkt in ihrer Bilanz. Zwei Unternehmen können über ein bei Aegryn gemeldetes JV co-erwerben. Asset Deal oder Share Deal je nach gewählter Struktur.",
         "conditions": [
           "Empfohlenes Mindestticket: 250.000 €",
           "Vollständiges B2B-KYC — Handelsregisterauszug < 3 Monate, Satzung, UBO ≥ 25%, Lichtbildausweis des Geschäftsführers",
@@ -3057,7 +3057,7 @@
           "Institutionelles KYC — regulatorische Zulassung falls zutreffend (FINMA, AMF, FCA)",
           "IC-Fenster: vertrauliche Reservierung 5–10 Werktage ohne Treuhand",
           "SPV für direktes LP-Co-Investment möglich",
-          "Management-Präsentation über AEGRYN, niemals direkt Verkäufer/Käufer"
+          "Management-Präsentation über Aegryn, niemals direkt Verkäufer/Käufer"
         ],
         "structures": [
           "Plattformerwerb (erster Asset in einem PE Roll-up)",
@@ -3078,7 +3078,7 @@
           "KYC nach Profil (vereinfacht für qualifizierte Privatpersonen, vollständig für Unternehmen)",
           "Kein Treuhand — Bindung via SHA, gemeinsam von den Beratern beider Parteien erstellt",
           "Sofortige Bindung: SHA-Unterzeichnung + ggf. Warrant oder BSA",
-          "AEGRYN erhält eine Vermittlungsprovision auf die vereinbarte Bewertung"
+          "Aegryn erhält eine Vermittlungsprovision auf die vereinbarte Bewertung"
         ],
         "structures": [
           "Advisory Equity (X% gegen Beratung/Expertise über N Monate)",
@@ -3107,17 +3107,17 @@
         {
           "num": "03",
           "title": "10% Treuhand",
-          "desc": "Auf ein Drittbankkonto innerhalb von 5 Werktagen eingezahlt. AEGRYN hat niemals Zugang zu den Geldern. Partnerbank fungiert als Verwahrer."
+          "desc": "Auf ein Drittbankkonto innerhalb von 5 Werktagen eingezahlt. Aegryn hat niemals Zugang zu den Geldern. Partnerbank fungiert als Verwahrer."
         },
         {
           "num": "04",
           "title": "Due Diligence — Standard 30 Tage",
-          "desc": "Vollständiger Data-Room-Zugang unter NDA. Q&A nur über AEGRYN (niemals direkt Verkäufer/Käufer). Verlängerung auf gegenseitiges Einvernehmen möglich (max. +30 Tage)."
+          "desc": "Vollständiger Data-Room-Zugang unter NDA. Q&A nur über Aegryn (niemals direkt Verkäufer/Käufer). Verlängerung auf gegenseitiges Einvernehmen möglich (max. +30 Tage)."
         },
         {
           "num": "05",
           "title": "Signing & Closing",
-          "desc": "KRYV Protocol zertifiziert den genauen Zustand des Codes. Restzahlung (90% verbleibend). Vermögensübertragung + Ausstellung des AEGRYN-Transaktionszertifikats."
+          "desc": "KRYV Protocol zertifiziert den genauen Zustand des Codes. Restzahlung (90% verbleibend). Vermögensübertragung + Ausstellung des Aegryn-Transaktionszertifikats."
         }
       ],
       "protection": {
@@ -3145,11 +3145,11 @@
   },
   "assessmentDays": {
     "meta": {
-      "title": "AEGRYN Assessment Days — Kostenlose Expertise fuer Ihr Tech-Asset",
-      "desc": "Kostenlose Expertensitzungen nach Vereinbarung. 45 Minuten mit einem AEGRYN-Advisor. Grade-Schaetzung und Bewertungsspanne. Kein Engagement."
+      "title": "Aegryn Assessment Days — Kostenlose Expertise fuer Ihr Tech-Asset",
+      "desc": "Kostenlose Expertensitzungen nach Vereinbarung. 45 Minuten mit einem Aegryn-Advisor. Grade-Schaetzung und Bewertungsspanne. Kein Engagement."
     },
     "hero": {
-      "label": "AEGRYN ASSESSMENT DAYS",
+      "label": "Aegryn ASSESSMENT DAYS",
       "title": "45 Minuten, um den Wert\nIhres Assets zu kennen.",
       "desc": "Nach Vereinbarung, in 4 europaeischen Staedten, fuehren unsere Advisors ein vertrauliches Pre-Screening durch. Kostenlos. Ohne Engagement."
     },
@@ -3163,7 +3163,7 @@
         },
         {
           "title": "Bewertungsspanne",
-          "desc": "Schaetzung basierend auf ARR-Multiples aus AEGRYN-Transaktionen und Marktdaten 2026."
+          "desc": "Schaetzung basierend auf ARR-Multiples aus Aegryn-Transaktionen und Marktdaten 2026."
         },
         {
           "title": "Konkrete Empfehlungen",
@@ -3270,7 +3270,7 @@
         },
         {
           "q": "Ist das Pre-Screening vertraulich?",
-          "a": "Vollstaendig. Durch ein AEGRYN-Rahmen-NDA abgedeckt."
+          "a": "Vollstaendig. Durch ein Aegryn-Rahmen-NDA abgedeckt."
         },
         {
           "q": "Was passiert nach dem Assessment Day?",
@@ -3281,13 +3281,13 @@
   },
   "valuation": {
     "meta": {
-      "title": "Tech-Asset bewerten — AEGRYN Valuation",
-      "desc": "B2B-SaaS-Bewertungsrechner auf Basis des AEGRYN-Grade-Protokolls. 4 Dimensionen, Score /100, Bewertungsspanne. Kostenlos. Vertraulich."
+      "title": "Tech-Asset bewerten — Aegryn Valuation",
+      "desc": "B2B-SaaS-Bewertungsrechner auf Basis des Aegryn-Grade-Protokolls. 4 Dimensionen, Score /100, Bewertungsspanne. Kostenlos. Vertraulich."
     },
     "hero": {
-      "label": "AEGRYN VALUATION",
+      "label": "Aegryn VALUATION",
       "title": "Bewerten Sie Ihr\nTech-Asset.",
-      "desc": "Unser Rechner simuliert das AEGRYN-Grade-Protokoll über 4 Dimensionen, Finanzen, Code, IP, Sicherheit, und liefert eine Bewertungsspanne auf Basis der Marktmultiples 2026. Kostenlos. Vertraulich. Unverbindlich."
+      "desc": "Unser Rechner simuliert das Aegryn-Grade-Protokoll über 4 Dimensionen, Finanzen, Code, IP, Sicherheit, und liefert eine Bewertungsspanne auf Basis der Marktmultiples 2026. Kostenlos. Vertraulich. Unverbindlich."
     },
     "progress": {
       "step": "Schritt",
@@ -3449,9 +3449,9 @@
       "preRevenueTitle": "Pre-Revenue-Asset",
       "preRevenueDesc": "Ohne ARR basiert die Bewertung auf dem kombinierten IP- und Code-Score.",
       "preRevenueRange": "Indikative Spanne",
-      "preRevenueNote": "Für ein Pre-Revenue-Asset ist AEGRYN Grade C der natürliche nächste Schritt.",
+      "preRevenueNote": "Für ein Pre-Revenue-Asset ist Aegryn Grade C der natürliche nächste Schritt.",
       "ngNote": "Ihr Score liegt unter der Gradierungsschwelle. Ein kostenloser Assessment Day zeigt die 3 Prioritäten.",
-      "disclaimer": "Diese Schätzung wird von einem Algorithmus auf Basis Ihrer nicht verifizierten Angaben generiert. Sie stellt keinen offiziellen AEGRYN Grade dar. Der AEGRYN Grade wird erst nach einem echten Audit durch unser Team zertifizierter AEGRYN-Analysten vergeben.",
+      "disclaimer": "Diese Schätzung wird von einem Algorithmus auf Basis Ihrer nicht verifizierten Angaben generiert. Sie stellt keinen offiziellen Aegryn Grade dar. Der Aegryn Grade wird erst nach einem echten Audit durch unser Team zertifizierter Aegryn-Analysten vergeben.",
       "ctaGrade": "Offizielle Zertifizierung starten",
       "ctaAssessment": "Kostenlosen Assessment Day buchen",
       "emailTitle": "Detaillierten Bericht per E-Mail erhalten.",
@@ -3491,13 +3491,13 @@
   },
   "auctionSubmit": {
     "meta": {
-      "title": "Asset einreichen — AEGRYN Auction Switzerland",
-      "desc": "Reichen Sie Ihr Tech-Asset für eine AEGRYN Auction Switzerland Session ein. Schweizer Recht. International offen."
+      "title": "Asset einreichen — Aegryn Auction Switzerland",
+      "desc": "Reichen Sie Ihr Tech-Asset für eine Aegryn Auction Switzerland Session ein. Schweizer Recht. International offen."
     },
     "hero": {
-      "label": "AEGRYN Auction Switzerland",
+      "label": "Aegryn Auction Switzerland",
       "title": "Ein Asset zum\nVerkauf einreichen.",
-      "desc": "Jeder Verkauf erfolgt ausschliesslich über AEGRYN Auction Switzerland. Schweizer Recht gilt. Verkäufer aus aller Welt sind willkommen."
+      "desc": "Jeder Verkauf erfolgt ausschliesslich über Aegryn Auction Switzerland. Schweizer Recht gilt. Verkäufer aus aller Welt sind willkommen."
     },
     "swissNote": "Schweizer Recht gilt für jede Transaktion — unabhängig von der Herkunft des Verkäufers oder des Assets.",
     "steps": [
@@ -3509,7 +3509,7 @@
       {
         "num": "02",
         "title": "Zertifizierung",
-        "desc": "Unser Team zertifiziert Ihr Asset (AEGRYN Grade)."
+        "desc": "Unser Team zertifiziert Ihr Asset (Aegryn Grade)."
       },
       {
         "num": "03",
@@ -3593,7 +3593,7 @@
       "countryPlaceholder": "z.B. Frankreich, Schweiz, Deutschland",
       "company": "Gesellschaft / Struktur (optional)",
       "message": "Zusätzliche Nachricht (optional)",
-      "swissLawLabel": "Ich bestätige, dass das Schweizer Recht für jede über AEGRYN Auction Switzerland abgewickelte Transaktion gilt.",
+      "swissLawLabel": "Ich bestätige, dass das Schweizer Recht für jede über Aegryn Auction Switzerland abgewickelte Transaktion gilt.",
       "submit": "Mein Dossier einreichen",
       "submitting": "Wird gesendet…",
       "successTitle": "Dossier erhalten.",
@@ -3625,17 +3625,17 @@
   },
   "aiUsage": {
     "meta": {
-      "title": "KI-Nutzungsrichtlinie — AEGRYN",
-      "desc": "Transparenz über den Einsatz künstlicher Intelligenz in AEGRYN-Inhalten. Konformität mit EU-KI-Verordnung Artikel 50."
+      "title": "KI-Nutzungsrichtlinie — Aegryn",
+      "desc": "Transparenz über den Einsatz künstlicher Intelligenz in Aegryn-Inhalten. Konformität mit EU-KI-Verordnung Artikel 50."
     },
     "label": "Richtlinie zur Nutzung künstlicher Intelligenz",
     "version": "Gültig ab 2. August 2026 — EU-KI-Verordnung Art. 50",
     "s1Title": "1. Regulatorischer Rahmen",
-    "s1Body": "Artikel 50 der Europäischen Verordnung über künstliche Intelligenz (EU KI-Gesetz, Verordnung EU 2024/1689) ist seit dem 2. August 2026 anwendbar. AEGRYN, als Betreiber von KI-Systemen zur Inhaltsgenerierung, verpflichtet sich zur Einhaltung der daraus resultierenden Transparenzpflichten.",
-    "s2Title": "2. Umfang des KI-Einsatzes bei AEGRYN",
-    "s2Body": "AEGRYN nutzt generative KI-Systeme zur Unterstützung der Erstellung redaktioneller Inhalte (Blog-Artikel, Marktberichte, Branchenanalysen). Diese Systeme werden nicht zur autonomen Erstellung von Inhalten von öffentlichem Informationsinteresse eingesetzt — jeder Inhalt wird vor der Veröffentlichung von Menschen geprüft.",
+    "s1Body": "Artikel 50 der Europäischen Verordnung über künstliche Intelligenz (EU KI-Gesetz, Verordnung EU 2024/1689) ist seit dem 2. August 2026 anwendbar. Aegryn, als Betreiber von KI-Systemen zur Inhaltsgenerierung, verpflichtet sich zur Einhaltung der daraus resultierenden Transparenzpflichten.",
+    "s2Title": "2. Umfang des KI-Einsatzes bei Aegryn",
+    "s2Body": "Aegryn nutzt generative KI-Systeme zur Unterstützung der Erstellung redaktioneller Inhalte (Blog-Artikel, Marktberichte, Branchenanalysen). Diese Systeme werden nicht zur autonomen Erstellung von Inhalten von öffentlichem Informationsinteresse eingesetzt — jeder Inhalt wird vor der Veröffentlichung von Menschen geprüft.",
     "s3Title": "3. Redaktionelle Verantwortung",
-    "s3Body": "Gemäß der Ausnahmeregelung in Artikel 50 Absatz 4 des EU-KI-Gesetzes unterliegen alle KI-unterstützten Inhalte, die auf aegryn.com veröffentlicht werden, einer menschlichen Prüfung und redaktionellen Kontrolle. AEGRYN übernimmt die volle redaktionelle Verantwortung für diese Veröffentlichungen.",
+    "s3Body": "Gemäß der Ausnahmeregelung in Artikel 50 Absatz 4 des EU-KI-Gesetzes unterliegen alle KI-unterstützten Inhalte, die auf aegryn.com veröffentlicht werden, einer menschlichen Prüfung und redaktionellen Kontrolle. Aegryn übernimmt die volle redaktionelle Verantwortung für diese Veröffentlichungen.",
     "s4Title": "4. Was wir tun und nicht tun",
     "s4Do": "Wir prüfen systematisch alle KI-unterstützten Inhalte vor der Veröffentlichung. Wir fügen bei mit KI verfassten Artikeln einen redaktionellen Hinweis hinzu. Wir dokumentieren intern unseren Überprüfungsprozess.",
     "s4Dont": "Wir veröffentlichen keine Deepfakes (KI-generierte Bilder, Audio oder Video, die reale Personen darstellen). Wir veröffentlichen keine ungeprüften Inhalte von öffentlichem Informationsinteresse. Wir übertragen unsere redaktionelle Verantwortung nicht an ein KI-System.",
@@ -3644,91 +3644,91 @@
   },
   "termsUse": {
     "meta": {
-      "title": "Nutzungsbedingungen — AEGRYN",
+      "title": "Nutzungsbedingungen — Aegryn",
       "desc": "Bedingungen für den Zugang und die Nutzung der Website aegryn.com."
     },
     "label": "Nutzungsbedingungen",
     "version": "Version: Juli 2026",
-    "intro": "Diese Nutzungsbedingungen regeln den Zugang zur und die Nutzung der AEGRYN-Website unter aegryn.com sowie aller zugehoerigen Websites. Mit dem Zugriff auf die Website akzeptieren Sie diese Bedingungen vorbehaltlos. AEGRYN behält sich das Recht vor, diese jederzeit zu ändern.",
+    "intro": "Diese Nutzungsbedingungen regeln den Zugang zur und die Nutzung der Aegryn-Website unter aegryn.com sowie aller zugehoerigen Websites. Mit dem Zugriff auf die Website akzeptieren Sie diese Bedingungen vorbehaltlos. Aegryn behält sich das Recht vor, diese jederzeit zu ändern.",
     "s1Title": "Website-Inhalte",
-    "s1": "Die Website und alle ihre Inhalte (Texte, Grafiken, Bilder, Daten, Code, Skripte, Methoden, Bewertungssysteme) sind durch das in der Schweiz und der Europäischen Union geltende Urheberrecht geschützt. Diese Inhalte sind ausschliessliches Eigentum von AEGRYN oder ihren Partnern. Jede Vervielfältigung, Änderung, Verbreitung oder gewerbliche Nutzung ohne vorherige schriftliche Genehmigung ist streng verboten. Die Verwendung von Bots, Scrapern oder automatisierten Skripten zur Datenextraktion ist verboten.",
+    "s1": "Die Website und alle ihre Inhalte (Texte, Grafiken, Bilder, Daten, Code, Skripte, Methoden, Bewertungssysteme) sind durch das in der Schweiz und der Europäischen Union geltende Urheberrecht geschützt. Diese Inhalte sind ausschliessliches Eigentum von Aegryn oder ihren Partnern. Jede Vervielfältigung, Änderung, Verbreitung oder gewerbliche Nutzung ohne vorherige schriftliche Genehmigung ist streng verboten. Die Verwendung von Bots, Scrapern oder automatisierten Skripten zur Datenextraktion ist verboten.",
     "s2Title": "Erlaubte Nutzung",
-    "s2": "Sie dürfen die Website für legitime persönliche und berufliche Zwecke nutzen. Jede Nutzung zu betrügerischen Zwecken oder entgegen der öffentlichen Ordnung ist verboten. AEGRYN behält sich das Recht vor, den Zugang für jeden Nutzer, der gegen diese Bedingungen verstösst, zu sperren.",
+    "s2": "Sie dürfen die Website für legitime persönliche und berufliche Zwecke nutzen. Jede Nutzung zu betrügerischen Zwecken oder entgegen der öffentlichen Ordnung ist verboten. Aegryn behält sich das Recht vor, den Zugang für jeden Nutzer, der gegen diese Bedingungen verstösst, zu sperren.",
     "s3Title": "Registrierung und Benutzerkonten",
-    "s3": "Der Zugang zum AEGRYN-Kundenbereich ist qualifizierten, zuvor von AEGRYN autorisierten Mitgliedern vorbehalten. Sie verpflichten sich, genaue Angaben zu machen und diese aktuell zu halten. Sie sind für die Vertraulichkeit Ihrer Zugangsdaten und alle unter Ihrem Konto durchgeführten Aktivitäten verantwortlich.",
+    "s3": "Der Zugang zum Aegryn-Kundenbereich ist qualifizierten, zuvor von Aegryn autorisierten Mitgliedern vorbehalten. Sie verpflichten sich, genaue Angaben zu machen und diese aktuell zu halten. Sie sind für die Vertraulichkeit Ihrer Zugangsdaten und alle unter Ihrem Konto durchgeführten Aktivitäten verantwortlich.",
     "s4Title": "Richtigkeit der Informationen",
     "s4": "Die auf der Website veröffentlichten Informationen dienen nur als Hinweis. Bei Abweichungen zwischen dem Website-Inhalt und unterzeichneten Vertragsunterlagen haben Letztere Vorrang.",
     "s5Title": "Haftungsbeschränkung",
-    "s5": "AEGRYN garantiert nicht, dass die Website ununterbrochen oder fehlerfrei zugänglich ist. Die Website wird ohne Gewähr bereitgestellt. AEGRYN haftet nicht für direkte oder indirekte Schäden aus der Nutzung der Website.",
+    "s5": "Aegryn garantiert nicht, dass die Website ununterbrochen oder fehlerfrei zugänglich ist. Die Website wird ohne Gewähr bereitgestellt. Aegryn haftet nicht für direkte oder indirekte Schäden aus der Nutzung der Website.",
     "s6Title": "Externe Links",
-    "s6": "Die Website kann Links zu Websites Dritter enthalten. AEGRYN ist für den Inhalt dieser Websites nicht verantwortlich.",
+    "s6": "Die Website kann Links zu Websites Dritter enthalten. Aegryn ist für den Inhalt dieser Websites nicht verantwortlich.",
     "s7Title": "Geistiges Eigentum",
-    "s7": "Das Label AEGRYN Grade, die Marke AEGRYN, das Monogramm AE, das C/I/F/S-Protokoll sowie alle von AEGRYN erstellten Methoden und Berichte sind ausschliessliches Eigentum von AEGRYN. Jede unbefugte Nutzung wird verfolgt.",
+    "s7": "Das Label Aegryn Grade, die Marke Aegryn, das Monogramm AE, das C/I/F/S-Protokoll sowie alle von Aegryn erstellten Methoden und Berichte sind ausschliessliches Eigentum von Aegryn. Jede unbefugte Nutzung wird verfolgt.",
     "s8Title": "Anwendbares Recht und Gerichtsstand",
-    "s8": "Diese Bedingungen unterliegen dem Schweizer Recht. Jede Streitigkeit unterliegt der ausschliesslichen Zuständigkeit der Gerichte des Kantons, in dem AEGRYN ansässig ist. Ist eine Klausel unwirksam, bleiben die übrigen Klauseln anwendbar.",
+    "s8": "Diese Bedingungen unterliegen dem Schweizer Recht. Jede Streitigkeit unterliegt der ausschliesslichen Zuständigkeit der Gerichte des Kantons, in dem Aegryn ansässig ist. Ist eine Klausel unwirksam, bleiben die übrigen Klauseln anwendbar.",
     "ctaCgv": "AGB einsehen",
     "ctaPrivacy": "Datenschutzrichtlinie"
   },
   "termsCgv": {
     "meta": {
-      "title": "Allgemeine Geschäftsbedingungen — AEGRYN",
-      "desc": "Vertragsbedingungen für AEGRYN-Zertifizierung, Transaktionen und Dienstleistungen."
+      "title": "Allgemeine Geschäftsbedingungen — Aegryn",
+      "desc": "Vertragsbedingungen für Aegryn-Zertifizierung, Transaktionen und Dienstleistungen."
     },
     "label": "Allgemeine Geschäftsbedingungen",
     "version": "Version: Juli 2026",
     "note": "Dieses Dokument ist die verbindliche Vertragsgrundlage. Genaue Preisbedingungen sind im unterzeichneten Mandat oder Angebot festgelegt.",
     "s1Title": "Definitionen",
-    "defAegryn": "AEGRYN (formerly BOHA-Group, in der Schweiz eingetragene Gesellschaft).",
-    "defAsset": "Jedes digitale Gut, das über AEGRYN zertifiziert und/oder übertragen werden kann: Software (SaaS, Anwendungen), Codebases, digitales geistiges Eigentum, Marken, Protokolle.",
-    "defGrade": "Offizielle Zertifizierung eines Tech-Assets nach dem C/I/F/S-Protokoll, ausgestellt von zertifizierten AEGRYN-Analysten. Vergebene Grade: ★, AAA, AA, A, B.",
-    "defGradeEst": "Nicht zertifiziertes Gutachten eines AEGRYN-Analysten ohne externe Validierung. Gegenüber Dritten nie durchsetzbar. Immer mit dem Zusatz (geschätzt) versehen.",
+    "defAegryn": "Aegryn (formerly BOHA-Group, in der Schweiz eingetragene Gesellschaft).",
+    "defAsset": "Jedes digitale Gut, das über Aegryn zertifiziert und/oder übertragen werden kann: Software (SaaS, Anwendungen), Codebases, digitales geistiges Eigentum, Marken, Protokolle.",
+    "defGrade": "Offizielle Zertifizierung eines Tech-Assets nach dem C/I/F/S-Protokoll, ausgestellt von zertifizierten Aegryn-Analysten. Vergebene Grade: ★, AAA, AA, A, B.",
+    "defGradeEst": "Nicht zertifiziertes Gutachten eines Aegryn-Analysten ohne externe Validierung. Gegenüber Dritten nie durchsetzbar. Immer mit dem Zusatz (geschätzt) versehen.",
     "defPtt": "Vertraglicher Mechanismus zur Regelung der Übertragung eines zertifizierten Assets, einschliesslich einer Banktreuhand von 10% des vereinbarten Preises.",
-    "defEscrow": "Vom Käufer bei einer von AEGRYN benannten Drittbank hinterlegter Betrag. AEGRYN ist niemals Verwahrer dieser Mittel.",
-    "defSeller": "Jede natürliche oder juristische Person, die ein Tech-Asset in den AEGRYN-Prozess einbringt.",
-    "defBuyer": "Jedes qualifizierte AEGRYN-Mitglied, das zum Zugang zum Katalog und zur Abgabe von Angeboten berechtigt ist.",
+    "defEscrow": "Vom Käufer bei einer von Aegryn benannten Drittbank hinterlegter Betrag. Aegryn ist niemals Verwahrer dieser Mittel.",
+    "defSeller": "Jede natürliche oder juristische Person, die ein Tech-Asset in den Aegryn-Prozess einbringt.",
+    "defBuyer": "Jedes qualifizierte Aegryn-Mitglied, das zum Zugang zum Katalog und zur Abgabe von Angeboten berechtigt ist.",
     "s2Title": "Erbrachte Dienstleistungen",
-    "s2ReviewTitle": "AEGRYN Review",
-    "s2Review": "Schriftliches Gutachten eines AEGRYN-Analysten zu einem eingereichten Tech-Asset. Bearbeitungszeit: 15 Werktage. Ohne externe Validierung, nicht im Katalog veröffentlichbar. Nur indikativer Wert. Vollständig auf Zertifizierungsgebühren anrechenbar, wenn der Prozess innerhalb von 6 Monaten gestartet wird.",
-    "s2ReviewPlusTitle": "AEGRYN Review+",
+    "s2ReviewTitle": "Aegryn Review",
+    "s2Review": "Schriftliches Gutachten eines Aegryn-Analysten zu einem eingereichten Tech-Asset. Bearbeitungszeit: 15 Werktage. Ohne externe Validierung, nicht im Katalog veröffentlichbar. Nur indikativer Wert. Vollständig auf Zertifizierungsgebühren anrechenbar, wenn der Prozess innerhalb von 6 Monaten gestartet wird.",
+    "s2ReviewPlusTitle": "Aegryn Review+",
     "s2ReviewPlus": "Schriftliches Gutachten ergänzt durch einen externen Partner. Bearbeitungszeit: 20 Werktage. Nicht offiziell im Sinne der vollständigen Zertifizierung, nicht veröffentlichbar. Unter gleichen Bedingungen vollständig anrechenbar.",
     "s2CertTitle": "Auction-Zertifizierung",
-    "s2Cert": "Vollständiger mehrdimensionaler Auditprozess über alle 4 C/I/F/S-Dimensionen. Durchgeführt von zertifizierten AEGRYN-Analysten gemäß dem offiziellen Protokoll. Offizieller AEG-Grade vergeben und im Katalog veröffentlichbar. Honorar: erfolgsbasiert (Provision beim Verkauf).",
-    "s2AdvisoryTitle": "AEGRYN Advisory",
+    "s2Cert": "Vollständiger mehrdimensionaler Auditprozess über alle 4 C/I/F/S-Dimensionen. Durchgeführt von zertifizierten Aegryn-Analysten gemäß dem offiziellen Protokoll. Offizieller AEG-Grade vergeben und im Katalog veröffentlichbar. Honorar: erfolgsbasiert (Provision beim Verkauf).",
+    "s2AdvisoryTitle": "Aegryn Advisory",
     "s2Advisory": "Strategische und operative Begleitung von Assets zur Sanierung und Neueinreichung. Honorar nach Angebot.",
     "s3Title": "Einreichungsbedingungen",
-    "s3": "Alle Assets werden über /grade/submit eingereicht. Die Einreichung begründet keine vertragliche Verpflichtung. AEGRYN hat 5 Werktage Zeit für ein Vorscreening. Weniger als 25% der eingereichten Assets werden für die vollständige Zertifizierung akzeptiert.",
+    "s3": "Alle Assets werden über /grade/submit eingereicht. Die Einreichung begründet keine vertragliche Verpflichtung. Aegryn hat 5 Werktage Zeit für ein Vorscreening. Weniger als 25% der eingereichten Assets werden für die vollständige Zertifizierung akzeptiert.",
     "s3ObligTitle": "Pflichten des Einreichers",
     "s3Oblig": "Der Verkäufer verpflichtet sich, genaue und vollständige Angaben zu machen, die zur Übertragung erforderlichen Rechte zu garantieren, die Vertraulichkeit des Bewertungsverfahrens zu wahren und das Asset während des Exklusivmandats nicht an Dritte zu übertragen.",
     "s4Title": "Das Tech-Transaktionsversprechen (PTT)",
     "s4EiTitle": "Interessensbekundung (IB)",
-    "s4Ei": "Nicht bindend. Innerhalb von 48 Stunden von AEGRYN an den Verkäufer übermittelt. Keine Hinterlegung erforderlich.",
+    "s4Ei": "Nicht bindend. Innerhalb von 48 Stunden von Aegryn an den Verkäufer übermittelt. Keine Hinterlegung erforderlich.",
     "s4ApTitle": "Grundsatzvereinbarung (GV)",
     "s4Ap": "Formalisierung des vereinbarten Preises und der Transaktionsstruktur. Die Unterzeichnung der GV begründet die Pflicht des Käufers zur Zahlung der Treuhand.",
     "s4EscrowTitle": "Treuhand",
-    "s4Escrow": "Betrag: 10% des vereinbarten Transaktionspreises. Zahlungsfrist: 5 Werktage nach Unterzeichnung der GV. Verwahrer: von AEGRYN benannte Drittbank. Doppelunterschrift für jede Freigabe erforderlich.",
+    "s4Escrow": "Betrag: 10% des vereinbarten Transaktionspreises. Zahlungsfrist: 5 Werktage nach Unterzeichnung der GV. Verwahrer: von Aegryn benannte Drittbank. Doppelunterschrift für jede Freigabe erforderlich.",
     "s4RetractTitle": "Rücktrittsregeln",
-    "s4RetractBuyer": "Rücktritt des Käufers ohne berechtigten Grund: die Treuhand geht an den Verkäufer, abzüglich der AEGRYN-Bearbeitungsprovision.",
+    "s4RetractBuyer": "Rücktritt des Käufers ohne berechtigten Grund: die Treuhand geht an den Verkäufer, abzüglich der Aegryn-Bearbeitungsprovision.",
     "s4RetractSeller": "Rücktritt des Verkäufers ohne berechtigten Grund: die Treuhand wird vollständig an den Käufer zurückerstattet. Der Verkäufer zahlt zusätzlich eine Entschädigung in Höhe des Treuhandbetrags.",
-    "s4RetractSusp": "Nicht erfüllte aufschiebende Bedingung (dokumentierter berechtigter Grund): die Treuhand wird vollständig an den Käufer zurückerstattet. Die bereits gezahlte Prüfungsprovision verbleibt bei AEGRYN.",
+    "s4RetractSusp": "Nicht erfüllte aufschiebende Bedingung (dokumentierter berechtigter Grund): die Treuhand wird vollständig an den Käufer zurückerstattet. Die bereits gezahlte Prüfungsprovision verbleibt bei Aegryn.",
     "s4DdTitle": "Due Diligence (DD)",
     "s4Dd": "Standarddauer: 30 Kalendertage ab Treuhandbestätigung. Der Käufer erhält Zugang zum vollständigen Datenraum unter NDA. Verlängerung durch gegenseitige schriftliche Vereinbarung möglich (max. 30 weitere Tage).",
     "s4SigningTitle": "Unterzeichnung und Closing",
-    "s4Signing": "Bei der Unterzeichnung: der genaue Codebase-Zustand wird dokumentiert und versioniert. Die Codebase wird im AEGRYN-Register archiviert und versioniert. Der Restbetrag (90%) wird vom Käufer gezahlt. Die Bank gibt die Treuhand frei. AEGRYN zieht seine Provision ab und zahlt den Nettobetrag an den Verkäufer. AEGRYN stellt das offizielle Transaktionszertifikat aus.",
+    "s4Signing": "Bei der Unterzeichnung: der genaue Codebase-Zustand wird dokumentiert und versioniert. Die Codebase wird im Aegryn-Register archiviert und versioniert. Der Restbetrag (90%) wird vom Käufer gezahlt. Die Bank gibt die Treuhand frei. Aegryn zieht seine Provision ab und zahlt den Nettobetrag an den Verkäufer. Aegryn stellt das offizielle Transaktionszertifikat aus.",
     "s5Title": "Haftung",
-    "s5": "AEGRYN handelt ausschliesslich als Vermittler und Prozessbetreiber. AEGRYN garantiert weder den Ausgang einer Transaktion noch den zukünftigen Wert eines Assets noch die Leistung nach der Übertragung. Die Haftung von AEGRYN ist auf die Rückerstattung der Zertifizierungsgebühren für das betreffende Asset beschränkt. AEGRYN haftet in keinem Fall für indirekte Schäden oder entgangenen Gewinn.",
+    "s5": "Aegryn handelt ausschliesslich als Vermittler und Prozessbetreiber. Aegryn garantiert weder den Ausgang einer Transaktion noch den zukünftigen Wert eines Assets noch die Leistung nach der Übertragung. Die Haftung von Aegryn ist auf die Rückerstattung der Zertifizierungsgebühren für das betreffende Asset beschränkt. Aegryn haftet in keinem Fall für indirekte Schäden oder entgangenen Gewinn.",
     "s6Title": "Grade-Anfechtung",
-    "s6": "Jede Anfechtung des offiziellen Grades muss AEGRYN schriftlich (contact@boha-group.com) innerhalb von 30 Kalendertagen nach Zustellung des Berichts gemeldet werden. AEGRYN verpflichtet sich, innerhalb von 15 Werktagen zu antworten.",
+    "s6": "Jede Anfechtung des offiziellen Grades muss Aegryn schriftlich (contact@boha-group.com) innerhalb von 30 Kalendertagen nach Zustellung des Berichts gemeldet werden. Aegryn verpflichtet sich, innerhalb von 15 Werktagen zu antworten.",
     "s7Title": "Transaktionsvertraulichkeit",
-    "s7": "AEGRYN gibt die Identität des Verkäufers gegenüber dem Käufer und umgekehrt niemals ohne ausdrückliche Zustimmung beider Parteien preis. Im Ergebniskatalog veröffentlichte Transaktionsdaten werden systematisch anonymisiert.",
+    "s7": "Aegryn gibt die Identität des Verkäufers gegenüber dem Käufer und umgekehrt niemals ohne ausdrückliche Zustimmung beider Parteien preis. Im Ergebniskatalog veröffentlichte Transaktionsdaten werden systematisch anonymisiert.",
     "s8Title": "Geldwäschebekämpfung (GwG/AMLD6)",
-    "s8": "Gemäss dem Schweizer GwG und der AMLD6 ist AEGRYN verpflichtet, die Identität aller Kunden zu überprüfen (KYC), wirtschaftlich Berechtigte (UBO >= 25%) zu identifizieren und verdächtige Transaktionen zu melden. Im Zweifelsfall kann AEGRYN jeden Prozess aussetzen oder annullieren.",
+    "s8": "Gemäss dem Schweizer GwG und der AMLD6 ist Aegryn verpflichtet, die Identität aller Kunden zu überprüfen (KYC), wirtschaftlich Berechtigte (UBO >= 25%) zu identifizieren und verdächtige Transaktionen zu melden. Im Zweifelsfall kann Aegryn jeden Prozess aussetzen oder annullieren.",
     "s9Title": "Anwendbares Recht und Streitbeilegung",
-    "s9": "Diese AGB unterliegen dem materiellen Schweizer Recht. Jede Streitigkeit unterliegt der ausschliesslichen Zuständigkeit der Gerichte des Kantons, in dem AEGRYN ansässig ist. Die Parteien versuchen, Meinungsverschiedenheiten innerhalb von 30 Tagen gütlich beizulegen.",
+    "s9": "Diese AGB unterliegen dem materiellen Schweizer Recht. Jede Streitigkeit unterliegt der ausschliesslichen Zuständigkeit der Gerichte des Kantons, in dem Aegryn ansässig ist. Die Parteien versuchen, Meinungsverschiedenheiten innerhalb von 30 Tagen gütlich beizulegen.",
     "s10Title": "Data Room und Zugang zu Due-Diligence-Dokumenten",
-    "s10": "Im Rahmen des Zertifizierungs- und Transaktionsprozesses stellt AEGRYN einen sicheren Data Room zur Verfügung, in dem der Verkäufer die für die CIFS-Analyse erforderlichen Dokumente hochladen kann. Der Zugang zu diesen Dokumenten wird über ein dreistufiges Berechtigungssystem streng kontrolliert: Administrator/Verkäufer, zugewiesener zertifizierter Partner und Käufer, der das Auction-NDA unterzeichnet hat.\n\nJede Einsichtnahme wird protokolliert (Identität, IP-Adresse, Zeitstempel, Dauer). Technische Abschreckungsmassnahmen sind implementiert (Download-Sperre, Erkennung von Screenshot-Versuchen, dynamisches Wasserzeichen). Diese Massnahmen stellen eine ernsthafte Abschreckung und einen protokollierten Nachweis im Streitfall dar, können jedoch nicht zu 100% verhindern, dass Dokumente mit externen Mitteln (Fotografieren, Erfassung durch ein Drittgerät) abgegriffen werden.\n\nDer Käufer erkennt an, dass die im Data Room eingesehenen Dokumente durch diese AGB und das unterzeichnete Auction-NDA geschützt sind. Er verpflichtet sich vertraglich, kein eingesehenes Dokument zu reproduzieren, weiterzugeben oder offenzulegen, widrigenfalls Schadensersatz und rechtliche Schritte drohen. Die Haftung von AEGRYN bei einem Leck infolge einer Umgehung der technischen Schutzmassnahmen ist ausdrücklich ausgeschlossen.",
+    "s10": "Im Rahmen des Zertifizierungs- und Transaktionsprozesses stellt Aegryn einen sicheren Data Room zur Verfügung, in dem der Verkäufer die für die CIFS-Analyse erforderlichen Dokumente hochladen kann. Der Zugang zu diesen Dokumenten wird über ein dreistufiges Berechtigungssystem streng kontrolliert: Administrator/Verkäufer, zugewiesener zertifizierter Partner und Käufer, der das Auction-NDA unterzeichnet hat.\n\nJede Einsichtnahme wird protokolliert (Identität, IP-Adresse, Zeitstempel, Dauer). Technische Abschreckungsmassnahmen sind implementiert (Download-Sperre, Erkennung von Screenshot-Versuchen, dynamisches Wasserzeichen). Diese Massnahmen stellen eine ernsthafte Abschreckung und einen protokollierten Nachweis im Streitfall dar, können jedoch nicht zu 100% verhindern, dass Dokumente mit externen Mitteln (Fotografieren, Erfassung durch ein Drittgerät) abgegriffen werden.\n\nDer Käufer erkennt an, dass die im Data Room eingesehenen Dokumente durch diese AGB und das unterzeichnete Auction-NDA geschützt sind. Er verpflichtet sich vertraglich, kein eingesehenes Dokument zu reproduzieren, weiterzugeben oder offenzulegen, widrigenfalls Schadensersatz und rechtliche Schritte drohen. Die Haftung von Aegryn bei einem Leck infolge einer Umgehung der technischen Schutzmassnahmen ist ausdrücklich ausgeschlossen.",
     "s11Title": "Transaktionshonorar",
-    "s11Charge": "Die Transaktionsprovision von AEGRYN wird vollständig vom Veräusserer (Verkäufer) getragen. Sie wird von AEGRYN direkt beim Closing vom hinterlegten Betrag einbehalten, bevor der Nettoerlös an den Verkäufer ausgezahlt wird. Der Erwerber zahlt im Rahmen der Transaktion keine Provision an AEGRYN. Der Zugang zum Katalog und zum Akquisitionsprozess ist für qualifizierte Käufermitglieder kostenlos.",
-    "s11Grid": "Die Transaktionsprovision von AEGRYN wird auf den beim Closing tatsächlich gezahlten Festkaufpreis berechnet, gemäss folgender degressiver Staffelung:",
+    "s11Charge": "Die Transaktionsprovision von Aegryn wird vollständig vom Veräusserer (Verkäufer) getragen. Sie wird von Aegryn direkt beim Closing vom hinterlegten Betrag einbehalten, bevor der Nettoerlös an den Verkäufer ausgezahlt wird. Der Erwerber zahlt im Rahmen der Transaktion keine Provision an Aegryn. Der Zugang zum Katalog und zum Akquisitionsprozess ist für qualifizierte Käufermitglieder kostenlos.",
+    "s11Grid": "Die Transaktionsprovision von Aegryn wird auf den beim Closing tatsächlich gezahlten Festkaufpreis berechnet, gemäss folgender degressiver Staffelung:",
     "s11Tiers": [
       "100.000 € – 250.000 €: 10% zzgl. MwSt.",
       "250.001 € – 500.000 €: 9% zzgl. MwSt.",
@@ -3739,34 +3739,34 @@
     ],
     "s11Minimum": "Mindestprovision: 25.000 € zzgl. MwSt., unabhängig vom anwendbaren Satz und dem endgültigen Transaktionspreis.",
     "s11NonSaleTitle": "Gebühren bei Nichtzustandekommen der Transaktion",
-    "s11NonSale": "Für den Fall, dass ein zum vollständigen Zertifizierungsprozess (Certification Auction) zugelassenes Asset aus dem Katalog zurückgezogen wird oder am Ende des AEGRYN-Prozesses keine Transaktion zustande kommt, sind AEGRYN Mindestpauschalgebühren von CHF 2.000 zzgl. MwSt. als Gegenleistung für die von seinen Teams erbrachten Leistungen geschuldet: C/I/F/S-Analyse, Vergabe des offiziellen Grades, Vorbereitung der Katalogakte, Kommunikations- und Marketingmaßnahmen sowie die während der Präsenz des Assets im AEGRYN-Katalog erlangte Produktsichtbarkeit. Diese Gebühren sind unabhängig vom kommerziellen Ergebnis fällig und am Tag des Rückzugs oder Abschlusses ohne Transaktion exigibel. Sie werden dem Veräußerer direkt in Rechnung gestellt. Diese Klausel gilt nicht bei einer ordnungsgemäß dokumentierten nicht erfüllten aufschiebenden Bedingung.",
+    "s11NonSale": "Für den Fall, dass ein zum vollständigen Zertifizierungsprozess (Certification Auction) zugelassenes Asset aus dem Katalog zurückgezogen wird oder am Ende des Aegryn-Prozesses keine Transaktion zustande kommt, sind Aegryn Mindestpauschalgebühren von CHF 2.000 zzgl. MwSt. als Gegenleistung für die von seinen Teams erbrachten Leistungen geschuldet: C/I/F/S-Analyse, Vergabe des offiziellen Grades, Vorbereitung der Katalogakte, Kommunikations- und Marketingmaßnahmen sowie die während der Präsenz des Assets im Aegryn-Katalog erlangte Produktsichtbarkeit. Diese Gebühren sind unabhängig vom kommerziellen Ergebnis fällig und am Tag des Rückzugs oder Abschlusses ohne Transaktion exigibel. Sie werden dem Veräußerer direkt in Rechnung gestellt. Diese Klausel gilt nicht bei einer ordnungsgemäß dokumentierten nicht erfüllten aufschiebenden Bedingung.",
     "s11Earnout": "Bei einem Earnout wird auf jede vom Veräusserer tatsächlich empfangene Earnout-Zahlung eine zusätzliche Provision von 5% erhoben, begrenzt auf den für die Gesamtpreisklasse geltenden Satz.",
-    "s11Payment": "Die Provision ist am Tag der Freigabe des Hinterlegungsbetrags fällig und wird von AEGRYN direkt vom hinterlegten Betrag einbehalten, bevor der Nettosaldo an den Verkäufer überwiesen wird. AEGRYN ist niemals Verwahrer dieser Gelder — der Hinterlegungsbetrag wird von einer von AEGRYN benannten Drittbank gehalten.",
-    "ctaContact": "AEGRYN-Team kontaktieren",
+    "s11Payment": "Die Provision ist am Tag der Freigabe des Hinterlegungsbetrags fällig und wird von Aegryn direkt vom hinterlegten Betrag einbehalten, bevor der Nettosaldo an den Verkäufer überwiesen wird. Aegryn ist niemals Verwahrer dieser Gelder — der Hinterlegungsbetrag wird von einer von Aegryn benannten Drittbank gehalten.",
+    "ctaContact": "Aegryn-Team kontaktieren",
     "ctaTermsUse": "Nutzungsbedingungen",
-    "s12Title": "AEGRYN Expertennetzwerk — Expertenprofil-Abonnement",
-    "s12Intro": "AEGRYN betreibt ein Netzwerk von gelisteten Fachleuten (nachfolgend \"Partner\"), die über den Bereich Expertennetzwerk der Plattform zugänglich sind. Dieses Netzwerk ist vom Transaktionsprozess getrennt und stellt keine Vermittlungsleistung im finanziellen Sinne dar.",
+    "s12Title": "Aegryn Expertennetzwerk — Expertenprofil-Abonnement",
+    "s12Intro": "Aegryn betreibt ein Netzwerk von gelisteten Fachleuten (nachfolgend \"Partner\"), die über den Bereich Expertennetzwerk der Plattform zugänglich sind. Dieses Netzwerk ist vom Transaktionsprozess getrennt und stellt keine Vermittlungsleistung im finanziellen Sinne dar.",
     "s12AbonTitle": "Expertenprofil-Abonnement",
-    "s12Abon": "Der Zugang zum Netzwerk ist an den Abschluss eines Expertenprofil-Abonnements geknüpft (89 CHF zzgl. MwSt./Monat oder geltender Jahrestarif). Dieses Abonnement berechtigt zur: Veröffentlichung und Aktualisierung eines Expertenprofils auf aegryn.com/grade/partners, direktem Zugang zu Vermittlungsanfragen von AEGRYN-Verkäufern oder -Käufern, die Unterstützungsbedarf in den im Profil angegebenen Fachgebieten geäußert haben, sowie zur Teilnahme an AEGRYN-Netzwerkveranstaltungen. Das Abonnement hat keine Mindestlaufzeit und kann jederzeit mit Wirkung zum Ende der laufenden Periode gekündigt werden.",
+    "s12Abon": "Der Zugang zum Netzwerk ist an den Abschluss eines Expertenprofil-Abonnements geknüpft (89 CHF zzgl. MwSt./Monat oder geltender Jahrestarif). Dieses Abonnement berechtigt zur: Veröffentlichung und Aktualisierung eines Expertenprofils auf aegryn.com/grade/partners, direktem Zugang zu Vermittlungsanfragen von Aegryn-Verkäufern oder -Käufern, die Unterstützungsbedarf in den im Profil angegebenen Fachgebieten geäußert haben, sowie zur Teilnahme an Aegryn-Netzwerkveranstaltungen. Das Abonnement hat keine Mindestlaufzeit und kann jederzeit mit Wirkung zum Ende der laufenden Periode gekündigt werden.",
     "s12SubTitle": "Art der Beziehung",
-    "s12Sub": "Der Partner ist ein unabhängiger Dienstleister, der in persönlicher Eigenschaft oder im Namen seiner Organisation gelistet ist. Er legt seine Honorare, Einsatzbedingungen und Vertragsbedingungen mit seinen Kunden frei fest. AEGRYN erhält keine Provision auf die vom Partner an seine Kunden berechneten Honorare und greift nicht in die Geschäftsbeziehung zwischen dem Partner und seinen Kunden ein. Der Partner ist im Rahmen seiner Dienstleistungen in keiner Weise Angestellter, Bevollmächtigter oder Mitvertragspartner von AEGRYN.",
-    "s12NoCommTitle": "Keine Provision an AEGRYN",
-    "s12NoComm": "Partner zahlen AEGRYN keine Provision auf ihre Dienstleistungshonorare, unabhängig von der Art des durchgeführten Auftrags (Beratung, Due Diligence, Rechtsberatung, technisches Gutachten usw.). Die einzige finanzielle Gegenleistung gegenüber AEGRYN ist das monatliche Expertenprofil-Abonnement. Diese Bestimmung ist zwingend und kann nicht durch individuelle Vereinbarung geändert werden.",
+    "s12Sub": "Der Partner ist ein unabhängiger Dienstleister, der in persönlicher Eigenschaft oder im Namen seiner Organisation gelistet ist. Er legt seine Honorare, Einsatzbedingungen und Vertragsbedingungen mit seinen Kunden frei fest. Aegryn erhält keine Provision auf die vom Partner an seine Kunden berechneten Honorare und greift nicht in die Geschäftsbeziehung zwischen dem Partner und seinen Kunden ein. Der Partner ist im Rahmen seiner Dienstleistungen in keiner Weise Angestellter, Bevollmächtigter oder Mitvertragspartner von Aegryn.",
+    "s12NoCommTitle": "Keine Provision an Aegryn",
+    "s12NoComm": "Partner zahlen Aegryn keine Provision auf ihre Dienstleistungshonorare, unabhängig von der Art des durchgeführten Auftrags (Beratung, Due Diligence, Rechtsberatung, technisches Gutachten usw.). Die einzige finanzielle Gegenleistung gegenüber Aegryn ist das monatliche Expertenprofil-Abonnement. Diese Bestimmung ist zwingend und kann nicht durch individuelle Vereinbarung geändert werden.",
     "s12ReferralTitle": "Empfehlungsprogramm",
-    "s12Referral": "Jeder Partner mit einem aktiven Expertenprofil-Abonnement kann andere Fachleute werben. Für jeden geworbenen Fachmann, der ein Expertenprofil abonniert, erhält der Werber eine Gutschrift von einem Monat auf sein eigenes Abonnement, die zur nächsten Abrechnung gutgeschrieben wird. Der geworbene Fachmann erhält ebenfalls einen kostenlosen Monat, der von seiner ersten Rechnung abgezogen wird. AEGRYN behält sich das Recht vor, dieses Programm mit einer Frist von 30 Tagen zu ändern.",
-    "defPartner": "Im AEGRYN-Verzeichnis gelisteter Fachmann über ein aktives Expertenprofil-Abonnement. Unterstützt Verkäufer und/oder Käufer bei ihren Transaktionen (Tech-Beratung, M&A, Recht, HR, Cyber, Finanzen, W&I-Versicherung usw.). Ist nicht Partei der Transaktion und erhält keine Provision von AEGRYN."
+    "s12Referral": "Jeder Partner mit einem aktiven Expertenprofil-Abonnement kann andere Fachleute werben. Für jeden geworbenen Fachmann, der ein Expertenprofil abonniert, erhält der Werber eine Gutschrift von einem Monat auf sein eigenes Abonnement, die zur nächsten Abrechnung gutgeschrieben wird. Der geworbene Fachmann erhält ebenfalls einen kostenlosen Monat, der von seiner ersten Rechnung abgezogen wird. Aegryn behält sich das Recht vor, dieses Programm mit einer Frist von 30 Tagen zu ändern.",
+    "defPartner": "Im Aegryn-Verzeichnis gelisteter Fachmann über ein aktives Expertenprofil-Abonnement. Unterstützt Verkäufer und/oder Käufer bei ihren Transaktionen (Tech-Beratung, M&A, Recht, HR, Cyber, Finanzen, W&I-Versicherung usw.). Ist nicht Partei der Transaktion und erhält keine Provision von Aegryn."
   },
   "privacy": {
     "meta": {
-      "title": "Datenschutzrichtlinie — AEGRYN",
-      "desc": "Wie AEGRYN Ihre personenbezogenen Daten erhebt, verarbeitet und schützt. Konform mit CH-DSG und DSGVO."
+      "title": "Datenschutzrichtlinie — Aegryn",
+      "desc": "Wie Aegryn Ihre personenbezogenen Daten erhebt, verarbeitet und schützt. Konform mit CH-DSG und DSGVO."
     },
     "label": "Datenschutzrichtlinie",
     "updated": "Letzte Aktualisierung: Juli 2026",
     "langSelector": "Verfügbar in",
-    "intro": "Wie die meisten Unternehmen im Finanz- und Transaktionsbereich erhebt und verarbeitet AEGRYN Daten über seine Kunden, Partner und andere Personen, die an seinen Dienstleistungen interessiert sein könnten. Diese Richtlinie erläutert, welche Daten wir verarbeiten, warum wir sie verarbeiten und wie sich dies auf Sie auswirken kann.",
+    "intro": "Wie die meisten Unternehmen im Finanz- und Transaktionsbereich erhebt und verarbeitet Aegryn Daten über seine Kunden, Partner und andere Personen, die an seinen Dienstleistungen interessiert sein könnten. Diese Richtlinie erläutert, welche Daten wir verarbeiten, warum wir sie verarbeiten und wie sich dies auf Sie auswirken kann.",
     "s1Title": "Wer sind wir?",
-    "s1": "Der für die Verarbeitung Ihrer Daten Verantwortliche ist AEGRYN (formerly BOHA-Group, eine in der Schweiz eingetragene Gesellschaft). Wenn Sie unsere Dienste nutzen (Zertifizierung, Transaktion, Advisory, Katalog), ist der Verantwortliche AEGRYN (formerly BOHA-Group).",
+    "s1": "Der für die Verarbeitung Ihrer Daten Verantwortliche ist Aegryn (formerly BOHA-Group, eine in der Schweiz eingetragene Gesellschaft). Wenn Sie unsere Dienste nutzen (Zertifizierung, Transaktion, Advisory, Katalog), ist der Verantwortliche Aegryn (formerly BOHA-Group).",
     "s2Title": "Welche Daten erheben wir und wie?",
     "s2DirectTitle": "Daten, die Sie uns direkt mitteilen",
     "s2Direct": "Name, berufliche Kontaktdaten, Angaben zur vertretenen Einheit, Finanzinformationen, Ausweisdokumente, Unternehmensdokumente, Angaben zu wirtschaftlich Berechtigten (UBO). Erhoben bei Registrierung, Asset-Einreichung, Alliance-Bewerbung, Assessment-Day-Buchung, Nutzung des Bewertungsrechners oder jeglicher Kommunikation.",
@@ -3797,7 +3797,7 @@
     "s3Row6Data": "Anonymisierte Daten",
     "s3Row6Basis": "Berechtigte Interessen / Öffentliches Interesse",
     "s4Title": "Wer hat Zugang zu Ihren Daten?",
-    "s4": "Innerhalb von AEGRYN: Teammitglieder mit berechtigtem operativem Bedarf. Zertifizierungspartner (unterliegen strengen Vertraulichkeitspflichten). Treuhandbank. Technische Dienstleister: Hosting, E-Mail, Zahlung über Stripe. Behörden: wenn gesetzlich vorgeschrieben. AEGRYN verkauft Ihre Daten niemals an Dritte.",
+    "s4": "Innerhalb von Aegryn: Teammitglieder mit berechtigtem operativem Bedarf. Zertifizierungspartner (unterliegen strengen Vertraulichkeitspflichten). Treuhandbank. Technische Dienstleister: Hosting, E-Mail, Zahlung über Stripe. Behörden: wenn gesetzlich vorgeschrieben. Aegryn verkauft Ihre Daten niemals an Dritte.",
     "s5Title": "Internationale Übermittlungen",
     "s5": "Daten werden auf Servern in der Europäischen Union oder der Schweiz gehostet. Bei Übermittlungen in Drittländer setzen wir geeignete Garantien ein (genehmigte Standardvertragsklauseln).",
     "s6Title": "Aufbewahrung",
@@ -3957,33 +3957,33 @@
   },
   "security": {
     "meta": {
-      "title": "Online-Sicherheit — AEGRYN",
-      "desc": "Wie Sie sich vor Betrug und Identitätsmissbrauch im Zusammenhang mit AEGRYN schützen können."
+      "title": "Online-Sicherheit — Aegryn",
+      "desc": "Wie Sie sich vor Betrug und Identitätsmissbrauch im Zusammenhang mit Aegryn schützen können."
     },
     "label": "Online-Sicherheit",
     "subtitle": "So schützen Sie sich vor Betrug",
     "contactEmail": "contact@boha-group.com",
     "intro": "Bei der Nutzung unserer Dienste können wir Sie nach Ihren Identitäts-, Bank- und Unternehmensdokumenten fragen. Wir setzen fortschrittliche Technologien zum Schutz Ihrer Daten ein und empfehlen Ihnen, grundlegende Sicherheitspraktiken zu befolgen.",
     "s1Title": "Markenidentitätsmissbrauch",
-    "s1": "Betrüger können gefälschte Websites, Social-Media-Profile oder E-Mails erstellen, die scheinbar von AEGRYN stammen, um Sie zu betrügerischen Zahlungen zu verleiten.",
+    "s1": "Betrüger können gefälschte Websites, Social-Media-Profile oder E-Mails erstellen, die scheinbar von Aegryn stammen, um Sie zu betrügerischen Zahlungen zu verleiten.",
     "s1Official": "Unsere offiziellen E-Mails stammen ausschliesslich von der Domain @boha-group.com. Jede Zahlungsaufforderung von einer anderen Domain ist betrügerisch.",
-    "s1NeverTitle": "AEGRYN verlangt niemals:",
+    "s1NeverTitle": "Aegryn verlangt niemals:",
     "s1Never1": "Eine Einzahlung auf ein Privatkonto",
     "s1Never2": "Vorauszahlungen, die nicht in Ihrem unterzeichneten Mandat vorgesehen sind",
     "s1Never3": "Ihre Zugangsdaten per E-Mail oder Telefon",
     "s2Title": "Betrügerische Kommunikation erkennen",
     "s2": "Prüfen Sie: die Absender-E-Mail ist genau @boha-group.com (nicht @boha-group.net oder eine Variante), Links in E-Mails verweisen auf aegryn.com, und Zahlungsaufforderungen entsprechen dem, was in Ihrem unterzeichneten Mandat vorgesehen ist.",
     "s2Doubt": "Im Zweifelsfall kontaktieren Sie uns direkt unter contact@boha-group.com — antworten Sie nicht auf die verdächtige E-Mail.",
-    "s3Title": "Ihr AEGRYN-Konto sichern",
+    "s3Title": "Ihr Aegryn-Konto sichern",
     "s3Items": [
-      "Verwenden Sie ein starkes, einzigartiges Passwort für Ihr AEGRYN-Konto",
+      "Verwenden Sie ein starkes, einzigartiges Passwort für Ihr Aegryn-Konto",
       "Aktivieren Sie die Zwei-Faktor-Authentifizierung (2FA), wenn verfügbar",
       "Teilen Sie niemals Ihre Zugangsdaten",
       "Melden Sie sich nach jeder Sitzung ab"
     ],
     "s4Title": "Zahlungsprozesse — normal vs. betrügerisch",
     "s4NormalTitle": "Normal",
-    "s4Normal1": "Zahlung der AEGRYN-Review-Honorare (2.000 EUR) oder Review+ (5.000 EUR) über Stripe Checkout auf aegryn.com",
+    "s4Normal1": "Zahlung der Aegryn-Review-Honorare (2.000 EUR) oder Review+ (5.000 EUR) über Stripe Checkout auf aegryn.com",
     "s4Normal2": "Treuhandzahlung (10% des vereinbarten Preises) per Banküberweisung an die IBAN der benannten Partnerbank mit Transaktionsreferenz",
     "s4FraudTitle": "Betrügerisch",
     "s4Fraud1": "Jede Zahlungsaufforderung an ein Privatkonto",
@@ -3996,8 +3996,8 @@
   },
   "faq": {
     "meta": {
-      "title": "FAQ — Häufig gestellte Fragen — AEGRYN",
-      "desc": "Antworten auf häufig gestellte Fragen zur AEGRYN-Grade-Zertifizierung, Transaktionen, Sessions und Konten."
+      "title": "FAQ — Häufig gestellte Fragen — Aegryn",
+      "desc": "Antworten auf häufig gestellte Fragen zur Aegryn-Grade-Zertifizierung, Transaktionen, Sessions und Konten."
     },
     "label": "Häufig gestellte Fragen",
     "filterAll": "Alle",
@@ -4014,7 +4014,7 @@
           "sellers",
           "buyers"
         ],
-        "q": "Wer ist AEGRYN und was tun Sie?",
+        "q": "Wer ist Aegryn und was tun Sie?",
         "a": "Aegryn ist ein Schweizer Tech-Asset-Builder, der proprietäre digitale Ökosysteme entwirft und betreibt. Wir zertifizieren, vermitteln und begleiten Technologie-Assets über ein unabhängiges und reproduzierbares Protokoll."
       },
       {
@@ -4032,15 +4032,15 @@
           "sellers"
         ],
         "q": "Welche Zertifizierungsoptionen gibt es und was kosten sie?",
-        "a": "Zwei Wege stehen zur Verfügung. Nur Zertifizierung (AEGRYN Review): offiziellen Grade ohne Katalogaufnahme erhalten, für 2.000 EUR zzgl. MwSt. (interne Review) oder 5.000 EUR zzgl. MwSt. (co-signierte Review+), anrechenbar bei Einleitung einer Certification Auction innerhalb von 6 Monaten. Certification Auction: vollständiger Prozess mit Katalogaufnahme und AEGRYN-Provision nur bei Transaktion. Publikationsgebühr von CHF 2.000 zzgl. MwSt. gilt, anrechenbar auf die Provision bei Verkauf, einbehalten ohne Transaktion."
+        "a": "Zwei Wege stehen zur Verfügung. Nur Zertifizierung (Aegryn Review): offiziellen Grade ohne Katalogaufnahme erhalten, für 2.000 EUR zzgl. MwSt. (interne Review) oder 5.000 EUR zzgl. MwSt. (co-signierte Review+), anrechenbar bei Einleitung einer Certification Auction innerhalb von 6 Monaten. Certification Auction: vollständiger Prozess mit Katalogaufnahme und Aegryn-Provision nur bei Transaktion. Publikationsgebühr von CHF 2.000 zzgl. MwSt. gilt, anrechenbar auf die Provision bei Verkauf, einbehalten ohne Transaktion."
       },
       {
         "id": "what-grade",
         "cat": [
           "certification"
         ],
-        "q": "Was ist der AEGRYN Grade?",
-        "a": "Der AEGRYN Grade ist eine offizielle mehrdimensionale Zertifizierung, die 4 Dimensionen bewertet: Code (C), IP und Rechte (I), Finanzen (F), Sicherheit (S). Jede Dimension wird mit 25 Punkten bewertet. Der Gesamtscore bestimmt den offiziellen Grade: AEG Stern Aussergewöhnlich (90 und mehr), AAA Exzellent (75 und mehr), AA Sehr gut (60 und mehr), A Gut (45 und mehr), B Korrekt (30 und mehr)."
+        "q": "Was ist der Aegryn Grade?",
+        "a": "Der Aegryn Grade ist eine offizielle mehrdimensionale Zertifizierung, die 4 Dimensionen bewertet: Code (C), IP und Rechte (I), Finanzen (F), Sicherheit (S). Jede Dimension wird mit 25 Punkten bewertet. Der Gesamtscore bestimmt den offiziellen Grade: AEG Stern Aussergewöhnlich (90 und mehr), AAA Exzellent (75 und mehr), AA Sehr gut (60 und mehr), A Gut (45 und mehr), B Korrekt (30 und mehr)."
       },
       {
         "id": "what-assets",
@@ -4048,7 +4048,7 @@
           "sellers"
         ],
         "q": "Welche Asset-Typen kann ich einreichen?",
-        "a": "AEGRYN zertifiziert und handelt digitale Tech-Assets: B2B-SaaS, mobile Apps, Marktplätze, KI-Protokolle, digitales geistiges Eigentum. Empfohlenes Mindestticket: 100.000 EUR geschätzte Bewertung."
+        "a": "Aegryn zertifiziert und handelt digitale Tech-Assets: B2B-SaaS, mobile Apps, Marktplätze, KI-Protokolle, digitales geistiges Eigentum. Empfohlenes Mindestticket: 100.000 EUR geschätzte Bewertung."
       },
       {
         "id": "seller-identity",
@@ -4056,7 +4056,7 @@
           "sellers"
         ],
         "q": "Wird meine Identität gegenüber Käufern offengelegt?",
-        "a": "AEGRYN wahrt die Vertraulichkeit aller Parteien während des gesamten Prozesses. Die Identität des Verkäufers ist keinem Käufer zugänglich, bevor AEGRYN die Einführung beschlossen hat. Ebenso bleibt die Identität des Käufers bis zur Annahme seines Angebots vertraulich. Nur das AEGRYN-Team hat für KYC-Prüfungen und die Fallverwaltung Zugang zu persönlichen Daten."
+        "a": "Aegryn wahrt die Vertraulichkeit aller Parteien während des gesamten Prozesses. Die Identität des Verkäufers ist keinem Käufer zugänglich, bevor Aegryn die Einführung beschlossen hat. Ebenso bleibt die Identität des Käufers bis zur Annahme seines Angebots vertraulich. Nur das Aegryn-Team hat für KYC-Prüfungen und die Fallverwaltung Zugang zu persönlichen Daten."
       },
       {
         "id": "become-buyer",
@@ -4082,7 +4082,7 @@
           "transactions"
         ],
         "q": "Wie funktioniert die Treuhand?",
-        "a": "Nach unterzeichnetem NDA und Annahme des eingereichten Angebots hinterlegt der Käufer 10% des vereinbarten Preises bei einem Drittpartnerinstitut. AEGRYN hält diese Mittel niemals. Die Rücktrittsregeln sind in den AGB festgelegt."
+        "a": "Nach unterzeichnetem NDA und Annahme des eingereichten Angebots hinterlegt der Käufer 10% des vereinbarten Preises bei einem Drittpartnerinstitut. Aegryn hält diese Mittel niemals. Die Rücktrittsregeln sind in den AGB festgelegt."
       },
       {
         "id": "kryv",
@@ -4090,20 +4090,20 @@
           "certification",
           "transactions"
         ],
-        "q": "Wie gewährleistet AEGRYN die Nachvollziehbarkeit eines Grades?",
-        "a": "Jeder Grade wird dokumentiert, versioniert und im AEGRYN-Register gespeichert. Jede Änderung an einer zertifizierten Codebase nach der Ausstellung generiert eine neue Version. Damit kann jederzeit nachgewiesen werden, dass der erhaltene Code genau dem zertifizierten Code entspricht."
+        "q": "Wie gewährleistet Aegryn die Nachvollziehbarkeit eines Grades?",
+        "a": "Jeder Grade wird dokumentiert, versioniert und im Aegryn-Register gespeichert. Jede Änderung an einer zertifizierten Codebase nach der Ausstellung generiert eine neue Version. Damit kann jederzeit nachgewiesen werden, dass der erhaltene Code genau dem zertifizierten Code entspricht."
       }
     ]
   },
   "blogPage": {
     "label": "Blog",
     "title": "Einblicke & Perspektiven.",
-    "desc": "Unsere Überlegungen zu Asset-Zertifizierung, Tech-Transaktionen und AEGRYN-Standards. Erste Artikel folgen in Kürze."
+    "desc": "Unsere Überlegungen zu Asset-Zertifizierung, Tech-Transaktionen und Aegryn-Standards. Erste Artikel folgen in Kürze."
   },
   "clientArea": {
     "login": {
       "title": "Kundenbereich",
-      "subtitle": "Zugang nur für zertifizierte AEGRYN-Verkäufer und -Käufer.",
+      "subtitle": "Zugang nur für zertifizierte Aegryn-Verkäufer und -Käufer.",
       "linkExpired": "Link abgelaufen oder ungültig. Bitte fordern Sie einen neuen an.",
       "emailLabel": "E-Mail-Adresse",
       "emailPlaceholder": "sie@beispiel.com",
@@ -4173,7 +4173,7 @@
     },
     "register": {
       "title": "Konto erstellen",
-      "subtitle": "Treten Sie dem AEGRYN-Kundenbereich bei — zertifizierte Käufer, Verkäufer und Partner.",
+      "subtitle": "Treten Sie dem Aegryn-Kundenbereich bei — zertifizierte Käufer, Verkäufer und Partner.",
       "fullNameLabel": "Vollständiger Name",
       "fullNamePlaceholder": "Vorname Nachname",
       "emailLabel": "E-Mail-Adresse",
@@ -4199,7 +4199,7 @@
       "errorGeneric": "Konto konnte nicht erstellt werden. Bitte versuchen Sie es erneut.",
       "errorNetwork": "Server nicht erreichbar. Bitte Verbindung prüfen.",
       "rolePartner": "Dem Partnernetzwerk beitreten",
-      "rolePartnerDesc": "Geschäftsvermittler, Sachverständige — Zugang zum AEGRYN-Partnerbereich."
+      "rolePartnerDesc": "Geschäftsvermittler, Sachverständige — Zugang zum Aegryn-Partnerbereich."
     }
   },
   "clientSpace": {
@@ -4247,10 +4247,10 @@
     "metricsTitle": "Finanzkennzahlen",
     "grossMargin": "Bruttomarge",
     "trackRecordMonths": "{n} Monate",
-    "certifiedSummary": "AEGRYN-zertifizierte Zusammenfassung",
+    "certifiedSummary": "Aegryn-zertifizierte Zusammenfassung",
     "existingBidLabel": "Sie haben bereits ein Angebot eingereicht",
     "submitInterestLabel": "Interessensbekundung einreichen",
-    "offerReviewTime": "Ihre EI wird vom AEGRYN-Team innerhalb von 48 Arbeitsstunden geprüft.",
+    "offerReviewTime": "Ihre EI wird vom Aegryn-Team innerhalb von 48 Arbeitsstunden geprüft.",
     "offerAmountStatus": "Angebot von {amount} — Status: {status}",
     "confidentialityTitle": "Vertraulichkeit",
     "confidentialityText": "Die in diesem Dossier enthaltenen Informationen sind ausschließlich für qualifizierte Käufer bestimmt, die eine NDA unterzeichnet haben. Jede Weitergabe ist verboten.",
@@ -4262,8 +4262,8 @@
     "descSection": "Der Bereich \"{section}\" befindet sich im Aufbau. Er wird in Kürze verfügbar sein."
   },
   "sitemap": {
-    "metaTitle": "Sitemap — AEGRYN",
-    "metaDesc": "Übersicht aller Seiten der AEGRYN-Website.",
+    "metaTitle": "Sitemap — Aegryn",
+    "metaDesc": "Übersicht aller Seiten der Aegryn-Website.",
     "title": "Sitemap",
     "subtitle": "Übersicht aller Seiten und Bereiche der Website.",
     "groupAuction": "Auktion",
@@ -4305,7 +4305,7 @@
   },
   "clientAuction": {
     "eyebrow": "Käuferbereich",
-    "title": "Meine AEGRYN-Auction-Dossiers",
+    "title": "Meine Aegryn-Auction-Dossiers",
     "subtitle": "Zuganglinks zu vollständigen Dossiers werden nie per E-Mail versandt. Sie erscheinen hier erst nach Validierung Ihrer Bewerbung.",
     "empty": "Kein laufender Zugangantrag.",
     "viewCatalog": "Katalog ansehen",
@@ -4318,13 +4318,13 @@
     "accessConfidential": "Dieser Link ist streng persönlich und vertraulich.",
     "openDossier": "Dossier öffnen",
     "accessExpired": "Der Zugangszeitraum ist abgelaufen oder die Auktionssitzung ist geschlossen.",
-    "pendingReview": "Ihre Anfrage wird vom AEGRYN-Team geprüft (innerhalb von 48 Geschäftsstunden). Der Link erscheint hier bei Genehmigung.",
+    "pendingReview": "Ihre Anfrage wird vom Aegryn-Team geprüft (innerhalb von 48 Geschäftsstunden). Der Link erscheint hier bei Genehmigung.",
     "rejected": "Ihre Anfrage wurde für diese Sitzung nicht ausgewählt.",
     "requestedOn": "Anfrage eingereicht am",
     "upcomingTitle": "Bereiche im Aufbau",
     "sectionSeller": "Verkäuferbereich",
     "sectionPartner": "Partnerbereich",
-    "disclaimer": "AEGRYN Auction · Genf · Schweiz — Streng vertraulicher Zugang"
+    "disclaimer": "Aegryn Auction · Genf · Schweiz — Streng vertraulicher Zugang"
   },
   "waitlist": {
     "header": {
@@ -4333,7 +4333,7 @@
     },
     "step1": {
       "profileLabel": "Ich bin *",
-      "sourceLabel": "Wie haben Sie von AEGRYN erfahren?",
+      "sourceLabel": "Wie haben Sie von Aegryn erfahren?",
       "next": "Weiter",
       "profiles": {
         "buyer": "Käufer",
@@ -4441,8 +4441,8 @@
       "firstNamePlaceholder": "Hans",
       "lastNamePlaceholder": "Müller",
       "emailPlaceholder": "sie@beispiel.com",
-      "gdprConsent": "Ich stimme zu, dass meine Daten von AEGRYN im Rahmen meines Zugangsantrags zu den Auction-Sessions gemäß DSGVO / nDSG verarbeitet werden. *",
-      "marketingConsent": "Ich stimme zu, AEGRYN-Kommunikationen zu erhalten (neue Sessions, verfügbare Assets).",
+      "gdprConsent": "Ich stimme zu, dass meine Daten von Aegryn im Rahmen meines Zugangsantrags zu den Auction-Sessions gemäß DSGVO / nDSG verarbeitet werden. *",
+      "marketingConsent": "Ich stimme zu, Aegryn-Kommunikationen zu erhalten (neue Sessions, verfügbare Assets).",
       "back": "Zurück",
       "submit": "Absenden",
       "submitting": "Wird gesendet..."
@@ -4453,7 +4453,7 @@
       "referral": "Empfehlung",
       "event": "Veranstaltung / Konferenz",
       "partner_intro": "Partnereinführung",
-      "direct": "Direkter AEGRYN-Kontakt"
+      "direct": "Direkter Aegryn-Kontakt"
     },
     "sectors": [
       "B2B SaaS",
@@ -4472,7 +4472,7 @@
     "placeholder": "— Auswählen —",
     "done": {
       "title": "Anfrage erfasst",
-      "desc": "Unser Team wird Ihr Profil prüfen und Sie innerhalb von 48 Stunden kontaktieren, um Ihren Zugang zur nächsten AEGRYN Auction-Session zu bestätigen.",
+      "desc": "Unser Team wird Ihr Profil prüfen und Sie innerhalb von 48 Stunden kontaktieren, um Ihren Zugang zur nächsten Aegryn Auction-Session zu bestätigen.",
       "note": "Kein Zugang ohne namentliche Einladung."
     },
     "errors": {
@@ -4492,7 +4492,7 @@
     },
     "breadcrumb": "Legal",
     "sectionDpn": "(01)",
-    "h1": "Datenschutzhinweis – AEGRYN neediu",
+    "h1": "Datenschutzhinweis – Aegryn neediu",
     "disclaimer": "Haftungsausschluss: Dieser Datenschutzhinweis ist eine KI-generierte Übersetzung und dient nur zu Informationszwecken. Bei Abweichungen oder Widersprüchen gilt die englische Fassung.",
     "updated": "Letzte Aktualisierung: 01.03.2026",
     "dpn": {
@@ -4641,7 +4641,7 @@
     },
     "cgu": {
       "sectionLabel": "(02)",
-      "h2": "Nutzungsbedingungen – neediu by AEGRYN",
+      "h2": "Nutzungsbedingungen – neediu by Aegryn",
       "disclaimer": "Haftungsausschluss: Diese Datenschutzerklärung ist eine KI-generierte Übersetzung und dient nur zu Informationszwecken. Bei Abweichungen oder Widersprüchen gilt die englische Fassung.",
       "intro": "Diese Nutzungsbedingungen (NB) gelten für jede Nutzung der Aegryn-Plattform, der mobilen App neediu sowie aller über die Plattform zugänglichen oder bereitgestellten Dienste (die Dienste), die von Aegryn (BOHA-Group sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Schweiz, bereitgestellt und verwaltet werden.",
       "s1H": "1. Allgemeines",
@@ -4737,37 +4737,37 @@
     }
   },
   "nda": {
-    "pageTitle": "Vertraulichkeitsvereinbarung — AEGRYN Käuferbereich",
+    "pageTitle": "Vertraulichkeitsvereinbarung — Aegryn Käuferbereich",
     "stepLabel": "Erforderlicher Schritt",
-    "stepTitle": "Vertraulichkeitsvereinbarung — AEGRYN Auction",
-    "introText": "Bevor Sie auf den AEGRYN Auction-Katalog zugreifen können, müssen Sie die folgende Vertraulichkeitsvereinbarung lesen und akzeptieren. Diese Vereinbarung ist obligatorisch und stellt eine vertragliche Vertraulichkeitsverpflichtung gegenüber AEGRYN und den Verkäufern dar. Ihre Unterzeichnung wird zeitgestempelt und für rechtliche Zwecke protokolliert.",
+    "stepTitle": "Vertraulichkeitsvereinbarung — Aegryn Auction",
+    "introText": "Bevor Sie auf den Aegryn Auction-Katalog zugreifen können, müssen Sie die folgende Vertraulichkeitsvereinbarung lesen und akzeptieren. Diese Vereinbarung ist obligatorisch und stellt eine vertragliche Vertraulichkeitsverpflichtung gegenüber Aegryn und den Verkäufern dar. Ihre Unterzeichnung wird zeitgestempelt und für rechtliche Zwecke protokolliert.",
     "versionLabel": "NDA — Version",
     "mainTitle": "Vertraulichkeitsbedingungen für Käufer",
-    "mainSubtitle": "AEGRYN (ehemals BOHA-Group Sàrl)",
+    "mainSubtitle": "Aegryn (ehemals BOHA-Group Sàrl)",
     "partiesLabel": "Zwischen den Unterzeichnenden:",
-    "partiesAegryn": "AEGRYN (ehemals BOHA-Group Sàrl), in der Schweiz eingetragene Gesellschaft, nachfolgend « AEGRYN » genannt,",
+    "partiesAegryn": "Aegryn (ehemals BOHA-Group Sàrl), in der Schweiz eingetragene Gesellschaft, nachfolgend « Aegryn » genannt,",
     "partiesAnd": "Und",
-    "partiesBuyer": "Der Nutzer, der bei der Registrierung auf der AEGRYN-Plattform identifiziert wird (Name, Vorname oder Firmenname, berufliche E-Mail), nachfolgend « der Käufer » genannt,",
+    "partiesBuyer": "Der Nutzer, der bei der Registrierung auf der Aegryn-Plattform identifiziert wird (Name, Vorname oder Firmenname, berufliche E-Mail), nachfolgend « der Käufer » genannt,",
     "a1Title": "Gegenstand",
-    "a1": "Diese Vertraulichkeitsvereinbarung (« NDA ») regelt den Zugang des Käufers zum AEGRYN Auction-Katalog, zu Aktienblättern, Grade-Berichten und allen im Rahmen des AEGRYN-Zertifizierungs- und Transaktionsprozesses bereitgestellten Data-Room-Dokumenten. Die Annahme dieser NDA ist eine unbedingte Voraussetzung für jeden Katalogzugang, unabhängig von der Zugangsstufe.",
+    "a1": "Diese Vertraulichkeitsvereinbarung (« NDA ») regelt den Zugang des Käufers zum Aegryn Auction-Katalog, zu Aktienblättern, Grade-Berichten und allen im Rahmen des Aegryn-Zertifizierungs- und Transaktionsprozesses bereitgestellten Data-Room-Dokumenten. Die Annahme dieser NDA ist eine unbedingte Voraussetzung für jeden Katalogzugang, unabhängig von der Zugangsstufe.",
     "a2Title": "Definition vertraulicher Informationen",
     "a2Intro": "Als vertrauliche Informationen gelten:",
-    "a2i1": "Alle Informationen zur Identität des Verkäufers oder des übertragenden Unternehmens vor einer ausdrücklichen Vermittlungsentscheidung durch AEGRYN",
+    "a2i1": "Alle Informationen zur Identität des Verkäufers oder des übertragenden Unternehmens vor einer ausdrücklichen Vermittlungsentscheidung durch Aegryn",
     "a2i2": "Alle finanziellen, technischen, kommerziellen oder rechtlichen Daten in einem Aktienblatt oder Data-Room-Dokument",
-    "a2i3": "Der Inhalt der AEGRYN-Grade-Berichte, einschliesslich Bewertungen, Untercodes und Vorbehalte",
+    "a2i3": "Der Inhalt der Aegryn-Grade-Berichte, einschliesslich Bewertungen, Untercodes und Vorbehalte",
     "a2i4": "Alle Informationen über andere Käufer, ihre Angebote oder den Stand einer Verhandlung",
     "a2i5": "Die blosse Existenz eines laufenden Veräusserungsprozesses für ein bestimmtes Objekt",
     "a3Title": "Verpflichtungen des Käufers",
     "a3s1Title": "3.1 Strikte Vertraulichkeit",
     "a3s1": "Keine vertraulichen Informationen an Dritte weiterzugeben, einschliesslich Berater, Mitarbeiter oder Partner, es sei denn, diese sind selbst durch eine gleichwertige und für die Bewertung der Gelegenheit unbedingt erforderliche Vertraulichkeitspflicht gebunden.",
     "a3s2Title": "3.2 Eingeschränkte Nutzung",
-    "a3s2": "Vertrauliche Informationen ausschliesslich zum Zweck der Bewertung einer Akquisitionsgelegenheit über AEGRYN zu verwenden — niemals für Wettbewerbs-, Handels-, Rekrutierungs- oder technische Reproduktionszwecke.",
+    "a3s2": "Vertrauliche Informationen ausschliesslich zum Zweck der Bewertung einer Akquisitionsgelegenheit über Aegryn zu verwenden — niemals für Wettbewerbs-, Handels-, Rekrutierungs- oder technische Reproduktionszwecke.",
     "a3s3Title": "3.3 Nicht-Reproduktion",
-    "a3s3": "Keine im AEGRYN Data Room eingesehenen Dokumente herunterzuladen, zu kopieren, aufzunehmen, zu fotografieren oder auf irgendeine Weise zu reproduzieren, einschliesslich durch Screenshot, Bildschirmfotografie oder andere Umgehungsmethoden.",
+    "a3s3": "Keine im Aegryn Data Room eingesehenen Dokumente herunterzuladen, zu kopieren, aufzunehmen, zu fotografieren oder auf irgendeine Weise zu reproduzieren, einschliesslich durch Screenshot, Bildschirmfotografie oder andere Umgehungsmethoden.",
     "a3s4Title": "3.4 Anerkennung technischer Grenzen",
     "a3s4": "Der Käufer erkennt an, dass die eingesehenen Dokumente durch technische Abschreckungsmassnahmen geschützt sind (Download-Blockierung, Screenshot-Erkennung, personalisiertes Wasserzeichen). Der Käufer akzeptiert, dass seine Vertraulichkeitsverpflichtung unabhängig von der Wirksamkeit dieser Massnahmen gilt.",
     "a3s5Title": "3.5 Nicht-Umgehung",
-    "a3s5": "Den Verkäufer oder eine mit einem über AEGRYN eingesehenen Objekt verbundene Partei nicht direkt zu kontaktieren oder dies zu versuchen, ausserhalb des AEGRYN-Prozesses, für einen Zeitraum von 24 Monaten ab der ersten Einsichtnahme.",
+    "a3s5": "Den Verkäufer oder eine mit einem über Aegryn eingesehenen Objekt verbundene Partei nicht direkt zu kontaktieren oder dies zu versuchen, ausserhalb des Aegryn-Prozesses, für einen Zeitraum von 24 Monaten ab der ersten Einsichtnahme.",
     "a3s6Title": "3.6 Nicht-Offenlegung des Prozesses",
     "a3s6": "Gegenüber Dritten die blosse Existenz eines laufenden Veräusserungsprozesses für ein eingesehenes Objekt nicht preiszugeben, einschliesslich Sektor, ungefähre Grösse oder identifizierende Daten.",
     "a4Title": "Rückverfolgbarkeit und Einwilligung zur Protokollierung",
@@ -4776,15 +4776,15 @@
     "a4i2": "Jeder Versuch, Screenshots zu erstellen oder technische Schutzmaßnahmen zu umgehen, erkannt und protokolliert wird",
     "a4i3": "Diese Protokolle im Falle eines Verstosses gegen diese NDA als Beweismittel verwendet werden können",
     "a5Title": "Laufzeit",
-    "a5": "Die Vertraulichkeitspflichten dieser NDA bleiben für einen Zeitraum von 5 Jahren ab der ersten Dokumenteneinsicht über die AEGRYN-Plattform in Kraft, auch nach Abschluss, Aufgabe oder Ablehnung einer Akquisitionsgelegenheit und nach Löschung des Käuferkontos.",
+    "a5": "Die Vertraulichkeitspflichten dieser NDA bleiben für einen Zeitraum von 5 Jahren ab der ersten Dokumenteneinsicht über die Aegryn-Plattform in Kraft, auch nach Abschluss, Aufgabe oder Ablehnung einer Akquisitionsgelegenheit und nach Löschung des Käuferkontos.",
     "a5Years": "5 Jahre",
     "a6Title": "Sanktionen bei Verstoss",
     "a6Intro": "Bei einem Verstoss gegen diese NDA kann der Käufer folgendem ausgesetzt sein:",
-    "a6i1": "Sofortiger und dauerhafter Entzug des Zugangs zur AEGRYN-Plattform",
-    "a6i2": "Entschädigung für Schäden, die AEGRYN und/oder dem betroffenen Verkäufer entstanden sind",
-    "a6i3": "Allen rechtlichen Schritten, die AEGRYN oder der Verkäufer für angemessen hält",
+    "a6i1": "Sofortiger und dauerhafter Entzug des Zugangs zur Aegryn-Plattform",
+    "a6i2": "Entschädigung für Schäden, die Aegryn und/oder dem betroffenen Verkäufer entstanden sind",
+    "a6i3": "Allen rechtlichen Schritten, die Aegryn oder der Verkäufer für angemessen hält",
     "a7Title": "Anwendbares Recht und Gerichtsstand",
-    "a7": "Diese NDA unterliegt schweizerischem Recht. Jede Streitigkeit aus dieser NDA unterliegt der ausschliesslichen Zuständigkeit der Gerichte des Kantons, in dem AEGRYN ansässig ist.",
+    "a7": "Diese NDA unterliegt schweizerischem Recht. Jede Streitigkeit aus dieser NDA unterliegt der ausschliesslichen Zuständigkeit der Gerichte des Kantons, in dem Aegryn ansässig ist.",
     "a8Title": "Annahme",
     "a8": "Durch Ankreuzen der untenstehenden Felder und Klicken auf „Akzeptieren und auf den Katalog zugreifen“ bestätigt der Käufer, alle Bestimmungen dieser NDA gelesen, verstanden und vorbehaltlos akzeptiert zu haben.",
     "acceptSectionLabel": "Artikel 8 — Annahme",
@@ -4796,11 +4796,11 @@
   },
   "experts": {
     "meta": {
-      "title": "Expertennetzwerk — AEGRYN",
+      "title": "Expertennetzwerk — Aegryn",
       "desc": "Wir glauben, dass jede Transaktion die richtigen Menschen zum richtigen Zeitpunkt verdient. Kein Verzeichnis. Ein geprüftes Netzwerk damit nichts Wesentliches dem Zufall überlassen wird."
     },
     "hero": {
-      "label": "AEGRYN Expertennetzwerk",
+      "label": "Aegryn Expertennetzwerk",
       "title": "Große Transaktionen entstehen nie allein.",
       "desc": "Hinter jedem erfolgreichen Deal steht ein M&A-Anwalt der das Risiko erkannte, ein Wirtschaftsprüfer der die Zahlen hielt, ein CTO der die Stack validierte. Wir haben sie gefunden und geprüft."
     },
@@ -4815,7 +4815,7 @@
       "transaction": "Advisory Transaction",
       "transactionDesc": "M&A, Bewertung, Finanzstrukturierung",
       "network": "Partnernetzwerk",
-      "networkDesc": "AEGRYN-zertifizierte Partner"
+      "networkDesc": "Aegryn-zertifizierte Partner"
     },
     "domains": {
       "security": "Sicherheit & Cybersicherheit",
@@ -4910,11 +4910,11 @@
     "placeholder": {
       "badge": "Bald verfügbar",
       "title": "Erste Experten kommen bald.",
-      "desc": "Das AEGRYN-Netzwerk öffnet seine Türen. Hier ein Vorblick auf die Profile, die Ihre Transaktionen begleiten werden."
+      "desc": "Das Aegryn-Netzwerk öffnet seine Türen. Hier ein Vorblick auf die Profile, die Ihre Transaktionen begleiten werden."
     },
     "card": {
       "contact": "Kontakt",
-      "verifiedBadge": "AEGRYN Verifiziert",
+      "verifiedBadge": "Aegryn Verifiziert",
       "rateFrom": "Ab",
       "rateUnit": "€/Std"
     },
@@ -4923,7 +4923,7 @@
       "fieldFirstName": "Vorname",
       "fieldLastName": "Nachname",
       "fieldEmail": "E-Mail",
-      "consentText": "Ich stimme zu, dass meine persönlichen Daten (Vorname, Nachname, E-Mail) an AEGRYN und den kontaktierten Experten zum Zweck der Vermittlung übermittelt werden, gemäß DSGVO und Schweizer DSG. Ich kann meine Rechte jederzeit unter contact@boha-group.com ausüben.",
+      "consentText": "Ich stimme zu, dass meine persönlichen Daten (Vorname, Nachname, E-Mail) an Aegryn und den kontaktierten Experten zum Zweck der Vermittlung übermittelt werden, gemäß DSGVO und Schweizer DSG. Ich kann meine Rechte jederzeit unter contact@boha-group.com ausüben.",
       "submit": "Kontakt freischalten",
       "submitting": "Senden…",
       "successTitle": "Kontakt freigegeben.",
@@ -4939,7 +4939,7 @@
     "waitlist": {
       "label": "Sind Sie Experte?",
       "title": "Treten Sie dem Netzwerk bei.",
-      "desc": "Das AEGRYN-Expertennetzwerk öffnet sich. Reichen Sie Ihre Bewerbung ein — unser Team prüft jedes Profil und kontaktiert Sie für ein Qualifikationsgespräch. Der Zugang erfolgt über ein monatliches Listing-Abonnement (89 CHF zzgl. MwSt./Monat).",
+      "desc": "Das Aegryn-Expertennetzwerk öffnet sich. Reichen Sie Ihre Bewerbung ein — unser Team prüft jedes Profil und kontaktiert Sie für ein Qualifikationsgespräch. Der Zugang erfolgt über ein monatliches Listing-Abonnement (89 CHF zzgl. MwSt./Monat).",
       "fieldPrenom": "Vorname",
       "fieldNom": "Nachname",
       "fieldEmail": "Geschäftliche E-Mail",

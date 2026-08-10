@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
     title: 'About Aegryn | The trust infrastructure for European tech M&A',
-    description: 'Certification. Discretion. Permanence. Three principles that shaped a name — and a company. AEGRYN is the independent certification and transaction infrastructure for European tech M&A.',
+    description: 'Certification. Discretion. Permanence. Three principles that shaped a name — and a company. Aegryn is the independent certification and transaction infrastructure for European tech M&A.',
     path: '/about',
     locale,
   })

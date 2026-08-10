@@ -114,7 +114,7 @@ export default async function AuctionCatalogPage({ params }: Props) {
           href="/assets"
           className="shrink-0 inline-flex items-center gap-2 font-sans font-semibold text-[10px] uppercase tracking-[0.16em] text-ag-gray-light border border-ag-border px-4 py-2 hover:border-ag-black hover:text-ag-black transition-colors whitespace-nowrap"
         >
-          Portfolio AEGRYN <ArrowUpRight size={11} />
+          Portfolio Aegryn <ArrowUpRight size={11} />
         </Link>
       </div>
     </div>
@@ -143,7 +143,7 @@ export default async function AuctionCatalogPage({ params }: Props) {
                 </h2>
                 <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-md mx-auto">
                   Les noms de sociétés et fiches actifs complets sont accessibles uniquement après
-                  création de compte, signature du NDA et acceptation des CGV AEGRYN Auction.
+                  création de compte, signature du NDA et acceptation des CGV Aegryn Auction.
                 </p>
               </div>
 
@@ -151,7 +151,7 @@ export default async function AuctionCatalogPage({ params }: Props) {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 max-w-2xl w-full text-left">
                 {[
                   { n: '01', label: 'Créer un compte acquéreur', done: !!user },
-                  { n: '02', label: 'Signer le NDA AEGRYN Auction', done: accessStatus === 'pending_cgv' },
+                  { n: '02', label: 'Signer le NDA Aegryn Auction', done: accessStatus === 'pending_cgv' },
                   { n: '03', label: 'Accepter les CGV', done: false },
                 ].map(({ n, label, done }) => (
                   <div key={n} className={`border p-5 flex items-start gap-3 ${done ? 'border-ag-apex/40 bg-ag-apex/5' : 'border-ag-border bg-ag-white'}`}>

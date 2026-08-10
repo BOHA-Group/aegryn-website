@@ -7,7 +7,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { ArrowLeft, Gavel } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Fiche actif — Espace Acquéreur AEGRYN',
+  title: 'Fiche actif — Espace Acquéreur Aegryn',
   robots: { index: false, follow: false },
 }
 

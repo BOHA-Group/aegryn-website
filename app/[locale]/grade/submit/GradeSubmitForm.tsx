@@ -421,13 +421,13 @@ export default function GradeSubmitForm() {
               {evalType === 'full_certification' && (
                 <div className="border border-ag-navy/30 bg-ag-navy/5 p-6 flex flex-col gap-4">
                   <p className="font-sans font-bold text-ag-black text-[13px] tracking-[-0.01em]">
-                    Accord de mise au catalogue AEGRYN
+                    Accord de mise au catalogue Aegryn
                   </p>
                   <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
-                    La <strong>Certification Auction</strong> inclut la mise au catalogue d&apos;AEGRYN et l&apos;ouverture aux acquéreurs membres qualifiés. Votre actif sera préparé à <strong>J+15</strong> après admission et visible aux acquéreurs à <strong>J+45 minimum</strong>.
+                    La <strong>Certification Auction</strong> inclut la mise au catalogue d&apos;Aegryn et l&apos;ouverture aux acquéreurs membres qualifiés. Votre actif sera préparé à <strong>J+15</strong> après admission et visible aux acquéreurs à <strong>J+45 minimum</strong>.
                   </p>
                   <div className="bg-amber-50 border border-amber-200 px-4 py-3 text-[12px] text-amber-800 font-sans leading-relaxed">
-                    <strong>Frais de publication : CHF 2 000 HT</strong> — Cet acompte est déduit de la commission AEGRYN en cas de vente. Il est conservé par AEGRYN si aucune transaction n&apos;est réalisée (cf. CGV § 11 et NDA signé). Une facture sera émise après validation de votre dossier par notre équipe.
+                    <strong>Frais de publication : CHF 2 000 HT</strong> — Cet acompte est déduit de la commission Aegryn en cas de vente. Il est conservé par Aegryn si aucune transaction n&apos;est réalisée (cf. CGV § 11 et NDA signé). Une facture sera émise après validation de votre dossier par notre équipe.
                   </div>
                   <label className="flex items-start gap-3 cursor-pointer">
                     <input
@@ -437,7 +437,7 @@ export default function GradeSubmitForm() {
                       className="mt-0.5 accent-ag-navy shrink-0 w-4 h-4"
                     />
                     <span className="font-sans text-[13px] text-ag-black leading-snug">
-                      J&apos;accepte la mise au catalogue AEGRYN et les conditions contractuelles associées (NDA, CGV, délais de 45 jours minimum).
+                      J&apos;accepte la mise au catalogue Aegryn et les conditions contractuelles associées (NDA, CGV, délais de 45 jours minimum).
                     </span>
                   </label>
                   <label className="flex items-start gap-3 cursor-pointer">

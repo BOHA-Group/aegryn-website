@@ -1,5 +1,5 @@
 /**
- * AEGRYN Valuation Engine v1.0
+ * Aegryn Valuation Engine v1.0
  *
  * Mirrors the 4-dimension CIFS grading protocol from /grade/methodology.
  * Thresholds are calibrated to match the published grade grid:

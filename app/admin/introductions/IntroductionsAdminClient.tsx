@@ -212,7 +212,7 @@ export default function IntroductionsAdminClient({ introductions: initial, token
                         rows={2}
                         value={noteVal}
                         onChange={e => setNoteVal(e.target.value)}
-                        placeholder="Note interne AEGRYN…"
+                        placeholder="Note interne Aegryn…"
                         className="w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[12px] focus:outline-none focus:border-ag-navy resize-none"
                       />
                       <div className="flex gap-2">

@@ -9,7 +9,7 @@ import { sendEmail, emailKycApproved } from '@/lib/sendEmail'
 import { syncExpertVisibility } from '@/lib/expertVisibility'
 
 export const metadata: Metadata = {
-  title: 'Dossier KYC — AEGRYN Admin',
+  title: 'Dossier KYC — Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

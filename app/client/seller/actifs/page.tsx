@@ -6,7 +6,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { ArrowUpRight, FileText } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Mes dossiers — Espace Cédant AEGRYN',
+  title: 'Mes dossiers — Espace Cédant Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -85,7 +85,7 @@ export default async function SellerActifsPage() {
         <div>
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Cédant</p>
           <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Mes dossiers de certification</h1>
-          <p className="font-sans text-[13px] text-gray-400 mt-1">Suivi du pipeline de vos actifs soumis à AEGRYN.</p>
+          <p className="font-sans text-[13px] text-gray-400 mt-1">Suivi du pipeline de vos actifs soumis à Aegryn.</p>
         </div>
         <Link href="/grade/submit"
           className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors">

@@ -3,7 +3,7 @@ import { createServiceClient } from '@/lib/supabase'
 import type { Metadata }       from 'next'
 import Link                    from 'next/link'
 
-export const metadata: Metadata = { title: 'Benchmark marché — AEGRYN Admin', robots: { index: false, follow: false } }
+export const metadata: Metadata = { title: 'Benchmark marché — Aegryn Admin', robots: { index: false, follow: false } }
 
 export default async function AdminSettingsBenchmarkPage({ searchParams }: { searchParams: Promise<{ token?: string }> }) {
   const params = await searchParams

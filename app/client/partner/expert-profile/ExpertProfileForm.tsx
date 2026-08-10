@@ -348,8 +348,8 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
         <div className="border border-blue-200 bg-blue-50 px-4 py-3 flex items-start gap-3">
           <CheckCircle2 size={15} className="text-blue-500 mt-0.5 shrink-0" />
           <div>
-            <p className="font-sans font-semibold text-[12px] text-blue-800">Fiche soumise — en attente de validation AEGRYN</p>
-            <p className="font-sans text-[11px] text-blue-600 mt-0.5">L&apos;équipe AEGRYN examinera votre fiche sous 48h. Vous recevrez une notification dès la décision.</p>
+            <p className="font-sans font-semibold text-[12px] text-blue-800">Fiche soumise — en attente de validation Aegryn</p>
+            <p className="font-sans text-[11px] text-blue-600 mt-0.5">L&apos;équipe Aegryn examinera votre fiche sous 48h. Vous recevrez une notification dès la décision.</p>
           </div>
         </div>
       )}
@@ -357,7 +357,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
         <div className="border border-red-200 bg-red-50 px-4 py-3 flex items-start gap-3">
           <CheckCircle2 size={15} className="text-red-400 mt-0.5 shrink-0" />
           <div>
-            <p className="font-sans font-semibold text-[12px] text-red-700">Fiche refusée par l&apos;équipe AEGRYN</p>
+            <p className="font-sans font-semibold text-[12px] text-red-700">Fiche refusée par l&apos;équipe Aegryn</p>
             {hiddenReason && hiddenReason !== 'admin_hidden' && (
               <p className="font-sans text-[11px] text-red-600 mt-0.5">Motif : {hiddenReason}. Corrigez votre fiche puis soumettez à nouveau.</p>
             )}
@@ -378,7 +378,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
           <CheckCircle2 size={15} className="text-gray-400 mt-0.5 shrink-0" />
           <div>
             <p className="font-sans font-semibold text-[12px] text-gray-700">Nouvelle fiche</p>
-            <p className="font-sans text-[11px] text-gray-500 mt-0.5">Remplissez votre fiche et cliquez sur <strong>Soumettre pour revue</strong> — l&apos;équipe AEGRYN la valide sous 48h.</p>
+            <p className="font-sans text-[11px] text-gray-500 mt-0.5">Remplissez votre fiche et cliquez sur <strong>Soumettre pour revue</strong> — l&apos;équipe Aegryn la valide sous 48h.</p>
           </div>
         </div>
       )}
@@ -466,7 +466,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
         </label>
         <textarea value={form.bio} onChange={e => setForm(p => ({ ...p, bio: e.target.value }))}
           maxLength={1200} rows={5}
-          placeholder="Décrivez votre parcours, votre expertise et la valeur ajoutée que vous apportez aux transactions AEGRYN…"
+          placeholder="Décrivez votre parcours, votre expertise et la valeur ajoutée que vous apportez aux transactions Aegryn…"
           className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white resize-none" />
       </div>
 
@@ -585,7 +585,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
       {submitted && (
         <div className="bg-blue-50 border border-blue-200 px-4 py-3 text-[12px] text-blue-700 flex items-center gap-2">
           <CheckCircle2 size={14} className="text-blue-500" />
-          Fiche soumise pour validation — l&apos;équipe AEGRYN vous répondra sous 48h.
+          Fiche soumise pour validation — l&apos;équipe Aegryn vous répondra sous 48h.
         </div>
       )}
 

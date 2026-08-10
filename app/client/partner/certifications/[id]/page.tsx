@@ -7,7 +7,7 @@ import { ArrowLeft } from 'lucide-react'
 import CertificationForm from './CertificationForm'
 
 export const metadata: Metadata = {
-  title: 'Co-signature — Espace Partenaire AEGRYN',
+  title: 'Co-signature — Espace Partenaire Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -114,7 +114,7 @@ export default async function PartnerCertificationDetailPage({
       {/* Statut : validated */}
       {isValidated && (
         <div className="bg-emerald-50 border border-emerald-200 px-5 py-4 mb-6">
-          <p className="font-sans font-semibold text-emerald-700 text-[13px]">✓ Contribution validée par AEGRYN</p>
+          <p className="font-sans font-semibold text-emerald-700 text-[13px]">✓ Contribution validée par Aegryn</p>
           {!!cert.validated_at && (
             <p className="font-sans text-[11px] text-emerald-600 mt-0.5">Validée le {fmtDate(cert.validated_at)}</p>
           )}
@@ -140,7 +140,7 @@ export default async function PartnerCertificationDetailPage({
           </div>
           {!!cert.observations && (
             <div className="mt-4 border-t border-emerald-200 pt-3">
-              <p className="font-mono text-[9px] uppercase tracking-widest text-emerald-500 mb-1">Observations AEGRYN</p>
+              <p className="font-mono text-[9px] uppercase tracking-widest text-emerald-500 mb-1">Observations Aegryn</p>
               <p className="font-sans text-[12px] text-emerald-800 leading-relaxed">{String(cert.observations)}</p>
             </div>
           )}
@@ -156,7 +156,7 @@ export default async function PartnerCertificationDetailPage({
       {/* Statut : rejected */}
       {isRejected && (
         <div className="bg-red-50 border border-red-200 px-5 py-4 mb-6">
-          <p className="font-sans font-semibold text-red-700 text-[13px]">✗ Contribution refusée par AEGRYN</p>
+          <p className="font-sans font-semibold text-red-700 text-[13px]">✗ Contribution refusée par Aegryn</p>
           {!!cert.rejection_reason && (
             <div className="mt-2">
               <p className="font-mono text-[9px] uppercase tracking-widest text-red-400 mb-1">Motif</p>
@@ -165,7 +165,7 @@ export default async function PartnerCertificationDetailPage({
           )}
           {!!cert.observations && (
             <div className="mt-3 border-t border-red-200 pt-3">
-              <p className="font-mono text-[9px] uppercase tracking-widest text-red-400 mb-1">Observations AEGRYN</p>
+              <p className="font-mono text-[9px] uppercase tracking-widest text-red-400 mb-1">Observations Aegryn</p>
               <p className="font-sans text-[12px] text-red-700 leading-relaxed">{String(cert.observations)}</p>
             </div>
           )}
@@ -197,7 +197,7 @@ export default async function PartnerCertificationDetailPage({
       <div className="mt-6 bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
         <p className="font-mono text-[9px] uppercase tracking-widest text-ag-navy/50 mb-2">Processus CIFS</p>
         <p className="font-sans text-[11px] text-gray-600 leading-relaxed">
-          Votre co-signature porte sur la dimension <strong>{DIMENSION_LABELS[cert.dimension] ?? cert.dimension}</strong>. Votre score (0–25) et votre avis seront intégrés dans le rapport de certification officiel AEGRYN. Le score global CIFS est la somme des quatre dimensions.
+          Votre co-signature porte sur la dimension <strong>{DIMENSION_LABELS[cert.dimension] ?? cert.dimension}</strong>. Votre score (0–25) et votre avis seront intégrés dans le rapport de certification officiel Aegryn. Le score global CIFS est la somme des quatre dimensions.
         </p>
       </div>
     </div>

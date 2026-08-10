@@ -1,7 +1,7 @@
 /**
  * lib/dataRoom.ts
  *
- * Types et helpers pour la data room sécurisée AEGRYN.
+ * Types et helpers pour la data room sécurisée Aegryn.
  * Toujours utiliser via l'API route /api/data-room/signed-url
  * — jamais générer d'URL signée côté client.
  */

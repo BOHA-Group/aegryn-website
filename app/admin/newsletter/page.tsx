@@ -4,7 +4,7 @@ import { checkAdminAccess }    from '@/lib/adminAuth'
 import NewsletterClient        from './NewsletterClient'
 
 export const metadata: Metadata = {
-  title: 'Newsletter — AEGRYN Admin',
+  title: 'Newsletter — Aegryn Admin',
   robots: { index: false, follow: false },
 }
 
@@ -29,7 +29,7 @@ export default async function AdminNewsletterPage({
       <div className="max-w-6xl mx-auto">
 
         <div className="mb-8">
-          <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">AEGRYN ADMIN</p>
+          <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN</p>
           <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Newsletter</h1>
           <p className="text-[12px] text-gray-400 mt-1">Abonnés actifs, prospects sans compte, historique d&apos;envoi</p>
         </div>

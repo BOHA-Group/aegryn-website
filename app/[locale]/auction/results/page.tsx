@@ -3,8 +3,8 @@ import { BarChart2 } from 'lucide-react'
 import { createServiceClient } from '@/lib/supabase'
 
 export const metadata: Metadata = {
-  title: 'Résultats de transactions — AEGRYN Auction',
-  description: 'Historique anonymisé des transactions certifiées AEGRYN : grades, fourchettes de valorisation et durées de process.',
+  title: 'Résultats de transactions — Aegryn Auction',
+  description: 'Historique anonymisé des transactions certifiées Aegryn : grades, fourchettes de valorisation et durées de process.',
 }
 
 const GRADE_LABELS: Record<string, string> = {
@@ -54,13 +54,13 @@ export default async function AuctionResultsPage() {
         <div className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
-            AEGRYN AUCTION
+            Aegryn AUCTION
           </p>
           <h1 className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-2xl mb-5" style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}>
             Catalogue historique
           </h1>
           <p className="font-sans text-[16px] text-white/55 max-w-xl">
-            Résultats anonymisés des transactions certifiées AEGRYN. Chaque entrée atteste qu'un actif a traversé le processus complet de certification et de cession.
+            Résultats anonymisés des transactions certifiées Aegryn. Chaque entrée atteste qu'un actif a traversé le processus complet de certification et de cession.
           </p>
           {hasResults && (
             <p className="mt-6 font-sans font-semibold text-[11px] uppercase tracking-[0.18em] text-ag-apex">
@@ -153,7 +153,7 @@ export default async function AuctionResultsPage() {
               <BarChart2 size={20} className="text-ag-gray-light" />
             </div>
             <p className="font-sans text-[15px] text-ag-gray max-w-md">
-              Les premiers résultats seront publiés ici à l'issue de chaque session AEGRYN. Les données sont anonymisées.
+              Les premiers résultats seront publiés ici à l'issue de chaque session Aegryn. Les données sont anonymisées.
             </p>
           </div>
         </section>

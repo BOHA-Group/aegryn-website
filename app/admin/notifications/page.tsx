@@ -5,7 +5,7 @@ import BroadcastForm      from './BroadcastForm'
 import { Mail, CheckCircle2, AlertTriangle, Clock, XCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Notifications Email — Admin AEGRYN',
+  title: 'Notifications Email — Admin Aegryn',
   robots: { index: false, follow: false },
 }
 

@@ -31,7 +31,7 @@ export default function KycBanner({ kycStatus, role, kycPath }: Props) {
       <div className="flex items-center gap-3 bg-blue-50 border-b border-blue-200 px-6 py-3">
         <Clock size={15} className="text-blue-500 shrink-0" />
         <p className="font-sans text-[12px] text-blue-800 flex-1">
-          <strong>Dossier KYC en cours d&apos;examen</strong> par l&apos;équipe AEGRYN. Vous serez notifié dès la décision.
+          <strong>Dossier KYC en cours d&apos;examen</strong> par l&apos;équipe Aegryn. Vous serez notifié dès la décision.
         </p>
       </div>
     )

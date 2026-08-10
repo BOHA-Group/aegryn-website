@@ -155,7 +155,7 @@ export default function BroadcastForm({ adminToken, roleCounts }: Props) {
             type="text"
             value={subject}
             onChange={e => setSubject(e.target.value)}
-            placeholder="Mise à jour de votre dossier AEGRYN"
+            placeholder="Mise à jour de votre dossier Aegryn"
             maxLength={200}
             className="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
           />
@@ -185,7 +185,7 @@ export default function BroadcastForm({ adminToken, roleCounts }: Props) {
             rows={5}
             value={bodyText}
             onChange={e => setBodyText(e.target.value)}
-            placeholder="Bonjour,&#10;&#10;L'équipe AEGRYN a le plaisir de vous informer..."
+            placeholder="Bonjour,&#10;&#10;L'équipe Aegryn a le plaisir de vous informer..."
             maxLength={5000}
             className="w-full bg-gray-50 border border-gray-300 px-4 py-3 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors resize-none"
           />

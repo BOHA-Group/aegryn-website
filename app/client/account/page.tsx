@@ -9,7 +9,7 @@ import DeleteAccountSection from './DeleteAccountSection'
 import ActivateProfileSection from './ActivateProfileSection'
 
 export const metadata: Metadata = {
-  title: 'Mon compte — AEGRYN',
+  title: 'Mon compte — Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -59,7 +59,7 @@ export default async function AccountPage() {
 
         {/* Header */}
         <div className="mb-10">
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-500 mb-1">Espace client AEGRYN</p>
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-500 mb-1">Espace client Aegryn</p>
           <h1 className="font-sans font-bold text-gray-900 text-[26px] tracking-tight">Mon compte</h1>
           <p className="font-sans text-[13px] text-gray-500 mt-0.5">{user.email}</p>
         </div>
@@ -103,7 +103,7 @@ export default async function AccountPage() {
           {emailNotifEnabled ? (
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="font-sans text-[13px] text-gray-700">Emails de l&apos;équipe AEGRYN activés</p>
+                <p className="font-sans text-[13px] text-gray-700">Emails de l&apos;équipe Aegryn activés</p>
                 <p className="font-sans text-[11px] text-gray-400 mt-0.5">Mises à jour dossier, alertes transactions, actualités.</p>
               </div>
               <form action="/api/client/account/email-unsubscribe" method="POST">
@@ -118,7 +118,7 @@ export default async function AccountPage() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="font-sans text-[13px] text-red-500">Notifications email désactivées</p>
-                <p className="font-sans text-[11px] text-gray-400 mt-0.5">Vous ne recevez plus les emails de l&apos;équipe AEGRYN.</p>
+                <p className="font-sans text-[11px] text-gray-400 mt-0.5">Vous ne recevez plus les emails de l&apos;équipe Aegryn.</p>
               </div>
               {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
               <a href="/api/client/account/email-resubscribe"
@@ -161,7 +161,7 @@ export default async function AccountPage() {
                 <div className="flex items-start justify-between gap-4 border border-gray-100 px-4 py-3">
                   <div>
                     <p className="font-sans text-[13px] text-gray-700 font-medium">
-                      NDA Partenaire AEGRYN
+                      NDA Partenaire Aegryn
                       <span className="ml-2 font-mono text-[10px] text-ag-apex bg-ag-navy px-1.5 py-0.5 uppercase tracking-wider">
                         Signé
                       </span>
@@ -184,7 +184,7 @@ export default async function AccountPage() {
                 <div key={i} className="flex items-start justify-between gap-4 border border-gray-100 px-4 py-3">
                   <div>
                     <p className="font-sans text-[13px] text-gray-700 font-medium">
-                      NDA Catalogue AEGRYN
+                      NDA Catalogue Aegryn
                       <span className="ml-2 font-mono text-[10px] text-ag-apex bg-ag-navy px-1.5 py-0.5 uppercase tracking-wider">
                         Signé
                       </span>

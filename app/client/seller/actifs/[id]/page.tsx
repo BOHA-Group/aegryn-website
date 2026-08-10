@@ -6,14 +6,14 @@ import { createServiceClient } from '@/lib/supabase'
 import { ArrowLeft } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Dossier actif — Espace Cédant AEGRYN',
+  title: 'Dossier actif — Espace Cédant Aegryn',
   robots: { index: false, follow: false },
 }
 
 const STATUS_STEPS = [
   { key: 'submitted',    label: 'Dossier reçu',        desc: 'Votre dossier a bien été soumis.' },
   { key: 'under_review', label: 'Analyse en cours',    desc: 'Nos analystes étudient votre dossier.' },
-  { key: 'graded',       label: 'Grade attribué',      desc: 'Votre actif a reçu un grade officiel AEGRYN.' },
+  { key: 'graded',       label: 'Grade attribué',      desc: 'Votre actif a reçu un grade officiel Aegryn.' },
   { key: 'published',    label: 'Publié au catalogue', desc: 'Votre actif est visible par les acquéreurs qualifiés.' },
   { key: 'sold',         label: 'Vendu',               desc: 'La transaction a été clôturée avec succès.' },
 ]
@@ -232,7 +232,7 @@ export default async function SellerAssetDetailPage({
             ))}
           </div>
           <p className="font-sans text-[11px] text-gray-400 mt-3">
-            Les identités des acquéreurs restent confidentielles. L&apos;équipe AEGRYN gère le processus de sélection.
+            Les identités des acquéreurs restent confidentielles. L&apos;équipe Aegryn gère le processus de sélection.
           </p>
         </div>
       )}

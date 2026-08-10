@@ -4,7 +4,7 @@ import { createServiceClient } from '@/lib/supabase'
 import InvoiceEditor from './InvoiceEditor'
 
 export const metadata: Metadata = {
-  title: 'Facture — Admin AEGRYN',
+  title: 'Facture — Admin Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -36,10 +36,10 @@ export default async function AdminInvoicePage({ params }: Props) {
       vat_amount:           0,
       total_ttc:            0,
       currency:             'CHF',
-      iban:                 process.env.AEGRYN_IBAN ?? '',
-      bic:                  process.env.AEGRYN_BIC ?? '',
-      bank_name:            process.env.AEGRYN_BANK_NAME ?? '',
-      account_holder:       'AEGRYN / BOHA-Group',
+      iban:                 process.env.Aegryn_IBAN ?? '',
+      bic:                  process.env.Aegryn_BIC ?? '',
+      bank_name:            process.env.Aegryn_BANK_NAME ?? '',
+      account_holder:       'Aegryn / BOHA-Group',
       status:               'draft',
       due_date:             new Date(Date.now() + 14 * 86400000).toISOString().slice(0, 10),
       issued_at:            new Date().toISOString().slice(0, 10),

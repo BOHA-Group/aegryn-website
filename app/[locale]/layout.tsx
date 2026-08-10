@@ -76,7 +76,7 @@ return {
     'Switzerland startup', 'Swiss holding', 'holding suisse tech',
     'plateforme M&A suisse', 'Swiss M&A platform',
     'ecosystem engineering', 'Subblink', 'Neediu', 'Primiom', 'Movtoo', 'Hobconnect',
-    'AEGRYN Grade', 'asset grading', 'tech credit rating', 'Engineered to Last',
+    'Aegryn Grade', 'asset grading', 'tech credit rating', 'Engineered to Last',
   ],
   authors: [{ name: 'Yohann Bollack', url: 'https://aegryn.com' }],
   creator: 'Aegryn',

@@ -8,7 +8,7 @@ import { CATEGORY_LABELS } from '@/lib/dataRoom'
 import type { DataRoomCategory } from '@/lib/dataRoom'
 
 export const metadata: Metadata = {
-  title: 'Consultations Data Room — Espace Cédant AEGRYN',
+  title: 'Consultations Data Room — Espace Cédant Aegryn',
   robots: { index: false, follow: false },
 }
 

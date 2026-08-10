@@ -114,7 +114,7 @@ export default function SitemapPage() {
         <div className="mb-12">
           <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-ag-apex mb-4 flex items-center gap-2">
             <span className="w-5 h-px bg-ag-apex/50 inline-block" />
-            AEGRYN
+            Aegryn
           </p>
           <h1 className="font-sans font-bold text-ag-black text-[32px] tracking-tight">
             {t('title')}

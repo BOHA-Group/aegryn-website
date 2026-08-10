@@ -6,7 +6,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { ArrowUpRight, ArrowRightLeft } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Transactions — Espace Cédant AEGRYN',
+  title: 'Transactions — Espace Cédant Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -67,7 +67,7 @@ export default async function SellerTransactionsPage() {
         <div className="bg-white border border-gray-200 px-8 py-16 text-center">
           <ArrowRightLeft size={24} className="text-gray-300 mx-auto mb-4" />
           <p className="font-sans text-[14px] text-gray-400">
-            Aucune transaction en cours. Les transactions démarrent après la sélection d&apos;une offre par l&apos;équipe AEGRYN.
+            Aucune transaction en cours. Les transactions démarrent après la sélection d&apos;une offre par l&apos;équipe Aegryn.
           </p>
         </div>
       ) : (

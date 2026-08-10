@@ -6,7 +6,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { Briefcase, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Mandats clients — Espace Partenaire AEGRYN',
+  title: 'Mandats clients — Espace Partenaire Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -141,7 +141,7 @@ export default async function PartnerMandatesPage() {
 
                 <div className="flex flex-wrap gap-5">
                   <div>
-                    <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Rétrocession AEGRYN</p>
+                    <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Rétrocession Aegryn</p>
                     <p className="font-sans font-semibold text-[12px] text-gray-700">{m.retrocession_pct}%</p>
                   </div>
                   {m.started_at && (
@@ -166,7 +166,7 @@ export default async function PartnerMandatesPage() {
       <div className="mt-8 px-5 py-4 border border-gray-200 bg-gray-50">
         <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
           Pour ouvrir un nouveau mandat client, contactez <a href="mailto:partnerships@boha-group.com" className="text-ag-navy underline">partnerships@boha-group.com</a>.
-          L&apos;équipe AEGRYN créera le mandat et vous l&apos;associera dans votre espace.
+          L&apos;équipe Aegryn créera le mandat et vous l&apos;associera dans votre espace.
         </p>
       </div>
     </div>

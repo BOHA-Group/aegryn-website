@@ -1,5 +1,5 @@
 /**
- * /client/auction — Espace acquéreur AEGRYN Auction
+ * /client/auction — Espace acquéreur Aegryn Auction
  * Affiche les demandes d'accès dossier et révèle le lien URL
  * UNIQUEMENT si l'accès est approuvé et la session toujours ouverte.
  * Aucun envoi email — accès exclusivement via cet espace.
@@ -143,7 +143,7 @@ export default async function ClientAuctionPage({ params }: Props) {
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">
-                        {t('lotPrefix')} {asset.lot_number} · {asset.catalog_context ?? 'AEGRYN Auction'}
+                        {t('lotPrefix')} {asset.lot_number} · {asset.catalog_context ?? 'Aegryn Auction'}
                       </p>
                       <p className="font-sans font-semibold text-ag-black text-[17px]">
                         {asset.name}

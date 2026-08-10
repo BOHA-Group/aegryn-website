@@ -20,7 +20,7 @@ const schema = z.object({
 async function sendEmail(to: string, subject: string, text: string) {
   const key  = process.env.RESEND_API_KEY
   const from = process.env.RESEND_FROM ?? 'no-reply@boha-group.com'
-  const name = process.env.RESEND_FROM_NAME ?? 'AEGRYN'
+  const name = process.env.RESEND_FROM_NAME ?? 'Aegryn'
   if (!key) return
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -72,12 +72,12 @@ export async function POST(req: NextRequest) {
     }
 
     /* ── 3. Email confirmation acquéreur ── */
-    const internal = process.env.AEGRYN_INTERNAL_EMAIL ?? 'team@boha-group.com'
+    const internal = process.env.Aegryn_INTERNAL_EMAIL ?? 'team@boha-group.com'
     await Promise.allSettled([
       sendEmail(
         body.buyerEmail,
-        'AEGRYN — Votre demande d\'accès NDA a été reçue',
-        `Bonjour ${body.buyerName},\n\nNous avons bien reçu votre demande d'accès au dossier de cet actif (Grade ${asset.official_grade ?? '—'} — ${asset.asset_type ?? '—'}).\n\nNotre équipe va examiner votre profil dans les 24-48h ouvrées. Si votre dossier d'acquéreur est validé, vous recevrez l'accord de confidentialité (NDA) à signer électroniquement.\n\nL'équipe AEGRYN\nhttps://aegryn.com`
+        'Aegryn — Votre demande d\'accès NDA a été reçue',
+        `Bonjour ${body.buyerName},\n\nNous avons bien reçu votre demande d'accès au dossier de cet actif (Grade ${asset.official_grade ?? '—'} — ${asset.asset_type ?? '—'}).\n\nNotre équipe va examiner votre profil dans les 24-48h ouvrées. Si votre dossier d'acquéreur est validé, vous recevrez l'accord de confidentialité (NDA) à signer électroniquement.\n\nL'équipe Aegryn\nhttps://aegryn.com`
       ),
       sendEmail(
         internal,

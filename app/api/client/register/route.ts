@@ -54,13 +54,13 @@ export async function POST(req: NextRequest) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${resendKey}` },
       body: JSON.stringify({
-        from: `AEGRYN <${process.env.RESEND_FROM ?? 'no-reply@boha-group.com'}>`,
+        from: `Aegryn <${process.env.RESEND_FROM ?? 'no-reply@boha-group.com'}>`,
         reply_to: process.env.RESEND_REPLY_TO ?? 'contact@boha-group.com',
         to: [normalizedEmail],
-        subject: 'Bienvenue dans l\'espace client AEGRYN',
+        subject: 'Bienvenue dans l\'espace client Aegryn',
         html: `<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:560px;margin:0 auto;background:#ffffff;border:1px solid #e5e7eb;">
   <div style="padding:28px 32px 20px;border-bottom:1px solid #e5e7eb;">
-    <p style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#5ADDA4;margin:0;font-weight:700;">AEGRYN</p>
+    <p style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#5ADDA4;margin:0;font-weight:700;">Aegryn</p>
   </div>
   <div style="padding:32px;">
     <p style="font-size:22px;font-weight:700;color:#0a0f1e;margin:0 0 12px 0;line-height:1.2;">Bienvenue, ${fullName}</p>
@@ -71,23 +71,23 @@ export async function POST(req: NextRequest) {
     </p>
   </div>
   <div style="padding:16px 32px;border-top:1px solid #e5e7eb;background:#f9fafb;">
-    <p style="font-size:11px;color:#9ca3af;margin:0;">AEGRYN Sàrl — Suisse · <a href="https://aegryn.com" style="color:#9ca3af;">aegryn.com</a></p>
+    <p style="font-size:11px;color:#9ca3af;margin:0;">Aegryn Sàrl — Suisse · <a href="https://aegryn.com" style="color:#9ca3af;">aegryn.com</a></p>
   </div>
 </div>`,
       }),
     }).catch(() => {})
 
-    const adminEmail = process.env.AEGRYN_ADMIN_EMAIL ?? 'admin@boha-group.com'
+    const adminEmail = process.env.Aegryn_ADMIN_EMAIL ?? 'admin@boha-group.com'
     await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${resendKey}` },
       body: JSON.stringify({
-        from: `AEGRYN <${process.env.RESEND_FROM ?? 'no-reply@boha-group.com'}>`,
+        from: `Aegryn <${process.env.RESEND_FROM ?? 'no-reply@boha-group.com'}>`,
         to: [adminEmail],
-        subject: `[AEGRYN] Nouveau compte ${roleLabel[role] ?? role} — ${fullName}`,
+        subject: `[Aegryn] Nouveau compte ${roleLabel[role] ?? role} — ${fullName}`,
         html: `<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:480px;margin:0 auto;background:#ffffff;border:1px solid #e5e7eb;">
   <div style="padding:20px 24px 16px;border-bottom:1px solid #e5e7eb;">
-    <p style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#5ADDA4;margin:0;font-weight:700;">AEGRYN ADMIN</p>
+    <p style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#5ADDA4;margin:0;font-weight:700;">Aegryn ADMIN</p>
   </div>
   <div style="padding:24px;">
     <p style="font-size:17px;font-weight:700;color:#0a0f1e;margin:0 0 20px 0;">Nouveau compte créé</p>

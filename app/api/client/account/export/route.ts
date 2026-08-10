@@ -106,7 +106,7 @@ export async function GET(_req: NextRequest) {
 
   let txt = ''
   txt += '\uFEFF'
-  txt += `AEGRYN — EXPORT DE DONNÉES PERSONNELLES\r\n`
+  txt += `Aegryn — EXPORT DE DONNÉES PERSONNELLES\r\n`
   txt += `Base légale : Art. 20 RGPD (EU) / Art. 28 nLPD (CH) — Portabilité\r\n`
   txt += `Date d'export : ${p.export_date}\r\n`
 
@@ -140,7 +140,7 @@ export async function GET(_req: NextRequest) {
   txt += tableSection(p.notifications as Record<string, unknown>[], ['type', 'title', 'read_at', 'created_at'])
 
   txt += `\r\n${'─'.repeat(60)}\r\n`
-  txt += `Fin de l'export — AEGRYN / BOHA Group SA\r\n`
+  txt += `Fin de l'export — Aegryn / BOHA Group SA\r\n`
 
   return new NextResponse(txt, {
     status: 200,

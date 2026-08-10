@@ -79,9 +79,9 @@ export async function POST(_req: NextRequest) {
   if (userEmail) {
     sendEmail(
       userEmail,
-      '[AEGRYN] Suppression de votre compte confirmée',
+      '[Aegryn] Suppression de votre compte confirmée',
       `<!DOCTYPE html><html lang="fr"><body style="font-family:Helvetica,Arial,sans-serif;color:#1e293b;padding:32px;">
-        <h2 style="color:#0F1C3F;">Votre compte AEGRYN a été supprimé</h2>
+        <h2 style="color:#0F1C3F;">Votre compte Aegryn a été supprimé</h2>
         <p>Conformément à votre demande et au droit à l'effacement (Art. 17 RGPD / Art. 30 nLPD),
         votre compte et vos données personnelles ont été supprimés définitivement.</p>
         <p style="color:#64748b;font-size:13px;">
@@ -90,7 +90,7 @@ export async function POST(_req: NextRequest) {
           Les sauvegardes d'infrastructure sont purgées dans un délai maximal de 30 jours.
         </p>
         <p style="margin-top:24px;font-size:12px;color:#94a3b8;">
-          AEGRYN — Genève, Suisse — <a href="https://aegryn.com" style="color:#5ADDA4;">aegryn.com</a>
+          Aegryn — Genève, Suisse — <a href="https://aegryn.com" style="color:#5ADDA4;">aegryn.com</a>
         </p>
       </body></html>`,
       'delete-account',

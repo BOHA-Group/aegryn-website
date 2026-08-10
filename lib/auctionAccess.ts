@@ -2,7 +2,7 @@
  * lib/auctionAccess.ts
  *
  * Vérifie si un utilisateur a les droits d'accès au catalogue auction tiers.
- * Prérequis : compte créé + NDA AEGRYN Auction signé + CGV acceptées.
+ * Prérequis : compte créé + NDA Aegryn Auction signé + CGV acceptées.
  * Ces deux champs sont renseignés manuellement par l'admin sur profiles.
  */
 import { createServiceClient } from '@/lib/supabase'

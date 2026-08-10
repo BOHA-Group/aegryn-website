@@ -2,7 +2,7 @@ import { notFound }          from 'next/navigation'
 import Link                   from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
-import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
+import { Aegryn_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
 import { getTranslations }    from 'next-intl/server'
 import type { Metadata }      from 'next'
 
@@ -18,7 +18,7 @@ const STATUS_DOT: Record<string, { dot: string; text: string }> = {
 const LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl']
 
 export async function generateStaticParams() {
-  const assets = AEGRYN_ASSETS.filter((a) => a.id !== 'kryv')
+  const assets = Aegryn_ASSETS.filter((a) => a.id !== 'kryv')
   return LOCALES.flatMap((locale) =>
     assets.map((a) => ({ locale, slug: a.slug }))
   )
@@ -26,7 +26,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params
-  const asset = AEGRYN_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
+  const asset = Aegryn_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) return {}
   return generateAegrynMetadata({
     title: asset.name,
@@ -41,7 +41,7 @@ export default async function AssetPage({ params }: Props) {
   const t       = await getTranslations({ locale, namespace: 'assetPage' })
   const tStatus = await getTranslations({ locale, namespace: 'assetStatus' })
   const tFooter  = await getTranslations({ locale, namespace: 'footer' })
-  const asset = AEGRYN_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
+  const asset = Aegryn_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) notFound()
 
   const assetId = asset.id as 'subblink' | 'neediu' | 'primiom' | 'movtoo' | 'hobconnect'

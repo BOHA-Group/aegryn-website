@@ -5,7 +5,7 @@ import { createServiceClient } from '@/lib/supabase'
 import ExpertProfileForm from './ExpertProfileForm'
 
 export const metadata: Metadata = {
-  title: 'Ma fiche expert — AEGRYN',
+  title: 'Ma fiche expert — Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -25,7 +25,7 @@ export default async function ExpertClientPage() {
   return (
     <div className="pb-12 px-6 md:px-10 pt-10 max-w-3xl">
       <div className="mb-10">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-500 mb-1">Espace Expert AEGRYN</p>
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-500 mb-1">Espace Expert Aegryn</p>
         <h1 className="font-sans font-bold text-gray-900 text-[26px] tracking-tight">Ma fiche expert</h1>
         <p className="font-sans text-[13px] text-gray-500 mt-0.5">{user.email}</p>
       </div>
@@ -65,7 +65,7 @@ export default async function ExpertClientPage() {
           {expertProfile.is_visible ? (
             <p className="font-sans text-[13px] text-emerald-800">✓ Fiche publiée et visible sur /experts</p>
           ) : (
-            <p className="font-sans text-[13px] text-blue-700">⏳ En attente de validation par l'équipe AEGRYN</p>
+            <p className="font-sans text-[13px] text-blue-700">⏳ En attente de validation par l'équipe Aegryn</p>
           )}
           {expertProfile.hidden_reason && !expertProfile.is_visible && (
             <p className="font-sans text-[12px] text-red-600 mt-1">Motif : {expertProfile.hidden_reason}</p>

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import Link              from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Paramètres — AEGRYN Admin',
+  title: 'Paramètres — Aegryn Admin',
   robots: { index: false, follow: false },
 }
 
@@ -29,7 +29,7 @@ export default async function AdminSettingsPage({
 
         <div className="mb-8 flex items-start justify-between gap-4">
           <div>
-            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">AEGRYN ADMIN</p>
+            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN</p>
             <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Paramètres</h1>
           </div>
           <Link href={`/admin${tokenQs}`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">

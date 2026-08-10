@@ -4,7 +4,7 @@
  * Table de correspondance CONFIDENTIELLE — USAGE ADMIN UNIQUEMENT
  *
  * Chaque entrée du catalogue documents (Cxx, Ixx, Fxx, Sxx, Txx) est mappée à :
- *   - subcodes[] : sous-codes AEGRYN Grading System à pré-cocher si le doc est "sufficient"
+ *   - subcodes[] : sous-codes Aegryn Grading System à pré-cocher si le doc est "sufficient"
  *   - unsubcodes[] : sous-codes à pré-cocher si le doc est "missing" ou "insufficient"
  *   - scoreHints : contributions partielles aux métriques de gradeEngine (si calculable)
  *

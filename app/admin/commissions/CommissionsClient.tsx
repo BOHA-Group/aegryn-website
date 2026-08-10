@@ -64,10 +64,10 @@ export default function CommissionsClient({ transactions, tiers, tokenQs }: Prop
         {/* Header */}
         <div className="mb-8 flex items-start justify-between gap-4">
           <div>
-            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">AEGRYN ADMIN</p>
-            <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Commissions AEGRYN</h1>
+            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN</p>
+            <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Commissions Aegryn</h1>
             <p className="text-[12px] text-gray-400 mt-1">
-              Suivi des honoraires de transaction dus à AEGRYN — grille dégressive juillet 2026
+              Suivi des honoraires de transaction dus à Aegryn — grille dégressive juillet 2026
             </p>
           </div>
           <a href={`/admin${tokenQs}`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
@@ -105,7 +105,7 @@ export default function CommissionsClient({ transactions, tiers, tokenQs }: Prop
                 <table className="w-full text-[12px] bg-white border border-gray-200">
                   <thead className="bg-gray-50 border-b border-gray-200">
                     <tr>
-                      {['Actif', 'Cédant', 'Prix tx', 'Commission AEGRYN', 'Net cédant', 'Statut', 'Clôture', 'Payée'].map(h => (
+                      {['Actif', 'Cédant', 'Prix tx', 'Commission Aegryn', 'Net cédant', 'Statut', 'Clôture', 'Payée'].map(h => (
                         <th key={h} className="text-left px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500 whitespace-nowrap">{h}</th>
                       ))}
                     </tr>
@@ -198,7 +198,7 @@ export default function CommissionsClient({ transactions, tiers, tokenQs }: Prop
                   {calcResult.type === 'calculated' ? (
                     <>
                       <div className="bg-emerald-50 border border-emerald-200 px-4 py-3">
-                        <p className="font-mono text-[10px] uppercase tracking-widest text-emerald-600 mb-1">Commission AEGRYN HT</p>
+                        <p className="font-mono text-[10px] uppercase tracking-widest text-emerald-600 mb-1">Commission Aegryn HT</p>
                         <p className="font-mono text-[22px] font-bold text-gray-900">{fmtEur(calcResult.commission)}</p>
                         <p className="font-mono text-[10px] text-emerald-600 mt-0.5">
                           Taux appliqué : {(calcResult.rate * 100).toFixed(0)}% — Tranche : {calcResult.tier.label}

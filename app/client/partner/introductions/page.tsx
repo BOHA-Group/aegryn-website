@@ -7,7 +7,7 @@ import NewIntroductionForm from './NewIntroductionForm'
 import IntroductionsList from './IntroductionsList'
 
 export const metadata: Metadata = {
-  title: 'Introductions — Espace Partenaire AEGRYN',
+  title: 'Introductions — Espace Partenaire Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -30,7 +30,7 @@ export default async function PartnerIntroductionsPage() {
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
           <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Introductions</h1>
           <p className="font-sans text-[13px] text-gray-400 mt-1">
-            Apports d&apos;affaires soumis à l&apos;équipe AEGRYN : actifs ou acquéreurs.
+            Apports d&apos;affaires soumis à l&apos;équipe Aegryn : actifs ou acquéreurs.
           </p>
         </div>
       </div>
@@ -49,7 +49,7 @@ export default async function PartnerIntroductionsPage() {
 
       <div className="mt-8 px-5 py-4 border border-gray-200 bg-gray-50">
         <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
-          Les introductions qualifiées peuvent générer une commission lors de la finalisation d&apos;une transaction. Les conditions sont définies dans votre contrat de partenariat AEGRYN.
+          Les introductions qualifiées peuvent générer une commission lors de la finalisation d&apos;une transaction. Les conditions sont définies dans votre contrat de partenariat Aegryn.
         </p>
       </div>
     </div>

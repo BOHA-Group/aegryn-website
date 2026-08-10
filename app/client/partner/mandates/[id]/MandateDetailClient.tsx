@@ -153,7 +153,7 @@ export default function MandateDetailClient({
           ) : (
             <>
               <p className="font-sans text-[12px] text-gray-500 mb-5 leading-relaxed">
-                Déclarez chaque facture émise à votre client. La rétrocession AEGRYN ({retrocessionPct}%) est calculée automatiquement.
+                Déclarez chaque facture émise à votre client. La rétrocession Aegryn ({retrocessionPct}%) est calculée automatiquement.
                 Transmettez ensuite le virement à <a href="mailto:contact@boha-group.com" className="underline text-ag-navy">contact@boha-group.com</a>.
               </p>
 
@@ -213,7 +213,7 @@ export default function MandateDetailClient({
                   />
                   {invAmount && !isNaN(parseFloat(invAmount)) && parseFloat(invAmount) > 0 && (
                     <p className="font-mono text-[10px] text-gray-400 mt-1">
-                      Rétrocession AEGRYN : CHF {(parseFloat(invAmount) * retrocessionPct / 100).toFixed(2)}
+                      Rétrocession Aegryn : CHF {(parseFloat(invAmount) * retrocessionPct / 100).toFixed(2)}
                     </p>
                   )}
                 </div>
@@ -237,7 +237,7 @@ export default function MandateDetailClient({
           <div className="flex-1 p-5 flex flex-col gap-3 overflow-y-auto max-h-96">
             {messages.length === 0 ? (
               <p className="font-sans text-[13px] text-gray-400 text-center py-10">
-                Pas encore de messages. Posez vos questions à l&apos;équipe AEGRYN.
+                Pas encore de messages. Posez vos questions à l&apos;équipe Aegryn.
               </p>
             ) : (
               messages.map(msg => (
@@ -254,7 +254,7 @@ export default function MandateDetailClient({
                   </div>
                   <div className="flex items-center gap-2">
                     {msg.is_admin && (
-                      <span className="font-mono text-[8px] uppercase tracking-widest text-ag-apex">AEGRYN</span>
+                      <span className="font-mono text-[8px] uppercase tracking-widest text-ag-apex">Aegryn</span>
                     )}
                     <span className="font-mono text-[8px] text-gray-300">{fmtTime(msg.created_at)}</span>
                   </div>
@@ -273,7 +273,7 @@ export default function MandateDetailClient({
                 type="text"
                 value={msgBody}
                 onChange={e => setMsgBody(e.target.value)}
-                placeholder="Votre message à l'équipe AEGRYN…"
+                placeholder="Votre message à l'équipe Aegryn…"
                 className="flex-1 border border-gray-200 px-3 py-2.5 font-sans text-[13px] focus:outline-none focus:border-ag-navy transition-colors"
               />
               <button

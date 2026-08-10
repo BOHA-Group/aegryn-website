@@ -6,7 +6,7 @@ import { Suspense }            from 'react'
 import AdminLeadsClient        from './AdminLeadsClient'
 
 export const metadata: Metadata = {
-  title: 'Leads — AEGRYN Admin',
+  title: 'Leads — Aegryn Admin',
   robots: { index: false, follow: false },
 }
 
@@ -125,7 +125,7 @@ export default async function AdminLeadsPage({
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
-          <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">AEGRYN ADMIN</p>
+          <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN</p>
           <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Leads & Prospects</h1>
           <p className="text-[12px] text-gray-400 mt-1">Service-role · RLS bypass · lecture seule</p>
         </div>

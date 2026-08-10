@@ -5,7 +5,7 @@ import type { Metadata }       from 'next'
 import Link                    from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Admin — AEGRYN',
+  title: 'Admin — Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -229,7 +229,7 @@ export default async function AdminIndexPage({
         {/* Header */}
         <div className="mb-8 flex items-end justify-between">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 mb-1">AEGRYN</p>
+            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 mb-1">Aegryn</p>
             <h1 className="text-[28px] font-bold text-gray-900 tracking-tight">Admin</h1>
             <p className="text-[12px] text-gray-400 mt-1">
               {new Date().toLocaleDateString('fr-CH', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}

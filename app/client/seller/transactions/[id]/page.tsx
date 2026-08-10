@@ -6,12 +6,12 @@ import { createServiceClient } from '@/lib/supabase'
 import { ArrowLeft, CheckCircle2, Clock, XCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Transaction — Espace Cédant AEGRYN',
+  title: 'Transaction — Espace Cédant Aegryn',
   robots: { index: false, follow: false },
 }
 
 const TX_STEPS = [
-  { key: 'ei_submitted',   label: 'EI reçue',            desc: 'Expression d\'Intérêt acceptée par AEGRYN.' },
+  { key: 'ei_submitted',   label: 'EI reçue',            desc: 'Expression d\'Intérêt acceptée par Aegryn.' },
   { key: 'ap_signed',      label: 'AP signé',             desc: 'Accord de Principe validé par les deux parties.' },
   { key: 'escrow_paid',    label: 'Séquestre versé',      desc: 'Montant séquestre confirmé auprès du partenaire fiduciaire.' },
   { key: 'dd_in_progress', label: 'Due Diligence',        desc: 'Accès à la data room et vérification des éléments.' },
@@ -205,7 +205,7 @@ export default async function SellerTransactionDetailPage({
                   <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-1">Libération en cours</p>
                   <div className={`flex items-center gap-2 ${tx.escrow_release_validated_admin ? 'text-emerald-600' : 'text-gray-300'}`}>
                     {tx.escrow_release_validated_admin ? <CheckCircle2 size={12} /> : <XCircle size={12} />}
-                    <span className="font-sans text-[11px]">Validation AEGRYN</span>
+                    <span className="font-sans text-[11px]">Validation Aegryn</span>
                   </div>
                   <div className={`flex items-center gap-2 ${tx.escrow_release_validated_external ? 'text-emerald-600' : 'text-gray-300'}`}>
                     {tx.escrow_release_validated_external ? <CheckCircle2 size={12} /> : <XCircle size={12} />}
@@ -238,7 +238,7 @@ export default async function SellerTransactionDetailPage({
             {tx.certificate_url && (
               <a href={tx.certificate_url} target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy px-4 py-2 hover:bg-ag-navy hover:text-white transition-colors w-fit">
-                Certificat de Transaction AEGRYN →
+                Certificat de Transaction Aegryn →
               </a>
             )}
           </div>
@@ -248,7 +248,7 @@ export default async function SellerTransactionDetailPage({
       {/* Note admin */}
       {tx.admin_note && (
         <div className="bg-gray-50 border border-gray-200 px-5 py-4 mb-4">
-          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-2">Message de l&apos;équipe AEGRYN</p>
+          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-2">Message de l&apos;équipe Aegryn</p>
           <p className="font-sans text-[13px] text-gray-700 leading-relaxed">{tx.admin_note}</p>
         </div>
       )}

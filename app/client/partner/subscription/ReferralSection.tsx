@@ -148,7 +148,7 @@ export default function ReferralSection({ isActive }: { isActive: boolean }) {
         </div>
 
         <p className="font-sans text-[13px] text-gray-700 leading-relaxed">
-          Parrainez d&apos;autres experts AEGRYN et gagnez{' '}
+          Parrainez d&apos;autres experts Aegryn et gagnez{' '}
           <strong>1 mois d&apos;abonnement offert</strong> pour vous et votre filleul
           dès son premier paiement. Plafond : <strong>6 mois</strong> par parrain.
         </p>

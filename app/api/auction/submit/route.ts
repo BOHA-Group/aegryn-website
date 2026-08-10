@@ -10,7 +10,7 @@ async function sendEmail(to: string, subject: string, text: string) {
     method: 'POST',
     headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      from: `${process.env.RESEND_FROM_NAME ?? 'AEGRYN'} <${from}>`,
+      from: `${process.env.RESEND_FROM_NAME ?? 'Aegryn'} <${from}>`,
       reply_to: process.env.RESEND_REPLY_TO ?? 'contact@boha-group.com',
       to: [to],
       subject,
@@ -90,17 +90,17 @@ export async function POST(req: NextRequest) {
 
     if (insertError) console.error('[auction/submit] insert error:', insertError)
 
-    const internal = process.env.AEGRYN_INTERNAL_EMAIL ?? 'team@boha-group.com'
+    const internal = process.env.Aegryn_INTERNAL_EMAIL ?? 'team@boha-group.com'
     await Promise.allSettled([
       sendEmail(
         body.email,
-        'AEGRYN Auction Switzerland — Votre dossier de cession a été reçu',
-        `Bonjour ${body.fullName},\n\nNous avons bien reçu votre dossier de soumission pour "${body.assetName}" via AEGRYN Auction Switzerland.\n\nProchaine étape : notre équipe examinera votre dossier sous 48–72h ouvrées et vous contactera pour lancer la phase de certification AEGRYN Grade.\n\nNote : le droit suisse s'applique à toutes les transactions AEGRYN Auction Switzerland.\n\nRéférence dossier : ${asset?.id ?? "en cours d'attribution"}\n\nL'équipe AEGRYN\nhttps://aegryn.com/auction`,
+        'Aegryn Auction Switzerland — Votre dossier de cession a été reçu',
+        `Bonjour ${body.fullName},\n\nNous avons bien reçu votre dossier de soumission pour "${body.assetName}" via Aegryn Auction Switzerland.\n\nProchaine étape : notre équipe examinera votre dossier sous 48–72h ouvrées et vous contactera pour lancer la phase de certification Aegryn Grade.\n\nNote : le droit suisse s'applique à toutes les transactions Aegryn Auction Switzerland.\n\nRéférence dossier : ${asset?.id ?? "en cours d'attribution"}\n\nL'équipe Aegryn\nhttps://aegryn.com/auction`,
       ),
       sendEmail(
         internal,
         `[Auction Submit] ${body.assetName} — ${body.email}`,
-        `Nouvelle soumission AEGRYN Auction Switzerland\n\nVendeur : ${body.fullName}\nEmail : ${body.email}\nPays : ${body.country ?? '—'}\nSociété : ${body.company ?? '—'}\n\nActif : ${body.assetName} (${body.assetType})\nSite : ${body.assetUrl || '—'}\nStade : ${body.devStage}\nStack : ${body.techStack ?? '—'}\nARR : ${body.arr ? `${body.arr} €` : '—'}\nPrix souhaité : ${body.askPrice ? `${body.askPrice} €` : '—'}\nIP : ${body.ipFiled ?? '—'}\nMotivation : ${body.motivation}\nTimeline : ${body.timeline}\nSession souhaitée : ${body.targetSession ?? '—'}\nMessage : ${body.message ?? '—'}\nLocale : ${body.locale ?? '—'}\nID Supabase : ${asset?.id ?? '—'}`,
+        `Nouvelle soumission Aegryn Auction Switzerland\n\nVendeur : ${body.fullName}\nEmail : ${body.email}\nPays : ${body.country ?? '—'}\nSociété : ${body.company ?? '—'}\n\nActif : ${body.assetName} (${body.assetType})\nSite : ${body.assetUrl || '—'}\nStade : ${body.devStage}\nStack : ${body.techStack ?? '—'}\nARR : ${body.arr ? `${body.arr} €` : '—'}\nPrix souhaité : ${body.askPrice ? `${body.askPrice} €` : '—'}\nIP : ${body.ipFiled ?? '—'}\nMotivation : ${body.motivation}\nTimeline : ${body.timeline}\nSession souhaitée : ${body.targetSession ?? '—'}\nMessage : ${body.message ?? '—'}\nLocale : ${body.locale ?? '—'}\nID Supabase : ${asset?.id ?? '—'}`,
       ),
     ])
 

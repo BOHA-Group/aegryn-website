@@ -1,5 +1,5 @@
 /**
- * /admin/auction — Tableau de bord AEGRYN Auction
+ * /admin/auction — Tableau de bord Aegryn Auction
  * Auth : Supabase session + rôle admin
  */
 import Link                    from 'next/link'
@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Auction Admin — AEGRYN',
+  title: 'Auction Admin — Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -81,7 +81,7 @@ export default async function AuctionAdminPage() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <p className="text-xs font-mono uppercase tracking-widest text-gray-400 mb-1">
-              AEGRYN Auction · Back-office
+              Aegryn Auction · Back-office
             </p>
             <h1 className="text-2xl font-bold text-gray-900">Tableau de bord Auction</h1>
           </div>
@@ -136,7 +136,7 @@ export default async function AuctionAdminPage() {
         {/* Lots table */}
         <div className="bg-white border border-gray-200 rounded-sm overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
-            <h2 className="font-semibold text-gray-900 text-sm">Lots AEGRYN Auction</h2>
+            <h2 className="font-semibold text-gray-900 text-sm">Lots Aegryn Auction</h2>
             <Link href={`/admin/auction/lots${qs}`} className="text-xs text-gray-400 hover:text-gray-700">
               Gérer →
             </Link>

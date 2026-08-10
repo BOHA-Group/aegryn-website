@@ -6,7 +6,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { BookOpen, Gavel, ArrowRightLeft, ShieldCheck, Bell, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Tableau de bord — Espace Acquéreur AEGRYN',
+  title: 'Tableau de bord — Espace Acquéreur Aegryn',
   robots: { index: false, follow: false },
 }
 

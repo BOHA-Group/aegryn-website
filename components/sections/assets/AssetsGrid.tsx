@@ -5,7 +5,7 @@ import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { ArrowUpRight, ExternalLink } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
-import { AEGRYN_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
+import { Aegryn_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
 
 type Category = 'all' | 'ai' | 'lifestyle' | 'transactions'
 
@@ -35,8 +35,8 @@ export function AssetsGrid() {
   const gridRef = useRef<HTMLDivElement>(null)
 
   const filtered = active === 'all'
-    ? AEGRYN_ASSETS
-    : AEGRYN_ASSETS.filter((a) => a.category === active)
+    ? Aegryn_ASSETS
+    : Aegryn_ASSETS.filter((a) => a.category === active)
 
   useEffect(() => {
     const ctx = gsap.context(() => {

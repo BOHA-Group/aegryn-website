@@ -6,7 +6,7 @@ import { CheckCircle2, Clock, XCircle, AlertCircle, ShieldCheck } from 'lucide-r
 import SellerKycUploadForm from './SellerKycUploadForm'
 
 export const metadata: Metadata = {
-  title: 'KYC — Espace Cédant AEGRYN',
+  title: 'KYC — Espace Cédant Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -108,7 +108,7 @@ export default async function SellerKycPage() {
         </div>
         {!isComplete && (
           <p className="font-sans text-[11px] text-amber-700 mt-2">
-            Complétez votre dossier KYC pour que l&apos;équipe AEGRYN puisse traiter votre dossier de cession.
+            Complétez votre dossier KYC pour que l&apos;équipe Aegryn puisse traiter votre dossier de cession.
           </p>
         )}
       </div>

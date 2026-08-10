@@ -6,7 +6,7 @@ import Link              from 'next/link'
 import LoginForm         from './LoginForm'
 
 export const metadata: Metadata = {
-  title: 'Connexion — Espace client AEGRYN',
+  title: 'Connexion — Espace client Aegryn',
   robots: { index: false, follow: false },
 }
 

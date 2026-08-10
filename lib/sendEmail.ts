@@ -13,7 +13,7 @@ export async function sendEmail(
 ): Promise<void> {
   const key  = process.env.RESEND_API_KEY
   const from = process.env.RESEND_FROM ?? 'no-reply@boha-group.com'
-  const name = process.env.RESEND_FROM_NAME ?? 'AEGRYN'
+  const name = process.env.RESEND_FROM_NAME ?? 'Aegryn'
   if (!key) {
     console.warn(`[sendEmail] RESEND_API_KEY manquant — skip email to ${to}`)
     return
@@ -34,7 +34,7 @@ export async function sendEmail(
 
 /* ── Logo AE officiel — coordonnées verbatim depuis AegrynLogo.tsx ────── */
 // viewBox="0 0 441.14 487.91" — identique au composant brand officiel
-const LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" viewBox="0 0 441.14 487.91" fill="none" aria-label="AEGRYN">
+const LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" viewBox="0 0 441.14 487.91" fill="none" aria-label="Aegryn">
   <polygon fill="#5adda4" points="297.96 171.32 266.09 100.56 220.57 0 191.6 64.14 254.09 127.04 297.96 171.32"/>
   <polygon fill="#0F1C3F" points="317.41 214.36 246.64 143.18 184.15 80.28 175.05 100.56 0 487.91 90.63 487.91 220.57 201.12 350.51 487.91 441.14 487.91 317.41 214.36"/>
 </svg>`
@@ -44,7 +44,7 @@ const FOOTER = `
 <tr>
   <td style="padding:24px 32px 20px;border-top:1px solid #e2e8f0;">
     <p style="margin:0 0 4px 0;font-size:11px;color:#94a3b8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-      <strong style="color:#64748b;">AEGRYN</strong> — Genève, Suisse
+      <strong style="color:#64748b;">Aegryn</strong> — Genève, Suisse
     </p>
     <p style="margin:0;font-size:11px;color:#94a3b8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
       <a href="https://aegryn.com" style="color:#5ADDA4;text-decoration:none;">aegryn.com</a>
@@ -81,7 +81,7 @@ function WRAP_NEWSLETTER(body: string): string {
               <table cellpadding="0" cellspacing="0"><tr>
                 <td style="padding-right:12px;">${LOGO_SVG}</td>
                 <td>
-                  <p style="margin:0;font-size:18px;font-weight:700;color:#0F1C3F;letter-spacing:-0.02em;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">AEGRYN</p>
+                  <p style="margin:0;font-size:18px;font-weight:700;color:#0F1C3F;letter-spacing:-0.02em;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">Aegryn</p>
                   <p style="margin:0;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#5ADDA4;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">Newsletter</p>
                 </td>
               </tr></table>
@@ -117,7 +117,7 @@ function WRAP(body: string): string {
               <table cellpadding="0" cellspacing="0"><tr>
                 <td style="padding-right:12px;">${LOGO_SVG}</td>
                 <td>
-                  <p style="margin:0;font-size:18px;font-weight:700;color:#0F1C3F;letter-spacing:-0.02em;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">AEGRYN</p>
+                  <p style="margin:0;font-size:18px;font-weight:700;color:#0F1C3F;letter-spacing:-0.02em;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">Aegryn</p>
                   <p style="margin:0;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#5ADDA4;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">Réseau Partenaires</p>
                 </td>
               </tr></table>
@@ -133,7 +133,7 @@ function WRAP(body: string): string {
         </table>
 
         <p style="font-size:10px;color:#94a3b8;margin:12px 0 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-          Cet email vous est adressé en tant que partenaire certifié AEGRYN.
+          Cet email vous est adressé en tant que partenaire certifié Aegryn.
         </p><!-- /WRAP -->
       </td>
     </tr>
@@ -171,7 +171,7 @@ export async function emailPartnerScoreValidated(opts: {
   observations?: string | null
 }): Promise<{ subject: string; html: string }> {
   const dim = opts.dimension.toUpperCase()
-  const subject = `[AEGRYN] Contribution ${dim} validée — ${opts.assetName}`
+  const subject = `[Aegryn] Contribution ${dim} validée — ${opts.assetName}`
 
   const amountLine = opts.amountChf
     ? amountRow('Honoraires dus', await formatChfEur(Number(opts.amountChf)))
@@ -183,7 +183,7 @@ export async function emailPartnerScoreValidated(opts: {
     <p style="margin:0 0 20px 0;font-size:14px;color:#475569;line-height:1.6;">
       Bonjour <strong style="color:#0F1C3F;">${opts.partnerName}</strong>,<br/>
       Votre contribution à la co-certification de l'actif <strong style="color:#0F1C3F;">${opts.assetName}</strong>
-      (dimension <strong style="color:#5ADDA4;">${dim}</strong>) a été <strong style="color:#16a34a;">validée</strong> par l'équipe AEGRYN.
+      (dimension <strong style="color:#5ADDA4;">${dim}</strong>) a été <strong style="color:#16a34a;">validée</strong> par l'équipe Aegryn.
     </p>
 
     <table cellpadding="0" cellspacing="0" style="border:1px solid #e2e8f0;padding:4px 16px;margin-bottom:20px;width:100%;">
@@ -215,7 +215,7 @@ export async function emailPartnerScoreRejected(opts: {
   observations?: string | null
 }): Promise<{ subject: string; html: string }> {
   const dim = opts.dimension.toUpperCase()
-  const subject = `[AEGRYN] Retour sur votre contribution ${dim} — ${opts.assetName}`
+  const subject = `[Aegryn] Retour sur votre contribution ${dim} — ${opts.assetName}`
 
   const html = WRAP(`
     <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#94a3b8;font-weight:600;">Certification CIFS — CAS 1</p>
@@ -238,7 +238,7 @@ export async function emailPartnerScoreRejected(opts: {
     </div>` : ''}
 
     <p style="margin:0 0 20px 0;font-size:13px;color:#64748b;">
-      Contactez votre référent AEGRYN pour discuter des ajustements à apporter avant une nouvelle soumission.
+      Contactez votre référent Aegryn pour discuter des ajustements à apporter avant une nouvelle soumission.
     </p>
     <p style="margin:0;">${ctaButton('Mon espace partenaire', 'https://aegryn.com/client/partner/certifications', false)}</p>
   `)
@@ -260,26 +260,26 @@ export async function emailPartnerMandateCreated(opts: {
     fundraising:   'Levée de fonds',
     other:         'Autre',
   }
-  const subject = `[AEGRYN] Mandat client activé — ${opts.clientName}`
+  const subject = `[Aegryn] Mandat client activé — ${opts.clientName}`
 
   const html = WRAP(`
     <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">Mandat client — CAS 3</p>
     <h1 style="margin:0 0 16px 0;font-size:22px;font-weight:700;color:#0F1C3F;line-height:1.25;">Nouveau mandat activé</h1>
     <p style="margin:0 0 20px 0;font-size:14px;color:#475569;line-height:1.6;">
       Bonjour <strong style="color:#0F1C3F;">${opts.partnerName}</strong>,<br/>
-      Un nouveau mandat client a été créé et activé dans votre espace partenaire AEGRYN.
+      Un nouveau mandat client a été créé et activé dans votre espace partenaire Aegryn.
     </p>
 
     <table cellpadding="0" cellspacing="0" style="border:1px solid #e2e8f0;padding:4px 16px;margin-bottom:24px;width:100%;">
       ${infoRow('Client', opts.clientName)}
       ${infoRow('Nature de la mission', typeLabel[opts.mandateType] ?? opts.mandateType)}
-      ${infoRow('Rétrocession AEGRYN', `<span style="color:#5ADDA4;font-weight:700;font-family:monospace;">${opts.retrocessionPct}%</span> de vos honoraires facturés`)}
+      ${infoRow('Rétrocession Aegryn', `<span style="color:#5ADDA4;font-weight:700;font-family:monospace;">${opts.retrocessionPct}%</span> de vos honoraires facturés`)}
       ${opts.assetName ? infoRow('Actif associé', opts.assetName) : ''}
     </table>
 
     <p style="margin:0 0 20px 0;font-size:13px;color:#64748b;">
       Vous pouvez déclarer vos factures et suivre l'avancement de ce mandat directement dans votre espace.
-      La rétrocession AEGRYN est calculée automatiquement à la validation de chaque facture.
+      La rétrocession Aegryn est calculée automatiquement à la validation de chaque facture.
     </p>
     <p style="margin:0;">${ctaButton('Voir mes mandats', 'https://aegryn.com/client/partner/mandates')}</p>
   `)
@@ -318,7 +318,7 @@ export function emailNewsletterArticle(opts: {
   const unsubUrl   = `https://aegryn.com/api/newsletter/unsubscribe?token=${unsubscribeToken}`
 
   const isFr = lang === 'fr'
-  const subject = `[AEGRYN] ${title}`
+  const subject = `[Aegryn] ${title}`
 
   const html = WRAP_NEWSLETTER(`
     <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">${category}</p>
@@ -327,8 +327,8 @@ export function emailNewsletterArticle(opts: {
     <p style="margin:0 0 28px 0;">${ctaButton(isFr ? 'Lire l\u2019article' : 'Read the article', articleUrl)}</p>
     <p style="margin:0;font-size:11px;color:#94a3b8;line-height:1.6;">
       ${isFr
-        ? 'Vous recevez cet email car vous êtes abonné à la newsletter AEGRYN (1 article par semaine).'
-        : 'You are receiving this email because you subscribed to the AEGRYN newsletter (1 article per week).'}
+        ? 'Vous recevez cet email car vous êtes abonné à la newsletter Aegryn (1 article par semaine).'
+        : 'You are receiving this email because you subscribed to the Aegryn newsletter (1 article per week).'}
       <br/>
       <a href="${unsubUrl}" style="color:#94a3b8;text-decoration:underline;">${isFr ? 'Se désabonner' : 'Unsubscribe'}</a>
     </p>
@@ -343,7 +343,7 @@ export function emailKycDocSubmitted(opts: {
   memberId: string
   docLabel: string
 }): { subject: string; html: string } {
-  const subject = `[AEGRYN KYC] Nouveau document soumis — ${opts.docLabel}`
+  const subject = `[Aegryn KYC] Nouveau document soumis — ${opts.docLabel}`
   const html = WRAP(`
     <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">KYC — Document reçu</p>
     <h1 style="margin:0 0 16px 0;font-size:20px;font-weight:700;color:#0F1C3F;line-height:1.25;">${opts.docLabel}</h1>
@@ -365,7 +365,7 @@ export function emailKycApproved(opts: {
   role: 'buyer' | 'seller' | 'partner'
 }): { subject: string; html: string } {
   const { role } = opts
-  const subject = '[AEGRYN] Votre profil KYC est validé'
+  const subject = '[Aegryn] Votre profil KYC est validé'
 
   const roleLabel  = role === 'buyer' ? 'acquéreur' : role === 'seller' ? 'cédant' : 'partenaire expert'
   const ctaLabel   = role === 'buyer'   ? 'Accéder aux sessions d\'acquisition'
@@ -374,9 +374,9 @@ export function emailKycApproved(opts: {
   const ctaHref    = role === 'buyer'   ? 'https://aegryn.com/client/buyer/catalogue'
                    : role === 'seller'  ? 'https://aegryn.com/client/seller/actifs'
                    : 'https://aegryn.com/client/partner'
-  const roleAction = role === 'buyer'   ? 'vous pouvez désormais <strong>vous inscrire et accéder aux sessions de vente AEGRYN</strong>.'
+  const roleAction = role === 'buyer'   ? 'vous pouvez désormais <strong>vous inscrire et accéder aux sessions de vente Aegryn</strong>.'
                    : role === 'seller'  ? 'vous pouvez désormais <strong>soumettre un actif pour certification et mise en vente</strong>.'
-                   : 'vous pouvez désormais <strong>publier votre fiche profil expert et recevoir des mandats clients AEGRYN</strong>.'
+                   : 'vous pouvez désormais <strong>publier votre fiche profil expert et recevoir des mandats clients Aegryn</strong>.'
 
   const html = WRAP(`
     <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">
@@ -385,7 +385,7 @@ export function emailKycApproved(opts: {
     <h1 style="margin:0 0 16px 0;font-size:22px;font-weight:700;color:#0F1C3F;line-height:1.25;">Votre dossier KYC est validé</h1>
     <p style="margin:0 0 20px 0;font-size:14px;color:#475569;line-height:1.6;">
       Bonjour <strong style="color:#0F1C3F;">${opts.memberName}</strong>,<br/><br/>
-      Votre dossier KYC a été examiné et <strong style="color:#16a34a;">approuvé</strong> par l'équipe AEGRYN. Votre identité et vos documents sont conformes à nos exigences réglementaires.<br/><br/>
+      Votre dossier KYC a été examiné et <strong style="color:#16a34a;">approuvé</strong> par l'équipe Aegryn. Votre identité et vos documents sont conformes à nos exigences réglementaires.<br/><br/>
       En tant que ${roleLabel}, ${roleAction}
     </p>
     <p style="margin:0 0 28px 0;">${ctaButton(ctaLabel, ctaHref)}</p>

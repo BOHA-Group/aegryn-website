@@ -6,7 +6,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { ArrowUpRight, Gavel } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Mes offres — Espace Acquéreur AEGRYN',
+  title: 'Mes offres — Espace Acquéreur Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -70,7 +70,7 @@ export default async function BuyerOffresPage() {
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Acquéreur</p>
           <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Mes offres</h1>
           <p className="font-sans text-[13px] text-gray-400 mt-1">
-            Expressions d&apos;Intérêt et offres soumises à l&apos;équipe AEGRYN.
+            Expressions d&apos;Intérêt et offres soumises à l&apos;équipe Aegryn.
           </p>
         </div>
         <Link href="/client/buyer/catalogue"

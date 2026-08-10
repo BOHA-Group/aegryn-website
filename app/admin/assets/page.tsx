@@ -5,7 +5,7 @@ import Link                    from 'next/link'
 import AssetsAdminClient       from './AssetsAdminClient'
 
 export const metadata: Metadata = {
-  title: 'Assets — AEGRYN Admin',
+  title: 'Assets — Aegryn Admin',
   robots: { index: false, follow: false },
 }
 
@@ -59,7 +59,7 @@ export default async function AdminAssetsPage({
 
         <div className="mb-8 flex items-start justify-between gap-4">
           <div>
-            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">AEGRYN ADMIN</p>
+            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN</p>
             <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Actifs soumis</h1>
             <p className="text-[12px] text-gray-400 mt-1">Gestion du pipeline de certification</p>
           </div>
