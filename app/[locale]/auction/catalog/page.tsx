@@ -8,6 +8,7 @@ import { createServerClient }      from '@supabase/ssr'
 import { ArrowUpRight, Info, Lock } from 'lucide-react'
 import CatalogNotifyForm           from './CatalogNotifyForm'
 import AuctionAccessRequestForm    from './AuctionAccessRequestForm'
+import CatalogFilters              from './CatalogFilters'
 import { checkAuctionCatalogAccess } from '@/lib/auctionAccess'
 import { createServiceClient }     from '@/lib/supabase'
 
@@ -58,14 +59,6 @@ async function getSessionUser() {
   return user
 }
 
-const GRADES = [
-  { key: 'filterAll',  color: '' },
-  { key: 'filterStar', color: 'text-ag-grade-star' },
-  { key: 'filterAAA',  color: 'text-ag-grade-aaa'  },
-  { key: 'filterAA',   color: 'text-ag-grade-aa'   },
-  { key: 'filterA',    color: 'text-ag-grade-a'    },
-  { key: 'filterB',    color: 'text-ag-grade-b'    },
-] as const
 
 export default async function AuctionCatalogPage({ params }: Props) {
   const { locale } = await params
@@ -235,84 +228,22 @@ export default async function AuctionCatalogPage({ params }: Props) {
       {Header}
       {ThirdPartyBanner}
 
-      {/* Grade filters */}
-      <section className="border-b border-ag-border bg-ag-white sticky top-16 z-30">
-        <div className="max-w-7xl mx-auto px-6 flex items-center gap-1 overflow-x-auto py-3">
-          {GRADES.map(({ key, color }) => (
-            <button
-              key={key}
-              className={`font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2 border border-ag-border hover:border-ag-black transition-colors whitespace-nowrap ${color || 'text-ag-gray'}`}
-            >
-              {t(key)}
-            </button>
-          ))}
-        </div>
-      </section>
-
-      {/* Grille actifs */}
-      <section id="notify" className="py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          {publishedAssets.length > 0 ? (
-            <>
-              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
-                {publishedAssets.length} actif{publishedAssets.length > 1 ? 's' : ''} — session en cours
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border mb-16">
-                {publishedAssets.map((asset) => (
-                  <div key={asset.id} className="bg-ag-white p-8 flex flex-col gap-4 hover:bg-ag-off-white transition-colors">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className={`border px-3 py-1 font-mono font-bold text-[14px] ${gradeColor(asset.official_grade ?? '')}`}>
-                        {asset.official_grade ?? '—'}
-                      </div>
-                      {asset.score_total != null && (
-                        <span className="font-mono text-[10px] text-ag-gray-light">{asset.score_total}/100</span>
-                      )}
-                    </div>
-
-                    {/* Nom société — visible après NDA/CGV */}
-                    {asset.company_name && (
-                      <p className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em]">
-                        {asset.company_name}
-                      </p>
-                    )}
-
-                    <div className="flex flex-wrap items-center gap-2">
-                      {asset.asset_type && (
-                        <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light border border-ag-border px-2 py-0.5">
-                          {asset.asset_type}
-                        </span>
-                      )}
-                      {fmtArr(asset.arr) && (
-                        <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-apex">
-                          {fmtArr(asset.arr)}
-                        </span>
-                      )}
-                    </div>
-
-                    {asset.public_summary && (
-                      <p className="font-sans text-[13px] text-ag-gray leading-relaxed line-clamp-3">
-                        {asset.public_summary}
-                      </p>
-                    )}
-
-                    <div className="mt-auto pt-4 border-t border-ag-border">
-                      <NextLink
-                        href={`/${locale}/client/buyer/catalogue`}
-                        className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ag-black hover:text-ag-apex transition-colors"
-                      >
-                        Accéder au dossier complet <ArrowUpRight size={10} />
-                      </NextLink>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <CatalogNotifyForm locale={locale} />
-            </>
-          ) : (
-            <CatalogNotifyForm locale={locale} />
-          )}
-        </div>
-      </section>
+      <CatalogFilters
+        assets={publishedAssets}
+        locale={locale}
+        labels={{
+          filterAll:  t('filterAll'),
+          filterStar: t('filterStar'),
+          filterAAA:  t('filterAAA'),
+          filterAA:   t('filterAA'),
+          filterA:    t('filterA'),
+          filterB:    t('filterB'),
+          count:      '',
+          session:    '',
+          arrRanges:  [],
+          categories: [],
+        }}
+      />
 
       {/* Seller CTA */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
