@@ -194,7 +194,7 @@ export default async function AdminIndexPage({
         {
           href:  `/admin/settings${qs}`,
           title: '⚙️ Paramètres',
-          desc:  'Documents légaux, templates emails, benchmark marché.',
+          desc:  'Benchmark marché.',
           badge: null,
         },
         {

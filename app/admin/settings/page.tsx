@@ -17,8 +17,6 @@ export default async function AdminSettingsPage({
 
 
   const sections = [
-    { title: 'Documents légaux',  desc: 'CGV, mentions légales, politique de confidentialité', href: `/admin/settings/legal` },
-    { title: 'Templates emails',  desc: 'Emails transactionnels (Resend) — invitations, notifications', href: `/admin/settings/emails` },
     { title: 'Benchmark marché',  desc: 'Mise à jour des données de benchmark_data', href: `/admin/settings/benchmark` },
   ]
 
