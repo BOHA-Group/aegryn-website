@@ -133,6 +133,10 @@
     {
       "path": "/api/cron/newsletter",
       "schedule": "0 9 * * 1"
+    },
+    {
+      "path": "/api/cron/expert-expiry",
+      "schedule": "0 8 * * *"
     }
   ]
 }

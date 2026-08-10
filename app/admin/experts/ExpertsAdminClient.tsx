@@ -307,9 +307,9 @@ function ProfileRow({
               {patchError}
             </div>
           )}
-          {profile.review_status === 'approved' && !profile.is_visible && profile.hidden_reason !== 'admin_hidden' && (
+          {profile.review_status === 'approved' && !profile.is_visible && profile.hidden_reason !== 'admin_hidden' && (!kycOk || !planOk) && (
             <p className="mb-3 font-sans text-[11px] text-blue-600 bg-blue-50 border border-blue-100 px-3 py-2">
-              Fiche approuvée par l&apos;admin — publication automatique dès que {!kycOk && 'le KYC'}{!kycOk && !planOk && ' et '}{!planOk && 'l\'abonnement'} {!kycOk || !planOk ? 'seront actifs.' : ''}
+              Fiche approuvée — prérequis manquants : {!kycOk && 'KYC'}{!kycOk && !planOk && ' + '}{!planOk && 'abonnement'}. Publication automatique dès qu&apos;ils seront actifs, ou utilisez &quot;Publier directement&quot;.
             </p>
           )}
 
@@ -320,6 +320,14 @@ function ProfileRow({
                 disabled={loading}
                 className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-emerald-200 text-emerald-700 hover:bg-emerald-50 disabled:opacity-50 transition-colors">
                 ✓ Approuver la fiche
+              </button>
+            )}
+            {profile.review_status === 'approved' && !profile.is_visible && (
+              <button
+                onClick={() => { if (confirm('Publier manuellement cette fiche sans vérifier les prérequis ?')) patchProfile({ is_visible: true, verified_at: new Date().toISOString(), hidden_reason: null }) }}
+                disabled={loading}
+                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-blue-300 text-blue-700 bg-blue-50 hover:bg-blue-100 disabled:opacity-50 transition-colors">
+                ⚡ Publier directement
               </button>
             )}
             {profile.is_visible && (

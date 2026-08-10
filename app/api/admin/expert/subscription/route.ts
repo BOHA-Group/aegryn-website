@@ -11,6 +11,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z }                         from 'zod'
 import { getAdminUser }              from '@/lib/adminAuth'
 import { createServiceClient }       from '@/lib/supabase'
+import { syncExpertVisibility }      from '@/lib/expertVisibility'
 
 const schema = z.object({
   user_id: z.string().uuid(),
@@ -62,5 +63,8 @@ export async function POST(req: NextRequest) {
   if (creditResult.error) return NextResponse.json({ error: creditResult.error.message }, { status: 500 })
   if (profileResult.error) return NextResponse.json({ error: profileResult.error.message }, { status: 500 })
 
-  return NextResponse.json({ ok: true, expert_plan_end: newEnd })
+  // Sync visibility : publie automatiquement si fiche approuvée + KYC OK
+  const isVisible = await syncExpertVisibility(supa, user_id)
+
+  return NextResponse.json({ ok: true, expert_plan_end: newEnd, is_visible: isVisible })
 }
