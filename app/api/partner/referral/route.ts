@@ -187,6 +187,7 @@ export async function POST(req: NextRequest) {
 
   if (isAlreadyActive) {
     /* Abonnement actif → crédit +1 mois immédiat */
+    const now = new Date()
     const { data: currentProfile } = await supa
       .from('profiles')
       .select('expert_plan_end')
@@ -204,8 +205,62 @@ export async function POST(req: NextRequest) {
       months:     1,
       note:       'Mois offert — parrainage (filleul)',
       applied:    true,
-      applied_at: new Date().toISOString(),
+      applied_at: now.toISOString(),
     })
+
+    /* Le filleul est déjà abonné → aucun futur webhook checkout.session.completed
+       ne viendra récompenser le parrain ni clore ce referral. On le fait ici,
+       immédiatement, sinon le referral reste "pending" indéfiniment et le
+       parrain n'est jamais crédité. */
+    const { data: sponsorProfile } = await supa
+      .from('profiles')
+      .select('referral_months_credit, expert_plan, expert_plan_end')
+      .eq('id', sponsor.id)
+      .single()
+
+    const sponsorCurrentCredit = (sponsorProfile as Record<string, unknown> | null)?.referral_months_credit as number ?? 0
+    const sponsorActive        = (sponsorProfile as Record<string, unknown> | null)?.expert_plan === 'active'
+
+    const { data: sponsorAllCredits } = await supa
+      .from('expert_subscription_credits')
+      .select('months')
+      .eq('user_id', sponsor.id)
+    const sponsorCreditsTotal = (sponsorAllCredits ?? []).reduce((sum, c) => sum + (c.months ?? 0), 0)
+
+    if (sponsorCurrentCredit < REFERRAL_MONTHS_CAP && sponsorActive && sponsorCreditsTotal < CREDITS_CAP) {
+      const sponsorEnd    = (sponsorProfile as Record<string, unknown> | null)?.expert_plan_end as string | null
+      const newSponsorEnd = sponsorEnd ? new Date(sponsorEnd) : now
+      newSponsorEnd.setMonth(newSponsorEnd.getMonth() + 1)
+
+      const { data: newReferral } = await supa
+        .from('expert_referrals')
+        .select('id')
+        .eq('referrer_id', sponsor.id)
+        .eq('referred_id', user.id)
+        .maybeSingle()
+
+      await Promise.allSettled([
+        supa.from('expert_subscription_credits').insert({
+          user_id:     sponsor.id,
+          months:      1,
+          source:      'referral_sponsor',
+          referral_id: newReferral?.id ?? null,
+          note:        'Mois offert — parrainage (parrain)',
+          applied:     true,
+          applied_at:  now.toISOString(),
+        }),
+        supa.from('profiles').update({
+          referral_months_credit: sponsorCurrentCredit + 1,
+          expert_plan_end:        newSponsorEnd.toISOString(),
+        }).eq('id', sponsor.id),
+      ])
+    }
+
+    await supa.from('expert_referrals').update({
+      status:               'rewarded',
+      payment_confirmed_at: now.toISOString(),
+      rewarded_at:          now.toISOString(),
+    }).eq('referrer_id', sponsor.id).eq('referred_id', user.id)
   } else {
     /* Pas d'abonnement actif → crédit pending, sera appliqué à l'activation */
     await supa.from('expert_subscription_credits').insert({
