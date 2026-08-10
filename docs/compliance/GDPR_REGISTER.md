@@ -16,7 +16,9 @@
 | Legal form | _(to be filled — SAS / SA / etc.)_ |
 | Registered address | _(to be filled)_ |
 | Contact | contact@boha-group.com |
-| DPO | _(none designated — to be assessed if threshold reached)_ |
+| DPO | None designated — threshold not reached. Data Protection Advisor to be assessed per nLPD (see `LPD_ADDENDUM.md`) |
+| Privacy policy (public) | `aegryn.com/[locale]/privacy` — 6 locales (fr, en, de, es, it, nl) |
+| Security policy (public) | `aegryn.com/[locale]/security` — 6 locales |
 
 ---
 
@@ -110,7 +112,22 @@
 
 ---
 
-## Processing Activity 7 — Transactional Emails
+## Processing Activity 7 — Data Subject Rights (Export, Anonymisation, Partial Deletion)
+
+| Field | Value |
+|---|---|
+| Purpose | Allow users to exercise GDPR rights: data portability (Art. 20), anonymisation, partial deletion |
+| Legal basis | Art. 6(1)(c) — legal obligation |
+| Data subjects | All authenticated users |
+| APIs implemented | `POST /api/client/account/export`, `POST /api/client/anonymise-account`, `POST /api/client/account/delete-partial` |
+| Audit trail | `rgpd_requests` table — type: `export`, `anonymize`, `delete_partial`, `delete_full` |
+| Recipients | Supabase (processor) |
+| Retention | Audit log: 5 years |
+| Security measures | Auth required, RLS, service role for deletions |
+
+---
+
+## Processing Activity 8 — Transactional Emails
 
 | Field | Value |
 |---|---|
@@ -147,7 +164,7 @@
 | Purpose | Publish market intelligence articles — some AI-assisted |
 | Legal basis | Art. 6(1)(f) — legitimate interest |
 | Data subjects | None (no personal data in articles) |
-| Notes | AI editorial review process documented — see `ai-editorial-review-process.md` (EU AI Act art. 50 §4) |
+| Notes | AI editorial review process documented — see `ai-editorial-review-process.md` (EU AI Act art. 50 §4). No personal data in articles. |
 
 ---
 

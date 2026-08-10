@@ -22,7 +22,7 @@ For each item:
 |---|---|---|---|
 | 1.1 | Record of processing activities (Art. 30) maintained | `GDPR_REGISTER.md` | ✅ |
 | 1.2 | Legal basis identified for each processing activity | `GDPR_REGISTER.md` | ✅ |
-| 1.3 | Privacy policy published and accessible | `/terms/use` | ⚠️ Review completeness |
+| 1.3 | Privacy policy published and accessible | `/privacy` (6 locales) + `/security` (6 locales) | ✅ |
 | 1.4 | Data subject rights procedure in place (access, erasure, portability) | Account deletion flow | ⚠️ Confirm erasure is complete |
 | 1.5 | DPA signed with all processors (Art. 28) | `DPA_TEMPLATE.md` | ❌ DPAs not yet formally accepted |
 | 1.6 | Sub-processor lists reviewed | `DPA_TEMPLATE.md` | ⚠️ |
@@ -92,7 +92,8 @@ For each item:
 | AI editorial review process | `docs/compliance/ai-editorial-review-process.md` | ✅ |
 | Cookie consent architecture | `docs/compliance/COOKIE_CONSENT.md` | ✅ |
 | Git history (traceability) | `git log --all --oneline` | ✅ |
-| Privacy policy (public) | `aegryn.com/terms/use` | ⚠️ Review needed |
+| Privacy policy (public) | `aegryn.com/[locale]/privacy` — 6 locales | ✅ |
+| Security policy (public) | `aegryn.com/[locale]/security` — 6 locales | ✅ |
 | CGV (public) | `aegryn.com/terms/cgv` | ⚠️ Awaiting lawyer |
 | AI usage notice (public) | `aegryn.com/terms/ai-usage` | ✅ |
 
@@ -105,8 +106,9 @@ For each item:
 | 🔴 | Formally accept DPAs with Supabase, Stripe, Resend, Vercel, Cloudflare |
 | 🔴 | Confirm SCCs cover Swiss transfers for all US processors |
 | 🔴 | Have CGV reviewed and signed by lawyer |
-| 🟡 | Review `/terms/use` privacy policy for GDPR + LPD completeness |
-| 🟡 | Confirm complete data erasure flow (account deletion → all tables) |
+| 🟡 | Review `/privacy` content for GDPR Art. 13/14 completeness (referral, CIFS, NDA processing) |
+| 🟡 | Verify export/anonymise/delete-partial APIs cover all tables in GDPR_REGISTER |
 | 🟡 | Enforce MFA on admin accounts |
+| 🟡 | Remove URL token fallback from `checkAdminAccess` — use `requireAdmin()` only |
 | 🟢 | Designate Data Protection Advisor (LPD) |
 | 🟢 | Schedule annual AI Act review |
