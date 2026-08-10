@@ -6,7 +6,6 @@ import { EXPERTISE_TAXONOMY } from '@/lib/expertiseTaxonomy'
 
 type Props = {
   partnerId: string
-  adminToken?: string
   assets: { id: string; name: string }[]
   backHref: string
 }
@@ -17,7 +16,7 @@ const DIMENSION_LABELS: Record<string, string> = {
   both:        'Advisory Tech & Transaction',
 }
 
-export default function CreateMandateForm({ partnerId, adminToken, assets, backHref }: Props) {
+export default function CreateMandateForm({ partnerId, assets, backHref }: Props) {
   const router = useRouter()
   const [saving, setSaving] = useState(false)
   const [error, setError]   = useState('')
@@ -44,7 +43,6 @@ export default function CreateMandateForm({ partnerId, adminToken, assets, backH
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        token: adminToken ?? '',
         partner_id: partnerId,
         client_name: clientName,
         client_email: clientEmail,

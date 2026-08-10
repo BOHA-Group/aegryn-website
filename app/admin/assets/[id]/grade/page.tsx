@@ -40,7 +40,6 @@ export default async function AdminAssetGradePage({
   if (error || !asset) notFound()
 
   const a = asset as Record<string, unknown>
-  const tokenQs = token ? `?token=${token}` : ''
 
   /* ── Benchmark marché — comparables pour contextualiser le grading ── */
   const { data: benchmarkRows } = await supa
@@ -92,15 +91,15 @@ export default async function AdminAssetGradePage({
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4 flex-wrap">
-            <Link href={`/admin/assets${tokenQs}`}
+            <Link href={`/admin/assets`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
               ← Assets
             </Link>
-            <Link href={`/admin/assets/${id}/documents${tokenQs}`}
+            <Link href={`/admin/assets/${id}/documents`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
               Documents {blockingAlerts.length > 0 && <span className="text-amber-500">({blockingAlerts.length})</span>}
             </Link>
-            <Link href={`/admin/leads${tokenQs}`}
+            <Link href={`/admin/leads`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
               Leads
             </Link>
@@ -143,7 +142,6 @@ export default async function AdminAssetGradePage({
         {/* Formulaire grade */}
         <GradeForm
           assetId={id}
-          adminToken={token ?? ''}
           blockingAlerts={blockingAlerts}
           docsByCategory={docsByCategory}
           initialStatus={String(a.status ?? 'submitted')}

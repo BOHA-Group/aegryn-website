@@ -265,10 +265,9 @@ function DocList({ dims, docsByCategory }: { dims: string[]; docsByCategory: Rec
 }
 
 export default function GradeEngineForm({
-  assetId, adminToken, docsByCategory = {}, autoFillOverrides,
+  assetId, docsByCategory = {}, autoFillOverrides,
 }: {
   assetId: string
-  adminToken: string
   docsByCategory?: Record<string, DataRoomDocEntry[]>
   autoFillOverrides?: AutoFillResult['gradeInputOverrides']
 }) {
@@ -353,7 +352,7 @@ export default function GradeEngineForm({
       const res = await fetch(`/api/admin/assets/${assetId}/grade-engine`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ token: adminToken, action: 'compute', input }),
+        body: JSON.stringify({ action: 'compute', input }),
       })
       const json = await res.json()
       if (!res.ok) { setStatusMsg(json.error ?? 'Erreur serveur'); return }
@@ -383,7 +382,7 @@ export default function GradeEngineForm({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          token: adminToken, action: 'validate',
+          action: 'validate',
           assessmentId, finalGrade, overrideNote: overrideNote || undefined,
           publicRationale: publicRationale || undefined,
         }),
@@ -404,7 +403,7 @@ export default function GradeEngineForm({
       const res = await fetch(`/api/admin/assets/${assetId}/grade-engine`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ token: adminToken, action: 'publish', assessmentId }),
+        body: JSON.stringify({ action: 'publish', assessmentId }),
       })
       const json = await res.json()
       if (!res.ok) { setStatusMsg(json.error ?? 'Erreur'); return }

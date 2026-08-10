@@ -17,7 +17,6 @@ export default async function AdminReferralsPage({
   await checkAdminAccess(params.token)
 
   const supa    = createServiceClient()
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   const [{ data: referrals }, { data: credits }, { data: partners }] = await Promise.all([
     supa
@@ -52,7 +51,6 @@ export default async function AdminReferralsPage({
       referrals={(referrals ?? []) as unknown as ReferralRow[]}
       credits={(credits ?? []) as unknown as CreditRow[]}
       activePartners={(partners ?? []) as { id: string; full_name: string | null; email: string }[]}
-      tokenQs={tokenQs}
     />
   )
 }

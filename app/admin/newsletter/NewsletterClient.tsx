@@ -24,10 +24,8 @@ function fmtDate(v: unknown): string {
 
 export default function NewsletterClient({
   subscribers: initial,
-  tokenQs,
 }: {
   subscribers: Subscriber[]
-  tokenQs:     string
 }) {
   const [rows,     setRows]     = useState(initial)
   const [selected, setSelected] = useState<Set<string>>(new Set())
@@ -71,7 +69,7 @@ export default function NewsletterClient({
     if (!window.confirm(`Supprimer définitivement ${selected.size} abonné${selected.size > 1 ? 's' : ''} ? Action irréversible.`)) return
     setDeleting(true)
     setError('')
-    const res = await fetch(`/api/admin/bulk-delete${tokenQs}`, {
+    const res = await fetch(`/api/admin/bulk-delete`, {
       method:  'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ table: 'newsletter_subscribers', ids: [...selected] }),

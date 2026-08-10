@@ -2,7 +2,7 @@
 
 import { Suspense, useCallback } from 'react'
 import Link from 'next/link'
-import { usePathname, useSearchParams, useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { LogOut } from 'lucide-react'
 
 const SECTIONS = [
@@ -51,12 +51,8 @@ const SECTIONS = [
 ]
 
 function AdminSideNavInner({ adminEmail }: { adminEmail: string }) {
-  const pathname    = usePathname()
-  const searchParams = useSearchParams()
-  const router      = useRouter()
-  const token       = searchParams.get('token')
-  const tokenSuffix = token ? `?token=${token}` : ''
-
+  const pathname = usePathname()
+  const router   = useRouter()
   const handleLogout = useCallback(async () => {
     await fetch('/api/client/logout', { method: 'POST' })
     router.push('/client/login')
@@ -73,7 +69,7 @@ function AdminSideNavInner({ adminEmail }: { adminEmail: string }) {
       {/* Dashboard global */}
       <div className="mb-1">
         <Link
-          href={`/admin${tokenSuffix}`}
+          href="/admin"
           className={`flex items-center px-5 py-2 font-sans text-[12px] transition-colors ${
             pathname === '/admin'
               ? 'bg-white/10 text-white font-semibold border-l-2 border-ag-apex'
@@ -94,7 +90,7 @@ function AdminSideNavInner({ adminEmail }: { adminEmail: string }) {
             return (
               <Link
                 key={item.href}
-                href={`${item.href}${tokenSuffix}`}
+                href={item.href}
                 className={`flex items-center px-5 py-2 font-sans text-[12px] transition-colors ${
                   isActive
                     ? 'bg-white/10 text-white font-semibold border-l-2 border-ag-apex'

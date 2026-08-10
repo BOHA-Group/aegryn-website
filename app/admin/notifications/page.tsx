@@ -53,7 +53,6 @@ export default async function AdminNotificationsPage({
   const params     = await searchParams
   await checkAdminAccess(params.token)
 
-  const tokenQs = params.token ? `?token=${params.token}` : ''
   const supa    = createServiceClient()
 
   const { data: broadcasts } = await supa
@@ -108,7 +107,7 @@ export default async function AdminNotificationsPage({
             <Mail size={14} className="text-gray-500" />
             <p className="font-mono text-[9px] uppercase tracking-widest text-gray-500">Nouveau broadcast</p>
           </div>
-          <BroadcastForm adminToken={params.token ?? ''} roleCounts={roleCounts} />
+          <BroadcastForm roleCounts={roleCounts} />
         </div>
 
         {/* Historique */}
@@ -180,7 +179,7 @@ export default async function AdminNotificationsPage({
 
       {/* Nav retour */}
       <div className="mt-10 pt-6 border-t border-gray-100">
-        <a href={`/admin${tokenQs}`}
+        <a href={`/admin`}
           className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors">
           ← Retour au tableau de bord
         </a>

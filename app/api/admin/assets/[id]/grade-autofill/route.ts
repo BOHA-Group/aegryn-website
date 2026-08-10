@@ -11,6 +11,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient }       from '@/lib/supabase'
 import { inferGradeFromDocs }        from '@/lib/gradeAutoFill'
 import type { DocSummary }           from '@/lib/gradeAutoFill'
+import { getAdminUser }              from '@/lib/adminAuth'
 
 export const runtime = 'nodejs'
 
@@ -22,8 +23,10 @@ export async function GET(
   const token     = req.nextUrl.searchParams.get('token')
   const adminToken = process.env.ADMIN_LEADS_TOKEN
 
-  if (adminToken && token !== adminToken) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  const tokenOk = adminToken && token === adminToken
+  if (!tokenOk) {
+    const adminUser = await getAdminUser()
+    if (!adminUser) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
   const supa = createServiceClient()

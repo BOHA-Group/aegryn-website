@@ -51,7 +51,6 @@ export default async function AdminAssetsPage({
     counts[s] = count ?? 0
   }))
 
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   return (
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">
@@ -64,11 +63,11 @@ export default async function AdminAssetsPage({
             <p className="text-[12px] text-gray-400 mt-1">Gestion du pipeline de certification</p>
           </div>
           <div className="flex gap-2">
-            <Link href={`/admin/catalog${tokenQs}`}
+            <Link href={`/admin/catalog`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
               Catalogue
             </Link>
-            <Link href={`/admin/leads${tokenQs}`}
+            <Link href={`/admin/leads`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
               ← Leads
             </Link>
@@ -92,7 +91,7 @@ export default async function AdminAssetsPage({
         <div className="flex flex-wrap gap-2 mb-3">
           {[{ key: 'all', label: 'Tous', count: Object.values(counts).reduce((a, b) => a + b, 0) }, ...STATUS_ORDER.map(s => ({ key: s, label: s, count: counts[s] ?? 0 }))].map(({ key, label, count }) => (
             <Link key={key}
-              href={`/admin/assets?status=${key}${evalFilter !== 'all' ? `&eval=${evalFilter}` : ''}${params.token ? `&token=${params.token}` : ''}`}
+              href={`/admin/assets?status=${key}${evalFilter !== 'all' ? `&eval=${evalFilter}` : ''}`}
               className={`px-4 py-2 text-[11px] font-semibold border transition-colors flex items-center gap-2 ${
                 status === key ? 'bg-gray-900 text-white border-gray-900' : 'border-gray-200 text-gray-600 hover:border-gray-400 bg-white'
               }`}>
@@ -106,7 +105,7 @@ export default async function AdminAssetsPage({
         <div className="flex flex-wrap gap-2 mb-6">
           {(['all', ...EVAL_TYPES] as const).map(k => (
             <Link key={k}
-              href={`/admin/assets?status=${status}&eval=${k}${params.token ? `&token=${params.token}` : ''}`}
+              href={`/admin/assets?status=${status}&eval=${k}`}
               className={`px-3 py-1.5 text-[10px] font-semibold border transition-colors ${
                 evalFilter === k ? 'bg-indigo-700 text-white border-indigo-700' : 'border-gray-200 text-gray-500 hover:border-gray-400 bg-white'
               }`}>
@@ -126,7 +125,7 @@ export default async function AdminAssetsPage({
               </p>
             </div>
             <Link
-              href={`/admin/partners/${params.partner_id}${tokenQs}`}
+              href={`/admin/partners/${params.partner_id}`}
               className="font-mono text-[10px] uppercase tracking-widest text-indigo-600 border border-indigo-300 px-3 py-1.5 hover:border-indigo-500 transition-colors shrink-0"
             >
               ← Retour partenaire
@@ -137,8 +136,6 @@ export default async function AdminAssetsPage({
         {/* Table avec sélection + suppression */}
         <AssetsAdminClient
           rows={rows}
-          adminToken={params.token ?? ''}
-          tokenQs={tokenQs}
         />
       </div>
     </main>

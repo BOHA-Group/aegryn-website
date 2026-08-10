@@ -27,7 +27,6 @@ export default async function AdminMemberDetailPage({
   await checkAdminAccess(sp.token)
 
   const supa = createServiceClient()
-  const tokenQs = sp.token ? `?token=${sp.token}` : ''
 
   /* ── Server-side action (NDA status change via URL) ── */
   if (sp.action === 'nda' && sp.nda && sp.status) {
@@ -38,7 +37,7 @@ export default async function AdminMemberDetailPage({
       if (sp.status === 'nda_signed') update.nda_signed_at = new Date().toISOString()
       await supa.from('nda_requests').update(update).eq('id', sp.nda)
     }
-    redirect(`/admin/members/${id}${tokenQs}`)
+    redirect(`/admin/members/${id}`)
   }
 
   /* ── Fetch profile ── */
@@ -105,9 +104,9 @@ export default async function AdminMemberDetailPage({
 
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 mb-6 text-[11px] font-mono text-gray-400">
-          <Link href={`/admin${tokenQs}`} className="hover:text-gray-700 transition-colors">Admin</Link>
+          <Link href={`/admin`} className="hover:text-gray-700 transition-colors">Admin</Link>
           <span>/</span>
-          <Link href={`/admin/members${tokenQs}`} className="hover:text-gray-700 transition-colors">Members</Link>
+          <Link href={`/admin/members`} className="hover:text-gray-700 transition-colors">Members</Link>
           <span>/</span>
           <span className="text-gray-700">{profile.full_name ?? profile.email}</span>
         </div>
@@ -150,7 +149,6 @@ export default async function AdminMemberDetailPage({
           commissions={(commissions ?? []) as Record<string, unknown>[]}
           sellerAssets={(sellerAssets ?? []) as Record<string, unknown>[]}
           token={sp.token ?? ''}
-          tokenQs={tokenQs}
         />
 
       </div>

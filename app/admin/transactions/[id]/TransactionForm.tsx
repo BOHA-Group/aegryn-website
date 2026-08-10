@@ -18,10 +18,9 @@ const sectionCls = 'bg-white border border-gray-200 p-6 flex flex-col gap-4'
 
 type Props = {
   transaction: Record<string, unknown>
-  adminToken?: string
 }
 
-export default function TransactionForm({ transaction, adminToken }: Props) {
+export default function TransactionForm({ transaction }: Props) {
   const router = useRouter()
   const [saving, setSaving]   = useState(false)
   const [saved, setSaved]     = useState(false)
@@ -70,7 +69,6 @@ export default function TransactionForm({ transaction, adminToken }: Props) {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          token: adminToken ?? '',
           partner_email: partnerEmail || undefined,
           partner_commission_pct: partnerCommPct ? Number(partnerCommPct) : undefined,
           partner_commission_chf: partnerCommChf ? Number(partnerCommChf) : undefined,
@@ -91,7 +89,7 @@ export default function TransactionForm({ transaction, adminToken }: Props) {
       const res = await fetch(`/api/admin/transactions/${transaction.id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ token: adminToken ?? '', ...payload }),
+        body: JSON.stringify({ ...payload }),
       })
       const json = await res.json()
       if (res.ok) {

@@ -43,12 +43,10 @@ function fmtDate(d: unknown) {
 }
 
 type Props = {
-  rows:        Asset[]
-  adminToken:  string
-  tokenQs:     string
+  rows: Asset[]
 }
 
-export default function AssetsAdminClient({ rows: initialRows, adminToken, tokenQs }: Props) {
+export default function AssetsAdminClient({ rows: initialRows }: Props) {
   const router = useRouter()
   const [isPending, startTransition] = useTransition()
   const [rows, setRows] = useState<Asset[]>(initialRows)
@@ -83,7 +81,7 @@ export default function AssetsAdminClient({ rows: initialRows, adminToken, token
     setDeleting(true)
     setError(null)
     try {
-      const res = await fetch(`/api/admin/assets${adminToken ? `?token=${adminToken}` : ''}`, {
+      const res = await fetch(`/api/admin/assets`, {
         method:  'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ ids }),
@@ -106,7 +104,7 @@ export default function AssetsAdminClient({ rows: initialRows, adminToken, token
     setDeleting(true)
     setError(null)
     try {
-      const res = await fetch(`/api/admin/assets${adminToken ? `?token=${adminToken}` : ''}`, {
+      const res = await fetch(`/api/admin/assets`, {
         method:  'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ ids: [id] }),
@@ -220,13 +218,12 @@ export default function AssetsAdminClient({ rows: initialRows, adminToken, token
                         assetId={id}
                         sellerEmail={String(r.seller_email ?? '')}
                         sellerName={String(r.seller_name ?? '')}
-                        adminToken={adminToken}
                       />
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex flex-col gap-1.5">
                         <Link
-                          href={`/admin/assets/${id}/grade${tokenQs}`}
+                          href={`/admin/assets/${id}/grade`}
                           className="inline-flex items-center gap-1 text-[10px] font-semibold text-blue-600 hover:text-blue-800">
                           Grader <ArrowUpRight size={10} />
                         </Link>

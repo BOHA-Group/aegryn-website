@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
+import { getAdminUser }       from '@/lib/adminAuth'
 
 const ALLOWED = ['public_summary', 'company_name', 'official_grade', 'score_total', 'asset_type'] as const
 
@@ -11,8 +12,10 @@ export async function PATCH(
   const adminToken = process.env.ADMIN_LEADS_TOKEN
   const body = await req.json() as Record<string, unknown>
 
-  if (adminToken && body.token !== adminToken) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  const tokenOk = adminToken && body.token === adminToken
+  if (!tokenOk) {
+    const adminUser = await getAdminUser()
+    if (!adminUser) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
   const patch: Record<string, unknown> = {}

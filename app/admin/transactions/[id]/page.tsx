@@ -22,7 +22,6 @@ export default async function AdminTransactionDetailPage({
   await checkAdminAccess(params.token)
 
   const supa = createServiceClient()
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   const { data: transaction, error } = await supa
     .from('transactions')
@@ -45,7 +44,7 @@ export default async function AdminTransactionDetailPage({
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">
       <div className="max-w-4xl mx-auto">
 
-        <Link href={`/admin/transactions${tokenQs}`} className="text-[11px] font-semibold text-gray-400 hover:text-gray-700 mb-6 inline-block">
+        <Link href={`/admin/transactions`} className="text-[11px] font-semibold text-gray-400 hover:text-gray-700 mb-6 inline-block">
           ← Retour aux transactions
         </Link>
 
@@ -63,7 +62,7 @@ export default async function AdminTransactionDetailPage({
               <p className="text-[12px] text-gray-400 mt-1 font-mono">{id}</p>
             </div>
 
-            <TransactionForm transaction={transaction as Record<string, unknown>} adminToken={params.token} />
+            <TransactionForm transaction={transaction as Record<string, unknown>} />
 
             {/* Audit log escrow */}
             {auditLog && auditLog.length > 0 && (

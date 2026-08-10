@@ -4,12 +4,11 @@ import { useState } from 'react'
 import { UserPlus, CheckCircle2 } from 'lucide-react'
 
 export default function InviteButton({
-  assetId, sellerEmail, sellerName, adminToken,
+  assetId, sellerEmail, sellerName,
 }: {
   assetId: string
   sellerEmail: string
   sellerName: string
-  adminToken: string
 }) {
   const [loading, setLoading] = useState(false)
   const [done,    setDone]    = useState(false)
@@ -27,7 +26,6 @@ export default function InviteButton({
           fullName: sellerName,
           role:     'seller',
           assetId,
-          token:    adminToken,
         }),
       })
       const json = await res.json()

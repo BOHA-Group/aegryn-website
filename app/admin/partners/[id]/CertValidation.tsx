@@ -32,7 +32,7 @@ const STATUS_COLORS: Record<string, string> = {
   expired:   'bg-gray-100 text-gray-400',
 }
 
-function CertRow({ cert, adminToken }: { cert: Cert; adminToken: string }) {
+function CertRow({ cert }: { cert: Cert }) {
   const router = useRouter()
   const [open,      setOpen]      = useState(false)
   const [saving,    setSaving]    = useState(false)
@@ -51,7 +51,6 @@ function CertRow({ cert, adminToken }: { cert: Cert; adminToken: string }) {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        token: adminToken,
         action,
         cosignature_amount_chf: amount ? parseFloat(amount) : undefined,
         rejection_reason: reason || undefined,
@@ -178,10 +177,8 @@ function CertRow({ cert, adminToken }: { cert: Cert; adminToken: string }) {
 
 export default function CertValidation({
   certs,
-  adminToken,
 }: {
   certs: Cert[]
-  adminToken: string
 }) {
   const submittedCount = certs.filter(c => c.status === 'submitted').length
 
@@ -202,7 +199,7 @@ export default function CertValidation({
       ) : (
         <div>
           {certs.map(c => (
-            <CertRow key={c.id} cert={c} adminToken={adminToken} />
+            <CertRow key={c.id} cert={c} />
           ))}
         </div>
       )}

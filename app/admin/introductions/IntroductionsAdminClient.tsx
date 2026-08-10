@@ -22,7 +22,6 @@ export type IntroductionAdmin = {
 
 type Props = {
   introductions: IntroductionAdmin[]
-  tokenQs:       string
 }
 
 const STATUS_OPTIONS = [
@@ -46,7 +45,7 @@ function fmtDate(d: string) {
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: '2-digit', year: '2-digit' })
 }
 
-export default function IntroductionsAdminClient({ introductions: initial, tokenQs }: Props) {
+export default function IntroductionsAdminClient({ introductions: initial }: Props) {
   const [items,   setItems]   = useState(initial)
   const [filter,  setFilter]  = useState<string>('new')
   const [saving,  setSaving]  = useState<string | null>(null)
@@ -65,7 +64,7 @@ export default function IntroductionsAdminClient({ introductions: initial, token
     setSaving(id + status)
     setError('')
     try {
-      const res = await fetch(`/api/admin/introductions/${id}${tokenQs}`, {
+      const res = await fetch(`/api/admin/introductions/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ introduction_status: status }),
@@ -83,7 +82,7 @@ export default function IntroductionsAdminClient({ introductions: initial, token
     setSaving(id + 'note')
     setError('')
     try {
-      const res = await fetch(`/api/admin/introductions/${id}${tokenQs}`, {
+      const res = await fetch(`/api/admin/introductions/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ admin_note: noteVal.trim() || null }),
@@ -259,7 +258,7 @@ export default function IntroductionsAdminClient({ introductions: initial, token
       )}
 
       <div className="mt-8 pt-6 border-t border-gray-100">
-        <a href={`/admin${tokenQs}`}
+        <a href={`/admin`}
           className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors">
           ← Retour au tableau de bord
         </a>

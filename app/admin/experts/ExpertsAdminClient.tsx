@@ -60,11 +60,9 @@ function fmtDate(d: string) {
 
 function ApplicationRow({
   app,
-  tokenQs,
   onRefresh,
 }: {
   app: Application
-  tokenQs: string
   onRefresh: () => void
 }) {
   const [expanded, setExpanded] = useState(false)
@@ -72,7 +70,7 @@ function ApplicationRow({
 
   async function patch(status: string) {
     setLoading(true)
-    await fetch(`/api/admin/experts${tokenQs}`, {
+    await fetch(`/api/admin/experts`, {
       method:  'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ table: 'expert_applications', id: app.id, status }),
@@ -84,7 +82,7 @@ function ApplicationRow({
   async function del() {
     if (!confirm('Supprimer définitivement cette candidature ?')) return
     setLoading(true)
-    await fetch(`/api/admin/experts${tokenQs}`, {
+    await fetch(`/api/admin/experts`, {
       method:  'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ table: 'expert_applications', id: app.id }),
@@ -173,11 +171,9 @@ function ApplicationRow({
 
 function ProfileRow({
   profile,
-  tokenQs,
   onRefresh,
 }: {
   profile: ExpertProfile
-  tokenQs: string
   onRefresh: () => void
 }) {
   const [expanded,     setExpanded]     = useState(false)
@@ -189,7 +185,7 @@ function ProfileRow({
   async function patchProfile(updates: Record<string, unknown>) {
     setLoading(true)
     setPatchError(null)
-    const res  = await fetch(`/api/admin/experts${tokenQs}`, {
+    const res  = await fetch(`/api/admin/experts`, {
       method:  'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ table: 'expert_profiles', id: profile.id, ...updates }),
@@ -207,7 +203,7 @@ function ProfileRow({
   async function del() {
     if (!confirm('Supprimer définitivement cette fiche ?')) return
     setLoading(true)
-    await fetch(`/api/admin/experts${tokenQs}`, {
+    await fetch(`/api/admin/experts`, {
       method:  'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ table: 'expert_profiles', id: profile.id }),
@@ -556,14 +552,13 @@ type Props = {
   applications: Application[]
   profiles:     ExpertProfile[]
   clickStats:   ClickStat[]
-  tokenQs:      string
   initialPeriod?: string
 }
 
 function TractionPanel({
-  stats, tokenQs, onRefresh, period, onPeriodChange,
+  stats, onRefresh, period, onPeriodChange,
 }: {
-  stats: ClickStat[]; tokenQs: string; onRefresh: () => void
+  stats: ClickStat[]; onRefresh: () => void
   period: string; onPeriodChange: (p: string) => void
 }) {
   const [open,       setOpen]       = useState(true)
@@ -573,7 +568,7 @@ function TractionPanel({
   async function purgeClicks(expertId: string, name: string) {
     if (!confirm(`Supprimer tous les clics de ${name} sur cette période ?`)) return
     setPurgingId(expertId)
-    await fetch(`/api/admin/experts${tokenQs}`, {
+    await fetch(`/api/admin/experts`, {
       method:  'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ table: 'expert_contact_clicks', expert_id: expertId }),
@@ -585,7 +580,7 @@ function TractionPanel({
   async function purgeAll() {
     if (!confirm('Supprimer TOUS les clics enregistrés ? Cette action est irréversible.')) return
     setPurgingAll(true)
-    await fetch(`/api/admin/experts${tokenQs}`, {
+    await fetch(`/api/admin/experts`, {
       method:  'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ table: 'expert_contact_clicks', purge_all: true }),
@@ -735,7 +730,7 @@ function TractionPanel({
   )
 }
 
-export default function ExpertsAdminClient({ applications, profiles, clickStats, tokenQs, initialPeriod }: Props) {
+export default function ExpertsAdminClient({ applications, profiles, clickStats, initialPeriod }: Props) {
   const [apps,   setApps]   = useState(applications)
   const [profs,  setProfs]  = useState(profiles)
   const [stats,  setStats]  = useState(clickStats)
@@ -824,7 +819,7 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
           ) : (
             <div className="flex flex-col gap-2">
               {apps.map(app => (
-                <ApplicationRow key={app.id} app={app} tokenQs={tokenQs} onRefresh={refresh} />
+                <ApplicationRow key={app.id} app={app} onRefresh={refresh} />
               ))}
             </div>
           )}
@@ -864,7 +859,7 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
           ) : (
             <div className="flex flex-col gap-2">
               {filteredProfs.map(p => (
-                <ProfileRow key={p.id} profile={p} tokenQs={tokenQs} onRefresh={refresh} />
+                <ProfileRow key={p.id} profile={p} onRefresh={refresh} />
               ))}
             </div>
           )}
@@ -878,7 +873,6 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
         {/* Section 4 — Traction réseau (clics) */}
         <TractionPanel
           stats={stats}
-          tokenQs={tokenQs}
           onRefresh={refresh}
           period={period}
           onPeriodChange={handlePeriodChange}

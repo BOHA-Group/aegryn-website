@@ -17,6 +17,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z }                         from 'zod'
 import { createServiceClient }       from '@/lib/supabase'
 import { runGradeEngine, type GradeInput, type GradeLetter } from '@/lib/gradeEngine'
+import { getAdminUser }              from '@/lib/adminAuth'
 
 // ── Schéma de validation Zod ──────────────────────────────────────────────────
 
@@ -99,8 +100,10 @@ export async function POST(
     return NextResponse.json({ error: 'invalid_body' }, { status: 400 })
   }
 
-  if (adminToken && body.token !== adminToken) {
-    return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+  const tokenOk = adminToken && body.token === adminToken
+  if (!tokenOk) {
+    const adminUser = await getAdminUser()
+    if (!adminUser) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
   }
 
   const supa = createServiceClient()
@@ -253,8 +256,10 @@ export async function GET(
   const token = new URL(req.url).searchParams.get('token')
   const adminToken = process.env.ADMIN_LEADS_TOKEN
 
-  if (adminToken && token !== adminToken) {
-    return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+  const tokenOk = adminToken && token === adminToken
+  if (!tokenOk) {
+    const adminUser = await getAdminUser()
+    if (!adminUser) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
   }
 
   const supa = createServiceClient()

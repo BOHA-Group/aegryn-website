@@ -49,8 +49,6 @@ export default async function GradeEnginePage({
     .order('created_at', { ascending: false })
     .limit(10)
 
-  const adminToken = sp.token ?? process.env.ADMIN_LEADS_TOKEN ?? ''
-
   // Documents data room pour contre-vérification CIFS
   const { data: dataRoomDocs } = await supa
     .from('data_room_documents')
@@ -74,7 +72,7 @@ export default async function GradeEnginePage({
 
         {/* En-tête */}
         <div className="mb-8">
-          <Link href={`/admin/assets${sp.token ? `?token=${sp.token}` : ''}`}
+          <Link href="/admin/assets"
             className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 mb-6 transition-colors">
             <ArrowLeft size={12} /> Retour aux actifs
           </Link>
@@ -94,7 +92,7 @@ export default async function GradeEnginePage({
         </div>
 
         {/* Formulaire principal */}
-        <GradeEngineForm assetId={id} adminToken={adminToken} docsByCategory={docsByCategory} />
+        <GradeEngineForm assetId={id} docsByCategory={docsByCategory} />
 
         {/* Historique */}
         {assessments && assessments.length > 0 && (

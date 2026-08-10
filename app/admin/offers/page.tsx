@@ -37,7 +37,6 @@ export default async function AdminOffersPage({
   await checkAdminAccess(params.token)
 
   const supa    = createServiceClient()
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   const { data, error } = await supa
     .from('auction_bids')
@@ -64,7 +63,7 @@ export default async function AdminOffersPage({
             <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Offres soumises</h1>
             <p className="text-[12px] text-gray-400 mt-1">Toutes les offres (Club Deal / Corporate / Fonds / Equity Stake) tous actifs confondus</p>
           </div>
-          <Link href={`/admin${tokenQs}`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
+          <Link href={`/admin`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
             ← Dashboard
           </Link>
         </div>
@@ -119,7 +118,7 @@ export default async function AdminOffersPage({
                         </span>
                       </td>
                       <td className="px-4 py-3">
-                        <Link href={`/admin/offers/${r.id}${tokenQs}`}
+                        <Link href={`/admin/offers/${r.id}`}
                           className="text-[10px] font-semibold text-gray-700 border border-gray-300 px-2 py-1 hover:border-gray-500 transition-colors">
                           Ouvrir →
                         </Link>

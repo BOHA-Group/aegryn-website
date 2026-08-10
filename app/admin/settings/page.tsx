@@ -15,12 +15,11 @@ export default async function AdminSettingsPage({
   const params     = await searchParams
   await checkAdminAccess(params.token)
 
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   const sections = [
-    { title: 'Documents légaux',  desc: 'CGV, mentions légales, politique de confidentialité', href: `/admin/settings/legal${tokenQs}` },
-    { title: 'Templates emails',  desc: 'Emails transactionnels (Resend) — invitations, notifications', href: `/admin/settings/emails${tokenQs}` },
-    { title: 'Benchmark marché',  desc: 'Mise à jour des données de benchmark_data', href: `/admin/settings/benchmark${tokenQs}` },
+    { title: 'Documents légaux',  desc: 'CGV, mentions légales, politique de confidentialité', href: `/admin/settings/legal` },
+    { title: 'Templates emails',  desc: 'Emails transactionnels (Resend) — invitations, notifications', href: `/admin/settings/emails` },
+    { title: 'Benchmark marché',  desc: 'Mise à jour des données de benchmark_data', href: `/admin/settings/benchmark` },
   ]
 
   return (
@@ -32,7 +31,7 @@ export default async function AdminSettingsPage({
             <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN</p>
             <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Paramètres</h1>
           </div>
-          <Link href={`/admin${tokenQs}`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
+          <Link href={`/admin`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
             ← Dashboard
           </Link>
         </div>

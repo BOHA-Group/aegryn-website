@@ -40,7 +40,6 @@ export default async function AdminMembersPage({
   await checkAdminAccess(params.token)
 
   const supa    = createServiceClient()
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   /* ── Action : changer le statut d'une demande NDA ── */
   if (params.action && params.id && params.status) {
@@ -53,7 +52,7 @@ export default async function AdminMembersPage({
       update.reviewed_at = new Date().toISOString()
       await supa.from('nda_requests').update(update).eq('id', params.id)
     }
-    redirect(`/admin/members${tokenQs}`)
+    redirect(`/admin/members`)
   }
 
   /* ── Fetch demandes NDA avec info actif ── */
@@ -92,15 +91,15 @@ export default async function AdminMembersPage({
             <p className="text-[12px] text-gray-400 mt-1">Qualification des acquéreurs et suivi des accords de confidentialité</p>
           </div>
           <div className="flex gap-2">
-            <Link href={`/admin/assets${tokenQs}`}
+            <Link href={`/admin/assets`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
               Assets
             </Link>
-            <Link href={`/admin/catalog${tokenQs}`}
+            <Link href={`/admin/catalog`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
               Catalogue
             </Link>
-            <Link href={`/admin/leads${tokenQs}`}
+            <Link href={`/admin/leads`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
               Leads
             </Link>
@@ -161,7 +160,7 @@ export default async function AdminMembersPage({
                       <td className="px-4 py-3">
                         {profileIdByEmail[String(r.buyer_email ?? '')] ? (
                           <Link
-                            href={`/admin/members/${profileIdByEmail[String(r.buyer_email ?? '')]}${tokenQs}`}
+                            href={`/admin/members/${profileIdByEmail[String(r.buyer_email ?? '')]}`}
                             className="font-mono text-[9px] uppercase tracking-widest text-ag-navy border border-ag-navy/20 px-2 py-1 hover:bg-ag-navy hover:text-white transition-colors whitespace-nowrap"
                           >
                             Profil →
@@ -191,24 +190,24 @@ export default async function AdminMembersPage({
                         <div className="flex flex-col gap-1 min-w-[130px]">
                           {r.status === 'pending' && (
                             <>
-                              <Link href={`/admin/members?action=update&id=${r.id}&status=approved${params.token ? `&token=${params.token}` : ''}`}
+                              <Link href={`/admin/members?action=update&id=${r.id}&status=approved`}
                                 className="text-[10px] font-semibold text-emerald-600 hover:text-emerald-800 border border-emerald-200 px-2 py-1 text-center hover:border-emerald-400 transition-colors">
                                 Approuver
                               </Link>
-                              <Link href={`/admin/members?action=update&id=${r.id}&status=rejected${params.token ? `&token=${params.token}` : ''}`}
+                              <Link href={`/admin/members?action=update&id=${r.id}&status=rejected`}
                                 className="text-[10px] font-semibold text-red-500 hover:text-red-700 border border-red-200 px-2 py-1 text-center hover:border-red-400 transition-colors">
                                 Rejeter
                               </Link>
                             </>
                           )}
                           {r.status === 'approved' && (
-                            <Link href={`/admin/members?action=update&id=${r.id}&status=nda_sent${params.token ? `&token=${params.token}` : ''}`}
+                            <Link href={`/admin/members?action=update&id=${r.id}&status=nda_sent`}
                               className="text-[10px] font-semibold text-blue-600 hover:text-blue-800 border border-blue-200 px-2 py-1 text-center hover:border-blue-400 transition-colors">
                               NDA envoyé ✓
                             </Link>
                           )}
                           {r.status === 'nda_sent' && (
-                            <Link href={`/admin/members?action=update&id=${r.id}&status=nda_signed${params.token ? `&token=${params.token}` : ''}`}
+                            <Link href={`/admin/members?action=update&id=${r.id}&status=nda_signed`}
                               className="text-[10px] font-semibold text-purple-600 hover:text-purple-800 border border-purple-200 px-2 py-1 text-center hover:border-purple-400 transition-colors">
                               NDA signé ✓
                             </Link>

@@ -59,7 +59,6 @@ type Props = {
   commissions:   Record<string, unknown>[]
   sellerAssets:  Record<string, unknown>[]
   token:         string
-  tokenQs:       string
 }
 
 type Tab = 'roles' | 'nda' | 'kyc' | 'assets' | 'partner'
@@ -67,7 +66,7 @@ type Tab = 'roles' | 'nda' | 'kyc' | 'assets' | 'partner'
 export default function MemberDetailClient({
   profileId, currentRoles, adminNote: initNote,
   ndaRows, ndaSignatures, ndaAcceptances, kycDocs, introductions, commissions, sellerAssets,
-  token, tokenQs,
+  token,
 }: Props) {
   const router = useRouter()
   const [isPending, startTransition] = useTransition()
@@ -87,10 +86,10 @@ export default function MemberDetailClient({
     if (!confirmed) return
     setDeleting(true)
     setDeleteError('')
-    const res = await fetch(`/api/admin/members/${profileId}${tokenQs ? `?${tokenQs.slice(1)}` : ''}`, { method: 'DELETE' })
+    const res = await fetch(`/api/admin/members/${profileId}`, { method: 'DELETE' })
     const data = await res.json() as { ok?: boolean; error?: string }
     if (data.ok) {
-      router.push(`/admin/members${tokenQs}`)
+      router.push(`/admin/members`)
     } else {
       setDeleteError(data.error ?? 'Erreur inconnue.')
       setDeleting(false)
@@ -527,7 +526,7 @@ export default function MemberDetailClient({
                       <span className="font-mono text-[10px] uppercase text-gray-500">{String(a.status ?? '—')}</span>
                     </td>
                     <td className="px-4 py-3">
-                      <Link href={`/admin/assets${tokenQs ? tokenQs + '&' : '?'}id=${String(a.id)}`}
+                      <Link href={`/admin/assets?id=${String(a.id)}`}
                         className="flex items-center gap-1 font-mono text-[10px] text-ag-navy hover:underline">
                         <ExternalLink size={10} /> Voir
                       </Link>

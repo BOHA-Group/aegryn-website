@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
+import { getAdminUser }       from '@/lib/adminAuth'
 
 export async function POST(
   req: NextRequest,
@@ -9,9 +10,10 @@ export async function POST(
   const body = await req.json() as Record<string, unknown>
 
   const adminToken = process.env.ADMIN_LEADS_TOKEN
-  const token = String(body.token ?? '')
-  if (!adminToken || token !== adminToken) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  const tokenOk = adminToken && String(body.token ?? '') === adminToken
+  if (!tokenOk) {
+    const adminUser = await getAdminUser()
+    if (!adminUser) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
   const { partner_email, dimension, score, subcodes, observations } = body

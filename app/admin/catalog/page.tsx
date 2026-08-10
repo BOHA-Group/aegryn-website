@@ -20,7 +20,6 @@ export default async function AdminCatalogPage({
   await checkAdminAccess(params.token)
 
   const supa    = createServiceClient()
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   /* ── Action publish/unpublish/withdraw ── */
   if (params.action && params.id) {
@@ -35,7 +34,7 @@ export default async function AdminCatalogPage({
       if (newStatus === 'published') update.published_at = new Date().toISOString()
       await supa.from('assets').update(update).eq('id', params.id)
     }
-    redirect(`/admin/catalog${tokenQs}`)
+    redirect(`/admin/catalog`)
   }
 
   /* ── Fetch actifs gradés + publiés + retirés ── */
@@ -65,15 +64,15 @@ export default async function AdminCatalogPage({
             <p className="text-[12px] text-gray-400 mt-1">Publication des actifs gradés vers le catalogue public</p>
           </div>
           <div className="flex gap-2">
-            <Link href={`/admin/assets${tokenQs}`}
+            <Link href={`/admin/assets`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
               ← Assets
             </Link>
-            <Link href={`/admin/members${tokenQs}`}
+            <Link href={`/admin/members`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
               Members
             </Link>
-            <Link href={`/admin/leads${tokenQs}`}
+            <Link href={`/admin/leads`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
               Leads
             </Link>
@@ -104,7 +103,7 @@ export default async function AdminCatalogPage({
           <div className="bg-white border border-gray-200 p-16 text-center">
             <p className="text-[13px] text-gray-400">Aucun actif gradé pour l&apos;instant.</p>
             <p className="text-[11px] text-gray-300 mt-2">Attribuez un grade via /admin/assets/[id]/grade pour qu&apos;un actif apparaîsse ici.</p>
-            <Link href={`/admin/assets${tokenQs}`}
+            <Link href={`/admin/assets`}
               className="inline-block mt-4 text-[11px] font-semibold text-blue-600 hover:text-blue-800">
               → Aller aux assets
             </Link>
@@ -112,8 +111,6 @@ export default async function AdminCatalogPage({
         ) : (
           <CatalogAdminClient
             rows={rows as Parameters<typeof CatalogAdminClient>[0]['rows']}
-            adminToken={params.token ?? ''}
-            tokenQs={tokenQs}
           />
         )}
 

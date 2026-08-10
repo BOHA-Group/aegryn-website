@@ -76,11 +76,10 @@ function ValuationTable({ rows, onDelete }: { rows: Record<string, unknown>[]; o
 }
 
 function InviteButton({
-  id, email, adminToken, profileType, table,
+  id, email, profileType, table,
 }: {
   id: string
   email: string
-  adminToken?: string
   profileType?: string
   table?: 'catalog_waitlist' | 'prospects' | 'auction_access_requests'
 }) {
@@ -110,7 +109,7 @@ function InviteButton({
       const res = await fetch('/api/client/invite', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, role, [waitlistField]: id, token: adminToken ?? '' }),
+        body: JSON.stringify({ email, role, [waitlistField]: id }),
       })
       if (res.ok) {
         setState('done')
@@ -136,7 +135,7 @@ function InviteButton({
   )
 }
 
-function CatalogTable({ rows, adminToken, onDelete }: { rows: Record<string, unknown>[]; adminToken?: string; onDelete: (id: string) => void }) {
+function CatalogTable({ rows, onDelete }: { rows: Record<string, unknown>[]; onDelete: (id: string) => void }) {
   if (!rows.length) return <EmptyState />
   return (
     <table className="w-full text-[12px] bg-white border border-gray-200">
@@ -155,7 +154,7 @@ function CatalogTable({ rows, adminToken, onDelete }: { rows: Record<string, unk
             <Td>
               {r.status === 'converted'
                 ? <span className="text-[10px] font-semibold text-emerald-600">Invité ✓</span>
-                : <InviteButton id={String(r.id)} email={String(r.email)} adminToken={adminToken} />}
+                : <InviteButton id={String(r.id)} email={String(r.email)} />}
             </Td>
             <td className="px-4 py-3">
               <button onClick={() => onDelete(String(r.id))} className="text-red-400 hover:text-red-700 transition-colors"><Trash2 size={11} /></button>
@@ -195,7 +194,7 @@ function AssessmentTable({ rows, onDelete }: { rows: Record<string, unknown>[]; 
   )
 }
 
-function ProspectsTable({ rows, adminToken, onDelete }: { rows: Record<string, unknown>[]; adminToken?: string; onDelete: (id: string) => void }) {
+function ProspectsTable({ rows, onDelete }: { rows: Record<string, unknown>[]; onDelete: (id: string) => void }) {
   if (!rows.length) return <EmptyState />
   const PROFILE_LABELS: Record<string, string> = { buyer: 'Acquéreur', seller: 'Cédant', partner: 'Partenaire', undecided: 'Non défini' }
   return (
@@ -217,7 +216,7 @@ function ProspectsTable({ rows, adminToken, onDelete }: { rows: Record<string, u
             <Td>
               {r.status === 'converted' || r.status === 'invited'
                 ? <span className="text-[10px] font-semibold text-emerald-600">{r.status === 'invited' ? 'Invité ✓' : 'Converti ✓'}</span>
-                : <InviteButton id={String(r.id)} email={String(r.email)} adminToken={adminToken} profileType={String(r.profile_type ?? '')} table="prospects" />}
+                : <InviteButton id={String(r.id)} email={String(r.email)} profileType={String(r.profile_type ?? '')} table="prospects" />}
             </Td>
             <td className="px-4 py-3">
               <button onClick={() => onDelete(String(r.id))} className="text-red-400 hover:text-red-700 transition-colors"><Trash2 size={11} /></button>
@@ -229,7 +228,7 @@ function ProspectsTable({ rows, adminToken, onDelete }: { rows: Record<string, u
   )
 }
 
-function ApproveAccessButton({ id, email, adminToken }: { id: string; email: string; adminToken?: string }) {
+function ApproveAccessButton({ id, email }: { id: string; email: string }) {
   const router = useRouter()
   const [state, setState] = useState<'idle' | 'loading' | 'done' | 'error'>('idle')
 
@@ -240,7 +239,7 @@ function ApproveAccessButton({ id, email, adminToken }: { id: string; email: str
       const res = await fetch('/api/client/invite', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, role: 'buyer', accessRequestId: id, token: adminToken ?? '' }),
+        body: JSON.stringify({ email, role: 'buyer', accessRequestId: id }),
       })
       if (res.ok) {
         setState('done')
@@ -266,7 +265,7 @@ function ApproveAccessButton({ id, email, adminToken }: { id: string; email: str
   )
 }
 
-function AuctionAccessTable({ rows, adminToken, onDelete }: { rows: Record<string, unknown>[]; adminToken?: string; onDelete: (id: string) => void }) {
+function AuctionAccessTable({ rows, onDelete }: { rows: Record<string, unknown>[]; onDelete: (id: string) => void }) {
   if (!rows.length) return <EmptyState />
   const BUYER_LABELS: Record<string, string> = { pe: 'PE/VC', strategic: 'Stratégique', family_office: 'Family Office', individual: 'Particulier' }
   return (
@@ -288,7 +287,7 @@ function AuctionAccessTable({ rows, adminToken, onDelete }: { rows: Record<strin
             <Td>
               {r.status === 'approved'
                 ? <span className="text-[10px] font-semibold text-emerald-600">Approuvé ✓</span>
-                : <ApproveAccessButton id={String(r.id)} email={String(r.email)} adminToken={adminToken} />}
+                : <ApproveAccessButton id={String(r.id)} email={String(r.email)} />}
             </Td>
             <td className="px-4 py-3">
               <button onClick={() => onDelete(String(r.id))} className="text-red-400 hover:text-red-700 transition-colors"><Trash2 size={11} /></button>
@@ -343,14 +342,13 @@ function EmptyState() {
 
 /* ── Main client component ── */
 export default function AdminLeadsClient({
-  rows: initialRows, source, counts, currentGrade, currentStatus, adminToken,
+  rows: initialRows, source, counts, currentGrade, currentStatus,
 }: {
   rows: Record<string, unknown>[]
   source: string
   counts: Record<string, number>
   currentGrade: string
   currentStatus: string
-  adminToken?: string
 }) {
   const router   = useRouter()
   const pathname = usePathname()
@@ -375,7 +373,7 @@ export default function AdminLeadsClient({
     setDeleting(true)
     setDeleteError(null)
     try {
-      const res = await fetch(`/api/admin/leads${adminToken ? `?token=${adminToken}` : ''}`, {
+      const res = await fetch(`/api/admin/leads`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ source, ids }),
@@ -397,7 +395,7 @@ export default function AdminLeadsClient({
     setDeleting(true)
     setDeleteError(null)
     try {
-      const res = await fetch(`/api/admin/leads${adminToken ? `?token=${adminToken}` : ''}`, {
+      const res = await fetch(`/api/admin/leads`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ source, ids: [id] }),
@@ -417,10 +415,10 @@ export default function AdminLeadsClient({
   const nav = useCallback((key: string, val: string) => {
     const p = new URLSearchParams(sp.toString())
     p.set(key, val)
-    if (adminToken) p.set('token', adminToken)
+    p.delete('token')
     setSelected(new Set())
     router.push(`${pathname}?${p.toString()}`)
-  }, [sp, router, pathname, adminToken])
+  }, [sp, router, pathname])
 
   return (
     <div className="flex flex-col gap-6">
@@ -509,11 +507,11 @@ export default function AdminLeadsClient({
       {/* Table */}
       <div className="overflow-x-auto">
         {source === 'valuation'      && <ValuationTable    rows={rows} onDelete={deleteOne} />}
-        {source === 'catalog'        && <CatalogTable      rows={rows} adminToken={adminToken} onDelete={deleteOne} />}
+        {source === 'catalog'        && <CatalogTable      rows={rows} onDelete={deleteOne} />}
         {source === 'assessment'     && <AssessmentTable   rows={rows} onDelete={deleteOne} />}
         {source === 'alliances'      && <AlliancesTable    rows={rows} onDelete={deleteOne} />}
-        {source === 'prospects'      && <ProspectsTable    rows={rows} adminToken={adminToken} onDelete={deleteOne} />}
-        {source === 'auction_access' && <AuctionAccessTable rows={rows} adminToken={adminToken} onDelete={deleteOne} />}
+        {source === 'prospects'      && <ProspectsTable    rows={rows} onDelete={deleteOne} />}
+        {source === 'auction_access' && <AuctionAccessTable rows={rows} onDelete={deleteOne} />}
       </div>
 
     </div>

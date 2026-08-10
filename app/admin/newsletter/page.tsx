@@ -16,7 +16,6 @@ export default async function AdminNewsletterPage({
   const params = await searchParams
   await checkAdminAccess(params.token)
 
-  const tokenQs = params.token ? `?token=${params.token}` : ''
   const supa    = createServiceClient()
 
   const { data: subscribers, error } = await supa
@@ -40,7 +39,7 @@ export default async function AdminNewsletterPage({
           </div>
         )}
 
-        <NewsletterClient subscribers={subscribers ?? []} tokenQs={tokenQs} />
+        <NewsletterClient subscribers={subscribers ?? []} />
 
       </div>
     </main>

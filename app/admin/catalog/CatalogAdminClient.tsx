@@ -55,11 +55,9 @@ type EditState = {
 
 interface Props {
   rows: CatalogRow[]
-  adminToken: string
-  tokenQs: string
 }
 
-export default function CatalogAdminClient({ rows: initial, adminToken, tokenQs }: Props) {
+export default function CatalogAdminClient({ rows: initial }: Props) {
   const router = useRouter()
   const [, startTransition] = useTransition()
   const [rows, setRows] = useState<CatalogRow[]>(initial)
@@ -95,7 +93,6 @@ export default function CatalogAdminClient({ rows: initial, adminToken, tokenQs 
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          token: adminToken,
           company_name:   editState.company_name || null,
           official_grade: editState.official_grade || null,
           score_total:    editState.score_total !== '' ? Number(editState.score_total) : null,
@@ -267,7 +264,7 @@ export default function CatalogAdminClient({ rows: initial, adminToken, tokenQs 
                     ) : (
                       <>
                         <Link
-                          href={`/admin/assets/${r.id}/grade${tokenQs}`}
+                          href={`/admin/assets/${r.id}/grade`}
                           className="flex items-center gap-1 text-[10px] font-semibold text-indigo-600 hover:text-indigo-800 border border-indigo-100 px-2 py-1 hover:border-indigo-300 transition-colors"
                         >
                           Grader →
@@ -280,7 +277,7 @@ export default function CatalogAdminClient({ rows: initial, adminToken, tokenQs 
                         </button>
                         {r.status === 'graded' && (
                           <Link
-                            href={`/admin/catalog?action=publish&id=${r.id}${tokenQs ? `&${tokenQs.replace('?','').replace(/^&/,'')}` : ''}`}
+                            href={`/admin/catalog?action=publish&id=${r.id}`}
                             className="text-[10px] font-semibold text-emerald-600 hover:text-emerald-800 border border-emerald-200 px-2 py-1 hover:border-emerald-400 transition-colors"
                           >
                             Publier
@@ -288,14 +285,14 @@ export default function CatalogAdminClient({ rows: initial, adminToken, tokenQs 
                         )}
                         {r.status === 'published' && (
                           <Link
-                            href={`/admin/catalog?action=unpublish&id=${r.id}${tokenQs ? `&${tokenQs.replace('?','').replace(/^&/,'')}` : ''}`}
+                            href={`/admin/catalog?action=unpublish&id=${r.id}`}
                             className="text-[10px] font-semibold text-orange-600 hover:text-orange-800 border border-orange-200 px-2 py-1 hover:border-orange-400 transition-colors"
                           >
                             Dépublier
                           </Link>
                         )}
                         <Link
-                          href={`/admin/catalog?action=withdraw&id=${r.id}${tokenQs ? `&${tokenQs.replace('?','').replace(/^&/,'')}` : ''}`}
+                          href={`/admin/catalog?action=withdraw&id=${r.id}`}
                           className="text-[10px] font-semibold text-gray-400 hover:text-gray-600 border border-gray-200 px-2 py-1 hover:border-gray-400 transition-colors"
                         >
                           Retirer

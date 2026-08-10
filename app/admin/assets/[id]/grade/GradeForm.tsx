@@ -94,12 +94,11 @@ interface BlockingAlert {
 }
 
 export default function GradeForm({
-  assetId, adminToken, initialStatus, evaluationType, partnerReviewerType,
+  assetId, initialStatus, evaluationType, partnerReviewerType,
   initialAsset, benchmarkRows = [], transactionComps = [], blockingAlerts = [],
   docsByCategory = {},
 }: {
   assetId: string
-  adminToken: string
   initialStatus: string
   evaluationType?: string
   partnerReviewerType?: string
@@ -164,7 +163,6 @@ export default function GradeForm({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          token: adminToken,
           partner_email: partnerEmail,
           dimension: partnerDim,
           score: partnerScore,
@@ -206,7 +204,7 @@ export default function GradeForm({
   async function loadAutoFill() {
     setAutoFillLoading(true)
     try {
-      const res  = await fetch(`/api/admin/assets/${assetId}/grade-autofill?token=${adminToken}`)
+      const res  = await fetch(`/api/admin/assets/${assetId}/grade-autofill`)
       const data = await res.json() as AutoFillResult
       setAutoFill(data)
     } catch { /* silencieux */ }
@@ -323,7 +321,6 @@ export default function GradeForm({
           nrr:                  nrr                === '' ? undefined : nrr,
           benchmark_category:   benchmarkCategory   || undefined,
           aeg_grade_override:   aegOverride         || undefined,
-          token: adminToken,
         }),
       })
       const json = await res.json()
@@ -430,7 +427,7 @@ export default function GradeForm({
               </p>
             </div>
             <a
-              href={`/admin/assets/${assetId}/documents${adminToken ? `?token=${adminToken}` : ''}`}
+              href={`/admin/assets/${assetId}/documents`}
               className="shrink-0 inline-flex items-center gap-1.5 text-[10px] font-semibold text-amber-700 border border-amber-300 bg-white px-3 py-1.5 hover:border-amber-500 transition-colors whitespace-nowrap"
             >
               Documents / Data Room
@@ -443,7 +440,7 @@ export default function GradeForm({
           </div>
           <div className="p-4">
             <Suspense fallback={<div className="text-[12px] text-gray-400 py-8 text-center">Chargement du moteur…</div>}>
-              <GradeEngineForm assetId={assetId} adminToken={adminToken} docsByCategory={docsByCategory} autoFillOverrides={autoFill?.gradeInputOverrides} />
+              <GradeEngineForm assetId={assetId} docsByCategory={docsByCategory} autoFillOverrides={autoFill?.gradeInputOverrides} />
             </Suspense>
           </div>
         </div>

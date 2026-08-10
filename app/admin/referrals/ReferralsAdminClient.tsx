@@ -32,7 +32,6 @@ type Props = {
   referrals:      ReferralRow[]
   credits:        CreditRow[]
   activePartners: { id: string; full_name: string | null; email: string }[]
-  tokenQs:        string
 }
 
 const STATUS_CFG = {
@@ -57,7 +56,7 @@ function name(p: Profile | null) {
   return p.full_name ?? p.email
 }
 
-export default function ReferralsAdminClient({ referrals, credits, activePartners, tokenQs }: Props) {
+export default function ReferralsAdminClient({ referrals, credits, activePartners }: Props) {
   const [tab,      setTab]      = useState<'referrals' | 'credits'>('referrals')
   const [filter,   setFilter]   = useState<'all' | 'pending' | 'rewarded' | 'cancelled'>('all')
 
@@ -76,7 +75,7 @@ export default function ReferralsAdminClient({ referrals, credits, activePartner
     setCreditSaving(true)
     setCreditMsg(null)
     try {
-      const res = await fetch(`/api/admin/expert/subscription${tokenQs}`, {
+      const res = await fetch(`/api/admin/expert/subscription`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ user_id: creditUserId, months: creditMonths, note: creditNote || undefined }),
@@ -321,7 +320,7 @@ export default function ReferralsAdminClient({ referrals, credits, activePartner
       )}
 
       <div className="mt-8 pt-6 border-t border-gray-100">
-        <a href={`/admin${tokenQs}`}
+        <a href={`/admin`}
           className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors">
           ← Retour au tableau de bord
         </a>

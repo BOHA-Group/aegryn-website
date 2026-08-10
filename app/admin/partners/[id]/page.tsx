@@ -23,7 +23,6 @@ export default async function AdminPartnerDetailPage({
   await checkAdminAccess(params.token)
 
   const supa    = createServiceClient()
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   const { data: profile, error } = await supa.from('profiles').select('*').eq('id', id).maybeSingle()
   if (!profile && !error) notFound()
@@ -47,7 +46,7 @@ export default async function AdminPartnerDetailPage({
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">
       <div className="max-w-5xl mx-auto">
 
-        <Link href={`/admin/partners${tokenQs}`} className="text-[11px] font-semibold text-gray-400 hover:text-gray-700 mb-6 inline-block">
+        <Link href={`/admin/partners`} className="text-[11px] font-semibold text-gray-400 hover:text-gray-700 mb-6 inline-block">
           ← Retour aux partenaires
         </Link>
 
@@ -65,14 +64,14 @@ export default async function AdminPartnerDetailPage({
               {/* Actions rapides */}
               <div className="flex gap-2 shrink-0">
                 <Link
-                  href={`/admin/assets${params.token ? `?token=${params.token}&` : '?'}partner_id=${id}`}
+                  href={`/admin/assets?partner_id=${id}`}
                   className="border border-gray-300 text-gray-600 text-[10px] font-semibold uppercase tracking-wide px-3 py-2 hover:border-gray-500 transition-colors"
                   title="Sélectionner un actif, puis ouvrir Moteur Grade pour co-certification CAS 1"
                 >
                   + Assignation CIFS
                 </Link>
                 <Link
-                  href={`/admin/partners/${id}/create-mandate${tokenQs}`}
+                  href={`/admin/partners/${id}/create-mandate`}
                   className="bg-gray-900 text-white text-[10px] font-semibold uppercase tracking-wide px-3 py-2 hover:bg-gray-700 transition-colors"
                 >
                   + Mandat client
@@ -83,7 +82,6 @@ export default async function AdminPartnerDetailPage({
             {/* Certifications assignées — avec validation inline */}
             <CertValidation
               certs={(certs ?? []) as Parameters<typeof CertValidation>[0]['certs']}
-              adminToken={params.token ?? ''}
             />
 
             {/* Apports d'affaires */}
@@ -111,7 +109,7 @@ export default async function AdminPartnerDetailPage({
               <div className="px-6 py-4 bg-gray-50 flex items-center justify-between">
                 <p className="text-[11px] font-semibold text-gray-600 uppercase tracking-wide">Mandats clients — CAS 3 ({(mandates ?? []).length})</p>
                 <Link
-                  href={`/admin/partners/${id}/create-mandate${tokenQs}`}
+                  href={`/admin/partners/${id}/create-mandate`}
                   className="text-[10px] text-gray-400 hover:text-gray-700"
                 >
                   + Nouveau →
@@ -152,7 +150,7 @@ export default async function AdminPartnerDetailPage({
                   )}
                 </div>
                 <Link
-                  href={`/admin/kyc/${id}${tokenQs}`}
+                  href={`/admin/kyc/${id}`}
                   className="text-[10px] font-semibold text-gray-400 hover:text-gray-700"
                 >
                   Ouvrir dossier KYC complet →
@@ -180,7 +178,7 @@ export default async function AdminPartnerDetailPage({
             <div className="bg-white border border-gray-200">
               <div className="px-6 py-4 bg-gray-50 flex items-center justify-between">
                 <p className="text-[11px] font-semibold text-gray-600 uppercase tracking-wide">Commissions ({(comms ?? []).length})</p>
-                <Link href={`/admin/commissions${tokenQs}`} className="text-[10px] text-gray-400 hover:text-gray-700">Voir toutes →</Link>
+                <Link href={`/admin/commissions`} className="text-[10px] text-gray-400 hover:text-gray-700">Voir toutes →</Link>
               </div>
               {(comms ?? []).length === 0 ? (
                 <div className="p-8 text-center text-[12px] text-gray-400">Aucune commission.</div>
@@ -200,7 +198,7 @@ export default async function AdminPartnerDetailPage({
         )}
 
         {/* Zone de danger */}
-        <DeletePartnerButton partnerId={id} tokenQs={tokenQs} />
+        <DeletePartnerButton partnerId={id} />
 
       </div>
     </main>

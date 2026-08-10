@@ -29,7 +29,6 @@ export default async function AdminAssetDocumentsPage({
   if (adminToken && token !== adminToken) redirect('/')
 
   const supa = createServiceClient()
-  const tokenQs = token ? `?token=${token}` : ''
 
   const { data: asset } = await supa
     .from('assets')
@@ -89,11 +88,11 @@ export default async function AdminAssetDocumentsPage({
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4 flex-wrap">
-            <Link href={`/admin/assets${tokenQs}`}
+            <Link href={`/admin/assets`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
               ← Assets
             </Link>
-            <Link href={`/admin/assets/${id}/grade${tokenQs}`}
+            <Link href={`/admin/assets/${id}/grade`}
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
               Grade
             </Link>
@@ -158,7 +157,6 @@ export default async function AdminAssetDocumentsPage({
         {/* Liste interactive par dimension */}
         <AdminDocumentsClient
           assetId={id}
-          adminToken={token ?? ''}
           catalog={catalog}
           documents={documents}
         />

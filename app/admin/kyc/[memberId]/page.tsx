@@ -44,7 +44,6 @@ export default async function AdminKycMemberPage({
   await checkAdminAccess(params.token)
 
   const supa    = createServiceClient()
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   /* ── Actions ── */
   if (params.action === 'doc' && params.docId && params.status) {
@@ -55,7 +54,7 @@ export default async function AdminKycMemberPage({
     }
     if (params.status === 'rejected' && params.reason) update.rejection_reason = params.reason
     await supa.from('kyc_documents').update(update).eq('id', params.docId)
-    redirect(`/admin/kyc/${memberId}${tokenQs}`)
+    redirect(`/admin/kyc/${memberId}`)
   }
 
   if (params.action === 'global' && params.global) {
@@ -91,7 +90,7 @@ export default async function AdminKycMemberPage({
       }
     }
 
-    redirect(`/admin/kyc/${memberId}${tokenQs}`)
+    redirect(`/admin/kyc/${memberId}`)
   }
 
   const [{ data: kyc }, { data: docs }, { data: profile }] = await Promise.all([
@@ -118,7 +117,7 @@ export default async function AdminKycMemberPage({
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">
       <div className="max-w-5xl mx-auto">
 
-        <Link href={`/admin/kyc${tokenQs}`} className="text-[11px] font-semibold text-gray-400 hover:text-gray-700 mb-6 inline-block">
+        <Link href={`/admin/kyc`} className="text-[11px] font-semibold text-gray-400 hover:text-gray-700 mb-6 inline-block">
           ← Retour à la file KYC
         </Link>
 
@@ -155,7 +154,7 @@ export default async function AdminKycMemberPage({
             <div className="flex gap-2 ml-auto">
               {['in_review', 'approved', 'rejected'].map(s => (
                 <Link key={s}
-                  href={`/admin/kyc/${memberId}?action=global&global=${s}${params.token ? `&token=${params.token}` : ''}`}
+                  href={`/admin/kyc/${memberId}?action=global&global=${s}`}
                   className="text-[10px] font-semibold text-gray-600 border border-gray-300 px-3 py-1.5 hover:border-gray-500 transition-colors">
                   {s === 'in_review' ? 'Passer en revue' : s === 'approved' ? 'Approuver le dossier' : 'Rejeter le dossier'}
                 </Link>

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
+import { getAdminUser }       from '@/lib/adminAuth'
 
 export async function PATCH(
   req: NextRequest,
@@ -15,8 +16,10 @@ export async function PATCH(
     required_level?: string
   }
 
-  if (adminToken && body.token !== adminToken) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  const tokenOk = adminToken && body.token === adminToken
+  if (!tokenOk) {
+    const adminUser = await getAdminUser()
+    if (!adminUser) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
   const allowed_qualities = ['pending_review', 'sufficient', 'insufficient', 'missing']

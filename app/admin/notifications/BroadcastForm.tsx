@@ -17,7 +17,6 @@ const NOTIF_TYPES = [
 ] as const
 
 type Props = {
-  adminToken: string
   roleCounts: Record<string, number>
 }
 
@@ -29,7 +28,7 @@ type Result = {
   broadcast_id: string
 }
 
-export default function BroadcastForm({ adminToken, roleCounts }: Props) {
+export default function BroadcastForm({ roleCounts }: Props) {
   const [targetRole,  setTargetRole]  = useState<'all' | 'buyer' | 'seller' | 'partner'>('all')
   const [notifType,   setNotifType]   = useState<'broadcast_info' | 'broadcast_alert' | 'broadcast_action'>('broadcast_info')
   const [subject,     setSubject]     = useState('')
@@ -64,7 +63,6 @@ export default function BroadcastForm({ adminToken, roleCounts }: Props) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-admin-token': adminToken,
         },
         body: JSON.stringify({
           target_role:   targetRole,

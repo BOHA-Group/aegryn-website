@@ -2,9 +2,10 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
 import { getChfToEurRate }          from '@/lib/fxRate'
+import { getAdminUser }             from '@/lib/adminAuth'
 
 const schema = z.object({
-  token: z.string(),
+  token: z.string().optional(),
   status: z.enum(['ei_submitted', 'ap_signed', 'escrow_paid', 'dd_in_progress', 'signing', 'closed', 'cancelled']).optional(),
   ap_accepted_buyer:  z.boolean().optional(),
   ap_accepted_seller: z.boolean().optional(),
@@ -42,8 +43,10 @@ export async function PATCH(
     const body = schema.parse(await req.json())
 
     const adminToken = process.env.ADMIN_LEADS_TOKEN
-    if (adminToken && body.token !== adminToken) {
-      return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+    const tokenOk = adminToken && body.token === adminToken
+    if (!tokenOk) {
+      const adminUser = await getAdminUser()
+      if (!adminUser) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
     }
 
     const supa = createServiceClient()

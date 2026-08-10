@@ -17,7 +17,6 @@ export default async function AdminPartnersPage({
   await checkAdminAccess(params.token)
 
   const supa    = createServiceClient()
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   const { data, error } = await supa
     .from('profiles')
@@ -52,7 +51,7 @@ export default async function AdminPartnersPage({
             <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Partenaires</h1>
             <p className="text-[12px] text-gray-400 mt-1">Cabinets juridiques, experts-comptables, cybersécurité et apporteurs d'affaires</p>
           </div>
-          <Link href={`/admin${tokenQs}`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
+          <Link href={`/admin`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
             ← Dashboard
           </Link>
         </div>
@@ -88,7 +87,7 @@ export default async function AdminPartnersPage({
                       <td className="px-4 py-3 font-mono text-[11px]">{s.pendingCerts}</td>
                       <td className="px-4 py-3 font-mono text-[11px]">{s.introductions}</td>
                       <td className="px-4 py-3">
-                        <Link href={`/admin/partners/${r.id}${tokenQs}`}
+                        <Link href={`/admin/partners/${r.id}`}
                           className="text-[10px] font-semibold text-gray-700 border border-gray-300 px-2 py-1 hover:border-gray-500 transition-colors">
                           Ouvrir →
                         </Link>

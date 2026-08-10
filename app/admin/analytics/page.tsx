@@ -17,7 +17,6 @@ export default async function AdminAnalyticsPage({
   await checkAdminAccess(params.token)
 
   const supa    = createServiceClient()
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   const [
     { count: assetsTotal },
@@ -57,7 +56,7 @@ export default async function AdminAnalyticsPage({
             <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Analytics</h1>
             <p className="text-[12px] text-gray-400 mt-1">KPIs opérationnels — vue d'ensemble</p>
           </div>
-          <Link href={`/admin${tokenQs}`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
+          <Link href={`/admin`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
             ← Dashboard
           </Link>
         </div>

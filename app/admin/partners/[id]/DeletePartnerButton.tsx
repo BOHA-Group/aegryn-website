@@ -6,10 +6,8 @@ import { Trash2, AlertTriangle, Loader2 } from 'lucide-react'
 
 export default function DeletePartnerButton({
   partnerId,
-  tokenQs,
 }: {
   partnerId: string
-  tokenQs:   string
 }) {
   const router   = useRouter()
   const [loading, setLoading] = useState(false)
@@ -22,11 +20,10 @@ export default function DeletePartnerButton({
     if (!confirmed) return
     setLoading(true)
     setError('')
-    const qs  = tokenQs ? tokenQs : ''
-    const res = await fetch(`/api/admin/members/${partnerId}${qs}`, { method: 'DELETE' })
+    const res = await fetch(`/api/admin/members/${partnerId}`, { method: 'DELETE' })
     const data = await res.json() as { ok?: boolean; error?: string }
     if (data.ok) {
-      router.push(`/admin/partners${qs}`)
+      router.push(`/admin/partners`)
     } else {
       setError(data.error ?? 'Erreur inconnue.')
       setLoading(false)

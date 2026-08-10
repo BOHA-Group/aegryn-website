@@ -22,7 +22,6 @@ export default async function AdminCreateMandatePage({
   await checkAdminAccess(params.token)
 
   const supa = createServiceClient()
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   const { data: profile } = await supa.from('profiles').select('id, full_name, email').eq('id', id).maybeSingle()
   if (!profile) notFound()
@@ -36,7 +35,7 @@ export default async function AdminCreateMandatePage({
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">
       <div className="max-w-2xl mx-auto">
         <Link
-          href={`/admin/partners/${id}${tokenQs}`}
+          href={`/admin/partners/${id}`}
           className="text-[11px] font-semibold text-gray-400 hover:text-gray-700 mb-6 inline-block"
         >
           ← Retour au partenaire
@@ -52,9 +51,8 @@ export default async function AdminCreateMandatePage({
 
         <CreateMandateForm
           partnerId={id}
-          adminToken={params.token}
           assets={(assets ?? []) as { id: string; name: string }[]}
-          backHref={`/admin/partners/${id}${tokenQs}`}
+          backHref={`/admin/partners/${id}`}
         />
       </div>
     </main>

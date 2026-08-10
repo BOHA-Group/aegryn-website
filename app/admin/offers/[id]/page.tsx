@@ -28,16 +28,15 @@ export default async function AdminOfferDetailPage({
   await checkAdminAccess(params.token)
 
   const supa    = createServiceClient()
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   /* ── Actions ── */
   if (params.action === 'under_review') {
     await supa.from('auction_bids').update({ status: 'under_review', reviewed_at: new Date().toISOString() }).eq('id', id)
-    redirect(`/admin/offers/${id}${tokenQs}`)
+    redirect(`/admin/offers/${id}`)
   }
   if (params.action === 'reject') {
     await supa.from('auction_bids').update({ status: 'rejected', reviewed_at: new Date().toISOString() }).eq('id', id)
-    redirect(`/admin/offers/${id}${tokenQs}`)
+    redirect(`/admin/offers/${id}`)
   }
   if (params.action === 'retain') {
     const { data: bid } = await supa.from('auction_bids').select('asset_id, user_id').eq('id', id).maybeSingle()
@@ -53,7 +52,7 @@ export default async function AdminOfferDetailPage({
         })
       }
     }
-    redirect(`/admin/offers/${id}${tokenQs}`)
+    redirect(`/admin/offers/${id}`)
   }
 
   const { data: bid, error } = await supa
@@ -73,7 +72,7 @@ export default async function AdminOfferDetailPage({
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">
       <div className="max-w-3xl mx-auto">
 
-        <Link href={`/admin/offers${tokenQs}`} className="text-[11px] font-semibold text-gray-400 hover:text-gray-700 mb-6 inline-block">
+        <Link href={`/admin/offers`} className="text-[11px] font-semibold text-gray-400 hover:text-gray-700 mb-6 inline-block">
           ← Retour aux offres
         </Link>
 
@@ -108,25 +107,25 @@ export default async function AdminOfferDetailPage({
               <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Actions</h2>
               <div className="flex gap-3 flex-wrap">
                 {bid.status === 'submitted' && (
-                  <Link href={`/admin/offers/${id}?action=under_review${params.token ? `&token=${params.token}` : ''}`}
+                  <Link href={`/admin/offers/${id}?action=under_review`}
                     className="text-[11px] font-semibold text-blue-600 border border-blue-200 px-4 py-2 hover:border-blue-400 transition-colors">
                     Passer en revue
                   </Link>
                 )}
                 {(bid.status === 'submitted' || bid.status === 'under_review') && (
                   <>
-                    <Link href={`/admin/offers/${id}?action=retain${params.token ? `&token=${params.token}` : ''}`}
+                    <Link href={`/admin/offers/${id}?action=retain`}
                       className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-4 py-2 hover:border-emerald-400 transition-colors">
                       Retenir l'offre → créer la transaction
                     </Link>
-                    <Link href={`/admin/offers/${id}?action=reject${params.token ? `&token=${params.token}` : ''}`}
+                    <Link href={`/admin/offers/${id}?action=reject`}
                       className="text-[11px] font-semibold text-red-500 border border-red-200 px-4 py-2 hover:border-red-400 transition-colors">
                       Rejeter
                     </Link>
                   </>
                 )}
                 {transaction && (
-                  <Link href={`/admin/transactions/${transaction.id}${tokenQs}`}
+                  <Link href={`/admin/transactions/${transaction.id}`}
                     className="text-[11px] font-semibold text-gray-700 border border-gray-300 px-4 py-2 hover:border-gray-500 transition-colors ml-auto">
                     Voir la transaction →
                   </Link>

@@ -144,7 +144,6 @@ export default async function AdminLeadsPage({
             counts={counts}
             currentGrade={params.grade ?? 'all'}
             currentStatus={params.status ?? 'all'}
-            adminToken={params.token}
           />
         </Suspense>
       </div>

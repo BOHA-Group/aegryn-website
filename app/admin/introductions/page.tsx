@@ -37,12 +37,10 @@ export default async function AdminIntroductionsPage({
     .order('created_at', { ascending: false })
     .limit(200)
 
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   return (
     <IntroductionsAdminClient
       introductions={(introductions ?? []) as unknown as IntroductionAdmin[]}
-      tokenQs={tokenQs}
     />
   )
 }

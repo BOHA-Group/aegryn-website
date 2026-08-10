@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
+import { getAdminUser }             from '@/lib/adminAuth'
 import { estimateGrade }            from '@/lib/valuationEngine'
 import {
   checkAutoRefusal,
@@ -52,8 +53,10 @@ export async function PATCH(
 
     /* ── Auth admin token ── */
     const adminToken = process.env.ADMIN_LEADS_TOKEN
-    if (adminToken && body.token !== adminToken) {
-      return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+    const tokenOk = adminToken && body.token === adminToken
+    if (!tokenOk) {
+      const adminUser = await getAdminUser()
+      if (!adminUser) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
     }
 
     /* ── Refus automatique (indépendant du score) ── */

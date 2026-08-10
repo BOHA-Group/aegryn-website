@@ -48,14 +48,12 @@ export default async function AdminExpertsPage({
     profile: profileMap.get(ep.user_id) ?? null,
   }))
 
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   return (
     <ExpertsAdminClient
       applications={applications ?? []}
       profiles={profiles}
       clickStats={clickStats ?? []}
-      tokenQs={tokenQs}
     />
   )
 }

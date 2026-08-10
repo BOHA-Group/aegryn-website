@@ -19,7 +19,6 @@ export default async function AdminCommissionsPage({
   await checkAdminAccess(params.token)
 
   const supa    = createServiceClient()
-  const tokenQs = params.token ? `?token=${params.token}` : ''
 
   if (params.toggle) {
     const { data: tx } = await supa
@@ -33,7 +32,7 @@ export default async function AdminCommissionsPage({
         .update({ commission_paid: !(tx as Record<string, unknown>).commission_paid })
         .eq('id', params.toggle)
     }
-    redirect(`/admin/commissions${tokenQs}`)
+    redirect(`/admin/commissions`)
   }
 
   const [
@@ -81,7 +80,6 @@ export default async function AdminCommissionsPage({
     <CommissionsClient
       transactions={transactions}
       tiers={tiers}
-      tokenQs={tokenQs}
     />
   )
 }

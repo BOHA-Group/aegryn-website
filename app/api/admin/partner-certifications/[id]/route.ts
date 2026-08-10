@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
 import { sendEmail, emailPartnerScoreValidated, emailPartnerScoreRejected } from '@/lib/sendEmail'
+import { getAdminUser }       from '@/lib/adminAuth'
 
 export async function PATCH(
   req: NextRequest,
@@ -10,9 +11,10 @@ export async function PATCH(
   const body = await req.json() as Record<string, unknown>
 
   const adminToken = process.env.ADMIN_LEADS_TOKEN
-  const token = String(body.token ?? '')
-  if (!adminToken || token !== adminToken) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  const tokenOk = adminToken && String(body.token ?? '') === adminToken
+  if (!tokenOk) {
+    const adminUser = await getAdminUser()
+    if (!adminUser) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
   const { action, cosignature_amount_chf, rejection_reason } = body

@@ -6,6 +6,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
+import { getAdminUser }             from '@/lib/adminAuth'
 
 const schema = z.object({
   email:      z.string().email(),
@@ -16,7 +17,7 @@ const schema = z.object({
   waitlistId:      z.string().uuid().optional(), // marquer catalog_waitlist.status = 'converted'
   prospectId:      z.string().uuid().optional(), // marquer prospects.status = 'invited'
   accessRequestId: z.string().uuid().optional(), // marquer auction_access_requests.status = 'approved'
-  token:           z.string(),
+  token:           z.string().optional(),
 })
 
 export async function POST(req: NextRequest) {
@@ -24,8 +25,10 @@ export async function POST(req: NextRequest) {
     const body = schema.parse(await req.json())
 
     const adminToken = process.env.ADMIN_LEADS_TOKEN
-    if (adminToken && body.token !== adminToken) {
-      return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+    const tokenOk = adminToken && body.token === adminToken
+    if (!tokenOk) {
+      const adminUser = await getAdminUser()
+      if (!adminUser) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
     }
 
     const supa = createServiceClient()

@@ -18,7 +18,6 @@ type Transaction = {
 type Props = {
   transactions: Transaction[]
   tiers:        CommissionTier[]
-  tokenQs:      string
 }
 
 const TX_STATUS: Record<string, { label: string; color: string }> = {
@@ -36,7 +35,7 @@ function fmtDate(d: string | null) {
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: '2-digit', year: '2-digit' })
 }
 
-export default function CommissionsClient({ transactions, tiers, tokenQs }: Props) {
+export default function CommissionsClient({ transactions, tiers }: Props) {
   const [calcInput, setCalcInput] = useState('')
   const activeTiers = tiers.length > 0 ? tiers : DEFAULT_TIERS
 
@@ -70,7 +69,7 @@ export default function CommissionsClient({ transactions, tiers, tokenQs }: Prop
               Suivi des honoraires de transaction dus à Aegryn — grille dégressive juillet 2026
             </p>
           </div>
-          <a href={`/admin${tokenQs}`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
+          <a href={`/admin`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
             ← Dashboard
           </a>
         </div>
@@ -147,7 +146,7 @@ export default function CommissionsClient({ transactions, tiers, tokenQs }: Prop
                           <td className="px-4 py-3">
                             {tx.status === 'closed' && (
                               <a
-                                href={`/admin/commissions?toggle=${tx.id}${tokenQs ? `&${tokenQs.slice(1)}` : ''}`}
+                                href={`/admin/commissions?toggle=${tx.id}`}
                                 className={`text-[10px] font-semibold px-2 py-1 border transition-colors ${
                                   tx.commission_paid
                                     ? 'border-emerald-200 text-emerald-700 bg-emerald-50'

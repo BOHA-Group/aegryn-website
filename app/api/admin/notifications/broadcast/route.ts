@@ -23,6 +23,7 @@ import { Resend }                     from 'resend'
 import { render }                     from '@react-email/render'
 import { createServiceClient }        from '@/lib/supabase'
 import BroadcastEmail                 from '@/emails/BroadcastEmail'
+import { getAdminUser }               from '@/lib/adminAuth'
 
 const schema = z.object({
   target_role:   z.enum(['all', 'buyer', 'seller', 'partner']),
@@ -68,8 +69,10 @@ export async function POST(req: NextRequest) {
   // Auth : token admin via header X-Admin-Token ou query param
   const adminToken = process.env.ADMIN_LEADS_TOKEN
   const reqToken   = req.headers.get('x-admin-token') ?? new URL(req.url).searchParams.get('token')
-  if (adminToken && reqToken !== adminToken) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  const tokenOk    = adminToken && reqToken === adminToken
+  if (!tokenOk) {
+    const adminUser = await getAdminUser()
+    if (!adminUser) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
   const body   = await req.json().catch(() => null)
