@@ -5,7 +5,6 @@ import { Gift, Users, Copy, Check, Loader2, ChevronDown, ChevronUp, X } from 'lu
 
 type ReferralItem = {
   id: string
-  referred_id: string
   status: 'pending' | 'rewarded' | 'cancelled'
   code_used_at: string
   code_expires_at: string
@@ -17,7 +16,6 @@ type CreditItem = {
   id: string
   months: number
   source: 'admin' | 'referral_sponsor' | 'referral_referred'
-  note: string | null
   applied: boolean
   applied_at: string | null
   created_at: string

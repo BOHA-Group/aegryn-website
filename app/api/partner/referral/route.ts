@@ -49,14 +49,14 @@ export async function GET() {
   /* Filleuls parrainés */
   const { data: referrals } = await supa
     .from('expert_referrals')
-    .select('id, referred_id, status, code_used_at, code_expires_at, payment_confirmed_at, rewarded_at')
+    .select('id, status, code_used_at, code_expires_at, payment_confirmed_at, rewarded_at')
     .eq('referrer_id', user.id)
     .order('code_used_at', { ascending: false })
 
   /* Crédits reçus */
   const { data: credits } = await supa
     .from('expert_subscription_credits')
-    .select('id, months, source, note, applied, applied_at, created_at')
+    .select('id, months, source, applied, applied_at, created_at')
     .eq('user_id', user.id)
     .order('created_at', { ascending: false })
 
@@ -176,7 +176,7 @@ export async function POST(req: NextRequest) {
   if (insertError) {
     console.error('[referral/POST] insert error', { code: insertError.code, message: insertError.message, details: insertError.details, hint: insertError.hint })
     if (insertError.code === '23505') return NextResponse.json({ error: 'already_referred_by_this_sponsor' }, { status: 409 })
-    return NextResponse.json({ error: insertError.message, code: insertError.code }, { status: 500 })
+    return NextResponse.json({ error: 'server_error' }, { status: 500 })
   }
 
   /* Stocker le parrain sur le profil filleul */
