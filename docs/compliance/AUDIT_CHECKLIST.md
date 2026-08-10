@@ -109,6 +109,6 @@ For each item:
 | 🟡 | Review `/privacy` content for GDPR Art. 13/14 completeness (referral, CIFS, NDA processing) |
 | 🟡 | Verify export/anonymise/delete-partial APIs cover all tables in GDPR_REGISTER |
 | 🟡 | Enforce MFA on admin accounts |
-| 🟡 | `ADMIN_LEADS_TOKEN` still accepted as secondary credential in some API routes (automation use) — never expires/rotates. Evaluate removing entirely or adding expiry/rotation |
+| 🟡 | `ADMIN_LEADS_TOKEN` rotated 2026-08 (old value invalidated — no longer valid even if leaked previously). Still accepted as secondary credential in ~18 API routes. No in-repo caller found for `bulk-delete`/`update-lot` (possible external/manual use — unconfirmed). Cookie fallback (`getAdminUser`) added to both, closing a critical open-by-default bug in `bulk-delete`. Full removal blocked pending confirmation that no external script depends on it. Consider short-lived rotating token (Stripe/GitHub-style) if external automation is required long-term |
 | 🟢 | Designate Data Protection Advisor (LPD) |
 | 🟢 | Schedule annual AI Act review |

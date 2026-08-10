@@ -6,6 +6,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient }       from '@/lib/supabase'
 import { z }                         from 'zod'
+import { getAdminUser }              from '@/lib/adminAuth'
 
 const ADMIN_TOKEN = process.env.ADMIN_LEADS_TOKEN
 
@@ -21,10 +22,12 @@ const schema = z.object({
 })
 
 export async function PATCH(req: NextRequest) {
-  /* Token auth simple */
+  /* Token auth (fallback automation) OU session admin */
   const auth = req.headers.get('x-admin-token')
-  if (ADMIN_TOKEN && auth !== ADMIN_TOKEN) {
-    return NextResponse.json({ error: 'Non autorisé.' }, { status: 401 })
+  const tokenOk = !!ADMIN_TOKEN && auth === ADMIN_TOKEN
+  if (!tokenOk) {
+    const adminUser = await getAdminUser()
+    if (!adminUser) return NextResponse.json({ error: 'Non autorisé.' }, { status: 401 })
   }
 
   const body   = await req.json()

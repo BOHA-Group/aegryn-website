@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
+import { getAdminUser }        from '@/lib/adminAuth'
 
 /* Tables autorisées pour la suppression en masse */
 const ALLOWED_TABLES = [
@@ -19,17 +20,15 @@ const ALLOWED_TABLES = [
 
 type AllowedTable = typeof ALLOWED_TABLES[number]
 
-function checkToken(token: string | null) {
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
-  return !adminToken || token === adminToken
-}
-
 export async function DELETE(req: NextRequest) {
   const { searchParams } = req.nextUrl
   const token = searchParams.get('token') ?? ''
 
-  if (!checkToken(token)) {
-    return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+  const adminToken = process.env.ADMIN_LEADS_TOKEN
+  const tokenOk = !!adminToken && token === adminToken
+  if (!tokenOk) {
+    const adminUser = await getAdminUser()
+    if (!adminUser) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
   }
 
   let body: { table: string; ids: string[] }

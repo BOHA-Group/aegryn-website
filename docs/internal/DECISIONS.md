@@ -80,6 +80,14 @@
 
 ---
 
+### D-011 — Admin token rotation + fix open-by-default bug
+**Date:** 2026-08  
+**Decision:** `ADMIN_LEADS_TOKEN` rotated to a new 256-bit value (Vercel Production/Preview/Development + GitHub Actions secret). Old value invalidated. Audit found `/api/admin/bulk-delete` and `/api/admin/auction/update-lot` had no in-repo callers (no admin page/component references them) and no `getAdminUser()` cookie fallback — `bulk-delete` was open-by-default (`!adminToken || token === adminToken` → `true` if env var unset). Both fixed to require either valid token or admin session cookie; `bulk-delete`'s open-default removed entirely.  
+**Unresolved:** cannot confirm from this repo alone whether external/manual scripts depend on these 2 routes. Full removal of `ADMIN_LEADS_TOKEN` deferred until confirmed.  
+**Status:** ✅ Rotation + bug fix implemented — ⚠️ full token removal pending confirmation
+
+---
+
 ## Pending Decisions
 
 | # | Topic | Context | Due |
