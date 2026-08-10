@@ -1993,38 +1993,46 @@
         "desc": "Il rapporto Aegryn Grade sostituisce parzialmente la due diligence e comprime il calendario di 30-45 giorni."
       },
       "transaction": {
-        "title": "Transazione supervisionata",
-        "desc": "Aegryn coordina la negoziazione, assicura il trasferimento dei diritti e garantisce la procedura dalla A alla Z."
+        "title": "Connessioni di closing on-demand",
+        "desc": "Accesso alla rete di esperti Aegryn (avvocati, notai, consulenti fiscali) mobilizzabile secondo le esigenze specifiche della transazione."
       }
     },
-    "roadmapLabel": "Prossime funzionalità",
+    "roadmapLabel": "20 funzionalità chiave",
+    "statusLive": "Disponibile",
+    "statusUpcoming": "In arrivo",
     "items": [
-      {
-        "phase": "Q4 2026",
-        "title": "Catalogo multi-asset simultaneo",
-        "desc": "Sessioni che presentano più asset certificati in parallelo, con filtraggio avanzato per grade, categoria e fascia di valutazione.",
-        "status": "In sviluppo"
-      },
-      {
-        "phase": "T1 2027",
-        "title": "API partner Aegryn",
-        "desc": "Accesso programmatico ai grade pubblicati e ai dati di mercato per le piattaforme partner e i fondi istituzionali.",
-        "status": "Pianificato"
-      },
-      {
-        "phase": "T2 2027",
-        "title": "Asset on-chain sotto diritto svizzero",
-        "desc": "Estensione del protocollo CIFS agli asset digitali tokenizzati (token di utilità, protocolli DeFi). Quadro giuridico svizzero.",
-        "status": "Pianificato"
-      }
+      { "iconKey": "certification", "theme": "Certificazione", "title": "Certificazione CIFS — Protocollo Aegryn Grade", "desc": "Ogni asset viene valutato su 4 dimensioni (Codice, PI, Finanza, Sicurezza) prima di qualsiasi listato. Nessun asset non certificato viene ammesso.", "live": true },
+      { "iconKey": "grade",         "theme": "Certificazione", "title": "Scala a 5 grade — B ad AEG ★", "desc": "Sistema di valutazione obiettivo e immutabile: B, A, AA, AAA, AEG ★. Ogni grade riflette un livello di maturità certificabile.", "live": true },
+      { "iconKey": "escrow",        "theme": "Transazione",    "title": "Escrow istituzionale", "desc": "I fondi sono detenuti in un conto di deposito controllato da Aegryn fino al closing. Sicurezza massima per tutte le parti.", "live": true },
+      { "iconKey": "nda",           "theme": "Conformità",     "title": "NDA digitale automatizzato", "desc": "L'accesso al dossier dell'asset è condizionato alla firma di un NDA. Riservatezza garantita per impostazione predefinita, senza intervento manuale.", "live": true },
+      { "iconKey": "closing",       "theme": "Transazione",    "title": "Connessioni di closing on-demand", "desc": "Rete di esperti mobilizzabili secondo le esigenze della transazione: avvocati, notai, consulenti fiscali specializzati in M&A tech.", "live": true },
+      { "iconKey": "swissLaw",      "theme": "Legale",          "title": "Diritto svizzero al 100%", "desc": "Tutte le transazioni sono disciplinate dal diritto svizzero, indipendentemente dalla nazionalità del venditore o dell'acquirente.", "live": true },
+      { "iconKey": "sessions",      "theme": "Catalogo",        "title": "Sessioni di vendita private", "desc": "Sessioni strutturate che presentano asset tech certificati ad acquirenti qualificati in un contesto riservato.", "live": true },
+      { "iconKey": "catalogFilter", "theme": "Catalogo",        "title": "Filtraggio multi-asset per grade, categoria e ARR", "desc": "Navigazione avanzata nel catalogo: filtri per grade Aegryn, tipo di asset e fascia di valutazione ARR.", "live": true },
+      { "iconKey": "buyers",        "theme": "Acquirenti",      "title": "Qualificazione degli acquirenti", "desc": "Ogni acquirente viene qualificato prima di accedere alle sessioni. Capacità di acquisizione e intenzioni verificate in anticipo.", "live": true },
+      { "iconKey": "dataRoom",      "theme": "Acquirenti",      "title": "Data room protetta da NDA", "desc": "Accesso a dossier completi, documenti finanziari e legali in un ambiente sicuro dopo la firma del NDA.", "live": true },
+      { "iconKey": "sellerSubmit",  "theme": "Venditori",       "title": "Invio di asset online", "desc": "Processo di invio guidato: informazioni, documenti, pagamento della valutazione. Completamente online.", "live": true },
+      { "iconKey": "dueDiligence",  "theme": "Venditori",       "title": "Due diligence pre-validata", "desc": "Il report Aegryn Grade sostituisce parzialmente la due diligence dell'acquirente e comprime il calendario di 30-45 giorni.", "live": true },
+      { "iconKey": "certifiers",    "theme": "Partner",          "title": "Rete di certificatori CIFS", "desc": "Programma partner esperti: mandati di certificazione, dashboard missioni, commissioni tracciate.", "live": true },
+      { "iconKey": "referral",      "theme": "Partner",          "title": "Programma di referral", "desc": "I partner esperti possono riferire altri certificatori. Crediti di abbonamento offerti, tetto massimo di 6 mesi.", "live": true },
+      { "iconKey": "kyc",           "theme": "Conformità",     "title": "KYC multi-ruolo", "desc": "Verifica dell'identità integrata per acquirenti, venditori e partner. Conformità AML dall'onboarding.", "live": true },
+      { "iconKey": "intelligence",  "theme": "Intelligence",    "title": "Blog e report di mercato", "desc": "Articoli approfonditi, studi di caso e report sul mercato europeo del M&A tech, prodotti dai team Aegryn.", "live": true },
+      { "iconKey": "international", "theme": "Mercato",          "title": "Apertura internazionale", "desc": "Asset e parti da tutto il mondo ammessi. Nessuna restrizione geografica sulla nazionalità di venditori o acquirenti.", "live": true },
+      { "iconKey": "catalogFilter", "theme": "Catalogo",        "title": "Notifiche di avviso personalizzate", "desc": "Avvisi su nuove sessioni, aggiornamenti di grade e stati transazionali in base ai criteri definiti dall'acquirente.", "live": false },
+      { "iconKey": "api",           "theme": "Tech & API",      "title": "API partner istituzionali", "desc": "Accesso programmatico ai grade pubblicati e ai dati di mercato per piattaforme partner e fondi istituzionali.", "live": false },
+      { "iconKey": "onChain",       "theme": "Protocollo",      "title": "Estensione CIFS agli asset digitali", "desc": "Estensione del protocollo CIFS a token di utilità e protocolli DeFi. Quadro giuridico svizzero applicato agli asset on-chain.", "live": false }
     ],
-    "currentLabel": "Disponibile oggi",
+    "currentLabel": "Già disponibile",
     "current": [
-      "Sessioni di cessione private — Q3 2026",
-      "Certificazione Aegryn Grade inclusa",
+      "Sessioni di vendita private",
+      "Certificazione Aegryn Grade — protocollo CIFS",
       "Escrow istituzionale",
-      "NDA automatizzato",
-      "Acquirenti qualificati internazionali"
+      "NDA digitale automatizzato",
+      "Qualificazione acquirenti e portale acquirenti",
+      "Portale venditori — invio e tracciamento asset",
+      "Rete partner certificatori CIFS",
+      "KYC integrato multi-ruolo",
+      "Filtraggio catalogo per grade, categoria e ARR"
     ],
     "cta": "Inviare un asset per la vendita",
     "ctaSecondary": "Ulteriori informazioni sul Grade"

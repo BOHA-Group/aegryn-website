@@ -1993,38 +1993,46 @@
         "desc": "Het Aegryn Grade-rapport vervangt gedeeltelijk de due diligence en verkort de tijdlijn met 30 tot 45 dagen."
       },
       "transaction": {
-        "title": "Begeleide transactie",
-        "desc": "Aegryn coördineert de onderhandeling, zorgt voor de overdracht van rechten en garandeert de procedure van A tot Z."
+        "title": "On-demand closing-verbindingen",
+        "desc": "Toegang tot het Aegryn-expertnetwerk (advocaten, notarissen, belastingadviseurs) inzetbaar naar de specifieke behoeften van de transactie."
       }
     },
-    "roadmapLabel": "Komende functies",
+    "roadmapLabel": "20 sleutelfuncties",
+    "statusLive": "Beschikbaar",
+    "statusUpcoming": "Binnenkort",
     "items": [
-      {
-        "phase": "Q4 2026",
-        "title": "Gelijktijdige multi-asset catalogus",
-        "desc": "Sessies met meerdere gecertificeerde assets tegelijkertijd, met geavanceerd filteren op grade, categorie en waarderingsrange.",
-        "status": "In ontwikkeling"
-      },
-      {
-        "phase": "Q1 2027",
-        "title": "Aegryn partner-API",
-        "desc": "Programmatische toegang tot gepubliceerde grades en marktgegevens voor partnerplatforms en institutionele fondsen.",
-        "status": "Gepland"
-      },
-      {
-        "phase": "Q2 2027",
-        "title": "On-chain assets onder Zwitsers recht",
-        "desc": "Uitbreiding van het CIFS-protocol naar getokeniseerde digitale assets (utility-tokens, DeFi-protocollen). Zwitsers juridisch kader.",
-        "status": "Gepland"
-      }
+      { "iconKey": "certification", "theme": "Certificering", "title": "CIFS-certificering — Aegryn Grade Protocol", "desc": "Elk asset wordt beoordeeld op 4 dimensies (Code, IP, Financën, Beveiliging) vóór enige vermelding. Geen niet-gecertificeerd asset wordt toegelaten.", "live": true },
+      { "iconKey": "grade",         "theme": "Certificering", "title": "5-graden schaal — B tot AEG ★", "desc": "Objectief en onveranderlijk beoordelingssysteem: B, A, AA, AAA, AEG ★. Elke grade weerspiegelt een certificeerbaar volwassenheidsniveau.", "live": true },
+      { "iconKey": "escrow",        "theme": "Transactie",    "title": "Institutionele escrow", "desc": "Gelden worden aangehouden op een door Aegryn gecontroleerde derdenrekening tot de closing. Maximale veiligheid voor alle partijen.", "live": true },
+      { "iconKey": "nda",           "theme": "Compliance",    "title": "Geautomatiseerde digitale NDA", "desc": "Toegang tot het asset-dossier is afhankelijk van ondertekening van een NDA. Vertrouwelijkheid standaard gegarandeerd, zonder handmatige tussenkomst.", "live": true },
+      { "iconKey": "closing",       "theme": "Transactie",    "title": "On-demand closing-verbindingen", "desc": "Netwerk van inzetbare experts naar transactiebehoeften: advocaten, notarissen, in M&A tech gespecialiseerde belastingadviseurs.", "live": true },
+      { "iconKey": "swissLaw",      "theme": "Juridisch",      "title": "100% Zwitsers recht", "desc": "Alle transacties worden beheerst door Zwitsers recht, ongeacht de nationaliteit van de verkoper of koper.", "live": true },
+      { "iconKey": "sessions",      "theme": "Catalogus",      "title": "Privé verkoopsessies", "desc": "Gestructureerde sessies die gecertificeerde tech-assets presenteren aan gekwalificeerde kopers in een vertrouwelijke omgeving.", "live": true },
+      { "iconKey": "catalogFilter", "theme": "Catalogus",      "title": "Multi-asset filtering op grade, categorie en ARR", "desc": "Geavanceerde catalogusnavigatie: filters op Aegryn-grade, type asset en ARR-waarderingsrange.", "live": true },
+      { "iconKey": "buyers",        "theme": "Kopers",          "title": "Koperskwalificatie", "desc": "Elke koper wordt gekwalificeerd voordat hij toegang krijgt tot sessies. Verwervingscapaciteit en intenties vooraf geverifieerd.", "live": true },
+      { "iconKey": "dataRoom",      "theme": "Kopers",          "title": "NDA-beveiligde dataroom", "desc": "Toegang tot volledige dossiers, financiële en juridische documenten in een beveiligde omgeving na ondertekening van de NDA.", "live": true },
+      { "iconKey": "sellerSubmit",  "theme": "Verkopers",       "title": "Online asset-indiening", "desc": "Begeleid indieningsproces: informatie, documenten, betalingsevaluatie. Volledig online.", "live": true },
+      { "iconKey": "dueDiligence",  "theme": "Verkopers",       "title": "Vooraf gevalideerde due diligence", "desc": "Het Aegryn Grade-rapport vervangt gedeeltelijk de due diligence van de koper en verkort de tijdlijn met 30 tot 45 dagen.", "live": true },
+      { "iconKey": "certifiers",    "theme": "Partners",         "title": "CIFS-certificeerdernetwerk", "desc": "Expert-partnerprogramma: certificeringsmandaten, missiedashboard, bijgehouden commissies.", "live": true },
+      { "iconKey": "referral",      "theme": "Partners",         "title": "Doorverwijsprogramma", "desc": "Expertpartners kunnen andere certificeerders doorverwijzen. Abonnementkredieten aangeboden, maximum 6 maanden.", "live": true },
+      { "iconKey": "kyc",           "theme": "Compliance",    "title": "Multi-rol KYC", "desc": "Geïntegreerde identiteitsverificatie voor kopers, verkopers en partners. AML-naleving vanaf onboarding.", "live": true },
+      { "iconKey": "intelligence",  "theme": "Intelligentie",  "title": "Blog & marktrapportages", "desc": "Diepgaande artikelen, casestudy's en rapporten over de Europese tech-M&A-markt, geproduceerd door Aegryn-teams.", "live": true },
+      { "iconKey": "international", "theme": "Markt",            "title": "Internationale openheid", "desc": "Assets en partijen van over de hele wereld toegelaten. Geen geografische beperkingen op de nationaliteit van verkopers of kopers.", "live": true },
+      { "iconKey": "catalogFilter", "theme": "Catalogus",      "title": "Gepersonaliseerde waarschu wingsmeldingen", "desc": "Meldingen over nieuwe sessies, grade-updates en transactiestatus op basis van door de koper gedefinieerde criteria.", "live": false },
+      { "iconKey": "api",           "theme": "Tech & API",     "title": "Institutionele partner-API", "desc": "Programmatische toegang tot gepubliceerde grades en marktgegevens voor partnerplatforms en institutionele fondsen.", "live": false },
+      { "iconKey": "onChain",       "theme": "Protocol",       "title": "CIFS-uitbreiding naar digitale assets", "desc": "Uitbreiding van het CIFS-protocol naar utility-tokens en DeFi-protocollen. Zwitsers juridisch kader toegepast op on-chain assets.", "live": false }
     ],
-    "currentLabel": "Vandaag beschikbaar",
+    "currentLabel": "Al beschikbaar",
     "current": [
-      "Private verkoopsessies — Q3 2026",
-      "Aegryn Grade certificering inbegrepen",
+      "Privé verkoopsessies",
+      "Aegryn Grade-certificering — CIFS-protocol",
       "Institutionele escrow",
-      "Geautomatiseerde NDA",
-      "Internationale gekwalificeerde kopers"
+      "Geautomatiseerde digitale NDA",
+      "Koperskwalificatie en kopersportaal",
+      "Verkopersportaal — asset-indiening en -tracking",
+      "CIFS-certificeerder partnernetwerk",
+      "Geïntegreerde multi-rol KYC",
+      "Catalogusfiltering op grade, categorie en ARR"
     ],
     "cta": "Asset indienen voor verkoop",
     "ctaSecondary": "Meer informatie over de Grade"
