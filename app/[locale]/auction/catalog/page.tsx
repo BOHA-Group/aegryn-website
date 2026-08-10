@@ -6,7 +6,6 @@ import { Link }                    from '@/i18n/navigation'
 import { cookies }                 from 'next/headers'
 import { createServerClient }      from '@supabase/ssr'
 import { ArrowUpRight, Info, Lock } from 'lucide-react'
-import CatalogNotifyForm           from './CatalogNotifyForm'
 import AuctionAccessRequestForm    from './AuctionAccessRequestForm'
 import CatalogFilters              from './CatalogFilters'
 import { checkAuctionCatalogAccess } from '@/lib/auctionAccess'
@@ -29,23 +28,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'sell digital business', 'acquire tech startup', 'NDA dossier',
     ],
   })
-}
-
-function gradeColor(g: string) {
-  return g === '★'  ? 'text-ag-grade-star border-ag-grade-star/30'
-    : g === 'AAA'   ? 'text-ag-grade-aaa  border-ag-grade-aaa/30'
-    : g === 'AA'    ? 'text-ag-grade-aa   border-ag-grade-aa/30'
-    : g === 'A'     ? 'text-ag-grade-a    border-ag-grade-a/30'
-    : g === 'B'     ? 'text-ag-grade-b    border-ag-grade-b/30'
-    : 'text-ag-gray-light border-ag-border'
-}
-
-function fmtArr(n: unknown) {
-  if (!n) return null
-  const v = Number(n)
-  if (v >= 1_000_000) return `ARR ${(v / 1_000_000).toFixed(1)}M€`
-  if (v >= 1_000)     return `ARR ${(v / 1_000).toFixed(0)}K€`
-  return null
 }
 
 async function getSessionUser() {

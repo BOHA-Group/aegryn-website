@@ -69,14 +69,6 @@ function fmtArr(n: unknown) {
   return null
 }
 
-const GRADE_LABELS: Record<string, string> = {
-  '':    'Tous',
-  '★':   'AEG ★',
-  'AAA': 'AAA',
-  'AA':  'AA',
-  'A':   'A',
-  'B':   'B',
-}
 
 export default function CatalogFilters({ assets, locale, labels }: Props) {
   const [grade,    setGrade]    = useState<string>('')
