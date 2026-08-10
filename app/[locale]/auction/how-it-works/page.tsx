@@ -49,7 +49,7 @@ const PROCESS_STEPS = [
     icon:   <ShieldCheck size={22} className="text-ag-apex" />,
     title:  'Certification CIFS & attribution de grade',
     label:  'Aegryn',
-    desc:   "Un auditeur CIFS indépendant examine le code, les finances, l'IP et la sécurité. Un grade officiel ★/AAA/AA/A/B est attribué, documenté et opposable. C'est la différence fondamentale avec tout autre marketplace.",
+    desc:   "Un auditeur CIFS indépendant examine le code, les finances, l'IP et la sécurité. Un grade officiel ★/AAA/AA/A/B est attribué, documenté et opposable. C'est la différence fondamentale avec toute autre plateforme de cession.",
     detail: "Audit indépendant · 4 dimensions · Grade officiel et opposable · Rapport complet remis",
     cta:    { label: 'Comprendre les grades', href: '/grade/grading-system' as const },
     side:   'aegryn',
@@ -206,14 +206,14 @@ export default async function HowItWorksPage({ params }: Props) {
             Positionnement
           </p>
           <h2 className="font-sans font-bold text-ag-black text-[24px] tracking-[-0.02em] mb-10">
-            Aegryn vs autres marketplaces
+            Aegryn vs autres plateformes
           </h2>
 
           <div className="border border-ag-border overflow-hidden">
             <div className="grid grid-cols-3 bg-ag-navy">
               <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50" />
               <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex border-l border-white/10">Aegryn</div>
-              <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50 border-l border-white/10">Autres marketplaces</div>
+              <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50 border-l border-white/10">Autres plateformes</div>
             </div>
             {COMPARE_ROWS.map(({ label, aegryn, other }, i) => (
               <div key={label} className={`grid grid-cols-3 border-t border-ag-border ${i % 2 === 0 ? 'bg-ag-white' : 'bg-ag-off-white'}`}>

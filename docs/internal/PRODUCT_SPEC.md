@@ -8,7 +8,7 @@
 
 ## 1. Product Vision
 
-Aegryn is the first certified tech M&A marketplace operating exclusively under Swiss law.
+Aegryn is a Swiss-regulated certification and transaction platform for European tech assets.
 It bridges certified digital asset sellers with qualified institutional buyers through a structured,
 confidential, and legally framed transaction protocol.
 
