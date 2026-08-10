@@ -147,8 +147,9 @@ export async function POST(req: NextRequest) {
   })
 
   if (insertError) {
+    console.error('[referral/POST] insert error', { code: insertError.code, message: insertError.message, details: insertError.details, hint: insertError.hint })
     if (insertError.code === '23505') return NextResponse.json({ error: 'already_referred_by_this_sponsor' }, { status: 409 })
-    return NextResponse.json({ error: insertError.message }, { status: 500 })
+    return NextResponse.json({ error: insertError.message, code: insertError.code }, { status: 500 })
   }
 
   /* Stocker le parrain sur le profil filleul */
