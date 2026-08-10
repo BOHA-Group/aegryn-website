@@ -178,7 +178,7 @@ export default function MfaSection() {
             <div className="flex justify-center bg-gray-50 border border-gray-200 p-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`data:image/svg+xml;utf8,${encodeURIComponent(qrCode)}`}
+                src={`data:image/svg+xml,${encodeURIComponent(qrCode)}`}
                 alt="QR code MFA"
                 width={160}
                 height={160}
