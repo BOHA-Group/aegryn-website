@@ -2946,12 +2946,12 @@
       "evalTypeReview": {
         "label": "AEGRYN Review",
         "desc": "Opinión escrita de un analista AEGRYN en 15 días hábiles. Sin revisión de socio externo. No publicable en el catálogo, sin validación externa.",
-        "price": "2.000 € sin IVA"
+        "price": "2.000 CHF sin IVA"
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
         "desc": "Opinión escrita + revisión por un socio externo (bufete jurídico o contador) a petición en 20 días hábiles. Referencia cruzada con nuestros socios Alliance.",
-        "price": "5.000 € sin IVA"
+        "price": "5.000 CHF sin IVA"
       },
       "evalDeductibleNote": "Este importe es íntegramente deducible del costo de certificación si inicia un proceso completo de Auction en los 6 meses siguientes a la recepción de su Review.",
       "partnerSelectLabel": "Socio a involucrar",
@@ -3747,7 +3747,7 @@
     "s12Title": "Red de expertos AEGRYN — Suscripción Ficha Experto",
     "s12Intro": "AEGRYN opera una red de profesionales referenciados (en adelante \"Socios\") accesibles desde la sección Red de expertos de la plataforma. Esta red es distinta del proceso de transacción y no constituye un servicio de intermediación en sentido financiero.",
     "s12AbonTitle": "Suscripción Ficha Experto",
-    "s12Abon": "El acceso a la red está condicionado a la suscripción a una Ficha Experto (89 € excl. IVA/mes o tarifa anual vigente). Esta suscripción da derecho a: publicación y actualización de una ficha experto visible en aegryn.com/grade/partners, acceso directo a solicitudes de puesta en contacto iniciadas por cedentes o adquirentes AEGRYN que hayan expresado necesidad de acompañamiento en los ámbitos de experiencia indicados en la ficha, y participación en los eventos de la red AEGRYN. La suscripción no tiene compromiso mínimo y puede rescindirse en cualquier momento con efecto al término del período en curso.",
+    "s12Abon": "El acceso a la red está condicionado a la suscripción a una Ficha Experto (89 CHF excl. IVA/mes o tarifa anual vigente). Esta suscripción da derecho a: publicación y actualización de una ficha experto visible en aegryn.com/grade/partners, acceso directo a solicitudes de puesta en contacto iniciadas por cedentes o adquirentes AEGRYN que hayan expresado necesidad de acompañamiento en los ámbitos de experiencia indicados en la ficha, y participación en los eventos de la red AEGRYN. La suscripción no tiene compromiso mínimo y puede rescindirse en cualquier momento con efecto al término del período en curso.",
     "s12SubTitle": "Naturaleza de la relación",
     "s12Sub": "El Socio es un proveedor de servicios independiente referenciado a título personal o en nombre de su organización. Fija libremente sus honorarios, condiciones de intervención y condiciones contractuales con sus clientes. AEGRYN no percibe ninguna comisión sobre los honorarios facturados por el Socio a sus clientes y no interviene en la relación comercial entre el Socio y sus clientes. El Socio no es en ningún caso empleado, mandatario ni co-contratante de AEGRYN en el marco de sus prestaciones.",
     "s12NoCommTitle": "Ausencia de comisión a AEGRYN",
@@ -4939,7 +4939,7 @@
     "waitlist": {
       "label": "¿Es usted experto?",
       "title": "Únase a la red.",
-      "desc": "La red de expertos AEGRYN está abriéndose. Envíe su candidatura — nuestro equipo revisa cada perfil y le contactará para una entrevista de cualificación. El acceso se realiza mediante una suscripción mensual de referenciación (89 € + IVA/mes).",
+      "desc": "La red de expertos AEGRYN está abriéndose. Envíe su candidatura — nuestro equipo revisa cada perfil y le contactará para una entrevista de cualificación. El acceso se realiza mediante una suscripción mensual de referenciación (89 CHF + IVA/mes).",
       "fieldPrenom": "Nombre",
       "fieldNom": "Apellido",
       "fieldEmail": "Email profesional",

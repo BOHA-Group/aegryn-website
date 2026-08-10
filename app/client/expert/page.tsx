@@ -40,7 +40,7 @@ export default async function ExpertClientPage() {
         {plan === 'active' ? (
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-ag-apex shrink-0" />
-            <p className="font-sans text-[13px] text-gray-700">Abonnement actif — votre fiche est éligible à la publication (89 € HT/mois).</p>
+            <p className="font-sans text-[13px] text-gray-700">Abonnement actif — votre fiche est éligible à la publication (89 CHF HT/mois).</p>
           </div>
         ) : (
           <div>
@@ -48,7 +48,7 @@ export default async function ExpertClientPage() {
               Aucun abonnement actif. Votre fiche ne sera pas visible publiquement.
             </p>
             <p className="font-sans text-[11px] text-amber-700">
-              Le paiement par abonnement sera disponible prochainement (89 € HT/mois). Contactez-nous pour activer votre accès manuellement : <a href="mailto:contact@boha-group.com" className="underline">contact@boha-group.com</a>
+              Le paiement par abonnement sera disponible prochainement (89 CHF HT/mois). Contactez-nous pour activer votre accès manuellement : <a href="mailto:contact@boha-group.com" className="underline">contact@boha-group.com</a>
             </p>
           </div>
         )}

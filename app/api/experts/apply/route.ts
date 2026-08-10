@@ -71,7 +71,7 @@ export async function POST(req: NextRequest) {
     await sendLeadEmails({
       to:              data.email,
       subjectFounder:  'AEGRYN — Candidature réseau d\'experts reçue',
-      textFounder:     `Bonjour ${data.prenom},\n\nVotre candidature au réseau d'experts AEGRYN a bien été reçue.\n\nProfil : ${data.profession}${data.organization ? ` · ${data.organization}` : ''}\n\nNos équipes examineront votre dossier et vous contacteront pour un entretien de qualification. L'accès au réseau se fait via un abonnement mensuel de référencement (89 € HT/mois).\n\nPour toute question : contact@boha-group.com\n\nL'équipe AEGRYN\nhttps://aegryn.com/experts`,
+      textFounder:     `Bonjour ${data.prenom},\n\nVotre candidature au réseau d'experts AEGRYN a bien été reçue.\n\nProfil : ${data.profession}${data.organization ? ` · ${data.organization}` : ''}\n\nNos équipes examineront votre dossier et vous contacteront pour un entretien de qualification. L'accès au réseau se fait via un abonnement mensuel de référencement (89 CHF HT/mois).\n\nPour toute question : contact@boha-group.com\n\nL'équipe AEGRYN\nhttps://aegryn.com/experts`,
       subjectInternal: `[Réseau Experts] Candidature — ${data.prenom} ${data.nom} (${data.profession})`,
       textInternal:    `Nouvelle candidature réseau expert\n\nNom : ${data.prenom} ${data.nom}\nEmail : ${data.email}\nProfession : ${data.profession}\nOrganisation : ${data.organization ?? '—'}\nVille : ${data.city ?? '—'} ${data.country ?? ''}\nSite : ${data.website ?? '—'}\n\nBio :\n${data.bio ?? '—'}\n\nSpécialités : ${(data.specialties ?? []).join(', ') || '—'}\n\nGérer : /admin/experts`,
     })

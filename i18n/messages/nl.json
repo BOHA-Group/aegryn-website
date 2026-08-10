@@ -2946,12 +2946,12 @@
       "evalTypeReview": {
         "label": "AEGRYN Review",
         "desc": "Schriftelijk advies van een AEGRYN-analist binnen 15 werkdagen. Geen externe partnerreview. Niet publiceerbaar in de catalogus, zonder externe validatie.",
-        "price": "2.000 € excl. btw"
+        "price": "2.000 CHF excl. btw"
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
         "desc": "Schriftelijk advies + review door een externe partner (juridisch kantoor of accountant) op verzoek binnen 20 werkdagen. Kruisverwijzingen met onze Alliance-partners.",
-        "price": "5.000 € excl. btw"
+        "price": "5.000 CHF excl. btw"
       },
       "evalDeductibleNote": "Dit bedrag is volledig aftrekbaar van de certificeringskosten als u binnen 6 maanden na ontvangst van uw Review een volledig Auction-proces start.",
       "partnerSelectLabel": "Te betrekken partner",
@@ -3747,7 +3747,7 @@
     "s12Title": "AEGRYN Expertennetwerk — Expertprofiel-abonnement",
     "s12Intro": "AEGRYN beheert een netwerk van geregistreerde professionals (hierna \"Partners\") die toegankelijk zijn via de sectie Expertennetwerk van het platform. Dit netwerk staat los van het transactieproces en vormt geen bemiddelingsdienst in financiële zin.",
     "s12AbonTitle": "Expertprofiel-abonnement",
-    "s12Abon": "Toegang tot het netwerk is afhankelijk van het afsluiten van een Expertprofiel-abonnement (€89 excl. btw/maand of geldend jaartarief). Dit abonnement geeft recht op: publicatie en bijwerking van een expertprofiel zichtbaar op aegryn.com/grade/partners, directe toegang tot contactverzoeken van AEGRYN-verkopers of -kopers die behoefte hebben aangegeven aan begeleiding op de in het profiel vermelde expertisegebieden, en deelname aan AEGRYN-netwerkevenementen. Het abonnement heeft geen minimale looptijd en kan op elk moment worden opgezegd met ingang van het einde van de lopende periode.",
+    "s12Abon": "Toegang tot het netwerk is afhankelijk van het afsluiten van een Expertprofiel-abonnement (CHF 89 excl. btw/maand of geldend jaartarief). Dit abonnement geeft recht op: publicatie en bijwerking van een expertprofiel zichtbaar op aegryn.com/grade/partners, directe toegang tot contactverzoeken van AEGRYN-verkopers of -kopers die behoefte hebben aangegeven aan begeleiding op de in het profiel vermelde expertisegebieden, en deelname aan AEGRYN-netwerkevenementen. Het abonnement heeft geen minimale looptijd en kan op elk moment worden opgezegd met ingang van het einde van de lopende periode.",
     "s12SubTitle": "Aard van de relatie",
     "s12Sub": "De Partner is een onafhankelijke dienstverlener die op persoonlijke titel of namens zijn organisatie is geregistreerd. Hij stelt zijn honoraria, intervenieningsvoorwaarden en contractuele voorwaarden met zijn klanten vrij vast. AEGRYN ontvangt geen commissie op de honoraria die de Partner aan zijn klanten in rekening brengt en treedt niet op in de commerciële relatie tussen de Partner en zijn klanten. De Partner is in het kader van zijn diensten op geen enkele wijze werknemer, gevolmachtigde of medecontractant van AEGRYN.",
     "s12NoCommTitle": "Geen commissie aan AEGRYN",

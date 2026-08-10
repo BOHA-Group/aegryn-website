@@ -41,8 +41,8 @@ const PRICES: Record<string, number> = {
 }
 
 const LABELS: Record<string, string> = {
-  review_internal: 'AEGRYN Review — Évaluation analytique (2 000 € HT)',
-  review_partner:  'AEGRYN Review+ — Évaluation co-signée (5 000 € HT)',
+  review_internal: 'AEGRYN Review — Évaluation analytique (2 000 CHF HT)',
+  review_partner:  'AEGRYN Review+ — Évaluation co-signée (5 000 CHF HT)',
 }
 
 export async function POST(req: NextRequest) {

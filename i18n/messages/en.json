@@ -2953,12 +2953,12 @@
       "evalTypeReview": {
         "label": "AEGRYN Review",
         "desc": "Written opinion from an AEGRYN analyst within 15 business days. No external partner review. Not publishable in the catalogue, no external validation.",
-        "price": "2,000 € excl. VAT"
+        "price": "CHF 2,000 excl. VAT"
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
         "desc": "Written opinion + review by an external partner (of your choice) on request within 20 business days. Cross-referenced with our partners.",
-        "price": "5,000 € excl. VAT"
+        "price": "CHF 5,000 excl. VAT"
       },
       "evalDeductibleNote": "This amount is fully deductible from the certification fee if you engage a full Auction process within 6 months of receiving your Review.",
       "partnerSelectLabel": "External partner to involve",
@@ -3751,7 +3751,7 @@
     "s12Title": "AEGRYN Expert Network — Expert Profile Subscription",
     "s12Intro": "AEGRYN operates a network of listed professionals (hereinafter \"Partners\") accessible from the Expert Network section of the platform. This network is distinct from the transaction process and does not constitute an intermediation service in the financial sense.",
     "s12AbonTitle": "Expert Profile Subscription",
-    "s12Abon": "Access to the network is conditional on subscribing to an Expert Profile subscription (€89 excl. VAT/month or current annual rate). This subscription entitles the holder to: publication and update of an expert profile visible on aegryn.com/grade/partners, direct access to referral requests initiated by AEGRYN sellers or buyers who have expressed a need for support in the areas of expertise listed in the profile, and participation in AEGRYN network events. The subscription has no minimum commitment and can be cancelled at any time with effect at the end of the current period.",
+    "s12Abon": "Access to the network is conditional on subscribing to an Expert Profile subscription (CHF 89 excl. VAT/month or current annual rate). This subscription entitles the holder to: publication and update of an expert profile visible on aegryn.com/grade/partners, direct access to referral requests initiated by AEGRYN sellers or buyers who have expressed a need for support in the areas of expertise listed in the profile, and participation in AEGRYN network events. The subscription has no minimum commitment and can be cancelled at any time with effect at the end of the current period.",
     "s12SubTitle": "Nature of the relationship",
     "s12Sub": "The Partner is an independent service provider listed in a personal capacity or in the name of their organisation. They freely set their fees, terms of engagement and contractual terms with their clients. AEGRYN does not receive any commission on fees charged by the Partner to their clients and does not intervene in the commercial relationship between the Partner and their clients. The Partner is in no way an employee, agent or co-contractor of AEGRYN in the context of their services.",
     "s12NoCommTitle": "No commission paid to AEGRYN",
@@ -4943,7 +4943,7 @@
     "waitlist": {
       "label": "Are you an expert?",
       "title": "Join the network.",
-      "desc": "The AEGRYN expert network is opening. Submit your application — our team reviews every profile and will contact you for a qualification interview. Access is via a monthly listing subscription (€89 excl. VAT/month).",
+      "desc": "The AEGRYN expert network is opening. Submit your application — our team reviews every profile and will contact you for a qualification interview. Access is via a monthly listing subscription (CHF 89 excl. VAT/month).",
       "fieldPrenom": "First name",
       "fieldNom": "Last name",
       "fieldEmail": "Professional email",

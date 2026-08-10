@@ -2946,12 +2946,12 @@
       "evalTypeReview": {
         "label": "AEGRYN Review",
         "desc": "Parere scritto di un analista AEGRYN entro 15 giorni lavorativi. Senza revisione da partner esterno. Non pubblicabile nel catalogo, senza validazione esterna.",
-        "price": "2.000 € IVA esclusa"
+        "price": "2.000 CHF IVA esclusa"
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
         "desc": "Parere scritto + revisione da un partner esterno (studio legale o commercialista) su richiesta entro 20 giorni lavorativi. Riferimenti incrociati con i nostri partner Alliance.",
-        "price": "5.000 € IVA esclusa"
+        "price": "5.000 CHF IVA esclusa"
       },
       "evalDeductibleNote": "Questo importo è interamente deducibile dal costo di certificazione se avvia un processo completo di Auction entro 6 mesi dalla ricezione della sua Review.",
       "partnerSelectLabel": "Partner da coinvolgere",
@@ -3747,7 +3747,7 @@
     "s12Title": "Rete di esperti AEGRYN — Abbonamento Scheda Esperto",
     "s12Intro": "AEGRYN gestisce una rete di professionisti referenziati (di seguito \"Partner\") accessibili dalla sezione Rete di esperti della piattaforma. Questa rete è distinta dal processo di transazione e non costituisce un servizio di intermediazione in senso finanziario.",
     "s12AbonTitle": "Abbonamento Scheda Esperto",
-    "s12Abon": "L'accesso alla rete è subordinato alla sottoscrizione di un abbonamento Scheda Esperto (89 € IVA esclusa/mese o tariffa annuale in vigore). Questo abbonamento dà diritto a: pubblicazione e aggiornamento di una scheda esperto visibile su aegryn.com/grade/partners, accesso diretto alle richieste di messa in contatto avviate da cedenti o acquirenti AEGRYN che abbiano espresso un bisogno di accompagnamento nei settori di competenza indicati nella scheda, e partecipazione agli eventi della rete AEGRYN. L'abbonamento non prevede impegno minimo ed è rescindibile in qualsiasi momento con effetto alla fine del periodo in corso.",
+    "s12Abon": "L'accesso alla rete è subordinato alla sottoscrizione di un abbonamento Scheda Esperto (89 CHF IVA esclusa/mese o tariffa annuale in vigore). Questo abbonamento dà diritto a: pubblicazione e aggiornamento di una scheda esperto visibile su aegryn.com/grade/partners, accesso diretto alle richieste di messa in contatto avviate da cedenti o acquirenti AEGRYN che abbiano espresso un bisogno di accompagnamento nei settori di competenza indicati nella scheda, e partecipazione agli eventi della rete AEGRYN. L'abbonamento non prevede impegno minimo ed è rescindibile in qualsiasi momento con effetto alla fine del periodo in corso.",
     "s12SubTitle": "Natura del rapporto",
     "s12Sub": "Il Partner è un fornitore di servizi indipendente referenziato a titolo personale o a nome della propria organizzazione. Fissa liberamente i propri onorari, le condizioni di intervento e le condizioni contrattuali con i propri clienti. AEGRYN non percepisce alcuna commissione sugli onorari fatturati dal Partner ai propri clienti e non interviene nel rapporto commerciale tra il Partner e i suoi clienti. Il Partner non è in alcun caso dipendente, mandatario né co-contraente di AEGRYN nell'ambito delle sue prestazioni.",
     "s12NoCommTitle": "Assenza di commissione ad AEGRYN",
@@ -4939,7 +4939,7 @@
     "waitlist": {
       "label": "Sei un esperto?",
       "title": "Unisciti alla rete.",
-      "desc": "La rete di esperti AEGRYN sta aprendo. Invia la tua candidatura — il nostro team esamina ogni profilo e ti contatterà per un colloquio di qualificazione. L'accesso avviene tramite un abbonamento mensile di referenziazione (89 € + IVA/mese).",
+      "desc": "La rete di esperti AEGRYN sta aprendo. Invia la tua candidatura — il nostro team esamina ogni profilo e ti contatterà per un colloquio di qualificazione. L'accesso avviene tramite un abbonamento mensile di referenziazione (89 CHF + IVA/mese).",
       "fieldPrenom": "Nome",
       "fieldNom": "Cognome",
       "fieldEmail": "Email professionale",

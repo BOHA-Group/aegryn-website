@@ -177,15 +177,15 @@ export default async function SellerDashboardPage() {
               <div className="flex items-center gap-2">
                 <Tag size={14} className="text-ag-grade-aaa shrink-0" />
                 <span className="font-sans font-bold text-[13px] text-gray-900">Certification seule (Review)</span>
-                <span className="ml-auto font-mono text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5">À partir de 2 000 € HT</span>
+                <span className="ml-auto font-mono text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5">À partir de 2 000 CHF HT</span>
               </div>
               <p className="font-sans text-[12px] text-gray-500 leading-relaxed">
                 Obtenez un <strong>Grade AEGRYN officiel</strong> sans mise en vente. Idéal pour valoriser votre actif, rassurer des partenaires ou préparer une future cession.
               </p>
               <ul className="flex flex-col gap-1.5">
                 {[
-                  ['AEGRYN Review — Analyse interne : 2 000 € HT (15 j. ouvrés)', true],
-                  ['AEGRYN Review+ — Co-signé partenaire : 5 000 € HT (20 j. ouvrés)', true],
+                  ['AEGRYN Review — Analyse interne : 2 000 CHF HT (15 j. ouvrés)', true],
+                  ['AEGRYN Review+ — Co-signé partenaire : 5 000 CHF HT (20 j. ouvrés)', true],
                   ['Paiement à la commande (Stripe — disponible prochainement)', false],
                   ['Déductible si Certification Auction engagée dans les 6 mois', true],
                 ].map(([txt, ok]) => (

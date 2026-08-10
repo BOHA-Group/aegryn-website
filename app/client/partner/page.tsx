@@ -137,7 +137,7 @@ export default async function PartnerDashboardPage() {
           <p className={`font-mono font-bold text-[13px] ${expertPlan === 'active' ? 'text-emerald-600' : 'text-amber-600'}`}>
             {expertPlan === 'active' ? 'Abonnement actif' : 'Abonnement inactif'}
           </p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">Fiche expert — 89 €/mois</p>
+          <p className="font-sans text-[11px] text-gray-400 mt-0.5">Fiche expert — 89 CHF/mois</p>
         </Link>
       </div>
 

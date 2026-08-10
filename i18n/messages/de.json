@@ -2946,12 +2946,12 @@
       "evalTypeReview": {
         "label": "AEGRYN Review",
         "desc": "Schriftliches Gutachten eines AEGRYN-Analysten innerhalb von 15 Werktagen. Keine externe Partnerprüfung. Nicht im Katalog veröffentlichbar, ohne externe Validierung.",
-        "price": "2.000 € zzgl. MwSt."
+        "price": "2.000 CHF zzgl. MwSt."
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
         "desc": "Schriftliches Gutachten + Prüfung durch einen externen Partner (Kanzlei oder Wirtschaftsprüfer) auf Anfrage innerhalb von 20 Werktagen. Querverweise mit unseren Alliance-Partnern.",
-        "price": "5.000 € zzgl. MwSt."
+        "price": "5.000 CHF zzgl. MwSt."
       },
       "evalDeductibleNote": "Dieser Betrag wird vollständig von den Zertifizierungskosten abgezogen, wenn Sie innerhalb von 6 Monaten nach Erhalt Ihres Reviews einen vollständigen Auction-Prozess einleiten.",
       "partnerSelectLabel": "Einzubeziehender Partner",
@@ -3747,7 +3747,7 @@
     "s12Title": "AEGRYN Expertennetzwerk — Expertenprofil-Abonnement",
     "s12Intro": "AEGRYN betreibt ein Netzwerk von gelisteten Fachleuten (nachfolgend \"Partner\"), die über den Bereich Expertennetzwerk der Plattform zugänglich sind. Dieses Netzwerk ist vom Transaktionsprozess getrennt und stellt keine Vermittlungsleistung im finanziellen Sinne dar.",
     "s12AbonTitle": "Expertenprofil-Abonnement",
-    "s12Abon": "Der Zugang zum Netzwerk ist an den Abschluss eines Expertenprofil-Abonnements geknüpft (89 € zzgl. MwSt./Monat oder geltender Jahrestarif). Dieses Abonnement berechtigt zur: Veröffentlichung und Aktualisierung eines Expertenprofils auf aegryn.com/grade/partners, direktem Zugang zu Vermittlungsanfragen von AEGRYN-Verkäufern oder -Käufern, die Unterstützungsbedarf in den im Profil angegebenen Fachgebieten geäußert haben, sowie zur Teilnahme an AEGRYN-Netzwerkveranstaltungen. Das Abonnement hat keine Mindestlaufzeit und kann jederzeit mit Wirkung zum Ende der laufenden Periode gekündigt werden.",
+    "s12Abon": "Der Zugang zum Netzwerk ist an den Abschluss eines Expertenprofil-Abonnements geknüpft (89 CHF zzgl. MwSt./Monat oder geltender Jahrestarif). Dieses Abonnement berechtigt zur: Veröffentlichung und Aktualisierung eines Expertenprofils auf aegryn.com/grade/partners, direktem Zugang zu Vermittlungsanfragen von AEGRYN-Verkäufern oder -Käufern, die Unterstützungsbedarf in den im Profil angegebenen Fachgebieten geäußert haben, sowie zur Teilnahme an AEGRYN-Netzwerkveranstaltungen. Das Abonnement hat keine Mindestlaufzeit und kann jederzeit mit Wirkung zum Ende der laufenden Periode gekündigt werden.",
     "s12SubTitle": "Art der Beziehung",
     "s12Sub": "Der Partner ist ein unabhängiger Dienstleister, der in persönlicher Eigenschaft oder im Namen seiner Organisation gelistet ist. Er legt seine Honorare, Einsatzbedingungen und Vertragsbedingungen mit seinen Kunden frei fest. AEGRYN erhält keine Provision auf die vom Partner an seine Kunden berechneten Honorare und greift nicht in die Geschäftsbeziehung zwischen dem Partner und seinen Kunden ein. Der Partner ist im Rahmen seiner Dienstleistungen in keiner Weise Angestellter, Bevollmächtigter oder Mitvertragspartner von AEGRYN.",
     "s12NoCommTitle": "Keine Provision an AEGRYN",
@@ -4939,7 +4939,7 @@
     "waitlist": {
       "label": "Sind Sie Experte?",
       "title": "Treten Sie dem Netzwerk bei.",
-      "desc": "Das AEGRYN-Expertennetzwerk öffnet sich. Reichen Sie Ihre Bewerbung ein — unser Team prüft jedes Profil und kontaktiert Sie für ein Qualifikationsgespräch. Der Zugang erfolgt über ein monatliches Listing-Abonnement (89 € zzgl. MwSt./Monat).",
+      "desc": "Das AEGRYN-Expertennetzwerk öffnet sich. Reichen Sie Ihre Bewerbung ein — unser Team prüft jedes Profil und kontaktiert Sie für ein Qualifikationsgespräch. Der Zugang erfolgt über ein monatliches Listing-Abonnement (89 CHF zzgl. MwSt./Monat).",
       "fieldPrenom": "Vorname",
       "fieldNom": "Nachname",
       "fieldEmail": "Geschäftliche E-Mail",

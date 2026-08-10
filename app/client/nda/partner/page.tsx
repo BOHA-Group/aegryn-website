@@ -86,7 +86,7 @@ export default async function PartnerNdaPage() {
             <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">4. Modèle économique — Absence de commission</h2>
             <p>
               Le Partenaire reconnaît et accepte expressément que son accès au réseau AEGRYN est
-              exclusivement conditionné au paiement d'un abonnement Fiche Expert (89 € HT/mois ou
+              exclusivement conditionné au paiement d'un abonnement Fiche Expert (89 CHF HT/mois ou
               tarif annuel en vigueur). AEGRYN ne perçoit <strong>aucune commission</strong> sur les
               honoraires facturés par le Partenaire à ses clients, quelle que soit la nature de la
               mission (conseil, due diligence, assistance juridique, audit technique, etc.).

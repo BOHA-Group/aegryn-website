@@ -2953,12 +2953,12 @@
       "evalTypeReview": {
         "label": "AEGRYN Review",
         "desc": "Avis écrit d'un analyste AEGRYN sous 15 jours ouvrés. Sans revue partenaire externe. Non publiable au catalogue, sans validation externe.",
-        "price": "2 000 € HT"
+        "price": "2 000 CHF HT"
       },
       "evalTypeReviewPlus": {
         "label": "AEGRYN Review+",
         "desc": "Avis écrit + revue d'un partenaire externe (de votre choix) à la demande sous 20 jours ouvrés. Référence croisée avec nos partenaires.",
-        "price": "5 000 € HT"
+        "price": "5 000 CHF HT"
       },
       "evalDeductibleNote": "Ce montant est intégralement déductible du coût de certification si vous engagez un processus complet vers l'Auction dans les 6 mois suivant la remise de votre Review.",
       "partnerSelectLabel": "Partenaire externe à associer",
@@ -3751,7 +3751,7 @@
     "s12SubTitle": "Nature de la relation",
     "s12Sub": "Le Partenaire est un prestataire indépendant référencé à titre personnel ou au nom de sa structure. Il fixe librement ses honoraires, ses conditions d'intervention et ses modalités contractuelles avec ses clients. AEGRYN ne perçoit aucune commission sur les honoraires facturés par le Partenaire à ses clients et n'intervient pas dans la relation commerciale entre le Partenaire et ses clients. Le Partenaire n'est en aucun cas salarié, mandataire ni co-contractant d'AEGRYN dans le cadre de ses prestations.",
     "s12AbonTitle": "Abonnement Fiche Expert",
-    "s12Abon": "L'accès au réseau est conditionné à la souscription d'un abonnement Fiche Expert (89 € HT/mois ou tarif annuel en vigueur). Cet abonnement donne droit à : la publication et la mise à jour d'une fiche expert visible sur aegryn.com/grade/partners, l'accès direct aux demandes de mise en relation initiées par des cédants ou acquéreurs AEGRYN ayant exprimé un besoin d'accompagnement sur les domaines d'expertise renseignés dans la fiche, et la participation aux événements réseau AEGRYN. L'abonnement est sans engagement minimum et résiliable à tout moment avec effet au terme de la période en cours.",
+    "s12Abon": "L'accès au réseau est conditionné à la souscription d'un abonnement Fiche Expert (89 CHF HT/mois ou tarif annuel en vigueur). Cet abonnement donne droit à : la publication et la mise à jour d'une fiche expert visible sur aegryn.com/grade/partners, l'accès direct aux demandes de mise en relation initiées par des cédants ou acquéreurs AEGRYN ayant exprimé un besoin d'accompagnement sur les domaines d'expertise renseignés dans la fiche, et la participation aux événements réseau AEGRYN. L'abonnement est sans engagement minimum et résiliable à tout moment avec effet au terme de la période en cours.",
     "s12ReferralTitle": "Programme de parrainage",
     "s12Referral": "Tout Partenaire détenteur d'un abonnement Fiche Expert actif peut parrainer d'autres professionnels. Pour chaque filleul souscrivant un abonnement Fiche Expert, le parrain bénéficie d'un crédit d'un mois offert sur son propre abonnement, crédité à l'échéance suivante. Le filleul bénéficie également d'un mois offert en déduction de sa première facture. AEGRYN se réserve le droit de modifier ce programme avec un préavis de 30 jours.",
     "s12NoCommTitle": "Absence de commission reversée à AEGRYN",
@@ -4035,7 +4035,7 @@
           "sellers"
         ],
         "q": "Quelles sont les options de certification et leurs tarifs ?",
-        "a": "Deux parcours sont disponibles. Certification uniquement (AEGRYN Review) : obtenir un Grade officiel sans mise au catalogue, à 2 000 € HT (Review interne) ou 5 000 € HT (Review+ co-signée), déductibles si une Certification Auction est engagée dans les 6 mois. Certification Auction : processus complet avec mise au catalogue et commission AEGRYN uniquement à la transaction. Des frais de publication de CHF 2 000 HT s'appliquent, déductibles de la commission en cas de vente et conservés sans transaction."
+        "a": "Deux parcours sont disponibles. Certification uniquement (AEGRYN Review) : obtenir un Grade officiel sans mise au catalogue, à 2 000 CHF HT (Review interne) ou 5 000 CHF HT (Review+ co-signée), déductibles si une Certification Auction est engagée dans les 6 mois. Certification Auction : processus complet avec mise au catalogue et commission AEGRYN uniquement à la transaction. Des frais de publication de CHF 2 000 HT s'appliquent, déductibles de la commission en cas de vente et conservés sans transaction."
       },
       {
         "id": "what-grade",
@@ -4942,7 +4942,7 @@
     "waitlist": {
       "label": "Vous êtes expert ?",
       "title": "Rejoignez le réseau.",
-      "desc": "Le réseau d'experts AEGRYN est en cours d'ouverture. Déposez votre candidature — notre équipe examine chaque profil et vous contactera pour un entretien de qualification. L'accès au réseau se fera via un abonnement mensuel de référencement (89 € HT/mois).",
+      "desc": "Le réseau d'experts AEGRYN est en cours d'ouverture. Déposez votre candidature — notre équipe examine chaque profil et vous contactera pour un entretien de qualification. L'accès au réseau se fera via un abonnement mensuel de référencement (89 CHF HT/mois).",
       "fieldPrenom": "Prénom",
       "fieldNom": "Nom",
       "fieldEmail": "Email professionnel",
