@@ -74,7 +74,7 @@ export default function ReferralSection({ isActive }: { isActive: boolean }) {
 
   async function copyLink() {
     if (!data) return
-    await navigator.clipboard.writeText(data.referral_link)
+    await navigator.clipboard.writeText(data.referral_code)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -187,10 +187,9 @@ export default function ReferralSection({ isActive }: { isActive: boolean }) {
                 className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest border border-gray-300 px-3 py-2 text-gray-500 hover:border-ag-navy hover:text-ag-navy transition-colors"
               >
                 {copied ? <Check size={12} /> : <Copy size={12} />}
-                {copied ? 'Copié' : 'Copier le lien'}
+                {copied ? 'Copié' : 'Copier le code'}
               </button>
             </div>
-            <p className="font-sans text-[11px] text-gray-400 break-all">{data.referral_link}</p>
           </div>
         )}
 
