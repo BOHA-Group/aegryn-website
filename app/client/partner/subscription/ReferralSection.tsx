@@ -28,6 +28,9 @@ type ReferralData = {
   referral_link: string
   referral_months_credit: number
   months_cap: number
+  credits_used: number
+  credits_cap: number
+  expert_plan: string | null
   referrals: ReferralItem[]
   credits: CreditItem[]
   filleul_status: {
@@ -101,6 +104,7 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
       load()
     } else {
       const ERRORS: Record<string, string> = {
+        quota_exceeded:                    'Vous avez atteint le plafond de 6 mois de crédits.',
         already_referred:                 'Vous avez déjà un parrain.',
         already_referred_by_this_sponsor: 'Ce parrain vous a déjà parrainé.',
         self_referral:                    'Vous ne pouvez pas vous auto-parrainer.',
@@ -133,8 +137,21 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
   const rewarded  = data.referrals.filter(r => r.status === 'rewarded').length
   const pending   = data.referrals.filter(r => r.status === 'pending').length
 
+  const quotaFull  = data.credits_used >= data.credits_cap
+  const quotaPct    = Math.min(100, Math.round((data.credits_used / data.credits_cap) * 100))
+
   return (
     <div className="space-y-6 mt-2">
+
+      {/* ── Bannière quota crédits atteint ── */}
+      {quotaFull && (
+        <div className="bg-red-50 border border-red-200 px-5 py-4 flex items-start gap-3">
+          <span className="font-mono text-[10px] uppercase tracking-widest text-red-700 shrink-0 mt-0.5">Plafond atteint</span>
+          <p className="font-sans text-[12px] text-red-800">
+            Vous avez utilisé vos <strong>6 mois de crédits</strong> maximum. Aucun crédit supplémentaire ne peut être accordé (parrainage ou admin).
+          </p>
+        </div>
+      )}
 
       {/* ── Bannière filleul (si l'utilisateur a lui-même été parrainé) ── */}
       {data.filleul_status && data.filleul_status.status !== 'rewarded' && (
@@ -268,6 +285,28 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
       {!data.filleul_status && (
         <div className="bg-white border border-gray-200 p-6">
           <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 mb-4">Saisir un code parrain</p>
+
+          {/* Barre de progression quota */}
+          <div className="mb-4">
+            <div className="flex items-center justify-between mb-1">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-gray-400">Crédits utilisés</span>
+              <span className={`font-mono text-[11px] font-bold ${quotaFull ? 'text-red-600' : 'text-gray-700'}`}>
+                {data.credits_used} / {data.credits_cap} mois
+              </span>
+            </div>
+            <div className="w-full bg-gray-100 h-1.5">
+              <div
+                className={`h-1.5 transition-all ${quotaFull ? 'bg-red-400' : quotaPct >= 80 ? 'bg-amber-400' : 'bg-ag-apex'}`}
+                style={{ width: `${quotaPct}%` }}
+              />
+            </div>
+          </div>
+
+          {quotaFull ? (
+            <p className="font-sans text-[12px] text-red-700 bg-red-50 border border-red-200 px-4 py-3">
+              Plafond de 6 mois de crédits atteint. Vous ne pouvez plus bénéficier de parrainage.
+            </p>
+          ) : (
           <form onSubmit={submitCode} className="flex gap-3 items-start flex-wrap">
             <input
               type="text"
@@ -286,6 +325,7 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
               Valider
             </button>
           </form>
+          )}
           {submitMsg && (
             <p className={`font-sans text-[12px] mt-3 ${submitMsg.ok ? 'text-emerald-700' : 'text-red-600'}`}>
               {submitMsg.text}

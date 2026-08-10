@@ -9,6 +9,7 @@ import { getUser }                   from '@/lib/supabaseServer'
 import { createServiceClient }       from '@/lib/supabase'
 
 const REFERRAL_MONTHS_CAP = 6
+const CREDITS_CAP = 6
 const CODE_CHARS = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
 
 function generateCode(): string {
@@ -72,11 +73,16 @@ export async function GET() {
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'
 
+  /* Total mois crédits reçus (parrainage + admin) */
+  const creditsUsed = (credits ?? []).reduce((sum, c) => sum + (c.months ?? 0), 0)
+
   return NextResponse.json({
     referral_code:          profile.referral_code,
     referral_link:          `${siteUrl}/?ref=${profile.referral_code}`,
     referral_months_credit: profile.referral_months_credit ?? 0,
     months_cap:             REFERRAL_MONTHS_CAP,
+    credits_used:           creditsUsed,
+    credits_cap:            CREDITS_CAP,
     expert_plan:            profile.expert_plan,
     expert_plan_end:        profile.expert_plan_end,
     referrals:              referrals ?? [],
@@ -107,9 +113,19 @@ export async function POST(req: NextRequest) {
     .from('profiles')
     .select('referred_by, expert_plan, referral_code')
     .eq('id', user.id)
-    .single()
+    .single()  
 
   if (!myProfile) return NextResponse.json({ error: 'profile_not_found' }, { status: 404 })
+
+  /* Vérifier quota global crédits filleul */
+  const { data: existingCredits } = await supa
+    .from('expert_subscription_credits')
+    .select('months')
+    .eq('user_id', user.id)
+  const creditsUsedAlready = (existingCredits ?? []).reduce((sum, c) => sum + (c.months ?? 0), 0)
+  if (creditsUsedAlready >= CREDITS_CAP) {
+    return NextResponse.json({ error: 'quota_exceeded', credits_used: creditsUsedAlready, credits_cap: CREDITS_CAP }, { status: 409 })
+  }
 
   /* Déjà un parrain */
   if (myProfile.referred_by) return NextResponse.json({ error: 'already_referred' }, { status: 409 })
