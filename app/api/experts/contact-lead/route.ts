@@ -90,9 +90,9 @@ export async function POST(req: NextRequest) {
   // 3. Retourner l'email de l'expert pour que le client puisse ouvrir mailto:
   const { data: expert } = await supa
     .from('expert_profiles')
-    .select('email_public')
+    .select('email_public, phone')
     .eq('id', expert_id)
     .single()
 
-  return NextResponse.json({ ok: true, email_public: expert?.email_public ?? null })
+  return NextResponse.json({ ok: true, email_public: expert?.email_public ?? null, phone: expert?.phone ?? null })
 }

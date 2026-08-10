@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
-import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, Scale, Cpu, ClipboardCheck, X } from 'lucide-react'
+import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, Scale, Cpu, ClipboardCheck, X, Phone } from 'lucide-react'
 import {
   EXPERTISE_TAXONOMY,
   getCategoryIdsByDimension,
@@ -222,6 +222,7 @@ function ContactLeadModal({ expert, filters, onClose }: ContactLeadModalProps) {
   const [error,     setError]     = useState<string | null>(null)
   const [done,      setDone]      = useState(false)
   const [revealedEmail, setRevealedEmail] = useState<string | null>(null)
+  const [revealedPhone, setRevealedPhone] = useState<string | null>(null)
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) { if (e.key === 'Escape') onClose() }
@@ -254,6 +255,7 @@ function ContactLeadModal({ expert, filters, onClose }: ContactLeadModalProps) {
       const data = await res.json()
       if (!res.ok) { setError(data.error ?? t('contactModal.errorGeneric')); return }
       setRevealedEmail(data.email_public ?? null)
+      setRevealedPhone(data.phone ?? null)
       setDone(true)
     } catch { setError(t('contactModal.errorGeneric')) }
     finally  { setLoading(false) }
@@ -286,6 +288,14 @@ function ContactLeadModal({ expert, filters, onClose }: ContactLeadModalProps) {
                   className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 bg-ag-navy text-white hover:bg-ag-black transition-colors mt-2"
                 >
                   <Mail size={11} /> {revealedEmail}
+                </a>
+              )}
+              {revealedPhone && (
+                <a
+                  href={`tel:${revealedPhone.replace(/\s/g, '')}`}
+                  className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 border border-ag-navy text-ag-navy hover:bg-ag-navy hover:text-white transition-colors"
+                >
+                  <Phone size={11} /> {revealedPhone}
                 </a>
               )}
             </div>
