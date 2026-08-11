@@ -92,7 +92,7 @@ const COMPARE_ROWS = [
   { label: 'Acheteurs',                 aegryn: '100% pré-qualifiés, preuve de fonds', other: 'Base ouverte, qualité variable' },
   { label: 'Séquestre',                 aegryn: 'Bancaire institutionnel suisse',    other: 'Escrow.com (US)' },
   { label: 'Juridiction',               aegryn: 'Suisse / droit continental',        other: 'Californie / droit US' },
-  { label: 'Ticket typique',            aegryn: '€100K – €10M+',                     other: '$10K – $2M' },
+  { label: 'Ticket typique',            aegryn: '€100K – €10M',                      other: '$10K – $2M' },
   { label: 'Commission vendeur',        aegryn: 'Success fee uniquement',            other: '6–8% + listing fee mensuelle' },
 ]
 

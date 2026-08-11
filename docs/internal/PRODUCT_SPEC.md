@@ -20,14 +20,30 @@ No buyer accesses a dossier without a signed NDA and verified qualification.
 ## 2. User Personas
 
 ### 2.1 Seller (Cédant)
+
+#### Seller A — Early Exit
 - Founder of a profitable tech asset (SaaS, marketplace, mobile app, API)
-- ARR €100k–€10M+, seeking structured exit with legal protection
-- Needs: grade report, data room, qualified buyer introduction, closing support
+- ARR €100k–€500k, Grade A–AA, indicative ticket €200k–€800k
+- Typical buyer profile: search fund operator or entrepreneurship-through-acquisition (ETA) individual
+- Needs: grade report, structured data room, introduction to qualified buyers, closing support
+
+#### Seller B — Mature Exit
+- Founder of a scaling tech asset with fully documented financials and established revenue base
+- ARR €500k–€5M, Grade AA–AAA, indicative ticket €800k–€5M
+- Typical buyer profile: private equity fund or family office
+- Needs: grade report, investment-committee-ready dossier, structured data room, legal and transfer framing
 
 ### 2.2 Buyer (Acquéreur)
-- PE fund, family office, strategic acquirer, or serial entrepreneur
-- Acquisition capacity €300k–€20M+
-- Needs: certified pipeline, NDA-gated access, financial metrics, legal clarity
+
+#### Buyer A — Search Fund / Entrepreneurship Through Acquisition
+- Individual operator or search fund on a first acquisition
+- Ticket €200k–€1M
+- Needs: certified and pre-audited pipeline, NDA-gated dossier access, closing expert support and transaction guidance
+
+#### Buyer B — Private Equity / Family Office / Strategic Acquirer
+- Private equity fund, family office, or strategic corporate acquirer
+- Ticket €1M–€10M, investment committee process, possible special purpose vehicle structure, own due diligence team
+- Needs: certified pipeline, financial metrics and grade documentation, legal clarity, full data room access
 
 ### 2.3 Certified Partner (Expert CIFS)
 - M&A consultant, CPA, tech auditor, IP attorney
@@ -42,7 +58,7 @@ No buyer accesses a dossier without a signed NDA and verified qualification.
 
 #### Flow A — Auction Certification (no upfront fee)
 ```
-Submit asset → Pre-qualification (5 business days) → CIFS audit (4 dimensions) →
+Submit asset → Pre-screening (5 business days) → CIFS audit (4 dimensions) →
 Grade issued → Dossier published → NDA matching → Session presentation →
 Offer → Closing → Commission deducted
 ```
