@@ -11,7 +11,7 @@ import { MarketStatStrip }   from '@/components/sections/MarketStatStrip'
 import { WhyUseApps }        from '@/components/sections/WhyUseApps'
 import { AcqSupportStrip }   from '@/components/sections/AcqSupportStrip'
 import { BuildEngineeringStrip } from '@/components/sections/BuildEngineeringStrip'
-import { StatementStrip }    from '@/components/sections/StatementStrip'
+import { AdvisoryTechStrip } from '@/components/sections/AdvisoryTechStrip'
 import { DiscoverStrip }     from '@/components/sections/DiscoverStrip'
 import type { Metadata }    from 'next'
 
@@ -29,28 +29,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params
-  const tAdv = await getTranslations({ locale, namespace: 'advisory' })
 
   return (
     <>
       {/* ── 0. Hero ────────────────────────────────────────── */}
       <HeroMountain />
 
-      {/* ── Intro : qui sommes-nous + modèle 3 piliers ─────── */}
+      {/* ── 01. Conviction + 02. Modèle Aegryn ─────────────── */}
       <ManifestoSection />
 
-      {/* ── 1. Conception ──────────────────────────────────── */}
+      {/* ── 03. Conception ─────────────────────────────────── */}
       <BuildStrip />
       <BuildEngineeringStrip />
 
-      {/* ── 2. Conseil ─────────────────────────────────────── */}
-      {/* Advisory Tech + stratégique en premier */}
-      <StatementStrip
-        label={tAdv('label')}
-        title={tAdv('hero.title')}
-        cta={tAdv('cta')}
-        href="/advisory"
-      />
+      {/* ── 04. Conseil ────────────────────────────────────── */}
+      {/* Advisory Tech — présentation des 3 domaines */}
+      <AdvisoryTechStrip />
       {/* Advisory Transaction + Réseau */}
       <AcqSupportStrip />
 
