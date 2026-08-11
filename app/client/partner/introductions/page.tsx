@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 import { redirect } from 'next/navigation'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
@@ -7,13 +9,19 @@ import NewIntroductionForm from './NewIntroductionForm'
 import IntroductionsList from './IntroductionsList'
 
 export const metadata: Metadata = {
-  title: 'Introductions — Espace Partenaire Aegryn',
+  title: 'Introductions — Partner Space Aegryn',
   robots: { index: false, follow: false },
 }
 
 export default async function PartnerIntroductionsPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
+
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.partner.introductions' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
 
   const supa = createServiceClient()
   const { data: introductions } = await supa
@@ -27,7 +35,7 @@ export default async function PartnerIntroductionsPage() {
 
       <div className="flex items-start justify-between mb-8">
         <div>
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('areaLabel')}</p>
           <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Introductions</h1>
           <p className="font-sans text-[13px] text-gray-400 mt-1">
             Apports d&apos;affaires soumis à l&apos;équipe Aegryn : actifs ou acquéreurs.

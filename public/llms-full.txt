@@ -108,6 +108,8 @@ A structured, session-based M&A auction platform dedicated to European digital t
 ### Key Pages
 - /auction — Platform overview
 - /auction/sell — Seller funnel: free valuation → readiness score → mandate submission
+- /auction/how-to-sell — Complete guide for sellers
+- /auction/submit — Mandate submission form
 - /auction/buyers — Buyer pre-qualification: profile, sectors, ticket, proof of funds
 - /auction/how-it-works — 6-step process: valuation → mandate+NDA → CIFS certification → buyer matching → auction session → Swiss escrow closing
 - /auction/catalog — Live catalog (NDA required for full dossier)
@@ -209,6 +211,8 @@ Incorporated: BOHA-Group Sàrl
 | What We Build | /fr/ce-que-nous-construisons | Proprietary digital ecosystems |
 | Auction | /fr/auction | Auction platform overview |
 | Céder un actif | /fr/auction/sell | Seller funnel: valuation, readiness score, mandate |
+| How to Sell | /fr/auction/how-to-sell | Complete guide for sellers |
+| Submit Mandate | /fr/auction/submit | Mandate submission form |
 | Acheteurs | /fr/auction/buyers | Buyer pre-qualification form |
 | Comment ça marche | /fr/auction/how-it-works | Full 6-step process |
 | Auction Catalog | /fr/auction/catalog | Live assets for sale |
@@ -244,10 +248,9 @@ Incorporated: BOHA-Group Sàrl
 ## Social Media
 
 - LinkedIn: https://www.linkedin.com/company/106273747/
-- Instagram: https://www.instagram.com/boha_group/
+- Instagram: https://www.instagram.com/aegrynhq/
+- YouTube: https://www.youtube.com/@aegrynhq
 - TikTok: https://www.tiktok.com/@aegryn.auction
-- YouTube: https://www.youtube.com/@aegryn.auction
-- Facebook: https://www.facebook.com/BOHA-Group
 
 ---
 

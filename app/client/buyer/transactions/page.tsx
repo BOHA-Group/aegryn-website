@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
@@ -6,7 +8,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { ArrowUpRight, ArrowRightLeft } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Transactions — Espace Acquéreur Aegryn',
+  title: 'Transactions — Buyer Space Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -28,7 +30,7 @@ function fmtChf(n: number | null) {
   return new Intl.NumberFormat('fr-CH', { style: 'currency', currency: 'CHF', maximumFractionDigits: 0 }).format(n)
 }
 
-function fmtDate(d: unknown) {
+function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
 }
@@ -50,6 +52,12 @@ export default async function BuyerTransactionsPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
 
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.buyer' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
+
   const supa = createServiceClient()
   const { data: transactions } = await supa
     .from('transactions')
@@ -61,8 +69,8 @@ export default async function BuyerTransactionsPage() {
     <div className="p-8 max-w-4xl">
 
       <div className="mb-8">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Acquéreur</p>
-        <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Mes transactions</h1>
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('areaLabel')}</p>
+        <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">{t('kpiTransactions')}</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
           Pipeline PTT (Promesse-To-Transfer) de vos acquisitions en cours.
         </p>
@@ -72,7 +80,7 @@ export default async function BuyerTransactionsPage() {
         <div className="bg-white border border-gray-200 px-8 py-16 text-center">
           <ArrowRightLeft size={24} className="text-gray-300 mx-auto mb-4" />
           <p className="font-sans text-[14px] text-gray-400 mb-4">
-            Aucune transaction en cours. Soumettez une offre pour démarrer un processus d&apos;acquisition.
+            {t('noTransactions')} Soumettez une offre pour démarrer un processus d&apos;acquisition.
           </p>
           <Link href="/client/buyer/catalogue"
             className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors">
@@ -95,7 +103,7 @@ export default async function BuyerTransactionsPage() {
                     <h2 className="font-sans font-semibold text-gray-900 text-[14px]">
                       {tx.assets?.company_name ?? `Transaction #${tx.id.slice(0, 8)}`}
                     </h2>
-                    <p className="font-mono text-[10px] text-gray-400 mt-0.5">Créée le {fmtDate(tx.created_at)}</p>
+                    <p className="font-mono text-[10px] text-gray-400 mt-0.5">Créée le {fmtDate(tx.created_at, locale)}</p>
                   </div>
                   <div className="flex items-center gap-3 shrink-0">
                     {tx.escrow_amount_chf != null && (
@@ -155,19 +163,19 @@ export default async function BuyerTransactionsPage() {
                   {tx.dd_deadline_at && (
                     <div>
                       <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Fin DD</p>
-                      <p className="font-sans text-[11px] text-gray-500">{fmtDate(tx.dd_deadline_at)}</p>
+                      <p className="font-sans text-[11px] text-gray-500">{fmtDate(tx.dd_deadline_at, locale)}</p>
                     </div>
                   )}
                   {tx.signing_date && (
                     <div>
                       <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Signing</p>
-                      <p className="font-sans text-[11px] text-gray-500">{fmtDate(tx.signing_date)}</p>
+                      <p className="font-sans text-[11px] text-gray-500">{fmtDate(tx.signing_date, locale)}</p>
                     </div>
                   )}
                   {tx.closed_at && (
                     <div>
                       <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Closing</p>
-                      <p className="font-sans text-[11px] text-gray-500">{fmtDate(tx.closed_at)}</p>
+                      <p className="font-sans text-[11px] text-gray-500">{fmtDate(tx.closed_at, locale)}</p>
                     </div>
                   )}
                 </div>

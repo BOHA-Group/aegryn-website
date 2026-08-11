@@ -86,10 +86,12 @@ Offer Models (Bid Models):
 Key pages:
 - /auction — Auction platform overview
 - /auction/sell — Seller funnel: valuation, readiness score, mandate submission
+- /auction/how-to-sell — Complete guide for sellers
+- /auction/submit — Mandate submission form
 - /auction/buyers — Buyer pre-qualification form (KYC + proof of funds)
 - /auction/how-it-works — Full 6-step process: valuation → mandate → CIFS → matching → session → closing
-- /auction/catalog — Live catalog of assets for sale (NDA required for full dossier)
 - /auction/how-to-buy — How to become a qualified buyer
+- /auction/catalog — Live catalog of assets for sale (NDA required for full dossier)
 - /auction/sessions — Calendar of upcoming auction sessions
 - /auction/bid-models — Offer model structures
 - /auction/results — Past auction results
@@ -213,6 +215,13 @@ French (fr), English (en), German (de), Italian (it), Spanish (es), Dutch (nl)
 - Movtoo — On-demand urban delivery
 - Hobconnect — Social network around passions
 - [Aegryn Advisory](https://www.aegryn.com/fr/advisory) — Cybersecurity, AI audit, digital strategy
+
+## Social Media
+
+- LinkedIn: https://www.linkedin.com/company/106273747/
+- Instagram: https://www.instagram.com/aegrynhq/
+- YouTube: https://www.youtube.com/@aegrynhq
+- TikTok: https://www.tiktok.com/@aegryn.auction
 
 ## GEO
 

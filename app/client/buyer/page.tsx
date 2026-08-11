@@ -1,41 +1,25 @@
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { BookOpen, Gavel, ArrowRightLeft, ShieldCheck, Bell, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Tableau de bord — Espace Acquéreur Aegryn',
+  title: 'Dashboard — Buyer Space Aegryn',
   robots: { index: false, follow: false },
 }
 
-function fmtDate(d: unknown) {
+function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
-  return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
+  return new Date(d).toLocaleDateString(locale, { day: '2-digit', month: 'long', year: 'numeric' })
 }
 
 function fmtChf(n: number | null) {
   if (n == null) return '—'
   return new Intl.NumberFormat('fr-CH', { style: 'currency', currency: 'CHF', maximumFractionDigits: 0 }).format(n)
-}
-
-const TX_STATUS_LABELS: Record<string, string> = {
-  ei_submitted:   'EI reçue',
-  ap_signed:      'AP signé',
-  escrow_paid:    'Séquestre versé',
-  dd_in_progress: 'Due Diligence',
-  signing:        'Signing',
-  closed:         'Clôturé',
-  cancelled:      'Annulé',
-}
-
-const BID_STATUS_LABELS: Record<string, string> = {
-  draft:     'Brouillon',
-  submitted: 'Soumise',
-  retained:  'Retenue',
-  rejected:  'Rejetée',
-  withdrawn: 'Retirée',
 }
 
 const BID_STATUS_COLOR: Record<string, string> = {
@@ -49,6 +33,11 @@ const BID_STATUS_COLOR: Record<string, string> = {
 export default async function BuyerDashboardPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
+
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.buyer' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
 
   const supa = createServiceClient()
 
@@ -69,18 +58,20 @@ export default async function BuyerDashboardPage() {
   const notifications= results[5].status === 'fulfilled' ? results[5].value.data : null
 
   const displayName = profile?.full_name ?? user.email ?? ''
-
   const kycAlertCount = kycPending ?? 0
   const unreadNotifCount = (notifications ?? []).filter(n => !n.read_at).length
+
+  const bidStatusLabel = (s: string) => t(`bidStatus.${s}` as Parameters<typeof t>[0]) || s
+  const txStatusLabel  = (s: string) => t(`txStatus.${s}` as Parameters<typeof t>[0]) || s
 
   return (
     <div className="p-8 max-w-5xl">
 
       {/* Header */}
       <div className="mb-10">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Acquéreur</p>
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('areaLabel')}</p>
         <h1 className="font-sans font-bold text-gray-900 text-[26px] tracking-tight">
-          Bonjour, {displayName.split(' ')[0] || 'Acquéreur'}
+          {t('hello', { name: displayName.split(' ')[0] || t('fallbackName') })}
         </h1>
         <p className="font-sans text-[13px] text-gray-400 mt-0.5">{user.email}</p>
       </div>
@@ -93,7 +84,7 @@ export default async function BuyerDashboardPage() {
               className="flex items-center gap-3 bg-amber-50 border border-amber-200 px-4 py-3 hover:bg-amber-100 transition-colors">
               <ShieldCheck size={14} className="text-amber-600 shrink-0" />
               <p className="font-sans text-[12px] text-amber-800">
-                {kycAlertCount} document{kycAlertCount > 1 ? 's' : ''} KYC en attente ou à corriger
+                {kycAlertCount > 1 ? t('kycPendingPlural', { count: kycAlertCount }) : t('kycPending', { count: kycAlertCount })}
               </p>
               <ArrowUpRight size={12} className="text-amber-500 ml-auto" />
             </Link>
@@ -103,7 +94,7 @@ export default async function BuyerDashboardPage() {
               className="flex items-center gap-3 bg-blue-50 border border-blue-200 px-4 py-3 hover:bg-blue-100 transition-colors">
               <Bell size={14} className="text-blue-600 shrink-0" />
               <p className="font-sans text-[12px] text-blue-800">
-                {unreadNotifCount} nouvelle{unreadNotifCount > 1 ? 's' : ''} notification{unreadNotifCount > 1 ? 's' : ''}
+                {unreadNotifCount > 1 ? tc('unreadNotifPlural', { count: unreadNotifCount }) : tc('unreadNotif', { count: unreadNotifCount })}
               </p>
               <ArrowUpRight size={12} className="text-blue-500 ml-auto" />
             </Link>
@@ -119,7 +110,7 @@ export default async function BuyerDashboardPage() {
             <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
           </div>
           <p className="font-mono font-bold text-[22px] text-gray-900">{catalogCount ?? 0}</p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">Actifs publiés</p>
+          <p className="font-sans text-[11px] text-gray-400 mt-0.5">{t('kpiPublished' as Parameters<typeof t>[0]) || 'Assets'}</p>
         </Link>
 
         <Link href="/client/buyer/offres" className="bg-white border border-gray-200 p-5 hover:border-gray-300 transition-colors group">
@@ -128,7 +119,7 @@ export default async function BuyerDashboardPage() {
             <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
           </div>
           <p className="font-mono font-bold text-[22px] text-gray-900">{bids?.length ?? 0}</p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">Offres soumises</p>
+          <p className="font-sans text-[11px] text-gray-400 mt-0.5">{t('kpiOffres')}</p>
         </Link>
 
         <Link href="/client/buyer/transactions" className="bg-white border border-gray-200 p-5 hover:border-gray-300 transition-colors group">
@@ -137,7 +128,7 @@ export default async function BuyerDashboardPage() {
             <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
           </div>
           <p className="font-mono font-bold text-[22px] text-gray-900">{transactions?.length ?? 0}</p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">Transactions</p>
+          <p className="font-sans text-[11px] text-gray-400 mt-0.5">{t('kpiTransactions')}</p>
         </Link>
 
         <Link href="/client/buyer/kyc" className="bg-white border border-gray-200 p-5 hover:border-gray-300 transition-colors group">
@@ -149,7 +140,7 @@ export default async function BuyerDashboardPage() {
             {kycAlertCount > 0 ? kycAlertCount : '✓'}
           </p>
           <p className="font-sans text-[11px] text-gray-400 mt-0.5">
-            {kycAlertCount > 0 ? 'KYC incomplet' : 'KYC validé'}
+            {kycAlertCount > 0 ? t('kpiKycIncomplete') : t('kpiKycOk')}
           </p>
         </Link>
       </div>
@@ -157,17 +148,17 @@ export default async function BuyerDashboardPage() {
       {/* Dernières offres */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="font-sans font-semibold text-gray-900 text-[14px]">Dernières offres</h2>
+          <h2 className="font-sans font-semibold text-gray-900 text-[14px]">{t('lastOffres')}</h2>
           <Link href="/client/buyer/offres" className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors flex items-center gap-1">
-            Voir tout <ArrowUpRight size={10} />
+            {tc('viewAll')} <ArrowUpRight size={10} />
           </Link>
         </div>
         {!bids || bids.length === 0 ? (
           <div className="bg-white border border-gray-200 px-6 py-8 text-center">
-            <p className="font-sans text-[13px] text-gray-400">Aucune offre soumise pour le moment.</p>
+            <p className="font-sans text-[13px] text-gray-400">{t('noOffres')}</p>
             <Link href="/client/buyer/catalogue"
               className="inline-flex items-center gap-1.5 mt-3 font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy px-4 py-2 hover:bg-ag-navy hover:text-white transition-colors">
-              Explorer le catalogue <ArrowUpRight size={10} />
+              {t('exploreCatalog')} <ArrowUpRight size={10} />
             </Link>
           </div>
         ) : (
@@ -177,14 +168,14 @@ export default async function BuyerDashboardPage() {
                 className="bg-white border border-gray-200 px-5 py-4 flex items-center justify-between hover:border-gray-300 transition-colors group">
                 <div>
                   <p className="font-sans font-medium text-gray-900 text-[13px]">
-                    {bid.assets?.company_name ?? `Actif #${bid.id.slice(0, 8)}`}
+                    {bid.assets?.company_name ?? `#${bid.id.slice(0, 8)}`}
                   </p>
-                  <p className="font-mono text-[10px] text-gray-400 mt-0.5">{fmtDate(bid.created_at)}</p>
+                  <p className="font-mono text-[10px] text-gray-400 mt-0.5">{fmtDate(bid.created_at, locale)}</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <p className="font-mono font-semibold text-[13px] text-gray-700">{fmtChf(bid.amount_chf)}</p>
                   <span className={`border px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest ${BID_STATUS_COLOR[bid.status] ?? 'text-gray-400 bg-gray-50 border-gray-200'}`}>
-                    {BID_STATUS_LABELS[bid.status] ?? bid.status}
+                    {bidStatusLabel(bid.status)}
                   </span>
                   <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
                 </div>
@@ -194,17 +185,17 @@ export default async function BuyerDashboardPage() {
         )}
       </div>
 
-      {/* Dernières transactions */}
+      {/* Transactions actives */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="font-sans font-semibold text-gray-900 text-[14px]">Transactions actives</h2>
+          <h2 className="font-sans font-semibold text-gray-900 text-[14px]">{t('activeTransactions')}</h2>
           <Link href="/client/buyer/transactions" className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors flex items-center gap-1">
-            Voir tout <ArrowUpRight size={10} />
+            {tc('viewAll')} <ArrowUpRight size={10} />
           </Link>
         </div>
         {!transactions || transactions.length === 0 ? (
           <div className="bg-white border border-gray-200 px-6 py-8 text-center">
-            <p className="font-sans text-[13px] text-gray-400">Aucune transaction en cours.</p>
+            <p className="font-sans text-[13px] text-gray-400">{t('noTransactions')}</p>
           </div>
         ) : (
           <div className="flex flex-col gap-2">
@@ -213,16 +204,16 @@ export default async function BuyerDashboardPage() {
                 className="bg-white border border-gray-200 px-5 py-4 flex items-center justify-between hover:border-gray-300 transition-colors group">
                 <div>
                   <p className="font-sans font-medium text-gray-900 text-[13px]">
-                    {tx.assets?.company_name ?? `Transaction #${tx.id.slice(0, 8)}`}
+                    {tx.assets?.company_name ?? `#${tx.id.slice(0, 8)}`}
                   </p>
-                  <p className="font-mono text-[10px] text-gray-400 mt-0.5">{fmtDate(tx.created_at)}</p>
+                  <p className="font-mono text-[10px] text-gray-400 mt-0.5">{fmtDate(tx.created_at, locale)}</p>
                 </div>
                 <div className="flex items-center gap-4">
                   {tx.escrow_amount_chf != null && (
                     <p className="font-mono font-semibold text-[13px] text-gray-700">{fmtChf(tx.escrow_amount_chf)}</p>
                   )}
                   <span className="border border-gray-200 bg-gray-50 px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-gray-500">
-                    {TX_STATUS_LABELS[tx.status] ?? tx.status}
+                    {txStatusLabel(tx.status)}
                   </span>
                   <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
                 </div>
@@ -236,9 +227,9 @@ export default async function BuyerDashboardPage() {
       {notifications && notifications.length > 0 && (
         <div>
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-sans font-semibold text-gray-900 text-[14px]">Notifications récentes</h2>
+            <h2 className="font-sans font-semibold text-gray-900 text-[14px]">{t('recentNotifs')}</h2>
             <Link href="/client/buyer/notifications" className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors flex items-center gap-1">
-              Voir tout <ArrowUpRight size={10} />
+              {tc('viewAll')} <ArrowUpRight size={10} />
             </Link>
           </div>
           <div className="flex flex-col gap-1.5">
@@ -249,7 +240,7 @@ export default async function BuyerDashboardPage() {
                   <p className="font-sans text-[12px] text-gray-800 font-medium truncate">{n.title}</p>
                   {n.body && <p className="font-sans text-[11px] text-gray-400 mt-0.5 line-clamp-1">{n.body}</p>}
                 </div>
-                <p className="font-mono text-[9px] text-gray-300 shrink-0">{fmtDate(n.created_at)}</p>
+                <p className="font-mono text-[9px] text-gray-300 shrink-0">{fmtDate(n.created_at, locale)}</p>
               </div>
             ))}
           </div>

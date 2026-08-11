@@ -21,6 +21,8 @@ const STATIC_ROUTES = [
   { path: '/auction/sell',                      priority: 1.0,  changeFrequency: 'monthly' as const },
   { path: '/auction/buyers',                    priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/auction/how-it-works',              priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/auction/how-to-sell',               priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/auction/submit',                    priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/auction/how-to-buy',                priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/auction/bid-models',                priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/auction/results',                   priority: 0.7,  changeFrequency: 'weekly'  as const },

@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
@@ -31,7 +33,7 @@ function gradeColor(g: string) {
     : 'text-red-500 border-red-100 bg-red-50'
 }
 
-function fmtDate(d: unknown) {
+function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
 }
@@ -59,6 +61,12 @@ export default async function SellerActifsPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
 
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.seller.actifs' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
+
   const supa = createServiceClient()
 
   const [{ data: byEmail }, { data: byUid }] = await Promise.all([
@@ -83,13 +91,13 @@ export default async function SellerActifsPage() {
     <div className="p-8 max-w-4xl">
       <div className="flex items-start justify-between mb-8">
         <div>
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Cédant</p>
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('areaLabel')}</p>
           <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Mes dossiers de certification</h1>
           <p className="font-sans text-[13px] text-gray-400 mt-1">Suivi du pipeline de vos actifs soumis à Aegryn.</p>
         </div>
         <Link href="/grade/submit"
           className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors">
-          <FileText size={11} /> Soumettre un actif
+          <FileText size={11} /> {t('submitNew')}
         </Link>
       </div>
 
@@ -126,7 +134,7 @@ export default async function SellerActifsPage() {
                       )}
                     </div>
                     <p className="font-mono text-[10px] text-gray-400">
-                      Soumis le {fmtDate(asset.submitted_at)}
+                      Soumis le {fmtDate(asset.submitted_at, locale)}
                       {asset.arr != null && ` — ARR ${fmtChf(asset.arr)}`}
                     </p>
                   </div>
@@ -182,13 +190,13 @@ export default async function SellerActifsPage() {
                   {asset.graded_at && (
                     <div>
                       <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Gradé le</p>
-                      <p className="font-sans text-[11px] text-gray-500">{fmtDate(asset.graded_at)}</p>
+                      <p className="font-sans text-[11px] text-gray-500">{fmtDate(asset.graded_at, locale)}</p>
                     </div>
                   )}
                   {asset.published_at && (
                     <div>
                       <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Publié le</p>
-                      <p className="font-sans text-[11px] text-gray-500">{fmtDate(asset.published_at)}</p>
+                      <p className="font-sans text-[11px] text-gray-500">{fmtDate(asset.published_at, locale)}</p>
                     </div>
                   )}
                 </div>

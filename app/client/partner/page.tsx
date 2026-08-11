@@ -1,27 +1,20 @@
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { Award, Users, Bell, ArrowUpRight, CreditCard } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Tableau de bord — Espace Partenaire Aegryn',
+  title: 'Dashboard — Partner Space Aegryn',
   robots: { index: false, follow: false },
 }
 
-const CERT_STATUS_LABELS: Record<string, string> = {
-  assigned:   'Assignée',
-  in_review:  'En cours',
-  submitted:  'Soumise',
-  signed:     'Signée',
-  declined:   'Refusée',
-}
-
-
-function fmtDate(d: unknown) {
+function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
-  return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
+  return new Date(d).toLocaleDateString(locale, { day: '2-digit', month: 'long', year: 'numeric' })
 }
 
 type Certification = {
@@ -43,6 +36,13 @@ type Introduction = {
 export default async function PartnerDashboardPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
+
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.partner' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
+  const certStatusLabel = (s: string) => t(`certStatus.${s}` as Parameters<typeof t>[0]) || s
 
   const supa = createServiceClient()
 
@@ -85,9 +85,9 @@ export default async function PartnerDashboardPage() {
 
       {/* Header */}
       <div className="mb-10">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('areaLabel')}</p>
         <h1 className="font-sans font-bold text-gray-900 text-[26px] tracking-tight">
-          Bonjour, {displayName.split(' ')[0] || 'Partenaire'}
+          {t('hello', { name: displayName.split(' ')[0] || t('fallbackName') })}
         </h1>
         <p className="font-sans text-[13px] text-gray-400 mt-0.5">{user.email}</p>
       </div>
@@ -115,7 +115,7 @@ export default async function PartnerDashboardPage() {
           <p className={`font-mono font-bold text-[22px] ${activeCertCount > 0 ? 'text-amber-600' : 'text-gray-900'}`}>
             {activeCertCount}
           </p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">Co-signatures actives</p>
+          <p className="font-sans text-[11px] text-gray-400 mt-0.5">{t('kpiCertifications')}</p>
         </Link>
 
         <Link href="/client/partner/introductions"
@@ -125,7 +125,7 @@ export default async function PartnerDashboardPage() {
             <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
           </div>
           <p className="font-mono font-bold text-[22px] text-gray-900">{introductions?.length ?? 0}</p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">Introductions</p>
+          <p className="font-sans text-[11px] text-gray-400 mt-0.5">{t('kpiIntroductions')}</p>
         </Link>
 
         <Link href="/client/partner/subscription"
@@ -135,9 +135,9 @@ export default async function PartnerDashboardPage() {
             <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
           </div>
           <p className={`font-mono font-bold text-[13px] ${expertPlan === 'active' ? 'text-emerald-600' : 'text-amber-600'}`}>
-            {expertPlan === 'active' ? 'Abonnement actif' : 'Abonnement inactif'}
+            {expertPlan === 'active' ? t('subscriptionActive') : t('subscriptionInactive')}
           </p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">Fiche expert — 89 CHF/mois</p>
+          <p className="font-sans text-[11px] text-gray-400 mt-0.5">{t('subscriptionDesc')}</p>
         </Link>
       </div>
 
@@ -145,10 +145,10 @@ export default async function PartnerDashboardPage() {
       {certifications && certifications.length > 0 && (
         <div className="mb-8">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-sans font-semibold text-gray-900 text-[14px]">Co-signatures en cours</h2>
+            <h2 className="font-sans font-semibold text-gray-900 text-[14px]">{t('activeCertifications')}</h2>
             <Link href="/client/partner/certifications"
               className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 flex items-center gap-1">
-              Voir tout <ArrowUpRight size={10} />
+              {tc('viewAll')} <ArrowUpRight size={10} />
             </Link>
           </div>
           <div className="flex flex-col gap-2">
@@ -164,13 +164,13 @@ export default async function PartnerDashboardPage() {
                   </p>
                   {cert.deadline_at && (
                     <p className="font-mono text-[10px] text-amber-600 mt-0.5">
-                      Échéance : {fmtDate(cert.deadline_at)}
+                      Échéance : {fmtDate(cert.deadline_at, locale)}
                     </p>
                   )}
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="font-mono text-[9px] uppercase tracking-widest text-gray-400">
-                    {CERT_STATUS_LABELS[cert.status] ?? cert.status}
+                    {certStatusLabel(cert.status)}
                   </span>
                   <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
                 </div>
@@ -180,7 +180,7 @@ export default async function PartnerDashboardPage() {
         </div>
       )}
 
-      {/* Introductions récentes */}
+      {/* {t('recentIntroductions')} */}
       {introductions && introductions.length > 0 && (
         <div>
           <div className="flex items-center justify-between mb-4">
@@ -197,8 +197,8 @@ export default async function PartnerDashboardPage() {
                 <div>
                   <p className="font-sans text-[13px] text-gray-800 font-medium">{intro.contact_name}</p>
                   <p className="font-mono text-[9px] text-gray-400 uppercase tracking-widest mt-0.5">
-                    {intro.introduction_type === 'asset' ? 'Apport actif' : 'Apport acquéreur'}
-                    {' — '}{fmtDate(intro.created_at)}
+                    {intro.introduction_type === 'asset' ? t('introductionTypeAsset') : t('introductionTypeBuyer')}
+                    {' — '}{fmtDate(intro.created_at, locale)}
                   </p>
                 </div>
                 <div className="flex items-center gap-3">

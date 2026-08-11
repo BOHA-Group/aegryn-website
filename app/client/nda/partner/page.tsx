@@ -4,10 +4,18 @@ import { createServiceClient } from '@/lib/supabase'
 import { NDA_VERSIONS }       from '@/lib/ndaVersions'
 import NdaAcceptForm          from '../NdaAcceptForm'
 import { ShieldCheck }        from 'lucide-react'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 
 export default async function PartnerNdaPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
+
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.nda.partner' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
 
   const supa = createServiceClient()
   const { data: profile } = await supa

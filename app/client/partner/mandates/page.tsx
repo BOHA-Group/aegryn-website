@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
@@ -29,7 +31,7 @@ const CLIENT_TYPE_LABELS: Record<string, string> = {
   other:  'Autre',
 }
 
-function fmtDate(d: unknown) {
+function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
 }
@@ -51,6 +53,12 @@ export default async function PartnerMandatesPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
 
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.partner.mandates' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
+
   const supa = createServiceClient()
   const { data: mandates } = await supa
     .from('partner_mandates')
@@ -67,7 +75,7 @@ export default async function PartnerMandatesPage() {
     <div className="p-8 max-w-4xl">
       <div className="flex items-start justify-between mb-8">
         <div>
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('areaLabel')}</p>
           <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Mandats clients</h1>
           <p className="font-sans text-[13px] text-gray-400 mt-1">
             Missions d&apos;accompagnement facturées directement à vos clients (CAS 3).
@@ -147,13 +155,13 @@ export default async function PartnerMandatesPage() {
                   {m.started_at && (
                     <div>
                       <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Démarré le</p>
-                      <p className="font-sans text-[12px] text-gray-600">{fmtDate(m.started_at)}</p>
+                      <p className="font-sans text-[12px] text-gray-600">{fmtDate(m.started_at, locale)}</p>
                     </div>
                   )}
                   {m.ended_at && (
                     <div>
                       <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Terminé le</p>
-                      <p className="font-sans text-[12px] text-gray-600">{fmtDate(m.ended_at)}</p>
+                      <p className="font-sans text-[12px] text-gray-600">{fmtDate(m.ended_at, locale)}</p>
                     </div>
                   )}
                 </div>

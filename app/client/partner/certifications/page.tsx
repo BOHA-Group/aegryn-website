@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
@@ -6,7 +8,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { Award, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Co-signatures — Espace Partenaire Aegryn',
+  title: 'Co-signatures — Partner Space Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -26,7 +28,7 @@ const DIMENSION_LABELS: Record<string, string> = {
   security: 'Sécurité & Conformité',
 }
 
-function fmtDate(d: unknown) {
+function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
 }
@@ -50,6 +52,12 @@ export default async function PartnerCertificationsPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
 
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.partner.certifications' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
+
   const supa = createServiceClient()
   const { data: certs } = await supa
     .from('partner_certifications')
@@ -66,7 +74,7 @@ export default async function PartnerCertificationsPage() {
   return (
     <div className="p-8 max-w-4xl">
       <div className="mb-8">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('areaLabel')}</p>
         <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Co-signatures CIFS</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
           Missions de co-certification par dimension attribuées par l&apos;équipe Aegryn.
@@ -141,13 +149,13 @@ export default async function PartnerCertificationsPage() {
                         <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Échéance</p>
                         <p className={`font-sans text-[12px] ${
                           new Date(cert.deadline_at) < new Date() ? 'text-red-500' : 'text-gray-700'
-                        }`}>{fmtDate(cert.deadline_at)}</p>
+                        }`}>{fmtDate(cert.deadline_at, locale)}</p>
                       </div>
                     )}
                     {cert.validated_at && (
                       <div>
                         <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Validée le</p>
-                        <p className="font-sans text-[12px] text-emerald-600">{fmtDate(cert.validated_at)}</p>
+                        <p className="font-sans text-[12px] text-emerald-600">{fmtDate(cert.validated_at, locale)}</p>
                       </div>
                     )}
                     {cert.rejection_reason && (

@@ -5559,5 +5559,349 @@
     "empty": "Geen meldingen.",
     "view": "Bekijken →",
     "archive": "Archiveren"
+  },
+  "client": {
+    "common": {
+      "viewAll": "Alles bekijken",
+      "noData": "Geen gegevens.",
+      "loading": "Laden…",
+      "back": "Terug",
+      "submit": "Verzenden",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "delete": "Verwijderen",
+      "edit": "Bewerken",
+      "download": "Downloaden",
+      "upload": "Bestand uploaden",
+      "confirm": "Bevestigen",
+      "close": "Sluiten",
+      "search": "Zoeken",
+      "filter": "Filteren",
+      "date": "Datum",
+      "status": "Status",
+      "amount": "Bedrag",
+      "actions": "Acties",
+      "optional": "Optioneel",
+      "required": "Vereist",
+      "ifApplicable": "Indien van toepassing",
+      "submittedOn": "Ingediend op",
+      "validatedOn": "Gevalideerd op",
+      "expiresOn": "Verloopt op",
+      "rejectionReason": "Reden",
+      "deadline": "Deadline",
+      "notifications": "Meldingen",
+      "noNotifications": "Geen meldingen op dit moment.",
+      "unreadNotif": "{count} nieuwe melding",
+      "unreadNotifPlural": "{count} nieuwe meldingen"
+    },
+    "nav": {
+      "buyer": "Kopersruimte",
+      "seller": "Verkopersruimte",
+      "partner": "Partnerruimte",
+      "expert": "Expertsruimte",
+      "dashboard": "Dashboard",
+      "catalogue": "Catalogus",
+      "offres": "Mijn biedingen",
+      "transactions": "Transacties",
+      "kyc": "KYC-verificatie",
+      "notifications": "Meldingen",
+      "account": "Mijn account",
+      "actifs": "Mijn assets",
+      "mandates": "Mandaten",
+      "certifications": "Medeparafering",
+      "commissions": "Commissies",
+      "introductions": "Introducties",
+      "subscription": "Abonnement",
+      "expertProfile": "Expertprofiel",
+      "nda": "NDA",
+      "logout": "Uitloggen"
+    },
+    "buyer": {
+      "meta": "Dashboard — Kopersruimte Aegryn",
+      "areaLabel": "Kopersruimte",
+      "hello": "Hallo, {name}",
+      "fallbackName": "Koper",
+      "kpiOffres": "Ingediende biedingen",
+      "kpiTransactions": "Transacties",
+      "kpiKycOk": "KYC gevalideerd",
+      "kpiKycIncomplete": "KYC onvolledig",
+      "lastOffres": "Laatste biedingen",
+      "activeTransactions": "Actieve transacties",
+      "recentNotifs": "Recente meldingen",
+      "noOffres": "Nog geen biedingen ingediend.",
+      "noTransactions": "Geen lopende transacties.",
+      "exploreCatalog": "Catalogus verkennen",
+      "kycPending": "{count} KYC-document in behandeling of te corrigeren",
+      "kycPendingPlural": "{count} KYC-documenten in behandeling of te corrigeren",
+      "bidStatus": {
+        "submitted": "Ingediend",
+        "under_review": "In behandeling",
+        "accepted": "Geaccepteerd",
+        "rejected": "Afgewezen",
+        "withdrawn": "Ingetrokken",
+        "countered": "Tegenbod"
+      },
+      "txStatus": {
+        "ei_submitted": "EI ontvangen",
+        "ap_signed": "VA ondertekend",
+        "escrow_paid": "Derdenrekening",
+        "dd_in_progress": "Due Diligence",
+        "signing": "Ondertekening",
+        "closed": "Gesloten",
+        "cancelled": "Geannuleerd"
+      },
+      "notifications": {
+        "meta": "Meldingen — Kopersruimte Aegryn",
+        "title": "Meldingen",
+        "subtitle": "Waarschuwingen en updates over uw activiteit."
+      },
+      "kyc": {
+        "meta": "KYC — Kopersruimte Aegryn",
+        "title": "KYC — Identiteitsverificatie",
+        "subtitle": "Vereiste documenten voor het Aegryn-acquisitieproces.",
+        "complete": "KYC-dossier volledig",
+        "inProgress": "KYC-dossier in uitvoering",
+        "completeHint": "Vul uw KYC-dossier in om toegang te krijgen tot de datarooms.",
+        "pendingUpload": "Document wordt beoordeeld. U kunt een gecorrigeerde versie indienen.",
+        "validatedWarn": "Dit document is gevalideerd. Een nieuwe upload vervangt de huidige versie.",
+        "gdprNotice": "Gegevensbescherming: Uw documenten worden veilig opgeslagen conform de AML-regelgeving. U kunt verwijdering aanvragen via legal@boha-group.com."
+      },
+      "offres": {
+        "meta": "Mijn biedingen — Kopersruimte Aegryn",
+        "title": "Mijn biedingen",
+        "subtitle": "Geschiedenis en opvolging van uw biedingen.",
+        "noOffres": "Nog geen biedingen ingediend.",
+        "exploreCatalog": "Catalogus verkennen"
+      },
+      "offreDetail": {
+        "meta": "Biedingsdetail — Kopersruimte Aegryn",
+        "title": "Biedingsdetail",
+        "back": "← Terug naar biedingen"
+      },
+      "newOffre": {
+        "meta": "Nieuw bod — Kopersruimte Aegryn",
+        "title": "Een bod indienen"
+      },
+      "transactionDetail": {
+        "meta": "Transactie — Kopersruimte Aegryn",
+        "back": "← Terug naar transacties"
+      },
+      "catalogue": {
+        "meta": "Catalogus — Kopersruimte Aegryn",
+        "title": "Koperscatalogus",
+        "subtitle": "Beschikbare assets voor overname.",
+        "noItems": "Momenteel geen assets beschikbaar.",
+        "viewDossier": "Dossier bekijken"
+      }
+    },
+    "seller": {
+      "meta": "Dashboard — Verkopersruimte Aegryn",
+      "areaLabel": "Verkopersruimte",
+      "hello": "Hallo, {name}",
+      "fallbackName": "Verkoper",
+      "kpiActifs": "Ingediende assets",
+      "kpiTransactions": "Transacties",
+      "kpiKycOk": "KYC gevalideerd",
+      "kpiKycIncomplete": "KYC onvolledig",
+      "kpiPublished": "Gepubliceerde assets",
+      "lastActifs": "Laatste assets",
+      "activeTransactions": "Actieve transacties",
+      "recentNotifs": "Recente meldingen",
+      "noActifs": "Nog geen assets ingediend.",
+      "noTransactions": "Geen lopende transacties.",
+      "submitAsset": "Een asset indienen",
+      "kycPending": "{count} KYC-document in behandeling",
+      "kycPendingPlural": "{count} KYC-documenten in behandeling",
+      "assetStatus": {
+        "submitted": "Ontvangen",
+        "under_review": "In analyse",
+        "graded": "Beoordeeld",
+        "published": "Gepubliceerd",
+        "sold": "Verkocht",
+        "withdrawn": "Ingetrokken"
+      },
+      "txStatus": {
+        "ei_submitted": "EI ontvangen",
+        "ap_signed": "VA ondertekend",
+        "escrow_paid": "Derdenrekening",
+        "dd_in_progress": "Due Diligence",
+        "signing": "Ondertekening",
+        "closed": "Gesloten",
+        "cancelled": "Geannuleerd"
+      },
+      "notifications": {
+        "meta": "Meldingen — Verkopersruimte Aegryn",
+        "title": "Meldingen",
+        "subtitle": "Waarschuwingen en updates over uw activiteit."
+      },
+      "kyc": {
+        "meta": "KYC — Verkopersruimte Aegryn",
+        "title": "KYC — Identiteitsverificatie",
+        "subtitle": "Vereiste documenten voor het Aegryn-verkoopproces.",
+        "complete": "KYC-dossier volledig",
+        "inProgress": "KYC-dossier in uitvoering",
+        "completeHint": "Vul uw KYC-dossier in om uw verkoop te finaliseren.",
+        "pendingUpload": "Document wordt beoordeeld.",
+        "validatedWarn": "Dit document is gevalideerd. Een nieuwe upload vervangt de huidige versie."
+      },
+      "actifs": {
+        "meta": "Mijn assets — Verkopersruimte Aegryn",
+        "title": "Mijn assets",
+        "subtitle": "Opvolging van uw bij Aegryn ingediende assets.",
+        "noActifs": "Nog geen assets ingediend.",
+        "submitNew": "Een asset indienen"
+      },
+      "actifDetail": {
+        "meta": "Asset-detail — Verkopersruimte Aegryn",
+        "back": "← Terug naar assets"
+      },
+      "ndaView": {
+        "meta": "NDA — Verkopersruimte Aegryn",
+        "title": "Geheimhoudingsovereenkomst",
+        "subtitle": "NDA ondertekend in het kader van uw verkoop."
+      },
+      "transactions": {
+        "meta": "Transacties — Verkopersruimte Aegryn",
+        "title": "Mijn transacties",
+        "subtitle": "Lopende en afgeronde transacties.",
+        "noTransactions": "Nog geen transacties."
+      }
+    },
+    "partner": {
+      "meta": "Dashboard — Partnerruimte Aegryn",
+      "areaLabel": "Partnerruimte",
+      "hello": "Hallo, {name}",
+      "fallbackName": "Partner",
+      "kpiCertifications": "Actieve medeparaferingen",
+      "kpiIntroductions": "Introducties",
+      "subscriptionActive": "Abonnement actief",
+      "subscriptionInactive": "Abonnement inactief",
+      "subscriptionDesc": "Expertprofiel — CHF 89/maand",
+      "activeCertifications": "Lopende medeparaferingen",
+      "recentIntroductions": "Recente introducties",
+      "introductionTypeAsset": "Asset-introductie",
+      "introductionTypeBuyer": "Koper-introductie",
+      "certStatus": {
+        "assigned": "Toegewezen",
+        "in_review": "In beoordeling",
+        "validated": "Gevalideerd",
+        "rejected": "Afgewezen"
+      },
+      "notifications": {
+        "meta": "Meldingen — Partnerruimte Aegryn",
+        "title": "Meldingen",
+        "subtitle": "Waarschuwingen en updates over uw activiteit."
+      },
+      "kyc": {
+        "meta": "KYC — Partnerruimte Aegryn",
+        "title": "KYC — Identiteitsverificatie",
+        "subtitle": "Vereiste documenten voor uw partnerprofiel."
+      },
+      "mandates": {
+        "meta": "Mandaten — Partnerruimte Aegryn",
+        "title": "Mijn mandaten",
+        "subtitle": "Lopende partnerschapsmandaten.",
+        "noMandates": "Nog geen mandaten."
+      },
+      "mandateDetail": {
+        "meta": "Mandaatdetail — Partnerruimte Aegryn",
+        "back": "← Terug naar mandaten"
+      },
+      "certifications": {
+        "meta": "Medeparaferingen — Partnerruimte Aegryn",
+        "title": "Mijn medeparaferingen",
+        "subtitle": "Lopende CIFS-certificatiemissies.",
+        "noCertifications": "Nog geen medeparaferingen toegewezen."
+      },
+      "certDetail": {
+        "meta": "Medeparaferingsdetail — Partnerruimte Aegryn",
+        "back": "← Terug naar medeparaferingen"
+      },
+      "commissions": {
+        "meta": "Commissies — Partnerruimte Aegryn",
+        "title": "Mijn commissies",
+        "subtitle": "Commissiegeschiedenis.",
+        "noCommissions": "Geen commissies geregistreerd."
+      },
+      "introductions": {
+        "meta": "Introducties — Partnerruimte Aegryn",
+        "title": "Mijn introducties",
+        "subtitle": "Geïntroduceerde assets en kopers.",
+        "noIntroductions": "Nog geen introducties."
+      },
+      "expertProfile": {
+        "meta": "Expertprofiel — Partnerruimte Aegryn",
+        "title": "Mijn expertprofiel",
+        "subtitle": "Profiel zichtbaar op de Aegryn Experts-marktplaats."
+      },
+      "subscription": {
+        "meta": "Abonnement — Partnerruimte Aegryn",
+        "title": "Mijn abonnement",
+        "subtitle": "Beheer uw expertabonnement.",
+        "monthlyPlan": "Maandelijks — CHF 89/maand",
+        "yearlyPlan": "Jaarlijks — CHF 80/maand (–10%)",
+        "active": "Actief",
+        "inactive": "Inactief",
+        "subscribe": "Abonneren",
+        "manage": "Abonnement beheren",
+        "successMsg": "Abonnement succesvol geactiveerd.",
+        "canceledMsg": "Betaling geannuleerd."
+      },
+      "nda": {
+        "meta": "NDA — Partnerruimte Aegryn",
+        "title": "Geheimhoudingsovereenkomst",
+        "subtitle": "NDA ondertekend in het kader van uw partnerschap."
+      }
+    },
+    "expert": {
+      "meta": "Dashboard — Expertsruimte Aegryn",
+      "areaLabel": "Expertsruimte",
+      "hello": "Hallo, {name}",
+      "fallbackName": "Expert",
+      "account": {
+        "meta": "Mijn account — Aegryn"
+      }
+    },
+    "nda": {
+      "buyer": {
+        "meta": "NDA Koper — Aegryn",
+        "title": "Geheimhoudingsovereenkomst (koper)",
+        "subtitle": "Handtekening vereist voor toegang tot vertrouwelijke dossiers."
+      },
+      "seller": {
+        "meta": "NDA Verkoper — Aegryn",
+        "title": "Geheimhoudingsovereenkomst (verkoper)",
+        "subtitle": "Handtekening vereist voor aanvang van het verkoopproces."
+      },
+      "partner": {
+        "meta": "NDA Partner — Aegryn",
+        "title": "Geheimhoudingsovereenkomst (partner)",
+        "subtitle": "Handtekening vereist voor activering van uw partnerschap."
+      },
+      "sign": "Overeenkomst ondertekenen",
+      "signed": "Overeenkomst ondertekend",
+      "signedOn": "Ondertekend op {date}",
+      "pending": "Handtekening in afwachting",
+      "downloadPdf": "PDF downloaden"
+    },
+    "myAssets": {
+      "meta": "Mijn assets — Aegryn",
+      "title": "Mijn assets",
+      "subtitle": "Assets gekoppeld aan uw account.",
+      "noAssets": "Geen assets gekoppeld aan uw account."
+    },
+    "account": {
+      "meta": "Mijn account — Aegryn",
+      "title": "Mijn account",
+      "subtitle": "Persoonlijke informatie en beveiliging.",
+      "fullName": "Volledige naam",
+      "email": "E-mailadres",
+      "phone": "Telefoon",
+      "changePassword": "Wachtwoord wijzigen",
+      "saveChanges": "Wijzigingen opslaan",
+      "saved": "Wijzigingen opgeslagen.",
+      "deleteAccount": "Account verwijderen",
+      "dangerZone": "Gevarenzone"
+    }
   }
 }

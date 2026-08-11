@@ -5,6 +5,8 @@ import { ArrowUpRight, LogOut } from 'lucide-react'
 import { getUser }            from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import DeleteAccountButton    from './DeleteAccountButton'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 
 export const metadata: Metadata = {
   title: 'Mes actifs — Espace client Aegryn',
@@ -32,7 +34,7 @@ function gradeColor(g: string) {
     : 'text-red-500 border-red-100 bg-red-50'
 }
 
-function fmtDate(d: unknown) {
+function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
 }
@@ -40,6 +42,12 @@ function fmtDate(d: unknown) {
 export default async function ClientMyAssetsPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
+
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.myAssets' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
 
   const supa = createServiceClient()
 
@@ -156,7 +164,7 @@ export default async function ClientMyAssetsPage() {
                         )}
                       </div>
                       <p className="font-mono text-[10px] text-gray-400">
-                        Soumis le {fmtDate(asset.submitted_at)}
+                        Soumis le {fmtDate(asset.submitted_at, locale)}
                       </p>
                     </div>
                     {asset.official_grade && (
@@ -233,13 +241,13 @@ export default async function ClientMyAssetsPage() {
                     {asset.graded_at && (
                       <div>
                         <p className="font-mono text-[9px] text-gray-300 uppercase tracking-widest mb-0.5">Grade attribué</p>
-                        <p className="font-sans text-[11px] text-gray-500">{fmtDate(asset.graded_at)}</p>
+                        <p className="font-sans text-[11px] text-gray-500">{fmtDate(asset.graded_at, locale)}</p>
                       </div>
                     )}
                     {asset.published_at && (
                       <div>
                         <p className="font-mono text-[9px] text-gray-300 uppercase tracking-widest mb-0.5">Publié le</p>
-                        <p className="font-sans text-[11px] text-gray-500">{fmtDate(asset.published_at)}</p>
+                        <p className="font-sans text-[11px] text-gray-500">{fmtDate(asset.published_at, locale)}</p>
                       </div>
                     )}
                   </div>

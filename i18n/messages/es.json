@@ -5559,5 +5559,349 @@
     "empty": "Sin notificaciones.",
     "view": "Ver →",
     "archive": "Archivar"
+  },
+  "client": {
+    "common": {
+      "viewAll": "Ver todo",
+      "noData": "Sin datos.",
+      "loading": "Cargando…",
+      "back": "Volver",
+      "submit": "Enviar",
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "delete": "Eliminar",
+      "edit": "Editar",
+      "download": "Descargar",
+      "upload": "Subir archivo",
+      "confirm": "Confirmar",
+      "close": "Cerrar",
+      "search": "Buscar",
+      "filter": "Filtrar",
+      "date": "Fecha",
+      "status": "Estado",
+      "amount": "Importe",
+      "actions": "Acciones",
+      "optional": "Opcional",
+      "required": "Requerido",
+      "ifApplicable": "Si aplica",
+      "submittedOn": "Enviado el",
+      "validatedOn": "Validado el",
+      "expiresOn": "Expira el",
+      "rejectionReason": "Motivo",
+      "deadline": "Plazo",
+      "notifications": "Notificaciones",
+      "noNotifications": "Sin notificaciones por el momento.",
+      "unreadNotif": "{count} nueva notificación",
+      "unreadNotifPlural": "{count} nuevas notificaciones"
+    },
+    "nav": {
+      "buyer": "Área Comprador",
+      "seller": "Área Vendedor",
+      "partner": "Área Socio",
+      "expert": "Área Experto",
+      "dashboard": "Panel",
+      "catalogue": "Catálogo",
+      "offres": "Mis ofertas",
+      "transactions": "Transacciones",
+      "kyc": "Verificación KYC",
+      "notifications": "Notificaciones",
+      "account": "Mi cuenta",
+      "actifs": "Mis activos",
+      "mandates": "Mandatos",
+      "certifications": "Cofirmas",
+      "commissions": "Comisiones",
+      "introductions": "Presentaciones",
+      "subscription": "Suscripción",
+      "expertProfile": "Perfil experto",
+      "nda": "NDA",
+      "logout": "Cerrar sesión"
+    },
+    "buyer": {
+      "meta": "Panel — Área Comprador Aegryn",
+      "areaLabel": "Área Comprador",
+      "hello": "Hola, {name}",
+      "fallbackName": "Comprador",
+      "kpiOffres": "Ofertas enviadas",
+      "kpiTransactions": "Transacciones",
+      "kpiKycOk": "KYC validado",
+      "kpiKycIncomplete": "KYC incompleto",
+      "lastOffres": "Últimas ofertas",
+      "activeTransactions": "Transacciones activas",
+      "recentNotifs": "Notificaciones recientes",
+      "noOffres": "Aún no ha enviado ninguna oferta.",
+      "noTransactions": "Sin transacciones en curso.",
+      "exploreCatalog": "Explorar el catálogo",
+      "kycPending": "{count} documento KYC pendiente o a corregir",
+      "kycPendingPlural": "{count} documentos KYC pendientes o a corregir",
+      "bidStatus": {
+        "submitted": "Enviada",
+        "under_review": "En revisión",
+        "accepted": "Aceptada",
+        "rejected": "Rechazada",
+        "withdrawn": "Retirada",
+        "countered": "Contraoferta"
+      },
+      "txStatus": {
+        "ei_submitted": "EI recibida",
+        "ap_signed": "PA firmado",
+        "escrow_paid": "Depósito",
+        "dd_in_progress": "Due Diligence",
+        "signing": "Firma",
+        "closed": "Cerrado",
+        "cancelled": "Cancelado"
+      },
+      "notifications": {
+        "meta": "Notificaciones — Área Comprador Aegryn",
+        "title": "Notificaciones",
+        "subtitle": "Alertas y actualizaciones de su actividad."
+      },
+      "kyc": {
+        "meta": "KYC — Área Comprador Aegryn",
+        "title": "KYC — Verificación de identidad",
+        "subtitle": "Documentos requeridos para el proceso de adquisición Aegryn.",
+        "complete": "Expediente KYC completo",
+        "inProgress": "Expediente KYC en curso",
+        "completeHint": "Complete su expediente KYC para acceder a los data rooms.",
+        "pendingUpload": "Documento en revisión. Puede enviar una versión corregida.",
+        "validatedWarn": "Este documento está validado. Un nuevo envío reemplazará la versión actual.",
+        "gdprNotice": "Protección de datos: Sus documentos se almacenan de forma segura conforme a la normativa AML. Puede solicitar su eliminación en legal@boha-group.com."
+      },
+      "offres": {
+        "meta": "Mis ofertas — Área Comprador Aegryn",
+        "title": "Mis ofertas",
+        "subtitle": "Historial de sus ofertas de adquisición.",
+        "noOffres": "Aún no ha enviado ninguna oferta.",
+        "exploreCatalog": "Explorar el catálogo"
+      },
+      "offreDetail": {
+        "meta": "Detalle oferta — Área Comprador Aegryn",
+        "title": "Detalle de la oferta",
+        "back": "← Volver a las ofertas"
+      },
+      "newOffre": {
+        "meta": "Nueva oferta — Área Comprador Aegryn",
+        "title": "Enviar una oferta"
+      },
+      "transactionDetail": {
+        "meta": "Transacción — Área Comprador Aegryn",
+        "back": "← Volver a transacciones"
+      },
+      "catalogue": {
+        "meta": "Catálogo — Área Comprador Aegryn",
+        "title": "Catálogo comprador",
+        "subtitle": "Activos disponibles para adquisición.",
+        "noItems": "Sin activos disponibles por el momento.",
+        "viewDossier": "Ver expediente"
+      }
+    },
+    "seller": {
+      "meta": "Panel — Área Vendedor Aegryn",
+      "areaLabel": "Área Vendedor",
+      "hello": "Hola, {name}",
+      "fallbackName": "Vendedor",
+      "kpiActifs": "Activos enviados",
+      "kpiTransactions": "Transacciones",
+      "kpiKycOk": "KYC validado",
+      "kpiKycIncomplete": "KYC incompleto",
+      "kpiPublished": "Activos publicados",
+      "lastActifs": "Últimos activos",
+      "activeTransactions": "Transacciones activas",
+      "recentNotifs": "Notificaciones recientes",
+      "noActifs": "Aún no ha enviado ningún activo.",
+      "noTransactions": "Sin transacciones en curso.",
+      "submitAsset": "Enviar un activo",
+      "kycPending": "{count} documento KYC pendiente",
+      "kycPendingPlural": "{count} documentos KYC pendientes",
+      "assetStatus": {
+        "submitted": "Recibido",
+        "under_review": "En análisis",
+        "graded": "Calificado",
+        "published": "Publicado",
+        "sold": "Vendido",
+        "withdrawn": "Retirado"
+      },
+      "txStatus": {
+        "ei_submitted": "EI recibida",
+        "ap_signed": "PA firmado",
+        "escrow_paid": "Depósito",
+        "dd_in_progress": "Due Diligence",
+        "signing": "Firma",
+        "closed": "Cerrado",
+        "cancelled": "Cancelado"
+      },
+      "notifications": {
+        "meta": "Notificaciones — Área Vendedor Aegryn",
+        "title": "Notificaciones",
+        "subtitle": "Alertas y actualizaciones de su actividad."
+      },
+      "kyc": {
+        "meta": "KYC — Área Vendedor Aegryn",
+        "title": "KYC — Verificación de identidad",
+        "subtitle": "Documentos requeridos para el proceso de venta Aegryn.",
+        "complete": "Expediente KYC completo",
+        "inProgress": "Expediente KYC en curso",
+        "completeHint": "Complete su KYC para finalizar su venta.",
+        "pendingUpload": "Documento en revisión.",
+        "validatedWarn": "Este documento está validado. Un nuevo envío reemplazará la versión actual."
+      },
+      "actifs": {
+        "meta": "Mis activos — Área Vendedor Aegryn",
+        "title": "Mis activos",
+        "subtitle": "Seguimiento de sus activos enviados a Aegryn.",
+        "noActifs": "Aún no ha enviado ningún activo.",
+        "submitNew": "Enviar un activo"
+      },
+      "actifDetail": {
+        "meta": "Detalle activo — Área Vendedor Aegryn",
+        "back": "← Volver a activos"
+      },
+      "ndaView": {
+        "meta": "NDA — Área Vendedor Aegryn",
+        "title": "Acuerdo de confidencialidad",
+        "subtitle": "NDA firmado en el marco de su venta."
+      },
+      "transactions": {
+        "meta": "Transacciones — Área Vendedor Aegryn",
+        "title": "Mis transacciones",
+        "subtitle": "Transacciones en curso y pasadas.",
+        "noTransactions": "Sin transacciones por el momento."
+      }
+    },
+    "partner": {
+      "meta": "Panel — Área Socio Aegryn",
+      "areaLabel": "Área Socio",
+      "hello": "Hola, {name}",
+      "fallbackName": "Socio",
+      "kpiCertifications": "Cofirmas activas",
+      "kpiIntroductions": "Presentaciones",
+      "subscriptionActive": "Suscripción activa",
+      "subscriptionInactive": "Suscripción inactiva",
+      "subscriptionDesc": "Perfil experto — 89 CHF/mes",
+      "activeCertifications": "Cofirmas en curso",
+      "recentIntroductions": "Presentaciones recientes",
+      "introductionTypeAsset": "Presentación de activo",
+      "introductionTypeBuyer": "Presentación de comprador",
+      "certStatus": {
+        "assigned": "Asignado",
+        "in_review": "En revisión",
+        "validated": "Validado",
+        "rejected": "Rechazado"
+      },
+      "notifications": {
+        "meta": "Notificaciones — Área Socio Aegryn",
+        "title": "Notificaciones",
+        "subtitle": "Alertas y actualizaciones de su actividad."
+      },
+      "kyc": {
+        "meta": "KYC — Área Socio Aegryn",
+        "title": "KYC — Verificación de identidad",
+        "subtitle": "Documentos requeridos para su perfil de socio."
+      },
+      "mandates": {
+        "meta": "Mandatos — Área Socio Aegryn",
+        "title": "Mis mandatos",
+        "subtitle": "Mandatos de asociación en curso.",
+        "noMandates": "Sin mandatos por el momento."
+      },
+      "mandateDetail": {
+        "meta": "Detalle mandato — Área Socio Aegryn",
+        "back": "← Volver a mandatos"
+      },
+      "certifications": {
+        "meta": "Cofirmas — Área Socio Aegryn",
+        "title": "Mis cofirmas",
+        "subtitle": "Misiones de certificación CIFS en curso.",
+        "noCertifications": "Sin cofirmas asignadas por el momento."
+      },
+      "certDetail": {
+        "meta": "Detalle cofirma — Área Socio Aegryn",
+        "back": "← Volver a cofirmas"
+      },
+      "commissions": {
+        "meta": "Comisiones — Área Socio Aegryn",
+        "title": "Mis comisiones",
+        "subtitle": "Historial de comisiones.",
+        "noCommissions": "Sin comisiones registradas."
+      },
+      "introductions": {
+        "meta": "Presentaciones — Área Socio Aegryn",
+        "title": "Mis presentaciones",
+        "subtitle": "Activos y compradores presentados.",
+        "noIntroductions": "Sin presentaciones por el momento."
+      },
+      "expertProfile": {
+        "meta": "Perfil experto — Área Socio Aegryn",
+        "title": "Mi perfil experto",
+        "subtitle": "Perfil visible en el marketplace Aegryn Experts."
+      },
+      "subscription": {
+        "meta": "Suscripción — Área Socio Aegryn",
+        "title": "Mi suscripción",
+        "subtitle": "Gestione su suscripción de experto.",
+        "monthlyPlan": "Mensual — 89 CHF/mes",
+        "yearlyPlan": "Anual — 80 CHF/mes (–10%)",
+        "active": "Activo",
+        "inactive": "Inactivo",
+        "subscribe": "Suscribirse",
+        "manage": "Gestionar suscripción",
+        "successMsg": "Suscripción activada con éxito.",
+        "canceledMsg": "Pago cancelado."
+      },
+      "nda": {
+        "meta": "NDA — Área Socio Aegryn",
+        "title": "Acuerdo de confidencialidad",
+        "subtitle": "NDA firmado en el marco de su asociación."
+      }
+    },
+    "expert": {
+      "meta": "Panel — Área Experto Aegryn",
+      "areaLabel": "Área Experto",
+      "hello": "Hola, {name}",
+      "fallbackName": "Experto",
+      "account": {
+        "meta": "Mi cuenta — Área Experto Aegryn"
+      }
+    },
+    "nda": {
+      "buyer": {
+        "meta": "NDA Comprador — Aegryn",
+        "title": "Acuerdo de confidencialidad (comprador)",
+        "subtitle": "Firma requerida para acceder a expedientes confidenciales."
+      },
+      "seller": {
+        "meta": "NDA Vendedor — Aegryn",
+        "title": "Acuerdo de confidencialidad (vendedor)",
+        "subtitle": "Firma requerida para iniciar el proceso de venta."
+      },
+      "partner": {
+        "meta": "NDA Socio — Aegryn",
+        "title": "Acuerdo de confidencialidad (socio)",
+        "subtitle": "Firma requerida para activar su asociación."
+      },
+      "sign": "Firmar el acuerdo",
+      "signed": "Acuerdo firmado",
+      "signedOn": "Firmado el {date}",
+      "pending": "Firma pendiente",
+      "downloadPdf": "Descargar PDF"
+    },
+    "myAssets": {
+      "meta": "Mis activos — Aegryn",
+      "title": "Mis activos",
+      "subtitle": "Activos vinculados a su cuenta.",
+      "noAssets": "Sin activos vinculados a su cuenta."
+    },
+    "account": {
+      "meta": "Mi cuenta — Aegryn",
+      "title": "Mi cuenta",
+      "subtitle": "Información personal y seguridad.",
+      "fullName": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "changePassword": "Cambiar contraseña",
+      "saveChanges": "Guardar cambios",
+      "saved": "Cambios guardados.",
+      "deleteAccount": "Eliminar cuenta",
+      "dangerZone": "Zona de peligro"
+    }
   }
 }

@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 import { redirect } from 'next/navigation'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
@@ -6,7 +8,7 @@ import { CheckCircle2, Clock, XCircle, AlertCircle, ShieldCheck } from 'lucide-r
 import SellerKycUploadForm from './SellerKycUploadForm'
 
 export const metadata: Metadata = {
-  title: 'KYC — Espace Cédant Aegryn',
+  title: 'KYC — Seller Space Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -35,7 +37,7 @@ const STATUS_CONFIG: Record<string, { label: string; renderIcon: () => React.Rea
   expired:   { label: 'Expiré',             renderIcon: () => <AlertCircle  size={14} className="text-amber-500"   />, color: 'text-amber-500'  },
 }
 
-function fmtDate(d: unknown) {
+function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
 }
@@ -54,6 +56,12 @@ type KycDoc = {
 export default async function SellerKycPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
+
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.seller.kyc' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
 
   const supa = createServiceClient()
   const { data: docs } = await supa
@@ -95,7 +103,7 @@ export default async function SellerKycPage() {
           <div className="flex items-center gap-2">
             <ShieldCheck size={16} className={isComplete ? 'text-emerald-500' : 'text-amber-500'} />
             <p className="font-sans font-semibold text-[13px] text-gray-900">
-              {isComplete ? 'Dossier KYC complet' : 'Dossier KYC en cours'}
+              {isComplete ? t('complete') : t('inProgress')}
             </p>
           </div>
           <p className="font-mono text-[11px] text-gray-600">{completedCount}/{totalRequired} validés</p>
@@ -136,18 +144,18 @@ export default async function SellerKycPage() {
                   <p className="font-sans text-[11px] text-gray-400">{desc}</p>
                   {latestDoc && (
                     <div className="mt-2 flex flex-wrap gap-4">
-                      <p className="font-mono text-[9px] text-gray-400">Soumis le {fmtDate(latestDoc.created_at)}</p>
+                      <p className="font-mono text-[9px] text-gray-400">{tc('submittedOn')} {fmtDate(latestDoc.created_at, locale)}</p>
                       {latestDoc.expires_at && (
-                        <p className="font-mono text-[9px] text-gray-400">Expire le {fmtDate(latestDoc.expires_at)}</p>
+                        <p className="font-mono text-[9px] text-gray-400">{tc('expiresOn')} {fmtDate(latestDoc.expires_at, locale)}</p>
                       )}
                       {latestDoc.validated_at && (
-                        <p className="font-mono text-[9px] text-emerald-500">Validé le {fmtDate(latestDoc.validated_at)}</p>
+                        <p className="font-mono text-[9px] text-emerald-500">{tc('validatedOn')} {fmtDate(latestDoc.validated_at, locale)}</p>
                       )}
                     </div>
                   )}
                   {latestDoc?.rejection_reason && status === 'rejected' && (
                     <p className="font-sans text-[11px] text-red-500 mt-2 italic">
-                      Motif : {latestDoc.rejection_reason}
+                      {tc('rejectionReason')} : {latestDoc.rejection_reason}
                     </p>
                   )}
                 </div>
@@ -178,7 +186,7 @@ export default async function SellerKycPage() {
 
       <div className="mt-8 px-5 py-4 border border-gray-200 bg-gray-50">
         <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
-          <strong>Protection des données :</strong> Vos documents sont traités dans le respect de la réglementation LBA et des obligations KYC/AML suisses. Suppression sur demande à <a href="mailto:legal@boha-group.com" className="text-ag-navy underline">legal@boha-group.com</a>.
+          <strong>{t('gdprNotice')} :</strong> Vos documents sont traités dans le respect de la réglementation LBA et des obligations KYC/AML suisses. Suppression sur demande à <a href="mailto:legal@boha-group.com" className="text-ag-navy underline">legal@boha-group.com</a>.
         </p>
       </div>
     </div>

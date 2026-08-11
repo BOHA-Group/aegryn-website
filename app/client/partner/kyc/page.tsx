@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 import { redirect } from 'next/navigation'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
@@ -68,7 +70,7 @@ const STATUS_CONFIG: Record<string, { label: string; renderIcon: () => React.Rea
   expired:   { label: 'Expiré',             renderIcon: () => <AlertCircle  size={14} className="text-amber-500"   />, color: 'text-amber-500'  },
 }
 
-function fmtDate(d: unknown) {
+function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return ''
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
 }
@@ -87,6 +89,12 @@ type KycDoc = {
 export default async function PartnerKycPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
+
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.partner.kyc' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
 
   const supa = createServiceClient()
   const { data: docs } = await supa
@@ -114,7 +122,7 @@ export default async function PartnerKycPage() {
     <div className="p-8 max-w-3xl">
 
       <div className="mb-8">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('areaLabel')}</p>
         <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">KYC — Vérification partenaire</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
           Documents requis pour valider votre identité et activer votre compte partenaire Aegryn.
@@ -168,12 +176,12 @@ export default async function PartnerKycPage() {
                   <p className="font-sans text-[11px] text-gray-400">{desc}</p>
                   {latestDoc && (
                     <div className="mt-2 flex flex-wrap gap-4">
-                      <p className="font-mono text-[9px] text-gray-400">Soumis le {fmtDate(latestDoc.created_at)}</p>
+                      <p className="font-mono text-[9px] text-gray-400">Soumis le {fmtDate(latestDoc.created_at, locale)}</p>
                       {latestDoc.expires_at && (
-                        <p className="font-mono text-[9px] text-gray-400">Expire le {fmtDate(latestDoc.expires_at)}</p>
+                        <p className="font-mono text-[9px] text-gray-400">Expire le {fmtDate(latestDoc.expires_at, locale)}</p>
                       )}
                       {latestDoc.validated_at && (
-                        <p className="font-mono text-[9px] text-emerald-500">Validé le {fmtDate(latestDoc.validated_at)}</p>
+                        <p className="font-mono text-[9px] text-emerald-500">Validé le {fmtDate(latestDoc.validated_at, locale)}</p>
                       )}
                     </div>
                   )}

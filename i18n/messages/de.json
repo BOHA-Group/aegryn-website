@@ -5559,5 +5559,349 @@
     "empty": "Keine Benachrichtigungen.",
     "view": "Anzeigen →",
     "archive": "Archivieren"
+  },
+  "client": {
+    "common": {
+      "viewAll": "Alle anzeigen",
+      "noData": "Keine Daten.",
+      "loading": "Laden…",
+      "back": "Zurück",
+      "submit": "Absenden",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "delete": "Löschen",
+      "edit": "Bearbeiten",
+      "download": "Herunterladen",
+      "upload": "Datei hochladen",
+      "confirm": "Bestätigen",
+      "close": "Schließen",
+      "search": "Suchen",
+      "filter": "Filtern",
+      "date": "Datum",
+      "status": "Status",
+      "amount": "Betrag",
+      "actions": "Aktionen",
+      "optional": "Optional",
+      "required": "Erforderlich",
+      "ifApplicable": "Falls zutreffend",
+      "submittedOn": "Eingereicht am",
+      "validatedOn": "Bestätigt am",
+      "expiresOn": "Läuft ab am",
+      "rejectionReason": "Grund",
+      "deadline": "Frist",
+      "notifications": "Benachrichtigungen",
+      "noNotifications": "Keine Benachrichtigungen.",
+      "unreadNotif": "{count} neue Benachrichtigung",
+      "unreadNotifPlural": "{count} neue Benachrichtigungen"
+    },
+    "nav": {
+      "buyer": "Käuferbereich",
+      "seller": "Verkäuferbereich",
+      "partner": "Partnerbereich",
+      "expert": "Expertenbereich",
+      "dashboard": "Dashboard",
+      "catalogue": "Katalog",
+      "offres": "Meine Gebote",
+      "transactions": "Transaktionen",
+      "kyc": "KYC-Prüfung",
+      "notifications": "Benachrichtigungen",
+      "account": "Mein Konto",
+      "actifs": "Meine Assets",
+      "mandates": "Mandate",
+      "certifications": "Mitunterzeichnungen",
+      "commissions": "Provisionen",
+      "introductions": "Vermittlungen",
+      "subscription": "Abonnement",
+      "expertProfile": "Expertenprofil",
+      "nda": "NDA",
+      "logout": "Abmelden"
+    },
+    "buyer": {
+      "meta": "Dashboard — Käuferbereich Aegryn",
+      "areaLabel": "Käuferbereich",
+      "hello": "Hallo, {name}",
+      "fallbackName": "Käufer",
+      "kpiOffres": "Eingereichte Gebote",
+      "kpiTransactions": "Transaktionen",
+      "kpiKycOk": "KYC bestätigt",
+      "kpiKycIncomplete": "KYC unvollständig",
+      "lastOffres": "Letzte Gebote",
+      "activeTransactions": "Aktive Transaktionen",
+      "recentNotifs": "Aktuelle Benachrichtigungen",
+      "noOffres": "Noch keine Gebote eingereicht.",
+      "noTransactions": "Keine laufenden Transaktionen.",
+      "exploreCatalog": "Katalog durchsuchen",
+      "kycPending": "{count} KYC-Dokument ausstehend oder zu korrigieren",
+      "kycPendingPlural": "{count} KYC-Dokumente ausstehend oder zu korrigieren",
+      "bidStatus": {
+        "submitted": "Eingereicht",
+        "under_review": "In Prüfung",
+        "accepted": "Akzeptiert",
+        "rejected": "Abgelehnt",
+        "withdrawn": "Zurückgezogen",
+        "countered": "Gegenangebot"
+      },
+      "txStatus": {
+        "ei_submitted": "EI erhalten",
+        "ap_signed": "VA unterzeichnet",
+        "escrow_paid": "Treuhand",
+        "dd_in_progress": "Due Diligence",
+        "signing": "Signing",
+        "closed": "Abgeschlossen",
+        "cancelled": "Storniert"
+      },
+      "notifications": {
+        "meta": "Benachrichtigungen — Käuferbereich Aegryn",
+        "title": "Benachrichtigungen",
+        "subtitle": "Benachrichtigungen zu Ihrer Aktivität."
+      },
+      "kyc": {
+        "meta": "KYC — Käuferbereich Aegryn",
+        "title": "KYC — Identitätsprüfung",
+        "subtitle": "Erforderliche Dokumente für den Aegryn-Akquisitionsprozess.",
+        "complete": "KYC-Akte vollständig",
+        "inProgress": "KYC-Akte in Bearbeitung",
+        "completeHint": "Vervollständigen Sie Ihre KYC-Akte, um Zugang zu Data Rooms zu erhalten.",
+        "pendingUpload": "Dokument wird geprüft. Sie können eine korrigierte Version einreichen.",
+        "validatedWarn": "Dieses Dokument ist validiert. Ein neuer Upload ersetzt die aktuelle Version und startet die Validierung neu.",
+        "gdprNotice": "Datenschutz: Ihre Dokumente werden sicher gespeichert und nur im Rahmen der AML-Vorschriften verarbeitet. Gemäß DSGVO können Sie die Löschung unter legal@boha-group.com beantragen."
+      },
+      "offres": {
+        "meta": "Meine Gebote — Käuferbereich Aegryn",
+        "title": "Meine Gebote",
+        "subtitle": "Verlauf und Verfolgung Ihrer Gebote.",
+        "noOffres": "Noch keine Gebote eingereicht.",
+        "exploreCatalog": "Katalog durchsuchen"
+      },
+      "offreDetail": {
+        "meta": "Gebotsdetail — Käuferbereich Aegryn",
+        "title": "Gebotsdetail",
+        "back": "← Zurück zu den Geboten"
+      },
+      "newOffre": {
+        "meta": "Neues Gebot — Käuferbereich Aegryn",
+        "title": "Gebot einreichen"
+      },
+      "transactionDetail": {
+        "meta": "Transaktion — Käuferbereich Aegryn",
+        "back": "← Zurück zu Transaktionen"
+      },
+      "catalogue": {
+        "meta": "Katalog — Käuferbereich Aegryn",
+        "title": "Käuferkatalog",
+        "subtitle": "Verfügbare Assets zur Übernahme.",
+        "noItems": "Derzeit keine Assets verfügbar.",
+        "viewDossier": "Akte anzeigen"
+      }
+    },
+    "seller": {
+      "meta": "Dashboard — Verkäuferbereich Aegryn",
+      "areaLabel": "Verkäuferbereich",
+      "hello": "Hallo, {name}",
+      "fallbackName": "Verkäufer",
+      "kpiActifs": "Eingereichte Assets",
+      "kpiTransactions": "Transaktionen",
+      "kpiKycOk": "KYC bestätigt",
+      "kpiKycIncomplete": "KYC unvollständig",
+      "kpiPublished": "Veröffentlichte Assets",
+      "lastActifs": "Letzte Assets",
+      "activeTransactions": "Aktive Transaktionen",
+      "recentNotifs": "Aktuelle Benachrichtigungen",
+      "noActifs": "Noch keine Assets eingereicht.",
+      "noTransactions": "Keine laufenden Transaktionen.",
+      "submitAsset": "Asset einreichen",
+      "kycPending": "{count} KYC-Dokument ausstehend",
+      "kycPendingPlural": "{count} KYC-Dokumente ausstehend",
+      "assetStatus": {
+        "submitted": "Erhalten",
+        "under_review": "In Prüfung",
+        "graded": "Bewertet",
+        "published": "Veröffentlicht",
+        "sold": "Verkauft",
+        "withdrawn": "Zurückgezogen"
+      },
+      "txStatus": {
+        "ei_submitted": "EI erhalten",
+        "ap_signed": "VA unterzeichnet",
+        "escrow_paid": "Treuhand",
+        "dd_in_progress": "Due Diligence",
+        "signing": "Signing",
+        "closed": "Abgeschlossen",
+        "cancelled": "Storniert"
+      },
+      "notifications": {
+        "meta": "Benachrichtigungen — Verkäuferbereich Aegryn",
+        "title": "Benachrichtigungen",
+        "subtitle": "Benachrichtigungen zu Ihrer Aktivität."
+      },
+      "kyc": {
+        "meta": "KYC — Verkäuferbereich Aegryn",
+        "title": "KYC — Identitätsprüfung",
+        "subtitle": "Erforderliche Dokumente für Ihren Aegryn-Verkaufsprozess.",
+        "complete": "KYC-Akte vollständig",
+        "inProgress": "KYC-Akte in Bearbeitung",
+        "completeHint": "Vervollständigen Sie Ihre KYC-Akte, um Ihren Verkauf abzuschließen.",
+        "pendingUpload": "Dokument wird geprüft.",
+        "validatedWarn": "Dieses Dokument ist validiert. Ein neuer Upload ersetzt die aktuelle Version."
+      },
+      "actifs": {
+        "meta": "Meine Assets — Verkäuferbereich Aegryn",
+        "title": "Meine Assets",
+        "subtitle": "Verfolgen Sie Ihre bei Aegryn eingereichten Assets.",
+        "noActifs": "Noch keine Assets eingereicht.",
+        "submitNew": "Asset einreichen"
+      },
+      "actifDetail": {
+        "meta": "Asset-Detail — Verkäuferbereich Aegryn",
+        "back": "← Zurück zu Assets"
+      },
+      "ndaView": {
+        "meta": "NDA — Verkäuferbereich Aegryn",
+        "title": "Geheimhaltungsvertrag",
+        "subtitle": "Im Rahmen Ihres Verkaufs unterzeichneter NDA."
+      },
+      "transactions": {
+        "meta": "Transaktionen — Verkäuferbereich Aegryn",
+        "title": "Meine Transaktionen",
+        "subtitle": "Laufende und abgeschlossene Transaktionen.",
+        "noTransactions": "Noch keine Transaktionen."
+      }
+    },
+    "partner": {
+      "meta": "Dashboard — Partnerbereich Aegryn",
+      "areaLabel": "Partnerbereich",
+      "hello": "Hallo, {name}",
+      "fallbackName": "Partner",
+      "kpiCertifications": "Aktive Mitunterzeichnungen",
+      "kpiIntroductions": "Vermittlungen",
+      "subscriptionActive": "Abonnement aktiv",
+      "subscriptionInactive": "Abonnement inaktiv",
+      "subscriptionDesc": "Expertenprofil — CHF 89/Monat",
+      "activeCertifications": "Laufende Mitunterzeichnungen",
+      "recentIntroductions": "Aktuelle Vermittlungen",
+      "introductionTypeAsset": "Asset-Vermittlung",
+      "introductionTypeBuyer": "Käufervermittlung",
+      "certStatus": {
+        "assigned": "Zugewiesen",
+        "in_review": "In Prüfung",
+        "validated": "Validiert",
+        "rejected": "Abgelehnt"
+      },
+      "notifications": {
+        "meta": "Benachrichtigungen — Partnerbereich Aegryn",
+        "title": "Benachrichtigungen",
+        "subtitle": "Benachrichtigungen zu Ihrer Aktivität."
+      },
+      "kyc": {
+        "meta": "KYC — Partnerbereich Aegryn",
+        "title": "KYC — Identitätsprüfung",
+        "subtitle": "Erforderliche Dokumente für Ihr Partnerprofil."
+      },
+      "mandates": {
+        "meta": "Mandate — Partnerbereich Aegryn",
+        "title": "Meine Mandate",
+        "subtitle": "Laufende Partnerschaftsmandate.",
+        "noMandates": "Noch keine Mandate."
+      },
+      "mandateDetail": {
+        "meta": "Mandat-Detail — Partnerbereich Aegryn",
+        "back": "← Zurück zu Mandaten"
+      },
+      "certifications": {
+        "meta": "Mitunterzeichnungen — Partnerbereich Aegryn",
+        "title": "Meine Mitunterzeichnungen",
+        "subtitle": "Laufende CIFS-Zertifizierungsmissionen.",
+        "noCertifications": "Noch keine Mitunterzeichnungen zugewiesen."
+      },
+      "certDetail": {
+        "meta": "Mitunterzeichnung-Detail — Partnerbereich Aegryn",
+        "back": "← Zurück zu Mitunterzeichnungen"
+      },
+      "commissions": {
+        "meta": "Provisionen — Partnerbereich Aegryn",
+        "title": "Meine Provisionen",
+        "subtitle": "Provisionshistorie.",
+        "noCommissions": "Keine Provisionen verbucht."
+      },
+      "introductions": {
+        "meta": "Vermittlungen — Partnerbereich Aegryn",
+        "title": "Meine Vermittlungen",
+        "subtitle": "Vermittelte Assets und Käufer.",
+        "noIntroductions": "Noch keine Vermittlungen."
+      },
+      "expertProfile": {
+        "meta": "Expertenprofil — Partnerbereich Aegryn",
+        "title": "Mein Expertenprofil",
+        "subtitle": "Profil auf dem Aegryn Experts-Marktplatz sichtbar."
+      },
+      "subscription": {
+        "meta": "Abonnement — Partnerbereich Aegryn",
+        "title": "Mein Abonnement",
+        "subtitle": "Verwalten Sie Ihr Expertenabonnement.",
+        "monthlyPlan": "Monatlich — CHF 89/Monat",
+        "yearlyPlan": "Jährlich — CHF 80/Monat (–10%)",
+        "active": "Aktiv",
+        "inactive": "Inaktiv",
+        "subscribe": "Abonnieren",
+        "manage": "Abonnement verwalten",
+        "successMsg": "Abonnement erfolgreich aktiviert.",
+        "canceledMsg": "Zahlung storniert."
+      },
+      "nda": {
+        "meta": "NDA — Partnerbereich Aegryn",
+        "title": "Geheimhaltungsvertrag",
+        "subtitle": "Im Rahmen Ihrer Partnerschaft unterzeichneter NDA."
+      }
+    },
+    "expert": {
+      "meta": "Dashboard — Expertenbereich Aegryn",
+      "areaLabel": "Expertenbereich",
+      "hello": "Hallo, {name}",
+      "fallbackName": "Experte",
+      "account": {
+        "meta": "Mein Konto — Expertenbereich Aegryn"
+      }
+    },
+    "nda": {
+      "buyer": {
+        "meta": "Käufer-NDA — Aegryn",
+        "title": "Geheimhaltungsvertrag (Käufer)",
+        "subtitle": "Unterschrift erforderlich, um auf vertrauliche Akten zuzugreifen."
+      },
+      "seller": {
+        "meta": "Verkäufer-NDA — Aegryn",
+        "title": "Geheimhaltungsvertrag (Verkäufer)",
+        "subtitle": "Unterschrift erforderlich, um den Verkaufsprozess einzuleiten."
+      },
+      "partner": {
+        "meta": "Partner-NDA — Aegryn",
+        "title": "Geheimhaltungsvertrag (Partner)",
+        "subtitle": "Unterschrift erforderlich, um Ihre Partnerschaft zu aktivieren."
+      },
+      "sign": "Vertrag unterzeichnen",
+      "signed": "Vertrag unterzeichnet",
+      "signedOn": "Unterzeichnet am {date}",
+      "pending": "Unterschrift ausstehend",
+      "downloadPdf": "PDF herunterladen"
+    },
+    "myAssets": {
+      "meta": "Meine Assets — Aegryn",
+      "title": "Meine Assets",
+      "subtitle": "Mit Ihrem Konto verknüpfte Assets.",
+      "noAssets": "Keine Assets mit Ihrem Konto verknüpft."
+    },
+    "account": {
+      "meta": "Mein Konto — Aegryn",
+      "title": "Mein Konto",
+      "subtitle": "Persönliche Informationen und Sicherheit.",
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefon",
+      "changePassword": "Passwort ändern",
+      "saveChanges": "Änderungen speichern",
+      "saved": "Änderungen gespeichert.",
+      "deleteAccount": "Konto löschen",
+      "dangerZone": "Gefahrenzone"
+    }
   }
 }

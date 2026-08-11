@@ -5,6 +5,8 @@ import { getUser }           from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { ShieldCheck, CreditCard, AlertCircle, CheckCircle2 } from 'lucide-react'
 import ExpertProfileForm     from './ExpertProfileForm'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 
 export const metadata: Metadata = {
   title: 'Fiche Expert — Espace Partenaire Aegryn',
@@ -14,6 +16,12 @@ export const metadata: Metadata = {
 export default async function PartnerExpertProfilePage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
+
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.partner.expertProfile' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
 
   const supa = createServiceClient()
 
@@ -55,7 +63,7 @@ export default async function PartnerExpertProfilePage() {
     <div className="p-8 max-w-6xl">
 
       <div className="mb-8">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('areaLabel')}</p>
         <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Fiche expert</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
           Remplissez et soumettez votre fiche — l&apos;équipe Aegryn la valide avant publication dans l&apos;annuaire.

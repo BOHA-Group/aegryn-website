@@ -4,6 +4,8 @@ import { getUser }             from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { NDA_VERSIONS }        from '@/lib/ndaVersions'
 import { ShieldCheck }         from 'lucide-react'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 
 export const metadata: Metadata = {
   title: 'Mon NDA Partenaire — Aegryn',
@@ -13,6 +15,12 @@ export const metadata: Metadata = {
 export default async function PartnerNdaPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
+
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.partner.nda' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
 
   const supa = createServiceClient()
   const [{ data: profile }, { data: ndaAcceptance }] = await Promise.all([
@@ -52,7 +60,7 @@ export default async function PartnerNdaPage() {
     <div className="max-w-3xl mx-auto px-6 py-10 space-y-6">
 
       <div className="mb-8">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('areaLabel')}</p>
         <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Mon NDA Partenaire</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
           Accord de confidentialité et conditions de partenariat Aegryn — lecture seule.

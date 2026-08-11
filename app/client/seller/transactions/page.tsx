@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
@@ -6,7 +8,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { ArrowUpRight, ArrowRightLeft } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Transactions — Espace Cédant Aegryn',
+  title: 'Transactions — Seller Space Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -24,7 +26,7 @@ function fmtChf(n: number | null) {
   return new Intl.NumberFormat('fr-CH', { style: 'currency', currency: 'CHF', maximumFractionDigits: 0 }).format(n)
 }
 
-function fmtDate(d: unknown) {
+function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
 }
@@ -45,6 +47,12 @@ export default async function SellerTransactionsPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
 
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.seller.transactions' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
+
   const supa = createServiceClient()
   const { data: transactions } = await supa
     .from('transactions')
@@ -56,8 +64,8 @@ export default async function SellerTransactionsPage() {
     <div className="p-8 max-w-4xl">
 
       <div className="mb-8">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Cédant</p>
-        <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Mes transactions</h1>
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('areaLabel')}</p>
+        <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">{t('title')}</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
           Pipeline PTT (Promesse-To-Transfer) de vos cessions en cours.
         </p>
@@ -85,7 +93,7 @@ export default async function SellerTransactionsPage() {
                     <h2 className="font-sans font-semibold text-gray-900 text-[14px]">
                       {tx.assets?.company_name ?? `Transaction #${tx.id.slice(0, 8)}`}
                     </h2>
-                    <p className="font-mono text-[10px] text-gray-400 mt-0.5">Créée le {fmtDate(tx.created_at)}</p>
+                    <p className="font-mono text-[10px] text-gray-400 mt-0.5">Créée le {fmtDate(tx.created_at, locale)}</p>
                   </div>
                   <div className="flex items-center gap-3 shrink-0">
                     {tx.escrow_amount_chf != null && (

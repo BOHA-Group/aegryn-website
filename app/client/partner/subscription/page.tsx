@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
@@ -9,11 +11,11 @@ import CancelButton       from './CancelButton'
 import ReferralSection    from './ReferralSection'
 
 export const metadata: Metadata = {
-  title: 'Abonnement — Espace Partenaire Aegryn',
+  title: 'Subscription — Partner Space Aegryn',
   robots: { index: false, follow: false },
 }
 
-function fmtDate(d: unknown) {
+function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
   return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
 }
@@ -27,6 +29,12 @@ export default async function PartnerSubscriptionPage({
 }) {
   const user = await getUser()
   if (!user) redirect('/client/login')
+
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+  const t = await getTranslations({ locale, namespace: 'client.partner.subscription' })
+  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
 
   const { success, canceled } = await searchParams
 
@@ -50,7 +58,7 @@ export default async function PartnerSubscriptionPage({
   return (
     <div className="p-8 max-w-2xl">
       <div className="mb-8">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Espace Partenaire</p>
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('areaLabel')}</p>
         <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Abonnement expert</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
           Votre fiche expert est visible dans l&apos;annuaire Aegryn tant que votre abonnement est actif.
@@ -97,10 +105,10 @@ export default async function PartnerSubscriptionPage({
             isCanceling ? 'text-orange-700' : isActive ? 'text-emerald-800' : 'text-amber-800'
           }`}>
             {isCanceling
-              ? `Résiliation programmée — actif jusqu'au ${fmtDate(cancelAt)}`
+              ? `Résiliation programmée — actif jusqu'au ${fmtDate(cancelAt, locale)}`
               : isActive
                 ? `Abonnement actif — ${intervalLabel}`
-                : 'Abonnement inactif'
+                : t('inactive')
             }
           </p>
         </div>
@@ -110,7 +118,7 @@ export default async function PartnerSubscriptionPage({
               <div className="flex items-center gap-2">
                 <CalendarClock size={13} className={isCanceling ? 'text-orange-400 shrink-0' : 'text-emerald-500 shrink-0'} />
                 <p className={`font-sans text-[12px] ${isCanceling ? 'text-orange-700' : 'text-emerald-700'}`}>
-                  Actif depuis le {fmtDate(planStart)}
+                  Actif depuis le {fmtDate(planStart, locale)}
                 </p>
               </div>
             )}
@@ -118,7 +126,7 @@ export default async function PartnerSubscriptionPage({
               <div className="flex items-center gap-2">
                 <CalendarClock size={13} className="text-emerald-500 shrink-0" />
                 <p className="font-sans text-[12px] text-emerald-700">
-                  Prochain renouvellement : {fmtDate(planEnd)}
+                  Prochain renouvellement : {fmtDate(planEnd, locale)}
                 </p>
               </div>
             )}
@@ -167,7 +175,7 @@ export default async function PartnerSubscriptionPage({
             <div className="bg-emerald-50 border border-emerald-200 px-4 py-3 mb-2">
               <p className="font-sans text-[12px] text-emerald-700">
                 Abonnement <strong>{intervalLabel.toLowerCase()}</strong> — renouvellement automatique.
-                {planEnd && <> Prochaine échéance : <strong>{fmtDate(planEnd)}</strong>.</>}
+                {planEnd && <> Prochaine échéance : <strong>{fmtDate(planEnd, locale)}</strong>.</>}
               </p>
             </div>
             <CancelButton />
