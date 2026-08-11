@@ -26,6 +26,7 @@ const GRADE_LABEL: Record<string, string> = {
 export function AssetGrid() {
   const t       = useTranslations('assetGrid')
   const tStatus = useTranslations('build.status')
+  const tItems  = useTranslations('assets.items')
   const wrapRef    = useRef<HTMLDivElement>(null)
   const headerRef  = useRef<HTMLDivElement>(null)
   const h2Ref = useRef<HTMLHeadingElement>(null)
@@ -80,7 +81,7 @@ export function AssetGrid() {
         >
           <div className="w-full flex items-center justify-between mb-6">
             <span className="font-sans font-semibold text-[10px] tracking-[0.18em] uppercase text-ag-gray-light group-hover:text-white/50 transition-colors duration-500">
-              {asset.badge}
+              {tItems(`${asset.id}.badge`)}
             </span>
             <span className={`inline-flex items-center justify-center w-7 h-7 font-sans font-bold text-[11px] transition-opacity duration-500 ${GRADE_BADGE[asset.grade]}`}>
               {GRADE_LABEL[asset.grade]}
@@ -115,7 +116,7 @@ export function AssetGrid() {
             {asset.name}
           </h3>
           <p className="font-sans font-normal text-[12px] leading-relaxed text-ag-gray group-hover:text-white/70 transition-colors duration-500">
-            {asset.tagline}
+            {tItems(`${asset.id}.tagline`)}
           </p>
           <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <ArrowUpRight size={14} className="text-white/60" />

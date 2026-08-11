@@ -24,6 +24,7 @@ const VISIBLE = Aegryn_ASSETS.slice()
 export function AssetCarousel() {
   const t = useTranslations('assetCarousel')
   const tStatus = useTranslations('assetStatus')
+  const tItems = useTranslations('assets.items')
   const sectionRef = useRef<HTMLElement>(null)
   const trackRef   = useRef<HTMLDivElement>(null)
   const headerRef  = useRef<HTMLDivElement>(null)
@@ -138,7 +139,7 @@ export function AssetCarousel() {
                     {asset.name}
                   </h3>
                   <p className="font-sans font-normal text-[13px] text-white/50 leading-relaxed mb-3">
-                    {asset.tagline}
+                    {tItems(`${asset.id}.tagline`)}
                   </p>
                   <p className="font-sans font-normal text-[12px] text-white/30 leading-relaxed mb-5">
                     {t('classifiedDesc').split('\n').map((line, i) => (
@@ -171,7 +172,7 @@ export function AssetCarousel() {
               />
               <div className="flex justify-between items-start mb-auto relative z-10">
                 <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-2.5 py-1 group-hover:border-ag-apex group-hover:text-ag-apex transition-all duration-200">
-                  {asset.badge}
+                  {tItems(`${asset.id}.badge`)}
                 </span>
                 <span className="w-8 h-8 border border-ag-border flex items-center justify-center text-ag-gray group-hover:border-ag-black group-hover:bg-ag-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
                   <ArrowUpRight size={13} />
@@ -185,10 +186,10 @@ export function AssetCarousel() {
                   {asset.name}
                 </h3>
                 <p className="font-sans font-normal text-[13px] text-ag-gray leading-relaxed mb-3">
-                  {asset.tagline}
+                  {tItems(`${asset.id}.tagline`)}
                 </p>
                 <p className="font-sans font-normal text-[12px] text-ag-gray-light leading-relaxed mb-5 line-clamp-2">
-                  {asset.description}
+                  {tItems(`${asset.id}.description`)}
                 </p>
                 <div className="flex items-center gap-2">
                   <span className={`w-1.5 h-1.5 rounded-full ${statusDot.dot} ${statusDot.pulse ? 'animate-pulse' : ''}`} />

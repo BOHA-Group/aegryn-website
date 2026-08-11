@@ -5,7 +5,7 @@ import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { ArrowUpRight, ExternalLink } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
-import { Aegryn_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
+import { Aegryn_ASSETS } from '@/data/assets'
 
 type Category = 'all' | 'ai' | 'lifestyle' | 'transactions'
 
@@ -31,6 +31,8 @@ const GRADE_LABELS: Record<string, string> = {
 export function AssetsGrid() {
   const t = useTranslations('assets.page')
   const tStatus = useTranslations('assetStatus')
+  const tItems = useTranslations('assets.items')
+  const tCats = useTranslations('assets.items.categories')
   const [active, setActive] = useState<Category>('all')
   const gridRef = useRef<HTMLDivElement>(null)
 
@@ -104,7 +106,7 @@ export function AssetsGrid() {
               <div className="flex items-start justify-between gap-3">
                 <div>
                   <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light mb-1">
-                    {ASSET_CATEGORIES[asset.category as keyof typeof ASSET_CATEGORIES]?.label}
+                    {tCats(asset.category)}
                   </p>
                   <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">
                     {asset.name}
@@ -126,7 +128,7 @@ export function AssetsGrid() {
               {/* Badge + status */}
               <div className="flex items-center gap-3 flex-wrap">
                 <span className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray border border-ag-border px-2 py-1">
-                  {asset.badge}
+                  {tItems(`${asset.id}.badge`)}
                 </span>
                 <span className={`font-mono text-[10px] tracking-[0.12em] uppercase ${statusColor(asset.status)}`}>
                   {statusLabel(asset.status)}
@@ -145,12 +147,12 @@ export function AssetsGrid() {
 
               {/* Tagline */}
               <p className="font-sans font-semibold text-ag-black text-[14px] leading-snug">
-                {asset.tagline}
+                {tItems(`${asset.id}.tagline`)}
               </p>
 
               {/* Description */}
               <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
-                {asset.description}
+                {tItems(`${asset.id}.description`)}
               </p>
 
               {/* Actions */}

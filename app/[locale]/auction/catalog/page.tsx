@@ -89,7 +89,7 @@ export default async function AuctionCatalogPage({ params }: Props) {
           href="/assets"
           className="shrink-0 inline-flex items-center gap-2 font-sans font-semibold text-[10px] uppercase tracking-[0.16em] text-ag-gray-light border border-ag-border px-4 py-2 hover:border-ag-black hover:text-ag-black transition-colors whitespace-nowrap"
         >
-          Portfolio Aegryn <ArrowUpRight size={11} />
+          {t('portfolioLink')} <ArrowUpRight size={11} />
         </Link>
       </div>
     </div>
@@ -111,23 +111,22 @@ export default async function AuctionCatalogPage({ params }: Props) {
               </div>
               <div>
                 <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex mb-3">
-                  Accès conditionnel
+                  {t('conditionalAccess')}
                 </p>
                 <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] mb-3">
-                  Catalogue réservé aux acquéreurs qualifiés
+                  {t('qualifiedOnly')}
                 </h2>
                 <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-md mx-auto">
-                  Les noms de sociétés et fiches actifs complets sont accessibles uniquement après
-                  création de compte, signature du NDA et acceptation des CGV Aegryn Auction.
+                  {t('accessDesc')}
                 </p>
               </div>
 
               {/* Étapes */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 max-w-2xl w-full text-left">
                 {[
-                  { n: '01', label: 'Créer un compte acquéreur', done: !!user },
-                  { n: '02', label: 'Signer le NDA Aegryn Auction', done: accessStatus === 'pending_cgv' },
-                  { n: '03', label: 'Accepter les CGV', done: false },
+                  { n: '01', label: t('step1'), done: !!user },
+                  { n: '02', label: t('step2'), done: accessStatus === 'pending_cgv' },
+                  { n: '03', label: t('step3'), done: false },
                 ].map(({ n, label, done }) => (
                   <div key={n} className={`border p-5 flex items-start gap-3 ${done ? 'border-ag-apex/40 bg-ag-apex/5' : 'border-ag-border bg-ag-white'}`}>
                     <span className={`font-mono text-[11px] font-bold shrink-0 ${done ? 'text-ag-apex' : 'text-ag-gray-light'}`}>{n}</span>
@@ -143,13 +142,13 @@ export default async function AuctionCatalogPage({ params }: Props) {
                     href={`/client/login?next=/${locale}/auction/catalog`}
                     className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-black transition-colors"
                   >
-                    Se connecter <ArrowUpRight size={12} />
+                    {t('loginCta')} <ArrowUpRight size={12} />
                   </NextLink>
                   <NextLink
                     href={`/client/register?next=/${locale}/auction/catalog`}
                     className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:border-ag-black hover:text-ag-black transition-all"
                   >
-                    Créer un compte
+                    {t('registerCta')}
                   </NextLink>
                 </div>
               )}
@@ -171,7 +170,7 @@ export default async function AuctionCatalogPage({ params }: Props) {
         <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <p className="font-sans font-semibold text-ag-black text-[18px] max-w-md">
-              Vous souhaitez lister votre actif dans le prochain catalogue ?
+              {t('sellerCta')}
             </p>
             <Link
               href="/auction/how-to-sell"
@@ -214,16 +213,18 @@ export default async function AuctionCatalogPage({ params }: Props) {
         assets={publishedAssets}
         locale={locale}
         labels={{
-          filterAll:  t('filterAll'),
-          filterStar: t('filterStar'),
-          filterAAA:  t('filterAAA'),
-          filterAA:   t('filterAA'),
-          filterA:    t('filterA'),
-          filterB:    t('filterB'),
-          count:      '',
-          session:    '',
-          arrRanges:  [],
-          categories: [],
+          filterAll:    t('filterAll'),
+          filterStar:   t('filterStar'),
+          filterAAA:    t('filterAAA'),
+          filterAA:     t('filterAA'),
+          filterA:      t('filterA'),
+          filterB:      t('filterB'),
+          count:        '',
+          session:      '',
+          arrRanges:    [],
+          categories:   [],
+          noResults:    t('noResults'),
+          resetFilters: t('resetFilters'),
         }}
       />
 
@@ -231,7 +232,7 @@ export default async function AuctionCatalogPage({ params }: Props) {
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <p className="font-sans font-semibold text-ag-black text-[18px] max-w-md">
-            Vous souhaitez lister votre actif dans le prochain catalogue ?
+            {t('sellerCta')}
           </p>
           <Link
             href="/auction/how-to-sell"

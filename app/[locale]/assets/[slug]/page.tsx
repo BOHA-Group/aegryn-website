@@ -2,7 +2,7 @@ import { notFound }          from 'next/navigation'
 import Link                   from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
-import { Aegryn_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
+import { Aegryn_ASSETS } from '@/data/assets'
 import { getTranslations }    from 'next-intl/server'
 import type { Metadata }      from 'next'
 
@@ -28,9 +28,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params
   const asset = Aegryn_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) return {}
+  const tItemsMeta = await getTranslations({ locale, namespace: 'assets.items' })
   return generateAegrynMetadata({
     title: asset.name,
-    description: asset.tagline,
+    description: tItemsMeta(`${asset.id}.tagline`),
     path: `/assets/${slug}`,
     locale,
   })
@@ -41,12 +42,14 @@ export default async function AssetPage({ params }: Props) {
   const t       = await getTranslations({ locale, namespace: 'assetPage' })
   const tStatus = await getTranslations({ locale, namespace: 'assetStatus' })
   const tFooter  = await getTranslations({ locale, namespace: 'footer' })
+  const tItems   = await getTranslations({ locale, namespace: 'assets.items' })
+  const tCats    = await getTranslations({ locale, namespace: 'assets.items.categories' })
   const asset = Aegryn_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) notFound()
 
   const assetId = asset.id as 'subblink' | 'neediu' | 'primiom' | 'movtoo' | 'hobconnect'
   const hasAssetI18n = ['subblink', 'neediu', 'primiom', 'movtoo', 'hobconnect'].includes(assetId)
-  const longDesc  = hasAssetI18n ? t(`assets.${assetId}.longDesc`) : asset.description
+  const longDesc  = hasAssetI18n ? t(`assets.${assetId}.longDesc`) : tItems(`${asset.id}.description`)
   const audience  = hasAssetI18n ? t(`assets.${assetId}.audience`) : ''
   const features  = hasAssetI18n ? (t.raw(`assets.${assetId}.features`) as string[]) : []
 
@@ -56,7 +59,7 @@ export default async function AssetPage({ params }: Props) {
     : statusKey === 'beta' ? tStatus('beta')
     : statusKey === 'dev'  ? tStatus('dev')
     : tStatus('notStarted')
-  const category = ASSET_CATEGORIES[asset.category]
+  const categoryLabel = tCats(asset.category)
   const isLive   = !!asset.url
 
   return (
@@ -67,10 +70,10 @@ export default async function AssetPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-28">
           <div className="flex flex-wrap items-center gap-3 mb-10">
             <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light border border-ag-border px-3 py-1">
-              {category.label}
+              {categoryLabel}
             </span>
             <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light">
-              {asset.badge}
+              {tItems(`${asset.id}.badge`)}
             </span>
             <span className="flex items-center gap-1.5">
               <span className={`w-1.5 h-1.5 rounded-full ${statusDot.dot}`} />
@@ -87,7 +90,7 @@ export default async function AssetPage({ params }: Props) {
             {asset.name}
           </h1>
           <p className="font-sans font-semibold text-[14px] text-ag-gray leading-relaxed max-w-xl mb-10">
-            {asset.tagline}
+            {tItems(`${asset.id}.tagline`)}
           </p>
 
           {isLive ? (

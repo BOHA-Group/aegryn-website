@@ -99,7 +99,46 @@
       "auctionEligibleNote": "Auction-eligible asset — investor inquiries on request.",
       "ctaBottom": "Want to submit your own asset for certification?",
       "ctaGrade": "Submit a third-party asset",
-      "ctaAuction": "View auction sessions"
+      "ctaAuction": "View auction sessions",
+      "notStarted": "Not started",
+      "certificationInProgress": "Certification in progress"
+    },
+    "items": {
+      "subblink": {
+        "badge": "B2B — SaaS",
+        "tagline": "AI-powered contract analysis",
+        "description": "Analyses all your contracts in seconds using AI calibrated for Swiss and European law. Risks, critical clauses, hidden obligations — everything identified in plain language."
+      },
+      "kryv": {
+        "badge": "Protocol — Blockchain",
+        "tagline": "AI code integrity certification",
+        "description": "Blockchain protocol for certifying the integrity of AI code. The SSL of artificial code — every deployment, immutably sealed."
+      },
+      "neediu": {
+        "badge": "B2C — Marketplace",
+        "tagline": "Home services, intelligent matching",
+        "description": "Connects individuals and professionals with the best home service providers, based on location and verified reviews."
+      },
+      "movtoo": {
+        "badge": "B2C — Transport",
+        "tagline": "On-demand transport, dense urban areas",
+        "description": "AI-powered immediate transport platform. Rides, parcels, moving — real-time dispatch for individuals and professionals."
+      },
+      "primiom": {
+        "badge": "B2C — Real Estate",
+        "tagline": "Seller-centric real estate transactions",
+        "description": "Reinvents the real estate transaction by placing the seller at the heart of the process. Valuation, market analysis and personalised support from A to Z."
+      },
+      "hobconnect": {
+        "badge": "B2C — Social",
+        "tagline": "Social network centred on shared passions",
+        "description": "Builds authentic communities around shared passions, without advertising algorithms. For individuals, professionals, creators and associations."
+      },
+      "categories": {
+        "ai": "AI & Protocols",
+        "lifestyle": "Services & Lifestyle",
+        "transactions": "Transactions & Network"
+      }
     }
   },
   "advisory": {
@@ -2566,7 +2605,19 @@
       "notifyError": "An error occurred. Please try again.",
       "notifySuccessTitle": "Registration confirmed",
       "notifySuccessDesc": "You will be contacted on a priority basis as soon as the catalogue opens to members, before any public listing.",
-      "notifySuccessCta": "Submit my asset for certification"
+      "notifySuccessCta": "Submit my asset for certification",
+      "noResults": "No asset matches the selected filters",
+      "resetFilters": "Show all assets",
+      "portfolioLink": "Aegryn Portfolio",
+      "conditionalAccess": "Conditional access",
+      "qualifiedOnly": "Catalogue reserved for qualified acquirers",
+      "accessDesc": "Company names and full asset files are accessible only after account creation, signing the NDA, and accepting the Aegryn Auction T&Cs.",
+      "step1": "Create an acquirer account",
+      "step2": "Sign the Aegryn Auction NDA",
+      "step3": "Accept the T&Cs",
+      "loginCta": "Log in",
+      "registerCta": "Create an account",
+      "sellerCta": "Would you like to list your asset in the next catalogue?"
     },
     "session": {
       "label": "Next session",

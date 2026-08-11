@@ -86,10 +86,10 @@
       "statusBeta": "Beta",
       "statusDev": "In ontwikkeling",
       "gradeLabel": "Aegryn Grade",
-      "gradePending": "Certificering loopt",
-      "visitSite": "Bezoek site",
-      "viewDetails": "Bekijk details",
-      "auctionEligible": "Veiling-geschikt",
+      "gradePending": "Certificering bezig",
+      "visitSite": "Website bezoeken",
+      "viewDetails": "Details bekijken",
+      "auctionEligible": "Veilinggeschikt",
       "internalOnly": "Intern gebruik",
       "confidential": "Vertrouwelijk",
       "heroLabel": "Aegryn — Eigen ecosysteem",
@@ -99,7 +99,46 @@
       "auctionEligibleNote": "Activum geschikt voor veiling — investeerderscontact op verzoek.",
       "ctaBottom": "Wilt u uw eigen asset indienen voor certificering?",
       "ctaGrade": "Een extern asset indienen",
-      "ctaAuction": "Veilingsessies bekijken"
+      "ctaAuction": "Veilingsessies bekijken",
+      "notStarted": "Niet gestart",
+      "certificationInProgress": "Certificering bezig"
+    },
+    "items": {
+      "subblink": {
+        "badge": "B2B — SaaS",
+        "tagline": "Contractanalyse via AI",
+        "description": "Analyseert al uw contracten in seconden met een AI gekalibreerd op Zwitsers en Europees recht. Risico's, kritieke clausules, verborgen verplichtingen — alles in duidelijke taal geïdentificeerd."
+      },
+      "kryv": {
+        "badge": "Protocol — Blockchain",
+        "tagline": "AI-code-integriteitscertificering",
+        "description": "Blockchain-protocol voor certificering van de integriteit van AI-code. De SSL van kunstmatige code — elke implementatie, onveranderlijk verzegeld."
+      },
+      "neediu": {
+        "badge": "B2C — Marktplaats",
+        "tagline": "Thuisdiensten, intelligente koppeling",
+        "description": "Verbindt particulieren en professionals met de beste aanbieders van thuisdiensten, op basis van locatie en geverifieerde beoordelingen."
+      },
+      "movtoo": {
+        "badge": "B2C — Transport",
+        "tagline": "Transport op aanvraag, dichte stedelijke zones",
+        "description": "AI-aangedreven onmiddellijk transportplatform. Ritten, pakketten, verhuizingen — realtime dispatch voor particulieren en professionals."
+      },
+      "primiom": {
+        "badge": "B2C — Vastgoed",
+        "tagline": "Vastgoedtransactie gericht op de verkoper",
+        "description": "Herdefinieert de vastgoedtransactie door de verkoper centraal te stellen. Waardering, marktanalyse en persoonlijke begeleiding van A tot Z."
+      },
+      "hobconnect": {
+        "badge": "B2C — Sociaal",
+        "tagline": "Sociaal netwerk gericht op gedeelde passies",
+        "description": "Bouwt authentieke gemeenschappen rondom gedeelde passies, zonder reclamealgorithmen. Voor particulieren, professionals, creatieven en verenigingen."
+      },
+      "categories": {
+        "ai": "AI & Protocollen",
+        "lifestyle": "Diensten & Lifestyle",
+        "transactions": "Transacties & Netwerk"
+      }
     }
   },
   "advisory": {
@@ -2465,7 +2504,19 @@
       "notifyError": "Er is een fout opgetreden. Probeer het opnieuw.",
       "notifySuccessTitle": "Registratie bevestigd",
       "notifySuccessDesc": "U wordt als eerste gecontacteerd zodra de catalogus voor leden wordt geopend.",
-      "notifySuccessCta": "Mijn asset indienen voor certificering"
+      "notifySuccessCta": "Mijn asset indienen voor certificering",
+      "noResults": "Geen activa komen overeen met de geselecteerde filters",
+      "resetFilters": "Alle activa weergeven",
+      "portfolioLink": "Aegryn Portfolio",
+      "conditionalAccess": "Voorwaardelijke toegang",
+      "qualifiedOnly": "Catalogus voorbehouden aan gekwalificeerde kopers",
+      "accessDesc": "Bedrijfsnamen en volledige asset-dossiers zijn alleen toegankelijk na accountaanmaak, ondertekening van de NDA en aanvaarding van de Aegryn Auction-voorwaarden.",
+      "step1": "Een kopersaccount aanmaken",
+      "step2": "Aegryn Auction NDA ondertekenen",
+      "step3": "Voorwaarden accepteren",
+      "loginCta": "Inloggen",
+      "registerCta": "Een account aanmaken",
+      "sellerCta": "Wilt u uw activa in de volgende catalogus opnemen?"
     },
     "sell": {
       "label": "Verkoper",

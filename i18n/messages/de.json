@@ -88,9 +88,9 @@
       "gradeLabel": "Aegryn Grade",
       "gradePending": "Zertifizierung läuft",
       "visitSite": "Website besuchen",
-      "viewDetails": "Details anzeigen",
-      "auctionEligible": "Auktion-geeignet",
-      "internalOnly": "Interne Nutzung",
+      "viewDetails": "Details ansehen",
+      "auctionEligible": "Auktionsfähig",
+      "internalOnly": "Interner Gebrauch",
       "confidential": "Vertraulich",
       "heroLabel": "Aegryn — Proprietäres Ökosystem",
       "heroTitle": "Was wir\nbauen.",
@@ -99,7 +99,46 @@
       "auctionEligibleNote": "Asset für Auktion geeignet — Investorenkontakt auf Anfrage.",
       "ctaBottom": "Möchten Sie Ihr eigenes Asset zur Zertifizierung einreichen?",
       "ctaGrade": "Drittanbieter-Asset einreichen",
-      "ctaAuction": "Auktions-Sessions ansehen"
+      "ctaAuction": "Auktions-Sessions ansehen",
+      "notStarted": "Nicht begonnen",
+      "certificationInProgress": "Zertifizierung läuft"
+    },
+    "items": {
+      "subblink": {
+        "badge": "B2B — SaaS",
+        "tagline": "KI-gestützte Vertragsanalyse",
+        "description": "Analysiert alle Ihre Verträge in Sekunden mit einer auf Schweizer und europäisches Recht kalibrierten KI. Risiken, kritische Klauseln, versteckte Verpflichtungen — alles in klarer Sprache identifiziert."
+      },
+      "kryv": {
+        "badge": "Protokoll — Blockchain",
+        "tagline": "KI-Code-Integritätszertifizierung",
+        "description": "Blockchain-Protokoll zur Zertifizierung der Integrität von KI-Code. Das SSL des künstlichen Codes — jede Bereitstellung, unveränderlich versiegelt."
+      },
+      "neediu": {
+        "badge": "B2C — Marktplatz",
+        "tagline": "Haushaltsdienstleistungen, intelligente Vermittlung",
+        "description": "Verbindet Privatpersonen und Fachleute mit den besten Haushaltsdienstleistern, basierend auf Standort und verifizierten Bewertungen."
+      },
+      "movtoo": {
+        "badge": "B2C — Transport",
+        "tagline": "On-Demand-Transport, dichte Stadtzonen",
+        "description": "KI-gestützte Soforttransportplattform. Fahrten, Pakete, Umzüge — Echtzeit-Dispatch für Privatpersonen und Fachleute."
+      },
+      "primiom": {
+        "badge": "B2C — Immobilien",
+        "tagline": "Verkäuferzentrierte Immobilientransaktionen",
+        "description": "Erfindet die Immobilientransaktion neu, indem der Verkäufer in den Mittelpunkt gestellt wird. Bewertung, Marktanalyse und persönliche Begleitung von A bis Z."
+      },
+      "hobconnect": {
+        "badge": "B2C — Sozial",
+        "tagline": "Soziales Netzwerk rund um gemeinsame Leidenschaften",
+        "description": "Baut authentische Gemeinschaften rund um gemeinsame Leidenschaften auf, ohne Werbealgorithmen. Für Privatpersonen, Fachleute, Kreative und Vereine."
+      },
+      "categories": {
+        "ai": "KI & Protokolle",
+        "lifestyle": "Dienste & Lifestyle",
+        "transactions": "Transaktionen & Netzwerk"
+      }
     }
   },
   "advisory": {
@@ -508,7 +547,7 @@
     "live": "Live",
     "beta": "Beta",
     "dev": "In Entwicklung",
-    "notStarted": "Nicht gestartet",
+    "notStarted": "Nicht begonnen",
     "refused": "Abgelehnt"
   },
   "assetPage": {
@@ -2465,7 +2504,19 @@
       "notifyError": "Ein Fehler ist aufgetreten. Bitte erneut versuchen.",
       "notifySuccessTitle": "Anmeldung bestätigt",
       "notifySuccessDesc": "Sie werden vorrangig kontaktiert, sobald der Katalog für Mitglieder geöffnet wird.",
-      "notifySuccessCta": "Mein Asset zur Zertifizierung einreichen"
+      "notifySuccessCta": "Mein Asset zur Zertifizierung einreichen",
+      "noResults": "Kein Asset entspricht den ausgewählten Filtern",
+      "resetFilters": "Alle Assets anzeigen",
+      "portfolioLink": "Aegryn Portfolio",
+      "conditionalAccess": "Bedingter Zugang",
+      "qualifiedOnly": "Katalog nur für qualifizierte Käufer",
+      "accessDesc": "Firmennamen und vollständige Asset-Dossiers sind nur nach Kontoerstellung, NDA-Unterzeichnung und Annahme der Aegryn Auction-AGB zugänglich.",
+      "step1": "Käuferkonto erstellen",
+      "step2": "Aegryn Auction NDA unterzeichnen",
+      "step3": "AGB akzeptieren",
+      "loginCta": "Anmelden",
+      "registerCta": "Konto erstellen",
+      "sellerCta": "Möchten Sie Ihr Asset im nächsten Katalog listen?"
     },
     "sell": {
       "label": "Verkäufer",

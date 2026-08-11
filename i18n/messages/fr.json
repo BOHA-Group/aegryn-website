@@ -86,10 +86,10 @@
       "statusBeta": "Bêta",
       "statusDev": "En développement",
       "gradeLabel": "Grade Aegryn",
-      "gradePending": "En cours de certification",
+      "gradePending": "Certification en cours",
       "visitSite": "Visiter le site",
-      "viewDetails": "Voir la fiche",
-      "auctionEligible": "Éligible auction",
+      "viewDetails": "Voir les détails",
+      "auctionEligible": "Éligible aux enchères",
       "internalOnly": "Usage interne",
       "confidential": "Confidentiel",
       "heroLabel": "Aegryn — Portefeuille propriétaire",
@@ -99,7 +99,46 @@
       "auctionEligibleNote": "Actif éligible à une mise en auction — contact investisseurs sur demande.",
       "ctaBottom": "Vous souhaitez soumettre votre propre actif pour certification ?",
       "ctaGrade": "Soumettre un actif tiers",
-      "ctaAuction": "Voir les sessions auction"
+      "ctaAuction": "Voir les sessions auction",
+      "notStarted": "Non démarré",
+      "certificationInProgress": "Certification en cours"
+    },
+    "items": {
+      "subblink": {
+        "badge": "B2B — SaaS",
+        "tagline": "Analyse contractuelle par IA",
+        "description": "Analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées — tout identifié en langage clair."
+      },
+      "kryv": {
+        "badge": "Protocole — Blockchain",
+        "tagline": "Certification d'intégrité du code IA",
+        "description": "Protocole blockchain de certification de l'intégrité du code IA. Le SSL du code artificiel — chaque déploiement, immuablement scellé."
+      },
+      "neediu": {
+        "badge": "B2C — Marketplace",
+        "tagline": "Services à domicile, mise en relation intelligente",
+        "description": "Connecte particuliers et professionnels aux meilleurs prestataires de services à domicile, basé sur la localisation et les avis vérifiés."
+      },
+      "movtoo": {
+        "badge": "B2C — Transport",
+        "tagline": "Transport à la demande, zones urbaines denses",
+        "description": "Plateforme de transport immédiat pilotée par l'IA. Courses, colis, déménagement — dispatch en temps réel pour particuliers et professionnels."
+      },
+      "primiom": {
+        "badge": "B2C — Immobilier",
+        "tagline": "Transaction immobilière centrée sur le vendeur",
+        "description": "Réinvente la transaction immobilière en plaçant le vendeur au cœur du processus. Estimation, analyse de marché et accompagnement personnalisé de A à Z."
+      },
+      "hobconnect": {
+        "badge": "B2C — Social",
+        "tagline": "Réseau social centré sur les passions partagées",
+        "description": "Crée des communautés authentiques autour des passions partagées, sans algorithme publicitaire. Pour particuliers, professionnels, créateurs et associations."
+      },
+      "categories": {
+        "ai": "AI & Protocoles",
+        "lifestyle": "Services & Lifestyle",
+        "transactions": "Transactions & Réseau"
+      }
     }
   },
   "advisory": {
@@ -505,7 +544,7 @@
     }
   },
   "assetStatus": {
-    "live": "Live",
+    "live": "En ligne",
     "beta": "Bêta",
     "dev": "En développement",
     "notStarted": "Non démarré",
@@ -2586,7 +2625,19 @@
       "notifyError": "Une erreur est survenue. Veuillez réessayer.",
       "notifySuccessTitle": "Inscription confirmée",
       "notifySuccessDesc": "Vous serez contacté en priorité dès l'ouverture du catalogue aux membres, avant tout listing public.",
-      "notifySuccessCta": "Soumettre mon actif pour certification"
+      "notifySuccessCta": "Soumettre mon actif pour certification",
+      "noResults": "Aucun actif ne correspond aux filtres sélectionnés",
+      "resetFilters": "Afficher tous les actifs",
+      "portfolioLink": "Portfolio Aegryn",
+      "conditionalAccess": "Accès conditionnel",
+      "qualifiedOnly": "Catalogue réservé aux acquéreurs qualifiés",
+      "accessDesc": "Les noms de sociétés et fiches actifs complets sont accessibles uniquement après création de compte, signature du NDA et acceptation des CGV Aegryn Auction.",
+      "step1": "Créer un compte acquéreur",
+      "step2": "Signer le NDA Aegryn Auction",
+      "step3": "Accepter les CGV",
+      "loginCta": "Se connecter",
+      "registerCta": "Créer un compte",
+      "sellerCta": "Vous souhaitez lister votre actif dans le prochain catalogue ?"
     },
     "session": {
       "label": "Prochaine session",

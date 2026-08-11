@@ -99,7 +99,46 @@
       "auctionEligibleNote": "Asset idoneo all'asta — contatto investitori su richiesta.",
       "ctaBottom": "Vuole inviare il suo asset per la certificazione?",
       "ctaGrade": "Invia un asset di terze parti",
-      "ctaAuction": "Vedi sessioni d'asta"
+      "ctaAuction": "Vedi sessioni d'asta",
+      "notStarted": "Non avviato",
+      "certificationInProgress": "Certificazione in corso"
+    },
+    "items": {
+      "subblink": {
+        "badge": "B2B — SaaS",
+        "tagline": "Analisi contrattuale tramite IA",
+        "description": "Analizza tutti i tuoi contratti in pochi secondi con una IA calibrata per il diritto svizzero ed europeo. Rischi, clausole critiche, obblighi nascosti — tutto identificato in linguaggio chiaro."
+      },
+      "kryv": {
+        "badge": "Protocollo — Blockchain",
+        "tagline": "Certificazione dell'integrità del codice IA",
+        "description": "Protocollo blockchain di certificazione dell'integrità del codice IA. Il SSL del codice artificiale — ogni distribuzione, sigillata in modo immutabile."
+      },
+      "neediu": {
+        "badge": "B2C — Marketplace",
+        "tagline": "Servizi a domicilio, collegamento intelligente",
+        "description": "Collega privati e professionisti ai migliori fornitori di servizi a domicilio, basandosi sulla localizzazione e le recensioni verificate."
+      },
+      "movtoo": {
+        "badge": "B2C — Trasporto",
+        "tagline": "Trasporto su richiesta, zone urbane dense",
+        "description": "Piattaforma di trasporto immediato guidata dall'IA. Corse, pacchi, traslochi — dispatch in tempo reale per privati e professionisti."
+      },
+      "primiom": {
+        "badge": "B2C — Immobiliare",
+        "tagline": "Transazione immobiliare centrata sul venditore",
+        "description": "Reinventa la transazione immobiliare mettendo il venditore al centro del processo. Valutazione, analisi di mercato e accompagnamento personalizzato dalla A alla Z."
+      },
+      "hobconnect": {
+        "badge": "B2C — Social",
+        "tagline": "Rete sociale centrata sulle passioni condivise",
+        "description": "Crea comunità autentiche attorno a passioni condivise, senza algoritmi pubblicitari. Per privati, professionisti, creativi e associazioni."
+      },
+      "categories": {
+        "ai": "IA & Protocolli",
+        "lifestyle": "Servizi & Lifestyle",
+        "transactions": "Transazioni & Rete"
+      }
     }
   },
   "advisory": {
@@ -505,7 +544,7 @@
     }
   },
   "assetStatus": {
-    "live": "Live",
+    "live": "Online",
     "beta": "Beta",
     "dev": "In sviluppo",
     "notStarted": "Non avviato",
@@ -2465,7 +2504,19 @@
       "notifyError": "Si è verificato un errore. Riprovare.",
       "notifySuccessTitle": "Registrazione confermata",
       "notifySuccessDesc": "Sarà contattato con priorità non appena il catalogo sarà aperto ai membri.",
-      "notifySuccessCta": "Inviare il mio asset per la certificazione"
+      "notifySuccessCta": "Inviare il mio asset per la certificazione",
+      "noResults": "Nessun asset corrisponde ai filtri selezionati",
+      "resetFilters": "Mostra tutti gli asset",
+      "portfolioLink": "Portfolio Aegryn",
+      "conditionalAccess": "Accesso condizionale",
+      "qualifiedOnly": "Catalogo riservato agli acquirenti qualificati",
+      "accessDesc": "I nomi delle società e le schede complete degli asset sono accessibili solo dopo la creazione di un account, la firma dell'NDA e l'accettazione delle CGV di Aegryn Auction.",
+      "step1": "Creare un account acquirente",
+      "step2": "Firmare il NDA Aegryn Auction",
+      "step3": "Accettare le CGV",
+      "loginCta": "Accedi",
+      "registerCta": "Creare un account",
+      "sellerCta": "Vuoi inserire il tuo asset nel prossimo catalogo?"
     },
     "sell": {
       "label": "Venditore",

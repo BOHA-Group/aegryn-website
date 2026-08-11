@@ -20,16 +20,18 @@ type Props = {
   assets:  Asset[]
   locale:  string
   labels: {
-    filterAll:  string
-    filterStar: string
-    filterAAA:  string
-    filterAA:   string
-    filterA:    string
-    filterB:    string
-    count:      string
-    session:    string
-    arrRanges:  string[]
-    categories: string[]
+    filterAll:    string
+    filterStar:   string
+    filterAAA:    string
+    filterAA:     string
+    filterA:      string
+    filterB:      string
+    count:        string
+    session:      string
+    arrRanges:    string[]
+    categories:   string[]
+    noResults:    string
+    resetFilters: string
   }
 }
 
@@ -243,13 +245,13 @@ export default function CatalogFilters({ assets, locale, labels }: Props) {
           ) : assets.length > 0 ? (
             <div className="py-12 text-center">
               <p className="font-mono text-[11px] uppercase tracking-widest text-ag-gray-light mb-4">
-                Aucun actif ne correspond aux filtres sélectionnés
+                {labels.noResults}
               </p>
               <button
                 onClick={reset}
                 className="font-mono text-[10px] uppercase tracking-widest border border-ag-border px-5 py-2.5 text-ag-gray hover:border-ag-black hover:text-ag-black transition-colors"
               >
-                Afficher tous les actifs
+                {labels.resetFilters}
               </button>
             </div>
           ) : (

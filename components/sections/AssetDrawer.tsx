@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link }                          from '@/i18n/navigation'
 import { X, ArrowUpRight }              from 'lucide-react'
 import { gsap }                          from '@/lib/gsap'
-import { Aegryn_ASSETS, ASSET_CATEGORIES } from '@/data/assets'
+import { Aegryn_ASSETS } from '@/data/assets'
 import type { Asset }                    from '@/data/assets'
 import { BadgePill, StatusIndicator }    from '@/components/ui/AssetIndicators'
 import { useTranslations }              from 'next-intl'
@@ -13,6 +13,7 @@ import { useTranslations }              from 'next-intl'
 function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
   const t = useTranslations('assetDrawer')
   const tStatus = useTranslations('assetStatus')
+  const tItems = useTranslations('assets.items')
   const panelRef = useRef<HTMLDivElement>(null)
   const backdropRef = useRef<HTMLDivElement>(null)
 
@@ -100,7 +101,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
         {/* Header */}
         <div className="flex items-start justify-between p-8 border-b border-ag-border sticky top-0 bg-white z-10">
           <div>
-            <BadgePill badge={asset.badge} />
+            <BadgePill badge={tItems(`${asset.id}.badge`)} />
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] mt-3"
               style={{ fontSize: 'clamp(28px,3vw,38px)' }}
@@ -151,7 +152,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
               </div>
             </>
           ) : (
-            <p className="text-[14px] text-ag-gray leading-relaxed">{asset.description}</p>
+            <p className="text-[14px] text-ag-gray leading-relaxed">{tItems(`${asset.id}.description`)}</p>
           )}
 
           {/* Status */}
@@ -193,6 +194,8 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
 /* ── Grille principale avec drawers ─────────────────────────────── */
 export function AssetGridWithDrawer() {
   const t = useTranslations('assetDrawer')
+  const tItems = useTranslations('assets.items')
+  const tCats = useTranslations('assets.items.categories')
   const [openId, setOpenId] = useState<string | null>(null)
   const openAsset = Aegryn_ASSETS.find((a) => a.id === openId) ?? null
 
@@ -237,10 +240,10 @@ export function AssetGridWithDrawer() {
                   <div className="flex justify-between items-start w-full mb-auto">
                     <div className="space-y-2">
                       <span className="font-sans font-semibold text-[10px] tracking-[0.16em] uppercase text-ag-gray-light group-hover:text-white/50 transition-colors duration-500">
-                        {ASSET_CATEGORIES[asset.category].label}
+                        {tCats(asset.category)}
                       </span>
                       <br />
-                      <BadgePill badge={asset.badge} />
+                      <BadgePill badge={tItems(`${asset.id}.badge`)} />
                     </div>
                     <span className="w-8 h-8 border border-ag-border flex items-center justify-center text-ag-gray group-hover:border-white/40 group-hover:text-white transition-all duration-500 shrink-0">
                       <ArrowUpRight size={13} />
@@ -256,7 +259,7 @@ export function AssetGridWithDrawer() {
                       {asset.name}
                     </h3>
                     <p className="font-sans font-normal text-[12px] text-ag-gray leading-relaxed mb-4 group-hover:text-white/65 transition-colors duration-500">
-                      {asset.tagline}
+                      {tItems(`${asset.id}.tagline`)}
                     </p>
                     <StatusIndicator status={asset.status} isRestricted={isRestricted} />
                   </div>

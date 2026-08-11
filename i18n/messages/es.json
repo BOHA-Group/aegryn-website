@@ -99,7 +99,46 @@
       "auctionEligibleNote": "Activo elegible para subasta — contacto inversores bajo demanda.",
       "ctaBottom": "¿Desea enviar su propio activo para certificación?",
       "ctaGrade": "Enviar un activo de terceros",
-      "ctaAuction": "Ver sesiones de subasta"
+      "ctaAuction": "Ver sesiones de subasta",
+      "notStarted": "No iniciado",
+      "certificationInProgress": "Certificación en curso"
+    },
+    "items": {
+      "subblink": {
+        "badge": "B2B — SaaS",
+        "tagline": "Análisis contractual por IA",
+        "description": "Analiza todos sus contratos en segundos con una IA calibrada para el derecho suizo y europeo. Riesgos, cláusulas críticas, obligaciones ocultas — todo identificado en lenguaje claro."
+      },
+      "kryv": {
+        "badge": "Protocolo — Blockchain",
+        "tagline": "Certificación de integridad del código IA",
+        "description": "Protocolo blockchain de certificación de la integridad del código IA. El SSL del código artificial — cada despliegue, sellado de forma inmutable."
+      },
+      "neediu": {
+        "badge": "B2C — Marketplace",
+        "tagline": "Servicios a domicilio, conexión inteligente",
+        "description": "Conecta particulares y profesionales con los mejores proveedores de servicios a domicilio, basado en la localización y las opiniones verificadas."
+      },
+      "movtoo": {
+        "badge": "B2C — Transporte",
+        "tagline": "Transporte bajo demanda, zonas urbanas densas",
+        "description": "Plataforma de transporte inmediato impulsada por IA. Viajes, paquetes, mudanzas — despacho en tiempo real para particulares y profesionales."
+      },
+      "primiom": {
+        "badge": "B2C — Inmobiliaria",
+        "tagline": "Transacción inmobiliaria centrada en el vendedor",
+        "description": "Reinventa la transacción inmobiliaria poniendo al vendedor en el centro del proceso. Valoración, análisis de mercado y acompañamiento personalizado de la A a la Z."
+      },
+      "hobconnect": {
+        "badge": "B2C — Social",
+        "tagline": "Red social centrada en las pasiones compartidas",
+        "description": "Crea comunidades auténticas alrededor de pasiones compartidas, sin algoritmos publicitarios. Para particulares, profesionales, creadores y asociaciones."
+      },
+      "categories": {
+        "ai": "IA & Protocolos",
+        "lifestyle": "Servicios & Lifestyle",
+        "transactions": "Transacciones & Red"
+      }
     }
   },
   "advisory": {
@@ -505,7 +544,7 @@
     }
   },
   "assetStatus": {
-    "live": "Live",
+    "live": "En línea",
     "beta": "Beta",
     "dev": "En desarrollo",
     "notStarted": "No iniciado",
@@ -2465,7 +2504,19 @@
       "notifyError": "Se ha producido un error. Por favor, inténtelo de nuevo.",
       "notifySuccessTitle": "Registro confirmado",
       "notifySuccessDesc": "Será contactado con prioridad en cuanto el catálogo se abra a los miembros.",
-      "notifySuccessCta": "Enviar mi activo para certificación"
+      "notifySuccessCta": "Enviar mi activo para certificación",
+      "noResults": "Ningún activo coincide con los filtros seleccionados",
+      "resetFilters": "Mostrar todos los activos",
+      "portfolioLink": "Portfolio Aegryn",
+      "conditionalAccess": "Acceso condicional",
+      "qualifiedOnly": "Catálogo reservado para adquirentes cualificados",
+      "accessDesc": "Los nombres de las empresas y los expedientes completos de activos son accesibles únicamente tras la creación de cuenta, la firma del NDA y la aceptación de las CGV de Aegryn Auction.",
+      "step1": "Crear una cuenta de adquirente",
+      "step2": "Firmar el NDA de Aegryn Auction",
+      "step3": "Aceptar las CGV",
+      "loginCta": "Iniciar sesión",
+      "registerCta": "Crear una cuenta",
+      "sellerCta": "¿Desea listar su activo en el próximo catálogo?"
     },
     "sell": {
       "label": "Vendedor",
