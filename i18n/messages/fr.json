@@ -300,7 +300,7 @@
     ]
   },
   "ecosystemDomains": {
-    "label": "Les marchés Aegryn",
+    "label": "Les marchés",
     "title": "Quelles thématiques\ntransitent via Aegryn Auction.",
     "domains": [
       {
@@ -360,7 +360,7 @@
         }
       ],
       "synthesis": "Trois mots issus de trois civilisations. Une synthèse : une entité qui protège (AEGIS), facilite les flux (AEGIR), et construit pour la permanence (AEON). Aegryn.",
-      "formerly": "Aegryn s'appelait autrefois BOHA-Group. À mesure que le positionnement de l'entreprise s'est affiné, de constructeur d'actifs numériques à infrastructure de certification et de transaction, son identité s'est affinée avec lui. Le nom a changé. La conviction, non."
+      "history": "Aegryn s'appelait autrefois BOHA-Group. À mesure que le positionnement de l'entreprise s'est affiné, de constructeur d'actifs numériques à infrastructure de certification et de transaction, son identité s'est affinée avec lui. Le nom a changé. La conviction, non."
     },
     "vision": {
       "label": "Notre vision",
@@ -935,7 +935,7 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 Aegryn — Tous droits réservés",
+    "legal": "© 2026 Aegryn (by BOHA-Group) — Tous droits réservés",
     "company": "An Aegryn company",
     "privacy": "Confidentialité",
     "terms": "Conditions",
@@ -1042,7 +1042,7 @@
     ]
   },
   "auctionNarrative": {
-    "label": "Aegryn Auction",
+    "label": "Enchères",
     "title": "Certains actifs méritent mieux\nqu'une liste publique.",
     "desc": "Aegryn Auction n'est pas une plateforme ouverte. C'est un processus de cession confidentiel entre des vendeurs qui ont passé notre certification et des acquéreurs qui ont prouvé leur capacité et leur sérieux.\n\nMoins de 25% des actifs soumis sont acceptés. 100% des acquéreurs sont pré-qualifiés. Chaque transaction est intégralement documentée et sécurisée.",
     "stat1Val": "< 25%",
@@ -2687,7 +2687,7 @@
     }
   },
   "gradeStrip": {
-    "label": "Système de Grade Aegryn",
+    "label": "Système de Grade",
     "title": "Pas une note.\nUne certification.",
     "desc": "Il y a une différence fondamentale entre donner une note et certifier. Aegryn certifie dans une logique de protocole indépendant, reproductible et traçable.",
     "quote": "Un actif sans certification indépendante, c'est une valeur sans preuve. Un actif Aegryn Grade AAA, c'est une certitude documentée et traçable.",
@@ -2730,7 +2730,7 @@
     "cta": "Explorer les options"
   },
   "discoverStrip": {
-    "label": "Aegryn Insights",
+    "label": "Insights",
     "title": "Le marché M&A tech en Europe.\nPar ceux qui le font.",
     "article1Title": "État du marché M&A tech Europe — Q2 2026",
     "article1Cat": "Rapport marché",
@@ -3847,7 +3847,7 @@
     "s6Title": "Liens externes",
     "s6": "Le Site peut contenir des liens vers des sites tiers. Aegryn n'est pas responsable du contenu de ces sites et ne les approuve pas implicitement.",
     "s7Title": "Propriété intellectuelle",
-    "s7": "Le label Aegryn Grade, la marque Aegryn, le monogramme AE, le protocole C/I/F/S, ainsi que toutes les méthodologies et rapports produits par Aegryn sont la propriété exclusive d'Aegryn, société enregistrée en Suisse. Toute utilisation non autorisée sera poursuivie.",
+    "s7": "Le label Aegryn Grade, la marque Aegryn, le monogramme AE, le protocole C/I/F/S, ainsi que toutes les méthodologies et rapports produits par Aegryn sont la propriété exclusive d'Aegryn (by BOHA-Group, société enregistrée en Suisse). Toute utilisation non autorisée sera poursuivie.",
     "s8Title": "Droit applicable et juridiction",
     "s8": "Les présentes CGU sont soumises au droit suisse. Tout litige relevant des présentes sera soumis à la compétence exclusive des tribunaux du canton de domicile d'Aegryn. Si une clause est invalide, les autres restent applicables.",
     "ctaCgv": "Consulter les CGV",
@@ -3862,7 +3862,7 @@
     "version": "Version : juillet 2026",
     "note": "Ce document constitue la référence contractuelle opposable. Les conditions tarifaires précises sont précisées dans le mandat ou le devis signé entre les parties.",
     "s1Title": "Définitions",
-    "defAegryn": "Aegryn, société enregistrée en Suisse.",
+    "defAegryn": "Aegryn (by BOHA-Group, société enregistrée en Suisse).",
     "defAsset": "Tout bien numérique susceptible d'être certifié et/ou cédé via Aegryn, incluant sans limitation : logiciels (SaaS, applications), bases de code, propriété intellectuelle numérique, marques associées à un actif numérique, protocoles.",
     "defGrade": "Certification officielle d'un actif tech selon le protocole C/I/F/S, émise par des analystes certifiés Aegryn. Grade attribué : ★, AAA, AA, A, B.",
     "defGradeEst": "Avis indicatif non-certifié produit par un analyste Aegryn sans validation externe. Jamais opposable à des tiers. Suffixé « (estimé) » dans toute communication.",
@@ -3950,7 +3950,7 @@
     "langSelector": "Disponible en",
     "intro": "Comme la plupart des entreprises opérant dans le secteur financier et des transactions, Aegryn collecte et traite des données relatives à ses clients, partenaires et autres personnes susceptibles d'être intéressées par ses services. La présente politique explique le type de données que nous traitons, pourquoi nous les traitons et comment ce traitement peut vous affecter.",
     "s1Title": "Qui sommes-nous ?",
-    "s1": "Le responsable du traitement de vos données est Aegryn, société enregistrée en Suisse. Lorsque vous utilisez nos services (certification, transaction, advisory, catalogue), le responsable du traitement est Aegryn.",
+    "s1": "Le responsable du traitement de vos données est Aegryn (by BOHA-Group, société enregistrée en Suisse). Lorsque vous utilisez nos services (certification, transaction, advisory, catalogue), le responsable du traitement est Aegryn (by BOHA-Group).",
     "s2Title": "Quelles données collectons-nous et comment ?",
     "s2DirectTitle": "Données que vous nous fournissez directement",
     "s2Direct": "Nom, prénom, coordonnées professionnelles, informations sur l'entité représentée, informations financières, documents d'identité, documents d'entité, informations sur les bénéficiaires effectifs (UBO). Collectées lors de l'inscription, soumission d'actif, candidature Alliance, réservation Assessment Day, utilisation du calculateur ou toute communication.",
@@ -5061,9 +5061,9 @@
     "introText": "Avant d'accéder au catalogue Aegryn Auction, vous devez lire et accepter l'accord de confidentialité ci-dessous. Cet accord est obligatoire et constitue un engagement contractuel de confidentialité envers Aegryn et les vendeurs. Votre signature est horodatée et journalisée à des fins légales.",
     "versionLabel": "NDA — Version",
     "mainTitle": "Conditions de Confidentialité Acquéreur",
-    "mainSubtitle": "Aegryn",
+    "mainSubtitle": "Aegryn (by BOHA-Group Sàrl)",
     "partiesLabel": "Entre les soussignés :",
-    "partiesAegryn": "Aegryn, société enregistrée en Suisse, ci-après « Aegryn »,",
+    "partiesAegryn": "Aegryn (by BOHA-Group Sàrl), société enregistrée en Suisse, ci-après « Aegryn »,",
     "partiesAnd": "Et",
     "partiesBuyer": "L'utilisateur identifié par les informations renseignées lors de son inscription sur la plateforme Aegryn (nom, prénom ou raison sociale, email professionnel), ci-après « l'Acquéreur »,",
     "a1Title": "Objet",
@@ -5299,7 +5299,7 @@
     "cta": "Soumettre un actif"
   },
   "buildStrip": {
-    "label": "Aegryn Build",
+    "label": "Conception",
     "assetsLabel": "Actifs propriétaires",
     "assetsTitle": "Un portefeuille\nd'actifs tech sélectifs.",
     "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques — SaaS B2B, marketplaces, outils IA. Chaque actif est certifié, documenté, opéré en conditions réelles.",

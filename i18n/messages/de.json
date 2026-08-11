@@ -227,7 +227,7 @@
     ]
   },
   "ecosystemDomains": {
-    "label": "Die Aegryn Märkte",
+    "label": "Märkte",
     "title": "Welche Themen\nüber Aegryn Auction laufen.",
     "domains": [
       {
@@ -360,7 +360,7 @@
         }
       ],
       "synthesis": "Drei Wörter aus drei Zivilisationen. Eine Synthese: eine Einheit, die schützt (AEGIS), Flüsse ermöglicht (AEGIR) und für die Dauer baut (AEON). Aegryn.",
-      "formerly": "Aegryn war früher als BOHA-Group bekannt. Als sich die Positionierung des Unternehmens schärfte, vom Erbauer digitaler Assets zur Zertifizierungs- und Transaktionsinfrastruktur, schärfte sich auch seine Identität. Der Name änderte sich. Die Überzeugung nicht."
+      "history": "Aegryn war früher als BOHA-Group bekannt. Als sich die Positionierung des Unternehmens schärfte, vom Erbauer digitaler Assets zur Zertifizierungs- und Transaktionsinfrastruktur, schärfte sich auch seine Identität. Der Name änderte sich. Die Überzeugung nicht."
     },
     "vision": {
       "label": "Unsere Vision",
@@ -935,7 +935,7 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 Aegryn — Alle Rechte vorbehalten",
+    "legal": "© 2026 Aegryn (by BOHA-Group) — Alle Rechte vorbehalten",
     "company": "An Aegryn company",
     "privacy": "Datenschutz",
     "terms": "AGB",
@@ -2566,7 +2566,7 @@
     }
   },
   "gradeStrip": {
-    "label": "Aegryn Grade-System",
+    "label": "Grade-System",
     "title": "Keine Bewertung.\nEine Zertifizierung.",
     "desc": "Es gibt einen grundlegenden Unterschied zwischen einer Bewertung und einer Zertifizierung. Aegryn zertifiziert, nach einem unabhängigen, reproduzierbaren und nachvollziehbaren Protokoll.",
     "quote": "Ein Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. Ein Aegryn Grade AAA Asset ist eine dokumentierte und nachvollziehbare Gewissheit.",
@@ -2600,7 +2600,7 @@
     ]
   },
   "auctionNarrative": {
-    "label": "Aegryn Auction",
+    "label": "Auktion",
     "title": "Manche Assets verdienen mehr\nals eine öffentliche Listung.",
     "desc": "Aegryn Auction ist keine offene Plattform. Es ist ein vertraulicher Veräußerungsprozess zwischen Verkäufern, die unsere Zertifizierung bestanden haben, und Käufern, die ihre Leistungsfähigkeit bewiesen haben.\n\nWeniger als 25% der eingereichten Assets werden akzeptiert. 100% der Käufer sind vorqualifiziert. Jede Transaktion wird vollständig dokumentiert und abgesichert.",
     "stat1Val": "< 25%",
@@ -2624,7 +2624,7 @@
     "cta": "Optionen erkunden"
   },
   "discoverStrip": {
-    "label": "Aegryn Insights",
+    "label": "Einblicke",
     "title": "Der europäische Tech-M&A-Markt.\nVon denen, die ihn gestalten.",
     "article1Title": "Stand des europäischen Tech-M&A-Markts — Q2 2026",
     "article1Cat": "Marktbericht",
@@ -3866,7 +3866,7 @@
     "version": "Version: Juli 2026",
     "note": "Dieses Dokument ist die verbindliche Vertragsgrundlage. Genaue Preisbedingungen sind im unterzeichneten Mandat oder Angebot festgelegt.",
     "s1Title": "Definitionen",
-    "defAegryn": "Aegryn, in der Schweiz eingetragene Gesellschaft.",
+    "defAegryn": "Aegryn (by BOHA-Group, in der Schweiz eingetragene Gesellschaft).",
     "defAsset": "Jedes digitale Gut, das über Aegryn zertifiziert und/oder übertragen werden kann: Software (SaaS, Anwendungen), Codebases, digitales geistiges Eigentum, Marken, Protokolle.",
     "defGrade": "Offizielle Zertifizierung eines Tech-Assets nach dem C/I/F/S-Protokoll, ausgestellt von zertifizierten Aegryn-Analysten. Vergebene Grade: ★, AAA, AA, A, B.",
     "defGradeEst": "Nicht zertifiziertes Gutachten eines Aegryn-Analysten ohne externe Validierung. Gegenüber Dritten nie durchsetzbar. Immer mit dem Zusatz (geschätzt) versehen.",
@@ -3954,7 +3954,7 @@
     "langSelector": "Verfügbar in",
     "intro": "Wie die meisten Unternehmen im Finanz- und Transaktionsbereich erhebt und verarbeitet Aegryn Daten über seine Kunden, Partner und andere Personen, die an seinen Dienstleistungen interessiert sein könnten. Diese Richtlinie erläutert, welche Daten wir verarbeiten, warum wir sie verarbeiten und wie sich dies auf Sie auswirken kann.",
     "s1Title": "Wer sind wir?",
-    "s1": "Der für die Verarbeitung Ihrer Daten Verantwortliche ist Aegryn, eine in der Schweiz eingetragene Gesellschaft. Wenn Sie unsere Dienste nutzen (Zertifizierung, Transaktion, Advisory, Katalog), ist der Verantwortliche Aegryn.",
+    "s1": "Der für die Verarbeitung Ihrer Daten Verantwortliche ist Aegryn (by BOHA-Group, eine in der Schweiz eingetragene Gesellschaft). Wenn Sie unsere Dienste nutzen (Zertifizierung, Transaktion, Advisory, Katalog), ist der Verantwortliche Aegryn (by BOHA-Group).",
     "s2Title": "Welche Daten erheben wir und wie?",
     "s2DirectTitle": "Daten, die Sie uns direkt mitteilen",
     "s2Direct": "Name, berufliche Kontaktdaten, Angaben zur vertretenen Einheit, Finanzinformationen, Ausweisdokumente, Unternehmensdokumente, Angaben zu wirtschaftlich Berechtigten (UBO). Erhoben bei Registrierung, Asset-Einreichung, Alliance-Bewerbung, Assessment-Day-Buchung, Nutzung des Bewertungsrechners oder jeglicher Kommunikation.",
@@ -5303,7 +5303,7 @@
     "cta": "Anlage einreichen"
   },
   "buildStrip": {
-    "label": "Aegryn Build",
+    "label": "Konzeption",
     "assetsLabel": "Eigene Assets",
     "assetsTitle": "Ein selektives Portfolio\nan Tech-Assets.",
     "assetsDesc": "Aegryn entwirft und betreibt eigene digitale Assets — B2B SaaS, Marktplätze, KI-Tools. Jedes Asset ist zertifiziert, dokumentiert und unter realen Bedingungen betrieben.",

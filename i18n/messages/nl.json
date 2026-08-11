@@ -227,7 +227,7 @@
     ]
   },
   "ecosystemDomains": {
-    "label": "De Aegryn-markten",
+    "label": "Markten",
     "title": "Welke thema's\nlopen via Aegryn Auction.",
     "domains": [
       {
@@ -360,7 +360,7 @@
         }
       ],
       "synthesis": "Drie woorden uit drie beschavingen. Één synthese: een entiteit die beschermt (AEGIS), stromen faciliteert (AEGIR) en bouwt voor permanentie (AEON). Aegryn.",
-      "formerly": "Aegryn was voorheen bekend als BOHA-Group. Naarmate de positionering van het bedrijf scherper werd, van bouwer van digitale assets naar certificerings- en transactie-infrastructuur, deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet."
+      "history": "Aegryn was voorheen bekend als BOHA-Group. Naarmate de positionering van het bedrijf scherper werd, van bouwer van digitale assets naar certificerings- en transactie-infrastructuur, deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet."
     },
     "vision": {
       "label": "Onze visie",
@@ -935,7 +935,7 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 Aegryn — Alle rechten voorbehouden",
+    "legal": "© 2026 Aegryn (by BOHA-Group) — Alle rechten voorbehouden",
     "company": "An Aegryn company",
     "privacy": "Privacy",
     "terms": "Voorwaarden",
@@ -2566,7 +2566,7 @@
     }
   },
   "gradeStrip": {
-    "label": "Aegryn Grade-systeem",
+    "label": "Grade-systeem",
     "title": "Geen cijfer.\nEen certificering.",
     "desc": "Er is een fundamenteel verschil tussen een cijfer geven en certificeren. Aegryn certificeert via een onafhankelijk, reproduceerbaar en traceerbaar protocol.",
     "quote": "Een asset zonder onafhankelijke certificering is een waarde zonder bewijs. Een Aegryn Grade AAA asset is een gedocumenteerde en traceerbare zekerheid.",
@@ -2600,7 +2600,7 @@
     ]
   },
   "auctionNarrative": {
-    "label": "Aegryn Auction",
+    "label": "Veiling",
     "title": "Sommige assets verdienen meer\ndan een publieke vermelding.",
     "desc": "Aegryn Auction is geen open platform. Het is een vertrouwelijk overdrachtsproces tussen verkopers die onze certificering hebben doorstaan en kopers die hun capaciteit hebben bewezen.\n\nMinder dan 25% van de ingediende assets wordt geaccepteerd. 100% van de kopers is vooraf gekwalificeerd. Elke transactie is volledig gedocumenteerd en beveiligd.",
     "stat1Val": "< 25%",
@@ -2624,7 +2624,7 @@
     "cta": "Opties verkennen"
   },
   "discoverStrip": {
-    "label": "Aegryn Insights",
+    "label": "Inzichten",
     "title": "De Europese tech M&A-markt.\nDoor degenen die het doen.",
     "article1Title": "Stand van de Europese tech M&A-markt — Q2 2026",
     "article1Cat": "Marktrapport",
@@ -3866,7 +3866,7 @@
     "version": "Versie: juli 2026",
     "note": "Dit document vormt de bindende contractuele referentie. De exacte tariefvoorwaarden worden gespecificeerd in het ondertekende mandaat of offerte tussen de partijen.",
     "s1Title": "Definities",
-    "defAegryn": "Aegryn, in Zwitserland geregistreerde vennootschap.",
+    "defAegryn": "Aegryn (by BOHA-Group, in Zwitserland geregistreerde vennootschap).",
     "defAsset": "Elk digitaal goed dat via Aegryn kan worden gecertificeerd en/of overgedragen: software (SaaS, applicaties), codebases, digitaal intellectueel eigendom, merken gekoppeld aan een digitaal asset, protocollen.",
     "defGrade": "Officiële certificering van een tech-asset volgens het C/I/F/S-protocol, uitgegeven door gecertificeerde Aegryn-analisten. Toegekende grades: ★, AAA, AA, A, B.",
     "defGradeEst": "Niet-gecertificeerde indicatieve opinie van een Aegryn-analist zonder externe validatie. Nooit afdwingbaar jegens derden. Altijd voorzien van het achtervoegsel (geschat) in alle communicatie.",
@@ -3954,7 +3954,7 @@
     "langSelector": "Beschikbaar in",
     "intro": "Zoals de meeste bedrijven die actief zijn in de financiële en transactionele sector, verzamelt en verwerkt Aegryn gegevens over zijn klanten, partners en andere personen die mogelijk geïnteresseerd zijn in zijn diensten. Dit beleid legt uit welk type gegevens we verwerken, waarom we ze verwerken en hoe dit u kan beïnvloeden.",
     "s1Title": "Wie zijn wij?",
-    "s1": "De verwerkingsverantwoordelijke voor uw gegevens is Aegryn, een in Zwitserland geregistreerde vennootschap. Wanneer u onze diensten gebruikt (certificering, transactie, advisory, catalogus), is de verwerkingsverantwoordelijke Aegryn.",
+    "s1": "De verwerkingsverantwoordelijke voor uw gegevens is Aegryn (by BOHA-Group, een in Zwitserland geregistreerde vennootschap). Wanneer u onze diensten gebruikt (certificering, transactie, advisory, catalogus), is de verwerkingsverantwoordelijke Aegryn (by BOHA-Group).",
     "s2Title": "Welke gegevens verzamelen we en hoe?",
     "s2DirectTitle": "Gegevens die u ons rechtstreeks verstrekt",
     "s2Direct": "Naam, professionele contactgegevens, informatie over de vertegenwoordigde entiteit, financiële informatie, identiteitsdocumenten, bedrijfsdocumenten, informatie over uiteindelijk begunstigden (UBO). Verzameld bij registratie, indiening van assets, Alliance-kandidatuur, reservering Assessment Day, gebruik van de waarderingscalculator of enige communicatie.",
@@ -5303,7 +5303,7 @@
     "cta": "Actief indienen"
   },
   "buildStrip": {
-    "label": "Aegryn Build",
+    "label": "Conceptie",
     "assetsLabel": "Eigen assets",
     "assetsTitle": "Een selectief portfolio\nvan tech-assets.",
     "assetsDesc": "Aegryn ontwerpt en beheert eigen digitale assets — B2B SaaS, marktplaatsen, AI-tools. Elk asset is gecertificeerd, gedocumenteerd en beheerd onder echte condities.",

@@ -227,7 +227,7 @@
     ]
   },
   "ecosystemDomains": {
-    "label": "Aegryn markets",
+    "label": "Markets",
     "title": "Which themes\nflow through Aegryn Auction.",
     "domains": [
       {
@@ -915,7 +915,7 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 Aegryn — All rights reserved",
+    "legal": "© 2026 Aegryn (by BOHA-Group) — All rights reserved",
     "company": "An Aegryn company",
     "privacy": "Privacy",
     "terms": "Terms",
@@ -1022,7 +1022,7 @@
     ]
   },
   "auctionNarrative": {
-    "label": "Aegryn Auction",
+    "label": "Auction",
     "title": "Some assets deserve more\nthan a public listing.",
     "desc": "Aegryn Auction is not an open platform. It is a confidential disposal process between sellers who have passed our certification and buyers who have proven their capacity and seriousness.\n\nLess than 25% of submitted assets are accepted. 100% of buyers are pre-qualified. Each transaction is fully documented and secured end-to-end.",
     "stat1Val": "< 25%",
@@ -2667,7 +2667,7 @@
     }
   },
   "gradeStrip": {
-    "label": "Aegryn Grade System",
+    "label": "Grade System",
     "title": "Not a score.\nA certification.",
     "desc": "There is a fundamental difference between giving a score and certifying. Aegryn certifies through an independent, reproducible and traceable protocol.",
     "quote": "An asset without an independent certification is a value without proof. An Aegryn Grade AAA asset is a documented and traceable certainty.",
@@ -2710,7 +2710,7 @@
     "cta": "Explore options"
   },
   "discoverStrip": {
-    "label": "Aegryn Insights",
+    "label": "Insights",
     "title": "The European tech M&A market.\nBy those who do it.",
     "article1Title": "State of the European tech M&A market — Q2 2026",
     "article1Cat": "Market report",
@@ -3843,7 +3843,7 @@
     "version": "Version: July 2026",
     "note": "This document constitutes the binding contractual reference. Precise pricing conditions are specified in the signed mandate or quote between the parties.",
     "s1Title": "Definitions",
-    "defAegryn": "Aegryn, a company registered in Switzerland.",
+    "defAegryn": "Aegryn (by BOHA-Group, a company registered in Switzerland).",
     "defAsset": "Any digital asset that may be certified and/or transferred via Aegryn, including without limitation: software (SaaS, applications), codebases, digital intellectual property, trademarks associated with a digital asset, protocols.",
     "defGrade": "Official certification of a tech asset under the C/I/F/S protocol, issued by certified Aegryn analysts. Grade awarded: ★, AAA, AA, A, B.",
     "defGradeEst": "Non-certified indicative opinion produced by an Aegryn analyst without external validation. Never enforceable against third parties. Always suffixed \"(estimated)\" in all communications.",
@@ -3931,7 +3931,7 @@
     "langSelector": "Available in",
     "intro": "Like most businesses operating in the financial and transaction sector, Aegryn collects and processes data relating to its clients, partners and others who may be interested in its services. This notice explains the type of data we process, why we process it and how this may affect you.",
     "s1Title": "Who we are",
-    "s1": "The data controller is Aegryn, a company registered in Switzerland. When you use our services (certification, transaction, advisory, catalogue), the data controller is Aegryn.",
+    "s1": "The data controller is Aegryn (by BOHA-Group, a company registered in Switzerland). When you use our services (certification, transaction, advisory, catalogue), the data controller is Aegryn (by BOHA-Group).",
     "s2Title": "What data do we collect and how?",
     "s2DirectTitle": "Data you provide directly",
     "s2Direct": "Name, professional contact details, entity information, financial information (investment capacity, proof of funds), identity documents, entity documents, beneficial owner (UBO) information. Collected during registration, asset submission, Alliance application, Assessment Day booking, use of the valuation calculator or any communication.",
@@ -4835,7 +4835,7 @@
       },
       "whoWeAre": {
         "h": "Who are we and how to contact us?",
-        "p": "Aegryn is the name of our company. If you have questions about data processing related to our platform, you may contact us by post: Aegryn (BOHA-Group sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland. You may also reach us via the contact form available on our platform."
+        "p": "Aegryn (by BOHA-Group) is the name of our company. If you have questions about data processing related to our platform, you may contact us by post: Aegryn (BOHA-Group sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland. You may also reach us via the contact form available on our platform."
       },
       "ourRole": {
         "h": "What is our role in data protection?",
@@ -5042,9 +5042,9 @@
     "introText": "Before accessing the Aegryn Auction catalogue, you must read and accept the confidentiality agreement below. This agreement is mandatory and constitutes a contractual confidentiality commitment to Aegryn and the sellers. Your signature is timestamped and logged for legal purposes.",
     "versionLabel": "NDA — Version",
     "mainTitle": "Buyer Confidentiality Conditions",
-    "mainSubtitle": "Aegryn",
+    "mainSubtitle": "Aegryn (by BOHA-Group Sàrl)",
     "partiesLabel": "Between the undersigned:",
-    "partiesAegryn": "Aegryn, a company registered in Switzerland, hereinafter referred to as « Aegryn »,",
+    "partiesAegryn": "Aegryn (by BOHA-Group Sàrl), a company registered in Switzerland, hereinafter referred to as « Aegryn »,",
     "partiesAnd": "And",
     "partiesBuyer": "The user identified by the information provided at registration on the Aegryn platform (name, surname or company name, professional email), hereinafter referred to as « the Buyer »,",
     "a1Title": "Purpose",
@@ -5280,7 +5280,7 @@
     "cta": "Submit an asset"
   },
   "buildStrip": {
-    "label": "Aegryn Build",
+    "label": "Conception",
     "assetsLabel": "Proprietary Assets",
     "assetsTitle": "A selective portfolio\nof tech assets.",
     "assetsDesc": "Aegryn designs and operates its own digital assets — B2B SaaS, marketplaces, AI tools. Each asset is certified, documented, and operated under real conditions.",
