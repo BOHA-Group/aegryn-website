@@ -296,15 +296,15 @@
     "items": [
       {
         "title": "BUILD",
-        "desc": "Wir bauen proprietäre Tech-Assets, die von Anfang an zertifizierbar und übertragbar gestaltet sind, SaaS, Marktplätze, KI-Protokolle. Jedes Asset ist strukturiert, um dem strengsten Audit standzuhalten."
+        "desc": "Wir konzipieren und betreiben Tech-Assets — SaaS, Marktplätze, KI-Protokolle — die von Anfang an zertifizierbar und übertragbar sind. Jedes Asset widersteht der strengsten Prüfung."
       },
       {
         "title": "GRADE",
-        "desc": "Wir zertifizieren Drittanbieter- und proprietäre Assets nach einem unabhängigen Label, strukturiert über 4 Analysedimensionen, Code, IP, Finanzen, Sicherheit. Ein reproduzierbares, nachvollziehbares und schlüssiges Protokoll."
+        "desc": "Wir zertifizieren Assets nach einem unabhängigen Label, das auf 4 Dimensionen strukturiert ist: Code, IP, Finanzen, Sicherheit. Ein reproduzierbares, nachvollziehbares und schlüssiges Protokoll."
       },
       {
         "title": "AUCTION",
-        "desc": "Wir transagieren zertifizierte Assets über einen vertraulichen Prozess, institutionelles Treuhand, Kreis vorqualifizierter Käufer, 60-tägiges Exklusivmandat. Weniger als 25% der eingereichten Assets werden akzeptiert."
+        "desc": "Wir transagieren zertifizierte Assets über einen vertraulichen Prozess: institutionelles Treuhand, qualifizierter Käuferkreis, exklusives 60-Tage-Mandat. Weniger als 25% der eingereichten Assets werden akzeptiert."
       }
     ]
   },
@@ -2620,10 +2620,10 @@
   "acqStrip": {
     "label": "Akquisitionsunterstützung",
     "title": "Ihre nächste Akquisition,\nbegleitet von den richtigen Experten.",
-    "desc": "Aegryn koordiniert für jede Transaktion ein Netzwerk ausgewählter Spezialisten: Finanzierung, Due Diligence, Strukturierung und qualifizierte Investorennetzwerke.",
+    "desc": "Aegryn koordiniert für jede Transaktion ein Netzwerk ausgewählter Spezialisten: Finanzierung, Sorgfaltsprüfung, Strukturierung und qualifizierte Investorennetzwerke.",
     "chip1": "VC-Koinvestition",
     "chip2": "Überbrückungsfinanzierung",
-    "chip3": "Earnout-Struktur",
+    "chip3": "Earn-out-Struktur",
     "cta": "Kontakt aufnehmen",
     "sublabel": "Advisory Transaction",
     "domains": [
@@ -2631,18 +2631,18 @@
         "title": "Vor der Transaktion",
         "items": [
           "Bewertung & Marktbenchmark",
-          "Vendor Readiness & Data Room",
+          "Vendor Readiness & Datenraum",
           "IP & geistiges Eigentum",
           "Digitalrecht"
         ]
       },
       {
-        "title": "Due Diligence",
+        "title": "Sorgfaltsprüfung",
         "items": [
           "M&A-Recht (SPA, SHA, LOI)",
-          "HR & soziale Due Diligence",
+          "HR & soziale Sorgfaltsprüfung",
           "Branchenregulierung (FinTech, KI…)",
-          "Warranty & Indemnity Insurance"
+          "Garantie- und Entschädigungsversicherung"
         ]
       },
       {
@@ -2650,7 +2650,7 @@
         "items": [
           "Steuer- & Unternehmensstrukturierung",
           "Überbrückungsfinanzierung & Koinvestition",
-          "Earnout-Design & KPI-Framework",
+          "Earn-out-Design & KPI-Framework",
           "Post-Akquisitions-Integration"
         ]
       }

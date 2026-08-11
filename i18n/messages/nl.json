@@ -296,15 +296,15 @@
     "items": [
       {
         "title": "BUILD",
-        "desc": "We bouwen propriëtaire tech-assets die vanaf de basis zijn ontworpen om certificeerbaar en overdraagbaar te zijn, SaaS, marktplaatsen, AI-protocollen. Elk asset is gestructureerd om de strengste audit te doorstaan."
+        "desc": "Wij ontwerpen en beheren tech-assets — SaaS, marktplaatsen, AI-protocollen — die vanaf de basis zijn opgezet om certificeerbaar en overdraagbaar te zijn. Elk asset doorstaat de strengste audit."
       },
       {
         "title": "GRADE",
-        "desc": "We certificeren assets van derden en propriëtaire assets onder een onafhankelijk label, gestructureerd over 4 analysedimensies, Code, IP, Financiën, Beveiliging. Een reproduceerbaar, traceerbaar en conclusief protocol."
+        "desc": "Wij certificeren assets onder een onafhankelijk label dat is gestructureerd op 4 dimensies: Code, IP, Financiën, Beveiliging. Een reproduceerbaar, traceerbaar en sluitend protocol."
       },
       {
         "title": "AUCTION",
-        "desc": "We transigeren gecertificeerde assets via een vertrouwelijk proces, institutioneel depot, kring van vooraf gekwalificeerde kopers, exclusief mandaat van 60 dagen. Minder dan 25% van de ingediende assets wordt geaccepteerd."
+        "desc": "Wij transigeren gecertificeerde assets via een vertrouwelijk proces: institutioneel depot, kring van vooraf gekwalificeerde kopers, exclusief 60-daags mandaat. Minder dan 25% van de ingediende assets wordt geaccepteerd."
       }
     ]
   },
@@ -2623,7 +2623,7 @@
     "desc": "Aegryn coördineert rond elke transactie een netwerk van geselecteerde specialisten: financiering, due diligence, structurering en netwerken van gekwalificeerde investeerders.",
     "chip1": "VC co-investering",
     "chip2": "Overbruggingsfinanciering",
-    "chip3": "Earnout-structuur",
+    "chip3": "Earn-out-structuur",
     "cta": "Contact opnemen",
     "sublabel": "Advisory Transaction",
     "domains": [
@@ -2631,18 +2631,18 @@
         "title": "Pre-transactie",
         "items": [
           "Waardering & marktbenchmark",
-          "Vendor Readiness & data room",
+          "Vendor Readiness & dataruimte",
           "IP & intellectueel eigendom",
           "Digitaal recht"
         ]
       },
       {
-        "title": "Due diligence",
+        "title": "Zorgvuldigheidsonderzoek",
         "items": [
           "M&A-recht (SPA, SHA, LOI)",
           "HR & sociale due diligence",
           "Sectorale regelgeving (FinTech, AI…)",
-          "Warranty & Indemnity Insurance"
+          "Garantie- en aansprakelijkheidsverzekering"
         ]
       },
       {
@@ -2650,7 +2650,7 @@
         "items": [
           "Fiscaliteit & corporate structurering",
           "Overbruggingsfinanciering & co-investering",
-          "Earnout-ontwerp & KPI-framework",
+          "Earn-out-ontwerp & KPI-framework",
           "Post-acquisitie-integratie"
         ]
       }

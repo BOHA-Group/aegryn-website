@@ -296,15 +296,15 @@
     "items": [
       {
         "title": "BUILD",
-        "desc": "Construimos activos tech propietarios diseñados desde el origen para ser certificables y transferibles, SaaS, marketplaces, protocolos IA. Cada activo está estructurado para resistir la auditoría más exigente."
+        "desc": "Diseñamos y operamos activos tech — SaaS, marketplaces, protocolos IA — estructurados desde el origen para ser certificables y transferibles. Cada activo resiste la auditoría más exigente."
       },
       {
         "title": "GRADE",
-        "desc": "Certificamos activos de terceros y propios bajo un sello independiente, estructurado en 4 dimensiones de análisis, Código, IP, Finanzas, Seguridad. Un protocolo reproducible, trazable y concluyente."
+        "desc": "Certificamos activos bajo un sello independiente estructurado en 4 dimensiones: Código, PI, Finanzas, Seguridad. Un protocolo reproducible, trazable y concluyente."
       },
       {
         "title": "AUCTION",
-        "desc": "Transaccionamos activos certificados a través de un proceso confidencial, fideicomiso institucional, círculo de adquirentes precalificados, mandato exclusivo de 60 días. Menos del 25% de los activos presentados son aceptados."
+        "desc": "Transaccionamos activos certificados mediante un proceso confidencial: depósito institucional, círculo de compradores precalificados, mandato exclusivo de 60 días. Menos del 25% de los activos presentados son aceptados."
       }
     ]
   },
@@ -2623,7 +2623,7 @@
     "desc": "Aegryn orquesta alrededor de cada transacción una red de especialistas seleccionados: financiación, due diligence, estructuración y redes de inversores cualificados.",
     "chip1": "Co-inversión VC",
     "chip2": "Financiación puente",
-    "chip3": "Estructura earnout",
+    "chip3": "Estructura pago diferido",
     "cta": "Ponerse en contacto",
     "sublabel": "Advisory Transaction",
     "domains": [
@@ -2631,18 +2631,18 @@
         "title": "Pre-transacción",
         "items": [
           "Valoración & benchmark de mercado",
-          "Vendor Readiness & data room",
+          "Vendor Readiness & sala de datos",
           "IP & propiedad intelectual",
           "Derecho digital"
         ]
       },
       {
-        "title": "Due diligence",
+        "title": "Diligencia debida",
         "items": [
           "Derecho M&A (SPA, SHA, LOI)",
-          "Due diligence RR.HH. & social",
+          "Diligencia debida RR.HH. & social",
           "Regulación sectorial (FinTech, IA…)",
-          "Warranty & Indemnity Insurance"
+          "Seguro de garantías e indemnizaciones"
         ]
       },
       {
@@ -2650,7 +2650,7 @@
         "items": [
           "Fiscal & estructuración corporativa",
           "Financiación puente & co-inversión",
-          "Diseño earnout & marco KPI",
+          "Diseño pago diferido & marco KPI",
           "Integración post-adquisición"
         ]
       }

@@ -259,15 +259,15 @@
     "items": [
       {
         "title": "BUILD",
-        "desc": "Nous construisons des actifs tech propriétaires conçus dès l'origine pour être certifiables et transférables, SaaS, marketplaces, protocoles IA. Chaque actif est structuré pour résister à l'audit le plus exigeant."
+        "desc": "Nous concevons et opérons des actifs tech — SaaS, marketplaces, protocoles IA — structurés dès l'origine pour être certifiables et transférables. Chaque actif résiste à l'audit le plus exigeant."
       },
       {
         "title": "GRADE",
-        "desc": "Nous certifions des actifs tiers et propres selon un label indépendant, structuré sur 4 dimensions d'analyse, Code, IP, Finance, Sécurité. Un protocole reproductible, traçable et concluant."
+        "desc": "Nous certifions des actifs selon un label indépendant structuré sur 4 dimensions : Code, IP, Finance, Sécurité. Un protocole reproductible, traçable et concluant — pour des tiers comme pour nos propres actifs."
       },
       {
         "title": "AUCTION",
-        "desc": "Nous transigeons des actifs certifiés via un processus confidentiel, séquestre institutionnel, cercle d'acquéreurs pré-qualifiés, mandat exclusif 60 jours. Moins de 25% des actifs soumis sont acceptés."
+        "desc": "Nous transigeons des actifs certifiés via un processus confidentiel : séquestre institutionnel, cercle d'acquéreurs pré-qualifiés, mandat exclusif 60 jours. Moins de 25% des actifs soumis sont acceptés."
       }
     ]
   },
@@ -2729,7 +2729,7 @@
     "desc": "Aegryn orchestre autour de chaque transaction un réseau de spécialistes sélectionnés : financement, due diligence, structuration et réseau d'investisseurs qualifiés.",
     "chip1": "Co-investissement VC",
     "chip2": "Financement relais",
-    "chip3": "Structure earnout",
+    "chip3": "Structure earn-out",
     "cta": "Prendre contact",
     "sublabel": "Advisory Transaction",
     "domains": [
@@ -2737,26 +2737,26 @@
         "title": "Pré-transaction",
         "items": [
           "Valorisation & benchmark marché",
-          "Vendor Readiness & data room",
+          "Préparation cession & salle de données",
           "IP & propriété intellectuelle",
           "Droit du numérique"
         ]
       },
       {
-        "title": "Due diligence",
+        "title": "Vérification préalable",
         "items": [
           "Droit M&A (SPA, SHA, LOI)",
-          "Due diligence RH & social",
+          "Vérification préalable RH & social",
           "Réglementaire sectoriel (FinTech, IA…)",
-          "Warranty & Indemnity Insurance"
+          "Assurance garanties & indemnités"
         ]
       },
       {
         "title": "Structuration & financement",
         "items": [
           "Fiscalité & structuration corporate",
-          "Bridge financing & co-investissement",
-          "Earn-out design & KPI framework",
+          "Financement relais & co-investissement",
+          "Conception earn-out & indicateurs clés",
           "Intégration post-acquisition"
         ]
       }
