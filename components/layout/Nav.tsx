@@ -342,25 +342,13 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             </>
           ) : (
             <>
-              {process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' ? (
-                <span
-                  title={t('comingSoon')}
-                  className="relative flex items-center gap-1.5 font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray/40 cursor-not-allowed select-none"
-                  aria-disabled="true"
-                >
-                  <User size={13} />
-                  {t('clientSpace')}
-                  <span className="ml-1 font-mono text-[8px] tracking-[0.1em] uppercase text-ag-apex/70 border border-ag-apex/30 px-1 py-px rounded-sm">{t('soon')}</span>
-                </span>
-              ) : (
-                <NextLink
+              <NextLink
                   href="/client/login"
                   className="flex items-center gap-1.5 font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors duration-200"
                 >
                   <User size={13} />
                   {t('clientSpace')}
                 </NextLink>
-              )}
               <Link
                 href="/contact"
                 className="font-mono text-[11px] tracking-[0.14em] uppercase bg-ag-navy text-white px-4 py-2 hover:bg-ag-navy-mid transition-colors duration-200"
@@ -545,17 +533,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 </>
               ) : (
                 <>
-                  {process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' ? (
-                    <span
-                      className="flex items-center justify-center gap-2 border border-white/10 px-4 py-3 font-mono text-[11px] tracking-[0.14em] uppercase text-white/30 cursor-not-allowed select-none"
-                      aria-disabled="true"
-                    >
-                      <User size={13} />
-                      {t('clientSpace')}
-                      <span className="font-mono text-[8px] tracking-[0.1em] uppercase text-ag-apex/60 border border-ag-apex/25 px-1 py-px rounded-sm">{t('soon')}</span>
-                    </span>
-                  ) : (
-                    <NextLink
+                  <NextLink
                       href="/client/login"
                       onClick={closeMobile}
                       className="flex items-center justify-center gap-2 border border-white/20 px-4 py-3 font-mono text-[11px] tracking-[0.14em] uppercase text-white/70 hover:border-white/50 hover:text-white transition-all"
@@ -563,7 +541,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                       <User size={13} />
                       {t('clientSpace')}
                     </NextLink>
-                  )}
                   <Link
                     href="/contact"
                     onClick={closeMobile}
