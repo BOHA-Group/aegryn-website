@@ -33,23 +33,34 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
+      {/* ── Hero ───────────────────────────────────────────── */}
       <HeroMountain />
       <ManifestoSection />
+
+      {/* ── 1. Build ───────────────────────────────────────── */}
       <BuildStrip />
-      <GradeStrip />
-      <MissionVideoSection />
-      <EcosystemDomains />
-      <AuctionNarrative />
-      <MarketStatStrip />
-      <WhyUseApps />
-      <AcqSupportStrip />
       <BuildEngineeringStrip />
+
+      {/* ── 2. Conseil (Advisory) ──────────────────────────── */}
+      <AcqSupportStrip />
       <StatementStrip
         label="Aegryn Advisory"
         title={tAdv('hero.title')}
         cta={tAdv('cta')}
         href="/advisory"
       />
+
+      {/* ── 3. Notation (Grade) ────────────────────────────── */}
+      <GradeStrip />
+      <MissionVideoSection />
+
+      {/* ── 4. Enchères (Auction) ──────────────────────────── */}
+      <EcosystemDomains />
+      <AuctionNarrative />
+      <MarketStatStrip />
+      <WhyUseApps />
+
+      {/* ── Blog ───────────────────────────────────────────── */}
       <DiscoverStrip />
     </>
   )
