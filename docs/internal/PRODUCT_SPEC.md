@@ -83,11 +83,23 @@ Negotiation → LOI → Closing
 ```
 
 ### 3.3 Partner Flow
+
+#### Flow A — Expert individuel (abonnement Fiche Expert)
 ```
-Apply → Expert review → Subscription activated → 
-Receive certification mission → Submit grade report → 
-Commission credited → Referral programme
+Apply → Admin review → Account created →
+Subscription activated (CHF 89 HT/mo, no minimum commitment) →
+Profile published (aegryn.com/grade/partners) →
+Receive introduction requests from sellers / buyers →
+Referral programme (1 month credit per referral, 6-month cap, no commission to Aegryn on client fees)
 ```
+
+#### Flow B — Alliance partner (institutionnel)
+```
+Apply via /alliances (types: certification | distribution | dealflow | technical | ecosystem) →
+Admin qualification → Convention Alliance signed →
+Introduction flow activated (asset or buyer referral)
+```
+> Note: Alliance commercial terms (lead fee, success fee) are defined per convention — not standardised at platform level.
 
 ---
 
