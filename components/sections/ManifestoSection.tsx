@@ -113,8 +113,8 @@ export function ManifestoSection() {
           </div>
           <div className="py-16 border-b border-ag-border text-center px-4">
             <p
-              className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.3] mx-auto"
-              style={{ fontSize: 'clamp(20px,2.5vw,30px)', maxWidth: '800px' }}
+              className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.3]"
+              style={{ fontSize: 'clamp(18px,2.2vw,28px)' }}
             >
               {tW('conviction').split('\n').map((line, i, arr) => (
                 <span key={i}>
