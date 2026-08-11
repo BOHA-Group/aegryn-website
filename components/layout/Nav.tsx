@@ -10,7 +10,7 @@ import NotificationBell   from '@/components/client/NotificationBell'
 import { AegrynLogo }   from '@/components/brand/AegrynLogo'
 import { gsap }          from '@/lib/gsap'
 
-type DropdownKey = 'auction' | 'grade' | 'services' | null
+type DropdownKey = 'auction' | 'grade' | 'build' | 'advisory' | null
 type LinkHref = ComponentProps<typeof Link>['href']
 
 const AUCTION_LINKS: { labelKey: string; href: LinkHref }[] = [
@@ -28,8 +28,12 @@ const GRADE_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'gradeSubmit',     href: '/grade/submit' },
 ]
 
-const SERVICES_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'servicesBuild',       href: '/services/build' },
+const BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'buildAssets',      href: '/assets' },
+  { labelKey: 'buildEngineering', href: '/services/build' },
+]
+
+const ADVISORY_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'servicesAdvisory',    href: '/advisory' },
   { labelKey: 'servicesAcquisition', href: '/services/acquisition-support' },
   { labelKey: 'servicesAlliances',   href: '/alliances' },
@@ -145,7 +149,8 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const isActive = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href)
   const isAuctionActive  = AUCTION_LINKS.some(({ href }) => isActive(href as string))
   const isGradeActive    = GRADE_LINKS.some(({ href }) => isActive(href as string))
-  const isServicesActive = SERVICES_LINKS.some(({ href }) => isActive(href as string))
+  const isBuildActive    = BUILD_LINKS.some(({ href }) => isActive(href as string))
+  const isAdvisoryActive = ADVISORY_LINKS.some(({ href }) => isActive(href as string))
   const [mobileOpen, setMobileOpen]   = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<DropdownKey>(null)
   const [mobileAccordion, setMobileAccordion] = useState<DropdownKey>(null)
@@ -260,33 +265,38 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             {activeDropdown === 'grade' && <GradeMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
           </div>
 
-          {/* Assets */}
-          <Link
-            href="/assets"
-            aria-current={isActive('/assets') ? 'page' : undefined}
-            className={`nav-link-item relative font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-              isActive('/assets') ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
-            }`}
-          >
-            {t('assets')}
-            {isActive('/assets') && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
-          </Link>
-
-          {/* Services dropdown */}
+          {/* Build dropdown */}
           <div className="nav-link-item relative">
             <button
-              onClick={() => toggleDropdown('services')}
+              onClick={() => toggleDropdown('build')}
               className={`relative flex items-center gap-1 font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-                isServicesActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
+                isBuildActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
-              aria-expanded={activeDropdown === 'services'}
-              aria-current={isServicesActive ? 'page' : undefined}
+              aria-expanded={activeDropdown === 'build'}
+              aria-current={isBuildActive ? 'page' : undefined}
             >
-              {t('services')}
-              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
-              {isServicesActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
+              {t('build')}
+              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'build' ? 'rotate-180' : ''}`} />
+              {isBuildActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
             </button>
-            {activeDropdown === 'services' && <DropdownMenu links={SERVICES_LINKS} t={t} />}
+            {activeDropdown === 'build' && <DropdownMenu links={BUILD_LINKS} t={t} />}
+          </div>
+
+          {/* Advisory dropdown */}
+          <div className="nav-link-item relative">
+            <button
+              onClick={() => toggleDropdown('advisory')}
+              className={`relative flex items-center gap-1 font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
+                isAdvisoryActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
+              }`}
+              aria-expanded={activeDropdown === 'advisory'}
+              aria-current={isAdvisoryActive ? 'page' : undefined}
+            >
+              {t('advisory')}
+              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'advisory' ? 'rotate-180' : ''}`} />
+              {isAdvisoryActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
+            </button>
+            {activeDropdown === 'advisory' && <DropdownMenu links={ADVISORY_LINKS} t={t} />}
           </div>
 
           {/* Blog */}
@@ -455,30 +465,45 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               )}
             </div>
 
-            {/* Assets */}
-            <Link href="/assets" onClick={closeMobile}
-              aria-current={isActive('/assets') ? 'page' : undefined}
-              className={`mobile-nav-item py-4 font-mono text-[12px] tracking-[0.18em] uppercase transition-colors border-b ${
-                isActive('/assets') ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
-              }`}>
-              {t('assets')}
-            </Link>
-
-            {/* Services accordion */}
+            {/* Build accordion */}
             <div className="mobile-nav-item">
               <button
-                onClick={() => toggleMobileAccordion('services')}
-                aria-current={isServicesActive ? 'page' : undefined}
+                onClick={() => toggleMobileAccordion('build')}
+                aria-current={isBuildActive ? 'page' : undefined}
                 className={`w-full flex items-center justify-between py-4 font-mono text-[12px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isServicesActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                  isBuildActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
                 }`}
               >
-                {t('services')}
-                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'services' ? 'rotate-180' : ''}`} />
+                {t('build')}
+                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'build' ? 'rotate-180' : ''}`} />
               </button>
-              {mobileAccordion === 'services' && (
+              {mobileAccordion === 'build' && (
                 <div className="py-2 pl-4 flex flex-col gap-1">
-                  {SERVICES_LINKS.map(({ labelKey, href }) => (
+                  {BUILD_LINKS.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href as LinkHref} onClick={closeMobile}
+                      className="py-2.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
+                      {t(labelKey)}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Advisory accordion */}
+            <div className="mobile-nav-item">
+              <button
+                onClick={() => toggleMobileAccordion('advisory')}
+                aria-current={isAdvisoryActive ? 'page' : undefined}
+                className={`w-full flex items-center justify-between py-4 font-mono text-[12px] tracking-[0.18em] uppercase transition-colors border-b ${
+                  isAdvisoryActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                }`}
+              >
+                {t('advisory')}
+                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'advisory' ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileAccordion === 'advisory' && (
+                <div className="py-2 pl-4 flex flex-col gap-1">
+                  {ADVISORY_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href as LinkHref} onClick={closeMobile}
                       className="py-2.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}
