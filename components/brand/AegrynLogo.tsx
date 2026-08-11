@@ -34,35 +34,20 @@ export function AegrynLogo({ className = '', size = 32, variant = 'full', onDark
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`} aria-label="Aegryn">
       {mark}
-      <span className="flex flex-col" style={{ gap: size * 0.04 }}>
-        <span
-          style={{
-            fontFamily: 'var(--font-body), "Plus Jakarta Sans", sans-serif',
-            fontWeight: 700,
-            fontSize: size * 0.42,
-            letterSpacing: '0.15em',
-            color: bodyColor,
-            lineHeight: 1.25,
-            textTransform: 'uppercase' as const,
-            display: 'block',
-            overflow: 'visible',
-          }}
-        >
-          Aegryn
-        </span>
-        <span
-          style={{
-            fontFamily: 'var(--font-body), "Plus Jakarta Sans", sans-serif',
-            fontWeight: 400,
-            fontSize: 8,
-            letterSpacing: '0.05em',
-            color: onDark ? 'rgba(255,255,255,0.45)' : 'rgba(5,5,5,0.4)',
-            lineHeight: 1,
-            display: 'block',
-          }}
-        >
-          by BOHA-Group
-        </span>
+      <span
+        style={{
+          fontFamily: 'var(--font-body), "Plus Jakarta Sans", sans-serif',
+          fontWeight: 700,
+          fontSize: size * 0.42,
+          letterSpacing: '0.15em',
+          color: bodyColor,
+          lineHeight: 1.25,
+          textTransform: 'uppercase' as const,
+          display: 'block',
+          overflow: 'visible',
+        }}
+      >
+        Aegryn
       </span>
     </span>
   )

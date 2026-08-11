@@ -935,7 +935,7 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 Aegryn (formerly BOHA-Group) — Todos los derechos reservados",
+    "legal": "© 2026 Aegryn — Todos los derechos reservados",
     "company": "An Aegryn company",
     "privacy": "Privacidad",
     "terms": "Términos",
@@ -2687,19 +2687,23 @@
     "stats": [
       {
         "value": "+42%",
-        "label": "Crecimiento M&A tech Europa 2025–2026"
+        "label": "Crecimiento M&A tech Europa 2025–2026",
+        "source": "Synergy AI 2026"
       },
       {
         "value": "€12Mil M",
-        "label": "Volumen transaccionado SME-tech Q1 2026"
+        "label": "Volumen transaccionado SME-tech Q1 2026",
+        "source": "Synergy AI 2026"
       },
       {
         "value": "< 30 días",
-        "label": "Duración media de transacción activos certificados"
+        "label": "Duración media de transacción activos certificados",
+        "source": "Aventis Advisors"
       },
       {
         "value": "68%",
-        "label": "Deals sin convocatoria pública"
+        "label": "Deals sin convocatoria pública",
+        "source": "Aegryn — 2026"
       }
     ]
   },
@@ -2717,20 +2721,23 @@
     "articles": [
       {
         "title": "Estado del mercado M&A tech Europa — Q2 2026",
-        "category": "Informe de mercado"
+        "category": "Informe de mercado",
+        "desc": "Análisis de volúmenes de transacciones, múltiplos de valoración y tendencias sectoriales en el mercado europeo de activos tech."
       },
       {
         "title": "¿Qué es un activo tech realmente certificable?",
-        "category": "Guía vendedor"
+        "category": "Guía vendedor",
+        "desc": "Los errores más frecuentes identificados durante las certificaciones Aegryn, y cómo corregirlos antes de presentar."
       },
       {
         "title": "Cómo los adquirentes PE valoran un SaaS en 2026",
-        "category": "Guía adquirente"
+        "category": "Guía adquirente",
+        "desc": "Los criterios objetivos que distinguen un activo certificable de uno que requiere un plan de remediación previo."
       },
       {
         "category": "Caso de estudio",
         "title": "Calificar un SaaS B2B: ejercicio metodológico sobre una transacción pública",
-        "desc": "Aplicación ilustrativa del protocolo CIFS a una transacción tech publicada, para entender cómo cada dimensión C/I/F/S influye en el grade final. Ejercicio pedagógico, no contractual."
+        "desc": "Aplicación ilustrativa del protocolo CIFS en una transacción tech publicada, para entender cómo cada dimensión C/I/F/S influye en el grade final. Ejercicio pedagógico, no contractual."
       }
     ]
   },
@@ -3859,7 +3866,7 @@
     "version": "Versión: julio de 2026",
     "note": "Este documento constituye la referencia contractual vinculante. Las condiciones tarifarias precisas se especifican en el mandato o presupuesto firmado entre las partes.",
     "s1Title": "Definiciones",
-    "defAegryn": "Aegryn (formerly BOHA-Group, sociedad registrada en Suiza).",
+    "defAegryn": "Aegryn, sociedad registrada en Suiza.",
     "defAsset": "Todo bien digital susceptible de ser certificado y/o cedido a través de Aegryn: software (SaaS, aplicaciones), bases de código, propiedad intelectual digital, marcas asociadas a un activo digital, protocolos.",
     "defGrade": "Certificación oficial de un activo tech según el protocolo C/I/F/S, emitida por analistas certificados Aegryn. Grades otorgados: ★, AAA, AA, A, B.",
     "defGradeEst": "Opinión indicativa no certificada producida por un analista Aegryn sin validación externa. Nunca oponible a terceros. Siempre con el sufijo (estimado) en toda comunicación.",
@@ -3947,7 +3954,7 @@
     "langSelector": "Disponible en",
     "intro": "Como la mayoría de las empresas que operan en el sector financiero y de transacciones, Aegryn recopila y trata datos relativos a sus clientes, socios y otras personas que puedan estar interesadas en sus servicios. Esta política explica el tipo de datos que tratamos, por qué los tratamos y cómo puede afectarle.",
     "s1Title": "Quiénes somos",
-    "s1": "El responsable del tratamiento de sus datos es Aegryn (formerly BOHA-Group, sociedad registrada en Suiza). Cuando utiliza nuestros servicios (certificación, transacción, advisory, catálogo), el responsable del tratamiento es Aegryn (formerly BOHA-Group).",
+    "s1": "El responsable del tratamiento de sus datos es Aegryn, sociedad registrada en Suiza. Cuando utiliza nuestros servicios (certificación, transacción, advisory, catálogo), el responsable del tratamiento es Aegryn.",
     "s2Title": "Qué datos recopilamos y cómo",
     "s2DirectTitle": "Datos que nos proporciona directamente",
     "s2Direct": "Nombre, datos de contacto profesionales, información sobre la entidad representada, información financiera, documentos de identidad, documentos de entidad, información sobre beneficiarios efectivos (UBO). Recopilados durante el registro, envío de activos, candidatura Alliance, reserva del Assessment Day, uso de la calculadora de valoración o cualquier comunicación.",

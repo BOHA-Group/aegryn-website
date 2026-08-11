@@ -342,26 +342,6 @@
       "title": "We do not sell deals.\nWe protect what lasts.",
       "desc": "We believe the real value of a tech asset is not negotiated under pressure. It is built with rigour, certified in transparency, and transferred in trust."
     },
-    "name": {
-      "label": "The name",
-      "title": "Three ancient words.\nOne identity.",
-      "roots": [
-        {
-          "word": "AEGIS",
-          "meaning": "Symbol of protection, authority and legitimacy. To act under the aegis of something is to act under a certifying authority, one whose standard others trust."
-        },
-        {
-          "word": "AEGIR",
-          "meaning": "Master of flows, of what moves between shores, between parties, between value and its recognition."
-        },
-        {
-          "word": "AEON",
-          "meaning": "Eternity. The long span. What endures beyond cycles, trends and funding rounds."
-        }
-      ],
-      "synthesis": "Three words from three civilisations. One synthesis: an entity that protects (AEGIS), facilitates flows (AEGIR), and builds for permanence (AEON). Aegryn.",
-      "formerly": "Aegryn was formerly known as BOHA-Group. As the company's positioning sharpened, from digital asset builder to certification and transaction infrastructure, so did its identity. The name changed. The conviction did not."
-    },
     "vision": {
       "label": "Our vision",
       "text": "The European tech M&A market has serious foundations, experienced advisors, rigorous due diligence, institutional capital. What it lacked was a standardised, independent certification framework: a shared, verifiable reference that both sides of a transaction could rely on before negotiations begin.\n\nAegryn is that framework, not a replacement for what already works, but the infrastructure layer that was structurally absent."
@@ -935,7 +915,7 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 Aegryn (formerly BOHA-Group) — All rights reserved",
+    "legal": "© 2026 Aegryn — All rights reserved",
     "company": "An Aegryn company",
     "privacy": "Privacy",
     "terms": "Terms",
@@ -1071,22 +1051,22 @@
       {
         "category": "Market report",
         "title": "State of the European tech M&A market — Q3 2026",
-        "desc": "Analysis of transaction volumes, valuation multiples and sector trends on the European tech asset market."
+        "desc": "Analysis of transaction volumes, valuation multiples and sector trends in the European tech asset market."
       },
       {
         "category": "Seller guide",
         "title": "The 5 mistakes that destroy your SaaS valuation",
-        "desc": "The most frequent errors identified during Aegryn certifications, and how to fix them before submitting."
+        "desc": "The most common errors identified during Aegryn certifications, and how to fix them before submitting."
       },
       {
         "category": "Certification",
         "title": "What makes a tech asset truly certifiable?",
-        "desc": "The objective criteria that distinguish a certifiable asset from one requiring a prior remediation plan."
+        "desc": "The objective criteria that distinguish a certifiable asset from one that requires a prior remediation plan."
       },
       {
         "category": "Case study",
         "title": "Grading a B2B SaaS: a methodological exercise on a public transaction",
-        "desc": "Illustrative application of the CIFS protocol to a published tech transaction, to understand how each C/I/F/S dimension influences the final grade. Educational exercise, non-contractual."
+        "desc": "Illustrative application of the CIFS protocol on a published tech transaction, to understand how each C/I/F/S dimension influences the final grade. Educational exercise, non-contractual."
       }
     ]
   },
@@ -3863,7 +3843,7 @@
     "version": "Version: July 2026",
     "note": "This document constitutes the binding contractual reference. Precise pricing conditions are specified in the signed mandate or quote between the parties.",
     "s1Title": "Definitions",
-    "defAegryn": "Aegryn (formerly BOHA-Group, a company registered in Switzerland).",
+    "defAegryn": "Aegryn, a company registered in Switzerland.",
     "defAsset": "Any digital asset that may be certified and/or transferred via Aegryn, including without limitation: software (SaaS, applications), codebases, digital intellectual property, trademarks associated with a digital asset, protocols.",
     "defGrade": "Official certification of a tech asset under the C/I/F/S protocol, issued by certified Aegryn analysts. Grade awarded: ★, AAA, AA, A, B.",
     "defGradeEst": "Non-certified indicative opinion produced by an Aegryn analyst without external validation. Never enforceable against third parties. Always suffixed \"(estimated)\" in all communications.",
@@ -3951,7 +3931,7 @@
     "langSelector": "Available in",
     "intro": "Like most businesses operating in the financial and transaction sector, Aegryn collects and processes data relating to its clients, partners and others who may be interested in its services. This notice explains the type of data we process, why we process it and how this may affect you.",
     "s1Title": "Who we are",
-    "s1": "The data controller is Aegryn (formerly BOHA-Group, a company registered in Switzerland). When you use our services (certification, transaction, advisory, catalogue), the data controller is Aegryn (formerly BOHA-Group).",
+    "s1": "The data controller is Aegryn, a company registered in Switzerland. When you use our services (certification, transaction, advisory, catalogue), the data controller is Aegryn.",
     "s2Title": "What data do we collect and how?",
     "s2DirectTitle": "Data you provide directly",
     "s2Direct": "Name, professional contact details, entity information, financial information (investment capacity, proof of funds), identity documents, entity documents, beneficial owner (UBO) information. Collected during registration, asset submission, Alliance application, Assessment Day booking, use of the valuation calculator or any communication.",
@@ -4855,7 +4835,7 @@
       },
       "whoWeAre": {
         "h": "Who are we and how to contact us?",
-        "p": "Aegryn (formerly BOHA-Group) is the name of our company. If you have questions about data processing related to our platform, you may contact us by post: Aegryn (BOHA-Group sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland. You may also reach us via the contact form available on our platform."
+        "p": "Aegryn is the name of our company. If you have questions about data processing related to our platform, you may contact us by post: Aegryn (BOHA-Group sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland. You may also reach us via the contact form available on our platform."
       },
       "ourRole": {
         "h": "What is our role in data protection?",
@@ -5062,9 +5042,9 @@
     "introText": "Before accessing the Aegryn Auction catalogue, you must read and accept the confidentiality agreement below. This agreement is mandatory and constitutes a contractual confidentiality commitment to Aegryn and the sellers. Your signature is timestamped and logged for legal purposes.",
     "versionLabel": "NDA — Version",
     "mainTitle": "Buyer Confidentiality Conditions",
-    "mainSubtitle": "Aegryn (formerly BOHA-Group Sàrl)",
+    "mainSubtitle": "Aegryn",
     "partiesLabel": "Between the undersigned:",
-    "partiesAegryn": "Aegryn (formerly BOHA-Group Sàrl), a company registered in Switzerland, hereinafter referred to as « Aegryn »,",
+    "partiesAegryn": "Aegryn, a company registered in Switzerland, hereinafter referred to as « Aegryn »,",
     "partiesAnd": "And",
     "partiesBuyer": "The user identified by the information provided at registration on the Aegryn platform (name, surname or company name, professional email), hereinafter referred to as « the Buyer »,",
     "a1Title": "Purpose",
