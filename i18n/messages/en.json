@@ -112,32 +112,32 @@
     "services": {
       "cyber": {
         "title": "Cybersecurity",
-        "desc": "Attack surface identification, infrastructure hardening and incident response.",
+        "desc": "Attack surface audit, application security, cloud infrastructure and NIS2 compliance.",
         "items": [
-          "Attack surface audit",
-          "Penetration testing",
-          "Incident response",
-          "Cloud & on-premise hardening"
+          "Pentest (black/grey/white box)",
+          "Application security audit",
+          "NIS2 compliance",
+          "Cloud & on-premise security"
         ]
       },
       "ai": {
-        "title": "AI Audit & Trust",
-        "desc": "We audit your models, pipelines and decision processes to guarantee reliability and compliance.",
+        "title": "Data & Artificial Intelligence",
+        "desc": "AI strategy, data governance, EU AI Act compliance and model auditing.",
         "items": [
           "Algorithmic bias audit",
           "EU AI Act compliance",
           "LLM red-teaming",
-          "Decision traceability"
+          "Data governance & MLOps"
         ]
       },
       "strategy": {
-        "title": "Digital Strategy",
-        "desc": "Alignment between your digital ambitions and European and Swiss regulatory constraints.",
+        "title": "Architecture & Engineering",
+        "desc": "CTO as a service, full-stack architecture review, DevSecOps and software quality.",
         "items": [
-          "Data governance",
-          "GDPR & FADP compliance",
-          "Secure architecture",
-          "Innovation roadmap"
+          "Full-stack architecture review",
+          "DevSecOps & CI/CD",
+          "Technical debt reduction",
+          "Scalability & migration"
         ]
       }
     },
@@ -2714,30 +2714,30 @@
     "sublabel": "Advisory Transaction",
     "domains": [
       {
-        "title": "Financing & Structuring",
+        "title": "Pre-transaction",
         "items": [
-          "VC co-investment",
-          "Bridge financing",
-          "Earnout structure",
-          "Mezzanine & senior debt"
-        ]
-      },
-      {
-        "title": "Due Diligence",
-        "items": [
-          "Financial audit",
-          "Code technical review",
+          "Valuation & market benchmark",
+          "Vendor Readiness & data room",
           "IP & intellectual property",
-          "Regulatory risks"
+          "Digital law"
         ]
       },
       {
-        "title": "Buyer Network",
+        "title": "Due diligence",
         "items": [
-          "Swiss family offices",
-          "European PE funds",
-          "Tech strategics",
-          "Institutional investors"
+          "M&A law (SPA, SHA, LOI)",
+          "HR & social due diligence",
+          "Sector regulation (FinTech, AI…)",
+          "Warranty & Indemnity Insurance"
+        ]
+      },
+      {
+        "title": "Structuring & financing",
+        "items": [
+          "Tax & corporate structuring",
+          "Bridge financing & co-investment",
+          "Earn-out design & KPI framework",
+          "Post-acquisition integration"
         ]
       }
     ]

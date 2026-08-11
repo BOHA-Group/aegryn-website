@@ -112,32 +112,32 @@
     "services": {
       "cyber": {
         "title": "Cyberbeveiliging",
-        "desc": "Aanvalsoppervlak identificeren, infrastructuur harden en incidenten afhandelen.",
+        "desc": "Audit van aanvalsoppervlak, applicatiebeveiliging, cloudinfrastructuur en NIS2-conformiteit.",
         "items": [
-          "Aanvalsoppervlak-audit",
-          "Penetratietesten",
-          "Incidentrespons",
-          "Cloud & on-premise hardening"
+          "Pentest (black/grey/white box)",
+          "Applicatiebeveiliging audit",
+          "NIS2-conformiteit",
+          "Cloud- & on-premise-beveiliging"
         ]
       },
       "ai": {
-        "title": "AI-audit & Vertrouwen",
-        "desc": "Wij auditten uw modellen, pipelines en beslissingsprocessen voor betrouwbaarheid en compliance.",
+        "title": "Data & Kunstmatige Intelligentie",
+        "desc": "AI-strategie, databeheer, EU AI Act-conformiteit en modelaudit.",
         "items": [
-          "Algoritmische bias-audit",
-          "EU AI Act-compliance",
+          "Algoritme bias-audit",
+          "EU AI Act-conformiteit",
           "LLM red-teaming",
-          "Beslissingstracering"
+          "Databeheer & MLOps"
         ]
       },
       "strategy": {
-        "title": "Digitale Strategie",
-        "desc": "Afstemming tussen uw digitale ambities en Europese en Zwitserse regelgevingsvereisten.",
+        "title": "Architectuur & Engineering",
+        "desc": "CTO as a service, full-stack architectuurreview, DevSecOps en softwarekwaliteit.",
         "items": [
-          "Data governance",
-          "AVG & DSG-compliance",
-          "Veilige architectuur",
-          "Innovatie-roadmap"
+          "Full-stack architectuurreview",
+          "DevSecOps & CI/CD",
+          "Vermindering technische schuld",
+          "Schaalbaarheid & migratie"
         ]
       }
     },
@@ -2628,30 +2628,30 @@
     "sublabel": "Advisory Transaction",
     "domains": [
       {
-        "title": "Financiering & Structurering",
+        "title": "Pre-transactie",
         "items": [
-          "VC co-investering",
-          "Overbruggingsfinanciering",
-          "Earnout-structuur",
-          "Mezzanine & senior schuld"
-        ]
-      },
-      {
-        "title": "Due Diligence",
-        "items": [
-          "Financiële audit",
-          "Technische codereview",
+          "Waardering & marktbenchmark",
+          "Vendor Readiness & data room",
           "IP & intellectueel eigendom",
-          "Regelgevingsrisico's"
+          "Digitaal recht"
         ]
       },
       {
-        "title": "Kopersnetwerk",
+        "title": "Due diligence",
         "items": [
-          "Zwitserse family offices",
-          "Europese PE-fondsen",
-          "Tech-strategen",
-          "Institutionele beleggers"
+          "M&A-recht (SPA, SHA, LOI)",
+          "HR & sociale due diligence",
+          "Sectorale regelgeving (FinTech, AI…)",
+          "Warranty & Indemnity Insurance"
+        ]
+      },
+      {
+        "title": "Structurering & financiering",
+        "items": [
+          "Fiscaliteit & corporate structurering",
+          "Overbruggingsfinanciering & co-investering",
+          "Earnout-ontwerp & KPI-framework",
+          "Post-acquisitie-integratie"
         ]
       }
     ]

@@ -112,32 +112,32 @@
     "services": {
       "cyber": {
         "title": "Cybersicherheit",
-        "desc": "Angriffsflächen identifizieren, Infrastruktur absichern und auf Vorfälle reagieren.",
+        "desc": "Angriffsflächen-Audit, Anwendungssicherheit, Cloud-Infrastruktur und NIS2-Konformität.",
         "items": [
-          "Angriffsflächen-Audit",
-          "Penetrationstests",
-          "Incident Response",
-          "Cloud & On-premise-Härtung"
+          "Penetrationstest (black/grey/white box)",
+          "Anwendungssicherheits-Audit",
+          "NIS2-Konformität",
+          "Cloud- & On-premise-Sicherheit"
         ]
       },
       "ai": {
-        "title": "KI-Audit & Vertrauen",
-        "desc": "Wir prüfen Ihre Modelle, Pipelines und Entscheidungsprozesse auf Zuverlässigkeit und Compliance.",
+        "title": "Data & Künstliche Intelligenz",
+        "desc": "KI-Strategie, Datenverwaltung, EU-KI-Gesetz-Konformität und Modellprüfung.",
         "items": [
-          "Algorithmen-Bias-Audit",
-          "EU-KI-Gesetz-Compliance",
+          "Algorithmische Bias-Prüfung",
+          "EU-KI-Gesetz-Konformität",
           "LLM Red-Teaming",
-          "Entscheidungs-Rückverfolgbarkeit"
+          "Datenverwaltung & MLOps"
         ]
       },
       "strategy": {
-        "title": "Digitale Strategie",
-        "desc": "Abstimmung zwischen Ihren digitalen Ambitionen und europäischen sowie schweizerischen Regulierungen.",
+        "title": "Architektur & Engineering",
+        "desc": "CTO as a Service, Full-Stack-Architekturüberprüfung, DevSecOps und Softwarequalität.",
         "items": [
-          "Daten-Governance",
-          "DSGVO & DSG-Compliance",
-          "Sichere Architektur",
-          "Innovations-Roadmap"
+          "Full-Stack-Architekturüberprüfung",
+          "DevSecOps & CI/CD",
+          "Technische Schuldenreduktion",
+          "Skalierbarkeit & Migration"
         ]
       }
     },
@@ -2628,30 +2628,30 @@
     "sublabel": "Advisory Transaction",
     "domains": [
       {
-        "title": "Finanzierung & Strukturierung",
+        "title": "Vor der Transaktion",
         "items": [
-          "VC-Koinvestition",
-          "Überbrückungsfinanzierung",
-          "Earnout-Struktur",
-          "Mezzanine & Senior-Schulden"
+          "Bewertung & Marktbenchmark",
+          "Vendor Readiness & Data Room",
+          "IP & geistiges Eigentum",
+          "Digitalrecht"
         ]
       },
       {
         "title": "Due Diligence",
         "items": [
-          "Finanzprüfung",
-          "Technische Code-Prüfung",
-          "IP & geistiges Eigentum",
-          "Regulatorische Risiken"
+          "M&A-Recht (SPA, SHA, LOI)",
+          "HR & soziale Due Diligence",
+          "Branchenregulierung (FinTech, KI…)",
+          "Warranty & Indemnity Insurance"
         ]
       },
       {
-        "title": "Käufernetzwerk",
+        "title": "Strukturierung & Finanzierung",
         "items": [
-          "Schweizer Family Offices",
-          "Europäische PE-Fonds",
-          "Tech-Strategen",
-          "Institutionelle Investoren"
+          "Steuer- & Unternehmensstrukturierung",
+          "Überbrückungsfinanzierung & Koinvestition",
+          "Earnout-Design & KPI-Framework",
+          "Post-Akquisitions-Integration"
         ]
       }
     ]

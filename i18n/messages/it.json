@@ -112,32 +112,32 @@
     "services": {
       "cyber": {
         "title": "Cybersicurezza",
-        "desc": "Identificazione della superficie di attacco, hardening delle infrastrutture e risposta agli incidenti.",
+        "desc": "Audit della superficie di attacco, sicurezza applicativa, infrastruttura cloud e conformità NIS2.",
         "items": [
-          "Audit della superficie di attacco",
-          "Penetration testing",
-          "Risposta agli incidenti",
-          "Hardening cloud & on-premise"
+          "Pentest (black/grey/white box)",
+          "Audit sicurezza applicativa",
+          "Conformità NIS2",
+          "Sicurezza cloud & on-premise"
         ]
       },
       "ai": {
-        "title": "Audit IA & Fiducia",
-        "desc": "Audittiamo i tuoi modelli, pipeline e processi decisionali per garantire affidabilità e conformità.",
+        "title": "Data & Intelligenza Artificiale",
+        "desc": "Strategia IA, governance dei dati, conformità EU AI Act e audit dei modelli.",
         "items": [
           "Audit dei bias algoritmici",
           "Conformità EU AI Act",
           "Red-teaming LLM",
-          "Tracciabilità delle decisioni"
+          "Governance dei dati & MLOps"
         ]
       },
       "strategy": {
-        "title": "Strategia Digitale",
-        "desc": "Allineamento tra le tue ambizioni digitali e i vincoli normativi europei e svizzeri.",
+        "title": "Architettura & Ingegneria",
+        "desc": "CTO as a service, revisione architettura full-stack, DevSecOps e qualità del software.",
         "items": [
-          "Governance dei dati",
-          "Conformità GDPR & LPD",
-          "Architettura sicura",
-          "Roadmap dell'innovazione"
+          "Revisione architettura full-stack",
+          "DevSecOps & CI/CD",
+          "Riduzione del debito tecnico",
+          "Scalabilità & migrazione"
         ]
       }
     },
@@ -2628,30 +2628,30 @@
     "sublabel": "Advisory Transaction",
     "domains": [
       {
-        "title": "Finanziamento & Strutturazione",
+        "title": "Pre-transazione",
         "items": [
-          "Co-investimento VC",
-          "Finanziamento ponte",
-          "Struttura earnout",
-          "Mezzanine e debito senior"
+          "Valutazione & benchmark di mercato",
+          "Vendor Readiness & data room",
+          "IP & proprietà intellettuale",
+          "Diritto digitale"
         ]
       },
       {
-        "title": "Due Diligence",
+        "title": "Due diligence",
         "items": [
-          "Audit finanziario",
-          "Revisione tecnica del codice",
-          "PI e proprietà intellettuale",
-          "Rischi normativi"
+          "Diritto M&A (SPA, SHA, LOI)",
+          "Due diligence HR & sociale",
+          "Regolamentazione settoriale (FinTech, IA…)",
+          "Warranty & Indemnity Insurance"
         ]
       },
       {
-        "title": "Rete acquirenti",
+        "title": "Strutturazione & finanziamento",
         "items": [
-          "Family office svizzeri",
-          "Fondi PE europei",
-          "Strategici tech",
-          "Investitori istituzionali"
+          "Fiscalità & strutturazione corporate",
+          "Finanziamento ponte & co-investimento",
+          "Earnout design & KPI framework",
+          "Integrazione post-acquisizione"
         ]
       }
     ]
