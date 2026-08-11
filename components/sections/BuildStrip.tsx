@@ -28,14 +28,14 @@ export function BuildStrip() {
   }, [])
 
   return (
-    <section ref={ref} className="border-t border-ag-border">
+    <section ref={ref} className="border-t border-ag-border bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 md:py-6">
         <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-ag-gray-light mb-8 md:mb-10">
           {t('label')}
         </p>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border-t border-b border-ag-border mb-0">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-ag-border border-t border-b border-ag-border">
 
         {/* Panneau gauche — Actifs propriétaires */}
         <div className="build-panel bg-ag-white px-8 md:px-12 py-12 md:py-16 flex flex-col gap-6">
