@@ -5314,5 +5314,18 @@
     "chip3": "Certification-ready",
     "chip4": "100% klant-IP",
     "cta": "Asset engineering bekijken"
+  },
+  "techStack": {
+    "label": "Tech Stack",
+    "title": "De technologieën\ndie wij beheersen.",
+    "desc": "Van frontend tot infrastructuur ontwerpt Aegryn uw digitale assets met de meest geschikte technologieën — soeverein, onderhoudbaar, certification-ready.",
+    "all": "Alles",
+    "frontend": "Frontend & Web",
+    "backend": "Backend & API",
+    "database": "Databases",
+    "mobile": "Mobiel",
+    "infra": "Infrastructuur",
+    "integrations": "Integraties",
+    "note": "Stack geselecteerd per project op basis van functionele vereisten, verwachte schaalbaarheid en geschiktheid voor Aegryn Grade-certificering."
   }
 }

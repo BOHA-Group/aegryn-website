@@ -5314,5 +5314,18 @@
     "chip3": "Zertifizierungsbereit",
     "chip4": "100% Kunden-IP",
     "cta": "Asset Engineering ansehen"
+  },
+  "techStack": {
+    "label": "Tech-Stack",
+    "title": "Die Technologien,\ndie wir beherrschen.",
+    "desc": "Vom Frontend bis zur Infrastruktur gestaltet Aegryn Ihre digitalen Assets mit den am besten geeigneten Technologien — souverän, wartbar, zertifizierungsbereit.",
+    "all": "Alle",
+    "frontend": "Frontend & Web",
+    "backend": "Backend & API",
+    "database": "Datenbanken",
+    "mobile": "Mobile",
+    "infra": "Infrastruktur",
+    "integrations": "Integrationen",
+    "note": "Stack wird projektspezifisch nach funktionalen Anforderungen, erwarteter Skalierbarkeit und Eignung für die Aegryn Grade-Zertifizierung ausgewählt."
   }
 }

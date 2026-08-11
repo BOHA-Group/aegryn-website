@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { Link } from '@/i18n/navigation'
+import { TechStackShowcase } from '@/components/sections/TechStackShowcase'
 
 const BASE = 'https://aegryn.com'
 
@@ -175,6 +176,9 @@ export default async function BuildServicePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* ── Section 5b : Tech Stack ──────────────────────────────────── */}
+      <TechStackShowcase />
 
       {/* ── Section 6 : Process ──────────────────────────────────────── */}
       <section className="border-b border-ag-border">

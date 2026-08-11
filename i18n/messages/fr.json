@@ -5317,5 +5317,18 @@
     "chip3": "Certification-ready",
     "chip4": "IP 100% client",
     "cta": "Voir la conception d'actifs"
+  },
+  "techStack": {
+    "label": "Stack Technique",
+    "title": "Les technologies\nque nous maîtrisons.",
+    "desc": "Du frontend à l'infrastructure, Aegryn conçoit vos actifs numériques avec les technologies les plus adaptées à votre besoin — souveraines, maintainables, certification-ready.",
+    "all": "Tout",
+    "frontend": "Frontend & Web",
+    "backend": "Backend & API",
+    "database": "Bases de données",
+    "mobile": "Mobile",
+    "infra": "Infrastructure",
+    "integrations": "Intégrations",
+    "note": "Stack sélectionnée projet par projet selon les besoins fonctionnels, la scalabilité attendue et l'éligibilité à la certification Aegryn Grade."
   }
 }

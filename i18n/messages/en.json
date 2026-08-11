@@ -5318,5 +5318,18 @@
     "chip3": "Certification-ready",
     "chip4": "100% client IP",
     "cta": "See asset engineering"
+  },
+  "techStack": {
+    "label": "Tech Stack",
+    "title": "The technologies\nwe master.",
+    "desc": "From frontend to infrastructure, Aegryn designs your digital assets with the most suitable technologies — sovereign, maintainable, certification-ready.",
+    "all": "All",
+    "frontend": "Frontend & Web",
+    "backend": "Backend & API",
+    "database": "Databases",
+    "mobile": "Mobile",
+    "infra": "Infrastructure",
+    "integrations": "Integrations",
+    "note": "Stack selected project by project based on functional requirements, expected scalability and eligibility for Aegryn Grade certification."
   }
 }
