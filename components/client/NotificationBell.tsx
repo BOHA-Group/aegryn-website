@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { Bell, X, Check, CheckCheck } from 'lucide-react'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 type Notification = {
   id:          string
@@ -62,6 +62,7 @@ const POLL_INTERVAL = 30_000
 
 export default function NotificationBell() {
   const locale = useLocale()
+  const t      = useTranslations('notifications')
   const [open,         setOpen]         = useState(false)
   const [notifs,       setNotifs]       = useState<Notification[]>([])
   const [unread,       setUnread]       = useState(0)
@@ -139,7 +140,7 @@ export default function NotificationBell() {
         type="button"
         onClick={() => setOpen(v => !v)}
         className="relative flex items-center justify-center w-8 h-8 text-ag-gray hover:text-ag-black transition-colors"
-        aria-label="Notifications"
+        aria-label={t('label')}
       >
         <Bell
           size={16}
@@ -159,7 +160,7 @@ export default function NotificationBell() {
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-ag-border">
             <div className="flex items-center gap-3">
-              <p className="font-mono text-[10px] uppercase tracking-widest text-ag-black font-semibold">Notifications</p>
+              <p className="font-mono text-[10px] uppercase tracking-widest text-ag-black font-semibold">{t('label')}</p>
               {unread > 0 && (
                 <span className="bg-ag-apex text-ag-navy font-mono text-[8px] font-bold px-1.5 py-0.5 min-w-[18px] text-center">
                   {unread}
@@ -173,10 +174,10 @@ export default function NotificationBell() {
                   onClick={markAllRead}
                   disabled={loading}
                   className="flex items-center gap-1 font-mono text-[8px] uppercase tracking-widest text-gray-400 hover:text-ag-navy transition-colors"
-                  title="Tout marquer comme lu"
+                  title={t('markAllRead')}
                 >
                   <CheckCheck size={11} />
-                  Tout lire
+                  {t('markAllReadShort')}
                 </button>
               )}
               <button type="button" onClick={() => setOpen(false)} className="text-gray-300 hover:text-gray-600">
@@ -196,7 +197,7 @@ export default function NotificationBell() {
                   filter === f ? 'text-ag-navy border-b-2 border-ag-navy' : 'text-ag-gray-light hover:text-ag-black'
                 }`}
               >
-                {f === 'all' ? 'Toutes' : `Non lues (${unread})`}
+                {f === 'all' ? t('filterAll') : t('filterUnread').replace('{count}', String(unread))}
               </button>
             ))}
           </div>
@@ -206,7 +207,7 @@ export default function NotificationBell() {
             {displayed.length === 0 ? (
               <div className="px-4 py-8 text-center">
                 <Bell size={20} className="text-gray-200 mx-auto mb-2" />
-                <p className="font-sans text-[12px] text-gray-400">Aucune notification.</p>
+                <p className="font-sans text-[12px] text-gray-400">{t('empty', { defaultValue: '—' })}</p>
               </div>
             ) : (
               displayed.map(n => {
@@ -241,7 +242,7 @@ export default function NotificationBell() {
                             onClick={() => { if (isUnread) markRead(n.id); setOpen(false) }}
                             className="font-mono text-[9px] uppercase tracking-widest text-ag-navy hover:text-ag-apex transition-colors"
                           >
-                            Voir →
+                            {t('view', { defaultValue: 'Voir →' })}
                           </a>
                         )}
                       </div>
@@ -251,13 +252,13 @@ export default function NotificationBell() {
                     <div className="flex items-center gap-1 shrink-0 mt-0.5">
                       {isUnread && (
                         <button type="button" onClick={() => markRead(n.id)}
-                          title="Marquer comme lu"
+                          title={t('markRead')}
                           className="p-1 text-gray-300 hover:text-ag-navy transition-colors">
                           <Check size={11} />
                         </button>
                       )}
                       <button type="button" onClick={() => dismiss(n.id)}
-                        title="Archiver"
+                        title={t('archive', { defaultValue: '—' })}
                         className="p-1 text-gray-300 hover:text-red-400 transition-colors">
                         <X size={11} />
                       </button>

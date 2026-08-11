@@ -1,6 +1,6 @@
 'use client'
 
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { usePathname as useNextPathname } from 'next/navigation'
 import { useState } from 'react'
 import { Globe } from 'lucide-react'
@@ -19,6 +19,7 @@ const KNOWN_LOCALES = locales.map(l => l.code)
 
 export default function LanguageSwitcher() {
   const locale       = useLocale()
+  const t            = useTranslations('languageSwitcher')
   const nextPathname = useNextPathname()
   const [pending, setPending] = useState(false)
 
@@ -49,7 +50,7 @@ export default function LanguageSwitcher() {
         value={locale}
         onChange={handleChange}
         disabled={pending}
-        aria-label="Sélectionner la langue"
+        aria-label={t('select')}
         className="bg-transparent font-sans font-semibold text-[11px] uppercase tracking-[0.12em] text-ag-gray cursor-pointer hover:text-ag-black transition-colors appearance-none pr-1 focus:outline-none disabled:opacity-50"
       >
         {locales.map(({ code, label }) => (

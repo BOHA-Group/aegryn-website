@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { ChevronUp } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 /**
  * Bouton flottant scroll-to-top.
@@ -9,6 +10,7 @@ import { ChevronUp } from 'lucide-react'
  */
 export function ScrollToTop() {
   const [visible, setVisible] = useState(false)
+  const t = useTranslations('scrollTop')
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 400)
@@ -21,7 +23,7 @@ export function ScrollToTop() {
   return (
     <button
       onClick={scrollUp}
-      aria-label="Remonter en haut"
+      aria-label={t('label')}
       className={[
         'fixed bottom-8 right-8 z-50',
         'w-11 h-11 flex items-center justify-center',

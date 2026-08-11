@@ -291,27 +291,27 @@ export default function AssetLotSheet({ asset }: { asset: AssetLot }) {
         </div>
 
         {/* Sections I–XII */}
-        <CollapsibleSection numeral="I" title="Notice de présentation" icon={FileText}>
+        <CollapsibleSection numeral="I" title={t('s1')} icon={FileText}>
           {presentationNotice.body.map((p, i) => <Body key={i}>{p}</Body>)}
           <Caption>{presentationNotice.meta}</Caption>
         </CollapsibleSection>
 
-        <CollapsibleSection numeral="II" title="Provenance et antériorité" icon={ShieldCheck}>
+        <CollapsibleSection numeral="II" title={t('s2')} icon={ShieldCheck}>
           {provenance.body.map((p, i) => <Body key={i}>{p}</Body>)}
         </CollapsibleSection>
 
-        <CollapsibleSection numeral="III" title="Rareté de l'actif" icon={Layers}>
+        <CollapsibleSection numeral="III" title={t('s3')} icon={Layers}>
           {rarity.body.map((p, i) => <Body key={i}>{p}</Body>)}
           {rarity.highlight && <Body emphasis>{rarity.highlight}</Body>}
         </CollapsibleSection>
 
-        <CollapsibleSection numeral="IV" title="État de l'actif" icon={Layers}>
+        <CollapsibleSection numeral="IV" title={t('s4')} icon={Layers}>
           {assetState.body.map((p, i) => <Body key={i}>{p}</Body>)}
           <SpecTable rows={assetState.specs} />
           {assetState.note && <Caption>{assetState.note}</Caption>}
         </CollapsibleSection>
 
-        <CollapsibleSection numeral="V" title="Niveau d'avancement fonctionnel" icon={ShieldCheck}>
+        <CollapsibleSection numeral="V" title={t('s5')} icon={ShieldCheck}>
           <Body>{capabilities.intro}</Body>
           <ul className="mb-5">
             {capabilities.items.map((it: BulletItem) => (
@@ -321,13 +321,13 @@ export default function AssetLotSheet({ asset }: { asset: AssetLot }) {
           {capabilities.pending && <Body>{capabilities.pending}</Body>}
         </CollapsibleSection>
 
-        <CollapsibleSection numeral="VI" title="Segments de clientèle adressés" icon={Users}>
+        <CollapsibleSection numeral="VI" title={t('s6')} icon={Users}>
           <Body>{targetSegments.intro}</Body>
           <TargetGrid targets={targetSegments.items} />
           {targetSegments.note && <Caption>{targetSegments.note}</Caption>}
         </CollapsibleSection>
 
-        <CollapsibleSection numeral="VII" title="Potentiel de croissance — extension internationale" icon={Globe2}>
+        <CollapsibleSection numeral="VII" title={t('s7')} icon={Globe2}>
           {growth.body.map((p, i) => <Body key={i}>{p}</Body>)}
           <ul className="mb-5">
             {growth.items.map((it: BulletItem) => (
@@ -337,21 +337,21 @@ export default function AssetLotSheet({ asset }: { asset: AssetLot }) {
           {growth.closing && <Body>{growth.closing}</Body>}
         </CollapsibleSection>
 
-        <CollapsibleSection numeral="VIII" title="Positionnement concurrentiel" icon={TrendingUp}>
+        <CollapsibleSection numeral="VIII" title={t('s8')} icon={TrendingUp}>
           {competitivePosition.body.map((p, i) => <Body key={i}>{p}</Body>)}
           {competitivePosition.highlight && <Body emphasis>{competitivePosition.highlight}</Body>}
           {competitivePosition.closing && <Body>{competitivePosition.closing}</Body>}
         </CollapsibleSection>
 
-        <CollapsibleSection numeral="IX" title="Traction commerciale et partenariats" icon={TrendingUp}>
+        <CollapsibleSection numeral="IX" title={t('s9')} icon={TrendingUp}>
           {traction.body.map((p, i) => <Body key={i}>{p}</Body>)}
         </CollapsibleSection>
 
-        <CollapsibleSection numeral="X" title="Stade de maturité de marché" icon={TrendingUp}>
+        <CollapsibleSection numeral="X" title={t('s10')} icon={TrendingUp}>
           <SpecTable rows={maturity.specs} />
         </CollapsibleSection>
 
-        <CollapsibleSection numeral="XI" title="Risques identifiés et réserves" icon={AlertTriangle} defaultOpen={false}>
+        <CollapsibleSection numeral="XI" title={t('s11')} icon={AlertTriangle} defaultOpen={false}>
           <Body italic>{risks.intro}</Body>
           <ul>
             {risks.items.map((it: BulletItem) => (
@@ -360,7 +360,7 @@ export default function AssetLotSheet({ asset }: { asset: AssetLot }) {
           </ul>
         </CollapsibleSection>
 
-        <CollapsibleSection numeral="XII" title="Thèse d'acquisition" icon={FileText}>
+        <CollapsibleSection numeral="XII" title={t('s12')} icon={FileText}>
           {thesis.body.map((p, i) => <Body key={i}>{p}</Body>)}
           {thesis.closing && <Body emphasis>{thesis.closing}</Body>}
         </CollapsibleSection>

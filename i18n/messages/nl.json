@@ -45,7 +45,9 @@
     "gradeDimS": "Beveiliging",
     "build": "Build",
     "buildAssets": "Eigen assets",
-    "buildEngineering": "Asset engineering"
+    "buildEngineering": "Asset engineering",
+    "comingSoon": "Binnenkort beschikbaar",
+    "soon": "Binnenkort"
   },
   "hero": {
     "tagline": "Wij weigeren dat een solide asset verdwijnt in een slecht voorbereide transactie.",
@@ -4804,9 +4806,21 @@
     }
   },
   "auctionSheet": {
-    "executiveSummaryKicker": "Samenvatting · In één oogopslag",
-    "executiveSummaryTitle": "Asset-overzicht",
-    "disclosureKicker": "Vermeldingen en distributiepredikaten"
+    "executiveSummaryKicker": "Samenvatting · Snel lezen",
+    "executiveSummaryTitle": "Asset-synthese",
+    "disclosureKicker": "Vermeldingen en verspreidingsvoorwaarden",
+    "s1": "Presentatienota",
+    "s2": "Herkomst en geschiedenis",
+    "s3": "Zeldzaamheid van het asset",
+    "s4": "Staat van het asset",
+    "s5": "Niveau van functionele voortgang",
+    "s6": "Geadresseerde klantsegmenten",
+    "s7": "Groeipotentieel — internationale uitbreiding",
+    "s8": "Concurrentiepositionering",
+    "s9": "Commerciële tractie en partnerschappen",
+    "s10": "Marktvolwassenheidsfase",
+    "s11": "Geïdentificeerde risico's en reserves",
+    "s12": "Acquisitie-these"
   },
   "neediuDpn": {
     "meta": {
@@ -5335,5 +5349,39 @@
     "infra": "Infrastructuur",
     "integrations": "Integraties",
     "note": "Stack geselecteerd per project op basis van functionele vereisten, verwachte schaalbaarheid en geschiktheid voor Aegryn Grade-certificering."
+  },
+  "languageSwitcher": {
+    "select": "Taal selecteren"
+  },
+  "scrollTop": {
+    "label": "Terug naar boven"
+  },
+  "kyc": {
+    "approvedBuyer": "U kunt zich registreren en toegang krijgen tot acquisitiesessies.",
+    "approvedSeller": "U kunt een asset indienen voor certificering.",
+    "approvedPartner": "U kunt uw expertprofiel publiceren en klantmandaten ontvangen.",
+    "approvedTitle": "KYC-profiel geverifieerd en conform.",
+    "inReviewTitle": "KYC-dossier wordt beoordeeld",
+    "inReviewDesc": "door het Aegryn-team. U wordt op de hoogte gesteld zodra er een beslissing is.",
+    "rejectedTitle": "KYC-dossier afgewezen.",
+    "rejectedDesc": "Sommige documenten zijn niet conform. Dien nieuwe documenten in.",
+    "rejectedCta": "Corrigeren →",
+    "pendingTitle": "KYC-verificatie vereist.",
+    "pendingBuyer": "U hebt nog geen toegang tot acquisitiesessies.",
+    "pendingSeller": "U kunt nog geen asset indienen.",
+    "pendingPartner": "U kunt uw expertprofiel nog niet publiceren of mandaten ontvangen.",
+    "pendingCta": "Voltooien →",
+    "pendingSuffix": "Voltooi uw KYC-dossier om toegang te krijgen."
+  },
+  "notifications": {
+    "label": "Meldingen",
+    "markAllRead": "Alles als gelezen markeren",
+    "markAllReadShort": "Alles lezen",
+    "markRead": "Als gelezen markeren",
+    "filterAll": "Alle",
+    "filterUnread": "Ongelezen ({count})",
+    "empty": "Geen meldingen.",
+    "view": "Bekijken →",
+    "archive": "Archiveren"
   }
 }

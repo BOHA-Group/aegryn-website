@@ -45,7 +45,9 @@
     "gradeDimS": "Sicurezza",
     "build": "Build",
     "buildAssets": "Asset proprietari",
-    "buildEngineering": "Ingegneria degli asset"
+    "buildEngineering": "Ingegneria degli asset",
+    "comingSoon": "Disponibile a breve",
+    "soon": "Presto"
   },
   "hero": {
     "tagline": "Rifiutiamo che un asset solido scompaia in una transazione mal preparata.",
@@ -4804,9 +4806,21 @@
     }
   },
   "auctionSheet": {
-    "executiveSummaryKicker": "Sintesi esecutiva · In breve",
+    "executiveSummaryKicker": "Sintesi esecutiva · Lettura rapida",
     "executiveSummaryTitle": "Sintesi dell'asset",
-    "disclosureKicker": "Avvisi e condizioni di distribuzione"
+    "disclosureKicker": "Menzioni e condizioni di diffusione",
+    "s1": "Nota di presentazione",
+    "s2": "Provenienza e storia",
+    "s3": "Rarità dell'asset",
+    "s4": "Stato dell'asset",
+    "s5": "Livello di avanzamento funzionale",
+    "s6": "Segmenti di clientela indirizzati",
+    "s7": "Potenziale di crescita — espansione internazionale",
+    "s8": "Posizionamento competitivo",
+    "s9": "Trazione commerciale e partnership",
+    "s10": "Stadio di maturità del mercato",
+    "s11": "Rischi identificati e riserve",
+    "s12": "Tesi di acquisizione"
   },
   "neediuDpn": {
     "meta": {
@@ -5335,5 +5349,39 @@
     "infra": "Infrastruttura",
     "integrations": "Integrazioni",
     "note": "Stack selezionato progetto per progetto in base ai requisiti funzionali, alla scalabilità attesa e all'idoneità alla certificazione Aegryn Grade."
+  },
+  "languageSwitcher": {
+    "select": "Seleziona la lingua"
+  },
+  "scrollTop": {
+    "label": "Torna in cima"
+  },
+  "kyc": {
+    "approvedBuyer": "Puoi registrarti e accedere alle sessioni di acquisizione.",
+    "approvedSeller": "Puoi inviare un asset per la certificazione.",
+    "approvedPartner": "Puoi pubblicare il tuo profilo esperto e ricevere mandati clienti.",
+    "approvedTitle": "Profilo KYC verificato e conforme.",
+    "inReviewTitle": "Fascicolo KYC in esame",
+    "inReviewDesc": "dal team Aegryn. Sarai notificato non appena verrà presa una decisione.",
+    "rejectedTitle": "Fascicolo KYC rifiutato.",
+    "rejectedDesc": "Alcuni documenti non sono conformi. Si prega di inviare nuovi documenti.",
+    "rejectedCta": "Correggere →",
+    "pendingTitle": "Verifica KYC richiesta.",
+    "pendingBuyer": "Non puoi ancora accedere alle sessioni di acquisizione.",
+    "pendingSeller": "Non puoi ancora inviare un asset.",
+    "pendingPartner": "Non puoi ancora pubblicare il tuo profilo esperto né ricevere mandati.",
+    "pendingCta": "Completare →",
+    "pendingSuffix": "Completa il tuo fascicolo KYC per sbloccare l'accesso."
+  },
+  "notifications": {
+    "label": "Notifiche",
+    "markAllRead": "Segna tutto come letto",
+    "markAllReadShort": "Leggi tutto",
+    "markRead": "Segna come letto",
+    "filterAll": "Tutte",
+    "filterUnread": "Non lette ({count})",
+    "empty": "Nessuna notifica.",
+    "view": "Visualizza →",
+    "archive": "Archivia"
   }
 }

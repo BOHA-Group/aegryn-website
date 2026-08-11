@@ -344,13 +344,13 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             <>
               {process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' ? (
                 <span
-                  title="Bientôt disponible"
+                  title={t('comingSoon')}
                   className="relative flex items-center gap-1.5 font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray/40 cursor-not-allowed select-none"
                   aria-disabled="true"
                 >
                   <User size={13} />
                   {t('clientSpace')}
-                  <span className="ml-1 font-mono text-[8px] tracking-[0.1em] uppercase text-ag-apex/70 border border-ag-apex/30 px-1 py-px rounded-sm">Soon</span>
+                  <span className="ml-1 font-mono text-[8px] tracking-[0.1em] uppercase text-ag-apex/70 border border-ag-apex/30 px-1 py-px rounded-sm">{t('soon')}</span>
                 </span>
               ) : (
                 <NextLink
@@ -552,7 +552,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                     >
                       <User size={13} />
                       {t('clientSpace')}
-                      <span className="font-mono text-[8px] tracking-[0.1em] uppercase text-ag-apex/60 border border-ag-apex/25 px-1 py-px rounded-sm">Soon</span>
+                      <span className="font-mono text-[8px] tracking-[0.1em] uppercase text-ag-apex/60 border border-ag-apex/25 px-1 py-px rounded-sm">{t('soon')}</span>
                     </span>
                   ) : (
                     <NextLink
