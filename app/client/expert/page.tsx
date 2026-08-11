@@ -1,6 +1,4 @@
 import type { Metadata } from 'next'
-import { cookies } from 'next/headers'
-import { getTranslations } from 'next-intl/server'
 import { redirect }      from 'next/navigation'
 import { getUser }       from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
@@ -14,11 +12,6 @@ export const metadata: Metadata = {
 export default async function ExpertClientPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
-
-  const cookieStore = await cookies()
-  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
-  const t = await getTranslations({ locale, namespace: 'client.expert' })
-  const tc = await getTranslations({ locale, namespace: 'client.common' })
 
 
   const supa = createServiceClient()

@@ -35,7 +35,7 @@ function fmtChf(n: number | null) {
 
 function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
-  return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
+  return new Date(d).toLocaleDateString(locale, { day: '2-digit', month: 'long', year: 'numeric' })
 }
 
 type Bid = {
@@ -53,8 +53,8 @@ export default async function BuyerOffresPage() {
 
   const cookieStore = await cookies()
   const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+
   const t = await getTranslations({ locale, namespace: 'client.buyer.offres' })
-  const tc = await getTranslations({ locale, namespace: 'client.common' })
 
 
   const supa = createServiceClient()

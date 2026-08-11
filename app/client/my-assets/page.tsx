@@ -6,7 +6,6 @@ import { getUser }            from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import DeleteAccountButton    from './DeleteAccountButton'
 import { cookies } from 'next/headers'
-import { getTranslations } from 'next-intl/server'
 
 export const metadata: Metadata = {
   title: 'Mes actifs — Espace client Aegryn',
@@ -36,7 +35,7 @@ function gradeColor(g: string) {
 
 function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
-  return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
+  return new Date(d).toLocaleDateString(locale, { day: '2-digit', month: 'long', year: 'numeric' })
 }
 
 export default async function ClientMyAssetsPage() {
@@ -45,8 +44,7 @@ export default async function ClientMyAssetsPage() {
 
   const cookieStore = await cookies()
   const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
-  const t = await getTranslations({ locale, namespace: 'client.myAssets' })
-  const tc = await getTranslations({ locale, namespace: 'client.common' })
+
 
 
   const supa = createServiceClient()
