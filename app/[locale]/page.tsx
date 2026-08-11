@@ -33,8 +33,11 @@ export default async function HomePage(_props: Props) {
       {/* ── 0. Hero ────────────────────────────────────────── */}
       <HeroMountain />
 
-      {/* ── 01. Conviction + 02. Modèle Aegryn ─────────────── */}
+      {/* ── 01. Notre Conviction ────────────────────────────── */}
       <ManifestoSection />
+
+      {/* ── 02. Le Modèle Aegryn — 3 métiers (animation scroll) */}
+      <MissionVideoSection />
 
       {/* ── 03. Conception ─────────────────────────────────── */}
       <BuildStrip />
@@ -46,9 +49,8 @@ export default async function HomePage(_props: Props) {
       {/* Advisory Transaction + Réseau */}
       <AcqSupportStrip />
 
-      {/* ── 3. Notation ────────────────────────────────────── */}
+      {/* ── 05. Notation ───────────────────────────────────── */}
       <GradeStrip />
-      <MissionVideoSection />
 
       {/* ── 4. Enchères ────────────────────────────────────── */}
       <EcosystemDomains />
