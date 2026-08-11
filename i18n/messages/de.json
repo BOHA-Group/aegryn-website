@@ -2719,30 +2719,76 @@
   },
   "build_service": {
     "meta": {
-      "title": "Digitale Asset-Entwicklung - Aegryn",
-      "desc": "Aegryn entwickelt B2B-SaaS, KI-Applikationen und mobile Apps nach CIFS-Protokollstandards. Ein Verkauf ist möglich, wenn gewünscht und sofern das Asset die erforderlichen Grade-Kriterien erfüllt."
+      "title": "Digitale Asset-Entwicklung zum Festpreis - Aegryn",
+      "desc": "B2B SaaS, KI und mobile App-Entwicklung zum Festpreis — vollständige Dokumentation und certification-ready Lieferung inklusive. Keine Überschreitungen, Asset ab Tag eins bewertbar."
     },
     "label": "Services - Asset-Entwicklung",
-    "title": "Ihr digitales Asset.\nFür Dauer gebaut.\nStrukturiert zum Verkauf.",
-    "desc": "Aegryn entwickelt proprietäre digitale Assets - B2B SaaS, vertikale KI, mobile App - nach CIFS-Protokollstandards. Sie starten bei null. Sie erhalten ein zertifizierbares und wartbares Asset. Der Verkauf ist eine Option, keine Pflicht: er hängt von Ihrem Wunsch und dem erreichten Grade ab.",
+    "title": "Wir bauen.\nSie besitzen.\nFestpreis. Certification-ready.",
+    "desc": "Aegryn entwickelt digitale Assets — B2B SaaS, vertikale KI, mobile App — zum Festpreis, der vor dem ersten Sprint festgelegt wird. Jedes gelieferte Asset wird mit vollständiger Dokumentation geliefert, die es ab der Lieferung certification-ready macht.",
     "difference": {
       "label": "Keine Agentur. Kein Studio.",
       "title": "Der Aegryn-Unterschied.",
       "items": [
         {
           "num": "01",
-          "title": "Ab Tag eins zertifizierbar",
-          "desc": "Jedes Asset wird nach CIFS-Standards entwickelt. Das Grade ist kein Post-Production-Audit: es ist die Architektur des ersten Tages."
+          "title": "Festpreis. Keine Überschreitungen.",
+          "desc": "Der Festpreis wird am Ende des Discoverys definiert und unterzeichnet — vor dem ersten Commit. Bei Änderungen des Umfangs wird vor der Ausführung ein Nachtrag unterzeichnet. Keine Überraschungsrechnungen."
         },
         {
           "num": "02",
-          "title": "Sie bleiben Eigentümer",
-          "desc": "Keine Verwässerung. Kein Eigenkapital durch Aegryn. Das Asset gehört Ihnen zu 100%. Aegryn kann auf Wunsch als Co-Investor auftreten."
+          "title": "Sie bleiben 100% Eigentümer",
+          "desc": "Keine Verwässerung. Kein Eigenkapital durch Aegryn. Das Asset gehört Ihnen zu 100%. Aegryn kann auf Wunsch als Co-Investor auftreten: das ist Ihre Entscheidung."
         },
         {
           "num": "03",
-          "title": "Der Exit ist eine Option, keine Pflicht",
-          "desc": "Frühphasig, bei Marktreife oder langfristige Wartung: das Exit-Szenario ist in der Architektur antizipiert, wird aber nur aktiviert, wenn Sie es wünschen und das Asset die erforderlichen Grade-Kriterien erfüllt."
+          "title": "Certification-ready bei Lieferung",
+          "desc": "Jedes gelieferte Asset wird mit vollständiger technischer Dokumentation (Architektur, API, Sicherheit, IP) geliefert, die es für eine unabhängige Zertifizierung durch jeden Drittprüfer bereit macht."
+        }
+      ]
+    },
+    "marketComparison": {
+      "label": "Was sehr wenige andere bieten",
+      "title": "Ein Preis. Ein Umfang.\nKeine Überraschungen.",
+      "agencyCol": "Was Agenturen machen",
+      "aegrynCol": "Was Aegryn macht",
+      "processCol": "Wie wir dorthin kommen",
+      "agencyItems": [
+        "Richtwertangebot, tatsächliche Rechnung weicht ab",
+        "Zeit & Material ohne Obergrenze",
+        "Überschreitungen als Extras berechnet",
+        "Lieferung ohne Dokumentation",
+        "Keine Garantie auf den Endwert"
+      ],
+      "aegrynItems": [
+        "Festpreis beim Discovery definiert",
+        "Messbare Meilensteine pro Sprint",
+        "Umfangsüberschreitung von Aegryn absorbiert",
+        "Vollständige technische Dokumentation enthalten",
+        "Certification-ready Asset bei Lieferung"
+      ],
+      "processItems": [
+        "Discovery 1–2 Wochen inklusive",
+        "Zertifizierbares Lastenheft",
+        "Preis vor erstem Commit fixiert",
+        "Nachtrag unterzeichnet bei Änderungen",
+        "Formelle Abnahme bei jedem Meilenstein"
+      ]
+    },
+    "certificationBenefits": {
+      "label": "Warum Dokumentation alles verändert",
+      "title": "Ein certification-ready Asset\nist strukturell mehr wert.",
+      "items": [
+        {
+          "title": "Dokumentierter und verteidigbarer Wert",
+          "desc": "Ein Asset mit vollständiger Dokumentation hat einen verteidigbaren Bewertungsmultiplikator für Fundraising oder Verkauf. Keine Schätzung — eine prüfbare Grundlage."
+        },
+        {
+          "title": "Vertraglicher Schutz bei Lieferung",
+          "desc": "Was Sie bestellen, ist genau das, was Sie erhalten. Die technische Dokumentation zertifiziert den Zustand jeder Dimension bei der Lieferung. Keine grauen Bereiche."
+        },
+        {
+          "title": "Übertragbar an jedes Team",
+          "desc": "Saubere Architektur, dokumentierte technische Schulden, vollständige README. Ihr Asset kann von jedem Entwickler oder unabhängigen Büro übernommen, geändert oder geprüft werden."
         }
       ]
     },
@@ -2803,8 +2849,8 @@
       "steps": [
         {
           "num": "01",
-          "title": "Discovery und Brief",
-          "desc": "Definition des Wertversprechens, Zielmarkt, Stack und Exit-Plan. Output: zertifizierbares Lastenheft. Dauer: 1 bis 2 Wochen."
+          "title": "Discovery & Festpreis",
+          "desc": "Definition des Wertversprechens, Zielmarkt, Stack und Exit-Plan. Output: Lastenheft + unterzeichneter Festpreisvertrag. Dauer: 1 bis 2 Wochen. Kosten: im Gesamtfestpreis enthalten."
         },
         {
           "num": "02",
@@ -2846,26 +2892,30 @@
     },
     "fees": {
       "label": "Honorare",
-      "title": "Transparent ab dem Brief.",
+      "title": "Festpreis. Keine Überraschungen.",
       "items": [
         {
-          "title": "Konzeption und Build",
-          "desc": "Festpreis beim Discovery. Keine Beteiligung. Keine Verwässerung.",
-          "format": "Angebot auf Anfrage"
+          "title": "Discovery (inklusive)",
+          "desc": "1 bis 2 Wochen. Zertifizierbares Lastenheft. Build-Preis definiert und unterzeichnet. Kein Engagement vor Unterzeichnung der Honorarvereinbarung.",
+          "format": "Im Gesamtfestpreis enthalten"
         },
         {
-          "title": "Wartung",
-          "desc": "Monatliche Pauschale oder pro Lieferung. Bedingungen im Vertrag.",
-          "format": "Monatliche Pauschale"
+          "title": "Build (Festpreis)",
+          "desc": "Preis beim Discovery fixiert. Keine Überschreitungen. Kein Zeit & Material. Bei Änderungen: Nachtrag vor Ausführung unterzeichnet. Richtwerte (ohne Discovery): B2B SaaS ab 25.000€ netto — B2C Mobile App ab 35.000€ netto — Natives KI-Produkt ab 40.000€ netto.",
+          "format": "Festpreis beim Discovery definiert"
         },
         {
-          "title": "Transaktion",
-          "desc": "Wenn der Exit über Aegryn Auction oder eine vertrauliche Transaktion läuft, gilt die Standard-Provision.",
-          "format": "Erfolgsprovision - AGB",
-          "href": "/terms/cgv"
+          "title": "Wartung (Abonnement)",
+          "desc": "Monatliche Pauschale oder pro Lieferung. SLA im Vertrag. Kündigung jederzeit mit 30 Tagen Vorlaufzeit.",
+          "format": "Monatliche Pauschale im Vertrag"
         }
       ],
       "coInvestNote": "Aegryn kann als Minderheits-Co-Investor auftreten. Fallweise Prüfung."
+    },
+    "exitBanner": {
+      "text": "Ein Verkauf ist eine Option, nie eine Pflicht. Wenn Sie jemals verkaufen möchten — frühphasig oder bei Reife — ist das Asset dafür konzipiert. Exit via Aegryn Auction oder vertrauliche Transaktion ist verfügbar, wenn das Grade es erlaubt.",
+      "cta": "Mehr über den Verkaufsprozess erfahren",
+      "href": "/auction/how-it-works"
     },
     "cta": {
       "title": "Ein Projekt im Kopf?",

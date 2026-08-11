@@ -2726,30 +2726,76 @@
   },
   "build_service": {
     "meta": {
-      "title": "Conception d'actifs numériques - Aegryn",
-      "desc": "Aegryn conçoit des SaaS B2B, applications IA et apps mobiles propriétaires selon les standards du protocole CIFS. La cession est possible si souhaitée, dès lors que l'actif atteint les critères de grade requis."
+      "title": "Conception d'actifs numériques à forfait fixe - Aegryn",
+      "desc": "Développement SaaS B2B, IA et app mobile à prix forfaitaire fixe — documentation complète et certification-ready incluse. Aucun dépassement, actif valorisable dès la conception."
     },
     "label": "Services - Conception d'actifs",
-    "title": "Votre actif numérique.\nConçu pour durer.\nStructuré pour céder.",
-    "desc": "Aegryn conçoit des actifs numériques propriétaires - SaaS B2B, IA verticale, application mobile - selon les standards du protocole CIFS. Vous partez de zéro. Vous arrivez avec un actif certifiable et maintenable. La cession est une option, pas une obligation : elle dépend de votre souhait et du grade atteint.",
+    "title": "On construit.\nVous possédez.\nPrix fixe. Certification-ready.",
+    "desc": "Aegryn conçoit des actifs numériques — SaaS B2B, IA verticale, application mobile — à prix forfaitaire défini avant le premier sprint. Chaque actif livré est accompagné d'une documentation complète qui le rend certification-ready dès la livraison.",
     "difference": {
       "label": "Pas une agence. Pas un studio.",
       "title": "La différence Aegryn.",
       "items": [
         {
           "num": "01",
-          "title": "Certifiable dès la conception",
-          "desc": "Chaque actif est construit selon les standards du protocole CIFS. Le grade n'est pas un audit post-production : c'est l'architecture du premier jour."
+          "title": "Prix fixe. Aucun dépassement.",
+          "desc": "Le forfait est défini et signé à l'issue du Discovery — avant le premier commit. Si le périmètre évolue, un avenant est signé avant exécution. Jamais de facturation surprise."
         },
         {
           "num": "02",
-          "title": "Vous restez propriétaire",
+          "title": "Vous restez propriétaire à 100%",
           "desc": "Aucune dilution. Aucune part prise par Aegryn. L'actif vous appartient à 100%. Aegryn peut intervenir comme co-investisseur sur demande : c'est votre décision, pas la nôtre."
         },
         {
           "num": "03",
-          "title": "La sortie est une option, pas une obligation",
-          "desc": "Cession early stage, à maturité, ou maintenance long terme : le scénario de sortie est anticipé dans l'architecture, mais il n'est engagé que si vous le souhaitez et si l'actif remplit les critères de grade requis."
+          "title": "Certification-ready à la livraison",
+          "desc": "Chaque actif livré est accompagné d'une documentation technique complète (architecture, API, sécurité, IP) qui le rend apte à une certification indépendante par tout auditeur tiers."
+        }
+      ]
+    },
+    "marketComparison": {
+      "label": "Ce que font très peu les autres",
+      "title": "Un prix. Un périmètre.\nAucune surprise.",
+      "agencyCol": "Ce que font les agences",
+      "aegrynCol": "Ce que fait Aegryn",
+      "processCol": "Comment on y arrive",
+      "agencyItems": [
+        "Devis indicatif, facture réelle différente",
+        "Régie au jour/homme sans plafond",
+        "Dépassements refacturés",
+        "Livraison sans documentation",
+        "Aucune garantie sur la valeur finale"
+      ],
+      "aegrynItems": [
+        "Forfait fixe défini au Discovery",
+        "Jalons mesurables par sprint",
+        "Dépassement périmètre absorbé par Aegryn",
+        "Documentation technique complète incluse",
+        "Actif certification-ready à la livraison"
+      ],
+      "processItems": [
+        "Discovery 1–2 semaines inclus",
+        "Cahier des charges certifiable",
+        "Prix verrouillé avant le premier commit",
+        "Avenant signé si périmètre évolue",
+        "Réception formelle à chaque jalon"
+      ]
+    },
+    "certificationBenefits": {
+      "label": "Pourquoi la documentation change tout",
+      "title": "Un actif certification-ready\nvaut structurellement plus.",
+      "items": [
+        {
+          "title": "Valeur documentée et défendable",
+          "desc": "Un actif livré avec documentation complète a un multiple de valorisation défendable lors d'une levée de fonds ou d'une cession. Pas une estimation — une base vérifiable."
+        },
+        {
+          "title": "Protection contractuelle à la livraison",
+          "desc": "Ce que vous commandez est précisément ce que vous recevez. La documentation technique certifie l'état de chaque dimension à la livraison. Aucune zone grise."
+        },
+        {
+          "title": "Reprise par n'importe quelle équipe",
+          "desc": "Architecture propre, dette technique documentée, README complet. Votre actif peut être repris, modifié ou audité par n'importe quel développeur ou cabinet indépendant."
         }
       ]
     },
@@ -2810,8 +2856,8 @@
       "steps": [
         {
           "num": "01",
-          "title": "Discovery et Brief",
-          "desc": "Définition de la proposition de valeur, du marché cible, de la stack et du plan de sortie. Output : cahier des charges certifiable. Durée : 1 à 2 semaines."
+          "title": "Discovery & Forfait",
+          "desc": "Définition de la proposition de valeur, du marché cible, de la stack et du plan de sortie. Output : cahier des charges + prix forfaitaire signé. Durée : 1 à 2 semaines. Coût : inclus dans le forfait total."
         },
         {
           "num": "02",
@@ -2853,26 +2899,30 @@
     },
     "fees": {
       "label": "Honoraires",
-      "title": "Transparent dès le brief.",
+      "title": "Forfait fixe. Aucune surprise.",
       "items": [
         {
-          "title": "Conception et Build",
-          "desc": "Forfait défini lors du Discovery. Aucune part prise. Aucune dilution.",
-          "format": "Devis sur demande"
+          "title": "Discovery (inclus)",
+          "desc": "1 à 2 semaines. Cahier des charges certifiable. Prix de build défini et signé. Aucun engagement avant signature du forfait.",
+          "format": "Inclus dans le forfait total"
         },
         {
-          "title": "Maintenance",
-          "desc": "Forfait mensuel ou rémunération au livrable. Conditions définies au contrat.",
+          "title": "Build (forfait fixe)",
+          "desc": "Prix verrouillé au Discovery. Aucun dépassement. Aucune régie. Si le périmètre évolue : avenant signé avant exécution. Fourchettes indicatives (hors Discovery) : SaaS B2B simple à partir de 25 000€ HT — App mobile B2C à partir de 35 000€ HT — Produit IA natif à partir de 40 000€ HT.",
+          "format": "Forfait fixe défini au Discovery"
+        },
+        {
+          "title": "Maintenance (abonnement)",
+          "desc": "Forfait mensuel ou au livrable. SLA défini au contrat. Résiliation à tout moment avec 30 jours de préavis.",
           "format": "Forfait mensuel défini au contrat"
-        },
-        {
-          "title": "Transaction",
-          "desc": "Si la sortie passe par Aegryn Auction ou une transaction confidentielle, la commission de transaction standard s'applique.",
-          "format": "Commission de succès - conditions en CGV",
-          "href": "/terms/cgv"
         }
       ],
       "coInvestNote": "Aegryn peut intervenir en co-investisseur minoritaire sur certains projets : prise de part en échange d'une réduction des honoraires de build. Examiné au cas par cas."
+    },
+    "exitBanner": {
+      "text": "La cession est une option, jamais une obligation. Si vous souhaitez céder un jour — early stage ou à maturité — l'actif est conçu pour l'être. La sortie via Aegryn Auction ou confidentielle est disponible si le grade le permet.",
+      "cta": "En savoir plus sur le processus de cession",
+      "href": "/auction/how-it-works"
     },
     "cta": {
       "title": "Un projet en tête ?",

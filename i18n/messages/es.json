@@ -2719,30 +2719,76 @@
   },
   "build_service": {
     "meta": {
-      "title": "Ingeniería de activos digitales - Aegryn",
-      "desc": "Aegryn diseña SaaS B2B, aplicaciones IA y apps móviles propietarias según los estándares del protocolo CIFS. La venta es posible si se desea, siempre que el activo cumpla los criterios de grade requeridos."
+      "title": "Desarrollo de activos digitales a precio fijo - Aegryn",
+      "desc": "Desarrollo SaaS B2B, IA y app móvil a precio fijo — documentación completa y entrega certification-ready incluida. Sin desviaciones, activo valorizable desde la concepción."
     },
     "label": "Servicios - Ingeniería de activos",
-    "title": "Su activo digital.\nConstruido para durar.\nEstructurado para ceder.",
-    "desc": "Aegryn diseña activos digitales propietarios - SaaS B2B, IA vertical, aplicación móvil - según los estándares del protocolo CIFS. Parte de cero. Llega con un activo certificable y mantenible. La venta es una opción, no una obligación: depende de su decisión y del grade alcanzado.",
+    "title": "Nosotros construimos.\nUsted posee.\nPrecio fijo. Certification-ready.",
+    "desc": "Aegryn diseña activos digitales — SaaS B2B, IA vertical, app móvil — a precio fijo definido antes del primer sprint. Cada activo entregado incluye documentación completa que lo hace certification-ready desde la entrega.",
     "difference": {
       "label": "No una agencia. No un estudio.",
       "title": "La diferencia Aegryn.",
       "items": [
         {
           "num": "01",
-          "title": "Certificable desde el primer día",
-          "desc": "Cada activo se construye según los estándares del protocolo CIFS. El grade no es una auditoría posterior: es la arquitectura del primer día."
+          "title": "Precio fijo. Sin desviaciones.",
+          "desc": "El precio fijo se define y firma al final del Discovery — antes del primer commit. Si el alcance cambia, se firma un anexo antes de la ejecución. Sin facturas sorpresa."
         },
         {
           "num": "02",
-          "title": "Usted sigue siendo propietario",
-          "desc": "Sin dilución. Sin participación de Aegryn. El activo es 100% suyo. Aegryn puede actuar como co-inversor a petición."
+          "title": "Usted sigue siendo 100% propietario",
+          "desc": "Sin dilución. Sin participación de Aegryn. El activo es 100% suyo. Aegryn puede actuar como co-inversor a petición: es su decisión."
         },
         {
           "num": "03",
-          "title": "La salida es una opción, no una obligación",
-          "desc": "Cesión en etapa temprana, en madurez o mantenimiento a largo plazo: el escenario de salida está anticipado en la arquitectura, pero solo se activa si lo desea y si el activo cumple los criterios de grade requeridos."
+          "title": "Certification-ready en la entrega",
+          "desc": "Cada activo entregado incluye documentación técnica completa (arquitectura, API, seguridad, IP) que lo hace apto para certificación independiente por cualquier auditor externo."
+        }
+      ]
+    },
+    "marketComparison": {
+      "label": "Lo que muy pocos ofrecen",
+      "title": "Un precio. Un alcance.\nSin sorpresas.",
+      "agencyCol": "Lo que hacen las agencias",
+      "aegrynCol": "Lo que hace Aegryn",
+      "processCol": "Cómo llegamos allí",
+      "agencyItems": [
+        "Presupuesto orientativo, factura real diferente",
+        "Tiempo y material sin techo",
+        "Desviaciones facturadas como extra",
+        "Entrega sin documentación",
+        "Sin garantía sobre el valor final"
+      ],
+      "aegrynItems": [
+        "Precio fijo definido en el Discovery",
+        "Hitos medibles por sprint",
+        "Desviación de alcance absorbida por Aegryn",
+        "Documentación técnica completa incluida",
+        "Activo certification-ready en la entrega"
+      ],
+      "processItems": [
+        "Discovery 1–2 semanas incluido",
+        "Pliego de condiciones certificable",
+        "Precio bloqueado antes del primer commit",
+        "Anexo firmado si el alcance cambia",
+        "Recepción formal en cada hito"
+      ]
+    },
+    "certificationBenefits": {
+      "label": "Por qué la documentación lo cambia todo",
+      "title": "Un activo certification-ready\nvale estructuralmente más.",
+      "items": [
+        {
+          "title": "Valor documentado y defendible",
+          "desc": "Un activo entregado con documentación completa tiene un múltiplo de valoración defendible para una ronda o una venta. No una estimación — una base verificable."
+        },
+        {
+          "title": "Protección contractual en la entrega",
+          "desc": "Lo que encarga es exactamente lo que recibe. La documentación técnica certifica el estado de cada dimensión en la entrega. Sin zonas grises."
+        },
+        {
+          "title": "Transferible a cualquier equipo",
+          "desc": "Arquitectura limpia, deuda técnica documentada, README completo. Su activo puede ser retomado, modificado o auditado por cualquier desarrollador o firma independiente."
         }
       ]
     },
@@ -2803,8 +2849,8 @@
       "steps": [
         {
           "num": "01",
-          "title": "Discovery y Brief",
-          "desc": "Definición de la propuesta de valor, mercado objetivo, stack y plan de salida. Output: pliego de condiciones certificable. Duración: 1 a 2 semanas."
+          "title": "Discovery & Precio Fijo",
+          "desc": "Definición de la propuesta de valor, mercado objetivo, stack y plan de salida. Output: pliego de condiciones + acuerdo de precio fijo firmado. Duración: 1 a 2 semanas. Coste: incluido en el precio fijo total."
         },
         {
           "num": "02",
@@ -2846,26 +2892,30 @@
     },
     "fees": {
       "label": "Honorarios",
-      "title": "Transparente desde el brief.",
+      "title": "Precio fijo. Sin sorpresas.",
       "items": [
         {
-          "title": "Concepción y Build",
-          "desc": "Tarifa fija definida en el Discovery. Sin participación. Sin dilución.",
-          "format": "Presupuesto a petición"
+          "title": "Discovery (incluido)",
+          "desc": "1 a 2 semanas. Pliego certificable. Precio de build definido y firmado. Sin compromiso antes de la firma del acuerdo.",
+          "format": "Incluido en el precio fijo total"
         },
         {
-          "title": "Mantenimiento",
-          "desc": "Tarifa mensual o por entregable. Condiciones en contrato.",
+          "title": "Build (precio fijo)",
+          "desc": "Precio bloqueado en el Discovery. Sin desviaciones. Sin tiempo y material. Si el alcance cambia: anexo firmado antes de la ejecución. Rangos indicativos (sin Discovery): SaaS B2B simple desde 25.000€ sin IVA — App móvil B2C desde 35.000€ sin IVA — Producto IA nativo desde 40.000€ sin IVA.",
+          "format": "Precio fijo definido en el Discovery"
+        },
+        {
+          "title": "Mantenimiento (suscripción)",
+          "desc": "Tarifa mensual o por entregable. SLA en contrato. Cancelable en cualquier momento con 30 días de prêviso.",
           "format": "Tarifa mensual definida en contrato"
-        },
-        {
-          "title": "Transacción",
-          "desc": "Si la salida es vía Aegryn Auction o transacción confidencial, aplica la comisión estándar.",
-          "format": "Comisión de éxito - condiciones en CGV",
-          "href": "/terms/cgv"
         }
       ],
       "coInvestNote": "Aegryn puede actuar como co-inversor minoritario en ciertos proyectos. Evaluado caso por caso."
+    },
+    "exitBanner": {
+      "text": "La venta es una opción, nunca una obligación. Si algún día desea ceder — en etapa temprana o en madurez — el activo está diseñado para ello. La salida vía Aegryn Auction o transacción confidencial está disponible si el grade lo permite.",
+      "cta": "Saber más sobre el proceso de venta",
+      "href": "/auction/how-it-works"
     },
     "cta": {
       "title": "¿Un proyecto en mente?",

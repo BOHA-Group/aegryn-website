@@ -2726,30 +2726,76 @@
   },
   "build_service": {
     "meta": {
-      "title": "Digital Asset Engineering - Aegryn",
-      "desc": "Aegryn designs B2B SaaS, AI applications and proprietary mobile apps to CIFS protocol standards. A sale is possible if desired, provided the asset meets the required grade criteria."
+      "title": "Fixed-price digital asset engineering - Aegryn",
+      "desc": "B2B SaaS, AI and mobile app development at a fixed price — full documentation and certification-ready delivery included. No overruns, asset valorisable from day one."
     },
     "label": "Services - Asset Engineering",
-    "title": "Your digital asset.\nBuilt to last.\nStructured to sell.",
-    "desc": "Aegryn designs proprietary digital assets - B2B SaaS, vertical AI, mobile application - to CIFS protocol standards. You start from scratch. You end up with a certifiable, maintainable asset. A sale is an option, not an obligation: it depends on your decision and the grade achieved.",
+    "title": "We build.\nYou own.\nFixed price. Certification-ready.",
+    "desc": "Aegryn designs digital assets — B2B SaaS, vertical AI, mobile application — at a fixed price defined before the first sprint. Every delivered asset comes with complete documentation making it certification-ready from delivery.",
     "difference": {
       "label": "Not an agency. Not a studio.",
       "title": "The Aegryn difference.",
       "items": [
         {
           "num": "01",
-          "title": "Certifiable from day one",
-          "desc": "Every asset is built to CIFS protocol standards. The grade is not a post-production audit: it is the architecture from day one."
+          "title": "Fixed price. No overruns.",
+          "desc": "The fixed fee is defined and signed at the end of Discovery — before the first commit. If scope changes, an amendment is signed before execution. No surprise invoicing."
         },
         {
           "num": "02",
-          "title": "You stay the owner",
+          "title": "You stay 100% owner",
           "desc": "No dilution. No equity taken by Aegryn. The asset is 100% yours. Aegryn can act as a co-investor on request: that is your decision, not ours."
         },
         {
           "num": "03",
-          "title": "The exit is an option, not an obligation",
-          "desc": "Early-stage sale, at maturity, or long-term maintenance: the exit scenario is anticipated in the architecture, but only engaged if you wish to and if the asset meets the required grade criteria."
+          "title": "Certification-ready at delivery",
+          "desc": "Every delivered asset comes with complete technical documentation (architecture, API, security, IP) making it ready for independent certification by any third-party auditor."
+        }
+      ]
+    },
+    "marketComparison": {
+      "label": "What very few others offer",
+      "title": "One price. One scope.\nNo surprises.",
+      "agencyCol": "What agencies do",
+      "aegrynCol": "What Aegryn does",
+      "processCol": "How we get there",
+      "agencyItems": [
+        "Indicative quote, real invoice differs",
+        "Time & materials with no ceiling",
+        "Overruns billed as extras",
+        "Delivery without documentation",
+        "No guarantee on final value"
+      ],
+      "aegrynItems": [
+        "Fixed fee defined at Discovery",
+        "Measurable milestones per sprint",
+        "Scope overrun absorbed by Aegryn",
+        "Full technical documentation included",
+        "Certification-ready asset at delivery"
+      ],
+      "processItems": [
+        "Discovery 1–2 weeks included",
+        "Certifiable specification document",
+        "Price locked before first commit",
+        "Amendment signed if scope changes",
+        "Formal sign-off at each milestone"
+      ]
+    },
+    "certificationBenefits": {
+      "label": "Why documentation changes everything",
+      "title": "A certification-ready asset\nis structurally worth more.",
+      "items": [
+        {
+          "title": "Documented and defensible value",
+          "desc": "An asset delivered with complete documentation has a defensible valuation multiple for fundraising or a sale. Not an estimate — a verifiable basis."
+        },
+        {
+          "title": "Contractual protection at delivery",
+          "desc": "What you order is precisely what you receive. The technical documentation certifies the state of every dimension at delivery. No grey areas."
+        },
+        {
+          "title": "Transferable to any team",
+          "desc": "Clean architecture, documented technical debt, complete README. Your asset can be taken over, modified or audited by any developer or independent firm."
         }
       ]
     },
@@ -2810,8 +2856,8 @@
       "steps": [
         {
           "num": "01",
-          "title": "Discovery and Brief",
-          "desc": "Definition of the value proposition, target market, stack and exit plan. Output: certifiable specification. Duration: 1 to 2 weeks."
+          "title": "Discovery & Fixed Fee",
+          "desc": "Definition of the value proposition, target market, stack and exit plan. Output: specification + signed fixed-price agreement. Duration: 1 to 2 weeks. Cost: included in the total fixed fee."
         },
         {
           "num": "02",
@@ -2853,26 +2899,30 @@
     },
     "fees": {
       "label": "Fees",
-      "title": "Transparent from the brief.",
+      "title": "Fixed fee. No surprises.",
       "items": [
         {
-          "title": "Design and Build",
-          "desc": "Fixed fee defined at Discovery. No equity taken. No dilution.",
-          "format": "Quote on request"
+          "title": "Discovery (included)",
+          "desc": "1 to 2 weeks. Certifiable specification. Build price defined and signed. No commitment before fee agreement is signed.",
+          "format": "Included in total fixed fee"
         },
         {
-          "title": "Maintenance",
-          "desc": "Monthly retainer or per-deliverable fee. Conditions defined in contract.",
+          "title": "Build (fixed fee)",
+          "desc": "Price locked at Discovery. No overruns. No time & materials. If scope changes: amendment signed before execution. Indicative ranges (excl. Discovery): B2B SaaS from €25,000 excl. VAT — B2C mobile app from €35,000 excl. VAT — Native AI product from €40,000 excl. VAT.",
+          "format": "Fixed fee defined at Discovery"
+        },
+        {
+          "title": "Maintenance (subscription)",
+          "desc": "Monthly retainer or per deliverable. SLA defined in contract. Cancellable at any time with 30 days notice.",
           "format": "Monthly retainer defined in contract"
-        },
-        {
-          "title": "Transaction",
-          "desc": "If the exit goes through Aegryn Auction or a confidential transaction, the standard Aegryn transaction commission applies.",
-          "format": "Success fee - conditions in T&Cs",
-          "href": "/terms/cgv"
         }
       ],
       "coInvestNote": "Aegryn may act as a minority co-investor on select projects: equity in exchange for a reduction in build fees. Assessed on a case-by-case basis."
+    },
+    "exitBanner": {
+      "text": "A sale is an option, never an obligation. If you ever wish to sell — early stage or at maturity — the asset is designed for it. Exit via Aegryn Auction or confidential transaction is available if the grade permits.",
+      "cta": "Learn more about the sale process",
+      "href": "/auction/how-it-works"
     },
     "cta": {
       "title": "A project in mind?",

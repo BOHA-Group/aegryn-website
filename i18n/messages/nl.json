@@ -2719,30 +2719,76 @@
   },
   "build_service": {
     "meta": {
-      "title": "Digitale asset ontwikkeling - Aegryn",
-      "desc": "Aegryn ontwerpt B2B SaaS, AI-applicaties en mobiele apps volgens CIFS-protocolnormen. Een verkoop is mogelijk indien gewenst, mits het asset aan de vereiste gradecriteria voldoet."
+      "title": "Digitale asset ontwikkeling tegen vaste prijs - Aegryn",
+      "desc": "B2B SaaS, AI en mobiele app ontwikkeling tegen vaste prijs — volledige documentatie en certification-ready oplevering inbegrepen. Geen overschrijdingen, asset waardeerbaar vanaf de eerste dag."
     },
     "label": "Services - Asset ontwikkeling",
-    "title": "Uw digitale asset.\nGebouwd om te blijven.\nGestructureerd om te verkopen.",
-    "desc": "Aegryn ontwerpt propriëtaire digitale assets - B2B SaaS, verticale AI, mobiele app - volgens CIFS-protocolnormen. U start van nul. U eindigt met een certificeerbaar en onderhoudbaar asset. Een verkoop is een optie, geen verplichting: het hangt af van uw wens en het behaalde grade.",
+    "title": "Wij bouwen.\nU bezit.\nVaste prijs. Certification-ready.",
+    "desc": "Aegryn ontwerpt digitale assets — B2B SaaS, verticale AI, mobiele app — tegen een vaste prijs die voor de eerste sprint wordt vastgelegd. Elk opgeleverd asset wordt vergezeld van volledige documentatie die het certification-ready maakt vanaf de oplevering.",
     "difference": {
       "label": "Geen bureau. Geen studio.",
       "title": "Het Aegryn-verschil.",
       "items": [
         {
           "num": "01",
-          "title": "Certificeerbaar vanaf dag één",
-          "desc": "Elk asset wordt gebouwd volgens CIFS-normen. Het grade is geen audit achteraf: het is de architectuur van dag één."
+          "title": "Vaste prijs. Geen overschrijdingen.",
+          "desc": "De vaste prijs wordt aan het einde van de Discovery vastgelegd en ondertekend — vóór de eerste commit. Als de scope wijzigt, wordt een bijlage ondertekend vóór uitvoering. Geen verrassende facturen."
         },
         {
           "num": "02",
-          "title": "U blijft eigenaar",
-          "desc": "Geen verwatering. Geen aandeel van Aegryn. Het asset is 100% van u."
+          "title": "U blijft 100% eigenaar",
+          "desc": "Geen verwatering. Geen aandeel van Aegryn. Het asset is 100% van u. Aegryn kan op verzoek als co-investeerder optreden: dat is uw beslissing."
         },
         {
           "num": "03",
-          "title": "De exit is een optie, geen verplichting",
-          "desc": "Vroegtijdige overdracht, op rijpheid of langdurig onderhoud: het exitscenario is geanticipeerd in de architectuur, maar wordt alleen geactiveerd als u dat wenst en als het asset aan de vereiste gradecriteria voldoet."
+          "title": "Certification-ready bij oplevering",
+          "desc": "Elk opgeleverd asset bevat volledige technische documentatie (architectuur, API, beveiliging, IP) die het gereed maakt voor onafhankelijke certificering door elke externe auditor."
+        }
+      ]
+    },
+    "marketComparison": {
+      "label": "Wat zeer weinigen bieden",
+      "title": "Een prijs. Een scope.\nGeen verrassingen.",
+      "agencyCol": "Wat bureaus doen",
+      "aegrynCol": "Wat Aegryn doet",
+      "processCol": "Hoe wij er komen",
+      "agencyItems": [
+        "Indicatieve offerte, werkelijke factuur wijkt af",
+        "Tijd en materiaal zonder plafond",
+        "Overschrijdingen als extra gefactureerd",
+        "Oplevering zonder documentatie",
+        "Geen garantie op eindwaarde"
+      ],
+      "aegrynItems": [
+        "Vaste prijs vastgelegd bij Discovery",
+        "Meetbare mijlpalen per sprint",
+        "Scopeoverschrijding door Aegryn geabsorbeerd",
+        "Volledige technische documentatie inbegrepen",
+        "Certification-ready asset bij oplevering"
+      ],
+      "processItems": [
+        "Discovery 1–2 weken inbegrepen",
+        "Certificeerbaar bestek",
+        "Prijs vergrendeld vóór eerste commit",
+        "Bijlage ondertekend bij scopewijziging",
+        "Formele opname bij elke mijlpaal"
+      ]
+    },
+    "certificationBenefits": {
+      "label": "Waarom documentatie alles verandert",
+      "title": "Een certification-ready asset\nis structureel meer waard.",
+      "items": [
+        {
+          "title": "Gedocumenteerde en verdedigbare waarde",
+          "desc": "Een asset met volledige documentatie heeft een verdedigbare waarderingsmultiple voor een investeringsronde of verkoop. Geen schatting — een verifieerbare basis."
+        },
+        {
+          "title": "Contractuele bescherming bij oplevering",
+          "desc": "Wat u bestelt is precies wat u ontvangt. De technische documentatie certificeert de toestand van elke dimensie bij oplevering. Geen grijze zones."
+        },
+        {
+          "title": "Overdraagbaar aan elk team",
+          "desc": "Schone architectuur, gedocumenteerde technische schuld, volledige README. Uw asset kan worden overgenomen, gewijzigd of geaudit door elke ontwikkelaar of onafhankelijk bureau."
         }
       ]
     },
@@ -2803,8 +2849,8 @@
       "steps": [
         {
           "num": "01",
-          "title": "Discovery en Brief",
-          "desc": "Definitie van de waardepropositie, doelmarkt, stack en exitplan. Output: certificeerbaar bestek. Duur: 1 tot 2 weken."
+          "title": "Discovery & Vaste Prijs",
+          "desc": "Definitie van de waardepropositie, doelmarkt, stack en exitplan. Output: bestek + ondertekende vaste-prijsovereenkomst. Duur: 1 tot 2 weken. Kosten: inbegrepen in de totale vaste prijs."
         },
         {
           "num": "02",
@@ -2846,26 +2892,30 @@
     },
     "fees": {
       "label": "Honoraria",
-      "title": "Transparant vanaf het brief.",
+      "title": "Vaste prijs. Geen verrassingen.",
       "items": [
         {
-          "title": "Ontwerp en Build",
-          "desc": "Vaste prijs bij Discovery. Geen aandeel. Geen verwatering.",
-          "format": "Offerte op aanvraag"
+          "title": "Discovery (inbegrepen)",
+          "desc": "1 tot 2 weken. Certificeerbaar bestek. Buildprijs vastgelegd en ondertekend. Geen verbintenis voor ondertekening van de overeenkomst.",
+          "format": "Inbegrepen in de totale vaste prijs"
         },
         {
-          "title": "Onderhoud",
-          "desc": "Maandelijks abonnement of per levering. Voorwaarden in contract.",
-          "format": "Maandelijks abonnement"
+          "title": "Build (vaste prijs)",
+          "desc": "Prijs vergrendeld bij Discovery. Geen overschrijdingen. Geen tijd en materiaal. Bij scopewijziging: bijlage ondertekend vóór uitvoering. Indicatieve bandbreedtes (excl. Discovery): B2B SaaS vanaf €25.000 excl. btw — B2C mobiele app vanaf €35.000 excl. btw — Natief AI-product vanaf €40.000 excl. btw.",
+          "format": "Vaste prijs vastgelegd bij Discovery"
         },
         {
-          "title": "Transactie",
-          "desc": "Als de exit via Aegryn Auction of vertrouwelijke transactie verloopt, geldt de standaardcommissie.",
-          "format": "Succesvergoeding - voorwaarden in CGV",
-          "href": "/terms/cgv"
+          "title": "Onderhoud (abonnement)",
+          "desc": "Maandelijks abonnement of per levering. SLA in contract. Op elk moment opzegbaar met 30 dagen opzegtermijn.",
+          "format": "Maandelijks abonnement in contract"
         }
       ],
       "coInvestNote": "Aegryn kan optreden als minderheids-co-investeerder. Per geval beoordeeld."
+    },
+    "exitBanner": {
+      "text": "Een verkoop is een optie, nooit een verplichting. Als u ooit wilt verkopen — vroeg stadium of op rijpheid — is het asset daarvoor ontworpen. Exit via Aegryn Auction of vertrouwelijke transactie is beschikbaar als het grade het toelaat.",
+      "cta": "Meer over het verkoopproces",
+      "href": "/auction/how-it-works"
     },
     "cta": {
       "title": "Een project in gedachten?",
