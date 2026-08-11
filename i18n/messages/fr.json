@@ -2725,12 +2725,42 @@
   },
   "acqStrip": {
     "label": "Accompagnement à l'acquisition",
-    "title": "Votre prochaine acquisition mérite le bon partenaire financier.",
-    "desc": "Aegryn ne prête pas. Aegryn connecte. Notre réseau de partenaires VC et de fonds d'investissement peut co-financer, co-investir, ou structurer le financement de votre prochaine acquisition d'actif tech certifié.",
+    "title": "Votre prochaine acquisition,\nentourée des bons experts.",
+    "desc": "Aegryn orchestre autour de chaque transaction un réseau de spécialistes sélectionnés : financement, due diligence, structuration et réseau d'investisseurs qualifiés.",
     "chip1": "Co-investissement VC",
     "chip2": "Financement relais",
     "chip3": "Structure earnout",
-    "cta": "Explorer les options"
+    "cta": "Prendre contact",
+    "sublabel": "Advisory Transaction",
+    "domains": [
+      {
+        "title": "Financement & Structuration",
+        "items": [
+          "Co-investissement VC",
+          "Financement relais",
+          "Structure earnout",
+          "Mezzanine & dette senior"
+        ]
+      },
+      {
+        "title": "Due Diligence",
+        "items": [
+          "Audit financier",
+          "Revue technique code",
+          "IP & propriété intellectuelle",
+          "Risques réglementaires"
+        ]
+      },
+      {
+        "title": "Réseau acheteurs",
+        "items": [
+          "Family offices suisses",
+          "Fonds de PE européens",
+          "Stratégiques tech",
+          "Investisseurs institutionnels"
+        ]
+      }
+    ]
   },
   "discoverStrip": {
     "label": "Insights",

@@ -2619,12 +2619,42 @@
   },
   "acqStrip": {
     "label": "Akquisitionsunterstützung",
-    "title": "Ihre nächste Akquisition verdient den richtigen Finanzpartner.",
-    "desc": "Aegryn verleiht nicht. Aegryn verbindet. Unser Netzwerk aus VC-Partnern und Investmentfonds kann die Finanzierung Ihrer nächsten zertifizierten Tech-Asset-Akquisition ko-finanzieren oder strukturieren.",
+    "title": "Ihre nächste Akquisition,\nbegleitet von den richtigen Experten.",
+    "desc": "Aegryn koordiniert für jede Transaktion ein Netzwerk ausgewählter Spezialisten: Finanzierung, Due Diligence, Strukturierung und qualifizierte Investorennetzwerke.",
     "chip1": "VC-Koinvestition",
-    "chip2": "Bridge-Finanzierung",
+    "chip2": "Überbrückungsfinanzierung",
     "chip3": "Earnout-Struktur",
-    "cta": "Optionen erkunden"
+    "cta": "Kontakt aufnehmen",
+    "sublabel": "Advisory Transaction",
+    "domains": [
+      {
+        "title": "Finanzierung & Strukturierung",
+        "items": [
+          "VC-Koinvestition",
+          "Überbrückungsfinanzierung",
+          "Earnout-Struktur",
+          "Mezzanine & Senior-Schulden"
+        ]
+      },
+      {
+        "title": "Due Diligence",
+        "items": [
+          "Finanzprüfung",
+          "Technische Code-Prüfung",
+          "IP & geistiges Eigentum",
+          "Regulatorische Risiken"
+        ]
+      },
+      {
+        "title": "Käufernetzwerk",
+        "items": [
+          "Schweizer Family Offices",
+          "Europäische PE-Fonds",
+          "Tech-Strategen",
+          "Institutionelle Investoren"
+        ]
+      }
+    ]
   },
   "discoverStrip": {
     "label": "Einblicke",

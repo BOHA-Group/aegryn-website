@@ -2619,12 +2619,42 @@
   },
   "acqStrip": {
     "label": "Acquisitieondersteuning",
-    "title": "Uw volgende acquisitie verdient de juiste financiële partner.",
-    "desc": "Aegryn leent niet. Aegryn verbindt. Ons netwerk van VC-partners en investeringsfondsen kan de financiering van uw volgende gecertificeerde tech-asset-acquisitie co-financieren of structureren.",
+    "title": "Uw volgende acquisitie,\nomringd door de juiste experts.",
+    "desc": "Aegryn coördineert rond elke transactie een netwerk van geselecteerde specialisten: financiering, due diligence, structurering en netwerken van gekwalificeerde investeerders.",
     "chip1": "VC co-investering",
     "chip2": "Overbruggingsfinanciering",
     "chip3": "Earnout-structuur",
-    "cta": "Opties verkennen"
+    "cta": "Contact opnemen",
+    "sublabel": "Advisory Transaction",
+    "domains": [
+      {
+        "title": "Financiering & Structurering",
+        "items": [
+          "VC co-investering",
+          "Overbruggingsfinanciering",
+          "Earnout-structuur",
+          "Mezzanine & senior schuld"
+        ]
+      },
+      {
+        "title": "Due Diligence",
+        "items": [
+          "Financiële audit",
+          "Technische codereview",
+          "IP & intellectueel eigendom",
+          "Regelgevingsrisico's"
+        ]
+      },
+      {
+        "title": "Kopersnetwerk",
+        "items": [
+          "Zwitserse family offices",
+          "Europese PE-fondsen",
+          "Tech-strategen",
+          "Institutionele beleggers"
+        ]
+      }
+    ]
   },
   "discoverStrip": {
     "label": "Inzichten",
