@@ -31,12 +31,17 @@ Synthesis: "Aegryn protects what endures."
 
 ## Core Activities
 
-Aegryn operates across two complementary pillars:
+Aegryn operates across three complementary pillars:
 
-### 1. Swiss Tech Asset Builder
-Designs, funds and operates proprietary digital ecosystems (SaaS, B2C, marketplace, social). Full ownership model — no VC dilution. Assets are built to last, not to flip.
+### 1. Aegryn Build — Proprietary Assets
+Designs, funds and operates proprietary digital ecosystems (SaaS, B2C, marketplace, social). Full ownership model — no VC dilution. Each asset: certified, documented, operated under real conditions. Built to last, not to flip.
+- Portfolio: /assets
 
-### 2. AEGRYN Auction — Tech Asset M&A Platform
+### 2. Aegryn Build — Asset Engineering (for third parties)
+Designs custom digital assets for individuals, entrepreneurs and institutions. Fixed price contract. Custom code only — no no-code/low-code. Full IP to client. Certification-ready from day one. 10–16 weeks delivery.
+- Service page: /services/build
+
+### 3. AEGRYN Auction — Tech Asset M&A Platform
 Europe's structured auction platform for buying and selling digital tech assets: SaaS businesses, B2C platforms, tech infrastructure. Range: €100K–€50M. Session-based, NDA-gated, graded assets only.
 
 ---
@@ -53,6 +58,32 @@ Europe's structured auction platform for buying and selling digital tech assets:
 | Aegryn Advisory | https://www.aegryn.com/fr/advisory | B2B Advisory | Cybersecurity, AI audit, digital strategy for enterprises |
 
 Each asset carries: "An Aegryn company."
+
+---
+
+## Asset Engineering — Custom Build for Third Parties
+
+URL: https://aegryn.com/en/services/build
+
+Aegryn designs custom digital assets for individuals, entrepreneurs and institutions who need a proprietary digital product built to professional, certification-ready standards.
+
+### Key differentiators
+- **Fixed price**: contract signed at discovery phase — price locked, no scope creep
+- **Custom code only**: no WordPress, no Webflow, no no-code — sovereign, maintainable codebase
+- **Full IP transfer**: 100% intellectual property to the client at delivery
+- **Zero technical debt**: clean architecture, documented from day one
+- **Certification-ready**: complete technical documentation enabling future Aegryn Grade certification
+- **Timeline**: 10–16 weeks from discovery to delivery
+- **Indicative range**: CHF 15,000–150,000+
+
+### Process (7 steps)
+1. Discovery & Fixed Fee Definition
+2. Architecture & Technical Specifications
+3. UI/UX Design
+4. Frontend Development
+5. Backend & Infrastructure
+6. Testing & Security Audit
+7. Delivery, Documentation & IP Transfer
 
 ---
 

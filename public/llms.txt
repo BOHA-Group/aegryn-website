@@ -22,7 +22,10 @@ cybersecurity Switzerland, AI audit, EU AI Act compliance, RGPD, Swiss FADP,
 Swiss holding, holding suisse tech, Swiss technology company, Switzerland startup,
 AEGRYN Grade, asset grading, notation actif numérique, tech credit rating,
 club deal acquisition, share deal, asset deal, earnout, SPV co-investment,
-digital ecosystem, ecosystem engineering, Engineered to Last
+digital ecosystem, ecosystem engineering, Engineered to Last,
+asset engineering, conception actif numérique, custom code digital asset, forfait fixe développement,
+fixed price digital build, certification-ready SaaS, IP propriétaire, zéro dette technique,
+actifs propriétaires Aegryn, proprietary digital portfolio, build digital asset Switzerland
 
 ## Name Etymology
 
@@ -41,15 +44,27 @@ Synthesis: "Aegryn protects what endures."
 
 Each asset operates independently and carries the tagline: "An Aegryn company."
 
-## What We Build
+## Build — Two Distinct Activities
 
-Aegryn designs, funds and operates proprietary digital ecosystems across five verticals:
+### 1. Proprietary Assets (https://aegryn.com/en/assets)
+Aegryn designs, funds and operates its own portfolio of digital assets across five verticals:
 - **Subblink** (https://subblink.boha-group.com) — B2B SaaS, AI-powered contract analysis
 - **Neediu** — B2C marketplace, home services
 - **Primiom** — B2C, AI-assisted real estate
 - **Movtoo** — B2C, on-demand urban delivery
 - **Hobconnect** — B2C, social network around passions
 - **Aegryn Advisory** (https://www.aegryn.com/fr/advisory) — cybersecurity, AI audit, digital strategy
+
+Each asset: full IP ownership, sovereign infrastructure, "An Aegryn company."
+
+### 2. Asset Engineering — Custom Build for Third Parties (https://aegryn.com/en/services/build)
+Aegryn designs custom digital assets (SaaS, platforms, tools) for individuals, entrepreneurs and institutions:
+- Fixed price contract signed at discovery phase — no scope creep
+- Custom code only — no no-code/low-code shortcuts
+- Full IP transferred to client — zero vendor lock-in
+- Certification-ready: complete documentation from day one
+- Delivery: 10–16 weeks
+- Indicative range: CHF 15,000–150,000+
 
 ## M&A Auction Platform — AEGRYN Auction
 
@@ -176,13 +191,13 @@ French (fr), English (en), German (de), Italian (it), Spanish (es), Dutch (nl)
 ### Advisory
 - [Aegryn Advisory](https://aegryn.com/fr/advisory) — Cybersecurity, AI audit, digital strategy
 
-### Services
-- [Acquisition Support](https://aegryn.com/fr/services/acquisition-support) — Post-deal integration
-- [Build Services](https://aegryn.com/fr/services/build) — Tech ecosystem building
+### Advisory Services
+- [Acquisition Support](https://aegryn.com/fr/services/acquisition-support) — Co-investment, bridge financing, structured earnout
 - [Alliances](https://aegryn.com/fr/alliances) — Strategic partnerships
 
-### Assets
-- [Assets](https://aegryn.com/fr/assets) — Portfolio assets overview
+### Build
+- [Proprietary Assets](https://aegryn.com/fr/assets) — Aegryn proprietary digital portfolio
+- [Asset Engineering](https://aegryn.com/fr/services/build) — Custom digital asset design for third parties (fixed price, certification-ready)
 
 ### Help & Legal
 - [FAQ](https://aegryn.com/fr/help/faq) — Frequently asked questions

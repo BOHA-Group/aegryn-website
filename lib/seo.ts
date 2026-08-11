@@ -50,9 +50,15 @@ const BASE_KEYWORDS = [
   'Switzerland startup', 'Swiss holding', 'holding suisse tech',
   'Europe tech market', 'marché tech européen',
   'plateforme M&A suisse', 'Swiss M&A platform', 'cession tech Suisse',
-  // Products
+  // Build — proprietary assets
   'Subblink', 'Neediu', 'Primiom', 'Movtoo', 'Hobconnect',
-  'ecosystem engineering', 'digital ecosystem',
+  'actifs propriétaires Aegryn', 'proprietary digital assets', 'digital ecosystem',
+  'ecosystem engineering', 'portefeuille actifs numériques',
+  // Build — asset engineering (tiers)
+  'conception actif numérique', 'asset engineering', 'custom code digital asset',
+  'développement actif sur mesure', 'forfait fixe développement', 'fixed price digital build',
+  'certification-ready SaaS', 'IP propriétaire développement', 'zéro dette technique',
+  'build digital asset Switzerland', 'construire SaaS forfait fixe',
   // Grade
   'Aegryn Grade', 'asset grading', 'notation actif numérique',
   'grade SaaS', 'certification actif numérique', 'tech credit rating',
@@ -222,6 +228,11 @@ export const aegrynOrganizationSchema = {
     'SaaS Acquisition',
     'Expert Network',
     'Asset Grading',
+    'Asset Engineering',
+    'Custom Digital Asset Development',
+    'Fixed Price Software Development',
+    'Certification-Ready Digital Assets',
+    'Proprietary Asset Portfolio',
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -272,6 +283,24 @@ export const aegrynOrganizationSchema = {
           url: `${BASE_URL}/en/advisory`,
         },
       },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Aegryn Build — Proprietary Assets',
+          description: 'Aegryn designs and operates its own portfolio of digital assets: B2B SaaS, marketplaces, AI tools. Each asset is certified, documented and operated under real conditions.',
+          url: `${BASE_URL}/en/assets`,
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Aegryn Asset Engineering',
+          description: 'Custom digital asset design for individuals, entrepreneurs and institutions. Fixed price, custom code, full IP ownership, certification-ready in 10–16 weeks. Zero technical debt.',
+          url: `${BASE_URL}/en/services/build`,
+        },
+      },
     ],
   },
 }
@@ -289,10 +318,12 @@ export const aegrynSiteNavigationSchema = {
     { '@type': 'ListItem', position: 6,  name: 'Catalogue',            url: `${BASE_URL}/fr/auction/catalog` },
     { '@type': 'ListItem', position: 7,  name: 'Valorisation',         url: `${BASE_URL}/fr/valuation` },
     { '@type': 'ListItem', position: 8,  name: 'Aegryn Grade',         url: `${BASE_URL}/fr/grade` },
-    { '@type': 'ListItem', position: 9,  name: 'Experts',              url: `${BASE_URL}/fr/experts` },
-    { '@type': 'ListItem', position: 10, name: 'Advisory',             url: `${BASE_URL}/fr/advisory` },
-    { '@type': 'ListItem', position: 11, name: 'Blog',                 url: `${BASE_URL}/fr/blog` },
-    { '@type': 'ListItem', position: 12, name: 'Contact',              url: `${BASE_URL}/fr/contact` },
+    { '@type': 'ListItem', position: 9,  name: 'Experts',                      url: `${BASE_URL}/fr/experts` },
+    { '@type': 'ListItem', position: 10, name: 'Advisory',                      url: `${BASE_URL}/fr/advisory` },
+    { '@type': 'ListItem', position: 11, name: 'Actifs propriétaires',           url: `${BASE_URL}/fr/assets` },
+    { '@type': 'ListItem', position: 12, name: 'Conception d\'actifs (Build)',   url: `${BASE_URL}/fr/services/build` },
+    { '@type': 'ListItem', position: 13, name: 'Blog',                          url: `${BASE_URL}/fr/blog` },
+    { '@type': 'ListItem', position: 14, name: 'Contact',                       url: `${BASE_URL}/fr/contact` },
   ],
 }
 
@@ -303,7 +334,7 @@ export const aegrynWebSiteSchema = {
   url:          BASE_URL,
   name:         'Aegryn',
   alternateName: ['Aegryn', 'Aegryn Swiss', 'Aegryn Advisory', 'Aegryn Auction'],
-  description:  'Aegryn — Swiss technology holding and M&A auction platform. Buy and sell digital tech assets (SaaS, B2C, infrastructure) in Europe. Free valuation, proprietary grading, curated expert network, cybersecurity and AI advisory. Engineered to Last.',
+  description:  'Aegryn — Swiss Tech Asset Builder and M&A auction platform. Design and operate proprietary digital assets. Custom asset engineering for third parties (fixed price, certification-ready). Buy and sell digital tech assets in Europe. Proprietary grading, expert network, cybersecurity and AI advisory. Engineered to Last.',
   publisher:    { '@id': `${BASE_URL}/#organization` },
   inLanguage:   ['fr', 'en', 'de', 'it', 'es', 'nl'],
   potentialAction: {
