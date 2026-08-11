@@ -5321,8 +5321,8 @@
   },
   "techStack": {
     "label": "Tech Stack",
-    "title": "The technologies\nwe master.",
-    "desc": "From frontend to infrastructure, Aegryn designs your digital assets with the most suitable technologies — sovereign, maintainable, certification-ready.",
+    "title": "The technologies we master.",
+    "desc": "Stack selected based on your functional requirements, expected scalability and Aegryn Grade certification eligibility.",
     "all": "All",
     "frontend": "Frontend & Web",
     "backend": "Backend & API",

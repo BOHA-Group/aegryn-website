@@ -43,7 +43,7 @@
     "gradeDimI": "IP",
     "gradeDimF": "Finance",
     "gradeDimS": "Sécurité",
-    "build": "Build",
+    "build": "Conception",
     "buildAssets": "Actifs propriétaires",
     "buildEngineering": "Conception d'actifs"
   },
@@ -5320,8 +5320,8 @@
   },
   "techStack": {
     "label": "Stack Technique",
-    "title": "Les technologies\nque nous maîtrisons.",
-    "desc": "Du frontend à l'infrastructure, Aegryn conçoit vos actifs numériques avec les technologies les plus adaptées à votre besoin — souveraines, maintainables, certification-ready.",
+    "title": "Les technologies que nous maîtrisons.",
+    "desc": "Stack sélectionnée selon vos besoins fonctionnels, scalabilité attendue et éligibilité à la certification Aegryn Grade.",
     "all": "Tout",
     "frontend": "Frontend & Web",
     "backend": "Backend & API",

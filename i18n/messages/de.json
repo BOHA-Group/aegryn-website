@@ -5317,8 +5317,8 @@
   },
   "techStack": {
     "label": "Tech-Stack",
-    "title": "Die Technologien,\ndie wir beherrschen.",
-    "desc": "Vom Frontend bis zur Infrastruktur gestaltet Aegryn Ihre digitalen Assets mit den am besten geeigneten Technologien — souverän, wartbar, zertifizierungsbereit.",
+    "title": "Die Technologien, die wir beherrschen.",
+    "desc": "Stack nach funktionalen Anforderungen, Skalierbarkeit und Eignung für die Aegryn Grade-Zertifizierung ausgewählt.",
     "all": "Alle",
     "frontend": "Frontend & Web",
     "backend": "Backend & API",

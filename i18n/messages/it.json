@@ -5317,8 +5317,8 @@
   },
   "techStack": {
     "label": "Stack Tecnologico",
-    "title": "Le tecnologie\nche padroneggiamo.",
-    "desc": "Dal frontend all'infrastruttura, Aegryn progetta i vostri asset digitali con le tecnologie più adatte — sovrane, mantenibili, certification-ready.",
+    "title": "Le tecnologie che padroneggiamo.",
+    "desc": "Stack selezionata in base ai requisiti funzionali, scalabilità attesa e idoneità alla certificazione Aegryn Grade.",
     "all": "Tutto",
     "frontend": "Frontend & Web",
     "backend": "Backend & API",

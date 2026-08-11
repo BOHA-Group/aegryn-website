@@ -5317,8 +5317,8 @@
   },
   "techStack": {
     "label": "Stack Tecnológico",
-    "title": "Las tecnologías\nque dominamos.",
-    "desc": "Desde el frontend hasta la infraestructura, Aegryn diseña sus activos digitales con las tecnologías más adecuadas — soberanas, mantenibles, certification-ready.",
+    "title": "Las tecnologías que dominamos.",
+    "desc": "Stack seleccionada según sus requisitos funcionales, escalabilidad esperada y elegibilidad para la certificación Aegryn Grade.",
     "all": "Todo",
     "frontend": "Frontend & Web",
     "backend": "Backend & API",

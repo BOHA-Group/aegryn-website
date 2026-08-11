@@ -5317,8 +5317,8 @@
   },
   "techStack": {
     "label": "Tech Stack",
-    "title": "De technologieën\ndie wij beheersen.",
-    "desc": "Van frontend tot infrastructuur ontwerpt Aegryn uw digitale assets met de meest geschikte technologieën — soeverein, onderhoudbaar, certification-ready.",
+    "title": "De technologieën die wij beheersen.",
+    "desc": "Stack geselecteerd op basis van functionele vereisten, verwachte schaalbaarheid en geschiktheid voor Aegryn Grade-certificering.",
     "all": "Alles",
     "frontend": "Frontend & Web",
     "backend": "Backend & API",

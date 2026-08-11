@@ -87,38 +87,35 @@ const CATEGORIES: TechCategory[] = [
 
 /* ── Badge component ───────────────────────────────────────────────── */
 
-function TechBadge({ item, delay }: { item: TechItem; delay: number }) {
-  const ref = useRef<HTMLDivElement>(null)
+function TechBadge({ item }: { item: TechItem }) {
   const [hovered, setHovered] = useState(false)
 
   return (
     <div
-      ref={ref}
-      className="tech-badge group relative flex flex-col items-center gap-2 cursor-default"
-      style={{ animationDelay: `${delay}ms` }}
+      className="tech-badge flex flex-col items-center gap-1.5 cursor-default"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Circle */}
+      {/* Circle — always slightly lit, full glow on hover */}
       <div
-        className="w-11 h-11 md:w-12 md:h-12 rounded-full border flex items-center justify-center transition-all duration-300"
+        className="w-9 h-9 rounded-full border flex items-center justify-center transition-all duration-250"
         style={{
-          borderColor: hovered ? item.color : '#E5E7EB',
-          backgroundColor: hovered ? `${item.color}18` : 'white',
-          boxShadow: hovered ? `0 0 16px ${item.color}40` : 'none',
+          borderColor: hovered ? item.color : `${item.color}55`,
+          backgroundColor: hovered ? `${item.color}22` : `${item.color}0A`,
+          boxShadow: hovered ? `0 0 14px ${item.color}50` : 'none',
         }}
       >
         <span
-          className="font-sans font-bold text-[11px] leading-none transition-colors duration-300"
-          style={{ color: hovered ? item.color : '#9BA8B0' }}
+          className="font-sans font-bold text-[10px] leading-none transition-colors duration-250"
+          style={{ color: hovered ? item.color : `${item.color}99` }}
         >
           {item.abbr}
         </span>
       </div>
       {/* Label */}
       <span
-        className="font-sans text-[10px] tracking-[0.06em] text-center leading-tight transition-colors duration-200"
-        style={{ color: hovered ? '#0D1B2A' : '#9BA8B0', maxWidth: '52px' }}
+        className="font-sans text-[9px] tracking-[0.04em] text-center leading-tight transition-colors duration-200"
+        style={{ color: hovered ? '#0D1B2A' : '#6B7280', maxWidth: '48px' }}
       >
         {item.name}
       </span>
@@ -136,16 +133,16 @@ export function TechStackShowcase() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from('.tss-header', {
-        opacity: 0, y: 20, duration: 0.6, ease: 'expo.out',
-        scrollTrigger: { trigger: ref.current, start: 'top 78%' },
+        opacity: 0, y: 16, duration: 0.5, ease: 'expo.out',
+        scrollTrigger: { trigger: ref.current, start: 'top 80%' },
       })
       gsap.from('.tss-tab', {
-        opacity: 0, y: 10, stagger: 0.05, duration: 0.5, ease: 'expo.out',
-        scrollTrigger: { trigger: ref.current, start: 'top 72%' },
+        opacity: 0, y: 8, stagger: 0.04, duration: 0.4, ease: 'expo.out',
+        scrollTrigger: { trigger: ref.current, start: 'top 76%' },
       })
       gsap.from('.tech-badge', {
-        opacity: 0, scale: 0.85, stagger: 0.025, duration: 0.45, ease: 'back.out(1.4)',
-        scrollTrigger: { trigger: '.tss-grid', start: 'top 80%' },
+        opacity: 0, scale: 0.8, stagger: 0.018, duration: 0.35, ease: 'back.out(1.6)',
+        scrollTrigger: { trigger: '.tss-grid', start: 'top 82%' },
       })
     }, ref)
     return () => ctx.revert()
@@ -157,32 +154,34 @@ export function TechStackShowcase() {
 
   return (
     <section ref={ref} className="border-b border-ag-border bg-ag-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16">
 
-        {/* Header */}
-        <div className="tss-header mb-10">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('label')}
-          </p>
-          <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight whitespace-pre-line"
-            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
-          >
-            {t('title')}
-          </h2>
-          <p className="mt-4 font-sans text-[13px] text-ag-gray leading-relaxed max-w-xl">
+        {/* Header — compact horizontal */}
+        <div className="tss-header flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-8">
+          <div>
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-1.5">
+              {t('label')}
+            </p>
+            <h2
+              className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight"
+              style={{ fontSize: 'clamp(20px,2.8vw,34px)' }}
+            >
+              {t('title')}
+            </h2>
+          </div>
+          <p className="font-sans text-[12px] text-ag-gray leading-relaxed max-w-sm md:text-right">
             {t('desc')}
           </p>
         </div>
 
         {/* Category filter tabs */}
-        <div className="flex flex-wrap gap-2 mb-12">
+        <div className="flex flex-wrap gap-1.5 mb-8">
           <button
             onClick={() => setActiveCategory(null)}
-            className={`tss-tab font-mono text-[9px] tracking-[0.18em] uppercase px-4 py-2 border transition-colors duration-200 ${
+            className={`tss-tab font-mono text-[9px] tracking-[0.16em] uppercase px-3 py-1.5 border transition-colors duration-200 ${
               activeCategory === null
                 ? 'bg-ag-navy text-white border-ag-navy'
-                : 'bg-white text-ag-gray border-ag-border hover:border-ag-navy/40 hover:text-ag-navy'
+                : 'bg-white text-ag-gray border-ag-border hover:border-ag-navy/50 hover:text-ag-navy'
             }`}
           >
             {t('all')}
@@ -191,10 +190,10 @@ export function TechStackShowcase() {
             <button
               key={cat.labelKey}
               onClick={() => setActiveCategory(activeCategory === i ? null : i)}
-              className={`tss-tab font-mono text-[9px] tracking-[0.18em] uppercase px-4 py-2 border transition-colors duration-200 ${
+              className={`tss-tab font-mono text-[9px] tracking-[0.16em] uppercase px-3 py-1.5 border transition-colors duration-200 ${
                 activeCategory === i
                   ? 'bg-ag-navy text-white border-ag-navy'
-                  : 'bg-white text-ag-gray border-ag-border hover:border-ag-navy/40 hover:text-ag-navy'
+                  : 'bg-white text-ag-gray border-ag-border hover:border-ag-navy/50 hover:text-ag-navy'
               }`}
             >
               {t(cat.labelKey)}
@@ -202,17 +201,18 @@ export function TechStackShowcase() {
           ))}
         </div>
 
-        {/* Grid by category */}
-        <div className="tss-grid flex flex-col gap-10">
+        {/* Grid by category — compact */}
+        <div className="tss-grid flex flex-col gap-6">
           {displayedCategories.map((cat) => (
-            <div key={cat.labelKey}>
-              <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex mb-5 flex items-center gap-3">
-                <span className="w-5 h-px bg-ag-apex/40 inline-block" />
+            <div key={cat.labelKey} className="flex flex-col sm:flex-row sm:items-start gap-4">
+              {/* Category label — fixed width, navy, readable */}
+              <p className="font-mono text-[9px] tracking-[0.20em] uppercase text-ag-navy font-semibold shrink-0 sm:w-28 pt-1">
                 {t(cat.labelKey)}
               </p>
-              <div className="flex flex-wrap gap-5">
-                {cat.items.map((item, j) => (
-                  <TechBadge key={item.name} item={item} delay={j * 30} />
+              {/* Badges row */}
+              <div className="flex flex-wrap gap-4">
+                {cat.items.map((item) => (
+                  <TechBadge key={item.name} item={item} />
                 ))}
               </div>
             </div>
@@ -220,7 +220,7 @@ export function TechStackShowcase() {
         </div>
 
         {/* Footer note */}
-        <p className="mt-14 font-sans text-[11px] text-ag-gray-light border-l-2 border-ag-apex/30 pl-4 max-w-xl leading-relaxed">
+        <p className="mt-10 font-sans text-[11px] text-ag-gray-light border-l-2 border-ag-border pl-3 max-w-xl leading-relaxed">
           {t('note')}
         </p>
       </div>
