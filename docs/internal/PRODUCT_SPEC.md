@@ -39,10 +39,24 @@ No buyer accesses a dossier without a signed NDA and verified qualification.
 ## 3. Core Flows
 
 ### 3.1 Seller Flow
+
+#### Flow A — Auction Certification (no upfront fee)
 ```
-Submit asset → Pay evaluation fee → Aegryn assigns certifier → 
-CIFS audit (4 dimensions) → Grade issued → Dossier published → 
-NDA matching → Session presentation → Offer → Closing
+Submit asset → Pre-qualification (5 business days) → CIFS audit (4 dimensions) →
+Grade issued → Dossier published → NDA matching → Session presentation →
+Offer → Closing → Commission deducted
+```
+
+#### Flow B — AEGRYN Review (CHF 2 000 HT)
+```
+Submit asset → Pay review fee (CHF 2 000 HT) → Written opinion (15 business days) →
+Internal use only → Optional: upgrade to Auction (fee deductible within 6 months)
+```
+
+#### Flow C — AEGRYN Review+ (CHF 5 000 HT)
+```
+Submit asset → Pay fee (CHF 5 000 HT) → Expert partner review (20 business days) →
+Written opinion → Optional: upgrade to Auction (fee deductible within 6 months)
 ```
 
 ### 3.2 Buyer Flow
@@ -94,7 +108,7 @@ Commission credited → Referral programme
 
 Four phases govern every transaction on Aegryn:
 
-1. **Pre-certification** — asset submitted, fee paid, certifier assigned
+1. **Pre-certification** — asset submitted, pre-qualification completed (Flow A: no upfront fee; Flow B/C: fee paid), certifier assigned
 2. **Certification** — CIFS audit conducted, grade issued, dossier built
 3. **Market phase** — sessions presented, NDA signed, dossier accessed
 4. **Closing** — LOI signed, escrow activated, legal experts mobilised, transfer completed
@@ -116,11 +130,11 @@ See `TRANSFER_CHECKLIST.md` for the full operational checklist.
 
 | Stream | Model | Amount |
 |---|---|---|
-| Certification fee | One-time, paid by seller | TBD per tier |
-| Partner subscription | Monthly SaaS | CHF 89/mo or annual |
-| Transaction commission | % of closing price | TBD |
-| Certification Niveau 1 | One-time partner accreditation | CHF 2 000 |
-| Certification Niveau 2 | One-time partner accreditation | CHF 5 000 |
+| Auction Certification — publication fee | One-time, paid by seller (deductible from commission if sold) | CHF 2 000 HT |
+| Auction Certification — success fee | Degressive % of closing price (8% → 6%), min. CHF 25 000 HT | — |
+| AEGRYN Review | One-time, paid by seller — deductible within 6 months | CHF 2 000 HT |
+| AEGRYN Review+ | One-time, paid by seller — deductible within 6 months | CHF 5 000 HT |
+| Partner subscription | Monthly SaaS | CHF 89 HT/mo or annual |
 
 ---
 
