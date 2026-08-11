@@ -2853,11 +2853,11 @@
   "build_service": {
     "meta": {
       "title": "Desarrollo de activos digitales a precio fijo - Aegryn",
-      "desc": "Desarrollo SaaS B2B, IA y app móvil a precio fijo — documentación completa y entrega certification-ready incluida. Sin desviaciones, activo valorizable desde la concepción."
+      "desc": "Desarrollo SaaS B2B, IA y app móvil a precio fijo — documentación completa y entrega listo para certificación incluida. Sin desviaciones, activo valorizable desde la concepción."
     },
     "label": "Servicios - Ingeniería de activos",
-    "title": "Nosotros construimos.\nUsted posee.\nPrecio fijo. Certification-ready.",
-    "desc": "Aegryn diseña activos digitales — SaaS B2B, IA vertical, app móvil — a precio fijo definido antes del primer sprint. Cada activo entregado incluye documentación completa que lo hace certification-ready desde la entrega.",
+    "title": "Nosotros construimos.\nUsted posee.\nPrecio fijo. Listo para certificación.",
+    "desc": "Aegryn diseña activos digitales — SaaS B2B, IA vertical, app móvil — a precio fijo definido antes del primer sprint. Cada activo entregado incluye documentación completa que lo hace listo para certificación desde la entrega.",
     "difference": {
       "label": "No una agencia. No un estudio.",
       "title": "La diferencia Aegryn.",
@@ -2874,7 +2874,7 @@
         },
         {
           "num": "03",
-          "title": "Certification-ready en la entrega",
+          "title": "Listo para certificación en la entrega",
           "desc": "Cada activo entregado incluye documentación técnica completa (arquitectura, API, seguridad, IP) que lo hace apto para certificación independiente por cualquier auditor externo."
         }
       ]
@@ -2897,7 +2897,7 @@
         "Hitos medibles por sprint",
         "Desviación de alcance absorbida por Aegryn",
         "Documentación técnica completa incluida",
-        "Activo certification-ready en la entrega"
+        "Activo listo para certificación en la entrega"
       ],
       "processItems": [
         "Discovery 1–2 semanas incluido",
@@ -2909,7 +2909,7 @@
     },
     "certificationBenefits": {
       "label": "Por qué la documentación lo cambia todo",
-      "title": "Un activo certification-ready\nvale estructuralmente más.",
+      "title": "Un activo listo para certificación\nvale estructuralmente más.",
       "items": [
         {
           "title": "Valor documentado y defendible",
@@ -5323,14 +5323,14 @@
     "assetsTitle": "Una cartera selectiva\nde activos tech.",
     "assetsDesc": "Aegryn diseña y opera sus propios activos digitales — SaaS B2B, marketplaces, herramientas IA. Cada activo está certificado, documentado y operado en condiciones reales.",
     "assetsCta": "Ver la cartera",
-    "engineeringLabel": "Asset Engineering",
+    "engineeringLabel": "Ingeniería de activos",
     "engineeringTitle": "Concepción de activos\na medida para terceros.",
-    "engineeringDesc": "Particulares, emprendedores, instituciones: Aegryn diseña su activo digital en custom code, precio fijo, certification-ready. Propiedad intelectual total, cero deuda técnica.",
-    "engineeringCta": "Descubrir Asset Engineering"
+    "engineeringDesc": "Particulares, emprendedores, instituciones: Aegryn diseña su activo digital en código personalizado, precio fijo, listo para certificación. Propiedad intelectual total, cero deuda técnica.",
+    "engineeringCta": "Descubrir Ingeniería de activos"
   },
   "buildEngineeringStrip": {
-    "label": "Asset Engineering",
-    "title": "Precio fijo. Código propietario. Certification-ready.",
+    "label": "Ingeniería de activos",
+    "title": "Precio fijo. Código exclusivo. Listo para certificación.",
     "chip1": "Precio fijo contractualizado",
     "chip2": "10–16 semanas",
     "chip3": "Listo para certificación",

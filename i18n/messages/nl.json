@@ -45,7 +45,7 @@
     "gradeDimS": "Beveiliging",
     "build": "Build",
     "buildAssets": "Eigen assets",
-    "buildEngineering": "Asset engineering",
+    "buildEngineering": "Asset-engineering",
     "comingSoon": "Binnenkort beschikbaar",
     "soon": "Binnenkort"
   },
@@ -2853,11 +2853,11 @@
   "build_service": {
     "meta": {
       "title": "Digitale asset ontwikkeling tegen vaste prijs - Aegryn",
-      "desc": "B2B SaaS, AI en mobiele app ontwikkeling tegen vaste prijs — volledige documentatie en certification-ready oplevering inbegrepen. Geen overschrijdingen, asset waardeerbaar vanaf de eerste dag."
+      "desc": "B2B SaaS, AI en mobiele app ontwikkeling tegen vaste prijs — volledige documentatie en klaar voor certificering oplevering inbegrepen. Geen overschrijdingen, asset waardeerbaar vanaf de eerste dag."
     },
     "label": "Services - Asset ontwikkeling",
-    "title": "Wij bouwen.\nU bezit.\nVaste prijs. Certification-ready.",
-    "desc": "Aegryn ontwerpt digitale assets — B2B SaaS, verticale AI, mobiele app — tegen een vaste prijs die voor de eerste sprint wordt vastgelegd. Elk opgeleverd asset wordt vergezeld van volledige documentatie die het certification-ready maakt vanaf de oplevering.",
+    "title": "Wij bouwen.\nU bezit.\nVaste prijs. Klaar voor certificering.",
+    "desc": "Aegryn ontwerpt digitale assets — B2B SaaS, verticale AI, mobiele app — tegen een vaste prijs die voor de eerste sprint wordt vastgelegd. Elk opgeleverd asset wordt vergezeld van volledige documentatie die het klaar voor certificering maakt vanaf de oplevering.",
     "difference": {
       "label": "Geen bureau. Geen studio.",
       "title": "Het Aegryn-verschil.",
@@ -2874,7 +2874,7 @@
         },
         {
           "num": "03",
-          "title": "Certification-ready bij oplevering",
+          "title": "Klaar voor certificering bij oplevering",
           "desc": "Elk opgeleverd asset bevat volledige technische documentatie (architectuur, API, beveiliging, IP) die het gereed maakt voor onafhankelijke certificering door elke externe auditor."
         }
       ]
@@ -2897,7 +2897,7 @@
         "Meetbare mijlpalen per sprint",
         "Scopeoverschrijding door Aegryn geabsorbeerd",
         "Volledige technische documentatie inbegrepen",
-        "Certification-ready asset bij oplevering"
+        "Klaar voor certificering asset bij oplevering"
       ],
       "processItems": [
         "Discovery 1–2 weken inbegrepen",
@@ -2909,7 +2909,7 @@
     },
     "certificationBenefits": {
       "label": "Waarom documentatie alles verandert",
-      "title": "Een certification-ready asset\nis structureel meer waard.",
+      "title": "Een klaar voor certificering asset\nis structureel meer waard.",
       "items": [
         {
           "title": "Gedocumenteerde en verdedigbare waarde",
@@ -4626,7 +4626,7 @@
     "security": "Beveiliging",
     "faq": "FAQ",
     "groupBuild": "Build",
-    "servicesBuild": "Asset engineering"
+    "servicesBuild": "Asset-engineering"
   },
   "clientAuction": {
     "eyebrow": "Kopersruimte",
@@ -5323,19 +5323,19 @@
     "assetsTitle": "Een selectief portfolio\nvan tech-assets.",
     "assetsDesc": "Aegryn ontwerpt en beheert eigen digitale assets — B2B SaaS, marktplaatsen, AI-tools. Elk asset is gecertificeerd, gedocumenteerd en beheerd onder echte condities.",
     "assetsCta": "Portfolio bekijken",
-    "engineeringLabel": "Asset Engineering",
+    "engineeringLabel": "Asset-engineering",
     "engineeringTitle": "Op maat gemaakte asset-\nontwerp voor derden.",
-    "engineeringDesc": "Particulieren, ondernemers, instellingen: Aegryn ontwerpt uw digitaal asset in custom code, vaste prijs, certification-ready. Volledig intellectueel eigendom, nul technische schuld.",
-    "engineeringCta": "Asset Engineering ontdekken"
+    "engineeringDesc": "Particulieren, ondernemers, instellingen: Aegryn ontwerpt uw digitaal asset in maatwerktechnologie, vaste prijs, klaar voor certificering. Volledig intellectueel eigendom, nul technische schuld.",
+    "engineeringCta": "Asset-engineering ontdekken"
   },
   "buildEngineeringStrip": {
-    "label": "Asset Engineering",
-    "title": "Vaste prijs. Propriëtaire code. Certification-ready.",
+    "label": "Asset-engineering",
+    "title": "Vaste prijs. Eigen code. Klaar voor certificering.",
     "chip1": "Gecontractualiseerde vaste prijs",
     "chip2": "10–16 weken",
     "chip3": "Klaar voor certificering",
     "chip4": "100% klant-IP",
-    "cta": "Asset engineering bekijken"
+    "cta": "Asset-engineering bekijken"
   },
   "techStack": {
     "label": "Tech Stack",

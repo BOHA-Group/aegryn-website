@@ -2853,11 +2853,11 @@
   "build_service": {
     "meta": {
       "title": "Conception d'actifs numériques à forfait fixe - Aegryn",
-      "desc": "Développement SaaS B2B, IA et app mobile à prix forfaitaire fixe — documentation complète et certification-ready incluse. Aucun dépassement, actif valorisable dès la conception."
+      "desc": "Développement SaaS B2B, IA et app mobile à prix forfaitaire fixe — documentation complète et prêt pour la certification incluse. Aucun dépassement, actif valorisable dès la conception."
     },
     "label": "Services - Conception d'actifs",
-    "title": "On construit.\nVous possédez.\nPrix fixe. Certification-ready.",
-    "desc": "Aegryn conçoit des actifs numériques — SaaS B2B, IA verticale, application mobile — à prix forfaitaire défini avant le premier sprint. Chaque actif livré est accompagné d'une documentation complète qui le rend certification-ready dès la livraison.",
+    "title": "On construit.\nVous possédez.\nPrix fixe. Prêt pour la certification.",
+    "desc": "Aegryn conçoit des actifs numériques — SaaS B2B, IA verticale, application mobile — à prix forfaitaire défini avant le premier sprint. Chaque actif livré est accompagné d'une documentation complète qui le rend prêt pour la certification dès la livraison.",
     "difference": {
       "label": "Pas une agence. Pas un studio.",
       "title": "La différence Aegryn.",
@@ -2874,7 +2874,7 @@
         },
         {
           "num": "03",
-          "title": "Certification-ready à la livraison",
+          "title": "Prêt pour la certification à la livraison",
           "desc": "Chaque actif livré est accompagné d'une documentation technique complète (architecture, API, sécurité, IP) qui le rend apte à une certification indépendante par tout auditeur tiers."
         }
       ]
@@ -2897,7 +2897,7 @@
         "Jalons mesurables par sprint",
         "Dépassement périmètre absorbé par Aegryn",
         "Documentation technique complète incluse",
-        "Actif certification-ready à la livraison"
+        "Actif prêt pour la certification à la livraison"
       ],
       "processItems": [
         "Discovery 1–2 semaines inclus",
@@ -2909,7 +2909,7 @@
     },
     "certificationBenefits": {
       "label": "Pourquoi la documentation change tout",
-      "title": "Un actif certification-ready\nvaut structurellement plus.",
+      "title": "Un actif prêt pour la certification\nvaut structurellement plus.",
       "items": [
         {
           "title": "Valeur documentée et défendable",
@@ -5319,14 +5319,14 @@
     "assetsTitle": "Un portefeuille\nd'actifs tech sélectifs.",
     "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques — SaaS B2B, marketplaces, outils IA. Chaque actif est certifié, documenté, opéré en conditions réelles.",
     "assetsCta": "Voir le portefeuille",
-    "engineeringLabel": "Asset Engineering",
+    "engineeringLabel": "Ingénierie d'actifs",
     "engineeringTitle": "Conception d'actifs\nsur-mesure pour des tiers.",
-    "engineeringDesc": "Particuliers, entrepreneurs, institutions : Aegryn conçoit votre actif numérique en custom code, forfait fixe, certification-ready. Propriété intellectuelle totale, zéro dette technique.",
-    "engineeringCta": "Découvrir Asset Engineering"
+    "engineeringDesc": "Particuliers, entrepreneurs, institutions : Aegryn conçoit votre actif numérique en custom code, forfait fixe, prêt pour la certification. Propriété intellectuelle totale, zéro dette technique.",
+    "engineeringCta": "Découvrir Ingénierie d'actifs"
   },
   "buildEngineeringStrip": {
-    "label": "Asset Engineering",
-    "title": "Forfait fixe. Code propriétaire. Certification-ready.",
+    "label": "Ingénierie d'actifs",
+    "title": "Forfait fixe. Code propriétaire. Prêt pour la certification.",
     "chip1": "Prix fixe contractualisé",
     "chip2": "10–16 semaines",
     "chip3": "Prêt pour la certification",

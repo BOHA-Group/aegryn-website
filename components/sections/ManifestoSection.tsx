@@ -108,7 +108,7 @@ export function ManifestoSection() {
               / {tW('label')}
             </span>
             <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
-              03
+              01
             </span>
           </div>
           <div className="py-16 border-b border-ag-border text-center px-4">
@@ -153,9 +153,14 @@ export function ManifestoSection() {
 
             {/* Left col */}
             <div className="py-24 md:pr-16">
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
-                / {tA('label')}
-              </p>
+              <div className="flex items-center justify-between mb-10">
+                <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+                  / {tA('label')}
+                </p>
+                <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
+                  02
+                </span>
+              </div>
               <h2
                 ref={aboutH2Ref}
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] pb-[0.15em] mb-12 overflow-hidden"

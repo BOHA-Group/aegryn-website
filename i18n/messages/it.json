@@ -2853,11 +2853,11 @@
   "build_service": {
     "meta": {
       "title": "Sviluppo di asset digitali a prezzo fisso - Aegryn",
-      "desc": "Sviluppo SaaS B2B, IA e app mobile a prezzo fisso — documentazione completa e consegna certification-ready inclusa. Nessuno sforamento, asset valorizzabile dalla concezione."
+      "desc": "Sviluppo SaaS B2B, IA e app mobile a prezzo fisso — documentazione completa e consegna pronto per la certificazione inclusa. Nessuno sforamento, asset valorizzabile dalla concezione."
     },
     "label": "Servizi - Sviluppo di asset",
-    "title": "Noi costruiamo.\nVoi possedete.\nPrezzo fisso. Certification-ready.",
-    "desc": "Aegryn progetta asset digitali — SaaS B2B, IA verticale, app mobile — a prezzo fisso definito prima del primo sprint. Ogni asset consegnato include documentazione completa che lo rende certification-ready dalla consegna.",
+    "title": "Noi costruiamo.\nVoi possedete.\nPrezzo fisso. Pronto per la certificazione.",
+    "desc": "Aegryn progetta asset digitali — SaaS B2B, IA verticale, app mobile — a prezzo fisso definito prima del primo sprint. Ogni asset consegnato include documentazione completa che lo rende pronto per la certificazione dalla consegna.",
     "difference": {
       "label": "Non un'agenzia. Non uno studio.",
       "title": "La differenza Aegryn.",
@@ -2874,7 +2874,7 @@
         },
         {
           "num": "03",
-          "title": "Certification-ready alla consegna",
+          "title": "Pronto per la certificazione alla consegna",
           "desc": "Ogni asset consegnato include documentazione tecnica completa (architettura, API, sicurezza, IP) che lo rende pronto per una certificazione indipendente da qualsiasi auditor terzo."
         }
       ]
@@ -2897,7 +2897,7 @@
         "Milestone misurabili per sprint",
         "Sforamento scope assorbito da Aegryn",
         "Documentazione tecnica completa inclusa",
-        "Asset certification-ready alla consegna"
+        "Asset pronto per la certificazione alla consegna"
       ],
       "processItems": [
         "Discovery 1–2 settimane incluso",
@@ -2909,7 +2909,7 @@
     },
     "certificationBenefits": {
       "label": "Perché la documentazione cambia tutto",
-      "title": "Un asset certification-ready\nvale strutturalmente di più.",
+      "title": "Un asset pronto per la certificazione\nvale strutturalmente di più.",
       "items": [
         {
           "title": "Valore documentato e difendibile",
@@ -5323,14 +5323,14 @@
     "assetsTitle": "Un portafoglio selettivo\ndi asset tech.",
     "assetsDesc": "Aegryn progetta e gestisce i propri asset digitali — SaaS B2B, marketplace, strumenti IA. Ogni asset è certificato, documentato e gestito in condizioni reali.",
     "assetsCta": "Vedere il portafoglio",
-    "engineeringLabel": "Asset Engineering",
+    "engineeringLabel": "Ingegneria degli asset",
     "engineeringTitle": "Progettazione di asset\nsu misura per terzi.",
-    "engineeringDesc": "Privati, imprenditori, istituzioni: Aegryn progetta il vostro asset digitale in custom code, prezzo fisso, certification-ready. Proprietà intellettuale totale, zero debito tecnico.",
-    "engineeringCta": "Scoprire Asset Engineering"
+    "engineeringDesc": "Privati, imprenditori, istituzioni: Aegryn progetta il vostro asset digitale in codice personalizzato, prezzo fisso, pronto per la certificazione. Proprietà intellettuale totale, zero debito tecnico.",
+    "engineeringCta": "Scoprire Ingegneria degli asset"
   },
   "buildEngineeringStrip": {
-    "label": "Asset Engineering",
-    "title": "Prezzo fisso. Codice proprietario. Certification-ready.",
+    "label": "Ingegneria degli asset",
+    "title": "Prezzo fisso. Codice proprietario. Pronto per la certificazione.",
     "chip1": "Prezzo fisso contrattualizzato",
     "chip2": "10–16 settimane",
     "chip3": "Pronto per la certificazione",
