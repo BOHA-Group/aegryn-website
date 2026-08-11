@@ -3,7 +3,7 @@ import { redirect, notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, FileDown } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Dossier actif — Espace Cédant Aegryn',
@@ -234,6 +234,24 @@ export default async function SellerAssetDetailPage({
           <p className="font-sans text-[11px] text-gray-400 mt-3">
             Les identités des acquéreurs restent confidentielles. L&apos;équipe Aegryn gère le processus de sélection.
           </p>
+        </div>
+      )}
+
+      {/* Fiche de grade téléchargeable */}
+      {['graded', 'published', 'sold'].includes(asset.status ?? '') && (
+        <div className="bg-white border border-ag-border px-5 py-4 mb-6 flex items-center justify-between gap-4">
+          <div>
+            <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-1">Fiche de grade officielle</p>
+            <p className="font-sans text-[12px] text-gray-600">Document de synthèse CIFS horodaté — grade, scores C/I/F/S, référence certifiée.</p>
+          </div>
+          <a
+            href={`/api/seller/assets/${id}/grade-sheet`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-ag-navy/90 transition-colors shrink-0"
+          >
+            <FileDown size={13} /> Télécharger
+          </a>
         </div>
       )}
 

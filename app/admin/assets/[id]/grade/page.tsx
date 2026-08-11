@@ -103,6 +103,15 @@ export default async function AdminAssetGradePage({
               className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
               Leads
             </Link>
+            {!!a.official_grade && !!a.graded_at && (
+              <a
+                href={`/api/admin/assets/${id}/grade-sheet`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] font-semibold text-white bg-ag-navy border border-ag-navy px-3 py-1.5 hover:bg-ag-navy/90 transition-colors">
+                ↓ Fiche de grade
+              </a>
+            )}
           </div>
           <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN — Attribution de grade officiel</p>
           <h1 className="text-[24px] font-bold text-gray-900 tracking-tight">
