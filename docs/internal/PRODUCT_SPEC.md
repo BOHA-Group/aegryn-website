@@ -154,9 +154,19 @@ See `TRANSFER_CHECKLIST.md` for the full operational checklist.
 
 ---
 
-## 8. Non-Goals (explicit)
+## 8. Explicit Non-Goals
 
-- Aegryn does not manage equity stakes or minority participations (parking lot)
-- Aegryn does not publish financials of listed assets publicly
-- Aegryn does not process payments between buyers and sellers directly (escrow via institution)
-- Aegryn does not offer earn-out structuring at this stage
+Aegryn never:
+- Acts as escrow agent or custodian of transaction funds
+- Provides legal, financial, or investment advice — CIFS certification is a decision-support tool, not regulated financial advice (MiFID II)
+- Guarantees asset value, transaction outcomes, post-transfer performance, or the conduct of any party — Aegryn acts solely as a certified intermediary and cannot be held liable for disputes arising between parties after closing
+- Discloses seller or buyer identity before mutual NDA
+- Publishes financials of listed assets publicly
+- Publishes any asset to the catalogue without a completed CIFS pre-screening
+- Grants catalogue access or accepts buyer registrations without verified KYC
+
+Parked (not in current scope, no committed timeline):
+- Equity stake / minority participation management
+- Earn-out structuring and monitoring
+- Institutional partner API
+- CIFS extension to on-chain assets
