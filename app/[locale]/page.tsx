@@ -27,9 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-export default async function HomePage({ params }: Props) {
-  const { locale } = await params
-
+export default async function HomePage(_props: Props) {
   return (
     <>
       {/* ── 0. Hero ────────────────────────────────────────── */}
