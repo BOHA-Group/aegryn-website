@@ -50,7 +50,7 @@
   "hero": {
     "tagline": "Nous refusons qu'un actif solide disparaisse dans une transaction mal préparée.",
     "eyebrow": "INFRASTRUCTURE DE CERTIFICATION ET DE TRANSACTION TECH",
-    "title": "Rare by selection.",
+    "title": "Rare par sélection.",
     "sub": "La plupart des transactions échouent non pas par manque de capital mais par manque de confiance. Nous sommes là pour changer ça.",
     "cta": "DÉCOUVRIR LE CATALOGUE",
     "strip": "INFRASTRUCTURE DE CERTIFICATION ET DE TRANSACTION TECH",
@@ -229,7 +229,7 @@
   "aboutSection": {
     "label": "À propos d'Aegryn",
     "title": "Trois métiers.\nUn standard de marché.",
-    "desc": "Aegryn construit des actifs tech propriétaires, les certifie selon un label indépendant, et les transige via un processus confidentiel entre vendeurs et acquéreurs qualifiés. La première infrastructure de confiance pour le M&A tech en Europe.",
+    "desc": "Aegryn conçoit des actifs tech, les certifie selon un label indépendant, et les transige via un processus confidentiel entre vendeurs et acquéreurs qualifiés. La première infrastructure de confiance pour le M&A tech en Europe.",
     "tagline": "CERTIFIÉ EN SUISSE. RÉFÉRENCE EN EUROPE.",
     "cta": "À propos d'Aegryn",
     "quote": "Un actif tech sans certification indépendante, c'est une valeur sans preuve. Aegryn apporte la preuve sur chaque actif, à chaque transfert.",
@@ -2721,7 +2721,7 @@
     ]
   },
   "acqStrip": {
-    "label": "Acquisition Support",
+    "label": "Accompagnement à l'acquisition",
     "title": "Votre prochaine acquisition mérite le bon partenaire financier.",
     "desc": "Aegryn ne prête pas. Aegryn connecte. Notre réseau de partenaires VC et de fonds d'investissement peut co-financer, co-investir, ou structurer le financement de votre prochaine acquisition d'actif tech certifié.",
     "chip1": "Co-investissement VC",

@@ -61,7 +61,7 @@ export function AegrynLogo({ className = '', size = 32, variant = 'full', onDark
             display: 'block',
           }}
         >
-          formerly BOHA-Group
+          by BOHA-Group
         </span>
       </span>
     </span>

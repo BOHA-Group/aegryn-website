@@ -35,9 +35,8 @@ export default async function HomePage({ params }: Props) {
     <>
       {/* ── Hero ───────────────────────────────────────────── */}
       <HeroMountain />
-      <ManifestoSection />
 
-      {/* ── 1. Build ───────────────────────────────────────── */}
+      {/* ── 1. Conception (Build) ──────────────────────────── */}
       <BuildStrip />
       <BuildEngineeringStrip />
 
@@ -60,8 +59,11 @@ export default async function HomePage({ params }: Props) {
       <MarketStatStrip />
       <WhyUseApps />
 
-      {/* ── Blog ───────────────────────────────────────────── */}
+      {/* ── 5. Blog ────────────────────────────────────────── */}
       <DiscoverStrip />
+
+      {/* ── 6. À propos ────────────────────────────────────── */}
+      <ManifestoSection />
     </>
   )
 }

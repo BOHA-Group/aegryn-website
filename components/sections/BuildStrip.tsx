@@ -30,7 +30,7 @@ export function BuildStrip() {
   return (
     <section ref={ref} className="border-t border-ag-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 md:py-6">
-        <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-ag-apex mb-8 md:mb-10">
+        <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-ag-gray-light mb-8 md:mb-10">
           {t('label')}
         </p>
       </div>
@@ -44,7 +44,7 @@ export function BuildStrip() {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.08] whitespace-pre-line"
-            style={{ fontSize: 'clamp(26px,3.2vw,44px)' }}
+            style={{ fontSize: 'clamp(22px,2.6vw,36px)' }}
           >
             {t('assetsTitle')}
           </h2>
@@ -61,12 +61,12 @@ export function BuildStrip() {
 
         {/* Panneau droit — Asset Engineering */}
         <div className="build-panel bg-ag-navy px-8 md:px-12 py-12 md:py-16 flex flex-col gap-6">
-          <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-ag-apex/70">
+          <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-white/50">
             {t('engineeringLabel')}
           </p>
           <h2
             className="font-sans font-bold text-white tracking-[-0.025em] leading-[1.08] whitespace-pre-line"
-            style={{ fontSize: 'clamp(26px,3.2vw,44px)' }}
+            style={{ fontSize: 'clamp(22px,2.6vw,36px)' }}
           >
             {t('engineeringTitle')}
           </h2>
