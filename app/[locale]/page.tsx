@@ -2,6 +2,7 @@ import { getTranslations }  from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { HeroMountain }      from '@/components/sections/HeroMountain'
 import { ManifestoSection }  from '@/components/sections/ManifestoSection'
+import { BuildStrip }        from '@/components/sections/BuildStrip'
 import { GradeStrip }        from '@/components/sections/GradeStrip'
 import { MissionVideoSection } from '@/components/sections/MissionVideoSection'
 import { EcosystemDomains }  from '@/components/sections/EcosystemDomains'
@@ -9,6 +10,7 @@ import { AuctionNarrative }  from '@/components/sections/AuctionNarrative'
 import { MarketStatStrip }   from '@/components/sections/MarketStatStrip'
 import { WhyUseApps }        from '@/components/sections/WhyUseApps'
 import { AcqSupportStrip }   from '@/components/sections/AcqSupportStrip'
+import { BuildEngineeringStrip } from '@/components/sections/BuildEngineeringStrip'
 import { StatementStrip }    from '@/components/sections/StatementStrip'
 import { DiscoverStrip }     from '@/components/sections/DiscoverStrip'
 import type { Metadata }    from 'next'
@@ -33,6 +35,7 @@ export default async function HomePage({ params }: Props) {
     <>
       <HeroMountain />
       <ManifestoSection />
+      <BuildStrip />
       <GradeStrip />
       <MissionVideoSection />
       <EcosystemDomains />
@@ -40,6 +43,7 @@ export default async function HomePage({ params }: Props) {
       <MarketStatStrip />
       <WhyUseApps />
       <AcqSupportStrip />
+      <BuildEngineeringStrip />
       <StatementStrip
         label="Aegryn Advisory"
         title={tAdv('hero.title')}

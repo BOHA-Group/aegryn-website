@@ -4617,7 +4617,9 @@
     "termsCgv": "CGV",
     "privacy": "Confidentialité",
     "security": "Sécurité",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "groupBuild": "Build",
+    "servicesBuild": "Conception d'actifs"
   },
   "clientAuction": {
     "eyebrow": "Espace acquéreur",
@@ -5295,5 +5297,25 @@
     "tier1Label": "Actifs principaux",
     "tier2Label": "En développement",
     "cta": "Soumettre un actif"
+  },
+  "buildStrip": {
+    "label": "Aegryn Build",
+    "assetsLabel": "Actifs propriétaires",
+    "assetsTitle": "Un portefeuille\nd'actifs tech sélectifs.",
+    "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques — SaaS B2B, marketplaces, outils IA. Chaque actif est certifié, documenté, opéré en conditions réelles.",
+    "assetsCta": "Voir le portefeuille",
+    "engineeringLabel": "Asset Engineering",
+    "engineeringTitle": "Conception d'actifs\nsur-mesure pour des tiers.",
+    "engineeringDesc": "Particuliers, entrepreneurs, institutions : Aegryn conçoit votre actif numérique en custom code, forfait fixe, certification-ready. Propriété intellectuelle totale, zéro dette technique.",
+    "engineeringCta": "Découvrir Asset Engineering"
+  },
+  "buildEngineeringStrip": {
+    "label": "Asset Engineering",
+    "title": "Forfait fixe. Code propriétaire. Certification-ready.",
+    "chip1": "Prix fixe contractualisé",
+    "chip2": "10–16 semaines",
+    "chip3": "Certification-ready",
+    "chip4": "IP 100% client",
+    "cta": "Voir la conception d'actifs"
   }
 }

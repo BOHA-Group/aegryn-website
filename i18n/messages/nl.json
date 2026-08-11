@@ -4614,7 +4614,9 @@
     "termsCgv": "Verkoopvoorwaarden",
     "privacy": "Privacy",
     "security": "Beveiliging",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "groupBuild": "Build",
+    "servicesBuild": "Asset engineering"
   },
   "clientAuction": {
     "eyebrow": "Kopersruimte",
@@ -5292,5 +5294,25 @@
     "tier1Label": "Kernactiva",
     "tier2Label": "In ontwikkeling",
     "cta": "Actief indienen"
+  },
+  "buildStrip": {
+    "label": "Aegryn Build",
+    "assetsLabel": "Eigen assets",
+    "assetsTitle": "Een selectief portfolio\nvan tech-assets.",
+    "assetsDesc": "Aegryn ontwerpt en beheert eigen digitale assets — B2B SaaS, marktplaatsen, AI-tools. Elk asset is gecertificeerd, gedocumenteerd en beheerd onder echte condities.",
+    "assetsCta": "Portfolio bekijken",
+    "engineeringLabel": "Asset Engineering",
+    "engineeringTitle": "Op maat gemaakte asset-\nontwerp voor derden.",
+    "engineeringDesc": "Particulieren, ondernemers, instellingen: Aegryn ontwerpt uw digitaal asset in custom code, vaste prijs, certification-ready. Volledig intellectueel eigendom, nul technische schuld.",
+    "engineeringCta": "Asset Engineering ontdekken"
+  },
+  "buildEngineeringStrip": {
+    "label": "Asset Engineering",
+    "title": "Vaste prijs. Propriëtaire code. Certification-ready.",
+    "chip1": "Gecontractualiseerde vaste prijs",
+    "chip2": "10–16 weken",
+    "chip3": "Certification-ready",
+    "chip4": "100% klant-IP",
+    "cta": "Asset engineering bekijken"
   }
 }

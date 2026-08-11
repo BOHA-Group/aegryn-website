@@ -165,7 +165,7 @@ export function HeroMountain() {
                 <ArrowUpRight size={13} />
               </Link>
               <Link
-                href="/auction#sell"
+                href="/auction/how-to-sell"
                 className="inline-flex items-center gap-3 border border-white/40 text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-3.5 hover:border-white hover:bg-white/10 transition-all duration-300"
               >
                 {t('ctaSecondary')}

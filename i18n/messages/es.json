@@ -4614,7 +4614,9 @@
     "termsCgv": "Condiciones de venta",
     "privacy": "Privacidad",
     "security": "Seguridad",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "groupBuild": "Build",
+    "servicesBuild": "Concepción de activos"
   },
   "clientAuction": {
     "eyebrow": "Espacio comprador",
@@ -5292,5 +5294,25 @@
     "tier1Label": "Activos principales",
     "tier2Label": "En desarrollo",
     "cta": "Enviar un activo"
+  },
+  "buildStrip": {
+    "label": "Aegryn Build",
+    "assetsLabel": "Activos propietarios",
+    "assetsTitle": "Una cartera selectiva\nde activos tech.",
+    "assetsDesc": "Aegryn diseña y opera sus propios activos digitales — SaaS B2B, marketplaces, herramientas IA. Cada activo está certificado, documentado y operado en condiciones reales.",
+    "assetsCta": "Ver la cartera",
+    "engineeringLabel": "Asset Engineering",
+    "engineeringTitle": "Concepción de activos\na medida para terceros.",
+    "engineeringDesc": "Particulares, emprendedores, instituciones: Aegryn diseña su activo digital en custom code, precio fijo, certification-ready. Propiedad intelectual total, cero deuda técnica.",
+    "engineeringCta": "Descubrir Asset Engineering"
+  },
+  "buildEngineeringStrip": {
+    "label": "Asset Engineering",
+    "title": "Precio fijo. Código propietario. Certification-ready.",
+    "chip1": "Precio fijo contractualizado",
+    "chip2": "10–16 semanas",
+    "chip3": "Certification-ready",
+    "chip4": "IP 100% cliente",
+    "cta": "Ver concepción de activos"
   }
 }

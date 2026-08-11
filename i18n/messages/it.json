@@ -4614,7 +4614,9 @@
     "termsCgv": "Condizioni di vendita",
     "privacy": "Privacy",
     "security": "Sicurezza",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "groupBuild": "Build",
+    "servicesBuild": "Progettazione di asset"
   },
   "clientAuction": {
     "eyebrow": "Spazio acquirente",
@@ -5292,5 +5294,25 @@
     "tier1Label": "Asset principali",
     "tier2Label": "In sviluppo",
     "cta": "Invia un asset"
+  },
+  "buildStrip": {
+    "label": "Aegryn Build",
+    "assetsLabel": "Asset proprietari",
+    "assetsTitle": "Un portafoglio selettivo\ndi asset tech.",
+    "assetsDesc": "Aegryn progetta e gestisce i propri asset digitali — SaaS B2B, marketplace, strumenti IA. Ogni asset è certificato, documentato e gestito in condizioni reali.",
+    "assetsCta": "Vedere il portafoglio",
+    "engineeringLabel": "Asset Engineering",
+    "engineeringTitle": "Progettazione di asset\nsu misura per terzi.",
+    "engineeringDesc": "Privati, imprenditori, istituzioni: Aegryn progetta il vostro asset digitale in custom code, prezzo fisso, certification-ready. Proprietà intellettuale totale, zero debito tecnico.",
+    "engineeringCta": "Scoprire Asset Engineering"
+  },
+  "buildEngineeringStrip": {
+    "label": "Asset Engineering",
+    "title": "Prezzo fisso. Codice proprietario. Certification-ready.",
+    "chip1": "Prezzo fisso contrattualizzato",
+    "chip2": "10–16 settimane",
+    "chip3": "Certification-ready",
+    "chip4": "IP 100% cliente",
+    "cta": "Vedere la progettazione di asset"
   }
 }
