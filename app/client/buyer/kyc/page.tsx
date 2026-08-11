@@ -70,7 +70,6 @@ export default async function BuyerKycPage() {
   const t = await getTranslations({ locale, namespace: 'client.buyer.kyc' })
   const tc = await getTranslations({ locale, namespace: 'client.common' })
 
-
   const supa = createServiceClient()
 
   /* Charger le profil pour d\u00e9tecter la cat\u00e9gorie acqu\u00e9reur */

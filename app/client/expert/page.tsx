@@ -13,7 +13,6 @@ export default async function ExpertClientPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
 
-
   const supa = createServiceClient()
 
   const [{ data: profile }, { data: expertProfile }] = await Promise.all([

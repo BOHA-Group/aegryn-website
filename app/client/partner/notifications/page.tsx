@@ -33,7 +33,6 @@ export default async function PartnerNotificationsPage() {
   const t = await getTranslations({ locale, namespace: 'client.partner.notifications' })
   const tc = await getTranslations({ locale, namespace: 'client.common' })
 
-
   const supa = createServiceClient()
   const { data } = await supa
     .from('user_notifications')

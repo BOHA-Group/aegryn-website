@@ -39,7 +39,7 @@ const STATUS_CONFIG: Record<string, { label: string; renderIcon: () => React.Rea
 
 function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
-  return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
+  return new Date(d).toLocaleDateString(locale, { day: '2-digit', month: 'long', year: 'numeric' })
 }
 
 type KycDoc = {
@@ -61,7 +61,6 @@ export default async function SellerKycPage() {
   const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
   const t = await getTranslations({ locale, namespace: 'client.seller.kyc' })
   const tc = await getTranslations({ locale, namespace: 'client.common' })
-
 
   const supa = createServiceClient()
   const { data: docs } = await supa

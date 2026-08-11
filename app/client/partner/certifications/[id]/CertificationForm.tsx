@@ -44,7 +44,6 @@ export default function CertificationForm({ certId, currentStatus, dimension }: 
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
-
   function toggleSubcode(code: string) {
     setSelectedSubcodes(prev =>
       prev.includes(code) ? prev.filter(c => c !== code) : [...prev, code]

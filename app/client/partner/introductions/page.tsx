@@ -20,8 +20,6 @@ export default async function PartnerIntroductionsPage() {
   const cookieStore = await cookies()
   const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
   const t = await getTranslations({ locale, namespace: 'client.partner.introductions' })
-  const tc = await getTranslations({ locale, namespace: 'client.common' })
-
 
   const supa = createServiceClient()
   const { data: introductions } = await supa

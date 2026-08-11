@@ -45,8 +45,6 @@ export default async function ClientMyAssetsPage() {
   const cookieStore = await cookies()
   const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
 
-
-
   const supa = createServiceClient()
 
   /* Dispatcher de rôles — redirige vers l'espace approprié */

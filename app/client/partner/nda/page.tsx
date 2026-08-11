@@ -19,8 +19,6 @@ export default async function PartnerNdaPage() {
   const cookieStore = await cookies()
   const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
   const t = await getTranslations({ locale, namespace: 'client.partner.nda' })
-  const tc = await getTranslations({ locale, namespace: 'client.common' })
-
 
   const supa = createServiceClient()
   const [{ data: profile }, { data: ndaAcceptance }] = await Promise.all([

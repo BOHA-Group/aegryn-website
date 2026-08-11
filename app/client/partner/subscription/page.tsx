@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
-  return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
+  return new Date(d).toLocaleDateString(locale, { day: '2-digit', month: 'long', year: 'numeric' })
 }
 
 function isActiveCheck(p: string | null) { return p === 'active' }
@@ -33,8 +33,6 @@ export default async function PartnerSubscriptionPage({
   const cookieStore = await cookies()
   const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
   const t = await getTranslations({ locale, namespace: 'client.partner.subscription' })
-  const tc = await getTranslations({ locale, namespace: 'client.common' })
-
 
   const { success, canceled } = await searchParams
 
@@ -64,7 +62,6 @@ export default async function PartnerSubscriptionPage({
           Votre fiche expert est visible dans l&apos;annuaire Aegryn tant que votre abonnement est actif.
         </p>
       </div>
-
 
       {/* Feedback paiement */}
       {success === '1' && (

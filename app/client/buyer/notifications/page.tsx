@@ -33,7 +33,6 @@ export default async function BuyerNotificationsPage() {
   const t = await getTranslations({ locale, namespace: 'client.buyer.notifications' })
   const tc = await getTranslations({ locale, namespace: 'client.common' })
 
-
   const supa = createServiceClient()
   const { data } = await supa
     .from('user_notifications')

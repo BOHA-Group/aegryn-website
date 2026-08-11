@@ -20,8 +20,6 @@ export default async function PartnerExpertProfilePage() {
   const cookieStore = await cookies()
   const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
   const t = await getTranslations({ locale, namespace: 'client.partner.expertProfile' })
-  const tc = await getTranslations({ locale, namespace: 'client.common' })
-
 
   const supa = createServiceClient()
 

@@ -35,7 +35,7 @@ function gradeColor(g: string) {
 
 function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
-  return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
+  return new Date(d).toLocaleDateString(locale, { day: '2-digit', month: 'long', year: 'numeric' })
 }
 
 function fmtChf(n: number | null) {
@@ -64,8 +64,6 @@ export default async function SellerActifsPage() {
   const cookieStore = await cookies()
   const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
   const t = await getTranslations({ locale, namespace: 'client.seller.actifs' })
-  const tc = await getTranslations({ locale, namespace: 'client.common' })
-
 
   const supa = createServiceClient()
 

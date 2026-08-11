@@ -33,7 +33,7 @@ const CLIENT_TYPE_LABELS: Record<string, string> = {
 
 function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
-  return new Date(d).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
+  return new Date(d).toLocaleDateString(locale, { day: '2-digit', month: 'long', year: 'numeric' })
 }
 
 type Mandate = {
@@ -56,8 +56,6 @@ export default async function PartnerMandatesPage() {
   const cookieStore = await cookies()
   const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
   const t = await getTranslations({ locale, namespace: 'client.partner.mandates' })
-  const tc = await getTranslations({ locale, namespace: 'client.common' })
-
 
   const supa = createServiceClient()
   const { data: mandates } = await supa
@@ -98,7 +96,6 @@ export default async function PartnerMandatesPage() {
           )}
         </div>
       )}
-
 
       {ms.length === 0 ? (
         <div className="bg-white border border-gray-200 px-8 py-16 text-center">

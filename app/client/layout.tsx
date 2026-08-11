@@ -7,7 +7,6 @@ import { createServiceClient } from '@/lib/supabase'
 import Nav, { type NavUser } from '@/components/layout/Nav'
 import '@/styles/globals.css'
 
-
 const SUPPORTED_LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
 type SupportedLocale = typeof SUPPORTED_LOCALES[number]
 

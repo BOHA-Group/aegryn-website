@@ -57,7 +57,6 @@ export default async function BuyerTransactionsPage() {
 
   const t = await getTranslations({ locale, namespace: 'client.buyer' })
 
-
   const supa = createServiceClient()
   const { data: transactions } = await supa
     .from('transactions')
