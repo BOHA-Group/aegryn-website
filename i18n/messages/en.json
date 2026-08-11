@@ -2663,24 +2663,119 @@
       "avgMultiple": "Median multiple"
     },
     "sell": {
-      "label": "Sell via Aegryn",
-      "title": "Your asset deserves\nbetter than a broker.",
-      "desc": "A transparent process, an objective grade, pre-qualified buyers. Our fee is aligned with your success, terms in GTC.",
-      "step1Title": "Submit",
-      "step1Desc": "Fill in the submission form. Basic asset information, key metrics, available documentation.",
-      "step2Title": "Certification",
-      "step2Desc": "Our team evaluates your asset across 4 dimensions. You receive a full certification report with the AEG grade.",
-      "step3Title": "Session preparation",
-      "step3Desc": "You sign the seller T&Cs, set your floor price. Your asset then becomes accessible to the qualified buyers registered for the session.",
-      "step4Title": "Transaction",
-      "step4Desc": "Negotiation supervised by our teams. Institutional escrow. Secure transfer of rights.",
-      "feesTitle": "Our fee structure",
-      "feesDesc": "Our fee structure is built on two components, aligned with the quality of your file and your success.",
-      "feesCert": "Certification",
-      "feesCertValue": "Fixed filing and audit fee covering the full CIFS certification process, regardless of the transaction outcome.",
-      "feesSuccess": "Success fee",
-      "feesSuccessValue": "Commission on the final sale price, paid at closing only. Amount negotiated on a case-by-case basis during qualification.",
-      "cta": "Submit my asset now"
+      "meta": {
+        "title": "Sell your asset — Aegryn Auction",
+        "desc": "Aegryn seller journey: indicative valuation, readiness score, mandate submission. CIFS certification, absolute confidentiality, Swiss institutional escrow."
+      },
+      "hero": {
+        "label": "Sell your asset",
+        "title": "Your asset deserves\na transaction at its real value.",
+        "desc": "Aegryn certifies, grades and puts pre-qualified institutional buyers in competition — in a confidential, structured framework, under Swiss law.",
+        "ctaValuation": "Estimate the value",
+        "ctaMandat": "Submit a mandate"
+      },
+      "steps": {
+        "label": "Seller journey",
+        "title": "Three steps, from valuation to mandate.",
+        "step2Label": "Step 02",
+        "step2Title": "Is your asset ready for an auction session?",
+        "s1": {
+          "title": "Indicative valuation",
+          "desc": "Get a valuation range in 4 steps (finance, code, IP, security) and an estimated Aegryn grade. Free, confidential, no commitment.",
+          "cta": "Estimate the value →"
+        },
+        "s2": {
+          "title": "Readiness Score",
+          "desc": "Assess whether your file is ready for an auction session: data room, contracts, operational independence, IP, technical debt. 6 questions, instant result."
+        },
+        "s3": {
+          "title": "Mandate submission",
+          "desc": "Submit your asset to the Aegryn team. Independent CIFS certification, official grade assignment, entry into an auction session under a 60-day exclusive mandate.",
+          "cta": "Submit your mandate →"
+        }
+      },
+      "guarantees": {
+        "label": "Aegryn commitments",
+        "title": "What you won't get elsewhere.",
+        "g1": {
+          "title": "Absolute confidentiality",
+          "desc": "Your asset's identity is never revealed before the buyer signs the NDA and the auction session opens."
+        },
+        "g2": {
+          "title": "100% pre-qualified buyers",
+          "desc": "Every buyer is verified: financial capacity, sector, ticket size. Zero tyre-kickers, zero direct competitors without prior agreement."
+        },
+        "g3": {
+          "title": "Swiss bank escrow",
+          "desc": "10% of the price at HoT via institutional escrow. No asset transfer before funds are released. Swiss jurisdiction."
+        },
+        "g4": {
+          "title": "Independent CIFS certification",
+          "desc": "Grade ★/AAA/AA/A/B assigned by an independent auditor — finance, code, IP, security. Enforceable and documented."
+        }
+      },
+      "cta": {
+        "title": "Ready to submit your asset?",
+        "desc": "Mandate submission is free. Our team gets back to you within 48h.",
+        "ctaMandat": "Submit a mandate",
+        "ctaAdvisor": "Talk to an advisor"
+      },
+      "readiness": {
+        "toolLabel": "Aegryn Tool",
+        "toolTitle": "Readiness Score",
+        "restart": "Restart",
+        "intro": "Assess in 2 minutes whether your asset is ready for submission to an Aegryn auction session.",
+        "answerYes": "Yes",
+        "answerPartial": "Partial",
+        "answerNo": "No",
+        "progress": "{answered} / {total} questions",
+        "calculateBtn": "Calculate my score",
+        "scoreLabel": "Score: {score} / {max} points",
+        "weakPoints": "Areas to strengthen",
+        "levels": {
+          "ready": {
+            "label": "Asset ready for submission",
+            "message": "Your asset has the characteristics of a file eligible for an Aegryn auction session. We recommend submitting your mandate for review by our team.",
+            "cta": "Submit your mandate →"
+          },
+          "almost": {
+            "label": "A few adjustments recommended",
+            "message": "Your asset is close to the required level. Fix the weak points identified above, then submit your file. Our team can assist you with preparation.",
+            "cta": "Consult an advisor →"
+          },
+          "not_ready": {
+            "label": "Preparation required before submission",
+            "message": "Several structural prerequisites are missing. We recommend an exit planning preparation programme before submitting your asset. Contact our advisory team.",
+            "cta": "Talk to an advisor →"
+          }
+        },
+        "questions": {
+          "dataroom": {
+            "label": "Data room available",
+            "hint": "Financial statements Y-2/Y-1/Y (auditable), cap table, key contracts, historical KPIs."
+          },
+          "contracts": {
+            "label": "Formalised client contracts",
+            "hint": "Signed contracts with assignment/transfer conditions, no blocking clause."
+          },
+          "founder_dependency": {
+            "label": "Operational independence from founder",
+            "hint": "The business can operate 6 months without the current founder."
+          },
+          "growth_documented": {
+            "label": "Growth documented over 12 months",
+            "hint": "Monthly MRR/ARR, churn, NRR tracked and exportable."
+          },
+          "ip_clean": {
+            "label": "Fully transferable IP",
+            "hint": "Registered trademark, proprietary code copyright, no blocking GPL component."
+          },
+          "tech_debt": {
+            "label": "Technical debt known and documented",
+            "hint": "Formalised tech debt backlog, no abandoned critical dependencies."
+          }
+        }
+      }
     },
     "buy": {
       "label": "Acquire via Aegryn",

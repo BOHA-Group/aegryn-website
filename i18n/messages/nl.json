@@ -2519,24 +2519,119 @@
       "sellerCta": "Wilt u uw activa in de volgende catalogus opnemen?"
     },
     "sell": {
-      "label": "Verkoper",
-      "title": "Verkoop uw asset\naan de juiste koper.",
-      "desc": "Aegryn vindt de optimale koper voor uw gecertificeerde asset.",
-      "step1Title": "Indienen",
-      "step1Desc": "Vul het indieningsformulier in. Basisinformatie over het asset, kernstatistieken, beschikbare documentatie.",
-      "step2Title": "Certificering",
-      "step2Desc": "Ons team beoordeelt uw asset op 4 dimensies. U ontvangt een volledig certificeringsrapport met de Aegryn Grade.",
-      "step3Title": "Sessievoorbereiding",
-      "step3Desc": "U ondertekent de verkoper-AV en stelt uw minimumprijs vast. Uw asset wordt dan toegankelijk voor de gekwalificeerde kopers die voor de sessie zijn ingeschreven.",
-      "step4Title": "Transactie",
-      "step4Desc": "Onderhandeling begeleid door onze teams. Institutioneel escrow. Veilige overdracht van rechten.",
-      "feesCert": "Certificering",
-      "feesSuccess": "Succesvergoeding",
-      "feesTitle": "Vergoedingsstructuur",
-      "cta": "Mijn asset indienen",
-      "feesDesc": "Onze vergoeding bestaat uit twee componenten, afgestemd op de kwaliteit van het dossier en uw succes.",
-      "feesCertValue": "Vaste dossier- en auditkosten voor het volledige CIFS-certificeringsproces, ongeacht de uitkomst van de transactie.",
-      "feesSuccessValue": "Commissie op de definitieve overdrachtswaarde, uitsluitend betaald bij closing. Bedrag wordt per dossier onderhandeld tijdens de kwalificatie."
+      "meta": {
+        "title": "Uw activa verkopen — Aegryn Auction",
+        "desc": "Aegryn verkopersproces: indicatieve waardering, readiness score, mandaatindiening. CIFS-certificering, absolute vertrouwelijkheid, Zwitserse institutionele escrow."
+      },
+      "hero": {
+        "label": "Uw activa verkopen",
+        "title": "Uw activa verdienen\neen overdracht tegen de werkelijke waarde.",
+        "desc": "Aegryn certificeert, gradeert en stelt vooraf gekwalificeerde institutionele kopers in concurrentie — in een vertrouwelijk, gestructureerd kader, onder Zwitsers recht.",
+        "ctaValuation": "Waarde schatten",
+        "ctaMandat": "Mandaat indienen"
+      },
+      "steps": {
+        "label": "Verkopersproces",
+        "title": "Drie stappen, van waardering tot mandaat.",
+        "step2Label": "Stap 02",
+        "step2Title": "Is uw activa klaar voor een veillingsessie?",
+        "s1": {
+          "title": "Indicatieve waardering",
+          "desc": "Ontvang een waarderingsrange in 4 stappen (financiën, code, IP, beveiliging) en een geschatte Aegryn-grade. Gratis, vertrouwelijk, vrijblijvend.",
+          "cta": "Waarde schatten →"
+        },
+        "s2": {
+          "title": "Readiness Score",
+          "desc": "Beoordeel of uw dossier klaar is voor een veillingsessie: data room, contracten, operationele onafhankelijkheid, IP, technische schuld. 6 vragen, direct resultaat."
+        },
+        "s3": {
+          "title": "Mandaatindiening",
+          "desc": "Dien uw activa in bij het Aegryn-team. Onafhankelijke CIFS-certificering, officiële grade-toewijzing, toegang tot een veillingsessie onder een exclusief mandaat van 60 dagen.",
+          "cta": "Uw mandaat indienen →"
+        }
+      },
+      "guarantees": {
+        "label": "Aegryn-verbintenissen",
+        "title": "Wat u elders niet krijgt.",
+        "g1": {
+          "title": "Absolute vertrouwelijkheid",
+          "desc": "De identiteit van uw activa wordt nooit onthuld voordat de koper de NDA ondertekent en de veillingsessie opent."
+        },
+        "g2": {
+          "title": "100% vooraf gekwalificeerde kopers",
+          "desc": "Elke koper wordt geverifieerd: financiële capaciteit, sector, ticketgrootte. Nul nieuwsgierigen, nul directe concurrenten zonder voorafgaande overeenkomst."
+        },
+        "g3": {
+          "title": "Zwitserse bancaire escrow",
+          "desc": "10% van de prijs bij HoT via institutionele escrow. Geen overdracht van activa vóór vrijgave van fondsen. Zwitserse jurisdictie."
+        },
+        "g4": {
+          "title": "Onafhankelijke CIFS-certificering",
+          "desc": "Grade ★/AAA/AA/A/B toegewezen door een onafhankelijke auditor — financiën, code, IP, beveiliging. Afdwingbaar en gedocumenteerd."
+        }
+      },
+      "cta": {
+        "title": "Klaar om uw activa in te dienen?",
+        "desc": "Mandaatindiening is gratis. Ons team reageert binnen 48u.",
+        "ctaMandat": "Mandaat indienen",
+        "ctaAdvisor": "Met een advisor spreken"
+      },
+      "readiness": {
+        "toolLabel": "Aegryn Tool",
+        "toolTitle": "Readiness Score",
+        "restart": "Opnieuw beginnen",
+        "intro": "Beoordeel in 2 minuten of uw activa klaar is voor indiening bij een Aegryn-veillingsessie.",
+        "answerYes": "Ja",
+        "answerPartial": "Gedeeltelijk",
+        "answerNo": "Nee",
+        "progress": "{answered} / {total} vragen",
+        "calculateBtn": "Mijn score berekenen",
+        "scoreLabel": "Score: {score} / {max} punten",
+        "weakPoints": "Te versterken gebieden",
+        "levels": {
+          "ready": {
+            "label": "Activa klaar voor indiening",
+            "message": "Uw activa heeft de kenmerken van een dossier dat in aanmerking komt voor een Aegryn-veillingsessie. Wij raden u aan uw mandaat in te dienen voor beoordeling door ons team.",
+            "cta": "Uw mandaat indienen →"
+          },
+          "almost": {
+            "label": "Enkele aanpassingen aanbevolen",
+            "message": "Uw activa is dicht bij het vereiste niveau. Herstel de zwakke punten die hierboven zijn geïdentificeerd en dien vervolgens uw dossier in. Ons team kan u begeleiden bij de voorbereiding.",
+            "cta": "Een advisor raadplegen →"
+          },
+          "not_ready": {
+            "label": "Voorbereiding vereist vóór indiening",
+            "message": "Meerdere structurele vereisten ontbreken. Wij raden een exit planning voorbereidingsprogramma aan voordat u uw activa indient. Neem contact op met ons advisory-team.",
+            "cta": "Met een advisor spreken →"
+          }
+        },
+        "questions": {
+          "dataroom": {
+            "label": "Data room beschikbaar",
+            "hint": "Jaarrekeningen J-2/J-1/J (controleerbaar), cap table, sleutelcontracten, historische KPI's."
+          },
+          "contracts": {
+            "label": "Geformaliseerde klantcontracten",
+            "hint": "Ondertekende contracten met overdrachts-/cessievoorwaarden, geen blokkerende clausule."
+          },
+          "founder_dependency": {
+            "label": "Operationele onafhankelijkheid van oprichter",
+            "hint": "Het bedrijf kan 6 maanden zonder de huidige oprichter opereren."
+          },
+          "growth_documented": {
+            "label": "Groei gedocumenteerd over 12 maanden",
+            "hint": "Maandelijkse MRR/ARR, churn, NRR bijgehouden en exporteerbaar."
+          },
+          "ip_clean": {
+            "label": "Volledig overdraagbaar IP",
+            "hint": "Geregistreerd handelsmerk, eigendomscode copyright, geen blokkerende GPL-component."
+          },
+          "tech_debt": {
+            "label": "Technische schuld bekend en gedocumenteerd",
+            "hint": "Geformaliseerde tech debt backlog, geen verlaten kritieke afhankelijkheden."
+          }
+        }
+      }
     },
     "buy": {
       "label": "Koper",

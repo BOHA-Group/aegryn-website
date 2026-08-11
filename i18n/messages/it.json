@@ -2519,24 +2519,119 @@
       "sellerCta": "Vuoi inserire il tuo asset nel prossimo catalogo?"
     },
     "sell": {
-      "label": "Venditore",
-      "title": "Vendi il tuo asset\nall'acquirente giusto.",
-      "desc": "Aegryn trova l'acquirente ottimale per il tuo asset certificato.",
-      "step1Title": "Invia",
-      "step1Desc": "Compila il modulo di invio. Informazioni di base sull'asset, metriche chiave, documentazione disponibile.",
-      "step2Title": "Certificazione",
-      "step2Desc": "Il nostro team valuta il tuo asset su 4 dimensioni. Riceve un rapporto di certificazione completo con il grade Aegryn.",
-      "step3Title": "Preparazione sessione",
-      "step3Desc": "Firma le CGV venditore e definisce il suo prezzo minimo. Il suo asset diventa quindi accessibile agli acquirenti qualificati iscritti alla sessione.",
-      "step4Title": "Transazione",
-      "step4Desc": "Negoziazione accompagnata dai nostri team. Escrow istituzionale. Trasferimento sicuro dei diritti.",
-      "feesCert": "Certificazione",
-      "feesSuccess": "Commissione di successo",
-      "feesTitle": "Struttura compensi",
-      "cta": "Invia il mio asset",
-      "feesDesc": "La nostra remunerazione è strutturata in due componenti, allineate alla qualità del dossier e al vostro successo.",
-      "feesCertValue": "Onorari fissi di istruzione e audit che coprono l'intero processo di certificazione CIFS, indipendentemente dall'esito della transazione.",
-      "feesSuccessValue": "Commissione sul prezzo finale di cessione, versata esclusivamente al closing. Importo negoziato caso per caso durante la qualifica."
+      "meta": {
+        "title": "Vendere il vostro asset — Aegryn Auction",
+        "desc": "Percorso cedente Aegryn: valutazione indicativa, readiness score, presentazione del mandato. Certificazione CIFS, riservatezza assoluta, deposito fiduciario istituzionale svizzero."
+      },
+      "hero": {
+        "label": "Vendere il vostro asset",
+        "title": "Il vostro asset merita\nuna cessione al suo valore reale.",
+        "desc": "Aegryn certifica, assegna un grade e mette in competizione acquirenti istituzionali prequalificati — in un quadro riservato, strutturato, sotto diritto svizzero.",
+        "ctaValuation": "Stimare il valore",
+        "ctaMandat": "Presentare un mandato"
+      },
+      "steps": {
+        "label": "Percorso cedente",
+        "title": "Tre fasi, dalla valutazione al mandato.",
+        "step2Label": "Fase 02",
+        "step2Title": "Il vostro asset è pronto per una sessione d'asta?",
+        "s1": {
+          "title": "Valutazione indicativa",
+          "desc": "Ottenete un intervallo di valutazione in 4 fasi (finanza, codice, PI, sicurezza) e un grade Aegryn stimato. Gratuito, riservato, senza impegno.",
+          "cta": "Stimare il valore →"
+        },
+        "s2": {
+          "title": "Readiness Score",
+          "desc": "Valutate se il vostro dossier è pronto per una sessione d'asta: data room, contratti, indipendenza operativa, PI, debito tecnico. 6 domande, risultato immediato."
+        },
+        "s3": {
+          "title": "Presentazione del mandato",
+          "desc": "Presentate il vostro asset al team Aegryn. Certificazione CIFS indipendente, attribuzione di grade ufficiale, ingresso in sessione d'asta sotto mandato esclusivo di 60 giorni.",
+          "cta": "Presentare il vostro mandato →"
+        }
+      },
+      "guarantees": {
+        "label": "Impegni Aegryn",
+        "title": "Quello che non troverete altrove.",
+        "g1": {
+          "title": "Riservatezza assoluta",
+          "desc": "L'identità del vostro asset non viene mai rivelata prima che l'acquirente firmi l'NDA e la sessione d'asta venga aperta."
+        },
+        "g2": {
+          "title": "Acquirenti 100% prequalificati",
+          "desc": "Ogni acquirente è verificato: capacità finanziaria, settore, ticket. Zero curiosi, zero concorrenti diretti senza accordo preliminare."
+        },
+        "g3": {
+          "title": "Deposito fiduciario bancario svizzero",
+          "desc": "10% del prezzo all'HoT tramite deposito fiduciario istituzionale. Nessun trasferimento di asset prima della liberazione dei fondi. Giurisdizione svizzera."
+        },
+        "g4": {
+          "title": "Certificazione CIFS indipendente",
+          "desc": "Grade ★/AAA/AA/A/B assegnato da un revisore indipendente — finanza, codice, PI, sicurezza. Opponibile e documentato."
+        }
+      },
+      "cta": {
+        "title": "Pronti a presentare il vostro asset?",
+        "desc": "La presentazione del mandato è gratuita. Il nostro team vi risponde entro 48h.",
+        "ctaMandat": "Presentare un mandato",
+        "ctaAdvisor": "Parlare con un advisor"
+      },
+      "readiness": {
+        "toolLabel": "Strumento Aegryn",
+        "toolTitle": "Readiness Score",
+        "restart": "Ricominciare",
+        "intro": "Valutate in 2 minuti se il vostro asset è pronto per una presentazione in una sessione d'asta Aegryn.",
+        "answerYes": "Sì",
+        "answerPartial": "Parziale",
+        "answerNo": "No",
+        "progress": "{answered} / {total} domande",
+        "calculateBtn": "Calcolare il mio punteggio",
+        "scoreLabel": "Punteggio: {score} / {max} punti",
+        "weakPoints": "Aree da rafforzare",
+        "levels": {
+          "ready": {
+            "label": "Asset pronto per la presentazione",
+            "message": "Il vostro asset presenta le caratteristiche di un dossier idoneo a una sessione d'asta Aegryn. Vi consigliamo di presentare il vostro mandato per la valutazione da parte del nostro team.",
+            "cta": "Presentare il vostro mandato →"
+          },
+          "almost": {
+            "label": "Alcuni aggiustamenti raccomandati",
+            "message": "Il vostro asset è vicino al livello richiesto. Correggete i punti deboli identificati sopra, poi presentate il vostro dossier. Il nostro team può accompagnarvi nella preparazione.",
+            "cta": "Consultare un advisor →"
+          },
+          "not_ready": {
+            "label": "Preparazione necessaria prima della presentazione",
+            "message": "Mancano diversi prerequisiti strutturali. Vi consigliamo un programma di preparazione all'exit planning prima di presentare il vostro asset. Contattate il nostro team advisory.",
+            "cta": "Parlare con un advisor →"
+          }
+        },
+        "questions": {
+          "dataroom": {
+            "label": "Data room disponibile",
+            "hint": "Bilanci A-2/A-1/A (verificabili), cap table, contratti chiave, KPI storici."
+          },
+          "contracts": {
+            "label": "Contratti clienti formalizzati",
+            "hint": "Contratti firmati con condizioni di cessione/trasferimento, senza clausola bloccante."
+          },
+          "founder_dependency": {
+            "label": "Indipendenza operativa del fondatore",
+            "hint": "L'azienda può operare 6 mesi senza il fondatore attuale."
+          },
+          "growth_documented": {
+            "label": "Crescita documentata su 12 mesi",
+            "hint": "MRR/ARR mensile, churn, NRR tracciati ed esportabili."
+          },
+          "ip_clean": {
+            "label": "PI interamente trasferibile",
+            "hint": "Marchio registrato, copyright del codice proprietario, nessun componente GPL bloccante."
+          },
+          "tech_debt": {
+            "label": "Debito tecnico noto e documentato",
+            "hint": "Backlog del debito tecnico formalizzato, nessuna dipendenza critica abbandonata."
+          }
+        }
+      }
     },
     "buy": {
       "label": "Acquirente",

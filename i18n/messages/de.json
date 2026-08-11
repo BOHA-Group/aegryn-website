@@ -2519,24 +2519,119 @@
       "sellerCta": "Möchten Sie Ihr Asset im nächsten Katalog listen?"
     },
     "sell": {
-      "label": "Verkäufer",
-      "title": "Verkaufen Sie Ihr Asset\nan den richtigen Käufer.",
-      "desc": "Aegryn findet den optimalen Käufer für Ihr zertifiziertes Asset.",
-      "step1Title": "Einreichen",
-      "step1Desc": "Füllen Sie das Einreichungsformular aus. Grundlegende Informationen zum Asset, Schlüsselkennzahlen, verfügbare Dokumentation.",
-      "step2Title": "Zertifizierung",
-      "step2Desc": "Unser Team bewertet Ihr Asset auf 4 Dimensionen. Sie erhalten einen vollständigen Zertifizierungsbericht mit Aegryn Grade.",
-      "step3Title": "Session-Vorbereitung",
-      "step3Desc": "Sie unterzeichnen die Verkäufer-AGB, legen Ihren Mindestpreis fest. Ihr Asset wird den für die Session registrierten qualifizierten Käufern zugänglich.",
-      "step4Title": "Transaktion",
-      "step4Desc": "Von unseren Teams begleitete Verhandlung. Institutionelles Escrow. Gesicherter Rechteübertrag.",
-      "feesCert": "Zertifizierung",
-      "feesSuccess": "Erfolgshonorar",
-      "feesTitle": "Gebührenstruktur",
-      "cta": "Mein Asset einreichen",
-      "feesDesc": "Unser Vergütungsmodell besteht aus zwei Komponenten, ausgerichtet auf die Qualität Ihrer Unterlagen und Ihren Erfolg.",
-      "feesCertValue": "Feste Bearbeitungs- und Prüfgebühr für den gesamten CIFS-Zertifizierungsprozess, unabhängig vom Transaktionsergebnis.",
-      "feesSuccessValue": "Provision auf den endgültigen Veräußerungserlös, fällig ausschließlich beim Closing. Betrag wird individuell während der Qualifizierung ausgehandelt."
+      "meta": {
+        "title": "Ihr Asset verkaufen — Aegryn Auction",
+        "desc": "Aegryn Verkäufer-Prozess: indikative Bewertung, Readiness Score, Mandatseinreichung. CIFS-Zertifizierung, absolute Vertraulichkeit, Schweizer institutionelles Treuhandkonto."
+      },
+      "hero": {
+        "label": "Ihr Asset verkaufen",
+        "title": "Ihr Asset verdient\neinen Verkauf zu seinem echten Wert.",
+        "desc": "Aegryn zertifiziert, benotet und stellt vorqualifizierte institutionelle Käufer in Wettbewerb — in einem vertraulichen, strukturierten Rahmen, nach Schweizer Recht.",
+        "ctaValuation": "Wert schätzen",
+        "ctaMandat": "Mandat einreichen"
+      },
+      "steps": {
+        "label": "Verkäufer-Prozess",
+        "title": "Drei Schritte, von der Bewertung zum Mandat.",
+        "step2Label": "Schritt 02",
+        "step2Title": "Ist Ihr Asset für eine Auktionssitzung bereit?",
+        "s1": {
+          "title": "Indikative Bewertung",
+          "desc": "Erhalten Sie eine Bewertungsspanne in 4 Schritten (Finanzen, Code, IP, Sicherheit) und einen geschätzten Aegryn-Grade. Kostenlos, vertraulich, unverbindlich.",
+          "cta": "Wert schätzen →"
+        },
+        "s2": {
+          "title": "Readiness Score",
+          "desc": "Prüfen Sie, ob Ihre Akte für eine Auktionssitzung bereit ist: Data Room, Verträge, operative Unabhängigkeit, IP, technische Schulden. 6 Fragen, sofortiges Ergebnis."
+        },
+        "s3": {
+          "title": "Mandatseinreichung",
+          "desc": "Reichen Sie Ihr Asset beim Aegryn-Team ein. Unabhängige CIFS-Zertifizierung, offizielle Grade-Vergabe, Eintritt in eine Auktionssitzung unter einem 60-tägigen Exklusivmandat.",
+          "cta": "Mandat einreichen →"
+        }
+      },
+      "guarantees": {
+        "label": "Aegryn-Verpflichtungen",
+        "title": "Was Sie anderswo nicht bekommen.",
+        "g1": {
+          "title": "Absolute Vertraulichkeit",
+          "desc": "Die Identität Ihres Assets wird nie offenbart, bevor der Käufer die NDA unterzeichnet und die Auktionssitzung eröffnet."
+        },
+        "g2": {
+          "title": "100% vorqualifizierte Käufer",
+          "desc": "Jeder Käufer wird überprüft: finanzielle Kapazität, Sektor, Ticketgrösse. Null Neugierige, null direkte Konkurrenten ohne vorherige Vereinbarung."
+        },
+        "g3": {
+          "title": "Schweizer Banktreuhandkonto",
+          "desc": "10% des Preises beim HoT über institutionelles Treuhandkonto. Kein Asset-Transfer vor Freigabe der Mittel. Schweizer Gerichtsbarkeit."
+        },
+        "g4": {
+          "title": "Unabhängige CIFS-Zertifizierung",
+          "desc": "Grade ★/AAA/AA/A/B vergeben durch einen unabhängigen Prüfer — Finanzen, Code, IP, Sicherheit. Durchsetzbar und dokumentiert."
+        }
+      },
+      "cta": {
+        "title": "Bereit, Ihr Asset einzureichen?",
+        "desc": "Mandatseinreichung ist kostenlos. Unser Team meldet sich innerhalb von 48h.",
+        "ctaMandat": "Mandat einreichen",
+        "ctaAdvisor": "Mit einem Advisor sprechen"
+      },
+      "readiness": {
+        "toolLabel": "Aegryn-Tool",
+        "toolTitle": "Readiness Score",
+        "restart": "Neu starten",
+        "intro": "Prüfen Sie in 2 Minuten, ob Ihr Asset für eine Einreichung bei einer Aegryn-Auktionssitzung bereit ist.",
+        "answerYes": "Ja",
+        "answerPartial": "Teilweise",
+        "answerNo": "Nein",
+        "progress": "{answered} / {total} Fragen",
+        "calculateBtn": "Mein Score berechnen",
+        "scoreLabel": "Score: {score} / {max} Punkte",
+        "weakPoints": "Zu stärkende Bereiche",
+        "levels": {
+          "ready": {
+            "label": "Asset bereit zur Einreichung",
+            "message": "Ihr Asset weist die Merkmale einer für eine Aegryn-Auktionssitzung geeigneten Akte auf. Wir empfehlen Ihnen, Ihr Mandat zur Prüfung durch unser Team einzureichen.",
+            "cta": "Mandat einreichen →"
+          },
+          "almost": {
+            "label": "Einige Anpassungen empfohlen",
+            "message": "Ihr Asset ist nahe am erforderlichen Niveau. Beheben Sie die oben identifizierten Schwachpunkte und reichen Sie Ihre Akte ein. Unser Team kann Sie bei der Vorbereitung unterstützen.",
+            "cta": "Advisor konsultieren →"
+          },
+          "not_ready": {
+            "label": "Vorbereitung vor Einreichung erforderlich",
+            "message": "Mehrere strukturelle Voraussetzungen fehlen. Wir empfehlen ein Exit-Planning-Vorbereitungsprogramm, bevor Sie Ihr Asset einreichen. Kontaktieren Sie unser Advisory-Team.",
+            "cta": "Mit einem Advisor sprechen →"
+          }
+        },
+        "questions": {
+          "dataroom": {
+            "label": "Data Room verfügbar",
+            "hint": "Abschlüsse J-2/J-1/J (prüfbar), Cap Table, Schlüsselverträge, historische KPIs."
+          },
+          "contracts": {
+            "label": "Formalisierte Kundenverträge",
+            "hint": "Unterzeichnete Verträge mit Abtretungs-/Übertragungsbedingungen, keine blockierende Klausel."
+          },
+          "founder_dependency": {
+            "label": "Operative Unabhängigkeit vom Gründer",
+            "hint": "Das Unternehmen kann 6 Monate ohne den aktuellen Gründer operieren."
+          },
+          "growth_documented": {
+            "label": "Wachstum über 12 Monate dokumentiert",
+            "hint": "Monatlicher MRR/ARR, Churn, NRR verfolgt und exportierbar."
+          },
+          "ip_clean": {
+            "label": "Vollständig übertragbares IP",
+            "hint": "Eingetragene Marke, proprietäres Code-Copyright, keine blockierende GPL-Komponente."
+          },
+          "tech_debt": {
+            "label": "Technische Schulden bekannt und dokumentiert",
+            "hint": "Formalisierter Tech-Debt-Backlog, keine aufgegebenen kritischen Abhängigkeiten."
+          }
+        }
+      }
     },
     "buy": {
       "label": "Käufer",

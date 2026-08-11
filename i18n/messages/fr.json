@@ -2683,24 +2683,119 @@
       "avgMultiple": "Multiple médian"
     },
     "sell": {
-      "label": "Vendre via Aegryn",
-      "title": "Votre actif mérite\nmieux qu'un broker.",
-      "desc": "Un processus transparent, un grade objectif, des acquéreurs pré-qualifiés. Notre rémunération est alignée sur votre succès, conditions en CGV. Un conseiller Aegryn vous répond directement par email sous 24h.",
-      "step1Title": "Soumettez",
-      "step1Desc": "Remplissez le formulaire de soumission. Informations de base sur l'actif, métriques clés, documentation disponible.",
-      "step2Title": "Certification",
-      "step2Desc": "Notre équipe évalue votre actif sur 4 dimensions. Vous recevez un rapport de certification complet avec le grade AEG.",
-      "step3Title": "Préparation session",
-      "step3Desc": "Vous signez les CGV vendeur, définissez votre prix plancher et votre actif devient accessible aux acquéreurs qualifiés inscrits à la session.",
-      "step4Title": "Transaction",
-      "step4Desc": "Négociation encadrée par nos équipes. Escrow institutionnel. Transfert sécurisé des droits.",
-      "feesTitle": "Notre modèle de rémunération",
-      "feesDesc": "Notre rémunération est structurée en deux composantes, alignées sur la qualité du dossier et sur votre succès.",
-      "feesCert": "Certification",
-      "feesCertValue": "Frais fixes de dossier et d'audit couvrant l'ensemble du processus de certification CIFS, indépendamment de l'issue de la transaction.",
-      "feesSuccess": "Success fee",
-      "feesSuccessValue": "Commission sur la valeur finale de cession, versée uniquement à closing. Montant négocié au dossier lors de la qualification.",
-      "cta": "Soumettre mon actif maintenant"
+      "meta": {
+        "title": "Céder votre actif — Aegryn Auction",
+        "desc": "Parcours cédant Aegryn : valorisation indicative, readiness score, dépôt de mandat. Certification CIFS, confidentialité absolue, séquestre institutionnel suisse."
+      },
+      "hero": {
+        "label": "Céder votre actif",
+        "title": "Votre actif mérite\nune cession à sa valeur réelle.",
+        "desc": "Aegryn certifie, grade et met en compétition des acheteurs institutionnels pré-qualifiés — dans un cadre confidentiel, structuré, sous droit suisse.",
+        "ctaValuation": "Estimer la valeur",
+        "ctaMandat": "Déposer un mandat"
+      },
+      "steps": {
+        "label": "Parcours cédant",
+        "title": "Trois étapes, de la valorisation au mandat.",
+        "step2Label": "Étape 02",
+        "step2Title": "Votre actif est-il prêt pour une session auction ?",
+        "s1": {
+          "title": "Valorisation indicative",
+          "desc": "Obtenez une fourchette de valorisation en 4 étapes (finance, code, IP, sécurité) et un grade estimé Aegryn. Gratuit, confidentiel, sans engagement.",
+          "cta": "Estimer la valeur →"
+        },
+        "s2": {
+          "title": "Readiness Score",
+          "desc": "Évaluez si votre dossier est prêt pour une session auction : data room, contrats, indépendance opérationnelle, IP, dette technique. 6 questions, résultat immédiat."
+        },
+        "s3": {
+          "title": "Dépôt de mandat",
+          "desc": "Soumettez votre actif à l'équipe Aegryn. Certification CIFS indépendante, attribution de grade officiel, entrée en session auction sous mandat exclusif 60 jours.",
+          "cta": "Déposer votre mandat →"
+        }
+      },
+      "guarantees": {
+        "label": "Engagements Aegryn",
+        "title": "Ce que vous n'obtenez pas ailleurs.",
+        "g1": {
+          "title": "Confidentialité absolue",
+          "desc": "L'identité de votre actif n'est jamais révélée avant signature du NDA acheteur et ouverture de la session auction."
+        },
+        "g2": {
+          "title": "Acheteurs 100% pré-qualifiés",
+          "desc": "Chaque acheteur est vérifié : capacité financière, secteur, ticket. Zéro curieux, zéro concurrent direct sans accord préalable."
+        },
+        "g3": {
+          "title": "Séquestre bancaire suisse",
+          "desc": "10% du prix au HoT via séquestre institutionnel. Aucun transfert d'actifs avant libération des fonds. Juridiction suisse."
+        },
+        "g4": {
+          "title": "Certification CIFS indépendante",
+          "desc": "Grade ★/AAA/AA/A/B attribué par un auditeur indépendant — finance, code, IP, sécurité. Opposable et documenté."
+        }
+      },
+      "cta": {
+        "title": "Prêt à soumettre votre actif ?",
+        "desc": "Dépôt de mandat gratuit. Notre équipe revient vers vous sous 48h.",
+        "ctaMandat": "Déposer un mandat",
+        "ctaAdvisor": "Parler à un advisor"
+      },
+      "readiness": {
+        "toolLabel": "Outil Aegryn",
+        "toolTitle": "Readiness Score",
+        "restart": "Recommencer",
+        "intro": "Évaluez en 2 minutes si votre actif est prêt pour une soumission en session auction Aegryn.",
+        "answerYes": "Oui",
+        "answerPartial": "Partiel",
+        "answerNo": "Non",
+        "progress": "{answered} / {total} questions",
+        "calculateBtn": "Calculer mon score",
+        "scoreLabel": "Score : {score} / {max} points",
+        "weakPoints": "Points à renforcer",
+        "levels": {
+          "ready": {
+            "label": "Actif prêt pour soumission",
+            "message": "Votre actif présente les caractéristiques d'un dossier soumissible à une session auction Aegryn. Nous vous recommandons de déposer votre mandat pour évaluation par notre équipe.",
+            "cta": "Déposer votre mandat →"
+          },
+          "almost": {
+            "label": "Quelques ajustements recommandés",
+            "message": "Votre actif est proche du niveau requis. Corrigez les points faibles identifiés ci-dessus, puis soumettez votre dossier. Notre équipe peut vous accompagner dans la préparation.",
+            "cta": "Consulter un advisor →"
+          },
+          "not_ready": {
+            "label": "Préparation nécessaire avant soumission",
+            "message": "Plusieurs prérequis structurels manquent. Nous vous recommandons un accompagnement de préparation (exit planning) avant de soumettre votre actif. Contactez notre équipe advisory.",
+            "cta": "Parler à un advisor →"
+          }
+        },
+        "questions": {
+          "dataroom": {
+            "label": "Data room disponible",
+            "hint": "États financiers N-2/N-1/N (auditables), cap table, contrats clés, KPIs historiques."
+          },
+          "contracts": {
+            "label": "Contrats clients formalisés",
+            "hint": "Contrats signés avec conditions de cession / transfert, sans clause bloquante."
+          },
+          "founder_dependency": {
+            "label": "Indépendance opérationnelle du fondateur",
+            "hint": "L'entreprise peut opérer 6 mois sans le fondateur actuel."
+          },
+          "growth_documented": {
+            "label": "Croissance documentée sur 12 mois",
+            "hint": "MRR/ARR mensuel, churn, NRR tracés et exportables."
+          },
+          "ip_clean": {
+            "label": "IP entièrement transférable",
+            "hint": "Marque déposée, copyright code en propre, pas de composant GPL bloquant."
+          },
+          "tech_debt": {
+            "label": "Dette technique connue et documentée",
+            "hint": "Backlog tech debt formalisé, pas de dépendances critiques abandonnées."
+          }
+        }
+      }
     },
     "buy": {
       "label": "Acquérir via Aegryn",

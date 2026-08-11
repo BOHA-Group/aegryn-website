@@ -1,16 +1,18 @@
-import type { Metadata }      from 'next'
+import type { Metadata }         from 'next'
+import { getTranslations }        from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
-import { Link }               from '@/i18n/navigation'
+import { Link }                   from '@/i18n/navigation'
 import { ArrowUpRight, ShieldCheck, BarChart3, FileText, Users, Lock, Landmark } from 'lucide-react'
-import ReadinessScore         from './ReadinessScore'
+import ReadinessScore             from './ReadinessScore'
 
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'auction.sell.meta' })
   return generateAegrynMetadata({
-    title: 'Céder votre actif — Aegryn Auction',
-    description: 'Parcours cédant Aegryn : valorisation indicative, readiness score, dépôt de mandat. Certification CIFS, confidentialité absolue, séquestre institutionnel suisse.',
+    title: t('title'),
+    description: t('desc'),
     path: '/auction/sell',
     locale,
     keywords: [
@@ -21,54 +23,57 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-const STEPS = [
-  {
-    num:   '01',
-    icon:  <BarChart3 size={20} className="text-ag-apex" />,
-    title: 'Valorisation indicative',
-    desc:  'Obtenez une fourchette de valorisation en 4 étapes (finance, code, IP, sécurité) et un grade estimé Aegryn. Gratuit, confidentiel, sans engagement.',
-    cta:   { label: 'Estimer la valeur →', href: '/valuation' },
-  },
-  {
-    num:   '02',
-    icon:  <FileText size={20} className="text-ag-apex" />,
-    title: 'Readiness Score',
-    desc:  'Évaluez si votre dossier est prêt pour une session auction : data room, contrats, indépendance opérationnelle, IP, dette technique. 6 questions, résultat immédiat.',
-    cta:   null,
-  },
-  {
-    num:   '03',
-    icon:  <ShieldCheck size={20} className="text-ag-apex" />,
-    title: 'Dépôt de mandat',
-    desc:  "Soumettez votre actif à l'équipe Aegryn. Certification CIFS indépendante, attribution de grade officiel, entrée en session auction sous mandat exclusif 60 jours.",
-    cta:   { label: 'Déposer votre mandat →', href: '/auction/submit' },
-  },
-]
+export default async function AuctionSellPage({ params }: Props) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'auction.sell' })
+  // locale resolved above for getTranslations
 
-const GUARANTEES = [
-  {
-    icon:  <Lock size={16} className="text-ag-apex shrink-0 mt-0.5" />,
-    title: 'Confidentialité absolue',
-    desc:  "L'identité de votre actif n'est jamais révélée avant signature du NDA acheteur et ouverture de la session auction.",
-  },
-  {
-    icon:  <Users size={16} className="text-ag-apex shrink-0 mt-0.5" />,
-    title: 'Acheteurs 100% pré-qualifiés',
-    desc:  'Chaque acheteur est vérifié : capacité financière, secteur, ticket. Zéro curieux, zéro concurrent direct sans accord préalable.',
-  },
-  {
-    icon:  <Landmark size={16} className="text-ag-apex shrink-0 mt-0.5" />,
-    title: 'Séquestre bancaire suisse',
-    desc:  "10% du prix au HoT via séquestre institutionnel. Aucun transfert d'actifs avant libération des fonds. Juridiction suisse.",
-  },
-  {
-    icon:  <ShieldCheck size={16} className="text-ag-apex shrink-0 mt-0.5" />,
-    title: 'Certification CIFS indépendante',
-    desc:  "Grade ★/AAA/AA/A/B attribué par un auditeur indépendant — finance, code, IP, sécurité. Opposable et documenté.",
-  },
-]
+  const STEPS = [
+    {
+      num:   '01',
+      icon:  <BarChart3 size={20} className="text-ag-apex" />,
+      title: t('steps.s1.title'),
+      desc:  t('steps.s1.desc'),
+      cta:   { label: t('steps.s1.cta'), href: '/valuation' },
+    },
+    {
+      num:   '02',
+      icon:  <FileText size={20} className="text-ag-apex" />,
+      title: t('steps.s2.title'),
+      desc:  t('steps.s2.desc'),
+      cta:   null,
+    },
+    {
+      num:   '03',
+      icon:  <ShieldCheck size={20} className="text-ag-apex" />,
+      title: t('steps.s3.title'),
+      desc:  t('steps.s3.desc'),
+      cta:   { label: t('steps.s3.cta'), href: '/auction/submit' },
+    },
+  ]
 
-export default async function AuctionSellPage({ params: _ }: Props) {
+  const GUARANTEES = [
+    {
+      icon:  <Lock size={16} className="text-ag-apex shrink-0 mt-0.5" />,
+      title: t('guarantees.g1.title'),
+      desc:  t('guarantees.g1.desc'),
+    },
+    {
+      icon:  <Users size={16} className="text-ag-apex shrink-0 mt-0.5" />,
+      title: t('guarantees.g2.title'),
+      desc:  t('guarantees.g2.desc'),
+    },
+    {
+      icon:  <Landmark size={16} className="text-ag-apex shrink-0 mt-0.5" />,
+      title: t('guarantees.g3.title'),
+      desc:  t('guarantees.g3.desc'),
+    },
+    {
+      icon:  <ShieldCheck size={16} className="text-ag-apex shrink-0 mt-0.5" />,
+      title: t('guarantees.g4.title'),
+      desc:  t('guarantees.g4.desc'),
+    },
+  ]
 
   return (
     <main className="bg-ag-white">
@@ -78,29 +83,29 @@ export default async function AuctionSellPage({ params: _ }: Props) {
         <div className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
-            Céder votre actif
+            {t('hero.label')}
           </p>
           <h1
-            className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-2xl mb-6"
+            className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-2xl mb-6 whitespace-pre-line"
             style={{ fontSize: 'clamp(36px,5vw,68px)' }}
           >
-            Votre actif mérite{'\n'}une cession à sa valeur réelle.
+            {t('hero.title')}
           </h1>
           <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-xl mb-10">
-            Aegryn certifie, grade et met en compétition des acheteurs institutionnels pré-qualifiés — dans un cadre confidentiel, structuré, sous droit suisse.
+            {t('hero.desc')}
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
               href="/valuation"
               className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-7 py-3.5 hover:bg-ag-apex/90 transition-colors"
             >
-              Estimer la valeur <ArrowUpRight size={13} />
+              {t('hero.ctaValuation')} <ArrowUpRight size={13} />
             </Link>
             <Link
               href="/auction/submit"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-7 py-3.5 hover:border-white/70 transition-colors"
             >
-              Déposer un mandat <ArrowUpRight size={13} />
+              {t('hero.ctaMandat')} <ArrowUpRight size={13} />
             </Link>
           </div>
         </div>
@@ -111,10 +116,10 @@ export default async function AuctionSellPage({ params: _ }: Props) {
         <div className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-3 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-gray-light/50 inline-block" />
-            Parcours cédant
+            {t('steps.label')}
           </p>
           <h2 className="font-sans font-bold text-ag-black text-[28px] tracking-[-0.02em] mb-16 max-w-lg">
-            Trois étapes, de la valorisation au mandat.
+            {t('steps.title')}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-ag-border divide-y md:divide-y-0 md:divide-x divide-ag-border mb-20">
@@ -146,10 +151,10 @@ export default async function AuctionSellPage({ params: _ }: Props) {
           <div className="max-w-2xl">
             <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-3 flex items-center gap-3">
               <span className="w-6 h-px bg-ag-gray-light/50 inline-block" />
-              Étape 02
+              {t('steps.step2Label')}
             </p>
             <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] mb-8">
-              Votre actif est-il prêt pour une session auction ?
+              {t('steps.step2Title')}
             </h2>
             <ReadinessScore />
           </div>
@@ -161,10 +166,10 @@ export default async function AuctionSellPage({ params: _ }: Props) {
         <div className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-3 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-gray-light/50 inline-block" />
-            Engagements Aegryn
+            {t('guarantees.label')}
           </p>
           <h2 className="font-sans font-bold text-ag-black text-[24px] tracking-[-0.02em] mb-12">
-            Ce que vous n&apos;obtenez pas ailleurs.
+            {t('guarantees.title')}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {GUARANTEES.map(({ icon, title, desc }) => (
@@ -185,10 +190,10 @@ export default async function AuctionSellPage({ params: _ }: Props) {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
           <div>
             <h2 className="font-sans font-bold text-ag-black text-[24px] tracking-[-0.02em] mb-2">
-              Prêt à soumettre votre actif ?
+              {t('cta.title')}
             </h2>
             <p className="font-sans text-[14px] text-ag-gray">
-              Dépôt de mandat gratuit. Notre équipe revient vers vous sous 48h.
+              {t('cta.desc')}
             </p>
           </div>
           <div className="flex flex-wrap gap-4 shrink-0">
@@ -196,13 +201,13 @@ export default async function AuctionSellPage({ params: _ }: Props) {
               href="/auction/submit"
               className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-7 py-3.5 hover:bg-ag-navy-mid transition-colors"
             >
-              Déposer un mandat <ArrowUpRight size={13} />
+              {t('cta.ctaMandat')} <ArrowUpRight size={13} />
             </Link>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-7 py-3.5 hover:border-ag-black transition-colors"
             >
-              Parler à un advisor <ArrowUpRight size={13} />
+              {t('cta.ctaAdvisor')} <ArrowUpRight size={13} />
             </Link>
           </div>
         </div>
