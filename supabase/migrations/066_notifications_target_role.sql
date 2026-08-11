@@ -1,5 +1,5 @@
 /**
- * Migration 027 — Notifications target_role + delete personnel
+ * Migration 066 — Notifications target_role + delete personnel
  *
  * Problème : les notifications sont affichées dans tous les espaces d'un
  * utilisateur multi-rôle (buyer/seller/partner), ce qui provoque des
