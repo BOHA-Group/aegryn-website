@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { cookies }       from 'next/headers'
 import { getTranslations } from 'next-intl/server'
-import { redirect }      from 'next/navigation'
 import Link              from 'next/link'
 import LoginForm         from './LoginForm'
 
@@ -15,8 +14,6 @@ export default async function ClientLoginPage({
 }: {
   searchParams: Promise<{ error?: string }>
 }) {
-  if (process.env.VERCEL_ENV === 'production') redirect('/')
-
   const { error } = await searchParams
   const cookieStore = await cookies()
   const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
