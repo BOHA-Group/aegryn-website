@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { Bell, CheckCheck, ArrowUpRight, X } from 'lucide-react'
+import { Bell, CheckCheck, ArrowUpRight, X, Trash2 } from 'lucide-react'
 import type { Notification } from './page'
 
 const TYPE_ICON_MAP: Record<string, string> = {
@@ -31,6 +31,7 @@ export default function SellerNotificationsClient({ notifications }: { notificat
   const [items, setItems]           = useState(notifications)
   const [markingAll, setMarkingAll] = useState(false)
   const [dismissingAll, setDismissingAll] = useState(false)
+  const [deletingAll, setDeletingAll] = useState(false)
 
   const unreadCount = items.filter(n => !n.read_at).length
   const readCount   = items.filter(n =>  n.read_at).length
@@ -85,6 +86,30 @@ export default function SellerNotificationsClient({ notifications }: { notificat
     }
   }
 
+  async function deleteOne(id: string) {
+    await fetch('/api/client/notifications', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id }),
+    })
+    setItems(prev => prev.filter(n => n.id !== id))
+  }
+
+  async function deleteAll() {
+    setDeletingAll(true)
+    try {
+      await fetch('/api/client/notifications', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ all: true }),
+      })
+      setItems([])
+      router.refresh()
+    } finally {
+      setDeletingAll(false)
+    }
+  }
+
   return (
     <div>
       <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
@@ -103,6 +128,12 @@ export default function SellerNotificationsClient({ notifications }: { notificat
             <button onClick={dismissAllRead} disabled={dismissingAll}
               className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-gray-300 hover:text-gray-500 transition-colors disabled:opacity-40">
               <X size={12} /> Archiver les lues
+            </button>
+          )}
+          {items.length > 0 && (
+            <button onClick={deleteAll} disabled={deletingAll}
+              className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-red-300 hover:text-red-500 transition-colors disabled:opacity-40">
+              <Trash2 size={12} /> Tout supprimer
             </button>
           )}
         </div>
@@ -132,6 +163,10 @@ export default function SellerNotificationsClient({ notifications }: { notificat
                   <button onClick={(e) => { e.stopPropagation(); dismiss(n.id) }}
                     className="text-gray-200 hover:text-gray-500 transition-colors mt-0.5" title="Archiver">
                     <X size={12} />
+                  </button>
+                  <button onClick={(e) => { e.stopPropagation(); deleteOne(n.id) }}
+                    className="text-gray-200 hover:text-red-400 transition-colors mt-0.5" title="Supprimer définitivement">
+                    <Trash2 size={12} />
                   </button>
                 </div>
               </div>

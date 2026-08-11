@@ -49,11 +49,12 @@ async function notifyAdminExpertSubmission(
   if (admins && admins.length > 0) {
     await supa.from('user_notifications').insert(
       admins.map(a => ({
-        user_id: a.id,
-        type:    'broadcast_action',
+        user_id:     a.id,
+        type:        'broadcast_action',
         title,
         body,
-        link:    `/admin/experts#expert-${userId}`,
+        link:        `/admin/experts#expert-${userId}`,
+        target_role: 'admin',
       }))
     )
   }

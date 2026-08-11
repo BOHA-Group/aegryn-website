@@ -219,11 +219,12 @@ export async function PATCH(req: NextRequest) {
 
       if (target?.user_id) {
         await supa.from('user_notifications').insert({
-          user_id: target.user_id,
-          type:    'broadcast_alert',
-          title:   'Votre fiche expert a été réinitialisée',
-          body:    'Un administrateur a vidé votre fiche expert. Vous pouvez la reconstruire depuis votre espace partenaire.',
-          link:    '/client/partner/expert-profile',
+          user_id:     target.user_id,
+          type:        'broadcast_alert',
+          title:       'Votre fiche expert a été réinitialisée',
+          body:        'Un administrateur a vidé votre fiche expert. Vous pouvez la reconstruire depuis votre espace partenaire.',
+          link:        '/client/partner/expert-profile',
+          target_role: 'partner',
         })
       }
 
@@ -296,11 +297,12 @@ export async function PATCH(req: NextRequest) {
 
       if (notifTitle) {
         await supa.from('user_notifications').insert({
-          user_id: before.user_id,
-          type:    (becamePublished || approvedPending) ? 'broadcast_info' : 'broadcast_alert',
-          title:   notifTitle,
-          body:    notifBody,
-          link:    '/client/partner/expert-profile',
+          user_id:     before.user_id,
+          type:        (becamePublished || approvedPending) ? 'broadcast_info' : 'broadcast_alert',
+          title:       notifTitle,
+          body:        notifBody,
+          link:        '/client/partner/expert-profile',
+          target_role: 'partner',
         })
       }
     }

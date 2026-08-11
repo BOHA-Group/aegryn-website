@@ -47,7 +47,13 @@ export default async function BuyerDashboardPage() {
     supa.from('auction_bids').select('id, amount_chf, status, created_at, asset_id, assets(company_name)').eq('bidder_id', user.id).order('created_at', { ascending: false }).limit(3),
     supa.from('transactions').select('id, status, created_at, asset_id, assets(company_name), escrow_amount_chf').eq('buyer_id', user.id).order('created_at', { ascending: false }).limit(3),
     supa.from('kyc_documents').select('id', { count: 'exact', head: true }).eq('user_id', user.id).in('status', ['pending', 'in_review', 'rejected']),
-    supa.from('user_notifications').select('id, title, body, link, created_at, read_at').eq('user_id', user.id).order('created_at', { ascending: false }).limit(5),
+    supa.from('user_notifications').select('id, title, body, link, created_at, read_at')
+      .eq('user_id', user.id)
+      .or('target_role.eq.buyer,target_role.is.null')
+      .is('dismissed_at', null)
+      .is('deleted_at', null)
+      .order('created_at', { ascending: false })
+      .limit(5),
   ])
 
   const profile      = results[0].status === 'fulfilled' ? results[0].value.data : null

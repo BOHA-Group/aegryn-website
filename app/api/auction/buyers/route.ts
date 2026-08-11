@@ -78,11 +78,12 @@ export async function POST(req: NextRequest) {
   if (admins && admins.length > 0) {
     await supa.from('user_notifications').insert(
       admins.map(a => ({
-        user_id: a.id,
-        type:    'broadcast_action',
-        title:   `Nouvel acheteur qualifié — ${data.full_name}`,
-        body:    `${data.organization ? data.organization + ' · ' : ''}${data.buyer_type} · ${data.country}. Ticket : ${data.ticket_min_eur ? `€${data.ticket_min_eur.toLocaleString()}` : '?'} – ${data.ticket_max_eur ? `€${data.ticket_max_eur.toLocaleString()}` : '?'}. À valider dans l'espace Admin.`,
-        link:    '/admin/buyers',
+        user_id:     a.id,
+        type:        'broadcast_action',
+        title:       `Nouvel acheteur qualifié — ${data.full_name}`,
+        body:        `${data.organization ? data.organization + ' · ' : ''}${data.buyer_type} · ${data.country}. Ticket : ${data.ticket_min_eur ? `€${data.ticket_min_eur.toLocaleString()}` : '?'} – ${data.ticket_max_eur ? `€${data.ticket_max_eur.toLocaleString()}` : '?'}. À valider dans l'espace Admin.`,
+        link:        '/admin/buyers',
+        target_role: 'admin',
       }))
     )
   }

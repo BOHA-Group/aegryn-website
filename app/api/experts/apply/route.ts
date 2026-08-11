@@ -59,11 +59,12 @@ export async function POST(req: NextRequest) {
     if (admins && admins.length > 0) {
       await supa.from('user_notifications').insert(
         admins.map(a => ({
-          user_id: a.id,
-          type:    'broadcast_action',
-          title:   `Candidature réseau expert — ${data.prenom} ${data.nom}`,
-          body:    `${data.profession ?? 'Profil inconnu'}${data.organization ? ` · ${data.organization}` : ''}. À traiter dans l'espace Experts réseau.`,
-          link:    '/admin/experts',
+          user_id:     a.id,
+          type:        'broadcast_action',
+          title:       `Candidature réseau expert — ${data.prenom} ${data.nom}`,
+          body:        `${data.profession ?? 'Profil inconnu'}${data.organization ? ` · ${data.organization}` : ''}. À traiter dans l'espace Experts réseau.`,
+          link:        '/admin/experts',
+          target_role: 'admin',
         }))
       )
     }

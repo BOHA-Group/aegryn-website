@@ -67,7 +67,9 @@ export default async function PartnerDashboardPage() {
     supa.from('user_notifications')
       .select('id, title, body, created_at, read_at')
       .eq('user_id', user.id)
+      .or('target_role.eq.partner,target_role.is.null')
       .is('dismissed_at', null)
+      .is('deleted_at', null)
       .order('created_at', { ascending: false })
       .limit(4),
   ])

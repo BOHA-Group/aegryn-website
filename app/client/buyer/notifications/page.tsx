@@ -38,7 +38,9 @@ export default async function BuyerNotificationsPage() {
     .from('user_notifications')
     .select('id, type, title, body, link, payload, read_at, dismissed_at, created_at')
     .eq('user_id', user.id)
+    .or('target_role.eq.buyer,target_role.is.null')
     .is('dismissed_at', null)
+    .is('deleted_at', null)
     .order('created_at', { ascending: false })
     .limit(50)
 

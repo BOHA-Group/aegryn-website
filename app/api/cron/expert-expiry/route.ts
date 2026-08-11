@@ -47,11 +47,12 @@ export async function GET(req: NextRequest) {
 
     // 1. Notification in-app
     await supa.from('user_notifications').insert({
-      user_id: p.id,
-      type:    'broadcast_alert',
-      title:   'Votre abonnement expert expire dans 7 jours',
-      body:    `Votre abonnement expert Aegryn expire le ${expiryDate}. Renouvelez-le pour maintenir votre fiche visible dans l'annuaire.`,
-      link:    '/client/partner/subscription',
+      user_id:     p.id,
+      type:        'broadcast_alert',
+      title:       'Votre abonnement expert expire dans 7 jours',
+      body:        `Votre abonnement expert Aegryn expire le ${expiryDate}. Renouvelez-le pour maintenir votre fiche visible dans l'annuaire.`,
+      link:        '/client/partner/subscription',
+      target_role: 'partner',
     })
 
     // 2. Email
