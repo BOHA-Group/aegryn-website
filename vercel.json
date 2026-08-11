@@ -61,6 +61,17 @@
       "source": "/(.*)",
       "has": [{ "type": "host", "value": "aegryn-website.vercel.app" }],
       "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "aegryn-website-3q4zr8lf1-boha-groups-projects.vercel.app" }],
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/(.*)",
+      "missing": [{ "type": "host", "value": "aegryn.com" }],
+      "has": [{ "type": "host", "value": "(?i).*\\.vercel\\.app" }],
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
     }
   ],
   "redirects": [
