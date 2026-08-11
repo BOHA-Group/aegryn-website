@@ -160,7 +160,8 @@
           "desc": "Final documentation, skills transfer and access to post-mission follow-up."
         }
       ]
-    }
+    },
+    "label": "Advisory"
   },
   "build": {
     "hero": {

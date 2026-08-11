@@ -160,7 +160,8 @@
           "desc": "Einddocumentatie, kennisoverdracht en toegang tot nazorg."
         }
       ]
-    }
+    },
+    "label": "Advies"
   },
   "build": {
     "hero": {
@@ -237,7 +238,7 @@
       },
       {
         "id": "saas",
-        "label": "SaaS B2B & Vertical Software",
+        "label": "SaaS B2B & Verticale software",
         "desc": "Sectorspecifieke CRM's, RegTech, LegalTech, HealthTech, EU-compliancetools. Hoge multiples voor verticale marktleiders."
       },
       {
@@ -257,7 +258,7 @@
       },
       {
         "id": "web3",
-        "label": "Digital Art & Web3",
+        "label": "Digitale kunst & Web3",
         "desc": "Digitale creatieve assets, smart contracts met hoge IP-waarde. Uitbreiding van het Aegryn Grade-label naar Web3-assets in onderzoek."
       }
     ],
@@ -2619,7 +2620,7 @@
     "title": "Uw volgende acquisitie verdient de juiste financiële partner.",
     "desc": "Aegryn leent niet. Aegryn verbindt. Ons netwerk van VC-partners en investeringsfondsen kan de financiering van uw volgende gecertificeerde tech-asset-acquisitie co-financieren of structureren.",
     "chip1": "VC co-investering",
-    "chip2": "Bridge financing",
+    "chip2": "Overbruggingsfinanciering",
     "chip3": "Earnout-structuur",
     "cta": "Opties verkennen"
   },
@@ -5318,7 +5319,7 @@
     "title": "Vaste prijs. Propriëtaire code. Certification-ready.",
     "chip1": "Gecontractualiseerde vaste prijs",
     "chip2": "10–16 weken",
-    "chip3": "Certification-ready",
+    "chip3": "Klaar voor certificering",
     "chip4": "100% klant-IP",
     "cta": "Asset engineering bekijken"
   },

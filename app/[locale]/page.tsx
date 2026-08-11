@@ -33,27 +33,32 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
-      {/* ── Hero ───────────────────────────────────────────── */}
+      {/* ── 0. Hero ────────────────────────────────────────── */}
       <HeroMountain />
 
-      {/* ── 1. Conception (Build) ──────────────────────────── */}
+      {/* ── Intro : qui sommes-nous + modèle 3 piliers ─────── */}
+      <ManifestoSection />
+
+      {/* ── 1. Conception ──────────────────────────────────── */}
       <BuildStrip />
       <BuildEngineeringStrip />
 
-      {/* ── 2. Conseil (Advisory) ──────────────────────────── */}
-      <AcqSupportStrip />
+      {/* ── 2. Conseil ─────────────────────────────────────── */}
+      {/* Advisory Tech + stratégique en premier */}
       <StatementStrip
-        label="Aegryn Advisory"
+        label={tAdv('label')}
         title={tAdv('hero.title')}
         cta={tAdv('cta')}
         href="/advisory"
       />
+      {/* Advisory Transaction + Réseau */}
+      <AcqSupportStrip />
 
-      {/* ── 3. Notation (Grade) ────────────────────────────── */}
+      {/* ── 3. Notation ────────────────────────────────────── */}
       <GradeStrip />
       <MissionVideoSection />
 
-      {/* ── 4. Enchères (Auction) ──────────────────────────── */}
+      {/* ── 4. Enchères ────────────────────────────────────── */}
       <EcosystemDomains />
       <AuctionNarrative />
       <MarketStatStrip />
@@ -61,9 +66,6 @@ export default async function HomePage({ params }: Props) {
 
       {/* ── 5. Blog ────────────────────────────────────────── */}
       <DiscoverStrip />
-
-      {/* ── 6. À propos ────────────────────────────────────── */}
-      <ManifestoSection />
     </>
   )
 }

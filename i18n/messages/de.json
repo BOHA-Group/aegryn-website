@@ -160,7 +160,8 @@
           "desc": "Abschlussdokumentation, Wissenstransfer und Zugang zur Nachbetreuung."
         }
       ]
-    }
+    },
+    "label": "Beratung"
   },
   "build": {
     "hero": {

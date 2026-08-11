@@ -160,7 +160,8 @@
           "desc": "Documentación final, transferencia de conocimientos y acceso al seguimiento post-misión."
         }
       ]
-    }
+    },
+    "label": "Consultoría"
   },
   "build": {
     "hero": {
@@ -237,7 +238,7 @@
       },
       {
         "id": "saas",
-        "label": "SaaS B2B & Vertical Software",
+        "label": "SaaS B2B y Software vertical",
         "desc": "CRMs sectoriales, RegTech, LegalTech, HealthTech, herramientas de cumplimiento regulatorio UE. Múltiplos elevados para los líderes verticales."
       },
       {
@@ -257,7 +258,7 @@
       },
       {
         "id": "web3",
-        "label": "Digital Art & Web3",
+        "label": "Arte digital y Web3",
         "desc": "Activos creativos digitales, smart contracts de alto valor IP. Extensión del label Aegryn Grade a los activos Web3 en estudio."
       }
     ],
@@ -2619,7 +2620,7 @@
     "title": "Tu próxima adquisición merece el socio financiero adecuado.",
     "desc": "Aegryn no presta. Aegryn conecta. Nuestra red de socios VC y fondos de inversión puede co-financiar o estructurar el financiamiento de tu próxima adquisición de activo tech certificado.",
     "chip1": "Co-inversión VC",
-    "chip2": "Bridge financing",
+    "chip2": "Financiación puente",
     "chip3": "Estructura earnout",
     "cta": "Explorar opciones"
   },
@@ -5318,7 +5319,7 @@
     "title": "Precio fijo. Código propietario. Certification-ready.",
     "chip1": "Precio fijo contractualizado",
     "chip2": "10–16 semanas",
-    "chip3": "Certification-ready",
+    "chip3": "Listo para certificación",
     "chip4": "IP 100% cliente",
     "cta": "Ver concepción de activos"
   },
