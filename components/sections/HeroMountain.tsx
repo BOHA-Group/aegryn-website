@@ -174,7 +174,7 @@ export function HeroMountain() {
               </div>
               <div className="flex items-center gap-6">
                 <Link
-                  href="/build/asset-engineering"
+                  href="/services/build"
                   className="font-sans text-[11px] text-white/55 hover:text-white/90 transition-colors duration-200"
                 >
                   {t('ctaBuildLabel')}{' '}
