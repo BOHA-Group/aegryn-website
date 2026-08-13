@@ -957,7 +957,7 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 Aegryn (by BOHA-Group) — All rights reserved",
+    "legal": "© 2026 Aegryn (formerly BOHA-Group) — All rights reserved",
     "company": "An Aegryn company",
     "privacy": "Privacy",
     "terms": "Terms",
@@ -4022,7 +4022,7 @@
     "version": "Version: July 2026",
     "note": "This document constitutes the binding contractual reference. Precise pricing conditions are specified in the signed mandate or quote between the parties.",
     "s1Title": "Definitions",
-    "defAegryn": "Aegryn (by BOHA-Group, a company registered in Switzerland).",
+    "defAegryn": "Aegryn (formerly BOHA-Group, a company registered in Switzerland).",
     "defAsset": "Any digital asset that may be certified and/or transferred via Aegryn, including without limitation: software (SaaS, applications), codebases, digital intellectual property, trademarks associated with a digital asset, protocols.",
     "defGrade": "Official certification of a tech asset under the C/I/F/S protocol, issued by certified Aegryn analysts. Grade awarded: ★, AAA, AA, A, B.",
     "defGradeEst": "Non-certified indicative opinion produced by an Aegryn analyst without external validation. Never enforceable against third parties. Always suffixed \"(estimated)\" in all communications.",
@@ -4110,7 +4110,7 @@
     "langSelector": "Available in",
     "intro": "Like most businesses operating in the financial and transaction sector, Aegryn collects and processes data relating to its clients, partners and others who may be interested in its services. This notice explains the type of data we process, why we process it and how this may affect you.",
     "s1Title": "Who we are",
-    "s1": "The data controller is Aegryn (by BOHA-Group, a company registered in Switzerland). When you use our services (certification, transaction, advisory, catalogue), the data controller is Aegryn (by BOHA-Group).",
+    "s1": "The data controller is Aegryn (formerly BOHA-Group, a company registered in Switzerland). When you use our services (certification, transaction, advisory, catalogue), the data controller is Aegryn (formerly BOHA-Group).",
     "s2Title": "What data do we collect and how?",
     "s2DirectTitle": "Data you provide directly",
     "s2Direct": "Name, professional contact details, entity information, financial information (investment capacity, proof of funds), identity documents, entity documents, beneficial owner (UBO) information. Collected during registration, asset submission, Alliance application, Assessment Day booking, use of the valuation calculator or any communication.",
@@ -5026,7 +5026,7 @@
       },
       "whoWeAre": {
         "h": "Who are we and how to contact us?",
-        "p": "Aegryn (by BOHA-Group) is the name of our company. If you have questions about data processing related to our platform, you may contact us by post: Aegryn (BOHA-Group sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland. You may also reach us via the contact form available on our platform."
+        "p": "Aegryn (formerly BOHA-Group) is the name of our company. If you have questions about data processing related to our platform, you may contact us by post: Aegryn (BOHA-Group sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland. You may also reach us via the contact form available on our platform."
       },
       "ourRole": {
         "h": "What is our role in data protection?",
@@ -5233,9 +5233,9 @@
     "introText": "Before accessing the Aegryn Auction catalogue, you must read and accept the confidentiality agreement below. This agreement is mandatory and constitutes a contractual confidentiality commitment to Aegryn and the sellers. Your signature is timestamped and logged for legal purposes.",
     "versionLabel": "NDA — Version",
     "mainTitle": "Buyer Confidentiality Conditions",
-    "mainSubtitle": "Aegryn (by BOHA-Group Sàrl)",
+    "mainSubtitle": "Aegryn (formerly BOHA-Group Sàrl)",
     "partiesLabel": "Between the undersigned:",
-    "partiesAegryn": "Aegryn (by BOHA-Group Sàrl), a company registered in Switzerland, hereinafter referred to as « Aegryn »,",
+    "partiesAegryn": "Aegryn (formerly BOHA-Group Sàrl), a company registered in Switzerland, hereinafter referred to as « Aegryn »,",
     "partiesAnd": "And",
     "partiesBuyer": "The user identified by the information provided at registration on the Aegryn platform (name, surname or company name, professional email), hereinafter referred to as « the Buyer »,",
     "a1Title": "Purpose",
@@ -5418,7 +5418,7 @@
       "submitting": "Sending…",
       "successTitle": "Contact revealed.",
       "successDesc": "Your information has been recorded. You can now write directly to the expert.",
-      "rgpdNote": "Data processed by BOHA-Group Sàrl (Aegryn). Your GDPR/LPD rights are guaranteed.",
+      "rgpdNote": "Data processed formerly BOHA-Group Sàrl (Aegryn). Your GDPR/LPD rights are guaranteed.",
       "errorConsent": "Please accept the consent before continuing.",
       "errorGeneric": "An error occurred. Please try again."
     },
