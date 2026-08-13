@@ -12,7 +12,7 @@ const HERO_SLIDES = [
   { src: '/images/home_geneva.jpg',  alt: 'Genève — Aegryn Group' },
 ]
 
-const SLIDE_INTERVAL_MS = 6000
+const SLIDE_INTERVAL_MS = 3500
 
 export function HeroMountain() {
   const t = useTranslations('hero')
