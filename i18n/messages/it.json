@@ -54,13 +54,17 @@
     "eyebrow": "INFRASTRUTTURA DI CERTIFICAZIONE E TRANSAZIONE TECH",
     "title": "Raro per selezione.",
     "sub": "La maggior parte delle transazioni fallisce non per mancanza di capitale ma per mancanza di fiducia. Siamo qui per cambiarlo.",
-    "cta": "SCOPRI IL CATALOGO",
+    "cta": "VENDI UN ASSET CERTIFICATO",
     "strip": "INFRASTRUTTURA DI CERTIFICAZIONE E TRANSAZIONE TECH",
     "geo": "Svizzera · Europa · Global",
     "scroll": "Scorri",
-    "ctaSecondary": "PROPONI UN ASSET",
-    "chip2": "GRADE CERTIFICATO INDIPENDENTE",
-    "ctaPrimary": "Vedi il catalogo"
+    "ctaSecondary": "ENTRA NEL CERCHIO ACQUIRENTE",
+    "ctaPrimary": "VENDI UN ASSET CERTIFICATO",
+    "ctaBuildLabel": "Stai costruendo qualcosa?",
+    "ctaBuildLink": "Ingegneria degli asset",
+    "ctaAdvisoryLabel": "Hai bisogno di un esperto?",
+    "ctaAdvisoryLink": "Consulenza",
+    "chip2": "GRADE CERTIFICATO INDIPENDENTE"
   },
   "assets": {
     "title": "Il nostro ecosistema proprietario.",

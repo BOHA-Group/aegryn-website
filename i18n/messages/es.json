@@ -54,13 +54,17 @@
     "eyebrow": "INFRAESTRUCTURA DE CERTIFICACIÓN Y TRANSACCIÓN TECH",
     "title": "Selecto por definición.",
     "sub": "La mayoría de las transacciones fracasan no por falta de capital sino por falta de confianza. Estamos aquí para cambiar eso.",
-    "cta": "DESCUBRIR EL CATÁLOGO",
+    "cta": "VENDER UN ACTIVO CERTIFICADO",
     "strip": "INFRAESTRUCTURA DE CERTIFICACIÓN Y TRANSACCIÓN TECH",
     "geo": "Suiza · Europa · Global",
     "scroll": "Desplazar",
-    "ctaSecondary": "PROPONER UN ACTIVO",
-    "chip2": "GRADE CERTIFICADO INDEPENDIENTE",
-    "ctaPrimary": "Ver el catálogo"
+    "ctaSecondary": "UNIRSE AL CÍRCULO COMPRADOR",
+    "ctaPrimary": "VENDER UN ACTIVO CERTIFICADO",
+    "ctaBuildLabel": "¿Estás construyendo algo?",
+    "ctaBuildLink": "Ingeniería de activos",
+    "ctaAdvisoryLabel": "¿Necesitas un experto?",
+    "ctaAdvisoryLink": "Asesoría",
+    "chip2": "GRADE CERTIFICADO INDEPENDIENTE"
   },
   "assets": {
     "title": "Nuestro ecosistema propio.",

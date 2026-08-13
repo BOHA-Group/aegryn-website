@@ -156,20 +156,40 @@ export function HeroMountain() {
               {t('sub').split('\n').join(' ')}
             </p>
 
-            <div ref={ctasRef} className="flex items-center gap-4 shrink-0">
-              <Link
-                href="/auction/catalog"
-                className="inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-3.5 hover:bg-ag-apex transition-colors duration-300"
-              >
-                {t('cta')}
-                <ArrowUpRight size={13} />
-              </Link>
-              <Link
-                href="/auction/how-to-sell"
-                className="inline-flex items-center gap-3 border border-white/40 text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-3.5 hover:border-white hover:bg-white/10 transition-all duration-300"
-              >
-                {t('ctaSecondary')}
-              </Link>
+            <div ref={ctasRef} className="flex flex-col items-start gap-4 shrink-0">
+              <div className="flex items-center gap-4">
+                <Link
+                  href="/auction/how-to-sell"
+                  className="inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-3.5 hover:bg-ag-apex transition-colors duration-300"
+                >
+                  {t('ctaPrimary')}
+                  <ArrowUpRight size={13} />
+                </Link>
+                <Link
+                  href="/auction/how-to-buy"
+                  className="inline-flex items-center gap-3 border border-white/40 text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-3.5 hover:border-white hover:bg-white/10 transition-all duration-300"
+                >
+                  {t('ctaSecondary')}
+                </Link>
+              </div>
+              <div className="flex items-center gap-6">
+                <Link
+                  href="/build/asset-engineering"
+                  className="font-sans text-[11px] text-white/55 hover:text-white/90 transition-colors duration-200"
+                >
+                  {t('ctaBuildLabel')}{' '}
+                  <span className="underline underline-offset-2">{t('ctaBuildLink')}</span>
+                  {' →'}
+                </Link>
+                <Link
+                  href="/advisory"
+                  className="font-sans text-[11px] text-white/55 hover:text-white/90 transition-colors duration-200"
+                >
+                  {t('ctaAdvisoryLabel')}{' '}
+                  <span className="underline underline-offset-2">{t('ctaAdvisoryLink')}</span>
+                  {' →'}
+                </Link>
+              </div>
             </div>
           </div>
         </div>

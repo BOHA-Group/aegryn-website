@@ -54,13 +54,17 @@
     "eyebrow": "INFRASTRUCTUUR VOOR TECH-CERTIFICERING EN TRANSACTIE",
     "title": "Zeldzaam door selectie.",
     "sub": "De meeste transacties mislukken niet door gebrek aan kapitaal maar door gebrek aan vertrouwen. Wij zijn er om dat te veranderen.",
-    "cta": "ONTDEK DE CATALOGUS",
+    "cta": "VERKOOP EEN GECERTIFICEERD ASSET",
     "strip": "INFRASTRUCTUUR VOOR TECH-CERTIFICERING EN TRANSACTIE",
     "geo": "Zwitserland · Europa · Global",
     "scroll": "Scrollen",
-    "ctaSecondary": "EEN ASSET VOORSTELLEN",
-    "chip2": "ONAFHANKELIJKE GECERTIFICEERDE GRADE",
-    "ctaPrimary": "Catalogus bekijken"
+    "ctaSecondary": "WORD LID VAN DE KOPERSKRING",
+    "ctaPrimary": "VERKOOP EEN GECERTIFICEERD ASSET",
+    "ctaBuildLabel": "Ben je iets aan het bouwen?",
+    "ctaBuildLink": "Asset-engineering",
+    "ctaAdvisoryLabel": "Heb je een expert nodig?",
+    "ctaAdvisoryLink": "Advies",
+    "chip2": "ONAFHANKELIJKE GECERTIFICEERDE GRADE"
   },
   "assets": {
     "title": "Ons eigen ecosysteem.",

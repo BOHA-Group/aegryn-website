@@ -54,13 +54,17 @@
     "eyebrow": "INFRASTRUKTUR FÜR TECH-ZERTIFIZIERUNG UND TRANSAKTION",
     "title": "Selten durch Auswahl.",
     "sub": "Die meisten Transaktionen scheitern nicht am fehlenden Kapital sondern am fehlenden Vertrauen. Wir sind hier, um das zu ändern.",
-    "cta": "KATALOG ENTDECKEN",
+    "cta": "ZERTIFIZIERTEN ASSET VERKAUFEN",
     "strip": "INFRASTRUKTUR FÜR TECH-ZERTIFIZIERUNG UND TRANSAKTION",
     "geo": "Schweiz · Europa · Global",
     "scroll": "Scrollen",
-    "ctaSecondary": "ASSET VORSCHLAGEN",
-    "chip2": "UNABHÄNGIGES ZERTIFIZIERTES GRADE",
-    "ctaPrimary": "Katalog ansehen"
+    "ctaSecondary": "DEM KÄUFERKREIS BEITRETEN",
+    "ctaPrimary": "ZERTIFIZIERTEN ASSET VERKAUFEN",
+    "ctaBuildLabel": "Sie bauen etwas?",
+    "ctaBuildLink": "Asset-Ingenieurwesen",
+    "ctaAdvisoryLabel": "Experten gesucht?",
+    "ctaAdvisoryLink": "Beratung",
+    "chip2": "UNABHÄNGIGES ZERTIFIZIERTES GRADE"
   },
   "assets": {
     "title": "Unser eigenes Ökosystem.",
