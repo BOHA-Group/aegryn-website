@@ -58,6 +58,15 @@ function FooterMedallion({ medallionText, contactLabel }: { medallionText: strin
 
 const socialLinks = [
   {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/aegrynhq',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.03 4.388 11.028 10.125 11.927v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.791-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.1 24 18.103 24 12.073z"/>
+      </svg>
+    ),
+  },
+  {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/company/106273747/',
     icon: (

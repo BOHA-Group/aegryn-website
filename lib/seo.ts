@@ -203,7 +203,7 @@ export const aegrynOrganizationSchema = {
     'https://www.instagram.com/boha_group/',
     'https://www.tiktok.com/@aegryn.auction',
     'https://www.youtube.com/@aegryn.auction',
-    'https://www.facebook.com/BOHA-Group',
+    'https://www.facebook.com/aegrynhq',
   ],
   founder: {
     '@type':    'Person',
