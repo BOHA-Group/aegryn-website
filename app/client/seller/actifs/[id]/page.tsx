@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { ArrowLeft, FileDown } from 'lucide-react'
+import SellerAssetTabs, { type Delta } from './SellerAssetTabs'
 
 export const metadata: Metadata = {
   title: 'Dossier actif — Espace Cédant Aegryn',
@@ -50,7 +51,7 @@ export default async function SellerAssetDetailPage({
 
   const { data: asset } = await supa
     .from('assets')
-    .select('id, company_name, asset_type, arr, official_grade, score_total, status, public_summary, submitted_at, graded_at, published_at, seller_email, seller_uid, gross_margin, nrr, benchmark_category, revenue_track_months')
+    .select('id, company_name, asset_type, arr, asking_price, official_grade, aeg_grade, score_total, status, sector, public_summary, submitted_at, graded_at, published_at, seller_email, seller_uid, gross_margin, nrr, benchmark_category, revenue_track_months, trs, auction_ready, auction_ready_blockers')
     .eq('id', id)
     .single()
 
@@ -62,16 +63,58 @@ export default async function SellerAssetDetailPage({
 
   if (!isOwner) notFound()
 
-  const stepIdx    = STATUS_STEPS.findIndex(s => s.key === asset.status)
+  const stepIdx     = STATUS_STEPS.findIndex(s => s.key === asset.status)
   const isWithdrawn = asset.status === 'withdrawn'
 
-  const { data: bidsOnAsset } = await supa
-    .from('auction_bids')
-    .select('id, amount_chf, status, created_at')
-    .eq('asset_id', id)
-    .not('status', 'eq', 'withdrawn')
-    .order('amount_chf', { ascending: false })
-    .limit(5)
+  const [
+    { data: bidsOnAsset },
+    { data: assessment },
+    { data: allVersions },
+    { data: docs },
+    { data: benchmark },
+  ] = await Promise.all([
+    supa.from('auction_bids')
+      .select('id, amount_chf, status, created_at')
+      .eq('asset_id', id)
+      .not('status', 'eq', 'withdrawn')
+      .order('amount_chf', { ascending: false })
+      .limit(5),
+    supa.from('grade_assessments')
+      .select('computed_grade, computed_score, trs, trs_reasons, recommendations, engine_result_json, grade_ceiling')
+      .eq('asset_id', id)
+      .in('status', ['published', 'validated'])
+      .order('version_number', { ascending: false })
+      .limit(1)
+      .maybeSingle(),
+    supa.from('grade_assessments')
+      .select('version_number, computed_grade, computed_score, trs, delta, created_at')
+      .eq('asset_id', id)
+      .order('version_number', { ascending: false }),
+    supa.from('data_room_documents')
+      .select('id, document_code, file_name, uploaded_at, buyer_visibility, admin_quality')
+      .eq('asset_id', id)
+      .order('document_code'),
+    asset.sector
+      ? supa.from('sector_benchmarks')
+          .select('sector, arr_multiple_median, arr_multiple_top_quartile, sample_size, source')
+          .eq('sector', asset.sector)
+          .limit(1)
+          .maybeSingle()
+      : Promise.resolve({ data: null }),
+  ])
+
+  // Extraire les scores par dimension depuis engine_result_json
+  type EngineResult = { dimensions?: { code?: { score?: number }; ip?: { score?: number }; finance?: { score?: number }; security?: { score?: number } } }
+  const engineResult = assessment?.engine_result_json as EngineResult | null
+  const assessmentForTabs = assessment ? {
+    computed_grade:  assessment.computed_grade,
+    computed_score:  assessment.computed_score,
+    trs:             assessment.trs as 'ready' | 'conditional' | 'remediation' | 'blocked' | null,
+    trs_reasons:     assessment.trs_reasons as string[] | null,
+    recommendations: assessment.recommendations as Array<{ subcode: string; priority: 'blocking' | 'high' | 'medium' | 'low'; action: string; effort?: string; impact?: string }> | null,
+    dimensions:      engineResult?.dimensions ?? null,
+    grade_ceiling:   (assessment as Record<string, unknown>).grade_ceiling as string | null ?? null,
+  } : null
 
   return (
     <div className="p-8 max-w-3xl">
@@ -254,6 +297,37 @@ export default async function SellerAssetDetailPage({
           </a>
         </div>
       )}
+
+      {/* ── Onglets Sprint 5.0 : Grade / TRS / Recs / Docs / Delta ── */}
+      <div className="mb-6">
+        <SellerAssetTabs
+          assetId={id}
+          assetAegGrade={asset.aeg_grade ?? null}
+          assetArr={asset.arr ?? null}
+          assetAskingPrice={asset.asking_price ?? null}
+          assetSector={asset.sector ?? null}
+          auctionReady={Boolean(asset.auction_ready)}
+          auctionReadyBlockers={(asset.auction_ready_blockers as string[] | null) ?? null}
+          assessment={assessmentForTabs}
+          allVersions={(allVersions ?? []).map(v => ({
+            version_number: v.version_number ?? 0,
+            computed_grade: v.computed_grade ?? null,
+            computed_score: v.computed_score ?? null,
+            trs:            v.trs ?? null,
+            delta:          v.delta as Delta | null,
+            created_at:     v.created_at ?? null,
+          }))}
+          docs={(docs ?? []).map(d => ({
+            id:               d.id,
+            document_code:    d.document_code,
+            file_name:        d.file_name,
+            uploaded_at:      d.uploaded_at,
+            buyer_visibility: d.buyer_visibility,
+            admin_quality:    d.admin_quality,
+          }))}
+          benchmark={benchmark ?? null}
+        />
+      </div>
 
       {/* Contact */}
       <div className="bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">

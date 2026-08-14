@@ -15,10 +15,18 @@ export const metadata: Metadata = {
 const STATUS_STEPS = [
   { key: 'submitted',    label: 'Reçu' },
   { key: 'under_review', label: 'Analyse' },
+  { key: 'pre_grade',    label: 'Pre-Grade' },
   { key: 'graded',       label: 'Gradé' },
   { key: 'published',    label: 'Publié' },
   { key: 'sold',         label: 'Vendu' },
 ]
+
+const TRS_BADGE: Record<string, { label: string; cls: string }> = {
+  ready:       { label: 'Prêt',          cls: 'text-emerald-700 bg-emerald-50 border-emerald-200' },
+  conditional: { label: 'Conditionnel',  cls: 'text-amber-700 bg-amber-50 border-amber-200' },
+  remediation: { label: 'Remédiation',   cls: 'text-orange-700 bg-orange-50 border-orange-200' },
+  blocked:     { label: 'Bloqué',        cls: 'text-red-700 bg-red-50 border-red-200' },
+}
 
 function getStepIndex(status: string) {
   return STATUS_STEPS.findIndex(s => s.key === status)
@@ -51,6 +59,8 @@ type Asset = {
   official_grade: string | null
   score_total: number | null
   status: string
+  trs: string | null
+  auction_ready: boolean | null
   public_summary: string | null
   submitted_at: string | null
   graded_at: string | null
@@ -69,11 +79,11 @@ export default async function SellerActifsPage() {
 
   const [{ data: byEmail }, { data: byUid }] = await Promise.all([
     supa.from('assets')
-      .select('id, company_name, asset_type, arr, official_grade, score_total, status, public_summary, submitted_at, graded_at, published_at')
+      .select('id, company_name, asset_type, arr, official_grade, score_total, status, trs, auction_ready, public_summary, submitted_at, graded_at, published_at')
       .eq('seller_email', user.email!)
       .order('submitted_at', { ascending: false }),
     supa.from('assets')
-      .select('id, company_name, asset_type, arr, official_grade, score_total, status, public_summary, submitted_at, graded_at, published_at')
+      .select('id, company_name, asset_type, arr, official_grade, score_total, status, trs, auction_ready, public_summary, submitted_at, graded_at, published_at')
       .eq('seller_uid', user.id)
       .order('submitted_at', { ascending: false }),
   ])
@@ -136,7 +146,17 @@ export default async function SellerActifsPage() {
                       {asset.arr != null && ` — ARR ${fmtChf(asset.arr)}`}
                     </p>
                   </div>
-                  <div className="flex items-center gap-3 shrink-0">
+                  <div className="flex items-center gap-2 shrink-0 flex-wrap justify-end">
+                    {asset.trs && TRS_BADGE[asset.trs] && (
+                      <span className={`border px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest ${TRS_BADGE[asset.trs].cls}`}>
+                        {TRS_BADGE[asset.trs].label}
+                      </span>
+                    )}
+                    {Boolean(asset.auction_ready) && (
+                      <span className="border px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-emerald-700 bg-emerald-50 border-emerald-300 font-bold">
+                        Auction Ready
+                      </span>
+                    )}
                     {asset.official_grade && (
                       <div className={`border px-3 py-1.5 font-mono font-bold text-[15px] ${gradeColor(asset.official_grade)}`}>
                         {asset.official_grade}

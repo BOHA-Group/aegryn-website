@@ -5,7 +5,7 @@ import { cookies } from 'next/headers'
 import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { FileText, ArrowRightLeft, ShieldCheck, Bell, ArrowUpRight, Calculator, Clock, CheckCircle2, Tag } from 'lucide-react'
+import { FileText, ArrowRightLeft, ShieldCheck, Bell, ArrowUpRight, Calculator, Clock, CheckCircle2, Tag, AlertTriangle, Zap } from 'lucide-react'
 import { calcCommission, fmtEur } from '@/lib/calcCommission'
 
 export const metadata: Metadata = {
@@ -46,10 +46,9 @@ export default async function SellerDashboardPage() {
   ] = await Promise.all([
     supa.from('profiles').select('full_name').eq('id', user.id).single(),
     supa.from('assets')
-      .select('id, company_name, status, official_grade, submitted_at, published_at, arr')
+      .select('id, company_name, status, official_grade, aeg_grade, trs, auction_ready, submitted_at, published_at, arr')
       .or(`seller_email.eq.${user.email},seller_uid.eq.${user.id}`)
-      .order('submitted_at', { ascending: false })
-      .limit(5),
+      .order('submitted_at', { ascending: false }),
     supa.from('transactions')
       .select('id, status, created_at, escrow_amount_chf, transaction_price, assets(company_name, arr)')
       .eq('seller_id', user.id)
@@ -73,7 +72,10 @@ export default async function SellerDashboardPage() {
   const kycAlertCount = kycPending ?? 0
   const unreadCount   = (notifications ?? []).filter(n => !n.read_at).length
 
-  const publishedCount = (assets ?? []).filter(a => a.status === 'published' || a.status === 'sold').length
+  const publishedCount  = (assets ?? []).filter(a => a.status === 'published' || a.status === 'sold').length
+  const certifiedCount  = (assets ?? []).filter(a => ['graded','published','sold'].includes(a.status)).length
+  const auctionReadyCount = (assets ?? []).filter(a => Boolean(a.auction_ready)).length
+  const trsAlerts       = (assets ?? []).filter(a => a.trs === 'blocked' || a.trs === 'remediation')
 
   return (
     <div className="p-8 max-w-5xl">
@@ -113,6 +115,27 @@ export default async function SellerDashboardPage() {
         </div>
       )}
 
+      {/* Alertes TRS — Sprint 5.0 */}
+      {trsAlerts.length > 0 && (
+        <div className="flex flex-col gap-2 mb-8">
+          {trsAlerts.map(a => (
+            <Link key={a.id} href={`/client/seller/actifs/${a.id}`}
+              className={`flex items-center gap-3 px-4 py-3 border hover:opacity-90 transition-opacity ${
+                a.trs === 'blocked'
+                  ? 'bg-red-50 border-red-200'
+                  : 'bg-orange-50 border-orange-200'
+              }`}>
+              <AlertTriangle size={14} className={a.trs === 'blocked' ? 'text-red-500 shrink-0' : 'text-orange-500 shrink-0'} />
+              <p className={`font-sans text-[12px] ${ a.trs === 'blocked' ? 'text-red-800' : 'text-orange-800' }`}>
+                <span className="font-semibold">{a.company_name ?? `Actif #${a.id.slice(0,8)}`}</span>
+                {a.trs === 'blocked' ? ' — Transaction bloquée. Action immédiate requise.' : ' — Remédiation nécessaire avant mise en marché.'}
+              </p>
+              <ArrowUpRight size={12} className="ml-auto text-gray-400" />
+            </Link>
+          ))}
+        </div>
+      )}
+
       {/* KPIs */}
       <div className="grid grid-cols-2 gap-4 mb-10 sm:grid-cols-4">
         <Link href="/client/seller/actifs"
@@ -127,10 +150,18 @@ export default async function SellerDashboardPage() {
 
         <div className="bg-white border border-gray-200 p-5">
           <div className="flex items-center justify-between mb-3">
-            <FileText size={16} className="text-emerald-400" />
+            <CheckCircle2 size={16} className="text-emerald-400" />
           </div>
-          <p className="font-mono font-bold text-[22px] text-gray-900">{publishedCount}</p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">Publiés / vendus</p>
+          <p className="font-mono font-bold text-[22px] text-gray-900">{certifiedCount}</p>
+          <p className="font-sans text-[11px] text-gray-400 mt-0.5">Certifiés</p>
+        </div>
+
+        <div className={`bg-white border p-5 ${ auctionReadyCount > 0 ? 'border-emerald-200 bg-emerald-50/30' : 'border-gray-200' }`}>
+          <div className="flex items-center justify-between mb-3">
+            <Zap size={16} className={auctionReadyCount > 0 ? 'text-emerald-500' : 'text-gray-300'} />
+          </div>
+          <p className={`font-mono font-bold text-[22px] ${ auctionReadyCount > 0 ? 'text-emerald-700' : 'text-gray-400' }`}>{auctionReadyCount}</p>
+          <p className="font-sans text-[11px] text-gray-400 mt-0.5">Auction Ready</p>
         </div>
 
         <Link href="/client/seller/transactions"
