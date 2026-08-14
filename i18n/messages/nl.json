@@ -8,7 +8,7 @@
     "growWithUs": "Partners",
     "career": "Carrières",
     "contact": "Contact",
-    "auction": "Veiling",
+    "auction": "M\u0026A Transacties",
     "grade": "Grade",
     "assets": "Assets",
     "services": "Diensten",
@@ -19,9 +19,9 @@
     "auctionCatalog": "Catalogus",
     "auctionSell": "Asset verkopen",
     "auctionBuy": "Koper worden",
-    "auctionBidModels": "Bid-modellen",
-    "auctionSession": "Volgende sessie",
-    "auctionResults": "Resultaten",
+    "auctionBidModels": "Voorstelmodellen",
+    "auctionSession": "Proces",
+    "auctionResults": "Afgesloten transacties",
     "gradeSystem": "Grade-systeem",
     "gradeMethod": "Methodologie",
     "gradeSubmit": "Indienen voor certificering",
@@ -103,7 +103,7 @@
       "auctionEligibleNote": "Activum geschikt voor veiling — investeerderscontact op verzoek.",
       "ctaBottom": "Wilt u uw eigen asset indienen voor certificering?",
       "ctaGrade": "Een extern asset indienen",
-      "ctaAuction": "Veilingsessies bekijken",
+      "ctaAuction": "M&A-process bekijken",
       "notStarted": "Niet gestart",
       "certificationInProgress": "Certificering bezig"
     },
@@ -274,7 +274,7 @@
   },
   "ecosystemDomains": {
     "label": "Markten",
-    "title": "Welke thema's\nlopen via Aegryn Auction.",
+    "title": "Welke thema's\nlopen via Aegryn.",
     "domains": [
       {
         "id": "ai",
@@ -743,10 +743,10 @@
   },
   "accessForm": {
     "doneTitle": "Aanvraag ontvangen",
-    "doneDesc": "Ons team neemt binnen 24–48u contact met u op om uw profiel te valideren en u de NDA en Aegryn Auction AV te sturen voor ondertekening.",
+    "doneDesc": "Ons team neemt binnen 24–48u contact met u op om uw profiel te valideren en u de NDA en Aegryn AV te sturen voor ondertekening.",
     "doneNote": "Geen toegang zonder ondertekening van beide documenten.",
     "restrictedTitle": "Beperkte catalogustoegang",
-    "restrictedDesc": "Actiefdossiers en bedrijfsnamen zijn alleen toegankelijk na accountaanmaak, ondertekening van de Aegryn Auction NDA en aanvaarding van de AV.",
+    "restrictedDesc": "Actiefdossiers en bedrijfsnamen zijn alleen toegankelijk na accountaanmaak, ondertekening van de Aegryn NDA en aanvaarding van de AV.",
     "pendingCgvDesc": "Uw NDA is geregistreerd. De AV worden u binnenkort toegestuurd.",
     "pendingNdaDesc": "Dien hieronder uw aanvraag in. Wij sturen u de NDA en AV ter ondertekening.",
     "ndaSignedTitle": "NDA ondertekend — AV in afwachting",
@@ -841,7 +841,7 @@
     "hero": {
       "label": "Contact opnemen",
       "title": "Laten we praten.",
-      "desc": "Advies, certificering, veiling, partnerschap of algemene vraag, we reageren binnen 24u."
+      "desc": "Advies, certificering, cessie, partnerschap of algemene vraag, we reageren binnen 24u."
     },
     "responseTime": {
       "label": "Reactietijd",
@@ -857,7 +857,7 @@
         "general": "Algemene vraag",
         "advisory": "Advisory",
         "grade": "Activumcertificering (Grade)",
-        "auction": "Veilingsessie",
+        "auction": "M&A-proces",
         "partnership": "Partnerschap",
         "investor": "Investeerder",
         "press": "Pers & Media",
@@ -876,7 +876,7 @@
     },
     "meta": {
       "title": "Contact — Aegryn",
-      "desc": "Neem contact op met Aegryn, Advisory, certificering, veiling, partnerschap of algemene vraag."
+      "desc": "Neem contact op met Aegryn, Advisory, certificering, cessie, partnerschap of algemene vraag."
     },
     "info": {
       "baseLabel": "Hoofdkantoor",
@@ -2004,12 +2004,12 @@
   },
   "roadmapPage": {
     "meta": {
-      "title": "Platform — Aegryn Auction Switzerland",
-      "desc": "Het Aegryn Auction Switzerland platform: certificering, private sessies, Zwitsers recht, internationale openheid."
+      "title": "Platform — Aegryn M&A Switzerland",
+      "desc": "Het Aegryn M&A Switzerland platform: certificering, private sessies, Zwitsers recht, internationale openheid."
     },
-    "label": "Aegryn Auction Switzerland",
+    "label": "Aegryn M&A Switzerland",
     "title": "Het platform.\nZijn functies.",
-    "desc": "Elke verkoop vindt uitsluitend plaats via Aegryn Auction Switzerland. Zwitsers recht is van toepassing. Verkopers en kopers van over de hele wereld zijn welkom.",
+    "desc": "Elke verkoop vindt uitsluitend plaats via Aegryn M&A Switzerland. Zwitsers recht is van toepassing. Verkopers en kopers van over de hele wereld zijn welkom.",
     "swissNote": "Zwitsers recht is van toepassing op elke transactie — ongeacht de herkomst van het asset of de nationaliteit van de partijen.",
     "featuresLabel": "Wat het platform biedt",
     "features": {
@@ -2095,7 +2095,7 @@
       {
         "iconKey": "sessions",
         "theme": "Catalogus",
-        "title": "Privé verkoopsessies",
+        "title": "Privé M&A-processen",
         "desc": "Gestructureerde sessies die gecertificeerde tech-assets presenteren aan gekwalificeerde kopers in een vertrouwelijke omgeving.",
         "live": true
       },
@@ -2193,7 +2193,7 @@
     ],
     "currentLabel": "Al beschikbaar",
     "current": [
-      "Privé verkoopsessies",
+      "Privé M&A-processen",
       "Aegryn Grade-certificering — CIFS-protocol",
       "Institutionele escrow",
       "Geautomatiseerde digitale NDA",
@@ -2413,7 +2413,7 @@
       "desc": "Aegryn-sessies: gecertificeerde tech-assets kopen of verkopen."
     },
     "index": {
-      "label": "Aegryn Veilingsessies",
+      "label": "Aegryn M&A-Transacties",
       "title": "Het gecertificeerde transactieplatform\nvoor Europese tech-assets.",
       "desc": "Geen open biedingen. Private, rigoureuze sessies voor gecertificeerde verkopers en gekwalificeerde kopers.",
       "ctaCatalog": "Catalogus bekijken",
@@ -2514,9 +2514,9 @@
       "portfolioLink": "Aegryn Portfolio",
       "conditionalAccess": "Voorwaardelijke toegang",
       "qualifiedOnly": "Catalogus voorbehouden aan gekwalificeerde kopers",
-      "accessDesc": "Bedrijfsnamen en volledige asset-dossiers zijn alleen toegankelijk na accountaanmaak, ondertekening van de NDA en aanvaarding van de Aegryn Auction-voorwaarden.",
+      "accessDesc": "Bedrijfsnamen en volledige asset-dossiers zijn alleen toegankelijk na accountaanmaak, ondertekening van de NDA en aanvaarding van de Aegryn-voorwaarden.",
       "step1": "Een kopersaccount aanmaken",
-      "step2": "Aegryn Auction NDA ondertekenen",
+      "step2": "Aegryn NDA ondertekenen",
       "step3": "Voorwaarden accepteren",
       "loginCta": "Inloggen",
       "registerCta": "Een account aanmaken",
@@ -2524,7 +2524,7 @@
     },
     "sell": {
       "meta": {
-        "title": "Uw activa verkopen — Aegryn Auction",
+        "title": "Uw activa overdragen — Aegryn",
         "desc": "Aegryn verkopersproces: indicatieve waardering, readiness score, mandaatindiening. CIFS-certificering, absolute vertrouwelijkheid, Zwitserse institutionele escrow."
       },
       "hero": {
@@ -2538,7 +2538,7 @@
         "label": "Verkopersproces",
         "title": "Drie stappen, van waardering tot mandaat.",
         "step2Label": "Stap 02",
-        "step2Title": "Is uw activa klaar voor een veillingsessie?",
+        "step2Title": "Is uw activa klaar voor een M&A-proces?",
         "s1": {
           "title": "Indicatieve waardering",
           "desc": "Ontvang een waarderingsrange in 4 stappen (financiën, code, IP, beveiliging) en een geschatte Aegryn-grade. Gratis, vertrouwelijk, vrijblijvend.",
@@ -2546,11 +2546,11 @@
         },
         "s2": {
           "title": "Readiness Score",
-          "desc": "Beoordeel of uw dossier klaar is voor een veillingsessie: data room, contracten, operationele onafhankelijkheid, IP, technische schuld. 6 vragen, direct resultaat."
+          "desc": "Beoordeel of uw dossier klaar is voor een M&A-proces: data room, contracten, operationele onafhankelijkheid, IP, technische schuld. 6 vragen, direct resultaat."
         },
         "s3": {
           "title": "Mandaatindiening",
-          "desc": "Dien uw activa in bij het Aegryn-team. Onafhankelijke CIFS-certificering, officiële grade-toewijzing, toegang tot een veillingsessie onder een exclusief mandaat van 60 dagen.",
+          "desc": "Dien uw activa in bij het Aegryn-team. Onafhankelijke CIFS-certificering, officiële grade-toewijzing, toegang tot een M&A-proces onder een exclusief mandaat van 60 dagen.",
           "cta": "Uw mandaat indienen →"
         }
       },
@@ -2559,7 +2559,7 @@
         "title": "Wat u elders niet krijgt.",
         "g1": {
           "title": "Absolute vertrouwelijkheid",
-          "desc": "De identiteit van uw activa wordt nooit onthuld voordat de koper de NDA ondertekent en de veillingsessie opent."
+          "desc": "De identiteit van uw activa wordt nooit onthuld voordat de koper de NDA ondertekent en de M&A-proces opent."
         },
         "g2": {
           "title": "100% vooraf gekwalificeerde kopers",
@@ -2584,7 +2584,7 @@
         "toolLabel": "Aegryn Tool",
         "toolTitle": "Readiness Score",
         "restart": "Opnieuw beginnen",
-        "intro": "Beoordeel in 2 minuten of uw activa klaar is voor indiening bij een Aegryn-veillingsessie.",
+        "intro": "Beoordeel in 2 minuten of uw activa klaar is voor indiening bij een Aegryn-M&A-proces.",
         "answerYes": "Ja",
         "answerPartial": "Gedeeltelijk",
         "answerNo": "Nee",
@@ -2595,7 +2595,7 @@
         "levels": {
           "ready": {
             "label": "Activa klaar voor indiening",
-            "message": "Uw activa heeft de kenmerken van een dossier dat in aanmerking komt voor een Aegryn-veillingsessie. Wij raden u aan uw mandaat in te dienen voor beoordeling door ons team.",
+            "message": "Uw activa heeft de kenmerken van een dossier dat in aanmerking komt voor een Aegryn-M&A-proces. Wij raden u aan uw mandaat in te dienen voor beoordeling door ons team.",
             "cta": "Uw mandaat indienen →"
           },
           "almost": {
@@ -2703,7 +2703,7 @@
       "sellerCta": "Asset indienen",
       "pastSessions": "Vorige sessies",
       "noSessions": "Nog geen voltooide sessies.",
-      "sessionCardKicker": "Online veiling",
+      "sessionCardKicker": "M&A-transactie",
       "sessionCardStatus": "Binnenkort",
       "sessionCardCategory": "Legal-Tech",
       "sessionCardTitle": "AI-contractintelligentie — Kavel nr. 001",
@@ -2755,7 +2755,7 @@
   "auctionNarrative": {
     "label": "Veiling",
     "title": "Sommige assets verdienen meer\ndan een publieke vermelding.",
-    "desc": "Aegryn Auction is geen open platform. Het is een vertrouwelijk overdrachtsproces tussen verkopers die onze certificering hebben doorstaan en kopers die hun capaciteit hebben bewezen.\n\nMinder dan 25% van de ingediende assets wordt geaccepteerd. 100% van de kopers is vooraf gekwalificeerd. Elke transactie is volledig gedocumenteerd en beveiligd.",
+    "desc": "Aegryn is geen open platform. Het is een vertrouwelijk overdrachtsproces tussen verkopers die onze certificering hebben doorstaan en kopers die hun capaciteit hebben bewezen.\n\nMinder dan 25% van de ingediende assets wordt geaccepteerd. 100% van de kopers is vooraf gekwalificeerd. Elke transactie is volledig gedocumenteerd en beveiligd.",
     "stat1Val": "< 25%",
     "stat1Label": "Acceptatiegraad ingediende assets",
     "stat2Val": "60 d max",
@@ -3183,7 +3183,7 @@
         {
           "num": "05",
           "title": "Certificering (en optionele exit)",
-          "desc": "CIFS-protocol indiening indien gewenst. Officieel grade toegekend als aan de criteria is voldaan. Een transactie via Aegryn Auction of vertrouwelijk kanaal wordt alleen op uw beslissing ingezet. Het asset kan ook worden behouden met onderhoud."
+          "desc": "CIFS-protocol indiening indien gewenst. Officieel grade toegekend als aan de criteria is voldaan. Een transactie via Aegryn of vertrouwelijk kanaal wordt alleen op uw beslissing ingezet. Het asset kan ook worden behouden met onderhoud."
         }
       ]
     },
@@ -3226,7 +3226,7 @@
       "coInvestNote": "Aegryn kan optreden als minderheids-co-investeerder. Per geval beoordeeld."
     },
     "exitBanner": {
-      "text": "Een verkoop is een optie, nooit een verplichting. Als u ooit wilt verkopen — vroeg stadium of op rijpheid — is het asset daarvoor ontworpen. Exit via Aegryn Auction of vertrouwelijke transactie is beschikbaar als het grade het toelaat.",
+      "text": "Een verkoop is een optie, nooit een verplichting. Als u ooit wilt verkopen — vroeg stadium of op rijpheid — is het asset daarvoor ontworpen. Exit via Aegryn of vertrouwelijke transactie is beschikbaar als het grade het toelaat.",
       "cta": "Meer over het verkoopproces",
       "href": "/auction/how-it-works"
     },
@@ -3311,7 +3311,7 @@
       "evalTypeTitle": "Welk evaluatieniveau wenst u?",
       "evalTypeFull": {
         "label": "Auction-certificering",
-        "desc": "Alleen succesfee. Volledig proces via onafhankelijk Aegryn-protocol (4 dimensies C/I/F/S), inbegrepen als de transactie via Aegryn Auction plaatsvindt.",
+        "desc": "Alleen succesfee. Volledig proces via onafhankelijk Aegryn-protocol (4 dimensies C/I/F/S), inbegrepen als de transactie via Aegryn plaatsvindt.",
         "price": "Gratis"
       },
       "evalTypeReview": {
@@ -3369,7 +3369,7 @@
   },
   "bidModels": {
     "meta": {
-      "title": "Acquisitiemodellen — Aegryn Auction",
+      "title": "Acquisitiemodellen — Aegryn",
       "desc": "Club Deal, Corporate, Fonds, Equity Stake, de 4 Aegryn-acquisitiemodellen met de Tech Transactiebelofte in 5 stappen."
     },
     "hero": {
@@ -3862,13 +3862,13 @@
   },
   "auctionSubmit": {
     "meta": {
-      "title": "Asset indienen — Aegryn Auction Switzerland",
-      "desc": "Dien uw tech-asset in voor een Aegryn Auction Switzerland sessie. Zwitsers recht. Internationaal open."
+      "title": "Asset indienen — Aegryn M&A Switzerland",
+      "desc": "Dien uw tech-asset in voor een Aegryn M&A Switzerland sessie. Zwitsers recht. Internationaal open."
     },
     "hero": {
-      "label": "Aegryn Auction Switzerland",
+      "label": "Aegryn M&A Switzerland",
       "title": "Een asset indienen\nvoor verkoop.",
-      "desc": "Elke verkoop is exclusief via Aegryn Auction Switzerland. Zwitsers recht is van toepassing. Verkopers van over de hele wereld zijn welkom."
+      "desc": "Elke verkoop is exclusief via Aegryn M&A Switzerland. Zwitsers recht is van toepassing. Verkopers van over de hele wereld zijn welkom."
     },
     "swissNote": "Zwitsers recht is van toepassing op elke transactie — ongeacht de herkomst van de verkoper of het asset.",
     "steps": [
@@ -3964,7 +3964,7 @@
       "countryPlaceholder": "bijv. Frankrijk, Zwitserland, Duitsland",
       "company": "Bedrijf / Structuur (optioneel)",
       "message": "Aanvullend bericht (optioneel)",
-      "swissLawLabel": "Ik erken dat het Zwitserse recht van toepassing is op elke transactie via Aegryn Auction Switzerland.",
+      "swissLawLabel": "Ik erken dat het Zwitserse recht van toepassing is op elke transactie via Aegryn M&A Switzerland.",
       "submit": "Mijn dossier indienen",
       "submitting": "Verzenden…",
       "successTitle": "Dossier ontvangen.",
@@ -4810,7 +4810,7 @@
   },
   "clientAuction": {
     "eyebrow": "Kopersruimte",
-    "title": "Mijn Aegryn Auction-dossiers",
+    "title": "Mijn Aegryn-dossiers",
     "subtitle": "Toegangslinks naar volledige dossiers worden nooit per e-mail verstuurd. Ze verschijnen hier pas na validatie van uw kandidatuur.",
     "empty": "Geen lopende toegangsaanvraag.",
     "viewCatalog": "Catalogus bekijken",
@@ -4822,14 +4822,14 @@
     "accessActivePlural": "Actieve toegang · {days} dagen resterend",
     "accessConfidential": "Deze link is strikt persoonlijk en vertrouwelijk.",
     "openDossier": "Dossier openen",
-    "accessExpired": "De toegangsperiode is verlopen of de veilingsessie is gesloten.",
+    "accessExpired": "De toegangsperiode is verlopen of de M&A-proces is gesloten.",
     "pendingReview": "Uw aanvraag wordt onderzocht door het Aegryn-team (binnen 48 werkuren). De link verschijnt hier bij goedkeuring.",
     "rejected": "Uw aanvraag werd niet geselecteerd voor deze sessie.",
     "requestedOn": "Aanvraag ingediend op",
     "upcomingTitle": "Ruimtes in opbouw",
     "sectionSeller": "Verkopersruimte",
     "sectionPartner": "Partnerruimte",
-    "disclaimer": "Aegryn Auction · Genève · Zwitserland — Strikt vertrouwelijke toegang"
+    "disclaimer": "Aegryn · Genève · Zwitserland — Strikt vertrouwelijke toegang"
   },
   "waitlist": {
     "header": {
@@ -4977,7 +4977,7 @@
     "placeholder": "— Selecteer —",
     "done": {
       "title": "Aanvraag geregistreerd",
-      "desc": "Ons team beoordeelt uw profiel en neemt binnen 48 uur contact met u op om uw toegang tot de volgende Aegryn Auction-sessie te valideren.",
+      "desc": "Ons team beoordeelt uw profiel en neemt binnen 48 uur contact met u op om uw toegang tot de volgende Aegryn M&A-proces te valideren.",
       "note": "Geen toegang zonder nominatieve uitnodiging."
     },
     "errors": {
@@ -5256,8 +5256,8 @@
   "nda": {
     "pageTitle": "Geheimhoudingsovereenkomst — Aegryn Kopersruimte",
     "stepLabel": "Verplichte stap",
-    "stepTitle": "Geheimhoudingsovereenkomst — Aegryn Auction",
-    "introText": "Voordat u toegang krijgt tot de Aegryn Auction-catalogus, moet u de onderstaande geheimhoudingsovereenkomst lezen en accepteren. Deze overeenkomst is verplicht en vormt een contractuele vertrouwelijkheidsverplichting jegens Aegryn en de verkopers. Uw handtekening wordt voorzien van een tijdstempel en geregistreerd voor juridische doeleinden.",
+    "stepTitle": "Geheimhoudingsovereenkomst — Aegryn",
+    "introText": "Voordat u toegang krijgt tot de Aegryn-catalogus, moet u de onderstaande geheimhoudingsovereenkomst lezen en accepteren. Deze overeenkomst is verplicht en vormt een contractuele vertrouwelijkheidsverplichting jegens Aegryn en de verkopers. Uw handtekening wordt voorzien van een tijdstempel en geregistreerd voor juridische doeleinden.",
     "versionLabel": "NDA — Versie",
     "mainTitle": "Vertrouwelijkheidsvoorwaarden voor Kopers",
     "mainSubtitle": "Aegryn (voorheen BOHA-Group Sàrl)",
@@ -5266,7 +5266,7 @@
     "partiesAnd": "En",
     "partiesBuyer": "De gebruiker die is geïdentificeerd aan de hand van de bij registratie op het Aegryn-platform verstrekte gegevens (naam, voornaam of handelsnaam, zakelijk e-mailadres), hierna « de Koper » genoemd,",
     "a1Title": "Onderwerp",
-    "a1": "Deze geheimhoudingsovereenkomst («NDA») regelt de toegang van de Koper tot de Aegryn Auction-catalogus, activafiches, grade-rapporten en alle documenten in de dataroom die beschikbaar zijn gesteld in het kader van het certificerings- en transactieproces van Aegryn. Aanvaarding van deze NDA is een verplichte voorwaarde voor elke toegang tot de catalogus, ongeacht het toegangsniveau.",
+    "a1": "Deze geheimhoudingsovereenkomst («NDA») regelt de toegang van de Koper tot de Aegryn-catalogus, activafiches, grade-rapporten en alle documenten in de dataroom die beschikbaar zijn gesteld in het kader van het certificerings- en transactieproces van Aegryn. Aanvaarding van deze NDA is een verplichte voorwaarde voor elke toegang tot de catalogus, ongeacht het toegangsniveau.",
     "a2Title": "Definitie van vertrouwelijke informatie",
     "a2Intro": "De volgende informatie wordt als vertrouwelijk beschouwd:",
     "a2i1": "Alle informatie over de identiteit van de verkoper of de overdragende entiteit, vóór een uitdrukkelijke introductiebeslissing van Aegryn",

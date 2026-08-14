@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { CheckCircle2, XCircle, AlertTriangle, ChevronRight } from 'lucide-react'
+import { CheckCircle2, XCircle, AlertTriangle, ChevronRight, FileText, Clock, Check, X, MessageSquare } from 'lucide-react'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -32,6 +32,29 @@ type AssessmentVersion = {
   trs: string | null
   delta: Delta | null
   created_at: string | null
+}
+
+type TermSheetStatus = 'pending' | 'viewed' | 'accepted' | 'refused' | 'countered' | 'expired'
+
+type TermSheet = {
+  id: string
+  buyer_rank: number
+  version: number
+  status: TermSheetStatus
+  proposed_price_chf: number
+  structure: string
+  price_comment: string | null
+  earnout: Record<string, unknown> | null
+  management_contract: Record<string, unknown> | null
+  non_compete: Record<string, unknown> | null
+  warranties: Record<string, unknown> | null
+  dd_duration_days: number | null
+  closing_weeks: number | null
+  conditions_precedent: string[] | null
+  buyer_profile_note: string | null
+  expires_at: string
+  seller_response_note: string | null
+  created_at: string
 }
 
 type DataRoomDoc = {
@@ -78,6 +101,7 @@ type Props = {
   allVersions: AssessmentVersion[]
   docs: DataRoomDoc[]
   benchmark: SectorBenchmark | null
+  termSheets: TermSheet[]
 }
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -110,6 +134,23 @@ const EFFORT_LABEL: Record<string, string> = {
   weeks:  'Quelques semaines',
   months: 'Plusieurs mois',
 }
+
+const STRUCTURE_LABELS: Record<string, string> = {
+  share_deal:   'Cession de titres',
+  asset_deal:   'Cession d\'actifs',
+  merger:       'Fusion',
+  earnout_only: 'Earnout exclusif',
+  mixed:        'Mixte',
+}
+
+const TS_STATUS_META: Record<TermSheetStatus, { label: string; cls: string }> = {
+  pending:    { label: 'En attente',        cls: 'text-amber-700 bg-amber-50 border-amber-300' },
+  viewed:     { label: 'Consultée',         cls: 'text-blue-700 bg-blue-50 border-blue-300' },
+  accepted:   { label: 'Acceptée',          cls: 'text-emerald-700 bg-emerald-50 border-emerald-300' },
+  refused:    { label: 'Refusée',           cls: 'text-red-700 bg-red-50 border-red-300' },
+  countered:  { label: 'Contre-proposée',   cls: 'text-purple-700 bg-purple-50 border-purple-300' },
+  expired:    { label: 'Expirée',           cls: 'text-gray-500 bg-gray-50 border-gray-300' },
+}
 const DOC_QUALITY: Record<string, { label: string; cls: string }> = {
   sufficient:     { label: '✓ Validé',               cls: 'text-emerald-700 bg-emerald-50 border-emerald-200' },
   insufficient:   { label: '⚠ Insuffisant',           cls: 'text-orange-700 bg-orange-50 border-orange-200' },
@@ -132,9 +173,36 @@ function deltaCls(n: number) {
 
 export default function SellerAssetTabs({
   assetId, assetAegGrade, assetArr, assetAskingPrice, assetSector,
-  auctionReady, auctionReadyBlockers, assessment, allVersions, docs, benchmark,
+  auctionReady, auctionReadyBlockers, assessment, allVersions, docs, benchmark, termSheets,
 }: Props) {
-  const [tab, setTab] = useState<'overview' | 'recommendations' | 'documents' | 'history'>('overview')
+  const [tab, setTab] = useState<'overview' | 'recommendations' | 'documents' | 'history' | 'termsheets'>('overview')
+  const [tsLoading, setTsLoading] = useState<string | null>(null)
+  const [tsError, setTsError] = useState('')
+  const [tsResponseNote, setTsResponseNote] = useState<Record<string, string>>({})  
+  const [tsSheets, setTsSheets] = useState<TermSheet[]>(termSheets)
+  const [expandedTs, setExpandedTs] = useState<string | null>(null)
+
+  async function handleTsAction(id: string, action: 'accepted' | 'refused' | 'countered') {
+    setTsLoading(id)
+    setTsError('')
+    try {
+      const res = await fetch(`/api/seller/term-sheets/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          status: action,
+          seller_response_note: tsResponseNote[id] ?? undefined,
+        }),
+      })
+      const json = await res.json()
+      if (!res.ok) throw new Error(json.error ?? 'Erreur')
+      setTsSheets(prev => prev.map(ts => ts.id === id ? { ...ts, status: action } : ts))
+    } catch (err: unknown) {
+      setTsError(err instanceof Error ? err.message : 'Erreur inattendue')
+    } finally {
+      setTsLoading(null)
+    }
+  }
 
   const dims = assessment?.dimensions
   const dimScores: { label: string; key: keyof NonNullable<typeof dims>; color: string }[] = [
@@ -157,11 +225,14 @@ export default function SellerAssetTabs({
   }
   const showBenchmark = benchmark && multiple !== null
 
+  const activeTsCount = tsSheets.filter(ts => ts.status === 'pending' || ts.status === 'viewed').length
+
   const TABS = [
     { key: 'overview',         label: 'Vue d\'ensemble' },
     { key: 'recommendations',  label: `Recommandations${recs.length > 0 ? ` (${recs.length})` : ''}` },
     { key: 'documents',        label: 'Documents' },
     { key: 'history',          label: 'Historique' },
+    { key: 'termsheets',       label: `Term Sheets${activeTsCount > 0 ? ` (${activeTsCount})` : ''}` },
   ] as const
 
   return (
@@ -255,17 +326,17 @@ export default function SellerAssetTabs({
             </div>
           )}
 
-          {/* Auction Ready */}
+          {/* M&A Ready */}
           <div className="bg-white border border-gray-200 p-6">
-            <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-4">Eligibilité session Auction</p>
+            <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-4">Eligibilité processus M&amp;A</p>
             {auctionReady ? (
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <CheckCircle2 size={18} className="text-emerald-500" />
-                  <span className="font-mono text-[12px] uppercase tracking-widest text-emerald-700 font-bold">Auction Ready</span>
+                  <span className="font-mono text-[12px] uppercase tracking-widest text-emerald-700 font-bold">M&amp;A Ready</span>
                 </div>
                 <p className="font-sans text-[13px] text-gray-600">
-                  Votre actif remplit tous les critères pour entrer en session AEGRYN Auction.
+                  Votre actif remplit tous les critères pour entrer en processus de cession AEGRYN.
                 </p>
               </div>
             ) : (
@@ -428,6 +499,214 @@ export default function SellerAssetTabs({
                   Gérer les documents <ChevronRight size={11} />
                 </Link>
               </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* ── ONGLET 5 — Term Sheets reçues ── */}
+      {tab === 'termsheets' && (
+        <div className="flex flex-col gap-4">
+
+          {/* Notice */}
+          <div className="bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
+            <div className="flex items-start gap-2.5">
+              <FileText size={13} className="text-ag-navy/60 shrink-0 mt-0.5" />
+              <p className="font-sans text-[11px] text-gray-600 leading-relaxed">
+                Les acheteurs sont anonymisés (<strong>Acheteur A, B…</strong>). Vous disposez de{' '}
+                <strong>72h</strong> pour répondre à chaque term sheet active. Au-delà de 2 échanges,
+                Aegryn facilitera un appel de médiation.
+              </p>
+            </div>
+          </div>
+
+          {tsError && (
+            <p className="font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{tsError}</p>
+          )}
+
+          {tsSheets.length === 0 ? (
+            <div className="bg-white border border-gray-200 px-6 py-12 text-center">
+              <FileText size={24} className="text-gray-300 mx-auto mb-3" />
+              <p className="font-sans text-[14px] text-gray-400">Aucune term sheet reçue pour cet actif.</p>
+            </div>
+          ) : (
+            <div className="flex flex-col gap-3">
+              {tsSheets.map(ts => {
+                const meta = TS_STATUS_META[ts.status]
+                const isActive = ts.status === 'pending' || ts.status === 'viewed'
+                const isExpanded = expandedTs === ts.id
+                const expiresIn = Math.max(0, Math.round((new Date(ts.expires_at).getTime() - Date.now()) / 3600000))
+
+                return (
+                  <div key={ts.id} className="bg-white border border-gray-200">
+                    {/* En-tête term sheet */}
+                    <button
+                      type="button"
+                      onClick={() => setExpandedTs(isExpanded ? null : ts.id)}
+                      className="w-full px-6 py-4 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="flex items-center gap-3 min-w-0">
+                        <span className="font-mono text-[11px] font-bold text-gray-700 shrink-0">
+                          Acheteur {String.fromCharCode(64 + ts.buyer_rank)}
+                        </span>
+                        {ts.version > 1 && (
+                          <span className="font-mono text-[8px] bg-purple-100 text-purple-700 px-1.5 py-0.5">v{ts.version}</span>
+                        )}
+                        <span className={`border font-mono text-[8px] uppercase tracking-widest px-2 py-0.5 ${meta.cls}`}>
+                          {meta.label}
+                        </span>
+                        <span className="font-mono font-bold text-[14px] text-gray-900">
+                          CHF {ts.proposed_price_chf.toLocaleString('fr-CH')}
+                        </span>
+                        <span className="font-mono text-[9px] text-gray-400">
+                          {STRUCTURE_LABELS[ts.structure] ?? ts.structure}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-3 shrink-0">
+                        {isActive && expiresIn > 0 && (
+                          <span className="flex items-center gap-1 font-mono text-[9px] text-amber-600">
+                            <Clock size={10} />{expiresIn}h restantes
+                          </span>
+                        )}
+                        <ChevronRight size={13} className={`text-gray-400 transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
+                      </div>
+                    </button>
+
+                    {/* Détail dépliable */}
+                    {isExpanded && (
+                      <div className="border-t border-gray-100 px-6 py-5 flex flex-col gap-5">
+
+                        {/* Grille paramètres */}
+                        <div className="grid grid-cols-2 gap-x-8 gap-y-3">
+                          {ts.price_comment && (
+                            <div className="col-span-2">
+                              <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Commentaire prix</p>
+                              <p className="font-sans text-[12px] text-gray-700">{ts.price_comment}</p>
+                            </div>
+                          )}
+                          {ts.dd_duration_days && (
+                            <div>
+                              <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Due diligence</p>
+                              <p className="font-sans text-[12px] text-gray-700">{ts.dd_duration_days} jours</p>
+                            </div>
+                          )}
+                          {ts.closing_weeks && (
+                            <div>
+                              <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Délai closing</p>
+                              <p className="font-sans text-[12px] text-gray-700">{ts.closing_weeks} semaines</p>
+                            </div>
+                          )}
+                          {ts.earnout && (ts.earnout as { included?: boolean }).included && (
+                            <div className="col-span-2">
+                              <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Earnout</p>
+                              <p className="font-sans text-[12px] text-gray-700">
+                                {(ts.earnout as { percentage?: number }).percentage}% — {(ts.earnout as { duration_months?: number }).duration_months} mois
+                                {(ts.earnout as { kpi?: string }).kpi && ` — ${(ts.earnout as { kpi?: string }).kpi}`}
+                              </p>
+                            </div>
+                          )}
+                          {ts.management_contract && (ts.management_contract as { included?: boolean }).included && (
+                            <div className="col-span-2">
+                              <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Management / Transition</p>
+                              <p className="font-sans text-[12px] text-gray-700">
+                                {(ts.management_contract as { role?: string }).role} — {(ts.management_contract as { duration_months?: number }).duration_months} mois
+                              </p>
+                            </div>
+                          )}
+                          {ts.non_compete && (ts.non_compete as { included?: boolean }).included && (
+                            <div className="col-span-2">
+                              <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Non-concurrence</p>
+                              <p className="font-sans text-[12px] text-gray-700">
+                                {(ts.non_compete as { duration_months?: number }).duration_months} mois — {(ts.non_compete as { geographic_scope?: string }).geographic_scope}
+                              </p>
+                            </div>
+                          )}
+                          {ts.buyer_profile_note && (
+                            <div className="col-span-2">
+                              <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-0.5">Profil acheteur</p>
+                              <p className="font-sans text-[12px] text-gray-700 leading-relaxed">{ts.buyer_profile_note}</p>
+                            </div>
+                          )}
+                          {(ts.conditions_precedent ?? []).length > 0 && (
+                            <div className="col-span-2">
+                              <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-1">Conditions suspensives</p>
+                              <ul className="flex flex-col gap-1">
+                                {(ts.conditions_precedent ?? []).map((c, i) => (
+                                  <li key={i} className="font-sans text-[12px] text-gray-700 flex items-start gap-1.5">
+                                    <span className="text-gray-300 shrink-0">—</span>{c}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Réponse vendeur */}
+                        {isActive && (
+                          <div className="border-t border-gray-100 pt-5">
+                            <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-3">Votre réponse</p>
+
+                            <div className="mb-3">
+                              <label className="font-mono text-[9px] uppercase tracking-widest text-gray-500 block mb-2">
+                                Message au cédant (optionnel)
+                              </label>
+                              <textarea
+                                rows={3}
+                                value={tsResponseNote[ts.id] ?? ''}
+                                onChange={e => setTsResponseNote(prev => ({ ...prev, [ts.id]: e.target.value }))}
+                                placeholder="Motif de refus, demande de précision, ou note pour la contre-proposition…"
+                                className="w-full bg-white border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 placeholder-gray-300 focus:outline-none focus:border-ag-navy transition-colors resize-none"
+                              />
+                            </div>
+
+                            <div className="flex items-center gap-3 flex-wrap">
+                              <button
+                                type="button"
+                                disabled={tsLoading === ts.id}
+                                onClick={() => handleTsAction(ts.id, 'accepted')}
+                                className="flex items-center gap-1.5 bg-emerald-600 text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-emerald-700 transition-colors disabled:opacity-50"
+                              >
+                                <Check size={11} /> Accepter
+                              </button>
+                              <button
+                                type="button"
+                                disabled={tsLoading === ts.id}
+                                onClick={() => handleTsAction(ts.id, 'refused')}
+                                className="flex items-center gap-1.5 border border-red-300 text-red-600 font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-red-50 transition-colors disabled:opacity-50"
+                              >
+                                <X size={11} /> Refuser
+                              </button>
+                              {ts.version < 2 && (
+                                <button
+                                  type="button"
+                                  disabled={tsLoading === ts.id}
+                                  onClick={() => handleTsAction(ts.id, 'countered')}
+                                  className="flex items-center gap-1.5 border border-ag-navy text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-ag-navy hover:text-white transition-colors disabled:opacity-50"
+                                >
+                                  <MessageSquare size={11} /> Contre-proposer
+                                </button>
+                              )}
+                              {ts.version >= 2 && (
+                                <p className="font-sans text-[11px] text-gray-400 italic">
+                                  Limite de rounds atteinte — Aegryn facilitera la prochaine étape.
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Réponse déjà émise */}
+                        {!isActive && ts.seller_response_note && (
+                          <div className="border-t border-gray-100 pt-4">
+                            <p className="font-mono text-[8px] uppercase tracking-widest text-gray-300 mb-1">Votre note</p>
+                            <p className="font-sans text-[12px] text-gray-600 italic">{ts.seller_response_note}</p>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )
+              })}
             </div>
           )}
         </div>

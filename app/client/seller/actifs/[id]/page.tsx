@@ -67,18 +67,16 @@ export default async function SellerAssetDetailPage({
   const isWithdrawn = asset.status === 'withdrawn'
 
   const [
-    { data: bidsOnAsset },
+    { data: termSheetsRaw },
     { data: assessment },
     { data: allVersions },
     { data: docs },
     { data: benchmark },
   ] = await Promise.all([
-    supa.from('auction_bids')
-      .select('id, amount_chf, status, created_at')
+    supa.from('seller_term_sheets_view')
+      .select('id, buyer_rank, version, status, proposed_price_chf, structure, price_comment, earnout, management_contract, non_compete, warranties, dd_duration_days, closing_weeks, conditions_precedent, buyer_profile_note, expires_at, seller_response_note, created_at')
       .eq('asset_id', id)
-      .not('status', 'eq', 'withdrawn')
-      .order('amount_chf', { ascending: false })
-      .limit(5),
+      .order('created_at', { ascending: true }),
     supa.from('grade_assessments')
       .select('computed_grade, computed_score, trs, trs_reasons, recommendations, engine_result_json, grade_ceiling')
       .eq('asset_id', id)
@@ -251,34 +249,6 @@ export default async function SellerAssetDetailPage({
         </div>
       </div>
 
-      {/* Offres reçues (si publié) */}
-      {asset.status === 'published' && bidsOnAsset && bidsOnAsset.length > 0 && (
-        <div className="bg-white border border-gray-200 p-6 mb-6">
-          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-4">
-            Expressions d&apos;Intérêt reçues ({bidsOnAsset.length})
-          </p>
-          <div className="flex flex-col gap-2">
-            {bidsOnAsset.map(bid => (
-              <div key={bid.id} className="flex items-center justify-between px-4 py-3 bg-gray-50 border border-gray-200">
-                <div>
-                  <p className="font-mono font-bold text-[13px] text-gray-800">{fmtChf(bid.amount_chf)}</p>
-                  <p className="font-mono text-[9px] text-gray-400 mt-0.5">{fmtDate(bid.created_at)}</p>
-                </div>
-                <span className={`font-mono text-[9px] uppercase tracking-widest border px-2 py-0.5 ${
-                  bid.status === 'retained' ? 'text-emerald-600 border-emerald-200 bg-emerald-50'
-                  : bid.status === 'rejected' ? 'text-red-500 border-red-100 bg-red-50'
-                  : 'text-blue-600 border-blue-200 bg-blue-50'
-                }`}>
-                  {bid.status === 'submitted' ? 'En examen' : bid.status === 'retained' ? 'Retenue' : bid.status}
-                </span>
-              </div>
-            ))}
-          </div>
-          <p className="font-sans text-[11px] text-gray-400 mt-3">
-            Les identités des acquéreurs restent confidentielles. L&apos;équipe Aegryn gère le processus de sélection.
-          </p>
-        </div>
-      )}
 
       {/* Fiche de grade téléchargeable */}
       {['graded', 'published', 'sold'].includes(asset.status ?? '') && (
@@ -326,6 +296,26 @@ export default async function SellerAssetDetailPage({
             admin_quality:    d.admin_quality,
           }))}
           benchmark={benchmark ?? null}
+          termSheets={(termSheetsRaw ?? []).map(ts => ({
+            id:                   ts.id as string,
+            buyer_rank:           (ts.buyer_rank as number) ?? 0,
+            version:              ts.version as number,
+            status:               ts.status as 'pending' | 'viewed' | 'accepted' | 'refused' | 'countered' | 'expired',
+            proposed_price_chf:   ts.proposed_price_chf as number,
+            structure:            ts.structure as string,
+            price_comment:        (ts.price_comment as string | null) ?? null,
+            earnout:              (ts.earnout as Record<string, unknown> | null) ?? null,
+            management_contract:  (ts.management_contract as Record<string, unknown> | null) ?? null,
+            non_compete:          (ts.non_compete as Record<string, unknown> | null) ?? null,
+            warranties:           (ts.warranties as Record<string, unknown> | null) ?? null,
+            dd_duration_days:     (ts.dd_duration_days as number | null) ?? null,
+            closing_weeks:        (ts.closing_weeks as number | null) ?? null,
+            conditions_precedent: (ts.conditions_precedent as string[] | null) ?? null,
+            buyer_profile_note:   (ts.buyer_profile_note as string | null) ?? null,
+            expires_at:           ts.expires_at as string,
+            seller_response_note: (ts.seller_response_note as string | null) ?? null,
+            created_at:           ts.created_at as string,
+          }))}
         />
       </div>
 

@@ -8,7 +8,7 @@
     "growWithUs": "Partenaires",
     "career": "Carrières",
     "contact": "Contact",
-    "auction": "Enchères",
+    "auction": "Cessions M\u0026A",
     "grade": "Notation",
     "assets": "Actifs",
     "services": "Services",
@@ -20,8 +20,8 @@
     "auctionSell": "Vendre un actif",
     "auctionBuy": "Devenir acquéreur",
     "auctionBidModels": "Modèles d'offre",
-    "auctionSession": "Prochaine session",
-    "auctionResults": "Résultats",
+    "auctionSession": "Processus",
+    "auctionResults": "Transactions clôturées",
     "gradeSystem": "Système de grade",
     "gradeMethod": "Méthodologie",
     "gradeSubmit": "Soumettre pour certification",
@@ -93,17 +93,17 @@
       "gradePending": "Certification en cours",
       "visitSite": "Visiter le site",
       "viewDetails": "Voir les détails",
-      "auctionEligible": "Éligible aux enchères",
+      "auctionEligible": "Éligible au processus de cession",
       "internalOnly": "Usage interne",
       "confidential": "Confidentiel",
       "heroLabel": "Aegryn — Portefeuille propriétaire",
       "heroTitle": "Ce que nous\nconstruisons.",
       "heroSub": "Actifs appartenant au groupe Aegryn — non soumis par des tiers",
-      "ownedNote": "Ces actifs appartiennent au groupe Aegryn. Ils ne sont pas en vente par défaut. Certains peuvent exceptionnellement faire l'objet d'une mise en auction sur décision stratégique du groupe.",
-      "auctionEligibleNote": "Actif éligible à une mise en auction — contact investisseurs sur demande.",
+      "ownedNote": "Ces actifs appartiennent au groupe Aegryn. Ils ne sont pas en vente par défaut. Certains peuvent exceptionnellement faire l'objet d'un processus de cession sur décision stratégique du groupe.",
+      "auctionEligibleNote": "Actif éligible à un processus de cession — contact investisseurs sur demande.",
       "ctaBottom": "Vous souhaitez soumettre votre propre actif pour certification ?",
       "ctaGrade": "Soumettre un actif tiers",
-      "ctaAuction": "Voir les sessions auction",
+      "ctaAuction": "Voir les actifs en cession",
       "notStarted": "Non démarré",
       "certificationInProgress": "Certification en cours"
     },
@@ -309,7 +309,7 @@
         "desc": "Nous certifions des actifs selon un label indépendant structuré sur 4 dimensions : Code, IP, Finance, Sécurité. Un protocole reproductible, traçable et concluant — pour des tiers comme pour nos propres actifs."
       },
       {
-        "title": "AUCTION",
+        "title": "CESSION M&A",
         "desc": "Nous transigeons des actifs certifiés via un processus confidentiel : séquestre institutionnel, cercle d'acquéreurs pré-qualifiés, mandat exclusif 60 jours. Moins de 25% des actifs soumis sont acceptés."
       }
     ]
@@ -347,7 +347,7 @@
   },
   "ecosystemDomains": {
     "label": "Les marchés",
-    "title": "Quelles thématiques\ntransitent via Aegryn Auction.",
+    "title": "Quelles thématiques\ntransitent via Aegryn.",
     "domains": [
       {
         "id": "ai",
@@ -446,7 +446,7 @@
         "desc": "Certifier de façon indépendante. Refuser plus qu'accepter. Une notation reproductible, traçable et définitive."
       },
       "embrace": {
-        "title": "AUCTION",
+        "title": "CESSION M&A",
         "desc": "Transiger dans la discrétion, avec la certitude pour les deux parties. Séquestre institutionnel. Documentation complète à chaque transfert."
       }
     },
@@ -743,10 +743,10 @@
   },
   "accessForm": {
     "doneTitle": "Demande reçue",
-    "doneDesc": "Notre équipe reviendra vers vous sous 24–48h pour valider votre profil, puis vous enverra le NDA et les CGV Aegryn Auction à signer.",
+    "doneDesc": "Notre équipe reviendra vers vous sous 24–48h pour valider votre profil, puis vous enverra le NDA et les CGV Aegryn à signer.",
     "doneNote": "Aucun accès sans signature des deux documents.",
     "restrictedTitle": "Accès catalogue restreint",
-    "restrictedDesc": "Les fiches actifs et noms de sociétés sont accessibles uniquement après création de compte, signature du NDA Aegryn Auction et acceptation des CGV.",
+    "restrictedDesc": "Les fiches actifs et noms de sociétés sont accessibles uniquement après création de compte, signature du NDA Aegryn et acceptation des CGV.",
     "pendingCgvDesc": "Votre NDA est enregistré. Les CGV vous seront envoyées prochainement.",
     "pendingNdaDesc": "Soumettez votre demande ci-dessous. Nous vous enverrons le NDA et les CGV pour signature.",
     "ndaSignedTitle": "NDA signé — en attente des CGV",
@@ -857,7 +857,7 @@
         "general": "Demande générale",
         "advisory": "Conseil stratégique",
         "grade": "Certification d'actif (Grade)",
-        "auction": "Session de vente",
+        "transaction": "Mandat de cession",
         "partnership": "Partenariat",
         "investor": "Investisseur",
         "press": "Presse & Médias",
@@ -876,7 +876,7 @@
     },
     "meta": {
       "title": "Contact — Aegryn",
-      "desc": "Prenez contact avec Aegryn, advisory, certification d'actif, session auction, partenariat ou question générale."
+      "desc": "Prenez contact avec Aegryn, advisory, certification d'actif, mandat de cession, partenariat ou question générale."
     },
     "info": {
       "baseLabel": "Siège",
@@ -1024,8 +1024,8 @@
       "label": "GRADE",
       "desc": "Certification indépendante et documentée"
     },
-    "auction": {
-      "label": "AUCTION",
+    "cession": {
+      "label": "CESSION M&A",
       "desc": "Transactions institutionnelles encadrées"
     }
   },
@@ -1088,9 +1088,9 @@
     ]
   },
   "auctionNarrative": {
-    "label": "Enchères",
-    "title": "Certains actifs méritent mieux\nqu'une liste publique.",
-    "desc": "Aegryn Auction n'est pas une plateforme ouverte. C'est un processus de cession confidentiel entre des vendeurs qui ont passé notre certification et des acquéreurs qui ont prouvé leur capacité et leur sérieux.\n\nMoins de 25% des actifs soumis sont acceptés. 100% des acquéreurs sont pré-qualifiés. Chaque transaction est intégralement documentée et sécurisée.",
+    "label": "Cessions M\u0026A confidentielles",
+    "title": "Certains actifs m\u00e9ritent mieux\nqu'une liste publique.",
+    "desc": "Aegryn n'est pas une plateforme ouverte. C'est un processus de cession offmarket, confidentiel, entre des vendeurs certifi\u00e9s CIFS et des acqu\u00e9reurs pr\u00e9-qualifi\u00e9s.\n\nChaque actif est pr\u00e9sent\u00e9 sous mandat exclusif. Chaque acqu\u00e9reur a prouv\u00e9 sa capacit\u00e9 et son s\u00e9rieux. La transaction se noue sur proposition structur\u00e9e, pas aux ench\u00e8res.",
     "stat1Val": "< 25%",
     "stat1Label": "Taux d'acceptation des actifs soumis",
     "stat2Val": "60 j max",
@@ -1372,18 +1372,18 @@
   },
   "roadmapPage": {
     "meta": {
-      "title": "Plateforme — Aegryn Auction Switzerland",
-      "desc": "La plateforme Aegryn Auction Switzerland : certification, sessions privées, droit suisse, ouverture internationale."
+      "title": "Plateforme — Aegryn Cessions M&A Switzerland",
+      "desc": "La plateforme Aegryn : certification CIFS, processus de cession privés, droit suisse, ouverture internationale."
     },
-    "label": "Aegryn Auction Switzerland",
+    "label": "Aegryn Cessions M&A Switzerland",
     "title": "La plateforme.\nSes fonctionnalités.",
-    "desc": "Chaque vente se réalise exclusivement via Aegryn Auction Switzerland. Le droit suisse s'applique. Vendeurs et acquéreurs du monde entier sont les bienvenus.",
+    "desc": "Chaque cession se réalise exclusivement via Aegryn. Le droit suisse s'applique. Vendeurs et acquéreurs du monde entier sont les bienvenus.",
     "swissNote": "Droit suisse applicable à chaque transaction — quelle que soit la provenance de l'actif ou la nationalité des parties.",
     "featuresLabel": "Ce que la plateforme offre",
     "features": {
       "certification": {
         "title": "Certification Aegryn Grade",
-        "desc": "Chaque actif mis en vente est certifié selon le protocole CIFS avant toute session. Aucun actif non certifié n'est admis."
+        "desc": "Chaque actif mis en vente est certifié selon le protocole CIFS avant tout processus. Aucun actif non certifié n'est admis."
       },
       "swissLaw": {
         "title": "Droit suisse — 100 %",
@@ -1598,7 +1598,7 @@
     "featuredLabel": "À la une",
     "allArticles": "Tous les articles",
     "ctaGrade": "Certifier mon actif",
-    "ctaAuction": "Voir les sessions",
+    "ctaAuction": "Voir les actifs en cession",
     "searchPlaceholder": "Rechercher un article...",
     "noArticles": "Aucun article dans cette catégorie pour l'instant.",
     "newsletterLabel": "Lettre d'information",
@@ -1716,7 +1716,7 @@
     "submit": {
       "label": "Soumettre un actif",
       "title": "Obtenez le grade\nqui donne du prix à votre actif.",
-      "desc": "La certification Aegryn est le passeport de votre actif pour accéder aux acquéreurs institutionnels et aux sessions d'auction.",
+      "desc": "La certification Aegryn est le passeport de votre actif pour accéder aux acquéreurs institutionnels et au processus de cession offmarket.",
       "cta": "Démarrer la soumission"
     },
     "methodology": {
@@ -1897,7 +1897,7 @@
         "range": "60–74 / 100",
         "color": "#9BA8B0",
         "rarity": "25–30% des actifs certifiés",
-        "profile": "Actif de qualité correcte avec des points forts identifiés et des axes d'amélioration clairement documentés. Éligible aux sessions auction standard.",
+        "profile": "Actif de qualité correcte avec des points forts identifiés et des axes d'amélioration clairement documentés. Éligible au processus de cession standard.",
         "typical": "SaaS en croissance, quelques lacunes en tests ou conformité, IP en cours de consolidation.",
         "subcodes": [
           "C-02 — C-03",
@@ -1939,7 +1939,7 @@
         "range": "30–44 / 100",
         "color": "#D4820A",
         "rarity": "15–20% des actifs certifiés",
-        "profile": "Actif early stage avec fondamentaux partiels. Certification accompagnée d'un rapport de remédiation détaillé. Non éligible à l'auction sans amélioration.",
+        "profile": "Actif early stage avec fondamentaux partiels. Certification accompagnée d'un rapport de remédiation détaillé. Non éligible à la cession sans amélioration.",
         "typical": "MVP ou produit pré-revenue, architecture non documentée, conformité à construire.",
         "subcodes": [
           "C-04",
@@ -2530,15 +2530,15 @@
   },
   "auction": {
     "meta": {
-      "title": "Auction — Sessions de transactions d'actifs tech",
-      "desc": "Sessions Aegryn : achetez ou vendez des actifs tech certifiés. Catalogue, prochaine session, résultats."
+      "title": "Cessions M\u0026A — Actifs tech certifi\u00e9s CIFS",
+      "desc": "Processus Aegryn : achetez ou vendez des actifs tech certifi\u00e9s CIFS. Catalogue offmarket, mandat exclusif, transactions encadr\u00e9es."
     },
     "index": {
-      "label": "Sessions Aegryn Auction",
-      "title": "La plateforme de transaction certifiée\npour les actifs tech européens.",
-      "desc": "Pas d'enchères ouvertes. Des sessions privées, rigoureuses, réservées aux vendeurs certifiés et acquéreurs qualifiés. Chaque actif est gradé. Chaque transaction est encadrée.",
+      "label": "Processus de cession Aegryn",
+      "title": "La plateforme de cession certifi\u00e9e\npour les actifs tech europ\u00e9ens.",
+      "desc": "Pas d'ench\u00e8res en temps r\u00e9el. Un processus offmarket structur\u00e9, r\u00e9serv\u00e9 aux vendeurs certifi\u00e9s CIFS et aux acqu\u00e9reurs pr\u00e9-qualifi\u00e9s. Chaque actif est grad\u00e9. Chaque transaction est encadr\u00e9e par mandat exclusif.",
       "ctaCatalog": "Voir le catalogue",
-      "ctaSession": "Prochaine session",
+      "ctaSession": "Le processus",
       "ctaSubmit": "Soumettre un actif",
       "statsLabel": "En chiffres",
       "stats": [
@@ -2582,8 +2582,8 @@
         },
         {
           "num": "03",
-          "title": "Session",
-          "desc": "L'actif certifié est présenté aux acquéreurs qualifiés lors d'une session privée. Vous fixez votre prix plancher."
+          "title": "Pr\u00e9sentation",
+          "desc": "L'actif certifi\u00e9 est pr\u00e9sent\u00e9 aux acqu\u00e9reurs qualifi\u00e9s dans le catalogue offmarket. Vous fixez votre prix de cession cible."
         },
         {
           "num": "04",
@@ -2597,10 +2597,10 @@
       "marketCta": "Estimer la valeur de mon actif"
     },
     "catalog": {
-      "label": "Aegryn Auction — Actifs tiers",
-      "title": "Actifs certifiés\ndisponibles.",
-      "desc": "Actifs soumis par des vendeurs tiers ayant passé le protocole de certification Aegryn. Ces actifs ne font pas partie du portefeuille propriétaire du groupe.",
-      "thirdPartyNote": "Ces actifs sont proposés par des vendeurs indépendants. Aegryn agit comme intermédiaire certifié et organisateur de la transaction — pas comme vendeur.",
+      "label": "Catalogue Aegryn — Actifs certifi\u00e9s CIFS",
+      "title": "Actifs certifi\u00e9s\ndisponibles.",
+      "desc": "Actifs soumis par des vendeurs tiers ayant pass\u00e9 le protocole de certification CIFS Aegryn. Ces actifs ne font pas partie du portefeuille propri\u00e9taire du groupe.",
+      "thirdPartyNote": "Ces actifs sont propos\u00e9s sous mandat exclusif par des vendeurs ind\u00e9pendants certifi\u00e9s. Aegryn agit comme interm\u00e9diaire certifi\u00e9 et organisateur de la transaction — \u00e9quivalent d'un conseil en cession sp\u00e9cialis\u00e9 tech.",
       "filterAll": "Tous les grades",
       "filterStar": "AEG ★",
       "filterAAA": "AAA",
@@ -2635,61 +2635,61 @@
       "portfolioLink": "Portfolio Aegryn",
       "conditionalAccess": "Accès conditionnel",
       "qualifiedOnly": "Catalogue réservé aux acquéreurs qualifiés",
-      "accessDesc": "Les noms de sociétés et fiches actifs complets sont accessibles uniquement après création de compte, signature du NDA et acceptation des CGV Aegryn Auction.",
+      "accessDesc": "Les noms de sociétés et fiches actifs complets sont accessibles uniquement après création de compte, signature du NDA et acceptation des CGV Aegryn.",
       "step1": "Créer un compte acquéreur",
-      "step2": "Signer le NDA Aegryn Auction",
+      "step2": "Signer le NDA Aegryn",
       "step3": "Accepter les CGV",
       "loginCta": "Se connecter",
       "registerCta": "Créer un compte",
       "sellerCta": "Vous souhaitez lister votre actif dans le prochain catalogue ?"
     },
     "session": {
-      "label": "Prochaine session",
-      "title": "Prochaine session Aegryn",
+      "label": "Processus Aegryn",
+      "title": "Le processus de cession Aegryn",
       "date": "Date",
       "dateTbd": "Date à confirmer",
       "format": "Format",
-      "formatValue": "Session privée — invitation uniquement",
+      "formatValue": "Processus privé — acquéreurs qualifiés uniquement",
       "location": "Lieu",
       "locationValue": "Suisse (+ accès distanciel sécurisé)",
-      "assetsLabel": "Actifs en session",
-      "assetsTbd": "Catalogue publié 30 jours avant la session",
+      "assetsLabel": "Actifs en processus",
+      "assetsTbd": "Catalogue publié lors de l'ouverture du processus",
       "registerTitle": "Demander un accès",
-      "registerDesc": "L'accès aux sessions est réservé aux acquéreurs qualifiés. Complétez le formulaire pour soumettre votre candidature.",
+      "registerDesc": "L'accès au catalogue est réservé aux acquéreurs qualifiés. Complétez le formulaire pour soumettre votre candidature.",
       "registerCta": "Demander l'accès acquéreur",
       "sellerTitle": "Vous souhaitez vendre ?",
       "sellerDesc": "Soumettez votre actif dès maintenant. La certification prend 2 à 4 semaines.",
       "sellerCta": "Soumettre mon actif",
-      "pastSessions": "Sessions précédentes",
-      "noSessions": "Aucune session passée pour l'instant.",
-      "sessionCardKicker": "Vente en ligne",
+      "pastSessions": "Processus antérieurs",
+      "noSessions": "Aucun processus antérieur pour l'instant.",
+      "sessionCardKicker": "Mandat de cession",
       "sessionCardStatus": "À venir",
       "sessionCardCategory": "Legal-Tech",
       "sessionCardTitle": "Intelligence contractuelle par IA — Lot N°001",
       "sessionCardLocation": "En ligne — Suisse",
-      "sessionCardDateLabel": "Ouverture du catalogue",
-      "sessionCardDateValue": "Date exacte communiquée 30 jours avant",
+      "sessionCardDateLabel": "Ouverture du processus",
+      "sessionCardDateValue": "Date communiquée aux acquéreurs qualifiés",
       "sessionCardCtaPreview": "Aperçu du lot",
       "sessionCardLocked": "Accès réservé aux membres vérifiés",
       "sessionCardLockedCta": "Créer un compte",
       "sessionCardCtaCatalog": "Catalogue",
       "sessionCardCtaNotify": "Être notifié",
-      "upcomingSessions": "Session à venir"
+      "upcomingSessions": "Processus à venir"
     },
     "results": {
-      "label": "Résultats des sessions",
+      "label": "Transactions clôturées",
       "title": "Transparence totale\nsur les transactions clôturées.",
-      "desc": "Chaque session clôturée fait l'objet d'un compte-rendu public anonymisé. Montants, grades, durées de négociation, le marché mérite de la clarté.",
-      "noResults": "Aucun résultat disponible. Les résultats de la première session seront publiés ici.",
-      "sessionLabel": "Session",
+      "desc": "Chaque processus clôturé fait l'objet d'un compte-rendu public anonymisé. Montants, grades, durées de négociation, le marché mérite de la clarté.",
+      "noResults": "Aucun résultat disponible. Les résultats du premier processus seront publiés ici.",
+      "sessionLabel": "Processus",
       "assetsTransacted": "Actifs transactés",
       "totalVolume": "Volume total",
       "avgMultiple": "Multiple médian"
     },
     "sell": {
       "meta": {
-        "title": "Céder votre actif — Aegryn Auction",
-        "desc": "Parcours cédant Aegryn : valorisation indicative, readiness score, dépôt de mandat. Certification CIFS, confidentialité absolue, séquestre institutionnel suisse."
+        "title": "Céder votre actif — Aegryn",
+        "desc": "Parcours cédant Aegryn : valorisation indicative, readiness score, dépôt de mandat exclusif. Certification CIFS, confidentialité absolue, séquestre institutionnel suisse."
       },
       "hero": {
         "label": "Céder votre actif",
@@ -2702,7 +2702,7 @@
         "label": "Parcours cédant",
         "title": "Trois étapes, de la valorisation au mandat.",
         "step2Label": "Étape 02",
-        "step2Title": "Votre actif est-il prêt pour une session auction ?",
+        "step2Title": "Votre actif est-il prêt pour le processus de cession ?",
         "s1": {
           "title": "Valorisation indicative",
           "desc": "Obtenez une fourchette de valorisation en 4 étapes (finance, code, IP, sécurité) et un grade estimé Aegryn. Gratuit, confidentiel, sans engagement.",
@@ -2710,11 +2710,11 @@
         },
         "s2": {
           "title": "Readiness Score",
-          "desc": "Évaluez si votre dossier est prêt pour une session auction : data room, contrats, indépendance opérationnelle, IP, dette technique. 6 questions, résultat immédiat."
+          "desc": "Évaluez si votre dossier est prêt pour le processus de cession Aegryn : data room, contrats, indépendance opérationnelle, IP, dette technique. 6 questions, résultat immédiat."
         },
         "s3": {
           "title": "Dépôt de mandat",
-          "desc": "Soumettez votre actif à l'équipe Aegryn. Certification CIFS indépendante, attribution de grade officiel, entrée en session auction sous mandat exclusif 60 jours.",
+          "desc": "Soumettez votre actif à l'équipe Aegryn. Certification CIFS indépendante, attribution de grade officiel, entrée dans le processus de cession sous mandat exclusif 60 jours.",
           "cta": "Déposer votre mandat →"
         }
       },
@@ -2723,7 +2723,7 @@
         "title": "Ce que vous n'obtenez pas ailleurs.",
         "g1": {
           "title": "Confidentialité absolue",
-          "desc": "L'identité de votre actif n'est jamais révélée avant signature du NDA acheteur et ouverture de la session auction."
+          "desc": "L'identité de votre actif n'est jamais révélée avant signature du NDA acheteur et ouverture du processus de cession."
         },
         "g2": {
           "title": "Acheteurs 100% pré-qualifiés",
@@ -2748,7 +2748,7 @@
         "toolLabel": "Outil Aegryn",
         "toolTitle": "Readiness Score",
         "restart": "Recommencer",
-        "intro": "Évaluez en 2 minutes si votre actif est prêt pour une soumission en session auction Aegryn.",
+        "intro": "Évaluez en 2 minutes si votre actif est prêt pour une soumission au processus de cession Aegryn.",
         "answerYes": "Oui",
         "answerPartial": "Partiel",
         "answerNo": "Non",
@@ -2759,7 +2759,7 @@
         "levels": {
           "ready": {
             "label": "Actif prêt pour soumission",
-            "message": "Votre actif présente les caractéristiques d'un dossier soumissible à une session auction Aegryn. Nous vous recommandons de déposer votre mandat pour évaluation par notre équipe.",
+            "message": "Votre actif présente les caractéristiques d'un dossier soumissible au processus de cession Aegryn. Nous vous recommandons de déposer votre mandat pour évaluation par notre équipe.",
             "cta": "Déposer votre mandat →"
           },
           "almost": {
@@ -3858,13 +3858,13 @@
   },
   "auctionSubmit": {
     "meta": {
-      "title": "Soumettre un actif — Aegryn Auction Switzerland",
-      "desc": "Soumettez votre actif tech certifié à une session Aegryn Auction Switzerland. Droit suisse. Ouvert à l'international."
+      "title": "Soumettre un actif — Aegryn",
+      "desc": "Soumettez votre actif tech certifié au processus de cession Aegryn. Droit suisse. Ouvert à l'international."
     },
     "hero": {
-      "label": "Aegryn Auction Switzerland",
+      "label": "Aegryn Cessions M&A",
       "title": "Soumettre un actif\nà la cession.",
-      "desc": "Chaque vente est exclusive à Aegryn Auction Switzerland. Le droit suisse s'applique. Vendeurs du monde entier bienvenus."
+      "desc": "Chaque cession est exclusive à Aegryn. Le droit suisse s'applique. Vendeurs du monde entier bienvenus."
     },
     "swissNote": "Droit suisse applicable à toute transaction — quelle que soit l'origine du vendeur ou de l'actif.",
     "steps": [
@@ -3960,7 +3960,7 @@
       "countryPlaceholder": "ex. France, Suisse, Allemagne",
       "company": "Société / Structure (optionnel)",
       "message": "Message complémentaire (optionnel)",
-      "swissLawLabel": "Je reconnais que le droit suisse s'applique à toute transaction réalisée via Aegryn Auction Switzerland.",
+      "swissLawLabel": "Je reconnais que le droit suisse s'applique à toute transaction réalisée via Aegryn.",
       "submit": "Soumettre mon dossier",
       "submitting": "Envoi en cours…",
       "successTitle": "Dossier reçu.",
@@ -4776,8 +4776,8 @@
     "auctionSell": "Vendre un actif",
     "auctionBuy": "Devenir acquéreur",
     "auctionBid": "Modèles d'offre",
-    "auctionSession": "Prochaine session",
-    "auctionResults": "Résultats",
+    "auctionSession": "Processus",
+    "auctionResults": "Transactions clôturées",
     "grade": "Système de grade",
     "gradeMethod": "Méthodologie",
     "gradePartners": "Réseau d'experts",

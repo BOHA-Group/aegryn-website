@@ -4,10 +4,10 @@ import Link from 'next/link'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { ArrowLeft } from 'lucide-react'
-import NewOfferForm from './NewOfferForm'
+import TermSheetForm from './TermSheetForm'
 
 export const metadata: Metadata = {
-  title: 'Soumettre une offre — Espace Acquéreur Aegryn',
+  title: 'Soumettre une Term Sheet — Espace Acquéreur Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -38,15 +38,16 @@ export default async function NewOfferPage({
 
   if (!asset) notFound()
 
-  const { data: existingBid } = await supa
-    .from('auction_bids')
+  const { data: existingTs } = await supa
+    .from('term_sheets')
     .select('id')
     .eq('asset_id', assetId)
-    .eq('bidder_id', user.id)
-    .in('status', ['draft', 'submitted', 'retained'])
-    .single()
+    .eq('buyer_id', user.id)
+    .in('status', ['pending', 'viewed'])
+    .limit(1)
+    .maybeSingle()
 
-  if (existingBid) redirect(`/client/buyer/offres/${existingBid.id}`)
+  if (existingTs) redirect(`/client/buyer/propositions/${existingTs.id}`)
 
   return (
     <div className="p-8 max-w-2xl">
@@ -56,9 +57,9 @@ export default async function NewOfferPage({
       </Link>
 
       <div className="mb-8">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Nouvelle offre</p>
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">Nouvelle proposition</p>
         <h1 className="font-sans font-bold text-gray-900 text-[22px] tracking-tight">
-          Expression d&apos;Intérêt — {asset.company_name ?? `Actif #${assetId.slice(0, 8)}`}
+          Term Sheet — {asset.company_name ?? `Actif #${assetId.slice(0, 8)}`}
         </h1>
         <div className="flex items-center gap-3 mt-2">
           {asset.asset_type && (
@@ -79,13 +80,14 @@ export default async function NewOfferPage({
 
       {/* Info processus */}
       <div className="bg-ag-navy/5 border border-ag-navy/20 px-5 py-4 mb-8">
-        <p className="font-mono text-[9px] uppercase tracking-widest text-ag-navy/60 mb-2">Processus Aegryn</p>
+        <p className="font-mono text-[9px] uppercase tracking-widest text-ag-navy/60 mb-2">Processus Aegryn M&amp;A</p>
         <ol className="flex flex-col gap-1.5">
           {[
-            'Votre EI est transmise à l\'équipe Aegryn',
-            'Analyse de votre dossier KYC et de votre capacité d\'acquisition',
-            'Réponse dans les 48h ouvrables',
-            'Si retenue : accès à la data room et processus PTT',
+            'Votre term sheet est transmise à l\'équipe Aegryn',
+            'Vérification de votre profil KYC et capacité d\'acquisition',
+            'Transmission anonymisée au cédant dans les 24h',
+            'Le cédant dispose de 72h pour accepter, refuser ou contre-proposer',
+            'Si acceptée : formalisation du protocole de cession et accès data room',
           ].map((step, i) => (
             <li key={i} className="flex items-start gap-2.5">
               <span className="font-mono text-[9px] text-ag-navy/40 shrink-0 mt-0.5">{String(i + 1).padStart(2, '0')}.</span>
@@ -95,7 +97,7 @@ export default async function NewOfferPage({
         </ol>
       </div>
 
-      <NewOfferForm assetId={assetId} userId={user.id} assetName={asset.company_name ?? `Actif #${assetId.slice(0, 8)}`} />
+      <TermSheetForm assetId={assetId} assetName={asset.company_name ?? `Actif #${assetId.slice(0, 8)}`} />
     </div>
   )
 }

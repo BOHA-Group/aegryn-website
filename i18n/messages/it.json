@@ -8,7 +8,7 @@
     "growWithUs": "Partner",
     "career": "Carriere",
     "contact": "Contatto",
-    "auction": "Asta",
+    "auction": "Transazioni M\u0026A",
     "grade": "Grade",
     "assets": "Asset",
     "services": "Servizi",
@@ -19,9 +19,9 @@
     "auctionCatalog": "Catalogo",
     "auctionSell": "Vendere un asset",
     "auctionBuy": "Diventare acquirente",
-    "auctionBidModels": "Modelli di bid",
-    "auctionSession": "Prossima sessione",
-    "auctionResults": "Risultati",
+    "auctionBidModels": "Modelli di proposta",
+    "auctionSession": "Processo",
+    "auctionResults": "Transazioni concluse",
     "gradeSystem": "Sistema di grade",
     "gradeMethod": "Metodologia",
     "gradeSubmit": "Invia per certificazione",
@@ -99,11 +99,11 @@
       "heroLabel": "Aegryn — Ecosistema proprietario",
       "heroTitle": "Ciò che\nconstruiamo.",
       "heroSub": "6 asset · 3 categorie · Svizzera & Europa",
-      "ownedNote": "Questi asset appartengono al gruppo Aegryn. Non sono in vendita per impostazione predefinita. Alcuni possono essere eccezionalmente messi all'asta per decisione strategica del gruppo.",
+      "ownedNote": "Questi asset appartengono al gruppo Aegryn. Non sono in vendita per impostazione predefinita. Alcuni possono essere eccezionalmente in cessione per decisione strategica del gruppo.",
       "auctionEligibleNote": "Asset idoneo all'asta — contatto investitori su richiesta.",
       "ctaBottom": "Vuole inviare il suo asset per la certificazione?",
       "ctaGrade": "Invia un asset di terze parti",
-      "ctaAuction": "Vedi sessioni d'asta",
+      "ctaAuction": "Vedi processi M&A",
       "notStarted": "Non avviato",
       "certificationInProgress": "Certificazione in corso"
     },
@@ -274,7 +274,7 @@
   },
   "ecosystemDomains": {
     "label": "Mercati",
-    "title": "Quali tematiche\ntransitano su Aegryn Auction.",
+    "title": "Quali tematiche\ntransitano su Aegryn.",
     "domains": [
       {
         "id": "ai",
@@ -743,10 +743,10 @@
   },
   "accessForm": {
     "doneTitle": "Richiesta ricevuta",
-    "doneDesc": "Il nostro team vi ricontatterà entro 24–48h per validare il vostro profilo, poi vi invierà l'NDA e le CGV Aegryn Auction da firmare.",
+    "doneDesc": "Il nostro team vi ricontatterà entro 24–48h per validare il vostro profilo, poi vi invierà l'NDA e le CGV Aegryn da firmare.",
     "doneNote": "Nessun accesso senza firma di entrambi i documenti.",
     "restrictedTitle": "Accesso catalogo limitato",
-    "restrictedDesc": "Le schede degli asset e i nomi delle società sono accessibili solo dopo la creazione di un account, la firma dell'NDA Aegryn Auction e l'accettazione delle CGV.",
+    "restrictedDesc": "Le schede degli asset e i nomi delle società sono accessibili solo dopo la creazione di un account, la firma dell'NDA Aegryn e l'accettazione delle CGV.",
     "pendingCgvDesc": "Il vostro NDA è registrato. Le CGV vi verranno inviate a breve.",
     "pendingNdaDesc": "Inviate la vostra richiesta di seguito. Vi invieremo l'NDA e le CGV per la firma.",
     "ndaSignedTitle": "NDA firmato — in attesa delle CGV",
@@ -841,7 +841,7 @@
     "hero": {
       "label": "Contattaci",
       "title": "Parliamo.",
-      "desc": "Consulenza, certificazione, asta, partnership o domanda generale, rispondiamo entro 24h."
+      "desc": "Consulenza, certificazione, cessione, partnership o domanda generale, rispondiamo entro 24h."
     },
     "responseTime": {
       "label": "Tempo di risposta",
@@ -857,7 +857,7 @@
         "general": "Richiesta generale",
         "advisory": "Advisory",
         "grade": "Certificazione asset (Grade)",
-        "auction": "Sessione d'asta",
+        "auction": "Processo M&A",
         "partnership": "Partnership",
         "investor": "Investitore",
         "press": "Stampa & Media",
@@ -876,7 +876,7 @@
     },
     "meta": {
       "title": "Contatto — Aegryn",
-      "desc": "Contattaci, Advisory, certificazione, asta, partnership o domanda generale."
+      "desc": "Contattaci, Advisory, certificazione, cessione, partnership o domanda generale."
     },
     "info": {
       "baseLabel": "Sede",
@@ -2004,12 +2004,12 @@
   },
   "roadmapPage": {
     "meta": {
-      "title": "Piattaforma — Aegryn Auction Switzerland",
-      "desc": "La piattaforma Aegryn Auction Switzerland: certificazione, sessioni private, diritto svizzero, apertura internazionale."
+      "title": "Piattaforma — Aegryn M&A Switzerland",
+      "desc": "La piattaforma Aegryn M&A Switzerland: certificazione, sessioni private, diritto svizzero, apertura internazionale."
     },
-    "label": "Aegryn Auction Switzerland",
+    "label": "Aegryn M&A Switzerland",
     "title": "La piattaforma.\nLe sue funzionalità.",
-    "desc": "Ogni vendita si realizza esclusivamente tramite Aegryn Auction Switzerland. Il diritto svizzero è applicabile. Venditori e acquirenti di tutto il mondo sono i benvenuti.",
+    "desc": "Ogni vendita si realizza esclusivamente tramite Aegryn M&A Switzerland. Il diritto svizzero è applicabile. Venditori e acquirenti di tutto il mondo sono i benvenuti.",
     "swissNote": "Il diritto svizzero si applica a ogni transazione, indipendentemente dall'origine dell'asset o dalla nazionalità delle parti.",
     "featuresLabel": "Cosa offre la piattaforma",
     "features": {
@@ -2413,7 +2413,7 @@
       "desc": "Sessioni Aegryn: compra o vendi asset tech certificati."
     },
     "index": {
-      "label": "Sessioni Aegryn Auction",
+      "label": "Aegryn M&A Transazioni",
       "title": "La piattaforma di transazione certificata\nper asset tech europei.",
       "desc": "Nessuna offerta aperta. Sessioni private e rigorose per venditori certificati e acquirenti qualificati.",
       "ctaCatalog": "Vedi catalogo",
@@ -2514,9 +2514,9 @@
       "portfolioLink": "Portfolio Aegryn",
       "conditionalAccess": "Accesso condizionale",
       "qualifiedOnly": "Catalogo riservato agli acquirenti qualificati",
-      "accessDesc": "I nomi delle società e le schede complete degli asset sono accessibili solo dopo la creazione di un account, la firma dell'NDA e l'accettazione delle CGV di Aegryn Auction.",
+      "accessDesc": "I nomi delle società e le schede complete degli asset sono accessibili solo dopo la creazione di un account, la firma dell'NDA e l'accettazione delle CGV di Aegryn.",
       "step1": "Creare un account acquirente",
-      "step2": "Firmare il NDA Aegryn Auction",
+      "step2": "Firmare il NDA Aegryn",
       "step3": "Accettare le CGV",
       "loginCta": "Accedi",
       "registerCta": "Creare un account",
@@ -2524,7 +2524,7 @@
     },
     "sell": {
       "meta": {
-        "title": "Vendere il vostro asset — Aegryn Auction",
+        "title": "Vendere il vostro asset — Aegryn",
         "desc": "Percorso cedente Aegryn: valutazione indicativa, readiness score, presentazione del mandato. Certificazione CIFS, riservatezza assoluta, deposito fiduciario istituzionale svizzero."
       },
       "hero": {
@@ -2538,7 +2538,7 @@
         "label": "Percorso cedente",
         "title": "Tre fasi, dalla valutazione al mandato.",
         "step2Label": "Fase 02",
-        "step2Title": "Il vostro asset è pronto per una sessione d'asta?",
+        "step2Title": "Il vostro asset è pronto per una processo M&A?",
         "s1": {
           "title": "Valutazione indicativa",
           "desc": "Ottenete un intervallo di valutazione in 4 fasi (finanza, codice, PI, sicurezza) e un grade Aegryn stimato. Gratuito, riservato, senza impegno.",
@@ -2546,11 +2546,11 @@
         },
         "s2": {
           "title": "Readiness Score",
-          "desc": "Valutate se il vostro dossier è pronto per una sessione d'asta: data room, contratti, indipendenza operativa, PI, debito tecnico. 6 domande, risultato immediato."
+          "desc": "Valutate se il vostro dossier è pronto per una processo M&A: data room, contratti, indipendenza operativa, PI, debito tecnico. 6 domande, risultato immediato."
         },
         "s3": {
           "title": "Presentazione del mandato",
-          "desc": "Presentate il vostro asset al team Aegryn. Certificazione CIFS indipendente, attribuzione di grade ufficiale, ingresso in sessione d'asta sotto mandato esclusivo di 60 giorni.",
+          "desc": "Presentate il vostro asset al team Aegryn. Certificazione CIFS indipendente, attribuzione di grade ufficiale, ingresso in processo M&A sotto mandato esclusivo di 60 giorni.",
           "cta": "Presentare il vostro mandato →"
         }
       },
@@ -2559,7 +2559,7 @@
         "title": "Quello che non troverete altrove.",
         "g1": {
           "title": "Riservatezza assoluta",
-          "desc": "L'identità del vostro asset non viene mai rivelata prima che l'acquirente firmi l'NDA e la sessione d'asta venga aperta."
+          "desc": "L'identità del vostro asset non viene mai rivelata prima che l'acquirente firmi l'NDA e la processo M&A venga aperta."
         },
         "g2": {
           "title": "Acquirenti 100% prequalificati",
@@ -2584,7 +2584,7 @@
         "toolLabel": "Strumento Aegryn",
         "toolTitle": "Readiness Score",
         "restart": "Ricominciare",
-        "intro": "Valutate in 2 minuti se il vostro asset è pronto per una presentazione in una sessione d'asta Aegryn.",
+        "intro": "Valutate in 2 minuti se il vostro asset è pronto per una presentazione in una processo M&A Aegryn.",
         "answerYes": "Sì",
         "answerPartial": "Parziale",
         "answerNo": "No",
@@ -2595,7 +2595,7 @@
         "levels": {
           "ready": {
             "label": "Asset pronto per la presentazione",
-            "message": "Il vostro asset presenta le caratteristiche di un dossier idoneo a una sessione d'asta Aegryn. Vi consigliamo di presentare il vostro mandato per la valutazione da parte del nostro team.",
+            "message": "Il vostro asset presenta le caratteristiche di un dossier idoneo a una processo M&A Aegryn. Vi consigliamo di presentare il vostro mandato per la valutazione da parte del nostro team.",
             "cta": "Presentare il vostro mandato →"
           },
           "almost": {
@@ -2755,7 +2755,7 @@
   "auctionNarrative": {
     "label": "Asta",
     "title": "Alcuni asset meritano più\ndi un'inserzione pubblica.",
-    "desc": "Aegryn Auction non è una piattaforma aperta. È un processo di cessione riservato tra venditori che hanno superato la nostra certificazione e acquirenti che hanno dimostrato la loro capacità.\n\nMeno del 25% degli asset presentati viene accettato. Il 100% degli acquirenti è pre-qualificato. Ogni transazione è interamente documentata e messa in sicurezza.",
+    "desc": "Aegryn non è una piattaforma aperta. È un processo di cessione riservato tra venditori che hanno superato la nostra certificazione e acquirenti che hanno dimostrato la loro capacità.\n\nMeno del 25% degli asset presentati viene accettato. Il 100% degli acquirenti è pre-qualificato. Ogni transazione è interamente documentata e messa in sicurezza.",
     "stat1Val": "< 25%",
     "stat1Label": "Tasso di accettazione degli asset",
     "stat2Val": "60 gg max",
@@ -3183,7 +3183,7 @@
         {
           "num": "05",
           "title": "Certificazione (e uscita opzionale)",
-          "desc": "Invio al protocollo CIFS se desiderato. Grade ufficiale emesso se i criteri sono soddisfatti. La transazione via Aegryn Auction o confidenziale viene avviata solo su vostra decisione. L'asset può anche essere conservato con manutenzione."
+          "desc": "Invio al protocollo CIFS se desiderato. Grade ufficiale emesso se i criteri sono soddisfatti. La transazione via Aegryn o confidenziale viene avviata solo su vostra decisione. L'asset può anche essere conservato con manutenzione."
         }
       ]
     },
@@ -3226,7 +3226,7 @@
       "coInvestNote": "Aegryn può agire come co-investitore minoritario su certi progetti. Valutato caso per caso."
     },
     "exitBanner": {
-      "text": "La cessione è un'opzione, mai un obbligo. Se un giorno desiderate cedere — early stage o a maturità — l'asset è progettato per farlo. L'uscita tramite Aegryn Auction o transazione confidenziale è disponibile se il grade lo consente.",
+      "text": "La cessione è un'opzione, mai un obbligo. Se un giorno desiderate cedere — early stage o a maturità — l'asset è progettato per farlo. L'uscita tramite Aegryn o transazione confidenziale è disponibile se il grade lo consente.",
       "cta": "Saperne di più sul processo di cessione",
       "href": "/auction/how-it-works"
     },
@@ -3311,7 +3311,7 @@
       "evalTypeTitle": "Quale livello di valutazione desidera?",
       "evalTypeFull": {
         "label": "Certificazione Auction",
-        "desc": "Solo success fee. Processo completo con protocollo indipendente Aegryn (4 dimensioni C/I/F/S), incluso se la transazione avviene tramite Aegryn Auction.",
+        "desc": "Solo success fee. Processo completo con protocollo indipendente Aegryn (4 dimensioni C/I/F/S), incluso se la transazione avviene tramite Aegryn.",
         "price": "Gratuito"
       },
       "evalTypeReview": {
@@ -3369,7 +3369,7 @@
   },
   "bidModels": {
     "meta": {
-      "title": "Modelli di acquisizione — Aegryn Auction",
+      "title": "Modelli di acquisizione — Aegryn",
       "desc": "Club Deal, Corporate, Fondo, Equity Stake, i 4 modelli di acquisizione Aegryn con la Promessa di Transazione Tech in 5 fasi."
     },
     "hero": {
@@ -3862,13 +3862,13 @@
   },
   "auctionSubmit": {
     "meta": {
-      "title": "Inviare un asset — Aegryn Auction Switzerland",
-      "desc": "Invia il tuo asset tech a una sessione Aegryn Auction Switzerland. Diritto svizzero. Apertura internazionale."
+      "title": "Inviare un asset — Aegryn M&A Switzerland",
+      "desc": "Invia il tuo asset tech a una sessione Aegryn M&A Switzerland. Diritto svizzero. Apertura internazionale."
     },
     "hero": {
-      "label": "Aegryn Auction Switzerland",
+      "label": "Aegryn M&A Switzerland",
       "title": "Inviare un asset\nper la vendita.",
-      "desc": "Ogni vendita è esclusiva di Aegryn Auction Switzerland. Il diritto svizzero è applicabile. Venditori di tutto il mondo sono i benvenuti."
+      "desc": "Ogni vendita è esclusiva di Aegryn M&A Switzerland. Il diritto svizzero è applicabile. Venditori di tutto il mondo sono i benvenuti."
     },
     "swissNote": "Il diritto svizzero disciplina ogni transazione, indipendentemente dall'origine del venditore o dell'asset.",
     "steps": [
@@ -3964,7 +3964,7 @@
       "countryPlaceholder": "es. Francia, Svizzera, Germania",
       "company": "Società / Struttura (opzionale)",
       "message": "Messaggio aggiuntivo (opzionale)",
-      "swissLawLabel": "Riconosco che il diritto svizzero disciplina ogni transazione effettuata tramite Aegryn Auction Switzerland.",
+      "swissLawLabel": "Riconosco che il diritto svizzero disciplina ogni transazione effettuata tramite Aegryn M&A Switzerland.",
       "submit": "Inviare il mio dossier",
       "submitting": "Invio in corso…",
       "successTitle": "Dossier ricevuto.",
@@ -4810,7 +4810,7 @@
   },
   "clientAuction": {
     "eyebrow": "Spazio acquirente",
-    "title": "I miei fascicoli Aegryn Auction",
+    "title": "I miei fascicoli Aegryn",
     "subtitle": "I link di accesso ai fascicoli completi non vengono mai inviati via email. Appaiono qui solo dopo la validazione della candidatura.",
     "empty": "Nessuna richiesta di accesso in corso.",
     "viewCatalog": "Vedi il catalogo",
@@ -4822,14 +4822,14 @@
     "accessActivePlural": "Accesso attivo · {days} giorni rimanenti",
     "accessConfidential": "Questo link è strettamente personale e confidenziale.",
     "openDossier": "Apri il fascicolo",
-    "accessExpired": "Il periodo di accesso è scaduto o la sessione d'asta è chiusa.",
+    "accessExpired": "Il periodo di accesso è scaduto o la processo M&A è chiusa.",
     "pendingReview": "La sua richiesta è in fase di esame dal team Aegryn (entro 48 ore lavorative). Il link apparirà qui in caso di approvazione.",
     "rejected": "La sua richiesta non è stata selezionata per questa sessione.",
     "requestedOn": "Richiesta inviata il",
     "upcomingTitle": "Spazi in costruzione",
     "sectionSeller": "Spazio venditore",
     "sectionPartner": "Spazio partner",
-    "disclaimer": "Aegryn Auction · Ginevra · Svizzera — Accesso strettamente confidenziale"
+    "disclaimer": "Aegryn · Ginevra · Svizzera — Accesso strettamente confidenziale"
   },
   "waitlist": {
     "header": {
@@ -4977,7 +4977,7 @@
     "placeholder": "— Selezionare —",
     "done": {
       "title": "Richiesta registrata",
-      "desc": "Il nostro team esaminerà il suo profilo e la contatterà entro 48h per convalidare il suo accesso alla prossima sessione Aegryn Auction.",
+      "desc": "Il nostro team esaminerà il suo profilo e la contatterà entro 48h per convalidare il suo accesso alla prossimo processo Aegryn M&A.",
       "note": "Nessun accesso senza invito nominativo."
     },
     "errors": {
@@ -5256,8 +5256,8 @@
   "nda": {
     "pageTitle": "Accordo di riservatezza — Spazio Acquirente Aegryn",
     "stepLabel": "Passaggio obbligatorio",
-    "stepTitle": "Accordo di riservatezza — Aegryn Auction",
-    "introText": "Prima di accedere al catalogo Aegryn Auction, è necessario leggere e accettare il seguente accordo di riservatezza. Questo accordo è obbligatorio e costituisce un impegno contrattuale di riservatezza nei confronti di Aegryn e dei venditori. La firma è marcata temporalmente e registrata a fini legali.",
+    "stepTitle": "Accordo di riservatezza — Aegryn",
+    "introText": "Prima di accedere al catalogo Aegryn, è necessario leggere e accettare il seguente accordo di riservatezza. Questo accordo è obbligatorio e costituisce un impegno contrattuale di riservatezza nei confronti di Aegryn e dei venditori. La firma è marcata temporalmente e registrata a fini legali.",
     "versionLabel": "NDA — Versione",
     "mainTitle": "Condizioni di Riservatezza dell'Acquirente",
     "mainSubtitle": "Aegryn (già BOHA-Group Sàrl)",
@@ -5266,7 +5266,7 @@
     "partiesAnd": "E",
     "partiesBuyer": "L'utente identificato tramite le informazioni fornite al momento della registrazione sulla piattaforma Aegryn (nome, cognome o ragione sociale, e-mail professionale), di seguito denominato « l'Acquirente »,",
     "a1Title": "Oggetto",
-    "a1": "Il presente accordo di riservatezza («NDA») disciplina l'accesso dell'Acquirente al catalogo Aegryn Auction, alle schede degli asset, ai rapporti di grade e a qualsiasi documento della data room messo a disposizione nell'ambito del processo di certificazione e transazione Aegryn. L'accettazione del presente NDA è condizione preliminare obbligatoria per qualsiasi accesso al catalogo, indipendentemente dal livello di accesso.",
+    "a1": "Il presente accordo di riservatezza («NDA») disciplina l'accesso dell'Acquirente al catalogo Aegryn, alle schede degli asset, ai rapporti di grade e a qualsiasi documento della data room messo a disposizione nell'ambito del processo di certificazione e transazione Aegryn. L'accettazione del presente NDA è condizione preliminare obbligatoria per qualsiasi accesso al catalogo, indipendentemente dal livello di accesso.",
     "a2Title": "Definizione delle informazioni riservate",
     "a2Intro": "Sono considerate informazioni riservate:",
     "a2i1": "Qualsiasi informazione relativa all'identità del venditore o dell'entità cedente, prima di una decisione esplicita di presentazione da parte di Aegryn",
