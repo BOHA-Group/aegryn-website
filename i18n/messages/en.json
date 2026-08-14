@@ -5681,6 +5681,8 @@
       "hello": "Hello, {name}",
       "fallbackName": "Seller",
       "kpiActifs": "Assets submitted",
+      "kpiCertified": "Certified",
+      "kpiAuctionReady": "Auction Ready",
       "kpiTransactions": "Transactions",
       "kpiKycOk": "KYC validated",
       "kpiKycIncomplete": "KYC incomplete",
@@ -5696,6 +5698,7 @@
       "assetStatus": {
         "submitted": "Received",
         "under_review": "Under review",
+        "pre_grade": "Pre-Grade",
         "graded": "Graded",
         "published": "Published",
         "sold": "Sold",

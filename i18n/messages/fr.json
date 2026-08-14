@@ -5700,6 +5700,8 @@
       "hello": "Bonjour, {name}",
       "fallbackName": "Cédant",
       "kpiActifs": "Actifs soumis",
+      "kpiCertified": "Certifiés",
+      "kpiAuctionReady": "Auction Ready",
       "kpiTransactions": "Transactions",
       "kpiKycOk": "KYC validé",
       "kpiKycIncomplete": "KYC incomplet",
@@ -5715,6 +5717,7 @@
       "assetStatus": {
         "submitted": "Reçu",
         "under_review": "En analyse",
+        "pre_grade": "Pre-Grade",
         "graded": "Gradé",
         "published": "Publié",
         "sold": "Vendu",

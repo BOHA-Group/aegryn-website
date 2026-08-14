@@ -5704,6 +5704,8 @@
       "hello": "Hallo, {name}",
       "fallbackName": "Verkoper",
       "kpiActifs": "Ingediende assets",
+      "kpiCertified": "Gecertificeerd",
+      "kpiAuctionReady": "Veilingklaar",
       "kpiTransactions": "Transacties",
       "kpiKycOk": "KYC gevalideerd",
       "kpiKycIncomplete": "KYC onvolledig",
@@ -5719,6 +5721,7 @@
       "assetStatus": {
         "submitted": "Ontvangen",
         "under_review": "In analyse",
+        "pre_grade": "Voorlopige beoordeling",
         "graded": "Beoordeeld",
         "published": "Gepubliceerd",
         "sold": "Verkocht",
