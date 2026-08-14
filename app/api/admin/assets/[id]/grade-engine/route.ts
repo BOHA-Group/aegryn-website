@@ -15,6 +15,7 @@
  */
 import { NextRequest, NextResponse } from 'next/server'
 import { z }                         from 'zod'
+import { createHash }                from 'crypto'
 import { createServiceClient }       from '@/lib/supabase'
 import { runGradeEngine, type GradeInput, type GradeLetter } from '@/lib/gradeEngine'
 import { getAdminUser }              from '@/lib/adminAuth'
@@ -62,6 +63,11 @@ const financeInputSchema = z.object({
   topClientConcentration:   z.number().min(0).max(100),
   runwayMonths:             z.number().min(0),
   founderDependency:        founderDependencySchema.optional(),
+  topCustomerPct:            z.number().min(0).max(100).optional(),
+  top3CustomerPct:           z.number().min(0).max(100).optional(),
+  cashOnHand:                z.number().min(0).optional(),
+  monthlyBurn:               z.number().min(0).optional(),
+  monthlyNewMrr:             z.number().min(0).optional(),
 })
 
 const securityInputSchema = z.object({
@@ -146,20 +152,25 @@ export async function POST(
   if (body.action === 'compute') {
     const result = runGradeEngine(body.input as GradeInput)
 
+    // Hash SHA-256 des inputs bruts pour garantir l'intégrité post-save (Sprint 3I)
+    const inputHash = createHash('sha256').update(JSON.stringify(body.input)).digest('hex')
+
     const { data, error } = await supa
       .from('grade_assessments')
       .insert({
-        asset_id:           assetId,
-        admin_id:           adminId,
-        input_json:         body.input,
-        engine_result_json: result,
-        computed_grade:     result.grade,
-        computed_score:     result.totalScore,
-        final_grade:        result.grade,
-        final_score:        result.totalScore,
-        is_overridden:      false,
-        public_rationale:   result.publicRationale,
-        status:             'draft',
+        asset_id:            assetId,
+        admin_id:            adminId,
+        input_json:          body.input,
+        engine_result_json:  result,
+        computed_grade:      result.grade,
+        computed_score:      result.totalScore,
+        final_grade:         result.grade,
+        final_score:         result.totalScore,
+        is_overridden:       false,
+        public_rationale:    result.publicRationale,
+        status:              'draft',
+        input_hash:          inputHash,
+        engine_analyst_id:   adminId !== '00000000-0000-0000-0000-000000000000' ? adminId : null,
       })
       .select('id')
       .single()
@@ -197,13 +208,14 @@ export async function POST(
     const { error } = await supa
       .from('grade_assessments')
       .update({
-        final_grade:     finalGrade,
-        final_score:     existing.computed_score,
-        is_overridden:   isOverridden,
-        override_note:   isOverridden ? body.overrideNote : null,
-        public_rationale: body.publicRationale ?? undefined,
-        status:          'validated',
-        validated_at:    new Date().toISOString(),
+        final_grade:         finalGrade,
+        final_score:         existing.computed_score,
+        is_overridden:       isOverridden,
+        override_note:       isOverridden ? body.overrideNote : null,
+        public_rationale:    body.publicRationale ?? undefined,
+        status:              'validated',
+        validated_at:        new Date().toISOString(),
+        grade_validator_id:  adminId !== '00000000-0000-0000-0000-000000000000' ? adminId : null,
       })
       .eq('id', body.assessmentId)
 

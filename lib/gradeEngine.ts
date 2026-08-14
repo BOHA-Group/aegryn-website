@@ -76,9 +76,15 @@ export interface FinanceInput {
   monthlyChurn: number               // %
   grossMargin: number                // %
   yoyGrowth: number                  // %
-  topClientConcentration: number     // % du top 1 client
-  runwayMonths: number               // mois
+  topClientConcentration: number     // % du top 1 client (ancien champ — déprécié)
+  runwayMonths: number               // mois (valeur manuelle — déprécié)
   founderDependency?: FounderDependencyInput  // optionnel — CIFS v3.0
+  // ── Nouveaux champs Sprint 1 ──
+  topCustomerPct?: number            // % CA du 1er client (0-100)
+  top3CustomerPct?: number           // % CA des 3 premiers clients (0-100)
+  cashOnHand?: number                // trésorerie en €
+  monthlyBurn?: number               // burn rate mensuel brut en €
+  monthlyNewMrr?: number             // nouvelle MRR mensuelle en €
 }
 
 export type PentestMethodology = 'owasp_ptes' | 'custom' | 'unknown'
@@ -124,6 +130,19 @@ export interface DimensionResult {
 
 export type GradeLetter = 'star' | 'aaa' | 'aa' | 'a' | 'b' | 'refused'
 
+/** Niveau de readiness transactionnelle */
+export type TRSLevel = 'ready' | 'conditional' | 'remediation' | 'blocked'
+
+/** Recommandation actionnable générée automatiquement par le moteur */
+export interface GradeRecommendation {
+  dimension: 'C' | 'I' | 'F' | 'S'
+  subcode:   string
+  priority:  'blocking' | 'high' | 'medium'
+  action:    string
+  effort:    'days' | 'weeks' | 'months'
+  impact:    string
+}
+
 export interface GradeResult {
   dimensions: {
     code:     DimensionResult
@@ -135,9 +154,20 @@ export interface GradeResult {
   grade:           GradeLetter
   gradeLabel:      string        // AEG ★ | AAA | AA | A | B | Non certifiable
   gradeCeiling?:   GradeLetter   // plafond appliqué par proof_quality (CIFS v3.0)
+  /** Transaction Readiness Score — readiness opérationnelle à transiger */
+  trs:             TRSLevel
+  trsReasons:      string[]       // justifications du TRS
+  recommendations: GradeRecommendation[]  // actions actionnables par sous-code
   autoRefusal:     boolean
   refusalReasons:  string[]
   publicRationale: string        // résumé qualitatif exposable côté actif catalogué
+  /** Métadonnées proof_quality dérivées effectivement appliquées (après règle ARR) */
+  effectiveProofQualities?: {
+    code:     ProofQuality
+    ip:       ProofQuality
+    finance:  ProofQuality
+    security: ProofQuality
+  }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -320,6 +350,37 @@ function scoreFinance(input: FinanceInput): DimensionResult {
   else if (input.monthlyChurn < 5)  { score += 1; rationale.push(`Churn mensuel élevé (${input.monthlyChurn}%) — vigilance requise`) }
   else                              {             rationale.push(`Churn mensuel critique (${input.monthlyChurn}%)`) }
 
+  // Concentration client (topCustomerPct) — pénalité jusqu'à -2 pts
+  if (input.topCustomerPct !== undefined) {
+    if (input.topCustomerPct > 50) {
+      score -= 2; rationale.push(`Client principal hyper-dominant (${input.topCustomerPct}% du CA) — risque de dépendance critique`)
+    } else if (input.topCustomerPct > 30) {
+      score -= 1; rationale.push(`Concentration client modérée (${input.topCustomerPct}% pour le 1er client)`)
+    } else {
+      rationale.push(`Base client diversifiée (1er client : ${input.topCustomerPct}%)`)
+    }
+  }
+  if (input.top3CustomerPct !== undefined && input.top3CustomerPct > 60) {
+    rationale.push(`Concentration élevée sur les 3 premiers clients (${input.top3CustomerPct}% du CA)`)
+  }
+
+  // Runway effectif (calculé) — signal bloquant si < 3 mois
+  if (input.cashOnHand !== undefined && input.monthlyBurn !== undefined) {
+    const effectiveBurn = (input.monthlyBurn ?? 0) - (input.monthlyNewMrr ?? 0)
+    if (effectiveBurn <= 0) {
+      score += 1; rationale.push('Actif self-funding (burn net ≤0) — autonomie financière confirmée')
+    } else {
+      const runway = Math.round(input.cashOnHand / effectiveBurn)
+      if (runway < 3) {
+        rationale.push(`Runway critique (${runway} mois) — ferme la fenêtre AAA/★`)
+      } else if (runway < 6) {
+        rationale.push(`Runway limité (${runway} mois) — surveiller avant closing`)
+      } else {
+        rationale.push(`Runway confortable (${runway} mois)`)
+      }
+    }
+  }
+
   // Score dépendance fondateur — pénalité max -3 pts (CIFS v3.0 F-42)
   if (input.founderDependency) {
     const fd = input.founderDependency
@@ -494,10 +555,36 @@ function buildPublicRationale(results: GradeResult['dimensions']): string {
 // ─────────────────────────────────────────────────────────────────────────────
 
 export function runGradeEngine(input: GradeInput): GradeResult {
+  // ── Règle de dérivation ArrAuditLevel → ProofQuality.finance (Sprint 1A) ─────
+  // L'ARR est la donnée centrale de F. Si elle est déclarative, toute la dimension F est déclarative.
+  let effectivePQ = input.proofQualities
+    ? { ...input.proofQualities }
+    : undefined
+  let arrForceNote: string | undefined
+  if (effectivePQ && input.finance.arrAudited === 'declarative' && effectivePQ.finance !== 'declarative') {
+    effectivePQ = { ...effectivePQ, finance: 'declarative' }
+    arrForceNote = 'Proof quality F forcée à Declarative car ARR auto-déclaré (règle de dérivation Sprint 1A)'
+  }
+
   const code     = scoreCode(input.code)
   const ip       = scoreIP(input.ip)
   const finance  = scoreFinance(input.finance)
   const security = scoreSecurity(input.security)
+
+  // ── Règles de cohérence entre sous-codes contradictoires (Sprint 3C) ────────
+  const consistencyWarnings: string[] = []
+  // Règle 1 : testCoverage ≥80 + techDebtDocumented = 'no' (dette non documentée + coverage haute = suspect)
+  if (input.code.testCoverage >= 80 && input.code.techDebtDocumented === 'no') {
+    consistencyWarnings.push('Coverage ≥80% + dette technique non documentée : vérifier que les tests couvrent le code critique, pas uniquement le code trivial')
+  }
+  // Règle 2 : MFA absent + criticalVulnsResolved = 'na' (prétend qu'il n'y a pas de vuln + pas de MFA = incohérence)
+  if (input.security.mfaOnAdminAccess === 'no' && input.security.criticalVulnsResolved === 'na') {
+    consistencyWarnings.push('MFA absent + aucune vuln critique identifiée (N/A) : incohérence — un pentest est recommandé pour valider l\'absence de vuln')
+  }
+  // Règle 3 : criticalVulnsResolved = 'no' && externalCertification = 'yes' (certifié avec vulns ouvertes = impossible)
+  if (input.security.criticalVulnsResolved === 'no' && input.security.externalCertification === 'yes') {
+    consistencyWarnings.push('Vulnérabilités critiques non résolues + certification externe obtenue : incohérence — vérifier les dates de certification et de scan')
+  }
 
   const anyRefusal = code.autoRefusal || ip.autoRefusal || finance.autoRefusal || security.autoRefusal
   const refusalReasons = [code, ip, finance, security]
@@ -510,11 +597,11 @@ export function runGradeEngine(input: GradeInput): GradeResult {
 
   const { grade: rawGrade } = calculateGrade(totalScore, anyRefusal)
 
-  // ── Plafond proof_quality (CIFS v3.0) ────────────────────────────────────
+  // ── Plafond proof_quality avec effectivePQ (CIFS v3.0 + Sprint 1A) ─────────
   let grade = rawGrade
   let gradeCeiling: GradeLetter | undefined
-  if (!anyRefusal && input.proofQualities) {
-    const cappedGrade = capAegByProofQuality(rawGrade as AEGGrade, input.proofQualities) as GradeLetter
+  if (!anyRefusal && effectivePQ) {
+    const cappedGrade = capAegByProofQuality(rawGrade as AEGGrade, effectivePQ) as GradeLetter
     if (cappedGrade !== rawGrade) {
       gradeCeiling = cappedGrade
       grade = cappedGrade
@@ -524,16 +611,176 @@ export function runGradeEngine(input: GradeInput): GradeResult {
 
   const dimensions = { code, ip, finance, security }
 
+  // ── TRS — Transaction Readiness Score (Sprint 1D) ─────────────────────
+  const { trs, trsReasons } = computeTRS(input, grade, effectivePQ)
+
+  // ── Recommendations (Sprint 2A) ───────────────────────────────────
+  const recommendations = buildRecommendations(input, dimensions)
+
+  // Injecter les warnings de cohérence dans le rationale Code/Sécu
+  if (consistencyWarnings.length > 0) {
+    consistencyWarnings.forEach(w => {
+      if (w.includes('Coverage') || w.includes('dette')) dimensions.code.rationale.push(`⚠️ ${w}`)
+      else dimensions.security.rationale.push(`⚠️ ${w}`)
+    })
+  }
+  if (arrForceNote) dimensions.finance.rationale.push(`⚠️ ${arrForceNote}`)
+
   return {
     dimensions,
     totalScore,
     grade,
     gradeLabel,
     gradeCeiling,
+    trs,
+    trsReasons,
+    recommendations,
     autoRefusal: anyRefusal,
     refusalReasons,
     publicRationale: anyRefusal ? '' : buildPublicRationale(dimensions),
+    effectiveProofQualities: effectivePQ,
   }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TRS — TRANSACTION READINESS SCORE (Sprint 1D)
+// ─────────────────────────────────────────────────────────────────────────────
+
+function computeTRS(
+  input: GradeInput,
+  grade: GradeLetter,
+  effectivePQ?: { code: ProofQuality; ip: ProofQuality; finance: ProofQuality; security: ProofQuality },
+): { trs: TRSLevel; trsReasons: string[] } {
+  const reasons: string[] = []
+
+  // — Bloquants durs
+  if (input.security.rgpdTransferReadiness === 'blocking') {
+    reasons.push('Transferts RGPD bloquants non résolus (I-29)')
+  }
+  if (input.security.activeSecurityIncident === 'yes') {
+    reasons.push('Incident de sécurité actif en cours')
+  }
+  if (input.ip.activeIPLitigation === 'yes') {
+    reasons.push('Litige IP actif (I-18)')
+  }
+  if (input.ip.employeeIPRights === 'absent') {
+    reasons.push('Droits IP employés/prestataires absents (I-21)')
+  }
+  if (input.code.criticalVulnOpen > 0 && input.code.lastCodeAuditMonthsAgo >= 9999) {
+    reasons.push('Vulnérabilités critiques ouvertes sans audit externe (C-34/C-40)')
+  }
+  // Runway < 3 mois
+  if (input.finance.cashOnHand !== undefined && input.finance.monthlyBurn !== undefined) {
+    const effectiveBurn = (input.finance.monthlyBurn ?? 0) - (input.finance.monthlyNewMrr ?? 0)
+    if (effectiveBurn > 0 && input.finance.cashOnHand / effectiveBurn < 3) {
+      reasons.push('Runway effectif < 3 mois — ferme la fenêtre AAA/★')
+    }
+  }
+
+  if (reasons.length > 0) return { trs: 'blocked', trsReasons: reasons }
+
+  // — Conditionnel
+  const founderScore = input.finance.founderDependency
+    ? Object.values(input.finance.founderDependency).filter(v => v === 'yes').length
+    : 0
+  if (founderScore >= 5) {
+    reasons.push('Dépendance fondateur maximale (5/5 critères) — plan de succession requis avant closing')
+  }
+  if (effectivePQ && (['code', 'ip', 'finance', 'security'] as const).every(d => effectivePQ![d] === 'declarative')) {
+    reasons.push('Toutes les dimensions en proof quality Déclaratif — due diligence étendue recommandée')
+  }
+  if (input.finance.topCustomerPct !== undefined && input.finance.topCustomerPct > 50) {
+    reasons.push(`Client principal représente ${input.finance.topCustomerPct}% du CA — clause earn-out recommandée`)
+  }
+  if (grade === 'b') {
+    reasons.push('Grade B — conditions de transition à négocier')
+  }
+
+  if (reasons.length > 0) return { trs: 'conditional', trsReasons: reasons }
+
+  // — Ready conditionnel avec actions pré-closing
+  const hasRemediation =
+    input.security.rgpdTransferReadiness === 'warning' ||
+    input.security.lastPentestMonthsAgo > 12 ||
+    founderScore >= 3
+  if (hasRemediation) {
+    return { trs: 'remediation', trsReasons: ['Points d\'attention identifiés — actions de remédiation recommandées avant closing'] }
+  }
+
+  return { trs: 'ready', trsReasons: [] }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RECOMMENDATIONS (Sprint 2A)
+// ─────────────────────────────────────────────────────────────────────────────
+
+function buildRecommendations(
+  input: GradeInput,
+  dims: { code: DimensionResult; ip: DimensionResult; finance: DimensionResult; security: DimensionResult },
+): GradeRecommendation[] {
+  const recs: GradeRecommendation[] = []
+
+  // S-16 : Pentest absent ou non qualifié
+  if (input.security.lastPentestMonthsAgo > 12) {
+    recs.push({
+      dimension: 'S', subcode: 'S-16', priority: input.security.lastPentestMonthsAgo >= 9999 ? 'blocking' : 'high',
+      action: 'Commander un pentest gray box auprès d\'un auditeur certifié OSCP ou CREST, en méthodologie OWASP/PTES.',
+      effort: 'weeks',
+      impact: '+4 à +6 pts sur dimension S selon ancienneté du dernier pentest',
+    })
+  } else if (input.security.pentestMethodology !== 'owasp_ptes' || input.security.pentestAuditorCert !== 'oscp_crest') {
+    recs.push({
+      dimension: 'S', subcode: 'S-16', priority: 'medium',
+      action: 'Faire certifier l\'auditeur pentest (OSCP/CREST) et adopter une méthodologie OWASP/PTES pour le prochain pentest.',
+      effort: 'months',
+      impact: '+1 à +2 pts sur dimension S (bonus qualification)',
+    })
+  }
+
+  // I-27 : Transferts RGPD warning
+  if (input.security.rgpdTransferReadiness === 'warning') {
+    recs.push({
+      dimension: 'I', subcode: 'I-27', priority: 'high',
+      action: 'Mettre en place des Clauses Contractuelles Types (SCCs) ou vérifier la décision d\'adéquation applicable. Rédaction juridique : 1-2 jours.',
+      effort: 'days',
+      impact: 'Élimine le warning I-28, réduit le risque bloquant pré-closing',
+    })
+  }
+
+  // C-14 : Coverage test insuffisante
+  if (input.code.testCoverage < 40) {
+    recs.push({
+      dimension: 'C', subcode: 'C-14', priority: dims.code.score < 10 ? 'high' : 'medium',
+      action: 'Mettre en place un plan de tests unitaires et d\'intégration visant 70% de coverage sur les modules critiques.',
+      effort: 'months',
+      impact: '+3 à +7 pts sur dimension C selon le niveau atteint',
+    })
+  }
+
+  // F-11 : ARR déclaratif
+  if (input.finance.arrAudited === 'declarative') {
+    recs.push({
+      dimension: 'F', subcode: 'F-11', priority: 'medium',
+      action: 'Obtenir un export certifié Stripe/Chargebee ou faire co-signer les revenus par un expert-comptable pour passer au niveau Verifiable ou Audité.',
+      effort: 'days',
+      impact: '+1 pt (Verifiable) ou +2 pts (Audité) sur dimension F — déverrouille proof quality F',
+    })
+  }
+
+  // F-42 : Dépendance fondateur ≥3 critères
+  if (input.finance.founderDependency) {
+    const riskCount = Object.values(input.finance.founderDependency).filter(v => v === 'yes').length
+    if (riskCount >= 3) {
+      recs.push({
+        dimension: 'F', subcode: 'F-42', priority: riskCount >= 5 ? 'blocking' : 'high',
+        action: 'Documenter les runbooks opérationnels, déléguer la signature de contrats à un N-1, et rédiger un plan de succession.',
+        effort: 'months',
+        impact: `Réduction pénalité fondateur de -${riskCount >= 5 ? 3 : 2} à 0 pts sur F, améliore le TRS`,
+      })
+    }
+  }
+
+  return recs
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

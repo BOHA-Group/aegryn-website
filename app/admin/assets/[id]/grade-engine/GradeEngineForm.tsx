@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useMemo, useEffect } from 'react'
-import type { GradeInput, GradeResult, GradeLetter, ArrAuditLevel, FounderDependencyInput, PentestMethodology, PentestAuditorCert } from '@/lib/gradeEngine'
+import type { GradeInput, GradeResult, GradeLetter, ArrAuditLevel, FounderDependencyInput, PentestMethodology, PentestAuditorCert, TRSLevel } from '@/lib/gradeEngine'
 import { runGradeEngine } from '@/lib/gradeEngine'
 import type { ProofQuality } from '@/lib/gradingSystem'
 import { ChevronDown, ChevronUp, AlertTriangle, CheckCircle2, Calculator, Send, Zap, FileText, XCircle } from 'lucide-react'
@@ -67,6 +67,8 @@ function defaultInput(): GradeInput {
         founderLeadsSales: 'no', noSigningDelegation: 'no', revenueAtRisk: 'no',
         noOperationalDocs: 'no', noSuccessionPlan: 'no',
       },
+      topCustomerPct: 0, top3CustomerPct: 0,
+      cashOnHand: 0, monthlyBurn: 0, monthlyNewMrr: 0,
     },
     security: {
       lastPentestMonthsAgo: 9999, criticalVulnsResolved: 'na', mfaOnAdminAccess: 'no',
@@ -195,8 +197,22 @@ const GRADE_LABELS: Record<string, string> = {
   star: 'AEG ★', aaa: 'AAA', aa: 'AA', a: 'A', b: 'B', refused: 'NG',
 }
 
+const TRS_BADGE: Record<TRSLevel, string> = {
+  ready:       'bg-emerald-100 text-emerald-700 border-emerald-300',
+  remediation: 'bg-amber-100 text-amber-700 border-amber-300',
+  conditional: 'bg-orange-100 text-orange-700 border-orange-300',
+  blocked:     'bg-red-100 text-red-700 border-red-300',
+}
+const TRS_LABELS: Record<TRSLevel, string> = {
+  ready:       'Prêt',
+  remediation: 'Remédiation',
+  conditional: 'Conditionnel',
+  blocked:     'Bloqué',
+}
+
 function LiveScorePanel({ live }: { live: ReturnType<typeof runGradeEngine> }) {
   const badge = GRADE_BADGE[live.grade] ?? GRADE_BADGE.b
+  const trsBadge = TRS_BADGE[live.trs]
   return (
     <div className="sticky top-4 bg-white border border-gray-200 p-4 space-y-3">
       <div className="flex items-center gap-1.5 mb-2">
@@ -216,9 +232,15 @@ function LiveScorePanel({ live }: { live: ReturnType<typeof runGradeEngine> }) {
             {live.totalScore}<span className="text-[13px] text-gray-400">/100</span>
           </p>
         </div>
-        <div className={`border px-3 py-1.5 text-center ${badge}`}>
-          <p className="font-mono text-[9px] uppercase tracking-widest opacity-70 mb-0.5">Grade estimé</p>
-          <p className="font-sans font-bold text-[18px] leading-none">{GRADE_LABELS[live.grade]}</p>
+        <div className="flex flex-col gap-1.5">
+          <div className={`border px-3 py-1.5 text-center ${badge}`}>
+            <p className="font-mono text-[9px] uppercase tracking-widest opacity-70 mb-0.5">Grade estimé</p>
+            <p className="font-sans font-bold text-[18px] leading-none">{GRADE_LABELS[live.grade]}</p>
+          </div>
+          <div className={`border px-2 py-1 text-center ${trsBadge}`}>
+            <p className="font-mono text-[8px] uppercase tracking-widest opacity-70">TRS</p>
+            <p className="font-mono font-bold text-[11px] leading-none">{TRS_LABELS[live.trs]}</p>
+          </div>
         </div>
       </div>
 
@@ -559,6 +581,41 @@ export default function GradeEngineForm({
         <Field label="Runway (mois)" source={inputSources['runwayMonths'] as SourceType}>
           <NumInput value={input.finance.runwayMonths} onChange={v => setFin('runwayMonths', v)} />
         </Field>
+        {/* Sprint 1 — Concentration client */}
+        <div className="col-span-2 border-t border-gray-100 pt-3">
+          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-2">Concentration client</p>
+          <div className="grid grid-cols-2 gap-3">
+            <Field label="1er client (% du CA)" hint=">30% = alerte · >50% = plafond Grade A">
+              <NumInput value={input.finance.topCustomerPct ?? 0} onChange={v => setFin('topCustomerPct', v)} max={100} />
+            </Field>
+            <Field label="Top 3 clients (% du CA)" hint=">60% = mention dans le rapport">
+              <NumInput value={input.finance.top3CustomerPct ?? 0} onChange={v => setFin('top3CustomerPct', v)} max={100} />
+            </Field>
+          </div>
+        </div>
+        {/* Sprint 1 — Runway effectif calculé */}
+        <div className="col-span-2 border-t border-gray-100 pt-3">
+          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-2">Runway effectif (calculé automatiquement)</p>
+          <div className="grid grid-cols-3 gap-3">
+            <Field label="Trésorerie (€)">
+              <NumInput value={input.finance.cashOnHand ?? 0} onChange={v => setFin('cashOnHand', v)} step={1000} />
+            </Field>
+            <Field label="Burn mensuel brut (€)">
+              <NumInput value={input.finance.monthlyBurn ?? 0} onChange={v => setFin('monthlyBurn', v)} step={500} />
+            </Field>
+            <Field label="Nouvelle MRR/mois (€)">
+              <NumInput value={input.finance.monthlyNewMrr ?? 0} onChange={v => setFin('monthlyNewMrr', v)} step={500} />
+            </Field>
+          </div>
+          {(() => {
+            const burn = (input.finance.monthlyBurn ?? 0) - (input.finance.monthlyNewMrr ?? 0)
+            const cash = input.finance.cashOnHand ?? 0
+            if (burn <= 0) return <p className="font-sans text-[11px] text-emerald-600 mt-1">Self-funding — burn net ≤0 ✅</p>
+            const rw = Math.round(cash / burn)
+            const cls = rw < 3 ? 'text-red-600' : rw < 6 ? 'text-amber-600' : 'text-emerald-600'
+            return <p className={`font-sans text-[11px] mt-1 ${cls}`}>Runway effectif : {rw} mois</p>
+          })()}
+        </div>
         {/* F-42 — Score dépendance fondateur */}
         <div className="col-span-2 border-t border-gray-100 pt-3">
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-2">F-42 — Dépendance fondateur (5 critères)</p>
@@ -985,6 +1042,48 @@ export default function GradeEngineForm({
           </div>
         </div>
 
+        {/* TRS */}
+        <div className="bg-white border border-gray-200 p-4">
+          <div className="flex items-center justify-between mb-2">
+            <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Transaction Readiness Score (TRS)</p>
+            <span className={`border px-3 py-1 font-mono font-bold text-[12px] ${TRS_BADGE[result.trs]}`}>
+              {TRS_LABELS[result.trs]}
+            </span>
+          </div>
+          {result.trsReasons.length > 0 && (
+            <ul className="space-y-0.5">
+              {result.trsReasons.map((r, i) => (
+                <li key={i} className="font-sans text-[12px] text-gray-600">· {r}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+
+        {/* Recommandations actionnables */}
+        {result.recommendations.length > 0 && (
+          <div className="bg-white border border-gray-200 p-4 space-y-3">
+            <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Actions recommandées avant closing</p>
+            {result.recommendations.map((rec, i) => {
+              const prioColor: Record<string, string> = {
+                blocking: 'border-l-red-500 bg-red-50',
+                high:     'border-l-orange-400 bg-orange-50',
+                medium:   'border-l-blue-400 bg-blue-50',
+              }
+              const effortLabel: Record<string, string> = { days: 'Quelques jours', weeks: 'Quelques semaines', months: 'Plusieurs mois' }
+              return (
+                <div key={i} className={`border-l-4 pl-3 py-2 ${prioColor[rec.priority] ?? 'bg-gray-50'}`}>
+                  <div className="flex items-center gap-2 mb-0.5">
+                    <span className="font-mono text-[9px] text-gray-500 uppercase">{rec.dimension}-{rec.subcode.split('-')[1]}</span>
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-gray-400">· {effortLabel[rec.effort]}</span>
+                  </div>
+                  <p className="font-sans text-[12px] text-gray-800 mb-0.5">{rec.action}</p>
+                  <p className="font-sans text-[10px] text-gray-500 italic">{rec.impact}</p>
+                </div>
+              )
+            })}
+          </div>
+        )}
+
         {/* Refus automatique */}
         {result.autoRefusal && (
           <div className="bg-red-50 border border-red-200 p-4">
@@ -1018,6 +1117,16 @@ export default function GradeEngineForm({
             )
           })}
         </div>
+
+        {/* Avertissement gouvernance — second analyste (Sprint 3J) */}
+        {(result.grade === 'star' || result.grade === 'aaa') && (
+          <div className="bg-amber-50 border border-amber-200 p-3 flex items-start gap-2">
+            <AlertTriangle size={13} className="text-amber-500 shrink-0 mt-0.5" />
+            <p className="font-sans text-[11px] text-amber-700">
+              <span className="font-semibold">Grade {result.gradeLabel} détecté.</span> Pour maximiser la crédibilité du grade, la validation par un second analyste (différent de celui qui a rempli le moteur) est recommandée.
+            </p>
+          </div>
+        )}
 
         {/* Override admin */}
         <div className="bg-white border border-gray-200 p-5 space-y-4">
