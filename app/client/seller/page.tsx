@@ -72,7 +72,6 @@ export default async function SellerDashboardPage() {
   const kycAlertCount = kycPending ?? 0
   const unreadCount   = (notifications ?? []).filter(n => !n.read_at).length
 
-  const publishedCount  = (assets ?? []).filter(a => a.status === 'published' || a.status === 'sold').length
   const certifiedCount  = (assets ?? []).filter(a => ['graded','published','sold'].includes(a.status)).length
   const auctionReadyCount = (assets ?? []).filter(a => Boolean(a.auction_ready)).length
   const trsAlerts       = (assets ?? []).filter(a => a.trs === 'blocked' || a.trs === 'remediation')
