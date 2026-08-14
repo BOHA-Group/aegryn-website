@@ -361,6 +361,7 @@ export default function GradeEngineForm({
   const [validating, setValidating] = useState(false)
   const [publishing, setPublishing] = useState(false)
   const [statusMsg, setStatusMsg] = useState('')
+  const [emitPreGrade, setEmitPreGrade] = useState(false)  // C2 — Pre-Grade explicite admin
 
   /* ── Score live recalculé à chaque changement d'input ── */
   const liveScore = useMemo(() => runGradeEngine(input), [input])
@@ -455,7 +456,7 @@ export default function GradeEngineForm({
       const res = await fetch(`/api/admin/assets/${assetId}/grade-engine`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'publish', assessmentId }),
+        body: JSON.stringify({ action: 'publish', assessmentId, emitPreGrade }),
       })
       const json = await res.json()
       if (!res.ok) { setStatusMsg(json.error ?? 'Erreur'); return }
@@ -1195,6 +1196,21 @@ export default function GradeEngineForm({
             <CheckCircle2 size={13} />
             {validating ? 'Validation…' : 'Valider le grade'}
           </button>
+          {/* C2 — Pre-Grade : checkbox uniquement si grade refused */}
+          {result.grade === 'refused' && (
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={emitPreGrade}
+                onChange={e => setEmitPreGrade(e.target.checked)}
+                className="w-3.5 h-3.5 accent-orange-500"
+              />
+              <span className="font-sans text-[11px] text-orange-700">
+                Émettre un Pre-Grade avec plan de remédiation
+                <span className="ml-1 text-gray-400">(statut = pre_grade)</span>
+              </span>
+            </label>
+          )}
           <button type="button" onClick={publish} disabled={publishing}
             className="flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-apex/80 transition-colors disabled:opacity-50">
             <Send size={13} />

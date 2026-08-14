@@ -50,12 +50,19 @@ COMMENT ON COLUMN public.assets.pre_grade_issued_at IS
 -- ─────────────────────────────────────────────────────────────────────────────
 
 ALTER TABLE public.assets
-  ADD COLUMN IF NOT EXISTS auction_ready    BOOLEAN      NOT NULL DEFAULT FALSE,
-  ADD COLUMN IF NOT EXISTS auction_ready_at TIMESTAMPTZ,
-  ADD COLUMN IF NOT EXISTS trs              TEXT
+  ADD COLUMN IF NOT EXISTS auction_ready          BOOLEAN      NOT NULL DEFAULT FALSE,
+  ADD COLUMN IF NOT EXISTS auction_ready_at        TIMESTAMPTZ,
+  ADD COLUMN IF NOT EXISTS auction_ready_blockers  JSONB,
+  ADD COLUMN IF NOT EXISTS trs                     TEXT
     CHECK (trs IN ('ready','conditional','remediation','blocked') OR trs IS NULL),
-  ADD COLUMN IF NOT EXISTS aeg_grade        TEXT
+  ADD COLUMN IF NOT EXISTS aeg_grade               TEXT
     CHECK (aeg_grade IN ('star','aaa','aa','a','b','refused') OR aeg_grade IS NULL);
+
+COMMENT ON COLUMN public.assets.auction_ready_blockers IS
+  'Tableau des conditions non remplies pour l\'Auction Ready.
+   NULL si auction_ready = TRUE (aucun bloqueur).
+   Exemple : ["KYC vendeur non validé", "Prix demandé non renseigné"]
+   Affiché au vendeur comme checklist de remédiation.';
 
 COMMENT ON COLUMN public.assets.auction_ready IS
   'TRUE si l''actif remplit tous les critères pour entrer en session d''enchères.
@@ -123,13 +130,15 @@ COMMENT ON TABLE public.sector_benchmarks IS
 -- Seed initial — données Aventis Advisors 2024 (à mettre à jour)
 INSERT INTO public.sector_benchmarks (sector, arr_multiple_median, arr_multiple_top_quartile, sample_size, source)
 VALUES
-  ('saas_b2b',       5.0,  9.0,  120, 'Aventis Advisors 2024'),
-  ('saas_b2c',       3.5,  6.5,   80, 'Aventis Advisors 2024'),
-  ('marketplace',    3.0,  5.5,   45, 'Aventis Advisors 2024'),
-  ('api_infra',      6.0, 11.0,   30, 'Aventis Advisors 2024'),
-  ('platform',       4.0,  7.5,   60, 'Aventis Advisors 2024'),
-  ('other',          2.5,  4.5,   90, 'Aventis Advisors 2024')
-ON CONFLICT (sector) DO NOTHING;
+  ('saas_b2b',       5.0,  9.0,  120, 'Aventis Advisors Q2 2026'),
+  ('saas_b2c',       3.5,  6.5,   80, 'Aventis Advisors Q2 2026'),
+  ('marketplace',    3.0,  5.5,   45, 'Aventis Advisors Q2 2026'),
+  ('api_infra',      6.0, 11.0,   30, 'Aventis Advisors Q2 2026'),
+  ('platform',       4.0,  7.5,   60, 'Aventis Advisors Q2 2026'),
+  ('other',          2.5,  4.5,   90, 'Aventis Advisors Q2 2026')
+ON CONFLICT (sector) DO UPDATE SET
+  source     = EXCLUDED.source,
+  updated_at = now();
 
 -- RLS — lecture publique (pour le catalogue), écriture service_role
 ALTER TABLE public.sector_benchmarks ENABLE ROW LEVEL SECURITY;

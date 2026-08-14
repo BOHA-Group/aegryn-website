@@ -105,6 +105,7 @@ const bodySchema = z.object({
   finalGrade:      z.enum(['star','aaa','aa','a','b','refused']).optional(),
   overrideNote:    z.string().max(2000).optional(),
   publicRationale: z.string().max(3000).optional(),
+  emitPreGrade:    z.boolean().optional(),  // C2 — Pre-Grade explicite admin, uniquement si grade=refused
 })
 
 // ── Handler ───────────────────────────────────────────────────────────────────
@@ -304,39 +305,64 @@ export async function POST(
       star: '★', aaa: 'AAA', aa: 'AA', a: 'A', b: 'B', refused: 'NG',
     }
 
-    // 5B — Auction Ready : calculé automatiquement à la publication
+    // 5B — Auction Ready : 4 conditions métier + 2 corrections (C1)
     const auctionReadyGrades = ['star', 'aaa', 'aa', 'a']
     const auctionReadyTrs    = ['ready', 'conditional']
-    // Récupérer kyc_validated + mandate_signed depuis l'asset
-    const { data: assetData } = await supa
+
+    // C1-a : récupérer kyc_validated + mandate_signed + asking_price
+    const { data: assetFull } = await supa
       .from('assets')
-      .select('kyc_validated, mandate_signed')
+      .select('kyc_validated, mandate_signed, asking_price')
       .eq('id', assetId)
       .maybeSingle()
-    const auctionReady =
-      auctionReadyGrades.includes(assessment.final_grade) &&
-      auctionReadyTrs.includes(assessment.trs ?? '') &&
-      (assetData?.kyc_validated === true) &&
-      (assetData?.mandate_signed === true)
 
-    // 5A — Pre-Grade actions si grade B ou refused
-    const preGradeGrades = ['b', 'refused']
-    const preGradeActions = preGradeGrades.includes(assessment.final_grade) && assessment.recommendations
-      ? { estimatedGrade: assessment.final_grade, actions: assessment.recommendations }
+    // C1-b : documents bloquants manquants dans la data room
+    const { count: blockingCount } = await supa
+      .from('data_room_documents')
+      .select('*', { count: 'exact', head: true })
+      .eq('asset_id', assetId)
+      .eq('required_level', 'blocking')
+      .neq('admin_quality', 'sufficient')
+
+    const gradeOk    = auctionReadyGrades.includes(assessment.final_grade)
+    const trsOk      = auctionReadyTrs.includes(assessment.trs ?? '')
+    const kycOk      = assetFull?.kyc_validated === true
+    const mandateOk  = assetFull?.mandate_signed === true
+    const docsOk     = (blockingCount ?? 1) === 0
+    const priceOk    = assetFull?.asking_price != null
+
+    const auctionReady = gradeOk && trsOk && kycOk && mandateOk && docsOk && priceOk
+
+    // Construire la checklist des bloqueurs (visible vendeur)
+    const auctionReadyBlockers: string[] = []
+    if (!gradeOk)   auctionReadyBlockers.push(`Grade ${assessment.final_grade} insuffisant — minimum requis : A`)
+    if (!trsOk)     auctionReadyBlockers.push(`TRS ${assessment.trs ?? 'non calculé'} — minimum requis : conditional`)
+    if (!kycOk)     auctionReadyBlockers.push('KYC vendeur non validé')
+    if (!mandateOk) auctionReadyBlockers.push('Mandat de vente non signé')
+    if (!docsOk)    auctionReadyBlockers.push(`${blockingCount ?? '?'} document(s) bloquant(s) manquant(s) dans la data room`)
+    if (!priceOk)   auctionReadyBlockers.push('Prix demandé non renseigné')
+
+    // C2 — Pre-Grade : uniquement sur grade=refused + demande explicite admin
+    // Grade B = grade officiel certifié (30-44/100), ne devient PAS pre_grade
+    const isRefused   = assessment.final_grade === 'refused'
+    const emitPreGrade = isRefused && body.emitPreGrade === true && !!assessment.recommendations
+    const preGradeActions = emitPreGrade
+      ? { estimatedGrade: 'b', actions: assessment.recommendations }
       : null
 
     const { error: assetErr } = await supa
       .from('assets')
       .update({
-        aeg_grade:            assessment.final_grade,
-        official_grade:       GRADE_TO_SYMBOL[assessment.final_grade] ?? assessment.final_grade,
-        public_summary:       assessment.public_rationale ?? undefined,
-        published_at:         new Date().toISOString(),
+        aeg_grade:              assessment.final_grade,
+        official_grade:         GRADE_TO_SYMBOL[assessment.final_grade] ?? assessment.final_grade,
+        public_summary:         assessment.public_rationale ?? undefined,
+        published_at:           new Date().toISOString(),
         // 5B
-        trs:                  assessment.trs ?? null,
-        auction_ready:        auctionReady,
-        auction_ready_at:     auctionReady ? new Date().toISOString() : null,
-        // 5A
+        trs:                    assessment.trs ?? null,
+        auction_ready:          auctionReady,
+        auction_ready_at:       auctionReady ? new Date().toISOString() : null,
+        auction_ready_blockers: auctionReadyBlockers.length > 0 ? auctionReadyBlockers : null,
+        // 5A C2 — Pre-Grade explicite sur refused uniquement
         ...(preGradeActions ? {
           status:              'pre_grade',
           pre_grade_actions:   preGradeActions,
@@ -347,7 +373,7 @@ export async function POST(
 
     if (assetErr) return NextResponse.json({ error: assetErr.message }, { status: 500 })
 
-    return NextResponse.json({ ok: true, grade: assessment.final_grade, auctionReady })
+    return NextResponse.json({ ok: true, grade: assessment.final_grade, auctionReady, auctionReadyBlockers })
   }
 
   return NextResponse.json({ error: 'unknown_action' }, { status: 400 })
