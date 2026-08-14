@@ -76,6 +76,7 @@ function defaultInput(): GradeInput {
       pentestMethodology: 'unknown' as PentestMethodology,
       pentestAuditorCert: 'none' as PentestAuditorCert,
       rgpdTransferReadiness: undefined,
+      accessManagement: 'no' as 'yes' | 'no',
     },
     proofQualities: {
       code:     'declarative' as ProofQuality,
@@ -684,6 +685,13 @@ export default function GradeEngineForm({
             <option value="oscp_crest">OSCP / CREST (certifié)</option>
             <option value="other_cert">Autre certification reconnue</option>
             <option value="none">Non certifié / inconnu</option>
+          </select>
+        </Field>
+        {/* S-15 — Politique de gestion des accès (V3 : règle MFA/S-15) */}
+        <Field label="Politique accès documentée (S-15)" hint="RBAC/IAM documenté — pénalité si MFA absent simultanément">
+          <select value={input.security.accessManagement ?? 'no'} onChange={e => setSec('accessManagement', e.target.value as 'yes' | 'no')} className={selectCls}>
+            <option value="no">Non documentée</option>
+            <option value="yes">Documentée (RBAC / IAM)</option>
           </select>
         </Field>
         {/* I-27 — Transferts RGPD (CIFS v3.0) */}

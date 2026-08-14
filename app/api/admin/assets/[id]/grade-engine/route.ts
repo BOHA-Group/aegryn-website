@@ -78,6 +78,7 @@ const securityInputSchema = z.object({
   rgpdDocumented:           z.enum(['yes', 'no']),
   activeSecurityIncident:   z.enum(['yes', 'no']),
   externalCertification:    z.enum(['yes', 'in_progress', 'no']),
+  accessManagement:          z.enum(['yes', 'no']).optional(),
   pentestMethodology:       z.enum(['owasp_ptes', 'custom', 'unknown']).optional(),
   pentestAuditorCert:       z.enum(['oscp_crest', 'other_cert', 'none']).optional(),
   rgpdTransferReadiness:    z.enum(['clean', 'warning', 'blocking']).optional(),
@@ -171,6 +172,10 @@ export async function POST(
         status:              'draft',
         input_hash:          inputHash,
         engine_analyst_id:   adminId !== '00000000-0000-0000-0000-000000000000' ? adminId : null,
+        // TRS + recommendations — persistance Sprint 4 (V1)
+        trs:                 result.trs,
+        trs_reasons:         result.trsReasons,
+        recommendations:     result.recommendations,
       })
       .select('id')
       .single()

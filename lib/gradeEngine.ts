@@ -101,6 +101,8 @@ export interface SecurityInput {
   pentestMethodology?: PentestMethodology  // CIFS v3.0
   pentestAuditorCert?: PentestAuditorCert  // CIFS v3.0
   rgpdTransferReadiness?: 'clean' | 'warning' | 'blocking'  // CIFS v3.0 I-27
+  /** S-15 — Politique de gestion des accès documentée (RBAC/IAM) */
+  accessManagement?: YesNo            // CIFS v3.0 V3 — règle MFA/S-15
 }
 
 export interface GradeInput {
@@ -120,6 +122,92 @@ export interface GradeInput {
 // ─────────────────────────────────────────────────────────────────────────────
 // TYPES — SORTIES
 // ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * NIVEAUX DE VISIBILITÉ DU RAPPORT AEGRYN (Sprint 4 / Point H)
+ *
+ * PUBLIC (catalogue, avant NDA) :
+ *   grade, gradeLabel, totalScore, scores par dimension, trs, secteur
+ *
+ * POST-NDA (acheteur qualifié après double NDA) :
+ *   + subcodes détaillés, proofQuality par dimension, gradeCeiling,
+ *     founderDependency score (F-42), recommendations[], trsReasons[]
+ *
+ * ADMIN UNIQUEMENT :
+ *   + input_hash, engineAnalystId, gradeValidatorId, internalNotes,
+ *     inputs bruts (GradeInput), historique versions
+ *
+ * Ces types TypeScript matérialisent la frontière — les queries Supabase
+ * doivent sélectionner uniquement les colonnes correspondant au niveau.
+ */
+
+/** Niveau PUBLIC — exposé dans le catalogue avant NDA */
+export interface GradeResultPublic {
+  grade:       GradeLetter
+  gradeLabel:  string
+  totalScore:  number
+  scoreC:      number
+  scoreI:      number
+  scoreF:      number
+  scoreS:      number
+  trs:         TRSLevel
+  autoRefusal: boolean
+}
+
+/** Niveau POST-NDA — exposé à l'acheteur qualifié après double NDA */
+export interface GradeResultPostNda extends GradeResultPublic {
+  gradeCeiling?:          GradeLetter
+  proofQualities?:        { code: ProofQuality; ip: ProofQuality; finance: ProofQuality; security: ProofQuality }
+  founderDependencyScore: number  // 0-5 critères à risque
+  trsReasons:             string[]
+  recommendations:        GradeRecommendation[]
+  rationaleByDimension:   { code: string[]; ip: string[]; finance: string[]; security: string[] }
+}
+
+/** Niveau ADMIN UNIQUEMENT — ne jamais exposer hors routes authentifiées admin */
+export interface GradeResultAdmin extends GradeResultPostNda {
+  inputHash?:          string   // SHA-256 de l'input_json
+  engineAnalystId?:    string   // UUID admin qui a saisi
+  gradeValidatorId?:   string   // UUID admin qui a validé
+  refusalReasons:      string[]
+  rawInput?:           GradeInput
+}
+
+/** Helper : projette GradeResult → GradeResultPublic */
+export function toPublicResult(r: GradeResult): GradeResultPublic {
+  return {
+    grade:       r.grade,
+    gradeLabel:  r.gradeLabel,
+    totalScore:  r.totalScore,
+    scoreC:      r.dimensions.code.score,
+    scoreI:      r.dimensions.ip.score,
+    scoreF:      r.dimensions.finance.score,
+    scoreS:      r.dimensions.security.score,
+    trs:         r.trs,
+    autoRefusal: r.autoRefusal,
+  }
+}
+
+/** Helper : projette GradeResult → GradeResultPostNda */
+export function toPostNdaResult(r: GradeResult, input?: GradeInput): GradeResultPostNda {
+  const founderDependencyScore = input?.finance?.founderDependency
+    ? Object.values(input.finance.founderDependency).filter(v => v === 'yes').length
+    : 0
+  return {
+    ...toPublicResult(r),
+    gradeCeiling:          r.gradeCeiling,
+    proofQualities:        r.effectiveProofQualities,
+    founderDependencyScore,
+    trsReasons:            r.trsReasons,
+    recommendations:       r.recommendations,
+    rationaleByDimension: {
+      code:     r.dimensions.code.rationale,
+      ip:       r.dimensions.ip.rationale,
+      finance:  r.dimensions.finance.rationale,
+      security: r.dimensions.security.rationale,
+    },
+  }
+}
 
 export interface DimensionResult {
   score:         number          // 0-25
@@ -463,9 +551,16 @@ function scoreSecurity(input: SecurityInput): DimensionResult {
   else if (input.criticalVulnsResolved === 'na')  { score += 3; rationale.push('Aucune vulnérabilité critique identifiée (N/A)') }
   else                                            {             rationale.push('Vulnérabilités critiques non résolues') }
 
-  // MFA admin — max 5 pts
-  if (input.mfaOnAdminAccess === 'yes') { score += 5; rationale.push('MFA actif sur tous les accès admin') }
-  else                                  {             rationale.push('MFA absent sur les accès admin — non-conformité critique') }
+  // MFA admin — max 5 pts (CIFS v3.0 V3 : pénalité S-15 si accessManagement sans MFA)
+  if (input.mfaOnAdminAccess === 'yes') {
+    score += 5; rationale.push('MFA actif sur tous les accès admin')
+  } else {
+    rationale.push('MFA absent sur les accès admin — non-conformité critique')
+    // Règle V3 : accessManagement=true sans MFA = contrôle incomplet → S-15 pénalisé
+    if (input.accessManagement === 'yes') {
+      score -= 1; rationale.push('⚠️ Politique d\'accès documentée (S-15) mais MFA absent — contrôle incomplet, pénalité appliquée')
+    }
+  }
 
   // Chiffrement — max 4 pts
   if      (input.encryption === 'full')    { score += 4; rationale.push('Chiffrement complet (repos + transit)') }
