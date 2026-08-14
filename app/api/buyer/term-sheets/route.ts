@@ -74,7 +74,7 @@ export async function POST(req: NextRequest) {
   // Vérifier actif publié
   const { data: asset } = await supa
     .from('assets')
-    .select('id, status, company_name, owner_id')
+    .select('id, status, company_name, seller_uid')
     .eq('id', asset_id)
     .eq('status', 'published')
     .single()
@@ -135,9 +135,9 @@ export async function POST(req: NextRequest) {
   })
 
   // Notification vendeur (si owner_id dispo)
-  if (asset.owner_id) {
+  if (asset.seller_uid) {
     await supa.from('user_notifications').insert({
-      user_id:     asset.owner_id,
+      user_id:     asset.seller_uid,
       type:        'term_sheet_received',
       title:       'Nouvelle Term Sheet reçue',
       body:        `Une proposition structurée a été soumise pour ${asset.company_name ?? 'votre actif'}. Vous disposez de 72h pour répondre.`,

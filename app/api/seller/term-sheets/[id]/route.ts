@@ -28,14 +28,14 @@ export async function PATCH(
   // Vérifier que la term sheet appartient à un actif du vendeur
   const { data: ts } = await supa
     .from('term_sheets')
-    .select('id, status, version, asset_id, buyer_id, proposed_price_chf, assets!inner(id, owner_id, seller_uid, seller_email, company_name)')
+    .select('id, status, version, asset_id, buyer_id, proposed_price_chf, assets!inner(id, seller_uid, seller_email, company_name)')
     .eq('id', id)
     .single()
 
   if (!ts) return NextResponse.json({ error: 'Term sheet not found' }, { status: 404 })
 
-  const asset = (ts.assets as unknown as { id: string; owner_id: string | null; seller_uid: string | null; seller_email: string | null; company_name: string | null } | null)
-  const isOwner = asset?.owner_id === user.id || asset?.seller_uid === user.id
+  const asset = (ts.assets as unknown as { id: string; seller_uid: string | null; seller_email: string | null; company_name: string | null } | null)
+  const isOwner = asset?.seller_uid === user.id
 
   if (!isOwner) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
 

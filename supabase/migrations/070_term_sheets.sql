@@ -128,7 +128,7 @@ CREATE POLICY "seller_view_own_asset_term_sheets" ON term_sheets
     EXISTS (
       SELECT 1 FROM assets
       WHERE assets.id = asset_id
-        AND assets.owner_id = auth.uid()
+        AND assets.seller_uid = auth.uid()
     )
   );
 
@@ -139,7 +139,7 @@ CREATE POLICY "seller_update_term_sheet_status" ON term_sheets
     EXISTS (
       SELECT 1 FROM assets
       WHERE assets.id = asset_id
-        AND assets.owner_id = auth.uid()
+        AND assets.seller_uid = auth.uid()
     )
   )
   WITH CHECK (
@@ -212,5 +212,5 @@ FROM term_sheets ts
 WHERE EXISTS (
   SELECT 1 FROM assets
   WHERE assets.id = ts.asset_id
-    AND assets.owner_id = auth.uid()
+    AND assets.seller_uid = auth.uid()
 );
