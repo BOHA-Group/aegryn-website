@@ -15,7 +15,7 @@
  */
 
 import { subcodesForDoc, gradeInputHintsForDoc, type DocQuality } from './docToSubcodeMap'
-import type { GradeInput } from './gradeEngine'
+import type { GradeInput, ArrAuditLevel } from './gradeEngine'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
@@ -168,7 +168,7 @@ export function applyAutoFillToGradeInput(
     },
     finance: {
       ...base.finance,
-      ...(overrides.arrAudited !== undefined && { arrAudited: overrides.arrAudited }),
+      ...(overrides.arrAudited !== undefined && { arrAudited: overrides.arrAudited as ArrAuditLevel }),
     },
     security: {
       ...base.security,

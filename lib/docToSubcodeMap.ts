@@ -33,7 +33,7 @@ export interface DocSubcodeRule {
     openSourceRisk: 'yes' | 'no'
     thirdPartyAPIContracted: 'yes' | 'no'
     rgpdCompliance: 'complete' | 'partial' | 'absent'
-    arrAudited: 'yes' | 'no'
+    arrAudited: 'declarative' | 'verifiable' | 'audited'
     mfaOnAdminAccess: 'yes' | 'no'
     encryption: 'full' | 'partial' | 'none'
     rgpdDocumented: 'yes' | 'no'
@@ -131,7 +131,7 @@ export const DOC_TO_SUBCODE_MAP: Record<string, DocSubcodeRule> = {
 
   'I-06': {
     onSufficient: ['I-25'],              // Licences conformes uniquement
-    onMissing:    ['I-28'],              // Licences non auditées
+    onMissing:    ['I-41'],              // Licences non auditées (I-41 depuis CIFS v3.0)
     gradeInputHints: { openSourceRisk: 'no' },
   },
 
@@ -164,7 +164,7 @@ export const DOC_TO_SUBCODE_MAP: Record<string, DocSubcodeRule> = {
   'F-01': {
     onSufficient: ['F-11'],              // ARR audité par expert-comptable co-signataire
     onMissing:    ['F-12'],              // ARR auto-déclaré (cohérence vérifiée)
-    gradeInputHints: { arrAudited: 'yes' },
+    gradeInputHints: { arrAudited: 'audited' },
   },
 
   'F-02': {

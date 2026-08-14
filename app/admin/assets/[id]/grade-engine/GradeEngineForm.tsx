@@ -1,8 +1,9 @@
 'use client'
 
 import { useState, useMemo, useEffect } from 'react'
-import type { GradeInput, GradeResult, GradeLetter } from '@/lib/gradeEngine'
+import type { GradeInput, GradeResult, GradeLetter, ArrAuditLevel, FounderDependencyInput, PentestMethodology, PentestAuditorCert } from '@/lib/gradeEngine'
 import { runGradeEngine } from '@/lib/gradeEngine'
+import type { ProofQuality } from '@/lib/gradingSystem'
 import { ChevronDown, ChevronUp, AlertTriangle, CheckCircle2, Calculator, Send, Zap, FileText, XCircle } from 'lucide-react'
 import type { AutoFillResult } from '@/lib/gradeAutoFill'
 import { applyAutoFillToGradeInput } from '@/lib/gradeAutoFill'
@@ -60,12 +61,25 @@ function defaultInput(): GradeInput {
       openSourceRisk: 'no', thirdPartyAPIContracted: 'no', moat: 'none', rgpdCompliance: 'absent',
     },
     finance: {
-      arr: 0, revenueAgeMonths: 0, arrAudited: 'no', nrr: null,
+      arr: 0, revenueAgeMonths: 0, arrAudited: 'declarative' as ArrAuditLevel, nrr: null,
       monthlyChurn: 0, grossMargin: 0, yoyGrowth: 0, topClientConcentration: 0, runwayMonths: 0,
+      founderDependency: {
+        founderLeadsSales: 'no', noSigningDelegation: 'no', revenueAtRisk: 'no',
+        noOperationalDocs: 'no', noSuccessionPlan: 'no',
+      },
     },
     security: {
       lastPentestMonthsAgo: 9999, criticalVulnsResolved: 'na', mfaOnAdminAccess: 'no',
       encryption: 'none', rgpdDocumented: 'no', activeSecurityIncident: 'no', externalCertification: 'no',
+      pentestMethodology: 'unknown' as PentestMethodology,
+      pentestAuditorCert: 'none' as PentestAuditorCert,
+      rgpdTransferReadiness: undefined,
+    },
+    proofQualities: {
+      code:     'declarative' as ProofQuality,
+      ip:       'declarative' as ProofQuality,
+      finance:  'declarative' as ProofQuality,
+      security: 'declarative' as ProofQuality,
     },
   }
 }
@@ -344,6 +358,21 @@ export default function GradeEngineForm({
     setInput(p => ({ ...p, security: { ...p.security, [k]: v } }))
     markSource(k, src)
   }
+  function setFounderDep<K extends keyof FounderDependencyInput>(k: K, v: 'yes' | 'no') {
+    setInput(p => ({
+      ...p,
+      finance: {
+        ...p.finance,
+        founderDependency: { ...p.finance.founderDependency!, [k]: v },
+      },
+    }))
+  }
+  function setProofQuality(dim: keyof NonNullable<GradeInput['proofQualities']>, v: ProofQuality) {
+    setInput(p => ({
+      ...p,
+      proofQualities: { ...p.proofQualities!, [dim]: v },
+    }))
+  }
 
   async function compute() {
     setComputing(true)
@@ -505,8 +534,12 @@ export default function GradeEngineForm({
         <Field label="Ancienneté des revenus (mois)" source={inputSources['revenueAgeMonths'] as SourceType}>
           <NumInput value={input.finance.revenueAgeMonths} onChange={v => setFin('revenueAgeMonths', v)} />
         </Field>
-        <Field label="ARR audité par un tiers" source={inputSources['arrAudited'] as SourceType}>
-          <YesNoSelect value={input.finance.arrAudited} onChange={v => setFin('arrAudited', v as 'yes' | 'no')} />
+        <Field label="Niveau de preuve ARR (CIFS v3.0)" hint="Declaratif = auto-déclaré · Vérifiable = export certifié · Audité = CAC co-signataire" source={inputSources['arrAudited'] as SourceType}>
+          <select value={input.finance.arrAudited} onChange={e => setFin('arrAudited', e.target.value as ArrAuditLevel)} className={selectCls}>
+            <option value="declarative">Déclaratif (auto-déclaré)</option>
+            <option value="verifiable">Vérifiable (Stripe / Chargebee certifié)</option>
+            <option value="audited">Audité (CAC co-signataire)</option>
+          </select>
         </Field>
         <Field label="NRR (%)" hint="Laisser à 0 si non applicable (<12 mois d'historique)" source={inputSources['nrr'] as SourceType}>
           <NumInput value={input.finance.nrr ?? 0} onChange={v => setFin('nrr', v === 0 ? null : v)} />
@@ -526,6 +559,28 @@ export default function GradeEngineForm({
         <Field label="Runway (mois)" source={inputSources['runwayMonths'] as SourceType}>
           <NumInput value={input.finance.runwayMonths} onChange={v => setFin('runwayMonths', v)} />
         </Field>
+        {/* F-42 — Score dépendance fondateur */}
+        <div className="col-span-2 border-t border-gray-100 pt-3">
+          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-2">F-42 — Dépendance fondateur (5 critères)</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {([
+              { k: 'founderLeadsSales',    label: 'Fondateur présent dans >50% des appels commerciaux' },
+              { k: 'noSigningDelegation',  label: 'Aucun N-1 capable de signer sans le fondateur' },
+              { k: 'revenueAtRisk',        label: 'Départ fondateur = perte >20% du CA estimée' },
+              { k: 'noOperationalDocs',   label: 'Pas de documentation opérationnelle (runbooks, SOPs)' },
+              { k: 'noSuccessionPlan',    label: 'Aucun plan de succession documenté' },
+            ] as const).map(({ k, label }) => (
+              <label key={k} className="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox"
+                  checked={input.finance.founderDependency?.[k] === 'yes'}
+                  onChange={e => setFounderDep(k, e.target.checked ? 'yes' : 'no')}
+                  className="w-4 h-4 border border-gray-300 accent-ag-navy shrink-0"
+                />
+                <span className="font-sans text-[11px] text-gray-700">{label}</span>
+              </label>
+            ))}
+          </div>
+        </div>
       </Section>
 
       {/* DIMENSION SECURITE */}
@@ -559,7 +614,75 @@ export default function GradeEngineForm({
             <option value="no">Non</option>
           </select>
         </Field>
+        {/* S-16 — Qualification pentest (CIFS v3.0) */}
+        <Field label="Méthodologie pentest (S-16)" hint="OWASP/PTES = méthodologie reconnue" source="declarative">
+          <select value={input.security.pentestMethodology ?? 'unknown'} onChange={e => setSec('pentestMethodology', e.target.value as PentestMethodology)} className={selectCls}>
+            <option value="owasp_ptes">OWASP / PTES (reconnue)</option>
+            <option value="custom">Méthodologie interne custom</option>
+            <option value="unknown">Inconnue / non précisée</option>
+          </select>
+        </Field>
+        <Field label="Certification auditeur pentest (S-16)" hint="OSCP / CREST = certification reconnue" source="declarative">
+          <select value={input.security.pentestAuditorCert ?? 'none'} onChange={e => setSec('pentestAuditorCert', e.target.value as PentestAuditorCert)} className={selectCls}>
+            <option value="oscp_crest">OSCP / CREST (certifié)</option>
+            <option value="other_cert">Autre certification reconnue</option>
+            <option value="none">Non certifié / inconnu</option>
+          </select>
+        </Field>
+        {/* I-27 — Transferts RGPD (CIFS v3.0) */}
+        <Field label="Transferts RGPD (I-27)" hint="Transferts hors UE : SCCs, décision d'adéquation, ou bloquant" source="declarative">
+          <select
+            value={input.security.rgpdTransferReadiness ?? ''}
+            onChange={e => setSec('rgpdTransferReadiness', (e.target.value || undefined) as 'clean' | 'warning' | 'blocking' | undefined)}
+            className={selectCls}>
+            <option value="">Non applicable / non évalué</option>
+            <option value="clean">Conforme (SCCs / décision d&apos;adéquation)</option>
+            <option value="warning">En attente de conformité</option>
+            <option value="blocking">Bloquant — remédiation requise</option>
+          </select>
+        </Field>
       </Section>
+
+      {/* PROOF QUALITY — plafond de grade par niveau de preuve (CIFS v3.0) */}
+      <div className="border border-gray-200 bg-white">
+        <div className="px-5 py-3 bg-gray-50">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-gray-600 font-semibold">Niveau de preuve par dimension (plafond grade)</p>
+          <p className="font-sans text-[10px] text-gray-400 mt-0.5">Déclaratif → plafond AA · Vérifiable → plafond AAA · Audité → grade ★ accessible</p>
+        </div>
+        <div className="px-5 py-4 grid grid-cols-2 sm:grid-cols-4 gap-4">
+          {(['code', 'ip', 'finance', 'security'] as const).map(dim => {
+            const labels: Record<string, string> = { code: 'C — Code', ip: 'I — IP', finance: 'F — Finance', security: 'S — Sécurité' }
+            const ceiling: Record<ProofQuality, string> = { declarative: 'plafond AA', verifiable: 'plafond AAA', audited: '★ accessible' }
+            const val = input.proofQualities?.[dim] ?? 'declarative'
+            return (
+              <div key={dim}>
+                <p className="font-mono text-[9px] uppercase tracking-widest text-gray-500 mb-1">{labels[dim]}</p>
+                <select value={val} onChange={e => setProofQuality(dim, e.target.value as ProofQuality)} className={selectCls}>
+                  {(['declarative', 'verifiable', 'audited'] as ProofQuality[]).map(pq => (
+                    <option key={pq} value={pq}>{pq.charAt(0).toUpperCase() + pq.slice(1)} — {ceiling[pq]}</option>
+                  ))}
+                </select>
+              </div>
+            )
+          })}
+        </div>
+        {(() => {
+          const pq = input.proofQualities
+          if (!pq) return null
+          const ceilings: Record<ProofQuality, number> = { declarative: 1, verifiable: 2, audited: 3 }
+          const minCeiling = (['declarative', 'verifiable', 'audited'] as ProofQuality[]).find(pqLevel =>
+            (['code', 'ip', 'finance', 'security'] as const).some(d => pq[d] === pqLevel && ceilings[pq[d]] === Math.min(...['code','ip','finance','security'].map(dd => ceilings[pq[dd as keyof typeof pq]])))
+          ) ?? 'declarative'
+          const ceilingLabel: Record<ProofQuality, string> = { declarative: 'AA (plafond déclaratif)', verifiable: 'AAA (plafond vérifiable)', audited: '★ (aucun plafond)' }
+          return (
+            <div className="px-5 pb-3">
+              <p className="font-sans text-[11px] text-gray-500">
+                Plafond actuel : <span className="font-mono font-semibold text-ag-navy">{ceilingLabel[minCeiling]}</span>
+              </p>
+            </div>
+          )
+        })()}
+      </div>
 
       {/* SOUS-CODES DÉTAILLÉS CIFS */}
       <div className="border border-gray-200 bg-white">
@@ -713,10 +836,12 @@ export default function GradeEngineForm({
             </p>
             <DocList dims={['F']} docsByCategory={docsByCategory} />
             <div className="mb-3" />
-            <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">ARR & Audit</p>
+            <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">ARR & Audit (niveaux CIFS v3.0)</p>
             {([
-              { id: 'F-11', label: 'ARR audité par commissaire aux comptes',   action: () => setFin('arrAudited', 'yes', 'subcode') },
-              { id: 'F-12', label: 'ARR non audité',                           action: () => setFin('arrAudited', 'no', 'subcode') },
+              { id: 'F-11a', label: 'ARR audité — CAC co-signataire',            action: () => setFin('arrAudited', 'audited' as ArrAuditLevel, 'subcode') },
+              { id: 'F-11b', label: 'ARR vérifiable — export Stripe/Chargebee',  action: () => setFin('arrAudited', 'verifiable' as ArrAuditLevel, 'subcode') },
+              { id: 'F-11c', label: 'ARR déclaratif — auto-déclaré',             action: () => setFin('arrAudited', 'declarative' as ArrAuditLevel, 'subcode') },
+              { id: 'F-12',  label: 'ARR auto-déclaré (cohérence vérifiée)',    action: () => setFin('arrAudited', 'declarative' as ArrAuditLevel, 'subcode') },
               { id: 'F-21', label: 'Marge brute >70%',    action: () => setFin('grossMargin', 75, 'subcode') },
               { id: 'F-22', label: 'Marge brute 40-70%',  action: () => setFin('grossMargin', 55, 'subcode') },
               { id: 'F-23', label: 'Marge brute <40%',    action: () => setFin('grossMargin', 25, 'subcode') },
@@ -725,8 +850,9 @@ export default function GradeEngineForm({
               { id: 'F-33', label: 'Churn mensuel >3%',   action: () => setFin('monthlyChurn', 5, 'subcode') },
             ] as const).map(item => {
               const isChecked = (() => {
-                if (item.id === 'F-11') return input.finance.arrAudited === 'yes'
-                if (item.id === 'F-12') return input.finance.arrAudited === 'no'
+                if (item.id === 'F-11a') return input.finance.arrAudited === 'audited'
+                if (item.id === 'F-11b') return input.finance.arrAudited === 'verifiable'
+                if (item.id === 'F-11c' || item.id === 'F-12') return input.finance.arrAudited === 'declarative'
                 if (item.id === 'F-21') return input.finance.grossMargin >= 70
                 if (item.id === 'F-22') return input.finance.grossMargin >= 40 && input.finance.grossMargin < 70
                 if (item.id === 'F-23') return input.finance.grossMargin < 40
@@ -757,8 +883,9 @@ export default function GradeEngineForm({
             </p>
             <DocList dims={['S']} docsByCategory={docsByCategory} />
             <div className="mb-3" />
-            <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">Pentest & MFA</p>
+            <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">Pentest & Qualification (CIFS v3.0)</p>
             {([
+              { id: 'S-16', label: 'Pentest qualifié OWASP/PTES + auditeur OSCP/CREST', action: () => { setSec('pentestMethodology', 'owasp_ptes', 'subcode'); setSec('pentestAuditorCert', 'oscp_crest', 'subcode') } },
               { id: 'S-11', label: 'Pentest < 12 mois',   action: () => setSec('lastPentestMonthsAgo', 6, 'subcode') },
               { id: 'S-12', label: 'Pentest 12-24 mois',  action: () => setSec('lastPentestMonthsAgo', 18, 'subcode') },
               { id: 'S-13', label: 'Pentest > 24 mois',   action: () => setSec('lastPentestMonthsAgo', 36, 'subcode') },
@@ -773,6 +900,7 @@ export default function GradeEngineForm({
               { id: 'S-43', label: 'Aucune certification',            action: () => setSec('externalCertification', 'no', 'subcode') },
             ] as const).map(item => {
               const isChecked = (() => {
+                if (item.id === 'S-16') return input.security.pentestMethodology === 'owasp_ptes' && input.security.pentestAuditorCert === 'oscp_crest'
                 if (item.id === 'S-11') return input.security.lastPentestMonthsAgo < 12
                 if (item.id === 'S-12') return input.security.lastPentestMonthsAgo >= 12 && input.security.lastPentestMonthsAgo < 24
                 if (item.id === 'S-13') return input.security.lastPentestMonthsAgo >= 24 && input.security.lastPentestMonthsAgo < 9999
@@ -805,8 +933,9 @@ export default function GradeEngineForm({
         </div>
       </div>
 
-      {/* Hidden input pour pont vers GradeForm (P4) */}
+      {/* Hidden inputs pour pont vers GradeForm (P4) */}
       <input type="hidden" id="__engine_grade__" value={liveScore.grade} />
+      {liveScore.gradeCeiling && <input type="hidden" id="__engine_grade_ceiling__" value={liveScore.gradeCeiling} />}
 
       {/* CTA */}
       <div className="pt-2">
@@ -849,6 +978,9 @@ export default function GradeEngineForm({
             <div className={`border px-4 py-2 text-center ${gradeCls}`}>
               <p className="font-mono text-[9px] uppercase tracking-widest mb-0.5 opacity-70">Grade calculé</p>
               <p className="font-sans font-bold text-[22px] tracking-tight">{result.gradeLabel}</p>
+              {result.gradeCeiling && result.gradeCeiling !== result.grade && (
+                <p className="font-mono text-[8px] text-amber-600 mt-0.5">Plafonné par proof_quality</p>
+              )}
             </div>
           </div>
         </div>

@@ -43,16 +43,25 @@ const ipInputSchema = z.object({
   rgpdCompliance:             z.enum(['complete', 'partial', 'absent']),
 })
 
+const founderDependencySchema = z.object({
+  founderLeadsSales:    z.enum(['yes', 'no']),
+  noSigningDelegation:  z.enum(['yes', 'no']),
+  revenueAtRisk:        z.enum(['yes', 'no']),
+  noOperationalDocs:    z.enum(['yes', 'no']),
+  noSuccessionPlan:     z.enum(['yes', 'no']),
+})
+
 const financeInputSchema = z.object({
   arr:                      z.number().min(0),
   revenueAgeMonths:         z.number().int().min(0),
-  arrAudited:               z.enum(['yes', 'no']),
+  arrAudited:               z.enum(['declarative', 'verifiable', 'audited']),
   nrr:                      z.number().nullable(),
   monthlyChurn:             z.number().min(0),
   grossMargin:              z.number(),
   yoyGrowth:                z.number(),
   topClientConcentration:   z.number().min(0).max(100),
   runwayMonths:             z.number().min(0),
+  founderDependency:        founderDependencySchema.optional(),
 })
 
 const securityInputSchema = z.object({
@@ -63,16 +72,27 @@ const securityInputSchema = z.object({
   rgpdDocumented:           z.enum(['yes', 'no']),
   activeSecurityIncident:   z.enum(['yes', 'no']),
   externalCertification:    z.enum(['yes', 'in_progress', 'no']),
+  pentestMethodology:       z.enum(['owasp_ptes', 'custom', 'unknown']).optional(),
+  pentestAuditorCert:       z.enum(['oscp_crest', 'other_cert', 'none']).optional(),
+  rgpdTransferReadiness:    z.enum(['clean', 'warning', 'blocking']).optional(),
+})
+
+const proofQualityDimensionSchema = z.object({
+  code:     z.enum(['declarative', 'verifiable', 'audited']),
+  ip:       z.enum(['declarative', 'verifiable', 'audited']),
+  finance:  z.enum(['declarative', 'verifiable', 'audited']),
+  security: z.enum(['declarative', 'verifiable', 'audited']),
 })
 
 const bodySchema = z.object({
   token:           z.string().optional(),
   action:          z.enum(['compute', 'validate', 'publish']).default('compute'),
   input:           z.object({
-    code:     codeInputSchema,
-    ip:       ipInputSchema,
-    finance:  financeInputSchema,
-    security: securityInputSchema,
+    code:           codeInputSchema,
+    ip:             ipInputSchema,
+    finance:        financeInputSchema,
+    security:       securityInputSchema,
+    proofQualities: proofQualityDimensionSchema.optional(),
   }),
   assessmentId:    z.string().uuid().optional(),
   finalGrade:      z.enum(['star','aaa','aa','a','b','refused']).optional(),

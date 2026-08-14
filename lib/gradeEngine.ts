@@ -13,11 +13,17 @@
  * dans une interface publique ou dans la documentation externe.
  */
 
+import type { ProofQuality, AEGGrade } from './gradingSystem'
+import { capAegByProofQuality } from './gradingSystem'
+
 // ─────────────────────────────────────────────────────────────────────────────
 // TYPES — ENTRÉES FACTUELLES
 // ─────────────────────────────────────────────────────────────────────────────
 
 export type YesNo         = 'yes' | 'no'
+
+/** Niveau de preuve pour l'ARR — remplace le booléen arrAudited (CIFS v3.0) */
+export type ArrAuditLevel = 'declarative' | 'verifiable' | 'audited'
 export type YesNoNA       = 'yes' | 'no' | 'na'
 export type Coverage      = 'complete' | 'partial' | 'absent'
 export type Architecture  = 'decoupled' | 'partial' | 'monolithic'
@@ -48,17 +54,35 @@ export interface IPInput {
   rgpdCompliance: Coverage
 }
 
+/** Score de dépendance fondateur — 5 critères objectifs (CIFS v3.0 F-42) */
+export interface FounderDependencyInput {
+  /** Fondateur présent dans >50% des appels commerciaux */
+  founderLeadsSales: YesNo
+  /** Aucun N-1 capable de signer un contrat sans le fondateur */
+  noSigningDelegation: YesNo
+  /** Départ fondateur = perte >20% du CA estimée */
+  revenueAtRisk: YesNo
+  /** Pas de documentation opérationnelle (runbooks, SOPs) */
+  noOperationalDocs: YesNo
+  /** Aucun plan de succession documenté */
+  noSuccessionPlan: YesNo
+}
+
 export interface FinanceInput {
   arr: number                        // ARR en €
   revenueAgeMonths: number           // ancienneté revenus
-  arrAudited: YesNo
+  arrAudited: ArrAuditLevel          // niveau de preuve ARR (CIFS v3.0)
   nrr: number | null                 // % ou null si <12 mois
   monthlyChurn: number               // %
   grossMargin: number                // %
   yoyGrowth: number                  // %
   topClientConcentration: number     // % du top 1 client
   runwayMonths: number               // mois
+  founderDependency?: FounderDependencyInput  // optionnel — CIFS v3.0
 }
+
+export type PentestMethodology = 'owasp_ptes' | 'custom' | 'unknown'
+export type PentestAuditorCert = 'oscp_crest' | 'other_cert' | 'none'
 
 export interface SecurityInput {
   lastPentestMonthsAgo: number       // 9999 = jamais
@@ -68,6 +92,9 @@ export interface SecurityInput {
   rgpdDocumented: YesNo
   activeSecurityIncident: YesNo
   externalCertification: Certification
+  pentestMethodology?: PentestMethodology  // CIFS v3.0
+  pentestAuditorCert?: PentestAuditorCert  // CIFS v3.0
+  rgpdTransferReadiness?: 'clean' | 'warning' | 'blocking'  // CIFS v3.0 I-27
 }
 
 export interface GradeInput {
@@ -75,6 +102,13 @@ export interface GradeInput {
   ip:       IPInput
   finance:  FinanceInput
   security: SecurityInput
+  /** Niveau de preuve par dimension — pilote le plafond de grade (CIFS v3.0) */
+  proofQualities?: {
+    code:     ProofQuality
+    ip:       ProofQuality
+    finance:  ProofQuality
+    security: ProofQuality
+  }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -100,6 +134,7 @@ export interface GradeResult {
   totalScore:      number        // 0-100
   grade:           GradeLetter
   gradeLabel:      string        // AEG ★ | AAA | AA | A | B | Non certifiable
+  gradeCeiling?:   GradeLetter   // plafond appliqué par proof_quality (CIFS v3.0)
   autoRefusal:     boolean
   refusalReasons:  string[]
   publicRationale: string        // résumé qualitatif exposable côté actif catalogué
@@ -264,9 +299,10 @@ function scoreFinance(input: FinanceInput): DimensionResult {
   else if (input.revenueAgeMonths >=  6) { score += 1; rationale.push(`Revenus récents (${input.revenueAgeMonths} mois)`) }
   else                                   {             rationale.push('Historique de revenus insuffisant (<6 mois)') }
 
-  // ARR audité — max 2 pts
-  if (input.arrAudited === 'yes') { score += 2; rationale.push('ARR audité par un tiers indépendant') }
-  else                            {             rationale.push('ARR non audité') }
+  // ARR — niveau de preuve (CIFS v3.0) — max 2 pts
+  if      (input.arrAudited === 'audited')    { score += 2; rationale.push('ARR audité par commissaire aux comptes co-signataire') }
+  else if (input.arrAudited === 'verifiable') { score += 1; rationale.push('ARR vérifiable (export certifié Stripe/Chargebee)') }
+  else                                        {             rationale.push('ARR déclaratif non audité') }
 
   // NRR — max 3 pts
   if (input.nrr !== null) {
@@ -283,6 +319,22 @@ function scoreFinance(input: FinanceInput): DimensionResult {
   else if (input.monthlyChurn < 3)  { score += 3; rationale.push(`Churn mensuel maîtrisé (${input.monthlyChurn}%)`) }
   else if (input.monthlyChurn < 5)  { score += 1; rationale.push(`Churn mensuel élevé (${input.monthlyChurn}%) — vigilance requise`) }
   else                              {             rationale.push(`Churn mensuel critique (${input.monthlyChurn}%)`) }
+
+  // Score dépendance fondateur — pénalité max -3 pts (CIFS v3.0 F-42)
+  if (input.founderDependency) {
+    const fd = input.founderDependency
+    const riskCount = [fd.founderLeadsSales, fd.noSigningDelegation, fd.revenueAtRisk, fd.noOperationalDocs, fd.noSuccessionPlan]
+      .filter(v => v === 'yes').length
+    if (riskCount === 0) {
+      rationale.push('Aucune dépendance fondateur identifiée — risque clé minimal')
+    } else if (riskCount <= 2) {
+      score -= 1; rationale.push(`Dépendance fondateur modérée (${riskCount}/5 critères)`)
+    } else if (riskCount <= 4) {
+      score -= 2; rationale.push(`Dépendance fondateur significative (${riskCount}/5 critères) — plan de succession recommandé`)
+    } else {
+      score -= 3; rationale.push('Dépendance fondateur critique (5/5 critères) — risque clé majeur pour l\'acquéreur')
+    }
+  }
 
   // Marge brute — max 3 pts
   if      (input.grossMargin >= 70) { score += 3; rationale.push(`Marge brute élevée (${input.grossMargin}%)`) }
@@ -330,11 +382,20 @@ function scoreSecurity(input: SecurityInput): DimensionResult {
 
   let score = 0
 
-  // Pentest — max 7 pts
-  if      (input.lastPentestMonthsAgo <= 6)   { score += 7; rationale.push('Pentest récent (≤6 mois)') }
-  else if (input.lastPentestMonthsAgo <= 12)   { score += 5; rationale.push('Pentest dans l\'année (≤12 mois)') }
-  else if (input.lastPentestMonthsAgo <= 24)   { score += 2; rationale.push(`Pentest ancien (${input.lastPentestMonthsAgo} mois) — renouvellement recommandé`) }
-  else                                          {             rationale.push('Aucun pentest réalisé') }
+  // Pentest — max 7 pts de base + bonus qualification (CIFS v3.0)
+  let pentestBase = 0
+  if      (input.lastPentestMonthsAgo <= 6)   { pentestBase = 7; rationale.push('Pentest récent (≤6 mois)') }
+  else if (input.lastPentestMonthsAgo <= 12)   { pentestBase = 5; rationale.push('Pentest dans l\'année (≤12 mois)') }
+  else if (input.lastPentestMonthsAgo <= 24)   { pentestBase = 2; rationale.push(`Pentest ancien (${input.lastPentestMonthsAgo} mois) — renouvellement recommandé`) }
+  else                                          {                  rationale.push('Aucun pentest réalisé') }
+  // Bonus qualification pentest (max +1 pt)
+  if (pentestBase > 0 && input.pentestMethodology === 'owasp_ptes') {
+    pentestBase = Math.min(pentestBase + 1, 7); rationale.push('Méthodologie OWASP/PTES utilisée')
+  }
+  if (pentestBase > 0 && input.pentestAuditorCert === 'oscp_crest') {
+    pentestBase = Math.min(pentestBase + 1, 7); rationale.push('Auditeur certifié OSCP/CREST')
+  }
+  score += pentestBase
 
   // Vulnérabilités critiques résolues — max 5 pts
   if      (input.criticalVulnsResolved === 'yes') { score += 5; rationale.push('Toutes les vulnérabilités critiques résolues') }
@@ -354,6 +415,16 @@ function scoreSecurity(input: SecurityInput): DimensionResult {
   if (input.rgpdDocumented === 'yes') { score += 2; rationale.push('Conformité RGPD/LPD documentée') }
   else                                {             rationale.push('Documentation RGPD/LPD absente') }
 
+  // Transferts RGPD (I-27) — blocage auto ou pénalité (CIFS v3.0)
+  if (input.rgpdTransferReadiness === 'blocking') {
+    return { score: 0, autoRefusal: true, refusalReason: 'Transferts de données RGPD bloquants non résolus (I-29)', rationale: [] }
+  }
+  if (input.rgpdTransferReadiness === 'warning') {
+    score -= 1; rationale.push('Transferts RGPD en attente de conformité — points d\'attention identifiés')
+  } else if (input.rgpdTransferReadiness === 'clean') {
+    rationale.push('Transferts RGPD conformes (SCCs / décision d\'adéquation)')
+  }
+
   // Certification externe — max 2 pts
   if      (input.externalCertification === 'yes')         { score += 2; rationale.push('Certification externe obtenue (ISO 27001 / SOC 2)') }
   else if (input.externalCertification === 'in_progress') { score += 1; rationale.push('Certification externe en cours') }
@@ -366,14 +437,17 @@ function scoreSecurity(input: SecurityInput): DimensionResult {
 // AGRÉGATION FINALE + GRADE
 // ─────────────────────────────────────────────────────────────────────────────
 
-function calculateGrade(total: number, anyRefusal: boolean): { grade: GradeLetter; gradeLabel: string } {
+function calculateGrade(total: number, anyRefusal: boolean, forcedGrade?: GradeLetter): { grade: GradeLetter; gradeLabel: string } {
   if (anyRefusal) return { grade: 'refused', gradeLabel: 'Non certifiable en l\'état' }
-  if (total >= 90) return { grade: 'star', gradeLabel: 'AEG ★' }
-  if (total >= 75) return { grade: 'aaa',  gradeLabel: 'AAA' }
-  if (total >= 60) return { grade: 'aa',   gradeLabel: 'AA' }
-  if (total >= 45) return { grade: 'a',    gradeLabel: 'A' }
-  if (total >= 30) return { grade: 'b',    gradeLabel: 'B' }
-  return { grade: 'refused', gradeLabel: 'Non certifiable en l\'état' }
+  const g = forcedGrade ?? (
+    total >= 90 ? 'star' :
+    total >= 75 ? 'aaa'  :
+    total >= 60 ? 'aa'   :
+    total >= 45 ? 'a'    :
+    total >= 30 ? 'b'    : 'refused'
+  )
+  const LABELS: Record<GradeLetter, string> = { star: 'AEG ★', aaa: 'AAA', aa: 'AA', a: 'A', b: 'B', refused: 'Non certifiable en l\'état' }
+  return { grade: g, gradeLabel: LABELS[g] }
 }
 
 function buildPublicRationale(results: GradeResult['dimensions']): string {
@@ -434,7 +508,19 @@ export function runGradeEngine(input: GradeInput): GradeResult {
     ? 0
     : code.score + ip.score + finance.score + security.score
 
-  const { grade, gradeLabel } = calculateGrade(totalScore, anyRefusal)
+  const { grade: rawGrade } = calculateGrade(totalScore, anyRefusal)
+
+  // ── Plafond proof_quality (CIFS v3.0) ────────────────────────────────────
+  let grade = rawGrade
+  let gradeCeiling: GradeLetter | undefined
+  if (!anyRefusal && input.proofQualities) {
+    const cappedGrade = capAegByProofQuality(rawGrade as AEGGrade, input.proofQualities) as GradeLetter
+    if (cappedGrade !== rawGrade) {
+      gradeCeiling = cappedGrade
+      grade = cappedGrade
+    }
+  }
+  const { gradeLabel } = calculateGrade(totalScore, anyRefusal, grade)
 
   const dimensions = { code, ip, finance, security }
 
@@ -443,6 +529,7 @@ export function runGradeEngine(input: GradeInput): GradeResult {
     totalScore,
     grade,
     gradeLabel,
+    gradeCeiling,
     autoRefusal: anyRefusal,
     refusalReasons,
     publicRationale: anyRefusal ? '' : buildPublicRationale(dimensions),

@@ -1,5 +1,5 @@
 /**
- * Aegryn Grading System — Adapté du système Antiquorum — Version 1.0 (Juillet 2026)
+ * Aegryn Grading System — Adapté du système Antiquorum — Version 3.0 (Août 2026)
  *
  * Référence : voir /grade/methodology pour le contenu public (storytelling).
  * Ce module centralise la logique interne (types, sous-codes, notation,
@@ -128,9 +128,12 @@ export const IP_SUBCODES: SubcodeDef[] = [
   // Licences open source
   { code: 'I-25', group: 'Licences open source', fr: 'Licences conformes uniquement (MIT / Apache / BSD)', en: 'Compliant licences only (MIT / Apache / BSD)' },
   { code: 'I-26', group: 'Licences open source', fr: 'Licence GPL présente — risque de contamination', en: 'GPL licence present — contamination risk' },
-  { code: 'I-27', group: 'Licences open source', fr: 'Licence LGPL présente — usage restreint', en: 'LGPL licence present — restricted use' },
-  { code: 'I-28', group: 'Licences open source', fr: 'Licences non auditées', en: 'Licences unaudited' },
-  { code: 'I-29', group: 'Licences open source', fr: 'Dépendance propriétaire critique (vendor lock-in)', en: 'Critical proprietary dependency (vendor lock-in)' },
+  { code: 'I-27', group: 'RGPD Transfer', fr: 'Transferts RGPD conformes (SCCs / adéquation)', en: 'GDPR transfers compliant (SCCs / adequacy)' },
+  { code: 'I-28', group: 'RGPD Transfer', fr: 'Transferts RGPD en attente de conformité', en: 'GDPR transfers pending compliance' },
+  { code: 'I-29', group: 'RGPD Transfer', fr: 'Transferts RGPD bloquants — remédiation requise', en: 'GDPR transfers blocking — remediation required' },
+  { code: 'I-40', group: 'Licences open source', fr: 'Licence LGPL présente — usage restreint', en: 'LGPL licence present — restricted use' },
+  { code: 'I-41', group: 'Licences open source', fr: 'Licences non auditées', en: 'Licences unaudited' },
+  { code: 'I-42', group: 'Licences open source', fr: 'Dépendance propriétaire critique (vendor lock-in)', en: 'Critical proprietary dependency (vendor lock-in)' },
   // APIs & Contrats tiers
   { code: 'I-30', group: 'APIs & Contrats tiers', fr: 'Contrats APIs tierces critiques en ordre', en: 'Critical third-party API contracts in order' },
   { code: 'I-31', group: 'APIs & Contrats tiers', fr: 'Contrats APIs partiels', en: 'Partial API contracts' },
@@ -151,7 +154,9 @@ export const IP_SUBCODES: SubcodeDef[] = [
 
 export const FINANCE_SUBCODES: SubcodeDef[] = [
   // Base de revenus
-  { code: 'F-11', group: 'Base de revenus', fr: 'ARR audité par expert-comptable co-signataire', en: 'ARR audited by co-signatory accountant' },
+  { code: 'F-11a', group: 'Base de revenus', fr: 'ARR audité — commissaire aux comptes co-signataire (niveau Audited)', en: 'ARR audited — co-signatory statutory auditor (Audited level)' },
+  { code: 'F-11b', group: 'Base de revenus', fr: 'ARR vérifiable — export Stripe / Chargebee certifié tiers (niveau Verifiable)', en: 'ARR verifiable — certified Stripe / Chargebee export (Verifiable level)' },
+  { code: 'F-11c', group: 'Base de revenus', fr: 'ARR déclaratif — auto-déclaré, cohérence vérifiée (niveau Declarative)', en: 'ARR declarative — self-declared, consistency verified (Declarative level)' },
   { code: 'F-12', group: 'Base de revenus', fr: 'ARR auto-déclaré (cohérence vérifiée)', en: 'ARR self-declared (consistency verified)' },
   { code: 'F-13', group: 'Base de revenus', fr: 'ARR non vérifié', en: 'ARR unverified' },
   { code: 'F-14', group: 'Base de revenus', fr: 'Pre-revenue (pas d\'ARR)', en: 'Pre-revenue (no ARR)' },
@@ -186,7 +191,7 @@ export const FINANCE_SUBCODES: SubcodeDef[] = [
   { code: 'F-39', group: 'Structure client', fr: 'Concentration élevée (1 client > 30%)', en: 'High concentration (1 client > 30%)' },
   { code: 'F-40', group: 'Structure client', fr: 'LTV:CAC > 5:1', en: 'LTV:CAC > 5:1' },
   { code: 'F-41', group: 'Structure client', fr: 'LTV:CAC 3:1–5:1', en: 'LTV:CAC 3:1–5:1' },
-  { code: 'F-42', group: 'Structure client', fr: 'LTV:CAC < 3:1', en: 'LTV:CAC < 3:1' },
+  { code: 'F-42', group: 'Dépendance fondateur', fr: 'Score dépendance fondateur — 5 critères objectifs (voir protocole CIFS v3.0)', en: 'Founder dependency score — 5 objective criteria (see CIFS v3.0 protocol)' },
   // Ancienneté & Piste
   { code: 'F-43', group: 'Ancienneté & Piste', fr: 'Revenus prouvés > 24 mois', en: 'Revenues proven > 24 months' },
   { code: 'F-44', group: 'Ancienneté & Piste', fr: 'Revenus prouvés 12–24 mois', en: 'Revenues proven 12–24 months' },
@@ -204,7 +209,7 @@ export const SECURITY_SUBCODES: SubcodeDef[] = [
   { code: 'S-13', group: 'Tests de sécurité', fr: 'Pentest > 12 mois', en: 'Pentest > 12 months' },
   { code: 'S-14', group: 'Tests de sécurité', fr: 'Pentest absent', en: 'No pentest' },
   { code: 'S-15', group: 'Tests de sécurité', fr: 'Vulnérabilités critiques résolues', en: 'Critical vulnerabilities resolved' },
-  { code: 'S-16', group: 'Tests de sécurité', fr: 'Vulnérabilités mineures identifiées (non critiques)', en: 'Minor vulnerabilities identified (non-critical)' },
+  { code: 'S-16', group: 'Tests de sécurité', fr: 'Pentest qualifié — méthodologie OWASP/PTES, auditeur certifié (OSCP/CREST)', en: 'Qualified pentest — OWASP/PTES methodology, certified auditor (OSCP/CREST)' },
   { code: 'S-17', group: 'Tests de sécurité', fr: 'Vulnérabilités critiques non résolues', en: 'Unresolved critical vulnerabilities' },
   // Authentification & Accès
   { code: 'S-18', group: 'Authentification & Accès', fr: 'MFA implémenté (admin + utilisateurs)', en: 'MFA implemented (admin + users)' },
@@ -378,6 +383,44 @@ export function capAegByMaturity(aeg: AEGGrade, tier: MaturityTier): AEGGrade {
   const rule = MATURITY_RULES.find(r => r.tier === tier)
   if (!rule?.maxAeg) return aeg
   return AEG_RANK[aeg] > AEG_RANK[rule.maxAeg] ? rule.maxAeg : aeg
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+ * PROOF QUALITY — plafond de grade par niveau de preuve (CIFS v3.0)
+ * ────────────────────────────────────────────────────────────────────── */
+
+/**
+ * Niveau de preuve par dimension :
+ *   declarative → toutes les données sont auto-déclarées → plafond AA
+ *   verifiable  → au moins une donnée vérifiable (export certifié, URL) → plafond AAA
+ *   audited     → au moins une donnée auditée par tiers indépendant → grade ★ accessible
+ */
+export type ProofQuality = 'declarative' | 'verifiable' | 'audited'
+
+export const PROOF_QUALITY_LABEL: Record<ProofQuality, { fr: string; en: string; ceiling: AEGGrade }> = {
+  declarative: { fr: 'Déclaratif',   en: 'Declarative',  ceiling: 'aa' },
+  verifiable:  { fr: 'Vérifiable',   en: 'Verifiable',   ceiling: 'aaa' },
+  audited:     { fr: 'Audité',       en: 'Audited',      ceiling: 'star' },
+}
+
+/**
+ * Calcule le plafond de grade résultant des niveaux de preuve des 4 dimensions.
+ * Règle : le plafond global = min(plafond de chaque dimension)
+ */
+export function capAegByProofQuality(
+  aeg: AEGGrade,
+  proofQualities: { code: ProofQuality; ip: ProofQuality; finance: ProofQuality; security: ProofQuality },
+): AEGGrade {
+  const ceilings = [
+    PROOF_QUALITY_LABEL[proofQualities.code].ceiling,
+    PROOF_QUALITY_LABEL[proofQualities.ip].ceiling,
+    PROOF_QUALITY_LABEL[proofQualities.finance].ceiling,
+    PROOF_QUALITY_LABEL[proofQualities.security].ceiling,
+  ]
+  const minCeiling = ceilings.reduce((min, c) =>
+    AEG_RANK[c] < AEG_RANK[min] ? c : min
+  )
+  return AEG_RANK[aeg] > AEG_RANK[minCeiling] ? minCeiling : aeg
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
