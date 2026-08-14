@@ -70,6 +70,11 @@ const nextConfig: NextConfig = {
       { source: '/grow-with-us',                      destination: '/alliances',                      permanent: true },
       { source: '/:locale/auction/assessment-days',   destination: '/:locale/auction/sessions',        permanent: true },
       { source: '/:locale/auction/how-to-sell',         destination: '/:locale/auction/sell',            permanent: true },
+      /* /auction/* → /transact/* (301 permanent, SEO-safe rebranding) */
+      { source: '/auction',                             destination: '/transact',                        permanent: true },
+      { source: '/auction/:path*',                      destination: '/transact/:path*',                 permanent: true },
+      { source: '/:locale/auction',                     destination: '/:locale/transact',                permanent: true },
+      { source: '/:locale/auction/:path*',              destination: '/:locale/transact/:path*',         permanent: true },
     ]
   },
   async headers() {

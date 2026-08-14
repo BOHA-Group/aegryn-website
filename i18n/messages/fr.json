@@ -8,7 +8,12 @@
     "growWithUs": "Partenaires",
     "career": "Carrières",
     "contact": "Contact",
-    "auction": "Cessions M\u0026A",
+    "transact": "TRANSACT",
+    "transactCatalog": "Catalogue offmarket",
+    "transactSell": "Mandat de cession",
+    "transactBuy": "Mandat d'acquisition",
+    "transactMandate": "Déposer un mandat",
+    "transactResults": "Transactions clôturées",
     "grade": "Notation",
     "assets": "Actifs",
     "services": "Services",
@@ -16,12 +21,6 @@
     "clientSpace": "Espace client",
     "logout": "Déconnexion",
     "submitAsset": "Soumettre un actif",
-    "auctionCatalog": "Catalogue",
-    "auctionSell": "Vendre un actif",
-    "auctionBuy": "Devenir acquéreur",
-    "auctionBidModels": "Modèles d'offre",
-    "auctionSession": "Processus",
-    "auctionResults": "Transactions clôturées",
     "gradeSystem": "Système de grade",
     "gradeMethod": "Méthodologie",
     "gradeSubmit": "Soumettre pour certification",
@@ -2527,6 +2526,199 @@
         "desc": "Responsable des données désigné, politique de classification et de rétention documentée."
       }
     ]
+  },
+  "transact": {
+    "meta": {
+      "title": "TRANSACT — Agence de transactions tech offmarket",
+      "desc": "Aegryn TRANSACT : l'agence de référence pour les transactions tech sélectives en Europe. Mandat exclusif, catalogue fermé, acheteurs et vendeurs qualifiés certifiés CIFS."
+    },
+    "index": {
+      "eyebrow": "AEGRYN TRANSACT — AGENCE DE TRANSACTIONS TECH",
+      "heroTitle": "La référence des transactions\ntech sélectives en Europe.",
+      "heroDesc": "Catalogue offmarket fermé sous mandat exclusif. Chaque acheteur est qualifié. Chaque actif est certifié CIFS. Aucune transaction sans protection NDA maximale.",
+      "ctaCatalog": "Accéder au catalogue",
+      "ctaMandate": "Déposer un mandat",
+      "segmentsLabel": "QUATRE SEGMENTS DE TRANSACTION",
+      "segmentsTitle": "Quelle que soit votre situation,\nil existe un mandat Aegryn.",
+      "segment": {
+        "sell": {
+          "kicker": "Cession d'actif",
+          "title": "Vous souhaitez vendre",
+          "desc": "Cédez votre actif tech ou votre société à un acquéreur qualifié. Certification CIFS, mandat exclusif, NDA systématique.",
+          "cta": "Mandat de cession"
+        },
+        "buy": {
+          "kicker": "Recherche d'acquisition",
+          "title": "Vous souhaitez acquérir",
+          "desc": "Mandatez Aegryn pour identifier des cibles selon vos critères. Accès au catalogue fermé et à notre réseau propriétaire.",
+          "cta": "Mandat d'acquisition"
+        },
+        "raise": {
+          "kicker": "Levée de fonds",
+          "title": "Vous cherchez des investisseurs",
+          "desc": "Accédez à notre réseau de family offices, fonds et corporates qualifiés. Processus structuré, confidentiel, sous droit suisse.",
+          "cta": "Mandat de levée"
+        },
+        "equity": {
+          "kicker": "Ouverture du capital",
+          "title": "Vous cherchez des associés",
+          "desc": "Cédez des parts minoritaires pour intégrer un partenaire stratégique, opérationnel ou financier dans votre capital.",
+          "cta": "Mandat equity"
+        }
+      },
+      "valueLabel": "LA VALEUR AEGRYN TRANSACT",
+      "valueTitle": "Une base de profils qualifiés.\nDes actifs certifiés.",
+      "valueDesc": "Aegryn ne travaille qu'avec des acheteurs ayant passé la procédure KYC et signé le NDA. Chaque actif est noté CIFS avant d'être présenté. C'est la différence entre une transaction qui aboutit et une qui échoue.",
+      "valueCta": "Voir le catalogue certifié",
+      "howLabel": "PROCESSUS TRANSACT EN 4 ÉTAPES",
+      "how": {
+        "step1": {
+          "title": "Mandat exclusif",
+          "desc": "Vous signez un mandat avec Aegryn. Durée, conditions, rémunération au succès définies contractuellement."
+        },
+        "step2": {
+          "title": "Qualification & matching",
+          "desc": "Aegryn identifie la contrepartie idéale dans son réseau qualifié. L'actif est présenté sous NDA uniquement."
+        },
+        "step3": {
+          "title": "Term sheet & négociation",
+          "desc": "Les parties soumettent des term sheets structurées. Aegryn accompagne la négociation et les contre-propositions."
+        },
+        "step4": {
+          "title": "Clôture sécurisée",
+          "desc": "Escrow institutionnel, closing sous droit suisse, transfert sécurisé. Protection maximale pour les deux parties."
+        }
+      },
+      "ctaStripLabel": "AEGRYN TRANSACT",
+      "ctaStripTitle": "Prêt à confier votre transaction à la référence européenne ?",
+      "ctaStripMandate": "Déposer un mandat",
+      "ctaStripCatalog": "Voir le catalogue"
+    },
+    "mandate": {
+      "meta": {
+        "title": "Déposer un mandat — Aegryn TRANSACT",
+        "desc": "Confiez votre transaction à Aegryn : cession d'actif, recherche d'acquisition, levée de fonds ou ouverture du capital. Mandat exclusif, catalogue fermé, protection NDA maximale."
+      },
+      "eyebrow": "AEGRYN TRANSACT — MANDAT EXCLUSIF",
+      "heroTitle": "Quel mandat souhaitez-vous\nnous confier ?",
+      "heroDesc": "Toutes nos transactions s'opèrent sous mandat exclusif, dans un catalogue fermé, avec des contreparties qualifiées. Le NDA est systématique dès le premier contact.",
+      "segmentsLabel": "CHOISISSEZ VOTRE SEGMENT",
+      "segment": {
+        "sell": {
+          "kicker": "Mandat de cession",
+          "title": "Vendre un actif ou une société",
+          "desc": "Vous êtes fondateur, holding ou studio. Vous souhaitez céder votre actif tech ou votre société dans les meilleures conditions.",
+          "points": [
+            "Certification CIFS obligatoire avant présentation",
+            "Présentation sous NDA aux acheteurs qualifiés uniquement",
+            "Prix de cession cible fixé par le vendeur",
+            "Escrow institutionnel et closing sécurisé",
+            "Commission au succès uniquement"
+          ],
+          "cta": "Déposer un mandat de cession"
+        },
+        "buy": {
+          "kicker": "Mandat d'acquisition",
+          "title": "Rechercher une cible d'acquisition",
+          "desc": "Vous êtes entrepreneur, corporate ou family office. Vous souhaitez acquérir un actif tech selon des critères précis.",
+          "points": [
+            "Accès au catalogue offmarket certifié CIFS",
+            "Matching selon vos critères (secteur, ARR, grade, taille)",
+            "NDA mutuel avant toute divulgation",
+            "Accompagnement due diligence et structuration",
+            "Commission à la transaction uniquement"
+          ],
+          "cta": "Déposer un mandat d'acquisition"
+        },
+        "fundraise": {
+          "kicker": "Levée de fonds",
+          "title": "Trouver des investisseurs qualifiés",
+          "desc": "Vous êtes fondateur d'un actif tech certifié. Vous cherchez des investisseurs institutionnels ou privés dans notre réseau qualifié.",
+          "points": [
+            "Accès réseau Aegryn : family offices, fonds, corporates",
+            "Présentation de votre dossier sous NDA exclusif",
+            "Ticket minimum : à partir de 100 000 CHF",
+            "Processus structuré, délai médian 8 semaines",
+            "Commission success fee à la clôture"
+          ],
+          "cta": "Déposer un mandat de levée"
+        },
+        "equity_stake": {
+          "kicker": "Ouverture du capital",
+          "title": "Intégrer un associé stratégique",
+          "desc": "Vous souhaitez céder des parts minoritaires pour intégrer un partenaire opérationnel, financier ou stratégique dans votre capital.",
+          "points": [
+            "Partenaire opérationnel, financier ou industriel",
+            "Cession de 5% à 49% du capital",
+            "Valorisation CIFS avant toute négociation",
+            "Pacte d'associés encadré par nos conseils juridiques",
+            "Confidentialité absolue tout au long du processus"
+          ],
+          "cta": "Déposer un mandat equity"
+        }
+      },
+      "processLabel": "LE PROCESSUS MANDAT",
+      "process": {
+        "step1": {
+          "title": "Prise de contact",
+          "desc": "Vous décrivez votre situation. Nous évaluons la faisabilité et définissons le type de mandat adapté à votre objectif."
+        },
+        "step2": {
+          "title": "Signature du mandat",
+          "desc": "Mandat exclusif signé pour une durée déterminée. Conditions de rémunération au succès définies contractuellement."
+        },
+        "step3": {
+          "title": "Exécution & closing",
+          "desc": "Aegryn identifie la contrepartie, gère les négociations et accompagne le closing dans un cadre sécurisé sous droit suisse."
+        }
+      },
+      "ndaLabel": "PROTECTION MAXIMALE",
+      "ndaTitle": "Aucune transaction sans NDA. Aucune exception.",
+      "ndaDesc": "Tous nos mandats incluent un accord de confidentialité renforcé. Les identités et données financières ne sont jamais divulguées sans consentement préalable écrit des deux parties.",
+      "ndaCta": "Nous contacter"
+    },
+    "sell": {
+      "label": "AEGRYN TRANSACT — MANDAT DE CESSION",
+      "title": "Céder votre actif tech\nau prix qu'il mérite.",
+      "desc": "Aegryn certifie votre actif CIFS, fixe le grade officiel et le présente sous NDA exclusif à des acquéreurs institutionnels pré-qualifiés. Commission au succès uniquement.",
+      "cta": "Déposer un mandat de cession",
+      "step1Title": "Certification CIFS",
+      "step1Desc": "Votre actif passe le protocole d'évaluation Aegryn sur 4 dimensions : Code, Infra, Finance, Sécurité. Un grade officiel AEG est attribué avant toute présentation.",
+      "step2Title": "Présentation sous NDA",
+      "step2Desc": "L'actif certifié entre dans le catalogue offmarket fermé. Chaque acquéreur signe un NDA avant d'accéder au moindre document confidentiel.",
+      "step3Title": "Term sheet & négociation",
+      "step3Desc": "Les acquéreurs qualifiés soumettent des offres structurées. Aegryn encadre la négociation et les contre-propositions jusqu'à l'accord.",
+      "step4Title": "Closing sécurisé",
+      "step4Desc": "Escrow institutionnel, transfert sécurisé, closing sous droit suisse. Protection maximale pour le vendeur et l'acquéreur.",
+      "feesTitle": "STRUCTURE DE RÉMUNÉRATION",
+      "feesDesc": "Aucun frais d'entrée. Aegryn est rémunéré exclusivement au succès de la transaction. La certification CIFS est facturée séparément selon le grade attribué.",
+      "feesCert": "CERTIFICATION CIFS",
+      "feesCertValue": "Facturée à la remise du grade officiel. Montant selon complexité de l'actif — communiqué lors de la prise de mandat.",
+      "feesSuccess": "COMMISSION DE SUCCÈS",
+      "feesSuccessValue": "Prélevée à la clôture uniquement. Calculée sur le prix de cession net. Taux communiqué lors de la signature du mandat exclusif."
+    },
+    "buy": {
+      "label": "AEGRYN TRANSACT — MANDAT D'ACQUISITION",
+      "title": "Acquérir un actif tech certifié.\nSans bruit. Sous NDA.",
+      "desc": "Accédez au catalogue offmarket Aegryn : actifs certifiés CIFS, vendeurs qualifiés, processus structuré. Chaque transaction est encadrée par mandat exclusif sous droit suisse.",
+      "cta": "Déposer un mandat d'acquisition",
+      "qualifTitle": "PROFIL ACQUÉREUR QUALIFIÉ",
+      "qualifDesc": "Le catalogue Aegryn est réservé aux acquéreurs ayant complété la procédure de qualification. Cette exigence protège la confidentialité des vendeurs et garantit la qualité des échanges.",
+      "qualifItems": [
+        "Entrepreneur, corporate, family office ou fonds d'investissement",
+        "Capacité d'acquisition justifiée (100 000 CHF — 2 500 000 CHF)",
+        "Procédure KYC complétée et validée par l'équipe Aegryn",
+        "NDA signé avant tout accès au catalogue ou aux fiches actifs",
+        "Engagement de confidentialité sur les identités des vendeurs"
+      ],
+      "processTitle": "PROCESSUS D'ACQUISITION",
+      "processSteps": [
+        { "num": "01", "title": "Qualification", "desc": "Vous soumettez votre profil et vos critères. Aegryn valide votre qualification sous 48h ouvrées." },
+        { "num": "02", "title": "Accès catalogue", "desc": "Vous accédez aux fiches actifs certifiées correspondant à vos critères. NDA signé au préalable." },
+        { "num": "03", "title": "Offre & due diligence", "desc": "Vous formulez une offre structurée. Aegryn organise la due diligence dans un cadre sécurisé." },
+        { "num": "04", "title": "Closing", "desc": "Escrow institutionnel, transfert sécurisé, closing sous droit suisse." }
+      ]
+    }
   },
   "auction": {
     "meta": {

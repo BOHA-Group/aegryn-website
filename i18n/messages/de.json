@@ -9,6 +9,12 @@
     "career": "Karriere",
     "contact": "Kontakt",
     "auction": "M\u0026A Transaktionen",
+    "transact": "TRANSACT",
+    "transactCatalog": "Offmarket-Katalog",
+    "transactSell": "Verkaufsmandat",
+    "transactBuy": "Akquisitionsmandat",
+    "transactMandate": "Mandat einreichen",
+    "transactResults": "Abgeschlossene Transaktionen",
     "grade": "Grade",
     "assets": "Assets",
     "services": "Dienstleistungen",
@@ -2404,6 +2410,199 @@
           "grade": "B",
           "color": "grade-b"
         }
+      ]
+    }
+  },
+  "transact": {
+    "meta": {
+      "title": "TRANSACT — Offmarket-Tech-Transaktionsagentur",
+      "desc": "Aegryn TRANSACT: die Referenzagentur für selektive Tech-Transaktionen in Europa. Exklusives Mandat, geschlossener Katalog, CIFS-zertifizierte qualifizierte Käufer und Verkäufer."
+    },
+    "index": {
+      "eyebrow": "AEGRYN TRANSACT — TECH-TRANSAKTIONSAGENTUR",
+      "heroTitle": "Europas Referenz\nfür selektive Tech-Transaktionen.",
+      "heroDesc": "Geschlossener Offmarket-Katalog unter exklusivem Mandat. Jeder Käufer ist qualifiziert. Jedes Asset ist CIFS-zertifiziert. Keine Transaktion ohne maximalen NDA-Schutz.",
+      "ctaCatalog": "Katalog aufrufen",
+      "ctaMandate": "Mandat einreichen",
+      "segmentsLabel": "VIER TRANSAKTIONSSEGMENTE",
+      "segmentsTitle": "Egal in welcher Situation,\nes gibt ein Aegryn-Mandat für Sie.",
+      "segment": {
+        "sell": {
+          "kicker": "Asset-Veräußerung",
+          "title": "Sie möchten verkaufen",
+          "desc": "Veräußern Sie Ihr Tech-Asset oder Unternehmen an einen qualifizierten Käufer. CIFS-Zertifizierung, exklusives Mandat, systematischer NDA.",
+          "cta": "Verkaufsmandat"
+        },
+        "buy": {
+          "kicker": "Akquisitionssuche",
+          "title": "Sie möchten akquirieren",
+          "desc": "Beauftragen Sie Aegryn, Targets nach Ihren Kriterien zu identifizieren. Zugang zum geschlossenen Katalog und unserem proprietären Netzwerk.",
+          "cta": "Akquisitionsmandat"
+        },
+        "raise": {
+          "kicker": "Kapitalsuche",
+          "title": "Sie suchen Investoren",
+          "desc": "Zugang zu unserem Netzwerk qualifizierter Family Offices, Fonds und Corporates. Strukturierter, vertraulicher Prozess nach Schweizer Recht.",
+          "cta": "Kapitalmandat"
+        },
+        "equity": {
+          "kicker": "Kapitaleröffnung",
+          "title": "Sie suchen Partner",
+          "desc": "Veräußern Sie Minderheitsanteile, um einen strategischen, operativen oder finanziellen Partner in Ihr Kapital aufzunehmen.",
+          "cta": "Equity-Mandat"
+        }
+      },
+      "valueLabel": "DER AEGRYN TRANSACT-WERT",
+      "valueTitle": "Eine qualifizierte Käuferbasis.\nZertifizierte Assets.",
+      "valueDesc": "Aegryn arbeitet nur mit Käufern, die das KYC-Verfahren abgeschlossen und den NDA unterzeichnet haben. Jedes Asset wird CIFS-bewertet, bevor es präsentiert wird. Das ist der Unterschied zwischen einer Transaktion, die abschließt, und einer, die scheitert.",
+      "valueCta": "Zertifizierten Katalog ansehen",
+      "howLabel": "TRANSACT-PROZESS IN 4 SCHRITTEN",
+      "how": {
+        "step1": {
+          "title": "Exklusives Mandat",
+          "desc": "Sie unterzeichnen ein Mandat mit Aegryn. Laufzeit, Konditionen und Erfolgshonorar vertraglich geregelt."
+        },
+        "step2": {
+          "title": "Qualifizierung & Matching",
+          "desc": "Aegryn identifiziert die ideale Gegenpartei in seinem qualifizierten Netzwerk. Das Asset wird nur unter NDA präsentiert."
+        },
+        "step3": {
+          "title": "Term Sheet & Verhandlung",
+          "desc": "Die Parteien legen strukturierte Term Sheets vor. Aegryn begleitet die Verhandlung und Gegenangebote."
+        },
+        "step4": {
+          "title": "Sicherer Abschluss",
+          "desc": "Institutionelles Treuhand, Abschluss nach Schweizer Recht, sicherer Transfer. Maximaler Schutz für beide Parteien."
+        }
+      },
+      "ctaStripLabel": "AEGRYN TRANSACT",
+      "ctaStripTitle": "Bereit, Ihre Transaktion Europas Referenz anzuvertrauen?",
+      "ctaStripMandate": "Mandat einreichen",
+      "ctaStripCatalog": "Katalog ansehen"
+    },
+    "mandate": {
+      "meta": {
+        "title": "Mandat einreichen — Aegryn TRANSACT",
+        "desc": "Vertrauen Sie Ihre Transaktion Aegryn an: Asset-Veräußerung, Akquisitionssuche, Kapitalsuche oder Kapitaleröffnung. Exklusives Mandat, geschlossener Katalog, maximaler NDA-Schutz."
+      },
+      "eyebrow": "AEGRYN TRANSACT — EXKLUSIVES MANDAT",
+      "heroTitle": "Welches Mandat möchten Sie\nuns anvertrauen?",
+      "heroDesc": "Alle unsere Transaktionen laufen unter exklusivem Mandat, in einem geschlossenen Katalog, mit qualifizierten Gegenparteien. Der NDA ist ab dem ersten Kontakt systematisch.",
+      "segmentsLabel": "WÄHLEN SIE IHR SEGMENT",
+      "segment": {
+        "sell": {
+          "kicker": "Verkaufsmandat",
+          "title": "Ein Asset oder Unternehmen verkaufen",
+          "desc": "Sie sind Gründer, Holding oder Studio. Sie möchten Ihr Tech-Asset oder Unternehmen unter besten Bedingungen veräußern.",
+          "points": [
+            "Obligatorische CIFS-Zertifizierung vor der Präsentation",
+            "Präsentation unter NDA ausschließlich an qualifizierte Käufer",
+            "Ziel-Verkaufspreis vom Verkäufer festgelegt",
+            "Institutionelles Treuhand und sicherer Abschluss",
+            "Nur Erfolgshonorar"
+          ],
+          "cta": "Verkaufsmandat einreichen"
+        },
+        "buy": {
+          "kicker": "Akquisitionsmandat",
+          "title": "Akquisitionsziel suchen",
+          "desc": "Sie sind Unternehmer, Corporate oder Family Office. Sie möchten ein Tech-Asset nach präzisen Kriterien erwerben.",
+          "points": [
+            "Zugang zum CIFS-zertifizierten Offmarket-Katalog",
+            "Matching nach Ihren Kriterien (Sektor, ARR, Grade, Größe)",
+            "Gegenseitiger NDA vor jeder Offenlegung",
+            "Unterstützung bei Due Diligence und Strukturierung",
+            "Nur Transaktionshonorar"
+          ],
+          "cta": "Akquisitionsmandat einreichen"
+        },
+        "fundraise": {
+          "kicker": "Kapitalsuche",
+          "title": "Qualifizierte Investoren finden",
+          "desc": "Sie sind Gründer eines zertifizierten Tech-Assets. Sie suchen institutionelle oder private Investoren in unserem qualifizierten Netzwerk.",
+          "points": [
+            "Aegryn-Netzwerk: Family Offices, Fonds, Corporates",
+            "Präsentation Ihrer Unterlagen unter exklusivem NDA",
+            "Mindestticket: ab CHF 100.000",
+            "Strukturierter Prozess, mittlere Laufzeit 8 Wochen",
+            "Erfolgshonorar beim Abschluss"
+          ],
+          "cta": "Kapitalmandat einreichen"
+        },
+        "equity_stake": {
+          "kicker": "Kapitaleröffnung",
+          "title": "Strategischen Partner aufnehmen",
+          "desc": "Sie möchten Minderheitsanteile veräußern, um einen operativen, finanziellen oder strategischen Partner in Ihr Kapital aufzunehmen.",
+          "points": [
+            "Operativer, finanzieller oder industrieller Partner",
+            "Veräußerung von 5 % bis 49 % des Kapitals",
+            "CIFS-Bewertung vor jeder Verhandlung",
+            "Gesellschaftervertrag unter Aufsicht unserer Rechtsberater",
+            "Absolute Vertraulichkeit während des gesamten Prozesses"
+          ],
+          "cta": "Equity-Mandat einreichen"
+        }
+      },
+      "processLabel": "DER MANDATSPROZESS",
+      "process": {
+        "step1": {
+          "title": "Erstkontakt",
+          "desc": "Sie beschreiben Ihre Situation. Wir prüfen die Machbarkeit und definieren den geeigneten Mandatstyp."
+        },
+        "step2": {
+          "title": "Mandatsunterzeichnung",
+          "desc": "Exklusives Mandat für eine bestimmte Laufzeit unterzeichnet. Erfolgshonorarbedingungen vertraglich festgelegt."
+        },
+        "step3": {
+          "title": "Durchführung & Abschluss",
+          "desc": "Aegryn identifiziert die Gegenpartei, leitet Verhandlungen und begleitet den Abschluss in einem sicheren Rahmen nach Schweizer Recht."
+        }
+      },
+      "ndaLabel": "MAXIMALER SCHUTZ",
+      "ndaTitle": "Keine Transaktion ohne NDA. Keine Ausnahmen.",
+      "ndaDesc": "Alle unsere Mandate beinhalten eine verstärkte Vertraulichkeitsvereinbarung. Identitäten und Finanzdaten werden ohne vorherige schriftliche Zustimmung beider Parteien niemals offengelegt.",
+      "ndaCta": "Kontakt aufnehmen"
+    },
+    "sell": {
+      "label": "AEGRYN TRANSACT — VERKAUFSMANDAT",
+      "title": "Ihr Tech-Asset veräußern\nzum Preis, den es verdient.",
+      "desc": "Aegryn zertifiziert Ihr Asset CIFS, vergibt den offiziellen Grade und präsentiert es unter exklusivem NDA an vorqualifizierte institutionelle Käufer. Nur Erfolgshonorar.",
+      "cta": "Verkaufsmandat einreichen",
+      "step1Title": "CIFS-Zertifizierung",
+      "step1Desc": "Ihr Asset durchläuft das Aegryn-Bewertungsprotokoll über 4 Dimensionen: Code, Infrastruktur, Finanzen, Sicherheit. Ein offizieller AEG-Grade wird vor jeder Präsentation vergeben.",
+      "step2Title": "Präsentation unter NDA",
+      "step2Desc": "Das zertifizierte Asset wird in den geschlossenen Offmarket-Katalog aufgenommen. Jeder Käufer unterzeichnet einen NDA, bevor er auf vertrauliche Dokumente zugreift.",
+      "step3Title": "Term Sheet & Verhandlung",
+      "step3Desc": "Qualifizierte Käufer legen strukturierte Angebote vor. Aegryn begleitet die Verhandlung und Gegenangebote bis zur Einigung.",
+      "step4Title": "Sicherer Abschluss",
+      "step4Desc": "Institutionelles Treuhand, sicherer Transfer, Abschluss nach Schweizer Recht. Maximaler Schutz für Verkäufer und Käufer.",
+      "feesTitle": "GEBÜHRENSTRUKTUR",
+      "feesDesc": "Keine Vorabgebühren. Aegryn wird ausschließlich bei Transaktionserfolg vergütet. Die CIFS-Zertifizierung wird separat nach dem vergebenen Grade in Rechnung gestellt.",
+      "feesCert": "CIFS-ZERTIFIZIERUNG",
+      "feesCertValue": "Bei Übergabe des offiziellen Grades in Rechnung gestellt. Betrag je nach Komplexität des Assets — bei Mandatsunterzeichnung kommuniziert.",
+      "feesSuccess": "ERFOLGSHONORAR",
+      "feesSuccessValue": "Nur beim Abschluss abgezogen. Berechnet auf den Netto-Verkaufspreis. Satz bei Unterzeichnung des exklusiven Mandats kommuniziert."
+    },
+    "buy": {
+      "label": "AEGRYN TRANSACT — AKQUISITIONSMANDAT",
+      "title": "Ein zertifiziertes Tech-Asset erwerben.\nKein Lärm. Unter NDA.",
+      "desc": "Zugang zum Aegryn Offmarket-Katalog: CIFS-zertifizierte Assets, qualifizierte Verkäufer, strukturierter Prozess. Jede Transaktion wird durch exklusives Mandat nach Schweizer Recht geregelt.",
+      "cta": "Akquisitionsmandat einreichen",
+      "qualifTitle": "QUALIFIZIERTES KÄUFERPROFIL",
+      "qualifDesc": "Der Aegryn-Katalog ist Käufern vorbehalten, die das Qualifizierungsverfahren abgeschlossen haben. Diese Anforderung schützt die Vertraulichkeit der Verkäufer und gewährleistet die Qualität des Austauschs.",
+      "qualifItems": [
+        "Unternehmer, Corporate, Family Office oder Investmentfonds",
+        "Nachgewiesene Akquisitionskapazität (CHF 100.000 — CHF 2.500.000)",
+        "KYC-Verfahren abgeschlossen und vom Aegryn-Team validiert",
+        "NDA vor dem Zugang zum Katalog oder Asset-Datenblättern unterzeichnet",
+        "Vertraulichkeitsverpflichtung bezüglich der Identitäten der Verkäufer"
+      ],
+      "processTitle": "AKQUISITIONSPROZESS",
+      "processSteps": [
+        { "num": "01", "title": "Qualifizierung", "desc": "Sie reichen Ihr Profil und Ihre Kriterien ein. Aegryn validiert Ihre Qualifizierung innerhalb von 48 Geschäftsstunden." },
+        { "num": "02", "title": "Katalogzugang", "desc": "Sie erhalten Zugang zu zertifizierten Asset-Datenblättern, die Ihren Kriterien entsprechen. NDA vorher unterzeichnet." },
+        { "num": "03", "title": "Angebot & Due Diligence", "desc": "Sie legen ein strukturiertes Angebot vor. Aegryn organisiert die Due Diligence in einem sicheren Rahmen." },
+        { "num": "04", "title": "Abschluss", "desc": "Institutionelles Treuhand, sicherer Transfer, Abschluss nach Schweizer Recht." }
       ]
     }
   },

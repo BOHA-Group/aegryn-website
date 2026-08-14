@@ -9,6 +9,12 @@
     "career": "Carrières",
     "contact": "Contact",
     "auction": "M\u0026A Transacties",
+    "transact": "TRANSACT",
+    "transactCatalog": "Offmarket-catalogus",
+    "transactSell": "Verkoopsmandaat",
+    "transactBuy": "Acquisitiemandat",
+    "transactMandate": "Mandaat indienen",
+    "transactResults": "Afgesloten transacties",
     "grade": "Grade",
     "assets": "Assets",
     "services": "Diensten",
@@ -2404,6 +2410,199 @@
           "grade": "B",
           "color": "grade-b"
         }
+      ]
+    }
+  },
+  "transact": {
+    "meta": {
+      "title": "TRANSACT — Offmarket tech-transactiebureau",
+      "desc": "Aegryn TRANSACT: het referentiebureau voor selectieve tech-transacties in Europa. Exclusief mandaat, gesloten catalogus, CIFS-gecertificeerde gekwalificeerde kopers en verkopers."
+    },
+    "index": {
+      "eyebrow": "AEGRYN TRANSACT — TECH-TRANSACTIEBUREAU",
+      "heroTitle": "De Europese referentie\nvoor selectieve tech-transacties.",
+      "heroDesc": "Gesloten offmarket-catalogus onder exclusief mandaat. Elke koper is gekwalificeerd. Elk asset is CIFS-gecertificeerd. Geen transactie zonder maximale NDA-bescherming.",
+      "ctaCatalog": "Catalogus bekijken",
+      "ctaMandate": "Mandaat indienen",
+      "segmentsLabel": "VIER TRANSACTIESEGMENTEN",
+      "segmentsTitle": "Wat uw situatie ook is,\ner is een Aegryn-mandaat voor u.",
+      "segment": {
+        "sell": {
+          "kicker": "Asset-overdracht",
+          "title": "U wilt verkopen",
+          "desc": "Draag uw tech-asset of bedrijf over aan een gekwalificeerde koper. CIFS-certificering, exclusief mandaat, systematische NDA.",
+          "cta": "Verkoopsmandaat"
+        },
+        "buy": {
+          "kicker": "Acquisitiezoektocht",
+          "title": "U wilt verwerven",
+          "desc": "Geef Aegryn opdracht om targets te identificeren op basis van uw criteria. Toegang tot de gesloten catalogus en ons propriëtair netwerk.",
+          "cta": "Acquisitiemandaat"
+        },
+        "raise": {
+          "kicker": "Kapitaalzoektocht",
+          "title": "U zoekt investeerders",
+          "desc": "Toegang tot ons netwerk van gekwalificeerde family offices, fondsen en corporates. Gestructureerd en vertrouwelijk proces onder Zwitsers recht.",
+          "cta": "Kapitaalmandaat"
+        },
+        "equity": {
+          "kicker": "Kapitaalontsluiting",
+          "title": "U zoekt partners",
+          "desc": "Draag minderheidsaandelen over om een strategische, operationele of financiële partner in uw kapitaal op te nemen.",
+          "cta": "Equity-mandaat"
+        }
+      },
+      "valueLabel": "DE AEGRYN TRANSACT-WAARDE",
+      "valueTitle": "Een gekwalificeerde kopersbase.\nGecertificeerde assets.",
+      "valueDesc": "Aegryn werkt alleen met kopers die het KYC-proces hebben voltooid en de NDA hebben ondertekend. Elk asset wordt CIFS-gewaardeerd voordat het wordt gepresenteerd. Dat is het verschil tussen een transactie die sluit en een die mislukt.",
+      "valueCta": "Gecertificeerde catalogus bekijken",
+      "howLabel": "TRANSACT-PROCES IN 4 STAPPEN",
+      "how": {
+        "step1": {
+          "title": "Exclusief mandaat",
+          "desc": "U ondertekent een mandaat met Aegryn. Looptijd, voorwaarden en succesvergoeding contractueel vastgelegd."
+        },
+        "step2": {
+          "title": "Kwalificatie en matching",
+          "desc": "Aegryn identificeert de ideale tegenpartij in zijn gekwalificeerde netwerk. Het asset wordt alleen onder NDA gepresenteerd."
+        },
+        "step3": {
+          "title": "Term sheet en onderhandeling",
+          "desc": "Partijen presenteren gestructureerde term sheets. Aegryn begeleidt de onderhandeling en tegenoffers."
+        },
+        "step4": {
+          "title": "Veilige afsluiting",
+          "desc": "Institutionele escrow, afsluiting onder Zwitsers recht, veilige overdracht. Maximale bescherming voor beide partijen."
+        }
+      },
+      "ctaStripLabel": "AEGRYN TRANSACT",
+      "ctaStripTitle": "Klaar om uw transactie toe te vertrouwen aan de Europese referentie?",
+      "ctaStripMandate": "Mandaat indienen",
+      "ctaStripCatalog": "Catalogus bekijken"
+    },
+    "mandate": {
+      "meta": {
+        "title": "Mandaat indienen — Aegryn TRANSACT",
+        "desc": "Vertrouw uw transactie toe aan Aegryn: asset-overdracht, acquisitiezoektocht, kapitaalzoektocht of kapitaalontsluiting. Exclusief mandaat, gesloten catalogus, maximale NDA-bescherming."
+      },
+      "eyebrow": "AEGRYN TRANSACT — EXCLUSIEF MANDAAT",
+      "heroTitle": "Welk mandaat wilt u\nons toevertrouwen?",
+      "heroDesc": "Al onze transacties verlopen onder exclusief mandaat, in een gesloten catalogus, met gekwalificeerde tegenpartijen. De NDA is systematisch vanaf het eerste contact.",
+      "segmentsLabel": "KIES UW SEGMENT",
+      "segment": {
+        "sell": {
+          "kicker": "Verkoopsmandaat",
+          "title": "Een asset of bedrijf verkopen",
+          "desc": "U bent oprichter, holding of studio. U wilt uw tech-asset of bedrijf onder de beste voorwaarden overdragen.",
+          "points": [
+            "Verplichte CIFS-certificering vóór elke presentatie",
+            "Presentatie onder NDA uitsluitend aan gekwalificeerde kopers",
+            "Doelverkoopprijs vastgesteld door de verkoper",
+            "Institutionele escrow en veilige afsluiting",
+            "Alleen succesvergoeding"
+          ],
+          "cta": "Verkoopsmandaat indienen"
+        },
+        "buy": {
+          "kicker": "Acquisitiemandaat",
+          "title": "Een acquisitiedoelwit zoeken",
+          "desc": "U bent ondernemer, corporate of family office. U wilt een tech-asset verwerven op basis van precieze criteria.",
+          "points": [
+            "Toegang tot de CIFS-gecertificeerde offmarket-catalogus",
+            "Matching op basis van uw criteria (sector, ARR, grade, omvang)",
+            "Wederzijdse NDA vóór elke openbaarmaking",
+            "Begeleiding bij due diligence en structurering",
+            "Alleen transactievergoeding"
+          ],
+          "cta": "Acquisitiemandaat indienen"
+        },
+        "fundraise": {
+          "kicker": "Kapitaalzoektocht",
+          "title": "Gekwalificeerde investeerders vinden",
+          "desc": "U bent oprichter van een gecertificeerd tech-asset. U zoekt institutionele of private investeerders in ons gekwalificeerde netwerk.",
+          "points": [
+            "Aegryn-netwerk: family offices, fondsen, corporates",
+            "Presentatie van uw dossier onder exclusieve NDA",
+            "Minimumticket: vanaf CHF 100.000",
+            "Gestructureerd proces, gemiddelde looptijd 8 weken",
+            "Succesvergoeding bij afsluiting"
+          ],
+          "cta": "Kapitaalmandaat indienen"
+        },
+        "equity_stake": {
+          "kicker": "Kapitaalontsluiting",
+          "title": "Een strategische partner opnemen",
+          "desc": "U wilt minderheidsaandelen overdragen om een operationele, financiële of strategische partner in uw kapitaal op te nemen.",
+          "points": [
+            "Operationele, financiële of industriële partner",
+            "Overdracht van 5% tot 49% van het kapitaal",
+            "CIFS-waardering vóór elke onderhandeling",
+            "Aandeelhoudersovereenkomst onder toezicht van onze juridisch adviseurs",
+            "Absolute vertrouwelijkheid gedurende het gehele proces"
+          ],
+          "cta": "Equity-mandaat indienen"
+        }
+      },
+      "processLabel": "HET MANDAATPROCES",
+      "process": {
+        "step1": {
+          "title": "Eerste contact",
+          "desc": "U beschrijft uw situatie. Wij beoordelen de haalbaarheid en bepalen het geschikte mandaattype."
+        },
+        "step2": {
+          "title": "Ondertekening van het mandaat",
+          "desc": "Exclusief mandaat voor een bepaalde looptijd ondertekend. Voorwaarden van de succesvergoeding contractueel vastgelegd."
+        },
+        "step3": {
+          "title": "Uitvoering en afsluiting",
+          "desc": "Aegryn identificeert de tegenpartij, leidt de onderhandelingen en begeleidt de afsluiting in een veilig kader onder Zwitsers recht."
+        }
+      },
+      "ndaLabel": "MAXIMALE BESCHERMING",
+      "ndaTitle": "Geen transactie zonder NDA. Geen uitzonderingen.",
+      "ndaDesc": "Al onze mandaten bevatten een versterkte vertrouwelijkheidsovereenkomst. Identiteiten en financiële gegevens worden nooit openbaar gemaakt zonder voorafgaande schriftelijke toestemming van beide partijen.",
+      "ndaCta": "Contact opnemen"
+    },
+    "sell": {
+      "label": "AEGRYN TRANSACT — VERKOOPSMANDAAT",
+      "title": "Uw tech-asset overdragen\ntegen de prijs die het verdient.",
+      "desc": "Aegryn certificeert uw asset CIFS, kent de officiële grade toe en presenteert het onder exclusieve NDA aan voorgekwalificeerde institutionele kopers. Alleen succesvergoeding.",
+      "cta": "Verkoopsmandaat indienen",
+      "step1Title": "CIFS-certificering",
+      "step1Desc": "Uw asset doorloopt het Aegryn-waarderingsprotocol in 4 dimensies: Code, Infrastructuur, Financiën, Beveiliging. Een officiële AEG-grade wordt toegekend vóór elke presentatie.",
+      "step2Title": "Presentatie onder NDA",
+      "step2Desc": "Het gecertificeerde asset wordt opgenomen in de gesloten offmarket-catalogus. Elke koper ondertekent een NDA voordat hij toegang krijgt tot vertrouwelijke documenten.",
+      "step3Title": "Term sheet en onderhandeling",
+      "step3Desc": "Gekwalificeerde kopers dienen gestructureerde offertes in. Aegryn begeleidt de onderhandeling en tegenoffers tot overeenstemming.",
+      "step4Title": "Veilige afsluiting",
+      "step4Desc": "Institutionele escrow, veilige overdracht, afsluiting onder Zwitsers recht. Maximale bescherming voor verkoper en koper.",
+      "feesTitle": "VERGOEDINGSSTRUCTUUR",
+      "feesDesc": "Geen voorafgaande vergoedingen. Aegryn wordt uitsluitend vergoed bij transactiesucces. De CIFS-certificering wordt apart gefactureerd op basis van de toegekende grade.",
+      "feesCert": "CIFS-CERTIFICERING",
+      "feesCertValue": "Gefactureerd bij afgifte van de officiële grade. Bedrag afhankelijk van de complexiteit van het asset — gecommuniceerd bij ondertekening van het mandaat.",
+      "feesSuccess": "SUCCESVERGOEDING",
+      "feesSuccessValue": "Alleen ingehouden bij afsluiting. Berekend op de netto-verkoopprijs. Tarief gecommuniceerd bij ondertekening van het exclusieve mandaat."
+    },
+    "buy": {
+      "label": "AEGRYN TRANSACT — ACQUISITIEMANDAAT",
+      "title": "Een gecertificeerd tech-asset verwerven.\nZonder ruis. Onder NDA.",
+      "desc": "Toegang tot de Aegryn offmarket-catalogus: CIFS-gecertificeerde assets, gekwalificeerde verkopers, gestructureerd proces. Elke transactie wordt geregeld door een exclusief mandaat onder Zwitsers recht.",
+      "cta": "Acquisitiemandaat indienen",
+      "qualifTitle": "GEKWALIFICEERD KOPERSPROFIEL",
+      "qualifDesc": "De Aegryn-catalogus is voorbehouden aan kopers die het kwalificatieproces hebben voltooid. Deze vereiste beschermt de vertrouwelijkheid van verkopers en garandeert de kwaliteit van de uitwisseling.",
+      "qualifItems": [
+        "Ondernemer, corporate, family office of investeringsfonds",
+        "Aangetoonde verwervingscapaciteit (CHF 100.000 — CHF 2.500.000)",
+        "KYC-proces voltooid en gevalideerd door het Aegryn-team",
+        "NDA ondertekend vóór toegang tot de catalogus of asset-fiches",
+        "Vertrouwelijkheidsverplichting met betrekking tot de identiteiten van verkopers"
+      ],
+      "processTitle": "ACQUISITIEPROCES",
+      "processSteps": [
+        { "num": "01", "title": "Kwalificatie", "desc": "U dient uw profiel en criteria in. Aegryn valideert uw kwalificatie binnen 48 werkuren." },
+        { "num": "02", "title": "Catalogustoegang", "desc": "U krijgt toegang tot gecertificeerde asset-fiches die overeenkomen met uw criteria. NDA vooraf ondertekend." },
+        { "num": "03", "title": "Offerte en due diligence", "desc": "U dient een gestructureerde offerte in. Aegryn organiseert de due diligence in een veilig kader." },
+        { "num": "04", "title": "Afsluiting", "desc": "Institutionele escrow, veilige overdracht, afsluiting onder Zwitsers recht." }
       ]
     }
   },

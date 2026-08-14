@@ -9,6 +9,12 @@
     "career": "Careers",
     "contact": "Contact",
     "auction": "M\u0026A Transactions",
+    "transact": "TRANSACT",
+    "transactCatalog": "Offmarket catalog",
+    "transactSell": "Sale mandate",
+    "transactBuy": "Acquisition mandate",
+    "transactMandate": "Submit a mandate",
+    "transactResults": "Closed transactions",
     "grade": "Grade",
     "assets": "Assets",
     "services": "Services",
@@ -2507,6 +2513,199 @@
         "desc": "Designated data owner, documented classification and retention policy."
       }
     ]
+  },
+  "transact": {
+    "meta": {
+      "title": "TRANSACT — Offmarket tech transaction agency",
+      "desc": "Aegryn TRANSACT: the reference agency for selective tech transactions in Europe. Exclusive mandate, closed catalog, certified CIFS qualified buyers and sellers."
+    },
+    "index": {
+      "eyebrow": "AEGRYN TRANSACT — TECH TRANSACTION AGENCY",
+      "heroTitle": "Europe's reference\nfor selective tech transactions.",
+      "heroDesc": "Closed offmarket catalog under exclusive mandate. Every buyer is qualified. Every asset is CIFS-certified. No transaction without maximum NDA protection.",
+      "ctaCatalog": "Access catalog",
+      "ctaMandate": "Submit a mandate",
+      "segmentsLabel": "FOUR TRANSACTION SEGMENTS",
+      "segmentsTitle": "Whatever your situation,\nthere is an Aegryn mandate for you.",
+      "segment": {
+        "sell": {
+          "kicker": "Asset sale",
+          "title": "You want to sell",
+          "desc": "Divest your tech asset or company to a qualified acquirer. CIFS certification, exclusive mandate, systematic NDA.",
+          "cta": "Sale mandate"
+        },
+        "buy": {
+          "kicker": "Acquisition search",
+          "title": "You want to acquire",
+          "desc": "Mandate Aegryn to identify targets matching your criteria. Access to the closed catalog and our proprietary network.",
+          "cta": "Acquisition mandate"
+        },
+        "raise": {
+          "kicker": "Fundraising",
+          "title": "You are seeking investors",
+          "desc": "Access our network of qualified family offices, funds and corporates. Structured, confidential process under Swiss law.",
+          "cta": "Fundraising mandate"
+        },
+        "equity": {
+          "kicker": "Equity opening",
+          "title": "You are seeking partners",
+          "desc": "Divest minority shares to integrate a strategic, operational or financial partner into your capital.",
+          "cta": "Equity mandate"
+        }
+      },
+      "valueLabel": "THE AEGRYN TRANSACT VALUE",
+      "valueTitle": "A qualified buyer base.\nCertified assets.",
+      "valueDesc": "Aegryn only works with buyers who have completed the KYC procedure and signed the NDA. Every asset is CIFS-rated before being presented. That is the difference between a transaction that closes and one that fails.",
+      "valueCta": "View certified catalog",
+      "howLabel": "TRANSACT PROCESS IN 4 STEPS",
+      "how": {
+        "step1": {
+          "title": "Exclusive mandate",
+          "desc": "You sign a mandate with Aegryn. Duration, terms and success fee defined contractually."
+        },
+        "step2": {
+          "title": "Qualification & matching",
+          "desc": "Aegryn identifies the ideal counterpart in its qualified network. The asset is presented under NDA only."
+        },
+        "step3": {
+          "title": "Term sheet & negotiation",
+          "desc": "Parties submit structured term sheets. Aegryn supports negotiation and counter-proposals."
+        },
+        "step4": {
+          "title": "Secure closing",
+          "desc": "Institutional escrow, closing under Swiss law, secure transfer. Maximum protection for both parties."
+        }
+      },
+      "ctaStripLabel": "AEGRYN TRANSACT",
+      "ctaStripTitle": "Ready to entrust your transaction to Europe's reference?",
+      "ctaStripMandate": "Submit a mandate",
+      "ctaStripCatalog": "View catalog"
+    },
+    "mandate": {
+      "meta": {
+        "title": "Submit a mandate — Aegryn TRANSACT",
+        "desc": "Entrust your transaction to Aegryn: asset sale, acquisition search, fundraising or equity opening. Exclusive mandate, closed catalog, maximum NDA protection."
+      },
+      "eyebrow": "AEGRYN TRANSACT — EXCLUSIVE MANDATE",
+      "heroTitle": "Which mandate would you like\nto entrust us with?",
+      "heroDesc": "All our transactions operate under exclusive mandate, in a closed catalog, with qualified counterparts. The NDA is systematic from the very first contact.",
+      "segmentsLabel": "CHOOSE YOUR SEGMENT",
+      "segment": {
+        "sell": {
+          "kicker": "Sale mandate",
+          "title": "Sell an asset or company",
+          "desc": "You are a founder, holding or studio. You wish to divest your tech asset or company under the best conditions.",
+          "points": [
+            "Mandatory CIFS certification before presentation",
+            "Presentation under NDA to qualified buyers only",
+            "Target sale price set by the seller",
+            "Institutional escrow and secure closing",
+            "Success fee only"
+          ],
+          "cta": "Submit a sale mandate"
+        },
+        "buy": {
+          "kicker": "Acquisition mandate",
+          "title": "Search for an acquisition target",
+          "desc": "You are an entrepreneur, corporate or family office. You wish to acquire a tech asset based on precise criteria.",
+          "points": [
+            "Access to CIFS-certified offmarket catalog",
+            "Matching based on your criteria (sector, ARR, grade, size)",
+            "Mutual NDA before any disclosure",
+            "Due diligence and structuring support",
+            "Transaction fee only"
+          ],
+          "cta": "Submit an acquisition mandate"
+        },
+        "fundraise": {
+          "kicker": "Fundraising",
+          "title": "Find qualified investors",
+          "desc": "You are the founder of a certified tech asset. You are seeking institutional or private investors in our qualified network.",
+          "points": [
+            "Aegryn network: family offices, funds, corporates",
+            "Presentation of your file under exclusive NDA",
+            "Minimum ticket: from CHF 100,000",
+            "Structured process, median timeline 8 weeks",
+            "Success fee at closing"
+          ],
+          "cta": "Submit a fundraising mandate"
+        },
+        "equity_stake": {
+          "kicker": "Equity opening",
+          "title": "Integrate a strategic partner",
+          "desc": "You wish to divest minority shares to integrate an operational, financial or strategic partner into your capital.",
+          "points": [
+            "Operational, financial or industrial partner",
+            "Divestiture of 5% to 49% of capital",
+            "CIFS valuation before any negotiation",
+            "Shareholder agreement governed by our legal counsel",
+            "Absolute confidentiality throughout the process"
+          ],
+          "cta": "Submit an equity mandate"
+        }
+      },
+      "processLabel": "THE MANDATE PROCESS",
+      "process": {
+        "step1": {
+          "title": "Initial contact",
+          "desc": "You describe your situation. We assess feasibility and define the type of mandate suited to your objective."
+        },
+        "step2": {
+          "title": "Mandate signing",
+          "desc": "Exclusive mandate signed for a defined duration. Success fee terms defined contractually."
+        },
+        "step3": {
+          "title": "Execution & closing",
+          "desc": "Aegryn identifies the counterpart, manages negotiations and supports closing in a secure framework under Swiss law."
+        }
+      },
+      "ndaLabel": "MAXIMUM PROTECTION",
+      "ndaTitle": "No transaction without NDA. No exceptions.",
+      "ndaDesc": "All our mandates include a reinforced confidentiality agreement. Identities and financial data are never disclosed without prior written consent from both parties.",
+      "ndaCta": "Contact us"
+    },
+    "sell": {
+      "label": "AEGRYN TRANSACT — SALE MANDATE",
+      "title": "Divest your tech asset\nat the price it deserves.",
+      "desc": "Aegryn certifies your asset CIFS, assigns the official grade and presents it under exclusive NDA to pre-qualified institutional acquirers. Success fee only.",
+      "cta": "Submit a sale mandate",
+      "step1Title": "CIFS Certification",
+      "step1Desc": "Your asset goes through the Aegryn evaluation protocol across 4 dimensions: Code, Infrastructure, Finance, Security. An official AEG grade is assigned before any presentation.",
+      "step2Title": "Presentation under NDA",
+      "step2Desc": "The certified asset enters the closed offmarket catalog. Every acquirer signs an NDA before accessing any confidential document.",
+      "step3Title": "Term sheet & negotiation",
+      "step3Desc": "Qualified acquirers submit structured offers. Aegryn manages negotiation and counter-proposals through to agreement.",
+      "step4Title": "Secure closing",
+      "step4Desc": "Institutional escrow, secure transfer, closing under Swiss law. Maximum protection for seller and acquirer.",
+      "feesTitle": "FEE STRUCTURE",
+      "feesDesc": "No upfront fees. Aegryn is remunerated exclusively on transaction success. CIFS certification is invoiced separately based on the grade assigned.",
+      "feesCert": "CIFS CERTIFICATION",
+      "feesCertValue": "Invoiced upon delivery of the official grade. Amount based on asset complexity — communicated at mandate signing.",
+      "feesSuccess": "SUCCESS FEE",
+      "feesSuccessValue": "Deducted at closing only. Calculated on the net sale price. Rate communicated at exclusive mandate signing."
+    },
+    "buy": {
+      "label": "AEGRYN TRANSACT — ACQUISITION MANDATE",
+      "title": "Acquire a certified tech asset.\nNo noise. Under NDA.",
+      "desc": "Access the Aegryn offmarket catalog: CIFS-certified assets, qualified sellers, structured process. Every transaction is governed by exclusive mandate under Swiss law.",
+      "cta": "Submit an acquisition mandate",
+      "qualifTitle": "QUALIFIED BUYER PROFILE",
+      "qualifDesc": "The Aegryn catalog is reserved for buyers who have completed the qualification procedure. This requirement protects seller confidentiality and guarantees the quality of exchanges.",
+      "qualifItems": [
+        "Entrepreneur, corporate, family office or investment fund",
+        "Demonstrated acquisition capacity (CHF 100,000 — CHF 2,500,000)",
+        "KYC procedure completed and validated by the Aegryn team",
+        "NDA signed before any access to the catalog or asset sheets",
+        "Confidentiality commitment regarding seller identities"
+      ],
+      "processTitle": "ACQUISITION PROCESS",
+      "processSteps": [
+        { "num": "01", "title": "Qualification", "desc": "You submit your profile and criteria. Aegryn validates your qualification within 48 business hours." },
+        { "num": "02", "title": "Catalog access", "desc": "You access certified asset sheets matching your criteria. NDA signed beforehand." },
+        { "num": "03", "title": "Offer & due diligence", "desc": "You submit a structured offer. Aegryn organises due diligence in a secure framework." },
+        { "num": "04", "title": "Closing", "desc": "Institutional escrow, secure transfer, closing under Swiss law." }
+      ]
+    }
   },
   "auction": {
     "meta": {

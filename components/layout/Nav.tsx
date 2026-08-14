@@ -10,16 +10,15 @@ import NotificationBell   from '@/components/client/NotificationBell'
 import { AegrynLogo }   from '@/components/brand/AegrynLogo'
 import { gsap }          from '@/lib/gsap'
 
-type DropdownKey = 'auction' | 'grade' | 'build' | 'advisory' | null
+type DropdownKey = 'transact' | 'grade' | 'build' | 'advisory' | null
 type LinkHref = ComponentProps<typeof Link>['href']
 
-const AUCTION_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'auctionCatalog',     href: '/auction/catalog' },
-  { labelKey: 'auctionSell',        href: '/auction/how-to-sell' },
-  { labelKey: 'auctionBuy',         href: '/auction/how-to-buy' },
-  { labelKey: 'auctionBidModels',   href: '/auction/bid-models' },
-  { labelKey: 'auctionSession',     href: '/auction/sessions' },
-  { labelKey: 'auctionResults',     href: '/auction/results' },
+const TRANSACT_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'transactCatalog',    href: '/transact/catalog' },
+  { labelKey: 'transactSell',       href: '/transact/how-to-sell' },
+  { labelKey: 'transactBuy',        href: '/transact/how-to-buy' },
+  { labelKey: 'transactMandate',    href: '/transact/mandate' },
+  { labelKey: 'transactResults',    href: '/transact/results' },
 ]
 
 const GRADE_LINKS: { labelKey: string; href: LinkHref }[] = [
@@ -147,7 +146,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const t = useTranslations('nav')
   const pathname = usePathname()
   const isActive = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href)
-  const isAuctionActive  = AUCTION_LINKS.some(({ href }) => isActive(href as string))
+  const isTransactActive = TRANSACT_LINKS.some(({ href }) => isActive(href as string))
   const isGradeActive    = GRADE_LINKS.some(({ href }) => isActive(href as string))
   const isBuildActive    = BUILD_LINKS.some(({ href }) => isActive(href as string))
   const isAdvisoryActive = ADVISORY_LINKS.some(({ href }) => isActive(href as string))
@@ -282,21 +281,21 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             {activeDropdown === 'grade' && <GradeMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
           </div>
 
-          {/* Auction dropdown */}
+          {/* Transact dropdown */}
           <div className="nav-link-item relative">
             <button
-              onClick={() => toggleDropdown('auction')}
+              onClick={() => toggleDropdown('transact')}
               className={`relative flex items-center gap-1 font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-                isAuctionActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
+                isTransactActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
-              aria-expanded={activeDropdown === 'auction'}
-              aria-current={isAuctionActive ? 'page' : undefined}
+              aria-expanded={activeDropdown === 'transact'}
+              aria-current={isTransactActive ? 'page' : undefined}
             >
-              {t('auction')}
-              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'auction' ? 'rotate-180' : ''}`} />
-              {isAuctionActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
+              {t('transact')}
+              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'transact' ? 'rotate-180' : ''}`} />
+              {isTransactActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
             </button>
-            {activeDropdown === 'auction' && <DropdownMenu links={AUCTION_LINKS} t={t} />}
+            {activeDropdown === 'transact' && <DropdownMenu links={TRANSACT_LINKS} t={t} />}
           </div>
 
           {/* Blog */}
@@ -477,21 +476,21 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               )}
             </div>
 
-            {/* Auction accordion */}
+            {/* Transact accordion */}
             <div className="mobile-nav-item">
               <button
-                onClick={() => toggleMobileAccordion('auction')}
-                aria-current={isAuctionActive ? 'page' : undefined}
+                onClick={() => toggleMobileAccordion('transact')}
+                aria-current={isTransactActive ? 'page' : undefined}
                 className={`w-full flex items-center justify-between py-4 font-mono text-[12px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isAuctionActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                  isTransactActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
                 }`}
               >
-                {t('auction')}
-                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'auction' ? 'rotate-180' : ''}`} />
+                {t('transact')}
+                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'transact' ? 'rotate-180' : ''}`} />
               </button>
-              {mobileAccordion === 'auction' && (
+              {mobileAccordion === 'transact' && (
                 <div className="py-2 pl-4 flex flex-col gap-1">
-                  {AUCTION_LINKS.map(({ labelKey, href }) => (
+                  {TRANSACT_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-2.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}
