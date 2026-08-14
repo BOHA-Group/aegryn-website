@@ -156,6 +156,40 @@ export async function POST(
     // Hash SHA-256 des inputs bruts pour garantir l'intégrité post-save (Sprint 3I)
     const inputHash = createHash('sha256').update(JSON.stringify(body.input)).digest('hex')
 
+    // 5C — Version number + Delta : récupérer la dernière évaluation publiée ou validée
+    const { data: prevAssessment } = await supa
+      .from('grade_assessments')
+      .select('version_number, computed_score, dimensions:engine_result_json')
+      .eq('asset_id', assetId)
+      .in('status', ['published', 'validated', 'draft'])
+      .order('version_number', { ascending: false })
+      .limit(1)
+      .maybeSingle()
+
+    const versionNumber = (prevAssessment?.version_number ?? 0) + 1
+
+    // Calcul du delta si version précédente existe
+    let delta: Record<string, unknown> | null = null
+    if (prevAssessment && prevAssessment.dimensions) {
+      const prev = prevAssessment.dimensions as { dimensions?: { code?: { score?: number }; ip?: { score?: number }; finance?: { score?: number }; security?: { score?: number } }; grade?: string; trs?: string }
+      const prevDims = prev?.dimensions
+      if (prevDims) {
+        delta = {
+          scoresDelta: {
+            code:     result.dimensions.code.score - (prevDims.code?.score ?? 0),
+            ip:       result.dimensions.ip.score - (prevDims.ip?.score ?? 0),
+            finance:  result.dimensions.finance.score - (prevDims.finance?.score ?? 0),
+            security: result.dimensions.security.score - (prevDims.security?.score ?? 0),
+            total:    result.totalScore - (prevAssessment.computed_score ?? 0),
+          },
+          gradeBefore: prev?.grade ?? null,
+          gradeAfter:  result.grade,
+          trsBefore:   prev?.trs ?? null,
+          trsAfter:    result.trs,
+        }
+      }
+    }
+
     const { data, error } = await supa
       .from('grade_assessments')
       .insert({
@@ -176,6 +210,9 @@ export async function POST(
         trs:                 result.trs,
         trs_reasons:         result.trsReasons,
         recommendations:     result.recommendations,
+        // 5C — Version + Delta
+        version_number:      versionNumber,
+        delta:               delta,
       })
       .select('id')
       .single()
@@ -236,7 +273,7 @@ export async function POST(
 
     const { data: assessment } = await supa
       .from('grade_assessments')
-      .select('final_grade, final_score, public_rationale, status')
+      .select('final_grade, final_score, public_rationale, status, trs, recommendations')
       .eq('id', body.assessmentId)
       .eq('asset_id', assetId)
       .single()
@@ -266,19 +303,51 @@ export async function POST(
     const GRADE_TO_SYMBOL: Record<string, string> = {
       star: '★', aaa: 'AAA', aa: 'AA', a: 'A', b: 'B', refused: 'NG',
     }
+
+    // 5B — Auction Ready : calculé automatiquement à la publication
+    const auctionReadyGrades = ['star', 'aaa', 'aa', 'a']
+    const auctionReadyTrs    = ['ready', 'conditional']
+    // Récupérer kyc_validated + mandate_signed depuis l'asset
+    const { data: assetData } = await supa
+      .from('assets')
+      .select('kyc_validated, mandate_signed')
+      .eq('id', assetId)
+      .maybeSingle()
+    const auctionReady =
+      auctionReadyGrades.includes(assessment.final_grade) &&
+      auctionReadyTrs.includes(assessment.trs ?? '') &&
+      (assetData?.kyc_validated === true) &&
+      (assetData?.mandate_signed === true)
+
+    // 5A — Pre-Grade actions si grade B ou refused
+    const preGradeGrades = ['b', 'refused']
+    const preGradeActions = preGradeGrades.includes(assessment.final_grade) && assessment.recommendations
+      ? { estimatedGrade: assessment.final_grade, actions: assessment.recommendations }
+      : null
+
     const { error: assetErr } = await supa
       .from('assets')
       .update({
-        aeg_grade:      assessment.final_grade,
-        official_grade: GRADE_TO_SYMBOL[assessment.final_grade] ?? assessment.final_grade,
-        public_summary: assessment.public_rationale ?? undefined,
-        published_at:   new Date().toISOString(),
+        aeg_grade:            assessment.final_grade,
+        official_grade:       GRADE_TO_SYMBOL[assessment.final_grade] ?? assessment.final_grade,
+        public_summary:       assessment.public_rationale ?? undefined,
+        published_at:         new Date().toISOString(),
+        // 5B
+        trs:                  assessment.trs ?? null,
+        auction_ready:        auctionReady,
+        auction_ready_at:     auctionReady ? new Date().toISOString() : null,
+        // 5A
+        ...(preGradeActions ? {
+          status:              'pre_grade',
+          pre_grade_actions:   preGradeActions,
+          pre_grade_issued_at: new Date().toISOString(),
+        } : {}),
       })
       .eq('id', assetId)
 
     if (assetErr) return NextResponse.json({ error: assetErr.message }, { status: 500 })
 
-    return NextResponse.json({ ok: true, grade: assessment.final_grade })
+    return NextResponse.json({ ok: true, grade: assessment.final_grade, auctionReady })
   }
 
   return NextResponse.json({ error: 'unknown_action' }, { status: 400 })

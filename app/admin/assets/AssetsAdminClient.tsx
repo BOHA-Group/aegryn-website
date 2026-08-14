@@ -23,10 +23,14 @@ function evalLabel(e: string) {
 function statusColor(s: string) {
   return s === 'submitted'    ? 'bg-blue-50 text-blue-700'
     : s === 'under_review'    ? 'bg-yellow-50 text-yellow-700'
+    : s === 'pre_grade'       ? 'bg-orange-50 text-orange-700'
     : s === 'graded'          ? 'bg-purple-50 text-purple-700'
     : s === 'published'       ? 'bg-emerald-50 text-emerald-700'
     : s === 'sold'            ? 'bg-green-100 text-green-800'
     : 'bg-gray-100 text-gray-500'
+}
+function statusLabel(s: string) {
+  return s === 'pre_grade' ? 'Pre-Grade' : s
 }
 function gradeColor(g: string) {
   return g === '★'   ? 'bg-emerald-100 text-emerald-800'
@@ -210,8 +214,13 @@ export default function AssetsAdminClient({ rows: initialRows }: Props) {
                     </td>
                     <td className="px-4 py-3">
                       <span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>
-                        {String(r.status ?? '—')}
+                        {statusLabel(String(r.status ?? '—'))}
                       </span>
+                      {Boolean(r.auction_ready) && (
+                        <span className="ml-1 px-1.5 py-0.5 text-[9px] font-bold bg-emerald-100 text-emerald-700 uppercase tracking-wide">
+                          Auction Ready
+                        </span>
+                      )}
                     </td>
                     <td className="px-4 py-3">
                       <InviteButton
