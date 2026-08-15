@@ -6174,15 +6174,48 @@
       }
     },
     "subscribe": {
-      "title": "The AEGRYN ontvangen",
-      "desc": "Elke jaarlijkse editie direct in uw inbox. Vrije toegang, geen verplichting.",
-      "placeholder": "Uw e-mailadres",
-      "cta": "Abonneren",
-      "success": "Dank u. U ontvangt de volgende editie bij publicatie.",
-      "error": "Er is een fout opgetreden. Probeer het opnieuw.",
       "meta": {
-        "title": "Abonneren op The AEGRYN Report",
-        "description": "Abonneer u op het jaarlijkse AEGRYN-rapport over de Europese tech M&A-markt."
+        "title": "Gedrukte editie — The AEGRYN Report",
+        "description": "Geef uw interesse aan voor de gedrukte editie van het AEGRYN Report, voorbehouden aan Aegryn-klanten."
+      },
+      "printBadge": "Gedrukte editie",
+      "title": "Interesselijst — Gedrukte editie",
+      "desc": "De gedrukte editie van het AEGRYN-rapport is voorbehouden aan actieve klanten van het ecosysteem. Geef uw interessegebieden op om op de wensenlijst te worden geplaatst — wij nemen contact met u op zodra de productie begint.",
+      "digitalNote": "De digitale versie is vrij toegankelijk, net als onze artikelen en nieuws.",
+      "digitalNoteCta": "Rapport online lezen",
+      "namePlaceholder": "Uw naam",
+      "emailPlaceholder": "Uw e-mailadres",
+      "companyPlaceholder": "Uw bedrijf (optioneel)",
+      "interestsLabel": "Uw interessegebieden",
+      "interests": {
+        "ma": "M&A & Transacties",
+        "certification": "Asset-certificering",
+        "build": "Build & Engineering",
+        "data": "Data & AI",
+        "cyber": "Cyberbeveiliging",
+        "advisory": "Advisory"
+      },
+      "cta": "Mijn interesse kenbaar maken",
+      "success": "Dank u. Uw interesse is geregistreerd. Wij nemen contact met u op wanneer de gedrukte editie in productie gaat.",
+      "error": "Er is een fout opgetreden. Probeer het opnieuw.",
+      "clientNote": "Deze lijst is voorbehouden aan Aegryn-klanten. Een gedrukte editie wordt alleen geproduceerd als de vraag dit rechtvaardigt.",
+      "disclaimer": "De digitale versie blijft vrij toegankelijk zonder beperking. De gedrukte editie is een initiatief dat momenteel wordt geëvalueerd.",
+      "backToMagazine": "Terug naar het magazine"
+    },
+    "press": {
+      "label": "Ze spreken over ons",
+      "title": "De pers schrijft over onze assets.",
+      "readArticle": "Artikel lezen",
+      "videoAvailable": "Video beschikbaar op aanvraag",
+      "subblink": {
+        "title": "Village de la Justice stelt voor al uw contracten te laten controleren",
+        "excerpt": "Village Justice biedt aan om al uw contracten te laten controleren voor een juridisch risicoscore met Subblink, een AI-oplossing gekalibreerd voor Zwitsers en Europees recht.",
+        "context": "Artikel gepubliceerd op Village de la Justice — referentieplatform voor Frans en Europees recht. Presentatie van Subblink, Aegryn-asset voor AI-contractanalyse."
+      },
+      "neediu": {
+        "title": "Neediu in het Gala-magazine",
+        "excerpt": "Neediu, het platform dat particulieren verbindt met aanbieders van huishoudelijke diensten, was onderwerp van een videoreportage in het Gala-magazine.",
+        "context": "Berichtgeving in Gala — toonaangevend mainstream magazine. Videoreportage over Neediu, Aegryn-asset in de sector huishoudelijke diensten."
       }
     }
   }

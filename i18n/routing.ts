@@ -97,5 +97,8 @@ export const routing = defineRouting({
     '/data-protection-notice-neediu':     '/data-protection-notice-neediu',
     '/client/auction':                    '/client/auction',
     '/sitemap':                           '/sitemap',
+    '/intelligence/report':               '/intelligence/report',
+    '/intelligence/report/[year]':        '/intelligence/report/[year]',
+    '/intelligence/subscribe':            '/intelligence/subscribe',
   },
 })

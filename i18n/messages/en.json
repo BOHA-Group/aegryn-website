@@ -6136,6 +6136,7 @@
       "readOnline": "Read online",
       "downloadPdf": "Browse PDF",
       "notify": "Get notified",
+      "subscribe": "Receive",
       "ctaEstimate": "Estimate your asset",
       "ctaGrade": "Discover the Grade",
       "ctaTitle": "You built something real.",
@@ -6163,6 +6164,51 @@
       "meta": {
         "title": "Notifications — The AEGRYN Report",
         "description": "Receive a publication notice for each new annual edition of the AEGRYN report on the European tech M&A market."
+      }
+    },
+    "subscribe": {
+      "meta": {
+        "title": "Print Edition — The AEGRYN Report",
+        "description": "Express your interest in the print edition of AEGRYN Report, reserved for Aegryn clients."
+      },
+      "printBadge": "Print Edition",
+      "title": "Interest List — Print Edition",
+      "desc": "The print edition of the AEGRYN report is reserved for active clients of the ecosystem. Indicate your areas of interest to be added to the wishlist — we will contact you when production begins.",
+      "digitalNote": "The digital version is freely accessible, like our articles and news.",
+      "digitalNoteCta": "Read the report online",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "Your email address",
+      "companyPlaceholder": "Your company (optional)",
+      "interestsLabel": "Your areas of interest",
+      "interests": {
+        "ma": "M&A & Transactions",
+        "certification": "Asset Certification",
+        "build": "Build & Engineering",
+        "data": "Data & AI",
+        "cyber": "Cybersecurity",
+        "advisory": "Advisory"
+      },
+      "cta": "Express my interest",
+      "success": "Thank you. Your interest has been recorded. We will contact you when the print edition goes into production.",
+      "error": "An error occurred. Please try again.",
+      "clientNote": "This list is reserved for Aegryn clients. A print edition will only be produced if demand warrants it.",
+      "disclaimer": "The digital version remains freely accessible without restriction. The print edition is an initiative currently under evaluation.",
+      "backToMagazine": "Back to Magazine"
+    },
+    "press": {
+      "label": "They talk about us",
+      "title": "The press covers our assets.",
+      "readArticle": "Read the article",
+      "videoAvailable": "Video available on request",
+      "subblink": {
+        "title": "Village de la Justice proposes auditing all your contracts",
+        "excerpt": "Village Justice offers to audit all your contracts to obtain a legal risk score using Subblink, a solution powered by artificial intelligence calibrated for Swiss and European law.",
+        "context": "Article published on Village de la Justice — the reference platform for French and European law. Presentation of Subblink, Aegryn's AI-powered contract analysis asset."
+      },
+      "neediu": {
+        "title": "Neediu featured in Gala magazine",
+        "excerpt": "Neediu, the platform connecting individuals with home service providers, was featured in a video report in Gala magazine.",
+        "context": "Coverage in Gala — a leading mainstream magazine. Video report on Neediu, Aegryn's asset in the home services sector."
       }
     }
   }

@@ -6174,15 +6174,48 @@
       }
     },
     "subscribe": {
-      "title": "Ricevere The AEGRYN",
-      "desc": "Ogni edizione annuale direttamente nella tua casella di posta. Accesso libero, nessun impegno.",
-      "placeholder": "Il tuo indirizzo email",
-      "cta": "Iscriversi",
-      "success": "Grazie. Riceverai la prossima edizione alla pubblicazione.",
-      "error": "Si è verificato un errore. Per favore riprova.",
       "meta": {
-        "title": "Iscriversi a The AEGRYN Report",
-        "description": "Iscriviti al rapporto annuale AEGRYN sul mercato europeo delle M&A tecnologiche."
+        "title": "Edizione cartacea — The AEGRYN Report",
+        "description": "Esprimi il tuo interesse per l'edizione cartacea dell'AEGRYN Report, riservata ai clienti Aegryn."
+      },
+      "printBadge": "Edizione cartacea",
+      "title": "Lista d'interesse — Edizione cartacea",
+      "desc": "L'edizione cartacea del rapporto AEGRYN è riservata ai clienti attivi dell'ecosistema. Indica le tue aree di interesse per essere aggiunto alla lista dei desideri — ti contatteremo quando la produzione avrà inizio.",
+      "digitalNote": "La versione digitale è liberamente accessibile, come i nostri articoli e le nostre notizie.",
+      "digitalNoteCta": "Leggi il rapporto online",
+      "namePlaceholder": "Il tuo nome",
+      "emailPlaceholder": "Il tuo indirizzo email",
+      "companyPlaceholder": "La tua azienda (opzionale)",
+      "interestsLabel": "Le tue aree di interesse",
+      "interests": {
+        "ma": "M&A e Transazioni",
+        "certification": "Certificazione di asset",
+        "build": "Build & Engineering",
+        "data": "Data e IA",
+        "cyber": "Cybersicurezza",
+        "advisory": "Advisory"
+      },
+      "cta": "Esprimere il mio interesse",
+      "success": "Grazie. Il tuo interesse è stato registrato. Ti contatteremo quando l'edizione cartacea sarà in produzione.",
+      "error": "Si è verificato un errore. Per favore riprova.",
+      "clientNote": "Questa lista è riservata ai clienti Aegryn. Un'edizione cartacea sarà prodotta solo se la domanda lo giustifica.",
+      "disclaimer": "La versione digitale rimane liberamente accessibile senza restrizioni. L'edizione cartacea è un'iniziativa attualmente in fase di valutazione.",
+      "backToMagazine": "Torna alla rivista"
+    },
+    "press": {
+      "label": "Parlano di noi",
+      "title": "La stampa parla dei nostri asset.",
+      "readArticle": "Leggi l'articolo",
+      "videoAvailable": "Video disponibile su richiesta",
+      "subblink": {
+        "title": "Village de la Justice propone di far revisionare tutti i tuoi contratti",
+        "excerpt": "Village Justice offre la possibilità di far revisionare tutti i tuoi contratti per ottenere un punteggio di rischio legale grazie a Subblink, una soluzione basata sull'intelligenza artificiale calibrata per il diritto svizzero ed europeo.",
+        "context": "Articolo pubblicato su Village de la Justice — piattaforma di riferimento per il diritto francese ed europeo. Presentazione di Subblink, asset Aegryn per l'analisi contrattuale basata su IA."
+      },
+      "neediu": {
+        "title": "Neediu nella rivista Gala",
+        "excerpt": "Neediu, la piattaforma che mette in contatto privati e fornitori di servizi domestici, è stata oggetto di un servizio video nella rivista Gala.",
+        "context": "Copertura su Gala — rivista di riferimento per il grande pubblico. Servizio video su Neediu, asset Aegryn nel settore dei servizi domestici."
       }
     }
   }

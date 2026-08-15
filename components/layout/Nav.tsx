@@ -35,7 +35,7 @@ const BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
 const ABOUT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'magazine',          href: '/intelligence/report' },
   { labelKey: 'aboutGroup',        href: '/about' },
-  { labelKey: 'aboutCareers',      href: '/about#careers' },
+  { labelKey: 'aboutCareers',      href: '/career' },
 ]
 
 const ADVISORY_LINKS: { labelKey: string; href: LinkHref }[] = [

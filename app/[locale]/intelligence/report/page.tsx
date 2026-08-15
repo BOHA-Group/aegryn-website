@@ -1,7 +1,7 @@
 import Link              from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import type { Metadata }   from 'next'
-import { ArrowUpRight }    from 'lucide-react'
+import { ArrowUpRight, ExternalLink } from 'lucide-react'
 
 export async function generateMetadata({
   params,
@@ -25,6 +25,7 @@ export default async function ReportIndexPage({
   const { locale } = await params
   const t  = await getTranslations({ locale, namespace: 'intelligence.report' })
   const th = await getTranslations({ locale, namespace: 'intelligence.hub' })
+  const tp = await getTranslations({ locale, namespace: 'intelligence.press' })
 
   return (
     <main className="min-h-screen bg-magazine-white">
@@ -96,6 +97,84 @@ export default async function ReportIndexPage({
         <p className="text-label-mag text-magazine-black/25 uppercase tracking-[0.1em] mt-24">
           Next edition — Autumn 2027
         </p>
+      </div>
+
+      {/* They talk about us */}
+      <div className="border-t border-magazine-black/10 bg-magazine-ivory">
+        <div className="max-w-magazine mx-auto px-6 md:px-[120px] py-24">
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-4">
+            {tp('label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-magazine-black mb-16"
+            style={{ fontSize: 'clamp(26px,3.5vw,48px)', lineHeight: 1.05, letterSpacing: '-0.02em' }}
+          >
+            {tp('title')}
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-px bg-magazine-black/10">
+
+            {/* Village de la Justice — subblink */}
+            <article className="bg-magazine-ivory p-10 flex flex-col justify-between gap-8">
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="text-label-mag font-sans font-bold uppercase tracking-[0.14em] text-magazine-black/30">
+                    Village de la Justice
+                  </span>
+                  <span className="w-1 h-1 rounded-full bg-magazine-black/20" />
+                  <span className="text-label-mag text-magazine-accent uppercase tracking-[0.12em]">
+                    Subblink
+                  </span>
+                </div>
+                <h3 className="font-sans font-bold text-magazine-black text-[20px] leading-snug tracking-[-0.01em] mb-4">
+                  {tp('subblink.title')}
+                </h3>
+                <p className="text-body-mag text-magazine-black/60 leading-[1.75] italic border-l-2 border-magazine-accent pl-5">
+                  {tp('subblink.excerpt')}
+                </p>
+                <p className="text-label-mag text-magazine-black/40 mt-4 leading-relaxed">
+                  {tp('subblink.context')}
+                </p>
+              </div>
+              <a
+                href="https://www.village-justice.com/articles/village-justice-vous-propose-faire-auditer-tous-vos-contrats-obtenir-score-des,57640.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-label-mag font-sans font-semibold uppercase tracking-[0.12em] text-magazine-black border-b border-magazine-black/20 pb-1 hover:border-magazine-black transition-colors self-start"
+              >
+                {tp('readArticle')} <ExternalLink size={11} />
+              </a>
+            </article>
+
+            {/* Gala — neediu */}
+            <article className="bg-magazine-ivory p-10 flex flex-col justify-between gap-8">
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="text-label-mag font-sans font-bold uppercase tracking-[0.14em] text-magazine-black/30">
+                    Gala
+                  </span>
+                  <span className="w-1 h-1 rounded-full bg-magazine-black/20" />
+                  <span className="text-label-mag text-magazine-accent uppercase tracking-[0.12em]">
+                    Neediu
+                  </span>
+                </div>
+                <h3 className="font-sans font-bold text-magazine-black text-[20px] leading-snug tracking-[-0.01em] mb-4">
+                  {tp('neediu.title')}
+                </h3>
+                <p className="text-body-mag text-magazine-black/60 leading-[1.75] italic border-l-2 border-magazine-accent pl-5">
+                  {tp('neediu.excerpt')}
+                </p>
+                <p className="text-label-mag text-magazine-black/40 mt-4 leading-relaxed">
+                  {tp('neediu.context')}
+                </p>
+              </div>
+              <div className="inline-flex items-center gap-2 text-label-mag font-sans font-semibold uppercase tracking-[0.12em] text-magazine-black/30 self-start">
+                {tp('videoAvailable')}
+              </div>
+            </article>
+
+          </div>
+        </div>
       </div>
     </main>
   )

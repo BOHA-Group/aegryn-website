@@ -116,10 +116,11 @@ const legal: { key: string; href: LinkHref; ns: string; external?: boolean }[] =
   { key: 'sitemap',   href: '/sitemap',         ns: 'legalNav' },
 ]
 
-const companyLinks: { navKey: 'about' | 'career' | 'contact'; href: LinkHref }[] = [
-  { navKey: 'about',   href: '/about' },
-  { navKey: 'career',  href: '/career' },
-  { navKey: 'contact', href: '/contact' },
+const companyLinks: { navKey: 'about' | 'career' | 'contact' | 'magazine'; href: LinkHref }[] = [
+  { navKey: 'about',    href: '/about' },
+  { navKey: 'career',   href: '/career' },
+  { navKey: 'magazine', href: '/intelligence/report' as never },
+  { navKey: 'contact',  href: '/contact' },
 ]
 
 const servicesLinks: { navKey: 'advisory' | 'growWithUs' | 'servicesBuild' | 'servicesAdvisory' | 'servicesAcquisition' | 'servicesAlliances'; href: LinkHref }[] = [
