@@ -46,7 +46,8 @@
     "buildAssets": "Actifs propriétaires",
     "buildEngineering": "Conception d'actifs",
     "comingSoon": "Bientôt disponible",
-    "soon": "Bientôt"
+    "soon": "Bientôt",
+    "intelligence": "Intelligence"
   },
   "hero": {
     "tagline": "Nous refusons qu'un actif solide disparaisse dans une transaction mal préparée.",
@@ -1087,9 +1088,9 @@
     ]
   },
   "transactNarrative": {
-    "label": "Cessions M\u0026A confidentielles",
-    "title": "Certains actifs m\u00e9ritent mieux\nqu'une liste publique.",
-    "desc": "Aegryn n'est pas une plateforme ouverte. C'est un processus de cession offmarket, confidentiel, entre des vendeurs certifi\u00e9s CIFS et des acqu\u00e9reurs pr\u00e9-qualifi\u00e9s.\n\nChaque actif est pr\u00e9sent\u00e9 sous mandat exclusif. Chaque acqu\u00e9reur a prouv\u00e9 sa capacit\u00e9 et son s\u00e9rieux. La transaction se noue sur proposition structur\u00e9e, pas aux ench\u00e8res.",
+    "label": "Cessions M&A confidentielles",
+    "title": "Certains actifs méritent mieux\nqu'une liste publique.",
+    "desc": "Aegryn n'est pas une plateforme ouverte. C'est un processus de cession offmarket, confidentiel, entre des vendeurs certifiés CIFS et des acquéreurs pré-qualifiés.\n\nChaque actif est présenté sous mandat exclusif. Chaque acquéreur a prouvé sa capacité et son sérieux. La transaction se noue sur proposition structurée, pas aux enchères.",
     "stat1Val": "< 25%",
     "stat1Label": "Taux d'acceptation des actifs soumis",
     "stat2Val": "60 j max",
@@ -2713,22 +2714,38 @@
       ],
       "processTitle": "PROCESSUS D'ACQUISITION",
       "processSteps": [
-        { "num": "01", "title": "Qualification", "desc": "Vous soumettez votre profil et vos critères. Aegryn valide votre qualification sous 48h ouvrées." },
-        { "num": "02", "title": "Accès catalogue", "desc": "Vous accédez aux fiches actifs certifiées correspondant à vos critères. NDA signé au préalable." },
-        { "num": "03", "title": "Offre & due diligence", "desc": "Vous formulez une offre structurée. Aegryn organise la due diligence dans un cadre sécurisé." },
-        { "num": "04", "title": "Closing", "desc": "Escrow institutionnel, transfert sécurisé, closing sous droit suisse." }
+        {
+          "num": "01",
+          "title": "Qualification",
+          "desc": "Vous soumettez votre profil et vos critères. Aegryn valide votre qualification sous 48h ouvrées."
+        },
+        {
+          "num": "02",
+          "title": "Accès catalogue",
+          "desc": "Vous accédez aux fiches actifs certifiées correspondant à vos critères. NDA signé au préalable."
+        },
+        {
+          "num": "03",
+          "title": "Offre & due diligence",
+          "desc": "Vous formulez une offre structurée. Aegryn organise la due diligence dans un cadre sécurisé."
+        },
+        {
+          "num": "04",
+          "title": "Closing",
+          "desc": "Escrow institutionnel, transfert sécurisé, closing sous droit suisse."
+        }
       ]
     }
   },
   "auction": {
     "meta": {
-      "title": "Cessions M\u0026A — Actifs tech certifi\u00e9s CIFS",
-      "desc": "Processus Aegryn : achetez ou vendez des actifs tech certifi\u00e9s CIFS. Catalogue offmarket, mandat exclusif, transactions encadr\u00e9es."
+      "title": "Cessions M&A — Actifs tech certifiés CIFS",
+      "desc": "Processus Aegryn : achetez ou vendez des actifs tech certifiés CIFS. Catalogue offmarket, mandat exclusif, transactions encadrées."
     },
     "index": {
       "label": "Processus de cession Aegryn",
-      "title": "La plateforme de cession certifi\u00e9e\npour les actifs tech europ\u00e9ens.",
-      "desc": "Pas d'ench\u00e8res en temps r\u00e9el. Un processus offmarket structur\u00e9, r\u00e9serv\u00e9 aux vendeurs certifi\u00e9s CIFS et aux acqu\u00e9reurs pr\u00e9-qualifi\u00e9s. Chaque actif est grad\u00e9. Chaque transaction est encadr\u00e9e par mandat exclusif.",
+      "title": "La plateforme de cession certifiée\npour les actifs tech européens.",
+      "desc": "Pas d'enchères en temps réel. Un processus offmarket structuré, réservé aux vendeurs certifiés CIFS et aux acquéreurs pré-qualifiés. Chaque actif est gradé. Chaque transaction est encadrée par mandat exclusif.",
       "ctaCatalog": "Voir le catalogue",
       "ctaSession": "Le processus",
       "ctaSubmit": "Soumettre un actif",
@@ -2774,8 +2791,8 @@
         },
         {
           "num": "03",
-          "title": "Pr\u00e9sentation",
-          "desc": "L'actif certifi\u00e9 est pr\u00e9sent\u00e9 aux acqu\u00e9reurs qualifi\u00e9s dans le catalogue offmarket. Vous fixez votre prix de cession cible."
+          "title": "Présentation",
+          "desc": "L'actif certifié est présenté aux acquéreurs qualifiés dans le catalogue offmarket. Vous fixez votre prix de cession cible."
         },
         {
           "num": "04",
@@ -2789,10 +2806,10 @@
       "marketCta": "Estimer la valeur de mon actif"
     },
     "catalog": {
-      "label": "Catalogue Aegryn — Actifs certifi\u00e9s CIFS",
-      "title": "Actifs certifi\u00e9s\ndisponibles.",
-      "desc": "Actifs soumis par des vendeurs tiers ayant pass\u00e9 le protocole de certification CIFS Aegryn. Ces actifs ne font pas partie du portefeuille propri\u00e9taire du groupe.",
-      "thirdPartyNote": "Ces actifs sont propos\u00e9s sous mandat exclusif par des vendeurs ind\u00e9pendants certifi\u00e9s. Aegryn agit comme interm\u00e9diaire certifi\u00e9 et organisateur de la transaction — \u00e9quivalent d'un conseil en cession sp\u00e9cialis\u00e9 tech.",
+      "label": "Catalogue Aegryn — Actifs certifiés CIFS",
+      "title": "Actifs certifiés\ndisponibles.",
+      "desc": "Actifs soumis par des vendeurs tiers ayant passé le protocole de certification CIFS Aegryn. Ces actifs ne font pas partie du portefeuille propriétaire du groupe.",
+      "thirdPartyNote": "Ces actifs sont proposés sous mandat exclusif par des vendeurs indépendants certifiés. Aegryn agit comme intermédiaire certifié et organisateur de la transaction — équivalent d'un conseil en cession spécialisé tech.",
       "filterAll": "Tous les grades",
       "filterStar": "AEG ★",
       "filterAAA": "AAA",
@@ -6093,6 +6110,53 @@
       "saved": "Modifications enregistrées.",
       "deleteAccount": "Supprimer le compte",
       "dangerZone": "Zone de danger"
+    }
+  },
+  "intelligence": {
+    "nav": "Intelligence",
+    "hub": {
+      "title": "AEGRYN Intelligence",
+      "desc": "Publications, rapports et analyses sur le marché M&A tech européen.",
+      "reportLabel": "Rapport annuel",
+      "reportDesc": "The AEGRYN — European Tech M&A Intelligence",
+      "subscribeLabel": "Recevoir le rapport",
+      "subscribeDesc": "Abonnez-vous pour recevoir chaque édition annuelle."
+    },
+    "report": {
+      "title": "The AEGRYN Report",
+      "subtitle": "European Tech M&A Intelligence",
+      "tagline": "Rare by selection. Certified to transact.",
+      "edition2026": "Édition 2026 — First Edition",
+      "readOnline": "Explorer en ligne",
+      "downloadPdf": "Feuilleter le PDF",
+      "subscribe": "Recevoir",
+      "ctaEstimate": "Estimer votre actif",
+      "ctaGrade": "Découvrir le Grade",
+      "ctaTitle": "Vous avez construit quelque chose de réel.",
+      "ctaSub": "Nous le certifions. Nous le transactons.",
+      "ctaLine": "AEGRYN — Certified to transact. Switzerland.",
+      "scrollDown": "Défiler",
+      "source": "Source",
+      "estimatedGrade": "Grade AEGRYN estimé",
+      "whatMadeItWork": "Ce qui a fonctionné",
+      "disclaimer": "Toutes les analyses de deals privés sont basées sur des informations publiques et des estimations AEGRYN. Elles ne constituent pas un conseil en investissement.",
+      "indexNote": "L'AEGRYN Index gagnera en profondeur à chaque édition, à mesure que nos données de certification s'accumulent.",
+      "meta": {
+        "title": "The AEGRYN Report 2026 — European Tech M&A Intelligence",
+        "description": "Rapport annuel de référence sur le marché M&A tech européen. Données, analyses et perspectives par AEGRYN — l'agence de certification et transaction d'actifs tech."
+      }
+    },
+    "subscribe": {
+      "title": "Recevoir The AEGRYN",
+      "desc": "Chaque édition annuelle directement dans votre boîte mail. Accès libre, aucun engagement.",
+      "placeholder": "Votre adresse email",
+      "cta": "S'abonner",
+      "success": "Merci. Vous recevrez la prochaine édition dès sa publication.",
+      "error": "Une erreur est survenue. Veuillez réessayer.",
+      "meta": {
+        "title": "S'abonner à The AEGRYN Report",
+        "description": "Abonnez-vous au rapport annuel AEGRYN sur le marché M&A tech européen."
+      }
     }
   }
 }

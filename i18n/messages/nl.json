@@ -8,7 +8,7 @@
     "growWithUs": "Partners",
     "career": "Carrières",
     "contact": "Contact",
-    "auction": "M\u0026A Transacties",
+    "auction": "M&A Transacties",
     "transact": "TRANSACT",
     "transactCatalog": "Offmarket-catalogus",
     "transactSell": "Verkoopsmandaat",
@@ -53,7 +53,8 @@
     "buildAssets": "Eigen assets",
     "buildEngineering": "Asset-engineering",
     "comingSoon": "Binnenkort beschikbaar",
-    "soon": "Binnenkort"
+    "soon": "Binnenkort",
+    "intelligence": "Intelligence"
   },
   "hero": {
     "tagline": "Wij weigeren dat een solide asset verdwijnt in een slecht voorbereide transactie.",
@@ -2599,10 +2600,26 @@
       ],
       "processTitle": "ACQUISITIEPROCES",
       "processSteps": [
-        { "num": "01", "title": "Kwalificatie", "desc": "U dient uw profiel en criteria in. Aegryn valideert uw kwalificatie binnen 48 werkuren." },
-        { "num": "02", "title": "Catalogustoegang", "desc": "U krijgt toegang tot gecertificeerde asset-fiches die overeenkomen met uw criteria. NDA vooraf ondertekend." },
-        { "num": "03", "title": "Offerte en due diligence", "desc": "U dient een gestructureerde offerte in. Aegryn organiseert de due diligence in een veilig kader." },
-        { "num": "04", "title": "Afsluiting", "desc": "Institutionele escrow, veilige overdracht, afsluiting onder Zwitsers recht." }
+        {
+          "num": "01",
+          "title": "Kwalificatie",
+          "desc": "U dient uw profiel en criteria in. Aegryn valideert uw kwalificatie binnen 48 werkuren."
+        },
+        {
+          "num": "02",
+          "title": "Catalogustoegang",
+          "desc": "U krijgt toegang tot gecertificeerde asset-fiches die overeenkomen met uw criteria. NDA vooraf ondertekend."
+        },
+        {
+          "num": "03",
+          "title": "Offerte en due diligence",
+          "desc": "U dient een gestructureerde offerte in. Aegryn organiseert de due diligence in een veilig kader."
+        },
+        {
+          "num": "04",
+          "title": "Afsluiting",
+          "desc": "Institutionele escrow, veilige overdracht, afsluiting onder Zwitsers recht."
+        }
       ]
     }
   },
@@ -6108,6 +6125,53 @@
       "saved": "Wijzigingen opgeslagen.",
       "deleteAccount": "Account verwijderen",
       "dangerZone": "Gevarenzone"
+    }
+  },
+  "intelligence": {
+    "nav": "Intelligence",
+    "hub": {
+      "title": "AEGRYN Intelligence",
+      "desc": "Publicaties, rapporten en analyses over de Europese tech M&A-markt.",
+      "reportLabel": "Jaarrapport",
+      "reportDesc": "The AEGRYN — European Tech M&A Intelligence",
+      "subscribeLabel": "Rapport ontvangen",
+      "subscribeDesc": "Abonneer u om elke jaarlijkse editie te ontvangen."
+    },
+    "report": {
+      "title": "The AEGRYN Report",
+      "subtitle": "European Tech M&A Intelligence",
+      "tagline": "Rare by selection. Certified to transact.",
+      "edition2026": "Editie 2026 — Eerste editie",
+      "readOnline": "Online lezen",
+      "downloadPdf": "PDF bekijken",
+      "subscribe": "Abonneren",
+      "ctaEstimate": "Uw asset schatten",
+      "ctaGrade": "De Grade ontdekken",
+      "ctaTitle": "U heeft iets echts gebouwd.",
+      "ctaSub": "Wij certificeren het. Wij transacteren het.",
+      "ctaLine": "AEGRYN — Certified to transact. Switzerland.",
+      "scrollDown": "Scrollen",
+      "source": "Bron",
+      "estimatedGrade": "Geschatte AEGRYN-grade",
+      "whatMadeItWork": "Wat het liet werken",
+      "disclaimer": "Alle analyses van privé-deals zijn gebaseerd op publieke informatie en AEGRYN-schattingen. Ze vormen geen beleggingsadvies.",
+      "indexNote": "De AEGRYN Index zal dieper worden met elke jaarlijkse editie naarmate onze certificeringsdatabase groeit.",
+      "meta": {
+        "title": "The AEGRYN Report 2026 — European Tech M&A Intelligence",
+        "description": "Jaarlijks referentierapport over de Europese tech M&A-markt. Gegevens, analyses en perspectieven van AEGRYN."
+      }
+    },
+    "subscribe": {
+      "title": "The AEGRYN ontvangen",
+      "desc": "Elke jaarlijkse editie direct in uw inbox. Vrije toegang, geen verplichting.",
+      "placeholder": "Uw e-mailadres",
+      "cta": "Abonneren",
+      "success": "Dank u. U ontvangt de volgende editie bij publicatie.",
+      "error": "Er is een fout opgetreden. Probeer het opnieuw.",
+      "meta": {
+        "title": "Abonneren op The AEGRYN Report",
+        "description": "Abonneer u op het jaarlijkse AEGRYN-rapport over de Europese tech M&A-markt."
+      }
     }
   }
 }

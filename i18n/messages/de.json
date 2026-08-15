@@ -8,7 +8,7 @@
     "growWithUs": "Partner",
     "career": "Karriere",
     "contact": "Kontakt",
-    "auction": "M\u0026A Transaktionen",
+    "auction": "M&A Transaktionen",
     "transact": "TRANSACT",
     "transactCatalog": "Offmarket-Katalog",
     "transactSell": "Verkaufsmandat",
@@ -53,7 +53,8 @@
     "buildAssets": "Eigene Assets",
     "buildEngineering": "Asset-Ingenieurwesen",
     "comingSoon": "Demnächst verfügbar",
-    "soon": "Demnächst"
+    "soon": "Demnächst",
+    "intelligence": "Intelligence"
   },
   "hero": {
     "tagline": "Wir weigern uns, dass ein solides Asset in einer schlecht vorbereiteten Transaktion verschwindet.",
@@ -2599,10 +2600,26 @@
       ],
       "processTitle": "AKQUISITIONSPROZESS",
       "processSteps": [
-        { "num": "01", "title": "Qualifizierung", "desc": "Sie reichen Ihr Profil und Ihre Kriterien ein. Aegryn validiert Ihre Qualifizierung innerhalb von 48 Geschäftsstunden." },
-        { "num": "02", "title": "Katalogzugang", "desc": "Sie erhalten Zugang zu zertifizierten Asset-Datenblättern, die Ihren Kriterien entsprechen. NDA vorher unterzeichnet." },
-        { "num": "03", "title": "Angebot & Due Diligence", "desc": "Sie legen ein strukturiertes Angebot vor. Aegryn organisiert die Due Diligence in einem sicheren Rahmen." },
-        { "num": "04", "title": "Abschluss", "desc": "Institutionelles Treuhand, sicherer Transfer, Abschluss nach Schweizer Recht." }
+        {
+          "num": "01",
+          "title": "Qualifizierung",
+          "desc": "Sie reichen Ihr Profil und Ihre Kriterien ein. Aegryn validiert Ihre Qualifizierung innerhalb von 48 Geschäftsstunden."
+        },
+        {
+          "num": "02",
+          "title": "Katalogzugang",
+          "desc": "Sie erhalten Zugang zu zertifizierten Asset-Datenblättern, die Ihren Kriterien entsprechen. NDA vorher unterzeichnet."
+        },
+        {
+          "num": "03",
+          "title": "Angebot & Due Diligence",
+          "desc": "Sie legen ein strukturiertes Angebot vor. Aegryn organisiert die Due Diligence in einem sicheren Rahmen."
+        },
+        {
+          "num": "04",
+          "title": "Abschluss",
+          "desc": "Institutionelles Treuhand, sicherer Transfer, Abschluss nach Schweizer Recht."
+        }
       ]
     }
   },
@@ -6108,6 +6125,53 @@
       "saved": "Änderungen gespeichert.",
       "deleteAccount": "Konto löschen",
       "dangerZone": "Gefahrenzone"
+    }
+  },
+  "intelligence": {
+    "nav": "Intelligence",
+    "hub": {
+      "title": "AEGRYN Intelligence",
+      "desc": "Publikationen, Berichte und Analysen zum europäischen Tech-M&A-Markt.",
+      "reportLabel": "Jahresbericht",
+      "reportDesc": "The AEGRYN — European Tech M&A Intelligence",
+      "subscribeLabel": "Bericht erhalten",
+      "subscribeDesc": "Abonnieren Sie jede Jahresausgabe."
+    },
+    "report": {
+      "title": "The AEGRYN Report",
+      "subtitle": "European Tech M&A Intelligence",
+      "tagline": "Rare by selection. Certified to transact.",
+      "edition2026": "Ausgabe 2026 — Erste Ausgabe",
+      "readOnline": "Online lesen",
+      "downloadPdf": "PDF ansehen",
+      "subscribe": "Abonnieren",
+      "ctaEstimate": "Asset bewerten",
+      "ctaGrade": "Grade entdecken",
+      "ctaTitle": "Sie haben etwas Echtes aufgebaut.",
+      "ctaSub": "Wir zertifizieren es. Wir transaktionieren es.",
+      "ctaLine": "AEGRYN — Certified to transact. Switzerland.",
+      "scrollDown": "Scrollen",
+      "source": "Quelle",
+      "estimatedGrade": "Geschätzter AEGRYN-Grade",
+      "whatMadeItWork": "Was funktioniert hat",
+      "disclaimer": "Alle Analysen privater Deals basieren auf öffentlichen Informationen und AEGRYN-Schätzungen. Sie stellen keine Anlageberatung dar.",
+      "indexNote": "Der AEGRYN Index wird mit jeder Ausgabe tiefgründiger, wenn unsere Zertifizierungsdatenbank wächst.",
+      "meta": {
+        "title": "The AEGRYN Report 2026 — European Tech M&A Intelligence",
+        "description": "Jährlicher Referenzbericht über den europäischen Tech-M&A-Markt. Daten, Analysen und Perspektiven von AEGRYN."
+      }
+    },
+    "subscribe": {
+      "title": "The AEGRYN erhalten",
+      "desc": "Jede Jahresausgabe direkt in Ihr Postfach. Kostenlos, keine Verpflichtung.",
+      "placeholder": "Ihre E-Mail-Adresse",
+      "cta": "Abonnieren",
+      "success": "Danke. Sie erhalten die nächste Ausgabe bei Veröffentlichung.",
+      "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+      "meta": {
+        "title": "The AEGRYN Report abonnieren",
+        "description": "Abonnieren Sie den AEGRYN-Jahresbericht über den europäischen Tech-M&A-Markt."
+      }
     }
   }
 }

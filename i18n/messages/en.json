@@ -8,7 +8,7 @@
     "growWithUs": "Partners",
     "career": "Careers",
     "contact": "Contact",
-    "auction": "M\u0026A Transactions",
+    "auction": "M&A Transactions",
     "transact": "TRANSACT",
     "transactCatalog": "Offmarket catalog",
     "transactSell": "Sale mandate",
@@ -53,7 +53,8 @@
     "buildAssets": "Proprietary Assets",
     "buildEngineering": "Asset Engineering",
     "comingSoon": "Coming soon",
-    "soon": "Soon"
+    "soon": "Soon",
+    "intelligence": "Intelligence"
   },
   "hero": {
     "tagline": "We refuse to let a solid asset disappear into a poorly prepared transaction.",
@@ -2700,10 +2701,26 @@
       ],
       "processTitle": "ACQUISITION PROCESS",
       "processSteps": [
-        { "num": "01", "title": "Qualification", "desc": "You submit your profile and criteria. Aegryn validates your qualification within 48 business hours." },
-        { "num": "02", "title": "Catalog access", "desc": "You access certified asset sheets matching your criteria. NDA signed beforehand." },
-        { "num": "03", "title": "Offer & due diligence", "desc": "You submit a structured offer. Aegryn organises due diligence in a secure framework." },
-        { "num": "04", "title": "Closing", "desc": "Institutional escrow, secure transfer, closing under Swiss law." }
+        {
+          "num": "01",
+          "title": "Qualification",
+          "desc": "You submit your profile and criteria. Aegryn validates your qualification within 48 business hours."
+        },
+        {
+          "num": "02",
+          "title": "Catalog access",
+          "desc": "You access certified asset sheets matching your criteria. NDA signed beforehand."
+        },
+        {
+          "num": "03",
+          "title": "Offer & due diligence",
+          "desc": "You submit a structured offer. Aegryn organises due diligence in a secure framework."
+        },
+        {
+          "num": "04",
+          "title": "Closing",
+          "desc": "Institutional escrow, secure transfer, closing under Swiss law."
+        }
       ]
     }
   },
@@ -6085,6 +6102,53 @@
       "saved": "Changes saved.",
       "deleteAccount": "Delete account",
       "dangerZone": "Danger zone"
+    }
+  },
+  "intelligence": {
+    "nav": "Intelligence",
+    "hub": {
+      "title": "AEGRYN Intelligence",
+      "desc": "Publications, reports and analysis on the European tech M&A market.",
+      "reportLabel": "Annual Report",
+      "reportDesc": "The AEGRYN — European Tech M&A Intelligence",
+      "subscribeLabel": "Receive the report",
+      "subscribeDesc": "Subscribe to receive each annual edition."
+    },
+    "report": {
+      "title": "The AEGRYN Report",
+      "subtitle": "European Tech M&A Intelligence",
+      "tagline": "Rare by selection. Certified to transact.",
+      "edition2026": "Edition 2026 — First Edition",
+      "readOnline": "Read online",
+      "downloadPdf": "Browse PDF",
+      "subscribe": "Subscribe",
+      "ctaEstimate": "Estimate your asset",
+      "ctaGrade": "Discover the Grade",
+      "ctaTitle": "You built something real.",
+      "ctaSub": "We certify it. We transact it.",
+      "ctaLine": "AEGRYN — Certified to transact. Switzerland.",
+      "scrollDown": "Scroll",
+      "source": "Source",
+      "estimatedGrade": "Estimated AEGRYN Grade",
+      "whatMadeItWork": "What made it work",
+      "disclaimer": "All private deal analyses are based on public information and AEGRYN estimates. They do not constitute investment advice.",
+      "indexNote": "The AEGRYN Index will deepen with each annual edition, as our certification database grows.",
+      "meta": {
+        "title": "The AEGRYN Report 2026 — European Tech M&A Intelligence",
+        "description": "Annual reference report on the European tech M&A market. Data, analysis and perspectives by AEGRYN."
+      }
+    },
+    "subscribe": {
+      "title": "Receive The AEGRYN",
+      "desc": "Each annual edition directly in your inbox. Free access, no commitment.",
+      "placeholder": "Your email address",
+      "cta": "Subscribe",
+      "success": "Thank you. You will receive the next edition upon publication.",
+      "error": "An error occurred. Please try again.",
+      "meta": {
+        "title": "Subscribe to The AEGRYN Report",
+        "description": "Subscribe to the AEGRYN annual report on the European tech M&A market."
+      }
     }
   }
 }

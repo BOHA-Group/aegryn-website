@@ -8,7 +8,7 @@
     "growWithUs": "Socios",
     "career": "Carreras",
     "contact": "Contacto",
-    "auction": "Transacciones M\u0026A",
+    "auction": "Transacciones M&A",
     "transact": "TRANSACT",
     "transactCatalog": "Catálogo offmarket",
     "transactSell": "Mandato de venta",
@@ -53,7 +53,8 @@
     "buildAssets": "Activos propietarios",
     "buildEngineering": "Ingeniería de activos",
     "comingSoon": "Próximamente",
-    "soon": "Pronto"
+    "soon": "Pronto",
+    "intelligence": "Inteligencia"
   },
   "hero": {
     "tagline": "Nos negamos a que un activo sólido desaparezca en una transacción mal preparada.",
@@ -2599,10 +2600,26 @@
       ],
       "processTitle": "PROCESO DE ADQUISICIÓN",
       "processSteps": [
-        { "num": "01", "title": "Cualificación", "desc": "Envía su perfil y criterios. Aegryn valida su cualificación en 48 horas hábiles." },
-        { "num": "02", "title": "Acceso al catálogo", "desc": "Accede a las fichas de activos certificados que corresponden a sus criterios. NDA firmado previamente." },
-        { "num": "03", "title": "Oferta y due diligence", "desc": "Presenta una oferta estructurada. Aegryn organiza la due diligence en un marco seguro." },
-        { "num": "04", "title": "Cierre", "desc": "Escrow institucional, transferencia segura, cierre bajo ley suiza." }
+        {
+          "num": "01",
+          "title": "Cualificación",
+          "desc": "Envía su perfil y criterios. Aegryn valida su cualificación en 48 horas hábiles."
+        },
+        {
+          "num": "02",
+          "title": "Acceso al catálogo",
+          "desc": "Accede a las fichas de activos certificados que corresponden a sus criterios. NDA firmado previamente."
+        },
+        {
+          "num": "03",
+          "title": "Oferta y due diligence",
+          "desc": "Presenta una oferta estructurada. Aegryn organiza la due diligence en un marco seguro."
+        },
+        {
+          "num": "04",
+          "title": "Cierre",
+          "desc": "Escrow institucional, transferencia segura, cierre bajo ley suiza."
+        }
       ]
     }
   },
@@ -6108,6 +6125,53 @@
       "saved": "Cambios guardados.",
       "deleteAccount": "Eliminar cuenta",
       "dangerZone": "Zona de peligro"
+    }
+  },
+  "intelligence": {
+    "nav": "Inteligencia",
+    "hub": {
+      "title": "AEGRYN Inteligencia",
+      "desc": "Publicaciones, informes y análisis sobre el mercado europeo de M&A tecnológico.",
+      "reportLabel": "Informe anual",
+      "reportDesc": "The AEGRYN — European Tech M&A Intelligence",
+      "subscribeLabel": "Recibir el informe",
+      "subscribeDesc": "Suscríbase para recibir cada edición anual."
+    },
+    "report": {
+      "title": "The AEGRYN Report",
+      "subtitle": "European Tech M&A Intelligence",
+      "tagline": "Rare by selection. Certified to transact.",
+      "edition2026": "Edición 2026 — Primera edición",
+      "readOnline": "Leer en línea",
+      "downloadPdf": "Ver PDF",
+      "subscribe": "Suscribirse",
+      "ctaEstimate": "Estimar su activo",
+      "ctaGrade": "Descubrir el Grade",
+      "ctaTitle": "Ha construido algo real.",
+      "ctaSub": "Lo certificamos. Lo transaccionamos.",
+      "ctaLine": "AEGRYN — Certified to transact. Switzerland.",
+      "scrollDown": "Desplazar",
+      "source": "Fuente",
+      "estimatedGrade": "Grade AEGRYN estimado",
+      "whatMadeItWork": "Lo que funcionó",
+      "disclaimer": "Todos los análisis de operaciones privadas se basan en información pública y estimaciones de AEGRYN. No constituyen asesoramiento de inversión.",
+      "indexNote": "El AEGRYN Index se profundizará con cada edición anual a medida que crezca nuestra base de datos de certificación.",
+      "meta": {
+        "title": "The AEGRYN Report 2026 — European Tech M&A Intelligence",
+        "description": "Informe anual de referencia sobre el mercado europeo de M&A tecnológico. Datos, análisis y perspectivas de AEGRYN."
+      }
+    },
+    "subscribe": {
+      "title": "Recibir The AEGRYN",
+      "desc": "Cada edición anual directamente en su bandeja de entrada. Acceso libre, sin compromiso.",
+      "placeholder": "Su dirección de correo electrónico",
+      "cta": "Suscribirse",
+      "success": "Gracias. Recibirá la próxima edición en cuanto se publique.",
+      "error": "Se ha producido un error. Por favor, inténtelo de nuevo.",
+      "meta": {
+        "title": "Suscribirse a The AEGRYN Report",
+        "description": "Suscríbase al informe anual AEGRYN sobre el mercado europeo de M&A tecnológico."
+      }
     }
   }
 }

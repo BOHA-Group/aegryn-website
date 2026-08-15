@@ -61,12 +61,29 @@ const config: Config = {
           'border-h':'#CBD5E1',
           glass:    'rgba(0,0,0,0.02)',
         },
+        magazine: {
+          black:  '#0A0A0A',
+          white:  '#FFFFFF',
+          ivory:  '#F4F3F0',
+          accent: '#2EAF7D',
+        },
       },
       fontFamily: {
         display: ['var(--font-body)', 'Plus Jakarta Sans', 'sans-serif'],
         sans:    ['var(--font-body)', 'Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         mono:    ['var(--font-body)', 'Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         unbounded: ['var(--font-unbounded)', 'sans-serif'],
+      },
+      fontSize: {
+        'display':  ['clamp(64px,8vw,120px)', { lineHeight: '0.92', letterSpacing: '-0.03em', fontWeight: '800' }],
+        'h1-mag':   ['clamp(36px,5vw,64px)',  { lineHeight: '1.08', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'h2-mag':   ['clamp(22px,3vw,36px)',  { lineHeight: '1.2',  letterSpacing: '-0.01em', fontWeight: '600' }],
+        'body-mag': ['18px',                   { lineHeight: '1.7',  letterSpacing: '0',       fontWeight: '400' }],
+        'label-mag':['12px',                   { lineHeight: '1.4',  letterSpacing: '0.08em',  fontWeight: '500' }],
+      },
+      maxWidth: {
+        magazine: '1440px',
+        prose:    '720px',
       },
       letterSpacing: {
         tighter: '-0.03em',
