@@ -7,7 +7,7 @@ import Link                    from 'next/link'
 import { createServiceClient } from '@/lib/supabase'
 import type { Metadata }       from 'next'
 
-export const metadata: Metadata = { title: 'Buyers — Auction Admin', robots: { index: false, follow: false } }
+export const metadata: Metadata = { title: 'Acquéreurs — Transact Admin', robots: { index: false, follow: false } }
 
 const KYC_LABEL: Record<string, string> = {
   pending:   'En attente',
@@ -24,7 +24,7 @@ const KYC_COLOR: Record<string, string> = {
   expired:   'bg-gray-100 text-gray-500',
 }
 
-export default async function AuctionBuyersPage({
+export default async function TransactBuyersPage({
   searchParams,
 }: {
   searchParams: Promise<{ kyc?: string }>
@@ -61,7 +61,7 @@ export default async function AuctionBuyersPage({
 
         <div className="flex items-center justify-between mb-6">
           <div>
-            <p className="text-xs text-gray-400 font-mono uppercase tracking-widest mb-1">Auction Admin</p>
+            <p className="text-xs text-gray-400 font-mono uppercase tracking-widest mb-1">Transact Admin</p>
             <h1 className="text-xl font-bold text-gray-900">Acquéreurs & KYC</h1>
           </div>
           <Link href={`/admin/auction${qs}`} className="text-xs text-gray-400 hover:text-gray-700">← Dashboard</Link>

@@ -1,14 +1,14 @@
 /**
  * lib/auctionAccess.ts
  *
- * Vérifie si un utilisateur a les droits d'accès au catalogue auction tiers.
- * Prérequis : compte créé + NDA Aegryn Auction signé + CGV acceptées.
+ * Vérifie si un utilisateur a les droits d'accès au catalogue TRANSACT.
+ * Prérequis : compte créé + NDA Aegryn TRANSACT signé + CGV acceptées.
  * Ces deux champs sont renseignés manuellement par l'admin sur profiles.
  */
 import { createServiceClient } from '@/lib/supabase'
 
 export type AuctionAccessStatus =
-  | 'ok'              // NDA + CGV validés → accès catalogue complet
+  | 'ok'              // NDA + CGV validés → accès catalogue TRANSACT complet
   | 'not_authenticated' // non connecté
   | 'pending_nda'     // connecté, NDA non encore signé
   | 'pending_cgv'     // NDA signé mais CGV non acceptées

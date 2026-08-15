@@ -6,7 +6,7 @@ import { BuildStrip }        from '@/components/sections/BuildStrip'
 import { GradeStrip }        from '@/components/sections/GradeStrip'
 import { MissionVideoSection } from '@/components/sections/MissionVideoSection'
 import { EcosystemDomains }  from '@/components/sections/EcosystemDomains'
-import { AuctionNarrative }  from '@/components/sections/AuctionNarrative'
+import { TransactNarrative } from '@/components/sections/AuctionNarrative'
 import { MarketStatStrip }   from '@/components/sections/MarketStatStrip'
 import { WhyUseApps }        from '@/components/sections/WhyUseApps'
 import { AcqSupportStrip }   from '@/components/sections/AcqSupportStrip'
@@ -54,7 +54,7 @@ export default async function HomePage(_props: Props) {
 
       {/* ── 4. Enchères ────────────────────────────────────── */}
       <EcosystemDomains />
-      <AuctionNarrative />
+      <TransactNarrative />
       <MarketStatStrip />
       <WhyUseApps />
 

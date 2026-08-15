@@ -7,7 +7,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { requireAdmin }        from '@/lib/adminAuth'
 import type { Metadata }       from 'next'
 
-export const metadata: Metadata = { title: 'Séquestres — Auction Admin', robots: { index: false, follow: false } }
+export const metadata: Metadata = { title: 'Séquestres — Transact Admin', robots: { index: false, follow: false } }
 
 const STATUS_LABEL: Record<string, string> = {
   awaited:  'En attente de virement',
@@ -24,7 +24,7 @@ const STATUS_COLOR: Record<string, string> = {
   forfeited:'bg-red-50 text-red-600',
 }
 
-export default async function AuctionSequesters({
+export default async function TransactSequesters({
   searchParams,
 }: {
   searchParams: Promise<{ status?: string }>
@@ -60,7 +60,7 @@ export default async function AuctionSequesters({
 
         <div className="flex items-center justify-between mb-6">
           <div>
-            <p className="text-xs text-gray-400 font-mono uppercase tracking-widest mb-1">Auction Admin</p>
+            <p className="text-xs text-gray-400 font-mono uppercase tracking-widest mb-1">Transact Admin</p>
             <h1 className="text-xl font-bold text-gray-900">Séquestres — Cautions bancaires</h1>
           </div>
           <Link href={`/admin/auction${qs}`} className="text-xs text-gray-400 hover:text-gray-700">← Dashboard</Link>

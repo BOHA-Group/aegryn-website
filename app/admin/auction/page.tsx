@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Auction Admin — Aegryn',
+  title: 'Transact Admin — Aegryn',
   robots: { index: false, follow: false },
 }
 
@@ -29,7 +29,7 @@ function fmtChf(n: number | null | undefined) {
   return `CHF ${new Intl.NumberFormat('fr-CH').format(n)}`
 }
 
-export default async function AuctionAdminPage() {
+export default async function TransactAdminPage() {
   await requireAdmin()
 
   const qs   = ''
@@ -66,10 +66,10 @@ export default async function AuctionAdminPage() {
   const closedLots  = (lots ?? []).filter(l => l.session_closes_at && new Date(l.session_closes_at as string) < now)
 
   const MODULES = [
-    { href: `/admin/auction/lots${qs}`,       icon: Gavel,       title: 'Gestion des lots',   desc: `${(lots ?? []).length} actifs · ${activeLots.length} session(s) active(s)`, badge: draftLots.length, badgeLabel: 'brouillons' },
-    { href: `/admin/auction/buyers${qs}`,     icon: Users,       title: 'Acquéreurs & KYC',   desc: 'Vérification identité + capacité financière', badge: kycPending ?? 0, badgeLabel: 'KYC en attente' },
-    { href: `/admin/auction/requests${qs}`,   icon: FileText,    title: 'Demandes dossier',   desc: 'Approbation accès dossier complet', badge: requestsPending ?? 0, badgeLabel: 'en attente' },
-    { href: `/admin/auction/bids${qs}`,       icon: TrendingUp,  title: 'Offres (sealed bid)', desc: 'Appel d\'offres fermé — revue et adjudication', badge: bidsSubmitted ?? 0, badgeLabel: 'à examiner' },
+    { href: `/admin/auction/lots${qs}`,       icon: Gavel,       title: 'Gestion des actifs',  desc: `${(lots ?? []).length} actifs · ${activeLots.length} session(s) active(s)`, badge: draftLots.length, badgeLabel: 'brouillons' },
+    { href: `/admin/auction/buyers${qs}`,     icon: Users,       title: 'Acquéreurs & KYC',    desc: 'Vérification identité + capacité financière', badge: kycPending ?? 0, badgeLabel: 'KYC en attente' },
+    { href: `/admin/auction/requests${qs}`,   icon: FileText,    title: 'Demandes dossier',    desc: 'Approbation accès dossier complet', badge: requestsPending ?? 0, badgeLabel: 'en attente' },
+    { href: `/admin/auction/bids${qs}`,       icon: TrendingUp,  title: 'Offres (appel fermé)', desc: 'Appel d\'offres fermé — revue et sélection', badge: bidsSubmitted ?? 0, badgeLabel: 'à examiner' },
     { href: `/admin/auction/sequesters${qs}`, icon: Banknote,    title: 'Séquestres / cautions', desc: 'Suivi des cautions bancaires', badge: sequesters ?? 0, badgeLabel: 'en attente' },
   ]
 
@@ -81,9 +81,9 @@ export default async function AuctionAdminPage() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <p className="text-xs font-mono uppercase tracking-widest text-gray-400 mb-1">
-              Aegryn Auction · Back-office
+              Aegryn Transact · Back-office
             </p>
-            <h1 className="text-2xl font-bold text-gray-900">Tableau de bord Auction</h1>
+            <h1 className="text-2xl font-bold text-gray-900">Tableau de bord Transact</h1>
           </div>
           <Link
             href={`/admin${qs}`}
@@ -136,7 +136,7 @@ export default async function AuctionAdminPage() {
         {/* Lots table */}
         <div className="bg-white border border-gray-200 rounded-sm overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
-            <h2 className="font-semibold text-gray-900 text-sm">Lots Aegryn Auction</h2>
+            <h2 className="font-semibold text-gray-900 text-sm">Actifs Aegryn Transact</h2>
             <Link href={`/admin/auction/lots${qs}`} className="text-xs text-gray-400 hover:text-gray-700">
               Gérer →
             </Link>

@@ -7,14 +7,14 @@ import { createServiceClient } from '@/lib/supabase'
 import { requireAdmin }        from '@/lib/adminAuth'
 import type { Metadata }       from 'next'
 
-export const metadata: Metadata = { title: 'Lots — Auction Admin', robots: { index: false, follow: false } }
+export const metadata: Metadata = { title: 'Actifs — Transact Admin', robots: { index: false, follow: false } }
 
 const GRADE_COLORS: Record<string, string> = {
   '★':  'text-emerald-600', AAA: 'text-yellow-600', AA: 'text-gray-500',
   A:    'text-blue-600',    B:   'text-orange-500',
 }
 
-export default async function AuctionLotsPage({
+export default async function TransactLotsPage({
   searchParams,
 }: {
   searchParams: Promise<{ status?: string; grade?: string }>
@@ -50,8 +50,8 @@ export default async function AuctionLotsPage({
 
         <div className="flex items-center justify-between mb-6">
           <div>
-            <p className="text-xs text-gray-400 font-mono uppercase tracking-widest mb-1">Auction Admin</p>
-            <h1 className="text-xl font-bold text-gray-900">Gestion des lots</h1>
+            <p className="text-xs text-gray-400 font-mono uppercase tracking-widest mb-1">Transact Admin</p>
+            <h1 className="text-xl font-bold text-gray-900">Gestion des actifs</h1>
           </div>
           <Link href={`/admin/auction${qs}`} className="text-xs text-gray-400 hover:text-gray-700">← Dashboard</Link>
         </div>

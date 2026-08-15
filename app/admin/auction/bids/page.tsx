@@ -7,7 +7,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { requireAdmin }        from '@/lib/adminAuth'
 import type { Metadata }       from 'next'
 
-export const metadata: Metadata = { title: 'Bids — Auction Admin', robots: { index: false, follow: false } }
+export const metadata: Metadata = { title: 'Offres — Transact Admin', robots: { index: false, follow: false } }
 
 const STATUS_LABEL: Record<string, string> = {
   submitted:   'Soumise',
@@ -24,7 +24,7 @@ const STATUS_COLOR: Record<string, string> = {
   withdrawn:   'bg-gray-100 text-gray-500',
 }
 
-export default async function AuctionBidsPage({
+export default async function TransactBidsPage({
   searchParams,
 }: {
   searchParams: Promise<{ status?: string; asset?: string }>
@@ -60,15 +60,15 @@ export default async function AuctionBidsPage({
 
         <div className="flex items-center justify-between mb-6">
           <div>
-            <p className="text-xs text-gray-400 font-mono uppercase tracking-widest mb-1">Auction Admin</p>
-            <h1 className="text-xl font-bold text-gray-900">Offres scellées — Appel d'offres fermé</h1>
+            <p className="text-xs text-gray-400 font-mono uppercase tracking-widest mb-1">Transact Admin</p>
+            <h1 className="text-xl font-bold text-gray-900">Offres — Appel d'offres fermé</h1>
           </div>
           <Link href={`/admin/auction${qs}`} className="text-xs text-gray-400 hover:text-gray-700">← Dashboard</Link>
         </div>
 
         {/* Note méthodologique */}
         <div className="bg-amber-50 border border-amber-200 rounded-sm px-5 py-4 mb-6 text-xs text-amber-800">
-          <strong>Modèle sealed bid :</strong> Les montants des offres sont visibles uniquement par l'admin.
+          <strong>Processus d'offres fermées :</strong> Les montants des offres sont visibles uniquement par l'admin.
           La mise à prix (reserve_price) doit être atteinte pour qu'une offre soit éligible.
           En cas d'égalité, Aegryn sélectionne sur critères qualitatifs (conditions, capacité, KYC).
         </div>

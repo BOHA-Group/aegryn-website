@@ -1,15 +1,15 @@
 /**
  * POST /api/auction/bid/submit
- * Soumettre une offre scellée sur un lot de la session Aegryn TRANSACT.
+ * Soumettre une offre sur un actif de la session Aegryn TRANSACT.
  *
  * Règles appliquées côté serveur :
- *  1. Auth obligatoire + accès dossier actif (auction_asset_access)
+ *  1. Auth obligatoire + accès dossier actif (transact_asset_access)
  *  2. Créneau horaire : bid_opens_at ≤ now ≤ bid_closes_at
  *     (fallback sur session_opens_at / session_closes_at si bid_opens_at absent)
- *  3. Séquestre reçu obligatoire (auction_sequesters.status = 'received')
- *  4. Un seul bid par (asset_id, user_id) — 409 si doublon
+ *  3. Séquestre reçu obligatoire (transact_sequesters.status = 'received')
+ *  4. Une seule offre par (asset_id, user_id) — 409 si doublon
  *  5. Montant ≥ reserve_price si défini (sinon 403)
- *  6. INSERT bid status='submitted'
+ *  6. INSERT offre status='submitted'
  *  7. Email de confirmation acheteur (sans montant) + notification interne
  */
 import { NextRequest, NextResponse } from 'next/server'
@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
 
   /* ── 3. Récupérer l'actif ── */
   const { data: asset } = await supa
-    .from('auction_assets')
+    .from('transact_assets')
     .select('id, name, status, reserve_price, session_opens_at, session_closes_at, bid_opens_at, bid_closes_at')
     .eq('id', body.asset_id)
     .single()
@@ -86,7 +86,7 @@ export async function POST(req: NextRequest) {
 
   /* ── 4. Vérifier accès dossier actif ── */
   const { data: access } = await supa
-    .from('auction_asset_access')
+    .from('transact_asset_access')
     .select('id, status, expires_at')
     .eq('asset_id', body.asset_id)
     .eq('user_id', user.id)
@@ -116,7 +116,7 @@ export async function POST(req: NextRequest) {
 
   /* ── 6. Séquestre reçu obligatoire ── */
   const { data: sequester } = await supa
-    .from('auction_sequesters')
+    .from('transact_sequesters')
     .select('id, amount_chf, status')
     .eq('asset_id', body.asset_id)
     .eq('user_id', user.id)
@@ -137,7 +137,7 @@ export async function POST(req: NextRequest) {
 
   /* ── 8. Doublon — un seul bid par (asset_id, user_id) ── */
   const { data: existing } = await supa
-    .from('auction_bids')
+    .from('transact_offers')
     .select('id, status')
     .eq('asset_id', body.asset_id)
     .eq('user_id', user.id)
@@ -168,7 +168,7 @@ export async function POST(req: NextRequest) {
   }
 
   const { data: bid, error: insertError } = await supa
-    .from('auction_bids')
+    .from('transact_offers')
     .insert(insertPayload)
     .select('id')
     .single()
@@ -193,12 +193,12 @@ export async function POST(req: NextRequest) {
     sendEmail(
       buyerEmail,
       `Aegryn TRANSACT — Votre offre sur "${asset.name}" a été reçue`,
-      `Bonjour ${buyerName},\n\nVotre offre sur "${asset.name}" a bien été enregistrée.\n\nRéférence : ${bid?.id}\n\nL'équipe Aegryn vous contactera à l'issue du processus avec les résultats.\n\nL'équipe Aegryn\nhttps://aegryn.com/transact`
+      `Bonjour ${buyerName},\n\nVotre offre sur l'actif "${asset.name}" a bien été enregistrée dans le processus Aegryn TRANSACT.\n\nRéférence : ${bid?.id}\n\nL'équipe Aegryn vous contactera à l'issue du processus avec les résultats.\n\nL'équipe Aegryn\nhttps://aegryn.com/transact`
     ),
     sendEmail(
       internal,
-      `[TRANSACT Offer] ${asset.name} — ${buyerEmail}`,
-      `Nouvelle offre reçue\n\nActif : ${asset.name} (${body.asset_id})\nAcheteur : ${buyerName} <${buyerEmail}>\nMontant : ${body.bid_amount_chf.toLocaleString('fr-CH')} CHF\nModèle : ${body.bid_model}\nOffer ID : ${bid?.id}\nSéquestre : ${sequester.id} (${sequester.amount_chf} CHF)`
+      `[TRANSACT — Offre] ${asset.name} — ${buyerEmail}`,
+      `Nouvelle offre reçue\n\nActif : ${asset.name} (${body.asset_id})\nAcheteur : ${buyerName} <${buyerEmail}>\nMontant : ${body.bid_amount_chf.toLocaleString('fr-CH')} CHF\nModèle : ${body.bid_model}\nOffre ID : ${bid?.id}\nSéquestre : ${sequester.id} (${sequester.amount_chf} CHF)`
     ),
   ])
 
