@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale,
     keywords: [
       'sell tech company', 'vendre entreprise tech', 'sell SaaS', 'cession actif numérique',
-      'sell digital asset', 'vendre startup', 'exit tech', 'M&A exit', 'auction sell digital business',
+      'sell digital asset', 'vendre startup', 'exit tech', 'M&A exit', 'transact sell digital business',
       'how to sell SaaS', 'structured sale tech asset', 'vente structurée actif tech',
     ],
   })

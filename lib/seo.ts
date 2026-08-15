@@ -12,8 +12,8 @@ const BASE_KEYWORDS = [
   // Brand
   'Aegryn', 'aegryn.com', 'Engineered to Last', 'Swiss Tech', 'BOHA-Group',
   // Core business
-  'digital assets', 'actifs numériques', 'digital asset auction', 'enchère tech',
-  'auction platform', 'tech auction', 'vente aux enchères technologie',
+  'digital assets', 'actifs numériques', 'digital asset transaction', 'cession tech structurée',
+  'transact platform', 'M&A tech platform', 'plateforme cession technologie',
   'buy tech company', 'sell tech company', 'acheter entreprise tech', 'vendre entreprise tech',
   'SaaS acquisition', 'acquisition SaaS', 'SaaS marketplace', 'SaaS for sale',
   // Seller funnel
@@ -27,7 +27,7 @@ const BASE_KEYWORDS = [
   'family office tech acquisition', 'fund SaaS acquisition', 'buy SaaS business Europe',
   // Certification & process
   'certification CIFS', 'audit code indépendant', 'CIFS tech audit',
-  'séquestre suisse M&A', 'séquestre bancaire institutionnel', 'Swiss escrow M&A',
+  'séquestre suisse M&A', 'séquestre bancaire institutionnel', 'Swiss escrow M&A', 'Aegryn TRANSACT',
   'closing tech sécurisé', 'NDA cession tech', 'data room cession',
   // M&A
   'M&A tech', 'mergers acquisitions technology', 'cession entreprise numérique',

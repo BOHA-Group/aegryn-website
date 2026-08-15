@@ -83,7 +83,7 @@ export default function BuyerForm() {
     setLoading(true)
     setError(null)
     try {
-      const res = await fetch('/api/auction/buyers', {
+      const res = await fetch('/api/transact/buyers', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -124,10 +124,10 @@ export default function BuyerForm() {
           Notre équipe examinera votre profil sous 48h ouvrées et vous contactera pour finaliser votre pré-qualification.
         </p>
         <Link
-          href="/auction"
+          href="/transact/sessions"
           className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3 hover:border-ag-black transition-colors mt-2"
         >
-          Voir les sessions auction <ArrowUpRight size={11} />
+          Voir les sessions TRANSACT <ArrowUpRight size={11} />
         </Link>
       </div>
     )

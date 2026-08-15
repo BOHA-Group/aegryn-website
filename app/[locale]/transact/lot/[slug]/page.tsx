@@ -1,16 +1,16 @@
 /**
- * /auction/lot/[slug]
- * ──────────────────────────────────────────────────────────────────────
- * Page protégée — fiche actif Aegryn Auction (AssetLotSheet complet).
+ * /transact/lot/[slug]
+ * ──────────────────────────────────────────────────────────────────
+ * Page protégée — fiche actif Aegryn TRANSACT (AssetLotSheet complet).
  *
  * Conditions d'accès :
  *  1. Utilisateur authentifié (session Supabase valide)
- *  2. Entrée active dans `auction_asset_access` pour cet actif
+ *  2. Entrée active dans `transact_asset_access` pour cet actif
  *  3. expires_at > now() ET session_closes_at > now()
  *     La fenêtre max est 30 jours avant session_closes_at.
  *
- * Tracking : chaque ouverture est enregistrée dans auction_access_log.
- * URL révélée uniquement dans /client/auction — jamais par email.
+ * Tracking : chaque ouverture est enregistrée dans transact_access_log.
+ * URL révélée uniquement dans /client/buyer — jamais par email.
  * Si l'une des conditions n'est pas remplie → message dédié, pas de 404.
  */
 import { cookies }          from 'next/headers'
@@ -25,18 +25,18 @@ import { Lock, ArrowUpRight, ClockAlert } from 'lucide-react'
 import AssetLotSheet   from '@/components/auction/AssetLotSheet'
 import { mapRowToAsset } from '@/lib/auction/mapRowToAsset'
 import { createServiceClient } from '@/lib/supabase'
-import { checkAuctionCatalogAccess } from '@/lib/auctionAccess'
-import type { AuctionLotRow, AuctionLotAccess } from '@/types/auction'
+import { checkTransactCatalogAccess } from '@/lib/transactAccess'
+import type { AuctionLotRow, AuctionLotAccess } from '@/types/transact'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   return {
-    title: `Lot — Aegryn Auction`,
-    description: 'Dossier confidentiel — Accès réservé aux acquéreurs qualifiés Aegryn Auction.',
+    title: `Lot — Aegryn TRANSACT`,
+    description: 'Dossier confidentiel — Accès réservé aux acquéreurs qualifiés Aegryn TRANSACT.',
     robots: { index: false, follow: false },
-    openGraph: { title: `Lot ${slug} — Aegryn Auction` },
+    openGraph: { title: `Lot ${slug} — Aegryn TRANSACT` },
   }
 }
 
@@ -65,20 +65,20 @@ export default async function AuctionLotPage({ params }: Props) {
   const { data: { user } } = await supaUser.auth.getUser()
 
   if (!user) {
-    redirect(`/client/login?next=/${locale}/auction/lot/${slug}`)
+    redirect(`/client/login?next=/${locale}/transact/lot/${slug}`)
   }
 
   /* ── 2. NDA + CGV check ── */
-  const catalogAccess = await checkAuctionCatalogAccess(user.id)
+  const catalogAccess = await checkTransactCatalogAccess(user.id)
   if (catalogAccess !== 'ok') {
-    redirect(`/${locale}/auction/catalog`)
+    redirect(`/${locale}/transact/catalog`)
   }
 
   /* ── 3. Access check via service client (bypasses RLS) ── */
   const supa = createServiceClient()
 
   const { data: lotRow } = await supa
-    .from('auction_assets')
+    .from('assets')
     .select('id, status, session_closes_at')
     .eq('slug', slug)
     .eq('status', 'published')
@@ -90,7 +90,7 @@ export default async function AuctionLotPage({ params }: Props) {
   }
 
   const { data: access } = await supa
-    .from('auction_asset_access')
+    .from('asset_access')
     .select('id, expires_at, status')
     .eq('asset_id', lotRow.id)
     .eq('user_id', user.id)
@@ -104,7 +104,7 @@ export default async function AuctionLotPage({ params }: Props) {
   } else if (new Date(access.expires_at) < now) {
     accessState = 'expired'
   } else if (lotRow.session_closes_at && new Date(lotRow.session_closes_at) < now) {
-    /* Session d'enchère clôturée — accès révoqué automatiquement */
+    /* Session clôturée — accès révoqué automatiquement */
     accessState = 'expired'
   }
 
@@ -114,7 +114,7 @@ export default async function AuctionLotPage({ params }: Props) {
 
   /* ── 3. Fetch full lot data ── */
   const { data: fullRow } = await supa
-    .from('auction_assets')
+    .from('assets')
     .select('*')
     .eq('id', lotRow.id)
     .single() as { data: AuctionLotRow | null }
@@ -130,7 +130,7 @@ export default async function AuctionLotPage({ params }: Props) {
 
   /* ── 4. Tracking (fire-and-forget, ne bloque pas le rendu) ── */
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
-  fetch(`${siteUrl}/api/auction/track-access`, {
+  fetch(`${siteUrl}/api/transact/track-access`, {
     method:  'POST',
     headers: { 'Content-Type': 'application/json' },
     body:    JSON.stringify({ asset_id: lotRow.id, access_id: access!.id, page: 'dossier' }),
@@ -163,7 +163,7 @@ function AccessDeniedScreen({
         </div>
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex mb-3">
-            Aegryn Auction — {t('confidentialLabel')}
+            Aegryn TRANSACT — {t('confidentialLabel')}
           </p>
           <h1 className="font-sans font-bold text-ag-black text-[28px] tracking-[-0.02em] mb-4">
             {isExpired ? t('accessExpiredTitle') : t('accessDeniedTitle')}
@@ -174,7 +174,7 @@ function AccessDeniedScreen({
         </div>
         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
           <NextLink
-            href="/client/auction"
+            href="/client/buyer"
             className="inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors"
           >
             Mon espace acquéreur <ArrowUpRight size={12} />

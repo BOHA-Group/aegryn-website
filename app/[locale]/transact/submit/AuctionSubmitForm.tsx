@@ -45,7 +45,7 @@ export default function AuctionSubmitForm() {
       locale,
     }
     try {
-      const res = await fetch('/api/auction/submit', {
+      const res = await fetch('/api/transact/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -73,10 +73,10 @@ export default function AuctionSubmitForm() {
       <section className="bg-ag-navy pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <Link
-            href="/auction"
+            href="/transact"
             className="inline-flex items-center gap-2 font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 hover:text-ag-apex transition-colors mb-10"
           >
-            <ChevronLeft size={11} /> {tNav('auction')}
+            <ChevronLeft size={11} /> {tNav('transact')}
           </Link>
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
@@ -129,10 +129,10 @@ export default function AuctionSubmitForm() {
                 {t('form.successDesc')}
               </p>
               <Link
-                href="/auction"
+                href="/transact"
                 className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-6 py-3 hover:bg-ag-navy hover:text-white transition-colors"
               >
-                {tNav('auction')} <ArrowUpRight size={12} />
+                {tNav('transact')} <ArrowUpRight size={12} />
               </Link>
             </div>
           ) : (

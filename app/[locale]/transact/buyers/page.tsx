@@ -9,7 +9,7 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
-    title: 'Accès acheteurs — Aegryn Auction',
+    title: 'Accès acheteurs — Aegryn TRANSACT',
     description: "Rejoignez le cercle d'acheteurs pré-qualifiés Aegryn. Accédez en priorité au deal flow confidentiel d'actifs tech certifiés et gradés. Ticket €100K–€10M+.",
     path: '/transact/buyers',
     locale,
@@ -48,12 +48,12 @@ const COMMITMENTS = [
   {
     icon:  <Lock size={16} className="text-ag-apex shrink-0 mt-0.5" />,
     title: 'Confidentialité totale',
-    desc:  "L'identité de chaque actif est strictement protégée jusqu'à l'ouverture de la session auction. Aucun nom, aucune URL avant NDA mutuel.",
+    desc:  "L'identité de chaque actif est strictement protégée tout au long du processus TRANSACT. Aucun nom, aucune URL avant NDA mutuel.",
   },
   {
     icon:  <ShieldCheck size={16} className="text-ag-apex shrink-0 mt-0.5" />,
     title: 'Actifs certifiés et gradés',
-    desc:  'Chaque actif en auction a reçu une certification CIFS indépendante (finance, code, IP, sécurité) et un grade ★/AAA/AA/A/B opposable.',
+    desc:  'Chaque actif en transaction a reçu une certification CIFS indépendante (finance, code, IP, sécurité) et un grade ★/AAA/AA/A/B opposable.',
   },
   {
     icon:  <Users size={16} className="text-ag-apex shrink-0 mt-0.5" />,
@@ -67,7 +67,7 @@ const COMMITMENTS = [
   },
 ]
 
-export default async function AuctionBuyersPage({ params }: Props) {
+export default async function TransactBuyersPage({ params }: Props) {
   await params
 
   return (

@@ -40,8 +40,8 @@ export async function POST(req: NextRequest) {
 
     await sendLeadEmails({
       to:              body.email,
-      subjectFounder:  'Aegryn — Demande d\'accès catalogue reçue',
-      textFounder:     `Bonjour ${body.fullName},\n\nVotre demande d'accès au catalogue de vente aux enchères Aegryn a bien été enregistrée.\n\nNos équipes l'examineront et vous contacteront rapidement pour finaliser votre profil acquéreur.\n\nPour toute question : contact@boha-group.com\n\nL'équipe Aegryn\nhttps://aegryn.com/auction`,
+      subjectFounder:  'Aegryn TRANSACT — Demande d\'accès catalogue reçue',
+      textFounder:     `Bonjour ${body.fullName},\n\nVotre demande d'accès au catalogue de transactions Aegryn TRANSACT a bien été enregistrée.\n\nNos équipes l'examineront et vous contacteront rapidement pour finaliser votre profil acquéreur.\n\nPour toute question : contact@boha-group.com\n\nL'équipe Aegryn\nhttps://aegryn.com/transact`,
       subjectInternal: `[Catalogue] Demande d'accès — ${body.fullName} (${body.buyerType ?? 'non précisé'})`,
       textInternal:    `Nouvelle demande d'accès catalogue\n\nNom : ${body.fullName}\nEmail : ${body.email}\nSociété : ${body.company ?? '—'}\nProfil : ${body.buyerType ?? '—'}\nCapacité : ${body.capacity ?? '—'}\nMessage : ${body.message ?? '—'}\nLocale : ${body.locale}`,
     })

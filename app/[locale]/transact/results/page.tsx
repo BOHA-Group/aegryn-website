@@ -3,7 +3,7 @@ import { BarChart2 } from 'lucide-react'
 import { createServiceClient } from '@/lib/supabase'
 
 export const metadata: Metadata = {
-  title: 'Résultats de transactions — Aegryn Auction',
+  title: 'Résultats de transactions — Aegryn TRANSACT',
   description: 'Historique anonymisé des transactions certifiées Aegryn : grades, fourchettes de valorisation et durées de process.',
 }
 
@@ -36,7 +36,7 @@ function fmtEur(n: number): string {
   return `${Math.round(n)} €`
 }
 
-export default async function AuctionResultsPage() {
+export default async function TransactResultsPage() {
   const supa = createServiceClient()
   const { data: results } = await supa
     .from('transaction_results')
@@ -54,7 +54,7 @@ export default async function AuctionResultsPage() {
         <div className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
-            Aegryn AUCTION
+            Aegryn TRANSACT
           </p>
           <h1 className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-2xl mb-5" style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}>
             Catalogue historique
@@ -153,7 +153,7 @@ export default async function AuctionResultsPage() {
               <BarChart2 size={20} className="text-ag-gray-light" />
             </div>
             <p className="font-sans text-[15px] text-ag-gray max-w-md">
-              Les premiers résultats seront publiés ici à l'issue de chaque session Aegryn. Les données sont anonymisées.
+              Les premiers résultats seront publiés ici à l'issue de chaque transaction Aegryn. Les données sont anonymisées.
             </p>
           </div>
         </section>

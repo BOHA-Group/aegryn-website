@@ -154,7 +154,7 @@ export default async function SellerActifsPage() {
                     )}
                     {Boolean(asset.auction_ready) && (
                       <span className="border px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-emerald-700 bg-emerald-50 border-emerald-300 font-bold">
-                        Auction Ready
+                        TRANSACT Ready
                       </span>
                     )}
                     {asset.official_grade && (

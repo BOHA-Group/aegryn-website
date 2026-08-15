@@ -8,7 +8,7 @@ import { createServerClient }      from '@supabase/ssr'
 import { ArrowUpRight, Info, Lock } from 'lucide-react'
 import AuctionAccessRequestForm    from './AuctionAccessRequestForm'
 import CatalogFilters              from './CatalogFilters'
-import { checkAuctionCatalogAccess } from '@/lib/auctionAccess'
+import { checkTransactCatalogAccess } from '@/lib/transactAccess'
 import { createServiceClient }     from '@/lib/supabase'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -21,9 +21,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('desc'),
     path: '/transact/catalog',
     locale,
-    image: '/og/auction.jpg',
+    image: '/og/transact.jpg',
     keywords: [
-      'auction catalog', 'catalogue enchères tech', 'buy SaaS company', 'acheter SaaS',
+      'transact catalog', 'catalogue cession tech', 'buy SaaS company', 'acheter SaaS',
       'digital asset for sale', 'actif numérique à vendre', 'tech M&A deal', 'SaaS for sale',
       'sell digital business', 'acquire tech startup', 'NDA dossier',
     ],
@@ -51,7 +51,7 @@ export default async function TransactCatalogPage({ params }: Props) {
 
   /* ── Access check : NDA + CGV ── */
   const accessStatus = user
-    ? await checkAuctionCatalogAccess(user.id)
+    ? await checkTransactCatalogAccess(user.id)
     : 'not_authenticated'
 
   /* ── Header commun (toujours visible) ── */

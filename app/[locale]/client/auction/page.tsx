@@ -1,5 +1,5 @@
 /**
- * /client/auction — Espace acquéreur Aegryn Auction
+ * /client/buyer — Espace acquéreur Aegryn TRANSACT
  * Affiche les demandes d'accès dossier et révèle le lien URL
  * UNIQUEMENT si l'accès est approuvé et la session toujours ouverte.
  * Aucun envoi email — accès exclusivement via cet espace.
@@ -20,7 +20,7 @@ interface DossierRequest {
   note:       string | null
   created_at: string
   asset_id:   string
-  auction_assets: {
+  assets: {
     slug:              string
     name:              string
     lot_number:        string
@@ -57,31 +57,31 @@ function daysLeft(expiresAt: string, sessionClosesAt: string | null): number {
   return Math.max(0, Math.ceil(ms / 86_400_000))
 }
 
-export default async function ClientAuctionPage({ params }: Props) {
+export default async function ClientBuyerPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations('clientAuction')
 
   /* ── Auth ── */
   const user = await getUser()
   if (!user) {
-    redirect(`/${locale}/auction/catalog`)
+    redirect(`/${locale}/transact/catalog`)
   }
 
   /* ── Fetch requests ── */
   const supa = createServiceClient()
 
   const { data: requests } = await supa
-    .from('auction_dossier_requests')
+    .from('dossier_requests')
     .select(`
       id, status, note, created_at, asset_id,
-      auction_assets ( slug, name, lot_number, catalog_context, session_closes_at )
+      assets ( slug, name, lot_number, catalog_context, session_closes_at )
     `)
     .eq('user_id', user.id)
     .order('created_at', { ascending: false }) as { data: DossierRequest[] | null }
 
   /* ── Fetch active accesses ── */
   const { data: accesses } = await supa
-    .from('auction_asset_access')
+    .from('asset_access')
     .select('asset_id, expires_at, status')
     .eq('user_id', user.id) as { data: AccessRecord[] | null }
 
@@ -115,7 +115,7 @@ export default async function ClientAuctionPage({ params }: Props) {
               {t('empty')}
             </p>
             <Link
-              href={`/${locale}/auction/catalog`}
+              href={`/${locale}/transact/catalog`}
               className="inline-flex items-center gap-2 mt-5 font-mono text-[10px] uppercase tracking-[0.16em] text-ag-apex hover:underline"
             >
               {t('viewCatalog')} →
@@ -124,7 +124,7 @@ export default async function ClientAuctionPage({ params }: Props) {
         ) : (
           <div className="flex flex-col gap-4">
             {requests.map((req) => {
-              const asset  = req.auction_assets
+              const asset  = req.assets
               const access = accessMap.get(req.asset_id)
               const valid  = access ? isAccessValid(access, asset.session_closes_at) : false
               const days   = access && valid ? daysLeft(access.expires_at, asset.session_closes_at) : 0
@@ -143,7 +143,7 @@ export default async function ClientAuctionPage({ params }: Props) {
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">
-                        {t('lotPrefix')} {asset.lot_number} · {asset.catalog_context ?? 'Aegryn Auction'}
+                        {t('lotPrefix')} {asset.lot_number} · {asset.catalog_context ?? 'Aegryn TRANSACT'}
                       </p>
                       <p className="font-sans font-semibold text-ag-black text-[17px]">
                         {asset.name}
@@ -170,7 +170,7 @@ export default async function ClientAuctionPage({ params }: Props) {
                         </p>
                       </div>
                       <Link
-                        href={`/${locale}/auction/lot/${asset.slug}`}
+                        href={`/${locale}/transact/lot/${asset.slug}`}
                         className="shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-[0.14em] px-5 py-2.5 hover:bg-ag-apex hover:text-ag-navy transition-colors"
                       >
                         {t('openDossier')} <ExternalLink size={11} />

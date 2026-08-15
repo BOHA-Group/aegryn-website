@@ -209,7 +209,7 @@ export default async function SellerNdaViewPage() {
 
           <Article num="4bis" title="Frais en cas de non-réalisation de la transaction">
             <p>
-              Dans le cas où l&apos;actif admis en Certification Auction serait retiré du catalogue ou
+              Dans le cas où l&apos;actif admis en Certification TRANSACT serait retiré du catalogue ou
               qu&apos;aucune transaction ne se réalise à l&apos;issue du processus Aegryn, des frais fixes
               minimaux de <strong>CHF 2 000 HT</strong> sont dus à Aegryn en contrepartie du travail
               engagé par ses équipes : analyse C/I/F/S, attribution du grade officiel, préparation du

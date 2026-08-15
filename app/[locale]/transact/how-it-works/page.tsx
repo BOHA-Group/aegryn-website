@@ -11,12 +11,12 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
-    title: 'Comment ça marche — Aegryn Auction',
-    description: "Le processus Aegryn en 6 étapes : certification CIFS, grade indépendant, data room confidentielle, matching acheteurs, session auction, séquestre bancaire suisse.",
+    title: 'Comment ça marche — Aegryn TRANSACT',
+    description: "Le processus Aegryn en 6 étapes : certification CIFS, grade indépendant, data room confidentielle, matching acheteurs, processus de transaction, séquestre bancaire suisse.",
     path: '/transact/how-it-works',
     locale,
     keywords: [
-      'processus auction tech', 'certification CIFS', 'grade actif numérique',
+      'processus transaction tech', 'certification CIFS', 'grade actif numérique',
       'cession SaaS structurée', 'séquestre suisse M&A', 'comment vendre entreprise tech',
       'how to sell SaaS Europe', 'M&A process Switzerland',
     ],
@@ -41,7 +41,7 @@ const PROCESS_STEPS = [
     label:  'Cédant',
     desc:   "Le cédant soumet son actif à l'équipe Aegryn avec les éléments de base (nom interne, ARR, type, pays). Il signe le NDA Aegryn avant tout traitement. Mandat exclusif 60 jours.",
     detail: "Formulaire de soumission · Signature NDA cédant · Mandat exclusif 60 jours · Réponse sous 48h",
-    cta:    { label: 'Déposer un mandat', href: '/auction/submit' as const },
+    cta:    { label: 'Déposer un mandat', href: '/transact/submit' as const },
     side:   'seller',
   },
   {
@@ -61,15 +61,15 @@ const PROCESS_STEPS = [
     label:  'Aegryn',
     desc:   "Les acheteurs dont le profil correspond (secteur, ticket, géographie) reçoivent une alerte confidentielle — secteur générique et grade uniquement. Aucun nom, aucune métrique, aucune URL. L'identité n'est révélée qu'après NDA acheteur et ouverture de session.",
     detail: "Matching sur profil acheteur · Notification : secteur + grade uniquement · NDA acheteur requis avant toute information",
-    cta:    { label: 'Accès acheteurs', href: '/auction/buyers' as const },
+    cta:    { label: 'Accès acheteurs', href: '/transact/buyers' as const },
     side:   'aegryn',
   },
   {
     num:    '05',
     icon:   <FileText size={22} className="text-ag-apex" />,
-    title:  'Session auction & data room',
+    title:  'Processus TRANSACT & data room',
     label:  'Acheteurs + Cédant',
-    desc:   "La session auction s'ouvre avec accès à la data room complète (financières, KPIs, contrats, rapport CIFS). Les acheteurs qualifiés soumettent leurs offres dans le délai imparti. Le cédant choisit l'offre retenue.",
+    desc:   "Le processus s'ouvre avec accès à la data room complète (financières, KPIs, contrats, rapport CIFS). Les acheteurs qualifiés soumettent leurs offres dans le délai imparti. Le cédant choisit l'offre retenue.",
     detail: "Data room sécurisée · Durée définie · Offres sous enveloppe · Cédant décide",
     cta:    null,
     side:   'both',

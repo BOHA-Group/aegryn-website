@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { Calendar, MapPin, Users, ArrowUpRight, Bell, Lock } from 'lucide-react'
 import WaitlistForm from '@/components/auction/WaitlistForm'
 import { getUser } from '@/lib/supabaseServer'
-import { checkAuctionCatalogAccess } from '@/lib/auctionAccess'
+import { checkTransactCatalogAccess } from '@/lib/transactAccess'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -22,7 +22,7 @@ export default async function AuctionSessionPage({ params }: Props) {
 
   const user = await getUser()
   const accessStatus = user
-    ? await checkAuctionCatalogAccess(user.id)
+    ? await checkTransactCatalogAccess(user.id)
     : 'not_authenticated'
   const hasLotAccess = accessStatus === 'ok'
 
@@ -70,7 +70,7 @@ export default async function AuctionSessionPage({ params }: Props) {
             {/* Vignette — format vertical 9:16, image visible en totalité (style Antiquorum) */}
             <div className="relative w-full md:w-[166px] shrink-0 bg-ag-off-white overflow-hidden" style={{ aspectRatio: '9 / 16' }}>
               <Image
-                src="/images/auction/auction_legal tech_T32026.jpg"
+                src="/images/transact/transact_legal-tech_T32026.jpg"
                 alt={t('sessionCardTitle')}
                 fill
                 className="object-contain"
@@ -134,7 +134,7 @@ export default async function AuctionSessionPage({ params }: Props) {
                   {t('sessionCardCtaCatalog')}
                 </Link>
                 <Link
-                  href={{ pathname: '/auction/catalog', hash: 'notify' }}
+                  href={{ pathname: '/transact/catalog', hash: 'notify' }}
                   className="inline-flex items-center gap-2 border border-ag-apex/40 text-ag-apex-ink font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:border-ag-apex hover:bg-ag-apex/10 transition-colors"
                 >
                   <Bell size={11} /> {t('sessionCardCtaNotify')}

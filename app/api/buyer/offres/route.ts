@@ -30,23 +30,23 @@ export async function POST(req: NextRequest) {
   if (!asset) return NextResponse.json({ error: 'Asset not found or not published' }, { status: 404 })
 
   const { data: existing } = await supa
-    .from('auction_bids')
+    .from('term_sheets')
     .select('id')
     .eq('asset_id', asset_id)
-    .eq('bidder_id', user.id)
-    .in('status', ['draft', 'submitted', 'retained'])
+    .eq('buyer_id', user.id)
+    .in('status', ['pending', 'viewed', 'countered'])
     .single()
 
   if (existing) return NextResponse.json({ error: 'Offer already exists for this asset' }, { status: 409 })
 
   const { data: bid, error } = await supa
-    .from('auction_bids')
+    .from('term_sheets')
     .insert({
       asset_id,
-      bidder_id: user.id,
-      amount_chf,
-      status: 'submitted',
-      ...(message ? { notes: message } : {}),
+      buyer_id: user.id,
+      proposed_price_chf: amount_chf,
+      status: 'pending',
+      ...(message ? { buyer_profile_note: message } : {}),
     })
     .select('id')
     .single()

@@ -34,7 +34,7 @@ export default function AuctionAccessRequestForm({ locale, userId, userEmail, st
     setError('')
     const fd = new FormData(e.currentTarget)
     try {
-      const res = await fetch('/api/auction/access-request', {
+      const res = await fetch('/api/transact/access-request', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

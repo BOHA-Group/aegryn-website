@@ -1,6 +1,6 @@
 /**
  * POST /api/auction/bid/submit
- * Soumettre une offre scellée sur un lot de la session Aegryn Auction.
+ * Soumettre une offre scellée sur un lot de la session Aegryn TRANSACT.
  *
  * Règles appliquées côté serveur :
  *  1. Auth obligatoire + accès dossier actif (auction_asset_access)
@@ -192,13 +192,13 @@ export async function POST(req: NextRequest) {
   await Promise.allSettled([
     sendEmail(
       buyerEmail,
-      `Aegryn Auction — Votre offre sur "${asset.name}" a été reçue`,
-      `Bonjour ${buyerName},\n\nVotre offre scellée sur le lot "${asset.name}" a bien été enregistrée.\n\nRéférence : ${bid?.id}\n\nL'équipe Aegryn vous contactera à l'issue de la session avec les résultats.\n\nL'équipe Aegryn\nhttps://aegryn.com/auction`
+      `Aegryn TRANSACT — Votre offre sur "${asset.name}" a été reçue`,
+      `Bonjour ${buyerName},\n\nVotre offre sur "${asset.name}" a bien été enregistrée.\n\nRéférence : ${bid?.id}\n\nL'équipe Aegryn vous contactera à l'issue du processus avec les résultats.\n\nL'équipe Aegryn\nhttps://aegryn.com/transact`
     ),
     sendEmail(
       internal,
-      `[Auction Bid] ${asset.name} — ${buyerEmail}`,
-      `Nouvelle offre scellée reçue\n\nLot : ${asset.name} (${body.asset_id})\nAcheteur : ${buyerName} <${buyerEmail}>\nMontant : ${body.bid_amount_chf.toLocaleString('fr-CH')} CHF\nModèle : ${body.bid_model}\nBid ID : ${bid?.id}\nSéquestre : ${sequester.id} (${sequester.amount_chf} CHF)`
+      `[TRANSACT Offer] ${asset.name} — ${buyerEmail}`,
+      `Nouvelle offre reçue\n\nActif : ${asset.name} (${body.asset_id})\nAcheteur : ${buyerName} <${buyerEmail}>\nMontant : ${body.bid_amount_chf.toLocaleString('fr-CH')} CHF\nModèle : ${body.bid_model}\nOffer ID : ${bid?.id}\nSéquestre : ${sequester.id} (${sequester.amount_chf} CHF)`
     ),
   ])
 

@@ -160,7 +160,7 @@ export default async function SellerDashboardPage() {
             <Zap size={16} className={auctionReadyCount > 0 ? 'text-emerald-500' : 'text-gray-300'} />
           </div>
           <p className={`font-mono font-bold text-[22px] ${ auctionReadyCount > 0 ? 'text-emerald-700' : 'text-gray-400' }`}>{auctionReadyCount}</p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">Auction Ready</p>
+          <p className="font-sans text-[11px] text-gray-400 mt-0.5">TRANSACT Ready</p>
         </div>
 
         <Link href="/client/seller/transactions"
@@ -211,7 +211,7 @@ export default async function SellerDashboardPage() {
                   ['Aegryn Review — Analyse interne : 2 000 CHF HT (15 j. ouvrés)', true],
                   ['Aegryn Review+ — Co-signé partenaire : 5 000 CHF HT (20 j. ouvrés)', true],
                   ['Paiement à la commande (Stripe — disponible prochainement)', false],
-                  ['Déductible si Certification Auction engagée dans les 6 mois', true],
+                  ['Déductible si Certification TRANSACT engagée dans les 6 mois', true],
                 ].map(([txt, ok]) => (
                   <li key={String(txt)} className="flex items-start gap-2">
                     <CheckCircle2 size={11} className={`mt-0.5 shrink-0 ${ok ? 'text-ag-apex' : 'text-gray-300'}`} />
@@ -228,7 +228,7 @@ export default async function SellerDashboardPage() {
             <div className="p-6 flex flex-col gap-3 bg-ag-navy/[0.03]">
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={14} className="text-ag-apex shrink-0" />
-                <span className="font-sans font-bold text-[13px] text-gray-900">Certification Auction (catalogue + cession)</span>
+                <span className="font-sans font-bold text-[13px] text-gray-900">Certification TRANSACT (catalogue + cession)</span>
                 <span className="ml-auto font-mono text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5">Commission à la vente</span>
               </div>
               <p className="font-sans text-[12px] text-gray-500 leading-relaxed">

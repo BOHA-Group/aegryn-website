@@ -32,7 +32,7 @@ export default async function AdminAnalyticsPage({
     supa.from('profiles').select('*', { count: 'exact', head: true }).contains('roles', ['buyer']),
     supa.from('profiles').select('*', { count: 'exact', head: true }).contains('roles', ['seller']),
     supa.from('profiles').select('*', { count: 'exact', head: true }).contains('roles', ['partner']),
-    supa.from('auction_bids').select('*', { count: 'exact', head: true }),
+    supa.from('term_sheets').select('*', { count: 'exact', head: true }),
     supa.from('transactions').select('*', { count: 'exact', head: true }).eq('status', 'closed'),
   ])
 

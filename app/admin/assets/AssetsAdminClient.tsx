@@ -218,7 +218,7 @@ export default function AssetsAdminClient({ rows: initialRows }: Props) {
                       </span>
                       {Boolean(r.auction_ready) && (
                         <span className="ml-1 px-1.5 py-0.5 text-[9px] font-bold bg-emerald-100 text-emerald-700 uppercase tracking-wide">
-                          Auction Ready
+                          TRANSACT Ready
                         </span>
                       )}
                     </td>
