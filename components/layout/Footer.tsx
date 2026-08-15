@@ -122,12 +122,12 @@ const companyLinks: { navKey: 'about' | 'career' | 'contact'; href: LinkHref }[]
   { navKey: 'contact', href: '/contact' },
 ]
 
-const servicesLinks: { navKey: 'auction' | 'grade' | 'advisory' | 'growWithUs' | 'servicesBuild' | 'servicesAdvisory' | 'servicesAcquisition' | 'servicesAlliances'; href: LinkHref }[] = [
+const servicesLinks: { navKey: 'grade' | 'advisory' | 'growWithUs' | 'servicesBuild' | 'servicesAdvisory' | 'servicesAcquisition' | 'servicesAlliances' | 'transact'; href: LinkHref }[] = [
   { navKey: 'servicesBuild',       href: '/services/build' },
   { navKey: 'servicesAdvisory',    href: '/advisory' },
   { navKey: 'servicesAcquisition', href: '/services/acquisition-support' },
   { navKey: 'servicesAlliances',   href: '/alliances' },
-  { navKey: 'auction',             href: '/auction' },
+  { navKey: 'transact',            href: '/transact' },
   { navKey: 'grade',               href: '/grade' },
 ]
 

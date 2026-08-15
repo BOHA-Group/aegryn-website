@@ -2736,7 +2736,16 @@
       "step3": "Accettare le CGV",
       "loginCta": "Accedi",
       "registerCta": "Creare un account",
-      "sellerCta": "Vuoi inserire il tuo asset nel prossimo catalogo?"
+      "sellerCta": "Vuoi inserire il tuo asset nel prossimo catalogo?",
+      "arrAll": "Tutti",
+      "arrBelow100k": "< 100K",
+      "arr100kTo1m": "100K – 1M",
+      "arr1mTo5m": "1M – 5M",
+      "arrAbove5m": "> 5M",
+      "assetCount": "{count} asset{count, plural, one {} other {}} — sessione corrente",
+      "assetsHidden": "{n} nascosto{n, plural, one {} other {}} dai filtri",
+      "resetFiltersShort": "Reimposta",
+      "viewFullDossier": "Accedere al fascicolo completo"
     },
     "sell": {
       "meta": {

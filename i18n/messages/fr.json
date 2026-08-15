@@ -1024,8 +1024,8 @@
       "label": "GRADE",
       "desc": "Certification indépendante et documentée"
     },
-    "cession": {
-      "label": "CESSION M&A",
+    "auction": {
+      "label": "TRANSACT",
       "desc": "Transactions institutionnelles encadrées"
     }
   },
@@ -2850,7 +2850,16 @@
       "step3": "Accepter les CGV",
       "loginCta": "Se connecter",
       "registerCta": "Créer un compte",
-      "sellerCta": "Vous souhaitez lister votre actif dans le prochain catalogue ?"
+      "sellerCta": "Vous souhaitez lister votre actif dans le prochain catalogue ?",
+      "arrAll": "Tous",
+      "arrBelow100k": "< 100K",
+      "arr100kTo1m": "100K – 1M",
+      "arr1mTo5m": "1M – 5M",
+      "arrAbove5m": "> 5M",
+      "assetCount": "{count} actif{count, plural, one {} other {s}} — session en cours",
+      "assetsHidden": "{n} masqué{n, plural, one {} other {s}} par les filtres",
+      "resetFiltersShort": "Réinitialiser",
+      "viewFullDossier": "Accéder au dossier complet"
     },
     "session": {
       "label": "Processus Aegryn",
@@ -6119,8 +6128,10 @@
       "desc": "Publications, rapports et analyses sur le marché M&A tech européen.",
       "reportLabel": "Rapport annuel",
       "reportDesc": "The AEGRYN — European Tech M&A Intelligence",
-      "subscribeLabel": "Recevoir le rapport",
-      "subscribeDesc": "Abonnez-vous pour recevoir chaque édition annuelle."
+      "notifyLabel": "Recevoir chaque édition",
+      "notifyDesc": "Inscrivez-vous pour être notifié à chaque nouvelle parution annuelle.",
+      "newsletterLabel": "Articles & Insights",
+      "newsletterDesc": "Recevez nos articles sur le marché M&A tech — un par semaine."
     },
     "report": {
       "title": "The AEGRYN Report",
@@ -6129,7 +6140,7 @@
       "edition2026": "Édition 2026 — First Edition",
       "readOnline": "Explorer en ligne",
       "downloadPdf": "Feuilleter le PDF",
-      "subscribe": "Recevoir",
+      "notify": "Être notifié",
       "ctaEstimate": "Estimer votre actif",
       "ctaGrade": "Découvrir le Grade",
       "ctaTitle": "Vous avez construit quelque chose de réel.",
@@ -6146,16 +6157,17 @@
         "description": "Rapport annuel de référence sur le marché M&A tech européen. Données, analyses et perspectives par AEGRYN — l'agence de certification et transaction d'actifs tech."
       }
     },
-    "subscribe": {
-      "title": "Recevoir The AEGRYN",
-      "desc": "Chaque édition annuelle directement dans votre boîte mail. Accès libre, aucun engagement.",
+    "notify": {
+      "title": "Être notifié de chaque édition",
+      "desc": "Renseignez votre email pour recevoir un avis de parution à chaque nouvelle édition annuelle de The AEGRYN Report. Accès libre, aucun engagement, désabonnement en un clic.",
       "placeholder": "Votre adresse email",
-      "cta": "S'abonner",
+      "cta": "Être notifié",
       "success": "Merci. Vous recevrez la prochaine édition dès sa publication.",
       "error": "Une erreur est survenue. Veuillez réessayer.",
+      "unsubscribed": "Vous avez été désabonné.",
       "meta": {
-        "title": "S'abonner à The AEGRYN Report",
-        "description": "Abonnez-vous au rapport annuel AEGRYN sur le marché M&A tech européen."
+        "title": "Notifications — The AEGRYN Report",
+        "description": "Recevez un avis de parution à chaque nouvelle édition annuelle du rapport AEGRYN sur le marché M&A tech européen."
       }
     }
   }

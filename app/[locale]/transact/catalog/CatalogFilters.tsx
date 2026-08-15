@@ -20,29 +20,30 @@ type Props = {
   assets:  Asset[]
   locale:  string
   labels: {
-    filterAll:    string
-    filterStar:   string
-    filterAAA:    string
-    filterAA:     string
-    filterA:      string
-    filterB:      string
-    count:        string
-    session:      string
-    arrRanges:    string[]
-    categories:   string[]
-    noResults:    string
-    resetFilters: string
+    filterAll:         string
+    filterStar:        string
+    filterAAA:         string
+    filterAA:          string
+    filterA:           string
+    filterB:           string
+    arrRanges:         string[]
+    noResults:         string
+    resetFilters:      string
+    resetFiltersShort: string
+    viewFullDossier:   string
+    assetCount:        (count: number) => string
+    assetsHidden:      (n: number) => string
   }
 }
 
 const GRADE_KEYS = ['', '★', 'AAA', 'AA', 'A', 'B'] as const
 
-const ARR_RANGES = [
-  { label: 'Tous',     min: 0,          max: Infinity  },
-  { label: '< 100K',  min: 0,          max: 100_000   },
-  { label: '100K–1M', min: 100_000,    max: 1_000_000 },
-  { label: '1M–5M',   min: 1_000_000,  max: 5_000_000 },
-  { label: '> 5M',    min: 5_000_000,  max: Infinity  },
+const ARR_RANGE_BOUNDS = [
+  { min: 0,          max: Infinity  },
+  { min: 0,          max: 100_000   },
+  { min: 100_000,    max: 1_000_000 },
+  { min: 1_000_000,  max: 5_000_000 },
+  { min: 5_000_000,  max: Infinity  },
 ] as const
 
 function gradeColor(g: string) {
@@ -88,7 +89,7 @@ export default function CatalogFilters({ assets, locale, labels }: Props) {
     return assets.filter(a => {
       if (grade    && a.official_grade !== grade) return false
       if (category && a.asset_type    !== category) return false
-      const range = ARR_RANGES[arrRange]
+      const range = ARR_RANGE_BOUNDS[arrRange]
       if (range && arrRange > 0) {
         const v = a.arr ?? 0
         if (v < range.min || v >= range.max) return false
@@ -152,7 +153,7 @@ export default function CatalogFilters({ assets, locale, labels }: Props) {
           {/* Filtre ARR */}
           <div className="flex items-center gap-1">
             <SlidersHorizontal size={11} className="text-ag-gray-light shrink-0" />
-            {ARR_RANGES.map((r, i) => (
+            {labels.arrRanges.map((label, i) => (
               <button
                 key={i}
                 onClick={() => setArrRange(i)}
@@ -162,7 +163,7 @@ export default function CatalogFilters({ assets, locale, labels }: Props) {
                     : 'border-ag-border text-ag-gray-light hover:border-ag-black hover:text-ag-black'
                 }`}
               >
-                {r.label}
+                {label}
               </button>
             ))}
           </div>
@@ -173,7 +174,7 @@ export default function CatalogFilters({ assets, locale, labels }: Props) {
               onClick={reset}
               className="flex items-center gap-1 font-mono text-[9px] uppercase tracking-widest text-ag-gray-light hover:text-red-500 transition-colors ml-2"
             >
-              <X size={10} /> Réinitialiser
+              <X size={10} /> {labels.resetFiltersShort}
             </button>
           )}
         </div>
@@ -185,10 +186,10 @@ export default function CatalogFilters({ assets, locale, labels }: Props) {
           {filtered.length > 0 ? (
             <>
               <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
-                {filtered.length} actif{filtered.length > 1 ? 's' : ''} — session en cours
+                {labels.assetCount(filtered.length)}
                 {hasFilters && (
                   <span className="ml-2 text-ag-apex">
-                    ({assets.length - filtered.length} masqué{assets.length - filtered.length > 1 ? 's' : ''} par les filtres)
+                    ({labels.assetsHidden(assets.length - filtered.length)})
                   </span>
                 )}
               </p>
@@ -234,7 +235,7 @@ export default function CatalogFilters({ assets, locale, labels }: Props) {
                         href={`/${locale}/client/buyer/catalogue`}
                         className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ag-black hover:text-ag-apex transition-colors"
                       >
-                        Accéder au dossier complet <ArrowUpRight size={10} />
+                        {labels.viewFullDossier} <ArrowUpRight size={10} />
                       </NextLink>
                     </div>
                   </div>

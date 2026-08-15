@@ -2736,7 +2736,16 @@
       "step3": "AGB akzeptieren",
       "loginCta": "Anmelden",
       "registerCta": "Konto erstellen",
-      "sellerCta": "Möchten Sie Ihr Asset im nächsten Katalog listen?"
+      "sellerCta": "Möchten Sie Ihr Asset im nächsten Katalog listen?",
+      "arrAll": "Alle",
+      "arrBelow100k": "< 100K",
+      "arr100kTo1m": "100K – 1M",
+      "arr1mTo5m": "1M – 5M",
+      "arrAbove5m": "> 5M",
+      "assetCount": "{count} Asset{count, plural, one {} other {s}} — aktuelle Sitzung",
+      "assetsHidden": "{n} durch Filter ausgeblendet",
+      "resetFiltersShort": "Zurücksetzen",
+      "viewFullDossier": "Vollständiges Dossier öffnen"
     },
     "sell": {
       "meta": {

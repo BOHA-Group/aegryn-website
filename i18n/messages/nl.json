@@ -2736,7 +2736,16 @@
       "step3": "Voorwaarden accepteren",
       "loginCta": "Inloggen",
       "registerCta": "Een account aanmaken",
-      "sellerCta": "Wilt u uw activa in de volgende catalogus opnemen?"
+      "sellerCta": "Wilt u uw activa in de volgende catalogus opnemen?",
+      "arrAll": "Alle",
+      "arrBelow100k": "< 100K",
+      "arr100kTo1m": "100K – 1M",
+      "arr1mTo5m": "1M – 5M",
+      "arrAbove5m": "> 5M",
+      "assetCount": "{count} asset{count, plural, one {} other {s}} — huidige sessie",
+      "assetsHidden": "{n} verborgen door filters",
+      "resetFiltersShort": "Resetten",
+      "viewFullDossier": "Toegang tot het volledige dossier"
     },
     "sell": {
       "meta": {

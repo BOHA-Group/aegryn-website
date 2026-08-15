@@ -213,18 +213,19 @@ export default async function TransactCatalogPage({ params }: Props) {
         assets={publishedAssets}
         locale={locale}
         labels={{
-          filterAll:    t('filterAll'),
-          filterStar:   t('filterStar'),
-          filterAAA:    t('filterAAA'),
-          filterAA:     t('filterAA'),
-          filterA:      t('filterA'),
-          filterB:      t('filterB'),
-          count:        '',
-          session:      '',
-          arrRanges:    [],
-          categories:   [],
-          noResults:    t('noResults'),
-          resetFilters: t('resetFilters'),
+          filterAll:         t('filterAll'),
+          filterStar:        t('filterStar'),
+          filterAAA:         t('filterAAA'),
+          filterAA:          t('filterAA'),
+          filterA:           t('filterA'),
+          filterB:           t('filterB'),
+          arrRanges:         [t('arrAll'), t('arrBelow100k'), t('arr100kTo1m'), t('arr1mTo5m'), t('arrAbove5m')],
+          noResults:         t('noResults'),
+          resetFilters:      t('resetFilters'),
+          resetFiltersShort: t('resetFiltersShort'),
+          viewFullDossier:   t('viewFullDossier'),
+          assetCount:        (count: number) => t('assetCount', { count }),
+          assetsHidden:      (n: number) => t('assetsHidden', { n }),
         }}
       />
 

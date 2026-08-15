@@ -2837,7 +2837,16 @@
       "step3": "Accept the T&Cs",
       "loginCta": "Log in",
       "registerCta": "Create an account",
-      "sellerCta": "Would you like to list your asset in the next catalogue?"
+      "sellerCta": "Would you like to list your asset in the next catalogue?",
+      "arrAll": "All",
+      "arrBelow100k": "< 100K",
+      "arr100kTo1m": "100K – 1M",
+      "arr1mTo5m": "1M – 5M",
+      "arrAbove5m": "> 5M",
+      "assetCount": "{count} asset{count, plural, one {} other {s}} — current session",
+      "assetsHidden": "{n} hidden{n, plural, one {} other {}} by filters",
+      "resetFiltersShort": "Reset",
+      "viewFullDossier": "View full dossier"
     },
     "session": {
       "label": "Next session",
@@ -6111,8 +6120,10 @@
       "desc": "Publications, reports and analysis on the European tech M&A market.",
       "reportLabel": "Annual Report",
       "reportDesc": "The AEGRYN — European Tech M&A Intelligence",
-      "subscribeLabel": "Receive the report",
-      "subscribeDesc": "Subscribe to receive each annual edition."
+      "notifyLabel": "Receive each edition",
+      "notifyDesc": "Sign up to be notified when each new annual edition is published.",
+      "newsletterLabel": "Articles & Insights",
+      "newsletterDesc": "Receive our articles on the tech M&A market — one per week."
     },
     "report": {
       "title": "The AEGRYN Report",
@@ -6121,7 +6132,7 @@
       "edition2026": "Edition 2026 — First Edition",
       "readOnline": "Read online",
       "downloadPdf": "Browse PDF",
-      "subscribe": "Subscribe",
+      "notify": "Get notified",
       "ctaEstimate": "Estimate your asset",
       "ctaGrade": "Discover the Grade",
       "ctaTitle": "You built something real.",
@@ -6138,16 +6149,17 @@
         "description": "Annual reference report on the European tech M&A market. Data, analysis and perspectives by AEGRYN."
       }
     },
-    "subscribe": {
-      "title": "Receive The AEGRYN",
-      "desc": "Each annual edition directly in your inbox. Free access, no commitment.",
+    "notify": {
+      "title": "Get notified for each edition",
+      "desc": "Enter your email to receive a publication notice for each new annual edition of The AEGRYN Report. Free access, no commitment, unsubscribe in one click.",
       "placeholder": "Your email address",
-      "cta": "Subscribe",
+      "cta": "Get notified",
       "success": "Thank you. You will receive the next edition upon publication.",
       "error": "An error occurred. Please try again.",
+      "unsubscribed": "You have been unsubscribed.",
       "meta": {
-        "title": "Subscribe to The AEGRYN Report",
-        "description": "Subscribe to the AEGRYN annual report on the European tech M&A market."
+        "title": "Notifications — The AEGRYN Report",
+        "description": "Receive a publication notice for each new annual edition of the AEGRYN report on the European tech M&A market."
       }
     }
   }
