@@ -207,7 +207,7 @@ export default async function RoadmapPage({ params }: Props) {
           </div>
           <div className="flex flex-col gap-4 md:pt-2">
             <Link
-              href="/auction/submit"
+              href="/transact/submit"
               className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-4 font-semibold hover:bg-ag-navy-mid transition-colors self-start"
             >
               {t('cta')} <ArrowUpRight size={13} />

@@ -65,7 +65,7 @@ return {
   description: 'Aegryn is a Swiss technology holding company. We design, fund and operate proprietary digital ecosystems — Subblink, Neediu, Primiom, Movtoo, Hobconnect — engineered to last. Headquartered in Switzerland.',
   keywords: [
     'Aegryn', 'Swiss Tech', 'digital assets', 'actifs numériques',
-    'digital asset auction', 'enchère tech', 'auction platform', 'tech auction',
+    'digital asset transaction', 'cession tech structurée', 'transact platform', 'M&A tech platform',
     'buy tech company', 'sell tech company', 'SaaS acquisition', 'SaaS for sale',
     'céder SaaS', 'cession SaaS Europe', 'vendre SaaS', 'SaaS exit Europe',
     'M&A tech', 'mergers acquisitions technology', 'cession entreprise numérique',

@@ -246,7 +246,7 @@ export default async function ArticlePage({ params }: Props) {
             <Link href="/grade" className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-5 py-3 hover:bg-ag-navy-mid transition-colors">
               {t('ctaGrade')} <ArrowUpRight size={12} />
             </Link>
-            <Link href="/auction" className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-5 py-3 hover:border-ag-black hover:text-ag-black transition-all">
+            <Link href="/transact" className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-5 py-3 hover:border-ag-black hover:text-ag-black transition-all">
               {t('ctaAuction')}
             </Link>
           </div>

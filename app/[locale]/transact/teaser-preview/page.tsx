@@ -1,6 +1,6 @@
 /**
- * /auction/teaser-preview — aperçu public du lot en vente (teaser Aegryn Auction).
- * Désormais lié publiquement depuis /auction/sessions ("Aperçu du lot" — session à venir).
+ * /transact/teaser-preview — aperçu public du lot en vente (teaser Aegryn TRANSACT).
+ * Désormais lié publiquement depuis /transact/sessions ("Aperçu du lot" — session à venir).
  *
  * ⚠️ SUBBLINK_ASSET_ID est un placeholder — à remplacer par l'UUID réel de la
  * ligne `auction_assets` une fois le lot subblink créé en base (db push).

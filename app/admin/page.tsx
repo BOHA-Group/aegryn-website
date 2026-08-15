@@ -270,7 +270,7 @@ export default async function AdminIndexPage({
           <div className="flex flex-wrap gap-2">
             {[
               { label: '/grade/submit',    href: '/grade/submit' },
-              { label: '/auction/catalog', href: '/auction/catalog' },
+              { label: '/transact/catalog', href: '/transact/catalog' },
               { label: '/valuation',       href: '/valuation' },
               { label: '/client/login',    href: '/client/login' },
             ].map(({ label, href }) => (

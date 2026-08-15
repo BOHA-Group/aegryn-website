@@ -131,7 +131,7 @@ export default async function AdminMembersPage({
           <div className="bg-white border border-gray-200 p-16 text-center">
             <p className="text-[13px] text-gray-400">Aucune demande NDA reçue pour le moment.</p>
             <p className="text-[11px] text-gray-300 mt-2">
-              Les demandes apparaissent ici dès qu'un acquéreur remplit le formulaire NDA sur /auction/catalog.
+              Les demandes apparaissent ici dès qu'un acquéreur remplit le formulaire NDA sur /transact/catalog.
             </p>
           </div>
         ) : (

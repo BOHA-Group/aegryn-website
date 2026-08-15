@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale,
     keywords: [
       'vendre entreprise tech', 'cession SaaS', 'exit startup',
-      'mandat cession actif numérique', 'vente confidentielle', 'auction tech suisse',
+      'mandat cession actif numérique', 'vente confidentielle', 'transaction tech suisse',
       'sell SaaS Europe', 'exit planning', 'M&A tech',
     ],
   })
@@ -48,7 +48,7 @@ export default async function AuctionSellPage({ params }: Props) {
       icon:  <ShieldCheck size={20} className="text-ag-apex" />,
       title: t('steps.s3.title'),
       desc:  t('steps.s3.desc'),
-      cta:   { label: t('steps.s3.cta'), href: '/auction/submit' },
+      cta:   { label: t('steps.s3.cta'), href: '/transact/submit' },
     },
   ]
 
@@ -137,7 +137,7 @@ export default async function AuctionSellPage({ params }: Props) {
                 </div>
                 {cta && (
                   <Link
-                    href={cta.href as '/valuation' | '/auction/submit'}
+                    href={cta.href as '/valuation' | '/transact/submit'}
                     className="inline-flex items-center gap-1.5 font-sans font-semibold text-[11px] uppercase tracking-[0.14em] text-ag-navy hover:text-ag-apex transition-colors mt-auto"
                   >
                     {cta.label} <ArrowUpRight size={11} />

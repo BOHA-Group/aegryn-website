@@ -116,7 +116,7 @@ export default async function AdminCatalogPage({
 
         {/* Info */}
         <div className="mt-8 bg-blue-50 border border-blue-100 p-4 text-[11px] text-blue-600">
-          <strong>Catalogue public (/auction/catalog)</strong> — affiche uniquement les actifs au statut <em>published</em>, avec résumé anonymisé. Le nom du vendeur et l'email ne sont jamais exposés.
+          <strong>Catalogue public (/transact/catalog)</strong> — affiche uniquement les actifs au statut <em>published</em>, avec résumé anonymisé. Le nom du vendeur et l'email ne sont jamais exposés.
         </div>
 
       </div>

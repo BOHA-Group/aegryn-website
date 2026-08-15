@@ -32,7 +32,7 @@ function getLevel(pct: number): Level {
 }
 
 const LEVEL_COLORS: Record<Level, { color: string; bg: string; border: string; icon: React.ReactNode; ctaHref: string }> = {
-  ready:     { color: 'text-emerald-700', bg: 'bg-emerald-50', border: 'border-emerald-200', icon: <CheckCircle2 size={20} className="text-emerald-600 shrink-0" />, ctaHref: '/auction/submit' },
+  ready:     { color: 'text-emerald-700', bg: 'bg-emerald-50', border: 'border-emerald-200', icon: <CheckCircle2 size={20} className="text-emerald-600 shrink-0" />, ctaHref: '/transact/submit' },
   almost:    { color: 'text-amber-700',   bg: 'bg-amber-50',   border: 'border-amber-200',   icon: <AlertCircle  size={20} className="text-amber-600 shrink-0"  />, ctaHref: '/contact'        },
   not_ready: { color: 'text-red-700',     bg: 'bg-red-50',     border: 'border-red-200',     icon: <XCircle      size={20} className="text-red-500 shrink-0"    />, ctaHref: '/contact'        },
 }
@@ -180,7 +180,7 @@ export default function ReadinessScore() {
 
           {/* CTA */}
           <Link
-            href={cfg.ctaHref as '/auction/submit' | '/contact'}
+            href={cfg.ctaHref as '/transact/submit' | '/contact'}
             className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors self-start"
           >
             {t(`levels.${level}.cta`)} <ArrowUpRight size={12} />
