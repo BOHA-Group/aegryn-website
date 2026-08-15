@@ -24,21 +24,25 @@ export async function POST(req: NextRequest) {
     const locale = data.locale ?? 'fr'
     const supabase = createServiceClient()
 
-    const { error } = await supabase
-      .from('newsletter_subscribers')
-      .upsert(
-        {
-          email,
-          user_id: user?.id ?? null,
-          locale,
-          status: 'active',
-          unsubscribed_at: null,
-        },
-        { onConflict: 'email' },
-      )
+    const payload = {
+      email,
+      user_id: user?.id ?? null,
+      locale,
+      status: 'active',
+      unsubscribed_at: null,
+    }
 
-    if (error) {
-      console.error('[newsletter/subscribe] Supabase error', error)
+    const [{ error: errNewsletter }, { error: errReport }] = await Promise.all([
+      supabase
+        .from('newsletter_subscribers')
+        .upsert(payload, { onConflict: 'email' }),
+      supabase
+        .from('report_subscribers')
+        .upsert({ ...payload, locale: payload.locale ?? 'en' }, { onConflict: 'email' }),
+    ])
+
+    if (errNewsletter || errReport) {
+      console.error('[newsletter/subscribe] Supabase error', errNewsletter ?? errReport)
       return NextResponse.json({ error: 'internal' }, { status: 500 })
     }
 
