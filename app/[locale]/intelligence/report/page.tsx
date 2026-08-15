@@ -77,6 +77,12 @@ export default async function ReportIndexPage({
                   {t('readOnline')} <ArrowUpRight size={13} />
                 </Link>
                 <Link
+                  href={`/${locale}/intelligence/report/2026/pdf`}
+                  className="inline-flex items-center gap-2 border border-magazine-black/20 text-magazine-black font-sans font-semibold text-label-mag uppercase tracking-[0.12em] px-6 py-3.5 hover:border-magazine-black/60 transition-colors"
+                >
+                  {t('downloadPdf')} <ArrowUpRight size={13} />
+                </Link>
+                <Link
                   href={`/${locale}/intelligence/subscribe`}
                   className="inline-flex items-center gap-2 border border-magazine-black/20 text-magazine-black font-sans font-semibold text-label-mag uppercase tracking-[0.12em] px-6 py-3.5 hover:border-magazine-black/60 transition-colors"
                 >
