@@ -53,7 +53,11 @@
     "buildEngineering": "Conception d'actifs",
     "comingSoon": "Bientôt disponible",
     "soon": "Bientôt",
-    "intelligence": "Intelligence"
+    "intelligence": "Intelligence",
+    "magazine": "Magazine",
+    "aboutGroup": "À propos",
+    "aboutPublications": "Publications",
+    "aboutCareers": "Carrières"
   },
   "hero": {
     "tagline": "Nous refusons qu'un actif solide disparaisse dans une transaction mal préparée.",
