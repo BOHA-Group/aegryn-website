@@ -34,6 +34,7 @@ const BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
 
 const ABOUT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'magazine',          href: '/intelligence/report' },
+  { labelKey: 'articles',          href: '/blog' },
   { labelKey: 'aboutGroup',        href: '/about' },
   { labelKey: 'aboutCareers',      href: '/career' },
 ]
@@ -156,7 +157,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const isGradeActive    = GRADE_LINKS.some(({ href }) => isActive(href as string))
   const isBuildActive    = BUILD_LINKS.some(({ href }) => isActive(href as string))
   const isAdvisoryActive = ADVISORY_LINKS.some(({ href }) => isActive(href as string))
-  const isAboutActive    = isActive('/about') || isActive('/intelligence/report')
+  const isAboutActive    = isActive('/about') || isActive('/intelligence/report') || isActive('/blog') || isActive('/career')
   const [mobileOpen, setMobileOpen]   = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<DropdownKey>(null)
   const [mobileAccordion, setMobileAccordion] = useState<DropdownKey>(null)
@@ -304,18 +305,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             </button>
             {activeDropdown === 'transact' && <DropdownMenu links={TRANSACT_LINKS} t={t} />}
           </div>
-
-          {/* Blog */}
-          <Link
-            href="/blog"
-            aria-current={isActive('/blog') ? 'page' : undefined}
-            className={`nav-link-item relative font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-              isActive('/blog') ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
-            }`}
-          >
-            {t('discover')}
-            {isActive('/blog') && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
-          </Link>
 
           {/* About dropdown */}
           <div className="nav-link-item relative">
@@ -511,15 +500,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 </div>
               )}
             </div>
-
-            {/* Blog */}
-            <Link href="/blog" onClick={closeMobile}
-              aria-current={isActive('/blog') ? 'page' : undefined}
-              className={`mobile-nav-item py-4 font-mono text-[12px] tracking-[0.18em] uppercase transition-colors border-b ${
-                isActive('/blog') ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
-              }`}>
-              {t('discover')}
-            </Link>
 
             {/* About accordion */}
             <div className="mobile-nav-item">

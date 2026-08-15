@@ -35,7 +35,7 @@ function RadioGroup<T extends string>({
 }
 
 export default function CatalogNotifyForm({ locale }: { locale: string }) {
-  const t = useTranslations('transact.catalog')
+  const t = useTranslations('auction.catalog')
 
   const [email,         setEmail]         = useState('')
   const [acquirerType,  setAcquirerType]  = useState<AcquirerType | ''>('')

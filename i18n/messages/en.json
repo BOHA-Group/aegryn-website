@@ -57,7 +57,8 @@
     "magazine": "Magazine",
     "aboutGroup": "About",
     "aboutPublications": "Publications",
-    "aboutCareers": "Careers"
+    "aboutCareers": "Careers",
+    "articles": "Articles"
   },
   "hero": {
     "tagline": "We refuse to let a solid asset disappear into a poorly prepared transaction.",

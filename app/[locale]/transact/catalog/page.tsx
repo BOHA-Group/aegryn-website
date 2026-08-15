@@ -15,7 +15,7 @@ type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'transact.meta' })
+  const t = await getTranslations({ locale, namespace: 'auction.meta' })
   return generateAegrynMetadata({
     title: t('title'),
     description: t('desc'),
@@ -44,7 +44,7 @@ async function getSessionUser() {
 
 export default async function TransactCatalogPage({ params }: Props) {
   const { locale } = await params
-  const t    = await getTranslations({ locale, namespace: 'transact.catalog' })
+  const t    = await getTranslations({ locale, namespace: 'auction.catalog' })
 
   /* ── Auth check ── */
   const user = await getSessionUser()
