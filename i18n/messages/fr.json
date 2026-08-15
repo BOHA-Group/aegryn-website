@@ -1024,7 +1024,7 @@
       "label": "GRADE",
       "desc": "Certification indépendante et documentée"
     },
-    "auction": {
+    "transact": {
       "label": "TRANSACT",
       "desc": "Transactions institutionnelles encadrées"
     }

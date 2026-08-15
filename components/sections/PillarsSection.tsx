@@ -8,7 +8,7 @@ import { gsap } from '@/lib/gsap'
 const PILLAR_ICONS: Record<string, typeof Hammer> = {
   build:   Hammer,
   grade:   BadgeCheck,
-  auction: Gavel,
+  transact: Gavel,
 }
 
 export function PillarsSection() {
@@ -29,7 +29,7 @@ export function PillarsSection() {
     return () => ctx.revert()
   }, [])
 
-  const pillars = ['build', 'grade', 'auction'] as const
+  const pillars = ['build', 'grade', 'transact'] as const
 
   return (
     <section ref={ref} className="bg-ag-navy border-t border-white/[0.08]">
