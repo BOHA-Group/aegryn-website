@@ -34,7 +34,7 @@ export default function DossierRequestModal({ assetId, assetName, onClose }: Pro
 
   async function onSubmit(data: FormData) {
     try {
-      const res = await fetch('/api/auction/request-dossier', {
+      const res = await fetch('/api/transaction/request-dossier', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ asset_id: assetId, note: data.note }),

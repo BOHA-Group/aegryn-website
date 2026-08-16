@@ -1,5 +1,5 @@
 /**
- * /admin/auction/sequesters
+ * /admin/transaction/sequesters
  * Suivi des cautions bancaires (séquestres)
  */
 import Link                    from 'next/link'
@@ -63,7 +63,7 @@ export default async function TransactSequesters({
             <p className="text-xs text-gray-400 font-mono uppercase tracking-widest mb-1">Transact Admin</p>
             <h1 className="text-xl font-bold text-gray-900">Séquestres — Cautions bancaires</h1>
           </div>
-          <Link href={`/admin/auction${qs}`} className="text-xs text-gray-400 hover:text-gray-700">← Dashboard</Link>
+          <Link href={`/admin/transaction${qs}`} className="text-xs text-gray-400 hover:text-gray-700">← Dashboard</Link>
         </div>
 
         {/* Totaux */}
@@ -83,7 +83,7 @@ export default async function TransactSequesters({
           {['awaited', 'received', 'released', 'applied', 'forfeited', 'all'].map(s => (
             <Link
               key={s}
-              href={`/admin/auction/sequesters?status=${s}`}
+              href={`/admin/transaction/sequesters?status=${s}`}
               className={`text-[11px] font-mono uppercase tracking-wider px-3 py-1.5 border transition-colors ${
                 status === s
                   ? 'bg-gray-900 text-white border-gray-900'
@@ -132,7 +132,7 @@ export default async function TransactSequesters({
                         {s.received_at ? new Date(s.received_at as string).toLocaleDateString('fr-CH') : '—'}
                       </td>
                       <td className="px-6 py-3 text-right">
-                        <Link href={`/admin/auction/sequesters/${s.id}`} className="text-blue-600 hover:underline">
+                        <Link href={`/admin/transaction/sequesters/${s.id}`} className="text-blue-600 hover:underline">
                           Gérer →
                         </Link>
                       </td>

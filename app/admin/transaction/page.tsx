@@ -1,5 +1,5 @@
 /**
- * /admin/auction — Tableau de bord Aegryn Auction
+ * /admin/transaction — Tableau de bord Aegryn Auction
  * Auth : Supabase session + rôle admin
  */
 import Link                    from 'next/link'
@@ -66,11 +66,11 @@ export default async function TransactAdminPage() {
   const closedLots  = (lots ?? []).filter(l => l.session_closes_at && new Date(l.session_closes_at as string) < now)
 
   const MODULES = [
-    { href: `/admin/auction/lots${qs}`,       icon: Gavel,       title: 'Gestion des actifs',  desc: `${(lots ?? []).length} actifs · ${activeLots.length} session(s) active(s)`, badge: draftLots.length, badgeLabel: 'brouillons' },
-    { href: `/admin/auction/buyers${qs}`,     icon: Users,       title: 'Acquéreurs & KYC',    desc: 'Vérification identité + capacité financière', badge: kycPending ?? 0, badgeLabel: 'KYC en attente' },
-    { href: `/admin/auction/requests${qs}`,   icon: FileText,    title: 'Demandes dossier',    desc: 'Approbation accès dossier complet', badge: requestsPending ?? 0, badgeLabel: 'en attente' },
-    { href: `/admin/auction/bids${qs}`,       icon: TrendingUp,  title: 'Offres (appel fermé)', desc: 'Appel d\'offres fermé — revue et sélection', badge: bidsSubmitted ?? 0, badgeLabel: 'à examiner' },
-    { href: `/admin/auction/sequesters${qs}`, icon: Banknote,    title: 'Séquestres / cautions', desc: 'Suivi des cautions bancaires', badge: sequesters ?? 0, badgeLabel: 'en attente' },
+    { href: `/admin/transaction/lots${qs}`,       icon: Gavel,       title: 'Gestion des actifs',  desc: `${(lots ?? []).length} actifs · ${activeLots.length} session(s) active(s)`, badge: draftLots.length, badgeLabel: 'brouillons' },
+    { href: `/admin/transaction/buyers${qs}`,     icon: Users,       title: 'Acquéreurs & KYC',    desc: 'Vérification identité + capacité financière', badge: kycPending ?? 0, badgeLabel: 'KYC en attente' },
+    { href: `/admin/transaction/requests${qs}`,   icon: FileText,    title: 'Demandes dossier',    desc: 'Approbation accès dossier complet', badge: requestsPending ?? 0, badgeLabel: 'en attente' },
+    { href: `/admin/transaction/bids${qs}`,       icon: TrendingUp,  title: 'Offres (appel fermé)', desc: 'Appel d\'offres fermé — revue et sélection', badge: bidsSubmitted ?? 0, badgeLabel: 'à examiner' },
+    { href: `/admin/transaction/sequesters${qs}`, icon: Banknote,    title: 'Séquestres / cautions', desc: 'Suivi des cautions bancaires', badge: sequesters ?? 0, badgeLabel: 'en attente' },
   ]
 
   return (
@@ -137,7 +137,7 @@ export default async function TransactAdminPage() {
         <div className="bg-white border border-gray-200 rounded-sm overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
             <h2 className="font-semibold text-gray-900 text-sm">Actifs Aegryn Transact</h2>
-            <Link href={`/admin/auction/lots${qs}`} className="text-xs text-gray-400 hover:text-gray-700">
+            <Link href={`/admin/transaction/lots${qs}`} className="text-xs text-gray-400 hover:text-gray-700">
               Gérer →
             </Link>
           </div>
@@ -163,7 +163,7 @@ export default async function TransactAdminPage() {
                   return (
                     <tr key={lot.id as string} className="border-b border-gray-50 hover:bg-gray-50 transition-colors">
                       <td className="px-6 py-3">
-                        <Link href={`/admin/auction/lots/${lot.id}${qs}`} className="font-semibold text-gray-900 hover:text-blue-600">
+                        <Link href={`/admin/transaction/lots/${lot.id}${qs}`} className="font-semibold text-gray-900 hover:text-blue-600">
                           {lot.name as string}
                         </Link>
                         <span className="ml-2 text-gray-400">#{lot.lot_number as string}</span>

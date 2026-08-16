@@ -1,5 +1,5 @@
 /**
- * /admin/auction/bids
+ * /admin/transaction/bids
  * Revue des offres scellées — adjudication
  */
 import Link                    from 'next/link'
@@ -63,7 +63,7 @@ export default async function TransactBidsPage({
             <p className="text-xs text-gray-400 font-mono uppercase tracking-widest mb-1">Transact Admin</p>
             <h1 className="text-xl font-bold text-gray-900">Offres — Appel d'offres fermé</h1>
           </div>
-          <Link href={`/admin/auction${qs}`} className="text-xs text-gray-400 hover:text-gray-700">← Dashboard</Link>
+          <Link href={`/admin/transaction${qs}`} className="text-xs text-gray-400 hover:text-gray-700">← Dashboard</Link>
         </div>
 
         {/* Note méthodologique */}
@@ -78,7 +78,7 @@ export default async function TransactBidsPage({
           {['submitted', 'under_review', 'retained', 'rejected', 'all'].map(s => (
             <Link
               key={s}
-              href={`/admin/auction/bids?status=${s}${asset ? `&asset=${asset}` : ''}`}
+              href={`/admin/transaction/bids?status=${s}${asset ? `&asset=${asset}` : ''}`}
               className={`text-[11px] font-mono uppercase tracking-wider px-3 py-1.5 border transition-colors ${
                 status === s
                   ? 'bg-gray-900 text-white border-gray-900'
@@ -144,7 +144,7 @@ export default async function TransactBidsPage({
                         {new Date(b.submitted_at as string).toLocaleDateString('fr-CH')}
                       </td>
                       <td className="px-6 py-3 text-right">
-                        <Link href={`/admin/auction/bids/${b.id}`} className="text-blue-600 hover:underline">
+                        <Link href={`/admin/transaction/bids/${b.id}`} className="text-blue-600 hover:underline">
                           Examiner →
                         </Link>
                       </td>

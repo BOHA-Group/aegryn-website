@@ -8,7 +8,7 @@ import {
   ChevronDown, ChevronUp,
 } from 'lucide-react'
 import type { LucideIcon }                                              from 'lucide-react'
-import type { AssetLot, HeroStat, SummaryItem, BulletItem, TargetItem } from '@/types/auction'
+import type { AssetLot, HeroStat, SummaryItem, BulletItem, TargetItem } from '@/types/transaction'
 
 const T = {
   ink:       '#0C0C0C',

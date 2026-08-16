@@ -1,1 +1,1 @@
-export { POST } from '@/app/api/auction/buyers/route'
+export { POST } from '@/app/api/transaction/buyers/route'

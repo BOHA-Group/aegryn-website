@@ -63,7 +63,7 @@ export default function LotEditForm({ lot }: { lot: Record<string, unknown> }) {
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data?.error ?? 'Erreur inconnue')
-      router.push('/admin/auction/lots')
+      router.push('/admin/transaction/lots')
       router.refresh()
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Erreur inconnue')
@@ -78,7 +78,7 @@ export default function LotEditForm({ lot }: { lot: Record<string, unknown> }) {
       const res  = await fetch(`/api/admin/lots/${id}`, { method: 'DELETE' })
       const data = await res.json()
       if (!res.ok) throw new Error(data?.error ?? 'Erreur inconnue')
-      router.push('/admin/auction/lots')
+      router.push('/admin/transaction/lots')
       router.refresh()
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Erreur inconnue')

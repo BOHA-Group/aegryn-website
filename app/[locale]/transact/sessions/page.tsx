@@ -4,7 +4,7 @@ import NextLink from 'next/link'
 import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
 import { Calendar, MapPin, Users, ArrowUpRight, Bell, Lock } from 'lucide-react'
-import WaitlistForm from '@/components/auction/WaitlistForm'
+import WaitlistForm from '@/components/transaction/WaitlistForm'
 import { getUser } from '@/lib/supabaseServer'
 import { checkTransactCatalogAccess } from '@/lib/transactAccess'
 

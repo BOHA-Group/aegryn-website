@@ -11,7 +11,7 @@
  * C'est la limite volontaire entre le teaser et le dossier complet (AssetLotSheet).
  */
 
-import type { AssetTeaser } from '@/types/auction'
+import type { AssetTeaser } from '@/types/transaction'
 
 export const subblinkTeaser: AssetTeaser = {
   lotNumber:     '001',

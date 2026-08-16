@@ -22,11 +22,11 @@ import NextLink             from 'next/link'
 import { Link }             from '@/i18n/navigation'
 import { Lock, ArrowUpRight, ClockAlert } from 'lucide-react'
 
-import AssetLotSheet   from '@/components/auction/AssetLotSheet'
-import { mapRowToAsset } from '@/lib/auction/mapRowToAsset'
+import AssetLotSheet   from '@/components/transaction/AssetLotSheet'
+import { mapRowToAsset } from '@/lib/transaction/mapRowToAsset'
 import { createServiceClient } from '@/lib/supabase'
 import { checkTransactCatalogAccess } from '@/lib/transactAccess'
-import type { AuctionLotRow, AuctionLotAccess } from '@/types/transact'
+import type { TransactionLotRow, TransactionLotAccess } from '@/types/transaction'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -94,7 +94,7 @@ export default async function AuctionLotPage({ params }: Props) {
     .select('id, expires_at, status')
     .eq('asset_id', lotRow.id)
     .eq('user_id', user.id)
-    .single() as { data: (Pick<AuctionLotAccess, 'expires_at' | 'status'> & { id: string }) | null }
+    .single() as { data: (Pick<TransactionLotAccess, 'expires_at' | 'status'> & { id: string }) | null }
 
   const now = new Date()
   let accessState: AccessState = 'ok'
@@ -117,7 +117,7 @@ export default async function AuctionLotPage({ params }: Props) {
     .from('assets')
     .select('*')
     .eq('id', lotRow.id)
-    .single() as { data: AuctionLotRow | null }
+    .single() as { data: TransactionLotRow | null }
 
   if (!fullRow) {
     return <AccessDeniedScreen locale={locale} slug={slug} state="no_access" t={t} />

@@ -143,7 +143,7 @@ export default async function AdminSessionsPage() {
                               Modifier
                             </Link>
                             <Link
-                              href={`/admin/auction/lots`}
+                              href={`/admin/transaction/lots`}
                               className="font-sans text-[11px] text-gray-500 hover:text-gray-800 transition-colors"
                             >
                               Lots

@@ -21,7 +21,7 @@ export default function AdminLoginForm({ errorParam }: { errorParam?: string }) 
   const [mfaCode,     setMfaCode]     = useState('')
 
   async function finishLogin() {
-    router.push('/admin/auction')
+    router.push('/admin/transaction')
   }
 
   async function handleSubmit(e: React.FormEvent) {

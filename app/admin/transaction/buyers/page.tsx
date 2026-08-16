@@ -1,5 +1,5 @@
 /**
- * /admin/auction/buyers
+ * /admin/transaction/buyers
  * Suivi KYC acquéreurs + gestion accès dossier
  */
 import { requireAdmin }        from '@/lib/adminAuth'
@@ -64,7 +64,7 @@ export default async function TransactBuyersPage({
             <p className="text-xs text-gray-400 font-mono uppercase tracking-widest mb-1">Transact Admin</p>
             <h1 className="text-xl font-bold text-gray-900">Acquéreurs & KYC</h1>
           </div>
-          <Link href={`/admin/auction${qs}`} className="text-xs text-gray-400 hover:text-gray-700">← Dashboard</Link>
+          <Link href={`/admin/transaction${qs}`} className="text-xs text-gray-400 hover:text-gray-700">← Dashboard</Link>
         </div>
 
         {/* KYC filter tabs */}
@@ -72,7 +72,7 @@ export default async function TransactBuyersPage({
           {['all', 'pending', 'in_review', 'approved', 'rejected'].map(s => (
             <Link
               key={s}
-              href={`/admin/auction/buyers?kyc=${s}`}
+              href={`/admin/transaction/buyers?kyc=${s}`}
               className={`text-[11px] font-mono uppercase tracking-wider px-4 py-2 border transition-colors ${
                 kyc === s
                   ? 'bg-gray-900 text-white border-gray-900'
@@ -126,7 +126,7 @@ export default async function TransactBuyersPage({
                     </td>
                     <td className="px-6 py-3 text-right">
                       <Link
-                        href={`/admin/auction/buyers/${b.user_id}${qs}`}
+                        href={`/admin/transaction/buyers/${b.user_id}${qs}`}
                         className="text-blue-600 hover:underline"
                       >
                         Gérer →
@@ -167,10 +167,10 @@ export default async function TransactBuyersPage({
                       <td className="px-4 py-3 font-mono text-gray-400 truncate max-w-[180px]">{r.user_id as string}</td>
                       <td className="px-4 py-3 text-gray-400">{new Date(r.created_at as string).toLocaleDateString('fr-CH')}</td>
                       <td className="px-6 py-3 text-right">
-                        <form action={`/api/auction/grant-access`} method="POST" className="inline-flex gap-2">
+                        <form action={`/api/transaction/grant-access`} method="POST" className="inline-flex gap-2">
                           <input type="hidden" name="request_id" value={r.id as string} />
                           <Link
-                            href={`/admin/auction/requests/${r.id}${qs}`}
+                            href={`/admin/transaction/requests/${r.id}${qs}`}
                             className="text-blue-600 hover:underline"
                           >
                             Examiner →

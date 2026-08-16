@@ -1,1 +1,1 @@
-export { POST } from '@/app/api/auction/access-request/route'
+export { POST } from '@/app/api/transaction/access-request/route'

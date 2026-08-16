@@ -1,5 +1,5 @@
 /**
- * /admin/auction/lots
+ * /admin/transaction/lots
  * Gestion des lots — statut, session, mise à prix, grade
  */
 import Link                    from 'next/link'
@@ -53,7 +53,7 @@ export default async function TransactLotsPage({
             <p className="text-xs text-gray-400 font-mono uppercase tracking-widest mb-1">Transact Admin</p>
             <h1 className="text-xl font-bold text-gray-900">Gestion des actifs</h1>
           </div>
-          <Link href={`/admin/auction${qs}`} className="text-xs text-gray-400 hover:text-gray-700">← Dashboard</Link>
+          <Link href={`/admin/transaction${qs}`} className="text-xs text-gray-400 hover:text-gray-700">← Dashboard</Link>
         </div>
 
         {/* Filtres statut */}
@@ -61,7 +61,7 @@ export default async function TransactLotsPage({
           {['all', 'draft', 'published', 'archived', 'withdrawn'].map(s => (
             <Link
               key={s}
-              href={`/admin/auction/lots?status=${s}&grade=${grade}`}
+              href={`/admin/transaction/lots?status=${s}&grade=${grade}`}
               className={`text-[11px] font-mono uppercase tracking-wider px-3 py-1.5 border transition-colors ${
                 status === s
                   ? 'bg-gray-900 text-white border-gray-900'
@@ -78,7 +78,7 @@ export default async function TransactLotsPage({
           {[['all', 'Tous grades'], ['AAA', 'AAA'], ['AA', 'AA'], ['A', 'A'], ['B', 'B'], ['star', 'AEG ★']].map(([g, label]) => (
             <Link
               key={g}
-              href={`/admin/auction/lots?status=${status}&grade=${g}`}
+              href={`/admin/transaction/lots?status=${status}&grade=${g}`}
               className={`text-[11px] font-mono uppercase tracking-wider px-3 py-1.5 border transition-colors ${
                 grade === g
                   ? 'bg-emerald-700 text-white border-emerald-700'
@@ -115,7 +115,7 @@ export default async function TransactLotsPage({
                   return (
                     <tr key={lot.id as string} className="border-b border-gray-50 hover:bg-gray-50">
                       <td className="px-6 py-3">
-                        <Link href={`/admin/auction/lots/${lot.id}${qs}`} className="font-semibold text-gray-900 hover:text-blue-600">
+                        <Link href={`/admin/transaction/lots/${lot.id}${qs}`} className="font-semibold text-gray-900 hover:text-blue-600">
                           {lot.name as string}
                         </Link>
                         <span className="ml-2 text-gray-400">#{lot.lot_number as string}</span>
@@ -135,7 +135,7 @@ export default async function TransactLotsPage({
                       <td className="px-4 py-3 text-right font-mono text-gray-700">{fmtChf(lot.reserve_price)}</td>
                       <td className="px-4 py-3 text-right text-gray-500">{lot.buyer_premium_pct as number ?? 10} %</td>
                       <td className="px-6 py-3 text-right">
-                        <Link href={`/admin/auction/lots/${lot.id}${qs}`} className="text-blue-600 hover:underline">
+                        <Link href={`/admin/transaction/lots/${lot.id}${qs}`} className="text-blue-600 hover:underline">
                           Modifier →
                         </Link>
                       </td>

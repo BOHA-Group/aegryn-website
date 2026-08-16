@@ -1,7 +1,7 @@
 /**
- * types/transact.ts
- * Shapes for AssetLotSheet and related TRANSACT data.
- * Every field mirrors a Supabase JSONB column in `assets`.
+ * types/transaction.ts
+ * Shapes for AssetLotSheet and related transaction data.
+ * Every field mirrors a Supabase JSONB column in `transaction_assets`.
  */
 
 /** Teaser document confidentiel — AssetTeaserDocument */
@@ -129,8 +129,8 @@ export interface AssetLotTeaser {
   session_opens_at: string | null
 }
 
-/** Supabase row shape (auction_assets table — schéma canonique) */
-export interface AuctionLotRow {
+/** Supabase row shape (transaction_assets table — schéma canonique) */
+export interface TransactionLotRow {
   id:              string
   slug:            string
   lot_number:      string
@@ -160,8 +160,8 @@ export interface AuctionLotRow {
   mentions:            unknown
 }
 
-/** Access record shape (auction_asset_access table) */
-export interface AuctionLotAccess {
+/** Access record shape (transaction_asset_access table) */
+export interface TransactionLotAccess {
   id:         string
   asset_id:   string
   user_id:    string

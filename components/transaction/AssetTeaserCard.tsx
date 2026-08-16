@@ -1,6 +1,6 @@
 import Link        from 'next/link'
 import { Lock, ArrowUpRight, CalendarClock } from 'lucide-react'
-import type { AssetLotTeaser } from '@/types/auction'
+import type { AssetLotTeaser } from '@/types/transaction'
 
 const GRADE_PALETTE: Record<string, { bg: string; text: string; border: string }> = {
   '★':   { bg: '#EDFAF4', text: '#0A6B47', border: '#5ADDA4' },  // apex mint

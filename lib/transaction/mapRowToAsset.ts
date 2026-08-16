@@ -7,7 +7,7 @@
  * JSONB sous forme de string non parsée (rare mais possible en Edge Runtime).
  * En fonctionnement normal, Supabase parse déjà les JSONB en objets JS.
  */
-import type { AssetLot, AuctionLotRow } from '@/types/auction'
+import type { AssetLot, TransactionLotRow } from '@/types/transaction'
 
 function jsonb<T>(raw: unknown, fallback: T): T {
   if (!raw) return fallback
@@ -17,7 +17,7 @@ function jsonb<T>(raw: unknown, fallback: T): T {
   return raw as T
 }
 
-export function mapRowToAsset(row: AuctionLotRow | null): AssetLot | null {
+export function mapRowToAsset(row: TransactionLotRow | null): AssetLot | null {
   if (!row) return null
 
   return {

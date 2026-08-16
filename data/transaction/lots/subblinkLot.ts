@@ -10,7 +10,7 @@
  *     (#9C7A3C) jusqu'à confirmation ou reclassement en "B" par le jury d'audit.
  */
 
-import type { AssetLot } from '@/types/auction'
+import type { AssetLot } from '@/types/transaction'
 
 export const subblinkLot: AssetLot = {
   lotNumber: "001",

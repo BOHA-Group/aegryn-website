@@ -2,7 +2,7 @@
 
 import { useState }              from 'react'
 import { ArrowRight, Lock }      from 'lucide-react'
-import type { AssetTeaser }      from '@/types/auction'
+import type { AssetTeaser }      from '@/types/transaction'
 import DossierRequestModal       from './DossierRequestModal'
 
 const T = {

@@ -24,7 +24,7 @@ export default async function EditLotPage({
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
-        <Link href="/admin/auction/lots" className="font-sans text-[12px] text-gray-400 hover:text-gray-700 transition-colors">
+        <Link href="/admin/transaction/lots" className="font-sans text-[12px] text-gray-400 hover:text-gray-700 transition-colors">
           ← Lots
         </Link>
         <span className="text-gray-200">|</span>
