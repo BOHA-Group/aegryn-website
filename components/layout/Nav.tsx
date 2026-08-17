@@ -17,7 +17,6 @@ const TRANSACT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'transactCatalog',    href: '/transact/catalog' },
   { labelKey: 'transactSell',       href: '/transact/how-to-sell' },
   { labelKey: 'transactBuy',        href: '/transact/how-to-buy' },
-  { labelKey: 'transactMandate',    href: '/transact/mandate' },
   { labelKey: 'transactResults',    href: '/transact/results' },
 ]
 
