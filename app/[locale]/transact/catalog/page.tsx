@@ -134,8 +134,6 @@ export default async function TransactCatalogPage({ params }: Props) {
           resetFilters:      t('resetFilters'),
           resetFiltersShort: t('resetFiltersShort'),
           viewFullDossier:   t('viewFullDossier'),
-          assetCount:        (count: number) => t('assetCount', { count }),
-          assetsHidden:      (n: number) => t('assetsHidden', { n }),
           /* gate labels */
           conditionalAccess: t('conditionalAccess'),
           qualifiedOnly:     t('qualifiedOnly'),

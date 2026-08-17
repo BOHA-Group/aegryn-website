@@ -34,8 +34,7 @@ type Props = {
     resetFilters:      string
     resetFiltersShort: string
     viewFullDossier:   string
-    assetCount:        (count: number) => string
-    assetsHidden:      (n: number) => string
+
     /* gate labels */
     conditionalAccess: string
     qualifiedOnly:     string
@@ -232,10 +231,10 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
           {filtered.length > 0 ? (
             <>
               <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
-                {labels.assetCount(filtered.length)}
-                {hasFilters && (
+                {filtered.length} / {assets.length}
+                {hasFilters && assets.length - filtered.length > 0 && (
                   <span className="ml-2 text-ag-apex">
-                    ({labels.assetsHidden(assets.length - filtered.length)})
+                    (−{assets.length - filtered.length})
                   </span>
                 )}
               </p>
