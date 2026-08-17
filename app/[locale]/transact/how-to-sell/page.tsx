@@ -58,7 +58,7 @@ export default async function TransactSellPage({ params }: Props) {
             {t('desc')}
           </p>
           <Link
-            href="/transact/submit"
+            href={{ pathname: '/transact/mandate', query: { type: 'sell' } }}
             className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             {t('cta')} <ArrowUpRight size={13} />
@@ -139,7 +139,7 @@ export default async function TransactSellPage({ params }: Props) {
                 </ul>
               </div>
               <Link
-                href="/contact"
+                href={{ pathname: '/transact/mandate', query: { type: 'fundraise' } }}
                 className="self-start inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-colors mt-auto"
               >
                 {tm('segment.fundraise.cta')} <ArrowUpRight size={11} />
@@ -170,7 +170,7 @@ export default async function TransactSellPage({ params }: Props) {
                 </ul>
               </div>
               <Link
-                href="/contact"
+                href={{ pathname: '/transact/mandate', query: { type: 'equity_stake' } }}
                 className="self-start inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-colors mt-auto"
               >
                 {tm('segment.equity_stake.cta')} <ArrowUpRight size={11} />
@@ -215,7 +215,7 @@ export default async function TransactSellPage({ params }: Props) {
             </p>
           </div>
           <Link
-            href="/contact"
+            href={{ pathname: '/transact/mandate', query: { type: 'sell' } }}
             className="shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             {tm('ndaCta')} <ArrowUpRight size={13} />

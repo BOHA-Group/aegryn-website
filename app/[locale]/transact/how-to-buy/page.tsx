@@ -51,7 +51,7 @@ export default async function TransactBuyPage({ params }: Props) {
             {t('desc')}
           </p>
           <Link
-            href="/contact"
+            href={{ pathname: '/transact/mandate', query: { type: 'buy' } }}
             className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             {t('cta')} <ArrowUpRight size={13} />
@@ -125,7 +125,7 @@ export default async function TransactBuyPage({ params }: Props) {
                 ))}
               </ul>
               <Link
-                href="/contact"
+                href={{ pathname: '/transact/mandate', query: { type: 'buy' } }}
                 className="self-start inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-2.5 hover:bg-ag-black transition-colors mt-4"
               >
                 {tm('segment.buy.cta')} <ArrowUpRight size={11} />
@@ -150,7 +150,7 @@ export default async function TransactBuyPage({ params }: Props) {
             </p>
           </div>
           <Link
-            href="/contact"
+            href={{ pathname: '/transact/mandate', query: { type: 'buy' } }}
             className="shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             {tm('ndaCta')} <ArrowUpRight size={13} />
