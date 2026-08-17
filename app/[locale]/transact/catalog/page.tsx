@@ -8,7 +8,6 @@ import { createServerClient }      from '@supabase/ssr'
 import { ArrowUpRight, Info, Calendar, MapPin, Users, Bell, Lock } from 'lucide-react'
 import Image                       from 'next/image'
 import CatalogFilters              from './CatalogFilters'
-import CatalogNotifyForm           from './CatalogNotifyForm'
 import WaitlistForm                from '@/components/transaction/WaitlistForm'
 import { checkTransactCatalogAccess } from '@/lib/transactAccess'
 import { createServiceClient }     from '@/lib/supabase'
@@ -98,19 +97,9 @@ export default async function TransactCatalogPage({ params }: Props) {
           >
             {tc('title')}
           </h1>
-          <p className="font-sans text-[15px] text-white/50 max-w-xl mb-10">
+          <p className="font-sans text-[15px] text-white/50 max-w-xl">
             {tc('desc')}
           </p>
-          {/* Métadonnées session */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {sessionDetails.map(({ icon: Icon, label, value }) => (
-              <div key={label} className="border border-white/15 p-5 flex flex-col gap-3">
-                <Icon size={15} className="text-ag-apex" />
-                <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-white/40">{label}</p>
-                <p className="font-sans font-semibold text-white text-[13px]">{value}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -131,6 +120,95 @@ export default async function TransactCatalogPage({ params }: Props) {
           </Link>
         </div>
       </div>
+
+      {/* ── Actifs à venir (ex "Prochaine session") ── */}
+      <section className="py-16 px-6 border-b border-ag-border">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-6">
+            Actifs à venir
+          </p>
+
+          {/* Métadonnées session */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            {sessionDetails.map(({ icon: Icon, label, value }) => (
+              <div key={label} className="border border-ag-border p-5 flex flex-col gap-3">
+                <Icon size={14} className="text-ag-apex" />
+                <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light">{label}</p>
+                <p className="font-sans font-semibold text-ag-black text-[13px]">{value}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Card lot */}
+          <div className="border border-ag-border bg-ag-white flex flex-col md:flex-row gap-0 md:gap-8 hover:border-ag-black/30 transition-colors">
+            {/* Vignette 9:16 */}
+            <div className="relative w-full md:w-[140px] shrink-0 bg-ag-off-white overflow-hidden" style={{ aspectRatio: '9 / 16' }}>
+              <Image
+                src="/images/transact/transact_legal-tech_T32026.jpg"
+                alt={ts('sessionCardTitle')}
+                fill
+                className="object-contain"
+                sizes="140px"
+              />
+              <span className="absolute top-3 left-3 bg-ag-apex text-ag-navy font-mono font-semibold text-[10px] tracking-[0.14em] uppercase px-3 py-1.5">
+                {ts('sessionCardStatus')}
+              </span>
+            </div>
+
+            {/* Détails + CTAs */}
+            <div className="flex-1 py-8 pr-8 pl-6 md:pl-0 flex flex-col md:flex-row md:items-center gap-6">
+              <div className="flex-1">
+                <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-apex-ink mb-2">
+                  {ts('sessionCardKicker')} — {ts('sessionCardCategory')}
+                </p>
+                <h2 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-snug mb-3">
+                  {ts('sessionCardTitle')}
+                </h2>
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-ag-gray">
+                  <span className="flex items-center gap-1.5 font-sans text-[12px]">
+                    <MapPin size={12} className="text-ag-gray-light" /> {ts('sessionCardLocation')}
+                  </span>
+                  <span className="flex items-center gap-1.5 font-sans text-[12px]">
+                    <Calendar size={12} className="text-ag-gray-light" /> {ts('sessionCardDateValue')}
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-2 shrink-0">
+                {hasLotAccess ? (
+                  <Link
+                    href="/transact/teaser-preview"
+                    className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:bg-ag-navy-mid transition-colors"
+                  >
+                    {ts('sessionCardCtaPreview')}
+                  </Link>
+                ) : (
+                  <div className="flex flex-col gap-1.5">
+                    <span className="inline-flex items-center gap-2 bg-ag-off-white border border-ag-border text-ag-gray-light font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 cursor-not-allowed select-none">
+                      <Lock size={11} /> {ts('sessionCardCtaPreview')}
+                    </span>
+                    <p className="font-sans text-[11px] text-ag-gray-light leading-tight">
+                      {ts('sessionCardLocked')}
+                    </p>
+                    <NextLink
+                      href="/client/register"
+                      className="font-sans text-[11px] font-semibold text-ag-apex-ink underline underline-offset-2 hover:text-ag-apex transition-colors"
+                    >
+                      {ts('sessionCardLockedCta')} →
+                    </NextLink>
+                  </div>
+                )}
+                <Link
+                  href={{ pathname: '/transact/catalog', hash: 'notify' }}
+                  className="inline-flex items-center gap-2 border border-ag-apex/40 text-ag-apex-ink font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:border-ag-apex hover:bg-ag-apex/10 transition-colors"
+                >
+                  <Bell size={11} /> {ts('sessionCardCtaNotify')}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ── Grille actifs avec filtres ── */}
       <CatalogFilters
@@ -162,90 +240,7 @@ export default async function TransactCatalogPage({ params }: Props) {
         }}
       />
 
-      {/* ── Session à venir ── */}
-      <section className="py-20 px-6 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
-            {ts('upcomingSessions')}
-          </p>
-
-          <div className="border border-ag-border bg-ag-white flex flex-col md:flex-row gap-0 md:gap-8 hover:border-ag-black/30 transition-colors">
-            {/* Vignette 9:16 */}
-            <div className="relative w-full md:w-[166px] shrink-0 bg-ag-off-white overflow-hidden" style={{ aspectRatio: '9 / 16' }}>
-              <Image
-                src="/images/transact/transact_legal-tech_T32026.jpg"
-                alt={ts('sessionCardTitle')}
-                fill
-                className="object-contain"
-                sizes="166px"
-              />
-              <span className="absolute top-3 left-3 bg-ag-apex text-ag-navy font-mono font-semibold text-[10px] tracking-[0.14em] uppercase px-3 py-1.5">
-                {ts('sessionCardStatus')}
-              </span>
-            </div>
-
-            {/* Détails + CTAs */}
-            <div className="flex-1 py-8 pr-8 pl-6 md:pl-0 flex flex-col md:flex-row md:items-center gap-6">
-              <div className="flex-1">
-                <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-apex-ink mb-2">
-                  {ts('sessionCardKicker')} — {ts('sessionCardCategory')}
-                </p>
-                <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em] leading-snug mb-3">
-                  {ts('sessionCardTitle')}
-                </h2>
-                <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-ag-gray">
-                  <span className="flex items-center gap-1.5 font-sans text-[13px]">
-                    <MapPin size={13} className="text-ag-gray-light" /> {ts('sessionCardLocation')}
-                  </span>
-                  <span className="flex items-center gap-1.5 font-sans text-[13px]">
-                    <Calendar size={13} className="text-ag-gray-light" /> {ts('sessionCardDateValue')}
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-2 shrink-0">
-                {hasLotAccess ? (
-                  <Link
-                    href="/transact/teaser-preview"
-                    className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:bg-ag-navy-mid transition-colors"
-                  >
-                    {ts('sessionCardCtaPreview')}
-                  </Link>
-                ) : (
-                  <div className="flex flex-col gap-1.5">
-                    <span className="inline-flex items-center gap-2 bg-ag-off-white border border-ag-border text-ag-gray-light font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 cursor-not-allowed select-none">
-                      <Lock size={11} /> {ts('sessionCardCtaPreview')}
-                    </span>
-                    <p className="font-sans text-[11px] text-ag-gray-light leading-tight">
-                      {ts('sessionCardLocked')}
-                    </p>
-                    <NextLink
-                      href="/client/register"
-                      className="font-sans text-[11px] font-semibold text-ag-apex-ink underline underline-offset-2 hover:text-ag-apex transition-colors"
-                    >
-                      {ts('sessionCardLockedCta')} →
-                    </NextLink>
-                  </div>
-                )}
-                <Link
-                  href={{ pathname: '/transact/catalog', hash: 'notify' }}
-                  className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:border-ag-black hover:text-ag-black transition-colors"
-                >
-                  {ts('sessionCardCtaCatalog')}
-                </Link>
-                <Link
-                  href={{ pathname: '/transact/catalog', hash: 'notify' }}
-                  className="inline-flex items-center gap-2 border border-ag-apex/40 text-ag-apex-ink font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:border-ag-apex hover:bg-ag-apex/10 transition-colors"
-                >
-                  <Bell size={11} /> {ts('sessionCardCtaNotify')}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Waitlist / notification + Seller CTA ── */}
+      {/* ── Accès prioritaire — WaitlistForm uniquement ── */}
       <section id="notify" className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <div className="mb-10 max-w-xl">
@@ -261,13 +256,8 @@ export default async function TransactCatalogPage({ params }: Props) {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-            {/* Formulaire notify/waitlist */}
-            <div>
-              <CatalogNotifyForm locale={locale} />
-              <div className="mt-6">
-                <WaitlistForm locale={locale} />
-              </div>
-            </div>
+            {/* Formulaire waitlist qualifié */}
+            <WaitlistForm locale={locale} />
 
             {/* Seller CTA */}
             <div className="border border-ag-apex/30 bg-ag-white p-10 flex flex-col gap-6">

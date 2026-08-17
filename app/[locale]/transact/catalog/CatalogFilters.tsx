@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react'
 import { ArrowUpRight, SlidersHorizontal, X, Lock } from 'lucide-react'
-import CatalogNotifyForm from './CatalogNotifyForm'
 import AccessGateDrawer, { type AccessStatus } from './AccessGateDrawer'
 
 type Asset = {
@@ -238,7 +237,7 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
                   </span>
                 )}
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
                 {filtered.map((asset) => (
                   <div key={asset.id} className="bg-ag-white p-8 flex flex-col gap-4 hover:bg-ag-off-white transition-colors">
                     <div className="flex items-start justify-between gap-4">
@@ -287,7 +286,6 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
                   </div>
                 ))}
               </div>
-              <CatalogNotifyForm locale={locale} />
             </>
           ) : assets.length > 0 ? (
             <div className="py-12 text-center">
@@ -301,9 +299,7 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
                 {labels.resetFilters}
               </button>
             </div>
-          ) : (
-            <CatalogNotifyForm locale={locale} />
-          )}
+          ) : null}
         </div>
       </section>
     </>
