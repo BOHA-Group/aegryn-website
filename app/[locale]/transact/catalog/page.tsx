@@ -9,7 +9,6 @@ import { ArrowUpRight, Info, Calendar, MapPin, Users, Bell, Lock } from 'lucide-
 import Image                       from 'next/image'
 import CatalogFilters              from './CatalogFilters'
 import CatalogNotifyForm           from './CatalogNotifyForm'
-import WaitlistForm                from '@/components/transaction/WaitlistForm'
 import { checkTransactCatalogAccess } from '@/lib/transactAccess'
 import { createServiceClient }     from '@/lib/supabase'
 
@@ -241,39 +240,33 @@ export default async function TransactCatalogPage({ params }: Props) {
         }}
       />
 
-      {/* ── Notification catalogue (après la grille) ── */}
-      <section className="py-16 px-6 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
-          <CatalogNotifyForm locale={locale} />
-        </div>
-      </section>
-
-      {/* ── Accès prioritaire — WaitlistForm ── */}
+      {/* ── Notification + Seller CTA — layout 2 colonnes ── */}
       <section id="notify" className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-10 max-w-xl">
-            <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-ag-apex mb-3">
-              Accès prioritaire
-            </p>
-            <h2 className="font-sans font-bold text-ag-black text-[26px] tracking-[-0.02em] leading-tight mb-3">
-              {ts('registerTitle')}
-            </h2>
-            <p className="font-sans text-[14px] text-ag-gray leading-relaxed">
-              {ts('registerDesc')}
-            </p>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border border-ag-border">
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-            {/* Formulaire waitlist qualifié */}
-            <WaitlistForm locale={locale} />
+            {/* Colonne gauche — être notifié */}
+            <div className="p-10 md:p-12 border-b lg:border-b-0 lg:border-r border-ag-border">
+              <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-ag-apex mb-4">
+                {tc('emptyTitle')}
+              </p>
+              <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] leading-tight mb-3">
+                {tc('emptyDesc')}
+              </h2>
+              <CatalogNotifyForm locale={locale} />
+            </div>
 
-            {/* Seller CTA */}
-            <div className="border border-ag-apex/30 bg-ag-white p-10 flex flex-col gap-6">
-              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink">{ts('sellerTitle')}</p>
-              <p className="font-sans font-bold text-ag-black text-[20px] leading-snug tracking-[-0.02em]">
+            {/* Colonne droite — Seller CTA */}
+            <div className="p-10 md:p-12 bg-ag-white flex flex-col gap-6 justify-center">
+              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink">
+                {ts('sellerTitle')}
+              </p>
+              <p className="font-sans font-bold text-ag-black text-[22px] leading-snug tracking-[-0.02em]">
                 {tc('sellerCta')}
               </p>
-              <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{ts('sellerDesc')}</p>
+              <p className="font-sans text-[14px] text-ag-gray leading-relaxed">
+                {ts('sellerDesc')}
+              </p>
               <Link
                 href="/transact/how-to-sell"
                 className="self-start inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
@@ -281,6 +274,7 @@ export default async function TransactCatalogPage({ params }: Props) {
                 {tc('viewAsset')} <ArrowUpRight size={13} />
               </Link>
             </div>
+
           </div>
         </div>
       </section>

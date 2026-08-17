@@ -2,7 +2,7 @@
 
 import { useState }        from 'react'
 import { useTranslations } from 'next-intl'
-import { Bell, CheckCircle2, ArrowUpRight } from 'lucide-react'
+import { CheckCircle2, ArrowUpRight } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
 
 const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
@@ -73,14 +73,12 @@ export default function CatalogNotifyForm({ locale }: { locale: string }) {
 
   if (sent) {
     return (
-      <div className="flex flex-col items-center text-center gap-6 py-16">
-        <CheckCircle2 size={40} className="text-ag-apex" />
-        <div>
-          <p className="font-sans font-bold text-ag-black text-[20px] mb-2">{t('notifySuccessTitle')}</p>
-          <p className="font-sans text-[13px] text-ag-gray max-w-sm">{t('notifySuccessDesc')}</p>
-        </div>
+      <div className="flex flex-col gap-4 pt-6">
+        <CheckCircle2 size={28} className="text-ag-apex" />
+        <p className="font-sans font-bold text-ag-black text-[16px]">{t('notifySuccessTitle')}</p>
+        <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('notifySuccessDesc')}</p>
         <Link href="/grade/submit"
-          className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors">
+          className="self-start inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-5 py-3 hover:bg-ag-navy-mid transition-colors">
           {t('notifySuccessCta')} <ArrowUpRight size={12} />
         </Link>
       </div>
@@ -88,19 +86,7 @@ export default function CatalogNotifyForm({ locale }: { locale: string }) {
   }
 
   return (
-    <div className="flex flex-col items-center text-center">
-      <div className="w-16 h-16 border border-ag-border flex items-center justify-center mb-8">
-        <Bell size={20} className="text-ag-gray-light" />
-      </div>
-      <h2 className="font-sans font-bold text-ag-black text-[24px] tracking-[-0.02em] mb-3">
-        {t('emptyTitle')}
-      </h2>
-      <p className="font-sans text-[14px] text-ag-gray max-w-md mb-10">
-        {t('emptyDesc')}
-      </p>
-
-      {/* Form */}
-      <form onSubmit={onSubmit} className="w-full max-w-lg text-left flex flex-col gap-6">
+    <form onSubmit={onSubmit} className="flex flex-col gap-5 pt-6">
 
         <div>
           <label className={labelCls}>{t('notifyEmail')} *</label>
@@ -154,10 +140,9 @@ export default function CatalogNotifyForm({ locale }: { locale: string }) {
         )}
 
         <button type="submit" disabled={loading || !email}
-          className="w-full bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] py-4 hover:bg-ag-navy-mid transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+          className="self-start inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
           {loading ? t('notifyLoading') : t('notifyCta')}
         </button>
-      </form>
-    </div>
+    </form>
   )
 }
