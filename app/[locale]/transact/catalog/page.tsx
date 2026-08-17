@@ -1,7 +1,6 @@
 import { getTranslations }        from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
 import type { Metadata }           from 'next'
-import NextLink                    from 'next/link'
 import { Link }                    from '@/i18n/navigation'
 import { cookies }                 from 'next/headers'
 import { createServerClient }      from '@supabase/ssr'

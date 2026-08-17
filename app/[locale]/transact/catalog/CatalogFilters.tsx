@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import NextLink from 'next/link'
 import { ArrowUpRight, SlidersHorizontal, X, Lock } from 'lucide-react'
 import CatalogNotifyForm from './CatalogNotifyForm'
 import AccessGateDrawer, { type AccessStatus } from './AccessGateDrawer'
