@@ -493,10 +493,14 @@ export default function SellerAssetTabs({
                   </div>
                 ))}
               </div>
-              <div className="mt-4">
+              <div className="mt-4 flex flex-wrap gap-2">
                 <Link href={`/client/seller/actifs/${assetId}/documents`}
                   className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest border border-gray-300 text-gray-600 px-4 py-2 hover:border-gray-500 transition-colors">
                   Gérer les documents <ChevronRight size={11} />
+                </Link>
+                <Link href={`/client/seller/actifs/${assetId}/offres-principe`}
+                  className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest border border-indigo-200 text-indigo-700 bg-indigo-50 px-4 py-2 hover:bg-indigo-100 transition-colors">
+                  Offres de principe
                 </Link>
               </div>
             </div>
