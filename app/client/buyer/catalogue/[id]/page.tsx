@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { ArrowLeft, Gavel, ShieldCheck, AlertTriangle, CheckCircle2, XCircle } from 'lucide-react'
+import { ArrowLeft, Gavel, ShieldCheck, AlertTriangle, CheckCircle2, XCircle, FolderOpen } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Fiche actif — Espace Acquéreur Aegryn',
@@ -44,14 +44,14 @@ export default async function BuyerAssetDetailPage({
 
   const { data: asset } = await supa
     .from('assets')
-    .select('id, company_name, asset_type, arr, official_grade, score_total, public_summary, published_at, gross_margin, nrr, benchmark_category, status, revenue_track_months')
+    .select('id, company_name, asset_type, arr, official_grade, score_total, public_summary, published_at, gross_margin, nrr, benchmark_category, status, revenue_track_months, data_room_light_enabled')
     .eq('id', id)
     .eq('status', 'published')
     .single()
 
   if (!asset) notFound()
 
-  const [{ data: existingBid }, { data: assessment }] = await Promise.all([
+  const [{ data: existingBid }, { data: assessment }, { data: lightReq }] = await Promise.all([
     supa
       .from('auction_bids')
       .select('id, amount_chf, status')
@@ -66,6 +66,12 @@ export default async function BuyerAssetDetailPage({
       .in('status', ['published', 'validated'])
       .order('version_number', { ascending: false })
       .limit(1)
+      .maybeSingle(),
+    supa
+      .from('data_room_light_requests')
+      .select('id, status')
+      .eq('asset_id', id)
+      .eq('user_id', user.id)
       .maybeSingle(),
   ])
 
@@ -246,11 +252,34 @@ export default async function BuyerAssetDetailPage({
       )}
 
       {/* Mention confidentialité */}
-      <div className="bg-gray-50 border border-gray-200 px-5 py-4 mb-8">
+      <div className="bg-gray-50 border border-gray-200 px-5 py-4 mb-6">
         <p className="font-sans text-[11px] text-gray-500 leading-relaxed">
           <strong>{t('confidentialityTitle')} :</strong> {t('confidentialityText')}
         </p>
       </div>
+
+      {/* ── CTA Due Diligence / Data Room ── */}
+      {(asset as Record<string, unknown>).data_room_light_enabled && (
+        <div className="border border-indigo-200 bg-indigo-50 px-5 py-4 mb-8 flex items-center justify-between gap-4">
+          <div>
+            <p className="font-mono text-[9px] uppercase tracking-widest text-indigo-500 mb-0.5">Data Room disponible</p>
+            <p className="font-sans text-[12px] text-indigo-800">
+              {lightReq?.status === 'approved'
+                ? 'Votre accès à la data room light est actif.'
+                : lightReq?.status === 'pending'
+                  ? 'Votre demande est en cours d\'examen.'
+                  : 'Demandez l\'accès à la data room préliminaire et recevez le montant indicatif pour votre séquestre.'}
+            </p>
+          </div>
+          <Link
+            href={`/client/buyer/catalogue/${id}/diligence`}
+            className="shrink-0 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest border border-indigo-300 text-indigo-700 px-4 py-2 hover:bg-indigo-100 transition-colors"
+          >
+            <FolderOpen size={11} />
+            {lightReq?.status === 'approved' ? 'Voir la data room' : 'Due diligence'}
+          </Link>
+        </div>
+      )}
 
       {/* CTA offre */}
       <div className="bg-ag-navy p-6">

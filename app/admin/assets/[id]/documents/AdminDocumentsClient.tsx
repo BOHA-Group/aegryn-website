@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { ChevronDown, ChevronUp, FileText, Upload } from 'lucide-react'
+import { ChevronDown, ChevronUp, FileText, Upload, Eye, Loader2 } from 'lucide-react'
 import type {
   DataRoomDocument, DocumentCatalogEntry, DocumentDimension,
   DocumentAdminQuality,
@@ -15,18 +15,21 @@ import {
 const DIMENSIONS: DocumentDimension[] = ['C', 'I', 'F', 'S', 'T']
 
 interface Props {
-  assetId:    string
-  catalog:    DocumentCatalogEntry[]
-  documents:  DataRoomDocument[]
+  assetId:                string
+  catalog:                DocumentCatalogEntry[]
+  documents:              DataRoomDocument[]
+  dataRoomLightEnabled:   boolean
 }
 
-export default function AdminDocumentsClient({ assetId: _assetId, catalog, documents }: Props) {
+export default function AdminDocumentsClient({ assetId, catalog, documents, dataRoomLightEnabled: initLightEnabled }: Props) {
   const router = useRouter()
   const [_isPending, startTransition] = useTransition()
   const [openDims, setOpenDims] = useState<Set<DocumentDimension>>(new Set(DIMENSIONS))
   const [noteOpen, setNoteOpen] = useState<Record<string, boolean>>({})
   const [noteValues, setNoteValues] = useState<Record<string, string>>({})
   const [saving, setSaving] = useState<Record<string, boolean>>({})
+  const [lightEnabled, setLightEnabled] = useState(initLightEnabled)
+  const [lightSaving, setLightSaving] = useState(false)
 
   function toggleDim(dim: DocumentDimension) {
     setOpenDims((prev) => {
@@ -52,8 +55,55 @@ export default function AdminDocumentsClient({ assetId: _assetId, catalog, docum
     setNoteOpen((n) => ({ ...n, [docId]: false }))
   }
 
+  async function toggleLightEnabled() {
+    setLightSaving(true)
+    const next = !lightEnabled
+    try {
+      await fetch(`/api/admin/assets/${assetId}/toggle-light`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ enabled: next }),
+      })
+      setLightEnabled(next)
+      startTransition(() => router.refresh())
+    } finally {
+      setLightSaving(false)
+    }
+  }
+
   return (
     <div className="space-y-4">
+      {/* ── Toggle Data Room Light ── */}
+      <div className="bg-white border border-gray-200 px-5 py-4 flex items-center justify-between gap-4">
+        <div>
+          <div className="flex items-center gap-2 mb-0.5">
+            <Eye size={13} className={lightEnabled ? 'text-indigo-600' : 'text-gray-400'} />
+            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-600 font-semibold">
+              Data Room Light
+            </p>
+            {lightEnabled && (
+              <span className="font-mono text-[9px] bg-indigo-50 text-indigo-700 border border-indigo-200 px-1.5 py-0.5">ACTIVE</span>
+            )}
+          </div>
+          <p className="font-sans text-[11px] text-gray-400 max-w-xl">
+            Donne accès aux documents <code className="font-mono text-[10px] bg-gray-100 px-1">light_buyers</code> aux acquéreurs KYC validés sur demande.
+            Ils reçoivent un montant indicatif pour calculer le séquestre 10%.
+          </p>
+        </div>
+        <button
+          type="button"
+          disabled={lightSaving}
+          onClick={toggleLightEnabled}
+          className={`shrink-0 flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-4 py-2 border transition-colors disabled:opacity-50 ${
+            lightEnabled
+              ? 'bg-indigo-600 text-white border-indigo-600 hover:bg-indigo-700'
+              : 'bg-white text-gray-600 border-gray-300 hover:border-gray-500'
+          }`}
+        >
+          {lightSaving && <Loader2 size={11} className="animate-spin" />}
+          {lightEnabled ? 'Désactiver' : 'Activer'}
+        </button>
+      </div>
       {DIMENSIONS.map((dim) => {
         const dimCatalog = catalog.filter((c) => c.dimension === dim)
         const isOpen     = openDims.has(dim)

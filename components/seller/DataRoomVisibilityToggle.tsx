@@ -5,11 +5,12 @@ import type { DataRoomVisibility } from '@/lib/dataRoom'
 import { VISIBILITY_LABELS } from '@/lib/dataRoom'
 import { useRouter } from 'next/navigation'
 
-const OPTIONS: DataRoomVisibility[] = ['admin_only', 'assigned_partner', 'nda_buyers']
+const OPTIONS: DataRoomVisibility[] = ['admin_only', 'assigned_partner', 'light_buyers', 'nda_buyers']
 
 const DOT: Record<DataRoomVisibility, string> = {
   admin_only:       'bg-gray-300',
   assigned_partner: 'bg-amber-500',
+  light_buyers:     'bg-indigo-400',
   nda_buyers:       'bg-emerald-500',
 }
 

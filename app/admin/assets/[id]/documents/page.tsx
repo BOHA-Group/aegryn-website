@@ -32,7 +32,7 @@ export default async function AdminAssetDocumentsPage({
 
   const { data: asset } = await supa
     .from('assets')
-    .select('id, company_name, seller_name, seller_email')
+    .select('id, company_name, seller_name, seller_email, data_room_light_enabled')
     .eq('id', id)
     .single()
 
@@ -159,6 +159,7 @@ export default async function AdminAssetDocumentsPage({
           assetId={id}
           catalog={catalog}
           documents={documents}
+          dataRoomLightEnabled={Boolean((asset as Record<string, unknown>).data_room_light_enabled)}
         />
 
       </div>

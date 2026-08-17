@@ -114,6 +114,26 @@ async function checkAccess(
     if (cert) return true
   }
 
+  /* Acheteur light : KYC approuvé + demande light approved */
+  if (doc.visible_to === 'light_buyers') {
+    const { data: lightProfile } = await supa
+      .from('profiles')
+      .select('kyc_status')
+      .eq('id', userId)
+      .single() as { data: { kyc_status: string | null } | null }
+
+    if (lightProfile?.kyc_status === 'approved') {
+      const { data: lightReq } = await supa
+        .from('data_room_light_requests')
+        .select('id')
+        .eq('asset_id', doc.asset_id)
+        .eq('user_id', userId)
+        .eq('status', 'approved')
+        .maybeSingle()
+      if (lightReq) return true
+    }
+  }
+
   /* Acheteur NDA : le NDA est global — auction_nda_signed_at suffit */
   if (doc.visible_to === 'nda_buyers') {
     const { data: ndaProfile } = await supa

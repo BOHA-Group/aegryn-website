@@ -8,7 +8,7 @@
 
 export type DataRoomCategory = 'code' | 'ip' | 'finance' | 'security' | 'transversal'
 
-export type DataRoomVisibility = 'admin_only' | 'assigned_partner' | 'nda_buyers'
+export type DataRoomVisibility = 'admin_only' | 'assigned_partner' | 'nda_buyers' | 'light_buyers'
 
 export type DocumentRequiredLevel = 'blocking' | 'recommended' | 'optional'
 
@@ -156,7 +156,8 @@ export const CATEGORY_LABELS: Record<DataRoomCategory, string> = {
 export const VISIBILITY_LABELS: Record<DataRoomVisibility, string> = {
   admin_only:       'Masqué (admin/vendeur uniquement)',
   assigned_partner: 'Visible partenaire assigné',
-  nda_buyers:       'Visible acheteurs NDA',
+  light_buyers:     'Data room light (KYC validé, avant séquestre)',
+  nda_buyers:       'Data room complète (NDA + séquestre reçu)',
 }
 
 /* ── Expiration par défaut des URLs signées : 1 heure ── */
