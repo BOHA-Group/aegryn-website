@@ -8,6 +8,7 @@ import { createServerClient }      from '@supabase/ssr'
 import { ArrowUpRight, Info, Calendar, MapPin, Users, Bell, Lock } from 'lucide-react'
 import Image                       from 'next/image'
 import CatalogFilters              from './CatalogFilters'
+import CatalogNotifyForm           from './CatalogNotifyForm'
 import WaitlistForm                from '@/components/transaction/WaitlistForm'
 import { checkTransactCatalogAccess } from '@/lib/transactAccess'
 import { createServiceClient }     from '@/lib/supabase'
@@ -240,7 +241,14 @@ export default async function TransactCatalogPage({ params }: Props) {
         }}
       />
 
-      {/* ── Accès prioritaire — WaitlistForm uniquement ── */}
+      {/* ── Notification catalogue (après la grille) ── */}
+      <section className="py-16 px-6 border-t border-ag-border">
+        <div className="max-w-7xl mx-auto">
+          <CatalogNotifyForm locale={locale} />
+        </div>
+      </section>
+
+      {/* ── Accès prioritaire — WaitlistForm ── */}
       <section id="notify" className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <div className="mb-10 max-w-xl">
