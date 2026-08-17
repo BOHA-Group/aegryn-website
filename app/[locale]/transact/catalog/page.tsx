@@ -5,8 +5,7 @@ import NextLink                    from 'next/link'
 import { Link }                    from '@/i18n/navigation'
 import { cookies }                 from 'next/headers'
 import { createServerClient }      from '@supabase/ssr'
-import { ArrowUpRight, Info, Lock } from 'lucide-react'
-import AuctionAccessRequestForm    from './AuctionAccessRequestForm'
+import { ArrowUpRight, Info } from 'lucide-react'
 import CatalogFilters              from './CatalogFilters'
 import { checkTransactCatalogAccess } from '@/lib/transactAccess'
 import { createServiceClient }     from '@/lib/supabase'
@@ -46,13 +45,32 @@ export default async function TransactCatalogPage({ params }: Props) {
   const { locale } = await params
   const t    = await getTranslations({ locale, namespace: 'auction.catalog' })
 
-  /* ── Auth check ── */
+  /* ── Auth + access checks ── */
   const user = await getSessionUser()
-
-  /* ── Access check : NDA + CGV ── */
   const accessStatus = user
     ? await checkTransactCatalogAccess(user.id)
     : 'not_authenticated'
+
+  /* ── Assets (toujours fetchés, catalogue public) ── */
+  const supa = createServiceClient()
+  const { data } = await supa
+    .from('assets')
+    .select('id, slug, asset_type, arr, official_grade, score_total, public_summary, published_at, company_name')
+    .eq('status', 'published')
+    .order('published_at', { ascending: false })
+    .limit(50)
+
+  const publishedAssets = (data ?? []) as {
+    id:             string
+    slug:           string | null
+    asset_type:     string | null
+    arr:            number | null
+    official_grade: string | null
+    score_total:    number | null
+    public_summary: string | null
+    published_at:   string | null
+    company_name:   string | null
+  }[]
 
   /* ── Header commun (toujours visible) ── */
   const Header = (
@@ -95,115 +113,6 @@ export default async function TransactCatalogPage({ params }: Props) {
     </div>
   )
 
-  /* ── Écran accès requis (non connecté ou NDA/CGV non signés) ── */
-  if (accessStatus !== 'ok') {
-    return (
-      <main className="bg-ag-white min-h-screen">
-        {Header}
-        {ThirdPartyBanner}
-
-        <section className="py-20 px-6">
-          <div className="max-w-7xl mx-auto">
-            {/* Explications accès */}
-            <div className="mb-12 flex flex-col items-center text-center gap-4">
-              <div className="w-14 h-14 border border-ag-border flex items-center justify-center">
-                <Lock size={22} className="text-ag-gray-light" />
-              </div>
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex mb-3">
-                  {t('conditionalAccess')}
-                </p>
-                <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] mb-3">
-                  {t('qualifiedOnly')}
-                </h2>
-                <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-md mx-auto">
-                  {t('accessDesc')}
-                </p>
-              </div>
-
-              {/* Étapes */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 max-w-2xl w-full text-left">
-                {[
-                  { n: '01', label: t('step1'), done: !!user },
-                  { n: '02', label: t('step2'), done: accessStatus === 'pending_cgv' },
-                  { n: '03', label: t('step3'), done: false },
-                ].map(({ n, label, done }) => (
-                  <div key={n} className={`border p-5 flex items-start gap-3 ${done ? 'border-ag-apex/40 bg-ag-apex/5' : 'border-ag-border bg-ag-white'}`}>
-                    <span className={`font-mono text-[11px] font-bold shrink-0 ${done ? 'text-ag-apex' : 'text-ag-gray-light'}`}>{n}</span>
-                    <p className={`font-sans text-[13px] leading-snug ${done ? 'text-ag-black' : 'text-ag-gray'}`}>{label}</p>
-                    {done && <span className="ml-auto text-ag-apex text-[11px] font-mono">✓</span>}
-                  </div>
-                ))}
-              </div>
-
-              {!user && process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' && (
-                <div className="flex flex-col sm:flex-row gap-3 mt-4">
-                  <NextLink
-                    href={`/client/login?next=/transact/catalog`}
-                    className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-black transition-colors"
-                  >
-                    {t('loginCta')} <ArrowUpRight size={12} />
-                  </NextLink>
-                  <NextLink
-                    href={`/client/register?next=/transact/catalog`}
-                    className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:border-ag-black hover:text-ag-black transition-all"
-                  >
-                    {t('registerCta')}
-                  </NextLink>
-                </div>
-              )}
-            </div>
-
-            {/* Formulaire demande accès si connecté mais NDA/CGV manquants */}
-            {user && (
-              <AuctionAccessRequestForm
-                locale={locale}
-                userId={user.id}
-                userEmail={user.email}
-                status={accessStatus as 'pending_nda' | 'pending_cgv'}
-              />
-            )}
-          </div>
-        </section>
-
-        {/* Seller CTA */}
-        <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <p className="font-sans font-semibold text-ag-black text-[18px] max-w-md">
-              {t('sellerCta')}
-            </p>
-            <Link
-              href="/transact/how-to-sell"
-              className="shrink-0 inline-flex items-center gap-2 bg-ag-black text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy transition-colors"
-            >
-              {t('viewAsset')} →
-            </Link>
-          </div>
-        </section>
-      </main>
-    )
-  }
-
-  /* ── Catalogue complet (NDA + CGV validés) ── */
-  const supa = createServiceClient()
-  const { data } = await supa
-    .from('assets')
-    .select('id, asset_type, arr, official_grade, score_total, public_summary, published_at, company_name')
-    .eq('status', 'published')
-    .order('published_at', { ascending: false })
-    .limit(50)
-
-  const publishedAssets = (data ?? []) as {
-    id:             string
-    asset_type:     string | null
-    arr:            number | null
-    official_grade: string | null
-    score_total:    number | null
-    public_summary: string | null
-    published_at:   string | null
-    company_name:   string | null
-  }[]
-
   return (
     <main className="bg-ag-white min-h-screen">
       {Header}
@@ -212,6 +121,8 @@ export default async function TransactCatalogPage({ params }: Props) {
       <CatalogFilters
         assets={publishedAssets}
         locale={locale}
+        accessStatus={accessStatus}
+        isAuthenticated={!!user}
         labels={{
           filterAll:         t('filterAll'),
           filterStar:        t('filterStar'),
@@ -226,6 +137,16 @@ export default async function TransactCatalogPage({ params }: Props) {
           viewFullDossier:   t('viewFullDossier'),
           assetCount:        (count: number) => t('assetCount', { count }),
           assetsHidden:      (n: number) => t('assetsHidden', { n }),
+          /* gate labels */
+          conditionalAccess: t('conditionalAccess'),
+          qualifiedOnly:     t('qualifiedOnly'),
+          accessDesc:        t('accessDesc'),
+          step1:             t('step1'),
+          step2:             t('step2'),
+          step3:             t('step3'),
+          loginCta:          t('loginCta'),
+          registerCta:       t('registerCta'),
+          kycPending:        t('kycPending'),
         }}
       />
 

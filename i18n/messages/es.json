@@ -2748,7 +2748,8 @@
       "assetCount": "{count} activo{count, plural, one {} other {s}} — sesión actual",
       "assetsHidden": "{n} oculto{n, plural, one {} other {s}} por filtros",
       "resetFiltersShort": "Restablecer",
-      "viewFullDossier": "Ver el expediente completo"
+      "viewFullDossier": "Ver el expediente completo",
+      "kycPending": "Su verificación KYC está en proceso. Será notificado una vez validado."
     },
     "sell": {
       "meta": {

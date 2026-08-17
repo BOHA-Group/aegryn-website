@@ -2902,7 +2902,8 @@
       "assetCount": "{count} actif{count, plural, one {} other {s}} — session en cours",
       "assetsHidden": "{n} masqué{n, plural, one {} other {s}} par les filtres",
       "resetFiltersShort": "Réinitialiser",
-      "viewFullDossier": "Accéder au dossier complet"
+      "viewFullDossier": "Accéder au dossier complet",
+      "kycPending": "Votre vérification KYC est en cours. Vous serez notifié dès validation."
     },
     "session": {
       "label": "Processus Aegryn",

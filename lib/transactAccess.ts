@@ -8,10 +8,11 @@
 import { createServiceClient } from '@/lib/supabase'
 
 export type TransactAccessStatus =
-  | 'ok'              // NDA + CGV validés → accès catalogue complet
+  | 'ok'              // NDA + CGV + KYC validés → accès catalogue complet
   | 'not_authenticated' // non connecté
   | 'pending_nda'     // connecté, NDA non encore signé
   | 'pending_cgv'     // NDA signé mais CGV non acceptées
+  | 'pending_kyc'     // NDA + CGV OK mais KYC non approuvé
 
 export async function checkTransactCatalogAccess(
   userId: string
@@ -19,12 +20,13 @@ export async function checkTransactCatalogAccess(
   const supa = createServiceClient()
   const { data } = await supa
     .from('profiles')
-    .select('auction_nda_signed_at, auction_cgv_accepted_at')
+    .select('auction_nda_signed_at, auction_cgv_accepted_at, kyc_status')
     .eq('id', userId)
     .single()
 
   if (!data) return 'pending_nda'
   if (!data.auction_nda_signed_at)   return 'pending_nda'
   if (!data.auction_cgv_accepted_at) return 'pending_cgv'
+  if ((data as { kyc_status?: string }).kyc_status !== 'approved') return 'pending_kyc'
   return 'ok'
 }

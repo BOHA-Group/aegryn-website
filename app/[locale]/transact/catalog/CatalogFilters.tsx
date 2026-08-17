@@ -2,11 +2,13 @@
 
 import { useState, useMemo } from 'react'
 import NextLink from 'next/link'
-import { ArrowUpRight, SlidersHorizontal, X } from 'lucide-react'
+import { ArrowUpRight, SlidersHorizontal, X, Lock } from 'lucide-react'
 import CatalogNotifyForm from './CatalogNotifyForm'
+import AccessGateDrawer, { type AccessStatus } from './AccessGateDrawer'
 
 type Asset = {
   id:             string
+  slug:           string | null
   asset_type:     string | null
   arr:            number | null
   official_grade: string | null
@@ -17,8 +19,10 @@ type Asset = {
 }
 
 type Props = {
-  assets:  Asset[]
-  locale:  string
+  assets:          Asset[]
+  locale:          string
+  accessStatus:    AccessStatus
+  isAuthenticated: boolean
   labels: {
     filterAll:         string
     filterStar:        string
@@ -33,6 +37,16 @@ type Props = {
     viewFullDossier:   string
     assetCount:        (count: number) => string
     assetsHidden:      (n: number) => string
+    /* gate labels */
+    conditionalAccess: string
+    qualifiedOnly:     string
+    accessDesc:        string
+    step1:             string
+    step2:             string
+    step3:             string
+    loginCta:          string
+    registerCta:       string
+    kycPending:        string
   }
 }
 
@@ -73,10 +87,21 @@ function fmtArr(n: unknown) {
 }
 
 
-export default function CatalogFilters({ assets, locale, labels }: Props) {
-  const [grade,    setGrade]    = useState<string>('')
-  const [category, setCategory] = useState<string>('')
-  const [arrRange, setArrRange] = useState<number>(0)
+export default function CatalogFilters({ assets, locale, accessStatus, isAuthenticated, labels }: Props) {
+  const [grade,       setGrade]       = useState<string>('')
+  const [category,    setCategory]    = useState<string>('')
+  const [arrRange,    setArrRange]    = useState<number>(0)
+  const [gateOpen,    setGateOpen]    = useState(false)
+  const [gateAssetId, setGateAssetId] = useState<string | null>(null)
+
+  function handleDossierClick(assetId: string, slug: string | null) {
+    if (accessStatus === 'ok') {
+      window.location.href = `/${locale}/transact/lot/${slug ?? assetId}`
+    } else {
+      setGateAssetId(assetId)
+      setGateOpen(true)
+    }
+  }
 
   /* Catégories distinctes présentes dans les actifs */
   const categories = useMemo(() => {
@@ -100,14 +125,36 @@ export default function CatalogFilters({ assets, locale, labels }: Props) {
 
   const hasFilters = grade !== '' || category !== '' || arrRange !== 0
 
+  void gateAssetId
+
   function reset() {
     setGrade('')
     setCategory('')
     setArrRange(0)
   }
 
+  const gateLabels = {
+    conditionalAccess: labels.conditionalAccess,
+    qualifiedOnly:     labels.qualifiedOnly,
+    accessDesc:        labels.accessDesc,
+    step1:             labels.step1,
+    step2:             labels.step2,
+    step3:             labels.step3,
+    loginCta:          labels.loginCta,
+    registerCta:       labels.registerCta,
+    kycPending:        labels.kycPending,
+  }
+
   return (
     <>
+      <AccessGateDrawer
+        open={gateOpen}
+        onClose={() => setGateOpen(false)}
+        accessStatus={accessStatus}
+        locale={locale}
+        labels={gateLabels}
+        isAuthenticated={isAuthenticated}
+      />
       {/* ── Barre de filtres sticky ── */}
       <section className="border-b border-ag-border bg-ag-white sticky top-16 z-30">
         <div className="max-w-7xl mx-auto px-6 py-3 flex flex-wrap items-center gap-2">
@@ -205,7 +252,7 @@ export default function CatalogFilters({ assets, locale, labels }: Props) {
                       )}
                     </div>
 
-                    {asset.company_name && (
+                    {accessStatus === 'ok' && asset.company_name && (
                       <p className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em]">
                         {asset.company_name}
                       </p>
@@ -231,12 +278,13 @@ export default function CatalogFilters({ assets, locale, labels }: Props) {
                     )}
 
                     <div className="mt-auto pt-4 border-t border-ag-border">
-                      <NextLink
-                        href={`/${locale}/client/buyer/catalogue`}
+                      <button
+                        onClick={() => handleDossierClick(asset.id, asset.slug)}
                         className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ag-black hover:text-ag-apex transition-colors"
                       >
+                        {accessStatus !== 'ok' && <Lock size={9} className="text-ag-gray-light" />}
                         {labels.viewFullDossier} <ArrowUpRight size={10} />
-                      </NextLink>
+                      </button>
                     </div>
                   </div>
                 ))}

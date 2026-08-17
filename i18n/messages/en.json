@@ -2850,7 +2850,8 @@
       "assetCount": "{count} asset{count, plural, one {} other {s}} — current session",
       "assetsHidden": "{n} hidden{n, plural, one {} other {}} by filters",
       "resetFiltersShort": "Reset",
-      "viewFullDossier": "View full dossier"
+      "viewFullDossier": "View full dossier",
+      "kycPending": "Your KYC verification is in progress. You will be notified once validated."
     },
     "session": {
       "label": "Next session",

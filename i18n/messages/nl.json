@@ -2748,7 +2748,8 @@
       "assetCount": "{count} asset{count, plural, one {} other {s}} — huidige sessie",
       "assetsHidden": "{n} verborgen door filters",
       "resetFiltersShort": "Resetten",
-      "viewFullDossier": "Toegang tot het volledige dossier"
+      "viewFullDossier": "Toegang tot het volledige dossier",
+      "kycPending": "Uw KYC-verificatie is in behandeling. U wordt op de hoogte gesteld zodra deze is gevalideerd."
     },
     "sell": {
       "meta": {
