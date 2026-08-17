@@ -152,81 +152,81 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
         labels={gateLabels}
         isAuthenticated={isAuthenticated}
       />
-      {/* ── Barre de filtres sticky ── */}
-      <section className="border-b border-ag-border bg-ag-white sticky top-16 z-30">
-        <div className="max-w-7xl mx-auto px-6 py-3 flex flex-wrap items-center gap-2">
-
-          {/* Filtres grade */}
-          <div className="flex items-center gap-1 flex-wrap">
-            {GRADE_KEYS.map((g) => (
-              <button
-                key={g || 'all'}
-                onClick={() => setGrade(g)}
-                className={`font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 border transition-colors whitespace-nowrap ${
-                  grade === g ? gradeActiveColor(g) : `border-ag-border text-ag-gray hover:border-ag-black hover:text-ag-black ${g ? gradeColor(g) : ''}`
-                }`}
-              >
-                {g ? (g === '★' ? 'AEG ★' : g) : labels.filterAll}
-              </button>
-            ))}
-          </div>
-
-          {/* Séparateur */}
-          {categories.length > 0 && (
-            <div className="w-px h-5 bg-ag-border mx-1 shrink-0" />
-          )}
-
-          {/* Filtres catégorie */}
-          {categories.map(cat => (
-            <button
-              key={cat}
-              onClick={() => setCategory(category === cat ? '' : cat)}
-              className={`font-mono text-[9px] tracking-[0.16em] uppercase px-3 py-1.5 border transition-colors whitespace-nowrap ${
-                category === cat
-                  ? 'border-ag-navy bg-ag-navy text-white'
-                  : 'border-ag-border text-ag-gray-light hover:border-ag-black hover:text-ag-black'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-
-          {/* Séparateur */}
-          <div className="w-px h-5 bg-ag-border mx-1 shrink-0" />
-
-          {/* Filtre ARR */}
-          <div className="flex items-center gap-1">
-            <SlidersHorizontal size={11} className="text-ag-gray-light shrink-0" />
-            {labels.arrRanges.map((label, i) => (
-              <button
-                key={i}
-                onClick={() => setArrRange(i)}
-                className={`font-mono text-[9px] tracking-[0.12em] uppercase px-3 py-1.5 border transition-colors whitespace-nowrap ${
-                  arrRange === i
-                    ? 'border-ag-navy bg-ag-navy text-white'
-                    : 'border-ag-border text-ag-gray-light hover:border-ag-black hover:text-ag-black'
-                }`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-
-          {/* Reset */}
-          {hasFilters && (
-            <button
-              onClick={reset}
-              className="flex items-center gap-1 font-mono text-[9px] uppercase tracking-widest text-ag-gray-light hover:text-red-500 transition-colors ml-2"
-            >
-              <X size={10} /> {labels.resetFiltersShort}
-            </button>
-          )}
-        </div>
-      </section>
-
-      {/* ── Résultats ── */}
-      <section id="notify" className="py-16 px-6">
+      {/* ── Grille actifs + filtres intégrés au-dessus ── */}
+      <section id="catalog-grid" className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
+
+          {/* ── Filtres au-dessus de la grille ── */}
+          <div className="border border-ag-border bg-ag-off-white px-5 py-4 mb-8 flex flex-wrap items-center gap-2">
+
+            {/* Filtres grade */}
+            <div className="flex items-center gap-1 flex-wrap">
+              {GRADE_KEYS.map((g) => (
+                <button
+                  key={g || 'all'}
+                  onClick={() => setGrade(g)}
+                  className={`font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 border transition-colors whitespace-nowrap ${
+                    grade === g ? gradeActiveColor(g) : `border-ag-border bg-ag-white text-ag-gray hover:border-ag-black hover:text-ag-black ${g ? gradeColor(g) : ''}`
+                  }`}
+                >
+                  {g ? (g === '★' ? 'AEG ★' : g) : labels.filterAll}
+                </button>
+              ))}
+            </div>
+
+            {/* Séparateur */}
+            {categories.length > 0 && (
+              <div className="w-px h-5 bg-ag-border mx-1 shrink-0" />
+            )}
+
+            {/* Filtres catégorie */}
+            {categories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setCategory(category === cat ? '' : cat)}
+                className={`font-mono text-[9px] tracking-[0.16em] uppercase px-3 py-1.5 border transition-colors whitespace-nowrap ${
+                  category === cat
+                    ? 'border-ag-navy bg-ag-navy text-white'
+                    : 'border-ag-border bg-ag-white text-ag-gray-light hover:border-ag-black hover:text-ag-black'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+
+            {/* Séparateur */}
+            <div className="w-px h-5 bg-ag-border mx-1 shrink-0" />
+
+            {/* Filtre ARR */}
+            <div className="flex items-center gap-1">
+              <SlidersHorizontal size={11} className="text-ag-gray-light shrink-0" />
+              {labels.arrRanges.map((label, i) => (
+                <button
+                  key={i}
+                  onClick={() => setArrRange(i)}
+                  className={`font-mono text-[9px] tracking-[0.12em] uppercase px-3 py-1.5 border transition-colors whitespace-nowrap ${
+                    arrRange === i
+                      ? 'border-ag-navy bg-ag-navy text-white'
+                      : 'border-ag-border bg-ag-white text-ag-gray-light hover:border-ag-black hover:text-ag-black'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+
+            {/* Reset */}
+            {hasFilters && (
+              <button
+                onClick={reset}
+                className="flex items-center gap-1 font-mono text-[9px] uppercase tracking-widest text-ag-gray-light hover:text-red-500 transition-colors ml-2"
+              >
+                <X size={10} /> {labels.resetFiltersShort}
+              </button>
+            )}
+          </div>
+
+          {/* ── Compteur résultats ── */}
           {filtered.length > 0 ? (
             <>
               <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
