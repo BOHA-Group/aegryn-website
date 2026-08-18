@@ -4,6 +4,7 @@ import { useState }        from 'react'
 import { useTranslations } from 'next-intl'
 import { CheckCircle2, ArrowUpRight } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
+import NextLink from 'next/link'
 
 const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
 const labelCls  = 'block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-2'
@@ -77,10 +78,10 @@ export default function CatalogNotifyForm({ locale }: { locale: string }) {
         <CheckCircle2 size={28} className="text-ag-apex" />
         <p className="font-sans font-bold text-ag-black text-[16px]">{t('notifySuccessTitle')}</p>
         <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('notifySuccessDesc')}</p>
-        <Link href="/grade/submit"
+        <NextLink href="/client/register"
           className="self-start inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-5 py-3 hover:bg-ag-navy-mid transition-colors">
-          {t('notifySuccessCta')} <ArrowUpRight size={12} />
-        </Link>
+          {t('notifySuccessCtaAcquirer')} <ArrowUpRight size={12} />
+        </NextLink>
       </div>
     )
   }
