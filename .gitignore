@@ -31,3 +31,12 @@ yarn-error.log*
 next-env.d.ts
 public/videos/assets-animation1.mp4
 public/videos/assets-animation2.mp4
+
+# Magazine reports — generated locally, not tracked in git
+# PDF source: export from Canva, place in public/reports/
+# Pages: generated via `npm run magazine:generate`
+public/reports/*.pdf
+public/reports/2026/pages/
+
+# Scripts build output
+.scripts-dist/
