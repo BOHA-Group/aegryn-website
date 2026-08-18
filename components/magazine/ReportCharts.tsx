@@ -3,6 +3,7 @@
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid,
   Tooltip, ResponsiveContainer, Cell,
+  LineChart, Line, Legend,
 } from 'recharts'
 
 /* ── Data ───────────────────────────────────────────────── */
@@ -22,9 +23,71 @@ const gradeData: GradeBar[] = [
   { grade: 'B',     pct: 17, color: '#D4820A' },
 ]
 
-const ACCENT = '#2EAF7D'
-const DARK   = '#0A0A0A'
-const GRID   = 'rgba(0,0,0,0.08)'
+const ACCENT  = '#2EAF7D'
+const DARK    = '#0A0A0A'
+const GRID    = 'rgba(0,0,0,0.08)'
+const GRID_W  = 'rgba(255,255,255,0.08)'
+const US_CLR  = '#4A90D9'
+const EU_CLR  = ACCENT
+
+/* ── EU vs US multiples 2021-2026 ─────────────────────────
+   Source: SEG SaaS Report 2026, Aventis Advisors Q2 2026
+   Median EV/ARR private SaaS deals
+──────────────────────────────────────────────────────────── */
+const multiplesData = [
+  { year: '2021', EU: 7.2,  US: 9.8  },
+  { year: '2022', EU: 4.8,  US: 6.5  },
+  { year: '2023', EU: 3.4,  US: 4.9  },
+  { year: '2024', EU: 3.8,  US: 5.4  },
+  { year: '2025', EU: 4.2,  US: 5.8  },
+  { year: '2026', EU: 4.7,  US: 6.1  },
+]
+
+/* ── EU vs US Multiples Chart ──────────────────────────── */
+export function MultiplesChart() {
+  return (
+    <div className="w-full h-72">
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart data={multiplesData} margin={{ top: 4, right: 8, left: -24, bottom: 0 }}>
+          <CartesianGrid vertical={false} stroke={GRID} strokeWidth={1} />
+          <XAxis
+            dataKey="year"
+            tick={{ fontSize: 10, fill: DARK, opacity: 0.45, fontFamily: 'var(--font-body)' }}
+            axisLine={false} tickLine={false}
+          />
+          <YAxis
+            domain={[2, 12]} tickCount={6} unit="x"
+            tick={{ fontSize: 10, fill: DARK, opacity: 0.45, fontFamily: 'var(--font-body)' }}
+            axisLine={false} tickLine={false}
+          />
+          <Tooltip
+            cursor={{ stroke: GRID, strokeWidth: 1 }}
+            contentStyle={{
+              background: DARK, border: 'none', borderRadius: 0,
+              color: '#fff', fontSize: 11, fontFamily: 'var(--font-body)',
+            }}
+            formatter={(v, name) => [`${v ?? '—'}x ARR`, String(name)]}
+          />
+          <Legend
+            wrapperStyle={{ fontSize: 10, fontFamily: 'var(--font-body)', paddingTop: 16, opacity: 0.6 }}
+            formatter={(v) => v === 'EU' ? 'Europe (median)' : 'United States (median)'}
+          />
+          <Line
+            type="monotone" dataKey="EU" stroke={EU_CLR} strokeWidth={2}
+            dot={{ fill: EU_CLR, r: 3, strokeWidth: 0 }}
+            activeDot={{ r: 5, strokeWidth: 0 }}
+          />
+          <Line
+            type="monotone" dataKey="US" stroke={US_CLR} strokeWidth={2}
+            strokeDasharray="4 3"
+            dot={{ fill: US_CLR, r: 3, strokeWidth: 0 }}
+            activeDot={{ r: 5, strokeWidth: 0 }}
+          />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
+  )
+}
 
 /* ── Volume Chart ───────────────────────────────────────── */
 export function DealVolumeChart() {

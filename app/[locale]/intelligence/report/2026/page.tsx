@@ -1,6 +1,7 @@
 import { getTranslations }   from 'next-intl/server'
 import type { Metadata }      from 'next'
 import {
+  ReportNav,
   ReportCover,
   ReportEditorial,
   ReportMarket,
@@ -73,6 +74,7 @@ export default async function Report2026Page({
       />
 
       <main>
+        <ReportNav />
         <ReportCover    ctaScroll={t('scrollDown')} />
         <ReportEditorial />
         <ReportMarket />

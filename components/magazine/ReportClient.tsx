@@ -1,11 +1,11 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link                  from 'next/link'
 import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import { gsap }              from '@/lib/gsap'
 import { StatHero }          from './StatHero'
-import { DealVolumeChart, GradeDistributionChart } from './ReportCharts'
+import { DealVolumeChart, MultiplesChart, GradeDistributionChart } from './ReportCharts'
 
 /* ── Types ──────────────────────────────────────────────── */
 interface Deal {
@@ -30,6 +30,67 @@ interface Force {
   title:  string
   body:   string
   impact: string
+}
+
+/* ── Section nav config ─────────────────────────────────── */
+export const REPORT_SECTIONS = [
+  { id: 's-editorial',    label: 'Editorial'        },
+  { id: 's-market',       label: 'The Market'       },
+  { id: 's-ai',           label: 'AI Effect'        },
+  { id: 's-perspective',  label: 'Perspective'      },
+  { id: 's-deals',        label: 'Deal Watch'       },
+  { id: 's-buyers',       label: 'Buyer Landscape'  },
+  { id: 's-outlook',      label: 'Perspectives 2027'},
+  { id: 's-index',        label: 'AEGRYN Index'     },
+] as const
+
+/* ── Scrollspy nav ──────────────────────────────────────── */
+export function ReportNav() {
+  const [active, setActive] = useState<string>('')
+
+  useEffect(() => {
+    const ids = REPORT_SECTIONS.map(s => s.id)
+    const observers: IntersectionObserver[] = []
+
+    ids.forEach(id => {
+      const el = document.getElementById(id)
+      if (!el) return
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActive(id) },
+        { rootMargin: '-40% 0px -55% 0px', threshold: 0 },
+      )
+      obs.observe(el)
+      observers.push(obs)
+    })
+
+    return () => observers.forEach(o => o.disconnect())
+  }, [])
+
+  return (
+    <nav className="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden xl:flex flex-col gap-3">
+      {REPORT_SECTIONS.map(s => (
+        <a
+          key={s.id}
+          href={`#${s.id}`}
+          onClick={e => {
+            e.preventDefault()
+            document.getElementById(s.id)?.scrollIntoView({ behavior: 'smooth' })
+          }}
+          className="group flex items-center gap-2.5"
+          aria-label={s.label}
+        >
+          <span className={`block w-5 h-px transition-all duration-300 ${
+            active === s.id ? 'bg-magazine-accent w-7' : 'bg-white/25 group-hover:bg-white/50'
+          }`} />
+          <span className={`text-[9px] font-mono uppercase tracking-[0.16em] transition-all duration-300 whitespace-nowrap ${
+            active === s.id ? 'text-magazine-accent opacity-100' : 'text-white/0 group-hover:text-white/50'
+          }`}>
+            {s.label}
+          </span>
+        </a>
+      ))}
+    </nav>
+  )
 }
 
 /* ── Scroll reveal hook ─────────────────────────────────── */
@@ -131,7 +192,7 @@ export function ReportEditorial() {
   useFadeUp('.editorial-body > *', ref)
 
   return (
-    <section id="s1" ref={ref} className="bg-magazine-ivory px-6 md:px-[120px] py-32">
+    <section id="s-editorial" ref={ref} className="bg-magazine-ivory px-6 md:px-[120px] py-32">
       <div className="max-w-prose mx-auto editorial-body">
         <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Editorial</p>
         <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-4">
@@ -169,7 +230,7 @@ export function ReportMarket() {
   ]
 
   return (
-    <section ref={ref} className="bg-magazine-white">
+    <section id="s-market" ref={ref} className="bg-magazine-white">
       <StatHero
         value="2,698"
         text="SaaS M&A transactions completed in 2025 — a record."
@@ -224,6 +285,28 @@ export function ReportMarket() {
           </table>
         </div>
 
+        {/* EU vs US Multiples */}
+        <div className="mt-20 market-text">
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.12em] mb-4">
+            Median EV/ARR — Europe vs United States, 2021–2026
+          </p>
+          <MultiplesChart />
+          <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-3">
+            Source — SEG SaaS Report 2026 · Aventis Advisors Q2 2026
+          </p>
+          <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-label-mag uppercase tracking-[0.1em]">
+            <span className="flex items-center gap-2 text-magazine-black/50">
+              <span className="inline-block w-6 h-0.5 bg-[#2EAF7D]" /> Europe: 3.1x → 4.7x ARR
+            </span>
+            <span className="flex items-center gap-2 text-magazine-black/50">
+              <span className="inline-block w-6 h-0.5 bg-[#4A90D9] opacity-70" style={{ backgroundImage: 'repeating-linear-gradient(90deg,#4A90D9 0,#4A90D9 4px,transparent 4px,transparent 7px)' }} /> US: 4.9x → 6.1x ARR
+            </span>
+            <span className="flex items-center gap-2 text-magazine-accent font-semibold">
+              Gap narrowed from −40% to −23% since 2023
+            </span>
+          </div>
+        </div>
+
         {/* The European Discount */}
         <div className="mt-20 max-w-prose market-text">
           <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-6">
@@ -254,7 +337,7 @@ export function ReportAIEffect() {
   ]
 
   return (
-    <section ref={ref} className="bg-magazine-black px-6 md:px-[120px] py-32">
+    <section id="s-ai" ref={ref} className="bg-magazine-black px-6 md:px-[120px] py-32">
       <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-8 ai-item">The AI Effect</p>
       <h2 className="text-h1-mag font-sans font-bold text-magazine-white mb-16 max-w-[800px] ai-item">
         Artificial Intelligence and the Recomposition of Tech Value
@@ -309,7 +392,7 @@ export function ReportPerspective() {
   ]
 
   return (
-    <section ref={ref} className="bg-magazine-ivory px-6 md:px-[120px] py-32">
+    <section id="s-perspective" ref={ref} className="bg-magazine-ivory px-6 md:px-[120px] py-32">
       <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8 persp-item">
         The AEGRYN Perspective
       </p>
@@ -390,6 +473,74 @@ export function ReportPerspective() {
           ))}
         </div>
       </div>
+
+      {/* Buyer's Checklist */}
+      <div className="persp-item mt-24">
+        <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-4">
+          The Buyer's Checklist — 2026 Edition
+        </h3>
+        <p className="text-body-mag text-magazine-black/50 max-w-prose mb-12 leading-[1.75]">
+          What buyers actually scrutinise first — by profile. Understanding their lens is the first step to positioning an asset correctly.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-magazine-black/10">
+          {([
+            {
+              profile: 'PE Fund',
+              focus: 'F-42 · F-11 · F-22',
+              items: [
+                'ARR certified with billing access (F-11a)',
+                'Founder dependency <40% of revenue (F-42)',
+                'Net Revenue Retention >110% (F-22)',
+                'Clean cap table, no conversion instruments',
+                'Auditable financial model with actuals',
+              ],
+              signal: 'Will not engage without certified financials.',
+            },
+            {
+              profile: 'Search Fund / ETA',
+              focus: 'Management · TRS · Earnout',
+              items: [
+                'Founder committed to transition period',
+                'Management team operational without founder',
+                'Documented SOPs and customer playbooks',
+                'SDE (Seller Discretionary Earnings) clearly stated',
+                'Earnout structure acceptable if SaaS metrics solid',
+              ],
+              signal: 'Most likely to pay a premium for CIFS certification.',
+            },
+            {
+              profile: 'Strategic Acquirer',
+              focus: 'I-14 · C-43 · I-24',
+              items: [
+                'All IP formally assigned to the entity (I-21)',
+                'No open-source licence conflicts (I-14)',
+                'No ongoing litigation or IP dispute',
+                "Tech complementary to acquirer's stack (C-43)",
+                'GDPR data transfer basis documented (I-27)',
+              ],
+              signal: 'IP certification (I-dimension) is their primary filter.',
+            },
+          ] as const).map(b => (
+            <div key={b.profile} className="p-8 md:p-10 border-b md:border-b-0 md:border-r border-magazine-black/10 last:border-0 flex flex-col gap-6">
+              <div>
+                <p className="text-label-mag text-magazine-accent uppercase tracking-[0.14em] mb-1">{b.focus}</p>
+                <h4 className="text-h2-mag font-sans font-semibold text-magazine-black">{b.profile}</h4>
+              </div>
+              <ul className="flex flex-col gap-3">
+                {b.items.map(item => (
+                  <li key={item} className="flex items-start gap-3 text-body-mag text-magazine-black/65">
+                    <span className="mt-2.5 w-1 h-1 rounded-full bg-magazine-accent shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-label-mag text-magazine-black/35 italic mt-auto pt-4 border-t border-magazine-black/8 leading-relaxed">
+                {b.signal}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   )
 }
@@ -443,7 +594,7 @@ export function ReportDealWatch({ disclaimer }: { disclaimer: string }) {
   ]
 
   return (
-    <section ref={ref} className="bg-magazine-white px-6 md:px-[120px] py-32">
+    <section id="s-deals" ref={ref} className="bg-magazine-white px-6 md:px-[120px] py-32">
       <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8 deal-item">Deal Watch</p>
       <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-16 max-w-[720px] deal-item">
         Transactions That Shaped the European Tech Landscape — H1 2026
@@ -513,7 +664,7 @@ export function ReportBuyerLandscape() {
   ]
 
   return (
-    <section ref={ref} className="bg-magazine-ivory px-6 md:px-[120px] py-32">
+    <section id="s-buyers" ref={ref} className="bg-magazine-ivory px-6 md:px-[120px] py-32">
       <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8 buyer-item">The Buyer Landscape</p>
       <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-16 max-w-[720px] buyer-item">
         Who Is Buying European Tech in 2026
@@ -571,7 +722,7 @@ export function ReportPerspectives() {
   ]
 
   return (
-    <section ref={ref} className="bg-magazine-black px-6 md:px-[120px] py-32">
+    <section id="s-outlook" ref={ref} className="bg-magazine-black px-6 md:px-[120px] py-32">
       <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-8 force-item">Perspectives 2027</p>
       <h2 className="text-h1-mag font-sans font-bold text-magazine-white mb-20 max-w-[720px] force-item">
         What the Next 12 Months Look Like
@@ -600,7 +751,7 @@ export function ReportIndex({ indexNote }: { indexNote: string }) {
   useFadeUp('.index-item', ref)
 
   return (
-    <section ref={ref} className="bg-magazine-ivory px-6 md:px-[120px] py-32">
+    <section id="s-index" ref={ref} className="bg-magazine-ivory px-6 md:px-[120px] py-32">
       <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8 index-item">
         The AEGRYN Index
       </p>
