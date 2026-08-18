@@ -74,14 +74,14 @@ export function MultiplesChart() {
           />
           <Line
             type="monotone" dataKey="EU" stroke={EU_CLR} strokeWidth={2}
-            dot={{ fill: EU_CLR, r: 3, strokeWidth: 0 }}
-            activeDot={{ r: 5, strokeWidth: 0 }}
+            dot={false}
+            activeDot={{ r: 4, strokeWidth: 0, fill: EU_CLR }}
           />
           <Line
             type="monotone" dataKey="US" stroke={US_CLR} strokeWidth={2}
             strokeDasharray="4 3"
-            dot={{ fill: US_CLR, r: 3, strokeWidth: 0 }}
-            activeDot={{ r: 5, strokeWidth: 0 }}
+            dot={false}
+            activeDot={{ r: 4, strokeWidth: 0, fill: US_CLR }}
           />
         </LineChart>
       </ResponsiveContainer>

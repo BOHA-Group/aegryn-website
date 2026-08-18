@@ -6148,7 +6148,11 @@
       "reportLabel": "Jaarrapport",
       "reportDesc": "The AEGRYN — European Tech M&A Intelligence",
       "subscribeLabel": "Rapport ontvangen",
-      "subscribeDesc": "Abonneer u om elke jaarlijkse editie te ontvangen."
+      "subscribeDesc": "Abonneer u om elke jaarlijkse editie te ontvangen.",
+      "notifyLabel": "Elke editie ontvangen",
+      "notifyDesc": "Meld u aan om op de hoogte gesteld te worden bij elke nieuwe jaarlijkse editie.",
+      "newsletterLabel": "Artikelen & Inzichten",
+      "newsletterDesc": "Ontvang onze artikelen over de tech M&A-markt — wekelijks."
     },
     "report": {
       "title": "The AEGRYN Report",
@@ -6218,6 +6222,13 @@
         "excerpt": "Neediu, het platform dat particulieren verbindt met aanbieders van huishoudelijke diensten, was onderwerp van een videoreportage in het Gala-magazine.",
         "context": "Berichtgeving in Gala — toonaangevend mainstream magazine. Videoreportage over Neediu, Aegryn-asset in de sector huishoudelijke diensten."
       }
+    },
+    "notify": {
+      "title": "Meld u aan",
+      "desc": "Abonneer u om elke editie te ontvangen.",
+      "cta": "Aanmelden",
+      "success": "Dank u! U wordt op de hoogte gesteld.",
+      "error": "Er is een fout opgetreden."
     }
   }
 }

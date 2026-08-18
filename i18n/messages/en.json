@@ -6128,7 +6128,9 @@
       "notifyLabel": "Receive each edition",
       "notifyDesc": "Sign up to be notified when each new annual edition is published.",
       "newsletterLabel": "Articles & Insights",
-      "newsletterDesc": "Receive our articles on the tech M&A market — one per week."
+      "newsletterDesc": "Receive our articles on the tech M&A market — one per week.",
+      "subscribeLabel": "Receive each edition",
+      "subscribeDesc": "Sign up to be notified when each new annual edition is published."
     },
     "report": {
       "title": "The AEGRYN Report",

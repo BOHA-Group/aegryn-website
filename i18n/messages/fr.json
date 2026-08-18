@@ -6251,7 +6251,9 @@
       "notifyLabel": "Recevoir chaque édition",
       "notifyDesc": "Inscrivez-vous pour être notifié à chaque nouvelle parution annuelle.",
       "newsletterLabel": "Articles & Insights",
-      "newsletterDesc": "Recevez nos articles sur le marché M&A tech — un par semaine."
+      "newsletterDesc": "Recevez nos articles sur le marché M&A tech — un par semaine.",
+      "subscribeLabel": "Recevoir chaque édition",
+      "subscribeDesc": "Inscrivez-vous pour être notifié à chaque nouvelle parution annuelle."
     },
     "report": {
       "title": "The AEGRYN Report",

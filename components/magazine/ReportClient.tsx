@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Link                  from 'next/link'
 import { ArrowDown, ArrowUpRight } from 'lucide-react'
-import { gsap }              from '@/lib/gsap'
+import { gsap, SplitText }   from '@/lib/gsap'
 import { StatHero }          from './StatHero'
 import { DealVolumeChart, MultiplesChart, GradeDistributionChart } from './ReportCharts'
 
@@ -113,27 +113,38 @@ function useFadeUp(selector: string, triggerEl: React.RefObject<HTMLElement | nu
 
 /* ── Cover ──────────────────────────────────────────────── */
 export function ReportCover({ ctaScroll }: { ctaScroll: string }) {
-  const ref  = useRef<HTMLElement>(null)
+  const ref     = useRef<HTMLElement>(null)
+  const titleRef = useRef<HTMLHeadingElement>(null)
 
   useEffect(() => {
-    if (!ref.current) return
+    if (!ref.current || !titleRef.current) return
+
+    // SplitText sur le h1 — type 'lines' pour un reveal ligne par ligne
+    const split = new SplitText(titleRef.current, { type: 'lines', linesClass: 'cover-line' })
+
     const ctx = gsap.context(() => {
-      gsap.fromTo('.cover-title',
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 1, ease: 'expo.out', stagger: 0.15, delay: 0.2 },
+      // Pattern B-like : chaque ligne monte depuis le bas (clip overflow)
+      gsap.fromTo(
+        split.lines,
+        { opacity: 0, y: 60 },
+        { opacity: 1, y: 0, duration: 0.9, ease: 'expo.out', stagger: 0.12, delay: 0.15 },
       )
       gsap.fromTo('.cover-meta',
         { opacity: 0 },
-        { opacity: 1, duration: 0.8, ease: 'power2.out', delay: 0.9 },
+        { opacity: 1, duration: 0.8, ease: 'power2.out', delay: 0.85 },
       )
     }, ref)
-    return () => ctx.revert()
+
+    return () => {
+      split.revert()
+      ctx.revert()
+    }
   }, [])
 
   return (
     <section
       ref={ref}
-      className="min-h-screen bg-magazine-black flex flex-col justify-between px-6 md:px-[120px] py-16"
+      className="min-h-screen bg-magazine-black flex flex-col justify-between px-6 md:px-[120px] py-16 overflow-hidden"
     >
       <div className="cover-meta flex items-center justify-between">
         <p className="text-label-mag text-magazine-white/50 uppercase tracking-[0.2em]">
@@ -145,19 +156,23 @@ export function ReportCover({ ctaScroll }: { ctaScroll: string }) {
       </div>
 
       <div className="flex-1 flex flex-col justify-center py-20">
-        <h1 className="font-sans text-magazine-white" style={{ fontSize: 'clamp(52px,9vw,120px)', lineHeight: 0.92, letterSpacing: '-0.03em', fontWeight: 800 }}>
-          <span className="cover-title block">The State</span>
-          <span className="cover-title block">of European</span>
-          <span className="cover-title block">Tech M&amp;A</span>
+        <h1
+          ref={titleRef}
+          className="font-sans text-magazine-white"
+          style={{ fontSize: 'clamp(52px,9vw,120px)', lineHeight: 0.92, letterSpacing: '-0.03em', fontWeight: 800 }}
+        >
+          The State<br />
+          of European<br />
+          Tech M&amp;A
         </h1>
 
         <div className="cover-meta mt-10 w-20 h-px bg-magazine-accent" />
 
         <div className="cover-meta mt-10 flex flex-wrap gap-x-16 gap-y-8">
           {[
-            { val: '2,698', label: 'SaaS deals completed in 2025 — a record.' },
-            { val: '+40%',  label: 'EU SaaS M&A volume growth since 2023.' },
-            { val: '€14.2B',label: 'Transaction volume Europe 2025.' },
+            { val: '2,698',  label: 'SaaS deals completed in 2025 — a record.' },
+            { val: '+40%',   label: 'EU SaaS M&A volume growth since 2023.' },
+            { val: '€14.2B', label: 'Transaction volume Europe 2025.' },
           ].map(s => (
             <div key={s.val}>
               <p className="font-sans font-bold text-magazine-white tabular-nums"
@@ -175,7 +190,7 @@ export function ReportCover({ ctaScroll }: { ctaScroll: string }) {
           Annual Report — Certified by AEGRYN — Switzerland
         </p>
         <button
-          onClick={() => document.getElementById('s1')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => document.getElementById('s-editorial')?.scrollIntoView({ behavior: 'smooth' })}
           className="flex items-center gap-2 text-label-mag text-magazine-white/50 hover:text-magazine-white transition-colors uppercase tracking-[0.12em]"
           aria-label={ctaScroll}
         >
@@ -378,6 +393,66 @@ export function ReportAIEffect() {
   )
 }
 
+/* ── CIFS Bars — Pattern C scaleX 0→1 ──────────────────── */
+const CIFS_DIMS = [
+  { dim: 'C', label: 'Code integrity',       score: 22 },
+  { dim: 'I', label: 'IP ownership',         score: 19 },
+  { dim: 'F', label: 'Financial reliability', score: 21 },
+  { dim: 'S', label: 'Security posture',      score: 18 },
+] as const
+
+function CifsBars() {
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!containerRef.current) return
+    const bars = containerRef.current.querySelectorAll<HTMLElement>('.cifs-bar-fill')
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        bars,
+        { scaleX: 0, transformOrigin: 'left center' },
+        {
+          scaleX: 1,
+          duration: 0.8,
+          ease: 'power2.out',
+          stagger: 0.12,
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top 80%',
+            once: true,
+          },
+        },
+      )
+    }, containerRef)
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <div ref={containerRef} className="space-y-4">
+      {CIFS_DIMS.map(({ dim, label, score }) => {
+        const pct = (score / 25) * 100
+        return (
+          <div key={dim}>
+            <div className="flex justify-between text-label-mag uppercase tracking-[0.1em] mb-2">
+              <span className="text-magazine-black font-semibold">{dim} — {label}</span>
+              <span className="text-magazine-black/40">{score}/25</span>
+            </div>
+            <div className="h-1.5 bg-magazine-black/10 w-full">
+              <div
+                className="cifs-bar-fill h-1.5 bg-magazine-accent"
+                style={{ width: `${pct}%` }}
+              />
+            </div>
+          </div>
+        )
+      })}
+      <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.08em] pt-2">
+        Example — Illustrative certified asset
+      </p>
+    </div>
+  )
+}
+
 /* ── AEGRYN Perspective ─────────────────────────────────── */
 export function ReportPerspective() {
   const ref = useRef<HTMLElement>(null)
@@ -416,30 +491,7 @@ export function ReportPerspective() {
             Less than 25% of submitted assets pass the certification threshold.
           </p>
         </div>
-        <div className="space-y-4">
-          {(['C', 'I', 'F', 'S'] as const).map((dim, i) => {
-            const labels: Record<string, string> = { C: 'Code integrity', I: 'IP ownership', F: 'Financial reliability', S: 'Security posture' }
-            const scores = [22, 19, 21, 18]
-            const pct    = (scores[i] / 25) * 100
-            return (
-              <div key={dim}>
-                <div className="flex justify-between text-label-mag uppercase tracking-[0.1em] mb-2">
-                  <span className="text-magazine-black font-semibold">{dim} — {labels[dim]}</span>
-                  <span className="text-magazine-black/40">{scores[i]}/25</span>
-                </div>
-                <div className="h-1.5 bg-magazine-black/10 w-full">
-                  <div
-                    className="h-1.5 bg-magazine-accent transition-all duration-700"
-                    style={{ width: `${pct}%` }}
-                  />
-                </div>
-              </div>
-            )
-          })}
-          <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.08em] pt-2">
-            Example — Illustrative certified asset
-          </p>
-        </div>
+        <CifsBars />
       </div>
 
       {/* Grade distribution */}
