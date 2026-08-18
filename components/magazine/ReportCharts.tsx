@@ -26,7 +26,6 @@ const gradeData: GradeBar[] = [
 const ACCENT  = '#2EAF7D'
 const DARK    = '#0A0A0A'
 const GRID    = 'rgba(0,0,0,0.08)'
-const GRID_W  = 'rgba(255,255,255,0.08)'
 const US_CLR  = '#4A90D9'
 const EU_CLR  = ACCENT
 

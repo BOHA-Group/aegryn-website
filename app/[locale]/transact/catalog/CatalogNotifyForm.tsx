@@ -3,7 +3,6 @@
 import { useState }        from 'react'
 import { useTranslations } from 'next-intl'
 import { CheckCircle2, ArrowUpRight } from 'lucide-react'
-import { Link } from '@/i18n/navigation'
 import NextLink from 'next/link'
 
 const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
