@@ -18,7 +18,7 @@ export function MagazineFallback({ pdfUrl }: MagazineFallbackProps) {
       {/* Header */}
       <div className="flex items-center justify-between w-full max-w-5xl">
         <p className="text-label-mag text-magazine-white/30 uppercase tracking-[0.2em]">
-          The AEGRYN · Autumn 2026
+          Aegryn Magazine · Autumn 2026
         </p>
         <a
           href={pdfUrl}
@@ -34,7 +34,7 @@ export function MagazineFallback({ pdfUrl }: MagazineFallbackProps) {
       {/* PDF iframe */}
       <iframe
         src={pdfUrl}
-        title="The AEGRYN Report 2026"
+        title="Aegryn Magazine 2026"
         className="w-full max-w-5xl border border-magazine-white/10"
         style={{ height: '85vh' }}
       />

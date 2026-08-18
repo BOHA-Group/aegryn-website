@@ -6247,7 +6247,7 @@
       "title": "AEGRYN Intelligence",
       "desc": "Publications, rapports et analyses sur le marché M&A tech européen.",
       "reportLabel": "Rapport annuel",
-      "reportDesc": "The AEGRYN — European Tech M&A Intelligence",
+      "reportDesc": "Aegryn Magazine — European Tech M&A Intelligence",
       "notifyLabel": "Recevoir chaque édition",
       "notifyDesc": "Inscrivez-vous pour être notifié à chaque nouvelle parution annuelle.",
       "newsletterLabel": "Articles & Insights",
@@ -6256,7 +6256,7 @@
       "subscribeDesc": "Inscrivez-vous pour être notifié à chaque nouvelle parution annuelle."
     },
     "report": {
-      "title": "The AEGRYN Report",
+      "title": "Aegryn Magazine",
       "subtitle": "European Tech M&A Intelligence",
       "tagline": "Rare by selection. Certified to transact.",
       "edition2026": "Édition 2026 — First Edition",
@@ -6276,26 +6276,26 @@
       "disclaimer": "Toutes les analyses de deals privés sont basées sur des informations publiques et des estimations AEGRYN. Elles ne constituent pas un conseil en investissement.",
       "indexNote": "L'AEGRYN Index gagnera en profondeur à chaque édition, à mesure que nos données de certification s'accumulent.",
       "meta": {
-        "title": "The AEGRYN Report 2026 — European Tech M&A Intelligence",
+        "title": "Aegryn Magazine 2026 — European Tech M&A Intelligence",
         "description": "Rapport annuel de référence sur le marché M&A tech européen. Données, analyses et perspectives par AEGRYN — l'agence de certification et transaction d'actifs tech."
       }
     },
     "notify": {
       "title": "Être notifié de chaque édition",
-      "desc": "Renseignez votre email pour recevoir un avis de parution à chaque nouvelle édition annuelle de The AEGRYN Report. Accès libre, aucun engagement, désabonnement en un clic.",
+      "desc": "Renseignez votre email pour recevoir un avis de parution à chaque nouvelle édition annuelle de Aegryn Magazine. Accès libre, aucun engagement, désabonnement en un clic.",
       "placeholder": "Votre adresse email",
       "cta": "Être notifié",
       "success": "Merci. Vous recevrez la prochaine édition dès sa publication.",
       "error": "Une erreur est survenue. Veuillez réessayer.",
       "unsubscribed": "Vous avez été désabonné.",
       "meta": {
-        "title": "Notifications — The AEGRYN Report",
+        "title": "Notifications — Aegryn Magazine",
         "description": "Recevez un avis de parution à chaque nouvelle édition annuelle du rapport AEGRYN sur le marché M&A tech européen."
       }
     },
     "subscribe": {
       "meta": {
-        "title": "Édition papier — The AEGRYN Report",
+        "title": "Édition papier — Aegryn Magazine",
         "description": "Exprimez vos centres d'intérêt pour l'édition papier d'AEGRYN Report, réservée aux clients Aegryn."
       },
       "printBadge": "Édition papier",

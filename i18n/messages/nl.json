@@ -6146,7 +6146,7 @@
       "title": "AEGRYN Intelligence",
       "desc": "Publicaties, rapporten en analyses over de Europese tech M&A-markt.",
       "reportLabel": "Jaarrapport",
-      "reportDesc": "The AEGRYN — European Tech M&A Intelligence",
+      "reportDesc": "Aegryn Magazine — European Tech M&A Intelligence",
       "subscribeLabel": "Rapport ontvangen",
       "subscribeDesc": "Abonneer u om elke jaarlijkse editie te ontvangen.",
       "notifyLabel": "Elke editie ontvangen",
@@ -6155,7 +6155,7 @@
       "newsletterDesc": "Ontvang onze artikelen over de tech M&A-markt — wekelijks."
     },
     "report": {
-      "title": "The AEGRYN Report",
+      "title": "Aegryn Magazine",
       "subtitle": "European Tech M&A Intelligence",
       "tagline": "Rare by selection. Certified to transact.",
       "edition2026": "Editie 2026 — Eerste editie",
@@ -6174,13 +6174,13 @@
       "disclaimer": "Alle analyses van privé-deals zijn gebaseerd op publieke informatie en AEGRYN-schattingen. Ze vormen geen beleggingsadvies.",
       "indexNote": "De AEGRYN Index zal dieper worden met elke jaarlijkse editie naarmate onze certificeringsdatabase groeit.",
       "meta": {
-        "title": "The AEGRYN Report 2026 — European Tech M&A Intelligence",
+        "title": "Aegryn Magazine 2026 — European Tech M&A Intelligence",
         "description": "Jaarlijks referentierapport over de Europese tech M&A-markt. Gegevens, analyses en perspectieven van AEGRYN."
       }
     },
     "subscribe": {
       "meta": {
-        "title": "Gedrukte editie — The AEGRYN Report",
+        "title": "Gedrukte editie — Aegryn Magazine",
         "description": "Geef uw interesse aan voor de gedrukte editie van het AEGRYN Report, voorbehouden aan Aegryn-klanten."
       },
       "printBadge": "Gedrukte editie",

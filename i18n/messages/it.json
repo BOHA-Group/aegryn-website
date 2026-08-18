@@ -6146,7 +6146,7 @@
       "title": "AEGRYN Intelligence",
       "desc": "Pubblicazioni, rapporti e analisi sul mercato europeo delle M&A tecnologiche.",
       "reportLabel": "Rapporto annuale",
-      "reportDesc": "The AEGRYN — European Tech M&A Intelligence",
+      "reportDesc": "Aegryn Magazine — European Tech M&A Intelligence",
       "subscribeLabel": "Ricevere il rapporto",
       "subscribeDesc": "Iscriviti per ricevere ogni edizione annuale.",
       "notifyLabel": "Ricevere ogni edizione",
@@ -6155,7 +6155,7 @@
       "newsletterDesc": "Ricevi i nostri articoli sul mercato M&A tech — settimanalmente."
     },
     "report": {
-      "title": "The AEGRYN Report",
+      "title": "Aegryn Magazine",
       "subtitle": "European Tech M&A Intelligence",
       "tagline": "Rare by selection. Certified to transact.",
       "edition2026": "Edizione 2026 — Prima edizione",
@@ -6174,13 +6174,13 @@
       "disclaimer": "Tutte le analisi di deal privati si basano su informazioni pubbliche e stime AEGRYN. Non costituiscono una consulenza sugli investimenti.",
       "indexNote": "L'AEGRYN Index si approfondirà ad ogni edizione annuale man mano che il nostro database di certificazione cresce.",
       "meta": {
-        "title": "The AEGRYN Report 2026 — European Tech M&A Intelligence",
+        "title": "Aegryn Magazine 2026 — European Tech M&A Intelligence",
         "description": "Rapporto annuale di riferimento sul mercato europeo delle M&A tecnologiche. Dati, analisi e prospettive di AEGRYN."
       }
     },
     "subscribe": {
       "meta": {
-        "title": "Edizione cartacea — The AEGRYN Report",
+        "title": "Edizione cartacea — Aegryn Magazine",
         "description": "Esprimi il tuo interesse per l'edizione cartacea dell'AEGRYN Report, riservata ai clienti Aegryn."
       },
       "printBadge": "Edizione cartacea",

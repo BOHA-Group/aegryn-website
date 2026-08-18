@@ -6124,7 +6124,7 @@
       "title": "AEGRYN Intelligence",
       "desc": "Publications, reports and analysis on the European tech M&A market.",
       "reportLabel": "Annual Report",
-      "reportDesc": "The AEGRYN — European Tech M&A Intelligence",
+      "reportDesc": "Aegryn Magazine — European Tech M&A Intelligence",
       "notifyLabel": "Receive each edition",
       "notifyDesc": "Sign up to be notified when each new annual edition is published.",
       "newsletterLabel": "Articles & Insights",
@@ -6133,7 +6133,7 @@
       "subscribeDesc": "Sign up to be notified when each new annual edition is published."
     },
     "report": {
-      "title": "The AEGRYN Report",
+      "title": "Aegryn Magazine",
       "subtitle": "European Tech M&A Intelligence",
       "tagline": "Rare by selection. Certified to transact.",
       "edition2026": "Edition 2026 — First Edition",
@@ -6153,26 +6153,26 @@
       "disclaimer": "All private deal analyses are based on public information and AEGRYN estimates. They do not constitute investment advice.",
       "indexNote": "The AEGRYN Index will deepen with each annual edition, as our certification database grows.",
       "meta": {
-        "title": "The AEGRYN Report 2026 — European Tech M&A Intelligence",
+        "title": "Aegryn Magazine 2026 — European Tech M&A Intelligence",
         "description": "Annual reference report on the European tech M&A market. Data, analysis and perspectives by AEGRYN."
       }
     },
     "notify": {
       "title": "Get notified for each edition",
-      "desc": "Enter your email to receive a publication notice for each new annual edition of The AEGRYN Report. Free access, no commitment, unsubscribe in one click.",
+      "desc": "Enter your email to receive a publication notice for each new annual edition of Aegryn Magazine. Free access, no commitment, unsubscribe in one click.",
       "placeholder": "Your email address",
       "cta": "Get notified",
       "success": "Thank you. You will receive the next edition upon publication.",
       "error": "An error occurred. Please try again.",
       "unsubscribed": "You have been unsubscribed.",
       "meta": {
-        "title": "Notifications — The AEGRYN Report",
+        "title": "Notifications — Aegryn Magazine",
         "description": "Receive a publication notice for each new annual edition of the AEGRYN report on the European tech M&A market."
       }
     },
     "subscribe": {
       "meta": {
-        "title": "Print Edition — The AEGRYN Report",
+        "title": "Print Edition — Aegryn Magazine",
         "description": "Express your interest in the print edition of AEGRYN Report, reserved for Aegryn clients."
       },
       "printBadge": "Print Edition",

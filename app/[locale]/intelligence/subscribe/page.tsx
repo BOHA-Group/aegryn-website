@@ -54,7 +54,7 @@ export default async function SubscribePage({
         </div>
 
         <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">
-          The AEGRYN Report — {t('printBadge')}
+          Aegryn Magazine — {t('printBadge')}
         </p>
         <h1
           className="font-sans font-bold text-magazine-black mb-4"

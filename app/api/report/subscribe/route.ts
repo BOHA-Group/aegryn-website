@@ -1,7 +1,7 @@
 /**
  * POST /api/report/subscribe
  *
- * Inscrit un visiteur aux notifications de parution de The AEGRYN Report.
+ * Inscrit un visiteur aux notifications de parution de Aegryn Magazine.
  * Table : report_subscribers (migration 073) — DISTINCT de newsletter_subscribers.
  *
  * Règles :

@@ -72,7 +72,7 @@ export function PdfViewer({ src, fileName = 'the-aegryn-2026.pdf' }: Props) {
 
         {/* Centre — titre */}
         <p className="hidden md:block text-label-mag uppercase tracking-[0.15em] text-magazine-black/40 select-none">
-          The AEGRYN · 2026
+          Aegryn Magazine · 2026
         </p>
 
         {/* Zoom + download */}

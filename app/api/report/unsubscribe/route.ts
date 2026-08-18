@@ -1,7 +1,7 @@
 /**
  * GET /api/report/unsubscribe?token=<uuid>
  *
- * Désabonne un inscrit à The AEGRYN Report via son token unique.
+ * Désabonne un inscrit à Aegryn Magazine via son token unique.
  * Lien inclus dans chaque email de notification de parution.
  */
 import { NextRequest, NextResponse } from 'next/server'

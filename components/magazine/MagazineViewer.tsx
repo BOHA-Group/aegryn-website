@@ -58,7 +58,7 @@ export function MagazineViewer({ totalPages, pdfUrl }: MagazineViewerProps) {
       {/* ── Header ── */}
       <div className="flex items-center justify-between w-full max-w-5xl">
         <p className="text-label-mag text-magazine-white/30 uppercase tracking-[0.2em]">
-          The AEGRYN · Autumn 2026
+          Aegryn Magazine · Autumn 2026
         </p>
         <a
           href={pdfUrl}

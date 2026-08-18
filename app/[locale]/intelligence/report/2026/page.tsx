@@ -62,7 +62,7 @@ export default async function Report2026Page({
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type':    'Report',
-            name:       'The AEGRYN Report 2026 — European Tech M&A Intelligence',
+            name:       'Aegryn Magazine 2026 — European Tech M&A Intelligence',
             description: t('meta.description'),
             author:     { '@type': 'Organization', name: 'AEGRYN', url: 'https://aegryn.com' },
             publisher:  { '@type': 'Organization', name: 'AEGRYN', url: 'https://aegryn.com' },

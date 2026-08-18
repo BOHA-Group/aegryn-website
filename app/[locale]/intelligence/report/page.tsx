@@ -229,7 +229,7 @@ export default async function ReportIndexPage({
                   {ed.image ? (
                     <Image
                       src={ed.image}
-                      alt={`The AEGRYN Report ${ed.year}`}
+                      alt={`Aegryn Magazine ${ed.year}`}
                       fill
                       className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
                     />
