@@ -117,22 +117,26 @@ export default async function AdvisoryPage({ params }: Props) {
           <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('experts.desc')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border">
-            {experts.map((item, i) => (
-              <div key={i} className="bg-ag-white p-6 hover:bg-ag-off-white transition-colors group">
-                <div className="flex items-start gap-4">
-                  <span className="font-sans font-semibold text-[10px] text-ag-gray-light w-5 shrink-0 pt-0.5">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <div className="min-w-0">
-                    <p className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.02em] group-hover:text-ag-navy transition-colors mb-1">
-                      {item.title}
-                    </p>
-                    <p className="font-sans font-normal text-[12px] text-ag-gray leading-snug">
-                      {item.desc}
-                    </p>
+          <div className="border border-ag-border divide-y divide-ag-border">
+            {Array.from({ length: Math.ceil(experts.length / 2) }, (_, row) => (
+              <div key={row} className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-ag-border">
+                {experts.slice(row * 2, row * 2 + 2).map((item, col) => (
+                  <div key={col} className="p-6 hover:bg-ag-off-white transition-colors group">
+                    <div className="flex items-start gap-4">
+                      <span className="font-sans font-semibold text-[10px] text-ag-gray-light w-5 shrink-0 pt-0.5">
+                        {String(row * 2 + col + 1).padStart(2, '0')}
+                      </span>
+                      <div className="min-w-0">
+                        <p className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.02em] group-hover:text-ag-navy transition-colors mb-1">
+                          {item.title}
+                        </p>
+                        <p className="font-sans font-normal text-[12px] text-ag-gray leading-snug">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
             ))}
           </div>
