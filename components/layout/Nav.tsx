@@ -348,12 +348,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                   <User size={13} />
                   {t('clientSpace')}
                 </NextLink>
-              <Link
-                href="/contact"
-                className="font-mono text-[11px] tracking-[0.14em] uppercase bg-ag-navy text-white px-4 py-2 hover:bg-ag-navy-mid transition-colors duration-200"
-              >
-                {t('submitAsset')} →
-              </Link>
             </>
           )}
         </div>
@@ -546,13 +540,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                       <User size={13} />
                       {t('clientSpace')}
                     </NextLink>
-                  <Link
-                    href="/contact"
-                    onClick={closeMobile}
-                    className="flex items-center justify-center gap-2 bg-ag-apex px-4 py-3 font-mono text-[11px] tracking-[0.14em] uppercase text-ag-navy font-semibold hover:bg-ag-apex/90 transition-colors"
-                  >
-                    {t('submitAsset')} →
-                  </Link>
                 </>
               )}
             </div>
