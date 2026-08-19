@@ -319,7 +319,7 @@
         "desc": "Nous certifions des actifs selon un label indépendant structuré sur 4 dimensions : Code, IP, Finance, Sécurité. Un protocole reproductible, traçable et concluant — pour des tiers comme pour nos propres actifs."
       },
       {
-        "title": "CESSION M&A",
+        "title": "TRANSACTION",
         "desc": "Nous transigeons des actifs certifiés via un processus confidentiel : séquestre institutionnel, cercle d'acquéreurs pré-qualifiés, mandat exclusif 60 jours. Moins de 25% des actifs soumis sont acceptés."
       }
     ]
@@ -456,7 +456,7 @@
         "desc": "Certifier de façon indépendante. Refuser plus qu'accepter. Une notation reproductible, traçable et définitive."
       },
       "embrace": {
-        "title": "CESSION M&A",
+        "title": "TRANSACTION",
         "desc": "Transiger dans la discrétion, avec la certitude pour les deux parties. Séquestre institutionnel. Documentation complète à chaque transfert."
       }
     },
