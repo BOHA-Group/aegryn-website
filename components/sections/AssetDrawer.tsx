@@ -108,6 +108,9 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
             >
               {asset.name}
             </h2>
+            <p className="font-sans font-semibold text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mt-2">
+              {t('ownedBy')}
+            </p>
           </div>
           <button
             onClick={close}
@@ -252,6 +255,9 @@ export function AssetGridWithDrawer() {
 
                   {/* Bottom — nom + tagline + status */}
                   <div className="mt-12">
+                    <p className="font-sans font-semibold text-[9px] tracking-[0.2em] uppercase text-ag-gray-light group-hover:text-white/40 transition-colors duration-500 mb-2">
+                      {t('ownedBy')}
+                    </p>
                     <h3
                       className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-none mb-2 group-hover:text-white transition-colors duration-500"
                       style={{ fontSize: 'clamp(22px,2vw,28px)' }}

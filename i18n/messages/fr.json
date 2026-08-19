@@ -739,7 +739,8 @@
       "category": "Catégorie",
       "useCase": "Cas d'usage",
       "model": "Modèle"
-    }
+    },
+    "ownedBy": "Un actif Aegryn"
   },
   "assetCarousel": {
     "label": "Notre écosystème",

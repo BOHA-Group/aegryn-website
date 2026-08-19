@@ -702,7 +702,8 @@
       "category": "Category",
       "useCase": "Use case",
       "model": "Model"
-    }
+    },
+    "ownedBy": "An Aegryn asset"
   },
   "ndaForm": {
     "requestBtn": "Request NDA access",

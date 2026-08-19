@@ -721,7 +721,8 @@
       "category": "Categorie",
       "useCase": "Gebruiksscenario",
       "model": "Model"
-    }
+    },
+    "ownedBy": "Een Aegryn-asset"
   },
   "ndaForm": {
     "requestBtn": "NDA-toegang aanvragen",

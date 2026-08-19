@@ -721,7 +721,8 @@
       "category": "Kategorie",
       "useCase": "Anwendungsfall",
       "model": "Modell"
-    }
+    },
+    "ownedBy": "Ein Aegryn-Asset"
   },
   "ndaForm": {
     "requestBtn": "NDA-Zugang anfordern",
