@@ -1570,7 +1570,7 @@
       }
     ],
     "fullCodesTitle": "Full CIFS sub-code table",
-    "fullCodesDesc": "Each sub-code identifies a specific criterion evaluated during certification. Codes marked ⛔ are automatic refusal conditions.",
+    "fullCodesDesc": "Jeder Untercode identifiziert ein spezifisches, während der Zertifizierung bewertetes Kriterium. Mit ⛔ markierte Codes sind automatische Ablehnungskriterien.",
     "fullCodesTable": [
       {
         "dim": "C",
@@ -5598,7 +5598,7 @@
       "devsecopsDesc": "CI/CD, Testabdeckung, Abbau technischer Schulden, QA-Automatisierung, Observability.",
       "data_engineering": "Data Engineering & Datenarchitektur",
       "data_engineeringDesc": "Datenmodellierung, Data Warehouse, Data Lake, Governance, Portabilität proprietärer Datensätze.",
-      "design_ux": "Design & User Experience",
+      "design_ux": "Design & Nutzererfahrung",
       "design_uxDesc": "UX/UI, Design System, Produktidentität, Nutzerreisen, Usability-Tests.",
       "product_management": "Product Management & Roadmap",
       "product_managementDesc": "Produktdefinition, Backlog-Priorisierung, Aktivierungs- und Retentionsmetriken, Roadmap.",

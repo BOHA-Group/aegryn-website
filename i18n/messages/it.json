@@ -1570,7 +1570,7 @@
       }
     ],
     "fullCodesTitle": "Full CIFS sub-code table",
-    "fullCodesDesc": "Each sub-code identifies a specific criterion evaluated during certification. Codes marked ⛔ are automatic refusal conditions.",
+    "fullCodesDesc": "Ogni sottocodice identifica un criterio specifico valutato durante la certificazione. I codici contrassegnati con ⛔ sono condizioni di rifiuto automatico.",
     "fullCodesTable": [
       {
         "dim": "C",

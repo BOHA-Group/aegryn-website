@@ -2621,7 +2621,7 @@
           "desc": "Vous signez un mandat avec Aegryn. Durée, conditions, rémunération au succès définies contractuellement."
         },
         "step2": {
-          "title": "Qualification & matching",
+          "title": "Qualification & mise en relation",
           "desc": "Aegryn identifie la contrepartie idéale dans son réseau qualifié. L'actif est présenté sous NDA uniquement."
         },
         "step3": {
@@ -4425,7 +4425,7 @@
     "s4RetractSusp": "Condition suspensive non levée (motif légitime documenté) : le séquestre est intégralement restitué à l'acquéreur. La commission d'audit déjà réglée reste acquise à Aegryn.",
     "s4DdTitle": "Due Diligence (DD)",
     "s4Dd": "Durée standard : 30 jours calendaires à compter de la confirmation du séquestre. L'acquéreur accède à la data room complète sous NDA. Extension possible sur accord mutuel écrit (maximum 30 jours supplémentaires).",
-    "s4SigningTitle": "Signing & Closing",
+    "s4SigningTitle": "Signature & Closing",
     "s4Signing": "À la date de signing : l'état exact du codebase est documenté et versionné. La codebase est archivée et versionnée dans le registre Aegryn. Le solde (90%) est versé par l'acquéreur. La banque libère le séquestre. Aegryn prélève sa commission et verse le solde net au vendeur. Aegryn émet le Certificat de Transaction officiel.",
     "s5Title": "Responsabilité",
     "s5": "Aegryn agit exclusivement comme intermédiaire et opérateur de processus. Aegryn ne garantit ni l'issue d'une transaction, ni la valeur future d'un actif, ni la performance post-cession. En cas de divergence entre les données déclarées et la réalité constatée lors de la DD, la responsabilité d'Aegryn est limitée au remboursement des honoraires de certification perçus pour l'actif concerné. En aucun cas Aegryn ne sera responsable des dommages indirects, manque à gagner ou dommages consécutifs.",
@@ -6261,7 +6261,7 @@
       "reportDesc": "Aegryn Magazine — Intelligence M&A Tech Européenne",
       "notifyLabel": "Recevoir chaque édition",
       "notifyDesc": "Inscrivez-vous pour être notifié à chaque nouvelle parution annuelle.",
-      "newsletterLabel": "Articles & Insights",
+      "newsletterLabel": "Articles & Analyses",
       "newsletterDesc": "Recevez nos articles sur le marché M&A tech — un par semaine.",
       "subscribeLabel": "Recevoir chaque édition",
       "subscribeDesc": "Inscrivez-vous pour être notifié à chaque nouvelle parution annuelle."
@@ -6321,7 +6321,7 @@
       "interests": {
         "ma": "M&A & Transactions",
         "certification": "Certification d'actifs",
-        "build": "Build & Engineering",
+        "build": "Conception & Ingénierie",
         "data": "Data & IA",
         "cyber": "Cybersécurité",
         "advisory": "Advisory"

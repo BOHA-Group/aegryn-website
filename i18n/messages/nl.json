@@ -1570,7 +1570,7 @@
       }
     ],
     "fullCodesTitle": "Full CIFS sub-code table",
-    "fullCodesDesc": "Each sub-code identifies a specific criterion evaluated during certification. Codes marked ⛔ are automatic refusal conditions.",
+    "fullCodesDesc": "Elke subcode identificeert een specifiek criterium dat tijdens de certificering wordt beoordeeld. Codes gemarkeerd met ⛔ zijn automatische weigeringsgronden.",
     "fullCodesTable": [
       {
         "dim": "C",
@@ -4805,7 +4805,7 @@
       "loginLink": "Inloggen →",
       "successTitle": "Account aangemaakt",
       "successDesc": "Doorsturen naar uw ruimte in 3 seconden…",
-      "errorEmailExists": "Dit e-mailadres is al in gebruik. Log in of reset uw wachtwoord.",
+      "errorEmailExists": "Dit e-mailadres is al in gebruik. Meld u aan of reset uw wachtwoord.",
       "errorTooShort": "Het wachtwoord moet minimaal 8 tekens bevatten.",
       "errorStrength": "Het wachtwoord moet minimaal één hoofdletter, één kleine letter en één cijfer bevatten.",
       "errorInvalid": "Ongeldig e-mailadres.",
