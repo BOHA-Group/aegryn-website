@@ -61,7 +61,7 @@ export function GradeStrip() {
           </p>
         </div>
 
-        <div className="grade-cards-row grid grid-cols-5 gap-px bg-ag-border mb-14">
+        <div className="grade-cards-row grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-ag-border mb-14">
           {grades.map((g) => (
             <div
               key={g.grade}

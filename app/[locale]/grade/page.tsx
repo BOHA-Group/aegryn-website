@@ -64,7 +64,7 @@ export default async function GradePage({ params }: Props) {
             </div>
             <div className="grid grid-cols-2 gap-px bg-ag-border border border-ag-border">
               {marketItems.map(({ value, label }) => (
-                <div key={label} className="bg-ag-white p-8 flex flex-col gap-2">
+                <div key={label} className="bg-ag-white p-5 sm:p-8 flex flex-col gap-2">
                   <span className="font-sans font-bold text-ag-black tracking-[-0.03em]" style={{ fontSize: 'clamp(24px,2.5vw,36px)' }}>{value}</span>
                   <span className="font-sans text-[12px] text-ag-gray leading-snug">{label}</span>
                 </div>

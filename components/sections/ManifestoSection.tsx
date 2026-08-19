@@ -203,7 +203,7 @@ export function ManifestoSection() {
                 </footer>
               </blockquote>
 
-              <div className="about-stats grid grid-cols-3 border-t border-ag-border pt-8 gap-4">
+              <div className="about-stats grid grid-cols-1 sm:grid-cols-3 border-t border-ag-border pt-8 gap-4">
                 {stats.map((s) => (
                   <div key={s.label} className="about-stat" style={{ opacity: 0 }}>
                     <p

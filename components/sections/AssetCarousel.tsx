@@ -95,8 +95,8 @@ export function AssetCarousel() {
       {/* Scrollable track */}
       <div
         ref={trackRef}
-        className="flex md:flex-nowrap flex-wrap gap-0 will-change-transform"
-        style={{ width: `${(VISIBLE.length + 1) * 340}px` }}
+        className="flex flex-col md:flex-row md:flex-nowrap gap-0 will-change-transform"
+        style={{ width: '100%' }}
       >
         {VISIBLE.map((asset) => {
           const statusKey = asset.status as keyof typeof STATUS_DOT_CONFIG
@@ -111,8 +111,8 @@ export function AssetCarousel() {
             return (
               <div
                 key={asset.id}
-                className="group relative flex flex-col shrink-0 border-r border-white/10 p-10 bg-ag-navy overflow-hidden"
-                style={{ width: '340px', minHeight: '420px' }}
+                className="group relative flex flex-col w-full md:w-[340px] md:shrink-0 border-b md:border-b-0 md:border-r border-white/10 p-10 bg-ag-navy overflow-hidden"
+                style={{ minHeight: '420px' }}
               >
                 <div
                   className="pointer-events-none absolute inset-0"
@@ -161,8 +161,8 @@ export function AssetCarousel() {
             <Link
               key={asset.id}
               href={`/assets/${asset.slug}` as never}
-              className="group relative flex flex-col shrink-0 border-r border-ag-border p-10 bg-ag-white hover:bg-ag-off-white transition-colors duration-300 overflow-hidden"
-              style={{ width: '340px', minHeight: '420px' }}
+              className="group relative flex flex-col w-full md:w-[340px] md:shrink-0 border-b md:border-b-0 md:border-r border-ag-border p-10 bg-ag-white hover:bg-ag-off-white transition-colors duration-300 overflow-hidden"
+              style={{ minHeight: '420px' }}
             >
               <div
                 className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -204,8 +204,8 @@ export function AssetCarousel() {
 
         {/* End card — CTA */}
         <div
-          className="shrink-0 flex flex-col items-center justify-center bg-ag-navy px-10"
-          style={{ width: '340px', minHeight: '420px' }}
+          className="w-full md:w-[340px] md:shrink-0 flex flex-col items-center justify-center bg-ag-navy px-10"
+          style={{ minHeight: '420px' }}
         >
           <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4 text-center">
             {t('cta.label')}

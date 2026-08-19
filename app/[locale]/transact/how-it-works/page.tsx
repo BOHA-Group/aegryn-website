@@ -209,22 +209,24 @@ export default async function HowItWorksPage({ params }: Props) {
             Aegryn vs autres plateformes
           </h2>
 
-          <div className="border border-ag-border overflow-hidden">
-            <div className="grid grid-cols-3 bg-ag-navy">
-              <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50" />
-              <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex border-l border-white/10">Aegryn</div>
-              <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50 border-l border-white/10">Autres plateformes</div>
-            </div>
-            {COMPARE_ROWS.map(({ label, aegryn, other }, i) => (
-              <div key={label} className={`grid grid-cols-3 border-t border-ag-border ${i % 2 === 0 ? 'bg-ag-white' : 'bg-ag-off-white'}`}>
-                <div className="px-5 py-4 font-sans font-semibold text-[12px] text-ag-black border-r border-ag-border">{label}</div>
-                <div className="px-5 py-4 font-sans text-[12px] text-ag-black border-r border-ag-border flex items-center gap-2">
-                  <CheckCircle2 size={12} className="text-ag-apex shrink-0" />
-                  {aegryn}
-                </div>
-                <div className="px-5 py-4 font-sans text-[12px] text-ag-gray-light">{other}</div>
+          <div className="border border-ag-border overflow-x-auto">
+            <div className="min-w-[480px]">
+              <div className="grid grid-cols-3 bg-ag-navy">
+                <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50" />
+                <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex border-l border-white/10">Aegryn</div>
+                <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50 border-l border-white/10">Autres plateformes</div>
               </div>
-            ))}
+              {COMPARE_ROWS.map(({ label, aegryn, other }, i) => (
+                <div key={label} className={`grid grid-cols-3 border-t border-ag-border ${i % 2 === 0 ? 'bg-ag-white' : 'bg-ag-off-white'}`}>
+                  <div className="px-5 py-4 font-sans font-semibold text-[12px] text-ag-black border-r border-ag-border">{label}</div>
+                  <div className="px-5 py-4 font-sans text-[12px] text-ag-black border-r border-ag-border flex items-center gap-2">
+                    <CheckCircle2 size={12} className="text-ag-apex shrink-0" />
+                    {aegryn}
+                  </div>
+                  <div className="px-5 py-4 font-sans text-[12px] text-ag-gray-light">{other}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -152,20 +152,22 @@ export default async function PrivacyPage({ params }: Props) {
           <h2>{tP('content.sharing.h')}</h2>
           <p>{tP('content.sharing.p')}</p>
           <h3>{tP('content.sharing.providersH')}</h3>
-          <table>
-            <thead>
-              <tr>
-                {(tP.raw('content.sharing.tableHeaders') as string[]).map((h, i) => (
-                  <th key={i}>{h}</th>
+          <div className="overflow-x-auto -mx-6 px-6">
+            <table className="min-w-[480px]">
+              <thead>
+                <tr>
+                  {(tP.raw('content.sharing.tableHeaders') as string[]).map((h, i) => (
+                    <th key={i}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {(tP.raw('content.sharing.providers') as string[][]).map((row, i) => (
+                  <tr key={i}>{row.map((cell, j) => <td key={j}>{cell}</td>)}</tr>
                 ))}
-              </tr>
-            </thead>
-            <tbody>
-              {(tP.raw('content.sharing.providers') as string[][]).map((row, i) => (
-                <tr key={i}>{row.map((cell, j) => <td key={j}>{cell}</td>)}</tr>
-              ))}
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
 
           {/* Cookies */}
           <h2>{tP('content.cookies.h')}</h2>
