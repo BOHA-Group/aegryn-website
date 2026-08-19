@@ -2851,7 +2851,9 @@
       "assetsHidden": "{n} hidden{n, plural, one {} other {}} by filters",
       "resetFiltersShort": "Reset",
       "viewFullDossier": "View full dossier",
-      "kycPending": "Your KYC verification is in progress. You will be notified once validated."
+      "kycPending": "Your KYC verification is in progress. You will be notified once validated.",
+      "assetsAvailable": "certified assets available in the catalogue",
+      "requestQualifiedAccess": "Access the certified catalogue"
     },
     "session": {
       "label": "Next session",

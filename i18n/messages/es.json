@@ -2749,7 +2749,9 @@
       "assetsHidden": "{n} oculto{n, plural, one {} other {s}} por filtros",
       "resetFiltersShort": "Restablecer",
       "viewFullDossier": "Ver el expediente completo",
-      "kycPending": "Su verificación KYC está en proceso. Será notificado una vez validado."
+      "kycPending": "Su verificación KYC está en proceso. Será notificado una vez validado.",
+      "assetsAvailable": "activos certificados disponibles en el catálogo",
+      "requestQualifiedAccess": "Acceder al catálogo certificado"
     },
     "sell": {
       "meta": {

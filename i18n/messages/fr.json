@@ -2979,7 +2979,9 @@
       "resetFiltersShort": "Réinitialiser",
       "viewFullDossier": "Accéder au dossier complet",
       "kycPending": "Votre vérification KYC est en cours. Vous serez notifié dès validation.",
-      "notifySuccessCtaAcquirer": "Créer mon compte acquéreur"
+      "notifySuccessCtaAcquirer": "Créer mon compte acquéreur",
+      "assetsAvailable": "actifs certifiés disponibles au catalogue",
+      "requestQualifiedAccess": "Accéder au catalogue certifié"
     },
     "session": {
       "label": "Processus Aegryn",

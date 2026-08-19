@@ -2749,7 +2749,9 @@
       "assetsHidden": "{n} durch Filter ausgeblendet",
       "resetFiltersShort": "Zurücksetzen",
       "viewFullDossier": "Vollständiges Dossier öffnen",
-      "kycPending": "Ihre KYC-Prüfung ist in Bearbeitung. Sie werden nach der Validierung benachrichtigt."
+      "kycPending": "Ihre KYC-Prüfung ist in Bearbeitung. Sie werden nach der Validierung benachrichtigt.",
+      "assetsAvailable": "zertifizierte Assets im Katalog verfügbar",
+      "requestQualifiedAccess": "Zum zertifizierten Katalog"
     },
     "sell": {
       "meta": {
