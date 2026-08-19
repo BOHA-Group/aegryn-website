@@ -148,7 +148,7 @@ export function ReportCover({ ctaScroll }: { ctaScroll: string }) {
     >
       <div className="cover-meta flex items-center justify-between">
         <p className="text-label-mag text-magazine-white/50 uppercase tracking-[0.2em]">
-          Aegryn Magazine · First Edition · Autumn 2026
+          Aegryn Magazine · First Edition · January 2027
         </p>
         <span className="text-label-mag text-magazine-accent uppercase tracking-[0.15em]">
           Annual Report

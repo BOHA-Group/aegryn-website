@@ -1,5 +1,4 @@
 import Link              from 'next/link'
-import Image             from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import type { Metadata }   from 'next'
 import { ArrowUpRight, ExternalLink } from 'lucide-react'
@@ -18,73 +17,31 @@ export async function generateMetadata({
   }
 }
 
-/* ─── données statiques des éditions ──────────────────────────────────────── */
-const EDITIONS = [
-  {
-    num:    '01',
-    year:   '2026',
-    season: 'Première édition',
-    tag:    'Annual · Digital + Print',
-    href:   '/intelligence/report/2026',
-    image:  '/images/magazine/cover-2026.jpg',
-    available: true,
-  },
-  {
-    num:    '02',
-    year:   '2027',
-    season: 'Automne 2027',
-    tag:    'En préparation',
-    href:   '/intelligence/subscribe',
-    image:  null,
-    available: false,
-  },
-]
-
-/* ─── sommaire éditorial de l'édition 2026 ────────────────────────────────── */
+/* ─── sommaire éditorial édition 2027 ─────────────────────────────────────── */
 const SOMMAIRE = [
   {
-    section: 'Marché M&A',
-    articles: [
-      {
-        title: 'L\'état du marché tech européen',
-        excerpt: 'Analyse des transactions 2024–2025 : volumes, secteurs, géographies. Données SEG, Aventis, Synergy AI.',
-        image: '/images/magazine/article-market-2026.jpg',
-        href: '/intelligence/report/2026',
-      },
-    ],
+    section: 'Tech M&A Market',
+    title: 'The State of European Tech M&A 2027',
+    excerpt: 'Volumes, multiples, geographies. H1–H2 2026 data. SEG, Aventis, Synergy AI.',
+    anchor: '#s-market',
   },
   {
-    section: 'Certification CIFS',
-    articles: [
-      {
-        title: 'Le protocole CIFS — Code, IP, Finance, Sécurité',
-        excerpt: 'Notre méthodologie de certification expliquée. Quatre dimensions, un grade objectif, reproductible, opposable.',
-        image: '/images/magazine/article-cifs-2026.jpg',
-        href: '/intelligence/report/2026',
-      },
-    ],
+    section: 'CIFS Certification',
+    title: 'The CIFS Protocol — Code, IP, Finance, Security',
+    excerpt: 'Our certification methodology explained. Four dimensions, one objective grade.',
+    anchor: '#s-perspective',
   },
   {
-    section: 'Analyse de transactions',
-    articles: [
-      {
-        title: 'Trois deals analysés sous le prisme CIFS',
-        excerpt: 'SEG, Aventis, Synergy AI : ce qui a fonctionné, le grade estimé, et les enseignements pour les vendeurs.',
-        image: '/images/magazine/article-deals-2026.jpg',
-        href: '/intelligence/report/2026',
-      },
-    ],
+    section: 'Deal Watch',
+    title: 'Five Transactions Analysed Under the CIFS Lens',
+    excerpt: 'H1 2026 notable deals: what worked, estimated grade, lessons for sellers.',
+    anchor: '#s-deals',
   },
   {
-    section: 'Perspectives 2027',
-    articles: [
-      {
-        title: 'Ce que les acheteurs institutionnels attendent',
-        excerpt: 'Family offices, corporates, fonds — leurs critères réels, leurs secteurs cibles, leur appétit pour le tech certifié.',
-        image: '/images/magazine/article-buyers-2026.jpg',
-        href: '/intelligence/report/2026',
-      },
-    ],
+    section: 'Buyer Landscape',
+    title: 'Who Is Buying European Tech in 2027',
+    excerpt: 'PE, search funds, family offices — their real criteria and appetite for certified assets.',
+    anchor: '#s-buyers',
   },
 ]
 
@@ -120,13 +77,13 @@ export default async function ReportIndexPage({
           <div className="grid md:grid-cols-[1fr_auto] gap-16 items-end pb-0">
             <div className="pb-20">
               <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-magazine-accent mb-10">
-                {t('edition2026')}
+                First Edition — January 2027
               </p>
               <h1
                 className="font-sans font-bold text-white leading-[0.90] mb-10"
                 style={{ fontSize: 'clamp(52px,7.5vw,108px)', letterSpacing: '-0.035em' }}
               >
-                {t('title')}<br />
+                Aegryn Magazine<br />
                 <span className="text-white/25">{t('subtitle')}</span>
               </h1>
               <p className="font-mono text-[12px] tracking-[0.20em] uppercase text-white/35 italic mb-12">
@@ -148,13 +105,14 @@ export default async function ReportIndexPage({
               </div>
             </div>
 
-            {/* Couverture grand format */}
+            {/* Couverture grand format — Barnes style */}
             <div className="shrink-0 hidden md:block self-end">
               <div className="w-[280px] h-[380px] relative overflow-hidden border border-white/10">
-                <div className="absolute inset-0 bg-gradient-to-br from-magazine-accent/8 via-transparent to-magazine-black/60 z-10 pointer-events-none" />
                 <div className="absolute inset-0 bg-magazine-black/90 flex flex-col justify-between p-8 z-20">
                   <div>
-                    <p className="font-mono text-[8px] tracking-[0.30em] uppercase text-white/20 mb-2">First Edition</p>
+                    <p className="font-mono text-[8px] tracking-[0.30em] uppercase text-white/20 mb-2">
+                      First Edition
+                    </p>
                     <div className="w-8 h-px bg-magazine-accent mb-1" />
                   </div>
                   <div>
@@ -162,14 +120,15 @@ export default async function ReportIndexPage({
                       className="font-sans font-bold text-white leading-[0.88] mb-5"
                       style={{ fontSize: 36, letterSpacing: '-0.03em' }}
                     >
-                      The<br />AEGRYN<br />2026
+                      Aegryn<br />Magazine<br />
+                      <span className="text-white/30">2027</span>
                     </p>
                     <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-white/20 mb-3">
                       European Tech M&A<br />Intelligence
                     </p>
                     <div className="inline-block border border-magazine-accent/40 px-2.5 py-1">
                       <span className="font-mono text-[8px] tracking-[0.12em] text-magazine-accent">
-                        Annual · Digital + Print
+                        January 2027
                       </span>
                     </div>
                   </div>
@@ -181,10 +140,10 @@ export default async function ReportIndexPage({
           {/* Méta-données édition */}
           <div className="border-t border-white/10 grid grid-cols-2 md:grid-cols-4">
             {[
-              { label: 'Format',    value: 'Annual · Digital + Print' },
-              { label: 'Sections', value: '8 chapitres' },
-              { label: 'Données',  value: 'SEG · Aventis · Synergy AI' },
-              { label: 'Édition',  value: 'Automne 2026' },
+              { label: 'Format',     value: 'Annual · Digital + Print' },
+              { label: 'Sections',   value: '8 chapters' },
+              { label: 'Data',       value: 'SEG · Aventis · Synergy AI' },
+              { label: 'Publication', value: 'January 2027' },
             ].map(({ label, value }) => (
               <div key={label} className="px-0 py-6 border-r border-white/10 last:border-0 first:pl-0 pl-8">
                 <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/25 mb-1">{label}</p>
@@ -196,7 +155,9 @@ export default async function ReportIndexPage({
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          GRILLE DES ÉDITIONS — style Barnes /magazines.html
+          ÉDITION — Barnes single-issue style
+          Une seule édition, mise en valeur comme Barnes
+          présente son édition annuelle flagship
       ══════════════════════════════════════════════════════════ */}
       <section className="bg-magazine-ivory border-b border-magazine-black/8">
         <div className="max-w-magazine mx-auto px-6 md:px-[120px] py-20">
@@ -204,13 +165,13 @@ export default async function ReportIndexPage({
           <div className="flex items-end justify-between mb-12 border-b border-magazine-black/10 pb-8">
             <div>
               <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-magazine-black/30 mb-3">
-                Nos éditions
+                Aegryn Magazine
               </p>
               <h2
                 className="font-sans font-bold text-magazine-black"
                 style={{ fontSize: 'clamp(26px,3vw,42px)', lineHeight: 1.05, letterSpacing: '-0.02em' }}
               >
-                Tous les magazines
+                First Edition
               </h2>
             </div>
             <Link
@@ -221,76 +182,83 @@ export default async function ReportIndexPage({
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {EDITIONS.map((ed) => (
-              <div key={ed.num} className="group flex flex-col gap-0">
-                {/* Couverture */}
-                <div className="relative aspect-[3/4] bg-magazine-black overflow-hidden border border-magazine-black/10">
-                  {ed.image ? (
-                    <Image
-                      src={ed.image}
-                      alt={`Aegryn Magazine ${ed.year}`}
-                      fill
-                      className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex flex-col justify-between p-6">
-                      <div>
-                        <p className="font-mono text-[8px] tracking-[0.25em] uppercase text-white/15 mb-2">
-                          {ed.season}
-                        </p>
-                        <div className="w-5 h-px bg-white/10" />
-                      </div>
-                      <div>
-                        <p
-                          className="font-sans font-bold text-white/20 leading-[0.9]"
-                          style={{ fontSize: 28, letterSpacing: '-0.025em' }}
-                        >
-                          The<br />AEGRYN<br />{ed.year}
-                        </p>
-                        <p className="font-mono text-[7px] tracking-[0.18em] uppercase text-white/12 mt-3">
-                          En préparation
-                        </p>
-                      </div>
-                    </div>
-                  )}
-                  {/* Overlay numéro */}
-                  <div className="absolute top-4 right-4 z-10">
-                    <span className="font-mono text-[9px] tracking-[0.08em] text-white/30 bg-magazine-black/60 px-2 py-1">
-                      N°{ed.num}
-                    </span>
-                  </div>
-                </div>
+          {/* Carte unique — pleine largeur, style Barnes flagship */}
+          <div className="grid md:grid-cols-[2fr_3fr] gap-0 border border-magazine-black/10">
 
-                {/* Légende */}
-                <div className="pt-4 pb-2 flex flex-col gap-1">
-                  <p className="font-mono text-[9px] tracking-[0.20em] uppercase text-magazine-black/35">
-                    {ed.tag}
-                  </p>
-                  <p className="font-sans font-semibold text-magazine-black text-[15px] leading-snug">
-                    Édition {ed.year}
-                  </p>
-                </div>
-
-                {/* CTA */}
-                <Link
-                  href={`/${locale}${ed.href}`}
-                  className={`mt-2 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.18em] border-b pb-0.5 transition-colors self-start ${
-                    ed.available
-                      ? 'text-magazine-black border-magazine-black/20 hover:border-magazine-black'
-                      : 'text-magazine-black/25 border-magazine-black/10 pointer-events-none'
-                  }`}
+            {/* Colonne cover */}
+            <div className="bg-magazine-black flex flex-col justify-between p-10 md:p-14 min-h-[420px]">
+              <div>
+                <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-magazine-accent mb-3">
+                  N°01 · January 2027
+                </p>
+                <div className="w-10 h-px bg-magazine-accent mb-8" />
+              </div>
+              <div>
+                <p
+                  className="font-sans font-bold text-white leading-[0.88] mb-6"
+                  style={{ fontSize: 'clamp(40px,5vw,72px)', letterSpacing: '-0.03em' }}
                 >
-                  {ed.available ? 'Explorer ce numéro' : 'En préparation'} {ed.available && <ArrowUpRight size={10} />}
+                  Aegryn<br />Magazine
+                </p>
+                <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/30 mb-6">
+                  European Tech M&A Intelligence
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="font-mono text-[8px] tracking-[0.12em] uppercase text-magazine-accent border border-magazine-accent/30 px-2.5 py-1">
+                    Annual · Digital
+                  </span>
+                  <span className="font-mono text-[8px] tracking-[0.12em] uppercase text-white/30 border border-white/10 px-2.5 py-1">
+                    First Edition
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Colonne metadata + CTA */}
+            <div className="bg-magazine-white flex flex-col justify-between p-10 md:p-14">
+              <div>
+                <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-magazine-black/30 mb-6">
+                  Au programme
+                </p>
+                <ul className="space-y-4">
+                  {[
+                    'The State of European Tech M&A — 2026 Data',
+                    'The AI Effect on Asset Valuations',
+                    'The AEGRYN Perspective — CIFS Protocol',
+                    'Deal Watch H1 2026 — 5 Transactions Analysed',
+                    'Who Is Buying European Tech in 2027',
+                    'Perspectives 2027 — Three Forces Reshaping the Market',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-[13px] text-magazine-black/65 font-sans leading-snug">
+                      <span className="mt-1.5 w-1 h-1 bg-magazine-accent shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="pt-10 border-t border-magazine-black/8 mt-8 flex flex-wrap gap-3">
+                <Link
+                  href={`/${locale}/intelligence/report/2026`}
+                  className="inline-flex items-center gap-2 bg-magazine-black text-white font-mono text-[10px] uppercase tracking-[0.18em] px-6 py-3 hover:bg-magazine-black/80 transition-colors"
+                >
+                  {t('readOnline')} <ArrowUpRight size={11} />
+                </Link>
+                <Link
+                  href={`/${locale}/intelligence/report/2026/pdf`}
+                  className="inline-flex items-center gap-2 border border-magazine-black/15 text-magazine-black/60 font-mono text-[10px] uppercase tracking-[0.18em] px-6 py-3 hover:border-magazine-black/40 hover:text-magazine-black transition-all"
+                >
+                  {t('downloadPdf')} <ArrowUpRight size={11} />
                 </Link>
               </div>
-            ))}
+            </div>
+
           </div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          SOMMAIRE ÉDITORIAL — grille articles avec catégories
+          SOMMAIRE ÉDITORIAL — grille articles
       ══════════════════════════════════════════════════════════ */}
       <section className="bg-magazine-white border-b border-magazine-black/8">
         <div className="max-w-magazine mx-auto px-6 md:px-[120px] py-24">
@@ -298,7 +266,7 @@ export default async function ReportIndexPage({
           <div className="flex items-end justify-between mb-14 border-b border-magazine-black/10 pb-8">
             <div>
               <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-magazine-black/30 mb-3">
-                Édition 2026 — Au sommaire
+                First Edition — Au sommaire
               </p>
               <h2
                 className="font-sans font-bold text-magazine-black"
@@ -317,76 +285,38 @@ export default async function ReportIndexPage({
 
           {/* Grille articles — 2 cols sur md, 4 sur xl */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-px bg-magazine-black/8">
-            {SOMMAIRE.flatMap((sec) =>
-              sec.articles.map((article) => (
-                <article key={article.title} className="bg-magazine-white group flex flex-col">
-                  {/* Visuel article */}
-                  <div className="relative aspect-[4/3] bg-magazine-ivory overflow-hidden">
-                    {article.image ? (
-                      <Image
-                        src={article.image}
-                        alt={article.title}
-                        fill
-                        className="object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
-                      />
-                    ) : (
-                      <div className="absolute inset-0 flex items-end p-5">
-                        <span className="font-mono text-[9px] text-magazine-black/20 uppercase tracking-[0.15em]">
-                          {sec.section}
-                        </span>
-                      </div>
-                    )}
-                    <div className="absolute top-4 left-4 z-10">
-                      <span className="font-mono text-[8px] tracking-[0.20em] uppercase text-magazine-black/50 bg-magazine-white/85 px-2 py-1">
-                        {sec.section}
-                      </span>
-                    </div>
+            {SOMMAIRE.map((item) => (
+              <article key={item.title} className="bg-magazine-white group flex flex-col">
+                {/* Visuel placeholder typographique */}
+                <div className="relative aspect-[4/3] bg-magazine-ivory overflow-hidden flex items-end p-5">
+                  <span className="font-mono text-[9px] text-magazine-black/20 uppercase tracking-[0.15em]">
+                    {item.section}
+                  </span>
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="font-mono text-[8px] tracking-[0.20em] uppercase text-magazine-black/50 bg-magazine-white/85 px-2 py-1">
+                      {item.section}
+                    </span>
                   </div>
+                </div>
 
-                  {/* Contenu */}
-                  <div className="p-7 flex flex-col flex-1 gap-3">
-                    <h3 className="font-sans font-bold text-magazine-black text-[17px] leading-snug tracking-[-0.01em]">
-                      {article.title}
-                    </h3>
-                    <p className="font-sans text-[13px] text-magazine-black/55 leading-[1.7] flex-1">
-                      {article.excerpt}
-                    </p>
-                    <Link
-                      href={`/${locale}${article.href}`}
-                      className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-magazine-black border-b border-magazine-black/20 pb-0.5 hover:border-magazine-black transition-colors self-start mt-2"
-                    >
-                      Lire <ArrowUpRight size={10} />
-                    </Link>
-                  </div>
-                </article>
-              ))
-            )}
+                {/* Contenu */}
+                <div className="p-7 flex flex-col flex-1 gap-3">
+                  <h3 className="font-sans font-bold text-magazine-black text-[17px] leading-snug tracking-[-0.01em]">
+                    {item.title}
+                  </h3>
+                  <p className="font-sans text-[13px] text-magazine-black/55 leading-[1.7] flex-1">
+                    {item.excerpt}
+                  </p>
+                  <Link
+                    href={`/${locale}/intelligence/report/2026${item.anchor}`}
+                    className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-magazine-black border-b border-magazine-black/20 pb-0.5 hover:border-magazine-black transition-colors self-start mt-2"
+                  >
+                    Read <ArrowUpRight size={10} />
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════════════════
-          TEASER PROCHAIN NUMÉRO
-      ══════════════════════════════════════════════════════════ */}
-      <section className="bg-magazine-black border-b border-white/5">
-        <div className="max-w-magazine mx-auto px-6 md:px-[120px] py-14 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <div>
-            <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-white/20 mb-2">
-              Prochain numéro
-            </p>
-            <p className="font-sans font-semibold text-white/50 text-[17px] tracking-[-0.01em]">
-              Édition 2027 — En préparation
-            </p>
-            <p className="font-sans text-[13px] text-white/30 mt-1">
-              Soyez notifié dès la publication.
-            </p>
-          </div>
-          <Link
-            href={`/${locale}/intelligence/subscribe`}
-            className="shrink-0 inline-flex items-center gap-2 border border-white/15 text-white/50 font-mono text-[10px] uppercase tracking-[0.18em] px-6 py-3 hover:border-white/40 hover:text-white/80 transition-all whitespace-nowrap"
-          >
-            {t('subscribe')} <ArrowUpRight size={11} />
-          </Link>
         </div>
       </section>
 

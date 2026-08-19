@@ -125,7 +125,7 @@ export function PdfViewer({ src, fileName = 'the-aegryn-2026.pdf' }: Props) {
               Le PDF n&apos;est pas encore disponible.
             </p>
             <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em]">
-              Publication prévue — Automne 2026
+              Publication prévue — Janvier 2027
             </p>
           </div>
         )}

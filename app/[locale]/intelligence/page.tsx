@@ -55,7 +55,7 @@ export default function IntelligencePage() {
                 {tHub('reportDesc')}
               </h2>
               <p className="text-body-mag text-magazine-black/50">
-                Aegryn Magazine · First Edition · Autumn 2026
+                Aegryn Magazine · First Edition · January 2027
               </p>
             </div>
             <span className="inline-flex items-center gap-2 text-label-mag uppercase tracking-[0.12em] text-magazine-black group-hover:text-magazine-accent transition-colors">

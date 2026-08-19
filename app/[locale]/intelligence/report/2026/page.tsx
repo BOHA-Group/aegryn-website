@@ -39,7 +39,7 @@ export async function generateMetadata({
       title:       t('title'),
       description: t('description'),
       type:        'article',
-      publishedTime: '2026-10-01T00:00:00Z',
+      publishedTime: '2027-01-01T00:00:00Z',
       authors:     ['AEGRYN'],
     },
   }
@@ -66,7 +66,7 @@ export default async function Report2026Page({
             description: t('meta.description'),
             author:     { '@type': 'Organization', name: 'AEGRYN', url: 'https://aegryn.com' },
             publisher:  { '@type': 'Organization', name: 'AEGRYN', url: 'https://aegryn.com' },
-            datePublished: '2026-10-01',
+            datePublished: '2027-01-01',
             inLanguage: 'en',
             url: `https://aegryn.com/${locale}/intelligence/report/2026`,
           }),
