@@ -53,7 +53,7 @@
     "buildEngineering": "Asset-Ingenieurwesen",
     "comingSoon": "Demnächst verfügbar",
     "soon": "Demnächst",
-    "magazine": "Intelligence",
+    "magazine": "Magazine",
     "aboutGroup": "Über uns",
     "aboutPublications": "Publikationen",
     "aboutCareers": "Karriere"
@@ -6142,9 +6142,9 @@
     }
   },
   "magazine": {
-    "nav": "Intelligence",
+    "nav": "Magazine",
     "hub": {
-      "title": "AEGRYN Intelligence",
+      "title": "AEGRYN Magazine",
       "desc": "Publikationen, Berichte und Analysen zum europäischen Tech-M&A-Markt.",
       "reportLabel": "Jahresbericht",
       "reportDesc": "Aegryn Magazine — European Tech M&A Intelligence",
