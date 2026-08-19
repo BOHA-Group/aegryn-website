@@ -4992,7 +4992,8 @@
   "comingSoon": {
     "label": "Binnenkort beschikbaar",
     "desc": "Deze functionaliteit is in opbouw. Ze zal zeer binnenkort beschikbaar zijn.",
-    "descSection": "De sectie \"{section}\" is in opbouw. Ze zal zeer binnenkort beschikbaar zijn."
+    "descSection": "De sectie \"{section}\" is in opbouw. Ze zal zeer binnenkort beschikbaar zijn.",
+    "backHome": "← Terug naar home"
   },
   "sitemap": {
     "metaTitle": "Sitemap — Aegryn",

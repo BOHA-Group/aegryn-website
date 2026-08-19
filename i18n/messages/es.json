@@ -4992,7 +4992,8 @@
   "comingSoon": {
     "label": "Próximamente",
     "desc": "Esta funcionalidad está en construcción. Estará disponible muy pronto.",
-    "descSection": "La sección \"{section}\" está en construcción. Estará disponible muy pronto."
+    "descSection": "La sección \"{section}\" está en construcción. Estará disponible muy pronto.",
+    "backHome": "← Volver al inicio"
   },
   "sitemap": {
     "metaTitle": "Mapa del sitio — Aegryn",

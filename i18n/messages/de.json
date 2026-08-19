@@ -4992,7 +4992,8 @@
   "comingSoon": {
     "label": "Demnächst verfügbar",
     "desc": "Diese Funktion befindet sich im Aufbau. Sie wird in Kürze verfügbar sein.",
-    "descSection": "Der Bereich \"{section}\" befindet sich im Aufbau. Er wird in Kürze verfügbar sein."
+    "descSection": "Der Bereich \"{section}\" befindet sich im Aufbau. Er wird in Kürze verfügbar sein.",
+    "backHome": "← Zurück zur Startseite"
   },
   "sitemap": {
     "metaTitle": "Sitemap — Aegryn",

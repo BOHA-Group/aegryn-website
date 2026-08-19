@@ -4970,7 +4970,8 @@
   "comingSoon": {
     "label": "Coming soon",
     "desc": "This feature is currently being built. It will be available very soon.",
-    "descSection": "The \"{section}\" section is currently being built. It will be available very soon."
+    "descSection": "The \"{section}\" section is currently being built. It will be available very soon.",
+    "backHome": "← Back to home"
   },
   "sitemap": {
     "metaTitle": "Sitemap — Aegryn",
