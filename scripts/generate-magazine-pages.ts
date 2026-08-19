@@ -50,7 +50,7 @@ async function run(): Promise<void> {
 
   console.log(`✅  Generated ${results.length} pages`)
   console.log(`    Output: ${OUTPUT_DIR}`)
-  console.log('    Next: npm run dev → /intelligence/report/2026')
+  console.log('    Next: npm run dev → /intelligence/report/2027')
 }
 
 run().catch((err: unknown) => {

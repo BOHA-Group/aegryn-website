@@ -44,7 +44,7 @@ export default function IntelligencePage() {
 
           {/* Report card */}
           <Link
-            href="./magazine/report/2026"
+            href="./magazine/report/2027"
             className="group pr-0 md:pr-16 pb-12 md:pb-0 flex flex-col justify-between gap-8"
           >
             <div>
