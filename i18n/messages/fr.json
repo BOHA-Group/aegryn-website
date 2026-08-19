@@ -1025,7 +1025,7 @@
   "footer": {
     "groupLabel": "Aegryn",
     "legal": "© 2026 Aegryn (formerly BOHA-Group) — Tous droits réservés",
-    "company": "An Aegryn company",
+    "company": "Une société Aegryn",
     "privacy": "Confidentialité",
     "terms": "Conditions",
     "dataProtection": "Politique de protection des données",
@@ -1205,7 +1205,7 @@
             },
             {
               "num": "02",
-              "title": "Vendor Readiness — Préparation cession",
+              "title": "Préparation cession",
               "desc": "Audit du dossier vendeur avant soumission : data room, contrats, registres, conformité RGPD, dette technique. Réduit le délai de certification de 30 à 50%."
             },
             {
@@ -1255,7 +1255,7 @@
             },
             {
               "num": "10",
-              "title": "Earn-out Design & KPI Framework",
+              "title": "Conception earn-out & KPI",
               "desc": "Conception des mécanismes d'earnout, définition des métriques, protections contractuelles vendeur contre la manipulation post-acquisition, clauses de dispute resolution."
             }
           ]
@@ -1376,7 +1376,7 @@
       "items": [
         {
           "phase": "Disponible sur demande",
-          "title": "Vendor Readiness",
+          "title": "Préparation cession",
           "desc": "Préparation complète du dossier vendeur avant soumission au Grade — audit contractuel, revue RH, structuration de la data room. Réduit le délai de certification de 30 à 50%.",
           "status": "available_on_request"
         },
@@ -1394,7 +1394,7 @@
         },
         {
           "phase": "Roadmap 12 mois",
-          "title": "Earn-out Design & KPI Framework",
+          "title": "Conception earn-out & KPI",
           "desc": "Conception des mécanismes d'earnout, définition des métriques et des protections contractuelles. Prévient les litiges post-acquisition.",
           "status": "roadmap"
         },
@@ -1820,12 +1820,12 @@
   },
   "gradingSystem": {
     "meta": {
-      "title": "Grading System — Aegryn Grade Protocol",
+      "title": "Système de Certification — Protocole Aegryn Grade",
       "desc": "Le protocole Aegryn Grade : grille CIFS, définitions des grades AEG ★ à AEG B, sous-codes, processus d'analyse et principes d'indépendance."
     },
-    "label": "Aegryn — Grading System",
+    "label": "Aegryn — Système de Certification",
     "version": "2026",
-    "title": "Aegryn\nGrading System.",
+    "title": "Aegryn\nSystème de Certification.",
     "intro": "Aegryn introduit son propre système de certification pour les actifs tech, avec une transparence totale sur les 4 dimensions fondamentales de la valeur.",
     "downloadLabel": "Documentation complète",
     "downloadCta": "Télécharger le protocole PDF",
@@ -3027,7 +3027,7 @@
     "sell": {
       "meta": {
         "title": "Céder votre actif — Aegryn",
-        "desc": "Parcours cédant Aegryn : valorisation indicative, readiness score, dépôt de mandat exclusif. Certification CIFS, confidentialité absolue, séquestre institutionnel suisse."
+        "desc": "Parcours cédant Aegryn : valorisation indicative, score de préparation, dépôt de mandat exclusif. Certification CIFS, confidentialité absolue, séquestre institutionnel suisse."
       },
       "hero": {
         "label": "Céder votre actif",
@@ -3047,7 +3047,7 @@
           "cta": "Estimer la valeur →"
         },
         "s2": {
-          "title": "Readiness Score",
+          "title": "Score de préparation",
           "desc": "Évaluez si votre dossier est prêt pour le processus de cession Aegryn : data room, contrats, indépendance opérationnelle, IP, dette technique. 6 questions, résultat immédiat."
         },
         "s3": {
@@ -3084,7 +3084,7 @@
       },
       "readiness": {
         "toolLabel": "Outil Aegryn",
-        "toolTitle": "Readiness Score",
+        "toolTitle": "Score de préparation",
         "restart": "Recommencer",
         "intro": "Évaluez en 2 minutes si votre actif est prêt pour une soumission au processus de cession Aegryn.",
         "answerYes": "Oui",
@@ -3671,7 +3671,7 @@
       },
       "evalDeductibleNote": "Ce montant est intégralement déductible du coût de certification si vous engagez un processus complet de cession dans les 6 mois suivant la remise de votre Review.",
       "partnerSelectLabel": "Partenaire externe à associer",
-      "analysisDataTitle": "Données pour l'analyse (Aegryn Grading System)",
+      "analysisDataTitle": "Données pour l'analyse (Système de Certification Aegryn)",
       "analysisDataDesc": "Ces informations accélèrent l'analyse interne et le benchmark marché de votre actif. Optionnelles mais recommandées.",
       "sector": "Secteur d'activité",
       "sectorPlaceholder": "ex: LegalTech, FinTech, RH & Paie...",
@@ -5724,7 +5724,7 @@
       "ip_lawDesc": "Chaîne de titres IP, licences open source, cession de droits fondateurs, protection marques.",
       "esg": "ESG / RSE",
       "esgDesc": "Stratégie RSE, reporting extra-financier, due diligence ESG, impact.",
-      "vendor_readiness": "Vendor Readiness — Préparation cession",
+      "vendor_readiness": "Préparation à la cession — Dossier vendeur",
       "vendor_readinessDesc": "Audit dossier vendeur, data room, contrats, RGPD, dette technique. Réduit le délai de certification.",
       "dd_hr": "Due diligence RH & Social",
       "dd_hrDesc": "Contrats clés, BSPCE, passifs sociaux, classification freelances, non-concurrence.",
@@ -5736,7 +5736,7 @@
       "tax_corporateDesc": "Optimisation exit, holding, SPV, Luxembourg, Suisse, France. Apport-cession.",
       "financing": "Financement & Partenaires financiers",
       "financingDesc": "Bridge financing, co-investissement, dette mezzanine. Spécifique à votre profil de deal.",
-      "earnout": "Earn-out Design & KPI Framework",
+      "earnout": "Conception earn-out & KPI",
       "earnoutDesc": "Mécanismes d'earnout, définition des métriques, protections contractuelles vendeur.",
       "post_acquisition": "Intégration post-acquisition",
       "post_acquisitionDesc": "Plan 30/60/100 jours : stack, RH, communication clients, migration contrats fournisseurs.",

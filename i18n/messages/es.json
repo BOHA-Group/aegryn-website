@@ -992,7 +992,7 @@
   "footer": {
     "groupLabel": "Aegryn",
     "legal": "© 2026 Aegryn (formerly BOHA-Group) — Todos los derechos reservados",
-    "company": "An Aegryn company",
+    "company": "Una empresa Aegryn",
     "privacy": "Privacidad",
     "terms": "Términos",
     "dataProtection": "Aviso de protección de datos",
@@ -1051,7 +1051,7 @@
             },
             {
               "num": "02",
-              "title": "Vendor Readiness — Preparación de la venta",
+              "title": "Preparación de la venta",
               "desc": "Auditoría del expediente del vendedor antes de la presentación: data room, contratos, registros, conformidad RGPD, deuda técnica. Reduce el plazo de certificación en un 30 a 50%."
             },
             {
@@ -1101,7 +1101,7 @@
             },
             {
               "num": "10",
-              "title": "Earn-out Design & KPI Framework",
+              "title": "Diseño earn-out y KPI",
               "desc": "Diseño de los mecanismos de earnout, definición de métricas, protecciones contractuales del vendedor contra la manipulación post-adquisición, cláusulas de resolución de disputas."
             }
           ]
@@ -1222,7 +1222,7 @@
       "items": [
         {
           "phase": "Disponible bajo demanda",
-          "title": "Vendor Readiness",
+          "title": "Preparación de la cesión",
           "desc": "Preparación completa del expediente vendedor antes de la sumisión al Grade: auditoría contractual, revisión de RR.HH., estructuración del data room. Reduce el plazo de certificación en un 30 a 50%.",
           "status": "available_on_request"
         },
@@ -1240,7 +1240,7 @@
         },
         {
           "phase": "Roadmap 12 meses",
-          "title": "Earn-out Design & KPI Framework",
+          "title": "Diseño earn-out y KPI",
           "desc": "Diseño de los mecanismos de earnout, definición de métricas y protecciones contractuales. Previene litigios post-adquisición.",
           "status": "roadmap"
         },
@@ -1264,9 +1264,9 @@
       "title": "Sistema de calificación — Aegryn Grade Protocol",
       "desc": "El protocolo Aegryn Grade: marco CIFS, definiciones de grados AEG ★ a B, sub-códigos, proceso de análisis y principios de independencia."
     },
-    "label": "Aegryn — Grading System",
+    "label": "Aegryn — Sistema de Certificación",
     "version": "2026",
-    "title": "Aegryn\nGrading System.",
+    "title": "Aegryn\nSistema de Certificación.",
     "intro": "Aegryn introduce su propio sistema de certificación para activos tecnológicos, con total transparencia en las 4 dimensiones fundamentales del valor.",
     "downloadLabel": "Documentación completa",
     "downloadCta": "Descargar el protocolo PDF",
@@ -2754,7 +2754,7 @@
     "sell": {
       "meta": {
         "title": "Vender su activo — Aegryn",
-        "desc": "Proceso Aegryn para vendedores: valoración indicativa, readiness score, presentación de mandato. Certificación CIFS, confidencialidad absoluta, depósito en garantía institucional suizo."
+        "desc": "Proceso Aegryn para vendedores: valoración indicativa, puntuación de preparación, presentación de mandato. Certificación CIFS, confidencialidad absoluta, depósito en garantía institucional suizo."
       },
       "hero": {
         "label": "Vender su activo",
@@ -2774,7 +2774,7 @@
           "cta": "Estimar el valor →"
         },
         "s2": {
-          "title": "Readiness Score",
+          "title": "Puntuación de preparación",
           "desc": "Evalúe si su expediente está listo para una proceso M&A: data room, contratos, independencia operativa, PI, deuda técnica. 6 preguntas, resultado inmediato."
         },
         "s3": {
@@ -2811,7 +2811,7 @@
       },
       "readiness": {
         "toolLabel": "Herramienta Aegryn",
-        "toolTitle": "Readiness Score",
+        "toolTitle": "Puntuación de preparación",
         "restart": "Reiniciar",
         "intro": "Evalúe en 2 minutos si su activo está listo para una presentación en una proceso M&A Aegryn.",
         "answerYes": "Sí",
@@ -3010,7 +3010,7 @@
         "title": "Pre-transacción",
         "items": [
           "Valoración & benchmark de mercado",
-          "Vendor Readiness & sala de datos",
+          "Preparación de la cesión & sala de datos",
           "IP & propiedad intelectual",
           "Derecho digital"
         ]
@@ -3557,7 +3557,7 @@
       "partnerSelectLabel": "Socio a involucrar",
       "partnerLegal": "Bufete jurídico",
       "partnerAccounting": "Contador público",
-      "analysisDataTitle": "Datos para el análisis (Aegryn Grading System)",
+      "analysisDataTitle": "Datos para el análisis (Sistema de Certificación Aegryn)",
       "analysisDataDesc": "Esta información acelera nuestro análisis interno y la comparación de mercado de su activo. Opcional pero recomendado.",
       "sector": "Sector",
       "sectorPlaceholder": "ej: LegalTech, FinTech, RRHH y Nómina...",
@@ -5612,7 +5612,7 @@
       "ip_lawDesc": "Cadena de títulos IP, licencias open source, cesión de derechos fundadores, protección de marcas.",
       "esg": "ESG / RSC",
       "esgDesc": "Estrategia RSC, reporting extrafinanciero, due diligence ESG, impacto.",
-      "vendor_readiness": "Vendor Readiness — Preparación de la cesión",
+      "vendor_readiness": "Preparación de la cesión — Dossier del vendedor",
       "vendor_readinessDesc": "Auditoría del expediente vendedor, data room, contratos, RGPD, deuda técnica.",
       "dd_hr": "Due diligence RR.HH. y derecho laboral",
       "dd_hrDesc": "Contratos clave, BSPCE, pasivos laborales, clasificación freelances, cláusulas de no competencia.",
@@ -5624,7 +5624,7 @@
       "tax_corporateDesc": "Optimización del exit, holding, SPV, Luxemburgo, Suiza, Francia. Aportación-canje.",
       "financing": "Financiación y socios financieros",
       "financingDesc": "Bridge financing, co-inversión, deuda mezzanine. Específico para su perfil de deal.",
-      "earnout": "Earn-out Design y KPI Framework",
+      "earnout": "Diseño earn-out y KPI",
       "earnoutDesc": "Diseño de mecanismos earnout, definición de métricas, protecciones contractuales del vendedor.",
       "post_acquisition": "Integración post-adquisición",
       "post_acquisitionDesc": "Plan 30/60/100 días: stack técnico, RR.HH., comunicación clientes, migración contratos proveedores.",

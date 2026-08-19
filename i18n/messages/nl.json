@@ -992,7 +992,7 @@
   "footer": {
     "groupLabel": "Aegryn",
     "legal": "© 2026 Aegryn (formerly BOHA-Group) — Alle rechten voorbehouden",
-    "company": "An Aegryn company",
+    "company": "Een Aegryn-onderneming",
     "privacy": "Privacy",
     "terms": "Voorwaarden",
     "dataProtection": "Gegevensbeschermingsverklaring",
@@ -1051,7 +1051,7 @@
             },
             {
               "num": "02",
-              "title": "Vendor Readiness — Verkoopvoorbereiding",
+              "title": "Verkoopvoorbereiding",
               "desc": "Audit van het verkopersdossier vóór indiening: data room, contracten, registers, AVG-conformiteit, technische schuld. Verkort de certificeringstermijn met 30 tot 50%."
             },
             {
@@ -1101,7 +1101,7 @@
             },
             {
               "num": "10",
-              "title": "Earn-out Design & KPI Framework",
+              "title": "Earn-out-ontwerp en KPI",
               "desc": "Ontwerp van earnout-mechanismen, metricdefinitie, contractuele verkopersbeschermingen tegen post-acquisitiemanipulatie, geschillenbeslechtingsclausules."
             }
           ]
@@ -1222,7 +1222,7 @@
       "items": [
         {
           "phase": "Beschikbaar op aanvraag",
-          "title": "Vendor Readiness",
+          "title": "Verkoopvoorbereiding",
           "desc": "Volledige voorbereiding van het verkopersdossier vóór Grade-indiening: contractaudit, HR-beoordeling, data room-structurering. Verkort de certificeringstijd met 30 tot 50%.",
           "status": "available_on_request"
         },
@@ -1240,7 +1240,7 @@
         },
         {
           "phase": "Roadmap 12 maanden",
-          "title": "Earn-out Design & KPI Framework",
+          "title": "Earn-out-ontwerp en KPI",
           "desc": "Ontwerp van earnout-mechanismen, definitie van meetcriteria en contractuele beschermingen. Voorkomt post-acquisitiegeschillen.",
           "status": "roadmap"
         },
@@ -1264,9 +1264,9 @@
       "title": "Beoordelingssysteem — Aegryn Grade Protocol",
       "desc": "Het Aegryn Grade-protocol: CIFS-kader, definities van AEG ★ tot B, subcodes, analyseproces en onafhankelijkheidsprincipes."
     },
-    "label": "Aegryn — Grading System",
+    "label": "Aegryn — Certificeringssysteem",
     "version": "2026",
-    "title": "Aegryn\nGrading System.",
+    "title": "Aegryn\nCertificeringssysteem.",
     "intro": "Aegryn introduceert zijn eigen certificeringssysteem voor tech-assets, met volledige transparantie over de 4 fundamentele waardedimensies.",
     "downloadLabel": "Volledige documentatie",
     "downloadCta": "Protocol PDF downloaden",
@@ -2754,7 +2754,7 @@
     "sell": {
       "meta": {
         "title": "Uw activa overdragen — Aegryn",
-        "desc": "Aegryn verkopersproces: indicatieve waardering, readiness score, mandaatindiening. CIFS-certificering, absolute vertrouwelijkheid, Zwitserse institutionele escrow."
+        "desc": "Aegryn verkopersproces: indicatieve waardering, gereedheidscore, mandaatindiening. CIFS-certificering, absolute vertrouwelijkheid, Zwitserse institutionele escrow."
       },
       "hero": {
         "label": "Uw activa verkopen",
@@ -2774,7 +2774,7 @@
           "cta": "Waarde schatten →"
         },
         "s2": {
-          "title": "Readiness Score",
+          "title": "Gereedheidscore",
           "desc": "Beoordeel of uw dossier klaar is voor een M&A-proces: data room, contracten, operationele onafhankelijkheid, IP, technische schuld. 6 vragen, direct resultaat."
         },
         "s3": {
@@ -2811,7 +2811,7 @@
       },
       "readiness": {
         "toolLabel": "Aegryn Tool",
-        "toolTitle": "Readiness Score",
+        "toolTitle": "Gereedheidscore",
         "restart": "Opnieuw beginnen",
         "intro": "Beoordeel in 2 minuten of uw activa klaar is voor indiening bij een Aegryn-M&A-proces.",
         "answerYes": "Ja",
@@ -3010,7 +3010,7 @@
         "title": "Pre-transactie",
         "items": [
           "Waardering & marktbenchmark",
-          "Vendor Readiness & dataruimte",
+          "Verkoopvoorbereiding & dataruimte",
           "IP & intellectueel eigendom",
           "Digitaal recht"
         ]
@@ -3557,7 +3557,7 @@
       "partnerSelectLabel": "Te betrekken partner",
       "partnerLegal": "Juridisch kantoor",
       "partnerAccounting": "Accountant",
-      "analysisDataTitle": "Gegevens voor analyse (Aegryn Grading System)",
+      "analysisDataTitle": "Gegevens voor analyse (Aegryn Certificeringssysteem)",
       "analysisDataDesc": "Deze informatie versnelt onze interne analyse en marktbenchmark van uw asset. Optioneel maar aanbevolen.",
       "sector": "Sector",
       "sectorPlaceholder": "bijv. LegalTech, FinTech, HR & Payroll...",
@@ -5612,7 +5612,7 @@
       "ip_lawDesc": "IP-eigendomsketen, open-source licenties, overdracht oprechtersrechten, merkbescherming.",
       "esg": "ESG / MVO",
       "esgDesc": "MVO-strategie, niet-financiële rapportage, ESG due diligence, impact.",
-      "vendor_readiness": "Vendor Readiness — Verkoopvoorbereiding",
+      "vendor_readiness": "Verkoopvoorbereiding — Verkopersdossier",
       "vendor_readinessDesc": "Audit verkopersdossier, data room, contracten, AVG, technische schuld. Verkort certificeringstermijn.",
       "dd_hr": "HR & Arbeidsrechtelijke due diligence",
       "dd_hrDesc": "Sleutelcontracten, BSPCE, arbeidspassiva, freelancerclassificatie, concurrentiebedingen.",
@@ -5624,7 +5624,7 @@
       "tax_corporateDesc": "Exit-optimalisatie, holding, SPV, Luxemburg, Zwitserland, Frankrijk. Inbreng-omruil.",
       "financing": "Financiering & Financiële partners",
       "financingDesc": "Bridge financing, co-investering, mezzanine schuld. Specifiek voor uw deal-profiel.",
-      "earnout": "Earn-out Design & KPI Framework",
+      "earnout": "Earn-out-ontwerp en KPI",
       "earnoutDesc": "Ontwerp earnout-mechanismen, metriektdefinitie, contractuele verkopersbeschermingen.",
       "post_acquisition": "Post-acquisitie integratie",
       "post_acquisitionDesc": "30/60/100-dagenplan: tech stack, HR, klantcommunicatie, migratie leverancierscontracten.",
