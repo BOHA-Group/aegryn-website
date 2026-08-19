@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
       {
         to:              data.email,
         subjectFounder:  'Aegryn \u2014 Liste d\u2019int\u00e9r\u00eat \u00e9dition papier',
-        textFounder:     `Bonjour ${data.name},\n\nNous avons bien enregistr\u00e9 votre int\u00e9r\u00eat pour l\u2019\u00e9dition papier du rapport AEGRYN.\n\nCentres d\u2019int\u00e9r\u00eat : ${interestsList}\n\nNous vous contacterons lors du lancement de la production.\n\nL\u2019\u00e9quipe Aegryn\nhttps://aegryn.com/intelligence/report`,
+        textFounder:     `Bonjour ${data.name},\n\nNous avons bien enregistr\u00e9 votre int\u00e9r\u00eat pour l\u2019\u00e9dition papier du rapport AEGRYN.\n\nCentres d\u2019int\u00e9r\u00eat : ${interestsList}\n\nNous vous contacterons lors du lancement de la production.\n\nL\u2019\u00e9quipe Aegryn\nhttps://aegryn.com/magazine/report`,
         subjectInternal: `[Print Wishlist] ${data.name} \u2014 ${data.email}`,
         textInternal:    `Nouvelle entr\u00e9e liste papier\nNom : ${data.name}\nEmail : ${data.email}\nEntreprise : ${data.company ?? '\u2014'}\nInt\u00e9r\u00eats : ${interestsList}\nLocale : ${data.locale ?? '\u2014'}`,
       },
@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
     if (err instanceof z.ZodError) {
       return NextResponse.json({ error: 'validation', issues: err.issues }, { status: 400 })
     }
-    console.error('[intelligence/print-wishlist]', err)
+    console.error('[magazine/print-wishlist]', err)
     return NextResponse.json({ error: 'internal' }, { status: 500 })
   }
 }

@@ -43,7 +43,7 @@ export function PrintWishlistForm({
     if (!email || !name) return
     setStatus('loading')
     try {
-      const res = await fetch('/api/intelligence/print-wishlist', {
+      const res = await fetch('/api/magazine/print-wishlist', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ name, email, company, interests: selected }),

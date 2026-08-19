@@ -53,8 +53,7 @@
     "buildEngineering": "Asset Engineering",
     "comingSoon": "Coming soon",
     "soon": "Soon",
-    "intelligence": "Intelligence",
-    "magazine": "Magazine",
+    "magazine": "Intelligence",
     "aboutGroup": "About",
     "aboutPublications": "Publications",
     "aboutCareers": "Careers",
@@ -6120,7 +6119,7 @@
       "dangerZone": "Danger zone"
     }
   },
-  "intelligence": {
+  "magazine": {
     "nav": "Intelligence",
     "hub": {
       "title": "AEGRYN Intelligence",

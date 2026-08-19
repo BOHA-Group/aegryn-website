@@ -29,5 +29,5 @@ export async function GET(req: NextRequest) {
   }
 
   const locale = req.nextUrl.searchParams.get('locale') ?? 'en'
-  return NextResponse.redirect(new URL(`/${locale}/intelligence/notify?unsubscribed=1`, req.url))
+  return NextResponse.redirect(new URL(`/${locale}/magazine/notify?unsubscribed=1`, req.url))
 }

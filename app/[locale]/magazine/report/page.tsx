@@ -9,11 +9,11 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'intelligence.report.meta' })
+  const t = await getTranslations({ locale, namespace: 'magazine.report.meta' })
   return {
     title:       t('title'),
     description: t('description'),
-    alternates:  { canonical: `/${locale}/intelligence/report` },
+    alternates:  { canonical: `/${locale}/magazine/report` },
   }
 }
 
@@ -51,8 +51,8 @@ export default async function ReportIndexPage({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  const t  = await getTranslations({ locale, namespace: 'intelligence.report' })
-  const tp = await getTranslations({ locale, namespace: 'intelligence.press' })
+  const t  = await getTranslations({ locale, namespace: 'magazine.report' })
+  const tp = await getTranslations({ locale, namespace: 'magazine.press' })
 
   return (
     <main className="min-h-screen bg-magazine-white">
@@ -91,13 +91,13 @@ export default async function ReportIndexPage({
               </p>
               <div className="flex flex-wrap items-center gap-3">
                 <Link
-                  href={`/${locale}/intelligence/report/2026`}
+                  href={`/${locale}/magazine/report/2026`}
                   className="inline-flex items-center gap-2 bg-magazine-accent text-magazine-black font-mono text-[11px] uppercase tracking-[0.18em] px-7 py-3.5 hover:bg-magazine-accent/90 transition-colors font-semibold"
                 >
                   {t('readOnline')} <ArrowUpRight size={13} />
                 </Link>
                 <Link
-                  href={`/${locale}/intelligence/report/2026/pdf`}
+                  href={`/${locale}/magazine/report/2026/pdf`}
                   className="inline-flex items-center gap-2 border border-white/20 text-white/70 font-mono text-[11px] uppercase tracking-[0.18em] px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
                 >
                   {t('downloadPdf')} <ArrowUpRight size={13} />
@@ -175,7 +175,7 @@ export default async function ReportIndexPage({
               </h2>
             </div>
             <Link
-              href={`/${locale}/intelligence/subscribe`}
+              href={`/${locale}/magazine/subscribe`}
               className="hidden md:inline-flex items-center gap-2 border border-magazine-black/15 text-magazine-black/50 font-mono text-[10px] uppercase tracking-[0.18em] px-5 py-2.5 hover:border-magazine-black/40 hover:text-magazine-black transition-all whitespace-nowrap"
             >
               {t('subscribe')} <ArrowUpRight size={11} />
@@ -239,13 +239,13 @@ export default async function ReportIndexPage({
 
               <div className="pt-10 border-t border-magazine-black/8 mt-8 flex flex-wrap gap-3">
                 <Link
-                  href={`/${locale}/intelligence/report/2026`}
+                  href={`/${locale}/magazine/report/2026`}
                   className="inline-flex items-center gap-2 bg-magazine-black text-white font-mono text-[10px] uppercase tracking-[0.18em] px-6 py-3 hover:bg-magazine-black/80 transition-colors"
                 >
                   {t('readOnline')} <ArrowUpRight size={11} />
                 </Link>
                 <Link
-                  href={`/${locale}/intelligence/report/2026/pdf`}
+                  href={`/${locale}/magazine/report/2026/pdf`}
                   className="inline-flex items-center gap-2 border border-magazine-black/15 text-magazine-black/60 font-mono text-[10px] uppercase tracking-[0.18em] px-6 py-3 hover:border-magazine-black/40 hover:text-magazine-black transition-all"
                 >
                   {t('downloadPdf')} <ArrowUpRight size={11} />
@@ -276,7 +276,7 @@ export default async function ReportIndexPage({
               </h2>
             </div>
             <Link
-              href={`/${locale}/intelligence/report/2026`}
+              href={`/${locale}/magazine/report/2026`}
               className="hidden md:inline-flex items-center gap-2 bg-magazine-black text-white font-mono text-[10px] uppercase tracking-[0.18em] px-5 py-2.5 hover:bg-magazine-black/80 transition-colors whitespace-nowrap"
             >
               {t('readOnline')} <ArrowUpRight size={11} />
@@ -308,7 +308,7 @@ export default async function ReportIndexPage({
                     {item.excerpt}
                   </p>
                   <Link
-                    href={`/${locale}/intelligence/report/2026${item.anchor}`}
+                    href={`/${locale}/magazine/report/2026${item.anchor}`}
                     className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-magazine-black border-b border-magazine-black/20 pb-0.5 hover:border-magazine-black transition-colors self-start mt-2"
                   >
                     Read <ArrowUpRight size={10} />

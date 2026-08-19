@@ -10,18 +10,18 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'intelligence.report.meta' })
+  const t = await getTranslations({ locale, namespace: 'magazine.report.meta' })
   return {
     title:       t('title'),
     description: t('description'),
-    alternates:  { canonical: `/${locale}/intelligence` },
+    alternates:  { canonical: `/${locale}/magazine` },
     openGraph:   { title: t('title'), description: t('description'), type: 'website' },
   }
 }
 
 export default function IntelligencePage() {
-  const t    = useTranslations('intelligence')
-  const tHub = useTranslations('intelligence.hub')
+  const t    = useTranslations('magazine')
+  const tHub = useTranslations('magazine.hub')
 
   return (
     <main className="min-h-screen bg-magazine-ivory">
@@ -44,7 +44,7 @@ export default function IntelligencePage() {
 
           {/* Report card */}
           <Link
-            href="./intelligence/report/2026"
+            href="./magazine/report/2026"
             className="group pr-0 md:pr-16 pb-12 md:pb-0 flex flex-col justify-between gap-8"
           >
             <div>
@@ -65,7 +65,7 @@ export default function IntelligencePage() {
 
           {/* Subscribe card */}
           <Link
-            href="./intelligence/subscribe"
+            href="./magazine/subscribe"
             className="group pl-0 md:pl-16 pt-12 md:pt-0 flex flex-col justify-between gap-8"
           >
             <div>

@@ -10,11 +10,11 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'intelligence.subscribe.meta' })
+  const t = await getTranslations({ locale, namespace: 'magazine.subscribe.meta' })
   return {
     title:       t('title'),
     description: t('description'),
-    alternates:  { canonical: `/${locale}/intelligence/subscribe` },
+    alternates:  { canonical: `/${locale}/magazine/subscribe` },
   }
 }
 
@@ -24,7 +24,7 @@ export default async function SubscribePage({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'intelligence.subscribe' })
+  const t = await getTranslations({ locale, namespace: 'magazine.subscribe' })
 
   const interests = [
     { key: 'ma',            label: t('interests.ma') },
@@ -45,7 +45,7 @@ export default async function SubscribePage({
           <p className="text-label-mag text-magazine-black/60 leading-relaxed">
             {t('digitalNote')}{' '}
             <Link
-              href={`/${locale}/intelligence/report`}
+              href={`/${locale}/magazine/report`}
               className="underline text-magazine-black hover:text-magazine-accent transition-colors"
             >
               {t('digitalNoteCta')}
@@ -83,7 +83,7 @@ export default async function SubscribePage({
             {t('disclaimer')}
           </p>
           <Link
-            href={`/${locale}/intelligence/report`}
+            href={`/${locale}/magazine/report`}
             className="mt-4 inline-flex items-center gap-1.5 text-label-mag text-magazine-black/60 uppercase tracking-[0.1em] hover:text-magazine-black transition-colors"
           >
             <ArrowUpRight size={11} /> {t('backToMagazine')}

@@ -20,19 +20,19 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'intelligence.report.meta' })
+  const t = await getTranslations({ locale, namespace: 'magazine.report.meta' })
   return {
     title:       t('title'),
     description: t('description'),
     alternates: {
-      canonical: `/${locale}/intelligence/report/2026`,
+      canonical: `/${locale}/magazine/report/2026`,
       languages: {
-        fr: '/fr/intelligence/report/2026',
-        en: '/en/intelligence/report/2026',
-        de: '/de/intelligence/report/2026',
-        es: '/es/intelligence/report/2026',
-        it: '/it/intelligence/report/2026',
-        nl: '/nl/intelligence/report/2026',
+        fr: '/fr/magazine/report/2026',
+        en: '/en/magazine/report/2026',
+        de: '/de/magazine/report/2026',
+        es: '/es/magazine/report/2026',
+        it: '/it/magazine/report/2026',
+        nl: '/nl/magazine/report/2026',
       },
     },
     openGraph: {
@@ -51,7 +51,7 @@ export default async function Report2026Page({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'intelligence.report' })
+  const t = await getTranslations({ locale, namespace: 'magazine.report' })
 
   return (
     <>
@@ -68,7 +68,7 @@ export default async function Report2026Page({
             publisher:  { '@type': 'Organization', name: 'AEGRYN', url: 'https://aegryn.com' },
             datePublished: '2027-01-01',
             inLanguage: 'en',
-            url: `https://aegryn.com/${locale}/intelligence/report/2026`,
+            url: `https://aegryn.com/${locale}/magazine/report/2026`,
           }),
         }}
       />

@@ -26,7 +26,7 @@ export default async function IntelligenceLayout({
 
           {/* Label section */}
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">
-            {tNav('intelligence')} · Aegryn Magazine
+            {tNav('magazine')} · Aegryn Magazine
           </p>
 
           {/* Bloc "Prochainement" */}

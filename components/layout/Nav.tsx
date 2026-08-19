@@ -32,7 +32,7 @@ const BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
 ]
 
 const ABOUT_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'magazine',          href: '/intelligence/report' },
+  { labelKey: 'magazine',          href: '/magazine' },
   { labelKey: 'articles',          href: '/blog' },
   { labelKey: 'aboutGroup',        href: '/about' },
   { labelKey: 'aboutCareers',      href: '/career' },
@@ -156,7 +156,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const isGradeActive    = GRADE_LINKS.some(({ href }) => isActive(href as string))
   const isBuildActive    = BUILD_LINKS.some(({ href }) => isActive(href as string))
   const isAdvisoryActive = ADVISORY_LINKS.some(({ href }) => isActive(href as string))
-  const isAboutActive    = isActive('/about') || isActive('/intelligence/report') || isActive('/blog') || isActive('/career')
+  const isAboutActive    = isActive('/about') || isActive('/magazine') || isActive('/blog') || isActive('/career')
   const [mobileOpen, setMobileOpen]   = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<DropdownKey>(null)
   const [mobileAccordion, setMobileAccordion] = useState<DropdownKey>(null)

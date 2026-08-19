@@ -119,7 +119,7 @@ const legal: { key: string; href: LinkHref; ns: string; external?: boolean }[] =
 const companyLinks: { navKey: 'about' | 'career' | 'contact' | 'magazine'; href: LinkHref }[] = [
   { navKey: 'about',    href: '/about' },
   { navKey: 'career',   href: '/career' },
-  { navKey: 'magazine', href: '/intelligence/report' as never },
+  { navKey: 'magazine', href: '/magazine' as never },
   { navKey: 'contact',  href: '/contact' },
 ]
 

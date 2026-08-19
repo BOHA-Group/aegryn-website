@@ -75,6 +75,11 @@ const nextConfig: NextConfig = {
       { source: '/auction/:path*',                      destination: '/transact/:path*',                 permanent: true },
       { source: '/:locale/auction',                     destination: '/:locale/transact',                permanent: true },
       { source: '/:locale/auction/:path*',              destination: '/:locale/transact/:path*',         permanent: true },
+      /* /intelligence/* → /magazine/* (301 permanent, SEO-safe rebranding) */
+      { source: '/intelligence',                        destination: '/magazine',                        permanent: true },
+      { source: '/intelligence/:path*',                 destination: '/magazine/:path*',                 permanent: true },
+      { source: '/:locale/intelligence',                destination: '/:locale/magazine',                permanent: true },
+      { source: '/:locale/intelligence/:path*',         destination: '/:locale/magazine/:path*',         permanent: true },
     ]
   },
   async headers() {

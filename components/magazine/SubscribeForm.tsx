@@ -19,7 +19,7 @@ export function SubscribeForm({ placeholder, cta, successMsg, errorMsg }: Props)
     if (!email) return
     setStatus('loading')
     try {
-      const res = await fetch('/api/intelligence/subscribe', {
+      const res = await fetch('/api/report/subscribe', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ email }),
