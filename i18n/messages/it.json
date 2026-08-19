@@ -347,15 +347,15 @@
     "sub": "Tre discipline. Un ecosistema integrato.",
     "items": [
       {
-        "title": "BUILD",
+        "title": "CONCEZIONE",
         "desc": "Progettiamo e gestiamo asset tech — SaaS, marketplace, protocolli IA — strutturati sin dall'origine per essere certificabili e trasferibili. Ogni asset resiste all'audit più rigoroso."
       },
       {
-        "title": "GRADE",
+        "title": "CERTIFICAZIONE",
         "desc": "Certifichiamo asset secondo un label indipendente strutturato su 4 dimensioni: Codice, IP, Finanze, Sicurezza. Un protocollo riproducibile, tracciabile e conclusivo."
       },
       {
-        "title": "AUCTION",
+        "title": "CESSIONE M&A",
         "desc": "Transigiamo asset certificati attraverso un processo riservato: deposito istituzionale, cerchia di acquirenti pre-qualificati, mandato esclusivo di 60 giorni. Meno del 25% degli asset presentati viene accettato."
       }
     ]
@@ -447,15 +447,15 @@
       "label": "Tre discipline",
       "title": "Tre discipline.\nUno standard di mercato.",
       "create": {
-        "title": "BUILD",
+        "title": "CONCEZIONE",
         "desc": "Asset tech proprietari, certificabili, trasferibili. IP registrata, codebase documentata, stack sovrana."
       },
       "simplify": {
-        "title": "GRADE",
+        "title": "CERTIFICAZIONE",
         "desc": "Certificare in modo indipendente. Rifiutare più che accettare. Un grade riproducibile, tracciabile e definitivo."
       },
       "embrace": {
-        "title": "AUCTION",
+        "title": "CESSIONE M&A",
         "desc": "Transigere con discrezione, con certezza per entrambe le parti. Escrow istituzionale. Documentazione completa ad ogni trasferimento."
       }
     },

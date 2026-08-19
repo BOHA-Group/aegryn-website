@@ -347,15 +347,15 @@
     "sub": "Drie disciplines. Één geïntegreerd ecosysteem.",
     "items": [
       {
-        "title": "BUILD",
+        "title": "ONTWERP",
         "desc": "Wij ontwerpen en beheren tech-assets — SaaS, marktplaatsen, AI-protocollen — die vanaf de basis zijn opgezet om certificeerbaar en overdraagbaar te zijn. Elk asset doorstaat de strengste audit."
       },
       {
-        "title": "GRADE",
+        "title": "CERTIFICERING",
         "desc": "Wij certificeren assets onder een onafhankelijk label dat is gestructureerd op 4 dimensies: Code, IP, Financiën, Beveiliging. Een reproduceerbaar, traceerbaar en sluitend protocol."
       },
       {
-        "title": "AUCTION",
+        "title": "M&A-OVERDRACHT",
         "desc": "Wij transigeren gecertificeerde assets via een vertrouwelijk proces: institutioneel depot, kring van vooraf gekwalificeerde kopers, exclusief 60-daags mandaat. Minder dan 25% van de ingediende assets wordt geaccepteerd."
       }
     ]
@@ -447,15 +447,15 @@
       "label": "Drie disciplines",
       "title": "Drie disciplines.\nEén marktstandaard.",
       "create": {
-        "title": "BUILD",
+        "title": "ONTWERP",
         "desc": "Propriëtaire, certificeerbare, overdraagbare tech-assets. Geregistreerd IP, gedocumenteerde codebase, soevereine stack."
       },
       "simplify": {
-        "title": "GRADE",
+        "title": "CERTIFICERING",
         "desc": "Onafhankelijk certificeren. Meer weigeren dan accepteren. Een reproduceerbare, traceerbare en definitieve grade."
       },
       "embrace": {
-        "title": "AUCTION",
+        "title": "M&A-OVERDRACHT",
         "desc": "Discreet transageren, met zekerheid voor beide partijen. Institutionele escrow. Volledige documentatie bij elke overdracht."
       }
     },

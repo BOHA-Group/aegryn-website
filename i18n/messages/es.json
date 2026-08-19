@@ -347,15 +347,15 @@
     "sub": "Tres disciplinas. Un ecosistema integrado.",
     "items": [
       {
-        "title": "BUILD",
+        "title": "CONCEPCIÓN",
         "desc": "Diseñamos y operamos activos tech — SaaS, marketplaces, protocolos IA — estructurados desde el origen para ser certificables y transferibles. Cada activo resiste la auditoría más exigente."
       },
       {
-        "title": "GRADE",
+        "title": "CERTIFICACIÓN",
         "desc": "Certificamos activos bajo un sello independiente estructurado en 4 dimensiones: Código, PI, Finanzas, Seguridad. Un protocolo reproducible, trazable y concluyente."
       },
       {
-        "title": "AUCTION",
+        "title": "CESIÓN M&A",
         "desc": "Transaccionamos activos certificados mediante un proceso confidencial: depósito institucional, círculo de compradores precalificados, mandato exclusivo de 60 días. Menos del 25% de los activos presentados son aceptados."
       }
     ]
@@ -447,15 +447,15 @@
       "label": "Tres disciplinas",
       "title": "Tres disciplinas.\nUn estándar de mercado.",
       "create": {
-        "title": "BUILD",
+        "title": "CONCEPCIÓN",
         "desc": "Activos tech propietarios, certificables, transferibles. IP registrada, codebase documentada, stack soberana."
       },
       "simplify": {
-        "title": "GRADE",
+        "title": "CERTIFICACIÓN",
         "desc": "Certificar de forma independiente. Rechazar más que aceptar. Un grade reproducible, trazable y definitivo."
       },
       "embrace": {
-        "title": "AUCTION",
+        "title": "CESIÓN M&A",
         "desc": "Transaccionar con discreción, con certeza para ambas partes. Escrow institucional. Documentación completa en cada transferencia."
       }
     },

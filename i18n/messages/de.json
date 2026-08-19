@@ -347,15 +347,15 @@
     "sub": "Drei Disziplinen. Ein integriertes Ökosystem.",
     "items": [
       {
-        "title": "BUILD",
+        "title": "KONZEPTION",
         "desc": "Wir konzipieren und betreiben Tech-Assets — SaaS, Marktplätze, KI-Protokolle — die von Anfang an zertifizierbar und übertragbar sind. Jedes Asset widersteht der strengsten Prüfung."
       },
       {
-        "title": "GRADE",
+        "title": "ZERTIFIZIERUNG",
         "desc": "Wir zertifizieren Assets nach einem unabhängigen Label, das auf 4 Dimensionen strukturiert ist: Code, IP, Finanzen, Sicherheit. Ein reproduzierbares, nachvollziehbares und schlüssiges Protokoll."
       },
       {
-        "title": "AUCTION",
+        "title": "M&A-TRANSAKTION",
         "desc": "Wir transagieren zertifizierte Assets über einen vertraulichen Prozess: institutionelles Treuhand, qualifizierter Käuferkreis, exklusives 60-Tage-Mandat. Weniger als 25% der eingereichten Assets werden akzeptiert."
       }
     ]
@@ -447,15 +447,15 @@
       "label": "Drei Disziplinen",
       "title": "Drei Disziplinen.\nEin Marktstandard.",
       "create": {
-        "title": "BUILD",
+        "title": "KONZEPTION",
         "desc": "Proprietäre, zertifizierbare, übertragbare Tech-Assets. Eingetragenes IP, dokumentierte Codebasis, souveräner Stack."
       },
       "simplify": {
-        "title": "GRADE",
+        "title": "ZERTIFIZIERUNG",
         "desc": "Unabhängig zertifizieren. Mehr ablehnen als annehmen. Ein reproduzierbarer, nachvollziehbarer und definitiver Grade."
       },
       "embrace": {
-        "title": "AUCTION",
+        "title": "M&A-TRANSAKTION",
         "desc": "Diskret transagieren, mit Sicherheit für beide Parteien. Institutioneller Escrow. Vollständige Dokumentation bei jeder Übertragung."
       }
     },

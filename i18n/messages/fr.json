@@ -311,11 +311,11 @@
     "sub": "Trois métiers. Un écosystème intégré.",
     "items": [
       {
-        "title": "BUILD",
+        "title": "CONCEPTION",
         "desc": "Nous concevons et opérons des actifs tech — SaaS, marketplaces, protocoles IA — structurés dès l'origine pour être certifiables et transférables. Chaque actif résiste à l'audit le plus exigeant."
       },
       {
-        "title": "GRADE",
+        "title": "CERTIFICATION",
         "desc": "Nous certifions des actifs selon un label indépendant structuré sur 4 dimensions : Code, IP, Finance, Sécurité. Un protocole reproductible, traçable et concluant — pour des tiers comme pour nos propres actifs."
       },
       {
@@ -448,11 +448,11 @@
       "label": "Trois disciplines",
       "title": "Trois disciplines.\nUn standard de marché.",
       "create": {
-        "title": "BUILD",
+        "title": "CONCEPTION",
         "desc": "Actifs tech propriétaires, certifiables, transférables. IP déposée, codebase documentée, stack souveraine."
       },
       "simplify": {
-        "title": "GRADE",
+        "title": "CERTIFICATION",
         "desc": "Certifier de façon indépendante. Refuser plus qu'accepter. Une notation reproductible, traçable et définitive."
       },
       "embrace": {
