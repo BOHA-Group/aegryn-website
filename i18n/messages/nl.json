@@ -74,7 +74,7 @@
     "ctaBuildLink": "Asset-engineering",
     "ctaAdvisoryLabel": "Heb je een expert nodig?",
     "ctaAdvisoryLink": "Advies",
-    "chip2": "ONAFHANKELIJKE GECERTIFICEERDE GRADE"
+    "chip2": "ONAFHANKELIJKE CERTIFICERING"
   },
   "assets": {
     "title": "Ons eigen ecosysteem.",
@@ -2948,7 +2948,7 @@
     }
   },
   "gradeStrip": {
-    "label": "Grade-systeem",
+    "label": "Certificeringssysteem",
     "title": "Geen cijfer.\nEen certificering.",
     "desc": "Er is een fundamenteel verschil tussen een cijfer geven en certificeren. Aegryn certificeert via een onafhankelijk, reproduceerbaar en traceerbaar protocol.",
     "quote": "Een asset zonder onafhankelijke certificering is een waarde zonder bewijs. Een Aegryn Grade AAA asset is een gedocumenteerde en traceerbare zekerheid.",
@@ -3049,7 +3049,7 @@
   },
   "pillars": {
     "build": {
-      "label": "BUILD",
+      "label": "ONTWERP",
       "desc": "Propriëtaire assets gebouwd om te duren"
     },
     "grade": {
@@ -3391,12 +3391,12 @@
       "steps": [
         {
           "num": "01",
-          "title": "Discovery & Vaste Prijs",
+          "title": "Diagnostic & Vaste Prijs",
           "desc": "Definitie van de waardepropositie, doelmarkt, stack en exitplan. Output: bestek + ondertekende vaste-prijsovereenkomst. Duur: 1 tot 2 weken. Kosten: inbegrepen in de totale vaste prijs."
         },
         {
           "num": "02",
-          "title": "Architectuur en Grade Design",
+          "title": "Architectuur en Design",
           "desc": "Het asset wordt opgebouwd volgens CIFS-criteria: gedocumenteerde code, geregistreerd IP, security by design."
         },
         {
@@ -3437,12 +3437,12 @@
       "title": "Vaste prijs. Geen verrassingen.",
       "items": [
         {
-          "title": "Discovery (inbegrepen)",
+          "title": "Diagnostic (inbegrepen)",
           "desc": "1 tot 2 weken. Certificeerbaar bestek. Buildprijs vastgelegd en ondertekend. Geen verbintenis voor ondertekening van de overeenkomst.",
           "format": "Inbegrepen in de totale vaste prijs"
         },
         {
-          "title": "Build (vaste prijs)",
+          "title": "Ontwerp (vaste prijs)",
           "desc": "Prijs vergrendeld bij Discovery. Geen overschrijdingen. Geen tijd en materiaal. Bij scopewijziging: bijlage ondertekend vóór uitvoering. Indicatieve bandbreedtes (excl. Discovery): B2B SaaS vanaf €25.000 excl. btw — B2C mobiele app vanaf €35.000 excl. btw — Natief AI-product vanaf €40.000 excl. btw.",
           "format": "Vaste prijs vastgelegd bij Discovery"
         },

@@ -74,7 +74,7 @@
     "ctaBuildLink": "Asset-Ingenieurwesen",
     "ctaAdvisoryLabel": "Experten gesucht?",
     "ctaAdvisoryLink": "Beratung",
-    "chip2": "UNABHÄNGIGES ZERTIFIZIERTES GRADE"
+    "chip2": "UNABHÄNGIGE ZERTIFIZIERUNG"
   },
   "assets": {
     "title": "Unser eigenes Ökosystem.",
@@ -2948,7 +2948,7 @@
     }
   },
   "gradeStrip": {
-    "label": "Grade-System",
+    "label": "Zertifizierungssystem",
     "title": "Keine Bewertung.\nEine Zertifizierung.",
     "desc": "Es gibt einen grundlegenden Unterschied zwischen einer Bewertung und einer Zertifizierung. Aegryn zertifiziert, nach einem unabhängigen, reproduzierbaren und nachvollziehbaren Protokoll.",
     "quote": "Ein Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. Ein Aegryn Grade AAA Asset ist eine dokumentierte und nachvollziehbare Gewissheit.",
@@ -3049,7 +3049,7 @@
   },
   "pillars": {
     "build": {
-      "label": "BUILD",
+      "label": "KONZEPTION",
       "desc": "Proprietäre Assets, gebaut für die Dauer"
     },
     "grade": {
@@ -3391,17 +3391,17 @@
       "steps": [
         {
           "num": "01",
-          "title": "Discovery & Festpreis",
+          "title": "Diagnostic & Festpreis",
           "desc": "Definition des Wertversprechens, Zielmarkt, Stack und Exit-Plan. Output: Lastenheft + unterzeichneter Festpreisvertrag. Dauer: 1 bis 2 Wochen. Kosten: im Gesamtfestpreis enthalten."
         },
         {
           "num": "02",
-          "title": "Architektur und Grade-Design",
+          "title": "Architektur und Design",
           "desc": "Das Asset wird nach CIFS-Kriterien aufgebaut: dokumentierter Code, eingetragenes IP, Security by Design."
         },
         {
           "num": "03",
-          "title": "Build und Iterationen",
+          "title": "Konzeption und Iterationen",
           "desc": "Sprint-basierte Entwicklung mit messbaren Meilensteinen und kontinuierlicher Dokumentation."
         },
         {
@@ -3437,12 +3437,12 @@
       "title": "Festpreis. Keine Überraschungen.",
       "items": [
         {
-          "title": "Discovery (inklusive)",
+          "title": "Diagnostic (inklusive)",
           "desc": "1 bis 2 Wochen. Zertifizierbares Lastenheft. Build-Preis definiert und unterzeichnet. Kein Engagement vor Unterzeichnung der Honorarvereinbarung.",
           "format": "Im Gesamtfestpreis enthalten"
         },
         {
-          "title": "Build (Festpreis)",
+          "title": "Konzeption (Festpreis)",
           "desc": "Preis beim Discovery fixiert. Keine Überschreitungen. Kein Zeit & Material. Bei Änderungen: Nachtrag vor Ausführung unterzeichnet. Richtwerte (ohne Discovery): B2B SaaS ab 25.000€ netto — B2C Mobile App ab 35.000€ netto — Natives KI-Produkt ab 40.000€ netto.",
           "format": "Festpreis beim Discovery definiert"
         },

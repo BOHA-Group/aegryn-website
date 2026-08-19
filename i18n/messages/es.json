@@ -74,7 +74,7 @@
     "ctaBuildLink": "Ingeniería de activos",
     "ctaAdvisoryLabel": "¿Necesitas un experto?",
     "ctaAdvisoryLink": "Asesoría",
-    "chip2": "GRADE CERTIFICADO INDEPENDIENTE"
+    "chip2": "CERTIFICACIÓN INDEPENDIENTE"
   },
   "assets": {
     "title": "Nuestro ecosistema propio.",
@@ -2948,7 +2948,7 @@
     }
   },
   "gradeStrip": {
-    "label": "Sistema de Grade",
+    "label": "Sistema de Certificación",
     "title": "No una nota.\nUna certificación.",
     "desc": "Hay una diferencia fundamental entre dar una nota y certificar. Aegryn certifica, mediante un protocolo independiente, reproducible y trazable.",
     "quote": "Un activo sin certificación independiente es un valor sin prueba. Un activo Aegryn Grade AAA es una certeza documentada y verificable.",
@@ -3049,7 +3049,7 @@
   },
   "pillars": {
     "build": {
-      "label": "BUILD",
+      "label": "CONCEPCIÓN",
       "desc": "Activos propietarios construidos para durar"
     },
     "grade": {
@@ -3391,12 +3391,12 @@
       "steps": [
         {
           "num": "01",
-          "title": "Discovery & Precio Fijo",
+          "title": "Diagnostic & Precio Fijo",
           "desc": "Definición de la propuesta de valor, mercado objetivo, stack y plan de salida. Output: pliego de condiciones + acuerdo de precio fijo firmado. Duración: 1 a 2 semanas. Coste: incluido en el precio fijo total."
         },
         {
           "num": "02",
-          "title": "Arquitectura y Grade Design",
+          "title": "Arquitectura y Design",
           "desc": "El activo se arquitectura según criterios CIFS: código documentado, IP registrada, seguridad by design."
         },
         {
@@ -3437,12 +3437,12 @@
       "title": "Precio fijo. Sin sorpresas.",
       "items": [
         {
-          "title": "Discovery (incluido)",
+          "title": "Diagnostic (incluido)",
           "desc": "1 a 2 semanas. Pliego certificable. Precio de build definido y firmado. Sin compromiso antes de la firma del acuerdo.",
           "format": "Incluido en el precio fijo total"
         },
         {
-          "title": "Build (precio fijo)",
+          "title": "Concepción (precio fijo)",
           "desc": "Precio bloqueado en el Discovery. Sin desviaciones. Sin tiempo y material. Si el alcance cambia: anexo firmado antes de la ejecución. Rangos indicativos (sin Discovery): SaaS B2B simple desde 25.000€ sin IVA — App móvil B2C desde 35.000€ sin IVA — Producto IA nativo desde 40.000€ sin IVA.",
           "format": "Precio fijo definido en el Discovery"
         },

@@ -75,7 +75,7 @@
     "ctaBuildLink": "Asset Engineering",
     "ctaAdvisoryLabel": "Need an expert?",
     "ctaAdvisoryLink": "Advisory",
-    "chip2": "INDEPENDENT CERTIFIED GRADE"
+    "chip2": "INDEPENDENT CERTIFICATION"
   },
   "assets": {
     "title": "Our proprietary ecosystem.",
@@ -1008,7 +1008,7 @@
   },
   "pillars": {
     "build": {
-      "label": "BUILD",
+      "label": "DESIGN",
       "desc": "Proprietary assets built to last"
     },
     "grade": {
@@ -3050,7 +3050,7 @@
     }
   },
   "gradeStrip": {
-    "label": "Grade System",
+    "label": "Certification System",
     "title": "Not a score.\nA certification.",
     "desc": "There is a fundamental difference between giving a score and certifying. Aegryn certifies through an independent, reproducible and traceable protocol.",
     "quote": "An asset without an independent certification is a value without proof. An Aegryn Grade AAA asset is a documented and traceable certainty.",
@@ -3377,12 +3377,12 @@
         },
         {
           "num": "02",
-          "title": "Architecture and Grade Design",
+          "title": "Architecture and Design",
           "desc": "The asset is architected to CIFS criteria: documented code, registered IP, security by design, tracked metrics. The grade is the construction plan."
         },
         {
           "num": "03",
-          "title": "Build and Iterations",
+          "title": "Design and Iterations",
           "desc": "Sprint-based development with measurable milestones, code review and continuous documentation. Aegryn proprietary stack or client stack."
         },
         {
@@ -3418,12 +3418,12 @@
       "title": "Fixed fee. No surprises.",
       "items": [
         {
-          "title": "Discovery (included)",
+          "title": "Diagnostic (included)",
           "desc": "1 to 2 weeks. Certifiable specification. Build price defined and signed. No commitment before fee agreement is signed.",
           "format": "Included in total fixed fee"
         },
         {
-          "title": "Build (fixed fee)",
+          "title": "Design (fixed fee)",
           "desc": "Price locked at Discovery. No overruns. No time & materials. If scope changes: amendment signed before execution. Indicative ranges (excl. Discovery): B2B SaaS from €25,000 excl. VAT — B2C mobile app from €35,000 excl. VAT — Native AI product from €40,000 excl. VAT.",
           "format": "Fixed fee defined at Discovery"
         },

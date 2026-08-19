@@ -75,7 +75,7 @@
     "ctaBuildLink": "Conception d'actifs",
     "ctaAdvisoryLabel": "Besoin d'un expert ?",
     "ctaAdvisoryLink": "Conseil",
-    "chip2": "GRADE CERTIFIÉ INDÉPENDANT"
+    "chip2": "CERTIFICATION INDÉPENDANTE"
   },
   "assets": {
     "title": "Notre écosystème propre.",
@@ -1060,7 +1060,7 @@
   },
   "pillars": {
     "build": {
-      "label": "BUILD",
+      "label": "CONCEPTION",
       "desc": "Actifs propriétaires construits pour durer"
     },
     "grade": {
@@ -3178,7 +3178,7 @@
     }
   },
   "gradeStrip": {
-    "label": "Système de Grade",
+    "label": "Système de Certification",
     "title": "Pas une note.\nUne certification.",
     "desc": "Il y a une différence fondamentale entre donner une note et certifier. Aegryn certifie dans une logique de protocole indépendant, reproductible et traçable.",
     "quote": "Un actif sans certification indépendante, c'est une valeur sans preuve. Un actif Aegryn Grade AAA, c'est une certitude documentée et traçable.",
@@ -3500,17 +3500,17 @@
       "steps": [
         {
           "num": "01",
-          "title": "Discovery & Forfait",
+          "title": "Diagnostic & Forfait",
           "desc": "Définition de la proposition de valeur, du marché cible, de la stack et du plan de sortie. Output : cahier des charges + prix forfaitaire signé. Durée : 1 à 2 semaines. Coût : inclus dans le forfait total."
         },
         {
           "num": "02",
-          "title": "Architecture et Grade Design",
+          "title": "Architecture et Design",
           "desc": "L'actif est architecturé selon les critères CIFS : code documenté, IP déposée, sécurité by design, métriques trackées. Le grade est le plan de construction."
         },
         {
           "num": "03",
-          "title": "Build et Itérations",
+          "title": "Conception et Itérations",
           "desc": "Développement en sprints avec jalons mesurables, revue de code et documentation continue. Stack propriétaire Aegryn ou stack client."
         },
         {
@@ -3546,12 +3546,12 @@
       "title": "Forfait fixe. Aucune surprise.",
       "items": [
         {
-          "title": "Discovery (inclus)",
+          "title": "Diagnostic (inclus)",
           "desc": "1 à 2 semaines. Cahier des charges certifiable. Prix de build défini et signé. Aucun engagement avant signature du forfait.",
           "format": "Inclus dans le forfait total"
         },
         {
-          "title": "Build (forfait fixe)",
+          "title": "Conception (forfait fixe)",
           "desc": "Prix verrouillé au Discovery. Aucun dépassement. Aucune régie. Si le périmètre évolue : avenant signé avant exécution. Fourchettes indicatives (hors Discovery) : SaaS B2B simple à partir de 25 000€ HT — App mobile B2C à partir de 35 000€ HT — Produit IA natif à partir de 40 000€ HT.",
           "format": "Forfait fixe défini au Discovery"
         },
@@ -3563,7 +3563,7 @@
       ],
       "coInvestNote": "Aegryn peut intervenir en co-investisseur minoritaire sur certains projets : prise de part en échange d'une réduction des honoraires de build. Examiné au cas par cas.",
       "exitBanner": {
-        "text": "La cession est une option, jamais une obligation. Si vous souhaitez céder un jour — early stage ou à maturité — l'actif est conçu pour l'être. La sortie via Aegryn TRANSACT ou confidentielle est disponible si le grade le permet.",
+        "text": "La cession est une option, jamais une obligation. Si vous souhaitez céder un jour — early stage ou à maturité — l'actif est conçu pour l'être. La sortie via Aegryn TRANSACT ou confidentielle est disponible si la certification le permet.",
         "cta": "En savoir plus sur le processus de cession",
         "href": "/transact/how-it-works"
       },
@@ -3571,6 +3571,17 @@
       "href": "/contact",
       "secondary": "Voir nos actifs propriétaires",
       "secondaryHref": "/assets"
+    },
+    "exitBanner": {
+      "text": "La cession est une option, jamais une obligation. Si vous souhaitez céder un jour — early stage ou à maturité — l'actif est conçu pour l'être. La sortie via Aegryn TRANSACT ou confidentielle est disponible si la certification le permet.",
+      "cta": "En savoir plus sur le processus de cession",
+      "href": "/transact/how-it-works"
+    },
+    "cta": {
+      "title": "Un projet en tête ?",
+      "desc": "Décrivez votre idée, le périmètre fonctionnel et vos contraintes. Nous vous répondons avec une estimation de faisabilité et un premier cadrage tarifaire sous 48h.",
+      "primary": "Démarrer le processus",
+      "secondary": "Voir nos actifs propriétaires"
     }
   },
   "gradeSubmit": {
