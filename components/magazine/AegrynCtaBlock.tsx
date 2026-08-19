@@ -1,13 +1,9 @@
 'use client'
 
-/**
- * CTA finale — Aegryn Magazine, January 2027 Edition
- */
-
 import { useRef } from 'react'
-import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
-import { useFadeUp } from './shared'
+import { ArrowUpRight } from 'lucide-react'
+import { useFadeUp } from './hooks/useFadeUp'
 
 interface Props {
   title:       string
@@ -17,7 +13,11 @@ interface Props {
   ctaGrade:    string
 }
 
-export function CTA({ title, sub, line, ctaEstimate, ctaGrade }: Props) {
+/**
+ * Full-screen CTA block for the end of a magazine issue.
+ * Replaces the old CTA.tsx component — no year/report reference.
+ */
+export function AegrynCtaBlock({ title, sub, line, ctaEstimate, ctaGrade }: Props) {
   const ref = useRef<HTMLElement>(null)
   useFadeUp('.cta-item', ref)
 

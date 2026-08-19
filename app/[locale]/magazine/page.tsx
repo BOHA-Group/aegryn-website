@@ -1,14 +1,11 @@
-import Link            from 'next/link'
-import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import type { Metadata }   from 'next'
-import { ArrowUpRight }    from 'lucide-react'
+import { IssueCard }       from '@/components/magazine/IssueCard'
+import { ISSUE_01 }        from '@/content/magazine/issue-01/meta'
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}): Promise<Metadata> {
+type Props = { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'magazine.report.meta' })
   return {
@@ -19,9 +16,11 @@ export async function generateMetadata({
   }
 }
 
-export default function IntelligencePage() {
-  const t    = useTranslations('magazine')
-  const tHub = useTranslations('magazine.hub')
+const ALL_ISSUES = [ISSUE_01]
+
+export default async function MagazineHubPage({ params }: Props) {
+  const { locale } = await params
+  const tHub = await getTranslations({ locale, namespace: 'magazine.hub' })
 
   return (
     <main className="min-h-screen bg-magazine-ivory">
@@ -40,51 +39,12 @@ export default function IntelligencePage() {
           {tHub('desc')}
         </p>
 
-        <div className="border-t border-magazine-black/10 pt-12 grid grid-cols-1 md:grid-cols-2 gap-0 md:divide-x divide-magazine-black/10">
-
-          {/* Report card */}
-          <Link
-            href="./magazine/report/2027"
-            className="group pr-0 md:pr-16 pb-12 md:pb-0 flex flex-col justify-between gap-8"
-          >
-            <div>
-              <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-4">
-                {tHub('reportLabel')}
-              </p>
-              <h2 className="text-h2-mag text-magazine-black mb-3 font-sans font-semibold">
-                {tHub('reportDesc')}
-              </h2>
-              <p className="text-body-mag text-magazine-black/50">
-                Aegryn Magazine · First Edition · January 2027
-              </p>
-            </div>
-            <span className="inline-flex items-center gap-2 text-label-mag uppercase tracking-[0.12em] text-magazine-black group-hover:text-magazine-accent transition-colors">
-              {t('report.readOnline')} <ArrowUpRight size={14} />
-            </span>
-          </Link>
-
-          {/* Subscribe card */}
-          <Link
-            href="./magazine/subscribe"
-            className="group pl-0 md:pl-16 pt-12 md:pt-0 flex flex-col justify-between gap-8"
-          >
-            <div>
-              <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-4">
-                {tHub('subscribeLabel')}
-              </p>
-              <h2 className="text-h2-mag text-magazine-black mb-3 font-sans font-semibold">
-                {tHub('subscribeDesc')}
-              </h2>
-              <p className="text-body-mag text-magazine-black/50">
-                Accès libre · Annuel · Multilingue
-              </p>
-            </div>
-            <span className="inline-flex items-center gap-2 text-label-mag uppercase tracking-[0.12em] text-magazine-black group-hover:text-magazine-accent transition-colors">
-              {t('subscribe.cta')} <ArrowUpRight size={14} />
-            </span>
-          </Link>
-
+        <div className="border-t border-magazine-black/10 pt-12 space-y-8">
+          {ALL_ISSUES.map(issue => (
+            <IssueCard key={issue.slug} issue={issue} />
+          ))}
         </div>
+
       </div>
     </main>
   )

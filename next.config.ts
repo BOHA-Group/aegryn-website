@@ -80,6 +80,10 @@ const nextConfig: NextConfig = {
       { source: '/intelligence/:path*',                 destination: '/magazine/:path*',                 permanent: true },
       { source: '/:locale/intelligence',                destination: '/:locale/magazine',                permanent: true },
       { source: '/:locale/intelligence/:path*',         destination: '/:locale/magazine/:path*',         permanent: true },
+      /* /magazine/report/2027/* → /magazine/issue-01 (301 permanent, architecture migration) */
+      { source: '/:locale/magazine/report/2027',        destination: '/:locale/magazine/issue-01',       permanent: true },
+      { source: '/:locale/magazine/report/2027/:path*', destination: '/:locale/magazine/issue-01',       permanent: true },
+      { source: '/:locale/magazine/report',             destination: '/:locale/magazine',                permanent: true },
     ]
   },
   async headers() {

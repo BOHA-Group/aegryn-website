@@ -1,23 +1,27 @@
 'use client'
 
-/**
- * Cover — Aegryn Magazine, January 2027 Edition
- * "The State of European Tech M&A"
- */
-
 import { useRef } from 'react'
 import { ArrowDown } from 'lucide-react'
-import { useCoverReveal } from './shared'
+import type { MagazineIssue, IssueStat } from '@/lib/magazine/types'
+import { useCoverReveal } from '../hooks/useCoverReveal'
 
 interface Props {
+  issue:     MagazineIssue
+  stats:     IssueStat[]
   ctaScroll: string
 }
 
-export function Cover({ ctaScroll }: Props) {
+/**
+ * Cover section template — data-driven, no hardcoded content.
+ */
+export function CoverSection({ issue, stats, ctaScroll }: Props) {
   const ref      = useRef<HTMLElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
 
   useCoverReveal(ref, titleRef)
+
+  const date = new Date(issue.publishedAt)
+  const formatted = date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
 
   return (
     <section
@@ -26,7 +30,7 @@ export function Cover({ ctaScroll }: Props) {
     >
       <div className="cover-meta flex items-center justify-between">
         <p className="text-label-mag text-magazine-white/50 uppercase tracking-[0.2em]">
-          Aegryn Magazine · First Edition · January 2027
+          Aegryn Magazine · Issue {String(issue.number).padStart(2, '0')} · {formatted}
         </p>
         <span className="text-label-mag text-magazine-accent uppercase tracking-[0.15em]">
           Annual Report
@@ -39,19 +43,13 @@ export function Cover({ ctaScroll }: Props) {
           className="font-sans text-magazine-white"
           style={{ fontSize: 'clamp(52px,9vw,120px)', lineHeight: 0.92, letterSpacing: '-0.03em', fontWeight: 800 }}
         >
-          The State<br />
-          of European<br />
-          Tech M&amp;A
+          {issue.title}
         </h1>
 
         <div className="cover-meta mt-10 w-20 h-px bg-magazine-accent" />
 
         <div className="cover-meta mt-10 flex flex-wrap gap-x-16 gap-y-8">
-          {[
-            { val: '2,698',  label: 'SaaS deals completed in 2025 — a record.' },
-            { val: '+40%',   label: 'EU SaaS M&A volume growth since 2023.' },
-            { val: '€14.2B', label: 'Transaction volume Europe 2025.' },
-          ].map(s => (
+          {stats.map(s => (
             <div key={s.val}>
               <p
                 className="font-sans font-bold text-magazine-white tabular-nums"
@@ -67,10 +65,13 @@ export function Cover({ ctaScroll }: Props) {
 
       <div className="cover-meta flex items-center justify-between">
         <p className="text-label-mag text-magazine-white/30 uppercase tracking-[0.12em]">
-          Annual Report — Certified by AEGRYN — Switzerland
+          {issue.theme} — Certified by AEGRYN — Switzerland
         </p>
         <button
-          onClick={() => document.getElementById('s-editorial')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => {
+            const firstSection = issue.sections[0]
+            if (firstSection) document.getElementById(firstSection.id)?.scrollIntoView({ behavior: 'smooth' })
+          }}
           className="flex items-center gap-2 text-label-mag text-magazine-white/50 hover:text-magazine-white transition-colors uppercase tracking-[0.12em]"
           aria-label={ctaScroll}
         >

@@ -1,0 +1,108 @@
+import type { MagazineArticle } from '@/lib/magazine/types'
+
+export const ARTICLES_01: MagazineArticle[] = [
+  {
+    slug: 'editorial-why-europe-needs-a-standard',
+    issue: 1,
+    pillar: 'money',
+    title: "Why Europe's Tech Market Needs a Standard",
+    excerpt:
+      'The European SaaS M&A market reached its highest recorded volume in 2026. Yet fragmentation and opacity persist. AEGRYN exists to change that — one certified asset at a time.',
+    readingTimeMinutes: 4,
+    seoKeywords: ['European tech M&A', 'SaaS certification', 'AEGRYN', 'CIFS protocol', 'tech M&A standard'],
+    ctaTarget: 'grade',
+    ctaLabel: 'Get your CIFS grade',
+    publishedAt: '2027-01-01',
+  },
+  {
+    slug: 'market-european-tech-ma-2026-numbers',
+    issue: 1,
+    pillar: 'money',
+    title: 'European Tech M&A — The 2026 Numbers',
+    excerpt:
+      '2,698 SaaS deals completed in 2025 — a record. EU M&A volume up +40% since 2023. Here is the data that defines the market we are operating in.',
+    readingTimeMinutes: 6,
+    seoKeywords: ['European SaaS M&A 2026', 'SaaS deal volume', 'EV/ARR multiples Europe', 'tech acquisition data', 'European discount'],
+    ctaTarget: 'advisory',
+    ctaLabel: 'Explore our advisory process',
+    publishedAt: '2027-01-01',
+  },
+  {
+    slug: 'ai-recomposition-of-tech-value',
+    issue: 1,
+    pillar: 'ai',
+    title: 'AI and the Recomposition of Tech Value',
+    excerpt:
+      '72% of SaaS M&A targets now reference AI. Median EV/Revenue for AI-native SaaS sits at 12.5x. But the premium is fragile — and the commoditisation trap is real.',
+    readingTimeMinutes: 5,
+    seoKeywords: ['AI SaaS valuation', 'AI M&A premium', 'EU AI Act M&A', 'AI-native SaaS multiples', 'proprietary data moat'],
+    ctaTarget: 'grade',
+    ctaLabel: 'Certify your AI asset',
+    publishedAt: '2027-01-01',
+  },
+  {
+    slug: 'perspective-certification-table',
+    issue: 1,
+    pillar: 'build',
+    title: 'What We See From the Certification Table',
+    excerpt:
+      'Less than 25% of submitted assets pass the CIFS certification threshold. Here is what the top 5 refusal reasons tell us about the state of European tech.',
+    readingTimeMinutes: 7,
+    seoKeywords: ['CIFS certification', 'tech asset certification', 'M&A readiness', 'due diligence Europe', 'asset grade'],
+    ctaTarget: 'grade',
+    ctaLabel: 'Start your certification',
+    publishedAt: '2027-01-01',
+  },
+  {
+    slug: 'deal-watch-h1-2026',
+    issue: 1,
+    pillar: 'money',
+    title: 'Deal Watch — Transactions That Shaped H1 2026',
+    excerpt:
+      'Five transactions from H1 2026 analysed through the CIFS lens. From Windsor.ai to OneStream — what worked, what did not, and what each grade would have signalled.',
+    readingTimeMinutes: 8,
+    seoKeywords: ['European tech deals 2026', 'SaaS acquisition analysis', 'M&A case study', 'Windsor AI acquisition', 'HealthTech deal'],
+    ctaTarget: 'auction',
+    ctaLabel: 'List your asset on AEGRYN Transact',
+    publishedAt: '2027-01-01',
+  },
+  {
+    slug: 'buyers-who-is-buying-european-tech',
+    issue: 1,
+    pillar: 'people',
+    title: 'Who Is Buying European Tech in 2026',
+    excerpt:
+      'PE funds, search funds, strategic acquirers, family offices — four buyer profiles, four sets of criteria, and what each one actually looks for in a certified asset.',
+    readingTimeMinutes: 5,
+    seoKeywords: ['European tech buyers', 'PE lower mid-market', 'search fund ETA', 'strategic acquirer tech', 'family office SaaS'],
+    ctaTarget: 'advisory',
+    ctaLabel: 'Talk to our advisory team',
+    publishedAt: '2027-01-01',
+  },
+  {
+    slug: 'outlook-2027-three-forces',
+    issue: 1,
+    pillar: 'build',
+    title: 'Outlook 2027 — Three Forces Reshaping the Market',
+    excerpt:
+      'The EU AI Act enters into force. The founder succession wave accelerates. PE dry powder reaches record levels. Three structural forces that will define the next 12 months.',
+    readingTimeMinutes: 5,
+    seoKeywords: ['tech M&A outlook 2027', 'EU AI Act M&A impact', 'founder succession wave', 'PE dry powder Europe', 'SaaS market forecast'],
+    ctaTarget: 'build',
+    ctaLabel: 'Prepare your exit',
+    publishedAt: '2027-01-01',
+  },
+  {
+    slug: 'aegryn-index-edition-1',
+    issue: 1,
+    pillar: 'build',
+    title: 'AEGRYN Index — Edition 1, Proprietary Certification Data',
+    excerpt:
+      'Our certification database, made public for the first time. Acceptance rate, dimension scores, grade distribution — the baseline against which every future edition will be measured.',
+    readingTimeMinutes: 3,
+    seoKeywords: ['AEGRYN Index', 'CIFS certification data', 'tech asset grade distribution', 'certification acceptance rate', 'AEGRYN methodology'],
+    ctaTarget: 'grade',
+    ctaLabel: 'Get your AEGRYN grade',
+    publishedAt: '2027-01-01',
+  },
+]

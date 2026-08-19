@@ -101,5 +101,7 @@ export const routing = defineRouting({
     '/magazine/report':                   '/magazine/report',
     '/magazine/report/[year]':            '/magazine/report/[year]',
     '/magazine/subscribe':                '/magazine/subscribe',
+    '/magazine/[issue]':                  '/magazine/[issue]',
+    '/magazine/[issue]/[slug]':           '/magazine/[issue]/[slug]',
   },
 })
