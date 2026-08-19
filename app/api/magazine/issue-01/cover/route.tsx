@@ -14,7 +14,7 @@
 import { NextResponse }  from 'next/server'
 import React             from 'react'
 import {
-  Document, Page, View, Text, StyleSheet, Font,
+  Document, Page, View, Text, StyleSheet,
   renderToBuffer,
 } from '@react-pdf/renderer'
 
