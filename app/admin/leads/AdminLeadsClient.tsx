@@ -425,17 +425,31 @@ export default function AdminLeadsClient({
 
       {/* Source tabs */}
       <div className="flex flex-wrap gap-2">
-        {SOURCES.map(({ key, label }) => (
-          <button key={key} onClick={() => nav('source', key)}
-            className={`px-5 py-2.5 text-[12px] font-semibold border transition-colors flex items-center gap-2 ${
-              source === key ? 'bg-gray-900 text-white border-gray-900' : 'border-gray-200 text-gray-600 hover:border-gray-400 bg-white'
-            }`}>
-            {label}
-            <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${source === key ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-500'}`}>
-              {counts[key] ?? 0}
-            </span>
-          </button>
-        ))}
+        {SOURCES.map(({ key, label }) => {
+          const pending = counts[key] ?? 0
+          return (
+            <button key={key} onClick={() => nav('source', key)}
+              title={pending > 0 ? `${pending} lead${pending > 1 ? 's' : ''} non traité${pending > 1 ? 's' : ''}` : 'Aucun lead en attente'}
+              className={`px-5 py-2.5 text-[12px] font-semibold border transition-colors flex items-center gap-2 ${
+                source === key ? 'bg-gray-900 text-white border-gray-900' : 'border-gray-200 text-gray-600 hover:border-gray-400 bg-white'
+              }`}>
+              {label}
+              {pending > 0 ? (
+                <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${
+                  source === key ? 'bg-red-500 text-white' : 'bg-red-100 text-red-700'
+                }`}>
+                  {pending}
+                </span>
+              ) : (
+                <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${
+                  source === key ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-400'
+                }`}>
+                  ✓
+                </span>
+              )}
+            </button>
+          )
+        })}
       </div>
 
       {/* Filtres grade (valuation only) + statut */}

@@ -96,19 +96,25 @@ export default async function AdminLeadsPage({
     fetchError = String(e)
   }
 
-  /* ── Counts pour badges ── */
+  /* ── Counts pour badges : leads non traités (new + pending) ── */
+  // Le badge affiche les leads qui requièrent une action, pas le total brut.
+  // "converted", "approved", "invited", "closed", "declined" sont exclus.
   const counts: Record<string, number> = {}
+  const PENDING_STATUSES = ['new', 'pending']
   try {
     const tables = [
-      { key: 'valuation',     table: 'valuation_leads'          },
-      { key: 'catalog',       table: 'catalog_waitlist'          },
-      { key: 'assessment',    table: 'assessment_day_bookings'   },
-      { key: 'alliances',     table: 'alliance_applications'     },
-      { key: 'prospects',     table: 'prospects'                 },
-      { key: 'auction_access',table: 'auction_access_requests'   },
+      { key: 'valuation',      table: 'valuation_leads'        },
+      { key: 'catalog',        table: 'catalog_waitlist'        },
+      { key: 'assessment',     table: 'assessment_day_bookings' },
+      { key: 'alliances',      table: 'alliance_applications'   },
+      { key: 'prospects',      table: 'prospects'               },
+      { key: 'auction_access', table: 'auction_access_requests' },
     ]
     await Promise.all(tables.map(async ({ key, table }) => {
-      const { count } = await supa.from(table).select('id', { count: 'exact', head: true })
+      const { count } = await supa
+        .from(table)
+        .select('id', { count: 'exact', head: true })
+        .in('status', PENDING_STATUSES)
       counts[key] = count ?? 0
     }))
   } catch { /* silencieux */ }
