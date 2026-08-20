@@ -143,7 +143,7 @@ export default async function NdaViewPage() {
           <NdaArticle num="6" title={t('a6Title')}>
             {t('a6Intro')}
             <ul className="mt-3 space-y-2 list-none">
-              {(['a6i1', 'a6i2', 'a6i3'] as const).map((key) => (
+              {(['a6i1', 'a6i2', 'a6i3', 'a6i4'] as const).map((key) => (
                 <li key={key} className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-1.5 shrink-0" />
                   {t(key)}
