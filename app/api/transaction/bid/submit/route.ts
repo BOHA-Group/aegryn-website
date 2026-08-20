@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
 
   /* ── 3. Récupérer l'actif ── */
   const { data: asset } = await supa
-    .from('transact_assets')
+    .from('auction_assets')
     .select('id, name, status, reserve_price, session_opens_at, session_closes_at, bid_opens_at, bid_closes_at')
     .eq('id', body.asset_id)
     .single()
@@ -86,7 +86,7 @@ export async function POST(req: NextRequest) {
 
   /* ── 4. Vérifier accès dossier actif ── */
   const { data: access } = await supa
-    .from('transact_asset_access')
+    .from('auction_asset_access')
     .select('id, status, expires_at')
     .eq('asset_id', body.asset_id)
     .eq('user_id', user.id)
@@ -116,7 +116,7 @@ export async function POST(req: NextRequest) {
 
   /* ── 6. Séquestre reçu obligatoire ── */
   const { data: sequester } = await supa
-    .from('transact_sequesters')
+    .from('auction_sequesters')
     .select('id, amount_chf, status')
     .eq('asset_id', body.asset_id)
     .eq('user_id', user.id)
@@ -137,7 +137,7 @@ export async function POST(req: NextRequest) {
 
   /* ── 8. Doublon — un seul bid par (asset_id, user_id) ── */
   const { data: existing } = await supa
-    .from('transact_offers')
+    .from('auction_bids')
     .select('id, status')
     .eq('asset_id', body.asset_id)
     .eq('user_id', user.id)
@@ -168,7 +168,7 @@ export async function POST(req: NextRequest) {
   }
 
   const { data: bid, error: insertError } = await supa
-    .from('transact_offers')
+    .from('auction_bids')
     .insert(insertPayload)
     .select('id')
     .single()
