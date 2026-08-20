@@ -1,31 +1,25 @@
 -- ============================================================
--- Migration 082 : Fix search_path mutable — 2 fonctions trigger
+-- Migration 082 : Fix search_path mutable — update_term_sheets_updated_at
+--                                            update_mandates_updated_at
 -- ============================================================
 --
--- Supabase Security Linter — 2 warnings WARN :
---   - public.update_term_sheets_updated_at
---   - public.update_mandates_updated_at
+-- Supabase Security Linter : function_search_path_mutable WARN
+-- Ces 2 fonctions n'étaient pas couvertes par la migration 064
+-- (qui a standardisé toutes les autres en SECURITY INVOKER + search_path='').
 --
--- Problème : sans SET search_path, une fonction plpgsql peut être
--- piégée par un search_path manipulé (schema injection). Un acteur
--- malveillant ayant CREATE SCHEMA peut substituer des objets du
--- schéma public (ex: remplacer now() par une fonction hostile).
---
--- Solution : ajouter SECURITY DEFINER SET search_path = public
--- sur ces fonctions trigger pour fixer le schéma de résolution.
--- Ces fonctions n'accèdent qu'à NEW.updated_at = now() — le
--- SECURITY DEFINER est sans risque ici (pas d'accès à d'autres
--- tables, pas de lecture de données sensibles).
+-- Alignement sur le standard 064 :
+--   SECURITY INVOKER (pas d'élévation de privilèges, triggers n'en ont pas besoin)
+--   SET search_path = '' (le plus strict — force qualification public.xxx)
 -- ============================================================
 
 
--- ── update_term_sheets_updated_at ────────────────────────────
+-- ── update_term_sheets_updated_at (070) ──────────────────────
 
 CREATE OR REPLACE FUNCTION public.update_term_sheets_updated_at()
 RETURNS TRIGGER
 LANGUAGE plpgsql
-SECURITY DEFINER
-SET search_path = public
+SECURITY INVOKER
+SET search_path = ''
 AS $$
 BEGIN
   NEW.updated_at = now();
@@ -34,13 +28,13 @@ END;
 $$;
 
 
--- ── update_mandates_updated_at ────────────────────────────────
+-- ── update_mandates_updated_at (072) ─────────────────────────
 
 CREATE OR REPLACE FUNCTION public.update_mandates_updated_at()
 RETURNS TRIGGER
 LANGUAGE plpgsql
-SECURITY DEFINER
-SET search_path = public
+SECURITY INVOKER
+SET search_path = ''
 AS $$
 BEGIN
   NEW.updated_at = now();
