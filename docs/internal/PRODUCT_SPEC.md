@@ -56,7 +56,7 @@ No buyer accesses a dossier without a signed NDA and verified qualification.
 
 ### 3.1 Seller Flow
 
-#### Flow A — Auction Certification (no upfront fee)
+#### Flow A — Transaction Certification (no upfront fee)
 ```
 Submit asset → Pre-screening (5 business days) → CIFS audit (4 dimensions) →
 Grade issued → Dossier published → NDA matching → Session presentation →
@@ -66,13 +66,13 @@ Offer → Closing → Commission deducted
 #### Flow B — AEGRYN Review (CHF 2 000 HT)
 ```
 Submit asset → Pay review fee (CHF 2 000 HT) → Written opinion (15 business days) →
-Internal use only → Optional: upgrade to Auction (fee deductible within 6 months)
+Internal use only → Optional: upgrade to Transaction (fee deductible within 6 months)
 ```
 
 #### Flow C — AEGRYN Review+ (CHF 5 000 HT)
 ```
 Submit asset → Pay fee (CHF 5 000 HT) → Expert partner review (20 business days) →
-Written opinion → Optional: upgrade to Auction (fee deductible within 6 months)
+Written opinion → Optional: upgrade to Transaction (fee deductible within 6 months)
 ```
 
 ### 3.2 Buyer Flow
@@ -158,8 +158,8 @@ See `TRANSFER_CHECKLIST.md` for the full operational checklist.
 
 | Stream | Model | Amount |
 |---|---|---|
-| Auction Certification — publication fee | One-time, paid by seller (deductible from commission if sold) | CHF 2 000 HT |
-| Auction Certification — success fee | Degressive % of closing price (8% → 6%), min. CHF 25 000 HT | — |
+| Transaction Certification — publication fee | One-time, paid by seller (deductible from commission if sold) | CHF 2 000 HT |
+| Transaction Certification — success fee | Degressive % of closing price (8% → 6%), min. CHF 25 000 HT | — |
 | AEGRYN Review | One-time, paid by seller — deductible within 6 months | CHF 2 000 HT |
 | AEGRYN Review+ | One-time, paid by seller — deductible within 6 months | CHF 5 000 HT |
 | Partner subscription | Monthly SaaS | CHF 89 HT/mo or annual |

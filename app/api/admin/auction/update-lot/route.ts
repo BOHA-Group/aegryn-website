@@ -1,6 +1,6 @@
 /**
  * PATCH /api/admin/auction/update-lot
- * Met à jour un lot auction : status, session dates, reserve_price, grade, buyer_premium_pct.
+ * Met à jour un lot transaction : status, session dates, reserve_price, grade, buyer_premium_pct.
  * Auth : session admin (cookie) uniquement.
  */
 import { NextRequest, NextResponse } from 'next/server'

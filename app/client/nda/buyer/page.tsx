@@ -86,7 +86,7 @@ export default async function BuyerNdaPage() {
           <section>
             <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">4. Accès à la data room</h2>
             <p>
-              L'accès à la data room est soumis à la signature d'un NDA Auction complémentaire par actif
+              L'accès à la data room est soumis à la signature d'un NDA Transaction complémentaire par actif
               (ou par session Aegryn). Le présent accord constitue le socle général de confidentialité
               applicable à l'ensemble des interactions avec la plateforme Aegryn.
             </p>

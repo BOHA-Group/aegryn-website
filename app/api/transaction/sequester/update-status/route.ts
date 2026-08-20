@@ -1,6 +1,6 @@
 /**
  * POST /api/transaction/sequester/update-status
- * Admin-only. Updates the status of an auction_sequester row.
+ * Admin-only. Updates the status of an auction_sequesters row (Supabase table).
  * Status 'received' → unlocks due diligence for the buyer.
  */
 import { NextRequest, NextResponse } from 'next/server'

@@ -179,8 +179,8 @@ Fonctionnalité non activée — le flux de facturation n'est pas encore opérat
 | `/client/register` (URL directe) | `app/client/register/page.tsx:14` | `if (process.env.VERCEL_ENV === 'production') redirect('/')` |
 | Nav desktop — bouton connexion | `components/layout/Nav.tsx:333` | `process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'` → `<span>` grisé + badge "Soon" |
 | Nav mobile — bouton connexion | `components/layout/Nav.tsx:521` | idem |
-| `/auction/catalog` — CTA login + register | `app/[locale]/auction/catalog/page.tsx:153` | `process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` |
-| `/auction/sessions` — lien register | `app/[locale]/auction/sessions/page.tsx:120` | `process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` |
+| `/transact/catalog` — CTA login + register | `app/[locale]/transact/catalog/page.tsx:153` | `process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` |
+| `/transact/sessions` — lien register | `app/[locale]/transact/sessions/page.tsx:120` | `process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` |
 | `/grade/submit/success` — bouton "Accéder à mon espace" | `app/[locale]/grade/submit/success/page.tsx:33` | `process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` |
 
 ### Pour réouvrir (tout ou partie)
@@ -193,8 +193,8 @@ Fonctionnalité non activée — le flux de facturation n'est pas encore opérat
 - `components/layout/Nav.tsx` : remplacer les deux blocs `{process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' ? (<span>...) : (<NextLink>...)}` par directement `<NextLink href="/client/login">` (desktop ligne ~333, mobile ligne ~521)
 
 **Réouvrir les CTA dans les pages marketing :**
-- `auction/catalog/page.tsx` : retirer la condition `&& process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` ligne 153
-- `auction/sessions/page.tsx` : retirer le `{process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' && (...)}` autour du lien register
+- `transact/catalog/page.tsx` : retirer la condition `&& process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` ligne 153
+- `transact/sessions/page.tsx` : retirer le `{process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' && (...)}` autour du lien register
 - `grade/submit/success/page.tsx` : retirer le `{process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' && (...)}` autour du NextLink
 
 ### Global-error en production
@@ -217,7 +217,7 @@ Fonctionnalité non activée — le flux de facturation n'est pas encore opérat
 - `c19b009` — useLayoutEffect sur 6 composants pin:true
 
 **Fichiers modifiés :**
-- `components/sections/HeroMountain.tsx`, `ManifestoSection.tsx`, `AssetHeroBanner.tsx`, `AssetHeroBannerVideo.tsx`, `AssetGrid.tsx`, `EcosystemDomains.tsx`, `StatementStrip.tsx`, `AuctionHero.tsx`, `GradeHero.tsx`, `WhyUseApps.tsx`, `MissionVideoSection.tsx`
+- `components/sections/HeroMountain.tsx`, `ManifestoSection.tsx`, `AssetHeroBanner.tsx`, `AssetHeroBannerVideo.tsx`, `AssetGrid.tsx`, `EcosystemDomains.tsx`, `StatementStrip.tsx`, `TransactionHero.tsx`, `GradeHero.tsx`, `WhyUseApps.tsx`, `MissionVideoSection.tsx`
 - `components/sections/AssetCarousel.tsx`, `HomeVideoSection.tsx`, `LogoZoomSection.tsx`, `VisionMissionBlock.tsx`
 - `app/global-error.tsx` — suppression du workaround `window.location.reload()`
 
@@ -247,19 +247,19 @@ Aucune modification de code requise.
 Journées d'expertise gratuites sur rendez-vous dans 4 villes européennes. Pre-screening confidentiel 45 min, estimation de grade indicatif, fourchette de valorisation.
 
 ### Pour réactiver
-1. Créer `app/[locale]/auction/assessment-days/page.tsx` (ou renommer le dossier si créé)
-2. Supprimer la redirection dans `next.config.ts` : `{ source: '/:locale/auction/assessment-days', destination: '/:locale/auction/sessions', permanent: true }`
-3. Ajouter le lien dans `Nav.tsx` (menu Enchères) avec la clé `nav.auctionAssessment`
+1. Créer `app/[locale]/transact/assessment-days/page.tsx` (ou renommer le dossier si créé)
+2. Supprimer la redirection dans `next.config.ts` : `{ source: '/:locale/transact/assessment-days', destination: '/:locale/transact/sessions', permanent: true }`
+3. Ajouter le lien dans `Nav.tsx` (menu Transactions) avec la clé `nav.transactionAssessment`
 4. Ajouter le lien dans `i18n/routing.ts` pathnames
 
 ### Clés i18n
 - Namespace : `assessmentDays` (complet × 6 langues dans les fichiers JSON)
-- Clé nav : `nav.auctionAssessment` = `"Assessment Days"` (identique × 6 langues)
+- Clé nav : `nav.transactionAssessment` = `"Assessment Days"` (identique × 6 langues)
 - Clé gradeEngine : `gradeEngine.ngNote` contient un CTA vers Assessment Day
 - Clé gradeEngine : `gradeEngine.ctaAssessment` = bouton de réservation
 
 ### Note
-`nav.auctionAssessment` a été retiré des 6 fichiers JSON le 28/07/2026 car non référencé dans Nav.tsx. À rétablir lors de la réactivation.
+`nav.transactionAssessment` a été retiré des 6 fichiers JSON le 28/07/2026 car non référencé dans Nav.tsx. À rétablir lors de la réactivation.
 
 ---
 

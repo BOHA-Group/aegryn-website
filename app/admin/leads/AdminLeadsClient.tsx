@@ -265,7 +265,7 @@ function ApproveAccessButton({ id, email }: { id: string; email: string }) {
   )
 }
 
-function AuctionAccessTable({ rows, onDelete }: { rows: Record<string, unknown>[]; onDelete: (id: string) => void }) {
+function TransactionAccessTable({ rows, onDelete }: { rows: Record<string, unknown>[]; onDelete: (id: string) => void }) {
   if (!rows.length) return <EmptyState />
   const BUYER_LABELS: Record<string, string> = { pe: 'PE/VC', strategic: 'Stratégique', family_office: 'Family Office', individual: 'Particulier' }
   return (
@@ -511,7 +511,7 @@ export default function AdminLeadsClient({
         {source === 'assessment'     && <AssessmentTable   rows={rows} onDelete={deleteOne} />}
         {source === 'alliances'      && <AlliancesTable    rows={rows} onDelete={deleteOne} />}
         {source === 'prospects'      && <ProspectsTable    rows={rows} onDelete={deleteOne} />}
-        {source === 'auction_access' && <AuctionAccessTable rows={rows} onDelete={deleteOne} />}
+        {source === 'auction_access' && <TransactionAccessTable rows={rows} onDelete={deleteOne} />}
       </div>
 
     </div>

@@ -1,5 +1,5 @@
 export type Pillar = 'build' | 'money' | 'ai' | 'people' | 'life'
-export type CtaTarget = 'build' | 'grade' | 'auction' | 'advisory' | 'newsletter'
+export type CtaTarget = 'build' | 'grade' | 'transaction' | 'advisory' | 'newsletter'
 export type IssueStatus = 'draft' | 'published' | 'archived'
 export type GradeCode = '★' | 'AAA' | 'AA' | 'A' | 'B'
 

@@ -1,5 +1,5 @@
 /**
- * /admin/transaction — Tableau de bord Aegryn Auction
+ * /admin/transaction — Tableau de bord Aegryn Transaction
  * Auth : Supabase session + rôle admin
  */
 import Link                    from 'next/link'

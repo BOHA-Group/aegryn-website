@@ -159,14 +159,14 @@ export function HeroMountain() {
             <div ref={ctasRef} className="flex flex-col items-start gap-4 shrink-0">
               <div className="flex items-center gap-4">
                 <Link
-                  href="/auction/how-to-sell"
+                  href="/transact/how-to-sell"
                   className="inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-3.5 hover:bg-ag-apex transition-colors duration-300"
                 >
                   {t('ctaPrimary')}
                   <ArrowUpRight size={13} />
                 </Link>
                 <Link
-                  href="/auction/how-to-buy"
+                  href="/transact/how-to-buy"
                   className="inline-flex items-center gap-3 border border-white/40 text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-3.5 hover:border-white hover:bg-white/10 transition-all duration-300"
                 >
                   {t('ctaSecondary')}

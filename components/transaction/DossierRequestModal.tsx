@@ -84,7 +84,7 @@ export default function DossierRequestModal({ assetId, assetName, onClose }: Pro
                 <strong>{assetName}</strong> apparaîtra dans votre espace client.
               </p>
               <p className="text-[11px] italic" style={{ color: T.grey6, fontFamily: 'Arial, sans-serif' }}>
-                Aucun email ne sera envoyé. Connectez-vous à /client/auction pour vérifier le statut.
+                Aucun email ne sera envoyé. Connectez-vous à /client/buyer pour vérifier le statut.
               </p>
               <button onClick={onClose}
                 className="mt-2 px-6 py-2.5 text-[11px] font-bold uppercase transition-opacity hover:opacity-80"

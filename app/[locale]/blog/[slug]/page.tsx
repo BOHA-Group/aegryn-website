@@ -19,7 +19,7 @@ const CATEGORY_KEYWORDS: Record<ArticleCategory, string[]> = {
   seller:        ['vendre son SaaS', 'cession startup tech', 'exit fondateur', 'valorisation SaaS', 'due diligence vendeur'],
   buyer:         ['acheter un SaaS', 'acquisition tech Europe', 'search fund', 'family office tech', 'private equity SaaS'],
   certification: ['certification actif tech', 'grade Aegryn', 'audit SaaS', 'CIFS Protocol', 'due diligence indépendante'],
-  strategy:      ['stratégie cession tech', 'M&A stratégie', 'place de marché actifs tech', 'Aegryn Auction', 'Swiss tech hub'],
+  strategy:      ['stratégie cession tech', 'M&A stratégie', 'place de marché actifs tech', 'Aegryn Transaction', 'Swiss tech hub'],
   case_study:    ['étude de cas SaaS', 'exit SaaS Europe', 'transaction certifiée', 'M&A case study tech', 'Aegryn Grade'],
   legal:         ['share deal asset deal', 'RGPD cession données', 'fiscalité exit fondateur', 'earnout SaaS', 'structuration juridique cession'],
   vertical:      ['LegalTech valorisation', 'FinTech M&A', 'AI SaaS multiples', 'vertical software Europe', 'actif tech certifié'],
@@ -247,7 +247,7 @@ export default async function ArticlePage({ params }: Props) {
               {t('ctaGrade')} <ArrowUpRight size={12} />
             </Link>
             <Link href="/transact" className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-5 py-3 hover:border-ag-black hover:text-ag-black transition-all">
-              {t('ctaAuction')}
+              {t('ctaTransaction')}
             </Link>
           </div>
         </div>

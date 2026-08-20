@@ -59,7 +59,7 @@ function daysLeft(expiresAt: string, sessionClosesAt: string | null): number {
 
 export default async function ClientBuyerPage({ params }: Props) {
   const { locale } = await params
-  const t = await getTranslations('clientAuction')
+  const t = await getTranslations('clientTransaction')
 
   /* ── Auth ── */
   const user = await getUser()

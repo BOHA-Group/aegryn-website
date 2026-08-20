@@ -309,10 +309,10 @@ export default function MemberDetailClient({
             )}
           </div>
 
-          {/* NDA Auction — signature plateforme */}
+          {/* NDA Transaction — signature plateforme */}
           <div className="bg-white border border-gray-200">
             <div className="px-5 py-3 border-b border-gray-100 flex items-center justify-between">
-              <p className="font-mono text-[9px] uppercase tracking-widest text-gray-500">NDA Auction — Signature plateforme</p>
+              <p className="font-mono text-[9px] uppercase tracking-widest text-gray-500">NDA Transaction — Signature plateforme</p>
               {ndaSignatures.length > 0 && (
                 <span className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-emerald-50 text-emerald-700 font-bold">
                   Signé

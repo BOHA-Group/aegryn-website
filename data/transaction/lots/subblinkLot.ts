@@ -3,7 +3,7 @@
  * Lot N° 001 — subblink.
  * Fixture de référence conforme à <AssetLotSheet />.
  *
- * En production, produit par mapRowToAsset() depuis auction_assets.
+ * En production, produit par mapRowToAsset() depuis auction_assets (table Supabase).
  *
  * ⚠️  grade.letter = "B+" est un grade préliminaire à confirmer par audit Aegryn.
  *     B+ n'est pas dans le barème officiel (★, AAA, AA, A, B) — couleur fallback
@@ -28,7 +28,7 @@ export const subblinkLot: AssetLot = {
   grade: {
     letter: "B",
     label:
-      "Actif technologique mature, traction commerciale démontrée, marché non disputé. Grade préliminaire fondateur — à confirmer par audit Aegryn Auction indépendant (KRYV Protocol + due diligence tierce) avant inscription définitive au catalogue.",
+      "Actif technologique mature, traction commerciale démontrée, marché non disputé. Grade préliminaire fondateur — à confirmer par audit Aegryn Transaction indépendant (KRYV Protocol + due diligence tierce) avant inscription définitive au catalogue.",
   },
 
   executiveSummary: {

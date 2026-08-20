@@ -5,8 +5,8 @@ import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { gsap, SplitText } from '@/lib/gsap'
 
-export function AuctionHero() {
-  const t          = useTranslations('auction.index')
+export function TransactionHero() {
+  const t          = useTranslations('transaction.index')
   const sectionRef = useRef<HTMLElement>(null)
   const headingRef = useRef<HTMLHeadingElement>(null)
   const descRef    = useRef<HTMLParagraphElement>(null)
@@ -44,13 +44,13 @@ export function AuctionHero() {
         </p>
         <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4">
           <Link
-            href="/auction/catalog"
+            href="/transact/catalog"
             className="inline-flex items-center justify-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             {t('ctaCatalog')} →
           </Link>
           <Link
-            href="/auction"
+            href="/transact"
             className="inline-flex items-center justify-center gap-2 border border-white/25 text-white/75 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
           >
             {t('ctaSession')}

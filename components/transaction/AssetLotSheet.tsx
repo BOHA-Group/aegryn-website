@@ -230,7 +230,7 @@ function CollapsibleSection({ numeral, title, icon: _icon, defaultOpen = true, c
 }
 
 export default function AssetLotSheet({ asset }: { asset: AssetLot }) {
-  const t = useTranslations('auctionSheet')
+  const t = useTranslations('transactionSheet')
   const {
     lotNumber, name, tagline, catalogContext,
     heroStats, grade,
@@ -248,7 +248,7 @@ export default function AssetLotSheet({ asset }: { asset: AssetLot }) {
         style={{ borderColor: T.line, backgroundColor: 'rgba(255,255,255,0.92)' }}>
         <span className="text-[11px] font-bold"
           style={{ color: T.ink, letterSpacing: '0.14em', fontFamily: 'Arial, sans-serif' }}>
-          Aegryn AUCTION
+          Aegryn TRANSACTION
         </span>
         <span className="text-[10px] hidden sm:inline"
           style={{ color: T.grey600, letterSpacing: '0.06em', fontFamily: 'Arial, sans-serif' }}>
@@ -381,7 +381,7 @@ export default function AssetLotSheet({ asset }: { asset: AssetLot }) {
           <div className="border-t-2 mb-4 mx-auto w-16" style={{ borderColor: T.gold }} />
           <p className="text-[12px] font-bold"
             style={{ color: T.ink, letterSpacing: '0.2em', fontFamily: 'Arial, sans-serif' }}>
-            Aegryn AUCTION
+            Aegryn TRANSACTION
           </p>
           <p className="text-[10px] mt-1"
             style={{ color: T.grey600, letterSpacing: '0.08em', fontFamily: 'Arial, sans-serif' }}>

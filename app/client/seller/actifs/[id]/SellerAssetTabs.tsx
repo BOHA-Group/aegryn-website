@@ -95,8 +95,8 @@ type Props = {
   assetArr: number | null
   assetAskingPrice: number | null
   assetSector: string | null
-  auctionReady: boolean
-  auctionReadyBlockers: string[] | null
+  transactionReady: boolean
+  transactionReadyBlockers: string[] | null
   assessment: Assessment | null
   allVersions: AssessmentVersion[]
   docs: DataRoomDoc[]
@@ -173,7 +173,7 @@ function deltaCls(n: number) {
 
 export default function SellerAssetTabs({
   assetId, assetAegGrade, assetArr, assetAskingPrice, assetSector,
-  auctionReady, auctionReadyBlockers, assessment, allVersions, docs, benchmark, termSheets,
+  transactionReady, transactionReadyBlockers, assessment, allVersions, docs, benchmark, termSheets,
 }: Props) {
   const [tab, setTab] = useState<'overview' | 'recommendations' | 'documents' | 'history' | 'termsheets'>('overview')
   const [tsLoading, setTsLoading] = useState<string | null>(null)
@@ -329,7 +329,7 @@ export default function SellerAssetTabs({
           {/* M&A Ready */}
           <div className="bg-white border border-gray-200 p-6">
             <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-4">Eligibilité processus M&amp;A</p>
-            {auctionReady ? (
+            {transactionReady ? (
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <CheckCircle2 size={18} className="text-emerald-500" />
@@ -345,9 +345,9 @@ export default function SellerAssetTabs({
                   <XCircle size={18} className="text-gray-400" />
                   <span className="font-mono text-[11px] uppercase tracking-widest text-gray-500">Non encore prêt</span>
                 </div>
-                {(auctionReadyBlockers ?? []).length > 0 && (
+                {(transactionReadyBlockers ?? []).length > 0 && (
                   <ul className="flex flex-col gap-1.5 mb-4">
-                    {(auctionReadyBlockers ?? []).map((b, i) => (
+                    {(transactionReadyBlockers ?? []).map((b, i) => (
                       <li key={i} className="flex items-start gap-2 font-sans text-[12px] text-gray-600">
                         <XCircle size={11} className="text-red-400 shrink-0 mt-0.5" />
                         {b}

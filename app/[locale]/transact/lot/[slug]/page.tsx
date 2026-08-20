@@ -56,9 +56,9 @@ async function createSupabaseServerClient() {
 
 type AccessState = 'ok' | 'not_authenticated' | 'no_access' | 'expired'
 
-export default async function AuctionLotPage({ params }: Props) {
+export default async function TransactionLotPage({ params }: Props) {
   const { locale, slug } = await params
-  const t = await getTranslations({ locale, namespace: 'auctionLot' })
+  const t = await getTranslations({ locale, namespace: 'transactionLot' })
 
   /* ── 1. Auth check ── */
   const supaUser = await createSupabaseServerClient()

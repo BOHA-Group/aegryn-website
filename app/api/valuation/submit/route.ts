@@ -66,7 +66,7 @@ Pour démarrer une certification officielle :
 → https://aegryn.com/grade/submit
 
 Pour réserver un Assessment Day gratuit :
-→ https://aegryn.com/auction/assessment-days
+→ https://aegryn.com/transact/assessment-days
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   `.trim()
 }

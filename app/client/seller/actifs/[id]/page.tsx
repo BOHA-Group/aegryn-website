@@ -276,8 +276,8 @@ export default async function SellerAssetDetailPage({
           assetArr={asset.arr ?? null}
           assetAskingPrice={asset.asking_price ?? null}
           assetSector={asset.sector ?? null}
-          auctionReady={Boolean(asset.auction_ready)}
-          auctionReadyBlockers={(asset.auction_ready_blockers as string[] | null) ?? null}
+          transactionReady={Boolean(asset.auction_ready)}
+          transactionReadyBlockers={(asset.auction_ready_blockers as string[] | null) ?? null}
           assessment={assessmentForTabs}
           allVersions={(allVersions ?? []).map(v => ({
             version_number: v.version_number ?? 0,

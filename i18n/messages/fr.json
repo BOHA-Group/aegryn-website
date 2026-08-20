@@ -21,12 +21,12 @@
     "clientSpace": "Espace client",
     "logout": "Déconnexion",
     "submitAsset": "Soumettre un actif",
-    "auctionCatalog": "Catalogue",
-    "auctionSell": "Céder un actif",
-    "auctionBuy": "Devenir acquéreur",
-    "auctionBidModels": "Modèles de proposition",
-    "auctionSession": "Processus",
-    "auctionResults": "Transactions clôturées",
+    "transactionCatalog": "Catalogue",
+    "transactionSell": "Céder un actif",
+    "transactionBuy": "Devenir acquéreur",
+    "transactionBidModels": "Modèles de proposition",
+    "transactionSession": "Processus",
+    "transactionResults": "Transactions clôturées",
     "gradeSystem": "Système de grade",
     "gradeMethod": "Méthodologie",
     "gradeSubmit": "Soumettre pour certification",
@@ -103,17 +103,17 @@
       "gradePending": "Certification en cours",
       "visitSite": "Visiter le site",
       "viewDetails": "Voir les détails",
-      "auctionEligible": "Éligible au processus de cession",
+      "transactionEligible": "Éligible au processus de cession",
       "internalOnly": "Usage interne",
       "confidential": "Confidentiel",
       "heroLabel": "Aegryn — Portefeuille propriétaire",
       "heroTitle": "Ce que nous\nconstruisons.",
       "heroSub": "Actifs appartenant au groupe Aegryn — non soumis par des tiers",
       "ownedNote": "Ces actifs appartiennent au groupe Aegryn. Ils ne sont pas en vente par défaut. Certains peuvent exceptionnellement faire l'objet d'un processus de cession sur décision stratégique du groupe.",
-      "auctionEligibleNote": "Actif éligible au processus de cession Aegryn — contact investisseurs sur demande.",
+      "transactionEligibleNote": "Actif éligible au processus de cession Aegryn — contact investisseurs sur demande.",
       "ctaBottom": "Vous souhaitez soumettre votre propre actif pour certification ?",
       "ctaGrade": "Soumettre un actif tiers",
-      "ctaAuction": "Voir les actifs en transaction",
+      "ctaTransaction": "Voir les actifs en transaction",
       "notStarted": "Non démarré",
       "certificationInProgress": "Certification en cours"
     },
@@ -900,7 +900,7 @@
         "general": "Demande générale",
         "advisory": "Conseil stratégique",
         "grade": "Certification d'actif (Grade)",
-        "auction": "Mandat de cession",
+        "transaction": "Mandat de cession",
         "partnership": "Partenariat",
         "investor": "Investisseur",
         "press": "Presse & Médias",
@@ -1641,7 +1641,7 @@
     "featuredLabel": "À la une",
     "allArticles": "Tous les articles",
     "ctaGrade": "Certifier mon actif",
-    "ctaAuction": "Voir les actifs en cession",
+    "ctaTransaction": "Voir les actifs en cession",
     "searchPlaceholder": "Rechercher un article...",
     "noArticles": "Aucun article dans cette catégorie pour l'instant.",
     "newsletterLabel": "Lettre d'information",
@@ -2855,7 +2855,7 @@
       ]
     }
   },
-  "auction": {
+  "transaction": {
     "meta": {
       "title": "Cessions M&A — Actifs tech certifiés CIFS",
       "desc": "Processus Aegryn : achetez ou vendez des actifs tech certifiés CIFS. Catalogue offmarket, mandat exclusif, transactions encadrées."
@@ -4203,7 +4203,7 @@
       ]
     }
   },
-  "auctionSubmit": {
+  "transactionSubmit": {
     "meta": {
       "title": "Soumettre un actif — Aegryn",
       "desc": "Soumettez votre actif tech certifié au processus de cession Aegryn. Droit suisse. Ouvert à l'international."
@@ -4315,7 +4315,7 @@
       "errorMsg": "Une erreur est survenue. Merci de réessayer ou de nous contacter directement."
     }
   },
-  "auctionLot": {
+  "transactionLot": {
     "accessDeniedTitle": "Accès restreint",
     "accessDeniedDesc": "Ce dossier est accessible uniquement aux acquéreurs qualifiés disposant d'une autorisation admin valide et d'un accès session actif.",
     "accessExpiredTitle": "Accès expiré",
@@ -5113,19 +5113,19 @@
     "metaDesc": "Vue d'ensemble de toutes les pages du site Aegryn.",
     "title": "Plan du site",
     "subtitle": "Vue d'ensemble de toutes les pages et sections du site.",
-    "groupTransact": "Transactions Aegryn",
+    "groupTransaction": "Transactions Aegryn",
     "groupGrade": "Grade",
     "groupAssets": "Actifs",
     "groupServices": "Services",
     "groupDiscover": "Blog",
     "groupCompany": "Entreprise",
     "groupLegal": "Légal",
-    "transact": "Catalogue",
-    "transactSell": "Vendre un actif",
-    "transactBuy": "Devenir acquéreur",
-    "transactBid": "Modèles de proposition",
-    "transactSession": "Processus",
-    "transactResults": "Transactions clôturées",
+    "transaction": "Catalogue",
+    "transactionSell": "Vendre un actif",
+    "transactionBuy": "Devenir acquéreur",
+    "transactionBid": "Modèles de proposition",
+    "transactionSession": "Processus",
+    "transactionResults": "Transactions clôturées",
     "grade": "Système de grade",
     "gradeMethod": "Méthodologie",
     "gradePartners": "Réseau d'experts",
@@ -5152,7 +5152,7 @@
     "groupBuild": "Build",
     "servicesBuild": "Conception d'actifs"
   },
-  "clientAuction": {
+  "clientTransaction": {
     "eyebrow": "Espace acquéreur",
     "title": "Mes dossiers Aegryn TRANSACT",
     "subtitle": "Les liens d'accès aux dossiers complets ne sont jamais communiqués par email. Ils apparaissent ici uniquement après validation de votre candidature.",
@@ -5329,7 +5329,7 @@
       "network": "Erreur réseau. Veuillez réessayer."
     }
   },
-  "auctionSheet": {
+  "transactionSheet": {
     "executiveSummaryKicker": "Résumé exécutif · Lecture en un coup d'œil",
     "executiveSummaryTitle": "Synthèse de l'actif",
     "disclosureKicker": "Mentions et conditions de diffusion",
@@ -6049,7 +6049,7 @@
       "fallbackName": "Cédant",
       "kpiActifs": "Actifs soumis",
       "kpiCertified": "Certifiés",
-      "kpiAuctionReady": "Prêt à la cession",
+      "kpiTransactionReady": "Prêt à la cession",
       "kpiTransactions": "Transactions",
       "kpiKycOk": "KYC validé",
       "kpiKycIncomplete": "KYC incomplet",

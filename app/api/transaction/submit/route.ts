@@ -17,7 +17,7 @@ async function sendEmail(to: string, subject: string, text: string) {
       text,
     }),
   })
-  if (!res.ok) console.error('[auction/submit] Resend error', await res.text())
+  if (!res.ok) console.error('[transaction/submit] Resend error', await res.text())
 }
 
 const schema = z.object({
@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
       .select('id')
       .single()
 
-    if (insertError) console.error('[auction/submit] insert error:', insertError)
+    if (insertError) console.error('[transaction/submit] insert error:', insertError)
 
     const internal = process.env.Aegryn_INTERNAL_EMAIL ?? 'team@boha-group.com'
     await Promise.allSettled([
@@ -109,7 +109,7 @@ export async function POST(req: NextRequest) {
     if (err instanceof z.ZodError) {
       return NextResponse.json({ error: 'validation', issues: err.issues }, { status: 400 })
     }
-    console.error('[auction/submit]', err)
+    console.error('[transaction/submit]', err)
     return NextResponse.json({ error: 'internal' }, { status: 500 })
   }
 }

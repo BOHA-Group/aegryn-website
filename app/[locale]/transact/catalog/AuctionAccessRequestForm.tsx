@@ -15,7 +15,7 @@ const CAPACITIES = [
   '< 100K€', '100K€ – 500K€', '500K€ – 2M€', '2M€ – 10M€', '> 10M€',
 ]
 
-export default function AuctionAccessRequestForm({ locale, userId, userEmail, status }: Props) {
+export default function TransactionAccessRequestForm({ locale, userId, userEmail, status }: Props) {
   const t = useTranslations('accessForm')
   const [done,    setDone]    = useState(false)
   const [loading, setLoading] = useState(false)

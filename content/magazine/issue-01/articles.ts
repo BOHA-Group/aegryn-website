@@ -62,7 +62,7 @@ export const ARTICLES_01: MagazineArticle[] = [
       'Five transactions from H1 2026 analysed through the CIFS lens. From Windsor.ai to OneStream — what worked, what did not, and what each grade would have signalled.',
     readingTimeMinutes: 8,
     seoKeywords: ['European tech deals 2026', 'SaaS acquisition analysis', 'M&A case study', 'Windsor AI acquisition', 'HealthTech deal'],
-    ctaTarget: 'auction',
+    ctaTarget: 'transaction',
     ctaLabel: 'List your asset on AEGRYN Transact',
     publishedAt: '2027-01-01',
   },

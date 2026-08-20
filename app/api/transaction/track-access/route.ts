@@ -1,6 +1,6 @@
 /**
- * POST /api/auction/track-access
- * Enregistre une ouverture de dossier dans auction_access_log.
+ * POST /api/transaction/track-access
+ * Enregistre une ouverture de dossier dans auction_access_log (table Supabase).
  * Appelé côté client à chaque chargement de la page dossier.
  * IP hashée SHA-256 + salt (RGPD/nLPD).
  */
@@ -16,7 +16,7 @@ const schema = z.object({
   page:      z.enum(['dossier', 'teaser']).default('dossier'),
 })
 
-const IP_SALT = process.env.IP_HASH_SALT ?? 'aegryn-auction-salt'
+const IP_SALT = process.env.IP_HASH_SALT ?? 'aegryn-transaction-salt'
 
 function hashIp(ip: string | null): string | null {
   if (!ip) return null

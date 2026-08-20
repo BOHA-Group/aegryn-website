@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-export default async function AuctionSellPage({ params }: Props) {
+export default async function TransactionSellPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'transact.sell' })
   // locale resolved above for getTranslations

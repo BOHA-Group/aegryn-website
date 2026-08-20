@@ -1,10 +1,10 @@
 /**
- * POST /api/auction/grant-access
+ * POST /api/transaction/grant-access
  * Route admin uniquement (JWT role = 'admin').
  *
  * Accorde l'accès au dossier complet.
  * expires_at = LEAST(now + 30 jours, session_closes_at)
- * Aucun email envoyé — l'acquéreur découvrira le lien dans /client/auction.
+ * Aucun email envoyé — l'acquéreur découvrira le lien dans /client/buyer.
  */
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient }       from '@/lib/supabase'

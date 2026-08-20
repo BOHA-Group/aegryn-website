@@ -8,8 +8,8 @@ import { ArrowUpRight, CheckCircle2, ChevronLeft, Scale } from 'lucide-react'
 type IpKey = 'yes' | 'no' | 'pending'
 const IP_KEYS: IpKey[] = ['yes', 'no', 'pending']
 
-export default function AuctionSubmitForm() {
-  const t    = useTranslations('auctionSubmit')
+export default function TransactionSubmitForm() {
+  const t    = useTranslations('transactionSubmit')
   const tNav = useTranslations('nav')
 
   const [ipChoice,    setIpChoice]    = useState<IpKey | ''>('')

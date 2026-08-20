@@ -1,8 +1,8 @@
 /**
- * POST /api/auction/request-dossier
+ * POST /api/transaction/request-dossier
  *
  * Crée une demande d'accès au dossier complet.
- * Aucun email envoyé — l'URL n'est révélée que dans /client/auction
+ * Aucun email envoyé — l'URL n'est révélée que dans /client/buyer
  * après approbation admin, pour éviter tout forward non autorisé.
  */
 import { NextRequest, NextResponse } from 'next/server'

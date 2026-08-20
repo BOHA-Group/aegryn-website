@@ -73,7 +73,7 @@ export default async function SellerDashboardPage() {
   const unreadCount   = (notifications ?? []).filter(n => !n.read_at).length
 
   const certifiedCount  = (assets ?? []).filter(a => ['graded','published','sold'].includes(a.status)).length
-  const auctionReadyCount = (assets ?? []).filter(a => Boolean(a.auction_ready)).length
+  const transactionReadyCount = (assets ?? []).filter(a => Boolean(a.auction_ready)).length
   const trsAlerts       = (assets ?? []).filter(a => a.trs === 'blocked' || a.trs === 'remediation')
 
   return (
@@ -155,11 +155,11 @@ export default async function SellerDashboardPage() {
           <p className="font-sans text-[11px] text-gray-400 mt-0.5">Certifiés</p>
         </div>
 
-        <div className={`bg-white border p-5 ${ auctionReadyCount > 0 ? 'border-emerald-200 bg-emerald-50/30' : 'border-gray-200' }`}>
+        <div className={`bg-white border p-5 ${ transactionReadyCount > 0 ? 'border-emerald-200 bg-emerald-50/30' : 'border-gray-200' }`}>
           <div className="flex items-center justify-between mb-3">
-            <Zap size={16} className={auctionReadyCount > 0 ? 'text-emerald-500' : 'text-gray-300'} />
+            <Zap size={16} className={transactionReadyCount > 0 ? 'text-emerald-500' : 'text-gray-300'} />
           </div>
-          <p className={`font-mono font-bold text-[22px] ${ auctionReadyCount > 0 ? 'text-emerald-700' : 'text-gray-400' }`}>{auctionReadyCount}</p>
+          <p className={`font-mono font-bold text-[22px] ${ transactionReadyCount > 0 ? 'text-emerald-700' : 'text-gray-400' }`}>{transactionReadyCount}</p>
           <p className="font-sans text-[11px] text-gray-400 mt-0.5">TRANSACT Ready</p>
         </div>
 

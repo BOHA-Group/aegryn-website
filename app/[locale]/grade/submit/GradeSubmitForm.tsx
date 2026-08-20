@@ -424,7 +424,7 @@ export default function GradeSubmitForm() {
                     Accord de mise au catalogue Aegryn
                   </p>
                   <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
-                    La <strong>Certification Auction</strong> inclut la mise au catalogue d&apos;Aegryn et l&apos;ouverture aux acquéreurs membres qualifiés. Votre actif sera préparé à <strong>J+15</strong> après admission et visible aux acquéreurs à <strong>J+45 minimum</strong>.
+                    La <strong>Certification Transaction</strong> inclut la mise au catalogue d&apos;Aegryn et l&apos;ouverture aux acquéreurs membres qualifiés. Votre actif sera préparé à <strong>J+15</strong> après admission et visible aux acquéreurs à <strong>J+45 minimum</strong>.
                   </p>
                   <div className="bg-amber-50 border border-amber-200 px-4 py-3 text-[12px] text-amber-800 font-sans leading-relaxed">
                     <strong>Frais de publication : CHF 2 000 HT</strong> — Cet acompte est déduit de la commission Aegryn en cas de vente. Il est conservé par Aegryn si aucune transaction n&apos;est réalisée (cf. CGV § 11 et NDA signé). Une facture sera émise après validation de votre dossier par notre équipe.
@@ -453,7 +453,7 @@ export default function GradeSubmitForm() {
                   </label>
                   {evalType === 'full_certification' && (!catalogueAgreed || !feeAgreed) && (
                     <p className="font-sans text-[11px] text-amber-700">
-                      Les deux cases doivent être cochées pour soumettre une demande de Certification Auction.
+                      Les deux cases doivent être cochées pour soumettre une demande de Certification Transaction.
                     </p>
                   )}
                 </div>

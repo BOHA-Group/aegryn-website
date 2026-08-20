@@ -17,14 +17,14 @@ type SitemapGroup = {
 
 const GROUPS: SitemapGroup[] = [
   {
-    labelKey: 'groupAuction',
+    labelKey: 'groupTransaction',
     links: [
-      { labelKey: 'auction',        href: '/transact/catalog' },
-      { labelKey: 'auctionSell',    href: '/transact/how-to-sell' },
-      { labelKey: 'auctionBuy',     href: '/transact/how-to-buy' },
-      { labelKey: 'auctionBid',     href: '/transact/bid-models' },
-      { labelKey: 'auctionSession', href: '/transact/sessions' },
-      { labelKey: 'auctionResults', href: '/transact/results' },
+      { labelKey: 'transaction',        href: '/transact/catalog' },
+      { labelKey: 'transactionSell',    href: '/transact/how-to-sell' },
+      { labelKey: 'transactionBuy',     href: '/transact/how-to-buy' },
+      { labelKey: 'transactionBid',     href: '/transact/bid-models' },
+      { labelKey: 'transactionSession', href: '/transact/sessions' },
+      { labelKey: 'transactionResults', href: '/transact/results' },
     ],
   },
   {

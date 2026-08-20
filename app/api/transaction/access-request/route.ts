@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
       })
 
     if (error) {
-      console.error('[auction/access-request]', error)
+      console.error('[transaction/access-request]', error)
       return NextResponse.json({ error: error.message }, { status: 500 })
     }
 
@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
     if (err instanceof z.ZodError) {
       return NextResponse.json({ error: 'validation', issues: err.issues }, { status: 400 })
     }
-    console.error('[auction/access-request]', err)
+    console.error('[transaction/access-request]', err)
     return NextResponse.json({ error: 'internal' }, { status: 500 })
   }
 }

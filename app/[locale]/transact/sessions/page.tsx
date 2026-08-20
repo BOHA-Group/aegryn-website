@@ -12,13 +12,13 @@ type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'auction.session' })
+  const t = await getTranslations({ locale, namespace: 'transaction.session' })
   return { title: t('title'), description: t('registerDesc') }
 }
 
-export default async function AuctionSessionPage({ params }: Props) {
+export default async function TransactionSessionPage({ params }: Props) {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'auction.session' })
+  const t = await getTranslations({ locale, namespace: 'transaction.session' })
 
   const user = await getUser()
   const accessStatus = user

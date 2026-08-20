@@ -21,12 +21,12 @@
     "clientSpace": "Kundenbereich",
     "logout": "Abmelden",
     "submitAsset": "Asset einreichen",
-    "auctionCatalog": "Katalog",
-    "auctionSell": "Asset verkaufen",
-    "auctionBuy": "Käufer werden",
-    "auctionBidModels": "Angebotsmodelle",
-    "auctionSession": "Prozess",
-    "auctionResults": "Abgeschlossene Transaktionen",
+    "transactionCatalog": "Katalog",
+    "transactionSell": "Asset verkaufen",
+    "transactionBuy": "Käufer werden",
+    "transactionBidModels": "Angebotsmodelle",
+    "transactionSession": "Prozess",
+    "transactionResults": "Abgeschlossene Transaktionen",
     "gradeSystem": "Grade-System",
     "gradeMethod": "Methodik",
     "gradeSubmit": "Zur Zertifizierung einreichen",
@@ -102,17 +102,17 @@
       "gradePending": "Zertifizierung läuft",
       "visitSite": "Website besuchen",
       "viewDetails": "Details ansehen",
-      "auctionEligible": "M&A-fähig",
+      "transactionEligible": "M&A-fähig",
       "internalOnly": "Interner Gebrauch",
       "confidential": "Vertraulich",
       "heroLabel": "Aegryn — Proprietäres Ökosystem",
       "heroTitle": "Was wir\nbauen.",
       "heroSub": "6 Assets · 3 Kategorien · Schweiz & Europa",
       "ownedNote": "Diese Assets gehören zur Aegryn-Gruppe. Sie stehen standardmäßig nicht zum Verkauf. Einige können ausnahmsweise auf strategischen Beschluss der Gruppe hin zur Transaktion angeboten werden.",
-      "auctionEligibleNote": "Asset für M&A geeignet — Investorenkontakt auf Anfrage.",
+      "transactionEligibleNote": "Asset für M&A geeignet — Investorenkontakt auf Anfrage.",
       "ctaBottom": "Möchten Sie Ihr eigenes Asset zur Zertifizierung einreichen?",
       "ctaGrade": "Drittanbieter-Asset einreichen",
-      "ctaAuction": "M&A-Transaktionen ansehen",
+      "ctaTransaction": "M&A-Transaktionen ansehen",
       "notStarted": "Nicht begonnen",
       "certificationInProgress": "Zertifizierung läuft"
     },
@@ -515,7 +515,7 @@
         "title": "Sie suchen eine Akquisition.",
         "desc": "Unser Katalog ist qualifizierten Käufern vorbehalten.",
         "btn": "Käuferbewerbung einreichen",
-        "href": "/auction/how-to-buy"
+        "href": "/transact/how-to-buy"
       },
       "partner": {
         "title": "Sie sind potenzieller Partner.",
@@ -867,7 +867,7 @@
         "general": "Allgemeine Anfrage",
         "advisory": "Advisory",
         "grade": "Vermögenszertifizierung (Grade)",
-        "auction": "M&A-Prozess",
+        "transaction": "M&A-Prozess",
         "partnership": "Partnerschaft",
         "investor": "Investor",
         "press": "Presse & Medien",
@@ -2240,7 +2240,7 @@
     "featuredLabel": "Empfohlen",
     "allArticles": "Alle Artikel",
     "ctaGrade": "Mein Asset zertifizieren",
-    "ctaAuction": "Sessions ansehen",
+    "ctaTransaction": "Sessions ansehen",
     "searchPlaceholder": "Artikel suchen...",
     "noArticles": "Noch keine Artikel in dieser Kategorie.",
     "newsletterLabel": "Newsletter",
@@ -2626,7 +2626,7 @@
       ]
     }
   },
-  "auction": {
+  "transaction": {
     "meta": {
       "title": "M&A-Transaktionen — Zertifizierte Tech-Asset-Transaktionen",
       "desc": "Aegryn-Sessions: Zertifizierte Tech-Assets kaufen oder verkaufen."
@@ -2983,7 +2983,7 @@
       }
     ]
   },
-  "auctionNarrative": {
+  "transactionNarrative": {
     "label": "M&A-Transaktionen",
     "title": "Manche Assets verdienen mehr\nals eine öffentliche Listung.",
     "desc": "Aegryn ist keine offene Plattform. Es ist ein vertraulicher Veräußerungsprozess zwischen Verkäufern, die unsere Zertifizierung bestanden haben, und Käufern, die ihre Leistungsfähigkeit bewiesen haben.\n\nWeniger als 25% der eingereichten Assets werden akzeptiert. 100% der Käufer sind vorqualifiziert. Jede Transaktion wird vollständig dokumentiert und abgesichert.",
@@ -3058,8 +3058,8 @@
       "label": "GRADE",
       "desc": "Unabhängige, dokumentierte Zertifizierung"
     },
-    "auction": {
-      "label": "AUCTION",
+    "transaction": {
+      "label": "TRANSACTION",
       "desc": "Institutionell gerahmte Transaktionen"
     }
   },
@@ -3364,10 +3364,10 @@
         {
           "phase": "Frühphase - 6 bis 18 Monate",
           "title": "Frühphasiger Verkauf",
-          "desc": "Ihr Asset hat eine solide Architektur und erste Traktion. Aegryn strukturiert den Verkauf via Auction-Session oder direkte vertrauliche Transaktion.",
+          "desc": "Ihr Asset hat eine solide Architektur und erste Traktion. Aegryn strukturiert den Verkauf via Transaction-Session oder direkte vertrauliche Transaktion.",
           "grade": "Zielgrade: A - Ticket 100K bis 500K EUR",
           "cta": "Akquisitionsmodelle ansehen",
-          "href": "/auction/bid-models"
+          "href": "/transact/bid-models"
         },
         {
           "phase": "Marktreife - 18 bis 36 Monate",
@@ -3459,7 +3459,7 @@
     "exitBanner": {
       "text": "Ein Verkauf ist eine Option, nie eine Pflicht. Wenn Sie jemals verkaufen möchten — frühphasig oder bei Reife — ist das Asset dafür konzipiert. Exit via Aegryn oder vertrauliche Transaktion ist verfügbar, wenn das Grade es erlaubt.",
       "cta": "Mehr über den Verkaufsprozess erfahren",
-      "href": "/auction/how-it-works"
+      "href": "/transact/how-it-works"
     },
     "cta": {
       "title": "Ein Projekt im Kopf?",
@@ -3541,7 +3541,7 @@
       "legalNote": "Die finanziellen Bedingungen der Zertifizierung sind in unseren Allgemeinen Geschäftsbedingungen verfügbar, die beim ersten Austausch mitgeteilt werden. Keine Verpflichtung zu diesem Zeitpunkt.",
       "evalTypeTitle": "Welches Bewertungsniveau wünschen Sie?",
       "evalTypeFull": {
-        "label": "Auction-Zertifizierung",
+        "label": "Transaction-Zertifizierung",
         "desc": "Nur Erfolgsbeteiligung. Vollständiges unabhängiges Aegryn-Protokoll (4 Dimensionen C/I/F/S), inklusive wenn die Transaktion über Aegryn abgeschlossen wird.",
         "price": "Kostenlos"
       },
@@ -3555,7 +3555,7 @@
         "desc": "Schriftliches Gutachten + Prüfung durch einen externen Partner (Kanzlei oder Wirtschaftsprüfer) auf Anfrage innerhalb von 20 Werktagen. Querverweise mit unseren Alliance-Partnern.",
         "price": "5.000 CHF zzgl. MwSt."
       },
-      "evalDeductibleNote": "Dieser Betrag wird vollständig von den Zertifizierungskosten abgezogen, wenn Sie innerhalb von 6 Monaten nach Erhalt Ihres Reviews einen vollständigen Auction-Prozess einleiten.",
+      "evalDeductibleNote": "Dieser Betrag wird vollständig von den Zertifizierungskosten abgezogen, wenn Sie innerhalb von 6 Monaten nach Erhalt Ihres Reviews einen vollständigen Transaction-Prozess einleiten.",
       "partnerSelectLabel": "Einzubeziehender Partner",
       "partnerLegal": "Rechtsanwaltskanzlei",
       "partnerAccounting": "Wirtschaftsprüfer",
@@ -3604,8 +3604,8 @@
       "desc": "Club Deal, Corporate, Fonds, Equity Stake, die 4 Aegryn-Akquisitionsmodelle mit dem Tech Transaction Promise in 5 Schritten."
     },
     "hero": {
-      "back": "← Auction",
-      "label": "Aegryn AUCTION",
+      "back": "← Transaction",
+      "label": "Aegryn TRANSACTION",
       "title": "Wählen Sie Ihr Akquisitionsmodell",
       "desc": "Vier Käuferprofile, eine Anforderung: Dealqualität. Jedes Modell ist auf Ihre Struktur und Ziele zugeschnitten."
     },
@@ -4091,7 +4091,7 @@
       ]
     }
   },
-  "auctionSubmit": {
+  "transactionSubmit": {
     "meta": {
       "title": "Asset einreichen — Aegryn M&A Switzerland",
       "desc": "Reichen Sie Ihr Tech-Asset für eine Aegryn M&A Switzerland Session ein. Schweizer Recht. International offen."
@@ -4203,7 +4203,7 @@
       "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt."
     }
   },
-  "auctionLot": {
+  "transactionLot": {
     "accessDeniedTitle": "Zugang beschränkt",
     "accessDeniedDesc": "Dieses Dossier ist nur qualifizierten Käufern mit einer gültigen Admin-Genehmigung und aktivem Session-Zugang zugänglich.",
     "accessExpiredTitle": "Zugang abgelaufen",
@@ -4293,7 +4293,7 @@
     "s2Review": "Schriftliches Gutachten eines Aegryn-Analysten zu einem eingereichten Tech-Asset. Bearbeitungszeit: 15 Werktage. Ohne externe Validierung, nicht im Katalog veröffentlichbar. Nur indikativer Wert. Vollständig auf Zertifizierungsgebühren anrechenbar, wenn der Prozess innerhalb von 6 Monaten gestartet wird.",
     "s2ReviewPlusTitle": "Aegryn Review+",
     "s2ReviewPlus": "Schriftliches Gutachten ergänzt durch einen externen Partner. Bearbeitungszeit: 20 Werktage. Nicht offiziell im Sinne der vollständigen Zertifizierung, nicht veröffentlichbar. Unter gleichen Bedingungen vollständig anrechenbar.",
-    "s2CertTitle": "Auction-Zertifizierung",
+    "s2CertTitle": "Transaction-Zertifizierung",
     "s2Cert": "Vollständiger mehrdimensionaler Auditprozess über alle 4 C/I/F/S-Dimensionen. Durchgeführt von zertifizierten Aegryn-Analysten gemäß dem offiziellen Protokoll. Offizieller AEG-Grade vergeben und im Katalog veröffentlichbar. Honorar: erfolgsbasiert (Provision beim Verkauf).",
     "s2AdvisoryTitle": "Aegryn Advisory",
     "s2Advisory": "Strategische und operative Begleitung von Assets zur Sanierung und Neueinreichung. Honorar nach Angebot.",
@@ -4327,7 +4327,7 @@
     "s9Title": "Anwendbares Recht und Streitbeilegung",
     "s9": "Diese AGB unterliegen dem materiellen Schweizer Recht. Jede Streitigkeit unterliegt der ausschliesslichen Zuständigkeit der Gerichte des Kantons, in dem Aegryn ansässig ist. Die Parteien versuchen, Meinungsverschiedenheiten innerhalb von 30 Tagen gütlich beizulegen.",
     "s10Title": "Data Room und Zugang zu Due-Diligence-Dokumenten",
-    "s10": "Im Rahmen des Zertifizierungs- und Transaktionsprozesses stellt Aegryn einen sicheren Data Room zur Verfügung, in dem der Verkäufer die für die CIFS-Analyse erforderlichen Dokumente hochladen kann. Der Zugang zu diesen Dokumenten wird über ein dreistufiges Berechtigungssystem streng kontrolliert: Administrator/Verkäufer, zugewiesener zertifizierter Partner und Käufer, der das Auction-NDA unterzeichnet hat.\n\nJede Einsichtnahme wird protokolliert (Identität, IP-Adresse, Zeitstempel, Dauer). Technische Abschreckungsmassnahmen sind implementiert (Download-Sperre, Erkennung von Screenshot-Versuchen, dynamisches Wasserzeichen). Diese Massnahmen stellen eine ernsthafte Abschreckung und einen protokollierten Nachweis im Streitfall dar, können jedoch nicht zu 100% verhindern, dass Dokumente mit externen Mitteln (Fotografieren, Erfassung durch ein Drittgerät) abgegriffen werden.\n\nDer Käufer erkennt an, dass die im Data Room eingesehenen Dokumente durch diese AGB und das unterzeichnete Auction-NDA geschützt sind. Er verpflichtet sich vertraglich, kein eingesehenes Dokument zu reproduzieren, weiterzugeben oder offenzulegen, widrigenfalls Schadensersatz und rechtliche Schritte drohen. Die Haftung von Aegryn bei einem Leck infolge einer Umgehung der technischen Schutzmassnahmen ist ausdrücklich ausgeschlossen.",
+    "s10": "Im Rahmen des Zertifizierungs- und Transaktionsprozesses stellt Aegryn einen sicheren Data Room zur Verfügung, in dem der Verkäufer die für die CIFS-Analyse erforderlichen Dokumente hochladen kann. Der Zugang zu diesen Dokumenten wird über ein dreistufiges Berechtigungssystem streng kontrolliert: Administrator/Verkäufer, zugewiesener zertifizierter Partner und Käufer, der das Transaction-NDA unterzeichnet hat.\n\nJede Einsichtnahme wird protokolliert (Identität, IP-Adresse, Zeitstempel, Dauer). Technische Abschreckungsmassnahmen sind implementiert (Download-Sperre, Erkennung von Screenshot-Versuchen, dynamisches Wasserzeichen). Diese Massnahmen stellen eine ernsthafte Abschreckung und einen protokollierten Nachweis im Streitfall dar, können jedoch nicht zu 100% verhindern, dass Dokumente mit externen Mitteln (Fotografieren, Erfassung durch ein Drittgerät) abgegriffen werden.\n\nDer Käufer erkennt an, dass die im Data Room eingesehenen Dokumente durch diese AGB und das unterzeichnete Transaction-NDA geschützt sind. Er verpflichtet sich vertraglich, kein eingesehenes Dokument zu reproduzieren, weiterzugeben oder offenzulegen, widrigenfalls Schadensersatz und rechtliche Schritte drohen. Die Haftung von Aegryn bei einem Leck infolge einer Umgehung der technischen Schutzmassnahmen ist ausdrücklich ausgeschlossen.",
     "s11Title": "Transaktionshonorar",
     "s11Charge": "Die Transaktionsprovision von Aegryn wird vollständig vom Veräusserer (Verkäufer) getragen. Sie wird von Aegryn direkt beim Closing vom hinterlegten Betrag einbehalten, bevor der Nettoerlös an den Verkäufer ausgezahlt wird. Der Erwerber zahlt im Rahmen der Transaktion keine Provision an Aegryn. Der Zugang zum Katalog und zum Akquisitionsprozess ist für qualifizierte Käufermitglieder kostenlos.",
     "s11Grid": "Die Transaktionsprovision von Aegryn wird auf den beim Closing tatsächlich gezahlten Festkaufpreis berechnet, gemäss folgender degressiver Staffelung:",
@@ -4341,7 +4341,7 @@
     ],
     "s11Minimum": "Mindestprovision: 25.000 CHF zzgl. MwSt., unabhängig vom anwendbaren Satz und dem endgültigen Transaktionspreis.",
     "s11NonSaleTitle": "Gebühren bei Nichtzustandekommen der Transaktion",
-    "s11NonSale": "Für den Fall, dass ein zum vollständigen Zertifizierungsprozess (Certification Auction) zugelassenes Asset aus dem Katalog zurückgezogen wird oder am Ende des Aegryn-Prozesses keine Transaktion zustande kommt, sind Aegryn Mindestpauschalgebühren von CHF 2.000 zzgl. MwSt. als Gegenleistung für die von seinen Teams erbrachten Leistungen geschuldet: C/I/F/S-Analyse, Vergabe des offiziellen Grades, Vorbereitung der Katalogakte, Kommunikations- und Marketingmaßnahmen sowie die während der Präsenz des Assets im Aegryn-Katalog erlangte Produktsichtbarkeit. Diese Gebühren sind unabhängig vom kommerziellen Ergebnis fällig und am Tag des Rückzugs oder Abschlusses ohne Transaktion exigibel. Sie werden dem Veräußerer direkt in Rechnung gestellt. Diese Klausel gilt nicht bei einer ordnungsgemäß dokumentierten nicht erfüllten aufschiebenden Bedingung.",
+    "s11NonSale": "Für den Fall, dass ein zum vollständigen Zertifizierungsprozess (Certification Transaction) zugelassenes Asset aus dem Katalog zurückgezogen wird oder am Ende des Aegryn-Prozesses keine Transaktion zustande kommt, sind Aegryn Mindestpauschalgebühren von CHF 2.000 zzgl. MwSt. als Gegenleistung für die von seinen Teams erbrachten Leistungen geschuldet: C/I/F/S-Analyse, Vergabe des offiziellen Grades, Vorbereitung der Katalogakte, Kommunikations- und Marketingmaßnahmen sowie die während der Präsenz des Assets im Aegryn-Katalog erlangte Produktsichtbarkeit. Diese Gebühren sind unabhängig vom kommerziellen Ergebnis fällig und am Tag des Rückzugs oder Abschlusses ohne Transaktion exigibel. Sie werden dem Veräußerer direkt in Rechnung gestellt. Diese Klausel gilt nicht bei einer ordnungsgemäß dokumentierten nicht erfüllten aufschiebenden Bedingung.",
     "s11Earnout": "Bei einem Earnout wird auf jede vom Veräusserer tatsächlich empfangene Earnout-Zahlung eine zusätzliche Provision von 5% erhoben, begrenzt auf den für die Gesamtpreisklasse geltenden Satz.",
     "s11Payment": "Die Provision ist am Tag der Freigabe des Hinterlegungsbetrags fällig und wird von Aegryn direkt vom hinterlegten Betrag einbehalten, bevor der Nettosaldo an den Verkäufer überwiesen wird. Aegryn ist niemals Verwahrer dieser Gelder — der Hinterlegungsbetrag wird von einer von Aegryn benannten Drittbank gehalten.",
     "ctaContact": "Aegryn-Team kontaktieren",
@@ -4647,7 +4647,7 @@
           "sellers"
         ],
         "q": "Welche Zertifizierungsoptionen gibt es und was kosten sie?",
-        "a": "Zwei Wege stehen zur Verfügung. Nur Zertifizierung (Aegryn Review): offiziellen Grade ohne Katalogaufnahme erhalten, für 2.000 EUR zzgl. MwSt. (interne Review) oder 5.000 EUR zzgl. MwSt. (co-signierte Review+), anrechenbar bei Einleitung einer Certification Auction innerhalb von 6 Monaten. Certification Auction: vollständiger Prozess mit Katalogaufnahme und Aegryn-Provision nur bei Transaktion. Publikationsgebühr von CHF 2.000 zzgl. MwSt. gilt, anrechenbar auf die Provision bei Verkauf, einbehalten ohne Transaktion."
+        "a": "Zwei Wege stehen zur Verfügung. Nur Zertifizierung (Aegryn Review): offiziellen Grade ohne Katalogaufnahme erhalten, für 2.000 EUR zzgl. MwSt. (interne Review) oder 5.000 EUR zzgl. MwSt. (co-signierte Review+), anrechenbar bei Einleitung einer Certification Transaction innerhalb von 6 Monaten. Certification Transaction: vollständiger Prozess mit Katalogaufnahme und Aegryn-Provision nur bei Transaktion. Publikationsgebühr von CHF 2.000 zzgl. MwSt. gilt, anrechenbar auf die Provision bei Verkauf, einbehalten ohne Transaktion."
       },
       {
         "id": "what-grade",
@@ -4679,7 +4679,7 @@
           "buyers"
         ],
         "q": "Wie werde ich Mitglied-Käufer?",
-        "a": "Über das Bewerbungsformular auf /auction#membership. Ihre Bewerbung wird innerhalb von 10 Werktagen geprüft."
+        "a": "Über das Bewerbungsformular auf /transact#membership. Ihre Bewerbung wird innerhalb von 10 Werktagen geprüft."
       },
       {
         "id": "kyc-docs",
@@ -5001,19 +5001,19 @@
     "metaDesc": "Übersicht aller Seiten der Aegryn-Website.",
     "title": "Sitemap",
     "subtitle": "Übersicht aller Seiten und Bereiche der Website.",
-    "groupAuction": "M&A-Transaktionen",
+    "groupTransaction": "M&A-Transaktionen",
     "groupGrade": "Grade",
     "groupAssets": "Assets",
     "groupServices": "Dienstleistungen",
     "groupDiscover": "Blog",
     "groupCompany": "Unternehmen",
     "groupLegal": "Rechtliches",
-    "auction": "Katalog",
-    "auctionSell": "Ein Asset verkaufen",
-    "auctionBuy": "Käufer werden",
-    "auctionBid": "Gebotsmodelle",
-    "auctionSession": "Nächste Sitzung",
-    "auctionResults": "Ergebnisse",
+    "transaction": "Katalog",
+    "transactionSell": "Ein Asset verkaufen",
+    "transactionBuy": "Käufer werden",
+    "transactionBid": "Gebotsmodelle",
+    "transactionSession": "Nächste Sitzung",
+    "transactionResults": "Ergebnisse",
     "grade": "Grade-System",
     "gradeMethod": "Methodik",
     "gradePartners": "Expertennetzwerk",
@@ -5040,9 +5040,9 @@
     "groupBuild": "Build",
     "servicesBuild": "Asset-Ingenieurwesen"
   },
-  "clientAuction": {
+  "clientTransaction": {
     "eyebrow": "Käuferbereich",
-    "title": "Meine Aegryn-Auction-Dossiers",
+    "title": "Meine Aegryn-Transaction-Dossiers",
     "subtitle": "Zuganglinks zu vollständigen Dossiers werden nie per E-Mail versandt. Sie erscheinen hier erst nach Validierung Ihrer Bewerbung.",
     "empty": "Kein laufender Zugangantrag.",
     "viewCatalog": "Katalog ansehen",
@@ -5065,7 +5065,7 @@
   },
   "waitlist": {
     "header": {
-      "label": "Warteliste — Auction-Sessions",
+      "label": "Warteliste — Transaction-Sessions",
       "title": "Der Prioritätszugangliste beitreten"
     },
     "step1": {
@@ -5178,7 +5178,7 @@
       "firstNamePlaceholder": "Hans",
       "lastNamePlaceholder": "Müller",
       "emailPlaceholder": "sie@beispiel.com",
-      "gdprConsent": "Ich stimme zu, dass meine Daten von Aegryn im Rahmen meines Zugangsantrags zu den Auction-Sessions gemäß DSGVO / nDSG verarbeitet werden. *",
+      "gdprConsent": "Ich stimme zu, dass meine Daten von Aegryn im Rahmen meines Zugangsantrags zu den Transaction-Sessions gemäß DSGVO / nDSG verarbeitet werden. *",
       "marketingConsent": "Ich stimme zu, Aegryn-Kommunikationen zu erhalten (neue Sessions, verfügbare Assets).",
       "back": "Zurück",
       "submit": "Absenden",
@@ -5217,7 +5217,7 @@
       "network": "Netzwerkfehler. Bitte erneut versuchen."
     }
   },
-  "auctionSheet": {
+  "transactionSheet": {
     "executiveSummaryKicker": "Zusammenfassung · Schnellübersicht",
     "executiveSummaryTitle": "Asset-Synthese",
     "disclosureKicker": "Offenlegung und Verbreitungsbedingungen",
@@ -5937,7 +5937,7 @@
       "fallbackName": "Verkäufer",
       "kpiActifs": "Eingereichte Assets",
       "kpiCertified": "Zertifiziert",
-      "kpiAuctionReady": "Auktionsbereit",
+      "kpiTransactionReady": "Auktionsbereit",
       "kpiTransactions": "Transaktionen",
       "kpiKycOk": "KYC bestätigt",
       "kpiKycIncomplete": "KYC unvollständig",

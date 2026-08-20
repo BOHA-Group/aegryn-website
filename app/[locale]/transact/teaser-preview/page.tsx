@@ -3,7 +3,7 @@
  * Désormais lié publiquement depuis /transact/sessions ("Aperçu du lot" — session à venir).
  *
  * ⚠️ SUBBLINK_ASSET_ID est un placeholder — à remplacer par l'UUID réel de la
- * ligne `auction_assets` une fois le lot subblink créé en base (db push).
+ * ligne `auction_assets` (table Supabase) une fois le lot subblink créé en base (db push).
  *
  * onRequestDossier : à brancher selon le choix de Yohann —
  *   A) formulaire modal de qualification

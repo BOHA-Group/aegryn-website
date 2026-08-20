@@ -34,7 +34,7 @@ export function websiteJsonLd() {
     '@id':      `${BASE}/#website`,
     url:        BASE,
     name:       'Aegryn',
-    description: 'Certified tech asset transactions in Europe — Grade system, Auction, Advisory.',
+    description: 'Certified tech asset transactions in Europe — Grade system, Transaction, Advisory.',
     publisher: { '@id': `${BASE}/#organization` },
     inLanguage: ['fr', 'en', 'de', 'it', 'es', 'nl'],
     potentialAction: {

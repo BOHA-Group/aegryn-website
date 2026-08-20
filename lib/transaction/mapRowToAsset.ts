@@ -1,6 +1,6 @@
 /**
- * lib/auction/mapRowToAsset.ts
- * Convertit une ligne de la table Supabase `auction_assets` en objet
+ * lib/transaction/mapRowToAsset.ts
+ * Convertit une ligne de la table Supabase `auction_assets` (nom DB conservé) en objet
  * `asset` consommable par <AssetLotSheet />.
  *
  * Le helper jsonb() gère le cas défensif où Supabase renverrait la colonne

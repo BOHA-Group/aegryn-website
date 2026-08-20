@@ -56,7 +56,7 @@ export default async function AdminMemberDetailPage({
     .eq('buyer_email', profile.email)
     .order('created_at', { ascending: false })
 
-  /* ── NDA Auction signatures (plateforme) ── */
+  /* ── NDA Transaction signatures (plateforme) ── */
   const { data: ndaSignatures } = await supa
     .from('nda_signatures')
     .select('id, nda_version, signed_at, ip_address, user_agent, scope, asset_id')

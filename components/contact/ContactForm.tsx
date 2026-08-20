@@ -5,7 +5,7 @@ import { useState }        from 'react'
 
 type Props = { locale: string }
 
-const subjects   = ['general', 'advisory', 'grade', 'auction', 'partnership', 'investor', 'press', 'career', 'other'] as const
+const subjects   = ['general', 'advisory', 'grade', 'transaction', 'partnership', 'investor', 'press', 'career', 'other'] as const
 const MSG_LIMIT  = 250
 
 export default function ContactForm({ locale }: Props) {

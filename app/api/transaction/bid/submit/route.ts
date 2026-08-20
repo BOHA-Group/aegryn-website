@@ -1,5 +1,5 @@
 /**
- * POST /api/auction/bid/submit
+ * POST /api/transaction/bid/submit
  * Soumettre une offre sur un actif de la session Aegryn TRANSACT.
  *
  * Règles appliquées côté serveur :

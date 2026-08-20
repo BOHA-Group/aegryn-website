@@ -138,9 +138,9 @@ export function AssetsGrid() {
                     {t('internalOnly')}
                   </span>
                 )}
-                {asset.auctionEligible && (
+                {asset.transactionEligible && (
                   <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-navy bg-ag-apex/15 border border-ag-apex/30 px-2 py-0.5">
-                    {t('auctionEligible')}
+                    {t('transactionEligible')}
                   </span>
                 )}
               </div>
@@ -197,10 +197,10 @@ export function AssetsGrid() {
               {t('ctaGrade')} <ArrowUpRight size={11} />
             </Link>
             <Link
-              href="/auction"
+              href="/transact"
               className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:border-ag-black hover:text-ag-black transition-all"
             >
-              {t('ctaAuction')}
+              {t('ctaTransaction')}
             </Link>
           </div>
         </div>

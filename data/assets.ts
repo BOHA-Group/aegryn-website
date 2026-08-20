@@ -12,7 +12,7 @@ export interface AegrynAsset {
   grade:           AssetGrade
   gradeCode:       string | undefined
   tier:              1 | 2
-  auctionEligible:   boolean
+  transactionEligible:   boolean
   showOnHomepage?:   boolean
   internalOnly?:     boolean
 }
@@ -36,7 +36,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     grade:            'pending' as const,
     gradeCode:        undefined,
     tier:             1 as const,
-    auctionEligible:  true,
+    transactionEligible:  true,
   },
   {
     id:               'kryv',
@@ -52,7 +52,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     grade:            'pending' as const,
     gradeCode:        undefined,
     tier:             1 as const,
-    auctionEligible:  false,
+    transactionEligible:  false,
     internalOnly:     true,
   },
 
@@ -71,7 +71,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     grade:            'pending' as const,
     gradeCode:        undefined,
     tier:             1 as const,
-    auctionEligible:  false,
+    transactionEligible:  false,
   },
   {
     id:               'movtoo',
@@ -87,7 +87,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     grade:            'pending' as const,
     gradeCode:        undefined,
     tier:             2 as const,
-    auctionEligible:  false,
+    transactionEligible:  false,
   },
 
   // ── TRANSACTIONS & RÉSEAU ─────────────────────────────────────
@@ -105,7 +105,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     grade:            'pending' as const,
     gradeCode:        undefined,
     tier:             2 as const,
-    auctionEligible:  false,
+    transactionEligible:  false,
   },
   {
     id:               'hobconnect',
@@ -121,7 +121,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     grade:            'pending' as const,
     gradeCode:        undefined,
     tier:             2 as const,
-    auctionEligible:  false,
+    transactionEligible:  false,
   },
 
 ]

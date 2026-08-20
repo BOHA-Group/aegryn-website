@@ -39,7 +39,7 @@ export default async function AssetsPage({ params }: Props) {
             href="/transact/catalog"
             className="shrink-0 inline-flex items-center gap-2 font-sans font-semibold text-[10px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-4 py-2 hover:bg-ag-navy hover:text-white transition-colors whitespace-nowrap"
           >
-            {t('ctaAuction')} <ArrowUpRight size={11} />
+            {t('ctaTransaction')} <ArrowUpRight size={11} />
           </Link>
         </div>
       </div>

@@ -21,12 +21,12 @@
     "clientSpace": "Client area",
     "logout": "Log out",
     "submitAsset": "Submit an asset",
-    "auctionCatalog": "Catalog",
-    "auctionSell": "Sell an asset",
-    "auctionBuy": "Become a buyer",
-    "auctionBidModels": "Proposal models",
-    "auctionSession": "Process",
-    "auctionResults": "Closed transactions",
+    "transactionCatalog": "Catalog",
+    "transactionSell": "Sell an asset",
+    "transactionBuy": "Become a buyer",
+    "transactionBidModels": "Proposal models",
+    "transactionSession": "Process",
+    "transactionResults": "Closed transactions",
     "gradeSystem": "Grade system",
     "gradeMethod": "Methodology",
     "gradeSubmit": "Submit for certification",
@@ -103,17 +103,17 @@
       "gradePending": "Certification in progress",
       "visitSite": "Visit site",
       "viewDetails": "View details",
-      "auctionEligible": "M&A eligible",
+      "transactionEligible": "M&A eligible",
       "internalOnly": "Internal use",
       "confidential": "Confidential",
       "heroLabel": "Aegryn — Proprietary portfolio",
       "heroTitle": "What we're\nbuilding.",
       "heroSub": "Assets owned by the Aegryn group — not submitted by third parties",
       "ownedNote": "These assets belong to the Aegryn group. They are not for sale by default. Some may exceptionally be listed for cession following a strategic decision by the group.",
-      "auctionEligibleNote": "Asset eligible for Aegryn M&A process — investor inquiries on request.",
+      "transactionEligibleNote": "Asset eligible for Aegryn M&A process — investor inquiries on request.",
       "ctaBottom": "Want to submit your own asset for certification?",
       "ctaGrade": "Submit a third-party asset",
-      "ctaAuction": "View M&A transactions",
+      "ctaTransaction": "View M&A transactions",
       "notStarted": "Not started",
       "certificationInProgress": "Certification in progress"
     },
@@ -848,7 +848,7 @@
         "general": "General inquiry",
         "advisory": "Advisory",
         "grade": "Asset certification (Grade)",
-        "auction": "M&A process",
+        "transaction": "M&A process",
         "partnership": "Partnership",
         "investor": "Investor",
         "press": "Press & Media",
@@ -1015,7 +1015,7 @@
       "label": "GRADE",
       "desc": "Independent, documented certification"
     },
-    "auction": {
+    "transaction": {
       "label": "TRANSACT",
       "desc": "Supervised institutional transactions"
     }
@@ -1589,7 +1589,7 @@
     "featuredLabel": "Featured",
     "allArticles": "All articles",
     "ctaGrade": "Certify my asset",
-    "ctaAuction": "View M&A transactions",
+    "ctaTransaction": "View M&A transactions",
     "searchPlaceholder": "Search articles...",
     "noArticles": "No articles in this category yet.",
     "newsletterLabel": "Newsletter",
@@ -2728,7 +2728,7 @@
       ]
     }
   },
-  "auction": {
+  "transaction": {
     "meta": {
       "title": "M&A Transactions — Certified tech asset transaction sessions",
       "desc": "Aegryn sessions: buy or sell certified tech assets. Catalog, next session, results."
@@ -4069,7 +4069,7 @@
       ]
     }
   },
-  "auctionSubmit": {
+  "transactionSubmit": {
     "meta": {
       "title": "Submit an Asset — Aegryn M&A Switzerland",
       "desc": "Submit your tech asset to an Aegryn M&A Switzerland session. Swiss law. Open internationally."
@@ -4181,7 +4181,7 @@
       "errorMsg": "An error occurred. Please try again or contact us directly."
     }
   },
-  "auctionLot": {
+  "transactionLot": {
     "accessDeniedTitle": "Restricted access",
     "accessDeniedDesc": "This dossier is only accessible to qualified buyers with a valid admin authorisation and an active session access.",
     "accessExpiredTitle": "Access expired",
@@ -4979,19 +4979,19 @@
     "metaDesc": "Overview of all pages on the Aegryn website.",
     "title": "Sitemap",
     "subtitle": "Overview of all pages and sections of the site.",
-    "groupAuction": "M&A Transactions",
+    "groupTransaction": "M&A Transactions",
     "groupGrade": "Grade",
     "groupAssets": "Assets",
     "groupServices": "Services",
     "groupDiscover": "Blog",
     "groupCompany": "Company",
     "groupLegal": "Legal",
-    "auction": "Catalogue",
-    "auctionSell": "Sell an asset",
-    "auctionBuy": "Become a buyer",
-    "auctionBid": "Proposal models",
-    "auctionSession": "Next session",
-    "auctionResults": "Results",
+    "transaction": "Catalogue",
+    "transactionSell": "Sell an asset",
+    "transactionBuy": "Become a buyer",
+    "transactionBid": "Proposal models",
+    "transactionSession": "Next session",
+    "transactionResults": "Results",
     "grade": "Grade system",
     "gradeMethod": "Methodology",
     "gradePartners": "Expert network",
@@ -5018,7 +5018,7 @@
     "groupBuild": "Build",
     "servicesBuild": "Asset Engineering"
   },
-  "clientAuction": {
+  "clientTransaction": {
     "eyebrow": "Buyer space",
     "title": "My Aegryn files",
     "subtitle": "Access links to complete dossiers are never sent by email. They appear here only after your application has been validated.",
@@ -5195,7 +5195,7 @@
       "network": "Network error. Please try again."
     }
   },
-  "auctionSheet": {
+  "transactionSheet": {
     "executiveSummaryKicker": "Executive summary · Quick read",
     "executiveSummaryTitle": "Asset synthesis",
     "disclosureKicker": "Disclosure and distribution conditions",
@@ -5915,7 +5915,7 @@
       "fallbackName": "Seller",
       "kpiActifs": "Assets submitted",
       "kpiCertified": "Certified",
-      "kpiAuctionReady": "M&A Ready",
+      "kpiTransactionReady": "M&A Ready",
       "kpiTransactions": "Transactions",
       "kpiKycOk": "KYC validated",
       "kpiKycIncomplete": "KYC incomplete",

@@ -115,7 +115,7 @@ export interface AssetLot {
 
 /**
  * Public teaser fields — visible in the catalog without NDA.
- * Derived from the auction_lots row.
+ * Derived from the transaction_lots row.
  */
 export interface AssetLotTeaser {
   id:              string

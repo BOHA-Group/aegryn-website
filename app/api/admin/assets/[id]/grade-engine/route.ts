@@ -305,9 +305,9 @@ export async function POST(
       star: '★', aaa: 'AAA', aa: 'AA', a: 'A', b: 'B', refused: 'NG',
     }
 
-    // 5B — Auction Ready : 4 conditions métier + 2 corrections (C1)
-    const auctionReadyGrades = ['star', 'aaa', 'aa', 'a']
-    const auctionReadyTrs    = ['ready', 'conditional']
+    // 5B — Transaction Ready : 4 conditions métier + 2 corrections (C1)
+    const transactionReadyGrades = ['star', 'aaa', 'aa', 'a']
+    const transactionReadyTrs    = ['ready', 'conditional']
 
     // C1-a : récupérer kyc_validated + mandate_signed + asking_price
     const { data: assetFull } = await supa
@@ -324,23 +324,23 @@ export async function POST(
       .eq('required_level', 'blocking')
       .neq('admin_quality', 'sufficient')
 
-    const gradeOk    = auctionReadyGrades.includes(assessment.final_grade)
-    const trsOk      = auctionReadyTrs.includes(assessment.trs ?? '')
+    const gradeOk    = transactionReadyGrades.includes(assessment.final_grade)
+    const trsOk      = transactionReadyTrs.includes(assessment.trs ?? '')
     const kycOk      = assetFull?.kyc_validated === true
     const mandateOk  = assetFull?.mandate_signed === true
     const docsOk     = (blockingCount ?? 1) === 0
     const priceOk    = assetFull?.asking_price != null
 
-    const auctionReady = gradeOk && trsOk && kycOk && mandateOk && docsOk && priceOk
+    const transactionReady = gradeOk && trsOk && kycOk && mandateOk && docsOk && priceOk
 
     // Construire la checklist des bloqueurs (visible vendeur)
-    const auctionReadyBlockers: string[] = []
-    if (!gradeOk)   auctionReadyBlockers.push(`Grade ${assessment.final_grade} insuffisant — minimum requis : A`)
-    if (!trsOk)     auctionReadyBlockers.push(`TRS ${assessment.trs ?? 'non calculé'} — minimum requis : conditional`)
-    if (!kycOk)     auctionReadyBlockers.push('KYC vendeur non validé')
-    if (!mandateOk) auctionReadyBlockers.push('Mandat de vente non signé')
-    if (!docsOk)    auctionReadyBlockers.push(`${blockingCount ?? '?'} document(s) bloquant(s) manquant(s) dans la data room`)
-    if (!priceOk)   auctionReadyBlockers.push('Prix demandé non renseigné')
+    const transactionReadyBlockers: string[] = []
+    if (!gradeOk)   transactionReadyBlockers.push(`Grade ${assessment.final_grade} insuffisant — minimum requis : A`)
+    if (!trsOk)     transactionReadyBlockers.push(`TRS ${assessment.trs ?? 'non calculé'} — minimum requis : conditional`)
+    if (!kycOk)     transactionReadyBlockers.push('KYC vendeur non validé')
+    if (!mandateOk) transactionReadyBlockers.push('Mandat de vente non signé')
+    if (!docsOk)    transactionReadyBlockers.push(`${blockingCount ?? '?'} document(s) bloquant(s) manquant(s) dans la data room`)
+    if (!priceOk)   transactionReadyBlockers.push('Prix demandé non renseigné')
 
     // C2 — Pre-Grade : uniquement sur grade=refused + demande explicite admin
     // Grade B = grade officiel certifié (30-44/100), ne devient PAS pre_grade
@@ -359,9 +359,9 @@ export async function POST(
         published_at:           new Date().toISOString(),
         // 5B
         trs:                    assessment.trs ?? null,
-        auction_ready:          auctionReady,
-        auction_ready_at:       auctionReady ? new Date().toISOString() : null,
-        auction_ready_blockers: auctionReadyBlockers.length > 0 ? auctionReadyBlockers : null,
+        auction_ready:          transactionReady,
+        auction_ready_at:       transactionReady ? new Date().toISOString() : null,
+        auction_ready_blockers: transactionReadyBlockers.length > 0 ? transactionReadyBlockers : null,
         // 5A C2 — Pre-Grade explicite sur refused uniquement
         ...(preGradeActions ? {
           status:              'pre_grade',
@@ -373,7 +373,7 @@ export async function POST(
 
     if (assetErr) return NextResponse.json({ error: assetErr.message }, { status: 500 })
 
-    return NextResponse.json({ ok: true, grade: assessment.final_grade, auctionReady, auctionReadyBlockers })
+    return NextResponse.json({ ok: true, grade: assessment.final_grade, transactionReady, transactionReadyBlockers })
   }
 
   return NextResponse.json({ error: 'unknown_action' }, { status: 400 })

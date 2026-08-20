@@ -221,7 +221,7 @@ export const aegrynOrganizationSchema = {
     'Swiss Technology',
     'M&A Advisory',
     'Digital Asset Valuation',
-    'Tech Asset Auction',
+    'Tech Asset Transaction',
     'Due Diligence',
     'EU AI Act Compliance',
     'GDPR Compliance',
@@ -242,9 +242,9 @@ export const aegrynOrganizationSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Aegryn Auction',
-          description: 'Structured auction platform for buying and selling digital tech assets (SaaS, B2C, infrastructure) in Europe. €100K–€50M range.',
-          url: `${BASE_URL}/en/auction`,
+          name: 'Aegryn Transaction',
+          description: 'Structured transaction platform for buying and selling digital tech assets (SaaS, B2C, infrastructure) in Europe. €100K–€50M range.',
+          url: `${BASE_URL}/en/transact`,
         },
       },
       {
@@ -311,11 +311,11 @@ export const aegrynSiteNavigationSchema = {
   name: 'Aegryn Site Navigation',
   itemListElement: [
     { '@type': 'ListItem', position: 1,  name: 'Accueil',              url: `${BASE_URL}/fr` },
-    { '@type': 'ListItem', position: 2,  name: 'Aegryn Auction',       url: `${BASE_URL}/fr/auction` },
-    { '@type': 'ListItem', position: 3,  name: 'Céder un actif',       url: `${BASE_URL}/fr/auction/sell` },
-    { '@type': 'ListItem', position: 4,  name: 'Accès acheteurs',      url: `${BASE_URL}/fr/auction/buyers` },
-    { '@type': 'ListItem', position: 5,  name: 'Comment ça marche',    url: `${BASE_URL}/fr/auction/how-it-works` },
-    { '@type': 'ListItem', position: 6,  name: 'Catalogue',            url: `${BASE_URL}/fr/auction/catalog` },
+    { '@type': 'ListItem', position: 2,  name: 'Aegryn Transaction',    url: `${BASE_URL}/fr/transact` },
+    { '@type': 'ListItem', position: 3,  name: 'Céder un actif',       url: `${BASE_URL}/fr/transact/sell` },
+    { '@type': 'ListItem', position: 4,  name: 'Accès acheteurs',      url: `${BASE_URL}/fr/transact/buyers` },
+    { '@type': 'ListItem', position: 5,  name: 'Comment ça marche',    url: `${BASE_URL}/fr/transact/how-it-works` },
+    { '@type': 'ListItem', position: 6,  name: 'Catalogue',            url: `${BASE_URL}/fr/transact/catalog` },
     { '@type': 'ListItem', position: 7,  name: 'Valorisation',         url: `${BASE_URL}/fr/valuation` },
     { '@type': 'ListItem', position: 8,  name: 'Aegryn Grade',         url: `${BASE_URL}/fr/grade` },
     { '@type': 'ListItem', position: 9,  name: 'Experts',                      url: `${BASE_URL}/fr/experts` },
@@ -333,8 +333,8 @@ export const aegrynWebSiteSchema = {
   '@id':        `${BASE_URL}/#website`,
   url:          BASE_URL,
   name:         'Aegryn',
-  alternateName: ['Aegryn', 'Aegryn Swiss', 'Aegryn Advisory', 'Aegryn Auction'],
-  description:  'Aegryn — Swiss Tech Asset Builder and M&A auction platform. Design and operate proprietary digital assets. Custom asset engineering for third parties (fixed price, certification-ready). Buy and sell digital tech assets in Europe. Proprietary grading, expert network, cybersecurity and AI advisory. Engineered to Last.',
+  alternateName: ['Aegryn', 'Aegryn Swiss', 'Aegryn Advisory', 'Aegryn Transaction'],
+  description:  'Aegryn — Swiss Tech Asset Builder and M&A transaction platform. Design and operate proprietary digital assets. Custom asset engineering for third parties (fixed price, certification-ready). Buy and sell digital tech assets in Europe. Proprietary grading, expert network, cybersecurity and AI advisory. Engineered to Last.',
   publisher:    { '@id': `${BASE_URL}/#organization` },
   inLanguage:   ['fr', 'en', 'de', 'it', 'es', 'nl'],
   potentialAction: {
@@ -344,9 +344,9 @@ export const aegrynWebSiteSchema = {
   },
 }
 
-/* ── Auction-specific JSON-LD ───────────────────────────────────── */
+/* ── Transaction-specific JSON-LD ───────────────────────────────────── */
 
-export function generateAuctionSchema({
+export function generateTransactionSchema({
   name,
   description,
   url,
@@ -371,7 +371,7 @@ export function generateAuctionSchema({
     eventStatus: 'https://schema.org/EventScheduled',
     location: {
       '@type': 'VirtualLocation',
-      url: `${BASE_URL}/en/auction`,
+      url: `${BASE_URL}/en/transact`,
     },
     ...(startDate ? { startDate } : {}),
     ...(endDate   ? { endDate }   : {}),

@@ -21,12 +21,12 @@
     "clientSpace": "Klantenzone",
     "logout": "Afmelden",
     "submitAsset": "Asset indienen",
-    "auctionCatalog": "Catalogus",
-    "auctionSell": "Asset verkopen",
-    "auctionBuy": "Koper worden",
-    "auctionBidModels": "Voorstelmodellen",
-    "auctionSession": "Proces",
-    "auctionResults": "Afgesloten transacties",
+    "transactionCatalog": "Catalogus",
+    "transactionSell": "Asset verkopen",
+    "transactionBuy": "Koper worden",
+    "transactionBidModels": "Voorstelmodellen",
+    "transactionSession": "Proces",
+    "transactionResults": "Afgesloten transacties",
     "gradeSystem": "Grade-systeem",
     "gradeMethod": "Methodologie",
     "gradeSubmit": "Indienen voor certificering",
@@ -102,17 +102,17 @@
       "gradePending": "Certificering bezig",
       "visitSite": "Website bezoeken",
       "viewDetails": "Details bekijken",
-      "auctionEligible": "Veilinggeschikt",
+      "transactionEligible": "Geschikt voor transactie",
       "internalOnly": "Intern gebruik",
       "confidential": "Vertrouwelijk",
       "heroLabel": "Aegryn — Eigen ecosysteem",
       "heroTitle": "Wat we\nbouwen.",
       "heroSub": "6 activa · 3 categorieën · Zwitserland & Europa",
       "ownedNote": "Deze activa behoren tot de Aegryn-groep. Ze staan standaard niet te koop. Sommige kunnen uitzonderlijk worden geveild op strategische beslissing van de groep.",
-      "auctionEligibleNote": "Activum geschikt voor veiling — investeerderscontact op verzoek.",
+      "transactionEligibleNote": "Activum geschikt voor transactie — investeerderscontact op verzoek.",
       "ctaBottom": "Wilt u uw eigen asset indienen voor certificering?",
       "ctaGrade": "Een extern asset indienen",
-      "ctaAuction": "M&A-process bekijken",
+      "ctaTransaction": "M&A-process bekijken",
       "notStarted": "Niet gestart",
       "certificationInProgress": "Certificering bezig"
     },
@@ -515,7 +515,7 @@
         "title": "U wilt acquiseren.",
         "desc": "Onze catalogus is voorbehouden aan gekwalificeerde kopers.",
         "btn": "Een kopersaanvraag indienen",
-        "href": "/auction/how-to-buy"
+        "href": "/transact/how-to-buy"
       },
       "partner": {
         "title": "U bent een potentiële partner.",
@@ -867,7 +867,7 @@
         "general": "Algemene vraag",
         "advisory": "Advisory",
         "grade": "Activumcertificering (Grade)",
-        "auction": "M&A-proces",
+        "transaction": "M&A-proces",
         "partnership": "Partnerschap",
         "investor": "Investeerder",
         "press": "Pers & Media",
@@ -2240,7 +2240,7 @@
     "featuredLabel": "Uitgelicht",
     "allArticles": "Alle artikelen",
     "ctaGrade": "Mijn asset certificeren",
-    "ctaAuction": "Sessies bekijken",
+    "ctaTransaction": "Sessies bekijken",
     "searchPlaceholder": "Artikelen zoeken...",
     "noArticles": "Nog geen artikelen in deze categorie.",
     "newsletterLabel": "Nieuwsbrief",
@@ -2626,7 +2626,7 @@
       ]
     }
   },
-  "auction": {
+  "transaction": {
     "meta": {
       "title": "Veiling — Gecertificeerde tech-assettransacties",
       "desc": "Aegryn-sessies: gecertificeerde tech-assets kopen of verkopen."
@@ -2983,7 +2983,7 @@
       }
     ]
   },
-  "auctionNarrative": {
+  "transactionNarrative": {
     "label": "Veiling",
     "title": "Sommige assets verdienen meer\ndan een publieke vermelding.",
     "desc": "Aegryn is geen open platform. Het is een vertrouwelijk overdrachtsproces tussen verkopers die onze certificering hebben doorstaan en kopers die hun capaciteit hebben bewezen.\n\nMinder dan 25% van de ingediende assets wordt geaccepteerd. 100% van de kopers is vooraf gekwalificeerd. Elke transactie is volledig gedocumenteerd en beveiligd.",
@@ -3058,8 +3058,8 @@
       "label": "GRADE",
       "desc": "Onafhankelijke, gedocumenteerde certificering"
     },
-    "auction": {
-      "label": "AUCTION",
+    "transaction": {
+      "label": "TRANSACTION",
       "desc": "Institutioneel omlijste transacties"
     }
   },
@@ -3364,10 +3364,10 @@
         {
           "phase": "Vroeg stadium - 6 tot 18 maanden",
           "title": "Vroege overdracht",
-          "desc": "Uw asset heeft een solide architectuur en eerste tractie. Aegryn structureert de verkoop via Auction of directe vertrouwelijke transactie.",
+          "desc": "Uw asset heeft een solide architectuur en eerste tractie. Aegryn structureert de verkoop via Transaction of directe vertrouwelijke transactie.",
           "grade": "Doelgrade: A - ticket 100K tot 500K EUR",
           "cta": "Acquisitiemodellen bekijken",
-          "href": "/auction/bid-models"
+          "href": "/transact/bid-models"
         },
         {
           "phase": "Marktrijpheid - 18 tot 36 maanden",
@@ -3459,7 +3459,7 @@
     "exitBanner": {
       "text": "Een verkoop is een optie, nooit een verplichting. Als u ooit wilt verkopen — vroeg stadium of op rijpheid — is het asset daarvoor ontworpen. Exit via Aegryn of vertrouwelijke transactie is beschikbaar als het grade het toelaat.",
       "cta": "Meer over het verkoopproces",
-      "href": "/auction/how-it-works"
+      "href": "/transact/how-it-works"
     },
     "cta": {
       "title": "Een project in gedachten?",
@@ -3541,7 +3541,7 @@
       "legalNote": "De financiële voorwaarden van de certificering zijn beschikbaar in onze Algemene Dienstverleningsvoorwaarden, gedeeld bij de eerste uitwisseling. Geen verplichting in dit stadium.",
       "evalTypeTitle": "Welk evaluatieniveau wenst u?",
       "evalTypeFull": {
-        "label": "Auction-certificering",
+        "label": "Transaction-certificering",
         "desc": "Alleen succesfee. Volledig proces via onafhankelijk Aegryn-protocol (4 dimensies C/I/F/S), inbegrepen als de transactie via Aegryn plaatsvindt.",
         "price": "Gratis"
       },
@@ -3555,7 +3555,7 @@
         "desc": "Schriftelijk advies + review door een externe partner (juridisch kantoor of accountant) op verzoek binnen 20 werkdagen. Kruisverwijzingen met onze Alliance-partners.",
         "price": "5.000 CHF excl. btw"
       },
-      "evalDeductibleNote": "Dit bedrag is volledig aftrekbaar van de certificeringskosten als u binnen 6 maanden na ontvangst van uw Review een volledig Auction-proces start.",
+      "evalDeductibleNote": "Dit bedrag is volledig aftrekbaar van de certificeringskosten als u binnen 6 maanden na ontvangst van uw Review een volledig Transaction-proces start.",
       "partnerSelectLabel": "Te betrekken partner",
       "partnerLegal": "Juridisch kantoor",
       "partnerAccounting": "Accountant",
@@ -3604,8 +3604,8 @@
       "desc": "Club Deal, Corporate, Fonds, Equity Stake, de 4 Aegryn-acquisitiemodellen met de Tech Transactiebelofte in 5 stappen."
     },
     "hero": {
-      "back": "← Auction",
-      "label": "Aegryn AUCTION",
+      "back": "← Transaction",
+      "label": "Aegryn TRANSACTION",
       "title": "Kies uw acquisitiemodel",
       "desc": "Vier kopersprofielen, één vereiste: dealskwaliteit. Elk model is afgestemd op uw structuur en doelstellingen."
     },
@@ -4091,7 +4091,7 @@
       ]
     }
   },
-  "auctionSubmit": {
+  "transactionSubmit": {
     "meta": {
       "title": "Asset indienen — Aegryn M&A Switzerland",
       "desc": "Dien uw tech-asset in voor een Aegryn M&A Switzerland sessie. Zwitsers recht. Internationaal open."
@@ -4203,7 +4203,7 @@
       "errorMsg": "Er is een fout opgetreden. Probeer het opnieuw of neem rechtstreeks contact met ons op."
     }
   },
-  "auctionLot": {
+  "transactionLot": {
     "accessDeniedTitle": "Toegang beperkt",
     "accessDeniedDesc": "Dit dossier is alleen toegankelijk voor gekwalificeerde kopers met een geldige adminautorisatie en een actieve sessietoegang.",
     "accessExpiredTitle": "Toegang verlopen",
@@ -4293,7 +4293,7 @@
     "s2Review": "Schriftelijke opinie van een Aegryn-analist over een ingediend tech-asset. Doorlooptijd: 15 werkdagen. Zonder externe validatie, niet publiceerbaar in de catalogus. Slechts indicatieve waarde. Volledig aftrekbaar van de certificeringsvergoedingen als het volledige proces binnen 6 maanden wordt gestart.",
     "s2ReviewPlusTitle": "Aegryn Review+",
     "s2ReviewPlus": "Schriftelijke opinie van een Aegryn-analist aangevuld met de beoordeling van een externe partner. Doorlooptijd: 20 werkdagen. Niet officieel in de zin van de volledige certificering, niet publiceerbaar. Volledig aftrekbaar onder dezelfde voorwaarden.",
-    "s2CertTitle": "Auction-certificering",
+    "s2CertTitle": "Transaction-certificering",
     "s2Cert": "Volledig multidimensionaal auditproces over alle 4 C/I/F/S-dimensies. Uitgevoerd door gecertificeerde Aegryn-analisten volgens het officiële protocol. Officieel AEG-grade toegekend en publiceerbaar in de catalogus. Vergoeding: op basis van succes (commissie bij verkoop).",
     "s2AdvisoryTitle": "Aegryn Advisory",
     "s2Advisory": "Strategische en operationele begeleiding van assets voor herstel en herindiening. Vergoeding op offerte.",
@@ -4327,7 +4327,7 @@
     "s9Title": "Toepasselijk recht en geschillenbeslechting",
     "s9": "Deze voorwaarden zijn onderworpen aan het materiële Zwitserse recht. Elk geschil valt onder de exclusieve bevoegdheid van de rechtbanken van het kanton waar Aegryn gevestigd is. Partijen zullen trachten elk geschil binnen 30 dagen in der minne te schikken voordat zij de rechter inschakelen.",
     "s10Title": "Data Room en toegang tot due diligence-documenten",
-    "s10": "In het kader van het certificerings- en transactieproces stelt Aegryn een beveiligde data room ter beschikking waarmee de verkoper de voor de CIFS-analyse vereiste documenten kan uploaden. De toegang tot deze documenten wordt strikt gecontroleerd via een drieniveausysteem: beheerder/verkoper, toegewezen gecertificeerde partner en koper die het Auction-NDA heeft ondertekend.\n\nElke raadpleging wordt gelogd (identiteit, IP-adres, tijdstempel, duur). Technische ontmoedigingsmaatregelen zijn geïmplementeerd (downloadblokkering, detectie van screenshot-pogingen, dynamisch watermerk). Deze maatregelen vormen een serieuze afschrikking en een gelogd bewijs bij geschillen, maar kunnen niet voor 100% voorkomen dat documenten via externe middelen worden vastgelegd.\n\nDe koper erkent dat de in de data room geraadpleegde documenten worden beschermd door deze voorwaarden en het ondertekende Auction-NDA. Hij verbindt zich er contractueel toe geen geraadpleegd document te reproduceren, door te sturen of openbaar te maken, op straffe van schadevergoeding en juridische stappen. De aansprakelijkheid van Aegryn bij een lek als gevolg van omzeiling van de technische beveiligingen is uitdrukkelijk uitgesloten.",
+    "s10": "In het kader van het certificerings- en transactieproces stelt Aegryn een beveiligde data room ter beschikking waarmee de verkoper de voor de CIFS-analyse vereiste documenten kan uploaden. De toegang tot deze documenten wordt strikt gecontroleerd via een drieniveausysteem: beheerder/verkoper, toegewezen gecertificeerde partner en koper die het Transaction-NDA heeft ondertekend.\n\nElke raadpleging wordt gelogd (identiteit, IP-adres, tijdstempel, duur). Technische ontmoedigingsmaatregelen zijn geïmplementeerd (downloadblokkering, detectie van screenshot-pogingen, dynamisch watermerk). Deze maatregelen vormen een serieuze afschrikking en een gelogd bewijs bij geschillen, maar kunnen niet voor 100% voorkomen dat documenten via externe middelen worden vastgelegd.\n\nDe koper erkent dat de in de data room geraadpleegde documenten worden beschermd door deze voorwaarden en het ondertekende Transaction-NDA. Hij verbindt zich er contractueel toe geen geraadpleegd document te reproduceren, door te sturen of openbaar te maken, op straffe van schadevergoeding en juridische stappen. De aansprakelijkheid van Aegryn bij een lek als gevolg van omzeiling van de technische beveiligingen is uitdrukkelijk uitgesloten.",
     "s11Title": "Transactiekosten",
     "s11Charge": "De transactievergoeding van Aegryn is volledig ten laste van de vervreemder (verkoper). Zij wordt door Aegryn rechtstreeks ingehouden op de geblokkeerde fondsen op de datum van sluiting, vóór de uitbetaling van het nettosaldo aan de vervreemder. De overnemer (koper) betaalt geen vergoeding aan Aegryn in verband met de transactie. De toegang tot de catalogus en het acquisitieproces is gratis voor gekwalificeerde kopersleden.",
     "s11Grid": "De transactievergoeding van Aegryn wordt berekend op de vaste overnameprijs die effectief is betaald op de datum van sluiting, volgens de volgende degressieve schaal:",
@@ -4341,7 +4341,7 @@
     ],
     "s11Minimum": "Minimumvergoeding: CHF 25.000 excl. btw, ongeacht het toepasselijke tarief en de definitieve transactieprijs.",
     "s11NonSaleTitle": "Kosten bij niet-realisatie van de transactie",
-    "s11NonSale": "Ingeval een asset die is toegelaten tot het volledige certificeringsproces (Certification Auction) uit de catalogus wordt teruggetrokken of er aan het einde van het Aegryn-proces geen transactie tot stand komt, zijn aan Aegryn minimale vaste kosten van CHF 2.000 excl. btw verschuldigd als vergoeding voor het werk dat zijn teams hebben verricht: C/I/F/S-analyse, toekenning van het officiële grade, voorbereiding van het catalogusdossier, communicatie- en marketingactiviteiten, alsmede de productvisibiliteit die is verworven tijdens de aanwezigheid van het asset in de Aegryn-catalogus. Deze kosten zijn verschuldigd ongeacht de commerciële uitkomst en zijn opeisbaar op de datum van terugtrekking of afsluiting zonder transactie. Ze worden rechtstreeks aan de vervreemder gefactureerd. Deze clausule is niet van toepassing bij een behoorlijk gedocumenteerde niet-vervulde opschortende voorwaarde.",
+    "s11NonSale": "Ingeval een asset die is toegelaten tot het volledige certificeringsproces (Certification Transaction) uit de catalogus wordt teruggetrokken of er aan het einde van het Aegryn-proces geen transactie tot stand komt, zijn aan Aegryn minimale vaste kosten van CHF 2.000 excl. btw verschuldigd als vergoeding voor het werk dat zijn teams hebben verricht: C/I/F/S-analyse, toekenning van het officiële grade, voorbereiding van het catalogusdossier, communicatie- en marketingactiviteiten, alsmede de productvisibiliteit die is verworven tijdens de aanwezigheid van het asset in de Aegryn-catalogus. Deze kosten zijn verschuldigd ongeacht de commerciële uitkomst en zijn opeisbaar op de datum van terugtrekking of afsluiting zonder transactie. Ze worden rechtstreeks aan de vervreemder gefactureerd. Deze clausule is niet van toepassing bij een behoorlijk gedocumenteerde niet-vervulde opschortende voorwaarde.",
     "s11Earnout": "Bij een earnout wordt op elke door de vervreemder effectief ontvangen earnout-betaling een bijkomende vergoeding van 5% aangerekend, met als maximum het tarief dat van toepassing is op de schijf van de totale prijs.",
     "s11Payment": "De vergoeding is verschuldigd op de datum van vrijgave van de geblokkeerde fondsen en wordt door Aegryn rechtstreeks ingehouden op de geblokkeerde fondsen vóór de uitbetaling van het nettosaldo aan de verkoper. Aegryn is nooit bewaarder van deze fondsen — de geblokkeerde bedragen worden aangehouden door een door Aegryn aangewezen derde bank.",
     "ctaContact": "Contact opnemen met het Aegryn-team",
@@ -4647,7 +4647,7 @@
           "sellers"
         ],
         "q": "Wat zijn de certificeringsopties en hun tarieven?",
-        "a": "Er zijn twee paden beschikbaar. Alleen certificering (Aegryn Review): een officiële Grade verkrijgen zonder catalogusopname, voor 2.000 EUR excl. btw (interne Review) of 5.000 EUR excl. btw (co-ondertekende Review+), aftrekbaar als een Certification Auction binnen 6 maanden wordt gestart. Certification Auction: volledig proces met catalogusopname en Aegryn-commissie uitsluitend bij transactie. Een publicatiekosten van CHF 2.000 excl. btw gelden, aftrekbaar van de commissie bij verkoop en ingehouden zonder transactie."
+        "a": "Er zijn twee paden beschikbaar. Alleen certificering (Aegryn Review): een officiële Grade verkrijgen zonder catalogusopname, voor 2.000 EUR excl. btw (interne Review) of 5.000 EUR excl. btw (co-ondertekende Review+), aftrekbaar als een Certification Transaction binnen 6 maanden wordt gestart. Certification Transaction: volledig proces met catalogusopname en Aegryn-commissie uitsluitend bij transactie. Een publicatiekosten van CHF 2.000 excl. btw gelden, aftrekbaar van de commissie bij verkoop en ingehouden zonder transactie."
       },
       {
         "id": "what-grade",
@@ -4679,7 +4679,7 @@
           "buyers"
         ],
         "q": "Hoe word ik ledenkoper?",
-        "a": "Via het sollicitatieformulier op /auction#membership. Uw sollicitatie wordt beoordeeld binnen 10 werkdagen."
+        "a": "Via het sollicitatieformulier op /transact#membership. Uw sollicitatie wordt beoordeeld binnen 10 werkdagen."
       },
       {
         "id": "kyc-docs",
@@ -5001,19 +5001,19 @@
     "metaDesc": "Overzicht van alle pagina's op de Aegryn-website.",
     "title": "Sitemap",
     "subtitle": "Overzicht van alle pagina's en secties van de site.",
-    "groupAuction": "Veiling",
+    "groupTransaction": "Transactie",
     "groupGrade": "Grade",
     "groupAssets": "Assets",
     "groupServices": "Diensten",
     "groupDiscover": "Blog",
     "groupCompany": "Bedrijf",
     "groupLegal": "Juridisch",
-    "auction": "Catalogus",
-    "auctionSell": "Een asset verkopen",
-    "auctionBuy": "Koper worden",
-    "auctionBid": "Biedmodellen",
-    "auctionSession": "Volgende sessie",
-    "auctionResults": "Resultaten",
+    "transaction": "Catalogus",
+    "transactionSell": "Een asset verkopen",
+    "transactionBuy": "Koper worden",
+    "transactionBid": "Biedmodellen",
+    "transactionSession": "Volgende sessie",
+    "transactionResults": "Resultaten",
     "grade": "Grade-systeem",
     "gradeMethod": "Methodologie",
     "gradePartners": "Expertnetwerk",
@@ -5040,7 +5040,7 @@
     "groupBuild": "Build",
     "servicesBuild": "Asset-engineering"
   },
-  "clientAuction": {
+  "clientTransaction": {
     "eyebrow": "Kopersruimte",
     "title": "Mijn Aegryn-dossiers",
     "subtitle": "Toegangslinks naar volledige dossiers worden nooit per e-mail verstuurd. Ze verschijnen hier pas na validatie van uw kandidatuur.",
@@ -5065,7 +5065,7 @@
   },
   "waitlist": {
     "header": {
-      "label": "Wachtlijst — Auction-sessies",
+      "label": "Wachtlijst — Transaction-sessies",
       "title": "Deelnemen aan de prioritaire toegangslijst"
     },
     "step1": {
@@ -5178,7 +5178,7 @@
       "firstNamePlaceholder": "Jan",
       "lastNamePlaceholder": "de Vries",
       "emailPlaceholder": "u@voorbeeld.nl",
-      "gdprConsent": "Ik ga ermee akkoord dat mijn gegevens worden verwerkt door Aegryn in het kader van mijn verzoek om toegang tot de auction-sessies, conform de AVG / nDSG. *",
+      "gdprConsent": "Ik ga ermee akkoord dat mijn gegevens worden verwerkt door Aegryn in het kader van mijn verzoek om toegang tot de transaction-sessies, conform de AVG / nDSG. *",
       "marketingConsent": "Ik ga ermee akkoord Aegryn-communicaties te ontvangen (nieuwe sessies, beschikbare activa).",
       "back": "Terug",
       "submit": "Versturen",
@@ -5217,7 +5217,7 @@
       "network": "Netwerkfout. Probeer het opnieuw."
     }
   },
-  "auctionSheet": {
+  "transactionSheet": {
     "executiveSummaryKicker": "Samenvatting · Snel lezen",
     "executiveSummaryTitle": "Asset-synthese",
     "disclosureKicker": "Vermeldingen en verspreidingsvoorwaarden",
@@ -5937,7 +5937,7 @@
       "fallbackName": "Verkoper",
       "kpiActifs": "Ingediende assets",
       "kpiCertified": "Gecertificeerd",
-      "kpiAuctionReady": "Veilingklaar",
+      "kpiTransactionReady": "Transactieklaar",
       "kpiTransactions": "Transacties",
       "kpiKycOk": "KYC gevalideerd",
       "kpiKycIncomplete": "KYC onvolledig",

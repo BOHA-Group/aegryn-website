@@ -21,12 +21,12 @@
     "clientSpace": "Área de clientes",
     "logout": "Cerrar sesión",
     "submitAsset": "Enviar un activo",
-    "auctionCatalog": "Catálogo",
-    "auctionSell": "Vender un activo",
-    "auctionBuy": "Convertirse en comprador",
-    "auctionBidModels": "Modelos de propuesta",
-    "auctionSession": "Proceso",
-    "auctionResults": "Transacciones cerradas",
+    "transactionCatalog": "Catálogo",
+    "transactionSell": "Vender un activo",
+    "transactionBuy": "Convertirse en comprador",
+    "transactionBidModels": "Modelos de propuesta",
+    "transactionSession": "Proceso",
+    "transactionResults": "Transacciones cerradas",
     "gradeSystem": "Sistema de grade",
     "gradeMethod": "Metodología",
     "gradeSubmit": "Enviar para certificación",
@@ -102,17 +102,17 @@
       "gradePending": "Certificación en curso",
       "visitSite": "Visitar sitio",
       "viewDetails": "Ver detalles",
-      "auctionEligible": "Apto para M&A",
+      "transactionEligible": "Apto para M&A",
       "internalOnly": "Uso interno",
       "confidential": "Confidencial",
       "heroLabel": "Aegryn — Ecosistema propietario",
       "heroTitle": "Lo que\nconstruimos.",
       "heroSub": "6 activos · 3 categorías · Suiza & Europa",
       "ownedNote": "Estos activos pertenecen al grupo Aegryn. No están a la venta por defecto. Algunos pueden ofrecerse excepcionalmente en cesión por decisión estratégica del grupo.",
-      "auctionEligibleNote": "Activo elegible para M&A — contacto inversores bajo demanda.",
+      "transactionEligibleNote": "Activo elegible para M&A — contacto inversores bajo demanda.",
       "ctaBottom": "¿Desea enviar su propio activo para certificación?",
       "ctaGrade": "Enviar un activo de terceros",
-      "ctaAuction": "Ver procesos M&A",
+      "ctaTransaction": "Ver procesos M&A",
       "notStarted": "No iniciado",
       "certificationInProgress": "Certificación en curso"
     },
@@ -515,7 +515,7 @@
         "title": "Está buscando adquirir.",
         "desc": "Nuestro catálogo está reservado para compradores cualificados.",
         "btn": "Enviar una solicitud de comprador",
-        "href": "/auction/how-to-buy"
+        "href": "/transact/how-to-buy"
       },
       "partner": {
         "title": "Es un socio potencial.",
@@ -867,7 +867,7 @@
         "general": "Consulta general",
         "advisory": "Advisory",
         "grade": "Certificación de activo (Grade)",
-        "auction": "Proceso M&A",
+        "transaction": "Proceso M&A",
         "partnership": "Asociación",
         "investor": "Inversor",
         "press": "Prensa & Medios",
@@ -2240,7 +2240,7 @@
     "featuredLabel": "Destacado",
     "allArticles": "Todos los artículos",
     "ctaGrade": "Certificar mi activo",
-    "ctaAuction": "Ver sesiones",
+    "ctaTransaction": "Ver sesiones",
     "searchPlaceholder": "Buscar artículos...",
     "noArticles": "Ningún artículo en esta categoría todavía.",
     "newsletterLabel": "Newsletter",
@@ -2626,7 +2626,7 @@
       ]
     }
   },
-  "auction": {
+  "transaction": {
     "meta": {
       "title": "Subasta — Transacciones de activos tech certificados",
       "desc": "Sesiones Aegryn: compra o vende activos tech certificados."
@@ -2983,7 +2983,7 @@
       }
     ]
   },
-  "auctionNarrative": {
+  "transactionNarrative": {
     "label": "Subasta",
     "title": "Algunos activos merecen más\nque una ficha pública.",
     "desc": "Aegryn no es una plataforma abierta. Es un proceso de cesión confidencial entre vendedores que han pasado nuestra certificación y adquirentes que han demostrado su capacidad.\n\nMenos del 25% de los activos presentados son aceptados. El 100% de los adquirentes están pre-calificados. Cada transacción está íntegramente documentada y asegurada.",
@@ -3058,8 +3058,8 @@
       "label": "GRADE",
       "desc": "Certificación independiente y documentada"
     },
-    "auction": {
-      "label": "AUCTION",
+    "transaction": {
+      "label": "TRANSACTION",
       "desc": "Transacciones institucionales encuadradas"
     }
   },
@@ -3364,10 +3364,10 @@
         {
           "phase": "Etapa temprana - 6 a 18 meses",
           "title": "Cesión en etapa temprana",
-          "desc": "Su activo tiene arquitectura sólida y primera tracción. Aegryn estructura la cesión vía Auction o transacción confidencial.",
+          "desc": "Su activo tiene arquitectura sólida y primera tracción. Aegryn estructura la cesión vía Transaction o transacción confidencial.",
           "grade": "Grade objetivo: A - ticket 100K a 500K EUR",
           "cta": "Ver modelos de adquisición",
-          "href": "/auction/bid-models"
+          "href": "/transact/bid-models"
         },
         {
           "phase": "Madurez - 18 a 36 meses",
@@ -3459,7 +3459,7 @@
     "exitBanner": {
       "text": "La venta es una opción, nunca una obligación. Si algún día desea ceder — en etapa temprana o en madurez — el activo está diseñado para ello. La salida vía Aegryn o transacción confidencial está disponible si el grade lo permite.",
       "cta": "Saber más sobre el proceso de venta",
-      "href": "/auction/how-it-works"
+      "href": "/transact/how-it-works"
     },
     "cta": {
       "title": "¿Un proyecto en mente?",
@@ -3541,7 +3541,7 @@
       "legalNote": "Las condiciones financieras de la certificación están disponibles en nuestras Condiciones Generales de Servicios, transmitidas en el primer intercambio. Sin compromiso en esta etapa.",
       "evalTypeTitle": "¿Qué nivel de evaluación necesita?",
       "evalTypeFull": {
-        "label": "Certificación Auction",
+        "label": "Certificación Transaction",
         "desc": "Solo honorarios de éxito. Proceso completo por protocolo independiente Aegryn (4 dimensiones C/I/F/S), incluido si la transacción se realiza vía Aegryn.",
         "price": "Gratuito"
       },
@@ -3555,7 +3555,7 @@
         "desc": "Opinión escrita + revisión por un socio externo (bufete jurídico o contador) a petición en 20 días hábiles. Referencia cruzada con nuestros socios Alliance.",
         "price": "5.000 CHF sin IVA"
       },
-      "evalDeductibleNote": "Este importe es íntegramente deducible del costo de certificación si inicia un proceso completo de Auction en los 6 meses siguientes a la recepción de su Review.",
+      "evalDeductibleNote": "Este importe es íntegramente deducible del costo de certificación si inicia un proceso completo de Transaction en los 6 meses siguientes a la recepción de su Review.",
       "partnerSelectLabel": "Socio a involucrar",
       "partnerLegal": "Bufete jurídico",
       "partnerAccounting": "Contador público",
@@ -3604,8 +3604,8 @@
       "desc": "Club Deal, Corporate, Fondo, Equity Stake, los 4 modelos de adquisición Aegryn con la Promesa de Transacción Tech en 5 pasos."
     },
     "hero": {
-      "back": "← Auction",
-      "label": "Aegryn AUCTION",
+      "back": "← Transaction",
+      "label": "Aegryn TRANSACTION",
       "title": "Elija su modelo de adquisición",
       "desc": "Cuatro perfiles de compradores, un requisito: la calidad del deal. Cada modelo está adaptado a su estructura y objetivos."
     },
@@ -4091,7 +4091,7 @@
       ]
     }
   },
-  "auctionSubmit": {
+  "transactionSubmit": {
     "meta": {
       "title": "Enviar un activo — Aegryn M&A Switzerland",
       "desc": "Envíe su activo tech a una sesión Aegryn M&A Switzerland. Derecho suizo. Abierto internacionalmente."
@@ -4203,7 +4203,7 @@
       "errorMsg": "Se ha producido un error. Por favor, inténtelo de nuevo o contáctenos directamente."
     }
   },
-  "auctionLot": {
+  "transactionLot": {
     "accessDeniedTitle": "Acceso restringido",
     "accessDeniedDesc": "Este dossier solo es accesible para compradores cualificados con una autorización admin válida y un acceso de sesión activo.",
     "accessExpiredTitle": "Acceso expirado",
@@ -4293,7 +4293,7 @@
     "s2Review": "Opinión escrita de un analista Aegryn sobre un activo tech enviado. Plazo: 15 días hábiles. Sin validación externa, no publicable en el catálogo. Valor meramente indicativo. Totalmente deducible de los honorarios de certificación si el proceso completo se inicia en los 6 meses siguientes.",
     "s2ReviewPlusTitle": "Aegryn Review+",
     "s2ReviewPlus": "Opinión escrita de un analista Aegryn complementada con la revisión de un socio externo. Plazo: 20 días hábiles. No oficial en el sentido de la certificación completa, no publicable. Totalmente deducible en las mismas condiciones.",
-    "s2CertTitle": "Certificación Auction",
+    "s2CertTitle": "Certificación Transaction",
     "s2Cert": "Proceso de auditoría multidimensional completo sobre las 4 dimensiones C/I/F/S. Realizado por analistas certificados Aegryn según el protocolo oficial. Grade AEG oficial otorgado y publicable en el catálogo. Honorarios: a éxito (comisión sobre venta).",
     "s2AdvisoryTitle": "Aegryn Advisory",
     "s2Advisory": "Acompañamiento estratégico y operativo de activos en proceso de remediación y reenvío. Honorarios según presupuesto.",
@@ -4327,7 +4327,7 @@
     "s9Title": "Ley aplicable y resolución de litigios",
     "s9": "Las presentes CGV se rigen por el derecho material suizo. Cualquier litigio será sometido a la jurisdicción exclusiva de los tribunales del cantón de domicilio de Aegryn. Las partes intentarán resolver amistosamente cualquier diferendo en un plazo de 30 días antes de acudir a los tribunales.",
     "s10Title": "Data Room y acceso a documentos de due diligence",
-    "s10": "En el marco del proceso de certificación y transacción, Aegryn pone a disposición una data room segura que permite al vendedor depositar los documentos necesarios para el análisis CIFS. El acceso a estos documentos está estrictamente controlado mediante un sistema de tres niveles de autorización: administrador/vendedor, socio certificado asignado y comprador que haya firmado el NDA Auction.\n\nCada consulta queda registrada (identidad, dirección IP, marca temporal, duración). Se implementan medidas técnicas disuasorias (bloqueo de descarga, detección de intentos de captura, marca de agua dinámica). Estas medidas constituyen una disuasión seria y un registro documentado en caso de litigio, pero no pueden garantizar al 100% la imposibilidad de captura por medios externos.\n\nEl comprador reconoce y acepta que los documentos consultados en la data room están protegidos por las presentes CGV y el NDA Auction firmado. Se compromete contractualmente a no reproducir, transmitir ni divulgar ningún documento consultado, bajo pena de daños y perjuicios y acciones legales. La responsabilidad de Aegryn en caso de filtración resultante de una elusión de las protecciones técnicas queda expresamente excluida.",
+    "s10": "En el marco del proceso de certificación y transacción, Aegryn pone a disposición una data room segura que permite al vendedor depositar los documentos necesarios para el análisis CIFS. El acceso a estos documentos está estrictamente controlado mediante un sistema de tres niveles de autorización: administrador/vendedor, socio certificado asignado y comprador que haya firmado el NDA Transaction.\n\nCada consulta queda registrada (identidad, dirección IP, marca temporal, duración). Se implementan medidas técnicas disuasorias (bloqueo de descarga, detección de intentos de captura, marca de agua dinámica). Estas medidas constituyen una disuasión seria y un registro documentado en caso de litigio, pero no pueden garantizar al 100% la imposibilidad de captura por medios externos.\n\nEl comprador reconoce y acepta que los documentos consultados en la data room están protegidos por las presentes CGV y el NDA Transaction firmado. Se compromete contractualmente a no reproducir, transmitir ni divulgar ningún documento consultado, bajo pena de daños y perjuicios y acciones legales. La responsabilidad de Aegryn en caso de filtración resultante de una elusión de las protecciones técnicas queda expresamente excluida.",
     "s11Title": "Honorarios de transacción",
     "s11Charge": "La comisión de transacción Aegryn es íntegramente a cargo del cedente (vendedor). Es deducida directamente por Aegryn de los fondos en depósito en garantía en la fecha del cierre, antes de la remisión del saldo neto al cedente. El adquirente (comprador) no paga ninguna comisión a Aegryn en relación con la transacción. El acceso al catálogo y al proceso de adquisición es gratuito para los miembros compradores cualificados.",
     "s11Grid": "La comisión de transacción Aegryn se calcula sobre el precio firme de cesión efectivamente abonado en la fecha del cierre, según la siguiente escala degresiva:",
@@ -4341,7 +4341,7 @@
     ],
     "s11Minimum": "Comisión mínima: 25.000 CHF sin IVA, independientemente de la tasa aplicable y del precio final de cesión.",
     "s11NonSaleTitle": "Honorarios en caso de no realización de la transacción",
-    "s11NonSale": "En el caso de que un activo admitido al proceso de certificación completa (Certification Auction) sea retirado del catálogo o no se concrete ninguna transacción al término del proceso Aegryn, se adeudan a Aegryn honorarios fijos mínimos de CHF 2.000 sin IVA en contraprestación al trabajo realizado por sus equipos: análisis C/I/F/S, atribución del grade oficial, preparación del dossier de catálogo, acciones de comunicación y marketing, así como la visibilidad del producto adquirida durante la presencia del activo en el catálogo Aegryn. Dichos honorarios son debidos con independencia del resultado comercial y son exigibles en la fecha de retiro o cierre sin transacción. Se facturan directamente al cedente. Esta cláusula no se aplica en caso de condición suspensiva no cumplida debidamente documentada.",
+    "s11NonSale": "En el caso de que un activo admitido al proceso de certificación completa (Certification Transaction) sea retirado del catálogo o no se concrete ninguna transacción al término del proceso Aegryn, se adeudan a Aegryn honorarios fijos mínimos de CHF 2.000 sin IVA en contraprestación al trabajo realizado por sus equipos: análisis C/I/F/S, atribución del grade oficial, preparación del dossier de catálogo, acciones de comunicación y marketing, así como la visibilidad del producto adquirida durante la presencia del activo en el catálogo Aegryn. Dichos honorarios son debidos con independencia del resultado comercial y son exigibles en la fecha de retiro o cierre sin transacción. Se facturan directamente al cedente. Esta cláusula no se aplica en caso de condición suspensiva no cumplida debidamente documentada.",
     "s11Earnout": "En caso de earnout, se aplica una comisión adicional del 5% sobre cada pago de earnout efectivamente recibido por el cedente, con el límite de la tasa aplicable a la franja del precio total.",
     "s11Payment": "La comisión se devenga en la fecha de liberación del depósito en garantía y es deducida directamente por Aegryn de los fondos en depósito antes de la remisión del saldo neto al vendedor. Aegryn nunca es depositario de dichos fondos: el depósito en garantía está en poder de un banco tercero designado por Aegryn.",
     "ctaContact": "Contactar al equipo Aegryn",
@@ -4647,7 +4647,7 @@
           "sellers"
         ],
         "q": "¿Cuáles son las opciones de certificación y sus tarifas?",
-        "a": "Hay dos recorridos disponibles. Solo certificación (Aegryn Review): obtener un Grade oficial sin inclusión en catálogo, a 2.000 EUR sin IVA (Review interna) o 5.000 EUR sin IVA (Review+ co-firmada), deducibles si se inicia una Certification Auction en los 6 meses siguientes. Certification Auction: proceso completo con inclusión en catálogo y comisión Aegryn solo en la transacción. Se aplica una tarifa de publicación de CHF 2.000 sin IVA, deducible de la comisión en caso de venta y retenida sin transacción."
+        "a": "Hay dos recorridos disponibles. Solo certificación (Aegryn Review): obtener un Grade oficial sin inclusión en catálogo, a 2.000 EUR sin IVA (Review interna) o 5.000 EUR sin IVA (Review+ co-firmada), deducibles si se inicia una Certification Transaction en los 6 meses siguientes. Certification Transaction: proceso completo con inclusión en catálogo y comisión Aegryn solo en la transacción. Se aplica una tarifa de publicación de CHF 2.000 sin IVA, deducible de la comisión en caso de venta y retenida sin transacción."
       },
       {
         "id": "what-grade",
@@ -4679,7 +4679,7 @@
           "buyers"
         ],
         "q": "¿Cómo me convierto en comprador miembro?",
-        "a": "A través del formulario de candidatura en /auction#membership. Su candidatura es examinada en 10 días hábiles."
+        "a": "A través del formulario de candidatura en /transact#membership. Su candidatura es examinada en 10 días hábiles."
       },
       {
         "id": "kyc-docs",
@@ -5001,19 +5001,19 @@
     "metaDesc": "Visión general de todas las páginas del sitio web de Aegryn.",
     "title": "Mapa del sitio",
     "subtitle": "Visión general de todas las páginas y secciones del sitio.",
-    "groupAuction": "Subasta",
+    "groupTransaction": "Transacción",
     "groupGrade": "Grade",
     "groupAssets": "Activos",
     "groupServices": "Servicios",
     "groupDiscover": "Blog",
     "groupCompany": "Empresa",
     "groupLegal": "Legal",
-    "auction": "Catálogo",
-    "auctionSell": "Vender un activo",
-    "auctionBuy": "Ser comprador",
-    "auctionBid": "Modelos de oferta",
-    "auctionSession": "Próxima sesión",
-    "auctionResults": "Resultados",
+    "transaction": "Catálogo",
+    "transactionSell": "Vender un activo",
+    "transactionBuy": "Ser comprador",
+    "transactionBid": "Modelos de oferta",
+    "transactionSession": "Próxima sesión",
+    "transactionResults": "Resultados",
     "grade": "Sistema de grade",
     "gradeMethod": "Metodología",
     "gradePartners": "Red de expertos",
@@ -5040,7 +5040,7 @@
     "groupBuild": "Build",
     "servicesBuild": "Concepción de activos"
   },
-  "clientAuction": {
+  "clientTransaction": {
     "eyebrow": "Espacio comprador",
     "title": "Mis expedientes Aegryn",
     "subtitle": "Los enlaces de acceso a los expedientes completos nunca se envían por correo. Aparecen aquí solo tras la validación de su candidatura.",
@@ -5065,7 +5065,7 @@
   },
   "waitlist": {
     "header": {
-      "label": "Lista de espera — Sesiones Auction",
+      "label": "Lista de espera — Sesiones Transaction",
       "title": "Unirse a la lista de acceso prioritario"
     },
     "step1": {
@@ -5178,7 +5178,7 @@
       "firstNamePlaceholder": "Juan",
       "lastNamePlaceholder": "García",
       "emailPlaceholder": "usted@ejemplo.com",
-      "gdprConsent": "Acepto que mis datos sean tratados por Aegryn en el marco de mi solicitud de acceso a las sesiones auction, de conformidad con el RGPD / nLPD. *",
+      "gdprConsent": "Acepto que mis datos sean tratados por Aegryn en el marco de mi solicitud de acceso a las sesiones transaction, de conformidad con el RGPD / nLPD. *",
       "marketingConsent": "Acepto recibir comunicaciones de Aegryn (nuevas sesiones, activos disponibles).",
       "back": "Volver",
       "submit": "Enviar",
@@ -5217,7 +5217,7 @@
       "network": "Error de red. Por favor, inténtelo de nuevo."
     }
   },
-  "auctionSheet": {
+  "transactionSheet": {
     "executiveSummaryKicker": "Resumen ejecutivo · Lectura rápida",
     "executiveSummaryTitle": "Síntesis del activo",
     "disclosureKicker": "Menciones y condiciones de difusión",
@@ -5937,7 +5937,7 @@
       "fallbackName": "Vendedor",
       "kpiActifs": "Activos enviados",
       "kpiCertified": "Certificado",
-      "kpiAuctionReady": "Listo para M&A",
+      "kpiTransactionReady": "Listo para M&A",
       "kpiTransactions": "Transacciones",
       "kpiKycOk": "KYC validado",
       "kpiKycIncomplete": "KYC incompleto",

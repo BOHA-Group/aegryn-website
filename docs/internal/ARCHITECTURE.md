@@ -70,8 +70,8 @@ github.com/BOHA-Group/aegryn-website
 | Route | Purpose |
 |---|---|
 | `/` | Home |
-| `/auction/catalog` | Asset catalogue (public teaser) |
-| `/auction/sessions` | Private sessions info |
+| `/transact/catalog` | Asset catalogue (public teaser) |
+| `/transact/sessions` | Private sessions info |
 | `/grade/grading-system` | CIFS explained publicly |
 | `/grade/submit` | Seller asset submission |
 | `/roadmap` | Platform roadmap (top 20) |
