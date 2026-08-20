@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { FileText, Eye, Loader2, ShieldAlert } from 'lucide-react'
+import { FileText, Eye, ShieldAlert } from 'lucide-react'
 import { DataRoomViewer } from '@/components/DataRoomViewer'
 
 type Doc = {
