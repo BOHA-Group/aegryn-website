@@ -1,21 +1,12 @@
 import { createServiceClient } from '@/lib/supabase'
-import { redirect }            from 'next/navigation'
-import { headers }             from 'next/headers'
 import type { Metadata }       from 'next'
 import { Suspense }            from 'react'
 import AdminLeadsClient        from './AdminLeadsClient'
+import { checkAdminAccess }   from '@/lib/adminAuth'
 
 export const metadata: Metadata = {
   title: 'Leads — Aegryn Admin',
   robots: { index: false, follow: false },
-}
-
-async function checkAccess(token?: string): Promise<boolean> {
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
-  if (!adminToken) return true
-  if (token === adminToken) return true
-  const hdrs = await headers()
-  return hdrs.get('x-admin-token') === adminToken
 }
 
 export default async function AdminLeadsPage({
@@ -25,7 +16,8 @@ export default async function AdminLeadsPage({
 }) {
   const params = await searchParams
 
-  if (!(await checkAccess(params.token))) redirect('/')
+  // Accepte : token URL valide OU cookie admin httpOnly OU session Supabase admin
+  await checkAdminAccess(params.token)
 
   const supa   = createServiceClient()
   const source = params.source ?? 'valuation'
