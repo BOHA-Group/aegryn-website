@@ -112,8 +112,8 @@ export default async function NdaRequiredPage() {
           </NdaArticle>
 
           <NdaArticle num="5" title={t('a5Title')}>
-            {t('a5').replace(t('a5Years'), '')}
-            <strong className="text-gray-900"> {t('a5Years')}</strong>
+            {t('a5').split(t('a5Years'))[0]}
+            <strong className="text-gray-900">{t('a5Years')}</strong>
             {t('a5').split(t('a5Years'))[1] ?? ''}
           </NdaArticle>
 
