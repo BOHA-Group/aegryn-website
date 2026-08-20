@@ -48,14 +48,16 @@ export default async function DiligencePage({
   const { id: assetId } = await params
   const supa = createServiceClient()
 
-  /* ── 1. KYC ── */
+  /* ── 1. KYC + profil acquéreur ── */
   const { data: profile } = await supa
     .from('profiles')
-    .select('kyc_status')
+    .select('kyc_status, full_name, email')
     .eq('id', user.id)
-    .single() as { data: { kyc_status: string | null } | null }
+    .single() as { data: { kyc_status: string | null; full_name: string | null; email: string | null } | null }
 
   const kycApproved = profile?.kyc_status === 'approved'
+  const userName    = profile?.full_name ?? profile?.email ?? user.email ?? 'Inconnu'
+  const userEmail   = profile?.email ?? user.email ?? ''
 
   /* ── 2. Actif ── */
   const { data: asset } = await supa
@@ -358,7 +360,7 @@ export default async function DiligencePage({
                     <p className="font-sans text-[13px] text-gray-400">Aucun document accessible pour le moment.</p>
                   </div>
                 ) : (
-                  <LightDocumentViewer documents={lightDocs} />
+                  <LightDocumentViewer documents={lightDocs} userName={userName} userEmail={userEmail} />
                 )}
               </div>
 

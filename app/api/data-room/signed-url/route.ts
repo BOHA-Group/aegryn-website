@@ -51,11 +51,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
   }
 
-  /* ── 5. Génération URL signée (Supabase Storage) ── */
+  /* ── 5. Génération URL signée (Supabase Storage, inline = pas de téléchargement direct) ── */
   const { data: signedData, error: signErr } = await supa
     .storage
     .from('data-room')
-    .createSignedUrl(doc.file_path, SIGNED_URL_EXPIRY_SECONDS)
+    .createSignedUrl(doc.file_path, SIGNED_URL_EXPIRY_SECONDS, {
+      download: false,
+    })
 
   if (signErr || !signedData?.signedUrl) {
     console.error('[data-room/signed-url] Storage error:', signErr)
