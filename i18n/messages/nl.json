@@ -415,7 +415,8 @@
         }
       ],
       "synthesis": "Drie woorden uit drie beschavingen. Één synthese: een entiteit die beschermt (AEGIS), stromen faciliteert (AEGIR) en bouwt voor permanentie (AEON). Aegryn.",
-      "history": "Aegryn was voorheen bekend als BOHA-Group. Naarmate de positionering van het bedrijf scherper werd, van bouwer van digitale assets naar certificerings- en transactie-infrastructuur, deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet."
+      "history": "Aegryn was voorheen bekend als BOHA-Group. Naarmate de positionering van het bedrijf scherper werd, van bouwer van digitale assets naar certificerings- en transactie-infrastructuur, deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet.",
+      "formerly": "Aegryn was voorheen bekend als BOHA-Group. Naarmate de positionering van het bedrijf scherper werd, van bouwer van digitale assets naar certificerings- en transactie-infrastructuur, deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet."
     },
     "vision": {
       "label": "Onze visie",
@@ -6234,5 +6235,20 @@
       "success": "Dank u! U wordt op de hoogte gesteld.",
       "error": "Er is een fout opgetreden."
     }
+  },
+  "transactNarrative": {
+    "label": "Vertrouwelijke M&A-transacties",
+    "title": "Sommige activa verdienen meer\ndan een openbare lijst.",
+    "desc": "Aegryn is geen open platform. Het is een vertrouwelijk offmarket-verkoopproces tussen CIFS-gecertificeerde verkopers en vooraf gekwalificeerde kopers.\n\nElk actief wordt gepresenteerd onder exclusief mandaat. Elke koper heeft zijn capaciteit en ernst bewezen. De transactie komt tot stand via een gestructureerd voorstel, niet via veiling.",
+    "stat1Val": "< 25%",
+    "stat1Label": "Acceptatiepercentage ingediende activa",
+    "stat2Val": "60 d max",
+    "stat2Label": "Exclusief verkopermandaat",
+    "stat3Val": "100%",
+    "stat3Label": "Vooraf gekwalificeerde kopers",
+    "ctaSell": "Een gecertificeerd actief verkopen",
+    "ctaBuy": "Toetreden tot de koperscirkel",
+    "stat4Val": "Zwitserland",
+    "stat4Label": "Institutioneel ankerpunt"
   }
 }

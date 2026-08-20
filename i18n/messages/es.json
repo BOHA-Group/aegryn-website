@@ -415,7 +415,8 @@
         }
       ],
       "synthesis": "Tres palabras de tres civilizaciones. Una síntesis: una entidad que protege (AEGIS), facilita flujos (AEGIR) y construye para la permanencia (AEON). Aegryn.",
-      "history": "Aegryn era conocida anteriormente como BOHA-Group. A medida que el posicionamiento de la empresa se afiló, de constructor de activos digitales a infraestructura de certificación y transacción, también lo hizo su identidad. El nombre cambió. La convicción no."
+      "history": "Aegryn era conocida anteriormente como BOHA-Group. A medida que el posicionamiento de la empresa se afiló, de constructor de activos digitales a infraestructura de certificación y transacción, también lo hizo su identidad. El nombre cambió. La convicción no.",
+      "formerly": "Aegryn era conocida anteriormente como BOHA-Group. A medida que el posicionamiento de la empresa se afiló, de constructor de activos digitales a infraestructura de certificación y transacción, también lo hizo su identidad. El nombre cambió. La convicción no."
     },
     "vision": {
       "label": "Nuestra visión",
@@ -6234,5 +6235,20 @@
       "success": "¡Gracias! Le avisaremos.",
       "error": "Ha ocurrido un error."
     }
+  },
+  "transactNarrative": {
+    "label": "Transacciones M&A confidenciales",
+    "title": "Algunos activos merecen más\nque un listado público.",
+    "desc": "Aegryn no es una plataforma abierta. Es un proceso de cesión offmarket, confidencial, entre vendedores certificados CIFS y compradores precalificados.\n\nCada activo se presenta bajo mandato exclusivo. Cada comprador ha demostrado su capacidad y seriedad. La transacción se articula mediante propuesta estructurada, no en subasta.",
+    "stat1Val": "< 25%",
+    "stat1Label": "Tasa de aceptación de activos presentados",
+    "stat2Val": "60 d máx",
+    "stat2Label": "Mandato exclusivo del vendedor",
+    "stat3Val": "100%",
+    "stat3Label": "Compradores precalificados",
+    "ctaSell": "Vender un activo certificado",
+    "ctaBuy": "Unirse al círculo de compradores",
+    "stat4Val": "Suiza",
+    "stat4Label": "Anclaje institucional"
   }
 }

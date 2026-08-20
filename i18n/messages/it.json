@@ -415,7 +415,8 @@
         }
       ],
       "synthesis": "Tre parole da tre civiltà. Una sintesi: un'entità che protegge (AEGIS), facilita i flussi (AEGIR) e costruisce per la permanenza (AEON). Aegryn.",
-      "history": "Aegryn era precedentemente conosciuta come BOHA-Group. Man mano che il posizionamento dell'azienda si affinava, da costruttore di asset digitali a infrastruttura di certificazione e transazione, così si affinava anche la sua identità. Il nome è cambiato. La convinzione no."
+      "history": "Aegryn era precedentemente conosciuta come BOHA-Group. Man mano che il posizionamento dell'azienda si affinava, da costruttore di asset digitali a infrastruttura di certificazione e transazione, così si affinava anche la sua identità. Il nome è cambiato. La convinzione no.",
+      "formerly": "Aegryn era precedentemente conosciuta come BOHA-Group. Man mano che il posizionamento dell'azienda si affinava, da costruttore di asset digitali a infrastruttura di certificazione e transazione, così si affinava anche la sua identità. Il nome è cambiato. La convinzione no."
     },
     "vision": {
       "label": "La nostra visione",
@@ -6234,5 +6235,20 @@
       "success": "Grazie! La notificheremo.",
       "error": "Si è verificato un errore."
     }
+  },
+  "transactNarrative": {
+    "label": "Transazioni M&A riservate",
+    "title": "Alcuni asset meritano di più\ndi un elenco pubblico.",
+    "desc": "Aegryn non è una piattaforma aperta. È un processo di cessione offmarket, riservato, tra venditori certificati CIFS e acquirenti prequalificati.\n\nOgni asset è presentato sotto mandato esclusivo. Ogni acquirente ha dimostrato la propria capacità e serietà. La transazione nasce da una proposta strutturata, non da un'asta.",
+    "stat1Val": "< 25%",
+    "stat1Label": "Tasso di accettazione degli asset presentati",
+    "stat2Val": "60 gg max",
+    "stat2Label": "Mandato esclusivo del venditore",
+    "stat3Val": "100%",
+    "stat3Label": "Acquirenti prequalificati",
+    "ctaSell": "Vendere un asset certificato",
+    "ctaBuy": "Entrare nel circolo degli acquirenti",
+    "stat4Val": "Svizzera",
+    "stat4Label": "Ancoraggio istituzionale"
   }
 }

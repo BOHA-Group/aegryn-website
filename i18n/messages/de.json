@@ -415,7 +415,8 @@
         }
       ],
       "synthesis": "Drei Wörter aus drei Zivilisationen. Eine Synthese: eine Einheit, die schützt (AEGIS), Flüsse ermöglicht (AEGIR) und für die Dauer baut (AEON). Aegryn.",
-      "history": "Aegryn war früher als BOHA-Group bekannt. Als sich die Positionierung des Unternehmens schärfte, vom Erbauer digitaler Assets zur Zertifizierungs- und Transaktionsinfrastruktur, schärfte sich auch seine Identität. Der Name änderte sich. Die Überzeugung nicht."
+      "history": "Aegryn war früher als BOHA-Group bekannt. Als sich die Positionierung des Unternehmens schärfte, vom Erbauer digitaler Assets zur Zertifizierungs- und Transaktionsinfrastruktur, schärfte sich auch seine Identität. Der Name änderte sich. Die Überzeugung nicht.",
+      "formerly": "Aegryn war früher als BOHA-Group bekannt. Als sich die Positionierung des Unternehmens schärfte, vom Erbauer digitaler Assets zur Zertifizierungs- und Transaktionsinfrastruktur, schärfte sich auch seine Identität. Der Name änderte sich. Die Überzeugung nicht."
     },
     "vision": {
       "label": "Unsere Vision",
@@ -6234,5 +6235,20 @@
       "success": "Danke! Sie werden benachrichtigt.",
       "error": "Fehler aufgetreten."
     }
+  },
+  "transactNarrative": {
+    "label": "Vertrauliche M&A-Transaktionen",
+    "title": "Manche Vermögenswerte verdienen mehr\nals eine öffentliche Liste.",
+    "desc": "Aegryn ist keine offene Plattform. Es ist ein vertraulicher Veräußerungsprozess zwischen CIFS-zertifizierten Verkäufern und vorqualifizierten Käufern.\n\nJeder Vermögenswert wird unter Exklusivmandat präsentiert. Jeder Käufer hat seine Kapazität und Ernsthaftigkeit nachgewiesen. Die Transaktion entsteht durch strukturiertes Angebot, nicht durch Auktion.",
+    "stat1Val": "< 25%",
+    "stat1Label": "Akzeptanzrate eingereichter Vermögenswerte",
+    "stat2Val": "60 T max",
+    "stat2Label": "Exklusives Verkäufermandat",
+    "stat3Val": "100%",
+    "stat3Label": "Vorqualifizierte Käufer",
+    "ctaSell": "Einen zertifizierten Vermögenswert verkaufen",
+    "ctaBuy": "Dem Käuferkreis beitreten",
+    "stat4Val": "Schweiz",
+    "stat4Label": "Institutionelle Verankerung"
   }
 }

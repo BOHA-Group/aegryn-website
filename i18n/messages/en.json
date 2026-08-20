@@ -504,6 +504,27 @@
         "btn": "Discover partnerships",
         "href": "/alliances"
       }
+    },
+    "name": {
+      "label": "The name",
+      "title": "Three ancient words.\nOne identity.",
+      "roots": [
+        {
+          "word": "AEGIS",
+          "meaning": "Symbol of protection, authority, and legitimacy. To act under the aegis of something is to act under a certifying authority whose standard holds."
+        },
+        {
+          "word": "AEGIR",
+          "meaning": "Master of flows — of what circulates between shores, between parties, between value and its recognition."
+        },
+        {
+          "word": "AEON",
+          "meaning": "Eternity. The long duration. What endures beyond cycles, trends, and funding rounds."
+        }
+      ],
+      "synthesis": "Three words from three civilisations. One synthesis: an entity that protects (AEGIS), facilitates flows (AEGIR), and builds for permanence (AEON). Aegryn.",
+      "history": "Aegryn was formerly known as BOHA-Group. As the company's positioning evolved — from digital asset builder to certification and transaction infrastructure — its identity evolved with it. The name changed. The conviction did not.",
+      "formerly": "Aegryn was formerly known as BOHA-Group. As the company's positioning evolved — from digital asset builder to certification and transaction infrastructure — its identity evolved with it. The name changed. The conviction did not."
     }
   },
   "career": {

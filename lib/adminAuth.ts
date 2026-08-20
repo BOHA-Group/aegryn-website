@@ -41,16 +41,23 @@ export async function requireAdmin() {
   const isAdminMeta = user.app_metadata?.role === 'admin'
   if (isAdminMeta) return user
 
-  /* Fallback : vérifier la table profiles */
+  /* Fallback : vérifier la table profiles — colonne role (string) ET roles (array) */
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('roles')
+    .select('role, roles')
     .eq('id', user.id)
     .single()
 
-  const roles = (profile?.roles ?? []) as string[]
-  if (!roles.includes('admin') && !roles.includes('super_admin')) {
+  const roleStr = (profile?.role ?? '') as string
+  const roles   = (profile?.roles ?? []) as string[]
+  const isAdmin =
+    roleStr === 'admin' ||
+    roleStr === 'super_admin' ||
+    roles.includes('admin') ||
+    roles.includes('super_admin')
+
+  if (!isAdmin) {
     await client.auth.signOut()
     redirect('/admin/login?error=not_admin')
   }
@@ -99,12 +106,18 @@ export async function getAdminUser() {
     const supa = createServiceClient()
     const { data: profile } = await supa
       .from('profiles')
-      .select('roles')
+      .select('role, roles')
       .eq('id', user.id)
       .single()
 
-    const roles = (profile?.roles ?? []) as string[]
-    if (roles.includes('admin') || roles.includes('super_admin')) return user
+    const roleStr = (profile?.role ?? '') as string
+    const roles   = (profile?.roles ?? []) as string[]
+    if (
+      roleStr === 'admin' ||
+      roleStr === 'super_admin' ||
+      roles.includes('admin') ||
+      roles.includes('super_admin')
+    ) return user
     return null
   } catch {
     return null
