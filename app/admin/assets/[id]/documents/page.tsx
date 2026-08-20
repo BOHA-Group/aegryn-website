@@ -7,6 +7,7 @@ import type {
 } from '@/lib/dataRoom'
 import { DIMENSION_LABELS } from '@/lib/dataRoom'
 import AdminDocumentsClient from './AdminDocumentsClient'
+import AccessLogsTable, { type AccessLog } from './AccessLogsTable'
 
 export const metadata: Metadata = {
   title: 'Documents Data Room — Aegryn Admin',
@@ -54,6 +55,23 @@ export default async function AdminAssetDocumentsPage({
     .order('uploaded_at', { ascending: false })
 
   const documents = (docs ?? []) as DataRoomDocument[]
+
+  /* Logs de consultation data room pour cet actif — 200 derniers */
+  const docIds = documents.map((d) => d.id)
+  const accessLogs = docIds.length > 0
+    ? await supa
+        .from('data_room_access_log')
+        .select(`
+          id, action, detail, ip_address, user_agent,
+          session_duration_seconds, created_at,
+          document_id,
+          profiles:user_id ( full_name, email )
+        `)
+        .in('document_id', docIds)
+        .order('created_at', { ascending: false })
+        .limit(200)
+        .then(r => r.data ?? [])
+    : []
 
   /* Complétude par dimension — calculée côté server */
   const completeness = DIMENSIONS.map((dim) => {
@@ -160,6 +178,12 @@ export default async function AdminAssetDocumentsPage({
           catalog={catalog}
           documents={documents}
           dataRoomLightEnabled={Boolean((asset as Record<string, unknown>).data_room_light_enabled)}
+        />
+
+        {/* Journal des consultations */}
+        <AccessLogsTable
+          logs={accessLogs as unknown as AccessLog[]}
+          documents={documents}
         />
 
       </div>
