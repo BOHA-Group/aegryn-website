@@ -49,17 +49,6 @@ export default async function AdminLeadsPage({
       rows = (data ?? []) as Record<string, unknown>[]
     }
 
-    if (source === 'assessment') {
-      let q = supa
-        .from('assessment_day_bookings')
-        .select('id, name, email, company, preferred_city, preferred_format, asset_type, arr_range, status, locale, created_at')
-        .order('created_at', { ascending: false }).limit(200)
-      if (params.status && params.status !== 'all') q = q.eq('status', params.status)
-      const { data, error } = await q
-      if (error) fetchError = error.message
-      rows = (data ?? []) as Record<string, unknown>[]
-    }
-
     if (source === 'alliances') {
       let q = supa
         .from('alliance_applications')
@@ -105,7 +94,7 @@ export default async function AdminLeadsPage({
     const tables = [
       { key: 'valuation',      table: 'valuation_leads'        },
       { key: 'catalog',        table: 'catalog_waitlist'        },
-      { key: 'assessment',     table: 'assessment_day_bookings' },
+      // assessment_day_bookings exclu — feature archivée (API 410 Gone)
       { key: 'alliances',      table: 'alliance_applications'   },
       { key: 'prospects',      table: 'prospects'               },
       { key: 'auction_access', table: 'auction_access_requests' },

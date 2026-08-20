@@ -7,7 +7,7 @@ import { Trash2, CheckSquare, Square, Loader2 } from 'lucide-react'
 const SOURCES = [
   { key: 'valuation',      label: 'Valuation'       },
   { key: 'catalog',        label: 'Catalogue'       },
-  { key: 'assessment',     label: 'Assessment Day'  },
+  // assessment: archivé — API retourne 410, aucun nouveau lead possible
   { key: 'alliances',      label: 'Alliances'       },
   { key: 'prospects',      label: 'Waitlist Session'},
   { key: 'auction_access', label: 'Accès Catalogue' },
