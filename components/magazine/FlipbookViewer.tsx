@@ -22,7 +22,8 @@ export function FlipbookViewer({ htmlSrc, title = 'Aegryn Magazine', label = 'Is
   const [flipping, setFlipping]   = useState(false)
   const [flipDir, setFlipDir]     = useState<'next'|'prev'|null>(null)
   const [isFullscreen, setIsFullscreen]   = useState(false)
-  const wrapRef = useRef<HTMLDivElement>(null)
+  const wrapRef    = useRef<HTMLDivElement>(null)
+  const bookWrapRef = useRef<HTMLDivElement>(null)
 
   /* ── Charger et extraire les 60 pages du HTML ── */
   useEffect(() => {
@@ -80,7 +81,19 @@ export function FlipbookViewer({ htmlSrc, title = 'Aegryn Magazine', label = 'Is
   }
 
   useEffect(() => {
-    const handler = () => setIsFullscreen(!!document.fullscreenElement)
+    const handler = () => {
+      const fs = !!document.fullscreenElement
+      setIsFullscreen(fs)
+      /* Calcul du scale : book 840x595, on occupe 90% de la fenêtre */
+      if (fs && bookWrapRef.current) {
+        const scaleX = (window.innerWidth  * 0.9) / 840
+        const scaleY = (window.innerHeight * 0.85) / 595
+        const sc = Math.min(scaleX, scaleY)
+        bookWrapRef.current.style.setProperty('--fb-scale', String(sc))
+      } else if (bookWrapRef.current) {
+        bookWrapRef.current.style.setProperty('--fb-scale', '1')
+      }
+    }
     document.addEventListener('fullscreenchange', handler)
     return () => document.removeEventListener('fullscreenchange', handler)
   }, [])
@@ -115,7 +128,7 @@ export function FlipbookViewer({ htmlSrc, title = 'Aegryn Magazine', label = 'Is
   return (
     <div
       ref={wrapRef}
-      className="flex flex-col items-center bg-[#F4F3F0] w-full select-none"
+      className="fb-wrap flex flex-col items-center bg-[#F4F3F0] w-full select-none"
       style={{ padding: '24px 0 40px', fontFamily: "'Plus Jakarta Sans', sans-serif" }}
     >
       {/* ── CSS flip injecté ── */}
@@ -159,9 +172,13 @@ export function FlipbookViewer({ htmlSrc, title = 'Aegryn Magazine', label = 'Is
           flex-shrink:0;overflow:hidden;opacity:.35;transition:opacity .2s}
         .fb-thumb:hover,.fb-thumb.active{opacity:1;border-color:var(--G)}
         .fb-thumb-inner{transform:scale(.095);transform-origin:top left;width:420px;height:595px;pointer-events:none}
-        /* Fullscreen */
-        :fullscreen .fb-book{width:calc(100vw - 120px);height:calc(100vh - 120px)}
-        :fullscreen .fb-page{width:50%;height:100%}
+        /* Fullscreen — scale le book pour remplir l'écran */
+        :fullscreen{background:#F4F3F0!important}
+        :fullscreen .fb-wrap{justify-content:center;min-height:100vh;padding:32px 0}
+        :fullscreen .fb-book-wrap{
+          transform:scale(var(--fb-scale,1));
+          transform-origin:center top;
+        }
       `}</style>
 
       {/* ── Label ── */}
@@ -170,7 +187,7 @@ export function FlipbookViewer({ htmlSrc, title = 'Aegryn Magazine', label = 'Is
       </p>
 
       {/* ── Viewer ── */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: 0, perspective: '3000px', perspectiveOrigin: '50% 48%' }}>
+      <div ref={bookWrapRef} className="fb-book-wrap" style={{ display: 'flex', alignItems: 'center', gap: 0, perspective: '3000px', perspectiveOrigin: '50% 48%' }}>
         {/* Prev */}
         <button
           onClick={prev}
