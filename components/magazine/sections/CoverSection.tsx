@@ -7,7 +7,7 @@ import { useCoverReveal } from '../hooks/useCoverReveal'
 
 interface Props {
   issue:     MagazineIssue
-  stats:     IssueStat[]
+  _stats?:   IssueStat[]
   ctaScroll: string
 }
 
@@ -15,7 +15,7 @@ interface Props {
  * Cover section — style Salford / magazine print cover.
  * Dark background, AEGRYN massive, accent tagline, theme text.
  */
-export function CoverSection({ issue, stats, ctaScroll }: Props) {
+export function CoverSection({ issue, ctaScroll }: Props) {
   const ref      = useRef<HTMLElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
 

@@ -2,7 +2,6 @@ import { notFound }        from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
 import type { Metadata }   from 'next'
 import type { MagazineIssue } from '@/lib/magazine/types'
-import Link from 'next/link'
 
 import { ISSUE_01 }        from '@/content/magazine/issue-01/meta'
 import { ARTICLES_01 }     from '@/content/magazine/issue-01/articles'
@@ -95,7 +94,6 @@ export default async function IssuePage({ params }: Props) {
       {/* ── Cover pleine largeur (avant sidebar) ── */}
       <CoverSection
         issue={issue}
-        stats={DATA_01.coverStats}
         ctaScroll={t('scrollDown')}
       />
 
