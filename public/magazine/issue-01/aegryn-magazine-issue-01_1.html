@@ -103,6 +103,18 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#F4F3F0;display:flex;
 .cta-url{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--G);margin-top:8px}
 .ghost{position:absolute;font-size:110px;font-weight:800;letter-spacing:-.06em;line-height:.85;opacity:.04;bottom:60px;right:-10px;pointer-events:none}
 .ghost-k{color:var(--K)}
+/* ── Premium flip 3D ── */
+.viewer-wrap{perspective:2400px;perspective-origin:50% 45%}
+.book{transform-style:preserve-3d;position:relative}
+.flip-shadow{pointer-events:none;position:absolute;top:0;bottom:0;width:60px;opacity:0;transition:opacity .45s ease;z-index:10}
+.flip-shadow-left{left:0;background:linear-gradient(to right,rgba(0,0,0,.18),transparent)}
+.flip-shadow-right{right:0;background:linear-gradient(to left,rgba(0,0,0,.18),transparent)}
+.page-turning-right{animation:flipRight .55s cubic-bezier(.35,0,.2,1) forwards;transform-origin:left center;transform-style:preserve-3d;backface-visibility:hidden}
+.page-turning-left{animation:flipLeft .55s cubic-bezier(.35,0,.2,1) forwards;transform-origin:right center;transform-style:preserve-3d;backface-visibility:hidden}
+@keyframes flipRight{0%{transform:rotateY(0deg)}50%{transform:rotateY(-92deg)}100%{transform:rotateY(0deg)}}
+@keyframes flipLeft{0%{transform:rotateY(0deg)}50%{transform:rotateY(92deg)}100%{transform:rotateY(0deg)}}
+.thumb-strip{scrollbar-width:none}
+.thumb-strip::-webkit-scrollbar{display:none}
 .profile{padding:12px 0;border-bottom:1px solid var(--LG)}
 .profile:last-child{border-bottom:none}
 .profile-lbl{font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--G);margin-bottom:5px}
@@ -125,6 +137,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#F4F3F0;display:flex;
   <button class="nav-btn" id="prev-btn" onclick="prev()">&#8249;</button>
   <div class="book">
     <div class="pg-left" id="pg-left"></div>
+    <div id="shadow-left" class="flip-shadow flip-shadow-left"></div>
+    <div id="shadow-right" class="flip-shadow flip-shadow-right"></div>
     <div class="pg-right" id="pg-right"></div>
   </div>
   <button class="nav-btn" id="next-btn" onclick="next()">&#8250;</button>
@@ -969,50 +983,98 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#F4F3F0;display:flex;
     <div style="display:flex;gap:8px;font-size:10px;color:#444"><span style="color:var(--G);font-weight:700">—</span>After the Exit — What Founders Do With Freedom</div>
     <div style="display:flex;gap:8px;font-size:10px;color:#444"><span style="color:var(--G);font-weight:700">—</span>The Aegryn Index — Edition II (full Q1 2027 certification data)</div>
   </div>
-  <div style="background:var(--K);padding:16px">
+  <div style="background:var(--LG);padding:16px">
     <div class="lbl" style="margin-bottom:10px">Subscribe — Aegryn Magazine</div>
-    <p style="font-size:10.5px;font-weight:300;line-height:1.7;color:rgba(244,243,240,.55);margin-bottom:14px">Aegryn Magazine is published quarterly. Digital access is free — permanently. No paywalls. No advertising. Funded by the quality of the transactions we facilitate.</p>
+    <p style="font-size:10.5px;font-weight:300;line-height:1.7;color:rgba(10,10,10,.55);margin-bottom:14px">Aegryn Magazine is published quarterly. Digital access is free — permanently. No paywalls. No advertising. Funded by the quality of the transactions we facilitate.</p>
     <div style="font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--G)">→ aegryn.com/magazine — Subscribe</div>
-    <div style="font-size:9px;color:rgba(244,243,240,.25);margin-top:6px">Issue 02 publishes April 2027. Subscribers receive access 48h before public release.</div>
+    <div style="font-size:9px;color:rgba(10,10,10,.35);margin-top:6px">Issue 02 publishes April 2027. Subscribers receive access 48h before public release.</div>
   </div>
   <div class="rf rf-k"><span>Aegryn Magazine — Issue 02 Preview</span><span>59</span></div>
 </div></div>
-<div id="p60" class="pg"><div style="height:595px;background:var(--K);display:flex;flex-direction:column;padding:32px 36px;justify-content:space-between">
-  <div style="display:flex;justify-content:space-between"><div style="font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(244,243,240,.12)">Aegryn Magazine</div><div style="font-size:8px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,243,240,.1)">Issue 01 — January 2027</div></div>
+<div id="p60" class="pg"><div style="height:595px;background:var(--C);display:flex;flex-direction:column;padding:32px 36px;justify-content:space-between">
+  <div style="display:flex;justify-content:space-between"><div style="font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(10,10,10,.15)">Aegryn Magazine</div><div style="font-size:8px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(10,10,10,.12)">Issue 01 — January 2027</div></div>
   <div style="text-align:center">
     <div style="font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--G);margin-bottom:36px">AEGRYN</div>
-    <div style="font-size:36px;font-weight:800;line-height:.95;color:var(--C);margin-bottom:6px">Rare by selection.</div>
-    <div style="font-size:36px;font-weight:800;line-height:.95;color:var(--C);margin-bottom:6px">Certified to transact.</div>
+    <div style="font-size:36px;font-weight:800;line-height:.95;color:var(--K);margin-bottom:6px">Rare by selection.</div>
+    <div style="font-size:36px;font-weight:800;line-height:.95;color:var(--K);margin-bottom:6px">Certified to transact.</div>
     <div style="font-size:36px;font-weight:800;line-height:.95;color:var(--G);margin-bottom:40px">Engineered to Last.</div>
-    <div style="width:48px;height:1px;background:rgba(244,243,240,.1);margin:0 auto 32px"></div>
-    <div style="font-size:12px;font-weight:300;line-height:1.8;color:rgba(244,243,240,.3);max-width:320px;margin:0 auto">We refuse to let a solid asset disappear into a poorly prepared transaction.</div>
+    <div style="width:48px;height:1px;background:rgba(10,10,10,.12);margin:0 auto 32px"></div>
+    <div style="font-size:12px;font-weight:300;line-height:1.8;color:rgba(10,10,10,.35);max-width:320px;margin:0 auto">We refuse to let a solid asset disappear into a poorly prepared transaction.</div>
   </div>
-  <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(244,243,240,.06);padding-top:20px">
-    <div style="font-size:8px;font-weight:500;color:rgba(244,243,240,.15);line-height:1.8;letter-spacing:.06em">Aegryn SA — Saint-Sulpice, Canton de Vaud<br>CHE-402.011.821 — Switzerland<br>contact@boha-group.com</div>
-    <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,243,240,.2)">aegryn.com</div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(10,10,10,.08);padding-top:20px">
+    <div style="font-size:8px;font-weight:500;color:rgba(10,10,10,.3);line-height:1.8;letter-spacing:.06em">Aegryn SA — Saint-Sulpice, Canton de Vaud<br>CHE-402.011.821 — Switzerland<br>contact@boha-group.com</div>
+    <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(10,10,10,.25)">aegryn.com</div>
   </div>
 </div></div></div>
 <script>
-let sp=0; const tot=30;
-function show(n){
-  const lp=document.getElementById('p'+(n*2+1));
-  const rp=document.getElementById('p'+(n*2+2));
+/* ── Premium flip 3D engine ── */
+let sp=0;const tot=30;let flipping=false;
+
+function getContent(n){
+  const el=document.getElementById('p'+n);
+  return el?el.innerHTML:'';
+}
+
+function show(n,dir){
+  if(flipping)return;
   const lv=document.getElementById('pg-left');
   const rv=document.getElementById('pg-right');
-  lv.innerHTML=lp?lp.innerHTML:'';
-  rv.innerHTML=rp?rp.innerHTML:'';
+  const sl=document.getElementById('shadow-left');
+  const sr=document.getElementById('shadow-right');
+  if(n===sp&&dir===undefined){/* initial */
+    lv.innerHTML=getContent(n*2+1);
+    rv.innerHTML=getContent(n*2+2);
+    sp=n;
+    updateUI(n);
+    return;
+  }
+  flipping=true;
+  /* which side animates */
+  const goingNext=(dir==='next');
+  /* shadow flash */
+  if(goingNext){sl.style.opacity='.7';}else{sr.style.opacity='.7';}
+  /* animate the outgoing page */
+  const animEl=goingNext?lv:rv;
+  animEl.classList.add(goingNext?'page-turning-right':'page-turning-left');
+  setTimeout(()=>{
+    /* swap content at midpoint */
+    lv.innerHTML=getContent(n*2+1);
+    rv.innerHTML=getContent(n*2+2);
+    sp=n;
+    updateUI(n);
+  },265);
+  setTimeout(()=>{
+    animEl.classList.remove('page-turning-right','page-turning-left');
+    sl.style.opacity='0';
+    sr.style.opacity='0';
+    flipping=false;
+  },560);
+}
+
+function updateUI(n){
   document.getElementById('pg-ctr').textContent=(n*2+1)+' — '+(n*2+2)+' / 60';
   document.getElementById('progress').style.width=((n+1)/tot*100).toFixed(0)+'%';
-  sp=n;
-  document.getElementById('prev-btn').style.opacity=n>0?'.7':'.1';
-  document.getElementById('next-btn').style.opacity=n<tot-1?'.7':'.1';
+  document.getElementById('prev-btn').style.opacity=n>0?'.7':'.15';
+  document.getElementById('next-btn').style.opacity=n<tot-1?'.7':'.15';
+  document.querySelectorAll('.thumb').forEach((t,i)=>t.classList.toggle('active',i===n));
 }
-function next(){if(sp<tot-1)show(sp+1);}
-function prev(){if(sp>0)show(sp-1);}
+
+function next(){if(sp<tot-1)show(sp+1,'next');}
+function prev(){if(sp>0)show(sp-1,'prev');}
+
+/* Keyboard */
 document.addEventListener('keydown',function(e){
   if(e.key==='ArrowRight')next();
   if(e.key==='ArrowLeft')prev();
 });
+
+/* Touch swipe */
+let tx=0;
+document.getElementById('pg-left').addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+document.getElementById('pg-right').addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+document.getElementById('pg-left').addEventListener('touchend',function(e){const dx=tx-e.changedTouches[0].clientX;if(dx>40)next();else if(dx<-40)prev();},{passive:true});
+document.getElementById('pg-right').addEventListener('touchend',function(e){const dx=tx-e.changedTouches[0].clientX;if(dx>40)next();else if(dx<-40)prev();},{passive:true});
+
 show(0);
 </script>
 </body></html>

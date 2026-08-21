@@ -12,7 +12,8 @@ interface Props {
 }
 
 /**
- * Cover section template — data-driven, no hardcoded content.
+ * Cover section — style Salford / magazine print cover.
+ * Dark background, AEGRYN massive, accent tagline, theme text.
  */
 export function CoverSection({ issue, stats, ctaScroll }: Props) {
   const ref      = useRef<HTMLElement>(null)
@@ -20,62 +21,103 @@ export function CoverSection({ issue, stats, ctaScroll }: Props) {
 
   useCoverReveal(ref, titleRef)
 
-  const date = new Date(issue.publishedAt)
-  const formatted = date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
+  const date      = new Date(issue.publishedAt)
+  const formatted = date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' }).toUpperCase()
+  const issueNum  = `ISSUE ${String(issue.number).padStart(2, '0')}`
 
   return (
     <section
       ref={ref}
-      className="min-h-screen bg-magazine-ivory flex flex-col justify-between px-6 md:px-[120px] py-16 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-between px-8 md:px-14 py-10 overflow-hidden"
+      style={{ background: '#0A0A0A' }}
     >
-      <div className="cover-meta flex items-center justify-between">
-        <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.2em]">
-          Aegryn Magazine · Issue {String(issue.number).padStart(2, '0')} · {formatted}
-        </p>
-        <span className="text-label-mag text-magazine-accent uppercase tracking-[0.15em]">
-          Annual Report
-        </span>
-      </div>
+      {/* Background texture overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 80% 60% at 60% 40%, rgba(46,175,125,0.07) 0%, transparent 70%)',
+        }}
+      />
 
-      <div className="flex-1 flex flex-col justify-center py-20">
-        <h1
-          ref={titleRef}
-          className="font-sans text-magazine-black"
-          style={{ fontSize: 'clamp(52px,9vw,120px)', lineHeight: 0.92, letterSpacing: '-0.03em', fontWeight: 800 }}
+      {/* ── Top bar ── */}
+      <div className="cover-meta relative z-10 flex items-start justify-between">
+        <p
+          className="font-mono tracking-[0.22em] uppercase text-white/40"
+          style={{ fontSize: '10px' }}
         >
-          {issue.title}
-        </h1>
-
-        <div className="cover-meta mt-10 w-20 h-px bg-magazine-accent" />
-
-        <div className="cover-meta mt-10 flex flex-wrap gap-x-16 gap-y-8">
-          {stats.map(s => (
-            <div key={s.val}>
-              <p
-                className="font-sans font-bold text-magazine-black tabular-nums"
-                style={{ fontSize: 'clamp(28px,4vw,48px)', lineHeight: 1, letterSpacing: '-0.03em' }}
-              >
-                {s.val}
-              </p>
-              <p className="text-label-mag text-magazine-black/40 mt-2 max-w-[220px]">{s.label}</p>
-            </div>
-          ))}
+          {formatted}
+        </p>
+        <div className="text-right">
+          <p className="font-mono tracking-[0.18em] uppercase text-[#2EAF7D] font-bold" style={{ fontSize: '10px' }}>
+            Special Edition
+          </p>
+          <p className="font-mono tracking-[0.18em] uppercase text-[#2EAF7D] font-bold" style={{ fontSize: '10px' }}>
+            {issueNum}
+          </p>
         </div>
       </div>
 
-      <div className="cover-meta flex items-center justify-between">
-        <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.12em]">
-          {issue.theme} — Certified by AEGRYN — Switzerland
+      {/* ── Main title block ── */}
+      <div className="relative z-10 flex-1 flex flex-col justify-center py-16">
+        {/* AEGRYN massive — Salford-style */}
+        <h1
+          ref={titleRef}
+          className="font-sans font-bold text-white leading-none"
+          style={{ fontSize: 'clamp(72px,14vw,180px)', letterSpacing: '-0.04em', lineHeight: 0.86 }}
+        >
+          Aegryn
+        </h1>
+
+        <p
+          className="cover-meta font-mono tracking-[0.18em] uppercase text-white/35 mt-3"
+          style={{ fontSize: '11px' }}
+        >
+          Magazine
         </p>
+
+        {/* ── Exclusive block — left aligned like Salford ── */}
+        <div className="cover-meta mt-10 md:mt-16 max-w-[240px]">
+          <p
+            className="font-sans font-bold text-[#2EAF7D] uppercase tracking-[0.06em] mb-2"
+            style={{ fontSize: '13px' }}
+          >
+            Exclusive
+          </p>
+          <div className="w-12 h-[2px] bg-[#2EAF7D] mb-3" />
+          <p className="font-sans font-bold text-white/60 uppercase leading-snug" style={{ fontSize: '11px', letterSpacing: '0.04em' }}>
+            {issue.coverLine}
+          </p>
+        </div>
+      </div>
+
+      {/* ── Bottom block ── */}
+      <div className="cover-meta relative z-10">
+        {/* Tagline massive accent — like "STRATEGIES FOR BUSINESS RESILIENCE" */}
+        <p
+          className="font-sans font-bold text-[#2EAF7D] uppercase leading-none mb-5"
+          style={{ fontSize: 'clamp(26px,4.5vw,52px)', letterSpacing: '-0.01em', lineHeight: 1 }}
+        >
+          {issue.title}
+        </p>
+
+        {/* Theme text — like the body copy at bottom of Salford cover */}
+        <p
+          className="font-sans uppercase text-white/50 leading-snug max-w-[640px]"
+          style={{ fontSize: '11px', letterSpacing: '0.06em' }}
+        >
+          {issue.theme}
+        </p>
+
+        {/* Scroll CTA */}
         <button
           onClick={() => {
             const firstSection = issue.sections[0]
             if (firstSection) document.getElementById(firstSection.id)?.scrollIntoView({ behavior: 'smooth' })
           }}
-          className="flex items-center gap-2 text-label-mag text-magazine-black/50 hover:text-magazine-black transition-colors uppercase tracking-[0.12em]"
+          className="mt-8 flex items-center gap-2 font-mono text-[9px] tracking-[0.2em] uppercase text-white/30 hover:text-white/70 transition-colors"
           aria-label={ctaScroll}
         >
-          {ctaScroll} <ArrowDown size={13} />
+          {ctaScroll} <ArrowDown size={11} />
         </button>
       </div>
     </section>

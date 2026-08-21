@@ -4,7 +4,7 @@ export const ISSUE_01: MagazineIssue = {
   number: 1,
   slug: 'issue-01',
   title: 'Built to Last',
-  theme: 'What separates the tech assets that transact from those that disappear',
+  theme: 'What separates the tech assets that transact from those that disappear and what every European founder needs to know before the conversation starts.',
   publishedAt: '2027-01-01',
   coverStat: '€262B',
   coverStatLabel: 'EU M&A volume — Q2 2026 · 3,315 transactions',
