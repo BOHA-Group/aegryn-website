@@ -92,7 +92,7 @@ export function IssueCard({ issue }: Props) {
             {issue.title}
           </h2>
           <p className="text-body-mag text-magazine-black/50 italic mb-6">{issue.theme}</p>
-          <p className="text-label-mag text-magazine-accent uppercase tracking-[0.1em] font-semibold">
+          <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.1em] font-semibold">
             {issue.coverLine}
           </p>
         </div>
