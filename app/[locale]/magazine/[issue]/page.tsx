@@ -116,7 +116,6 @@ export default async function IssuePage({ params }: Props) {
             <FlipbookViewer
               htmlSrc="/magazine/issue-01/aegryn-magazine-issue-01_1.html"
               title="Aegryn Magazine Issue 01 — Built to Last"
-              label="Issue 01 — Built to Last — January 2027"
             />
           </section>
         )}

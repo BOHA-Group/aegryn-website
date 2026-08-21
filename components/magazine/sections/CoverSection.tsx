@@ -42,7 +42,7 @@ export function CoverSection({ issue, ctaScroll }: Props) {
       {/* Dark overlay for readability */}
       <div
         className="absolute inset-0"
-        style={{ background: 'linear-gradient(160deg, rgba(5,10,15,0.80) 0%, rgba(5,10,15,0.38) 50%, rgba(5,10,15,0.82) 100%)' }}
+        style={{ background: 'linear-gradient(160deg, rgba(5,10,15,0.82) 0%, rgba(5,10,15,0.65) 50%, rgba(5,10,15,0.88) 100%)' }}
       />
 
       {/* ── TOP BAR : date gauche / Special Edition droite ── */}
@@ -57,11 +57,11 @@ export function CoverSection({ issue, ctaScroll }: Props) {
       </div>
 
       {/* ── AEGRYN massif + BUSINESS MAGAZINE sous le titre ── */}
-      <div className="relative z-10">
+      <div className="relative z-10 -mt-2">
         <h1
           ref={titleRef}
           className="font-sans font-bold text-white leading-none"
-          style={{ fontSize: 'clamp(80px,15vw,190px)', letterSpacing: '-0.04em', lineHeight: 0.88 }}
+          style={{ fontSize: 'clamp(80px,15vw,190px)', letterSpacing: '-0.04em', lineHeight: 0.86 }}
         >
           Aegryn
         </h1>
@@ -87,12 +87,12 @@ export function CoverSection({ issue, ctaScroll }: Props) {
       <div className="cover-meta relative z-10">
         <p
           className="font-sans font-bold text-[#2EAF7D] uppercase leading-tight mb-4"
-          style={{ fontSize: 'clamp(32px,5vw,72px)', letterSpacing: '-0.01em', lineHeight: 1.0 }}
+          style={{ fontSize: 'clamp(22px,4vw,46px)', letterSpacing: '-0.01em', lineHeight: 1.05 }}
         >
           {issue.title}
         </p>
         <p
-          className="font-sans uppercase text-center text-white/45 leading-relaxed"
+          className="font-sans uppercase text-center text-white/45 leading-snug"
           style={{ fontSize: '10px', letterSpacing: '0.07em' }}
         >
           {issue.theme}
