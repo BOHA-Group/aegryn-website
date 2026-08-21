@@ -123,16 +123,16 @@ export default async function IssuePage({ params }: Props) {
 
         {/* ── Editorial ── */}
         <section id="s-editorial" className="bg-magazine-white px-6 md:px-[120px] py-32">
-          <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-12">Editorial — Issue 01</p>
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-12">Editorial — Issue 01</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div>
               <p
                 className="font-sans font-bold text-magazine-black leading-[0.88] mb-8"
                 style={{ fontSize: 'clamp(56px,8vw,100px)', letterSpacing: '-0.04em', fontWeight: 800 }}
               >
-                We<br /><span className="text-magazine-accent">Refuse.</span>
+                We<br /><span className="text-magazine-black">Refuse.</span>
               </p>
-              <blockquote className="border-l-2 border-magazine-accent pl-6 mb-8">
+              <blockquote className="border-l-2 border-magazine-black/40 pl-6 mb-8">
                 <p className="text-body-mag text-magazine-black/60 leading-[1.75] italic">
                   &ldquo;Every year, several hundred European tech companies disappear into transactions that should never have happened — or never happen at all.&rdquo;
                 </p>
@@ -210,7 +210,7 @@ export default async function IssuePage({ params }: Props) {
                       className={`border-b border-magazine-black/5 ${i % 2 === 0 ? 'bg-magazine-ivory' : 'bg-magazine-white'}`}
                     >
                       <td className="py-4 pr-8 font-semibold text-magazine-black">{row.sector}</td>
-                      <td className="py-4 pr-8 text-magazine-accent font-semibold">{row.median}</td>
+                      <td className="py-4 pr-8 font-semibold text-magazine-black/70">{row.median}</td>
                       <td className="py-4 pr-8 text-magazine-black/60">{row.top}</td>
                       <td className="py-4 text-magazine-black/40 text-label-mag uppercase tracking-[0.08em]">{row.src}</td>
                     </tr>
@@ -239,7 +239,7 @@ export default async function IssuePage({ params }: Props) {
                   />
                   US: 4.9x → 6.1x ARR
                 </span>
-                <span className="flex items-center gap-2 text-magazine-accent font-semibold">
+                <span className="flex items-center gap-2 font-semibold text-magazine-black/60">
                   Gap narrowed from −40% to −23% since 2023
                 </span>
               </div>
@@ -262,7 +262,7 @@ export default async function IssuePage({ params }: Props) {
 
         {/* ── AI Effect ── */}
         <section id="s-ai" className="bg-magazine-white px-6 md:px-[120px] py-32">
-          <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-8">The AI Effect</p>
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">The AI Effect</p>
           <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-16 max-w-[800px]">
             Artificial Intelligence and the Recomposition of Tech Value
           </h2>
@@ -291,8 +291,8 @@ export default async function IssuePage({ params }: Props) {
               { code: 'S-42', title: 'EU AI Act ready',   body: 'Compliance with Articles 9–15 — increasingly a buyer prerequisite.' },
               { code: 'F-14', title: 'NRR > 120%',        body: 'Net Revenue Retention above 120% demonstrates genuine product-market fit.' },
             ].map(a => (
-              <div key={a.code} className="border-l-2 border-magazine-accent pl-6 py-2 bg-magazine-ivory">
-                <p className="text-label-mag text-magazine-accent uppercase tracking-[0.12em] mb-2">{a.code}</p>
+              <div key={a.code} className="border-l-2 border-magazine-black/20 pl-6 py-2 bg-magazine-ivory">
+                <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.12em] mb-2">{a.code}</p>
                 <p className="text-h2-mag font-sans font-semibold text-magazine-black mb-2">{a.title}</p>
                 <p className="text-body-mag text-magazine-black/60">{a.body}</p>
               </div>
@@ -364,7 +364,7 @@ export default async function IssuePage({ params }: Props) {
                     0{i + 1}
                   </span>
                   <div className="pt-1">
-                    <p className="text-label-mag text-magazine-accent uppercase tracking-[0.12em] mb-1">{r.code}</p>
+                    <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.12em] mb-1">{r.code}</p>
                     <p className="text-h2-mag font-sans font-semibold text-magazine-black">{r.label}</p>
                   </div>
                 </div>
@@ -375,7 +375,7 @@ export default async function IssuePage({ params }: Props) {
 
         {/* ── Transaction : Deal Watch ── */}
         <section id="s-transaction" className="bg-magazine-white px-6 md:px-[120px] py-32">
-          <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-8">Transaction — Deal Watch H1 2026</p>
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Transaction — Deal Watch H1 2026</p>
           <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">Five Deals That Defined H1 2026.</h2>
           <p className="text-body-mag text-magazine-black/55 max-w-prose mb-16 leading-[1.75]">Not the press releases. The signals. Grades shown are analytical estimates — not official certifications.</p>
           <div className="space-y-0">
@@ -389,10 +389,10 @@ export default async function IssuePage({ params }: Props) {
               <div key={d.n} className={`py-10 grid grid-cols-[auto_1fr_auto] gap-8 items-start ${i < arr.length - 1 ? 'border-b border-magazine-black/8' : ''}`}>
                 <span className="font-sans font-bold text-magazine-black/15 tabular-nums" style={{ fontSize: 'clamp(28px,3.5vw,48px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}>{d.n}</span>
                 <div>
-                  <p className="text-label-mag text-magazine-accent uppercase tracking-[0.12em] mb-1">{d.meta}</p>
+                  <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.12em] mb-1">{d.meta}</p>
                   <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-3">{d.name}</h3>
                   <p className="text-body-mag text-magazine-black/60 leading-[1.75] mb-3">{d.desc}</p>
-                  <p className="text-label-mag text-magazine-accent font-semibold">→ {d.lesson}</p>
+                  <p className="text-label-mag text-magazine-black/50 font-semibold">→ {d.lesson}</p>
                 </div>
                 <span className="inline-block font-mono text-[8px] tracking-[0.18em] uppercase border border-magazine-black/20 text-magazine-black/50 px-3 py-1.5 shrink-0 mt-1">{d.grade}</span>
               </div>
@@ -411,7 +411,7 @@ export default async function IssuePage({ params }: Props) {
             {DATA_01.buyers.map((b, i) => (
               <div key={b.type}>
                 <p
-                  className="font-sans font-bold text-magazine-accent"
+                  className="font-sans font-bold text-magazine-black/15"
                   style={{ fontSize: 'clamp(48px,6vw,80px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}
                 >
                   {String(i + 1).padStart(2, '0')}
@@ -438,7 +438,7 @@ export default async function IssuePage({ params }: Props) {
 
         {/* ── Outlook 2027 ── */}
         <section id="s-outlook" className="bg-magazine-ivory px-6 md:px-[120px] py-32">
-          <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-8">Perspectives 2027</p>
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Perspectives 2027</p>
           <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-20 max-w-[720px]">
             What the Next 12 Months Look Like
           </h2>
@@ -473,7 +473,7 @@ export default async function IssuePage({ params }: Props) {
                 </p>
                 <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-6 max-w-[600px]">{f.title}</h3>
                 <p className="text-body-mag text-magazine-black/60 leading-[1.75] max-w-prose mb-6">{f.body}</p>
-                <p className="text-label-mag text-magazine-accent uppercase tracking-[0.1em]">{f.impact}</p>
+                <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.1em]">{f.impact}</p>
               </div>
             ))}
           </div>
@@ -481,7 +481,7 @@ export default async function IssuePage({ params }: Props) {
 
         {/* ── AEGRYN Index ── */}
         <section id="s-index" className="bg-magazine-white px-6 md:px-[120px] py-32">
-          <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-8">The AEGRYN Index — Edition I</p>
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">The AEGRYN Index — Edition I</p>
           <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">Proprietary Certification Data. Published Here First.</h2>
           <p className="text-body-mag text-magazine-black/50 max-w-prose mb-16 italic">Not available elsewhere. Updated every issue. CIFS Protocol v3.0.</p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-magazine-black/8 mb-16">

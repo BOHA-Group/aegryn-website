@@ -103,16 +103,51 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#F4F3F0;display:flex;
 .cta-url{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--G);margin-top:8px}
 .ghost{position:absolute;font-size:110px;font-weight:800;letter-spacing:-.06em;line-height:.85;opacity:.04;bottom:60px;right:-10px;pointer-events:none}
 .ghost-k{color:var(--K)}
-/* ── Premium flip 3D ── */
-.viewer-wrap{perspective:2400px;perspective-origin:50% 45%}
+/* ── Vrai flip livre 3D ── */
+.viewer-wrap{perspective:3000px;perspective-origin:50% 48%}
 .book{transform-style:preserve-3d;position:relative}
-.flip-shadow{pointer-events:none;position:absolute;top:0;bottom:0;width:60px;opacity:0;transition:opacity .45s ease;z-index:10}
-.flip-shadow-left{left:0;background:linear-gradient(to right,rgba(0,0,0,.18),transparent)}
-.flip-shadow-right{right:0;background:linear-gradient(to left,rgba(0,0,0,.18),transparent)}
-.page-turning-right{animation:flipRight .55s cubic-bezier(.35,0,.2,1) forwards;transform-origin:left center;transform-style:preserve-3d;backface-visibility:hidden}
-.page-turning-left{animation:flipLeft .55s cubic-bezier(.35,0,.2,1) forwards;transform-origin:right center;transform-style:preserve-3d;backface-visibility:hidden}
-@keyframes flipRight{0%{transform:rotateY(0deg)}50%{transform:rotateY(-92deg)}100%{transform:rotateY(0deg)}}
-@keyframes flipLeft{0%{transform:rotateY(0deg)}50%{transform:rotateY(92deg)}100%{transform:rotateY(0deg)}}
+/* Page qui tourne : wrapper positionné sur la bonne moitié */
+.flip-page{
+  position:absolute;top:0;width:420px;height:595px;
+  transform-style:preserve-3d;
+  z-index:20;
+  pointer-events:none;
+}
+.flip-page-next{left:0;transform-origin:right center}
+.flip-page-prev{left:420px;transform-origin:left center}
+.flip-face,.flip-back{
+  position:absolute;inset:0;width:420px;height:595px;
+  overflow:hidden;backface-visibility:hidden;
+}
+.flip-back{transform:rotateY(180deg)}
+/* Ombre centrale (reliure) */
+.book-spine{
+  position:absolute;left:418px;top:0;width:4px;height:595px;
+  background:linear-gradient(to right,rgba(0,0,0,.18),rgba(0,0,0,.04));
+  z-index:5;pointer-events:none;
+}
+/* Ombres de progression pendant le flip */
+.flip-shadow-l{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(to right,rgba(0,0,0,.22),transparent 60%);
+  opacity:0;transition:opacity .12s;
+}
+.flip-shadow-r{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(to left,rgba(0,0,0,.22),transparent 60%);
+  opacity:0;transition:opacity .12s;
+}
+/* Keyframes flip directionnel */
+@keyframes doFlipNext{
+  0%  {transform:rotateY(0deg)}
+  100%{transform:rotateY(-180deg)}
+}
+@keyframes doFlipPrev{
+  0%  {transform:rotateY(0deg)}
+  100%{transform:rotateY(180deg)}
+}
+.flip-page.animating-next{animation:doFlipNext .65s cubic-bezier(.45,.02,.32,1) forwards}
+.flip-page.animating-prev{animation:doFlipPrev .65s cubic-bezier(.45,.02,.32,1) forwards}
 .thumb-strip{scrollbar-width:none}
 .thumb-strip::-webkit-scrollbar{display:none}
 .profile{padding:12px 0;border-bottom:1px solid var(--LG)}
@@ -137,8 +172,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#F4F3F0;display:flex;
   <button class="nav-btn" id="prev-btn" onclick="prev()">&#8249;</button>
   <div class="book">
     <div class="pg-left" id="pg-left"></div>
-    <div id="shadow-left" class="flip-shadow flip-shadow-left"></div>
-    <div id="shadow-right" class="flip-shadow flip-shadow-right"></div>
+    <div class="book-spine"></div>
     <div class="pg-right" id="pg-right"></div>
   </div>
   <button class="nav-btn" id="next-btn" onclick="next()">&#8250;</button>
@@ -1003,12 +1037,16 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#F4F3F0;display:flex;
 <div id="p60" class="pg"><div style="height:595px;background:var(--C);display:flex;flex-direction:column;padding:32px 36px;justify-content:space-between">
   <div style="display:flex;justify-content:space-between"><div style="font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(10,10,10,.15)">Aegryn Magazine</div><div style="font-size:8px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(10,10,10,.12)">Issue 01 — January 2027</div></div>
   <div style="text-align:center">
-    <div style="font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--G);margin-bottom:36px">AEGRYN</div>
-    <div style="font-size:36px;font-weight:800;line-height:.95;color:var(--K);margin-bottom:6px">Rare by selection.</div>
-    <div style="font-size:36px;font-weight:800;line-height:.95;color:var(--K);margin-bottom:6px">Certified to transact.</div>
-    <div style="font-size:36px;font-weight:800;line-height:.95;color:var(--G);margin-bottom:40px">Engineered to Last.</div>
-    <div style="width:48px;height:1px;background:rgba(10,10,10,.12);margin:0 auto 32px"></div>
-    <div style="font-size:12px;font-weight:300;line-height:1.8;color:rgba(10,10,10,.35);max-width:320px;margin:0 auto">We refuse to let a solid asset disappear into a poorly prepared transaction.</div>
+    <!-- Logo AEGRYN SVG -->
+    <svg width="120" height="36" viewBox="0 0 120 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 28px;display:block;opacity:.7">
+      <text x="0" y="28" font-family="'Plus Jakarta Sans',sans-serif" font-size="28" font-weight="800" letter-spacing="-1" fill="#0A0A0A">AEGRYN</text>
+    </svg>
+    <div style="width:32px;height:2px;background:var(--G);margin:0 auto 28px"></div>
+    <div style="font-size:32px;font-weight:800;line-height:.95;color:var(--K);margin-bottom:6px">Rare by selection.</div>
+    <div style="font-size:32px;font-weight:800;line-height:.95;color:var(--K);margin-bottom:6px">Certified to transact.</div>
+    <div style="font-size:32px;font-weight:800;line-height:.95;color:var(--G);margin-bottom:36px">Engineered to Last.</div>
+    <div style="width:48px;height:1px;background:rgba(10,10,10,.12);margin:0 auto 28px"></div>
+    <div style="font-size:11px;font-weight:300;line-height:1.8;color:rgba(10,10,10,.35);max-width:300px;margin:0 auto">We refuse to let a solid asset disappear into a poorly prepared transaction.</div>
   </div>
   <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(10,10,10,.08);padding-top:20px">
     <div style="font-size:8px;font-weight:500;color:rgba(10,10,10,.3);line-height:1.8;letter-spacing:.06em">Aegryn SA — Saint-Sulpice, Canton de Vaud<br>CHE-402.011.821 — Switzerland<br>contact@boha-group.com</div>
@@ -1016,48 +1054,81 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#F4F3F0;display:flex;
   </div>
 </div></div></div>
 <script>
-/* ── Premium flip 3D engine ── */
+/* ── Vrai flip livre 3D ── */
 let sp=0;const tot=30;let flipping=false;
 
-function getContent(n){
-  const el=document.getElementById('p'+n);
-  return el?el.innerHTML:'';
-}
+function html(n){const el=document.getElementById('p'+n);return el?el.innerHTML:'';}
 
-function show(n,dir){
+function doFlip(targetSpread,dir){
   if(flipping)return;
+  flipping=true;
   const lv=document.getElementById('pg-left');
   const rv=document.getElementById('pg-right');
-  const sl=document.getElementById('shadow-left');
-  const sr=document.getElementById('shadow-right');
-  if(n===sp&&dir===undefined){/* initial */
-    lv.innerHTML=getContent(n*2+1);
-    rv.innerHTML=getContent(n*2+2);
-    sp=n;
-    updateUI(n);
-    return;
-  }
-  flipping=true;
-  /* which side animates */
-  const goingNext=(dir==='next');
-  /* shadow flash */
-  if(goingNext){sl.style.opacity='.7';}else{sr.style.opacity='.7';}
-  /* animate the outgoing page */
-  const animEl=goingNext?lv:rv;
-  animEl.classList.add(goingNext?'page-turning-right':'page-turning-left');
+  const goNext=(dir==='next');
+
+  /* Contenu courant et cible */
+  const curLeft =html(sp*2+1),    curRight=html(sp*2+2);
+  const newLeft =html(targetSpread*2+1), newRight=html(targetSpread*2+2);
+
+  /* Créer le wrapper de la page qui tourne */
+  const fp=document.createElement('div');
+  fp.className='flip-page '+(goNext?'flip-page-next':'flip-page-prev');
+
+  /* Face avant = page courante qui part */
+  const front=document.createElement('div');
+  front.className='flip-face';
+  front.innerHTML=goNext?curRight:curLeft;
+
+  /* Face arrière = page suivante (miroir) */
+  const back=document.createElement('div');
+  back.className='flip-back';
+  back.innerHTML=goNext?newLeft:newRight;
+  /* Miroir horizontal pour que le recto soit lisible après rotation */
+  back.style.transform='rotateY(180deg) scaleX(1)';
+
+  fp.appendChild(front);
+  fp.appendChild(back);
+
+  /* Ombre sur la page fixe opposée */
+  const fixedSide=goNext?lv:rv;
+  const shEl=document.createElement('div');
+  shEl.className=goNext?'flip-shadow-l':'flip-shadow-r';
+  fixedSide.appendChild(shEl);
+  setTimeout(()=>{shEl.style.opacity='1';},16);
+
+  document.querySelector('.book').appendChild(fp);
+
+  /* Appliquer l'animation */
+  requestAnimationFrame(()=>{
+    requestAnimationFrame(()=>{
+      fp.classList.add(goNext?'animating-next':'animating-prev');
+    });
+  });
+
+  /* Au milieu du flip (325ms) : swapper le contenu des pages fixes */
   setTimeout(()=>{
-    /* swap content at midpoint */
-    lv.innerHTML=getContent(n*2+1);
-    rv.innerHTML=getContent(n*2+2);
-    sp=n;
-    updateUI(n);
-  },265);
+    lv.innerHTML=newLeft;
+    rv.innerHTML=newRight;
+    sp=targetSpread;
+    updateUI(targetSpread);
+    shEl.style.opacity='0';
+  },325);
+
+  /* Fin : nettoyer */
   setTimeout(()=>{
-    animEl.classList.remove('page-turning-right','page-turning-left');
-    sl.style.opacity='0';
-    sr.style.opacity='0';
+    if(fp.parentNode)fp.parentNode.removeChild(fp);
+    if(shEl.parentNode)shEl.parentNode.removeChild(shEl);
     flipping=false;
-  },560);
+  },670);
+}
+
+function show(n){
+  const lv=document.getElementById('pg-left');
+  const rv=document.getElementById('pg-right');
+  lv.innerHTML=html(n*2+1);
+  rv.innerHTML=html(n*2+2);
+  sp=n;
+  updateUI(n);
 }
 
 function updateUI(n){
@@ -1068,16 +1139,14 @@ function updateUI(n){
   document.querySelectorAll('.thumb').forEach((t,i)=>t.classList.toggle('active',i===n));
 }
 
-function next(){if(sp<tot-1)show(sp+1,'next');}
-function prev(){if(sp>0)show(sp-1,'prev');}
+function next(){if(!flipping&&sp<tot-1)doFlip(sp+1,'next');}
+function prev(){if(!flipping&&sp>0)doFlip(sp-1,'prev');}
 
-/* Keyboard */
 document.addEventListener('keydown',function(e){
   if(e.key==='ArrowRight')next();
   if(e.key==='ArrowLeft')prev();
 });
 
-/* Touch swipe */
 let tx=0;
 document.getElementById('pg-left').addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
 document.getElementById('pg-right').addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});

@@ -18,8 +18,8 @@ export function IssueCard({ issue }: Props) {
       href={`/magazine/${issue.slug}`}
       className="group grid md:grid-cols-[2fr_3fr] gap-0 border border-magazine-black/10 hover:border-magazine-black/25 transition-colors"
     >
-      {/* Cover panel — format magazine portrait style Salford */}
-      <div className="relative flex flex-col justify-between p-8 min-h-[520px] border-r border-magazine-black/10 overflow-hidden">
+      {/* Cover panel — format magazine portrait style Salford, ratio A4 */}
+      <div className="relative flex flex-col justify-between p-8 min-h-[560px] border-r border-magazine-black/10 overflow-hidden">
         {/* Background image */}
         <div
           className="absolute inset-0"
