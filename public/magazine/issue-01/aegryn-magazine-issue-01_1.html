@@ -103,45 +103,56 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#F4F3F0;display:flex;
 .cta-url{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--G);margin-top:8px}
 .ghost{position:absolute;font-size:110px;font-weight:800;letter-spacing:-.06em;line-height:.85;opacity:.04;bottom:60px;right:-10px;pointer-events:none}
 .ghost-k{color:var(--K)}
-/* ── Vrai flip livre 3D ── */
-.viewer-wrap{perspective:3000px;perspective-origin:50% 48%}
+/* ── Flip livre 3D — centre = reliure ── */
+.viewer-wrap{perspective:3000px;perspective-origin:50% 48%;overflow:hidden}
 .book{transform-style:preserve-3d;position:relative}
-/* Page qui tourne : wrapper positionné sur la bonne moitié */
+/*
+  next : la page de DROITE tourne depuis le centre (left = reliure)
+  prev : la page de GAUCHE tourne depuis le centre (right = reliure)
+*/
 .flip-page{
   position:absolute;top:0;width:420px;height:595px;
   transform-style:preserve-3d;
   z-index:20;
   pointer-events:none;
 }
-.flip-page-next{left:0;transform-origin:right center}
-.flip-page-prev{left:420px;transform-origin:left center}
+/* next : positionné sur la droite, pivot à gauche (= reliure) */
+.flip-page-next{left:420px;transform-origin:left center}
+/* prev : positionné sur la gauche, pivot à droite (= reliure) */
+.flip-page-prev{left:0;transform-origin:right center}
+
 .flip-face,.flip-back{
   position:absolute;inset:0;width:420px;height:595px;
   overflow:hidden;backface-visibility:hidden;
 }
-.flip-back{transform:rotateY(180deg)}
-/* Ombre centrale (reliure) */
+/* La face arrière est retournée de 180° — visible quand la page a pivoté.
+   scaleX(-1) corrige le mirroring pour que le contenu reste lisible. */
+.flip-back{transform:rotateY(180deg) scaleX(-1)}
+
+/* Reliure centrale */
 .book-spine{
   position:absolute;left:418px;top:0;width:4px;height:595px;
-  background:linear-gradient(to right,rgba(0,0,0,.18),rgba(0,0,0,.04));
-  z-index:5;pointer-events:none;
+  background:linear-gradient(to right,rgba(0,0,0,.2),rgba(0,0,0,.04));
+  z-index:30;pointer-events:none;
 }
-/* Ombres de progression pendant le flip */
+/* Ombre qui apparaît sur la page fixe pendant le flip */
 .flip-shadow-l{
   position:absolute;inset:0;z-index:2;pointer-events:none;
-  background:linear-gradient(to right,rgba(0,0,0,.22),transparent 60%);
-  opacity:0;transition:opacity .12s;
+  background:linear-gradient(to left,rgba(0,0,0,.28),transparent 70%);
+  opacity:0;transition:opacity .1s;
 }
 .flip-shadow-r{
   position:absolute;inset:0;z-index:2;pointer-events:none;
-  background:linear-gradient(to left,rgba(0,0,0,.22),transparent 60%);
-  opacity:0;transition:opacity .12s;
+  background:linear-gradient(to right,rgba(0,0,0,.28),transparent 70%);
+  opacity:0;transition:opacity .1s;
 }
-/* Keyframes flip directionnel */
+
+/* next : la page droite pivote vers la gauche (comme on tourne une vraie page) */
 @keyframes doFlipNext{
   0%  {transform:rotateY(0deg)}
   100%{transform:rotateY(-180deg)}
 }
+/* prev : la page gauche pivote vers la droite */
 @keyframes doFlipPrev{
   0%  {transform:rotateY(0deg)}
   100%{transform:rotateY(180deg)}
@@ -1064,48 +1075,51 @@ function doFlip(targetSpread,dir){
   flipping=true;
   const lv=document.getElementById('pg-left');
   const rv=document.getElementById('pg-right');
+  const book=document.querySelector('.book');
   const goNext=(dir==='next');
 
   /* Contenu courant et cible */
-  const curLeft =html(sp*2+1),    curRight=html(sp*2+2);
-  const newLeft =html(targetSpread*2+1), newRight=html(targetSpread*2+2);
+  const curLeft=html(sp*2+1),     curRight=html(sp*2+2);
+  const newLeft=html(targetSpread*2+1), newRight=html(targetSpread*2+2);
 
-  /* Créer le wrapper de la page qui tourne */
+  /*
+    NEXT : la page de droite (rv) tourne vers la gauche depuis la reliure.
+           Face avant = curRight, face arrière = newLeft.
+           La page gauche (lv) reste fixe. Elle recevra une ombre.
+    PREV : la page de gauche (lv) tourne vers la droite depuis la reliure.
+           Face avant = curLeft,  face arrière = newRight.
+           La page droite (rv) reste fixe. Elle recevra une ombre.
+  */
   const fp=document.createElement('div');
   fp.className='flip-page '+(goNext?'flip-page-next':'flip-page-prev');
 
-  /* Face avant = page courante qui part */
   const front=document.createElement('div');
   front.className='flip-face';
   front.innerHTML=goNext?curRight:curLeft;
 
-  /* Face arrière = page suivante (miroir) */
+  /* La face arrière doit être en miroir via CSS rotateY(180deg),
+     donc son contenu s’affiche lisiblement une fois la page retournée */
   const back=document.createElement('div');
   back.className='flip-back';
   back.innerHTML=goNext?newLeft:newRight;
-  /* Miroir horizontal pour que le recto soit lisible après rotation */
-  back.style.transform='rotateY(180deg) scaleX(1)';
 
   fp.appendChild(front);
   fp.appendChild(back);
+  book.appendChild(fp);
 
-  /* Ombre sur la page fixe opposée */
+  /* Ombre progressive sur la page fixe (côté opposé à la page qui tourne) */
   const fixedSide=goNext?lv:rv;
   const shEl=document.createElement('div');
   shEl.className=goNext?'flip-shadow-l':'flip-shadow-r';
   fixedSide.appendChild(shEl);
-  setTimeout(()=>{shEl.style.opacity='1';},16);
+  requestAnimationFrame(()=>{shEl.style.opacity='1';});
 
-  document.querySelector('.book').appendChild(fp);
+  /* Déclencher l'animation au prochain frame */
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    fp.classList.add(goNext?'animating-next':'animating-prev');
+  }));
 
-  /* Appliquer l'animation */
-  requestAnimationFrame(()=>{
-    requestAnimationFrame(()=>{
-      fp.classList.add(goNext?'animating-next':'animating-prev');
-    });
-  });
-
-  /* Au milieu du flip (325ms) : swapper le contenu des pages fixes */
+  /* À mi-animation : swap le contenu statique des deux pages */
   setTimeout(()=>{
     lv.innerHTML=newLeft;
     rv.innerHTML=newRight;
@@ -1114,12 +1128,12 @@ function doFlip(targetSpread,dir){
     shEl.style.opacity='0';
   },325);
 
-  /* Fin : nettoyer */
+  /* Fin : retirer le wrapper de flip */
   setTimeout(()=>{
-    if(fp.parentNode)fp.parentNode.removeChild(fp);
-    if(shEl.parentNode)shEl.parentNode.removeChild(shEl);
+    fp.parentNode&&fp.parentNode.removeChild(fp);
+    shEl.parentNode&&shEl.parentNode.removeChild(shEl);
     flipping=false;
-  },670);
+  },680);
 }
 
 function show(n){
