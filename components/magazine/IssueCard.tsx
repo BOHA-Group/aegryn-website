@@ -45,10 +45,10 @@ export function IssueCard({ issue }: Props) {
         </div>
 
         {/* AEGRYN massif + BUSINESS MAGAZINE aligné droite */}
-        <div className="relative z-10 -mt-1">
+        <div className="relative z-10">
           <p
             className="font-sans font-bold text-white leading-none"
-            style={{ fontSize: 'clamp(52px,8vw,96px)', letterSpacing: '-0.04em', lineHeight: 0.86 }}
+            style={{ fontSize: 'clamp(52px,8vw,96px)', letterSpacing: '-0.04em', lineHeight: 0.88 }}
           >
             Aegryn
           </p>
@@ -57,24 +57,24 @@ export function IssueCard({ issue }: Props) {
 
         {/* EXCLUSIVE — milieu gauche */}
         <div className="relative z-10 flex-1 flex flex-col justify-center">
-          <div className="max-w-[180px]">
+          <div className="max-w-[200px]">
             <p className="font-sans font-bold text-[#2EAF7D] uppercase tracking-[0.08em] mb-2" style={{ fontSize: '11px' }}>Exclusive</p>
             <div className="w-8 h-[2px] bg-[#2EAF7D] mb-2" />
-            <p className="font-sans font-bold text-white/55 uppercase leading-snug" style={{ fontSize: '9px', letterSpacing: '0.04em' }}>
+            <p className="font-sans font-bold text-white/60 uppercase leading-snug" style={{ fontSize: '9px', letterSpacing: '0.04em' }}>
               {issue.coverLine}
             </p>
           </div>
         </div>
 
-        {/* BAS : titre accent + theme */}
+        {/* BAS : BUILT TO LAST grand gauche + theme centré */}
         <div className="relative z-10">
           <p
             className="font-sans font-bold text-[#2EAF7D] uppercase leading-tight mb-3"
-            style={{ fontSize: 'clamp(16px,2.5vw,26px)', letterSpacing: '-0.01em', lineHeight: 1.05 }}
+            style={{ fontSize: 'clamp(22px,3.5vw,40px)', letterSpacing: '-0.01em', lineHeight: 1.0 }}
           >
             {issue.title}
           </p>
-          <p className="font-sans uppercase text-center text-white/40 leading-snug" style={{ fontSize: '9px', letterSpacing: '0.06em' }}>
+          <p className="font-sans uppercase text-center text-white/40 leading-relaxed" style={{ fontSize: '9px', letterSpacing: '0.06em' }}>
             {issue.theme}
           </p>
         </div>

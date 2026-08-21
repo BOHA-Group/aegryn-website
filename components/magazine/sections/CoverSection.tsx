@@ -57,11 +57,11 @@ export function CoverSection({ issue, ctaScroll }: Props) {
       </div>
 
       {/* ── AEGRYN massif + BUSINESS MAGAZINE sous le titre ── */}
-      <div className="relative z-10 -mt-2">
+      <div className="relative z-10">
         <h1
           ref={titleRef}
           className="font-sans font-bold text-white leading-none"
-          style={{ fontSize: 'clamp(80px,15vw,190px)', letterSpacing: '-0.04em', lineHeight: 0.86 }}
+          style={{ fontSize: 'clamp(80px,15vw,190px)', letterSpacing: '-0.04em', lineHeight: 0.88 }}
         >
           Aegryn
         </h1>
@@ -87,12 +87,12 @@ export function CoverSection({ issue, ctaScroll }: Props) {
       <div className="cover-meta relative z-10">
         <p
           className="font-sans font-bold text-[#2EAF7D] uppercase leading-tight mb-4"
-          style={{ fontSize: 'clamp(22px,4vw,46px)', letterSpacing: '-0.01em', lineHeight: 1.05 }}
+          style={{ fontSize: 'clamp(32px,5vw,72px)', letterSpacing: '-0.01em', lineHeight: 1.0 }}
         >
           {issue.title}
         </p>
         <p
-          className="font-sans uppercase text-center text-white/45 leading-snug"
+          className="font-sans uppercase text-center text-white/45 leading-relaxed"
           style={{ fontSize: '10px', letterSpacing: '0.07em' }}
         >
           {issue.theme}
