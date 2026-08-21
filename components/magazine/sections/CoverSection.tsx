@@ -45,82 +45,64 @@ export function CoverSection({ issue, ctaScroll }: Props) {
         style={{ background: 'linear-gradient(160deg, rgba(5,10,15,0.82) 0%, rgba(5,10,15,0.65) 50%, rgba(5,10,15,0.88) 100%)' }}
       />
 
-      {/* ── Top bar ── */}
+      {/* ── TOP BAR : date gauche / Special Edition droite ── */}
       <div className="cover-meta relative z-10 flex items-start justify-between">
-        <p
-          className="font-mono tracking-[0.22em] uppercase text-white/40"
-          style={{ fontSize: '10px' }}
-        >
+        <p className="font-mono tracking-[0.22em] uppercase text-white/40" style={{ fontSize: '10px' }}>
           {formatted}
         </p>
         <div className="text-right">
-          <p className="font-mono tracking-[0.18em] uppercase text-[#2EAF7D] font-bold" style={{ fontSize: '10px' }}>
-            Special Edition
-          </p>
-          <p className="font-mono tracking-[0.18em] uppercase text-[#2EAF7D] font-bold" style={{ fontSize: '10px' }}>
-            {issueNum}
-          </p>
+          <p className="font-mono tracking-[0.18em] uppercase text-[#2EAF7D] font-bold" style={{ fontSize: '10px' }}>Special Edition</p>
+          <p className="font-mono tracking-[0.18em] uppercase text-[#2EAF7D] font-bold" style={{ fontSize: '10px' }}>{issueNum}</p>
         </div>
       </div>
 
-      {/* ── Main title block ── */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center py-16">
-        {/* AEGRYN massive — Salford-style */}
+      {/* ── AEGRYN massif + BUSINESS MAGAZINE sous le titre ── */}
+      <div className="relative z-10 -mt-2">
         <h1
           ref={titleRef}
           className="font-sans font-bold text-white leading-none"
-          style={{ fontSize: 'clamp(72px,14vw,180px)', letterSpacing: '-0.04em', lineHeight: 0.86 }}
+          style={{ fontSize: 'clamp(80px,15vw,190px)', letterSpacing: '-0.04em', lineHeight: 0.86 }}
         >
           Aegryn
         </h1>
-
-        <p
-          className="cover-meta font-mono tracking-[0.18em] uppercase text-white/35 mt-3"
-          style={{ fontSize: '11px' }}
-        >
-          Magazine
+        <p className="cover-meta text-right font-mono tracking-[0.18em] uppercase text-white/35 mt-2" style={{ fontSize: '11px' }}>
+          Business Magazine
         </p>
+      </div>
 
-        {/* ── Exclusive block — left aligned like Salford ── */}
-        <div className="cover-meta mt-10 md:mt-16 max-w-[240px]">
-          <p
-            className="font-sans font-bold text-[#2EAF7D] uppercase tracking-[0.06em] mb-2"
-            style={{ fontSize: '13px' }}
-          >
+      {/* ── EXCLUSIVE — milieu gauche ── */}
+      <div className="cover-meta relative z-10 flex-1 flex flex-col justify-center">
+        <div className="max-w-[220px]">
+          <p className="font-sans font-bold text-[#2EAF7D] uppercase tracking-[0.08em] mb-2" style={{ fontSize: '13px' }}>
             Exclusive
           </p>
-          <div className="w-12 h-[2px] bg-[#2EAF7D] mb-3" />
-          <p className="font-sans font-bold text-white/60 uppercase leading-snug" style={{ fontSize: '11px', letterSpacing: '0.04em' }}>
+          <div className="w-10 h-[2px] bg-[#2EAF7D] mb-3" />
+          <p className="font-sans font-bold text-white/55 uppercase leading-snug" style={{ fontSize: '10px', letterSpacing: '0.05em' }}>
             {issue.coverLine}
           </p>
         </div>
       </div>
 
-      {/* ── Bottom block ── */}
+      {/* ── BAS : titre accent + theme centré + scroll ── */}
       <div className="cover-meta relative z-10">
-        {/* Tagline massive accent — like "STRATEGIES FOR BUSINESS RESILIENCE" */}
         <p
-          className="font-sans font-bold text-[#2EAF7D] uppercase leading-none mb-5"
-          style={{ fontSize: 'clamp(26px,4.5vw,52px)', letterSpacing: '-0.01em', lineHeight: 1 }}
+          className="font-sans font-bold text-[#2EAF7D] uppercase leading-tight mb-4"
+          style={{ fontSize: 'clamp(22px,4vw,46px)', letterSpacing: '-0.01em', lineHeight: 1.05 }}
         >
           {issue.title}
         </p>
-
-        {/* Theme text — like the body copy at bottom of Salford cover */}
         <p
-          className="font-sans uppercase text-white/50 leading-snug max-w-[640px]"
-          style={{ fontSize: '11px', letterSpacing: '0.06em' }}
+          className="font-sans uppercase text-center text-white/45 leading-snug"
+          style={{ fontSize: '10px', letterSpacing: '0.07em' }}
         >
           {issue.theme}
         </p>
-
-        {/* Scroll CTA */}
         <button
           onClick={() => {
             const firstSection = issue.sections[0]
             if (firstSection) document.getElementById(firstSection.id)?.scrollIntoView({ behavior: 'smooth' })
           }}
-          className="mt-8 flex items-center gap-2 font-mono text-[9px] tracking-[0.2em] uppercase text-white/30 hover:text-white/70 transition-colors"
+          className="mt-6 flex items-center gap-2 font-mono text-[9px] tracking-[0.2em] uppercase text-white/25 hover:text-white/60 transition-colors"
           aria-label={ctaScroll}
         >
           {ctaScroll} <ArrowDown size={11} />

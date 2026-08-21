@@ -18,23 +18,64 @@ export function IssueCard({ issue }: Props) {
       href={`/magazine/${issue.slug}`}
       className="group grid md:grid-cols-[2fr_3fr] gap-0 border border-magazine-black/10 hover:border-magazine-black/25 transition-colors"
     >
-      {/* Cover panel */}
-      <div className="bg-magazine-white flex flex-col justify-between p-10 md:p-14 min-h-[380px] border-r border-magazine-black/10">
-        <div>
-          <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-magazine-accent mb-3">
-            N°{String(issue.number).padStart(2, '0')} · {formatted}
-          </p>
-          <div className="w-10 h-px bg-magazine-accent mb-8" />
+      {/* Cover panel — format magazine portrait style Salford */}
+      <div className="relative flex flex-col justify-between p-8 min-h-[520px] border-r border-magazine-black/10 overflow-hidden">
+        {/* Background image */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(/magazine/issue-${String(issue.number).padStart(2,'0')}/cover-bg.jpg)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center top',
+          }}
+        />
+        {/* Dark overlay */}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(160deg, rgba(5,10,15,0.80) 0%, rgba(5,10,15,0.60) 50%, rgba(5,10,15,0.85) 100%)' }}
+        />
+
+        {/* TOP BAR : date gauche / Special Edition droite */}
+        <div className="relative z-10 flex items-start justify-between">
+          <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/40">{formatted.toUpperCase()}</p>
+          <div className="text-right">
+            <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#2EAF7D] font-bold">Special Edition</p>
+            <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#2EAF7D] font-bold">Issue {String(issue.number).padStart(2, '0')}</p>
+          </div>
         </div>
-        <div>
+
+        {/* AEGRYN massif + BUSINESS MAGAZINE aligné droite */}
+        <div className="relative z-10 -mt-1">
           <p
-            className="font-sans font-bold text-magazine-black leading-[0.88] mb-3"
-            style={{ fontSize: 'clamp(36px,4.5vw,64px)', letterSpacing: '-0.03em' }}
+            className="font-sans font-bold text-white leading-none"
+            style={{ fontSize: 'clamp(52px,8vw,96px)', letterSpacing: '-0.04em', lineHeight: 0.86 }}
           >
-            {issue.coverStat}
+            Aegryn
           </p>
-          <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-magazine-black/40">
-            {issue.coverStatLabel}
+          <p className="text-right font-mono text-[9px] tracking-[0.18em] uppercase text-white/35 mt-1">Business Magazine</p>
+        </div>
+
+        {/* EXCLUSIVE — milieu gauche */}
+        <div className="relative z-10 flex-1 flex flex-col justify-center">
+          <div className="max-w-[180px]">
+            <p className="font-sans font-bold text-[#2EAF7D] uppercase tracking-[0.08em] mb-2" style={{ fontSize: '11px' }}>Exclusive</p>
+            <div className="w-8 h-[2px] bg-[#2EAF7D] mb-2" />
+            <p className="font-sans font-bold text-white/55 uppercase leading-snug" style={{ fontSize: '9px', letterSpacing: '0.04em' }}>
+              {issue.coverLine}
+            </p>
+          </div>
+        </div>
+
+        {/* BAS : titre accent + theme */}
+        <div className="relative z-10">
+          <p
+            className="font-sans font-bold text-[#2EAF7D] uppercase leading-tight mb-3"
+            style={{ fontSize: 'clamp(16px,2.5vw,26px)', letterSpacing: '-0.01em', lineHeight: 1.05 }}
+          >
+            {issue.title}
+          </p>
+          <p className="font-sans uppercase text-center text-white/40 leading-snug" style={{ fontSize: '9px', letterSpacing: '0.06em' }}>
+            {issue.theme}
           </p>
         </div>
       </div>
