@@ -7,16 +7,17 @@ import { ISSUE_01 }        from '@/content/magazine/issue-01/meta'
 import { ARTICLES_01 }     from '@/content/magazine/issue-01/articles'
 import { DATA_01, dealVolumeData, multiplesChartData, gradeDistributionData } from '@/content/magazine/issue-01/data'
 
-import { CoverSection }    from '@/components/magazine/sections/CoverSection'
-import { EditorialSection } from '@/components/magazine/sections/EditorialSection'
-import { ListSection }     from '@/components/magazine/sections/ListSection'
-import { DataSection }     from '@/components/magazine/sections/DataSection'
-import { AegrynCtaBlock }  from '@/components/magazine/AegrynCtaBlock'
-import { StatHero }        from '@/components/magazine/StatHero'
-import { CifsBars }        from '@/components/magazine/CifsBars'
-import { DealVolumeChart } from '@/components/magazine/charts/DealVolumeChart'
-import { MultiplesChart }  from '@/components/magazine/charts/MultiplesChart'
+import { CoverSection }       from '@/components/magazine/sections/CoverSection'
+import { EditorialSection }  from '@/components/magazine/sections/EditorialSection'
+import { ListSection }       from '@/components/magazine/sections/ListSection'
+import { DataSection }       from '@/components/magazine/sections/DataSection'
+import { AegrynCtaBlock }    from '@/components/magazine/AegrynCtaBlock'
+import { StatHero }          from '@/components/magazine/StatHero'
+import { CifsBars }          from '@/components/magazine/CifsBars'
+import { DealVolumeChart }   from '@/components/magazine/charts/DealVolumeChart'
+import { MultiplesChart }    from '@/components/magazine/charts/MultiplesChart'
 import { GradeDistributionChart } from '@/components/magazine/charts/GradeDistributionChart'
+import { HtmlMagazineViewer } from '@/components/magazine/HtmlMagazineViewer'
 
 /* ── Issue registry ─────────────────────────────────────── */
 function getIssue(slug: string): MagazineIssue | null {
@@ -106,6 +107,17 @@ export default async function IssuePage({ params }: Props) {
           stats={DATA_01.coverStats}
           ctaScroll={t('scrollDown')}
         />
+
+        {/* ── Magazine Viewer (HTML inline) ── */}
+        {issue.slug === 'issue-01' && (
+          <section id="s-viewer" className="bg-[#111]">
+            <HtmlMagazineViewer
+              htmlSrc="/magazine/issue-01/aegryn-magazine-issue-01_1.html"
+              title="Aegryn Magazine Issue 01 — Built to Last"
+              label="Issue 01 — Built to Last — January 2027"
+            />
+          </section>
+        )}
 
         {/* ── Editorial ── */}
         <EditorialSection

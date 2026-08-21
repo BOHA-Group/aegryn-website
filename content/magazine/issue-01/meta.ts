@@ -11,6 +11,7 @@ export const ISSUE_01: MagazineIssue = {
   coverLine: 'The market is ready. Are the founders?',
   status: 'published',
   sections: [
+    { id: 's-viewer',      label: 'Read Issue',     pillar: 'build'  },
     { id: 's-editorial',   label: 'Editorial',      pillar: 'money'  },
     { id: 's-market',      label: 'The Market',     pillar: 'money'  },
     { id: 's-ai',          label: 'AI & Value',     pillar: 'ai'     },
