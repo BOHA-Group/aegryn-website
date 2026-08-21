@@ -2,17 +2,15 @@ import { notFound }        from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
 import type { Metadata }   from 'next'
 import type { MagazineIssue } from '@/lib/magazine/types'
+import Link from 'next/link'
 
 import { ISSUE_01 }        from '@/content/magazine/issue-01/meta'
 import { ARTICLES_01 }     from '@/content/magazine/issue-01/articles'
 import { DATA_01, dealVolumeData, multiplesChartData, gradeDistributionData } from '@/content/magazine/issue-01/data'
 
-import { CoverSection }       from '@/components/magazine/sections/CoverSection'
-import { EditorialSection }  from '@/components/magazine/sections/EditorialSection'
-import { ListSection }       from '@/components/magazine/sections/ListSection'
-import { DataSection }       from '@/components/magazine/sections/DataSection'
+import { MagazineNav }       from '@/components/magazine/MagazineNav'
+import { CoverSection }      from '@/components/magazine/sections/CoverSection'
 import { AegrynCtaBlock }    from '@/components/magazine/AegrynCtaBlock'
-import { StatHero }          from '@/components/magazine/StatHero'
 import { CifsBars }          from '@/components/magazine/CifsBars'
 import { DealVolumeChart }   from '@/components/magazine/charts/DealVolumeChart'
 import { MultiplesChart }    from '@/components/magazine/charts/MultiplesChart'
@@ -68,17 +66,11 @@ export default async function IssuePage({ params }: Props) {
 
   const t = await getTranslations({ locale, namespace: 'magazine.report' })
 
-  /* ── Article lookups ── */
-  const editorial    = ARTICLES_01.find(a => a.slug === 'editorial-why-europe-needs-a-standard')!
-
-  /* ── Editorial paragraphs ── */
-  const editorialParagraphs = [
-    `We have spent years building, auditing, and structuring digital assets — and observing the same gap: the absence of a standardised, independent reference that both sides of a tech transaction could equally trust. Sellers operate without a certified baseline. Buyers make decisions on unverified information. The market, for all its sophistication, runs on opacity.`,
-    `In 2026, the European SaaS M&A market reached its highest recorded volume. AI is fundamentally recomposing how tech value is defined and priced. European buyers are finally asserting themselves in a market long dominated by North American capital. Yet fragmentation and opacity persist — particularly for the 100K–5M€ segment, which represents the majority of deals by volume and the least served segment in terms of infrastructure.`,
-    `The European discount — 15 to 25% below comparable US multiples — has narrowed, but has not disappeared. Part of the explanation is structural: a less mature advisory ecosystem, fewer standardised due diligence frameworks, and a cultural reluctance around price transparency. AEGRYN exists to change that.`,
-    `The CIFS certification protocol — covering Code integrity, IP ownership, Financial reliability, and Security posture — provides both sides of a transaction with a shared, auditable language. The Grade is not a valuation. It is a certification of transactability: a verified statement that an asset has been prepared, structured, and documented to a standard that makes closing possible.`,
-    `This report is not a commissioned market study. It is our reading of the market — drawn from our data, our protocol, our point of view. Each year, as our certification database grows, the data will become more ours. This first edition establishes the baseline. Everything that follows will build on it.`,
-  ]
+  /* ── Nav sections with articles ── */
+  const navSections = issue.sections.map(s => ({
+    ...s,
+    articles: ARTICLES_01.filter(a => a.pillar === s.pillar).slice(0, 3),
+  }))
 
   return (
     <>
@@ -100,7 +92,7 @@ export default async function IssuePage({ params }: Props) {
         }}
       />
 
-      <main>
+      <main className="bg-magazine-ivory">
         {/* ── Cover ── */}
         <CoverSection
           issue={issue}
@@ -108,9 +100,15 @@ export default async function IssuePage({ params }: Props) {
           ctaScroll={t('scrollDown')}
         />
 
-        {/* ── Magazine Viewer (HTML inline) ── */}
+        {/* ── Barnes-style sticky nav ── */}
+        <MagazineNav
+          sections={navSections}
+          issueLabel={`Issue ${String(issue.number).padStart(2, '0')} — ${issue.title}`}
+        />
+
+        {/* ── Flipbook (HTML inline viewer) ── */}
         {issue.slug === 'issue-01' && (
-          <section id="s-viewer" className="bg-magazine-ivory">
+          <section id="s-flipbook" className="bg-magazine-ivory">
             <HtmlMagazineViewer
               htmlSrc="/magazine/issue-01/aegryn-magazine-issue-01_1.html"
               title="Aegryn Magazine Issue 01 — Built to Last"
@@ -120,18 +118,55 @@ export default async function IssuePage({ params }: Props) {
         )}
 
         {/* ── Editorial ── */}
-        <EditorialSection
-          article={editorial}
-          paragraphs={editorialParagraphs}
-        />
+        <section id="s-editorial" className="bg-magazine-white px-6 md:px-[120px] py-32">
+          <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-12">Editorial — Issue 01</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+            <div>
+              <p
+                className="font-sans font-bold text-magazine-black leading-[0.88] mb-8"
+                style={{ fontSize: 'clamp(56px,8vw,100px)', letterSpacing: '-0.04em', fontWeight: 800 }}
+              >
+                We<br /><span className="text-magazine-accent">Refuse.</span>
+              </p>
+              <blockquote className="border-l-2 border-magazine-accent pl-6 mb-8">
+                <p className="text-body-mag text-magazine-black/60 leading-[1.75] italic">
+                  &ldquo;Every year, several hundred European tech companies disappear into transactions that should never have happened — or never happen at all.&rdquo;
+                </p>
+              </blockquote>
+              <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-magazine-black/30 italic">
+                The Aegryn Founding Team — Saint-Sulpice — January 2027
+              </p>
+            </div>
+            <div className="space-y-6 text-body-mag text-magazine-black/65 leading-[1.8]">
+              <p>Not because the assets weren't real. Not because the technology wasn't solid. Because <strong className="text-magazine-black">no one prepared them to transact.</strong></p>
+              <p>We built Aegryn to refuse that outcome. We refuse to let a serious company disappear into a poorly structured process. We refuse to let a founder walk away with 60 cents on the dollar because their data room was three PDFs and a prayer.</p>
+              <p><strong className="text-magazine-black">Aegryn Magazine</strong> exists because the information gap between European founders and institutional acquirers is still enormous — and the publications that could close it have chosen to stay behind paywalls, stay shallow, or stay American.</p>
+              <p>Issue 01 is <strong className="text-magazine-black">&ldquo;Built to Last.&rdquo;</strong> It covers what makes an asset worth acquiring before any conversation starts — the structural decisions, the certification logic, the real market data, and the human reality of building something a serious buyer will pay full price for.</p>
+              <p className="font-semibold text-magazine-black">Certified to transact. Engineered to Last.</p>
+            </div>
+          </div>
+        </section>
 
         {/* ── The Market ── */}
-        <section id="s-market" className="bg-magazine-white">
-          <StatHero
-            value="2,698"
-            text="SaaS M&A transactions completed in 2025 — a record."
-            source="Software Equity Group, 2026"
-          />
+        <section id="s-market" className="bg-magazine-ivory">
+          <div className="px-6 md:px-[120px] py-10 border-b border-magazine-black/8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-0 divide-x divide-magazine-black/8">
+              {[
+                { val: '€262B', label: 'EU M&A Q2 2026',      sub: '3,315 transactions' },
+                { val: '2,698', label: 'SaaS deals 2025',      sub: 'Record by volume' },
+                { val: '+28%',  label: 'Certified premium',    sub: 'vs uncertified' },
+                { val: '<25%',  label: 'CIFS acceptance rate', sub: '1 in 4 pass' },
+              ].map(s => (
+                <div key={s.val} className="px-6 py-8 first:pl-0">
+                  <p className="font-sans font-bold text-magazine-black tabular-nums" style={{ fontSize: 'clamp(28px,3.5vw,44px)', letterSpacing: '-0.03em', fontWeight: 800, lineHeight: 1 }}>
+                    {s.val}
+                  </p>
+                  <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-magazine-black/50 mt-2">{s.label}</p>
+                  <p className="font-mono text-[8px] tracking-[0.1em] uppercase text-magazine-black/30 mt-0.5">{s.sub}</p>
+                </div>
+              ))}
+            </div>
+          </div>
           <div className="px-6 md:px-[120px] py-20">
             <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">The Market</p>
             <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-4">
@@ -334,37 +369,32 @@ export default async function IssuePage({ params }: Props) {
           </div>
         </section>
 
-        {/* ── Deal Watch ── */}
-        <ListSection
-          id="s-deals"
-          label="Deal Watch"
-          title="Transactions That Shaped the European Tech Landscape — H1 2026"
-          disclaimer={t('disclaimer')}
-        >
-          <div className="space-y-6">
-            {DATA_01.deals.map(deal => (
-              <div key={deal.title} className="border-l-2 border-magazine-accent pl-8 py-6 bg-magazine-ivory">
-                <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.12em] mb-2">{deal.sector}</p>
-                <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-2">{deal.title}</h3>
-                <div className="flex flex-wrap gap-x-8 gap-y-1 mb-4">
-                  <p className="text-body-mag text-magazine-black/60">{deal.ticket}</p>
-                  <p className="text-body-mag text-magazine-black/60">{deal.multiple}</p>
-                  <p className="text-label-mag text-magazine-accent uppercase tracking-[0.1em] font-semibold">
-                    Est. Grade {deal.grade}
-                  </p>
+        {/* ── Transaction : Deal Watch ── */}
+        <section id="s-transaction" className="bg-magazine-white px-6 md:px-[120px] py-32">
+          <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-8">Transaction — Deal Watch H1 2026</p>
+          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">Five Deals That Defined H1 2026.</h2>
+          <p className="text-body-mag text-magazine-black/55 max-w-prose mb-16 leading-[1.75]">Not the press releases. The signals. Grades shown are analytical estimates — not official certifications.</p>
+          <div className="space-y-0">
+            {[
+              { n: '01', name: 'Legal Workflow Platform — DACH', meta: 'LegalTech · €4.2M ARR · PE · 6.8x ARR', grade: 'Auction Ready', desc: '7-year-old bootstrapped platform, 98% subscription revenue, NRR 118%. Due diligence closed in 19 days — half the EU market average. Buyer cited documentation quality as primary driver.', lesson: 'Clean documentation is a time-to-close advantage worth 15–20% in negotiating power.' },
+              { n: '02', name: 'AI Contract Intelligence — France', meta: 'AI-native SaaS · €1.8M ARR · Strategic · 11x ARR', grade: 'Grade A', desc: 'Buyer paid 11x ARR for the proprietary training dataset. Founder had documented data provenance from day one. That documentation added an estimated €3.2M to the headline price.', lesson: 'Proprietary data with documented provenance is the highest-value AI asset.' },
+              { n: '03', name: 'Home Services Marketplace — Netherlands', meta: 'Marketplace · €900K GMV · Search Fund · 2.6x revenue', grade: 'Pre-Grade', desc: 'F-42 score of 4/5 — three largest clients communicated exclusively with the founder. Buyer accepted an 18-month earn-out to compensate for transition risk.', lesson: 'Founder dependency is a pricing problem — and it costs more than most founders expect.' },
+              { n: '04', name: 'FinTech Compliance Tool — Spain', meta: 'RegTech · €2.1M ARR · Strategic · 8.2x ARR', grade: 'Grade A', desc: 'DORA compliance deadline created structural urgency. Sold at 8.2x ARR — a premium of ~3x above sector median. The regulatory moment was exceptional.', lesson: 'Regulatory windows create premium moments. Prepared assets capture them.' },
+              { n: '05', name: 'Vibe-Coded SaaS — Germany', meta: 'Horizontal SaaS · €600K ARR · No Close', grade: 'No Close', desc: 'LOI at 5x ARR. Technical due diligence: 70% of core codebase AI-generated, no tests, no docs, 3 deprecated dependencies. Buyer requested −40%. Founder declined.', lesson: 'Speed of build is invisible in due diligence. Auditability is everything.' },
+            ].map((d, i, arr) => (
+              <div key={d.n} className={`py-10 grid grid-cols-[auto_1fr_auto] gap-8 items-start ${i < arr.length - 1 ? 'border-b border-magazine-black/8' : ''}`}>
+                <span className="font-sans font-bold text-magazine-black/15 tabular-nums" style={{ fontSize: 'clamp(28px,3.5vw,48px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}>{d.n}</span>
+                <div>
+                  <p className="text-label-mag text-magazine-accent uppercase tracking-[0.12em] mb-1">{d.meta}</p>
+                  <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-3">{d.name}</h3>
+                  <p className="text-body-mag text-magazine-black/60 leading-[1.75] mb-3">{d.desc}</p>
+                  <p className="text-label-mag text-magazine-accent font-semibold">→ {d.lesson}</p>
                 </div>
-                <ul className="space-y-1">
-                  {deal.factors.map(f => (
-                    <li key={f} className="flex items-start gap-3 text-body-mag text-magazine-black/65">
-                      <span className="mt-2 w-1 h-1 rounded-full bg-magazine-accent shrink-0" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
+                <span className="inline-block font-mono text-[8px] tracking-[0.18em] uppercase border border-magazine-black/20 text-magazine-black/50 px-3 py-1.5 shrink-0 mt-1">{d.grade}</span>
               </div>
             ))}
           </div>
-        </ListSection>
+        </section>
 
         {/* ── Buyers ── */}
         <section id="s-buyers" className="bg-magazine-ivory px-6 md:px-[120px] py-32">
@@ -446,25 +476,26 @@ export default async function IssuePage({ params }: Props) {
         </section>
 
         {/* ── AEGRYN Index ── */}
-        <DataSection id="s-index" label="The AEGRYN Index" title="Edition 1 — Proprietary Certification Data">
-          <p className="text-body-mag text-magazine-black/50 max-w-prose mb-16 italic">
-            {t('indexNote')}
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 sm:divide-x divide-magazine-black/10">
+        <section id="s-index" className="bg-magazine-white px-6 md:px-[120px] py-32">
+          <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-8">The AEGRYN Index — Edition I</p>
+          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">Proprietary Certification Data. Published Here First.</h2>
+          <p className="text-body-mag text-magazine-black/50 max-w-prose mb-16 italic">Not available elsewhere. Updated every issue. CIFS Protocol v3.0.</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-magazine-black/8 mb-16">
             {DATA_01.indexMetrics.map(m => (
-              <div key={m.label} className="py-10 px-8 first:pl-0 last:pr-0">
+              <div key={m.label} className="bg-magazine-white p-8">
                 <p
                   className="font-sans font-bold text-magazine-black tabular-nums"
-                  style={{ fontSize: 'clamp(40px,5vw,72px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}
+                  style={{ fontSize: 'clamp(32px,4vw,56px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}
                 >
                   {m.val}
                 </p>
-                <p className="text-body-mag text-magazine-black/70 mt-3 font-semibold">{m.label}</p>
-                <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.08em] mt-1">{m.note}</p>
+                <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-magazine-black/50 mt-3">{m.label}</p>
+                <p className="text-body-mag text-magazine-black/40 mt-1 text-[11px] leading-snug">{m.note}</p>
               </div>
             ))}
           </div>
-        </DataSection>
+          <CifsBars dims={DATA_01.cifsExample} />
+        </section>
 
         {/* ── CTA ── */}
         <AegrynCtaBlock
