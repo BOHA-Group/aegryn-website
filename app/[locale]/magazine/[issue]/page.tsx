@@ -92,19 +92,25 @@ export default async function IssuePage({ params }: Props) {
         }}
       />
 
-      <main className="bg-magazine-ivory">
-        {/* ── Cover ── */}
-        <CoverSection
-          issue={issue}
-          stats={DATA_01.coverStats}
-          ctaScroll={t('scrollDown')}
-        />
+      {/* ── Cover pleine largeur (avant sidebar) ── */}
+      <CoverSection
+        issue={issue}
+        stats={DATA_01.coverStats}
+        ctaScroll={t('scrollDown')}
+      />
 
-        {/* ── Barnes-style sticky nav ── */}
+      {/* ── Layout 2 colonnes : sidebar fixe + contenu scrollable ── */}
+      <div className="relative">
+        {/* Sidebar Barnes verticale fixe */}
         <MagazineNav
           sections={navSections}
-          issueLabel={`Issue ${String(issue.number).padStart(2, '0')} — ${issue.title}`}
+          issueNumber={issue.number}
+          issueTitle={issue.title}
+          issueSubtitle={`N°${String(issue.number).padStart(2,'0')} — Printemps 2027`}
         />
+
+        {/* Contenu principal décalé de 240px sur desktop */}
+        <main className="lg:ml-[240px] bg-magazine-ivory">
 
         {/* ── Flipbook (HTML inline viewer) ── */}
         {issue.slug === 'issue-01' && (
@@ -505,7 +511,8 @@ export default async function IssuePage({ params }: Props) {
           ctaEstimate={t('ctaEstimate')}
           ctaGrade={t('ctaGrade')}
         />
-      </main>
+        </main>
+      </div>
     </>
   )
 }

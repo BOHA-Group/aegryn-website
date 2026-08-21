@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import type { IssueSection, MagazineArticle } from '@/lib/magazine/types'
 
 interface SectionWithArticles extends IssueSection {
@@ -9,24 +9,23 @@ interface SectionWithArticles extends IssueSection {
 
 interface Props {
   sections: SectionWithArticles[]
-  issueLabel?: string
+  issueNumber?: number
+  issueTitle?: string
+  issueSubtitle?: string
 }
 
 /**
- * Barnes-style sticky horizontal nav for magazine issues.
- * Scrollspy active state + article dropdown per section.
+ * Barnes-style vertical sidebar nav — fixed left, always visible.
+ * Logo + issue info at top, AU SOMMAIRE, sections with scrollspy, PDF link at bottom.
  */
-export function MagazineNav({ sections, issueLabel = 'Issue 01 — Built to Last' }: Props) {
-  const [active, setActive]     = useState<string>('')
-  const [open, setOpen]         = useState<string | null>(null)
-  const [scrolled, setScrolled] = useState(false)
-  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+export function MagazineNav({
+  sections,
+  issueNumber = 1,
+  issueTitle = 'Built to Last',
+  issueSubtitle,
+}: Props) {
+  const [active, setActive]       = useState<string>('')
+  const [expanded, setExpanded]   = useState<string | null>(null)
 
   useEffect(() => {
     const ids = sections.map(s => s.id)
@@ -36,7 +35,7 @@ export function MagazineNav({ sections, issueLabel = 'Issue 01 — Built to Last
       if (!el) return
       const obs = new IntersectionObserver(
         ([entry]) => { if (entry.isIntersecting) setActive(id) },
-        { rootMargin: '-20% 0px -70% 0px', threshold: 0 },
+        { rootMargin: '-15% 0px -65% 0px', threshold: 0 },
       )
       obs.observe(el)
       observers.push(obs)
@@ -46,102 +45,95 @@ export function MagazineNav({ sections, issueLabel = 'Issue 01 — Built to Last
 
   function scrollTo(id: string) {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-    setOpen(null)
   }
 
-  function handleMouseEnter(id: string) {
-    if (closeTimer.current) clearTimeout(closeTimer.current)
-    setOpen(id)
-  }
-
-  function handleMouseLeave() {
-    closeTimer.current = setTimeout(() => setOpen(null), 180)
-  }
+  const issueNum = `N°${String(issueNumber).padStart(2, '0')}`
 
   return (
-    <nav
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? 'bg-magazine-white/95 backdrop-blur-sm border-b border-magazine-black/10 shadow-[0_1px_0_rgba(0,0,0,0.04)]'
-          : 'bg-magazine-ivory border-b border-magazine-black/8'
-      }`}
-    >
-      <div className="flex items-center justify-between px-6 md:px-[80px]">
+    <aside className="hidden lg:flex flex-col fixed top-0 left-0 h-screen w-[240px] bg-magazine-white border-r border-magazine-black/8 z-40 overflow-y-auto">
 
-        {/* ── Issue label ── */}
-        <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-magazine-black/35 shrink-0 py-4 pr-8 border-r border-magazine-black/8 hidden md:block">
-          {issueLabel}
-        </span>
+      {/* ── Brand header ── */}
+      <div className="px-6 pt-8 pb-6 border-b border-magazine-black/8">
+        <p className="font-sans font-bold text-magazine-black text-[15px] tracking-[0.04em] leading-none">
+          AEGRYN
+        </p>
+        <p className="font-mono text-[9px] tracking-[0.16em] uppercase text-magazine-accent mt-0.5">
+          Magazine
+        </p>
+        <p className="font-mono text-[9px] tracking-[0.12em] text-magazine-black/40 mt-3">
+          {issueNum} — {issueSubtitle ?? issueTitle}
+        </p>
+      </div>
 
-        {/* ── Section links ── */}
-        <div className="flex items-stretch overflow-x-auto scrollbar-none flex-1">
-          {sections.map(s => {
-            const isActive = active === s.id
-            const isOpen   = open === s.id
-            const hasItems = s.articles && s.articles.length > 0
+      {/* ── Sommaire label ── */}
+      <div className="px-6 pt-5 pb-3">
+        <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30 flex items-center gap-2">
+          <span className="inline-block w-4 h-px bg-magazine-black/20" />
+          Au Sommaire
+        </p>
+      </div>
 
-            return (
-              <div
-                key={s.id}
-                className="relative shrink-0"
-                onMouseEnter={() => hasItems ? handleMouseEnter(s.id) : undefined}
-                onMouseLeave={handleMouseLeave}
+      {/* ── Section list ── */}
+      <nav className="flex-1 px-3 pb-4">
+        {sections.map(s => {
+          const isActive   = active === s.id
+          const isExpanded = expanded === s.id
+          const hasArticles = s.articles && s.articles.length > 0
+
+          return (
+            <div key={s.id}>
+              <button
+                onClick={() => {
+                  scrollTo(s.id)
+                  if (hasArticles) setExpanded(isExpanded ? null : s.id)
+                }}
+                className={`w-full flex items-center justify-between px-3 py-2.5 text-left transition-colors rounded-sm group ${
+                  isActive
+                    ? 'text-magazine-accent'
+                    : 'text-magazine-black/65 hover:text-magazine-black'
+                }`}
               >
-                <button
-                  onClick={() => scrollTo(s.id)}
-                  className={`flex items-center gap-1.5 py-4 px-4 font-mono text-[9px] tracking-[0.18em] uppercase transition-colors whitespace-nowrap border-b-2 ${
-                    isActive
-                      ? 'text-magazine-black border-magazine-accent'
-                      : 'text-magazine-black/40 border-transparent hover:text-magazine-black/80 hover:border-magazine-black/20'
-                  }`}
-                >
+                <span className="font-sans text-[13px] font-medium leading-snug">
                   {s.label}
-                  {hasItems && (
-                    <span className={`block w-1 h-1 rounded-full transition-colors ${isActive ? 'bg-magazine-accent' : 'bg-magazine-black/20'}`} />
-                  )}
-                </button>
-
-                {/* Dropdown */}
-                {hasItems && isOpen && (
-                  <div
-                    className="absolute top-full left-0 min-w-[260px] bg-magazine-white border border-magazine-black/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] py-2 z-50"
-                    onMouseEnter={() => handleMouseEnter(s.id)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    {s.articles!.map(a => (
-                      <button
-                        key={a.slug}
-                        onClick={() => scrollTo(s.id)}
-                        className="w-full text-left px-5 py-3 hover:bg-magazine-ivory transition-colors group"
-                      >
-                        <span className="block font-mono text-[8px] tracking-[0.2em] uppercase text-magazine-accent mb-0.5">
-                          {s.label}
-                        </span>
-                        <span className="block font-sans text-[12px] font-semibold text-magazine-black group-hover:text-magazine-accent transition-colors leading-snug">
-                          {a.title}
-                        </span>
-                        <span className="block font-mono text-[8px] text-magazine-black/30 mt-0.5">
-                          {a.readingTimeMinutes} min read
-                        </span>
-                      </button>
-                    ))}
-                  </div>
+                </span>
+                {hasArticles && (
+                  <span className={`font-mono text-[11px] transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''} ${isActive ? 'text-magazine-accent' : 'text-magazine-black/25'}`}>
+                    −
+                  </span>
                 )}
-              </div>
-            )
-          })}
-        </div>
+              </button>
 
-        {/* ── PDF download ── */}
+              {/* Sub-articles */}
+              {hasArticles && isExpanded && (
+                <div className="ml-3 mb-1 border-l border-magazine-black/10 pl-3">
+                  {s.articles!.map(a => (
+                    <button
+                      key={a.slug}
+                      onClick={() => scrollTo(s.id)}
+                      className="w-full text-left py-1.5 text-[11px] text-magazine-black/45 hover:text-magazine-black transition-colors leading-snug"
+                    >
+                      {a.title}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          )
+        })}
+      </nav>
+
+      {/* ── PDF download ── */}
+      <div className="px-6 py-5 border-t border-magazine-black/8">
         <a
           href="/api/magazine/issue-01/cover"
           target="_blank"
           rel="noopener noreferrer"
-          className="shrink-0 ml-4 font-mono text-[9px] tracking-[0.18em] uppercase text-magazine-accent border border-magazine-accent/30 px-4 py-2 hover:bg-magazine-accent hover:text-white transition-colors hidden md:inline-flex items-center gap-2 my-3"
+          className="flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase text-magazine-black/40 hover:text-magazine-accent transition-colors"
         >
-          PDF ↗
+          <span className="inline-block w-4 h-px bg-current" />
+          Télécharger PDF
         </a>
       </div>
-    </nav>
+    </aside>
   )
 }
