@@ -5,13 +5,13 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
 
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://static.cloudflareinsights.com https://*.cookie-script.com https://js.stripe.com",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://static.cloudflareinsights.com https://*.cookie-script.com https://js.stripe.com https://cdnjs.cloudflare.com",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com data:",
   "img-src 'self' data: blob: https: https://www.google-analytics.com",
   "media-src 'self' blob:",
   "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://vitals.vercel-insights.com https://cloudflareinsights.com wss: wss://ws-us3.pusher.com https://*.cookie-script.com https://*.supabase.co wss://*.supabase.co https://api.stripe.com",
-  "frame-src https://js.stripe.com",
+  "frame-src 'self' https://js.stripe.com",
   "frame-ancestors 'self'",
   "object-src 'none'",
   "base-uri 'self'",

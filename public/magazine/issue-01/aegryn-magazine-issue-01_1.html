@@ -1116,11 +1116,9 @@ body{background:#1e1e1e;display:flex;flex-direction:column;align-items:stretch}
   }
   function applyZoom(){
     const s = computeFit() * zoomLevel;
-    wrapEl.style.transform = 'scale('+s+')';
-    /* Compenser l'espace layout (transform ne modifie pas le flow) */
-    const dH = Math.round(PAGE_H * (s - 1) / 2);
-    wrapEl.style.marginTop    = dH + 'px';
-    wrapEl.style.marginBottom = dH + 'px';
+    /* CSS zoom ajuste le layout ET les coords d'événements (pas transform:scale)
+       → StPageFlip hit-detection reste correct */
+    wrapEl.style.zoom = String(s);
     document.getElementById('fb-zoom-lbl').textContent = Math.round(zoomLevel*100)+'%';
   }
 
