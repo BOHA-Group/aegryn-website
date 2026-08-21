@@ -104,7 +104,7 @@ export default async function IssuePage({ params }: Props) {
           sections={navSections}
           issueNumber={issue.number}
           issueTitle={issue.title}
-          issueSubtitle={`N°${String(issue.number).padStart(2,'0')} — Printemps 2027`}
+          issueSubtitle="Printemps 2027"
         />
 
         {/* Contenu principal décalé de 240px sur desktop */}

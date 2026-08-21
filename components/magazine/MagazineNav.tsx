@@ -93,8 +93,15 @@ export function MagazineNav({
                     : 'text-magazine-black/65 hover:text-magazine-black'
                 }`}
               >
-                <span className="font-sans text-[13px] font-medium leading-snug">
-                  {s.label}
+                <span className="flex flex-col">
+                  <span className="font-sans text-[13px] font-medium leading-snug">
+                    {s.label}
+                  </span>
+                  {s.pageRange && (
+                    <span className="font-mono text-[9px] tracking-[0.1em] text-magazine-black/30 mt-0.5">
+                      {s.pageRange}
+                    </span>
+                  )}
                 </span>
                 {hasArticles && (
                   <span className={`font-mono text-[11px] transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''} ${isActive ? 'text-magazine-accent' : 'text-magazine-black/25'}`}>

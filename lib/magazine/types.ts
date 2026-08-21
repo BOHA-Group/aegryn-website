@@ -25,6 +25,8 @@ export interface IssueSection {
   id: string
   label: string
   pillar: Pillar
+  /** Référence page(s) dans le flipbook/PDF 60 pages, ex: "p.05–08" */
+  pageRange?: string
 }
 
 export interface MagazineArticle {
