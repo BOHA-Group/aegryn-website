@@ -110,7 +110,7 @@ export default async function IssuePage({ params }: Props) {
 
         {/* ── Magazine Viewer (HTML inline) ── */}
         {issue.slug === 'issue-01' && (
-          <section id="s-viewer" className="bg-[#111]">
+          <section id="s-viewer" className="bg-magazine-ivory">
             <HtmlMagazineViewer
               htmlSrc="/magazine/issue-01/aegryn-magazine-issue-01_1.html"
               title="Aegryn Magazine Issue 01 — Built to Last"
@@ -222,9 +222,9 @@ export default async function IssuePage({ params }: Props) {
         </section>
 
         {/* ── AI Effect ── */}
-        <section id="s-ai" className="bg-magazine-black px-6 md:px-[120px] py-32">
+        <section id="s-ai" className="bg-magazine-white px-6 md:px-[120px] py-32">
           <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-8">The AI Effect</p>
-          <h2 className="text-h1-mag font-sans font-bold text-magazine-white mb-16 max-w-[800px]">
+          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-16 max-w-[800px]">
             Artificial Intelligence and the Recomposition of Tech Value
           </h2>
 
@@ -235,12 +235,12 @@ export default async function IssuePage({ params }: Props) {
             ].map(s => (
               <div key={s.val}>
                 <p
-                  className="font-sans font-bold text-magazine-white tabular-nums"
+                  className="font-sans font-bold text-magazine-black tabular-nums"
                   style={{ fontSize: 'clamp(52px,7vw,96px)', lineHeight: 0.92, letterSpacing: '-0.03em', fontWeight: 800 }}
                 >
                   {s.val}
                 </p>
-                <p className="text-body-mag text-magazine-white/50 mt-4">{s.label}</p>
+                <p className="text-body-mag text-magazine-black/50 mt-4">{s.label}</p>
               </div>
             ))}
           </div>
@@ -252,17 +252,17 @@ export default async function IssuePage({ params }: Props) {
               { code: 'S-42', title: 'EU AI Act ready',   body: 'Compliance with Articles 9–15 — increasingly a buyer prerequisite.' },
               { code: 'F-14', title: 'NRR > 120%',        body: 'Net Revenue Retention above 120% demonstrates genuine product-market fit.' },
             ].map(a => (
-              <div key={a.code} className="border-l-2 border-magazine-accent pl-6 py-2" style={{ background: '#1A1A1A' }}>
+              <div key={a.code} className="border-l-2 border-magazine-accent pl-6 py-2 bg-magazine-ivory">
                 <p className="text-label-mag text-magazine-accent uppercase tracking-[0.12em] mb-2">{a.code}</p>
-                <p className="text-h2-mag font-sans font-semibold text-magazine-white mb-2">{a.title}</p>
-                <p className="text-body-mag text-magazine-white/55">{a.body}</p>
+                <p className="text-h2-mag font-sans font-semibold text-magazine-black mb-2">{a.title}</p>
+                <p className="text-body-mag text-magazine-black/60">{a.body}</p>
               </div>
             ))}
           </div>
 
-          <div className="max-w-prose border-t border-magazine-white/10 pt-12">
-            <h3 className="text-h2-mag font-sans font-semibold text-magazine-white mb-6">The Commoditisation Trap</h3>
-            <p className="text-body-mag text-magazine-white/65 leading-[1.75]">
+          <div className="max-w-prose border-t border-magazine-black/10 pt-12">
+            <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-6">The Commoditisation Trap</h3>
+            <p className="text-body-mag text-magazine-black/65 leading-[1.75]">
               The test: can a competitor rebuild this with Claude or GPT in two weeks? If yes, the asset has no certifiable moat. This is what we observe in approximately 40% of submitted assets — products built on thin wrappers around public LLMs, without proprietary data, contractual depth, or technical differentiation. The AI valuation premium is real. It is also fragile for assets that cannot pass this test.
             </p>
           </div>
@@ -403,9 +403,9 @@ export default async function IssuePage({ params }: Props) {
         </section>
 
         {/* ── Outlook 2027 ── */}
-        <section id="s-outlook" className="bg-magazine-black px-6 md:px-[120px] py-32">
+        <section id="s-outlook" className="bg-magazine-ivory px-6 md:px-[120px] py-32">
           <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-8">Perspectives 2027</p>
-          <h2 className="text-h1-mag font-sans font-bold text-magazine-white mb-20 max-w-[720px]">
+          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-20 max-w-[720px]">
             What the Next 12 Months Look Like
           </h2>
 
@@ -429,16 +429,16 @@ export default async function IssuePage({ params }: Props) {
             ].map((f, i, arr) => (
               <div
                 key={f.num}
-                className={`py-16 ${i < arr.length - 1 ? 'border-b border-magazine-white/10' : ''}`}
+                className={`py-16 ${i < arr.length - 1 ? 'border-b border-magazine-black/10' : ''}`}
               >
                 <p
-                  className="font-sans font-bold text-magazine-white/15 mb-4 tabular-nums"
+                  className="font-sans font-bold text-magazine-black/15 mb-4 tabular-nums"
                   style={{ fontSize: 'clamp(48px,6vw,80px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}
                 >
                   {f.num}
                 </p>
-                <h3 className="text-h2-mag font-sans font-semibold text-magazine-white mb-6 max-w-[600px]">{f.title}</h3>
-                <p className="text-body-mag text-magazine-white/60 leading-[1.75] max-w-prose mb-6">{f.body}</p>
+                <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-6 max-w-[600px]">{f.title}</h3>
+                <p className="text-body-mag text-magazine-black/60 leading-[1.75] max-w-prose mb-6">{f.body}</p>
                 <p className="text-label-mag text-magazine-accent uppercase tracking-[0.1em]">{f.impact}</p>
               </div>
             ))}

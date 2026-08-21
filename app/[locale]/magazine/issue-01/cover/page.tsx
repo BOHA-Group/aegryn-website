@@ -30,20 +30,20 @@ export default async function IssueCoverPage({ params }: Props) {
   const { locale } = await params
 
   return (
-    <div className="min-h-screen bg-magazine-black flex flex-col">
+    <div className="min-h-screen bg-neutral-200 flex flex-col">
 
       {/* ── Top bar ── */}
-      <div className="sticky top-0 z-20 bg-magazine-black border-b border-white/8
+      <div className="sticky top-0 z-20 bg-white border-b border-black/10
                       flex items-center justify-between px-6 md:px-12 py-4">
         <Link
           href={`/${locale}/magazine/issue-01`}
           className="inline-flex items-center gap-2 text-label-mag uppercase tracking-[0.12em]
-                     text-white/40 hover:text-white transition-colors"
+                     text-black/40 hover:text-black transition-colors"
         >
           <ArrowLeft size={13} /> Back to Issue
         </Link>
 
-        <p className="hidden md:block font-mono text-[10px] tracking-[0.20em] uppercase text-white/25 select-none">
+        <p className="hidden md:block font-mono text-[10px] tracking-[0.20em] uppercase text-black/30 select-none">
           Aegryn Magazine · Issue 01 · Cover
         </p>
 
@@ -54,7 +54,7 @@ export default async function IssueCoverPage({ params }: Props) {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-label-mag uppercase tracking-[0.1em]
-                       text-white/40 hover:text-white transition-colors"
+                       text-black/40 hover:text-black transition-colors"
           >
             <ExternalLink size={13} />
             <span className="hidden sm:inline">Open</span>
@@ -74,9 +74,9 @@ export default async function IssueCoverPage({ params }: Props) {
       </div>
 
       {/* ── Notice ── */}
-      <div className="border-b border-white/6 bg-white/[0.02] px-6 md:px-12 py-3
+      <div className="border-b border-black/10 bg-white px-6 md:px-12 py-3
                       flex items-center justify-between gap-4">
-        <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-white/25">
+        <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-black/30">
           Proposal — cover image placeholder to be replaced
         </p>
         <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-magazine-accent/60">
@@ -90,7 +90,7 @@ export default async function IssueCoverPage({ params }: Props) {
           <iframe
             src={PDF_URL}
             title="Aegryn Magazine Issue 01 — Cover Preview"
-            className="w-full border-0 bg-magazine-black"
+            className="w-full border-0 bg-neutral-200"
             style={{ height: 'calc(100vh - 160px)', minHeight: 600 }}
           />
         </div>
@@ -104,10 +104,10 @@ export default async function IssueCoverPage({ params }: Props) {
             ['Format',     'A4 · Digital + Print'],
           ].map(([label, val]) => (
             <div key={label} className="text-center">
-              <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-white/20 mb-1">
+              <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-black/30 mb-1">
                 {label}
               </p>
-              <p className="font-mono text-[10px] tracking-[0.12em] text-white/50">{val}</p>
+              <p className="font-mono text-[10px] tracking-[0.12em] text-black/50">{val}</p>
             </div>
           ))}
         </div>

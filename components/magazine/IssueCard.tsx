@@ -19,7 +19,7 @@ export function IssueCard({ issue }: Props) {
       className="group grid md:grid-cols-[2fr_3fr] gap-0 border border-magazine-black/10 hover:border-magazine-black/25 transition-colors"
     >
       {/* Cover panel */}
-      <div className="bg-magazine-black flex flex-col justify-between p-10 md:p-14 min-h-[380px]">
+      <div className="bg-magazine-white flex flex-col justify-between p-10 md:p-14 min-h-[380px] border-r border-magazine-black/10">
         <div>
           <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-magazine-accent mb-3">
             N°{String(issue.number).padStart(2, '0')} · {formatted}
@@ -28,12 +28,12 @@ export function IssueCard({ issue }: Props) {
         </div>
         <div>
           <p
-            className="font-sans font-bold text-white leading-[0.88] mb-3"
+            className="font-sans font-bold text-magazine-black leading-[0.88] mb-3"
             style={{ fontSize: 'clamp(36px,4.5vw,64px)', letterSpacing: '-0.03em' }}
           >
             {issue.coverStat}
           </p>
-          <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-white/35">
+          <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-magazine-black/40">
             {issue.coverStatLabel}
           </p>
         </div>
@@ -57,7 +57,7 @@ export function IssueCard({ issue }: Props) {
         </div>
 
         <div className="pt-8 border-t border-magazine-black/8 mt-6">
-          <span className="inline-flex items-center gap-2 bg-magazine-black text-white font-mono text-[10px] uppercase tracking-[0.18em] px-6 py-3 group-hover:bg-magazine-accent group-hover:text-magazine-black transition-colors">
+          <span className="inline-flex items-center gap-2 bg-magazine-black text-white font-mono text-[10px] uppercase tracking-[0.18em] px-6 py-3 group-hover:bg-magazine-accent group-hover:text-magazine-black transition-colors font-semibold">
             Read issue <ArrowUpRight size={11} />
           </span>
         </div>

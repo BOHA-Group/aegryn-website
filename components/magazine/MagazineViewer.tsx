@@ -53,18 +53,18 @@ export function MagazineViewer({ totalPages, pdfUrl }: MagazineViewerProps) {
   })
 
   return (
-    <div className="flex flex-col items-center gap-8 bg-magazine-black min-h-screen py-16 px-4">
+    <div className="flex flex-col items-center gap-8 bg-magazine-ivory min-h-screen py-16 px-4">
 
       {/* ── Header ── */}
       <div className="flex items-center justify-between w-full max-w-5xl">
-        <p className="text-label-mag text-magazine-white/30 uppercase tracking-[0.2em]">
+        <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.2em]">
           Aegryn Magazine · First Edition · January 2027
         </p>
         <a
           href={pdfUrl}
           download="aegryn-report-2026.pdf"
           className="inline-flex items-center gap-2 text-label-mag uppercase tracking-[0.15em]
-                     text-magazine-white/50 border border-magazine-white/15 px-4 py-2
+                     text-magazine-black/50 border border-magazine-black/20 px-4 py-2
                      hover:border-magazine-accent hover:text-magazine-accent transition-colors"
         >
           <Download size={12} /> PDF
@@ -110,13 +110,13 @@ export function MagazineViewer({ totalPages, pdfUrl }: MagazineViewerProps) {
           onClick={() => flip?.flipPrev()}
           disabled={current === 0}
           aria-label="Page précédente"
-          className="text-magazine-white/50 hover:text-magazine-white
+          className="text-magazine-black/50 hover:text-magazine-black
                      disabled:opacity-20 disabled:cursor-not-allowed transition-colors"
         >
           <ArrowLeft size={18} />
         </button>
 
-        <span className="text-label-mag text-magazine-white/30 uppercase tracking-[0.18em] tabular-nums w-24 text-center">
+        <span className="text-label-mag text-magazine-black/40 uppercase tracking-[0.18em] tabular-nums w-24 text-center">
           {current + 1} / {totalPages}
         </span>
 
@@ -124,7 +124,7 @@ export function MagazineViewer({ totalPages, pdfUrl }: MagazineViewerProps) {
           onClick={() => flip?.flipNext()}
           disabled={current >= totalPages - 1}
           aria-label="Page suivante"
-          className="text-magazine-white/50 hover:text-magazine-white
+          className="text-magazine-black/50 hover:text-magazine-black
                      disabled:opacity-20 disabled:cursor-not-allowed transition-colors"
         >
           <ArrowRight size={18} />
@@ -140,7 +140,7 @@ export function MagazineViewer({ totalPages, pdfUrl }: MagazineViewerProps) {
             className={`text-label-mag uppercase tracking-[0.14em] transition-colors ${
               current >= s.page && current < (s.page + 2)
                 ? 'text-magazine-accent'
-                : 'text-magazine-white/25 hover:text-magazine-white/60'
+                : 'text-magazine-black/30 hover:text-magazine-black/70'
             }`}
           >
             {s.label}

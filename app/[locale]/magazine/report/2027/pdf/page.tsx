@@ -32,14 +32,14 @@ export default async function Report2027PdfPage({ params }: Props) {
   const pagesReady = existsSync(FIRST_PAGE_CHECK)
 
   return (
-    <div className="min-h-screen bg-magazine-black">
+    <div className="min-h-screen bg-magazine-ivory">
 
       {/* Back bar */}
-      <div className="bg-magazine-black border-b border-magazine-white/8 px-6 md:px-[120px] py-4">
+      <div className="bg-magazine-ivory border-b border-magazine-black/10 px-6 md:px-[120px] py-4">
         <Link
           href={`/${locale}/magazine/report/2027`}
           className="inline-flex items-center gap-2 text-label-mag uppercase tracking-[0.12em]
-                     text-magazine-white/40 hover:text-magazine-white transition-colors"
+                     text-magazine-black/40 hover:text-magazine-black transition-colors"
         >
           <ArrowLeft size={13} /> {t('readOnline')}
         </Link>

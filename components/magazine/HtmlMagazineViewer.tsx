@@ -24,18 +24,18 @@ export function HtmlMagazineViewer({ htmlSrc, title = 'Aegryn Magazine', label =
   }
 
   return (
-    <div className="flex flex-col bg-[#111] w-full">
+    <div className="flex flex-col bg-magazine-ivory w-full">
 
       {/* ── Top bar ── */}
-      <div className="flex items-center justify-between px-6 md:px-10 py-3 border-b border-white/[0.06]">
-        <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/30 select-none">
+      <div className="flex items-center justify-between px-6 md:px-10 py-3 border-b border-magazine-black/10">
+        <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-magazine-black/40 select-none">
           {label}
         </p>
         <div className="flex items-center gap-4">
           <button
             onClick={handleFullscreen}
             className="inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-[0.16em]
-                       text-white/30 hover:text-white/70 transition-colors"
+                       text-magazine-black/40 hover:text-magazine-black transition-colors"
             aria-label="Plein écran"
           >
             <Maximize2 size={11} /> Fullscreen
