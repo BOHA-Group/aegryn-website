@@ -278,17 +278,21 @@ export function FlipbookViewer({
             style={{ transform:`scale(${zoom})`, transformOrigin:'center center' }}>
             <div className="fb-book" style={{ width: PAGE_W * 2, height: PAGE_H }}>
 
-              {/* Page gauche */}
+              {/* Page gauche — clic pour revenir en arrière */}
               <div className="fb-page fb-page-l"
-                style={{ width: PAGE_W, height: PAGE_H }}
+                style={{ width: PAGE_W, height: PAGE_H, cursor: spread > 0 && !flipping ? 'w-resize' : 'default' }}
+                onClick={() => { if (spread > 0 && !flipping) prev() }}
+                onDoubleClick={() => setZoom(z => z === 1 ? 1.5 : 1)}
                 dangerouslySetInnerHTML={{ __html: lp }} />
 
               {/* Reliure */}
               <div className="fb-spine" style={{ left: PAGE_W - 3 }} />
 
-              {/* Page droite */}
+              {/* Page droite — clic pour avancer */}
               <div className="fb-page"
-                style={{ width: PAGE_W, height: PAGE_H }}
+                style={{ width: PAGE_W, height: PAGE_H, cursor: spread < TOTAL_SPREADS - 1 && !flipping ? 'e-resize' : 'default' }}
+                onClick={() => { if (spread < TOTAL_SPREADS - 1 && !flipping) next() }}
+                onDoubleClick={() => setZoom(z => z === 1 ? 1.5 : 1)}
                 dangerouslySetInnerHTML={{ __html: rp }} />
 
               {/* ── Page qui tourne ── */}
