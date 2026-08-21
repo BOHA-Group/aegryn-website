@@ -42,7 +42,7 @@ export function CoverSection({ issue, ctaScroll }: Props) {
       {/* Dark overlay for readability */}
       <div
         className="absolute inset-0"
-        style={{ background: 'linear-gradient(160deg, rgba(5,10,15,0.82) 0%, rgba(5,10,15,0.65) 50%, rgba(5,10,15,0.88) 100%)' }}
+        style={{ background: 'linear-gradient(160deg, rgba(5,10,15,0.80) 0%, rgba(5,10,15,0.38) 50%, rgba(5,10,15,0.82) 100%)' }}
       />
 
       {/* ── TOP BAR : date gauche / Special Edition droite ── */}
