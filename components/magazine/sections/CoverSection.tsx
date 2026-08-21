@@ -28,15 +28,21 @@ export function CoverSection({ issue, ctaScroll }: Props) {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen flex flex-col justify-between px-8 md:px-14 py-10 overflow-hidden"
-      style={{ background: '#0A0A0A' }}
+      className="relative min-h-screen flex flex-col justify-between px-8 md:px-14 py-10 overflow-hidden lg:pl-[calc(240px+3.5rem)]"
     >
-      {/* Background texture overlay */}
+      {/* Background image — Geneva Jet d'eau */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse 80% 60% at 60% 40%, rgba(46,175,125,0.07) 0%, transparent 70%)',
+          backgroundImage: 'url(/magazine/issue-01/cover-bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top',
         }}
+      />
+      {/* Dark overlay for readability */}
+      <div
+        className="absolute inset-0"
+        style={{ background: 'linear-gradient(160deg, rgba(5,10,15,0.82) 0%, rgba(5,10,15,0.65) 50%, rgba(5,10,15,0.88) 100%)' }}
       />
 
       {/* ── Top bar ── */}
