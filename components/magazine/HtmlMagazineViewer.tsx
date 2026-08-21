@@ -4,23 +4,31 @@ import { useRef } from 'react'
 import { Download, Maximize2 } from 'lucide-react'
 
 interface Props {
-  htmlSrc: string   // chemin public vers le fichier HTML (ex: /magazine/issue-01/aegryn-magazine-issue-01_1.html)
+  htmlSrc: string
   title?:  string
   label?:  string
 }
 
-/**
- * Embeds the self-contained HTML magazine viewer in an iframe.
- * The HTML file contains all 60 pages inline + its own JS navigation —
- * no dependencies, no build step, renders identically to the standalone file.
- */
 export function HtmlMagazineViewer({ htmlSrc, title = 'Aegryn Magazine', label = 'Issue 01 — Built to Last — January 2027' }: Props) {
   const iframeRef = useRef<HTMLIFrameElement>(null)
 
   function handleFullscreen() {
-    const el = iframeRef.current
-    if (!el) return
-    if (el.requestFullscreen) el.requestFullscreen()
+    const iframe = iframeRef.current
+    if (!iframe) return
+    const doc = iframe.contentDocument
+    if (doc && doc.documentElement.requestFullscreen) {
+      doc.documentElement.requestFullscreen().catch(() => {
+        if (iframe.requestFullscreen) iframe.requestFullscreen()
+      })
+    } else if (iframe.requestFullscreen) {
+      iframe.requestFullscreen()
+    }
+  }
+
+  function handleDownloadPdf() {
+    const iframe = iframeRef.current
+    if (!iframe || !iframe.contentWindow) return
+    iframe.contentWindow.print()
   }
 
   return (
@@ -40,26 +48,26 @@ export function HtmlMagazineViewer({ htmlSrc, title = 'Aegryn Magazine', label =
           >
             <Maximize2 size={11} /> Fullscreen
           </button>
-          <a
-            href={htmlSrc}
-            download={`${title.toLowerCase().replace(/\s+/g, '-')}.html`}
+          <button
+            onClick={handleDownloadPdf}
             className="inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-[0.16em]
                        text-magazine-accent border border-magazine-accent/30 px-3 py-1.5
                        hover:bg-magazine-accent hover:text-black transition-colors"
+            title="Imprimer / Sauvegarder en PDF via le navigateur"
           >
-            <Download size={11} /> Download
-          </a>
+            <Download size={11} /> Download PDF
+          </button>
         </div>
       </div>
 
-      {/* ── Iframe viewer ── */}
+      {/* ── Iframe viewer ── hauteur suffisante pour voir les 60 pages + thumb strip */}
       <iframe
         ref={iframeRef}
         src={htmlSrc}
         title={title}
         className="w-full border-0"
-        style={{ height: 'calc(100vh - 120px)', minHeight: '680px' }}
-        sandbox="allow-scripts allow-same-origin"
+        style={{ height: 'calc(100vh - 60px)', minHeight: '820px' }}
+        sandbox="allow-scripts allow-same-origin allow-modals"
         loading="eager"
       />
 
