@@ -14,7 +14,7 @@ import { CifsBars }          from '@/components/magazine/CifsBars'
 import { DealVolumeChart }   from '@/components/magazine/charts/DealVolumeChart'
 import { MultiplesChart }    from '@/components/magazine/charts/MultiplesChart'
 import { GradeDistributionChart } from '@/components/magazine/charts/GradeDistributionChart'
-import { HtmlMagazineViewer } from '@/components/magazine/HtmlMagazineViewer'
+import { FlipbookViewer } from '@/components/magazine/FlipbookViewer'
 
 /* ── Issue registry ─────────────────────────────────────── */
 function getIssue(slug: string): MagazineIssue | null {
@@ -112,8 +112,8 @@ export default async function IssuePage({ params }: Props) {
 
         {/* ── Flipbook (HTML inline viewer) ── */}
         {issue.slug === 'issue-01' && (
-          <section id="s-flipbook" className="bg-magazine-ivory">
-            <HtmlMagazineViewer
+          <section id="s-flipbook" className="bg-[#F4F3F0] py-12">
+            <FlipbookViewer
               htmlSrc="/magazine/issue-01/aegryn-magazine-issue-01_1.html"
               title="Aegryn Magazine Issue 01 — Built to Last"
               label="Issue 01 — Built to Last — January 2027"
