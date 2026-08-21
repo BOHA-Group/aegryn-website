@@ -1,10 +1,13 @@
 import { getTranslations } from 'next-intl/server'
 import { Construction }    from 'lucide-react'
 import type { ReactNode }  from 'react'
+import { getAdminUser }    from '@/lib/adminAuth'
 
 /* ─── Gate : section Magazine bloquée en production ─────────────────────── */
 /* En preview / développement : accès libre.                                  */
-/* En production (VERCEL_ENV === 'production') : badge "Prochainement".       */
+/* En production (VERCEL_ENV === 'production') : badge "Prochainement",       */
+/* SAUF pour un profil admin déjà connecté (session Supabase role admin,      */
+/* via /admin/login) qui garde un accès complet pour review/QA.               */
 
 export default async function IntelligenceLayout({
   children,
@@ -16,6 +19,9 @@ export default async function IntelligenceLayout({
   const isProduction = process.env.VERCEL_ENV === 'production'
 
   if (isProduction) {
+    const adminUser = await getAdminUser()
+    if (adminUser) return <>{children}</>
+
     const { locale } = await params
     const t    = await getTranslations({ locale, namespace: 'comingSoon' })
     const tNav = await getTranslations({ locale, namespace: 'nav' })
