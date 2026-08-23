@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter, useSearchParams, usePathname } from 'next/navigation'
-import { useCallback, useState, useTransition } from 'react'
+import { useCallback, useEffect, useState, useTransition } from 'react'
 import { Trash2, CheckSquare, Square, Loader2 } from 'lucide-react'
 
 const SOURCES = [
@@ -359,6 +359,15 @@ export default function AdminLeadsClient({
   const [selected, setSelected] = useState<Set<string>>(new Set())
   const [deleting, setDeleting] = useState(false)
   const [deleteError, setDeleteError] = useState<string | null>(null)
+
+  /* initialRows est figé au premier montage par useState — sans ce sync,
+     un changement de filtre (nav() → router.push() → nouveau fetch serveur)
+     repasse une nouvelle prop mais rows/stats restent sur l'ancien état
+     tant que la page n'est pas rechargée manuellement. */
+  useEffect(() => {
+    setRows(initialRows)
+    setSelected(new Set())
+  }, [initialRows])
 
   const allIds = rows.map(r => String(r.id))
   const allSelected = allIds.length > 0 && allIds.every(id => selected.has(id))
