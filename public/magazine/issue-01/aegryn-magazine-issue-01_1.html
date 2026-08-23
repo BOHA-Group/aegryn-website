@@ -108,8 +108,8 @@ html,body{height:100%;margin:0;padding:0;overflow:hidden}
 body{background:#1e1e1e;display:flex;flex-direction:column;align-items:stretch}
 .mag-title{display:none}
 #fb-root{display:flex;flex-direction:column;height:100vh;width:100vw;background:#1e1e1e}
-#fb-viewer-area{flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
-.fb-arrow{background:none;border:none;color:rgba(255,255,255,.35);font-size:44px;cursor:pointer;padding:0 18px;line-height:1;user-select:none;transition:color .15s;z-index:10;flex-shrink:0}
+#fb-viewer-area{flex:1;display:flex;align-items:stretch;justify-content:center;overflow:hidden;position:relative;min-height:0}
+.fb-arrow{background:none;border:none;color:rgba(255,255,255,.35);font-size:44px;cursor:pointer;padding:0 18px;line-height:1;user-select:none;transition:color .15s;z-index:10;flex-shrink:0;align-self:center}
 .fb-arrow:hover{color:#fff}
 .fb-arrow:disabled{opacity:.15;cursor:default}
 #fb-book-wrap{position:relative}
@@ -1078,101 +1078,96 @@ body{background:#1e1e1e;display:flex;flex-direction:column;align-items:stretch}
 </div></div></div>
 <script>
 (function(){
-  const TOT_PAGES = 60;
+  const TOT_PAGES   = 60;
   const TOT_SPREADS = 30;
+  /* Dimensions de référence A4 portrait — StPageFlip les utilise comme base
+     pour le mode stretch (il adapte lui-même la taille réelle au conteneur) */
   const PAGE_W = 420, PAGE_H = 595;
 
-  /* ── 1. Extraire les pages depuis #pg-source ── */
+  /* ── 1. Extraire les pages depuis #pg-source et alimenter #fb-book ── */
   const src    = document.getElementById('pg-source');
   const bookEl = document.getElementById('fb-book');
-  const wrapEl = document.getElementById('fb-book-wrap'); /* scaler cible */
-  const srcPages = []; /* innerHTML source pour thumbs */
+  const srcPages = [];
 
-  for(let i=1;i<=TOT_PAGES;i++){
-    const el = src.querySelector('#p'+i);
+  for(var i = 1; i <= TOT_PAGES; i++){
+    var el = src.querySelector('#p' + i);
     srcPages.push(el ? el.innerHTML : '');
-    const wrapper = document.createElement('div');
+    var wrapper = document.createElement('div');
     wrapper.className = 'spf-page';
-    /* PAS de position:absolute — StPageFlip le gère lui-même */
-    wrapper.style.cssText = 'width:'+PAGE_W+'px;height:'+PAGE_H+'px;overflow:hidden;';
-    wrapper.innerHTML = el ? el.innerHTML : '<div style="width:'+PAGE_W+'px;height:'+PAGE_H+'px;background:#F4F3F0"></div>';
+    /* Laisser StPageFlip gérer entièrement width/height/position */
+    wrapper.innerHTML = el
+      ? el.innerHTML
+      : '<div style="width:100%;height:100%;background:#F4F3F0"></div>';
     bookEl.appendChild(wrapper);
   }
 
-  /* ── 2. Wrapper dimensions fixes + scale (pas bookEl) ── */
-  wrapEl.style.width  = (PAGE_W * 2) + 'px';
-  wrapEl.style.height = PAGE_H + 'px';
-  wrapEl.style.position = 'relative';
-  wrapEl.style.transformOrigin = 'center center';
-  bookEl.style.width  = (PAGE_W * 2) + 'px';
-  bookEl.style.height = PAGE_H + 'px';
+  /* ── 2. Le viewer-area doit être flex et occuper tout l'espace dispo ──
+     #fb-book-wrap prend toute la largeur moins les flèches (≈90px chacune) */
+  var wrapEl = document.getElementById('fb-book-wrap');
+  wrapEl.style.cssText = 'flex:1;min-width:0;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;';
+  bookEl.style.cssText = 'width:100%;height:100%;';
 
-  let zoomLevel = 1;
-  function computeFit(){
-    const area   = document.getElementById('fb-viewer-area');
-    const availW = area.clientWidth  - 120;
-    const availH = area.clientHeight - 16;
-    return Math.min(availW / (PAGE_W * 2), availH / PAGE_H, 1);
-  }
-  function applyZoom(){
-    const s = computeFit() * zoomLevel;
-    /* CSS zoom ajuste le layout ET les coords d'événements (pas transform:scale)
-       → StPageFlip hit-detection reste correct */
-    wrapEl.style.zoom = String(s);
-    document.getElementById('fb-zoom-lbl').textContent = Math.round(zoomLevel*100)+'%';
-  }
-
-  /* ── 3. Init StPageFlip sur bookEl (PAS wrapEl) ── */
-  const pageFlip = new St.PageFlip(bookEl, {
-    width:               PAGE_W,
-    height:              PAGE_H,
-    size:                'fixed',
+  /* ── 3. Init StPageFlip en mode STRETCH ──────────────────────────────
+     size:'stretch' → StPageFlip calcule lui-même la taille réelle à partir
+     du conteneur et gère les coords d'événements en interne.
+     Pas de zoom CSS externe = hit-detection correct = pages qui se tournent. */
+  var pageFlip = new St.PageFlip(bookEl, {
+    width:               PAGE_W,   /* largeur de référence (ratio) */
+    height:              PAGE_H,   /* hauteur de référence (ratio) */
+    size:                'stretch',
+    minWidth:            200,
+    maxWidth:            PAGE_W,
+    minHeight:           280,
+    maxHeight:           PAGE_H,
     drawShadow:          true,
-    flippingTime:        800,
+    flippingTime:        700,
     usePortrait:         false,
-    showCover:           false,
+    showCover:           true,
     mobileScrollSupport: false,
-    maxShadowOpacity:    0.5,
+    maxShadowOpacity:    0.6,
     showPageCorners:     true,
     disableFlipByClick:  false,
-    swipeDistance:       30,
+    swipeDistance:       20,
+    clickEventForward:   true,
     startZIndex:         0,
   });
   pageFlip.loadFromHTML(document.querySelectorAll('.spf-page'));
 
   /* ── 4. Thumbnail strip ── */
-  const thumbsEl = document.getElementById('fb-thumbs');
-  const thumbEls = [];
-  for(let i=0;i<TOT_SPREADS;i++){
-    const idx = i; /* closure explicite */
-    const th = document.createElement('div');
-    th.className = 'fb-thumb'+(i===0?' active':'');
-    const inner = document.createElement('div');
-    inner.className = 'fb-thumb-inner';
-    inner.innerHTML = srcPages[i*2] || '';
-    const num = document.createElement('div');
-    num.className = 'fb-thumb-num';
-    num.textContent = (i*2+1)+'-'+(i*2+2);
-    th.appendChild(inner);
-    th.appendChild(num);
-    th.addEventListener('click', function(){ pageFlip.flip(idx*2); });
-    thumbsEl.appendChild(th);
-    thumbEls.push(th);
+  var thumbsEl = document.getElementById('fb-thumbs');
+  var thumbEls = [];
+  for(var j = 0; j < TOT_SPREADS; j++){
+    (function(idx){
+      var th    = document.createElement('div');
+      th.className = 'fb-thumb' + (idx === 0 ? ' active' : '');
+      var inner = document.createElement('div');
+      inner.className = 'fb-thumb-inner';
+      inner.innerHTML = srcPages[idx * 2] || '';
+      var num   = document.createElement('div');
+      num.className   = 'fb-thumb-num';
+      num.textContent = (idx*2+1) + '–' + (idx*2+2);
+      th.appendChild(inner);
+      th.appendChild(num);
+      th.addEventListener('click', function(){ pageFlip.flip(idx * 2); });
+      thumbsEl.appendChild(th);
+      thumbEls.push(th);
+    }(j));
   }
 
   /* ── 5. UI update ── */
   function updateUI(pageIdx){
-    const sp = Math.floor(pageIdx / 2);
-    const p1 = pageIdx + 1, p2 = pageIdx + 2;
-    document.getElementById('fb-pg-num').textContent = p1+(p2<=TOT_PAGES?'–'+p2:'')+' / '+TOT_PAGES;
-    document.getElementById('fb-progress-fill').style.width = ((sp+1)/TOT_SPREADS*100).toFixed(0)+'%';
-    document.getElementById('fb-prev').disabled = pageIdx === 0;
-    document.getElementById('btn-ptb').disabled = pageIdx === 0;
-    document.getElementById('fb-next').disabled = pageIdx >= TOT_PAGES - 2;
-    document.getElementById('btn-ntb').disabled = pageIdx >= TOT_PAGES - 2;
-    thumbEls.forEach((t,i)=>t.classList.toggle('active', i===sp));
-    const activeThumb = thumbEls[sp];
-    if(activeThumb) activeThumb.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+    var sp = Math.floor(pageIdx / 2);
+    var p1 = pageIdx + 1, p2 = pageIdx + 2;
+    document.getElementById('fb-pg-num').textContent =
+      p1 + (p2 <= TOT_PAGES ? '–' + p2 : '') + ' / ' + TOT_PAGES;
+    document.getElementById('fb-progress-fill').style.width =
+      ((sp + 1) / TOT_SPREADS * 100).toFixed(0) + '%';
+    document.getElementById('fb-prev').disabled  = pageIdx === 0;
+    document.getElementById('btn-ptb').disabled  = pageIdx === 0;
+    document.getElementById('fb-next').disabled  = pageIdx >= TOT_PAGES - 2;
+    document.getElementById('btn-ntb').disabled  = pageIdx >= TOT_PAGES - 2;
+    thumbEls.forEach(function(t, i){ t.classList.toggle('active', i === sp); });
+    if(thumbEls[sp]) thumbEls[sp].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
   }
 
   pageFlip.on('flip', function(e){ updateUI(e.data); });
@@ -1185,22 +1180,37 @@ body{background:#1e1e1e;display:flex;flex-direction:column;align-items:stretch}
   document.getElementById('btn-ntb').addEventListener('click', function(){ pageFlip.flipNext(); });
 
   document.addEventListener('keydown', function(e){
-    if(e.key==='ArrowRight') pageFlip.flipNext();
-    if(e.key==='ArrowLeft')  pageFlip.flipPrev();
-    if(e.key==='Escape' && document.fullscreenElement) document.exitFullscreen();
+    if(e.key === 'ArrowRight' || e.key === 'ArrowDown')  pageFlip.flipNext();
+    if(e.key === 'ArrowLeft'  || e.key === 'ArrowUp')    pageFlip.flipPrev();
+    if(e.key === 'Escape' && document.fullscreenElement) document.exitFullscreen();
   });
 
   /* ── 7. Progress bar clic ── */
   document.getElementById('fb-progress-wrap').addEventListener('click', function(e){
-    const rect = e.currentTarget.getBoundingClientRect();
-    const pct = (e.clientX - rect.left) / rect.width;
-    const target = Math.round(pct * (TOT_SPREADS-1)) * 2;
+    var rect   = e.currentTarget.getBoundingClientRect();
+    var pct    = (e.clientX - rect.left) / rect.width;
+    var target = Math.round(pct * (TOT_SPREADS - 1)) * 2;
     pageFlip.flip(target);
   });
 
-  /* ── 8. Zoom ── */
-  document.getElementById('btn-zi').addEventListener('click', function(){ zoomLevel=Math.min(zoomLevel+0.25,2); applyZoom(); });
-  document.getElementById('btn-zo').addEventListener('click', function(){ zoomLevel=Math.max(zoomLevel-0.25,0.5); applyZoom(); });
+  /* ── 8. Zoom — géré en modifiant maxWidth/maxHeight puis update() ──
+     En mode stretch, le zoom réel = rapport maxWidth / PAGE_W */
+  var zoomLevel = 1;
+  function applyZoom(){
+    var newMax = Math.round(PAGE_W * zoomLevel);
+    /* Recréer le pageFlip n'est pas possible ; on manipule le conteneur
+       via CSS transform sur wrapEl — mais UNIQUEMENT pour le zoom bouton,
+       pas pour le stretch initial (qui n'a pas de zoom). */
+    bookEl.style.transform       = 'scale(' + zoomLevel + ')';
+    bookEl.style.transformOrigin = 'center center';
+    document.getElementById('fb-zoom-lbl').textContent = Math.round(zoomLevel * 100) + '%';
+  }
+  document.getElementById('btn-zi').addEventListener('click', function(){
+    zoomLevel = Math.min(zoomLevel + 0.2, 1.8); applyZoom();
+  });
+  document.getElementById('btn-zo').addEventListener('click', function(){
+    zoomLevel = Math.max(zoomLevel - 0.2, 0.6); applyZoom();
+  });
 
   /* ── 9. Thumbnails toggle ── */
   var thumbsVisible = true;
@@ -1208,20 +1218,24 @@ body{background:#1e1e1e;display:flex;flex-direction:column;align-items:stretch}
     thumbsVisible = !thumbsVisible;
     document.getElementById('fb-thumbs').style.display = thumbsVisible ? 'flex' : 'none';
     this.classList.toggle('on', thumbsVisible);
-    setTimeout(applyZoom, 50);
+    setTimeout(function(){ pageFlip.update(); }, 60);
   });
 
   /* ── 10. Fullscreen ── */
   document.getElementById('btn-fs').addEventListener('click', function(){
-    const root = document.getElementById('fb-root');
+    var root = document.getElementById('fb-root');
     if(!document.fullscreenElement){ root.requestFullscreen(); }
     else { document.exitFullscreen(); }
   });
-  document.addEventListener('fullscreenchange', function(){ setTimeout(applyZoom, 100); });
+  document.addEventListener('fullscreenchange', function(){
+    setTimeout(function(){ pageFlip.update(); }, 120);
+  });
 
   /* ── 11. Resize ── */
-  window.addEventListener('resize', applyZoom);
-  applyZoom();
+  window.addEventListener('resize', function(){
+    pageFlip.update();
+  });
+
 })();
 </script>
 </body></html>
