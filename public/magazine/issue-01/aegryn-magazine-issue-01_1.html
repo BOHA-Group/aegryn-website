@@ -118,8 +118,8 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
 }
 /* Wrapper du livre — centrage */
 #fb-book-wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}
-/* Scaler : c'est LUI qui reçoit transform:scale — jamais #fb-book (cible StPageFlip) */
-#fb-scaler{transform-origin:center center;flex-shrink:0;}
+/* Scaler : reçoit CSS zoom — bookEl reste à ses coords natives pour StPageFlip */
+#fb-scaler{display:block;line-height:0;flex-shrink:0;}
 /* Flèches : overlay sur les côtés, centrées verticalement */
 .fb-arrow{
   position:absolute;top:50%;transform:translateY(-50%);
@@ -1157,8 +1157,8 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
 
   /* ── 3. Calcul scale pour tenir dans le viewer ── */
   function computeScale(){
-    var aw = areaEl.clientWidth  - 24;
-    var ah = areaEl.clientHeight - 24;
+    var aw = (areaEl.clientWidth  || window.innerWidth)  - 24;
+    var ah = (areaEl.clientHeight || window.innerHeight) - 24;
     return Math.min(aw / BOOK_W, ah / BOOK_H, 1);
   }
 
@@ -1183,13 +1183,15 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
   });
   pageFlip.loadFromHTML(document.querySelectorAll('.spf-page'));
 
-  /* ── 5. Scale appliqué sur #fb-scaler (PARENT de bookEl) ─────────────
-     StPageFlip écoute les events sur bookEl — en scalant le parent,
-     les coords natives de bookEl restent inchangées → flip fonctionne. */
+  /* ── 5. Scale via CSS zoom sur #fb-scaler ────────────────────────────
+     CSS zoom (contrairement à transform:scale) :
+     - recalcule le layout → bookEl garde ses coords absolues dans le doc
+     - propage les corrections de coords aux événements enfants
+     → StPageFlip reçoit les bonnes coordonnées pour le hit-detection. */
   var zoomBoost = 1;
   function applyScale(){
     var s = computeScale() * zoomBoost;
-    scalerEl.style.transform = 'scale(' + s + ')';
+    scalerEl.style.zoom = String(s);
     document.getElementById('fb-zoom-lbl').textContent = Math.round(zoomBoost * 100) + '%';
   }
 
@@ -1282,9 +1284,13 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
     setTimeout(applyScale, 150);
   });
 
-  /* ── 13. Resize + init ── */
+  /* ── 13. Resize + init ──
+     Double RAF : garantit que le navigateur a calculé les dimensions
+     (clientWidth/clientHeight non nuls) avant applyScale. */
   window.addEventListener('resize', applyScale);
-  setTimeout(applyScale, 50);
+  requestAnimationFrame(function(){
+    requestAnimationFrame(applyScale);
+  });
 
 })();
 </script>
