@@ -116,8 +116,8 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;
 }
-/* Wrapper du livre — laissé à 100% pour stretch StPageFlip */
-#fb-book-wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+/* Wrapper du livre — centrage, overflow:hidden pour masquer hors-viewport */
+#fb-book-wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}
 /* Flèches : overlay sur les côtés, centrées verticalement */
 .fb-arrow{
   position:absolute;top:50%;transform:translateY(-50%);
@@ -1141,24 +1141,37 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
     bookEl.appendChild(wrapper);
   }
 
-  /* ── 2. Le viewer-area doit être flex et occuper tout l'espace dispo ──
-     #fb-book-wrap prend toute la largeur moins les flèches (≈90px chacune) */
-  var wrapEl = document.getElementById('fb-book-wrap');
-  wrapEl.style.cssText = 'flex:1;min-width:0;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;';
-  bookEl.style.cssText = 'width:100%;height:100%;';
+  /* ── 2. Calculer la taille réelle du spread (2 pages côte à côte) ──
+     Le spread = PAGE_W×2 × PAGE_H. On scale pour tenir dans le viewer. */
+  var wrapEl  = document.getElementById('fb-book-wrap');
+  var areaEl  = document.getElementById('fb-viewer-area');
 
-  /* ── 3. Init StPageFlip en mode STRETCH ──────────────────────────────
-     size:'stretch' → StPageFlip calcule lui-même la taille réelle à partir
-     du conteneur et gère les coords d'événements en interne.
-     Pas de zoom CSS externe = hit-detection correct = pages qui se tournent. */
+  /* Dimensions fixes du livre non-scalé */
+  var BOOK_W = PAGE_W * 2;   /* 840px — spread complet */
+  var BOOK_H = PAGE_H;       /* 595px */
+
+  /* Calcul du scale initial pour tenir dans l'espace disponible */
+  function computeScale(){
+    var aw = areaEl.clientWidth  - 20;  /* 10px marge chaque côté */
+    var ah = areaEl.clientHeight - 20;
+    return Math.min(aw / BOOK_W, ah / BOOK_H, 1);
+  }
+
+  /* bookEl : taille fixe non-scalée — StPageFlip doit avoir des px exacts */
+  bookEl.style.cssText = 'width:' + BOOK_W + 'px;height:' + BOOK_H + 'px;flex-shrink:0;';
+
+  /* wrapEl : conteneur centré, ne scale PAS encore (scale après init) */
+  wrapEl.style.cssText = 'width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:visible;';
+
+  /* ── 3. Init StPageFlip en mode FIXED avec les vraies dimensions ──────
+     size:'fixed' + dimensions exactes = StPageFlip place chaque page
+     gauche/droite correctement. Le scaling se fait sur bookEl après init
+     via transform:scale — les events StPageFlip sont capturés sur le canvas
+     interne (qui connaît le scale via getBoundingClientRect). */
   var pageFlip = new St.PageFlip(bookEl, {
-    width:               PAGE_W,   /* largeur de référence (ratio) */
-    height:              PAGE_H,   /* hauteur de référence (ratio) */
-    size:                'stretch',
-    minWidth:            200,
-    maxWidth:            PAGE_W,
-    minHeight:           280,
-    maxHeight:           PAGE_H,
+    width:               PAGE_W,   /* largeur d'UNE page */
+    height:              PAGE_H,
+    size:                'fixed',
     drawShadow:          true,
     flippingTime:        700,
     usePortrait:         false,
@@ -1234,32 +1247,33 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
     pageFlip.flip(target);
   });
 
-  /* ── 8. Zoom — géré en modifiant maxWidth/maxHeight puis update() ──
-     En mode stretch, le zoom réel = rapport maxWidth / PAGE_W */
-  var zoomLevel = 1;
-  function applyZoom(){
-    var newMax = Math.round(PAGE_W * zoomLevel);
-    /* Recréer le pageFlip n'est pas possible ; on manipule le conteneur
-       via CSS transform sur wrapEl — mais UNIQUEMENT pour le zoom bouton,
-       pas pour le stretch initial (qui n'a pas de zoom). */
-    bookEl.style.transform       = 'scale(' + zoomLevel + ')';
+  /* ── 8. Scale adaptatif + boutons zoom ─────────────────────────────────
+     bookEl est FIXE (840×595). On scale bookEl via transform:scale.
+     StPageFlip utilise getBoundingClientRect sur son canvas interne →
+     les coordonnées d'événements sont recalculées correctement même avec scale. */
+  var zoomBoost = 1; /* multiplicateur utilisateur (boutons +/-) */
+
+  function applyScale(){
+    var s = computeScale() * zoomBoost;
+    bookEl.style.transform       = 'scale(' + s + ')';
     bookEl.style.transformOrigin = 'center center';
-    document.getElementById('fb-zoom-lbl').textContent = Math.round(zoomLevel * 100) + '%';
+    document.getElementById('fb-zoom-lbl').textContent = Math.round(zoomBoost * 100) + '%';
   }
+
   document.getElementById('btn-zi').addEventListener('click', function(){
-    zoomLevel = Math.min(zoomLevel + 0.2, 1.8); applyZoom();
+    zoomBoost = Math.min(+(zoomBoost + 0.15).toFixed(2), 1.5); applyScale();
   });
   document.getElementById('btn-zo').addEventListener('click', function(){
-    zoomLevel = Math.max(zoomLevel - 0.2, 0.6); applyZoom();
+    zoomBoost = Math.max(+(zoomBoost - 0.15).toFixed(2), 0.5); applyScale();
   });
 
-  /* ── 9. Thumbnails toggle (cachés par défaut, .visible les affiche) ── */
+  /* ── 9. Thumbnails toggle ── */
   var thumbsVisible = false;
   document.getElementById('btn-thumbs').addEventListener('click', function(){
     thumbsVisible = !thumbsVisible;
     document.getElementById('fb-thumbs').classList.toggle('visible', thumbsVisible);
     this.classList.toggle('on', thumbsVisible);
-    setTimeout(function(){ pageFlip.update(); }, 60);
+    setTimeout(applyScale, 60);
   });
 
   /* ── 10. Fullscreen ── */
@@ -1269,13 +1283,14 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
     else { document.exitFullscreen(); }
   });
   document.addEventListener('fullscreenchange', function(){
-    setTimeout(function(){ pageFlip.update(); }, 120);
+    setTimeout(applyScale, 150);
   });
 
   /* ── 11. Resize ── */
-  window.addEventListener('resize', function(){
-    pageFlip.update();
-  });
+  window.addEventListener('resize', applyScale);
+
+  /* ── 12. Init scale après que StPageFlip a fini de se monter ── */
+  setTimeout(applyScale, 50);
 
 })();
 </script>
