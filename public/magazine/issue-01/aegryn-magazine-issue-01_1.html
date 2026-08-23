@@ -116,8 +116,10 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;
 }
-/* Wrapper du livre — centrage, overflow:hidden pour masquer hors-viewport */
+/* Wrapper du livre — centrage */
 #fb-book-wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}
+/* Scaler : c'est LUI qui reçoit transform:scale — jamais #fb-book (cible StPageFlip) */
+#fb-scaler{transform-origin:center center;flex-shrink:0;}
 /* Flèches : overlay sur les côtés, centrées verticalement */
 .fb-arrow{
   position:absolute;top:50%;transform:translateY(-50%);
@@ -219,7 +221,9 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
     <!-- flèches overlay sur la zone livre -->
     <button class="fb-arrow" id="fb-prev" title="Page précédente">&#8249;</button>
     <div id="fb-book-wrap">
-      <div id="fb-book"></div>
+      <div id="fb-scaler">
+        <div id="fb-book"></div>
+      </div>
     </div>
     <button class="fb-arrow" id="fb-next" title="Page suivante">&#8250;</button>
   </div>
@@ -1118,148 +1122,140 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
 </div></div></div>
 <script>
 (function(){
-  const TOT_PAGES   = 60;
-  const TOT_SPREADS = 30;
-  /* Dimensions de référence A4 portrait — StPageFlip les utilise comme base
-     pour le mode stretch (il adapte lui-même la taille réelle au conteneur) */
-  const PAGE_W = 420, PAGE_H = 595;
+  var PAGE_W   = 420, PAGE_H = 595;
+  var BOOK_W   = PAGE_W * 2;   /* 840px — spread double page */
+  var BOOK_H   = PAGE_H;
 
-  /* ── 1. Extraire les pages depuis #pg-source et alimenter #fb-book ── */
-  const src    = document.getElementById('pg-source');
-  const bookEl = document.getElementById('fb-book');
-  const srcPages = [];
+  var src      = document.getElementById('pg-source');
+  var bookEl   = document.getElementById('fb-book');
+  var scalerEl = document.getElementById('fb-scaler');
+  var areaEl   = document.getElementById('fb-viewer-area');
 
-  for(var i = 1; i <= TOT_PAGES; i++){
+  /* ── 1. Pages : page vide en index 0 → cover seule à droite ──────────
+     Layout : [vide][cover p1] | [p2][p3] | [p4][p5] … [p59][p60]
+     Total StPageFlip : 61 slots (1 vide + 60 pages) */
+  var srcPages = ['']; /* index 0 = vide */
+  var blankDiv = document.createElement('div');
+  blankDiv.className = 'spf-page';
+  blankDiv.innerHTML = '<div style="width:' + PAGE_W + 'px;height:' + PAGE_H + 'px;background:#2a2a2a"></div>';
+  bookEl.appendChild(blankDiv);
+
+  var TOT_REAL = 60;
+  for(var i = 1; i <= TOT_REAL; i++){
     var el = src.querySelector('#p' + i);
     srcPages.push(el ? el.innerHTML : '');
-    var wrapper = document.createElement('div');
-    wrapper.className = 'spf-page';
-    /* Laisser StPageFlip gérer entièrement width/height/position */
-    wrapper.innerHTML = el
+    var w = document.createElement('div');
+    w.className = 'spf-page';
+    w.innerHTML = el
       ? el.innerHTML
-      : '<div style="width:100%;height:100%;background:#F4F3F0"></div>';
-    bookEl.appendChild(wrapper);
+      : '<div style="width:' + PAGE_W + 'px;height:' + PAGE_H + 'px;background:#F4F3F0"></div>';
+    bookEl.appendChild(w);
   }
 
-  /* ── 2. Calculer la taille réelle du spread (2 pages côte à côte) ──
-     Le spread = PAGE_W×2 × PAGE_H. On scale pour tenir dans le viewer. */
-  var wrapEl  = document.getElementById('fb-book-wrap');
-  var areaEl  = document.getElementById('fb-viewer-area');
+  /* ── 2. bookEl taille fixe — StPageFlip a besoin de px absolus ── */
+  bookEl.style.cssText = 'width:' + BOOK_W + 'px;height:' + BOOK_H + 'px;flex-shrink:0;';
 
-  /* Dimensions fixes du livre non-scalé */
-  var BOOK_W = PAGE_W * 2;   /* 840px — spread complet */
-  var BOOK_H = PAGE_H;       /* 595px */
-
-  /* Calcul du scale initial pour tenir dans l'espace disponible */
+  /* ── 3. Calcul scale pour tenir dans le viewer ── */
   function computeScale(){
-    var aw = areaEl.clientWidth  - 20;  /* 10px marge chaque côté */
-    var ah = areaEl.clientHeight - 20;
+    var aw = areaEl.clientWidth  - 24;
+    var ah = areaEl.clientHeight - 24;
     return Math.min(aw / BOOK_W, ah / BOOK_H, 1);
   }
 
-  /* bookEl : taille fixe non-scalée — StPageFlip doit avoir des px exacts */
-  bookEl.style.cssText = 'width:' + BOOK_W + 'px;height:' + BOOK_H + 'px;flex-shrink:0;';
-
-  /* wrapEl : conteneur centré, ne scale PAS encore (scale après init) */
-  wrapEl.style.cssText = 'width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:visible;';
-
-  /* ── 3. Init StPageFlip en mode FIXED avec les vraies dimensions ──────
-     size:'fixed' + dimensions exactes = StPageFlip place chaque page
-     gauche/droite correctement. Le scaling se fait sur bookEl après init
-     via transform:scale — les events StPageFlip sont capturés sur le canvas
-     interne (qui connaît le scale via getBoundingClientRect). */
+  /* ── 4. Init StPageFlip ───────────────────────────────────────────────
+     showCover:false car on gère la cover manuellement via page vide.
+     size:'fixed' = coordonnées internes stables (pas de recalcul stretch). */
   var pageFlip = new St.PageFlip(bookEl, {
-    width:               PAGE_W,   /* largeur d'UNE page */
+    width:               PAGE_W,
     height:              PAGE_H,
     size:                'fixed',
     drawShadow:          true,
-    flippingTime:        700,
+    flippingTime:        650,
     usePortrait:         false,
-    showCover:           true,
+    showCover:           false,
     mobileScrollSupport: false,
-    maxShadowOpacity:    0.6,
+    maxShadowOpacity:    0.65,
     showPageCorners:     true,
     disableFlipByClick:  false,
-    swipeDistance:       20,
+    swipeDistance:       15,
     clickEventForward:   true,
     startZIndex:         0,
   });
   pageFlip.loadFromHTML(document.querySelectorAll('.spf-page'));
 
-  /* ── 4. Thumbnail strip ── */
+  /* ── 5. Scale appliqué sur #fb-scaler (PARENT de bookEl) ─────────────
+     StPageFlip écoute les events sur bookEl — en scalant le parent,
+     les coords natives de bookEl restent inchangées → flip fonctionne. */
+  var zoomBoost = 1;
+  function applyScale(){
+    var s = computeScale() * zoomBoost;
+    scalerEl.style.transform = 'scale(' + s + ')';
+    document.getElementById('fb-zoom-lbl').textContent = Math.round(zoomBoost * 100) + '%';
+  }
+
+  /* ── 6. Thumbnails (spreads réels = 30, index StPageFlip 1..60) ── */
+  var TOT_SPREADS = 30;
   var thumbsEl = document.getElementById('fb-thumbs');
   var thumbEls = [];
   for(var j = 0; j < TOT_SPREADS; j++){
-    (function(idx){
+    (function(idx){ /* idx 0..29, pages réelles 1..60 */
       var th    = document.createElement('div');
       th.className = 'fb-thumb' + (idx === 0 ? ' active' : '');
       var inner = document.createElement('div');
       inner.className = 'fb-thumb-inner';
-      inner.innerHTML = srcPages[idx * 2] || '';
+      inner.innerHTML = srcPages[idx * 2 + 1] || ''; /* +1 car srcPages[0]=vide */
       var num   = document.createElement('div');
       num.className   = 'fb-thumb-num';
-      num.textContent = (idx*2+1) + '–' + (idx*2+2);
+      num.textContent = (idx * 2 + 1) + (idx * 2 + 2 <= TOT_REAL ? '–' + (idx * 2 + 2) : '');
       th.appendChild(inner);
       th.appendChild(num);
-      th.addEventListener('click', function(){ pageFlip.flip(idx * 2); });
+      /* flip vers slot StPageFlip : idx*2+1 (sauter le slot vide 0) */
+      th.addEventListener('click', function(){ pageFlip.flip(idx * 2 + 1); });
       thumbsEl.appendChild(th);
       thumbEls.push(th);
     }(j));
   }
 
-  /* ── 5. UI update ── */
-  function updateUI(pageIdx){
-    var sp = Math.floor(pageIdx / 2);
-    var p1 = pageIdx + 1;
-    /* Format Barnes : "p. X / 60" */
-    document.getElementById('fb-pg-num').textContent = 'p. ' + p1 + ' / ' + TOT_PAGES;
+  /* ── 7. UI update ── */
+  function updateUI(slotIdx){
+    /* slotIdx 0=vide,1=p1,2=p2… → page réelle = slotIdx */
+    var realPage = slotIdx < 1 ? 1 : slotIdx;
+    var sp = Math.floor((realPage - 1) / 2); /* spread 0..29 */
+    document.getElementById('fb-pg-num').textContent = 'p. ' + realPage + ' / ' + TOT_REAL;
     document.getElementById('fb-progress-fill').style.width =
       ((sp + 1) / TOT_SPREADS * 100).toFixed(0) + '%';
-    /* Flèches latérales — CSS disabled via pointer-events:none + opacity:0 */
-    document.getElementById('fb-prev').disabled  = pageIdx === 0;
-    document.getElementById('fb-next').disabled  = pageIdx >= TOT_PAGES - 2;
-    document.getElementById('btn-ptb').disabled  = pageIdx === 0;
-    document.getElementById('btn-ntb').disabled  = pageIdx >= TOT_PAGES - 2;
+    document.getElementById('fb-prev').disabled  = slotIdx <= 1;
+    document.getElementById('fb-next').disabled  = slotIdx >= TOT_REAL;
+    document.getElementById('btn-ptb').disabled  = slotIdx <= 1;
+    document.getElementById('btn-ntb').disabled  = slotIdx >= TOT_REAL;
     thumbEls.forEach(function(t, i){ t.classList.toggle('active', i === sp); });
     if(thumbEls[sp]) thumbEls[sp].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
   }
 
   pageFlip.on('flip', function(e){ updateUI(e.data); });
-  updateUI(0);
+  updateUI(1);
 
-  /* ── 6. Navigation ── */
+  /* ── 8. Navigation ── */
   document.getElementById('fb-prev').addEventListener('click', function(){ pageFlip.flipPrev(); });
   document.getElementById('fb-next').addEventListener('click', function(){ pageFlip.flipNext(); });
   document.getElementById('btn-ptb').addEventListener('click', function(){ pageFlip.flipPrev(); });
   document.getElementById('btn-ntb').addEventListener('click', function(){ pageFlip.flipNext(); });
 
   document.addEventListener('keydown', function(e){
-    if(e.key === 'ArrowRight' || e.key === 'ArrowDown')  pageFlip.flipNext();
-    if(e.key === 'ArrowLeft'  || e.key === 'ArrowUp')    pageFlip.flipPrev();
+    if(e.key === 'ArrowRight' || e.key === 'ArrowDown') pageFlip.flipNext();
+    if(e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   pageFlip.flipPrev();
     if(e.key === 'Escape' && document.fullscreenElement) document.exitFullscreen();
   });
 
-  /* ── 7. Progress bar clic ── */
+  /* ── 9. Progress bar clic ── */
   document.getElementById('fb-progress-wrap').addEventListener('click', function(e){
     var rect   = e.currentTarget.getBoundingClientRect();
     var pct    = (e.clientX - rect.left) / rect.width;
-    var target = Math.round(pct * (TOT_SPREADS - 1)) * 2;
-    pageFlip.flip(target);
+    var target = 1 + Math.round(pct * (TOT_REAL - 1));
+    pageFlip.flip(target % 2 === 0 ? target - 1 : target);
   });
 
-  /* ── 8. Scale adaptatif + boutons zoom ─────────────────────────────────
-     bookEl est FIXE (840×595). On scale bookEl via transform:scale.
-     StPageFlip utilise getBoundingClientRect sur son canvas interne →
-     les coordonnées d'événements sont recalculées correctement même avec scale. */
-  var zoomBoost = 1; /* multiplicateur utilisateur (boutons +/-) */
-
-  function applyScale(){
-    var s = computeScale() * zoomBoost;
-    bookEl.style.transform       = 'scale(' + s + ')';
-    bookEl.style.transformOrigin = 'center center';
-    document.getElementById('fb-zoom-lbl').textContent = Math.round(zoomBoost * 100) + '%';
-  }
-
+  /* ── 10. Boutons zoom ── */
   document.getElementById('btn-zi').addEventListener('click', function(){
     zoomBoost = Math.min(+(zoomBoost + 0.15).toFixed(2), 1.5); applyScale();
   });
@@ -1267,7 +1263,7 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
     zoomBoost = Math.max(+(zoomBoost - 0.15).toFixed(2), 0.5); applyScale();
   });
 
-  /* ── 9. Thumbnails toggle ── */
+  /* ── 11. Thumbnails toggle ── */
   var thumbsVisible = false;
   document.getElementById('btn-thumbs').addEventListener('click', function(){
     thumbsVisible = !thumbsVisible;
@@ -1276,20 +1272,18 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
     setTimeout(applyScale, 60);
   });
 
-  /* ── 10. Fullscreen ── */
+  /* ── 12. Fullscreen ── */
   document.getElementById('btn-fs').addEventListener('click', function(){
     var root = document.getElementById('fb-root');
-    if(!document.fullscreenElement){ root.requestFullscreen(); }
-    else { document.exitFullscreen(); }
+    if(!document.fullscreenElement) root.requestFullscreen();
+    else document.exitFullscreen();
   });
   document.addEventListener('fullscreenchange', function(){
     setTimeout(applyScale, 150);
   });
 
-  /* ── 11. Resize ── */
+  /* ── 13. Resize + init ── */
   window.addEventListener('resize', applyScale);
-
-  /* ── 12. Init scale après que StPageFlip a fini de se monter ── */
   setTimeout(applyScale, 50);
 
 })();
