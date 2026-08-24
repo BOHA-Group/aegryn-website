@@ -112,7 +112,21 @@ export default async function IssuePage({ params }: Props) {
 
         {/* ── Flipbook (HTML inline viewer) ── */}
         {issue.slug === 'issue-01' && (
-          <section id="s-flipbook" className="bg-[#F4F3F0] py-12">
+          <section id="s-flipbook" className="bg-[#EDEAE4]">
+            {/* Switcher Flipbook / Version web */}
+            <div className="flex items-center justify-between px-6 md:px-10 py-3 border-b border-black/8 bg-[#F7F5F1]">
+              <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-black/40">
+                Issue 01 — Built to Last — January 2027
+              </span>
+              <a
+                href="/magazine/issue-01/aegryn-magazine-issue-01_web.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-[9px] tracking-[0.16em] uppercase text-black/40 hover:text-black transition-colors border border-black/15 hover:border-black/40 px-3 py-1.5"
+              >
+                Version web longue →
+              </a>
+            </div>
             <FlipbookViewer
               htmlSrc="/magazine/issue-01/aegryn-magazine-issue-01_1.html"
               title="Aegryn Magazine Issue 01 — Built to Last"

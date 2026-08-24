@@ -18,10 +18,9 @@ export function FlipbookViewer({ htmlSrc }: Props) {
       style={{
         position: 'relative',
         width: '100%',
-        /* 100vh moins la hauteur du nav site (≈80px) pour ne jamais être masqué */
-        height: 'calc(100vh - 80px)',
-        minHeight: '680px',
-        background: '#1e1e1e',
+        height: 'calc(100vh - 52px)',
+        minHeight: '700px',
+        background: '#EDEAE4',
       }}
     >
       <iframe

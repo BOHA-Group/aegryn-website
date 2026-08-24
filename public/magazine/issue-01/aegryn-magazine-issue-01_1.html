@@ -1170,16 +1170,19 @@ body{background:#EDEAE4;display:flex;flex-direction:column;align-items:stretch}
      Le scaling est géré exclusivement par CSS transform sur #fb-scaler.
      Avantage : les boutons overlay (flèches) sont HORS du canvas donc leurs
      coordonnées ne sont jamais perturbées par le transform. ── */
+  /* IMPORTANT : StPageFlip width/height = dimensions d'UNE page (420×595).
+     La librairie gère elle-même le spread double page (usePortrait:false).
+     Le canvas interne aura 840×595. Le scaler CSS ajuste l'affichage. */
   var pageFlip = new St.PageFlip(bookEl, {
-    width:               BOOK_W,
-    height:              BOOK_H,
+    width:               PAGE_W,   /* 420 = une page */
+    height:              PAGE_H,   /* 595 */
     size:                'fixed',
     drawShadow:          true,
-    flippingTime:        600,
+    flippingTime:        700,
     usePortrait:         false,
     showCover:           true,
     mobileScrollSupport: false,
-    maxShadowOpacity:    0.5,
+    maxShadowOpacity:    0.4,
     showPageCorners:     true,
     disableFlipByClick:  false,
     swipeDistance:       30,
@@ -1187,12 +1190,15 @@ body{background:#EDEAE4;display:flex;flex-direction:column;align-items:stretch}
   });
   pageFlip.loadFromHTML(document.querySelectorAll('.spf-page'));
 
-  /* ── 3. Scaling CSS externe ── */
+  /* ── 3. Scaling CSS externe ──
+     Le canvas interne créé par StPageFlip en mode paysage = BOOK_W × BOOK_H.
+     On applique un scale sur le scaler pour fitter dans la zone visible. */
   var zoomBoost = 1;
   function applyScale(){
-    var aw = areaEl.clientWidth  - 80;  /* 80 = marges flèches */
-    var ah = areaEl.clientHeight - 16;
-    var sc = Math.min(aw / BOOK_W, ah / BOOK_H, 1) * zoomBoost;
+    var aw = areaEl.clientWidth  - 100; /* marges flèches */
+    var ah = areaEl.clientHeight - 20;
+    var sc = Math.min(aw / BOOK_W, ah / BOOK_H) * zoomBoost;
+    if(sc <= 0) sc = 0.5;
     scalerEl.style.width  = BOOK_W + 'px';
     scalerEl.style.height = BOOK_H + 'px';
     scalerEl.style.transform = 'scale(' + sc + ')';
