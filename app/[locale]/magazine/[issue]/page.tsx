@@ -95,6 +95,7 @@ export default async function IssuePage({ params }: Props) {
       <CoverSection
         issue={issue}
         ctaScroll={t('scrollDown')}
+        locale={locale}
       />
 
       {/* ── Layout 2 colonnes : sidebar fixe + contenu scrollable ── */}

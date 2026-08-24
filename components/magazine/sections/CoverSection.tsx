@@ -1,7 +1,8 @@
 'use client'
 
 import { useRef } from 'react'
-import { ArrowDown } from 'lucide-react'
+import Link from 'next/link'
+import { ArrowDown, BookOpen, Globe } from 'lucide-react'
 import type { MagazineIssue, IssueStat } from '@/lib/magazine/types'
 import { useCoverReveal } from '../hooks/useCoverReveal'
 
@@ -15,7 +16,7 @@ interface Props {
  * Cover section — style Salford / magazine print cover.
  * Dark background, AEGRYN massive, accent tagline, theme text.
  */
-export function CoverSection({ issue, ctaScroll }: Props) {
+export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { locale?: string }) {
   const ref      = useRef<HTMLElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
 
@@ -51,8 +52,8 @@ export function CoverSection({ issue, ctaScroll }: Props) {
           {formatted}
         </p>
         <div className="text-right">
-          <p className="font-mono tracking-[0.18em] uppercase text-[#2EAF7D] font-bold" style={{ fontSize: '10px' }}>Special Edition</p>
-          <p className="font-mono tracking-[0.18em] uppercase text-[#2EAF7D] font-bold" style={{ fontSize: '10px' }}>{issueNum}</p>
+          <p className="font-mono tracking-[0.18em] uppercase text-[#5ADDA4] font-bold" style={{ fontSize: '10px' }}>Special Edition</p>
+          <p className="font-mono tracking-[0.18em] uppercase text-[#5ADDA4] font-bold" style={{ fontSize: '10px' }}>{issueNum}</p>
         </div>
       </div>
 
@@ -73,10 +74,10 @@ export function CoverSection({ issue, ctaScroll }: Props) {
       {/* ── EXCLUSIVE — milieu gauche ── */}
       <div className="cover-meta relative z-10 flex-1 flex flex-col justify-center">
         <div className="max-w-[220px]">
-          <p className="font-sans font-bold text-[#2EAF7D] uppercase tracking-[0.08em] mb-2" style={{ fontSize: '13px' }}>
+          <p className="font-sans font-bold text-[#5ADDA4] uppercase tracking-[0.08em] mb-2" style={{ fontSize: '13px' }}>
             Exclusive
           </p>
-          <div className="w-10 h-[2px] bg-[#2EAF7D] mb-3" />
+          <div className="w-10 h-[2px] bg-[#5ADDA4] mb-3" />
           <p className="font-sans font-bold text-white/55 uppercase leading-snug" style={{ fontSize: '10px', letterSpacing: '0.05em' }}>
             {issue.coverLine}
           </p>
@@ -86,23 +87,47 @@ export function CoverSection({ issue, ctaScroll }: Props) {
       {/* ── BAS : titre accent + theme centré + scroll ── */}
       <div className="cover-meta relative z-10">
         <p
-          className="font-sans font-bold text-[#2EAF7D] uppercase leading-tight mb-4"
+          className="font-sans font-bold text-[#5ADDA4] uppercase leading-tight mb-4"
           style={{ fontSize: 'clamp(22px,4vw,46px)', letterSpacing: '-0.01em', lineHeight: 1.05 }}
         >
           {issue.title}
         </p>
         <p
-          className="font-sans uppercase text-center text-white/45 leading-snug"
+          className="font-sans uppercase text-white/45 leading-snug mb-8"
           style={{ fontSize: '10px', letterSpacing: '0.07em' }}
         >
           {issue.theme}
         </p>
+
+        {/* ── Deux CTAs style Barnes ── */}
+        <div className="flex flex-wrap items-center gap-3 mb-6">
+          {/* Feuilleter le flipbook → scroll vers #s-flipbook */}
+          <button
+            onClick={() => document.getElementById('s-flipbook')?.scrollIntoView({ behavior: 'smooth' })}
+            className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.16em] uppercase
+                       bg-[#5ADDA4] text-[#0F1A2B] px-4 py-2.5 font-bold
+                       hover:bg-white hover:text-[#0F1A2B] transition-colors"
+          >
+            <BookOpen size={11} /> Feuilleter le flipbook
+          </button>
+
+          {/* Explorer en ligne → page dédiée */}
+          <Link
+            href={`/${locale}/magazine/issue-01/web`}
+            className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.16em] uppercase
+                       border border-white/30 text-white/70 px-4 py-2.5
+                       hover:border-white/70 hover:text-white transition-colors"
+          >
+            <Globe size={11} /> Explorer en ligne
+          </Link>
+        </div>
+
         <button
           onClick={() => {
             const firstSection = issue.sections[0]
             if (firstSection) document.getElementById(firstSection.id)?.scrollIntoView({ behavior: 'smooth' })
           }}
-          className="mt-6 flex items-center gap-2 font-mono text-[9px] tracking-[0.2em] uppercase text-white/25 hover:text-white/60 transition-colors"
+          className="flex items-center gap-2 font-mono text-[9px] tracking-[0.2em] uppercase text-white/25 hover:text-white/60 transition-colors"
           aria-label={ctaScroll}
         >
           {ctaScroll} <ArrowDown size={11} />
