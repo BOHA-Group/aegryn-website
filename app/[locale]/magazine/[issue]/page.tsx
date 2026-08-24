@@ -244,7 +244,7 @@ export default async function IssuePage({ params }: Props) {
               </p>
               <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-label-mag uppercase tracking-[0.1em]">
                 <span className="flex items-center gap-2 text-magazine-black/50">
-                  <span className="inline-block w-6 h-0.5 bg-[#2EAF7D]" /> Europe: 3.1x → 4.7x ARR
+                  <span className="inline-block w-6 h-0.5 bg-[#5ADDA4]" /> Europe: 3.1x → 4.7x ARR
                 </span>
                 <span className="flex items-center gap-2 text-magazine-black/50">
                   <span

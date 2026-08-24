@@ -39,8 +39,8 @@ export function IssueCard({ issue }: Props) {
         <div className="relative z-10 flex items-start justify-between">
           <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/40">{formatted.toUpperCase()}</p>
           <div className="text-right">
-            <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#2EAF7D] font-bold">Special Edition</p>
-            <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#2EAF7D] font-bold">Issue {String(issue.number).padStart(2, '0')}</p>
+            <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#5ADDA4] font-bold">Special Edition</p>
+            <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#5ADDA4] font-bold">Issue {String(issue.number).padStart(2, '0')}</p>
           </div>
         </div>
 
@@ -58,8 +58,8 @@ export function IssueCard({ issue }: Props) {
         {/* EXCLUSIVE — milieu gauche */}
         <div className="relative z-10 flex-1 flex flex-col justify-center">
           <div className="max-w-[180px]">
-            <p className="font-sans font-bold text-[#2EAF7D] uppercase tracking-[0.08em] mb-2" style={{ fontSize: '11px' }}>Exclusive</p>
-            <div className="w-8 h-[2px] bg-[#2EAF7D] mb-2" />
+            <p className="font-sans font-bold text-[#5ADDA4] uppercase tracking-[0.08em] mb-2" style={{ fontSize: '11px' }}>Exclusive</p>
+            <div className="w-8 h-[2px] bg-[#5ADDA4] mb-2" />
             <p className="font-sans font-bold text-white/55 uppercase leading-snug" style={{ fontSize: '9px', letterSpacing: '0.04em' }}>
               {issue.coverLine}
             </p>
@@ -69,7 +69,7 @@ export function IssueCard({ issue }: Props) {
         {/* BAS : titre accent + theme */}
         <div className="relative z-10">
           <p
-            className="font-sans font-bold text-[#2EAF7D] uppercase leading-tight mb-3"
+            className="font-sans font-bold text-[#5ADDA4] uppercase leading-tight mb-3"
             style={{ fontSize: 'clamp(16px,2.5vw,26px)', letterSpacing: '-0.01em', lineHeight: 1.05 }}
           >
             {issue.title}

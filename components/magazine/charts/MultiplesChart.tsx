@@ -5,7 +5,7 @@ import {
   Tooltip, Legend, ResponsiveContainer,
 } from 'recharts'
 
-const ACCENT  = '#2EAF7D'
+const ACCENT  = '#5ADDA4'
 const DARK    = '#0A0A0A'
 const GRID    = 'rgba(0,0,0,0.08)'
 const US_CLR  = '#4A90D9'

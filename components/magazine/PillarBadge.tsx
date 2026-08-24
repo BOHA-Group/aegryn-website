@@ -5,7 +5,7 @@ interface Props {
 }
 
 const PILLAR_CONFIG: Record<Pillar, { label: string; color: string }> = {
-  build:  { label: 'BUILD',  color: '#2EAF7D' },
+  build:  { label: 'BUILD',  color: '#5ADDA4' },
   money:  { label: 'MONEY',  color: '#C9A84C' },
   ai:     { label: 'AI',     color: '#4A90D9' },
   people: { label: 'PEOPLE', color: '#9BA8B0' },
