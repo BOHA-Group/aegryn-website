@@ -107,8 +107,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#F4F3F0;display:flex;
 html,body{height:100%;margin:0;padding:0;overflow:hidden}
 body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
 .mag-title{display:none}
-/* Root : plein écran, fond #323232 exactement comme Barnes/FlipHTML5 */
-#fb-root{position:fixed;inset:0;display:flex;flex-direction:column;background:#323232}
+/* Root : remplit l'iframe entière — position:absolute sur html/body height:100% */
+#fb-root{position:absolute;inset:0;display:flex;flex-direction:column;background:#323232}
 /* Zone livre : flex-1, le livre est centré dedans */
 #fb-viewer-area{
   flex:1;min-height:0;
