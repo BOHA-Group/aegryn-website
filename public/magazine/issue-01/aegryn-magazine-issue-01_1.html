@@ -116,10 +116,9 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;
 }
-/* Wrapper du livre — centrage */
-#fb-book-wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}
-/* Scaler : reçoit CSS zoom — bookEl reste à ses coords natives pour StPageFlip */
-#fb-scaler{display:block;line-height:0;flex-shrink:0;}
+/* Wrapper du livre + scaler : height:100% pour que StPageFlip stretch lise clientHeight */
+#fb-book-wrap{width:100%;height:100%;overflow:hidden}
+#fb-scaler{width:100%;height:100%;display:block;}
 /* Flèches : overlay sur les côtés, centrées verticalement */
 .fb-arrow{
   position:absolute;top:50%;transform:translateY(-50%);
@@ -1152,23 +1151,20 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
     bookEl.appendChild(w);
   }
 
-  /* ── 2. bookEl taille fixe — StPageFlip a besoin de px absolus ── */
-  bookEl.style.cssText = 'width:' + BOOK_W + 'px;height:' + BOOK_H + 'px;flex-shrink:0;';
+  /* ── 2. bookEl remplit toute la zone viewer — StPageFlip stretch gère le reste */
+  bookEl.style.cssText = 'width:100%;height:100%;';
 
-  /* ── 3. Calcul scale pour tenir dans le viewer ── */
-  function computeScale(){
-    var aw = (areaEl.clientWidth  || window.innerWidth)  - 24;
-    var ah = (areaEl.clientHeight || window.innerHeight) - 24;
-    return Math.min(aw / BOOK_W, ah / BOOK_H, 1);
-  }
-
-  /* ── 4. Init StPageFlip ───────────────────────────────────────────────
-     showCover:false car on gère la cover manuellement via page vide.
-     size:'fixed' = coordonnées internes stables (pas de recalcul stretch). */
+  /* ── 3. Init StPageFlip size:stretch ─────────────────────────────────
+     stretch = StPageFlip calcule lui-même la taille depuis le conteneur.
+     Aucun scaling CSS externe. Les coords d'événements sont gérées en interne. */
   var pageFlip = new St.PageFlip(bookEl, {
     width:               PAGE_W,
     height:              PAGE_H,
-    size:                'fixed',
+    size:                'stretch',
+    minWidth:            280,
+    maxWidth:            PAGE_W,
+    minHeight:           200,
+    maxHeight:           PAGE_H,
     drawShadow:          true,
     flippingTime:        650,
     usePortrait:         false,
@@ -1178,21 +1174,15 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
     showPageCorners:     true,
     disableFlipByClick:  false,
     swipeDistance:       15,
-    clickEventForward:   true,
     startZIndex:         0,
   });
   pageFlip.loadFromHTML(document.querySelectorAll('.spf-page'));
 
-  /* ── 5. Scale via CSS zoom sur #fb-scaler ────────────────────────────
-     CSS zoom (contrairement à transform:scale) :
-     - recalcule le layout → bookEl garde ses coords absolues dans le doc
-     - propage les corrections de coords aux événements enfants
-     → StPageFlip reçoit les bonnes coordonnées pour le hit-detection. */
+  /* ── 4. Zoom boutons — redimensionne maxWidth et force update ── */
   var zoomBoost = 1;
   function applyScale(){
-    var s = computeScale() * zoomBoost;
-    scalerEl.style.zoom = String(s);
     document.getElementById('fb-zoom-lbl').textContent = Math.round(zoomBoost * 100) + '%';
+    pageFlip.update();
   }
 
   /* ── 6. Thumbnails (spreads réels = 30, index StPageFlip 1..60) ── */
@@ -1281,15 +1271,13 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
     else document.exitFullscreen();
   });
   document.addEventListener('fullscreenchange', function(){
-    setTimeout(applyScale, 150);
+    setTimeout(function(){ pageFlip.update(); }, 150);
   });
 
-  /* ── 13. Resize + init ──
-     Double RAF : garantit que le navigateur a calculé les dimensions
-     (clientWidth/clientHeight non nuls) avant applyScale. */
-  window.addEventListener('resize', applyScale);
+  /* ── 13. Resize + init ── */
+  window.addEventListener('resize', function(){ pageFlip.update(); });
   requestAnimationFrame(function(){
-    requestAnimationFrame(applyScale);
+    requestAnimationFrame(function(){ pageFlip.update(); });
   });
 
 })();
