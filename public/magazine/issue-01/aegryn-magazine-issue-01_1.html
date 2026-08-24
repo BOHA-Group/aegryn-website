@@ -117,23 +117,31 @@ body{background:#EDEAE4;display:flex;flex-direction:column;align-items:stretch}
   overflow:hidden;
   background:radial-gradient(ellipse at center,#F2EFE9 0%,#E8E4DD 100%);
 }
-/* Wrapper livre */
-#fb-book-wrap{width:100%;height:100%;overflow:hidden}
-#fb-scaler{width:100%;height:100%;display:block;}
+/* Wrapper de scaling — centré, taille fixe, transformé par JS */
+#fb-scaler{
+  position:absolute;
+  transform-origin:center center;
+  /* taille définie par JS au resize */
+}
+/* Le livre prend exactement BOOK_W × BOOK_H */
+#fb-book{display:block;}
 /* Flèches — style Barnes : cercle discret navy sur fond ivoire */
 .fb-arrow{
   position:absolute;top:50%;transform:translateY(-50%);
-  z-index:20;background:none;border:none;
+  z-index:20;background:rgba(255,255,255,.55);border:1px solid rgba(0,0,0,.10);
   width:44px;height:44px;cursor:pointer;
   display:flex;align-items:center;justify-content:center;
-  color:rgba(10,10,10,0);transition:all .22s;
+  color:rgba(10,10,10,.55);transition:all .22s;
   font-size:22px;user-select:none;
   border-radius:50%;
+  box-shadow:0 1px 6px rgba(0,0,0,.08);
+  backdrop-filter:blur(4px);
 }
 .fb-arrow:hover{
-  color:rgba(10,10,10,.75);
-  background:rgba(255,255,255,.82);
-  box-shadow:0 2px 12px rgba(0,0,0,.10);
+  color:rgba(10,10,10,.9);
+  background:rgba(255,255,255,.95);
+  box-shadow:0 2px 14px rgba(0,0,0,.14);
+  border-color:rgba(0,0,0,.18);
 }
 .fb-arrow:disabled{opacity:0;pointer-events:none}
 #fb-prev{left:14px}
@@ -226,13 +234,11 @@ body{background:#EDEAE4;display:flex;flex-direction:column;align-items:stretch}
 <body>
 <div id="fb-root">
   <div id="fb-viewer-area">
-    <!-- flèches overlay sur la zone livre -->
-    <button class="fb-arrow" id="fb-prev" title="Page précédente">&#8249;</button>
-    <div id="fb-book-wrap">
-      <div id="fb-scaler">
-        <div id="fb-book"></div>
-      </div>
+    <!-- Le livre est dans le scaler ; les flèches sont HORS du scaler pour que leurs coords soient stables -->
+    <div id="fb-scaler">
+      <div id="fb-book"></div>
     </div>
+    <button class="fb-arrow" id="fb-prev" title="Page précédente">&#8249;</button>
     <button class="fb-arrow" id="fb-next" title="Page suivante">&#8250;</button>
   </div>
   <!-- Thumbnails cachés par défaut -->
@@ -1160,38 +1166,37 @@ body{background:#EDEAE4;display:flex;flex-direction:column;align-items:stretch}
     bookEl.appendChild(w);
   }
 
-  /* ── 2. bookEl remplit toute la zone viewer — StPageFlip stretch gère le reste */
-  bookEl.style.cssText = 'width:100%;height:100%;';
-
-  /* ── 3. Init StPageFlip size:stretch ─────────────────────────────────
-     stretch = StPageFlip calcule lui-même la taille depuis le conteneur.
-     Aucun scaling CSS externe. Les coords d'événements sont gérées en interne. */
+  /* ── 2. Init StPageFlip size:fixed — dimensions exactes, pas de stretch interne.
+     Le scaling est géré exclusivement par CSS transform sur #fb-scaler.
+     Avantage : les boutons overlay (flèches) sont HORS du canvas donc leurs
+     coordonnées ne sont jamais perturbées par le transform. ── */
   var pageFlip = new St.PageFlip(bookEl, {
-    width:               PAGE_W,
-    height:              PAGE_H,
-    size:                'stretch',
-    minWidth:            280,
-    maxWidth:            PAGE_W,
-    minHeight:           200,
-    maxHeight:           PAGE_H,
+    width:               BOOK_W,
+    height:              BOOK_H,
+    size:                'fixed',
     drawShadow:          true,
-    flippingTime:        650,
+    flippingTime:        600,
     usePortrait:         false,
-    showCover:           false,
+    showCover:           true,
     mobileScrollSupport: false,
-    maxShadowOpacity:    0.65,
+    maxShadowOpacity:    0.5,
     showPageCorners:     true,
     disableFlipByClick:  false,
-    swipeDistance:       15,
+    swipeDistance:       30,
     startZIndex:         0,
   });
   pageFlip.loadFromHTML(document.querySelectorAll('.spf-page'));
 
-  /* ── 4. Zoom boutons — redimensionne maxWidth et force update ── */
+  /* ── 3. Scaling CSS externe ── */
   var zoomBoost = 1;
   function applyScale(){
-    document.getElementById('fb-zoom-lbl').textContent = Math.round(zoomBoost * 100) + '%';
-    pageFlip.update();
+    var aw = areaEl.clientWidth  - 80;  /* 80 = marges flèches */
+    var ah = areaEl.clientHeight - 16;
+    var sc = Math.min(aw / BOOK_W, ah / BOOK_H, 1) * zoomBoost;
+    scalerEl.style.width  = BOOK_W + 'px';
+    scalerEl.style.height = BOOK_H + 'px';
+    scalerEl.style.transform = 'scale(' + sc + ')';
+    document.getElementById('fb-zoom-lbl').textContent = Math.round(sc * 100) + '%';
   }
 
   /* ── 6. Thumbnails (spreads réels = 30, index StPageFlip 1..60) ── */
@@ -1234,13 +1239,14 @@ body{background:#EDEAE4;display:flex;flex-direction:column;align-items:stretch}
   }
 
   pageFlip.on('flip', function(e){ updateUI(e.data); });
-  updateUI(1);
+  pageFlip.on('changeState', function(e){ });
+  updateUI(0);
 
   /* ── 8. Navigation ── */
-  document.getElementById('fb-prev').addEventListener('click', function(){ pageFlip.flipPrev(); });
-  document.getElementById('fb-next').addEventListener('click', function(){ pageFlip.flipNext(); });
-  document.getElementById('btn-ptb').addEventListener('click', function(){ pageFlip.flipPrev(); });
-  document.getElementById('btn-ntb').addEventListener('click', function(){ pageFlip.flipNext(); });
+  document.getElementById('fb-prev').addEventListener('click', function(e){ e.stopPropagation(); pageFlip.flipPrev(); });
+  document.getElementById('fb-next').addEventListener('click', function(e){ e.stopPropagation(); pageFlip.flipNext(); });
+  document.getElementById('btn-ptb').addEventListener('click', function(e){ e.stopPropagation(); pageFlip.flipPrev(); });
+  document.getElementById('btn-ntb').addEventListener('click', function(e){ e.stopPropagation(); pageFlip.flipNext(); });
 
   document.addEventListener('keydown', function(e){
     if(e.key === 'ArrowRight' || e.key === 'ArrowDown') pageFlip.flipNext();
@@ -1258,10 +1264,10 @@ body{background:#EDEAE4;display:flex;flex-direction:column;align-items:stretch}
 
   /* ── 10. Boutons zoom ── */
   document.getElementById('btn-zi').addEventListener('click', function(){
-    zoomBoost = Math.min(+(zoomBoost + 0.15).toFixed(2), 1.5); applyScale();
+    zoomBoost = Math.min(+(zoomBoost + 0.15).toFixed(2), 2.0); applyScale();
   });
   document.getElementById('btn-zo').addEventListener('click', function(){
-    zoomBoost = Math.max(+(zoomBoost - 0.15).toFixed(2), 0.5); applyScale();
+    zoomBoost = Math.max(+(zoomBoost - 0.15).toFixed(2), 0.4); applyScale();
   });
 
   /* ── 11. Thumbnails toggle ── */
@@ -1270,7 +1276,7 @@ body{background:#EDEAE4;display:flex;flex-direction:column;align-items:stretch}
     thumbsVisible = !thumbsVisible;
     document.getElementById('fb-thumbs').classList.toggle('visible', thumbsVisible);
     this.classList.toggle('on', thumbsVisible);
-    setTimeout(applyScale, 60);
+    setTimeout(function(){ applyScale(); }, 80);
   });
 
   /* ── 12. Fullscreen ── */
@@ -1280,13 +1286,14 @@ body{background:#EDEAE4;display:flex;flex-direction:column;align-items:stretch}
     else document.exitFullscreen();
   });
   document.addEventListener('fullscreenchange', function(){
-    setTimeout(function(){ pageFlip.update(); }, 150);
+    setTimeout(function(){ applyScale(); }, 150);
   });
 
   /* ── 13. Resize + init ── */
-  window.addEventListener('resize', function(){ pageFlip.update(); });
+  window.addEventListener('resize', function(){ applyScale(); });
+  applyScale();
   requestAnimationFrame(function(){
-    requestAnimationFrame(function(){ pageFlip.update(); });
+    requestAnimationFrame(function(){ applyScale(); });
   });
 
 })();
