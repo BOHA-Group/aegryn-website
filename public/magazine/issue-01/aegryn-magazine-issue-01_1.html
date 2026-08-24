@@ -103,92 +103,101 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#F4F3F0;display:flex;
 .cta-url{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--G);margin-top:8px}
 .ghost{position:absolute;font-size:110px;font-weight:800;letter-spacing:-.06em;line-height:.85;opacity:.04;bottom:60px;right:-10px;pointer-events:none}
 .ghost-k{color:var(--K)}
-/* ══ BARNES-style viewer ══════════════════════════════════════ */
+/* ══ BARNES-style viewer — fond ivoire ════════════════════════ */
 html,body{height:100%;margin:0;padding:0;overflow:hidden}
-body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
+body{background:#EDEAE4;display:flex;flex-direction:column;align-items:stretch}
 .mag-title{display:none}
-/* Root : remplit l'iframe entière — position:absolute sur html/body height:100% */
-#fb-root{position:absolute;inset:0;display:flex;flex-direction:column;background:#323232}
-/* Zone livre : flex-1, le livre est centré dedans */
+/* Root : remplit l'iframe entière */
+#fb-root{position:absolute;inset:0;display:flex;flex-direction:column;background:#EDEAE4}
+/* Zone livre : fond ivoire avec grain subtil */
 #fb-viewer-area{
   flex:1;min-height:0;
   position:relative;
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;
+  background:radial-gradient(ellipse at center,#F2EFE9 0%,#E8E4DD 100%);
 }
-/* Wrapper du livre + scaler : height:100% pour que StPageFlip stretch lise clientHeight */
+/* Wrapper livre */
 #fb-book-wrap{width:100%;height:100%;overflow:hidden}
 #fb-scaler{width:100%;height:100%;display:block;}
-/* Flèches : overlay sur les côtés, centrées verticalement */
+/* Flèches — style Barnes : cercle discret navy sur fond ivoire */
 .fb-arrow{
   position:absolute;top:50%;transform:translateY(-50%);
   z-index:20;background:none;border:none;
-  width:52px;height:80px;cursor:pointer;
+  width:44px;height:44px;cursor:pointer;
   display:flex;align-items:center;justify-content:center;
-  color:rgba(255,255,255,.0);transition:color .2s,background .2s;
-  font-size:32px;user-select:none;
-  border-radius:3px;
+  color:rgba(10,10,10,0);transition:all .22s;
+  font-size:22px;user-select:none;
+  border-radius:50%;
 }
-.fb-arrow:hover{color:rgba(255,255,255,.85);background:rgba(0,0,0,.25)}
+.fb-arrow:hover{
+  color:rgba(10,10,10,.75);
+  background:rgba(255,255,255,.82);
+  box-shadow:0 2px 12px rgba(0,0,0,.10);
+}
 .fb-arrow:disabled{opacity:0;pointer-events:none}
-#fb-prev{left:6px}
-#fb-next{right:6px}
-/* Thumbnails — cachés par défaut comme Barnes */
+#fb-prev{left:14px}
+#fb-next{right:14px}
+/* Thumbnails */
 #fb-thumbs{
-  display:none;gap:4px;padding:6px 12px;background:#1e1e1e;
-  overflow-x:auto;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.12) transparent;
-  border-top:1px solid rgba(255,255,255,.05);flex-shrink:0;max-height:80px;
+  display:none;gap:5px;padding:8px 14px;
+  background:#F5F2EC;
+  overflow-x:auto;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.12) transparent;
+  border-top:1px solid rgba(0,0,0,.07);flex-shrink:0;max-height:82px;
 }
 #fb-thumbs.visible{display:flex}
 #fb-thumbs::-webkit-scrollbar{height:3px}
-#fb-thumbs::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12)}
+#fb-thumbs::-webkit-scrollbar-thumb{background:rgba(0,0,0,.12)}
 .fb-thumb{
   width:40px;height:56px;flex-shrink:0;overflow:hidden;
-  border:1.5px solid rgba(255,255,255,.08);cursor:pointer;
-  opacity:.45;transition:opacity .18s,border-color .18s;position:relative;
+  border:1.5px solid rgba(0,0,0,.10);cursor:pointer;
+  opacity:.45;transition:opacity .18s,border-color .18s,box-shadow .18s;position:relative;
+  box-shadow:0 1px 3px rgba(0,0,0,.06);
 }
-.fb-thumb:hover{opacity:.8;border-color:rgba(255,255,255,.3)}
-.fb-thumb.active{opacity:1;border-color:#c8a96e}
+.fb-thumb:hover{opacity:.85;border-color:rgba(0,0,0,.25)}
+.fb-thumb.active{opacity:1;border-color:#2EAF7D;box-shadow:0 0 0 1px #2EAF7D}
 .fb-thumb-inner{transform:scale(.095);transform-origin:top left;width:420px;height:595px;pointer-events:none}
 .fb-thumb-num{
   position:absolute;bottom:0;left:0;right:0;text-align:center;
   font-size:5.5px;font-weight:600;letter-spacing:.06em;
-  color:rgba(255,255,255,.45);background:rgba(0,0,0,.35);padding:1px 0;
+  color:rgba(0,0,0,.4);background:rgba(255,255,255,.6);padding:1px 0;
 }
-/* Toolbar bas — style Barnes : très discret, fond sombre */
+/* Toolbar bas — Barnes ivoire : élégant, discret, fond blanc cassé */
 #fb-toolbar{
-  height:40px;background:rgba(30,30,30,.98);
-  border-top:1px solid rgba(255,255,255,.04);
+  height:44px;background:rgba(245,242,236,.98);
+  border-top:1px solid rgba(0,0,0,.07);
   display:flex;align-items:center;justify-content:space-between;
-  padding:0 12px;flex-shrink:0;gap:8px;
+  padding:0 14px;flex-shrink:0;gap:8px;
+  box-shadow:0 -1px 8px rgba(0,0,0,.04);
 }
 .fb-tb-btn{
   background:none;border:none;
-  color:rgba(255,255,255,.4);cursor:pointer;
+  color:rgba(10,10,10,.35);cursor:pointer;
   font-size:11px;font-weight:500;
-  padding:4px 7px;border-radius:2px;
+  padding:5px 8px;border-radius:3px;
   transition:color .15s,background .15s;
   display:flex;align-items:center;gap:3px;
   white-space:nowrap;
+  letter-spacing:.04em;
 }
-.fb-tb-btn:hover{color:rgba(255,255,255,.9);background:rgba(255,255,255,.06)}
-.fb-tb-btn.on{color:#c8a96e}
+.fb-tb-btn:hover{color:rgba(10,10,10,.85);background:rgba(0,0,0,.05)}
+.fb-tb-btn.on{color:#2EAF7D;font-weight:600}
 .fb-tb-btn:disabled{opacity:.2;pointer-events:none}
-/* Numéro de page centré, police mono discrète */
+/* Numéro page */
 .fb-pg-num{
-  font-size:11px;font-weight:400;letter-spacing:.08em;
-  color:rgba(255,255,255,.4);font-family:monospace;
-  white-space:nowrap;
+  font-size:10px;font-weight:500;letter-spacing:.12em;
+  color:rgba(10,10,10,.35);font-family:monospace;
+  white-space:nowrap;text-transform:uppercase;
 }
-/* Barre de progression fine — Barnes style */
+/* Barre de progression fine — mint */
 #fb-progress-wrap{
-  flex:1;max-width:120px;height:2px;
-  background:rgba(255,255,255,.1);cursor:pointer;
+  flex:1;max-width:140px;height:1.5px;
+  background:rgba(0,0,0,.10);cursor:pointer;
   border-radius:1px;position:relative;
 }
 #fb-progress-fill{
-  height:100%;background:#c8a96e;
-  border-radius:1px;transition:width .3s;
+  height:100%;background:#2EAF7D;
+  border-radius:1px;transition:width .35s;
 }
 .profile{padding:12px 0;border-bottom:1px solid var(--LG)}
 .profile:last-child{border-bottom:none}
@@ -347,11 +356,11 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
 </div></div>
 <div id="p7" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;border-right:1px solid rgba(244,243,240,.07)">
   <div style="height:36px"></div>
-  <p class="bdy-w" style="margin-bottom:14px">Not because the assets weren't real. Not because the technology wasn't solid. Because <strong style="color:var(--C)">no one prepared them to transact.</strong></p>
-  <p class="bdy-w" style="margin-bottom:14px">We built Aegryn to refuse that outcome. We refuse to let a serious company disappear into a poorly structured process. We refuse to let a founder walk away with 60 cents on the dollar because their data room was three PDFs and a prayer. We refuse to let good tech be judged by the wrong buyer on the wrong day with no preparation.</p>
-  <p class="bdy-w" style="margin-bottom:14px">This magazine is part of that refusal. <strong style="color:var(--C)">Aegryn Magazine</strong> exists because the information gap between European founders and institutional acquirers is still enormous — and the publications that could close it have chosen either to stay behind paywalls, stay shallow, or stay American.</p>
-  <p class="bdy-w" style="margin-bottom:14px">We chose none of the above. Every issue gives you the real numbers, the real process, the real stories of how European tech assets are built, certified, and transacted.</p>
-  <div class="pq pq-dk" style="margin-top:8px"><div class="pq-txt" style="color:var(--C)">Angles that advisory firms won't publish because they compete with their own mandates. Angles that mainstream tech media won't publish because they chase unicorns, not the €2M exit that changes a founder's life.</div></div>
+  <div class="img-ph" style="height:80px;margin-bottom:14px;background:rgba(244,243,240,.06)"><div class="img-ph-txt" style="color:rgba(244,243,240,.18)">PHOTO PLACEHOLDER — Architectural detail — Swiss building, stone or concrete texture</div><div class="img-ph-dim" style="color:rgba(244,243,240,.12)">960 × 320 px — full width — horizontal — editorial photography</div></div>
+  <p class="bdy-w" style="margin-bottom:12px">Not because the assets weren't real. Not because the technology wasn't solid. Because <strong style="color:var(--C)">no one prepared them to transact.</strong></p>
+  <p class="bdy-w" style="margin-bottom:12px">We built Aegryn to refuse that outcome. We refuse to let a serious company disappear into a poorly structured process. We refuse to let a founder walk away with 60 cents on the dollar because their data room was three PDFs and a prayer.</p>
+  <p class="bdy-w" style="margin-bottom:12px">This magazine exists because the information gap between European founders and institutional acquirers is still enormous — and the publications that could close it have chosen to stay behind paywalls, stay shallow, or stay American. We chose none of the above.</p>
+  <div class="pq pq-dk" style="margin-top:8px"><div class="pq-txt" style="color:var(--C)">Angles that advisory firms won't publish because they compete with their own mandates. Angles that mainstream tech press won't publish because they chase unicorns, not the €2M exit that changes a founder's life. Angles that American publications won't publish because they don't cover European small-cap M&amp;A.</div></div>
   <div class="rf"><span>Editorial</span><span>07</span></div>
 </div></div>
 <div id="p8" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column">
@@ -1030,7 +1039,8 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
   <div class="radar-card"><div class="radar-tag">HealthTech · Switzerland · 4 years</div><div class="radar-nm">Regulatory Submission Platform</div><div class="radar-body">€380K ARR, 97% retention, NRR 122%. Automates regulatory submission for Swiss MedTech seeking EU/US approval. Founder spent 12 years in regulatory affairs. Pre-Grade CIFS pending.</div></div>
   <div class="radar-card"><div class="radar-tag">LegalTech · Germany · 6 years</div><div class="radar-nm">Contract Risk Intelligence</div><div class="radar-body">€520K ARR, enterprise only, avg contract €28K/year. Proprietary risk-scoring model trained on 180K German-language contracts licensed from three German bar associations. The data moat is the asset.</div></div>
   <div class="radar-card"><div class="radar-tag">RegTech · Netherlands · 3 years</div><div class="radar-nm">AI-Native Compliance Monitoring</div><div class="radar-body">€210K ARR, +30% QoQ. Monitors EU financial services regulation in real-time against internal policies. DORA compliance was accidental timing — built 18 months before the regulation was finalised.</div></div>
-  <div class="radar-card" style="margin-bottom:0"><div class="radar-tag">EdTech · Spain · 4 years</div><div class="radar-nm">Compliance Training — EU Financial Services</div><div class="radar-body">€340K ARR, 91% annual retention. 140 financial institutions across Spain, Portugal, Italy. Founder sold compliance services to the same institutions for 12 years before building the SaaS version.</div></div>
+  <div class="radar-card"><div class="radar-tag">EdTech · Spain · 4 years</div><div class="radar-nm">Compliance Training — EU Financial Services</div><div class="radar-body">€340K ARR, 91% annual retention. 140 financial institutions across Spain, Portugal, Italy. Founder sold compliance services to the same institutions for 12 years before building the SaaS version. Distribution is the moat.</div></div>
+  <div class="radar-card" style="margin-bottom:0"><div class="radar-tag">PropTech · France · 5 years</div><div class="radar-nm">Commercial Real Estate Transaction Intelligence</div><div class="radar-body">€290K ARR. Proprietary transaction dataset built over five years from public registry data, direct transaction sources, and a network of contributing agents. The founder calls it "the most unfashionable data business in PropTech" — which is approximately correct, and the reason the moat is real.</div></div>
   <div class="rf rf-k"><span>People — Radar</span><span>54</span></div>
 </div></div>
 <div id="p55" class="pg"><div style="height:595px;background:var(--C);position:relative;overflow:hidden">
@@ -1050,7 +1060,7 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--LG);flex:1">
     <div class="stk-cell"><div class="stk-cat">5 Tools</div><div class="stk-nm">Linear</div><div class="stk-desc">Product tracking for teams under 20. No ceremony. Everything searchable.</div><div class="stk-nm">Supabase</div><div class="stk-desc">Open backend with built-in audit logging. Postgres — portable, auditable.</div><div class="stk-nm">Notion (Data Room)</div><div class="stk-desc">The founders who close fast have one clean Notion. Updated monthly.</div><div class="stk-nm">Cursor / Windsurf</div><div class="stk-desc">AI coding with mandatory human review. Leverage, not shortcuts.</div><div class="stk-nm">Lemon Squeezy</div><div class="stk-desc">MoR payments. EU VAT handled. ARR verifiable from day one.</div></div>
     <div class="stk-cell"><div class="stk-cat">3 Books</div><div class="stk-nm">The SaaS Playbook — Rob Walling</div><div class="stk-desc">Only bootstrapped SaaS book that discusses exit without assuming VC.</div><div class="stk-nm">Valuation — Damodaran</div><div class="stk-desc">Makes multiple maths intuitive after ~100 pages of work. Worth it.</div><div class="stk-nm">Zero to Sold — Arvid Kahl</div><div class="stk-desc">Built, bootstrapped, exited. Honest about what sale preparation requires.</div><div class="stk-cat" style="margin-top:12px">2 Podcasts</div><div class="stk-nm">Acquired</div><div class="stk-desc">Business history as strategy school. 1M+ listeners per episode.</div><div class="stk-nm">Indie Hackers</div><div class="stk-desc">Real founders, real numbers. Filter for bootstrap-to-exit stories.</div></div>
-    <div class="stk-cell"><div class="stk-cat">1 Habit</div><div class="stk-nm">Monthly P&amp;L — alone, in writing</div><div class="stk-desc" style="margin-bottom:16px;padding-bottom:16px">Every first Monday. 90 minutes. No accountant. No co-founder. Founders who do this are never surprised in due diligence. Its absence costs far more than 90 minutes.<br><br><em style="font-size:9px;color:#777">"The monthly P&amp;L review is not accounting. It is reality-testing."</em></div><div class="stk-cat">1 Place</div><div class="stk-nm">Lausanne / Canton de Vaud</div><div class="stk-desc">40 minutes to Geneva. EPFL talent. Fiduciaires who understand SaaS. Family office capital looking for exactly what you're building. More EU founders are choosing this base than the ecosystem admits.</div></div>
+    <div class="stk-cell"><div class="stk-cat">1 Habit</div><div class="stk-nm">Monthly P&amp;L — alone, in writing</div><div class="stk-desc" style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--LG)">Every first Monday. 90 minutes. No accountant. No co-founder. Founders who do this are never surprised in due diligence.</div><div class="stk-cat">1 Object</div><div class="stk-nm">A fountain pen</div><div class="stk-desc" style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--LG)">Not a productivity hack. A commitment device. Founders who sign things carefully — contracts, IP assignments, fiduciaire engagements — tend to build things carefully. The observation is not scientific. It is consistent.</div><div class="stk-cat">1 Place</div><div class="stk-nm">Lausanne / Canton de Vaud</div><div class="stk-desc">40 min to Geneva. EPFL talent (global top 15). Fiduciaires who understand SaaS. 13.8% corporate tax. Family office capital looking for exactly what you're building.</div></div>
   </div>
   <div class="rf rf-k"><span>Life — Founder's Stack</span><span>56</span></div>
 </div></div>
@@ -1061,19 +1071,18 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
     <div class="dek dek-w">Why Lausanne, Zurich, and Geneva are becoming the preferred base for EU founders in build-to-exit mode — and what the ecosystem doesn't publicise.</div>
   </div>
   <div style="display:flex;flex-direction:column;gap:0">
-    <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(244,243,240,.08)"><span style="font-size:10px;color:rgba(244,243,240,.55)">Corporate tax — Canton Vaud</span><span style="font-size:12px;font-weight:700;color:var(--G)">13.8%</span></div>
-    <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(244,243,240,.08)"><span style="font-size:10px;color:rgba(244,243,240,.55)">SA formation time</span><span style="font-size:12px;font-weight:700;color:var(--C)">3–6 weeks</span></div>
-    <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(244,243,240,.08)"><span style="font-size:10px;color:rgba(244,243,240,.55)">EPFL global ranking</span><span style="font-size:12px;font-weight:700;color:var(--C)">Top 15 world</span></div>
+    <div style="padding:10px 0;border-bottom:1px solid rgba(244,243,240,.08)"><div style="display:flex;justify-content:space-between"><span style="font-size:10px;color:rgba(244,243,240,.55)">Corporate tax — Canton Vaud</span><span style="font-size:12px;font-weight:700;color:var(--G)">13.8%</span></div><div style="font-size:7px;color:rgba(244,243,240,.2);letter-spacing:.1em;text-transform:uppercase;margin-top:2px">Canton de Vaud Tax Administration — 2026</div></div>
+    <div style="padding:10px 0;border-bottom:1px solid rgba(244,243,240,.08)"><div style="display:flex;justify-content:space-between"><span style="font-size:10px;color:rgba(244,243,240,.55)">SA formation time</span><span style="font-size:12px;font-weight:700;color:var(--C)">3–6 weeks</span></div><div style="font-size:7px;color:rgba(244,243,240,.2);letter-spacing:.1em;text-transform:uppercase;margin-top:2px">Swiss Federal Commercial Registry — standard timeline 2026</div></div>
+    <div style="padding:10px 0;border-bottom:1px solid rgba(244,243,240,.08)"><div style="display:flex;justify-content:space-between"><span style="font-size:10px;color:rgba(244,243,240,.55)">EPFL global ranking</span><span style="font-size:12px;font-weight:700;color:var(--C)">Top 15 world</span></div><div style="font-size:7px;color:rgba(244,243,240,.2);letter-spacing:.1em;text-transform:uppercase;margin-top:2px">QS World University Rankings 2025</div></div>
     <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(244,243,240,.08)"><span style="font-size:10px;color:rgba(244,243,240,.55)">Lausanne → Geneva</span><span style="font-size:12px;font-weight:700;color:var(--C)">40 min train</span></div>
     <div style="display:flex;justify-content:space-between;padding:10px 0"><span style="font-size:10px;color:rgba(244,243,240,.55)">EU market access</span><span style="font-size:12px;font-weight:700;color:var(--G)">Full (bilateral)</span></div>
   </div>
   <div class="rf"><span>Life — Switzerland</span><span>57</span></div>
 </div></div>
 <div id="p58" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
-  <div class="img-ph img-ph-lt" style="height:120px;margin-bottom:14px">
-    <div class="img-ph-txt img-ph-txt-lt">PHOTO PLACEHOLDER</div>
-    <div class="img-ph-txt img-ph-txt-lt">Lausanne lakeside / Lake Geneva — architectural or aerial view</div>
-    <div class="img-ph-dim img-ph-dim-lt">420 × 120 px — landscape, natural light</div>
+  <div class="img-ph img-ph-lt" style="height:110px;margin-bottom:14px">
+    <div class="img-ph-txt img-ph-txt-lt">PHOTO PLACEHOLDER — Lake Geneva from Lavaux terraces above Saint-Sulpice — golden hour</div>
+    <div class="img-ph-dim img-ph-dim-lt">960 × 300 px — full width — landscape — golden hour or blue hour</div>
   </div>
   <p class="bdy" style="margin-bottom:10px">The conversation about where European tech founders should base their operations has been dominated by the usual cities — Berlin, Amsterdam, Paris, Stockholm. Switzerland appears occasionally, usually as a punchline about banking and skiing. That is changing quietly but visibly.</p>
   <p class="bdy" style="margin-bottom:10px">What Lausanne, Zurich, and Geneva offer the founder in build-to-exit mode is specific and undervalued. The legal infrastructure for structuring an asset correctly — fiduciaires who understand SaaS revenue models, lawyers who have seen hundreds of tech M&A transactions, notaries who can close an SA conversion in three weeks — is more concentrated per capita in Switzerland than anywhere in EU continental Europe.</p>
@@ -1136,7 +1145,7 @@ body{background:#323232;display:flex;flex-direction:column;align-items:stretch}
   var srcPages = ['']; /* index 0 = vide */
   var blankDiv = document.createElement('div');
   blankDiv.className = 'spf-page';
-  blankDiv.innerHTML = '<div style="width:' + PAGE_W + 'px;height:' + PAGE_H + 'px;background:#2a2a2a"></div>';
+  blankDiv.innerHTML = '<div style="width:' + PAGE_W + 'px;height:' + PAGE_H + 'px;background:#EDEAE4"></div>';
   bookEl.appendChild(blankDiv);
 
   var TOT_REAL = 60;
