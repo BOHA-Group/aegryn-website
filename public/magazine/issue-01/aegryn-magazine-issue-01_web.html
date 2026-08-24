@@ -7,12 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--K:#0A0A0A;--C:#F4F3F0;--G:#2EAF7D;--GR:#888;--LG:#E8E6E1;--W:#F9F8F5;--INK:#1C1C1C;--SW:220px;--CW:700px}
+:root{--K:#0F1A2B;--C:#F7F5F1;--G:#5ADDA4;--GR:#8A8A8A;--LG:#E4E1DC;--W:#FFFFFF;--INK:#1C1C1C;--SW:220px;--CW:700px;--NAVY:#0F1A2B;--CREAM:#F7F5F1;--GOLD:#B8965A}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--W);color:var(--INK);display:flex;min-height:100vh}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--CREAM);color:var(--INK);display:flex;min-height:100vh}
 /* SIDEBAR */
-#sb{position:fixed;top:0;left:0;width:var(--SW);height:100vh;background:#F5F2EC;border-right:1px solid rgba(0,0,0,.07);display:flex;flex-direction:column;overflow-y:auto;z-index:100;padding:24px 0 40px}
+#sb{position:fixed;top:0;left:0;width:var(--SW);height:100vh;background:#F7F5F1;border-right:1px solid rgba(0,0,0,.07);display:flex;flex-direction:column;overflow-y:auto;z-index:100;padding:24px 0 40px}
 #sb::-webkit-scrollbar{width:3px}#sb::-webkit-scrollbar-thumb{background:rgba(0,0,0,.1)}
 .sb-logo{padding:0 18px 20px;border-bottom:1px solid rgba(0,0,0,.07);margin-bottom:14px}
 .sb-logo-nm{font-size:13px;font-weight:800;letter-spacing:-.02em;color:var(--K)}
@@ -20,33 +20,33 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--W);color:var(--
 .sb-lbl{font-size:7.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--GR);padding:0 18px;margin:14px 0 4px}
 .sb-a{display:flex;align-items:center;padding:6px 18px;font-size:11px;font-weight:500;color:rgba(10,10,10,.5);text-decoration:none;transition:all .15s;border-left:2px solid transparent;gap:6px;line-height:1.35}
 .sb-a:hover{color:var(--K);background:rgba(0,0,0,.04)}
-.sb-a.on{color:var(--G);font-weight:700;border-left-color:var(--G);background:rgba(46,175,125,.05)}
-.sb-pg{font-size:8px;font-weight:600;color:var(--G);background:rgba(46,175,125,.1);padding:1px 5px;border-radius:2px;margin-left:auto;flex-shrink:0}
+.sb-a.on{color:var(--NAVY);font-weight:700;border-left-color:var(--G);background:rgba(90,221,164,.08)}
+.sb-pg{font-size:8px;font-weight:600;color:var(--NAVY);background:rgba(90,221,164,.15);padding:1px 5px;border-radius:2px;margin-left:auto;flex-shrink:0}
 .sb-div{height:1px;background:rgba(0,0,0,.07);margin:8px 18px}
-.sb-flip{margin:14px 18px 0;display:flex;align-items:center;justify-content:center;gap:5px;padding:9px;background:var(--K);color:var(--C);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:2px}
-.sb-flip:hover{background:#222}
+.sb-flip{margin:14px 18px 0;display:flex;align-items:center;justify-content:center;gap:5px;padding:9px;background:var(--NAVY);color:var(--CREAM);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:2px}
+.sb-flip:hover{background:#162035}
 /* MAIN */
 #main{margin-left:var(--SW);flex:1}
 /* SECTION DIVIDER */
 .sdiv{padding:56px 60px 40px;position:relative;overflow:hidden}
-.sdiv.dk{background:var(--K)}.sdiv.cr{background:var(--C)}.sdiv.gr{background:var(--G)}
-.sdiv-ghost{position:absolute;bottom:-20px;right:-10px;font-size:clamp(80px,12vw,150px);font-weight:800;letter-spacing:-.06em;line-height:.85;opacity:.05;pointer-events:none;color:#fff}
-.sdiv.cr .sdiv-ghost{color:#000}
+.sdiv.dk{background:var(--NAVY)}.sdiv.cr{background:var(--CREAM)}.sdiv.gr{background:#EDEAE4}
+.sdiv-ghost{position:absolute;bottom:-20px;right:-10px;font-size:clamp(80px,12vw,150px);font-weight:800;letter-spacing:-.06em;line-height:.85;opacity:.04;pointer-events:none;color:#fff}
+.sdiv.cr .sdiv-ghost,.sdiv.gr .sdiv-ghost{color:#000}
 .sdiv-inner{position:relative;z-index:1;max-width:var(--CW)}
 .sdiv-num{font-size:8px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px}
-.sdiv-num.lt{color:rgba(255,255,255,.3)}.sdiv-num.dk{color:rgba(10,10,10,.3)}
+.sdiv-num.lt{color:rgba(255,255,255,.3)}.sdiv-num.dk{color:rgba(10,10,10,.35)}
 .sdiv-t{font-size:clamp(44px,7vw,76px);font-weight:800;line-height:.9;letter-spacing:-.04em;margin-bottom:14px}
-.sdiv-t.lt{color:var(--C)}.sdiv-t.dk{color:var(--K)}
+.sdiv-t.lt{color:#F7F5F1}.sdiv-t.dk{color:var(--NAVY)}
 .sdiv-bar{width:44px;height:2px;margin-bottom:18px}
-.sdiv-bar.lt{background:var(--G)}.sdiv-bar.dk{background:var(--K)}
+.sdiv-bar.lt{background:var(--G)}.sdiv-bar.dk{background:var(--NAVY)}
 .sdiv-desc{font-size:14px;font-weight:300;line-height:1.75;max-width:460px}
-.sdiv-desc.lt{color:rgba(255,255,255,.45)}.sdiv-desc.dk{color:rgba(10,10,10,.45)}
+.sdiv-desc.lt{color:rgba(247,245,241,.45)}.sdiv-desc.dk{color:rgba(10,26,43,.45)}
 /* ARTICLE */
 .art{padding:64px 60px;border-bottom:1px solid var(--LG)}
-.art.wh{background:var(--W)}.art.cr{background:var(--C)}.art.dk{background:var(--K)}
+.art.wh{background:var(--W)}.art.cr{background:var(--CREAM)}.art.dk{background:var(--NAVY)}
 .art-w{max-width:var(--CW)}
 .lbl{display:inline-block;font-size:7.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:3px 8px;border-radius:1px;margin-bottom:14px}
-.lbl.g{background:var(--G);color:#fff}.lbl.k{background:var(--K);color:#fff}.lbl.w{background:rgba(255,255,255,.15);color:rgba(255,255,255,.6)}
+.lbl.g{background:var(--G);color:var(--NAVY)}.lbl.k{background:var(--NAVY);color:#F7F5F1}.lbl.w{background:rgba(255,255,255,.12);color:rgba(247,245,241,.65)}
 .h1{font-size:clamp(24px,3.2vw,38px);font-weight:800;letter-spacing:-.025em;line-height:1.1;margin-bottom:10px}
 .h1.lt{color:var(--C)}.h1.dk{color:var(--K)}
 .deck{font-size:15px;font-weight:300;line-height:1.7;margin-bottom:22px;max-width:580px}
@@ -56,26 +56,26 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--W);color:var(--
 .body p strong.lt{color:var(--C)}.body p strong.dk{color:var(--K)}
 /* PQ */
 .pq{border-left:2px solid var(--G);padding:13px 17px;margin:18px 0}
-.pq.lt{background:rgba(46,175,125,.08)}.pq.wh{background:rgba(46,175,125,.04)}
+.pq.lt{background:rgba(90,221,164,.07)}.pq.wh{background:rgba(90,221,164,.04)}
 .pq-t{font-size:14px;font-weight:300;line-height:1.65;font-style:italic;margin-bottom:6px}
 .pq-t.lt{color:var(--C)}.pq-t.dk{color:var(--K)}
 .pq-a{font-size:8px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--GR)}
 /* STATS */
 .sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--LG);margin:18px 0}
-.sc{padding:16px}.sc.dk{background:rgba(255,255,255,.04)}.sc.wh{background:var(--W)}.sc.cr{background:var(--C)}
-.sn{font-size:32px;font-weight:800;color:var(--G);line-height:1;margin-bottom:4px}.sn.lt{color:var(--C)}
+.sc{padding:16px}.sc.dk{background:rgba(255,255,255,.04)}.sc.wh{background:#FAFAF8}.sc.cr{background:var(--CREAM)}
+.sn{font-size:32px;font-weight:800;color:var(--NAVY);line-height:1;margin-bottom:4px}.sn.lt{color:#F7F5F1}
 .sc-cap{font-size:10px;font-weight:500;line-height:1.4}.sc-cap.lt{color:rgba(244,243,240,.4)}.sc-cap.dk{color:rgba(10,10,10,.45)}
 .sc-src{font-size:7.5px;margin-top:4px;letter-spacing:.08em;text-transform:uppercase}.sc-src.lt{color:rgba(244,243,240,.2)}.sc-src.dk{color:rgba(10,10,10,.2)}
 /* TABLE */
 .t{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}
 .t th{font-size:7.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--GR);padding:8px 10px;border-bottom:2px solid var(--LG);text-align:left}
 .t td{padding:9px 10px;border-bottom:1px solid var(--LG);color:rgba(10,10,10,.7)}
-.t td.g{color:var(--G);font-weight:700;text-align:right}.t td.n{color:#888;text-align:right;font-weight:700}.t td.r{text-align:right;font-weight:700}
+.t td.g{color:#1E8C5C;font-weight:700;text-align:right}.t td.n{color:#888;text-align:right;font-weight:700}.t td.r{text-align:right;font-weight:700}
 .t tr:last-child td{border-bottom:none}
 /* TIMELINE */
-.tl{border-left:2px solid var(--G);padding-left:18px;margin:18px 0}
+.tl{border-left:2px solid var(--G);padding-left:18px;margin:18px 0;opacity:1}
 .tl-i{padding:10px 0;border-bottom:1px solid rgba(0,0,0,.05)}.tl-i:last-child{border-bottom:none}
-.tl-d{font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--G);margin-bottom:4px}
+.tl-d{font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--NAVY);margin-bottom:4px;opacity:.6}
 .tl-b{font-size:13px;line-height:1.65;color:rgba(10,10,10,.6)}
 /* DEAL CARDS */
 .dc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
@@ -91,16 +91,16 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--W);color:var(--
 .rc-nm{font-size:14px;font-weight:700;color:var(--K);margin-bottom:4px}
 .rc-b{font-size:13px;line-height:1.6;color:#555}
 /* QUOTEBOX */
-.qb{background:var(--K);padding:48px 60px;text-align:center}
-.qb-mk{font-size:60px;color:rgba(255,255,255,.05);font-weight:800;line-height:1;margin-bottom:-8px}
-.qb-t{font-size:clamp(14px,2vw,18px);font-weight:300;line-height:1.65;color:var(--C);font-style:italic;max-width:500px;margin:0 auto 16px}
+.qb{background:var(--CREAM);border-top:1px solid var(--LG);border-bottom:1px solid var(--LG);padding:56px 60px;text-align:center}
+.qb-mk{font-size:60px;color:rgba(15,26,43,.06);font-weight:800;line-height:1;margin-bottom:-8px}
+.qb-t{font-size:clamp(14px,2vw,20px);font-weight:300;line-height:1.65;color:var(--NAVY);font-style:italic;max-width:520px;margin:0 auto 16px}
 .qb-bar{width:28px;height:1px;background:var(--G);margin:0 auto 12px}
-.qb-a{font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.qb-a{font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(15,26,43,.35)}
 /* CTA */
-.cta{background:rgba(46,175,125,.07);border:1px solid rgba(46,175,125,.25);padding:16px 20px;margin:18px 0}
-.cta h4{font-size:12px;font-weight:700;color:var(--K);margin-bottom:4px}
+.cta{background:rgba(90,221,164,.06);border:1px solid rgba(90,221,164,.22);padding:16px 20px;margin:18px 0}
+.cta h4{font-size:12px;font-weight:700;color:var(--NAVY);margin-bottom:4px}
 .cta p{font-size:12px;line-height:1.6;color:#555}
-.cta-u{font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--G);margin-top:7px}
+.cta-u{font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#1E8C5C;margin-top:7px}
 /* STACK */
 .stk{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--LG);margin:16px 0}
 .stk-c{background:var(--W);padding:16px}
@@ -115,13 +115,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--W);color:var(--
 .ph{background:rgba(0,0,0,.04);border:1px dashed rgba(0,0,0,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px;margin:16px 0;min-height:80px}
 .ph-t{font-size:10px;color:rgba(0,0,0,.3);font-style:italic;line-height:1.5}.ph-d{font-size:8px;color:rgba(0,0,0,.18);margin-top:3px;letter-spacing:.1em;text-transform:uppercase}
 /* RIB */
-.rib{font-size:8px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--G);margin-bottom:10px;display:flex;align-items:center;gap:8px}
-.rib::before{content:'';display:block;width:20px;height:1px;background:var(--G)}
+.rib{font-size:8px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--NAVY);opacity:.5;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.rib::before{content:'';display:block;width:20px;height:1px;background:currentColor}
 /* MULT TABLE */
 .mt{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}
-.mt th{background:var(--K);color:rgba(244,243,240,.45);font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:9px 12px;text-align:left}
+.mt th{background:var(--NAVY);color:rgba(247,245,241,.45);font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:9px 12px;text-align:left}
 .mt td{padding:10px 12px;border-bottom:1px solid var(--LG);color:rgba(10,10,10,.7)}
-.mt td.g{color:var(--G);font-weight:700}.mt tr:hover td{background:rgba(0,0,0,.02)}
+.mt td.g{color:#1E8C5C;font-weight:700}.mt tr:hover td{background:rgba(0,0,0,.02)}
 /* PROFILE */
 .prof-i{padding:14px 0;border-bottom:1px solid var(--LG)}.prof-i:last-child{border-bottom:none}
 .prof-lbl{font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--G);margin-bottom:4px}
@@ -227,7 +227,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--W);color:var(--
     <div class="rib" style="color:rgba(255,255,255,.2)"><span style="color:rgba(255,255,255,.25)">Editor's Letter — p.06</span></div>
     <div style="font-size:52px;font-weight:800;line-height:.9;color:var(--C);margin-bottom:4px">We</div>
     <div style="font-size:52px;font-weight:800;line-height:.9;color:var(--G);margin-bottom:22px">Refuse.</div>
-    <div style="border-left:2px solid var(--G);padding:12px 16px;margin-bottom:18px;background:rgba(46,175,125,.05)">
+    <div style="border-left:2px solid var(--G);padding:12px 16px;margin-bottom:18px;background:rgba(90,221,164,.05)">
       <div style="font-size:14px;font-weight:300;line-height:1.75;color:rgba(244,243,240,.5);font-style:italic">"Every year, several hundred European tech companies disappear into transactions that should never have happened — or never happen at all."</div>
     </div>
     <div class="ph" style="background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.07);height:90px"><div class="ph-t" style="color:rgba(255,255,255,.18)">PHOTO — Architectural detail — Swiss building, stone or concrete texture — Full width horizontal</div></div>
@@ -276,7 +276,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--W);color:var(--
       <div style="padding:11px 0;border-bottom:1px solid rgba(255,255,255,.07);display:flex;gap:11px"><div style="width:6px;height:6px;background:var(--G);flex-shrink:0;margin-top:5px;border-radius:1px"></div><div><div style="font-size:13px;font-weight:700;color:var(--C);margin-bottom:2px">Vibe-coded core logic</div><div style="font-size:12px;line-height:1.6;color:rgba(244,243,240,.5)">AI-generated code without review in the core path. Auditors flag in 48h. Cost: 15–25% of headline valuation.</div></div></div>
       <div style="padding:11px 0;display:flex;gap:11px"><div style="width:6px;height:6px;background:var(--G);flex-shrink:0;margin-top:5px;border-radius:1px"></div><div><div style="font-size:13px;font-weight:700;color:var(--C);margin-bottom:2px">No model versioning strategy</div><div style="font-size:12px;line-height:1.6;color:rgba(244,243,240,.5)">When the LLM updates, product changes behaviour unpredictably. Most founders have no documented answer.</div></div></div>
     </div>
-    <div class="cta" style="background:rgba(46,175,125,.1);border-color:rgba(46,175,125,.3)"><h4 style="color:var(--C)">CIFS S-16 — AI &amp; Security Module</h4><p style="color:rgba(244,243,240,.5)">Assesses your AI architecture against the checklist buyers use as standard. Produces a documented brief, not just a score.</p><div class="cta-u">→ aegryn.com/grade</div></div>
+    <div class="cta" style="background:rgba(90,221,164,.1);border-color:rgba(90,221,164,.3)"><h4 style="color:var(--C)">CIFS S-16 — AI &amp; Security Module</h4><p style="color:rgba(244,243,240,.5)">Assesses your AI architecture against the checklist buyers use as standard. Produces a documented brief, not just a score.</p><div class="cta-u">→ aegryn.com/grade</div></div>
   </div>
 </section>
 <section id="ai-premium" class="art wh">
@@ -344,7 +344,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--W);color:var(--
         <div style="display:flex;flex-direction:column;gap:3px">
           <div style="display:flex;justify-content:space-between;padding:5px 8px;background:rgba(244,243,240,.04)"><span style="font-size:10px;color:rgba(244,243,240,.35)">Declarative</span><span style="font-size:11px;font-weight:700;color:rgba(244,243,240,.35)">3.8x → €1.52M</span></div>
           <div style="display:flex;justify-content:space-between;padding:5px 8px;background:rgba(244,243,240,.07)"><span style="font-size:10px;color:rgba(244,243,240,.55)">Verifiable</span><span style="font-size:11px;font-weight:700;color:rgba(244,243,240,.55)">5.2x → €2.08M</span></div>
-          <div style="display:flex;justify-content:space-between;padding:5px 8px;background:rgba(46,175,125,.12);border-left:2px solid var(--G)"><span style="font-size:10px;color:var(--G)">Audited</span><span style="font-size:11px;font-weight:700;color:var(--G)">7.1x → €2.84M</span></div>
+          <div style="display:flex;justify-content:space-between;padding:5px 8px;background:rgba(90,221,164,.12);border-left:2px solid var(--G)"><span style="font-size:10px;color:var(--G)">Audited</span><span style="font-size:11px;font-weight:700;color:var(--G)">7.1x → €2.84M</span></div>
         </div>
       </div>
       <div style="background:var(--C);padding:14px">
@@ -360,7 +360,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--W);color:var(--
         <div style="font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--G);margin-bottom:6px">Adjustment 03 — Technical Debt</div>
         <div style="font-size:13px;font-weight:800;color:var(--K);margin-bottom:8px">Stack Penalty or Stack Premium</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
-          <div style="padding:8px;background:rgba(46,175,125,.06);border-left:2px solid var(--G)"><div style="font-size:9px;font-weight:700;color:var(--G)">Premium</div><div style="font-size:9px;color:#444;margin-top:2px">Next.js · TypeScript · Tests &gt;60%</div></div>
+          <div style="padding:8px;background:rgba(90,221,164,.06);border-left:2px solid var(--G)"><div style="font-size:9px;font-weight:700;color:var(--G)">Premium</div><div style="font-size:9px;color:#444;margin-top:2px">Next.js · TypeScript · Tests &gt;60%</div></div>
           <div style="padding:8px;background:rgba(0,0,0,.03);border-left:2px solid #ccc"><div style="font-size:9px;font-weight:700;color:#888">Penalty</div><div style="font-size:9px;color:#444;margin-top:2px">PHP legacy · No tests · Deprecated deps</div></div>
         </div>
       </div>
@@ -368,12 +368,12 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--W);color:var(--
         <div style="font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--G);margin-bottom:6px">Adjustment 04 — AI Positioning</div>
         <div style="font-size:13px;font-weight:800;color:var(--C);margin-bottom:8px">Architecture vs. Feature</div>
         <div style="display:flex;gap:8px">
-          <div style="flex:1;padding:8px;background:rgba(46,175,125,.1);border-left:2px solid var(--G)"><div style="font-size:9px;font-weight:700;color:var(--G)">Architecture</div><div style="font-size:16px;font-weight:800;color:var(--G)">+30%</div></div>
+          <div style="flex:1;padding:8px;background:rgba(90,221,164,.1);border-left:2px solid var(--G)"><div style="font-size:9px;font-weight:700;color:var(--G)">Architecture</div><div style="font-size:16px;font-weight:800;color:var(--G)">+30%</div></div>
           <div style="flex:1;padding:8px;background:rgba(255,255,255,.04)"><div style="font-size:9px;font-weight:700;color:rgba(244,243,240,.35)">Undocumented</div><div style="font-size:16px;font-weight:800;color:rgba(244,243,240,.35)">−15%</div></div>
         </div>
       </div>
     </div>
-    <div class="cta" style="background:rgba(46,175,125,.1);border-color:rgba(46,175,125,.3)"><h4 style="color:var(--C)">Start your CIFS certification — all 4 dimensions</h4><p style="color:rgba(244,243,240,.45)">Find out where your asset stands before any buyer conversation starts.</p><div class="cta-u">→ aegryn.com/grade</div></div>
+    <div class="cta" style="background:rgba(90,221,164,.1);border-color:rgba(90,221,164,.3)"><h4 style="color:var(--C)">Start your CIFS certification — all 4 dimensions</h4><p style="color:rgba(244,243,240,.45)">Find out where your asset stands before any buyer conversation starts.</p><div class="cta-u">→ aegryn.com/grade</div></div>
   </div>
 </section>
 <section id="build-18m" class="art wh">
@@ -456,7 +456,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--W);color:var(--
       <p class="lt">The narrative that M&amp;A markets have "closed" is inaccurate. What has closed is tolerance for process-making it up as you go. Capital that used to accept six-month processes with ad-hoc data rooms is being deployed elsewhere — into private credit, into infrastructure, into assets from other jurisdictions where process standards are higher.</p>
       <p class="lt">The assets that cleared in H1 2026 share one characteristic: they arrived at the table with documentation that made the technical diligence routine, not investigative.</p>
     </div>
-    <div class="cta" style="background:rgba(46,175,125,.1);border-color:rgba(46,175,125,.3)"><h4 style="color:var(--C)">European M&amp;A Market Report — Q3 2026 Edition</h4><p style="color:rgba(244,243,240,.45)">Full dataset: sector, ticket size, geography, closing timeline. Available to CIFS-certified founders at no additional fee.</p><div class="cta-u">→ aegryn.com/advisory</div></div>
+    <div class="cta" style="background:rgba(90,221,164,.1);border-color:rgba(90,221,164,.3)"><h4 style="color:var(--C)">European M&amp;A Market Report — Q3 2026 Edition</h4><p style="color:rgba(244,243,240,.45)">Full dataset: sector, ticket size, geography, closing timeline. Available to CIFS-certified founders at no additional fee.</p><div class="cta-u">→ aegryn.com/advisory</div></div>
   </div>
 </section>
 <section id="money-multiple" class="art wh">
@@ -585,7 +585,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--W);color:var(--
       </div>
       <div class="dc">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:6px">
-          <div style="display:flex;gap:10px;align-items:flex-start"><div style="width:7px;height:7px;border-radius:50%;background:#2EAF7D;margin-top:4px;flex-shrink:0"></div><div><div style="font-size:13px;font-weight:800;margin-bottom:1px">EdTech Platform — Nordics</div><div style="font-size:9px;font-weight:700;letter-spacing:.1em;color:rgba(10,10,10,.4);text-transform:uppercase">SaaS · VC-backed · €16M</div></div></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><div style="width:7px;height:7px;border-radius:50%;background:#5ADDA4;margin-top:4px;flex-shrink:0"></div><div><div style="font-size:13px;font-weight:800;margin-bottom:1px">EdTech Platform — Nordics</div><div style="font-size:9px;font-weight:700;letter-spacing:.1em;color:rgba(10,10,10,.4);text-transform:uppercase">SaaS · VC-backed · €16M</div></div></div>
           <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="badge g">★ AEG</span><span class="badge" style="background:#f5f5f5;color:#333;border-color:#ddd">AI Act Compliant</span></div>
         </div>
         <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
@@ -614,7 +614,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--W);color:var(--
       <div class="tl-i"><div class="tl-d">08 — The Legal Pack</div><div class="tl-b lt">Entity structure, cap table (clean, fully diluted), shareholder agreements, option pool documentation, material contracts, regulatory status. All signatories identified. Nothing outstanding.</div></div>
       <div class="tl-i"><div class="tl-d">09 — The Process Brief</div><div class="tl-b lt">A confidential, 12-page document sent to pre-qualified buyers: summary, context, strategic rationale for acquisition, available information package, process timeline. Written by an advisor. Not by the founder.</div></div>
     </div>
-    <div class="cta" style="background:rgba(46,175,125,.1);border-color:rgba(46,175,125,.3)"><h4 style="color:var(--C)">Transaction Preparation — Full Audit</h4><p style="color:rgba(244,243,240,.45)">We audit all 9 dimensions and produce a gap list with effort estimates. Average time to close: 4.2 months from clean state.</p><div class="cta-u">→ aegryn.com/advisory</div></div>
+    <div class="cta" style="background:rgba(90,221,164,.1);border-color:rgba(90,221,164,.3)"><h4 style="color:var(--C)">Transaction Preparation — Full Audit</h4><p style="color:rgba(244,243,240,.45)">We audit all 9 dimensions and produce a gap list with effort estimates. Average time to close: 4.2 months from clean state.</p><div class="cta-u">→ aegryn.com/advisory</div></div>
   </div>
 </section>
 <!-- S.05 PEOPLE -->
