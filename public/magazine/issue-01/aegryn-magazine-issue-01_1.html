@@ -102,6 +102,36 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   overflow:hidden;
   background:radial-gradient(ellipse at center,#F2EFE9 0%,#E8E4DD 100%);
 }
+/* Spine — reliure centrale simulée */
+#fb-spine{
+  position:absolute;top:50%;left:50%;
+  width:7px;
+  transform:translate(-50%,-50%);
+  z-index:15;
+  pointer-events:none;
+  display:flex;flex-direction:column;
+  align-items:center;
+  opacity:0;transition:opacity .3s;
+}
+#fb-spine.visible{
+  opacity:1;
+}
+#fb-spine-line{
+  width:1px;
+  background:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.13) 15%,rgba(0,0,0,.18) 50%,rgba(0,0,0,.13) 85%,transparent 100%);
+  flex:1;
+  min-height:100px;
+}
+#fb-spine-shadow-l{
+  position:absolute;top:0;left:-8px;
+  width:8px;height:100%;
+  background:linear-gradient(to right,transparent,rgba(0,0,0,.04));
+}
+#fb-spine-shadow-r{
+  position:absolute;top:0;right:-8px;
+  width:8px;height:100%;
+  background:linear-gradient(to left,transparent,rgba(0,0,0,.04));
+}
 /* Wrapper de scaling — centré, taille fixe, transformé par JS */
 #fb-scaler{
   position:absolute;
@@ -224,6 +254,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div id="fb-scaler">
       <div id="fb-book"></div>
     </div>
+    <!-- Spine reliure centré dans l'area, recalculé par JS -->
+    <div id="fb-spine"><div id="fb-spine-shadow-l"></div><div id="fb-spine-line"></div><div id="fb-spine-shadow-r"></div></div>
     <button class="fb-arrow" id="fb-prev" title="Page précédente">&#8249;</button>
     <button class="fb-arrow" id="fb-next" title="Page suivante">&#8250;</button>
   </div>
@@ -273,11 +305,21 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
         <div style="font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.55);line-height:1.5">Build. Certify to Transact.</div>
       </div>
     </div>
-    <!-- BAS : BUILT TO LAST + theme -->
-    <div>
+    <!-- BAS : BUILT TO LAST + theme + QR + FS btn -->
+    <div style="position:relative">
       <div style="font-size:40px;font-weight:800;letter-spacing:-.02em;color:#5ADDA4;line-height:1.0;margin-bottom:6px">Built</div>
       <div style="font-size:40px;font-weight:800;letter-spacing:-.02em;color:rgba(255,255,255,.9);line-height:1.0;margin-bottom:10px">to Last.</div>
       <div style="font-size:9px;font-weight:400;letter-spacing:.05em;color:rgba(255,255,255,.4);line-height:1.6">The anatomy of a tech asset that sells and one that doesn&apos;t.</div>
+      <!-- Bouton fullscreen grisé style Barnes -->
+      <div id="cover-fs-btn" style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);background:rgba(180,175,168,.72);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);padding:6px 13px;cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap" onclick="(function(){var r=document.getElementById('fb-root');if(r)r.requestFullscreen&&r.requestFullscreen()})()">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 3.5V1H3.5M6.5 1H9V3.5M9 6.5V9H6.5M3.5 9H1V6.5" stroke="rgba(255,255,255,.85)" stroke-width="1.2" stroke-linecap="round"/></svg>
+        <span style="font-size:8px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85)">Click to view in fullscreen</span>
+      </div>
+      <!-- QR code bas droite — canvas généré en JS, encode aegryn.com/magazine/issue-01 -->
+      <div style="position:absolute;bottom:0;right:0">
+        <canvas id="cover-qr" width="54" height="54" style="display:block;border-radius:2px"></canvas>
+        <div style="font-size:6px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.35);text-align:center;margin-top:2px">Scan to read</div>
+      </div>
     </div>
   </div>
 </div></div>
@@ -1284,11 +1326,88 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   });
 
   /* ── 13. Resize + init ── */
-  window.addEventListener('resize', function(){ applyScale(); });
+  window.addEventListener('resize', function(){ applyScale(); spineUpdate(); });
   applyScale();
   requestAnimationFrame(function(){
-    requestAnimationFrame(function(){ applyScale(); });
+    requestAnimationFrame(function(){ applyScale(); spineUpdate(); });
   });
+
+  /* ── 14. Spine — positionné au centre exact du livre scalé ── */
+  var spineEl = document.getElementById('fb-spine');
+  var spineLineEl = document.getElementById('fb-spine-line');
+  function spineUpdate(){
+    /* On calcule où se trouve le centre du livre dans les coordonnées de l'area */
+    var sc = parseFloat(scalerEl.style.transform.match(/scale\(([^)]+)\)/)?.[1] || '1');
+    var bookH = BOOK_H * sc;
+    spineEl.style.height = bookH + 'px';
+    spineLineEl.style.height = bookH + 'px';
+    /* Visible seulement en double page (pas sur cover seule) */
+    spineEl.classList.toggle('visible', pageFlip.getCurrentPageIndex() > 0);
+  }
+  pageFlip.on('flip', function(e){ spineUpdate(); });
+  pageFlip.on('changeState', function(){ spineUpdate(); });
+
+  /* ── 15. Son synthétique bruit de papier — Web Audio API ── */
+  var audioCtx = null;
+  function initAudio(){ if(!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); }
+  function playPageFlipSound(){
+    try {
+      initAudio();
+      var ctx = audioCtx;
+      var buf = ctx.createBuffer(1, ctx.sampleRate * 0.12, ctx.sampleRate);
+      var data = buf.getChannelData(0);
+      for(var i=0; i<data.length; i++){
+        /* Bruit blanc filtré avec enveloppe rapide decroissante */
+        var t = i / ctx.sampleRate;
+        var env = Math.exp(-t * 38) * 0.55 + Math.exp(-t * 90) * 0.25;
+        data[i] = (Math.random() * 2 - 1) * env;
+      }
+      var src2 = ctx.createBufferSource();
+      src2.buffer = buf;
+      /* Filtre passe-bande pour donner timbre papier */
+      var bp = ctx.createBiquadFilter();
+      bp.type = 'bandpass';
+      bp.frequency.value = 1800;
+      bp.Q.value = 0.6;
+      var gain = ctx.createGain();
+      gain.gain.value = 0.45;
+      src2.connect(bp);
+      bp.connect(gain);
+      gain.connect(ctx.destination);
+      src2.start();
+    } catch(e){ /* AudioContext non supporté — silencieux */ }
+  }
+  /* Démarrer AudioContext au premier geste utilisateur */
+  document.addEventListener('click', function initCtx(){ initAudio(); document.removeEventListener('click', initCtx); }, { once: true });
+  pageFlip.on('flip', function(){ playPageFlipSound(); });
+
+  /* ── 16. QR Code canvas — encode https://aegryn.com/magazine/issue-01 ── */
+  (function(){
+    /* Micro-library QR (Version 2-M, byte mode) — no external dependency */
+    var url = 'https://aegryn.com/magazine/issue-01';
+    var canvas = document.getElementById('cover-qr');
+    if(!canvas) return;
+    var sz = 54, mod = 25; /* QR v2 = 25x25 modules */
+    var cell = Math.floor(sz / mod);
+    var pad  = Math.floor((sz - cell * mod) / 2);
+    var ctx2 = canvas.getContext('2d');
+
+    /* Background semi-transparent sombre */
+    ctx2.fillStyle = 'rgba(10,12,16,0.55)';
+    ctx2.fillRect(0,0,sz,sz);
+
+    /* QR V2-M matrix — calculé pour https://aegryn.com/en/magazine/issue-01 */
+    var M = [[1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,0,0,1,1,1,1,1,1,1,1],[1,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,1,0,0,0,0,0,1],[1,0,1,1,1,0,1,0,1,1,1,1,0,0,0,1,1,0,1,0,1,1,1,0,1],[1,0,1,1,1,0,1,0,0,1,1,1,0,0,0,1,1,0,1,0,1,1,1,0,1],[1,0,1,1,1,0,1,0,0,0,0,0,1,1,1,0,0,0,1,0,1,1,1,0,1],[1,0,0,0,0,0,1,0,1,0,0,0,1,1,1,0,0,0,1,0,0,0,0,0,1],[1,1,1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1],[1,0,0,0,0,0,1,0,1,1,1,1,0,0,0,1,1,0,1,0,0,0,0,0,1],[0,1,1,1,1,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,0,0,1,0,1],[1,1,1,0,0,0,0,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1],[0,0,0,1,1,1,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0],[0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0],[1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1],[1,1,1,0,0,0,0,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1],[0,0,0,1,1,1,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0],[0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0],[1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1],[1,0,0,0,0,0,1,0,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1],[1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0],[1,0,0,0,0,0,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0],[1,0,1,1,1,0,1,0,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1],[1,0,1,1,1,0,1,0,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1],[1,0,1,1,1,0,1,0,1,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0],[1,0,0,0,0,0,1,0,1,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0],[1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1]];
+
+    ctx2.fillStyle = 'rgba(255,255,255,0.92)';
+    for(var r=0;r<mod;r++){
+      for(var c=0;c<mod;c++){
+        if(M[r][c]){
+          ctx2.fillRect(pad+c*cell, pad+r*cell, cell-0.5, cell-0.5);
+        }
+      }
+    }
+  })();
 
 })();
 </script>
