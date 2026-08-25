@@ -1088,10 +1088,14 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
      Le canvas interne créé par StPageFlip en mode paysage = BOOK_W × BOOK_H.
      On applique un scale sur le scaler pour fitter dans la zone visible. */
   var zoomBoost = 1;
+  var isCoverState = true; /* true quand cover seule visible */
+
   function applyScale(){
     var aw = areaEl.clientWidth  - 100; /* marges flèches */
     var ah = areaEl.clientHeight - 20;
-    var sc = Math.min(aw / BOOK_W, ah / BOOK_H) * zoomBoost;
+    /* Cover seule → scaler sur PAGE_W (une page) ; sinon spread BOOK_W */
+    var refW = isCoverState ? PAGE_W : BOOK_W;
+    var sc = Math.min(aw / refW, ah / BOOK_H) * zoomBoost;
     if(sc <= 0) sc = 0.5;
     scalerEl.style.width  = BOOK_W + 'px';
     scalerEl.style.height = BOOK_H + 'px';
@@ -1139,8 +1143,15 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     if(thumbEls[sp]) thumbEls[sp].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
   }
 
-  pageFlip.on('flip', function(e){ updateUI(e.data); });
-  pageFlip.on('changeState', function(e){ });
+  pageFlip.on('flip', function(e){
+    var idx = e.data;
+    isCoverState = (idx <= 1);
+    updateUI(idx);
+    edgeUpdate();
+    folioPagesUpdate(idx);
+    setTimeout(applyScale, 50); /* re-scale après transition cover→spread */
+  });
+  pageFlip.on('changeState', function(e){});
   updateUI(0);
 
   /* ── 8. Navigation ── */
@@ -1191,10 +1202,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   });
 
   /* ── 13. Resize + init ── */
-  window.addEventListener('resize', function(){ applyScale(); spineUpdate(); });
+  window.addEventListener('resize', function(){ applyScale(); spineUpdate(); folioPagesUpdate(pageFlip.getCurrentPageIndex()); });
   applyScale();
   requestAnimationFrame(function(){
-    requestAnimationFrame(function(){ applyScale(); spineUpdate(); });
+    requestAnimationFrame(function(){ applyScale(); spineUpdate(); folioPagesUpdate(0); });
   });
 
   /* ── 14. Spine + Tranches — positionnées au centre exact du livre scalé ── */
@@ -1247,8 +1258,51 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   }
 
   function spineUpdate(){ edgeUpdate(); }
-  pageFlip.on('flip', function(){ edgeUpdate(); });
+  /* edgeUpdate est appelé depuis le listener flip principal ci-dessus */
   pageFlip.on('changeState', function(){ edgeUpdate(); });
+
+  /* ── 14b. Folio overlay — numéros coins bas pages visibles ── */
+  var folioL = document.createElement('div');
+  var folioR = document.createElement('div');
+  var folioStyle = 'position:absolute;bottom:0;font-size:10px;font-weight:600;'
+    + 'letter-spacing:.1em;color:rgba(15,26,43,.28);pointer-events:none;z-index:20;'
+    + 'font-family:"Plus Jakarta Sans",sans-serif;transition:opacity .3s;';
+  folioL.style.cssText = folioStyle + 'transform-origin:left bottom;';
+  folioR.style.cssText = folioStyle + 'transform-origin:right bottom;';
+  areaEl.appendChild(folioL);
+  areaEl.appendChild(folioR);
+
+  function folioPagesUpdate(slotIdx){
+    var sc = parseFloat((scalerEl.style.transform.match(/scale\(([^)]+)\)/) || ['','1'])[1]);
+    var bookH = BOOK_H * sc;
+    var bookW = BOOK_W * sc;
+    var halfW = bookW / 2;
+    var pad = 18 * sc; /* padding coin */
+    var pb  = 10 * sc; /* padding bottom */
+
+    if(slotIdx <= 1){
+      /* Cover seule — aucun folio overlay (la cover a son propre folio) */
+      folioL.style.opacity = '0';
+      folioR.style.opacity = '0';
+      return;
+    }
+    /* Pages visibles : slotIdx (gauche) et slotIdx+1 (droite) */
+    var leftPage  = slotIdx;       /* page gauche = slot courant */
+    var rightPage = slotIdx + 1;   /* page droite */
+
+    /* Folio gauche — coin bas-gauche du livre */
+    folioL.textContent = leftPage <= TOT_REAL ? leftPage : '';
+    folioL.style.left   = 'calc(50% - ' + halfW + 'px + ' + pad + 'px)';
+    folioL.style.bottom = pb + 'px';
+    folioL.style.opacity = leftPage <= TOT_REAL ? '1' : '0';
+
+    /* Folio droit — coin bas-droit du livre */
+    folioR.textContent = rightPage <= TOT_REAL ? rightPage : '';
+    folioR.style.right  = 'calc(50% - ' + halfW + 'px + ' + pad + 'px)';
+    folioR.style.bottom = pb + 'px';
+    folioR.style.left   = 'auto';
+    folioR.style.opacity = rightPage <= TOT_REAL ? '1' : '0';
+  }
 
   /* ── 15. Son page — fichier MP3 préchargé ── */
   var flipAudio = new Audio('page-turn.mp3');
