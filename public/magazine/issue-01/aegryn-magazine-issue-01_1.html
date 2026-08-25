@@ -12,52 +12,56 @@
 .pg{width:420px;height:595px;position:relative;font-family:inherit;overflow:hidden}
 /* Barnes fond ivoire = pages "crème" (editorial, intro, contenu alternés) */
 .dk{background:#0F1A2B;color:var(--C)}
-.cr{background:#FAFAF8;color:var(--K)}
+.cr{background:#FFFFFF;color:var(--K)}
 .wh{background:#FFFFFF;color:var(--K)}
 .gr{background:var(--G);color:var(--K)}
 .sp{padding:36px 32px 52px}
 .sp-sm{padding:28px 28px 40px}
-/* ── En-tête rubrique style Barnes (bande top) ── */
+/* ── En-tête rubrique — transparent, sans bande ── */
 .pg-hdr{
-  height:28px;margin:-36px -32px 24px;padding:0 32px;
+  height:22px;margin:-36px -32px 18px;padding:0 32px;
   display:flex;align-items:center;justify-content:space-between;
-  border-bottom:1px solid rgba(0,0,0,.07);
-  background:rgba(0,0,0,.018);
+  border-bottom:none;
+  background:transparent;
 }
-.pg-hdr-dk{
-  background:rgba(255,255,255,.04);
-  border-bottom-color:rgba(255,255,255,.08);
-}
+.pg-hdr-dk{background:transparent;}
 .pg-hdr-ttl{
-  font-size:7px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
-  color:rgba(0,0,0,.3);
+  font-size:6.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(0,0,0,.18);
 }
-.pg-hdr-ttl-dk{color:rgba(255,255,255,.25);}
+.pg-hdr-ttl-dk{color:rgba(255,255,255,.15);}
 .pg-hdr-pg{
-  font-size:7px;font-weight:600;letter-spacing:.14em;font-family:monospace;
-  color:rgba(0,0,0,.22);
+  font-size:6.5px;font-weight:600;letter-spacing:.14em;font-family:monospace;
+  color:rgba(0,0,0,.15);
 }
-.pg-hdr-pg-dk{color:rgba(255,255,255,.2);}
-/* ── Folio Barnes : ligne fine + texte bas ── */
+.pg-hdr-pg-dk{color:rgba(255,255,255,.13);}
+/* ── Folio : numéro seul, coin bas — sans barre ni fond ── */
 .rf{
-  position:absolute;bottom:0;left:0;right:0;
-  height:28px;padding:0 32px;
-  display:flex;align-items:center;justify-content:space-between;
-  font-size:7px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
-  color:rgba(0,0,0,.2);
-  border-top:1px solid rgba(0,0,0,.07);
-  background:rgba(0,0,0,.012);
+  position:absolute;bottom:12px;
+  font-size:7.5px;font-weight:600;letter-spacing:.12em;
+  color:rgba(0,0,0,.22);
+  background:transparent;border:none;
+  /* Par défaut : coin bas-droit (pages droites impaires) */
+  right:24px;left:auto;
+  display:block;
 }
-.rf-k{color:rgba(0,0,0,.22);border-top-color:rgba(0,0,0,.07);}
-.rf-gn{color:rgba(0,0,0,.3);border-top-color:rgba(0,0,0,.1);}
+/* Page gauche (paire) : numéro à gauche */
+.rf-l{
+  left:24px;right:auto;
+}
+/* Page droite (impaire) : numéro à droite (défaut .rf) */
+.rf-r{
+  right:24px;left:auto;
+}
+.rf-k{color:rgba(0,0,0,.22);}
+.rf-gn{color:rgba(0,0,0,.3);}
+/* Folios sur fond sombre */
 .rf-dk,
 .dk .rf{
   color:rgba(255,255,255,.22) !important;
-  border-top-color:rgba(255,255,255,.08) !important;
-  background:rgba(255,255,255,.03) !important;
+  background:transparent !important;
+  border:none !important;
 }
-/* Pages section covers (fond plein) — folio intégré */
-.sp.dk .rf{ color:rgba(255,255,255,.2) !important;border-top-color:rgba(255,255,255,.07) !important;background:rgba(255,255,255,.025) !important; }
 /* ── Zones images style Barnes ── */
 .img-ph{
   background:#EDEAE4;
@@ -358,22 +362,22 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
         <div style="font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.55);line-height:1.5">Build. Certify to Transact.</div>
       </div>
     </div>
-    <!-- BAS : BUILT TO LAST + theme + QR + FS btn -->
-    <div style="position:relative">
+    <!-- BAS : BUILT TO LAST + subtitle -->
+    <div>
       <div style="font-size:40px;font-weight:800;letter-spacing:-.02em;color:#5ADDA4;line-height:1.0;margin-bottom:6px">Built</div>
       <div style="font-size:40px;font-weight:800;letter-spacing:-.02em;color:rgba(255,255,255,.9);line-height:1.0;margin-bottom:10px">to Last.</div>
       <div style="font-size:9px;font-weight:400;letter-spacing:.05em;color:rgba(255,255,255,.4);line-height:1.6">The anatomy of a tech asset that sells and one that doesn&apos;t.</div>
-      <!-- Bouton fullscreen transparent, visible au hover -->
-      <div id="cover-fs-btn" style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);background:transparent;border:1px solid rgba(255,255,255,0);padding:6px 13px;cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap;opacity:0;transition:opacity .25s,background .25s,border-color .25s" onmouseenter="this.style.opacity='1';this.style.background='rgba(10,12,16,.55)';this.style.borderColor='rgba(255,255,255,.2)'" onmouseleave="this.style.opacity='0';this.style.background='transparent';this.style.borderColor='rgba(255,255,255,0)'" onclick="(function(){var r=document.getElementById('fb-root');if(r)r.requestFullscreen&&r.requestFullscreen()})()">
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 3.5V1H3.5M6.5 1H9V3.5M9 6.5V9H6.5M3.5 9H1V6.5" stroke="rgba(255,255,255,.85)" stroke-width="1.2" stroke-linecap="round"/></svg>
-        <span style="font-size:8px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85)">Click to view in fullscreen</span>
-      </div>
-      <!-- QR code bas droite — canvas généré en JS, encode aegryn.com/magazine/issue-01 -->
-      <div style="position:absolute;bottom:0;right:0">
-        <canvas id="cover-qr" width="58" height="58" style="display:block;border-radius:2px"></canvas>
-        <div style="font-size:6px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.35);text-align:center;margin-top:2px">Scan to read</div>
-      </div>
     </div>
+  </div>
+  <!-- QR style Barnes : encadré blanc, coin bas-droit absolu sur la page -->
+  <div style="position:absolute;bottom:18px;right:18px;background:#fff;padding:5px;border-radius:2px;box-shadow:0 1px 8px rgba(0,0,0,.18)">
+    <canvas id="cover-qr" width="56" height="56" style="display:block"></canvas>
+    <div style="font-size:5.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.4);text-align:center;margin-top:3px;line-height:1.2">Scan to read</div>
+  </div>
+  <!-- Bouton fullscreen : invisible par défaut, apparaît au hover sur la cover -->
+  <div id="cover-fs-btn" style="position:absolute;bottom:18px;left:50%;transform:translateX(-50%);background:transparent;border:1px solid rgba(255,255,255,0);padding:6px 13px;cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap;opacity:0;transition:opacity .25s,background .25s,border-color .25s" onmouseenter="this.style.opacity='1';this.style.background='rgba(10,12,16,.6)';this.style.borderColor='rgba(255,255,255,.25)'" onmouseleave="this.style.opacity='0';this.style.background='transparent';this.style.borderColor='rgba(255,255,255,0)'" onclick="(function(){var r=document.getElementById('fb-root');if(r)r.requestFullscreen&&r.requestFullscreen()})()">
+    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 3.5V1H3.5M6.5 1H9V3.5M9 6.5V9H6.5M3.5 9H1V6.5" stroke="rgba(255,255,255,.9)" stroke-width="1.2" stroke-linecap="round"/></svg>
+    <span style="font-size:8px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.9)">Click to view in fullscreen</span>
   </div>
 </div></div>
 <div id="p2" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:center">
@@ -390,7 +394,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   </div>
   <div style="position:absolute;bottom:20px;left:32px;right:32px;font-size:8px;font-weight:500;letter-spacing:.1em;color:rgba(10,10,10,.3)">Aegryn SA — Saint-Sulpice, Canton de Vaud, Switzerland — CHE-402.011.821</div>
 </div></div>
-<div id="p3" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column;border-right:1px solid var(--LG)">
+<div id="p3" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
   <span class="lbl" style="margin-bottom:20px">Contents — Issue 01</span>
   <div class="d2" style="margin-bottom:28px;line-height:.92">In this<br>issue.</div>
   <div>
@@ -400,7 +404,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="padding:10px 0;border-bottom:1px solid var(--LG)"><div class="lbl lbl-gr" style="margin-bottom:4px">Build</div><div style="font-size:11px;font-weight:700;color:var(--K)">Your SaaS Is Worth Less Than You Think</div><div style="font-size:9px;color:var(--GR);margin-top:2px">The four valuation adjustments</div><div style="font-size:8px;font-weight:700;color:var(--G);margin-top:4px">— p.19</div></div>
     <div style="padding:10px 0;border-bottom:1px solid var(--LG)"><div class="lbl lbl-gr" style="margin-bottom:4px">Build</div><div style="font-size:11px;font-weight:700;color:var(--K)">Vibe Coding Is a Valuation Problem</div><div style="font-size:9px;color:var(--GR);margin-top:2px">What auditors find in 48h</div><div style="font-size:8px;font-weight:700;color:var(--G);margin-top:4px">— p.25</div></div>
   </div>
-  <div class="rf rf-k"><span>Aegryn Magazine — Issue 01</span><span>03</span></div>
+  <div class="rf rf-r">03</div>
 </div></div>
 <div id="p4" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
   <div style="height:56px"></div>
@@ -414,7 +418,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="padding:10px 0"><div class="lbl lbl-gr" style="margin-bottom:4px">Life</div><div style="font-size:11px;font-weight:700;color:var(--K)">The Founder's Stack — Issue 01</div><div style="font-size:9px;color:var(--GR);margin-top:2px">5 tools / 3 books / 2 podcasts / 1 habit / 1 place</div><div style="font-size:8px;font-weight:700;color:var(--G);margin-top:4px">— p.61</div></div>
   </div>
   <div style="margin-top:auto;font-size:9px;color:#aaa;line-height:1.7">Aegryn Magazine is published quarterly.<br>Digital access is free — permanently. No advertising.<br>media@boha-group.com · aegryn.com/magazine</div>
-  <div class="rf rf-k"><span>Aegryn Magazine</span><span>04</span></div>
+  <div class="rf rf-l">04</div>
 </div></div>
 <div id="p5" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:space-between">
   <span class="lbl">Editorial — Issue 01</span>
@@ -430,7 +434,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <div>
     <div style="font-size:9px;color:rgba(244,243,240,.25);line-height:1.8">All data in Aegryn Magazine is sourced from public market reports (EU Commission, Eurostat, ECB, Invest Europe, EIF, SaaS Capital Index, Pitchbook, CB Insights, McKinsey &amp; Company, Bain &amp; Company, QS World University Rankings) or from Aegryn's proprietary CIFS certification activity. CIFS grades in Deal Watch are analytical estimates — not official certifications. No advertising. Reproduction requires prior written consent from Aegryn SA. © Aegryn SA 2027.</div>
   </div>
-  <div class="rf"><span>Aegryn Magazine — January 2027</span><span>05</span></div>
+  <div class="rf rf-r">05</div>
 </div></div>
 <div id="p6" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:space-between">
   <span class="lbl">Editor's Letter — Issue 01</span>
@@ -440,16 +444,16 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="border-left:2px solid var(--G);padding:14px 16px;margin-top:24px"><div style="font-size:13px;font-weight:300;line-height:1.75;color:rgba(244,243,240,.55);font-style:italic">"Every year, several hundred European tech companies disappear into transactions that should never have happened — or never happen at all."</div></div>
   </div>
   <div style="font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,243,240,.2);font-style:italic">The Aegryn Founding Team — Saint-Sulpice — January 2027</div>
-  <div class="rf"><span>Aegryn Magazine — Editorial</span><span>06</span></div>
+  <div class="rf rf-l">06</div>
 </div></div>
-<div id="p7" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;border-right:1px solid rgba(244,243,244,.07)">
+<div id="p7" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr pg-hdr-dk"><span class="pg-hdr-ttl pg-hdr-ttl-dk">Editorial</span><span class="pg-hdr-pg pg-hdr-pg-dk">07</span></div>
   <div class="img-ph" data-n="IMG 01" style="height:80px;margin-bottom:14px;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.08)"><div class="img-ph-txt" style="color:rgba(255,255,255,.2)">Architectural detail — Swiss building</div><div class="img-ph-dim" style="color:rgba(255,255,255,.12)">960 × 320 px — full width — horizontal</div></div>
   <p class="bdy-w" style="margin-bottom:12px">Not because the assets weren't real. Not because the technology wasn't solid. Because <strong style="color:var(--C)">no one prepared them to transact.</strong></p>
   <p class="bdy-w" style="margin-bottom:12px">We built Aegryn to refuse that outcome. We refuse to let a serious company disappear into a poorly structured process. We refuse to let a founder walk away with 60 cents on the dollar because their data room was three PDFs and a prayer.</p>
   <p class="bdy-w" style="margin-bottom:12px">This magazine exists because the information gap between European founders and institutional acquirers is still enormous — and the publications that could close it have chosen to stay behind paywalls, stay shallow, or stay American. We chose none of the above.</p>
   <div class="pq pq-dk" style="margin-top:8px"><div class="pq-txt" style="color:var(--C)">Angles that advisory firms won't publish because they compete with their own mandates. Angles that mainstream tech press won't publish because they chase unicorns, not the €2M exit that changes a founder's life. Angles that American publications won't publish because they don't cover European small-cap M&amp;A.</div></div>
-  <div class="rf"><span>Editorial</span><span>07</span></div>
+  <div class="rf rf-r">07</div>
 </div></div>
 <div id="p8" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr pg-hdr-dk"><span class="pg-hdr-ttl pg-hdr-ttl-dk">Editorial</span><span class="pg-hdr-pg pg-hdr-pg-dk">08</span></div>
@@ -459,7 +463,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <p class="bdy-w" style="margin-bottom:20px">The CIFS Protocol exists to measure them. This magazine exists to explain why they matter.</p>
   <div class="dv-w"></div>
   <div style="margin-top:14px"><div class="d4" style="color:var(--G)">Certified to transact.</div><div class="d4" style="color:var(--C)">Engineered to Last.</div></div>
-  <div class="rf"><span>Editorial</span><span>08</span></div>
+  <div class="rf rf-l">08</div>
 </div></div>
 <div id="p9" class="pg"><div style="height:595px;background:var(--K);position:relative;overflow:hidden">
   <div class="ghost" style="color:rgba(244,243,240,.035);bottom:40px;right:-15px;font-size:100px">BUILD</div>
@@ -474,7 +478,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
       <div style="font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,243,240,.2)">The Tech Stack That Sells →</div>
     </div>
   </div>
-  <div class="rf"><span>Aegryn Magazine — Build</span><span>09</span></div>
+  <div class="rf rf-r">09</div>
 </div></div>
 <div id="p10" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Build</span><span class="pg-hdr-pg">10</span></div>
@@ -487,9 +491,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <p class="bdy" style="margin-bottom:10px">There are two kinds of tech companies: those built to operate, and those built to transact. The distinction is not visible from the outside. It is entirely in the choices made before revenue was meaningful — before any buyer ever appeared.</p>
   <p class="bdy" style="margin-bottom:10px">The companies that transact well are almost always the ones where the founder, consciously or not, imposed a standard on the operation early: clean books, owned IP, documented architecture, transferable client relationships.</p>
   <p class="bdy">The companies that transact poorly are the ones where none of those choices were made deliberately — and where the cost of that informality materialises, in full, during the 14 weeks of due diligence.</p>
-  <div class="rf rf-k"><span>Build</span><span>10</span></div>
+  <div class="rf rf-l">10</div>
 </div></div>
-<div id="p11" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid rgba(244,243,240,.07)">
+<div id="p11" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:space-between">
   <span class="bdg bdg-g" style="align-self:flex-start">Build</span>
   <div>
     <div class="d3" style="color:var(--C);margin-bottom:14px">Your SaaS Is Worth Less Than You Think — and Here's the Exact Number.</div>
@@ -504,7 +508,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="font-size:8px;color:rgba(244,243,240,.18);margin-top:4px">Aegryn CIFS observation — H1 2025–H1 2026</div>
   </div>
   <div style="font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,243,240,.2)">The Aegryn Editorial Desk</div>
-  <div class="rf"><span>Build — Valuation</span><span>11</span></div>
+  <div class="rf rf-r">11</div>
 </div></div>
 <div id="p12" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Build — Valuation</span><span class="pg-hdr-pg">12</span></div>
@@ -516,7 +520,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <p class="bdy" style="margin-bottom:10px">Most founders estimate their valuation by applying a multiple to their ARR. That number is the ceiling, not the floor. Between the number in a founder's head and the number in a signed LOI lie four systematic adjustments that every serious buyer applies — without exception, and usually without announcing them.</p>
   <p class="bdy" style="margin-bottom:10px">None of these adjustments require exotic financial modelling. All of them are based on observable, correctable characteristics of the asset. The distance between knowing this at year two versus year six is often measured in hundreds of thousands of euros.</p>
   <div class="pq pq-lt"><div class="pq-txt">Founders who arrive prepared close 38% faster and command a premium of 28% above comparable uncertified assets. The preparation is entirely on the seller's clock.</div><div class="pq-attr">Invest Europe / SaaS Capital Index — Private SaaS M&amp;A Data 2026</div></div>
-  <div class="rf rf-k"><span>Build — Valuation</span><span>12</span></div>
+  <div class="rf rf-l">12</div>
 </div></div>
 <div id="p13" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Build — The Four Adjustments</span><span class="pg-hdr-pg">13</span></div>
@@ -542,7 +546,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
       <div style="display:flex;align-items:center;gap:8px"><span style="font-size:9px;color:var(--GR);min-width:52px">F-42: 4–5</span><div style="flex:1;height:3px;background:var(--LG)"><div style="width:100%;height:100%;background:#333"></div></div><span style="font-size:9px;font-weight:700;color:#333">−40%</span></div>
     </div>
   </div>
-  <div class="rf rf-k"><span>Build — Adjustments</span><span>13</span></div>
+  <div class="rf rf-r">13</div>
 </div></div>
 <div id="p14" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Build — Adjustments</span><span class="pg-hdr-pg">14</span></div>
@@ -565,7 +569,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     </div>
   </div>
   <div class="cta-bx"><div style="font-size:10px;font-weight:700;color:var(--K)">Start your CIFS certification — all 4 dimensions</div><div style="font-size:9.5px;line-height:1.6;color:#444;margin-top:4px">Find out where your asset stands before any buyer conversation starts. The CIFS protocol measures all four adjustments and produces a documented grade.</div><div class="cta-url">→ aegryn.com/grade</div></div>
-  <div class="rf rf-k"><span>Build — Adjustments</span><span>14</span></div>
+  <div class="rf rf-l">14</div>
 </div></div>
 <div id="p15" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column">
   <span class="lbl" style="margin-bottom:16px">Build — The Preparation Window</span>
@@ -577,16 +581,16 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="padding:12px 0;border-bottom:1px solid rgba(244,243,240,.08)"><div style="font-size:8px;font-weight:700;color:var(--G);letter-spacing:.14em;text-transform:uppercase;margin-bottom:5px">Month −12 to −6</div><div style="font-size:11px;color:rgba(244,243,240,.65)">Full CIFS Grade. Data room assembly. Buyer universe definition. Advisor selection.</div></div>
     <div style="padding:12px 0"><div style="font-size:8px;font-weight:700;color:var(--G);letter-spacing:.14em;text-transform:uppercase;margin-bottom:5px">Month −6 to Close</div><div style="font-size:11px;color:rgba(244,243,240,.65)">Process launch. Due diligence from a position of documented strength. Negotiate. Close.</div></div>
   </div>
-  <div class="rf"><span>Build</span><span>15</span></div>
+  <div class="rf rf-r">15</div>
 </div></div>
 <div id="p16" class="pg"><div style="height:595px;background:var(--K);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px 36px;text-align:center">
   <div style="font-size:60px;color:rgba(244,243,240,.06);font-weight:800;line-height:1;margin-bottom:-8px">"</div>
   <div style="font-size:20px;font-weight:300;line-height:1.5;color:var(--C);font-style:italic;margin-bottom:24px;max-width:340px">The due diligence team told me they had never seen a data room this clean on a sub-€5M ARR company. I didn't know that was unusual. I thought it was just how you ran a business.</div>
   <div style="width:32px;height:1px;background:var(--G);margin-bottom:14px"></div>
   <div style="font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,243,240,.3)">European SaaS founder — acquired 2026 at 6.4x ARR</div>
-  <div class="rf"><span>Aegryn Magazine</span><span>16</span></div>
+  <div class="rf rf-l">16</div>
 </div></div>
-<div id="p17" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid rgba(244,243,240,.07)">
+<div id="p17" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:space-between">
   <span class="bdg bdg-g" style="align-self:flex-start">Build — Opinion</span>
   <div>
     <div class="d3" style="color:var(--C);margin-bottom:14px">Vibe Coding Is a Valuation Problem.</div>
@@ -599,7 +603,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div class="cap-w" style="margin-top:4px">Share of codebase in the deal that fell apart (p.35)</div>
   </div>
   <div style="font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,243,240,.2)">The Aegryn Editorial Desk</div>
-  <div class="rf"><span>Build — Vibe Coding</span><span>17</span></div>
+  <div class="rf rf-r">17</div>
 </div></div>
 <div id="p18" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Build — Vibe Coding</span><span class="pg-hdr-pg">18</span></div>
@@ -608,7 +612,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <div class="pq pq-lt"><div class="pq-txt">"The LOI was signed at 5x ARR. Technical due diligence took 11 days. The buyer requested a 40% price reduction citing undocumented technical debt. The founder walked. The asset remains unsold."</div><div class="pq-attr">Aegryn Data Desk — H1 2026 Transaction Analysis</div></div>
   <p class="bdy" style="margin-bottom:10px">This is not an argument against Cursor, Windsurf, or any AI coding tool. It is an argument for applying a documentation and review standard to every piece of code that enters a production codebase — regardless of how it was generated.</p>
   <p class="bdy">Human-reviewed, tested, documented AI-assisted code is indistinguishable from human-written code in due diligence. Unreviewed vibe output is not.</p>
-  <div class="rf rf-k"><span>Build — Vibe Coding</span><span>18</span></div>
+  <div class="rf rf-l">18</div>
 </div></div>
 <div id="p19" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Build — Reference</span><span class="pg-hdr-pg">19</span></div>
@@ -631,7 +635,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     </tbody>
   </table>
   <div style="margin-top:8px;font-size:8px;color:var(--GR);letter-spacing:.08em;text-transform:uppercase">Based on Aegryn CIFS technical audit observations (v3.0) — not financial advice</div>
-  <div class="rf rf-k"><span>Build — Stack</span><span>19</span></div>
+  <div class="rf rf-r">19</div>
 </div></div>
 <div id="p20" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Build — Data Room</span><span class="pg-hdr-pg">20</span></div>
@@ -647,7 +651,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="padding:9px 0;border-bottom:1px solid var(--LG);display:flex;gap:10px"><div style="font-size:10px;font-weight:800;color:var(--G);min-width:18px">06</div><div><div style="font-size:11px;font-weight:700">Pentest report</div><div style="font-size:9.5px;color:#666;margin-top:2px">Dated within 18 months — methodology and auditor stated</div></div></div>
     <div style="padding:9px 0;display:flex;gap:10px"><div style="font-size:10px;font-weight:800;color:var(--G);min-width:18px">07</div><div><div style="font-size:11px;font-weight:700">RGPD / EU AI Act compliance brief</div><div style="font-size:9.5px;color:#666;margin-top:2px">For EU-domiciled assets — increasingly non-negotiable in 2027</div></div></div>
   </div>
-  <div class="rf rf-k"><span>Build</span><span>20</span></div>
+  <div class="rf rf-l">20</div>
 </div></div>
 <div id="p21" class="pg"><div style="height:595px;background:var(--C);position:relative;overflow:hidden">
   <div class="ghost ghost-k" style="bottom:30px;right:-15px;font-size:90px">MONEY</div>
@@ -662,7 +666,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
       <div style="font-size:8px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(10,10,10,.25)">Stop Raising. Start Building to Sell. →</div>
     </div>
   </div>
-  <div class="rf rf-k"><span>Aegryn Magazine — Money</span><span>21</span></div>
+  <div class="rf rf-r">21</div>
 </div></div>
 <div id="p22" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Money — Market Context</span><span class="pg-hdr-pg">22</span></div>
@@ -675,9 +679,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <p class="bdy" style="margin-bottom:10px">The headline numbers mask a structural shift that matters far more than the volume total. The spread between top-tier and bottom-tier private SaaS valuations has never been wider. Businesses with strong NRR, a clear path to profitability, and a credible AI positioning attract premium valuations. The rest face systematic downward repricing.</p>
   <p class="bdy" style="margin-bottom:10px">The SaaS Capital Index peaked at 16.9x ARR in 2021. It entered 2025 at roughly 7x, then fell to a decade-plus low near 3.2x by mid-2026. It has since recovered modestly to approximately 3.8x ARR as of late July 2026 (SaaS Capital Index). The recovery is selective: identity, security, and vertical SaaS are leading. AI-exposed horizontal SaaS is lagging.</p>
   <div class="pq pq-lt"><div class="pq-txt">"The bifurcation is real. A proper sell-side process with competitive tension is the most reliable way to maximise outcome regardless of where the market sits."</div><div class="pq-attr">Invest Europe Annual Industry Statistics 2026</div></div>
-  <div class="rf rf-k"><span>Money</span><span>22</span></div>
+  <div class="rf rf-l">22</div>
 </div></div>
-<div id="p23" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;border-right:1px solid rgba(244,243,240,.07)">
+<div id="p23" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column">
   <span class="lbl" style="margin-bottom:20px">Money — EU Tech M&amp;A 2026</span>
   <div class="d3" style="color:var(--C);margin-bottom:24px">The Numbers.</div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:space-between">
@@ -685,7 +689,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div class="stat-blk stat-blk-dk"><div class="cap-w" style="margin-bottom:6px">Global M&amp;A — Full Year 2026 Track</div><div class="num" style="color:var(--C)">$4T</div><div style="font-size:10px;color:rgba(244,243,240,.4);margin-top:6px;line-height:1.5">On track for second-highest year in history. Up 41% through H1 2026 vs H1 2025. Technology driving &gt;25% of mega-deal activity.</div><div style="font-size:8px;color:rgba(244,243,240,.2);margin-top:4px">Source: Pitchbook M&amp;A Market Report — H1 2026</div></div>
     <div class="stat-blk stat-blk-dk"><div class="cap-w" style="margin-bottom:6px">SaaS deals — full year 2025</div><div class="num" style="color:var(--C)">2,698</div><div style="font-size:10px;color:rgba(244,243,240,.4);margin-top:6px;line-height:1.5">+28% on 2024. A record by transaction volume. Acquisition has become the primary exit path for VC-backed software companies.</div><div style="font-size:8px;color:rgba(244,243,240,.2);margin-top:4px">Source: Pitchbook / Invest Europe — Q2 2026</div></div>
   </div>
-  <div class="rf"><span>Money — Market Data</span><span>23</span></div>
+  <div class="rf rf-r">23</div>
 </div></div>
 <div id="p24" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Money — Market Data</span><span class="pg-hdr-pg">24</span></div>
@@ -693,7 +697,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <div class="stat-blk" style="border-color:var(--K)"><div class="cap" style="margin-bottom:6px">AI in tech deals — full year 2025</div><div class="num-sm">47%</div><div style="font-size:10px;color:#555;margin-top:6px;line-height:1.5">Of all technology deals in 2025 carried an AI component — up from roughly 25% in 2024. Private AI companies raised &gt;$226B in Q1 2026 alone, surpassing full-year 2025 in a single quarter.</div><div style="font-size:8px;color:var(--GR);margin-top:4px">Source: CB Insights / EU Commission AI Innovation Report 2026</div></div>
   <div class="stat-blk" style="border-color:var(--K)"><div class="cap" style="margin-bottom:6px">GenAI impact on due diligence timelines</div><div class="num-sm">−10 to −30%</div><div style="font-size:10px;color:#555;margin-top:6px;line-height:1.5">GenAI now cuts deal timelines by 10–30% and reduces costs by approximately 20%. Sellers with clean, well-organised financials capture the full benefit of faster closings.</div><div style="font-size:8px;color:var(--GR);margin-top:4px">Source: McKinsey &amp; Company Global M&amp;A Report 2026</div></div>
   <div class="stat-blk" style="border-color:var(--K)"><div class="cap" style="margin-bottom:6px">EU annual investment gap vs US/China</div><div class="num-sm">€800B</div><div style="font-size:10px;color:#555;margin-top:6px;line-height:1.5">Annual additional spending needed to close the competitive gap — per the Draghi Report commissioned by the European Commission. The policy gap and the preparation gap compound each other.</div><div style="font-size:8px;color:var(--GR);margin-top:4px">Source: EU Commission — “The Future of European Competitiveness” — Draghi Report, September 2024</div></div>
-  <div class="rf rf-k"><span>Money — Market Data</span><span>24</span></div>
+  <div class="rf rf-l">24</div>
 </div></div>
 <div id="p25" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Money — Multiple Map</span><span class="pg-hdr-pg">25</span></div>
@@ -716,7 +720,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     </tbody>
   </table>
   <div style="margin-top:8px;font-size:8px;color:var(--GR);letter-spacing:.06em;text-transform:uppercase">Sources: SaaS Capital Index Q2 2026, Pitchbook, Invest Europe, ECB, EU Commission</div>
-  <div class="rf rf-k"><span>Money — Multiple Map</span><span>25</span></div>
+  <div class="rf rf-r">25</div>
 </div></div>
 <div id="p26" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Money — Multiple Map</span><span class="pg-hdr-pg">26</span></div>
@@ -727,21 +731,21 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <div style="background:var(--K);padding:18px">
     <div class="lbl" style="margin-bottom:12px">The EU vs US Delta — 2026 Update</div>
     <div style="display:flex;gap:0;margin-bottom:12px">
-      <div style="flex:1;padding:12px;border-right:1px solid rgba(244,243,240,.08)"><div style="font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(244,243,240,.3);margin-bottom:5px">EU Median — Private SaaS</div><div style="font-size:22px;font-weight:800;color:var(--C)">3.8x ARR</div></div>
+      <div style="flex:1;padding:12px"><div style="font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(244,243,240,.3);margin-bottom:5px">EU Median — Private SaaS</div><div style="font-size:22px;font-weight:800;color:var(--C)">3.8x ARR</div></div>
       <div style="flex:1;padding:12px"><div style="font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(244,243,240,.3);margin-bottom:5px">US Median — Private SaaS</div><div style="font-size:22px;font-weight:800;color:var(--C)">4.1x ARR</div></div>
     </div>
     <div style="font-size:10px;color:rgba(244,243,240,.4);line-height:1.5">First time since 2015 the gap is under 0.3x. Certified, prepared EU assets are being valued at parity with US equivalents by global buyers. The geographic discount is structural history.</div>
   </div>
-  <div class="rf rf-k"><span>Money — Multiple Map</span><span>26</span></div>
+  <div class="rf rf-l">26</div>
 </div></div>
-<div id="p27" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid rgba(244,243,240,.07)">
+<div id="p27" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:space-between">
   <span class="bdg bdg-g" style="align-self:flex-start">Opinion — Money</span>
   <div>
     <div class="d2" style="color:var(--C);line-height:.92;margin-bottom:18px">Stop<br>Raising.<br>Start<br>Building<br>to Sell.</div>
     <div class="dek dek-w">The maths most VCs won't show you. For the majority of European founders under €5M ARR, the bootstrap-to-exit path returns more than the dilution spiral.</div>
   </div>
   <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,243,240,.2)">The Aegryn Editorial Desk</div>
-  <div class="rf"><span>Money — Opinion</span><span>27</span></div>
+  <div class="rf rf-r">27</div>
 </div></div>
 <div id="p28" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Money — Opinion</span><span class="pg-hdr-pg">28</span></div>
@@ -750,7 +754,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <div class="pq pq-lt"><div class="pq-txt">"Clean cap tables, documented IP, transferable contracts, and a product that solves one problem exceptionally well are now exit strategy, not housekeeping."</div><div class="pq-attr">Invest Europe Annual Report 2026 — European Private Equity Activity</div></div>
   <p class="bdy" style="margin-bottom:10px">The founders who capture the best outcomes are not the ones who time the market perfectly. They are the ones who are ready when the window opens. Preparation is entirely on the seller's clock. Not the buyer's, not the market's. Yours.</p>
   <p class="bdy">The EU exit ecosystem is mature enough in 2027 to absorb well-prepared assets across all verticals. The question is not whether a serious EU tech asset will find a buyer. It is whether it arrives at the table ready to be found — or whether due diligence finds the problems first.</p>
-  <div class="rf rf-k"><span>Money — Opinion</span><span>28</span></div>
+  <div class="rf rf-l">28</div>
 </div></div>
 <div id="p29" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Money — Scenarios</span><span class="pg-hdr-pg">29</span></div>
@@ -774,14 +778,14 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
       <div style="font-size:8px;color:var(--GR);margin-top:4px">Source: European Investment Fund (EIF) — European Venture Capital Report 2025</div>
     </div>
   </div>
-  <div class="rf rf-k"><span>Money — Scenarios</span><span>29</span></div>
+  <div class="rf rf-r">29</div>
 </div></div>
 <div id="p30" class="pg"><div style="height:595px;background:var(--G);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px 36px;text-align:center">
   <div style="font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.35);margin-bottom:24px">Money — Perspective</div>
   <div style="font-size:22px;font-weight:300;line-height:1.45;color:var(--K);font-style:italic;margin-bottom:20px;max-width:340px">"The founders who capture the best outcomes in 2027 are not the ones who time the market perfectly — they are the ones who are ready when the window opens."</div>
   <div style="width:28px;height:1px;background:var(--K);margin-bottom:14px"></div>
   <div style="font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(0,0,0,.4)">Invest Europe Annual Industry Statistics 2026</div>
-  <div class="rf rf-gn"><span>Aegryn Magazine</span><span>30</span></div>
+  <div class="rf rf-l">30</div>
 </div></div>
 <div id="p31" class="pg"><div style="height:595px;background:var(--K);position:relative;overflow:hidden">
   <div class="ghost" style="font-size:72px;bottom:30px;right:-10px">TRANSACTION</div>
@@ -791,7 +795,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="width:48px;height:2px;background:var(--G);margin-bottom:20px"></div>
     <div style="font-size:13px;font-weight:300;line-height:1.75;color:rgba(244,243,240,.4);max-width:320px">Five deals from H1 2026. Four acquirer profiles. What the transactions say about who is buying European tech — and how they decide.</div>
   </div>
-  <div class="rf"><span>Aegryn Magazine — Transaction</span><span>31</span></div>
+  <div class="rf rf-r">31</div>
 </div></div>
 <div id="p32" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Transaction — Deal Watch</span><span class="pg-hdr-pg">32</span></div>
@@ -805,9 +809,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="padding:12px;background:var(--W);border:1px solid var(--LG)"><div class="lbl lbl-gr" style="margin-bottom:4px">Regulatory Window</div><div style="font-size:13px;font-weight:700">8.2x ARR</div><div style="font-size:9px;color:#666;margin-top:2px">Deal 04 — DORA compliance RegTech, 3x above sector median</div></div>
     <div style="padding:12px;background:var(--K);border:1px solid var(--K)"><div class="lbl" style="margin-bottom:4px">Did Not Close</div><div style="font-size:13px;font-weight:700;color:var(--C)">−40%</div><div style="font-size:9px;color:rgba(244,243,240,.45);margin-top:2px">Deal 05 — Vibe-coded SaaS, buyer walked after technical review</div></div>
   </div>
-  <div class="rf rf-k"><span>Transaction — Deal Watch</span><span>32</span></div>
+  <div class="rf rf-l">32</div>
 </div></div>
-<div id="p33" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column;border-right:1px solid var(--LG)">
+<div id="p33" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <span class="lbl lbl-gr" style="margin-bottom:12px">Deal Watch — H1 2026</span>
   <div class="deal-card">
     <div class="deal-n">01</div>
@@ -829,7 +833,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     </div>
     <span class="bdg bdg-sk" style="white-space:nowrap;align-self:flex-start;font-size:7px">Grade A</span>
   </div>
-  <div class="rf rf-k"><span>Transaction — Deal Watch</span><span>33</span></div>
+  <div class="rf rf-r">33</div>
 </div></div>
 <div id="p34" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Transaction — Deal Watch</span><span class="pg-hdr-pg">34</span></div>
@@ -853,7 +857,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     </div>
     <span class="bdg bdg-sk" style="white-space:nowrap;align-self:flex-start;font-size:7px">Grade A</span>
   </div>
-  <div class="rf rf-k"><span>Transaction — Deal Watch</span><span>34</span></div>
+  <div class="rf rf-l">34</div>
 </div></div>
 <div id="p35" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Transaction — Deal Watch</span><span class="pg-hdr-pg">35</span></div>
@@ -875,9 +879,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="display:flex;gap:10px"><span style="color:var(--G);font-weight:700;font-size:11px;min-width:14px">4.</span><span style="font-size:11px;color:#444">Regulatory windows reward those who prepared before the window opened.</span></div>
     <div style="display:flex;gap:10px"><span style="color:var(--G);font-weight:700;font-size:11px;min-width:14px">5.</span><span style="font-size:11px;color:#444">Vibe-coded core logic is the fastest way to turn a 5x into a 0x.</span></div>
   </div>
-  <div class="rf rf-k"><span>Transaction</span><span>35</span></div>
+  <div class="rf rf-r">35</div>
 </div></div>
-<div id="p36" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;border-right:1px solid rgba(244,243,244,.07)">
+<div id="p36" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column">
   <span class="lbl" style="margin-bottom:14px">Transaction — Acquirer Profiles</span>
   <div class="d3" style="color:var(--C);margin-bottom:14px">Who Is Buying<br>European Tech<br>in 2027.</div>
   <div class="dek dek-w" style="margin-bottom:20px">The acquirer universe for EU tech small cap (€500K–€10M ARR) is more diverse than most founders realize — and the logic of each buyer type is radically different from the others.</div>
@@ -887,7 +891,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="padding:12px;border:1px solid rgba(244,243,240,.1)"><div class="lbl" style="margin-bottom:5px">Profile 03</div><div style="font-size:12px;font-weight:700;color:var(--C)">Strategic Acquirer</div><div style="font-size:9.5px;color:rgba(244,243,240,.4);margin-top:3px">Unlimited ticket (selective)<br>Hold: integration<br>Premium: +30–50% if fit is real</div></div>
     <div style="padding:12px;border:1px solid rgba(244,243,240,.1)"><div class="lbl" style="margin-bottom:5px">Profile 04</div><div class="lbl" style="color:var(--G);font-size:8px;display:block;margin-bottom:4px">Fastest growing</div><div style="font-size:12px;font-weight:700;color:var(--C)">Family Office</div><div style="font-size:9.5px;color:rgba(244,243,240,.4);margin-top:3px">Ticket €2M–€20M<br>Hold: 10+ years<br>Best for profitable bootstrap</div></div>
   </div>
-  <div class="rf"><span>Transaction — Buyer Profiles</span><span>36</span></div>
+  <div class="rf rf-l">36</div>
 </div></div>
 <div id="p37" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Transaction — Acquirer Profiles</span><span class="pg-hdr-pg">37</span></div>
@@ -901,7 +905,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div class="profile-nm">The Individual Operator</div>
     <div class="profile-body">Ticket: €500K–€5M, often with institutional backing from search fund investors. Hold period: indefinite — they run it, probably for a decade or more. What they pay for: simplicity, profitability, a founder willing to transition properly. What makes them different: they will pay slightly below PE multiples but offer full retention of the business's identity, no integration pressure, and sometimes an earn-out that benefits a good transition. The fastest-growing acquirer type in EU 2025–2026. European Investment Fund (EIF) Search Fund Monitor counted at least 18 new search fund launches in Western Europe in H1 2026.</div>
   </div>
-  <div class="rf rf-k"><span>Transaction — Buyer Profiles</span><span>37</span></div>
+  <div class="rf rf-r">37</div>
 </div></div>
 <div id="p38" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Transaction — Acquirer Profiles</span><span class="pg-hdr-pg">38</span></div>
@@ -915,7 +919,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div class="profile-nm">The Patient Capital</div>
     <div class="profile-body">Ticket: €2M–€20M. Hold period: 10+ years. Logic: cash-generating, defensible assets that don't require active management or aggressive growth. What they pay for: recurring revenue, low churn, founder-independent operations, and a sector they understand. The fastest-growing buyer type for profitable bootstrapped assets in Switzerland, DACH, and Benelux. They don't need a 10x. They need a solid 2x over 10 years — which means they can pay full price without requiring heroic growth assumptions. This alignment is exceptional for founders exiting at €1M–€5M ARR.</div>
   </div>
-  <div class="rf rf-k"><span>Transaction</span><span>38</span></div>
+  <div class="rf rf-l">38</div>
 </div></div>
 <div id="p39" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
   <span class="lbl" style="margin-bottom:20px">CIFS Certification — Aegryn SA</span>
@@ -931,7 +935,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="padding:10px;border:1px solid rgba(244,243,240,.1)"><div style="font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--G);margin-bottom:4px">ADVISORY</div><div style="font-size:9px;color:rgba(244,243,240,.5)">Tech and transaction advisory</div></div>
     <div style="padding:10px;border:1px solid rgba(244,243,240,.1)"><div style="font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--G);margin-bottom:4px">TRANSACTION</div><div style="font-size:9px;color:rgba(244,243,240,.5)">Confidential disposal process</div></div>
   </div>
-  <div class="rf"><span>Aegryn</span><span>39</span></div>
+  <div class="rf rf-r">39</div>
 </div></div>
 <div id="p40" class="pg"><div style="height:595px;background:var(--K);position:relative;overflow:hidden">
   <div class="ghost" style="font-size:80px;bottom:30px;right:-8px">INDEX</div>
@@ -941,9 +945,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="width:48px;height:2px;background:var(--G);margin-bottom:20px"></div>
     <div style="font-size:13px;font-weight:300;line-height:1.75;color:rgba(244,243,240,.4);max-width:300px">Proprietary data from the CIFS certification protocol. Published here first. Updated every issue. Not available elsewhere.</div>
   </div>
-  <div class="rf"><span>Aegryn Magazine — Index</span><span>40</span></div>
+  <div class="rf rf-l">40</div>
 </div></div>
-<div id="p41" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;border-right:1px solid rgba(244,243,240,.07)">
+<div id="p41" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column">
   <span class="lbl" style="margin-bottom:16px">The Aegryn Index — Edition I</span>
   <div class="d3" style="color:var(--C);margin-bottom:20px">The Index.</div>
   <div class="ix-grid" style="flex:1;margin-bottom:0">
@@ -954,7 +958,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div class="ix-cell"><div style="font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,243,240,.3);margin-bottom:8px">Auction Ready (top tier)</div><div class="num" style="font-size:36px;color:var(--G)">8%</div><div style="font-size:10px;color:rgba(244,243,240,.35);margin-top:6px;line-height:1.4">Of submissions reach Auction Ready status</div></div>
     <div class="ix-cell"><div style="font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,243,240,.3);margin-bottom:8px">Leading vertical — submissions</div><div style="font-size:18px;font-weight:800;color:var(--C);margin-top:4px">SaaS / AI</div><div style="font-size:10px;color:rgba(244,243,240,.35);margin-top:6px;line-height:1.4">Followed by FinTech 22%, LegalTech 18%, PropTech 11%</div></div>
   </div>
-  <div class="rf"><span>Aegryn Index — Edition I</span><span>41</span></div>
+  <div class="rf rf-r">41</div>
 </div></div>
 <div id="p42" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column">
   <div style="height:36px"></div>
@@ -975,7 +979,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     </div>
   </div>
   <div style="margin-top:14px;font-size:9px;color:rgba(244,243,240,.2);line-height:1.6">CIFS Protocol v3.0 — Base Reference — Issue 01<br>This index does not name certified assets. Updated each edition.</div>
-  <div class="rf"><span>Aegryn Index — Edition I</span><span>42</span></div>
+  <div class="rf rf-l">42</div>
 </div></div>
 <div id="p43" class="pg"><div style="height:595px;background:var(--G);position:relative;overflow:hidden">
   <div style="position:absolute;bottom:40px;right:-10px;font-size:90px;font-weight:800;color:rgba(0,0,0,.06);letter-spacing:-.05em;line-height:.85">AI</div>
@@ -985,9 +989,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="width:48px;height:2px;background:var(--K);margin-bottom:20px"></div>
     <div style="font-size:13px;font-weight:300;line-height:1.75;color:rgba(0,0,0,.45);max-width:300px">AI doesn't automatically create value in a tech asset — it reveals, amplifies, or destroys it. The difference is invisible without a rigorous audit.</div>
   </div>
-  <div class="rf rf-gn"><span>Aegryn Magazine — Tech &amp; AI</span><span>43</span></div>
+  <div class="rf rf-r">43</div>
 </div></div>
-<div id="p44" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid rgba(244,243,240,.07)">
+<div id="p44" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:space-between">
   <span class="bdg bdg-g" style="align-self:flex-start">Tech &amp; AI</span>
   <div>
     <div class="d3" style="color:var(--C);margin-bottom:14px">When AI Becomes a Liability.</div>
@@ -1002,7 +1006,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="font-size:8px;color:rgba(244,243,240,.2);margin-top:4px">CB Insights State of AI Report — Q1 2026</div>
   </div>
   <div style="font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,243,240,.2)">The Aegryn Editorial Desk</div>
-  <div class="rf"><span>Tech &amp; AI</span><span>44</span></div>
+  <div class="rf rf-l">44</div>
 </div></div>
 <div id="p45" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Tech &amp; AI — Red Flags</span><span class="pg-hdr-pg">45</span></div>
@@ -1016,9 +1020,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="padding:10px 0;display:flex;gap:10px"><div style="width:16px;height:16px;background:var(--K);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px"><div style="width:5px;height:5px;background:var(--G)"></div></div><div><div style="font-size:11px;font-weight:700;margin-bottom:3px">No model versioning strategy</div><div style="font-size:10px;line-height:1.6;color:#555">When the LLM updates, product changes behaviour unpredictably. Buyers need a documented answer. Most founders have none.</div></div></div>
   </div>
   <div class="cta-bx"><div style="font-size:10px;font-weight:700;color:var(--K)">CIFS S-16 — AI &amp; Security Module</div><div style="font-size:9.5px;line-height:1.5;color:#444;margin-top:4px">Assesses your AI architecture against the checklist buyers use as standard. Produces a documented brief, not just a score.</div><div class="cta-url">→ aegryn.com/grade</div></div>
-  <div class="rf rf-k"><span>Tech &amp; AI</span><span>45</span></div>
+  <div class="rf rf-r">45</div>
 </div></div>
-<div id="p46" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column;border-right:1px solid var(--LG)">
+<div id="p46" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Tech &amp; AI — Valuation</span><span class="pg-hdr-pg">46</span></div>
   <span class="lbl lbl-gr" style="margin-bottom:8px">Tech &amp; AI — Valuation</span>
   <div class="d3" style="margin-bottom:10px">The AI Premium Is Real — Here's How to Earn It.</div>
@@ -1026,7 +1030,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <p class="bdy" style="margin-bottom:10px">When a buyer's technical team evaluates an AI-enabled asset, they are performing one test: is the AI defensible, or substitutable? A feature AI — a ChatGPT wrapper, a standard RAG implementation over public data — is substitutable. A competitor can replicate it in 90 days. A buyer pays no premium for something replaceable.</p>
   <p class="bdy" style="margin-bottom:10px">An architecture AI — proprietary training data with documented rights, custom fine-tuning, a tested model strategy, EU AI Act compliance — is defensible. A competitor cannot replicate it in 90 days because the data doesn't exist elsewhere, the fine-tuning took 18 months of customer feedback, and the compliance framework required a legal and technical investment that most competitors haven't made.</p>
   <div class="pq pq-lt"><div class="pq-txt">Founders who arrive with a complete AI architecture brief — model provenance, data rights, fallback strategy, compliance status, versioning policy — close AI due diligence 60% faster.</div><div class="pq-attr">Aegryn CIFS Protocol S-16 — Internal Observation 2026</div></div>
-  <div class="rf rf-k"><span>Tech &amp; AI — Premium</span><span>46</span></div>
+  <div class="rf rf-l">46</div>
 </div></div>
 <div id="p47" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Tech &amp; AI — Architecture Premium</span><span class="pg-hdr-pg">47</span></div>
@@ -1044,7 +1048,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   </div>
   <p style="font-size:10.5px;color:#555;margin-bottom:10px;line-height:1.6">The premiums above apply at the margin — they compound with base valuation. An AI-native SaaS trading at 6x ARR with all five architecture elements present can realistically negotiate toward 9–10x in a competitive process. The elements are correctable. The documentation is achievable. The timeline is 12–18 months with intentional effort.</p>
   <div class="cta-bx"><div style="font-size:10px;font-weight:700;color:var(--K)">CIFS Grade — AI Architecture Assessment</div><div class="cta-url">→ aegryn.com/grade</div></div>
-  <div class="rf rf-k"><span>Tech &amp; AI</span><span>47</span></div>
+  <div class="rf rf-r">47</div>
 </div></div>
 <div id="p48" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Tech &amp; AI — Due Diligence</span><span class="pg-hdr-pg">48</span></div>
@@ -1060,7 +1064,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="padding:9px 0;border-bottom:1px solid var(--LG);display:flex;gap:10px"><span style="font-size:10px;font-weight:800;color:var(--G);min-width:18px">Q6</span><div><div style="font-size:10px;font-weight:700">What is the AI cost structure and its sensitivity to volume?</div><div style="font-size:9.5px;color:#666;margin-top:2px">Token costs, cost per transaction, margin impact at 10x scale</div></div></div>
     <div style="padding:9px 0;display:flex;gap:10px"><span style="font-size:10px;font-weight:800;color:var(--G);min-width:18px">Q7</span><div><div style="font-size:10px;font-weight:700">Has any AI-generated code in the product been reviewed by a human?</div><div style="font-size:9.5px;color:#666;margin-top:2px">Code review policy, documentation standard, test coverage per module</div></div></div>
   </div>
-  <div class="rf rf-k"><span>Tech &amp; AI</span><span>48</span></div>
+  <div class="rf rf-l">48</div>
 </div></div>
 <div id="p49" class="pg"><div style="height:595px;background:var(--K);position:relative;overflow:hidden">
   <div class="ghost" style="bottom:30px;right:-12px;font-size:80px">PEOPLE</div>
@@ -1070,9 +1074,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="width:48px;height:2px;background:var(--G);margin-bottom:20px"></div>
     <div style="font-size:13px;font-weight:300;line-height:1.75;color:rgba(244,243,240,.4);max-width:300px">The founders who built something real. The acquirers who paid full price for it. And the five builders in Europe doing it again right now.</div>
   </div>
-  <div class="rf"><span>Aegryn Magazine — People</span><span>49</span></div>
+  <div class="rf rf-r">49</div>
 </div></div>
-<div id="p50" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid rgba(244,243,240,.07)">
+<div id="p50" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:space-between">
   <span class="lbl" style="margin-bottom:0">People — Portrait</span>
   <div>
     <div style="font-size:36px;font-weight:800;color:var(--C);letter-spacing:-.025em;line-height:1;margin-bottom:10px">The Founder<br>Who Built<br>to Sell.</div>
@@ -1088,7 +1092,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     </div>
   </div>
   <div style="font-size:8px;color:rgba(244,243,240,.18);font-style:italic;line-height:1.7">Details altered to protect confidentiality. Portrait drawn from conversations with four founders who exited 2025–2026.</div>
-  <div class="rf"><span>People — Portrait</span><span>50</span></div>
+  <div class="rf rf-l">50</div>
 </div></div>
 <div id="p51" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">People — Portrait</span><span class="pg-hdr-pg">51</span></div>
@@ -1099,7 +1103,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <p class="bdy" style="margin-bottom:10px">He built the first version alone, over a weekend, to solve a problem he had watched his previous employer pay €40,000 a year to solve badly. He did not think about exits for the first four years. He thought about making the software do the thing properly.</p>
   <p class="bdy" style="margin-bottom:10px">By year five, he had €2.4M in ARR, seven employees, and a waiting list. He also had a cap table that was entirely clean — no convertible notes, no SAFEs, no informal equity promises to early contractors. He had signed IP assignment agreements with every developer who had ever written a line of code for the product.</p>
   <p class="bdy">His bookkeeper closed the monthly accounts within 48 hours of month-end, every month, for six years. None of this was strategic preparation for a sale. It was simply how he ran things.</p>
-  <div class="rf rf-k"><span>People — Portrait</span><span>51</span></div>
+  <div class="rf rf-r">51</div>
 </div></div>
 <div id="p52" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">People — Portrait</span><span class="pg-hdr-pg">52</span></div>
@@ -1117,7 +1121,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
       <div style="display:flex;gap:6px"><span style="color:var(--G);font-weight:700">✓</span>ARR verifiable with full audit trail</div>
     </div>
   </div>
-  <div class="rf rf-k"><span>People — Portrait</span><span>52</span></div>
+  <div class="rf rf-l">52</div>
 </div></div>
 <div id="p53" class="pg"><div style="height:595px;background:var(--K);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px 36px;text-align:center">
   <div style="font-size:55px;color:rgba(244,243,240,.06);font-weight:800;line-height:1;margin-bottom:-6px">"</div>
@@ -1126,7 +1130,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <div style="font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,243,240,.3)">Invest Europe — European Ecosystem Analysis — H1 2026</div>
   <div style="margin-top:28px;font-size:12px;font-weight:300;line-height:1.7;color:rgba(244,243,240,.35);max-width:300px;font-style:italic">Seven billion-dollar EU startups found a buyer or hit public markets in H1 2026 — matching Europe's previous annual record. The ecosystem is mature. The preparation gap is not.</div>
   <div style="font-size:8px;color:rgba(244,243,240,.2);margin-top:8px">Source: Invest Europe / EIF H1 2026 Activity Report</div>
-  <div class="rf"><span>Aegryn Magazine</span><span>53</span></div>
+  <div class="rf rf-r">53</div>
 </div></div>
 <div id="p54" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">People — Radar</span><span class="pg-hdr-pg">54</span></div>
@@ -1138,7 +1142,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <div class="radar-card"><div class="radar-tag">RegTech · Netherlands · 3 years</div><div class="radar-nm">AI-Native Compliance Monitoring</div><div class="radar-body">€210K ARR, +30% QoQ. Monitors EU financial services regulation in real-time against internal policies. DORA compliance was accidental timing — built 18 months before the regulation was finalised.</div></div>
   <div class="radar-card"><div class="radar-tag">EdTech · Spain · 4 years</div><div class="radar-nm">Compliance Training — EU Financial Services</div><div class="radar-body">€340K ARR, 91% annual retention. 140 financial institutions across Spain, Portugal, Italy. Founder sold compliance services to the same institutions for 12 years before building the SaaS version. Distribution is the moat.</div></div>
   <div class="radar-card" style="margin-bottom:0"><div class="radar-tag">PropTech · France · 5 years</div><div class="radar-nm">Commercial Real Estate Transaction Intelligence</div><div class="radar-body">€290K ARR. Proprietary transaction dataset built over five years from public registry data, direct transaction sources, and a network of contributing agents. The founder calls it "the most unfashionable data business in PropTech" — which is approximately correct, and the reason the moat is real.</div></div>
-  <div class="rf rf-k"><span>People — Radar</span><span>54</span></div>
+  <div class="rf rf-l">54</div>
 </div></div>
 <div id="p55" class="pg"><div style="height:595px;background:var(--C);position:relative;overflow:hidden">
   <div class="ghost ghost-k" style="bottom:30px;right:-12px;font-size:100px">LIFE</div>
@@ -1148,7 +1152,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="width:48px;height:2px;background:var(--K);margin-bottom:20px"></div>
     <div style="font-size:13px;font-weight:300;line-height:1.75;color:rgba(10,10,10,.4);max-width:300px">How the people who build things worth selling actually live, work, and think — stripped of the performance.</div>
   </div>
-  <div class="rf rf-k"><span>Aegryn Magazine — Life</span><span>55</span></div>
+  <div class="rf rf-r">55</div>
 </div></div>
 <div id="p56" class="pg"><div style="height:595px;background:var(--W);display:flex;flex-direction:column;padding:28px 28px 44px">
   <span class="lbl lbl-gr" style="margin-bottom:6px">Life — Recurring</span>
@@ -1159,9 +1163,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div class="stk-cell"><div class="stk-cat">3 Books</div><div class="stk-nm">The SaaS Playbook — Rob Walling</div><div class="stk-desc">Only bootstrapped SaaS book that discusses exit without assuming VC.</div><div class="stk-nm">Valuation — Damodaran</div><div class="stk-desc">Makes multiple maths intuitive after ~100 pages of work. Worth it.</div><div class="stk-nm">Zero to Sold — Arvid Kahl</div><div class="stk-desc">Built, bootstrapped, exited. Honest about what sale preparation requires.</div><div class="stk-cat" style="margin-top:12px">2 Podcasts</div><div class="stk-nm">Acquired</div><div class="stk-desc">Business history as strategy school. 1M+ listeners per episode.</div><div class="stk-nm">Indie Hackers</div><div class="stk-desc">Real founders, real numbers. Filter for bootstrap-to-exit stories.</div></div>
     <div class="stk-cell"><div class="stk-cat">1 Habit</div><div class="stk-nm">Monthly P&amp;L — alone, in writing</div><div class="stk-desc" style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--LG)">Every first Monday. 90 minutes. No accountant. No co-founder. Founders who do this are never surprised in due diligence.</div><div class="stk-cat">1 Object</div><div class="stk-nm">A fountain pen</div><div class="stk-desc" style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--LG)">Not a productivity hack. A commitment device. Founders who sign things carefully — contracts, IP assignments, fiduciaire engagements — tend to build things carefully. The observation is not scientific. It is consistent.</div><div class="stk-cat">1 Place</div><div class="stk-nm">Lausanne / Canton de Vaud</div><div class="stk-desc">40 min to Geneva. EPFL talent (global top 15). Fiduciaires who understand SaaS. 13.8% corporate tax. Family office capital looking for exactly what you're building.</div></div>
   </div>
-  <div class="rf rf-k"><span>Life — Founder's Stack</span><span>56</span></div>
+  <div class="rf rf-l">56</div>
 </div></div>
-<div id="p57" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid rgba(244,243,240,.07)">
+<div id="p57" class="pg"><div class="sp dk" style="height:595px;display:flex;flex-direction:column;justify-content:space-between">
   <span class="bdg bdg-g" style="align-self:flex-start">Life — Place</span>
   <div>
     <div class="d3" style="color:var(--C);margin-bottom:14px">Switzerland's<br>Quiet Tech Bet.</div>
@@ -1174,7 +1178,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(244,243,240,.08)"><span style="font-size:10px;color:rgba(244,243,240,.55)">Lausanne → Geneva</span><span style="font-size:12px;font-weight:700;color:var(--C)">40 min train</span></div>
     <div style="display:flex;justify-content:space-between;padding:10px 0"><span style="font-size:10px;color:rgba(244,243,240,.55)">EU market access</span><span style="font-size:12px;font-weight:700;color:var(--G)">Full (bilateral)</span></div>
   </div>
-  <div class="rf"><span>Life — Switzerland</span><span>57</span></div>
+  <div class="rf rf-r">57</div>
 </div></div>
 <div id="p58" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Life — Switzerland</span><span class="pg-hdr-pg">58</span></div>
@@ -1186,7 +1190,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <p class="bdy" style="margin-bottom:10px">What Lausanne, Zurich, and Geneva offer the founder in build-to-exit mode is specific and undervalued. The legal infrastructure for structuring an asset correctly — fiduciaires who understand SaaS revenue models, lawyers who have seen hundreds of tech M&A transactions, notaries who can close an SA conversion in three weeks — is more concentrated per capita in Switzerland than anywhere in EU continental Europe.</p>
   <div class="pq pq-lt"><div class="pq-txt">"Switzerland is not a startup ecosystem in the Berlin sense. It is something more useful: a place where the infrastructure for running a serious, profitable technology business correctly is genuinely excellent."</div><div class="pq-attr">Aegryn Data Desk — Canton de Vaud — 2026</div></div>
   <p class="bdy">The 40-minute train between Lausanne and Geneva gives a founder access to two distinct networks: EPFL talent and the Romandie tech community from Lausanne; international banking, family office, and institutional capital from Geneva. Both networks underestimate each other. That gap is, for now, an advantage for those who know both.</p>
-  <div class="rf rf-k"><span>Life — Switzerland</span><span>58</span></div>
+  <div class="rf rf-l">58</div>
 </div></div>
 <div id="p59" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Issue 02 Preview</span><span class="pg-hdr-pg">59</span></div>
@@ -1206,7 +1210,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     <div style="font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--G)">→ aegryn.com/magazine — Subscribe</div>
     <div style="font-size:9px;color:rgba(10,10,10,.35);margin-top:6px">Issue 02 publishes April 2027. Subscribers receive access 48h before public release.</div>
   </div>
-  <div class="rf rf-k"><span>Aegryn Magazine — Issue 02 Preview</span><span>59</span></div>
+  <div class="rf rf-r">59</div>
 </div></div>
 <div id="p60" class="pg"><div style="height:595px;background:var(--C);display:flex;flex-direction:column;padding:32px 36px;justify-content:space-between">
   <div style="display:flex;justify-content:space-between"><div style="font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(10,10,10,.15)">Aegryn Magazine</div><div style="font-size:8px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(10,10,10,.12)">Issue 01 — January 2027</div></div>
@@ -1451,23 +1455,24 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     var url = 'https://aegryn.com/en/magazine/issue-01';
     var canvas = document.getElementById('cover-qr');
     if(!canvas) return;
-    var sz = 58, mod = 29; /* QR v3 = 29x29 modules */
+    var sz = 56, mod = 29; /* QR v3 = 29x29 modules, canvas 56px */
     var cell = Math.floor(sz / mod);
     var pad  = Math.floor((sz - cell * mod) / 2);
     var ctx2 = canvas.getContext('2d');
 
-    /* Background semi-transparent sombre */
-    ctx2.fillStyle = 'rgba(10,12,16,0.55)';
+    /* Fond blanc — encadré blanc dans le HTML */
+    ctx2.fillStyle = '#ffffff';
     ctx2.fillRect(0,0,sz,sz);
 
-    /* QR V2-M matrix — calculé pour https://aegryn.com/en/magazine/issue-01 */
+    /* QR V3 matrix — encode https://aegryn.com/en/magazine/issue-01 */
     var M = [[1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1],[1,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,1,1,1,0,1,0,0,0,0,0,1],[1,0,1,1,1,0,1,0,1,1,1,1,0,0,0,1,1,1,0,0,0,0,1,0,1,1,1,0,1],[1,0,1,1,1,0,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,0,1,0,1,1,1,0,1],[1,0,1,1,1,0,1,0,0,0,0,0,1,1,1,0,0,0,1,1,1,0,1,0,1,1,1,0,1],[1,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,1,1,1,0,1,0,0,0,0,0,1],[1,1,1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1],[1,0,0,0,0,0,1,0,1,1,1,1,0,0,0,1,1,1,0,0,0,0,1,0,0,0,0,0,1],[0,0,0,0,1,1,1,0,1,0,0,0,1,1,1,0,0,0,1,1,1,0,1,0,0,0,1,0,1],[1,1,1,0,0,0,0,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[0,0,0,1,1,1,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[1,1,1,0,0,0,0,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[0,0,0,1,1,1,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[1,1,1,0,0,0,0,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[0,0,0,1,1,1,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[1,0,0,0,0,0,1,0,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[1,1,1,1,1,1,1,1,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[1,0,0,0,0,0,1,0,1,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[1,0,1,1,1,0,1,0,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[1,0,1,1,1,0,1,0,0,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[1,0,1,1,1,0,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[1,0,0,0,0,0,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0]];
 
-    ctx2.fillStyle = 'rgba(255,255,255,0.92)';
+    /* Modules noirs sur fond blanc */
+    ctx2.fillStyle = '#0F1A2B';
     for(var r=0;r<mod;r++){
       for(var c=0;c<mod;c++){
         if(M[r][c]){
-          ctx2.fillRect(pad+c*cell, pad+r*cell, cell-0.5, cell-0.5);
+          ctx2.fillRect(pad+c*cell, pad+r*cell, cell, cell);
         }
       }
     }
