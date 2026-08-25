@@ -6157,13 +6157,154 @@
       "notifyLabel": "Jede Ausgabe erhalten",
       "notifyDesc": "Melden Sie sich an, um bei jeder neuen Jahresausgabe benachrichtigt zu werden.",
       "newsletterLabel": "Artikel & Insights",
-      "newsletterDesc": "Erhalten Sie unsere Artikel zum Tech-M&A-Markt — wöchentlich."
+      "newsletterDesc": "Erhalten Sie unsere Artikel zum Tech-M&A-Markt — wöchentlich.",
+      "charteFreqLabel": "Erscheinungsweise",
+      "charteFreqVal": "Vierteljährlich",
+      "charteLangLabel": "Sprachen",
+      "charteLangVal": "FR · EN · DE · ES · IT · NL",
+      "charteAccesLabel": "Zugang",
+      "charteAccesVal": "Kostenlos — dauerhafter digitaler Zugang",
+      "nextIssuesTitle": "Nächste Ausgaben",
+      "issue02Date": "April 2027",
+      "issue02Theme": "The Exit Equation",
+      "issue02Desc": "Die Entscheidung, die Vorbereitung, die Verhandlung. Und die 12 Monate danach.",
+      "issue03Date": "Juli 2027",
+      "issue03Theme": "The Buyer Inside",
+      "issue03Desc": "Wer kauft europäische Tech-Unternehmen 2027 — und wie entscheiden sie?",
+      "issue04Date": "Oktober 2027",
+      "issue04Theme": "The Succession Wave",
+      "issue04Desc": "3,5 Millionen europäische KMU ohne Nachfolger. Der Moment ist jetzt.",
+      "subscribeTitle": "Jede Ausgabe 48 Stunden vor Veröffentlichung erhalten.",
+      "subscribeBody": "Aegryn Magazine erscheint im Januar, April, Juli und Oktober. Digitaler Zugang ist dauerhaft kostenlos. Abonnenten erhalten jede Ausgabe 48 Stunden vor der Veröffentlichung.",
+      "subscribeBullet1": "Europäische M&A-Daten — vierteljährlich aktualisiert",
+      "subscribeBullet2": "CIFS-Index — exklusive Zertifizierungsdaten",
+      "subscribeBullet3": "Analysen anderswo nicht verfügbar — ohne Interessenkonflikt",
+      "subscribePlaceholder": "ihre@email.com",
+      "subscribeCta": "Abonnieren",
+      "subscribeSuccess": "Sie sind auf der Liste — erste Ausgabe innerhalb von 48 Std. in Ihrem Postfach.",
+      "subscribeError": "Ein Fehler ist aufgetreten. Versuchen Sie es erneut oder schreiben Sie an contact@boha-group.com",
+      "contactLabel": "Abonnement — Digitaler Zugang",
+      "contactEditLabel": "Redaktionskontakt",
+      "contactEditTitle": "Partnerschaft, Beitrag, Nachdruckrechte",
+      "contactEditBody": "Für Anfragen zu redaktionellen Inhalten, Nachdruckrechten oder Content-Partnerschaften wenden Sie sich direkt an das Aegryn-Redaktionsteam.",
+      "contactEditCta": "contact@boha-group.com →",
+      "cifsLabel": "CIFS-Zertifizierung",
+      "cifsBody": "Weniger als 25 % der eingereichten Assets erreichen den Full-Grade-Status. Erfahren Sie, wo Ihr Asset steht, bevor es ein Käufer tut.",
+      "cifsCta": "Zertifizierung starten →",
+      "footerLegal": "Aegryn SA — Saint-Sulpice, Kanton Waadt, Schweiz — CHE-402.011.821",
+      "footerCopyright": "© Aegryn SA 2027 — Dauerhaft kostenloser digitaler Zugang"
     },
-    "report": {
-      "title": "Aegryn Magazine",
-      "subtitle": "European Tech M&A Intelligence",
-      "tagline": "Selten durch Selektion. Zertifiziert für die Transaktion.",
-      "edition2026": "Erste Ausgabe — Januar 2027",
+    "ndaView": {
+      "meta": "NDA — Verkäuferbereich Aegryn",
+      "title": "Geheimhaltungsvertrag",
+      "subtitle": "Im Rahmen Ihres Verkaufs unterzeichneter NDA."
+    },
+    "transactions": {
+      "meta": "Transaktionen — Verkäuferbereich Aegryn",
+      "title": "Meine Transaktionen",
+      "subtitle": "Laufende und abgeschlossene Transaktionen.",
+      "noTransactions": "Noch keine Transaktionen."
+    },
+    "txStatus": {
+      "ei_submitted": "EI erhalten",
+      "ap_signed": "VA unterzeichnet",
+      "escrow_paid": "Treuhand",
+      "dd_in_progress": "Due Diligence",
+      "signing": "Signing",
+      "closed": "Abgeschlossen",
+      "cancelled": "Storniert"
+    },
+    "notifications": {
+      "meta": "Benachrichtigungen — Verkäuferbereich Aegryn",
+      "title": "Benachrichtigungen",
+      "subtitle": "Benachrichtigungen zu Ihrer Aktivität."
+    },
+    "kyc": {
+      "meta": "KYC — Verkäuferbereich Aegryn",
+      "title": "KYC — Identitätsprüfung",
+      "subtitle": "Erforderliche Dokumente für Ihren Aegryn-Verkaufsprozess.",
+      "complete": "KYC-Akte vollständig",
+      "inProgress": "KYC-Akte in Bearbeitung",
+      "completeHint": "Vervollständigen Sie Ihre KYC-Akte, um Ihren Verkauf abzuschließen.",
+      "pendingUpload": "Dokument wird geprüft.",
+      "validatedWarn": "Dieses Dokument ist validiert. Ein neuer Upload ersetzt die aktuelle Version."
+    }
+  },
+  "partner": {
+    "meta": "Dashboard — Partnerbereich Aegryn",
+    "areaLabel": "Partnerbereich",
+    "hello": "Hallo, {name}",
+    "fallbackName": "Partner",
+    "kpiCertifications": "Aktive Mitunterzeichnungen",
+    "kpiIntroductions": "Vermittlungen",
+    "subscriptionActive": "Abonnement aktiv",
+    "subscriptionInactive": "Abonnement inaktiv",
+    "subscriptionDesc": "Expertenprofil — CHF 89/Monat",
+    "activeCertifications": "Laufende Mitunterzeichnungen",
+    "recentIntroductions": "Aktuelle Vermittlungen",
+    "introductionTypeAsset": "Asset-Vermittlung",
+    "introductionTypeBuyer": "Käufervermittlung",
+    "certStatus": {
+      "assigned": "Zugewiesen",
+      "in_review": "In Prüfung",
+      "validated": "Validiert",
+      "rejected": "Abgelehnt"
+    },
+    "notifications": {
+      "meta": "Benachrichtigungen — Partnerbereich Aegryn",
+      "title": "Benachrichtigungen",
+      "subtitle": "Benachrichtigungen zu Ihrer Aktivität."
+    },
+    "kyc": {
+      "meta": "KYC — Partnerbereich Aegryn",
+      "title": "KYC — Identitätsprüfung",
+      "subtitle": "Erforderliche Dokumente für Ihr Partnerprofil."
+    },
+    "mandates": {
+      "meta": "Mandate — Partnerbereich Aegryn",
+      "title": "Meine Mandate",
+      "subtitle": "Laufende Partnerschaftsmandate.",
+      "noMandates": "Noch keine Mandate."
+    },
+    "mandateDetail": {
+      "meta": "Mandat-Detail — Partnerbereich Aegryn",
+      "back": "← Zurück zu Mandaten"
+    },
+    "certifications": {
+      "meta": "Mitunterzeichnungen — Partnerbereich Aegryn",
+      "title": "Meine Mitunterzeichnungen",
+      "subtitle": "Laufende CIFS-Zertifizierungsmissionen.",
+      "noCertifications": "Noch keine Mitunterzeichnungen zugewiesen."
+    },
+    "certDetail": {
+      "meta": "Mitunterzeichnung-Detail — Partnerbereich Aegryn",
+      "back": "← Zurück zu Mitunterzeichnungen"
+    },
+    "commissions": {
+      "meta": "Provisionen — Partnerbereich Aegryn",
+      "title": "Meine Provisionen",
+      "subtitle": "Provisionshistorie.",
+      "noCommissions": "Keine Provisionen verbucht."
+    },
+    "introductions": {
+      "meta": "Vermittlungen — Partnerbereich Aegryn",
+      "title": "Meine Vermittlungen",
+      "subtitle": "Vermittelte Assets und Käufer.",
+      "noIntroductions": "Noch keine Vermittlungen."
+    },
+    "expertProfile": {
+      "meta": "Expertenprofil — Partnerbereich Aegryn",
+      "title": "Mein Expertenprofil",
+      "subtitle": "Profil auf dem Aegryn Experts-Marktplatz sichtbar."
+    },
+    "subscription": {
+      "meta": "Abonnement — Partnerbereich Aegryn",
+      "title": "Mein Abonnement",
+      "subtitle": "Verwalten Sie Ihr Expertenabonnement.",
+      "monthlyPlan": "Monatlich — CHF 89/Monat",
+      "yearlyPlan": "Jährlich — CHF 80/Monat (–10%)",
+      "active": "Aktiv",
+      "inactive": "Inaktiv",
       "readOnline": "Online lesen",
       "downloadPdf": "PDF ansehen",
       "subscribe": "Abonnieren",
