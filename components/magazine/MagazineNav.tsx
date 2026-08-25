@@ -27,7 +27,7 @@ export function MagazineNav({
   issueNumber = 1,
   issueTitle = 'Built to Last',
   issueSubtitle,
-  locale = 'fr',
+  locale: _locale = 'fr',
   issueSlug = 'issue-01',
   labelContents = 'Contents',
   labelDownload = 'Download PDF',
