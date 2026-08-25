@@ -6190,7 +6190,12 @@
       "cifsBody": "Fewer than 25% of submitted assets reach Full Grade status. Find out where your asset stands before a buyer does.",
       "cifsCta": "Start certification \u2192",
       "footerLegal": "Aegryn SA \u2014 Saint-Sulpice, Canton de Vaud, Switzerland \u2014 CHE-402.011.821",
-      "footerCopyright": "\u00a9 Aegryn SA 2027 \u2014 Free permanent digital access"
+      "footerCopyright": "\u00a9 Aegryn SA 2027 \u2014 Free permanent digital access",
+      "navTableOfContents": "Contents",
+      "navDownloadPdf": "Download PDF",
+      "cardReadIssue": "Read issue",
+      "cardExploreOnline": "Explore online",
+      "cardSpecialEdition": "Special Edition"
     },
     "report": {
       "title": "Aegryn Magazine",

@@ -63,7 +63,13 @@ export default async function MagazineHubPage({ params }: Props) {
       <div className="max-w-magazine mx-auto px-6 md:px-[120px] pb-24">
         <div className="border-t border-magazine-black/10 pt-12 space-y-8">
           {ALL_ISSUES.map(issue => (
-            <IssueCard key={issue.slug} issue={issue} locale={locale} />
+            <IssueCard
+              key={issue.slug}
+              issue={issue}
+              locale={locale}
+              labelReadIssue={tHub('cardReadIssue')}
+              labelSpecial={tHub('cardSpecialEdition')}
+            />
           ))}
         </div>
       </div>

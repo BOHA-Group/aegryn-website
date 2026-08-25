@@ -8,12 +8,14 @@ interface SectionWithArticles extends IssueSection {
 }
 
 interface Props {
-  sections:      SectionWithArticles[]
-  issueNumber?:  number
-  issueTitle?:   string
-  issueSubtitle?: string
-  locale?:       string
-  issueSlug?:    string
+  sections:        SectionWithArticles[]
+  issueNumber?:    number
+  issueTitle?:     string
+  issueSubtitle?:  string
+  locale?:         string
+  issueSlug?:      string
+  labelContents?:  string
+  labelDownload?:  string
 }
 
 /**
@@ -27,6 +29,8 @@ export function MagazineNav({
   issueSubtitle,
   locale = 'fr',
   issueSlug = 'issue-01',
+  labelContents = 'Contents',
+  labelDownload = 'Download PDF',
 }: Props) {
   const [active, setActive]       = useState<string>('')
   const [expanded, setExpanded]   = useState<string | null>(null)
@@ -73,7 +77,7 @@ export function MagazineNav({
       <div className="px-6 pt-5 pb-3">
         <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30 flex items-center gap-2">
           <span className="inline-block w-4 h-px bg-magazine-black/20" />
-          Au Sommaire
+          {labelContents}
         </p>
       </div>
 
@@ -134,22 +138,15 @@ export function MagazineNav({
       </nav>
 
       {/* ── Actions bas de sidebar ── */}
-      <div className="px-6 py-5 border-t border-magazine-black/8 space-y-3">
+      <div className="px-6 py-5 border-t border-magazine-black/8">
         <a
-          href={`/${locale}/magazine/${issueSlug}/web`}
-          className="flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase text-magazine-black/40 hover:text-magazine-black transition-colors"
-        >
-          <span className="inline-block w-4 h-px bg-current" />
-          Explorer en ligne
-        </a>
-        <a
-          href="/api/magazine/issue-01/cover"
+          href={`/magazine/${issueSlug}/aegryn-magazine-${issueSlug}_1.html`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase text-magazine-black/40 hover:text-magazine-black transition-colors"
         >
           <span className="inline-block w-4 h-px bg-current" />
-          Télécharger PDF
+          {labelDownload}
         </a>
       </div>
     </aside>

@@ -63,7 +63,8 @@ export default async function IssuePage({ params }: Props) {
   const issue = getIssue(issueSlug)
   if (!issue) notFound()
 
-  const t = await getTranslations({ locale, namespace: 'magazine.report' })
+  const t    = await getTranslations({ locale, namespace: 'magazine.report' })
+  const tHub = await getTranslations({ locale, namespace: 'magazine.hub' })
 
   /* ── Nav sections with articles ── */
   const navSections = issue.sections.map(s => ({
@@ -105,9 +106,11 @@ export default async function IssuePage({ params }: Props) {
           sections={navSections}
           issueNumber={issue.number}
           issueTitle={issue.title}
-          issueSubtitle="Janvier 2027"
+          issueSubtitle="January 2027"
           locale={locale}
           issueSlug={issue.slug}
+          labelContents={tHub('navTableOfContents')}
+          labelDownload={tHub('navDownloadPdf')}
         />
 
         {/* Contenu principal décalé de 240px sur desktop */}

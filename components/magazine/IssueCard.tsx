@@ -3,14 +3,16 @@ import { ArrowUpRight } from 'lucide-react'
 import type { MagazineIssue } from '@/lib/magazine/types'
 
 interface Props {
-  issue:  MagazineIssue
-  locale?: string
+  issue:           MagazineIssue
+  locale?:         string
+  labelReadIssue?: string
+  labelSpecial?:   string
 }
 
 /**
  * Clickable card linking to /magazine/[issue.slug]
  */
-export function IssueCard({ issue, locale = 'fr' }: Props) {
+export function IssueCard({ issue, locale = 'fr', labelReadIssue = 'Read issue', labelSpecial = 'Special Edition' }: Props) {
   const date = new Date(issue.publishedAt)
   const formatted = date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
 
@@ -37,7 +39,7 @@ export function IssueCard({ issue, locale = 'fr' }: Props) {
         <div className="relative z-10 flex items-start justify-between">
           <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/40">{formatted.toUpperCase()}</p>
           <div className="text-right">
-            <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#5ADDA4] font-bold">Special Edition</p>
+            <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#5ADDA4] font-bold">{labelSpecial}</p>
             <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#5ADDA4] font-bold">Issue {String(issue.number).padStart(2, '0')}</p>
           </div>
         </div>
@@ -95,18 +97,12 @@ export function IssueCard({ issue, locale = 'fr' }: Props) {
           </p>
         </div>
 
-        <div className="pt-8 border-t border-magazine-black/8 mt-6 flex flex-wrap gap-3">
+        <div className="pt-8 border-t border-magazine-black/8 mt-6">
           <Link
             href={`/${locale}/magazine/${issue.slug}`}
             className="inline-flex items-center gap-2 bg-magazine-black text-white font-mono text-[10px] uppercase tracking-[0.18em] px-6 py-3 hover:bg-magazine-accent hover:text-magazine-black transition-colors font-semibold"
           >
-            Lire l&apos;issue <ArrowUpRight size={11} />
-          </Link>
-          <Link
-            href={`/${locale}/magazine/${issue.slug}/web`}
-            className="inline-flex items-center gap-2 border border-magazine-black/20 text-magazine-black/60 font-mono text-[10px] uppercase tracking-[0.18em] px-6 py-3 hover:border-magazine-accent hover:text-magazine-accent transition-colors font-semibold"
-          >
-            Explorer en ligne <ArrowUpRight size={11} />
+            {labelReadIssue} <ArrowUpRight size={11} />
           </Link>
         </div>
       </div>

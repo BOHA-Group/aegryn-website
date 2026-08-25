@@ -6192,7 +6192,12 @@
       "cifsBody": "Meno del 25 % degli asset presentati raggiunge lo stato Full Grade. Scopri dove si posiziona il tuo asset prima che lo faccia un acquirente.",
       "cifsCta": "Avvia la certificazione →",
       "footerLegal": "Aegryn SA — Saint-Sulpice, Cantone di Vaud, Svizzera — CHE-402.011.821",
-      "footerCopyright": "© Aegryn SA 2027 — Accesso digitale gratuito e permanente"
+      "footerCopyright": "© Aegryn SA 2027 — Accesso digitale gratuito e permanente",
+      "navTableOfContents": "Sommario",
+      "navDownloadPdf": "Scarica PDF",
+      "cardReadIssue": "Leggi il numero",
+      "cardExploreOnline": "Esplora online",
+      "cardSpecialEdition": "Edizione speciale"
     },
     "report": {
       "title": "Aegryn Magazine",

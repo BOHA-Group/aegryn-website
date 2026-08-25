@@ -6192,7 +6192,12 @@
       "cifsBody": "Weniger als 25 % der eingereichten Assets erreichen den Full-Grade-Status. Erfahren Sie, wo Ihr Asset steht, bevor es ein Käufer tut.",
       "cifsCta": "Zertifizierung starten →",
       "footerLegal": "Aegryn SA — Saint-Sulpice, Kanton Waadt, Schweiz — CHE-402.011.821",
-      "footerCopyright": "© Aegryn SA 2027 — Dauerhaft kostenloser digitaler Zugang"
+      "footerCopyright": "© Aegryn SA 2027 — Dauerhaft kostenloser digitaler Zugang",
+      "navTableOfContents": "Inhalt",
+      "navDownloadPdf": "PDF herunterladen",
+      "cardReadIssue": "Ausgabe lesen",
+      "cardExploreOnline": "Online erkunden",
+      "cardSpecialEdition": "Sonderausgabe"
     },
     "ndaView": {
       "meta": "NDA — Verkäuferbereich Aegryn",
