@@ -1250,38 +1250,19 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   pageFlip.on('flip', function(){ edgeUpdate(); });
   pageFlip.on('changeState', function(){ edgeUpdate(); });
 
-  /* ── 15. Son synthétique bruit de papier — Web Audio API ── */
-  var audioCtx = null;
-  function initAudio(){ if(!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); }
+  /* ── 15. Son page — fichier MP3 préchargé ── */
+  var flipAudio = new Audio('page-turn.mp3');
+  flipAudio.preload = 'auto';
+  flipAudio.volume  = 0.55;
+
   function playPageFlipSound(){
     try {
-      initAudio();
-      var ctx = audioCtx;
-      var buf = ctx.createBuffer(1, ctx.sampleRate * 0.12, ctx.sampleRate);
-      var data = buf.getChannelData(0);
-      for(var i=0; i<data.length; i++){
-        /* Bruit blanc filtré avec enveloppe rapide decroissante */
-        var t = i / ctx.sampleRate;
-        var env = Math.exp(-t * 38) * 0.55 + Math.exp(-t * 90) * 0.25;
-        data[i] = (Math.random() * 2 - 1) * env;
-      }
-      var src2 = ctx.createBufferSource();
-      src2.buffer = buf;
-      /* Filtre passe-bande pour donner timbre papier */
-      var bp = ctx.createBiquadFilter();
-      bp.type = 'bandpass';
-      bp.frequency.value = 1800;
-      bp.Q.value = 0.6;
-      var gain = ctx.createGain();
-      gain.gain.value = 0.45;
-      src2.connect(bp);
-      bp.connect(gain);
-      gain.connect(ctx.destination);
-      src2.start();
-    } catch(e){ /* AudioContext non supporté — silencieux */ }
+      /* Cloner le nœud pour autoriser les chevauchements rapides */
+      var snd = flipAudio.cloneNode();
+      snd.volume = 0.55;
+      snd.play().catch(function(){});
+    } catch(e){}
   }
-  /* Démarrer AudioContext au premier geste utilisateur */
-  document.addEventListener('click', function initCtx(){ initAudio(); document.removeEventListener('click', initCtx); }, { once: true });
   pageFlip.on('flip', function(){ playPageFlipSound(); });
 
   /* ── 16. QR Code canvas — encode https://aegryn.com/magazine/issue-01 ── */
