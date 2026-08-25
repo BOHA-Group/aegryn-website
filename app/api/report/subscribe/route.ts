@@ -62,5 +62,42 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'db_error' }, { status: 500 })
   }
 
+  /* ── Email de confirmation ── */
+  const resendKey = process.env.RESEND_API_KEY
+  const fromEmail = process.env.RESEND_FROM ?? 'no-reply@boha-group.com'
+  const fromName  = process.env.RESEND_FROM_NAME ?? 'Aegryn Magazine'
+
+  if (resendKey) {
+    await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization:  `Bearer ${resendKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from:    `${fromName} <${fromEmail}>`,
+        to:      [email],
+        subject: "Aegryn Magazine \u2014 You're on the list.",
+        text: [
+          "You're confirmed.",
+          '',
+          "We've registered your address for Aegryn Magazine digital access.",
+          '',
+          'Issue 01 — Built to Last — is available now at aegryn.com/magazine/issue-01',
+          'Issue 02 — The Exit Equation — arrives in April 2027.',
+          '',
+          'No paywall. No advertising. Published quarterly.',
+          '',
+          '—',
+          'Aegryn Magazine Editorial',
+          'media@boha-group.com',
+          'aegryn.com/magazine',
+        ].join('\n'),
+      }),
+    }).catch(err => console.error('[report/subscribe] Resend error', err))
+  } else {
+    console.warn('[report/subscribe] RESEND_API_KEY not set — confirmation email skipped for', email)
+  }
+
   return NextResponse.json({ ok: true })
 }
