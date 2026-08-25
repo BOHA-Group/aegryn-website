@@ -14,7 +14,7 @@ import { CifsBars }          from '@/components/magazine/CifsBars'
 import { DealVolumeChart }   from '@/components/magazine/charts/DealVolumeChart'
 import { MultiplesChart }    from '@/components/magazine/charts/MultiplesChart'
 import { GradeDistributionChart } from '@/components/magazine/charts/GradeDistributionChart'
-import { FlipbookViewer } from '@/components/magazine/FlipbookViewer'
+import { IssueViewerTabs } from '@/components/magazine/IssueViewerTabs'
 
 /* ── Issue registry ─────────────────────────────────────── */
 function getIssue(slug: string): MagazineIssue | null {
@@ -116,18 +116,13 @@ export default async function IssuePage({ params }: Props) {
         {/* Contenu principal décalé de 240px sur desktop */}
         <main className="lg:ml-[240px] bg-magazine-ivory">
 
-        {/* ── Flipbook (HTML inline viewer) ── */}
+        {/* ── Flipbook + Web Edition (onglets) ── */}
         {issue.slug === 'issue-01' && (
-          <section id="s-flipbook" className="bg-[#EDEAE4]">
-            {/* Switcher Flipbook / Version web */}
-            <div className="flex items-center px-6 md:px-10 py-3 border-b border-black/8 bg-[#F7F5F1]">
-              <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-black/40">
-                Issue 01 — Built to Last — January 2027
-              </span>
-            </div>
-            <FlipbookViewer
-              htmlSrc="/magazine/issue-01/aegryn-magazine-issue-01_1.html"
-              title="Aegryn Magazine Issue 01 — Built to Last"
+          <section id="s-flipbook">
+            <IssueViewerTabs
+              flipbookSrc="/magazine/issue-01/aegryn-magazine-issue-01_1.html"
+              webSrc="/magazine/issue-01/aegryn-magazine-issue-01_web.html"
+              issueLabel="Issue 01 — Built to Last — January 2027"
             />
           </section>
         )}
