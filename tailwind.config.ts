@@ -62,10 +62,11 @@ const config: Config = {
           glass:    'rgba(0,0,0,0.02)',
         },
         magazine: {
-          black:  '#0A0A0A',
+          black:  '#0F1A2B',
           white:  '#FFFFFF',
-          ivory:  '#F4F3F0',
-          accent: '#2EAF7D',
+          ivory:  '#F7F5F1',
+          cream:  '#EDEAE4',
+          accent: '#5ADDA4',
         },
       },
       fontFamily: {

@@ -3,21 +3,19 @@ import { ArrowUpRight } from 'lucide-react'
 import type { MagazineIssue } from '@/lib/magazine/types'
 
 interface Props {
-  issue: MagazineIssue
+  issue:  MagazineIssue
+  locale?: string
 }
 
 /**
  * Clickable card linking to /magazine/[issue.slug]
  */
-export function IssueCard({ issue }: Props) {
+export function IssueCard({ issue, locale = 'fr' }: Props) {
   const date = new Date(issue.publishedAt)
   const formatted = date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
 
   return (
-    <Link
-      href={`/magazine/${issue.slug}`}
-      className="group grid md:grid-cols-[2fr_3fr] gap-0 border border-magazine-black/10 hover:border-magazine-black/25 transition-colors"
-    >
+    <div className="group grid md:grid-cols-[2fr_3fr] gap-0 border border-magazine-black/10 hover:border-magazine-black/25 transition-colors">
       {/* Cover panel — format magazine portrait style Salford, ratio A4 */}
       <div className="relative flex flex-col justify-between p-8 min-h-[560px] border-r border-magazine-black/10 overflow-hidden">
         {/* Background image */}
@@ -97,12 +95,21 @@ export function IssueCard({ issue }: Props) {
           </p>
         </div>
 
-        <div className="pt-8 border-t border-magazine-black/8 mt-6">
-          <span className="inline-flex items-center gap-2 bg-magazine-black text-white font-mono text-[10px] uppercase tracking-[0.18em] px-6 py-3 group-hover:bg-magazine-accent group-hover:text-magazine-black transition-colors font-semibold">
-            Read issue <ArrowUpRight size={11} />
-          </span>
+        <div className="pt-8 border-t border-magazine-black/8 mt-6 flex flex-wrap gap-3">
+          <Link
+            href={`/${locale}/magazine/${issue.slug}`}
+            className="inline-flex items-center gap-2 bg-magazine-black text-white font-mono text-[10px] uppercase tracking-[0.18em] px-6 py-3 hover:bg-magazine-accent hover:text-magazine-black transition-colors font-semibold"
+          >
+            Lire l&apos;issue <ArrowUpRight size={11} />
+          </Link>
+          <Link
+            href={`/${locale}/magazine/${issue.slug}/web`}
+            className="inline-flex items-center gap-2 border border-magazine-black/20 text-magazine-black/60 font-mono text-[10px] uppercase tracking-[0.18em] px-6 py-3 hover:border-magazine-accent hover:text-magazine-accent transition-colors font-semibold"
+          >
+            Explorer en ligne <ArrowUpRight size={11} />
+          </Link>
         </div>
       </div>
-    </Link>
+    </div>
   )
 }

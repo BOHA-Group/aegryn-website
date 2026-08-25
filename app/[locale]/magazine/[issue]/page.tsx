@@ -105,7 +105,9 @@ export default async function IssuePage({ params }: Props) {
           sections={navSections}
           issueNumber={issue.number}
           issueTitle={issue.title}
-          issueSubtitle="Printemps 2027"
+          issueSubtitle="Janvier 2027"
+          locale={locale}
+          issueSlug={issue.slug}
         />
 
         {/* Contenu principal décalé de 240px sur desktop */}

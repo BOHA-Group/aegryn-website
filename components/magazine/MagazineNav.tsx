@@ -8,10 +8,12 @@ interface SectionWithArticles extends IssueSection {
 }
 
 interface Props {
-  sections: SectionWithArticles[]
-  issueNumber?: number
-  issueTitle?: string
+  sections:      SectionWithArticles[]
+  issueNumber?:  number
+  issueTitle?:   string
   issueSubtitle?: string
+  locale?:       string
+  issueSlug?:    string
 }
 
 /**
@@ -23,6 +25,8 @@ export function MagazineNav({
   issueNumber = 1,
   issueTitle = 'Built to Last',
   issueSubtitle,
+  locale = 'fr',
+  issueSlug = 'issue-01',
 }: Props) {
   const [active, setActive]       = useState<string>('')
   const [expanded, setExpanded]   = useState<string | null>(null)
@@ -89,8 +93,8 @@ export function MagazineNav({
                 }}
                 className={`w-full flex items-center justify-between px-3 py-2.5 text-left transition-colors rounded-sm group ${
                   isActive
-                    ? 'text-magazine-accent'
-                    : 'text-magazine-black/65 hover:text-magazine-black'
+                    ? 'text-magazine-black font-semibold border-l-2 border-magazine-accent -ml-[2px] pl-[14px]'
+                    : 'text-magazine-black/55 hover:text-magazine-black'
                 }`}
               >
                 <span className="flex flex-col">
@@ -104,7 +108,7 @@ export function MagazineNav({
                   )}
                 </span>
                 {hasArticles && (
-                  <span className={`font-mono text-[11px] transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''} ${isActive ? 'text-magazine-accent' : 'text-magazine-black/25'}`}>
+                  <span className={`font-mono text-[11px] transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''} ${isActive ? 'text-magazine-black/60' : 'text-magazine-black/25'}`}>
                     −
                   </span>
                 )}
@@ -129,13 +133,20 @@ export function MagazineNav({
         })}
       </nav>
 
-      {/* ── PDF download ── */}
-      <div className="px-6 py-5 border-t border-magazine-black/8">
+      {/* ── Actions bas de sidebar ── */}
+      <div className="px-6 py-5 border-t border-magazine-black/8 space-y-3">
+        <a
+          href={`/${locale}/magazine/${issueSlug}/web`}
+          className="flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase text-magazine-black/40 hover:text-magazine-black transition-colors"
+        >
+          <span className="inline-block w-4 h-px bg-current" />
+          Explorer en ligne
+        </a>
         <a
           href="/api/magazine/issue-01/cover"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase text-magazine-black/40 hover:text-magazine-accent transition-colors"
+          className="flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase text-magazine-black/40 hover:text-magazine-black transition-colors"
         >
           <span className="inline-block w-4 h-px bg-current" />
           Télécharger PDF
