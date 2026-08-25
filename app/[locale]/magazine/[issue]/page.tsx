@@ -117,18 +117,10 @@ export default async function IssuePage({ params }: Props) {
         {issue.slug === 'issue-01' && (
           <section id="s-flipbook" className="bg-[#EDEAE4]">
             {/* Switcher Flipbook / Version web */}
-            <div className="flex items-center justify-between px-6 md:px-10 py-3 border-b border-black/8 bg-[#F7F5F1]">
+            <div className="flex items-center px-6 md:px-10 py-3 border-b border-black/8 bg-[#F7F5F1]">
               <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-black/40">
                 Issue 01 — Built to Last — January 2027
               </span>
-              <a
-                href="/magazine/issue-01/aegryn-magazine-issue-01_web.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-mono text-[9px] tracking-[0.16em] uppercase text-black/40 hover:text-black transition-colors border border-black/15 hover:border-black/40 px-3 py-1.5"
-              >
-                Version web longue →
-              </a>
             </div>
             <FlipbookViewer
               htmlSrc="/magazine/issue-01/aegryn-magazine-issue-01_1.html"
@@ -515,6 +507,146 @@ export default async function IssuePage({ params }: Props) {
             ))}
           </div>
           <CifsBars dims={DATA_01.cifsExample} />
+        </section>
+
+        {/* ── People : Founder Portrait + Radar 5 Builders ── */}
+        <section id="s-perspective" className="bg-magazine-ivory px-6 md:px-[120px] py-32">
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Section 05 — People</p>
+          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">The Founder Who Built to Sell.</h2>
+          <p className="text-body-mag text-magazine-black/55 max-w-prose mb-16 leading-[1.75] italic">Composite portrait drawn from four European founders who exited between 2025 and 2026. All bootstrapped. All profitable. None had institutional venture backing.</p>
+
+          {/* Portrait stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-magazine-black/8 mb-20">
+            {[
+              { val: '6.4x', label: 'ARR multiple at exit' },
+              { val: '14w', label: 'Process to signing' },
+              { val: '€3–8M', label: 'ARR at time of sale' },
+              { val: '0', label: 'VC money raised' },
+            ].map(s => (
+              <div key={s.label} className="bg-magazine-ivory p-8">
+                <p className="font-sans font-bold text-magazine-black" style={{ fontSize: 'clamp(28px,3.5vw,48px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}>{s.val}</p>
+                <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-magazine-black/40 mt-3">{s.label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Portrait text */}
+          <div className="grid md:grid-cols-2 gap-16 mb-20">
+            <div className="space-y-6 text-body-mag text-magazine-black/65 leading-[1.8]">
+              <p>He built the first version alone, over a long weekend in his apartment in Rotterdam, to solve a problem he had watched his previous employer pay €40,000 a year to solve badly. By year five, he had €2.4 million in ARR, seven employees, and a waiting list.</p>
+              <p>His cap table was entirely clean. He had signed intellectual property assignment agreements with every developer who had ever written a line of production code, including two freelancers who had contributed during the first year. He had tracked both of them down. One required a modest payment. The other signed willingly.</p>
+              <p>His bookkeeper closed the monthly management accounts within 48 hours of month-end, every month, without exception, for six years. None of this had been strategic preparation for a sale. It was simply how he ran things.</p>
+            </div>
+            <div className="space-y-6 text-body-mag text-magazine-black/65 leading-[1.8]">
+              <blockquote className="border-l-2 border-magazine-accent pl-6">
+                <p className="italic">&ldquo;The due diligence team told me they had never seen a data room this clean on a sub-€5M ARR company. I didn’t know that was unusual. I thought it was just how you ran a business.&rdquo;</p>
+              </blockquote>
+              <p>Three buyers expressed serious interest. Two submitted letters of intent. He accepted at 6.4x ARR. The process ran fourteen weeks from first meeting to signing — half the EU market average for an asset of comparable complexity.</p>
+              <p>He is now 22 months into his second company. He started the documentation on day one this time. The IP assignment agreements were signed before the first line of code was written.</p>
+            </div>
+          </div>
+
+          {/* 5 Builders Radar */}
+          <div className="border-t border-magazine-black/10 pt-16">
+            <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-12">5 European Builders to Watch</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                { sector: 'HealthTech · Switzerland · 4 years', name: 'Regulatory Submission Automation', arr: '€380K ARR', nrr: 'NRR 122%', desc: 'Automates CE marking and FDA 510(k) submissions for Swiss MedTech. The regulatory moat is the non-substitutable asset — 12 years of prior experience in the field.' },
+                { sector: 'LegalTech · Germany · 6 years', name: 'Contract Risk Intelligence', arr: '€520K ARR', nrr: 'Enterprise only', desc: 'Proprietary risk-scoring model trained on 180,000 German-language contracts, licensed from three bar associations. The training data cannot be reproduced without six years of relationship-building.' },
+                { sector: 'RegTech · Netherlands · 3 years', name: 'AI Regulatory Change Monitoring', arr: '€210K ARR', nrr: '+30% QoQ', desc: 'Monitors EU financial services regulation in real time. Built 18 months before DORA compliance became mandatory for its target customers.' },
+                { sector: 'EdTech · Spain · 4 years', name: 'EU Compliance Training Platform', arr: '€340K ARR', nrr: '91% retention', desc: '140 financial institutions across Spain, Portugal, Italy. Distribution built over 12 years of direct consulting relationships — the moat is not the technology, it is the network.' },
+                { sector: 'PropTech · France · 5 years', name: 'Commercial RE Transaction Intelligence', arr: '€290K ARR', nrr: 'Proprietary data', desc: 'Five years of primary research across French, Belgian, and Luxembourg commercial transactions. The dataset cannot be scraped or purchased — it required five years to build.' },
+              ].map(b => (
+                <div key={b.name} className="border border-magazine-black/10 p-6 bg-magazine-white">
+                  <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-accent mb-3">{b.sector}</p>
+                  <h3 className="font-sans font-semibold text-magazine-black text-[15px] mb-2 leading-snug">{b.name}</h3>
+                  <div className="flex gap-4 mb-4">
+                    <span className="font-mono text-[9px] tracking-[0.1em] text-magazine-black/50">{b.arr}</span>
+                    <span className="font-mono text-[9px] tracking-[0.1em] text-magazine-black/30">·</span>
+                    <span className="font-mono text-[9px] tracking-[0.1em] text-magazine-black/50">{b.nrr}</span>
+                  </div>
+                  <p className="text-[12px] text-magazine-black/60 leading-[1.65]">{b.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Life : The Founder’s Stack ── */}
+        <section id="s-buyers" className="bg-magazine-white px-6 md:px-[120px] py-32">
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Section 06 — Life</p>
+          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">The Founder’s Stack — Issue 01.</h2>
+          <p className="text-body-mag text-magazine-black/55 max-w-prose mb-20 leading-[1.75]">Not what founders say they use. What serious European builders in active build or pre-transaction mode actually use — day to day, quarter to quarter.</p>
+
+          <div className="grid md:grid-cols-3 gap-16 mb-24">
+            {/* Tools */}
+            <div>
+              <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30 mb-8">5 Tools</p>
+              <div className="space-y-8">
+                {[
+                  { name: 'Linear', desc: 'Product and engineering task management for teams under 20. Replaces Jira without the ceremony.' },
+                  { name: 'Supabase', desc: 'Open-source backend on PostgreSQL — portable, auditable, understood by every technical auditor. Built-in audit logging matters for CIFS.' },
+                  { name: 'Notion — as Data Room', desc: 'The founders who close fast maintain one clean Notion workspace as their permanent data room. Updated monthly. When a buyer asks, turnaround is hours, not weeks.' },
+                  { name: 'Cursor / Windsurf', desc: 'AI-assisted coding with mandatory human review. As leverage, not as a shortcut past engineering discipline.' },
+                  { name: 'Lemon Squeezy', desc: 'Merchant-of-record payments. EU VAT handled by the platform. MRR verifiable from day one — a clean revenue trail for CIFS certification.' },
+                ].map(tool => (
+                  <div key={tool.name} className="border-l border-magazine-black/10 pl-5">
+                    <p className="font-sans font-semibold text-magazine-black text-[14px] mb-1">{tool.name}</p>
+                    <p className="text-[12px] text-magazine-black/55 leading-[1.6]">{tool.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Books + Podcasts */}
+            <div>
+              <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30 mb-8">3 Books</p>
+              <div className="space-y-6 mb-12">
+                {[
+                  { name: 'The SaaS Playbook', author: 'Rob Walling', desc: 'The only bootstrapped SaaS book that discusses exit preparation without assuming venture backing.' },
+                  { name: 'Valuation', author: 'Aswath Damodaran', desc: 'The definitive text on corporate valuation. Worth reading before any transaction process begins.' },
+                  { name: 'Zero to Sold', author: 'Arvid Kahl', desc: 'Built, bootstrapped, and exited a SaaS product. Honest about what preparation actually requires.' },
+                ].map(b => (
+                  <div key={b.name}>
+                    <p className="font-sans font-semibold text-magazine-black text-[13px]">{b.name}</p>
+                    <p className="font-mono text-[9px] tracking-[0.1em] text-magazine-black/35 mb-1">{b.author}</p>
+                    <p className="text-[12px] text-magazine-black/55 leading-[1.6]">{b.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30 mb-6">2 Podcasts</p>
+              <div className="space-y-5">
+                {[
+                  { name: 'Acquired', host: 'Ben Gilbert & David Rosenthal', desc: 'Business history as strategy school. The Berkshire, TSMC, and Costco episodes are required listening.' },
+                  { name: 'Indie Hackers', host: 'Courtland Allen', desc: 'Real founders, real revenue numbers. Filter for bootstrap-to-exit stories.' },
+                ].map(p => (
+                  <div key={p.name}>
+                    <p className="font-sans font-semibold text-magazine-black text-[13px]">{p.name}</p>
+                    <p className="font-mono text-[9px] tracking-[0.1em] text-magazine-black/35 mb-1">{p.host}</p>
+                    <p className="text-[12px] text-magazine-black/55 leading-[1.6]">{p.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Habits + Place */}
+            <div>
+              <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30 mb-8">1 Habit</p>
+              <div className="border-l border-magazine-black/10 pl-5 mb-12">
+                <p className="font-sans font-semibold text-magazine-black text-[14px] mb-2">The Monthly P&amp;L Review — Alone, in Writing</p>
+                <p className="text-[12px] text-magazine-black/55 leading-[1.65]">Every first Monday of the month. 90 minutes. No accountant. No co-founder. The founder reads the previous month’s P&amp;L and writes a one-page commentary. The founders who do this close their books cleaner and are never surprised by what due diligence finds.</p>
+              </div>
+              <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30 mb-6">1 Place</p>
+              <div className="border-l border-magazine-black/10 pl-5 mb-12">
+                <p className="font-sans font-semibold text-magazine-black text-[14px] mb-2">Lausanne — Canton de Vaud</p>
+                <p className="text-[12px] text-magazine-black/55 leading-[1.65]">40 minutes by train to Geneva. EPFL talent at walking distance. Corporate tax rate of 13.8% in the Canton de Vaud. Legal infrastructure that understands SaaS revenue models. A fiduciaire community that has worked with SaaS since SaaS was a novel concept.</p>
+              </div>
+              <div className="bg-magazine-ivory p-6">
+                <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-accent mb-3">Coming Next — Issue 02 — April 2027</p>
+                <p className="font-sans font-bold text-magazine-black text-[18px] mb-3">The Exit Equation.</p>
+                <p className="text-[12px] text-magazine-black/55 leading-[1.65] mb-4">The decision, the preparation, the negotiation, and the twelve months that follow. The number that changes your life, and whether it was the right number.</p>
+                <a href="/fr/magazine" className="font-mono text-[9px] tracking-[0.16em] uppercase text-magazine-accent hover:underline">Subscribe →</a>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* ── CTA ── */}

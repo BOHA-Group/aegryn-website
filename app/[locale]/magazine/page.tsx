@@ -88,8 +88,8 @@ export default async function MagazineHubPage({ params }: Props) {
         </div>
       </div>
 
-      {/* ── Contact / Abonnement — style Barnes ── */}
-      <div className="bg-magazine-black">
+      {/* ── Contact / Abonnement — style Barnes ivoire ── */}
+      <div className="border-t border-magazine-black/8 bg-magazine-cream">
         <div className="max-w-magazine mx-auto px-6 md:px-[120px] py-24">
           <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-start">
 
@@ -99,12 +99,12 @@ export default async function MagazineHubPage({ params }: Props) {
                 Abonnement — Accès digital
               </p>
               <h2
-                className="font-sans font-bold text-white mb-6"
+                className="font-sans font-bold text-magazine-black mb-6"
                 style={{ fontSize: 'clamp(28px,4vw,52px)', lineHeight: 1.08, letterSpacing: '-0.02em' }}
               >
                 Recevez chaque numéro 48 h avant sa publication.
               </h2>
-              <p className="text-body-mag text-white/55 leading-[1.75] mb-8 max-w-prose">
+              <p className="text-body-mag text-magazine-black/60 leading-[1.75] mb-8 max-w-prose">
                 Aegryn Magazine paraît en janvier, avril, juillet et octobre.
                 L'accès digital est permanent et gratuit. Sans paywall. Sans publicité.
                 Les abonnés reçoivent chaque numéro 48 heures avant la mise en ligne publique.
@@ -117,7 +117,7 @@ export default async function MagazineHubPage({ params }: Props) {
                 ].map(item => (
                   <div key={item} className="flex items-start gap-3">
                     <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-magazine-accent flex-shrink-0" />
-                    <p className="text-label-mag text-white/60">{item}</p>
+                    <p className="text-label-mag text-magazine-black/60">{item}</p>
                   </div>
                 ))}
               </div>
@@ -130,31 +130,31 @@ export default async function MagazineHubPage({ params }: Props) {
             </div>
 
             {/* Contact direct */}
-            <div className="border border-white/10 p-8">
+            <div className="border border-magazine-black/12 p-8 bg-magazine-white">
               <p className="font-mono text-[8px] tracking-[0.24em] uppercase text-magazine-accent mb-6">
                 Contact éditorial
               </p>
-              <p className="font-sans font-semibold text-white text-[15px] mb-4 leading-snug">
+              <p className="font-sans font-semibold text-magazine-black text-[15px] mb-4 leading-snug">
                 Partenariat, contribution, droits de reproduction
               </p>
-              <p className="text-label-mag text-white/50 leading-relaxed mb-8">
+              <p className="text-label-mag text-magazine-black/50 leading-relaxed mb-8">
                 Pour toute demande relative au contenu éditorial, aux droits de reproduction, ou aux partenariats de contenu, contactez l'équipe éditoriale d'Aegryn directement.
               </p>
               <a
                 href="mailto:contact@boha-group.com?subject=Aegryn Magazine — Contact éditorial"
-                className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase text-white/70 border border-white/20 px-5 py-3 hover:border-magazine-accent hover:text-magazine-accent transition-colors"
+                className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase text-magazine-black/60 border border-magazine-black/20 px-5 py-3 hover:border-magazine-accent hover:text-magazine-accent transition-colors"
               >
                 contact@boha-group.com →
               </a>
-              <div className="mt-8 pt-8 border-t border-white/8">
-                <p className="font-mono text-[8px] tracking-[0.16em] uppercase text-white/30 mb-2">Certification CIFS</p>
-                <p className="text-label-mag text-white/50 leading-relaxed mb-4">
+              <div className="mt-8 pt-8 border-t border-magazine-black/8">
+                <p className="font-mono text-[8px] tracking-[0.16em] uppercase text-magazine-black/30 mb-2">Certification CIFS</p>
+                <p className="text-label-mag text-magazine-black/50 leading-relaxed mb-4">
                   Moins de 25 % des actifs soumis atteignent le statut Full Grade.
                   Découvrez où se situe votre actif avant qu'un acheteur ne le fasse.
                 </p>
                 <a
                   href={`/${locale}/contact`}
-                  className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase bg-magazine-accent text-magazine-black px-5 py-3 font-bold hover:bg-white transition-colors"
+                  className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase bg-magazine-black text-magazine-white px-5 py-3 font-bold hover:bg-magazine-accent hover:text-magazine-black transition-colors"
                 >
                   Démarrer la certification →
                 </a>
@@ -166,12 +166,12 @@ export default async function MagazineHubPage({ params }: Props) {
       </div>
 
       {/* ── Footer mag ── */}
-      <div className="bg-magazine-black border-t border-white/5">
+      <div className="border-t border-magazine-black/8 bg-magazine-ivory">
         <div className="max-w-magazine mx-auto px-6 md:px-[120px] py-8 flex flex-wrap items-center justify-between gap-4">
-          <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-white/20">
+          <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-black/25">
             Aegryn SA — Saint-Sulpice, Canton de Vaud, Switzerland — CHE-402.011.821
           </p>
-          <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-white/20">
+          <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-black/25">
             © Aegryn SA 2027 — Accès digital gratuit et permanent
           </p>
         </div>
