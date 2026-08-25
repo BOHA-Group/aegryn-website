@@ -8,7 +8,6 @@ import { ARTICLES_01 }     from '@/content/magazine/issue-01/articles'
 import { DATA_01, dealVolumeData, multiplesChartData, gradeDistributionData } from '@/content/magazine/issue-01/data'
 
 import { MagazineNav }       from '@/components/magazine/MagazineNav'
-import { CoverSection }      from '@/components/magazine/sections/CoverSection'
 import { AegrynCtaBlock }    from '@/components/magazine/AegrynCtaBlock'
 import { CifsBars }          from '@/components/magazine/CifsBars'
 import { DealVolumeChart }   from '@/components/magazine/charts/DealVolumeChart'
@@ -90,13 +89,6 @@ export default async function IssuePage({ params }: Props) {
             url:           `https://aegryn.com/${locale}/magazine/${issue.slug}`,
           }),
         }}
-      />
-
-      {/* ── Cover pleine largeur (avant sidebar) ── */}
-      <CoverSection
-        issue={issue}
-        ctaScroll={t('scrollDown')}
-        locale={locale}
       />
 
       {/* ── Layout 2 colonnes : sidebar fixe + contenu scrollable ── */}
