@@ -28,7 +28,7 @@ export function NewsletterBlock({
     if (!email) return
     setStatus('loading')
     try {
-      const res = await fetch('/api/report/subscribe', {
+      const res = await fetch('/api/newsletter/subscribe', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ email }),
