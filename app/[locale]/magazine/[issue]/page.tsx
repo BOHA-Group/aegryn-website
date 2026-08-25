@@ -513,7 +513,7 @@ export default async function IssuePage({ params }: Props) {
         </section>
 
         {/* ── People : Founder Portrait + Radar 5 Builders ── */}
-        <section id="s-perspective" className="bg-magazine-ivory px-6 md:px-[120px] py-32">
+        <section id="s-people" className="bg-magazine-ivory px-6 md:px-[120px] py-32">
           <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Section 05 — People</p>
           <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">The Founder Who Built to Sell.</h2>
           <p className="text-body-mag text-magazine-black/55 max-w-prose mb-16 leading-[1.75] italic">Composite portrait drawn from four European founders who exited between 2025 and 2026. All bootstrapped. All profitable. None had institutional venture backing.</p>
@@ -575,8 +575,8 @@ export default async function IssuePage({ params }: Props) {
           </div>
         </section>
 
-        {/* ── Life : The Founder’s Stack ── */}
-        <section id="s-buyers" className="bg-magazine-white px-6 md:px-[120px] py-32">
+        {/* ── Life : The Founder's Stack ── */}
+        <section id="s-life" className="bg-magazine-white px-6 md:px-[120px] py-32">
           <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Section 06 — Life</p>
           <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">The Founder’s Stack — Issue 01.</h2>
           <p className="text-body-mag text-magazine-black/55 max-w-prose mb-20 leading-[1.75]">Not what founders say they use. What serious European builders in active build or pre-transaction mode actually use — day to day, quarter to quarter.</p>
@@ -646,7 +646,7 @@ export default async function IssuePage({ params }: Props) {
                 <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-accent mb-3">Coming Next — Issue 02 — April 2027</p>
                 <p className="font-sans font-bold text-magazine-black text-[18px] mb-3">The Exit Equation.</p>
                 <p className="text-[12px] text-magazine-black/55 leading-[1.65] mb-4">The decision, the preparation, the negotiation, and the twelve months that follow. The number that changes your life, and whether it was the right number.</p>
-                <a href="/fr/magazine" className="font-mono text-[9px] tracking-[0.16em] uppercase text-magazine-accent hover:underline">Subscribe →</a>
+                <a href={`/${locale}/magazine`} className="font-mono text-[9px] tracking-[0.16em] uppercase text-magazine-accent hover:underline">Subscribe →</a>
               </div>
             </div>
           </div>
