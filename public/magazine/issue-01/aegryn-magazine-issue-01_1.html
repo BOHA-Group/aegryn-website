@@ -1144,10 +1144,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 
   /* ── 7. UI update ── */
   function updateUI(slotIdx){
-    /* slotIdx 0=vide,1=p1,2=p2… → page réelle = slotIdx */
+    /* slotIdx 0=vide,1=cover,2=p2… */
     var realPage = slotIdx < 1 ? 1 : slotIdx;
     var sp = Math.floor((realPage - 1) / 2); /* spread 0..29 */
-    document.getElementById('fb-pg-num').textContent = 'p. ' + realPage + ' / ' + TOT_REAL;
+    var pgLabel = (slotIdx <= 1) ? 'Cover' : ('p. ' + realPage + ' / ' + TOT_REAL);
+    document.getElementById('fb-pg-num').textContent = pgLabel;
     document.getElementById('fb-progress-fill').style.width =
       ((sp + 1) / TOT_SPREADS * 100).toFixed(0) + '%';
     document.getElementById('fb-prev').disabled  = slotIdx <= 1;
