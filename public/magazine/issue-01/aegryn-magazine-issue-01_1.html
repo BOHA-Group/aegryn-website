@@ -1126,13 +1126,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     if(sc <= 0) sc = 0.5;
     scalerEl.style.width  = BOOK_W + 'px';
     scalerEl.style.height = BOOK_H + 'px';
-    /* En cover state : décaler le scaler pour centrer la page visible
-       – Cover (slot droite) : translateX(+PAGE_W/2*sc) pour ramener la moitié droite au centre
-       – Back cover (slot gauche) : translateX(-PAGE_W/2*sc) pour ramener la moitié gauche au centre
-       En spread : pas de décalage, transform-origin center center */
+    /* En cover state : décaler le canvas pour centrer la page visible
+       Cover = moitié droite → offsetX négatif (canvas glisse à gauche, cover se centre)
+       Back cover = moitié gauche → offsetX positif (canvas glisse à droite, back cover se centre)
+       Spread : offsetX = 0, pas de décalage */
     var offsetX = 0;
     if(isCoverState){
-      offsetX = isBack ? -(PAGE_W / 2) * sc : (PAGE_W / 2) * sc;
+      offsetX = isBack ? (PAGE_W / 2) * sc : -(PAGE_W / 2) * sc;
     }
     scalerEl.style.transform = 'translate(calc(-50% + ' + offsetX + 'px),-50%) scale(' + sc + ')';
     document.getElementById('fb-zoom-lbl').textContent = Math.round(sc * 100) + '%';
@@ -1292,6 +1292,14 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     var leftW  = EDGE_MIN + (EDGE_MAX - EDGE_MIN) * readRatio;
     var rightW = EDGE_MAX - (EDGE_MAX - EDGE_MIN) * readRatio + EDGE_MIN;
 
+    /* En cover/back cover : masquer spine et tranches — magazine fermé */
+    if(isCoverState){
+      spineEl.classList.remove('visible');
+      edgeL.style.opacity = '0';
+      edgeR.style.opacity = '0';
+      return;
+    }
+
     /* Spine */
     spineEl.style.height = bookH + 'px';
     spineLineEl.style.height = bookH + 'px';
@@ -1300,15 +1308,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     /* Tranches — positionnées aux bords du livre scalé */
     var halfBook = bookW / 2;
 
-    /* Tranche gauche : à l'extérieur du bord gauche du livre
-       Le livre est centré (left: 50% - halfBook → right edge of left page).
-       La tranche se positionne juste à gauche du livre. */
     edgeL.style.right  = 'calc(50% + ' + halfBook + 'px)';
     edgeL.style.width  = leftW + 'px';
     edgeL.style.height = bookH + 'px';
     edgeL.style.opacity = idx > 0 ? '1' : '0';
 
-    /* Tranche droite : à l'extérieur du bord droit du livre */
     edgeR.style.left   = 'calc(50% + ' + halfBook + 'px)';
     edgeR.style.width  = rightW + 'px';
     edgeR.style.height = bookH + 'px';
