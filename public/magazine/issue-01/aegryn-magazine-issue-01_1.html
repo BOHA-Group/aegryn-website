@@ -15,16 +15,13 @@
 .cr{background:#FFFFFF;color:var(--K)}
 .wh{background:#FFFFFF;color:var(--K)}
 .gr{background:var(--G);color:var(--K)}
-.sp{padding:36px 32px 52px}
-.sp-sm{padding:28px 28px 40px}
-/* ── En-tête rubrique — transparent, sans bande ── */
+.sp{padding:44px 38px 56px}
+.sp-sm{padding:34px 34px 46px}
+/* ── En-tête rubrique — masqué (Barnes : pas de header) ── */
 .pg-hdr{
-  height:22px;margin:-36px -32px 18px;padding:0 32px;
-  display:flex;align-items:center;justify-content:space-between;
-  border-bottom:none;
-  background:transparent;
+  display:none !important;
 }
-.pg-hdr-dk{background:transparent;}
+.pg-hdr-dk{display:none !important;}
 .pg-hdr-ttl{
   font-size:6.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
   color:rgba(0,0,0,.18);
@@ -35,15 +32,9 @@
   color:rgba(0,0,0,.15);
 }
 .pg-hdr-pg-dk{color:rgba(15,26,43,.15);}
-/* ── Folio : numéro seul, coin bas — sans barre ni fond ── */
+/* ── Folio HTML interne — masqué (seul le folio overlay JS est conservé) ── */
 .rf{
-  position:absolute;bottom:12px;
-  font-size:7.5px;font-weight:600;letter-spacing:.12em;
-  color:rgba(0,0,0,.22);
-  background:transparent;border:none;
-  /* Par défaut : coin bas-droit (pages droites impaires) */
-  right:24px;left:auto;
-  display:block;
+  display:none !important;
 }
 /* Page gauche (paire) : numéro à gauche */
 .rf-l{
@@ -1345,17 +1336,18 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     var leftPage  = slotIdx;       /* page gauche = slot courant */
     var rightPage = slotIdx + 1;   /* page droite */
 
-    /* Folio gauche — coin bas-gauche du livre */
+    /* Folio gauche — coin bas-EXTÉRIEUR gauche (bord gauche du livre) */
     folioL.textContent = leftPage <= TOT_REAL ? leftPage : '';
-    folioL.style.left   = 'calc(50% - ' + halfW + 'px + ' + pad + 'px)';
+    folioL.style.left   = 'calc(50% - ' + halfW + 'px - ' + pad + 'px - 12px)';
+    folioL.style.right  = 'auto';
     folioL.style.bottom = pb + 'px';
     folioL.style.opacity = leftPage <= TOT_REAL ? '1' : '0';
 
-    /* Folio droit — coin bas-droit du livre */
+    /* Folio droit — coin bas-EXTÉRIEUR droit (bord droit du livre) */
     folioR.textContent = rightPage <= TOT_REAL ? rightPage : '';
-    folioR.style.right  = 'calc(50% - ' + halfW + 'px + ' + pad + 'px)';
-    folioR.style.bottom = pb + 'px';
+    folioR.style.right  = 'calc(50% - ' + halfW + 'px - ' + pad + 'px - 12px)';
     folioR.style.left   = 'auto';
+    folioR.style.bottom = pb + 'px';
     folioR.style.opacity = rightPage <= TOT_REAL ? '1' : '0';
   }
 
