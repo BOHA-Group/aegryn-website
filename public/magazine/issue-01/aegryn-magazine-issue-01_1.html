@@ -183,25 +183,25 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   overflow:hidden;
   border-radius:0;
 }
-/* Lignes de pages empilées — tranche gauche (pages lues) */
+/* Traits verticaux — tranche gauche (pages lues) — style Barnes exact */
 #fb-edge-l .fb-edge-inner{
   background:repeating-linear-gradient(
-    to bottom,
-    #f8f6f2 0px, #f8f6f2 1.2px,
-    #c8c3bb 1.2px, #c8c3bb 2px,
-    #ede9e3 2px, #ede9e3 3.2px
+    to right,
+    #f5f3ef 0px, #f5f3ef 0.8px,
+    #bfbab2 0.8px, #bfbab2 1.4px,
+    #e8e4de 1.4px, #e8e4de 2.5px
   );
-  box-shadow:inset -2px 0 4px rgba(0,0,0,.18), 4px 0 18px rgba(0,0,0,.35);
+  box-shadow:inset -3px 0 5px rgba(0,0,0,.22), 5px 0 20px rgba(0,0,0,.40);
 }
-/* Lignes de pages empilées — tranche droite (pages restantes) */
+/* Traits verticaux — tranche droite (pages restantes) — style Barnes exact */
 #fb-edge-r .fb-edge-inner{
   background:repeating-linear-gradient(
-    to bottom,
-    #f8f6f2 0px, #f8f6f2 1.2px,
-    #c8c3bb 1.2px, #c8c3bb 2px,
-    #ede9e3 2px, #ede9e3 3.2px
+    to right,
+    #f5f3ef 0px, #f5f3ef 0.8px,
+    #bfbab2 0.8px, #bfbab2 1.4px,
+    #e8e4de 1.4px, #e8e4de 2.5px
   );
-  box-shadow:inset 2px 0 4px rgba(0,0,0,.18), -4px 0 18px rgba(0,0,0,.35);
+  box-shadow:inset 3px 0 5px rgba(0,0,0,.22), -5px 0 20px rgba(0,0,0,.40);
 }
 /* Spine — reliure centrale simulée — style Barnes exact */
 #fb-spine{
@@ -1102,15 +1102,16 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
      La librairie gère elle-même le spread double page (usePortrait:false).
      Le canvas interne aura 840×595. Le scaler CSS ajuste l'affichage. */
   var pageFlip = new St.PageFlip(bookEl, {
-    width:               PAGE_W,   /* 420 = une page */
-    height:              PAGE_H,   /* 595 */
+    width:               PAGE_W,
+    height:              PAGE_H,
     size:                'fixed',
-    drawShadow:          true,
+    drawShadow:          false,   /* on gère la spine CSS nous-mêmes */
     flippingTime:        700,
     usePortrait:         false,
     showCover:           true,
+    startPage:           0,       /* démarre sur slot 0 → cover seule à droite */
     mobileScrollSupport: false,
-    maxShadowOpacity:    0.4,
+    maxShadowOpacity:    0.0,
     showPageCorners:     true,
     disableFlipByClick:  false,
     swipeDistance:       30,
@@ -1175,6 +1176,14 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     if(thumbEls[sp]) thumbEls[sp].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
   }
 
+  /* ── 14. Spine + Tranches — déclarés tôt pour les listeners ── */
+  var spineEl     = document.getElementById('fb-spine');
+  var spineLineEl = document.getElementById('fb-spine-line');
+  var edgeL       = document.getElementById('fb-edge-l');
+  var edgeR       = document.getElementById('fb-edge-r');
+  var EDGE_MAX    = 28;
+  var EDGE_MIN    = 2;
+
   pageFlip.on('flip', function(e){
     var idx = e.data;
     isCoverState = (idx <= 1);
@@ -1185,9 +1194,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   });
   pageFlip.on('changeState', function(e){
     var idx = pageFlip.getCurrentPageIndex();
+    var state = e.data; /* 'read','flipping','user_fold','fold_corner' */
     var prev = isCoverState;
     isCoverState = (idx <= 1);
     if(prev !== isCoverState){ setTimeout(applyScale, 50); }
+    /* Masquer spine pendant flip pour éviter transparence */
+    var isFlipping = (state === 'flipping' || state === 'user_fold' || state === 'fold_corner');
+    if(spineEl) spineEl.style.opacity = (isFlipping || idx <= 1) ? '0' : '1';
     edgeUpdate();
   });
   pageFlip.on('init', function(){
@@ -1258,15 +1271,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   /* Re-scale sécurité après rendu complet */
   setTimeout(function(){ isCoverState = true; applyScale(); edgeUpdate(); }, 200);
 
-  /* ── 14. Spine + Tranches — positionnées au centre exact du livre scalé ── */
-  var spineEl    = document.getElementById('fb-spine');
-  var spineLineEl = document.getElementById('fb-spine-line');
-  var edgeL      = document.getElementById('fb-edge-l');
-  var edgeR      = document.getElementById('fb-edge-r');
-
-  /* Épaisseur max de la tranche : ~22px côté plein, ~3px côté vide */
-  var EDGE_MAX = 28; /* px — côté avec toutes les pages */
-  var EDGE_MIN = 2;  /* px — côté avec 0 page */
+  /* ── 14. Spine + Tranches — (variables déjà déclarées ci-dessus) ── */
 
   function edgeUpdate(){
     var sc = parseFloat((scalerEl.style.transform.match(/scale\(([^)]+)\)/) || ['','1'])[1]);
