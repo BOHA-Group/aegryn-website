@@ -324,27 +324,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 .stk-desc:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 /* Cover — bouton fullscreen au hover via CSS */
 #p1:hover #cover-fs-btn{opacity:1!important}
-/* ── Cover mask : masque la moitié vide du canvas en état cover seule ── */
-#cover-mask{
-  position:absolute;top:0;bottom:0;
-  pointer-events:none;
-  z-index:16;
-  background:#3A3A3A;
-  transition:opacity .25s;
-  opacity:0;
-}
-#cover-mask.visible{opacity:1}
-/* Dos de couverture simulé : fine tranche sombre sur le bord intérieur */
-#cover-mask::after{
-  content:'';
-  position:absolute;top:0;bottom:0;
-  width:22px;
-  background:linear-gradient(to right,rgba(0,0,0,.55),rgba(0,0,0,.0));
-}
-#cover-mask.side-left{left:0;right:50%;}
-#cover-mask.side-left::after{right:0;left:auto}
-#cover-mask.side-right{right:0;left:50%;}
-#cover-mask.side-right::after{left:0;right:auto;background:linear-gradient(to left,rgba(0,0,0,.55),rgba(0,0,0,.0))}
+/* ── Cover mask : inutilisé, conservé pour compatibilité DOM ── */
+#cover-mask{ display:none; }
 @media print{
   body{display:block;padding:0;background:#fff}
   .mag-title,.viewer-wrap,.controls,.thumb-strip,button{display:none!important}
@@ -398,7 +379,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <!-- Marge blanche autour : style Barnes exact -->
   <div style="width:420px;height:595px;background:#fff;display:flex;align-items:center;justify-content:center;padding:0;box-shadow:0 8px 40px rgba(0,0,0,.55);position:relative">
     <!-- Image de fond cover -->
-    <div style="position:relative;width:100%;height:100%;overflow:hidden;background-image:url(cover-bg.jpg);background-size:cover;background-position:center top">
+    <div style="position:relative;width:100%;height:100%;overflow:hidden;background-image:url('cover-bg.jpg'),url('https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&w=840');background-size:cover;background-position:center top">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,10,15,.75) 0%,rgba(5,10,15,.45) 45%,rgba(5,10,15,.78) 100%)"></div>
       <div style="position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:space-between;padding:28px 30px">
         <!-- TOP BAR -->
@@ -1134,48 +1115,30 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   var zoomBoost = 1;
   var isCoverState = true; /* true quand cover seule visible */
 
-  var coverMaskEl = document.getElementById('cover-mask');
-
   function applyScale(){
-    var aw = areaEl.clientWidth  - 80;  /* marges flèches */
+    var aw = areaEl.clientWidth  - 80;
     var ah = areaEl.clientHeight - 20;
-    /* Cover/back cover seule : scaler sur PAGE_W pour maximiser la page */
+    var curIdx = pageFlip ? pageFlip.getCurrentPageIndex() : 0;
+    var isBack = (curIdx >= TOT_REAL);
+    /* En cover state : scaler sur PAGE_W (une page), sinon BOOK_W (spread double) */
     var fitW = isCoverState ? PAGE_W : BOOK_W;
     var sc = Math.min(aw / fitW, ah / BOOK_H) * zoomBoost;
     if(sc <= 0) sc = 0.5;
     scalerEl.style.width  = BOOK_W + 'px';
     scalerEl.style.height = BOOK_H + 'px';
-    scalerEl.style.transform = 'translate(-50%,-50%) scale(' + sc + ')';
+    /* En cover state : décaler le scaler pour centrer la page visible
+       – Cover (slot droite) : translateX(+PAGE_W/2*sc) pour ramener la moitié droite au centre
+       – Back cover (slot gauche) : translateX(-PAGE_W/2*sc) pour ramener la moitié gauche au centre
+       En spread : pas de décalage, transform-origin center center */
+    var offsetX = 0;
+    if(isCoverState){
+      offsetX = isBack ? -(PAGE_W / 2) * sc : (PAGE_W / 2) * sc;
+    }
+    scalerEl.style.transform = 'translate(calc(-50% + ' + offsetX + 'px),-50%) scale(' + sc + ')';
     document.getElementById('fb-zoom-lbl').textContent = Math.round(sc * 100) + '%';
-    /* Cover mask — masque la moitié vide du canvas */
-    var curIdx = pageFlip ? pageFlip.getCurrentPageIndex() : 0;
-    updateCoverMask(sc, curIdx);
   }
 
-  function updateCoverMask(sc, idx){
-    if(!coverMaskEl) return;
-    var isBack = (idx >= TOT_REAL);
-    if(isCoverState){
-      var bookW = BOOK_W * sc;
-      var bookH = BOOK_H * sc;
-      /* Cover (p1) : StPageFlip la positionne à DROITE du canvas → masquer la moitié GAUCHE */
-      /* Back cover (p60) : positionnée à GAUCHE → masquer la moitié DROITE */
-      coverMaskEl.className = 'visible ' + (isBack ? 'side-right' : 'side-left');
-      /* Aligner le mask exactement sur la moitié vide du livre scalé */
-      var halfBook = bookW / 2;
-      if(isBack){
-        /* back cover à gauche → masquer droite */
-        coverMaskEl.style.left  = 'calc(50%)';
-        coverMaskEl.style.right = '0';
-      } else {
-        /* cover à droite → masquer gauche */
-        coverMaskEl.style.left  = '0';
-        coverMaskEl.style.right = 'calc(50%)';
-      }
-    } else {
-      coverMaskEl.className = '';
-    }
-  }
+  function updateCoverMask(){} /* no-op — remplacé par translate */
 
   /* ── 6. Thumbnails (spreads réels = 30, index StPageFlip 1..60) ── */
   var TOT_SPREADS = 30;
@@ -1223,12 +1186,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   var edgeR       = document.getElementById('fb-edge-r');
   var EDGE_MAX    = 28;
   var EDGE_MIN    = 2;
-  /* Masque initial cover avant init — couvre la moitié gauche vide dès le chargement */
-  if(coverMaskEl){
-    coverMaskEl.className = 'visible side-left';
-    coverMaskEl.style.left  = '0';
-    coverMaskEl.style.right = 'calc(50%)';
-  }
 
   pageFlip.on('flip', function(e){
     var idx = e.data;
@@ -1237,7 +1194,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     edgeUpdate();
     folioPagesUpdate(idx);
     setTimeout(applyScale, 50); /* re-scale après transition cover→spread */
-    updateCoverMask(1, idx); /* mise à jour immédiate du mask */
   });
   pageFlip.on('changeState', function(e){
     var idx = pageFlip.getCurrentPageIndex();
