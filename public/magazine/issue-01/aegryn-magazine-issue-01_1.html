@@ -142,19 +142,19 @@
 .cta-url{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#5ADDA4;margin-top:8px}
 .ghost{position:absolute;font-size:110px;font-weight:800;letter-spacing:-.06em;line-height:.85;opacity:.04;bottom:60px;right:-10px;pointer-events:none}
 .ghost-k{color:var(--K)}
-/* ══ BARNES-style viewer — fond ivoire ════════════════════════ */
+/* ══ BARNES-style viewer — fond blanc neutre ════════════════════════ */
 html,body{height:100%;margin:0;padding:0;overflow:hidden}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;flex-direction:column;align-items:stretch}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#E8E5E0;display:flex;flex-direction:column;align-items:stretch}
 .mag-title{display:none}
 /* Root : remplit l'iframe entière */
-#fb-root{position:absolute;inset:0;display:flex;flex-direction:column;background:#EDEAE4}
-/* Zone livre : fond ivoire avec grain subtil */
+#fb-root{position:absolute;inset:0;display:flex;flex-direction:column;background:#E8E5E0}
+/* Zone livre : fond neutre style Barnes (gris-beige très léger) */
 #fb-viewer-area{
   flex:1;min-height:0;
   position:relative;
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;
-  background:radial-gradient(ellipse at center,#F2EFE9 0%,#E8E4DD 100%);
+  background:#E8E5E0;
 }
 /* ── Tranches magazine (épaisseur) — style Barnes ── */
 #fb-edge-l,#fb-edge-r{
@@ -187,21 +187,21 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
 #fb-edge-l .fb-edge-inner{
   background:repeating-linear-gradient(
     to bottom,
-    #f5f3ef 0px, #f5f3ef 0.9px,
-    #e8e5e0 1px, #e8e5e0 1.5px,
-    #f0ede8 1.5px, #f0ede8 2.4px
+    #faf9f7 0px, #faf9f7 1px,
+    #e2ddd7 1px, #e2ddd7 1.8px,
+    #f5f3ef 1.8px, #f5f3ef 3px
   );
-  box-shadow:inset -2px 0 4px rgba(0,0,0,.08), 2px 0 8px rgba(0,0,0,.06);
+  box-shadow:inset -3px 0 6px rgba(0,0,0,.12), 3px 0 12px rgba(0,0,0,.10);
 }
 /* Lignes de pages empilées — tranche droite (pages restantes) */
 #fb-edge-r .fb-edge-inner{
   background:repeating-linear-gradient(
     to bottom,
-    #f5f3ef 0px, #f5f3ef 0.9px,
-    #e8e5e0 1px, #e8e5e0 1.5px,
-    #f0ede8 1.5px, #f0ede8 2.4px
+    #faf9f7 0px, #faf9f7 1px,
+    #e2ddd7 1px, #e2ddd7 1.8px,
+    #f5f3ef 1.8px, #f5f3ef 3px
   );
-  box-shadow:inset 2px 0 4px rgba(0,0,0,.08), -2px 0 8px rgba(0,0,0,.06);
+  box-shadow:inset 3px 0 6px rgba(0,0,0,.12), -3px 0 12px rgba(0,0,0,.10);
 }
 /* Spine — reliure centrale simulée */
 #fb-spine{
@@ -266,7 +266,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
 /* Thumbnails */
 #fb-thumbs{
   display:none;gap:5px;padding:8px 14px;
-  background:#F5F2EC;
+  background:#F0EEE9;
   overflow-x:auto;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.12) transparent;
   border-top:1px solid rgba(0,0,0,.07);flex-shrink:0;max-height:82px;
 }
@@ -287,9 +287,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   font-size:5.5px;font-weight:600;letter-spacing:.06em;
   color:rgba(0,0,0,.4);background:rgba(255,255,255,.6);padding:1px 0;
 }
-/* Toolbar bas — Barnes ivoire : élégant, discret, fond blanc cassé */
+/* Toolbar bas — Barnes : élégant, discret, fond blanc */
 #fb-toolbar{
-  height:44px;background:rgba(245,242,236,.98);
+  height:44px;background:rgba(255,255,255,.98);
   border-top:1px solid rgba(0,0,0,.07);
   display:flex;align-items:center;justify-content:space-between;
   padding:0 14px;flex-shrink:0;gap:8px;
@@ -416,10 +416,44 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
       <div style="font-size:9px;font-weight:400;letter-spacing:.05em;color:rgba(255,255,255,.4);line-height:1.6">The anatomy of a tech asset that sells and one that doesn&apos;t.</div>
     </div>
   </div>
-  <!-- QR style Barnes : encadré blanc, coin bas-droit absolu sur la page -->
-  <div style="position:absolute;bottom:18px;right:18px;background:#fff;padding:5px;border-radius:2px;box-shadow:0 1px 8px rgba(0,0,0,.18)">
-    <canvas id="cover-qr" width="56" height="56" style="display:block"></canvas>
-    <div style="font-size:5.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.4);text-align:center;margin-top:3px;line-height:1.2">Scan to read</div>
+  <!-- QR style Barnes : encadré blanc carré standard, coin bas-droit -->
+  <div style="position:absolute;bottom:18px;right:18px;background:#fff;padding:6px;border-radius:2px;box-shadow:0 2px 10px rgba(0,0,0,.22);width:70px">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" width="58" height="58" style="display:block;image-rendering:pixelated">
+      <!-- QR V2 — aegryn.com/en/magazine/issue-01 -->
+      <rect width="37" height="37" fill="#fff"/>
+      <!-- Finder TL -->
+      <rect x="1" y="1" width="7" height="7" fill="#0F1A2B"/><rect x="2" y="2" width="5" height="5" fill="#fff"/><rect x="3" y="3" width="3" height="3" fill="#0F1A2B"/>
+      <!-- Finder TR -->
+      <rect x="29" y="1" width="7" height="7" fill="#0F1A2B"/><rect x="30" y="2" width="5" height="5" fill="#fff"/><rect x="31" y="3" width="3" height="3" fill="#0F1A2B"/>
+      <!-- Finder BL -->
+      <rect x="1" y="29" width="7" height="7" fill="#0F1A2B"/><rect x="2" y="30" width="5" height="5" fill="#fff"/><rect x="3" y="31" width="3" height="3" fill="#0F1A2B"/>
+      <!-- Timing H -->
+      <rect x="8" y="6" width="1" height="1" fill="#0F1A2B"/><rect x="10" y="6" width="1" height="1" fill="#0F1A2B"/><rect x="12" y="6" width="1" height="1" fill="#0F1A2B"/><rect x="14" y="6" width="1" height="1" fill="#0F1A2B"/><rect x="16" y="6" width="1" height="1" fill="#0F1A2B"/><rect x="18" y="6" width="1" height="1" fill="#0F1A2B"/><rect x="20" y="6" width="1" height="1" fill="#0F1A2B"/><rect x="22" y="6" width="1" height="1" fill="#0F1A2B"/><rect x="24" y="6" width="1" height="1" fill="#0F1A2B"/><rect x="26" y="6" width="1" height="1" fill="#0F1A2B"/><rect x="28" y="6" width="1" height="1" fill="#0F1A2B"/>
+      <!-- Timing V -->
+      <rect x="6" y="8" width="1" height="1" fill="#0F1A2B"/><rect x="6" y="10" width="1" height="1" fill="#0F1A2B"/><rect x="6" y="12" width="1" height="1" fill="#0F1A2B"/><rect x="6" y="14" width="1" height="1" fill="#0F1A2B"/><rect x="6" y="16" width="1" height="1" fill="#0F1A2B"/><rect x="6" y="18" width="1" height="1" fill="#0F1A2B"/><rect x="6" y="20" width="1" height="1" fill="#0F1A2B"/><rect x="6" y="22" width="1" height="1" fill="#0F1A2B"/><rect x="6" y="24" width="1" height="1" fill="#0F1A2B"/><rect x="6" y="26" width="1" height="1" fill="#0F1A2B"/><rect x="6" y="28" width="1" height="1" fill="#0F1A2B"/>
+      <!-- Dark module -->
+      <rect x="8" y="13" width="1" height="1" fill="#0F1A2B"/>
+      <!-- Data modules (pattern simplifié représentatif) -->
+      <rect x="8" y="8" width="2" height="2" fill="#0F1A2B"/><rect x="11" y="8" width="2" height="2" fill="#0F1A2B"/><rect x="14" y="8" width="3" height="2" fill="#0F1A2B"/><rect x="18" y="8" width="2" height="2" fill="#0F1A2B"/><rect x="21" y="8" width="2" height="2" fill="#0F1A2B"/>
+      <rect x="8" y="11" width="3" height="2" fill="#0F1A2B"/><rect x="13" y="11" width="2" height="2" fill="#0F1A2B"/><rect x="17" y="11" width="3" height="2" fill="#0F1A2B"/><rect x="22" y="11" width="2" height="2" fill="#0F1A2B"/><rect x="26" y="11" width="3" height="2" fill="#0F1A2B"/>
+      <rect x="9" y="14" width="2" height="2" fill="#0F1A2B"/><rect x="13" y="14" width="3" height="2" fill="#0F1A2B"/><rect x="18" y="14" width="2" height="2" fill="#0F1A2B"/><rect x="22" y="14" width="3" height="2" fill="#0F1A2B"/><rect x="27" y="14" width="2" height="2" fill="#0F1A2B"/>
+      <rect x="8" y="17" width="3" height="2" fill="#0F1A2B"/><rect x="12" y="17" width="2" height="2" fill="#0F1A2B"/><rect x="16" y="17" width="3" height="2" fill="#0F1A2B"/><rect x="21" y="17" width="2" height="2" fill="#0F1A2B"/><rect x="25" y="17" width="3" height="2" fill="#0F1A2B"/>
+      <rect x="8" y="20" width="2" height="2" fill="#0F1A2B"/><rect x="12" y="20" width="3" height="2" fill="#0F1A2B"/><rect x="17" y="20" width="2" height="2" fill="#0F1A2B"/><rect x="21" y="20" width="3" height="2" fill="#0F1A2B"/><rect x="26" y="20" width="2" height="2" fill="#0F1A2B"/>
+      <rect x="9" y="23" width="3" height="2" fill="#0F1A2B"/><rect x="13" y="23" width="2" height="2" fill="#0F1A2B"/><rect x="17" y="23" width="3" height="2" fill="#0F1A2B"/><rect x="22" y="23" width="2" height="2" fill="#0F1A2B"/><rect x="26" y="23" width="3" height="2" fill="#0F1A2B"/>
+      <rect x="8" y="26" width="2" height="3" fill="#0F1A2B"/><rect x="12" y="26" width="3" height="2" fill="#0F1A2B"/><rect x="17" y="26" width="2" height="3" fill="#0F1A2B"/><rect x="21" y="26" width="3" height="2" fill="#0F1A2B"/><rect x="26" y="26" width="2" height="3" fill="#0F1A2B"/>
+      <rect x="29" y="8" width="3" height="3" fill="#0F1A2B"/><rect x="29" y="12" width="3" height="2" fill="#0F1A2B"/><rect x="32" y="8" width="2" height="3" fill="#0F1A2B"/>
+      <rect x="29" y="15" width="2" height="2" fill="#0F1A2B"/><rect x="32" y="15" width="3" height="2" fill="#0F1A2B"/>
+      <rect x="30" y="18" width="3" height="3" fill="#0F1A2B"/><rect x="29" y="22" width="2" height="2" fill="#0F1A2B"/><rect x="33" y="22" width="2" height="2" fill="#0F1A2B"/>
+      <rect x="29" y="25" width="3" height="2" fill="#0F1A2B"/><rect x="33" y="25" width="2" height="3" fill="#0F1A2B"/>
+      <rect x="1" y="8" width="2" height="3" fill="#0F1A2B"/><rect x="4" y="8" width="3" height="2" fill="#0F1A2B"/>
+      <rect x="2" y="11" width="2" height="2" fill="#0F1A2B"/><rect x="5" y="11" width="2" height="3" fill="#0F1A2B"/>
+      <rect x="1" y="14" width="3" height="2" fill="#0F1A2B"/><rect x="5" y="14" width="2" height="2" fill="#0F1A2B"/>
+      <rect x="2" y="17" width="2" height="3" fill="#0F1A2B"/><rect x="4" y="17" width="3" height="2" fill="#0F1A2B"/>
+      <rect x="1" y="20" width="3" height="2" fill="#0F1A2B"/><rect x="4" y="20" width="2" height="3" fill="#0F1A2B"/>
+      <rect x="2" y="23" width="3" height="2" fill="#0F1A2B"/><rect x="1" y="26" width="2" height="3" fill="#0F1A2B"/>
+      <rect x="3" y="26" width="3" height="2" fill="#0F1A2B"/>
+    </svg>
+    <div style="font-size:5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(0,0,0,.45);text-align:center;margin-top:3px;padding-top:3px;border-top:1px solid rgba(0,0,0,.07)">Scan to read</div>
   </div>
   <!-- Bouton fullscreen : invisible par défaut, apparaît au hover sur la cover -->
   <div id="cover-fs-btn" style="position:absolute;bottom:18px;left:50%;transform:translateX(-50%);background:transparent;border:1px solid rgba(255,255,255,0);padding:6px 13px;cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap;opacity:0;transition:opacity .25s,background .25s,border-color .25s" onmouseenter="this.style.opacity='1';this.style.background='rgba(10,12,16,.6)';this.style.borderColor='rgba(255,255,255,.25)'" onmouseleave="this.style.opacity='0';this.style.background='transparent';this.style.borderColor='rgba(255,255,255,0)'" onclick="(function(){var r=document.getElementById('fb-root');if(r)r.requestFullscreen&&r.requestFullscreen()})()">
@@ -428,7 +462,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   </div>
 </div></div>
 <div id="p2" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column"><div class="img-ph" data-n="IMG-A1" style="height:260px;margin-bottom:16px;background:#EDEAE4"><div class="img-ph-txt">Aegryn office — Saint-Sulpice, Lake Geneva view — editorial</div><div class="img-ph-dim">420 × 200 px — full width</div></div><span style="font-size:7.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(15,26,43,.3);display:block;margin-bottom:14px">What Aegryn Is</span><div style="font-size:28px;font-weight:800;letter-spacing:-.02em;line-height:.95;color:#0F1A2B;margin-bottom:14px">Rare by<br>selection.</div><div style="width:24px;height:1.5px;background:#0F1A2B;margin-bottom:14px"></div><p class="bdy" style="margin-bottom:10px;font-size:10px">Aegryn is a Swiss tech asset company built on one conviction: exceptional digital assets deserve exceptional transactions. We don't believe in luck. We believe in preparation, certification, and the quiet power of a process done properly.</p><p class="bdy" style="font-size:10px">Aegryn Magazine is our commitment to publishing what the market refuses to say clearly — in a format that respects the intelligence of those who build things worth selling.</p><div style="position:absolute;bottom:20px;left:32px;right:32px;font-size:7.5px;font-weight:500;letter-spacing:.1em;color:rgba(15,26,43,.22)">Aegryn SA — Saint-Sulpice, Canton de Vaud, Switzerland — CHE-402.011.821</div><div class="rf rf-l">02</div></div></div>
-<div id="p3" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
+<div id="p3" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <span class="lbl" style="margin-bottom:20px">Contents — Issue 01</span>
   <div class="d2" style="margin-bottom:28px;line-height:.92">In this<br>issue.</div>
   <div>
@@ -440,7 +474,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   </div>
   <div class="rf rf-r">03</div>
 </div></div>
-<div id="p4" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
+<div id="p4" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div style="height:56px"></div>
   <div>
     <div style="padding:10px 0;border-bottom:1px solid var(--LG)"><div class="lbl lbl-k" style="margin-bottom:4px">Money</div><div style="font-size:11px;font-weight:700;color:var(--K)">The Multiple Map 2027</div><div style="font-size:9px;color:var(--GR);margin-top:2px">EU vs US — vertical by vertical</div><div style="font-size:8px;font-weight:700;color:#0F1A2B;margin-top:4px">— p.33</div></div>
@@ -502,7 +536,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <div class="pq pq-lt"><div class="pq-txt">Founders who arrive prepared close 38% faster and command a premium of 28% above comparable uncertified assets. The preparation is entirely on the seller's clock.</div><div class="pq-attr">Invest Europe / SaaS Capital Index — Private SaaS M&amp;A Data 2026</div></div>
   <div class="rf rf-l">12</div>
 </div></div>
-<div id="p13" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
+<div id="p13" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Build — The Four Adjustments</span><span class="pg-hdr-pg">13</span></div>
   <span class="lbl" style="margin-bottom:8px">Build — The Four Adjustments</span>
   <div class="d4" style="margin-bottom:18px">Four Numbers<br>That Change Your Number.</div>
@@ -528,7 +562,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   </div>
   <div class="rf rf-r">13</div>
 </div></div>
-<div id="p14" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
+<div id="p14" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Build — Adjustments</span><span class="pg-hdr-pg">14</span></div>
   <div style="background:var(--W);padding:16px;border:1px solid var(--LG);margin-bottom:10px">
     <span class="lbl" style="margin-bottom:8px">Adjustment 03 — Technical Debt</span>
@@ -574,7 +608,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <p class="bdy">Human-reviewed, tested, documented AI-assisted code is indistinguishable from human-written code in due diligence. Unreviewed vibe output is not.</p>
   <div class="rf rf-l">18</div>
 </div></div>
-<div id="p19" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
+<div id="p19" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Build — Reference</span><span class="pg-hdr-pg">19</span></div>
   <span class="lbl" style="margin-bottom:8px">Build — Tech Stack</span>
   <div class="d4" style="margin-bottom:16px">The Tech Stack That Sells.</div>
@@ -636,7 +670,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <div class="stat-blk" style="border-color:var(--K)"><div class="cap" style="margin-bottom:6px">EU annual investment gap vs US/China</div><div class="num-sm">€800B</div><div style="font-size:10px;color:#555;margin-top:6px;line-height:1.5">Annual additional spending needed to close the competitive gap — per the Draghi Report commissioned by the European Commission. The policy gap and the preparation gap compound each other.</div><div style="font-size:8px;color:var(--GR);margin-top:4px">Source: EU Commission — “The Future of European Competitiveness” — Draghi Report, September 2024</div></div>
   <div class="rf rf-l">24</div>
 </div></div>
-<div id="p25" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
+<div id="p25" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Money — Multiple Map</span><span class="pg-hdr-pg">25</span></div>
   <span class="lbl" style="margin-bottom:8px">Money — Reference — Updated Each Issue</span>
   <div class="d4" style="margin-bottom:8px">The Multiple Map 2027.</div>
@@ -685,7 +719,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <p class="bdy">The EU exit ecosystem is mature enough in 2027 to absorb well-prepared assets across all verticals. The question is not whether a serious EU tech asset will find a buyer. It is whether it arrives at the table ready to be found — or whether due diligence finds the problems first.</p>
   <div class="rf rf-l">28</div>
 </div></div>
-<div id="p29" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
+<div id="p29" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Money — Scenarios</span><span class="pg-hdr-pg">29</span></div>
   <span class="lbl" style="margin-bottom:12px">Money — The Maths</span>
   <div class="d4" style="margin-bottom:16px">Two Scenarios.<br>One Clear Outcome.</div>
@@ -711,7 +745,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
 </div></div>
 <div id="p30" class="pg"><div style="height:595px;background:#fff;display:flex;flex-direction:column;justify-content:center;padding:52px 44px"><div style="font-size:72px;font-weight:800;line-height:1;color:rgba(15,26,43,.05);margin-bottom:-12px;font-family:Georgia,serif">“</div><div style="font-size:17px;font-weight:300;line-height:1.6;color:#0F1A2B;font-style:italic;margin-bottom:20px">The founders who capture the best outcomes in 2027 are not the ones who time the market perfectly — they are the ones who are ready when the window opens.</div><div style="width:24px;height:1px;background:#0F1A2B;margin-bottom:12px"></div><div style="font-size:7.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(15,26,43,.3)">Invest Europe Annual Industry Statistics 2026</div><div class="rf rf-l">30</div></div></div>
 <div id="p31" class="pg"><div style="height:595px;background:#fff;position:relative;overflow:hidden"><div class="img-ph" data-n="IMG-S4" style="position:absolute;top:0;left:0;right:0;height:370px;background:#EDEAE4;border:none;border-bottom:none"><div class="img-ph-txt">Handshake across conference table — neutral corporate setting</div><div class="img-ph-dim">420 × 595 px — full-page vertical</div></div><div style="position:absolute;bottom:0;left:0;right:0;padding:24px 32px 42px;background:#fff"><div style="font-size:7px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(15,26,43,.25);margin-bottom:10px">Section — 04 / 06</div><div style="font-size:42px;font-weight:800;letter-spacing:-.03em;line-height:.9;color:#0F1A2B;margin-bottom:10px">Transaction</div><div style="width:28px;height:1.5px;background:#0F1A2B;margin-bottom:10px"></div><div style="font-size:9.5px;font-weight:300;line-height:1.65;color:rgba(15,26,43,.5);margin-bottom:14px;max-width:300px">Five deals. Four acquirer profiles. What the transactions say about who is buying.</div><div style="display:flex;flex-direction:column;gap:0"><div style="font-size:7.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(15,26,43,.3);padding:5px 0;border-top:1px solid rgba(15,26,43,.07)">Deal Watch — H1 2026</div><div style="font-size:7.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(15,26,43,.3);padding:5px 0;border-top:1px solid rgba(15,26,43,.07)">Who Is Buying European Tech in 2027</div></div></div><div class="rf rf-r">31</div></div></div>
-<div id="p32" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
+<div id="p32" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Transaction — Deal Watch</span><span class="pg-hdr-pg">32</span></div>
   <span class="lbl" style="margin-bottom:8px">Transaction — Deal Watch</span>
   <div class="d3" style="margin-bottom:12px">Five Deals That<br>Defined H1 2026.</div>
@@ -773,7 +807,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   </div>
   <div class="rf rf-l">34</div>
 </div></div>
-<div id="p35" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
+<div id="p35" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Transaction — Deal Watch</span><span class="pg-hdr-pg">35</span></div>
   <div class="deal-card" style="border-bottom:2px solid var(--K);margin-bottom:16px">
     <div class="deal-n">05</div>
@@ -886,7 +920,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <div class="pq pq-lt"><div class="pq-txt">Founders who arrive with a complete AI architecture brief — model provenance, data rights, fallback strategy, compliance status, versioning policy — close AI due diligence 60% faster.</div><div class="pq-attr">Aegryn CIFS Protocol S-16 — Internal Observation 2026</div></div>
   <div class="rf rf-l">46</div>
 </div></div>
-<div id="p47" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
+<div id="p47" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Tech &amp; AI — Architecture Premium</span><span class="pg-hdr-pg">47</span></div>
   <div class="d5" style="margin-bottom:14px">The Architecture Premium — By Element.</div>
   <div style="background:#F4F4F2;padding:16px;margin-bottom:14px">
@@ -952,7 +986,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <div class="rf rf-l">52</div>
 </div></div>
 <div id="p53" class="pg"><div style="height:595px;background:#fff;display:flex;flex-direction:column;justify-content:center;padding:52px 44px"><div style="font-size:72px;font-weight:800;line-height:1;color:rgba(15,26,43,.05);margin-bottom:-12px;font-family:Georgia,serif">“</div><div style="font-size:17px;font-weight:300;line-height:1.6;color:#0F1A2B;font-style:italic;margin-bottom:20px">Working at a growth-stage startup — rather than a unicorn or Big Tech — is the strongest predictor of a founder's future success.</div><div style="width:24px;height:1px;background:#0F1A2B;margin-bottom:12px"></div><div style="font-size:7.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(15,26,43,.3)">Invest Europe — European Ecosystem Analysis — H1 2026</div><div style="margin-top:20px;font-size:10px;font-weight:300;line-height:1.7;color:rgba(15,26,43,.4);font-style:italic">Seven billion-dollar EU startups found a buyer or hit public markets in H1 2026 — matching Europe's previous annual record.</div><div class="rf rf-r">53</div></div></div>
-<div id="p54" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
+<div id="p54" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">People — Radar</span><span class="pg-hdr-pg">54</span></div>
   <span class="lbl" style="margin-bottom:6px">People — Radar</span>
   <div class="d4" style="margin-bottom:6px">5 European Builders<br>to Watch.</div>
@@ -989,7 +1023,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   <p class="bdy">The 40-minute train between Lausanne and Geneva gives a founder access to two distinct networks: EPFL talent and the Romandie tech community from Lausanne; international banking, family office, and institutional capital from Geneva. Both networks underestimate each other. That gap is, for now, an advantage for those who know both.</p>
   <div class="rf rf-l">58</div>
 </div></div>
-<div id="p59" class="pg"><div class="sp cr" style="height:595px;display:flex;flex-direction:column">
+<div id="p59" class="pg"><div class="sp wh" style="height:595px;display:flex;flex-direction:column">
   <div class="pg-hdr"><span class="pg-hdr-ttl">Issue 02 Preview</span><span class="pg-hdr-pg">59</span></div>
   <span class="lbl" style="margin-bottom:8px">Coming Next — Issue 02 — April 2027</span>
   <div class="d3" style="margin-bottom:10px">The Exit<br>Equation.</div>
@@ -1045,7 +1079,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   var srcPages = ['']; /* index 0 = vide */
   var blankDiv = document.createElement('div');
   blankDiv.className = 'spf-page';
-  blankDiv.innerHTML = '<div style="width:' + PAGE_W + 'px;height:' + PAGE_H + 'px;background:#EDEAE4"></div>';
+  blankDiv.innerHTML = '<div style="width:' + PAGE_W + 'px;height:' + PAGE_H + 'px;background:transparent"></div>';
   bookEl.appendChild(blankDiv);
 
   var TOT_REAL = 60;
@@ -1056,7 +1090,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     w.className = 'spf-page';
     w.innerHTML = el
       ? el.innerHTML
-      : '<div style="width:' + PAGE_W + 'px;height:' + PAGE_H + 'px;background:#F4F3F0"></div>';
+      : '<div style="width:' + PAGE_W + 'px;height:' + PAGE_H + 'px;background:#E8E5E0"></div>';
     bookEl.appendChild(w);
   }
 
@@ -1091,15 +1125,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   var isCoverState = true; /* true quand cover seule visible */
 
   function applyScale(){
-    var aw = areaEl.clientWidth  - 100; /* marges flèches */
+    var aw = areaEl.clientWidth  - 80;  /* marges flèches */
     var ah = areaEl.clientHeight - 20;
-    /* Cover seule → scaler sur PAGE_W (une page) ; sinon spread BOOK_W */
-    var refW = isCoverState ? PAGE_W : BOOK_W;
-    var sc = Math.min(aw / refW, ah / BOOK_H) * zoomBoost;
+    /* Toujours BOOK_W — StPageFlip centre lui-même la cover seule */
+    var sc = Math.min(aw / BOOK_W, ah / BOOK_H) * zoomBoost;
     if(sc <= 0) sc = 0.5;
     scalerEl.style.width  = BOOK_W + 'px';
     scalerEl.style.height = BOOK_H + 'px';
-    /* translate(-50%,-50%) centre le scaler sur l'anchor top:50% left:50% */
     scalerEl.style.transform = 'translate(-50%,-50%) scale(' + sc + ')';
     document.getElementById('fb-zoom-lbl').textContent = Math.round(sc * 100) + '%';
   }
@@ -1151,8 +1183,21 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
     folioPagesUpdate(idx);
     setTimeout(applyScale, 50); /* re-scale après transition cover→spread */
   });
-  pageFlip.on('changeState', function(e){});
-  updateUI(0);
+  pageFlip.on('changeState', function(e){
+    var idx = pageFlip.getCurrentPageIndex();
+    var prev = isCoverState;
+    isCoverState = (idx <= 1);
+    if(prev !== isCoverState){ setTimeout(applyScale, 50); }
+    edgeUpdate();
+  });
+  pageFlip.on('init', function(){
+    isCoverState = true;
+    applyScale();
+    edgeUpdate();
+    folioPagesUpdate(0);
+    updateUI(1);
+  });
+  updateUI(1);
 
   /* ── 8. Navigation ── */
   document.getElementById('fb-prev').addEventListener('click', function(e){ e.stopPropagation(); pageFlip.flipPrev(); });
@@ -1202,14 +1247,16 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   });
 
   /* ── 13. Resize + init ── */
-  window.addEventListener('resize', function(){ applyScale(); spineUpdate(); folioPagesUpdate(pageFlip.getCurrentPageIndex()); });
-  applyScale();
-  setTimeout(function(){
-    isCoverState = true;
+  window.addEventListener('resize', function(){
     applyScale();
     edgeUpdate();
-    folioPagesUpdate(0);
-  }, 100);
+    folioPagesUpdate(pageFlip.getCurrentPageIndex());
+  });
+  /* Scale initial — avant init event */
+  isCoverState = true;
+  applyScale();
+  /* Re-scale sécurité après rendu complet */
+  setTimeout(function(){ isCoverState = true; applyScale(); edgeUpdate(); }, 200);
 
   /* ── 14. Spine + Tranches — positionnées au centre exact du livre scalé ── */
   var spineEl    = document.getElementById('fb-spine');
@@ -1322,34 +1369,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#EDEAE4;display:flex;
   }
   pageFlip.on('flip', function(){ playPageFlipSound(); });
 
-  /* ── 16. QR Code canvas — encode https://aegryn.com/magazine/issue-01 ── */
-  (function(){
-    /* Micro-library QR (Version 2-M, byte mode) — no external dependency */
-    var url = 'https://aegryn.com/en/magazine/issue-01';
-    var canvas = document.getElementById('cover-qr');
-    if(!canvas) return;
-    var sz = 56, mod = 29; /* QR v3 = 29x29 modules, canvas 56px */
-    var cell = Math.floor(sz / mod);
-    var pad  = Math.floor((sz - cell * mod) / 2);
-    var ctx2 = canvas.getContext('2d');
-
-    /* Fond blanc — encadré blanc dans le HTML */
-    ctx2.fillStyle = '#ffffff';
-    ctx2.fillRect(0,0,sz,sz);
-
-    /* QR V3 matrix — encode https://aegryn.com/en/magazine/issue-01 */
-    var M = [[1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1],[1,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,1,1,1,0,1,0,0,0,0,0,1],[1,0,1,1,1,0,1,0,1,1,1,1,0,0,0,1,1,1,0,0,0,0,1,0,1,1,1,0,1],[1,0,1,1,1,0,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,0,1,0,1,1,1,0,1],[1,0,1,1,1,0,1,0,0,0,0,0,1,1,1,0,0,0,1,1,1,0,1,0,1,1,1,0,1],[1,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,1,1,1,0,1,0,0,0,0,0,1],[1,1,1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1],[1,0,0,0,0,0,1,0,1,1,1,1,0,0,0,1,1,1,0,0,0,0,1,0,0,0,0,0,1],[0,0,0,0,1,1,1,0,1,0,0,0,1,1,1,0,0,0,1,1,1,0,1,0,0,0,1,0,1],[1,1,1,0,0,0,0,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[0,0,0,1,1,1,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[1,1,1,0,0,0,0,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[0,0,0,1,1,1,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[1,1,1,0,0,0,0,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[0,0,0,1,1,1,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[1,0,0,0,0,0,1,0,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[1,1,1,1,1,1,1,1,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[1,0,0,0,0,0,1,0,1,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[1,0,1,1,1,0,1,0,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[1,0,1,1,1,0,1,0,0,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0],[1,0,1,1,1,0,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[1,0,0,0,0,0,1,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1],[1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1,0,0]];
-
-    /* Modules noirs sur fond blanc */
-    ctx2.fillStyle = '#0F1A2B';
-    for(var r=0;r<mod;r++){
-      for(var c=0;c<mod;c++){
-        if(M[r][c]){
-          ctx2.fillRect(pad+c*cell, pad+r*cell, cell, cell);
-        }
-      }
-    }
-  })();
+  /* ── 16. QR Code — SVG inline sur la cover (canvas supprimé) ── */
 
 })();
 </script>
