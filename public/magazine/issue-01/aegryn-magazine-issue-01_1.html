@@ -221,8 +221,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 #fb-scaler{
   position:absolute;
   top:50%;left:50%;
-  transform-origin:center center;
-  /* translate(-50%,-50%) intégré dans applyScale() via JS */
+  transform-origin:top left; /* on gère nous-mêmes via JS */
 }
 /* Le livre prend exactement BOOK_W × BOOK_H */
 #fb-book{display:block;}
@@ -1114,56 +1113,47 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
      On applique un scale sur le scaler pour fitter dans la zone visible. */
   var zoomBoost = 1;
   var isCoverState = true; /* true quand cover seule visible */
-  /* coverSide : 'right' si cover dans la moitié droite du canvas, 'left' sinon.
-     Détecté après init via getBoundingClientRect. Par défaut 'right' (doc PageFlip). */
-  var coverSide = 'left';
-
-  function detectCoverSide(){
-    /* StPageFlip avec showCover:true et slot 0 vide :
-       La cover (slot 1) est positionnée dans la moitié GAUCHE du canvas.
-       (Le slot 0 vide est à droite, en miroir.)
-       Source : comportement observé + doc StPageFlip showCover. */
-    coverSide = 'left';
-    /* Vérification dynamique via DOM si possible */
-    try {
-      var items = bookEl.querySelectorAll('[class*="stf"]');
-      if(items.length >= 2){
-        var bookRect = bookEl.getBoundingClientRect();
-        var bookCenter = bookRect.left + bookRect.width / 2;
-        for(var pi = 0; pi < Math.min(items.length, 4); pi++){
-          var pr = items[pi].getBoundingClientRect();
-          if(pr.width < 20 || pr.width > PAGE_W * 1.5) continue;
-          var pageCenter = pr.left + pr.width / 2;
-          if(Math.abs(pageCenter - bookCenter) > 30){
-            coverSide = pageCenter < bookCenter ? 'left' : 'right';
-            break;
-          }
-        }
-      }
-    } catch(e){}
-  }
+  function detectCoverSide(){} /* no-op */
 
   function applyScale(){
     var aw = areaEl.clientWidth  - 80;
     var ah = areaEl.clientHeight - 20;
     var curIdx = pageFlip ? pageFlip.getCurrentPageIndex() : 0;
-    var isBack = (curIdx >= TOT_REAL);
-    /* En cover state : scaler sur PAGE_W (une page), sinon BOOK_W (spread double) */
+    var isBack  = (curIdx >= TOT_REAL);
+    /* Scaler toujours sur PAGE_W en cover state, BOOK_W en spread */
     var fitW = isCoverState ? PAGE_W : BOOK_W;
-    var sc = Math.min(aw / fitW, ah / BOOK_H) * zoomBoost;
+    var sc   = Math.min(aw / fitW, ah / BOOK_H) * zoomBoost;
     if(sc <= 0) sc = 0.5;
     scalerEl.style.width  = BOOK_W + 'px';
     scalerEl.style.height = BOOK_H + 'px';
-    /* En cover state : décaler le canvas pour centrer la page visible.
-       Règle : si cover à droite → offsetX = -(PAGE_W/2)*sc (canvas vers gauche)
-                si cover à gauche → offsetX = +(PAGE_W/2)*sc (canvas vers droite)
-       Back cover : côté opposé à la cover. */
-    var offsetX = 0;
+    scalerEl.style.clipPath = 'none';
+    var areaW = areaEl.clientWidth;
+    var areaH = areaEl.clientHeight;
     if(isCoverState){
-      var side = isBack ? (coverSide === 'right' ? 'left' : 'right') : coverSide;
-      offsetX = (side === 'right') ? -(PAGE_W / 2) * sc : (PAGE_W / 2) * sc;
+      /* Positionnement précis en px (transform-origin: top left, scale(sc)).
+         Canvas affiché = BOOK_W*sc × BOOK_H*sc px à l'écran.
+         Cover = moitié DROITE du canvas (pixels PAGE_W→BOOK_W avant scale).
+         Back cover = moitié GAUCHE (pixels 0→PAGE_W avant scale).
+         On veut que la page visible soit centrée horizontalement et verticalement.
+         Formule : le bord top-left du scaler doit être à :
+           Cover  (droite) : leftPx = centreX - 1.5 * PAGE_W * sc
+           BackCover (gauche) : leftPx = centreX - 0.5 * PAGE_W * sc */
+      var halfSc = PAGE_W * sc;
+      var leftPx = isBack
+        ? (areaW / 2) - 0.5 * halfSc
+        : (areaW / 2) - 1.5 * halfSc;
+      var topPx  = (areaH / 2) - (BOOK_H * sc) / 2;
+      scalerEl.style.left            = leftPx + 'px';
+      scalerEl.style.top             = topPx  + 'px';
+      scalerEl.style.transform       = 'scale(' + sc + ')';
+      scalerEl.style.transformOrigin = 'top left';
+    } else {
+      /* Spread normal : centrage standard translate(-50%,-50%) */
+      scalerEl.style.left            = '50%';
+      scalerEl.style.top             = '50%';
+      scalerEl.style.transform       = 'translate(-50%,-50%) scale(' + sc + ')';
+      scalerEl.style.transformOrigin = 'top left';
     }
-    scalerEl.style.transform = 'translate(calc(-50% + ' + offsetX + 'px),-50%) scale(' + sc + ')';
     document.getElementById('fb-zoom-lbl').textContent = Math.round(sc * 100) + '%';
   }
 
