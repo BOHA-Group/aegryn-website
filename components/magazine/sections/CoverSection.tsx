@@ -46,6 +46,17 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
         style={{ background: 'linear-gradient(160deg, rgba(5,10,15,0.82) 0%, rgba(5,10,15,0.65) 50%, rgba(5,10,15,0.88) 100%)' }}
       />
 
+      {/* QR code scannable — reporté depuis la cover flipbook, coin bas-droit */}
+      <div className="hidden sm:block absolute bottom-8 right-8 md:right-14 z-20 bg-white p-1.5 rounded-sm shadow-lg">
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=88x88&data=https%3A%2F%2Faegryn.com%2Fmagazine&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png"
+          width={88}
+          height={88}
+          alt="aegryn.com/magazine"
+          style={{ display: 'block', imageRendering: 'pixelated' }}
+        />
+      </div>
+
       {/* ── TOP BAR : date gauche / Special Edition droite ── */}
       <div className="cover-meta relative z-10 flex items-start justify-between">
         <p className="font-mono tracking-[0.22em] uppercase text-white/40" style={{ fontSize: '10px' }}>
