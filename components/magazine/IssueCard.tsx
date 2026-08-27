@@ -44,15 +44,15 @@ export function IssueCard({ issue, locale = 'fr', labelReadIssue = 'Read issue',
           </div>
         </div>
 
-        {/* AEGRYN massif + BUSINESS MAGAZINE — format/taille/position identiques flipbook */}
+        {/* AEGRYN massif + BUSINESS MAGAZINE — proportionnel au flipbook (420px → ~300px panel) */}
         <div className="relative z-10 -mt-2">
           <p
             className="font-sans font-bold text-white"
-            style={{ fontSize: '80px', letterSpacing: '-0.04em', lineHeight: 0.86 }}
+            style={{ fontSize: 'clamp(52px,13vw,64px)', letterSpacing: '-0.04em', lineHeight: 0.86 }}
           >
             Aegryn
           </p>
-          <p className="text-right font-mono uppercase text-white/35" style={{ fontSize: '11px', letterSpacing: '0.18em', marginTop: '8px', fontWeight: 400 }}>Business Magazine</p>
+          <p className="text-right font-mono uppercase text-white/35" style={{ fontSize: '9px', letterSpacing: '0.18em', marginTop: '6px', fontWeight: 400 }}>Business Magazine</p>
         </div>
 
         {/* EXCLUSIVE — milieu gauche */}
