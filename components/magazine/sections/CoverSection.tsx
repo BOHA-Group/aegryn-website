@@ -48,6 +48,7 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
 
       {/* QR code scannable — reporté depuis la cover flipbook, coin bas-droit */}
       <div className="hidden sm:block absolute bottom-8 right-8 md:right-14 z-20 bg-white p-1.5 rounded-sm shadow-lg">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://api.qrserver.com/v1/create-qr-code/?size=88x88&data=https%3A%2F%2Faegryn.com%2Fmagazine&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png"
           width={88}
