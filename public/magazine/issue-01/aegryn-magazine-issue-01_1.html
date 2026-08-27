@@ -400,14 +400,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
           <div style="max-width:170px">
             <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#5ADDA4;margin-bottom:6px">Exclusive</div>
             <div style="width:28px;height:2px;background:#5ADDA4;margin-bottom:8px"></div>
-            <div style="font-size:8.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.55);line-height:1.5">Build. Certify. Transact.</div>
+            <div style="font-size:8.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.55);line-height:1.5">Build to last. Certify to transact.</div>
           </div>
         </div>
-        <!-- BAS : BUILT TO LAST + subtitle -->
+        <!-- BAS : titre + theme — contenu identique à ISSUE_01 (CoverSection/IssueCard) -->
         <div style="padding-bottom:52px">
-          <div style="font-size:36px;font-weight:800;letter-spacing:-.02em;color:#5ADDA4;line-height:1.0;margin-bottom:5px">Built</div>
-          <div style="font-size:36px;font-weight:800;letter-spacing:-.02em;color:rgba(255,255,255,.9);line-height:1.0;margin-bottom:9px">to Last.</div>
-          <div style="font-size:8.5px;font-weight:400;letter-spacing:.05em;color:rgba(255,255,255,.4);line-height:1.6">The anatomy of a tech asset that sells and one that doesn&apos;t.</div>
+          <div style="font-size:32px;font-weight:800;letter-spacing:-.02em;color:#5ADDA4;line-height:1.05;text-transform:uppercase;margin-bottom:10px">Built to Last</div>
+          <div style="font-size:8.5px;font-weight:400;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.45);line-height:1.65">What separates the tech assets that transact from those that disappear and what every European founder needs to know before the conversation starts.</div>
         </div>
       </div>
       <!-- QR code scannable, coin bas-droit -->
@@ -1115,6 +1114,21 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     startZIndex:         0,
   });
   pageFlip.loadFromHTML(document.querySelectorAll('.spf-page'));
+
+  /* showCover:true force density:'hard' sur la cover (page 0) et la back
+     cover (dernière page) dans createSpread() — ce qui déclenche un rendu
+     de flip RIGIDE (drawHardOuterShadow/drawHardInnerShadow) au lieu de
+     l'effet SOUPLE + ombre glossy classique (drawOuterShadow/drawInnerShadow).
+     Cette density est indépendante de la structure d'isolement du spread
+     (déjà figée à la construction, basée uniquement sur showCover + parité
+     du nombre de pages) : on peut donc la réécraser ici en 'soft' pour
+     obtenir le même effet natif souple + brillant que les pages internes,
+     sans jamais re-pairer la cover/back-cover avec une autre page. */
+  try {
+    var pc = pageFlip.getPageCollection();
+    pc.getPage(0).setDensity('soft');
+    pc.getPage(TOT_REAL - 1).setDensity('soft');
+  } catch(e) {}
 
   /* ── 3. Scaling CSS externe ──
      Le canvas interne créé par StPageFlip en mode paysage = BOOK_W × BOOK_H.

@@ -24,7 +24,7 @@ export default async function MagazineHubPage({ params }: Props) {
   const tHub = await getTranslations({ locale, namespace: 'magazine.hub' })
 
   return (
-    <main className="min-h-screen bg-magazine-ivory">
+    <main className="min-h-screen bg-magazine-white">
 
       {/* ── Hero header ── */}
       <div className="max-w-magazine mx-auto px-6 md:px-[120px] pt-32 pb-20">
@@ -168,7 +168,7 @@ export default async function MagazineHubPage({ params }: Props) {
       </div>
 
       {/* ── Footer mag ── */}
-      <div className="border-t border-magazine-black/8 bg-magazine-ivory">
+      <div className="border-t border-magazine-black/8 bg-magazine-white">
         <div className="max-w-magazine mx-auto px-6 md:px-[120px] py-8 flex flex-wrap items-center justify-between gap-4">
           <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-black/25">
             {tHub('footerLegal')}
