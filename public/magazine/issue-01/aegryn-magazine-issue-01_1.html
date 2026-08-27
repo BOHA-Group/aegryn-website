@@ -1066,15 +1066,18 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   var scalerEl = document.getElementById('fb-scaler');
   var areaEl   = document.getElementById('fb-viewer-area');
 
-  /* ── 1. Pages : page vide en index 0 → cover seule
-     Layout : [vide][cover p1] | [p2][p3] | … | [p59][p60]
-     Total StPageFlip : 61 slots (1 vide + 60 pages) */
-  var srcPages = ['']; /* index 0 = vide */
-  var blankDiv = document.createElement('div');
-  blankDiv.className = 'spf-page';
-  blankDiv.innerHTML = '<div style="width:' + PAGE_W + 'px;height:' + PAGE_H + 'px;background:transparent"></div>';
-  bookEl.appendChild(blankDiv);
-
+  /* ── 1. Pages : AUCUN slot vide — StPageFlip isole nativement la
+     première ET la dernière page en mode showCover:true, à condition
+     que le nombre total de slots soit PAIR (ici 60).
+     Preuve (page-flip.browser.js, createSpread()) :
+       - showCover met this.pages[0] en density "hard" et le pousse
+         SEUL dans le spread 0 (jamais pairé).
+       - la boucle restante pousse des paires [e,e+1] tant que
+         e < pages.length-1 ; sur le DERNIER indice restant (ici 59),
+         la condition est fausse → il est poussé SEUL et passé en
+         density "hard" lui aussi (back cover isolé automatiquement).
+     Layout résultant : [p1 seul] | [p2,p3] | … | [p58,p59] | [p60 seul] */
+  var srcPages = [];
   var TOT_REAL = 60;
   for(var i = 1; i <= TOT_REAL; i++){
     var el = src.querySelector('#p' + i);
@@ -1116,56 +1119,77 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
      Le canvas interne créé par StPageFlip en mode paysage = BOOK_W × BOOK_H.
      On applique un scale sur le scaler pour fitter dans la zone visible. */
   var zoomBoost = 1;
-  var isCoverState = true; /* true quand cover seule visible */
+  var isCoverState = true; /* true quand cover OU back cover seule visible */
 
+  /* Le canvas StPageFlip garde TOUJOURS une largeur BOOK_W fixe (fixed size),
+     même quand une seule page est affichée (preuve : calculateBoundsRect()
+     dans page-flip.browser.js retourne width=2*pageWidth inconditionnellement).
+     showSpread() dessine alors :
+       - la cover (idx 0)        → setRightPage() → contenu sur la MOITIÉ DROITE
+       - la back cover (dernier) → setLeftPage()  → contenu sur la MOITIÉ GAUCHE
+     Il faut donc décaler le scaler pour recentrer visuellement la page seule. */
   function applyScale(){
     var aw = areaEl.clientWidth  - 80;  /* marges flèches */
     var ah = areaEl.clientHeight - 20;
-    /* Toujours BOOK_W — StPageFlip centre lui-même la cover seule */
     var sc = Math.min(aw / BOOK_W, ah / BOOK_H) * zoomBoost;
     if(sc <= 0) sc = 0.5;
     scalerEl.style.width  = BOOK_W + 'px';
     scalerEl.style.height = BOOK_H + 'px';
-    scalerEl.style.transform = 'translate(-50%,-50%) scale(' + sc + ')';
+    var idx = pageFlip ? pageFlip.getCurrentPageIndex() : 0;
+    var offsetX = 0;
+    if(idx === 0){
+      offsetX = -(PAGE_W / 2) * sc;               /* cover : contenu à droite → décaler à gauche */
+    } else if(idx === TOT_REAL - 1){
+      offsetX = (PAGE_W / 2) * sc;                /* back cover : contenu à gauche → décaler à droite */
+    }
+    scalerEl.style.transform = 'translate(calc(-50% + ' + offsetX + 'px),-50%) scale(' + sc + ')';
     document.getElementById('fb-zoom-lbl').textContent = Math.round(sc * 100) + '%';
   }
 
-  /* ── 6. Thumbnails (spreads réels = 30, index StPageFlip 1..60) ── */
-  var TOT_SPREADS = 30;
+  /* ── 6. Thumbnails ── Unités logiques : cover seule + 29 spreads réels
+     (p2-p3 … p58-p59) + back cover seule = 31 entrées.
+     spreadDefs[k].idx = index StPageFlip exact (0-based) du slot de gauche. */
+  var spreadDefs = [{ idx: 0, pages: [1] }];
+  for(var rp = 2; rp < TOT_REAL; rp += 2){
+    spreadDefs.push({ idx: rp - 1, pages: [rp, rp + 1] });
+  }
+  spreadDefs.push({ idx: TOT_REAL - 1, pages: [TOT_REAL] });
+  var TOT_SPREADS = spreadDefs.length; /* 31 */
+
   var thumbsEl = document.getElementById('fb-thumbs');
   var thumbEls = [];
-  for(var j = 0; j < TOT_SPREADS; j++){
-    (function(idx){ /* idx 0..29, pages réelles 1..60 */
-      var th    = document.createElement('div');
-      th.className = 'fb-thumb' + (idx === 0 ? ' active' : '');
-      var inner = document.createElement('div');
-      inner.className = 'fb-thumb-inner';
-      inner.innerHTML = srcPages[idx * 2 + 1] || ''; /* +1 car srcPages[0]=vide */
-      var num   = document.createElement('div');
-      num.className   = 'fb-thumb-num';
-      num.textContent = (idx * 2 + 1) + (idx * 2 + 2 <= TOT_REAL ? '–' + (idx * 2 + 2) : '');
-      th.appendChild(inner);
-      th.appendChild(num);
-      /* flip vers slot StPageFlip : idx*2+1 (sauter le slot vide 0) */
-      th.addEventListener('click', function(){ pageFlip.flip(idx * 2 + 1); });
-      thumbsEl.appendChild(th);
-      thumbEls.push(th);
-    }(j));
-  }
+  spreadDefs.forEach(function(def, i){
+    var th    = document.createElement('div');
+    th.className = 'fb-thumb' + (i === 0 ? ' active' : '');
+    var inner = document.createElement('div');
+    inner.className = 'fb-thumb-inner';
+    inner.innerHTML = srcPages[def.pages[0] - 1] || '';
+    var num   = document.createElement('div');
+    num.className   = 'fb-thumb-num';
+    num.textContent = def.pages.length === 2 ? (def.pages[0] + '–' + def.pages[1]) : String(def.pages[0]);
+    th.appendChild(inner);
+    th.appendChild(num);
+    th.addEventListener('click', function(){ pageFlip.flip(def.idx); });
+    thumbsEl.appendChild(th);
+    thumbEls.push(th);
+  });
 
-  /* ── 7. UI update ── */
+  /* ── 7. UI update ── slotIdx = index StPageFlip 0-based (0..TOT_REAL-1) */
   function updateUI(slotIdx){
-    /* slotIdx 0=vide,1=cover,2=p2… */
-    var realPage = slotIdx < 1 ? 1 : slotIdx;
-    var sp = Math.floor((realPage - 1) / 2); /* spread 0..29 */
-    var pgLabel = (slotIdx <= 1) ? 'Cover' : ('p. ' + realPage + ' / ' + TOT_REAL);
+    var realPage = slotIdx + 1;
+    var sp = spreadDefs.findIndex(function(d){ return d.idx === slotIdx; });
+    if(sp < 0) sp = 0;
+    var pgLabel;
+    if(slotIdx === 0)               pgLabel = 'Cover';
+    else if(slotIdx === TOT_REAL-1) pgLabel = 'Back Cover';
+    else                             pgLabel = 'p. ' + realPage + ' / ' + TOT_REAL;
     document.getElementById('fb-pg-num').textContent = pgLabel;
     document.getElementById('fb-progress-fill').style.width =
       ((sp + 1) / TOT_SPREADS * 100).toFixed(0) + '%';
-    document.getElementById('fb-prev').disabled  = slotIdx <= 1;
-    document.getElementById('fb-next').disabled  = slotIdx >= TOT_REAL;
-    document.getElementById('btn-ptb').disabled  = slotIdx <= 1;
-    document.getElementById('btn-ntb').disabled  = slotIdx >= TOT_REAL;
+    document.getElementById('fb-prev').disabled  = slotIdx <= 0;
+    document.getElementById('fb-next').disabled  = slotIdx >= TOT_REAL - 1;
+    document.getElementById('btn-ptb').disabled  = slotIdx <= 0;
+    document.getElementById('btn-ntb').disabled  = slotIdx >= TOT_REAL - 1;
     thumbEls.forEach(function(t, i){ t.classList.toggle('active', i === sp); });
     if(thumbEls[sp]) thumbEls[sp].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
   }
@@ -1178,9 +1202,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   var EDGE_MAX    = 28;
   var EDGE_MIN    = 2;
 
+  function isCoverIdx(idx){ return idx === 0 || idx === TOT_REAL - 1; }
+
   pageFlip.on('flip', function(e){
     var idx = e.data;
-    isCoverState = (idx <= 1);
+    isCoverState = isCoverIdx(idx);
     updateUI(idx);
     edgeUpdate();
     folioPagesUpdate(idx);
@@ -1190,10 +1216,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     var idx = pageFlip.getCurrentPageIndex();
     var state = e.data;
     var prev = isCoverState;
-    isCoverState = (idx <= 1);
+    isCoverState = isCoverIdx(idx);
     if(prev !== isCoverState){ setTimeout(applyScale, 50); }
     var isFlipping = (state === 'flipping' || state === 'user_fold' || state === 'fold_corner');
-    if(spineEl) spineEl.style.opacity = (isFlipping || idx <= 1) ? '0' : '1';
+    if(spineEl) spineEl.style.opacity = (isFlipping || isCoverIdx(idx)) ? '0' : '1';
     edgeUpdate();
   });
   pageFlip.on('init', function(){
@@ -1201,9 +1227,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     applyScale();
     edgeUpdate();
     folioPagesUpdate(0);
-    updateUI(1);
+    updateUI(0);
   });
-  updateUI(1);
+  updateUI(0);
 
   /* ── 8. Navigation ── */
   document.getElementById('fb-prev').addEventListener('click', function(e){ e.stopPropagation(); pageFlip.flipPrev(); });
@@ -1219,10 +1245,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 
   /* ── 9. Progress bar clic ── */
   document.getElementById('fb-progress-wrap').addEventListener('click', function(e){
-    var rect   = e.currentTarget.getBoundingClientRect();
-    var pct    = (e.clientX - rect.left) / rect.width;
-    var target = 1 + Math.round(pct * (TOT_REAL - 1));
-    pageFlip.flip(target % 2 === 0 ? target - 1 : target);
+    var rect = e.currentTarget.getBoundingClientRect();
+    var pct  = (e.clientX - rect.left) / rect.width;
+    var si   = Math.min(spreadDefs.length - 1, Math.max(0, Math.round(pct * (spreadDefs.length - 1))));
+    pageFlip.flip(spreadDefs[si].idx);
   });
 
   /* ── 10. Boutons zoom ── */
@@ -1271,18 +1297,15 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     var bookH = BOOK_H * sc;
     var bookW = BOOK_W * sc;
 
-    /* Index courant : 0 = cover seule, 1 = première double page, etc.
-       StPageFlip : getCurrentPageIndex() retourne l'index de la première
-       page visible dans le spread (0-based parmi les 61 slots) */
+    /* idx = index StPageFlip 0-based du slot gauche du spread courant (0..TOT_REAL-1) */
     var idx   = pageFlip.getCurrentPageIndex();
-    var total = TOT_REAL + 1; /* 61 slots */
+    var total = TOT_REAL; /* 60 slots, 0-based */
 
-    /* Ratio pages lues vs restantes */
-    var readRatio = (idx > 0) ? Math.min(idx / (total - 1), 1) : 0;
+    var readRatio = Math.min(idx / (total - 1), 1);
     var leftW  = EDGE_MIN + (EDGE_MAX - EDGE_MIN) * readRatio;
     var rightW = EDGE_MAX - (EDGE_MAX - EDGE_MIN) * readRatio + EDGE_MIN;
 
-    /* En cover : masquer spine et tranches */
+    /* En cover/back cover : masquer spine et tranches */
     if(isCoverState){
       spineEl.classList.remove('visible');
       edgeL.style.opacity = '0';
@@ -1332,15 +1355,15 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     var pad = 18 * sc; /* padding coin */
     var pb  = 20 * sc; /* padding bottom — espace sous folio */
 
-    if(slotIdx <= 1){
-      /* Cover seule — pas de folio overlay */
+    if(isCoverIdx(slotIdx)){
+      /* Cover ou back cover seule — pas de folio overlay */
       folioL.style.opacity = '0';
       folioR.style.opacity = '0';
       return;
     }
-    /* Pages visibles : slotIdx (gauche) et slotIdx+1 (droite) */
-    var leftPage  = slotIdx;       /* page gauche = slot courant */
-    var rightPage = slotIdx + 1;   /* page droite */
+    /* Pages visibles : realPage gauche = slotIdx+1, droite = slotIdx+2 */
+    var leftPage  = slotIdx + 1;
+    var rightPage = slotIdx + 2;
 
     /* Folio gauche — coin bas-extérieur gauche de la PAGE GAUCHE
        = bord gauche du livre (centre - demi-largeur) + padding interne */
