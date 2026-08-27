@@ -8,12 +8,16 @@ export const DATA_01: IssueData = {
   ],
 
   multiples: [
-    { sector: 'AI-native SaaS',   median: '8–15x ARR', top: '>30x (outliers)',  src: 'Aventis Q2 2026' },
-    { sector: 'FinTech',          median: '5.1x ARR',  top: '8.2x',             src: 'Aventis Q2 2026' },
-    { sector: 'HealthTech',       median: '4.8x ARR',  top: '7.5x',             src: 'Aventis Q2 2026' },
-    { sector: 'LegalTech',        median: '4.2x ARR',  top: '6.8x',             src: 'Aventis Q2 2026' },
-    { sector: 'SaaS B2B generic', median: '3.1x ARR',  top: '5.5x',             src: 'SEG 2026'        },
-    { sector: 'Marketplace',      median: '2.8x ARR',  top: '4.5x',             src: 'Aventis Q2 2026' },
+    { sector: 'AI-native SaaS',     median: '6–12x ARR', top: '15x+',  src: 'SaaS Capital Index Q2 2026' },
+    { sector: 'Cybersecurity',      median: '6–14x ARR', top: '45x',   src: 'SaaS Capital Index Q2 2026' },
+    { sector: 'Vertical SaaS',      median: '5–9x ARR',  top: '12x',   src: 'SaaS Capital Index Q2 2026' },
+    { sector: 'RegTech / LegalTech',median: '6–12x ARR', top: '12x',   src: 'SaaS Capital Index Q2 2026' },
+    { sector: 'HealthTech',         median: '4–8x ARR',  top: '10x',   src: 'SaaS Capital Index Q2 2026' },
+    { sector: 'FinTech / Payments', median: '4–6x ARR',  top: '8x',    src: 'SaaS Capital Index Q2 2026' },
+    { sector: 'EdTech / Compliance',median: '3–6x ARR',  top: '8x',    src: 'SaaS Capital Index Q2 2026' },
+    { sector: 'Marketplace',        median: '2–5x ARR',  top: '7x',    src: 'SaaS Capital Index Q2 2026' },
+    { sector: 'PropTech',           median: '2–4x ARR',  top: '6x',    src: 'SaaS Capital Index Q2 2026' },
+    { sector: 'Horizontal SaaS',    median: '3–4x ARR',  top: '5x',    src: 'SaaS Capital Index Q2 2026' },
   ],
 
   deals: [
@@ -127,9 +131,12 @@ export const DATA_01: IssueData = {
   ],
 
   indexMetrics: [
-    { val: '< 25%', label: 'Certification acceptance rate', note: 'Across all submitted assets'          },
-    { val: '4',     label: 'Active certification dimensions', note: 'C · I · F · S (25 pts each)'       },
-    { val: '100',   label: 'Maximum certification score',    note: 'Perfect score — theoretical baseline' },
+    { val: '< 25%', label: 'CIFS acceptance rate',            note: 'Fewer than 1 in 4 submitted assets reaches Full Grade' },
+    { val: '+28%',  label: 'Price premium — certified',        note: 'vs comparable uncertified assets — H1 2025–H1 2026'    },
+    { val: '−38%',  label: 'Time-to-close reduction',          note: 'For certified assets vs equivalent uncertified'        },
+    { val: '11w',   label: 'Pre-Grade to Grade A — avg time',  note: 'With standard preparation effort'                     },
+    { val: '8%',    label: 'Auction Ready (top tier)',         note: 'Of submissions reach Auction Ready status'             },
+    { val: 'SaaS/AI', label: 'Leading vertical — submissions', note: 'Followed by FinTech 22%, LegalTech 18%, PropTech 11%'  },
   ],
 
   cifsExample: [
@@ -152,18 +159,17 @@ export const dealVolumeData = [
 ]
 
 export const multiplesChartData = [
-  { year: '2021', EU: 7.2,  US: 9.8  },
-  { year: '2022', EU: 4.8,  US: 6.5  },
-  { year: '2023', EU: 3.4,  US: 4.9  },
-  { year: '2024', EU: 3.8,  US: 5.4  },
-  { year: '2025', EU: 4.2,  US: 5.8  },
-  { year: '2026', EU: 4.7,  US: 6.1  },
+  { year: '2021', EU: 6.5, US: 8.0 },
+  { year: '2022', EU: 5.2, US: 6.4 },
+  { year: '2023', EU: 4.4, US: 5.3 },
+  { year: '2024', EU: 4.0, US: 4.7 },
+  { year: '2025', EU: 3.9, US: 4.4 },
+  { year: '2026', EU: 3.8, US: 4.1 },
 ]
 
 export const gradeDistributionData = [
-  { grade: 'AEG ★', pct: 5,  color: '#2EAF7D' },
-  { grade: 'AAA',   pct: 12, color: '#C9A84C' },
-  { grade: 'AA',    pct: 27, color: '#9BA8B0' },
-  { grade: 'A',     pct: 32, color: '#4A90D9' },
-  { grade: 'B',     pct: 17, color: '#D4820A' },
+  { grade: 'Auction Ready', pct: 8,  color: '#2EAF7D' },
+  { grade: 'Grade A',       pct: 17, color: '#4A90D9' },
+  { grade: 'Grade B',       pct: 31, color: '#9BA8B0' },
+  { grade: 'Pre-Grade',     pct: 44, color: '#D4820A' },
 ]

@@ -224,21 +224,21 @@ export default async function IssuePage({ params }: Props) {
               </p>
               <MultiplesChart data={multiplesChartData} />
               <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-3">
-                Source — SEG SaaS Report 2026 · Aventis Advisors Q2 2026
+                Source — SaaS Capital Index Q2 2026 · ECB Financial Stability Review 2026
               </p>
               <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-label-mag uppercase tracking-[0.1em]">
                 <span className="flex items-center gap-2 text-magazine-black/50">
-                  <span className="inline-block w-6 h-0.5 bg-[#5ADDA4]" /> Europe: 3.1x → 4.7x ARR
+                  <span className="inline-block w-6 h-0.5 bg-[#5ADDA4]" /> Europe: 6.5x → 3.8x ARR
                 </span>
                 <span className="flex items-center gap-2 text-magazine-black/50">
                   <span
                     className="inline-block w-6 h-0.5 bg-[#4A90D9] opacity-70"
                     style={{ backgroundImage: 'repeating-linear-gradient(90deg,#4A90D9 0,#4A90D9 4px,transparent 4px,transparent 7px)' }}
                   />
-                  US: 4.9x → 6.1x ARR
+                  US: 8.0x → 4.1x ARR
                 </span>
                 <span className="flex items-center gap-2 font-semibold text-magazine-black/60">
-                  Gap narrowed from −40% to −23% since 2023
+                  Gap under 0.3x in 2026 — first time since 2015
                 </span>
               </div>
             </div>
@@ -249,10 +249,10 @@ export default async function IssuePage({ params }: Props) {
                 The European Discount — and Why It's Narrowing
               </h3>
               <p className="text-body-mag text-magazine-black/70 leading-[1.75]">
-                European SaaS companies trade at a 15–25% discount vs US peers. The gap has narrowed from 30–40% in 2020 — driven by increasing US buyer appetite for European SaaS and the maturation of European growth equity. The remaining discount reflects structural factors: a less standardised advisory ecosystem, fewer certifiable due diligence frameworks, and a cultural reluctance around price transparency. These are solvable problems.
+                For the first time since 2015, US public SaaS no longer trades at a significant premium over EU peers — the gap has closed to under 0.3x ARR (EU median 3.8x vs US median 4.1x, 2026). The SaaS Capital Index itself peaked at 16.9x in 2021, entered 2025 at roughly 7x, fell to a decade-plus low near 3.2x by mid-2026, and has since recovered modestly to ~3.8x. The recovery is selective: identity, security, and vertical SaaS are leading. AI-exposed horizontal SaaS is lagging.
               </p>
               <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">
-                Source — Synergy AI 2026
+                Source — SaaS Capital Index Q2 2026 · ECB Financial Stability Review 2026
               </p>
             </div>
           </div>
@@ -267,8 +267,8 @@ export default async function IssuePage({ params }: Props) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20">
             {[
-              { val: '72%',   label: 'of SaaS M&A targets reference AI (2025)' },
-              { val: '12.5x', label: 'median EV/Revenue for AI-native SaaS' },
+              { val: '47%',   label: 'of all technology deals in 2025 carried an AI component — up from ~25% in 2024' },
+              { val: '$226B', label: 'raised by private AI companies in Q1 2026 alone — surpassing full-year 2025' },
             ].map(s => (
               <div key={s.val}>
                 <p
@@ -282,16 +282,17 @@ export default async function IssuePage({ params }: Props) {
             ))}
           </div>
 
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.12em] mb-6">The Architecture Premium — by element (applies at the margin, on top of base valuation)</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-20">
             {[
-              { code: 'I-16', title: 'Proprietary data',  body: 'Datasets that cannot be replicated — the foundation of durable AI value.' },
-              { code: 'F-49', title: 'Contractual moat',  body: 'Long-term contracts (>24 months) that prove deep client embedding.' },
-              { code: 'S-42', title: 'EU AI Act ready',   body: 'Compliance with Articles 9–15 — increasingly a buyer prerequisite.' },
-              { code: 'F-14', title: 'NRR > 120%',        body: 'Net Revenue Retention above 120% demonstrates genuine product-market fit.' },
+              { code: 'Proprietary training dataset', body: 'The data doesn\u2019t exist elsewhere. Non-replicable in 90 days.', pct: '+35%' },
+              { code: 'Custom fine-tuned model',       body: '18 months of customer feedback baked into the model.', pct: '+25%' },
+              { code: 'EU AI Act conformity',          body: 'Legal and technical investment most competitors haven\u2019t made.', pct: '+20%' },
+              { code: 'Model versioning strategy',     body: 'A documented answer for when the underlying LLM updates.', pct: '+10%' },
             ].map(a => (
               <div key={a.code} className="border-l-2 border-magazine-black/20 pl-6 py-2 bg-magazine-ivory">
-                <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.12em] mb-2">{a.code}</p>
-                <p className="text-h2-mag font-sans font-semibold text-magazine-black mb-2">{a.title}</p>
+                <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.12em] mb-2">{a.pct}</p>
+                <p className="text-h2-mag font-sans font-semibold text-magazine-black mb-2">{a.code}</p>
                 <p className="text-body-mag text-magazine-black/60">{a.body}</p>
               </div>
             ))}
@@ -300,7 +301,10 @@ export default async function IssuePage({ params }: Props) {
           <div className="max-w-prose border-t border-magazine-black/10 pt-12">
             <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-6">The Commoditisation Trap</h3>
             <p className="text-body-mag text-magazine-black/65 leading-[1.75]">
-              The test: can a competitor rebuild this with Claude or GPT in two weeks? If yes, the asset has no certifiable moat. This is what we observe in approximately 40% of submitted assets — products built on thin wrappers around public LLMs, without proprietary data, contractual depth, or technical differentiation. The AI valuation premium is real. It is also fragile for assets that cannot pass this test.
+              The test: is the AI defensible, or substitutable? A feature AI — a ChatGPT wrapper, a standard RAG implementation over public data — is substitutable; a competitor can replicate it in 90 days, and a buyer pays no premium for it. A standard RAG/wrapper commands a <strong>0%</strong> architecture premium, versus up to <strong>+35%</strong> for a proprietary, documented training dataset. Founders who arrive with a complete AI architecture brief — model provenance, data rights, fallback strategy, compliance status, versioning policy — close AI due diligence <strong>60% faster</strong>.
+            </p>
+            <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">
+              Source — CB Insights / EU Commission AI Innovation Report 2026 · Aegryn CIFS Protocol S-16
             </p>
           </div>
         </section>
@@ -348,13 +352,13 @@ export default async function IssuePage({ params }: Props) {
             </h3>
             <div className="space-y-0">
               {[
-                { code: 'F-11a', label: 'ARR declared without Stripe or billing access' },
-                { code: 'I-21',  label: 'Software rights not formally assigned to the entity' },
-                { code: 'F-42',  label: 'Founder dependency exceeding 60% of revenue' },
-                { code: 'S-16',  label: 'No pentest conducted in the past 18 months' },
-                { code: 'I-27',  label: 'No legal basis for personal data transfer (GDPR)' },
+                { pct: '88%', label: 'Founder Dependency' },
+                { pct: '64%', label: 'IP Ownership Gaps' },
+                { pct: '58%', label: 'ARR Not Verifiable' },
+                { pct: '42%', label: 'No Pentest on Record' },
+                { pct: '35%', label: 'RGPD / AI Act Risk' },
               ].map((r, i) => (
-                <div key={r.code} className="flex items-start gap-8 py-6 border-b border-magazine-black/10">
+                <div key={r.label} className="flex items-start gap-8 py-6 border-b border-magazine-black/10">
                   <span
                     className="font-sans font-bold text-magazine-black/20 tabular-nums shrink-0"
                     style={{ fontSize: 'clamp(32px,4vw,56px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}
@@ -362,12 +366,15 @@ export default async function IssuePage({ params }: Props) {
                     0{i + 1}
                   </span>
                   <div className="pt-1">
-                    <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.12em] mb-1">{r.code}</p>
+                    <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.12em] mb-1">{r.pct} of rejected submissions</p>
                     <p className="text-h2-mag font-sans font-semibold text-magazine-black">{r.label}</p>
                   </div>
                 </div>
               ))}
             </div>
+            <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">
+              Source — CIFS Protocol v3.0, Issue 01 Base Reference (multi-select — assets can trigger more than one reason)
+            </p>
           </div>
         </section>
 

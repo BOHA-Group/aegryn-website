@@ -31,8 +31,8 @@ export function GradeDistributionChart({ data }: Props) {
           margin={{ top: 0, right: 40, left: 0, bottom: 0 }}
         >
           <CartesianGrid horizontal={false} stroke={GRID} strokeWidth={1} />
-          <XAxis type="number" domain={[0, 40]} unit="%" tick={tickStyle(0.4)} axisLine={false} tickLine={false} />
-          <YAxis type="category" dataKey="grade" width={50}
+          <XAxis type="number" domain={[0, 50]} unit="%" tick={tickStyle(0.4)} axisLine={false} tickLine={false} />
+          <YAxis type="category" dataKey="grade" width={90}
             tick={{ fontSize: 11, fill: DARK, fontFamily: 'var(--font-body)', fontWeight: 600 }}
             axisLine={false} tickLine={false} />
           <Tooltip
