@@ -90,24 +90,30 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
           </p>
           <div className="w-10 h-[2px] bg-[#5ADDA4] mb-3" />
           <p className="font-sans font-bold text-white/55 uppercase leading-snug" style={{ fontSize: '10px', letterSpacing: '0.05em' }}>
-            {issue.coverLine}
+            Build. Certify. Transact.
           </p>
         </div>
       </div>
 
-      {/* ── BAS : titre accent + theme centré + scroll ── */}
+      {/* ── BAS : titre accent + theme centré + scroll — contenu identique cover flipbook ── */}
       <div className="cover-meta relative z-10">
         <p
-          className="font-sans font-bold text-[#5ADDA4] uppercase leading-tight mb-4"
-          style={{ fontSize: 'clamp(22px,4vw,46px)', letterSpacing: '-0.01em', lineHeight: 1.05 }}
+          className="font-sans font-bold text-[#5ADDA4] uppercase leading-none mb-1"
+          style={{ fontSize: 'clamp(22px,4vw,46px)', letterSpacing: '-0.01em', lineHeight: 1.0 }}
         >
-          {issue.title}
+          Built
+        </p>
+        <p
+          className="font-sans font-bold text-white/90 uppercase leading-none mb-4"
+          style={{ fontSize: 'clamp(22px,4vw,46px)', letterSpacing: '-0.01em', lineHeight: 1.0 }}
+        >
+          to Last.
         </p>
         <p
           className="font-sans uppercase text-white/45 leading-snug mb-8"
           style={{ fontSize: '10px', letterSpacing: '0.07em' }}
         >
-          {issue.theme}
+          The anatomy of a tech asset that sells and one that doesn&apos;t.
         </p>
 
         {/* ── Deux CTAs style Barnes ── */}
