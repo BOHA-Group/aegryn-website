@@ -1205,22 +1205,51 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 
   function isCoverIdx(idx){ return idx === 0 || idx === TOT_REAL - 1; }
 
+  /* ── Ensemble spine + tranches — TOUJOURS positionné au centre fixe.
+     Jamais de translation séparée : uniquement un fondu d'opacité, appliqué
+     comme un SEUL bloc (les deux tranches et le spine ensemble, jamais l'un
+     sans l'autre). Le fade-in est retardé le temps que le scaler termine son
+     slide (.45s) afin que l'ensemble semble se stabiliser EN MÊME TEMPS que
+     le livre à l'ouverture ; le fade-out est immédiat à la fermeture. ── */
+  var SLIDE_MS = 460; /* légèrement > la transition CSS .45s du scaler */
+  var ensembleTimer = null;
+  function setEnsembleVisible(show, delayed){
+    if(ensembleTimer){ clearTimeout(ensembleTimer); ensembleTimer = null; }
+    var apply = function(v){
+      spineEl.classList.toggle('visible', v);
+      edgeL.style.opacity = v ? '1' : '0';
+      edgeR.style.opacity = v ? '1' : '0';
+    };
+    if(show && delayed){ ensembleTimer = setTimeout(function(){ apply(true); }, SLIDE_MS); }
+    else{ apply(show); }
+  }
+
+  var isFlippingNow = false;
+
   pageFlip.on('flip', function(e){
-    var idx = e.data;
+    var idx  = e.data;
+    var wasCover = isCoverState;
     isCoverState = isCoverIdx(idx);
     updateUI(idx);
     edgeUpdate();
     folioPagesUpdate(idx);
     setTimeout(applyScale, 50);
+
+    var opening = wasCover && !isCoverState;   /* sortie de cover → premier spread */
+    var closing = !wasCover && isCoverState;   /* entrée en cover/back cover */
+    if(closing){
+      setEnsembleVisible(false, false);        /* déjà masqué pendant le flip — reste masqué */
+    } else if(opening){
+      setEnsembleVisible(true, true);          /* attend la fin du slide avant d'apparaître */
+    } else if(!isCoverState){
+      setEnsembleVisible(true, false);         /* flip interne normal — réapparition immédiate */
+    }
   });
   pageFlip.on('changeState', function(e){
     var idx = pageFlip.getCurrentPageIndex();
     var state = e.data;
-    var prev = isCoverState;
-    isCoverState = isCoverIdx(idx);
-    if(prev !== isCoverState){ setTimeout(applyScale, 50); }
-    var isFlipping = (state === 'flipping' || state === 'user_fold' || state === 'fold_corner');
-    if(spineEl) spineEl.style.opacity = (isFlipping || isCoverIdx(idx)) ? '0' : '1';
+    isFlippingNow = (state === 'flipping' || state === 'user_fold' || state === 'fold_corner');
+    if(isFlippingNow){ setEnsembleVisible(false, false); } /* masqué pendant l'animation de flip */
     edgeUpdate();
   });
   pageFlip.on('init', function(){
@@ -1294,48 +1323,35 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   /* ── 14. Spine + Tranches — (variables déjà déclarées ci-dessus) ── */
 
   function edgeUpdate(){
+    /* Géométrie UNIQUEMENT (taille/position) — la visibilité (opacité) de
+       l'ensemble spine+tranches est gérée exclusivement par setEnsembleVisible(),
+       jamais ici, pour éviter toute compétition entre deux mécanismes. */
     var sc = parseFloat((scalerEl.style.transform.match(/scale\(([^)]+)\)/) || ['','1'])[1]);
     var bookH = BOOK_H * sc;
     var bookW = BOOK_W * sc;
 
-    /* idx = index StPageFlip 0-based du slot gauche du spread courant (0..TOT_REAL-1) */
     var idx   = pageFlip.getCurrentPageIndex();
-    var total = TOT_REAL; /* 60 slots, 0-based */
+    var total = TOT_REAL;
 
     var readRatio = Math.min(idx / (total - 1), 1);
     var leftW  = EDGE_MIN + (EDGE_MAX - EDGE_MIN) * readRatio;
     var rightW = EDGE_MAX - (EDGE_MAX - EDGE_MIN) * readRatio + EDGE_MIN;
+    var halfBook = bookW / 2;
 
-    /* En cover/back cover : masquer spine et tranches */
-    if(isCoverState){
-      spineEl.classList.remove('visible');
-      edgeL.style.opacity = '0';
-      edgeR.style.opacity = '0';
-      return;
-    }
-
-    /* Spine */
     spineEl.style.height = bookH + 'px';
     spineLineEl.style.height = bookH + 'px';
-    spineEl.classList.toggle('visible', idx > 0);
-
-    /* Tranches — positionnées aux bords du livre scalé */
-    var halfBook = bookW / 2;
 
     edgeL.style.right  = 'calc(50% + ' + halfBook + 'px)';
     edgeL.style.width  = leftW + 'px';
     edgeL.style.height = bookH + 'px';
-    edgeL.style.opacity = idx > 0 ? '1' : '0';
 
     edgeR.style.left   = 'calc(50% + ' + halfBook + 'px)';
     edgeR.style.width  = rightW + 'px';
     edgeR.style.height = bookH + 'px';
-    edgeR.style.opacity = '1';
-  }
 
-  function spineUpdate(){ edgeUpdate(); }
-  /* edgeUpdate est appelé depuis le listener flip principal ci-dessus */
-  pageFlip.on('changeState', function(){ edgeUpdate(); });
+    /* État initial (avant tout flip) : ensemble masqué si cover, visible sinon */
+    if(isCoverState) setEnsembleVisible(false, false);
+  }
 
   /* ── 14b. Folio overlay — numéros coins bas pages visibles ── */
   var folioL = document.createElement('div');
