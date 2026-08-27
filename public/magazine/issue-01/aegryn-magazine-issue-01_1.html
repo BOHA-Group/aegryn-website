@@ -1102,13 +1102,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     width:               PAGE_W,
     height:              PAGE_H,
     size:                'fixed',
-    drawShadow:          false,   /* on gère la spine CSS nous-mêmes */
+    drawShadow:          true,    /* effet ombre/brillance natif pendant le flip (cf. 09b734e) */
     flippingTime:        700,
     usePortrait:         false,
     showCover:           true,
     startPage:           0,       /* démarre sur slot 0 → cover seule à droite */
     mobileScrollSupport: false,
-    maxShadowOpacity:    0.0,
+    maxShadowOpacity:    0.4,
     showPageCorners:     true,
     disableFlipByClick:  false,
     swipeDistance:       30,
@@ -1224,8 +1224,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     else{ apply(show); }
   }
 
-  var isFlippingNow = false;
-
   pageFlip.on('flip', function(e){
     var idx  = e.data;
     var wasCover = isCoverState;
@@ -1245,11 +1243,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
       setEnsembleVisible(true, false);         /* flip interne normal — réapparition immédiate */
     }
   });
-  pageFlip.on('changeState', function(e){
-    var idx = pageFlip.getCurrentPageIndex();
-    var state = e.data;
-    isFlippingNow = (state === 'flipping' || state === 'user_fold' || state === 'fold_corner');
-    if(isFlippingNow){ setEnsembleVisible(false, false); } /* masqué pendant l'animation de flip */
+  pageFlip.on('changeState', function(){
+    /* Mise à jour géométrique uniquement — l'ensemble spine+tranches reste
+       visible pendant les flips internes normaux (pas de clignotement à
+       chaque tournage de page). Seules les transitions cover<->spread,
+       gérées dans le listener 'flip' ci-dessus, pilotent son opacité. */
     edgeUpdate();
   });
   pageFlip.on('init', function(){
