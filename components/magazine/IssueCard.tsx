@@ -18,13 +18,12 @@ export function IssueCard({ issue, locale = 'fr', labelReadIssue = 'Read issue',
 
   return (
     <div className="group grid md:grid-cols-[2fr_3fr] gap-0 border border-magazine-black/10 hover:border-magazine-black/25 transition-colors">
-      {/* Cover panel — proportions exactes de la cover flipbook (base 420x595), mise à l'échelle
-          via container query units (cqw) pour occuper 100% de sa colonne SANS aucun espace
-          blanc résiduel ni distorsion : chaque valeur px est convertie en %-de-largeur-conteneur
-          identique au ratio flipbook (letter-spacing déjà en em s'adapte automatiquement). */}
+      {/* Cover panel — copie exacte du cover /fr/magazine/issue-01 (CoverSection.tsx), mis à
+          l'échelle via container query units (cqw, base réf. 1000px = rendu desktop de
+          CoverSection) pour occuper 100% de sa colonne sans espace blanc résiduel. */}
       <div
         className="relative flex flex-col justify-between border-r border-magazine-black/10 overflow-hidden w-full"
-        style={{ aspectRatio: '420 / 595', containerType: 'inline-size', padding: '6.6667cqw 7.1429cqw' } as React.CSSProperties}
+        style={{ aspectRatio: '420 / 595', containerType: 'inline-size', padding: '4cqw 3.2cqw' } as React.CSSProperties}
       >
         {/* Background image */}
         <div
@@ -35,67 +34,67 @@ export function IssueCard({ issue, locale = 'fr', labelReadIssue = 'Read issue',
             backgroundPosition: 'center top',
           }}
         />
-        {/* Dark overlay — identique flipbook */}
+        {/* Dark overlay — identique CoverSection (160deg, .82/.65/.88) */}
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(180deg, rgba(5,10,15,.75) 0%, rgba(5,10,15,.45) 45%, rgba(5,10,15,.78) 100%)' }}
+          style={{ background: 'linear-gradient(160deg, rgba(5,10,15,0.82) 0%, rgba(5,10,15,0.65) 50%, rgba(5,10,15,0.88) 100%)' }}
         />
 
-        {/* TOP BAR : date gauche / Special Edition droite */}
+        {/* TOP BAR : date gauche / Special Edition droite — identique CoverSection */}
         <div className="relative z-10 flex items-start justify-between">
-          <p className="font-mono uppercase text-white/40" style={{ fontSize: '2.1429cqw', fontWeight: 500, letterSpacing: '0.22em' }}>{formatted.toUpperCase()}</p>
+          <p className="font-mono uppercase text-white/40" style={{ fontSize: '1cqw', letterSpacing: '0.22em' }}>{formatted.toUpperCase()}</p>
           <div className="text-right">
-            <p className="font-mono uppercase text-[#5ADDA4] font-bold" style={{ fontSize: '2.1429cqw', letterSpacing: '0.18em' }}>{labelSpecial}</p>
-            <p className="font-mono uppercase text-[#5ADDA4] font-bold" style={{ fontSize: '2.1429cqw', letterSpacing: '0.18em' }}>Issue {String(issue.number).padStart(2, '0')}</p>
+            <p className="font-mono uppercase text-[#5ADDA4] font-bold" style={{ fontSize: '1cqw', letterSpacing: '0.18em' }}>{labelSpecial}</p>
+            <p className="font-mono uppercase text-[#5ADDA4] font-bold" style={{ fontSize: '1cqw', letterSpacing: '0.18em' }}>Issue {String(issue.number).padStart(2, '0')}</p>
           </div>
         </div>
 
-        {/* AEGRYN massif + BUSINESS MAGAZINE — copie exacte flipbook (Business Magazine légèrement réduit, position inchangée) */}
-        <div className="relative z-10" style={{ marginTop: '-1.9048cqw' }}>
+        {/* AEGRYN massif + BUSINESS MAGAZINE — identique CoverSection (Aegryn plafonné à 190px, Business Magazine 11px) */}
+        <div className="relative z-10" style={{ marginTop: '-0.8cqw' }}>
           <p
             className="font-sans font-bold text-white"
-            style={{ fontSize: '19.0476cqw', letterSpacing: '-0.04em', lineHeight: 0.86 }}
+            style={{ fontSize: '19cqw', letterSpacing: '-0.04em', lineHeight: 0.86 }}
           >
             Aegryn
           </p>
-          <p className="text-right font-mono uppercase text-white/35" style={{ fontSize: '2.1429cqw', fontWeight: 400, letterSpacing: '0.18em', marginTop: '1.9048cqw' }}>Business Magazine</p>
+          <p className="text-right font-mono uppercase text-white/35" style={{ fontSize: '1.1cqw', letterSpacing: '0.18em', marginTop: '0.8cqw' }}>Business Magazine</p>
         </div>
 
-        {/* EXCLUSIVE — milieu gauche */}
+        {/* EXCLUSIVE — milieu gauche — identique CoverSection */}
         <div className="relative z-10 flex-1 flex flex-col justify-center">
-          <div style={{ maxWidth: '40.4762cqw' }}>
-            <p className="font-sans font-bold text-[#5ADDA4] uppercase" style={{ fontSize: '2.381cqw', letterSpacing: '0.08em', marginBottom: '1.4286cqw' }}>Exclusive</p>
-            <div style={{ width: '6.6667cqw', height: '0.4762cqw', background: '#5ADDA4', marginBottom: '1.9048cqw' }} />
-            <p className="font-sans font-bold text-white/55 uppercase" style={{ fontSize: '2.0238cqw', letterSpacing: '0.04em', lineHeight: 1.5 }}>
+          <div style={{ maxWidth: '22cqw' }}>
+            <p className="font-sans font-bold text-[#5ADDA4] uppercase" style={{ fontSize: '1.3cqw', letterSpacing: '0.08em', marginBottom: '0.8cqw' }}>Exclusive</p>
+            <div style={{ width: '4cqw', height: '0.2cqw', background: '#5ADDA4', marginBottom: '1.2cqw' }} />
+            <p className="font-sans font-bold text-white/55 uppercase leading-snug" style={{ fontSize: '1cqw', letterSpacing: '0.05em' }}>
               {issue.coverLine}
             </p>
           </div>
         </div>
 
-        {/* QR code — coin bas-droit identique flipbook */}
-        <div className="absolute z-20 bg-white" style={{ bottom: '3.3333cqw', right: '3.3333cqw', padding: '0.9524cqw', borderRadius: '2px', boxShadow: '0 2px 8px rgba(0,0,0,.3)', width: '14.7619cqw', height: '14.7619cqw' }}>
+        {/* QR code — identique CoverSection (88px, bottom-8 right-14, p-1.5 rounded-sm) */}
+        <div className="absolute z-20 bg-white rounded-sm shadow-lg" style={{ bottom: '3.2cqw', right: '5.6cqw', padding: '0.6cqw' }}>
           <img
-            src="https://api.qrserver.com/v1/create-qr-code/?size=54x54&data=https%3A%2F%2Faegryn.com%2Fmagazine&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=88x88&data=https%3A%2F%2Faegryn.com%2Fmagazine&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png"
             alt="aegryn.com/magazine"
-            style={{ display: 'block', width: '100%', height: '100%', imageRendering: 'pixelated' }}
+            style={{ display: 'block', width: '8.8cqw', height: '8.8cqw', imageRendering: 'pixelated' }}
           />
         </div>
 
-        {/* BAS : titre splitté accent/blanc + theme — copie exacte flipbook */}
-        <div className="relative z-10" style={{ paddingBottom: '12.381cqw' }}>
+        {/* BAS : titre splitté accent/blanc + theme — identique CoverSection (Built/to Last plafonné à 46px) */}
+        <div className="relative z-10">
           <p
-            className="font-sans font-bold text-[#5ADDA4] uppercase"
-            style={{ fontSize: '8.5714cqw', letterSpacing: '-0.02em', lineHeight: 1.0, marginBottom: '1.1905cqw' }}
+            className="font-sans font-bold text-[#5ADDA4] uppercase leading-none"
+            style={{ fontSize: '4.6cqw', letterSpacing: '-0.01em', lineHeight: 1.0, marginBottom: '0.4cqw' }}
           >
             Built
           </p>
           <p
-            className="font-sans font-bold text-white/90 uppercase"
-            style={{ fontSize: '8.5714cqw', letterSpacing: '-0.02em', lineHeight: 1.0, marginBottom: '2.1429cqw' }}
+            className="font-sans font-bold text-white/90 uppercase leading-none"
+            style={{ fontSize: '4.6cqw', letterSpacing: '-0.01em', lineHeight: 1.0, marginBottom: '1.6cqw' }}
           >
             to Last.
           </p>
-          <p className="font-sans uppercase text-white/40" style={{ fontSize: '2.0238cqw', letterSpacing: '0.05em', lineHeight: 1.6 }}>
+          <p className="font-sans uppercase text-white/45 leading-snug" style={{ fontSize: '1cqw', letterSpacing: '0.07em' }}>
             {issue.theme}
           </p>
         </div>
