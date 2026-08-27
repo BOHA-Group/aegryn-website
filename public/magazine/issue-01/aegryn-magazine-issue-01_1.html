@@ -196,7 +196,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   pointer-events:none;
   display:flex;flex-direction:column;
   align-items:center;
-  opacity:0;transition:opacity .4s ease;
+  opacity:0;transition:opacity .3s;
 }
 #fb-spine.visible{
   opacity:1;
@@ -1204,7 +1204,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   var EDGE_MIN    = 2;
 
   function isCoverIdx(idx){ return idx === 0 || idx === TOT_REAL - 1; }
-  var isFlippingNow = false; /* pilote uniquement le fondu du spine — jamais sa position */
 
   pageFlip.on('flip', function(e){
     var idx = e.data;
@@ -1220,7 +1219,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     var prev = isCoverState;
     isCoverState = isCoverIdx(idx);
     if(prev !== isCoverState){ setTimeout(applyScale, 50); }
-    isFlippingNow = (state === 'flipping' || state === 'user_fold' || state === 'fold_corner');
+    var isFlipping = (state === 'flipping' || state === 'user_fold' || state === 'fold_corner');
+    if(spineEl) spineEl.style.opacity = (isFlipping || isCoverIdx(idx)) ? '0' : '1';
     edgeUpdate();
   });
   pageFlip.on('init', function(){
@@ -1306,9 +1306,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     var leftW  = EDGE_MIN + (EDGE_MAX - EDGE_MIN) * readRatio;
     var rightW = EDGE_MAX - (EDGE_MAX - EDGE_MIN) * readRatio + EDGE_MIN;
 
-    /* En cover/back cover ou pendant un flip actif : fondu du spine (classList
-       uniquement — sa position reste fixe à 50%, seule l'opacité varie). */
-    if(isCoverState || isFlippingNow){
+    /* En cover/back cover : masquer spine et tranches */
+    if(isCoverState){
       spineEl.classList.remove('visible');
       edgeL.style.opacity = '0';
       edgeR.style.opacity = '0';
