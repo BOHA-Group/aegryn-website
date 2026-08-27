@@ -44,15 +44,15 @@ export function IssueCard({ issue, locale = 'fr', labelReadIssue = 'Read issue',
           </div>
         </div>
 
-        {/* AEGRYN massif + BUSINESS MAGAZINE aligné droite */}
-        <div className="relative z-10 -mt-1">
+        {/* AEGRYN massif + BUSINESS MAGAZINE — format/taille/position identiques flipbook */}
+        <div className="relative z-10 -mt-2">
           <p
-            className="font-sans font-bold text-white leading-none"
-            style={{ fontSize: 'clamp(52px,8vw,96px)', letterSpacing: '-0.04em', lineHeight: 0.86 }}
+            className="font-sans font-bold text-white"
+            style={{ fontSize: '80px', letterSpacing: '-0.04em', lineHeight: 0.86 }}
           >
             Aegryn
           </p>
-          <p className="text-right font-mono text-[9px] tracking-[0.18em] uppercase text-white/35 mt-1">Business Magazine</p>
+          <p className="text-right font-mono uppercase text-white/35" style={{ fontSize: '11px', letterSpacing: '0.18em', marginTop: '8px', fontWeight: 400 }}>Business Magazine</p>
         </div>
 
         {/* EXCLUSIVE — milieu gauche */}
@@ -64,6 +64,17 @@ export function IssueCard({ issue, locale = 'fr', labelReadIssue = 'Read issue',
               {issue.coverLine}
             </p>
           </div>
+        </div>
+
+        {/* QR code — coin bas-droit identique flipbook */}
+        <div className="absolute bottom-[14px] right-[14px] z-20 bg-white" style={{ padding: '4px', borderRadius: '2px', boxShadow: '0 2px 8px rgba(0,0,0,.3)', width: '62px', height: '62px' }}>
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=54x54&data=https%3A%2F%2Faegryn.com%2Fmagazine&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png"
+            width={54}
+            height={54}
+            alt="aegryn.com/magazine"
+            style={{ display: 'block', imageRendering: 'pixelated' }}
+          />
         </div>
 
         {/* BAS : titre splitté accent/blanc + theme — identique flipbook et CoverSection */}
