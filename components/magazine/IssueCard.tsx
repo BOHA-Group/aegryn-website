@@ -66,15 +66,21 @@ export function IssueCard({ issue, locale = 'fr', labelReadIssue = 'Read issue',
           </div>
         </div>
 
-        {/* BAS : titre accent + theme */}
+        {/* BAS : titre splitté accent/blanc + theme — identique flipbook et CoverSection */}
         <div className="relative z-10">
           <p
-            className="font-sans font-bold text-[#5ADDA4] uppercase leading-tight mb-3"
-            style={{ fontSize: 'clamp(16px,2.5vw,26px)', letterSpacing: '-0.01em', lineHeight: 1.05 }}
+            className="font-sans font-bold text-[#5ADDA4] uppercase leading-none"
+            style={{ fontSize: 'clamp(16px,2.5vw,28px)', letterSpacing: '-0.02em', lineHeight: 1.0, marginBottom: '2px' }}
           >
-            {issue.title}
+            Built
           </p>
-          <p className="font-sans uppercase text-center text-white/40 leading-snug" style={{ fontSize: '9px', letterSpacing: '0.06em' }}>
+          <p
+            className="font-sans font-bold text-white/90 uppercase leading-none mb-3"
+            style={{ fontSize: 'clamp(16px,2.5vw,28px)', letterSpacing: '-0.02em', lineHeight: 1.0 }}
+          >
+            to Last.
+          </p>
+          <p className="font-sans uppercase text-white/40 leading-snug" style={{ fontSize: '8.5px', letterSpacing: '0.05em' }}>
             {issue.theme}
           </p>
         </div>

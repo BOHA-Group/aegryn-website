@@ -3,12 +3,12 @@ import type { MagazineIssue } from '@/lib/magazine/types'
 export const ISSUE_01: MagazineIssue = {
   number: 1,
   slug: 'issue-01',
-  title: 'Built to Last',
-  theme: 'What separates the tech assets that transact from those that disappear and what every European founder needs to know before the conversation starts.',
+  title: 'Built to Last.',
+  theme: "The anatomy of a tech asset that sells and one that doesn't.",
   publishedAt: '2027-01-01',
   coverStat: '€262B',
   coverStatLabel: 'EU M&A volume — Q2 2026 · 3,315 transactions',
-  coverLine: 'Build to last. Certify to transact.',
+  coverLine: 'Build. Certify. Transact.',
   status: 'published',
   sections: [
     { id: 's-flipbook',    label: 'Flipbook',           pillar: 'build', pageRange: '60 p.'    },
