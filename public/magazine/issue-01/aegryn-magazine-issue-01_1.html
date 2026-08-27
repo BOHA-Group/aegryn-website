@@ -222,6 +222,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   position:absolute;
   top:50%;left:50%;
   transform-origin:center center;
+  transition:transform .45s cubic-bezier(.4,0,.2,1);
 }
 /* Le livre prend exactement BOOK_W × BOOK_H */
 #fb-book{display:block;}
@@ -1351,9 +1352,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     var sc = parseFloat((scalerEl.style.transform.match(/scale\(([^)]+)\)/) || ['','1'])[1]);
     var bookH = BOOK_H * sc;
     var bookW = BOOK_W * sc;
-    var halfW = bookW / 2;
-    var pad = 18 * sc; /* padding coin */
-    var pb  = 20 * sc; /* padding bottom — espace sous folio */
+    var halfW   = bookW / 2;
+    var marginX = 24 * sc; /* marge horizontale — DEPUIS le bord du livre, vers l'intérieur */
+    var marginB = 16 * sc; /* marge basse depuis le bord inférieur de la page */
 
     if(isCoverIdx(slotIdx)){
       /* Cover ou back cover seule — pas de folio overlay */
@@ -1365,20 +1366,21 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     var leftPage  = slotIdx + 1;
     var rightPage = slotIdx + 2;
 
-    /* Folio gauche — coin bas-extérieur gauche de la PAGE GAUCHE
-       = bord gauche du livre (centre - demi-largeur) + padding interne */
-    folioL.textContent = leftPage <= TOT_REAL ? leftPage : '';
-    /* Coin bas-extérieur GAUCHE = bord gauche du livre */
-    folioL.style.left   = 'calc(50% - ' + halfW + 'px - ' + pad + 'px - 12px)';
-    folioL.style.right  = 'auto';
-    folioL.style.bottom = pb + 'px';
+    /* Folio gauche — coin bas-extérieur de la PAGE GAUCHE (bas-gauche).
+       Position : bord gauche du livre (50% - halfW) + marge vers l'INTÉRIEUR
+       de la page. Ne jamais dépasser ce bord vers l'extérieur (zone tranches). */
+    folioL.textContent   = leftPage <= TOT_REAL ? leftPage : '';
+    folioL.style.left    = 'calc(50% - ' + halfW + 'px + ' + marginX + 'px)';
+    folioL.style.right   = 'auto';
+    folioL.style.bottom  = marginB + 'px';
     folioL.style.opacity = leftPage <= TOT_REAL ? '1' : '0';
 
-    /* Coin bas-extérieur DROIT = bord droit du livre */
-    folioR.textContent = rightPage <= TOT_REAL ? rightPage : '';
-    folioR.style.right  = 'calc(50% - ' + halfW + 'px - ' + pad + 'px - 12px)';
-    folioR.style.left   = 'auto';
-    folioR.style.bottom = pb + 'px';
+    /* Folio droit — coin bas-extérieur de la PAGE DROITE (bas-droite).
+       Symétrique : bord droit du livre (50% - halfW depuis la droite) + marge intérieure. */
+    folioR.textContent   = rightPage <= TOT_REAL ? rightPage : '';
+    folioR.style.right   = 'calc(50% - ' + halfW + 'px + ' + marginX + 'px)';
+    folioR.style.left    = 'auto';
+    folioR.style.bottom  = marginB + 'px';
     folioR.style.opacity = rightPage <= TOT_REAL ? '1' : '0';
   }
 
