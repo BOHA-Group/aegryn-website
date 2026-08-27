@@ -18,8 +18,8 @@ export function IssueCard({ issue, locale = 'fr', labelReadIssue = 'Read issue',
 
   return (
     <div className="group grid md:grid-cols-[2fr_3fr] gap-0 border border-magazine-black/10 hover:border-magazine-black/25 transition-colors">
-      {/* Cover panel — format magazine portrait style Salford, ratio A4 */}
-      <div className="relative flex flex-col justify-between p-8 min-h-[560px] border-r border-magazine-black/10 overflow-hidden">
+      {/* Cover panel — copie exacte de la cover flipbook (420x595, mêmes px) */}
+      <div className="relative flex flex-col justify-between border-r border-magazine-black/10 overflow-hidden mx-auto" style={{ width: '420px', height: '595px', padding: '28px 30px' }}>
         {/* Background image */}
         <div
           className="absolute inset-0"
@@ -29,45 +29,45 @@ export function IssueCard({ issue, locale = 'fr', labelReadIssue = 'Read issue',
             backgroundPosition: 'center top',
           }}
         />
-        {/* Dark overlay */}
+        {/* Dark overlay — identique flipbook */}
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(160deg, rgba(5,10,15,0.80) 0%, rgba(5,10,15,0.60) 50%, rgba(5,10,15,0.85) 100%)' }}
+          style={{ background: 'linear-gradient(180deg, rgba(5,10,15,.75) 0%, rgba(5,10,15,.45) 45%, rgba(5,10,15,.78) 100%)' }}
         />
 
         {/* TOP BAR : date gauche / Special Edition droite */}
         <div className="relative z-10 flex items-start justify-between">
-          <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/40">{formatted.toUpperCase()}</p>
+          <p className="font-mono uppercase text-white/40" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em' }}>{formatted.toUpperCase()}</p>
           <div className="text-right">
-            <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#5ADDA4] font-bold">{labelSpecial}</p>
-            <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#5ADDA4] font-bold">Issue {String(issue.number).padStart(2, '0')}</p>
+            <p className="font-mono uppercase text-[#5ADDA4] font-bold" style={{ fontSize: '9px', letterSpacing: '0.18em' }}>{labelSpecial}</p>
+            <p className="font-mono uppercase text-[#5ADDA4] font-bold" style={{ fontSize: '9px', letterSpacing: '0.18em' }}>Issue {String(issue.number).padStart(2, '0')}</p>
           </div>
         </div>
 
-        {/* AEGRYN massif + BUSINESS MAGAZINE — proportionnel au flipbook (420px → ~300px panel) */}
-        <div className="relative z-10 -mt-2">
+        {/* AEGRYN massif + BUSINESS MAGAZINE — copie exacte flipbook (Business Magazine légèrement réduit, position inchangée) */}
+        <div className="relative z-10" style={{ marginTop: '-8px' }}>
           <p
             className="font-sans font-bold text-white"
-            style={{ fontSize: 'clamp(52px,13vw,64px)', letterSpacing: '-0.04em', lineHeight: 0.86 }}
+            style={{ fontSize: '80px', letterSpacing: '-0.04em', lineHeight: 0.86 }}
           >
             Aegryn
           </p>
-          <p className="text-right font-mono uppercase text-white/35" style={{ fontSize: '9px', letterSpacing: '0.18em', marginTop: '6px', fontWeight: 400 }}>Business Magazine</p>
+          <p className="text-right font-mono uppercase text-white/35" style={{ fontSize: '9px', fontWeight: 400, letterSpacing: '0.18em', marginTop: '8px' }}>Business Magazine</p>
         </div>
 
         {/* EXCLUSIVE — milieu gauche */}
         <div className="relative z-10 flex-1 flex flex-col justify-center">
-          <div className="max-w-[180px]">
-            <p className="font-sans font-bold text-[#5ADDA4] uppercase tracking-[0.08em] mb-2" style={{ fontSize: '11px' }}>Exclusive</p>
-            <div className="w-8 h-[2px] bg-[#5ADDA4] mb-2" />
-            <p className="font-sans font-bold text-white/55 uppercase leading-snug" style={{ fontSize: '9px', letterSpacing: '0.04em' }}>
+          <div style={{ maxWidth: '170px' }}>
+            <p className="font-sans font-bold text-[#5ADDA4] uppercase" style={{ fontSize: '10px', letterSpacing: '0.08em', marginBottom: '6px' }}>Exclusive</p>
+            <div style={{ width: '28px', height: '2px', background: '#5ADDA4', marginBottom: '8px' }} />
+            <p className="font-sans font-bold text-white/55 uppercase" style={{ fontSize: '8.5px', letterSpacing: '0.04em', lineHeight: 1.5 }}>
               {issue.coverLine}
             </p>
           </div>
         </div>
 
         {/* QR code — coin bas-droit identique flipbook */}
-        <div className="absolute bottom-[14px] right-[14px] z-20 bg-white" style={{ padding: '4px', borderRadius: '2px', boxShadow: '0 2px 8px rgba(0,0,0,.3)', width: '62px', height: '62px' }}>
+        <div className="absolute z-20 bg-white" style={{ bottom: '14px', right: '14px', padding: '4px', borderRadius: '2px', boxShadow: '0 2px 8px rgba(0,0,0,.3)', width: '62px', height: '62px' }}>
           <img
             src="https://api.qrserver.com/v1/create-qr-code/?size=54x54&data=https%3A%2F%2Faegryn.com%2Fmagazine&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png"
             width={54}
@@ -77,21 +77,21 @@ export function IssueCard({ issue, locale = 'fr', labelReadIssue = 'Read issue',
           />
         </div>
 
-        {/* BAS : titre splitté accent/blanc + theme — identique flipbook et CoverSection */}
-        <div className="relative z-10">
+        {/* BAS : titre splitté accent/blanc + theme — copie exacte flipbook */}
+        <div className="relative z-10" style={{ paddingBottom: '52px' }}>
           <p
-            className="font-sans font-bold text-[#5ADDA4] uppercase leading-none"
-            style={{ fontSize: 'clamp(16px,2.5vw,28px)', letterSpacing: '-0.02em', lineHeight: 1.0, marginBottom: '2px' }}
+            className="font-sans font-bold text-[#5ADDA4] uppercase"
+            style={{ fontSize: '36px', letterSpacing: '-0.02em', lineHeight: 1.0, marginBottom: '5px' }}
           >
             Built
           </p>
           <p
-            className="font-sans font-bold text-white/90 uppercase leading-none mb-3"
-            style={{ fontSize: 'clamp(16px,2.5vw,28px)', letterSpacing: '-0.02em', lineHeight: 1.0 }}
+            className="font-sans font-bold text-white/90 uppercase"
+            style={{ fontSize: '36px', letterSpacing: '-0.02em', lineHeight: 1.0, marginBottom: '9px' }}
           >
             to Last.
           </p>
-          <p className="font-sans uppercase text-white/40 leading-snug" style={{ fontSize: '8.5px', letterSpacing: '0.05em' }}>
+          <p className="font-sans uppercase text-white/40" style={{ fontSize: '8.5px', letterSpacing: '0.05em', lineHeight: 1.6 }}>
             {issue.theme}
           </p>
         </div>
