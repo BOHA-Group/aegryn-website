@@ -27,10 +27,12 @@ export default async function SubscribePage({
   const t = await getTranslations({ locale, namespace: 'magazine.subscribe' })
 
   const INTEREST_KEYS = ['market', 'techAi', 'build', 'transaction', 'buyers', 'outlook', 'index', 'people', 'life'] as const
+  const labelsRaw = t.raw('interests')    as Record<string, string>
+  const descsRaw  = t.raw('interestsDesc') as Record<string, string>
   const interests = INTEREST_KEYS.map(key => ({
     key,
-    label: t(`interests.${key}`),
-    desc:  t(`interestsDesc.${key}`),
+    label: labelsRaw[key] ?? key,
+    desc:  descsRaw[key]  ?? '',
   }))
 
   return (
