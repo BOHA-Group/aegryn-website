@@ -200,23 +200,11 @@ export default async function MagazineHubPage({ params }: Props) {
                 {tHub('contactEditBody')}
               </p>
               <a
-                href="mailto:contact@boha-group.com?subject=Aegryn Magazine"
+                href="mailto:media@boha-group.com?subject=Aegryn Magazine"
                 className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase text-magazine-black/60 border border-magazine-black/20 px-5 py-3 hover:border-magazine-accent hover:text-magazine-accent transition-colors"
               >
                 {tHub('contactEditCta')}
               </a>
-              <div className="mt-8 pt-8 border-t border-magazine-black/8">
-                <p className="font-mono text-[8px] tracking-[0.16em] uppercase text-magazine-black/30 mb-2">{tHub('cifsLabel')}</p>
-                <p className="text-label-mag text-magazine-black/50 leading-relaxed mb-4">
-                  {tHub('cifsBody')}
-                </p>
-                <a
-                  href={`/${locale}/contact`}
-                  className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase bg-magazine-black text-magazine-white px-5 py-3 font-bold hover:bg-magazine-accent hover:text-magazine-black transition-colors"
-                >
-                  {tHub('cifsCta')}
-                </a>
-              </div>
             </div>
 
           </div>

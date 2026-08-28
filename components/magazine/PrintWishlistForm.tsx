@@ -4,21 +4,35 @@ import { useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 
 interface Props {
-  namePlaceholder:    string
-  emailPlaceholder:   string
-  companyPlaceholder: string
-  interestsLabel:     string
-  interests:          { key: string; label: string; desc?: string }[]
-  cta:                string
-  successMsg:         string
-  errorMsg:           string
-  clientNote:         string
+  firstNamePlaceholder:  string
+  lastNamePlaceholder:   string
+  emailPlaceholder:      string
+  companyPlaceholder:    string
+  addressLabel:          string
+  addressPlaceholder:    string
+  cityPlaceholder:       string
+  postalCodePlaceholder: string
+  countryPlaceholder:    string
+  interestsLabel:        string
+  interests:             { key: string; label: string; desc?: string }[]
+  cta:                   string
+  successMsg:            string
+  errorMsg:              string
+  clientNote:            string
 }
 
+const INPUT = 'bg-magazine-white border border-magazine-black/20 text-magazine-black text-body-mag px-6 py-4 outline-none focus:border-magazine-black/60 transition-colors placeholder:text-magazine-black/30'
+
 export function PrintWishlistForm({
-  namePlaceholder,
+  firstNamePlaceholder,
+  lastNamePlaceholder,
   emailPlaceholder,
   companyPlaceholder,
+  addressLabel,
+  addressPlaceholder,
+  cityPlaceholder,
+  postalCodePlaceholder,
+  countryPlaceholder,
   interestsLabel,
   interests,
   cta,
@@ -26,11 +40,16 @@ export function PrintWishlistForm({
   errorMsg,
   clientNote,
 }: Props) {
-  const [name,     setName]     = useState('')
-  const [email,    setEmail]    = useState('')
-  const [company,  setCompany]  = useState('')
-  const [selected, setSelected] = useState<string[]>([])
-  const [status,   setStatus]   = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [firstName,   setFirstName]   = useState('')
+  const [lastName,    setLastName]    = useState('')
+  const [email,       setEmail]       = useState('')
+  const [company,     setCompany]     = useState('')
+  const [address,     setAddress]     = useState('')
+  const [city,        setCity]        = useState('')
+  const [postalCode,  setPostalCode]  = useState('')
+  const [country,     setCountry]     = useState('')
+  const [selected,    setSelected]    = useState<string[]>([])
+  const [status,      setStatus]      = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
   function toggleInterest(key: string) {
     setSelected(prev =>
@@ -40,19 +59,28 @@ export function PrintWishlistForm({
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    if (!email || !name) return
+    if (!email || !firstName || !lastName) return
     setStatus('loading')
     try {
       const res = await fetch('/api/magazine/print-wishlist', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify({ name, email, company, interests: selected }),
+        body:    JSON.stringify({
+          first_name: firstName,
+          last_name:  lastName,
+          email,
+          company,
+          address,
+          city,
+          postal_code: postalCode,
+          country,
+          interests:   selected,
+        }),
       })
       if (!res.ok) throw new Error('failed')
       setStatus('success')
-      setName('')
-      setEmail('')
-      setCompany('')
+      setFirstName(''); setLastName(''); setEmail(''); setCompany('')
+      setAddress(''); setCity(''); setPostalCode(''); setCountry('')
       setSelected([])
     } catch {
       setStatus('error')
@@ -67,31 +95,32 @@ export function PrintWishlistForm({
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      {/* Identité */}
       <div className="flex flex-col sm:flex-row gap-4">
-        <input
-          type="text"
-          value={name}
-          onChange={e => setName(e.target.value)}
-          placeholder={namePlaceholder}
-          required
-          className="flex-1 bg-magazine-white border border-magazine-black/20 text-magazine-black text-body-mag px-6 py-4 outline-none focus:border-magazine-black/60 transition-colors placeholder:text-magazine-black/30"
-        />
-        <input
-          type="email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          placeholder={emailPlaceholder}
-          required
-          className="flex-1 bg-magazine-white border border-magazine-black/20 text-magazine-black text-body-mag px-6 py-4 outline-none focus:border-magazine-black/60 transition-colors placeholder:text-magazine-black/30"
-        />
+        <input type="text" value={firstName} onChange={e => setFirstName(e.target.value)}
+          placeholder={firstNamePlaceholder} required className={`flex-1 ${INPUT}`} />
+        <input type="text" value={lastName} onChange={e => setLastName(e.target.value)}
+          placeholder={lastNamePlaceholder} required className={`flex-1 ${INPUT}`} />
       </div>
-      <input
-        type="text"
-        value={company}
-        onChange={e => setCompany(e.target.value)}
-        placeholder={companyPlaceholder}
-        className="bg-magazine-white border border-magazine-black/20 text-magazine-black text-body-mag px-6 py-4 outline-none focus:border-magazine-black/60 transition-colors placeholder:text-magazine-black/30"
-      />
+      <div className="flex flex-col sm:flex-row gap-4">
+        <input type="email" value={email} onChange={e => setEmail(e.target.value)}
+          placeholder={emailPlaceholder} required className={`flex-1 ${INPUT}`} />
+        <input type="text" value={company} onChange={e => setCompany(e.target.value)}
+          placeholder={companyPlaceholder} className={`flex-1 ${INPUT}`} />
+      </div>
+
+      {/* Adresse postale */}
+      <p className="text-label-mag text-magazine-black/60 uppercase tracking-[0.12em] mt-2">{addressLabel}</p>
+      <input type="text" value={address} onChange={e => setAddress(e.target.value)}
+        placeholder={addressPlaceholder} className={INPUT} />
+      <div className="flex flex-col sm:flex-row gap-4">
+        <input type="text" value={postalCode} onChange={e => setPostalCode(e.target.value)}
+          placeholder={postalCodePlaceholder} className={`w-40 shrink-0 ${INPUT}`} />
+        <input type="text" value={city} onChange={e => setCity(e.target.value)}
+          placeholder={cityPlaceholder} className={`flex-1 ${INPUT}`} />
+      </div>
+      <input type="text" value={country} onChange={e => setCountry(e.target.value)}
+        placeholder={countryPlaceholder} className={INPUT} />
 
       <div className="mt-2">
         <p className="text-label-mag text-magazine-black/60 uppercase tracking-[0.12em] mb-3">
