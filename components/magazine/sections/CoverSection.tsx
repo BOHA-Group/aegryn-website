@@ -60,12 +60,12 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
 
       {/* ── TOP BAR : date gauche / Special Edition droite ── */}
       <div className="cover-meta relative z-10 flex items-start justify-between">
-        <p className="font-mono tracking-[0.22em] uppercase text-white/40" style={{ fontSize: '10px' }}>
+        <p className="font-sans tracking-[0.22em] uppercase text-white/40 font-medium" style={{ fontSize: '9px' }}>
           {formatted}
         </p>
         <div className="text-right">
-          <p className="font-mono tracking-[0.18em] uppercase text-[#5ADDA4] font-bold" style={{ fontSize: '10px' }}>Special Edition</p>
-          <p className="font-mono tracking-[0.18em] uppercase text-[#5ADDA4] font-bold" style={{ fontSize: '10px' }}>{issueNum}</p>
+          <p className="font-sans tracking-[0.18em] uppercase text-[#5ADDA4] font-bold" style={{ fontSize: '9px' }}>Special Edition</p>
+          <p className="font-sans tracking-[0.18em] uppercase text-[#5ADDA4] font-bold" style={{ fontSize: '9px' }}>{issueNum}</p>
         </div>
       </div>
 
