@@ -21,7 +21,7 @@ interface Props {
   clientNote:            string
 }
 
-const INPUT = 'bg-magazine-white border border-magazine-black/20 text-magazine-black text-body-mag px-6 py-4 outline-none focus:border-magazine-black/60 transition-colors placeholder:text-magazine-black/30'
+const INPUT = 'w-full bg-magazine-white border border-magazine-black/20 rounded-lg text-magazine-black text-sm px-4 py-3 outline-none focus:border-magazine-black/60 focus:ring-2 focus:ring-magazine-black/8 transition-colors placeholder:text-magazine-black/30'
 
 export function PrintWishlistForm({
   firstNamePlaceholder,
@@ -98,32 +98,32 @@ export function PrintWishlistForm({
       {/* Identité */}
       <div className="flex flex-col sm:flex-row gap-4">
         <input type="text" value={firstName} onChange={e => setFirstName(e.target.value)}
-          placeholder={firstNamePlaceholder} required className={`flex-1 ${INPUT}`} />
+          placeholder={firstNamePlaceholder} required className={INPUT} />
         <input type="text" value={lastName} onChange={e => setLastName(e.target.value)}
-          placeholder={lastNamePlaceholder} required className={`flex-1 ${INPUT}`} />
+          placeholder={lastNamePlaceholder} required className={INPUT} />
       </div>
       <div className="flex flex-col sm:flex-row gap-4">
         <input type="email" value={email} onChange={e => setEmail(e.target.value)}
-          placeholder={emailPlaceholder} required className={`flex-1 ${INPUT}`} />
+          placeholder={emailPlaceholder} required className={INPUT} />
         <input type="text" value={company} onChange={e => setCompany(e.target.value)}
-          placeholder={companyPlaceholder} className={`flex-1 ${INPUT}`} />
+          placeholder={companyPlaceholder} className={INPUT} />
       </div>
 
       {/* Adresse postale */}
-      <p className="text-label-mag text-magazine-black/60 uppercase tracking-[0.12em] mt-2">{addressLabel}</p>
+      <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-magazine-black/40 mt-2">{addressLabel}</p>
       <input type="text" value={address} onChange={e => setAddress(e.target.value)}
         placeholder={addressPlaceholder} className={INPUT} />
       <div className="flex flex-col sm:flex-row gap-4">
         <input type="text" value={postalCode} onChange={e => setPostalCode(e.target.value)}
-          placeholder={postalCodePlaceholder} className={`w-40 shrink-0 ${INPUT}`} />
+          placeholder={postalCodePlaceholder} className={INPUT} style={{maxWidth:'10rem'}} />
         <input type="text" value={city} onChange={e => setCity(e.target.value)}
-          placeholder={cityPlaceholder} className={`flex-1 ${INPUT}`} />
+          placeholder={cityPlaceholder} className={INPUT} />
       </div>
       <input type="text" value={country} onChange={e => setCountry(e.target.value)}
         placeholder={countryPlaceholder} className={INPUT} />
 
       <div className="mt-2">
-        <p className="text-label-mag text-magazine-black/60 uppercase tracking-[0.12em] mb-3">
+        <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-magazine-black/40 mb-3">
           {interestsLabel}
         </p>
         <div className="flex flex-wrap gap-2">
@@ -158,7 +158,7 @@ export function PrintWishlistForm({
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="inline-flex items-center gap-2 bg-magazine-black text-magazine-white font-sans font-semibold text-label-mag uppercase tracking-[0.12em] px-8 py-4 hover:bg-magazine-black/80 transition-colors disabled:opacity-50"
+          className="inline-flex items-center gap-2 bg-magazine-black text-magazine-white font-sans font-semibold text-[11px] uppercase tracking-[0.12em] px-6 py-3 rounded-lg hover:bg-magazine-black/80 transition-colors disabled:opacity-50"
         >
           {status === 'loading' ? '…' : <>{cta} <ArrowUpRight size={13} /></>}
         </button>
