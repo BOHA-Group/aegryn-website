@@ -232,11 +232,11 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
         {/* Logo */}
         <Link ref={logoRef} href="/" aria-label="AEGRYN — Accueil" className="hover:opacity-70 transition-opacity duration-200 shrink-0">
           <Image
-            src="/images/Full Color Version.jpg"
+            src="/images/logo-aegryn-navbar.jpg"
             alt="AEGRYN"
-            width={80}
-            height={80}
-            className="h-10 w-auto object-contain"
+            width={64}
+            height={64}
+            className="h-16 w-auto object-contain"
             priority
           />
         </Link>
