@@ -34,16 +34,19 @@ export default function MagazinePublishToggle({ issueKey, issueLabel, initialVal
   }
 
   return (
-    <div className="flex items-center justify-between gap-6 bg-white border border-gray-200 px-6 py-5">
-      <div>
-        <p className="font-semibold text-[14px] text-gray-900">{issueLabel}</p>
-        <p className="text-[12px] text-gray-400 mt-0.5">
-          {isPublic
-            ? 'Publié publiquement — QR code actif, accès flipbook & web edition ouvert'
-            : 'Non publié — QR code affiche "Coming soon", accès restreint'}
-        </p>
-        {error && <p className="text-[11px] text-red-600 mt-1">{error}</p>}
-      </div>
+    <div className={issueLabel ? 'flex items-center justify-between gap-6 bg-white border border-gray-200 px-6 py-5' : 'flex items-center gap-3 shrink-0'}>
+      {issueLabel && (
+        <div>
+          <p className="font-semibold text-[14px] text-gray-900">{issueLabel}</p>
+          <p className="text-[12px] text-gray-400 mt-0.5">
+            {isPublic
+              ? 'Publié publiquement — QR code actif, accès flipbook & web edition ouvert'
+              : 'Non publié — QR code affiche "Coming soon", accès restreint'}
+          </p>
+          {error && <p className="text-[11px] text-red-600 mt-1">{error}</p>}
+        </div>
+      )}
+      {!issueLabel && error && <p className="text-[11px] text-red-600">{error}</p>}
       <button
         onClick={toggle}
         disabled={isPending}
