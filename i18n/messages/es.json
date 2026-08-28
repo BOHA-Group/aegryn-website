@@ -56,7 +56,8 @@
     "magazine": "Magazines",
     "aboutGroup": "Sobre nosotros",
     "aboutPublications": "Publicaciones",
-    "aboutCareers": "Carreras"
+    "aboutCareers": "Carreras",
+    "articles": "Artículos"
   },
   "hero": {
     "tagline": "Nos negamos a que un activo sólido desaparezca en una transacción mal preparada.",
@@ -555,6 +556,62 @@
       "architecture": "Arquitectura",
       "ux": "UX & Diseño",
       "product": "Producto"
+    },
+    "about": {
+      "desc": "Construimos activos, no herramientas. Buscamos personas que piensan en décadas.",
+      "label": "Carreras",
+      "tagline": "Aegryn — Saint-Sulpice, Suiza",
+      "title": "Construir lo que perdura."
+    },
+    "crafts": {
+      "items": {
+        "advisory": {
+          "desc": "Transacción, certificación, estrategia. Asesoramos.",
+          "title": "Advisory"
+        },
+        "build": {
+          "desc": "Diseño de activos, producto, go-to-market. Entregamos.",
+          "title": "Build"
+        },
+        "intelligence": {
+          "desc": "Investigación, editorial, datos. Analizamos.",
+          "title": "Intelligence"
+        },
+        "tech": {
+          "desc": "Arquitectura, backend, frontend, IA. Construimos el núcleo.",
+          "title": "Ingeniería"
+        }
+      },
+      "label": "Disciplinas",
+      "title": "Dónde trabajamos."
+    },
+    "openings": {
+      "cta": "Contáctenos",
+      "desc": "Sin posiciones abiertas por el momento. Reclutamos por talento, no por vacante. Envíenos su perfil.",
+      "label": "Posiciones abiertas",
+      "title": "Posiciones actuales."
+    },
+    "values": {
+      "items": {
+        "durability": {
+          "desc": "Pensamos en ciclos de 10 años. Construir una vez, construir bien.",
+          "title": "Durabilidad"
+        },
+        "precision": {
+          "desc": "Cada detalle importa. La calidad no es una característica, es un estándar.",
+          "title": "Precisión"
+        },
+        "sovereignty": {
+          "desc": "Construimos activos independientes. Sin vendor lock-in, sin dependencias.",
+          "title": "Soberanía"
+        },
+        "trust": {
+          "desc": "Transparencia con clientes, socios y dentro del equipo.",
+          "title": "Confianza"
+        }
+      },
+      "label": "Nuestros valores",
+      "title": "Lo que defendemos."
     }
   },
   "assetStatus": {
@@ -2566,7 +2623,82 @@
       "ndaLabel": "MÁXIMA PROTECCIÓN",
       "ndaTitle": "Ninguna transacción sin NDA. Sin excepciones.",
       "ndaDesc": "Todos nuestros mandatos incluyen un acuerdo reforzado de confidencialidad. Las identidades y datos financieros nunca se revelan sin consentimiento escrito previo de ambas partes.",
-      "ndaCta": "Contactar"
+      "ndaCta": "Contactar",
+      "form": {
+        "arrChf": "ARR actuel (CHF)",
+        "arrPlaceholder": "Ex : 400000",
+        "budgetMaxChf": "Budget maximum (CHF)",
+        "budgetMinChf": "Budget minimum (CHF)",
+        "budgetNote": "Valorisation indicative pour la cession / ticket pour la levée",
+        "budgetPlaceholder": "Ex : 500000",
+        "companyName": "Société / Structure (optionnel)",
+        "companyPlaceholder": "Holding, startup, cabinet...",
+        "contactEmail": "Adresse email",
+        "contactName": "Nom complet",
+        "currentMrr": "MRR actuel (CHF)",
+        "description": "Description & contexte",
+        "descriptionPlaceholder": "Décrivez votre situation, vos objectifs, vos contraintes et toute information utile pour notre équipe.",
+        "equityOfferedPct": "Capital offert (%)",
+        "equityPctPlaceholder": "Ex : 15",
+        "errorMsg": "Une erreur est survenue. Veuillez réessayer ou nous contacter directement.",
+        "hasIp": "IP ou brevet déposé ?",
+        "hasIpNo": "Non",
+        "hasIpPending": "En cours",
+        "hasIpYes": "Oui",
+        "mrrPlaceholder": "Ex : 80000",
+        "partnerType": "Type de partenaire recherché",
+        "partnerTypePlaceholder": "Opérationnel, financier, industriel...",
+        "profitability": "Rentabilité souhaitée",
+        "profitabilityPlaceholder": "Ex : EBITDA positif, breakeven, early stage",
+        "revenueChf": "CA annuel (CHF)",
+        "revenuePlaceholder": "Ex : 600000",
+        "sectionAsset": "ACTIF / SOCIÉTÉ",
+        "sectionBudget": "BUDGET / VALORISATION",
+        "sectionContact": "VOS COORDONNÉES",
+        "sectionContext": "CONTEXTE & OBJECTIFS",
+        "sectionType": "TYPE DE MANDAT",
+        "stakePctMax": "Part du capital cédée max (%)",
+        "stakePlaceholder": "Ex : 30",
+        "submit": "Déposer mon mandat",
+        "submitting": "Envoi en cours...",
+        "successDesc": "Notre équipe examinera votre demande sous 48–72h ouvrées et vous contactera pour initier la procédure de qualification. Un NDA sera systématiquement proposé dès le premier échange.",
+        "successTitle": "Mandat reçu.",
+        "swissLawLabel": "En soumettant ce formulaire, je reconnais que les mandats Aegryn opèrent sous droit suisse et que toute transaction fait l'objet d'un NDA systématique.",
+        "targetArrMin": "ARR cible minimum (CHF)",
+        "targetCountries": "Pays cibles (séparés par virgule)",
+        "targetCountriesPlaceholder": "Ex : fr, ch, de",
+        "teamPlaceholder": "Ex : 4",
+        "teamSize": "Taille de l'équipe",
+        "typeLabel": "Quel type de mandat souhaitez-vous déposer ?",
+        "typeOptions": {
+          "buy": "Mandat d'acquisition — Rechercher une cible",
+          "equity_stake": "Ouverture du capital — Intégrer un associé stratégique",
+          "fundraise": "Levée de fonds — Trouver des investisseurs qualifiés",
+          "sell": "Mandat de cession — Vendre un actif ou une société"
+        },
+        "typePlaceholder": "Sélectionnez un type de mandat",
+        "useOfFunds": "Usage des fonds",
+        "useOfFundsPlaceholder": "Expansion, R&D, recrutement...",
+        "vertical": "Secteur vertical",
+        "verticalOptions": {
+          "deeptech": "Deeptech / IA",
+          "ecommerce": "E-commerce",
+          "edtech": "Edtech",
+          "fintech": "Fintech",
+          "healthtech": "Healthtech",
+          "infra_devtools": "Infra / DevTools",
+          "marketplace": "Marketplace",
+          "media_content": "Média / Contenu",
+          "other": "Autre",
+          "saas_b2b": "SaaS B2B",
+          "saas_b2c": "SaaS B2C"
+        },
+        "verticalOther": "Précisez le secteur",
+        "verticalOtherPlaceholder": "Ex : LegalTech, PropTech...",
+        "verticalPlaceholder": "Sélectionnez un secteur",
+        "yoyGrowth": "Croissance YoY (%)",
+        "yoyPlaceholder": "Ex : 35"
+      }
     },
     "sell": {
       "label": "AEGRYN TRANSACT — MANDATO DE VENTA",
@@ -2752,7 +2884,8 @@
       "viewFullDossier": "Ver el expediente completo",
       "kycPending": "Su verificación KYC está en proceso. Será notificado una vez validado.",
       "assetsAvailable": "activos certificados disponibles en el catálogo",
-      "requestQualifiedAccess": "Acceder al catálogo certificado"
+      "requestQualifiedAccess": "Acceder al catálogo certificado",
+      "notifySuccessCtaAcquirer": "Explorar el catálogo"
     },
     "sell": {
       "meta": {
@@ -3062,6 +3195,10 @@
     "transaction": {
       "label": "TRANSACTION",
       "desc": "Transacciones institucionales encuadradas"
+    },
+    "transact": {
+      "desc": "Procesos estructurados de adquisición, cesión y captación de fondos.",
+      "label": "Transacción"
     }
   },
   "gradeShowcase": {
@@ -3267,9 +3404,9 @@
       "title": "Desarrollo de activos digitales a precio fijo - Aegryn",
       "desc": "Desarrollo SaaS B2B, IA y app móvil a precio fijo — documentación completa y entrega listo para certificación incluida. Sin desviaciones, activo valorizable desde la concepción."
     },
-    "label": "Servicios - Ingeniería de activos",
-    "title": "Nosotros construimos.\nUsted posee.\nPrecio fijo. Listo para certificación.",
-    "desc": "Aegryn diseña activos digitales — SaaS B2B, IA vertical, app móvil — a precio fijo definido antes del primer sprint. Cada activo entregado incluye documentación completa que lo hace listo para certificación desde la entrega.",
+    "label": "Servicios — Diseño de activos",
+    "title": "Construimos.\nUsted es el propietario.\nPrecio fijo. Listo para la certificación.",
+    "desc": "Aegryn diseña activos digitales — SaaS B2B, IA vertical, aplicaciones móviles — para emprendedores, family offices y fondos. Entrega llave en mano. Certificable CIFS desde el primer día.",
     "difference": {
       "label": "No una agencia. No un estudio.",
       "title": "La diferencia Aegryn.",
@@ -3436,7 +3573,7 @@
       "note": "El mantenimiento Aegryn garantiza que el activo conserve o mejore su grade."
     },
     "fees": {
-      "label": "Honorarios",
+      "label": "Precio fijo",
       "title": "Precio fijo. Sin sorpresas.",
       "items": [
         {
@@ -3455,7 +3592,16 @@
           "format": "Tarifa mensual definida en contrato"
         }
       ],
-      "coInvestNote": "Aegryn puede actuar como co-inversor minoritario en ciertos proyectos. Evaluado caso por caso."
+      "coInvestNote": "Aegryn puede actuar como co-inversor minoritario en ciertos proyectos. Evaluado caso por caso.",
+      "cta": "Démarrer le processus",
+      "exitBanner": {
+        "cta": "En savoir plus sur le processus de cession",
+        "href": "/transact/how-it-works",
+        "text": "La cession est une option, jamais une obligation. Si vous souhaitez céder un jour — early stage ou à maturité — l'actif est conçu pour l'être. La sortie via Aegryn TRANSACT ou confidentielle est disponible si la certification le permet."
+      },
+      "href": "/es/build",
+      "secondary": "Más información",
+      "secondaryHref": "/es/build"
     },
     "exitBanner": {
       "text": "La venta es una opción, nunca una obligación. Si algún día desea ceder — en etapa temprana o en madurez — el activo está diseñado para ello. La salida vía Aegryn o transacción confidencial está disponible si el grade lo permite.",
@@ -3463,12 +3609,10 @@
       "href": "/transact/how-it-works"
     },
     "cta": {
-      "title": "¿Un proyecto en mente?",
-      "desc": "Describa su idea o mercado objetivo. Respondemos en 48h con un análisis de viabilidad.",
-      "primary": "Iniciar un proyecto",
-      "href": "/contact",
-      "secondary": "Ver nuestros activos propietarios",
-      "secondaryHref": "/assets"
+      "title": "¿Tienes un proyecto en mente?",
+      "desc": "Describe tu idea, el alcance funcional y tus restricciones. Te responderemos con una evaluación de viabilidad y un primer marco de precios en 48h.",
+      "primary": "Iniciar el proceso",
+      "secondary": "Ver nuestros activos"
     }
   },
   "gradeSubmit": {
@@ -6308,7 +6452,13 @@
       "desc": "Suscríbase para recibir cada edición.",
       "cta": "Suscribirse",
       "success": "¡Gracias! Le avisaremos.",
-      "error": "Ha ocurrido un error."
+      "error": "Ha ocurrido un error.",
+      "meta": {
+        "description": "Recibe cada número de la revista Aegryn por correo electrónico.",
+        "title": "Aegryn Magazine — Mantenerse informado"
+      },
+      "placeholder": "Tu dirección de correo electrónico",
+      "unsubscribed": "Has sido dado de baja."
     }
   },
   "transactNarrative": {

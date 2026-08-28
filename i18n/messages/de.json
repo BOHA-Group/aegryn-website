@@ -56,7 +56,8 @@
     "magazine": "Magazines",
     "aboutGroup": "Über uns",
     "aboutPublications": "Publikationen",
-    "aboutCareers": "Karriere"
+    "aboutCareers": "Karriere",
+    "articles": "Artikel"
   },
   "hero": {
     "tagline": "Wir weigern uns, dass ein solides Asset in einer schlecht vorbereiteten Transaktion verschwindet.",
@@ -555,6 +556,62 @@
       "architecture": "Architektur",
       "ux": "UX & Design",
       "product": "Produkt"
+    },
+    "about": {
+      "desc": "Wir bauen Assets, keine Tools. Wir suchen Menschen, die in Jahrzehnten denken.",
+      "label": "Karriere",
+      "tagline": "Aegryn — Saint-Sulpice, Schweiz",
+      "title": "Bauen, was bleibt."
+    },
+    "crafts": {
+      "items": {
+        "advisory": {
+          "desc": "Transaktion, Zertifizierung, Strategie. Wir beraten.",
+          "title": "Advisory"
+        },
+        "build": {
+          "desc": "Asset-Design, Produkt, Go-to-Market. Wir liefern.",
+          "title": "Build"
+        },
+        "intelligence": {
+          "desc": "Forschung, Redaktion, Daten. Wir analysieren.",
+          "title": "Intelligence"
+        },
+        "tech": {
+          "desc": "Architektur, Backend, Frontend, KI. Wir bauen den Kern.",
+          "title": "Engineering"
+        }
+      },
+      "label": "Disziplinen",
+      "title": "Wo wir arbeiten."
+    },
+    "openings": {
+      "cta": "Kontakt aufnehmen",
+      "desc": "Derzeit keine offenen Stellen. Wir rekrutieren nach Talent, nicht nach Vakanz. Senden Sie uns Ihr Profil.",
+      "label": "Offene Stellen",
+      "title": "Aktuelle Stellen."
+    },
+    "values": {
+      "items": {
+        "durability": {
+          "desc": "Wir denken in 10-Jahres-Zyklen. Einmal bauen, richtig bauen.",
+          "title": "Beständigkeit"
+        },
+        "precision": {
+          "desc": "Jedes Detail zählt. Qualität ist kein Feature, sondern ein Standard.",
+          "title": "Präzision"
+        },
+        "sovereignty": {
+          "desc": "Wir bauen unabhängige Assets. Kein Vendor Lock-in, keine Abhängigkeit.",
+          "title": "Souveränität"
+        },
+        "trust": {
+          "desc": "Transparenz gegenüber Kunden, Partnern und im Team.",
+          "title": "Vertrauen"
+        }
+      },
+      "label": "Unsere Werte",
+      "title": "Wofür wir stehen."
     }
   },
   "assetStatus": {
@@ -2566,7 +2623,82 @@
       "ndaLabel": "MAXIMALER SCHUTZ",
       "ndaTitle": "Keine Transaktion ohne NDA. Keine Ausnahmen.",
       "ndaDesc": "Alle unsere Mandate beinhalten eine verstärkte Vertraulichkeitsvereinbarung. Identitäten und Finanzdaten werden ohne vorherige schriftliche Zustimmung beider Parteien niemals offengelegt.",
-      "ndaCta": "Kontakt aufnehmen"
+      "ndaCta": "Kontakt aufnehmen",
+      "form": {
+        "arrChf": "ARR actuel (CHF)",
+        "arrPlaceholder": "Ex : 400000",
+        "budgetMaxChf": "Budget maximum (CHF)",
+        "budgetMinChf": "Budget minimum (CHF)",
+        "budgetNote": "Valorisation indicative pour la cession / ticket pour la levée",
+        "budgetPlaceholder": "Ex : 500000",
+        "companyName": "Société / Structure (optionnel)",
+        "companyPlaceholder": "Holding, startup, cabinet...",
+        "contactEmail": "Adresse email",
+        "contactName": "Nom complet",
+        "currentMrr": "MRR actuel (CHF)",
+        "description": "Description & contexte",
+        "descriptionPlaceholder": "Décrivez votre situation, vos objectifs, vos contraintes et toute information utile pour notre équipe.",
+        "equityOfferedPct": "Capital offert (%)",
+        "equityPctPlaceholder": "Ex : 15",
+        "errorMsg": "Une erreur est survenue. Veuillez réessayer ou nous contacter directement.",
+        "hasIp": "IP ou brevet déposé ?",
+        "hasIpNo": "Non",
+        "hasIpPending": "En cours",
+        "hasIpYes": "Oui",
+        "mrrPlaceholder": "Ex : 80000",
+        "partnerType": "Type de partenaire recherché",
+        "partnerTypePlaceholder": "Opérationnel, financier, industriel...",
+        "profitability": "Rentabilité souhaitée",
+        "profitabilityPlaceholder": "Ex : EBITDA positif, breakeven, early stage",
+        "revenueChf": "CA annuel (CHF)",
+        "revenuePlaceholder": "Ex : 600000",
+        "sectionAsset": "ACTIF / SOCIÉTÉ",
+        "sectionBudget": "BUDGET / VALORISATION",
+        "sectionContact": "VOS COORDONNÉES",
+        "sectionContext": "CONTEXTE & OBJECTIFS",
+        "sectionType": "TYPE DE MANDAT",
+        "stakePctMax": "Part du capital cédée max (%)",
+        "stakePlaceholder": "Ex : 30",
+        "submit": "Déposer mon mandat",
+        "submitting": "Envoi en cours...",
+        "successDesc": "Notre équipe examinera votre demande sous 48–72h ouvrées et vous contactera pour initier la procédure de qualification. Un NDA sera systématiquement proposé dès le premier échange.",
+        "successTitle": "Mandat reçu.",
+        "swissLawLabel": "En soumettant ce formulaire, je reconnais que les mandats Aegryn opèrent sous droit suisse et que toute transaction fait l'objet d'un NDA systématique.",
+        "targetArrMin": "ARR cible minimum (CHF)",
+        "targetCountries": "Pays cibles (séparés par virgule)",
+        "targetCountriesPlaceholder": "Ex : fr, ch, de",
+        "teamPlaceholder": "Ex : 4",
+        "teamSize": "Taille de l'équipe",
+        "typeLabel": "Quel type de mandat souhaitez-vous déposer ?",
+        "typeOptions": {
+          "buy": "Mandat d'acquisition — Rechercher une cible",
+          "equity_stake": "Ouverture du capital — Intégrer un associé stratégique",
+          "fundraise": "Levée de fonds — Trouver des investisseurs qualifiés",
+          "sell": "Mandat de cession — Vendre un actif ou une société"
+        },
+        "typePlaceholder": "Sélectionnez un type de mandat",
+        "useOfFunds": "Usage des fonds",
+        "useOfFundsPlaceholder": "Expansion, R&D, recrutement...",
+        "vertical": "Secteur vertical",
+        "verticalOptions": {
+          "deeptech": "Deeptech / IA",
+          "ecommerce": "E-commerce",
+          "edtech": "Edtech",
+          "fintech": "Fintech",
+          "healthtech": "Healthtech",
+          "infra_devtools": "Infra / DevTools",
+          "marketplace": "Marketplace",
+          "media_content": "Média / Contenu",
+          "other": "Autre",
+          "saas_b2b": "SaaS B2B",
+          "saas_b2c": "SaaS B2C"
+        },
+        "verticalOther": "Précisez le secteur",
+        "verticalOtherPlaceholder": "Ex : LegalTech, PropTech...",
+        "verticalPlaceholder": "Sélectionnez un secteur",
+        "yoyGrowth": "Croissance YoY (%)",
+        "yoyPlaceholder": "Ex : 35"
+      }
     },
     "sell": {
       "label": "AEGRYN TRANSACT — VERKAUFSMANDAT",
@@ -2752,7 +2884,8 @@
       "viewFullDossier": "Vollständiges Dossier öffnen",
       "kycPending": "Ihre KYC-Prüfung ist in Bearbeitung. Sie werden nach der Validierung benachrichtigt.",
       "assetsAvailable": "zertifizierte Assets im Katalog verfügbar",
-      "requestQualifiedAccess": "Zum zertifizierten Katalog"
+      "requestQualifiedAccess": "Zum zertifizierten Katalog",
+      "notifySuccessCtaAcquirer": "Katalog durchsuchen"
     },
     "sell": {
       "meta": {
@@ -3062,6 +3195,10 @@
     "transaction": {
       "label": "TRANSACTION",
       "desc": "Institutionell gerahmte Transaktionen"
+    },
+    "transact": {
+      "desc": "Strukturierte Akquisitions-, Veräußerungs- und Finanzierungsprozesse.",
+      "label": "Transaktion"
     }
   },
   "gradeShowcase": {
@@ -3267,9 +3404,9 @@
       "title": "Digitale Asset-Entwicklung zum Festpreis - Aegryn",
       "desc": "B2B SaaS, KI und mobile App-Entwicklung zum Festpreis — vollständige Dokumentation und zertifizierungsbereit Lieferung inklusive. Keine Überschreitungen, Asset ab Tag eins bewertbar."
     },
-    "label": "Services - Asset-Entwicklung",
+    "label": "Leistungen — Asset-Design",
     "title": "Wir bauen.\nSie besitzen.\nFestpreis. Zertifizierungsbereit.",
-    "desc": "Aegryn entwickelt digitale Assets — B2B SaaS, vertikale KI, mobile App — zum Festpreis, der vor dem ersten Sprint festgelegt wird. Jedes gelieferte Asset wird mit vollständiger Dokumentation geliefert, die es ab der Lieferung zertifizierungsbereit macht.",
+    "desc": "Aegryn entwickelt digitale Assets — B2B-SaaS, vertikale KI, mobile Anwendungen — für Unternehmer, Family Offices und Fonds. Schlüsselfertige Lieferung. Von Anfang an CIFS-zertifizierbar.",
     "difference": {
       "label": "Keine Agentur. Kein Studio.",
       "title": "Der Aegryn-Unterschied.",
@@ -3436,7 +3573,7 @@
       "note": "Aegryn-Wartung garantiert, dass das Asset sein Grade behält oder verbessert."
     },
     "fees": {
-      "label": "Honorare",
+      "label": "Festpreis",
       "title": "Festpreis. Keine Überraschungen.",
       "items": [
         {
@@ -3455,7 +3592,16 @@
           "format": "Monatliche Pauschale im Vertrag"
         }
       ],
-      "coInvestNote": "Aegryn kann als Minderheits-Co-Investor auftreten. Fallweise Prüfung."
+      "coInvestNote": "Aegryn kann als Minderheits-Co-Investor auftreten. Fallweise Prüfung.",
+      "cta": "Démarrer le processus",
+      "exitBanner": {
+        "cta": "En savoir plus sur le processus de cession",
+        "href": "/transact/how-it-works",
+        "text": "La cession est une option, jamais une obligation. Si vous souhaitez céder un jour — early stage ou à maturité — l'actif est conçu pour l'être. La sortie via Aegryn TRANSACT ou confidentielle est disponible si la certification le permet."
+      },
+      "href": "/de/build",
+      "secondary": "Mehr erfahren",
+      "secondaryHref": "/de/build"
     },
     "exitBanner": {
       "text": "Ein Verkauf ist eine Option, nie eine Pflicht. Wenn Sie jemals verkaufen möchten — frühphasig oder bei Reife — ist das Asset dafür konzipiert. Exit via Aegryn oder vertrauliche Transaktion ist verfügbar, wenn das Grade es erlaubt.",
@@ -3463,12 +3609,10 @@
       "href": "/transact/how-it-works"
     },
     "cta": {
-      "title": "Ein Projekt im Kopf?",
-      "desc": "Beschreiben Sie Ihre Idee. Wir melden uns innerhalb von 48h mit einer Machbarkeitsanalyse.",
-      "primary": "Projekt starten",
-      "href": "/contact",
-      "secondary": "Unsere Assets ansehen",
-      "secondaryHref": "/assets"
+      "title": "Haben Sie ein Projekt?",
+      "desc": "Beschreiben Sie Ihre Idee, den funktionalen Umfang und Ihre Anforderungen. Wir antworten innerhalb von 48 Stunden mit einer Machbarkeitseinschätzung und einem ersten Preisrahmen.",
+      "primary": "Prozess starten",
+      "secondary": "Unsere Assets ansehen"
     }
   },
   "gradeSubmit": {
@@ -6297,6 +6441,35 @@
       "wishlistSectionLabel": "Druckausgabe — Wunschliste",
       "wishlistTitle": "Das Aegryn-Magazin in gedruckter Form erhalten",
       "wishlistDesc": "Die Druckausgabe des Aegryn-Magazins ist eine Initiative für registrierte Kunden. Mit diesem Formular können Sie Ihre Interessensgebiete angeben, um auf die Wunschliste aufgenommen zu werden. Wir werden Sie kontaktieren, wenn die Produktion beginnt."
+    },
+    "notify": {
+      "cta": "Être notifié",
+      "desc": "Renseignez votre email pour recevoir un avis de parution à chaque nouvelle édition annuelle de Aegryn Magazine. Accès libre, aucun engagement, désabonnement en un clic.",
+      "error": "Une erreur est survenue. Veuillez réessayer.",
+      "meta": {
+        "description": "Erhalten Sie jede Ausgabe des Aegryn Magazins per E-Mail.",
+        "title": "Aegryn Magazine — Informiert bleiben"
+      },
+      "placeholder": "Ihre E-Mail-Adresse",
+      "success": "Merci. Vous recevrez la prochaine édition dès sa publication.",
+      "title": "Être notifié de chaque édition",
+      "unsubscribed": "Sie wurden abgemeldet."
+    },
+    "press": {
+      "label": "Ils parlent de nous",
+      "neediu": {
+        "context": "Couverture dans Gala — magazine grand public de référence. Reportage vidéo sur Neediu, actif Aegryn dans le secteur des services à domicile.",
+        "excerpt": "Neediu, la plateforme de mise en relation entre particuliers et prestataires de services à domicile, a fait l'objet d'un reportage vidéo dans le magazine Gala.",
+        "title": "Neediu dans le magazine Gala"
+      },
+      "readArticle": "Lire l'article",
+      "subblink": {
+        "context": "Article publié sur Village de la Justice — plateforme de référence du droit français et européen. Présentation de Subblink, actif Aegryn d'analyse contractuelle par IA.",
+        "excerpt": "Village Justice vous propose de faire auditer tous vos contrats pour obtenir un score des risques juridiques grâce à Subblink, une solution propulsée par l'intelligence artificielle calibrée pour le droit suisse et européen.",
+        "title": "Village de la Justice propose de faire auditer tous vos contrats"
+      },
+      "title": "La presse cite nos actifs.",
+      "videoAvailable": "Vidéo disponible sur demande"
     }
   },
   "partner": {
