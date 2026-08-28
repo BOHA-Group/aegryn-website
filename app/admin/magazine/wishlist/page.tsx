@@ -2,6 +2,7 @@ import { checkAdminAccess }    from '@/lib/adminAuth'
 import { createServiceClient } from '@/lib/supabase'
 import type { Metadata }        from 'next'
 import Link                     from 'next/link'
+import { DeleteButton }         from './DeleteButton'
 
 export const metadata: Metadata = {
   title: 'Wishlist Magazine — Aegryn Admin',
@@ -49,6 +50,7 @@ export default async function AdminMagazineWishlistPage({
 }) {
   const { token } = await searchParams
   await checkAdminAccess(token)
+  const adminToken = token
 
   const supa = createServiceClient()
 
@@ -129,7 +131,7 @@ export default async function AdminMagazineWishlistPage({
             <table className="w-full text-[12px] bg-white border border-gray-200 min-w-[700px]">
               <thead className="bg-gray-50 border-b border-gray-200">
                 <tr>
-                  {['Date', 'Civilité', 'Prénom', 'Nom', 'Email', 'Téléphone', 'Adresse', 'Intérêts', 'RGPD'].map(h => (
+                  {['Date', 'Civilité', 'Prénom', 'Nom', 'Email', 'Téléphone', 'Adresse', 'Intérêts', 'RGPD', ''].map(h => (
                     <th key={h} className="text-left px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500 whitespace-nowrap">
                       {h}
                     </th>
@@ -167,6 +169,9 @@ export default async function AdminMagazineWishlistPage({
                         {r.rgpd_consent
                           ? <span className="text-[9px] font-bold text-white bg-gray-800 px-2 py-0.5">✓ OK</span>
                           : <span className="text-[9px] font-semibold text-red-600 bg-red-50 border border-red-200 px-2 py-0.5">✗</span>}
+                      </td>
+                      <td className="px-4 py-3 text-center">
+                        <DeleteButton id={r.id} token={adminToken} />
                       </td>
                     </tr>
                   )
