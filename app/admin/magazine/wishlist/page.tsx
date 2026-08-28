@@ -165,8 +165,8 @@ export default async function AdminMagazineWishlistPage({
                       </td>
                       <td className="px-4 py-3 text-center">
                         {r.rgpd_consent
-                          ? <span className="text-[9px] font-semibold text-green-600 bg-green-50 border border-green-200 px-1.5 py-0.5">✓</span>
-                          : <span className="text-[9px] text-gray-300">—</span>}
+                          ? <span className="text-[9px] font-bold text-white bg-gray-800 px-2 py-0.5">✓ OK</span>
+                          : <span className="text-[9px] font-semibold text-red-600 bg-red-50 border border-red-200 px-2 py-0.5">✗</span>}
                       </td>
                     </tr>
                   )
