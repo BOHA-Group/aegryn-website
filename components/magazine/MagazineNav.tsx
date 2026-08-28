@@ -65,7 +65,7 @@ export function MagazineNav({
         <p className="font-sans font-bold text-magazine-black text-[15px] tracking-[0.04em] leading-none">
           AEGRYN
         </p>
-        <p className="font-mono text-[9px] tracking-[0.16em] uppercase text-magazine-accent mt-0.5">
+        <p className="font-mono text-[9px] tracking-[0.16em] uppercase text-magazine-black/50 mt-0.5">
           Magazine
         </p>
         <p className="font-mono text-[9px] tracking-[0.12em] text-magazine-black/40 mt-3">

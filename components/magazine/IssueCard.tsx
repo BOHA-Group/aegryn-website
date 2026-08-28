@@ -90,7 +90,7 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
               className={[
                 'inline-block font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold transition-colors',
                 filled
-                  ? 'bg-magazine-black text-white hover:bg-magazine-accent hover:text-magazine-black'
+                  ? 'bg-magazine-black text-white hover:bg-magazine-black/80'
                   : 'border border-magazine-black text-magazine-black hover:bg-magazine-black hover:text-white',
               ].join(' ')}
             >
@@ -115,13 +115,13 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
             </div>
           )
         ))}
-        {/* Bouton 3 — Recevoir — actif, pointe vers /magazine/subscribe */}
-        <Link
-          href={`/${locale}/magazine/subscribe`}
+        {/* Bouton 3 — Recevoir — scroll vers #wishlist */}
+        <a
+          href="#wishlist"
           className="inline-block font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold border border-magazine-black text-magazine-black hover:bg-magazine-black hover:text-white transition-colors"
         >
           {labelSubscribe}
-        </Link>
+        </a>
       </div>
 
     </div>

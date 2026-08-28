@@ -24,7 +24,7 @@ export function ArticleCard({ article, issue }: Props) {
         </span>
       </div>
 
-      <h3 className="text-h2-mag font-sans font-semibold text-magazine-black leading-snug group-hover:text-magazine-accent transition-colors">
+      <h3 className="text-h2-mag font-sans font-semibold text-magazine-black leading-snug group-hover:text-magazine-black transition-colors">
         {article.title}
       </h3>
 
@@ -32,7 +32,7 @@ export function ArticleCard({ article, issue }: Props) {
         {article.excerpt}
       </p>
 
-      <span className="inline-flex items-center gap-1.5 text-label-mag uppercase tracking-[0.12em] text-magazine-black/50 group-hover:text-magazine-accent transition-colors self-start mt-auto">
+      <span className="inline-flex items-center gap-1.5 text-label-mag uppercase tracking-[0.12em] text-magazine-black/50 group-hover:text-magazine-black transition-colors self-start mt-auto">
         Read <ArrowUpRight size={11} />
       </span>
     </Link>

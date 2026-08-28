@@ -43,7 +43,7 @@ export function NewsletterBlock({
 
   if (status === 'success') {
     return (
-      <p className="text-body-mag text-magazine-accent font-semibold">{successMsg}</p>
+      <p className="text-body-mag text-magazine-black font-semibold">{successMsg}</p>
     )
   }
 

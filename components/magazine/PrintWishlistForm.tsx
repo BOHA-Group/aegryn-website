@@ -86,7 +86,7 @@ export function PrintWishlistForm({
   }
 
   if (status === 'success') {
-    return <p className="text-sm text-magazine-accent font-semibold">{successMsg}</p>
+    return <p className="text-sm text-magazine-black font-semibold">{successMsg}</p>
   }
 
   return (

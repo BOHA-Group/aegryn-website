@@ -166,7 +166,7 @@ export default async function MagazineHubPage({ params }: Props) {
 
             {/* Texte éditorial */}
             <div>
-              <p className="font-mono text-[8px] tracking-[0.24em] uppercase text-magazine-accent mb-6">
+              <p className="font-mono text-[8px] tracking-[0.24em] uppercase text-magazine-black/50 mb-6">
                 {tHub('contactLabel')}
               </p>
               <h2
@@ -185,7 +185,7 @@ export default async function MagazineHubPage({ params }: Props) {
                   tHub('subscribeBullet3'),
                 ].map(item => (
                   <div key={item} className="flex items-start gap-3">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-magazine-accent flex-shrink-0" />
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-magazine-black/30 flex-shrink-0" />
                     <p className="text-label-mag text-magazine-black/60">{item}</p>
                   </div>
                 ))}
@@ -200,7 +200,7 @@ export default async function MagazineHubPage({ params }: Props) {
 
             {/* Contact direct */}
             <div className="border border-magazine-black/12 p-8 bg-magazine-white">
-              <p className="font-mono text-[8px] tracking-[0.24em] uppercase text-magazine-accent mb-6">
+              <p className="font-mono text-[8px] tracking-[0.24em] uppercase text-magazine-black/50 mb-6">
                 {tHub('contactEditLabel')}
               </p>
               <p className="font-sans font-semibold text-magazine-black text-[15px] mb-4 leading-snug">
@@ -211,7 +211,7 @@ export default async function MagazineHubPage({ params }: Props) {
               </p>
               <a
                 href="mailto:media@boha-group.com?subject=Aegryn Magazine"
-                className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase text-magazine-black/60 border border-magazine-black/20 px-5 py-3 hover:border-magazine-accent hover:text-magazine-accent transition-colors"
+                className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase text-magazine-black/60 border border-magazine-black/20 px-5 py-3 hover:border-magazine-black hover:text-magazine-black transition-colors"
               >
                 {tHub('contactEditCta')}
               </a>
@@ -228,7 +228,7 @@ export default async function MagazineHubPage({ params }: Props) {
 
             {/* Intro */}
             <div className="md:sticky md:top-32">
-              <p className="font-mono text-[8px] tracking-[0.24em] uppercase text-magazine-accent mb-6">
+              <p className="font-mono text-[8px] tracking-[0.24em] uppercase text-magazine-black/50 mb-6">
                 {tSub('wishlistSectionLabel')}
               </p>
               <h2
