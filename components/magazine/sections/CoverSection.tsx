@@ -69,16 +69,16 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
         </div>
       </div>
 
-      {/* ── AEGRYN massif + BUSINESS MAGAZINE sous le titre ── */}
-      <div className="relative z-10 -mt-2">
+      {/* ── AEGRYN massif + BUSINESS MAGAZINE — copie exacte cover flipbook ── */}
+      <div className="relative z-10" style={{ marginTop: -8 }}>
         <h1
           ref={titleRef}
-          className="font-sans font-bold text-white leading-none"
-          style={{ fontSize: 'clamp(90px,14vw,190px)', letterSpacing: '-0.04em', lineHeight: 0.86 }}
+          className="font-sans font-bold text-white"
+          style={{ fontSize: 'clamp(90px,14vw,190px)', fontWeight: 700, lineHeight: 0.86, letterSpacing: '-0.04em' }}
         >
           Aegryn
         </h1>
-        <p className="cover-meta text-right font-mono tracking-[0.2em] uppercase text-white/30 mt-1" style={{ fontSize: '8px' }}>
+        <p className="cover-meta" style={{ textAlign: 'right', fontSize: 8, fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.32)', marginTop: 5 }}>
           Business Magazine
         </p>
       </div>

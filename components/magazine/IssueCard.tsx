@@ -1,111 +1,99 @@
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
 import type { MagazineIssue } from '@/lib/magazine/types'
 
 interface Props {
-  issue:           MagazineIssue
-  locale?:         string
-  labelReadIssue?: string
-  labelSpecial?:   string
+  issue:              MagazineIssue
+  locale?:            string
+  labelSpecial?:      string
+  labelReadOnline?:   string
+  labelFlipbook?:     string
+  labelSubscribe?:    string
 }
 
 /**
- * Clickable card linking to /magazine/[issue.slug]
+ * Style Barnes : cover portrait centré sur fond blanc, titre sous le cover, 3 boutons d'accès rapide.
  */
-export function IssueCard({ issue, locale = 'fr', labelReadIssue = 'Read issue', labelSpecial = 'Special Edition' }: Props) {
-  const date = new Date(issue.publishedAt)
+export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Edition', labelReadOnline = 'Explorer en ligne', labelFlipbook = 'Feuilleter le PDF', labelSubscribe = 'Recevoir' }: Props) {
+  const date      = new Date(issue.publishedAt)
   const formatted = date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
+  const issueNum  = `Issue ${String(issue.number).padStart(2, '0')}`
+  const padNum    = String(issue.number).padStart(2, '0')
 
   return (
-    <div className="group grid md:grid-cols-[2fr_3fr] gap-0 border border-magazine-black/10 hover:border-magazine-black/25 transition-colors">
-      {/* Cover panel — format magazine portrait style Salford, ratio A4 */}
-      <div className="relative flex flex-col justify-between p-8 min-h-[560px] border-r border-magazine-black/10 overflow-hidden">
-        {/* Background image */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url(/magazine/issue-${String(issue.number).padStart(2,'0')}/cover-bg.jpg)`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center top',
-          }}
-        />
-        {/* Dark overlay */}
-        <div
-          className="absolute inset-0"
-          style={{ background: 'linear-gradient(160deg, rgba(5,10,15,0.80) 0%, rgba(5,10,15,0.60) 50%, rgba(5,10,15,0.85) 100%)' }}
-        />
+    <div className="flex flex-col items-center bg-white py-12">
 
-        {/* TOP BAR : date gauche / Special Edition droite */}
-        <div className="relative z-10 flex items-start justify-between">
-          <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/40">{formatted.toUpperCase()}</p>
-          <div className="text-right">
-            <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#5ADDA4] font-bold">{labelSpecial}</p>
-            <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-[#5ADDA4] font-bold">Issue {String(issue.number).padStart(2, '0')}</p>
+      {/* ── Cover portrait — copie exacte du cover flipbook ── */}
+      <Link href={`/${locale}/magazine/${issue.slug}`} className="block group" style={{ width: 420, height: 595, flexShrink: 0 }}>
+        <div style={{ width: 420, height: 595, position: 'relative', overflow: 'hidden', boxShadow: '0 8px 40px rgba(0,0,0,.28)', cursor: 'pointer' }}>
+          {/* Image de fond */}
+          <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(/magazine/issue-${padNum}/cover-bg.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center top' }} />
+          {/* Overlay */}
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg,rgba(5,10,15,.75) 0%,rgba(5,10,15,.45) 45%,rgba(5,10,15,.78) 100%)' }} />
+          {/* Contenu */}
+          <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px 30px' }}>
+            {/* TOP BAR */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+              <div style={{ fontFamily: 'inherit', fontSize: 9, fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,.4)' }}>{formatted.toUpperCase()}</div>
+              <div style={{ textAlign: 'right' }}>
+                <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#5ADDA4' }}>{labelSpecial}</div>
+                <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#5ADDA4' }}>{issueNum}</div>
+              </div>
+            </div>
+            {/* AEGRYN + BUSINESS MAGAZINE */}
+            <div style={{ marginTop: -8 }}>
+              <div style={{ fontSize: 90, fontWeight: 700, color: '#fff', lineHeight: 0.86, letterSpacing: '-0.04em' }}>Aegryn</div>
+              <div style={{ textAlign: 'right', fontSize: 8, fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.32)', marginTop: 5 }}>Business Magazine</div>
+            </div>
+            {/* EXCLUSIVE milieu */}
+            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <div style={{ maxWidth: 170 }}>
+                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#5ADDA4', marginBottom: 6 }}>Exclusive</div>
+                <div style={{ width: 28, height: 2, background: '#5ADDA4', marginBottom: 8 }} />
+                <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', color: 'rgba(255,255,255,.55)', lineHeight: 1.5 }}>Build. Certify. Transact.</div>
+              </div>
+            </div>
+            {/* BAS : BUILT TO LAST */}
+            <div style={{ paddingBottom: 52 }}>
+              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#5ADDA4', lineHeight: 1.0, marginBottom: 5 }}>Built</div>
+              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: 'rgba(255,255,255,.9)', lineHeight: 1.0, marginBottom: 9 }}>to Last.</div>
+              <div style={{ fontSize: 8.5, fontWeight: 400, letterSpacing: '0.05em', color: 'rgba(255,255,255,.4)', lineHeight: 1.6 }}>The anatomy of a tech asset that sells and one that doesn&apos;t.</div>
+            </div>
+          </div>
+          {/* QR code */}
+          <div style={{ position: 'absolute', bottom: 14, right: 14, background: '#fff', padding: 4, borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,.3)', width: 62, height: 62 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=54x54&data=https%3A%2F%2Faegryn.com%2Fmagazine&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png" width={54} height={54} style={{ display: 'block', imageRendering: 'pixelated' }} alt="aegryn.com/magazine" />
           </div>
         </div>
+      </Link>
 
-        {/* AEGRYN massif + BUSINESS MAGAZINE aligné droite */}
-        <div className="relative z-10 -mt-1">
-          <p
-            className="font-sans font-bold text-white leading-none"
-            style={{ fontSize: 'clamp(52px,8vw,96px)', letterSpacing: '-0.04em', lineHeight: 0.86 }}
-          >
-            Aegryn
-          </p>
-          <p className="text-right font-mono text-[9px] tracking-[0.18em] uppercase text-white/35 mt-1">Business Magazine</p>
-        </div>
+      {/* ── Titre sous le cover — style Barnes ── */}
+      <p className="font-sans text-magazine-black mt-8 mb-6 text-center" style={{ fontSize: 18, letterSpacing: '-0.01em' }}>
+        {formatted} — {issue.title}
+      </p>
 
-        {/* EXCLUSIVE — milieu gauche */}
-        <div className="relative z-10 flex-1 flex flex-col justify-center">
-          <div className="max-w-[180px]">
-            <p className="font-sans font-bold text-[#5ADDA4] uppercase tracking-[0.08em] mb-2" style={{ fontSize: '11px' }}>Exclusive</p>
-            <div className="w-8 h-[2px] bg-[#5ADDA4] mb-2" />
-            <p className="font-sans font-bold text-white/55 uppercase leading-snug" style={{ fontSize: '9px', letterSpacing: '0.04em' }}>
-              {issue.coverLine}
-            </p>
-          </div>
-        </div>
-
-        {/* BAS : titre accent + theme */}
-        <div className="relative z-10">
-          <p
-            className="font-sans font-bold text-[#5ADDA4] uppercase leading-tight mb-3"
-            style={{ fontSize: 'clamp(16px,2.5vw,26px)', letterSpacing: '-0.01em', lineHeight: 1.05 }}
-          >
-            {issue.title}
-          </p>
-          <p className="font-sans uppercase text-center text-white/40 leading-snug" style={{ fontSize: '9px', letterSpacing: '0.06em' }}>
-            {issue.theme}
-          </p>
-        </div>
+      {/* ── 3 boutons d'accès rapide — style Barnes ── */}
+      <div className="flex flex-wrap items-center justify-center gap-0">
+        <Link
+          href={`/${locale}/magazine/${issue.slug}`}
+          className="font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold bg-magazine-black text-white hover:bg-magazine-accent hover:text-magazine-black transition-colors"
+        >
+          {labelReadOnline}
+        </Link>
+        <Link
+          href={`/${locale}/magazine/${issue.slug}`}
+          className="font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold border border-magazine-black/30 text-magazine-black hover:border-magazine-black transition-colors"
+        >
+          {labelFlipbook}
+        </Link>
+        <Link
+          href={`/${locale}/magazine/subscribe`}
+          className="font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold border border-magazine-black/30 text-magazine-black hover:border-magazine-black transition-colors"
+        >
+          {labelSubscribe}
+        </Link>
       </div>
 
-      {/* Metadata panel */}
-      <div className="bg-magazine-ivory flex flex-col justify-between p-10 md:p-14">
-        <div>
-          <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-magazine-black/30 mb-4">
-            Issue {String(issue.number).padStart(2, '0')}
-          </p>
-          <h2 className="font-sans font-bold text-magazine-black leading-snug mb-2"
-            style={{ fontSize: 'clamp(22px,2.5vw,34px)', letterSpacing: '-0.02em' }}
-          >
-            {issue.title}
-          </h2>
-          <p className="text-body-mag text-magazine-black/50 italic mb-6">{issue.theme}</p>
-          <p className="text-label-mag text-magazine-accent uppercase tracking-[0.1em] font-semibold">
-            {issue.coverLine}
-          </p>
-        </div>
-
-        <div className="pt-8 border-t border-magazine-black/8 mt-6">
-          <Link
-            href={`/${locale}/magazine/${issue.slug}`}
-            className="inline-flex items-center gap-2 bg-magazine-black text-white font-mono text-[10px] uppercase tracking-[0.18em] px-6 py-3 hover:bg-magazine-accent hover:text-magazine-black transition-colors font-semibold"
-          >
-            {labelReadIssue} <ArrowUpRight size={11} />
-          </Link>
-        </div>
-      </div>
     </div>
   )
 }
