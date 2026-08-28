@@ -6254,7 +6254,6 @@
       "companyPlaceholder": "Your company (optional)",
       "interestsLabel": "Your areas of interest",
       "interests": {
-        "editorial":   "Editorial",
         "market":      "The Market — M&A & Data",
         "techAi":      "Tech & AI",
         "build":       "Build — Asset Engineering",
@@ -6264,6 +6263,17 @@
         "index":       "AEGRYN Index",
         "people":      "People",
         "life":        "Life"
+      },
+      "interestsDesc": {
+        "market":      "European M&A data, deal volumes and valuations",
+        "techAi":      "AI, SaaS and tech asset landscape",
+        "build":       "Engineering, scalability and value of a tech asset",
+        "transaction": "Deal structuring and transaction process",
+        "buyers":      "Buyer profiles, expectations and acquisition criteria",
+        "outlook":     "Market trends and projections for 2027",
+        "index":       "CIFS certification scores and rankings",
+        "people":      "Entrepreneur portraits and career paths",
+        "life":        "Lifestyle, culture and territories"
       },
       "cta": "Express my interest",
       "success": "Thank you. Your interest has been recorded. We will contact you when the print edition goes into production.",

@@ -8,7 +8,7 @@ interface Props {
   emailPlaceholder:   string
   companyPlaceholder: string
   interestsLabel:     string
-  interests:          { key: string; label: string }[]
+  interests:          { key: string; label: string; desc?: string }[]
   cta:                string
   successMsg:         string
   errorMsg:           string
@@ -98,18 +98,23 @@ export function PrintWishlistForm({
           {interestsLabel}
         </p>
         <div className="flex flex-wrap gap-2">
-          {interests.map(({ key, label }) => (
+          {interests.map(({ key, label, desc }) => (
             <button
               key={key}
               type="button"
               onClick={() => toggleInterest(key)}
-              className={`text-label-mag font-sans font-semibold uppercase tracking-[0.1em] px-4 py-2 border transition-colors ${
+              className={`flex flex-col items-start text-left px-4 py-2.5 border transition-colors ${
                 selected.includes(key)
                   ? 'bg-magazine-black text-magazine-white border-magazine-black'
                   : 'bg-transparent text-magazine-black/60 border-magazine-black/20 hover:border-magazine-black/50'
               }`}
             >
-              {label}
+              <span className="text-label-mag font-sans font-semibold uppercase tracking-[0.1em]">{label}</span>
+              {desc && (
+                <span className={`text-[10px] font-sans font-normal normal-case tracking-normal mt-0.5 leading-snug ${
+                  selected.includes(key) ? 'text-magazine-white/60' : 'text-magazine-black/35'
+                }`}>{desc}</span>
+              )}
             </button>
           ))}
         </div>

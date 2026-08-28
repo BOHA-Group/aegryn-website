@@ -26,18 +26,12 @@ export default async function SubscribePage({
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'magazine.subscribe' })
 
-  const interests = [
-    { key: 'editorial',   label: t('interests.editorial') },
-    { key: 'market',      label: t('interests.market') },
-    { key: 'techAi',      label: t('interests.techAi') },
-    { key: 'build',       label: t('interests.build') },
-    { key: 'transaction', label: t('interests.transaction') },
-    { key: 'buyers',      label: t('interests.buyers') },
-    { key: 'outlook',     label: t('interests.outlook') },
-    { key: 'index',       label: t('interests.index') },
-    { key: 'people',      label: t('interests.people') },
-    { key: 'life',        label: t('interests.life') },
-  ]
+  const INTEREST_KEYS = ['market', 'techAi', 'build', 'transaction', 'buyers', 'outlook', 'index', 'people', 'life'] as const
+  const interests = INTEREST_KEYS.map(key => ({
+    key,
+    label: t(`interests.${key}`),
+    desc:  t(`interestsDesc.${key}`),
+  }))
 
   return (
     <main className="min-h-screen bg-magazine-ivory px-6 py-32">

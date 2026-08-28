@@ -6242,7 +6242,6 @@
       "companyPlaceholder": "La tua azienda (opzionale)",
       "interestsLabel": "Le tue aree di interesse",
       "interests": {
-        "editorial":   "Editorial",
         "market":      "Il Mercato — M&A & Dati",
         "techAi":      "Tech & IA",
         "build":       "Build — Ingegneria degli asset",
@@ -6252,6 +6251,17 @@
         "index":       "AEGRYN Index",
         "people":      "People",
         "life":        "Life"
+      },
+      "interestsDesc": {
+        "market":      "Dati M&A europei, volumi di transazioni e valutazioni",
+        "techAi":      "IA, SaaS e panorama degli asset tecnologici",
+        "build":       "Ingegneria, scalabilità e valore di un asset tech",
+        "transaction": "Strutturazione dell'operazione e processo di transazione",
+        "buyers":      "Profili acquirenti, aspettative e criteri di acquisizione",
+        "outlook":     "Tendenze di mercato e proiezioni per il 2027",
+        "index":       "Punteggi e classifiche di certificazione CIFS",
+        "people":      "Ritratti di imprenditori e percorsi di carriera",
+        "life":        "Lifestyle, cultura e territori"
       },
       "cta": "Esprimere il mio interesse",
       "success": "Grazie. Il tuo interesse è stato registrato. Ti contatteremo quando l'edizione cartacea sarà in produzione.",

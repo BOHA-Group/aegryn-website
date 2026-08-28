@@ -6253,7 +6253,6 @@
       "companyPlaceholder": "Ihr Unternehmen (optional)",
       "interestsLabel": "Ihre Interessensgebiete",
       "interests": {
-        "editorial":   "Editorial",
         "market":      "Der Markt — M&A & Daten",
         "techAi":      "Tech & KI",
         "build":       "Build — Asset-Engineering",
@@ -6263,6 +6262,17 @@
         "index":       "AEGRYN Index",
         "people":      "People",
         "life":        "Life"
+      },
+      "interestsDesc": {
+        "market":      "Europäische M&A-Daten, Transaktionsvolumen und Bewertungen",
+        "techAi":      "KI, SaaS und Technologie-Assets",
+        "build":       "Aufbau, Skalierbarkeit und Wert eines Tech-Assets",
+        "transaction": "Deal-Strukturierung und Transaktionsprozess",
+        "buyers":      "Käuferprofile, Erwartungen und Akquisitionskriterien",
+        "outlook":     "Markttrends und Prognosen für 2027",
+        "index":       "CIFS-Zertifizierungspunkte und Rankings",
+        "people":      "Unternehmerporträts und Lebenswerke",
+        "life":        "Lifestyle, Kultur und Territorien"
       },
       "cta": "Mein Interesse bekunden",
       "success": "Danke. Ihr Interesse wurde erfasst.",

@@ -6368,7 +6368,6 @@
       "companyPlaceholder": "Votre entreprise (optionnel)",
       "interestsLabel": "Vos centres d'intérêt",
       "interests": {
-        "editorial":   "Editorial",
         "market":      "The Market — M&A & Données",
         "techAi":      "Tech & IA",
         "build":       "Build — Conception d'actifs",
@@ -6378,6 +6377,17 @@
         "index":       "AEGRYN Index",
         "people":      "People",
         "life":        "Life"
+      },
+      "interestsDesc": {
+        "market":      "Données M&A européennes, volumes et valorisations",
+        "techAi":      "IA, SaaS et actifs technologiques",
+        "build":       "Conception, scalabilité et valeur d'un actif tech",
+        "transaction": "Structuration de cession et processus de transaction",
+        "buyers":      "Profils, attentes et critères des acquéreurs",
+        "outlook":     "Tendances et projections marché pour 2027",
+        "index":       "Scores et classements de certification CIFS",
+        "people":      "Portraits et parcours d'entrepreneurs",
+        "life":        "Art de vivre, culture et territoires"
       },
       "cta": "Exprimer mon intérêt",
       "success": "Merci. Votre intérêt a été enregistré. Nous vous contacterons lors de la production de l'édition papier.",

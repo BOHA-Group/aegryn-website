@@ -6242,7 +6242,6 @@
       "companyPlaceholder": "Uw bedrijf (optioneel)",
       "interestsLabel": "Uw interessegebieden",
       "interests": {
-        "editorial":   "Editorial",
         "market":      "De Markt — M&A & Data",
         "techAi":      "Tech & AI",
         "build":       "Build — Asset-engineering",
@@ -6252,6 +6251,17 @@
         "index":       "AEGRYN Index",
         "people":      "People",
         "life":        "Life"
+      },
+      "interestsDesc": {
+        "market":      "Europese M&A-gegevens, dealvolumes en waarderingen",
+        "techAi":      "AI, SaaS en technologische assets",
+        "build":       "Engineering, schaalbaarheid en waarde van een tech-asset",
+        "transaction": "Dealstructurering en transactieproces",
+        "buyers":      "Kopersprofielen, verwachtingen en acquisitiecriteria",
+        "outlook":     "Markttrends en prognoses voor 2027",
+        "index":       "CIFS-certificeringsscores en rankings",
+        "people":      "Ondernemersportretten en loopbaantrajecten",
+        "life":        "Lifestyle, cultuur en territorieën"
       },
       "cta": "Mijn interesse kenbaar maken",
       "success": "Dank u. Uw interesse is geregistreerd. Wij nemen contact met u op wanneer de gedrukte editie in productie gaat.",
