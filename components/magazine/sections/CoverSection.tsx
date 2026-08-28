@@ -74,11 +74,11 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
         <h1
           ref={titleRef}
           className="font-sans font-bold text-white leading-none"
-          style={{ fontSize: 'clamp(80px,12vw,190px)', letterSpacing: '-0.04em', lineHeight: 0.86 }}
+          style={{ fontSize: 'clamp(90px,14vw,190px)', letterSpacing: '-0.04em', lineHeight: 0.86 }}
         >
           Aegryn
         </h1>
-        <p className="cover-meta text-right font-mono tracking-[0.18em] uppercase text-white/35 mt-1" style={{ fontSize: '9px' }}>
+        <p className="cover-meta text-right font-mono tracking-[0.2em] uppercase text-white/30 mt-1" style={{ fontSize: '8px' }}>
           Business Magazine
         </p>
       </div>
