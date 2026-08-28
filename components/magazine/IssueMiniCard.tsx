@@ -38,17 +38,12 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
             : '0 3px 14px rgba(0,0,0,.18)',
         }}
       >
-        {/* Cover BG */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundImage: issue.status === 'published' ? `url(/magazine/issue-${padNum}/cover-bg.jpg)` : undefined,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center top',
-            background: issue.status !== 'published' ? 'linear-gradient(160deg,#0a1520 0%,#0f2235 60%,#081018 100%)' : undefined,
-          }}
-        />
+        {/* Cover BG — image ou gradient selon statut */}
+        {issue.status === 'published' ? (
+          <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(/magazine/issue-${padNum}/cover-bg.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center top' }} />
+        ) : (
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(160deg,#0a1520 0%,#0f2235 60%,#081018 100%)' }} />
+        )}
         {/* Overlay — identique IssueCard */}
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg,rgba(5,10,15,.75) 0%,rgba(5,10,15,.45) 45%,rgba(5,10,15,.78) 100%)' }} />
 
