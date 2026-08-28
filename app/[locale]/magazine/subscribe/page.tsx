@@ -67,17 +67,23 @@ export default async function SubscribePage({
         </p>
 
         <PrintWishlistForm
+          civilityLabel={t('civilityLabel')}
+          civilityM={t('civilityM')}
+          civilityMme={t('civilityMme')}
           firstNamePlaceholder={t('firstNamePlaceholder')}
           lastNamePlaceholder={t('lastNamePlaceholder')}
           emailPlaceholder={t('emailPlaceholder')}
+          phonePlaceholder={t('phonePlaceholder')}
           companyPlaceholder={t('companyPlaceholder')}
           addressLabel={t('addressLabel')}
           addressPlaceholder={t('addressPlaceholder')}
-          cityPlaceholder={t('cityPlaceholder')}
           postalCodePlaceholder={t('postalCodePlaceholder')}
+          cityPlaceholder={t('cityPlaceholder')}
           countryPlaceholder={t('countryPlaceholder')}
           interestsLabel={t('interestsLabel')}
           interests={interests}
+          rgpdLabel={t('rgpdLabel')}
+          legalNotice={t('legalNotice')}
           cta={t('cta')}
           successMsg={t('success')}
           errorMsg={t('error')}

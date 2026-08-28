@@ -6276,7 +6276,16 @@
       "cityPlaceholder": "Città",
       "postalCodePlaceholder": "Codice postale",
       "countryPlaceholder": "Paese",
-      "addressLabel": "Indirizzo di consegna"
+      "addressLabel": "Indirizzo di consegna",
+      "civilityLabel": "Titolo",
+      "civilityM": "Sig.",
+      "civilityMme": "Sig.ra",
+      "phonePlaceholder": "Telefono",
+      "rgpdLabel": "Acconsento che Aegryn SA utilizzi i miei dati personali per contattarmi in merito a questa richiesta di edizione cartacea.",
+      "legalNotice": "I dati raccolti sono trattati da Aegryn SA (Canton Vaud, Svizzera) in conformità con il GDPR (UE 2016/679) e la revisione della LPD svizzera (in vigore dal 1° settembre 2023). Sono utilizzati esclusivamente per la gestione della lista dei desideri dell'edizione cartacea. Hai il diritto di accedere, rettificare e cancellare i tuoi dati scrivendo a media@boha-group.com.",
+      "wishlistSectionLabel": "Edizione cartacea — Lista desideri",
+      "wishlistTitle": "Ricevere la rivista Aegryn in formato cartaceo",
+      "wishlistDesc": "L'edizione cartacea della rivista Aegryn è un'iniziativa riservata ai clienti registrati. Questo modulo ti permette di esprimere le tue aree di interesse per essere incluso nella lista dei desideri. Ti contatteremo quando inizierà la produzione."
     },
     "press": {
       "label": "Parlano di noi",

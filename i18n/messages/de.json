@@ -6287,7 +6287,16 @@
       "cityPlaceholder": "Stadt",
       "postalCodePlaceholder": "Postleitzahl",
       "countryPlaceholder": "Land",
-      "addressLabel": "Lieferadresse"
+      "addressLabel": "Lieferadresse",
+      "civilityLabel": "Anrede",
+      "civilityM": "Herr",
+      "civilityMme": "Frau",
+      "phonePlaceholder": "Telefon",
+      "rgpdLabel": "Ich bin damit einverstanden, dass Aegryn SA meine personenbezogenen Daten nutzt, um mich bezüglich dieser Druckausgabenanfrage zu kontaktieren.",
+      "legalNotice": "Die erhobenen Daten werden von der Aegryn SA (Kanton Waadt, Schweiz) gemäß der DSGVO (EU 2016/679) und dem revidierten Schweizer DSG (in Kraft seit 1. September 2023) verarbeitet. Sie werden ausschließlich für die Verwaltung der Wunschliste der Druckausgabe verwendet. Sie haben das Recht auf Zugang, Berichtigung und Löschung Ihrer Daten per E-Mail an media@boha-group.com.",
+      "wishlistSectionLabel": "Druckausgabe — Wunschliste",
+      "wishlistTitle": "Das Aegryn-Magazin in gedruckter Form erhalten",
+      "wishlistDesc": "Die Druckausgabe des Aegryn-Magazins ist eine Initiative für registrierte Kunden. Mit diesem Formular können Sie Ihre Interessensgebiete angeben, um auf die Wunschliste aufgenommen zu werden. Wir werden Sie kontaktieren, wenn die Produktion beginnt."
     }
   },
   "partner": {

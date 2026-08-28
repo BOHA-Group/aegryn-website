@@ -6288,7 +6288,16 @@
       "cityPlaceholder": "City",
       "postalCodePlaceholder": "Postal code",
       "countryPlaceholder": "Country",
-      "addressLabel": "Delivery address"
+      "addressLabel": "Delivery address",
+      "civilityLabel": "Title",
+      "civilityM": "Mr",
+      "civilityMme": "Ms",
+      "phonePlaceholder": "Phone",
+      "rgpdLabel": "I agree that Aegryn SA may use my personal data to contact me regarding this print edition request.",
+      "legalNotice": "The information collected is processed by Aegryn SA (Canton of Vaud, Switzerland) in accordance with the GDPR (EU 2016/679) and the revised Swiss FADP (in force since 1 September 2023). It is used exclusively for managing the print edition wish list. You have the right to access, rectify and delete your data by writing to media@boha-group.com.",
+      "wishlistSectionLabel": "Print Edition — Wish List",
+      "wishlistTitle": "Receive the Aegryn Magazine in print",
+      "wishlistDesc": "The print edition of the Aegryn magazine is an initiative reserved for registered clients. This form allows you to express your areas of interest to be added to the wish list. We will contact you when production begins."
     },
     "press": {
       "label": "They talk about us",

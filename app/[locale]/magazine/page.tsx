@@ -3,6 +3,7 @@ import type { Metadata }     from 'next'
 import { IssueCard }           from '@/components/magazine/IssueCard'
 import { IssueMiniCard }       from '@/components/magazine/IssueMiniCard'
 import { NewsletterBlock }     from '@/components/magazine/NewsletterBlock'
+import { PrintWishlistForm }   from '@/components/magazine/PrintWishlistForm'
 import { ISSUE_01 }            from '@/content/magazine/issue-01/meta'
 import { ISSUE_02 }            from '@/content/magazine/issue-02/meta'
 import { ISSUE_03 }            from '@/content/magazine/issue-03/meta'
@@ -41,10 +42,19 @@ async function getMagazineFlags(): Promise<Record<string, boolean>> {
 export default async function MagazineHubPage({ params }: Props) {
   const { locale } = await params
   const isPreview = process.env.VERCEL_ENV !== 'production'
-  const [tHub, flags] = await Promise.all([
+  const INTEREST_KEYS = ['market', 'techAi', 'build', 'transaction', 'buyers', 'outlook', 'index', 'people', 'life'] as const
+  const [tHub, tSub, flags] = await Promise.all([
     getTranslations({ locale, namespace: 'magazine.hub' }),
+    getTranslations({ locale, namespace: 'magazine.subscribe' }),
     getMagazineFlags(),
   ])
+  const labelsRaw = tSub.raw('interests')     as Record<string, string>
+  const descsRaw  = tSub.raw('interestsDesc') as Record<string, string>
+  const interests = INTEREST_KEYS.map(key => ({
+    key,
+    label: labelsRaw[key] ?? key,
+    desc:  descsRaw[key]  ?? '',
+  }))
 
   return (
     <main className="min-h-screen bg-magazine-white">
@@ -207,6 +217,60 @@ export default async function MagazineHubPage({ params }: Props) {
               </a>
             </div>
 
+          </div>
+        </div>
+      </div>
+
+      {/* ── Wishlist édition papier (inline) ── */}
+      <div className="border-t border-magazine-black/8 bg-magazine-ivory" id="wishlist">
+        <div className="max-w-magazine mx-auto px-6 md:px-[120px] py-24">
+          <div className="grid md:grid-cols-[2fr_3fr] gap-16 items-start">
+
+            {/* Intro */}
+            <div className="md:sticky md:top-32">
+              <p className="font-mono text-[8px] tracking-[0.24em] uppercase text-magazine-accent mb-6">
+                {tSub('wishlistSectionLabel')}
+              </p>
+              <h2
+                className="font-sans font-bold text-magazine-black mb-6"
+                style={{ fontSize: 'clamp(24px,3.5vw,44px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
+              >
+                {tSub('wishlistTitle')}
+              </h2>
+              <p className="text-sm text-magazine-black/60 leading-[1.75] mb-6">
+                {tSub('wishlistDesc')}
+              </p>
+              <p className="text-[11px] text-magazine-black/35 leading-relaxed">
+                {tSub('disclaimer')}
+              </p>
+            </div>
+
+            {/* Formulaire */}
+            <div className="bg-magazine-white border border-magazine-black/10 p-8">
+              <PrintWishlistForm
+                civilityLabel={tSub('civilityLabel')}
+                civilityM={tSub('civilityM')}
+                civilityMme={tSub('civilityMme')}
+                firstNamePlaceholder={tSub('firstNamePlaceholder')}
+                lastNamePlaceholder={tSub('lastNamePlaceholder')}
+                emailPlaceholder={tSub('emailPlaceholder')}
+                phonePlaceholder={tSub('phonePlaceholder')}
+                companyPlaceholder={tSub('companyPlaceholder')}
+                addressLabel={tSub('addressLabel')}
+                addressPlaceholder={tSub('addressPlaceholder')}
+                postalCodePlaceholder={tSub('postalCodePlaceholder')}
+                cityPlaceholder={tSub('cityPlaceholder')}
+                countryPlaceholder={tSub('countryPlaceholder')}
+                interestsLabel={tSub('interestsLabel')}
+                interests={interests}
+                rgpdLabel={tSub('rgpdLabel')}
+                legalNotice={tSub('legalNotice')}
+                cta={tSub('cta')}
+                successMsg={tSub('success')}
+                errorMsg={tSub('error')}
+                clientNote={tSub('clientNote')}
+              />
+            </div>
           </div>
         </div>
       </div>

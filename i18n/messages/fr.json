@@ -6402,7 +6402,16 @@
       "cityPlaceholder": "Ville",
       "postalCodePlaceholder": "Code postal",
       "countryPlaceholder": "Pays",
-      "addressLabel": "Adresse postale de livraison"
+      "addressLabel": "Adresse postale de livraison",
+      "civilityLabel": "Civilité",
+      "civilityM": "M.",
+      "civilityMme": "Mme",
+      "phonePlaceholder": "Téléphone",
+      "rgpdLabel": "J'accepte qu'Aegryn SA utilise mes données personnelles pour me contacter dans le cadre de cette demande d'édition papier.",
+      "legalNotice": "Les informations recueillies sont traitées par Aegryn SA (Canton de Vaud, Suisse) conformément au RGPD (UE 2016/679) et à la LPD suisse révisée (entrée en vigueur le 1er septembre 2023). Elles sont utilisées exclusivement pour la gestion de la liste de souhait de l'édition imprimée. Vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à media@boha-group.com.",
+      "wishlistSectionLabel": "Édition imprimée — Liste de souhait",
+      "wishlistTitle": "Recevoir le magazine Aegryn en version papier",
+      "wishlistDesc": "L'édition papier du magazine Aegryn est une initiative réservée aux clients enregistrés. Ce formulaire vous permet d'exprimer vos centres d'intérêt pour figurer sur la liste de souhait. Nous vous contacterons lors de la mise en production."
     },
     "press": {
       "label": "Ils parlent de nous",

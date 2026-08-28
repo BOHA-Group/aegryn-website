@@ -24,19 +24,22 @@ const THEME_LABELS: Record<string, string> = {
 }
 
 type Row = {
-  id:          number
-  created_at:  string
-  first_name:  string | null
-  last_name:   string | null
-  name:        string
-  email:       string
-  company:     string | null
-  address:     string | null
-  city:        string | null
-  postal_code: string | null
-  country:     string | null
-  interests:   string | null
-  locale:      string | null
+  id:           number
+  created_at:   string
+  civility:     string | null
+  first_name:   string | null
+  last_name:    string | null
+  name:         string
+  email:        string
+  phone:        string | null
+  company:      string | null
+  address:      string | null
+  city:         string | null
+  postal_code:  string | null
+  country:      string | null
+  interests:    string | null
+  rgpd_consent: boolean | null
+  locale:       string | null
 }
 
 export default async function AdminMagazineWishlistPage({
@@ -51,7 +54,7 @@ export default async function AdminMagazineWishlistPage({
 
   const { data: rows, error } = await supa
     .from('print_wishlist')
-    .select('id, created_at, first_name, last_name, name, email, company, address, city, postal_code, country, interests, locale')
+    .select('id, created_at, civility, first_name, last_name, name, email, phone, company, address, city, postal_code, country, interests, rgpd_consent, locale')
     .order('created_at', { ascending: false })
 
   /* Calcul des stats par thème */
@@ -126,7 +129,7 @@ export default async function AdminMagazineWishlistPage({
             <table className="w-full text-[12px] bg-white border border-gray-200 min-w-[700px]">
               <thead className="bg-gray-50 border-b border-gray-200">
                 <tr>
-                  {['Date', 'Prénom', 'Nom', 'Email', 'Entreprise', 'Adresse', 'Langue', 'Centres d\'intérêt'].map(h => (
+                  {['Date', 'Civilité', 'Prénom', 'Nom', 'Email', 'Téléphone', 'Adresse', 'Intérêts', 'RGPD'].map(h => (
                     <th key={h} className="text-left px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500 whitespace-nowrap">
                       {h}
                     </th>
@@ -141,14 +144,14 @@ export default async function AdminMagazineWishlistPage({
                       <td className="px-4 py-3 font-mono text-[10px] text-gray-400 whitespace-nowrap">
                         {new Date(r.created_at).toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: '2-digit', hour: '2-digit', minute: '2-digit' })}
                       </td>
+                      <td className="px-4 py-3 text-gray-400 text-[10px]">{r.civility ?? '—'}</td>
                       <td className="px-4 py-3 text-gray-800">{r.first_name ?? '—'}</td>
                       <td className="px-4 py-3 font-semibold text-gray-800">{r.last_name ?? r.name}</td>
                       <td className="px-4 py-3 text-gray-500">{r.email}</td>
-                      <td className="px-4 py-3 text-gray-400">{r.company ?? '—'}</td>
+                      <td className="px-4 py-3 text-gray-400 text-[11px]">{r.phone ?? '—'}</td>
                       <td className="px-4 py-3 text-gray-400 text-[11px] leading-snug">
                         {[r.address, r.postal_code && r.city ? `${r.postal_code} ${r.city}` : (r.city ?? r.postal_code), r.country].filter(Boolean).join(', ') || '—'}
                       </td>
-                      <td className="px-4 py-3 font-mono text-[10px] text-gray-400 uppercase">{r.locale ?? '—'}</td>
                       <td className="px-4 py-3">
                         <div className="flex flex-wrap gap-1">
                           {keys.length === 0 ? (
@@ -159,6 +162,11 @@ export default async function AdminMagazineWishlistPage({
                             </span>
                           ))}
                         </div>
+                      </td>
+                      <td className="px-4 py-3 text-center">
+                        {r.rgpd_consent
+                          ? <span className="text-[9px] font-semibold text-green-600 bg-green-50 border border-green-200 px-1.5 py-0.5">✓</span>
+                          : <span className="text-[9px] text-gray-300">—</span>}
                       </td>
                     </tr>
                   )
