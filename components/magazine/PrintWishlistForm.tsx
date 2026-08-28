@@ -99,23 +99,24 @@ export function PrintWishlistForm({
         </p>
         <div className="flex flex-wrap gap-2">
           {interests.map(({ key, label, desc }) => (
-            <button
-              key={key}
-              type="button"
-              onClick={() => toggleInterest(key)}
-              className={`flex flex-col items-start text-left px-4 py-2.5 border transition-colors ${
-                selected.includes(key)
-                  ? 'bg-magazine-black text-magazine-white border-magazine-black'
-                  : 'bg-transparent text-magazine-black/60 border-magazine-black/20 hover:border-magazine-black/50'
-              }`}
-            >
-              <span className="text-label-mag font-sans font-semibold uppercase tracking-[0.1em]">{label}</span>
+            <div key={key} className="relative group/interest">
+              <button
+                type="button"
+                onClick={() => toggleInterest(key)}
+                className={`text-label-mag font-sans font-semibold uppercase tracking-[0.1em] px-4 py-2 border transition-colors ${
+                  selected.includes(key)
+                    ? 'bg-magazine-black text-magazine-white border-magazine-black'
+                    : 'bg-transparent text-magazine-black/60 border-magazine-black/20 hover:border-magazine-black/50'
+                }`}
+              >
+                {label}
+              </button>
               {desc && (
-                <span className={`text-[10px] font-sans font-normal normal-case tracking-normal mt-0.5 leading-snug ${
-                  selected.includes(key) ? 'text-magazine-white/60' : 'text-magazine-black/35'
-                }`}>{desc}</span>
+                <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-10 whitespace-nowrap bg-magazine-black text-magazine-white font-sans text-[10px] font-normal normal-case tracking-normal px-3 py-1.5 opacity-0 group-hover/interest:opacity-100 transition-opacity duration-150">
+                  {desc}
+                </span>
               )}
-            </button>
+            </div>
           ))}
         </div>
       </div>

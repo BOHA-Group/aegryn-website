@@ -36,6 +36,7 @@ async function getMagazineFlags(): Promise<Record<string, boolean>> {
 
 export default async function MagazineHubPage({ params }: Props) {
   const { locale } = await params
+  const isPreview = process.env.VERCEL_ENV !== 'production'
   const [tHub, flags] = await Promise.all([
     getTranslations({ locale, namespace: 'magazine.hub' }),
     getMagazineFlags(),
@@ -91,6 +92,7 @@ export default async function MagazineHubPage({ params }: Props) {
               labelSubscribe={tHub('subscribe')}
               labelComingSoon={tHub('comingSoon')}
               isPublic={flags[`magazine_issue_${String(issue.number).padStart(2,'0')}_public`] ?? false}
+              isPreview={isPreview}
             />
           ))}
         </div>

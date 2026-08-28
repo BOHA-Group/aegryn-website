@@ -10,13 +10,14 @@ interface Props {
   labelSubscribe?:    string
   labelComingSoon?:   string
   isPublic?:          boolean
+  isPreview?:         boolean
 }
 
 /**
  * Style Barnes : cover portrait centré sur fond blanc, titre sous le cover, 3 boutons d'accès rapide.
  * Boutons désactivés avec tooltip "publication prochainement" au survol.
  */
-export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Edition', labelReadOnline = 'Explorer en ligne', labelDownloadPdf = 'Feuilleter le PDF', labelSubscribe = 'Recevoir', labelComingSoon = 'Publication prochainement', isPublic = false }: Props) {
+export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Edition', labelReadOnline = 'Explorer en ligne', labelDownloadPdf = 'Feuilleter le PDF', labelSubscribe = 'Recevoir', labelComingSoon = 'Publication prochainement', isPublic = false, isPreview = false }: Props) {
   const date      = new Date(issue.publishedAt)
   const formatted = date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
   const issueNum  = `Issue ${String(issue.number).padStart(2, '0')}`
@@ -77,12 +78,12 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
 
       {/* ── 3 boutons d'accès rapide — style Barnes ── */}
       <div className="flex flex-wrap items-center justify-center gap-3">
-        {/* Boutons 1 & 2 — actifs si isPublic, sinon désactivés avec tooltip */}
+        {/* Boutons 1 & 2 — actifs si isPublic ou isPreview (btn1 seulement), sinon désactivés avec tooltip */}
         {[
-          { label: labelReadOnline,  filled: true,  href: `/${locale}/magazine/${issue.slug}` },
-          { label: labelDownloadPdf, filled: false, href: `/${locale}/magazine/${issue.slug}` },
-        ].map(({ label, filled, href }) => (
-          isPublic ? (
+          { label: labelReadOnline,  filled: true,  href: `/${locale}/magazine/${issue.slug}`, previewUnlock: true  },
+          { label: labelDownloadPdf, filled: false, href: `/${locale}/magazine/${issue.slug}`, previewUnlock: false },
+        ].map(({ label, filled, href, previewUnlock }) => (
+          (isPublic || (isPreview && previewUnlock)) ? (
             <Link
               key={label}
               href={href}
