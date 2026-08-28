@@ -36,7 +36,8 @@ const SECTIONS = [
   {
     label: 'Contenu',
     items: [
-      { href: '/admin/magazine', label: 'Magazine' },
+      { href: '/admin/magazine',          label: 'Magazine' },
+      { href: '/admin/magazine/wishlist', label: 'Wishlist papier' },
     ],
   },
   {
