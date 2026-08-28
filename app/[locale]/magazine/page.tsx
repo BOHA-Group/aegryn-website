@@ -61,9 +61,6 @@ export default async function MagazineHubPage({ params }: Props) {
 
       {/* ── Hero header ── */}
       <div className="max-w-magazine mx-auto px-6 md:px-[120px] pt-32 pb-20">
-        <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">
-          AEGRYN
-        </p>
         <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-end">
           <div>
             <h1
