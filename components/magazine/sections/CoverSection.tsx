@@ -40,12 +40,6 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
           backgroundPosition: 'center top',
         }}
       />
-      {/* Dark overlay for readability */}
-      <div
-        className="absolute inset-0"
-        style={{ background: 'linear-gradient(160deg, rgba(5,10,15,0.38) 0%, rgba(5,10,15,0.12) 50%, rgba(5,10,15,0.52) 100%)' }}
-      />
-
       {/* QR code scannable — reporté depuis la cover flipbook, coin bas-droit */}
       <div className="hidden sm:block absolute bottom-8 right-8 md:right-14 z-20 bg-white p-1.5 rounded-sm shadow-lg">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -60,12 +54,12 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
 
       {/* ── TOP BAR : date gauche / Special Edition droite ── */}
       <div className="cover-meta relative z-10 flex items-start justify-between">
-        <p className="font-sans tracking-[0.22em] uppercase text-white/40 font-medium" style={{ fontSize: '9px' }}>
+        <p className="font-sans tracking-[0.22em] uppercase text-white font-medium" style={{ fontSize: '9px' }}>
           {formatted}
         </p>
         <div className="text-right">
-          <p className="font-sans tracking-[0.18em] uppercase text-[#5ADDA4] font-bold" style={{ fontSize: '9px' }}>Special Edition</p>
-          <p className="font-sans tracking-[0.18em] uppercase text-[#5ADDA4] font-bold" style={{ fontSize: '9px' }}>{issueNum}</p>
+          <p className="font-sans tracking-[0.18em] uppercase text-white font-bold" style={{ fontSize: '9px' }}>Special Edition</p>
+          <p className="font-sans tracking-[0.18em] uppercase text-white font-bold" style={{ fontSize: '9px' }}>{issueNum}</p>
         </div>
       </div>
 
@@ -78,7 +72,7 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
         >
           Aegryn
         </h1>
-        <p className="cover-meta" style={{ textAlign: 'right', fontSize: 8, fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.32)', marginTop: 5 }}>
+        <p className="cover-meta" style={{ textAlign: 'right', fontSize: 8, fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#fff', marginTop: 5 }}>
           Business Magazine
         </p>
       </div>
@@ -86,11 +80,11 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
       {/* ── EXCLUSIVE — milieu gauche ── */}
       <div className="cover-meta relative z-10 flex-1 flex flex-col justify-center">
         <div className="max-w-[220px]">
-          <p className="font-sans font-bold text-[#5ADDA4] uppercase tracking-[0.08em] mb-2" style={{ fontSize: '13px' }}>
+          <p className="font-sans font-bold text-white uppercase tracking-[0.08em] mb-2" style={{ fontSize: '13px' }}>
             Exclusive
           </p>
-          <div className="w-10 h-[2px] bg-[#5ADDA4] mb-3" />
-          <p className="font-sans font-bold text-white/55 uppercase leading-snug" style={{ fontSize: '10px', letterSpacing: '0.05em' }}>
+          <div className="w-10 h-[2px] bg-white mb-3" />
+          <p className="font-sans font-bold text-white uppercase leading-snug" style={{ fontSize: '10px', letterSpacing: '0.05em' }}>
             Build. Certify. Transact.
           </p>
         </div>
@@ -99,19 +93,19 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
       {/* ── BAS : titre accent + theme centré + scroll — contenu identique cover flipbook ── */}
       <div className="cover-meta relative z-10">
         <p
-          className="font-sans font-bold text-[#5ADDA4] uppercase leading-none mb-1"
+          className="font-sans font-bold text-white uppercase leading-none mb-1"
           style={{ fontSize: 'clamp(22px,4vw,46px)', letterSpacing: '-0.01em', lineHeight: 1.0 }}
         >
           Built
         </p>
         <p
-          className="font-sans font-bold text-white/90 uppercase leading-none mb-4"
+          className="font-sans font-bold text-white uppercase leading-none mb-4"
           style={{ fontSize: 'clamp(22px,4vw,46px)', letterSpacing: '-0.01em', lineHeight: 1.0 }}
         >
           to Last.
         </p>
         <p
-          className="font-sans uppercase text-white/45 leading-snug mb-8"
+          className="font-sans uppercase text-white leading-snug mb-8"
           style={{ fontSize: '10px', letterSpacing: '0.07em' }}
         >
           The anatomy of a tech asset that sells and one that doesn&apos;t.

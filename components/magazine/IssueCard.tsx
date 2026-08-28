@@ -31,36 +31,34 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
         <div style={{ width: 420, height: 595, position: 'relative', overflow: 'hidden', boxShadow: '0 8px 40px rgba(0,0,0,.28)', cursor: 'pointer' }}>
           {/* Image de fond */}
           <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(/magazine/issue-${padNum}/cover-magazine-issue-${padNum}.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center top' }} />
-          {/* Overlay */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg,rgba(5,10,15,.35) 0%,rgba(5,10,15,.10) 45%,rgba(5,10,15,.50) 100%)' }} />
           {/* Contenu */}
           <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px 30px' }}>
             {/* TOP BAR */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-              <div style={{ fontFamily: 'inherit', fontSize: 9, fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,.4)' }}>{formatted.toUpperCase()}</div>
+              <div style={{ fontFamily: 'inherit', fontSize: 9, fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#fff' }}>{formatted.toUpperCase()}</div>
               <div style={{ textAlign: 'right' }}>
-                <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#5ADDA4' }}>{labelSpecial}</div>
-                <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#5ADDA4' }}>{issueNum}</div>
+                <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#fff' }}>{labelSpecial}</div>
+                <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#fff' }}>{issueNum}</div>
               </div>
             </div>
             {/* AEGRYN + BUSINESS MAGAZINE */}
             <div style={{ marginTop: -8 }}>
               <div style={{ fontSize: 90, fontWeight: 700, color: '#fff', lineHeight: 0.86, letterSpacing: '-0.04em' }}>Aegryn</div>
-              <div style={{ textAlign: 'right', fontSize: 8, fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.32)', marginTop: 5 }}>Business Magazine</div>
+              <div style={{ textAlign: 'right', fontSize: 8, fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#fff', marginTop: 5 }}>Business Magazine</div>
             </div>
             {/* EXCLUSIVE milieu */}
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
               <div style={{ maxWidth: 170 }}>
-                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#5ADDA4', marginBottom: 6 }}>Exclusive</div>
-                <div style={{ width: 28, height: 2, background: '#5ADDA4', marginBottom: 8 }} />
-                <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', color: 'rgba(255,255,255,.55)', lineHeight: 1.5 }}>Build. Certify. Transact.</div>
+                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#fff', marginBottom: 6 }}>Exclusive</div>
+                <div style={{ width: 28, height: 2, background: '#fff', marginBottom: 8 }} />
+                <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', color: '#fff', lineHeight: 1.5 }}>Build. Certify. Transact.</div>
               </div>
             </div>
             {/* BAS : BUILT TO LAST */}
             <div style={{ paddingBottom: 52 }}>
-              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#5ADDA4', lineHeight: 1.0, marginBottom: 5 }}>Built</div>
-              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: 'rgba(255,255,255,.9)', lineHeight: 1.0, marginBottom: 9 }}>to Last.</div>
-              <div style={{ fontSize: 8.5, fontWeight: 400, letterSpacing: '0.05em', color: 'rgba(255,255,255,.4)', lineHeight: 1.6 }}>The anatomy of a tech asset that sells and one that doesn&apos;t.</div>
+              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: 5 }}>Built</div>
+              <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: 9 }}>to Last.</div>
+              <div style={{ fontSize: 8.5, fontWeight: 400, letterSpacing: '0.05em', color: '#fff', lineHeight: 1.6 }}>The anatomy of a tech asset that sells and one that doesn&apos;t.</div>
             </div>
           </div>
           {/* QR code — toujours visible, URL /magazine/qr gère le coming-soon côté serveur */}
