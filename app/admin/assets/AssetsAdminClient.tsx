@@ -159,8 +159,8 @@ export default function AssetsAdminClient({ rows: initialRows }: Props) {
           <p className="text-[13px] text-gray-400">Aucun actif correspondant.</p>
         </div>
       ) : (
-        <div className="overflow-x-auto">
-          <table className="w-full text-[12px] bg-white border border-gray-200">
+        <div className="overflow-x-auto pb-2 -mx-0">
+          <table className="w-full text-[12px] bg-white border border-gray-200 min-w-[900px]">
             <thead className="bg-gray-50 border-b border-gray-200">
               <tr>
                 <th className="px-4 py-3 w-10">

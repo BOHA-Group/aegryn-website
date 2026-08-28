@@ -53,7 +53,7 @@ export default async function AdminAssetsPage({
 
 
   return (
-    <main className="min-h-screen bg-gray-50 p-6 md:p-10">
+    <main className="min-h-screen bg-gray-50 px-6 py-6 md:px-10 md:py-10">
       <div className="max-w-7xl mx-auto">
 
         <div className="mb-8 flex items-start justify-between gap-4">

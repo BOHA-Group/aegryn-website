@@ -34,6 +34,12 @@ const SECTIONS = [
     ],
   },
   {
+    label: 'Contenu',
+    items: [
+      { href: '/admin/magazine', label: 'Magazine' },
+    ],
+  },
+  {
     label: 'Acquisition',
     items: [
       { href: '/admin/leads',       label: 'Leads' },

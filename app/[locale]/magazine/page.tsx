@@ -1,8 +1,9 @@
-import { getTranslations } from 'next-intl/server'
-import type { Metadata }   from 'next'
-import { IssueCard }       from '@/components/magazine/IssueCard'
-import { NewsletterBlock } from '@/components/magazine/NewsletterBlock'
-import { ISSUE_01 }        from '@/content/magazine/issue-01/meta'
+import { getTranslations }   from 'next-intl/server'
+import type { Metadata }     from 'next'
+import { IssueCard }         from '@/components/magazine/IssueCard'
+import { NewsletterBlock }   from '@/components/magazine/NewsletterBlock'
+import { ISSUE_01 }          from '@/content/magazine/issue-01/meta'
+import { createServiceClient } from '@/lib/supabase'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -19,9 +20,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const ALL_ISSUES = [ISSUE_01]
 
+async function getMagazineFlags(): Promise<Record<string, boolean>> {
+  try {
+    const supa = createServiceClient()
+    const { data } = await supa.from('site_settings').select('key, value').like('key', 'magazine_%')
+    const flags: Record<string, boolean> = {}
+    for (const row of (data ?? [])) {
+      flags[row.key] = row.value === true || row.value === 'true'
+    }
+    return flags
+  } catch {
+    return {}
+  }
+}
+
 export default async function MagazineHubPage({ params }: Props) {
   const { locale } = await params
-  const tHub = await getTranslations({ locale, namespace: 'magazine.hub' })
+  const [tHub, flags] = await Promise.all([
+    getTranslations({ locale, namespace: 'magazine.hub' }),
+    getMagazineFlags(),
+  ])
 
   return (
     <main className="min-h-screen bg-magazine-white">
@@ -72,6 +90,7 @@ export default async function MagazineHubPage({ params }: Props) {
               labelDownloadPdf={tHub('downloadPdf')}
               labelSubscribe={tHub('subscribe')}
               labelComingSoon={tHub('comingSoon')}
+              isPublic={flags[`magazine_issue_${String(issue.number).padStart(2,'0')}_public`] ?? false}
             />
           ))}
         </div>

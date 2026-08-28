@@ -6,16 +6,17 @@ interface Props {
   locale?:            string
   labelSpecial?:      string
   labelReadOnline?:   string
-  labelDownloadPdf?: string
+  labelDownloadPdf?:  string
   labelSubscribe?:    string
   labelComingSoon?:   string
+  isPublic?:          boolean
 }
 
 /**
  * Style Barnes : cover portrait centré sur fond blanc, titre sous le cover, 3 boutons d'accès rapide.
  * Boutons désactivés avec tooltip "publication prochainement" au survol.
  */
-export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Edition', labelReadOnline = 'Explorer en ligne', labelDownloadPdf = 'Feuilleter le PDF', labelSubscribe = 'Recevoir', labelComingSoon = 'Publication prochainement' }: Props) {
+export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Edition', labelReadOnline = 'Explorer en ligne', labelDownloadPdf = 'Feuilleter le PDF', labelSubscribe = 'Recevoir', labelComingSoon = 'Publication prochainement', isPublic = false }: Props) {
   const date      = new Date(issue.publishedAt)
   const formatted = date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
   const issueNum  = `Issue ${String(issue.number).padStart(2, '0')}`
@@ -61,10 +62,20 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
               <div style={{ fontSize: 8.5, fontWeight: 400, letterSpacing: '0.05em', color: 'rgba(255,255,255,.4)', lineHeight: 1.6 }}>The anatomy of a tech asset that sells and one that doesn&apos;t.</div>
             </div>
           </div>
-          {/* QR code */}
-          <div style={{ position: 'absolute', bottom: 14, right: 14, background: '#fff', padding: 4, borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,.3)', width: 62, height: 62 }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=54x54&data=https%3A%2F%2Faegryn.com%2Fmagazine&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png" width={54} height={54} style={{ display: 'block', imageRendering: 'pixelated' }} alt="aegryn.com/magazine" />
+          {/* QR code — pointe vers /magazine, affiche le contenu si isPublic */}
+          <div style={{ position: 'absolute', bottom: 14, right: 14, background: '#fff', padding: 4, borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,.3)', width: 62, height: 62, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            {isPublic ? (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=54x54&data=https%3A%2F%2Faegryn.com%2Fmagazine&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png" width={54} height={54} style={{ display: 'block', imageRendering: 'pixelated' }} alt="aegryn.com/magazine" />
+            ) : (
+              <div style={{ width: 54, height: 54, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 3 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=54x54&data=https%3A%2F%2Faegryn.com%2Fmagazine&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png" width={54} height={54} style={{ display: 'block', imageRendering: 'pixelated', opacity: 0.15 }} alt="" />
+                <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(255,255,255,0.88)', borderRadius: 2 }}>
+                  <span style={{ fontSize: 6.5, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#0F1A2B', textAlign: 'center', lineHeight: 1.3, padding: '0 4px' }}>{labelComingSoon}</span>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </Link>
@@ -75,28 +86,43 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
       </p>
 
       {/* ── 3 boutons d'accès rapide — style Barnes ── */}
-      <div className="flex flex-wrap items-center justify-center gap-0">
-        {/* Boutons 1 & 2 — désactivés avec tooltip "publication prochainement" */}
+      <div className="flex flex-wrap items-center justify-center gap-3">
+        {/* Boutons 1 & 2 — actifs si isPublic, sinon désactivés avec tooltip */}
         {[
-          { label: labelReadOnline,   filled: true  },
-          { label: labelDownloadPdf,  filled: false },
-        ].map(({ label, filled }) => (
-          <div key={label} className="relative group/btn">
-            <span
+          { label: labelReadOnline,  filled: true,  href: `/${locale}/magazine/${issue.slug}` },
+          { label: labelDownloadPdf, filled: false, href: `/${locale}/magazine/${issue.slug}` },
+        ].map(({ label, filled, href }) => (
+          isPublic ? (
+            <Link
+              key={label}
+              href={href}
               className={[
-                'inline-block font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold cursor-not-allowed select-none opacity-50',
+                'inline-block font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold transition-colors',
                 filled
-                  ? 'bg-magazine-black text-white'
-                  : 'border border-magazine-black text-magazine-black',
+                  ? 'bg-magazine-black text-white hover:bg-magazine-accent hover:text-magazine-black'
+                  : 'border border-magazine-black text-magazine-black hover:bg-magazine-black hover:text-white',
               ].join(' ')}
-              aria-disabled="true"
             >
               {label}
-            </span>
-            <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 whitespace-nowrap bg-magazine-black text-white font-mono text-[8px] tracking-[0.12em] uppercase px-3 py-1.5 opacity-0 group-hover/btn:opacity-100 transition-opacity">
-              {labelComingSoon}
-            </span>
-          </div>
+            </Link>
+          ) : (
+            <div key={label} className="relative group/btn">
+              <span
+                className={[
+                  'inline-block font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold cursor-not-allowed select-none opacity-50',
+                  filled
+                    ? 'bg-magazine-black text-white'
+                    : 'border border-magazine-black text-magazine-black',
+                ].join(' ')}
+                aria-disabled="true"
+              >
+                {label}
+              </span>
+              <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 whitespace-nowrap bg-magazine-black text-white font-mono text-[8px] tracking-[0.12em] uppercase px-3 py-1.5 opacity-0 group-hover/btn:opacity-100 transition-opacity">
+                {labelComingSoon}
+              </span>
+            </div>
+          )
         ))}
         {/* Bouton 3 — Recevoir — actif, pointe vers /magazine/subscribe */}
         <Link
