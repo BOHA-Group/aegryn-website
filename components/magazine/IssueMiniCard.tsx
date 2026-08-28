@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import type { MagazineIssue } from '@/lib/magazine/types'
 
@@ -20,8 +22,9 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
   return (
     <Link
       href={isDraft ? '#' : `/${locale}/magazine/${issue.slug}`}
-      onClick={isDraft ? (e) => e.preventDefault() : undefined}
-      className={`block shrink-0 transition-transform ${isDraft ? 'cursor-default' : `hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}`}
+      aria-disabled={isDraft}
+      tabIndex={isDraft ? -1 : undefined}
+      className={`block shrink-0 transition-transform ${isDraft ? 'cursor-default pointer-events-none' : `hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}`}
       style={{ width: 155, flexShrink: 0 }}
     >
       <div
