@@ -53,13 +53,13 @@ export default async function AdminAssetsPage({
 
 
   return (
-    <main className="min-h-screen bg-gray-50 px-6 py-6 md:px-10 md:py-10">
-      <div className="max-w-7xl mx-auto">
+    <main className="min-h-screen bg-gray-50 px-6 py-6 md:px-10 md:py-10 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto w-full">
 
         <div className="mb-8 flex items-start justify-between gap-4">
           <div>
             <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN</p>
-            <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Actifs soumis</h1>
+            <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Actifs soumis pour certification CIFS</h1>
             <p className="text-[12px] text-gray-400 mt-1">Gestion du pipeline de certification</p>
           </div>
           <div className="flex gap-2">

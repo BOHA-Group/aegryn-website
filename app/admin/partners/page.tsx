@@ -1,7 +1,8 @@
-import { checkAdminAccess } from '@/lib/adminAuth'
+import { checkAdminAccess }   from '@/lib/adminAuth'
 import { createServiceClient } from '@/lib/supabase'
 import type { Metadata }       from 'next'
 import Link                    from 'next/link'
+import PartnersTableClient     from './PartnersTableClient'
 
 export const metadata: Metadata = {
   title: 'Partenaires — Aegryn Admin',
@@ -42,8 +43,8 @@ export default async function AdminPartnersPage({
   }
 
   return (
-    <main className="min-h-screen bg-gray-50 p-6 md:p-10">
-      <div className="max-w-7xl mx-auto">
+    <main className="min-h-screen bg-gray-50 px-6 py-6 md:px-10 md:py-10">
+      <div className="max-w-7xl mx-auto w-full">
 
         <div className="mb-8 flex items-start justify-between gap-4">
           <div>
@@ -62,43 +63,14 @@ export default async function AdminPartnersPage({
           </div>
         )}
 
-        {rows.length === 0 && !error ? (
-          <div className="bg-white border border-gray-200 p-16 text-center">
-            <p className="text-[13px] text-gray-400">Aucun partenaire pour le moment.</p>
-            <p className="text-[11px] text-gray-300 mt-2">Un partenaire est un profil dont le tableau roles[] contient 'partner'.</p>
-          </div>
-        ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-[12px] bg-white border border-gray-200">
-              <thead className="bg-gray-50 border-b border-gray-200">
-                <tr>
-                  {['Nom', 'Email', 'Dossiers en cours', 'Apports', 'Action'].map(h => (
-                    <th key={h} className="text-left px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500 whitespace-nowrap">{h}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-100">
-                {rows.map((r) => {
-                  const s = statsFor(String(r.id))
-                  return (
-                    <tr key={String(r.id)} className="hover:bg-gray-50">
-                      <td className="px-4 py-3 font-semibold text-gray-800">{String(r.full_name ?? '—')}</td>
-                      <td className="px-4 py-3 text-gray-500">{String(r.email ?? '—')}</td>
-                      <td className="px-4 py-3 font-mono text-[11px]">{s.pendingCerts}</td>
-                      <td className="px-4 py-3 font-mono text-[11px]">{s.introductions}</td>
-                      <td className="px-4 py-3">
-                        <Link href={`/admin/partners/${r.id}`}
-                          className="text-[10px] font-semibold text-gray-700 border border-gray-300 px-2 py-1 hover:border-gray-500 transition-colors">
-                          Ouvrir →
-                        </Link>
-                      </td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            </table>
-          </div>
-        )}
+        <PartnersTableClient
+          rows={rows.map(r => ({
+            id:           String(r.id),
+            full_name:    r.full_name != null ? String(r.full_name) : null,
+            email:        r.email     != null ? String(r.email)     : null,
+            ...statsFor(String(r.id)),
+          }))}
+        />
 
       </div>
     </main>

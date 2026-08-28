@@ -9,7 +9,7 @@ const SECTIONS = [
   {
     label: 'Certification',
     items: [
-      { href: '/admin/assets',  label: 'Soumissions / Grading' },
+      { href: '/admin/assets',  label: 'Grading' },
       { href: '/admin/catalog', label: 'Catalogue' },
     ],
   },
