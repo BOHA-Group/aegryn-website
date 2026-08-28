@@ -6,7 +6,7 @@ interface Props {
   locale?:            string
   labelSpecial?:      string
   labelReadOnline?:   string
-  labelFlipbook?:     string
+  labelDownloadPdf?: string
   labelSubscribe?:    string
   labelComingSoon?:   string
 }
@@ -15,7 +15,7 @@ interface Props {
  * Style Barnes : cover portrait centré sur fond blanc, titre sous le cover, 3 boutons d'accès rapide.
  * Boutons désactivés avec tooltip "publication prochainement" au survol.
  */
-export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Edition', labelReadOnline = 'Explorer en ligne', labelFlipbook = 'Feuilleter le PDF', labelSubscribe = 'Recevoir', labelComingSoon = 'Publication prochainement' }: Props) {
+export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Edition', labelReadOnline = 'Explorer en ligne', labelDownloadPdf = 'Feuilleter le PDF', labelSubscribe = 'Recevoir', labelComingSoon = 'Publication prochainement' }: Props) {
   const date      = new Date(issue.publishedAt)
   const formatted = date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
   const issueNum  = `Issue ${String(issue.number).padStart(2, '0')}`
@@ -77,9 +77,9 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
       {/* ── 3 boutons d'accès rapide — style Barnes — désactivés avec tooltip ── */}
       <div className="flex flex-wrap items-center justify-center gap-0">
         {[
-          { label: labelReadOnline,  filled: true  },
-          { label: labelFlipbook,    filled: false },
-          { label: labelSubscribe,   filled: false },
+          { label: labelReadOnline,   filled: true  },
+          { label: labelDownloadPdf,  filled: false },
+          { label: labelSubscribe,    filled: false },
         ].map(({ label, filled }) => (
           <div key={label} className="relative group/btn">
             <span
