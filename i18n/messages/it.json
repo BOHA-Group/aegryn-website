@@ -6242,18 +6242,18 @@
       "companyPlaceholder": "La tua azienda (opzionale)",
       "interestsLabel": "Le tue aree di interesse",
       "interests": {
-        "ma": "M&A e Transazioni",
-        "certification": "Certificazione di asset",
-        "build": "Build & Engineering",
-        "data": "Data e IA",
-        "cyber": "Cybersicurezza",
-        "advisory": "Advisory"
+        "market": "Il Mercato — M&A & Dati",
+        "techAi": "Tech & IA",
+        "build": "Build — Ingegneria degli asset",
+        "transaction": "Transazione & Strutturazione",
+        "buyers": "Profili acquirenti",
+        "outlook": "Outlook 2027"
       },
       "cta": "Esprimere il mio interesse",
       "success": "Grazie. Il tuo interesse è stato registrato. Ti contatteremo quando l'edizione cartacea sarà in produzione.",
-      "error": "Si è verificato un errore. Per favore riprova.",
-      "clientNote": "Questa lista è riservata ai clienti Aegryn. Un'edizione cartacea sarà prodotta solo se la domanda lo giustifica.",
-      "disclaimer": "La versione digitale rimane liberamente accessibile senza restrizioni. L'edizione cartacea è un'iniziativa attualmente in fase di valutazione.",
+      "error": "Si è verificato un errore. Riprova.",
+      "clientNote": "Riservato ai clienti Aegryn. Un'edizione cartacea sarà prodotta solo se la domanda lo giustifica.",
+      "disclaimer": "La versione digitale rimane liberamente accessibile. L'edizione cartacea è un'iniziativa attualmente in valutazione.",
       "backToMagazine": "Torna alla rivista"
     },
     "press": {

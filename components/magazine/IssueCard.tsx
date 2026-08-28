@@ -62,20 +62,10 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
               <div style={{ fontSize: 8.5, fontWeight: 400, letterSpacing: '0.05em', color: 'rgba(255,255,255,.4)', lineHeight: 1.6 }}>The anatomy of a tech asset that sells and one that doesn&apos;t.</div>
             </div>
           </div>
-          {/* QR code — pointe vers /magazine, affiche le contenu si isPublic */}
-          <div style={{ position: 'absolute', bottom: 14, right: 14, background: '#fff', padding: 4, borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,.3)', width: 62, height: 62, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            {isPublic ? (
-              /* eslint-disable-next-line @next/next/no-img-element */
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=54x54&data=https%3A%2F%2Faegryn.com%2Fmagazine&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png" width={54} height={54} style={{ display: 'block', imageRendering: 'pixelated' }} alt="aegryn.com/magazine" />
-            ) : (
-              <div style={{ width: 54, height: 54, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 3 }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=54x54&data=https%3A%2F%2Faegryn.com%2Fmagazine&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png" width={54} height={54} style={{ display: 'block', imageRendering: 'pixelated', opacity: 0.15 }} alt="" />
-                <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(255,255,255,0.88)', borderRadius: 2 }}>
-                  <span style={{ fontSize: 6.5, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#0F1A2B', textAlign: 'center', lineHeight: 1.3, padding: '0 4px' }}>{labelComingSoon}</span>
-                </div>
-              </div>
-            )}
+          {/* QR code — toujours visible, URL /magazine/qr gère le coming-soon côté serveur */}
+          <div style={{ position: 'absolute', bottom: 14, right: 14, background: '#fff', padding: 4, borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,.3)', width: 62, height: 62 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=54x54&data=https%3A%2F%2Faegryn.com%2Fmagazine%2Fqr&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png" width={54} height={54} style={{ display: 'block', imageRendering: 'pixelated' }} alt="aegryn.com/magazine" />
           </div>
         </div>
       </Link>

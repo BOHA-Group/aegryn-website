@@ -6242,12 +6242,12 @@
       "companyPlaceholder": "Uw bedrijf (optioneel)",
       "interestsLabel": "Uw interessegebieden",
       "interests": {
-        "ma": "M&A & Transacties",
-        "certification": "Asset-certificering",
-        "build": "Build & Engineering",
-        "data": "Data & AI",
-        "cyber": "Cyberbeveiliging",
-        "advisory": "Advisory"
+        "market": "De Markt — M&A & Data",
+        "techAi": "Tech & AI",
+        "build": "Build — Asset-engineering",
+        "transaction": "Transactie & Structurering",
+        "buyers": "Kopersprofielen",
+        "outlook": "Outlook 2027"
       },
       "cta": "Mijn interesse kenbaar maken",
       "success": "Dank u. Uw interesse is geregistreerd. Wij nemen contact met u op wanneer de gedrukte editie in productie gaat.",

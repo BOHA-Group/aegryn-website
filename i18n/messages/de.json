@@ -6237,6 +6237,35 @@
       "completeHint": "Vervollständigen Sie Ihre KYC-Akte, um Ihren Verkauf abzuschließen.",
       "pendingUpload": "Dokument wird geprüft.",
       "validatedWarn": "Dieses Dokument ist validiert. Ein neuer Upload ersetzt die aktuelle Version."
+    },
+    "subscribe": {
+      "meta": {
+        "title": "Druckausgabe — Aegryn Magazine",
+        "description": "Teilen Sie Ihr Interesse an der Druckausgabe des AEGRYN Magazine, reserviert für Aegryn-Kunden."
+      },
+      "printBadge": "Druckausgabe",
+      "title": "Interessentenliste — Druckausgabe",
+      "desc": "Die Druckausgabe des AEGRYN-Magazins ist aktiven Kunden vorbehalten. Geben Sie Ihre Interessensgebiete an, um auf die Wunschliste gesetzt zu werden.",
+      "digitalNote": "Die digitale Version ist frei zugänglich.",
+      "digitalNoteCta": "Magazin online lesen",
+      "namePlaceholder": "Ihr Name",
+      "emailPlaceholder": "Ihre E-Mail-Adresse",
+      "companyPlaceholder": "Ihr Unternehmen (optional)",
+      "interestsLabel": "Ihre Interessensgebiete",
+      "interests": {
+        "market": "Der Markt — M&A & Daten",
+        "techAi": "Tech & KI",
+        "build": "Build — Asset-Engineering",
+        "transaction": "Transaktion & Strukturierung",
+        "buyers": "Käuferprofile",
+        "outlook": "Ausblick 2027"
+      },
+      "cta": "Mein Interesse bekunden",
+      "success": "Danke. Ihr Interesse wurde erfasst.",
+      "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+      "clientNote": "Reserviert für Aegryn-Kunden.",
+      "disclaimer": "Die digitale Version bleibt frei zugänglich.",
+      "backToMagazine": "Zurück zum Magazin"
     }
   },
   "partner": {
@@ -6330,12 +6359,12 @@
       "companyPlaceholder": "Ihr Unternehmen (optional)",
       "interestsLabel": "Ihre Interessensgebiete",
       "interests": {
-        "ma": "M&A & Transaktionen",
-        "certification": "Asset-Zertifizierung",
-        "build": "Build & Engineering",
-        "data": "Data & KI",
-        "cyber": "Cybersicherheit",
-        "advisory": "Advisory"
+        "market": "Der Markt — M&A & Daten",
+        "techAi": "Tech & KI",
+        "build": "Build — Asset-Engineering",
+        "transaction": "Transaktion & Strukturierung",
+        "buyers": "Käuferprofile",
+        "outlook": "Ausblick 2027"
       },
       "cta": "Mein Interesse bekunden",
       "success": "Danke. Ihr Interesse wurde erfasst. Wir kontaktieren Sie, wenn die Druckausgabe produziert wird.",

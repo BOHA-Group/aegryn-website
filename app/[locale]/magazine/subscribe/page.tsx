@@ -27,12 +27,12 @@ export default async function SubscribePage({
   const t = await getTranslations({ locale, namespace: 'magazine.subscribe' })
 
   const interests = [
-    { key: 'ma',            label: t('interests.ma') },
-    { key: 'certification', label: t('interests.certification') },
-    { key: 'build',         label: t('interests.build') },
-    { key: 'data',          label: t('interests.data') },
-    { key: 'cyber',         label: t('interests.cyber') },
-    { key: 'advisory',      label: t('interests.advisory') },
+    { key: 'market',      label: t('interests.market') },
+    { key: 'techAi',      label: t('interests.techAi') },
+    { key: 'build',       label: t('interests.build') },
+    { key: 'transaction', label: t('interests.transaction') },
+    { key: 'buyers',      label: t('interests.buyers') },
+    { key: 'outlook',     label: t('interests.outlook') },
   ]
 
   return (
