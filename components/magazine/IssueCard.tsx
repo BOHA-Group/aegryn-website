@@ -30,7 +30,7 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
       <Link href={`/${locale}/magazine/${issue.slug}`} className="block group" style={{ width: 420, height: 595, flexShrink: 0 }}>
         <div style={{ width: 420, height: 595, position: 'relative', overflow: 'hidden', boxShadow: '0 8px 40px rgba(0,0,0,.28)', cursor: 'pointer' }}>
           {/* Image de fond */}
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(/magazine/issue-${padNum}/cover-bg.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center top' }} />
+          <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(/magazine/issue-${padNum}/cover-magazine-issue-${padNum}.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center top' }} />
           {/* Overlay */}
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg,rgba(5,10,15,.75) 0%,rgba(5,10,15,.45) 45%,rgba(5,10,15,.78) 100%)' }} />
           {/* Contenu */}

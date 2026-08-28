@@ -35,7 +35,7 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: 'url(/magazine/issue-01/cover-bg.jpg)',
+          backgroundImage: 'url(/magazine/issue-01/cover-magazine-issue-01.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center top',
         }}

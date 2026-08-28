@@ -43,7 +43,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
           <div style={{ position: 'absolute', top: 0, left: 0, transformOrigin: 'top left', transform: 'scale(0.369)', width: 420, height: 595 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`/magazine/issue-${padNum}/cover-bg.jpg`}
+              src={`/magazine/issue-${padNum}/cover-magazine-issue-${padNum}.jpg`}
               alt=""
               style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
             />
