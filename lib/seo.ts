@@ -200,9 +200,9 @@ export const aegrynOrganizationSchema = {
   },
   sameAs: [
     'https://www.linkedin.com/company/106273747/',
-    'https://www.instagram.com/boha_group/',
+    'https://www.instagram.com/aegrynhq/',
     'https://www.tiktok.com/@aegrynhq',
-    'https://www.youtube.com/@aegryn.auction',
+    'https://www.youtube.com/@aegrynhq',
     'https://www.facebook.com/aegrynhq',
   ],
   founder: {
