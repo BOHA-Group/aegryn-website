@@ -8,12 +8,14 @@ interface Props {
   labelReadOnline?:   string
   labelFlipbook?:     string
   labelSubscribe?:    string
+  labelComingSoon?:   string
 }
 
 /**
  * Style Barnes : cover portrait centré sur fond blanc, titre sous le cover, 3 boutons d'accès rapide.
+ * Boutons désactivés avec tooltip "publication prochainement" au survol.
  */
-export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Edition', labelReadOnline = 'Explorer en ligne', labelFlipbook = 'Feuilleter le PDF', labelSubscribe = 'Recevoir' }: Props) {
+export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Edition', labelReadOnline = 'Explorer en ligne', labelFlipbook = 'Feuilleter le PDF', labelSubscribe = 'Recevoir', labelComingSoon = 'Publication prochainement' }: Props) {
   const date      = new Date(issue.publishedAt)
   const formatted = date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
   const issueNum  = `Issue ${String(issue.number).padStart(2, '0')}`
@@ -72,26 +74,30 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
         {formatted} — {issue.title}
       </p>
 
-      {/* ── 3 boutons d'accès rapide — style Barnes ── */}
+      {/* ── 3 boutons d'accès rapide — style Barnes — désactivés avec tooltip ── */}
       <div className="flex flex-wrap items-center justify-center gap-0">
-        <Link
-          href={`/${locale}/magazine/${issue.slug}`}
-          className="font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold bg-magazine-black text-white hover:bg-magazine-accent hover:text-magazine-black transition-colors"
-        >
-          {labelReadOnline}
-        </Link>
-        <Link
-          href={`/${locale}/magazine/${issue.slug}`}
-          className="font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold border border-magazine-black/30 text-magazine-black hover:border-magazine-black transition-colors"
-        >
-          {labelFlipbook}
-        </Link>
-        <Link
-          href={`/${locale}/magazine/subscribe`}
-          className="font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold border border-magazine-black/30 text-magazine-black hover:border-magazine-black transition-colors"
-        >
-          {labelSubscribe}
-        </Link>
+        {[
+          { label: labelReadOnline,  filled: true  },
+          { label: labelFlipbook,    filled: false },
+          { label: labelSubscribe,   filled: false },
+        ].map(({ label, filled }) => (
+          <div key={label} className="relative group/btn">
+            <span
+              className={[
+                'inline-block font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold cursor-not-allowed select-none transition-colors',
+                filled
+                  ? 'bg-magazine-black/30 text-white/50'
+                  : 'border border-magazine-black/15 text-magazine-black/30',
+              ].join(' ')}
+              aria-disabled="true"
+            >
+              {label}
+            </span>
+            <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 whitespace-nowrap bg-magazine-black text-white font-mono text-[8px] tracking-[0.12em] uppercase px-3 py-1.5 opacity-0 group-hover/btn:opacity-100 transition-opacity">
+              {labelComingSoon}
+            </span>
+          </div>
+        ))}
       </div>
 
     </div>

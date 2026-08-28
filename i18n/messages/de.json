@@ -6197,7 +6197,11 @@
       "navDownloadPdf": "PDF herunterladen",
       "cardReadIssue": "Ausgabe lesen",
       "cardExploreOnline": "Online erkunden",
-      "cardSpecialEdition": "Sonderausgabe"
+      "cardSpecialEdition": "Sonderausgabe",
+      "readOnline": "Online erkunden",
+      "downloadPdf": "PDF blättern",
+      "subscribe": "Erhalten",
+      "comingSoon": "Demnächst verfügbar"
     },
     "ndaView": {
       "meta": "NDA — Verkäuferbereich Aegryn",
@@ -6309,25 +6313,7 @@
       "monthlyPlan": "Monatlich — CHF 89/Monat",
       "yearlyPlan": "Jährlich — CHF 80/Monat (–10%)",
       "active": "Aktiv",
-      "inactive": "Inaktiv",
-      "readOnline": "Online lesen",
-      "downloadPdf": "PDF ansehen",
-      "subscribe": "Abonnieren",
-      "ctaEstimate": "Asset bewerten",
-      "ctaGrade": "Grade entdecken",
-      "ctaTitle": "Sie haben etwas Echtes aufgebaut.",
-      "ctaSub": "Wir zertifizieren es. Wir transaktionieren es.",
-      "ctaLine": "AEGRYN — Zertifiziert für die Transaktion. Schweiz.",
-      "scrollDown": "Scrollen",
-      "source": "Quelle",
-      "estimatedGrade": "Geschätzter AEGRYN-Grade",
-      "whatMadeItWork": "Was funktioniert hat",
-      "disclaimer": "Alle Analysen privater Deals basieren auf öffentlichen Informationen und AEGRYN-Schätzungen. Sie stellen keine Anlageberatung dar.",
-      "indexNote": "Der AEGRYN Index wird mit jeder Ausgabe tiefgründiger, wenn unsere Zertifizierungsdatenbank wächst.",
-      "meta": {
-        "title": "Aegryn Magazine 2026 — European Tech M&A Intelligence",
-        "description": "Jährlicher Referenzbericht über den europäischen Tech-M&A-Markt. Daten, Analysen und Perspektiven von AEGRYN."
-      }
+      "inactive": "Inaktiv"
     },
     "subscribe": {
       "meta": {

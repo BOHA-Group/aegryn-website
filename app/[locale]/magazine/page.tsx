@@ -71,6 +71,7 @@ export default async function MagazineHubPage({ params }: Props) {
               labelReadOnline={tHub('readOnline')}
               labelFlipbook={tHub('downloadPdf')}
               labelSubscribe={tHub('subscribe')}
+              labelComingSoon={tHub('comingSoon')}
             />
           ))}
         </div>

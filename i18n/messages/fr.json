@@ -6309,7 +6309,11 @@
       "navDownloadPdf": "Télécharger PDF",
       "cardReadIssue": "Lire l'issue",
       "cardExploreOnline": "Explorer en ligne",
-      "cardSpecialEdition": "Special Edition"
+      "cardSpecialEdition": "Special Edition",
+      "readOnline": "Explorer en ligne",
+      "downloadPdf": "Feuilleter le PDF",
+      "subscribe": "Recevoir",
+      "comingSoon": "Publication prochainement"
     },
     "report": {
       "title": "Aegryn Magazine",

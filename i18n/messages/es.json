@@ -6197,7 +6197,11 @@
       "navDownloadPdf": "Descargar PDF",
       "cardReadIssue": "Leer el número",
       "cardExploreOnline": "Explorar en línea",
-      "cardSpecialEdition": "Edición especial"
+      "cardSpecialEdition": "Edición especial",
+      "readOnline": "Explorar en línea",
+      "downloadPdf": "Hojear el PDF",
+      "subscribe": "Recibir",
+      "comingSoon": "Publicación próximamente"
     },
     "report": {
       "title": "Aegryn Magazine",
