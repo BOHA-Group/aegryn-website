@@ -19,6 +19,7 @@ const ALL_ISSUES: MagazineIssue[] = [ISSUE_01]
 function issueFlags(num: number) {
   const pad = String(num).padStart(2, '0')
   return {
+    featured:    `magazine_issue_${pad}_featured`,
     public:      `magazine_issue_${pad}_public`,
     earlyAccess: `magazine_issue_${pad}_early_access`,
   }
@@ -70,6 +71,7 @@ export default async function AdminMagazinePage({
         <div className="space-y-8">
           {ALL_ISSUES.map(issue => {
             const flags       = issueFlags(issue.number)
+            const isFeatured  = getBool(flags.featured)
             const isPublic    = getBool(flags.public)
             const isEarly     = getBool(flags.earlyAccess)
             const pad         = String(issue.number).padStart(2, '0')
@@ -97,6 +99,27 @@ export default async function AdminMagazinePage({
                 </div>
 
                 <div className="space-y-2">
+                  {/* Niveau 0 — à la une */}
+                  <div className="bg-white border border-gray-200 px-6 py-5">
+                    <div className="flex items-start justify-between gap-6">
+                      <div>
+                        <div className="flex items-center gap-2 mb-0.5">
+                          <span className="text-[9px] font-mono uppercase tracking-widest text-violet-600 bg-violet-50 border border-violet-200 px-2 py-0.5">À la une</span>
+                          <p className="font-semibold text-[14px] text-gray-900">Issue en vedette</p>
+                        </div>
+                        <p className="text-[12px] text-gray-400 mt-1 leading-relaxed">
+                          Affiche cette issue en hero sur la page /magazine. Une seule issue doit être à la une à la fois.
+                          Les autres issues s&apos;affichent en carousel compact ci-dessous.
+                        </p>
+                      </div>
+                      <MagazinePublishToggle
+                        issueKey={flags.featured}
+                        issueLabel=""
+                        initialValue={isFeatured}
+                      />
+                    </div>
+                  </div>
+
                   {/* Niveau 1 — early access */}
                   <div className="bg-white border border-gray-200 px-6 py-5">
                     <div className="flex items-start justify-between gap-6">

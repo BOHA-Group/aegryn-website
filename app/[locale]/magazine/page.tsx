@@ -1,8 +1,9 @@
 import { getTranslations }   from 'next-intl/server'
 import type { Metadata }     from 'next'
-import { IssueCard }         from '@/components/magazine/IssueCard'
-import { NewsletterBlock }   from '@/components/magazine/NewsletterBlock'
-import { ISSUE_01 }          from '@/content/magazine/issue-01/meta'
+import { IssueCard }           from '@/components/magazine/IssueCard'
+import { IssueMiniCard }       from '@/components/magazine/IssueMiniCard'
+import { NewsletterBlock }     from '@/components/magazine/NewsletterBlock'
+import { ISSUE_01 }            from '@/content/magazine/issue-01/meta'
 import { createServiceClient } from '@/lib/supabase'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -78,24 +79,55 @@ export default async function MagazineHubPage({ params }: Props) {
         </div>
       </div>
 
-      {/* ── Issues list ── */}
-      <div className="max-w-magazine mx-auto px-6 md:px-[120px] pb-24">
-        <div className="border-t border-magazine-black/10 pt-12 space-y-8">
-          {ALL_ISSUES.map(issue => (
-            <IssueCard
-              key={issue.slug}
-              issue={issue}
-              locale={locale}
-              labelSpecial={tHub('cardSpecialEdition')}
-              labelReadOnline={tHub('readOnline')}
-              labelDownloadPdf={tHub('downloadPdf')}
-              labelSubscribe={tHub('subscribe')}
-              labelComingSoon={tHub('comingSoon')}
-              isPublic={flags[`magazine_issue_${String(issue.number).padStart(2,'0')}_public`] ?? false}
-              isPreview={isPreview}
-            />
-          ))}
-        </div>
+      {/* ── Issues ── */}
+      <div className="border-t border-magazine-black/10">
+        {(() => {
+          const featuredIssue = ALL_ISSUES.find(
+            i => flags[`magazine_issue_${String(i.number).padStart(2,'0')}_featured`] ?? false
+          ) ?? ALL_ISSUES[0]
+          const otherIssues = ALL_ISSUES.filter(i => i.slug !== featuredIssue.slug)
+          const pad = (n: number) => String(n).padStart(2,'0')
+
+          return (
+            <>
+              {/* Hero — issue à la une */}
+              <div className="max-w-magazine mx-auto px-6 md:px-[120px] py-16">
+                <IssueCard
+                  issue={featuredIssue}
+                  locale={locale}
+                  labelSpecial={tHub('cardSpecialEdition')}
+                  labelReadOnline={tHub('readOnline')}
+                  labelDownloadPdf={tHub('downloadPdf')}
+                  labelSubscribe={tHub('subscribe')}
+                  labelComingSoon={tHub('comingSoon')}
+                  isPublic={flags[`magazine_issue_${pad(featuredIssue.number)}_public`] ?? false}
+                  isPreview={isPreview}
+                />
+              </div>
+
+              {/* Carousel compact — autres issues */}
+              {otherIssues.length > 0 && (
+                <div className="border-t border-magazine-black/8 bg-magazine-cream">
+                  <div className="max-w-magazine mx-auto px-6 md:px-[120px] py-14">
+                    <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30 mb-8">
+                      {tHub('allIssuesLabel')}
+                    </p>
+                    <div className="flex items-end gap-6 overflow-x-auto pb-2">
+                      {otherIssues.map(issue => (
+                        <IssueMiniCard
+                          key={issue.slug}
+                          issue={issue}
+                          locale={locale}
+                          active={false}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </>
+          )
+        })()}
       </div>
 
       {/* ── Prochains numéros ── */}
