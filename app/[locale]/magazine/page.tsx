@@ -4,6 +4,9 @@ import { IssueCard }           from '@/components/magazine/IssueCard'
 import { IssueMiniCard }       from '@/components/magazine/IssueMiniCard'
 import { NewsletterBlock }     from '@/components/magazine/NewsletterBlock'
 import { ISSUE_01 }            from '@/content/magazine/issue-01/meta'
+import { ISSUE_02 }            from '@/content/magazine/issue-02/meta'
+import { ISSUE_03 }            from '@/content/magazine/issue-03/meta'
+import { ISSUE_04 }            from '@/content/magazine/issue-04/meta'
 import { createServiceClient } from '@/lib/supabase'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -19,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const ALL_ISSUES = [ISSUE_01]
+const ALL_ISSUES = [ISSUE_01, ISSUE_02, ISSUE_03, ISSUE_04]
 
 async function getMagazineFlags(): Promise<Record<string, boolean>> {
   try {

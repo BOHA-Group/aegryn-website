@@ -1,6 +1,9 @@
 import { checkAdminAccess }   from '@/lib/adminAuth'
 import { createServiceClient } from '@/lib/supabase'
 import { ISSUE_01 }            from '@/content/magazine/issue-01/meta'
+import { ISSUE_02 }            from '@/content/magazine/issue-02/meta'
+import { ISSUE_03 }            from '@/content/magazine/issue-03/meta'
+import { ISSUE_04 }            from '@/content/magazine/issue-04/meta'
 import type { MagazineIssue }  from '@/lib/magazine/types'
 import type { Metadata }       from 'next'
 import Link                    from 'next/link'
@@ -14,7 +17,7 @@ export const metadata: Metadata = {
 export const dynamic = 'force-dynamic'
 
 /* Registre de toutes les issues — ajouter ici à chaque nouveau numéro */
-const ALL_ISSUES: MagazineIssue[] = [ISSUE_01]
+const ALL_ISSUES: MagazineIssue[] = [ISSUE_01, ISSUE_02, ISSUE_03, ISSUE_04]
 
 function issueFlags(num: number) {
   const pad = String(num).padStart(2, '0')

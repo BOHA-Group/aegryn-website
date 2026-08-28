@@ -15,10 +15,13 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
   const padNum    = String(issue.number).padStart(2, '0')
   const formatted = new Date(issue.publishedAt).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' }).toUpperCase()
 
+  const isDraft = issue.status === 'draft'
+
   return (
     <Link
-      href={`/${locale}/magazine/${issue.slug}`}
-      className={`block shrink-0 transition-transform hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}
+      href={isDraft ? '#' : `/${locale}/magazine/${issue.slug}`}
+      onClick={isDraft ? (e) => e.preventDefault() : undefined}
+      className={`block shrink-0 transition-transform ${isDraft ? 'cursor-default' : `hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}`}
       style={{ width: 155, flexShrink: 0 }}
     >
       <div
@@ -32,14 +35,19 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
             : '0 3px 14px rgba(0,0,0,.18)',
         }}
       >
-        {/* Cover BG */}
+        {/* Cover BG — fallback gradient pour les issues sans image */}
         <div
           style={{
             position: 'absolute',
             inset: 0,
-            backgroundImage: `url(/magazine/issue-${padNum}/cover-bg.jpg)`,
+            backgroundImage: issue.status === 'published'
+              ? `url(/magazine/issue-${padNum}/cover-bg.jpg)`
+              : undefined,
             backgroundSize: 'cover',
             backgroundPosition: 'center top',
+            background: issue.status !== 'published'
+              ? 'linear-gradient(160deg,#0a1520 0%,#0f2235 60%,#081018 100%)'
+              : undefined,
           }}
         />
         {/* Overlay */}
@@ -81,6 +89,13 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
             <div style={{ fontSize: 10, fontWeight: 800, color: '#5ADDA4', letterSpacing: '-0.01em', lineHeight: 1.1 }}>{issue.title}</div>
           </div>
         </div>
+
+        {/* Draft badge */}
+        {isDraft && (
+          <div style={{ position: 'absolute', top: 8, left: 8, background: 'rgba(90,221,164,.15)', border: '1px solid rgba(90,221,164,.4)', padding: '2px 6px' }}>
+            <span style={{ fontSize: 6, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#5ADDA4' }}>À paraître</span>
+          </div>
+        )}
 
         {/* Active indicator */}
         {active && (
