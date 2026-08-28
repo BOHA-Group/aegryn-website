@@ -32,7 +32,7 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
           {/* Image de fond */}
           <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(/magazine/issue-${padNum}/cover-magazine-issue-${padNum}.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center top' }} />
           {/* Overlay */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg,rgba(5,10,15,.75) 0%,rgba(5,10,15,.45) 45%,rgba(5,10,15,.78) 100%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg,rgba(5,10,15,.35) 0%,rgba(5,10,15,.10) 45%,rgba(5,10,15,.50) 100%)' }} />
           {/* Contenu */}
           <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px 30px' }}>
             {/* TOP BAR */}

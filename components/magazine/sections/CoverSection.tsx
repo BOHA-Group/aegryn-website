@@ -43,7 +43,7 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
       {/* Dark overlay for readability */}
       <div
         className="absolute inset-0"
-        style={{ background: 'linear-gradient(160deg, rgba(5,10,15,0.82) 0%, rgba(5,10,15,0.65) 50%, rgba(5,10,15,0.88) 100%)' }}
+        style={{ background: 'linear-gradient(160deg, rgba(5,10,15,0.38) 0%, rgba(5,10,15,0.12) 50%, rgba(5,10,15,0.52) 100%)' }}
       />
 
       {/* QR code scannable — reporté depuis la cover flipbook, coin bas-droit */}
