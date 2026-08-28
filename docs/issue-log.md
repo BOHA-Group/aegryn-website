@@ -91,4 +91,66 @@ CookieScript détecte désormais correctement son installation, lit le consentem
 
 ---
 
+---
+
+## ✅ ISSUE-003 — Bouton "RECEVOIR" hover invisible (magazine)
+
+**Détecté :** 2026-08-28  
+**Résolu :** 2026-08-28  
+**Commits :** `543cf08`, `f3a2c4d`  
+
+**Symptôme :** Au survol du bouton "RECEVOIR" sur la page magazine, le texte devenait invisible (blanc sur fond blanc) — `hover:text-white` purgé par Tailwind.  
+**Fix :** Déplacement des styles hover vers une classe CSS dédiée `magazine-btn-receive` dans `styles/globals.css` avec valeurs hexadécimales explicites (`#0F1A2B` / `#ffffff`).  
+**Fichiers :** `components/magazine/IssueCard.tsx`, `styles/globals.css`
+
+---
+
+## ✅ ISSUE-004 — Mini cover issue-01 affichage incorrect
+
+**Détecté :** 2026-08-28  
+**Résolu :** 2026-08-28  
+**Commit :** `029f4ba`  
+
+**Symptôme :** La mini-carte du numéro 01 affichait l'image brute en paysage sans overlay ni texte.  
+**Fix :** Restauration de l'approche overlay + texte identique au flipbook source, avec `transform: scale(0.369)` sur un conteneur 420×595px.  
+**Fichiers :** `components/magazine/IssueMiniCard.tsx`
+
+---
+
+## ✅ ISSUE-005 — Logo navbar : texte "formerly BOHA-Group" et format non officiel
+
+**Détecté :** 2026-08-28  
+**Résolu :** 2026-08-28  
+**Commits :** `12bd07c`, `2aa8ec4`, `47ae6a3`  
+
+**Symptôme :** La navbar affichait un logo SVG composite non officiel avec la mention "formerly BOHA-Group".  
+**Fix :** Remplacement par l'image officielle `logo-aegryn-navbar.jpg` (`public/images/`) via `next/image`, hauteur `h-16` (= hauteur de la navbar), lien `block` pour zone cliquable totale.  
+**Fichiers :** `components/layout/Nav.tsx`
+
+---
+
+## ✅ ISSUE-006 — "AEGRYN" isolé dupliqué en haut de la page magazine
+
+**Détecté :** 2026-08-28  
+**Résolu :** 2026-08-28  
+**Commit :** `47ae6a3`  
+
+**Symptôme :** Un `<p>AEGRYN</p>` redondant avec le logo navbar apparaissait au-dessus du H1 de la page magazine.  
+**Fix :** Suppression du paragraphe (lignes 64-66 de `app/[locale]/magazine/page.tsx`).  
+**Fichiers :** `app/[locale]/magazine/page.tsx`
+
+---
+
+## ✅ ISSUE-007 — Lien "< CERTIFICATION" parasite en haut de page soumettre
+
+**Détecté :** 2026-08-28  
+**Résolu :** 2026-08-28  
+**Commit :** `18871ce`  
+
+**Symptôme :** Un lien retour `< CERTIFICATION` non désiré apparaissait en haut du hero de la page "Soumettre pour certification".  
+**Fix :** Suppression du bloc `<Link href="/grade">` + nettoyage de l'import `ChevronLeft`.  
+**Fichiers :** `app/[locale]/grade/submit/GradeSubmitForm.tsx`
+
+---
+
 *Ce fichier est mis à jour manuellement à chaque bug résolu.*

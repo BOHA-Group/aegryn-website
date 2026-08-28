@@ -152,6 +152,28 @@ Fonctionnalité non activée — le flux de facturation n'est pas encore opérat
 
 ---
 
+### Harmonisation labels hero — format texte "rappel section"
+
+**Constaté le :** 2026-08-28  
+**Contexte :** Audit visuel des pages publiques — 3 formats coexistent pour le label au-dessus du H1.
+
+**Format A — fond blanc (about, career, contact, experts…)**  
+`font-sans font-semibold text-[11px] uppercase tracking-[0.25–0.28em] text-ag-gray-light` — pas de barre, pas de tiret
+
+**Format B — fond navy (catalog, transact, mandate, grade/submit…)**  
+`font-[mono|sans] text-[10px] uppercase tracking-[0.28em] text-ag-apex flex items-center gap-3` + `<span w-6 h-px bg-ag-apex/50 />`
+
+**Format C — contact (isolé, écart)**  
+`font-sans font-semibold text-xs uppercase tracking-[0.3em] text-ag-apex` → utilise `text-ag-apex` (vert) sans barre sur fond blanc — incohérent avec Format A
+
+**Ce qui est à faire :**
+- `app/[locale]/contact/page.tsx` ligne 27 : passer `text-ag-apex` → `text-ag-gray-light` (aligner sur Format A fond blanc)
+- `app/[locale]/about/page.tsx` ligne 57 : décider si le préfixe `/` devant les labels de sections internes est intentionnel (typographie éditoriale) ou à supprimer
+
+**Priorité :** basse — purement visuel, non bloquant
+
+---
+
 ### Code — tâches mineures
 
 - [ ] **URL Subblink** : remplacer `https://subblink.boha-group.com` par `https://subblink.app`

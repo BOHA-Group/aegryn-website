@@ -11,26 +11,32 @@ Convention de nommage : `NNN_nom_table.sql` (NNN = ordre d'exécution).
 
 ## Migrations exécutées en production
 
-| # | Fichier | Table(s) créée(s) | Dépendances | Statut |
-|---|---------|-------------------|-------------|--------|
-| 001 | `001_valuation_leads.sql` | `valuation_leads` | — | ✅ exécuté |
-| 002 | `002_catalog_waitlist.sql` | `catalog_waitlist` | — | ✅ exécuté |
-| 003 | `003_bookings_and_alliances.sql` | `assessment_day_bookings`, `alliance_applications` | — | ✅ exécuté |
-| 004 | `004_assets.sql` | `assets` | trigger `set_updated_at` | ✅ exécuté |
-| 005 | `005_user_profiles.sql` | `user_profiles` + colonne `assets.seller_uid` | 004, Auth activé | ✅ exécuté |
-| 006 | `006_nda_requests.sql` | `nda_requests` — demandes d'accès NDA acquéreurs | 004 | ✅ exécuté |
-| 007 | `007_evaluation_tiers.sql` | Colonnes `evaluation_type`, `evaluation_fee_*`, `stripe_payment_intent_id`, `partner_reviewer_*`, `source_valuation_lead_id` sur `assets` | 004, 001 | ⚠️ à exécuter |
+| # | Fichier | Objectif principal | Statut |
+|---|---------|-------------------|--------|
+| 001 | `001_valuation_leads.sql` | Table `valuation_leads` | ✅ |
+| 002 | `002_catalog_waitlist.sql` | Table `catalog_waitlist` | ✅ |
+| 003 | `003_bookings_and_alliances.sql` | `assessment_day_bookings`, `alliance_applications` | ✅ |
+| 004 | `004_assets.sql` | Table `assets` + trigger `set_updated_at` | ✅ |
+| 005 | `005_user_profiles.sql` | `user_profiles` + colonne `assets.seller_uid` | ✅ |
+| 006 | `006_nda_requests.sql` | `nda_requests` — accès NDA acquéreurs | ✅ |
+| 007 | `007_evaluation_tiers.sql` | Colonnes evaluation sur `assets` | ✅ |
+| 008–065 | *(voir fichiers SQL)* | Profils, KYC, parrainage, grades, auction, invoices, sécurité RLS | ✅ |
+| 086 | `086_magazine_early_access_flag.sql` | Flag `magazine_early_access` dans `site_settings` | ✅ |
+| 087 | `087_magazine_featured_flag.sql` | Flag `magazine_featured_issue` dans `site_settings` | ✅ |
+| 088 | `088_magazine_issues_02_03_04_flags.sql` | Flags issues 02/03/04 dans `site_settings` | ✅ |
+| 089 | `089_print_wishlist_address.sql` | Colonnes adresse (`first_name`, `last_name`, `address`, `city`, `postal_code`, `country`) sur `print_wishlist` | ✅ |
+| 090 | `090_print_wishlist_civility_phone_rgpd.sql` | Colonnes `civility`, `phone`, `rgpd_consent` sur `print_wishlist` | ✅ |
+| 091 | `091_print_wishlist_grants.sql` | Grants `service_role` sur `print_wishlist` + colonnes idempotentes (089+090) | ✅ |
+
+> **Note :** Les migrations 008–065 couvrent notamment : `profiles`, `kyc_documents`, `expert_subscriptions`, `referral_codes`, `assets` (grade engine, CIFS), `auction_sessions`, `bids`, `invoices`, `user_notifications`, `buyer_commission_dues`, policies RLS avancées et sécurité colonnes (`admin_note`).
 
 ---
 
 ## Migrations futures planifiées
 
-| # | Fichier (à créer) | Objectif | Prérequis |
-|---|-------------------|----------|-----------|
-| 007 | `007_sessions.sql` | `auction_sessions` — sessions de vente planifiées | — |
-| 008 | `008_bids.sql` | `bids` — offres d'acquéreurs sur actifs | 005, 007 |
-| 009 | `009_transactions.sql` | `transactions` — clôture de vente, escrow | 004, 008 |
-| 010 | `010_notifications.sql` | `notifications` — alertes utilisateurs | 005 |
+| # | Objectif | Prérequis |
+|---|----------|-----------|
+| 092+ | À définir selon évolution produit | — |
 
 ---
 
