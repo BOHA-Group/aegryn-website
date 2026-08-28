@@ -214,3 +214,15 @@ img { image-rendering: auto; }
     transition-duration       : 0.01ms !important;
   }
 }
+
+/* ── Bouton Recevoir — magazine ─────────────────────────────────── */
+.magazine-btn-receive {
+  border: 1px solid #0F1A2B;
+  color: #0F1A2B;
+  background-color: transparent;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.magazine-btn-receive:hover {
+  background-color: #0F1A2B;
+  color: #ffffff;
+}

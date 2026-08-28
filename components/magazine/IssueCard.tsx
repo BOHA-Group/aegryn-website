@@ -118,7 +118,7 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
         {/* Bouton 3 — Recevoir — scroll vers #wishlist */}
         <a
           href="#wishlist"
-          className="inline-block font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold border border-[#0F1A2B] text-[#0F1A2B] transition-all duration-150 hover:bg-[#0F1A2B] hover:text-[#ffffff]"
+          className="magazine-btn-receive inline-block font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold"
         >
           {labelSubscribe}
         </a>
