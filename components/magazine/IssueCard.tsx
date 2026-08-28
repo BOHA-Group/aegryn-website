@@ -84,10 +84,10 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
           <div key={label} className="relative group/btn">
             <span
               className={[
-                'inline-block font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold cursor-not-allowed select-none transition-colors',
+                'inline-block font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold cursor-not-allowed select-none opacity-50',
                 filled
-                  ? 'bg-magazine-black/30 text-white/50'
-                  : 'border border-magazine-black/15 text-magazine-black/30',
+                  ? 'bg-magazine-black text-white'
+                  : 'border border-magazine-black text-magazine-black',
               ].join(' ')}
               aria-disabled="true"
             >
