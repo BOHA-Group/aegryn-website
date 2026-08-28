@@ -6242,12 +6242,16 @@
       "companyPlaceholder": "Su empresa (opcional)",
       "interestsLabel": "Sus áreas de interés",
       "interests": {
-        "market": "El Mercado — M&A & Datos",
-        "techAi": "Tech & IA",
-        "build": "Build — Ingeniería de activos",
+        "editorial":   "Editorial",
+        "market":      "El Mercado — M&A & Datos",
+        "techAi":      "Tech & IA",
+        "build":       "Build — Ingeniería de activos",
         "transaction": "Transacción & Estructuración",
-        "buyers": "Perfiles de compradores",
-        "outlook": "Outlook 2027"
+        "buyers":      "Buyers — Perfiles de compradores",
+        "outlook":     "Outlook 2027",
+        "index":       "AEGRYN Index",
+        "people":      "People",
+        "life":        "Life"
       },
       "cta": "Expresar mi interés",
       "success": "Gracias. Su interés ha sido registrado. Nos pondremos en contacto cuando la edición impresa entre en producción.",

@@ -6242,12 +6242,16 @@
       "companyPlaceholder": "Uw bedrijf (optioneel)",
       "interestsLabel": "Uw interessegebieden",
       "interests": {
-        "market": "De Markt — M&A & Data",
-        "techAi": "Tech & AI",
-        "build": "Build — Asset-engineering",
+        "editorial":   "Editorial",
+        "market":      "De Markt — M&A & Data",
+        "techAi":      "Tech & AI",
+        "build":       "Build — Asset-engineering",
         "transaction": "Transactie & Structurering",
-        "buyers": "Kopersprofielen",
-        "outlook": "Outlook 2027"
+        "buyers":      "Buyers — Kopersprofielen",
+        "outlook":     "Outlook 2027",
+        "index":       "AEGRYN Index",
+        "people":      "People",
+        "life":        "Life"
       },
       "cta": "Mijn interesse kenbaar maken",
       "success": "Dank u. Uw interesse is geregistreerd. Wij nemen contact met u op wanneer de gedrukte editie in productie gaat.",

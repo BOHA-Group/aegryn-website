@@ -6253,12 +6253,16 @@
       "companyPlaceholder": "Ihr Unternehmen (optional)",
       "interestsLabel": "Ihre Interessensgebiete",
       "interests": {
-        "market": "Der Markt — M&A & Daten",
-        "techAi": "Tech & KI",
-        "build": "Build — Asset-Engineering",
+        "editorial":   "Editorial",
+        "market":      "Der Markt — M&A & Daten",
+        "techAi":      "Tech & KI",
+        "build":       "Build — Asset-Engineering",
         "transaction": "Transaktion & Strukturierung",
-        "buyers": "Käuferprofile",
-        "outlook": "Ausblick 2027"
+        "buyers":      "Buyers — Käuferprofile",
+        "outlook":     "Ausblick 2027",
+        "index":       "AEGRYN Index",
+        "people":      "People",
+        "life":        "Life"
       },
       "cta": "Mein Interesse bekunden",
       "success": "Danke. Ihr Interesse wurde erfasst.",

@@ -6254,12 +6254,16 @@
       "companyPlaceholder": "Your company (optional)",
       "interestsLabel": "Your areas of interest",
       "interests": {
-        "market": "The Market — M&A & Data",
-        "techAi": "Tech & AI",
-        "build": "Build — Asset Engineering",
+        "editorial":   "Editorial",
+        "market":      "The Market — M&A & Data",
+        "techAi":      "Tech & AI",
+        "build":       "Build — Asset Engineering",
         "transaction": "Transaction & Structuring",
-        "buyers": "Buyer Profiles",
-        "outlook": "Outlook 2027"
+        "buyers":      "Buyers — Buyer Profiles",
+        "outlook":     "Outlook 2027",
+        "index":       "AEGRYN Index",
+        "people":      "People",
+        "life":        "Life"
       },
       "cta": "Express my interest",
       "success": "Thank you. Your interest has been recorded. We will contact you when the print edition goes into production.",

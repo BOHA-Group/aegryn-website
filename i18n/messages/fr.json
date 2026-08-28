@@ -6368,12 +6368,16 @@
       "companyPlaceholder": "Votre entreprise (optionnel)",
       "interestsLabel": "Vos centres d'intérêt",
       "interests": {
-        "market": "Le Marché — M&A & Données",
-        "techAi": "Tech & IA",
-        "build": "Build — Conception d'actifs",
+        "editorial":   "Editorial",
+        "market":      "The Market — M&A & Données",
+        "techAi":      "Tech & IA",
+        "build":       "Build — Conception d'actifs",
         "transaction": "Transaction & Structuration",
-        "buyers": "Profil acheteurs",
-        "outlook": "Outlook 2027"
+        "buyers":      "Buyers — Profil acheteurs",
+        "outlook":     "Outlook 2027",
+        "index":       "AEGRYN Index",
+        "people":      "People",
+        "life":        "Life"
       },
       "cta": "Exprimer mon intérêt",
       "success": "Merci. Votre intérêt a été enregistré. Nous vous contacterons lors de la production de l'édition papier.",

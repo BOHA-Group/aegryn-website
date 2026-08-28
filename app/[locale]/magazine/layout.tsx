@@ -16,6 +16,10 @@ export default async function IntelligenceLayout({
   children: ReactNode
   params: Promise<{ locale: string }>
 }) {
+  const isProduction = process.env.VERCEL_ENV === 'production'
+
+  if (!isProduction) return <>{children}</>
+
   const adminUser = await getAdminUser()
   if (adminUser) return <>{children}</>
 
