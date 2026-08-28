@@ -74,12 +74,12 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
         {formatted} — {issue.title}
       </p>
 
-      {/* ── 3 boutons d'accès rapide — style Barnes — désactivés avec tooltip ── */}
+      {/* ── 3 boutons d'accès rapide — style Barnes ── */}
       <div className="flex flex-wrap items-center justify-center gap-0">
+        {/* Boutons 1 & 2 — désactivés avec tooltip "publication prochainement" */}
         {[
           { label: labelReadOnline,   filled: true  },
           { label: labelDownloadPdf,  filled: false },
-          { label: labelSubscribe,    filled: false },
         ].map(({ label, filled }) => (
           <div key={label} className="relative group/btn">
             <span
@@ -98,6 +98,13 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
             </span>
           </div>
         ))}
+        {/* Bouton 3 — Recevoir — actif, pointe vers /magazine/subscribe */}
+        <Link
+          href={`/${locale}/magazine/subscribe`}
+          className="inline-block font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold border border-magazine-black text-magazine-black hover:bg-magazine-black hover:text-white transition-colors"
+        >
+          {labelSubscribe}
+        </Link>
       </div>
 
     </div>
