@@ -201,7 +201,7 @@ export const aegrynOrganizationSchema = {
   sameAs: [
     'https://www.linkedin.com/company/106273747/',
     'https://www.instagram.com/boha_group/',
-    'https://www.tiktok.com/@aegryn.auction',
+    'https://www.tiktok.com/@aegrynhq',
     'https://www.youtube.com/@aegryn.auction',
     'https://www.facebook.com/aegrynhq',
   ],
