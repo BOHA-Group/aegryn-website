@@ -55,12 +55,12 @@ export function NewsletterBlock({
         onChange={e => setEmail(e.target.value)}
         placeholder={placeholder}
         required
-        className="flex-1 bg-magazine-white border border-magazine-black/20 text-magazine-black text-body-mag px-6 py-4 outline-none focus:border-magazine-black/60 transition-colors placeholder:text-magazine-black/30"
+        className="flex-1 bg-magazine-white border border-magazine-black/20 text-magazine-black text-sm px-4 py-3 outline-none focus:border-magazine-black/60 transition-colors placeholder:text-magazine-black/30"
       />
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="inline-flex items-center gap-2 bg-magazine-black text-magazine-white font-sans font-semibold text-label-mag uppercase tracking-[0.12em] px-8 py-4 hover:bg-magazine-black/80 transition-colors disabled:opacity-50 whitespace-nowrap"
+        className="inline-flex items-center gap-2 bg-magazine-black text-magazine-white font-sans font-semibold text-[11px] uppercase tracking-[0.12em] px-6 py-3 hover:bg-magazine-black/80 transition-colors disabled:opacity-50 whitespace-nowrap"
       >
         {status === 'loading' ? '…' : <>{cta} <ArrowUpRight size={13} /></>}
       </button>
