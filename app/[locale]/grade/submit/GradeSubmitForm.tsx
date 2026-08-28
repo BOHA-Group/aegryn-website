@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import { useSearchParams } from 'next/navigation'
 import { Link } from '@/i18n/navigation'
-import { ArrowUpRight, CheckCircle2, ChevronLeft } from 'lucide-react'
+import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 import { EXPERTISE_TAXONOMY } from '@/lib/expertiseTaxonomy'
 
 type EvalType = 'review_internal' | 'review_partner' | 'full_certification'
@@ -121,12 +121,6 @@ export default function GradeSubmitForm() {
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <Link
-            href="/grade"
-            className="inline-flex items-center gap-2 font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 hover:text-ag-apex transition-colors mb-10"
-          >
-            <ChevronLeft size={11} /> {tNav('grade')}
-          </Link>
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('hero.label')}
