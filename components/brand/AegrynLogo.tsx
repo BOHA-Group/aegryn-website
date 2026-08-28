@@ -3,12 +3,43 @@
 interface AegrynLogoProps {
   className?: string
   size?: number
-  variant?: 'full' | 'mark'
+  variant?: 'full' | 'mark' | 'wordmark'
   onDark?: boolean
 }
 
 export function AegrynLogo({ className = '', size = 32, variant = 'full', onDark = false }: AegrynLogoProps) {
   const bodyColor = onDark ? '#FFFFFF' : '#050505'
+
+  /**
+   * Variant "wordmark" — le A est remplacé par le mark triangle (mont/alpha),
+   * fusionné directement avec "EGRYN" pour former un seul mot "AEGRYN".
+   * `size` correspond ici à la taille de police (fontSize) du mot.
+   */
+  if (variant === 'wordmark') {
+    const capHeight = size * 0.74
+    const aWidth    = capHeight * (441.14 / 487.91)
+    return (
+      <span
+        className={`inline-flex items-baseline ${className}`}
+        aria-label="Aegryn"
+        style={{ fontFamily: 'var(--font-body), "Plus Jakarta Sans", sans-serif', fontWeight: 700, fontSize: size, letterSpacing: '0.02em', color: bodyColor, lineHeight: 1 }}
+      >
+        <svg
+          width={aWidth}
+          height={capHeight}
+          viewBox="0 0 441.14 487.91"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+          style={{ marginRight: size * 0.04, transform: `translateY(${size * 0.02}px)` }}
+        >
+          <polygon fill={bodyColor} points="317.41 214.36 246.64 143.18 184.15 80.28 175.05 100.56 0 487.91 90.63 487.91 220.57 201.12 350.51 487.91 441.14 487.91 317.41 214.36"/>
+        </svg>
+        <span>EGRYN</span>
+      </span>
+    )
+  }
 
   /**
    * SVG source exact — coordonnées verbatim depuis logo.svg officiel.

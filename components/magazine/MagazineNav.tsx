@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { AegrynLogo } from '@/components/brand/AegrynLogo'
 import type { IssueSection, MagazineArticle } from '@/lib/magazine/types'
 
 interface SectionWithArticles extends IssueSection {
@@ -62,9 +63,7 @@ export function MagazineNav({
 
       {/* ── Brand header ── */}
       <div className="px-6 pt-8 pb-6 border-b border-magazine-black/8">
-        <p className="font-sans font-bold text-magazine-black text-[15px] tracking-[0.04em] leading-none">
-          AEGRYN
-        </p>
+        <AegrynLogo variant="wordmark" size={15} />
         <p className="font-mono text-[9px] tracking-[0.16em] uppercase text-magazine-black/50 mt-0.5">
           Magazine
         </p>

@@ -7,7 +7,7 @@ import { useState, useRef, useEffect, type ComponentProps } from 'react'
 import { Menu, X, ChevronDown, User, UserCircle } from 'lucide-react'
 import LanguageSwitcher   from '@/components/layout/LanguageSwitcher'
 import NotificationBell   from '@/components/client/NotificationBell'
-import { AegrynLogo }   from '@/components/brand/AegrynLogo'
+import Image             from 'next/image'
 import { gsap }          from '@/lib/gsap'
 
 type DropdownKey = 'transact' | 'grade' | 'build' | 'advisory' | 'about' | null
@@ -231,7 +231,14 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
 
         {/* Logo */}
         <Link ref={logoRef} href="/" aria-label="AEGRYN — Accueil" className="hover:opacity-70 transition-opacity duration-200 shrink-0">
-          <AegrynLogo size={28} variant="full" />
+          <Image
+            src="/images/Full Color Version.jpg"
+            alt="AEGRYN"
+            width={80}
+            height={80}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
