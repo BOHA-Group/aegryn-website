@@ -39,13 +39,41 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
         }}
       >
         {issue.status === 'published' ? (
-          /* ── Image directe recadrée en portrait ── */
-          /* eslint-disable-next-line @next/next/no-img-element */
-          <img
-            src={`/magazine/issue-${padNum}/cover-bg.jpg`}
-            alt={`Aegryn Magazine Issue ${padNum}`}
-            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
-          />
+          /* ── Copie exacte du flipbook : photo + overlay sombre + texte AEGRYN, mise à l'échelle ── */
+          <div style={{ position: 'absolute', top: 0, left: 0, transformOrigin: 'top left', transform: 'scale(0.369)', width: 420, height: 595 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`/magazine/issue-${padNum}/cover-bg.jpg`}
+              alt=""
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
+            />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg,rgba(5,10,15,.75) 0%,rgba(5,10,15,.45) 45%,rgba(5,10,15,.78) 100%)' }} />
+            <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px 30px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                <div style={{ fontSize: 9, fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,.4)' }}>{formatted}</div>
+                <div style={{ textAlign: 'right' }}>
+                  <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#5ADDA4' }}>Special Edition</div>
+                  <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#5ADDA4' }}>{`Issue ${padNum}`}</div>
+                </div>
+              </div>
+              <div style={{ marginTop: -8 }}>
+                <div style={{ fontSize: 90, fontWeight: 700, color: '#fff', lineHeight: 0.86, letterSpacing: '-0.04em' }}>Aegryn</div>
+                <div style={{ textAlign: 'right', fontSize: 8, fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.32)', marginTop: 5 }}>Business Magazine</div>
+              </div>
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                <div style={{ maxWidth: 170 }}>
+                  <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#5ADDA4', marginBottom: 6 }}>Exclusive</div>
+                  <div style={{ width: 28, height: 2, background: '#5ADDA4', marginBottom: 8 }} />
+                  <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', color: 'rgba(255,255,255,.55)', lineHeight: 1.5 }}>Build. Certify. Transact.</div>
+                </div>
+              </div>
+              <div style={{ paddingBottom: 52 }}>
+                <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#5ADDA4', lineHeight: 1.0, marginBottom: 5 }}>Built</div>
+                <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: 'rgba(255,255,255,.9)', lineHeight: 1.0, marginBottom: 9 }}>to Last.</div>
+                <div style={{ fontSize: 8.5, fontWeight: 400, letterSpacing: '0.05em', color: 'rgba(255,255,255,.4)', lineHeight: 1.6 }}>The anatomy of a tech asset that sells and one that doesn&apos;t.</div>
+              </div>
+            </div>
+          </div>
         ) : (
           /* ── Draft placeholder ── */
           <>

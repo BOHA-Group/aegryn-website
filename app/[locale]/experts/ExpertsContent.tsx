@@ -182,7 +182,7 @@ function FanCards({
 }
 
 const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
-const selectCls = 'w-full border border-ag-border bg-ag-white px-4 py-2.5 pr-10 font-sans text-[12px] text-ag-black appearance-none focus:outline-none focus:border-ag-black transition-colors cursor-pointer'
+const selectCls = 'w-full border border-ag-border bg-ag-white px-4 py-3 pr-10 font-sans text-[13px] text-ag-black appearance-none focus:outline-none focus:border-ag-black transition-colors cursor-pointer'
 const labelCls  = 'block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-2'
 
 const DIMENSION_LABELS_PUBLIC: Record<string, string> = {
