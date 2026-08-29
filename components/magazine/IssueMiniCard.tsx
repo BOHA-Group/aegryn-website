@@ -87,10 +87,13 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
       />
       <div style={{ position: 'absolute', inset: 0, background: TEXT_OVERLAY }} />
       <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px 30px' }}>
-        {/* Top bar */}
+        {/* Top bar — même structure 2 lignes à droite que la cover principale */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
           <div style={{ fontSize: 9, fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,.75)' }}>{formatted}</div>
-          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#fff' }}>Issue {padNum}</div>
+          <div style={{ textAlign: 'right' }}>
+            <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#fff' }}>Special Edition</div>
+            <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#fff' }}>Issue {padNum}</div>
+          </div>
         </div>
         {/* Masthead */}
         <div style={{ marginTop: -8 }}>
