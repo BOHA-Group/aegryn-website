@@ -17,7 +17,7 @@ export default async function SellerNav({
   let dataRoomItems: NavGroup['items']
   if (assets.length === 0) {
     dataRoomItems = [
-      { href: '/client/seller/actifs', label: 'Data Room', icon: 'FolderLock', disabled: true },
+      { href: '/client/seller/actifs#data-room', label: 'Data Room', icon: 'FolderLock', disabled: true },
     ]
   } else if (assets.length === 1) {
     dataRoomItems = [
