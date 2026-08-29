@@ -10,6 +10,7 @@ import { ISSUE_02 }            from '@/content/magazine/issue-02/meta'
 import { ISSUE_03 }            from '@/content/magazine/issue-03/meta'
 import { ISSUE_04 }            from '@/content/magazine/issue-04/meta'
 import { createServiceClient } from '@/lib/supabase'
+import { getAdminUser }        from '@/lib/adminAuth'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -42,13 +43,17 @@ async function getMagazineFlags(): Promise<Record<string, boolean>> {
 
 export default async function MagazineHubPage({ params }: Props) {
   const { locale } = await params
-  const isPreview = process.env.VERCEL_ENV !== 'production'
   const INTEREST_KEYS = ['market', 'techAi', 'build', 'transaction', 'buyers', 'outlook', 'index', 'people', 'life'] as const
-  const [tHub, tSub, flags] = await Promise.all([
+  const [tHub, tSub, flags, adminUser] = await Promise.all([
     getTranslations({ locale, namespace: 'magazine.hub' }),
     getTranslations({ locale, namespace: 'magazine.subscribe' }),
     getMagazineFlags(),
+    getAdminUser(),
   ])
+  /* Boutons "Explorer en ligne"/"Feuilleter le PDF" débloqués visuellement :
+     hors production (preview/dev) OU pour un admin connecté — cohérent avec
+     le gate réel appliqué dans canAccessIssue() (lib/magazineAccess.ts). */
+  const isPreview = process.env.VERCEL_ENV !== 'production' || !!adminUser
   const labelsRaw = tSub.raw('interests')     as Record<string, string>
   const descsRaw  = tSub.raw('interestsDesc') as Record<string, string>
   const interests = INTEREST_KEYS.map(key => ({

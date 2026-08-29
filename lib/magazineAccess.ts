@@ -15,12 +15,15 @@
 import { randomUUID } from 'crypto'
 import { cookies }    from 'next/headers'
 import { createServiceClient } from '@/lib/supabase'
+import { getAdminUser }        from '@/lib/adminAuth'
 import { sendEmail, emailMagazineEarlyAccess } from '@/lib/sendEmail'
 
 /**
  * Vérifie si l'issue est consultable pour la requête courante :
  * - toujours vrai hors production (preview/dev) — permet aux équipes internes
  *   de relire un numéro avant son ouverture publique.
+ * - toujours vrai pour un admin connecté (session Supabase, rôle admin) — même
+ *   en production, avant toute activation de early_access/public.
  * - vrai en production si `public` est actif.
  * - vrai en production si `early_access` est actif ET que le visiteur détient
  *   le cookie de déverrouillage (obtenu via le lien email, cf. /api/magazine/access).
@@ -28,6 +31,9 @@ import { sendEmail, emailMagazineEarlyAccess } from '@/lib/sendEmail'
 export async function canAccessIssue(issuePad: string): Promise<boolean> {
   const isPreviewEnv = process.env.VERCEL_ENV !== 'production'
   if (isPreviewEnv) return true
+
+  const adminUser = await getAdminUser()
+  if (adminUser) return true
 
   const supa = createServiceClient()
   const { data } = await supa
