@@ -44,13 +44,8 @@ const PHOTO_POS: Record<number, string> = {
   4: 'center center',
 }
 
-/* Overlay gradient par issue */
-const OVERLAYS: Record<number, string> = {
-  1: 'linear-gradient(180deg,rgba(5,10,20,.55) 0%,rgba(5,10,20,.35) 40%,rgba(5,10,20,.82) 100%)',
-  2: 'linear-gradient(180deg,rgba(10,8,2,.72) 0%,rgba(10,8,2,.38) 45%,rgba(10,8,2,.88) 100%)',
-  3: 'linear-gradient(180deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.42) 45%,rgba(0,0,0,.90) 100%)',
-  4: 'linear-gradient(180deg,rgba(0,4,0,.65) 0%,rgba(0,4,0,.30) 45%,rgba(0,4,0,.85) 100%)',
-}
+/* Overlay minimal uniquement pour lisibilité texte (haut + bas), pas de filtre couleur) */
+const TEXT_OVERLAY = 'linear-gradient(180deg,rgba(0,0,0,.45) 0%,transparent 35%,transparent 55%,rgba(0,0,0,.60) 100%)'
 
 /**
  * Version compacte du cover magazine pour le carousel "autres issues".
@@ -67,7 +62,6 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
 
   const accent      = ACCENTS[issue.number]  ?? '#5ADDA4'
   const photoPos    = PHOTO_POS[issue.number] ?? 'center top'
-  const overlay     = OVERLAYS[issue.number]  ?? OVERLAYS[1]
   const exclLabel   = EXCLUSIVE_LABEL[issue.number] ?? 'Exclusive'
 
   /* Titre splitté sur 2 lignes au premier point suivi d'un espace ou fin */
@@ -103,7 +97,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
                 alt=""
                 style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: photoPos }}
               />
-              <div style={{ position: 'absolute', inset: 0, background: overlay }} />
+              <div style={{ position: 'absolute', inset: 0, background: TEXT_OVERLAY }} />
               <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px 30px' }}>
                 {/* Top bar */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>

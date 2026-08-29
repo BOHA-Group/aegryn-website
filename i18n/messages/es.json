@@ -6350,7 +6350,8 @@
       "readOnline": "Explorar en línea",
       "downloadPdf": "Hojear el PDF",
       "subscribe": "Recibir",
-      "comingSoon": "Publicación próximamente"
+      "comingSoon": "Publicación próximamente",
+      "comingSoonBadge": "Próximamente"
     },
     "report": {
       "title": "Aegryn Magazine",

@@ -6350,7 +6350,8 @@
       "readOnline": "Online erkunden",
       "downloadPdf": "PDF blättern",
       "subscribe": "Erhalten",
-      "comingSoon": "Demnächst verfügbar"
+      "comingSoon": "Demnächst verfügbar",
+      "comingSoonBadge": "Demnächst"
     },
     "ndaView": {
       "meta": "NDA — Verkäuferbereich Aegryn",

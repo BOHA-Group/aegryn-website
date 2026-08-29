@@ -6350,7 +6350,8 @@
       "readOnline": "Online verkennen",
       "downloadPdf": "PDF bladeren",
       "subscribe": "Ontvangen",
-      "comingSoon": "Binnenkort beschikbaar"
+      "comingSoon": "Binnenkort beschikbaar",
+      "comingSoonBadge": "Binnenkort"
     },
     "report": {
       "title": "Aegryn Magazine",

@@ -6325,7 +6325,8 @@
       "subscribe": "Subscribe",
       "manage": "Manage subscription",
       "successMsg": "Subscription activated successfully.",
-      "canceledMsg": "Payment cancelled."
+      "canceledMsg": "Payment cancelled.",
+      "comingSoonBadge": "Coming soon"
     },
     "nda": {
       "meta": "NDA — Partner Space Aegryn",
