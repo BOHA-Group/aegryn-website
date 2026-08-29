@@ -41,12 +41,14 @@ export async function POST(req: NextRequest) {
   const locale   = body.locale ?? 'fr'
   const supabase = createServiceClient()
 
-  const { error: dbErr } = await supabase
+  const { data: subRow, error: dbErr } = await supabase
     .from('newsletter_subscribers')
     .upsert(
       { email, user_id: user?.id ?? null, locale, status: 'active', unsubscribed_at: null },
       { onConflict: 'email' },
     )
+    .select('unsubscribe_token')
+    .single()
 
   if (dbErr) {
     console.error('[newsletter/subscribe] Supabase error', dbErr)
@@ -59,7 +61,10 @@ export async function POST(req: NextRequest) {
   const fromName  = process.env.RESEND_FROM_NAME ?? 'Aegryn'
 
   if (resendKey) {
-    const unsubUrl = `https://aegryn.com/api/newsletter/unsubscribe`
+    /* IMPORTANT : le token doit être présent dans l'URL — la route
+       /api/newsletter/unsubscribe rejette toute requête sans ?token=,
+       sans quoi le lien de désabonnement est toujours "invalide". */
+    const unsubUrl = `https://aegryn.com/api/newsletter/unsubscribe?token=${subRow.unsubscribe_token}`
     await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -75,12 +80,12 @@ export async function POST(req: NextRequest) {
           '',
           "Vous recevrez d\u00e9sormais les communications Aegryn suivantes :",
           '',
-          "\u2014 Articles & Insights : analyses march\u00e9, M&A, tech (fr\u00e9quence bimensuelle)",
+          "\u2014 Articles & Insights : analyses march\u00e9, M&A, tech (fr\u00e9quence hebdomadaire)",
           "\u2014 Aegryn Magazine : chaque num\u00e9ro trimestriel d\u00e8s parution",
-          '    Issue 01 \u2014 Built to Last \u2014 disponible maintenant : aegryn.com/magazine/issue-01',
+          '    Issue 01 \u2014 Built to Last \u2014 janvier 2027',
           '    Issue 02 \u2014 The Exit Equation \u2014 avril 2027',
           '',
-          "Aucune publicit\u00e9. Aucun paywall. D\u00e9sabonnement en un clic.",
+          "D\u00e9sabonnement en un clic.",
           '',
           '\u2014',
           'Aegryn Editorial',
