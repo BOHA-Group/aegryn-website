@@ -1,7 +1,9 @@
-import { notFound }        from 'next/navigation'
-import { getTranslations } from 'next-intl/server'
-import type { Metadata }   from 'next'
+import { notFound, redirect } from 'next/navigation'
+import { getTranslations }    from 'next-intl/server'
+import { cookies }            from 'next/headers'
+import type { Metadata }      from 'next'
 import type { MagazineIssue } from '@/lib/magazine/types'
+import { createServiceClient } from '@/lib/supabase'
 
 import { ISSUE_01 }        from '@/content/magazine/issue-01/meta'
 import { ARTICLES_01 }     from '@/content/magazine/issue-01/articles'
@@ -61,6 +63,25 @@ export default async function IssuePage({ params }: Props) {
   const { locale, issue: issueSlug } = await params
   const issue = getIssue(issueSlug)
   if (!issue) notFound()
+
+  /* ── Gate d'accès : public > early_access (cookie de déverrouillage) > verrouillé ──
+     Reproduit ici le comportement décrit dans /admin/magazine — une issue non publique
+     n'est accessible que via le lien d'accès anticipé envoyé par email (48h avant). */
+  const pad = String(issue.number).padStart(2, '0')
+  const supa = createServiceClient()
+  const { data: flagRows } = await supa
+    .from('site_settings')
+    .select('key, value')
+    .in('key', [`magazine_issue_${pad}_public`, `magazine_issue_${pad}_early_access`])
+  const isPublic = flagRows?.some(r => r.key === `magazine_issue_${pad}_public` && (r.value === true || r.value === 'true')) ?? false
+  const isEarly  = flagRows?.some(r => r.key === `magazine_issue_${pad}_early_access` && (r.value === true || r.value === 'true')) ?? false
+
+  if (!isPublic) {
+    if (!isEarly) redirect(`/${locale}/magazine`)
+    const cookieStore = await cookies()
+    const unlocked = cookieStore.get(`ag-mag-unlock-${pad}`)?.value === '1'
+    if (!unlocked) redirect(`/${locale}/magazine`)
+  }
 
   const t    = await getTranslations({ locale, namespace: 'magazine.report' })
   const tHub = await getTranslations({ locale, namespace: 'magazine.hub' })

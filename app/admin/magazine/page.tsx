@@ -132,8 +132,9 @@ export default async function AdminMagazinePage({
                           <p className="font-semibold text-[14px] text-gray-900">Accès anticipé — inscrits 48 h</p>
                         </div>
                         <p className="text-[12px] text-gray-400 mt-1 leading-relaxed">
-                          Ouvre l&apos;accès pour les abonnés newsletter et la liste de souhait papier,
-                          48 h avant l&apos;ouverture publique.
+                          Envoie immédiatement un email avec lien de lecture déverrouillé aux abonnés newsletter
+                          et à la liste de souhait papier. L&apos;ouverture publique (Niveau 2) s&apos;active
+                          automatiquement 48 h après l&apos;activation.
                         </p>
                       </div>
                       <MagazinePublishToggle
@@ -166,7 +167,8 @@ export default async function AdminMagazinePage({
                 </div>
 
                 <p className="text-[11px] text-gray-400 pt-2 leading-relaxed">
-                  Ordre recommandé : Niveau 1 (J-2), Niveau 2 le jour J.
+                  Activer le Niveau 1 déclenche l&apos;envoi des emails et lance le compte à rebours —
+                  le Niveau 2 s&apos;active seul 48 h plus tard (cron horaire). Vous pouvez aussi l&apos;activer manuellement plus tôt si besoin.
                 </p>
               </div>
             )

@@ -337,6 +337,35 @@ export function emailNewsletterArticle(opts: {
   return { subject, html }
 }
 
+/* ── Magazine : accès anticipé 48h avant publication publique ─────────── */
+export function emailMagazineEarlyAccess(opts: {
+  issueLabel: string
+  issueTheme: string
+  accessUrl:  string
+  unsubscribeToken?: string
+}): { subject: string; html: string } {
+  const subject  = `Aegryn Magazine — ${opts.issueLabel} en avant-première`
+  const unsubUrl = opts.unsubscribeToken
+    ? `https://aegryn.com/api/newsletter/unsubscribe?token=${opts.unsubscribeToken}`
+    : null
+
+  const html = WRAP_NEWSLETTER(`
+    <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">Accès anticipé — 48h avant le grand public</p>
+    <h1 style="margin:0 0 16px 0;font-size:22px;font-weight:700;color:#0F1C3F;line-height:1.25;">${opts.issueLabel}</h1>
+    <p style="margin:0 0 20px 0;font-size:14px;color:#475569;line-height:1.6;">${opts.issueTheme}</p>
+    <p style="margin:0 0 24px 0;font-size:13px;color:#64748b;line-height:1.6;">
+      En tant qu'inscrit(e) Aegryn, vous accédez à ce numéro 48h avant sa mise en ligne publique.
+    </p>
+    <p style="margin:0 0 20px 0;">${ctaButton('Lire le numéro maintenant', opts.accessUrl)}</p>
+    ${unsubUrl ? `
+    <p style="margin:0;font-size:11px;color:#94a3b8;line-height:1.6;">
+      <a href="${unsubUrl}" style="color:#94a3b8;text-decoration:underline;">Se désabonner</a>
+    </p>` : ''}
+  `)
+
+  return { subject, html }
+}
+
 /* ── KYC : notification admin à la soumission d'un document ────────────── */
 export function emailKycDocSubmitted(opts: {
   memberName: string
