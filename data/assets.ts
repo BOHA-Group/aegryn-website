@@ -24,7 +24,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
   // ── AI & PROTOCOLES ──────────────────────────────────────────
   {
     id:               'subblink',
-    name:             'Subblink',
+    name:             'subblink',
     slug:             'subblink',
     url:              'https://subblink.boha-group.com' as string | null,
     badge:            'B2B — SaaS',
@@ -59,7 +59,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
   // ── SERVICES & LIFESTYLE ─────────────────────────────────────
   {
     id:               'neediu',
-    name:             'Neediu',
+    name:             'neediu',
     slug:             'neediu',
     url:              null as string | null,
     badge:            'B2C — Marketplace',
@@ -75,7 +75,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
   },
   {
     id:               'movtoo',
-    name:             'Movtoo',
+    name:             'movtoo',
     slug:             'movtoo',
     url:              null as string | null,
     badge:            'B2C — Transport',
@@ -93,7 +93,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
   // ── TRANSACTIONS & RÉSEAU ─────────────────────────────────────
   {
     id:               'primiom',
-    name:             'Primiom',
+    name:             'primiom',
     slug:             'primiom',
     url:              null as string | null,
     badge:            'B2C — Immobilier',
@@ -109,7 +109,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
   },
   {
     id:               'hobconnect',
-    name:             'Hobconnect',
+    name:             'hobconnect',
     slug:             'hobconnect',
     url:              null as string | null,
     badge:            'B2C — Social',

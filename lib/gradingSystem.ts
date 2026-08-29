@@ -145,8 +145,8 @@ export const IP_SUBCODES: SubcodeDef[] = [
   { code: 'I-36', group: 'RGPD & Données', fr: 'RGPD/LPD non évalué', en: 'GDPR/LPD not assessed' },
   { code: 'I-37', group: 'RGPD & Données', fr: 'Transfert de données utilisateurs complexe', en: 'Complex user data transfer' },
   // Outils Aegryn
-  { code: 'I-38', group: 'Outils Aegryn', fr: 'Analyse contractuelle Subblink réalisée', en: 'Subblink contractual analysis completed' },
-  { code: 'I-39', group: 'Outils Aegryn', fr: 'Analyse Subblink partielle', en: 'Partial Subblink analysis' },
+  { code: 'I-38', group: 'Outils Aegryn', fr: 'Analyse contractuelle subblink réalisée', en: 'subblink contractual analysis completed' },
+  { code: 'I-39', group: 'Outils Aegryn', fr: 'Analyse subblink partielle', en: 'Partial subblink analysis' },
   // Spécial
   { code: 'I-*',  group: 'Spécial', fr: 'Régularisation IP recommandée, avant ou après signing', en: 'IP regularisation recommended, before or after signing' },
   { code: 'I-**', group: 'Spécial', fr: 'Régularisation IP requise avant tout transfert', en: 'IP regularisation required before any transfer' },

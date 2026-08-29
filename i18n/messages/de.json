@@ -90,7 +90,7 @@
       "desc": "Jedes Aegryn-Asset wird intern konzipiert, gebaut und betrieben. Vollständiges Eigentum, absolute Souveränität.",
       "meta": {
         "title": "Aegryn Assets — Eigenes Ökosystem",
-        "desc": "Entdecken Sie die proprietären Assets von Aegryn: Subblink, Neediu, Primiom, Movtoo und Hobconnect, konzipiert, um zertifizierbar und übertragbar zu sein."
+        "desc": "Entdecken Sie die proprietären Assets von Aegryn: subblink, neediu, primiom, movtoo und hobconnect, konzipiert, um zertifizierbar und übertragbar zu sein."
       },
       "filterAll": "Alle",
       "filterAI": "KI & Protokolle",
@@ -636,7 +636,7 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "Subblink analysiert alle Ihre Verträge in Sekunden mit einer KI, die auf das Schweizer und europäische Recht kalibriert ist. Risiken, kritische Klauseln, versteckte Verpflichtungen: alles wird identifiziert und in klarer Sprache erklärt.",
+        "longDesc": "subblink analysiert alle Ihre Verträge in Sekunden mit einer KI, die auf das Schweizer und europäische Recht kalibriert ist. Risiken, kritische Klauseln, versteckte Verpflichtungen: alles wird identifiziert und in klarer Sprache erklärt.",
         "audience": "Privatpersonen, Freiberufler, KMU, Rechtsfachleute",
         "features": [
           "Vertragsanalyse in 60 Sekunden",
@@ -720,13 +720,13 @@
     "assets": {
       "subblink": {
         "headline": "Die KI, die Ihre Verträge für Sie liest.",
-        "p1": "Subblink analysiert sofort jeden Vertragstyp, NDAs, AGB, Mietverträge, Dienstleistungsverträge, und identifiziert riskante Klauseln, versteckte Verpflichtungen und Verhandlungspunkte.",
+        "p1": "subblink analysiert sofort jeden Vertragstyp, NDAs, AGB, Mietverträge, Dienstleistungsverträge, und identifiziert riskante Klauseln, versteckte Verpflichtungen und Verhandlungspunkte.",
         "p2": "Kalibriert für das Schweizer und europäische Recht richtet sich die Lösung an Privatpersonen, Freiberufler, KMU und Rechtsabteilungen, die die Kontrolle über ihre Vertragspflichten zurückgewinnen möchten.",
         "market": "B2B — SaaS",
         "tech": "Generative KI + juristisches NLP",
         "zones": "Schweiz · Europa",
         "status": "Live",
-        "cta": "Subblink aufrufen"
+        "cta": "subblink aufrufen"
       },
       "kryv": {
         "headline": "Das SSL des KI-Codes. Jedes Deployment, unveränderlich versiegelt.",
@@ -738,7 +738,7 @@
       },
       "neediu": {
         "headline": "Intelligente Vermittlung für Haushaltsdienstleistungen.",
-        "p1": "Neediu verbindet Privatpersonen mit qualifizierten Dienstleistern für alle Haushaltsbedürfnisse: Reinigung, Gartenarbeit, Heimwerken, Kinderbetreuung und mehr.",
+        "p1": "neediu verbindet Privatpersonen mit qualifizierten Dienstleistern für alle Haushaltsbedürfnisse: Reinigung, Gartenarbeit, Heimwerken, Kinderbetreuung und mehr.",
         "p2": "Der Algorithmus analysiert Verfügbarkeit, Standort und Bewertungen, um den idealen Anbieter in Sekunden vorzuschlagen.",
         "market": "B2C — Marktplatz",
         "zone": "Großraum Paris → Frankreich",
@@ -746,7 +746,7 @@
       },
       "movtoo": {
         "headline": "On-Demand-Lieferung, angetrieben von KI.",
-        "p1": "Movtoo erfindet die Last-Mile-Logistik mit einer von künstlicher Intelligenz optimierten Sofortlieferplattform neu.",
+        "p1": "movtoo erfindet die Last-Mile-Logistik mit einer von künstlicher Intelligenz optimierten Sofortlieferplattform neu.",
         "p2": "Absender und Empfänger profitieren von vollständiger Transparenz über Route, Dauer und Kosten, in Echtzeit.",
         "market": "B2C — Lieferung",
         "tech": "KI-Routing + Flottenoptimierung",
@@ -754,7 +754,7 @@
       },
       "primiom": {
         "headline": "Immobilien neu erfunden durch KI.",
-        "p1": "Primiom unterstützt Käufer, Verkäufer und Immobilieninvestoren mit KI-basierten Marktanalyse- und Entscheidungshilfe-Tools.",
+        "p1": "primiom unterstützt Käufer, Verkäufer und Immobilieninvestoren mit KI-basierten Marktanalyse- und Entscheidungshilfe-Tools.",
         "p2": "Prädiktive Bewertung, Chancenerkennung, Rentabilitätssimulation, alles, was Sie brauchen, um mit Vertrauen zu entscheiden.",
         "market": "B2C — Immobilien",
         "zones": "Frankreich · Europa",
@@ -762,7 +762,7 @@
       },
       "hobconnect": {
         "headline": "Das soziale Netzwerk, das Leidenschaften vereint.",
-        "p1": "Hobconnect baut authentische Gemeinschaften rund um gemeinsame Interessen auf, Sport, Musik, Kunst, Gaming, Reisen und mehr.",
+        "p1": "hobconnect baut authentische Gemeinschaften rund um gemeinsame Interessen auf, Sport, Musik, Kunst, Gaming, Reisen und mehr.",
         "p2": "Eine Alternative zu generalistischen Netzwerken, die auf die Tiefe des Austauschs statt auf die Menge der Interaktionen setzt.",
         "market": "B2C — Sozial",
         "model": "Freemium — private/öffentliche Communitys",
@@ -1054,7 +1054,7 @@
     "privacy": "Datenschutz",
     "terms": "AGB",
     "dataProtection": "Datenschutzhinweis",
-    "neediuLegal": "Neediu ist eine eingetragene Marke der Aegryn. Alle Rechte vorbehalten.",
+    "neediuLegal": "neediu ist eine eingetragene Marke der Aegryn. Alle Rechte vorbehalten.",
     "tagline": "CERTIFIED TO TRANSACT.",
     "swissTagline": "Die zertifizierte Referenz für Premium-Tech-Asset-Transaktionen in Europa.",
     "navLabel": "Aegryn",
@@ -6461,14 +6461,14 @@
     "press": {
       "label": "Ils parlent de nous",
       "neediu": {
-        "context": "Couverture dans Gala — magazine grand public de référence. Reportage vidéo sur Neediu, actif Aegryn dans le secteur des services à domicile.",
-        "excerpt": "Neediu, la plateforme de mise en relation entre particuliers et prestataires de services à domicile, a fait l'objet d'un reportage vidéo dans le magazine Gala.",
-        "title": "Neediu dans le magazine Gala"
+        "context": "Couverture dans Gala — magazine grand public de référence. Reportage vidéo sur neediu, actif Aegryn dans le secteur des services à domicile.",
+        "excerpt": "neediu, la plateforme de mise en relation entre particuliers et prestataires de services à domicile, a fait l'objet d'un reportage vidéo dans le magazine Gala.",
+        "title": "neediu dans le magazine Gala"
       },
       "readArticle": "Lire l'article",
       "subblink": {
-        "context": "Article publié sur Village de la Justice — plateforme de référence du droit français et européen. Présentation de Subblink, actif Aegryn d'analyse contractuelle par IA.",
-        "excerpt": "Village Justice vous propose de faire auditer tous vos contrats pour obtenir un score des risques juridiques grâce à Subblink, une solution propulsée par l'intelligence artificielle calibrée pour le droit suisse et européen.",
+        "context": "Article publié sur Village de la Justice — plateforme de référence du droit français et européen. Présentation de subblink, actif Aegryn d'analyse contractuelle par IA.",
+        "excerpt": "Village Justice vous propose de faire auditer tous vos contrats pour obtenir un score des risques juridiques grâce à subblink, une solution propulsée par l'intelligence artificielle calibrée pour le droit suisse et européen.",
         "title": "Village de la Justice propose de faire auditer tous vos contrats"
       },
       "title": "La presse cite nos actifs.",
@@ -6587,13 +6587,13 @@
       "videoAvailable": "Video auf Anfrage verfügbar",
       "subblink": {
         "title": "Village de la Justice empfiehlt, alle Ihre Verträge prüfen zu lassen",
-        "excerpt": "Village Justice bietet an, alle Ihre Verträge zu prüfen, um mit Subblink, einer KI-gestützten Lösung für Schweizer und europäisches Recht, einen Risikowert zu ermitteln.",
-        "context": "Artikel erschienen auf Village de la Justice — Referenzplattform für französisches und europäisches Recht. Vorstellung von Subblink, Aegryn-Asset für KI-gestützte Vertragsanalyse."
+        "excerpt": "Village Justice bietet an, alle Ihre Verträge zu prüfen, um mit subblink, einer KI-gestützten Lösung für Schweizer und europäisches Recht, einen Risikowert zu ermitteln.",
+        "context": "Artikel erschienen auf Village de la Justice — Referenzplattform für französisches und europäisches Recht. Vorstellung von subblink, Aegryn-Asset für KI-gestützte Vertragsanalyse."
       },
       "neediu": {
-        "title": "Neediu im Gala-Magazin",
-        "excerpt": "Neediu, die Plattform zur Vernetzung von Privatpersonen mit Haushaltsdienstleistern, wurde in einem Videobericht im Gala-Magazin vorgestellt.",
-        "context": "Berichterstattung in Gala — führendes Lifestyle-Magazin. Videobericht über Neediu, Aegryn-Asset im Haushaltsdienstleistungssektor."
+        "title": "neediu im Gala-Magazin",
+        "excerpt": "neediu, die Plattform zur Vernetzung von Privatpersonen mit Haushaltsdienstleistern, wurde in einem Videobericht im Gala-Magazin vorgestellt.",
+        "context": "Berichterstattung in Gala — führendes Lifestyle-Magazin. Videobericht über neediu, Aegryn-Asset im Haushaltsdienstleistungssektor."
       }
     },
     "notify": {

@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('page.meta.desc'),
     path:        slug,
     locale,
-    keywords:    ['Subblink', 'Neediu', 'Primiom', 'Movtoo', 'Hobconnect', 'Aegryn ecosystem', 'proprietary assets', 'Swiss tech'],
+    keywords:    ['subblink', 'neediu', 'primiom', 'movtoo', 'hobconnect', 'Aegryn ecosystem', 'proprietary assets', 'Swiss tech'],
   })
   return {
     ...base,

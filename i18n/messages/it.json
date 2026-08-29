@@ -90,7 +90,7 @@
       "desc": "Ogni asset Aegryn è progettato, costruito e gestito internamente. Proprietà totale, sovranità assoluta.",
       "meta": {
         "title": "Asset Aegryn — Ecosistema proprietario",
-        "desc": "Scopri gli asset proprietari di Aegryn: Subblink, Neediu, Primiom, Movtoo e Hobconnect, progettati per essere certificabili e trasferibili."
+        "desc": "Scopri gli asset proprietari di Aegryn: subblink, neediu, primiom, movtoo e hobconnect, progettati per essere certificabili e trasferibili."
       },
       "filterAll": "Tutti",
       "filterAI": "AI & Protocolli",
@@ -720,13 +720,13 @@
     "assets": {
       "subblink": {
         "headline": "L'IA che legge i vostri contratti al posto vostro.",
-        "p1": "Subblink analizza istantaneamente qualsiasi tipo di contratto, NDA, CGV, locazioni, contratti di servizio, e identifica le clausole a rischio, gli impegni nascosti e i punti di negoziazione.",
+        "p1": "subblink analizza istantaneamente qualsiasi tipo di contratto, NDA, CGV, locazioni, contratti di servizio, e identifica le clausole a rischio, gli impegni nascosti e i punti di negoziazione.",
         "p2": "Calibrata per il diritto svizzero ed europeo, la soluzione si rivolge a privati, liberi professionisti, PMI e direzioni legali che vogliono riprendere il controllo dei propri obblighi contrattuali.",
         "market": "B2B — SaaS",
         "tech": "IA generativa + NLP giuridico",
         "zones": "Svizzera · Europa",
         "status": "Live",
-        "cta": "Accedi a Subblink"
+        "cta": "Accedi a subblink"
       },
       "kryv": {
         "headline": "L'SSL del codice IA. Ogni deployment, immutabilmente sigillato.",
@@ -738,7 +738,7 @@
       },
       "neediu": {
         "headline": "L'abbinamento intelligente per i servizi domestici.",
-        "p1": "Neediu mette in contatto i privati con fornitori qualificati per tutte le esigenze domestiche: pulizie, giardinaggio, fai-da-te, assistenza all'infanzia e altro ancora.",
+        "p1": "neediu mette in contatto i privati con fornitori qualificati per tutte le esigenze domestiche: pulizie, giardinaggio, fai-da-te, assistenza all'infanzia e altro ancora.",
         "p2": "L'algoritmo analizza disponibilità, posizione e valutazioni per suggerire il fornitore ideale in pochi secondi.",
         "market": "B2C — Marketplace",
         "zone": "Regione parigina → Francia",
@@ -746,7 +746,7 @@
       },
       "movtoo": {
         "headline": "Consegna su richiesta, guidata dall'IA.",
-        "p1": "Movtoo reinventa la logistica dell'ultimo miglio con una piattaforma di consegna immediata ottimizzata dall'intelligenza artificiale.",
+        "p1": "movtoo reinventa la logistica dell'ultimo miglio con una piattaforma di consegna immediata ottimizzata dall'intelligenza artificiale.",
         "p2": "Mittenti e destinatari beneficiano di piena trasparenza su percorso, tempi e costi, in tempo reale.",
         "market": "B2C — Consegna",
         "tech": "IA routing + ottimizzazione flotta",
@@ -754,7 +754,7 @@
       },
       "primiom": {
         "headline": "L'immobiliare reinventato dall'IA.",
-        "p1": "Primiom supporta acquirenti, venditori e investitori immobiliari con strumenti di analisi di mercato e supporto decisionale basati su IA.",
+        "p1": "primiom supporta acquirenti, venditori e investitori immobiliari con strumenti di analisi di mercato e supporto decisionale basati su IA.",
         "p2": "Valutazione predittiva, rilevamento di opportunità, simulazione di redditività, tutto ciò di cui avete bisogno per decidere con fiducia.",
         "market": "B2C — Immobiliare",
         "zones": "Francia · Europa",
@@ -762,7 +762,7 @@
       },
       "hobconnect": {
         "headline": "Il social network che riunisce attorno alle passioni.",
-        "p1": "Hobconnect crea comunità autentiche attorno a interessi condivisi, sport, musica, arte, gaming, viaggi e altro ancora.",
+        "p1": "hobconnect crea comunità autentiche attorno a interessi condivisi, sport, musica, arte, gaming, viaggi e altro ancora.",
         "p2": "Un'alternativa alle reti generaliste, incentrata sulla profondità degli scambi piuttosto che sul volume delle interazioni.",
         "market": "B2C — Social",
         "model": "Freemium — comunità private/pubbliche",
@@ -1054,7 +1054,7 @@
     "privacy": "Privacy",
     "terms": "Termini",
     "dataProtection": "Informativa sulla protezione dei dati",
-    "neediuLegal": "Neediu è un marchio registrato di Aegryn. Tutti i diritti riservati.",
+    "neediuLegal": "neediu è un marchio registrato di Aegryn. Tutti i diritti riservati.",
     "tagline": "CERTIFIED TO TRANSACT.",
     "swissTagline": "Il riferimento certificato per le transazioni di asset tech premium in Europa.",
     "navLabel": "Aegryn",
@@ -6441,13 +6441,13 @@
       "videoAvailable": "Video disponibile su richiesta",
       "subblink": {
         "title": "Village de la Justice propone di far revisionare tutti i tuoi contratti",
-        "excerpt": "Village Justice offre la possibilità di far revisionare tutti i tuoi contratti per ottenere un punteggio di rischio legale grazie a Subblink, una soluzione basata sull'intelligenza artificiale calibrata per il diritto svizzero ed europeo.",
-        "context": "Articolo pubblicato su Village de la Justice — piattaforma di riferimento per il diritto francese ed europeo. Presentazione di Subblink, asset Aegryn per l'analisi contrattuale basata su IA."
+        "excerpt": "Village Justice offre la possibilità di far revisionare tutti i tuoi contratti per ottenere un punteggio di rischio legale grazie a subblink, una soluzione basata sull'intelligenza artificiale calibrata per il diritto svizzero ed europeo.",
+        "context": "Articolo pubblicato su Village de la Justice — piattaforma di riferimento per il diritto francese ed europeo. Presentazione di subblink, asset Aegryn per l'analisi contrattuale basata su IA."
       },
       "neediu": {
-        "title": "Neediu nella rivista Gala",
-        "excerpt": "Neediu, la piattaforma che mette in contatto privati e fornitori di servizi domestici, è stata oggetto di un servizio video nella rivista Gala.",
-        "context": "Copertura su Gala — rivista di riferimento per il grande pubblico. Servizio video su Neediu, asset Aegryn nel settore dei servizi domestici."
+        "title": "neediu nella rivista Gala",
+        "excerpt": "neediu, la piattaforma che mette in contatto privati e fornitori di servizi domestici, è stata oggetto di un servizio video nella rivista Gala.",
+        "context": "Copertura su Gala — rivista di riferimento per il grande pubblico. Servizio video su neediu, asset Aegryn nel settore dei servizi domestici."
       }
     },
     "notify": {

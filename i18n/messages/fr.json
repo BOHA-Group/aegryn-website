@@ -90,7 +90,7 @@
       "desc": "Chaque actif Aegryn est conçu, construit et opéré en interne. Propriété totale, souveraineté absolue, durabilité garantie.",
       "meta": {
         "title": "Actifs Aegryn — Écosystème propriétaire",
-        "desc": "Découvrez les actifs propriétaires d'Aegryn : Subblink, Neediu, Primiom, Movtoo, Hobconnect, conçus pour durer, certifiables et transférables."
+        "desc": "Découvrez les actifs propriétaires d'Aegryn : subblink, neediu, primiom, movtoo, hobconnect, conçus pour durer, certifiables et transférables."
       },
       "filterAll": "Tous",
       "filterAI": "AI & Protocoles",
@@ -612,7 +612,7 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "Subblink analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées, tout est identifié et expliqué en langage clair.",
+        "longDesc": "subblink analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées, tout est identifié et expliqué en langage clair.",
         "audience": "Particuliers, indépendants, PME, professionnels du droit",
         "features": [
           "Analyse de contrats en 60 secondes",
@@ -681,13 +681,13 @@
     "assets": {
       "subblink": {
         "headline": "L'IA qui lit vos contrats à votre place.",
-        "p1": "Subblink analyse instantanément tout type de contrat, NDAs, CGV, baux, contrats de prestation, et identifie les clauses à risque, les engagements cachés et les points de négociation.",
+        "p1": "subblink analyse instantanément tout type de contrat, NDAs, CGV, baux, contrats de prestation, et identifie les clauses à risque, les engagements cachés et les points de négociation.",
         "p2": "Calibrée pour le droit suisse et européen, la solution s'adresse aux particuliers, indépendants, PME et directions juridiques qui veulent reprendre le contrôle de leurs obligations contractuelles.",
         "market": "B2B — SaaS",
         "tech": "IA générative + NLP juridique",
         "zones": "Suisse · Europe",
         "status": "Live",
-        "cta": "Accéder à Subblink"
+        "cta": "Accéder à subblink"
       },
       "kryv": {
         "headline": "Le SSL du code IA. Chaque déploiement, immuablement scellé.",
@@ -699,7 +699,7 @@
       },
       "neediu": {
         "headline": "La mise en relation intelligente pour les services à domicile.",
-        "p1": "Neediu connecte les particuliers aux prestataires qualifiés pour tous leurs besoins à domicile : ménage, jardinage, bricolage, garde d'enfants et bien plus.",
+        "p1": "neediu connecte les particuliers aux prestataires qualifiés pour tous leurs besoins à domicile : ménage, jardinage, bricolage, garde d'enfants et bien plus.",
         "p2": "L'algorithme analyse la disponibilité, la localisation et les évaluations pour proposer le prestataire idéal en quelques secondes.",
         "market": "B2C — Marketplace",
         "zone": "Région parisienne → France",
@@ -707,7 +707,7 @@
       },
       "movtoo": {
         "headline": "La livraison à la demande, pilotée par l'IA.",
-        "p1": "Movtoo réinvente la logistique du dernier kilomètre avec une plateforme de livraison immédiate optimisée par l'intelligence artificielle.",
+        "p1": "movtoo réinvente la logistique du dernier kilomètre avec une plateforme de livraison immédiate optimisée par l'intelligence artificielle.",
         "p2": "Les expéditeurs et destinataires bénéficient d'une transparence totale sur le trajet, le délai et le coût, en temps réel.",
         "market": "B2C — Livraison",
         "tech": "IA routage + optimisation flotte",
@@ -715,7 +715,7 @@
       },
       "primiom": {
         "headline": "L'immobilier réinventé par l'IA.",
-        "p1": "Primiom accompagne acheteurs, vendeurs et investisseurs immobiliers avec des outils d'analyse de marché et d'aide à la décision basés sur l'IA.",
+        "p1": "primiom accompagne acheteurs, vendeurs et investisseurs immobiliers avec des outils d'analyse de marché et d'aide à la décision basés sur l'IA.",
         "p2": "Évaluation prédictive, détection des opportunités, simulation de rentabilité, tout ce dont vous avez besoin pour décider avec confiance.",
         "market": "B2C — Immobilier",
         "zones": "France · Europe",
@@ -723,7 +723,7 @@
       },
       "hobconnect": {
         "headline": "Le réseau social qui rassemble autour des passions.",
-        "p1": "Hobconnect crée des communautés authentiques autour des centres d'intérêt partagés, sport, musique, art, gaming, voyages et bien d'autres.",
+        "p1": "hobconnect crée des communautés authentiques autour des centres d'intérêt partagés, sport, musique, art, gaming, voyages et bien d'autres.",
         "p2": "Une alternative aux réseaux généralistes, centrée sur la profondeur des échanges plutôt que sur la quantité d'interactions.",
         "market": "B2C — Social",
         "model": "Freemium — communautés privées/publiques",
@@ -1030,7 +1030,7 @@
     "privacy": "Confidentialité",
     "terms": "Conditions",
     "dataProtection": "Politique de protection des données",
-    "neediuLegal": "Neediu est une marque déposée d'Aegryn. Tous droits réservés.",
+    "neediuLegal": "neediu est une marque déposée d'Aegryn. Tous droits réservés.",
     "tagline": "CERTIFIED TO TRANSACT.",
     "swissTagline": "La référence certifiée pour les transactions d'actifs tech premium en Europe.",
     "navLabel": "Aegryn",
@@ -6423,13 +6423,13 @@
       "videoAvailable": "Vidéo disponible sur demande",
       "subblink": {
         "title": "Village de la Justice propose de faire auditer tous vos contrats",
-        "excerpt": "Village Justice vous propose de faire auditer tous vos contrats pour obtenir un score des risques juridiques grâce à Subblink, une solution propulsée par l'intelligence artificielle calibrée pour le droit suisse et européen.",
-        "context": "Article publié sur Village de la Justice — plateforme de référence du droit français et européen. Présentation de Subblink, actif Aegryn d'analyse contractuelle par IA."
+        "excerpt": "Village Justice vous propose de faire auditer tous vos contrats pour obtenir un score des risques juridiques grâce à subblink, une solution propulsée par l'intelligence artificielle calibrée pour le droit suisse et européen.",
+        "context": "Article publié sur Village de la Justice — plateforme de référence du droit français et européen. Présentation de subblink, actif Aegryn d'analyse contractuelle par IA."
       },
       "neediu": {
-        "title": "Neediu dans le magazine Gala",
-        "excerpt": "Neediu, la plateforme de mise en relation entre particuliers et prestataires de services à domicile, a fait l'objet d'un reportage vidéo dans le magazine Gala.",
-        "context": "Couverture dans Gala — magazine grand public de référence. Reportage vidéo sur Neediu, actif Aegryn dans le secteur des services à domicile."
+        "title": "neediu dans le magazine Gala",
+        "excerpt": "neediu, la plateforme de mise en relation entre particuliers et prestataires de services à domicile, a fait l'objet d'un reportage vidéo dans le magazine Gala.",
+        "context": "Couverture dans Gala — magazine grand public de référence. Reportage vidéo sur neediu, actif Aegryn dans le secteur des services à domicile."
       }
     }
   }

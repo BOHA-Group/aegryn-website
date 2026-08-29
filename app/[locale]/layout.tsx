@@ -62,7 +62,7 @@ return {
     default: 'Aegryn — Engineered to Last',
     template: '%s — Aegryn',
   },
-  description: 'Aegryn is a Swiss technology holding company. We design, fund and operate proprietary digital ecosystems — Subblink, Neediu, Primiom, Movtoo, Hobconnect — engineered to last. Headquartered in Switzerland.',
+  description: 'Aegryn is a Swiss technology holding company. We design, fund and operate proprietary digital ecosystems — subblink, neediu, primiom, movtoo, hobconnect — engineered to last. Headquartered in Switzerland.',
   keywords: [
     'Aegryn', 'Swiss Tech', 'digital assets', 'actifs numériques',
     'digital asset transaction', 'cession tech structurée', 'transact platform', 'M&A tech platform',
@@ -75,7 +75,7 @@ return {
     'cybersecurity', 'AI', 'EU AI Act', 'advisory', 'RGPD compliance',
     'Switzerland startup', 'Swiss holding', 'holding suisse tech',
     'plateforme M&A suisse', 'Swiss M&A platform',
-    'ecosystem engineering', 'Subblink', 'Neediu', 'Primiom', 'Movtoo', 'Hobconnect',
+    'ecosystem engineering', 'subblink', 'neediu', 'primiom', 'movtoo', 'hobconnect',
     'Aegryn Grade', 'asset grading', 'tech credit rating', 'Engineered to Last',
   ],
   authors: [{ name: 'Yohann Bollack', url: 'https://aegryn.com' }],

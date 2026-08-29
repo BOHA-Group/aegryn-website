@@ -51,7 +51,7 @@ const BASE_KEYWORDS = [
   'Europe tech market', 'marché tech européen',
   'plateforme M&A suisse', 'Swiss M&A platform', 'cession tech Suisse',
   // Build — proprietary assets
-  'Subblink', 'Neediu', 'Primiom', 'Movtoo', 'Hobconnect',
+  'subblink', 'neediu', 'primiom', 'movtoo', 'hobconnect',
   'actifs propriétaires Aegryn', 'proprietary digital assets', 'digital ecosystem',
   'ecosystem engineering', 'portefeuille actifs numériques',
   // Build — asset engineering (tiers)
