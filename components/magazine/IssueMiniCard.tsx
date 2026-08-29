@@ -29,6 +29,14 @@ const EXCLUSIVE_LABEL: Record<number, string> = {
   4: 'Heritage',
 }
 
+/* Titre découpé sur 2 lignes — même structure que la cover principale (IssueCard) */
+const TITLE_LINES: Record<number, [string, string]> = {
+  1: ['Built', 'to Last.'],
+  2: ['The Exit', 'Equation.'],
+  3: ['The Buyer', 'Inside.'],
+  4: ['The Succession', 'Wave.'],
+}
+
 /* Accent par issue — sert uniquement au trait séparateur */
 const ACCENTS: Record<number, string> = {
   1: '#5ADDA4',
@@ -65,8 +73,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
   const photoPos    = PHOTO_POS[issue.number] ?? 'center top'
   const exclLabel   = EXCLUSIVE_LABEL[issue.number] ?? 'Exclusive'
 
-  /* Titre splitté sur 2 lignes au premier point suivi d'un espace ou fin */
-  const titleParts   = issue.title.replace(/\.(\s|$)/, '\n').split('\n').filter(Boolean)
+  const titleLines   = TITLE_LINES[issue.number] ?? [issue.title, '']
   const [lightboxOpen, setLightboxOpen] = useState(false)
 
   /* ── Contenu de la cover (canvas 420×595) — réutilisé mini + lightbox ── */
@@ -90,20 +97,19 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
           <div style={{ fontSize: 90, fontWeight: 700, color: '#fff', lineHeight: 0.86, letterSpacing: '-0.01em' }}>Aegryn</div>
           <div style={{ textAlign: 'right', fontSize: 8, fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.55)', marginTop: 5 }}>Business Magazine</div>
         </div>
-        {/* Exclusive label + CoverLine — tout en blanc */}
+        {/* Exclusive label + CoverLine — tout en blanc, même maxWidth que la cover principale */}
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <div>
+          <div style={{ maxWidth: 170 }}>
             <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#fff', marginBottom: 6 }}>{exclLabel}</div>
-            <div style={{ width: 28, height: 1.5, background: accent, marginBottom: 8 }} />
-            <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#fff', lineHeight: 1.5 }}>{issue.coverLine}</div>
+            <div style={{ width: 28, height: 2, background: accent, marginBottom: 8 }} />
+            <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', color: '#fff', lineHeight: 1.5 }}>{issue.coverLine}</div>
           </div>
         </div>
-        {/* Headline */}
-        <div style={{ paddingBottom: 48 }}>
-          {titleParts.map((part, idx) => (
-            <div key={idx} style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: idx < titleParts.length - 1 ? 2 : 9 }}>{part.trim()}</div>
-          ))}
-          <div style={{ fontSize: 8.5, fontWeight: 400, letterSpacing: '0.04em', color: 'rgba(255,255,255,.70)', lineHeight: 1.6, maxWidth: 240 }}>{issue.theme}</div>
+        {/* Headline — mêmes marges que la cover principale (paddingBottom 52, lignes 5/9) */}
+        <div style={{ paddingBottom: 52 }}>
+          <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: 5 }}>{titleLines[0]}</div>
+          <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: 9 }}>{titleLines[1]}</div>
+          <div style={{ fontSize: 8.5, fontWeight: 400, letterSpacing: '0.05em', color: '#fff', lineHeight: 1.6 }}>{issue.theme}</div>
         </div>
       </div>
     </>
