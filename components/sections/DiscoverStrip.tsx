@@ -5,26 +5,27 @@ import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { ArrowUpRight } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
-import Image from 'next/image'
+import { IssueMiniCard } from '@/components/magazine/IssueMiniCard'
+import { ISSUE_01 } from '@/content/magazine/issue-01/meta'
+import { ISSUE_02 } from '@/content/magazine/issue-02/meta'
+import { ISSUE_03 } from '@/content/magazine/issue-03/meta'
+import { ISSUE_04 } from '@/content/magazine/issue-04/meta'
 
 /*
- * 4 covers JPG — positionnées en 2 rangées côte à côte, diagonale montante
- * vers le coin haut-droit, fidèle au modèle Barnes.
- * Chaque cover = 200×283px (ratio A4 1:1.414).
- *
- * Rangée basse : issue-01 (gauche) + issue-03 (droite)
- * Rangée haute : issue-02 (gauche) + issue-04 (droite, partiellement coupée)
- *
- * La diagonale est obtenue par un décalage progressif left↑ top↓ de gauche à droite.
+ * Disposition fidèle Barnes :
+ * - Card texte à gauche (~35%), fond blanc, centrée verticalement
+ * - Zone covers à droite (~65%), overflow hidden
+ * - 4 covers en 2 rangées diagonale montante vers haut-droit
+ *   Rangée basse : issue-01 (gauche) + issue-02 (droite)  — plus bas
+ *   Rangée haute : issue-03 (gauche) + issue-04 (droite)  — plus haut
+ * - Covers = IssueMiniCard identiques à la page magazine (overlays texte inclus)
+ * - Pas de badge "À venir" (isPublic/isPreview ne sont pas utilisés pour le rendu décoratif)
  */
-const CW = 200
-const CH = Math.round(CW * 1.414)
-
-const COVERS = [
-  { src: '/magazine/issue-01/cover-magazine-issue-01.jpg', rot: '-6deg', left: 40,  top: 280, z: 1 },
-  { src: '/magazine/issue-02/cover-magazine-issue-02.jpg', rot: '-3deg', left: 260, top: 180, z: 2 },
-  { src: '/magazine/issue-03/cover-magazine-issue-03.jpg', rot:  '4deg', left: 460, top:  80, z: 3 },
-  { src: '/magazine/issue-04/cover-magazine-issue-04.jpg', rot:  '7deg', left: 640, top: -20, z: 4 },
+const COVER_LAYOUT = [
+  { issue: ISSUE_01, rot: '-8deg', left: '2%',   top: '48%', z: 1 },
+  { issue: ISSUE_02, rot:  '4deg', left: '42%',  top: '38%', z: 2 },
+  { issue: ISSUE_03, rot: '-3deg', left: '22%',  top: '-5%', z: 3 },
+  { issue: ISSUE_04, rot:  '7deg', left: '60%',  top: '-15%', z: 4 },
 ]
 
 interface Props {
@@ -80,14 +81,14 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta, articlesLab
         className="relative overflow-hidden border-b border-ag-border"
         style={{ background: '#F5F2EE', height: 560 }}
       >
-        {/* Card texte — centrée gauche-centre, fond blanc, z-index au-dessus des covers */}
+        {/* Card texte — centre-gauche, fond blanc, z au-dessus des covers */}
         <div
           className="absolute z-10 bg-white py-10 px-12 space-y-5"
           style={{
-            left: '8%',
+            left: '10%',
             top: '50%',
             transform: 'translateY(-50%)',
-            maxWidth: 380,
+            width: 360,
           }}
         >
           <p className="font-mono text-[9px] tracking-[0.30em] uppercase text-ag-gray-light">
@@ -110,32 +111,31 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta, articlesLab
           </Link>
         </div>
 
-        {/* Covers — 4 images en diagonale montante bas-gauche → haut-droit */}
-        {COVERS.map(({ src, rot, left, top, z }, i) => (
-          <div
-            key={i}
-            className="mag-cover-card absolute pointer-events-none"
-            style={{
-              width: CW,
-              height: CH,
-              left,
-              top,
-              transform: `rotate(${rot})`,
-              zIndex: z,
-              borderRadius: 3,
-              overflow: 'hidden',
-              boxShadow: '0 8px 32px rgba(0,0,0,.18)',
-            }}
-          >
-            <Image
-              src={src}
-              alt=""
-              fill
-              sizes={`${CW}px`}
-              className="object-cover"
-            />
-          </div>
-        ))}
+        {/* Zone covers — moitié droite, diagonale montante haut-droit */}
+        <div
+          className="hidden md:block absolute top-0 bottom-0 overflow-hidden pointer-events-none"
+          style={{ left: '38%', right: 0 }}
+        >
+          {COVER_LAYOUT.map(({ issue, rot, left, top, z }, i) => (
+            <div
+              key={i}
+              className="mag-cover-card absolute"
+              style={{
+                transform: `rotate(${rot}) scale(0.72)`,
+                transformOrigin: 'center center',
+                zIndex: z,
+                left,
+                top,
+              }}
+            >
+              <IssueMiniCard
+                issue={issue}
+                locale="en"
+                decorative
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* ── Bloc 2 : Articles ── */}
