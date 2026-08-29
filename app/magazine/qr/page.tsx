@@ -1,6 +1,7 @@
-import { redirect }  from 'next/navigation'
-import { cookies }   from 'next/headers'
-import type { Metadata } from 'next'
+import { redirect }       from 'next/navigation'
+import { cookies }        from 'next/headers'
+import type { Metadata }  from 'next'
+import { canAccessIssue } from '@/lib/magazineAccess'
 
 export const dynamic = 'force-dynamic'
 
@@ -10,15 +11,19 @@ export const metadata: Metadata = {
 }
 
 /**
- * /magazine/qr — point d'entrée du QR code imprimé sur la cover.
- * La page hub /magazine est toujours ouverte au public (pas de gate) : on y
- * redirige systématiquement. Seul l'accès direct à une issue verrouillée
- * (via les boutons CTA du hub) reste soumis à canAccessIssue().
+ * /magazine/qr — point d'entrée du QR code imprimé sur la cover d'issue-01.
+ * Soumis aux mêmes règles d'accès que la page issue (canAccessIssue) :
+ * - accessible (public / early_access+cookie / admin / preview) → direct sur l'issue.
+ * - sinon → hub /magazine (toujours ouvert), pour découvrir/s'inscrire en attendant.
  */
 export default async function MagazineQrPage() {
   const cookieStore = await cookies()
   const localePref  = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
   const locale      = ['fr','en','de','it','es','nl'].includes(localePref) ? localePref : 'fr'
 
-  redirect(`/${locale}/magazine`)
+  const destination = (await canAccessIssue('01'))
+    ? `/${locale}/magazine/issue-01`
+    : `/${locale}/magazine`
+
+  redirect(destination)
 }
