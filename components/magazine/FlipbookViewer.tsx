@@ -28,6 +28,7 @@ export function FlipbookViewer({ htmlSrc }: Props) {
         title="Aegryn Magazine Flipbook"
         style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
         allow="fullscreen"
+        allowFullScreen
       />
     </div>
   )

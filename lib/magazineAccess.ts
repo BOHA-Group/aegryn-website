@@ -32,14 +32,16 @@ export async function canAccessIssue(issuePad: string): Promise<boolean> {
   const isPreviewEnv = process.env.VERCEL_ENV !== 'production'
   if (isPreviewEnv) return true
 
-  const adminUser = await getAdminUser()
-  if (adminUser) return true
-
   const supa = createServiceClient()
-  const { data } = await supa
-    .from('site_settings')
-    .select('key, value')
-    .in('key', [`magazine_issue_${issuePad}_public`, `magazine_issue_${issuePad}_early_access`])
+  const [adminUser, { data }] = await Promise.all([
+    getAdminUser(),
+    supa
+      .from('site_settings')
+      .select('key, value')
+      .in('key', [`magazine_issue_${issuePad}_public`, `magazine_issue_${issuePad}_early_access`]),
+  ])
+
+  if (adminUser) return true
 
   const isPublic = data?.some(r => r.key === `magazine_issue_${issuePad}_public` && (r.value === true || r.value === 'true')) ?? false
   if (isPublic) return true
