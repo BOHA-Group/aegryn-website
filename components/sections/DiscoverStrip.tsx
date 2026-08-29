@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { ArrowUpRight } from 'lucide-react'
@@ -17,10 +17,10 @@ import { ISSUE_04 } from '@/content/magazine/issue-04/meta'
  * Chaque IssueMiniCard = 232.5×330px natif.
  */
 const COVER_LAYOUT = [
-  { issue: ISSUE_01, rot: '-6deg', left:  -50, top:  -70, z: 1 },
-  { issue: ISSUE_02, rot:  '4deg', left:  170, top: -100, z: 2 },
-  { issue: ISSUE_03, rot: '-4deg', left:  -30, top:  190, z: 3 },
-  { issue: ISSUE_04, rot:  '6deg', left:  190, top:  170, z: 4 },
+  { issue: ISSUE_01, rot: '-8deg', left:  10, top:  10, z: 1 },
+  { issue: ISSUE_02, rot:  '5deg', left: 220, top: -30, z: 2 },
+  { issue: ISSUE_03, rot: '-5deg', left:  60, top: 320, z: 3 },
+  { issue: ISSUE_04, rot:  '9deg', left: 280, top: 280, z: 4 },
 ]
 
 interface Props {
@@ -36,6 +36,15 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta, articlesLab
   const t      = useTranslations('discoverStrip')
   const ref    = useRef<HTMLElement>(null)
   const magRef = useRef<HTMLDivElement>(null)
+  const [isDesktop, setIsDesktop] = useState(false)
+
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)')
+    setIsDesktop(mq.matches)
+    const onChange = () => setIsDesktop(mq.matches)
+    mq.addEventListener('change', onChange)
+    return () => mq.removeEventListener('change', onChange)
+  }, [])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -76,8 +85,8 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta, articlesLab
         className="overflow-hidden border-b border-ag-border"
         style={{ background: '#F5F2EE' }}
       >
-        {/* Hauteur explicite fixe sur desktop — évite tout souci de stretch/track-sizing CSS grid. Auto sur mobile. */}
-        <div className="relative md:h-[560px] py-16 md:py-0">
+        {/* Hauteur explicite fixe sur desktop (via JS matchMedia, garanti indépendamment du JIT Tailwind) */}
+        <div className="relative py-16 md:py-0" style={isDesktop ? { height: 640 } : undefined}>
 
           {/* Col gauche — texte isolé sur fond blanc card. Statique pleine largeur mobile, absolute 42% desktop */}
           <div className="relative md:absolute md:inset-y-0 md:left-0 flex items-center px-6 md:px-[80px] md:w-[42%]">
