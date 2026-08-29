@@ -1,7 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useEffect, useRef } from 'react'
 
 interface IssueItem {
   issue: string
@@ -24,7 +23,6 @@ export function IssueTickerCarousel({ items }: Props) {
   const rafRef    = useRef<number>(0)
   const pausedRef = useRef(false)
   const xRef      = useRef(0)
-  const [paused, setPaused] = useState(false)
 
   /* Largeur totale d'un "set" de cartes (on duplique pour loop infini) */
   const totalW = items.length * STEP
@@ -44,53 +42,18 @@ export function IssueTickerCarousel({ items }: Props) {
     return () => cancelAnimationFrame(rafRef.current)
   }, [totalW]) // animate est stable (refs uniquement)
 
-  function pause()  { pausedRef.current = true;  setPaused(true)  }
-  function resume() { pausedRef.current = false; setPaused(false) }
-
-  function nudge(dir: -1 | 1) {
-    xRef.current += dir * STEP
-    if (xRef.current > 0)            xRef.current = -(totalW - STEP)
-    if (Math.abs(xRef.current) >= totalW) xRef.current = 0
-    if (trackRef.current) trackRef.current.style.transform = `translateX(${xRef.current}px)`
-  }
+  function pause()  { pausedRef.current = true  }
+  function resume() { pausedRef.current = false }
 
   /* Dupliquer les items pour le loop infini */
   const doubled = [...items, ...items]
 
   return (
     <div className="relative border-t border-magazine-black/8 bg-magazine-white overflow-hidden">
-      <div className="max-w-magazine mx-auto px-6 md:px-[120px] py-16">
-
-        {/* Header */}
-        <div className="flex items-center justify-between mb-10">
-          <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30">
-            Au sommaire
-          </p>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => nudge(-1)}
-              aria-label="Précédent"
-              className="w-8 h-8 border border-magazine-black/15 flex items-center justify-center text-magazine-black/40 hover:border-magazine-black/50 hover:text-magazine-black transition-colors"
-            >
-              <ChevronLeft size={14} />
-            </button>
-            <button
-              onClick={() => nudge(1)}
-              aria-label="Suivant"
-              className="w-8 h-8 border border-magazine-black/15 flex items-center justify-center text-magazine-black/40 hover:border-magazine-black/50 hover:text-magazine-black transition-colors"
-            >
-              <ChevronRight size={14} />
-            </button>
-            <button
-              onClick={paused ? resume : pause}
-              aria-label={paused ? 'Reprendre' : 'Pause'}
-              className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-black/30 border border-magazine-black/12 px-3 py-1.5 hover:border-magazine-black/35 hover:text-magazine-black/60 transition-colors ml-1"
-            >
-              {paused ? '▶ Play' : '⏸ Pause'}
-            </button>
-          </div>
-        </div>
-
+      <div className="max-w-magazine mx-auto px-6 md:px-[120px] pt-12 pb-2">
+        <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30">
+          Au sommaire
+        </p>
       </div>
 
       {/* Piste défilante — déborde des marges */}
