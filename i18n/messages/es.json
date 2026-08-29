@@ -121,12 +121,12 @@
       "subblink": {
         "badge": "B2B — SaaS",
         "tagline": "Análisis contractual por IA",
-        "description": "Analiza todos sus contratos en segundos con una IA calibrada para el derecho suizo y europeo. Riesgos, cláusulas críticas, obligaciones ocultas — todo identificado en lenguaje claro."
+        "description": "Analiza todos sus contratos en segundos con una IA calibrada para el derecho suizo y europeo. Riesgos, cláusulas críticas, obligaciones ocultas: todo identificado en lenguaje claro."
       },
       "kryv": {
         "badge": "Protocolo — Blockchain",
         "tagline": "Certificación de integridad del código IA",
-        "description": "Protocolo blockchain de certificación de la integridad del código IA. El SSL del código artificial — cada despliegue, sellado de forma inmutable."
+        "description": "Protocolo blockchain de certificación de la integridad del código IA. El SSL del código artificial: cada despliegue, sellado de forma inmutable."
       },
       "neediu": {
         "badge": "B2C — Marketplace",
@@ -136,7 +136,7 @@
       "movtoo": {
         "badge": "B2C — Transporte",
         "tagline": "Transporte bajo demanda, zonas urbanas densas",
-        "description": "Plataforma de transporte inmediato impulsada por IA. Viajes, paquetes, mudanzas — despacho en tiempo real para particulares y profesionales."
+        "description": "Plataforma de transporte inmediato impulsada por IA. Viajes, paquetes, mudanzas: despacho en tiempo real para particulares y profesionales."
       },
       "primiom": {
         "badge": "B2C — Inmobiliaria",
@@ -349,7 +349,7 @@
     "items": [
       {
         "title": "CONCEPCIÓN",
-        "desc": "Diseñamos y operamos activos tech — SaaS, marketplaces, protocolos IA — estructurados desde el origen para ser certificables y transferibles. Cada activo resiste la auditoría más exigente."
+        "desc": "Diseñamos y operamos activos tech, SaaS, marketplaces, protocolos IA, estructurados desde el origen para ser certificables y transferibles. Cada activo resiste la auditoría más exigente."
       },
       {
         "title": "CERTIFICACIÓN",
@@ -636,7 +636,7 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "Analiza todos sus contratos en segundos con una IA calibrada para el derecho suizo y europeo. Riesgos, cláusulas críticas, obligaciones ocultas — todo se identifica y explica en lenguaje claro.",
+        "longDesc": "Analiza todos sus contratos en segundos con una IA calibrada para el derecho suizo y europeo. Riesgos, cláusulas críticas, obligaciones ocultas: todo se identifica y explica en lenguaje claro.",
         "audience": "Particulares, autónomos, PYME, profesionales del derecho",
         "features": [
           "Análisis de contratos en 60 segundos",
@@ -649,7 +649,7 @@
         ]
       },
       "neediu": {
-        "longDesc": "Conecta a particulares con los mejores proveedores de servicios del hogar. Limpieza, jardinería, bricolaje, cuidado de niños — conexión inteligente basada en ubicación y reseñas verificadas.",
+        "longDesc": "Conecta a particulares con los mejores proveedores de servicios del hogar. Limpieza, jardinería, bricolaje, cuidado de niños: conexión inteligente basada en ubicación y reseñas verificadas.",
         "audience": "Particulares, profesionales",
         "features": [
           "Conexión en tiempo real",
@@ -685,7 +685,7 @@
         ]
       },
       "hobconnect": {
-        "longDesc": "Crea comunidades auténticas en torno a pasiones compartidas. Fotografía, cocina, deporte, música — una red social centrada en el interés común más que en los seguidores.",
+        "longDesc": "Crea comunidades auténticas en torno a pasiones compartidas. Fotografía, cocina, deporte, música: una red social centrada en el interés común más que en los seguidores.",
         "audience": "Aficionados, profesionales, creadores de contenido, asociaciones",
         "features": [
           "Comunidades temáticas por pasión",
@@ -729,7 +729,7 @@
         "cta": "Acceder a Subblink"
       },
       "kryv": {
-        "headline": "El SSL del código IA — cada despliegue, sellado de forma inmutable.",
+        "headline": "El SSL del código IA. Cada despliegue, sellado de forma inmutable.",
         "p1": "KRYV Protocol es un protocolo blockchain para certificar la integridad del código IA. Garantiza que un modelo desplegado es exactamente el que fue auditado y aprobado, sin alteración.",
         "p2": "En un mundo donde la IA se convierte en infraestructura crítica, KRYV sienta las bases de una certificación de confianza verificable on-chain.",
         "category": "Protocolo — Blockchain",
@@ -5702,7 +5702,7 @@
     "showcase": {
       "label": "Áreas de experiencia",
       "title": "Todos los tipos de expertos transaccionales",
-      "desc": "Desde asesoría puntual hasta acompañamiento profundo — la comunidad cubre todas las especialidades M&A tech."
+      "desc": "Desde asesoría puntual hasta acompañamiento profundo: la comunidad cubre todas las especialidades M&A tech."
     },
     "categories": {
       "tech": "Advisory Tech",
@@ -5834,7 +5834,7 @@
     "waitlist": {
       "label": "¿Es usted experto?",
       "title": "Únase a la red.",
-      "desc": "La red de expertos Aegryn está abriéndose. Envíe su candidatura — nuestro equipo revisa cada perfil y le contactará para una entrevista de cualificación. El acceso se realiza mediante una suscripción mensual de referenciación (89 CHF + IVA/mes).",
+      "desc": "La red de expertos Aegryn está abriéndose. Envíe su candidatura: nuestro equipo revisa cada perfil y le contactará para una entrevista de cualificación. El acceso se realiza mediante una suscripción mensual de referenciación (89 CHF + IVA/mes).",
       "fieldPrenom": "Nombre",
       "fieldNom": "Apellido",
       "fieldEmail": "Email profesional",
@@ -6301,35 +6301,35 @@
       "notifyLabel": "Recibir cada edición",
       "notifyDesc": "Regístrese para ser notificado en cada nueva edición anual.",
       "newsletterLabel": "Artículos & Análisis",
-      "newsletterDesc": "Reciba nuestros artículos sobre el mercado de M&A tecnológico — semanalmente.",
+      "newsletterDesc": "Reciba nuestros artículos sobre el mercado de M&A tecnológico, semanalmente.",
       "charteFreqLabel": "Frecuencia",
       "charteFreqVal": "Trimestral",
       "charteLangLabel": "Idioma",
       "charteLangVal": "EN",
       "charteAccesLabel": "Acceso",
-      "charteAccesVal": "Gratuito — acceso digital permanente",
+      "charteAccesVal": "Gratuito, acceso digital permanente",
       "allIssuesLabel": "Todos los números",
       "nextIssuesTitle": "Próximos números",
       "issue01Date": "Enero 2027",
       "issue01Theme": "Built to Last.",
-      "issue01Desc": "La anatomía de un activo tech que se vende — y el que no.",
+      "issue01Desc": "La anatomía de un activo tech que se vende y el que no.",
       "issue02Date": "Abril 2027",
       "issue02Theme": "The Exit Equation",
       "issue02Desc": "La decisión, la preparación, la negociación. Y los 12 meses siguientes.",
       "issue03Date": "Julio 2027",
       "issue03Theme": "The Buyer Inside",
-      "issue03Desc": "Quién compra tecnología europea en 2027 — y cómo toman sus decisiones.",
+      "issue03Desc": "Quién compra tecnología europea en 2027 y cómo toman sus decisiones.",
       "issue04Date": "Octubre 2027",
       "issue04Theme": "The Succession Wave",
       "issue04Desc": "3,5 millones de pymes europeas sin sucesor. El momento es ahora.",
       "subscribeTitle": "Reciba cada número 48 horas antes de su publicación.",
       "subscribeBody": "Aegryn Magazine se publica en enero, abril, julio y octubre. El acceso digital es permanente y gratuito. Los suscriptores reciben cada número 48 horas antes de su lanzamiento público.",
-      "subscribeBullet1": "Datos europeos de M&A — actualizados cada trimestre",
-      "subscribeBullet2": "CIFS Index — datos de certificación exclusivos",
-      "subscribeBullet3": "Análisis no disponibles en otro lugar — sin conflicto de interés",
+      "subscribeBullet1": "Datos europeos de M&A, actualizados cada trimestre",
+      "subscribeBullet2": "CIFS Index: datos de certificación exclusivos",
+      "subscribeBullet3": "Análisis no disponibles en otro lugar, sin conflicto de interés",
       "subscribePlaceholder": "su@correo.com",
       "subscribeCta": "Suscribirse",
-      "subscribeSuccess": "Está en la lista — primer número en su bandeja en 48 h.",
+      "subscribeSuccess": "Está en la lista. Primer número en su bandeja en 48 h.",
       "subscribeError": "Se produjo un error. Inténtelo de nuevo o escríbanos a contact@boha-group.com",
       "contactLabel": "Suscripción — Acceso digital",
       "contactEditLabel": "Contacto editorial",
@@ -6340,7 +6340,7 @@
       "cifsBody": "Menos del 25 % de los activos presentados alcanzan el estado Full Grade. Descubra dónde se sitúa su activo antes que un comprador.",
       "cifsCta": "Iniciar certificación →",
       "footerLegal": "Aegryn SA — Saint-Sulpice, Cantón de Vaud, Suiza — CHE-402.011.821",
-      "footerCopyright": "© Aegryn SA 2027 — Acceso digital gratuito y permanente",
+      "footerCopyright": "© Aegryn SA 2027. Acceso digital gratuito y permanente",
       "navTableOfContents": "Sumario",
       "navDownloadPdf": "Descargar PDF",
       "cardReadIssue": "Leer el número",
@@ -6355,7 +6355,7 @@
       "title": "Aegryn Magazine",
       "subtitle": "European Tech M&A Intelligence",
       "tagline": "Raro por selección. Certificado para la transacción.",
-      "edition2026": "Primera edición — Enero 2027",
+      "edition2026": "Primera edición · Enero 2027",
       "readOnline": "Leer en línea",
       "downloadPdf": "Ver PDF",
       "subscribe": "Suscribirse",

@@ -121,12 +121,12 @@
       "subblink": {
         "badge": "B2B — SaaS",
         "tagline": "KI-gestützte Vertragsanalyse",
-        "description": "Analysiert alle Ihre Verträge in Sekunden mit einer auf Schweizer und europäisches Recht kalibrierten KI. Risiken, kritische Klauseln, versteckte Verpflichtungen — alles in klarer Sprache identifiziert."
+        "description": "Analysiert alle Ihre Verträge in Sekunden mit einer auf Schweizer und europäisches Recht kalibrierten KI. Risiken, kritische Klauseln, versteckte Verpflichtungen: alles in klarer Sprache identifiziert."
       },
       "kryv": {
         "badge": "Protokoll — Blockchain",
         "tagline": "KI-Code-Integritätszertifizierung",
-        "description": "Blockchain-Protokoll zur Zertifizierung der Integrität von KI-Code. Das SSL des künstlichen Codes — jede Bereitstellung, unveränderlich versiegelt."
+        "description": "Blockchain-Protokoll zur Zertifizierung der Integrität von KI-Code. Das SSL des künstlichen Codes: jede Bereitstellung, unveränderlich versiegelt."
       },
       "neediu": {
         "badge": "B2C — Marktplatz",
@@ -136,7 +136,7 @@
       "movtoo": {
         "badge": "B2C — Transport",
         "tagline": "On-Demand-Transport, dichte Stadtzonen",
-        "description": "KI-gestützte Soforttransportplattform. Fahrten, Pakete, Umzüge — Echtzeit-Dispatch für Privatpersonen und Fachleute."
+        "description": "KI-gestützte Soforttransportplattform. Fahrten, Pakete, Umzüge: Echtzeit-Dispatch für Privatpersonen und Fachleute."
       },
       "primiom": {
         "badge": "B2C — Immobilien",
@@ -349,7 +349,7 @@
     "items": [
       {
         "title": "KONZEPTION",
-        "desc": "Wir konzipieren und betreiben Tech-Assets — SaaS, Marktplätze, KI-Protokolle — die von Anfang an zertifizierbar und übertragbar sind. Jedes Asset widersteht der strengsten Prüfung."
+        "desc": "Wir konzipieren und betreiben Tech-Assets, SaaS, Marktplätze, KI-Protokolle, die von Anfang an zertifizierbar und übertragbar sind. Jedes Asset widersteht der strengsten Prüfung."
       },
       {
         "title": "ZERTIFIZIERUNG",
@@ -636,7 +636,7 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "Subblink analysiert alle Ihre Verträge in Sekunden mit einer KI, die auf das Schweizer und europäische Recht kalibriert ist. Risiken, kritische Klauseln, versteckte Verpflichtungen — alles wird identifiziert und in klarer Sprache erklärt.",
+        "longDesc": "Subblink analysiert alle Ihre Verträge in Sekunden mit einer KI, die auf das Schweizer und europäische Recht kalibriert ist. Risiken, kritische Klauseln, versteckte Verpflichtungen: alles wird identifiziert und in klarer Sprache erklärt.",
         "audience": "Privatpersonen, Freiberufler, KMU, Rechtsfachleute",
         "features": [
           "Vertragsanalyse in 60 Sekunden",
@@ -649,7 +649,7 @@
         ]
       },
       "neediu": {
-        "longDesc": "Verbindet Privatpersonen mit den besten Haushaltsdienstleistern. Reinigung, Gartenarbeit, Heimwerken, Babysitting — intelligente Vermittlung auf Basis von Standort und verifizierten Bewertungen.",
+        "longDesc": "Verbindet Privatpersonen mit den besten Haushaltsdienstleistern. Reinigung, Gartenarbeit, Heimwerken, Babysitting: intelligente Vermittlung auf Basis von Standort und verifizierten Bewertungen.",
         "audience": "Privatpersonen, Fachleute",
         "features": [
           "Echtzeit-Vermittlung",
@@ -685,7 +685,7 @@
         ]
       },
       "hobconnect": {
-        "longDesc": "Baut authentische Gemeinschaften rund um gemeinsame Leidenschaften. Fotografie, Kochen, Sport, Musik — ein soziales Netzwerk, das auf gemeinsamen Interessen statt auf Followern basiert.",
+        "longDesc": "Baut authentische Gemeinschaften rund um gemeinsame Leidenschaften. Fotografie, Kochen, Sport, Musik: ein soziales Netzwerk, das auf gemeinsamen Interessen statt auf Followern basiert.",
         "audience": "Leidenschaftliche Privatpersonen, Fachleute, Content-Creator, Vereine",
         "features": [
           "Thematische Communitys nach Leidenschaft",
@@ -729,7 +729,7 @@
         "cta": "Subblink aufrufen"
       },
       "kryv": {
-        "headline": "Das SSL des KI-Codes — jedes Deployment, unveränderlich versiegelt.",
+        "headline": "Das SSL des KI-Codes. Jedes Deployment, unveränderlich versiegelt.",
         "p1": "KRYV Protocol ist ein Blockchain-Protokoll zur Zertifizierung der KI-Code-Integrität. Es garantiert, dass ein eingesetztes Modell genau das ist, das geprüft und genehmigt wurde, ohne Veränderung.",
         "p2": "In einer Welt, in der KI zur kritischen Infrastruktur wird, legt KRYV die Grundlage für on-chain prüfbare Vertrauenszertifizierung.",
         "category": "Protokoll — Blockchain",
@@ -5702,7 +5702,7 @@
     "showcase": {
       "label": "Fachgebiete",
       "title": "Alle Arten von Transaktionsexperten",
-      "desc": "Von punktuellem Rat bis zur tiefen Deal-Begleitung — die Community deckt alle M&A-Tech-Spezialisierungen ab."
+      "desc": "Von punktuellem Rat bis zur tiefen Deal-Begleitung: die Community deckt alle M&A-Tech-Spezialisierungen ab."
     },
     "categories": {
       "tech": "Advisory Tech",
@@ -5834,7 +5834,7 @@
     "waitlist": {
       "label": "Sind Sie Experte?",
       "title": "Treten Sie dem Netzwerk bei.",
-      "desc": "Das Aegryn-Expertennetzwerk öffnet sich. Reichen Sie Ihre Bewerbung ein — unser Team prüft jedes Profil und kontaktiert Sie für ein Qualifikationsgespräch. Der Zugang erfolgt über ein monatliches Listing-Abonnement (89 CHF zzgl. MwSt./Monat).",
+      "desc": "Das Aegryn-Expertennetzwerk öffnet sich. Reichen Sie Ihre Bewerbung ein: unser Team prüft jedes Profil und kontaktiert Sie für ein Qualifikationsgespräch. Der Zugang erfolgt über ein monatliches Listing-Abonnement (89 CHF zzgl. MwSt./Monat).",
       "fieldPrenom": "Vorname",
       "fieldNom": "Nachname",
       "fieldEmail": "Geschäftliche E-Mail",
@@ -6301,35 +6301,35 @@
       "notifyLabel": "Jede Ausgabe erhalten",
       "notifyDesc": "Melden Sie sich an, um bei jeder neuen Jahresausgabe benachrichtigt zu werden.",
       "newsletterLabel": "Artikel & Insights",
-      "newsletterDesc": "Erhalten Sie unsere Artikel zum Tech-M&A-Markt — wöchentlich.",
+      "newsletterDesc": "Erhalten Sie unsere Artikel zum Tech-M&A-Markt, wöchentlich.",
       "charteFreqLabel": "Erscheinungsweise",
       "charteFreqVal": "Vierteljährlich",
       "charteLangLabel": "Sprache",
       "charteLangVal": "EN",
       "charteAccesLabel": "Zugang",
-      "charteAccesVal": "Kostenlos — dauerhafter digitaler Zugang",
+      "charteAccesVal": "Kostenlos, dauerhafter digitaler Zugang",
       "allIssuesLabel": "Alle Ausgaben",
       "nextIssuesTitle": "Nächste Ausgaben",
       "issue01Date": "Januar 2027",
       "issue01Theme": "Built to Last.",
-      "issue01Desc": "Die Anatomie eines Tech-Assets, das sich verkauft — und eines, das es nicht tut.",
+      "issue01Desc": "Die Anatomie eines Tech-Assets, das sich verkauft, und eines, das es nicht tut.",
       "issue02Date": "April 2027",
       "issue02Theme": "The Exit Equation",
       "issue02Desc": "Die Entscheidung, die Vorbereitung, die Verhandlung. Und die 12 Monate danach.",
       "issue03Date": "Juli 2027",
       "issue03Theme": "The Buyer Inside",
-      "issue03Desc": "Wer kauft europäische Tech-Unternehmen 2027 — und wie entscheiden sie?",
+      "issue03Desc": "Wer kauft europäische Tech-Unternehmen 2027 und wie entscheiden sie?",
       "issue04Date": "Oktober 2027",
       "issue04Theme": "The Succession Wave",
       "issue04Desc": "3,5 Millionen europäische KMU ohne Nachfolger. Der Moment ist jetzt.",
       "subscribeTitle": "Jede Ausgabe 48 Stunden vor Veröffentlichung erhalten.",
       "subscribeBody": "Aegryn Magazine erscheint im Januar, April, Juli und Oktober. Digitaler Zugang ist dauerhaft kostenlos. Abonnenten erhalten jede Ausgabe 48 Stunden vor der Veröffentlichung.",
-      "subscribeBullet1": "Europäische M&A-Daten — vierteljährlich aktualisiert",
-      "subscribeBullet2": "CIFS-Index — exklusive Zertifizierungsdaten",
-      "subscribeBullet3": "Analysen anderswo nicht verfügbar — ohne Interessenkonflikt",
+      "subscribeBullet1": "Europäische M&A-Daten, vierteljährlich aktualisiert",
+      "subscribeBullet2": "CIFS-Index: exklusive Zertifizierungsdaten",
+      "subscribeBullet3": "Analysen anderswo nicht verfügbar, ohne Interessenkonflikt",
       "subscribePlaceholder": "ihre@email.com",
       "subscribeCta": "Abonnieren",
-      "subscribeSuccess": "Sie sind auf der Liste — erste Ausgabe innerhalb von 48 Std. in Ihrem Postfach.",
+      "subscribeSuccess": "Sie sind auf der Liste. Erste Ausgabe innerhalb von 48 Std. in Ihrem Postfach.",
       "subscribeError": "Ein Fehler ist aufgetreten. Versuchen Sie es erneut oder schreiben Sie an contact@boha-group.com",
       "contactLabel": "Abonnement — Digitaler Zugang",
       "contactEditLabel": "Redaktionskontakt",

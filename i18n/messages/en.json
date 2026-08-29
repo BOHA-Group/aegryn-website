@@ -121,12 +121,12 @@
       "subblink": {
         "badge": "B2B — SaaS",
         "tagline": "AI-powered contract analysis",
-        "description": "Analyses all your contracts in seconds using AI calibrated for Swiss and European law. Risks, critical clauses, hidden obligations — everything identified in plain language."
+        "description": "Analyses all your contracts in seconds using AI calibrated for Swiss and European law. Risks, critical clauses, hidden obligations: everything identified in plain language."
       },
       "kryv": {
         "badge": "Protocol — Blockchain",
         "tagline": "AI code integrity certification",
-        "description": "Blockchain protocol for certifying the integrity of AI code. The SSL of artificial code — every deployment, immutably sealed."
+        "description": "Blockchain protocol for certifying the integrity of AI code. The SSL of artificial code: every deployment, immutably sealed."
       },
       "neediu": {
         "badge": "B2C — Marketplace",
@@ -136,7 +136,7 @@
       "movtoo": {
         "badge": "B2C — Transport",
         "tagline": "On-demand transport, dense urban areas",
-        "description": "AI-powered immediate transport platform. Rides, parcels, moving — real-time dispatch for individuals and professionals."
+        "description": "AI-powered immediate transport platform. Rides, parcels, moving: real-time dispatch for individuals and professionals."
       },
       "primiom": {
         "badge": "B2C — Real Estate",
@@ -349,11 +349,11 @@
     "items": [
       {
         "title": "BUILD",
-        "desc": "We design and operate tech assets — SaaS, marketplaces, AI protocols — structured from inception to be certifiable and transferable. Every asset withstands the most rigorous audit."
+        "desc": "We design and operate tech assets, SaaS, marketplaces, AI protocols, structured from inception to be certifiable and transferable. Every asset withstands the most rigorous audit."
       },
       {
         "title": "GRADE",
-        "desc": "We certify assets under an independent label structured across 4 dimensions: Code, IP, Finance, Security. A reproducible, traceable and conclusive protocol — for third parties and our own assets alike."
+        "desc": "We certify assets under an independent label structured across 4 dimensions: Code, IP, Finance, Security. A reproducible, traceable and conclusive protocol, for third parties and our own assets alike."
       },
       {
         "title": "M&A TRANSACTION",
@@ -636,7 +636,7 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "Subblink analyses all your contracts in seconds using AI calibrated for Swiss and European law. Risks, critical clauses, hidden obligations — everything is identified and explained in plain language.",
+        "longDesc": "Subblink analyses all your contracts in seconds using AI calibrated for Swiss and European law. Risks, critical clauses, hidden obligations: everything is identified and explained in plain language.",
         "audience": "Individuals, freelancers, SMEs, legal professionals",
         "features": [
           "Contract analysis in 60 seconds",
@@ -649,7 +649,7 @@
         ]
       },
       "neediu": {
-        "longDesc": "Connects individuals with the best home service providers. Cleaning, gardening, DIY, babysitting — smart matching based on location and verified reviews.",
+        "longDesc": "Connects individuals with the best home service providers. Cleaning, gardening, DIY, babysitting: smart matching based on location and verified reviews.",
         "audience": "Individuals, professionals",
         "features": [
           "Real-time matching",
@@ -685,7 +685,7 @@
         ]
       },
       "hobconnect": {
-        "longDesc": "Builds authentic communities around shared passions. Photography, cooking, sport, music — a social network centred on common interest rather than follower counts.",
+        "longDesc": "Builds authentic communities around shared passions. Photography, cooking, sport, music: a social network centred on common interest rather than follower counts.",
         "audience": "Passionate individuals, professionals, content creators, associations",
         "features": [
           "Thematic communities by passion",
@@ -729,7 +729,7 @@
         "cta": "Access Subblink"
       },
       "kryv": {
-        "headline": "The SSL of AI code — every deployment, immutably sealed.",
+        "headline": "The SSL of AI code. Every deployment, immutably sealed.",
         "p1": "KRYV Protocol is a blockchain protocol for certifying AI code integrity. It guarantees that a deployed model is exactly the one that was audited and approved, without alteration.",
         "p2": "In a world where AI is becoming critical infrastructure, KRYV lays the foundation for on-chain verifiable trust certification.",
         "category": "Protocol — Blockchain",
@@ -6296,7 +6296,7 @@
       "notifyLabel": "Receive each edition",
       "notifyDesc": "Sign up to be notified when each new annual edition is published.",
       "newsletterLabel": "Articles & Insights",
-      "newsletterDesc": "Receive our articles on the tech M&A market — one per week.",
+      "newsletterDesc": "Receive our articles on the tech M&A market, one per week.",
       "subscribeLabel": "Receive each edition",
       "subscribeDesc": "Sign up to be notified when each new annual edition is published.",
       "charteFreqLabel": "Frequency",
@@ -6304,134 +6304,32 @@
       "charteLangLabel": "Language",
       "charteLangVal": "EN",
       "charteAccesLabel": "Access",
-      "charteAccesVal": "Free — permanent digital access",
+      "charteAccesVal": "Free, permanent digital access",
       "allIssuesLabel": "All issues",
       "nextIssuesTitle": "Upcoming issues",
       "issue01Date": "January 2027",
       "issue01Theme": "Built to Last.",
-      "issue01Desc": "The anatomy of a tech asset that sells — and one that doesn't.",
+      "issue01Desc": "The anatomy of a tech asset that sells and one that doesn't.",
       "issue02Date": "April 2027",
       "issue02Theme": "The Exit Equation",
       "issue02Desc": "The decision, the preparation, the negotiation. And the 12 months that follow.",
       "issue03Date": "July 2027",
       "issue03Theme": "The Buyer Inside",
-      "issue03Desc": "Who is buying European tech in 2027 — and how they make their decisions.",
+      "issue03Desc": "Who is buying European tech in 2027 and how they make their decisions.",
       "issue04Date": "October 2027",
       "issue04Theme": "The Succession Wave",
       "issue04Desc": "3.5 million European SMEs without a successor. The moment is now.",
       "subscribeTitle": "Receive each issue 48 hours before publication.",
       "subscribeBody": "Aegryn Magazine is published in January, April, July and October. Digital access is permanent and free. Subscribers receive each issue 48 hours before public release.",
-      "subscribeBullet1": "European M&A data — updated every quarter",
-      "subscribeBullet2": "CIFS Index — exclusive certification data",
-      "subscribeBullet3": "Analysis unavailable elsewhere — no conflict of interest",
-      "subscribePlaceholder": "your@email.com",
-      "subscribeCta": "Subscribe",
-      "subscribeSuccess": "You’re on the list — first issue in your inbox within 48h.",
-      "subscribeError": "An error occurred. Try again or write to contact@boha-group.com",
-      "contactLabel": "Subscription — Digital access",
-      "contactEditLabel": "Editorial contact",
-      "contactEditTitle": "Partnership, contribution, reproduction rights",
-      "contactEditBody": "For any enquiry regarding editorial content, reproduction rights, or content partnerships, contact the Aegryn editorial team directly.",
-      "contactEditCta": "media@boha-group.com →",
-      "cifsLabel": "CIFS Certification",
-      "cifsBody": "Fewer than 25% of submitted assets reach Full Grade status. Find out where your asset stands before a buyer does.",
-      "cifsCta": "Start certification →",
-      "footerLegal": "Aegryn SA — Saint-Sulpice, Canton de Vaud, Switzerland — CHE-402.011.821",
-      "footerCopyright": "© Aegryn SA 2027 — Free permanent digital access",
-      "navTableOfContents": "Contents",
-      "navDownloadPdf": "Download PDF",
-      "cardReadIssue": "Read issue",
-      "cardExploreOnline": "Explore online",
-      "cardSpecialEdition": "Special Edition",
-      "readOnline": "Explore online",
-      "downloadPdf": "Browse the PDF",
       "subscribe": "Subscribe",
-      "comingSoon": "Coming soon"
+      "manage": "Manage subscription",
+      "successMsg": "Subscription activated successfully.",
+      "canceledMsg": "Payment cancelled."
     },
-    "report": {
-      "title": "Aegryn Magazine",
-      "subtitle": "European Tech M&A Intelligence",
-      "tagline": "Rare by selection. Certified to transact.",
-      "edition2026": "First Edition — January 2027",
-      "readOnline": "Read online",
-      "downloadPdf": "Browse PDF",
-      "notify": "Get notified",
-      "subscribe": "Receive",
-      "ctaEstimate": "Estimate your asset",
-      "ctaGrade": "Discover the Grade",
-      "ctaTitle": "You built something real.",
-      "ctaSub": "We certify it. We transact it.",
-      "ctaLine": "AEGRYN — Certified to transact. Switzerland.",
-      "scrollDown": "Scroll",
-      "source": "Source",
-      "estimatedGrade": "Estimated AEGRYN Grade",
-      "whatMadeItWork": "What made it work",
-      "disclaimer": "All private deal analyses are based on public information and AEGRYN estimates. They do not constitute investment advice.",
-      "indexNote": "The AEGRYN Index will deepen with each annual edition, as our certification database grows.",
-      "meta": {
-        "title": "Aegryn Magazine 2026 — European Tech M&A Intelligence",
-        "description": "Annual reference report on the European tech M&A market. Data, analysis and perspectives by AEGRYN."
-      }
-    },
-    "notify": {
-      "title": "Get notified for each edition",
-      "desc": "Enter your email to receive a publication notice for each new annual edition of Aegryn Magazine. Free access, no commitment, unsubscribe in one click.",
-      "placeholder": "Your email address",
-      "cta": "Get notified",
-      "success": "Thank you. You will receive the next edition upon publication.",
-      "error": "An error occurred. Please try again.",
-      "unsubscribed": "You have been unsubscribed.",
-      "meta": {
-        "title": "Aegryn Magazine — Stay informed",
-        "description": "Receive each issue of Aegryn Magazine by email."
-      }
-    },
-    "subscribe": {
-      "meta": {
-        "title": "Print Edition — Aegryn Magazine",
-        "description": "Express your interest in the print edition of AEGRYN Report, reserved for Aegryn clients."
-      },
-      "printBadge": "Print Edition",
-      "title": "Interest List — Print Edition",
-      "desc": "The print edition of the Aegryn magazine is an initiative reserved for registered clients. This form allows you to express your areas of interest to be added to the wish list. We will contact you when production begins.",
-      "digitalNote": "The digital version is freely accessible, like our articles and news.",
-      "digitalNoteCta": "Read the report online",
-      "namePlaceholder": "Your name",
-      "emailPlaceholder": "Your email address",
-      "companyPlaceholder": "Your company (optional)",
-      "interestsLabel": "Your areas of interest",
-      "interests": {
-        "market": "The Market — M&A & Data",
-        "techAi": "Tech AI",
-        "build": "Build — Asset Engineering",
-        "transaction": "Transaction & Structuring",
-        "buyers": "Buyers — Buyer Profiles",
-        "outlook": "Outlook 2027",
-        "index": "AEGRYN Index",
-        "people": "People",
-        "life": "Life"
-      },
-      "interestsDesc": {
-        "market": "European M&A data, deal volumes and valuations",
-        "techAi": "AI, SaaS and tech asset landscape",
-        "build": "Engineering, scalability and value of a tech asset",
-        "transaction": "Deal structuring and transaction process",
-        "buyers": "Buyer profiles, expectations and acquisition criteria",
-        "outlook": "Market trends and projections for 2027",
-        "index": "CIFS certification scores and rankings",
-        "people": "Entrepreneur portraits and career paths",
-        "life": "Lifestyle, culture and territories"
-      },
-      "cta": "Express my interest",
-      "success": "Thank you. Your interest has been recorded. We will contact you when the print edition goes into production.",
-      "error": "An error occurred. Please try again.",
-      "clientNote": "This list is reserved for Aegryn clients. A print edition will only be produced if demand warrants it.",
-      "disclaimer": "The digital version remains freely accessible without restriction. The print edition is an initiative currently under evaluation.",
-      "backToMagazine": "Back to Magazine",
-      "firstNamePlaceholder": "First name",
-      "lastNamePlaceholder": "Last name",
-      "addressPlaceholder": "Street address",
-      "cityPlaceholder": "City",
+    "nda": {
+      "meta": "NDA — Partner Space Aegryn",
+      "title": "Non-Disclosure Agreement",
+      "subtitle": "NDA signed as part of your partnership.",
       "postalCodePlaceholder": "Postal code",
       "countryPlaceholder": "Country",
       "addressLabel": "Delivery address",

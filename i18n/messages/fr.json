@@ -121,7 +121,7 @@
       "subblink": {
         "badge": "B2B — SaaS",
         "tagline": "Analyse contractuelle par IA",
-        "description": "Analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées — tout identifié en langage clair."
+        "description": "Analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées : tout identifié en langage clair."
       },
       "kryv": {
         "badge": "Protocole — Blockchain",
@@ -136,7 +136,7 @@
       "movtoo": {
         "badge": "B2C — Transport",
         "tagline": "Transport à la demande, zones urbaines denses",
-        "description": "Plateforme de transport immédiat pilotée par l'IA. Courses, colis, déménagement — dispatch en temps réel pour particuliers et professionnels."
+        "description": "Plateforme de transport immédiat pilotée par l'IA. Courses, colis, déménagement : dispatch en temps réel pour particuliers et professionnels."
       },
       "primiom": {
         "badge": "B2C — Immobilier",
@@ -316,7 +316,7 @@
       },
       {
         "title": "CERTIFICATION",
-        "desc": "Nous certifions des actifs selon un label indépendant structuré sur 4 dimensions : Code, IP, Finance, Sécurité. Un protocole reproductible, traçable et concluant — pour des tiers comme pour nos propres actifs."
+        "desc": "Nous certifions des actifs selon un label indépendant structuré sur 4 dimensions : Code, IP, Finance, Sécurité. Un protocole reproductible, traçable et concluant, pour des tiers comme pour nos propres actifs."
       },
       {
         "title": "TRANSACTION",
@@ -531,12 +531,12 @@
     "hero": {
       "label": "Aegryn · Carrières",
       "title": "Construire ce qui dure.",
-      "desc": "Aegryn est une infrastructure suisse de certification et de transaction pour les actifs technologiques européens. Nous n'occupons pas une niche — nous en définissons les règles."
+      "desc": "Aegryn est une infrastructure suisse de certification et de transaction pour les actifs technologiques européens. Nous n'occupons pas une niche : nous en définissons les règles."
     },
     "about": {
       "label": "Qui sommes-nous",
       "title": "Une infrastructure, pas une agence.",
-      "desc": "Fondée sur trois principes — précision, durabilité, souveraineté — Aegryn structure les transactions M&A tech avec une rigueur que le marché n'offrait pas encore. Nos actifs propriétaires, notre protocole de certification et notre réseau advisory forment un écosystème intégré conçu pour les 10 prochaines années.",
+      "desc": "Fondée sur trois principes, précision, durabilité, souveraineté, Aegryn structure les transactions M&A tech avec une rigueur que le marché n'offrait pas encore. Nos actifs propriétaires, notre protocole de certification et notre réseau advisory forment un écosystème intégré conçu pour les 10 prochaines années.",
       "tagline": "Suisse · Europe · Indépendant"
     },
     "crafts": {
@@ -567,7 +567,7 @@
       "items": {
         "precision": {
           "title": "Précision",
-          "desc": "Chaque analyse, chaque certification, chaque conseil repose sur des données vérifiables — pas sur des intuitions."
+          "desc": "Chaque analyse, chaque certification, chaque conseil repose sur des données vérifiables, pas sur des intuitions."
         },
         "durability": {
           "title": "Durabilité",
@@ -575,11 +575,11 @@
         },
         "sovereignty": {
           "title": "Souveraineté",
-          "desc": "Indépendance structurelle totale — vis-à-vis des acheteurs, des vendeurs, des plateformes. Notre seul alignement : la qualité."
+          "desc": "Indépendance structurelle totale vis-à-vis des acheteurs, des vendeurs, des plateformes. Notre seul alignement : la qualité."
         },
         "trust": {
           "title": "Confiance",
-          "desc": "La confiance ne se déclare pas, elle se prouve — par la cohérence entre ce qu'on certifie et ce qu'on défend."
+          "desc": "La confiance ne se déclare pas, elle se prouve par la cohérence entre ce qu'on certifie et ce qu'on défend."
         }
       }
     },
@@ -625,7 +625,7 @@
         ]
       },
       "neediu": {
-        "longDesc": "Connecte les particuliers aux meilleurs prestataires de services à domicile. Ménage, jardinage, bricolage, baby-sitting — mise en relation intelligente basée sur la localisation et les avis vérifiés.",
+        "longDesc": "Connecte les particuliers aux meilleurs prestataires de services à domicile. Ménage, jardinage, bricolage, baby-sitting : mise en relation intelligente basée sur la localisation et les avis vérifiés.",
         "audience": "Particuliers, professionnels",
         "features": [
           "Mise en relation en temps réel",
@@ -661,7 +661,7 @@
         ]
       },
       "hobconnect": {
-        "longDesc": "Crée des communautés authentiques autour des passions partagées. Photographie, cuisine, sport, musique — un réseau social centré sur l'intérêt commun plutôt que sur les abonnés.",
+        "longDesc": "Crée des communautés authentiques autour des passions partagées. Photographie, cuisine, sport, musique : un réseau social centré sur l'intérêt commun plutôt que sur les abonnés.",
         "audience": "Particuliers passionnés, professionnels, créateurs de contenu, associations",
         "features": [
           "Communautés thématiques par passion",
@@ -690,7 +690,7 @@
         "cta": "Accéder à Subblink"
       },
       "kryv": {
-        "headline": "Le SSL du code IA — chaque déploiement, immuablement scellé.",
+        "headline": "Le SSL du code IA. Chaque déploiement, immuablement scellé.",
         "p1": "KRYV Protocol est un protocole blockchain de certification de l'intégrité du code IA. Il garantit qu'un modèle déployé est exactement celui qui a été audité et approuvé, sans altération.",
         "p2": "Dans un monde où l'IA devient infrastructure critique, KRYV pose les bases d'une certification de confiance vérifiable on-chain.",
         "category": "Protocole — Blockchain",
@@ -5670,7 +5670,7 @@
     "showcase": {
       "label": "Domaines d'expertise",
       "title": "Tous types d'experts\ntransactionnels",
-      "desc": "Du conseil ponctuel à l'accompagnement approfondi — la communauté couvre l'ensemble des spécialités M&A tech."
+      "desc": "Du conseil ponctuel à l'accompagnement approfondi : la communauté couvre l'ensemble des spécialités M&A tech."
     },
     "categories": {
       "tech": "Advisory Tech",
@@ -5802,7 +5802,7 @@
     "waitlist": {
       "label": "Vous êtes expert ?",
       "title": "Rejoignez le réseau.",
-      "desc": "Le réseau d'experts Aegryn est en cours d'ouverture. Déposez votre candidature — notre équipe examine chaque profil et vous contactera pour un entretien de qualification. L'accès au réseau se fera via un abonnement mensuel de référencement (89 CHF HT/mois).",
+      "desc": "Le réseau d'experts Aegryn est en cours d'ouverture. Déposez votre candidature : notre équipe examine chaque profil et vous contactera pour un entretien de qualification. L'accès au réseau se fera via un abonnement mensuel de référencement (89 CHF HT/mois).",
       "fieldPrenom": "Prénom",
       "fieldNom": "Nom",
       "fieldEmail": "Email professionnel",
@@ -5847,7 +5847,7 @@
     "label": "Conception",
     "assetsLabel": "Actifs propriétaires",
     "assetsTitle": "Un portefeuille\nd'actifs tech sélectifs.",
-    "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques — SaaS B2B, marketplaces, outils IA. Chaque actif est certifié, documenté, opéré en conditions réelles.",
+    "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques : SaaS B2B, marketplaces, outils IA. Chaque actif est certifié, documenté, opéré en conditions réelles.",
     "assetsCta": "Voir le portefeuille",
     "engineeringLabel": "Ingénierie d'actifs",
     "engineeringTitle": "Conception d'actifs\nsur-mesure pour des tiers.",
@@ -6267,7 +6267,7 @@
       "notifyLabel": "Recevoir chaque édition",
       "notifyDesc": "Inscrivez-vous pour être notifié à chaque nouvelle parution annuelle.",
       "newsletterLabel": "Articles & Analyses",
-      "newsletterDesc": "Recevez nos articles sur le marché M&A tech — un par semaine.",
+      "newsletterDesc": "Recevez nos articles sur le marché M&A tech, un par semaine.",
       "subscribeLabel": "Recevoir chaque édition",
       "subscribeDesc": "Inscrivez-vous pour être notifié à chaque nouvelle parution annuelle.",
       "charteFreqLabel": "Fréquence",
@@ -6275,29 +6275,29 @@
       "charteLangLabel": "Langue",
       "charteLangVal": "EN",
       "charteAccesLabel": "Accès",
-      "charteAccesVal": "Gratuit — accès digital permanent",
+      "charteAccesVal": "Gratuit, accès digital permanent",
       "allIssuesLabel": "Tous les numéros",
       "nextIssuesTitle": "Prochains numéros",
       "issue01Date": "Janvier 2027",
       "issue01Theme": "Built to Last.",
-      "issue01Desc": "L'anatomie d'un actif tech qui se vend — et celui qui ne se vend pas.",
+      "issue01Desc": "L'anatomie d'un actif tech qui se vend et celui qui ne se vend pas.",
       "issue02Date": "Avril 2027",
       "issue02Theme": "The Exit Equation",
       "issue02Desc": "La décision, la préparation, la négociation. Et les 12 mois qui suivent.",
       "issue03Date": "Juillet 2027",
       "issue03Theme": "The Buyer Inside",
-      "issue03Desc": "Qui achète le tech européen en 2027 — et comment ils prennent leurs décisions.",
+      "issue03Desc": "Qui achète le tech européen en 2027 et comment ils prennent leurs décisions.",
       "issue04Date": "Octobre 2027",
       "issue04Theme": "The Succession Wave",
       "issue04Desc": "3,5 millions de PME européennes sans successeur. Le moment est maintenant.",
       "subscribeTitle": "Recevez chaque numéro 48h avant sa publication.",
       "subscribeBody": "Aegryn Magazine paraît en janvier, avril, juillet et octobre. L'accès digital est permanent et gratuit. Les abonnés reçoivent chaque numéro 48h avant la mise en ligne publique.",
-      "subscribeBullet1": "Données M&A européennes — mises à jour chaque trimestre",
-      "subscribeBullet2": "Index CIFS — données de certification exclusives",
-      "subscribeBullet3": "Analyses non disponibles ailleurs — sans conflit d'intérêt",
+      "subscribeBullet1": "Données M&A européennes, mises à jour chaque trimestre",
+      "subscribeBullet2": "Index CIFS : données de certification exclusives",
+      "subscribeBullet3": "Analyses non disponibles ailleurs, sans conflit d'intérêt",
       "subscribePlaceholder": "votre@email.com",
       "subscribeCta": "S'abonner",
-      "subscribeSuccess": "Vous êtes sur la liste — premier numéro dans votre boîte dans 48h.",
+      "subscribeSuccess": "Vous êtes sur la liste. Premier numéro dans votre boîte dans 48h.",
       "subscribeError": "Une erreur est survenue. Réessayez ou écrivez-nous à contact@boha-group.com",
       "contactLabel": "Abonnement — Accès digital",
       "contactEditLabel": "Contact éditorial",
@@ -6308,7 +6308,7 @@
       "cifsBody": "Moins de 25 % des actifs soumis atteignent le statut Full Grade. Découvrez où se situe votre actif avant qu'un acheteur ne le fasse.",
       "cifsCta": "Démarrer la certification →",
       "footerLegal": "Aegryn SA — Saint-Sulpice, Canton de Vaud, Switzerland — CHE-402.011.821",
-      "footerCopyright": "© Aegryn SA 2027 — Accès digital gratuit et permanent",
+      "footerCopyright": "© Aegryn SA 2027. Accès digital gratuit et permanent",
       "navTableOfContents": "Au sommaire",
       "navDownloadPdf": "Télécharger PDF",
       "cardReadIssue": "Lire l'issue",
@@ -6323,7 +6323,7 @@
       "title": "Aegryn Magazine",
       "subtitle": "Intelligence M&A Tech Européenne",
       "tagline": "Rare par sélection. Certifié pour la transaction.",
-      "edition2026": "Première édition — Janvier 2027",
+      "edition2026": "Première édition · Janvier 2027",
       "readOnline": "Explorer en ligne",
       "downloadPdf": "Feuilleter le PDF",
       "notify": "Être notifié",
@@ -6341,7 +6341,7 @@
       "indexNote": "L'AEGRYN Index gagnera en profondeur à chaque édition, à mesure que nos données de certification s'accumulent.",
       "meta": {
         "title": "Aegryn Magazine 2026 — Intelligence M&A Tech Européenne",
-        "description": "Rapport annuel de référence sur le marché M&A tech européen. Données, analyses et perspectives par AEGRYN — l'agence de certification et transaction d'actifs tech."
+        "description": "Rapport annuel de référence sur le marché M&A tech européen. Données, analyses et perspectives par AEGRYN, l'agence de certification et transaction d'actifs tech."
       }
     },
     "notify": {
@@ -6396,8 +6396,8 @@
       "cta": "Exprimer mon intérêt",
       "success": "Merci. Votre intérêt a été enregistré. Nous vous contacterons lors de la production de l'édition papier.",
       "error": "Une erreur est survenue. Veuillez réessayer.",
-      "clientNote": "Réservé aux clients enregistrés Aegryn. L'édition papier n'est ni disponible ni imprimable via le web — elle fera l'objet d'une production physique dédiée si la demande le justifie.",
-      "disclaimer": "La version digitale est accessible librement à tous, comme nos articles et actualités. L'édition papier — si elle est produite — sera expédiée uniquement aux clients enregistrés figurant sur la liste de souhait.",
+      "clientNote": "Réservé aux clients enregistrés Aegryn. L'édition papier n'est ni disponible ni imprimable via le web : elle fera l'objet d'une production physique dédiée si la demande le justifie.",
+      "disclaimer": "La version digitale est accessible librement à tous, comme nos articles et actualités. L'édition papier, si elle est produite, sera expédiée uniquement aux clients enregistrés figurant sur la liste de souhait.",
       "backToMagazine": "Retour au Magazine",
       "firstNamePlaceholder": "Prénom",
       "lastNamePlaceholder": "Nom",
