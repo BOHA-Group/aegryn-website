@@ -133,11 +133,13 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
     </>
   )
 
+  const MINI_W = 232.5
+  const MINI_H = 330
   const miniBox = (
     <div
       style={{
-        width: 155,
-        height: 220,
+        width: MINI_W,
+        height: MINI_H,
         position: 'relative',
         overflow: 'hidden',
         boxShadow: active
@@ -145,7 +147,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
           : '0 3px 14px rgba(0,0,0,.18)',
       }}
     >
-      <div style={{ position: 'absolute', top: 0, left: 0, transformOrigin: 'top left', transform: 'scale(0.369)', width: 420, height: 595 }}>
+      <div style={{ position: 'absolute', top: 0, left: 0, transformOrigin: 'top left', transform: `scale(${MINI_W / 420})`, width: 420, height: 595 }}>
         {coverContent}
       </div>
     </div>
@@ -160,7 +162,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
           type="button"
           onClick={() => setLightboxOpen(true)}
           className={`block transition-transform hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}
-          style={{ width: 155, cursor: 'pointer', border: 0, padding: 0, background: 'none', textAlign: 'left' }}
+          style={{ width: MINI_W, cursor: 'pointer', border: 0, padding: 0, background: 'none', textAlign: 'left' }}
           aria-label={`${issue.title} — ${comingSoonLabel}`}
         >
           {miniBox}
@@ -171,7 +173,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
           aria-disabled={isDraft}
           tabIndex={isDraft ? -1 : undefined}
           className={`block transition-transform ${isDraft ? 'cursor-default pointer-events-none' : `hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}`}
-          style={{ width: 155 }}
+          style={{ width: MINI_W }}
         >
           {miniBox}
         </Link>

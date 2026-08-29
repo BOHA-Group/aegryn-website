@@ -208,7 +208,20 @@ export default async function middleware(req: NextRequest) {
        sans ça, le JWT expire pendant la navigation publique et force
        une reconnexion dès que l'utilisateur va sur /client/*.
        On passe req à intlMiddleware APRÈS que refreshAndCheckSession
-       ait muté req.cookies (via setAll) pour que le req soit à jour. */
+       ait muté req.cookies (via setAll) pour que le req soit à jour.
+
+       IMPORTANT : on ne rafraîchit JAMAIS sur une requête de prefetch
+       (Next-Router-Prefetch: 1). Le refresh_token Supabase est à usage
+       unique (rotation) — si un survol de lien déclenche un prefetch en
+       parallèle d'une navigation réelle, les deux consomment le même
+       refresh_token : la 2e requête échoue avec "Invalid Refresh Token"
+       et peut déclencher un SIGNED_OUT côté client, déconnectant
+       l'utilisateur même si l'autre requête a réussi. */
+    const isPrefetch = req.headers.get('Next-Router-Prefetch') === '1'
+    if (isPrefetch) {
+      return intlMiddleware(req)
+    }
+
     const { response: refreshedRes } = await refreshAndCheckSession(req)
     const intlRes = intlMiddleware(req)
 
