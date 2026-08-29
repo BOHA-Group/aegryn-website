@@ -17,14 +17,20 @@ type SitemapGroup = {
 
 const GROUPS: SitemapGroup[] = [
   {
-    labelKey: 'groupTransaction',
+    labelKey: 'groupBuild',
     links: [
-      { labelKey: 'transaction',        href: '/transact/catalog' },
-      { labelKey: 'transactionSell',    href: '/transact/how-to-sell' },
-      { labelKey: 'transactionBuy',     href: '/transact/how-to-buy' },
-      { labelKey: 'transactionBid',     href: '/transact/bid-models' },
-      { labelKey: 'transactionSession', href: '/transact/sessions' },
-      { labelKey: 'transactionResults', href: '/transact/results' },
+      { labelKey: 'assets',        href: '/assets' },
+      { labelKey: 'servicesBuild', href: '/services/build' },
+    ],
+  },
+  {
+    labelKey: 'groupAdvisory',
+    links: [
+      { labelKey: 'advisory',     href: '/advisory' },
+      { labelKey: 'acquisition',  href: '/services/acquisition-support' },
+      { labelKey: 'alliances',    href: '/alliances' },
+      { labelKey: 'experts',      href: '/experts' },
+      { labelKey: 'valuation',    href: '/valuation' },
     ],
   },
   {
@@ -32,40 +38,30 @@ const GROUPS: SitemapGroup[] = [
     links: [
       { labelKey: 'grade',         href: '/grade' },
       { labelKey: 'gradeMethod',   href: '/grade/methodology' },
-      { labelKey: 'gradePartners', href: '/grade/partners' },
       { labelKey: 'gradeSubmit',   href: '/grade/submit' },
+      { labelKey: 'gradePartners', href: '/grade/partners' },
     ],
   },
   {
-    labelKey: 'groupBuild',
+    labelKey: 'groupTransaction',
     links: [
-      { labelKey: 'assets',           href: '/assets' },
-      { labelKey: 'servicesBuild',    href: '/services/build' },
-    ],
-  },
-  {
-    labelKey: 'groupServices',
-    links: [
-      { labelKey: 'advisory',     href: '/advisory' },
-      { labelKey: 'experts',      href: '/experts' },
-      { labelKey: 'alliances',    href: '/alliances' },
-      { labelKey: 'acquisition',  href: '/services/acquisition-support' },
-      { labelKey: 'valuation',    href: '/valuation' },
+      { labelKey: 'transaction',        href: '/transact/catalog' },
+      { labelKey: 'transactionSell',    href: '/transact/how-to-sell' },
+      { labelKey: 'transactionBuy',     href: '/transact/how-to-buy' },
+      { labelKey: 'transactionSubmit',  href: '/transact/submit' },
+      { labelKey: 'transactionHowWorks',href: '/transact/how-it-works' },
+      { labelKey: 'transactionSession', href: '/transact/sessions' },
+      { labelKey: 'transactionResults', href: '/transact/results' },
     ],
   },
   {
     labelKey: 'groupDiscover',
     links: [
-      { labelKey: 'blog',       href: '/blog' },
-      { labelKey: 'roadmap',    href: '/roadmap' },
-      { labelKey: 'glossaire',  href: '/glossaire' },
-    ],
-  },
-  {
-    labelKey: 'groupMagazine',
-    links: [
       { labelKey: 'magazine',          href: '/magazine' },
       { labelKey: 'magazineIssue01',   href: '/magazine/issue-01' },
+      { labelKey: 'blog',              href: '/blog' },
+      { labelKey: 'roadmap',           href: '/roadmap' },
+      { labelKey: 'glossaire',         href: '/glossaire' },
     ],
   },
   {
