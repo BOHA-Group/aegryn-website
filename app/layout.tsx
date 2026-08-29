@@ -1,7 +1,15 @@
 /**
- * Root layout — enveloppe silencieusement [locale]/layout.tsx.
- * CookieScript est chargé via GTM (tag CMP CookieScript) — pas de script direct ici.
+ * Root layout — requis par Next.js 15 (doit avoir html + body).
+ * Les layouts enfants ([locale], /client, /admin) surchargent html/body
+ * avec leur propre lang/class via suppressHydrationWarning.
+ * CookieScript est chargé via GTM — pas de script direct ici.
  */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <html suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        {children}
+      </body>
+    </html>
+  )
 }

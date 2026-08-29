@@ -51,8 +51,8 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   }
 
   return (
-    <html lang={locale} className={`${plusJakartaSans.variable}`}>
-      <body className="font-sans antialiased bg-white">
+    <html lang={locale} className={`${plusJakartaSans.variable}`} suppressHydrationWarning>
+      <body className="font-sans antialiased bg-white" suppressHydrationWarning>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Nav user={adminUser ? { name: adminEmail, label: 'Admin' } : null} />
 
