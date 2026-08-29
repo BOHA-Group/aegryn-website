@@ -146,10 +146,6 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
             </>
           )}
 
-          {/* Active indicator */}
-          {active && (
-            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 3, background: '#5ADDA4' }} />
-          )}
         </div>
       </Link>
 
