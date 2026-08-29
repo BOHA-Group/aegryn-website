@@ -12,26 +12,26 @@ import { ISSUE_03 } from '@/content/magazine/issue-03/meta'
 import { ISSUE_04 } from '@/content/magazine/issue-04/meta'
 
 /*
- * Disposition 2×2 style Barnes :
- * Rangée haute (partiellement visible, derrière) — issues 01 & 02
- * Rangée basse (premier plan, plus centrée) — issues 03 & 04
- * Chaque cover IssueMiniCard = 232.5×330px
+ * Disposition style Barnes en px absolus dans la col droite (largeur ~60% de l'écran)
+ * Chaque IssueMiniCard = 232.5×330px natif
  */
 const COVER_LAYOUT = [
-  { issue: ISSUE_02, rot:  '-8deg', x: '34%', y: '-18%', z: 2 },
-  { issue: ISSUE_01, rot:  '10deg', x: '58%', y: '-12%', z: 1 },
-  { issue: ISSUE_03, rot:  '-4deg', x: '24%', y:  '22%', z: 4 },
-  { issue: ISSUE_04, rot:   '8deg', x: '50%', y:  '18%', z: 3 },
+  { issue: ISSUE_02, rot: '-12deg', left:  20, top: -30, z: 2 },
+  { issue: ISSUE_01, rot:   '8deg', left: 190, top: -50, z: 1 },
+  { issue: ISSUE_03, rot:  '-4deg', left:  80, top: 200, z: 4 },
+  { issue: ISSUE_04, rot:  '10deg', left: 280, top: 160, z: 3 },
 ]
 
 interface Props {
-  magLabel: string
-  magTitle: string
-  magDesc:  string
-  magCta:   string
+  magLabel:    string
+  magTitle:    string
+  magDesc:     string
+  magCta:      string
+  articlesLabel: string
+  articlesCta:   string
 }
 
-export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta }: Props) {
+export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta, articlesLabel, articlesCta }: Props) {
   const t      = useTranslations('discoverStrip')
   const ref    = useRef<HTMLElement>(null)
   const magRef = useRef<HTMLDivElement>(null)
@@ -72,38 +72,42 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta }: Props) {
       {/* ── Bloc 1 : Teaser Magazine — style Barnes ── */}
       <div
         ref={magRef}
-        className="relative overflow-hidden border-b border-ag-border"
-        style={{ background: '#F5F2EE', minHeight: 420 }}
+        className="overflow-hidden border-b border-ag-border"
+        style={{ background: '#F5F2EE' }}
       >
-        {/* Layout pleine largeur : texte gauche absolu + covers débordantes droite */}
-        <div className="relative" style={{ minHeight: 520 }}>
-          {/* Texte gauche */}
-          <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24">
-            <div className="md:max-w-[420px] space-y-6">
+        {/* Grid 2 colonnes : texte gauche | covers droite */}
+        <div className="grid md:grid-cols-[45%_55%]" style={{ minHeight: 520 }}>
+
+          {/* Col gauche — texte isolé sur fond blanc card */}
+          <div className="flex items-center px-6 md:px-[80px] py-20">
+            <div
+              className="bg-white py-10 px-10 space-y-5"
+              style={{ maxWidth: 380, boxShadow: '0 2px 24px rgba(0,0,0,.06)' }}
+            >
               <p className="font-mono text-[9px] tracking-[0.30em] uppercase text-ag-gray-light">
                 {magLabel}
               </p>
               <h2
-                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
-                style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+                className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.1]"
+                style={{ fontSize: 'clamp(22px,2.4vw,36px)' }}
               >
                 {magTitle}
               </h2>
-              <p className="font-sans text-[14px] text-ag-gray leading-[1.75]">
+              <p className="font-sans text-[13px] text-ag-gray leading-[1.75]">
                 {magDesc}
               </p>
               <Link
                 href="/magazine"
-                className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-6 py-3 hover:bg-ag-black hover:text-white transition-all duration-300"
+                className="inline-flex items-center gap-2 font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-5 py-2.5 hover:bg-ag-black hover:text-white transition-all duration-300"
               >
-                {magCta} <ArrowUpRight size={12} />
+                {magCta} <ArrowUpRight size={11} />
               </Link>
             </div>
           </div>
 
-          {/* Covers — IssueMiniCard en diagonale style Barnes */}
-          <div className="hidden md:block absolute inset-0 overflow-hidden pointer-events-none">
-            {COVER_LAYOUT.map(({ issue, rot, x, y, z }, i) => (
+          {/* Col droite — covers en diagonale */}
+          <div className="hidden md:block relative overflow-hidden pointer-events-none">
+            {COVER_LAYOUT.map(({ issue, rot, left, top, z }, i) => (
               <div
                 key={i}
                 className="mag-cover-card absolute"
@@ -111,9 +115,8 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta }: Props) {
                   transform: `rotate(${rot})`,
                   transformOrigin: 'center center',
                   zIndex: z,
-                  left: x,
-                  top:  y,
-                  opacity: 0,
+                  left,
+                  top,
                 }}
               >
                 <IssueMiniCard
@@ -135,7 +138,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta }: Props) {
           <div className="space-y-3">
             <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex flex items-center gap-3">
               <span className="w-5 h-px bg-ag-apex/50 inline-block" />
-              {t('label')}
+              {articlesLabel}
             </p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.15] whitespace-pre-line"
@@ -148,7 +151,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta }: Props) {
             href="/blog"
             className="shrink-0 hidden md:inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-5 py-3 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300"
           >
-            {t('cta')} <ArrowUpRight size={12} />
+            {articlesCta} <ArrowUpRight size={12} />
           </Link>
         </div>
 
@@ -181,7 +184,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta }: Props) {
             href="/blog"
             className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-5 py-3 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300"
           >
-            {t('cta')} <ArrowUpRight size={12} />
+            {articlesCta} <ArrowUpRight size={12} />
           </Link>
         </div>
 
