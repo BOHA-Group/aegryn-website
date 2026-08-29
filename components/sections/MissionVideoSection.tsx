@@ -28,6 +28,8 @@ export function MissionVideoSection() {
     const section = sectionRef.current
     if (!wrap || !section) return
 
+    const isMobile = window.innerWidth < 1024
+
     /* SplitText sur les titres Mission pour animer mot par mot */
     const splits: SplitText[] = []
     const titleEls = section.querySelectorAll<HTMLElement>('.mv-title')
@@ -41,10 +43,10 @@ export function MissionVideoSection() {
         scrollTrigger: {
           trigger:       wrap,
           start:         'top top',
-          end:           '+=300%',
-          pin:           true,
+          end:           isMobile ? 'bottom bottom' : '+=300%',
+          pin:           !isMobile,
           scrub:         true,
-          anticipatePin: 1,
+          anticipatePin: isMobile ? 0 : 1,
           invalidateOnRefresh: true,
         },
       })
@@ -98,8 +100,8 @@ export function MissionVideoSection() {
   }, [])
 
   return (
-    /* Wrapper — hauteur 100vh visible + 300vh scroll */
-    <div ref={wrapRef} className="relative" style={{ height: '100vh' }}>
+    /* Wrapper — desktop: 100vh pinné | mobile: hauteur auto (contenu complet visible) */
+    <div ref={wrapRef} className="relative min-h-screen lg:h-screen">
 
       {/* ── Couche 1 : vidéo plein fond ── */}
       <video
@@ -119,9 +121,9 @@ export function MissionVideoSection() {
       {/* ── Couche 2 : section Mission sticky, bg transparent ── */}
       <div
         ref={sectionRef}
-        className="absolute inset-0 z-10 overflow-hidden"
+        className="relative lg:absolute lg:inset-0 z-10"
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 h-full flex flex-col justify-center">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:h-full flex flex-col justify-center py-16 lg:py-0">
 
           {/* Header row */}
           <div className="mv-border flex items-center justify-between border-b py-4 mb-0">

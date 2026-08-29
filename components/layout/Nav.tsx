@@ -438,18 +438,28 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               {mobileAccordion === 'grade' && (
                 <div className="py-3 flex flex-col gap-3">
                   {/* Grade scale — 2 rows × 3 / 2 cols */}
-                  <div className="grid grid-cols-3 gap-1">
-                    {[
-                      { label: 'AEG ★', key: 'star', cls: 'border-ag-apex/40 text-ag-apex'      },
-                      { label: 'AAA',    key: 'aaa',  cls: 'border-white/20  text-white/80'      },
-                      { label: 'AA',     key: 'aa',   cls: 'border-white/15  text-white/60'      },
-                      { label: 'A',      key: 'a',    cls: 'border-white/10  text-white/40'      },
-                      { label: 'B',      key: 'b',    cls: 'border-white/8   text-white/30'      },
-                    ].map(({ label, cls }) => (
-                      <div key={label} className={`border p-2 text-center ${cls}`}>
-                        <p className="font-mono text-[10px] font-semibold tracking-[0.04em]">{label}</p>
-                      </div>
-                    ))}
+                  <div className="flex flex-col gap-1">
+                    <div className="grid grid-cols-3 gap-1">
+                      {[
+                        { label: 'AEG ★', cls: 'border-ag-apex/40 text-ag-apex' },
+                        { label: 'AAA',    cls: 'border-white/20  text-white/80' },
+                        { label: 'AA',     cls: 'border-white/15  text-white/60' },
+                      ].map(({ label, cls }) => (
+                        <div key={label} className={`border p-2 text-center ${cls}`}>
+                          <p className="font-mono text-[10px] font-semibold tracking-[0.04em]">{label}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="grid grid-cols-2 gap-1">
+                      {[
+                        { label: 'A', cls: 'border-white/10 text-white/40' },
+                        { label: 'B', cls: 'border-white/8  text-white/30' },
+                      ].map(({ label, cls }) => (
+                        <div key={label} className={`border p-2 text-center ${cls}`}>
+                          <p className="font-mono text-[10px] font-semibold tracking-[0.04em]">{label}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                   {/* Dimensions */}
                   <div className="flex gap-1.5 flex-wrap">
