@@ -6,18 +6,37 @@ import { useTranslations } from 'next-intl'
 import { ArrowUpRight } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 
+/* Covers des 4 issues — photo brute uniquement (pas de canvas SVG) */
+const COVERS = [
+  { src: '/magazine/issue-01/cover-magazine-issue-01.jpg', rot: '-8deg',  z: 1 },
+  { src: '/magazine/issue-02/cover-magazine-issue-02.jpg', rot: '-2deg',  z: 4 },
+  { src: '/magazine/issue-03/cover-magazine-issue-03.jpg', rot:  '4deg',  z: 3 },
+  { src: '/magazine/issue-04/cover-magazine-issue-04.jpg', rot: '10deg',  z: 2 },
+]
+
 export function DiscoverStrip() {
-  const t   = useTranslations('discoverStrip')
-  const ref = useRef<HTMLElement>(null)
+  const t      = useTranslations('discoverStrip')
+  const ref    = useRef<HTMLElement>(null)
+  const magRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      /* Apparition articles */
       gsap.fromTo('.discover-strip-card',
         { opacity: 0, y: 24 },
         {
           opacity: 1, y: 0,
           stagger: 0.1, duration: 0.7, ease: 'expo.out',
           scrollTrigger: { trigger: ref.current, start: 'top 78%', once: true },
+        },
+      )
+      /* Apparition covers magazine */
+      gsap.fromTo('.mag-cover-card',
+        { opacity: 0, y: 32, scale: 0.94 },
+        {
+          opacity: 1, y: 0, scale: 1,
+          stagger: 0.08, duration: 0.8, ease: 'expo.out',
+          scrollTrigger: { trigger: magRef.current, start: 'top 80%', once: true },
         },
       )
     }, ref)
@@ -32,6 +51,66 @@ export function DiscoverStrip() {
 
   return (
     <section ref={ref} className="bg-ag-white border-t border-ag-border">
+
+      {/* ── Bloc 1 : Teaser Magazine — style Barnes ── */}
+      <div
+        ref={magRef}
+        className="relative overflow-hidden border-b border-ag-border"
+        style={{ background: '#F5F2EE', minHeight: 420 }}
+      >
+        {/* Zone gauche — texte */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24 grid md:grid-cols-2 items-center gap-12">
+          <div className="space-y-6">
+            <p className="font-mono text-[9px] tracking-[0.30em] uppercase text-ag-gray-light">
+              {t('magLabel')}
+            </p>
+            <h2
+              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
+              style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
+            >
+              {t('magTitle')}
+            </h2>
+            <p className="font-sans text-[14px] text-ag-gray leading-[1.75] max-w-sm">
+              {t('magDesc')}
+            </p>
+            <Link
+              href="/magazine"
+              className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-6 py-3 hover:bg-ag-black hover:text-white transition-all duration-300"
+            >
+              {t('magCta')} <ArrowUpRight size={12} />
+            </Link>
+          </div>
+
+          {/* Zone droite — covers en diagonale façon Barnes */}
+          <div
+            className="hidden md:block relative"
+            style={{ height: 380 }}
+          >
+            {COVERS.map(({ src, rot, z }, i) => (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img
+                key={i}
+                src={src}
+                alt=""
+                className="mag-cover-card absolute object-cover shadow-2xl"
+                style={{
+                  width: 160,
+                  height: 226,
+                  borderRadius: 2,
+                  transform: `rotate(${rot})`,
+                  zIndex: z,
+                  /* Positions étalées pour effet chevauchement diagonal */
+                  left: `${i * 22}%`,
+                  top:  `${i % 2 === 0 ? 10 : 30}%`,
+                  opacity: 0,
+                }}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ── Bloc 2 : Articles ── */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24">
 
         <div className="flex items-end justify-between mb-12 gap-6">

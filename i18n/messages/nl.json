@@ -3172,7 +3172,11 @@
     ]
   },
   "discoverStrip": {
-    "label": "Inzichten",
+    "magLabel": "Aegryn Nieuws",
+    "magTitle": "Aegryn Magazine",
+    "magDesc": "Meerdere keren per jaar publiceert en verspreidt Aegryn zijn eigen magazine — marktanalyses, transactieportretten, inzichten voor tech-oprichters en kopers.",
+    "magCta": "Ontdek het magazine",
+    "label": "Artikelen",
     "title": "De Europese tech M&A-markt.\nDoor degenen die het doen.",
     "article1Title": "Stand van de Europese tech M&A-markt — Q2 2026",
     "article1Cat": "Marktrapport",
@@ -3180,7 +3184,7 @@
     "article2Cat": "Gids voor verkopers",
     "article3Title": "Hoe PE-kopers een SaaS in 2026 beoordelen",
     "article3Cat": "Gids voor kopers",
-    "cta": "Bekijk alle insights",
+    "cta": "Bekijk alle artikelen",
     "readMore": "Artikel lezen"
   },
   "pillars": {

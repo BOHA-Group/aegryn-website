@@ -3172,7 +3172,11 @@
     ]
   },
   "discoverStrip": {
-    "label": "Approfondimenti",
+    "magLabel": "Notizie Aegryn",
+    "magTitle": "Aegryn Magazine",
+    "magDesc": "Più volte all'anno, Aegryn pubblica e distribuisce la propria rivista — analisi di mercato, ritratti di transazioni, approfondimenti per fondatori tech e acquirenti.",
+    "magCta": "Scopri la rivista",
+    "label": "Articoli",
     "title": "Il mercato M&A tech in Europa.\nDa chi lo fa.",
     "article1Title": "Stato del mercato M&A tech europeo — Q2 2026",
     "article1Cat": "Report di mercato",
@@ -3180,7 +3184,7 @@
     "article2Cat": "Guida per venditori",
     "article3Title": "Come gli acquirenti PE valutano un SaaS nel 2026",
     "article3Cat": "Guida per acquirenti",
-    "cta": "Visualizza tutti gli insights",
+    "cta": "Visualizza tutti gli articoli",
     "readMore": "Leggi l'articolo"
   },
   "pillars": {
