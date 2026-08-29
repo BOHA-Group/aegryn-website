@@ -216,7 +216,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
               type="button"
               onClick={() => setLightboxOpen(false)}
               aria-label="Close"
-              style={{ position: 'absolute', top: -44, right: 0, width: 32, height: 32, borderRadius: '50%', background: 'rgba(255,255,255,.12)', border: '1px solid rgba(255,255,255,.25)', color: '#fff', fontSize: 18, lineHeight: 1, cursor: 'pointer' }}
+              style={{ position: 'absolute', top: -44, right: 0, width: 32, height: 32, borderRadius: '50%', background: 'rgba(255,255,255,.12)', border: '1px solid rgba(255,255,255,.25)', color: '#fff', fontSize: 16, display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', padding: 0 }}
             >
               ×
             </button>

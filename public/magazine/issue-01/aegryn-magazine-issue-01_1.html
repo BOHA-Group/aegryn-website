@@ -355,9 +355,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   </div>
   <!-- Thumbnails cachés par défaut -->
   <div id="fb-thumbs"></div>
-  <!-- Toolbar Barnes : gauche=thumbs+zoom | centre=nav+progress | droite=fs -->
+  <!-- Toolbar Barnes : gauche=retour+thumbs+zoom | centre=nav+progress | droite=fs -->
   <div id="fb-toolbar">
     <div style="display:flex;align-items:center;gap:2px">
+      <button class="fb-tb-btn" id="btn-back" title="Retour" onclick="history.back()" style="display:flex;align-items:center;gap:5px;padding:5px 10px;font-size:11px;font-weight:600;letter-spacing:.04em;border-right:1px solid rgba(255,255,255,.1);margin-right:4px">&#8592; Retour</button>
       <button class="fb-tb-btn" id="btn-thumbs" title="Miniatures">⊞</button>
       <button class="fb-tb-btn" id="btn-zo" title="Zoom arrière">−</button>
       <span class="fb-tb-btn" id="fb-zoom-lbl" style="cursor:default;min-width:36px;text-align:center">100%</span>
