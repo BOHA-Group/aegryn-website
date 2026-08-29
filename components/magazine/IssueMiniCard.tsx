@@ -9,6 +9,8 @@ interface Props {
   locale?:          string
   active?:          boolean
   labelComingSoon?: string
+  isPublic?:        boolean
+  isPreview?:       boolean
 }
 
 /* Badge "À venir" — 6 langues */
@@ -60,7 +62,7 @@ const TEXT_OVERLAY = 'linear-gradient(180deg,rgba(0,0,0,.45) 0%,transparent 35%,
  * Version compacte du cover magazine pour le carousel "autres issues".
  * Hauteur fixe 220px, largeur 155px — style Barnes.
  */
-export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComingSoon }: Props) {
+export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComingSoon, isPublic = false, isPreview = false }: Props) {
   const padNum    = String(issue.number).padStart(2, '0')
   const formatted = new Date(issue.publishedAt).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' }).toUpperCase()
 
@@ -176,15 +178,21 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
           {miniBox}
         </button>
       ) : (
-        <Link
-          href={isDraft ? '#' : `/${locale}/magazine/${issue.slug}`}
-          aria-disabled={isDraft}
-          tabIndex={isDraft ? -1 : undefined}
-          className={`block transition-transform ${isDraft ? 'cursor-default pointer-events-none' : `hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}`}
-          style={{ width: MINI_W }}
-        >
-          {miniBox}
-        </Link>
+        (isPublic || isPreview) ? (
+          <Link
+            href={isDraft ? '#' : `/${locale}/magazine/${issue.slug}`}
+            aria-disabled={isDraft}
+            tabIndex={isDraft ? -1 : undefined}
+            className={`block transition-transform ${isDraft ? 'cursor-default pointer-events-none' : `hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}`}
+            style={{ width: MINI_W }}
+          >
+            {miniBox}
+          </Link>
+        ) : (
+          <div style={{ width: MINI_W, cursor: 'default', opacity: 0.6 }}>
+            {miniBox}
+          </div>
+        )
       )}
 
       {/* Badge "À venir" — position absolute sous la cover, hors overflow:hidden, i18n via prop */}

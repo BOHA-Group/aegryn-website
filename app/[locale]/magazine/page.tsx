@@ -136,6 +136,8 @@ export default async function MagazineHubPage({ params }: Props) {
                         locale={locale}
                         active={issue.slug === featuredIssue?.slug}
                         labelComingSoon={tHub('comingSoonBadge')}
+                        isPublic={flags[`magazine_issue_${pad(issue.number)}_public`] ?? false}
+                        isPreview={isPreview}
                       />
                     ))}
                   </div>

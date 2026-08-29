@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface IssueItem {
   issue: string
@@ -19,18 +19,21 @@ const STEP      = CARD_W + GAP
 const SPEED     = 0.6 // px par frame (~36px/s à 60fps)
 
 export function IssueTickerCarousel({ items }: Props) {
-  const trackRef  = useRef<HTMLDivElement>(null)
-  const rafRef    = useRef<number>(0)
-  const pausedRef = useRef(false)
-  const xRef      = useRef(0)
+  const trackRef    = useRef<HTMLDivElement>(null)
+  const rafRef      = useRef<number>(0)
+  const pausedRef   = useRef(false)
+  const xRef        = useRef(0)
+  const draggingRef = useRef(false)
+  const dragStartX  = useRef(0)
+  const dragStartXRef = useRef(0)
+  const [isDragging, setIsDragging] = useState(false)
 
   /* Largeur totale d'un "set" de cartes (on duplique pour loop infini) */
   const totalW = items.length * STEP
 
   function animate() {
-    if (!pausedRef.current && trackRef.current) {
+    if (!pausedRef.current && !draggingRef.current && trackRef.current) {
       xRef.current -= SPEED
-      /* Reset dès qu'on a scrollé d'un set complet */
       if (Math.abs(xRef.current) >= totalW) xRef.current = 0
       trackRef.current.style.transform = `translateX(${xRef.current}px)`
     }
@@ -40,10 +43,34 @@ export function IssueTickerCarousel({ items }: Props) {
   useEffect(() => {
     rafRef.current = requestAnimationFrame(animate)
     return () => cancelAnimationFrame(rafRef.current)
-  }, [totalW]) // animate est stable (refs uniquement)
+  }, [totalW])
 
   function pause()  { pausedRef.current = true  }
-  function resume() { pausedRef.current = false }
+  function resume() { if (!draggingRef.current) pausedRef.current = false }
+
+  function onMouseDown(e: React.MouseEvent) {
+    draggingRef.current = true
+    pausedRef.current   = true
+    setIsDragging(true)
+    dragStartX.current  = e.clientX
+    dragStartXRef.current = xRef.current
+  }
+
+  function onMouseMove(e: React.MouseEvent) {
+    if (!draggingRef.current || !trackRef.current) return
+    const delta = e.clientX - dragStartX.current
+    let next = dragStartXRef.current + delta
+    /* Garder dans la plage du loop */
+    next = ((next % totalW) - totalW) % totalW
+    xRef.current = next
+    trackRef.current.style.transform = `translateX(${next}px)`
+  }
+
+  function onMouseUp() {
+    draggingRef.current = false
+    pausedRef.current   = false
+    setIsDragging(false)
+  }
 
   /* Dupliquer les items pour le loop infini */
   const doubled = [...items, ...items]
@@ -52,9 +79,13 @@ export function IssueTickerCarousel({ items }: Props) {
     <div className="relative border-t border-magazine-black/8 bg-magazine-white overflow-hidden">
       {/* Piste défilante — déborde des marges */}
       <div
-        className="pt-6 pb-14"
+        className="pt-6 pb-14 select-none"
+        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
         onMouseEnter={pause}
-        onMouseLeave={resume}
+        onMouseLeave={onMouseUp}
+        onMouseDown={onMouseDown}
+        onMouseMove={onMouseMove}
+        onMouseUp={onMouseUp}
       >
         <div
           ref={trackRef}
