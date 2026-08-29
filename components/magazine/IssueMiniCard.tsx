@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { useState } from 'react'
 import type { MagazineIssue } from '@/lib/magazine/types'
 
 interface Props {
@@ -65,89 +66,110 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
   const exclLabel   = EXCLUSIVE_LABEL[issue.number] ?? 'Exclusive'
 
   /* Titre splitté sur 2 lignes au premier point suivi d'un espace ou fin */
-  const titleParts  = issue.title.replace(/\.(\s|$)/, '\n').split('\n').filter(Boolean)
+  const titleParts   = issue.title.replace(/\.(\s|$)/, '\n').split('\n').filter(Boolean)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+
+  /* ── Contenu de la cover (canvas 420×595) — réutilisé mini + lightbox ── */
+  const coverContent = issue.status === 'published' ? (
+    <>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`/magazine/issue-${padNum}/cover-magazine-issue-${padNum}.jpg`}
+        alt=""
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: photoPos }}
+      />
+      <div style={{ position: 'absolute', inset: 0, background: TEXT_OVERLAY }} />
+      <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px 30px' }}>
+        {/* Top bar */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <div style={{ fontSize: 9, fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,.75)' }}>{formatted}</div>
+          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#fff' }}>Issue {padNum}</div>
+        </div>
+        {/* Masthead */}
+        <div style={{ marginTop: -8 }}>
+          <div style={{ fontSize: 90, fontWeight: 700, color: '#fff', lineHeight: 0.86, letterSpacing: '-0.01em' }}>Aegryn</div>
+          <div style={{ textAlign: 'right', fontSize: 8, fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.55)', marginTop: 5 }}>Business Magazine</div>
+        </div>
+        {/* Exclusive label + CoverLine — tout en blanc */}
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#fff', marginBottom: 6 }}>{exclLabel}</div>
+            <div style={{ width: 28, height: 1.5, background: accent, marginBottom: 8 }} />
+            <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#fff', lineHeight: 1.5 }}>{issue.coverLine}</div>
+          </div>
+        </div>
+        {/* Headline */}
+        <div style={{ paddingBottom: 48 }}>
+          {titleParts.map((part, idx) => (
+            <div key={idx} style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: idx < titleParts.length - 1 ? 2 : 9 }}>{part.trim()}</div>
+          ))}
+          <div style={{ fontSize: 8.5, fontWeight: 400, letterSpacing: '0.04em', color: 'rgba(255,255,255,.70)', lineHeight: 1.6, maxWidth: 240 }}>{issue.theme}</div>
+        </div>
+      </div>
+    </>
+  ) : (
+    /* ── Draft placeholder ── */
+    <>
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(160deg,#0a1520 0%,#0f2235 60%,#081018 100%)' }} />
+      <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '10px 11px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <span style={{ fontSize: 6, fontWeight: 500, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.38)' }}>{formatted}</span>
+          <span style={{ fontSize: 6, fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#fff' }}>{`0${issue.number}`}</span>
+        </div>
+        <div>
+          <div style={{ fontSize: 28, fontWeight: 700, color: '#fff', lineHeight: 0.88, letterSpacing: '-0.04em' }}>Aegryn</div>
+          <div style={{ fontSize: 5.5, fontWeight: 400, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,.28)', marginTop: 3 }}>Business Magazine</div>
+        </div>
+        <div>
+          <div style={{ fontSize: 10, fontWeight: 800, color: '#fff', letterSpacing: '-0.01em', lineHeight: 1.1 }}>{issue.title}</div>
+        </div>
+      </div>
+    </>
+  )
+
+  const miniBox = (
+    <div
+      style={{
+        width: 155,
+        height: 220,
+        position: 'relative',
+        overflow: 'hidden',
+        boxShadow: active
+          ? '0 8px 32px rgba(0,0,0,.32)'
+          : '0 3px 14px rgba(0,0,0,.18)',
+      }}
+    >
+      <div style={{ position: 'absolute', top: 0, left: 0, transformOrigin: 'top left', transform: 'scale(0.369)', width: 420, height: 595 }}>
+        {coverContent}
+      </div>
+    </div>
+  )
 
   return (
     /* Conteneur relatif — permet d'ancrer le badge hors overflow:hidden sans impacter l'alignement du carousel */
     <div style={{ position: 'relative', flexShrink: 0, paddingBottom: isComingSoon ? 24 : 0 }}>
-      <Link
-        href={isDraft || isComingSoon ? '#' : `/${locale}/magazine/${issue.slug}`}
-        aria-disabled={isDraft || isComingSoon}
-        tabIndex={isDraft || isComingSoon ? -1 : undefined}
-        className={`block transition-transform ${isDraft || isComingSoon ? 'cursor-default pointer-events-none' : `hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}`}
-        style={{ width: 155 }}
-      >
-        <div
-          style={{
-            width: 155,
-            height: 220,
-            position: 'relative',
-            overflow: 'hidden',
-            boxShadow: active
-              ? '0 8px 32px rgba(0,0,0,.32)'
-              : '0 3px 14px rgba(0,0,0,.18)',
-          }}
+      {isComingSoon ? (
+        /* Pas encore publié — clic ouvre un aperçu plein écran, pas de navigation */
+        <button
+          type="button"
+          onClick={() => setLightboxOpen(true)}
+          className={`block transition-transform hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}
+          style={{ width: 155, cursor: 'pointer', border: 0, padding: 0, background: 'none' }}
+          aria-label={`${issue.title} — ${comingSoonLabel}`}
         >
-          {issue.status === 'published' ? (
-            /* ── Mini cover photo — tous textes en blanc ── */
-            <div style={{ position: 'absolute', top: 0, left: 0, transformOrigin: 'top left', transform: 'scale(0.369)', width: 420, height: 595 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={`/magazine/issue-${padNum}/cover-magazine-issue-${padNum}.jpg`}
-                alt=""
-                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: photoPos }}
-              />
-              <div style={{ position: 'absolute', inset: 0, background: TEXT_OVERLAY }} />
-              <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px 30px' }}>
-                {/* Top bar */}
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                  <div style={{ fontSize: 9, fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,.75)' }}>{formatted}</div>
-                  <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#fff' }}>Issue {padNum}</div>
-                </div>
-                {/* Masthead */}
-                <div style={{ marginTop: -8 }}>
-                  <div style={{ fontSize: 90, fontWeight: 700, color: '#fff', lineHeight: 0.86, letterSpacing: '-0.01em' }}>Aegryn</div>
-                  <div style={{ textAlign: 'right', fontSize: 8, fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.55)', marginTop: 5 }}>Business Magazine</div>
-                </div>
-                {/* Exclusive label + CoverLine — tout en blanc */}
-                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                  <div>
-                    <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#fff', marginBottom: 6 }}>{exclLabel}</div>
-                    <div style={{ width: 28, height: 1.5, background: accent, marginBottom: 8 }} />
-                    <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#fff', lineHeight: 1.5 }}>{issue.coverLine}</div>
-                  </div>
-                </div>
-                {/* Headline */}
-                <div style={{ paddingBottom: 48 }}>
-                  {titleParts.map((part, idx) => (
-                    <div key={idx} style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: idx < titleParts.length - 1 ? 2 : 9 }}>{part.trim()}</div>
-                  ))}
-                  <div style={{ fontSize: 8.5, fontWeight: 400, letterSpacing: '0.04em', color: 'rgba(255,255,255,.70)', lineHeight: 1.6, maxWidth: 240 }}>{issue.theme}</div>
-                </div>
-              </div>
-            </div>
-          ) : (
-            /* ── Draft placeholder ── */
-            <>
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(160deg,#0a1520 0%,#0f2235 60%,#081018 100%)' }} />
-              <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '10px 11px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                  <span style={{ fontSize: 6, fontWeight: 500, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.38)' }}>{formatted}</span>
-                  <span style={{ fontSize: 6, fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#fff' }}>{`0${issue.number}`}</span>
-                </div>
-                <div>
-                  <div style={{ fontSize: 28, fontWeight: 700, color: '#fff', lineHeight: 0.88, letterSpacing: '-0.04em' }}>Aegryn</div>
-                  <div style={{ fontSize: 5.5, fontWeight: 400, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,.28)', marginTop: 3 }}>Business Magazine</div>
-                </div>
-                <div>
-                  <div style={{ fontSize: 10, fontWeight: 800, color: '#fff', letterSpacing: '-0.01em', lineHeight: 1.1 }}>{issue.title}</div>
-                </div>
-              </div>
-            </>
-          )}
-
-        </div>
-      </Link>
+          {miniBox}
+        </button>
+      ) : (
+        <Link
+          href={isDraft ? '#' : `/${locale}/magazine/${issue.slug}`}
+          aria-disabled={isDraft}
+          tabIndex={isDraft ? -1 : undefined}
+          className={`block transition-transform ${isDraft ? 'cursor-default pointer-events-none' : `hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}`}
+          style={{ width: 155 }}
+        >
+          {miniBox}
+        </Link>
+      )}
 
       {/* Badge "À venir" — position absolute sous la cover, hors overflow:hidden, i18n via prop */}
       {isComingSoon && (
@@ -156,6 +178,35 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
           <span style={{ fontSize: 9, fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(15,26,43,.55)', whiteSpace: 'nowrap' }}>
             {comingSoonLabel}
           </span>
+        </div>
+      )}
+
+      {/* Lightbox — aperçu plein écran de la cover, pas de redirection */}
+      {lightboxOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setLightboxOpen(false)}
+          style={{ position: 'fixed', inset: 0, zIndex: 200, background: 'rgba(5,8,12,.92)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24 }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{ position: 'relative', width: 300, maxWidth: '85vw', aspectRatio: '420 / 595', boxShadow: '0 24px 64px rgba(0,0,0,.5)' }}
+          >
+            <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
+              <div style={{ position: 'absolute', top: 0, left: 0, transformOrigin: 'top left', transform: `scale(${300 / 420})`, width: 420, height: 595 }}>
+                {coverContent}
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => setLightboxOpen(false)}
+              aria-label="Close"
+              style={{ position: 'absolute', top: -36, right: 0, width: 28, height: 28, borderRadius: '50%', background: 'rgba(255,255,255,.12)', border: '1px solid rgba(255,255,255,.25)', color: '#fff', fontSize: 16, lineHeight: 1, cursor: 'pointer' }}
+            >
+              ×
+            </button>
+          </div>
         </div>
       )}
     </div>
