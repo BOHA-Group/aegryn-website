@@ -4,9 +4,10 @@ import Link from 'next/link'
 import type { MagazineIssue } from '@/lib/magazine/types'
 
 interface Props {
-  issue:   MagazineIssue
-  locale?: string
-  active?: boolean
+  issue:            MagazineIssue
+  locale?:          string
+  active?:          boolean
+  labelComingSoon?: string
 }
 
 /* Badge "À venir" — 6 langues */
@@ -55,14 +56,14 @@ const OVERLAYS: Record<number, string> = {
  * Version compacte du cover magazine pour le carousel "autres issues".
  * Hauteur fixe 220px, largeur 155px — style Barnes.
  */
-export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
+export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComingSoon }: Props) {
   const padNum    = String(issue.number).padStart(2, '0')
   const formatted = new Date(issue.publishedAt).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' }).toUpperCase()
 
   const isDraft    = issue.status === 'draft'
   /* "À venir" = issues sans flipbook (sections vides), published ou draft */
-  const isComingSoon = issue.sections.length === 0
-  const comingSoonLabel = COMING_SOON[locale] ?? COMING_SOON['fr']
+  const isComingSoon    = issue.sections.length === 0
+  const comingSoonLabel = labelComingSoon ?? COMING_SOON[locale] ?? COMING_SOON['fr']
 
   const accent      = ACCENTS[issue.number]  ?? '#5ADDA4'
   const photoPos    = PHOTO_POS[issue.number] ?? 'center top'
@@ -73,12 +74,13 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
   const titleParts  = issue.title.replace(/\.(\s|$)/, '\n').split('\n').filter(Boolean)
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 8, flexShrink: 0 }}>
+    /* Conteneur relatif — permet d'ancrer le badge hors overflow:hidden sans impacter l'alignement du carousel */
+    <div style={{ position: 'relative', flexShrink: 0, paddingBottom: isComingSoon ? 24 : 0 }}>
       <Link
         href={isDraft || isComingSoon ? '#' : `/${locale}/magazine/${issue.slug}`}
         aria-disabled={isDraft || isComingSoon}
         tabIndex={isDraft || isComingSoon ? -1 : undefined}
-        className={`block shrink-0 transition-transform ${isDraft || isComingSoon ? 'cursor-default pointer-events-none' : `hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}`}
+        className={`block transition-transform ${isDraft || isComingSoon ? 'cursor-default pointer-events-none' : `hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}`}
         style={{ width: 155 }}
       >
         <div
@@ -157,9 +159,9 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
         </div>
       </Link>
 
-      {/* Badge "À venir" — hors cover, sous la carte, i18n 6 langues */}
+      {/* Badge "À venir" — position absolute sous la cover, hors overflow:hidden, i18n via prop */}
       {isComingSoon && (
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, background: 'rgba(15,26,43,.06)', border: '1px solid rgba(15,26,43,.14)', padding: '3px 8px' }}>
+        <div style={{ position: 'absolute', bottom: 0, left: 0, display: 'inline-flex', alignItems: 'center', gap: 5, background: 'rgba(15,26,43,.06)', border: '1px solid rgba(15,26,43,.14)', padding: '3px 8px' }}>
           <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#5ADDA4', display: 'inline-block', flexShrink: 0 }} />
           <span style={{ fontSize: 9, fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(15,26,43,.55)', whiteSpace: 'nowrap' }}>
             {comingSoonLabel}

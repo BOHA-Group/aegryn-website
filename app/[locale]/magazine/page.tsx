@@ -130,6 +130,7 @@ export default async function MagazineHubPage({ params }: Props) {
                         issue={issue}
                         locale={locale}
                         active={issue.slug === featuredIssue?.slug}
+                        labelComingSoon={tHub('comingSoon')}
                       />
                     ))}
                   </div>
