@@ -1,26 +1,30 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { ArrowUpRight } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
-import { IssueMiniCard } from '@/components/magazine/IssueMiniCard'
-import { ISSUE_01 } from '@/content/magazine/issue-01/meta'
-import { ISSUE_02 } from '@/content/magazine/issue-02/meta'
-import { ISSUE_03 } from '@/content/magazine/issue-03/meta'
-import { ISSUE_04 } from '@/content/magazine/issue-04/meta'
+import Image from 'next/image'
 
 /*
- * Mosaïque 2×2 serrée façon Barnes — les 4 covers débordent des bords
- * du conteneur (overflow:hidden), quasi jointives, rotations légères distinctes.
- * Chaque IssueMiniCard = 232.5×330px natif.
+ * 4 covers JPG — positionnées en 2 rangées côte à côte, diagonale montante
+ * vers le coin haut-droit, fidèle au modèle Barnes.
+ * Chaque cover = 200×283px (ratio A4 1:1.414).
+ *
+ * Rangée basse : issue-01 (gauche) + issue-03 (droite)
+ * Rangée haute : issue-02 (gauche) + issue-04 (droite, partiellement coupée)
+ *
+ * La diagonale est obtenue par un décalage progressif left↑ top↓ de gauche à droite.
  */
-const COVER_LAYOUT = [
-  { issue: ISSUE_01, rot: '-8deg', left:  10, top:  10, z: 1 },
-  { issue: ISSUE_02, rot:  '5deg', left: 220, top: -30, z: 2 },
-  { issue: ISSUE_03, rot: '-5deg', left:  60, top: 320, z: 3 },
-  { issue: ISSUE_04, rot:  '9deg', left: 280, top: 280, z: 4 },
+const CW = 200
+const CH = Math.round(CW * 1.414)
+
+const COVERS = [
+  { src: '/magazine/issue-01/cover-magazine-issue-01.jpg', rot: '-6deg', left: 40,  top: 280, z: 1 },
+  { src: '/magazine/issue-02/cover-magazine-issue-02.jpg', rot: '-3deg', left: 260, top: 180, z: 2 },
+  { src: '/magazine/issue-03/cover-magazine-issue-03.jpg', rot:  '4deg', left: 460, top:  80, z: 3 },
+  { src: '/magazine/issue-04/cover-magazine-issue-04.jpg', rot:  '7deg', left: 640, top: -20, z: 4 },
 ]
 
 interface Props {
@@ -36,15 +40,6 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta, articlesLab
   const t      = useTranslations('discoverStrip')
   const ref    = useRef<HTMLElement>(null)
   const magRef = useRef<HTMLDivElement>(null)
-  const [isDesktop, setIsDesktop] = useState(false)
-
-  useEffect(() => {
-    const mq = window.matchMedia('(min-width: 768px)')
-    setIsDesktop(mq.matches)
-    const onChange = () => setIsDesktop(mq.matches)
-    mq.addEventListener('change', onChange)
-    return () => mq.removeEventListener('change', onChange)
-  }, [])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -77,71 +72,70 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta, articlesLab
   ]
 
   return (
-    <section ref={ref} className="bg-ag-white border-t border-ag-border">
+    <section ref={ref} className="bg-ag-white border-t border-ag-border mt-20">
 
-      {/* ── Bloc 1 : Teaser Magazine — style Barnes ── */}
+      {/* ── Bloc 1 : Teaser Magazine — fidèle au modèle Barnes ── */}
       <div
         ref={magRef}
-        className="overflow-hidden border-b border-ag-border"
-        style={{ background: '#F5F2EE' }}
+        className="relative overflow-hidden border-b border-ag-border"
+        style={{ background: '#F5F2EE', height: 560 }}
       >
-        {/* Hauteur explicite fixe sur desktop (via JS matchMedia, garanti indépendamment du JIT Tailwind) */}
-        <div className="relative py-16 md:py-0" style={isDesktop ? { height: 640 } : undefined}>
-
-          {/* Col gauche — texte isolé sur fond blanc card. Statique pleine largeur mobile, absolute 42% desktop */}
-          <div className="relative md:absolute md:inset-y-0 md:left-0 flex items-center px-6 md:px-[80px] md:w-[42%]">
-            <div
-              className="bg-white py-10 px-10 space-y-5"
-              style={{ maxWidth: 380, boxShadow: '0 2px 24px rgba(0,0,0,.06)' }}
-            >
-              <p className="font-mono text-[9px] tracking-[0.30em] uppercase text-ag-gray-light">
-                {magLabel}
-              </p>
-              <h2
-                className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.1]"
-                style={{ fontSize: 'clamp(22px,2.4vw,36px)' }}
-              >
-                {magTitle}
-              </h2>
-              <p className="font-sans text-[13px] text-ag-gray leading-[1.75]">
-                {magDesc}
-              </p>
-              <Link
-                href="/magazine"
-                className="inline-flex items-center gap-2 font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-5 py-2.5 hover:bg-ag-black hover:text-white transition-all duration-300"
-              >
-                {magCta} <ArrowUpRight size={11} />
-              </Link>
-            </div>
-          </div>
-
-          {/* Col droite — covers en mosaïque, pleine hauteur, overflow clippé */}
-          <div
-            className="hidden md:block absolute inset-y-0 right-0 overflow-hidden pointer-events-none"
-            style={{ left: '42%' }}
+        {/* Card texte — centrée gauche-centre, fond blanc, z-index au-dessus des covers */}
+        <div
+          className="absolute z-10 bg-white py-10 px-12 space-y-5"
+          style={{
+            left: '8%',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            maxWidth: 380,
+          }}
+        >
+          <p className="font-mono text-[9px] tracking-[0.30em] uppercase text-ag-gray-light">
+            {magLabel}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.1]"
+            style={{ fontSize: 'clamp(22px, 2.4vw, 36px)' }}
           >
-            {COVER_LAYOUT.map(({ issue, rot, left, top, z }, i) => (
-              <div
-                key={i}
-                className="mag-cover-card absolute"
-                style={{
-                  transform: `rotate(${rot})`,
-                  transformOrigin: 'center center',
-                  zIndex: z,
-                  left,
-                  top,
-                }}
-              >
-                <IssueMiniCard
-                  issue={issue}
-                  locale="en"
-                  isPublic={false}
-                  isPreview={false}
-                />
-              </div>
-            ))}
-          </div>
+            {magTitle}
+          </h2>
+          <p className="font-sans text-[13px] text-ag-gray leading-[1.75]">
+            {magDesc}
+          </p>
+          <Link
+            href="/magazine"
+            className="inline-flex items-center gap-2 font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-5 py-2.5 hover:bg-ag-black hover:text-white transition-all duration-300"
+          >
+            {magCta} <ArrowUpRight size={11} />
+          </Link>
         </div>
+
+        {/* Covers — 4 images en diagonale montante bas-gauche → haut-droit */}
+        {COVERS.map(({ src, rot, left, top, z }, i) => (
+          <div
+            key={i}
+            className="mag-cover-card absolute pointer-events-none"
+            style={{
+              width: CW,
+              height: CH,
+              left,
+              top,
+              transform: `rotate(${rot})`,
+              zIndex: z,
+              borderRadius: 3,
+              overflow: 'hidden',
+              boxShadow: '0 8px 32px rgba(0,0,0,.18)',
+            }}
+          >
+            <Image
+              src={src}
+              alt=""
+              fill
+              sizes={`${CW}px`}
+              className="object-cover"
+            />
+          </div>
+        ))}
       </div>
 
       {/* ── Bloc 2 : Articles ── */}
