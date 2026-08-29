@@ -76,12 +76,12 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
 
       {/* ── 3 boutons d'accès rapide — style Barnes ── */}
       <div className="flex flex-wrap items-center justify-center gap-3">
-        {/* Boutons 1 & 2 — actifs si isPublic ou isPreview (btn1 seulement), sinon désactivés avec tooltip */}
+        {/* Boutons 1 & 2 — actifs si isPublic ou isPreview, sinon désactivés avec tooltip */}
         {[
-          { label: labelReadOnline,  filled: true,  href: `/${locale}/magazine/${issue.slug}`, previewUnlock: true  },
-          { label: labelDownloadPdf, filled: false, href: `/${locale}/magazine/${issue.slug}`, previewUnlock: false },
-        ].map(({ label, filled, href, previewUnlock }) => (
-          (isPublic || (isPreview && previewUnlock)) ? (
+          { label: labelReadOnline,  filled: true,  href: `/${locale}/magazine/${issue.slug}` },
+          { label: labelDownloadPdf, filled: false, href: `/${locale}/magazine/${issue.slug}/flipbook` },
+        ].map(({ label, filled, href }) => (
+          (isPublic || isPreview) ? (
             <Link
               key={label}
               href={href}

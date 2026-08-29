@@ -13,8 +13,37 @@
  *    anticipé (basé sur updated_at de la ligne early_access).
  */
 import { randomUUID } from 'crypto'
+import { cookies }    from 'next/headers'
 import { createServiceClient } from '@/lib/supabase'
 import { sendEmail, emailMagazineEarlyAccess } from '@/lib/sendEmail'
+
+/**
+ * Vérifie si l'issue est consultable pour la requête courante :
+ * - toujours vrai hors production (preview/dev) — permet aux équipes internes
+ *   de relire un numéro avant son ouverture publique.
+ * - vrai en production si `public` est actif.
+ * - vrai en production si `early_access` est actif ET que le visiteur détient
+ *   le cookie de déverrouillage (obtenu via le lien email, cf. /api/magazine/access).
+ */
+export async function canAccessIssue(issuePad: string): Promise<boolean> {
+  const isPreviewEnv = process.env.VERCEL_ENV !== 'production'
+  if (isPreviewEnv) return true
+
+  const supa = createServiceClient()
+  const { data } = await supa
+    .from('site_settings')
+    .select('key, value')
+    .in('key', [`magazine_issue_${issuePad}_public`, `magazine_issue_${issuePad}_early_access`])
+
+  const isPublic = data?.some(r => r.key === `magazine_issue_${issuePad}_public` && (r.value === true || r.value === 'true')) ?? false
+  if (isPublic) return true
+
+  const isEarly = data?.some(r => r.key === `magazine_issue_${issuePad}_early_access` && (r.value === true || r.value === 'true')) ?? false
+  if (!isEarly) return false
+
+  const cookieStore = await cookies()
+  return cookieStore.get(`ag-mag-unlock-${issuePad}`)?.value === '1'
+}
 
 export async function activateEarlyAccessAndNotify(opts: {
   issuePad:    string
