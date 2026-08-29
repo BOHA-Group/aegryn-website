@@ -78,13 +78,14 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
       <div className="flex flex-wrap items-center justify-center gap-3">
         {/* Boutons 1 & 2 — actifs si isPublic ou isPreview, sinon désactivés avec tooltip */}
         {[
-          { label: labelReadOnline,  filled: true,  href: `/${locale}/magazine/${issue.slug}` },
-          { label: labelDownloadPdf, filled: false, href: `/${locale}/magazine/${issue.slug}/flipbook` },
-        ].map(({ label, filled, href }) => (
+          { label: labelReadOnline,  filled: true,  href: `/${locale}/magazine/${issue.slug}`,                          target: '_self'   },
+          { label: labelDownloadPdf, filled: false, href: `/magazine/issue-${padNum}/aegryn-magazine-issue-${padNum}_1.html`, target: '_blank'  },
+        ].map(({ label, filled, href, target }) => (
           (isPublic || isPreview) ? (
             <Link
               key={label}
               href={href}
+              target={target}
               className={[
                 'inline-block font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold transition-colors',
                 filled
