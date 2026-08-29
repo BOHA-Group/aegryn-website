@@ -39,40 +39,75 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
         }}
       >
         {issue.status === 'published' ? (
-          /* ── Copie exacte du flipbook : photo + overlay sombre + texte AEGRYN, mise à l'échelle ── */
-          <div style={{ position: 'absolute', top: 0, left: 0, transformOrigin: 'top left', transform: 'scale(0.369)', width: 420, height: 595 }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={`/magazine/issue-${padNum}/cover-magazine-issue-${padNum}.jpg`}
-              alt=""
-              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
-            />
-            <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px 30px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                <div style={{ fontSize: 9, fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#fff' }}>{formatted}</div>
-                <div style={{ textAlign: 'right' }}>
-                  <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#fff' }}>Special Edition</div>
-                  <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#fff' }}>{`Issue ${padNum}`}</div>
+          /* ── Mini cover : photo + overlay + texte contextualisé par issue ── */
+          (() => {
+            /* Accent color par issue */
+            const ACCENTS: Record<number, string> = {
+              1: '#5ADDA4', // mint — Build
+              2: '#C9A84C', // gold — Exit / stratégie
+              3: '#E8E0D4', // crème — Buyer / portrait
+            }
+            const accent = ACCENTS[issue.number] ?? '#5ADDA4'
+
+            /* Position photo par issue (objectPosition) */
+            const PHOTO_POS: Record<number, string> = {
+              1: 'center top',
+              2: 'center center',
+              3: 'center 20%',
+            }
+            const photoPos = PHOTO_POS[issue.number] ?? 'center top'
+
+            /* Overlay gradient par issue */
+            const OVERLAYS: Record<number, string> = {
+              1: 'linear-gradient(180deg,rgba(5,10,20,.55) 0%,rgba(5,10,20,.35) 40%,rgba(5,10,20,.82) 100%)',
+              2: 'linear-gradient(180deg,rgba(10,8,2,.72) 0%,rgba(10,8,2,.38) 45%,rgba(10,8,2,.88) 100%)',
+              3: 'linear-gradient(180deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.42) 45%,rgba(0,0,0,.90) 100%)',
+            }
+            const overlay = OVERLAYS[issue.number] ?? OVERLAYS[1]
+
+            /* Titre splitté sur 2 lignes si contient un point médian */
+            const titleParts = issue.title.replace('.','\n').split('\n').filter(Boolean)
+
+            return (
+              <div style={{ position: 'absolute', top: 0, left: 0, transformOrigin: 'top left', transform: 'scale(0.369)', width: 420, height: 595 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`/magazine/issue-${padNum}/cover-magazine-issue-${padNum}.jpg`}
+                  alt=""
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: photoPos }}
+                />
+                <div style={{ position: 'absolute', inset: 0, background: overlay }} />
+                <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px 30px' }}>
+                  {/* Top bar */}
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                    <div style={{ fontSize: 9, fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,.75)' }}>{formatted}</div>
+                    <div style={{ textAlign: 'right' }}>
+                      <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: accent }}>Issue {padNum}</div>
+                    </div>
+                  </div>
+                  {/* Masthead */}
+                  <div style={{ marginTop: -8 }}>
+                    <div style={{ fontSize: 90, fontWeight: 700, color: '#fff', lineHeight: 0.86, letterSpacing: '-0.01em' }}>Aegryn</div>
+                    <div style={{ textAlign: 'right', fontSize: 8, fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.55)', marginTop: 5 }}>Business Magazine</div>
+                  </div>
+                  {/* CoverLine */}
+                  <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                    <div>
+                      <div style={{ width: 28, height: 1.5, background: accent, marginBottom: 10 }} />
+                      <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: accent, lineHeight: 1.5 }}>{issue.coverLine}</div>
+                    </div>
+                  </div>
+                  {/* Headline */}
+                  <div style={{ paddingBottom: 48 }}>
+                    {titleParts.map((part, idx) => (
+                      <div key={idx} style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: idx < titleParts.length - 1 ? 2 : 9 }}>{part.trim()}</div>
+                    ))}
+                    <div style={{ fontSize: 8.5, fontWeight: 400, letterSpacing: '0.04em', color: 'rgba(255,255,255,.65)', lineHeight: 1.6, maxWidth: 240 }}>{issue.theme}</div>
+                  </div>
                 </div>
               </div>
-              <div style={{ marginTop: -8 }}>
-                <div style={{ fontSize: 90, fontWeight: 700, color: '#fff', lineHeight: 0.86, letterSpacing: '-0.01em' }}>Aegryn</div>
-                <div style={{ textAlign: 'right', fontSize: 8, fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#fff', marginTop: 5 }}>Business Magazine</div>
-              </div>
-              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                <div style={{ maxWidth: 170 }}>
-                  <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#fff', marginBottom: 6 }}>Exclusive</div>
-                  <div style={{ width: 28, height: 2, background: '#fff', marginBottom: 8 }} />
-                  <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', color: '#fff', lineHeight: 1.5 }}>Build. Certify. Transact.</div>
-                </div>
-              </div>
-              <div style={{ paddingBottom: 52 }}>
-                <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: 5 }}>Built</div>
-                <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: 9 }}>to Last.</div>
-                <div style={{ fontSize: 8.5, fontWeight: 400, letterSpacing: '0.05em', color: '#fff', lineHeight: 1.6 }}>The anatomy of a tech asset that sells and one that doesn&apos;t.</div>
-              </div>
-            </div>
-          </div>
+            )
+          })()
         ) : (
           /* ── Draft placeholder ── */
           <>

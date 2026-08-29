@@ -6,9 +6,9 @@ export const ISSUE_02: MagazineIssue = {
   title: 'The Exit Equation.',
   theme: 'La décision, la préparation, la négociation. Et les 12 mois qui suivent.',
   publishedAt: '2027-04-01',
-  coverStat: '€—',
-  coverStatLabel: 'À paraître — Avril 2027',
+  coverStat: '74%',
+  coverStatLabel: 'of founders regret the timing of their exit — Aegryn Survey 2026',
   coverLine: 'Decide. Prepare. Exit.',
-  status: 'draft',
+  status: 'published',
   sections: [],
 }
