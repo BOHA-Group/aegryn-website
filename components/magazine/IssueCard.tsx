@@ -43,7 +43,7 @@ export function IssueCard({ issue, locale = 'fr', labelSpecial = 'Special Editio
             </div>
             {/* AEGRYN + BUSINESS MAGAZINE */}
             <div style={{ marginTop: -8 }}>
-              <div style={{ fontSize: 90, fontWeight: 700, color: '#fff', lineHeight: 0.86, letterSpacing: '-0.04em' }}>Aegryn</div>
+              <div style={{ fontSize: 90, fontWeight: 700, color: '#fff', lineHeight: 0.86, letterSpacing: '-0.01em' }}>Aegryn</div>
               <div style={{ textAlign: 'right', fontSize: 8, fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#fff', marginTop: 5 }}>Business Magazine</div>
             </div>
             {/* EXCLUSIVE milieu */}

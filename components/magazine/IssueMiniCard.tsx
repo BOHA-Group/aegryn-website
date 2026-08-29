@@ -56,7 +56,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
                 </div>
               </div>
               <div style={{ marginTop: -8 }}>
-                <div style={{ fontSize: 90, fontWeight: 700, color: '#fff', lineHeight: 0.86, letterSpacing: '-0.04em' }}>Aegryn</div>
+                <div style={{ fontSize: 90, fontWeight: 700, color: '#fff', lineHeight: 0.86, letterSpacing: '-0.01em' }}>Aegryn</div>
                 <div style={{ textAlign: 'right', fontSize: 8, fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#fff', marginTop: 5 }}>Business Magazine</div>
               </div>
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -101,8 +101,8 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
           </div>
         )}
 
-        {/* Active indicator */}
-        {active && (
+        {/* Active indicator — uniquement sur les drafts (fond sombre) */}
+        {active && issue.status !== 'published' && (
           <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 3, background: '#5ADDA4' }} />
         )}
       </div>

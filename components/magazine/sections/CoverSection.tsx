@@ -68,7 +68,7 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
         <h1
           ref={titleRef}
           className="font-sans font-bold text-white"
-          style={{ fontSize: 'clamp(90px,14vw,190px)', fontWeight: 700, lineHeight: 0.86, letterSpacing: '-0.04em' }}
+          style={{ fontSize: 'clamp(90px,14vw,190px)', fontWeight: 700, lineHeight: 0.86, letterSpacing: '-0.01em' }}
         >
           Aegryn
         </h1>
