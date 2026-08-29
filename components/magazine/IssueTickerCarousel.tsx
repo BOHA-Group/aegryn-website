@@ -52,7 +52,7 @@ export function IssueTickerCarousel({ items }: Props) {
     <div className="relative border-t border-magazine-black/8 bg-magazine-white overflow-hidden">
       {/* Piste défilante — déborde des marges */}
       <div
-        className="pb-14"
+        className="pt-6 pb-14"
         onMouseEnter={pause}
         onMouseLeave={resume}
       >
