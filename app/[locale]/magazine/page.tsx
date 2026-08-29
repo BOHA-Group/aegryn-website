@@ -93,13 +93,14 @@ export default async function MagazineHubPage({ params }: Props) {
       <div className="border-t border-magazine-black/10">
         {(() => {
           const featuredIssue = ALL_ISSUES.find(
-            i => flags[`magazine_issue_${String(i.number).padStart(2,'0')}_featured`] ?? false
-          ) ?? ALL_ISSUES[0]
+            i => flags[`magazine_issue_${String(i.number).padStart(2,'00')}_featured`] ?? false
+          ) ?? null
           const pad = (n: number) => String(n).padStart(2,'0')
 
           return (
             <>
-              {/* Hero — issue à la une */}
+              {/* Hero — issue à la une (uniquement si un flag featured est activé) */}
+              {featuredIssue && (
               <div className="max-w-magazine mx-auto px-6 md:px-[120px] py-16">
                 <IssueCard
                   issue={featuredIssue}
@@ -113,6 +114,7 @@ export default async function MagazineHubPage({ params }: Props) {
                   isPreview={isPreview}
                 />
               </div>
+              )}
 
               {/* Carousel — toutes les issues, featured active au centre */}
               <div className="border-t border-magazine-black/8 bg-magazine-cream">
@@ -126,7 +128,7 @@ export default async function MagazineHubPage({ params }: Props) {
                         key={issue.slug}
                         issue={issue}
                         locale={locale}
-                        active={issue.slug === featuredIssue.slug}
+                        active={issue.slug === featuredIssue?.slug}
                       />
                     ))}
                   </div>

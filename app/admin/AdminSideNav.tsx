@@ -9,9 +9,8 @@ const SECTIONS = [
   {
     label: 'Certification',
     items: [
-      { href: '/admin/assets',            label: 'Grading' },
-      { href: '/admin/catalog',           label: 'Catalogue' },
-      { href: '/admin/magazine/wishlist', label: 'Wishlist magazine' },
+      { href: '/admin/assets',  label: 'Grading' },
+      { href: '/admin/catalog', label: 'Catalogue' },
     ],
   },
   {
@@ -37,7 +36,8 @@ const SECTIONS = [
   {
     label: 'Contenu',
     items: [
-      { href: '/admin/magazine', label: 'Magazine' },
+      { href: '/admin/magazine',          label: 'Magazine' },
+      { href: '/admin/magazine/wishlist', label: 'Wishlist magazine' },
     ],
   },
   {
