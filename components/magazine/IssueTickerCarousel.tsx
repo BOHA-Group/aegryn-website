@@ -50,12 +50,6 @@ export function IssueTickerCarousel({ items }: Props) {
 
   return (
     <div className="relative border-t border-magazine-black/8 bg-magazine-white overflow-hidden">
-      <div className="max-w-magazine mx-auto px-6 md:px-[120px] pt-12 pb-2">
-        <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30">
-          Au sommaire
-        </p>
-      </div>
-
       {/* Piste défilante — déborde des marges */}
       <div
         className="pb-14"
