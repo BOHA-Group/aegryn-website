@@ -12,14 +12,15 @@ import { ISSUE_03 } from '@/content/magazine/issue-03/meta'
 import { ISSUE_04 } from '@/content/magazine/issue-04/meta'
 
 /*
- * Disposition style Barnes en px absolus dans la col droite (largeur ~60% de l'écran)
- * Chaque IssueMiniCard = 232.5×330px natif
+ * Mosaïque 2×2 serrée façon Barnes — les 4 covers débordent des bords
+ * du conteneur (overflow:hidden), quasi jointives, rotations légères distinctes.
+ * Chaque IssueMiniCard = 232.5×330px natif.
  */
 const COVER_LAYOUT = [
-  { issue: ISSUE_02, rot: '-12deg', left:  20, top: -30, z: 2 },
-  { issue: ISSUE_01, rot:   '8deg', left: 190, top: -50, z: 1 },
-  { issue: ISSUE_03, rot:  '-4deg', left:  80, top: 200, z: 4 },
-  { issue: ISSUE_04, rot:  '10deg', left: 280, top: 160, z: 3 },
+  { issue: ISSUE_01, rot: '-6deg', left:  -50, top:  -70, z: 1 },
+  { issue: ISSUE_02, rot:  '4deg', left:  170, top: -100, z: 2 },
+  { issue: ISSUE_03, rot: '-4deg', left:  -30, top:  190, z: 3 },
+  { issue: ISSUE_04, rot:  '6deg', left:  190, top:  170, z: 4 },
 ]
 
 interface Props {
@@ -76,7 +77,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta, articlesLab
         style={{ background: '#F5F2EE' }}
       >
         {/* Grid 2 colonnes : texte gauche | covers droite */}
-        <div className="grid md:grid-cols-[45%_55%]" style={{ minHeight: 520 }}>
+        <div className="grid md:grid-cols-[42%_58%]" style={{ minHeight: 560 }}>
 
           {/* Col gauche — texte isolé sur fond blanc card */}
           <div className="flex items-center px-6 md:px-[80px] py-20">
