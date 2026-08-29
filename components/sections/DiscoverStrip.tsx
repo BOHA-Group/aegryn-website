@@ -11,12 +11,17 @@ import { ISSUE_02 } from '@/content/magazine/issue-02/meta'
 import { ISSUE_03 } from '@/content/magazine/issue-03/meta'
 import { ISSUE_04 } from '@/content/magazine/issue-04/meta'
 
-/* Disposition diagonale style Barnes */
+/*
+ * Disposition 2×2 style Barnes :
+ * Rangée haute (partiellement visible, derrière) — issues 01 & 02
+ * Rangée basse (premier plan, plus centrée) — issues 03 & 04
+ * Chaque cover IssueMiniCard = 232.5×330px
+ */
 const COVER_LAYOUT = [
-  { issue: ISSUE_01, rot: '-14deg', x: '22%', y: '-5%',  z: 1 },
-  { issue: ISSUE_02, rot:  '-4deg', x: '38%', y: '-12%', z: 4 },
-  { issue: ISSUE_03, rot:   '5deg', x: '54%', y:  '-2%', z: 3 },
-  { issue: ISSUE_04, rot:  '13deg', x: '70%', y: '-10%', z: 2 },
+  { issue: ISSUE_02, rot:  '-8deg', x: '34%', y: '-18%', z: 2 },
+  { issue: ISSUE_01, rot:  '10deg', x: '58%', y: '-12%', z: 1 },
+  { issue: ISSUE_03, rot:  '-4deg', x: '24%', y:  '22%', z: 4 },
+  { issue: ISSUE_04, rot:   '8deg', x: '50%', y:  '18%', z: 3 },
 ]
 
 interface Props {
@@ -71,7 +76,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta }: Props) {
         style={{ background: '#F5F2EE', minHeight: 420 }}
       >
         {/* Layout pleine largeur : texte gauche absolu + covers débordantes droite */}
-        <div className="relative" style={{ minHeight: 480 }}>
+        <div className="relative" style={{ minHeight: 520 }}>
           {/* Texte gauche */}
           <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24">
             <div className="md:max-w-[420px] space-y-6">
