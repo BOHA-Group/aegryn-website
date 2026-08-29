@@ -5188,7 +5188,10 @@
     "security": "Sicherheit",
     "faq": "FAQ",
     "groupBuild": "Build",
-    "servicesBuild": "Asset-Ingenieurwesen"
+    "servicesBuild": "Asset-Ingenieurwesen",
+    "groupMagazine": "Magazin",
+    "magazine": "Aegryn Magazine",
+    "magazineIssue01": "Ausgabe 01: Built to Last"
   },
   "clientTransaction": {
     "eyebrow": "Käuferbereich",
