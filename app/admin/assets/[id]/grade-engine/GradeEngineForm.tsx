@@ -474,7 +474,7 @@ export default function GradeEngineForm({
       <div className="space-y-3">
 
       {/* DIMENSION CODE */}
-      <Section title="Dimension C — Code (25 pts)" open={open.code} onToggle={() => setOpen(p => ({ ...p, code: !p.code }))}>
+      <Section title="Dimension C : Code (25 pts)" open={open.code} onToggle={() => setOpen(p => ({ ...p, code: !p.code }))}>
         <Field label="Couverture de tests (%)" hint="0 = aucun test · 100 = couverture totale" source={inputSources['testCoverage'] as SourceType}>
           <NumInput value={input.code.testCoverage} onChange={v => setCode('testCoverage', v)} max={100} />
         </Field>
@@ -513,7 +513,7 @@ export default function GradeEngineForm({
       </Section>
 
       {/* DIMENSION IP */}
-      <Section title="Dimension I — IP & Droits (25 pts)" open={open.ip} onToggle={() => setOpen(p => ({ ...p, ip: !p.ip }))}>
+      <Section title="Dimension I : IP & Droits (25 pts)" open={open.ip} onToggle={() => setOpen(p => ({ ...p, ip: !p.ip }))}>
         <Field label="Marques déposées (nb de juridictions)" source={inputSources['trademarksJurisdictions'] as SourceType}>
           <NumInput value={input.ip.trademarksJurisdictions} onChange={v => setIP('trademarksJurisdictions', v)} />
         </Field>
@@ -551,7 +551,7 @@ export default function GradeEngineForm({
       </Section>
 
       {/* DIMENSION FINANCE */}
-      <Section title="Dimension F — Finance (25 pts)" open={open.finance} onToggle={() => setOpen(p => ({ ...p, finance: !p.finance }))}>
+      <Section title="Dimension F : Finance (25 pts)" open={open.finance} onToggle={() => setOpen(p => ({ ...p, finance: !p.finance }))}>
         <Field label="ARR (€)" source={inputSources['arr'] as SourceType}>
           <NumInput value={input.finance.arr} onChange={v => setFin('arr', v)} step={1000} />
         </Field>
@@ -577,7 +577,7 @@ export default function GradeEngineForm({
         <Field label="Croissance YoY (%)" source={inputSources['yoyGrowth'] as SourceType}>
           <NumInput value={input.finance.yoyGrowth} onChange={v => setFin('yoyGrowth', v)} />
         </Field>
-        <Field label="Concentration client — top 1 (%)" source={inputSources['topClientConcentration'] as SourceType}>
+        <Field label="Concentration client, top 1 (%)" source={inputSources['topClientConcentration'] as SourceType}>
           <NumInput value={input.finance.topClientConcentration} onChange={v => setFin('topClientConcentration', v)} max={100} />
         </Field>
         <Field label="Runway (mois)" source={inputSources['runwayMonths'] as SourceType}>
@@ -643,7 +643,7 @@ export default function GradeEngineForm({
       </Section>
 
       {/* DIMENSION SECURITE */}
-      <Section title="Dimension S — Sécurité (25 pts)" open={open.security} onToggle={() => setOpen(p => ({ ...p, security: !p.security }))}>
+      <Section title="Dimension S : Sécurité (25 pts)" open={open.security} onToggle={() => setOpen(p => ({ ...p, security: !p.security }))}>
         <Field label="Dernier pentest (mois)" hint="9999 = jamais réalisé" source={inputSources['lastPentestMonthsAgo'] as SourceType}>
           <NumInput value={input.security.lastPentestMonthsAgo} onChange={v => setSec('lastPentestMonthsAgo', v)} />
         </Field>
@@ -689,7 +689,7 @@ export default function GradeEngineForm({
           </select>
         </Field>
         {/* S-15 — Politique de gestion des accès (V3 : règle MFA/S-15) */}
-        <Field label="Politique accès documentée (S-15)" hint="RBAC/IAM documenté — pénalité si MFA absent simultanément">
+        <Field label="Politique accès documentée (S-15)" hint="RBAC/IAM documenté, pénalité si MFA absent simultanément">
           <select value={input.security.accessManagement ?? 'no'} onChange={e => setSec('accessManagement', e.target.value as 'yes' | 'no')} className={selectCls}>
             <option value="no">Non documentée</option>
             <option value="yes">Documentée (RBAC / IAM)</option>

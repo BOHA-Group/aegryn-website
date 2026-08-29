@@ -52,8 +52,8 @@ export function IssueViewerTabs({ flipbookSrc, webSrc, issueLabel }: Props) {
 
       {/* Viewer */}
       {tab === 'flipbook'
-        ? <FlipbookViewer htmlSrc={flipbookSrc} title="Aegryn Magazine Issue 01 — Flipbook" />
-        : <WebViewer      htmlSrc={webSrc}      title="Aegryn Magazine Issue 01 — Web Edition" />
+        ? <FlipbookViewer htmlSrc={flipbookSrc} title="Aegryn Magazine Issue 01 | Flipbook" />
+        : <WebViewer      htmlSrc={webSrc}      title="Aegryn Magazine Issue 01 | Web Edition" />
       }
     </div>
   )

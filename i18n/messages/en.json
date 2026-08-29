@@ -89,7 +89,7 @@
       "title": "Six proprietary assets.\nOne shared vision.",
       "desc": "Every Aegryn asset is designed, built and operated in-house. Full ownership, absolute sovereignty, guaranteed durability.",
       "meta": {
-        "title": "Aegryn Assets — Proprietary ecosystem",
+        "title": "Aegryn Assets, Proprietary ecosystem",
         "desc": "Discover Aegryn's proprietary assets: subblink, neediu, primiom, movtoo, hobconnect, engineered to last, certifiable and transferable."
       },
       "filterAll": "All",
@@ -106,11 +106,11 @@
       "transactionEligible": "M&A eligible",
       "internalOnly": "Internal use",
       "confidential": "Confidential",
-      "heroLabel": "Aegryn — Proprietary portfolio",
+      "heroLabel": "Aegryn | Proprietary portfolio",
       "heroTitle": "What we're\nbuilding.",
-      "heroSub": "Assets owned by the Aegryn group — not submitted by third parties",
+      "heroSub": "Assets owned by the Aegryn group, not submitted by third parties",
       "ownedNote": "These assets belong to the Aegryn group. They are not for sale by default. Some may exceptionally be listed for cession following a strategic decision by the group.",
-      "transactionEligibleNote": "Asset eligible for Aegryn M&A process — investor inquiries on request.",
+      "transactionEligibleNote": "Asset eligible for Aegryn M&A process, investor inquiries on request.",
       "ctaBottom": "Want to submit your own asset for certification?",
       "ctaGrade": "Submit a third-party asset",
       "ctaTransaction": "View M&A transactions",
@@ -119,32 +119,32 @@
     },
     "items": {
       "subblink": {
-        "badge": "B2B — SaaS",
+        "badge": "B2B · SaaS",
         "tagline": "AI-powered contract analysis",
         "description": "Analyses all your contracts in seconds using AI calibrated for Swiss and European law. Risks, critical clauses, hidden obligations: everything identified in plain language."
       },
       "kryv": {
-        "badge": "Protocol — Blockchain",
+        "badge": "Protocol · Blockchain",
         "tagline": "AI code integrity certification",
         "description": "Blockchain protocol for certifying the integrity of AI code. The SSL of artificial code: every deployment, immutably sealed."
       },
       "neediu": {
-        "badge": "B2C — Marketplace",
+        "badge": "B2C · Marketplace",
         "tagline": "Home services, intelligent matching",
         "description": "Connects individuals and professionals with the best home service providers, based on location and verified reviews."
       },
       "movtoo": {
-        "badge": "B2C — Transport",
+        "badge": "B2C · Transport",
         "tagline": "On-demand transport, dense urban areas",
         "description": "AI-powered immediate transport platform. Rides, parcels, moving: real-time dispatch for individuals and professionals."
       },
       "primiom": {
-        "badge": "B2C — Real Estate",
+        "badge": "B2C · Real Estate",
         "tagline": "Seller-centric real estate transactions",
         "description": "Reinvents the real estate transaction by placing the seller at the heart of the process. Valuation, market analysis and personalised support from A to Z."
       },
       "hobconnect": {
-        "badge": "B2C — Social",
+        "badge": "B2C · Social",
         "tagline": "Social network centred on shared passions",
         "description": "Builds authentic communities around shared passions, without advertising algorithms. For individuals, professionals, creators and associations."
       },
@@ -156,7 +156,7 @@
     }
   },
   "advisory": {
-    "strip": "Aegryn Advisory — We protect what you spent years building",
+    "strip": "Aegryn Advisory | We protect what you spent years building",
     "cta": "Get in touch",
     "hero": {
       "title": "Protecting what you build.",
@@ -515,7 +515,7 @@
         },
         {
           "word": "AEGIR",
-          "meaning": "Master of flows — of what circulates between shores, between parties, between value and its recognition."
+          "meaning": "Master of flows, of what circulates between shores, between parties, between value and its recognition."
         },
         {
           "word": "AEON",
@@ -523,8 +523,8 @@
         }
       ],
       "synthesis": "Three words from three civilisations. One synthesis: an entity that protects (AEGIS), facilitates flows (AEGIR), and builds for permanence (AEON). Aegryn.",
-      "history": "Aegryn was formerly known as BOHA-Group. As the company's positioning evolved — from digital asset builder to certification and transaction infrastructure — its identity evolved with it. The name changed. The conviction did not.",
-      "formerly": "Aegryn was formerly known as BOHA-Group. As the company's positioning evolved — from digital asset builder to certification and transaction infrastructure — its identity evolved with it. The name changed. The conviction did not."
+      "history": "Aegryn was formerly known as BOHA-Group. As the company's positioning evolved, from digital asset builder to certification and transaction infrastructure, its identity evolved with it. The name changed. The conviction did not.",
+      "formerly": "Aegryn was formerly known as BOHA-Group. As the company's positioning evolved, from digital asset builder to certification and transaction infrastructure, its identity evolved with it. The name changed. The conviction did not."
     }
   },
   "career": {
@@ -543,7 +543,7 @@
     "spontaneous": "Unsolicited application",
     "statement": {
       "label": "Aegryn Advisory",
-      "title": "Certified to transact — built by experts who believe in it.",
+      "title": "Certified to transact, built by experts who believe in it.",
       "cta": "Discover Advisory"
     },
     "domains": {
@@ -560,7 +560,7 @@
     "about": {
       "desc": "We build assets, not tools. We look for people who think in decades.",
       "label": "Careers",
-      "tagline": "Aegryn — Saint-Sulpice, Switzerland",
+      "tagline": "Aegryn | Saint-Sulpice, Switzerland",
       "title": "Build what endures."
     },
     "crafts": {
@@ -722,7 +722,7 @@
         "headline": "The AI that reads your contracts for you.",
         "p1": "subblink instantly analyses any type of contract, NDAs, T&Cs, leases, service agreements, and identifies risky clauses, hidden commitments and negotiation points.",
         "p2": "Calibrated for Swiss and European law, the solution serves individuals, freelancers, SMEs and legal departments who want to regain control of their contractual obligations.",
-        "market": "B2B — SaaS",
+        "market": "B2B · SaaS",
         "tech": "Generative AI + legal NLP",
         "zones": "Switzerland · Europe",
         "status": "Live",
@@ -732,15 +732,15 @@
         "headline": "The SSL of AI code. Every deployment, immutably sealed.",
         "p1": "KRYV Protocol is a blockchain protocol for certifying AI code integrity. It guarantees that a deployed model is exactly the one that was audited and approved, without alteration.",
         "p2": "In a world where AI is becoming critical infrastructure, KRYV lays the foundation for on-chain verifiable trust certification.",
-        "category": "Protocol — Blockchain",
+        "category": "Protocol · Blockchain",
         "useCase": "AI certification, on-chain audit",
-        "status": "Restricted — by invitation"
+        "status": "Restricted, by invitation"
       },
       "neediu": {
         "headline": "Smart matching for home services.",
         "p1": "neediu connects individuals with qualified providers for all their home needs: cleaning, gardening, DIY, childcare and more.",
         "p2": "The algorithm analyses availability, location and reviews to suggest the ideal provider in seconds.",
-        "market": "B2C — Marketplace",
+        "market": "B2C · Marketplace",
         "zone": "Paris region → France",
         "status": "In development"
       },
@@ -748,7 +748,7 @@
         "headline": "On-demand delivery, powered by AI.",
         "p1": "movtoo reinvents last-mile logistics with an immediate delivery platform optimised by artificial intelligence.",
         "p2": "Senders and recipients benefit from full transparency on the route, delay and cost, in real time.",
-        "market": "B2C — Delivery",
+        "market": "B2C · Delivery",
         "tech": "AI routing + fleet optimisation",
         "status": "In development"
       },
@@ -756,7 +756,7 @@
         "headline": "Real estate reinvented by AI.",
         "p1": "primiom supports buyers, sellers and real estate investors with AI-based market analysis and decision-support tools.",
         "p2": "Predictive valuation, opportunity detection, profitability simulation, everything you need to decide with confidence.",
-        "market": "B2C — Real estate",
+        "market": "B2C · Real estate",
         "zones": "France · Europe",
         "status": "In development"
       },
@@ -764,8 +764,8 @@
         "headline": "The social network that brings passion together.",
         "p1": "hobconnect builds authentic communities around shared interests, sport, music, art, gaming, travel and more.",
         "p2": "An alternative to generalist networks, centred on depth of exchange rather than interaction volume.",
-        "market": "B2C — Social",
-        "model": "Freemium — private/public communities",
+        "market": "B2C · Social",
+        "model": "Freemium, private/public communities",
         "status": "In development"
       }
     },
@@ -796,7 +796,7 @@
     "placeholderEmail": "you@example.com",
     "placeholderCompany": "Your company name",
     "placeholderMessage": "Context of your interest in this asset...",
-    "selectDefault": "— Select —",
+    "selectDefault": "Select",
     "submit": "Submit my request",
     "sending": "Sending...",
     "disclaimer": "Access subject to profile validation by our team.",
@@ -817,7 +817,7 @@
     "restrictedDesc": "Asset files and company names are accessible only after account creation, signing the Aegryn NDA and accepting the T&Cs.",
     "pendingCgvDesc": "Your NDA is registered. The T&Cs will be sent to you shortly.",
     "pendingNdaDesc": "Submit your request below. We will send you the NDA and T&Cs for signature.",
-    "ndaSignedTitle": "NDA signed — awaiting T&Cs",
+    "ndaSignedTitle": "NDA signed, awaiting T&Cs",
     "ndaSignedDesc": "Our team will send you the General Terms of Sale shortly.",
     "formLabel": "Catalogue access request",
     "labelName": "Full name *",
@@ -830,7 +830,7 @@
     "placeholderEmail": "you@example.com",
     "placeholderCompany": "Your company name",
     "placeholderMessage": "Context of your interest in the next session...",
-    "selectDefault": "— Select —",
+    "selectDefault": "Select",
     "submit": "Submit my request",
     "sending": "Sending...",
     "disclaimer": "Access subject to profile validation, NDA signature and T&Cs acceptance.",
@@ -854,22 +854,22 @@
       "code": {
         "label": "CODE & TECH AUDIT",
         "desc": "Senior freelance CTO or independent firm specialising in code review and technical debt, supporting dimension C (Code) for sellers and buyers who wish it.",
-        "dimension": "Dimension C — Code"
+        "dimension": "Dimension C : Code"
       },
       "legal": {
         "label": "IP LEGAL",
         "desc": "Law firm specialising in tech & IP, supporting dimension I (IP & Rights) for sellers and buyers who wish it.",
-        "dimension": "Dimension I — IP & Rights"
+        "dimension": "Dimension I : IP & Rights"
       },
       "finance": {
         "label": "CHARTERED ACCOUNTANT",
         "desc": "Audit firm or chartered accountant specialising in SaaS/tech, supporting dimension F (Finance) for sellers and buyers who wish it.",
-        "dimension": "Dimension F — Finance"
+        "dimension": "Dimension F : Finance"
       },
       "security": {
         "label": "CYBERSECURITY",
         "desc": "Accredited cybersecurity specialist (PASSI or CREST), supporting dimension S (Security) for sellers and buyers who wish it.",
-        "dimension": "Dimension S — Security"
+        "dimension": "Dimension S : Security"
       }
     },
     "ctaLabel": "FOR EXPERTS",
@@ -880,7 +880,7 @@
     "benefits": [
       "Access to a regular flow of tech assets requiring your expertise",
       "Visibility as an Aegryn network partner (from the first mandates)",
-      "Qualified institutional clientele — PE, VC, Family Office buyers",
+      "Qualified institutional clientele, PE, VC, Family Office buyers",
       "Remuneration defined within the partnership framework"
     ]
   },
@@ -890,11 +890,11 @@
       "items": [
         {
           "q": "Who are we and what do we do?",
-          "a": "Aegryn is a Swiss Tech Asset Builder designing and operating proprietary digital ecosystems — environments where technology structures everyday life for individuals, professionals and the markets they operate in."
+          "a": "Aegryn is a Swiss Tech Asset Builder designing and operating proprietary digital ecosystems, environments where technology structures everyday life for individuals, professionals and the markets they operate in."
         },
         {
           "q": "What makes us unique compared to competitors?",
-          "a": "Unlike consultancies or agencies, we build and operate our own digital ecosystems. Every piece of strategic advice, every security protocol, every growth approach we offer is derived from real execution — not theory. We do not resell generic models. We share what works because we use it ourselves."
+          "a": "Unlike consultancies or agencies, we build and operate our own digital ecosystems. Every piece of strategic advice, every security protocol, every growth approach we offer is derived from real execution, not theory. We do not resell generic models. We share what works because we use it ourselves."
         },
         {
           "q": "How can I invest or partner with Aegryn?",
@@ -943,7 +943,7 @@
       }
     },
     "meta": {
-      "title": "Contact — Aegryn",
+      "title": "Contact | Aegryn",
       "desc": "Get in touch with Aegryn, advisory, asset certification, M&A process, partnership or general enquiry."
     },
     "info": {
@@ -956,7 +956,7 @@
       "label": "Aegryn Advisory",
       "title": "Strategic Clarity.\nOperational Depth.",
       "desc1": "At Aegryn Advisory, we work with founders, executives and organisations facing critical technology decisions. Our guidance is derived from how we design, build and secure our own digital ecosystems.",
-      "desc2": "We don't rely on theory, trends or recycled frameworks. We provide clear, direct and execution-grounded strategic direction across Data, AI and Cybersecurity — focused on impact, resilience and long-term value.",
+      "desc2": "We don't rely on theory, trends or recycled frameworks. We provide clear, direct and execution-grounded strategic direction across Data, AI and Cybersecurity, focused on impact, resilience and long-term value.",
       "quote": "No endless slides. No generic playbooks.\nOnly standards that have been tested in real environments.",
       "cta": "Book a session"
     },
@@ -1049,7 +1049,7 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 Aegryn (formerly BOHA-Group) — All rights reserved",
+    "legal": "© 2026 Aegryn (formerly BOHA-Group) · All rights reserved",
     "company": "An Aegryn company",
     "privacy": "Privacy",
     "terms": "Terms",
@@ -1074,10 +1074,10 @@
     "assetsLink": "Asset Catalogue",
     "glossaryLink": "Glossary",
     "ecosystemCatalogLink": "Our proprietary assets",
-    "aiNotice": "Some content on this site is produced with the assistance of artificial intelligence systems and reviewed under Aegryn editorial responsibility — EU AI Act art. 50."
+    "aiNotice": "Some content on this site is produced with the assistance of artificial intelligence systems and reviewed under Aegryn editorial responsibility, EU AI Act art. 50."
   },
   "cookie": {
-    "title": "Aegryn — Cookies & Analytics",
+    "title": "Aegryn | Cookies & Analytics",
     "desc": "We use Cloudflare Analytics (anonymised) to measure audience and improve experience. No advertising data. GDPR & LPD compliant.",
     "learnMore": "Learn more",
     "accept": "Accept",
@@ -1135,7 +1135,7 @@
     }
   },
   "marketStats": {
-    "label": "The market in numbers — 2026",
+    "label": "The market in numbers, 2026",
     "stats": [
       {
         "value": "+42%",
@@ -1155,7 +1155,7 @@
       {
         "value": "< 25%",
         "label": "Aegryn Grade acceptance rate",
-        "source": "Aegryn — 2026"
+        "source": "Aegryn | 2026"
       }
     ]
   },
@@ -1188,7 +1188,7 @@
     "articles": [
       {
         "category": "Market report",
-        "title": "State of the European tech M&A market — Q3 2026",
+        "title": "State of the European tech M&A market, Q3 2026",
         "desc": "Analysis of transaction volumes, valuation multiples and sector trends in the European tech asset market."
       },
       {
@@ -1210,10 +1210,10 @@
   },
   "acquisition": {
     "meta": {
-      "title": "Transaction Advisory & M&A — Aegryn",
+      "title": "Transaction Advisory & M&A | Aegryn",
       "desc": "Full support for certified tech asset acquisitions: due diligence, legal and tax structuring, financing, secure signing and closing. Aegryn mobilises the right experts for your deal."
     },
-    "label": "Services — Transaction Advisory",
+    "label": "Services : Transaction Advisory",
     "title": "Your acquisition.\nStructured to close.",
     "desc": "When acquiring a certified asset requires specific financial, legal or tax structuring, Aegryn mobilises the right experts for your profile and the nature of the deal.",
     "ctaPrimary": "Discuss my acquisition",
@@ -1234,7 +1234,7 @@
             },
             {
               "num": "02",
-              "title": "Vendor Readiness — Sale Preparation",
+              "title": "Vendor Readiness, Sale Preparation",
               "desc": "Seller file audit before submission: data room, contracts, registers, GDPR compliance, technical debt. Reduces certification timeline by 30 to 50%."
             },
             {
@@ -1368,11 +1368,11 @@
         },
         {
           "title": "Off-market first",
-          "desc": "Most Aegryn assets are never publicly listed. Qualified acquirer members access them before any public listing — or exclusively."
+          "desc": "Most Aegryn assets are never publicly listed. Qualified acquirer members access them before any public listing, or exclusively."
         },
         {
           "title": "Experts mobilised at the right time",
-          "desc": "Aegryn doesn't do everything. We coordinate the right experts (legal, tax, financial) at the right moment in the process — not too early to avoid overcomplication, not too late to avoid fragility."
+          "desc": "Aegryn doesn't do everything. We coordinate the right experts (legal, tax, financial) at the right moment in the process, not too early to avoid overcomplication, not too late to avoid fragility."
         },
         {
           "title": "Liability on the grade",
@@ -1406,7 +1406,7 @@
         {
           "phase": "Available on request",
           "title": "Vendor Readiness",
-          "desc": "Complete preparation of the seller's file before Grade submission — contract audit, HR review, data room structuring. Reduces certification timeline by 30 to 50%.",
+          "desc": "Complete preparation of the seller's file before Grade submission, contract audit, HR review, data room structuring. Reduces certification timeline by 30 to 50%.",
           "status": "available_on_request"
         },
         {
@@ -1444,13 +1444,13 @@
   },
   "roadmapPage": {
     "meta": {
-      "title": "Platform — Aegryn M&A Switzerland",
+      "title": "Platform | Aegryn M&A Switzerland",
       "desc": "The Aegryn M&A Switzerland platform: certification, private sessions, Swiss law, international openness."
     },
     "label": "Aegryn M&A Switzerland",
     "title": "The platform.\nIts features.",
     "desc": "Every sale is conducted exclusively through Aegryn M&A Switzerland. Swiss law applies. Sellers and buyers from anywhere in the world are welcome.",
-    "swissNote": "Swiss law governs every transaction — regardless of the asset's origin or the parties' nationality.",
+    "swissNote": "Swiss law governs every transaction, regardless of the asset's origin or the parties' nationality.",
     "featuresLabel": "What the platform offers",
     "features": {
       "certification": {
@@ -1458,7 +1458,7 @@
         "desc": "Every asset listed for sale is certified under the CIFS protocol before any session. No uncertified asset is admitted."
       },
       "swissLaw": {
-        "title": "Swiss Law — 100%",
+        "title": "Swiss Law : 100%",
         "desc": "All transactions are governed by Swiss law, regardless of the nationality of the seller or buyer."
       },
       "international": {
@@ -1493,14 +1493,14 @@
       {
         "iconKey": "certification",
         "theme": "Certification",
-        "title": "CIFS Certification — Aegryn Grade Protocol",
+        "title": "CIFS Certification | Aegryn Grade Protocol",
         "desc": "Every asset is assessed across 4 dimensions (Code, IP, Finance, Security) before any listing. No uncertified asset is admitted.",
         "live": true
       },
       {
         "iconKey": "grade",
         "theme": "Certification",
-        "title": "5-grade scale — B to AEG ★",
+        "title": "5-grade scale, B to AEG ★",
         "desc": "Objective and immutable rating system: B, A, AA, AAA, AEG ★. Each grade reflects a certifiable level of maturity.",
         "live": true
       },
@@ -1634,11 +1634,11 @@
     "currentLabel": "Already available",
     "current": [
       "Private sale sessions",
-      "Aegryn Grade certification — CIFS protocol",
+      "Aegryn Grade certification, CIFS protocol",
       "Institutional escrow",
       "Automated digital NDA",
       "Buyer qualification and buyer portal",
-      "Seller portal — asset submission and tracking",
+      "Seller portal, asset submission and tracking",
       "CIFS certifier partner network",
       "Integrated multi-role KYC",
       "Catalogue filtering by grade, category and ARR"
@@ -1648,7 +1648,7 @@
   },
   "discover": {
     "meta": {
-      "title": "Discover — Aegryn Market Intelligence",
+      "title": "Discover | Aegryn Market Intelligence",
       "desc": "Market reports, seller and buyer guides, certification analyses, European tech market intelligence by Aegryn."
     },
     "label": "Aegryn Blog",
@@ -1687,7 +1687,7 @@
   },
   "grade": {
     "meta": {
-      "title": "Aegryn Grade System — Tech asset certification",
+      "title": "Aegryn Grade System, Tech asset certification",
       "desc": "The Aegryn Grade protocol objectively certifies every tech asset across 4 dimensions: Code, IP, Finance, Security."
     },
     "index": {
@@ -1698,7 +1698,7 @@
       "ctaMethod": "Read the methodology",
       "marketLabel": "Why certify now",
       "marketTitle": "Certification creates\nmeasurable value.",
-      "marketDesc": "The tech M&A market has developed a clear premium for assets whose quality is verifiable. This premium is not a projection — it is observable on completed transactions.",
+      "marketDesc": "The tech M&A market has developed a clear premium for assets whose quality is verifiable. This premium is not a projection, it is observable on completed transactions.",
       "marketCta": "Submit my asset",
       "marketCtaSecondary": "View methodology"
     },
@@ -1849,10 +1849,10 @@
   },
   "gradingSystem": {
     "meta": {
-      "title": "Grading System — Aegryn Grade Protocol",
+      "title": "Grading System | Aegryn Grade Protocol",
       "desc": "The Aegryn Grade protocol: CIFS framework, AEG ★ to B grade definitions, sub-codes, analysis process and independence principles."
     },
-    "label": "Aegryn — Grading System",
+    "label": "Aegryn | Grading System",
     "version": "2026",
     "title": "Aegryn\nGrading System.",
     "intro": "Aegryn introduces its own certification system for tech assets, with full transparency across the 4 fundamental dimensions of value.",
@@ -1936,10 +1936,10 @@
           "S-01"
         ],
         "dimensionRationale": {
-          "C": "Code level 1 — test coverage >90%, mature CI/CD, near-zero tech debt, documented scalable architecture.",
-          "I": "IP level 1 — trademarks registered in 3+ jurisdictions, software rights fully assigned, no litigation, clear moat.",
-          "F": "Finance level 1 — audited ARR >€2M, NRR >120%, churn <1%, margins >75%, YoY growth >40%.",
-          "S": "Security level 1 — pentest <6 months with no critical vulnerability, full MFA, end-to-end encryption, documented GDPR/LPD compliance."
+          "C": "Code level 1, test coverage >90%, mature CI/CD, near-zero tech debt, documented scalable architecture.",
+          "I": "IP level 1, trademarks registered in 3+ jurisdictions, software rights fully assigned, no litigation, clear moat.",
+          "F": "Finance level 1, audited ARR >€2M, NRR >120%, churn <1%, margins >75%, YoY growth >40%.",
+          "S": "Security level 1, pentest <6 months with no critical vulnerability, full MFA, end-to-end encryption, documented GDPR/LPD compliance."
         }
       },
       {
@@ -1951,16 +1951,16 @@
         "profile": "High-quality asset with solid fundamentals across all four dimensions. A few documented improvement areas but not blocking.",
         "typical": "SaaS ARR > €500K, growth > 30% YoY, managed technical debt, full GDPR compliance.",
         "subcodes": [
-          "C-01 — C-02",
-          "I-01 — I-02",
-          "F-01 — F-02",
-          "S-01 — S-02"
+          "C-01, C-02",
+          "I-01, I-02",
+          "F-01, F-02",
+          "S-01, S-02"
         ],
         "dimensionRationale": {
-          "C": "Code level 1–2 — solid tests (>70%), minor documented tech debt, functional CI/CD.",
-          "I": "IP level 1–2 — trademark registered, rights formalised, minor reservations possible on third-party licences.",
-          "F": "Finance level 1–2 — audited ARR >€500K, NRR >100%, growth >25% YoY, margins >60%.",
-          "S": "Security level 1–2 — pentest <12 months, MFA active, substantial GDPR compliance."
+          "C": "Code level 1–2, solid tests (>70%), minor documented tech debt, functional CI/CD.",
+          "I": "IP level 1–2, trademark registered, rights formalised, minor reservations possible on third-party licences.",
+          "F": "Finance level 1–2, audited ARR >€500K, NRR >100%, growth >25% YoY, margins >60%.",
+          "S": "Security level 1–2, pentest <12 months, MFA active, substantial GDPR compliance."
         }
       },
       {
@@ -1972,16 +1972,16 @@
         "profile": "Good quality asset with identified strengths and clearly documented improvement areas. Eligible for standard M&A processes.",
         "typical": "Growing SaaS, some gaps in tests or compliance, IP in consolidation.",
         "subcodes": [
-          "C-02 — C-03",
-          "I-02 — I-03",
-          "F-02 — F-03",
-          "S-02 — S-03"
+          "C-02, C-03",
+          "I-02, I-03",
+          "F-02, F-03",
+          "S-02, S-03"
         ],
         "dimensionRationale": {
-          "C": "Code level 2–3 — partial tests, tech debt identified and quantified, some documented improvement areas.",
-          "I": "IP level 2–3 — trademark in progress or locally registered, rights partially formalised.",
-          "F": "Finance level 2–3 — ARR documented >12 months, NRR close to 100%, stable growth.",
-          "S": "Security level 2–3 — existing security audit but >12 months old, partial GDPR compliance."
+          "C": "Code level 2–3, partial tests, tech debt identified and quantified, some documented improvement areas.",
+          "I": "IP level 2–3, trademark in progress or locally registered, rights partially formalised.",
+          "F": "Finance level 2–3, ARR documented >12 months, NRR close to 100%, stable growth.",
+          "S": "Security level 2–3, existing security audit but >12 months old, partial GDPR compliance."
         }
       },
       {
@@ -1993,16 +1993,16 @@
         "profile": "Developing asset with identifiable potential but structural weaknesses to address. Eligible for Aegryn Review with remediation plan.",
         "typical": "Product in early traction, significant technical debt, partially documented financial metrics.",
         "subcodes": [
-          "C-03 — C-04",
-          "I-03 — I-04",
-          "F-03 — F-04",
-          "S-03 — S-04"
+          "C-03, C-04",
+          "I-03, I-04",
+          "F-03, F-04",
+          "S-03, S-04"
         ],
         "dimensionRationale": {
-          "C": "Code level 3–4 — significant tech debt, insufficient tests, documentation to build.",
-          "I": "IP level 3–4 — trademark not filed or recent, rights to formalise.",
-          "F": "Finance level 3–4 — early traction (<12 months), metrics partially documented.",
-          "S": "Security level 3–4 — no recent audit, compliance to build."
+          "C": "Code level 3–4, significant tech debt, insufficient tests, documentation to build.",
+          "I": "IP level 3–4, trademark not filed or recent, rights to formalise.",
+          "F": "Finance level 3–4, early traction (<12 months), metrics partially documented.",
+          "S": "Security level 3–4, no recent audit, compliance to build."
         }
       },
       {
@@ -2020,10 +2020,10 @@
           "S-04"
         ],
         "dimensionRationale": {
-          "C": "Code level 4 — undocumented architecture, uncontrolled tech debt.",
-          "I": "IP level 4 — no formalised protection.",
-          "F": "Finance level 4 — pre-revenue or minimal traction.",
-          "S": "Security level 4 — no compliance, no audit."
+          "C": "Code level 4, undocumented architecture, uncontrolled tech debt.",
+          "I": "IP level 4, no formalised protection.",
+          "F": "Finance level 4, pre-revenue or minimal traction.",
+          "S": "Security level 4, no compliance, no audit."
         }
       }
     ],
@@ -2125,7 +2125,7 @@
     "disclaimerTitle": "Mandatory notice",
     "disclaimerText": "While every effort has been made to remain objective, clients are informed that any certification involves an element of expert judgement. The information contained in an Aegryn Grade report is provided as professional certification, issued by Aegryn certified analysts. It does not constitute a guarantee of market value.",
     "refusalTitle": "Automatic refusal conditions",
-    "refusalDesc": "Certain configurations trigger an automatic refusal regardless of the overall score — the algorithm produces a score, the expert gives the final opinion, but an automatic refusal can never be overridden.",
+    "refusalDesc": "Certain configurations trigger an automatic refusal regardless of the overall score, the algorithm produces a score, the expert gives the final opinion, but an automatic refusal can never be overridden.",
     "refusalConditions": [
       "Unresolved exposed secrets (C-40) combined with unresolved critical CVEs (C-34) → Code dimension refused",
       "Active trademark dispute (I-18) or unformalised rights on third-party-produced codebase (I-21) → IP dimension refused",
@@ -2385,7 +2385,7 @@
       {
         "dim": "F",
         "code": "F-14",
-        "label": "NRR — Net Revenue Retention",
+        "label": "NRR (Net Revenue Retention)",
         "desc": "Expansion revenue included. Level 1 threshold: >120%. Level 2: >100%."
       },
       {
@@ -2602,11 +2602,11 @@
   },
   "transact": {
     "meta": {
-      "title": "TRANSACT — Offmarket tech transaction agency",
+      "title": "TRANSACT | Offmarket tech transaction agency",
       "desc": "Aegryn TRANSACT: the reference agency for selective tech transactions in Europe. Exclusive mandate, closed catalog, certified CIFS qualified buyers and sellers."
     },
     "index": {
-      "eyebrow": "AEGRYN TRANSACT — TECH TRANSACTION AGENCY",
+      "eyebrow": "AEGRYN TRANSACT | TECH TRANSACTION AGENCY",
       "heroTitle": "Europe's reference\nfor selective tech transactions.",
       "heroDesc": "Closed offmarket catalog under exclusive mandate. Every buyer is qualified. Every asset is CIFS-certified. No transaction without maximum NDA protection.",
       "ctaCatalog": "Access catalog",
@@ -2669,10 +2669,10 @@
     },
     "mandate": {
       "meta": {
-        "title": "Submit a mandate — Aegryn TRANSACT",
+        "title": "Submit a mandate | Aegryn TRANSACT",
         "desc": "Entrust your transaction to Aegryn: asset sale, acquisition search, fundraising or equity opening. Exclusive mandate, closed catalog, maximum NDA protection."
       },
-      "eyebrow": "AEGRYN TRANSACT — EXCLUSIVE MANDATE",
+      "eyebrow": "AEGRYN TRANSACT | EXCLUSIVE MANDATE",
       "heroTitle": "Which mandate would you like\nto entrust us with?",
       "heroDesc": "All our transactions operate under exclusive mandate, in a closed catalog, with qualified counterparts. The NDA is systematic from the very first contact.",
       "segmentsLabel": "CHOOSE YOUR SEGMENT",
@@ -2796,10 +2796,10 @@
         "teamSize": "Taille de l'équipe",
         "typeLabel": "Quel type de mandat souhaitez-vous déposer ?",
         "typeOptions": {
-          "buy": "Mandat d'acquisition — Rechercher une cible",
-          "equity_stake": "Ouverture du capital — Intégrer un associé stratégique",
-          "fundraise": "Levée de fonds — Trouver des investisseurs qualifiés",
-          "sell": "Mandat de cession — Vendre un actif ou une société"
+          "buy": "Mandat d'acquisition : Rechercher une cible",
+          "equity_stake": "Ouverture du capital : Intégrer un associé stratégique",
+          "fundraise": "Levée de fonds : Trouver des investisseurs qualifiés",
+          "sell": "Mandat de cession : Vendre un actif ou une société"
         },
         "typePlaceholder": "Sélectionnez un type de mandat",
         "useOfFunds": "Usage des fonds",
@@ -2826,7 +2826,7 @@
       }
     },
     "sell": {
-      "label": "AEGRYN TRANSACT — SALE MANDATE",
+      "label": "AEGRYN TRANSACT | SALE MANDATE",
       "title": "Divest your tech asset\nat the price it deserves.",
       "desc": "Aegryn certifies your asset CIFS, assigns the official grade and presents it under exclusive NDA to pre-qualified institutional acquirers. Success fee only.",
       "cta": "Submit a sale mandate",
@@ -2841,12 +2841,12 @@
       "feesTitle": "FEE STRUCTURE",
       "feesDesc": "No upfront fees. Aegryn is remunerated exclusively on transaction success. CIFS certification is invoiced separately based on the grade assigned.",
       "feesCert": "CIFS CERTIFICATION",
-      "feesCertValue": "Invoiced upon delivery of the official grade. Amount based on asset complexity — communicated at mandate signing.",
+      "feesCertValue": "Invoiced upon delivery of the official grade. Amount based on asset complexity, communicated at mandate signing.",
       "feesSuccess": "SUCCESS FEE",
       "feesSuccessValue": "Deducted at closing only. Calculated on the net sale price. Rate communicated at exclusive mandate signing."
     },
     "buy": {
-      "label": "AEGRYN TRANSACT — ACQUISITION MANDATE",
+      "label": "AEGRYN TRANSACT | ACQUISITION MANDATE",
       "title": "Acquire a certified tech asset.\nNo noise. Under NDA.",
       "desc": "Access the Aegryn offmarket catalog: CIFS-certified assets, qualified sellers, structured process. Every transaction is governed by exclusive mandate under Swiss law.",
       "cta": "Submit an acquisition mandate",
@@ -2854,7 +2854,7 @@
       "qualifDesc": "The Aegryn catalog is reserved for buyers who have completed the qualification procedure. This requirement protects seller confidentiality and guarantees the quality of exchanges.",
       "qualifItems": [
         "Entrepreneur, corporate, family office or investment fund",
-        "Demonstrated acquisition capacity (CHF 100,000 — CHF 2,500,000)",
+        "Demonstrated acquisition capacity (CHF 100,000, CHF 2,500,000)",
         "KYC procedure completed and validated by the Aegryn team",
         "NDA signed before any access to the catalog or asset sheets",
         "Confidentiality commitment regarding seller identities"
@@ -2886,7 +2886,7 @@
   },
   "transaction": {
     "meta": {
-      "title": "M&A Transactions — Certified tech asset transaction sessions",
+      "title": "M&A Transactions, Certified tech asset transaction sessions",
       "desc": "Aegryn sessions: buy or sell certified tech assets. Catalog, next session, results."
     },
     "index": {
@@ -2953,10 +2953,10 @@
       "marketCta": "Estimate my asset's value"
     },
     "catalog": {
-      "label": "Aegryn — Third-party assets",
+      "label": "Aegryn | Third-party assets",
       "title": "Certified assets\navailable now.",
       "desc": "Assets submitted by independent third-party sellers who have passed the Aegryn certification protocol. These assets are not part of the group's proprietary portfolio.",
-      "thirdPartyNote": "These assets are offered by independent sellers. Aegryn acts as a certified intermediary and transaction organiser — not as the seller.",
+      "thirdPartyNote": "These assets are offered by independent sellers. Aegryn acts as a certified intermediary and transaction organiser, not as the seller.",
       "filterAll": "All grades",
       "filterStar": "AEG ★",
       "filterAAA": "AAA",
@@ -2972,7 +2972,7 @@
       "assetRevenue": "Indicative ARR",
       "assetAsk": "Seller price",
       "viewAsset": "View listing",
-      "confidential": "Confidential — NDA required",
+      "confidential": "Confidential, NDA required",
       "notifyEmail": "Your email",
       "notifyEmailPlaceholder": "founder@example.com",
       "notifyType": "You are",
@@ -3003,7 +3003,7 @@
       "arr100kTo1m": "100K – 1M",
       "arr1mTo5m": "1M – 5M",
       "arrAbove5m": "> 5M",
-      "assetCount": "{count} asset{count, plural, one {} other {s}} — current session",
+      "assetCount": "{count} asset{count, plural, one {} other {s}}, current session",
       "assetsHidden": "{n} hidden{n, plural, one {} other {}} by filters",
       "resetFiltersShort": "Reset",
       "viewFullDossier": "View full dossier",
@@ -3018,7 +3018,7 @@
       "date": "Date",
       "dateTbd": "Date to be confirmed",
       "format": "Format",
-      "formatValue": "Private session — invitation only",
+      "formatValue": "Private session, invitation only",
       "location": "Location",
       "locationValue": "Switzerland (+ secure remote access)",
       "assetsLabel": "Assets in session",
@@ -3034,8 +3034,8 @@
       "sessionCardKicker": "Online sale",
       "sessionCardStatus": "Upcoming",
       "sessionCardCategory": "Legal-Tech",
-      "sessionCardTitle": "AI Contract Intelligence — Lot No.001",
-      "sessionCardLocation": "Online — Switzerland",
+      "sessionCardTitle": "AI Contract Intelligence, Lot No.001",
+      "sessionCardLocation": "Online, Switzerland",
       "sessionCardDateLabel": "Catalogue opens",
       "sessionCardDateValue": "Exact date announced 30 days prior",
       "sessionCardCtaPreview": "Lot preview",
@@ -3057,13 +3057,13 @@
     },
     "sell": {
       "meta": {
-        "title": "Sell your asset — Aegryn",
+        "title": "Sell your asset | Aegryn",
         "desc": "Aegryn seller journey: indicative valuation, readiness score, mandate submission. CIFS certification, absolute confidentiality, Swiss institutional escrow."
       },
       "hero": {
         "label": "Sell your asset",
         "title": "Your asset deserves\na transaction at its real value.",
-        "desc": "Aegryn certifies, grades and puts pre-qualified institutional buyers in competition — in a confidential, structured framework, under Swiss law.",
+        "desc": "Aegryn certifies, grades and puts pre-qualified institutional buyers in competition, in a confidential, structured framework, under Swiss law.",
         "ctaValuation": "Estimate the value",
         "ctaMandat": "Submit a mandate"
       },
@@ -3104,7 +3104,7 @@
         },
         "g4": {
           "title": "Independent CIFS certification",
-          "desc": "Grade ★/AAA/AA/A/B assigned by an independent auditor — finance, code, IP, security. Enforceable and documented."
+          "desc": "Grade ★/AAA/AA/A/B assigned by an independent auditor, finance, code, IP, security. Enforceable and documented."
         }
       },
       "cta": {
@@ -3289,7 +3289,7 @@
     "magCta": "Discover the magazine",
     "label": "Articles",
     "title": "The European tech M&A market.\nBy those who do it.",
-    "article1Title": "State of the European tech M&A market — Q2 2026",
+    "article1Title": "State of the European tech M&A market, Q2 2026",
     "article1Cat": "Market report",
     "article2Title": "What makes a tech asset truly certifiable?",
     "article2Cat": "Seller guide",
@@ -3300,7 +3300,7 @@
   },
   "alliances": {
     "meta": {
-      "title": "Partners — Aegryn",
+      "title": "Partners | Aegryn",
       "desc": "Certification, distribution and transaction flow partners. Aegryn selects its partners with the same rigour as its assets."
     },
     "hero": {
@@ -3340,7 +3340,7 @@
       "advisory_transaction": {
         "label": "Advisory Transaction",
         "title": "M&A tech experts",
-        "desc": "Partners mobilised at every stage of the transaction cycle — from sale preparation to closing and post-acquisition integration.",
+        "desc": "Partners mobilised at every stage of the transaction cycle, from sale preparation to closing and post-acquisition integration.",
         "profiles": "IP & tech law firms (chain of title, licences) · M&A transactional lawyers (SPA, SHA, APA) · Chartered accountants & statutory auditors · Corporate tax advisors (CH/FR/LU) · HR & employment law firms · W&I insurers (AIG, Tokio Marine) · Sectoral due diligence experts (FinTech, HealthTech, AI)",
         "cta": "Become an Advisory Transaction partner"
       },
@@ -3407,11 +3407,11 @@
   "build_service": {
     "meta": {
       "title": "Fixed-price digital asset engineering - Aegryn",
-      "desc": "B2B SaaS, AI and mobile app development at a fixed price — full documentation and certification-ready delivery included. No overruns, asset valorisable from day one."
+      "desc": "B2B SaaS, AI and mobile app development at a fixed price, full documentation and certification-ready delivery included. No overruns, asset valorisable from day one."
     },
-    "label": "Services — Asset Design",
+    "label": "Services : Asset Design",
     "title": "We build.\nYou own.\nFixed price. Ready for certification.",
-    "desc": "Aegryn designs digital assets — B2B SaaS, vertical AI, mobile applications — for entrepreneurs, family offices and funds. Turnkey delivery. CIFS-certifiable from day one.",
+    "desc": "Aegryn designs digital assets, B2B SaaS, vertical AI, mobile applications, for entrepreneurs, family offices and funds. Turnkey delivery. CIFS-certifiable from day one.",
     "difference": {
       "label": "Not an agency. Not a studio.",
       "title": "The Aegryn difference.",
@@ -3419,7 +3419,7 @@
         {
           "num": "01",
           "title": "Fixed price. No overruns.",
-          "desc": "The fixed fee is defined and signed at the end of Discovery — before the first commit. If scope changes, an amendment is signed before execution. No surprise invoicing."
+          "desc": "The fixed fee is defined and signed at the end of Discovery, before the first commit. If scope changes, an amendment is signed before execution. No surprise invoicing."
         },
         {
           "num": "02",
@@ -3467,7 +3467,7 @@
       "items": [
         {
           "title": "Documented and defensible value",
-          "desc": "An asset delivered with complete documentation has a defensible valuation multiple for fundraising or a sale. Not an estimate — a verifiable basis."
+          "desc": "An asset delivered with complete documentation has a defensible valuation multiple for fundraising or a sale. Not an estimate, a verifiable basis."
         },
         {
           "title": "Contractual protection at delivery",
@@ -3588,7 +3588,7 @@
         },
         {
           "title": "Design (fixed fee)",
-          "desc": "Price locked at Discovery. No overruns. No time & materials. If scope changes: amendment signed before execution. Indicative ranges (excl. Discovery): B2B SaaS from €25,000 excl. VAT — B2C mobile app from €35,000 excl. VAT — Native AI product from €40,000 excl. VAT.",
+          "desc": "Price locked at Discovery. No overruns. No time & materials. If scope changes: amendment signed before execution. Indicative ranges (excl. Discovery): B2B SaaS from €25,000 excl. VAT, B2C mobile app from €35,000 excl. VAT, Native AI product from €40,000 excl. VAT.",
           "format": "Fixed fee defined at Discovery"
         },
         {
@@ -3602,14 +3602,14 @@
       "exitBanner": {
         "cta": "En savoir plus sur le processus de cession",
         "href": "/transact/how-it-works",
-        "text": "La cession est une option, jamais une obligation. Si vous souhaitez céder un jour — early stage ou à maturité — l'actif est conçu pour l'être. La sortie via Aegryn TRANSACT ou confidentielle est disponible si la certification le permet."
+        "text": "La cession est une option, jamais une obligation. Si vous souhaitez céder un jour, early stage ou à maturité, l'actif est conçu pour l'être. La sortie via Aegryn TRANSACT ou confidentielle est disponible si la certification le permet."
       },
       "href": "/en/build",
       "secondary": "Learn more",
       "secondaryHref": "/en/build"
     },
     "exitBanner": {
-      "text": "A sale is an option, never an obligation. If you ever wish to sell — early stage or at maturity — the asset is designed for it. Exit via Aegryn or confidential transaction is available if the grade permits.",
+      "text": "A sale is an option, never an obligation. If you ever wish to sell, early stage or at maturity, the asset is designed for it. Exit via Aegryn or confidential transaction is available if the grade permits.",
       "cta": "Learn more about the sale process",
       "href": "/transact/how-it-works"
     },
@@ -3622,11 +3622,11 @@
   },
   "gradeSubmit": {
     "meta": {
-      "title": "Submit an asset — Aegryn Certification",
+      "title": "Submit an asset | Aegryn Certification",
       "desc": "Start the Aegryn certification process. Confidential pre-submission form. No commitment before agreement on methodology."
     },
     "hero": {
-      "label": "Aegryn GRADE — CERTIFICATION",
+      "label": "Aegryn GRADE, CERTIFICATION",
       "title": "Start the certification\nprocess.",
       "desc": "Every Aegryn certification process is unique because every asset is. This pre-submission form allows us to qualify your asset and propose a tailored roadmap. No commitment before agreement on methodology."
     },
@@ -3712,42 +3712,42 @@
       "sector": "Sector",
       "sectorPlaceholder": "e.g. LegalTech, FinTech, HR & Payroll...",
       "benchmarkCategory": "Closest market category",
-      "benchmarkCategoryPlaceholder": "— Select —",
+      "benchmarkCategoryPlaceholder": "Select",
       "revenueTrackMonths": "Revenue track record (months)",
       "teamSize": "Team size",
       "foundedYear": "Year founded",
       "arrGrowth": "ARR YoY growth (%)",
       "grossMargin": "Gross margin (%)",
-      "nrr": "Net Revenue Retention — NRR (%)",
+      "nrr": "Net Revenue Retention, NRR (%)",
       "cancelledNote": "Request cancelled. You may resubmit your application.",
-      "invoiceNote": "Request received — a quote will be sent to you. Pre-payment by invoice is required before analysis begins."
+      "invoiceNote": "Request received, a quote will be sent to you. Pre-payment by invoice is required before analysis begins."
     },
     "gradeScale": [
       {
         "g": "AEG ★",
-        "d": "Top 1% — Exceptional"
+        "d": "Top 1%, Exceptional"
       },
       {
         "g": "AAA",
-        "d": "Excellent — Transaction-ready"
+        "d": "Excellent, Transaction-ready"
       },
       {
         "g": "AA",
-        "d": "Very good — Confirmed valuation"
+        "d": "Very good, Confirmed valuation"
       },
       {
         "g": "A",
-        "d": "Good — Identified potential"
+        "d": "Good, Identified potential"
       },
       {
         "g": "B",
-        "d": "Correct — Remediation plan"
+        "d": "Correct, Remediation plan"
       }
     ]
   },
   "bidModels": {
     "meta": {
-      "title": "Acquisition Models — Aegryn",
+      "title": "Acquisition Models | Aegryn",
       "desc": "Club Deal, Corporate, Fund, Equity Stake, the 4 Aegryn acquisition models with the Tech Transaction Promise in 5 steps."
     },
     "hero": {
@@ -3766,7 +3766,7 @@
         "summary": "A lead bidder may associate up to 4 declared co-investors. A single offer, a single escrow paid by the lead. Internal allocation remains confidential.",
         "conditions": [
           "Recommended minimum ticket: €100,000",
-          "Full lead bidder KYC + simplified co-investor KYC (ID + proof of address only — the lead assumes financial responsibility for the full escrow)",
+          "Full lead bidder KYC + simplified co-investor KYC (ID + proof of address only, the lead assumes financial responsibility for the full escrow)",
           "10% escrow paid by lead bidder within 5 business days",
           "Up to 4 declared co-investors, each signing the Aegryn NDA individually. Internal allocation remains confidential to Aegryn.",
           "Internal allocation modifiable until the Heads of Agreement signature date."
@@ -3784,7 +3784,7 @@
         "summary": "A legal entity acquires the asset directly onto its balance sheet. Two entities may co-acquire via a JV declared to Aegryn. Asset deal or share deal depending on the structure chosen.",
         "conditions": [
           "Recommended minimum ticket: €250,000",
-          "Full B2B KYC — Kbis < 3 months, articles of association, UBO ≥ 25%, director ID",
+          "Full B2B KYC : Kbis < 3 months, articles of association, UBO ≥ 25%, director ID",
           "10% escrow paid from the legal entity's account",
           "JV possible: the JV entity must be incorporated or in final incorporation before the Heads of Agreement signature."
         ],
@@ -3793,7 +3793,7 @@
           "Share deal (acquisition of the holding company)",
           "Direct balance-sheet acquisition",
           "Acquisition via dedicated subsidiary",
-          "Acqui-hire: acquisition structured to retain the founding team post-transfer — requires specific SHA and employment clauses."
+          "Acqui-hire: acquisition structured to retain the founding team post-transfer, requires specific SHA and employment clauses."
         ]
       },
       {
@@ -3803,17 +3803,17 @@
         "summary": "Institutional funds benefit from an IC window of 5 to 10 business days before submitting a firm offer. SPV available for direct LP co-investment on specific deals.",
         "conditions": [
           "Recommended minimum ticket: €500,000 (no cap)",
-          "Institutional KYC — regulatory approval if applicable (FINMA, AMF, FCA)",
+          "Institutional KYC : regulatory approval if applicable (FINMA, AMF, FCA)",
           "IC window: confidential reservation 5–10 business days without escrow",
           "SPV possible for direct LP co-investment",
-          "Management presentation organised by Aegryn upon mutual request — never direct contact between seller and fund before the Heads of Agreement."
+          "Management presentation organised by Aegryn upon mutual request, never direct contact between seller and fund before the Heads of Agreement."
         ],
         "structures": [
           "Platform acquisition (first asset in a PE roll-up)",
           "Add-on (complementary asset to an existing portfolio)",
           "Full acquisition (100%)",
           "Minority acquisition (< 50%) with structured SHA",
-          "LMBO: management buyout with leverage — requires third-party financing arranged independently of Aegryn."
+          "LMBO: management buyout with leverage, requires third-party financing arranged independently of Aegryn."
         ]
       },
       {
@@ -3825,7 +3825,7 @@
         "conditions": [
           "No fixed recommended minimum ticket (valuation negotiated between parties)",
           "KYC according to profile (simplified for qualified individuals, full for entities)",
-          "No escrow — commitment via SHA co-drafted with both parties' advisors",
+          "No escrow, commitment via SHA co-drafted with both parties' advisors",
           "Live commitment: SHA signing + possibly warrant or BSA",
           "Aegryn receives a fixed intermediation fee on the agreed valuation, defined in the mandate. No escrow mechanism applies to this model."
         ],
@@ -3839,7 +3839,7 @@
       }
     ],
     "ptt": {
-      "label": "COMMON PROCESS — MODELS 01, 02, 03",
+      "label": "COMMON PROCESS, MODELS 01, 02, 03",
       "title": "The Tech Transaction Promise",
       "desc": "5 structured steps for all deals with real acquisition. The Equity Stake Model follows a dedicated SHA process without escrow.",
       "steps": [
@@ -3860,7 +3860,7 @@
         },
         {
           "num": "04",
-          "title": "Due Diligence — 30-day standard",
+          "title": "Due Diligence : 30-day standard",
           "desc": "Full data room access under NDA. Q&A via Aegryn only (never direct seller/buyer). Extension possible by mutual agreement (max +30 days)."
         },
         {
@@ -3894,7 +3894,7 @@
   },
   "assessmentDays": {
     "meta": {
-      "title": "Aegryn Assessment Days — Free expertise for your tech asset",
+      "title": "Aegryn Assessment Days, Free expertise for your tech asset",
       "desc": "Free by-appointment expert sessions. Present your tech asset in 45 minutes to an Aegryn advisor. Grade estimate and valuation range. No commitment."
     },
     "hero": {
@@ -3948,25 +3948,25 @@
         {
           "city": "Zurich",
           "country": "Switzerland",
-          "dates": "Q3 2026 — dates to be confirmed",
+          "dates": "Q3 2026, dates to be confirmed",
           "format": "In-person + Video"
         },
         {
           "city": "Paris",
           "country": "France",
-          "dates": "Q3 2026 — dates to be confirmed",
+          "dates": "Q3 2026, dates to be confirmed",
           "format": "In-person + Video"
         },
         {
           "city": "Amsterdam",
           "country": "Netherlands",
-          "dates": "Q4 2026 — dates to be confirmed",
+          "dates": "Q4 2026, dates to be confirmed",
           "format": "Video only"
         },
         {
           "city": "Munich",
           "country": "Germany",
-          "dates": "Q4 2026 — dates to be confirmed",
+          "dates": "Q4 2026, dates to be confirmed",
           "format": "Video only"
         }
       ]
@@ -3994,8 +3994,8 @@
       "arrOptions": {
         "pre": "Pre-revenue",
         "under100": "< €100K",
-        "100to500": "€100K — €500K",
-        "500to2m": "€500K — €2M",
+        "100to500": "€100K, €500K",
+        "500to2m": "€500K, €2M",
         "above2m": "> €2M"
       },
       "message": "Additional information (optional)",
@@ -4015,7 +4015,7 @@
         },
         {
           "q": "Does my asset need to be operational?",
-          "a": "No. We evaluate assets at all stages — in production with revenue, in beta, or even at IP and code-only stage."
+          "a": "No. We evaluate assets at all stages, in production with revenue, in beta, or even at IP and code-only stage."
         },
         {
           "q": "Is the pre-screening confidential?",
@@ -4030,7 +4030,7 @@
   },
   "valuation": {
     "meta": {
-      "title": "Estimate the value of your tech asset — Aegryn Valuation",
+      "title": "Estimate the value of your tech asset | Aegryn Valuation",
       "desc": "B2B SaaS valuation calculator based on the Aegryn grade protocol. 4 dimensions, score out of 100, estimated grade and valuation range. Free. Confidential."
     },
     "hero": {
@@ -4050,7 +4050,7 @@
     },
     "finance": {
       "title": "Financial data",
-      "subtitle": "Dimension F — Finance (0–25 pts)",
+      "subtitle": "Dimension F : Finance (0–25 pts)",
       "arr": "Annual ARR (€)",
       "arrPlaceholder": "E.g. 500000",
       "arrHint": "Enter 0 if pre-revenue",
@@ -4058,7 +4058,7 @@
       "growthPlaceholder": "E.g. 35",
       "churn": "Monthly churn (%)",
       "churnPlaceholder": "E.g. 2.5",
-      "nrr": "NRR — Net Revenue Retention (%)",
+      "nrr": "NRR (Net Revenue Retention (%)",
       "nrrPlaceholder": "E.g. 110",
       "nrrHint": "> 100% = net expansion",
       "margin": "Gross margin (%)",
@@ -4078,7 +4078,7 @@
     },
     "code": {
       "title": "Code quality",
-      "subtitle": "Dimension C — Code (0–25 pts)",
+      "subtitle": "Dimension C : Code (0–25 pts)",
       "tests": "Automated tests in place?",
       "testsOptions": {
         "full": "Yes, full coverage",
@@ -4114,7 +4114,7 @@
     },
     "ip": {
       "title": "Intellectual property",
-      "subtitle": "Dimension I — IP & Rights (0–25 pts)",
+      "subtitle": "Dimension I : IP & Rights (0–25 pts)",
       "trademark": "Trademark filed?",
       "trademarkOptions": {
         "yes": "Yes (country or zone specified)",
@@ -4130,7 +4130,7 @@
       "opensource": "Critical open-source dependencies?",
       "opensourceOptions": {
         "clean": "Compliant (MIT/Apache/BSD)",
-        "gpl": "GPL present — to address",
+        "gpl": "GPL present, to address",
         "unaudited": "Not audited"
       },
       "apiContracts": "Third-party API contracts in order?",
@@ -4142,12 +4142,12 @@
     },
     "security": {
       "title": "Security & compliance",
-      "subtitle": "Dimension S — Security (0–25 pts)",
+      "subtitle": "Dimension S : Security (0–25 pts)",
       "pentest": "Pentest performed?",
       "pentestOptions": {
-        "under6m": "Yes — less than 6 months ago",
-        "six_to_12m": "Yes — 6 to 12 months ago",
-        "above12m": "Yes — more than 12 months ago",
+        "under6m": "Yes, less than 6 months ago",
+        "six_to_12m": "Yes : 6 to 12 months ago",
+        "above12m": "Yes, more than 12 months ago",
         "never": "Never"
       },
       "gdpr": "GDPR compliance?",
@@ -4186,7 +4186,7 @@
       "weakMessages": {
         "finance": "Your Finance score is the weakest. An audited ARR and NRR > 100% are the highest-impact levers.",
         "code": "Your Code dimension limits your grade. Adding automated tests and CI/CD can gain 8 to 10 points.",
-        "ip": "Your IP is not yet secured. This is the #1 factor limiting your grade — a filed trademark alone is worth +8 points.",
+        "ip": "Your IP is not yet secured. This is the #1 factor limiting your grade, a filed trademark alone is worth +8 points.",
         "security": "No recent pentest. Institutional buyers require a report < 12 months old. This is a frequent blocker in due diligence."
       },
       "strongMessages": {
@@ -4209,7 +4209,7 @@
       "emailSubmit": "Receive report",
       "emailSending": "Sending...",
       "emailSuccess": "Report sent. Check your inbox.",
-      "emailError": "Error — please try again.",
+      "emailError": "Error, please try again.",
       "restart": "New estimate",
       "estimated": "estimated",
       "disclaimerLabel": "Non-official estimate",
@@ -4225,7 +4225,7 @@
         },
         {
           "value": "6.9x ARR",
-          "label": "Grade AAA — top certified assets"
+          "label": "Grade AAA, top certified assets"
         },
         {
           "value": "2.8x ARR",
@@ -4240,7 +4240,7 @@
   },
   "transactionSubmit": {
     "meta": {
-      "title": "Submit an Asset — Aegryn M&A Switzerland",
+      "title": "Submit an Asset | Aegryn M&A Switzerland",
       "desc": "Submit your tech asset to an Aegryn M&A Switzerland session. Swiss law. Open internationally."
     },
     "hero": {
@@ -4248,7 +4248,7 @@
       "title": "Submit an asset\nfor sale.",
       "desc": "Every sale is exclusive to Aegryn M&A Switzerland. Swiss law applies. Sellers from around the world are welcome."
     },
-    "swissNote": "Swiss law governs every transaction — regardless of the seller's or asset's origin.",
+    "swissNote": "Swiss law governs every transaction, regardless of the seller's or asset's origin.",
     "steps": [
       {
         "num": "01",
@@ -4321,9 +4321,9 @@
       "timeline": "Desired timeline",
       "timelinePlaceholder": "Select",
       "timelineOptions": {
-        "urgent": "Urgent — less than 3 months",
-        "standard": "Standard — 3 to 6 months",
-        "long": "Long term — more than 6 months"
+        "urgent": "Urgent, less than 3 months",
+        "standard": "Standard : 3 to 6 months",
+        "long": "Long term, more than 6 months"
       },
       "targetSession": "Target session",
       "targetSessionPlaceholder": "Select",
@@ -4360,7 +4360,7 @@
     "backToCatalog": "Back to catalogue",
     "confidentialLabel": "Confidential dossier",
     "teaserAccessLabel": "Access dossier",
-    "ndaLabel": "NDA required — Controlled access",
+    "ndaLabel": "NDA required, Controlled access",
     "lotRef": "Lot"
   },
   "legalNav": {
@@ -4374,15 +4374,15 @@
   },
   "aiUsage": {
     "meta": {
-      "title": "AI Usage Policy — Aegryn",
+      "title": "AI Usage Policy | Aegryn",
       "desc": "Transparency on the use of artificial intelligence in Aegryn content. EU AI Act article 50 compliance."
     },
     "label": "Artificial Intelligence Usage Policy",
-    "version": "Effective August 2, 2026 — EU AI Act art. 50",
+    "version": "Effective August 2, 2026, EU AI Act art. 50",
     "s1Title": "1. Regulatory Framework",
     "s1Body": "Article 50 of the European Artificial Intelligence Regulation (EU AI Act, Regulation EU 2024/1689) has been applicable since August 2, 2026. Aegryn, as a deployer of AI content-generating systems, commits to fulfilling the resulting transparency obligations.",
     "s2Title": "2. Scope of AI Use at Aegryn",
-    "s2Body": "Aegryn uses generative artificial intelligence systems to assist the writing of editorial content (blog articles, market reports, sector analyses). These systems are not used to autonomously generate public information content — every piece of content undergoes human review before publication.",
+    "s2Body": "Aegryn uses generative artificial intelligence systems to assist the writing of editorial content (blog articles, market reports, sector analyses). These systems are not used to autonomously generate public information content, every piece of content undergoes human review before publication.",
     "s3Title": "3. Editorial Responsibility",
     "s3Body": "In accordance with the exception provided by Article 50, paragraph 4 of the EU AI Act, all AI-assisted content published on aegryn.com is subject to human review and editorial oversight. Aegryn assumes full editorial responsibility for these publications.",
     "s4Title": "4. What We Do and Do Not Do",
@@ -4393,7 +4393,7 @@
   },
   "termsUse": {
     "meta": {
-      "title": "Terms of Use — Aegryn",
+      "title": "Terms of Use | Aegryn",
       "desc": "Terms governing access to and use of the aegryn.com website."
     },
     "label": "Terms of Use",
@@ -4420,7 +4420,7 @@
   },
   "termsCgv": {
     "meta": {
-      "title": "Terms of Service — Aegryn",
+      "title": "Terms of Service | Aegryn",
       "desc": "Contractual conditions governing Aegryn certification, transactions and services."
     },
     "label": "Terms of Service",
@@ -4490,10 +4490,10 @@
     "s11NonSaleTitle": "Fees in the event of non-completion of the transaction",
     "s11NonSale": "In the event that an asset admitted to the full certification process (M&A Certification) is withdrawn from the catalogue or no transaction is completed at the end of the Aegryn process, a minimum fixed fee of CHF 2,000 excl. VAT is due to Aegryn in consideration of the work carried out by its teams: C/I/F/S analysis, attribution of the official grade, preparation of the catalogue file, communication and marketing activities, and the product visibility acquired during the asset's presence in the Aegryn catalogue. These fees are due regardless of the commercial outcome and are payable on the date of withdrawal or closure without transaction. They are invoiced directly to the seller. This clause does not apply in the event of a duly documented unfulfilled condition precedent.",
     "s11Earnout": "In the event of an earnout, an additional commission of 5% is levied on each earnout payment effectively received by the seller, up to the rate applicable to the total price bracket.",
-    "s11Payment": "The commission is due on the date the escrow is released and is deducted directly by Aegryn from the escrowed funds before the net balance is remitted to the seller. Aegryn is never the custodian of these funds — the escrow is held by a third-party bank designated by Aegryn.",
+    "s11Payment": "The commission is due on the date the escrow is released and is deducted directly by Aegryn from the escrowed funds before the net balance is remitted to the seller. Aegryn is never the custodian of these funds, the escrow is held by a third-party bank designated by Aegryn.",
     "ctaContact": "Contact the Aegryn team",
     "ctaTermsUse": "Terms of Use",
-    "s12Title": "Aegryn Expert Network — Expert Profile Subscription",
+    "s12Title": "Aegryn Expert Network, Expert Profile Subscription",
     "s12Intro": "Aegryn operates a network of listed professionals (hereinafter \"Partners\") accessible from the Expert Network section of the platform. This network is distinct from the transaction process and does not constitute an intermediation service in the financial sense.",
     "s12AbonTitle": "Expert Profile Subscription",
     "s12Abon": "Access to the network is conditional on subscribing to an Expert Profile subscription (CHF 89 excl. VAT/month or current annual rate). This subscription entitles the holder to: publication and update of an expert profile visible on aegryn.com/grade/partners, direct access to referral requests initiated by Aegryn sellers or buyers who have expressed a need for support in the areas of expertise listed in the profile, and participation in Aegryn network events. The subscription has no minimum commitment and can be cancelled at any time with effect at the end of the current period.",
@@ -4507,7 +4507,7 @@
   },
   "privacy": {
     "meta": {
-      "title": "Privacy Policy — Aegryn",
+      "title": "Privacy Policy | Aegryn",
       "desc": "How Aegryn collects, processes and protects your personal data. Swiss LPD and GDPR compliant."
     },
     "label": "Privacy Policy",
@@ -4520,7 +4520,7 @@
     "s2DirectTitle": "Data you provide directly",
     "s2Direct": "Name, professional contact details, entity information, financial information (investment capacity, proof of funds), identity documents, entity documents, beneficial owner (UBO) information. Collected during registration, asset submission, Alliance application, Assessment Day booking, use of the valuation calculator or any communication.",
     "s2AutoTitle": "Automatically collected data",
-    "s2Auto": "IP address, browser type, operating system, pages visited, visit duration — via cookies and similar technologies. See our Cookie Policy.",
+    "s2Auto": "IP address, browser type, operating system, pages visited, visit duration, via cookies and similar technologies. See our Cookie Policy.",
     "s2ThirdTitle": "Data from third parties",
     "s2Third": "Public registers, identity verification and fraud prevention services, sanctions and politically exposed persons (PEP) databases.",
     "s3Title": "Why do we process your data?",
@@ -4560,9 +4560,9 @@
     "s9": "We use analytical cookies (Cloudflare Web Analytics, no personally identifiable data). No advertising cookies. You may decline analytical cookies via our consent banner.",
     "s10Title": "Complaints",
     "s10": "You have the right to lodge a complaint with the competent supervisory authority.",
-    "authorityCH": "Switzerland: FDPIC — www.edoeb.admin.ch",
-    "authorityFR": "France: CNIL — www.cnil.fr",
-    "authorityEU": "EU: EDPB — www.edpb.europa.eu",
+    "authorityCH": "Switzerland: FDPIC, www.edoeb.admin.ch",
+    "authorityFR": "France: CNIL, www.cnil.fr",
+    "authorityEU": "EU: EDPB, www.edpb.europa.eu",
     "contactEmail": "legal@boha-group.com",
     "content": {
       "intro": {
@@ -4719,7 +4719,7 @@
   },
   "security": {
     "meta": {
-      "title": "Online Security — Aegryn",
+      "title": "Online Security | Aegryn",
       "desc": "How to protect yourself against fraud and impersonation related to Aegryn."
     },
     "label": "Staying secure online",
@@ -4735,7 +4735,7 @@
     "s1Never3": "Share your login credentials by email or phone",
     "s2Title": "Identifying fraudulent communications",
     "s2": "Check that: the sender email is exactly @boha-group.com (not @boha-group.net or any variant), links in emails point to aegryn.com, and payment requests match what is specified in your signed mandate or contract.",
-    "s2Doubt": "If in doubt, use the contact form on aegryn.com/contact — do not reply to the suspicious email.",
+    "s2Doubt": "If in doubt, use the contact form on aegryn.com/contact, do not reply to the suspicious email.",
     "s3Title": "Securing your Aegryn account",
     "s3Items": [
       "Use a strong, unique password for your Aegryn account",
@@ -4743,7 +4743,7 @@
       "Never share your login credentials",
       "Sign out after each session"
     ],
-    "s4Title": "Payment processes — normal vs fraudulent",
+    "s4Title": "Payment processes, normal vs fraudulent",
     "s4NormalTitle": "Normal",
     "s4Normal1": "Payment of Aegryn Review (€2,000) or Review+ (€5,000) fees via Stripe Checkout on aegryn.com",
     "s4Normal2": "Escrow payment (10% of agreed price) by bank transfer to the designated partner bank IBAN with transaction reference",
@@ -4758,7 +4758,7 @@
   },
   "faq": {
     "meta": {
-      "title": "FAQ — Frequently Asked Questions — Aegryn",
+      "title": "FAQ, Frequently Asked Questions | Aegryn",
       "desc": "Answers to frequently asked questions about Aegryn Grade certification, transactions, sessions and accounts."
     },
     "label": "Frequently Asked Questions",
@@ -4935,7 +4935,7 @@
     },
     "register": {
       "title": "Create an account",
-      "subtitle": "Join the Aegryn client area — certified buyers, sellers and partners.",
+      "subtitle": "Join the Aegryn client area, certified buyers, sellers and partners.",
       "fullNameLabel": "Full name",
       "fullNamePlaceholder": "First Last",
       "emailLabel": "Email address",
@@ -4943,7 +4943,7 @@
       "passwordLabel": "Password",
       "passwordPlaceholder": "8 characters minimum",
       "roleLabel": "I primarily want to",
-      "roleOptional": "optional — buyer by default",
+      "roleOptional": "optional, buyer by default",
       "roleBuyer": "Acquire a tech asset",
       "roleBuyerDesc": "Access the certified catalogue, sign NDAs and track your offers.",
       "roleSeller": "Sell a tech asset",
@@ -4961,7 +4961,7 @@
       "errorGeneric": "Unable to create account. Please try again.",
       "errorNetwork": "Unable to reach the server. Check your connection.",
       "rolePartner": "Join the partner network",
-      "rolePartnerDesc": "Business introducers, expert co-certifiers — access the Aegryn partner space."
+      "rolePartnerDesc": "Business introducers, expert co-certifiers, access the Aegryn partner space."
     },
     "account": {
       "eyebrow": "Aegryn Client Area",
@@ -4994,7 +4994,7 @@
       "mfaTitle": "Two-factor authentication (MFA)",
       "mfaLoading": "Loading…",
       "mfaEnabledTitle": "Enabled",
-      "mfaEnabledDesc": "Authenticator app (TOTP) — a 6-digit code is required on every login.",
+      "mfaEnabledDesc": "Authenticator app (TOTP), a 6-digit code is required on every login.",
       "mfaDisableButton": "Disable",
       "mfaDisableConfirm": "Disable two-factor authentication? Your account will be less protected.",
       "mfaDisabledMsg": "Two-factor authentication disabled.",
@@ -5040,13 +5040,13 @@
       "activateErrorGeneric": "Unable to activate this profile",
       "activateButton": "Activate",
       "activating": "Activating…",
-      "activateFooterNote": "Identity KYC (ID document + proof of address) is common to all profiles — if already submitted, it remains valid. Additional documents may be required depending on the activated profile.",
+      "activateFooterNote": "Identity KYC (ID document + proof of address) is common to all profiles, if already submitted, it remains valid. Additional documents may be required depending on the activated profile.",
       "profileBuyerLabel": "Buyer",
       "profileBuyerDesc": "Access the certified catalog, sign NDAs and track your offers.",
       "profileSellerLabel": "Seller",
       "profileSellerDesc": "Submit your asset, track certification and receive qualified offers.",
       "profilePartnerLabel": "Partner",
-      "profilePartnerDesc": "Business introducer or co-certifier — access the Aegryn partner space.",
+      "profilePartnerDesc": "Business introducer or co-certifier, access the Aegryn partner space.",
       "kycNoteStandard": "KYC: ID document + proof of address",
       "kycNotePartner": "KYC: ID document + proof of address + business registration + professional insurance",
       "deletePartialChoose": "Choose data to delete",
@@ -5132,10 +5132,10 @@
     "existingBidLabel": "You have already submitted an offer",
     "submitInterestLabel": "Submit an Expression of Interest",
     "offerReviewTime": "Your EI will be reviewed by the Aegryn team within 48 working hours.",
-    "offerAmountStatus": "Offer of {amount} — status: {status}",
+    "offerAmountStatus": "Offer of {amount}, status: {status}",
     "confidentialityTitle": "Confidentiality",
     "confidentialityText": "The information presented in this file is strictly reserved for qualified buyers who have signed an NDA. Any disclosure is prohibited.",
-    "catalogSubtitle": "Certified and published assets — access restricted to qualified buyers."
+    "catalogSubtitle": "Certified and published assets, access restricted to qualified buyers."
   },
   "comingSoon": {
     "label": "Coming soon",
@@ -5144,7 +5144,7 @@
     "backHome": "← Back to home"
   },
   "sitemap": {
-    "metaTitle": "Sitemap — Aegryn",
+    "metaTitle": "Sitemap | Aegryn",
     "metaDesc": "Overview of all pages on the Aegryn website.",
     "title": "Sitemap",
     "subtitle": "Overview of all pages and sections of the site.",
@@ -5208,11 +5208,11 @@
     "upcomingTitle": "Spaces under construction",
     "sectionSeller": "Seller space",
     "sectionPartner": "Partner space",
-    "disclaimer": "Aegryn · Geneva · Switzerland — Strictly confidential access"
+    "disclaimer": "Aegryn · Geneva · Switzerland, Strictly confidential access"
   },
   "waitlist": {
     "header": {
-      "label": "Waiting list — M&A Transactions",
+      "label": "Waiting list, M&A Transactions",
       "title": "Join the priority access list"
     },
     "step1": {
@@ -5314,7 +5314,7 @@
           "20+_per_year": "> 20 / year"
         }
       },
-      "undecidedNote": "No problem — just fill in your contact details and our team will get in touch with you.",
+      "undecidedNote": "No problem, just fill in your contact details and our team will get in touch with you.",
       "back": "Back",
       "next": "Next"
     },
@@ -5353,7 +5353,7 @@
       "Logistics",
       "Other"
     ],
-    "placeholder": "— Select —",
+    "placeholder": "Select",
     "done": {
       "title": "Request registered",
       "desc": "Our team will review your profile and contact you within 48h to validate your access to the next Aegryn M&A process.",
@@ -5374,7 +5374,7 @@
     "s4": "Asset condition",
     "s5": "Functional advancement level",
     "s6": "Addressed customer segments",
-    "s7": "Growth potential — international expansion",
+    "s7": "Growth potential, international expansion",
     "s8": "Competitive positioning",
     "s9": "Commercial traction and partnerships",
     "s10": "Market maturity stage",
@@ -5383,7 +5383,7 @@
   },
   "neediuDpn": {
     "meta": {
-      "title": "Data Protection Notice & Terms of Use — neediu | Aegryn",
+      "title": "Data Protection Notice & Terms of Use, neediu | Aegryn",
       "desc": "Data protection notice and terms of use for the neediu platform, Aegryn, Swiss FADP and GDPR compliant."
     },
     "breadcrumb": "Legal",
@@ -5453,7 +5453,7 @@
         "accountH": "Account data",
         "accountP": "Account status, services offered or requested, profile picture and other preferences, service history, availability settings, participation in features such as reviews or messaging.",
         "economicH": "Economic data",
-        "economicP": "Payment method, amounts paid or received, transaction history, applicable commissions, billing address, bank details for payouts. Payment method data is processed solely by our third-party providers — we do not process credit card numbers or CVC codes.",
+        "economicP": "Payment method, amounts paid or received, transaction history, applicable commissions, billing address, bank details for payouts. Payment method data is processed solely by our third-party providers, we do not process credit card numbers or CVC codes.",
         "internetH": "Internet and connection data",
         "internetP": "IP address, information about your internet service provider and device operating system, referral URL, browser used, date and time of access, content viewed.",
         "otherH": "Other data",
@@ -5516,7 +5516,7 @@
           ],
           [
             "Stripe",
-            "Global payment infrastructure — secure transaction processing and identity verification.",
+            "Global payment infrastructure, secure transaction processing and identity verification.",
             "EEA/USA"
           ],
           [
@@ -5633,11 +5633,11 @@
     }
   },
   "nda": {
-    "pageTitle": "Confidentiality Agreement — Aegryn Buyer Space",
+    "pageTitle": "Confidentiality Agreement | Aegryn Buyer Space",
     "stepLabel": "Required step",
-    "stepTitle": "Confidentiality Agreement — Aegryn",
+    "stepTitle": "Confidentiality Agreement | Aegryn",
     "introText": "Before accessing the Aegryn catalogue, you must read and accept the confidentiality agreement below. This agreement is mandatory and constitutes a contractual confidentiality commitment to Aegryn and the sellers. Your signature is timestamped and logged for legal purposes.",
-    "versionLabel": "NDA — Version",
+    "versionLabel": "NDA | Version",
     "mainTitle": "Buyer Confidentiality Conditions",
     "mainSubtitle": "Aegryn (formerly BOHA-Group Sàrl)",
     "partiesLabel": "Between the undersigned:",
@@ -5657,7 +5657,7 @@
     "a3s1Title": "3.1 Strict confidentiality",
     "a3s1": "Not to disclose any confidential information to any third party, including advisors, employees or partners, unless they are themselves bound by an equivalent confidentiality obligation strictly necessary for the evaluation of the opportunity.",
     "a3s2Title": "3.2 Limited use",
-    "a3s2": "To use confidential information solely for the purpose of evaluating an acquisition opportunity through Aegryn — never for competitive, commercial, recruitment, or technical reproduction purposes.",
+    "a3s2": "To use confidential information solely for the purpose of evaluating an acquisition opportunity through Aegryn | never for competitive, commercial, recruitment, or technical reproduction purposes.",
     "a3s3Title": "3.3 Non-reproduction",
     "a3s3": "Not to download, copy, capture, photograph, or reproduce by any means any document consulted in the Aegryn data room, including via screenshot, screen photography, or any other method of circumventing the technical protection measures in place.",
     "a3s4Title": "3.4 Acknowledgement of technical limitations",
@@ -5684,7 +5684,7 @@
     "a7": "This NDA is governed by Swiss law. Any dispute arising under this NDA shall be submitted to the exclusive jurisdiction of the courts of Aegryn's registered canton.",
     "a8Title": "Acceptance",
     "a8": "By checking the boxes below and clicking \"Accept and access the catalogue\", the Buyer acknowledges having read, understood and accepted without reservation all provisions of this NDA.",
-    "acceptSectionLabel": "Article 8 — Acceptance",
+    "acceptSectionLabel": "Article 8, Acceptance",
     "check1": "I have read and accept the confidentiality conditions above in their entirety.",
     "check2": "I acknowledge that any attempt to circumvent the technical protection measures will be logged and may constitute evidence in the event of a breach of this agreement.",
     "signingBtn": "Signing…",
@@ -5693,7 +5693,7 @@
   },
   "experts": {
     "meta": {
-      "title": "Expert Network — Aegryn",
+      "title": "Expert Network | Aegryn",
       "desc": "We believe every transaction deserves the right people at the right moment. Not a directory. A verified network selected so that nothing essential is left to chance."
     },
     "hero": {
@@ -5704,7 +5704,7 @@
     "showcase": {
       "label": "Areas of expertise",
       "title": "Every type of transactional expert",
-      "desc": "From ad-hoc advice to deep deal support — the community covers every M&A tech specialty."
+      "desc": "From ad-hoc advice to deep deal support, the community covers every M&A tech specialty."
     },
     "categories": {
       "tech": "Advisory Tech",
@@ -5763,7 +5763,7 @@
       "ip_lawDesc": "IP chain of title, open-source licences, assignment of founder rights, trademark protection.",
       "esg": "ESG / CSR",
       "esgDesc": "CSR strategy, extra-financial reporting, ESG due diligence, impact.",
-      "vendor_readiness": "Vendor Readiness — Sale Preparation",
+      "vendor_readiness": "Vendor Readiness, Sale Preparation",
       "vendor_readinessDesc": "Seller file audit, data room, contracts, GDPR, technical debt. Reduces certification timeline.",
       "dd_hr": "HR & Employment Due Diligence",
       "dd_hrDesc": "Key contracts, BSPCE, employment liabilities, freelancer classification, non-compete clauses.",
@@ -5836,7 +5836,7 @@
     "waitlist": {
       "label": "Are you an expert?",
       "title": "Join the network.",
-      "desc": "The Aegryn expert network is opening. Submit your application — our team reviews every profile and will contact you for a qualification interview. Access is via a monthly listing subscription (CHF 89 excl. VAT/month).",
+      "desc": "The Aegryn expert network is opening. Submit your application, our team reviews every profile and will contact you for a qualification interview. Access is via a monthly listing subscription (CHF 89 excl. VAT/month).",
       "fieldPrenom": "First name",
       "fieldNom": "Last name",
       "fieldEmail": "Professional email",
@@ -5881,7 +5881,7 @@
     "label": "Conception",
     "assetsLabel": "Proprietary Assets",
     "assetsTitle": "A selective portfolio\nof tech assets.",
-    "assetsDesc": "Aegryn designs and operates its own digital assets — B2B SaaS, marketplaces, AI tools. Each asset is certified, documented, and operated under real conditions.",
+    "assetsDesc": "Aegryn designs and operates its own digital assets, B2B SaaS, marketplaces, AI tools. Each asset is certified, documented, and operated under real conditions.",
     "assetsCta": "View the portfolio",
     "engineeringLabel": "Asset Engineering",
     "engineeringTitle": "Custom asset design\nfor third parties.",
@@ -6001,7 +6001,7 @@
       "logout": "Log out"
     },
     "buyer": {
-      "meta": "Dashboard — Buyer Space Aegryn",
+      "meta": "Dashboard, Buyer Space Aegryn",
       "areaLabel": "Buyer Space",
       "hello": "Hello, {name}",
       "fallbackName": "Buyer",
@@ -6035,13 +6035,13 @@
         "cancelled": "Cancelled"
       },
       "notifications": {
-        "meta": "Notifications — Buyer Space Aegryn",
+        "meta": "Notifications, Buyer Space Aegryn",
         "title": "Notifications",
         "subtitle": "Alerts and updates related to your activity."
       },
       "kyc": {
-        "meta": "KYC — Identity Verification — Buyer Space Aegryn",
-        "title": "KYC — Identity Verification",
+        "meta": "KYC, Identity Verification, Buyer Space Aegryn",
+        "title": "KYC : Identity Verification",
         "subtitle": "Documents required to access the Aegryn acquisition process.",
         "complete": "KYC file complete",
         "inProgress": "KYC file in progress",
@@ -6051,27 +6051,27 @@
         "gdprNotice": "Data protection: Your documents are stored securely and processed solely within the framework of AML regulations and Swiss KYC/AML obligations. Under GDPR, you may request deletion at legal@boha-group.com."
       },
       "offres": {
-        "meta": "My bids — Buyer Space Aegryn",
+        "meta": "My bids, Buyer Space Aegryn",
         "title": "My bids",
         "subtitle": "History and tracking of your acquisition bids.",
         "noOffres": "You have not submitted any bids yet.",
         "exploreCatalog": "Browse the catalogue"
       },
       "offreDetail": {
-        "meta": "Bid detail — Buyer Space Aegryn",
+        "meta": "Bid detail, Buyer Space Aegryn",
         "title": "Bid detail",
         "back": "← Back to bids"
       },
       "newOffre": {
-        "meta": "New bid — Buyer Space Aegryn",
+        "meta": "New bid, Buyer Space Aegryn",
         "title": "Submit a bid"
       },
       "transactionDetail": {
-        "meta": "Transaction — Buyer Space Aegryn",
+        "meta": "Transaction, Buyer Space Aegryn",
         "back": "← Back to transactions"
       },
       "catalogue": {
-        "meta": "Catalogue — Buyer Space Aegryn",
+        "meta": "Catalogue, Buyer Space Aegryn",
         "title": "Buyer catalogue",
         "subtitle": "Assets available for acquisition.",
         "noItems": "No assets available at the moment.",
@@ -6080,7 +6080,7 @@
       "kpiPublished": "Available assets"
     },
     "seller": {
-      "meta": "Dashboard — Seller Space Aegryn",
+      "meta": "Dashboard, Seller Space Aegryn",
       "areaLabel": "Seller Space",
       "hello": "Hello, {name}",
       "fallbackName": "Seller",
@@ -6118,13 +6118,13 @@
         "cancelled": "Cancelled"
       },
       "notifications": {
-        "meta": "Notifications — Seller Space Aegryn",
+        "meta": "Notifications, Seller Space Aegryn",
         "title": "Notifications",
         "subtitle": "Alerts and updates related to your activity."
       },
       "kyc": {
-        "meta": "KYC — Identity Verification — Seller Space Aegryn",
-        "title": "KYC — Identity Verification",
+        "meta": "KYC, Identity Verification, Seller Space Aegryn",
+        "title": "KYC : Identity Verification",
         "subtitle": "Documents required to complete your Aegryn sale process.",
         "complete": "KYC file complete",
         "inProgress": "KYC file in progress",
@@ -6133,30 +6133,30 @@
         "validatedWarn": "This document is validated. A new upload will replace the current version and restart validation."
       },
       "actifs": {
-        "meta": "My assets — Seller Space Aegryn",
+        "meta": "My assets, Seller Space Aegryn",
         "title": "My assets",
         "subtitle": "Track your assets submitted to Aegryn.",
         "noActifs": "No assets submitted yet.",
         "submitNew": "Submit an asset"
       },
       "actifDetail": {
-        "meta": "Asset detail — Seller Space Aegryn",
+        "meta": "Asset detail, Seller Space Aegryn",
         "back": "← Back to assets"
       },
       "ndaView": {
-        "meta": "NDA — Seller Space Aegryn",
+        "meta": "NDA | Seller Space Aegryn",
         "title": "Non-Disclosure Agreement",
         "subtitle": "NDA signed as part of your sale."
       },
       "transactions": {
-        "meta": "Transactions — Seller Space Aegryn",
+        "meta": "Transactions, Seller Space Aegryn",
         "title": "My transactions",
         "subtitle": "Track ongoing and past transactions.",
         "noTransactions": "No transactions yet."
       }
     },
     "partner": {
-      "meta": "Dashboard — Partner Space Aegryn",
+      "meta": "Dashboard, Partner Space Aegryn",
       "areaLabel": "Partner Space",
       "hello": "Hello, {name}",
       "fallbackName": "Partner",
@@ -6164,7 +6164,7 @@
       "kpiIntroductions": "Introductions",
       "subscriptionActive": "Active subscription",
       "subscriptionInactive": "Inactive subscription",
-      "subscriptionDesc": "Expert profile — CHF 89/month",
+      "subscriptionDesc": "Expert profile, CHF 89/month",
       "activeCertifications": "Ongoing co-signatures",
       "recentIntroductions": "Recent introductions",
       "introductionTypeAsset": "Asset referral",
@@ -6176,58 +6176,58 @@
         "rejected": "Rejected"
       },
       "notifications": {
-        "meta": "Notifications — Partner Space Aegryn",
+        "meta": "Notifications, Partner Space Aegryn",
         "title": "Notifications",
         "subtitle": "Alerts and updates related to your activity."
       },
       "kyc": {
-        "meta": "KYC — Identity Verification — Partner Space Aegryn",
-        "title": "KYC — Identity Verification",
+        "meta": "KYC, Identity Verification, Partner Space Aegryn",
+        "title": "KYC : Identity Verification",
         "subtitle": "Documents required for your partner profile."
       },
       "mandates": {
-        "meta": "Mandates — Partner Space Aegryn",
+        "meta": "Mandates, Partner Space Aegryn",
         "title": "My mandates",
         "subtitle": "Ongoing partnership mandates.",
         "noMandates": "No mandates yet."
       },
       "mandateDetail": {
-        "meta": "Mandate detail — Partner Space Aegryn",
+        "meta": "Mandate detail, Partner Space Aegryn",
         "back": "← Back to mandates"
       },
       "certifications": {
-        "meta": "Co-signatures — Partner Space Aegryn",
+        "meta": "Co-signatures, Partner Space Aegryn",
         "title": "My co-signatures",
         "subtitle": "Ongoing CIFS certification missions.",
         "noCertifications": "No co-signatures assigned yet."
       },
       "certDetail": {
-        "meta": "Co-signature detail — Partner Space Aegryn",
+        "meta": "Co-signature detail, Partner Space Aegryn",
         "back": "← Back to co-signatures"
       },
       "commissions": {
-        "meta": "Commissions — Partner Space Aegryn",
+        "meta": "Commissions, Partner Space Aegryn",
         "title": "My commissions",
         "subtitle": "Commission history.",
         "noCommissions": "No commissions recorded."
       },
       "introductions": {
-        "meta": "Introductions — Partner Space Aegryn",
+        "meta": "Introductions, Partner Space Aegryn",
         "title": "My introductions",
         "subtitle": "Assets and buyers introduced.",
         "noIntroductions": "No introductions yet."
       },
       "expertProfile": {
-        "meta": "Expert profile — Partner Space Aegryn",
+        "meta": "Expert profile, Partner Space Aegryn",
         "title": "My expert profile",
         "subtitle": "Profile visible on the Aegryn Experts marketplace."
       },
       "subscription": {
-        "meta": "Subscription — Partner Space Aegryn",
+        "meta": "Subscription : Partner Space Aegryn",
         "title": "My subscription",
         "subtitle": "Manage your expert subscription.",
-        "monthlyPlan": "Monthly — CHF 89/month",
-        "yearlyPlan": "Annual — CHF 80/month (–10%)",
+        "monthlyPlan": "Monthly, CHF 89/month",
+        "yearlyPlan": "Annual, CHF 80/month (–10%)",
         "active": "Active",
         "inactive": "Inactive",
         "subscribe": "Subscribe",
@@ -6236,33 +6236,33 @@
         "canceledMsg": "Payment cancelled."
       },
       "nda": {
-        "meta": "NDA — Partner Space Aegryn",
+        "meta": "NDA | Partner Space Aegryn",
         "title": "Non-Disclosure Agreement",
         "subtitle": "NDA signed as part of your partnership."
       }
     },
     "expert": {
-      "meta": "Dashboard — Expert Space Aegryn",
+      "meta": "Dashboard, Expert Space Aegryn",
       "areaLabel": "Expert Space",
       "hello": "Hello, {name}",
       "fallbackName": "Expert",
       "account": {
-        "meta": "My account — Expert Space Aegryn"
+        "meta": "My account, Expert Space Aegryn"
       }
     },
     "nda": {
       "buyer": {
-        "meta": "Buyer NDA — Aegryn Client Space",
+        "meta": "Buyer NDA | Aegryn Client Space",
         "title": "Buyer Non-Disclosure Agreement",
         "subtitle": "Signature required to access confidential dossiers."
       },
       "seller": {
-        "meta": "Seller NDA — Aegryn Client Space",
+        "meta": "Seller NDA | Aegryn Client Space",
         "title": "Seller Non-Disclosure Agreement",
         "subtitle": "Signature required to initiate the sale process."
       },
       "partner": {
-        "meta": "Partner NDA — Aegryn Client Space",
+        "meta": "Partner NDA | Aegryn Client Space",
         "title": "Partner Non-Disclosure Agreement",
         "subtitle": "Signature required to activate your partnership."
       },
@@ -6273,13 +6273,13 @@
       "downloadPdf": "Download PDF"
     },
     "myAssets": {
-      "meta": "My assets — Aegryn Client Space",
+      "meta": "My assets | Aegryn Client Space",
       "title": "My assets",
       "subtitle": "Assets linked to your account.",
       "noAssets": "No assets linked to your account."
     },
     "account": {
-      "meta": "My account — Aegryn Client Space",
+      "meta": "My account | Aegryn Client Space",
       "title": "My account",
       "subtitle": "Personal information and security.",
       "fullName": "Full name",
@@ -6296,9 +6296,9 @@
     "nav": "Magazine",
     "hub": {
       "title": "AEGRYN Magazine",
-      "desc": "Publications, reports and analysis on the European tech M&A market.",
+      "desc": "Deals, multiples, portraits and lifestyle \u2014 quarterly.",
       "reportLabel": "Annual Report",
-      "reportDesc": "Aegryn Magazine — European Tech M&A Intelligence",
+      "reportDesc": "Aegryn Magazine, European Tech M&A Intelligence",
       "notifyLabel": "Receive each edition",
       "notifyDesc": "Sign up to be notified when each new annual edition is published.",
       "newsletterLabel": "Articles & Insights",
@@ -6333,8 +6333,33 @@
       "canceledMsg": "Payment cancelled.",
       "comingSoonBadge": "Coming soon"
     },
+    "report": {
+      "title": "Aegryn Magazine",
+      "subtitle": "European Tech M&A Intelligence",
+      "tagline": "Rare by selection. Certified for the transaction.",
+      "edition2026": "First edition · January 2027",
+      "readOnline": "Explore online",
+      "downloadPdf": "Browse the PDF",
+      "notify": "Get notified",
+      "subscribe": "Subscribe",
+      "ctaEstimate": "Estimate your asset",
+      "ctaGrade": "Discover the Grade",
+      "ctaTitle": "You built something real.",
+      "ctaSub": "We certify it. We transact it.",
+      "ctaLine": "AEGRYN | Certified for the transaction. Switzerland.",
+      "scrollDown": "Scroll",
+      "source": "Source",
+      "estimatedGrade": "Estimated AEGRYN Grade",
+      "whatMadeItWork": "What made it work",
+      "disclaimer": "All private deal analyses are based on public information and AEGRYN estimates. They do not constitute investment advice.",
+      "indexNote": "The AEGRYN Index will deepen with each edition as our certification data accumulates.",
+      "meta": {
+        "title": "Aegryn Magazine | Deals, multiples, portraits and lifestyle",
+        "description": "The quarterly magazine for European tech founders and the acquirers watching them. Decoded transactions, market data, entrepreneur portraits and lifestyle."
+      }
+    },
     "nda": {
-      "meta": "NDA — Partner Space Aegryn",
+      "meta": "NDA | Partner Space Aegryn",
       "title": "Non-Disclosure Agreement",
       "subtitle": "NDA signed as part of your partnership.",
       "postalCodePlaceholder": "Postal code",
@@ -6346,7 +6371,7 @@
       "phonePlaceholder": "Phone",
       "rgpdLabel": "I agree that Aegryn SA may use my personal data to contact me regarding this print edition request.",
       "legalNotice": "The information collected is processed by Aegryn (Canton of Vaud, Switzerland) in accordance with the GDPR (EU 2016/679) and the revised Swiss FADP (in force since 1 September 2023). It is used exclusively for managing the print edition wish list. You have the right to access, rectify and delete your data by writing to media@boha-group.com or from your account space.",
-      "wishlistSectionLabel": "Print Edition — Wish List",
+      "wishlistSectionLabel": "Print Edition, Wish List",
       "wishlistTitle": "Receive the Aegryn Magazine in print",
       "wishlistDesc": "The print edition of the Aegryn magazine is an initiative reserved for registered clients. This form allows you to express your areas of interest to be added to the wish list. We will contact you when production begins."
     },
@@ -6358,12 +6383,12 @@
       "subblink": {
         "title": "Village de la Justice proposes auditing all your contracts",
         "excerpt": "Village Justice offers to audit all your contracts to obtain a legal risk score using subblink, a solution powered by artificial intelligence calibrated for Swiss and European law.",
-        "context": "Article published on Village de la Justice — the reference platform for French and European law. Presentation of subblink, Aegryn's AI-powered contract analysis asset."
+        "context": "Article published on Village de la Justice, the reference platform for French and European law. Presentation of subblink, Aegryn's AI-powered contract analysis asset."
       },
       "neediu": {
         "title": "neediu featured in Gala magazine",
         "excerpt": "neediu, the platform connecting individuals with home service providers, was featured in a video report in Gala magazine.",
-        "context": "Coverage in Gala — a leading mainstream magazine. Video report on neediu, Aegryn's asset in the home services sector."
+        "context": "Coverage in Gala, a leading mainstream magazine. Video report on neediu, Aegryn's asset in the home services sector."
       }
     }
   }

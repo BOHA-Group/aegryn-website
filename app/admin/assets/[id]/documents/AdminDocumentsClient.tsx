@@ -257,7 +257,7 @@ export default function AdminDocumentsClient({ assetId, catalog, documents, data
                             rows={3}
                             value={noteValues[uploaded[0].id] ?? ''}
                             onChange={(e) => setNoteValues((n) => ({ ...n, [uploaded[0].id]: e.target.value }))}
-                            placeholder="Note interne admin — jamais visible du vendeur"
+                            placeholder="Note interne admin, jamais visible du vendeur"
                             className="w-full text-[12px] border border-gray-200 px-3 py-2 resize-none focus:outline-none focus:border-ag-navy/40 text-gray-700 bg-ag-navy/[0.02]"
                           />
                           <div className="flex gap-2 mt-1.5">

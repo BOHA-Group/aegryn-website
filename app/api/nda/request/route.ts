@@ -77,11 +77,11 @@ export async function POST(req: NextRequest) {
       sendEmail(
         body.buyerEmail,
         'Aegryn — Votre demande d\'accès NDA a été reçue',
-        `Bonjour ${body.buyerName},\n\nNous avons bien reçu votre demande d'accès au dossier de cet actif (Grade ${asset.official_grade ?? '—'} — ${asset.asset_type ?? '—'}).\n\nNotre équipe va examiner votre profil dans les 24-48h ouvrées. Si votre dossier d'acquéreur est validé, vous recevrez l'accord de confidentialité (NDA) à signer électroniquement.\n\nL'équipe Aegryn\nhttps://aegryn.com`
+        `Bonjour ${body.buyerName},\n\nNous avons bien reçu votre demande d'accès au dossier de cet actif (Grade ${asset.official_grade ?? '–'}, ${asset.asset_type ?? '—'}).\n\nNotre équipe va examiner votre profil dans les 24-48h ouvrées. Si votre dossier d'acquéreur est validé, vous recevrez l'accord de confidentialité (NDA) à signer électroniquement.\n\nL'équipe Aegryn\nhttps://aegryn.com`
       ),
       sendEmail(
         internal,
-        `[NDA Request] ${body.buyerName} — Grade ${asset.official_grade ?? '—'}`,
+        `[NDA Request] ${body.buyerName} | Grade ${asset.official_grade ?? '—'}`,
         `Nouvelle demande NDA\n\nAcquéreur : ${body.buyerName}\nEmail : ${body.buyerEmail}\nSociété : ${body.buyerCompany ?? '—'}\nType : ${body.buyerType ?? '—'}\nCapacité : ${body.capacity ?? '—'}\nActif ID : ${body.assetId}\nGrade : ${asset.official_grade ?? '—'}\nMessage : ${body.message ?? '—'}\nLocale : ${body.locale ?? '—'}\n\nRevoir dans /admin/members`
       ),
     ])

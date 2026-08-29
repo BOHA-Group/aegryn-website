@@ -176,7 +176,7 @@ export default async function PartnerNdaPage() {
           </ul>
         </NdaArticle>
 
-        <NdaArticle num="4" title="Modèle économique — Absence de commission">
+        <NdaArticle num="4" title="Modèle économique : Absence de commission">
           <p>
             Le Partenaire reconnaît et accepte expressément que son accès au réseau Aegryn est
             exclusivement conditionné au paiement d&apos;un abonnement Fiche Expert (89 CHF HT/mois ou
@@ -191,7 +191,7 @@ export default async function PartnerNdaPage() {
           </p>
         </NdaArticle>
 
-        <NdaArticle num="5" title="Programme de parrainage — Fiche Expert">
+        <NdaArticle num="5" title="Programme de parrainage : Fiche Expert">
           <p>Dans le cadre de son programme de développement réseau, Aegryn offre au Partenaire
           détenant un abonnement Fiche Expert actif la possibilité de parrainer d&apos;autres professionnels :</p>
           <ul className="list-none mt-3 space-y-2">

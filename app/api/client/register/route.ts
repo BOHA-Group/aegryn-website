@@ -71,7 +71,7 @@ export async function POST(req: NextRequest) {
     </p>
   </div>
   <div style="padding:16px 32px;border-top:1px solid #e5e7eb;background:#f9fafb;">
-    <p style="font-size:11px;color:#9ca3af;margin:0;">Aegryn Sàrl — Suisse · <a href="https://aegryn.com" style="color:#9ca3af;">aegryn.com</a></p>
+    <p style="font-size:11px;color:#9ca3af;margin:0;">Aegryn Sàrl · Suisse · <a href="https://aegryn.com" style="color:#9ca3af;">aegryn.com</a></p>
   </div>
 </div>`,
       }),

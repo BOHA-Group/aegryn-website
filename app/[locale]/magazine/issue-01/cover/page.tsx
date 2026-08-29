@@ -89,7 +89,7 @@ export default async function IssueCoverPage({ params }: Props) {
         <div className="w-full max-w-[700px] shadow-[0_8px_60px_rgba(0,0,0,0.6)]">
           <iframe
             src={PDF_URL}
-            title="Aegryn Magazine Issue 01 — Cover Preview"
+            title="Aegryn Magazine Issue 01 | Cover Preview"
             className="w-full border-0 bg-neutral-200"
             style={{ height: 'calc(100vh - 160px)', minHeight: 600 }}
           />

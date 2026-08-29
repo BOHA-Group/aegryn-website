@@ -228,7 +228,7 @@ export default function ExpertProfileForm({ initialData }: { initialData: Expert
               value={form.min_rate_eur}
               onChange={e => setForm(f => ({ ...f, min_rate_eur: e.target.value }))}
               className={inputCls}
-              placeholder="Ex : 250  — affiché « À partir de X €/h » sur votre fiche"
+              placeholder="Ex : 250 , affiché « À partir de X €/h » sur votre fiche"
             />
           </div>
         </div>

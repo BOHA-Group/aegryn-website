@@ -252,7 +252,7 @@ export default function AssetLotSheet({ asset }: { asset: AssetLot }) {
         </span>
         <span className="text-[10px] hidden sm:inline"
           style={{ color: T.grey600, letterSpacing: '0.06em', fontFamily: 'Arial, sans-serif' }}>
-          DOSSIER CONFIDENTIEL — DIFFUSION RESTREINTE
+          DOSSIER CONFIDENTIEL | DIFFUSION RESTREINTE
         </span>
       </div>
 

@@ -230,7 +230,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
 
         {/* Logo */}
-        <Link ref={logoRef} href="/" aria-label="AEGRYN — Accueil" className="block hover:opacity-70 transition-opacity duration-200 shrink-0 leading-none">
+        <Link ref={logoRef} href="/" aria-label="AEGRYN | Accueil" className="block hover:opacity-70 transition-opacity duration-200 shrink-0 leading-none">
           <Image
             src="/images/logo-aegryn-navbar.jpg"
             alt="AEGRYN"

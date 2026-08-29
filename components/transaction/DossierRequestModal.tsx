@@ -149,7 +149,7 @@ export default function DossierRequestModal({ assetId, assetName, onClose }: Pro
 
               <p className="text-[10px] italic text-center"
                 style={{ color: T.grey6, fontFamily: 'Arial, sans-serif' }}>
-                Le lien d'accès n'est jamais communiqué par email —
+                Le lien d'accès n'est jamais communiqué par email,
                 il sera visible uniquement dans votre espace client.
               </p>
             </form>

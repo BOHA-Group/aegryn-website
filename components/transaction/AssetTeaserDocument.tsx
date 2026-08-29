@@ -85,7 +85,7 @@ export default function AssetTeaserDocument({ teaser, assetId }: Props) {
           className="text-[10px] font-bold uppercase"
           style={{ color: '#D9C9A3', letterSpacing: '0.12em', fontFamily: 'Arial, sans-serif' }}
         >
-          Document confidentiel — usage personnel{recipientName ? ` · ${recipientName}` : ''}
+          Document confidentiel, usage personnel{recipientName ? ` · ${recipientName}` : ''}
         </span>
       </div>
 
@@ -191,7 +191,7 @@ export default function AssetTeaserDocument({ teaser, assetId }: Props) {
           className="text-[11px] italic text-center mt-4"
           style={{ color: T.grey600, fontFamily: 'Arial, sans-serif' }}
         >
-          Accès réservé aux acquéreurs qualifiés — justificatif de capacité financière requis.
+          Accès réservé aux acquéreurs qualifiés, justificatif de capacité financière requis.
         </p>
       </div>
 

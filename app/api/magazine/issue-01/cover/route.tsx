@@ -206,9 +206,9 @@ const s = StyleSheet.create({
 function CoverDocument() {
   return (
     <Document
-      title="Aegryn — Build to Last — Issue 01"
+      title="Aegryn | Build to Last | Issue 01"
       author="AEGRYN"
-      subject="European Tech M&A Intelligence — January 2027"
+      subject="European Tech M&A Intelligence | January 2027"
       keywords="M&A, SaaS, Europe, tech, CIFS, certification, Aegryn"
       creator="Aegryn Magazine"
       producer="@react-pdf/renderer"
@@ -249,7 +249,7 @@ function CoverDocument() {
         <View style={s.headlineBand}>
           <Text style={s.headlineTitle}>{"Build to\nLast"}</Text>
           <Text style={s.headlineSub}>
-            {"What separates the tech assets that transact from those that disappear\n— and what every European founder needs to know before the conversation starts."}
+            {"What separates the tech assets that transact from those that disappear,\nand what every European founder needs to know before the conversation starts."}
           </Text>
         </View>
 

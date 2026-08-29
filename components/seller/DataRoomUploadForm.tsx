@@ -72,7 +72,7 @@ export function DataRoomUploadForm({ assetId, category, requiredTypes }: Props) 
         {/* Fichier */}
         <div>
           <label className="block text-[10px] font-semibold text-gray-500 mb-1.5">
-            Fichier (PDF, DOCX, XLSX, PNG — max 20 Mo)
+            Fichier (PDF, DOCX, XLSX, PNG, max 20 Mo)
           </label>
           <input
             ref={fileRef}

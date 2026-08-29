@@ -131,7 +131,7 @@ export default function LotEditForm({ lot }: { lot: Record<string, unknown> }) {
       <div>
         <label className="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1.5">Tagline</label>
         <input type="text" value={values.tagline} onChange={e => set('tagline', e.target.value)}
-          placeholder="ex: SaaS B2B — analyse IA des contrats"
+          placeholder="ex: SaaS B2B, analyse IA des contrats"
           className="w-full border border-gray-200 px-3 py-2.5 text-[13px] focus:outline-none focus:border-ag-navy"
         />
       </div>

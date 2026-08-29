@@ -121,7 +121,7 @@ export default async function IssuePage({ params }: Props) {
             <IssueViewerTabs
               flipbookSrc="/magazine/issue-01/aegryn-magazine-issue-01_1.html"
               webSrc="/magazine/issue-01/aegryn-magazine-issue-01_web.html"
-              issueLabel="Issue 01 — Built to Last — January 2027"
+              issueLabel="Issue 01 | Built to Last | January 2027"
             />
           </section>
         )}

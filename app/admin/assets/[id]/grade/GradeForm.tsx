@@ -1047,7 +1047,7 @@ export default function GradeForm({
                 rows={3}
                 value={blockingJustif}
                 onChange={e => setBlockingJustif(e.target.value)}
-                placeholder="Ex : les documents financiers sont en cours de finalisation — ARR auto-déclaré vérifié par notre analyste via extraits bancaires..."
+                placeholder="Ex : les documents financiers sont en cours de finalisation. ARR auto-déclaré vérifié par notre analyste via extraits bancaires..."
                 className={`${inputCls} resize-none`}
               />
               <p className="text-[10px] text-gray-400 mt-1">{blockingJustif.length} / 80 caractères min</p>

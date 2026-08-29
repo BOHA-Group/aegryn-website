@@ -59,7 +59,7 @@ const PROCESS_STEPS = [
     icon:   <Users size={22} className="text-ag-apex" />,
     title:  'Matching acheteurs pré-qualifiés',
     label:  'Aegryn',
-    desc:   "Les acheteurs dont le profil correspond (secteur, ticket, géographie) reçoivent une alerte confidentielle — secteur générique et grade uniquement. Aucun nom, aucune métrique, aucune URL. L'identité n'est révélée qu'après NDA acheteur et ouverture de session.",
+    desc:   "Les acheteurs dont le profil correspond (secteur, ticket, géographie) reçoivent une alerte confidentielle, secteur générique et grade uniquement. Aucun nom, aucune métrique, aucune URL. L'identité n'est révélée qu'après NDA acheteur et ouverture de session.",
     detail: "Matching sur profil acheteur · Notification : secteur + grade uniquement · NDA acheteur requis avant toute information",
     cta:    { label: 'Accès acheteurs', href: '/transact/buyers' as const },
     side:   'aegryn',

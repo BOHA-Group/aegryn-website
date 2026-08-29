@@ -94,8 +94,8 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
     const json = await res.json() as { ok?: boolean; error?: string; code?: string; already_active?: boolean; new_plan_end?: string | null; credit_pending?: boolean }
     if (json.ok) {
       const msg = json.already_active
-        ? `Code validé — 1 mois offert crédité. Prochain renouvellement le ${json.new_plan_end ? fmtDate(json.new_plan_end) : '—'}.`
-        : 'Code validé — 1 mois offert enregistré. Il sera activé automatiquement lors de votre premier abonnement.'
+        ? `Code validé, 1 mois offert crédité. Prochain renouvellement le ${json.new_plan_end ? fmtDate(json.new_plan_end) : '—'}.`
+        : 'Code validé, 1 mois offert enregistré. Il sera activé automatiquement lors de votre premier abonnement.'
       setSubmitMsg({ ok: true, text: msg })
       if (json.new_plan_end) setPlanEnd(json.new_plan_end)
       setCodeInput('')

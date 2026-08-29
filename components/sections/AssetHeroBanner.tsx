@@ -65,7 +65,7 @@ export function AssetHeroBanner() {
       <div ref={photoRef} className="absolute inset-0 will-change-transform">
         <Image
           src="/images/assets-intro.jpg"
-          alt="Aegryn — Nos actifs numériques"
+          alt="Aegryn | Nos actifs numériques"
           fill
           priority
           quality={95}

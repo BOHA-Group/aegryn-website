@@ -215,7 +215,7 @@ export default function TermSheetForm({ assetId, assetName }: Props) {
 
       {/* ── 2. Earnout ── */}
       <div>
-        <SectionToggle label="02 — Clause d'earnout" open={showEarnout} onToggle={() => setShowEarnout(o => !o)} />
+        <SectionToggle label="02. Clause d'earnout" open={showEarnout} onToggle={() => setShowEarnout(o => !o)} />
         {showEarnout && (
           <div className="border border-t-0 border-gray-200 p-6 flex flex-col gap-4">
             <label className="flex items-center gap-2.5 cursor-pointer">
@@ -253,7 +253,7 @@ export default function TermSheetForm({ assetId, assetName }: Props) {
 
       {/* ── 3. Management ── */}
       <div>
-        <SectionToggle label="03 — Reprise de management / transition" open={showMgmt} onToggle={() => setShowMgmt(o => !o)} />
+        <SectionToggle label="03. Reprise de management / transition" open={showMgmt} onToggle={() => setShowMgmt(o => !o)} />
         {showMgmt && (
           <div className="border border-t-0 border-gray-200 p-6 flex flex-col gap-4">
             <label className="flex items-center gap-2.5 cursor-pointer">
@@ -286,7 +286,7 @@ export default function TermSheetForm({ assetId, assetName }: Props) {
 
       {/* ── 4. Non-concurrence ── */}
       <div>
-        <SectionToggle label="04 — Clause de non-concurrence" open={showNonCompete} onToggle={() => setShowNonCompete(o => !o)} />
+        <SectionToggle label="04. Clause de non-concurrence" open={showNonCompete} onToggle={() => setShowNonCompete(o => !o)} />
         {showNonCompete && (
           <div className="border border-t-0 border-gray-200 p-6 flex flex-col gap-4">
             <label className="flex items-center gap-2.5 cursor-pointer">
@@ -319,7 +319,7 @@ export default function TermSheetForm({ assetId, assetName }: Props) {
 
       {/* ── 5. Garanties ── */}
       <div>
-        <SectionToggle label="05 — Garanties & représentations" open={showWarranties} onToggle={() => setShowWarranties(o => !o)} />
+        <SectionToggle label="05. Garanties & représentations" open={showWarranties} onToggle={() => setShowWarranties(o => !o)} />
         {showWarranties && (
           <div className="border border-t-0 border-gray-200 p-6 flex flex-col gap-4">
             <div className="grid grid-cols-2 gap-4">
@@ -352,7 +352,7 @@ export default function TermSheetForm({ assetId, assetName }: Props) {
 
       {/* ── 6. Processus ── */}
       <div>
-        <SectionToggle label="06 — Processus & conditions" open={showProcess} onToggle={() => setShowProcess(o => !o)} />
+        <SectionToggle label="06. Processus & conditions" open={showProcess} onToggle={() => setShowProcess(o => !o)} />
         {showProcess && (
           <div className="border border-t-0 border-gray-200 p-6 flex flex-col gap-4">
             <div className="grid grid-cols-2 gap-4">

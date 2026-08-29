@@ -176,8 +176,8 @@ export default async function ArticlePage({ params }: Props) {
 
         <AegrynCtaBlock
           title={article.ctaLabel}
-          sub="AEGRYN — European Tech M&A Intelligence"
-          line="Certified by AEGRYN — Switzerland"
+          sub="AEGRYN | European Tech M&A Intelligence"
+          line="Certified by AEGRYN | Switzerland"
           ctaEstimate="Get a valuation estimate"
           ctaGrade="Request CIFS certification"
         />
