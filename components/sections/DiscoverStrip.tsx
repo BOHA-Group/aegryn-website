@@ -76,11 +76,11 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta, articlesLab
         className="overflow-hidden border-b border-ag-border"
         style={{ background: '#F5F2EE' }}
       >
-        {/* Grid 2 colonnes : texte gauche | covers droite */}
-        <div className="grid md:grid-cols-[42%_58%]" style={{ minHeight: 560 }}>
+        {/* Hauteur explicite fixe sur desktop — évite tout souci de stretch/track-sizing CSS grid. Auto sur mobile. */}
+        <div className="relative md:h-[560px] py-16 md:py-0">
 
-          {/* Col gauche — texte isolé sur fond blanc card */}
-          <div className="flex items-center px-6 md:px-[80px] py-20">
+          {/* Col gauche — texte isolé sur fond blanc card. Statique pleine largeur mobile, absolute 42% desktop */}
+          <div className="relative md:absolute md:inset-y-0 md:left-0 flex items-center px-6 md:px-[80px] md:w-[42%]">
             <div
               className="bg-white py-10 px-10 space-y-5"
               style={{ maxWidth: 380, boxShadow: '0 2px 24px rgba(0,0,0,.06)' }}
@@ -106,8 +106,11 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta, articlesLab
             </div>
           </div>
 
-          {/* Col droite — covers en diagonale */}
-          <div className="hidden md:block relative overflow-hidden pointer-events-none">
+          {/* Col droite — covers en mosaïque, pleine hauteur, overflow clippé */}
+          <div
+            className="hidden md:block absolute inset-y-0 right-0 overflow-hidden pointer-events-none"
+            style={{ left: '42%' }}
+          >
             {COVER_LAYOUT.map(({ issue, rot, left, top, z }, i) => (
               <div
                 key={i}
