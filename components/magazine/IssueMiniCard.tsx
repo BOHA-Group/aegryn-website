@@ -46,6 +46,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
               1: '#5ADDA4', // mint — Build
               2: '#C9A84C', // gold — Exit / stratégie
               3: '#E8E0D4', // crème — Buyer / portrait
+              4: '#7AB648', // vert feuille — Succession / transmission
             }
             const accent = ACCENTS[issue.number] ?? '#5ADDA4'
 
@@ -54,6 +55,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
               1: 'center top',
               2: 'center center',
               3: 'center 20%',
+              4: 'center center',
             }
             const photoPos = PHOTO_POS[issue.number] ?? 'center top'
 
@@ -62,6 +64,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false }: Props) {
               1: 'linear-gradient(180deg,rgba(5,10,20,.55) 0%,rgba(5,10,20,.35) 40%,rgba(5,10,20,.82) 100%)',
               2: 'linear-gradient(180deg,rgba(10,8,2,.72) 0%,rgba(10,8,2,.38) 45%,rgba(10,8,2,.88) 100%)',
               3: 'linear-gradient(180deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.42) 45%,rgba(0,0,0,.90) 100%)',
+              4: 'linear-gradient(180deg,rgba(0,4,0,.65) 0%,rgba(0,4,0,.30) 45%,rgba(0,4,0,.85) 100%)',
             }
             const overlay = OVERLAYS[issue.number] ?? OVERLAYS[1]
 
