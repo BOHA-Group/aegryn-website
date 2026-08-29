@@ -52,10 +52,19 @@ const intlMiddleware = createIntlMiddleware(routing)
 /** Vérifie si la dernière activité dépasse SESSION_TTL_MS (24h) */
 function isSessionExpired(req: NextRequest): boolean {
   const ts = req.cookies.get(ACTIVITY_COOKIE)?.value
-  if (!ts) return false // pas de cookie → première visite, pas expiré
+  if (!ts) return false // pas de cookie → on laisse getUser() décider
   const last = parseInt(ts, 10)
   if (isNaN(last)) return false
   return Date.now() - last > SESSION_TTL_MS
+}
+
+/** Vérifie si un cookie d'activité valide (non expiré) est présent */
+function hasValidActivityCookie(req: NextRequest): boolean {
+  const ts = req.cookies.get(ACTIVITY_COOKIE)?.value
+  if (!ts) return false
+  const last = parseInt(ts, 10)
+  if (isNaN(last)) return false
+  return Date.now() - last <= SESSION_TTL_MS
 }
 
 /** Pose / renouvelle le cookie d'activité sur la réponse */
@@ -130,6 +139,18 @@ export default async function middleware(req: NextRequest) {
     if (!isPrefetch) {
       const { hasSession, response } = await refreshAndCheckSession(req)
       if (!hasSession) {
+        /* Si ag-last-active est encore valide (< 24h), l'utilisateur s'est connecté
+           récemment. getUser() peut échouer si les cookies sb-* chunked ne sont pas
+           tous transmis (cas Vercel / Safari) ou si le réseau est instable.
+           Dans ce cas on laisse passer — le Server Component layout fera sa propre
+           vérification et redirigera proprement si nécessaire. */
+        if (hasValidActivityCookie(req)) {
+          const preferred = req.cookies.get(PREF_COOKIE)?.value as Locale | undefined
+          const locale: Locale = preferred && LOCALES.includes(preferred) ? preferred : (routing.defaultLocale as Locale)
+          const res = NextResponse.next({ request: req })
+          res.headers.set('x-next-intl-locale', locale)
+          return res
+        }
         const loginUrl = req.nextUrl.clone()
         loginUrl.pathname = '/client/login'
         return NextResponse.redirect(loginUrl)
@@ -190,9 +211,16 @@ export default async function middleware(req: NextRequest) {
        ait muté req.cookies (via setAll) pour que le req soit à jour. */
     const { response: refreshedRes } = await refreshAndCheckSession(req)
     const intlRes = intlMiddleware(req)
-    /* Copier TOUS les cookies de refresh (sb-* + ag-last-active) dans la réponse i18n */
-    for (const { name, value, ...opts } of refreshedRes.cookies.getAll()) {
-      intlRes.cookies.set(name, value, opts as Parameters<typeof intlRes.cookies.set>[2])
+
+    /* Si intlMiddleware retourne une redirection, les Set-Cookie sur la réponse
+       intermédiaire ne sont pas persistés par certains navigateurs.
+       Dans ce cas on fusionne les cookies dans la réponse intl quand même —
+       les navigateurs modernes persistent bien les cookies sur les 3xx. */
+    const refreshCookies = refreshedRes.cookies.getAll()
+    if (refreshCookies.length > 0) {
+      for (const { name, value, ...opts } of refreshCookies) {
+        intlRes.cookies.set(name, value, opts as Parameters<typeof intlRes.cookies.set>[2])
+      }
     }
     return intlRes
   }
