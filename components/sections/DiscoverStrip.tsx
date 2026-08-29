@@ -5,13 +5,18 @@ import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { ArrowUpRight } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
+import { IssueMiniCard } from '@/components/magazine/IssueMiniCard'
+import { ISSUE_01 } from '@/content/magazine/issue-01/meta'
+import { ISSUE_02 } from '@/content/magazine/issue-02/meta'
+import { ISSUE_03 } from '@/content/magazine/issue-03/meta'
+import { ISSUE_04 } from '@/content/magazine/issue-04/meta'
 
-/* Covers des 4 issues — photo brute uniquement */
-const COVERS = [
-  { src: '/magazine/issue-01/cover-magazine-issue-01.jpg', rot: '-14deg', x: '28%',  y: '5%',  z: 1, w: 210 },
-  { src: '/magazine/issue-02/cover-magazine-issue-02.jpg', rot: '-4deg',  x: '46%',  y: '-8%', z: 4, w: 240 },
-  { src: '/magazine/issue-03/cover-magazine-issue-03.jpg', rot:  '6deg',  x: '62%',  y: '12%', z: 3, w: 200 },
-  { src: '/magazine/issue-04/cover-magazine-issue-04.jpg', rot: '14deg',  x: '76%',  y: '-2%', z: 2, w: 190 },
+/* Disposition diagonale style Barnes */
+const COVER_LAYOUT = [
+  { issue: ISSUE_01, rot: '-14deg', x: '22%', y: '-5%',  z: 1 },
+  { issue: ISSUE_02, rot:  '-4deg', x: '38%', y: '-12%', z: 4 },
+  { issue: ISSUE_03, rot:   '5deg', x: '54%', y:  '-2%', z: 3 },
+  { issue: ISSUE_04, rot:  '13deg', x: '70%', y: '-10%', z: 2 },
 ]
 
 interface Props {
@@ -91,20 +96,13 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta }: Props) {
             </div>
           </div>
 
-          {/* Covers — position absolute droite, débordent en hauteur comme Barnes */}
+          {/* Covers — IssueMiniCard en diagonale style Barnes */}
           <div className="hidden md:block absolute inset-0 overflow-hidden pointer-events-none">
-            {COVERS.map(({ src, rot, x, y, z, w }, i) => (
-              /* eslint-disable-next-line @next/next/no-img-element */
-              <img
+            {COVER_LAYOUT.map(({ issue, rot, x, y, z }, i) => (
+              <div
                 key={i}
-                src={src}
-                alt=""
-                className="mag-cover-card absolute object-cover"
+                className="mag-cover-card absolute"
                 style={{
-                  width: w,
-                  height: Math.round(w * 1.414),
-                  borderRadius: 3,
-                  boxShadow: '0 12px 48px rgba(0,0,0,.22), 0 4px 16px rgba(0,0,0,.15)',
                   transform: `rotate(${rot})`,
                   transformOrigin: 'center center',
                   zIndex: z,
@@ -112,7 +110,14 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta }: Props) {
                   top:  y,
                   opacity: 0,
                 }}
-              />
+              >
+                <IssueMiniCard
+                  issue={issue}
+                  locale="en"
+                  isPublic={false}
+                  isPreview={false}
+                />
+              </div>
             ))}
           </div>
         </div>
