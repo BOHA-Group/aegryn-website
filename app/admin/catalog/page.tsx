@@ -57,26 +57,10 @@ export default async function AdminCatalogPage({
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">
       <div className="max-w-7xl mx-auto">
 
-        <div className="mb-8 flex items-start justify-between gap-4">
-          <div>
-            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN</p>
-            <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Catalogue</h1>
-            <p className="text-[12px] text-gray-400 mt-1">Publication des actifs gradés vers le catalogue public</p>
-          </div>
-          <div className="flex gap-2">
-            <Link href={`/admin/assets`}
-              className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
-              ← Assets
-            </Link>
-            <Link href={`/admin/members`}
-              className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
-              Members
-            </Link>
-            <Link href={`/admin/leads`}
-              className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
-              Leads
-            </Link>
-          </div>
+        <div className="mb-8">
+          <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN</p>
+          <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Catalogue</h1>
+          <p className="text-[12px] text-gray-400 mt-1">Publication des actifs gradés vers le catalogue public</p>
         </div>
 
         {/* Stats */}
