@@ -6,15 +6,22 @@ import { useTranslations } from 'next-intl'
 import { ArrowUpRight } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 
-/* Covers des 4 issues — photo brute uniquement (pas de canvas SVG) */
+/* Covers des 4 issues — photo brute uniquement */
 const COVERS = [
-  { src: '/magazine/issue-01/cover-magazine-issue-01.jpg', rot: '-8deg',  z: 1 },
-  { src: '/magazine/issue-02/cover-magazine-issue-02.jpg', rot: '-2deg',  z: 4 },
-  { src: '/magazine/issue-03/cover-magazine-issue-03.jpg', rot:  '4deg',  z: 3 },
-  { src: '/magazine/issue-04/cover-magazine-issue-04.jpg', rot: '10deg',  z: 2 },
+  { src: '/magazine/issue-01/cover-magazine-issue-01.jpg', rot: '-14deg', x: '28%',  y: '5%',  z: 1, w: 210 },
+  { src: '/magazine/issue-02/cover-magazine-issue-02.jpg', rot: '-4deg',  x: '46%',  y: '-8%', z: 4, w: 240 },
+  { src: '/magazine/issue-03/cover-magazine-issue-03.jpg', rot:  '6deg',  x: '62%',  y: '12%', z: 3, w: 200 },
+  { src: '/magazine/issue-04/cover-magazine-issue-04.jpg', rot: '14deg',  x: '76%',  y: '-2%', z: 2, w: 190 },
 ]
 
-export function DiscoverStrip() {
+interface Props {
+  magLabel: string
+  magTitle: string
+  magDesc:  string
+  magCta:   string
+}
+
+export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta }: Props) {
   const t      = useTranslations('discoverStrip')
   const ref    = useRef<HTMLElement>(null)
   const magRef = useRef<HTMLDivElement>(null)
@@ -58,50 +65,51 @@ export function DiscoverStrip() {
         className="relative overflow-hidden border-b border-ag-border"
         style={{ background: '#F5F2EE', minHeight: 420 }}
       >
-        {/* Zone gauche — texte */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24 grid md:grid-cols-2 items-center gap-12">
-          <div className="space-y-6">
-            <p className="font-mono text-[9px] tracking-[0.30em] uppercase text-ag-gray-light">
-              {t('magLabel')}
-            </p>
-            <h2
-              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
-              style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
-            >
-              {t('magTitle')}
-            </h2>
-            <p className="font-sans text-[14px] text-ag-gray leading-[1.75] max-w-sm">
-              {t('magDesc')}
-            </p>
-            <Link
-              href="/magazine"
-              className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-6 py-3 hover:bg-ag-black hover:text-white transition-all duration-300"
-            >
-              {t('magCta')} <ArrowUpRight size={12} />
-            </Link>
+        {/* Layout pleine largeur : texte gauche absolu + covers débordantes droite */}
+        <div className="relative" style={{ minHeight: 480 }}>
+          {/* Texte gauche */}
+          <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24">
+            <div className="md:max-w-[420px] space-y-6">
+              <p className="font-mono text-[9px] tracking-[0.30em] uppercase text-ag-gray-light">
+                {magLabel}
+              </p>
+              <h2
+                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
+                style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+              >
+                {magTitle}
+              </h2>
+              <p className="font-sans text-[14px] text-ag-gray leading-[1.75]">
+                {magDesc}
+              </p>
+              <Link
+                href="/magazine"
+                className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-6 py-3 hover:bg-ag-black hover:text-white transition-all duration-300"
+              >
+                {magCta} <ArrowUpRight size={12} />
+              </Link>
+            </div>
           </div>
 
-          {/* Zone droite — covers en diagonale façon Barnes */}
-          <div
-            className="hidden md:block relative"
-            style={{ height: 380 }}
-          >
-            {COVERS.map(({ src, rot, z }, i) => (
+          {/* Covers — position absolute droite, débordent en hauteur comme Barnes */}
+          <div className="hidden md:block absolute inset-0 overflow-hidden pointer-events-none">
+            {COVERS.map(({ src, rot, x, y, z, w }, i) => (
               /* eslint-disable-next-line @next/next/no-img-element */
               <img
                 key={i}
                 src={src}
                 alt=""
-                className="mag-cover-card absolute object-cover shadow-2xl"
+                className="mag-cover-card absolute object-cover"
                 style={{
-                  width: 160,
-                  height: 226,
-                  borderRadius: 2,
+                  width: w,
+                  height: Math.round(w * 1.414),
+                  borderRadius: 3,
+                  boxShadow: '0 12px 48px rgba(0,0,0,.22), 0 4px 16px rgba(0,0,0,.15)',
                   transform: `rotate(${rot})`,
+                  transformOrigin: 'center center',
                   zIndex: z,
-                  /* Positions étalées pour effet chevauchement diagonal */
-                  left: `${i * 22}%`,
-                  top:  `${i % 2 === 0 ? 10 : 30}%`,
+                  left: x,
+                  top:  y,
                   opacity: 0,
                 }}
               />

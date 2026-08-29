@@ -27,7 +27,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-export default async function HomePage(_props: Props) {
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params
+  const tDiscover = await getTranslations({ locale, namespace: 'discoverStrip' })
+
   return (
     <>
       {/* ── 0. Hero ────────────────────────────────────────── */}
@@ -58,8 +61,13 @@ export default async function HomePage(_props: Props) {
       <MarketStatStrip />
       <WhyUseApps />
 
-      {/* ── 5. Blog ────────────────────────────────────────── */}
-      <DiscoverStrip />
+      {/* ── 5. Blog ─────────────────────────────────────────────── */}
+      <DiscoverStrip
+        magLabel={tDiscover('magLabel')}
+        magTitle={tDiscover('magTitle')}
+        magDesc={tDiscover('magDesc')}
+        magCta={tDiscover('magCta')}
+      />
     </>
   )
 }
