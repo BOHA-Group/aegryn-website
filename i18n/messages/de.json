@@ -3172,9 +3172,10 @@
     ]
   },
   "discoverStrip": {
-    "magLabel": "Aegryn Neuigkeiten",
-    "magTitle": "Aegryn Magazine",
-    "magDesc": "Mehrmals jährlich veröffentlicht und verbreitet Aegryn sein eigenes Magazin — Marktanalysen, Transaktionsporträts, Einblicke für Tech-Gründer und Erwerber.",
+    "magLabel": "Aegryn Magazine",
+    "magTitle": "Tech. Money. Deals. People. Life.",
+    "magDesc": "Das Magazin für europäische Tech-Gründer und die Erwerber, die sie beobachten. Echte Transaktionen entschlüsselt, Marktdaten, Unternehmerporträts, Multiples nach Branche und das Leben derer, die etwas Bedeutendes aufbauen.",
+    "magFooter": "Vier Ausgaben pro Jahr.",
     "magCta": "Das Magazin entdecken",
     "label": "Artikel",
     "title": "Der europäische Tech-M&A-Markt.\nVon denen, die ihn gestalten.",

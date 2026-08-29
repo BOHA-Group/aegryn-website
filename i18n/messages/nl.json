@@ -3172,9 +3172,10 @@
     ]
   },
   "discoverStrip": {
-    "magLabel": "Aegryn Nieuws",
-    "magTitle": "Aegryn Magazine",
-    "magDesc": "Meerdere keren per jaar publiceert en verspreidt Aegryn zijn eigen magazine — marktanalyses, transactieportretten, inzichten voor tech-oprichters en kopers.",
+    "magLabel": "Aegryn Magazine",
+    "magTitle": "Tech. Money. Deals. People. Life.",
+    "magDesc": "Het magazine voor Europese tech-oprichters en de kopers die hen in de gaten houden. Echte transacties ontcijferd, marktdata, ondernemersportretten, multiples per verticaal en het leven van wie iets bouwt dat ertoe doet.",
+    "magFooter": "Vier edities per jaar.",
     "magCta": "Ontdek het magazine",
     "label": "Artikelen",
     "title": "De Europese tech M&A-markt.\nDoor degenen die het doen.",

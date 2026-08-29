@@ -82,7 +82,7 @@ export function IssueTickerCarousel({ items }: Props) {
         className="pt-6 pb-14 select-none"
         style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
         onMouseEnter={pause}
-        onMouseLeave={onMouseUp}
+        onMouseLeave={() => { onMouseUp(); resume() }}
         onMouseDown={onMouseDown}
         onMouseMove={onMouseMove}
         onMouseUp={onMouseUp}

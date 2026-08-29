@@ -66,6 +66,7 @@ export default async function HomePage({ params }: Props) {
         magLabel={tDiscover('magLabel')}
         magTitle={tDiscover('magTitle')}
         magDesc={tDiscover('magDesc')}
+        magFooter={tDiscover('magFooter')}
         magCta={tDiscover('magCta')}
         articlesLabel={tDiscover('label')}
         articlesCta={tDiscover('cta')}

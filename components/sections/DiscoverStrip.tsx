@@ -22,22 +22,23 @@ import { ISSUE_04 } from '@/content/magazine/issue-04/meta'
  * - Pas de badge "À venir" (isPublic/isPreview ne sont pas utilisés pour le rendu décoratif)
  */
 const COVER_LAYOUT = [
-  { issue: ISSUE_01, rot: '-8deg', left: '2%',   top: '48%', z: 1 },
-  { issue: ISSUE_02, rot:  '4deg', left: '42%',  top: '38%', z: 2 },
-  { issue: ISSUE_03, rot: '-3deg', left: '22%',  top: '-5%', z: 3 },
-  { issue: ISSUE_04, rot:  '7deg', left: '60%',  top: '-15%', z: 4 },
+  { issue: ISSUE_03, rot: '-5deg', left: '-8%',  top: '55%',  z: 1 },
+  { issue: ISSUE_01, rot:  '3deg', left: '18%',  top: '20%',  z: 2 },
+  { issue: ISSUE_02, rot: '-3deg', left: '48%',  top: '-12%', z: 3 },
+  { issue: ISSUE_04, rot:  '6deg', left: '74%',  top: '-40%', z: 4 },
 ]
 
 interface Props {
-  magLabel:    string
-  magTitle:    string
-  magDesc:     string
-  magCta:      string
+  magLabel:      string
+  magTitle:      string
+  magDesc:       string
+  magFooter:     string
+  magCta:        string
   articlesLabel: string
   articlesCta:   string
 }
 
-export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta, articlesLabel, articlesCta }: Props) {
+export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, articlesLabel, articlesCta }: Props) {
   const t      = useTranslations('discoverStrip')
   const ref    = useRef<HTMLElement>(null)
   const magRef = useRef<HTMLDivElement>(null)
@@ -83,32 +84,41 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magCta, articlesLab
       >
         {/* Card texte — centre-gauche, fond blanc, z au-dessus des covers */}
         <div
-          className="absolute z-10 bg-white py-10 px-12 space-y-5"
+          className="absolute z-10 bg-white space-y-4"
           style={{
-            left: '10%',
+            left: '12%',
             top: '50%',
             transform: 'translateY(-50%)',
-            width: 360,
+            width: 380,
+            padding: '40px 44px',
           }}
         >
-          <p className="font-mono text-[9px] tracking-[0.30em] uppercase text-ag-gray-light">
-            {magLabel}
-          </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.1]"
-            style={{ fontSize: 'clamp(22px, 2.4vw, 36px)' }}
+            style={{ fontSize: 'clamp(22px, 2.2vw, 32px)' }}
+          >
+            {magLabel}
+          </h2>
+          <p
+            className="font-sans font-semibold italic text-ag-black leading-[1.3]"
+            style={{ fontSize: 'clamp(13px, 1.1vw, 16px)' }}
           >
             {magTitle}
-          </h2>
-          <p className="font-sans text-[13px] text-ag-gray leading-[1.75]">
+          </p>
+          <p className="font-sans text-[12.5px] text-ag-gray leading-[1.75]">
             {magDesc}
           </p>
-          <Link
-            href="/magazine"
-            className="inline-flex items-center gap-2 font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-5 py-2.5 hover:bg-ag-black hover:text-white transition-all duration-300"
-          >
-            {magCta} <ArrowUpRight size={11} />
-          </Link>
+          <p className="font-sans font-semibold text-[12px] text-ag-black">
+            {magFooter}
+          </p>
+          <div className="pt-2">
+            <Link
+              href="/magazine"
+              className="inline-flex items-center gap-2 font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-5 py-2.5 hover:bg-ag-black hover:text-white transition-all duration-300"
+            >
+              {magCta} <ArrowUpRight size={11} />
+            </Link>
+          </div>
         </div>
 
         {/* Zone covers — moitié droite, diagonale montante haut-droit */}
