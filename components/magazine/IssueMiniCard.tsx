@@ -160,7 +160,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
           type="button"
           onClick={() => setLightboxOpen(true)}
           className={`block transition-transform hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}
-          style={{ width: 155, cursor: 'pointer', border: 0, padding: 0, background: 'none' }}
+          style={{ width: 155, cursor: 'pointer', border: 0, padding: 0, background: 'none', textAlign: 'left' }}
           aria-label={`${issue.title} — ${comingSoonLabel}`}
         >
           {miniBox}
