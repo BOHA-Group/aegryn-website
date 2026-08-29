@@ -199,6 +199,14 @@ export default async function middleware(req: NextRequest) {
     return NextResponse.next()
   }
 
+  /* ── 3bis. QR code magazine — pass-through ──
+     URL imprimée physiquement sur la cover papier (aegryn.com/magazine/qr),
+     ne doit jamais être préfixée par une locale (app/magazine/qr/page.tsx
+     gère lui-même la locale via le cookie ag-locale-pref). */
+  if (pathname === '/magazine/qr') {
+    return NextResponse.next()
+  }
+
   /* ── 4. i18n + geo-detection pour toutes les autres routes ── */
   const hasLocalePrefix = LOCALES.some(
     (l) => pathname === `/${l}` || pathname.startsWith(`/${l}/`)
