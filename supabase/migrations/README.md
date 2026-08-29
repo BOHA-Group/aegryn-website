@@ -1,4 +1,4 @@
-# AEGRYN — Migrations Supabase
+# AEGRYN, Migrations Supabase
 
 Toutes exécutées manuellement via **Supabase SQL Editor**.  
 Convention de nommage : `NNN_nom_table.sql` (NNN = ordre d'exécution).
@@ -18,7 +18,7 @@ Convention de nommage : `NNN_nom_table.sql` (NNN = ordre d'exécution).
 | 003 | `003_bookings_and_alliances.sql` | `assessment_day_bookings`, `alliance_applications` | ✅ |
 | 004 | `004_assets.sql` | Table `assets` + trigger `set_updated_at` | ✅ |
 | 005 | `005_user_profiles.sql` | `user_profiles` + colonne `assets.seller_uid` | ✅ |
-| 006 | `006_nda_requests.sql` | `nda_requests` — accès NDA acquéreurs | ✅ |
+| 006 | `006_nda_requests.sql` | `nda_requests`, accès NDA acquéreurs | ✅ |
 | 007 | `007_evaluation_tiers.sql` | Colonnes evaluation sur `assets` | ✅ |
 | 008–065 | *(voir fichiers SQL)* | Profils, KYC, parrainage, grades, auction, invoices, sécurité RLS | ✅ |
 | 086 | `086_magazine_early_access_flag.sql` | Flag `magazine_early_access` dans `site_settings` | ✅ |
@@ -36,7 +36,7 @@ Convention de nommage : `NNN_nom_table.sql` (NNN = ordre d'exécution).
 
 | # | Objectif | Prérequis |
 |---|----------|-----------|
-| 092+ | À définir selon évolution produit | — |
+| 092+ | À définir selon évolution produit |, |
 
 ---
 

@@ -1,6 +1,6 @@
-# AEGRYN CIFS Standards Mapping — v3.0 (Août 2026)
+# AEGRYN CIFS Standards Mapping, v3.0 (Août 2026)
 
-> Document éditorial interne — NE PAS exposer publiquement.  
+> Document éditorial interne, NE PAS exposer publiquement.  
 > Référence : `lib/gradingSystem.ts` (source de vérité des sous-codes) et `lib/gradeEngine.ts` (logique de scoring).
 
 ---
@@ -9,16 +9,16 @@
 
 | Amélioration | Impact scoring | Fichiers modifiés |
 |---|---|---|
-| `proof_quality` — plafond de grade par niveau de preuve | Plafond global = min(niveau par dimension) | `gradingSystem.ts`, `gradeEngine.ts`, `GradeEngineForm.tsx`, `route.ts` |
+| `proof_quality`, plafond de grade par niveau de preuve | Plafond global = min(niveau par dimension) | `gradingSystem.ts`, `gradeEngine.ts`, `GradeEngineForm.tsx`, `route.ts` |
 | `arrAudited` 3 niveaux (déclaratif / vérifiable / audité) | +0/+1/+2 pts sur F | `gradeEngine.ts`, `docToSubcodeMap.ts`, `gradeAutoFill.ts`, `route.ts`, `GradeEngineForm.tsx` |
 | I-27 RGPD Transfer Readiness (nouveau sous-code) | Blocage auto si `blocking`, -1 pt si `warning` | `gradingSystem.ts`, `gradeEngine.ts`, `GradeEngineForm.tsx`, `route.ts` |
 | F-42 Founder Dependency Score (5 critères objectifs) | Pénalité -1/-2/-3 pts sur F | `gradingSystem.ts`, `gradeEngine.ts`, `GradeEngineForm.tsx`, `route.ts` |
 | S-16 Qualification pentest (OWASP/PTES + OSCP/CREST) | Bonus +1 pt méthodo + +1 pt cert (max 7 pts pentest) | `gradingSystem.ts`, `gradeEngine.ts`, `GradeEngineForm.tsx`, `route.ts` |
-| Renommage I-27→I-40, I-28→I-41, I-29→I-42 | Éditorial uniquement — 0 impact scoring | `gradingSystem.ts`, `docToSubcodeMap.ts` |
+| Renommage I-27→I-40, I-28→I-41, I-29→I-42 | Éditorial uniquement, 0 impact scoring | `gradingSystem.ts`, `docToSubcodeMap.ts` |
 
 ---
 
-## 2. Proof Quality — Plafonds de grade
+## 2. Proof Quality, Plafonds de grade
 
 | Niveau | Définition | Plafond global |
 |---|---|---|
@@ -31,20 +31,20 @@
 
 ---
 
-## 3. ARR Audit Level — Mapping sous-codes (CIFS v3.0)
+## 3. ARR Audit Level, Mapping sous-codes (CIFS v3.0)
 
 | Niveau `arrAudited` | Sous-code | Description | Points |
 |---|---|---|---|
-| `audited` | F-11a | ARR audité — Commissaire aux comptes co-signataire | +2 pts |
-| `verifiable` | F-11b | ARR vérifiable — Export Stripe / Chargebee certifié tiers | +1 pt |
-| `declarative` | F-11c | ARR déclaratif — Auto-déclaré, cohérence vérifiée | 0 pt |
+| `audited` | F-11a | ARR audité, Commissaire aux comptes co-signataire | +2 pts |
+| `verifiable` | F-11b | ARR vérifiable, Export Stripe / Chargebee certifié tiers | +1 pt |
+| `declarative` | F-11c | ARR déclaratif, Auto-déclaré, cohérence vérifiée | 0 pt |
 
 > **Migration** : l'ancien booléen `arrAudited: 'yes'` est mappé sur `'audited'`, `'no'` sur `'declarative'`.  
-> Les anciens enregistrements `input_json` (JSONB) avec `arrAudited: 'yes' | 'no'` restent lisibles — le moteur les traite comme `declarative` (comportement sûr par défaut).
+> Les anciens enregistrements `input_json` (JSONB) avec `arrAudited: 'yes' | 'no'` restent lisibles, le moteur les traite comme `declarative` (comportement sûr par défaut).
 
 ---
 
-## 4. Founder Dependency Score — F-42
+## 4. Founder Dependency Score, F-42
 
 | Critère | Champ `FounderDependencyInput` | Risque si `yes` |
 |---|---|---|
@@ -62,7 +62,7 @@
 
 ---
 
-## 5. RGPD Transfer Readiness — I-27/I-28/I-29
+## 5. RGPD Transfer Readiness, I-27/I-28/I-29
 
 | Sous-code | Valeur `rgpdTransferReadiness` | Impact scoring |
 |---|---|---|
@@ -74,7 +74,7 @@
 
 ---
 
-## 6. Pentest Qualification — S-16
+## 6. Pentest Qualification, S-16
 
 Le score pentest est désormais en deux temps :
 
@@ -92,7 +92,7 @@ Le score pentest est désormais en deux temps :
 
 ---
 
-## 7. Compatibilité ascendante — données existantes
+## 7. Compatibilité ascendante, données existantes
 
 | Champ | Ancien type | Nouveau type | Comportement sur ancien `input_json` |
 |---|---|---|---|
@@ -107,7 +107,7 @@ Le score pentest est désormais en deux temps :
 
 ---
 
-## 8. Fichiers impactés — résumé
+## 8. Fichiers impactés, résumé
 
 | Fichier | Nature des changements |
 |---|---|

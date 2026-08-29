@@ -1,7 +1,7 @@
-# HANDOVER — Asset Transfer Certificate
+# HANDOVER, Asset Transfer Certificate
 
-> **Document type:** Closing document — signed by both parties at transfer completion  
-> **CIFS protocol:** PTT Phase 4 — Closing  
+> **Document type:** Closing document, signed by both parties at transfer completion  
+> **CIFS protocol:** PTT Phase 4, Closing  
 > **This document is legally binding once signed by both parties.**
 
 ---
@@ -24,13 +24,13 @@
 
 | Asset | Transferred | Method | Date confirmed |
 |---|---|---|---|
-| Source code repository | ☐ | _(e.g. GitHub org transfer)_ | — |
-| Production hosting account | ☐ | _(e.g. Vercel team transfer)_ | — |
-| Database access | ☐ | _(e.g. Supabase project transfer)_ | — |
-| Domain(s) | ☐ | _(e.g. registrar transfer)_ | — |
-| Storage / media assets | ☐ | _(e.g. R2 / S3 bucket)_ | — |
-| Third-party API accounts | ☐ | _(list in CREDENTIALS.md)_ | — |
-| CI/CD pipelines | ☐ | — | — |
+| Source code repository | ☐ | _(e.g. GitHub org transfer)_ |, |
+| Production hosting account | ☐ | _(e.g. Vercel team transfer)_ |, |
+| Database access | ☐ | _(e.g. Supabase project transfer)_ |, |
+| Domain(s) | ☐ | _(e.g. registrar transfer)_ |, |
+| Storage / media assets | ☐ | _(e.g. R2 / S3 bucket)_ |, |
+| Third-party API accounts | ☐ | _(list in CREDENTIALS.md)_ |, |
+| CI/CD pipelines | ☐ |, |, |
 
 ---
 
@@ -39,10 +39,10 @@
 | Category | Transmitted | Method |
 |---|---|---|
 | Infrastructure & hosting | ☐ | _(e.g. 1Password shared vault)_ |
-| Database | ☐ | — |
-| External services & APIs | ☐ | — |
-| Domain registrar | ☐ | — |
-| Other | ☐ | — |
+| Database | ☐ |, |
+| External services & APIs | ☐ |, |
+| Domain registrar | ☐ |, |
+| Other | ☐ |, |
 
 All credential values are transmitted outside this document via: _(specify secure method)_
 

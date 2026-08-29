@@ -1,8 +1,8 @@
-# Processus de révision éditoriale — Contenus assistés par IA
+# Processus de révision éditoriale, Contenus assistés par IA
 
 **Version :** 1.0  
 **En vigueur :** 2 août 2026  
-**Base légale :** EU AI Act art. 50 §4 — Règlement UE 2024/1689  
+**Base légale :** EU AI Act art. 50 §4, Règlement UE 2024/1689  
 **Responsable :** Équipe éditoriale AEGRYN  
 **Contact :** contact@boha-group.com
 
@@ -14,7 +14,7 @@ Ce document décrit le processus interne de révision humaine appliqué à tout 
 
 Il constitue la **trace documentaire** de la responsabilité éditoriale AEGRYN au sens de l'article 50 §4 du EU AI Act, lequel exonère les déployeurs de l'obligation de mention explicite par unité de contenu lorsqu'une **révision humaine est mise en place et documentée**.
 
-AEGRYN a choisi de **cumuler** les deux dispositifs : mention éditoriale par article (`aiAssisted: true`) **et** documentation du processus interne — au-delà du minimum légal.
+AEGRYN a choisi de **cumuler** les deux dispositifs : mention éditoriale par article (`aiAssisted: true`) **et** documentation du processus interne, au-delà du minimum légal.
 
 ---
 
@@ -39,13 +39,13 @@ Ce processus s'applique à **tous les contenus** publiés sur aegryn.com qui ont
 
 ## 3. Étapes du processus de révision
 
-### Étape 1 — Génération assistée
+### Étape 1, Génération assistée
 
 - Un membre de l'équipe éditoriale formule le brief, les sources de données, et le cadrage factuel
 - Le système IA génère un premier jet
 - **Durée estimée :** variable selon la longueur
 
-### Étape 2 — Révision factuelle (obligatoire)
+### Étape 2, Révision factuelle (obligatoire)
 
 Le réviseur humain vérifie :
 
@@ -57,19 +57,19 @@ Le réviseur humain vérifie :
 | Ton éditorial | Respect du ton AEGRYN : factuel, institutionnel, sans hyperbole |
 | Mentions légales | Vérification que les disclaimers ("à titre indicatif", "consulter un professionnel") sont présents là où requis |
 
-### Étape 3 — Révision structurelle (obligatoire)
+### Étape 3, Révision structurelle (obligatoire)
 
 - Cohérence des H2/H3 avec le corps
 - Absence de répétitions ou d'artefacts IA (formulations génériques, hallucinations)
 - Vérification des liens internes et des ancres
 
-### Étape 4 — Validation finale et marquage
+### Étape 4, Validation finale et marquage
 
 - Le réviseur valide le contenu pour publication
 - Le champ `aiAssisted: true` est confirmé dans `data/articles.ts`
 - La date de publication est définie
 
-### Étape 5 — Publication
+### Étape 5, Publication
 
 - Merge du contenu sur `main`
 - Le bandeau éditorial "IA" s'affiche automatiquement sur la page article
@@ -82,8 +82,8 @@ Le réviseur humain vérifie :
 | Rôle | Responsabilité |
 |---|---|
 | **Rédacteur / Opérateur IA** | Brief, génération, premier jet |
-| **Réviseur éditorial** | Étapes 2 et 3 — révision factuelle et structurelle |
-| **Responsable publication** | Étape 4 — validation finale, marquage `aiAssisted`, merge |
+| **Réviseur éditorial** | Étapes 2 et 3, révision factuelle et structurelle |
+| **Responsable publication** | Étape 4, validation finale, marquage `aiAssisted`, merge |
 | **Responsable légal AEGRYN** | Mise à jour de ce document, conformité EU AI Act |
 
 > En l'absence d'une équipe dédiée, le fondateur assume les rôles de réviseur éditorial et responsable publication.
@@ -95,7 +95,7 @@ Le réviseur humain vérifie :
 ### Traçabilité technique
 
 Chaque article publié est traçable via :
-- Le commit Git associé (auteur, date, diff) — repo `BOHA-Group/aegryn-website`
+- Le commit Git associé (auteur, date, diff), repo `BOHA-Group/aegryn-website`
 - Le champ `date` dans `data/articles.ts` (date de publication)
 - Le champ `aiAssisted: true` indiquant le statut IA-assisté
 
@@ -145,8 +145,8 @@ Ce document est mis à jour :
 
 | Version | Date | Auteur | Changement |
 |---|---|---|---|
-| 1.0 | 2026-08-04 | AEGRYN | Création initiale — mise en conformité EU AI Act art. 50 |
+| 1.0 | 2026-08-04 | AEGRYN | Création initiale, mise en conformité EU AI Act art. 50 |
 
 ---
 
-*Ce document est interne à AEGRYN. Il est versionné dans le dépôt Git du projet et n'est pas destiné à être publié publiquement dans son intégralité — seuls les éléments synthétiques figurant sur `/terms/ai-usage` sont destinés au public.*
+*Ce document est interne à AEGRYN. Il est versionné dans le dépôt Git du projet et n'est pas destiné à être publié publiquement dans son intégralité, seuls les éléments synthétiques figurant sur `/terms/ai-usage` sont destinés au public.*

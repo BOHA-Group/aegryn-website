@@ -1,6 +1,6 @@
-# TRANSFER_CHECKLIST — Asset Transaction Protocol (PTT)
+# TRANSFER_CHECKLIST, Asset Transaction Protocol (PTT)
 
-> **Audience:** Internal — Aegryn team  
+> **Audience:** Internal, Aegryn team  
 > **Usage:** One checklist instance per transaction. Duplicate and fill in per asset.  
 > **Last updated:** 2026-08
 
@@ -19,7 +19,7 @@
 
 ---
 
-## Phase 1 — Pre-Certification
+## Phase 1, Pre-Certification
 
 | # | Action | Owner | Status |
 |---|---|---|---|
@@ -35,7 +35,7 @@
 
 ---
 
-## Phase 2 — Certification (CIFS Audit)
+## Phase 2, Certification (CIFS Audit)
 
 | # | Action | Owner | Status |
 |---|---|---|---|
@@ -55,7 +55,7 @@
 
 ---
 
-## Phase 3 — Market Phase
+## Phase 3, Market Phase
 
 | # | Action | Owner | Status |
 |---|---|---|---|
@@ -73,7 +73,7 @@
 
 ---
 
-## Phase 4 — Closing
+## Phase 4, Closing
 
 | # | Action | Owner | Status |
 |---|---|---|---|
@@ -94,4 +94,4 @@
 
 ## Notes
 
-_(Free field — add any transaction-specific notes here)_
+_(Free field, add any transaction-specific notes here)_

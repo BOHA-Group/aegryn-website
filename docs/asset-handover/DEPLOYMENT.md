@@ -1,7 +1,7 @@
-# DEPLOYMENT — [Asset Name]
+# DEPLOYMENT, [Asset Name]
 
-> **Document type:** Asset handover — deployment guide  
-> **CIFS dimension:** C (Code — CI/CD, architecture)  
+> **Document type:** Asset handover, deployment guide  
+> **CIFS dimension:** C (Code, CI/CD, architecture)  
 > **Last updated:** _(to be filled)_
 
 ---
@@ -10,9 +10,9 @@
 
 | Environment | URL | Branch | Notes |
 |---|---|---|---|
-| Production | _(URL)_ | _(e.g. main)_ | — |
-| Staging | _(URL)_ | _(e.g. preview)_ | — |
-| Local | localhost:_(port)_ | — | — |
+| Production | _(URL)_ | _(e.g. main)_ |, |
+| Staging | _(URL)_ | _(e.g. preview)_ |, |
+| Local | localhost:_(port)_ |, |, |
 
 ---
 
@@ -38,7 +38,7 @@ _(e.g. npm install)_
 
 # Copy environment variables
 cp .env.example .env.local
-# Fill in required values — see CREDENTIALS.md inventory
+# Fill in required values, see CREDENTIALS.md inventory
 
 # Start development server
 _(e.g. npm run dev)_
@@ -51,7 +51,7 @@ _(e.g. npm run dev)_
 | Variable | Purpose | Required |
 |---|---|---|
 | _(e.g. DATABASE_URL)_ | _(database connection)_ | Yes / No |
-| — | — | — |
+|, |, |, |
 
 > Values are not stored here. See `CREDENTIALS.md` for the full inventory. Actual values are transmitted securely at closing.
 

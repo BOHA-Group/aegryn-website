@@ -1,12 +1,12 @@
-# DATA ROOM CHECKLIST — CIFS v1.0
+# DATA ROOM CHECKLIST, CIFS v1.0
 
-> **Audience:** Sellers — transmitted at onboarding  
+> **Audience:** Sellers, transmitted at onboarding  
 > **Instructions:** Upload each document to your secure Aegryn seller space.  
 > Status legend: **Required** = mandatory for certification / **Recommended** = improves your score
 
 ---
 
-## Dimension C — Code & Architecture
+## Dimension C, Code & Architecture
 
 | Code | Document | Status | Format |
 |---|---|---|---|
@@ -22,7 +22,7 @@
 
 ---
 
-## Dimension I — IP & Rights
+## Dimension I, IP & Rights
 
 | Code | Document | Status | Format |
 |---|---|---|---|
@@ -39,7 +39,7 @@
 
 ---
 
-## Dimension F — Finance
+## Dimension F, Finance
 
 | Code | Document | Status | Format |
 |---|---|---|---|
@@ -55,19 +55,19 @@
 
 ---
 
-## Dimension S — Security
+## Dimension S, Security
 
 | Code | Document | Status | Format |
 |---|---|---|---|
 | S-01 | GDPR / LPD data processing register | Required | PDF or spreadsheet |
 | S-02 | Privacy policy (current, published URL or PDF) | Required | PDF or URL |
-| S-03 | DPA — Data Processing Agreement (with processors) | Required | PDF |
+| S-03 | DPA, Data Processing Agreement (with processors) | Required | PDF |
 | S-04 | Latest external pentest report | Required | PDF |
 | S-05 | Access control policy (admin access, MFA status) | Required | PDF or MD |
 | S-06 | Encryption documentation (at rest + in transit) | Required | PDF or MD |
 | S-07 | ISO 27001 / SOC 2 certificate (if applicable) | Recommended | PDF |
 | S-08 | Past security incident report(s) with resolution | Recommended | PDF |
-| S-09 | BCP / DRP — Business Continuity / Disaster Recovery Plan | Recommended | PDF or MD |
+| S-09 | BCP / DRP, Business Continuity / Disaster Recovery Plan | Recommended | PDF or MD |
 
 ---
 

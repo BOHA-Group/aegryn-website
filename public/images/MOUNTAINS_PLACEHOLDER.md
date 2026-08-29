@@ -1,6 +1,6 @@
-# Image signature — NON NÉGOCIABLE
+# Image signature, NON NÉGOCIABLE
 
-Placer ici `mountains.jpg` — photo des Alpes suisses en noir & blanc,
+Placer ici `mountains.jpg`, photo des Alpes suisses en noir & blanc,
 grain cinématique. C'est l'ancre visuelle identitaire d'AEGRYN.
 
 Specs techniques :

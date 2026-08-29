@@ -1,6 +1,6 @@
-# ARCHITECTURE — [Asset Name]
+# ARCHITECTURE, [Asset Name]
 
-> **Document type:** Asset handover — technical architecture  
+> **Document type:** Asset handover, technical architecture  
 > **CIFS dimension:** C (Code & Architecture)  
 > **Last updated:** _(to be filled)_
 
@@ -10,15 +10,15 @@
 
 | Layer | Technology | Version | Notes |
 |---|---|---|---|
-| Frontend | _(e.g. React, Vue, etc.)_ | — | — |
-| Backend | _(e.g. Node.js, Python, etc.)_ | — | — |
-| Database | _(e.g. PostgreSQL)_ | — | — |
-| Cache | _(e.g. Redis)_ | — | — |
-| Storage | _(e.g. S3, R2)_ | — | — |
-| Auth | _(e.g. Auth0, Supabase)_ | — | — |
-| Email | _(e.g. Resend, SendGrid)_ | — | — |
-| Hosting | _(e.g. Vercel, AWS EC2)_ | — | — |
-| CDN | _(e.g. Cloudflare)_ | — | — |
+| Frontend | _(e.g. React, Vue, etc.)_ |, |, |
+| Backend | _(e.g. Node.js, Python, etc.)_ |, |, |
+| Database | _(e.g. PostgreSQL)_ |, |, |
+| Cache | _(e.g. Redis)_ |, |, |
+| Storage | _(e.g. S3, R2)_ |, |, |
+| Auth | _(e.g. Auth0, Supabase)_ |, |, |
+| Email | _(e.g. Resend, SendGrid)_ |, |, |
+| Hosting | _(e.g. Vercel, AWS EC2)_ |, |, |
+| CDN | _(e.g. Cloudflare)_ |, |, |
 
 ---
 
@@ -42,7 +42,7 @@ _(Describe the overall architecture: monolithic / microservices / serverless / d
 | Decision | Rationale | Date |
 |---|---|---|
 | _(e.g. chose PostgreSQL over MongoDB)_ | _(reason)_ | _(date)_ |
-| — | — | — |
+|, |, |, |
 
 ---
 
@@ -51,7 +51,7 @@ _(Describe the overall architecture: monolithic / microservices / serverless / d
 | Service | Purpose | Critical | Contracted |
 |---|---|---|---|
 | _(e.g. Stripe)_ | _(payments)_ | Yes / No | Yes / No |
-| — | — | — | — |
+|, |, |, |, |
 
 ---
 
@@ -67,4 +67,4 @@ _(List known tech debt items, their severity, and estimated remediation effort. 
 
 | Item | Severity | Effort | Notes |
 |---|---|---|---|
-| — | Low / Medium / High | — | — |
+|, | Low / Medium / High |, |, |

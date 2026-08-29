@@ -1,4 +1,4 @@
-# Audio source — Aegryn ambient player
+# Audio source, Aegryn ambient player
 
 Placer ici le fichier source audio :
 

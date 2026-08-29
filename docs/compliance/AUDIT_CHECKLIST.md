@@ -1,6 +1,6 @@
-# AUDIT CHECKLIST — GDPR · LPD · AI Act
+# AUDIT CHECKLIST, GDPR · LPD · AI Act
 
-> **Audience:** Internal — Aegryn / BOHA Group  
+> **Audience:** Internal, Aegryn / BOHA Group  
 > **Usage:** Use this checklist to prepare for or respond to a regulatory audit. Run it at least annually.  
 > **Last updated:** 2026-08
 
@@ -11,12 +11,12 @@
 For each item:
 - ✅ = in place and documented
 - ⚠️ = partial / needs update
-- ❌ = missing — action required
+- ❌ = missing, action required
 - N/A = not applicable
 
 ---
 
-## Section 1 — GDPR Fundamentals
+## Section 1, GDPR Fundamentals
 
 | # | Item | Reference | Status |
 |---|---|---|---|
@@ -27,15 +27,15 @@ For each item:
 | 1.5 | DPA signed with all processors (Art. 28) | `DPA_TEMPLATE.md` | ❌ DPAs not yet formally accepted |
 | 1.6 | Sub-processor lists reviewed | `DPA_TEMPLATE.md` | ⚠️ |
 | 1.7 | Data breach response procedure defined | `BREACH_RESPONSE.md` | ✅ |
-| 1.8 | Breach log maintained | `BREACH_RESPONSE.md` §4 | ✅ (empty — no breaches) |
+| 1.8 | Breach log maintained | `BREACH_RESPONSE.md` §4 | ✅ (empty, no breaches) |
 | 1.9 | Retention periods defined per processing activity | `GDPR_REGISTER.md` | ✅ |
 | 1.10 | Data minimisation applied (only necessary data collected) | Code + DB schema | ⚠️ Confirm no excess fields |
 | 1.11 | International transfer safeguards in place (SCCs) | `DPA_TEMPLATE.md` | ⚠️ Formal acceptance pending |
-| 1.12 | DPIA conducted for high-risk processing | N/A — no high-risk identified | ✅ N/A |
+| 1.12 | DPIA conducted for high-risk processing | N/A, no high-risk identified | ✅ N/A |
 
 ---
 
-## Section 2 — Swiss LPD (nLPD)
+## Section 2, Swiss LPD (nLPD)
 
 | # | Item | Reference | Status |
 |---|---|---|---|
@@ -48,14 +48,14 @@ For each item:
 
 ---
 
-## Section 3 — EU AI Act
+## Section 3, EU AI Act
 
 | # | Item | Reference | Status |
 |---|---|---|---|
 | 3.1 | AI systems inventory completed | `AI_ACT_COMPLIANCE.md` §1 | ✅ |
 | 3.2 | Risk classification assessed for each AI system | `AI_ACT_COMPLIANCE.md` §2 | ✅ |
 | 3.3 | Prohibited practices confirmed as not used | `AI_ACT_COMPLIANCE.md` §4 | ✅ |
-| 3.4 | Art. 50 transparency — AI content labelled | `ai-editorial-review-process.md` | ✅ |
+| 3.4 | Art. 50 transparency, AI content labelled | `ai-editorial-review-process.md` | ✅ |
 | 3.5 | Human review process documented | `ai-editorial-review-process.md` | ✅ |
 | 3.6 | CIFS engine human oversight confirmed | `GRADING_PROTOCOL.md` §8 | ✅ |
 | 3.7 | Annual AI Act review scheduled | `AI_ACT_COMPLIANCE.md` §6 | ⚠️ Calendar entry needed |
@@ -63,7 +63,7 @@ For each item:
 
 ---
 
-## Section 4 — Technical Security (GDPR Art. 32)
+## Section 4, Technical Security (GDPR Art. 32)
 
 | # | Item | Reference | Status |
 |---|---|---|---|
@@ -71,8 +71,8 @@ For each item:
 | 4.2 | Row-Level Security (RLS) enforced on all tables | Supabase migrations | ✅ |
 | 4.3 | No UUIDs or internal IDs in client API responses | Code audit 2026-08 | ✅ |
 | 4.4 | No Postgres error messages exposed to clients | Code audit 2026-08 | ✅ |
-| 4.5 | Admin routes protected (auth check on all /admin/*) | Code audit 2026-08 — `proxy.ts` + `requireAdmin()`, no token in URLs/props/bodies | ✅ |
-| 4.5b | Column-level access control on sensitive fields (admin-only notes) | Migration `065_restrict_profiles_admin_note.sql` — `profiles.admin_note` was readable by any user for their own row via direct REST call; fixed via GRANT/REVOKE column privileges | ✅ Fixed 2026-08 |
+| 4.5 | Admin routes protected (auth check on all /admin/*) | Code audit 2026-08, `proxy.ts` + `requireAdmin()`, no token in URLs/props/bodies | ✅ |
+| 4.5b | Column-level access control on sensitive fields (admin-only notes) | Migration `065_restrict_profiles_admin_note.sql`, `profiles.admin_note` was readable by any user for their own row via direct REST call; fixed via GRANT/REVOKE column privileges | ✅ Fixed 2026-08 |
 | 4.6 | MFA available for user accounts | Supabase Auth | ⚠️ Available but not enforced |
 | 4.7 | Referral cross-data blocked (no UUID leakage) | Commits 82866af, cb44003 | ✅ |
 | 4.8 | grade engine admin-only, not importable client-side | `lib/gradeEngine.ts` | ✅ |
@@ -81,7 +81,7 @@ For each item:
 
 ---
 
-## Section 5 — Documents to Present in Case of Audit
+## Section 5, Documents to Present in Case of Audit
 
 | Document | Location | Ready |
 |---|---|---|
@@ -93,8 +93,8 @@ For each item:
 | AI editorial review process | `docs/compliance/ai-editorial-review-process.md` | ✅ |
 | Cookie consent architecture | `docs/compliance/COOKIE_CONSENT.md` | ✅ |
 | Git history (traceability) | `git log --all --oneline` | ✅ |
-| Privacy policy (public) | `aegryn.com/[locale]/privacy` — 6 locales | ✅ |
-| Security policy (public) | `aegryn.com/[locale]/security` — 6 locales | ✅ |
+| Privacy policy (public) | `aegryn.com/[locale]/privacy`, 6 locales | ✅ |
+| Security policy (public) | `aegryn.com/[locale]/security`, 6 locales | ✅ |
 | CGV (public) | `aegryn.com/terms/cgv` | ⚠️ Awaiting lawyer |
 | AI usage notice (public) | `aegryn.com/terms/ai-usage` | ✅ |
 
@@ -110,6 +110,6 @@ For each item:
 | 🟡 | Review `/privacy` content for GDPR Art. 13/14 completeness (referral, CIFS, NDA processing) |
 | 🟡 | Verify export/anonymise/delete-partial APIs cover all tables in GDPR_REGISTER |
 | 🟡 | Enforce MFA on admin accounts |
-| 🟡 | `ADMIN_LEADS_TOKEN` rotated 2026-08 (old value invalidated). Confirmed no Supabase-side caller (no `pg_net`/`http` extension, no `cron`/`supabase_functions` schema, zero Edge Functions) and no external script for `bulk-delete`/`update-lot` — token removed entirely from both, session-cookie-only now. Still accepted as secondary credential in ~16 remaining admin API routes (UI-driven, cookie-first). Consider short-lived rotating token (Stripe/GitHub-style) if external automation is required long-term |
+| 🟡 | `ADMIN_LEADS_TOKEN` rotated 2026-08 (old value invalidated). Confirmed no Supabase-side caller (no `pg_net`/`http` extension, no `cron`/`supabase_functions` schema, zero Edge Functions) and no external script for `bulk-delete`/`update-lot`, token removed entirely from both, session-cookie-only now. Still accepted as secondary credential in ~16 remaining admin API routes (UI-driven, cookie-first). Consider short-lived rotating token (Stripe/GitHub-style) if external automation is required long-term |
 | 🟢 | Designate Data Protection Advisor (LPD) |
 | 🟢 | Schedule annual AI Act review |

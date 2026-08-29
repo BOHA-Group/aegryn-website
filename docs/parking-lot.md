@@ -1,4 +1,4 @@
-# Parking Lot — Fonctionnalités en attente & éléments archivés
+# Parking Lot, Fonctionnalités en attente & éléments archivés
 
 > Source unique. Ne pas créer de second fichier `parking-lot.md` à la racine.  
 > Ajouter toute nouvelle entrée ici, en respectant la structure : **En attente** → **Archivé / Résolu**.
@@ -7,27 +7,27 @@
 
 ## 🔴 HAUTE PRIORITÉ
 
-### Factures admin — Bouton "Enregistrer et envoyer" + email amélioré
+### Factures admin, Bouton "Enregistrer et envoyer" + email amélioré
 
 **Contexte :**
 Le bouton "Enregistrer + Envoyer email" a été temporairement supprimé (workflow manuel). À remettre.
 
 **Ce qui est à faire :**
 1. Remettre le bouton "Enregistrer et envoyer" dans `InvoiceEditor.tsx`
-2. L'appel API existe déjà (`send_email: true` dans le PATCH) — câblage à rétablir
+2. L'appel API existe déjà (`send_email: true` dans le PATCH), câblage à rétablir
 3. **Email :** adresse expéditeur = `finance@boha-group.com` (pas `no-reply@boha-group.com`)
-4. **Contenu email :** ne pas mentionner IBAN/BOHA-Group — inclure à la place un **lien de paiement Stripe** directement dans le corps de l'email
+4. **Contenu email :** ne pas mentionner IBAN/BOHA-Group, inclure à la place un **lien de paiement Stripe** directement dans le corps de l'email
 5. Ajouter une phrase de remerciement et salutation avant la signature
-6. **Template PDF :** retirer toute mention IBAN — remplacer par "Règlement par lien de paiement transmis séparément"
+6. **Template PDF :** retirer toute mention IBAN, remplacer par "Règlement par lien de paiement transmis séparément"
 
 **Fichiers concernés :**
-- `app/admin/invoices/[id]/InvoiceEditor.tsx` — remettre le bouton + état `sent`
-- `app/api/admin/invoices/[id]/route.ts` — modifier `send_email` block (from, contenu, lien Stripe)
-- `app/api/admin/invoices/[id]/pdf/route.ts` — retirer mention IBAN du template HTML
+- `app/admin/invoices/[id]/InvoiceEditor.tsx`, remettre le bouton + état `sent`
+- `app/api/admin/invoices/[id]/route.ts`, modifier `send_email` block (from, contenu, lien Stripe)
+- `app/api/admin/invoices/[id]/pdf/route.ts`, retirer mention IBAN du template HTML
 
 ---
 
-### Liens de paiement Stripe — Certifications AEGRYN
+### Liens de paiement Stripe, Certifications AEGRYN
 
 **Contexte :**
 Créer deux liens de paiement Stripe pour les certifications partenaires (CAS 3 / accréditation).
@@ -35,8 +35,8 @@ Créer deux liens de paiement Stripe pour les certifications partenaires (CAS 3 
 **À créer dans Stripe Dashboard (mode production) :**
 | Produit | Montant | Usage |
 |---|---|---|
-| Certification AEGRYN — Niveau 1 | CHF 2 000 | Accréditation partenaire standard |
-| Certification AEGRYN — Niveau 2 | CHF 5 000 | Accréditation partenaire premium |
+| Certification AEGRYN, Niveau 1 | CHF 2 000 | Accréditation partenaire standard |
+| Certification AEGRYN, Niveau 2 | CHF 5 000 | Accréditation partenaire premium |
 
 **Actions :**
 1. Créer les Payment Links dans le Stripe Dashboard (production)
@@ -47,7 +47,7 @@ Créer deux liens de paiement Stripe pour les certifications partenaires (CAS 3 
 
 ## 🟡 PRIORITÉ MOYENNE
 
-### Notifications in-app — Parrainage expert
+### Notifications in-app, Parrainage expert
 
 **Contexte :**
 Le système de parrainage expert génère des événements qui mériteraient des notifications in-app pour les deux parties.
@@ -62,7 +62,7 @@ Le système de parrainage expert génère des événements qui mériteraient des
 | Abonnement expert arrive à expiration (J-7) | Partenaire | "Votre abonnement Fiche Expert expire dans 7 jours." |
 
 **Prérequis :**
-- Table `user_notifications` (existante — à vérifier schéma)
+- Table `user_notifications` (existante, à vérifier schéma)
 - Décider du canal : in-app (toast/badge), email, ou les deux
 - Intégrer dans le webhook Stripe (`applyReferralReward`) et dans `/api/admin/expert/subscription`
 
@@ -70,11 +70,11 @@ Le système de parrainage expert génère des événements qui mériteraient des
 
 ## 🟢 BASSE PRIORITÉ
 
-### Commissions — Espace Acquéreur (masqué)
+### Commissions, Espace Acquéreur (masqué)
 
 **Contexte :**
 La page `/client/buyer/commissions` affiche les frais de transaction dus par l'acquéreur à AEGRYN.
-Fonctionnalité non activée — le flux de facturation n'est pas encore opérationnel.
+Fonctionnalité non activée, le flux de facturation n'est pas encore opérationnel.
 
 **Ce qui existe (archivé, ne pas supprimer) :**
 - Page : `app/client/buyer/commissions/page.tsx`
@@ -92,7 +92,7 @@ Fonctionnalité non activée — le flux de facturation n'est pas encore opérat
 
 ## � INFRA & CONFIGURATION
 
-### DNS & Domaines — aegryn.com
+### DNS & Domaines, aegryn.com
 
 **Statut :** À valider/compléter
 
@@ -110,16 +110,16 @@ Fonctionnalité non activée — le flux de facturation n'est pas encore opérat
     - `@` TXT Google verification → `google-site-verification=mvJBVtITTwiGgUnI1JmQcZzZuklIyAs4nDUhGUl9vjU`
     - MX Google → seulement si Google Workspace activé sur aegryn.com
   - **Garder** : NS `dns200.anycast.me` + `ns200.anycast.me`
-- [x] Mettre à jour le CNAME `aegryn` dans `boha-group.com` ✅ — transitoire jusqu'à bascule complète
+- [x] Mettre à jour le CNAME `aegryn` dans `boha-group.com` ✅, transitoire jusqu'à bascule complète
 
 ---
 
-### Webflow — Migration boha-group.com → aegryn.com
+### Webflow, Migration boha-group.com → aegryn.com
 
 - [x] Redirection Webflow 301 : `/*` → `https://aegryn.com/$1` ✅ active
 - [ ] Couper l'abonnement Webflow → Account → Plans → Cancel  
-  *(Les MX Google Workspace dans OVH ne bougent pas — emails `@boha-group.com` non impactés)*
-- [ ] **Après coupure Webflow — séquence exacte :**
+  *(Les MX Google Workspace dans OVH ne bougent pas, emails `@boha-group.com` non impactés)*
+- [ ] **Après coupure Webflow, séquence exacte :**
   1. Webflow → retirer domaine custom `boha-group.com`
   2. Vercel → projet `aegryn-website` → Settings → Domains → Add `boha-group.com` → Redirect to `aegryn.com` (301)
   3. OVH → `boha-group.com` → Zone DNS → `www` CNAME : `cdn.webflow.com.` → `cname.vercel-dns.com.`
@@ -152,29 +152,29 @@ Fonctionnalité non activée — le flux de facturation n'est pas encore opérat
 
 ---
 
-### Harmonisation labels hero — format texte "rappel section"
+### Harmonisation labels hero, format texte "rappel section"
 
 **Constaté le :** 2026-08-28  
-**Contexte :** Audit visuel des pages publiques — 3 formats coexistent pour le label au-dessus du H1.
+**Contexte :** Audit visuel des pages publiques, 3 formats coexistent pour le label au-dessus du H1.
 
-**Format A — fond blanc (about, career, contact, experts…)**  
-`font-sans font-semibold text-[11px] uppercase tracking-[0.25–0.28em] text-ag-gray-light` — pas de barre, pas de tiret
+**Format A, fond blanc (about, career, contact, experts…)**  
+`font-sans font-semibold text-[11px] uppercase tracking-[0.25–0.28em] text-ag-gray-light`, pas de barre, pas de tiret
 
-**Format B — fond navy (catalog, transact, mandate, grade/submit…)**  
+**Format B, fond navy (catalog, transact, mandate, grade/submit…)**  
 `font-[mono|sans] text-[10px] uppercase tracking-[0.28em] text-ag-apex flex items-center gap-3` + `<span w-6 h-px bg-ag-apex/50 />`
 
-**Format C — contact (isolé, écart)**  
-`font-sans font-semibold text-xs uppercase tracking-[0.3em] text-ag-apex` → utilise `text-ag-apex` (vert) sans barre sur fond blanc — incohérent avec Format A
+**Format C, contact (isolé, écart)**  
+`font-sans font-semibold text-xs uppercase tracking-[0.3em] text-ag-apex` → utilise `text-ag-apex` (vert) sans barre sur fond blanc, incohérent avec Format A
 
 **Ce qui est à faire :**
 - `app/[locale]/contact/page.tsx` ligne 27 : passer `text-ag-apex` → `text-ag-gray-light` (aligner sur Format A fond blanc)
 - `app/[locale]/about/page.tsx` ligne 57 : décider si le préfixe `/` devant les labels de sections internes est intentionnel (typographie éditoriale) ou à supprimer
 
-**Priorité :** basse — purement visuel, non bloquant
+**Priorité :** basse, purement visuel, non bloquant
 
 ---
 
-### Code — tâches mineures
+### Code, tâches mineures
 
 - [ ] **URL Subblink** : remplacer `https://subblink.boha-group.com` par `https://subblink.app`
   - `components/sections/AssetDrawer.tsx:30`
@@ -183,15 +183,15 @@ Fonctionnalité non activée — le flux de facturation n'est pas encore opérat
 
 ---
 
-## �🔵 ARCHIVÉ — À réactiver sur décision
+## �🔵 ARCHIVÉ, À réactiver sur décision
 
 ---
 
-## Espace Client — Chemins bloqués en production
+## Espace Client, Chemins bloqués en production
 
 **Bloqué le :** 29/07/2026  
 **Condition :** `VERCEL_ENV === 'production'` (serveur) ou `NEXT_PUBLIC_VERCEL_ENV === 'production'` (client)  
-**Raison :** Problèmes d'hydratation React + navigation compte non résolus — à réouvrir après stabilisation
+**Raison :** Problèmes d'hydratation React + navigation compte non résolus, à réouvrir après stabilisation
 
 ### Chemins bloqués et mécanisme
 
@@ -199,11 +199,11 @@ Fonctionnalité non activée — le flux de facturation n'est pas encore opérat
 |---|---|---|
 | `/client/login` (URL directe) | `app/client/login/page.tsx:18` | `if (process.env.VERCEL_ENV === 'production') redirect('/')` |
 | `/client/register` (URL directe) | `app/client/register/page.tsx:14` | `if (process.env.VERCEL_ENV === 'production') redirect('/')` |
-| Nav desktop — bouton connexion | `components/layout/Nav.tsx:333` | `process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'` → `<span>` grisé + badge "Soon" |
-| Nav mobile — bouton connexion | `components/layout/Nav.tsx:521` | idem |
-| `/transact/catalog` — CTA login + register | `app/[locale]/transact/catalog/page.tsx:153` | `process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` |
-| `/transact/sessions` — lien register | `app/[locale]/transact/sessions/page.tsx:120` | `process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` |
-| `/grade/submit/success` — bouton "Accéder à mon espace" | `app/[locale]/grade/submit/success/page.tsx:33` | `process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` |
+| Nav desktop, bouton connexion | `components/layout/Nav.tsx:333` | `process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'` → `<span>` grisé + badge "Soon" |
+| Nav mobile, bouton connexion | `components/layout/Nav.tsx:521` | idem |
+| `/transact/catalog`, CTA login + register | `app/[locale]/transact/catalog/page.tsx:153` | `process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` |
+| `/transact/sessions`, lien register | `app/[locale]/transact/sessions/page.tsx:120` | `process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` |
+| `/grade/submit/success`, bouton "Accéder à mon espace" | `app/[locale]/grade/submit/success/page.tsx:33` | `process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'` |
 
 ### Pour réouvrir (tout ou partie)
 
@@ -222,33 +222,33 @@ Fonctionnalité non activée — le flux de facturation n'est pas encore opérat
 ### Global-error en production
 ~~`app/global-error.tsx` : `useEffect` déclenche `window.location.reload()` automatiquement si `NEXT_PUBLIC_VERCEL_ENV === 'production'`.~~
 
-**✅ RÉSOLU le 02/08/2026** — Workaround supprimé. Cause racine corrigée (voir section ci-dessous).
+**✅ RÉSOLU le 02/08/2026**, Workaround supprimé. Cause racine corrigée (voir section ci-dessous).
 
 ---
 
-## ✅ Fix hydration NotFoundError — RÉSOLU (02/08/2026)
+## ✅ Fix hydration NotFoundError, RÉSOLU (02/08/2026)
 
 **Problème :** `NotFoundError: removeChild` au démontage de composants à la navigation SPA (React 19 + GSAP).
 
 **Cause racine double :**
-1. **SplitText** wrap les nœuds texte dans des `<div>` intermédiaires — React perdait la référence à ses nœuds enfants au démontage. Corrigé avec `dangerouslySetInnerHTML` sur les éléments ciblés par SplitText.
-2. **ScrollTrigger `pin: true`** reparente physiquement le nœud dans un `pin-spacer` GSAP. Le cleanup `ctx.revert()` dans `useEffect` arrivait trop tard (asynchrone) — React tentait déjà `removeChild`. Corrigé en passant à `useLayoutEffect` (synchrone).
+1. **SplitText** wrap les nœuds texte dans des `<div>` intermédiaires, React perdait la référence à ses nœuds enfants au démontage. Corrigé avec `dangerouslySetInnerHTML` sur les éléments ciblés par SplitText.
+2. **ScrollTrigger `pin: true`** reparente physiquement le nœud dans un `pin-spacer` GSAP. Le cleanup `ctx.revert()` dans `useEffect` arrivait trop tard (asynchrone), React tentait déjà `removeChild`. Corrigé en passant à `useLayoutEffect` (synchrone).
 
 **Commits :**
-- `9d02043` — dangerouslySetInnerHTML + ordre split.revert() avant ctx.revert() (11 composants)
-- `c19b009` — useLayoutEffect sur 6 composants pin:true
+- `9d02043`, dangerouslySetInnerHTML + ordre split.revert() avant ctx.revert() (11 composants)
+- `c19b009`, useLayoutEffect sur 6 composants pin:true
 
 **Fichiers modifiés :**
 - `components/sections/HeroMountain.tsx`, `ManifestoSection.tsx`, `AssetHeroBanner.tsx`, `AssetHeroBannerVideo.tsx`, `AssetGrid.tsx`, `EcosystemDomains.tsx`, `StatementStrip.tsx`, `TransactionHero.tsx`, `GradeHero.tsx`, `WhyUseApps.tsx`, `MissionVideoSection.tsx`
 - `components/sections/AssetCarousel.tsx`, `HomeVideoSection.tsx`, `LogoZoomSection.tsx`, `VisionMissionBlock.tsx`
-- `app/global-error.tsx` — suppression du workaround `window.location.reload()`
+- `app/global-error.tsx`, suppression du workaround `window.location.reload()`
 
 ---
 
-## Meta Pixel — ID à configurer
+## Meta Pixel, ID à configurer
 
 **Archivé le :** 26/07/2026  
-**Statut :** Composant prêt (`components/analytics/MetaPixel.tsx`) — en attente de l'ID
+**Statut :** Composant prêt (`components/analytics/MetaPixel.tsx`), en attente de l'ID
 
 ### Pour activer
 Dans Vercel → Environment Variables :
@@ -260,10 +260,10 @@ Aucune modification de code requise.
 
 ---
 
-## Assessment Days — Page & Feature complète
+## Assessment Days, Page & Feature complète
 
 **Archivé le :** 28/07/2026  
-**Statut :** Masqué — page prête, namespace i18n complet × 6 langues, pas de route active
+**Statut :** Masqué, page prête, namespace i18n complet × 6 langues, pas de route active
 
 ### Description
 Journées d'expertise gratuites sur rendez-vous dans 4 villes européennes. Pre-screening confidentiel 45 min, estimation de grade indicatif, fourchette de valorisation.
@@ -285,10 +285,10 @@ Journées d'expertise gratuites sur rendez-vous dans 4 villes européennes. Pre-
 
 ---
 
-## Section "/ THE FOUNDER" — Page About
+## Section "/ THE FOUNDER", Page About
 
 **Archivé le :** 26/07/2026  
-**Statut :** Masquée — prête à réactiver
+**Statut :** Masquée, prête à réactiver
 
 ### Pour réactiver
 
@@ -298,12 +298,12 @@ Journées d'expertise gratuites sur rendez-vous dans 4 villes européennes. Pre-
    ```
 2. Remettre le bloc juste avant le CTA navy :
    ```tsx
-   {/* Founder — Rolex-style scroll reveal */}
+   {/* Founder, Rolex-style scroll reveal */}
    <FounderSection />
    ```
 
 ### Composant
-`components/sections/FounderSection.tsx` — GSAP pinned scroll, photo plein-section, overlay noir progressif, bio Yohann Bollack, liens LinkedIn + contact.
+`components/sections/FounderSection.tsx`, GSAP pinned scroll, photo plein-section, overlay noir progressif, bio Yohann Bollack, liens LinkedIn + contact.
 
 ### Traductions utilisées
 Namespace `about`, clés : `founder.label`, `founder.role`, `founder.bio1`, `founder.bio2`, `founder.cta`

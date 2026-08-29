@@ -1,14 +1,14 @@
-# Issue Log — Bugs résolus
+# Issue Log, Bugs résolus
 
 Chronologie des bugs diagnostiqués et corrigés sur le projet AEGRYN.
 
 ---
 
-## ✅ ISSue-001 — Re-login immédiat dans l'espace client (session perdue)
+## ✅ ISSue-001, Re-login immédiat dans l'espace client (session perdue)
 
 **Détecté :** 02/08/2026  
 **Résolu :** 02/08/2026  
-**Commit fix :** `e79dedf` — `fix(cookie-script): charger directement via Script afterInteractive dans layout.tsx`  
+**Commit fix :** `e79dedf`, `fix(cookie-script): charger directement via Script afterInteractive dans layout.tsx`  
 **Environnement :** Vercel Preview (non reproductible en local)
 
 ### Symptôme
@@ -37,7 +37,7 @@ Audit complet mené en plusieurs étapes :
 1. **Middleware** (`proxy.ts`) : remplacement de `getClaims()` par `getSession()` pour éviter les échecs WebCrypto/JWKS en Edge Runtime → n'a pas résolu.
 2. **Variables d'environnement Vercel** : vérification des clés Supabase (format JWT legacy vs `sb_publishable_`), ajout de `.trim()` → n'a pas résolu.
 3. **Race condition GoTrueClient** : `DebugOverlay` créait sa propre instance `createBrowserClient` en parallèle du singleton → fix (réutilisation du singleton `lib/supabase.ts`) → n'a pas résolu seul.
-4. **CookieScript en mode auto-blocking** : le dashboard CookieScript affichait **"Installation FAILED"** car le script était chargé indirectement via GTM. CookieScript ne détectant pas sa propre installation, il activait un mode de blocage agressif interceptant les écritures `document.cookie` — y compris le cookie de session Supabase `sb-*`.
+4. **CookieScript en mode auto-blocking** : le dashboard CookieScript affichait **"Installation FAILED"** car le script était chargé indirectement via GTM. CookieScript ne détectant pas sa propre installation, il activait un mode de blocage agressif interceptant les écritures `document.cookie`, y compris le cookie de session Supabase `sb-*`.
 
 ### Cause racine
 
@@ -50,7 +50,7 @@ Le script CookieScript était chargé via un tag GTM (Google Tag Manager). GTM i
 Chargement de CookieScript **directement** via un tag `<Script>` Next.js dans `app/[locale]/layout.tsx` (stratégie `afterInteractive`) au lieu de passer par GTM :
 
 ```tsx
-// app/[locale]/layout.tsx — avant (via GTM, indirect)
+// app/[locale]/layout.tsx, avant (via GTM, indirect)
 // GTM chargeait CookieScript → "Installation FAILED"
 
 // Après (direct)
@@ -81,31 +81,31 @@ CookieScript détecte désormais correctement son installation, lit le consentem
 
 ---
 
-## ✅ ISSUE-002 — NotFoundError hydration React + GSAP (removeChild)
+## ✅ ISSUE-002, NotFoundError hydration React + GSAP (removeChild)
 
 **Détecté :** 01/08/2026  
 **Résolu :** 02/08/2026  
 **Commits :** `9d02043`, `c19b009`
 
-> Voir détail complet dans `docs/parking-lot.md` — section "Fix hydration NotFoundError".
+> Voir détail complet dans `docs/parking-lot.md`, section "Fix hydration NotFoundError".
 
 ---
 
 ---
 
-## ✅ ISSUE-003 — Bouton "RECEVOIR" hover invisible (magazine)
+## ✅ ISSUE-003, Bouton "RECEVOIR" hover invisible (magazine)
 
 **Détecté :** 2026-08-28  
 **Résolu :** 2026-08-28  
 **Commits :** `543cf08`, `f3a2c4d`  
 
-**Symptôme :** Au survol du bouton "RECEVOIR" sur la page magazine, le texte devenait invisible (blanc sur fond blanc) — `hover:text-white` purgé par Tailwind.  
+**Symptôme :** Au survol du bouton "RECEVOIR" sur la page magazine, le texte devenait invisible (blanc sur fond blanc), `hover:text-white` purgé par Tailwind.  
 **Fix :** Déplacement des styles hover vers une classe CSS dédiée `magazine-btn-receive` dans `styles/globals.css` avec valeurs hexadécimales explicites (`#0F1A2B` / `#ffffff`).  
 **Fichiers :** `components/magazine/IssueCard.tsx`, `styles/globals.css`
 
 ---
 
-## ✅ ISSUE-004 — Mini cover issue-01 affichage incorrect
+## ✅ ISSUE-004, Mini cover issue-01 affichage incorrect
 
 **Détecté :** 2026-08-28  
 **Résolu :** 2026-08-28  
@@ -117,7 +117,7 @@ CookieScript détecte désormais correctement son installation, lit le consentem
 
 ---
 
-## ✅ ISSUE-005 — Logo navbar : texte "formerly BOHA-Group" et format non officiel
+## ✅ ISSUE-005, Logo navbar : texte "formerly BOHA-Group" et format non officiel
 
 **Détecté :** 2026-08-28  
 **Résolu :** 2026-08-28  
@@ -129,7 +129,7 @@ CookieScript détecte désormais correctement son installation, lit le consentem
 
 ---
 
-## ✅ ISSUE-006 — "AEGRYN" isolé dupliqué en haut de la page magazine
+## ✅ ISSUE-006, "AEGRYN" isolé dupliqué en haut de la page magazine
 
 **Détecté :** 2026-08-28  
 **Résolu :** 2026-08-28  
@@ -141,7 +141,7 @@ CookieScript détecte désormais correctement son installation, lit le consentem
 
 ---
 
-## ✅ ISSUE-007 — Lien "< CERTIFICATION" parasite en haut de page soumettre
+## ✅ ISSUE-007, Lien "< CERTIFICATION" parasite en haut de page soumettre
 
 **Détecté :** 2026-08-28  
 **Résolu :** 2026-08-28  
@@ -153,4 +153,28 @@ CookieScript détecte désormais correctement son installation, lit le consentem
 
 ---
 
-*Ce fichier est mis à jour manuellement à chaque bug résolu.*
+## ✅ ISSUE-008, CI failure: unused 'resume' in IssueTickerCarousel
+
+**Detecte :** 2026-08-29  
+**Resolu :** 2026-08-29  
+**Commit :** `05f99c7`  
+
+**Symptome :** CI echoue sur `preview` : `'resume' is defined but never used` dans `IssueTickerCarousel.tsx`.  
+**Fix :** Ajout de `resume()` dans le handler `onMouseLeave` pour que la variable soit utilisee.  
+**Fichiers :** `components/magazine/IssueTickerCarousel.tsx`
+
+---
+
+## ✅ ISSUE-009, Badges "A venir" sur mini covers DiscoverStrip
+
+**Detecte :** 2026-08-29  
+**Resolu :** 2026-08-29  
+**Commit :** `05f99c7`  
+
+**Symptome :** Les 3 mini covers avec `sections.length === 0` affichaient le badge "A venir" dans le DiscoverStrip homepage.  
+**Fix :** Ajout du prop `decorative` a `IssueMiniCard`, qui retourne un rendu simplifie sans badge, sans lightbox, sans interaction.  
+**Fichiers :** `components/magazine/IssueMiniCard.tsx`, `components/sections/DiscoverStrip.tsx`
+
+---
+
+*Ce fichier est mis a jour manuellement a chaque bug resolu.*

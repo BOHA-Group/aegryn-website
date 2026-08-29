@@ -1,7 +1,7 @@
-# COOKIE CONSENT — Architecture & Compliance
+# COOKIE CONSENT, Architecture & Compliance
 
-> **Audience:** Internal — Aegryn / BOHA Group  
-> **Legal basis:** GDPR Art. 6(1)(a) + ePrivacy Directive — consent for non-essential cookies  
+> **Audience:** Internal, Aegryn / BOHA Group  
+> **Legal basis:** GDPR Art. 6(1)(a) + ePrivacy Directive, consent for non-essential cookies  
 > **Last updated:** 2026-08
 
 ---
@@ -10,10 +10,10 @@
 
 | Element | Status |
 |---|---|
-| Cookie banner implementation | _(to confirm — check components/analytics/)_ |
-| Consent management platform (CMP) | _(none identified — to implement)_ |
-| Analytics tool | Cloudflare Web Analytics — **cookie-free** ✅ |
-| Meta Pixel | Component ready (`MetaPixel.tsx`) — **pending ID configuration** |
+| Cookie banner implementation | _(to confirm, check components/analytics/)_ |
+| Consent management platform (CMP) | _(none identified, to implement)_ |
+| Analytics tool | Cloudflare Web Analytics, **cookie-free** ✅ |
+| Meta Pixel | Component ready (`MetaPixel.tsx`), **pending ID configuration** |
 | Other tracking | None identified |
 
 ---
@@ -31,21 +31,21 @@
 
 | Name | Purpose | Provider | Duration | Status |
 |---|---|---|---|---|
-| Cloudflare Web Analytics | Page view measurement | Cloudflare | No cookie — pixel only | ✅ No consent needed |
-| Meta Pixel | Ad conversion tracking | Meta | 90 days | ⚠️ Requires consent — ID not yet configured |
+| Cloudflare Web Analytics | Page view measurement | Cloudflare | No cookie, pixel only | ✅ No consent needed |
+| Meta Pixel | Ad conversion tracking | Meta | 90 days | ⚠️ Requires consent, ID not yet configured |
 
 ### 2.3 Marketing / Personalisation (consent required)
 
 | Name | Purpose | Provider | Status |
 |---|---|---|---|
-| _(none currently)_ | — | — | — |
+| _(none currently)_ |, |, |, |
 
 ---
 
 ## 3. Consent Architecture
 
 ### Current approach
-Cloudflare Web Analytics is cookie-free — **no consent banner required** for analytics alone.
+Cloudflare Web Analytics is cookie-free, **no consent banner required** for analytics alone.
 
 ### When Meta Pixel is activated
 A consent banner will be **mandatory** before the Meta Pixel fires.

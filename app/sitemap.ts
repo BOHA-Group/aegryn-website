@@ -43,6 +43,9 @@ const STATIC_ROUTES = [
   { path: '/services/build',                    priority: 0.7,  changeFrequency: 'monthly' as const },
   // ── Help / FAQ ────────────────────────────────────────────────────────────
   { path: '/help/faq',                          priority: 0.7,  changeFrequency: 'monthly' as const },
+  // ── Magazine ─────────────────────────────────────────────────────────────
+  { path: '/magazine',                           priority: 0.9,  changeFrequency: 'weekly'  as const },
+  { path: '/magazine/issue-01',                  priority: 0.8,  changeFrequency: 'monthly' as const },
   // ── Legal ─────────────────────────────────────────────────────────────────
   { path: '/terms/use',                         priority: 0.3,  changeFrequency: 'yearly'  as const },
   { path: '/terms/cgv',                         priority: 0.3,  changeFrequency: 'yearly'  as const },

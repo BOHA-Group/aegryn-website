@@ -1,8 +1,8 @@
-# BREACH RESPONSE — Data Breach Procedure
+# BREACH RESPONSE, Data Breach Procedure
 
-> **Audience:** Internal — Aegryn / BOHA Group  
+> **Audience:** Internal, Aegryn / BOHA Group  
 > **Legal basis:** GDPR Art. 33 (notification to authority) + Art. 34 (notification to individuals)  
-> **Also applies:** nLPD (Swiss) — notify FDPIC "as soon as possible"  
+> **Also applies:** nLPD (Swiss), notify FDPIC "as soon as possible"  
 > **Last updated:** 2026-08
 
 ---
@@ -28,36 +28,36 @@ Examples relevant to Aegryn:
 ## 2. Response Timeline
 
 ```
-T+0 — Breach detected or suspected
-T+0 to T+4h — Initial assessment and containment
-T+4h to T+24h — Severity assessment + internal escalation
-T+24h to T+72h — Regulatory notification (if required) ← GDPR hard deadline
-T+72h+ — Individual notification (if high risk) + remediation
+T+0, Breach detected or suspected
+T+0 to T+4h, Initial assessment and containment
+T+4h to T+24h, Severity assessment + internal escalation
+T+24h to T+72h, Regulatory notification (if required) ← GDPR hard deadline
+T+72h+, Individual notification (if high risk) + remediation
 ```
 
 ---
 
 ## 3. Step-by-Step Procedure
 
-### Step 1 — Detect & Contain (T+0 to T+4h)
+### Step 1, Detect & Contain (T+0 to T+4h)
 
 - [ ] Identify the nature and scope of the breach
 - [ ] Isolate affected system(s) if possible (disable endpoint, revoke key, restrict access)
-- [ ] Preserve evidence — do NOT delete logs
+- [ ] Preserve evidence, do NOT delete logs
 - [ ] Notify internal lead immediately
 
-**First responder:** _(name — to be filled)_  
-**Escalation contact:** _(founder / legal — to be filled)_
+**First responder:** _(name, to be filled)_  
+**Escalation contact:** _(founder / legal, to be filled)_
 
 ---
 
-### Step 2 — Assess Severity (T+4h to T+24h)
+### Step 2, Assess Severity (T+4h to T+24h)
 
 Answer these questions to determine notification obligations:
 
 | Question | Answer |
 |---|---|
-| What data was affected? | _(categories — see GDPR_REGISTER.md)_ |
+| What data was affected? | _(categories, see GDPR_REGISTER.md)_ |
 | How many individuals affected? | _(estimate)_ |
 | Is the data encrypted? | Yes / No |
 | Is there a risk to individuals' rights and freedoms? | Yes / No / Unlikely |
@@ -73,7 +73,7 @@ Answer these questions to determine notification obligations:
 
 ---
 
-### Step 3 — Regulatory Notification (T+24h to T+72h, if required)
+### Step 3, Regulatory Notification (T+24h to T+72h, if required)
 
 #### CNIL (France / EU)
 - Portal: [notifications.cnil.fr](https://notifications.cnil.fr)
@@ -94,18 +94,18 @@ Answer these questions to determine notification obligations:
 
 ---
 
-### Step 4 — Individual Notification (if high risk)
+### Step 4, Individual Notification (if high risk)
 
 If the breach is likely to result in **high risk to individuals** (identity theft, financial loss, discrimination):
 
 - [ ] Draft notification in clear, plain language
 - [ ] Include: what happened, what data, what Aegryn is doing, how to protect yourself
 - [ ] Send via email (Resend) within reasonable time after authority notification
-- [ ] Do NOT send if it would require disproportionate effort — notify publicly instead
+- [ ] Do NOT send if it would require disproportionate effort, notify publicly instead
 
 ---
 
-### Step 5 — Remediation & Post-Mortem
+### Step 5, Remediation & Post-Mortem
 
 - [ ] Fix the root cause
 - [ ] Update affected credentials (see CREDENTIALS.md inventory)
@@ -120,7 +120,7 @@ If the breach is likely to result in **high risk to individuals** (identity thef
 
 | Date | Nature | Systems affected | Individuals affected | Authority notified | Resolved |
 |---|---|---|---|---|---|
-| _(none to date)_ | — | — | — | — | — |
+| _(none to date)_ |, |, |, |, |, |
 
 ---
 
@@ -130,5 +130,5 @@ If the breach is likely to result in **high risk to individuals** (identity thef
 |---|---|---|---|
 | CNIL | France / EU | notifications.cnil.fr | GDPR breach notification |
 | FDPIC | Switzerland | edoeb.admin.ch | nLPD breach notification |
-| Supabase Support | — | supabase.com/support | If breach via Supabase |
-| Stripe Security | — | stripe.com/contact | If breach via Stripe |
+| Supabase Support |, | supabase.com/support | If breach via Supabase |
+| Stripe Security |, | stripe.com/contact | If breach via Stripe |

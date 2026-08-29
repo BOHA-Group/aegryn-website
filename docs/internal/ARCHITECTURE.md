@@ -1,6 +1,6 @@
-# ARCHITECTURE — Aegryn Platform
+# ARCHITECTURE, Aegryn Platform
 
-> **Audience:** Internal — developers  
+> **Audience:** Internal, developers  
 > **Last updated:** 2026-08
 
 ---
@@ -20,7 +20,7 @@
 | CDN/DNS | Cloudflare | Proxy orange |
 | Hosting | Vercel (front) | CI/CD via GitHub Actions |
 | CMS | Payload CMS v3 | Same repo, OVH VPS |
-| Scroll | Lenis + GSAP ScrollTrigger | Synced — see layout.tsx |
+| Scroll | Lenis + GSAP ScrollTrigger | Synced, see layout.tsx |
 | Animations | GSAP 3 + Framer Motion 12 | GSAP: scroll / Framer: UI |
 | 3D | React Three Fiber + drei | Logo section only |
 | Icons | Lucide React | |
@@ -55,7 +55,7 @@ github.com/BOHA-Group/aegryn-website
 
 | Branch | Target | Protection |
 |---|---|---|
-| `main` | Production (aegryn.com) | Protected — requires PR |
+| `main` | Production (aegryn.com) | Protected, requires PR |
 | `preview` | Staging (Vercel preview) | Push after user validation only |
 | `feature/*` | Feature preview | Auto-deployed by Vercel |
 | `hotfix/*` | Emergency production fix | |
@@ -77,6 +77,9 @@ github.com/BOHA-Group/aegryn-website
 | `/roadmap` | Platform roadmap (top 20) |
 | `/about` | About Aegryn |
 | `/blog/[slug]` | Market intelligence |
+| `/magazine` | Magazine hub |
+| `/magazine/[issue]` | Issue viewer (flipbook + web) |
+| `/magazine/[issue]/[slug]` | Individual article |
 
 ### Client (`/client/`)
 | Route | Space | Purpose |
@@ -97,19 +100,19 @@ github.com/BOHA-Group/aegryn-website
 ### Admin authentication
 - **Primary:** Supabase session cookie (httpOnly, set at `/admin/login`). Verified server-side via `requireAdmin()` / `getAdminUser()` (`lib/adminAuth.ts`), which checks `app_metadata.role` or the `profiles.roles` table.
 - **Perimeter defense:** `proxy.ts` (Next.js middleware) blocks `/admin/*` and `/client/*` at the network layer before any page/API code runs.
-- **No token in URLs, props, or fetch bodies** — as of 2026-08, all admin `page.tsx` and client components were audited and cleaned of `tokenQs`/`adminToken` propagation. Admin API routes (`/api/admin/**`) authenticate via session cookie by default.
+- **No token in URLs, props, or fetch bodies**, as of 2026-08, all admin `page.tsx` and client components were audited and cleaned of `tokenQs`/`adminToken` propagation. Admin API routes (`/api/admin/**`) authenticate via session cookie by default.
 - **Legacy fallback:** `ADMIN_LEADS_TOKEN` (env var) remains accepted as an optional secondary credential in some API route bodies (for external automation/scripts), verified via `checkAdminAccess(token)`. It is never required and never propagated by the UI. See `AUDIT_CHECKLIST.md` §4.5 for residual risk tracking.
 
 ---
 
 ## 5. Code Conventions
 
-- **Server Components by default** — `'use client'` only when interactivity required
+- **Server Components by default**, `'use client'` only when interactivity required
 - **i18n:** `fr.json` is the single source of truth. All new keys must be added there first, then propagated to en/de/es/it/nl
-- **Grade engine** (`lib/gradeEngine.ts`) — admin-only, never imported client-side
-- **No `console.log` on main/preview** — debug logs only on feature branches
+- **Grade engine** (`lib/gradeEngine.ts`), admin-only, never imported client-side
+- **No `console.log` on main/preview**, debug logs only on feature branches
 - **No UUID or internal DB IDs in client-facing API responses**
-- **No Postgres error messages exposed to client** — always return `{ error: 'server_error' }`
+- **No Postgres error messages exposed to client**, always return `{ error: 'server_error' }`
 - **tsc --noEmit = 0 errors** before every commit
 
 ---
@@ -117,7 +120,7 @@ github.com/BOHA-Group/aegryn-website
 ## 6. Database Migrations
 
 Located in `supabase/migrations/`, sequentially numbered (`001_`, `002_`, ...).
-Current count: ~064.
+Current count: ~092.
 
 Run via Supabase CLI:
 ```bash
@@ -146,8 +149,8 @@ supabase db push
 ## 8. CI/CD Pipeline
 
 `.github/workflows/ci.yml` runs on every push to `preview` and `main`:
-1. `npx tsc --noEmit` — TypeScript check
-2. ESLint — no unused vars (must match `/^_/`)
-3. `next build` — production build
+1. `npx tsc --noEmit`, TypeScript check
+2. ESLint, no unused vars (must match `/^_/`)
+3. `next build`, production build
 
 Failures block merge.

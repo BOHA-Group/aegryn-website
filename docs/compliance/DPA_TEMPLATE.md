@@ -1,7 +1,7 @@
-# DPA TEMPLATE — Data Processing Agreement (Art. 28 GDPR)
+# DPA TEMPLATE, Data Processing Agreement (Art. 28 GDPR)
 
-> **Audience:** Internal — Aegryn / BOHA Group  
-> **Legal basis:** GDPR Art. 28 — mandatory agreement with each data processor  
+> **Audience:** Internal, Aegryn / BOHA Group  
+> **Legal basis:** GDPR Art. 28, mandatory agreement with each data processor  
 > **Usage:** This template summarises the DPA status per processor. Formal DPAs are signed via each processor's standard process (links below).  
 > **Last updated:** 2026-08
 
@@ -11,12 +11,12 @@
 
 | Processor | Service | DPA available | Signed / accepted | SCCs (US transfer) | Notes |
 |---|---|---|---|---|---|
-| **Supabase** | Database, Auth, Storage | ✅ Yes — [supabase.com/privacy](https://supabase.com/privacy) | ☐ Accept via dashboard | ✅ SCCs | Verify CH coverage |
-| **Stripe** | Payments, subscriptions | ✅ Yes — [stripe.com/privacy-center](https://stripe.com/privacy-center) | ☐ Accept via dashboard | ✅ SCCs | PCI-DSS compliant |
-| **Resend** | Transactional email | ✅ Yes — [resend.com/legal/dpa](https://resend.com/legal/dpa) | ☐ Request via dashboard | ✅ SCCs | Verify CH coverage |
-| **Vercel** | Hosting, CI/CD | ✅ Yes — [vercel.com/legal/dpa](https://vercel.com/legal/dpa) | ☐ Accept via dashboard | ✅ SCCs | |
-| **Cloudflare** | CDN, DNS, Analytics | ✅ Yes — [cloudflare.com/privacypolicy](https://cloudflare.com/privacypolicy) | ☐ Accept via dashboard | ✅ SCCs | Analytics is cookie-free |
-| **GitHub** | Source code hosting | ✅ Yes — [github.com/site/privacy](https://github.com/site/privacy) | ☐ | ✅ SCCs | No personal data in repo |
+| **Supabase** | Database, Auth, Storage | ✅ Yes, [supabase.com/privacy](https://supabase.com/privacy) | ☐ Accept via dashboard | ✅ SCCs | Verify CH coverage |
+| **Stripe** | Payments, subscriptions | ✅ Yes, [stripe.com/privacy-center](https://stripe.com/privacy-center) | ☐ Accept via dashboard | ✅ SCCs | PCI-DSS compliant |
+| **Resend** | Transactional email | ✅ Yes, [resend.com/legal/dpa](https://resend.com/legal/dpa) | ☐ Request via dashboard | ✅ SCCs | Verify CH coverage |
+| **Vercel** | Hosting, CI/CD | ✅ Yes, [vercel.com/legal/dpa](https://vercel.com/legal/dpa) | ☐ Accept via dashboard | ✅ SCCs | |
+| **Cloudflare** | CDN, DNS, Analytics | ✅ Yes, [cloudflare.com/privacypolicy](https://cloudflare.com/privacypolicy) | ☐ Accept via dashboard | ✅ SCCs | Analytics is cookie-free |
+| **GitHub** | Source code hosting | ✅ Yes, [github.com/site/privacy](https://github.com/site/privacy) | ☐ | ✅ SCCs | No personal data in repo |
 
 ---
 
@@ -27,18 +27,18 @@ Each signed/accepted DPA must confirm:
 - [ ] Processor acts only on documented instructions from controller
 - [ ] Confidentiality obligations on all authorised persons
 - [ ] Appropriate technical and organisational security measures
-- [ ] Sub-processor rules — prior written authorisation required
+- [ ] Sub-processor rules, prior written authorisation required
 - [ ] Assistance with data subject rights requests
 - [ ] Deletion or return of data at contract end
 - [ ] Audit rights for controller
 
 ---
 
-## Sub-processors — Known Lists
+## Sub-processors, Known Lists
 
 | Processor | Sub-processor list URL |
 |---|---|
-| Supabase | [supabase.com/legal/privacy—sub-processors](https://supabase.com/legal/privacy) |
+| Supabase | [supabase.com/legal/privacysub-processors](https://supabase.com/legal/privacy) |
 | Stripe | [stripe.com/legal/privacy-center](https://stripe.com/legal/privacy-center) |
 | Resend | _(check resend.com/legal)_ |
 | Vercel | [vercel.com/legal/privacy-policy](https://vercel.com/legal/privacy-policy) |
@@ -87,7 +87,7 @@ Between:
    [State adequacy decision or SCCs reference]
 
 8. Governing law
-   Swiss law / EU law — [specify]
+   Swiss law / EU law, [specify]
 
 Signed:
 Controller: ___________________ Date: ___________

@@ -1,6 +1,6 @@
-# IP INVENTORY — [Asset Name]
+# IP INVENTORY, [Asset Name]
 
-> **Document type:** Asset handover — intellectual property inventory  
+> **Document type:** Asset handover, intellectual property inventory  
 > **CIFS dimension:** I (IP & Rights)  
 > **Last updated:** _(to be filled)_
 
@@ -10,7 +10,7 @@
 
 | Mark | Type | Jurisdiction(s) | Registration number | Filing date | Status |
 |---|---|---|---|---|---|
-| _(e.g. brand name)_ | Verbal / Figurative | _(e.g. EU, CH, US)_ | — | — | Registered / Pending |
+| _(e.g. brand name)_ | Verbal / Figurative | _(e.g. EU, CH, US)_ |, |, | Registered / Pending |
 
 ---
 
@@ -18,24 +18,24 @@
 
 | Domain | Registrar | Expiry date | Included in transfer |
 |---|---|---|---|
-| _(e.g. example.com)_ | _(e.g. OVH)_ | — | Yes / No |
+| _(e.g. example.com)_ | _(e.g. OVH)_ |, | Yes / No |
 
 ---
 
-## 3. Software Licences — Outbound (your product's licence)
+## 3. Software Licences, Outbound (your product's licence)
 
 | Product | Licence type | Scope | Notes |
 |---|---|---|---|
-| _(product name)_ | _(e.g. Proprietary / MIT / SaaS terms)_ | _(customers)_ | — |
+| _(product name)_ | _(e.g. Proprietary / MIT / SaaS terms)_ | _(customers)_ |, |
 
 ---
 
-## 4. Software Licences — Inbound (third-party components used)
+## 4. Software Licences, Inbound (third-party components used)
 
 | Component | Licence | Version | Risk level | Notes |
 |---|---|---|---|---|
-| _(e.g. React)_ | _(MIT)_ | — | None | — |
-| _(e.g. library with GPL)_ | _(GPL v3)_ | — | High — review required | — |
+| _(e.g. React)_ | _(MIT)_ |, | None |, |
+| _(e.g. library with GPL)_ | _(GPL v3)_ |, | High, review required |, |
 
 ---
 
@@ -52,7 +52,7 @@
 
 | Title | Filing number | Jurisdiction | Status | Notes |
 |---|---|---|---|---|
-| — | — | — | — | — |
+|, |, |, |, |, |
 
 ---
 
@@ -62,7 +62,7 @@ _(Describe any proprietary data sets, trained models, or data licences that are 
 
 | Asset | Description | Ownership | Transfer status |
 |---|---|---|---|
-| — | — | Owned / Licensed | Included / Excluded |
+|, |, | Owned / Licensed | Included / Excluded |
 
 ---
 
@@ -70,7 +70,7 @@ _(Describe any proprietary data sets, trained models, or data licences that are 
 
 | Case | Status | Resolution | Notes |
 |---|---|---|---|
-| _(None at time of transfer — or describe)_ | — | — | — |
+| _(None at time of transfer, or describe)_ |, |, |, |
 
 ---
 
@@ -79,6 +79,6 @@ _(Describe any proprietary data sets, trained models, or data licences that are 
 | Item | Status |
 |---|---|
 | Data processing register | _(Complete / Partial / Absent)_ |
-| Privacy policy | _(Published — URL or attached)_ |
+| Privacy policy | _(Published, URL or attached)_ |
 | DPA with all processors | _(Signed / Partial / Missing)_ |
 | Last GDPR audit | _(date or never)_ |

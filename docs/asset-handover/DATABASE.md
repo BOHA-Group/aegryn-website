@@ -1,7 +1,7 @@
-# DATABASE — [Asset Name]
+# DATABASE, [Asset Name]
 
-> **Document type:** Asset handover — database documentation  
-> **CIFS dimension:** C (Code — architecture, documentation)  
+> **Document type:** Asset handover, database documentation  
+> **CIFS dimension:** C (Code, architecture, documentation)  
 > **Last updated:** _(to be filled)_
 
 ---
@@ -24,7 +24,7 @@ _(Describe the main tables/collections and their purpose. A schema diagram may b
 | Table / Collection | Purpose | Key columns |
 |---|---|---|
 | _(e.g. users)_ | _(user accounts)_ | _(id, email, created_at)_ |
-| — | — | — |
+|, |, |, |
 
 ---
 
