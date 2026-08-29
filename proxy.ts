@@ -44,10 +44,10 @@ function localeFromAcceptLanguage(header: string | null): Locale | null {
 const intlMiddleware = createIntlMiddleware(routing)
 
 /* ── Supabase Auth check ──
-   getSession() lit le cookie localement (sans réseau, sans WebCrypto) pour vérifier
-   qu'une session existe. La validation sécurisée du JWT est déléguée aux Server
-   Component layouts (getUser() via supabaseServer.ts) qui font un appel réseau.
-   getClaims() échoue en Edge Runtime Vercel (crypto.subtle.importKey EC instable). */
+   getUser() valide le JWT via un appel réseau Supabase et rafraîchit le
+   access_token expiré (en écrivant les nouveaux cookies sb-* via setAll).
+   NE PAS utiliser getSession() : elle lit uniquement le cookie local sans
+   rafraîchir le token, ce qui provoque des déconnexions après ~1h de navigation. */
 
 /** Vérifie si la dernière activité dépasse SESSION_TTL_MS (24h) */
 function isSessionExpired(req: NextRequest): boolean {
@@ -100,12 +100,15 @@ async function refreshAndCheckSession(
     }
   )
 
-  const { data: { session } } = await supabase.auth.getSession()
+  /* getUser() valide le JWT côté serveur Supabase et écrit les nouveaux
+     tokens sb-* via setAll si le access_token était expiré (refresh automatique).
+     getSession() ne fait qu'un parsing local — elle ne rafraîchit pas le token. */
+  const { data: { user } } = await supabase.auth.getUser()
 
   /* Renouvelle le cookie d'activité si une session est active */
-  if (session) touchActivity(response)
+  if (user) touchActivity(response)
 
-  return { hasSession: !!session, response }
+  return { hasSession: !!user, response }
 }
 
 export default async function middleware(req: NextRequest) {
@@ -182,13 +185,15 @@ export default async function middleware(req: NextRequest) {
   if (hasLocalePrefix) {
     /* Rafraîchir silencieusement le token si une session existe —
        sans ça, le JWT expire pendant la navigation publique et force
-       une reconnexion dès que l'utilisateur va sur /client/*. */
+       une reconnexion dès que l'utilisateur va sur /client/*.
+       On passe req à intlMiddleware APRÈS que refreshAndCheckSession
+       ait muté req.cookies (via setAll) pour que le req soit à jour. */
     const { response: refreshedRes } = await refreshAndCheckSession(req)
     const intlRes = intlMiddleware(req)
-    /* Copier les cookies de refresh (sb-*) dans la réponse i18n */
-    refreshedRes.cookies.getAll().forEach(({ name, value, ...opts }) => {
+    /* Copier TOUS les cookies de refresh (sb-* + ag-last-active) dans la réponse i18n */
+    for (const { name, value, ...opts } of refreshedRes.cookies.getAll()) {
       intlRes.cookies.set(name, value, opts as Parameters<typeof intlRes.cookies.set>[2])
-    })
+    }
     return intlRes
   }
 
