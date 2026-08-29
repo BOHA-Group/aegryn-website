@@ -2,7 +2,8 @@ import { getTranslations }   from 'next-intl/server'
 import type { Metadata }     from 'next'
 import { IssueCard }           from '@/components/magazine/IssueCard'
 import { IssueMiniCard }       from '@/components/magazine/IssueMiniCard'
-import { NewsletterBlock }     from '@/components/magazine/NewsletterBlock'
+import { NewsletterBlock }          from '@/components/magazine/NewsletterBlock'
+import { IssueTickerCarousel }      from '@/components/magazine/IssueTickerCarousel'
 import { PrintWishlistForm }   from '@/components/magazine/PrintWishlistForm'
 import { ISSUE_01 }            from '@/content/magazine/issue-01/meta'
 import { ISSUE_02 }            from '@/content/magazine/issue-02/meta'
@@ -139,24 +140,13 @@ export default async function MagazineHubPage({ params }: Props) {
         })()}
       </div>
 
-      {/* ── Prochains numéros ── */}
-      <div className="border-t border-magazine-black/8 bg-magazine-white">
-        <div className="max-w-magazine mx-auto px-6 md:px-[120px] py-20">
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { issue: 'Issue 02', date: tHub('issue02Date'), theme: tHub('issue02Theme'), desc: tHub('issue02Desc') },
-              { issue: 'Issue 03', date: tHub('issue03Date'), theme: tHub('issue03Theme'), desc: tHub('issue03Desc') },
-              { issue: 'Issue 04', date: tHub('issue04Date'), theme: tHub('issue04Theme'), desc: tHub('issue04Desc') },
-            ].map(n => (
-              <div key={n.issue} className="border-l-2 border-magazine-black/10 pl-6 py-2">
-                <p className="font-mono text-[8px] tracking-[0.2em] uppercase text-magazine-black/30 mb-1">{n.issue} — {n.date}</p>
-                <p className="font-sans font-semibold text-magazine-black text-[15px] mb-2">{n.theme}</p>
-                <p className="text-label-mag text-magazine-black/50 leading-relaxed">{n.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* ── Carousel issues ── */}
+      <IssueTickerCarousel items={[
+        { issue: 'Issue 01', date: tHub('issue01Date'), theme: tHub('issue01Theme'), desc: tHub('issue01Desc') },
+        { issue: 'Issue 02', date: tHub('issue02Date'), theme: tHub('issue02Theme'), desc: tHub('issue02Desc') },
+        { issue: 'Issue 03', date: tHub('issue03Date'), theme: tHub('issue03Theme'), desc: tHub('issue03Desc') },
+        { issue: 'Issue 04', date: tHub('issue04Date'), theme: tHub('issue04Theme'), desc: tHub('issue04Desc') },
+      ]} />
 
       {/* ── Contact / Abonnement — style Barnes ivoire ── */}
       <div className="border-t border-magazine-black/8 bg-magazine-cream">
