@@ -110,17 +110,12 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
             <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', color: '#fff', lineHeight: 1.5 }}>{issue.coverLine}</div>
           </div>
         </div>
-        {/* Headline — mêmes marges que la cover principale (paddingBottom 52, lignes 5/9) */}
-        <div style={{ paddingBottom: 52 }}>
+        {/* Headline */}
+        <div style={{ paddingBottom: 20 }}>
           <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: 5 }}>{titleLines[0]}</div>
           <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: 9 }}>{titleLines[1]}</div>
           <div style={{ fontSize: 8.5, fontWeight: 400, letterSpacing: '0.05em', color: '#fff', lineHeight: 1.6 }}>{issue.theme}</div>
         </div>
-      </div>
-      {/* QR code — même position que la cover principale. Encart réservé mais invisible tant que l'issue n'est pas publiée (À venir) */}
-      <div style={{ position: 'absolute', bottom: 14, right: 14, background: '#fff', padding: 4, borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,.3)', width: 62, height: 62, opacity: isComingSoon ? 0 : 1 }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=54x54&data=https%3A%2F%2Faegryn.com%2Fmagazine%2Fqr&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png" width={54} height={54} style={{ display: 'block', imageRendering: 'pixelated' }} alt="aegryn.com/magazine" />
       </div>
     </>
   ) : (
