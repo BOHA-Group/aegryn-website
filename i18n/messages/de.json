@@ -6074,7 +6074,8 @@
         "subtitle": "Verfügbare Assets zur Übernahme.",
         "noItems": "Derzeit keine Assets verfügbar.",
         "viewDossier": "Akte anzeigen"
-      }
+      },
+      "kpiPublished": "Verfügbare Assets"
     },
     "seller": {
       "meta": "Dashboard — Verkäuferbereich Aegryn",

@@ -6074,7 +6074,8 @@
         "subtitle": "Asset disponibili per l'acquisizione.",
         "noItems": "Nessun asset disponibile al momento.",
         "viewDossier": "Vedi fascicolo"
-      }
+      },
+      "kpiPublished": "Asset disponibili"
     },
     "seller": {
       "meta": "Dashboard — Area Cedente Aegryn",

@@ -6071,7 +6071,8 @@
         "subtitle": "Assets available for acquisition.",
         "noItems": "No assets available at the moment.",
         "viewDossier": "View dossier"
-      }
+      },
+      "kpiPublished": "Available assets"
     },
     "seller": {
       "meta": "Dashboard — Seller Space Aegryn",

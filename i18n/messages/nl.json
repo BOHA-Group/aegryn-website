@@ -6074,7 +6074,8 @@
         "subtitle": "Beschikbare assets voor overname.",
         "noItems": "Momenteel geen assets beschikbaar.",
         "viewDossier": "Dossier bekijken"
-      }
+      },
+      "kpiPublished": "Beschikbare assets"
     },
     "seller": {
       "meta": "Dashboard — Verkopersruimte Aegryn",

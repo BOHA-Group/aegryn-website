@@ -6042,7 +6042,8 @@
         "subtitle": "Actifs disponibles pour acquisition.",
         "noItems": "Aucun actif disponible pour le moment.",
         "viewDossier": "Voir le dossier"
-      }
+      },
+      "kpiPublished": "Actifs disponibles"
     },
     "seller": {
       "meta": "Tableau de bord — Espace Cédant Aegryn",

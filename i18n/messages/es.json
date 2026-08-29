@@ -6074,7 +6074,8 @@
         "subtitle": "Activos disponibles para adquisición.",
         "noItems": "Sin activos disponibles por el momento.",
         "viewDossier": "Ver expediente"
-      }
+      },
+      "kpiPublished": "Activos disponibles"
     },
     "seller": {
       "meta": "Panel — Área Vendedor Aegryn",
