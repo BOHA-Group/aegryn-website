@@ -20,8 +20,10 @@ const COUNTRY_LOCALE: Record<string, Locale> = {
   ZA: 'en', IN: 'en', SG: 'en', HK: 'en', PH: 'en', NG: 'en', KE: 'en', GH: 'en',
 }
 
-const LOCALES   = routing.locales as readonly Locale[]
+const LOCALES     = routing.locales as readonly Locale[]
 const PREF_COOKIE = 'ag-locale-pref'
+const ACTIVITY_COOKIE = 'ag-last-active'
+const SESSION_TTL_MS  = 24 * 60 * 60 * 1000 // 24h
 
 function localeFromAcceptLanguage(header: string | null): Locale | null {
   if (!header) return null
@@ -47,9 +49,33 @@ const intlMiddleware = createIntlMiddleware(routing)
    Component layouts (getUser() via supabaseServer.ts) qui font un appel réseau.
    getClaims() échoue en Edge Runtime Vercel (crypto.subtle.importKey EC instable). */
 
+/** Vérifie si la dernière activité dépasse SESSION_TTL_MS (24h) */
+function isSessionExpired(req: NextRequest): boolean {
+  const ts = req.cookies.get(ACTIVITY_COOKIE)?.value
+  if (!ts) return false // pas de cookie → première visite, pas expiré
+  const last = parseInt(ts, 10)
+  if (isNaN(last)) return false
+  return Date.now() - last > SESSION_TTL_MS
+}
+
+/** Pose / renouvelle le cookie d'activité sur la réponse */
+function touchActivity(response: NextResponse): void {
+  response.cookies.set(ACTIVITY_COOKIE, String(Date.now()), {
+    maxAge: Math.floor(SESSION_TTL_MS / 1000), // 86400 s
+    httpOnly: true,
+    sameSite: 'lax',
+    path: '/',
+  })
+}
+
 async function refreshAndCheckSession(
   req: NextRequest
 ): Promise<{ hasSession: boolean; response: NextResponse }> {
+  /* Si le cookie d'activité dépasse 24h → session expirée sans faire de requête Supabase */
+  if (isSessionExpired(req)) {
+    return { hasSession: false, response: NextResponse.next({ request: req }) }
+  }
+
   let response = NextResponse.next({ request: req })
 
   const rawUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? ''
@@ -75,6 +101,9 @@ async function refreshAndCheckSession(
   )
 
   const { data: { session } } = await supabase.auth.getSession()
+
+  /* Renouvelle le cookie d'activité si une session est active */
+  if (session) touchActivity(response)
 
   return { hasSession: !!session, response }
 }

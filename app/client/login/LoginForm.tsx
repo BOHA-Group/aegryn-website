@@ -41,6 +41,9 @@ export default function LoginForm() {
         }
       }
 
+      /* Pose le cookie d'activité via API route (httpOnly, côté serveur) */
+      await fetch('/api/client/touch-session', { method: 'POST' }).catch(() => {})
+
       /* Délai minimal : garantit que createBrowserClient a fini d'écrire
          tous les cookies chunked sb-* avant le rechargement SSR. */
       await new Promise(r => setTimeout(r, 150))

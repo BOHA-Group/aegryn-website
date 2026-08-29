@@ -4,5 +4,7 @@ import { createAuthClient }         from '@/lib/supabaseServer'
 export async function POST(_req: NextRequest) {
   const client = await createAuthClient()
   await client.auth.signOut()
-  return NextResponse.redirect(new URL('/client/login', _req.url))
+  const res = NextResponse.redirect(new URL('/client/login', _req.url))
+  res.cookies.set('ag-last-active', '', { maxAge: 0, path: '/' })
+  return res
 }
