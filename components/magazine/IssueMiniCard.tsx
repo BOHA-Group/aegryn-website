@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import type { MagazineIssue } from '@/lib/magazine/types'
 
 interface Props {
@@ -75,20 +75,6 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
 
   const titleLines   = TITLE_LINES[issue.number] ?? [issue.title, '']
   const [lightboxOpen, setLightboxOpen] = useState(false)
-  const lightboxRef = useRef<HTMLDivElement>(null)
-  const [lightboxScale, setLightboxScale] = useState(1)
-
-  /* Recalcule le scale du canvas 420x595 en fonction de la taille reelle du lightbox (plein ecran, responsive) */
-  useEffect(() => {
-    if (!lightboxOpen) return
-    const el = lightboxRef.current
-    if (!el) return
-    const update = () => setLightboxScale(el.clientWidth / 420)
-    update()
-    const ro = new ResizeObserver(update)
-    ro.observe(el)
-    return () => ro.disconnect()
-  }, [lightboxOpen])
 
   /* ── Contenu de la cover (canvas 420×595) — réutilisé mini + lightbox ── */
   const coverContent = issue.status === 'published' ? (
@@ -212,14 +198,11 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
           style={{ position: 'fixed', inset: 0, zIndex: 200, background: 'rgba(5,8,12,.92)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24 }}
         >
           <div
-            ref={lightboxRef}
             onClick={(e) => e.stopPropagation()}
-            style={{ position: 'relative', width: 'min(92vw, calc(92vh * 0.7059))', aspectRatio: '420 / 595', boxShadow: '0 24px 64px rgba(0,0,0,.5)' }}
+            style={{ position: 'relative', width: 420, height: 595, boxShadow: '0 24px 64px rgba(0,0,0,.5)' }}
           >
             <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
-              <div style={{ position: 'absolute', top: 0, left: 0, transformOrigin: 'top left', transform: `scale(${lightboxScale})`, width: 420, height: 595 }}>
-                {coverContent}
-              </div>
+              {coverContent}
             </div>
             <button
               type="button"
