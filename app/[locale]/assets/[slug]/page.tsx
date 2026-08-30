@@ -1,5 +1,6 @@
 import { notFound }          from 'next/navigation'
 import Link                   from 'next/link'
+import Image                  from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { Aegryn_ASSETS } from '@/data/assets'
@@ -170,6 +171,49 @@ export default async function AssetPage({ params }: Props) {
             </Link>
           </div>
         </div>
+      )}
+
+      {/* Neediu press — Gala */}
+      {asset.id === 'neediu' && (
+        <section className="border-b border-ag-border bg-ag-off-white">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+            <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
+              PRESSE
+            </p>
+            <div className="flex flex-col md:flex-row gap-10 items-start">
+              {/* Badge */}
+              <div className="shrink-0">
+                <Image
+                  src="/images/press-gala-badge.png"
+                  alt="Paru dans Gala — 27 novembre 2025"
+                  width={220}
+                  height={160}
+                  className="object-contain"
+                />
+              </div>
+              {/* Couverture */}
+              <div className="shrink-0">
+                <Image
+                  src="/images/press-gala-cover.png"
+                  alt="Couverture Gala — 27 novembre 2025"
+                  width={200}
+                  height={266}
+                  className="object-cover shadow-md"
+                />
+              </div>
+              {/* Pub neediu */}
+              <div className="flex-1 max-w-sm">
+                <Image
+                  src="/images/press-gala-neediu-ad.png"
+                  alt="Publicité neediu dans Gala"
+                  width={380}
+                  height={480}
+                  className="object-contain w-full shadow-md"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
       )}
 
       {/* CTA strip */}

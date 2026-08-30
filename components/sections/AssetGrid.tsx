@@ -3,6 +3,7 @@
 import { useEffect, useRef }  from 'react'
 import Link                    from 'next/link'
 import { ArrowUpRight }        from 'lucide-react'
+import Image            from 'next/image'
 import { useTranslations }     from 'next-intl'
 import { gsap, SplitText }     from '@/lib/gsap'
 import { Aegryn_ASSETS }       from '@/data/assets'
@@ -121,6 +122,19 @@ export function AssetGrid() {
           <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <ArrowUpRight size={14} className="text-white/60" />
           </div>
+
+          {/* Badge presse — uniquement neediu */}
+          {asset.id === 'neediu' && (
+            <div className="absolute bottom-3 right-3 z-10">
+              <Image
+                src="/images/press-gala-badge.png"
+                alt="Paru dans Gala"
+                width={90}
+                height={64}
+                className="object-contain"
+              />
+            </div>
+          )}
         </div>
       </Link>
     )
