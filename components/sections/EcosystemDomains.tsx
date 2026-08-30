@@ -91,10 +91,10 @@ export function EcosystemDomains() {
                       src={image}
                       alt={domain.label}
                       fill
-                      className="object-cover opacity-0 group-hover:opacity-25 transition-opacity duration-500"
+                      className="object-cover opacity-100 group-hover:opacity-40 transition-opacity duration-500"
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     />
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ag-navy/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="pointer-events-none absolute inset-0 bg-ag-navy/0 group-hover:bg-ag-navy/80 transition-colors duration-500" />
                   </>
                 )}
 
