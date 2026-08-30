@@ -8,8 +8,8 @@ import { useTranslations } from 'next-intl'
 import { gsap, SplitText } from '@/lib/gsap'
 
 const HERO_SLIDES = [
-  { src: '/images/mountains.avif',   alt: 'Alpes suisses — Aegryn Group' },
   { src: '/images/home_geneva.jpg',  alt: 'Genève — Aegryn Group' },
+  { src: '/images/mountains.avif',   alt: 'Alpes suisses — Aegryn Group' },
 ]
 
 const SLIDE_INTERVAL_MS = 3500
@@ -72,7 +72,7 @@ export function HeroMountain() {
 
       /* Éclaircissement progressif au scroll — overlay s'estompe */
       gsap.to('#hero-overlay', {
-        opacity: 0.45, ease: 'none',
+        opacity: 0.2, ease: 'none',
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
@@ -110,7 +110,7 @@ export function HeroMountain() {
           />
         ))}
         {/* Gradient foncé au départ — s'éclaircit au scroll via GSAP */}
-        <div id="hero-overlay" className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/95" />
+        <div id="hero-overlay" className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-black/50" />
 
         {/* Dots de navigation manuelle */}
         <div className="absolute bottom-28 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2">
