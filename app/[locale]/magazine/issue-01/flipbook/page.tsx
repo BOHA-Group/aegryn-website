@@ -22,14 +22,14 @@ export default function MagazineFlipbookPage() {
   useEffect(() => {
     const prev = document.body.style.overflow
     document.body.style.overflow = 'hidden'
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') handleQuit() }
+    const quit = () => router.push(`/${locale}/magazine/issue-01`)
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') quit() }
     window.addEventListener('keydown', onKey)
     return () => {
       document.body.style.overflow = prev
       window.removeEventListener('keydown', onKey)
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [locale])
+  }, [locale, router])
 
   return (
     <div style={{ position: 'fixed', top: 0, right: 0, bottom: 0, left: 0, zIndex: 9999, background: '#0F1A2B', width: '100vw', height: '100vh' }}>
