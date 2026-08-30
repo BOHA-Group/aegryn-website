@@ -10,7 +10,7 @@ const OG_LOCALE: Record<string, string> = {
 
 const BASE_KEYWORDS = [
   // Brand
-  'Aegryn', 'aegryn.com', 'Engineered to Last', 'Swiss Tech', 'BOHA-Group',
+  'Aegryn', 'aegryn.com', 'Engineered to Last', 'Swiss Tech', 
   // Core business
   'digital assets', 'actifs numériques', 'digital asset transaction', 'cession tech structurée',
   'transact platform', 'M&A tech platform', 'plateforme cession technologie',
@@ -172,7 +172,7 @@ export const aegrynOrganizationSchema = {
   '@type':       'Organization',
   '@id':         `${BASE_URL}/#organization`,
   name:          'Aegryn',
-  legalName:     'BOHA-Group Sàrl',
+  legalName:     'Aegryn',
   url:           BASE_URL,
   logo: {
     '@type':     'ImageObject',

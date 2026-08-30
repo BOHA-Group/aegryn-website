@@ -416,8 +416,8 @@
         }
       ],
       "synthesis": "Trois mots issus de trois civilisations. Une synthèse : une entité qui protège (AEGIS), facilite les flux (AEGIR), et construit pour la permanence (AEON). Aegryn.",
-      "history": "Aegryn s'appelait autrefois BOHA-Group. À mesure que le positionnement de l'entreprise s'est affiné, de constructeur d'actifs numériques à infrastructure de certification et de transaction, son identité s'est affinée avec lui. Le nom a changé. La conviction, non.",
-      "formerly": "Aegryn s'appelait autrefois BOHA-Group. À mesure que le positionnement de l'entreprise s'est affiné, de constructeur d'actifs numériques à infrastructure de certification et de transaction, son identité s'est affinée avec lui. Le nom a changé. La conviction, non."
+      "history": "Aegryn s'appelait autrefois . À mesure que le positionnement de l'entreprise s'est affiné, de constructeur d'actifs numériques à infrastructure de certification et de transaction, son identité s'est affinée avec lui. Le nom a changé. La conviction, non.",
+      "formerly": "Aegryn s'appelait autrefois . À mesure que le positionnement de l'entreprise s'est affiné, de constructeur d'actifs numériques à infrastructure de certification et de transaction, son identité s'est affinée avec lui. Le nom a changé. La conviction, non."
     },
     "vision": {
       "label": "Notre vision",
@@ -1025,7 +1025,7 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 Aegryn (formerly BOHA-Group) · Tous droits réservés",
+    "legal": "© 2026 Aegryn · Tous droits réservés",
     "company": "Une société Aegryn",
     "privacy": "Confidentialité",
     "terms": "Conditions",
@@ -4383,7 +4383,7 @@
     "s6Title": "Liens externes",
     "s6": "Le Site peut contenir des liens vers des sites tiers. Aegryn n'est pas responsable du contenu de ces sites et ne les approuve pas implicitement.",
     "s7Title": "Propriété intellectuelle",
-    "s7": "Le label Aegryn Grade, la marque Aegryn, le monogramme AE, le protocole C/I/F/S, ainsi que toutes les méthodologies et rapports produits par Aegryn sont la propriété exclusive d'Aegryn (formerly BOHA-Group, société enregistrée en Suisse). Toute utilisation non autorisée sera poursuivie.",
+    "s7": "Le label Aegryn Grade, la marque Aegryn, le monogramme AE, le protocole C/I/F/S, ainsi que toutes les méthodologies et rapports produits par Aegryn sont la propriété exclusive d'Aegryn. Toute utilisation non autorisée sera poursuivie.",
     "s8Title": "Droit applicable et juridiction",
     "s8": "Les présentes CGU sont soumises au droit suisse. Tout litige relevant des présentes sera soumis à la compétence exclusive des tribunaux du canton de domicile d'Aegryn. Si une clause est invalide, les autres restent applicables.",
     "ctaCgv": "Consulter les CGV",
@@ -4398,7 +4398,7 @@
     "version": "Version : juillet 2026",
     "note": "Ce document constitue la référence contractuelle opposable. Les conditions tarifaires précises sont précisées dans le mandat ou le devis signé entre les parties.",
     "s1Title": "Définitions",
-    "defAegryn": "Aegryn (formerly BOHA-Group, société enregistrée en Suisse).",
+    "defAegryn": "Aegryn.",
     "defAsset": "Tout bien numérique susceptible d'être certifié et/ou cédé via Aegryn, incluant sans limitation : logiciels (SaaS, applications), bases de code, propriété intellectuelle numérique, marques associées à un actif numérique, protocoles.",
     "defGrade": "Certification officielle d'un actif tech selon le protocole C/I/F/S, émise par des analystes certifiés Aegryn. Grade attribué : ★, AAA, AA, A, B.",
     "defGradeEst": "Avis indicatif non-certifié produit par un analyste Aegryn sans validation externe. Jamais opposable à des tiers. Suffixé « (estimé) » dans toute communication.",
@@ -4486,7 +4486,7 @@
     "langSelector": "Disponible en",
     "intro": "Comme la plupart des entreprises opérant dans le secteur financier et des transactions, Aegryn collecte et traite des données relatives à ses clients, partenaires et autres personnes susceptibles d'être intéressées par ses services. La présente politique explique le type de données que nous traitons, pourquoi nous les traitons et comment ce traitement peut vous affecter.",
     "s1Title": "Qui sommes-nous ?",
-    "s1": "Le responsable du traitement de vos données est Aegryn (formerly BOHA-Group, société enregistrée en Suisse). Lorsque vous utilisez nos services (certification, transaction, advisory, catalogue), le responsable du traitement est Aegryn (formerly BOHA-Group).",
+    "s1": "Le responsable du traitement de vos données est Aegryn. Lorsque vous utilisez nos services (certification, transaction, advisory, catalogue), le responsable du traitement est Aegryn.",
     "s2Title": "Quelles données collectons-nous et comment ?",
     "s2DirectTitle": "Données que vous nous fournissez directement",
     "s2Direct": "Nom, prénom, coordonnées professionnelles, informations sur l'entité représentée, informations financières, documents d'identité, documents d'entité, informations sur les bénéficiaires effectifs (UBO). Collectées lors de l'inscription, soumission d'actif, candidature Alliance, réservation Assessment Day, utilisation du calculateur ou toute communication.",
@@ -4524,7 +4524,7 @@
     "s6": "Nous conservons vos données aussi longtemps que nécessaire pour l'exécution des services, le respect de nos obligations légales (obligations LCB-FT : 10 ans minimum après la fin de la relation commerciale), et la protection contre d'éventuelles réclamations. Les données anonymisées du catalogue historique sont conservées indéfiniment.",
     "s7Title": "Vos droits",
     "s7": "Conformément à la LPD suisse et au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité.",
-    "s7Contact": "Pour exercer ces droits : legal@boha-group.com",
+    "s7Contact": "Pour exercer ces droits : legal@aegryn.com",
     "s8Title": "Sécurité de vos données",
     "s8": "Mesures techniques et organisationnelles : chiffrement des données sensibles au repos et en transit, contrôle d'accès strict par rôle (RLS Supabase), journalisation des accès à la data room, authentification forte (2FA) pour l'accès admin. En cas de violation, notification des autorités et des personnes concernées conformément à la LPD et au RGPD.",
     "s9Title": "Cookies",
@@ -4534,7 +4534,7 @@
     "authorityCH": "Suisse : PFPDT, www.edoeb.admin.ch",
     "authorityFR": "France : CNIL, www.cnil.fr",
     "authorityEU": "UE : EDPB, www.edpb.europa.eu",
-    "contactEmail": "legal@boha-group.com",
+    "contactEmail": "legal@aegryn.com",
     "content": {
       "intro": {
         "h": "Introduction",
@@ -4575,7 +4575,7 @@
       },
       "whoWeAre": {
         "h": "Qui sommes-nous et comment nous contacter ?",
-        "p": "Aegryn est le nom de notre entreprise. Si vous avez des questions sur le traitement des données relatives à notre site web, vous pouvez nous contacter par courrier : Aegryn (BOHA-Group sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. Vous pouvez également nous contacter par e-mail à legal@boha-group.com ou via notre formulaire de contact."
+        "p": "Aegryn est le nom de notre entreprise. Si vous avez des questions sur le traitement des données relatives à notre site web, vous pouvez nous contacter par courrier : Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. Vous pouvez également nous contacter par e-mail à legal@aegryn.com ou via notre formulaire de contact."
       },
       "ourRole": {
         "h": "Quel est notre rôle en matière de protection des données ?",
@@ -4627,7 +4627,7 @@
       },
       "security": {
         "h": "Comment protégeons-nous vos données ?",
-        "p": "Nous prenons des mesures de sécurité appropriées, telles que le chiffrement, pour protéger vos données personnelles. Si vous pensez que vos données personnelles ont été compromises, veuillez nous en informer immédiatement à legal@boha-group.com."
+        "p": "Nous prenons des mesures de sécurité appropriées, telles que le chiffrement, pour protéger vos données personnelles. Si vous pensez que vos données personnelles ont été compromises, veuillez nous en informer immédiatement à legal@aegryn.com."
       },
       "storage": {
         "h": "Où vos données sont-elles stockées et combien de temps ?",
@@ -5404,7 +5404,7 @@
       },
       "whoWeAre": {
         "h": "Qui sommes-nous et comment nous contacter ?",
-        "p": "Aegryn (anciennement BOHA-Group) est le nom de notre entreprise. Si vous avez des questions concernant le traitement des données relatives à notre plateforme, vous pouvez nous contacter par courrier : Aegryn (BOHA-Group sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suisse. Vous pouvez également nous contacter via le formulaire de contact disponible sur notre plateforme."
+        "p": "Aegryn est le nom de notre entreprise. Si vous avez des questions concernant le traitement des données relatives à notre plateforme, vous pouvez nous contacter par courrier : Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suisse. Vous pouvez également nous contacter via le formulaire de contact disponible sur notre plateforme."
       },
       "ourRole": {
         "h": "Quel est notre rôle en matière de protection des données ?",
@@ -5463,7 +5463,7 @@
       },
       "security": {
         "h": "Comment protégeons-nous vos données ?",
-        "p": "Nous prenons des mesures de sécurité appropriées, comme le chiffrement, pour assurer la confidentialité, l'intégrité et la disponibilité de vos données personnelles. Malheureusement, nous ne pouvons pas garantir que vos données seront toujours totalement en sécurité. Si vous pensez que vos données personnelles ont été compromises, veuillez nous en informer immédiatement à legal@boha-group.com."
+        "p": "Nous prenons des mesures de sécurité appropriées, comme le chiffrement, pour assurer la confidentialité, l'intégrité et la disponibilité de vos données personnelles. Malheureusement, nous ne pouvons pas garantir que vos données seront toujours totalement en sécurité. Si vous pensez que vos données personnelles ont été compromises, veuillez nous en informer immédiatement à legal@aegryn.com."
       },
       "storage": {
         "h": "Où et combien de temps vos données sont-elles conservées ?",
@@ -5511,7 +5511,7 @@
       "sectionLabel": "(02)",
       "h2": "Conditions d'utilisation – neediu by Aegryn",
       "disclaimer": "Exclusion de responsabilité : La présente déclaration de protection des données est une traduction IA fournie à titre informatif uniquement. En cas de divergences ou d'incohérences, la version anglaise fera foi.",
-      "intro": "Les présentes Conditions d'utilisation (les CdU) s'appliquent à toute utilisation de la Plateforme Aegryn, de l'application mobile neediu, ainsi qu'à tout service accessible ou fourni via la Plateforme (les Services), qui sont fournis et gérés par Aegryn (BOHA-Group sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suisse.",
+      "intro": "Les présentes Conditions d'utilisation (les CdU) s'appliquent à toute utilisation de la Plateforme Aegryn, de l'application mobile neediu, ainsi qu'à tout service accessible ou fourni via la Plateforme (les Services), qui sont fournis et gérés par Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suisse.",
       "s1H": "1. Généralités",
       "s1AcceptTitle": "Acceptation.",
       "s1Accept": "En accédant ou en utilisant notre Plateforme, vous acceptez d'être lié par les présentes CdU.",
@@ -5611,9 +5611,9 @@
     "introText": "Avant d'accéder au catalogue Aegryn TRANSACT, vous devez lire et accepter l'accord de confidentialité ci-dessous. Cet accord est obligatoire et constitue un engagement contractuel de confidentialité envers Aegryn et les vendeurs. Votre signature est horodatée et journalisée à des fins légales.",
     "versionLabel": "NDA | Version",
     "mainTitle": "Conditions de Confidentialité Acquéreur",
-    "mainSubtitle": "Aegryn (formerly BOHA-Group Sàrl)",
+    "mainSubtitle": "Aegryn",
     "partiesLabel": "Entre les soussignés :",
-    "partiesAegryn": "Aegryn (formerly BOHA-Group Sàrl), société enregistrée en Suisse, ci-après « Aegryn »,",
+    "partiesAegryn": "Aegryn, société enregistrée en Suisse, ci-après « Aegryn »,",
     "partiesAnd": "Et",
     "partiesBuyer": "L'utilisateur identifié par les informations renseignées lors de son inscription sur la plateforme Aegryn (nom, prénom ou raison sociale, email professionnel), ci-après « l'Acquéreur »,",
     "a1Title": "Objet",
@@ -5797,7 +5797,7 @@
       "submitting": "Envoi…",
       "successTitle": "Contact révélé.",
       "successDesc": "Vos informations ont été enregistrées. Vous pouvez désormais écrire directement à l'expert.",
-      "rgpdNote": "Données traitées par BOHA-Group Sàrl (Aegryn). Vos droits RGPD/LPD sont garantis.",
+      "rgpdNote": "Données traitées par Aegryn. Vos droits RGPD/LPD sont garantis.",
       "errorConsent": "Veuillez accepter le consentement avant de continuer.",
       "errorGeneric": "Une erreur s'est produite. Merci de réessayer."
     },
@@ -6020,7 +6020,7 @@
         "completeHint": "Complétez votre dossier KYC pour débloquer l'accès aux data rooms et au processus PTT.",
         "pendingUpload": "Document en cours d'examen. Vous pouvez soumettre une version corrigée si nécessaire.",
         "validatedWarn": "Ce document est validé. Un nouveau dépôt remplacera la version actuelle et relancera la validation.",
-        "gdprNotice": "Protection des données : Vos documents sont stockés de manière sécurisée et traités uniquement dans le cadre de la réglementation LBA et des obligations KYC/AML suisses. Conformément au RGPD, vous pouvez demander leur suppression à legal@boha-group.com."
+        "gdprNotice": "Protection des données : Vos documents sont stockés de manière sécurisée et traités uniquement dans le cadre de la réglementation LBA et des obligations KYC/AML suisses. Conformément au RGPD, vous pouvez demander leur suppression à legal@aegryn.com."
       },
       "offres": {
         "meta": "Mes offres | Espace Acquéreur Aegryn",
@@ -6314,8 +6314,8 @@
       "cifsLabel": "Certification CIFS",
       "cifsBody": "Moins de 25 % des actifs soumis atteignent le statut Full Grade. Découvrez où se situe votre actif avant qu'un acheteur ne le fasse.",
       "cifsCta": "Démarrer la certification →",
-      "footerLegal": "Aegryn SA, Saint-Sulpice, Canton de Vaud, Switzerland, CHE-402.011.821",
-      "footerCopyright": "© Aegryn SA 2027. Accès digital gratuit et permanent",
+      "footerLegal": "Aegryn, Saint-Sulpice, Canton de Vaud, Switzerland, CHE-402.011.821",
+      "footerCopyright": "© Aegryn 2027. Accès digital gratuit et permanent",
       "navTableOfContents": "Au sommaire",
       "navDownloadPdf": "Télécharger PDF",
       "cardReadIssue": "Lire l'issue",
@@ -6418,7 +6418,7 @@
       "civilityM": "M.",
       "civilityMme": "Mme",
       "phonePlaceholder": "Téléphone",
-      "rgpdLabel": "J'accepte qu'Aegryn SA utilise mes données personnelles pour me contacter dans le cadre de cette demande d'édition papier.",
+      "rgpdLabel": "J'accepte qu'Aegryn utilise mes données personnelles pour me contacter dans le cadre de cette demande d'édition papier.",
       "legalNotice": "Les informations recueillies sont traitées par Aegryn (Canton de Vaud, Suisse) conformément au RGPD (UE 2016/679) et à la LPD suisse révisée (entrée en vigueur le 1er septembre 2023). Elles sont utilisées exclusivement pour la gestion de la liste de souhait de l'édition imprimée. Vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à media@boha-group.com ou depuis votre espace compte.",
       "wishlistSectionLabel": "Édition imprimée : Liste de souhait",
       "wishlistTitle": "Recevoir le magazine Aegryn en version papier",

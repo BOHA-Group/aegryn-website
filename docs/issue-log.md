@@ -117,13 +117,13 @@ CookieScript détecte désormais correctement son installation, lit le consentem
 
 ---
 
-## ✅ ISSUE-005, Logo navbar : texte "formerly BOHA-Group" et format non officiel
+## ✅ ISSUE-005, Logo navbar : texte "" et format non officiel
 
 **Détecté :** 2026-08-28  
 **Résolu :** 2026-08-28  
 **Commits :** `12bd07c`, `2aa8ec4`, `47ae6a3`  
 
-**Symptôme :** La navbar affichait un logo SVG composite non officiel avec la mention "formerly BOHA-Group".  
+**Symptôme :** La navbar affichait un logo SVG composite non officiel avec la mention "".  
 **Fix :** Remplacement par l'image officielle `logo-aegryn-navbar.jpg` (`public/images/`) via `next/image`, hauteur `h-16` (= hauteur de la navbar), lien `block` pour zone cliquable totale.  
 **Fichiers :** `components/layout/Nav.tsx`
 

@@ -123,7 +123,7 @@ export default async function SellerNdaViewPage() {
               Accord de Confidentialité et Conditions d'Engagement — Cédant
             </h1>
             <p className="text-[12px] text-gray-500 mt-1">
-              Aegryn (formerly BOHA-Group, société enregistrée en Suisse) · contact@boha-group.com
+              Aegryn (, société enregistrée en Suisse) · contact@boha-group.com
             </p>
           </div>
 

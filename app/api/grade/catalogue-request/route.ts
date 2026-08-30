@@ -104,7 +104,7 @@ export async function POST(req: NextRequest) {
       iban:         process.env.Aegryn_IBAN ?? '',
       bic:          process.env.Aegryn_BIC ?? '',
       bank_name:    process.env.Aegryn_BANK_NAME ?? '',
-      account_holder: 'Aegryn / BOHA-Group',
+      account_holder: 'Aegryn',
       status:       'draft',
       due_date:     new Date(Date.now() + 14 * 86400000).toISOString().slice(0, 10),
     })

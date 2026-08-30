@@ -27,7 +27,7 @@ Le template doit respecter l'ordre suivant :
 
 ## Pied de page (obligatoire, fixe)
 
-> Aegryn (par BOHA-Group Sàrl), Rue du Centre 142, 1025 Saint-Sulpice, Suisse. CHE-402.011.821 TVA.
+> Aegryn, Rue du Centre 142, 1025 Saint-Sulpice, Suisse. CHE-402.011.821 TVA.
 
 ## Note sécurité RIB
 

@@ -44,7 +44,7 @@ export default async function SellerNdaPage() {
         <div className="bg-white border border-gray-200 p-8 mb-6 space-y-6 text-[14px] font-sans text-ag-gray leading-relaxed">
 
           <p className="font-sans font-semibold text-ag-black text-[15px]">
-            Entre Aegryn (formerly BOHA-Group, société enregistrée en Suisse) et{' '}
+            Entre Aegryn (, société enregistrée en Suisse) et{' '}
             <span className="text-ag-navy">{fullName}</span> (ci-après « le Cédant »).
           </p>
 

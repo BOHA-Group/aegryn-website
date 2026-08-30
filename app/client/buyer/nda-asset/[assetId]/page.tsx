@@ -98,7 +98,7 @@ export default async function NdaAssetPage({
           </div>
 
           <p className="font-sans font-semibold text-ag-black text-[14px]">
-            Entre Aegryn (formerly BOHA-Group, société enregistrée en Suisse) et{' '}
+            Entre Aegryn (, société enregistrée en Suisse) et{' '}
             <span className="text-ag-navy">{fullName}</span> (ci-après « l'Acquéreur »),
             concernant l'actif <strong>{asset.name}</strong> (Lot #{asset.lot_number}).
           </p>

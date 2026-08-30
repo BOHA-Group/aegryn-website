@@ -46,7 +46,7 @@ export default function MagazineConfirmEmail({ email }: Props) {
           {/* Footer */}
           <Section style={s.footer}>
             <Text style={s.footerText}>
-              Aegryn SA · Saint-Sulpice, Canton de Vaud · Switzerland
+              Aegryn · Saint-Sulpice, Canton de Vaud · Switzerland
             </Text>
             <Text style={s.footerText}>
               Editorial contact:{' '}

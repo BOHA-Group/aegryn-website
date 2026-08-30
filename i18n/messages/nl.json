@@ -416,8 +416,8 @@
         }
       ],
       "synthesis": "Drie woorden uit drie beschavingen. Één synthese: een entiteit die beschermt (AEGIS), stromen faciliteert (AEGIR) en bouwt voor permanentie (AEON). Aegryn.",
-      "history": "Aegryn was voorheen bekend als BOHA-Group. Naarmate de positionering van het bedrijf scherper werd, van bouwer van digitale assets naar certificerings- en transactie-infrastructuur, deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet.",
-      "formerly": "Aegryn was voorheen bekend als BOHA-Group. Naarmate de positionering van het bedrijf scherper werd, van bouwer van digitale assets naar certificerings- en transactie-infrastructuur, deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet."
+      "history": "Aegryn was voorheen bekend als . Naarmate de positionering van het bedrijf scherper werd, van bouwer van digitale assets naar certificerings- en transactie-infrastructuur, deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet.",
+      "formerly": "Aegryn was voorheen bekend als . Naarmate de positionering van het bedrijf scherper werd, van bouwer van digitale assets naar certificerings- en transactie-infrastructuur, deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet."
     },
     "vision": {
       "label": "Onze visie",
@@ -1049,7 +1049,7 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 Aegryn (formerly BOHA-Group) · Alle rechten voorbehouden",
+    "legal": "© 2026 Aegryn · Alle rechten voorbehouden",
     "company": "Een Aegryn-onderneming",
     "privacy": "Privacy",
     "terms": "Voorwaarden",
@@ -4430,7 +4430,7 @@
     "version": "Versie: juli 2026",
     "note": "Dit document vormt de bindende contractuele referentie. De exacte tariefvoorwaarden worden gespecificeerd in het ondertekende mandaat of offerte tussen de partijen.",
     "s1Title": "Definities",
-    "defAegryn": "Aegryn (formerly BOHA-Group, in Zwitserland geregistreerde vennootschap).",
+    "defAegryn": "Aegryn (, in Zwitserland geregistreerde vennootschap).",
     "defAsset": "Elk digitaal goed dat via Aegryn kan worden gecertificeerd en/of overgedragen: software (SaaS, applicaties), codebases, digitaal intellectueel eigendom, merken gekoppeld aan een digitaal asset, protocollen.",
     "defGrade": "Officiële certificering van een tech-asset volgens het C/I/F/S-protocol, uitgegeven door gecertificeerde Aegryn-analisten. Toegekende grades: ★, AAA, AA, A, B.",
     "defGradeEst": "Niet-gecertificeerde indicatieve opinie van een Aegryn-analist zonder externe validatie. Nooit afdwingbaar jegens derden. Altijd voorzien van het achtervoegsel (geschat) in alle communicatie.",
@@ -4518,7 +4518,7 @@
     "langSelector": "Beschikbaar in",
     "intro": "Zoals de meeste bedrijven die actief zijn in de financiële en transactionele sector, verzamelt en verwerkt Aegryn gegevens over zijn klanten, partners en andere personen die mogelijk geïnteresseerd zijn in zijn diensten. Dit beleid legt uit welk type gegevens we verwerken, waarom we ze verwerken en hoe dit u kan beïnvloeden.",
     "s1Title": "Wie zijn wij?",
-    "s1": "De verwerkingsverantwoordelijke voor uw gegevens is Aegryn (formerly BOHA-Group, een in Zwitserland geregistreerde vennootschap). Wanneer u onze diensten gebruikt (certificering, transactie, advisory, catalogus), is de verwerkingsverantwoordelijke Aegryn (formerly BOHA-Group).",
+    "s1": "De verwerkingsverantwoordelijke voor uw gegevens is Aegryn. Wanneer u onze diensten gebruikt (certificering, transactie, advisory, catalogus), is de verwerkingsverantwoordelijke Aegryn.",
     "s2Title": "Welke gegevens verzamelen we en hoe?",
     "s2DirectTitle": "Gegevens die u ons rechtstreeks verstrekt",
     "s2Direct": "Naam, professionele contactgegevens, informatie over de vertegenwoordigde entiteit, financiële informatie, identiteitsdocumenten, bedrijfsdocumenten, informatie over uiteindelijk begunstigden (UBO). Verzameld bij registratie, indiening van assets, Alliance-kandidatuur, reservering Assessment Day, gebruik van de waarderingscalculator of enige communicatie.",
@@ -4556,7 +4556,7 @@
     "s6": "Wij bewaren uw gegevens zo lang als nodig is voor de dienstverlening, naleving van wettelijke verplichtingen (AML-verplichtingen: minimaal 10 jaar na einde van de commerciële relatie) en bescherming tegen mogelijke vorderingen.",
     "s7Title": "Uw rechten",
     "s7": "Op grond van de Zwitserse DSG en de AVG: rechten op inzage, rectificatie, verwijdering, bezwaar, beperking en overdraagbaarheid.",
-    "s7Contact": "Om deze rechten uit te oefenen: legal@boha-group.com",
+    "s7Contact": "Om deze rechten uit te oefenen: legal@aegryn.com",
     "s8Title": "Gegevensbeveiliging",
     "s8": "Technische en organisatorische maatregelen: versleuteling van gevoelige gegevens in rust en tijdens overdracht, rolgebaseerde toegangscontrole (Supabase RLS), registratie van toegangen tot de data room, 2FA voor beheerderstoegang. Bij een inbreuk: kennisgeving aan autoriteiten en betrokkenen conform de Zwitserse DSG en de AVG.",
     "s9Title": "Cookies",
@@ -4566,7 +4566,7 @@
     "authorityCH": "Zwitserland: FDPIC, www.edoeb.admin.ch",
     "authorityFR": "Frankrijk: CNIL, www.cnil.fr",
     "authorityEU": "EU: EDPB, www.edpb.europa.eu",
-    "contactEmail": "legal@boha-group.com",
+    "contactEmail": "legal@aegryn.com",
     "content": {
       "intro": {
         "h": "Inleiding",
@@ -4607,7 +4607,7 @@
       },
       "whoWeAre": {
         "h": "Wie zijn wij en hoe kunt u contact opnemen?",
-        "p": "Aegryn is de naam van ons bedrijf. Voor vragen over de gegevensverwerking met betrekking tot onze website kunt u ons per post bereiken: Aegryn (BOHA-Group sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. U kunt ook contact opnemen via e-mail op legal@boha-group.com of via ons contactformulier."
+        "p": "Aegryn is de naam van ons bedrijf. Voor vragen over de gegevensverwerking met betrekking tot onze website kunt u ons per post bereiken: Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. U kunt ook contact opnemen via e-mail op legal@aegryn.com of via ons contactformulier."
       },
       "ourRole": {
         "h": "Wat is onze rol op het gebied van gegevensbescherming?",
@@ -4659,7 +4659,7 @@
       },
       "security": {
         "h": "Hoe beschermen wij uw gegevens?",
-        "p": "Wij nemen passende beveiligingsmaatregelen, zoals encryptie, om uw persoonsgegevens te beschermen. Als u denkt dat uw persoonsgegevens zijn gecompromitteerd, informeer ons dan onmiddellijk op legal@boha-group.com."
+        "p": "Wij nemen passende beveiligingsmaatregelen, zoals encryptie, om uw persoonsgegevens te beschermen. Als u denkt dat uw persoonsgegevens zijn gecompromitteerd, informeer ons dan onmiddellijk op legal@aegryn.com."
       },
       "storage": {
         "h": "Waar worden uw gegevens opgeslagen en hoe lang?",
@@ -5436,7 +5436,7 @@
       },
       "whoWeAre": {
         "h": "Wie zijn wij en hoe kunt u contact met ons opnemen?",
-        "p": "Aegryn (voorheen BOHA-Group) is de naam van ons bedrijf. Voor vragen over de gegevensverwerking met betrekking tot ons platform kunt u ons per post bereiken: Aegryn (BOHA-Group sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland. U kunt ons ook per e-mail bereiken via legal@boha-group.com."
+        "p": "Aegryn is de naam van ons bedrijf. Voor vragen over de gegevensverwerking met betrekking tot ons platform kunt u ons per post bereiken: Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland. U kunt ons ook per e-mail bereiken via legal@aegryn.com."
       },
       "ourRole": {
         "h": "Wat is onze rol op het gebied van gegevensbescherming?",
@@ -5495,7 +5495,7 @@
       },
       "security": {
         "h": "Hoe beschermen wij uw gegevens?",
-        "p": "Wij treffen passende beveiligingsmaatregelen, zoals versleuteling, om de vertrouwelijkheid, integriteit en beschikbaarheid van uw persoonsgegevens te waarborgen. Helaas kunnen wij niet garanderen dat uw gegevens altijd volledig veilig zijn. Als u vermoedt dat uw persoonsgegevens zijn gecompromitteerd, informeer ons dan onmiddellijk via legal@boha-group.com."
+        "p": "Wij treffen passende beveiligingsmaatregelen, zoals versleuteling, om de vertrouwelijkheid, integriteit en beschikbaarheid van uw persoonsgegevens te waarborgen. Helaas kunnen wij niet garanderen dat uw gegevens altijd volledig veilig zijn. Als u vermoedt dat uw persoonsgegevens zijn gecompromitteerd, informeer ons dan onmiddellijk via legal@aegryn.com."
       },
       "storage": {
         "h": "Waar en hoe lang worden uw gegevens bewaard?",
@@ -5543,7 +5543,7 @@
       "sectionLabel": "(02)",
       "h2": "Gebruiksvoorwaarden – neediu by Aegryn",
       "disclaimer": "Disclaimer: Deze gegevensbeschermingsverklaring is een door AI gegenereerde vertaling en wordt uitsluitend ter informatie verstrekt. Bij afwijkingen of tegenstrijdigheden prevaleert de Engelse versie.",
-      "intro": "Deze Gebruiksvoorwaarden (GV) zijn van toepassing op elk gebruik van het Aegryn-platform, de mobiele applicatie neediu, alsmede op elke dienst die toegankelijk is via of geleverd wordt via het Platform (de Diensten), die worden geleverd en beheerd door Aegryn (BOHA-Group sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland.",
+      "intro": "Deze Gebruiksvoorwaarden (GV) zijn van toepassing op elk gebruik van het Aegryn-platform, de mobiele applicatie neediu, alsmede op elke dienst die toegankelijk is via of geleverd wordt via het Platform (de Diensten), die worden geleverd en beheerd door Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland.",
       "s1H": "1. Algemeen",
       "s1AcceptTitle": "Aanvaarding.",
       "s1Accept": "Door toegang te krijgen tot of gebruik te maken van ons Platform, stemt u ermee in gebonden te zijn aan deze GV.",
@@ -5633,7 +5633,7 @@
       "s17JurisTitle": "Bevoegde rechtbank.",
       "s17Juris": "Elk geschil valt onder de exclusieve bevoegdheid van de bevoegde rechtbanken ter plaatse van de maatschappelijke zetel van Aegryn.",
       "s18H": "18. Contact",
-      "s18": "U kunt contact met ons opnemen via legal@boha-group.com."
+      "s18": "U kunt contact met ons opnemen via legal@aegryn.com."
     }
   },
   "nda": {
@@ -5643,9 +5643,9 @@
     "introText": "Voordat u toegang krijgt tot de Aegryn-catalogus, moet u de onderstaande geheimhoudingsovereenkomst lezen en accepteren. Deze overeenkomst is verplicht en vormt een contractuele vertrouwelijkheidsverplichting jegens Aegryn en de verkopers. Uw handtekening wordt voorzien van een tijdstempel en geregistreerd voor juridische doeleinden.",
     "versionLabel": "NDA | Versie",
     "mainTitle": "Vertrouwelijkheidsvoorwaarden voor Kopers",
-    "mainSubtitle": "Aegryn (voorheen BOHA-Group Sàrl)",
+    "mainSubtitle": "Aegryn",
     "partiesLabel": "Tussen de ondergetekenden:",
-    "partiesAegryn": "Aegryn (voorheen BOHA-Group Sàrl), een in Zwitserland geregistreerde vennootschap, hierna « Aegryn » genoemd,",
+    "partiesAegryn": "Aegryn, een in Zwitserland geregistreerde vennootschap, hierna « Aegryn » genoemd,",
     "partiesAnd": "En",
     "partiesBuyer": "De gebruiker die is geïdentificeerd aan de hand van de bij registratie op het Aegryn-platform verstrekte gegevens (naam, voornaam of handelsnaam, zakelijk e-mailadres), hierna « de Koper » genoemd,",
     "a1Title": "Onderwerp",
@@ -5829,7 +5829,7 @@
       "submitting": "Verzenden…",
       "successTitle": "Contact onthuld.",
       "successDesc": "Uw gegevens zijn geregistreerd. U kunt nu rechtstreeks aan de expert schrijven.",
-      "rgpdNote": "Gegevens verwerkt door BOHA-Group Sàrl (Aegryn). Uw AVG/DSG-rechten zijn gegarandeerd.",
+      "rgpdNote": "Gegevens verwerkt door Aegryn. Uw AVG/DSG-rechten zijn gegarandeerd.",
       "errorConsent": "Accepteer de toestemming voordat u verdergaat.",
       "errorGeneric": "Er is een fout opgetreden. Probeer het opnieuw."
     },
@@ -6052,7 +6052,7 @@
         "completeHint": "Vul uw KYC-dossier in om toegang te krijgen tot de datarooms.",
         "pendingUpload": "Document wordt beoordeeld. U kunt een gecorrigeerde versie indienen.",
         "validatedWarn": "Dit document is gevalideerd. Een nieuwe upload vervangt de huidige versie.",
-        "gdprNotice": "Gegevensbescherming: Uw documenten worden veilig opgeslagen conform de AML-regelgeving. U kunt verwijdering aanvragen via legal@boha-group.com."
+        "gdprNotice": "Gegevensbescherming: Uw documenten worden veilig opgeslagen conform de AML-regelgeving. U kunt verwijdering aanvragen via legal@aegryn.com."
       },
       "offres": {
         "meta": "Mijn biedingen, Kopersruimte Aegryn",
@@ -6346,8 +6346,8 @@
       "cifsLabel": "CIFS-certificering",
       "cifsBody": "Minder dan 25 % van de ingediende activa bereikt Full Grade-status. Ontdek waar uw actief staat voordat een koper dat doet.",
       "cifsCta": "Certificering starten →",
-      "footerLegal": "Aegryn SA, Saint-Sulpice, Kanton Vaud, Zwitserland, CHE-402.011.821",
-      "footerCopyright": "© Aegryn SA 2027. Permanente gratis digitale toegang",
+      "footerLegal": "Aegryn, Saint-Sulpice, Kanton Vaud, Zwitserland, CHE-402.011.821",
+      "footerCopyright": "© Aegryn 2027. Permanente gratis digitale toegang",
       "navTableOfContents": "Inhoud",
       "navDownloadPdf": "PDF downloaden",
       "cardReadIssue": "Nummer lezen",
@@ -6425,7 +6425,7 @@
       "civilityM": "Dhr.",
       "civilityMme": "Mevr.",
       "phonePlaceholder": "Telefoon",
-      "rgpdLabel": "Ik ga ermee akkoord dat Aegryn SA mijn persoonsgegevens gebruikt om contact met mij op te nemen over dit verzoek voor de gedrukte editie.",
+      "rgpdLabel": "Ik ga ermee akkoord dat Aegryn mijn persoonsgegevens gebruikt om contact met mij op te nemen over dit verzoek voor de gedrukte editie.",
       "legalNotice": "De verzamelde gegevens worden verwerkt door Aegryn (kanton Vaud, Zwitserland) in overeenstemming met de AVG (EU 2016/679) en de herziene Zwitserse DSG (van kracht sinds 1 september 2023). Ze worden uitsluitend gebruikt voor het beheer van de verlanglijst van de gedrukte editie. U heeft het recht op inzage, rectificatie en verwijdering van uw gegevens via media@boha-group.com of vanuit uw accountruimte.",
       "wishlistSectionLabel": "Gedrukte editie, Verlanglijst",
       "wishlistTitle": "Het Aegryn-magazine in gedrukte vorm ontvangen",
