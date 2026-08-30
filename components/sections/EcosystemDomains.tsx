@@ -17,6 +17,7 @@ interface Domain {
 const DOMAIN_IMAGES: Record<string, string> = {
   ai:      '/images/theme_AI.jpg',
   fintech: '/images/theme_fintech.jpg',
+  ip:      '/images/theme_IP.jpg',
   web3:    '/images/theme_Digital Art.jpg',
 }
 
