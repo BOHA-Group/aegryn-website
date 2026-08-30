@@ -10,9 +10,7 @@
 
 | ID | Fichier local | Fallback Pexels | Notes |
 |----|--------------|-----------------|-------|
-| COVER | `cover-magazine-issue-01.jpg` | [pexels/618833](https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg) | Montagne enneigée — utilisé IssueCard + IssueCard issue-01 |
-| COVER-2 | `cover-magazine-issue-01-2.jpg` | — | Version alternative (non utilisée activement) |
-| COVER-OLD | `cover-magazine-issue-01-old.jpg` | — | Archive ancienne version |
+| COVER | `cover-magazine-issue-01.jpg` | [pexels/618833](https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg) | Montagne enneigée — IssueCard + flipbook cover |
 
 ---
 
