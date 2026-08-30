@@ -32,7 +32,7 @@ export default function MagazineFlipbookPage() {
   }, [locale])
 
   return (
-    <div style={{ position: 'fixed', inset: 0, zIndex: 9999, background: '#0F1A2B' }}>
+    <div style={{ position: 'fixed', top: 0, right: 0, bottom: 0, left: 0, zIndex: 9999, background: '#0F1A2B', width: '100vw', height: '100vh' }}>
 
       {/* Quit button */}
       <button
@@ -69,7 +69,7 @@ export default function MagazineFlipbookPage() {
         ref={iframeRef}
         src="/magazine/issue-01/aegryn-magazine-issue-01_1.html"
         title="Aegryn Magazine — Issue 01 Flipbook"
-        style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
+        style={{ width: '100vw', height: '100vh', border: 'none', display: 'block' }}
         allow="fullscreen"
         allowFullScreen
       />
