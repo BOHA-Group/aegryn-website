@@ -4524,7 +4524,7 @@
     "s6": "Nous conservons vos données aussi longtemps que nécessaire pour l'exécution des services, le respect de nos obligations légales (obligations LCB-FT : 10 ans minimum après la fin de la relation commerciale), et la protection contre d'éventuelles réclamations. Les données anonymisées du catalogue historique sont conservées indéfiniment.",
     "s7Title": "Vos droits",
     "s7": "Conformément à la LPD suisse et au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité.",
-    "s7Contact": "Pour exercer ces droits : legal@aegryn.com",
+    "s7Contact": "Pour exercer ces droits : legal@boha-group.com",
     "s8Title": "Sécurité de vos données",
     "s8": "Mesures techniques et organisationnelles : chiffrement des données sensibles au repos et en transit, contrôle d'accès strict par rôle (RLS Supabase), journalisation des accès à la data room, authentification forte (2FA) pour l'accès admin. En cas de violation, notification des autorités et des personnes concernées conformément à la LPD et au RGPD.",
     "s9Title": "Cookies",
@@ -4534,7 +4534,7 @@
     "authorityCH": "Suisse : PFPDT, www.edoeb.admin.ch",
     "authorityFR": "France : CNIL, www.cnil.fr",
     "authorityEU": "UE : EDPB, www.edpb.europa.eu",
-    "contactEmail": "legal@aegryn.com",
+    "contactEmail": "legal@boha-group.com",
     "content": {
       "intro": {
         "h": "Introduction",
@@ -4575,7 +4575,7 @@
       },
       "whoWeAre": {
         "h": "Qui sommes-nous et comment nous contacter ?",
-        "p": "Aegryn est le nom de notre entreprise. Si vous avez des questions sur le traitement des données relatives à notre site web, vous pouvez nous contacter par courrier : Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. Vous pouvez également nous contacter par e-mail à legal@aegryn.com ou via notre formulaire de contact."
+        "p": "Aegryn est le nom de notre entreprise. Si vous avez des questions sur le traitement des données relatives à notre site web, vous pouvez nous contacter par courrier : Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. Vous pouvez également nous contacter par e-mail à legal@boha-group.com ou via notre formulaire de contact."
       },
       "ourRole": {
         "h": "Quel est notre rôle en matière de protection des données ?",
@@ -4627,7 +4627,7 @@
       },
       "security": {
         "h": "Comment protégeons-nous vos données ?",
-        "p": "Nous prenons des mesures de sécurité appropriées, telles que le chiffrement, pour protéger vos données personnelles. Si vous pensez que vos données personnelles ont été compromises, veuillez nous en informer immédiatement à legal@aegryn.com."
+        "p": "Nous prenons des mesures de sécurité appropriées, telles que le chiffrement, pour protéger vos données personnelles. Si vous pensez que vos données personnelles ont été compromises, veuillez nous en informer immédiatement à legal@boha-group.com."
       },
       "storage": {
         "h": "Où vos données sont-elles stockées et combien de temps ?",
@@ -5463,7 +5463,7 @@
       },
       "security": {
         "h": "Comment protégeons-nous vos données ?",
-        "p": "Nous prenons des mesures de sécurité appropriées, comme le chiffrement, pour assurer la confidentialité, l'intégrité et la disponibilité de vos données personnelles. Malheureusement, nous ne pouvons pas garantir que vos données seront toujours totalement en sécurité. Si vous pensez que vos données personnelles ont été compromises, veuillez nous en informer immédiatement à legal@aegryn.com."
+        "p": "Nous prenons des mesures de sécurité appropriées, comme le chiffrement, pour assurer la confidentialité, l'intégrité et la disponibilité de vos données personnelles. Malheureusement, nous ne pouvons pas garantir que vos données seront toujours totalement en sécurité. Si vous pensez que vos données personnelles ont été compromises, veuillez nous en informer immédiatement à legal@boha-group.com."
       },
       "storage": {
         "h": "Où et combien de temps vos données sont-elles conservées ?",
@@ -6020,7 +6020,7 @@
         "completeHint": "Complétez votre dossier KYC pour débloquer l'accès aux data rooms et au processus PTT.",
         "pendingUpload": "Document en cours d'examen. Vous pouvez soumettre une version corrigée si nécessaire.",
         "validatedWarn": "Ce document est validé. Un nouveau dépôt remplacera la version actuelle et relancera la validation.",
-        "gdprNotice": "Protection des données : Vos documents sont stockés de manière sécurisée et traités uniquement dans le cadre de la réglementation LBA et des obligations KYC/AML suisses. Conformément au RGPD, vous pouvez demander leur suppression à legal@aegryn.com."
+        "gdprNotice": "Protection des données : Vos documents sont stockés de manière sécurisée et traités uniquement dans le cadre de la réglementation LBA et des obligations KYC/AML suisses. Conformément au RGPD, vous pouvez demander leur suppression à legal@boha-group.com."
       },
       "offres": {
         "meta": "Mes offres | Espace Acquéreur Aegryn",

@@ -4553,7 +4553,7 @@
     "s6": "We retain your data as long as necessary for service delivery, legal and regulatory compliance (AML obligations: minimum 10 years after end of commercial relationship), and protection against claims. Anonymised historical catalogue data is retained indefinitely.",
     "s7Title": "Your rights",
     "s7": "Under Swiss LPD and GDPR: rights of access, rectification, erasure, objection, restriction and portability.",
-    "s7Contact": "To exercise these rights: legal@aegryn.com",
+    "s7Contact": "To exercise these rights: legal@boha-group.com",
     "s8Title": "Data security",
     "s8": "Technical and organisational measures: encryption of sensitive data at rest and in transit, role-based access control (Supabase RLS), data room access logging, 2FA for admin access. In case of breach, notification of authorities and affected persons in accordance with Swiss LPD and GDPR.",
     "s9Title": "Cookies",
@@ -4563,7 +4563,7 @@
     "authorityCH": "Switzerland: FDPIC, www.edoeb.admin.ch",
     "authorityFR": "France: CNIL, www.cnil.fr",
     "authorityEU": "EU: EDPB, www.edpb.europa.eu",
-    "contactEmail": "legal@aegryn.com",
+    "contactEmail": "legal@boha-group.com",
     "content": {
       "intro": {
         "h": "Introduction",
@@ -4604,7 +4604,7 @@
       },
       "whoWeAre": {
         "h": "Who are we and how can you contact us?",
-        "p": "Aegryn is the name of our company. If you have questions about the data processing related to our website, you can contact us by mail: Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. You can also contact us by email at legal@aegryn.com or via our contact form."
+        "p": "Aegryn is the name of our company. If you have questions about the data processing related to our website, you can contact us by mail: Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. You can also contact us by email at legal@boha-group.com or via our contact form."
       },
       "ourRole": {
         "h": "What is our role regarding data protection?",
@@ -4656,7 +4656,7 @@
       },
       "security": {
         "h": "How do we protect your data?",
-        "p": "We take appropriate security measures, such as encryption, to protect your personal data. If you believe your personal data has been compromised, please inform us immediately at legal@aegryn.com."
+        "p": "We take appropriate security measures, such as encryption, to protect your personal data. If you believe your personal data has been compromised, please inform us immediately at legal@boha-group.com."
       },
       "storage": {
         "h": "Where is your data stored and for how long?",
@@ -5492,7 +5492,7 @@
       },
       "security": {
         "h": "How do we protect your data?",
-        "p": "We take appropriate security measures, such as encryption, to keep your personal data safe and make sure it stays private, secure, and available. Unfortunately, we cannot guarantee that your data will always be completely safe. If you believe your personal data has been compromised, please let us know right away at legal@aegryn.com."
+        "p": "We take appropriate security measures, such as encryption, to keep your personal data safe and make sure it stays private, secure, and available. Unfortunately, we cannot guarantee that your data will always be completely safe. If you believe your personal data has been compromised, please let us know right away at legal@boha-group.com."
       },
       "storage": {
         "h": "Where and for how long is your data stored?",
@@ -6049,7 +6049,7 @@
         "completeHint": "Complete your KYC file to unlock access to data rooms and the PTT process.",
         "pendingUpload": "Document under review. You may submit a corrected version if needed.",
         "validatedWarn": "This document is validated. A new upload will replace the current version and restart validation.",
-        "gdprNotice": "Data protection: Your documents are stored securely and processed solely within the framework of AML regulations and Swiss KYC/AML obligations. Under GDPR, you may request deletion at legal@aegryn.com."
+        "gdprNotice": "Data protection: Your documents are stored securely and processed solely within the framework of AML regulations and Swiss KYC/AML obligations. Under GDPR, you may request deletion at legal@boha-group.com."
       },
       "offres": {
         "meta": "My bids, Buyer Space Aegryn",

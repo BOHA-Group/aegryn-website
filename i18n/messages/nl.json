@@ -4556,7 +4556,7 @@
     "s6": "Wij bewaren uw gegevens zo lang als nodig is voor de dienstverlening, naleving van wettelijke verplichtingen (AML-verplichtingen: minimaal 10 jaar na einde van de commerciële relatie) en bescherming tegen mogelijke vorderingen.",
     "s7Title": "Uw rechten",
     "s7": "Op grond van de Zwitserse DSG en de AVG: rechten op inzage, rectificatie, verwijdering, bezwaar, beperking en overdraagbaarheid.",
-    "s7Contact": "Om deze rechten uit te oefenen: legal@aegryn.com",
+    "s7Contact": "Om deze rechten uit te oefenen: legal@boha-group.com",
     "s8Title": "Gegevensbeveiliging",
     "s8": "Technische en organisatorische maatregelen: versleuteling van gevoelige gegevens in rust en tijdens overdracht, rolgebaseerde toegangscontrole (Supabase RLS), registratie van toegangen tot de data room, 2FA voor beheerderstoegang. Bij een inbreuk: kennisgeving aan autoriteiten en betrokkenen conform de Zwitserse DSG en de AVG.",
     "s9Title": "Cookies",
@@ -4566,7 +4566,7 @@
     "authorityCH": "Zwitserland: FDPIC, www.edoeb.admin.ch",
     "authorityFR": "Frankrijk: CNIL, www.cnil.fr",
     "authorityEU": "EU: EDPB, www.edpb.europa.eu",
-    "contactEmail": "legal@aegryn.com",
+    "contactEmail": "legal@boha-group.com",
     "content": {
       "intro": {
         "h": "Inleiding",
@@ -4607,7 +4607,7 @@
       },
       "whoWeAre": {
         "h": "Wie zijn wij en hoe kunt u contact opnemen?",
-        "p": "Aegryn is de naam van ons bedrijf. Voor vragen over de gegevensverwerking met betrekking tot onze website kunt u ons per post bereiken: Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. U kunt ook contact opnemen via e-mail op legal@aegryn.com of via ons contactformulier."
+        "p": "Aegryn is de naam van ons bedrijf. Voor vragen over de gegevensverwerking met betrekking tot onze website kunt u ons per post bereiken: Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice. U kunt ook contact opnemen via e-mail op legal@boha-group.com of via ons contactformulier."
       },
       "ourRole": {
         "h": "Wat is onze rol op het gebied van gegevensbescherming?",
@@ -4659,7 +4659,7 @@
       },
       "security": {
         "h": "Hoe beschermen wij uw gegevens?",
-        "p": "Wij nemen passende beveiligingsmaatregelen, zoals encryptie, om uw persoonsgegevens te beschermen. Als u denkt dat uw persoonsgegevens zijn gecompromitteerd, informeer ons dan onmiddellijk op legal@aegryn.com."
+        "p": "Wij nemen passende beveiligingsmaatregelen, zoals encryptie, om uw persoonsgegevens te beschermen. Als u denkt dat uw persoonsgegevens zijn gecompromitteerd, informeer ons dan onmiddellijk op legal@boha-group.com."
       },
       "storage": {
         "h": "Waar worden uw gegevens opgeslagen en hoe lang?",
@@ -5436,7 +5436,7 @@
       },
       "whoWeAre": {
         "h": "Wie zijn wij en hoe kunt u contact met ons opnemen?",
-        "p": "Aegryn is de naam van ons bedrijf. Voor vragen over de gegevensverwerking met betrekking tot ons platform kunt u ons per post bereiken: Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland. U kunt ons ook per e-mail bereiken via legal@aegryn.com."
+        "p": "Aegryn is de naam van ons bedrijf. Voor vragen over de gegevensverwerking met betrekking tot ons platform kunt u ons per post bereiken: Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland. U kunt ons ook per e-mail bereiken via legal@boha-group.com."
       },
       "ourRole": {
         "h": "Wat is onze rol op het gebied van gegevensbescherming?",
@@ -5495,7 +5495,7 @@
       },
       "security": {
         "h": "Hoe beschermen wij uw gegevens?",
-        "p": "Wij treffen passende beveiligingsmaatregelen, zoals versleuteling, om de vertrouwelijkheid, integriteit en beschikbaarheid van uw persoonsgegevens te waarborgen. Helaas kunnen wij niet garanderen dat uw gegevens altijd volledig veilig zijn. Als u vermoedt dat uw persoonsgegevens zijn gecompromitteerd, informeer ons dan onmiddellijk via legal@aegryn.com."
+        "p": "Wij treffen passende beveiligingsmaatregelen, zoals versleuteling, om de vertrouwelijkheid, integriteit en beschikbaarheid van uw persoonsgegevens te waarborgen. Helaas kunnen wij niet garanderen dat uw gegevens altijd volledig veilig zijn. Als u vermoedt dat uw persoonsgegevens zijn gecompromitteerd, informeer ons dan onmiddellijk via legal@boha-group.com."
       },
       "storage": {
         "h": "Waar en hoe lang worden uw gegevens bewaard?",
@@ -5633,7 +5633,7 @@
       "s17JurisTitle": "Bevoegde rechtbank.",
       "s17Juris": "Elk geschil valt onder de exclusieve bevoegdheid van de bevoegde rechtbanken ter plaatse van de maatschappelijke zetel van Aegryn.",
       "s18H": "18. Contact",
-      "s18": "U kunt contact met ons opnemen via legal@aegryn.com."
+      "s18": "U kunt contact met ons opnemen via legal@boha-group.com."
     }
   },
   "nda": {
@@ -6052,7 +6052,7 @@
         "completeHint": "Vul uw KYC-dossier in om toegang te krijgen tot de datarooms.",
         "pendingUpload": "Document wordt beoordeeld. U kunt een gecorrigeerde versie indienen.",
         "validatedWarn": "Dit document is gevalideerd. Een nieuwe upload vervangt de huidige versie.",
-        "gdprNotice": "Gegevensbescherming: Uw documenten worden veilig opgeslagen conform de AML-regelgeving. U kunt verwijdering aanvragen via legal@aegryn.com."
+        "gdprNotice": "Gegevensbescherming: Uw documenten worden veilig opgeslagen conform de AML-regelgeving. U kunt verwijdering aanvragen via legal@boha-group.com."
       },
       "offres": {
         "meta": "Mijn biedingen, Kopersruimte Aegryn",

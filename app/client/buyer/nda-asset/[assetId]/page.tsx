@@ -124,7 +124,7 @@ export default async function NdaAssetPage({
               <li>Ne pas contacter directement le cédant, ses dirigeants, salariés, clients ou fournisseurs sans accord préalable écrit d'Aegryn</li>
               <li>Ne pas utiliser les informations pour développer ou améliorer un produit ou service concurrent</li>
               <li>Restituer ou détruire tous les documents à première demande d'Aegryn ou à l'issue du processus</li>
-              <li>Signaler immédiatement tout accès non autorisé, perte ou divulgation accidentelle à legal@aegryn.com</li>
+              <li>Signaler immédiatement tout accès non autorisé, perte ou divulgation accidentelle à legal@boha-group.com</li>
             </ul>
           </section>
 

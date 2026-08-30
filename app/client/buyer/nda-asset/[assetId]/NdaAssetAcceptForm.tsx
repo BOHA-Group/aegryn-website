@@ -89,7 +89,7 @@ export default function NdaAssetAcceptForm({ assetId, assetName, version, fullNa
       <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
         En acceptant, votre adresse IP et l'horodatage sont enregistrés conformément au RGPD et à la LPD suisse.
         Ce consentement est conservé à titre de preuve contractuelle.
-        Contact : <a href="mailto:legal@aegryn.com" className="underline">legal@aegryn.com</a>
+        Contact : <a href="mailto:legal@boha-group.com" className="underline">legal@boha-group.com</a>
       </p>
     </div>
   )
