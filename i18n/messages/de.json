@@ -1086,7 +1086,7 @@
   "acquisition": {
     "meta": {
       "title": "Transaktionsberatung & M&A | Aegryn",
-      "desc": "Vollständige Begleitung beim Erwerb zertifizierter Tech-Assets: Due Diligence, rechtliche und steuerliche Strukturierung, Finanzierung, sicheres Signing und Closing. Aegryn mobilisiert die richtigen Experten für Ihren Deal."
+      "desc": "M&A-Begleitung für zertifizierte Tech-Assets: Due Diligence, Strukturierung, Escrow, Closing. Aegryn koordiniert die Experten für jede Transaktion."
     },
     "label": "Services : Transaktionsberatung",
     "title": "Ihre Akquisition.\nStrukturiert für den Abschluss.",
@@ -2478,7 +2478,7 @@
   "transact": {
     "meta": {
       "title": "TRANSACT | Offmarket-Tech-Transaktionsagentur",
-      "desc": "Aegryn TRANSACT: die Referenzagentur für selektive Tech-Transaktionen in Europa. Exklusives Mandat, geschlossener Katalog, CIFS-zertifizierte qualifizierte Käufer und Verkäufer."
+      "desc": "Aegryn TRANSACT: Referenzagentur für selektive Tech-Transaktionen in Europa. Exklusives Mandat 60 Tage, institutionelles Escrow, vorqualifizierte Käufer."
     },
     "index": {
       "eyebrow": "AEGRYN TRANSACT | TECH-TRANSAKTIONSAGENTUR",
@@ -2545,7 +2545,7 @@
     "mandate": {
       "meta": {
         "title": "Mandat einreichen | Aegryn TRANSACT",
-        "desc": "Vertrauen Sie Ihre Transaktion Aegryn an: Asset-Veräußerung, Akquisitionssuche, Kapitalsuche oder Kapitaleröffnung. Exklusives Mandat, geschlossener Katalog, maximaler NDA-Schutz."
+        "desc": "Vertrauen Sie Aegryn Ihre Transaktion an: Asset-Veräußerung, Akquisition oder Kapitalsuche. Antwort in 48h, exklusives Mandat 60 Tage, vertraulicher Prozess."
       },
       "eyebrow": "AEGRYN TRANSACT | EXKLUSIVES MANDAT",
       "heroTitle": "Welches Mandat möchten Sie\nuns anvertrauen?",
@@ -2762,7 +2762,7 @@
   "transaction": {
     "meta": {
       "title": "M&A-Transaktionen, Zertifizierte Tech-Asset-Transaktionen",
-      "desc": "Aegryn-Sessions: Zertifizierte Tech-Assets kaufen oder verkaufen."
+      "desc": "Aegryn-Sessions: Tech-Assets kaufen oder verkaufen. Vertraulicher Prozess, CIFS-Zertifizierung, Escrow, vorqualifizierte Käufer."
     },
     "index": {
       "label": "Aegryn M&A-Transaktionen",
@@ -2890,7 +2890,7 @@
     "sell": {
       "meta": {
         "title": "Ihr Asset veräussern | Aegryn",
-        "desc": "Aegryn Verkäufer-Prozess: indikative Bewertung, Bereitschafts-Score, Mandatseinreichung. CIFS-Zertifizierung, absolute Vertraulichkeit, Schweizer institutionelles Treuhandkonto."
+        "desc": "Aegryn Verkäuferprozess: indikative Bewertung, Bereitschafts-Score, exklusives Mandat. CIFS-Zertifizierung, offizieller Grade, vorqualifizierte Käufer."
       },
       "hero": {
         "label": "Ihr Asset verkaufen",
@@ -3407,7 +3407,7 @@
   "build_service": {
     "meta": {
       "title": "Digitale Asset-Entwicklung zum Festpreis - Aegryn",
-      "desc": "Digitale Asset-Entwicklung zum Festpreis: B2B SaaS, KI, mobile App. Vollständige Dokumentation, zertifizierungsbereit. Keine Überschreitungen, Asset bewertbar ab Tag eins."
+      "desc": "Digitale Assets zum Festpreis: B2B SaaS, KI, mobile App. Vollständige Dokumentation, zertifizierungsbereit. Keine Überschreitungen, bewertbar ab Tag eins."
     },
     "label": "Leistungen, Asset-Design",
     "title": "Wir bauen.\nSie besitzen.\nFestpreis. Zertifizierungsbereit.",
@@ -4397,7 +4397,7 @@
   "termsUse": {
     "meta": {
       "title": "Nutzungsbedingungen | Aegryn",
-      "desc": "Bedingungen für den Zugang und die Nutzung der Website aegryn.com."
+      "desc": "Nutzungsbedingungen für aegryn.com: Zugangsvoraussetzungen, Haftung, geistiges Eigentum und anwendbares Recht."
     },
     "label": "Nutzungsbedingungen",
     "version": "Version: Juli 2026",
@@ -5698,7 +5698,7 @@
   "experts": {
     "meta": {
       "title": "Expertennetzwerk | Aegryn",
-      "desc": "Wir glauben, dass jede Transaktion die richtigen Menschen zum richtigen Zeitpunkt verdient. Kein Verzeichnis. Ein geprüftes Netzwerk damit nichts Wesentliches dem Zufall überlassen wird."
+      "desc": "Geprüftes Netzwerk aus M&A-, Rechts-, Technik- und Cyber-Experten, ausgewählt von Aegryn. Die richtigen Personen zum richtigen Zeitpunkt bei jeder Transaktion."
     },
     "hero": {
       "label": "Aegryn Expertennetzwerk",
@@ -6300,7 +6300,7 @@
     "nav": "Magazine",
     "hub": {
       "title": "AEGRYN Magazine",
-      "desc": "Deals, Multiples, Porträts und Lebensart \u2014 vierteljährlich.",
+      "desc": "Deals, Multiples, Porträts und Lebensart — vierteljährlich.",
       "reportLabel": "Jahresbericht",
       "reportDesc": "Aegryn Magazine, European Tech M&A Intelligence",
       "subscribeLabel": "Bericht erhalten",

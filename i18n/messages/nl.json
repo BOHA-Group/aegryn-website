@@ -1086,7 +1086,7 @@
   "acquisition": {
     "meta": {
       "title": "Transactie-advies & M&A | Aegryn",
-      "desc": "Volledige begeleiding bij de overname van gecertificeerde tech-assets: due diligence, juridische en fiscale structurering, financiering, veilige ondertekening en closing. Aegryn mobiliseert de juiste experts voor uw deal."
+      "desc": "M&A-begeleiding voor gecertificeerde tech-asset-overnames: due diligence, structurering, escrow, closing. Aegryn coördineert de experts."
     },
     "label": "Services : Transactie-advies",
     "title": "Uw overname.\nGestructureerd om te sluiten.",
@@ -2478,7 +2478,7 @@
   "transact": {
     "meta": {
       "title": "TRANSACT | Offmarket tech-transactiebureau",
-      "desc": "Aegryn TRANSACT: het referentiebureau voor selectieve tech-transacties in Europa. Exclusief mandaat, gesloten catalogus, CIFS-gecertificeerde gekwalificeerde kopers en verkopers."
+      "desc": "Aegryn TRANSACT: referentiebureau voor selectieve tech-transacties in Europa. Exclusief mandaat 60 dagen, institutioneel escrow, vooraf gekwalificeerde kopers."
     },
     "index": {
       "eyebrow": "AEGRYN TRANSACT | TECH-TRANSACTIEBUREAU",
@@ -2545,7 +2545,7 @@
     "mandate": {
       "meta": {
         "title": "Mandaat indienen | Aegryn TRANSACT",
-        "desc": "Vertrouw uw transactie toe aan Aegryn: asset-overdracht, acquisitiezoektocht, kapitaalzoektocht of kapitaalontsluiting. Exclusief mandaat, gesloten catalogus, maximale NDA-bescherming."
+        "desc": "Vertrouw uw transactie toe aan Aegryn: asset-overdracht, acquisitie of kapitaalzoektocht. Antwoord in 48u, exclusief mandaat 60 dagen, vertrouwelijk proces."
       },
       "eyebrow": "AEGRYN TRANSACT | EXCLUSIEF MANDAAT",
       "heroTitle": "Welk mandaat wilt u\nons toevertrouwen?",
@@ -2762,7 +2762,7 @@
   "transaction": {
     "meta": {
       "title": "Veiling, Gecertificeerde tech-assettransacties",
-      "desc": "Aegryn-sessies: gecertificeerde tech-assets kopen of verkopen."
+      "desc": "Aegryn-sessies: gecertificeerde tech-assets kopen of verkopen. Vertrouwelijk proces, CIFS-certificering, institutioneel escrow en gekwalificeerde kopers."
     },
     "index": {
       "label": "Aegryn M&A-Transacties",
@@ -2890,7 +2890,7 @@
     "sell": {
       "meta": {
         "title": "Uw activa overdragen | Aegryn",
-        "desc": "Aegryn verkopersproces: indicatieve waardering, gereedheidscore, mandaatindiening. CIFS-certificering, absolute vertrouwelijkheid, Zwitserse institutionele escrow."
+        "desc": "Aegryn-verkoopproces: indicatieve waardering, gereedheidscore, exclusief mandaat. CIFS-certificering, officiële grade, vooraf gekwalificeerde kopers."
       },
       "hero": {
         "label": "Uw activa verkopen",
@@ -3407,7 +3407,7 @@
   "build_service": {
     "meta": {
       "title": "Digitale asset ontwikkeling tegen vaste prijs - Aegryn",
-      "desc": "Digitale asset engineering tegen vaste prijs: B2B SaaS, AI, mobiele app. Volledige documentatie, klaar voor certificering. Geen overschrijdingen, asset waardeerbaar vanaf dag één."
+      "desc": "Digitale assets tegen vaste prijs: B2B SaaS, AI, mobiele app. Volledige documentatie, klaar voor certificering. Geen overschrijdingen, waardeerbaar vanaf dag 1."
     },
     "label": "Diensten : Asset-ontwerp",
     "title": "Wij bouwen.\nU bent eigenaar.\nVaste prijs. Klaar voor certificering.",
@@ -4397,7 +4397,7 @@
   "termsUse": {
     "meta": {
       "title": "Gebruiksvoorwaarden | Aegryn",
-      "desc": "Voorwaarden voor toegang tot en gebruik van de website aegryn.com."
+      "desc": "Gebruiksvoorwaarden van aegryn.com: toegang, aansprakelijkheid, intellectuele eigendom en toepasselijk recht."
     },
     "label": "Gebruiksvoorwaarden",
     "version": "Versie: juli 2026",
@@ -5698,7 +5698,7 @@
   "experts": {
     "meta": {
       "title": "Expertennetwerk | Aegryn",
-      "desc": "Wij geloven dat elke transactie de juiste mensen op het juiste moment verdient. Geen gids. Een geverifieerd netwerk samengesteld zodat niets essentieels aan het toeval wordt overgelaten."
+      "desc": "Geverifieerd netwerk van M&A-, juridische, technische en cyberexperts geselecteerd door Aegryn. De juiste mensen op het juiste moment bij elke transactie."
     },
     "hero": {
       "label": "Aegryn Expertennetwerk",
@@ -6300,7 +6300,7 @@
     "nav": "Magazine",
     "hub": {
       "title": "AEGRYN Magazine",
-      "desc": "Deals, multiples, portretten en levensstijl \u2014 driemaandelijks.",
+      "desc": "Deals, multiples, portretten en levensstijl — driemaandelijks.",
       "reportLabel": "Jaarrapport",
       "reportDesc": "Aegryn Magazine, European Tech M&A Intelligence",
       "subscribeLabel": "Rapport ontvangen",

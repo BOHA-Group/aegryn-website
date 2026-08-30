@@ -1086,7 +1086,7 @@
   "acquisition": {
     "meta": {
       "title": "Consulenza transazionale e M&A | Aegryn",
-      "desc": "Accompagnamento completo per l'acquisizione di asset tech certificati: due diligence, strutturazione legale e fiscale, finanziamento, firma e chiusura sicure. Aegryn mobilita gli esperti giusti per il vostro deal."
+      "desc": "Supporto M&A per acquisizioni di asset tech certificati: due diligence, strutturazione legale, escrow istituzionale, closing. Esperti coordinati da Aegryn."
     },
     "label": "Servizi : Consulenza transazionale",
     "title": "La vostra acquisizione.\nStrutturata per chiudere.",
@@ -2478,7 +2478,7 @@
   "transact": {
     "meta": {
       "title": "TRANSACT | Agenzia di transazioni tech offmarket",
-      "desc": "Aegryn TRANSACT: l'agenzia di riferimento per transazioni tech selettive in Europa. Mandato esclusivo, catalogo chiuso, acquirenti e venditori qualificati certificati CIFS."
+      "desc": "Aegryn TRANSACT: agenzia di riferimento per transazioni tech selettive in Europa. Mandato esclusivo 60 giorni, escrow istituzionale, acquirenti pre-qualificati."
     },
     "index": {
       "eyebrow": "AEGRYN TRANSACT | AGENZIA DI TRANSAZIONI TECH",
@@ -2545,7 +2545,7 @@
     "mandate": {
       "meta": {
         "title": "Inviare un mandato | Aegryn TRANSACT",
-        "desc": "Affidi la sua transazione ad Aegryn: cessione di asset, ricerca di acquisizione, ricerca di capitale o apertura di capitale. Mandato esclusivo, catalogo chiuso, massima protezione NDA."
+        "desc": "Affidi la sua transazione ad Aegryn: cessione di asset, acquisizione o ricerca di capitale. Risposta in 48h, mandato esclusivo 60 giorni, processo riservato."
       },
       "eyebrow": "AEGRYN TRANSACT | MANDATO ESCLUSIVO",
       "heroTitle": "Quale mandato vuole\naffidarci?",
@@ -2762,7 +2762,7 @@
   "transaction": {
     "meta": {
       "title": "Asta, Transazioni di asset tech certificati",
-      "desc": "Sessioni Aegryn: compra o vendi asset tech certificati."
+      "desc": "Sessioni Aegryn: compra o vendi asset tech certificati CIFS. Processo riservato, escrow istituzionale e acquirenti qualificati."
     },
     "index": {
       "label": "Aegryn M&A Transazioni",
@@ -2890,7 +2890,7 @@
     "sell": {
       "meta": {
         "title": "Vendere il vostro asset | Aegryn",
-        "desc": "Percorso cedente Aegryn: valutazione indicativa, punteggio di preparazione, presentazione del mandato. Certificazione CIFS, riservatezza assoluta, deposito fiduciario istituzionale svizzero."
+        "desc": "Percorso cedente Aegryn: valutazione indicativa, punteggio di preparazione, mandato esclusivo. Certificazione CIFS, grade ufficiale, acquirenti pre-qualificati."
       },
       "hero": {
         "label": "Vendere il vostro asset",
@@ -3407,7 +3407,7 @@
   "build_service": {
     "meta": {
       "title": "Sviluppo di asset digitali a prezzo fisso - Aegryn",
-      "desc": "Ingegneria di asset digitali a prezzo fisso: SaaS B2B, IA, app mobile. Documentazione completa, pronto per certificazione. Zero sforamenti, asset valorizzabile dal primo giorno."
+      "desc": "Asset digitali a prezzo fisso: SaaS B2B, IA, app mobile. Documentazione completa, pronto per certificazione. Zero sforamenti, valorizzabile dal primo giorno."
     },
     "label": "Servizi : Progettazione di asset",
     "title": "Costruiamo.\nSei il proprietario.\nPrezzo fisso. Pronto per la certificazione.",
@@ -4034,7 +4034,7 @@
   "valuation": {
     "meta": {
       "title": "Stimate il valore del vostro asset tech | Aegryn Valuation",
-      "desc": "Calcolatore di valutazione SaaS B2B basato sul protocollo di grade Aegryn. 4 dimensioni, punteggio su 100, grade stimato e fascia di valutazione. Gratuito. Riservato."
+      "desc": "Valutazione SaaS B2B basata sul protocollo Aegryn. 4 dimensioni, punteggio su 100, multiplo ARR. Risultato immediato, gratuito e riservato."
     },
     "hero": {
       "label": "Aegryn VALUATION",
@@ -4397,7 +4397,7 @@
   "termsUse": {
     "meta": {
       "title": "Condizioni d'uso | Aegryn",
-      "desc": "Condizioni che regolano l'accesso e l'utilizzo del sito aegryn.com."
+      "desc": "Condizioni di utilizzo di aegryn.com: accesso, responsabilità, proprietà intellettuale e diritto applicabile."
     },
     "label": "Condizioni d'uso",
     "version": "Versione: luglio 2026",
@@ -4723,7 +4723,7 @@
   "security": {
     "meta": {
       "title": "Sicurezza online | Aegryn",
-      "desc": "Come proteggersi da frodi e usurpazione di identità legate ad Aegryn."
+      "desc": "Come proteggersi da frodi e usurpazione di identità legate ad Aegryn. Consigli di sicurezza e contatti verificati ufficiali."
     },
     "label": "Sicurezza online",
     "subtitle": "Come proteggersi dalle frodi",
@@ -5698,7 +5698,7 @@
   "experts": {
     "meta": {
       "title": "Rete di esperti | Aegryn",
-      "desc": "Crediamo che ogni transazione meriti le persone giuste al momento giusto. Non un elenco. Una rete verificata e selezionata affinché nulla di essenziale sia lasciato al caso."
+      "desc": "Rete verificata di esperti M&A, legali, tecnici e cyber selezionati da Aegryn. Le persone giuste al momento giusto per ogni transazione."
     },
     "hero": {
       "label": "Rete di esperti Aegryn",
@@ -6300,7 +6300,7 @@
     "nav": "Magazine",
     "hub": {
       "title": "AEGRYN Magazine",
-      "desc": "Deals, multipli, ritratti e arte di vivere \u2014 trimestrale.",
+      "desc": "Deals, multipli, ritratti e arte di vivere — trimestrale.",
       "reportLabel": "Rapporto annuale",
       "reportDesc": "Aegryn Magazine, European Tech M&A Intelligence",
       "subscribeLabel": "Ricevere il rapporto",

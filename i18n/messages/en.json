@@ -1211,7 +1211,7 @@
   "acquisition": {
     "meta": {
       "title": "Transaction Advisory & M&A | Aegryn",
-      "desc": "Full support for certified tech asset acquisitions: due diligence, legal and tax structuring, financing, secure signing and closing. Aegryn mobilises the right experts for your deal."
+      "desc": "Full M&A support for certified tech asset acquisitions: due diligence, legal structuring, institutional escrow, closing. Experts coordinated by Aegryn."
     },
     "label": "Services : Transaction Advisory",
     "title": "Your acquisition.\nStructured to close.",
@@ -3407,7 +3407,7 @@
   "build_service": {
     "meta": {
       "title": "Fixed-price digital asset engineering - Aegryn",
-      "desc": "Fixed-price digital asset engineering: B2B SaaS, AI, mobile app. Full documentation, certification-ready delivery. Zero overruns, asset valorisable from day one."
+      "desc": "Fixed-price digital asset engineering: B2B SaaS, AI, mobile app. Full documentation, certification-ready. Zero overruns, asset valorisable from day one."
     },
     "label": "Services : Asset Design",
     "title": "We build.\nYou own.\nFixed price. Ready for certification.",
@@ -4394,7 +4394,7 @@
   "termsUse": {
     "meta": {
       "title": "Terms of Use | Aegryn",
-      "desc": "Terms governing access to and use of the aegryn.com website."
+      "desc": "Terms of use for aegryn.com: access conditions, responsibilities, intellectual property rights and applicable law."
     },
     "label": "Terms of Use",
     "version": "Version: July 2026",
@@ -5695,7 +5695,7 @@
   "experts": {
     "meta": {
       "title": "Expert Network | Aegryn",
-      "desc": "We believe every transaction deserves the right people at the right moment. Not a directory. A verified network selected so that nothing essential is left to chance."
+      "desc": "Verified network of M&A, legal, technical and cybersecurity experts selected by Aegryn. The right people at the right moment for every transaction."
     },
     "hero": {
       "label": "Aegryn Expert Network",
@@ -6297,7 +6297,7 @@
     "nav": "Magazine",
     "hub": {
       "title": "AEGRYN Magazine",
-      "desc": "Deals, multiples, portraits and lifestyle \u2014 quarterly.",
+      "desc": "Deals, multiples, portraits and lifestyle — quarterly.",
       "reportLabel": "Annual Report",
       "reportDesc": "Aegryn Magazine, European Tech M&A Intelligence",
       "notifyLabel": "Receive each edition",
