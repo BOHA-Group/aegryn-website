@@ -3,16 +3,42 @@ import { generateAegrynMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import ContactForm from '@/components/contact/ContactForm'
 
+const BASE = 'https://aegryn.com'
+const CONTACT_SLUG: Record<string, string> = {
+  fr: '/contact',
+  en: '/contact',
+  it: '/contatto',
+  es: '/contacto',
+  de: '/kontakt',
+  nl: '/contact',
+}
+
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  return generateAegrynMetadata({
+  const slug = CONTACT_SLUG[locale] ?? '/contact'
+  const base = generateAegrynMetadata({
     title: 'Contact Aegryn | General, Partnership, Investor & Media',
     description: "Reach out for general inquiries, media, partnerships, investments, or career opportunities. Let's build enduring digital ecosystems together.",
-    path: '/contact',
+    path: slug,
     locale,
   })
+  return {
+    ...base,
+    alternates: {
+      canonical: `${BASE}/${locale}${slug}`,
+      languages: {
+        fr:          `${BASE}/fr/contact`,
+        en:          `${BASE}/en/contact`,
+        it:          `${BASE}/it/contatto`,
+        es:          `${BASE}/es/contacto`,
+        de:          `${BASE}/de/kontakt`,
+        nl:          `${BASE}/nl/contact`,
+        'x-default': `${BASE}/en/contact`,
+      },
+    },
+  }
 }
 
 export default async function ContactPage({ params }: Props) {

@@ -6,16 +6,42 @@ import { VisionMissionBlock } from '@/components/sections/VisionMissionBlock'
 import { AboutHeroLogo }       from '@/components/brand/AboutHeroLogo'
 import type { Metadata } from 'next'
 
+const BASE = 'https://aegryn.com'
+const ABOUT_SLUG: Record<string, string> = {
+  fr: '/a-propos',
+  en: '/about',
+  it: '/chi-siamo',
+  es: '/sobre-nosotros',
+  de: '/ueber-uns',
+  nl: '/over-ons',
+}
+
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  return generateAegrynMetadata({
+  const slug = ABOUT_SLUG[locale] ?? '/about'
+  const base = generateAegrynMetadata({
     title: 'About Aegryn | The trust infrastructure for European tech M&A',
     description: 'Certification. Discretion. Permanence. Three principles that shaped a name — and a company. Aegryn is the independent certification and transaction infrastructure for European tech M&A.',
-    path: '/about',
+    path: slug,
     locale,
   })
+  return {
+    ...base,
+    alternates: {
+      canonical: `${BASE}/${locale}${slug}`,
+      languages: {
+        fr:          `${BASE}/fr/a-propos`,
+        en:          `${BASE}/en/about`,
+        it:          `${BASE}/it/chi-siamo`,
+        es:          `${BASE}/es/sobre-nosotros`,
+        de:          `${BASE}/de/ueber-uns`,
+        nl:          `${BASE}/nl/over-ons`,
+        'x-default': `${BASE}/en/about`,
+      },
+    },
+  }
 }
 
 const values = ['precision', 'durability', 'sovereignty', 'independence'] as const
