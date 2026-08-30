@@ -180,6 +180,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             avant tout script GTM/GA4/Cookie-Script.
             Garantit que les defaults "denied" sont lus par GTM dès son init. */}
         <script
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -197,16 +198,22 @@ export default async function LocaleLayout({ children, params }: Props) {
             `,
           }}
         />
-        <script
+        <Script
+          id="ld-org"
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynOrganizationSchema) }}
         />
-        <script
+        <Script
+          id="ld-website"
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynWebSiteSchema) }}
         />
-        <script
+        <Script
+          id="ld-sitenav"
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynSiteNavigationSchema) }}
         />
       </head>

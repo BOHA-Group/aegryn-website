@@ -8,7 +8,7 @@ import { X }                    from 'lucide-react'
  * /[locale]/magazine/issue-01/flipbook
  * Flipbook pleine page dans Next.js — iframe StPageFlip.
  * - Bouton "Quitter" + touche ESC → retour à /magazine/issue-01
- * - Layout dédié (flipbook/layout.tsx) masque nav + footer
+ * - position:fixed inset:0 couvre nav + footer — pas de layout séparé
  * - Aucun flash de contenu sous-jacent
  */
 export default function MagazineFlipbookPage() {
@@ -32,7 +32,7 @@ export default function MagazineFlipbookPage() {
   }, [locale])
 
   return (
-    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+    <div style={{ position: 'fixed', inset: 0, zIndex: 9999, background: '#0F1A2B' }}>
 
       {/* Quit button */}
       <button
