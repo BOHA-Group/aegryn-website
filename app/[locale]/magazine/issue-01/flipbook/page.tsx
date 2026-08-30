@@ -1,35 +1,95 @@
-import { redirect }      from 'next/navigation'
-import { canAccessIssue } from '@/lib/magazineAccess'
+'use client'
 
-export const dynamic = 'force-dynamic'
-
-type Props = { params: Promise<{ locale: string }> }
+import { useEffect, useRef }   from 'react'
+import { useRouter, useParams } from 'next/navigation'
+import { X }                    from 'lucide-react'
 
 /**
  * /[locale]/magazine/issue-01/flipbook
- * Ouvre le flipbook autonome (StPageFlip) en pleine page.
- * Gate : même règles que la page issue (public / early_access+cookie / preview / admin).
- *
- * On rend un meta-refresh HTML au lieu d'un redirect() Next.js pour éviter :
- * - la barre navy du loading.tsx affichée pendant le redirect serveur
- * - l'entrée supplémentaire dans l'historique du navigateur (impossible de revenir)
+ * Flipbook pleine page dans Next.js — iframe StPageFlip.
+ * - Bouton "Quitter" + touche ESC → retour à /magazine/issue-01
+ * - Layout dédié (flipbook/layout.tsx) masque nav + footer
+ * - Aucun flash de contenu sous-jacent
  */
-export default async function MagazineFlipbookPage({ params }: Props) {
-  const { locale } = await params
+export default function MagazineFlipbookPage() {
+  const router = useRouter()
+  const params = useParams()
+  const locale = typeof params.locale === 'string' ? params.locale : 'fr'
+  const iframeRef = useRef<HTMLIFrameElement>(null)
 
-  if (!(await canAccessIssue('01'))) {
-    redirect(`/${locale}/magazine`)
-  }
+  const handleQuit = () => router.push(`/${locale}/magazine/issue-01`)
 
-  const flipbookUrl = '/magazine/issue-01/aegryn-magazine-issue-01_1.html'
+  useEffect(() => {
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') handleQuit() }
+    window.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = prev
+      window.removeEventListener('keydown', onKey)
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [locale])
 
   return (
-    <html>
-      <head>
-        <meta httpEquiv="refresh" content={`0; url=${flipbookUrl}`} />
-        <title>Aegryn Magazine — Flipbook</title>
-      </head>
-      <body style={{ margin: 0, background: '#0F1A2B' }} />
-    </html>
+    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+
+      {/* Quit button */}
+      <button
+        onClick={handleQuit}
+        aria-label="Quitter le flipbook"
+        style={{
+          position:    'absolute',
+          top:         16,
+          right:       16,
+          zIndex:      10000,
+          display:     'flex',
+          alignItems:  'center',
+          gap:         6,
+          background:  'rgba(15,26,43,0.85)',
+          border:      '1px solid rgba(255,255,255,0.15)',
+          color:       'rgba(255,255,255,0.7)',
+          fontFamily:  'monospace',
+          fontSize:    10,
+          letterSpacing: '0.18em',
+          textTransform: 'uppercase',
+          padding:     '7px 14px',
+          cursor:      'pointer',
+          backdropFilter: 'blur(4px)',
+        }}
+        onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+        onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+      >
+        <X size={12} />
+        Quitter
+      </button>
+
+      {/* ESC hint */}
+      <p style={{
+        position:    'absolute',
+        top:         22,
+        right:       110,
+        zIndex:      10000,
+        fontFamily:  'monospace',
+        fontSize:    9,
+        letterSpacing: '0.14em',
+        textTransform: 'uppercase',
+        color:       'rgba(255,255,255,0.2)',
+        pointerEvents: 'none',
+        userSelect:  'none',
+      }}>
+        esc
+      </p>
+
+      {/* Flipbook iframe */}
+      <iframe
+        ref={iframeRef}
+        src="/magazine/issue-01/aegryn-magazine-issue-01_1.html"
+        title="Aegryn Magazine — Issue 01 Flipbook"
+        style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
+        allow="fullscreen"
+        allowFullScreen
+      />
+    </div>
   )
 }
