@@ -20,7 +20,7 @@ export async function POST() {
   const customerId = (profile as Record<string, unknown> | null)?.stripe_customer_id as string | null
   if (!customerId) return NextResponse.json({ error: 'no_customer' }, { status: 404 })
 
-  const stripe  = new Stripe(stripeKey, { apiVersion: '2026-06-24.dahlia' })
+  const stripe  = new Stripe(stripeKey, { apiVersion: '2026-08-26.dahlia' })
   const vercelUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null
   const siteUrl   = vercelUrl ?? process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'
 

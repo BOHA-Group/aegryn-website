@@ -96,7 +96,7 @@ export async function POST(req: NextRequest) {
     }
 
     /* ── 2. Créer la Stripe Checkout Session ── */
-    const stripe = new Stripe(stripeKey, { apiVersion: '2026-06-24.dahlia' })
+    const stripe = new Stripe(stripeKey, { apiVersion: '2026-08-26.dahlia' })
 
     const session = await stripe.checkout.sessions.create({
       mode:        'payment',

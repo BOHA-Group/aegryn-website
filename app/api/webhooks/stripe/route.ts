@@ -160,7 +160,7 @@ export async function POST(req: NextRequest) {
 
   let event: Stripe.Event
   try {
-    const stripe = new Stripe(stripeKey, { apiVersion: '2026-06-24.dahlia' })
+    const stripe = new Stripe(stripeKey, { apiVersion: '2026-08-26.dahlia' })
     event = stripe.webhooks.constructEvent(body, signature, webhookSecret)
   } catch {
     return NextResponse.json({ error: 'invalid_signature' }, { status: 400 })
@@ -217,7 +217,7 @@ export async function POST(req: NextRequest) {
     } else if (session.mode === 'subscription' && meta.supabase_uid) {
       /* ── Abonnement expert — activation immédiate ── */
       const uid    = meta.supabase_uid
-      const stripe2 = new Stripe(stripeKey, { apiVersion: '2026-06-24.dahlia' })
+      const stripe2 = new Stripe(stripeKey, { apiVersion: '2026-08-26.dahlia' })
       const sub    = session.subscription
         ? await stripe2.subscriptions.retrieve(session.subscription as string)
         : null

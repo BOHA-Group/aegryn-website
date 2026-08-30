@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
     .eq('id', user.id)
     .single()
 
-  const stripe    = new Stripe(stripeKey, { apiVersion: '2026-06-24.dahlia' })
+  const stripe    = new Stripe(stripeKey, { apiVersion: '2026-08-26.dahlia' })
   /* VERCEL_URL est l'URL exacte du déploiement (preview ou prod) — pas de https:// préfixé par Vercel */
   const vercelUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null
   const siteUrl   = vercelUrl ?? process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'
