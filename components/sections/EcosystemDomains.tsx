@@ -15,8 +15,9 @@ interface Domain {
 
 /* Photos éditoriales par thématique — compléter au fur et à mesure des visuels disponibles */
 const DOMAIN_IMAGES: Record<string, string> = {
-  ai:   '/images/theme_AI.jpg',
-  web3: '/images/theme_Digital Art.jpg',
+  ai:      '/images/theme_AI.jpg',
+  fintech: '/images/theme_fintech.jpg',
+  web3:    '/images/theme_Digital Art.jpg',
 }
 
 export function EcosystemDomains() {
