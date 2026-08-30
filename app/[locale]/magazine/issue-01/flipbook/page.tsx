@@ -64,23 +64,6 @@ export default function MagazineFlipbookPage() {
         Quitter
       </button>
 
-      {/* ESC hint */}
-      <p style={{
-        position:    'absolute',
-        top:         22,
-        right:       110,
-        zIndex:      10000,
-        fontFamily:  'monospace',
-        fontSize:    9,
-        letterSpacing: '0.14em',
-        textTransform: 'uppercase',
-        color:       'rgba(255,255,255,0.2)',
-        pointerEvents: 'none',
-        userSelect:  'none',
-      }}>
-        esc
-      </p>
-
       {/* Flipbook iframe */}
       <iframe
         ref={iframeRef}
