@@ -453,7 +453,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                     <div className="grid grid-cols-2 gap-1">
                       {[
                         { label: 'A', cls: 'border-white/10 text-white/40' },
-                        { label: 'B', cls: 'border-white/8  text-white/30' },
+                        { label: 'B', cls: 'border-white/10 text-white/30' },
                       ].map(({ label, cls }) => (
                         <div key={label} className={`border p-2 text-center ${cls}`}>
                           <p className="font-mono text-[10px] font-semibold tracking-[0.04em]">{label}</p>

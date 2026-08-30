@@ -80,18 +80,14 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
       <div
         ref={magRef}
         className="relative overflow-hidden border-b border-ag-border"
-        style={{ background: '#F5F2EE', height: 560 }}
+        style={{ background: '#F5F2EE', minHeight: 560 }}
       >
-        {/* Card texte — centre-gauche, fond blanc, z au-dessus des covers */}
+        {/* Card texte — mobile: pleine largeur haut / desktop: absolute centre-gauche */}
         <div
-          className="absolute z-10 bg-white space-y-4"
-          style={{
-            left: '12%',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            width: 380,
-            padding: '40px 44px',
-          }}
+          className="absolute z-10 bg-white space-y-4
+            inset-x-4 top-6
+            md:inset-x-[unset] md:left-[12%] md:right-auto md:top-1/2 md:-translate-y-1/2"
+          style={{ maxWidth: 380, padding: '36px 40px' }}
         >
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.1]"
@@ -121,7 +117,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
           </div>
         </div>
 
-        {/* Zone covers — moitié droite, diagonale montante haut-droit */}
+        {/* Zone covers — desktop : diagonale montante haut-droit */}
         <div
           className="hidden md:block absolute top-0 bottom-0 overflow-hidden pointer-events-none"
           style={{ left: '38%', right: 0 }}
@@ -143,6 +139,17 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
                 locale="en"
                 decorative
               />
+            </div>
+          ))}
+        </div>
+
+        {/* Zone covers — mobile : scroll horizontal sous la card texte */}
+        <div className="md:hidden absolute bottom-0 left-0 right-0 flex gap-3 overflow-x-auto px-6 pb-4 pt-2 pointer-events-none"
+          style={{ scrollbarWidth: 'none' }}
+        >
+          {COVER_LAYOUT.map(({ issue }, i) => (
+            <div key={i} className="mag-cover-card shrink-0 scale-75 origin-bottom-left">
+              <IssueMiniCard issue={issue} locale="en" decorative />
             </div>
           ))}
         </div>
