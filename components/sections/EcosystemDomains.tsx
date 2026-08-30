@@ -81,7 +81,7 @@ export function EcosystemDomains() {
               <div
                 key={domain.id}
                 className={`domain-card-${i} group relative flex flex-col justify-start overflow-hidden p-8 transition-all duration-500
-                  bg-ag-white hover:bg-ag-navy border-b border-ag-border
+                  bg-ag-navy hover:bg-ag-navy border-b border-ag-border
                   ${borderRight} ${borderRightSm}`}
                 style={{ minHeight: '220px', opacity: 0 }}
               >
@@ -91,25 +91,25 @@ export function EcosystemDomains() {
                       src={image}
                       alt={domain.label}
                       fill
-                      className="object-cover opacity-100 group-hover:opacity-40 transition-opacity duration-500"
+                      className="object-cover opacity-60 group-hover:opacity-30 transition-opacity duration-500"
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     />
-                    <div className="pointer-events-none absolute inset-0 bg-ag-navy/0 group-hover:bg-ag-navy/80 transition-colors duration-500" />
+                    <div className="pointer-events-none absolute inset-0 bg-ag-navy/20 group-hover:bg-ag-navy/75 transition-colors duration-500" />
                   </>
                 )}
 
                 <div className="relative z-10 w-full flex items-center justify-end mb-6">
-                  <ArrowUpRight size={14} className="text-ag-gray-light group-hover:text-white/60 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                  <ArrowUpRight size={14} className="text-white/40 group-hover:text-white/80 transition-all duration-500" />
                 </div>
 
                 <div className="relative z-10">
                   <h3
-                    className="font-sans font-bold tracking-[-0.02em] leading-[1.1] mb-3 text-ag-black group-hover:text-white transition-colors duration-500"
+                    className="font-sans font-bold tracking-[-0.02em] leading-[1.1] mb-3 text-white transition-colors duration-500"
                     style={{ fontSize: 'clamp(18px,1.8vw,22px)' }}
                   >
                     {domain.label}
                   </h3>
-                  <p className="font-sans font-normal text-[12.5px] leading-relaxed text-ag-gray group-hover:text-white/70 transition-colors duration-500">
+                  <p className="font-sans font-normal text-[12.5px] leading-relaxed text-white/70 transition-colors duration-500">
                     {domain.desc}
                   </p>
                 </div>
