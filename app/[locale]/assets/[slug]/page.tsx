@@ -30,11 +30,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const asset = Aegryn_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) return {}
   const tItemsMeta = await getTranslations({ locale, namespace: 'assets.items' })
+  const isNeediu = asset.id === 'neediu'
+  const neediuKeywords = isNeediu ? [
+    'neediu', 'neediu app', 'services à domicile', 'marketplace services maison',
+    'paru dans Gala', 'Gala 27 novembre 2025', 'neediu Gala presse',
+    'booking prestataire domicile', 'aide à domicile app', 'service à la personne digital',
+    'application home services', 'jardinage app', 'bricolage app', 'babysitting app',
+    'neediu.app', 'An Aegryn company',
+  ] : []
   return generateAegrynMetadata({
-    title: asset.name,
-    description: tItemsMeta(`${asset.id}.tagline`),
+    title: isNeediu ? 'neediu — Services à domicile, paru dans Gala | Aegryn' : asset.name,
+    description: isNeediu
+      ? 'neediu, application de mise en relation avec des prestataires à domicile. Paru dans Gala, 27 novembre 2025. Un actif propriétaire Aegryn.'
+      : tItemsMeta(`${asset.id}.tagline`),
     path: `/assets/${slug}`,
     locale,
+    keywords: neediuKeywords,
   })
 }
 
@@ -175,6 +186,41 @@ export default async function AssetPage({ params }: Props) {
 
       {/* Neediu press — Gala */}
       {asset.id === 'neediu' && (
+        <>
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context':    'https://schema.org',
+            '@type':       'NewsArticle',
+            headline:      'neediu — Services à domicile à 360° | Paru dans Gala',
+            description:   'neediu, l\'application de mise en relation avec des prestataires à domicile de confiance, présentée dans le magazine Gala le 27 novembre 2025.',
+            datePublished: '2025-11-27',
+            url:           'https://aegryn.com/fr/assets/neediu',
+            image:         'https://aegryn.com/images/press-gala-neediu-ad.png',
+            author:        { '@type': 'Organization', name: 'Gala', url: 'https://gala.fr' },
+            publisher:     { '@type': 'Organization', name: 'Gala', url: 'https://gala.fr' },
+            about: {
+              '@type':     'MobileApplication',
+              name:        'neediu',
+              url:         'https://neediu.app',
+              applicationCategory: 'LifestyleApplication',
+              operatingSystem: 'iOS, Android',
+              description: 'Application de mise en relation avec des prestataires de services à domicile : ménage, jardinage, bricolage, babysitting, aide aux seniors.',
+            },
+            isPartOf: {
+              '@type':   'Periodical',
+              name:      'Gala',
+              issn:      '1163-5053',
+              publisher: { '@type': 'Organization', name: 'Prisma Media' },
+            },
+            mentions: {
+              '@type':   'Organization',
+              name:      'Aegryn',
+              url:       'https://aegryn.com',
+            },
+          }) }}
+        />
         <section className="border-b border-ag-border bg-ag-off-white">
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
             <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
@@ -214,6 +260,7 @@ export default async function AssetPage({ params }: Props) {
             </div>
           </div>
         </section>
+        </>
       )}
 
       {/* CTA strip */}

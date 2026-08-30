@@ -1,5 +1,6 @@
 import { getTranslations }   from 'next-intl/server'
 import type { Metadata }     from 'next'
+import { generateAegrynMetadata } from '@/lib/seo'
 import { IssueCard }           from '@/components/magazine/IssueCard'
 import { IssueMiniCard }       from '@/components/magazine/IssueMiniCard'
 import { NewsletterBlock }          from '@/components/magazine/NewsletterBlock'
@@ -17,12 +18,20 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'magazine.report.meta' })
-  return {
+  return generateAegrynMetadata({
     title:       t('title'),
     description: t('description'),
-    alternates:  { canonical: `/${locale}/magazine` },
-    openGraph:   { title: t('title'), description: t('description'), type: 'website' },
-  }
+    path:        '/magazine',
+    locale,
+    keywords: [
+      'Aegryn Magazine', 'magazine tech fondateurs', 'magazine tech Europe',
+      'Tech Money Deals People Life', 'magazine startup Europe', 'magazine M&A tech',
+      'revue fondateurs tech', 'quarterly tech magazine', 'magazine trimestriel entrepreneurs',
+      'magazine acquisitions startups', 'magazine deals tech', 'magazine corporate tech',
+      'magazine investisseurs tech', 'magazine scale-up', 'publication Aegryn',
+      'lire magazine tech gratuit', 'flipbook magazine tech', 'magazine transactions tech',
+    ],
+  })
 }
 
 const ALL_ISSUES = [ISSUE_01, ISSUE_02, ISSUE_03, ISSUE_04]

@@ -62,6 +62,16 @@ const BASE_KEYWORDS = [
   // Grade
   'Aegryn Grade', 'asset grading', 'notation actif numérique',
   'grade SaaS', 'certification actif numérique', 'tech credit rating',
+  // Magazine
+  'Aegryn Magazine', 'magazine tech fondateurs', 'magazine tech Europe', 'magazine startup',
+  'magazine entrepreneurs tech', 'publication tech M&A', 'revue tech business',
+  'Tech Money Deals People Life', 'magazine trimestriel tech', 'quarterly tech magazine',
+  'magazine deals entrepreneurs', 'magazine acquisitions tech', 'magazine fondateurs européens',
+  // Press — neediu
+  'neediu Gala', 'paru dans Gala', 'Gala magazine neediu', 'neediu presse',
+  'neediu app services domicile', 'neediu service à domicile', 'application services maison',
+  'marketplace services domicile France', 'booking prestataire domicile',
+  'aide ménagère app', 'jardinage domicile app', 'bricolage app', 'service à la personne digital',
 ]
 
 export function generateAegrynMetadata({
@@ -233,6 +243,28 @@ export const aegrynOrganizationSchema = {
     'Fixed Price Software Development',
     'Certification-Ready Digital Assets',
     'Proprietary Asset Portfolio',
+    'Tech Magazine Publishing',
+    'Home Services Marketplace',
+    'Digital Publishing',
+    'Press Relations',
+  ],
+  mentions: [
+    {
+      '@type':       'Periodical',
+      name:          'Aegryn Magazine',
+      url:           `${BASE_URL}/fr/magazine`,
+      description:   'Quarterly magazine for European tech founders and acquirers. Tech. Money. Deals. People. Life.',
+      inLanguage:    'fr',
+      publisher:     { '@type': 'Organization', name: 'Aegryn', url: BASE_URL },
+    },
+    {
+      '@type':       'NewsArticle',
+      name:          'neediu — Paru dans Gala, 27 novembre 2025',
+      url:           `${BASE_URL}/fr/assets/neediu`,
+      datePublished: '2025-11-27',
+      isPartOf:      { '@type': 'Periodical', name: 'Gala', issn: '1163-5053' },
+      about:         { '@type': 'Product', name: 'neediu', url: 'https://neediu.app' },
+    },
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -333,7 +365,7 @@ export const aegrynWebSiteSchema = {
   '@id':        `${BASE_URL}/#website`,
   url:          BASE_URL,
   name:         'Aegryn',
-  alternateName: ['Aegryn', 'Aegryn Swiss', 'Aegryn Advisory', 'Aegryn Transaction'],
+  alternateName: ['Aegryn', 'Aegryn Swiss', 'Aegryn Advisory', 'Aegryn Transaction', 'Aegryn Magazine'],
   description:  'Aegryn — Swiss Tech Asset Builder and M&A transaction platform. Design and operate proprietary digital assets. Custom asset engineering for third parties (fixed price, certification-ready). Buy and sell digital tech assets in Europe. Proprietary grading, expert network, cybersecurity and AI advisory. Engineered to Last.',
   publisher:    { '@id': `${BASE_URL}/#organization` },
   inLanguage:   ['fr', 'en', 'de', 'it', 'es', 'nl'],
