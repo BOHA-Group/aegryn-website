@@ -115,7 +115,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
         <div style={{ paddingBottom: 20 }}>
           <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: 5 }}>{titleLines[0]}</div>
           <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: 9 }}>{titleLines[1]}</div>
-          <div style={{ fontSize: 8.5, fontWeight: 400, letterSpacing: '0.05em', color: '#fff', lineHeight: 1.6 }}>{issue.theme}</div>
+          <div style={{ fontSize: 17, fontWeight: 400, letterSpacing: '0.02em', color: '#fff', lineHeight: 1.3, maxWidth: 290 }}>{issue.theme}</div>
         </div>
       </div>
     </>
