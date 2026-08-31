@@ -280,17 +280,6 @@ export default async function MagazineHubPage({ params }: Props) {
         </div>
       </div>
 
-      {/* ── Footer mag ── */}
-      <div className="border-t border-magazine-black/8 bg-magazine-white">
-        <div className="max-w-magazine mx-auto px-6 md:px-[120px] py-8 flex flex-wrap items-center justify-between gap-4">
-          <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-black/25">
-            {tHub('footerLegal')}
-          </p>
-          <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-black/25">
-            {tHub('footerCopyright')}
-          </p>
-        </div>
-      </div>
 
     </main>
   )
