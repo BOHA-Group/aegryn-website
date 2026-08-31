@@ -76,6 +76,24 @@
   ],
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "aegryn-website.vercel.app" }],
+      "destination": "https://aegryn.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "aegryn-website-git-main-boha-groups-projects.vercel.app" }],
+      "destination": "https://aegryn.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "aegryn-website-3q4zr8lf1-boha-groups-projects.vercel.app" }],
+      "destination": "https://aegryn.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/privacy",
       "destination": "/fr/privacy",
       "permanent": true
