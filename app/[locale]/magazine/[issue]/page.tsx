@@ -129,29 +129,87 @@ export default async function IssuePage({ params }: Props) {
         {/* ── Editorial ── */}
         <section id="s-editorial" className="bg-magazine-white px-6 md:px-[120px] py-32">
           <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-12">Editorial — Issue 01</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+
+          {/* Our conviction */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-20">
             <div>
-              <p
-                className="font-sans font-bold text-magazine-black leading-[0.88] mb-8"
-                style={{ fontSize: 'clamp(56px,8vw,100px)', letterSpacing: '-0.04em', fontWeight: 800 }}
-              >
-                We<br /><span className="text-magazine-black">Refuse.</span>
+              <p className="font-sans font-bold text-magazine-black leading-[0.88] mb-8"
+                style={{ fontSize: 'clamp(28px,4vw,48px)', letterSpacing: '-0.02em', fontWeight: 300, fontStyle: 'italic' }}>
+                We refuse to let a solid asset disappear into a poorly prepared transaction.
               </p>
-              <blockquote className="border-l-2 border-magazine-black/40 pl-6 mb-8">
-                <p className="text-body-mag text-magazine-black/60 leading-[1.75] italic">
-                  &ldquo;Every year, several hundred European tech companies disappear into transactions that should never have happened — or never happen at all.&rdquo;
-                </p>
-              </blockquote>
               <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-magazine-black/30 italic">
-                The Aegryn Founding Team — Saint-Sulpice — January 2027
+                The Aegryn Founding Team — Saint-Sulpice, Switzerland
               </p>
             </div>
-            <div className="space-y-6 text-body-mag text-magazine-black/65 leading-[1.8]">
-              <p>Not because the assets weren't real. Not because the technology wasn't solid. Because <strong className="text-magazine-black">no one prepared them to transact.</strong></p>
-              <p>We built Aegryn to refuse that outcome. We refuse to let a serious company disappear into a poorly structured process. We refuse to let a founder walk away with 60 cents on the dollar because their data room was three PDFs and a prayer.</p>
-              <p><strong className="text-magazine-black">Aegryn Magazine</strong> exists because the information gap between European founders and institutional acquirers is still enormous — and the publications that could close it have chosen to stay behind paywalls, stay shallow, or stay American.</p>
-              <p>Issue 01 is <strong className="text-magazine-black">&ldquo;Built to Last.&rdquo;</strong> It covers what makes an asset worth acquiring before any conversation starts — the structural decisions, the certification logic, the real market data, and the human reality of building something a serious buyer will pay full price for.</p>
-              <p className="font-semibold text-magazine-black">Certified to transact. Engineered to Last.</p>
+            <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+              <p>Aegryn is a Swiss company building what we intend to become the European reference for trusted technology transactions. We certify assets. We facilitate sales. We refuse to rush either.</p>
+              <p className="text-magazine-black/50">This magazine is the editorial layer of that mission: a place to tell the stories, share the data, and publish the opinions that the market needs but rarely gets from someone without a conflict of interest.</p>
+              <p className="font-mono text-[8px] tracking-[0.12em] uppercase text-magazine-black/30">Aegryn SA · Saint-Sulpice, Canton de Vaud, Switzerland · aegryn.com</p>
+            </div>
+          </div>
+
+          {/* Three disciplines */}
+          <div className="border-t border-magazine-black/10 pt-16 mb-20">
+            <p className="font-sans font-bold text-magazine-black leading-[0.86] mb-10"
+              style={{ fontSize: 'clamp(24px,3.5vw,40px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+              Three disciplines.<br /><strong>One goal.</strong>
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+              {[
+                { label: 'Build',       color: 'border-magazine-black text-magazine-black',   desc: 'Designing and engineering technology assets to be documented, certifiable, and transferable. The foundation everything else depends on.' },
+                { label: 'Grade',       color: 'border-magazine-accent text-magazine-accent', desc: 'Independent certification across Code, IP, Finance and Security. A score a buyer can trust, because it was earned — not declared.' },
+                { label: 'Transaction', color: 'border-magazine-black/40 text-magazine-black/50', desc: 'Confidential transactions between certified sellers and qualified buyers. Supported by institutional standards and a trusted European network.' },
+              ].map(d => (
+                <div key={d.label}>
+                  <p className={`font-mono text-[9px] font-bold tracking-[0.14em] uppercase mb-3 pb-3 border-b-2 ${d.color}`}>{d.label}</p>
+                  <p className="text-body-mag text-magazine-black/60 leading-[1.7]">{d.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Editorial letter */}
+          <div className="border-t border-magazine-black/10 pt-16 mb-16">
+            <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">From the Founding Team</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+              <div>
+                <p className="font-sans font-bold text-magazine-black leading-[0.88] mb-8"
+                  style={{ fontSize: 'clamp(24px,3.5vw,40px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                  Built to be<br /><strong>acquired.</strong>
+                </p>
+                <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+                  <p>This magazine began as a question we kept asking ourselves: why do so many solid European technology companies sell for far less than they are worth, or fail to sell at all?</p>
+                  <p>The answer was almost never the product. It was preparation. Documentation. The kind of unglamorous, systematic work that founders put off until a buyer is already asking for it.</p>
+                  <p>We built Aegryn to change that. This magazine is where we tell the stories, share the data, and publish the opinions that we believe this market needs but rarely gets from someone without a conflict of interest.</p>
+                </div>
+              </div>
+              <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+                <p>The people you will meet in these pages built companies without asking anyone&rsquo;s permission. Some sold them well. Some learned the hard way what they should have done differently. A few are still in the middle of it.</p>
+                <p>We do not pretend to be neutral. We think the European technology market is undervalued, under-documented, and over-dependent on advisors with a stake in the outcome. We are building a different kind of infrastructure — one where trust is the product, not the pitch.</p>
+                <p className="font-semibold text-magazine-black">Built to last.</p>
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/30">The Aegryn Founding Team<br />Saint-Sulpice, Switzerland · January 2027</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contents */}
+          <div className="border-t border-magazine-black/10 pt-16">
+            <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">What is inside</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
+              {[
+                { num: '01', label: 'Tech and AI',  title: 'She Quit on a Tuesday',            desc: 'Building from anywhere. What actually changed. The tools founders use. Five honest lessons.' },
+                { num: '02', label: 'Build',         title: 'The Habit That Changes Everything', desc: 'The workshop that became a platform. Why we refuse to rush. The bookkeeper who saved six weeks.' },
+                { num: '03', label: 'Money',         title: 'Fewer Deals. More Capital.',        desc: 'What buyers actually pay. Stop raising. The metrics that move the number.' },
+                { num: '04', label: 'Transaction',   title: 'Five Deals, Five Stories',          desc: 'Who is buying European tech. From first meeting to signature. Getting paid later.' },
+                { num: '05', label: 'People',        title: 'The Founders',                      desc: 'The first leap. The second try. The family business. The acquirer\'s portrait.' },
+                { num: '06', label: 'Life',          title: 'The Good Life, Earned',             desc: 'European tech cities. The reading list. On building for the long view.' },
+              ].map(s => (
+                <div key={s.num} className="py-6 border-b border-magazine-black/8 pr-8">
+                  <p className="font-mono text-[8px] font-bold tracking-[0.2em] uppercase text-magazine-accent mb-1">{s.num} — {s.label}</p>
+                  <p className="font-sans font-semibold text-magazine-black text-[15px] mb-1">{s.title}</p>
+                  <p className="text-[12px] text-magazine-black/45">{s.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -161,8 +219,8 @@ export default async function IssuePage({ params }: Props) {
           <div className="px-6 md:px-[120px] py-10 border-b border-magazine-black/8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-0 divide-x divide-magazine-black/8">
               {[
-                { val: '€262B', label: 'EU M&A Q2 2026',      sub: '3,315 transactions' },
-                { val: '2,698', label: 'SaaS deals 2025',      sub: 'Record by volume' },
+                { val: '€44.1B', label: 'EU Tech H1 2026',     sub: '~1,740 deals' },
+                { val: '+77%',  label: 'EMEA Strategic value', sub: 'through May 2026' },
                 { val: '+28%',  label: 'Certified premium',    sub: 'vs uncertified' },
                 { val: '<25%',  label: 'CIFS acceptance rate', sub: '1 in 4 pass' },
               ].map(s => (
@@ -177,10 +235,23 @@ export default async function IssuePage({ params }: Props) {
             </div>
           </div>
           <div className="px-6 md:px-[120px] py-20">
-            <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">The Market</p>
+            <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">Money — H1 2026</p>
             <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-4">
-              European Tech M&amp;A — The 2026 Numbers
+              Fewer Deals. More Concentrated Capital.
             </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-10 mb-16">
+              <p className="text-body-mag text-magazine-black/65 leading-[1.8]">
+                European tech funding recovered to 44.1 billion euros in the first half of 2026, but across roughly 1,740 deals — well below the pace of 2024. The market is not shrinking. It is concentrating. The UK raised 18.7 billion across 423 deals alone. Capital is not evenly distributed, and it is not evenly distributed across company stages either.
+              </p>
+              <div>
+                <p className="text-body-mag text-magazine-black/65 leading-[1.8] mb-4">
+                  On the M&amp;A side, strategic deal value in EMEA rose 77 percent through May as acquirers chose fewer, higher-conviction targets. The mid-market — where most European founders operate — is living inside that concentration, not above it.
+                </p>
+                <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em]">
+                  Sources: tech.eu H1 2026 Ecosystem Report · FE International Mid-Year 2026 · LSEG
+                </p>
+              </div>
+            </div>
 
             {/* Volume chart */}
             <div className="mt-16">
@@ -265,54 +336,109 @@ export default async function IssuePage({ params }: Props) {
           </div>
         </section>
 
-        {/* ── AI Effect ── */}
+        {/* ── Tech and AI ── */}
         <section id="s-ai" className="bg-magazine-white px-6 md:px-[120px] py-32">
-          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">The AI Effect</p>
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Tech and AI</p>
           <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-16 max-w-[800px]">
-            Artificial Intelligence and the Recomposition of Tech Value
+            What Actually Changed.
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20">
-            {[
-              { val: '47%',   label: 'of all technology deals in 2025 carried an AI component — up from ~25% in 2024' },
-              { val: '$226B', label: 'raised by private AI companies in Q1 2026 alone — surpassing full-year 2025' },
-            ].map(s => (
-              <div key={s.val}>
-                <p
-                  className="font-sans font-bold text-magazine-black tabular-nums"
-                  style={{ fontSize: 'clamp(52px,7vw,96px)', lineHeight: 0.92, letterSpacing: '-0.03em', fontWeight: 800 }}
-                >
-                  {s.val}
+          {/* She quit on a Tuesday */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
+            <div>
+              <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">A Composite Portrait</p>
+              <p className="font-sans font-bold text-magazine-black leading-[0.86] mb-6"
+                style={{ fontSize: 'clamp(28px,4vw,48px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                She quit on<br />a <strong>Tuesday.</strong>
+              </p>
+              <p className="text-[12px] text-magazine-black/40 italic mb-6 leading-[1.5]">Drawn from patterns across dozens of solo-founder journeys observed in Aegryn Advisory work, 2022 to 2026.</p>
+              <div className="space-y-4 text-body-mag text-magazine-black/65 leading-[1.8]">
+                <p>No investors. No co-founder. No plan B. Just a laptop, an idea she had been circling for two years, and a generation of tools that let one determined person do what used to require a department.</p>
+                <p>She built the first version in six weeks, nights and weekends, then full-time once the fear of staying became larger than the fear of leaving. The product worked. Customers paid.</p>
+                <p>This is the quiet revolution nobody put on a cover. Building a real company no longer requires permission, capital, or a team. What it requires is time, a decent laptop, and the willingness to sit with a blank page until something good happens. Three years later, she has a team of seven and a waiting list.</p>
+              </div>
+            </div>
+            <div className="space-y-8">
+              <blockquote className="border-l-2 border-magazine-accent pl-6">
+                <p className="text-body-mag text-magazine-black/70 leading-[1.75] italic text-[17px]">
+                  &ldquo;I used to think I needed a team of ten to build something real. I was wrong. I needed a laptop, four hours of quiet every morning, and the courage to stop asking for permission.&rdquo;
                 </p>
-                <p className="text-body-mag text-magazine-black/50 mt-4">{s.label}</p>
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-4">Composite quote — Aegryn Advisory conversations 2024 to 2026</p>
+              </blockquote>
+              <div className="bg-magazine-ivory p-6">
+                <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-4">Building from a café in Lisbon</p>
+                <div className="space-y-3 text-body-mag text-magazine-black/65 leading-[1.75]">
+                  <p>He moved from Amsterdam eighteen months ago, told himself it was temporary, and never left. His entire product runs on tools that did not exist five years ago. What used to need a team of eight now needs him, a good pair of headphones, and a city that costs a third of what Amsterdam did.</p>
+                  <p>This is not a remote-work trend piece. It is the new default for an entire generation of founders: build somewhere beautiful, because for the first time nothing is stopping you.</p>
+                </div>
+                <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">Source: Idealista Portugal Rent Index, May 2026</p>
               </div>
-            ))}
+            </div>
           </div>
 
-          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.12em] mb-6">The Architecture Premium — by element (applies at the margin, on top of base valuation)</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-20">
-            {[
-              { code: 'Proprietary training dataset', body: 'The data doesn\u2019t exist elsewhere. Non-replicable in 90 days.', pct: '+35%' },
-              { code: 'Custom fine-tuned model',       body: '18 months of customer feedback baked into the model.', pct: '+25%' },
-              { code: 'EU AI Act conformity',          body: 'Legal and technical investment most competitors haven\u2019t made.', pct: '+20%' },
-              { code: 'Model versioning strategy',     body: 'A documented answer for when the underlying LLM updates.', pct: '+10%' },
-            ].map(a => (
-              <div key={a.code} className="border-l-2 border-magazine-black/20 pl-6 py-2 bg-magazine-ivory">
-                <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.12em] mb-2">{a.pct}</p>
-                <p className="text-h2-mag font-sans font-semibold text-magazine-black mb-2">{a.code}</p>
-                <p className="text-body-mag text-magazine-black/60">{a.body}</p>
-              </div>
-            ))}
+          {/* Switzerland correction */}
+          <div className="border border-magazine-black/10 p-8 mb-20 max-w-2xl">
+            <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-3">A Correction Worth Making</p>
+            <p className="font-sans font-semibold text-magazine-black text-[16px] mb-4">Switzerland has no nomad visa. The real advantages are elsewhere.</p>
+            <p className="text-body-mag text-magazine-black/60 leading-[1.75]">Despite what circulates online, Switzerland launched no digital-nomad visa in 2026. Founders building from Lausanne or Geneva use standard residence or business permits. The country&rsquo;s actual advantage is its tax environment and proximity to EPFL and ETH Zurich, two of the world&rsquo;s highest-ranked engineering institutions.</p>
           </div>
 
-          <div className="max-w-prose border-t border-magazine-black/10 pt-12">
-            <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-6">The Commoditisation Trap</h3>
-            <p className="text-body-mag text-magazine-black/65 leading-[1.75]">
-              The test: is the AI defensible, or substitutable? A feature AI — a ChatGPT wrapper, a standard RAG implementation over public data — is substitutable; a competitor can replicate it in 90 days, and a buyer pays no premium for it. A standard RAG/wrapper commands a <strong>0%</strong> architecture premium, versus up to <strong>+35%</strong> for a proprietary, documented training dataset. Founders who arrive with a complete AI architecture brief — model provenance, data rights, fallback strategy, compliance status, versioning policy — close AI due diligence <strong>60% faster</strong>.
+          {/* Five tools */}
+          <div className="mb-20">
+            <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">What Is Actually On Their Laptops</p>
+            <p className="font-sans font-bold text-magazine-black leading-[0.88] mb-8"
+              style={{ fontSize: 'clamp(24px,3.5vw,40px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+              Five tools,<br /><strong>one solo founder.</strong>
             </p>
-            <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">
-              Source — CB Insights / EU Commission AI Innovation Report 2026 · Aegryn CIFS Protocol S-16
-            </p>
+            <p className="text-body-mag text-magazine-black/55 mb-8">Not a sponsored list. What shows up, again and again, on the desktops of founders building alone in 2026.</p>
+            <div className="space-y-0">
+              {[
+                { tool: 'An AI coding assistant',       note: 'Writes the first draft of almost everything. The founder reads it carefully rather than typing from scratch.' },
+                { tool: 'A design tool that never sleeps', note: 'Turns a rough sketch into something a customer would pay for, in minutes instead of weeks.' },
+                { tool: 'An inbox that answers itself',  note: 'Handles predictable questions so the founder only sees the ones that need a human.' },
+                { tool: 'One good notebook',             note: 'Every founder, regardless of how much software they run, still writes the big decisions by hand.' },
+                { tool: 'A door that closes',            note: 'Somewhere quiet enough to think, four mornings a week. The one piece of infrastructure nobody talks about.' },
+              ].map(t => (
+                <div key={t.tool} className="py-5 border-b border-magazine-black/8">
+                  <p className="font-sans font-semibold text-magazine-black text-[14px] mb-1">{t.tool}</p>
+                  <p className="text-[12px] text-magazine-black/55 leading-[1.65]">{t.note}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Nine to five + Architecture premium */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
+            <div>
+              <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-4">The Freedom Ledger</p>
+              <p className="font-sans font-bold text-magazine-black leading-[0.88] mb-6"
+                style={{ fontSize: 'clamp(20px,3vw,34px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                Nine to five<br />is <strong>optional now.</strong>
+              </p>
+              <div className="space-y-4 text-body-mag text-magazine-black/65 leading-[1.8]">
+                <p>Ask any founder who built solo in the last two years what actually changed, and none of them mention artificial intelligence first. They mention their mornings. Their ability to take a Tuesday off.</p>
+                <p>The tools do the repetitive work, the first draft, the boilerplate, the parts of building a company that used to eat entire weeks. What is left for the founder is the part that was always the actual job: deciding what matters, talking to customers, and having the nerve to ship something before it is perfect.</p>
+                <p>Freedom, in this context, is not a slogan. It is a Tuesday afternoon spent somewhere with a laptop open, half-working and half-not, because for the first time the two are not opposites.</p>
+              </div>
+            </div>
+            <div>
+              <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.12em] mb-6">The Architecture Premium — by element</p>
+              <div className="space-y-4">
+                {[
+                  { code: 'Proprietary training dataset', pct: '+35%', body: 'The data doesn\u2019t exist elsewhere. Non-replicable in 90 days.' },
+                  { code: 'Custom fine-tuned model',      pct: '+25%', body: '18 months of customer feedback baked into the model.' },
+                  { code: 'EU AI Act conformity',         pct: '+20%', body: 'Legal and technical investment most competitors haven\u2019t made.' },
+                  { code: 'Model versioning strategy',    pct: '+10%', body: 'A documented answer for when the underlying LLM updates.' },
+                ].map(a => (
+                  <div key={a.code} className="border-l-2 border-magazine-black/20 pl-6 py-2 bg-magazine-ivory">
+                    <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.12em] mb-1">{a.pct}</p>
+                    <p className="font-sans font-semibold text-magazine-black text-[13px] mb-1">{a.code}</p>
+                    <p className="text-[12px] text-magazine-black/60">{a.body}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">Source — CB Insights / EU Commission AI Innovation Report 2026 · Aegryn CIFS Protocol S-16</p>
+            </div>
           </div>
         </section>
 
@@ -320,7 +446,7 @@ export default async function IssuePage({ params }: Props) {
         <section id="s-perspective" className="bg-magazine-ivory px-6 md:px-[120px] py-32">
           <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">The AEGRYN Perspective</p>
           <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-16 max-w-[720px]">
-            What We See From the Certification Table
+            The Certification That Changes the Conversation.
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
@@ -328,17 +454,27 @@ export default async function IssuePage({ params }: Props) {
               <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-6">
                 Not a Valuation. A Certification.
               </h3>
-              <p className="text-body-mag text-magazine-black/70 leading-[1.75] mb-6">
-                The CIFS protocol covers four dimensions: <strong>C</strong>ode integrity, <strong>I</strong>P ownership, <strong>F</strong>inancial reliability, and <strong>S</strong>ecurity posture. Each dimension is scored on a 25-point scale. A certified asset achieves a minimum threshold across all four — not just the average.
-              </p>
-              <p className="text-body-mag text-magazine-black/70 leading-[1.75]">
-                Unlike a CIM or an information memorandum, the CIFS certification is auditable, signed, and tied to a specific state of the asset at a specific date. It is what makes closing faster and dispute risk lower.
-              </p>
+              <div className="space-y-5 text-body-mag text-magazine-black/70 leading-[1.75]">
+                <p>The most common question we hear from founders who have just completed their CIFS grade is: does this change what I can ask for? The honest answer is: sometimes directly, and almost always indirectly.</p>
+                <p>Directly, a certified asset eliminates a category of buyer uncertainty. The conversation shifts from &ldquo;can we trust these numbers and this documentation&rdquo; to &ldquo;do we want to own this specific company.&rdquo; That is a different and more productive conversation, and it tends to happen faster.</p>
+                <p>Indirectly, certification changes who approaches you. There is a growing category of buyer — particularly in regulated industries — who searches for certified assets specifically, because the certification reduces their own post-acquisition remediation cost and timeline.</p>
+                <p>We grade assets because we believe verification is the foundation of a fair transaction. A grade makes the process faster, the conversations better, and the outcomes more predictable.</p>
+              </div>
               <p className="text-body-mag text-magazine-black/50 leading-[1.75] mt-4 italic">
                 Less than 25% of submitted assets pass the certification threshold.
               </p>
             </div>
-            <CifsBars dims={DATA_01.cifsExample} />
+            <div>
+              <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-6">
+                Not a Valuation. A Certification.
+              </h3>
+              <div className="space-y-5 text-body-mag text-magazine-black/70 leading-[1.75]">
+                <p>The CIFS methodology assesses four dimensions: code quality and technical documentation, intellectual property ownership and assignment, financial record completeness and accuracy, and security posture and compliance. Each is scored through independent review, not self-assessment.</p>
+                <p>In the first half of 2026, the most common finding across initial reviews was incomplete IP assignment documentation — contractor agreements that did not explicitly transfer code ownership to the company. This issue appeared in 64 percent of first submissions. It is almost always fixable. It takes, on average, eleven weeks to resolve properly once identified.</p>
+                <p>The second most common finding was financial statements that had not been independently reviewed for more than 24 months. Buyers apply a discount for the uncertainty this creates.</p>
+              </div>
+              <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">Aegryn CIFS Protocol v3.0 · Aegryn Transaction Desk H1 2026 observations</p>
+            </div>
           </div>
 
           {/* Grade distribution */}
@@ -359,11 +495,11 @@ export default async function IssuePage({ params }: Props) {
             </h3>
             <div className="space-y-0">
               {[
-                { pct: '88%', label: 'Founder Dependency' },
-                { pct: '64%', label: 'IP Ownership Gaps' },
-                { pct: '58%', label: 'ARR Not Verifiable' },
-                { pct: '42%', label: 'No Pentest on Record' },
-                { pct: '35%', label: 'RGPD / AI Act Risk' },
+                { pct: '64%', label: 'IP Ownership Gaps', note: 'Incomplete contractor agreements not explicitly transferring code ownership.' },
+                { pct: '58%', label: 'ARR Not Verifiable', note: 'Financial statements not independently reviewed in the last 24 months.' },
+                { pct: '42%', label: 'No Pentest on Record', note: 'No documented independent security assessment.' },
+                { pct: '35%', label: 'RGPD / AI Act Risk', note: 'Regulatory compliance gaps identified during review.' },
+                { pct: '28%', label: 'Founder Dependency', note: 'Operational concentration creating structural transition risk.' },
               ].map((r, i) => (
                 <div key={r.label} className="flex items-start gap-8 py-6 border-b border-magazine-black/10">
                   <span
@@ -373,8 +509,9 @@ export default async function IssuePage({ params }: Props) {
                     0{i + 1}
                   </span>
                   <div className="pt-1">
-                    <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.12em] mb-1">{r.pct} of rejected submissions</p>
-                    <p className="text-h2-mag font-sans font-semibold text-magazine-black">{r.label}</p>
+                    <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.12em] mb-1">{r.pct} of initial submissions</p>
+                    <p className="text-h2-mag font-sans font-semibold text-magazine-black mb-1">{r.label}</p>
+                    <p className="text-[12px] text-magazine-black/50 leading-[1.6]">{r.note}</p>
                   </div>
                 </div>
               ))}
@@ -388,114 +525,214 @@ export default async function IssuePage({ params }: Props) {
         {/* ── Transaction : Deal Watch ── */}
         <section id="s-transaction" className="bg-magazine-white px-6 md:px-[120px] py-32">
           <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Transaction — Deal Watch H1 2026</p>
-          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">Five Deals That Defined H1 2026.</h2>
-          <p className="text-body-mag text-magazine-black/55 max-w-prose mb-16 leading-[1.75]">Not the press releases. The signals. Grades shown are analytical estimates — not official certifications.</p>
-          <div className="space-y-0">
-            {[
-              { n: '01', name: 'Legal Workflow Platform — DACH', meta: 'LegalTech · €4.2M ARR · PE · 6.8x ARR', grade: 'Auction Ready', desc: '7-year-old bootstrapped platform, 98% subscription revenue, NRR 118%. Due diligence closed in 19 days — half the EU market average. Buyer cited documentation quality as primary driver.', lesson: 'Clean documentation is a time-to-close advantage worth 15–20% in negotiating power.' },
-              { n: '02', name: 'AI Contract Intelligence — France', meta: 'AI-native SaaS · €1.8M ARR · Strategic · 11x ARR', grade: 'Grade A', desc: 'Buyer paid 11x ARR for the proprietary training dataset. Founder had documented data provenance from day one. That documentation added an estimated €3.2M to the headline price.', lesson: 'Proprietary data with documented provenance is the highest-value AI asset.' },
-              { n: '03', name: 'Home Services Marketplace — Netherlands', meta: 'Marketplace · €900K GMV · Search Fund · 2.6x revenue', grade: 'Pre-Grade', desc: 'F-42 score of 4/5 — three largest clients communicated exclusively with the founder. Buyer accepted an 18-month earn-out to compensate for transition risk.', lesson: 'Founder dependency is a pricing problem — and it costs more than most founders expect.' },
-              { n: '04', name: 'FinTech Compliance Tool — Spain', meta: 'RegTech · €2.1M ARR · Strategic · 8.2x ARR', grade: 'Grade A', desc: 'DORA compliance deadline created structural urgency. Sold at 8.2x ARR — a premium of ~3x above sector median. The regulatory moment was exceptional.', lesson: 'Regulatory windows create premium moments. Prepared assets capture them.' },
-              { n: '05', name: 'Vibe-Coded SaaS — Germany', meta: 'Horizontal SaaS · €600K ARR · No Close', grade: 'No Close', desc: 'LOI at 5x ARR. Technical due diligence: 70% of core codebase AI-generated, no tests, no docs, 3 deprecated dependencies. Buyer requested −40%. Founder declined.', lesson: 'Speed of build is invisible in due diligence. Auditability is everything.' },
-            ].map((d, i, arr) => (
-              <div key={d.n} className={`py-10 grid grid-cols-[auto_1fr_auto] gap-8 items-start ${i < arr.length - 1 ? 'border-b border-magazine-black/8' : ''}`}>
-                <span className="font-sans font-bold text-magazine-black/15 tabular-nums" style={{ fontSize: 'clamp(28px,3.5vw,48px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}>{d.n}</span>
-                <div>
-                  <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.12em] mb-1">{d.meta}</p>
-                  <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-3">{d.name}</h3>
-                  <p className="text-body-mag text-magazine-black/60 leading-[1.75] mb-3">{d.desc}</p>
-                  <p className="text-label-mag text-magazine-black/50 font-semibold">→ {d.lesson}</p>
-                </div>
-                <span className="inline-block font-mono text-[8px] tracking-[0.18em] uppercase border border-magazine-black/20 text-magazine-black/50 px-3 py-1.5 shrink-0 mt-1">{d.grade}</span>
+          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">Five Deals. Five Completely Different Stories.</h2>
+          <p className="text-body-mag text-magazine-black/55 max-w-prose mb-16 leading-[1.75]">All real. Names, companies, and identifying details anonymised or inferred from public registry data. Multiples confirmed through documented processes only. The deal that did not close is included because it is the most instructive of all.</p>
+
+          {/* Deal 01 & 02 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
+            <div className="border-b border-magazine-black/8 pb-8">
+              <p className="font-mono text-[8px] font-bold tracking-[0.18em] uppercase text-magazine-accent mb-2">Deal 01</p>
+              <p className="font-sans font-semibold text-magazine-black text-[18px] leading-[0.92] mb-4">The certification<br /><strong>that closed it.</strong></p>
+              <p className="text-body-mag text-magazine-black/60 leading-[1.75] mb-3">Legal automation software, DACH region. The certification review completed eighteen months before the sale process began. When the buyer&rsquo;s due diligence team arrived, the data room was already structured to answer their questions before they asked them. The deal closed in nine weeks.</p>
+              <p className="font-mono text-[8px] font-semibold text-magazine-black/40 tracking-[0.12em] uppercase">Outcome: agreed above initial guidance</p>
+            </div>
+            <div className="border-b border-magazine-black/8 pb-8">
+              <p className="font-mono text-[8px] font-bold tracking-[0.18em] uppercase text-magazine-accent mb-2">Deal 02</p>
+              <p className="font-sans font-semibold text-magazine-black text-[18px] leading-[0.92] mb-4">The search fund<br /><strong>that moved quietly.</strong></p>
+              <p className="text-body-mag text-magazine-black/60 leading-[1.75] mb-3">Property management software, France. A search fund identified the company through a referral network rather than a formal process. The founder had not planned to sell for another two years. The buyer&rsquo;s speed and certainty made the difference.</p>
+              <p className="font-mono text-[8px] font-semibold text-magazine-black/40 tracking-[0.12em] uppercase">Outcome: below market median, but clean and certain</p>
+            </div>
+          </div>
+
+          {/* Deal 03–05 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <div className="space-y-10">
+              <div>
+                <p className="font-mono text-[8px] font-bold tracking-[0.18em] uppercase text-magazine-accent mb-2">Deal 03</p>
+                <p className="font-sans font-semibold text-magazine-black text-[17px] leading-[0.92] mb-4">The patient<br /><strong>buyer.</strong></p>
+                <p className="text-body-mag text-magazine-black/60 leading-[1.75] mb-2">HR software, Benelux. A family office had been tracking the company for three years before making contact. They were not in a hurry. That patience produced a more favourable outcome for both parties than a competitive process would have.</p>
+                <p className="font-mono text-[8px] font-semibold text-magazine-black/40 tracking-[0.12em] uppercase">Outcome: at market median, with a generous earn-out structure</p>
               </div>
-            ))}
+              <div>
+                <p className="font-mono text-[8px] font-bold tracking-[0.18em] uppercase text-magazine-accent mb-2">Deal 04</p>
+                <p className="font-sans font-semibold text-magazine-black text-[17px] leading-[0.92] mb-4">The compliance<br /><strong>premium.</strong></p>
+                <p className="text-body-mag text-magazine-black/60 leading-[1.75]">Fintech RegTech, EU-wide. Full regulatory compliance eliminated the buyer&rsquo;s own post-acquisition remediation cost. That single factor drove the final price above the range the seller had initially modelled.</p>
+              </div>
+            </div>
+            <div>
+              <p className="font-mono text-[8px] font-bold tracking-[0.18em] uppercase text-[#c0392b] mb-2">Deal 05 — No Close</p>
+              <p className="font-sans font-semibold text-magazine-black text-[17px] leading-[0.92] mb-4">The deal<br /><strong>that taught the most.</strong></p>
+              <p className="text-body-mag text-magazine-black/60 leading-[1.75] mb-3">AI software, Iberia. Letter of intent signed. Technical review found large sections of core product written by AI and never reviewed by a human. The buyer walked. The founder spent twelve weeks fixing it. A second process opened six months later.</p>
+              <p className="font-mono text-[8px] font-semibold text-magazine-black/40 tracking-[0.12em] uppercase">Outcome: no close — technical risk unresolved in the buyer&rsquo;s timeline</p>
+            </div>
+          </div>
+
+          {/* PE partner quote */}
+          <blockquote className="bg-magazine-navy p-10 mb-16">
+            <p className="text-body-mag text-white/80 leading-[1.75] italic mb-4">
+              &ldquo;He reads approximately two hundred deal summaries per year. He takes forty first meetings. He acquires three companies. The 160 he never meets are not worse businesses. They failed to make the right impression on the two-page summary his analyst read in four minutes.&rdquo;
+            </p>
+            <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-white/35">Composite portrait of a PE mid-market fund partner — Aegryn Advisory observations 2024 to 2026</p>
+          </blockquote>
+
+          {/* Process + Earn-out */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+              <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">From First Meeting to Signature</p>
+              <p className="font-sans font-bold text-magazine-black leading-[0.88] mb-8"
+                style={{ fontSize: 'clamp(22px,3vw,36px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                What actually happens,<br /><strong>week by week.</strong>
+              </p>
+              <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+                <p>The first conversation is rarely decisive. The buyer is pattern-matching against dozens of companies they have seen. What makes a founder memorable is having a clear answer to the three questions every buyer is actually asking: can I trust the revenue, can I run this without the founder, and is there a real reason I should pay more than I would for something similar?</p>
+                <p>The letter of intent arrives after roughly four to eight weeks of conversation. The exclusivity period that follows is when the real work happens. Due diligence typically runs eight to twelve weeks.</p>
+                <p>The founders who report the best experience share one habit in common: they started preparing the documentation twelve to eighteen months before the conversation began. By the time a buyer asked for something, it was already ready.</p>
+              </div>
+            </div>
+            <div>
+              <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">Getting Paid Later</p>
+              <p className="font-sans font-bold text-magazine-black leading-[0.88] mb-8"
+                style={{ fontSize: 'clamp(22px,3vw,36px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                Getting paid<br /><strong>later.</strong>
+              </p>
+              <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+                <p>An earn-out is a payment structure where part of the price is paid after the transaction closes, contingent on the business hitting agreed targets. It lets a buyer pay more for future performance they cannot yet verify, and it lets a seller prove the business is worth what they claimed.</p>
+                <p>The risks are real. Targets can be set in ways that are difficult to achieve after the sale, especially if the founder is no longer in full operational control. The metrics used to calculate the earn-out should be simple, objective, and within the founder&rsquo;s ability to influence.</p>
+                <p>The founders who navigate earn-outs well have one advantage: they negotiated the terms before they signed, not after.</p>
+              </div>
+              <blockquote className="border-l-2 border-magazine-accent pl-6 mt-8">
+                <p className="text-body-mag text-magazine-black/65 italic leading-[1.75]">&ldquo;Negotiate the earn-out as carefully as you negotiate the headline number. You are writing a second contract, with a different set of risks.&rdquo;</p>
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-3">Composite observation — Aegryn Transaction Desk, 2026</p>
+              </blockquote>
+            </div>
           </div>
         </section>
 
         {/* ── Buyers ── */}
         <section id="s-buyers" className="bg-magazine-ivory px-6 md:px-[120px] py-32">
-          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">The Buyer Landscape</p>
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Transaction — Who Is Buying</p>
           <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-16 max-w-[720px]">
-            Who Is Buying European Tech in 2026
+            Who Is Buying European Tech in 2027.
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
-            {DATA_01.buyers.map((b, i) => (
-              <div key={b.type}>
-                <p
-                  className="font-sans font-bold text-magazine-black/15"
-                  style={{ fontSize: 'clamp(48px,6vw,80px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}
-                >
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 mb-16">
+            {[
+              { type: 'Strategic acquirers', desc: 'Represented roughly 62 percent of lower mid-market software transactions in 2025. They pay more because they have revenue synergies a financial buyer cannot access.' },
+              { type: 'Private equity funds', desc: 'Buy on the basis of financial engineering and operational improvement. Their investment committee meets every two weeks. Eleven minutes to present. Decisions made before the full report is read.' },
+              { type: 'Family offices', desc: 'Move more slowly and more quietly. They are often the best buyer for a founder who values continuity over speed. They track companies for years before making contact.' },
+              { type: 'Search funds', desc: 'A small but growing category: entrepreneurially-minded buyers who acquire a single company to operate themselves. Often more flexible on price in exchange for continuity and knowledge transfer.' },
+            ].map((b, i) => (
+              <div key={b.type} className={`py-8 border-b border-magazine-black/8 ${i % 2 === 0 ? 'md:border-r md:pr-12' : 'md:pl-12'}`}>
+                <p className="font-sans font-bold text-magazine-black/15"
+                  style={{ fontSize: 'clamp(36px,5vw,64px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}>
                   {String(i + 1).padStart(2, '0')}
                 </p>
-                <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mt-4 mb-2">{b.type}</h3>
-                <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.1em] mb-6">
-                  Target: {b.ticket}
-                </p>
-                <ul className="space-y-2 mb-6">
-                  {b.criteria.map(s => (
-                    <li key={s} className="flex items-start gap-3 text-body-mag text-magazine-black/70">
-                      <span className="mt-2.5 w-1 h-1 rounded-full bg-magazine-black/40 shrink-0" />
-                      {s}
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-body-mag text-magazine-black/50 italic">
-                  Grade min. {b.gradeMin} — {b.examples}
-                </p>
+                <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mt-4 mb-3">{b.type}</h3>
+                <p className="text-body-mag text-magazine-black/60 leading-[1.75]">{b.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* ── Outlook 2027 ── */}
+        {/* ── Build — The Year Before ── */}
         <section id="s-outlook" className="bg-magazine-ivory px-6 md:px-[120px] py-32">
-          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Perspectives 2027</p>
-          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-20 max-w-[720px]">
-            What the Next 12 Months Look Like
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Build — The Year Before</p>
+          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-8 max-w-[720px]">
+            Twelve months that determine the price.
           </h2>
+          <p className="text-body-mag text-magazine-black/55 max-w-prose mb-16 leading-[1.75]">What follows is a distilled account of how a prepared founder uses the twelve months before a transaction. It is a composite of several real processes observed by Aegryn between 2023 and 2026. Not every step applies to every situation. The sequence, however, holds consistently.</p>
 
-          <div className="space-y-0">
+          <div className="space-y-0 mb-20">
             {[
               {
-                num: '01', title: 'The EU AI Act Enters Into Force',
-                body: 'Assets not compliant with the EU AI Act — particularly high-risk systems — will face a structural devaluation. Assets that can demonstrate compliance (CIFS S-42) will command a verifiable premium.',
-                impact: 'Non-compliant AI assets: est. −20 to −30% valuation impact',
+                num: '01', label: 'Months 1–3',
+                title: 'Audit the ownership structure',
+                body: 'Find every contractor who ever touched the product and confirm the agreement transferring their work to the company. This is the step most founders skip and most buyers ask about. It is almost always fixable, but it takes time to track down former contributors and obtain the right signatures.',
               },
               {
-                num: '02', title: 'The Founder Succession Wave',
-                body: 'More than 3.5 million European SMEs are currently without a successor. The tech segment — particularly bootstrapped SaaS companies founded between 2008 and 2016 — is entering its peak succession window.',
-                impact: 'Largest deal volume growth expected in LMM tech — H2 2026 to 2028',
+                num: '02', label: 'Months 4–6',
+                title: 'Commission an independent financial review',
+                body: 'If the last one was more than eighteen months ago. Clean and consistent monthly financials for the past three years are one of the strongest signals a buyer receives about how a company is managed. The cost of the review is small relative to what it protects in the final offer.',
               },
               {
-                num: '03', title: 'PE Dry Powder Reaches Record Levels',
-                body: 'European private equity funds are sitting on record undeployed capital. Certified, transaction-ready assets will move faster and attract more competitive offers.',
-                impact: 'Certified assets expected to transact 40–60 days faster than uncertified',
+                num: '03', label: 'Months 7–9',
+                title: 'Document the technical architecture',
+                body: 'Not for a buyer — for yourself first. Write down why each major component was built the way it was, what it depends on, and what would need to change if the core AI or infrastructure provider changed their pricing or API. This documentation saves weeks in due diligence later.',
+              },
+              {
+                num: '04', label: 'Months 10–12',
+                title: 'Organise the data room itself',
+                body: 'Create a clear folder structure. Add a one-page executive summary that answers the buyer\'s first three questions before they ask them. Index every document so a reviewer can navigate it without guidance. The data room is the first impression.',
               },
             ].map((f, i, arr) => (
-              <div
-                key={f.num}
-                className={`py-16 ${i < arr.length - 1 ? 'border-b border-magazine-black/10' : ''}`}
-              >
-                <p
-                  className="font-sans font-bold text-magazine-black/15 mb-4 tabular-nums"
-                  style={{ fontSize: 'clamp(48px,6vw,80px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}
-                >
-                  {f.num}
-                </p>
-                <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-6 max-w-[600px]">{f.title}</h3>
-                <p className="text-body-mag text-magazine-black/60 leading-[1.75] max-w-prose mb-6">{f.body}</p>
-                <p className="text-label-mag text-magazine-black/50 uppercase tracking-[0.1em]">{f.impact}</p>
+              <div key={f.num} className={`py-12 grid grid-cols-[auto_1fr] gap-10 items-start ${i < arr.length - 1 ? 'border-b border-magazine-black/10' : ''}`}>
+                <div>
+                  <p className="font-sans font-bold text-magazine-black/15 tabular-nums"
+                    style={{ fontSize: 'clamp(40px,5vw,72px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}>
+                    {f.num}
+                  </p>
+                  <p className="font-mono text-[8px] tracking-[0.14em] uppercase text-magazine-black/35 mt-2">{f.label}</p>
+                </div>
+                <div>
+                  <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-4">{f.title}</h3>
+                  <p className="text-body-mag text-magazine-black/60 leading-[1.75] max-w-prose">{f.body}</p>
+                </div>
               </div>
             ))}
+          </div>
+
+          {/* The Data Room — what it actually contains */}
+          <div className="border-t border-magazine-black/10 pt-16">
+            <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">The Document That Closes Deals</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+              <div>
+                <p className="font-sans font-bold text-magazine-black leading-[0.88] mb-8"
+                  style={{ fontSize: 'clamp(22px,3vw,36px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                  What a data room<br />actually <strong>contains.</strong>
+                </p>
+                <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+                  <p>The term &ldquo;data room&rdquo; sounds more intimidating than it is. At its core, it is an organised folder with documents that answer the questions a serious buyer will eventually ask. The founders who do well in a sale process are the ones who build this folder long before anyone asks for it.</p>
+                  <p>There are four categories every buyer looks at, in roughly this order of importance: the financials, the customer contracts and revenue documentation, the technical architecture and code ownership, and the legal structure including shares, options, and any outstanding claims.</p>
+                  <p>The financials are usually the first thing opened. A buyer&rsquo;s first question is: can I trust this revenue? The second is: what is the cost of producing it? If those two questions can be answered quickly and clearly, the rest of the process tends to go faster.</p>
+                </div>
+              </div>
+              <div>
+                <p className="font-sans font-bold text-magazine-black leading-[0.88] mb-8"
+                  style={{ fontSize: 'clamp(22px,3vw,36px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                  The buyer&rsquo;s first<br />48 hours with your<br /><strong>data room.</strong>
+                </p>
+                <p className="text-[12px] text-magazine-black/40 italic mb-6">A composite portrait — PE fund partner and deal team, based on Aegryn Advisory buy-side observations.</p>
+                <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+                  <p>The data room opens on a Tuesday morning. The analyst downloads everything in the financial folder first. He is looking for three things: the trend in gross margin over 24 months, the customer churn rate in the last four quarters, and whether the revenue is genuinely recurring or lumpy.</p>
+                  <p>By Thursday, the technical reviewer has a first look at the code and architecture documentation. In a well-documented data room, the reviewer can build a mental model of the product&rsquo;s defensibility in two hours.</p>
+                </div>
+                <div className="bg-magazine-white border border-magazine-black/8 p-6 mt-8">
+                  <p className="font-sans font-semibold text-magazine-black text-[13px] mb-2">The week-one signal</p>
+                  <p className="text-[12px] text-magazine-black/55 leading-[1.65]">The pace of week one in due diligence is the strongest predictor of deal outcome. Founders who answer questions in hours, not days, close faster and at higher prices. Preparation is speed. Speed is trust. Trust is price.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* ── AEGRYN Index ── */}
         <section id="s-index" className="bg-magazine-white px-6 md:px-[120px] py-32">
-          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">The AEGRYN Index — Edition I</p>
-          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">Proprietary Certification Data. Published Here First.</h2>
-          <p className="text-body-mag text-magazine-black/50 max-w-prose mb-16 italic">Not available elsewhere. Updated every issue. CIFS Protocol v3.0.</p>
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Aegryn Index — Edition I</p>
+          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">What we tracked and what it showed.</h2>
+          <p className="text-label-mag text-magazine-black/35 uppercase tracking-[0.1em] mb-12">Aegryn Transaction and Grade Desks · H1 2026</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
+            <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+              <p>For this first edition of the Aegryn Index, we tracked a selection of European technology transactions in the sectors we work in most actively: B2B software, RegTech, HealthTech, and software-enabled services. We are not claiming statistical significance. We are sharing the patterns we observed across the processes we participated in or closely followed in the first half of 2026.</p>
+              <p>Two patterns held consistently enough that we are prepared to state them as working hypotheses. The first: time-to-close correlates more strongly with data room preparation quality than with any other observable variable we tracked. The second: the largest discounts from initial offer to final signed price occurred in companies where the financial statements had not been independently reviewed in the 24 months preceding the sale.</p>
+            </div>
+            <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+              <p>The CIFS methodology assesses four dimensions: code quality and technical documentation, intellectual property ownership and assignment, financial record completeness and accuracy, and security posture and compliance. Each is scored through independent review, not self-assessment. The final grade reflects what a reviewer found, not what the founder believes to be true.</p>
+              <p>In the first half of 2026, the most common finding across initial reviews was incomplete IP assignment documentation — contractor agreements that did not explicitly transfer code ownership to the company. This issue appeared in 64 percent of first submissions. The cost of not fixing it is a discount in the final offer, a slower process, or both.</p>
+              <p className="font-mono text-[8px] tracking-[0.1em] uppercase text-magazine-black/30">Aegryn CIFS Protocol v3.0 · Aegryn Transaction Desk H1 2026 observations</p>
+            </div>
+          </div>
+
           <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-magazine-black/8 mb-16">
             {DATA_01.indexMetrics.map(m => (
               <div key={m.label} className="bg-magazine-white p-8">
@@ -513,142 +750,181 @@ export default async function IssuePage({ params }: Props) {
           <CifsBars dims={DATA_01.cifsExample} />
         </section>
 
-        {/* ── People : Founder Portrait + Radar 5 Builders ── */}
+        {/* ── People ── */}
         <section id="s-people" className="bg-magazine-ivory px-6 md:px-[120px] py-32">
-          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Section 05 — People</p>
-          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">The Founder Who Built to Sell.</h2>
-          <p className="text-body-mag text-magazine-black/55 max-w-prose mb-16 leading-[1.75] italic">Composite portrait drawn from four European founders who exited between 2025 and 2026. All bootstrapped. All profitable. None had institutional venture backing.</p>
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">People</p>
+          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">The founders, the acquirers, and the people who built something worth buying.</h2>
+          <p className="text-body-mag text-magazine-black/55 max-w-prose mb-20 leading-[1.75] italic">Their stories, told as closely as we were allowed to tell them.</p>
 
-          {/* Portrait stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-magazine-black/8 mb-20">
-            {[
-              { val: '6.4x', label: 'ARR multiple at exit' },
-              { val: '14w', label: 'Process to signing' },
-              { val: '€3–8M', label: 'ARR at time of sale' },
-              { val: '0', label: 'VC money raised' },
-            ].map(s => (
-              <div key={s.label} className="bg-magazine-ivory p-8">
-                <p className="font-sans font-bold text-magazine-black" style={{ fontSize: 'clamp(28px,3.5vw,48px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}>{s.val}</p>
-                <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-magazine-black/40 mt-3">{s.label}</p>
+          {/* Portrait 1 — She had no plan B */}
+          <div className="grid md:grid-cols-2 gap-16 mb-20 pb-20 border-b border-magazine-black/10">
+            <div>
+              <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">A Composite Portrait</p>
+              <p className="font-sans font-bold text-magazine-black leading-[0.86] mb-6"
+                style={{ fontSize: 'clamp(28px,4vw,48px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                She had<br />no <strong>plan B.</strong>
+              </p>
+              <p className="text-[12px] text-magazine-black/40 italic mb-6">Drawn from patterns across Aegryn Advisory founder conversations, 2022 to 2026.</p>
+              <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+                <p>No investor. No co-founder. No safety net. Just eleven months of savings, a laptop, and an idea she had been circling for two years without acting on it.</p>
+                <p>The decision to leave her job was not brave. It was arithmetic. She had been unhappy for long enough that the discomfort of staying had become larger than the fear of failing. That is how most of these decisions actually work.</p>
               </div>
-            ))}
-          </div>
-
-          {/* Portrait text */}
-          <div className="grid md:grid-cols-2 gap-16 mb-20">
-            <div className="space-y-6 text-body-mag text-magazine-black/65 leading-[1.8]">
-              <p>He built the first version alone, over a long weekend in his apartment in Rotterdam, to solve a problem he had watched his previous employer pay €40,000 a year to solve badly. By year five, he had €2.4 million in ARR, seven employees, and a waiting list.</p>
-              <p>His cap table was entirely clean. He had signed intellectual property assignment agreements with every developer who had ever written a line of production code, including two freelancers who had contributed during the first year. He had tracked both of them down. One required a modest payment. The other signed willingly.</p>
-              <p>His bookkeeper closed the monthly management accounts within 48 hours of month-end, every month, without exception, for six years. None of this had been strategic preparation for a sale. It was simply how he ran things.</p>
-            </div>
-            <div className="space-y-6 text-body-mag text-magazine-black/65 leading-[1.8]">
-              <blockquote className="border-l-2 border-magazine-accent pl-6">
-                <p className="italic">&ldquo;The due diligence team told me they had never seen a data room this clean on a sub-€5M ARR company. I didn’t know that was unusual. I thought it was just how you ran a business.&rdquo;</p>
+              <blockquote className="border-l-2 border-magazine-accent pl-6 mt-8">
+                <p className="text-body-mag text-magazine-black/65 italic leading-[1.75]">&ldquo;Everyone told me to wait for the right moment. There is no right moment. There is only the moment you stop waiting.&rdquo;</p>
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-3">Composite quote — Aegryn Advisory 2024</p>
               </blockquote>
-              <p>Three buyers expressed serious interest. Two submitted letters of intent. He accepted at 6.4x ARR. The process ran fourteen weeks from first meeting to signing — half the EU market average for an asset of comparable complexity.</p>
-              <p>He is now 22 months into his second company. He started the documentation on day one this time. The IP assignment agreements were signed before the first line of code was written.</p>
+            </div>
+            <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+              <p className="font-sans font-semibold text-magazine-black text-[18px] leading-[0.94] mb-6">The first eighteen months.</p>
+              <p>The first client paid late. The second one didn&rsquo;t pay at all. She kept going because the alternative — going back to a salaried job she&rsquo;d already left — felt worse than the fear of running out of money.</p>
+              <p>What changed everything wasn&rsquo;t a big break. It was a small one: a single enterprise client who referred three more. Word of mouth built what no marketing budget could have. Eighteen months in, she hired her first employee — not because she could easily afford it, but because she couldn&rsquo;t do the work alone anymore.</p>
+              <p>Five years later, the company she built without a safety net has a team of twelve and a buyer&rsquo;s attention. She still remembers the exact balance in her bank account the week she almost quit. She uses that number now as a compass, not a warning.</p>
             </div>
           </div>
 
-          {/* 5 Builders Radar */}
-          <div className="border-t border-magazine-black/10 pt-16">
-            <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-12">5 European Builders to Watch</p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { sector: 'HealthTech · Switzerland · 4 years', name: 'Regulatory Submission Automation', arr: '€380K ARR', nrr: 'NRR 122%', desc: 'Automates CE marking and FDA 510(k) submissions for Swiss MedTech. The regulatory moat is the non-substitutable asset — 12 years of prior experience in the field.' },
-                { sector: 'LegalTech · Germany · 6 years', name: 'Contract Risk Intelligence', arr: '€520K ARR', nrr: 'Enterprise only', desc: 'Proprietary risk-scoring model trained on 180,000 German-language contracts, licensed from three bar associations. The training data cannot be reproduced without six years of relationship-building.' },
-                { sector: 'RegTech · Netherlands · 3 years', name: 'AI Regulatory Change Monitoring', arr: '€210K ARR', nrr: '+30% QoQ', desc: 'Monitors EU financial services regulation in real time. Built 18 months before DORA compliance became mandatory for its target customers.' },
-                { sector: 'EdTech · Spain · 4 years', name: 'EU Compliance Training Platform', arr: '€340K ARR', nrr: '91% retention', desc: '140 financial institutions across Spain, Portugal, Italy. Distribution built over 12 years of direct consulting relationships — the moat is not the technology, it is the network.' },
-                { sector: 'PropTech · France · 5 years', name: 'Commercial RE Transaction Intelligence', arr: '€290K ARR', nrr: 'Proprietary data', desc: 'Five years of primary research across French, Belgian, and Luxembourg commercial transactions. The dataset cannot be scraped or purchased — it required five years to build.' },
-              ].map(b => (
-                <div key={b.name} className="border border-magazine-black/10 p-6 bg-magazine-white">
-                  <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-accent mb-3">{b.sector}</p>
-                  <h3 className="font-sans font-semibold text-magazine-black text-[15px] mb-2 leading-snug">{b.name}</h3>
-                  <div className="flex gap-4 mb-4">
-                    <span className="font-mono text-[9px] tracking-[0.1em] text-magazine-black/50">{b.arr}</span>
-                    <span className="font-mono text-[9px] tracking-[0.1em] text-magazine-black/30">·</span>
-                    <span className="font-mono text-[9px] tracking-[0.1em] text-magazine-black/50">{b.nrr}</span>
-                  </div>
-                  <p className="text-[12px] text-magazine-black/60 leading-[1.65]">{b.desc}</p>
-                </div>
-              ))}
+          {/* Portrait 2 — His first company died quietly */}
+          <div className="grid md:grid-cols-2 gap-16 mb-20 pb-20 border-b border-magazine-black/10">
+            <div>
+              <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">A Composite Portrait</p>
+              <p className="font-sans font-bold text-magazine-black leading-[0.86] mb-6"
+                style={{ fontSize: 'clamp(28px,4vw,48px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                His first company<br />died <strong>quietly.</strong>
+              </p>
+              <p className="text-[12px] text-magazine-black/40 italic mb-6">Composite portrait — European founder, two companies, 2016 to 2026.</p>
+              <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+                <p>No press release. No dramatic collapse. It just ran out of customers, then out of runway, then out of reasons to continue. He shut it down himself, told his five employees in person, and spent the following year and a half working for someone else while he paid off what the company owed him personally.</p>
+                <p>&ldquo;The first time, I built what I thought was smart. The second time, I built what people asked me for. That is the whole difference.&rdquo;</p>
+              </div>
+            </div>
+            <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+              <p>The second company started from a single observation: the exact problem his old customers kept complaining about, that he had never fixed because he was too busy building features nobody had asked for.</p>
+              <p>He kept the team deliberately small for the first two years — three people — and refused every investor meeting until the product was already profitable. When he finally raised capital, it was on his terms, at a valuation that reflected leverage rather than desperation.</p>
+              <p>The company sold four years later. Not for a headline-making sum, but for enough that he never has to explain the first failure in a job interview again.</p>
+              <div className="bg-magazine-white border border-magazine-black/8 p-5 mt-4">
+                <p className="font-sans font-semibold text-magazine-black text-[13px] mb-2">The pattern</p>
+                <p className="text-[12px] text-magazine-black/55 leading-[1.65]">Most successful founders have at least one earlier company that did not work. The story the market tells is the second act. The lesson is almost always in the first one.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Portrait 3 — Workshop to Platform */}
+          <div className="grid md:grid-cols-2 gap-16 mb-20 pb-20 border-b border-magazine-black/10">
+            <div>
+              <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-6">A Composite Portrait</p>
+              <p className="font-sans font-bold text-magazine-black leading-[0.86] mb-6"
+                style={{ fontSize: 'clamp(28px,4vw,48px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                Her grandfather built<br />the workshop.<br />She built the <strong>platform.</strong>
+              </p>
+              <p className="text-[12px] text-magazine-black/40 italic mb-6">Third-generation founder, family manufacturing group, technology transition 2020 to 2026.</p>
+            </div>
+            <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+              <p>The business had run the same way for forty years. Reliable, profitable, entirely on paper. She joined with an engineering degree and one uncomfortable question: what happens to this company in fifteen years if nothing changes?</p>
+              <p>She started with the smallest, least glamorous project possible — digitising the order book. It worked. That single win bought her the trust to go further. Predictive maintenance. A client portal. A data layer the old business had never had.</p>
+              <p>The company is worth more today than at any point in its history. Not because it makes something different, but because a buyer can now see, verify, and trust everything it does. The workshop still exists. It runs on better information.</p>
+              <blockquote className="border-l-2 border-magazine-accent pl-6 mt-4">
+                <p className="text-body-mag text-magazine-black/65 italic leading-[1.75]">&ldquo;I did not want to save the company from my father. I wanted to build the version of it that exists for another forty years.&rdquo;</p>
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-3">Composite quote — third-generation European founder</p>
+              </blockquote>
+            </div>
+          </div>
+
+          {/* Portrait 4 — The Acquirer */}
+          <div className="grid md:grid-cols-2 gap-16">
+            <div>
+              <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">A Composite Portrait</p>
+              <p className="text-[12px] text-magazine-black/40 italic mb-4">PE mid-market fund partner, active in EU tech transactions. Aegryn Advisory observations 2024 to 2026.</p>
+              <p className="font-sans font-bold text-magazine-black leading-[0.86] mb-6"
+                style={{ fontSize: 'clamp(28px,4vw,48px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                Two hundred<br />summaries.<br /><strong>Three acquisitions.</strong>
+              </p>
+            </div>
+            <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+              <p>He reads approximately 200 deal summaries per year. He takes 40 first meetings. He acquires three companies. The 160 he never meets are not worse businesses — they failed to make the right impression on the two-page summary his analyst read in four minutes.</p>
+              <p>His investment committee meets every two weeks. A partner has eleven minutes to present a dossier. Seven for the thesis. Three for the financials. One for questions. The 200-page due diligence report is never read in full before the committee vote.</p>
+              <p>What matters is what the presenting partner chose to highlight. Which means what matters, long before the committee, is the data room the seller built before the process started.</p>
             </div>
           </div>
         </section>
 
-        {/* ── Life : The Founder's Stack ── */}
+        {/* ── Life ── */}
         <section id="s-life" className="bg-magazine-white px-6 md:px-[120px] py-32">
-          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Section 06 — Life</p>
-          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">The Founder’s Stack — Issue 01.</h2>
-          <p className="text-body-mag text-magazine-black/55 max-w-prose mb-20 leading-[1.75]">Not what founders say they use. What serious European builders in active build or pre-transaction mode actually use — day to day, quarter to quarter.</p>
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Life</p>
+          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">The Good Life, Earned.</h2>
+          <p className="text-body-mag text-magazine-black/55 max-w-prose mb-20 leading-[1.75]">Where European builders go when they need to think. What they read. Why they stay.</p>
 
-          <div className="grid md:grid-cols-3 gap-16 mb-24">
-            {/* Tools */}
-            <div>
-              <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30 mb-8">5 Tools</p>
-              <div className="space-y-8">
-                {[
-                  { name: 'Linear', desc: 'Product and engineering task management for teams under 20. Replaces Jira without the ceremony.' },
-                  { name: 'Supabase', desc: 'Open-source backend on PostgreSQL — portable, auditable, understood by every technical auditor. Built-in audit logging matters for CIFS.' },
-                  { name: 'Notion — as Data Room', desc: 'The founders who close fast maintain one clean Notion workspace as their permanent data room. Updated monthly. When a buyer asks, turnaround is hours, not weeks.' },
-                  { name: 'Cursor / Windsurf', desc: 'AI-assisted coding with mandatory human review. As leverage, not as a shortcut past engineering discipline.' },
-                  { name: 'Lemon Squeezy', desc: 'Merchant-of-record payments. EU VAT handled by the platform. MRR verifiable from day one — a clean revenue trail for CIFS certification.' },
-                ].map(tool => (
-                  <div key={tool.name} className="border-l border-magazine-black/10 pl-5">
-                    <p className="font-sans font-semibold text-magazine-black text-[14px] mb-1">{tool.name}</p>
-                    <p className="text-[12px] text-magazine-black/55 leading-[1.6]">{tool.desc}</p>
-                  </div>
-                ))}
+          {/* European tech cities */}
+          <div className="mb-20">
+            <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">European Tech Cities</p>
+            <p className="font-sans font-bold text-magazine-black leading-[0.88] mb-10"
+              style={{ fontSize: 'clamp(24px,3.5vw,40px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+              Five cities.<br /><strong>One question: where would you build?</strong>
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
+              {[
+                { city: 'Lisbon', sub: 'Portugal', note: 'A third of Zurich&rsquo;s cost. English-speaking founder community already in place. Warm. The city where dozens of European founders moved &ldquo;temporarily&rdquo; and stayed. Source: Idealista Portugal Rent Index, May 2026.' },
+                { city: 'Lausanne', sub: 'Switzerland', note: 'EPFL at walking distance. Tax rate of 13.8% in the Canton de Vaud. 40 minutes from Geneva. A legal infrastructure that understands SaaS and has been working with software companies since software was a niche.' },
+                { city: 'Tallinn', sub: 'Estonia', note: 'The smallest country with the highest density of unicorns per capita in Europe. Digital infrastructure built to global standards. The e-Residency program has brought 100,000 entrepreneurs to operate under Estonian law. Source: e-Estonia, 2026.' },
+                { city: 'Amsterdam', sub: 'Netherlands', note: 'The financial infrastructure of continental Europe. English-language courts for commercial disputes. A founder community that has been building B2B software since before B2B software was a category.' },
+                { city: 'Berlin', sub: 'Germany', note: 'Still the largest startup ecosystem in continental Europe by deal volume. Access to the DACH market from a city where the cost of failure is lower than in Munich or Frankfurt.' },
+              ].map((c) => (
+                <div key={c.city} className="py-8 border-b border-magazine-black/8 pr-6">
+                  <p className="font-sans font-bold text-magazine-black text-[22px] mb-0.5">{c.city}</p>
+                  <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-accent mb-4">{c.sub}</p>
+                  <p className="text-[12px] text-magazine-black/55 leading-[1.65]" dangerouslySetInnerHTML={{ __html: c.note }} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Reading list */}
+          <div className="border-t border-magazine-black/10 pt-16 mb-20">
+            <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">The Reading List</p>
+            <p className="font-sans font-bold text-magazine-black leading-[0.88] mb-10"
+              style={{ fontSize: 'clamp(24px,3.5vw,40px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+              What the founders<br />in this issue <strong>recommended.</strong>
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+              {[
+                { title: 'The SaaS Playbook', author: 'Rob Walling', note: 'The only bootstrapped SaaS book that treats exit preparation seriously without assuming venture backing. Honest about what it actually takes.' },
+                { title: 'Valuation', author: 'Aswath Damodaran', note: 'The definitive text on corporate valuation. Every founder heading toward a transaction should spend a weekend with this before the first meeting.' },
+                { title: 'Zero to Sold', author: 'Arvid Kahl', note: 'Built, bootstrapped, and exited. Honest about what preparation requires. The chapters on documentation are worth the price of the book alone.' },
+                { title: 'The Mom Test', author: 'Rob Fitzpatrick', note: 'How to talk to customers about your product without them lying to you. The single best book on validating an idea before building it.' },
+                { title: 'Acquired (Podcast)', author: 'Ben Gilbert & David Rosenthal', note: 'Business history as strategy school. The Berkshire, TSMC, and Costco episodes are required listening for anyone thinking about acquirers.' },
+                { title: 'Indie Hackers (Podcast)', author: 'Courtland Allen', note: 'Real founders, real revenue numbers. Filter for bootstrap-to-exit stories. The signal-to-noise ratio is higher than most business media.' },
+              ].map(b => (
+                <div key={b.title} className="py-6 border-b border-magazine-black/8 pr-8">
+                  <p className="font-sans font-semibold text-magazine-black text-[14px] mb-0.5">{b.title}</p>
+                  <p className="font-mono text-[8px] tracking-[0.12em] text-magazine-black/35 mb-2">{b.author}</p>
+                  <p className="text-[12px] text-magazine-black/55 leading-[1.6]">{b.note}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Closing essay */}
+          <div className="border-t border-magazine-black/10 pt-16">
+            <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">Essay</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+              <div>
+                <p className="font-sans font-bold text-magazine-black leading-[0.88] mb-8"
+                  style={{ fontSize: 'clamp(22px,3.5vw,38px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                  On building<br />for the <strong>long view.</strong>
+                </p>
+                <p className="font-mono text-[8px] tracking-[0.14em] uppercase text-magazine-black/35 mb-6">The Aegryn Founding Team</p>
+              </div>
+              <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+                <p>The companies that sell well share one quality that has nothing to do with their product, their market, or their technology. It is a quality of attention. The founders who built them paid attention to the details that did not matter yet — the contracts, the documentation, the financial records — long before anyone asked for them.</p>
+                <p>This is not glamorous advice. It does not make for a good podcast episode or a viral LinkedIn post. But it is the closest thing to a reliable pattern that we have seen across the transactions we have observed and participated in.</p>
+                <p>Build something real. Build it cleanly. Document it before anyone asks you to. Let the work speak before you do. The buyers who matter already know the difference.</p>
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/30">Aegryn Magazine — Issue 01 — Saint-Sulpice, Switzerland — January 2027</p>
               </div>
             </div>
-            {/* Books + Podcasts */}
-            <div>
-              <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30 mb-8">3 Books</p>
-              <div className="space-y-6 mb-12">
-                {[
-                  { name: 'The SaaS Playbook', author: 'Rob Walling', desc: 'The only bootstrapped SaaS book that discusses exit preparation without assuming venture backing.' },
-                  { name: 'Valuation', author: 'Aswath Damodaran', desc: 'The definitive text on corporate valuation. Worth reading before any transaction process begins.' },
-                  { name: 'Zero to Sold', author: 'Arvid Kahl', desc: 'Built, bootstrapped, and exited a SaaS product. Honest about what preparation actually requires.' },
-                ].map(b => (
-                  <div key={b.name}>
-                    <p className="font-sans font-semibold text-magazine-black text-[13px]">{b.name}</p>
-                    <p className="font-mono text-[9px] tracking-[0.1em] text-magazine-black/35 mb-1">{b.author}</p>
-                    <p className="text-[12px] text-magazine-black/55 leading-[1.6]">{b.desc}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30 mb-6">2 Podcasts</p>
-              <div className="space-y-5">
-                {[
-                  { name: 'Acquired', host: 'Ben Gilbert & David Rosenthal', desc: 'Business history as strategy school. The Berkshire, TSMC, and Costco episodes are required listening.' },
-                  { name: 'Indie Hackers', host: 'Courtland Allen', desc: 'Real founders, real revenue numbers. Filter for bootstrap-to-exit stories.' },
-                ].map(p => (
-                  <div key={p.name}>
-                    <p className="font-sans font-semibold text-magazine-black text-[13px]">{p.name}</p>
-                    <p className="font-mono text-[9px] tracking-[0.1em] text-magazine-black/35 mb-1">{p.host}</p>
-                    <p className="text-[12px] text-magazine-black/55 leading-[1.6]">{p.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* Habits + Place */}
-            <div>
-              <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30 mb-8">1 Habit</p>
-              <div className="border-l border-magazine-black/10 pl-5 mb-12">
-                <p className="font-sans font-semibold text-magazine-black text-[14px] mb-2">The Monthly P&amp;L Review — Alone, in Writing</p>
-                <p className="text-[12px] text-magazine-black/55 leading-[1.65]">Every first Monday of the month. 90 minutes. No accountant. No co-founder. The founder reads the previous month’s P&amp;L and writes a one-page commentary. The founders who do this close their books cleaner and are never surprised by what due diligence finds.</p>
-              </div>
-              <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30 mb-6">1 Place</p>
-              <div className="border-l border-magazine-black/10 pl-5 mb-12">
-                <p className="font-sans font-semibold text-magazine-black text-[14px] mb-2">Lausanne — Canton de Vaud</p>
-                <p className="text-[12px] text-magazine-black/55 leading-[1.65]">40 minutes by train to Geneva. EPFL talent at walking distance. Corporate tax rate of 13.8% in the Canton de Vaud. Legal infrastructure that understands SaaS revenue models. A fiduciaire community that has worked with SaaS since SaaS was a novel concept.</p>
-              </div>
-              <div className="bg-magazine-ivory p-6">
-                <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-accent mb-3">Coming Next — Issue 02 — April 2027</p>
-                <p className="font-sans font-bold text-magazine-black text-[18px] mb-3">The Exit Equation.</p>
-                <p className="text-[12px] text-magazine-black/55 leading-[1.65] mb-4">The decision, the preparation, the negotiation, and the twelve months that follow. The number that changes your life, and whether it was the right number.</p>
-                <a href={`/${locale}/magazine`} className="font-mono text-[9px] tracking-[0.16em] uppercase text-magazine-accent hover:underline">Subscribe →</a>
-              </div>
+
+            <div className="mt-16 bg-magazine-ivory p-8">
+              <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-accent mb-3">Coming Next — Issue 02 — April 2027</p>
+              <p className="font-sans font-bold text-magazine-black text-[22px] mb-3">The Exit Equation.</p>
+              <p className="text-body-mag text-magazine-black/55 leading-[1.65] mb-6 max-w-prose">The decision, the preparation, the negotiation, and the twelve months that follow. The number that changes your life, and whether it was the right number.</p>
+              <a href={`/${locale}/magazine`} className="font-mono text-[9px] tracking-[0.16em] uppercase text-magazine-accent hover:underline">Subscribe →</a>
             </div>
           </div>
         </section>

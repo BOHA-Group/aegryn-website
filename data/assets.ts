@@ -36,7 +36,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     grade:            'pending' as const,
     gradeCode:        undefined,
     tier:             1 as const,
-    transactionEligible:  true,
+    transactionEligible:  false,
   },
   {
     id:               'kryv',
