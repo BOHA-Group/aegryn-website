@@ -64,7 +64,7 @@ function buyerTypeLabel(t: string | null) {
 }
 
 /* ── Delete confirmation inline ── */
-function DeleteButton({ id, name }: { id: string; name: string }) {
+function DeleteButton({ id, name: _name }: { id: string; name: string }) {
   const [confirm, setConfirm] = useState(false)
   const [isPending, startTransition] = useTransition()
   const router = useRouter()

@@ -120,7 +120,7 @@ export default async function MagazineHubPage({ params }: Props) {
                 <IssueCard
                   issue={featuredIssue}
                   locale={locale}
-                  labelSpecial={tHub('cardSpecialEdition')}
+                  _labelSpecial={tHub('cardSpecialEdition')}
                   labelReadOnline={tHub('readOnline')}
                   labelDownloadPdf={tHub('downloadPdf')}
                   labelSubscribe={tHub('subscribe')}

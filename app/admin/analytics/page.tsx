@@ -33,11 +33,6 @@ async function buildKpis(
   const prevFrom = prevPeriodStart(period)
   const prevTo  = from   /* prev window ends where current starts */
 
-  function addFrom<T extends object>(q: T, col: string, date: string | null): T {
-    if (!date) return q
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    return (q as any).gte(col, date)
-  }
   function addRange<T extends object>(q: T, col: string, from2: string | null, to: string | null): T {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let r: any = q
