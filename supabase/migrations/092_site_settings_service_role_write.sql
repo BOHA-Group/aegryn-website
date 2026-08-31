@@ -2,6 +2,8 @@
 -- La migration 084 a activé RLS sans policy d'écriture → PATCH /api/admin/site-settings → 500
 -- Fix : policy INSERT/UPDATE pour service_role + GRANT explicite
 
+DROP POLICY IF EXISTS "site_settings_service_role_write" ON public.site_settings;
+
 CREATE POLICY "site_settings_service_role_write"
   ON public.site_settings
   FOR ALL
