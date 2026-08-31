@@ -6359,6 +6359,19 @@
       "canceledMsg": "Payment cancelled.",
       "comingSoonBadge": "Coming soon"
     },
+    "notify": {
+      "title": "Be notified of each edition",
+      "desc": "Enter your email to receive a publication notice for each new annual edition of Aegryn Magazine. Free access, no commitment, unsubscribe in one click.",
+      "placeholder": "Your email address",
+      "cta": "Get notified",
+      "success": "Thank you. You will receive the next edition as soon as it is published.",
+      "error": "An error occurred. Please try again.",
+      "unsubscribed": "You have been unsubscribed.",
+      "meta": {
+        "title": "Notifications | Aegryn Magazine",
+        "description": "Receive a publication notice for each new annual edition of AEGRYN Magazine on the European tech M&A market."
+      }
+    },
     "report": {
       "title": "Aegryn Magazine",
       "subtitle": "European Tech M&A Intelligence",
