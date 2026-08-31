@@ -372,6 +372,20 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 .pn-r{justify-content:flex-end;padding-right:26px}
 .pn-dk{border-top:.5px solid rgba(255,255,255,.08);color:rgba(248,250,252,.22)}
 
+/* ── Folio overlay JS désactivé — numéros .pn baked-in premium actifs ── */
+#fb-viewer-area>div:not(#fb-scaler):not(#fb-spine):not(#fb-edge-l):not(#fb-edge-r){display:none!important}
+
+/* ── PRINT — affiche pages source, masque viewer chrome ───────────────── */
+@media print{
+  #fb-bar,#fb-toolbar,#fb-prev,#fb-next,#fb-thumbs,#fb-scaler,#fb-spine,#fb-edge-l,#fb-edge-r{display:none!important}
+  #fb-root{position:static;background:#fff}
+  #fb-viewer-area{overflow:visible!important;display:block!important}
+  #pg-source{display:block!important;position:static!important;width:auto!important;height:auto!important}
+  .pg{display:block!important;position:relative!important;page-break-after:always;break-after:page}
+  .pg-frame{overflow:hidden!important;position:relative!important}
+  @page{size:420px 595px;margin:0}
+}
+
 /* ── CONTENT BODY — strict bleed guard ───── */
 .body{
   position:absolute;
