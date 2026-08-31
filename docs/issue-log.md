@@ -177,4 +177,59 @@ CookieScript détecte désormais correctement son installation, lit le consentem
 
 ---
 
+## ✅ ISSUE-010, Flipbook issue-01 — polish pass (em dash, headers, images, structure)
+
+**Détecté :** 2026-08-31
+**Résolu :** 2026-08-31
+**Commits :** `c140f02`, `3d0ebbf`, `543b996`
+
+**Symptômes :**
+- 41 pages affichaient des mentions internes "Continued overleaf" / "Continued"
+- Barres `<hr class="dv">` visibles entre header et contenu
+- Page 4 : colonnes BUILD/GRADE/TRANSACTION inégales (`3fr 2fr 2fr`)
+- Em dashes narratifs (` — `) dans les textes éditoriaux
+- Headers bilingues (Sommaire, Publicité, Primer, Sources) au lieu d'anglais uniquement
+- p43 : image Pexels + titre coupé en 2 lignes avec mot isolé
+- p94 : attribut `style=` dupliqué → image invisible
+- p105 : "grandfather" incohérent avec la quote "from my father" (p106)
+- p119 : placeholder pub manquant
+- p85 : image Unsplash 404
+
+**Fix :**
+- Suppression chirurgicale des `cont-bar` (rebuild depuis base `6006830` pour 0 div déséquilibré)
+- Remplacement de toutes les images Pexels (11 restantes) par Unsplash HD
+- 55 images HD téléchargées localement dans `public/magazine/issue-01/images/`
+- Headers harmonisés en anglais, labels publicitaires → noms de section
+- `ga-photo-l/r/top` : `top:0→28px`, `bottom:0→24px` (plus de débordement sur séparateurs)
+- `grandfather → father`, `Third-generation → Second-generation` (flipbook + web edition)
+- `issue-03/meta.ts` : em dash dans `theme` → virgule
+
+**Fichiers :**
+- `public/magazine/issue-01/aegryn-magazine-issue-01_1.html`
+- `content/magazine/issue-01/issue-01-images.md` (créé, 77 entrées)
+- `public/magazine/issue-01/images/` (55 fichiers JPG HD)
+- `content/magazine/issue-03/meta.ts`
+- `app/[locale]/magazine/[issue]/page.tsx`
+- `docs/magazine/issue-01-images.md` (marqué obsolète → canonical)
+
+---
+
+## ✅ ISSUE-011, Flipbook — textes débordant sur séparateurs header/footer
+
+**Détecté :** 2026-08-31
+**Résolu :** 2026-08-31
+**Commit :** `543b996`
+
+**Symptôme :** Sur les 40 pages avec layout `ga-photo-l/r/top + ga-text-*`, les images et zones de texte commençaient à `top:0` et `bottom:0`, débordant derrière le running header `.rh` (28px) et le folio `.pn` (24px).
+
+**Fix :** Correction CSS unique (6 règles) appliquée à toutes les pages concernées :
+- `ga-photo-l/r` : `top:0→28px`, `bottom:0→24px`
+- `ga-photo-top` : `top:0→28px`, `height:62%→calc(62%-14px)`
+- `ga-text-bottom` : `top:62%→calc(62%+14px)`, `bottom:22px→24px`
+- `ga-text-r/l` : `bottom:22px→24px`
+
+Aucune coupure de texte supplémentaire (différence max 2px sur zones latérales, 16px sur zones bottom, zones déjà `overflow:hidden`).
+
+---
+
 *Ce fichier est mis a jour manuellement a chaque bug resolu.*

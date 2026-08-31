@@ -185,7 +185,7 @@ export default async function IssuePage({ params }: Props) {
               </div>
               <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
                 <p>The people you will meet in these pages built companies without asking anyone&rsquo;s permission. Some sold them well. Some learned the hard way what they should have done differently. A few are still in the middle of it.</p>
-                <p>We do not pretend to be neutral. We think the European technology market is undervalued, under-documented, and over-dependent on advisors with a stake in the outcome. We are building a different kind of infrastructure — one where trust is the product, not the pitch.</p>
+                <p>We do not pretend to be neutral. We think the European technology market is undervalued, under-documented, and over-dependent on advisors with a stake in the outcome. We are building a different kind of infrastructure, one where trust is the product, not the pitch.</p>
                 <p className="font-semibold text-magazine-black">Built to last.</p>
                 <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/30">The Aegryn Founding Team<br />Saint-Sulpice, Switzerland · January 2027</p>
               </div>
@@ -241,11 +241,11 @@ export default async function IssuePage({ params }: Props) {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-10 mb-16">
               <p className="text-body-mag text-magazine-black/65 leading-[1.8]">
-                European tech funding recovered to 44.1 billion euros in the first half of 2026, but across roughly 1,740 deals — well below the pace of 2024. The market is not shrinking. It is concentrating. The UK raised 18.7 billion across 423 deals alone. Capital is not evenly distributed, and it is not evenly distributed across company stages either.
+                European tech funding recovered to 44.1 billion euros in the first half of 2026, but across roughly 1,740 deals, well below the pace of 2024. The market is not shrinking. It is concentrating. The UK raised 18.7 billion across 423 deals alone. Capital is not evenly distributed, and it is not evenly distributed across company stages either.
               </p>
               <div>
                 <p className="text-body-mag text-magazine-black/65 leading-[1.8] mb-4">
-                  On the M&amp;A side, strategic deal value in EMEA rose 77 percent through May as acquirers chose fewer, higher-conviction targets. The mid-market — where most European founders operate — is living inside that concentration, not above it.
+                  On the M&amp;A side, strategic deal value in EMEA rose 77 percent through May as acquirers chose fewer, higher-conviction targets. The mid-market, where most European founders operate, is living inside that concentration, not above it.
                 </p>
                 <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em]">
                   Sources: tech.eu H1 2026 Ecosystem Report · FE International Mid-Year 2026 · LSEG
@@ -350,7 +350,7 @@ export default async function IssuePage({ params }: Props) {
             </div>
             <div className="space-y-4 text-body-mag text-magazine-black/65 leading-[1.8]">
               <p>The private mid-market for software companies sits at a median around 4.5 times yearly revenue in 2026, with a range from three to seven times for most transactions. But the gap between the bottom and the top of that range has widened sharply since 2022.</p>
-              <p>The variable is almost always preparation. A ten-point improvement in net revenue retention now translates into a 20 to 30 percent valuation increase. Companies that are profitable in 2026 command stronger multiples than fast-growing but unprofitable ones at the same overall efficiency score — a direct reversal of the logic that ruled two years earlier.</p>
+              <p>The variable is almost always preparation. A ten-point improvement in net revenue retention now translates into a 20 to 30 percent valuation increase. Companies that are profitable in 2026 command stronger multiples than fast-growing but unprofitable ones at the same overall efficiency score, a direct reversal of the logic that ruled two years earlier.</p>
               <p>European software companies still trade at a discount of 15 to 25 percent versus comparable US businesses. That gap has narrowed from 30 to 40 percent five years ago, but it has not closed.</p>
               <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em]">Sources: Livmo SaaS Multiples 2026 · Synergy AI Q1 2026 · SaaSMag Exit Playbook 2026</p>
             </div>
@@ -366,12 +366,12 @@ export default async function IssuePage({ params }: Props) {
               </p>
               <p className="text-[12px] text-magazine-black/40 italic mb-6">The decision that changed the outcome.</p>
               <div className="space-y-4 text-body-mag text-magazine-black/65 leading-[1.8]">
-                <p>Year three, month four. He had been in conversations with investors for almost two years — not continuously, but cyclically. Every six months or so, he would update his deck, reach out to a new set of funds, go through several rounds of meetings, and end up at the same place: a term sheet with terms he did not like, from an investor he was not sure he trusted, for a company that was growing steadily and generating more cash each quarter than the one before.</p>
+                <p>Year three, month four. He had been in conversations with investors for almost two years, not continuously, but cyclically. Every six months or so, he would update his deck, reach out to a new set of funds, go through several rounds of meetings, and end up at the same place: a term sheet with terms he did not like, from an investor he was not sure he trusted, for a company that was growing steadily and generating more cash each quarter than the one before.</p>
                 <p>In month four of year three, a larger fund passed with a note that said, essentially, that the company was too profitable to be interesting as a venture investment. He closed the browser and opened a spreadsheet instead.</p>
               </div>
             </div>
             <div className="space-y-4 text-body-mag text-magazine-black/65 leading-[1.8]">
-              <p>He modelled the next four years without raising. The spreadsheet showed that if he kept his current growth rate and margins — neither heroic — he would arrive at roughly 4.5 million euros in annual recurring revenue in year seven, with no debt and no dilution. At a median transaction multiple for a bootstrapped software company in his vertical, that would produce a total outcome roughly equivalent to raising a Series A, growing faster, diluting 25 percent, and selling at the same time.</p>
+              <p>He modelled the next four years without raising. The spreadsheet showed that if he kept his current growth rate and margins — neither heroic — he would arrive at roughly 4.5 million euros in annual recurring revenue in year seven, with no debt and no dilution. At a median transaction multiple for a bootstrapped software company in his vertical, that would produce a total outcome roughly equivalent to raising a Series A, growing faster, diluting 25 percent and selling at the same time.</p>
               <p>He stopped raising. He hired a bookkeeper. He opened a data room folder and started filling it with the documents that a buyer would eventually ask for. He did not think of it as exit preparation. He thought of it as good practice.</p>
               <p>Three years later, a strategic acquirer in his sector approached him. He had not put the company on the market. The buyer found him through a certification registry.</p>
               <blockquote className="border-l-2 border-magazine-accent pl-6 mt-2">
@@ -450,7 +450,7 @@ export default async function IssuePage({ params }: Props) {
                 <p className="text-[12px] text-magazine-black/40 italic mb-6">A composite portrait, based on patterns observed in EU RegTech transactions 2023–2026.</p>
                 <div className="space-y-4 text-body-mag text-magazine-black/65 leading-[1.8]">
                   <p>She had not planned to sell in 2026. She had a list of things to fix first: a second product line to launch, a Paris office to open, a Series A she had been postponing for eighteen months because the terms were never quite right.</p>
-                  <p>What changed her timeline was a cold email from a compliance officer at a mid-sized Dutch bank. He had found her software through a regulatory body&rsquo;s approved vendor list — the same list she had spent eight months and roughly forty thousand euros getting onto.</p>
+                  <p>What changed her timeline was a cold email from a compliance officer at a mid-sized Dutch bank. He had found her software through a regulatory body&rsquo;s approved vendor list, the same list she had spent eight months and roughly forty thousand euros getting onto.</p>
                 </div>
               </div>
               <div className="space-y-4 text-body-mag text-magazine-black/65 leading-[1.8]">
@@ -614,7 +614,7 @@ export default async function IssuePage({ params }: Props) {
               <div className="space-y-5 text-body-mag text-magazine-black/70 leading-[1.75]">
                 <p>The most common question we hear from founders who have just completed their CIFS grade is: does this change what I can ask for? The honest answer is: sometimes directly, and almost always indirectly.</p>
                 <p>Directly, a certified asset eliminates a category of buyer uncertainty. The conversation shifts from &ldquo;can we trust these numbers and this documentation&rdquo; to &ldquo;do we want to own this specific company.&rdquo; That is a different and more productive conversation, and it tends to happen faster.</p>
-                <p>Indirectly, certification changes who approaches you. There is a growing category of buyer — particularly in regulated industries — who searches for certified assets specifically, because the certification reduces their own post-acquisition remediation cost and timeline.</p>
+                <p>Indirectly, certification changes who approaches you. There is a growing category of buyer, particularly in regulated industries, who searches for certified assets specifically, because the certification reduces their own post-acquisition remediation cost and timeline.</p>
                 <p>We grade assets because we believe verification is the foundation of a fair transaction. A grade makes the process faster, the conversations better, and the outcomes more predictable.</p>
               </div>
               <p className="text-body-mag text-magazine-black/50 leading-[1.75] mt-4 italic">
@@ -713,7 +713,7 @@ export default async function IssuePage({ params }: Props) {
               </p>
               <p className="text-[12px] text-magazine-black/40 italic mb-6">Drawn from patterns across founder journeys observed in Aegryn Advisory work, 2022 to 2026.</p>
               <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
-                <p>He did not set out to build a company that would sell well. He set out to build one that would not embarrass him. So from the very first month, every contractor signed a proper agreement. Every invoice got filed the same day. It felt excessive at the time — a single person running a company nobody had heard of, filing paperwork like it mattered.</p>
+                <p>He did not set out to build a company that would sell well. He set out to build one that would not embarrass him. So from the very first month, every contractor signed a proper agreement. Every invoice got filed the same day. It felt excessive at the time, a single person running a company nobody had heard of, filing paperwork like it mattered.</p>
                 <p>Ten years later, it mattered enormously. When a buyer&rsquo;s team opened his records, they found exactly what they expected to find: nothing missing, nothing to explain away.</p>
               </div>
             </div>
@@ -1189,9 +1189,9 @@ export default async function IssuePage({ params }: Props) {
               <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-6">A Composite Portrait</p>
               <p className="font-sans font-bold text-magazine-black leading-[0.86] mb-6"
                 style={{ fontSize: 'clamp(28px,4vw,48px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
-                Her grandfather built<br />the workshop.<br />She built the <strong>platform.</strong>
+                Her father built the workshop.<br />She built the <strong>platform.</strong>
               </p>
-              <p className="text-[12px] text-magazine-black/40 italic mb-6">Third-generation founder, family manufacturing group, technology transition 2020 to 2026.</p>
+              <p className="text-[12px] text-magazine-black/40 italic mb-6">Second-generation founder, family manufacturing group, technology transition 2020 to 2026.</p>
             </div>
             <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
               <p>The business had run the same way for forty years. Reliable, profitable, entirely on paper. She joined with an engineering degree and one uncomfortable question: what happens to this company in fifteen years if nothing changes?</p>
