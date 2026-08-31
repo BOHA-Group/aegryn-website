@@ -322,7 +322,7 @@
   "aboutSection": {
     "label": "About Aegryn",
     "title": "Three disciplines.\nOne market standard.",
-    "desc": "Aegryn builds and engineers tech assets, certifies them under an independent label, and transacts them through a confidential process between qualified sellers and buyers. The first trust infrastructure for tech M&A in Europe — and the magazine that documents this market every year.",
+    "desc": "Aegryn builds and engineers tech assets, certifies them under an independent label, and transacts them through a confidential process between qualified sellers and buyers. The first trust infrastructure for tech M&A in Europe. The Aegryn Magazine documents this market every quarter.",
     "tagline": "CERTIFIED IN SWITZERLAND. REFERENCE IN EUROPE.",
     "cta": "About Aegryn",
     "quote": "A tech asset without an independent certification is a value without proof. Aegryn provides the proof on every asset, at every transfer.",
@@ -6297,7 +6297,7 @@
     "nav": "Magazine",
     "hub": {
       "title": "AEGRYN Magazine",
-      "desc": "Deals, multiples, portraits and lifestyle — quarterly.",
+      "desc": "Deals, multiples, portraits and lifestyle. Quarterly.",
       "reportLabel": "Annual Report",
       "reportDesc": "Aegryn Magazine, European Tech M&A Intelligence",
       "notifyLabel": "Receive each edition",
@@ -6436,7 +6436,7 @@
       "cta": "Express my interest",
       "success": "Thank you. Your interest has been registered. We will contact you when the print edition goes into production.",
       "error": "An error occurred. Please try again.",
-      "clientNote": "Reserved for registered Aegryn clients. The print edition is not available or printable via the web — it will be produced physically if demand justifies it.",
+      "clientNote": "Reserved for registered Aegryn clients. The print edition is not available or printable via the web. It will be produced physically if demand justifies it.",
       "disclaimer": "The digital version remains freely accessible. The print edition, if produced, will be shipped only to registered clients on the wish list.",
       "backToMagazine": "Back to Magazine",
       "firstNamePlaceholder": "First name",

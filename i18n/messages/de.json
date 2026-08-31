@@ -322,7 +322,7 @@
   "aboutSection": {
     "label": "Über Aegryn",
     "title": "Drei Disziplinen.\nEin Marktstandard.",
-    "desc": "Aegryn entwickelt und konzipiert Tech-Assets, zertifiziert sie unter einem unabhängigen Label und transagiert sie über einen vertraulichen Prozess zwischen qualifizierten Verkäufern und Käufern. Die erste Vertrauensinfrastruktur für Tech-M&A in Europa — und das Magazin, das diesen Markt jedes Jahr dokumentiert.",
+    "desc": "Aegryn entwickelt und konzipiert Tech-Assets, zertifiziert sie unter einem unabhängigen Label und transagiert sie über einen vertraulichen Prozess zwischen qualifizierten Verkäufern und Käufern. Die erste Vertrauensinfrastruktur für Tech-M&A in Europa. Das Aegryn Magazin dokumentiert diesen Markt jedes Quartal.",
     "tagline": "ZERTIFIZIERT IN DER SCHWEIZ. REFERENZ IN EUROPA.",
     "cta": "Über Aegryn",
     "quote": "Ein Tech-Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. Aegryn liefert den Beweis bei jedem Asset, bei jedem Transfer.",
@@ -6300,7 +6300,7 @@
     "nav": "Magazine",
     "hub": {
       "title": "AEGRYN Magazine",
-      "desc": "Deals, Multiples, Porträts und Lebensart — vierteljährlich.",
+      "desc": "Deals, Multiples, Porträts und Lebensart. Vierteljährlich.",
       "reportLabel": "Jahresbericht",
       "reportDesc": "Aegryn Magazine, European Tech M&A Intelligence",
       "subscribeLabel": "Bericht erhalten",

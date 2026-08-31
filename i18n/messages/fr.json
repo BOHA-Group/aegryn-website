@@ -285,7 +285,7 @@
   "aboutSection": {
     "label": "À propos d'Aegryn",
     "title": "Trois métiers.\nUn standard de marché.",
-    "desc": "Aegryn conçoit des actifs tech, les certifie selon un label indépendant, et les transige via un processus confidentiel entre vendeurs et acquéreurs qualifiés. La première infrastructure de confiance pour le M&A tech en Europe — et le magazine qui documente ce marché chaque année.",
+    "desc": "Aegryn conçoit des actifs tech, les certifie selon un label indépendant, et les transige via un processus confidentiel entre vendeurs et acquéreurs qualifiés. La première infrastructure de confiance pour le M&A tech en Europe. Le magazine Aegryn documente ce marché chaque trimestre.",
     "tagline": "CERTIFIÉ EN SUISSE. RÉFÉRENCE EN EUROPE.",
     "cta": "À propos d'Aegryn",
     "quote": "Un actif tech sans certification indépendante, c'est une valeur sans preuve. Aegryn apporte la preuve sur chaque actif, à chaque transfert.",
@@ -6268,7 +6268,7 @@
     "nav": "Magazine",
     "hub": {
       "title": "AEGRYN Magazine",
-      "desc": "Deals, multiples, portraits et art de vivre — trimestriel.",
+      "desc": "Deals, multiples, portraits et art de vivre. Trimestriel.",
       "reportLabel": "Rapport annuel",
       "reportDesc": "Aegryn Magazine | Intelligence M&A Tech Européenne",
       "notifyLabel": "Recevoir chaque édition",
