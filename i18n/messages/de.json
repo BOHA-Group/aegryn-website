@@ -263,7 +263,7 @@
   },
   "whatwedo": {
     "label": "Unsere Überzeugung",
-    "conviction": "Die besten europäischen Tech-Assets verdienen eine Zertifizierung.\nKeine Listung.",
+    "conviction": "Der europäische Markt für Tech-Assets braucht Zertifizierung, Diskretion und verlässliche Daten.\nWir bauen alle drei auf.",
     "items": [
       {
         "num": "01",
@@ -322,7 +322,7 @@
   "aboutSection": {
     "label": "Über Aegryn",
     "title": "Drei Disziplinen.\nEin Marktstandard.",
-    "desc": "Aegryn entwickelt und konzipiert Tech-Assets, zertifiziert sie unter einem unabhängigen Label und transagiert sie über einen vertraulichen Prozess zwischen qualifizierten Verkäufern und Käufern. Die erste Vertrauensinfrastruktur für Tech-M&A in Europa.",
+    "desc": "Aegryn entwickelt und konzipiert Tech-Assets, zertifiziert sie unter einem unabhängigen Label und transagiert sie über einen vertraulichen Prozess zwischen qualifizierten Verkäufern und Käufern. Die erste Vertrauensinfrastruktur für Tech-M&A in Europa — und das Magazin, das diesen Markt jedes Jahr dokumentiert.",
     "tagline": "ZERTIFIZIERT IN DER SCHWEIZ. REFERENZ IN EUROPA.",
     "cta": "Über Aegryn",
     "quote": "Ein Tech-Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. Aegryn liefert den Beweis bei jedem Asset, bei jedem Transfer.",
@@ -6639,16 +6639,16 @@
   },
   "transactNarrative": {
     "label": "Vertrauliche M&A-Transaktionen",
-    "title": "Manche Vermögenswerte verdienen mehr\nals eine öffentliche Liste.",
-    "desc": "Aegryn ist keine offene Plattform. Es ist ein vertraulicher Veräußerungsprozess zwischen CIFS-zertifizierten Verkäufern und vorqualifizierten Käufern.\n\nJeder Vermögenswert wird unter Exklusivmandat präsentiert. Jeder Käufer hat seine Kapazität und Ernsthaftigkeit nachgewiesen. Die Transaktion entsteht durch strukturiertes Angebot, nicht durch Auktion.",
+    "title": "Die Zertifizierung verändert das Gespräch.\nDie Transaktion folgt.",
+    "desc": "Aegryn zertifiziert Tech-Assets nach einem unabhängigen Protokoll auf vier Dimensionen: Code, IP, Finanzen, Sicherheit. Zertifizierte Assets gelangen in einen vertraulichen Off-Market-Veräußerungsprozess zwischen dokumentierten Verkäufern und vorqualifizierten Käufern.\n\nKeine Liste. Keine Auktion. Ein Marktstandard.",
     "stat1Val": "< 25%",
     "stat1Label": "Akzeptanzrate eingereichter Vermögenswerte",
     "stat2Val": "60 T max",
     "stat2Label": "Exklusives Verkäufermandat",
     "stat3Val": "100%",
     "stat3Label": "Vorqualifizierte Käufer",
-    "ctaSell": "Einen zertifizierten Vermögenswert verkaufen",
-    "ctaBuy": "Dem Käuferkreis beitreten",
+    "ctaSell": "Asset zur Zertifizierung einreichen",
+    "ctaBuy": "Zugang zum Käuferkreis",
     "stat4Val": "Schweiz",
     "stat4Label": "Institutionelle Verankerung"
   }

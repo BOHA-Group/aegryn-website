@@ -263,7 +263,7 @@
   },
   "whatwedo": {
     "label": "Nuestra Convicción",
-    "conviction": "Los mejores activos tech europeos merecen una certificación.\nNo una ficha.",
+    "conviction": "El mercado europeo de activos tech necesita certificación, discreción y datos fiables.\nEstamos construyendo los tres.",
     "items": [
       {
         "num": "01",
@@ -322,7 +322,7 @@
   "aboutSection": {
     "label": "Sobre Aegryn",
     "title": "Tres disciplinas.\nUn estándar de mercado.",
-    "desc": "Aegryn diseña e ingenia activos tech, los certifica bajo un sello independiente, y los transacciona a través de un proceso confidencial entre vendedores cualificados y adquirentes. La primera infraestructura de confianza para el M&A tech en Europa.",
+    "desc": "Aegryn diseña e ingenia activos tech, los certifica bajo un sello independiente, y los transacciona a través de un proceso confidencial entre vendedores cualificados y adquirentes. La primera infraestructura de confianza para el M&A tech en Europa — y la revista que documenta este mercado cada año.",
     "tagline": "CERTIFICADO EN SUIZA. REFERENCIA EN EUROPA.",
     "cta": "Sobre Aegryn",
     "quote": "Un activo tech sin certificación independiente es un valor sin prueba. Aegryn aporta la prueba en cada activo, en cada transferencia.",
@@ -6475,16 +6475,16 @@
   },
   "transactNarrative": {
     "label": "Transacciones M&A confidenciales",
-    "title": "Algunos activos merecen más\nque un listado público.",
-    "desc": "Aegryn no es una plataforma abierta. Es un proceso de cesión offmarket, confidencial, entre vendedores certificados CIFS y compradores precalificados.\n\nCada activo se presenta bajo mandato exclusivo. Cada comprador ha demostrado su capacidad y seriedad. La transacción se articula mediante propuesta estructurada, no en subasta.",
+    "title": "La certificación cambia la conversación.\nLa transacción sigue.",
+    "desc": "Aegryn certifica activos tech según un protocolo independiente en cuatro dimensiones: código, IP, finanzas y seguridad. Los activos certificados entran en un proceso de cesión offmarket confidencial, entre vendedores documentados y compradores precalificados.\n\nNo es una lista. No es una subasta. Es un estándar de mercado.",
     "stat1Val": "< 25%",
     "stat1Label": "Tasa de aceptación de activos presentados",
     "stat2Val": "60 d máx",
     "stat2Label": "Mandato exclusivo del vendedor",
     "stat3Val": "100%",
     "stat3Label": "Compradores precalificados",
-    "ctaSell": "Vender un activo certificado",
-    "ctaBuy": "Unirse al círculo de compradores",
+    "ctaSell": "Presentar un activo para certificación",
+    "ctaBuy": "Acceder al círculo de compradores",
     "stat4Val": "Suiza",
     "stat4Label": "Anclaje institucional"
   }

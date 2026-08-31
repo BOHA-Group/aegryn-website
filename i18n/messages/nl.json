@@ -263,7 +263,7 @@
   },
   "whatwedo": {
     "label": "Onze Overtuiging",
-    "conviction": "De beste Europese tech-assets verdienen een certificering.\nGeen vermelding.",
+    "conviction": "De Europese markt voor tech-assets heeft certificering, discretie en betrouwbare data nodig.\nWij bouwen alle drie.",
     "items": [
       {
         "num": "01",
@@ -322,7 +322,7 @@
   "aboutSection": {
     "label": "Over Aegryn",
     "title": "Drie disciplines.\nEén marktstandaard.",
-    "desc": "Aegryn ontwerpt en ontwikkelt tech-assets, certificeert ze onder een onafhankelijk label en transageert ze via een vertrouwelijk proces tussen gekwalificeerde verkopers en kopers. De eerste vertrouwensinfrastructuur voor tech-M&A in Europa.",
+    "desc": "Aegryn ontwerpt en ontwikkelt tech-assets, certificeert ze onder een onafhankelijk label en transageert ze via een vertrouwelijk proces tussen gekwalificeerde verkopers en kopers. De eerste vertrouwensinfrastructuur voor tech-M&A in Europa — en het magazine dat deze markt elk jaar documenteert.",
     "tagline": "GECERTIFICEERD IN ZWITSERLAND. REFERENTIE IN EUROPA.",
     "cta": "Over Aegryn",
     "quote": "Een tech-asset zonder onafhankelijke certificering is een waarde zonder bewijs. Aegryn levert het bewijs bij elk asset, bij elke overdracht.",
@@ -6475,16 +6475,16 @@
   },
   "transactNarrative": {
     "label": "Vertrouwelijke M&A-transacties",
-    "title": "Sommige activa verdienen meer\ndan een openbare lijst.",
-    "desc": "Aegryn is geen open platform. Het is een vertrouwelijk offmarket-verkoopproces tussen CIFS-gecertificeerde verkopers en vooraf gekwalificeerde kopers.\n\nElk actief wordt gepresenteerd onder exclusief mandaat. Elke koper heeft zijn capaciteit en ernst bewezen. De transactie komt tot stand via een gestructureerd voorstel, niet via veiling.",
+    "title": "Certificering verandert het gesprek.\nDe transactie volgt.",
+    "desc": "Aegryn certificeert tech-assets volgens een onafhankelijk protocol op vier dimensies: code, IP, financiën, beveiliging. Gecertificeerde assets worden opgenomen in een vertrouwelijk off-market overdrachtsproces, tussen gedocumenteerde verkopers en vooraf gekwalificeerde kopers.\n\nDit is geen lijst. Dit is geen veiling. Dit is een marktstandaard.",
     "stat1Val": "< 25%",
     "stat1Label": "Acceptatiepercentage ingediende activa",
     "stat2Val": "60 d max",
     "stat2Label": "Exclusief verkopermandaat",
     "stat3Val": "100%",
     "stat3Label": "Vooraf gekwalificeerde kopers",
-    "ctaSell": "Een gecertificeerd actief verkopen",
-    "ctaBuy": "Toetreden tot de koperscirkel",
+    "ctaSell": "Asset indienen voor certificering",
+    "ctaBuy": "Toegang tot de koperskring",
     "stat4Val": "Zwitserland",
     "stat4Label": "Institutioneel ankerpunt"
   }

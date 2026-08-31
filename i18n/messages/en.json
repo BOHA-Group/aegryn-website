@@ -263,7 +263,7 @@
   },
   "whatwedo": {
     "label": "Our Conviction",
-    "conviction": "The best European tech assets deserve certification.\nNot a listing.",
+    "conviction": "The European tech asset market needs certification, discretion, and reliable data.\nWe are building all three.",
     "items": [
       {
         "num": "01",
@@ -322,7 +322,7 @@
   "aboutSection": {
     "label": "About Aegryn",
     "title": "Three disciplines.\nOne market standard.",
-    "desc": "Aegryn builds and engineers tech assets, certifies them under an independent label, and transacts them through a confidential process between qualified sellers and buyers. The first trust infrastructure for tech M&A in Europe.",
+    "desc": "Aegryn builds and engineers tech assets, certifies them under an independent label, and transacts them through a confidential process between qualified sellers and buyers. The first trust infrastructure for tech M&A in Europe — and the magazine that documents this market every year.",
     "tagline": "CERTIFIED IN SWITZERLAND. REFERENCE IN EUROPE.",
     "cta": "About Aegryn",
     "quote": "A tech asset without an independent certification is a value without proof. Aegryn provides the proof on every asset, at every transfer.",
@@ -1161,16 +1161,16 @@
   },
   "transactNarrative": {
     "label": "M&A Transactions",
-    "title": "Some assets deserve more\nthan a public listing.",
-    "desc": "Aegryn is not an open platform. It is a confidential disposal process between sellers who have passed our certification and buyers who have proven their capacity and seriousness.\n\nLess than 25% of submitted assets are accepted. 100% of buyers are pre-qualified. Each transaction is fully documented and secured end-to-end.",
+    "title": "Certification changes the conversation.\nThe transaction follows.",
+    "desc": "Aegryn certifies tech assets according to an independent protocol across four dimensions: code, IP, finance, security. Certified assets enter a confidential off-market disposal process, between documented sellers and pre-qualified buyers.\n\nThis is not a listing. This is not an auction. This is a market standard.",
     "stat1Val": "< 25%",
     "stat1Label": "Acceptance rate of submitted assets",
     "stat2Val": "60d max",
     "stat2Label": "Exclusive seller mandate",
     "stat3Val": "100%",
     "stat3Label": "Pre-qualified buyers",
-    "ctaSell": "Sell a certified asset",
-    "ctaBuy": "Join the buyer circle",
+    "ctaSell": "Submit an asset for certification",
+    "ctaBuy": "Access the buyer circle",
     "stat4Val": "Switzerland",
     "stat4Label": "Institutional anchor"
   },

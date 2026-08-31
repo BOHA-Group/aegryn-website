@@ -263,7 +263,7 @@
   },
   "whatwedo": {
     "label": "La Nostra Convinzione",
-    "conviction": "I migliori asset tech europei meritano una certificazione.\nNon un'inserzione.",
+    "conviction": "Il mercato europeo degli asset tech ha bisogno di certificazione, discrezione e dati affidabili.\nStiamo costruendo tutte e tre.",
     "items": [
       {
         "num": "01",
@@ -322,7 +322,7 @@
   "aboutSection": {
     "label": "Chi è Aegryn",
     "title": "Tre discipline.\nUno standard di mercato.",
-    "desc": "Aegryn progetta e sviluppa asset tech, li certifica sotto un label indipendente, e li transige attraverso un processo riservato tra venditori qualificati e acquirenti. La prima infrastruttura di fiducia per il M&A tech in Europa.",
+    "desc": "Aegryn progetta e sviluppa asset tech, li certifica sotto un label indipendente, e li transige attraverso un processo riservato tra venditori qualificati e acquirenti. La prima infrastruttura di fiducia per il M&A tech in Europa — e la rivista che documenta questo mercato ogni anno.",
     "tagline": "CERTIFICATO IN SVIZZERA. RIFERIMENTO IN EUROPA.",
     "cta": "Chi è Aegryn",
     "quote": "Un asset tech senza certificazione indipendente è un valore senza prova. Aegryn fornisce la prova su ogni asset, ad ogni trasferimento.",
@@ -6475,16 +6475,16 @@
   },
   "transactNarrative": {
     "label": "Transazioni M&A riservate",
-    "title": "Alcuni asset meritano di più\ndi un elenco pubblico.",
-    "desc": "Aegryn non è una piattaforma aperta. È un processo di cessione offmarket, riservato, tra venditori certificati CIFS e acquirenti prequalificati.\n\nOgni asset è presentato sotto mandato esclusivo. Ogni acquirente ha dimostrato la propria capacità e serietà. La transazione nasce da una proposta strutturata, non da un'asta.",
+    "title": "La certificazione cambia la conversazione.\nLa transazione segue.",
+    "desc": "Aegryn certifica asset tech secondo un protocollo indipendente su quattro dimensioni: codice, IP, finanza, sicurezza. Gli asset certificati entrano in un processo di cessione offmarket riservato, tra venditori documentati e acquirenti pre-qualificati.\n\nNon è una lista. Non è un'asta. È uno standard di mercato.",
     "stat1Val": "< 25%",
     "stat1Label": "Tasso di accettazione degli asset presentati",
     "stat2Val": "60 gg max",
     "stat2Label": "Mandato esclusivo del venditore",
     "stat3Val": "100%",
     "stat3Label": "Acquirenti prequalificati",
-    "ctaSell": "Vendere un asset certificato",
-    "ctaBuy": "Entrare nel circolo degli acquirenti",
+    "ctaSell": "Invia un asset per la certificazione",
+    "ctaBuy": "Accedi al circolo acquirenti",
     "stat4Val": "Svizzera",
     "stat4Label": "Ancoraggio istituzionale"
   }

@@ -263,7 +263,7 @@
   },
   "whatwedo": {
     "label": "Notre Conviction",
-    "conviction": "Les meilleurs actifs tech européens méritent une certification.\nPas une liste.",
+    "conviction": "Le marché européen des actifs tech a besoin de certification, de discrétion, et de données fiables.\nNous construisons les trois.",
     "items": [
       {
         "num": "01",
@@ -285,7 +285,7 @@
   "aboutSection": {
     "label": "À propos d'Aegryn",
     "title": "Trois métiers.\nUn standard de marché.",
-    "desc": "Aegryn conçoit des actifs tech, les certifie selon un label indépendant, et les transige via un processus confidentiel entre vendeurs et acquéreurs qualifiés. La première infrastructure de confiance pour le M&A tech en Europe.",
+    "desc": "Aegryn conçoit des actifs tech, les certifie selon un label indépendant, et les transige via un processus confidentiel entre vendeurs et acquéreurs qualifiés. La première infrastructure de confiance pour le M&A tech en Europe — et le magazine qui documente ce marché chaque année.",
     "tagline": "CERTIFIÉ EN SUISSE. RÉFÉRENCE EN EUROPE.",
     "cta": "À propos d'Aegryn",
     "quote": "Un actif tech sans certification indépendante, c'est une valeur sans preuve. Aegryn apporte la preuve sur chaque actif, à chaque transfert.",
@@ -1133,16 +1133,16 @@
   },
   "transactNarrative": {
     "label": "Cessions M&A confidentielles",
-    "title": "Certains actifs méritent mieux\nqu'une liste publique.",
-    "desc": "Aegryn n'est pas une plateforme ouverte. C'est un processus de cession offmarket, confidentiel, entre des vendeurs certifiés CIFS et des acquéreurs pré-qualifiés.\n\nChaque actif est présenté sous mandat exclusif. Chaque acquéreur a prouvé sa capacité et son sérieux. La transaction se noue sur proposition structurée, pas aux enchères.",
+    "title": "La certification change la conversation.\nLa transaction suit.",
+    "desc": "Aegryn certifie des actifs tech selon un protocole indépendant sur quatre dimensions : code, IP, finance, sécurité. Les actifs certifiés entrent dans un processus de cession offmarket confidentiel, entre vendeurs documentés et acquéreurs pré-qualifiés.\n\nCe n'est pas une liste. Ce n'est pas une enchère. C'est un standard de marché.",
     "stat1Val": "< 25%",
     "stat1Label": "Taux d'acceptation des actifs soumis",
     "stat2Val": "60 j max",
     "stat2Label": "Mandat exclusif vendeur",
     "stat3Val": "100%",
     "stat3Label": "Acquéreurs pré-qualifiés",
-    "ctaSell": "Vendre un actif certifié",
-    "ctaBuy": "Rejoindre le cercle acquéreurs",
+    "ctaSell": "Soumettre un actif à la certification",
+    "ctaBuy": "Accéder au cercle acquéreurs",
     "stat4Val": "Suisse",
     "stat4Label": "Ancrage institutionnel"
   },

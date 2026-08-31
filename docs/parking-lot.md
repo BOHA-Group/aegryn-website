@@ -7,9 +7,10 @@
 
 ## 🔴 HAUTE PRIORITÉ
 
-### Homepage — Repositionnement éditorial et CTAs
+### Homepage — Repositionnement éditorial et CTAs ✅ RÉSOLU 2026-08-31
 
 **Demandé le :** 2026-08-31
+**Résolu le :** 2026-08-31 — commit `feat(i18n): homepage repositionnement éditorial × 6 langues`
 **Contexte :** Le texte actuel de la homepage ne reflète pas correctement le positionnement d'Aegryn (certification, transaction offmarket, magazine). Les CTAs sont trop génériques.
 
 **Textes à modifier (i18n FR source, puis traduire × 6 langues) :**
