@@ -43,6 +43,25 @@ export async function POST(req: NextRequest) {
 
   await supa.from('profiles').update({ full_name: fullName, roles: [role] }).eq('id', userId)
 
+  /* ── Notif in-app pour tous les admins ── */
+  const { data: admins } = await supa
+    .from('profiles')
+    .select('id')
+    .contains('roles', ['admin'])
+  if (admins && admins.length > 0) {
+    const roleLabel2: Record<string, string> = { buyer: 'Acquéreur', seller: 'Cédant', partner: 'Partenaire' }
+    await supa.from('user_notifications').insert(
+      admins.map((a: { id: string }) => ({
+        user_id:     a.id,
+        type:        'broadcast_action',
+        title:       `Nouveau compte ${roleLabel2[role] ?? role} — ${fullName}`,
+        body:        `${normalizedEmail} vient de créer un espace client.`,
+        link:        '/admin/members',
+        target_role: 'admin',
+      }))
+    )
+  }
+
   const resendKey = process.env.RESEND_API_KEY
   if (resendKey) {
     const roleLabel: Record<string, string> = {

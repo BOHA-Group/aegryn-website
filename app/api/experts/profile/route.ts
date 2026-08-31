@@ -40,7 +40,6 @@ async function notifyAdminExpertSubmission(
     ? `${partnerName} a soumis sa fiche expert. À valider dans l'espace Experts réseau.`
     : `${partnerName} a modifié sa fiche expert. Elle est en attente de révision.`
 
-  // Récupérer tous les admins
   const { data: admins } = await supa
     .from('profiles')
     .select('id')
@@ -57,6 +56,37 @@ async function notifyAdminExpertSubmission(
         target_role: 'admin',
       }))
     )
+  }
+
+  /* ── Email admin ── */
+  const resendKey = process.env.RESEND_API_KEY
+  const adminEmail = process.env.Aegryn_ADMIN_EMAIL ?? 'admin@boha-group.com'
+  if (resendKey) {
+    await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${resendKey}` },
+      body: JSON.stringify({
+        from:    `Aegryn <${process.env.RESEND_FROM ?? 'no-reply@boha-group.com'}>`,
+        to:      [adminEmail],
+        subject: `[Experts] ${isNew ? 'Nouvelle fiche soumise' : 'Fiche mise à jour'} — ${partnerName}`,
+        html: `<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:480px;margin:0 auto;background:#ffffff;border:1px solid #e5e7eb;">
+  <div style="padding:20px 24px 16px;border-bottom:1px solid #e5e7eb;">
+    <p style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#5ADDA4;margin:0;font-weight:700;">Aegryn ADMIN · Experts</p>
+  </div>
+  <div style="padding:24px;">
+    <p style="font-size:17px;font-weight:700;color:#0a0f1e;margin:0 0 12px 0;">${isNew ? 'Nouvelle fiche expert soumise' : 'Fiche expert mise à jour'}</p>
+    <table style="font-size:13px;color:#374151;border-collapse:collapse;width:100%;">
+      <tr><td style="padding:6px 0;font-weight:600;color:#6b7280;width:80px;">Expert</td><td style="padding:6px 0;color:#0a0f1e;">${partnerName}</td></tr>
+      <tr><td style="padding:6px 0;font-weight:600;color:#6b7280;">ID</td><td style="padding:6px 0;color:#9ca3af;font-size:11px;">${userId}</td></tr>
+      <tr><td style="padding:6px 0;font-weight:600;color:#6b7280;">Action</td><td style="padding:6px 0;color:#0a0f1e;">${body}</td></tr>
+    </table>
+    <p style="margin:20px 0 0 0;">
+      <a href="https://aegryn.com/admin/experts" style="font-size:12px;color:#0a0f1e;text-decoration:underline;">Traiter dans l'admin →</a>
+    </p>
+  </div>
+</div>`,
+      }),
+    }).catch(() => {})
   }
 }
 
