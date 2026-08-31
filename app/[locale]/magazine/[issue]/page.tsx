@@ -334,6 +334,90 @@ export default async function IssuePage({ params }: Props) {
               </p>
             </div>
           </div>
+
+          {/* Sector premiums */}
+          <div className="mt-20 max-w-prose">
+            <h3 className="text-h2-mag font-sans font-semibold text-magazine-black mb-6">
+              What Buyers Actually Pay, Sector by Sector
+            </h3>
+            <div className="space-y-0">
+              {[
+                { sector: 'Cybersecurity', note: 'Regulatory demand under NIS2 is not discretionary. Even mid-tier security tools carry structurally low churn.' },
+                { sector: 'Vertical software', note: 'Commands a 25–30% premium over horizontal tools. Depth of integration, higher switching costs, and embedded revenue all contribute.' },
+                { sector: 'AI-native products', note: 'The premium goes to proprietary data and defensible architecture — not to products that use standard APIs anyone could replicate in ninety days.' },
+                { sector: 'Strategic vs. financial buyers', note: 'Strategic acquirers paid roughly 1.5–2× more than private equity for comparable deals in 2025.' },
+              ].map(s => (
+                <div key={s.sector} className="py-5 border-b border-magazine-black/8">
+                  <p className="font-sans font-semibold text-magazine-black text-[14px] mb-1">{s.sector}</p>
+                  <p className="text-[12px] text-magazine-black/55 leading-[1.65]">{s.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">Sources: Windsor Drake 2026 · Synergy AI · ENISA · FE International</p>
+          </div>
+
+          {/* Bootstrap path */}
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+              <p className="text-label-mag text-magazine-accent uppercase tracking-[0.15em] mb-4">The Other Path</p>
+              <p className="font-sans font-bold text-magazine-black leading-[0.88] mb-6"
+                style={{ fontSize: 'clamp(22px,3vw,36px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                Stop raising.<br /><strong>Start building to sell.</strong>
+              </p>
+              <div className="space-y-4 text-body-mag text-magazine-black/65 leading-[1.8]">
+                <p>For bootstrapped software companies in the three to ten million euro annual revenue range, realistic exit multiples run from three to five times yearly revenue, with equity-backed companies typically commanding a modest premium.</p>
+                <p>What separates a three-times outcome from a seven-times outcome comes down to three variables: growth rate, customer retention, and the efficiency score that combines both.</p>
+              </div>
+              <blockquote className="border-l-2 border-magazine-accent pl-6 mt-8">
+                <p className="text-body-mag text-magazine-black/65 italic leading-[1.75]">&ldquo;Below fifteen percent growth, most buyers shift from revenue multiples to profit multiples. The company gets priced as a cash-flow asset, not a growth asset. That is not necessarily bad. But you need to know which conversation you are walking into.&rdquo;</p>
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-3">Livmo SaaS Multiples 2026</p>
+              </blockquote>
+            </div>
+            <div>
+              <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">The Metrics That Move the Number</p>
+              <div className="space-y-0">
+                {[
+                  { metric: 'Customer retention above 100%', note: 'Existing customers spend more each year than the previous year. This single metric now drives a 20–30% valuation premium when strong.' },
+                  { metric: 'Gross margin above 70%', note: 'For software, this is the baseline. Below it, buyers start applying different valuation frameworks.' },
+                  { metric: 'Growth + profitability, combined', note: 'The efficiency score combining growth rate with profit margin. A ten-point improvement correlates with a meaningful lift in what buyers pay.' },
+                  { metric: 'Revenue concentration', note: 'If one customer represents more than 25% of revenue, buyers will ask about it extensively. Better to address this before going to market.' },
+                ].map(m => (
+                  <div key={m.metric} className="py-5 border-b border-magazine-black/8">
+                    <p className="font-sans font-semibold text-magazine-black text-[13px] mb-1">{m.metric}</p>
+                    <p className="text-[12px] text-magazine-black/55 leading-[1.65]">{m.note}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">Sources: SaaSMag Exit Playbook 2026 · Windsor Drake 2026 · Aventis Advisors</p>
+            </div>
+          </div>
+
+          {/* Compliance Premium Story */}
+          <div className="mt-20 pb-0 border-t border-magazine-black/10 pt-16">
+            <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">A Composite Portrait</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+              <div>
+                <p className="font-sans font-bold text-magazine-black leading-[0.86] mb-6"
+                  style={{ fontSize: 'clamp(28px,4vw,48px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                  The buyers she<br />wasn&rsquo;t <strong>looking for.</strong>
+                </p>
+                <p className="text-[12px] text-magazine-black/40 italic mb-6">A composite portrait, based on patterns observed in EU RegTech transactions 2023–2026.</p>
+                <div className="space-y-4 text-body-mag text-magazine-black/65 leading-[1.8]">
+                  <p>She had not planned to sell in 2026. She had a list of things to fix first: a second product line to launch, a Paris office to open, a Series A she had been postponing for eighteen months because the terms were never quite right.</p>
+                  <p>What changed her timeline was a cold email from a compliance officer at a mid-sized Dutch bank. He had found her software through a regulatory body&rsquo;s approved vendor list — the same list she had spent eight months and roughly forty thousand euros getting onto.</p>
+                </div>
+              </div>
+              <div className="space-y-4 text-body-mag text-magazine-black/65 leading-[1.8]">
+                <p>The bank needed to demonstrate DORA compliance to its national regulator by the end of the year. Her software — already certified, already documented, already running on two comparable institutions — was one of fewer than a dozen products in Europe that could be deployed fast enough.</p>
+                <p>What followed was not what she expected a sale process to look like. There was no competitive auction, no investment banker running the process. There was a conversation about operational fit, a due diligence that took two weeks because her documentation was already in order, and an offer that arrived before she had decided whether she actually wanted to sell.</p>
+                <p>The price was above the range she had privately modelled. The reason was simple: her compliance made the buyer&rsquo;s problem disappear. They paid for the solution, not just the software.</p>
+                <blockquote className="border-l-2 border-magazine-accent pl-6 mt-4">
+                  <p className="text-body-mag text-magazine-black/65 italic leading-[1.75]">&ldquo;The VC told me the company was too profitable to be interesting. Three years later, a strategic buyer called it the most interesting asset in the sector. Same company. Different audience.&rdquo;</p>
+                  <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-3">Composite quote — European bootstrapped founder, acquired 2026</p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* ── Tech and AI ── */}
@@ -522,6 +606,107 @@ export default async function IssuePage({ params }: Props) {
           </div>
         </section>
 
+        {/* ── Build ── */}
+        <section id="s-build" className="bg-magazine-white px-6 md:px-[120px] py-32">
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Build</p>
+          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">
+            The Habit That Changes Everything.
+          </h2>
+          <p className="text-body-mag text-magazine-black/55 max-w-prose mb-16 leading-[1.75] italic">
+            Nobody builds a company thinking about the day they will sell it. But the habits from year one are exactly what a buyer checks in year eight.
+          </p>
+
+          {/* Stats banner */}
+          <div className="grid grid-cols-2 gap-px bg-magazine-black/8 mb-20">
+            <div className="bg-magazine-ivory p-10">
+              <p className="font-sans font-bold text-magazine-black tabular-nums" style={{ fontSize: 'clamp(48px,6vw,80px)', lineHeight: 1, letterSpacing: '-0.04em', fontWeight: 800 }}>−30%</p>
+              <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-magazine-black/50 mt-3">Typical valuation cut for a company that enters a sale process unprepared</p>
+              <p className="text-[12px] text-magazine-black/40 mt-1">It is almost never about the product.</p>
+            </div>
+            <div className="bg-magazine-ivory p-10">
+              <p className="font-sans font-bold text-magazine-accent tabular-nums" style={{ fontSize: 'clamp(48px,6vw,80px)', lineHeight: 1, letterSpacing: '-0.04em', fontWeight: 800 }}>+28%</p>
+              <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-magazine-black/50 mt-3">Typical premium when properly reviewed and certified before going to market</p>
+              <p className="text-[12px] text-magazine-black/40 mt-1">Source: Aegryn CIFS Protocol v3.0</p>
+            </div>
+          </div>
+
+          {/* Portrait — The Habit */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20 pb-20 border-b border-magazine-black/10">
+            <div>
+              <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">A Composite Portrait</p>
+              <p className="font-sans font-bold text-magazine-black leading-[0.86] mb-6"
+                style={{ fontSize: 'clamp(28px,4vw,48px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                A decade of small,<br />boring,<br /><strong>correct decisions.</strong>
+              </p>
+              <p className="text-[12px] text-magazine-black/40 italic mb-6">Drawn from patterns across founder journeys observed in Aegryn Advisory work, 2022 to 2026.</p>
+              <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+                <p>He did not set out to build a company that would sell well. He set out to build one that would not embarrass him. So from the very first month, every contractor signed a proper agreement. Every invoice got filed the same day. It felt excessive at the time — a single person running a company nobody had heard of, filing paperwork like it mattered.</p>
+                <p>Ten years later, it mattered enormously. When a buyer&rsquo;s team opened his records, they found exactly what they expected to find: nothing missing, nothing to explain away.</p>
+              </div>
+            </div>
+            <div>
+              <blockquote className="border-l-2 border-magazine-accent pl-6 mb-8">
+                <p className="text-body-mag text-magazine-black/70 leading-[1.75] italic text-[17px]">
+                  &ldquo;The due diligence team said they had never seen a data room this clean. I thought it was just how you ran a serious business.&rdquo;
+                </p>
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-4">Composite quote — European founder, acquired 2026</p>
+              </blockquote>
+              <blockquote className="border-l-2 border-magazine-black/20 pl-6">
+                <p className="text-body-mag text-magazine-black/60 leading-[1.75] italic">
+                  &ldquo;Write everything down. Not for the buyer. For yourself. The moment you can hand the company to someone else for two weeks and nothing breaks — that is when it is worth something.&rdquo;
+                </p>
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-4">Composite quote — European founder, acquired 2026</p>
+              </blockquote>
+            </div>
+          </div>
+
+          {/* Portrait — He Built Fast */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20 pb-20 border-b border-magazine-black/10">
+            <div>
+              <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">A Composite Portrait</p>
+              <p className="font-sans font-bold text-magazine-black leading-[0.86] mb-6"
+                style={{ fontSize: 'clamp(28px,4vw,48px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                He built fast.<br />Then he had to<br /><strong>slow down and check.</strong>
+              </p>
+              <p className="text-[12px] text-magazine-black/40 italic mb-6">A composite, reflecting a pattern seen repeatedly in Aegryn technical reviews.</p>
+              <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+                <p>He built the first version of his product almost entirely with AI coding tools, in a fraction of the time a small team would have needed five years earlier. It worked. Customers paid. He was, understandably, proud of the pace.</p>
+                <p>A buyer&rsquo;s technical reviewer found something he had not thought to check: large sections of the product had never been looked at by a human after the AI wrote them. Nothing was broken, exactly, but nobody could confidently explain why certain choices had been made. That made the buyer nervous about what else might be hidden.</p>
+                <p>The fix took twelve weeks: reviewing the important parts, writing down the reasoning, adding basic tests. Not glamorous work. But it turned a fast, fragile product into a fast, trustworthy one. The difference showed up directly in what he was eventually paid.</p>
+              </div>
+            </div>
+            <div>
+              <div className="bg-magazine-ivory p-6 mb-6">
+                <p className="font-sans font-semibold text-magazine-black text-[13px] mb-2">The simple habit</p>
+                <p className="text-[12px] text-magazine-black/60 leading-[1.65]">Once a week, actually read the code the tools wrote. Write one sentence explaining why each major decision was made. That is most of what a technical reviewer needs to find.</p>
+              </div>
+              <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
+                <p>The founders who navigate a technical review well have almost always done one thing consistently: they have kept a short document explaining why important architectural decisions were made. Not a formal spec. One sentence per decision. Written at the time, not reconstructed later.</p>
+                <p>The buyers who do the most thorough technical reviews are not looking for perfection. They are looking for evidence that the person who built it understood what they were building. That evidence is surprisingly rare.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* POV — Stop Raising */}
+          <div className="bg-magazine-navy p-10 md:p-16">
+            <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-accent mb-4">Aegryn Point of View</p>
+            <p className="font-sans font-bold text-white leading-[0.86] mb-8"
+              style={{ fontSize: 'clamp(24px,3.5vw,40px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+              A tech asset doesn&rsquo;t have<br />to be a startup.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div className="space-y-4 text-body-mag text-white/70 leading-[1.75]">
+                <p>Most conversations about technology assets assume a startup — young, venture-adjacent, growing fast. We see something different every week: family businesses, small industrial companies, service firms, quietly digitising themselves into something transferable and valuable.</p>
+                <p>We think this is the more interesting story in European tech right now. Not the next unicorn, but the third-generation manufacturer whose granddaughter built a client portal. Not the funding round, but the fiduciaire who insisted on clean books from month one.</p>
+              </div>
+              <div className="space-y-4 text-body-mag text-white/70 leading-[1.75]">
+                <p>The unglamorous version of building turns out to be exactly the version that sells well. Companies built with systematic care — documented, clean, transferable — are the ones that survive a serious buyer&rsquo;s review, that close faster, and that command the premium.</p>
+                <p className="font-mono text-[8px] tracking-[0.12em] uppercase text-white/30">Aegryn Founding Team — Saint-Sulpice, Switzerland</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── Transaction : Deal Watch ── */}
         <section id="s-transaction" className="bg-magazine-white px-6 md:px-[120px] py-32">
           <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Transaction — Deal Watch H1 2026</p>
@@ -604,6 +789,31 @@ export default async function IssuePage({ params }: Props) {
                 <p className="text-body-mag text-magazine-black/65 italic leading-[1.75]">&ldquo;Negotiate the earn-out as carefully as you negotiate the headline number. You are writing a second contract, with a different set of risks.&rdquo;</p>
                 <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-3">Composite observation — Aegryn Transaction Desk, 2026</p>
               </blockquote>
+            </div>
+          </div>
+
+          {/* Earn-out real case */}
+          <div className="mt-16 border-t border-magazine-black/10 pt-16">
+            <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-6">A Real Case, Explained Plainly</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+              <div>
+                <p className="font-sans font-bold text-magazine-black leading-[0.86] mb-6"
+                  style={{ fontSize: 'clamp(24px,3.5vw,40px)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                  What an earn-out<br />actually <strong>feels like.</strong>
+                </p>
+                <div className="space-y-4 text-body-mag text-magazine-black/65 leading-[1.8]">
+                  <p>He sold his company for what looked like a good headline number. A third was paid on closing. A third would be paid twelve months later if the company hit its annual recurring revenue target. A final third came at month 24, contingent on maintaining the customer retention rate above a specified threshold.</p>
+                  <p>The earn-out was designed around metrics he could influence. That mattered enormously.</p>
+                </div>
+              </div>
+              <div className="space-y-4 text-body-mag text-magazine-black/65 leading-[1.8]">
+                <p>In the 18 months after closing, the new parent company changed the product roadmap twice, replaced his head of sales, and moved the customer success team to a shared services model. The earn-out targets survived two of those three changes. The third — losing his sales lead — put the month-24 threshold at risk.</p>
+                <p>He hit it, narrowly. What he learned was that earn-outs work when the targets are simple, measurable, and within the seller&rsquo;s control after the transaction closes. They fail when any of those three conditions is missing.</p>
+                <div className="bg-magazine-ivory p-5 mt-2">
+                  <p className="font-sans font-semibold text-magazine-black text-[13px] mb-2">The principle that held</p>
+                  <p className="text-[12px] text-magazine-black/55 leading-[1.65]">Once the letter of intent is signed and exclusivity begins, the founder&rsquo;s leverage drops sharply. The earn-out terms you accept at that point are the ones you will live with for two years. Negotiate them before you need to.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -889,6 +1099,12 @@ export default async function IssuePage({ params }: Props) {
                 { title: 'Valuation', author: 'Aswath Damodaran', note: 'The definitive text on corporate valuation. Every founder heading toward a transaction should spend a weekend with this before the first meeting.' },
                 { title: 'Zero to Sold', author: 'Arvid Kahl', note: 'Built, bootstrapped, and exited. Honest about what preparation requires. The chapters on documentation are worth the price of the book alone.' },
                 { title: 'The Mom Test', author: 'Rob Fitzpatrick', note: 'How to talk to customers about your product without them lying to you. The single best book on validating an idea before building it.' },
+                { title: 'The Hard Thing About Hard Things', author: 'Ben Horowitz', note: 'For moments when the situation is genuinely difficult and the management books have no answer.' },
+                { title: 'Zero to One', author: 'Peter Thiel', note: 'Useful not for its conclusions but for the questions it insists you answer about defensibility.' },
+                { title: 'Good to Great', author: 'Jim Collins', note: 'The discipline of doing less, extremely well, for a very long time.' },
+                { title: 'The Innovator\'s Dilemma', author: 'Clayton Christensen', note: 'Why good companies fail when the market moves. Relevant to every founder who has incumbents as both competitors and potential acquirers.' },
+                { title: 'The Art of the Deal (M&A edition)', author: 'Alexandra Reed Lajoux', note: 'The practical mechanics of M&A, explained without the investment banking jargon. The reference every seller should read before signing an LOI.' },
+                { title: 'Built to Sell', author: 'John Warrillow', note: 'A short novel about building a company that doesn\'t depend on its founder. The framework translates directly to the CIFS F-42 dimension.' },
                 { title: 'Acquired (Podcast)', author: 'Ben Gilbert & David Rosenthal', note: 'Business history as strategy school. The Berkshire, TSMC, and Costco episodes are required listening for anyone thinking about acquirers.' },
                 { title: 'Indie Hackers (Podcast)', author: 'Courtland Allen', note: 'Real founders, real revenue numbers. Filter for bootstrap-to-exit stories. The signal-to-noise ratio is higher than most business media.' },
               ].map(b => (

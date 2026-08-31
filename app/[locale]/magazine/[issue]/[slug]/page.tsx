@@ -106,6 +106,66 @@ The acceptance rate — under 25% — is the most cited number in this index. It
 The four CIFS dimensions — Code integrity, IP ownership, Financial reliability, Security posture — are each scored on a 25-point scale. The minimum threshold for certification requires a score above the threshold in each dimension, not just in the aggregate. This is deliberate. An asset with perfect financial documentation and no IP assignment is not certifiable. The certification is a signal of comprehensive readiness.
 
 The grade distribution — from AEG ★ (5%) through AAA (12%), AA (27%), A (32%), to B (17%) — reflects the current state of the market. Most assets that pass certification are A or AA grade. The AEG ★ grade is reserved for assets that represent the top of market in every CIFS dimension. As our certification database grows, this distribution will become the definitive benchmark for European tech M&A quality.`,
+
+    'build-the-habit-that-changes-everything': `He did not set out to build a company that would sell well. He set out to build one that would not embarrass him. So from the very first month, every contractor signed a proper agreement. Every invoice got filed the same day. It felt excessive at the time — a single person running a company nobody had heard of, filing paperwork like it mattered.
+
+Ten years later, it mattered enormously. When a buyer's team opened his records, they found exactly what they expected to find: nothing missing, nothing to explain away. The due diligence process that typically runs twelve weeks closed in six.
+
+The habit he started out of simple discomfort with mess turned out to be exactly the infrastructure a transaction requires. Not because he planned it that way. Because the habits that make a company easy to run are the same habits that make it easy to sell.
+
+The most common refusal reason in CIFS certification is not a technical problem or a financial problem. It is a documentation problem. Revenue figures that cannot be substantiated with billing access. Software rights that were never formally assigned to the company entity. Security assessments that were planned but never commissioned. These are not signs of a bad company. They are signs of a company that never built the habit.
+
+The founders who navigate sale processes most cleanly tend to share one characteristic: they prepared for a transaction they were not sure they would ever want. The preparation was its own form of discipline. The transaction, when it came, was a test they had already studied for without knowing it.
+
+Write everything down. Not for the buyer. For yourself. The moment you can hand the company to someone else for two weeks and nothing breaks — that is when it is worth something.`,
+
+    'build-he-built-fast': `He built the first version of his product almost entirely with AI coding tools, in a fraction of the time a small team would have needed five years earlier. It worked. Customers paid. He was, understandably, proud of the pace.
+
+A buyer's technical reviewer found something he had not thought to check: large sections of the product had never been looked at by a human after the AI wrote them. Nothing was broken, exactly, but nobody could confidently explain why certain choices had been made. The architecture had logic, but the logic had never been articulated. That made the buyer nervous about what else might be hidden inside a codebase nobody had fully read.
+
+The fix took twelve weeks: reviewing the important parts, writing down the reasoning, adding basic tests to confirm the system behaved as expected. Not glamorous work. But it turned a fast, fragile product into a fast, trustworthy one. The difference showed up directly in what he was eventually paid.
+
+The simple habit that would have prevented this: once a week, actually read the code the tools wrote. Write one sentence explaining why each major decision was made. That is most of what a technical reviewer needs to find. It takes approximately thirty minutes per session. It takes approximately twelve weeks to reconstruct after the fact, under time pressure, with a buyer waiting.
+
+The AI coding tools available in 2026 are genuinely useful. They write working code quickly, they handle boilerplate, they suggest patterns that hold up. The founders who use them well are the ones who remain the author of the product — not just the person who approved what the tool produced.`,
+
+    'money-the-compliance-premium': `She had not planned to sell in 2026. She had a list of things to fix first: a second product line to launch, a Paris office to open, a Series A she had been postponing for eighteen months because the terms were never quite right.
+
+What changed her timeline was a cold email from a compliance officer at a mid-sized Dutch bank. He had found her software through a regulatory body's approved vendor list — the same list she had spent eight months and roughly forty thousand euros getting onto.
+
+The bank needed to demonstrate DORA compliance to its national regulator by the end of the year. Her software — already certified, already documented, already running on two comparable institutions — was one of fewer than a dozen products in Europe that could be deployed fast enough.
+
+The compliance officer put her in front of the bank's technology committee within three weeks. What followed was not what she expected a sale process to look like. There was no competitive auction, no investment banker running the process, no letter of intent negotiated over four months. There was a conversation about operational fit, a due diligence that took two weeks because her documentation was already in order, and an offer that arrived before she had decided whether she actually wanted to sell.
+
+The price was above the range she had privately modelled. The reason was simple: her compliance made the buyer's problem disappear. They paid for the solution, not just the software.
+
+The forty thousand euros she spent getting onto a regulatory approved vendor list produced a return she could not have modelled. The EU AI Act, DORA, NIS2 — these are not just compliance burdens. For assets that meet the standard, they are barriers to entry that create structural premiums. The founders who understand this early are the ones who end up with buyers they were not looking for.`,
+
+    'transaction-what-an-earnout-feels-like': `He sold his company for what looked like a good headline number. A third was paid on closing. A third would be paid twelve months later if the company hit its annual recurring revenue target. A final third came at month 24, contingent on maintaining the customer retention rate above a specified threshold.
+
+The earn-out was designed around metrics he could influence. That mattered enormously.
+
+In the 18 months after closing, the new parent company changed the product roadmap twice, replaced his head of sales, and moved the customer success team to a shared services model. The earn-out targets survived two of those three changes. The third — losing his sales lead at month 14 — put the month-24 retention threshold at risk.
+
+He hit it, narrowly. What he learned was that earn-outs work when the targets are simple, measurable, and within the seller's control after the transaction closes. They fail when any of those three conditions is missing.
+
+The metrics used in his earn-out — annual recurring revenue and customer retention rate — were both things he could directly influence even after the acquisition. He kept his customer relationships. He maintained the renewal process himself. He absorbed the account management work that the new parent's restructuring had disrupted.
+
+The earn-out targets that fail most often are the ones tied to growth metrics in markets that the new parent then changes strategy on, or to retention metrics on customer segments the new parent immediately tries to upsell into different products.
+
+Once the letter of intent is signed and exclusivity begins, the founder's leverage drops sharply. The earn-out terms you accept at that point are the ones you will live with for two years. Negotiate them before you need to. The time to discuss earn-out structure is before you have a signed LOI — not after.`,
+
+    'life-on-building-for-the-long-view': `The companies that sell well share one quality that has nothing to do with their product, their market, or their technology. It is a quality of attention. The founders who built them paid attention to the details that did not matter yet — the contracts, the documentation, the financial records — long before anyone asked for them.
+
+This is not glamorous advice. It does not make for a good podcast episode or a viral LinkedIn post. But it is the closest thing to a reliable pattern that we have seen across the transactions we have observed and participated in.
+
+The European technology market rewards a different profile of founder than the one most venture narratives celebrate. It rewards the person who keeps clean books because they believe in accuracy, not because a buyer might eventually check. The person who documents their code because they respect the next engineer who will read it, not because they are preparing for due diligence.
+
+This is not naive. It is, in the end, the most practical approach. Companies built with this kind of care are the ones that survive a serious buyer's review, that close faster, and that command the premium. Not because the founders were preparing for a sale. Because they were building something real.
+
+The founders who build for the long view often look, in the short term, like they are moving too slowly. They are not. They are building the infrastructure that makes everything else possible — the documentation that makes due diligence fast, the financial records that make revenue verifiable, the code ownership that makes a clean acquisition possible.
+
+Build something real. Build it cleanly. Document it before anyone asks you to. Let the work speak before you do. The buyers who matter already know the difference.`,
   }
 
   return content[slug] ?? `This article is part of Aegryn Magazine Issue 01 — The State of European Tech M&A.`
