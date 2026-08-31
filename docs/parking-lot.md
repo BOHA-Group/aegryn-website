@@ -7,6 +7,30 @@
 
 ## 🔴 HAUTE PRIORITÉ
 
+### Homepage — Repositionnement éditorial et CTAs
+
+**Demandé le :** 2026-08-31
+**Contexte :** Le texte actuel de la homepage ne reflète pas correctement le positionnement d'Aegryn (certification, transaction offmarket, magazine). Les CTAs sont trop génériques.
+
+**Textes à modifier (i18n FR source, puis traduire × 6 langues) :**
+
+| Clé | Valeur actuelle | Valeur proposée |
+|---|---|---|
+| `whatwedo.conviction` | "Les meilleurs actifs tech européens méritent une certification. Pas une liste." | "Le marché européen des actifs tech a besoin de certification, de discrétion, et de données fiables. Nous construisons les trois." |
+| `transactNarrative.title` | "Certains actifs méritent mieux qu'une liste publique." | "La certification change la conversation. La transaction suit." |
+| `transactNarrative.ctaSell` | "Vendre un actif certifié" | "Soumettre un actif à la certification" |
+| `transactNarrative.ctaBuy` | "Rejoindre le cercle acquéreurs" | "Accéder au cercle acquéreurs" |
+| `transactNarrative.desc` | (voir fr.json ligne 1137) | "Aegryn certifie des actifs tech selon un protocole indépendant sur quatre dimensions : code, IP, finance, sécurité. Les actifs certifiés entrent dans un processus de cession offmarket confidentiel, entre vendeurs documentés et acquéreurs pré-qualifiés.\n\nCe n'est pas une liste. Ce n'est pas une enchère. C'est un standard de marché." |
+| `aboutSection.desc` | "...La première infrastructure de confiance pour le M&A tech en Europe." | Ajouter en fin : "...et le magazine qui documente ce marché chaque année." |
+
+**Fichiers concernés :**
+- `i18n/messages/fr.json` (source de vérité) — clés `whatwedo`, `transactNarrative`, `aboutSection`
+- `i18n/messages/en.json`, `de.json`, `es.json`, `it.json`, `nl.json` — à synchroniser
+
+**Priorité :** haute, purement éditorial, non bloquant techniquement
+
+---
+
 ### Factures admin, Bouton "Enregistrer et envoyer" + email amélioré
 
 **Contexte :**
