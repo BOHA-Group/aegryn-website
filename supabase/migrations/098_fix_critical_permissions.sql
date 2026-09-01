@@ -11,11 +11,16 @@ DELETE FROM admin_permissions WHERE id IN (
 );
 
 -- 2. Ajouter le rôle "internal" dans la contrainte profiles.role
--- D'abord, vérifier si la contrainte existe et la modifier
 DO $$
 BEGIN
   -- Drop l'ancienne contrainte si elle existe
   ALTER TABLE profiles DROP CONSTRAINT IF EXISTS profiles_role_check;
+  
+  -- Mettre à jour les rôles invalides vers 'buyer' (rôle par défaut le plus sûr)
+  -- Cela ne devrait affecter que les données de test/dev
+  UPDATE profiles 
+  SET role = 'buyer' 
+  WHERE role NOT IN ('buyer', 'seller', 'partner', 'admin', 'internal');
   
   -- Créer la nouvelle contrainte avec le rôle "internal"
   ALTER TABLE profiles ADD CONSTRAINT profiles_role_check 
