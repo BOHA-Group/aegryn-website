@@ -73,7 +73,7 @@
     "craftSupportAcquisition": "Advisory Fusions et Acquisitions",
     "craftSupportAlliances": "Réseau de partenaires",
     "craftSupportExperts": "Réseau d'experts",
-    "craftTransact": "Transiger",
+    "craftTransact": "Transmettre",
     "craftTransactDesc": "Certification, cession, acquisition d'actifs tech",
     "craftTransactGrade": "Système de certification",
     "craftTransactCatalog": "Catalogue offmarket",
@@ -119,10 +119,10 @@
   },
   "hero": {
     "tagline": "Nous refusons qu'un actif solide disparaisse dans une transaction mal préparée.",
-    "metaDescription": "AEGRYN certifie et transige des actifs tech en Europe. Cinq disciplines : conception, advisory, transaction M&A, talent et intelligence de marché. Ancré en Suisse.",
+    "metaDescription": "AEGRYN certifie et transmet des actifs tech en Europe. Cinq disciplines : conception, advisory, transaction M&A, talent et intelligence de marché. Ancré en Suisse.",
     "eyebrow": "INFRASTRUCTURE DE CERTIFICATION ET DE TRANSACTION",
     "title": "Rare par\nsélection.",
-    "sub": "Aegryn conçoit, certifie et transige des actifs tech en Europe. Advisory, talent, intelligence de marché : cinq disciplines. Un seul standard.",
+    "sub": "Aegryn conçoit, certifie et transmet des actifs tech en Europe. Advisory, talent, intelligence de marché : cinq disciplines. Un seul standard.",
     "cta": "CÉDER UN ACTIF CERTIFIÉ",
     "strip": "INFRASTRUCTURE DE CERTIFICATION ET DE TRANSACTION TECH",
     "geo": "Suisse · Europe · Global",
@@ -133,7 +133,7 @@
     "cta2Title": "Accompagner",
     "cta2Desc": "vos projets.",
     "cta2Link": "Contacter",
-    "cta3Title": "Transiger",
+    "cta3Title": "Transmettre",
     "cta3Desc": "votre actif.",
     "cta3Link": "Estimer",
     "cta4Title": "Recruter",
@@ -359,7 +359,7 @@
   "aboutSection": {
     "label": "À propos d'Aegryn",
     "title": "Cinq métiers.\nUn standard de marché.",
-    "desc": "Aegryn conçoit des actifs tech, les certifie selon un label indépendant, les transige dans un cercle fermé, accompagne les entrepreneurs et les acquéreurs, et documente le marché chaque trimestre. La première infrastructure de confiance pour le M&A tech en Europe.",
+    "desc": "Aegryn conçoit des actifs tech, les certifie selon un label indépendant, les transmet dans un cercle fermé, accompagne les entrepreneurs et les acquéreurs, et documente le marché chaque trimestre. La première infrastructure de confiance pour le M&A tech en Europe.",
     "tagline": "CERTIFIÉ EN SUISSE. RÉFÉRENCE EN EUROPE.",
     "cta": "À propos d'Aegryn",
     "quote": "Un actif tech sans certification indépendante, c'est une valeur sans preuve. Aegryn apporte la preuve sur chaque actif, à chaque transfert.",
@@ -389,12 +389,8 @@
         "desc": "Nous concevons et opérons des actifs tech, SaaS, marketplaces, protocoles IA, structurés dès l'origine pour être certifiables et transférables. Chaque actif résiste à l'audit le plus exigeant."
       },
       {
-        "title": "CERTIFICATION",
-        "desc": "Nous certifions des actifs selon un label indépendant structuré sur 4 dimensions : Code, IP, Finance, Sécurité. Un protocole reproductible, traçable et concluant, pour des tiers comme pour nos propres actifs."
-      },
-      {
-        "title": "TRANSACTION",
-        "desc": "Nous transigeons des actifs certifiés via un processus confidentiel : séquestre institutionnel, cercle d'acquéreurs pré-qualifiés, mandat exclusif 60 jours. Moins de 25% des actifs soumis sont acceptés."
+        "title": "TRANSMETTRE",
+        "desc": "Nous certifions et transmettons des actifs tech selon un protocole indépendant sur 4 dimensions : Code, IP, Finance, Sécurité. Mandat exclusif 60 jours. Séquestre institutionnel. Moins de 25% des actifs soumis acceptés."
       },
       {
         "title": "ACCOMPAGNER",
@@ -539,8 +535,8 @@
         "desc": "Certifier de façon indépendante. Refuser plus qu'accepter. Une notation reproductible, traçable et définitive."
       },
       "embrace": {
-        "title": "TRANSACTION",
-        "desc": "Transiger dans la discrétion, avec la certitude pour les deux parties. Séquestre institutionnel. Documentation complète à chaque transfert."
+        "title": "TRANSMISSION",
+        "desc": "Transmettre dans la discrétion, avec la certitude pour les deux parties. Séquestre institutionnel. Documentation complète à chaque transfert."
       }
     },
     "dna": {
@@ -584,7 +580,7 @@
     "whatsnext": {
       "label": "Ce qui vient ensuite",
       "title": "Le protocole évolue.\nLe standard tient.",
-      "desc": "Aegryn certifie et transige aujourd'hui des SaaS, applications, marketplaces, actifs IP et actifs Web3 sous le protocole CIFS.\n\nLe principal chantier de la feuille de route est la certification blockchain : une couche d'ancrage qui scellera chaque codebase certifié à la date exacte du transfert, rendant chaque grade définitivement vérifiable et permanent. Cette couche s'ajoutera au protocole indépendant déjà pleinement opérationnel.\n\nEn parallèle, nous constituons un réseau de partenaires experts, cabinets juridiques, experts-comptables, spécialistes cybersécurité, architectes techniques pour accompagner acheteurs et vendeurs à chaque étape : conseil tech avant la certification, structuration juridique et financière pendant la transaction, intégration après le closing.",
+      "desc": "Aegryn certifie et transmet aujourd'hui des SaaS, applications, marketplaces, actifs IP et actifs Web3 sous le protocole CIFS.\n\nLe principal chantier de la feuille de route est la certification blockchain : une couche d'ancrage qui scellera chaque codebase certifié à la date exacte du transfert, rendant chaque grade définitivement vérifiable et permanent. Cette couche s'ajoutera au protocole indépendant déjà pleinement opérationnel.\n\nEn parallèle, nous constituons un réseau de partenaires experts, cabinets juridiques, experts-comptables, spécialistes cybersécurité, architectes techniques pour accompagner acheteurs et vendeurs à chaque étape : conseil tech avant la certification, structuration juridique et financière pendant la transaction, intégration après le closing.",
       "cta": "Voir les sessions en cours"
     },
     "cta": {
@@ -4921,7 +4917,7 @@
           "buyers"
         ],
         "q": "Qui est Aegryn et que faites-vous ?",
-        "a": "Aegryn est un constructeur d'actifs tech suisse qui conçoit et opère des écosystèmes numériques propriétaires. Nous certifions, transigeons et accompagnons les actifs technologiques via un protocole indépendant et reproductible."
+        "a": "Aegryn est un constructeur d'actifs tech suisse qui conçoit et opère des écosystèmes numériques propriétaires. Nous certifions, transmettons et accompagnons les actifs technologiques via un protocole indépendant et reproductible."
       },
       {
         "id": "what-differentiates",
@@ -4954,7 +4950,7 @@
           "sellers"
         ],
         "q": "Quels types d'actifs puis-je soumettre ?",
-        "a": "Aegryn certifie et transige des actifs tech numériques : SaaS B2B, applications mobiles, marketplaces, protocoles IA, propriété intellectuelle numérique. Ticket minimum recommandé : 100 000 € de valorisation estimée."
+        "a": "Aegryn certifie et transmet des actifs tech numériques : SaaS B2B, applications mobiles, marketplaces, protocoles IA, propriété intellectuelle numérique. Ticket minimum recommandé : 100 000 € de valorisation estimée."
       },
       {
         "id": "seller-identity",

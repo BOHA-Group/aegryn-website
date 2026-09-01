@@ -73,7 +73,7 @@
     "craftSupportAcquisition": "Advisory Fusiones y Adquisiciones",
     "craftSupportAlliances": "Red de socios",
     "craftSupportExperts": "Red de expertos",
-    "craftTransact": "Transigir",
+    "craftTransact": "Transmitir",
     "craftTransactDesc": "Certificación, cesión, adquisición de activos tech",
     "craftTransactGrade": "Sistema de certificación",
     "craftTransactCatalog": "Catálogo offmarket",
@@ -119,10 +119,10 @@
   },
   "hero": {
     "tagline": "Nos negamos a que un activo sólido desaparezca en una transacción mal preparada.",
-    "metaDescription": "AEGRYN certifica y negocia activos tech en Europa. Cinco disciplinas: ingeniería de activos, asesoría, transacción M&A, talento e inteligencia de mercado. Anclado en Suiza.",
+    "metaDescription": "AEGRYN certifica y transmite activos tech en Europa. Cinco disciplinas: ingeniería de activos, asesoría, transacción M&A, talento e inteligencia de mercado. Anclado en Suiza.",
     "eyebrow": "INFRAESTRUCTURA DE CERTIFICACIÓN Y TRANSACCIÓN TECH",
     "title": "Selecto por definición.",
-    "sub": "Aegryn diseña, certifica y negocia activos tech en Europa. Asesoría, talento, inteligencia de mercado: cinco disciplinas. Un estándar.",
+    "sub": "Aegryn diseña, certifica y transmite activos tech en Europa. Asesoría, talento, inteligencia de mercado: cinco disciplinas. Un estándar.",
     "cta": "VENDER UN ACTIVO CERTIFICADO",
     "strip": "INFRAESTRUCTURA DE CERTIFICACIÓN Y TRANSACCIÓN TECH",
     "geo": "Suiza · Europa · Global",
@@ -134,7 +134,7 @@
     "cta2Title": "Asesorar",
     "cta2Desc": "tus proyectos.",
     "cta2Link": "Contactar",
-    "cta3Title": "Negociar",
+    "cta3Title": "Transmitir",
     "cta3Desc": "tu activo.",
     "cta3Link": "Estimar",
     "cta4Title": "Reclutar",
@@ -396,7 +396,7 @@
   "aboutSection": {
     "label": "Sobre Aegryn",
     "title": "Cinco disciplinas.\nUn estándar de mercado.",
-    "desc": "Aegryn diseña activos tech, los certifica bajo un sello independiente, los transacciona en un círculo cerrado, acompaña a emprendedores y adquirentes, y documenta el mercado cada trimestre. La primera infraestructura de confianza para el M&A tech en Europa.",
+    "desc": "Aegryn diseña activos tech, los certifica bajo un sello independiente, los transmite en un círculo cerrado, acompaña a emprendedores y adquirentes, y documenta el mercado cada trimestre. La primera infraestructura de confianza para el M&A tech en Europa.",
     "tagline": "CERTIFICADO EN SUIZA. REFERENCIA EN EUROPA.",
     "cta": "Sobre Aegryn",
     "quote": "Un activo tech sin certificación independiente es un valor sin prueba. Aegryn aporta la prueba en cada activo, en cada transferencia.",
@@ -426,12 +426,8 @@
         "desc": "Diseñamos y operamos activos tech, SaaS, marketplaces, protocolos IA, estructurados desde el origen para ser certificables y transferibles. Cada activo resiste la auditoría más exigente."
       },
       {
-        "title": "CERTIFICACIÓN",
-        "desc": "Certificamos activos bajo un sello independiente estructurado en 4 dimensiones: Código, PI, Finanzas, Seguridad. Un protocolo reproducible, trazable y concluyente."
-      },
-      {
-        "title": "CESIÓN M&A",
-        "desc": "Transaccionamos activos certificados mediante un proceso confidencial: depósito institucional, círculo de compradores precalificados, mandato exclusivo de 60 días. Menos del 25% de los activos presentados son aceptados."
+        "title": "TRANSMITIR",
+        "desc": "Certificamos y transmitimos activos tech según un protocolo independiente en 4 dimensiones: Código, PI, Finanzas, Seguridad. Mandato exclusivo 60 días. Depósito institucional. Menos del 25% de los activos presentados aceptados."
       },
       {
         "title": "ACOMPAÑAR",

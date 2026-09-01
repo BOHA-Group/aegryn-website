@@ -73,7 +73,7 @@
     "craftSupportAcquisition": "Advisory Fusioni e Acquisizioni",
     "craftSupportAlliances": "Rete di partner",
     "craftSupportExperts": "Rete di esperti",
-    "craftTransact": "Transigere",
+    "craftTransact": "Trasmettere",
     "craftTransactDesc": "Certificazione, cessione, acquisizione di asset tech",
     "craftTransactGrade": "Sistema di certificazione",
     "craftTransactCatalog": "Catalogo offmarket",
@@ -119,10 +119,10 @@
   },
   "hero": {
     "tagline": "Ci rifiutiamo di lasciare che un asset solido scompaia in una transazione mal preparata.",
-    "metaDescription": "AEGRYN certifica e negozia asset tech in Europa. Cinque discipline: ingegneria degli asset, advisory, transazione M&A, talento e intelligenza di mercato. Ancorato in Svizzera.",
+    "metaDescription": "AEGRYN certifica e trasmette asset tech in Europa. Cinque discipline: ingegneria degli asset, advisory, transazione M&A, talento e intelligenza di mercato. Ancorato in Svizzera.",
     "eyebrow": "INFRASTRUTTURA DI CERTIFICAZIONE E TRANSAZIONE TECH",
     "title": "Raro per selezione.",
-    "sub": "Aegryn progetta, certifica e negozia asset tech in Europa. Advisory, talento, intelligenza di mercato: cinque discipline. Uno standard.",
+    "sub": "Aegryn progetta, certifica e trasmette asset tech in Europa. Advisory, talento, intelligenza di mercato: cinque discipline. Uno standard.",
     "cta": "VENDI UN ASSET CERTIFICATO",
     "strip": "INFRASTRUTTURA DI CERTIFICAZIONE E TRANSAZIONE TECH",
     "geo": "Svizzera · Europa · Global",
@@ -134,7 +134,7 @@
     "cta2Title": "Consigliare",
     "cta2Desc": "i tuoi progetti.",
     "cta2Link": "Contattare",
-    "cta3Title": "Negoziare",
+    "cta3Title": "Trasmettere",
     "cta3Desc": "il tuo asset.",
     "cta3Link": "Stimare",
     "cta4Title": "Reclutare",
@@ -396,7 +396,7 @@
   "aboutSection": {
     "label": "Su Aegryn",
     "title": "Cinque discipline.\nUno standard di mercato.",
-    "desc": "Aegryn progetta asset tech, li certifica sotto un marchio indipendente, li negozia in un circolo chiuso, supporta imprenditori e acquirenti, e documenta il mercato ogni trimestre. La prima infrastruttura di fiducia per il M&A tech in Europa.",
+    "desc": "Aegryn progetta asset tech, li certifica sotto un marchio indipendente, li trasmette in un circolo chiuso, supporta imprenditori e acquirenti, e documenta il mercato ogni trimestre. La prima infrastruttura di fiducia per il M&A tech in Europa.",
     "tagline": "CERTIFICATO IN SVIZZERA. RIFERIMENTO IN EUROPA.",
     "cta": "Chi è Aegryn",
     "quote": "Un asset tech senza certificazione indipendente è un valore senza prova. Aegryn fornisce la prova su ogni asset, ad ogni trasferimento.",
@@ -426,12 +426,8 @@
         "desc": "Progettiamo e operiamo asset tech, SaaS, marketplace, protocolli IA, strutturati fin dall'origine per essere certificabili e trasferibili. Ogni asset resiste all'audit più rigoroso."
       },
       {
-        "title": "CERTIFICAZIONE",
-        "desc": "Certifichiamo asset sotto un marchio indipendente strutturato su 4 dimensioni: Codice, IP, Finanza, Sicurezza. Un protocollo riproducibile, tracciabile e conclusivo."
-      },
-      {
-        "title": "TRANSAZIONE M&A",
-        "desc": "Negoziamo asset certificati attraverso un processo confidenziale: deposito istituzionale, cerchia di acquirenti pre-qualificati, mandato esclusivo di 60 giorni. Meno del 25% degli asset presentati vengono accettati."
+        "title": "TRASMETTERE",
+        "desc": "Certifichiamo e trasmettiamo asset tech secondo un protocollo indipendente su 4 dimensioni: Codice, IP, Finanza, Sicurezza. Mandato esclusivo 60 giorni. Deposito istituzionale. Meno del 25% degli asset presentati accettati."
       },
       {
         "title": "ACCOMPAGNARE",

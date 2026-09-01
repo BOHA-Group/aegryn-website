@@ -73,7 +73,7 @@
     "craftSupportAcquisition": "Mergers & Acquisitions Advisory",
     "craftSupportAlliances": "Partner network",
     "craftSupportExperts": "Expert network",
-    "craftTransact": "Transact",
+    "craftTransact": "Transfer",
     "craftTransactDesc": "Certification, sale, acquisition of tech assets",
     "craftTransactGrade": "Certification system",
     "craftTransactCatalog": "Offmarket catalog",
@@ -119,10 +119,10 @@
   },
   "hero": {
     "tagline": "We refuse to let a solid asset disappear into a poorly prepared transaction.",
-    "metaDescription": "AEGRYN certifies and transacts tech assets across Europe. Five disciplines: asset engineering, advisory, M&A transaction, talent and market intelligence. Anchored in Switzerland.",
+    "metaDescription": "AEGRYN certifies and transfers tech assets across Europe. Five disciplines: asset engineering, advisory, M&A transaction, talent and market intelligence. Anchored in Switzerland.",
     "eyebrow": "TECH CERTIFICATION AND TRANSACTION INFRASTRUCTURE",
     "title": "Rare by selection.",
-    "sub": "Aegryn designs, certifies and transacts tech assets in Europe. Advisory, talent, market intelligence: five disciplines. One standard.",
+    "sub": "Aegryn designs, certifies and transfers tech assets in Europe. Advisory, talent, market intelligence: five disciplines. One standard.",
     "cta": "SELL A CERTIFIED ASSET",
     "strip": "TECH CERTIFICATION AND TRANSACTION INFRASTRUCTURE",
     "geo": "Switzerland · Europe · Global",
@@ -134,7 +134,7 @@
     "cta2Title": "Advise",
     "cta2Desc": "your projects.",
     "cta2Link": "Contact",
-    "cta3Title": "Transact",
+    "cta3Title": "Transfer",
     "cta3Desc": "your asset.",
     "cta3Link": "Estimate",
     "cta4Title": "Recruit",
@@ -396,7 +396,7 @@
   "aboutSection": {
     "label": "About Aegryn",
     "title": "Five disciplines.\nOne market standard.",
-    "desc": "Aegryn builds tech assets, certifies them under an independent label, transacts them in a closed circle, supports entrepreneurs and acquirers, and documents the market every quarter. The first trust infrastructure for tech M&A in Europe.",
+    "desc": "Aegryn builds tech assets, certifies them under an independent label, transfers them in a closed circle, supports entrepreneurs and acquirers, and documents the market every quarter. The first trust infrastructure for tech M&A in Europe.",
     "tagline": "CERTIFIED IN SWITZERLAND. REFERENCE IN EUROPE.",
     "cta": "About Aegryn",
     "quote": "A tech asset without an independent certification is a value without proof. Aegryn provides the proof on every asset, at every transfer.",
@@ -426,12 +426,8 @@
         "desc": "We design and operate tech assets, SaaS, marketplaces, AI protocols, structured from inception to be certifiable and transferable. Every asset withstands the most rigorous audit."
       },
       {
-        "title": "GRADE",
-        "desc": "We certify assets under an independent label structured across 4 dimensions: Code, IP, Finance, Security. A reproducible, traceable and conclusive protocol, for third parties and our own assets alike."
-      },
-      {
-        "title": "M&A TRANSACTION",
-        "desc": "We transact certified assets through a confidential process: institutional escrow, pre-qualified buyer circle, exclusive mandate. Less than 25% of submitted assets are accepted."
+        "title": "TRANSFER",
+        "desc": "We certify and transfer tech assets through an independent protocol across 4 dimensions: Code, IP, Finance, Security. Exclusive 60-day mandate. Institutional escrow. Less than 25% of submitted assets accepted."
       },
       {
         "title": "ADVISE",

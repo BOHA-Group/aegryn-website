@@ -73,8 +73,8 @@
     "craftSupportAcquisition": "Fusionen & Übernahmen Advisory",
     "craftSupportAlliances": "Partnernetzwerk",
     "craftSupportExperts": "Expertennetzwerk",
-    "craftTransact": "Transagieren",
-    "craftTransactDesc": "Zertifizierung, Verkauf, Erwerb von Tech-Assets",
+    "craftTransact": "Übertragen",
+    "craftTransactDesc": "Zertifizierung, Abtretung, Erwerb von Tech-Assets",
     "craftTransactGrade": "Zertifizierungssystem",
     "craftTransactCatalog": "Offmarket-Katalog",
     "craftTransactSell": "Asset verkaufen",
@@ -119,10 +119,10 @@
   },
   "hero": {
     "tagline": "Wir weigern uns, dass ein solides Asset in einer schlecht vorbereiteten Transaktion verschwindet.",
-    "metaDescription": "AEGRYN zertifiziert und handelt Tech-Assets in Europa. Fünf Disziplinen: Asset Engineering, Beratung, M&A-Transaktion, Talent und Marktintelligenz. Verankert in der Schweiz.",
+    "metaDescription": "AEGRYN zertifiziert und überträgt Tech-Assets in Europa. Fünf Disziplinen: Asset Engineering, Beratung, M&A-Transaktion, Talent und Marktintelligenz. Verankert in der Schweiz.",
     "eyebrow": "INFRASTRUKTUR FÜR TECH-ZERTIFIZIERUNG UND TRANSAKTION",
     "title": "Selten durch Auswahl.",
-    "sub": "Aegryn entwirft, zertifiziert und handelt Tech-Assets in Europa. Beratung, Talent, Marktintelligenz: fünf Disziplinen. Ein Standard.",
+    "sub": "Aegryn entwirft, zertifiziert und überträgt Tech-Assets in Europa. Beratung, Talent, Marktintelligenz: fünf Disziplinen. Ein Standard.",
     "cta": "ZERTIFIZIERTEN ASSET VERKAUFEN",
     "strip": "INFRASTRUKTUR FÜR TECH-ZERTIFIZIERUNG UND TRANSAKTION",
     "geo": "Schweiz · Europa · Global",
@@ -134,7 +134,7 @@
     "cta2Title": "Beraten",
     "cta2Desc": "Ihre Projekte.",
     "cta2Link": "Kontakt",
-    "cta3Title": "Handeln",
+    "cta3Title": "Übertragen",
     "cta3Desc": "Ihr Vermögen.",
     "cta3Link": "Schätzen",
     "cta4Title": "Rekrutieren",
@@ -396,7 +396,7 @@
   "aboutSection": {
     "label": "Über Aegryn",
     "title": "Fünf Disziplinen.\nEin Marktstandard.",
-    "desc": "Aegryn entwickelt Tech-Assets, zertifiziert sie unter einem unabhängigen Label, transagiert sie in einem geschlossenen Kreis, unterstützt Unternehmer und Erwerber und dokumentiert den Markt jedes Quartal. Die erste Vertrauensinfrastruktur für Tech-M&A in Europa.",
+    "desc": "Aegryn entwickelt Tech-Assets, zertifiziert sie unter einem unabhängigen Label, überträgt sie in einem geschlossenen Kreis, unterstützt Unternehmer und Erwerber und dokumentiert den Markt jedes Quartal. Die erste Vertrauensinfrastruktur für Tech-M&A in Europa.",
     "tagline": "ZERTIFIZIERT IN DER SCHWEIZ. REFERENZ IN EUROPA.",
     "cta": "Über Aegryn",
     "quote": "Ein Tech-Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. Aegryn liefert den Beweis bei jedem Asset, bei jedem Transfer.",
@@ -426,12 +426,8 @@
         "desc": "Wir konzipieren und betreiben Tech-Assets, SaaS, Marktplätze, KI-Protokolle, die von Anfang an zertifizierbar und übertragbar sind. Jedes Asset widersteht der strengsten Prüfung."
       },
       {
-        "title": "ZERTIFIZIERUNG",
-        "desc": "Wir zertifizieren Assets nach einem unabhängigen Label, das auf 4 Dimensionen strukturiert ist: Code, IP, Finanzen, Sicherheit. Ein reproduzierbares, nachvollziehbares und schlüssiges Protokoll."
-      },
-      {
-        "title": "M&A-TRANSAKTION",
-        "desc": "Wir transagieren zertifizierte Assets über einen vertraulichen Prozess: institutionelles Treuhand, qualifizierter Käuferkreis, exklusives 60-Tage-Mandat. Weniger als 25% der eingereichten Assets werden akzeptiert."
+        "title": "ÜBERTRAGEN",
+        "desc": "Wir zertifizieren und übertragen Tech-Assets nach einem unabhängigen Protokoll über 4 Dimensionen: Code, IP, Finanzen, Sicherheit. Exklusives 60-Tage-Mandat. Institutionelles Treuhand. Weniger als 25% der eingereichten Assets akzeptiert."
       },
       {
         "title": "BEGLEITEN",

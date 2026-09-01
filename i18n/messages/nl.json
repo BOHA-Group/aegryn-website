@@ -73,7 +73,7 @@
     "craftSupportAcquisition": "Fusies & Overnames Advisory",
     "craftSupportAlliances": "Partnernetwerk",
     "craftSupportExperts": "Expertennetwerk",
-    "craftTransact": "Transacteren",
+    "craftTransact": "Overdragen",
     "craftTransactDesc": "Certificering, overdracht, acquisitie van tech-assets",
     "craftTransactGrade": "Certificeringssysteem",
     "craftTransactCatalog": "Offmarket-catalogus",
@@ -119,10 +119,10 @@
   },
   "hero": {
     "tagline": "Wij weigeren dat een solide asset verdwijnt in een slecht voorbereide transactie.",
-    "metaDescription": "AEGRYN certificeert en verhandelt tech-assets in Europa. Vijf disciplines: asset engineering, advisory, M&A-transactie, talent en marktintelligentie. Verankerd in Zwitserland.",
+    "metaDescription": "AEGRYN certificeert en draagt tech-assets over in Europa. Vijf disciplines: asset engineering, advisory, M&A-transactie, talent en marktintelligentie. Verankerd in Zwitserland.",
     "eyebrow": "TECH CERTIFICERINGS- EN TRANSACTIE-INFRASTRUCTUUR",
     "title": "Zeldzaam door selectie.",
-    "sub": "Aegryn ontwerpt, certificeert en verhandelt tech-assets in Europa. Advisory, talent, marktintelligentie: vijf disciplines. Één standaard.",
+    "sub": "Aegryn ontwerpt, certificeert en draagt tech-assets over in Europa. Advisory, talent, marktintelligentie: vijf disciplines. Één standaard.",
     "cta": "VERKOOP EEN GECERTIFICEERD ASSET",
     "strip": "INFRASTRUCTUUR VOOR TECH-CERTIFICERING EN TRANSACTIE",
     "geo": "Zwitserland · Europa · Global",
@@ -134,7 +134,7 @@
     "cta2Title": "Adviseren",
     "cta2Desc": "uw projecten.",
     "cta2Link": "Contact",
-    "cta3Title": "Verhandelen",
+    "cta3Title": "Overdragen",
     "cta3Desc": "uw asset.",
     "cta3Link": "Schatten",
     "cta4Title": "Rekruteren",
@@ -396,7 +396,7 @@
   "aboutSection": {
     "label": "Over Aegryn",
     "title": "Vijf disciplines.\nÉén marktstandaard.",
-    "desc": "Aegryn ontwerpt tech-assets, certificeert ze onder een onafhankelijk label, verhandelt ze in een gesloten kring, ondersteunt ondernemers en kopers, en documenteert de markt elk kwartaal. De eerste vertrouwensinfrastructuur voor tech M&A in Europa.",
+    "desc": "Aegryn ontwerpt tech-assets, certificeert ze onder een onafhankelijk label, draagt ze over in een gesloten kring, ondersteunt ondernemers en kopers, en documenteert de markt elk kwartaal. De eerste vertrouwensinfrastructuur voor tech M&A in Europa.",
     "tagline": "GECERTIFICEERD IN ZWITSERLAND. REFERENTIE IN EUROPA.",
     "cta": "Over Aegryn",
     "quote": "Een tech-asset zonder onafhankelijke certificering is een waarde zonder bewijs. Aegryn levert het bewijs bij elk asset, bij elke overdracht.",
@@ -426,12 +426,8 @@
         "desc": "We ontwerpen en exploiteren tech-assets, SaaS, marketplaces, AI-protocollen, vanaf het begin gestructureerd om certificeerbaar en overdraagbaar te zijn. Elk asset weerstaat de meest strikte audit."
       },
       {
-        "title": "CERTIFICERING",
-        "desc": "We certificeren assets onder een onafhankelijk label gestructureerd over 4 dimensies: Code, IP, Financiën, Veiligheid. Een reproduceerbaar, traceerbaar en concluderend protocol."
-      },
-      {
-        "title": "M&A TRANSACTIE",
-        "desc": "We verhandelen gecertificeerde assets via een vertrouwelijk proces: institutionele escrow, pre-gekwalificeerde koperskring, exclusief mandaat van 60 dagen. Minder dan 25% van de ingediende assets wordt geaccepteerd."
+        "title": "OVERDRAGEN",
+        "desc": "We certificeren en dragen tech-assets over volgens een onafhankelijk protocol over 4 dimensies: Code, IP, Financiën, Veiligheid. Exclusief mandaat 60 dagen. Institutionele escrow. Minder dan 25% van de ingediende assets geaccepteerd."
       },
       {
         "title": "BEGELEIDEN",
