@@ -116,18 +116,18 @@ const legal: { key: string; href: LinkHref; ns: string; external?: boolean }[] =
   { key: 'sitemap',   href: '/sitemap',         ns: 'legalNav' },
 ]
 
-const companyLinks: { navKey: 'about' | 'career' | 'contact' | 'magazine'; href: LinkHref }[] = [
-  { navKey: 'about',    href: '/about' },
-  { navKey: 'career',   href: '/career' },
-  { navKey: 'magazine', href: '/magazine' as never },
-  { navKey: 'contact',  href: '/contact' },
+const companyLinks: { navKey: string; href: LinkHref }[] = [
+  { navKey: 'whoAbout',    href: '/about' },
+  { navKey: 'whoContact',  href: '/contact' },
+  { navKey: 'whoCareers',  href: '/career' },
+  { navKey: 'whoTalent',   href: '/talent' as never },
 ]
 
-const servicesLinks: { navKey: 'advisory' | 'growWithUs' | 'servicesBuild' | 'servicesAdvisory' | 'servicesAcquisition' | 'servicesAlliances'; href: LinkHref }[] = [
-  { navKey: 'servicesBuild',       href: '/services/build' },
-  { navKey: 'servicesAdvisory',    href: '/advisory' },
-  { navKey: 'servicesAcquisition', href: '/services/acquisition-support' },
-  { navKey: 'servicesAlliances',   href: '/alliances' },
+const servicesLinks: { navKey: string; href: LinkHref }[] = [
+  { navKey: 'craftBuild',          href: '/services/build' },
+  { navKey: 'craftSupport',        href: '/advisory' },
+  { navKey: 'craftTransact',       href: '/transact' },
+  { navKey: 'craftGrade',          href: '/grade' },
 ]
 
 export default function Footer() {
@@ -198,35 +198,30 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Écosystème — actifs, blog, roadmap */}
+          {/* Nos convictions */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
-              {t('ecosystemLabel')}
+              {tNav('thinking')}
             </p>
             <ul className="space-y-2.5">
               <li>
-                <Link href="/what-we-build" className="text-sm text-white/75 hover:text-white transition-colors">
-                  {t('ecosystemCatalogLink')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/assets" className="text-sm text-white/75 hover:text-white transition-colors">
-                  {t('assetsLink')}
+                <Link href="/magazine" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {tNav('thinkingMagazine')}
                 </Link>
               </li>
               <li>
                 <Link href="/blog" className="text-sm text-white/75 hover:text-white transition-colors">
-                  {t('blogLink')}
+                  {tNav('thinkingMarketArticles')}
                 </Link>
               </li>
               <li>
-                <Link href={"/glossaire" as never} className="text-sm text-white/75 hover:text-white transition-colors">
-                  {t('glossaryLink')}
+                <Link href="/blog" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {tNav('thinkingMarketGlossary')}
                 </Link>
               </li>
               <li>
-                <Link href="/roadmap" className="text-sm text-white/75 hover:text-white transition-colors">
-                  {t('roadmap.link')}
+                <Link href="/assets" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {tNav('solutionsViewAll')}
                 </Link>
               </li>
             </ul>
