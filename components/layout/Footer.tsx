@@ -201,7 +201,7 @@ export default function Footer() {
           {/* Nos convictions */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
-              {tNav('thinking')}
+              {tNav('ourThinking')}
             </p>
             <ul className="space-y-2.5">
               <li>
@@ -215,7 +215,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-sm text-white/75 hover:text-white transition-colors">
+                <Link href={"/glossaire" as ComponentProps<typeof Link>['href']} className="text-sm text-white/75 hover:text-white transition-colors">
                   {tNav('thinkingMarketGlossary')}
                 </Link>
               </li>
