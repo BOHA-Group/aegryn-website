@@ -156,40 +156,86 @@ export function HeroMountain() {
               {t('sub').split('\n').join(' ')}
             </p>
 
-            <div ref={ctasRef} className="flex flex-col items-start gap-4 shrink-0">
-              <div className="flex items-center gap-4">
-                <Link
-                  href="/transact/how-to-sell"
-                  className="inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-3.5 hover:bg-ag-apex transition-colors duration-300"
-                >
-                  {t('ctaPrimary')}
-                  <ArrowUpRight size={13} />
-                </Link>
-                <Link
-                  href="/transact/how-to-buy"
-                  className="inline-flex items-center gap-3 border border-white/40 text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-3.5 hover:border-white hover:bg-white/10 transition-all duration-300"
-                >
-                  {t('ctaSecondary')}
-                </Link>
-              </div>
-              <div className="flex items-center gap-6">
-                <Link
-                  href="/services/build"
-                  className="font-sans text-[11px] text-white/55 hover:text-white/90 transition-colors duration-200"
-                >
-                  {t('ctaBuildLabel')}{' '}
-                  <span className="underline underline-offset-2">{t('ctaBuildLink')}</span>
-                  {' →'}
-                </Link>
-                <Link
-                  href="/advisory"
-                  className="font-sans text-[11px] text-white/55 hover:text-white/90 transition-colors duration-200"
-                >
-                  {t('ctaAdvisoryLabel')}{' '}
-                  <span className="underline underline-offset-2">{t('ctaAdvisoryLink')}</span>
-                  {' →'}
-                </Link>
-              </div>
+            <div ref={ctasRef} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 w-full max-w-5xl">
+              {/* CTA 1: Construire */}
+              <Link
+                href="/services/build"
+                className="group bg-white/5 backdrop-blur-sm border border-white/20 p-4 hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+              >
+                <h3 className="font-sans font-bold text-white text-[13px] tracking-[-0.01em] mb-2 uppercase">
+                  {t('cta1Title')}
+                </h3>
+                <p className="font-sans text-[11px] text-white/70 leading-relaxed mb-3">
+                  {t('cta1Desc')}
+                </p>
+                <span className="inline-flex items-center gap-1 font-sans text-[10px] text-white/90 uppercase tracking-[0.16em]">
+                  {t('cta1Link')} <ArrowUpRight size={11} />
+                </span>
+              </Link>
+
+              {/* CTA 2: Accompagner */}
+              <Link
+                href="/advisory"
+                className="group bg-white/5 backdrop-blur-sm border border-white/20 p-4 hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+              >
+                <h3 className="font-sans font-bold text-white text-[13px] tracking-[-0.01em] mb-2 uppercase">
+                  {t('cta2Title')}
+                </h3>
+                <p className="font-sans text-[11px] text-white/70 leading-relaxed mb-3">
+                  {t('cta2Desc')}
+                </p>
+                <span className="inline-flex items-center gap-1 font-sans text-[10px] text-white/90 uppercase tracking-[0.16em]">
+                  {t('cta2Link')} <ArrowUpRight size={11} />
+                </span>
+              </Link>
+
+              {/* CTA 3: Transiger */}
+              <Link
+                href="/grade"
+                className="group bg-white/5 backdrop-blur-sm border border-white/20 p-4 hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+              >
+                <h3 className="font-sans font-bold text-white text-[13px] tracking-[-0.01em] mb-2 uppercase">
+                  {t('cta3Title')}
+                </h3>
+                <p className="font-sans text-[11px] text-white/70 leading-relaxed mb-3">
+                  {t('cta3Desc')}
+                </p>
+                <span className="inline-flex items-center gap-1 font-sans text-[10px] text-white/90 uppercase tracking-[0.16em]">
+                  {t('cta3Link')} <ArrowUpRight size={11} />
+                </span>
+              </Link>
+
+              {/* CTA 4: Placer */}
+              <Link
+                href="/talent"
+                className="group bg-white/5 backdrop-blur-sm border border-white/20 p-4 hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+              >
+                <h3 className="font-sans font-bold text-white text-[13px] tracking-[-0.01em] mb-2 uppercase">
+                  {t('cta4Title')}
+                </h3>
+                <p className="font-sans text-[11px] text-white/70 leading-relaxed mb-3">
+                  {t('cta4Desc')}
+                </p>
+                <span className="inline-flex items-center gap-1 font-sans text-[10px] text-white/90 uppercase tracking-[0.16em]">
+                  {t('cta4Link')} <ArrowUpRight size={11} />
+                </span>
+              </Link>
+
+              {/* CTA 5: S'informer */}
+              <Link
+                href="/magazine"
+                className="group bg-white/5 backdrop-blur-sm border border-white/20 p-4 hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+              >
+                <h3 className="font-sans font-bold text-white text-[13px] tracking-[-0.01em] mb-2 uppercase">
+                  {t('cta5Title')}
+                </h3>
+                <p className="font-sans text-[11px] text-white/70 leading-relaxed mb-3">
+                  {t('cta5Desc')}
+                </p>
+                <span className="inline-flex items-center gap-1 font-sans text-[10px] text-white/90 uppercase tracking-[0.16em]">
+                  {t('cta5Link')} <ArrowUpRight size={11} />
+                </span>
+              </Link>
             </div>
           </div>
         </div>
