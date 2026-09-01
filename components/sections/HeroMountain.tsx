@@ -156,85 +156,100 @@ export function HeroMountain() {
               {t('sub').split('\n').join(' ')}
             </p>
 
-            <div ref={ctasRef} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 w-full max-w-5xl">
+            <div ref={ctasRef} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 w-full max-w-5xl">
               {/* CTA 1: Construire */}
               <Link
                 href="/services/build"
-                className="group bg-white/5 backdrop-blur-sm border border-white/20 p-4 hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 p-5 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
               >
-                <h3 className="font-sans font-bold text-white text-[13px] tracking-[-0.01em] mb-2 uppercase">
-                  {t('cta1Title')}
-                </h3>
-                <p className="font-sans text-[11px] text-white/70 leading-relaxed mb-3">
-                  {t('cta1Desc')}
-                </p>
-                <span className="inline-flex items-center gap-1 font-sans text-[10px] text-white/90 uppercase tracking-[0.16em]">
-                  {t('cta1Link')} <ArrowUpRight size={11} />
-                </span>
+                <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
+                <div className="relative">
+                  <h3 className="font-sans font-bold text-white text-[12px] tracking-wide mb-1.5 uppercase">
+                    {t('cta1Title')}
+                  </h3>
+                  <p className="font-sans text-[13px] text-white/75 leading-snug mb-4 min-h-[40px]">
+                    {t('cta1Desc')}
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.18em] transition-colors duration-300">
+                    {t('cta1Link')} <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  </span>
+                </div>
               </Link>
 
               {/* CTA 2: Accompagner */}
               <Link
                 href="/advisory"
-                className="group bg-white/5 backdrop-blur-sm border border-white/20 p-4 hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 p-5 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
               >
-                <h3 className="font-sans font-bold text-white text-[13px] tracking-[-0.01em] mb-2 uppercase">
-                  {t('cta2Title')}
-                </h3>
-                <p className="font-sans text-[11px] text-white/70 leading-relaxed mb-3">
-                  {t('cta2Desc')}
-                </p>
-                <span className="inline-flex items-center gap-1 font-sans text-[10px] text-white/90 uppercase tracking-[0.16em]">
-                  {t('cta2Link')} <ArrowUpRight size={11} />
-                </span>
+                <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
+                <div className="relative">
+                  <h3 className="font-sans font-bold text-white text-[12px] tracking-wide mb-1.5 uppercase">
+                    {t('cta2Title')}
+                  </h3>
+                  <p className="font-sans text-[13px] text-white/75 leading-snug mb-4 min-h-[40px]">
+                    {t('cta2Desc')}
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.18em] transition-colors duration-300">
+                    {t('cta2Link')} <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  </span>
+                </div>
               </Link>
 
               {/* CTA 3: Transiger */}
               <Link
                 href="/grade"
-                className="group bg-white/5 backdrop-blur-sm border border-white/20 p-4 hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 p-5 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
               >
-                <h3 className="font-sans font-bold text-white text-[13px] tracking-[-0.01em] mb-2 uppercase">
-                  {t('cta3Title')}
-                </h3>
-                <p className="font-sans text-[11px] text-white/70 leading-relaxed mb-3">
-                  {t('cta3Desc')}
-                </p>
-                <span className="inline-flex items-center gap-1 font-sans text-[10px] text-white/90 uppercase tracking-[0.16em]">
-                  {t('cta3Link')} <ArrowUpRight size={11} />
-                </span>
+                <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
+                <div className="relative">
+                  <h3 className="font-sans font-bold text-white text-[12px] tracking-wide mb-1.5 uppercase">
+                    {t('cta3Title')}
+                  </h3>
+                  <p className="font-sans text-[13px] text-white/75 leading-snug mb-4 min-h-[40px]">
+                    {t('cta3Desc')}
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.18em] transition-colors duration-300">
+                    {t('cta3Link')} <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  </span>
+                </div>
               </Link>
 
               {/* CTA 4: Placer */}
               <Link
                 href="/talent"
-                className="group bg-white/5 backdrop-blur-sm border border-white/20 p-4 hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 p-5 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
               >
-                <h3 className="font-sans font-bold text-white text-[13px] tracking-[-0.01em] mb-2 uppercase">
-                  {t('cta4Title')}
-                </h3>
-                <p className="font-sans text-[11px] text-white/70 leading-relaxed mb-3">
-                  {t('cta4Desc')}
-                </p>
-                <span className="inline-flex items-center gap-1 font-sans text-[10px] text-white/90 uppercase tracking-[0.16em]">
-                  {t('cta4Link')} <ArrowUpRight size={11} />
-                </span>
+                <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
+                <div className="relative">
+                  <h3 className="font-sans font-bold text-white text-[12px] tracking-wide mb-1.5 uppercase">
+                    {t('cta4Title')}
+                  </h3>
+                  <p className="font-sans text-[13px] text-white/75 leading-snug mb-4 min-h-[40px]">
+                    {t('cta4Desc')}
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.18em] transition-colors duration-300">
+                    {t('cta4Link')} <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  </span>
+                </div>
               </Link>
 
               {/* CTA 5: S'informer */}
               <Link
                 href="/magazine"
-                className="group bg-white/5 backdrop-blur-sm border border-white/20 p-4 hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 p-5 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
               >
-                <h3 className="font-sans font-bold text-white text-[13px] tracking-[-0.01em] mb-2 uppercase">
-                  {t('cta5Title')}
-                </h3>
-                <p className="font-sans text-[11px] text-white/70 leading-relaxed mb-3">
-                  {t('cta5Desc')}
-                </p>
-                <span className="inline-flex items-center gap-1 font-sans text-[10px] text-white/90 uppercase tracking-[0.16em]">
-                  {t('cta5Link')} <ArrowUpRight size={11} />
-                </span>
+                <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
+                <div className="relative">
+                  <h3 className="font-sans font-bold text-white text-[12px] tracking-wide mb-1.5 uppercase">
+                    {t('cta5Title')}
+                  </h3>
+                  <p className="font-sans text-[13px] text-white/75 leading-snug mb-4 min-h-[40px]">
+                    {t('cta5Desc')}
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.18em] transition-colors duration-300">
+                    {t('cta5Link')} <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  </span>
+                </div>
               </Link>
             </div>
           </div>
