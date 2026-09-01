@@ -85,7 +85,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
         {/* Card texte — mobile: pleine largeur haut / desktop: absolute centre-gauche */}
         <div
           className="absolute z-10 bg-white space-y-4
-            inset-x-4 top-20
+            inset-x-4 top-28
             md:inset-x-[unset] md:left-[12%] md:right-auto md:top-1/2 md:-translate-y-1/2"
           style={{ maxWidth: 380, padding: '36px 40px' }}
         >
