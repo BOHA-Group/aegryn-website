@@ -16,10 +16,17 @@ BEGIN
   -- Drop l'ancienne contrainte si elle existe
   ALTER TABLE profiles DROP CONSTRAINT IF EXISTS profiles_role_check;
   
-  -- Mettre à jour les rôles invalides vers 'buyer' (rôle par défaut le plus sûr)
-  -- Cela ne devrait affecter que les données de test/dev
+  -- Mettre à jour les rôles invalides
+  -- Si le profil a 'admin' dans roles[], mettre role='admin'
+  -- Sinon, mettre role='buyer' par défaut
   UPDATE profiles 
-  SET role = 'buyer' 
+  SET role = CASE 
+    WHEN 'admin' = ANY(roles) THEN 'admin'
+    WHEN 'seller' = ANY(roles) THEN 'seller'
+    WHEN 'partner' = ANY(roles) THEN 'partner'
+    WHEN 'buyer' = ANY(roles) THEN 'buyer'
+    ELSE 'buyer'
+  END
   WHERE role NOT IN ('buyer', 'seller', 'partner', 'admin', 'internal');
   
   -- Créer la nouvelle contrainte avec le rôle "internal"
