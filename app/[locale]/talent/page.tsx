@@ -1,6 +1,8 @@
 import { getTranslations } from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
+import TalentHiringForm from '@/components/forms/TalentHiringForm'
+import TalentCandidateForm from '@/components/forms/TalentCandidateForm'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -182,20 +184,29 @@ export default async function TalentPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Placeholder for forms — to be implemented in ÉTAPE 6 */}
+      {/* Hiring Form */}
       <section id="hiring-form" className="py-24 border-b border-ag-border">
         <div className="max-w-3xl mx-auto px-6 md:px-12">
-          <p className="text-center text-ag-gray text-[14px]">
-            {t('forms.hiring.placeholder')}
+          <h2 className="font-sans font-bold text-ag-black text-[32px] tracking-[-0.02em] mb-4">
+            {t('forms.hiring.title')}
+          </h2>
+          <p className="text-[14px] text-ag-gray leading-relaxed mb-10">
+            {t('forms.hiring.desc')}
           </p>
+          <TalentHiringForm />
         </div>
       </section>
 
+      {/* Candidate Form */}
       <section id="candidate-form" className="py-24 bg-ag-off-white">
         <div className="max-w-3xl mx-auto px-6 md:px-12">
-          <p className="text-center text-ag-gray text-[14px]">
-            {t('forms.candidate.placeholder')}
+          <h2 className="font-sans font-bold text-ag-black text-[32px] tracking-[-0.02em] mb-4">
+            {t('forms.candidate.title')}
+          </h2>
+          <p className="text-[14px] text-ag-gray leading-relaxed mb-10">
+            {t('forms.candidate.desc')}
           </p>
+          <TalentCandidateForm />
         </div>
       </section>
     </>
