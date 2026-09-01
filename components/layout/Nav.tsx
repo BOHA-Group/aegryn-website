@@ -39,6 +39,7 @@ const CRAFT_TRANSACT_LINKS: { labelKey: string; href: LinkHref }[] = [
 // Nos solutions - CORE assets
 const SOLUTIONS_CORE: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'solutionsSubblink', href: '/assets' },
+  { labelKey: 'solutionsKryv',     href: '/assets' },
 ]
 
 // Nos solutions - PORTFOLIO assets
@@ -71,7 +72,7 @@ const WHO_GROUP_LINKS: { labelKey: string; href: LinkHref }[] = [
 // Qui sommes-nous - Nous rejoindre
 const WHO_JOIN_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'whoCareers',   href: '/career' },
-  { labelKey: 'whoTalent',    href: '/career' },
+  { labelKey: 'whoTalent',    href: '/talent' as LinkHref },
   { labelKey: 'whoAlliances', href: '/alliances' },
 ]
 
