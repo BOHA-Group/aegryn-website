@@ -17,6 +17,9 @@ const hiringSchema = z.object({
   location: z.string().min(2, 'Location required'),
   budgetAnnualChf: z.string().optional(),
   urgency: z.enum(['immediate', 'month', 'quarter', 'flexible']),
+  gdprConsent: z.boolean().refine((val) => val === true, {
+    message: 'GDPR consent required',
+  }),
   locale: z.string().default('fr'),
 })
 

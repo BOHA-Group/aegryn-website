@@ -16,6 +16,9 @@ const candidateSchema = z.object({
   cvFilename: z.string().optional(),
   motivation: z.string().min(50, 'Motivation letter too short'),
   availability: z.string().optional(),
+  gdprConsent: z.boolean().refine((val) => val === true, {
+    message: 'GDPR consent required',
+  }),
   locale: z.string().default('fr'),
 })
 
