@@ -112,7 +112,9 @@
     "whoCareers": "Careers",
     "whoTalent": "Recruitment & Placement",
     "whoAlliances": "Become a partner",
-    "talent": "Talent"
+    "talent": "Talent",
+    "industries": "Industries",
+    "industriesDesc": "Tous secteurs"
   },
   "hero": {
     "tagline": "We refuse to let a solid asset disappear into a poorly prepared transaction.",
@@ -6767,7 +6769,25 @@
       "availabilityPlaceholder": "E.g.: Immediate, 3-month notice, Flexible...",
       "submit": "Submit application",
       "success": "Thank you. Your application has been registered. We will contact you if your profile matches our mandates.",
-      "error": "An error occurred. Please try again."
+      "error": "An error occurred. Please try again.",
+      "benefits": {
+        "confidential": {
+          "desc": "Votre recherche reste strictement confidentielle. Nous ne partageons votre profil qu'avec votre accord explicite et uniquement auprès d'entreprises pré-qualifiées.",
+          "title": "Confidentialité garantie"
+        },
+        "curated": {
+          "desc": "Nous ne vous présentons que des postes executive alignés avec votre expertise, vos ambitions et votre niveau de séniorité. Zéro spam, 100% pertinence.",
+          "title": "Opportunités triées sur mesure"
+        },
+        "network": {
+          "desc": "Accès direct aux décideurs des entreprises tech les plus innovantes : scale-ups en hyper-croissance, leaders SaaS, fintechs, deeptech et groupes en transformation digitale.",
+          "title": "Réseau européen premium"
+        }
+      },
+      "intro": {
+        "desc": "Aegryn Talent vous connecte aux scale-ups et leaders tech européens qui recrutent des profils executive. Confidentialité absolue, processus premium, opportunités triées.",
+        "title": "Accédez aux opportunités tech les plus exclusives d'Europe"
+      }
     },
     "admin": {
       "title": "Talent Management",
@@ -6866,6 +6886,163 @@
       "magazineDesc": "Quarterly publication on tech transactions, AI, exits and M&A trends in Europe.",
       "magazineCta": "Read the magazine",
       "responseTime": "Our team will contact you within 48h"
+    },
+    "employer": {
+      "intro": {
+        "desc": "Aegryn Talent identifie et place les profils tech rares qui accélèrent votre croissance. Notre approche combine expertise sectorielle, réseau européen et processus de certification rigoureux.",
+        "title": "Recrutez les leaders qui transforment"
+      },
+      "process": {
+        "brief": {
+          "desc": "Analyse approfondie de votre organisation, culture, enjeux techniques et ambitions de croissance.",
+          "title": "Brief stratégique"
+        },
+        "placement": {
+          "desc": "Accompagnement jusqu'à l'intégration réussie. Garantie de remplacement et suivi post-placement.",
+          "title": "Placement & suivi"
+        },
+        "search": {
+          "desc": "Identification des meilleurs profils via notre réseau européen, approche directe et évaluation rigoureuse.",
+          "title": "Recherche ciblée"
+        },
+        "title": "Notre processus"
+      },
+      "profiles": {
+        "cdo": {
+          "desc": "Architectes de la stratégie data : data engineering, analytics, gouvernance, monétisation et culture data.",
+          "title": "Chief Data Officer & VP Data"
+        },
+        "cio": {
+          "desc": "Responsables infrastructure IT, cloud, DevOps, SRE, modernisation legacy et transformation digitale.",
+          "title": "CIO & VP Infrastructure"
+        },
+        "ciso": {
+          "desc": "Experts en cybersécurité, conformité RGPD, gestion des risques, résilience et gouvernance. Profils certifiés.",
+          "title": "CISO & VP Security"
+        },
+        "cpo": {
+          "desc": "Visionnaires produit tech : roadmap, discovery, growth, product-led growth et stratégie go-to-market.",
+          "title": "Chief Product Officer & VP Product"
+        },
+        "cto": {
+          "desc": "Leaders techniques capables de structurer, scaler et innover. Maîtrise des architectures modernes, IA, cloud, sécurité.",
+          "title": "CTO & VP Engineering"
+        },
+        "headAI": {
+          "desc": "Leaders en intelligence artificielle, machine learning, GenAI, stratégie data-driven et transformation IA.",
+          "title": "Chief AI Officer & VP AI"
+        },
+        "headML": {
+          "desc": "Experts ML/AI : deep learning, NLP, computer vision, MLOps, recherche appliquée et déploiement à l'échelle.",
+          "title": "Head of Machine Learning & AI Research"
+        },
+        "headPlatform": {
+          "desc": "Architectes de plateformes internes : developer productivity, API design, infrastructure as code, observability.",
+          "title": "Head of Platform & Developer Experience"
+        },
+        "headQA": {
+          "desc": "Leaders qualité : test automation, CI/CD, performance testing, shift-left et culture quality engineering.",
+          "title": "VP Quality & Head of QA Engineering"
+        },
+        "intro": "Profils executive que nous plaçons (niveau C-Level, VP, Director)",
+        "vpe": {
+          "desc": "Leaders d'équipes techniques : scaling, culture engineering, delivery, architecture et excellence opérationnelle.",
+          "title": "VP Engineering & Engineering Director"
+        }
+      }
+    },
+    "forms": {
+      "candidate": {
+        "availability": "Disponibilité",
+        "availabilityPlaceholder": "Ex: Immédiate, Préavis 3 mois, Flexible...",
+        "cv": "CV (PDF)",
+        "cvNote": "Votre CV sera demandé lors de l'entretien si votre profil correspond à nos mandats.",
+        "cvUpload": "Déposer votre CV",
+        "cvUploaded": "CV déposé",
+        "desc": "Partagez votre profil et accédez à des opportunités exclusives.",
+        "email": "Email",
+        "emailPlaceholder": "votre@email.com",
+        "error": "Une erreur est survenue. Veuillez réessayer.",
+        "errorMessage": "Une erreur est survenue. Veuillez réessayer.",
+        "fullName": "Nom complet",
+        "fullNamePlaceholder": "Prénom Nom",
+        "gdprConsent": "J'accepte que mes données personnelles soient traitées par Aegryn dans le cadre de ma candidature/demande. Je peux demander la suppression de mes données à tout moment en contactant",
+        "linkedin": "LinkedIn",
+        "linkedinPlaceholder": "https://linkedin.com/in/...",
+        "motivation": "Lettre de motivation",
+        "motivationPlaceholder": "Parlez-nous de votre parcours, vos compétences clés, et ce que vous recherchez...",
+        "phone": "Téléphone",
+        "phonePlaceholder": "+41 XX XXX XX XX",
+        "submit": "Envoyer ma candidature",
+        "submitting": "Envoi en cours...",
+        "success": "Merci. Votre candidature a été enregistrée. Nous vous contacterons si votre profil correspond à nos mandats.",
+        "successMessage": "Merci. Votre candidature a été enregistrée. Nous vous contacterons si votre profil correspond à nos mandats.",
+        "title": "Postuler comme candidat"
+      },
+      "hiring": {
+        "budget": "Budget annuel (CHF)",
+        "budgetPlaceholder": "Ex: 120'000 - 150'000 CHF",
+        "company": "Entreprise",
+        "companyPlaceholder": "Nom de votre entreprise",
+        "contactName": "Nom du contact",
+        "contactNamePlaceholder": "Votre nom complet",
+        "desc": "Décrivez le profil que vous recherchez. Nous vous recontacterons sous 48h.",
+        "email": "Email",
+        "emailPlaceholder": "votre@email.com",
+        "error": "Une erreur est survenue. Veuillez réessayer.",
+        "errorMessage": "Une erreur est survenue. Veuillez réessayer.",
+        "gdprConsent": "J'accepte que mes données personnelles soient traitées par Aegryn dans le cadre de ma candidature/demande. Je peux demander la suppression de mes données à tout moment en contactant",
+        "location": "Localisation",
+        "locationPlaceholder": "Ex: Lausanne, Remote Europe, Hybride Genève...",
+        "phone": "Téléphone",
+        "phonePlaceholder": "+41 XX XXX XX XX",
+        "roleDesc": "Description du poste",
+        "roleDescPlaceholder": "Missions, responsabilités, stack technique, contexte...",
+        "roleDescription": "Description du rôle *",
+        "roleDescriptionPlaceholder": "Missions, responsabilités, stack technique, contexte...",
+        "roleTitle": "Intitulé du poste",
+        "roleTitlePlaceholder": "Ex: CTO, Lead DevOps, Data Scientist...",
+        "submit": "Envoyer le mandat",
+        "submitting": "Envoi en cours...",
+        "success": "Merci. Votre mandat a été enregistré. Nous vous contacterons sous 48h.",
+        "successMessage": "Merci. Votre demande a été enregistrée. Nous vous contacterons sous 48h.",
+        "title": "Lancer un mandat de recrutement",
+        "urgency": "Urgence",
+        "urgencyFlexible": "Flexible",
+        "urgencyImmediate": "Immédiat (< 1 mois)",
+        "urgencyMonth": "Dans le mois",
+        "urgencyQuarter": "Dans le trimestre"
+      }
     }
+  },
+  "industries": {
+    "desc": "Aegryn intervient dans tous les secteurs d'activité : conception d'actifs tech, advisory stratégique, recrutement executive, fusions & acquisitions. Notre expertise couvre l'ensemble de l'économie européenne.",
+    "footerNote": "Cette liste n'est pas exhaustive. Aegryn intervient dans tout secteur où la technologie, l'innovation et la transformation digitale créent de la valeur.",
+    "list": [
+      "Aérospatiale & Défense",
+      "Agriculture & Agroalimentaire",
+      "Automobile & Mobilité",
+      "Banque & Services Financiers",
+      "Chimie & Sciences des Matériaux",
+      "Construction & Infrastructures",
+      "Cybersécurité & Protection des Données",
+      "E-commerce & Retail",
+      "Éducation & EdTech",
+      "Énergie & Utilities",
+      "Fintech & Blockchain",
+      "Healthtech & Biotechnologie",
+      "Hôtellerie & Tourisme",
+      "Immobilier & PropTech",
+      "Industrie & Manufacturing",
+      "Logistique & Supply Chain",
+      "Luxe & Biens de Consommation",
+      "Médias & Divertissement",
+      "Ressources Naturelles & Mines",
+      "Santé & Dispositifs Médicaux",
+      "Services Professionnels",
+      "Télécommunications",
+      "Transport & Logistique"
+    ],
+    "title": "Industries couvertes"
   }
 }
