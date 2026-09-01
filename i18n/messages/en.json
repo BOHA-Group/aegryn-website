@@ -3407,13 +3407,13 @@
   },
   "acqStrip": {
     "label": "Acquisition Support",
-    "title": "Your next acquisition,\nsurrounded by the right experts.",
+    "title": "Every transaction,\nsurrounded by the right experts.",
     "desc": "Aegryn assembles a network of selected specialists around each transaction: financing, due diligence, structuring and qualified investor networks.",
     "chip1": "VC co-investment",
     "chip2": "Bridge financing",
     "chip3": "Earnout structure",
     "cta": "Get in touch",
-    "sublabel": "Advisory Transaction",
+    "sublabel": "ADVISE · Advisory Transaction",
     "domains": [
       {
         "title": "Pre-transaction",

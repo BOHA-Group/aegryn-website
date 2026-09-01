@@ -3297,13 +3297,13 @@
   },
   "acqStrip": {
     "label": "Akquisitionsunterstützung",
-    "title": "Ihre nächste Akquisition,\nbegleitet von den richtigen Experten.",
+    "title": "Jede Transaktion,\nbegleitet von den richtigen Experten.",
     "desc": "Aegryn koordiniert für jede Transaktion ein Netzwerk ausgewählter Spezialisten: Finanzierung, Sorgfaltsprüfung, Strukturierung und qualifizierte Investorennetzwerke.",
     "chip1": "VC-Koinvestition",
     "chip2": "Überbrückungsfinanzierung",
     "chip3": "Earn-out-Struktur",
     "cta": "Kontakt aufnehmen",
-    "sublabel": "Advisory Transaction",
+    "sublabel": "BEGLEITEN · Advisory Transaction",
     "domains": [
       {
         "title": "Vor der Transaktion",

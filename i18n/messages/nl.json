@@ -3297,13 +3297,13 @@
   },
   "acqStrip": {
     "label": "Acquisitieondersteuning",
-    "title": "Uw volgende acquisitie,\nomringd door de juiste experts.",
+    "title": "Elke transactie,\nomringd door de juiste experts.",
     "desc": "Aegryn coördineert rond elke transactie een netwerk van geselecteerde specialisten: financiering, due diligence, structurering en netwerken van gekwalificeerde investeerders.",
     "chip1": "VC co-investering",
     "chip2": "Overbruggingsfinanciering",
     "chip3": "Earn-out-structuur",
     "cta": "Contact opnemen",
-    "sublabel": "Advisory Transaction",
+    "sublabel": "BEGELEIDEN · Advisory Transaction",
     "domains": [
       {
         "title": "Pre-transactie",

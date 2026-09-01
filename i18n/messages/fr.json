@@ -3379,13 +3379,13 @@
   },
   "acqStrip": {
     "label": "Accompagnement à l'acquisition",
-    "title": "Votre prochaine acquisition,\nentourée des bons experts.",
+    "title": "Chaque transaction,\nentourée des bons experts.",
     "desc": "Aegryn orchestre autour de chaque transaction un réseau de spécialistes sélectionnés : financement, due diligence, structuration et réseau d'investisseurs qualifiés.",
     "chip1": "Co-investissement VC",
     "chip2": "Financement relais",
     "chip3": "Structure earn-out",
     "cta": "Prendre contact",
-    "sublabel": "Advisory Transaction",
+    "sublabel": "ACCOMPAGNER · Advisory Transaction",
     "domains": [
       {
         "title": "Pré-transaction",
