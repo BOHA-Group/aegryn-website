@@ -167,16 +167,20 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
           <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('solutionsCoreDesc')}
           </p>
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-3">
             {SOLUTIONS_CORE.map(({ labelKey, href }) => (
-              <Link
-                key={labelKey}
-                href={href}
-                onClick={onClose}
-                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
-              >
-                {t(labelKey)}
-              </Link>
+              <div key={labelKey}>
+                <Link
+                  href={href}
+                  onClick={onClose}
+                  className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors font-semibold block"
+                >
+                  {t(labelKey)}
+                </Link>
+                <p className="font-sans text-[10px] text-ag-gray-light mt-0.5 leading-relaxed">
+                  {t(`${labelKey}Desc`)}
+                </p>
+              </div>
             ))}
           </div>
         </div>
