@@ -29,8 +29,9 @@
     "transactionResults": "Transazioni concluse",
     "gradeSystem": "Sistema di grade",
     "gradeMethod": "Metodologia",
-    "gradeSubmit": "Invia per certificazione",
+    "gradeSubmit": "Certificare un asset",
     "gradePartners": "Rete di esperti",
+    "roadmap": "Roadmap",
     "servicesBuild": "Sviluppo di asset",
     "servicesAdvisory": "Advisory Tech",
     "servicesAlliances": "Rete di partner",
@@ -117,10 +118,11 @@
     "industriesDesc": "Tous secteurs"
   },
   "hero": {
-    "tagline": "Rifiutiamo che un asset solido scompaia in una transazione mal preparata.",
+    "tagline": "Ci rifiutiamo di lasciare che un asset solido scompaia in una transazione mal preparata.",
+    "metaDescription": "AEGRYN certifica e negozia asset tech in Europa. Cinque discipline: ingegneria degli asset, advisory, transazione M&A, talento e intelligenza di mercato. Ancorato in Svizzera.",
     "eyebrow": "INFRASTRUTTURA DI CERTIFICAZIONE E TRANSAZIONE TECH",
     "title": "Raro per selezione.",
-    "sub": "Aegryn progetta, certifica e negozia asset tech in Europa. Consulenza, talento, intelligence di mercato: cinque discipline. Uno standard.",
+    "sub": "Aegryn progetta, certifica e negozia asset tech in Europa. Advisory, talento, intelligenza di mercato: cinque discipline. Uno standard.",
     "cta": "VENDI UN ASSET CERTIFICATO",
     "strip": "INFRASTRUTTURA DI CERTIFICAZIONE E TRANSAZIONE TECH",
     "geo": "Svizzera · Europa · Global",
@@ -392,9 +394,9 @@
     "cta": "Sottometti il tuo asset per la certificazione"
   },
   "aboutSection": {
-    "label": "Chi è Aegryn",
-    "title": "Tre discipline.\nUno standard di mercato.",
-    "desc": "Aegryn progetta e sviluppa asset tech, li certifica sotto un label indipendente, e li transige attraverso un processo riservato tra venditori qualificati e acquirenti. La prima infrastruttura di fiducia per il M&A tech in Europa. La rivista Aegryn documenta questo mercato ogni trimestre.",
+    "label": "Su Aegryn",
+    "title": "Cinque discipline.\nUno standard di mercato.",
+    "desc": "Aegryn progetta asset tech, li certifica sotto un marchio indipendente, li negozia in un circolo chiuso, supporta imprenditori e acquirenti, e documenta il mercato ogni trimestre. La prima infrastruttura di fiducia per il M&A tech in Europa.",
     "tagline": "CERTIFICATO IN SVIZZERA. RIFERIMENTO IN EUROPA.",
     "cta": "Chi è Aegryn",
     "quote": "Un asset tech senza certificazione indipendente è un valore senza prova. Aegryn fornisce la prova su ogni asset, ad ogni trasferimento.",
@@ -417,19 +419,27 @@
   },
   "missionSection": {
     "label": "Il Modello Aegryn",
-    "sub": "Tre discipline. Un ecosistema integrato.",
+    "sub": "Cinque discipline. Un ecosistema integrato.",
     "items": [
       {
-        "title": "CONCEZIONE",
-        "desc": "Progettiamo e gestiamo asset tech, SaaS, marketplace, protocolli IA, strutturati sin dall'origine per essere certificabili e trasferibili. Ogni asset resiste all'audit più rigoroso."
+        "title": "PROGETTAZIONE",
+        "desc": "Progettiamo e operiamo asset tech, SaaS, marketplace, protocolli IA, strutturati fin dall'origine per essere certificabili e trasferibili. Ogni asset resiste all'audit più rigoroso."
       },
       {
         "title": "CERTIFICAZIONE",
-        "desc": "Certifichiamo asset secondo un label indipendente strutturato su 4 dimensioni: Codice, IP, Finanze, Sicurezza. Un protocollo riproducibile, tracciabile e conclusivo."
+        "desc": "Certifichiamo asset sotto un marchio indipendente strutturato su 4 dimensioni: Codice, IP, Finanza, Sicurezza. Un protocollo riproducibile, tracciabile e conclusivo."
       },
       {
-        "title": "CESSIONE M&A",
-        "desc": "Transigiamo asset certificati attraverso un processo riservato: deposito istituzionale, cerchia di acquirenti pre-qualificati, mandato esclusivo di 60 giorni. Meno del 25% degli asset presentati viene accettato."
+        "title": "TRANSAZIONE M&A",
+        "desc": "Negoziamo asset certificati attraverso un processo confidenziale: deposito istituzionale, cerchia di acquirenti pre-qualificati, mandato esclusivo di 60 giorni. Meno del 25% degli asset presentati vengono accettati."
+      },
+      {
+        "title": "ACCOMPAGNARE",
+        "desc": "Supportiamo imprenditori e acquirenti: Tech Advisory (cybersecurity, IA, compliance), Transaction Advisory (strutturazione, due diligence, closing) e Talento (reclutamento e collocamento di profili tech)."
+      },
+      {
+        "title": "INTELLIGENCE",
+        "desc": "Documentiamo il mercato M&A tech europeo: Rivista trimestrale Aegryn, Brief settimanale, Articoli e analisi. Una visione chiara del mercato, per chi lo fa."
       }
     ]
   },

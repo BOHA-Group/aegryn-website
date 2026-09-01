@@ -29,8 +29,9 @@
     "transactionResults": "Abgeschlossene Transaktionen",
     "gradeSystem": "Grade-System",
     "gradeMethod": "Methodik",
-    "gradeSubmit": "Zur Zertifizierung einreichen",
+    "gradeSubmit": "Asset zertifizieren",
     "gradePartners": "Expertennetzwerk",
+    "roadmap": "Roadmap",
     "servicesBuild": "Asset-Entwicklung",
     "servicesAdvisory": "Advisory Tech",
     "servicesAlliances": "Partnernetzwerk",
@@ -118,6 +119,7 @@
   },
   "hero": {
     "tagline": "Wir weigern uns, dass ein solides Asset in einer schlecht vorbereiteten Transaktion verschwindet.",
+    "metaDescription": "AEGRYN zertifiziert und handelt Tech-Assets in Europa. Fünf Disziplinen: Asset Engineering, Beratung, M&A-Transaktion, Talent und Marktintelligenz. Verankert in der Schweiz.",
     "eyebrow": "INFRASTRUKTUR FÜR TECH-ZERTIFIZIERUNG UND TRANSAKTION",
     "title": "Selten durch Auswahl.",
     "sub": "Aegryn entwirft, zertifiziert und handelt Tech-Assets in Europa. Beratung, Talent, Marktintelligenz: fünf Disziplinen. Ein Standard.",
@@ -393,8 +395,8 @@
   },
   "aboutSection": {
     "label": "Über Aegryn",
-    "title": "Drei Disziplinen.\nEin Marktstandard.",
-    "desc": "Aegryn entwickelt und konzipiert Tech-Assets, zertifiziert sie unter einem unabhängigen Label und transagiert sie über einen vertraulichen Prozess zwischen qualifizierten Verkäufern und Käufern. Die erste Vertrauensinfrastruktur für Tech-M&A in Europa. Das Aegryn Magazin dokumentiert diesen Markt jedes Quartal.",
+    "title": "Fünf Disziplinen.\nEin Marktstandard.",
+    "desc": "Aegryn entwickelt Tech-Assets, zertifiziert sie unter einem unabhängigen Label, transagiert sie in einem geschlossenen Kreis, unterstützt Unternehmer und Erwerber und dokumentiert den Markt jedes Quartal. Die erste Vertrauensinfrastruktur für Tech-M&A in Europa.",
     "tagline": "ZERTIFIZIERT IN DER SCHWEIZ. REFERENZ IN EUROPA.",
     "cta": "Über Aegryn",
     "quote": "Ein Tech-Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. Aegryn liefert den Beweis bei jedem Asset, bei jedem Transfer.",
@@ -417,7 +419,7 @@
   },
   "missionSection": {
     "label": "Das Aegryn-Modell",
-    "sub": "Drei Disziplinen. Ein integriertes Ökosystem.",
+    "sub": "Fünf Disziplinen. Ein integriertes Ökosystem.",
     "items": [
       {
         "title": "KONZEPTION",
@@ -430,6 +432,14 @@
       {
         "title": "M&A-TRANSAKTION",
         "desc": "Wir transagieren zertifizierte Assets über einen vertraulichen Prozess: institutionelles Treuhand, qualifizierter Käuferkreis, exklusives 60-Tage-Mandat. Weniger als 25% der eingereichten Assets werden akzeptiert."
+      },
+      {
+        "title": "BEGLEITEN",
+        "desc": "Wir unterstützen Unternehmer und Erwerber: Tech Advisory (Cybersicherheit, KI, Compliance), Transaction Advisory (Strukturierung, Due Diligence, Closing) und Talent (Rekrutierung und Platzierung von Tech-Profilen)."
+      },
+      {
+        "title": "INTELLIGENCE",
+        "desc": "Wir dokumentieren den europäischen Tech-M&A-Markt: Vierteljährliches Aegryn Magazin, wöchentlicher Brief, Artikel und Analysen. Ein klarer Blick auf den Markt, für diejenigen, die ihn machen."
       }
     ]
   },

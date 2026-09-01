@@ -29,8 +29,9 @@
     "transactionResults": "Afgesloten transacties",
     "gradeSystem": "Grade-systeem",
     "gradeMethod": "Methodologie",
-    "gradeSubmit": "Indienen voor certificering",
-    "gradePartners": "Expertnetwerk",
+    "gradeSubmit": "Een asset certificeren",
+    "gradePartners": "Expertennetwerk",
+    "roadmap": "Roadmap",
     "servicesBuild": "Asset ontwikkeling",
     "servicesAdvisory": "Advisory Tech",
     "servicesAlliances": "Partnernetwerk",
@@ -118,9 +119,10 @@
   },
   "hero": {
     "tagline": "Wij weigeren dat een solide asset verdwijnt in een slecht voorbereide transactie.",
-    "eyebrow": "INFRASTRUCTUUR VOOR TECH-CERTIFICERING EN TRANSACTIE",
+    "metaDescription": "AEGRYN certificeert en verhandelt tech-assets in Europa. Vijf disciplines: asset engineering, advisory, M&A-transactie, talent en marktintelligentie. Verankerd in Zwitserland.",
+    "eyebrow": "TECH CERTIFICERINGS- EN TRANSACTIE-INFRASTRUCTUUR",
     "title": "Zeldzaam door selectie.",
-    "sub": "Aegryn ontwerpt, certificeert en verhandelt tech-assets in Europa. Advies, talent, marktintelligentie: vijf disciplines. Eén standaard.",
+    "sub": "Aegryn ontwerpt, certificeert en verhandelt tech-assets in Europa. Advisory, talent, marktintelligentie: vijf disciplines. Één standaard.",
     "cta": "VERKOOP EEN GECERTIFICEERD ASSET",
     "strip": "INFRASTRUCTUUR VOOR TECH-CERTIFICERING EN TRANSACTIE",
     "geo": "Zwitserland · Europa · Global",
@@ -393,8 +395,8 @@
   },
   "aboutSection": {
     "label": "Over Aegryn",
-    "title": "Drie disciplines.\nEén marktstandaard.",
-    "desc": "Aegryn ontwerpt en ontwikkelt tech-assets, certificeert ze onder een onafhankelijk label en transageert ze via een vertrouwelijk proces tussen gekwalificeerde verkopers en kopers. De eerste vertrouwensinfrastructuur voor tech-M&A in Europa. Het Aegryn Magazine documenteert deze markt elk kwartaal.",
+    "title": "Vijf disciplines.\nÉén marktstandaard.",
+    "desc": "Aegryn ontwerpt tech-assets, certificeert ze onder een onafhankelijk label, verhandelt ze in een gesloten kring, ondersteunt ondernemers en kopers, en documenteert de markt elk kwartaal. De eerste vertrouwensinfrastructuur voor tech M&A in Europa.",
     "tagline": "GECERTIFICEERD IN ZWITSERLAND. REFERENTIE IN EUROPA.",
     "cta": "Over Aegryn",
     "quote": "Een tech-asset zonder onafhankelijke certificering is een waarde zonder bewijs. Aegryn levert het bewijs bij elk asset, bij elke overdracht.",
@@ -416,20 +418,28 @@
     ]
   },
   "missionSection": {
-    "label": "Het Aegryn-model",
-    "sub": "Drie disciplines. Één geïntegreerd ecosysteem.",
+    "label": "Het Aegryn Model",
+    "sub": "Vijf disciplines. Één geïntegreerd ecosysteem.",
     "items": [
       {
         "title": "ONTWERP",
-        "desc": "Wij ontwerpen en beheren tech-assets, SaaS, marktplaatsen, AI-protocollen, die vanaf de basis zijn opgezet om certificeerbaar en overdraagbaar te zijn. Elk asset doorstaat de strengste audit."
+        "desc": "We ontwerpen en exploiteren tech-assets, SaaS, marketplaces, AI-protocollen, vanaf het begin gestructureerd om certificeerbaar en overdraagbaar te zijn. Elk asset weerstaat de meest strikte audit."
       },
       {
         "title": "CERTIFICERING",
-        "desc": "Wij certificeren assets onder een onafhankelijk label dat is gestructureerd op 4 dimensies: Code, IP, Financiën, Beveiliging. Een reproduceerbaar, traceerbaar en sluitend protocol."
+        "desc": "We certificeren assets onder een onafhankelijk label gestructureerd over 4 dimensies: Code, IP, Financiën, Veiligheid. Een reproduceerbaar, traceerbaar en concluderend protocol."
       },
       {
-        "title": "M&A-OVERDRACHT",
-        "desc": "Wij transigeren gecertificeerde assets via een vertrouwelijk proces: institutioneel depot, kring van vooraf gekwalificeerde kopers, exclusief 60-daags mandaat. Minder dan 25% van de ingediende assets wordt geaccepteerd."
+        "title": "M&A TRANSACTIE",
+        "desc": "We verhandelen gecertificeerde assets via een vertrouwelijk proces: institutionele escrow, pre-gekwalificeerde koperskring, exclusief mandaat van 60 dagen. Minder dan 25% van de ingediende assets wordt geaccepteerd."
+      },
+      {
+        "title": "BEGELEIDEN",
+        "desc": "We ondersteunen ondernemers en kopers: Tech Advisory (cybersecurity, AI, compliance), Transaction Advisory (structurering, due diligence, closing) en Talent (werving en plaatsing van tech-profielen)."
+      },
+      {
+        "title": "INTELLIGENCE",
+        "desc": "We documenteren de Europese tech M&A-markt: Driemaandelijks Aegryn Magazine, Wekelijkse Brief, Artikelen en analyses. Een helder zicht op de markt, voor degenen die hem maken."
       }
     ]
   },
