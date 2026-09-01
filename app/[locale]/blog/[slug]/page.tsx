@@ -117,8 +117,8 @@ export default async function ArticlePage({ params }: Props) {
             {catLabel}
           </p>
           <h1
-            className="font-sans font-bold text-white leading-[1.08] tracking-[-0.03em] mb-6"
-            style={{ fontSize: 'clamp(28px,4vw,56px)' }}
+            className="font-sans font-bold text-white leading-[1.18] tracking-[-0.03em] mb-6"
+            style={{ fontSize: 'clamp(48px,6vw,86px)' }}
           >
             {getLocaleText(article.title, locale)}
           </h1>

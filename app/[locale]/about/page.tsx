@@ -62,8 +62,8 @@ export default function AboutPage() {
                 {t('hero.label')}
               </p>
               <h1
-                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8 whitespace-pre-line"
-                style={{ fontSize: 'clamp(52px,6.5vw,88px)' }}
+                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8 whitespace-pre-line"
+                style={{ fontSize: 'clamp(48px,6vw,86px)' }}
               >
                 {t('hero.title')}
               </h1>

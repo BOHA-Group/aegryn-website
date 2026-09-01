@@ -96,8 +96,8 @@ export default async function AssetPage({ params }: Props) {
           </div>
 
           <h1
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-6"
-            style={{ fontSize: 'clamp(56px,7vw,96px)' }}
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.18] max-w-3xl mb-6"
+            style={{ fontSize: 'clamp(48px,6vw,86px)' }}
           >
             {asset.name}
           </h1>

@@ -104,8 +104,8 @@ export default async function GlossairePage({ params }: Props) {
             {lang === 'fr' ? 'Aegryn — Ressources' : 'Aegryn — Resources'}
           </p>
           <h1
-            className="font-sans font-bold text-white leading-[1.06] tracking-[-0.03em] mb-5"
-            style={{ fontSize: 'clamp(32px,5vw,68px)' }}
+            className="font-sans font-bold text-white leading-[1.18] tracking-[-0.03em] mb-5"
+            style={{ fontSize: 'clamp(48px,6vw,86px)' }}
           >
             {lang === 'fr' ? 'Glossaire M&A tech' : 'Tech M&A Glossary'}
           </h1>
