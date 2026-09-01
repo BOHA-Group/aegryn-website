@@ -33,11 +33,19 @@ jobs:
         run: npm run build
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
+          RESEND_FROM_NAME: ${{ secrets.RESEND_FROM_NAME }}
+          RESEND_REPLY_TO: ${{ secrets.RESEND_REPLY_TO }}
+          RESEND_INTERNAL_TO: ${{ secrets.RESEND_INTERNAL_TO }}
           NEXT_PUBLIC_SITE_URL: https://aegryn.com
           NEXT_PUBLIC_GA_ID: G-YW7XT6BLT6
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           ADMIN_LEADS_TOKEN: ${{ secrets.ADMIN_LEADS_TOKEN }}
+          ADMIN_KYC_EMAIL: ${{ secrets.ADMIN_KYC_EMAIL }}
           STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
           STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          INDEXNOW_SECRET: ${{ secrets.INDEXNOW_SECRET }}
+          IP_HASH_SALT: ${{ secrets.IP_HASH_SALT }}
