@@ -110,6 +110,8 @@
     "whoCareers": "Carrières",
     "whoTalent": "Headhunting & Transition",
     "whoAlliances": "Devenir partenaire",
+    "industries": "Industries",
+    "industriesDesc": "Tous secteurs",
     "talent": "Talent"
   },
   "hero": {
@@ -6617,5 +6619,34 @@
       "notePlaceholder": "Ajouter une note interne...",
       "saveNote": "Enregistrer note"
     }
+  },
+  "industries": {
+    "title": "Industries couvertes",
+    "desc": "Aegryn accompagne les actifs tech dans tous les secteurs d'activité. Notre expertise couvre l'ensemble de l'économie européenne.",
+    "list": [
+      "Aérospatiale & Défense",
+      "Agriculture & Agroalimentaire",
+      "Automobile & Mobilité",
+      "Banque & Services Financiers",
+      "Chimie & Sciences des Matériaux",
+      "Construction & Infrastructures",
+      "Cybersécurité & Protection des Données",
+      "E-commerce & Retail",
+      "Éducation & EdTech",
+      "Énergie & Utilities",
+      "Fintech & Blockchain",
+      "Healthtech & Biotechnologie",
+      "Hôtellerie & Tourisme",
+      "Immobilier & PropTech",
+      "Industrie & Manufacturing",
+      "Logistique & Supply Chain",
+      "Luxe & Biens de Consommation",
+      "Médias & Divertissement",
+      "Ressources Naturelles & Mines",
+      "Santé & Dispositifs Médicaux",
+      "Services Professionnels",
+      "Télécommunications",
+      "Transport & Logistique"
+    ]
   }
 }
