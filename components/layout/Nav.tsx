@@ -59,7 +59,6 @@ const THINKING_MAGAZINE_LINKS: { labelKey: string; href: LinkHref }[] = [
 const THINKING_MARKET_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'thinkingMarketArticles',   href: '/blog' },
   { labelKey: 'thinkingMarketGlossary',   href: '/blog' },
-  { labelKey: 'thinkingMarketValuation',  href: '/grade' },
   { labelKey: 'thinkingMarketFAQ',        href: '/blog' },
 ]
 
@@ -166,20 +165,16 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
           <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('solutionsCoreDesc')}
           </p>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-1">
             {SOLUTIONS_CORE.map(({ labelKey, href }) => (
-              <div key={labelKey}>
-                <Link
-                  href={href}
-                  onClick={onClose}
-                  className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors font-semibold block"
-                >
-                  {t(labelKey)}
-                </Link>
-                <p className="font-sans text-[10px] text-ag-gray-light mt-0.5 leading-relaxed">
-                  {t(`${labelKey}Desc`)}
-                </p>
-              </div>
+              <Link
+                key={labelKey}
+                href={href}
+                onClick={onClose}
+                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+              >
+                {t(labelKey)}
+              </Link>
             ))}
           </div>
         </div>
