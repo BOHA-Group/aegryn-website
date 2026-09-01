@@ -1,17 +1,18 @@
 'use client'
 
 import { useState } from 'react'
-import { useForm } from 'react-hook-form'
+import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useTranslations } from 'next-intl'
 import { Loader2 } from 'lucide-react'
+import PhoneInput from '@/components/ui/PhoneInput'
 
 const hiringSchema = z.object({
   company: z.string().min(2, 'Company name required'),
   contactName: z.string().min(2, 'Contact name required'),
   email: z.string().email('Valid email required'),
-  phone: z.string().regex(/^\+?[1-9]\d{1,14}$/, 'Format international requis (ex: +41 79 123 45 67)').optional(),
+  phone: z.string().min(1, 'Téléphone requis').regex(/^\+\d{1,3}\s\d/, 'Format invalide').optional(),
   roleTitle: z.string().min(2, 'Role title required'),
   roleDescription: z.string().min(20, 'Role description too short (min 20 characters)'),
   location: z.string().min(2, 'Location required'),
@@ -30,6 +31,7 @@ export default function TalentHiringForm() {
     register,
     handleSubmit,
     reset,
+    control,
     formState: { errors },
   } = useForm<HiringFormData>({
     resolver: zodResolver(hiringSchema),
@@ -114,16 +116,18 @@ export default function TalentHiringForm() {
           <label className="block font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-gray mb-2">
             {t('phone')}
           </label>
-          <input
-            {...register('phone')}
-            type="tel"
-            pattern="^\+?[1-9]\d{1,14}$"
-            className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px]"
-            placeholder={t('phonePlaceholder')}
+          <Controller
+            name="phone"
+            control={control}
+            render={({ field }) => (
+              <PhoneInput
+                value={field.value}
+                onChange={field.onChange}
+                onBlur={field.onBlur}
+                error={errors.phone?.message}
+              />
+            )}
           />
-          {errors.phone && (
-            <p className="mt-1 text-[12px] text-red-600">{errors.phone.message}</p>
-          )}
         </div>
 
         {/* Role Title */}

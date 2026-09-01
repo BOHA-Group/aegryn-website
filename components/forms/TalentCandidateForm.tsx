@@ -1,16 +1,17 @@
 'use client'
 
 import { useState } from 'react'
-import { useForm } from 'react-hook-form'
+import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useTranslations } from 'next-intl'
 import { Loader2 } from 'lucide-react'
+import PhoneInput from '@/components/ui/PhoneInput'
 
 const candidateSchema = z.object({
   fullName: z.string().min(2, 'Full name required'),
   email: z.string().email('Valid email required'),
-  phone: z.string().regex(/^\+?[1-9]\d{1,14}$/, 'Format international requis (ex: +41 79 123 45 67)').optional(),
+  phone: z.string().min(1, 'Téléphone requis').regex(/^\+\d{1,3}\s\d/, 'Format invalide').optional(),
   linkedinUrl: z.string().url().optional().or(z.literal('')),
   motivation: z.string().min(50, 'Motivation letter too short (min 50 characters)'),
   availability: z.string().optional(),
@@ -27,6 +28,7 @@ export default function TalentCandidateForm() {
     register,
     handleSubmit,
     reset,
+    control,
     formState: { errors },
   } = useForm<CandidateFormData>({
     resolver: zodResolver(candidateSchema),
@@ -95,16 +97,18 @@ export default function TalentCandidateForm() {
           <label className="block font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-gray mb-2">
             {t('phone')}
           </label>
-          <input
-            {...register('phone')}
-            type="tel"
-            pattern="^\+?[1-9]\d{1,14}$"
-            className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px]"
-            placeholder={t('phonePlaceholder')}
+          <Controller
+            name="phone"
+            control={control}
+            render={({ field }) => (
+              <PhoneInput
+                value={field.value}
+                onChange={field.onChange}
+                onBlur={field.onBlur}
+                error={errors.phone?.message}
+              />
+            )}
           />
-          {errors.phone && (
-            <p className="mt-1 text-[12px] text-red-600">{errors.phone.message}</p>
-          )}
         </div>
 
         {/* LinkedIn */}
