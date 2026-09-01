@@ -6730,6 +6730,7 @@
           "Education",
           "Energy & Utilities",
           "Financial Services",
+          "Food & Beverage",
           "Healthcare & Medtech",
           "Industrial Goods & Manufacturing",
           "Insurance",
@@ -6739,10 +6740,12 @@
           "Pharma & Biotechnology",
           "Principal Investors & Private Equity",
           "Public Sector",
+          "Real Estate & Construction",
           "Retail",
           "Technology & Software",
           "Transportation & Logistics",
-          "Travel & Tourism"
+          "Travel & Tourism",
+          "Watchmaking & Jewelry"
         ]
       }
     },
