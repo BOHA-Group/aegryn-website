@@ -6772,21 +6772,21 @@
       "error": "An error occurred. Please try again.",
       "benefits": {
         "confidential": {
-          "desc": "Votre recherche reste strictement confidentielle. Nous ne partageons votre profil qu'avec votre accord explicite et uniquement auprès d'entreprises pré-qualifiées.",
-          "title": "Confidentialité garantie"
+          "desc": "Your search remains strictly confidential. We only share your profile with your explicit consent and only with pre-qualified companies.",
+          "title": "Guaranteed confidentiality"
         },
         "curated": {
-          "desc": "Nous ne vous présentons que des postes executive alignés avec votre expertise, vos ambitions et votre niveau de séniorité. Zéro spam, 100% pertinence.",
-          "title": "Opportunités triées sur mesure"
+          "desc": "We only present executive positions aligned with your expertise, ambitions and seniority level. Zero spam, 100% relevance.",
+          "title": "Curated opportunities"
         },
         "network": {
-          "desc": "Accès direct aux décideurs des entreprises tech les plus innovantes : scale-ups en hyper-croissance, leaders SaaS, fintechs, deeptech et groupes en transformation digitale.",
-          "title": "Réseau européen premium"
+          "desc": "Direct access to decision-makers at the most innovative tech companies: hyper-growth scale-ups, SaaS leaders, fintechs, deeptech and groups in digital transformation.",
+          "title": "Premium European network"
         }
       },
       "intro": {
-        "desc": "Aegryn Talent vous connecte aux scale-ups et leaders tech européens qui recrutent des profils executive. Confidentialité absolue, processus premium, opportunités triées.",
-        "title": "Accédez aux opportunités tech les plus exclusives d'Europe"
+        "desc": "Aegryn Talent connects you with European scale-ups and tech leaders recruiting executive profiles. Absolute confidentiality, premium process, curated opportunities.",
+        "title": "Access the most exclusive tech opportunities in Europe"
       }
     },
     "admin": {
@@ -6889,159 +6889,159 @@
     },
     "employer": {
       "intro": {
-        "desc": "Aegryn Talent identifie et place les profils tech rares qui accélèrent votre croissance. Notre approche combine expertise sectorielle, réseau européen et processus de certification rigoureux.",
-        "title": "Recrutez les leaders qui transforment"
+        "desc": "Aegryn Talent identifies and places rare tech profiles that accelerate your growth. Our approach combines sector expertise, European network and rigorous certification process.",
+        "title": "Recruit the leaders who transform"
       },
       "process": {
         "brief": {
-          "desc": "Analyse approfondie de votre organisation, culture, enjeux techniques et ambitions de croissance.",
-          "title": "Brief stratégique"
+          "desc": "In-depth analysis of your organization, culture, technical challenges and growth ambitions.",
+          "title": "Strategic brief"
         },
         "placement": {
-          "desc": "Accompagnement jusqu'à l'intégration réussie. Garantie de remplacement et suivi post-placement.",
-          "title": "Placement & suivi"
+          "desc": "Support until successful integration. Replacement guarantee and post-placement follow-up.",
+          "title": "Placement & follow-up"
         },
         "search": {
-          "desc": "Identification des meilleurs profils via notre réseau européen, approche directe et évaluation rigoureuse.",
-          "title": "Recherche ciblée"
+          "desc": "Identification of the best profiles through our European network, direct approach and rigorous evaluation.",
+          "title": "Targeted search"
         },
-        "title": "Notre processus"
+        "title": "Our process"
       },
       "profiles": {
         "cdo": {
-          "desc": "Architectes de la stratégie data : data engineering, analytics, gouvernance, monétisation et culture data.",
+          "desc": "Data strategy architects: data engineering, analytics, governance, monetization and data culture.",
           "title": "Chief Data Officer & VP Data"
         },
         "cio": {
-          "desc": "Responsables infrastructure IT, cloud, DevOps, SRE, modernisation legacy et transformation digitale.",
+          "desc": "IT infrastructure leaders, cloud, DevOps, SRE, legacy modernization and digital transformation.",
           "title": "CIO & VP Infrastructure"
         },
         "ciso": {
-          "desc": "Experts en cybersécurité, conformité RGPD, gestion des risques, résilience et gouvernance. Profils certifiés.",
+          "desc": "Cybersecurity experts, GDPR compliance, risk management, resilience and governance. Certified profiles.",
           "title": "CISO & VP Security"
         },
         "cpo": {
-          "desc": "Visionnaires produit tech : roadmap, discovery, growth, product-led growth et stratégie go-to-market.",
+          "desc": "Tech product visionaries: roadmap, discovery, growth, product-led growth and go-to-market strategy.",
           "title": "Chief Product Officer & VP Product"
         },
         "cto": {
-          "desc": "Leaders techniques capables de structurer, scaler et innover. Maîtrise des architectures modernes, IA, cloud, sécurité.",
+          "desc": "Technical leaders capable of structuring, scaling and innovating. Mastery of modern architectures, AI, cloud, security.",
           "title": "CTO & VP Engineering"
         },
         "headAI": {
-          "desc": "Leaders en intelligence artificielle, machine learning, GenAI, stratégie data-driven et transformation IA.",
+          "desc": "Leaders in artificial intelligence, machine learning, GenAI, data-driven strategy and AI transformation.",
           "title": "Chief AI Officer & VP AI"
         },
         "headML": {
-          "desc": "Experts ML/AI : deep learning, NLP, computer vision, MLOps, recherche appliquée et déploiement à l'échelle.",
+          "desc": "ML/AI experts: deep learning, NLP, computer vision, MLOps, applied research and deployment at scale.",
           "title": "Head of Machine Learning & AI Research"
         },
         "headPlatform": {
-          "desc": "Architectes de plateformes internes : developer productivity, API design, infrastructure as code, observability.",
+          "desc": "Internal platform architects: developer productivity, API design, infrastructure as code, observability.",
           "title": "Head of Platform & Developer Experience"
         },
         "headQA": {
-          "desc": "Leaders qualité : test automation, CI/CD, performance testing, shift-left et culture quality engineering.",
+          "desc": "Quality leaders: test automation, CI/CD, performance testing, shift-left and quality engineering culture.",
           "title": "VP Quality & Head of QA Engineering"
         },
-        "intro": "Profils executive que nous plaçons (niveau C-Level, VP, Director)",
+        "intro": "Executive profiles we place (C-Level, VP, Director level)",
         "vpe": {
-          "desc": "Leaders d'équipes techniques : scaling, culture engineering, delivery, architecture et excellence opérationnelle.",
+          "desc": "Technical team leaders: scaling, engineering culture, delivery, architecture and operational excellence.",
           "title": "VP Engineering & Engineering Director"
         }
       }
     },
     "forms": {
       "candidate": {
-        "availability": "Disponibilité",
-        "availabilityPlaceholder": "Ex: Immédiate, Préavis 3 mois, Flexible...",
+        "availability": "Availability",
+        "availabilityPlaceholder": "E.g.: Immediate, 3 months notice, Flexible...",
         "cv": "CV (PDF)",
-        "cvNote": "Votre CV sera demandé lors de l'entretien si votre profil correspond à nos mandats.",
-        "cvUpload": "Déposer votre CV",
-        "cvUploaded": "CV déposé",
-        "desc": "Partagez votre profil et accédez à des opportunités exclusives.",
+        "cvNote": "Your CV will be requested during the interview if your profile matches our mandates.",
+        "cvUpload": "Upload your CV",
+        "cvUploaded": "CV uploaded",
+        "desc": "Share your profile and access exclusive opportunities.",
         "email": "Email",
-        "emailPlaceholder": "votre@email.com",
-        "error": "Une erreur est survenue. Veuillez réessayer.",
-        "errorMessage": "Une erreur est survenue. Veuillez réessayer.",
-        "fullName": "Nom complet",
-        "fullNamePlaceholder": "Prénom Nom",
-        "gdprConsent": "J'accepte que mes données personnelles soient traitées par Aegryn dans le cadre de ma candidature/demande. Je peux demander la suppression de mes données à tout moment en contactant",
+        "emailPlaceholder": "your@email.com",
+        "error": "An error occurred. Please try again.",
+        "errorMessage": "An error occurred. Please try again.",
+        "fullName": "Full name",
+        "fullNamePlaceholder": "First Last",
+        "gdprConsent": "I agree that my personal data will be processed by Aegryn in the context of my application/request. I can request the deletion of my data at any time by contacting",
         "linkedin": "LinkedIn",
         "linkedinPlaceholder": "https://linkedin.com/in/...",
-        "motivation": "Lettre de motivation",
-        "motivationPlaceholder": "Parlez-nous de votre parcours, vos compétences clés, et ce que vous recherchez...",
-        "phone": "Téléphone",
+        "motivation": "Cover letter",
+        "motivationPlaceholder": "Tell us about your background, key skills, and what you're looking for...",
+        "phone": "Phone",
         "phonePlaceholder": "+41 XX XXX XX XX",
-        "submit": "Envoyer ma candidature",
-        "submitting": "Envoi en cours...",
-        "success": "Merci. Votre candidature a été enregistrée. Nous vous contacterons si votre profil correspond à nos mandats.",
-        "successMessage": "Merci. Votre candidature a été enregistrée. Nous vous contacterons si votre profil correspond à nos mandats.",
-        "title": "Postuler comme candidat"
+        "submit": "Submit application",
+        "submitting": "Sending...",
+        "success": "Thank you. Your application has been registered. We will contact you if your profile matches our mandates.",
+        "successMessage": "Thank you. Your application has been registered. We will contact you if your profile matches our mandates.",
+        "title": "Apply as candidate"
       },
       "hiring": {
-        "budget": "Budget annuel (CHF)",
-        "budgetPlaceholder": "Ex: 120'000 - 150'000 CHF",
-        "company": "Entreprise",
-        "companyPlaceholder": "Nom de votre entreprise",
-        "contactName": "Nom du contact",
-        "contactNamePlaceholder": "Votre nom complet",
-        "desc": "Décrivez le profil que vous recherchez. Nous vous recontacterons sous 48h.",
+        "budget": "Annual budget (CHF)",
+        "budgetPlaceholder": "E.g.: 120'000 - 150'000 CHF",
+        "company": "Company",
+        "companyPlaceholder": "Your company name",
+        "contactName": "Contact name",
+        "contactNamePlaceholder": "Your full name",
+        "desc": "Describe the profile you're looking for. We will contact you within 48h.",
         "email": "Email",
-        "emailPlaceholder": "votre@email.com",
-        "error": "Une erreur est survenue. Veuillez réessayer.",
-        "errorMessage": "Une erreur est survenue. Veuillez réessayer.",
-        "gdprConsent": "J'accepte que mes données personnelles soient traitées par Aegryn dans le cadre de ma candidature/demande. Je peux demander la suppression de mes données à tout moment en contactant",
-        "location": "Localisation",
-        "locationPlaceholder": "Ex: Lausanne, Remote Europe, Hybride Genève...",
-        "phone": "Téléphone",
+        "emailPlaceholder": "your@email.com",
+        "error": "An error occurred. Please try again.",
+        "errorMessage": "An error occurred. Please try again.",
+        "gdprConsent": "I agree that my personal data will be processed by Aegryn in the context of my application/request. I can request the deletion of my data at any time by contacting",
+        "location": "Location",
+        "locationPlaceholder": "E.g.: Lausanne, Remote Europe, Hybrid Geneva...",
+        "phone": "Phone",
         "phonePlaceholder": "+41 XX XXX XX XX",
-        "roleDesc": "Description du poste",
-        "roleDescPlaceholder": "Missions, responsabilités, stack technique, contexte...",
-        "roleDescription": "Description du rôle *",
-        "roleDescriptionPlaceholder": "Missions, responsabilités, stack technique, contexte...",
-        "roleTitle": "Intitulé du poste",
-        "roleTitlePlaceholder": "Ex: CTO, Lead DevOps, Data Scientist...",
-        "submit": "Envoyer le mandat",
-        "submitting": "Envoi en cours...",
-        "success": "Merci. Votre mandat a été enregistré. Nous vous contacterons sous 48h.",
-        "successMessage": "Merci. Votre demande a été enregistrée. Nous vous contacterons sous 48h.",
-        "title": "Lancer un mandat de recrutement",
-        "urgency": "Urgence",
+        "roleDesc": "Job description",
+        "roleDescPlaceholder": "Missions, responsibilities, tech stack, context...",
+        "roleDescription": "Role description *",
+        "roleDescriptionPlaceholder": "Missions, responsibilities, tech stack, context...",
+        "roleTitle": "Job title",
+        "roleTitlePlaceholder": "E.g.: CTO, Lead DevOps, Data Scientist...",
+        "submit": "Submit mandate",
+        "submitting": "Sending...",
+        "success": "Thank you. Your mandate has been registered. We will contact you within 48h.",
+        "successMessage": "Thank you. Your request has been registered. We will contact you within 48h.",
+        "title": "Launch a recruitment mandate",
+        "urgency": "Urgency",
         "urgencyFlexible": "Flexible",
-        "urgencyImmediate": "Immédiat (< 1 mois)",
-        "urgencyMonth": "Dans le mois",
-        "urgencyQuarter": "Dans le trimestre"
+        "urgencyImmediate": "Immediate (< 1 month)",
+        "urgencyMonth": "Within a month",
+        "urgencyQuarter": "Within a quarter"
       }
     }
   },
   "industries": {
     "desc": "Aegryn intervient dans tous les secteurs d'activité : conception d'actifs tech, advisory stratégique, recrutement executive, fusions & acquisitions. Notre expertise couvre l'ensemble de l'économie européenne.",
-    "footerNote": "Cette liste n'est pas exhaustive. Aegryn intervient dans tout secteur où la technologie, l'innovation et la transformation digitale créent de la valeur.",
+    "footerNote": "All industries",
     "list": [
-      "Aérospatiale & Défense",
-      "Agriculture & Agroalimentaire",
-      "Automobile & Mobilité",
-      "Banque & Services Financiers",
-      "Chimie & Sciences des Matériaux",
-      "Construction & Infrastructures",
-      "Cybersécurité & Protection des Données",
+      "Aerospace & Defense",
+      "Agriculture & Agrifood",
+      "Automotive & Mobility",
+      "Banking & Financial Services",
+      "Chemistry & Materials Science",
+      "Construction & Infrastructure",
+      "Cybersecurity & Data Protection",
       "E-commerce & Retail",
-      "Éducation & EdTech",
-      "Énergie & Utilities",
+      "Education & EdTech",
+      "Energy & Utilities",
       "Fintech & Blockchain",
-      "Healthtech & Biotechnologie",
-      "Hôtellerie & Tourisme",
-      "Immobilier & PropTech",
-      "Industrie & Manufacturing",
-      "Logistique & Supply Chain",
-      "Luxe & Biens de Consommation",
-      "Médias & Divertissement",
-      "Ressources Naturelles & Mines",
-      "Santé & Dispositifs Médicaux",
-      "Services Professionnels",
-      "Télécommunications",
-      "Transport & Logistique"
+      "Healthtech & Biotechnology",
+      "Hospitality & Tourism",
+      "Real Estate & PropTech",
+      "Industry & Manufacturing",
+      "Logistics & Supply Chain",
+      "Luxury & Consumer Goods",
+      "Media & Entertainment",
+      "Natural Resources & Mining",
+      "Healthcare & Medical Devices",
+      "Professional Services",
+      "Telecommunications",
+      "Transport & Logistics"
     ],
     "title": "Industries couvertes"
   }
