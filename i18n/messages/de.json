@@ -6811,8 +6811,10 @@
     },
     "hero": {
       "label": "Aegryn Talent",
-      "title": "Rekrutierung & Vermittlung",
-      "sub": "Wir verbinden die besten Tech-Talente mit Unternehmen, die Europa transformieren."
+      "title": "Executive Tech Recruiting\nC-Level & VP",
+      "desc1": "Wir vermitteln Tech-Leader, die Unternehmen transformieren: CTO, CISO, Chief AI Officer, VP Engineering, VP Product, VP Data.",
+      "desc2": "Tech-Operatoren, keine HR-Berater. Nur Erfolgshonorar. 3-Monats-Garantie.",
+      "quote": "Schweiz & Europa • 30 Länder • 23 Branchen\nAntwort innerhalb 48h"
     },
     "hiring": {
       "title": "Ich stelle ein",

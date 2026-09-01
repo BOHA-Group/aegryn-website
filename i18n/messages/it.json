@@ -6647,8 +6647,10 @@
     },
     "hero": {
       "label": "Aegryn Talent",
-      "title": "Reclutamento e Collocamento",
-      "sub": "Connettiamo i migliori talenti tech con le aziende che trasformano l'Europa."
+      "title": "Reclutamento executive tech\nC-Level & VP",
+      "desc1": "Collochiamo i leader tech che trasformano le aziende: CTO, CISO, Chief AI Officer, VP Engineering, VP Product, VP Data.",
+      "desc2": "Operatori tech, non consulenti HR. Solo success fee. Garanzia 3 mesi.",
+      "quote": "Svizzera & Europa • 30 paesi • 23 settori\nRisposta entro 48h"
     },
     "hiring": {
       "title": "Sto assumendo",

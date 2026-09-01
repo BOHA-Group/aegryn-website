@@ -11,37 +11,46 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
 
   return (
     <>
-      {/* Hero with Toggle */}
-      <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-24">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-6">
+      {/* Hero Navy Banner */}
+      <section className="border-b border-ag-border bg-ag-navy overflow-hidden">
+        <div className="relative mx-auto max-w-7xl px-6 md:px-12 py-32">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             {t('hero.label')}
           </p>
           <h1
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.15] max-w-3xl mb-12"
-            style={{ fontSize: 'clamp(48px,6vw,88px)' }}
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8 whitespace-pre-line"
+            style={{ fontSize: 'clamp(48px,6vw,86px)' }}
           >
             {t('hero.title')}
           </h1>
+          <p className="text-[15px] text-white/60 leading-relaxed max-w-xl mb-6">
+            {t('hero.desc1')}
+          </p>
+          <p className="text-[15px] text-white/60 leading-relaxed max-w-xl mb-10">
+            {t('hero.desc2')}
+          </p>
+          <p className="font-sans font-semibold text-[13px] text-white/60 leading-relaxed max-w-xl mb-12 border-l-2 border-ag-apex/40 pl-5 whitespace-pre-line">
+            {t('hero.quote')}
+          </p>
           
           {/* Toggle */}
-          <div className="inline-flex border border-ag-border bg-white">
+          <div className="inline-flex border border-white/20 bg-white/5 backdrop-blur-sm">
             <button
               onClick={() => setActiveTab('candidate')}
               className={`px-8 py-4 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase transition-all ${
                 activeTab === 'candidate'
-                  ? 'bg-ag-navy text-white'
-                  : 'bg-white text-ag-gray hover:text-ag-black'
+                  ? 'bg-white text-ag-navy'
+                  : 'bg-transparent text-white/60 hover:text-white'
               }`}
             >
               {t('toggle.candidate')}
             </button>
             <button
               onClick={() => setActiveTab('employer')}
-              className={`px-8 py-4 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase transition-all border-l border-ag-border ${
+              className={`px-8 py-4 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase transition-all border-l border-white/20 ${
                 activeTab === 'employer'
-                  ? 'bg-ag-navy text-white'
-                  : 'bg-white text-ag-gray hover:text-ag-black'
+                  ? 'bg-white text-ag-navy'
+                  : 'bg-transparent text-white/60 hover:text-white'
               }`}
             >
               {t('toggle.employer')}

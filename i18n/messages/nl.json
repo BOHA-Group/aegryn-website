@@ -6647,8 +6647,10 @@
     },
     "hero": {
       "label": "Aegryn Talent",
-      "title": "Werving & Plaatsing",
-      "sub": "We verbinden de beste tech-talenten met bedrijven die Europa transformeren."
+      "title": "Executive tech recruitment\nC-Level & VP",
+      "desc1": "We plaatsen tech-leiders die bedrijven transformeren: CTO, CISO, Chief AI Officer, VP Engineering, VP Product, VP Data.",
+      "desc2": "Tech-operators, geen HR-consultants. Alleen success fee. 3 maanden garantie.",
+      "quote": "Zwitserland & Europa • 30 landen • 23 sectoren\nReactie binnen 48u"
     },
     "hiring": {
       "title": "Ik ben aan het werven",
