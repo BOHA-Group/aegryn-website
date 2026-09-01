@@ -15,6 +15,9 @@ const candidateSchema = z.object({
   linkedinUrl: z.string().url().optional().or(z.literal('')),
   motivation: z.string().min(50, 'Motivation letter too short (min 50 characters)'),
   availability: z.string().optional(),
+  gdprConsent: z.boolean().refine((val) => val === true, {
+    message: 'Vous devez accepter la politique de confidentialité',
+  }),
 })
 
 type CandidateFormData = z.infer<typeof candidateSchema>
@@ -158,11 +161,31 @@ export default function TalentCandidateForm() {
       </div>
 
       {/* CV Upload Note */}
-      <div className="p-4 bg-ag-off-white border border-ag-border">
+      <div className="p-4 bg-ag-off-white border border-ag-border rounded-xl">
         <p className="text-[13px] text-ag-gray leading-relaxed">
           {t('cvNote')}
         </p>
       </div>
+
+      {/* RGPD/LPD Consent */}
+      <div className="flex items-start gap-3">
+        <input
+          {...register('gdprConsent')}
+          type="checkbox"
+          id="gdprConsent"
+          className="mt-1 w-4 h-4 rounded border-ag-border text-ag-apex focus:ring-ag-apex focus:ring-2"
+        />
+        <label htmlFor="gdprConsent" className="text-[13px] text-ag-gray leading-relaxed">
+          {t('gdprConsent')}{' '}
+          <a href="mailto:contact@boha-group.com" className="text-ag-apex hover:underline">
+            contact@boha-group.com
+          </a>
+          .
+        </label>
+      </div>
+      {errors.gdprConsent && (
+        <p className="mt-1 text-[12px] text-red-600">{errors.gdprConsent.message}</p>
+      )}
 
       {/* Submit */}
       <div>

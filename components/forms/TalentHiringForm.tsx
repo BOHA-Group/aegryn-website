@@ -18,6 +18,9 @@ const hiringSchema = z.object({
   location: z.string().min(2, 'Location required'),
   budgetAnnualChf: z.string().optional(),
   urgency: z.enum(['immediate', 'month', 'quarter', 'flexible']),
+  gdprConsent: z.boolean().refine((val) => val === true, {
+    message: 'Vous devez accepter la politique de confidentialité',
+  }),
 })
 
 type HiringFormData = z.infer<typeof hiringSchema>
@@ -210,6 +213,26 @@ export default function TalentHiringForm() {
           <p className="mt-1 text-[12px] text-red-600">{errors.roleDescription.message}</p>
         )}
       </div>
+
+      {/* RGPD/LPD Consent */}
+      <div className="flex items-start gap-3">
+        <input
+          {...register('gdprConsent')}
+          type="checkbox"
+          id="gdprConsent"
+          className="mt-1 w-4 h-4 rounded border-ag-border text-ag-apex focus:ring-ag-apex focus:ring-2"
+        />
+        <label htmlFor="gdprConsent" className="text-[13px] text-ag-gray leading-relaxed">
+          {t('gdprConsent')}{' '}
+          <a href="mailto:contact@boha-group.com" className="text-ag-apex hover:underline">
+            contact@boha-group.com
+          </a>
+          .
+        </label>
+      </div>
+      {errors.gdprConsent && (
+        <p className="mt-1 text-[12px] text-red-600">{errors.gdprConsent.message}</p>
+      )}
 
       {/* Submit */}
       <div>
