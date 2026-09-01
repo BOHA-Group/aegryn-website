@@ -141,7 +141,7 @@ export default function Footer() {
   return (
     <footer className="bg-ag-navy border-t border-white/10">
       <div className="mx-auto max-w-7xl px-6 pt-10 pb-10">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
 
           {/* Brand */}
           <div className="col-span-full lg:col-span-1">
@@ -201,30 +201,69 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Nos convictions */}
+          {/* Nos solutions */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
-              {tNav('ourThinking')}
+              {t('col2Title')}
             </p>
             <ul className="space-y-2.5">
               <li>
-                <Link href="/magazine" className="text-sm text-white/75 hover:text-white transition-colors">
-                  {tNav('thinkingMagazine')}
+                <a href="https://subblink.com" target="_blank" rel="noopener noreferrer" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col2Subblink')}
+                </a>
+              </li>
+              <li>
+                <Link href="/assets" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col2Code')}
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-sm text-white/75 hover:text-white transition-colors">
-                  {tNav('thinkingMarketArticles')}
+                <Link href="/grade" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col2Grade')}
                 </Link>
               </li>
               <li>
-                <Link href={"/glossaire" as ComponentProps<typeof Link>['href']} className="text-sm text-white/75 hover:text-white transition-colors">
-                  {tNav('thinkingMarketGlossary')}
+                <Link href="/grade/methodology" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col2DataRoom')}
                 </Link>
               </li>
               <li>
                 <Link href="/assets" className="text-sm text-white/75 hover:text-white transition-colors">
-                  {tNav('solutionsViewAll')}
+                  {t('col2ViewAll')}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Nos convictions */}
+          <div>
+            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
+              {t('col3Title')}
+            </p>
+            <ul className="space-y-2.5">
+              <li>
+                <Link href="/magazine" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col3Magazine')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col3Blog')}
+                </Link>
+              </li>
+              <li>
+                <Link href={"/glossaire" as ComponentProps<typeof Link>['href']} className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col3Glossary')}
+                </Link>
+              </li>
+              <li>
+                <Link href={"/valuation" as ComponentProps<typeof Link>['href']} className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col3Valuation')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/help/faq" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col3FAQ')}
                 </Link>
               </li>
             </ul>
