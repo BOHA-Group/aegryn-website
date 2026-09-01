@@ -4597,7 +4597,17 @@
     "s12NoComm": "Partners do not pay any commission to Aegryn on their service fees, regardless of the nature of the engagement performed (advisory, due diligence, legal assistance, technical expertise, etc.). The sole financial consideration owed to Aegryn is the monthly Expert Profile subscription. This provision is mandatory and cannot be modified by individual agreement.",
     "s12ReferralTitle": "Referral programme",
     "s12Referral": "Any Partner holding an active Expert Profile subscription may refer other professionals. For each referred professional subscribing to an Expert Profile, the referrer receives a one-month credit on their own subscription, credited at the next billing date. The referred professional also receives one free month deducted from their first invoice. Aegryn reserves the right to modify this programme with 30 days' notice.",
-    "defPartner": "Professional listed in the Aegryn directory via an active Expert Profile subscription. Supports sellers and/or buyers in their transactions (tech advisory, M&A, legal, HR, cyber, finance, W&I insurance, etc.). Is not a party to the transaction and receives no commission from Aegryn."
+    "defPartner": "Professional listed in the Aegryn directory via an active Expert Profile subscription. Supports sellers and/or buyers in their transactions (tech advisory, M&A, legal, HR, cyber, finance, W&I insurance, etc.). Is not a party to the transaction and receives no commission from Aegryn.",
+    "s11BisTitle": "Recruitment and placement fees (Aegryn Talent)",
+    "s11BisIntro": "Aegryn Talent offers executive search services (permanent recruitment) and temporary placement (interim management) for C-Level, VP and Director tech profiles.",
+    "s11BisRecruitTitle": "Permanent recruitment (Executive Search)",
+    "s11BisRecruit": "Fixed fees: 20% of the candidate's gross annual salary. Payable upon effective start date. Replacement guarantee: 3 months. If the candidate leaves or is dismissed within 3 months of starting, Aegryn Talent commits to proposing a replacement candidate at no additional cost.",
+    "s11BisInterimTitle": "Temporary placement (Interim Management)",
+    "s11BisInterim": "Fixed fees: 20% of the candidate's equivalent gross annual salary (calculated pro rata for the mission duration). Payable monthly during the mission. No replacement guarantee applies to temporary assignments.",
+    "s11BisPaymentTitle": "Payment terms",
+    "s11BisPayment": "Invoicing: upon receipt of written confirmation of start date (permanent recruitment) or at the end of each mission month (temporary placement). Payment terms: 30 days net from invoice date. No deposit required. Fees are only due upon effective placement.",
+    "s11BisNoPlacementTitle": "No placement",
+    "s11BisNoPlacement": "If no candidate is placed at the end of the search process, no fees are due. The search service is entirely performance-based (success fee)."
   },
   "privacy": {
     "meta": {
@@ -4948,6 +4958,54 @@
         ],
         "q": "How does Aegryn guarantee the traceability of a grade?",
         "a": "Every grade is documented, versioned, and stored in the Aegryn registry. Any modification to a certified codebase after issuance generates a new version. This makes it possible to prove at any point that the code received matches exactly the certified code."
+      },
+      {
+        "id": "talent-service",
+        "cat": [
+          "account"
+        ],
+        "q": "Do you offer recruitment services?",
+        "a": "Yes, Aegryn Talent offers executive search (CTO, CISO, Chief AI Officer, VP Engineering, etc.) and temporary placement (interim management). Fees: 20% of gross annual salary, only upon successful placement (success fee). 3-month replacement guarantee for permanent recruitment. Forms available at /talent."
+      },
+      {
+        "id": "advisory-service",
+        "cat": [
+          "account"
+        ],
+        "q": "What advisory services do you offer?",
+        "a": "Aegryn Advisory operates on 4 axes: Tech & AI (digital transformation, AI strategy, architecture), Cybersecurity (audits, GDPR/FADP/SOC2/ISO27001 compliance), M&A Advisory (buy-side, sell-side, due diligence, valuation), Data Privacy (EU AI Act, data governance). We operate across 23+ industries in Europe. See /advisory for details."
+      },
+      {
+        "id": "build-service",
+        "cat": [
+          "account"
+        ],
+        "q": "Do you build custom assets?",
+        "a": "Yes, Aegryn designs custom tech assets (SaaS, platforms, tools) for entrepreneurs and institutions. Fixed price signed at discovery phase, custom code only (no no-code), IP fully transferred to client, certification-ready from day 1. Timeline: 10-16 weeks. Indicative range: CHF 15,000-150,000+. Details at /services/build."
+      },
+      {
+        "id": "magazine",
+        "cat": [
+          "account"
+        ],
+        "q": "What is the Aegryn magazine?",
+        "a": "Quarterly publication on tech transactions, AI, exits and M&A trends in Europe. Available online at /magazine. Free subscription to receive upcoming issues in advance."
+      },
+      {
+        "id": "partner-network",
+        "cat": [
+          "account"
+        ],
+        "q": "How to join the Aegryn expert network?",
+        "a": "Professionals (lawyers, tech experts, M&A, cyber, finance, W&I insurance) can subscribe to an Expert Card (89 CHF excl. VAT/month). This gives access to referral requests from Aegryn sellers and buyers. No commission paid to Aegryn on your fees. Details at /grade/partners."
+      },
+      {
+        "id": "valuation",
+        "cat": [
+          "sellers"
+        ],
+        "q": "Do you offer tech asset valuations?",
+        "a": "Yes, via /valuation. Submit your asset for a free indicative estimate within 48h. For a certified valuation with detailed report, opt for Aegryn Review (2,000 CHF excl. VAT) or Review+ (5,000 CHF excl. VAT), deductible if full certification engaged within 6 months."
       }
     ]
   },

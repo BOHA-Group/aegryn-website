@@ -195,6 +195,25 @@ export default async function TermsCgvPage({ params }: Props) {
           <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('s11Payment')}</p>
         </section>
 
+        {/* Section XI-Bis — Honoraires Recrutement */}
+        <section className="border-t border-ag-border pt-8">
+          <h2 className="font-sans font-semibold text-[13px] uppercase tracking-[0.18em] text-ag-black mb-6">
+            Section XI-Bis — {t('s11BisTitle')}
+          </h2>
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-6">{t('s11BisIntro')}</p>
+          {([
+            ['s11BisRecruitTitle', 's11BisRecruit'],
+            ['s11BisInterimTitle', 's11BisInterim'],
+            ['s11BisPaymentTitle', 's11BisPayment'],
+            ['s11BisNoPlacementTitle', 's11BisNoPlacement'],
+          ] as const).map(([titleKey, bodyKey]) => (
+            <div key={titleKey} className="mb-6 pl-4 border-l-2 border-ag-border">
+              <h3 className="font-sans font-semibold text-[13px] text-ag-black mb-2">{t(titleKey)}</h3>
+              <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t(bodyKey)}</p>
+            </div>
+          ))}
+        </section>
+
         {/* Section XII — Réseau d'experts */}
         <section className="border-t border-ag-border pt-8">
           <h2 className="font-sans font-semibold text-[13px] uppercase tracking-[0.18em] text-ag-black mb-6">

@@ -4600,7 +4600,17 @@
     "s12NoComm": "Partner zahlen Aegryn keine Provision auf ihre Dienstleistungshonorare, unabhängig von der Art des durchgeführten Auftrags (Beratung, Due Diligence, Rechtsberatung, technisches Gutachten usw.). Die einzige finanzielle Gegenleistung gegenüber Aegryn ist das monatliche Expertenprofil-Abonnement. Diese Bestimmung ist zwingend und kann nicht durch individuelle Vereinbarung geändert werden.",
     "s12ReferralTitle": "Empfehlungsprogramm",
     "s12Referral": "Jeder Partner mit einem aktiven Expertenprofil-Abonnement kann andere Fachleute werben. Für jeden geworbenen Fachmann, der ein Expertenprofil abonniert, erhält der Werber eine Gutschrift von einem Monat auf sein eigenes Abonnement, die zur nächsten Abrechnung gutgeschrieben wird. Der geworbene Fachmann erhält ebenfalls einen kostenlosen Monat, der von seiner ersten Rechnung abgezogen wird. Aegryn behält sich das Recht vor, dieses Programm mit einer Frist von 30 Tagen zu ändern.",
-    "defPartner": "Im Aegryn-Verzeichnis gelisteter Fachmann über ein aktives Expertenprofil-Abonnement. Unterstützt Verkäufer und/oder Käufer bei ihren Transaktionen (Tech-Beratung, M&A, Recht, HR, Cyber, Finanzen, W&I-Versicherung usw.). Ist nicht Partei der Transaktion und erhält keine Provision von Aegryn."
+    "defPartner": "Im Aegryn-Verzeichnis gelisteter Fachmann über ein aktives Expertenprofil-Abonnement. Unterstützt Verkäufer und/oder Käufer bei ihren Transaktionen (Tech-Beratung, M&A, Recht, HR, Cyber, Finanzen, W&I-Versicherung usw.). Ist nicht Partei der Transaktion und erhält keine Provision von Aegryn.",
+    "s11BisTitle": "Rekrutierungs- und Vermittlungsgebühren (Aegryn Talent)",
+    "s11BisIntro": "Aegryn Talent bietet Executive Search-Dienstleistungen (permanente Rekrutierung) und temporäre Vermittlung (Interim Management) für C-Level-, VP- und Director-Tech-Profile an.",
+    "s11BisRecruitTitle": "Permanente Rekrutierung (Executive Search)",
+    "s11BisRecruit": "Festgebühren: 20% des Bruttojahresgehalts des Kandidaten. Zahlbar bei effektivem Arbeitsbeginn. Ersatzgarantie: 3 Monate. Wenn der Kandidat innerhalb von 3 Monaten nach Arbeitsbeginn kündigt oder entlassen wird, verpflichtet sich Aegryn Talent, ohne zusätzliche Kosten einen Ersatzkandidaten vorzuschlagen.",
+    "s11BisInterimTitle": "Temporäre Vermittlung (Interim Management)",
+    "s11BisInterim": "Festgebühren: 20% des äquivalenten Bruttojahresgehalts des Kandidaten (anteilig für die Missionsdauer berechnet). Monatlich während der Mission zahlbar. Für temporäre Einsätze gilt keine Ersatzgarantie.",
+    "s11BisPaymentTitle": "Zahlungsbedingungen",
+    "s11BisPayment": "Rechnungsstellung: bei Erhalt der schriftlichen Bestätigung des Arbeitsbeginns (permanente Rekrutierung) oder am Ende jedes Missionsmonats (temporäre Vermittlung). Zahlungsziel: 30 Tage netto ab Rechnungsdatum. Keine Anzahlung erforderlich. Gebühren sind nur bei effektiver Vermittlung fällig.",
+    "s11BisNoPlacementTitle": "Keine Vermittlung",
+    "s11BisNoPlacement": "Wenn am Ende des Suchprozesses kein Kandidat vermittelt wird, sind keine Gebühren fällig. Der Suchdienst ist vollständig leistungsbasiert (Erfolgshonorar)."
   },
   "privacy": {
     "meta": {
@@ -4951,6 +4961,54 @@
         ],
         "q": "Wie gewährleistet Aegryn die Nachvollziehbarkeit eines Grades?",
         "a": "Jeder Grade wird dokumentiert, versioniert und im Aegryn-Register gespeichert. Jede Änderung an einer zertifizierten Codebase nach der Ausstellung generiert eine neue Version. Damit kann jederzeit nachgewiesen werden, dass der erhaltene Code genau dem zertifizierten Code entspricht."
+      },
+      {
+        "id": "talent-service",
+        "cat": [
+          "account"
+        ],
+        "q": "Bieten Sie Recruiting-Dienstleistungen an?",
+        "a": "Ja, Aegryn Talent bietet Executive Search (CTO, CISO, Chief AI Officer, VP Engineering usw.) und temporäre Vermittlung (Interim Management). Gebühren: 20% des Bruttojahresgehalts, nur bei erfolgreicher Vermittlung (Erfolgshonorar). 3-monatige Ersatzgarantie für permanente Rekrutierung. Formulare verfügbar unter /talent."
+      },
+      {
+        "id": "advisory-service",
+        "cat": [
+          "account"
+        ],
+        "q": "Welche Beratungsdienstleistungen bieten Sie an?",
+        "a": "Aegryn Advisory arbeitet auf 4 Achsen: Tech & KI (digitale Transformation, KI-Strategie, Architektur), Cybersicherheit (Audits, DSGVO/FADP/SOC2/ISO27001-Compliance), M&A-Beratung (Buy-Side, Sell-Side, Due Diligence, Bewertung), Datenschutz (EU AI Act, Data Governance). Wir sind in 23+ Branchen in Europa tätig. Details unter /advisory."
+      },
+      {
+        "id": "build-service",
+        "cat": [
+          "account"
+        ],
+        "q": "Bauen Sie maßgeschneiderte Assets?",
+        "a": "Ja, Aegryn entwirft maßgeschneiderte Tech-Assets (SaaS, Plattformen, Tools) für Unternehmer und Institutionen. Festpreis in der Discovery-Phase vereinbart, nur Custom Code (kein No-Code), IP vollständig auf Kunden übertragen, zertifizierungsbereit ab Tag 1. Zeitrahmen: 10-16 Wochen. Indikative Spanne: CHF 15.000-150.000+. Details unter /services/build."
+      },
+      {
+        "id": "magazine",
+        "cat": [
+          "account"
+        ],
+        "q": "Was ist das Aegryn-Magazin?",
+        "a": "Vierteljährliche Publikation über Tech-Transaktionen, KI, Exits und M&A-Trends in Europa. Online verfügbar unter /magazine. Kostenlose Anmeldung für kommende Ausgaben im Voraus."
+      },
+      {
+        "id": "partner-network",
+        "cat": [
+          "account"
+        ],
+        "q": "Wie trete ich dem Aegryn-Expertennetzwerk bei?",
+        "a": "Fachleute (Anwälte, Tech-Experten, M&A, Cyber, Finanzen, W&I-Versicherung) können eine Expertenkarte abonnieren (89 CHF exkl. MwSt./Monat). Dies gibt Zugang zu Vermittlungsanfragen von Aegryn-Verkäufern und -Käufern. Keine Provision an Aegryn auf Ihre Honorare. Details unter /grade/partners."
+      },
+      {
+        "id": "valuation",
+        "cat": [
+          "sellers"
+        ],
+        "q": "Bieten Sie Bewertungen von Tech-Assets an?",
+        "a": "Ja, über /valuation. Reichen Sie Ihr Asset ein für eine kostenlose indikative Schätzung innerhalb von 48 Stunden. Für eine zertifizierte Bewertung mit detailliertem Bericht wählen Sie Aegryn Review (2.000 CHF exkl. MwSt.) oder Review+ (5.000 CHF exkl. MwSt.), abzugsfähig bei vollständiger Zertifizierung innerhalb von 6 Monaten."
       }
     ]
   },

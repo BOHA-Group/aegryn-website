@@ -4600,7 +4600,17 @@
     "s12NoComm": "Los Socios no abonan ninguna comisión a Aegryn sobre sus honorarios de prestación, independientemente de la naturaleza de la misión realizada (asesoramiento, due diligence, asistencia jurídica, pericia técnica, etc.). La única contraprestación financiera debida a Aegryn es la suscripción mensual Ficha Experto. Esta disposición es imperativa y no puede modificarse mediante convenio particular.",
     "s12ReferralTitle": "Programa de patrocinio",
     "s12Referral": "Todo Socio titular de una suscripción Ficha Experto activa puede patrocinar a otros profesionales. Por cada profesional patrocinado que suscriba una Ficha Experto, el padrino recibe un crédito de un mes en su propia suscripción, acreditado en el próximo vencimiento. El profesional patrocinado también recibe un mes gratuito deducido de su primera factura. Aegryn se reserva el derecho de modificar este programa con un preaviso de 30 días.",
-    "defPartner": "Profesional referenciado en el directorio Aegryn mediante una suscripción Ficha Experto activa. Acompaña a cedentes y/o adquirentes en sus operaciones (asesoramiento tech, M&A, jurídico, RR.HH., cyber, finanzas, seguro W&I, etc.). No es parte en la transacción y no percibe ninguna comisión de Aegryn."
+    "defPartner": "Profesional referenciado en el directorio Aegryn mediante una suscripción Ficha Experto activa. Acompaña a cedentes y/o adquirentes en sus operaciones (asesoramiento tech, M&A, jurídico, RR.HH., cyber, finanzas, seguro W&I, etc.). No es parte en la transacción y no percibe ninguna comisión de Aegryn.",
+    "s11BisTitle": "Honorarios de reclutamiento y colocación (Aegryn Talent)",
+    "s11BisIntro": "Aegryn Talent ofrece servicios de búsqueda ejecutiva (reclutamiento permanente) y colocación temporal (interim management) para perfiles tech de nivel C-Level, VP y Director.",
+    "s11BisRecruitTitle": "Reclutamiento permanente (Executive Search)",
+    "s11BisRecruit": "Honorarios fijos: 20% del salario anual bruto del candidato colocado. Pagadero en la fecha efectiva de inicio. Garantía de reemplazo: 3 meses. Si el candidato deja o es despedido dentro de los 3 meses posteriores al inicio, Aegryn Talent se compromete a proponer un candidato de reemplazo sin costo adicional.",
+    "s11BisInterimTitle": "Colocación temporal (Interim Management)",
+    "s11BisInterim": "Honorarios fijos: 20% del salario anual bruto equivalente del candidato (calculado prorrateado por la duración de la misión). Pagadero mensualmente durante la misión. No se aplica garantía de reemplazo a las misiones temporales.",
+    "s11BisPaymentTitle": "Condiciones de pago",
+    "s11BisPayment": "Facturación: al recibir la confirmación escrita de inicio (reclutamiento permanente) o al final de cada mes de misión (colocación temporal). Plazo de pago: 30 días netos desde la fecha de factura. No se requiere depósito. Los honorarios solo se deben en caso de colocación efectiva.",
+    "s11BisNoPlacementTitle": "Sin colocación",
+    "s11BisNoPlacement": "Si no se coloca ningún candidato al final del proceso de búsqueda, no se deben honorarios. El servicio de búsqueda es completamente basado en el rendimiento (success fee)."
   },
   "privacy": {
     "meta": {
@@ -4951,6 +4961,54 @@
         ],
         "q": "¿Cómo garantiza Aegryn la trazabilidad de un grade?",
         "a": "Cada grade es documentado, versionado y almacenado en el registro Aegryn. Cualquier modificación de la codebase certificada tras la emisión genera una nueva versión. Esto permite demostrar en cualquier momento que el código recibido corresponde exactamente al código certificado."
+      },
+      {
+        "id": "talent-service",
+        "cat": [
+          "account"
+        ],
+        "q": "¿Ofrecen servicios de reclutamiento?",
+        "a": "Sí, Aegryn Talent ofrece búsqueda ejecutiva (CTO, CISO, Chief AI Officer, VP Engineering, etc.) y colocación temporal (interim management). Honorarios: 20% del salario anual bruto, solo en caso de colocación exitosa (success fee). Garantía de reemplazo de 3 meses para reclutamiento permanente. Formularios disponibles en /talent."
+      },
+      {
+        "id": "advisory-service",
+        "cat": [
+          "account"
+        ],
+        "q": "¿Qué servicios de asesoramiento ofrecen?",
+        "a": "Aegryn Advisory opera en 4 ejes: Tech & IA (transformación digital, estrategia IA, arquitectura), Ciberseguridad (auditorías, cumplimiento GDPR/FADP/SOC2/ISO27001), M&A Advisory (buy-side, sell-side, due diligence, valoración), Data Privacy (EU AI Act, gobernanza de datos). Operamos en 23+ industrias en Europa. Detalles en /advisory."
+      },
+      {
+        "id": "build-service",
+        "cat": [
+          "account"
+        ],
+        "q": "¿Construyen activos personalizados?",
+        "a": "Sí, Aegryn diseña activos tech personalizados (SaaS, plataformas, herramientas) para emprendedores e instituciones. Precio fijo firmado en fase de descubrimiento, solo código custom (sin no-code), IP transferida íntegramente al cliente, certification-ready desde el día 1. Plazo: 10-16 semanas. Rango indicativo: CHF 15.000-150.000+. Detalles en /services/build."
+      },
+      {
+        "id": "magazine",
+        "cat": [
+          "account"
+        ],
+        "q": "¿Qué es la revista Aegryn?",
+        "a": "Publicación trimestral sobre transacciones tech, IA, salidas y tendencias M&A en Europa. Disponible en línea en /magazine. Suscripción gratuita para recibir próximos números por adelantado."
+      },
+      {
+        "id": "partner-network",
+        "cat": [
+          "account"
+        ],
+        "q": "¿Cómo unirse a la red de expertos Aegryn?",
+        "a": "Los profesionales (abogados, expertos tech, M&A, cyber, finanzas, seguro W&I) pueden suscribirse a una Ficha Experto (89 CHF IVA excl./mes). Esto da acceso a solicitudes de referencia de vendedores y compradores Aegryn. Sin comisión pagada a Aegryn sobre sus honorarios. Detalles en /grade/partners."
+      },
+      {
+        "id": "valuation",
+        "cat": [
+          "sellers"
+        ],
+        "q": "¿Ofrecen valoraciones de activos tech?",
+        "a": "Sí, a través de /valuation. Envíe su activo para obtener una estimación indicativa gratuita en 48 horas. Para una valoración certificada con informe detallado, opte por Aegryn Review (2.000 CHF IVA excl.) o Review+ (5.000 CHF IVA excl.), deducibles si se inicia certificación completa en 6 meses."
       }
     ]
   },

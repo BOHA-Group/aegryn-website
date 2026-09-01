@@ -4600,7 +4600,17 @@
     "s12NoComm": "Partners betalen Aegryn geen commissie op hun dienstverleningshonoraria, ongeacht de aard van de uitgevoerde opdracht (advies, due diligence, juridische bijstand, technische expertise, enz.). De enige financiële tegenprestatie verschuldigd aan Aegryn is het maandelijkse Expertprofiel-abonnement. Deze bepaling is dwingend en kan niet worden gewijzigd door een afzonderlijke overeenkomst.",
     "s12ReferralTitle": "Referralprogramma",
     "s12Referral": "Elke Partner met een actief Expertprofiel-abonnement kan andere professionals doorverwijzen. Voor elke doorverwezen professional die een Expertprofiel abonneert, ontvangt de verwijzer een tegoed van één maand op zijn eigen abonnement, gecrediteerd bij de volgende vervaldatum. De doorverwezen professional ontvangt ook één gratis maand afgetrokken van zijn eerste factuur. Aegryn behoudt zich het recht voor dit programma te wijzigen met een opzegtermijn van 30 dagen.",
-    "defPartner": "Professional geregistreerd in de Aegryn-directory via een actief Expertprofiel-abonnement. Begeleidt verkopers en/of kopers bij hun transacties (tech-advies, M&A, juridisch, HR, cyber, financiën, W&I-verzekering, enz.). Is geen partij bij de transactie en ontvangt geen commissie van Aegryn."
+    "defPartner": "Professional geregistreerd in de Aegryn-directory via een actief Expertprofiel-abonnement. Begeleidt verkopers en/of kopers bij hun transacties (tech-advies, M&A, juridisch, HR, cyber, financiën, W&I-verzekering, enz.). Is geen partij bij de transactie en ontvangt geen commissie van Aegryn.",
+    "s11BisTitle": "Werving- en plaatsingskosten (Aegryn Talent)",
+    "s11BisIntro": "Aegryn Talent biedt executive search-diensten (permanente werving) en tijdelijke plaatsing (interim management) voor C-Level, VP en Director tech-profielen.",
+    "s11BisRecruitTitle": "Permanente werving (Executive Search)",
+    "s11BisRecruit": "Vaste kosten: 20% van het bruto jaarsalaris van de geplaatste kandidaat. Betaalbaar bij effectieve startdatum. Vervangingsgarantie: 3 maanden. Als de kandidaat binnen 3 maanden na aanvang vertrekt of wordt ontslagen, verbindt Aegryn Talent zich ertoe een vervangende kandidaat voor te stellen zonder extra kosten.",
+    "s11BisInterimTitle": "Tijdelijke plaatsing (Interim Management)",
+    "s11BisInterim": "Vaste kosten: 20% van het equivalente bruto jaarsalaris van de kandidaat (berekend pro rata voor de missieduur). Maandelijks betaalbaar tijdens de missie. Geen vervangingsgarantie is van toepassing op tijdelijke opdrachten.",
+    "s11BisPaymentTitle": "Betalingsvoorwaarden",
+    "s11BisPayment": "Facturering: bij ontvangst van schriftelijke bevestiging van startdatum (permanente werving) of aan het einde van elke missiemaand (tijdelijke plaatsing). Betalingstermijn: 30 dagen netto vanaf factuurdatum. Geen aanbetaling vereist. Kosten zijn alleen verschuldigd bij effectieve plaatsing.",
+    "s11BisNoPlacementTitle": "Geen plaatsing",
+    "s11BisNoPlacement": "Als geen kandidaat wordt geplaatst aan het einde van het zoekproces, zijn geen kosten verschuldigd. De zoekdienst is volledig prestatiegericht (success fee)."
   },
   "privacy": {
     "meta": {
@@ -4951,6 +4961,54 @@
         ],
         "q": "Hoe garandeert Aegryn de traceerbaarheid van een grade?",
         "a": "Elke grade wordt gedocumenteerd, geversioneerd en opgeslagen in het Aegryn-register. Elke wijziging aan een gecertificeerde codebase na uitgifte genereert een nieuwe versie. Dit maakt het mogelijk om op elk moment te verifiëren dat de ontvangen code exact overeenkomt met de gecertificeerde code."
+      },
+      {
+        "id": "talent-service",
+        "cat": [
+          "account"
+        ],
+        "q": "Bieden jullie wervingsdiensten aan?",
+        "a": "Ja, Aegryn Talent biedt executive search (CTO, CISO, Chief AI Officer, VP Engineering, enz.) en tijdelijke plaatsing (interim management). Kosten: 20% van bruto jaarsalaris, alleen bij succesvolle plaatsing (success fee). 3 maanden vervangingsgarantie voor permanente werving. Formulieren beschikbaar op /talent."
+      },
+      {
+        "id": "advisory-service",
+        "cat": [
+          "account"
+        ],
+        "q": "Welke adviesdiensten bieden jullie aan?",
+        "a": "Aegryn Advisory werkt op 4 assen: Tech & AI (digitale transformatie, AI-strategie, architectuur), Cyberbeveiliging (audits, GDPR/FADP/SOC2/ISO27001-naleving), M&A-advies (buy-side, sell-side, due diligence, waardering), Data Privacy (EU AI Act, data governance). We zijn actief in 23+ sectoren in Europa. Details op /advisory."
+      },
+      {
+        "id": "build-service",
+        "cat": [
+          "account"
+        ],
+        "q": "Bouwen jullie op maat gemaakte assets?",
+        "a": "Ja, Aegryn ontwerpt op maat gemaakte tech-assets (SaaS, platforms, tools) voor ondernemers en instellingen. Vaste prijs ondertekend in discovery-fase, alleen custom code (geen no-code), IP volledig overgedragen aan klant, certification-ready vanaf dag 1. Tijdlijn: 10-16 weken. Indicatief bereik: CHF 15.000-150.000+. Details op /services/build."
+      },
+      {
+        "id": "magazine",
+        "cat": [
+          "account"
+        ],
+        "q": "Wat is het Aegryn magazine?",
+        "a": "Driemaandelijkse publicatie over tech-transacties, AI, exits en M&A-trends in Europa. Online beschikbaar op /magazine. Gratis abonnement om komende nummers vooraf te ontvangen."
+      },
+      {
+        "id": "partner-network",
+        "cat": [
+          "account"
+        ],
+        "q": "Hoe word ik lid van het Aegryn-expertennetwerk?",
+        "a": "Professionals (advocaten, tech-experts, M&A, cyber, financiën, W&I-verzekering) kunnen een Expertkaart abonneren (89 CHF excl. BTW/maand). Dit geeft toegang tot verwijzingsverzoeken van Aegryn-verkopers en -kopers. Geen commissie betaald aan Aegryn op uw honoraria. Details op /grade/partners."
+      },
+      {
+        "id": "valuation",
+        "cat": [
+          "sellers"
+        ],
+        "q": "Bieden jullie waarderingen van tech-assets aan?",
+        "a": "Ja, via /valuation. Dien uw asset in voor een gratis indicatieve schatting binnen 48 uur. Voor een gecertificeerde waardering met gedetailleerd rapport, kies voor Aegryn Review (2.000 CHF excl. BTW) of Review+ (5.000 CHF excl. BTW), aftrekbaar als volledige certificering binnen 6 maanden wordt gestart."
       }
     ]
   },
