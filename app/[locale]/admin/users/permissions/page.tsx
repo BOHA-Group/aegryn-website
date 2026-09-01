@@ -2,7 +2,16 @@
 
 import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
-import { Shield, Check, X, Save, Search } from 'lucide-react'
+import { Shield, Check, X, Save, Search, AlertTriangle } from 'lucide-react'
+
+// Permissions critiques qui ne doivent JAMAIS être affichées/déléguées
+const CRITICAL_PERMISSIONS = [
+  'users.delete',
+  'users.manage_permissions',
+  'assets.delete',
+  'system.settings',
+  'finance.edit'
+]
 
 type Permission = {
   id: string
@@ -56,13 +65,17 @@ export default function AdminPermissionsPage() {
     
     if (usersData) setUsers(usersData)
 
-    // Charger toutes les permissions disponibles
+    // Charger toutes les permissions disponibles (sauf critiques)
     const { data: permsData } = await supabase
       .from('admin_permissions')
       .select('*')
       .order('category, name')
     
-    if (permsData) setPermissions(permsData)
+    if (permsData) {
+      // Filtrer les permissions critiques
+      const safePermissions = permsData.filter(p => !CRITICAL_PERMISSIONS.includes(p.id))
+      setPermissions(safePermissions)
+    }
     
     setLoading(false)
   }
@@ -135,6 +148,26 @@ export default function AdminPermissionsPage() {
           <p className="text-[14px] text-ag-gray">
             Attribuer des permissions granulaires aux utilisateurs internes
           </p>
+        </div>
+
+        {/* Bandeau de sécurité */}
+        <div className="mb-6 p-4 bg-amber-50 border border-amber-200">
+          <div className="flex items-start gap-3">
+            <AlertTriangle size={20} className="text-amber-600 flex-shrink-0 mt-0.5" />
+            <div>
+              <h3 className="font-semibold text-[14px] text-amber-900 mb-1">
+                Sécurité : Permissions critiques protégées
+              </h3>
+              <p className="text-[13px] text-amber-800 leading-relaxed">
+                Les permissions suivantes sont <strong>réservées aux admins full</strong> et ne peuvent pas être déléguées :
+                suppression de comptes, gestion des permissions, suppression d'actifs, paramètres système, modification finances.
+              </p>
+              <p className="text-[12px] text-amber-700 mt-2">
+                Les utilisateurs avec rôle <code className="px-1 py-0.5 bg-amber-100 font-mono">internal</code> n'ont accès à l'espace admin 
+                que si au moins une permission leur est attribuée.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-[400px_1fr] gap-6">
