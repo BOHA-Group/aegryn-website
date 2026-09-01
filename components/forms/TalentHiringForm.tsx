@@ -71,7 +71,7 @@ export default function TalentHiringForm() {
           <input
             {...register('company')}
             type="text"
-            className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px]"
+            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
             placeholder={t('companyPlaceholder')}
           />
           {errors.company && (
@@ -87,7 +87,7 @@ export default function TalentHiringForm() {
           <input
             {...register('contactName')}
             type="text"
-            className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px]"
+            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
             placeholder={t('contactNamePlaceholder')}
           />
           {errors.contactName && (
@@ -103,7 +103,7 @@ export default function TalentHiringForm() {
           <input
             {...register('email')}
             type="email"
-            className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px]"
+            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
             placeholder={t('emailPlaceholder')}
           />
           {errors.email && (
@@ -138,7 +138,7 @@ export default function TalentHiringForm() {
           <input
             {...register('roleTitle')}
             type="text"
-            className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px]"
+            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
             placeholder={t('roleTitlePlaceholder')}
           />
           {errors.roleTitle && (
@@ -154,7 +154,7 @@ export default function TalentHiringForm() {
           <input
             {...register('location')}
             type="text"
-            className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px]"
+            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
             placeholder={t('locationPlaceholder')}
           />
           {errors.location && (
@@ -170,7 +170,7 @@ export default function TalentHiringForm() {
           <input
             {...register('budgetAnnualChf')}
             type="text"
-            className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px]"
+            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
             placeholder={t('budgetPlaceholder')}
           />
         </div>
@@ -182,7 +182,7 @@ export default function TalentHiringForm() {
           </label>
           <select
             {...register('urgency')}
-            className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px]"
+            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
           >
             <option value="immediate">{t('urgencyImmediate')}</option>
             <option value="month">{t('urgencyMonth')}</option>
@@ -203,7 +203,7 @@ export default function TalentHiringForm() {
         <textarea
           {...register('roleDescription')}
           rows={6}
-          className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] resize-none"
+          className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] resize-none transition-colors"
           placeholder={t('roleDescriptionPlaceholder')}
         />
         {errors.roleDescription && (

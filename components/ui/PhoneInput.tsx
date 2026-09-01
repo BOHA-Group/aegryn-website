@@ -221,7 +221,7 @@ export default function PhoneInput({
             type="button"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             disabled={disabled}
-            className="flex items-center gap-2 px-3 py-3 border border-ag-border bg-white hover:border-ag-apex/60 focus:border-ag-apex focus:outline-none focus:ring-2 focus:ring-ag-apex/10 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 px-3 py-3 rounded-xl border border-ag-border bg-white hover:border-ag-apex/60 focus:border-ag-apex focus:outline-none focus:ring-2 focus:ring-ag-apex/10 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <span className="text-lg">{COUNTRIES.find(c => c.code === selectedCountry)?.flag}</span>
             <span className="font-mono text-[13px] text-ag-gray">{currentFormat.code}</span>
@@ -235,7 +235,7 @@ export default function PhoneInput({
                 className="fixed inset-0 z-10"
                 onClick={() => setIsDropdownOpen(false)}
               />
-              <div className="absolute top-full left-0 mt-1 w-64 bg-white border border-ag-border shadow-lg max-h-64 overflow-y-auto z-20">
+              <div className="absolute top-full left-0 mt-1 w-64 bg-white border border-ag-border rounded-xl shadow-lg max-h-64 overflow-y-auto z-20">
                 {COUNTRIES.map((country) => (
                   <button
                     key={country.code}
@@ -263,7 +263,7 @@ export default function PhoneInput({
             disabled={disabled}
             required={required}
             placeholder={placeholder || currentFormat.placeholder}
-            className={`w-full px-4 py-3 border ${
+            className={`w-full px-4 py-3 rounded-xl border ${
               error || (!isValid && phoneNumber)
                 ? 'border-red-500 focus:border-red-500 focus:ring-red-500/10'
                 : 'border-ag-border focus:border-ag-apex focus:ring-ag-apex/10'

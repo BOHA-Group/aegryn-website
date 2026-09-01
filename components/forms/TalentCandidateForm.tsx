@@ -68,7 +68,7 @@ export default function TalentCandidateForm() {
           <input
             {...register('fullName')}
             type="text"
-            className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px]"
+            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
             placeholder={t('fullNamePlaceholder')}
           />
           {errors.fullName && (
@@ -84,7 +84,7 @@ export default function TalentCandidateForm() {
           <input
             {...register('email')}
             type="email"
-            className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px]"
+            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
             placeholder={t('emailPlaceholder')}
           />
           {errors.email && (
@@ -119,7 +119,7 @@ export default function TalentCandidateForm() {
           <input
             {...register('linkedinUrl')}
             type="url"
-            className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px]"
+            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
             placeholder={t('linkedinPlaceholder')}
           />
           {errors.linkedinUrl && (
@@ -135,7 +135,7 @@ export default function TalentCandidateForm() {
           <input
             {...register('availability')}
             type="text"
-            className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px]"
+            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
             placeholder={t('availabilityPlaceholder')}
           />
         </div>
@@ -148,8 +148,8 @@ export default function TalentCandidateForm() {
         </label>
         <textarea
           {...register('motivation')}
-          rows={8}
-          className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] resize-none"
+          rows={6}
+          className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] resize-none transition-colors"
           placeholder={t('motivationPlaceholder')}
         />
         {errors.motivation && (
