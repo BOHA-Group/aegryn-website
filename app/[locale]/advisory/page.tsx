@@ -2,6 +2,7 @@ import Link                     from 'next/link'
 import { ArrowUpRight }          from 'lucide-react'
 import { getTranslations }       from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
+import IndustriesSection         from '@/components/sections/IndustriesSection'
 import type { Metadata }         from 'next'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -9,10 +10,26 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
-    title: 'Aegryn Advisory — Strategic Advisory Data, AI & Cybersecurity',
-    description: 'Strategic guidance in Data, AI and Cybersecurity. Built by operators. Delivered without noise.',
+    title: 'Aegryn Advisory — Tech, AI, Cybersecurity & M&A Advisory | All Industries',
+    description: 'Strategic advisory in technology, AI, cybersecurity and M&A. Executive recruitment. Asset engineering. Operating across 23+ industries in Europe. Built by operators.',
     path: '/advisory',
     locale,
+    keywords: [
+      'tech advisory',
+      'AI advisory',
+      'cybersecurity consulting',
+      'M&A advisory',
+      'executive recruitment',
+      'tech asset engineering',
+      'strategic consulting',
+      'digital transformation',
+      'fintech advisory',
+      'healthtech consulting',
+      'proptech advisory',
+      'SaaS advisory',
+      'European tech advisory',
+      'Switzerland advisory',
+    ],
   })
 }
 
@@ -166,17 +183,14 @@ export default async function AdvisoryPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Industries */}
+      <IndustriesSection />
+
       {/* Approach + CTA */}
-      <section className="bg-ag-navy py-28 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
+      <section className="bg-ag-navy border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-6 md:px-12 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
-            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">
-              / {t('approach.label')}
-            </p>
-            <h2
-              className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl"
-              style={{ fontSize: 'clamp(24px,3vw,44px)' }}
-            >
+            <h2 className="font-sans font-bold text-[28px] text-white leading-tight">
               {t('approach.title')}
             </h2>
             <p className="mt-4 text-[14px] text-white/50 max-w-lg leading-relaxed">

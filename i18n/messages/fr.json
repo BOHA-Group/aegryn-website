@@ -6732,7 +6732,7 @@
   },
   "industries": {
     "title": "Industries couvertes",
-    "desc": "Aegryn accompagne les actifs tech dans tous les secteurs d'activité. Notre expertise couvre l'ensemble de l'économie européenne.",
+    "desc": "Aegryn intervient dans tous les secteurs d'activité : conception d'actifs tech, advisory stratégique, recrutement executive, fusions & acquisitions. Notre expertise couvre l'ensemble de l'économie européenne.",
     "list": [
       "Aérospatiale & Défense",
       "Agriculture & Agroalimentaire",
@@ -6757,6 +6757,7 @@
       "Services Professionnels",
       "Télécommunications",
       "Transport & Logistique"
-    ]
+    ],
+    "footerNote": "Cette liste n'est pas exhaustive. Aegryn intervient dans tout secteur où la technologie, l'innovation et la transformation digitale créent de la valeur."
   }
 }
