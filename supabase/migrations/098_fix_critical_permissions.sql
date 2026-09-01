@@ -93,7 +93,7 @@ $$ LANGUAGE plpgsql SECURITY DEFINER;
 CREATE POLICY "only_admin_can_manage_permissions"
   ON user_admin_permissions FOR INSERT
   TO authenticated
-  USING (
+  WITH CHECK (
     EXISTS (
       SELECT 1 FROM profiles
       WHERE profiles.id = auth.uid()
