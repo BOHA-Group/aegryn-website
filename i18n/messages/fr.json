@@ -2898,6 +2898,36 @@
       "title": "Céder votre actif tech\nau prix qu'il mérite.",
       "desc": "Aegryn certifie votre actif CIFS, fixe le grade officiel et le présente sous NDA exclusif à des acquéreurs institutionnels pré-qualifiés. Commission au succès uniquement.",
       "cta": "Déposer un mandat de cession",
+      "steps": {
+        "s1": {
+          "title": "Certification CIFS",
+          "desc": "Votre actif passe le protocole d'évaluation Aegryn sur 4 dimensions : Code, Infra, Finance, Sécurité. Un grade officiel AEG est attribué avant toute présentation.",
+          "cta": "Obtenir la certification"
+        },
+        "s2": {
+          "title": "Présentation sous NDA",
+          "desc": "L'actif certifié entre dans le catalogue offmarket fermé. Chaque acquéreur signe un NDA avant d'accéder au moindre document confidentiel."
+        },
+        "s3": {
+          "title": "Closing sécurisé",
+          "desc": "Escrow institutionnel, transfert sécurisé, closing sous droit suisse. Protection maximale pour le vendeur et l'acquéreur.",
+          "cta": "Déposer un mandat"
+        }
+      },
+      "guarantees": {
+        "g1": {
+          "title": "Confidentialité absolue",
+          "desc": "NDA signé avant toute divulgation. Aucune publication publique."
+        },
+        "g2": {
+          "title": "Acquéreurs qualifiés uniquement",
+          "desc": "Procédure KYC complétée. Capacité d'acquisition vérifiée."
+        },
+        "g3": {
+          "title": "Protection droit suisse",
+          "desc": "Escrow institutionnel. Closing sécurisé sous juridiction suisse."
+        }
+      },
       "step1Title": "Certification CIFS",
       "step1Desc": "Votre actif passe le protocole d'évaluation Aegryn sur 4 dimensions : Code, Infra, Finance, Sécurité. Un grade officiel AEG est attribué avant toute présentation.",
       "step2Title": "Présentation sous NDA",

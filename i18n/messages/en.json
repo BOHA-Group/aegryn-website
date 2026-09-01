@@ -2926,6 +2926,36 @@
       "title": "Divest your tech asset\nat the price it deserves.",
       "desc": "Aegryn certifies your asset CIFS, assigns the official grade and presents it under exclusive NDA to pre-qualified institutional acquirers. Success fee only.",
       "cta": "Submit a sale mandate",
+      "steps": {
+        "s1": {
+          "title": "CIFS Certification",
+          "desc": "Your asset goes through the Aegryn evaluation protocol across 4 dimensions: Code, Infrastructure, Finance, Security. An official AEG grade is assigned before any presentation.",
+          "cta": "Get certified"
+        },
+        "s2": {
+          "title": "Presentation under NDA",
+          "desc": "The certified asset enters the closed offmarket catalog. Every acquirer signs an NDA before accessing any confidential document."
+        },
+        "s3": {
+          "title": "Secure closing",
+          "desc": "Institutional escrow, secure transfer, closing under Swiss law. Maximum protection for seller and acquirer.",
+          "cta": "Submit mandate"
+        }
+      },
+      "guarantees": {
+        "g1": {
+          "title": "Absolute confidentiality",
+          "desc": "NDA signed before any disclosure. No public listing."
+        },
+        "g2": {
+          "title": "Qualified buyers only",
+          "desc": "KYC procedure completed. Acquisition capacity verified."
+        },
+        "g3": {
+          "title": "Swiss law protection",
+          "desc": "Institutional escrow. Secure closing under Swiss jurisdiction."
+        }
+      },
       "step1Title": "CIFS Certification",
       "step1Desc": "Your asset goes through the Aegryn evaluation protocol across 4 dimensions: Code, Infrastructure, Finance, Security. An official AEG grade is assigned before any presentation.",
       "step2Title": "Presentation under NDA",
