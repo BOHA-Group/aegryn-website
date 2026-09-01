@@ -6889,20 +6889,22 @@
           "Banken & Kapitalmärkte",
           "Bildung",
           "Chemie & Life Sciences",
+          "Einzelhandel",
           "Energie & Utilities",
           "Finanzdienstleistungen",
           "Gesundheitswesen & Medtech",
           "Industriegüter & Fertigung",
           "Konsumgüter",
           "Logistik & Transport",
+          "Luxus & Mode",
           "Medien & Telekommunikation",
           "Natürliche Ressourcen",
+          "Pharma & Biotechnologie",
           "Principal Investors & Private Equity",
           "Öffentlicher Sektor",
           "Reisen & Tourismus",
           "Technologie & Software",
-          "Versicherung",
-          "Einzelhandel"
+          "Versicherung"
         ]
       }
     },

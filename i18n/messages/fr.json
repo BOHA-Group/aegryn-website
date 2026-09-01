@@ -6915,20 +6915,22 @@
           "Automobile",
           "Banque & Marchés Financiers",
           "Biens de Consommation",
+          "Capital-Investissement & Private Equity",
           "Chimie & Sciences de la Vie",
           "Commerce de Détail",
           "Éducation",
           "Énergie & Utilities",
           "Industrie & Manufacturing",
           "Logistique & Transport",
+          "Luxe & Mode",
           "Médias & Télécommunications",
+          "Pharma & Biotechnologie",
           "Ressources Naturelles",
           "Santé & Medtech",
           "Secteur Public",
           "Services Financiers",
           "Technology & Software",
-          "Tourisme & Hôtellerie",
-          "Capital-Investissement & Private Equity"
+          "Tourisme & Hôtellerie"
         ]
       }
     }
