@@ -88,7 +88,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftBuild')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('craftBuildDesc')}
           </p>
           <div className="flex flex-col gap-1">
@@ -110,7 +110,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftSupport')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('craftSupportDesc')}
           </p>
           <div className="flex flex-col gap-1">
@@ -132,7 +132,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftTransact')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('craftTransactDesc')}
           </p>
           <div className="flex flex-col gap-1">
@@ -165,7 +165,7 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
               {t('solutionsCore')}
             </span>
           </div>
-          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('solutionsCoreDesc')}
           </p>
           <div className="flex flex-col gap-1">
@@ -189,7 +189,7 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
               {t('solutionsPortfolio')}
             </span>
           </div>
-          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('solutionsPortfolioDesc')}
           </p>
           <div className="flex flex-col gap-1">
@@ -232,7 +232,7 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('thinkingMagazine')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('thinkingMagazineDesc')}
           </p>
           <div className="flex flex-col gap-1 mb-4">
@@ -251,7 +251,7 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3 mt-4">
             {t('thinkingBlog')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('thinkingBlogDesc')}
           </p>
           <div className="flex flex-col gap-1">
@@ -273,7 +273,7 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('thinkingKnowledge')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('thinkingKnowledgeDesc')}
           </p>
           <div className="flex flex-col gap-1">
@@ -304,7 +304,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('whoGroup')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('whoGroupDesc')}
           </p>
           <div className="flex flex-col gap-1">
@@ -326,7 +326,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('whoJoin')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('whoJoinDesc')}
           </p>
           <div className="flex flex-col gap-1">
