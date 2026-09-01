@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
-import { Trash2, Edit2, Save, X, Users, DollarSign } from 'lucide-react'
+import { Trash2, Edit2, Save, X, Users, DollarSign, Shield } from 'lucide-react'
+import { usePermissions } from '@/hooks/usePermissions'
 
 type HiringRequest = {
   id: string
@@ -44,6 +45,14 @@ export default function AdminTalentPage() {
   const [loading, setLoading] = useState(true)
   const [editingId, setEditingId] = useState<string | null>(null)
   const [editData, setEditData] = useState<any>({})
+  
+  const {
+    canEditTalent,
+    canDeleteTalent,
+    canViewTalentFinancials,
+    canEditTalentFinancials,
+    loading: permissionsLoading
+  } = usePermissions()
 
   useEffect(() => {
     loadData()
@@ -285,6 +294,7 @@ export default function AdminTalentPage() {
                           <option value="closed">Fermé</option>
                           <option value="cancelled">Annulé</option>
                         </select>
+                        {canEditTalent() && (
                         <button
                           onClick={() => startEdit(req)}
                           className="p-2 border border-ag-border hover:bg-ag-off-white"
@@ -292,6 +302,8 @@ export default function AdminTalentPage() {
                         >
                           <Edit2 size={14} />
                         </button>
+                        )}
+                        {canDeleteTalent() && (
                         <button
                           onClick={() => deleteItem(req.id, 'hiring')}
                           className="p-2 border border-red-300 text-red-600 hover:bg-red-50"
@@ -299,6 +311,7 @@ export default function AdminTalentPage() {
                         >
                           <Trash2 size={14} />
                         </button>
+                        )}
                       </div>
                     </div>
 
@@ -473,6 +486,7 @@ export default function AdminTalentPage() {
                           <option value="placed">Placé</option>
                           <option value="archived">Archivé</option>
                         </select>
+                        {canEditTalent() && (
                         <button
                           onClick={() => startEdit(cand)}
                           className="p-2 border border-ag-border hover:bg-ag-off-white"
@@ -480,6 +494,8 @@ export default function AdminTalentPage() {
                         >
                           <Edit2 size={14} />
                         </button>
+                        )}
+                        {canDeleteTalent() && (
                         <button
                           onClick={() => deleteItem(cand.id, 'candidate')}
                           className="p-2 border border-red-300 text-red-600 hover:bg-red-50"
@@ -487,6 +503,7 @@ export default function AdminTalentPage() {
                         >
                           <Trash2 size={14} />
                         </button>
+                        )}
                       </div>
                     </div>
 
