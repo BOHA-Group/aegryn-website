@@ -6886,6 +6886,25 @@
       "responseTime": "Ons team neemt binnen 48 uur contact met u op"
     },
     "employer": {
+      "services": {
+        "title": "Onze executive search aanpak",
+        "subtitle": "Op maat gemaakte oplossingen om uw tech & AI leiders te identificeren en te werven",
+        "search": {
+          "label": "Executive Search",
+          "title": "Leiderschapswerving",
+          "desc": "We vormgeven de briefing samen met u, gebruikmakend van bewezen frameworks en marktkennis om leiderschapstalent te identificeren dat aansluit bij uw strategische uitdagingen."
+        },
+        "assessment": {
+          "label": "Assessment",
+          "title": "Executive beoordeling",
+          "desc": "We beoordelen leiders voor senior functies door middel van gestructureerde interviews, psychometrische tests en diepgaande analyse van hun eerdere prestaties."
+        },
+        "advisory": {
+          "label": "Advisory",
+          "title": "Talentstrategie advies",
+          "desc": "We ondersteunen uw leiderschapsstrategie door market mapping, compensatieanalyse en coaching om wereldklasse tech teams te bouwen."
+        }
+      },
       "intro": {
         "desc": "Aegryn Talent identificeert en plaatst zeldzame tech-profielen die uw groei versnellen. Onze aanpak combineert sectorexpertise, Europees netwerk en rigoureus certificeringsproces.",
         "title": "Werf de leiders die transformeren"

@@ -7050,6 +7050,25 @@
       "responseTime": "Unser Team kontaktiert Sie innerhalb von 48 Stunden"
     },
     "employer": {
+      "services": {
+        "title": "Unser Executive-Search-Ansatz",
+        "subtitle": "Maßgeschneiderte Lösungen zur Identifizierung und Rekrutierung Ihrer Tech- & KI-Führungskräfte",
+        "search": {
+          "label": "Executive Search",
+          "title": "Führungskräftesuche",
+          "desc": "Wir gestalten das Briefing mit Ihnen unter Verwendung bewährter Frameworks und Marktkenntnis, um Führungstalente zu identifizieren, die auf Ihre strategischen Herausforderungen abgestimmt sind."
+        },
+        "assessment": {
+          "label": "Assessment",
+          "title": "Executive-Bewertung",
+          "desc": "Wir bewerten Führungskräfte für Senior-Positionen durch strukturierte Interviews, psychometrische Tests und eine eingehende Analyse ihrer bisherigen Erfolge."
+        },
+        "advisory": {
+          "label": "Advisory",
+          "title": "Talent-Strategieberatung",
+          "desc": "Wir unterstützen Ihre Führungsstrategie durch Market Mapping, Vergütungsanalyse und Coaching zum Aufbau erstklassiger Tech-Teams."
+        }
+      },
       "intro": {
         "desc": "Aegryn Talent identifiziert und vermittelt seltene Tech-Profile, die Ihr Wachstum beschleunigen. Unser Ansatz kombiniert Branchenexpertise, europäisches Netzwerk und rigorosen Zertifizierungsprozess.",
         "title": "Rekrutieren Sie die Leader, die transformieren"

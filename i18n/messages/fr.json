@@ -6612,6 +6612,25 @@
       "employer": "Je recrute"
     },
     "employer": {
+      "services": {
+        "title": "Notre approche executive search",
+        "subtitle": "Des solutions sur mesure pour identifier et recruter vos leaders tech & IA",
+        "search": {
+          "label": "Executive Search",
+          "title": "Recherche de cadres dirigeants",
+          "desc": "Nous façonnons le brief avec vous, en utilisant des frameworks éprouvés et notre connaissance du marché pour identifier les talents de leadership adaptés à vos enjeux stratégiques."
+        },
+        "assessment": {
+          "label": "Assessment",
+          "title": "Évaluation executive",
+          "desc": "Nous évaluons les leaders pour les postes senior à travers des entretiens structurés, des tests psychométriques et une analyse approfondie de leurs réalisations passées."
+        },
+        "advisory": {
+          "label": "Advisory",
+          "title": "Conseil en stratégie talent",
+          "desc": "Nous accompagnons votre stratégie de leadership à travers le market mapping, l'analyse de rémunération et le coaching pour construire des équipes tech de classe mondiale."
+        }
+      },
       "intro": {
         "title": "Recrutez les leaders qui transforment",
         "desc": "Aegryn Talent identifie et place les profils tech rares qui accélèrent votre croissance. Notre approche combine expertise sectorielle, réseau européen et processus de certification rigoureux."

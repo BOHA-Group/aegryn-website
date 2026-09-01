@@ -194,11 +194,6 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
                 {t('forms.candidate.desc')}
               </p>
               <TalentCandidateForm />
-              <div className="mt-8 text-center">
-                <p className="text-[13px] text-ag-gray italic">
-                  {t('insights.responseTime')}
-                </p>
-              </div>
             </div>
           </section>
         </>
@@ -246,8 +241,57 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
             </div>
           </section>
 
-          {/* Employer: Intro */}
+          {/* Employer: Services */}
           <section className="py-24 border-b border-ag-border">
+            <div className="max-w-7xl mx-auto px-6 md:px-12">
+              <div className="mb-16 text-center">
+                <h2 className="font-sans font-bold text-ag-black text-[36px] tracking-[-0.02em] mb-3">
+                  {t('employer.services.title')}
+                </h2>
+                <p className="text-[14px] text-ag-gray max-w-2xl mx-auto">
+                  {t('employer.services.subtitle')}
+                </p>
+              </div>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="border border-ag-border bg-white p-8 hover:border-ag-apex/40 transition-colors">
+                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex mb-4">
+                    {t('employer.services.search.label')}
+                  </div>
+                  <h3 className="font-sans font-bold text-ag-black text-[19px] tracking-[-0.01em] mb-4">
+                    {t('employer.services.search.title')}
+                  </h3>
+                  <p className="text-[14px] text-ag-gray leading-relaxed">
+                    {t('employer.services.search.desc')}
+                  </p>
+                </div>
+                <div className="border border-ag-border bg-white p-8 hover:border-ag-apex/40 transition-colors">
+                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex mb-4">
+                    {t('employer.services.assessment.label')}
+                  </div>
+                  <h3 className="font-sans font-bold text-ag-black text-[19px] tracking-[-0.01em] mb-4">
+                    {t('employer.services.assessment.title')}
+                  </h3>
+                  <p className="text-[14px] text-ag-gray leading-relaxed">
+                    {t('employer.services.assessment.desc')}
+                  </p>
+                </div>
+                <div className="border border-ag-border bg-white p-8 hover:border-ag-apex/40 transition-colors">
+                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex mb-4">
+                    {t('employer.services.advisory.label')}
+                  </div>
+                  <h3 className="font-sans font-bold text-ag-black text-[19px] tracking-[-0.01em] mb-4">
+                    {t('employer.services.advisory.title')}
+                  </h3>
+                  <p className="text-[14px] text-ag-gray leading-relaxed">
+                    {t('employer.services.advisory.desc')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Employer: Intro */}
+          <section className="py-24 bg-ag-off-white border-b border-ag-border">
             <div className="max-w-7xl mx-auto px-6 md:px-12">
               <div className="grid md:grid-cols-2 gap-16">
                 <div>
@@ -342,11 +386,6 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
                 {t('forms.hiring.desc')}
               </p>
               <TalentHiringForm />
-              <div className="mt-8 text-center">
-                <p className="text-[13px] text-ag-gray italic">
-                  {t('insights.responseTime')}
-                </p>
-              </div>
             </div>
           </section>
         </>

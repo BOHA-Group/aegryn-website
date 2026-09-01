@@ -6886,6 +6886,25 @@
       "responseTime": "Nuestro equipo te contactará en 48h"
     },
     "employer": {
+      "services": {
+        "title": "Nuestro enfoque executive search",
+        "subtitle": "Soluciones a medida para identificar y reclutar a sus líderes tech & IA",
+        "search": {
+          "label": "Executive Search",
+          "title": "Búsqueda de directivos",
+          "desc": "Definimos el brief con usted, utilizando frameworks probados y conocimiento del mercado para identificar talento de liderazgo alineado con sus desafíos estratégicos."
+        },
+        "assessment": {
+          "label": "Assessment",
+          "title": "Evaluación executive",
+          "desc": "Evaluamos líderes para puestos senior mediante entrevistas estructuradas, pruebas psicométricas y análisis en profundidad de sus logros pasados."
+        },
+        "advisory": {
+          "label": "Advisory",
+          "title": "Consultoría estrategia de talento",
+          "desc": "Apoyamos su estrategia de liderazgo mediante market mapping, análisis de compensación y coaching para construir equipos tech de clase mundial."
+        }
+      },
       "intro": {
         "desc": "Aegryn Talent identifica y coloca perfiles tech raros que aceleran tu crecimiento. Nuestro enfoque combina experiencia sectorial, red europea y proceso de certificación riguroso.",
         "title": "Recluta a los líderes que transforman"
