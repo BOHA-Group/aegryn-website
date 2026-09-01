@@ -54,15 +54,12 @@ const THINKING_MAGAZINE_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'thinkingMagazineIssues', href: '/magazine' },
 ]
 
-// Nos convictions - Blog
-const THINKING_BLOG_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'thinkingBlogArticles', href: '/blog' },
-]
-
-// Nos convictions - Base de connaissance
-const THINKING_KNOWLEDGE_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'thinkingGlossary', href: '/blog' },
-  { labelKey: 'thinkingFAQ',      href: '/blog' },
+// Nos convictions - Notre regard sur le marché
+const THINKING_MARKET_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'thinkingMarketArticles',   href: '/blog' },
+  { labelKey: 'thinkingMarketGlossary',   href: '/blog' },
+  { labelKey: 'thinkingMarketValuation',  href: '/grade' },
+  { labelKey: 'thinkingMarketFAQ',        href: '/blog' },
 ]
 
 // Qui sommes-nous - Le groupe
@@ -222,12 +219,12 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
   )
 }
 
-// Mega-menu Nos convictions (2 colonnes Magazine + Base connaissance)
+// Mega-menu Nos convictions (2 colonnes Magazine + Notre regard)
 function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   return (
     <div className="absolute top-full left-0 mt-2 w-[500px] bg-ag-white border border-ag-border shadow-lg z-50">
       <div className="grid grid-cols-2 gap-px bg-ag-border">
-        {/* Magazine + Blog */}
+        {/* The Aegryn Magazine */}
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('thinkingMagazine')}
@@ -235,27 +232,8 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
           <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('thinkingMagazineDesc')}
           </p>
-          <div className="flex flex-col gap-1 mb-4">
-            {THINKING_MAGAZINE_LINKS.map(({ labelKey, href }) => (
-              <Link
-                key={labelKey}
-                href={href}
-                onClick={onClose}
-                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
-              >
-                {t(labelKey)}
-              </Link>
-            ))}
-          </div>
-
-          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3 mt-4">
-            {t('thinkingBlog')}
-          </p>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
-            {t('thinkingBlogDesc')}
-          </p>
           <div className="flex flex-col gap-1">
-            {THINKING_BLOG_LINKS.map(({ labelKey, href }) => (
+            {THINKING_MAGAZINE_LINKS.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
                 href={href}
@@ -268,16 +246,16 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
           </div>
         </div>
 
-        {/* Base de connaissance */}
+        {/* Notre regard sur le marché */}
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
-            {t('thinkingKnowledge')}
+            {t('thinkingMarket')}
           </p>
           <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
-            {t('thinkingKnowledgeDesc')}
+            {t('thinkingMarketDesc')}
           </p>
           <div className="flex flex-col gap-1">
-            {THINKING_KNOWLEDGE_LINKS.map(({ labelKey, href }) => (
+            {THINKING_MARKET_LINKS.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
                 href={href}
@@ -657,15 +635,8 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('thinkingBlog')}</p>
-                  {THINKING_BLOG_LINKS.map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
-                      {t(labelKey)}
-                    </Link>
-                  ))}
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('thinkingKnowledge')}</p>
-                  {THINKING_KNOWLEDGE_LINKS.map(({ labelKey, href }) => (
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('thinkingMarket')}</p>
+                  {THINKING_MARKET_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}
