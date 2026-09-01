@@ -40,15 +40,14 @@ CREATE INDEX idx_talent_hiring_email ON talent_hiring_requests(email);
 -- RLS: Admin only
 ALTER TABLE talent_hiring_requests ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY "Admin full access on talent_hiring_requests"
-  ON talent_hiring_requests
-  FOR ALL
+CREATE POLICY "talent_hiring_admin_all"
+  ON talent_hiring_requests FOR ALL
   TO authenticated
   USING (
     EXISTS (
       SELECT 1 FROM profiles
       WHERE profiles.id = auth.uid()
-      AND profiles.is_admin = true
+      AND profiles.role = 'admin'
     )
   );
 
@@ -88,15 +87,14 @@ CREATE INDEX idx_talent_candidates_email ON talent_candidates(email);
 -- RLS: Admin only
 ALTER TABLE talent_candidates ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY "Admin full access on talent_candidates"
-  ON talent_candidates
-  FOR ALL
+CREATE POLICY "talent_candidates_admin_all"
+  ON talent_candidates FOR ALL
   TO authenticated
   USING (
     EXISTS (
       SELECT 1 FROM profiles
       WHERE profiles.id = auth.uid()
-      AND profiles.is_admin = true
+      AND profiles.role = 'admin'
     )
   );
 
