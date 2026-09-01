@@ -50,6 +50,121 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
         </div>
       </section>
 
+      {/* Coverage - Pays & Industries (commun aux 2 tabs) */}
+      <section className="py-24 bg-ag-off-white border-b border-ag-border">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-16">
+            <h2 className="font-sans font-bold text-ag-black text-[36px] tracking-[-0.02em] mb-3">
+              {t('coverage.coverageTitle')}
+            </h2>
+            <p className="text-[14px] text-ag-gray uppercase tracking-[0.2em]">
+              {t('coverage.coverageSubtitle')}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-4">
+                {t('coverage.countriesTitle')}
+              </h3>
+              <p className="text-[13px] text-ag-gray leading-relaxed">
+                {t('coverage.countriesDesc')}
+              </p>
+            </div>
+            <div>
+              <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-4">
+                {t('coverage.industriesTitle')}
+              </h3>
+              <p className="text-[13px] text-ag-gray leading-relaxed">
+                {t('coverage.industriesDesc')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Market Roles - Postes les plus recherchés (commun aux 2 tabs) */}
+      <section className="py-24 border-b border-ag-border">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="mb-16">
+            <h2 className="font-sans font-bold text-ag-black text-[36px] tracking-[-0.02em] mb-3">
+              {t('marketRoles.marketRolesTitle')}
+            </h2>
+            <p className="text-[14px] text-ag-gray">
+              {t('marketRoles.marketRolesSubtitle')}
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {(t.raw('marketRoles.roles') as Array<{title: string; location: string; salary: string; demand: string}>).map((role, i) => (
+              <div key={i} className="border border-ag-border bg-white p-6 hover:border-ag-apex/40 transition-colors">
+                <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] mb-3">
+                  {role.title}
+                </h3>
+                <div className="space-y-2 text-[12px]">
+                  <p className="text-ag-gray">
+                    <span className="font-semibold text-ag-black">{t('marketRoles.locationLabel')}:</span> {role.location}
+                  </p>
+                  <p className="text-ag-gray">
+                    <span className="font-semibold text-ag-black">{t('marketRoles.salaryLabel')}:</span> {role.salary}
+                  </p>
+                  <p className="text-ag-apex font-semibold">
+                    {role.demand}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Insights & Données Marché (commun aux 2 tabs) */}
+      <section className="py-24 bg-ag-off-white border-b border-ag-border">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="mb-12">
+            <h2 className="font-sans font-bold text-ag-black text-[36px] tracking-[-0.02em] mb-3">
+              {t('insights.insightsTitle')}
+            </h2>
+            <p className="text-[14px] text-ag-gray">
+              {t('insights.insightsSubtitle')}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="border border-ag-border bg-white p-8">
+              <h3 className="font-sans font-bold text-ag-black text-[19px] tracking-[-0.01em] mb-3">
+                {t('insights.salaryReportTitle')}
+              </h3>
+              <p className="text-[13px] text-ag-gray leading-relaxed mb-6">
+                {t('insights.salaryReportDesc')}
+              </p>
+              <a
+                href="/magazine"
+                className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"
+              >
+                {t('insights.salaryReportCta')}
+              </a>
+            </div>
+            <div className="border border-ag-border bg-white p-8">
+              <h3 className="font-sans font-bold text-ag-black text-[19px] tracking-[-0.01em] mb-3">
+                {t('insights.magazineTitle')}
+              </h3>
+              <p className="text-[13px] text-ag-gray leading-relaxed mb-6">
+                {t('insights.magazineDesc')}
+              </p>
+              <a
+                href="/magazine"
+                className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"
+              >
+                {t('insights.magazineCta')}
+              </a>
+            </div>
+          </div>
+          <div className="mt-12 text-center">
+            <p className="text-[13px] text-ag-gray italic">
+              {t('insights.responseTime')}
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Content conditionnel */}
       {activeTab === 'candidate' ? (
         <>

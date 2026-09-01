@@ -6736,6 +6736,69 @@
     "toggle": {
       "candidate": "Ik ben kandidaat",
       "employer": "Ik ben aan het werven"
+    },
+    "coverage": {
+      "coverageTitle": "Onze dekking",
+      "coverageSubtitle": "Zwitserland en Europa",
+      "countriesTitle": "Gedekte landen",
+      "countriesDesc": "Zwitserland, Frankrijk, Duitsland, Italië, Spanje, Nederland, België, Luxemburg, Oostenrijk, Ierland, Portugal, Polen, Tsjechië, Hongarije, Roemenië, Bulgarije, Griekenland, Kroatië, Slovenië, Slowakije, Estland, Letland, Litouwen, Malta, Cyprus, Finland, Zweden, Denemarken, Noorwegen, IJsland",
+      "industriesTitle": "Gedekte sectoren",
+      "industriesDesc": "Alle Aegryn-sectoren: Fintech & Banking, Healthtech & Medtech, Proptech & Bouw, Insurtech & Verzekeringen, Legaltech & Compliance, SaaS B2B & Enterprise, E-commerce & Retail, Mobility & Logistics, Energy & Cleantech, Agritech & Foodtech, Edtech & Opleiding, HR Tech & Talent, Martech & Adtech, Cybersecurity & Privacy, AI & Data Science, Cloud & Infrastructure, Blockchain & Web3, Gaming & Entertainment, Media & Publishing, Travel & Hospitality, Sports & Fitness, Fashion & Luxury, Manufacturing & Industry 4.0"
+    },
+    "marketRoles": {
+      "marketRolesTitle": "Meest gezochte tech & AI functies",
+      "marketRolesSubtitle": "Executive marktanalyse Zwitserland & Europa 2026",
+      "roles": [
+        {
+          "title": "Chief Technology Officer (CTO)",
+          "location": "Zwitserland, Duitsland, Frankrijk",
+          "salary": "€180K - €350K",
+          "demand": "Zeer hoge vraag"
+        },
+        {
+          "title": "Chief Information Security Officer (CISO)",
+          "location": "Zwitserland, Nederland, Ierland",
+          "salary": "€160K - €300K",
+          "demand": "Groeiende vraag (+35% vs 2025)"
+        },
+        {
+          "title": "Chief AI Officer / VP AI",
+          "location": "Zwitserland, Frankrijk, Duitsland",
+          "salary": "€200K - €400K",
+          "demand": "Explosieve vraag (+120% vs 2025)"
+        },
+        {
+          "title": "VP Engineering",
+          "location": "Europa (remote-first)",
+          "salary": "€140K - €250K",
+          "demand": "Hoge vraag scale-ups"
+        },
+        {
+          "title": "Chief Data Officer (CDO)",
+          "location": "Zwitserland, Frankrijk, Benelux",
+          "salary": "€150K - €280K",
+          "demand": "Aanhoudende vraag"
+        },
+        {
+          "title": "Chief Product Officer (CPO)",
+          "location": "Zwitserland, Duitsland, Spanje",
+          "salary": "€140K - €270K",
+          "demand": "Hoge vraag SaaS B2B"
+        }
+      ],
+      "locationLabel": "Locatie",
+      "salaryLabel": "Salaris"
+    },
+    "insights": {
+      "insightsTitle": "Insights & Marktgegevens",
+      "insightsSubtitle": "Analyses en trends in de executive tech-markt",
+      "salaryReportTitle": "Executive Tech Salarissen Zwitserland & Europa 2026",
+      "salaryReportDesc": "Uitgebreid rapport over C-Level en VP-beloningen in tech. Gegevens van 2000+ executive plaatsingen in Europa.",
+      "salaryReportCta": "Bekijk rapport",
+      "magazineTitle": "Aegryn Magazine",
+      "magazineDesc": "Driemaandelijkse publicatie over tech-transacties, AI, exits en M&A-trends in Europa.",
+      "magazineCta": "Lees het magazine",
+      "responseTime": "Ons team neemt binnen 48 uur contact met u op"
     }
   }
 }

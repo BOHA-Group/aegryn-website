@@ -6736,6 +6736,69 @@
     "toggle": {
       "candidate": "Sono un candidato",
       "employer": "Sto assumendo"
+    },
+    "coverage": {
+      "coverageTitle": "La nostra copertura",
+      "coverageSubtitle": "Svizzera e Europa",
+      "countriesTitle": "Paesi coperti",
+      "countriesDesc": "Svizzera, Francia, Germania, Italia, Spagna, Paesi Bassi, Belgio, Lussemburgo, Austria, Irlanda, Portogallo, Polonia, Repubblica Ceca, Ungheria, Romania, Bulgaria, Grecia, Croazia, Slovenia, Slovacchia, Estonia, Lettonia, Lituania, Malta, Cipro, Finlandia, Svezia, Danimarca, Norvegia, Islanda",
+      "industriesTitle": "Settori coperti",
+      "industriesDesc": "Tutti i settori Aegryn: Fintech & Banking, Healthtech & Medtech, Proptech & Costruzioni, Insurtech & Assicurazioni, Legaltech & Compliance, SaaS B2B & Enterprise, E-commerce & Retail, Mobility & Logistics, Energy & Cleantech, Agritech & Foodtech, Edtech & Formazione, HR Tech & Talent, Martech & Adtech, Cybersecurity & Privacy, AI & Data Science, Cloud & Infrastructure, Blockchain & Web3, Gaming & Entertainment, Media & Publishing, Travel & Hospitality, Sports & Fitness, Fashion & Luxury, Manufacturing & Industry 4.0"
+    },
+    "marketRoles": {
+      "marketRolesTitle": "Posizioni tech & IA più ricercate",
+      "marketRolesSubtitle": "Analisi del mercato executive Svizzera & Europa 2026",
+      "roles": [
+        {
+          "title": "Chief Technology Officer (CTO)",
+          "location": "Svizzera, Germania, Francia",
+          "salary": "€180K - €350K",
+          "demand": "Domanda molto alta"
+        },
+        {
+          "title": "Chief Information Security Officer (CISO)",
+          "location": "Svizzera, Paesi Bassi, Irlanda",
+          "salary": "€160K - €300K",
+          "demand": "Domanda crescente (+35% vs 2025)"
+        },
+        {
+          "title": "Chief AI Officer / VP AI",
+          "location": "Svizzera, Francia, Germania",
+          "salary": "€200K - €400K",
+          "demand": "Domanda esplosiva (+120% vs 2025)"
+        },
+        {
+          "title": "VP Engineering",
+          "location": "Europa (remote-first)",
+          "salary": "€140K - €250K",
+          "demand": "Alta domanda scale-up"
+        },
+        {
+          "title": "Chief Data Officer (CDO)",
+          "location": "Svizzera, Francia, Benelux",
+          "salary": "€150K - €280K",
+          "demand": "Domanda sostenuta"
+        },
+        {
+          "title": "Chief Product Officer (CPO)",
+          "location": "Svizzera, Germania, Spagna",
+          "salary": "€140K - €270K",
+          "demand": "Alta domanda SaaS B2B"
+        }
+      ],
+      "locationLabel": "Località",
+      "salaryLabel": "Salario"
+    },
+    "insights": {
+      "insightsTitle": "Insights & Dati di Mercato",
+      "insightsSubtitle": "Analisi e tendenze del mercato executive tech",
+      "salaryReportTitle": "Salari Executive Tech Svizzera & Europa 2026",
+      "salaryReportDesc": "Rapporto completo sulle retribuzioni C-Level e VP nel tech. Dati da 2000+ collocamenti executive in Europa.",
+      "salaryReportCta": "Consulta il rapporto",
+      "magazineTitle": "Magazine Aegryn",
+      "magazineDesc": "Pubblicazione trimestrale su transazioni tech, IA, exit e tendenze M&A in Europa.",
+      "magazineCta": "Leggi il magazine",
+      "responseTime": "Il nostro team ti contatterà entro 48 ore"
     }
   }
 }
