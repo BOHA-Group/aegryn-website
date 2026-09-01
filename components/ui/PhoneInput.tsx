@@ -221,7 +221,7 @@ export default function PhoneInput({
             type="button"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             disabled={disabled}
-            className="flex items-center gap-2 px-3 py-3 rounded-xl border border-ag-border bg-white hover:border-ag-apex/60 focus:border-ag-apex focus:outline-none focus:ring-2 focus:ring-ag-apex/10 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 px-3 py-[13px] rounded-xl border border-ag-border bg-white hover:border-ag-apex/60 focus:border-ag-apex focus:outline-none focus:ring-2 focus:ring-ag-apex/10 transition-colors disabled:opacity-50 disabled:cursor-not-allowed h-[50px]"
           >
             <span className="text-lg">{COUNTRIES.find(c => c.code === selectedCountry)?.flag}</span>
             <span className="font-mono text-[13px] text-ag-gray">{currentFormat.code}</span>
