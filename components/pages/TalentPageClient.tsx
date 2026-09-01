@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import TalentHiringForm from '@/components/forms/TalentHiringForm'
 import TalentCandidateForm from '@/components/forms/TalentCandidateForm'
 
-export default function TalentPageClient({ locale }: { locale: string }) {
+export default function TalentPageClient({ locale: _locale }: { locale: string }) {
   const t = useTranslations('talent')
   const [activeTab, setActiveTab] = useState<'candidate' | 'employer'>('candidate')
 

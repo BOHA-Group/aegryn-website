@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useTranslations } from 'next-intl'
 import { supabase } from '@/lib/supabase'
 
 type HiringRequest = {
@@ -34,7 +33,6 @@ type Candidate = {
 }
 
 export default function AdminTalentPage() {
-  const t = useTranslations('admin.talent')
   const [activeTab, setActiveTab] = useState<'hiring' | 'candidates'>('hiring')
   const [hiringRequests, setHiringRequests] = useState<HiringRequest[]>([])
   const [candidates, setCandidates] = useState<Candidate[]>([])
