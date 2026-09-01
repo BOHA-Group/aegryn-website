@@ -1,6 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createAuthClient } from '@/lib/supabaseServer'
+import { Resend } from 'resend'
 import { z } from 'zod'
+import TalentHiringConfirmation from '@/emails/TalentHiringConfirmation'
+import TalentAdminNotification from '@/emails/TalentAdminNotification'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 const hiringSchema = z.object({
   company: z.string().min(2, 'Company name required'),
@@ -47,6 +52,47 @@ export async function POST(req: NextRequest) {
         { error: 'Failed to submit hiring request' },
         { status: 500 }
       )
+    }
+
+    try {
+      await resend.emails.send({
+        from: 'Aegryn Talent <contact@boha-group.com>',
+        to: validated.email,
+        subject: validated.locale === 'fr' ? 'Votre mandat de recrutement Aegryn Talent' : 'Your Aegryn Talent recruitment mandate',
+        react: TalentHiringConfirmation({
+          company: validated.company,
+          contactName: validated.contactName,
+          email: validated.email,
+          phone: validated.phone,
+          roleTitle: validated.roleTitle,
+          location: validated.location,
+          urgency: validated.urgency,
+          locale: validated.locale,
+        }),
+      })
+
+      await resend.emails.send({
+        from: 'Aegryn Talent <contact@boha-group.com>',
+        to: 'contact@boha-group.com',
+        subject: `[Talent] Nouveau mandat - ${validated.company} - ${validated.roleTitle}`,
+        react: TalentAdminNotification({
+          type: 'hiring',
+          data: {
+            company: validated.company,
+            contactName: validated.contactName,
+            email: validated.email,
+            phone: validated.phone,
+            roleTitle: validated.roleTitle,
+            roleDescription: validated.roleDescription,
+            location: validated.location,
+            budgetAnnualChf: validated.budgetAnnualChf,
+            urgency: validated.urgency,
+            locale: validated.locale,
+          },
+        }),
+      })
+    } catch (emailError) {
+      console.error('Email sending error:', emailError)
     }
 
     return NextResponse.json({ success: true, data }, { status: 201 })

@@ -1,6 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createAuthClient } from '@/lib/supabaseServer'
+import { Resend } from 'resend'
 import { z } from 'zod'
+import TalentCandidateConfirmation from '@/emails/TalentCandidateConfirmation'
+import TalentAdminNotification from '@/emails/TalentAdminNotification'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 const candidateSchema = z.object({
   fullName: z.string().min(2, 'Full name required'),
@@ -45,6 +50,42 @@ export async function POST(req: NextRequest) {
         { error: 'Failed to submit candidate application' },
         { status: 500 }
       )
+    }
+
+    try {
+      await resend.emails.send({
+        from: 'Aegryn Talent <contact@boha-group.com>',
+        to: validated.email,
+        subject: validated.locale === 'fr' ? 'Votre candidature Aegryn Talent' : 'Your Aegryn Talent application',
+        react: TalentCandidateConfirmation({
+          fullName: validated.fullName,
+          email: validated.email,
+          phone: validated.phone,
+          linkedinUrl: validated.linkedinUrl,
+          availability: validated.availability,
+          locale: validated.locale,
+        }),
+      })
+
+      await resend.emails.send({
+        from: 'Aegryn Talent <contact@boha-group.com>',
+        to: 'contact@boha-group.com',
+        subject: `[Talent] Nouvelle candidature - ${validated.fullName}`,
+        react: TalentAdminNotification({
+          type: 'candidate',
+          data: {
+            fullName: validated.fullName,
+            email: validated.email,
+            phone: validated.phone,
+            linkedinUrl: validated.linkedinUrl,
+            motivation: validated.motivation,
+            availability: validated.availability,
+            locale: validated.locale,
+          },
+        }),
+      })
+    } catch (emailError) {
+      console.error('Email sending error:', emailError)
     }
 
     return NextResponse.json({ success: true, data }, { status: 201 })
