@@ -23,13 +23,12 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
           >
             {t('hero.title')}
           </h1>
-          <p className="text-[15px] text-white/60 leading-relaxed max-w-xl mb-6">
-            {t('hero.desc1')}
-          </p>
           <p className="text-[15px] text-white/60 leading-relaxed max-w-xl mb-10">
+            {t('hero.desc1')}
+            <br /><br />
             {t('hero.desc2')}
           </p>
-          <p className="font-sans font-semibold text-[13px] text-white/60 leading-relaxed max-w-xl mb-12 border-l-2 border-ag-apex/40 pl-5 whitespace-pre-line">
+          <p className="font-sans font-semibold text-[13px] text-white/60 leading-relaxed max-w-xl mb-10 border-l-2 border-ag-apex/40 pl-5 whitespace-pre-line">
             {t('hero.quote')}
           </p>
           
