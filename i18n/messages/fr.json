@@ -79,6 +79,8 @@
     "craftTransactSell": "Céder un actif",
     "craftTransactBuy": "Devenir acquéreur",
     "craftTransactResults": "Transactions clôturées",
+    "craftGrade": "Certifier",
+    "craftGradeDesc": "Système de notation indépendant",
     "solutionsCore": "CORE",
     "solutionsPortfolio": "PORTFOLIO",
     "solutionsCoreTitle": "Actifs propriétaires",

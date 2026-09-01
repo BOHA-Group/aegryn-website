@@ -79,6 +79,8 @@
     "craftTransactSell": "Asset verkopen",
     "craftTransactBuy": "Koper worden",
     "craftTransactResults": "Afgesloten transacties",
+    "craftGrade": "Certificeren",
+    "craftGradeDesc": "Onafhankelijk beoordelingssysteem",
     "solutionsCore": "CORE",
     "solutionsPortfolio": "PORTFOLIO",
     "solutionsCoreTitle": "Eigen assets",

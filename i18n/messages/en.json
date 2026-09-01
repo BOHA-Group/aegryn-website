@@ -79,6 +79,8 @@
     "craftTransactSell": "Sell an asset",
     "craftTransactBuy": "Become a buyer",
     "craftTransactResults": "Closed transactions",
+    "craftGrade": "Grade",
+    "craftGradeDesc": "Independent rating system",
     "solutionsCore": "CORE",
     "solutionsPortfolio": "PORTFOLIO",
     "solutionsCoreTitle": "Proprietary assets",

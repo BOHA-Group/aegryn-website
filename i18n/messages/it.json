@@ -79,6 +79,8 @@
     "craftTransactSell": "Cedere un asset",
     "craftTransactBuy": "Diventare acquirente",
     "craftTransactResults": "Transazioni concluse",
+    "craftGrade": "Certificare",
+    "craftGradeDesc": "Sistema di valutazione indipendente",
     "solutionsCore": "CORE",
     "solutionsPortfolio": "PORTFOLIO",
     "solutionsCoreTitle": "Asset proprietari",
