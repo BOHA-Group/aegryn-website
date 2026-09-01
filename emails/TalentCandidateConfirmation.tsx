@@ -1,6 +1,6 @@
 import {
   Html, Head, Preview, Body, Container,
-  Section, Heading, Text, Button, Hr,
+  Section, Heading, Text, Hr,
 } from '@react-email/components'
 
 interface Props {

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 import TalentHiringForm from '@/components/forms/TalentHiringForm'
 import TalentCandidateForm from '@/components/forms/TalentCandidateForm'
 
@@ -111,12 +112,12 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
               <p className="text-[13px] text-ag-gray leading-relaxed mb-6">
                 {t('insights.salaryReportDesc')}
               </p>
-              <a
+              <Link
                 href="/blog/salaires-executive-tech-suisse-europe-2026"
                 className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"
               >
                 {t('insights.salaryReportCta')}
-              </a>
+              </Link>
             </div>
             <div className="border border-ag-border bg-white p-8">
               <h3 className="font-sans font-bold text-ag-black text-[19px] tracking-[-0.01em] mb-3">
@@ -125,12 +126,12 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
               <p className="text-[13px] text-ag-gray leading-relaxed mb-6">
                 {t('insights.magazineDesc')}
               </p>
-              <a
+              <Link
                 href="/magazine"
                 className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"
               >
                 {t('insights.magazineCta')}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

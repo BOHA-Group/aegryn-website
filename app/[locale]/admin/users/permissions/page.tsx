@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
-import { Shield, Check, X, Save, Search, AlertTriangle } from 'lucide-react'
+import { Shield, Check, Search, AlertTriangle } from 'lucide-react'
 
 // Permissions critiques qui ne doivent JAMAIS être affichées/déléguées
 const CRITICAL_PERMISSIONS = [
