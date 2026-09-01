@@ -104,10 +104,22 @@ export function AssetsGrid() {
             >
               {/* Top row */}
               <div className="flex items-start justify-between gap-3">
-                <div>
-                  <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light mb-1">
-                    {tCats(asset.category)}
-                  </p>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light">
+                      {tCats(asset.category)}
+                    </p>
+                    {/* Badge CORE/PORTFOLIO */}
+                    <span
+                      className={`font-mono text-[9px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border ${
+                        asset.ownership === 'core'
+                          ? 'border-ag-apex/30 bg-ag-apex/5 text-ag-apex-ink'
+                          : 'border-ag-border bg-ag-off-white text-ag-gray'
+                      }`}
+                    >
+                      {asset.ownership === 'core' ? 'CORE' : 'PORTFOLIO'}
+                    </span>
+                  </div>
                   <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">
                     {asset.name}
                   </h2>
