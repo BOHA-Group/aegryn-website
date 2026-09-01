@@ -104,7 +104,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
                 {t('insights.salaryReportDesc')}
               </p>
               <a
-                href="/magazine"
+                href="/blog/salaires-executive-tech-suisse-europe-2026"
                 className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"
               >
                 {t('insights.salaryReportCta')}
