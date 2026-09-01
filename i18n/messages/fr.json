@@ -2894,11 +2894,26 @@
       }
     },
     "sell": {
+      "meta": {
+        "title": "Céder votre actif | Aegryn TRANSACT",
+        "desc": "Mandat de cession exclusif. Certification CIFS, grade officiel, acquéreurs pré-qualifiés sous NDA. Commission au succès uniquement."
+      },
+      "hero": {
+        "label": "AEGRYN TRANSACT | MANDAT DE CESSION",
+        "title": "Céder votre actif tech\nau prix qu'il mérite.",
+        "desc": "Aegryn certifie votre actif CIFS, fixe le grade officiel et le présente sous NDA exclusif à des acquéreurs institutionnels pré-qualifiés. Commission au succès uniquement.",
+        "ctaValuation": "Valorisation indicative",
+        "ctaMandat": "Déposer un mandat"
+      },
       "label": "AEGRYN TRANSACT | MANDAT DE CESSION",
       "title": "Céder votre actif tech\nau prix qu'il mérite.",
       "desc": "Aegryn certifie votre actif CIFS, fixe le grade officiel et le présente sous NDA exclusif à des acquéreurs institutionnels pré-qualifiés. Commission au succès uniquement.",
       "cta": "Déposer un mandat de cession",
       "steps": {
+        "label": "PARCOURS CÉDANT EN 3 ÉTAPES",
+        "title": "Un processus structuré de la certification au closing.",
+        "step2Label": "SCORE DE PRÉPARATION",
+        "step2Title": "Évaluez la maturité de votre actif avant la certification.",
         "s1": {
           "title": "Certification CIFS",
           "desc": "Votre actif passe le protocole d'évaluation Aegryn sur 4 dimensions : Code, Infra, Finance, Sécurité. Un grade officiel AEG est attribué avant toute présentation.",
@@ -2926,7 +2941,19 @@
         "g3": {
           "title": "Protection droit suisse",
           "desc": "Escrow institutionnel. Closing sécurisé sous juridiction suisse."
-        }
+        },
+        "g4": {
+          "title": "Certification CIFS obligatoire",
+          "desc": "Grade officiel attribué avant toute présentation. Transparence totale."
+        },
+        "label": "GARANTIES AEGRYN",
+        "title": "Protection maximale pour chaque transaction."
+      },
+      "cta": {
+        "title": "Prêt à céder votre actif ?",
+        "desc": "Notre équipe vous accompagne de la valorisation au closing.",
+        "ctaMandat": "Déposer un mandat",
+        "ctaAdvisor": "Parler à un conseiller"
       },
       "step1Title": "Certification CIFS",
       "step1Desc": "Votre actif passe le protocole d'évaluation Aegryn sur 4 dimensions : Code, Infra, Finance, Sécurité. Un grade officiel AEG est attribué avant toute présentation.",

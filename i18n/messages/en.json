@@ -2922,11 +2922,26 @@
       }
     },
     "sell": {
+      "meta": {
+        "title": "Sell your asset | Aegryn TRANSACT",
+        "desc": "Exclusive sale mandate. CIFS certification, official grade, pre-qualified buyers under NDA. Success fee only."
+      },
+      "hero": {
+        "label": "AEGRYN TRANSACT | SALE MANDATE",
+        "title": "Divest your tech asset\nat the price it deserves.",
+        "desc": "Aegryn certifies your asset CIFS, assigns the official grade and presents it under exclusive NDA to pre-qualified institutional acquirers. Success fee only.",
+        "ctaValuation": "Indicative valuation",
+        "ctaMandat": "Submit mandate"
+      },
       "label": "AEGRYN TRANSACT | SALE MANDATE",
       "title": "Divest your tech asset\nat the price it deserves.",
       "desc": "Aegryn certifies your asset CIFS, assigns the official grade and presents it under exclusive NDA to pre-qualified institutional acquirers. Success fee only.",
       "cta": "Submit a sale mandate",
       "steps": {
+        "label": "SELLER JOURNEY IN 3 STEPS",
+        "title": "A structured process from certification to closing.",
+        "step2Label": "READINESS SCORE",
+        "step2Title": "Assess your asset's maturity before certification.",
         "s1": {
           "title": "CIFS Certification",
           "desc": "Your asset goes through the Aegryn evaluation protocol across 4 dimensions: Code, Infrastructure, Finance, Security. An official AEG grade is assigned before any presentation.",
@@ -2954,7 +2969,19 @@
         "g3": {
           "title": "Swiss law protection",
           "desc": "Institutional escrow. Secure closing under Swiss jurisdiction."
-        }
+        },
+        "g4": {
+          "title": "Mandatory CIFS certification",
+          "desc": "Official grade assigned before any presentation. Total transparency."
+        },
+        "label": "AEGRYN GUARANTEES",
+        "title": "Maximum protection for every transaction."
+      },
+      "cta": {
+        "title": "Ready to divest your asset?",
+        "desc": "Our team supports you from valuation to closing.",
+        "ctaMandat": "Submit mandate",
+        "ctaAdvisor": "Talk to an advisor"
       },
       "step1Title": "CIFS Certification",
       "step1Desc": "Your asset goes through the Aegryn evaluation protocol across 4 dimensions: Code, Infrastructure, Finance, Security. An official AEG grade is assigned before any presentation.",
