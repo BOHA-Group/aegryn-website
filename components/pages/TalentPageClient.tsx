@@ -50,38 +50,6 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
         </div>
       </section>
 
-      {/* Coverage - Pays & Industries (commun aux 2 tabs) */}
-      <section className="py-24 bg-ag-off-white border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
-            <h2 className="font-sans font-bold text-ag-black text-[36px] tracking-[-0.02em] mb-3">
-              {t('coverage.coverageTitle')}
-            </h2>
-            <p className="text-[14px] text-ag-gray uppercase tracking-[0.2em]">
-              {t('coverage.coverageSubtitle')}
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-4">
-                {t('coverage.countriesTitle')}
-              </h3>
-              <p className="text-[13px] text-ag-gray leading-relaxed">
-                {t('coverage.countriesDesc')}
-              </p>
-            </div>
-            <div>
-              <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-4">
-                {t('coverage.industriesTitle')}
-              </h3>
-              <p className="text-[13px] text-ag-gray leading-relaxed">
-                {t('coverage.industriesDesc')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Market Roles - Postes les plus recherchés (commun aux 2 tabs) */}
       <section className="py-24 border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -157,11 +125,6 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
               </a>
             </div>
           </div>
-          <div className="mt-12 text-center">
-            <p className="text-[13px] text-ag-gray italic">
-              {t('insights.responseTime')}
-            </p>
-          </div>
         </div>
       </section>
 
@@ -223,11 +186,58 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
                 {t('forms.candidate.desc')}
               </p>
               <TalentCandidateForm />
+              <div className="mt-8 text-center">
+                <p className="text-[13px] text-ag-gray italic">
+                  {t('insights.responseTime')}
+                </p>
+              </div>
             </div>
           </section>
         </>
       ) : (
         <>
+          {/* Employer: Coverage - Pays & Industries */}
+          <section className="py-24 bg-ag-off-white border-b border-ag-border">
+            <div className="max-w-7xl mx-auto px-6 md:px-12">
+              <div className="text-center mb-16">
+                <h2 className="font-sans font-bold text-ag-black text-[36px] tracking-[-0.02em] mb-3">
+                  {t('hiring.coverage.coverageTitle')}
+                </h2>
+                <p className="text-[14px] text-ag-gray uppercase tracking-[0.2em]">
+                  {t('hiring.coverage.coverageSubtitle')}
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-12">
+                <div>
+                  <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-6">
+                    {t('hiring.coverage.countriesTitle')}
+                  </h3>
+                  <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+                    {(t.raw('hiring.coverage.countries') as string[]).map((country, i) => (
+                      <li key={i} className="flex items-center gap-2 text-[13px] text-ag-gray">
+                        <span className="shrink-0 w-1 h-1 bg-ag-apex rounded-full" />
+                        {country}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-6">
+                    {t('hiring.coverage.industriesTitle')}
+                  </h3>
+                  <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+                    {(t.raw('hiring.coverage.industries') as string[]).map((industry, i) => (
+                      <li key={i} className="flex items-center gap-2 text-[13px] text-ag-gray">
+                        <span className="shrink-0 w-1 h-1 bg-ag-apex rounded-full" />
+                        {industry}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Employer: Intro */}
           <section className="py-24 border-b border-ag-border">
             <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -324,6 +334,11 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
                 {t('forms.hiring.desc')}
               </p>
               <TalentHiringForm />
+              <div className="mt-8 text-center">
+                <p className="text-[13px] text-ag-gray italic">
+                  {t('insights.responseTime')}
+                </p>
+              </div>
             </div>
           </section>
         </>
