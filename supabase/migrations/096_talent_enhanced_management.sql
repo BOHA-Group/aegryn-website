@@ -136,4 +136,4 @@ COMMENT ON COLUMN talent_hiring_requests.salary_gross_annual IS 'Salaire annuel 
 COMMENT ON COLUMN talent_hiring_requests.commission_percentage IS 'Pourcentage de commission Aegryn (ex: 20 pour 20%)';
 COMMENT ON COLUMN talent_hiring_requests.commission_amount_calculated IS 'Montant de commission calculé automatiquement';
 COMMENT ON VIEW talent_hiring_requests_with_stats IS 'Mandats avec statistiques de candidatures';
-COMMENT ON VIEW talent_candidates_with_stats IS 'Candidats avec statistiques d\'assignations';
+COMMENT ON VIEW talent_candidates_with_stats IS 'Candidats avec statistiques d''assignations';
