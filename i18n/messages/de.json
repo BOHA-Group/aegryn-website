@@ -2797,10 +2797,67 @@
       }
     },
     "sell": {
+      "meta": {
+        "title": "Ihr Asset veräußern | Aegryn TRANSACT",
+        "desc": "Exklusives Verkaufsmandat. CIFS-Zertifizierung, offizieller Grade, vorqualifizierte Käufer unter NDA. Nur Erfolgshonorar."
+      },
+      "hero": {
+        "label": "AEGRYN TRANSACT | VERKAUFSMANDAT",
+        "title": "Ihr Tech-Asset veräußern\nzum Preis, den es verdient.",
+        "desc": "Aegryn zertifiziert Ihr Asset CIFS, vergibt den offiziellen Grade und präsentiert es unter exklusivem NDA an vorqualifizierte institutionelle Käufer. Nur Erfolgshonorar.",
+        "ctaValuation": "Indikative Bewertung",
+        "ctaMandat": "Mandat einreichen"
+      },
       "label": "AEGRYN TRANSACT | VERKAUFSMANDAT",
       "title": "Ihr Tech-Asset veräußern\nzum Preis, den es verdient.",
       "desc": "Aegryn zertifiziert Ihr Asset CIFS, vergibt den offiziellen Grade und präsentiert es unter exklusivem NDA an vorqualifizierte institutionelle Käufer. Nur Erfolgshonorar.",
       "cta": "Verkaufsmandat einreichen",
+      "steps": {
+        "label": "VERKÄUFERPROZESS IN 3 SCHRITTEN",
+        "title": "Ein strukturierter Prozess von der Zertifizierung bis zum Abschluss.",
+        "step2Label": "BEREITSCHAFTS-SCORE",
+        "step2Title": "Bewerten Sie die Reife Ihres Assets vor der Zertifizierung.",
+        "s1": {
+          "title": "CIFS-Zertifizierung",
+          "desc": "Ihr Asset durchläuft das Aegryn-Bewertungsprotokoll über 4 Dimensionen: Code, Infrastruktur, Finanzen, Sicherheit. Ein offizieller AEG-Grade wird vor jeder Präsentation vergeben.",
+          "cta": "Zertifizierung erhalten"
+        },
+        "s2": {
+          "title": "Präsentation unter NDA",
+          "desc": "Das zertifizierte Asset wird in den geschlossenen Offmarket-Katalog aufgenommen. Jeder Käufer unterzeichnet einen NDA, bevor er auf vertrauliche Dokumente zugreift."
+        },
+        "s3": {
+          "title": "Sicherer Abschluss",
+          "desc": "Institutionelles Treuhand, sicherer Transfer, Abschluss nach Schweizer Recht. Maximaler Schutz für Verkäufer und Käufer.",
+          "cta": "Mandat einreichen"
+        }
+      },
+      "guarantees": {
+        "g1": {
+          "title": "Absolute Vertraulichkeit",
+          "desc": "NDA vor jeder Offenlegung unterzeichnet. Keine öffentliche Veröffentlichung."
+        },
+        "g2": {
+          "title": "Nur qualifizierte Käufer",
+          "desc": "KYC-Verfahren abgeschlossen. Akquisitionskapazität verifiziert."
+        },
+        "g3": {
+          "title": "Schweizer Rechtsschutz",
+          "desc": "Institutionelles Treuhand. Sicherer Abschluss unter Schweizer Gerichtsbarkeit."
+        },
+        "g4": {
+          "title": "Obligatorische CIFS-Zertifizierung",
+          "desc": "Offizieller Grade vor jeder Präsentation vergeben. Totale Transparenz."
+        },
+        "label": "AEGRYN-GARANTIEN",
+        "title": "Maximaler Schutz für jede Transaktion."
+      },
+      "cta": {
+        "title": "Bereit, Ihr Asset zu veräußern?",
+        "desc": "Unser Team begleitet Sie von der Bewertung bis zum Abschluss.",
+        "ctaMandat": "Mandat einreichen",
+        "ctaAdvisor": "Mit einem Berater sprechen"
+      },
       "step1Title": "CIFS-Zertifizierung",
       "step1Desc": "Ihr Asset durchläuft das Aegryn-Bewertungsprotokoll über 4 Dimensionen: Code, Infrastruktur, Finanzen, Sicherheit. Ein offizieller AEG-Grade wird vor jeder Präsentation vergeben.",
       "step2Title": "Präsentation unter NDA",

@@ -2797,10 +2797,67 @@
       }
     },
     "sell": {
+      "meta": {
+        "title": "Ceder su activo | Aegryn TRANSACT",
+        "desc": "Mandato de venta exclusivo. Certificación CIFS, grade oficial, compradores precualificados bajo NDA. Solo honorarios de éxito."
+      },
+      "hero": {
+        "label": "AEGRYN TRANSACT | MANDATO DE VENTA",
+        "title": "Ceder su activo tech\nal precio que merece.",
+        "desc": "Aegryn certifica su activo CIFS, atribuye el grade oficial y lo presenta bajo NDA exclusivo a compradores institucionales precualificados. Solo honorarios de éxito.",
+        "ctaValuation": "Valoración indicativa",
+        "ctaMandat": "Enviar mandato"
+      },
       "label": "AEGRYN TRANSACT | MANDATO DE VENTA",
       "title": "Ceder su activo tech\nal precio que merece.",
       "desc": "Aegryn certifica su activo CIFS, atribuye el grade oficial y lo presenta bajo NDA exclusivo a compradores institucionales precualificados. Solo honorarios de éxito.",
       "cta": "Enviar mandato de venta",
+      "steps": {
+        "label": "RECORRIDO CEDENTE EN 3 ETAPAS",
+        "title": "Un proceso estructurado desde la certificación hasta el cierre.",
+        "step2Label": "PUNTUACIÓN DE PREPARACIÓN",
+        "step2Title": "Evalúe la madurez de su activo antes de la certificación.",
+        "s1": {
+          "title": "Certificación CIFS",
+          "desc": "Su activo pasa por el protocolo de valoración Aegryn en 4 dimensiones: Código, Infraestructura, Finanzas, Seguridad. Se atribuye un grade AEG oficial antes de cualquier presentación.",
+          "cta": "Obtener la certificación"
+        },
+        "s2": {
+          "title": "Presentación bajo NDA",
+          "desc": "El activo certificado se integra en el catálogo offmarket cerrado. Cada comprador firma un NDA antes de acceder a documentos confidenciales."
+        },
+        "s3": {
+          "title": "Cierre seguro",
+          "desc": "Escrow institucional, transferencia segura, cierre bajo ley suiza. Máxima protección para vendedor y comprador.",
+          "cta": "Enviar mandato"
+        }
+      },
+      "guarantees": {
+        "g1": {
+          "title": "Confidencialidad absoluta",
+          "desc": "NDA firmado antes de cualquier divulgación. Ninguna publicación pública."
+        },
+        "g2": {
+          "title": "Solo compradores cualificados",
+          "desc": "Proceso KYC completado. Capacidad de adquisición verificada."
+        },
+        "g3": {
+          "title": "Protección ley suiza",
+          "desc": "Escrow institucional. Cierre seguro bajo jurisdicción suiza."
+        },
+        "g4": {
+          "title": "Certificación CIFS obligatoria",
+          "desc": "Grade oficial atribuido antes de cualquier presentación. Total transparencia."
+        },
+        "label": "GARANTÍAS AEGRYN",
+        "title": "Máxima protección para cada transacción."
+      },
+      "cta": {
+        "title": "¿Listo para ceder su activo?",
+        "desc": "Nuestro equipo le acompaña desde la valoración hasta el cierre.",
+        "ctaMandat": "Enviar mandato",
+        "ctaAdvisor": "Hablar con un asesor"
+      },
       "step1Title": "Certificación CIFS",
       "step1Desc": "Su activo pasa por el protocolo de valoración Aegryn en 4 dimensiones: Código, Infraestructura, Finanzas, Seguridad. Se atribuye un grade AEG oficial antes de cualquier presentación.",
       "step2Title": "Presentación bajo NDA",

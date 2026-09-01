@@ -2797,10 +2797,67 @@
       }
     },
     "sell": {
+      "meta": {
+        "title": "Uw asset overdragen | Aegryn TRANSACT",
+        "desc": "Exclusief verkoopsmandaat. CIFS-certificering, officiële grade, voorgekwalificeerde kopers onder NDA. Alleen succesvergoeding."
+      },
+      "hero": {
+        "label": "AEGRYN TRANSACT | VERKOOPSMANDAAT",
+        "title": "Uw tech-asset overdragen\ntegen de prijs die het verdient.",
+        "desc": "Aegryn certificeert uw asset CIFS, kent de officiële grade toe en presenteert het onder exclusieve NDA aan voorgekwalificeerde institutionele kopers. Alleen succesvergoeding.",
+        "ctaValuation": "Indicatieve waardering",
+        "ctaMandat": "Mandaat indienen"
+      },
       "label": "AEGRYN TRANSACT | VERKOOPSMANDAAT",
       "title": "Uw tech-asset overdragen\ntegen de prijs die het verdient.",
       "desc": "Aegryn certificeert uw asset CIFS, kent de officiële grade toe en presenteert het onder exclusieve NDA aan voorgekwalificeerde institutionele kopers. Alleen succesvergoeding.",
       "cta": "Verkoopsmandaat indienen",
+      "steps": {
+        "label": "VERKOPERSPROCES IN 3 STAPPEN",
+        "title": "Een gestructureerd proces van certificering tot afsluiting.",
+        "step2Label": "GEREEDHEIDS-SCORE",
+        "step2Title": "Beoordeel de volwassenheid van uw asset vóór certificering.",
+        "s1": {
+          "title": "CIFS-certificering",
+          "desc": "Uw asset doorloopt het Aegryn-waarderingsprotocol in 4 dimensies: Code, Infrastructuur, Financiën, Beveiliging. Een officiële AEG-grade wordt toegekend vóór elke presentatie.",
+          "cta": "Certificering verkrijgen"
+        },
+        "s2": {
+          "title": "Presentatie onder NDA",
+          "desc": "Het gecertificeerde asset wordt opgenomen in de gesloten offmarket-catalogus. Elke koper ondertekent een NDA voordat hij toegang krijgt tot vertrouwelijke documenten."
+        },
+        "s3": {
+          "title": "Veilige afsluiting",
+          "desc": "Institutionele escrow, veilige overdracht, afsluiting onder Zwitsers recht. Maximale bescherming voor verkoper en koper.",
+          "cta": "Mandaat indienen"
+        }
+      },
+      "guarantees": {
+        "g1": {
+          "title": "Absolute vertrouwelijkheid",
+          "desc": "NDA ondertekend vóór elke openbaarmaking. Geen openbare publicatie."
+        },
+        "g2": {
+          "title": "Alleen gekwalificeerde kopers",
+          "desc": "KYC-proces voltooid. Verwervingscapaciteit geverifieerd."
+        },
+        "g3": {
+          "title": "Zwitserse rechtsbescherming",
+          "desc": "Institutionele escrow. Veilige afsluiting onder Zwitserse jurisdictie."
+        },
+        "g4": {
+          "title": "Verplichte CIFS-certificering",
+          "desc": "Officiële grade toegekend vóór elke presentatie. Totale transparantie."
+        },
+        "label": "AEGRYN-GARANTIES",
+        "title": "Maximale bescherming voor elke transactie."
+      },
+      "cta": {
+        "title": "Klaar om uw asset over te dragen?",
+        "desc": "Ons team begeleidt u van waardering tot afsluiting.",
+        "ctaMandat": "Mandaat indienen",
+        "ctaAdvisor": "Praten met een adviseur"
+      },
       "step1Title": "CIFS-certificering",
       "step1Desc": "Uw asset doorloopt het Aegryn-waarderingsprotocol in 4 dimensies: Code, Infrastructuur, Financiën, Beveiliging. Een officiële AEG-grade wordt toegekend vóór elke presentatie.",
       "step2Title": "Presentatie onder NDA",
