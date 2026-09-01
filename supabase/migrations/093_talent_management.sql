@@ -1,4 +1,4 @@
--- Migration 031: Talent Management (Headhunting & Transition)
+-- Migration 093: Talent Management (Headhunting & Transition)
 -- Tables pour gérer les mandats de recrutement et les candidatures
 
 -- Table: talent_hiring_requests
