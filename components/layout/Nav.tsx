@@ -66,7 +66,6 @@ const THINKING_MARKET_LINKS: { labelKey: string; href: LinkHref }[] = [
 // Qui sommes-nous - Le groupe
 const WHO_GROUP_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'whoAbout',   href: '/about' },
-  { labelKey: 'whoOffices', href: '/offices' as LinkHref },
   { labelKey: 'whoContact', href: '/contact' },
 ]
 
@@ -302,6 +301,17 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
                 {t(labelKey)}
               </Link>
             ))}
+          </div>
+          {/* Nos bureaux - affichage statique */}
+          <div className="mt-4 pt-4 border-t border-ag-border">
+            <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-ag-gray-light mb-2">
+              {t('whoOffices')}
+            </p>
+            <p className="font-sans text-[11px] text-ag-gray leading-relaxed">
+              Switzerland<br />
+              Rue du Centre 142<br />
+              1025 St-Sulpice
+            </p>
           </div>
         </div>
 
