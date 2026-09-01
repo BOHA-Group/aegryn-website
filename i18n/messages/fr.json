@@ -6644,7 +6644,8 @@
         "success": "Merci. Votre mandat a été enregistré. Nous vous contacterons sous 48h.",
         "error": "Une erreur est survenue. Veuillez réessayer.",
         "submitting": "Envoi en cours...",
-        "roleDescription": "Description du rôle *"
+        "roleDescription": "Description du rôle *",
+        "roleDescriptionPlaceholder": "Missions, responsabilités, stack technique, contexte..."
       },
       "candidate": {
         "title": "Postuler comme candidat",
@@ -6668,7 +6669,9 @@
         "success": "Merci. Votre candidature a été enregistrée. Nous vous contacterons si votre profil correspond à nos mandats.",
         "error": "Une erreur est survenue. Veuillez réessayer.",
         "submitting": "Envoi en cours...",
-        "cvNote": "Votre CV sera demandé lors de l'entretien si votre profil correspond à nos mandats."
+        "cvNote": "Votre CV sera demandé lors de l'entretien si votre profil correspond à nos mandats.",
+        "successMessage": "Merci. Votre candidature a été enregistrée. Nous vous contacterons si votre profil correspond à nos mandats.",
+        "errorMessage": "Une erreur est survenue. Veuillez réessayer."
       }
     },
     "admin": {
