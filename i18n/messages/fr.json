@@ -6552,35 +6552,64 @@
     "employer": {
       "intro": {
         "title": "Recrutez les leaders qui transforment",
-        "desc": "Aegryn Talent identifie et place les profils tech rares qui acc\u00e9l\u00e8rent votre croissance. Notre approche combine expertise sectorielle, r\u00e9seau europ\u00e9en et processus de certification rigoureux."
+        "desc": "Aegryn Talent identifie et place les profils tech rares qui accélèrent votre croissance. Notre approche combine expertise sectorielle, réseau européen et processus de certification rigoureux."
       },
       "profiles": {
+        "intro": "Profils executive que nous plaçons (niveau C-Level, VP, Director)",
         "cto": {
           "title": "CTO & VP Engineering",
-          "desc": "Leaders techniques capables de structurer, scaler et innover. Ma\u00eetrise des architectures modernes, IA, cloud et s\u00e9curit\u00e9."
+          "desc": "Leaders techniques capables de structurer, scaler et innover. Maîtrise des architectures modernes, IA, cloud, sécurité."
         },
         "ciso": {
-          "title": "CISO & Security Leaders",
-          "desc": "Experts en cybers\u00e9curit\u00e9, conformit\u00e9 RGPD, gestion des risques et r\u00e9silience. Profils certifi\u00e9s et op\u00e9rationnels."
+          "title": "CISO & VP Security",
+          "desc": "Experts en cybersécurité, conformité RGPD, gestion des risques, résilience et gouvernance. Profils certifiés."
         },
         "headAI": {
-          "title": "Head of AI & Data",
-          "desc": "Sp\u00e9cialistes en intelligence artificielle, machine learning, data science et strat\u00e9gie data-driven."
+          "title": "Chief AI Officer & VP AI",
+          "desc": "Leaders en intelligence artificielle, machine learning, GenAI, stratégie data-driven et transformation IA."
+        },
+        "cdo": {
+          "title": "Chief Data Officer & VP Data",
+          "desc": "Architectes de la stratégie data : data engineering, analytics, gouvernance, monétisation et culture data."
+        },
+        "cpo": {
+          "title": "Chief Product Officer & VP Product",
+          "desc": "Visionnaires produit tech : roadmap, discovery, growth, product-led growth et stratégie go-to-market."
+        },
+        "vpe": {
+          "title": "VP Engineering & Engineering Director",
+          "desc": "Leaders d'équipes techniques : scaling, culture engineering, delivery, architecture et excellence opérationnelle."
+        },
+        "cio": {
+          "title": "CIO & VP Infrastructure",
+          "desc": "Responsables infrastructure IT, cloud, DevOps, SRE, modernisation legacy et transformation digitale."
+        },
+        "headML": {
+          "title": "Head of Machine Learning & AI Research",
+          "desc": "Experts ML/AI : deep learning, NLP, computer vision, MLOps, recherche appliquée et déploiement à l'échelle."
+        },
+        "headPlatform": {
+          "title": "Head of Platform & Developer Experience",
+          "desc": "Architectes de plateformes internes : developer productivity, API design, infrastructure as code, observability."
+        },
+        "headQA": {
+          "title": "VP Quality & Head of QA Engineering",
+          "desc": "Leaders qualité : test automation, CI/CD, performance testing, shift-left et culture quality engineering."
         }
       },
       "process": {
         "title": "Notre processus",
         "brief": {
-          "title": "Brief strat\u00e9gique",
+          "title": "Brief stratégique",
           "desc": "Analyse approfondie de votre organisation, culture, enjeux techniques et ambitions de croissance."
         },
         "search": {
-          "title": "Recherche cibl\u00e9e",
-          "desc": "Identification des meilleurs profils via notre r\u00e9seau europ\u00e9en, approche directe et \u00e9valuation rigoureuse."
+          "title": "Recherche ciblée",
+          "desc": "Identification des meilleurs profils via notre réseau européen, approche directe et évaluation rigoureuse."
         },
         "placement": {
           "title": "Placement & suivi",
-          "desc": "Accompagnement jusqu'\u00e0 l'int\u00e9gration r\u00e9ussie. Garantie de remplacement et suivi post-placement."
+          "desc": "Accompagnement jusqu'à l'intégration réussie. Garantie de remplacement et suivi post-placement."
         }
       }
     },
@@ -6589,54 +6618,55 @@
         "title": "Lancer un mandat de recrutement",
         "desc": "Décrivez le profil que vous recherchez. Nous vous recontacterons sous 48h.",
         "company": "Entreprise",
-      "companyPlaceholder": "Nom de votre entreprise",
-      "contactName": "Nom du contact",
-      "contactNamePlaceholder": "Votre nom complet",
-      "email": "Email",
-      "emailPlaceholder": "votre@email.com",
-      "phone": "Téléphone",
-      "phonePlaceholder": "+41 XX XXX XX XX",
-      "roleTitle": "Intitulé du poste",
-      "roleTitlePlaceholder": "Ex: CTO, Lead DevOps, Data Scientist...",
-      "roleDesc": "Description du poste",
-      "roleDescPlaceholder": "Missions, responsabilités, stack technique, contexte...",
-      "location": "Localisation",
-      "locationPlaceholder": "Ex: Lausanne, Remote Europe, Hybride Genève...",
-      "budget": "Budget annuel (CHF)",
-      "budgetPlaceholder": "Ex: 120'000 - 150'000 CHF",
-      "urgency": "Urgence",
-      "urgencyImmediate": "Immédiat (< 1 mois)",
-      "urgencyMonth": "Dans le mois",
-      "urgencyQuarter": "Dans le trimestre",
-      "urgencyFlexible": "Flexible",
-      "submit": "Envoyer le mandat",
-      "success": "Merci. Votre mandat a \u00e9t\u00e9 enregistr\u00e9. Nous vous contacterons sous 48h.",
-      "error": "Une erreur est survenue. Veuillez r\u00e9essayer.",
-      "submitting": "Envoi en cours..."
+        "companyPlaceholder": "Nom de votre entreprise",
+        "contactName": "Nom du contact",
+        "contactNamePlaceholder": "Votre nom complet",
+        "email": "Email",
+        "emailPlaceholder": "votre@email.com",
+        "phone": "Téléphone",
+        "phonePlaceholder": "+41 XX XXX XX XX",
+        "roleTitle": "Intitulé du poste",
+        "roleTitlePlaceholder": "Ex: CTO, Lead DevOps, Data Scientist...",
+        "roleDesc": "Description du poste",
+        "roleDescPlaceholder": "Missions, responsabilités, stack technique, contexte...",
+        "location": "Localisation",
+        "locationPlaceholder": "Ex: Lausanne, Remote Europe, Hybride Genève...",
+        "budget": "Budget annuel (CHF)",
+        "budgetPlaceholder": "Ex: 120'000 - 150'000 CHF",
+        "urgency": "Urgence",
+        "urgencyImmediate": "Immédiat (< 1 mois)",
+        "urgencyMonth": "Dans le mois",
+        "urgencyQuarter": "Dans le trimestre",
+        "urgencyFlexible": "Flexible",
+        "submit": "Envoyer le mandat",
+        "success": "Merci. Votre mandat a été enregistré. Nous vous contacterons sous 48h.",
+        "error": "Une erreur est survenue. Veuillez réessayer.",
+        "submitting": "Envoi en cours...",
+        "roleDescription": "Description du rôle *"
       },
       "candidate": {
         "title": "Postuler comme candidat",
         "desc": "Partagez votre profil et accédez à des opportunités exclusives.",
         "fullName": "Nom complet",
-      "fullNamePlaceholder": "Prénom Nom",
-      "email": "Email",
-      "emailPlaceholder": "votre@email.com",
-      "phone": "Téléphone",
-      "phonePlaceholder": "+41 XX XXX XX XX",
-      "linkedin": "LinkedIn",
-      "linkedinPlaceholder": "https://linkedin.com/in/...",
-      "cv": "CV (PDF)",
-      "cvUpload": "Déposer votre CV",
-      "cvUploaded": "CV déposé",
-      "motivation": "Lettre de motivation",
-      "motivationPlaceholder": "Parlez-nous de votre parcours, vos compétences clés, et ce que vous recherchez...",
-      "availability": "Disponibilité",
-      "availabilityPlaceholder": "Ex: Immédiate, Préavis 3 mois, Flexible...",
-      "submit": "Envoyer ma candidature",
-      "success": "Merci. Votre candidature a été enregistrée. Nous vous contacterons si votre profil correspond à nos mandats.",
-      "error": "Une erreur est survenue. Veuillez réessayer.",
-      "submitting": "Envoi en cours...",
-      "cvNote": "Votre CV sera demandé lors de l'entretien si votre profil correspond à nos mandats."
+        "fullNamePlaceholder": "Prénom Nom",
+        "email": "Email",
+        "emailPlaceholder": "votre@email.com",
+        "phone": "Téléphone",
+        "phonePlaceholder": "+41 XX XXX XX XX",
+        "linkedin": "LinkedIn",
+        "linkedinPlaceholder": "https://linkedin.com/in/...",
+        "cv": "CV (PDF)",
+        "cvUpload": "Déposer votre CV",
+        "cvUploaded": "CV déposé",
+        "motivation": "Lettre de motivation",
+        "motivationPlaceholder": "Parlez-nous de votre parcours, vos compétences clés, et ce que vous recherchez...",
+        "availability": "Disponibilité",
+        "availabilityPlaceholder": "Ex: Immédiate, Préavis 3 mois, Flexible...",
+        "submit": "Envoyer ma candidature",
+        "success": "Merci. Votre candidature a été enregistrée. Nous vous contacterons si votre profil correspond à nos mandats.",
+        "error": "Une erreur est survenue. Veuillez réessayer.",
+        "submitting": "Envoi en cours...",
+        "cvNote": "Votre CV sera demandé lors de l'entretien si votre profil correspond à nos mandats."
       }
     },
     "admin": {
@@ -6669,6 +6699,26 @@
       "noteLabel": "Note admin",
       "notePlaceholder": "Ajouter une note interne...",
       "saveNote": "Enregistrer note"
+    },
+    "candidate": {
+      "intro": {
+        "title": "Accédez aux opportunités tech les plus exclusives d'Europe",
+        "desc": "Aegryn Talent vous connecte aux scale-ups et leaders tech européens qui recrutent des profils executive. Confidentialité absolue, processus premium, opportunités triées."
+      },
+      "benefits": {
+        "network": {
+          "title": "Réseau européen premium",
+          "desc": "Accès direct aux décideurs des entreprises tech les plus innovantes : scale-ups en hyper-croissance, leaders SaaS, fintechs, deeptech et groupes en transformation digitale."
+        },
+        "confidential": {
+          "title": "Confidentialité garantie",
+          "desc": "Votre recherche reste strictement confidentielle. Nous ne partageons votre profil qu'avec votre accord explicite et uniquement auprès d'entreprises pré-qualifiées."
+        },
+        "curated": {
+          "title": "Opportunités triées sur mesure",
+          "desc": "Nous ne vous présentons que des postes executive alignés avec votre expertise, vos ambitions et votre niveau de séniorité. Zéro spam, 100% pertinence."
+        }
+      }
     }
   },
   "industries": {

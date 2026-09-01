@@ -11,7 +11,7 @@ const hiringSchema = z.object({
   company: z.string().min(2, 'Company name required'),
   contactName: z.string().min(2, 'Contact name required'),
   email: z.string().email('Valid email required'),
-  phone: z.string().optional(),
+  phone: z.string().regex(/^\+?[1-9]\d{1,14}$/, 'Format international requis (ex: +41 79 123 45 67)').optional(),
   roleTitle: z.string().min(2, 'Role title required'),
   roleDescription: z.string().min(20, 'Role description too short (min 20 characters)'),
   location: z.string().min(2, 'Location required'),
@@ -117,9 +117,13 @@ export default function TalentHiringForm() {
           <input
             {...register('phone')}
             type="tel"
+            pattern="^\+?[1-9]\d{1,14}$"
             className="w-full px-4 py-3 border border-ag-border focus:border-ag-apex focus:outline-none text-[14px]"
             placeholder={t('phonePlaceholder')}
           />
+          {errors.phone && (
+            <p className="mt-1 text-[12px] text-red-600">{errors.phone.message}</p>
+          )}
         </div>
 
         {/* Role Title */}
