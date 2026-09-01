@@ -160,18 +160,18 @@ export function HeroMountain() {
               {/* CTA 1: Construire */}
               <Link
                 href="/services/build"
-                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 p-5 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
+                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
                 <div className="relative">
-                  <h3 className="font-sans font-bold text-white text-[12px] tracking-wide mb-1.5 uppercase">
+                  <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta1Title')}
                   </h3>
-                  <p className="font-sans text-[13px] text-white/75 leading-snug mb-4 min-h-[40px]">
+                  <p className="font-sans text-[12px] text-white/75 leading-tight mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
                     {t('cta1Desc')}
                   </p>
-                  <span className="inline-flex items-center gap-1.5 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.18em] transition-colors duration-300">
-                    {t('cta1Link')} <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  <span className="inline-flex items-center gap-1 font-sans text-[9px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
+                    {t('cta1Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   </span>
                 </div>
               </Link>
@@ -179,18 +179,18 @@ export function HeroMountain() {
               {/* CTA 2: Accompagner */}
               <Link
                 href="/advisory"
-                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 p-5 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
+                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
                 <div className="relative">
-                  <h3 className="font-sans font-bold text-white text-[12px] tracking-wide mb-1.5 uppercase">
+                  <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta2Title')}
                   </h3>
-                  <p className="font-sans text-[13px] text-white/75 leading-snug mb-4 min-h-[40px]">
+                  <p className="font-sans text-[12px] text-white/75 leading-tight mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
                     {t('cta2Desc')}
                   </p>
-                  <span className="inline-flex items-center gap-1.5 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.18em] transition-colors duration-300">
-                    {t('cta2Link')} <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  <span className="inline-flex items-center gap-1 font-sans text-[9px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
+                    {t('cta2Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   </span>
                 </div>
               </Link>
@@ -198,18 +198,18 @@ export function HeroMountain() {
               {/* CTA 3: Transiger */}
               <Link
                 href="/grade"
-                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 p-5 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
+                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
                 <div className="relative">
-                  <h3 className="font-sans font-bold text-white text-[12px] tracking-wide mb-1.5 uppercase">
+                  <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta3Title')}
                   </h3>
-                  <p className="font-sans text-[13px] text-white/75 leading-snug mb-4 min-h-[40px]">
+                  <p className="font-sans text-[12px] text-white/75 leading-tight mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
                     {t('cta3Desc')}
                   </p>
-                  <span className="inline-flex items-center gap-1.5 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.18em] transition-colors duration-300">
-                    {t('cta3Link')} <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  <span className="inline-flex items-center gap-1 font-sans text-[9px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
+                    {t('cta3Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   </span>
                 </div>
               </Link>
@@ -217,18 +217,18 @@ export function HeroMountain() {
               {/* CTA 4: Placer */}
               <Link
                 href="/talent"
-                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 p-5 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
+                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
                 <div className="relative">
-                  <h3 className="font-sans font-bold text-white text-[12px] tracking-wide mb-1.5 uppercase">
+                  <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta4Title')}
                   </h3>
-                  <p className="font-sans text-[13px] text-white/75 leading-snug mb-4 min-h-[40px]">
+                  <p className="font-sans text-[12px] text-white/75 leading-tight mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
                     {t('cta4Desc')}
                   </p>
-                  <span className="inline-flex items-center gap-1.5 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.18em] transition-colors duration-300">
-                    {t('cta4Link')} <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  <span className="inline-flex items-center gap-1 font-sans text-[9px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
+                    {t('cta4Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   </span>
                 </div>
               </Link>
@@ -236,18 +236,18 @@ export function HeroMountain() {
               {/* CTA 5: S'informer */}
               <Link
                 href="/magazine"
-                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 p-5 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
+                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
                 <div className="relative">
-                  <h3 className="font-sans font-bold text-white text-[12px] tracking-wide mb-1.5 uppercase">
+                  <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta5Title')}
                   </h3>
-                  <p className="font-sans text-[13px] text-white/75 leading-snug mb-4 min-h-[40px]">
+                  <p className="font-sans text-[12px] text-white/75 leading-tight mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
                     {t('cta5Desc')}
                   </p>
-                  <span className="inline-flex items-center gap-1.5 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.18em] transition-colors duration-300">
-                    {t('cta5Link')} <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  <span className="inline-flex items-center gap-1 font-sans text-[9px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
+                    {t('cta5Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   </span>
                 </div>
               </Link>
