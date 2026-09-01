@@ -44,7 +44,7 @@ export default function AdminTalentPage() {
   const [candidates, setCandidates] = useState<Candidate[]>([])
   const [loading, setLoading] = useState(true)
   const [editingId, setEditingId] = useState<string | null>(null)
-  const [editData, setEditData] = useState<Record<string, string | number>>({})
+  const [editData, setEditData] = useState<Record<string, string | number | null>>({})
   
   const {
     canEditTalent,
@@ -106,7 +106,7 @@ export default function AdminTalentPage() {
 
   function startEdit(item: HiringRequest | Candidate) {
     setEditingId(item.id)
-    setEditData(item as Record<string, string | number>)
+    setEditData(item as Record<string, string | number | null>)
   }
 
   function formatCurrency(amount: number | null, currency: string | null) {
@@ -247,12 +247,12 @@ export default function AdminTalentPage() {
                           />
                         </div>
                       </div>
-                      {editData.salary_gross_annual && editData.commission_percentage && (
+                      {typeof editData.salary_gross_annual === 'number' && typeof editData.commission_percentage === 'number' && (
                         <div className="mt-3 p-3 bg-ag-apex/10 border border-ag-apex/20">
                           <p className="text-[13px] font-semibold text-ag-black">
                             Commission calculée: {formatCurrency(
                               editData.salary_gross_annual * (editData.commission_percentage / 100),
-                              editData.salary_currency
+                              typeof editData.salary_currency === 'string' ? editData.salary_currency : null
                             )}
                           </p>
                         </div>
