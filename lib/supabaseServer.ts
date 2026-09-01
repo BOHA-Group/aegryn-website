@@ -10,8 +10,9 @@ import { createServerClient } from '@supabase/ssr'
 import { cookies }            from 'next/headers'
 import { cache }              from 'react'
 
-const url     = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+const url        = process.env.NEXT_PUBLIC_SUPABASE_URL!
+const anonKey    = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
 
 /** Client auth-aware pour Server Components (lit/écrit les cookies auth).
  *  cache() garantit une seule instance par requête RSC, peu importe
@@ -50,3 +51,15 @@ export const getUser = cache(async () => {
   if (error || !user) return null
   return user
 })
+
+/** Client service_role pour API routes publiques (bypass RLS).
+ *  Utilisé pour les formulaires publics (contact, talent, etc.) qui doivent
+ *  insérer des données sans authentification. */
+export function createServiceClient() {
+  return createServerClient(url, serviceKey, {
+    cookies: {
+      getAll: () => [],
+      setAll: () => {},
+    },
+  })
+}

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createAuthClient } from '@/lib/supabaseServer'
+import { createServiceClient } from '@/lib/supabaseServer'
 import { Resend } from 'resend'
 import { z } from 'zod'
 import TalentCandidateConfirmation from '@/emails/TalentCandidateConfirmation'
@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json()
     const validated = candidateSchema.parse(body)
 
-    const supabase = await createAuthClient()
+    const supabase = createServiceClient()
 
     const { data, error } = await supabase
       .from('talent_candidates')
