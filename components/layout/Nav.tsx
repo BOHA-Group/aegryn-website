@@ -94,7 +94,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
               >
                 {t(labelKey)}
               </Link>
@@ -116,7 +116,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
               >
                 {t(labelKey)}
               </Link>
@@ -138,7 +138,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
               >
                 {t(labelKey)}
               </Link>
@@ -171,7 +171,7 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
               >
                 {t(labelKey)}
               </Link>
@@ -195,7 +195,7 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
               >
                 {t(labelKey)}
               </Link>
@@ -238,7 +238,7 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
               >
                 {t(labelKey)}
               </Link>
@@ -260,7 +260,7 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
               >
                 {t(labelKey)}
               </Link>
@@ -291,7 +291,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
               >
                 {t(labelKey)}
               </Link>
@@ -324,7 +324,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
               >
                 {t(labelKey)}
               </Link>
@@ -449,7 +449,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
           <div className="nav-link-item relative">
             <button
               onClick={() => toggleDropdown('craft')}
-              className={`relative flex items-center gap-1 font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
+              className={`relative flex items-center gap-1 font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
                 isCraftActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
               aria-expanded={activeDropdown === 'craft'}
@@ -466,7 +466,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
           <div className="nav-link-item relative">
             <button
               onClick={() => toggleDropdown('solutions')}
-              className={`relative flex items-center gap-1 font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
+              className={`relative flex items-center gap-1 font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
                 isSolutionsActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
               aria-expanded={activeDropdown === 'solutions'}
@@ -483,7 +483,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
           <div className="nav-link-item relative">
             <button
               onClick={() => toggleDropdown('thinking')}
-              className={`relative flex items-center gap-1 font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
+              className={`relative flex items-center gap-1 font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
                 isThinkingActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
               aria-expanded={activeDropdown === 'thinking'}
@@ -500,7 +500,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
           <div className="nav-link-item relative">
             <button
               onClick={() => toggleDropdown('who')}
-              className={`relative flex items-center gap-1 font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
+              className={`relative flex items-center gap-1 font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
                 isWhoActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
               aria-expanded={activeDropdown === 'who'}
