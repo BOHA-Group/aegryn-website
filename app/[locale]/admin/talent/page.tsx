@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
-import { Trash2, Edit2, Save, X, Users, DollarSign, Shield } from 'lucide-react'
+import { Trash2, Edit2, Save, X, DollarSign } from 'lucide-react'
 import { usePermissions } from '@/hooks/usePermissions'
 
 type HiringRequest = {
@@ -44,14 +44,14 @@ export default function AdminTalentPage() {
   const [candidates, setCandidates] = useState<Candidate[]>([])
   const [loading, setLoading] = useState(true)
   const [editingId, setEditingId] = useState<string | null>(null)
-  const [editData, setEditData] = useState<any>({})
+  const [editData, setEditData] = useState<Record<string, string | number>>({})
   
   const {
     canEditTalent,
     canDeleteTalent,
-    canViewTalentFinancials,
-    canEditTalentFinancials,
-    loading: permissionsLoading
+    canViewTalentFinancials: _canViewTalentFinancials,
+    canEditTalentFinancials: _canEditTalentFinancials,
+    loading: _permissionsLoading
   } = usePermissions()
 
   useEffect(() => {
@@ -104,9 +104,9 @@ export default function AdminTalentPage() {
     loadData()
   }
 
-  function startEdit(item: any) {
+  function startEdit(item: HiringRequest | Candidate) {
     setEditingId(item.id)
-    setEditData(item)
+    setEditData(item as Record<string, string | number>)
   }
 
   function formatCurrency(amount: number | null, currency: string | null) {
