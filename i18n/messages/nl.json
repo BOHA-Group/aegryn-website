@@ -103,7 +103,7 @@
     "whoJoin": "Sluit je bij ons aan",
     "whoJoinDesc": "Carrières, talenten, partners",
     "whoCareers": "Carrières",
-    "whoTalent": "Headhunting & Transition",
+    "whoTalent": "Werving & Plaatsing",
     "whoAlliances": "Partner worden",
     "talent": "Talent",
     "thinkingMarket": "Ons marktperspectief",
@@ -6582,13 +6582,13 @@
   },
   "talent": {
     "meta": {
-      "title": "Headhunting & Transition | Aegryn Talent",
-      "desc": "Werving van tech-talent en begeleiding bij professionele transities. Expertise in tech-, data-, AI-, cybersecurity- en managementprofielen."
+      "title": "Werving & Plaatsing | Aegryn Talent",
+      "desc": "We verbinden de beste tech-talenten met bedrijven die Europa transformeren. CTO, CISO, Head of AI, VP Engineering."
     },
     "hero": {
       "label": "Aegryn Talent",
-      "title": "Headhunting & Transition.",
-      "sub": "We ondersteunen bedrijven bij het werven van zeldzaam tech-talent en professionals bij hun strategische transities."
+      "title": "Werving & Plaatsing",
+      "sub": "We verbinden de beste tech-talenten met bedrijven die Europa transformeren."
     },
     "hiring": {
       "title": "Ik ben aan het werven",
@@ -6672,6 +6672,10 @@
       "noteLabel": "Admin-notitie",
       "notePlaceholder": "Interne notitie toevoegen...",
       "saveNote": "Notitie opslaan"
+    },
+    "toggle": {
+      "candidate": "Ik ben kandidaat",
+      "employer": "Ik ben aan het werven"
     }
   }
 }

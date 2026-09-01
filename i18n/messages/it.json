@@ -103,7 +103,7 @@
     "whoJoin": "Unisciti a noi",
     "whoJoinDesc": "Carriere, talenti, partner",
     "whoCareers": "Carriere",
-    "whoTalent": "Headhunting & Transition",
+    "whoTalent": "Reclutamento e Collocamento",
     "whoAlliances": "Diventa partner",
     "talent": "Talento",
     "thinkingMarket": "Il nostro sguardo sul mercato",
@@ -6582,13 +6582,13 @@
   },
   "talent": {
     "meta": {
-      "title": "Headhunting & Transition | Aegryn Talent",
-      "desc": "Reclutamento di talenti tech e accompagnamento nelle transizioni professionali. Competenza in profili tech, data, IA, cybersecurity e management."
+      "title": "Reclutamento e Collocamento | Aegryn Talent",
+      "desc": "Connettiamo i migliori talenti tech con le aziende che trasformano l'Europa. CTO, CISO, Head of AI, VP Engineering."
     },
     "hero": {
       "label": "Aegryn Talent",
-      "title": "Headhunting & Transition.",
-      "sub": "Accompagniamo le aziende nel reclutamento di talenti tech rari e i professionisti nelle loro transizioni strategiche."
+      "title": "Reclutamento e Collocamento",
+      "sub": "Connettiamo i migliori talenti tech con le aziende che trasformano l'Europa."
     },
     "hiring": {
       "title": "Sto assumendo",
@@ -6672,6 +6672,10 @@
       "noteLabel": "Nota admin",
       "notePlaceholder": "Aggiungi una nota interna...",
       "saveNote": "Salva nota"
+    },
+    "toggle": {
+      "candidate": "Sono un candidato",
+      "employer": "Sto assumendo"
     }
   }
 }

@@ -108,7 +108,7 @@
     "whoJoin": "Nous rejoindre",
     "whoJoinDesc": "Carrières, talents, partenaires",
     "whoCareers": "Carrières",
-    "whoTalent": "Headhunting & Transition",
+    "whoTalent": "Recrutement et Placement",
     "whoAlliances": "Devenir partenaire",
     "industries": "Industries",
     "industriesDesc": "Tous secteurs",
@@ -6537,19 +6537,58 @@
   },
   "talent": {
     "meta": {
-      "title": "Headhunting & Transition | Aegryn Talent",
-      "desc": "Recrutement de talents tech et accompagnement de transitions professionnelles. Expertise en profils tech, data, IA, cybersécurité et management."
+      "title": "Recrutement et Placement | Aegryn Talent",
+      "desc": "Nous connectons les meilleurs talents tech avec les entreprises qui transforment l'Europe. CTO, CISO, Head of AI, VP Engineering."
     },
     "hero": {
       "label": "Aegryn Talent",
-      "title": "Headhunting & Transition.",
-      "sub": "Nous accompagnons les entreprises dans le recrutement de talents tech rares et les professionnels dans leurs transitions stratégiques."
+      "title": "Recrutement et Placement",
+      "sub": "Nous connectons les meilleurs talents tech avec les entreprises qui transforment l'Europe."
     },
-    "hiring": {
-      "title": "Je recrute",
-      "desc": "Vous recherchez un profil tech rare ? Confiez-nous votre mandat.",
-      "formTitle": "Déposer un mandat de recrutement",
-      "company": "Entreprise",
+    "toggle": {
+      "candidate": "Je suis candidat",
+      "employer": "Je recrute"
+    },
+    "employer": {
+      "intro": {
+        "title": "Recrutez les leaders qui transforment",
+        "desc": "Aegryn Talent identifie et place les profils tech rares qui acc\u00e9l\u00e8rent votre croissance. Notre approche combine expertise sectorielle, r\u00e9seau europ\u00e9en et processus de certification rigoureux."
+      },
+      "profiles": {
+        "cto": {
+          "title": "CTO & VP Engineering",
+          "desc": "Leaders techniques capables de structurer, scaler et innover. Ma\u00eetrise des architectures modernes, IA, cloud et s\u00e9curit\u00e9."
+        },
+        "ciso": {
+          "title": "CISO & Security Leaders",
+          "desc": "Experts en cybers\u00e9curit\u00e9, conformit\u00e9 RGPD, gestion des risques et r\u00e9silience. Profils certifi\u00e9s et op\u00e9rationnels."
+        },
+        "headAI": {
+          "title": "Head of AI & Data",
+          "desc": "Sp\u00e9cialistes en intelligence artificielle, machine learning, data science et strat\u00e9gie data-driven."
+        }
+      },
+      "process": {
+        "title": "Notre processus",
+        "brief": {
+          "title": "Brief strat\u00e9gique",
+          "desc": "Analyse approfondie de votre organisation, culture, enjeux techniques et ambitions de croissance."
+        },
+        "search": {
+          "title": "Recherche cibl\u00e9e",
+          "desc": "Identification des meilleurs profils via notre r\u00e9seau europ\u00e9en, approche directe et \u00e9valuation rigoureuse."
+        },
+        "placement": {
+          "title": "Placement & suivi",
+          "desc": "Accompagnement jusqu'\u00e0 l'int\u00e9gration r\u00e9ussie. Garantie de remplacement et suivi post-placement."
+        }
+      }
+    },
+    "forms": {
+      "hiring": {
+        "title": "Lancer un mandat de recrutement",
+        "desc": "Décrivez le profil que vous recherchez. Nous vous recontacterons sous 48h.",
+        "company": "Entreprise",
       "companyPlaceholder": "Nom de votre entreprise",
       "contactName": "Nom du contact",
       "contactNamePlaceholder": "Votre nom complet",
@@ -6571,14 +6610,14 @@
       "urgencyQuarter": "Dans le trimestre",
       "urgencyFlexible": "Flexible",
       "submit": "Envoyer le mandat",
-      "success": "Merci. Votre mandat a été enregistré. Nous vous contacterons sous 48h.",
-      "error": "Une erreur est survenue. Veuillez réessayer."
-    },
-    "candidate": {
-      "title": "Je suis candidat",
-      "desc": "Vous êtes un talent tech en transition ? Déposez votre candidature.",
-      "formTitle": "Déposer une candidature",
-      "fullName": "Nom complet",
+      "success": "Merci. Votre mandat a \u00e9t\u00e9 enregistr\u00e9. Nous vous contacterons sous 48h.",
+      "error": "Une erreur est survenue. Veuillez r\u00e9essayer.",
+      "submitting": "Envoi en cours..."
+      },
+      "candidate": {
+        "title": "Postuler comme candidat",
+        "desc": "Partagez votre profil et accédez à des opportunités exclusives.",
+        "fullName": "Nom complet",
       "fullNamePlaceholder": "Prénom Nom",
       "email": "Email",
       "emailPlaceholder": "votre@email.com",
@@ -6595,7 +6634,10 @@
       "availabilityPlaceholder": "Ex: Immédiate, Préavis 3 mois, Flexible...",
       "submit": "Envoyer ma candidature",
       "success": "Merci. Votre candidature a été enregistrée. Nous vous contacterons si votre profil correspond à nos mandats.",
-      "error": "Une erreur est survenue. Veuillez réessayer."
+      "error": "Une erreur est survenue. Veuillez réessayer.",
+      "submitting": "Envoi en cours...",
+      "cvNote": "Votre CV sera demandé lors de l'entretien si votre profil correspond à nos mandats."
+      }
     },
     "admin": {
       "title": "Gestion Talent",
