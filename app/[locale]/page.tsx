@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'hero' })
   return generateAegrynMetadata({
     title: t('tagline'),
-    description: 'We are a Swiss Tech Asset Builder designing and operating digital ecosystems, with selective advisory in Data, AI and Cybersecurity across Europe.',
+    description: t('metaDescription'),
     locale,
   })
 }

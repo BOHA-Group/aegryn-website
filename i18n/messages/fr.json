@@ -29,8 +29,9 @@
     "transactionResults": "Transactions clôturées",
     "gradeSystem": "Système de grade",
     "gradeMethod": "Méthodologie",
-    "gradeSubmit": "Soumettre pour certification",
+    "gradeSubmit": "Certifier un actif",
     "gradePartners": "Réseau d'experts",
+    "roadmap": "Feuille de route",
     "servicesBuild": "Conception d'actifs",
     "servicesAdvisory": "Advisory Tech",
     "servicesAlliances": "Réseau de partenaires",
@@ -118,6 +119,7 @@
   },
   "hero": {
     "tagline": "Nous refusons qu'un actif solide disparaisse dans une transaction mal préparée.",
+    "metaDescription": "AEGRYN certifie et transige des actifs tech en Europe. Cinq disciplines : conception, advisory, transaction M&A, talent et intelligence de marché. Ancré en Suisse.",
     "eyebrow": "INFRASTRUCTURE DE CERTIFICATION ET DE TRANSACTION",
     "title": "Rare par\nsélection.",
     "sub": "Aegryn conçoit, certifie et transige des actifs tech en Europe. Advisory, talent, intelligence de marché : cinq disciplines. Un seul standard.",
@@ -356,8 +358,8 @@
   },
   "aboutSection": {
     "label": "À propos d'Aegryn",
-    "title": "Trois métiers.\nUn standard de marché.",
-    "desc": "Aegryn conçoit des actifs tech, les certifie selon un label indépendant, et les transige via un processus confidentiel entre vendeurs et acquéreurs qualifiés. La première infrastructure de confiance pour le M&A tech en Europe. Le magazine Aegryn documente ce marché chaque trimestre.",
+    "title": "Cinq métiers.\nUn standard de marché.",
+    "desc": "Aegryn conçoit des actifs tech, les certifie selon un label indépendant, les transige dans un cercle fermé, accompagne les entrepreneurs et les acquéreurs, et documente le marché chaque trimestre. La première infrastructure de confiance pour le M&A tech en Europe.",
     "tagline": "CERTIFIÉ EN SUISSE. RÉFÉRENCE EN EUROPE.",
     "cta": "À propos d'Aegryn",
     "quote": "Un actif tech sans certification indépendante, c'est une valeur sans preuve. Aegryn apporte la preuve sur chaque actif, à chaque transfert.",
@@ -380,7 +382,7 @@
   },
   "missionSection": {
     "label": "Le Modèle Aegryn",
-    "sub": "Trois métiers. Un écosystème intégré.",
+    "sub": "Cinq métiers. Un écosystème intégré.",
     "items": [
       {
         "title": "CONCEPTION",
@@ -393,6 +395,14 @@
       {
         "title": "TRANSACTION",
         "desc": "Nous transigeons des actifs certifiés via un processus confidentiel : séquestre institutionnel, cercle d'acquéreurs pré-qualifiés, mandat exclusif 60 jours. Moins de 25% des actifs soumis sont acceptés."
+      },
+      {
+        "title": "ACCOMPAGNER",
+        "desc": "Nous accompagnons les entrepreneurs et les acquéreurs : Advisory Tech (cybersécurité, IA, conformité), Advisory Transaction (structuration, due diligence, closing), et Talent (recrutement et placement de profils tech)."
+      },
+      {
+        "title": "INTELLIGENCE",
+        "desc": "Nous documentons le marché M&A tech européen : Magazine trimestriel Aegryn, Brief hebdomadaire, Articles et analyses. Une vision claire du marché, pour ceux qui le font."
       }
     ]
   },

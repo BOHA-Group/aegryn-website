@@ -118,16 +118,19 @@ const legal: { key: string; href: LinkHref; ns: string; external?: boolean }[] =
 
 const companyLinks: { navKey: string; href: LinkHref }[] = [
   { navKey: 'whoAbout',    href: '/about' },
+  { navKey: 'gradeMethod', href: '/grade/methodology' },
+  { navKey: 'roadmap',     href: '/roadmap' as never },
   { navKey: 'whoContact',  href: '/contact' },
-  { navKey: 'whoCareers',  href: '/career' },
-  { navKey: 'whoTalent',   href: '/talent' as never },
+  { navKey: 'whoAlliances', href: '/alliances' },
 ]
 
 const servicesLinks: { navKey: string; href: LinkHref }[] = [
   { navKey: 'craftBuild',          href: '/services/build' },
   { navKey: 'craftSupport',        href: '/advisory' },
   { navKey: 'craftTransact',       href: '/transact' },
-  { navKey: 'craftGrade',          href: '/grade' },
+  { navKey: 'gradeSubmit',         href: '/grade/submit' },
+  { navKey: 'whoTalent',           href: '/talent' as never },
+  { navKey: 'thinkingMagazine',    href: '/magazine' },
 ]
 
 export default function Footer() {
