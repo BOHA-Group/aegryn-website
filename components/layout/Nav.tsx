@@ -10,156 +10,373 @@ import NotificationBell   from '@/components/client/NotificationBell'
 import Image             from 'next/image'
 import { gsap }          from '@/lib/gsap'
 
-type DropdownKey = 'transact' | 'grade' | 'build' | 'advisory' | 'about' | null
+type DropdownKey = 'craft' | 'solutions' | 'thinking' | 'who' | null
 type LinkHref = ComponentProps<typeof Link>['href']
 
-const TRANSACT_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'transactCatalog',    href: '/transact/catalog' },
-  { labelKey: 'transactSell',       href: '/transact/how-to-sell' },
-  { labelKey: 'transactBuy',        href: '/transact/how-to-buy' },
-  { labelKey: 'transactResults',    href: '/transact/results' },
+// Nos métiers - Build section
+const CRAFT_BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'craftBuildAssets',      href: '/assets' },
+  { labelKey: 'craftBuildEngineering', href: '/services/build' },
 ]
 
-const GRADE_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'gradeSystem',     href: '/grade' },
-  { labelKey: 'gradeMethod',     href: '/grade/methodology' },
-  { labelKey: 'gradeSubmit',     href: '/grade/submit' },
+// Nos métiers - Support section
+const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'craftSupportAdvisory',    href: '/advisory' },
+  { labelKey: 'craftSupportAcquisition', href: '/services/acquisition-support' },
+  { labelKey: 'craftSupportAlliances',   href: '/alliances' },
+  { labelKey: 'craftSupportExperts',     href: '/experts' },
 ]
 
-const BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'buildAssets',      href: '/assets' },
-  { labelKey: 'buildEngineering', href: '/services/build' },
+// Nos métiers - Transaction M&A section
+const CRAFT_TRANSACT_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'craftTransactGrade',   href: '/grade' },
+  { labelKey: 'craftTransactCatalog', href: '/transact/catalog' },
+  { labelKey: 'craftTransactSell',    href: '/transact/how-to-sell' },
+  { labelKey: 'craftTransactBuy',     href: '/transact/how-to-buy' },
+  { labelKey: 'craftTransactResults', href: '/transact/results' },
 ]
 
-const ABOUT_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'magazine',          href: '/magazine' },
-  { labelKey: 'articles',          href: '/blog' },
-  { labelKey: 'aboutGroup',        href: '/about' },
-  { labelKey: 'aboutCareers',      href: '/career' },
+// Nos solutions - CORE assets
+const SOLUTIONS_CORE: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'solutionsSubblink', href: '/assets' },
 ]
 
-const ADVISORY_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'servicesAdvisory',    href: '/advisory' },
-  { labelKey: 'servicesAcquisition', href: '/services/acquisition-support' },
-  { labelKey: 'servicesAlliances',   href: '/alliances' },
-  { labelKey: 'servicesExperts',     href: '/experts' },
+// Nos solutions - PORTFOLIO assets
+const SOLUTIONS_PORTFOLIO: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'solutionsNeediu',      href: '/assets' },
+  { labelKey: 'solutionsMovtoo',      href: '/assets' },
+  { labelKey: 'solutionsPrimiom',     href: '/assets' },
+  { labelKey: 'solutionsHobconnect',  href: '/assets' },
 ]
 
-function DropdownMenu({ links, t }: { links: { labelKey: string; href: LinkHref }[]; t: ReturnType<typeof useTranslations> }) {
+// Nos convictions - Magazine
+const THINKING_MAGAZINE_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'thinkingMagazineIssues', href: '/magazine' },
+]
+
+// Nos convictions - Blog
+const THINKING_BLOG_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'thinkingBlogArticles', href: '/blog' },
+]
+
+// Nos convictions - Base de connaissance
+const THINKING_KNOWLEDGE_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'thinkingGlossary', href: '/blog' },
+  { labelKey: 'thinkingFAQ',      href: '/blog' },
+]
+
+// Qui sommes-nous - Le groupe
+const WHO_GROUP_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'whoAbout',   href: '/about' },
+  { labelKey: 'whoContact', href: '/contact' },
+]
+
+// Qui sommes-nous - Nous rejoindre
+const WHO_JOIN_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'whoCareers',   href: '/career' },
+  { labelKey: 'whoTalent',    href: '/career' },
+  { labelKey: 'whoAlliances', href: '/alliances' },
+]
+
+// Mega-menu Nos métiers (3 sections)
+function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   return (
-    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 bg-ag-white border border-ag-border shadow-lg z-50">
-      {links.map(({ labelKey, href }) => (
-        <Link
-          key={labelKey}
-          href={href}
-          className="block px-5 py-3 font-sans text-[12px] text-ag-gray hover:text-ag-black hover:bg-ag-off-white transition-colors border-b border-ag-border/50 last:border-0"
-        >
-          {t(labelKey)}
-        </Link>
-      ))}
+    <div className="absolute top-full left-0 mt-2 w-[650px] bg-ag-white border border-ag-border shadow-lg z-50">
+      <div className="grid grid-cols-3 gap-px bg-ag-border">
+        {/* Build */}
+        <div className="bg-ag-white p-4">
+          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+            {t('craftBuild')}
+          </p>
+          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+            {t('craftBuildDesc')}
+          </p>
+          <div className="flex flex-col gap-1">
+            {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
+              <Link
+                key={labelKey}
+                href={href}
+                onClick={onClose}
+                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+              >
+                {t(labelKey)}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Support */}
+        <div className="bg-ag-white p-4">
+          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+            {t('craftSupport')}
+          </p>
+          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+            {t('craftSupportDesc')}
+          </p>
+          <div className="flex flex-col gap-1">
+            {CRAFT_SUPPORT_LINKS.map(({ labelKey, href }) => (
+              <Link
+                key={labelKey}
+                href={href}
+                onClick={onClose}
+                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+              >
+                {t(labelKey)}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Transaction M&A */}
+        <div className="bg-ag-white p-4">
+          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+            {t('craftTransact')}
+          </p>
+          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+            {t('craftTransactDesc')}
+          </p>
+          <div className="flex flex-col gap-1">
+            {CRAFT_TRANSACT_LINKS.map(({ labelKey, href }) => (
+              <Link
+                key={labelKey}
+                href={href}
+                onClick={onClose}
+                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+              >
+                {t(labelKey)}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
 
-
-function GradeMegaMenu({
-  t,
-  onClose,
-}: {
-  t: ReturnType<typeof useTranslations>
-  onClose: () => void
-}) {
-  const tg = useTranslations('gradeShowcase')
-
-  const GRADES = [
-    { label: 'AEG ★', key: 'star', cls: 'border-ag-apex/40  bg-ag-apex/[0.06]  text-ag-apex-ink'      },
-    { label: 'AAA',    key: 'aaa',  cls: 'border-ag-navy/35  bg-ag-navy/[0.05]  text-ag-navy'         },
-    { label: 'AA',     key: 'aa',   cls: 'border-ag-navy/20  bg-ag-navy/[0.03]  text-ag-navy/80'      },
-    { label: 'A',      key: 'a',    cls: 'border-ag-border   bg-ag-off-white    text-ag-gray'          },
-    { label: 'B',      key: 'b',    cls: 'border-ag-border/50 bg-ag-white       text-ag-gray-light'   },
-  ] as const
-
-  const DIMS = [
-    { letter: 'C', tKey: 'gradeDimC' },
-    { letter: 'I', tKey: 'gradeDimI' },
-    { letter: 'F', tKey: 'gradeDimF' },
-    { letter: 'S', tKey: 'gradeDimS' },
-  ] as const
-
+// Mega-menu Nos solutions (2 colonnes CORE/PORTFOLIO)
+function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   return (
     <div className="absolute top-full left-0 mt-2 w-[500px] bg-ag-white border border-ag-border shadow-lg z-50">
-
-      {/* Header */}
-      <div className="px-5 py-3 border-b border-ag-border">
-        <p className="font-mono text-[9px] tracking-[0.30em] uppercase text-ag-gray-light">
-          {tg('label')}
-        </p>
-      </div>
-
-      {/* Grade scale — 5 slots inspired by Antiquorum watch grading */}
-      <div className="p-3.5 grid grid-cols-5 gap-1.5">
-        {GRADES.map(({ label, key, cls }) => (
-          <div key={key} className={`border p-2.5 text-center ${cls}`}>
-            <p className="font-mono text-[10px] font-semibold tracking-[0.04em] leading-none mb-1.5 whitespace-nowrap">
-              {label}
-            </p>
-            <p className="font-sans text-[9px] leading-tight opacity-80">
-              {tg(`grades.${key}.desc`)}
-            </p>
+      <div className="grid grid-cols-2 gap-px bg-ag-border">
+        {/* CORE */}
+        <div className="bg-ag-white p-4">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-apex-ink font-bold px-2 py-0.5 border border-ag-apex/30 bg-ag-apex/5">
+              {t('solutionsCore')}
+            </span>
           </div>
-        ))}
+          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+            {t('solutionsCoreDesc')}
+          </p>
+          <div className="flex flex-col gap-1">
+            {SOLUTIONS_CORE.map(({ labelKey, href }) => (
+              <Link
+                key={labelKey}
+                href={href}
+                onClick={onClose}
+                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+              >
+                {t(labelKey)}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* PORTFOLIO */}
+        <div className="bg-ag-white p-4">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray font-bold px-2 py-0.5 border border-ag-border bg-ag-off-white">
+              {t('solutionsPortfolio')}
+            </span>
+          </div>
+          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+            {t('solutionsPortfolioDesc')}
+          </p>
+          <div className="flex flex-col gap-1">
+            {SOLUTIONS_PORTFOLIO.map(({ labelKey, href }) => (
+              <Link
+                key={labelKey}
+                href={href}
+                onClick={onClose}
+                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+              >
+                {t(labelKey)}
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
 
-      {/* 4 dimensions */}
-      <div className="px-3.5 pb-3 flex gap-1.5">
-        {DIMS.map(({ letter, tKey }) => (
-          <span
-            key={letter}
-            className="inline-flex items-center gap-1.5 border border-ag-border px-2.5 py-1 font-mono text-[9px] tracking-[0.08em] text-ag-gray"
-          >
-            <span className="text-ag-navy font-bold text-[10px]">{letter}</span>
-            {t(tKey)}
-          </span>
-        ))}
+      {/* Footer link */}
+      <div className="border-t border-ag-border p-3 bg-ag-off-white">
+        <Link
+          href="/assets"
+          onClick={onClose}
+          className="font-sans text-[11px] text-ag-gray hover:text-ag-black transition-colors flex items-center gap-2"
+        >
+          {t('solutionsViewAll')}
+          <span className="text-ag-apex-ink">→</span>
+        </Link>
       </div>
+    </div>
+  )
+}
 
-      {/* Nav links */}
-      <div className="border-t border-ag-border">
-        {GRADE_LINKS.map(({ labelKey, href }) => (
-          <Link
-            key={labelKey}
-            href={href}
-            onClick={onClose}
-            className="flex items-center justify-between px-5 py-3 font-sans text-[12px] text-ag-gray hover:text-ag-black hover:bg-ag-off-white transition-colors border-b border-ag-border/50 last:border-0"
-          >
-            {t(labelKey)}
-            <span className="text-ag-apex-ink text-[11px] font-semibold">→</span>
-          </Link>
-        ))}
+// Mega-menu Nos convictions (2 colonnes Magazine + Base connaissance)
+function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
+  return (
+    <div className="absolute top-full left-0 mt-2 w-[500px] bg-ag-white border border-ag-border shadow-lg z-50">
+      <div className="grid grid-cols-2 gap-px bg-ag-border">
+        {/* Magazine + Blog */}
+        <div className="bg-ag-white p-4">
+          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+            {t('thinkingMagazine')}
+          </p>
+          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+            {t('thinkingMagazineDesc')}
+          </p>
+          <div className="flex flex-col gap-1 mb-4">
+            {THINKING_MAGAZINE_LINKS.map(({ labelKey, href }) => (
+              <Link
+                key={labelKey}
+                href={href}
+                onClick={onClose}
+                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+              >
+                {t(labelKey)}
+              </Link>
+            ))}
+          </div>
+
+          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3 mt-4">
+            {t('thinkingBlog')}
+          </p>
+          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+            {t('thinkingBlogDesc')}
+          </p>
+          <div className="flex flex-col gap-1">
+            {THINKING_BLOG_LINKS.map(({ labelKey, href }) => (
+              <Link
+                key={labelKey}
+                href={href}
+                onClick={onClose}
+                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+              >
+                {t(labelKey)}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Base de connaissance */}
+        <div className="bg-ag-white p-4">
+          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+            {t('thinkingKnowledge')}
+          </p>
+          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+            {t('thinkingKnowledgeDesc')}
+          </p>
+          <div className="flex flex-col gap-1">
+            {THINKING_KNOWLEDGE_LINKS.map(({ labelKey, href }) => (
+              <Link
+                key={labelKey}
+                href={href}
+                onClick={onClose}
+                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+              >
+                {t(labelKey)}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Mega-menu Qui sommes-nous (2 colonnes Groupe + Rejoindre)
+function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
+  return (
+    <div className="absolute top-full left-0 mt-2 w-[500px] bg-ag-white border border-ag-border shadow-lg z-50">
+      <div className="grid grid-cols-2 gap-px bg-ag-border">
+        {/* Le groupe */}
+        <div className="bg-ag-white p-4">
+          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+            {t('whoGroup')}
+          </p>
+          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+            {t('whoGroupDesc')}
+          </p>
+          <div className="flex flex-col gap-1">
+            {WHO_GROUP_LINKS.map(({ labelKey, href }) => (
+              <Link
+                key={labelKey}
+                href={href}
+                onClick={onClose}
+                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+              >
+                {t(labelKey)}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Nous rejoindre */}
+        <div className="bg-ag-white p-4">
+          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+            {t('whoJoin')}
+          </p>
+          <p className="font-sans text-[10px] text-ag-gray mb-3 leading-relaxed">
+            {t('whoJoinDesc')}
+          </p>
+          <div className="flex flex-col gap-1">
+            {WHO_JOIN_LINKS.map(({ labelKey, href }) => (
+              <Link
+                key={labelKey}
+                href={href}
+                onClick={onClose}
+                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-1"
+              >
+                {t(labelKey)}
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   )
 }
 
 export interface NavUser {
-  /** Nom complet ou email de l'utilisateur connecté */
   name: string
-  /** Libellé de l'espace : "Acquéreur", "Vendeur", "Partenaire", "Admin" */
   label: string
 }
 
 export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const t = useTranslations('nav')
   const pathname = usePathname()
+  
   const isActive = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href)
-  const isTransactActive = TRANSACT_LINKS.some(({ href }) => isActive(href as string))
-  const isGradeActive    = GRADE_LINKS.some(({ href }) => isActive(href as string))
-  const isBuildActive    = BUILD_LINKS.some(({ href }) => isActive(href as string))
-  const isAdvisoryActive = ADVISORY_LINKS.some(({ href }) => isActive(href as string))
-  const isAboutActive    = isActive('/about') || isActive('/magazine') || isActive('/blog') || isActive('/career')
-  const [mobileOpen, setMobileOpen]   = useState(false)
+  
+  const isCraftActive = 
+    isActive('/assets') || isActive('/services/build') || 
+    isActive('/advisory') || isActive('/services/acquisition-support') || 
+    isActive('/alliances') || isActive('/experts') ||
+    isActive('/grade') || isActive('/transact')
+  
+  const isSolutionsActive = isActive('/assets')
+  
+  const isThinkingActive = 
+    isActive('/magazine') || isActive('/blog')
+  
+  const isWhoActive = 
+    isActive('/about') || isActive('/contact') || 
+    isActive('/career')
+
+  const [mobileOpen, setMobileOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<DropdownKey>(null)
   const [mobileAccordion, setMobileAccordion] = useState<DropdownKey>(null)
+  
   const navRef    = useRef<HTMLElement>(null)
   const logoRef   = useRef<HTMLAnchorElement>(null)
   const linksRef  = useRef<HTMLElement>(null)
@@ -177,14 +394,9 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   }, [])
 
   useEffect(() => {
-    /* Logo — toujours pleinement opaque, sans animation d'entrée ni filtre */
     if (logoRef.current) gsap.set(logoRef.current, { opacity: 1, x: 0, clearProps: 'opacity,transform,filter' })
-
     if (!linksRef.current || !rightRef.current) return
 
-    /* gsap.context() scope les sélecteurs au conteneur ref — évite que GSAP
-       sélectionne des nœuds en dehors du composant ou avant la fin de l'hydratation
-       React 19, ce qui provoquait le crash removeChild. */
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'expo.out', duration: 0.6 } })
       tl.from('.nav-link-item', { opacity: 0, y: -8, stagger: 0.06, delay: 0.1 })
@@ -244,89 +456,72 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
         {/* Desktop nav */}
         <nav ref={linksRef} className="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
 
-          {/* Build dropdown */}
+          {/* Nos métiers */}
           <div className="nav-link-item relative">
             <button
-              onClick={() => toggleDropdown('build')}
+              onClick={() => toggleDropdown('craft')}
               className={`relative flex items-center gap-1 font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-                isBuildActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
+                isCraftActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
-              aria-expanded={activeDropdown === 'build'}
-              aria-current={isBuildActive ? 'page' : undefined}
+              aria-expanded={activeDropdown === 'craft'}
+              aria-current={isCraftActive ? 'page' : undefined}
             >
-              {t('build')}
-              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'build' ? 'rotate-180' : ''}`} />
-              {isBuildActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
+              {t('ourCraft')}
+              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'craft' ? 'rotate-180' : ''}`} />
+              {isCraftActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
             </button>
-            {activeDropdown === 'build' && <DropdownMenu links={BUILD_LINKS} t={t} />}
+            {activeDropdown === 'craft' && <CraftMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
           </div>
 
-          {/* Advisory dropdown */}
+          {/* Nos solutions */}
           <div className="nav-link-item relative">
             <button
-              onClick={() => toggleDropdown('advisory')}
+              onClick={() => toggleDropdown('solutions')}
               className={`relative flex items-center gap-1 font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-                isAdvisoryActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
+                isSolutionsActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
-              aria-expanded={activeDropdown === 'advisory'}
-              aria-current={isAdvisoryActive ? 'page' : undefined}
+              aria-expanded={activeDropdown === 'solutions'}
+              aria-current={isSolutionsActive ? 'page' : undefined}
             >
-              {t('advisory')}
-              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'advisory' ? 'rotate-180' : ''}`} />
-              {isAdvisoryActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
+              {t('ourSolutions')}
+              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
+              {isSolutionsActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
             </button>
-            {activeDropdown === 'advisory' && <DropdownMenu links={ADVISORY_LINKS} t={t} />}
+            {activeDropdown === 'solutions' && <SolutionsMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
           </div>
 
-          {/* Grade dropdown */}
+          {/* Nos convictions */}
           <div className="nav-link-item relative">
             <button
-              onClick={() => toggleDropdown('grade')}
+              onClick={() => toggleDropdown('thinking')}
               className={`relative flex items-center gap-1 font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-                isGradeActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
+                isThinkingActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
-              aria-expanded={activeDropdown === 'grade'}
-              aria-current={isGradeActive ? 'page' : undefined}
+              aria-expanded={activeDropdown === 'thinking'}
+              aria-current={isThinkingActive ? 'page' : undefined}
             >
-              {t('grade')}
-              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'grade' ? 'rotate-180' : ''}`} />
-              {isGradeActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
+              {t('ourThinking')}
+              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'thinking' ? 'rotate-180' : ''}`} />
+              {isThinkingActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
             </button>
-            {activeDropdown === 'grade' && <GradeMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
+            {activeDropdown === 'thinking' && <ThinkingMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
           </div>
 
-          {/* Transact dropdown */}
+          {/* Qui sommes-nous */}
           <div className="nav-link-item relative">
             <button
-              onClick={() => toggleDropdown('transact')}
+              onClick={() => toggleDropdown('who')}
               className={`relative flex items-center gap-1 font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-                isTransactActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
+                isWhoActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
-              aria-expanded={activeDropdown === 'transact'}
-              aria-current={isTransactActive ? 'page' : undefined}
+              aria-expanded={activeDropdown === 'who'}
+              aria-current={isWhoActive ? 'page' : undefined}
             >
-              {t('transact')}
-              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'transact' ? 'rotate-180' : ''}`} />
-              {isTransactActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
+              {t('whoWeAre')}
+              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'who' ? 'rotate-180' : ''}`} />
+              {isWhoActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
             </button>
-            {activeDropdown === 'transact' && <DropdownMenu links={TRANSACT_LINKS} t={t} />}
-          </div>
-
-          {/* About dropdown */}
-          <div className="nav-link-item relative">
-            <button
-              onClick={() => toggleDropdown('about')}
-              className={`relative flex items-center gap-1 font-mono text-[11px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-                isAboutActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
-              }`}
-              aria-expanded={activeDropdown === 'about'}
-              aria-current={isAboutActive ? 'page' : undefined}
-            >
-              {t('about')}
-              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'about' ? 'rotate-180' : ''}`} />
-              {isAboutActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
-            </button>
-            {activeDropdown === 'about' && <DropdownMenu links={ABOUT_LINKS} t={t} />}
+            {activeDropdown === 'who' && <WhoMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
           </div>
         </nav>
 
@@ -336,26 +531,21 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
           <LanguageSwitcher />
 
           {user ? (
-            <>
-              {/* Identité connectée — accès au compte */}
-              <NextLink href="/client/account" className="flex items-center gap-2 pl-1 group" aria-label="Mon compte">
-                <UserCircle size={16} className="text-ag-apex-ink shrink-0" aria-hidden="true" />
-                <div className="leading-tight">
-                  <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-ag-gray-light">{user.label}</p>
-                  <p className="font-sans text-[12px] font-semibold text-ag-black truncate max-w-[150px] group-hover:text-ag-apex-ink transition-colors">{user.name}</p>
-                </div>
-              </NextLink>
-            </>
+            <NextLink href="/client/account" className="flex items-center gap-2 pl-1 group" aria-label="Mon compte">
+              <UserCircle size={16} className="text-ag-apex-ink shrink-0" aria-hidden="true" />
+              <div className="leading-tight">
+                <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-ag-gray-light">{user.label}</p>
+                <p className="font-sans text-[12px] font-semibold text-ag-black truncate max-w-[150px] group-hover:text-ag-apex-ink transition-colors">{user.name}</p>
+              </div>
+            </NextLink>
           ) : (
-            <>
-              <NextLink
-                  href="/client/login"
-                  className="flex items-center gap-1.5 font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors duration-200"
-                >
-                  <User size={13} />
-                  {t('clientSpace')}
-                </NextLink>
-            </>
+            <NextLink
+              href="/client/login"
+              className="flex items-center gap-1.5 font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors duration-200"
+            >
+              <User size={13} />
+              {t('clientSpace')}
+            </NextLink>
           )}
         </div>
 
@@ -370,140 +560,43 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
         </button>
       </div>
 
-      {/* Mobile drawer — full-screen navy */}
+      {/* Mobile drawer */}
       {mobileOpen && (
         <div ref={drawerRef} className="lg:hidden fixed inset-0 top-16 z-40 bg-ag-navy overflow-y-auto">
           <div className="px-6 py-8 flex flex-col gap-1">
 
-            {/* Build accordion */}
+            {/* Nos métiers accordion */}
             <div className="mobile-nav-item">
               <button
-                onClick={() => toggleMobileAccordion('build')}
-                aria-current={isBuildActive ? 'page' : undefined}
+                onClick={() => toggleMobileAccordion('craft')}
+                aria-current={isCraftActive ? 'page' : undefined}
                 className={`w-full flex items-center justify-between py-4 font-mono text-[12px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isBuildActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                  isCraftActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
                 }`}
               >
-                {t('build')}
-                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'build' ? 'rotate-180' : ''}`} />
+                {t('ourCraft')}
+                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'craft' ? 'rotate-180' : ''}`} />
               </button>
-              {mobileAccordion === 'build' && (
-                <div className="py-2 pl-4 flex flex-col gap-1">
-                  {BUILD_LINKS.map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href as LinkHref} onClick={closeMobile}
-                      className="py-2.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
-                      {t(labelKey)}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Advisory accordion */}
-            <div className="mobile-nav-item">
-              <button
-                onClick={() => toggleMobileAccordion('advisory')}
-                aria-current={isAdvisoryActive ? 'page' : undefined}
-                className={`w-full flex items-center justify-between py-4 font-mono text-[12px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isAdvisoryActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
-                }`}
-              >
-                {t('advisory')}
-                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'advisory' ? 'rotate-180' : ''}`} />
-              </button>
-              {mobileAccordion === 'advisory' && (
-                <div className="py-2 pl-4 flex flex-col gap-1">
-                  {ADVISORY_LINKS.map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href as LinkHref} onClick={closeMobile}
-                      className="py-2.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
-                      {t(labelKey)}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Grade accordion */}
-            <div className="mobile-nav-item">
-              <button
-                onClick={() => toggleMobileAccordion('grade')}
-                aria-current={isGradeActive ? 'page' : undefined}
-                className={`w-full flex items-center justify-between py-4 font-mono text-[12px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isGradeActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
-                }`}
-              >
-                {t('grade')}
-                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'grade' ? 'rotate-180' : ''}`} />
-              </button>
-              {mobileAccordion === 'grade' && (
-                <div className="py-3 flex flex-col gap-3">
-                  {/* Grade scale — 2 rows × 3 / 2 cols */}
-                  <div className="flex flex-col gap-1">
-                    <div className="grid grid-cols-3 gap-1">
-                      {[
-                        { label: 'AEG ★', cls: 'border-ag-apex/40 text-ag-apex' },
-                        { label: 'AAA',    cls: 'border-white/20  text-white/80' },
-                        { label: 'AA',     cls: 'border-white/15  text-white/60' },
-                      ].map(({ label, cls }) => (
-                        <div key={label} className={`border p-2 text-center ${cls}`}>
-                          <p className="font-mono text-[10px] font-semibold tracking-[0.04em]">{label}</p>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="grid grid-cols-2 gap-1">
-                      {[
-                        { label: 'A', cls: 'border-white/10 text-white/40' },
-                        { label: 'B', cls: 'border-white/10 text-white/30' },
-                      ].map(({ label, cls }) => (
-                        <div key={label} className={`border p-2 text-center ${cls}`}>
-                          <p className="font-mono text-[10px] font-semibold tracking-[0.04em]">{label}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  {/* Dimensions */}
-                  <div className="flex gap-1.5 flex-wrap">
-                    {(['C','I','F','S'] as const).map((letter, i) => {
-                      const keys = ['gradeDimC','gradeDimI','gradeDimF','gradeDimS'] as const
-                      return (
-                        <span key={letter} className="inline-flex items-center gap-1 border border-white/15 px-2 py-0.5 font-mono text-[9px] text-white/40">
-                          <span className="text-ag-apex font-bold">{letter}</span>
-                          {t(keys[i])}
-                        </span>
-                      )
-                    })}
-                  </div>
-                  {/* Nav links */}
-                  <div className="flex flex-col gap-0 border-t border-white/10 pt-2">
-                    {GRADE_LINKS.map(({ labelKey, href }) => (
-                      <Link key={labelKey} href={href} onClick={closeMobile}
-                        className="flex items-center justify-between py-2.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors border-b border-white/5 last:border-0">
-                        {t(labelKey)}
-                        <span className="text-ag-apex text-[10px]">→</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Transact accordion */}
-            <div className="mobile-nav-item">
-              <button
-                onClick={() => toggleMobileAccordion('transact')}
-                aria-current={isTransactActive ? 'page' : undefined}
-                className={`w-full flex items-center justify-between py-4 font-mono text-[12px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isTransactActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
-                }`}
-              >
-                {t('transact')}
-                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'transact' ? 'rotate-180' : ''}`} />
-              </button>
-              {mobileAccordion === 'transact' && (
-                <div className="py-2 pl-4 flex flex-col gap-1">
-                  {TRANSACT_LINKS.map(({ labelKey, href }) => (
+              {mobileAccordion === 'craft' && (
+                <div className="py-2 pl-4 flex flex-col gap-2">
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-2">{t('craftBuild')}</p>
+                  {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-2.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
+                      className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
+                      {t(labelKey)}
+                    </Link>
+                  ))}
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('craftSupport')}</p>
+                  {CRAFT_SUPPORT_LINKS.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile}
+                      className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
+                      {t(labelKey)}
+                    </Link>
+                  ))}
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('craftTransact')}</p>
+                  {CRAFT_TRANSACT_LINKS.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile}
+                      className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
@@ -511,23 +604,102 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               )}
             </div>
 
-            {/* About accordion */}
+            {/* Nos solutions accordion */}
             <div className="mobile-nav-item">
               <button
-                onClick={() => toggleMobileAccordion('about')}
-                aria-current={isAboutActive ? 'page' : undefined}
+                onClick={() => toggleMobileAccordion('solutions')}
+                aria-current={isSolutionsActive ? 'page' : undefined}
                 className={`w-full flex items-center justify-between py-4 font-mono text-[12px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isAboutActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                  isSolutionsActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
                 }`}
               >
-                {t('about')}
-                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'about' ? 'rotate-180' : ''}`} />
+                {t('ourSolutions')}
+                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'solutions' ? 'rotate-180' : ''}`} />
               </button>
-              {mobileAccordion === 'about' && (
-                <div className="py-2 pl-4 flex flex-col gap-1">
-                  {ABOUT_LINKS.map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href as LinkHref} onClick={closeMobile}
-                      className="py-2.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
+              {mobileAccordion === 'solutions' && (
+                <div className="py-2 pl-4 flex flex-col gap-2">
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-apex mt-2">{t('solutionsCore')}</p>
+                  {SOLUTIONS_CORE.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile}
+                      className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
+                      {t(labelKey)}
+                    </Link>
+                  ))}
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('solutionsPortfolio')}</p>
+                  {SOLUTIONS_PORTFOLIO.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile}
+                      className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
+                      {t(labelKey)}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Nos convictions accordion */}
+            <div className="mobile-nav-item">
+              <button
+                onClick={() => toggleMobileAccordion('thinking')}
+                aria-current={isThinkingActive ? 'page' : undefined}
+                className={`w-full flex items-center justify-between py-4 font-mono text-[12px] tracking-[0.18em] uppercase transition-colors border-b ${
+                  isThinkingActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                }`}
+              >
+                {t('ourThinking')}
+                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'thinking' ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileAccordion === 'thinking' && (
+                <div className="py-2 pl-4 flex flex-col gap-2">
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-2">{t('thinkingMagazine')}</p>
+                  {THINKING_MAGAZINE_LINKS.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile}
+                      className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
+                      {t(labelKey)}
+                    </Link>
+                  ))}
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('thinkingBlog')}</p>
+                  {THINKING_BLOG_LINKS.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile}
+                      className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
+                      {t(labelKey)}
+                    </Link>
+                  ))}
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('thinkingKnowledge')}</p>
+                  {THINKING_KNOWLEDGE_LINKS.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile}
+                      className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
+                      {t(labelKey)}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Qui sommes-nous accordion */}
+            <div className="mobile-nav-item">
+              <button
+                onClick={() => toggleMobileAccordion('who')}
+                aria-current={isWhoActive ? 'page' : undefined}
+                className={`w-full flex items-center justify-between py-4 font-mono text-[12px] tracking-[0.18em] uppercase transition-colors border-b ${
+                  isWhoActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                }`}
+              >
+                {t('whoWeAre')}
+                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'who' ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileAccordion === 'who' && (
+                <div className="py-2 pl-4 flex flex-col gap-2">
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-2">{t('whoGroup')}</p>
+                  {WHO_GROUP_LINKS.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile}
+                      className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
+                      {t(labelKey)}
+                    </Link>
+                  ))}
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('whoJoin')}</p>
+                  {WHO_JOIN_LINKS.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile}
+                      className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
@@ -538,26 +710,22 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             {/* Bottom CTAs */}
             <div className="mt-8 flex flex-col gap-3">
               {user ? (
-                <>
-                  <div className="flex items-center gap-2.5 border border-white/15 px-4 py-3">
-                    <UserCircle size={18} className="text-ag-apex shrink-0" aria-hidden="true" />
-                    <div className="leading-tight">
-                      <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-white/45">{user.label}</p>
-                      <p className="font-sans text-[13px] font-semibold text-white truncate max-w-[200px]">{user.name}</p>
-                    </div>
+                <div className="flex items-center gap-2.5 border border-white/15 px-4 py-3">
+                  <UserCircle size={18} className="text-ag-apex shrink-0" aria-hidden="true" />
+                  <div className="leading-tight">
+                    <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-white/45">{user.label}</p>
+                    <p className="font-sans text-[13px] font-semibold text-white truncate max-w-[200px]">{user.name}</p>
                   </div>
-                </>
+                </div>
               ) : (
-                <>
-                  <NextLink
-                      href="/client/login"
-                      onClick={closeMobile}
-                      className="flex items-center justify-center gap-2 border border-white/20 px-4 py-3 font-mono text-[11px] tracking-[0.14em] uppercase text-white/70 hover:border-white/50 hover:text-white transition-all"
-                    >
-                      <User size={13} />
-                      {t('clientSpace')}
-                    </NextLink>
-                </>
+                <NextLink
+                  href="/client/login"
+                  onClick={closeMobile}
+                  className="flex items-center justify-center gap-2 border border-white/20 px-4 py-3 font-mono text-[11px] tracking-[0.14em] uppercase text-white/70 hover:border-white/50 hover:text-white transition-all"
+                >
+                  <User size={13} />
+                  {t('clientSpace')}
+                </NextLink>
               )}
             </div>
 
