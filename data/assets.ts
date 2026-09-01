@@ -39,6 +39,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     tier:             1 as const,
     ownership:        'core' as const,
     transactionEligible:  false,
+    internalOnly:     true,
   },
   {
     id:               'kryv',
