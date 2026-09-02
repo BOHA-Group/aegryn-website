@@ -10,6 +10,11 @@ import { HybridBlock }       from '@/components/sections/HybridBlock'
 import { HomeTalentStrip }   from '@/components/sections/HomeTalentStrip'
 import { BuildEngineeringStrip } from '@/components/sections/BuildEngineeringStrip'
 import { AdvisoryTechStrip } from '@/components/sections/AdvisoryTechStrip'
+import { GradeStrip }        from '@/components/sections/GradeStrip'
+import { EcosystemDomains }  from '@/components/sections/EcosystemDomains'
+import { TransactNarrative } from '@/components/sections/TransactionNarrative'
+import { MarketStatStrip }   from '@/components/sections/MarketStatStrip'
+import { WhyUseApps }        from '@/components/sections/WhyUseApps'
 import { DiscoverStrip }     from '@/components/sections/DiscoverStrip'
 import type { Metadata }    from 'next'
 
@@ -56,7 +61,16 @@ export default async function HomePage({ params }: Props) {
       <BuildStrip />
       <BuildEngineeringStrip />
 
-      {/* ── 08. Talent ─────────────────────────────────────── */}
+      {/* ── 08. Notation ───────────────────────────────────── */}
+      <GradeStrip />
+
+      {/* ── 09. Les marchés & Transact ─────────────────────── */}
+      <EcosystemDomains />
+      <TransactNarrative />
+      <MarketStatStrip />
+      <WhyUseApps />
+
+      {/* ── 10. Talent ─────────────────────────────────────── */}
       <HomeTalentStrip />
 
       {/* ── 5. Blog ─────────────────────────────────────────────── */}
