@@ -595,7 +595,7 @@
     "tagline": "STRATEGIE-, TECH- EN M&A-ADVIES. ÉÉN STANDAARD.",
     "cta": "Onze disciplines →",
     "ctaHref": "/advisory",
-    "quote": "Wat we voor onze klanten doen, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Deze coherentie is onze enige geloofwaardigheid.",
+    "quote": "Wat we voor onze klanten doen, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Deze coherentie is onze eerste geloofwaardigheid.",
     "ceoName": "",
     "ceoTitle": "Oprichter, Aegryn",
     "stats": [
@@ -7804,29 +7804,94 @@
     "desc": "Aegryn intervient dans tous les secteurs d'activité : conception d'actifs tech, advisory stratégique, recrutement executive, fusions & acquisitions. Notre expertise couvre l'ensemble de l'économie européenne.",
     "footerNote": "All industries",
     "list": [
-      "Aerospace & Defense",
-      "Agriculture & Agrifood",
-      "Automotive & Mobility",
-      "Banking & Financial Services",
-      "Chemistry & Materials Science",
-      "Construction & Infrastructure",
-      "Cybersecurity & Data Protection",
-      "E-commerce & Retail",
-      "Education & EdTech",
-      "Energy & Utilities",
-      "Fintech & Blockchain",
-      "Healthtech & Biotechnology",
-      "Hospitality & Tourism",
-      "Real Estate & PropTech",
-      "Industry & Manufacturing",
-      "Logistics & Supply Chain",
-      "Luxury & Consumer Goods",
-      "Media & Entertainment",
-      "Natural Resources & Mining",
-      "Healthcare & Medical Devices",
-      "Professional Services",
-      "Telecommunications",
-      "Transport & Logistics"
+      {
+        "name": "Ruimtevaart & Defensie",
+        "desc": "Embedded systemen, missie-AI, ITAR/EAR-compliance, strategisch onderaannemersbeheer."
+      },
+      {
+        "name": "Landbouw & Agri-food",
+        "desc": "Supply chain traceerbaarheid, opbrengstvoorspelling AI, sanitaire en ESG-compliance."
+      },
+      {
+        "name": "Automotive & Mobiliteit",
+        "desc": "Digitale transformatie, embedded AI, Tier-1/2 leveranciersbeheer, logistiek en MaaS."
+      },
+      {
+        "name": "Bankwezen & Financiële Diensten",
+        "desc": "Regelgevende compliance (DORA, Bazel IV), kredietrisico AI, back-office automatisering."
+      },
+      {
+        "name": "Chemie & Geavanceerde Materialen",
+        "desc": "R&D-data, REACH-compliance, leverancierscontractbeheer, intellectueel eigendom."
+      },
+      {
+        "name": "Bouw & Infrastructuur",
+        "desc": "BIM, voorspellend onderhoud AI, complexe contracten, meerlaags onderaannemersbeheer."
+      },
+      {
+        "name": "Onderwijs & EdTech",
+        "desc": "Adaptieve leerplatformen, educatieve AVG-compliance, personalisatie-AI."
+      },
+      {
+        "name": "Energie & Nutsbedrijven",
+        "desc": "Energietransitie, smart grid, EU ETS-compliance, asset management AI en vraagprognose."
+      },
+      {
+        "name": "FinTech & Betalingen",
+        "desc": "PSD2, open banking, AML/KYC-compliance, real-time betalingsarchitecturen, tokenisatie."
+      },
+      {
+        "name": "GovTech & Publieke Sector",
+        "desc": "Digitale transformatie van instellingen, datasouvereiniteit, NIS2 en DORA-compliance."
+      },
+      {
+        "name": "HealthTech & MedTech",
+        "desc": "Diagnostische AI, MDR/IVDR-compliance, gezondheidsdata AVG, HL7/FHIR-interoperabiliteit."
+      },
+      {
+        "name": "Horeca & Toerisme",
+        "desc": "Revenue management AI, unified CRM, klantdata-compliance, ervaringsdigitalisering."
+      },
+      {
+        "name": "Industrie & Productie",
+        "desc": "Industrie 4.0, voorspellend onderhoud, MES/ERP-integratie, ISO-compliance en kwaliteitsbeheer."
+      },
+      {
+        "name": "Logistiek & Supply Chain",
+        "desc": "Real-time zichtbaarheid, stroomoptimalisatie AI, douane-compliance, 3PL/4PL-contracten."
+      },
+      {
+        "name": "Luxe & Premium Retail",
+        "desc": "Oorsprongstraceerbaarheid, blockchain anti-vervalsing, omnichannel CX, first-party data."
+      },
+      {
+        "name": "Media & Entertainment",
+        "desc": "Digitale rechten, aanbevelings-AI, contentmonetisatie, DSA/AVMS-compliance."
+      },
+      {
+        "name": "PropTech & Vastgoed",
+        "desc": "AI-waardering, geautomatiseerde due diligence, documentbeheer, vastgoed AML-compliance."
+      },
+      {
+        "name": "Retail & E-commerce",
+        "desc": "Pricing en voorraadprognose AI, geautomatiseerde CX, DSA-compliance, first-party data."
+      },
+      {
+        "name": "Gezondheidszorg & Farmacie",
+        "desc": "Klinische proefdata, geneesmiddelenbewaking, diagnostische AI, HDS en EU-regelgevingscompliance."
+      },
+      {
+        "name": "Technologie & SaaS",
+        "desc": "Schaalbaarheid, multi-tenant architectuur, SOC2/ISO27001-compliance, product AI en PLG."
+      },
+      {
+        "name": "Telecommunicatie",
+        "desc": "NIS2-compliance, netwerk-AI, service-orkestratie, BSS/OSS-transformatie."
+      },
+      {
+        "name": "Transport & Vracht",
+        "desc": "Route- en capaciteits-AI-optimalisatie, multimodale contracten, emissie-compliance, vlootzichtbaarheid."
+      }
     ],
     "title": "Industries couvertes"
   },

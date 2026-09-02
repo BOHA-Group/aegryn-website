@@ -595,7 +595,7 @@
     "tagline": "STRATEGY, TECH AND M&A ADVISORY. ONE STANDARD.",
     "cta": "Our disciplines →",
     "ctaHref": "/advisory",
-    "quote": "What we do for our clients, we do for ourselves. Our own assets go through our own methods. This coherence is our only credibility.",
+    "quote": "What we do for our clients, we apply to ourselves. Our own assets go through our own methods. This consistency is our first credibility.",
     "ceoName": "",
     "ceoTitle": "Founder, Aegryn",
     "stats": [
@@ -7788,29 +7788,94 @@
     "desc": "Aegryn intervient dans tous les secteurs d'activité : conception d'actifs tech, advisory stratégique, recrutement executive, fusions & acquisitions. Notre expertise couvre l'ensemble de l'économie européenne.",
     "footerNote": "All industries",
     "list": [
-      "Aerospace & Defense",
-      "Agriculture & Agrifood",
-      "Automotive & Mobility",
-      "Banking & Financial Services",
-      "Chemistry & Materials Science",
-      "Construction & Infrastructure",
-      "Cybersecurity & Data Protection",
-      "E-commerce & Retail",
-      "Education & EdTech",
-      "Energy & Utilities",
-      "Fintech & Blockchain",
-      "Healthtech & Biotechnology",
-      "Hospitality & Tourism",
-      "Real Estate & PropTech",
-      "Industry & Manufacturing",
-      "Logistics & Supply Chain",
-      "Luxury & Consumer Goods",
-      "Media & Entertainment",
-      "Natural Resources & Mining",
-      "Healthcare & Medical Devices",
-      "Professional Services",
-      "Telecommunications",
-      "Transport & Logistics"
+      {
+        "name": "Aerospace & Defence",
+        "desc": "Embedded systems, mission AI, ITAR/EAR compliance, strategic subcontractor management."
+      },
+      {
+        "name": "Agriculture & Agri-food",
+        "desc": "Supply chain traceability, yield forecasting AI, sanitary and ESG compliance."
+      },
+      {
+        "name": "Automotive & Mobility",
+        "desc": "Digital transformation, embedded AI, Tier-1/2 supplier management, logistics and MaaS."
+      },
+      {
+        "name": "Banking & Financial Services",
+        "desc": "Regulatory compliance (DORA, Basel IV), credit risk AI, back-office automation."
+      },
+      {
+        "name": "Chemicals & Advanced Materials",
+        "desc": "R&D data, REACH compliance, supplier contract management, intellectual property."
+      },
+      {
+        "name": "Construction & Infrastructure",
+        "desc": "BIM, predictive maintenance AI, complex contracts, multi-tier subcontractor management."
+      },
+      {
+        "name": "Education & EdTech",
+        "desc": "Adaptive learning platforms, educational GDPR compliance, personalisation AI."
+      },
+      {
+        "name": "Energy & Utilities",
+        "desc": "Energy transition, smart grid, EU ETS compliance, asset management AI and demand forecasting."
+      },
+      {
+        "name": "FinTech & Payments",
+        "desc": "PSD2, open banking, AML/KYC compliance, real-time payment architectures, tokenisation."
+      },
+      {
+        "name": "GovTech & Public Sector",
+        "desc": "Institutional digital transformation, data sovereignty, NIS2 and DORA compliance."
+      },
+      {
+        "name": "HealthTech & MedTech",
+        "desc": "Diagnostic AI, MDR/IVDR compliance, health data GDPR, HL7/FHIR interoperability."
+      },
+      {
+        "name": "Hospitality & Tourism",
+        "desc": "Revenue management AI, unified CRM, customer data compliance, experience digitalisation."
+      },
+      {
+        "name": "Industry & Manufacturing",
+        "desc": "Industry 4.0, predictive maintenance, MES/ERP integration, ISO compliance and quality management."
+      },
+      {
+        "name": "Logistics & Supply Chain",
+        "desc": "Real-time visibility, flow optimisation AI, customs compliance, 3PL/4PL contracts."
+      },
+      {
+        "name": "Luxury & Premium Retail",
+        "desc": "Origin traceability, blockchain anti-counterfeiting, omnichannel CX, first-party data."
+      },
+      {
+        "name": "Media & Entertainment",
+        "desc": "Digital rights, recommendation AI, content monetisation, DSA/AVMS compliance."
+      },
+      {
+        "name": "PropTech & Real Estate",
+        "desc": "AI valuation, automated due diligence, document management, real estate AML compliance."
+      },
+      {
+        "name": "Retail & E-commerce",
+        "desc": "Pricing and stock forecasting AI, automated CX, DSA compliance, first-party data."
+      },
+      {
+        "name": "Healthcare & Pharmaceuticals",
+        "desc": "Clinical trial data, pharmacovigilance, diagnostic AI, HDS and EU regulatory compliance."
+      },
+      {
+        "name": "Technology & SaaS",
+        "desc": "Scalability, multi-tenant architecture, SOC2/ISO27001 compliance, product AI and PLG."
+      },
+      {
+        "name": "Telecommunications",
+        "desc": "NIS2 compliance, network AI, service orchestration, BSS/OSS transformation."
+      },
+      {
+        "name": "Transport & Freight",
+        "desc": "Route and capacity AI optimisation, multimodal contracts, emissions compliance, fleet visibility."
+      }
     ],
     "title": "Industries couvertes"
   },

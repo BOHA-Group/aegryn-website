@@ -595,7 +595,7 @@
     "tagline": "CONSULENZA IN STRATEGIA, TECH E M&A. UN SOLO STANDARD.",
     "cta": "Le nostre discipline →",
     "ctaHref": "/advisory",
-    "quote": "Ciò che facciamo per i nostri clienti, lo applichiamo a noi stessi. I nostri asset passano attraverso i nostri stessi metodi. Questa coerenza è la nostra unica credibilità.",
+    "quote": "Quello che facciamo per i nostri clienti, lo applichiamo a noi stessi. I nostri asset passano attraverso i nostri metodi. Questa coerenza è la nostra prima credibilità.",
     "ceoName": "",
     "ceoTitle": "Fondatore, Aegryn",
     "stats": [
@@ -7788,29 +7788,94 @@
     "desc": "Aegryn intervient dans tous les secteurs d'activité : conception d'actifs tech, advisory stratégique, recrutement executive, fusions & acquisitions. Notre expertise couvre l'ensemble de l'économie européenne.",
     "footerNote": "Tutti i settori",
     "list": [
-      "Aerospaziale & Difesa",
-      "Agricoltura & Agroalimentare",
-      "Automotive & Mobilità",
-      "Banking & Servizi Finanziari",
-      "Chimica & Scienze dei Materiali",
-      "Costruzioni & Infrastrutture",
-      "Cybersicurezza & Protezione Dati",
-      "E-commerce & Retail",
-      "Istruzione & EdTech",
-      "Energia & Utilities",
-      "Fintech & Blockchain",
-      "Healthtech & Biotecnologia",
-      "Ospitalità & Turismo",
-      "Immobiliare & PropTech",
-      "Industria & Manifattura",
-      "Logistica & Supply Chain",
-      "Lusso & Beni di Consumo",
-      "Media & Intrattenimento",
-      "Risorse Naturali & Miniere",
-      "Sanità & Dispositivi Medici",
-      "Servizi Professionali",
-      "Telecomunicazioni",
-      "Trasporti & Logistica"
+      {
+        "name": "Aerospazio & Difesa",
+        "desc": "Sistemi embedded, IA di missione, conformità ITAR/EAR, gestione subappaltatori strategici."
+      },
+      {
+        "name": "Agricoltura & Agroalimentare",
+        "desc": "Tracciabilità supply chain, IA previsione resa, conformità sanitaria ed ESG."
+      },
+      {
+        "name": "Automotive & Mobilità",
+        "desc": "Trasformazione digitale, IA embedded, gestione fornitori Tier-1/2, logistica e MaaS."
+      },
+      {
+        "name": "Banca & Servizi Finanziari",
+        "desc": "Conformità regolamentare (DORA, Basilea IV), IA rischio credito, automazione back-office."
+      },
+      {
+        "name": "Chimica & Materiali Avanzati",
+        "desc": "Dati R&D, conformità REACH, gestione contratti fornitori, proprietà intellettuale."
+      },
+      {
+        "name": "Costruzioni & Infrastrutture",
+        "desc": "BIM, IA manutenzione predittiva, contratti complessi, gestione subappaltatori multi-livello."
+      },
+      {
+        "name": "Istruzione & EdTech",
+        "desc": "Piattaforme apprendimento adattivo, conformità GDPR educativo, IA personalizzazione."
+      },
+      {
+        "name": "Energia & Utilities",
+        "desc": "Transizione energetica, smart grid, conformità EU ETS, IA gestione asset e previsione domanda."
+      },
+      {
+        "name": "FinTech & Pagamenti",
+        "desc": "PSD2, open banking, conformità AML/KYC, architetture pagamento real-time, tokenizzazione."
+      },
+      {
+        "name": "GovTech & Settore Pubblico",
+        "desc": "Trasformazione digitale istituzionale, sovranità dei dati, conformità NIS2 e DORA."
+      },
+      {
+        "name": "HealthTech & MedTech",
+        "desc": "IA diagnostica, conformità MDR/IVDR, dati salute GDPR, interoperabilità HL7/FHIR."
+      },
+      {
+        "name": "Ospitalità & Turismo",
+        "desc": "IA revenue management, CRM unificato, conformità dati clienti, digitalizzazione esperienza."
+      },
+      {
+        "name": "Industria & Manifatturiero",
+        "desc": "Industria 4.0, manutenzione predittiva, integrazione MES/ERP, conformità ISO e gestione qualità."
+      },
+      {
+        "name": "Logistica & Supply Chain",
+        "desc": "Visibilità real-time, IA ottimizzazione flussi, conformità doganale, contratti 3PL/4PL."
+      },
+      {
+        "name": "Lusso & Retail Premium",
+        "desc": "Tracciabilità origine, blockchain anti-contraffazione, CX omnicanale, dati first-party."
+      },
+      {
+        "name": "Media & Entertainment",
+        "desc": "Diritti digitali, IA raccomandazione, monetizzazione contenuto, conformità DSA/AVMS."
+      },
+      {
+        "name": "PropTech & Immobiliare",
+        "desc": "Valutazione IA, due diligence automatizzata, gestione documentale, conformità AML immobiliare."
+      },
+      {
+        "name": "Retail & E-commerce",
+        "desc": "IA pricing e previsione stock, CX automatizzato, conformità DSA, dati first-party."
+      },
+      {
+        "name": "Salute & Farmaceutico",
+        "desc": "Dati trial clinici, farmacovigilanza, IA diagnostica, conformità HDS e regolamentare EU."
+      },
+      {
+        "name": "Tecnologia & SaaS",
+        "desc": "Scalabilità, architettura multi-tenant, conformità SOC2/ISO27001, IA prodotto e PLG."
+      },
+      {
+        "name": "Telecomunicazioni",
+        "desc": "Conformità NIS2, IA rete, orchestrazione servizi, trasformazione BSS/OSS."
+      },
+      {
+        "name": "Trasporti & Merci",
+        "desc": "Ottimizzazione IA rotte e capacità, contratti multimodali, conformità emissioni, visibilità flotta."
+      }
     ],
     "title": "Industries couvertes"
   },

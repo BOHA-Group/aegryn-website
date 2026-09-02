@@ -595,7 +595,7 @@
     "tagline": "STRATEGIE-, TECH- UND M&A-BERATUNG. EIN STANDARD.",
     "cta": "Unsere Disziplinen →",
     "ctaHref": "/advisory",
-    "quote": "Was wir für unsere Kunden tun, wenden wir auf uns selbst an. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Diese Kohärenz ist unsere einzige Glaubwürdigkeit.",
+    "quote": "Was wir für unsere Kunden tun, wenden wir auf uns selbst an. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Diese Kohärenz ist unsere erste Glaubwürdigkeit.",
     "ceoName": "",
     "ceoTitle": "Gründer, Aegryn",
     "stats": [
@@ -7951,29 +7951,94 @@
     "desc": "Aegryn intervient dans tous les secteurs d'activité : conception d'actifs tech, advisory stratégique, recrutement executive, fusions & acquisitions. Notre expertise couvre l'ensemble de l'économie européenne.",
     "footerNote": "Alle Branchen",
     "list": [
-      "Luft- und Raumfahrt & Verteidigung",
-      "Landwirtschaft & Agrarwirtschaft",
-      "Automobil & Mobilität",
-      "Banking & Finanzdienstleistungen",
-      "Chemie & Materialwissenschaften",
-      "Bau & Infrastruktur",
-      "Cybersicherheit & Datenschutz",
-      "E-Commerce & Einzelhandel",
-      "Bildung & EdTech",
-      "Energie & Versorgung",
-      "Fintech & Blockchain",
-      "Healthtech & Biotechnologie",
-      "Gastgewerbe & Tourismus",
-      "Immobilien & PropTech",
-      "Industrie & Fertigung",
-      "Logistik & Lieferkette",
-      "Luxus & Konsumgüter",
-      "Medien & Unterhaltung",
-      "Natürliche Ressourcen & Bergbau",
-      "Gesundheitswesen & Medizinprodukte",
-      "Professionelle Dienstleistungen",
-      "Telekommunikation",
-      "Transport & Logistik"
+      {
+        "name": "Luft- & Raumfahrt und Verteidigung",
+        "desc": "Eingebettete Systeme, Missions-KI, ITAR/EAR-Compliance, strategisches Subunternehmer-Management."
+      },
+      {
+        "name": "Landwirtschaft & Agrar-Lebensmittel",
+        "desc": "Lieferkettenrückverfolgbarkeit, Ertragsvorhersage-KI, Hygiene- und ESG-Compliance."
+      },
+      {
+        "name": "Automobil & Mobilität",
+        "desc": "Digitale Transformation, eingebettete KI, Tier-1/2-Lieferantenmanagement, Logistik und MaaS."
+      },
+      {
+        "name": "Bank & Finanzdienstleistungen",
+        "desc": "Regulatorische Compliance (DORA, Basel IV), Kreditrisiko-KI, Back-Office-Automatisierung."
+      },
+      {
+        "name": "Chemie & Fortschrittliche Materialien",
+        "desc": "F&E-Daten, REACH-Compliance, Lieferantenvertragsmanagement, geistiges Eigentum."
+      },
+      {
+        "name": "Bau & Infrastruktur",
+        "desc": "BIM, prädiktive Wartungs-KI, komplexe Verträge, mehrstufiges Subunternehmer-Management."
+      },
+      {
+        "name": "Bildung & EdTech",
+        "desc": "Adaptives Lernplattformen, Bildungs-DSGVO-Compliance, Personalisierungs-KI."
+      },
+      {
+        "name": "Energie & Versorgung",
+        "desc": "Energiewende, Smart Grid, EU-ETS-Compliance, Asset-Management-KI und Nachfrageprognose."
+      },
+      {
+        "name": "FinTech & Zahlungen",
+        "desc": "PSD2, Open Banking, AML/KYC-Compliance, Echtzeit-Zahlungsarchitekturen, Tokenisierung."
+      },
+      {
+        "name": "GovTech & Öffentlicher Sektor",
+        "desc": "Digitale Transformation von Institutionen, Datensouveränität, NIS2 und DORA-Compliance."
+      },
+      {
+        "name": "HealthTech & MedTech",
+        "desc": "Diagnostische KI, MDR/IVDR-Compliance, Gesundheitsdaten-DSGVO, HL7/FHIR-Interoperabilität."
+      },
+      {
+        "name": "Gastgewerbe & Tourismus",
+        "desc": "Revenue-Management-KI, einheitliches CRM, Kundendaten-Compliance, Erlebnis-Digitalisierung."
+      },
+      {
+        "name": "Industrie & Fertigung",
+        "desc": "Industrie 4.0, prädiktive Wartung, MES/ERP-Integration, ISO-Compliance und Qualitätsmanagement."
+      },
+      {
+        "name": "Logistik & Lieferkette",
+        "desc": "Echtzeit-Sichtbarkeit, Flussoptimierungs-KI, Zoll-Compliance, 3PL/4PL-Verträge."
+      },
+      {
+        "name": "Luxus & Premium-Einzelhandel",
+        "desc": "Ursprungsverfolgbarkeit, Blockchain-Anti-Counterfeiting, Omnichannel-CX, First-Party-Daten."
+      },
+      {
+        "name": "Medien & Entertainment",
+        "desc": "Digitale Rechte, Empfehlungs-KI, Content-Monetarisierung, DSA/AVMS-Compliance."
+      },
+      {
+        "name": "PropTech & Immobilien",
+        "desc": "KI-Bewertung, automatisierte Due Diligence, Dokumentenmanagement, Immobilien-AML-Compliance."
+      },
+      {
+        "name": "Einzelhandel & E-Commerce",
+        "desc": "Preis- und Bestandsvorhersage-KI, automatisiertes CX, DSA-Compliance, First-Party-Daten."
+      },
+      {
+        "name": "Gesundheit & Pharmazeutika",
+        "desc": "Klinische Studiendaten, Pharmakovigilanz, diagnostische KI, HDS und EU-Regulierungs-Compliance."
+      },
+      {
+        "name": "Technologie & SaaS",
+        "desc": "Skalierbarkeit, Multi-Tenant-Architektur, SOC2/ISO27001-Compliance, Produkt-KI und PLG."
+      },
+      {
+        "name": "Telekommunikation",
+        "desc": "NIS2-Compliance, Netzwerk-KI, Service-Orchestrierung, BSS/OSS-Transformation."
+      },
+      {
+        "name": "Transport & Fracht",
+        "desc": "Routen- und Kapazitäts-KI-Optimierung, multimodale Verträge, Emissions-Compliance, Flottenvisibilität."
+      }
     ],
     "title": "Industries couvertes"
   },
