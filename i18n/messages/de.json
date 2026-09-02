@@ -892,27 +892,27 @@
     },
     "crafts": {
       "label": "Unsere Disziplinen",
-      "title": "Fünf Disziplinen, die sich gegenseitig stärken.",
+      "title": "Was wir tun. Die Profile, die wir suchen.",
       "items": {
         "accompagner": {
-          "title": "Beraten",
-          "desc": "Strategie-, Tech- und M&A-Beratung. Wir greifen ein, wenn Entscheidungen die Trajektorie der Organisation bestimmen."
+          "title": "Beratung & Strategie",
+          "desc": "Wir begleiten Führungskräfte bei komplexen strategischen, technologischen und transaktionalen Entscheidungen. Wir suchen Senior-Profile mit hoher Autonomie: ehemalige Partner, Practice-Direktoren, Executive-Berater."
         },
         "construire": {
-          "title": "Aufbauen",
-          "desc": "Nachhaltige digitale Assets zu Festpreisen, vollständiges IP-Eigentum des Kunden. Vom Diagnosegespräch zum zertifizierbaren Produkt."
+          "title": "Engineering & Produkt",
+          "desc": "Wir entwickeln und betreiben eigene digitale Assets — SaaS, KI-Plattformen, Protokolle. Wir suchen Ingenieure, Tech-Leads und Product Manager, die für Dauerhaftigkeit bauen."
         },
         "transmettre": {
-          "title": "Übertragen",
-          "desc": "Tech-Asset-Zertifizierung und Veräußerung. Due Diligence, Bewertung, Strukturierung und Closing im Kreis qualifizierter Käufer."
+          "title": "Transaktionen & M&A",
+          "desc": "Wir strukturieren den Verkauf und die Akquisition von Tech-Assets. Wir arbeiten mit Transaktions-, Rechts- und Finanzfachleuten, die digitale Asset-Bewertung verstehen."
         },
         "recruter": {
-          "title": "Rekrutieren",
-          "desc": "Identifizierung und Platzierung von Führungskräften, Tech-Experten und Innovationsprofilen. CTO, CISO, COO, DPO, Head of AI — in der Schweiz und Europa."
+          "title": "Talent & Research",
+          "desc": "Wir vermitteln Führungskräfte und Tech-Experten für unsere Kunden. Wir suchen auf Tech, M&A und Transformation spezialisierte Headhunter mit starkem europäischen Netzwerk."
         },
         "informer": {
-          "title": "Informieren",
-          "desc": "Magazin, Branchenintelligenz und Analyse der Tech- und M&A-Trends in Europa. Wir dokumentieren, was wir beobachten und erleben."
+          "title": "Intelligence & Content",
+          "desc": "Wir veröffentlichen unser eigenes Marktmagazin und produzieren Branchenintelligenz. Wir suchen Analysten, Fachjournalisten und Redakteure, die Tech- und M&A-Trends fundiert dokumentieren."
         }
       }
     },

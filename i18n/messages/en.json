@@ -892,27 +892,27 @@
     },
     "crafts": {
       "label": "Our disciplines",
-      "title": "Five disciplines that strengthen each other.",
+      "title": "What we do. The profiles we seek.",
       "items": {
         "accompagner": {
-          "title": "Advise",
-          "desc": "Strategy, tech and M&A advisory. We step in when decisions define the trajectory of the organisation."
+          "title": "Advisory & Strategy",
+          "desc": "We advise leaders on complex strategic, technology and transactional decisions. We seek senior profiles capable of operating with high autonomy: former partners, practice directors, executive consultants."
         },
         "construire": {
-          "title": "Build",
-          "desc": "Durable digital assets at fixed price, full client IP ownership. From diagnosis to certifiable product."
+          "title": "Engineering & Product",
+          "desc": "We design and operate our own digital assets — SaaS, AI platforms, protocols. We hire engineers, tech leads and product managers who build to last, not to ship fast."
         },
         "transmettre": {
-          "title": "Transact",
-          "desc": "Tech asset certification and divestiture. Due diligence, valuation, structuring and closing within a circle of qualified acquirers."
+          "title": "Transactions & M&A",
+          "desc": "We structure tech asset sales and acquisitions. We work with transaction, legal and finance professionals who understand digital asset valuation."
         },
         "recruter": {
-          "title": "Recruit",
-          "desc": "Identifying and placing executives, tech experts and innovation profiles. CTO, CISO, COO, DPO, Head of AI — across Switzerland and Europe."
+          "title": "Talent & Research",
+          "desc": "We place executives and tech experts for our clients. We seek headhunters and researchers specialised in tech, M&A and transformation profiles, with a strong European network."
         },
         "informer": {
-          "title": "Inform",
-          "desc": "Magazine, sector intelligence and analysis of tech and M&A trends in Europe. We document what we observe and live."
+          "title": "Intelligence & Content",
+          "desc": "We publish our own market magazine and produce sector intelligence. We recruit analysts, specialist journalists and editors capable of documenting tech and M&A trends with rigour."
         }
       }
     },

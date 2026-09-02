@@ -892,27 +892,27 @@
     },
     "crafts": {
       "label": "Nuestras disciplinas",
-      "title": "Cinco disciplinas que se refuerzan mutuamente.",
+      "title": "Lo que hacemos. Los perfiles que buscamos.",
       "items": {
         "accompagner": {
-          "title": "Asesorar",
-          "desc": "Consultoría en estrategia, tecnología y M&A. Intervenimos cuando las decisiones definen la trayectoria de la organización."
+          "title": "Consultoría & Estrategia",
+          "desc": "Asesoramos a directivos en decisiones estratégicas, tecnológicas y transaccionales complejas. Buscamos perfiles sénior con alta autonomía: ex-socios, directores de práctica, consultores ejecutivos."
         },
         "construire": {
-          "title": "Construir",
-          "desc": "Activos digitales duraderos a precio fijo, plena propiedad intelectual del cliente. Del diagnóstico al producto certificable."
+          "title": "Ingeniería & Producto",
+          "desc": "Diseñamos y operamos nuestros propios activos digitales — SaaS, plataformas IA, protocolos. Contratamos ingenieros, tech leads y product managers que construyen para durar."
         },
         "transmettre": {
-          "title": "Transmitir",
-          "desc": "Certificación y cesión de activos tech. Due diligence, valoración, estructuración y cierre en un círculo de compradores cualificados."
+          "title": "Transacciones & M&A",
+          "desc": "Estructuramos ventas y adquisiciones de activos tech. Trabajamos con profesionales de transacciones, derecho y finanzas que comprenden la valoración de activos digitales."
         },
         "recruter": {
-          "title": "Reclutar",
-          "desc": "Identificación y colocación de directivos, expertos tech y perfiles de innovación. CTO, CISO, COO, DPO, Head of AI — en Suiza y Europa."
+          "title": "Talento & Research",
+          "desc": "Colocamos directivos y expertos tech para nuestros clientes. Buscamos headhunters y researchers especializados en perfiles tech, M&A y transformación, con sólida red europea."
         },
         "informer": {
-          "title": "Informar",
-          "desc": "Revista, inteligencia sectorial y análisis de tendencias tech y M&A en Europa. Documentamos lo que observamos y vivimos."
+          "title": "Inteligencia & Contenido",
+          "desc": "Publicamos nuestra propia revista de mercado y producimos inteligencia sectorial. Reclutamos analistas, periodistas especializados y editores capaces de documentar tendencias tech y M&A con rigor."
         }
       }
     },

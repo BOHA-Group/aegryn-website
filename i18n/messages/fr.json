@@ -828,27 +828,27 @@
     },
     "crafts": {
       "label": "Nos métiers",
-      "title": "Cinq disciplines qui se renforcent.",
+      "title": "Ce que nous faisons. Les profils que nous cherchons.",
       "items": {
         "accompagner": {
-          "title": "Accompagner",
-          "desc": "Conseil en stratégie d'entreprise, tech et M&A. Nous intervenons quand les décisions définissent la trajectoire de l'organisation."
+          "title": "Conseil & Stratégie",
+          "desc": "Nous accompagnons des dirigeants sur des décisions stratégiques, technologiques et transactionnelles complexes. Nous cherchons des profils senior capables d'opérer à haut niveau d'autonomie : anciens associés, directeurs de practice, consultants exécutifs."
         },
         "construire": {
-          "title": "Construire",
-          "desc": "Conception d'actifs numériques durables à forfait fixe, propriété totale client. Du diagnostic au produit certifiable."
+          "title": "Engineering & Produit",
+          "desc": "Nous concevons et opérons nos propres actifs numériques — SaaS, plateformes IA, protocoles. Nous recrutons des ingénieurs, tech leads et product managers qui construisent pour durer, pas pour livrer vite."
         },
         "transmettre": {
-          "title": "Transmettre",
-          "desc": "Certification et cession d'actifs tech. Due diligence, valorisation, structuration et closing dans un cercle d'acquéreurs qualifiés."
+          "title": "Transaction & M&A",
+          "desc": "Nous structurons des cessions et acquisitions d'actifs tech. Nous travaillons avec des professionnels de la transaction, du juridique et de la finance qui comprennent les enjeux de valorisation des actifs numériques."
         },
         "recruter": {
-          "title": "Recruter",
-          "desc": "Identification et placement de dirigeants, experts tech et profils innovation. CTO, CISO, COO, DPO, Head of AI — en Suisse et en Europe."
+          "title": "Talent & Recherche",
+          "desc": "Nous plaçons des dirigeants et experts tech pour nos clients. Nous cherchons des chasseurs de têtes et researchers spécialisés dans les profils tech, M&A et transformation, avec un réseau solide en Europe."
         },
         "informer": {
-          "title": "Informer",
-          "desc": "Magazine, veille sectorielle et analyse des tendances tech et M&A en Europe. Nous documentons ce que nous observons et vivons."
+          "title": "Intelligence & Contenu",
+          "desc": "Nous publions notre propre magazine de marché et produisons de la veille sectorielle. Nous recrutons des analystes, journalistes spécialisés et éditeurs capables de documenter les tendances tech et M&A avec rigueur."
         }
       }
     },

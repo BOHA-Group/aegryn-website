@@ -215,25 +215,7 @@ export default function NetworkContent() {
             {t('partners.desc')}
           </p>
 
-          {/* Logos placeholders */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
-            {PARTNER_LOGOS.map(p => (
-              <div
-                key={p.name}
-                className="border border-ag-border flex items-center justify-center py-8 px-4 bg-ag-off-white hover:bg-ag-white hover:border-ag-black transition-colors"
-              >
-                <div className="flex flex-col items-center gap-2">
-                  <div
-                    className="w-10 h-10 rounded-full flex items-center justify-center font-sans font-bold text-white text-[18px]"
-                    style={{ background: p.color }}
-                  >
-                    {p.initial}
-                  </div>
-                  <span className="font-sans text-[11px] text-ag-gray font-medium">{p.name}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* Logos partenaires — à venir */}
 
           <p className="font-sans text-[11px] text-ag-gray-light mt-6 italic">
             {t('partners.note')}
