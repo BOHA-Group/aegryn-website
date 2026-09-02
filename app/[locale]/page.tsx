@@ -56,14 +56,14 @@ export default async function HomePage({ params }: Props) {
       {/* ── 05. Nos clients — 4 segments ──────────────────── */}
       <SegmentsSection />
 
-      {/* ── 06. Conception ─────────────────────────────────── */}
-      <BuildStrip />
-      <BuildEngineeringStrip />
-
-      {/* ── 07. Conseil ────────────────────────────────────── */}
+      {/* ── 06. Conseil ────────────────────────────────────── */}
       <AdvisoryTechStrip />
       <AdvisoryThoughtLeadership />
       <AcqSupportStrip />
+
+      {/* ── 07. Conception ─────────────────────────────────── */}
+      <BuildStrip />
+      <BuildEngineeringStrip />
 
       {/* ── 08. Notation ───────────────────────────────────── */}
       <GradeStrip />

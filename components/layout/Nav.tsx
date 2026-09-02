@@ -77,8 +77,9 @@ const THINKING_MARKET_LINKS: { labelKey: string; href: LinkHref }[] = [
 
 // Qui sommes-nous - Le groupe
 const WHO_GROUP_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'whoAbout',   href: '/about' },
-  { labelKey: 'whoContact', href: '/contact' },
+  { labelKey: 'whoAbout',    href: '/about' },
+  { labelKey: 'whoFounder',  href: '/about' as LinkHref },
+  { labelKey: 'whoContact',  href: '/contact' },
 ]
 
 // Qui sommes-nous - Nous rejoindre
