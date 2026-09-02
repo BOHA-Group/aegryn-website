@@ -2836,7 +2836,7 @@
       "label": "AEGRYN TRANSACT | VERKOOPSMANDAAT",
       "title": "Uw tech-asset overdragen\ntegen de prijs die het verdient.",
       "desc": "Aegryn certificeert uw asset CIFS, kent de officiële grade toe en presenteert het onder exclusieve NDA aan voorgekwalificeerde institutionele kopers. Alleen succesvergoeding.",
-      "cta": "Verkoopsmandaat indienen",
+      "ctaButton": "Verkoopsmandaat indienen",
       "steps": {
         "label": "VERKOPERSPROCES IN 3 STAPPEN",
         "title": "Een gestructureerd proces van certificering tot afsluiting.",

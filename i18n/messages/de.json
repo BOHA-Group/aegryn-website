@@ -2836,7 +2836,7 @@
       "label": "AEGRYN TRANSACT | VERKAUFSMANDAT",
       "title": "Ihr Tech-Asset veräußern\nzum Preis, den es verdient.",
       "desc": "Aegryn zertifiziert Ihr Asset CIFS, vergibt den offiziellen Grade und präsentiert es unter exklusivem NDA an vorqualifizierte institutionelle Käufer. Nur Erfolgshonorar.",
-      "cta": "Verkaufsmandat einreichen",
+      "ctaButton": "Verkaufsmandat einreichen",
       "steps": {
         "label": "VERKÄUFERPROZESS IN 3 SCHRITTEN",
         "title": "Ein strukturierter Prozess von der Zertifizierung bis zum Abschluss.",

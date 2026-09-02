@@ -14,8 +14,8 @@ export function AdvisoryTechStrip() {
   const labelRef = useRef<HTMLParagraphElement>(null)
   const headRef  = useRef<HTMLHeadingElement>(null)
 
-  const services = (t.raw('services') as Record<string, { title: string; desc: string; items: string[] }>) || {}
-  const serviceKeys = Object.keys(services)
+  const pillars = (t.raw('pillars') as Record<string, { title: string; desc: string; dimensions: { label: string; desc: string }[] }>) || {}
+  const pillarKeys = Object.keys(pillars)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -57,11 +57,11 @@ export function AdvisoryTechStrip() {
           </p>
         </div>
 
-        {/* Services grid */}
+        {/* Pillars grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border border border-ag-border">
-          {serviceKeys.map((key, i) => {
-            const svc  = services[key]
-            const Icon = ICONS[i] ?? ShieldCheck
+          {pillarKeys.map((key, i) => {
+            const pillar = pillars[key]
+            const Icon   = ICONS[i] ?? ShieldCheck
             return (
               <div
                 key={key}
@@ -73,16 +73,16 @@ export function AdvisoryTechStrip() {
                   className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2]"
                   style={{ fontSize: 'clamp(15px,1.3vw,18px)' }}
                 >
-                  {svc.title}
+                  {pillar.title}
                 </h3>
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
-                  {svc.desc}
+                  {pillar.desc}
                 </p>
                 <ul className="space-y-1.5">
-                  {svc.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 font-sans text-[12px] text-ag-gray-light">
+                  {(pillar.dimensions || []).map((dim) => (
+                    <li key={dim.label} className="flex items-start gap-2 font-sans text-[12px] text-ag-gray-light">
                       <span className="mt-[5px] w-1 h-1 rounded-full bg-ag-apex shrink-0" />
-                      {item}
+                      {dim.label}
                     </li>
                   ))}
                 </ul>

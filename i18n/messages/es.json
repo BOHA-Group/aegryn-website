@@ -2836,7 +2836,7 @@
       "label": "AEGRYN TRANSACT | MANDATO DE VENTA",
       "title": "Ceder su activo tech\nal precio que merece.",
       "desc": "Aegryn certifica su activo CIFS, atribuye el grade oficial y lo presenta bajo NDA exclusivo a compradores institucionales precualificados. Solo honorarios de éxito.",
-      "cta": "Enviar mandato de venta",
+      "ctaButton": "Enviar mandato de venta",
       "steps": {
         "label": "RECORRIDO CEDENTE EN 3 ETAPAS",
         "title": "Un proceso estructurado desde la certificación hasta el cierre.",
