@@ -247,6 +247,32 @@
       "strategy": {
         "title": "Conseil en Stratégie",
         "desc": "Nous aidons les dirigeants à définir et exécuter leur vision stratégique dans un environnement en constante évolution.",
+        "why": {
+          "title": "Pourquoi le conseil en stratégie ?",
+          "desc": "Dans un marché européen fragmenté où 70% des stratégies échouent à générer une croissance durable, les dirigeants tech font face à des choix critiques : expansion internationale, transformation du modèle opérationnel, allocation de capital entre croissance organique et acquisitions. Notre approche combine vision stratégique et exécution opérationnelle pour transformer l'ambition en résultats mesurables."
+        },
+        "approach": {
+          "title": "Notre approche",
+          "desc": "Nous ne livrons pas de slides. Nous co-construisons avec vos équipes un plan stratégique ancré dans la réalité de votre marché, de vos capacités et de vos contraintes. Chaque recommandation est testée, chiffrée et assortie d'un plan d'exécution détaillé.",
+          "steps": [
+            {
+              "label": "Diagnostic stratégique",
+              "desc": "Analyse de votre positionnement concurrentiel, de vos avantages différenciants et des tendances de marché. Identification des opportunités de croissance et des risques structurels."
+            },
+            {
+              "label": "Définition de la vision",
+              "desc": "Co-construction de votre vision stratégique à 3-5 ans, alignée sur vos ambitions et vos capacités. Priorisation des paris stratégiques à fort impact."
+            },
+            {
+              "label": "Feuille de route",
+              "desc": "Élaboration d'un plan d'exécution détaillé avec jalons, KPIs, allocation de ressources et gouvernance. Identification des quick wins et des transformations structurelles."
+            },
+            {
+              "label": "Accompagnement exécution",
+              "desc": "Suivi de la mise en œuvre, ajustements tactiques, résolution des blocages opérationnels. Transfert de compétences à vos équipes pour autonomisation."
+            }
+          ]
+        },
         "dimensions": [
           {
             "label": "Stratégie internationale",
@@ -273,6 +299,32 @@
       "technology": {
         "title": "Conseil en Technologie",
         "desc": "Nous accompagnons la transformation technologique des entreprises avec une approche pragmatique et opérationnelle.",
+        "why": {
+          "title": "Pourquoi le conseil en technologie ?",
+          "desc": "Seulement 30% des transformations digitales atteignent leurs objectifs. La technologie n'est plus un support : elle définit votre modèle opérationnel, votre expérience client et votre capacité à innover. Nous aidons les dirigeants à transformer l'ambition technologique en avantage concurrentiel mesurable, en combinant vision stratégique et exécution technique."
+        },
+        "approach": {
+          "title": "Notre approche",
+          "desc": "Nous ne faisons pas de la stratégie tech en silo. Chaque recommandation est ancrée dans votre réalité opérationnelle : architecture existante, dette technique, compétences internes, contraintes budgétaires. Nous privilégions les approches incrémentales qui génèrent de la valeur rapidement tout en construisant les fondations long terme.",
+          "steps": [
+            {
+              "label": "Diagnostic technique",
+              "desc": "Audit de votre infrastructure, applications, données et processus. Identification de la dette technique, des risques cyber et des opportunités d'optimisation."
+            },
+            {
+              "label": "Vision & feuille de route",
+              "desc": "Définition de votre architecture cible et priorisation des chantiers. Équilibre entre quick wins (6-12 mois) et transformations structurelles (18-36 mois)."
+            },
+            {
+              "label": "Proof of Concept",
+              "desc": "Validation technique et business sur des use cases prioritaires. Approche agile : build, test, learn, iterate. Dé-risquage avant industrialisation."
+            },
+            {
+              "label": "Industrialisation & transfert",
+              "desc": "Déploiement à l'échelle, intégration dans les processus existants, formation des équipes. Autonomisation progressive pour pérenniser les acquis."
+            }
+          ]
+        },
         "dimensions": [
           {
             "label": "Transformation digitale",
@@ -303,6 +355,32 @@
       "ma": {
         "title": "Conseil en M&A",
         "desc": "Nous accompagnons les opérations de fusions-acquisitions et d'intégration post-acquisition avec une expertise tech.",
+        "why": {
+          "title": "Pourquoi le conseil en M&A ?",
+          "desc": "Les acquisitions tech échouent rarement sur la stratégie, mais sur l'exécution : sous-estimation de la dette technique, intégration IT bâclée, fuite des talents clés, synergies technologiques non réalisées. Nous intervenons dès la phase de due diligence pour identifier les risques techniques et les opportunités de création de valeur, puis nous accompagnons l'intégration jusqu'au closing et au-delà."
+        },
+        "approach": {
+          "title": "Notre approche",
+          "desc": "Nous traitons chaque acquisition comme une opportunité de transformation. Au-delà de la due diligence technique classique, nous évaluons comment l'acquisition peut accélérer votre modernisation IT, enrichir vos capacités data/IA, ou servir de plateforme pour consolider votre marché. Notre expertise couvre l'ensemble du cycle M&A.",
+          "steps": [
+            {
+              "label": "Due diligence tech",
+              "desc": "Audit technique approfondi : architecture, dette technique, sécurité, conformité, IP. Évaluation des risques et opportunités. Chiffrage des synergies technologiques."
+            },
+            {
+              "label": "Technology blueprint",
+              "desc": "Définition de l'architecture cible post-acquisition. Plan d'intégration IT détaillé : systèmes, données, processus. Identification des quick wins et des chantiers structurels."
+            },
+            {
+              "label": "Integration Management Office",
+              "desc": "Pilotage de l'intégration IT : gouvernance, planning, gestion des risques, coordination des équipes. Suivi des jalons critiques (Day 1, Day 100, synergies)."
+            },
+            {
+              "label": "Value capture & transformation",
+              "desc": "Réalisation des synergies technologiques. Modernisation accélérée des systèmes legacy. Transformation digitale post-acquisition pour maximiser la création de valeur."
+            }
+          ]
+        },
         "dimensions": [
           {
             "label": "Conseil Transactions",
@@ -354,6 +432,25 @@
           "desc": "Documentation finale, transfert de compétences et accès au suivi post-mission."
         }
       ]
+    },
+    "thoughtLeadership": {
+      "title": "Trois dimensions complémentaires dans un marché en consolidation",
+      "desc": "Le marché tech européen connaît une transformation structurelle : la technologie n'est plus un avantage différenciant, mais un prérequis de survie. Dans ce contexte, stratégie, technologie et M&A ne sont plus des disciplines isolées — elles forment un triptyque indissociable pour les dirigeants qui veulent croître.",
+      "pillars": [
+        {
+          "label": "Stratégie : définir où jouer",
+          "desc": "Face à la fragmentation du marché européen et à l'accélération technologique, les dirigeants doivent faire des choix radicaux : quels marchés adresser, quelles capacités développer en interne, quelles acquisitions cibler pour combler les gaps. La stratégie définit la vision, mais sans roadmap technologique ni plan M&A, elle reste lettre morte."
+        },
+        {
+          "label": "Technologie : construire l'avantage",
+          "desc": "La technologie est devenue le principal levier de différenciation : expérience client, efficacité opérationnelle, capacité d'innovation. Mais 70% des transformations digitales échouent faute d'alignement stratégique. Une vision tech déconnectée de la stratégie business génère de la dette technique et des investissements perdus."
+        },
+        {
+          "label": "M&A : accélérer par la consolidation",
+          "desc": "La croissance organique ne suffit plus. Les leaders tech européens consolident leurs marchés par acquisitions pour gagner en taille critique, acquérir des talents rares, ou accélérer leur transformation digitale. Mais sans due diligence tech rigoureuse et plan d'intégration IT, les acquisitions détruisent plus de valeur qu'elles n'en créent."
+        }
+      ],
+      "conclusion": "Aegryn Conseil intervient à l'intersection de ces trois dimensions. Nous aidons les dirigeants tech à définir une stratégie de croissance cohérente, à construire les capacités technologiques pour l'exécuter, et à identifier les acquisitions qui accélèrent le plan sans créer de dette technique. Une approche intégrée pour un marché qui ne pardonne plus les silos."
     },
     "label": "Conseil"
   },
