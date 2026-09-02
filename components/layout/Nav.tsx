@@ -23,8 +23,8 @@ const CRAFT_BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
 const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportStrategy',    href: '/advisory/strategy' as LinkHref },
   { labelKey: 'craftSupportTechnology',  href: '/advisory/technology' as LinkHref },
+  { labelKey: 'craftSupportMA',          href: '/advisory/ma' as LinkHref },
   { labelKey: 'craftSupportAdvisory',    href: '/advisory' },
-  { labelKey: 'craftSupportAcquisition', href: '/services/acquisition-support' },
   { labelKey: 'craftSupportAlliances',   href: '/alliances' },
   { labelKey: 'craftSupportExperts',     href: '/experts' },
 ]
