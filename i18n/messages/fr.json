@@ -33,18 +33,18 @@
     "gradePartners": "Réseau d'experts",
     "roadmap": "Feuille de route",
     "servicesBuild": "Conception d'actifs",
-    "servicesAdvisory": "Advisory Tech",
+    "servicesAdvisory": "Conseil Tech",
     "servicesAlliances": "Réseau de partenaires",
-    "servicesAcquisition": "Advisory Transaction",
+    "servicesAcquisition": "Conseil Transaction",
     "servicesValuation": "Valorisation",
     "servicesExperts": "Réseau d'experts",
     "servicesMenuLabel": "Services Aegryn",
-    "servicesSectionTech": "Advisory Tech",
+    "servicesSectionTech": "Conseil Tech",
     "servicesSectionTechDesc": "Audit technique, sécurité, IA, conformité",
-    "servicesSectionTransaction": "Advisory Transaction",
+    "servicesSectionTransaction": "Conseil Transaction",
     "servicesSectionTransactionDesc": "Cession, acquisition, structuration, closing",
     "servicesSectionNetwork": "Réseau de partenaires",
-    "servicesSectionNetworkDesc": "Partenaires Advisory Tech & Transaction",
+    "servicesSectionNetworkDesc": "Partenaires Conseil Tech & Transaction",
     "gradeDimC": "Code",
     "gradeDimI": "IP",
     "gradeDimF": "Finance",
@@ -68,9 +68,10 @@
     "craftBuildAssets": "Actifs propriétaires",
     "craftBuildEngineering": "Conception d'actifs",
     "craftSupport": "Accompagner",
-    "craftSupportDesc": "Advisory Tech, IA & M&A — Toutes industries",
-    "craftSupportAdvisory": "Advisory Tech & IA",
-    "craftSupportAcquisition": "Advisory Fusions et Acquisitions",
+    "craftSupportDesc": "Conseil Stratégie, Tech & M&A — Toutes industries",
+    "craftSupportStrategy": "Conseil Stratégie",
+    "craftSupportAdvisory": "Conseil Tech & IA",
+    "craftSupportAcquisition": "Conseil Fusions et Acquisitions",
     "craftSupportAlliances": "Réseau de partenaires",
     "craftSupportExperts": "Réseau d'experts",
     "craftTransact": "Transmettre",
@@ -124,10 +125,10 @@
   },
   "hero": {
     "tagline": "Nous refusons qu'un actif solide disparaisse dans une transaction mal préparée.",
-    "metaDescription": "AEGRYN : conseil stratégique, certification d'actifs tech et transactions M&A sécurisées en Europe. Infrastructure suisse de confiance pour entrepreneurs et acquéreurs.",
+    "metaDescription": "AEGRYN : conseil stratégique, tech et M&A, construction d'actifs, transactions certifiées. Écosystème de talents et partenaires de confiance en Suisse et Europe.",
     "eyebrow": "CINQ DISCIPLINES. UN LABEL QUALITÉ.",
     "title": "Rare par\nsélection.",
-    "sub": "Conseil stratégique, certification rigoureuse et transactions sécurisées pour les actifs tech européens. Ancré en Suisse.",
+    "sub": "Aegryn : Du conseil stratégique, tech et M&A, à la construction d'actifs et transactions certifiées. Écosystème de talents et partenaires de confiance en Suisse et Europe.",
     "cta": "CÉDER UN ACTIF CERTIFIÉ",
     "strip": "CONSTRUIRE · ACCOMPAGNER · TRANSMETTRE · RECRUTER · S'INFORMER",
     "geo": "Suisse · Europe · Global",
@@ -235,7 +236,7 @@
     }
   },
   "advisory": {
-    "strip": "Aegryn Advisory | Conseil en stratégie, technologie et M&A pour entreprises tech européennes",
+    "strip": "Aegryn Conseil | Conseil en stratégie, technologie et M&A pour entreprises tech européennes",
     "cta": "Prendre contact",
     "hero": {
       "title": "Accompagner ce que vous construisez.",
@@ -303,7 +304,7 @@
         "desc": "Nous accompagnons les opérations de fusions-acquisitions et d'intégration post-acquisition avec une expertise tech.",
         "dimensions": [
           {
-            "label": "Advisory Transactions",
+            "label": "Conseil Transactions",
             "desc": "Structuration de cessions, acquisitions, levées de fonds, valorisation d'actifs tech et négociation."
           },
           {
@@ -393,9 +394,9 @@
       }
     },
     "advisoryCta": {
-      "label": "Aegryn Advisory",
+      "label": "Aegryn Conseil",
       "text": "Votre actif n'a pas encore atteint le Grade A ?",
-      "button": "Découvrir Advisory"
+      "button": "Découvrir Conseil"
     }
   },
   "whatwedo": {
@@ -453,7 +454,7 @@
       },
       {
         "title": "ACCOMPAGNER",
-        "desc": "Nous accompagnons les entrepreneurs et les acquéreurs : Advisory Tech (cybersécurité, IA, conformité), Advisory Transaction (structuration, due diligence, closing), et Talent (recrutement et placement de profils tech)."
+        "desc": "Nous accompagnons les entrepreneurs et les acquéreurs : Conseil Tech (cybersécurité, IA, conformité), Conseil Transaction (structuration, due diligence, closing), et Talent (recrutement et placement de profils tech)."
       },
       {
         "title": "TRANSMETTRE",
@@ -689,11 +690,11 @@
       "title": "Des disciplines qui se combinent.",
       "items": {
         "advisory": {
-          "title": "Advisory Transaction",
+          "title": "Conseil Transaction",
           "desc": "Structuration de cessions, acquisitions et opérations de capital pour des actifs tech certifiés. Due diligence, valorisation, closing."
         },
         "tech": {
-          "title": "Advisory Tech",
+          "title": "Conseil Tech",
           "desc": "Audit technique, sécurité applicative, conformité réglementaire (RGPD, nLPD, NIS2) et certification indépendante des actifs numériques."
         },
         "build": {
@@ -1074,7 +1075,7 @@
   },
   "advisoryPage": {
     "hero": {
-      "label": "Aegryn Advisory",
+      "label": "Aegryn Conseil",
       "title": "Clarté Stratégique.\nProfondeur Opérationnelle.",
       "desc1": "Chez Aegryn Advisory, nous accompagnons les fondateurs, dirigeants et organisations face à des décisions technologiques critiques. Notre conseil repose sur la façon dont nous concevons, construisons et sécurisons nos propres écosystèmes numériques.",
       "desc2": "Nous ne nous appuyons pas sur la théorie, les tendances ou les frameworks recyclés. Nous apportons une direction stratégique claire, directe et ancrée dans l'exécution, en Data, IA et Cybersécurité.",
@@ -1082,7 +1083,7 @@
       "cta": "Prendre contact"
     },
     "why": {
-      "label": "Pourquoi Advisory ?",
+      "label": "Pourquoi Conseil ?",
       "desc1": "Concevoir ou faire évoluer un écosystème numérique demande plus que de l'ambition. Cela requiert une clarté architecturale, une exécution disciplinée et une vision long terme.",
       "desc2": "Aegryn Advisory existe pour les dirigeants qui ont besoin d'un accompagnement structuré au moment où les décisions en Data, IA et Cybersécurité définissent la résilience future.",
       "tagline": "Notre rôle est simple : apporter la clarté, réduire le risque, accélérer les bonnes décisions."
@@ -1106,7 +1107,7 @@
     },
     "experts": {
       "label": "Expertises mobilisées",
-      "desc": "Aegryn Advisory Tech intervient sur les dimensions techniques qui définissent la robustesse et la certifiabilité d'un actif numérique : avant, pendant ou indépendamment de toute transaction.",
+      "desc": "Aegryn Conseil Tech intervient sur les dimensions techniques qui définissent la robustesse et la certifiabilité d'un actif numérique : avant, pendant ou indépendamment de toute transaction.",
       "items": [
         {
           "title": "Audit de sécurité & Cybersécurité",
@@ -3532,18 +3533,18 @@
         "cta": "Référencer un actif ou un acquéreur"
       },
       "advisory_tech": {
-        "label": "Advisory Tech",
+        "label": "Conseil Tech",
         "title": "Experts techniques certifiés",
         "desc": "Partenaires mobilisés pour améliorer la robustesse et la certifiabilité des actifs avant ou pendant le processus de grade Aegryn.",
         "profiles": "Firmes de cybersécurité (PASSI/CREST/OSCP) · CTO freelance senior (architecture, DevSecOps) · Experts Data & IA (MLOps, gouvernance) · DPO externes accrédités (RGPD/LPD) · Experts conformité EU AI Act · Auditeurs accessibilité numérique (RGAA/WCAG)",
-        "cta": "Devenir partenaire Advisory Tech"
+        "cta": "Devenir partenaire Conseil Tech"
       },
       "advisory_transaction": {
-        "label": "Advisory Transaction",
+        "label": "Conseil Transaction",
         "title": "Experts M&A tech",
         "desc": "Partenaires mobilisés à chaque étape du cycle de transaction, de la préparation cession au closing et à l'intégration post-acquisition.",
         "profiles": "Cabinets IP & tech (chaîne de titres, licences) · Avocats M&A transactionnels (SPA, SHA, APA) · Experts-comptables & commissaires aux comptes · Fiscalistes corporate (CH/FR/LU) · Cabinets RH & droit social · Assureurs W&I (AIG, Tokio Marine) · Experts due diligence sectorielle (FinTech, HealthTech, IA)",
-        "cta": "Devenir partenaire Advisory Transaction"
+        "cta": "Devenir partenaire Conseil Transaction"
       },
       "sequestre": {
         "label": "SÉQUESTRE & JURIDIQUE",
@@ -3594,8 +3595,8 @@
     },
     "tabs": {
       "overview": "Présentation",
-      "advisory_tech": "Advisory Tech",
-      "advisory_transaction": "Advisory Transaction",
+      "advisory_tech": "Conseil Tech",
+      "advisory_transaction": "Conseil Transaction",
       "certification": "Certification",
       "distribution": "Distribution",
       "dealflow": "Deal Flow",
@@ -5407,7 +5408,7 @@
     "title": "Plan du site",
     "subtitle": "Vue d'ensemble de toutes les pages et sections du site.",
     "groupBuild": "Build",
-    "groupAdvisory": "Advisory",
+    "groupAdvisory": "Conseil",
     "groupGrade": "Grade",
     "groupTransaction": "Transact",
     "groupDiscover": "Découvrir",
@@ -5966,9 +5967,9 @@
       "desc": "Du conseil ponctuel à l'accompagnement approfondi : la communauté couvre l'ensemble des spécialités M&A tech."
     },
     "categories": {
-      "tech": "Advisory Tech",
+      "tech": "Conseil Tech",
       "techDesc": "Cybersécurité, audit IA, stratégie digitale",
-      "transaction": "Advisory Transaction",
+      "transaction": "Conseil Transaction",
       "transactionDesc": "M&A, valorisation, structuration financière",
       "network": "Réseau partenaires",
       "networkDesc": "Partenaires certifiés Aegryn"
@@ -5978,7 +5979,7 @@
       "securityDesc": "Pentest, sécurité cloud, conformité NIS2, audit sécurité applicative.",
       "data-ai": "Data & Intelligence Artificielle",
       "data-aiDesc": "Stratégie IA, MLOps, gouvernance data, conformité EU AI Act.",
-      "transaction": "Advisory Transaction M&A",
+      "transaction": "Conseil Transaction M&A",
       "transactionDesc": "Valorisation, préparation cession, due diligence, droit des transactions.",
       "product-ux": "Produit & Expérience utilisateur",
       "product-uxDesc": "Product management, UX/UI, accessibilité numérique, RGPD & Privacy.",
@@ -6795,7 +6796,7 @@
           "desc": "Nous évaluons les leaders pour les postes senior à travers des entretiens structurés, des tests psychométriques et une analyse approfondie de leurs réalisations passées."
         },
         "advisory": {
-          "label": "Advisory",
+          "label": "Conseil",
           "title": "Conseil en stratégie talent",
           "desc": "Nous accompagnons votre stratégie de leadership à travers le market mapping, l'analyse de rémunération et le coaching pour construire des équipes tech de classe mondiale."
         }
