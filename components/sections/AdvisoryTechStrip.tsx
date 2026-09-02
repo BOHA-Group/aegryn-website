@@ -14,7 +14,7 @@ export function AdvisoryTechStrip() {
   const labelRef = useRef<HTMLParagraphElement>(null)
   const headRef  = useRef<HTMLHeadingElement>(null)
 
-  const services = t.raw('services') as Record<string, { title: string; desc: string; items: string[] }>
+  const services = (t.raw('services') as Record<string, { title: string; desc: string; items: string[] }>) || {}
   const serviceKeys = Object.keys(services)
 
   useEffect(() => {

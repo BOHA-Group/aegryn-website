@@ -13,7 +13,7 @@ type Domain = { title: string; items: string[] }
 export function AcqSupportStrip() {
   const t   = useTranslations('acqStrip')
   const ref = useRef<HTMLElement>(null)
-  const domains = t.raw('domains') as Domain[]
+  const domains = (t.raw('domains') as Domain[]) || []
 
   useEffect(() => {
     const ctx = gsap.context(() => {
