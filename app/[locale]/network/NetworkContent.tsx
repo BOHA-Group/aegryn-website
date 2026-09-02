@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import {
   ArrowUpRight, ShieldCheck, BrainCircuit, Scale, Cpu, ClipboardCheck,
-  Building2, Users, Globe, ChevronDown, CheckCircle2,
+  Building2, Users, Globe,
 } from 'lucide-react'
 
 /* ─── Types ────────────────────────────────────────────────────────────────── */
@@ -16,6 +16,49 @@ type ExpertDomain = {
   color: string
   dimension: DimensionKey | 'all'
 }
+
+type ExpertiseCard = {
+  title: string
+  tags: string[]
+  dimension: DimensionKey
+  color: string
+}
+
+/* ─── Grille expertises mobilisables par dimension ─────────────────────────── */
+const EXPERTISE_CARDS: ExpertiseCard[] = [
+  // STRATEGY (vert apex)
+  { title: 'Stratégie d\'entreprise',    tags: ['Vision long terme', 'OKR', 'Business model'], dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Transformation digitale',    tags: ['Change management', 'Roadmap SI', 'Adoption'], dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Gouvernance & Compliance',   tags: ['RGPD', 'NIS2', 'DORA', 'AI Act'],             dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Intelligence compétitive',   tags: ['Veille marché', 'Benchmarking', 'Tendances'],  dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Finance & Restructuring',    tags: ['Business plan', 'Restructuration', 'Tréso'],   dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'ESG & Durabilité',           tags: ['Reporting ESG', 'Impact', 'Taxonomie UE'],     dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Risk Management',            tags: ['Risk mapping', 'Continuité', 'Sinistres'],      dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Opérations & Lean',          tags: ['Process mining', 'Efficience', 'KPI ops'],     dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Innovation & Ventures',      tags: ['Open innovation', 'Intrapreneuriat', 'Labs'],  dimension: 'strategy', color: '#5ADDA4' },
+
+  // TECHNOLOGY (bleu)
+  { title: 'Architecture Système',       tags: ['Cloud', 'Microservices', 'API-first'],          dimension: 'technology', color: '#60a5fa' },
+  { title: 'Cybersécurité offensive',    tags: ['Pentest', 'Red team', 'Vuln. scoring'],         dimension: 'technology', color: '#60a5fa' },
+  { title: 'Cybersécurité défensive',    tags: ['SOC', 'SIEM', 'Threat intel'],                  dimension: 'technology', color: '#60a5fa' },
+  { title: 'IA & Machine Learning',      tags: ['LLM', 'Fine-tuning', 'MLOps', 'RAG'],           dimension: 'technology', color: '#60a5fa' },
+  { title: 'DevSecOps',                  tags: ['CI/CD sécurisé', 'SBOM', 'Shift-left'],         dimension: 'technology', color: '#60a5fa' },
+  { title: 'Data & Analytique',          tags: ['Data lake', 'BI', 'Pipelines temps réel'],      dimension: 'technology', color: '#60a5fa' },
+  { title: 'Cloud & Infrastructure',     tags: ['AWS', 'Azure', 'GCP', 'FinOps'],                dimension: 'technology', color: '#60a5fa' },
+  { title: 'Audit Technique Actifs',     tags: ['Code review', 'Dette tech', 'Certification'],   dimension: 'technology', color: '#60a5fa' },
+  { title: 'Product Engineering',        tags: ['SaaS B2B', 'App mobile', 'Protocoles IA'],      dimension: 'technology', color: '#60a5fa' },
+
+  // M&A (violet)
+  { title: 'Due Diligence Stratégique',  tags: ['Marché', 'Positionnement', 'Synergies'],        dimension: 'ma', color: '#818cf8' },
+  { title: 'Due Diligence Financière',   tags: ['QoE', 'Normalisation', 'Flux de tréso'],        dimension: 'ma', color: '#818cf8' },
+  { title: 'Due Diligence Technique',    tags: ['Architecture', 'Code', 'Dette', 'IP'],          dimension: 'ma', color: '#818cf8' },
+  { title: 'Valorisation d\'actifs',     tags: ['DCF', 'Multiples', 'ARR/NRR', 'EBITDA'],       dimension: 'ma', color: '#818cf8' },
+  { title: 'Structuration Juridique',    tags: ['SPA', 'LOI', 'Earn-out', 'GAP'],               dimension: 'ma', color: '#818cf8' },
+  { title: 'Fiscalité & Optimisation',   tags: ['Structuration holding', 'Exit tax', 'Treaty'],  dimension: 'ma', color: '#818cf8' },
+  { title: 'Séquestre & Financement',    tags: ['Escrow', 'Bridge', 'Mezzanine', 'LBO'],         dimension: 'ma', color: '#818cf8' },
+  { title: 'Assurance W&I & Risque',     tags: ['W&I insurance', 'Tax liability', 'D&O'],        dimension: 'ma', color: '#818cf8' },
+  { title: 'Post-Merger Integration',    tags: ['PMI', 'Synergies', 'Gouvernance', 'Culture'],   dimension: 'ma', color: '#818cf8' },
+]
 
 /* ─── Domaines d'expertise disponibles (alignés Conseil Strategy/Tech/M&A) ── */
 const EXPERT_DOMAINS: ExpertDomain[] = [
@@ -33,27 +76,38 @@ const DIMENSIONS: { key: DimensionKey | 'all'; labelKey: string }[] = [
   { key: 'ma',         labelKey: 'filters.ma' },
 ]
 
-/* ─── Partenaires logos (illustratif) ─────────────────────────────────────── */
-const PARTNER_LOGOS = [
-  { name: 'Subblink',   initial: 'S', color: '#5ADDA4' },
-  { name: 'Partner A',  initial: 'A', color: '#60a5fa' },
-  { name: 'Partner B',  initial: 'B', color: '#818cf8' },
-  { name: 'Partner C',  initial: 'C', color: '#fb923c' },
-  { name: 'Partner D',  initial: 'D', color: '#f472b6' },
-  { name: 'Partner E',  initial: 'E', color: '#a78bfa' },
-]
-
-/* ─── Placeholders fiches experts (mode illustration) ─────────────────────── */
-const PLACEHOLDER_PROFILES = [
-  { id: 'ph1', name: 'Sophie M.', role: 'M&A Advisor', org: 'Aegryn Advisory', dimension: 'ma' as DimensionKey,        domainKey: 'ma',          city: 'Genève',  langs: ['FR', 'EN'], color: '#818cf8' },
-  { id: 'ph2', name: 'Thomas B.', role: 'CTO Advisory', org: 'TechLead GmbH',  dimension: 'technology' as DimensionKey, domainKey: 'security',    city: 'Zurich',  langs: ['DE', 'EN'], color: '#5ADDA4' },
-  { id: 'ph3', name: 'Pierre D.', role: 'Tax & Law',    org: 'Cabinet Dumont', dimension: 'ma' as DimensionKey,        domainKey: 'compliance',  city: 'Paris',   langs: ['FR', 'EN', 'ES'], color: '#fb923c' },
-  { id: 'ph4', name: 'Lena K.',   role: 'AI Strategy',  org: 'AI Partners',    dimension: 'strategy' as DimensionKey,  domainKey: 'strategy',    city: 'Berlin',  langs: ['DE', 'EN', 'FR'], color: '#60a5fa' },
-  { id: 'ph5', name: 'Marco R.',  role: 'Corp. Law',    org: 'Studio Ricci',   dimension: 'ma' as DimensionKey,        domainKey: 'ma',          city: 'Milan',   langs: ['IT', 'EN', 'FR'], color: '#a78bfa' },
-  { id: 'ph6', name: 'Elena V.',  role: 'CFO Advisory', org: 'Verdu Audit',    dimension: 'strategy' as DimensionKey,  domainKey: 'compliance',  city: 'Bruxelles', langs: ['FR', 'NL', 'EN'], color: '#f472b6' },
-]
-
-const selectCls = 'border border-ag-border bg-ag-white px-4 py-2.5 pr-10 font-sans text-[12px] text-ag-black appearance-none focus:outline-none focus:border-ag-black transition-colors cursor-pointer'
+/* ─── ExpertiseCard animée ──────────────────────────────────────────────────── */
+function ExpertiseCardItem({ card }: { card: ExpertiseCard }) {
+  const [hovered, setHovered] = useState(false)
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        transition: 'box-shadow 0.25s, transform 0.25s',
+        transform: hovered ? 'translateY(-3px)' : 'translateY(0)',
+        boxShadow: hovered ? `0 8px 32px rgba(0,0,0,0.10), 0 0 0 1.5px ${card.color}55` : '0 1px 4px rgba(0,0,0,0.04)',
+      }}
+      className="bg-ag-white border border-ag-border p-5 flex flex-col gap-3 cursor-default"
+    >
+      <div className="flex items-start justify-between gap-2">
+        <h3 className="font-sans font-bold text-ag-black text-[13px] leading-snug">{card.title}</h3>
+        <div className="w-1.5 h-1.5 rounded-full shrink-0 mt-1.5" style={{ background: card.color }} />
+      </div>
+      <div className="flex flex-wrap gap-1">
+        {card.tags.map(tag => (
+          <span
+            key={tag}
+            className="font-sans text-[9px] tracking-[0.07em] text-ag-gray border border-ag-border px-2 py-0.5"
+            style={{ borderColor: hovered ? `${card.color}55` : undefined }}
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 /* ─── FanCards ─────────────────────────────────────────────────────────────── */
 function FanCards({
@@ -118,52 +172,19 @@ function FanCards({
   )
 }
 
-/* ─── ExpertPlaceholderCard ─────────────────────────────────────────────────── */
-function ExpertPlaceholderCard({ p }: { p: typeof PLACEHOLDER_PROFILES[0] }) {
-  const initials = p.name.split(' ').map(w => w[0]).join('').toUpperCase()
-  return (
-    <div className="bg-ag-white border border-ag-border p-5 flex flex-col gap-3 relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-0.5" style={{ background: p.color }} />
-      <div className="flex items-start gap-3">
-        <div className="w-14 h-14 bg-ag-off-white border border-ag-border flex items-center justify-center shrink-0">
-          <span className="font-mono text-[14px] font-bold text-ag-gray">{initials}</span>
-        </div>
-        <div className="flex-1 min-w-0">
-          <p className="font-sans font-semibold text-ag-black text-[14px] leading-tight">{p.name}</p>
-          <p className="font-sans text-[11px] mt-0.5" style={{ color: p.color }}>{p.role}</p>
-          <p className="font-sans text-[11px] text-ag-gray">{p.org}</p>
-        </div>
-      </div>
-      <div className="flex flex-wrap gap-1">
-        {p.langs.map(l => (
-          <span key={l} className="font-mono text-[9px] text-ag-gray-light border border-ag-border px-1.5 py-0.5">{l}</span>
-        ))}
-        <span className="font-sans text-[10px] text-ag-gray-light border border-ag-border px-1.5 py-0.5 ml-auto flex items-center gap-1">
-          <Globe size={9} /> {p.city}
-        </span>
-      </div>
-      <div className="pt-2 border-t border-ag-border">
-        <span className="inline-flex items-center gap-1 font-mono text-[8px] tracking-[0.14em] uppercase px-2 py-0.5 border border-ag-apex/30 bg-ag-apex/10 text-ag-apex">
-          Aegryn Network
-        </span>
-      </div>
-    </div>
-  )
-}
-
 /* ─── Main Component ─────────────────────────────────────────────────────────── */
 export default function NetworkContent() {
   const t = useTranslations('network')
   const [activeDimension, setActiveDimension] = useState<DimensionKey | 'all'>('all')
   const [activeDomain, setActiveDomain]       = useState<string>('strategy')
 
-  const filteredProfiles = activeDimension === 'all'
-    ? PLACEHOLDER_PROFILES
-    : PLACEHOLDER_PROFILES.filter(p => p.dimension === activeDimension)
-
   const visibleDomains = activeDimension === 'all'
     ? EXPERT_DOMAINS
     : EXPERT_DOMAINS.filter(d => d.dimension === activeDimension || d.dimension === 'all')
+
+  const filteredExpertise = activeDimension === 'all'
+    ? EXPERTISE_CARDS
+    : EXPERTISE_CARDS.filter(c => c.dimension === activeDimension)
 
   return (
     <>
@@ -211,106 +232,72 @@ export default function NetworkContent() {
           >
             {t('partners.title')}
           </h2>
-          <p className="text-[14px] text-ag-gray leading-relaxed max-w-xl mb-12">
+          <p className="text-[14px] text-ag-gray leading-relaxed max-w-xl mb-6">
             {t('partners.desc')}
           </p>
-
           {/* Logos partenaires — à venir */}
-
-          <p className="font-sans text-[11px] text-ag-gray-light mt-6 italic">
+          <p className="font-sans text-[11px] text-ag-gray-light italic">
             {t('partners.note')}
           </p>
         </div>
       </section>
 
-      {/* ── Section 2 : Réseau d'experts (Fan cards + grille illustrative) ── */}
+      {/* ── Section 2 : Expertises mobilisables (Fan cards + grille animée) ── */}
       <section className="border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
-            {/* Colonne gauche */}
+
+          {/* Header + filtres */}
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12">
             <div>
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
                 {t('experts.label')}
               </p>
               <h2
-                className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15] mb-6 whitespace-pre-line"
+                className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15] whitespace-pre-line"
                 style={{ fontSize: 'clamp(26px,3vw,44px)' }}
               >
                 {t('experts.title')}
               </h2>
-              <p className="text-[14px] text-ag-gray leading-relaxed mb-8">
+              <p className="text-[14px] text-ag-gray leading-relaxed mt-4 max-w-xl">
                 {t('experts.desc')}
               </p>
-
-              {/* Filtres dimension */}
-              <div className="flex flex-wrap gap-2 mb-10">
-                {DIMENSIONS.map(d => (
-                  <button
-                    key={d.key}
-                    onClick={() => { setActiveDimension(d.key); setActiveDomain('strategy') }}
-                    className={[
-                      'px-4 py-2 font-sans font-semibold text-[11px] uppercase tracking-[0.14em] border transition-colors',
-                      activeDimension === d.key
-                        ? 'bg-ag-navy text-white border-ag-navy'
-                        : 'text-ag-gray border-ag-border hover:border-ag-black hover:text-ag-black',
-                    ].join(' ')}
-                  >
-                    {t(d.labelKey)}
-                  </button>
-                ))}
-              </div>
-
-              {/* Fan cards */}
-              <FanCards
-                domains={visibleDomains}
-                activeDomain={activeDomain}
-                onSelect={setActiveDomain}
-                t={t}
-              />
             </div>
-
-            {/* Colonne droite — grille profils illustratifs */}
-            <div>
-              <div className="flex items-center justify-between mb-6">
-                <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.18em] text-ag-gray-light">
-                  {t('experts.profilesLabel')}
-                </p>
-                <div className="relative">
-                  <select
-                    value={activeDimension}
-                    onChange={e => setActiveDimension(e.target.value as DimensionKey | 'all')}
-                    className={selectCls}
-                  >
-                    {DIMENSIONS.map(d => (
-                      <option key={d.key} value={d.key}>{t(d.labelKey)}</option>
-                    ))}
-                  </select>
-                  <ChevronDown size={12} className="absolute right-3 top-1/2 -translate-y-1/2 text-ag-gray pointer-events-none" />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {filteredProfiles.map(p => (
-                  <ExpertPlaceholderCard key={p.id} p={p} />
-                ))}
-              </div>
-
-              {/* Notice désactivée */}
-              <div className="mt-8 border border-ag-border bg-ag-white p-6">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 size={16} className="text-ag-gray-light mt-0.5 shrink-0" />
-                  <div>
-                    <p className="font-sans font-semibold text-[12px] text-ag-gray mb-1">
-                      {t('experts.comingSoonTitle')}
-                    </p>
-                    <p className="font-sans text-[11px] text-ag-gray-light leading-relaxed">
-                      {t('experts.comingSoonDesc')}
-                    </p>
-                  </div>
-                </div>
-              </div>
+            {/* Filtres dimension */}
+            <div className="flex flex-wrap gap-2 shrink-0">
+              {DIMENSIONS.map(d => (
+                <button
+                  key={d.key}
+                  onClick={() => { setActiveDimension(d.key); setActiveDomain('strategy') }}
+                  className={[
+                    'px-4 py-2 font-sans font-semibold text-[11px] uppercase tracking-[0.14em] border transition-colors',
+                    activeDimension === d.key
+                      ? 'bg-ag-navy text-white border-ag-navy'
+                      : 'text-ag-gray border-ag-border hover:border-ag-black hover:text-ag-black',
+                  ].join(' ')}
+                >
+                  {t(d.labelKey)}
+                </button>
+              ))}
             </div>
           </div>
+
+          {/* Fan cards de sélection de domaine */}
+          <div className="mb-12">
+            <FanCards
+              domains={visibleDomains}
+              activeDomain={activeDomain}
+              onSelect={setActiveDomain}
+              t={t}
+            />
+          </div>
+
+          {/* Grille expertises animées — 9 cartes par dimension */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+            {filteredExpertise.map((card) => (
+              <ExpertiseCardItem key={card.title} card={card} />
+            ))}
+          </div>
+
         </div>
       </section>
 
