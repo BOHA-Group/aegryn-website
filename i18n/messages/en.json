@@ -136,7 +136,15 @@
     "talent": "Talent",
     "industries": "Industries",
     "industriesDesc": "Tous secteurs",
-    "whoFounder": "The founder"
+    "whoFounder": "The founder",
+    "solutionsCategoriesPrimary": "MAIN CATEGORIES",
+    "solutionsCategoriesSecondary": "ADDITIONAL CATEGORIES",
+    "solutionsCategoryAI": "AI & Protocols",
+    "solutionsCategoryFinTech": "FinTech & Payments",
+    "solutionsCategoryHealthTech": "HealthTech & MedTech",
+    "solutionsCategoryPropTech": "PropTech & Real Estate",
+    "solutionsCategoryServices": "Services & Lifestyle",
+    "solutionsCategoryTransactions": "Transactions & Network"
   },
   "hero": {
     "tagline": "Aegryn — Swiss Tech Group. Strategy, Transactions & Assets.",
@@ -477,7 +485,10 @@
     "categories": {
       "ai": "AI & Protocols",
       "lifestyle": "Services & Lifestyle",
-      "transactions": "Transactions & Network"
+      "transactions": "Transactions & Network",
+      "fintech": "FinTech & Payments",
+      "healthtech": "HealthTech & MedTech",
+      "proptech": "PropTech & Real Estate"
     },
     "status": {
       "building": "Building",
@@ -7704,6 +7715,9 @@
           "desc": "Technical team leaders: scaling, engineering culture, delivery, architecture and operational excellence.",
           "title": "VP Engineering & Engineering Director"
         }
+      },
+      "_legacy_profiles": {
+        "intro": "Executive profiles we place (C-Level, VP, Director)"
       }
     },
     "forms": {

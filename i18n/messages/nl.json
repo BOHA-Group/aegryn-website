@@ -136,7 +136,15 @@
     "thinkingMarketFAQ": "FAQ",
     "industries": "Industries",
     "industriesDesc": "Tous secteurs",
-    "whoFounder": "De oprichter"
+    "whoFounder": "De oprichter",
+    "solutionsCategoriesPrimary": "HOOFDCATEGORIEËN",
+    "solutionsCategoriesSecondary": "AANVULLENDE CATEGORIEËN",
+    "solutionsCategoryAI": "AI & Protocollen",
+    "solutionsCategoryFinTech": "FinTech & Betalingen",
+    "solutionsCategoryHealthTech": "HealthTech & MedTech",
+    "solutionsCategoryPropTech": "PropTech & Vastgoed",
+    "solutionsCategoryServices": "Services & Lifestyle",
+    "solutionsCategoryTransactions": "Transacties & Netwerk"
   },
   "hero": {
     "tagline": "Aegryn — Zwitserse Tech Groep. Strategie, Transacties & Assets.",
@@ -477,7 +485,10 @@
     "categories": {
       "ai": "AI & Protocollen",
       "lifestyle": "Services & Lifestyle",
-      "transactions": "Transacties & Netwerk"
+      "transactions": "Transacties & Netwerk",
+      "fintech": "FinTech & Betalingen",
+      "healthtech": "HealthTech & MedTech",
+      "proptech": "PropTech & Vastgoed"
     },
     "status": {
       "building": "In aanbouw",
@@ -7720,6 +7731,9 @@
           "desc": "Technical team leaders: scaling, engineering culture, delivery, architecture and operational excellence.",
           "title": "VP Engineering & Engineering Director"
         }
+      },
+      "_legacy_profiles": {
+        "intro": "Executive-profielen die wij plaatsen (C-Level, VP, Director)"
       }
     },
     "forms": {
