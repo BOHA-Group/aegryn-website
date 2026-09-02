@@ -3070,12 +3070,13 @@
         "title": "Vendere il vostro asset | Aegryn",
         "desc": "Percorso cedente Aegryn: valutazione indicativa, punteggio di preparazione, mandato esclusivo. Certificazione CIFS, grade ufficiale, acquirenti pre-qualificati."
       },
+      "ctaButton": "Inviare mandato",
       "hero": {
         "label": "Vendere il vostro asset",
-        "title": "Il vostro asset merita\nuna cessione al suo valore reale.",
-        "desc": "Aegryn certifica, assegna un grade e mette in competizione acquirenti istituzionali prequalificati, in un quadro riservato, strutturato, sotto diritto svizzero.",
-        "ctaValuation": "Stimare il valore",
-        "ctaMandat": "Presentare un mandato"
+        "title": "Il vostro asset merita\nuna vendita al suo valore reale.",
+        "desc": "Aegryn certifica, valuta e mette in competizione acquirenti istituzionali prequalificati, in un quadro riservato e strutturato, secondo la legge svizzera.",
+        "ctaValuation": "Stimare valore",
+        "ctaMandat": "Inviare mandato"
       },
       "steps": {
         "label": "Percorso cedente",

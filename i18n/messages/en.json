@@ -3002,17 +3002,10 @@
         "title": "Sell your asset | Aegryn TRANSACT",
         "desc": "Exclusive sale mandate. CIFS certification, official grade, pre-qualified buyers under NDA. Success fee only."
       },
-      "hero": {
-        "label": "AEGRYN TRANSACT | SALE MANDATE",
-        "title": "Divest your tech asset\nat the price it deserves.",
-        "desc": "Aegryn certifies your asset CIFS, assigns the official grade and presents it under exclusive NDA to pre-qualified institutional acquirers. Success fee only.",
-        "ctaValuation": "Indicative valuation",
-        "ctaMandat": "Submit mandate"
-      },
       "label": "AEGRYN TRANSACT | SALE MANDATE",
       "title": "Divest your tech asset\nat the price it deserves.",
       "desc": "Aegryn certifies your asset CIFS, assigns the official grade and presents it under exclusive NDA to pre-qualified institutional acquirers. Success fee only.",
-      "cta": "Submit a sale mandate",
+      "ctaButton": "Submit a sale mandate",
       "steps": {
         "label": "SELLER JOURNEY IN 3 STEPS",
         "title": "A structured process from certification to closing.",

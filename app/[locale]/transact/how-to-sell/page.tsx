@@ -61,7 +61,7 @@ export default async function TransactSellPage({ params }: Props) {
             href={{ pathname: '/transact/mandate', query: { type: 'sell' } }}
             className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
-            {t('cta')} <ArrowUpRight size={13} />
+            {t('ctaButton')} <ArrowUpRight size={13} />
           </Link>
         </div>
       </section>

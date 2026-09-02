@@ -3070,10 +3070,11 @@
         "title": "Uw activa overdragen | Aegryn",
         "desc": "Aegryn-verkoopproces: indicatieve waardering, gereedheidscore, exclusief mandaat. CIFS-certificering, officiële grade, vooraf gekwalificeerde kopers."
       },
+      "ctaButton": "Mandaat indienen",
       "hero": {
-        "label": "Uw activa verkopen",
-        "title": "Uw activa verdienen\neen overdracht tegen de werkelijke waarde.",
-        "desc": "Aegryn certificeert, gradeert en stelt vooraf gekwalificeerde institutionele kopers in concurrentie, in een vertrouwelijk, gestructureerd kader, onder Zwitsers recht.",
+        "label": "Uw asset verkopen",
+        "title": "Uw asset verdient\neen verkoop tegen zijn echte waarde.",
+        "desc": "Aegryn certificeert, beoordeelt en laat voorgeselecteerde institutionele kopers concurreren, in een vertrouwelijk en gestructureerd kader, onder Zwitsers recht.",
         "ctaValuation": "Waarde schatten",
         "ctaMandat": "Mandaat indienen"
       },
