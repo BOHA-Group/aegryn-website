@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 import {
   ArrowUpRight, ShieldCheck, BrainCircuit, Scale, Cpu, ClipboardCheck,
   Building2, Users, Globe, ChevronDown, CheckCircle2,
@@ -343,12 +344,12 @@ export default function NetworkContent() {
               {t('cta.title')}
             </h2>
           </div>
-          <a
+          <Link
             href="/alliances"
             className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
           >
             {t('cta.button')} <ArrowUpRight size={14} />
-          </a>
+          </Link>
         </div>
       </section>
     </>
