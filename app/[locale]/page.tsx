@@ -4,15 +4,10 @@ import { HeroMountain }      from '@/components/sections/HeroMountain'
 import { ManifestoSection }  from '@/components/sections/ManifestoSection'
 import { FounderQuoteStrip } from '@/components/sections/FounderQuoteStrip'
 import { BuildStrip }        from '@/components/sections/BuildStrip'
-import { GradeStrip }        from '@/components/sections/GradeStrip'
 import { MissionVideoSection } from '@/components/sections/MissionVideoSection'
 import { SegmentsSection }   from '@/components/sections/SegmentsSection'
 import { HybridBlock }       from '@/components/sections/HybridBlock'
 import { HomeTalentStrip }   from '@/components/sections/HomeTalentStrip'
-import { EcosystemDomains }  from '@/components/sections/EcosystemDomains'
-import { TransactNarrative } from '@/components/sections/TransactionNarrative'
-import { MarketStatStrip }   from '@/components/sections/MarketStatStrip'
-import { WhyUseApps }        from '@/components/sections/WhyUseApps'
 import { BuildEngineeringStrip } from '@/components/sections/BuildEngineeringStrip'
 import { AdvisoryTechStrip } from '@/components/sections/AdvisoryTechStrip'
 import { DiscoverStrip }     from '@/components/sections/DiscoverStrip'
@@ -61,16 +56,7 @@ export default async function HomePage({ params }: Props) {
       <BuildStrip />
       <BuildEngineeringStrip />
 
-      {/* ── 08. Notation ───────────────────────────────────── */}
-      <GradeStrip />
-
-      {/* ── 09. Transact ───────────────────────────────────── */}
-      <EcosystemDomains />
-      <TransactNarrative />
-      <MarketStatStrip />
-      <WhyUseApps />
-
-      {/* ── 10. Talent ─────────────────────────────────────── */}
+      {/* ── 08. Talent ─────────────────────────────────────── */}
       <HomeTalentStrip />
 
       {/* ── 5. Blog ─────────────────────────────────────────────── */}
