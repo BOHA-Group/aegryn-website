@@ -6721,15 +6721,51 @@
   },
   "talent": {
     "meta": {
-      "title": "Werving & Plaatsing | Aegryn Talent",
-      "desc": "We verbinden de beste tech-talenten met bedrijven die Europa transformeren. CTO, CISO, Head of AI, VP Engineering."
+      "title": "Executive Recruitment | Aegryn Talent",
+      "desc": "We plaatsen de leiders die bedrijven transformeren: bestuursleden, tech executives en M&A executives. Gespecialiseerde executive search."
     },
     "hero": {
       "label": "Aegryn Talent",
-      "title": "Executive tech recruitment\nC-Level & VP",
-      "desc1": "We plaatsen tech-leiders die bedrijven transformeren: CTO, CISO, Chief AI Officer, VP Engineering, VP Product, VP Data.",
-      "desc2": "Tech-operators, geen HR-consultants. Alleen success fee. 3 maanden garantie.",
+      "title": "Executive recruitment\nBestuur · Tech · M&A",
+      "desc1": "We plaatsen de leiders die bedrijven transformeren: bestuursleden (CEO, COO, CTO, CIO, CHRO), tech executives en M&A executives.",
+      "desc2": "Operators, geen HR-consultants. Alleen success fee. 3 maanden garantie.",
       "quote": "Zwitserland & Europa • 30 landen • 23 sectoren\nReactie binnen 48u"
+    },
+    "pillars": {
+      "board": {
+        "title": "Bestuursleden & C-Level",
+        "desc": "We plaatsen bestuursleden en executives die strategie definiëren en transformatie aandrijven.",
+        "profiles": [
+          {"label": "CEO & Managing Director", "desc": "Strategische leiders die visie, groei en bedrijfstransformatie kunnen aandrijven."},
+          {"label": "COO & Chief Operating Officer", "desc": "Experts in operationele excellentie, schaalvergroting, procesoptimalisatie en strategische uitvoering."},
+          {"label": "CTO & Chief Technology Officer", "desc": "Tech-visionairs die architectuur, innovatie en technologie-roadmap kunnen definiëren."},
+          {"label": "CIO & Chief Information Officer", "desc": "Leiders van digitale transformatie, IT-infrastructuur, governance en systeemmodernisering."},
+          {"label": "CHRO & Chief Human Resources Officer", "desc": "Architecten van HR-strategie, bedrijfscultuur, talentacquisitie en organisatieontwikkeling."},
+          {"label": "CFO & Chief Financial Officer", "desc": "Experts in financiële strategie, fundraising, M&A, management control en financiële optimalisatie."}
+        ]
+      },
+      "executiveTech": {
+        "title": "Executive Tech",
+        "desc": "We plaatsen technische leiders die innovatie, beveiliging, data en AI aandrijven.",
+        "profiles": [
+          {"label": "Chief AI Officer & VP AI", "desc": "Leiders in kunstmatige intelligentie, machine learning, GenAI, data-gedreven strategie en AI-transformatie."},
+          {"label": "CISO & VP Security", "desc": "Experts in cybersecurity, AVG-naleving, risicobeheer, veerkracht en governance."},
+          {"label": "Chief Data Officer & VP Data", "desc": "Architecten van datastrategie: data engineering, analytics, governance, monetisatie en datacultuur."},
+          {"label": "Chief Product Officer & VP Product", "desc": "Tech-productvisionairs: roadmap, discovery, growth, product-led growth en go-to-market-strategie."},
+          {"label": "VP Engineering & Engineering Director", "desc": "Technische teamleiders: schaalvergroting, engineeringcultuur, delivery, architectuur en operationele excellentie."},
+          {"label": "VP Infrastructure & Head of Platform", "desc": "IT-infrastructuurleiders, cloud, DevOps, SRE, legacy-modernisering en developer experience."}
+        ]
+      },
+      "executiveMA": {
+        "title": "Executive M&A",
+        "desc": "We plaatsen leiders gespecialiseerd in fusies & overnames, due diligence en post-merger-integratie.",
+        "profiles": [
+          {"label": "VP M&A & Head of Corporate Development", "desc": "Experts in M&A-strategie, deal sourcing, transactiestructurering en acquisitie-uitvoering."},
+          {"label": "M&A Director & Transaction Lead", "desc": "Transactieleiders: waardering, onderhandeling, financiële en juridische due diligence, closing."},
+          {"label": "Head of Integration (PMI)", "desc": "Specialisten in post-merger-integratie: synergieën, procesharmonisatie, verandermanagement."},
+          {"label": "VP Strategy & Corporate Strategy Director", "desc": "Architecten van bedrijfsstrategie: anorganische groei, strategische partnerschappen, portfoliobeheer."}
+        ]
+      }
     },
     "hiring": {
       "title": "Ik ben aan het werven",

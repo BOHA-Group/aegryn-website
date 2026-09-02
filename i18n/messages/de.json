@@ -6885,15 +6885,51 @@
   },
   "talent": {
     "meta": {
-      "title": "Rekrutierung & Vermittlung | Aegryn Talent",
-      "desc": "Wir verbinden die besten Tech-Talente mit Unternehmen, die Europa transformieren. CTO, CISO, Head of AI, VP Engineering."
+      "title": "Executive Recruiting | Aegryn Talent",
+      "desc": "Wir vermitteln die Führungskräfte, die Unternehmen transformieren: Board Members, Tech Executives und M&A Executives. Spezialisierte Executive Search."
     },
     "hero": {
       "label": "Aegryn Talent",
-      "title": "Executive Tech Recruiting\nC-Level & VP",
-      "desc1": "Wir vermitteln Tech-Leader, die Unternehmen transformieren: CTO, CISO, Chief AI Officer, VP Engineering, VP Product, VP Data.",
-      "desc2": "Tech-Operatoren, keine HR-Berater. Nur Erfolgshonorar. 3-Monats-Garantie.",
+      "title": "Executive Recruiting\nBoard · Tech · M&A",
+      "desc1": "Wir vermitteln die Führungskräfte, die Unternehmen transformieren: Board Members (CEO, COO, CTO, CIO, CHRO), Tech Executives und M&A Executives.",
+      "desc2": "Operatoren, keine HR-Berater. Nur Erfolgshonorar. 3-Monats-Garantie.",
       "quote": "Schweiz & Europa • 30 Länder • 23 Branchen\nAntwort innerhalb 48h"
+    },
+    "pillars": {
+      "board": {
+        "title": "Board Members & C-Level",
+        "desc": "Wir vermitteln Vorstandsmitglieder und Führungskräfte, die Strategie definieren und Transformation vorantreiben.",
+        "profiles": [
+          {"label": "CEO & Managing Director", "desc": "Strategische Führer, die Vision, Wachstum und Unternehmenstransformation vorantreiben können."},
+          {"label": "COO & Chief Operating Officer", "desc": "Experten für operative Exzellenz, Skalierung, Prozessoptimierung und strategische Umsetzung."},
+          {"label": "CTO & Chief Technology Officer", "desc": "Tech-Visionäre, die Architektur, Innovation und Technologie-Roadmap definieren können."},
+          {"label": "CIO & Chief Information Officer", "desc": "Führer der digitalen Transformation, IT-Infrastruktur, Governance und Systemmodernisierung."},
+          {"label": "CHRO & Chief Human Resources Officer", "desc": "Architekten der HR-Strategie, Unternehmenskultur, Talentakquise und Organisationsentwicklung."},
+          {"label": "CFO & Chief Financial Officer", "desc": "Experten für Finanzstrategie, Fundraising, M&A, Controlling und Finanzoptimierung."}
+        ]
+      },
+      "executiveTech": {
+        "title": "Executive Tech",
+        "desc": "Wir vermitteln technische Führungskräfte, die Innovation, Sicherheit, Daten und KI vorantreiben.",
+        "profiles": [
+          {"label": "Chief AI Officer & VP AI", "desc": "Führer in künstlicher Intelligenz, Machine Learning, GenAI, datengetriebener Strategie und KI-Transformation."},
+          {"label": "CISO & VP Security", "desc": "Experten für Cybersicherheit, DSGVO-Konformität, Risikomanagement, Resilienz und Governance."},
+          {"label": "Chief Data Officer & VP Data", "desc": "Architekten der Datenstrategie: Data Engineering, Analytics, Governance, Monetarisierung und Datenkultur."},
+          {"label": "Chief Product Officer & VP Product", "desc": "Tech-Produktvisionäre: Roadmap, Discovery, Growth, Product-led Growth und Go-to-Market-Strategie."},
+          {"label": "VP Engineering & Engineering Director", "desc": "Technische Teamleiter: Skalierung, Engineering-Kultur, Delivery, Architektur und operative Exzellenz."},
+          {"label": "VP Infrastructure & Head of Platform", "desc": "IT-Infrastrukturleiter, Cloud, DevOps, SRE, Legacy-Modernisierung und Developer Experience."}
+        ]
+      },
+      "executiveMA": {
+        "title": "Executive M&A",
+        "desc": "Wir vermitteln Führungskräfte, die auf Fusionen & Übernahmen, Due Diligence und Post-Merger-Integration spezialisiert sind.",
+        "profiles": [
+          {"label": "VP M&A & Head of Corporate Development", "desc": "Experten für M&A-Strategie, Deal Sourcing, Transaktionsstrukturierung und Akquisitionsumsetzung."},
+          {"label": "M&A Director & Transaction Lead", "desc": "Transaktionsleiter: Bewertung, Verhandlung, finanzielle und rechtliche Due Diligence, Closing."},
+          {"label": "Head of Integration (PMI)", "desc": "Spezialisten für Post-Merger-Integration: Synergien, Prozessharmonisierung, Change Management."},
+          {"label": "VP Strategy & Corporate Strategy Director", "desc": "Architekten der Unternehmensstrategie: anorganisches Wachstum, strategische Partnerschaften, Portfolio-Management."}
+        ]
+      }
     },
     "hiring": {
       "title": "Ich stelle ein",
