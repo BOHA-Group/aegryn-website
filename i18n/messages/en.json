@@ -65,14 +65,15 @@
     "whoWeAre": "WHO WE ARE",
     "craftBuild": "Build",
     "craftBuildDesc": "Engineering durable tech assets",
-    "craftBuildAssets": "Proprietary assets",
-    "craftBuildEngineering": "Asset engineering",
+    "craftBuildAssets": "Sovereign Assets",
+    "craftBuildEngineering": "Custom Software",
     "craftSupport": "Support",
     "craftSupportDesc": "Strategy, Tech & M&A Advisory — All industries",
     "craftSupportStrategy": "Strategy Consulting",
     "craftSupportTechnology": "Technology Consulting",
     "craftSupportMA": "M&A Consulting",
     "craftSupportAdvisory": "Tech & AI Advisory",
+    "craftSupportNetwork": "Partner & Expert Network",
     "craftSupportAlliances": "Partner network",
     "craftSupportExperts": "Expert network",
     "craftTransact": "Transact",
@@ -3730,6 +3731,56 @@
       "sequestre": "Escrow",
       "technique": "Technical",
       "assurance": "Insurance"
+    }
+  },
+  "network": {
+    "meta": {
+      "title": "Partner & Expert Network | Aegryn",
+      "desc": "The Aegryn network: trusted partners and mobilisable experts for strategy, technology and M&A advisory across Switzerland and Europe."
+    },
+    "hero": {
+      "label": "Aegryn Network",
+      "title": "Trusted partners\n& experts.",
+      "desc": "Aegryn relies on a curated network of partners and experts to reinforce every dimension of our advisory offering: strategy, technology, transactions.",
+      "stat1": "Qualified partners",
+      "stat2": "Mobilisable experts",
+      "stat3": "Switzerland & Europe"
+    },
+    "partners": {
+      "label": "Partners",
+      "title": "Companies that trust us.",
+      "desc": "A network of partners and companies with whom Aegryn collaborates on its assignments. Rigorous selection. No public categorisation.",
+      "note": "Logos represent active partners. Aegryn does not disclose individual partnership terms."
+    },
+    "experts": {
+      "label": "Expert Network",
+      "title": "The expertise mobilised\non every assignment.",
+      "desc": "The Aegryn expert network combines internal capabilities (strategy, technology, M&A advisory) with those of our extended partners. Each profile is mobilised based on the specific needs of the assignment.",
+      "profilesLabel": "Illustrative profiles",
+      "comingSoonTitle": "Directory under construction",
+      "comingSoonDesc": "Individual expert profiles will be published progressively. This section illustrates the types of profiles mobilisable across Aegryn advisory dimensions."
+    },
+    "filters": {
+      "all": "All dimensions",
+      "strategy": "Strategy Advisory",
+      "technology": "Technology Advisory",
+      "ma": "M&A Advisory"
+    },
+    "domains": {
+      "strategy": "Strategy",
+      "strategyDesc": "Transformation, governance, positioning and strategic steering.",
+      "technology": "Technology",
+      "technologyDesc": "Architecture, cybersecurity, AI, digital sovereignty and tech compliance.",
+      "ma": "Mergers & Acquisitions",
+      "maDesc": "Structuring, due diligence, valuation, closing and post-deal integration.",
+      "security": "Cybersecurity",
+      "securityDesc": "Audit, NIS2/DORA/ISO 27001 compliance, risk management and cyber governance.",
+      "compliance": "Compliance & Governance",
+      "complianceDesc": "AI Act, GDPR, Swiss FADP, internal audit and data processing registers."
+    },
+    "cta": {
+      "title": "Join the Aegryn network.",
+      "button": "Become a partner"
     }
   },
   "build_service": {

@@ -24,9 +24,10 @@ const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportStrategy',    href: '/advisory/strategy' as LinkHref },
   { labelKey: 'craftSupportTechnology',  href: '/advisory/technology' as LinkHref },
   { labelKey: 'craftSupportMA',          href: '/advisory/ma' as LinkHref },
-  { labelKey: 'craftSupportAdvisory',    href: '/advisory' },
-  { labelKey: 'craftSupportAlliances',   href: '/alliances' },
-  // MASKED: { labelKey: 'craftSupportExperts', href: '/experts' }, // Backup: réactiver si besoin
+  { labelKey: 'craftSupportNetwork',     href: '/network' as LinkHref },
+  // MASKED: { labelKey: 'craftSupportAdvisory', href: '/advisory' }, // doublon de Conseil en Technologie
+  // MASKED: { labelKey: 'craftSupportAlliances', href: '/alliances' }, // fusionné dans /network
+  // MASKED: { labelKey: 'craftSupportExperts', href: '/experts' }, // fusionné dans /network
 ]
 
 // Nos métiers - Transaction M&A section

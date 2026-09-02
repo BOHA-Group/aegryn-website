@@ -65,14 +65,15 @@
     "whoWeAre": "CHI SIAMO",
     "craftBuild": "Costruire",
     "craftBuildDesc": "Ingegneria di asset tech durevoli",
-    "craftBuildAssets": "Asset proprietari",
-    "craftBuildEngineering": "Ingegneria degli asset",
+    "craftBuildAssets": "Asset sovrani",
+    "craftBuildEngineering": "Software su misura",
     "craftSupport": "Accompagnare",
     "craftSupportDesc": "Consulenza in Strategia, Tech & M&A — Tutti i settori",
     "craftSupportStrategy": "Consulenza Strategica",
     "craftSupportTechnology": "Consulenza Tecnologica",
     "craftSupportMA": "Consulenza M&A",
-    "craftSupportAdvisory": "Advisory Tech & IA",
+    "craftSupportAdvisory": "Consulenza Tech & IA",
+    "craftSupportNetwork": "Rete di partner ed esperti",
     "craftSupportAlliances": "Rete di partner",
     "craftSupportExperts": "Rete di esperti",
     "craftTransact": "Trasmettere",
@@ -3635,6 +3636,56 @@
       "sequestre": "Deposito",
       "technique": "Tecnico",
       "assurance": "Assicurazione"
+    }
+  },
+  "network": {
+    "meta": {
+      "title": "Rete di partner ed esperti | Aegryn",
+      "desc": "La rete Aegryn: partner di fiducia ed esperti mobilizzabili per consulenza in strategia, tecnologia e M&A in Svizzera e in Europa."
+    },
+    "hero": {
+      "label": "Rete Aegryn",
+      "title": "Partner ed esperti\ndi fiducia.",
+      "desc": "Aegryn si avvale di una rete selezionata di partner ed esperti per rafforzare ogni dimensione della nostra offerta di consulenza: strategia, tecnologia, transazioni.",
+      "stat1": "Partner qualificati",
+      "stat2": "Esperti mobilizzabili",
+      "stat3": "Svizzera & Europa"
+    },
+    "partners": {
+      "label": "Partner",
+      "title": "Aziende che si fidano di noi.",
+      "desc": "Una rete di partner e aziende con cui Aegryn collabora nelle sue missioni. Selezione rigorosa. Nessuna categorizzazione pubblica.",
+      "note": "I loghi rappresentano i partner attivi. Aegryn non divulga i termini individuali delle partnership."
+    },
+    "experts": {
+      "label": "Rete di esperti",
+      "title": "Le competenze mobilizzate\nper ogni missione.",
+      "desc": "La rete di esperti Aegryn combina le capacità interne (consulenza in strategia, tecnologia e M&A) con quelle dei nostri partner estesi. Ogni profilo viene mobilizzato in base alle esigenze specifiche del dossier.",
+      "profilesLabel": "Profili illustrativi",
+      "comingSoonTitle": "Registro in costruzione",
+      "comingSoonDesc": "I profili di esperti individuali saranno pubblicati progressivamente. Questa sezione illustra i tipi di profili mobilizzabili nelle dimensioni di consulenza Aegryn."
+    },
+    "filters": {
+      "all": "Tutte le dimensioni",
+      "strategy": "Consulenza strategica",
+      "technology": "Consulenza tecnologica",
+      "ma": "Consulenza M&A"
+    },
+    "domains": {
+      "strategy": "Strategia",
+      "strategyDesc": "Trasformazione, governance, posizionamento e direzione strategica.",
+      "technology": "Tecnologia",
+      "technologyDesc": "Architettura, cybersecurity, IA, sovranità digitale e conformità tecnologica.",
+      "ma": "Fusioni e acquisizioni",
+      "maDesc": "Strutturazione, due diligence, valutazione, closing e integrazione post-deal.",
+      "security": "Cybersecurity",
+      "securityDesc": "Audit, conformità NIS2/DORA/ISO 27001, gestione del rischio e governance cyber.",
+      "compliance": "Conformità e governance",
+      "complianceDesc": "AI Act, GDPR, LPD svizzera, audit interno e registro dei trattamenti."
+    },
+    "cta": {
+      "title": "Unisciti alla rete Aegryn.",
+      "button": "Diventare partner"
     }
   },
   "build_service": {
