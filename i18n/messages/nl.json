@@ -65,7 +65,7 @@
     "whoWeAre": "WIE WE ZIJN",
     "craftBuild": "Bouwen",
     "craftBuildDesc": "Engineering van duurzame tech-assets",
-    "craftBuildAssets": "Soevereine assets",
+    "craftBuildAssets": "Eigen assets",
     "craftBuildEngineering": "Maatwerksoftware",
     "craftSupport": "Begeleiden",
     "craftSupportDesc": "Strategie-, Tech- & M&A-advies — Alle sectoren",
@@ -175,7 +175,7 @@
     "page": {
       "label": "Aegryn Ecosysteem",
       "title": "Zes eigen assets.\nÉén gedeelde visie.",
-      "desc": "Elk Aegryn-asset wordt intern ontworpen, gebouwd en beheerd. Volledig eigendom, absolute soevereiniteit.",
+      "desc": "Elk Aegryn-asset wordt intern ontworpen, gebouwd en beheerd. Volledig eigendom, gegarandeerde onafhankelijkheid, duurzaamheid ingebakken in de code.",
       "meta": {
         "title": "Aegryn Assets, Eigen ecosysteem",
         "desc": "Ontdek de propriëtaire assets van Aegryn: subblink, neediu, primiom, movtoo en hobconnect, ontworpen om certificeerbaar en overdraagbaar te zijn."
@@ -470,8 +470,8 @@
   "build": {
     "hero": {
       "label": "Aegryn Portfolio",
-      "title": "Zes propriëtaire assets.\nEén gemeenschappelijke visie.",
-      "desc": "Elk Aegryn-asset is van meet af aan ontworpen om certificeerbaar en overdraagbaar te zijn, geregistreerd IP, propriëtaire codebase, gedocumenteerde stack."
+      "title": "Zes eigen assets.\nEén gedeelde visie.",
+      "desc": "Elk Aegryn-asset is vanaf het begin ontworpen om certificeerbaar en overdraagbaar te zijn: geregistreerd IP, gedocumenteerde codebase, beheerste stack."
     },
     "categories": {
       "ai": "AI & Protocollen",
@@ -487,8 +487,8 @@
     "comingSoon": "Binnenkort beschikbaar",
     "philosophy": {
       "label": "Onze filosofie",
-      "title": "Eigendom. Soeverein. Duurzaam.",
-      "desc": "We bouwen geen MVP's. We verkopen geen minderheidsbelangen aan VC's. Elk Aegryn-asset is ontworpen voor volledig eigendom en soevereine exploitatie."
+      "title": "Eigen. Onafhankelijk. Duurzaam.",
+      "desc": "We bouwen geen MVPs. We verkopen geen minderheidsbelangen aan VC's. Elk Aegryn-asset is ontworpen om volledig in eigendom te zijn, onafhankelijk te worden beheerd en aan volgende generaties te worden doorgegeven."
     },
     "pillars": {
       "proprietary": {
@@ -497,7 +497,7 @@
       },
       "sovereign": {
         "stat": "CH",
-        "label": "Soevereiniteit"
+        "label": "Onafhankelijkheid"
       },
       "durable": {
         "stat": "∞",
@@ -508,11 +508,15 @@
       "label": "Aegryn Advisory",
       "text": "Heeft uw asset Grade A nog niet bereikt?",
       "button": "Ontdek Advisory"
+    },
+    "sovereignty": {
+      "title": "Software met beheerste code",
+      "desc": "De echte uitdaging van de cloud ligt niet in de locatie van de machines: het gaat om de software. Wij maken software met beheerste code, inzetbaar op fysiek in Europa gevestigde infrastructuur, en biedt echte technologische onafhankelijkheid. Voor onze zakelijke en institutionele klanten ontwerpen, onderhouden of herbouwen we maatwerksoftware vanaf nul — een sterk groeiende vraag te midden van uitdagingen op het gebied van veiligheid, compliance en onafhankelijkheid."
     }
   },
   "whatwedo": {
     "label": "Onze Overtuiging",
-    "conviction": "De Europese markt voor tech-assets heeft certificering, discretie en betrouwbare data nodig.\nWij bouwen alle drie.",
+    "conviction": "De Europese techmarkt heeft strategisch advies nodig, software met volledig eigendom, en onafhankelijke certificering.\nWij bouwen alle drie.",
     "items": [
       {
         "num": "01",
@@ -521,8 +525,8 @@
       },
       {
         "num": "02",
-        "title": "Discretie werd opgeofferd.",
-        "desc": "De beste overdrachten vinden niet publiekelijk plaats. Ze vinden plaats in een besloten kring, tussen partijen die weten wat ze zoeken. Aegryn is die kring."
+        "title": "Technologische onafhankelijkheid ontbrak.",
+        "desc": "De echte uitdaging van de cloud ligt niet in de locatie van de machines: het gaat om de software. Aegryn ontwerpt Europese software met volledig eigendom, inzetbaar op lokale infrastructuur, voor ondernemingen en instellingen. Veiligheid, compliance, onafhankelijkheid."
       },
       {
         "num": "03",
@@ -760,7 +764,7 @@
       "title": "Drie disciplines.\nEén marktstandaard.",
       "create": {
         "title": "ONTWERP",
-        "desc": "Propriëtaire, certificeerbare, overdraagbare tech-assets. Geregistreerd IP, gedocumenteerde codebase, soevereine stack."
+        "desc": "Eigen, certificeerbare, overdraagbare tech-assets. Geregistreerd IP, gedocumenteerde codebase, beheerste stack."
       },
       "simplify": {
         "title": "CERTIFICERING",
@@ -787,7 +791,7 @@
       },
       "sovereignty": {
         "label": "03",
-        "title": "Soevereiniteit",
+        "title": "Structurele onafhankelijkheid",
         "desc": "Onze assets, onze infrastructuur, onze data. Geen kritieke externe afhankelijkheden. Zwitsers recht. Europese hosting. Volledige controle."
       },
       "independence": {
@@ -913,7 +917,7 @@
         },
         "sovereignty": {
           "desc": "Wij bouwen onafhankelijke assets. Geen vendor lock-in, geen afhankelijkheid.",
-          "title": "Soevereiniteit"
+          "title": "Onafhankelijkheid"
         },
         "trust": {
           "desc": "Transparantie naar klanten, partners en binnen het team.",
@@ -1319,7 +1323,7 @@
         },
         {
           "title": "Data Engineering & Dataarchitectuur",
-          "desc": "Datamodellering, data warehouse, data lake, datagovernance en -kwaliteit, portabiliteit en soevereiniteit van eigen datasets."
+          "desc": "Datamodellering, data warehouse, data lake, datagovernance en -kwaliteit, portabiliteit en beheersing van eigen datasets."
         },
         {
           "title": "Design & Gebruikerservaring",
@@ -3837,7 +3841,7 @@
       "strategy": "Strategie",
       "strategyDesc": "Transformatie, governance, positionering en strategische sturing.",
       "technology": "Technologie",
-      "technologyDesc": "Architectuur, cyberveiligheid, AI, digitale soevereiniteit en technische compliance.",
+      "technologyDesc": "Architectuur, cyberveiligheid, AI, digitale onafhankelijkheid en technische compliance.",
       "ma": "Fusies en overnames",
       "maDesc": "Structurering, due diligence, waardering, closing en post-deal integratie.",
       "security": "Cyberbeveiliging",
@@ -3870,11 +3874,11 @@
       "title": "Fixed-price digital asset design - Aegryn",
       "desc": "Fixed-price digital assets: B2B SaaS, AI, mobile apps. Full documentation, certification-ready. Zero overruns, valuable from day one."
     },
-    "label": "Engineering — Sovereign Software",
+    "label": "Engineering — Maatwerksoftware",
     "title": "Aegryn builds the software\nof your operations.",
     "desc": "From SMEs to large groups, in Switzerland and Europe: Aegryn designs, deploys and maintains custom business software. No dependency on major vendors. No generalist SaaS subscriptions. Sovereign, controlled code, integrable into your infrastructure.",
     "whySection": {
-      "label": "Why sovereign software",
+      "label": "Waarom maatwerksoftware",
       "title": "What the standard market cannot offer you.",
       "desc": "46.7% of European companies use the cloud. 39.9% use data analytics. Nearly 20% use AI in 2026. The need for quality, sovereign, vendor-lock-in-free software is structural. The European Commission acknowledges in 2026 that dependencies on third-country providers remain significant in cloud and cybersecurity. Switzerland has placed digital sovereignty among the priorities of its 2026 digital strategy.",
       "points": [

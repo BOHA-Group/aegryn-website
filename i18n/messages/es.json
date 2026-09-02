@@ -65,7 +65,7 @@
     "whoWeAre": "QUIÉNES SOMOS",
     "craftBuild": "Construir",
     "craftBuildDesc": "Ingeniería de activos tech duraderos",
-    "craftBuildAssets": "Activos soberanos",
+    "craftBuildAssets": "Activos propietarios",
     "craftBuildEngineering": "Software a medida",
     "craftSupport": "Acompañar",
     "craftSupportDesc": "Consultoría en Estrategia, Tech & M&A — Todas las industrias",
@@ -175,7 +175,7 @@
     "page": {
       "label": "Ecosistema Aegryn",
       "title": "Seis activos propietarios.\nUna visión compartida.",
-      "desc": "Cada activo Aegryn se diseña, construye y opera internamente. Propiedad total, soberanía absoluta.",
+      "desc": "Cada activo de Aegryn está diseñado, construido y operado internamente. Propiedad total, independencia garantizada, durabilidad inscrita en el código.",
       "meta": {
         "title": "Activos Aegryn | Ecosistema propio",
         "desc": "Descubra los activos propietarios de Aegryn: subblink, neediu, primiom, movtoo y hobconnect, diseñados para ser certificables y transferibles."
@@ -268,18 +268,45 @@
           "title": "Nuestro enfoque",
           "desc": "No entregamos diapositivas. Co-construimos con sus equipos un plan estratégico anclado en la realidad de su mercado, capacidades y restricciones. Cada recomendación se prueba, cuantifica y acompaña de un plan de ejecución detallado.",
           "steps": [
-            {"label": "Diagnóstico estratégico", "desc": "Análisis de su posicionamiento competitivo, ventajas diferenciadoras y tendencias del mercado. Identificación de oportunidades de crecimiento y riesgos estructurales."},
-            {"label": "Definición de visión", "desc": "Co-construcción de su visión estratégica a 3-5 años, alineada con sus ambiciones y capacidades. Priorización de apuestas estratégicas de alto impacto."},
-            {"label": "Hoja de ruta", "desc": "Desarrollo de un plan de ejecución detallado con hitos, KPIs, asignación de recursos y gobernanza. Identificación de quick wins y transformaciones estructurales."},
-            {"label": "Acompañamiento ejecución", "desc": "Seguimiento de implementación, ajustes tácticos, resolución de bloqueos operativos. Transferencia de competencias a sus equipos para autonomía."}
+            {
+              "label": "Diagnóstico estratégico",
+              "desc": "Análisis de su posicionamiento competitivo, ventajas diferenciadoras y tendencias del mercado. Identificación de oportunidades de crecimiento y riesgos estructurales."
+            },
+            {
+              "label": "Definición de visión",
+              "desc": "Co-construcción de su visión estratégica a 3-5 años, alineada con sus ambiciones y capacidades. Priorización de apuestas estratégicas de alto impacto."
+            },
+            {
+              "label": "Hoja de ruta",
+              "desc": "Desarrollo de un plan de ejecución detallado con hitos, KPIs, asignación de recursos y gobernanza. Identificación de quick wins y transformaciones estructurales."
+            },
+            {
+              "label": "Acompañamiento ejecución",
+              "desc": "Seguimiento de implementación, ajustes tácticos, resolución de bloqueos operativos. Transferencia de competencias a sus equipos para autonomía."
+            }
           ]
         },
         "dimensions": [
-          {"label": "Estrategia internacional", "desc": "Expansión geográfica, implantación de filiales, adaptación a mercados locales y alianzas estratégicas."},
-          {"label": "Transformación empresarial", "desc": "Rediseño del modelo operativo, digitalización de procesos, gestión del cambio y alineación organizacional."},
-          {"label": "Optimización de costes", "desc": "Análisis de estructura de costes, identificación de palancas de eficiencia, reestructuración y mejora de rentabilidad."},
-          {"label": "Innovación y crecimiento", "desc": "Estrategia de producto, nuevos mercados, diversificación, alianzas tecnológicas y modelos de ingresos."},
-          {"label": "Talento y organización", "desc": "Diseño organizacional, estrategia de RRHH, cultura empresarial, retención de talento y liderazgo."}
+          {
+            "label": "Estrategia internacional",
+            "desc": "Expansión geográfica, implantación de filiales, adaptación a mercados locales y alianzas estratégicas."
+          },
+          {
+            "label": "Transformación empresarial",
+            "desc": "Rediseño del modelo operativo, digitalización de procesos, gestión del cambio y alineación organizacional."
+          },
+          {
+            "label": "Optimización de costes",
+            "desc": "Análisis de estructura de costes, identificación de palancas de eficiencia, reestructuración y mejora de rentabilidad."
+          },
+          {
+            "label": "Innovación y crecimiento",
+            "desc": "Estrategia de producto, nuevos mercados, diversificación, alianzas tecnológicas y modelos de ingresos."
+          },
+          {
+            "label": "Talento y organización",
+            "desc": "Diseño organizacional, estrategia de RRHH, cultura empresarial, retención de talento y liderazgo."
+          }
         ]
       },
       "technology": {
@@ -293,19 +320,49 @@
           "title": "Nuestro enfoque",
           "desc": "No hacemos estrategia tech en silos. Cada recomendación está anclada en su realidad operativa: arquitectura existente, deuda técnica, competencias internas, restricciones presupuestarias. Privilegiamos enfoques incrementales que generan valor rápidamente mientras construyen fundamentos a largo plazo.",
           "steps": [
-            {"label": "Diagnóstico técnico", "desc": "Auditoría de su infraestructura, aplicaciones, datos y procesos. Identificación de deuda técnica, riesgos cyber y oportunidades de optimización."},
-            {"label": "Visión y hoja de ruta", "desc": "Definición de su arquitectura objetivo y priorización de proyectos. Equilibrio entre quick wins (6-12 meses) y transformaciones estructurales (18-36 meses)."},
-            {"label": "Proof of Concept", "desc": "Validación técnica y de negocio en casos de uso prioritarios. Enfoque ágil: build, test, learn, iterate. Reducción de riesgos antes de industrialización."},
-            {"label": "Industrialización y transferencia", "desc": "Despliegue a escala, integración en procesos existentes, formación de equipos. Autonomía progresiva para sostener logros."}
+            {
+              "label": "Diagnóstico técnico",
+              "desc": "Auditoría de su infraestructura, aplicaciones, datos y procesos. Identificación de deuda técnica, riesgos cyber y oportunidades de optimización."
+            },
+            {
+              "label": "Visión y hoja de ruta",
+              "desc": "Definición de su arquitectura objetivo y priorización de proyectos. Equilibrio entre quick wins (6-12 meses) y transformaciones estructurales (18-36 meses)."
+            },
+            {
+              "label": "Proof of Concept",
+              "desc": "Validación técnica y de negocio en casos de uso prioritarios. Enfoque ágil: build, test, learn, iterate. Reducción de riesgos antes de industrialización."
+            },
+            {
+              "label": "Industrialización y transferencia",
+              "desc": "Despliegue a escala, integración en procesos existentes, formación de equipos. Autonomía progresiva para sostener logros."
+            }
           ]
         },
         "dimensions": [
-          {"label": "Transformación digital", "desc": "Estrategia digital, renovación de sistemas legacy, modernización de aplicaciones y experiencia de usuario."},
-          {"label": "Data & Analytics", "desc": "Arquitectura de datos, gobernanza, data lake/warehouse, BI, analítica avanzada y monetización de datos."},
-          {"label": "Inteligencia Artificial", "desc": "Estrategia IA, casos de uso, MLOps, IA generativa, cumplimiento EU AI Act y auditoría de modelos."},
-          {"label": "Ciberseguridad", "desc": "Auditoría de seguridad, pentest, cumplimiento NIS2/ISO27001, gobernanza cyber y resiliencia."},
-          {"label": "Cloud e Infraestructura", "desc": "Migración cloud, arquitectura multi-cloud, DevOps, SRE, escalabilidad y optimización de costes cloud."},
-          {"label": "Blockchain & Web3", "desc": "Estrategia blockchain, tokenización, smart contracts, DeFi y cumplimiento regulatorio."}
+          {
+            "label": "Transformación digital",
+            "desc": "Estrategia digital, renovación de sistemas legacy, modernización de aplicaciones y experiencia de usuario."
+          },
+          {
+            "label": "Data & Analytics",
+            "desc": "Arquitectura de datos, gobernanza, data lake/warehouse, BI, analítica avanzada y monetización de datos."
+          },
+          {
+            "label": "Inteligencia Artificial",
+            "desc": "Estrategia IA, casos de uso, MLOps, IA generativa, cumplimiento EU AI Act y auditoría de modelos."
+          },
+          {
+            "label": "Ciberseguridad",
+            "desc": "Auditoría de seguridad, pentest, cumplimiento NIS2/ISO27001, gobernanza cyber y resiliencia."
+          },
+          {
+            "label": "Cloud e Infraestructura",
+            "desc": "Migración cloud, arquitectura multi-cloud, DevOps, SRE, escalabilidad y optimización de costes cloud."
+          },
+          {
+            "label": "Blockchain & Web3",
+            "desc": "Estrategia blockchain, tokenización, smart contracts, DeFi y cumplimiento regulatorio."
+          }
         ]
       },
       "ma": {
@@ -319,23 +376,53 @@
           "title": "Nuestro enfoque",
           "desc": "Tratamos cada adquisición como una oportunidad de transformación. Más allá de la due diligence técnica clásica, evaluamos cómo la adquisición puede acelerar su modernización IT, enriquecer sus capacidades data/IA, o servir como plataforma para consolidar su mercado. Nuestra experiencia cubre todo el ciclo M&A.",
           "steps": [
-            {"label": "Due diligence tech", "desc": "Auditoría técnica profunda: arquitectura, deuda técnica, seguridad, cumplimiento, IP. Evaluación de riesgos y oportunidades. Cuantificación de sinergias tecnológicas."},
-            {"label": "Technology blueprint", "desc": "Definición de arquitectura objetivo post-adquisición. Plan de integración IT detallado: sistemas, datos, procesos. Identificación de quick wins y proyectos estructurales."},
-            {"label": "Integration Management Office", "desc": "Dirección de integración IT: gobernanza, planificación, gestión de riesgos, coordinación de equipos. Seguimiento de hitos críticos (Day 1, Day 100, sinergias)."},
-            {"label": "Value capture & transformation", "desc": "Realización de sinergias tecnológicas. Modernización acelerada de sistemas legacy. Transformación digital post-adquisición para maximizar creación de valor."}
+            {
+              "label": "Due diligence tech",
+              "desc": "Auditoría técnica profunda: arquitectura, deuda técnica, seguridad, cumplimiento, IP. Evaluación de riesgos y oportunidades. Cuantificación de sinergias tecnológicas."
+            },
+            {
+              "label": "Technology blueprint",
+              "desc": "Definición de arquitectura objetivo post-adquisición. Plan de integración IT detallado: sistemas, datos, procesos. Identificación de quick wins y proyectos estructurales."
+            },
+            {
+              "label": "Integration Management Office",
+              "desc": "Dirección de integración IT: gobernanza, planificación, gestión de riesgos, coordinación de equipos. Seguimiento de hitos críticos (Day 1, Day 100, sinergias)."
+            },
+            {
+              "label": "Value capture & transformation",
+              "desc": "Realización de sinergias tecnológicas. Modernización acelerada de sistemas legacy. Transformación digital post-adquisición para maximizar creación de valor."
+            }
           ]
         },
         "dimensions": [
-          {"label": "Advisory Transacciones", "desc": "Estructuración de cesiones, adquisiciones, levantamiento de fondos, valoración de activos tech y negociación."},
-          {"label": "Due Diligence Tech", "desc": "Auditoría técnica, evaluación de deuda técnica, análisis de propiedad intelectual y riesgos."},
-          {"label": "Integración Post-Fusión (PMI)", "desc": "Integración de sistemas IT, armonización de procesos, sinergias tecnológicas y gestión del cambio."},
-          {"label": "Carve-out & Spin-off", "desc": "Separación de activos, extracción de unidades de negocio, acuerdos de servicios de transición y autonomización IT."}
+          {
+            "label": "Advisory Transacciones",
+            "desc": "Estructuración de cesiones, adquisiciones, levantamiento de fondos, valoración de activos tech y negociación."
+          },
+          {
+            "label": "Due Diligence Tech",
+            "desc": "Auditoría técnica, evaluación de deuda técnica, análisis de propiedad intelectual y riesgos."
+          },
+          {
+            "label": "Integración Post-Fusión (PMI)",
+            "desc": "Integración de sistemas IT, armonización de procesos, sinergias tecnológicas y gestión del cambio."
+          },
+          {
+            "label": "Carve-out & Spin-off",
+            "desc": "Separación de activos, extracción de unidades de negocio, acuerdos de servicios de transición y autonomización IT."
+          }
         ]
       }
     },
     "network": {
-      "partners": {"title": "Red de Socios", "desc": "Colaboramos con una red seleccionada de empresas socias para ampliar nuestra capacidad de intervención en misiones complejas."},
-      "experts": {"title": "Red de Expertos", "desc": "Movilizamos una red de expertos independientes (abogados, contables, asesores fiscales, notarios) para completar nuestras misiones según las necesidades específicas de cada proyecto."}
+      "partners": {
+        "title": "Red de Socios",
+        "desc": "Colaboramos con una red seleccionada de empresas socias para ampliar nuestra capacidad de intervención en misiones complejas."
+      },
+      "experts": {
+        "title": "Red de Expertos",
+        "desc": "Movilizamos una red de expertos independientes (abogados, contables, asesores fiscales, notarios) para completar nuestras misiones según las necesidades específicas de cada proyecto."
+      }
     },
     "approach": {
       "title": "Un protocolo riguroso, no una promesa.",
@@ -363,9 +450,18 @@
       "title": "Tres dimensiones complementarias en un mercado en consolidación",
       "desc": "El mercado tech europeo atraviesa una transformación estructural: la tecnología ya no es una ventaja diferenciadora, sino un requisito de supervivencia. En este contexto, estrategia, tecnología y M&A ya no son disciplinas aisladas — forman un tríptico indisociable para los líderes que quieren crecer.",
       "pillars": [
-        {"label": "Estrategia: definir dónde jugar", "desc": "Ante la fragmentación del mercado europeo y la aceleración tecnológica, los líderes deben tomar decisiones radicales: qué mercados abordar, qué capacidades desarrollar internamente, qué adquisiciones apuntar para cerrar brechas. La estrategia define la visión, pero sin hoja de ruta tecnológica ni plan M&A, queda en letra muerta."},
-        {"label": "Tecnología: construir la ventaja", "desc": "La tecnología se ha convertido en la principal palanca de diferenciación: experiencia del cliente, eficiencia operativa, capacidad de innovación. Pero el 70% de las transformaciones digitales fracasan por falta de alineación estratégica. Una visión tech desconectada de la estrategia de negocio genera deuda técnica e inversiones perdidas."},
-        {"label": "M&A: acelerar por consolidación", "desc": "El crecimiento orgánico ya no es suficiente. Los líderes tech europeos consolidan sus mercados mediante adquisiciones para ganar masa crítica, adquirir talentos escasos o acelerar su transformación digital. Pero sin due diligence tech rigurosa y plan de integración IT, las adquisiciones destruyen más valor del que crean."}
+        {
+          "label": "Estrategia: definir dónde jugar",
+          "desc": "Ante la fragmentación del mercado europeo y la aceleración tecnológica, los líderes deben tomar decisiones radicales: qué mercados abordar, qué capacidades desarrollar internamente, qué adquisiciones apuntar para cerrar brechas. La estrategia define la visión, pero sin hoja de ruta tecnológica ni plan M&A, queda en letra muerta."
+        },
+        {
+          "label": "Tecnología: construir la ventaja",
+          "desc": "La tecnología se ha convertido en la principal palanca de diferenciación: experiencia del cliente, eficiencia operativa, capacidad de innovación. Pero el 70% de las transformaciones digitales fracasan por falta de alineación estratégica. Una visión tech desconectada de la estrategia de negocio genera deuda técnica e inversiones perdidas."
+        },
+        {
+          "label": "M&A: acelerar por consolidación",
+          "desc": "El crecimiento orgánico ya no es suficiente. Los líderes tech europeos consolidan sus mercados mediante adquisiciones para ganar masa crítica, adquirir talentos escasos o acelerar su transformación digital. Pero sin due diligence tech rigurosa y plan de integración IT, las adquisiciones destruyen más valor del que crean."
+        }
       ],
       "conclusion": "Aegryn Advisory interviene en la intersección de estas tres dimensiones. Ayudamos a los líderes tech a definir una estrategia de crecimiento coherente, construir las capacidades tecnológicas para ejecutarla e identificar las adquisiciones que aceleran el plan sin crear deuda técnica. Un enfoque integrado para un mercado que ya no perdona los silos."
     },
@@ -375,7 +471,7 @@
     "hero": {
       "label": "Portafolio Aegryn",
       "title": "Seis activos propietarios.\nUna visión común.",
-      "desc": "Cada activo Aegryn está diseñado desde el origen para ser certificable y transferible, IP registrada, codebase propietaria, stack documentada."
+      "desc": "Cada activo de Aegryn está diseñado desde el origen para ser certificable y transferible: IP registrada, codebase documentada, stack dominado."
     },
     "categories": {
       "ai": "IA & Protocolos",
@@ -391,8 +487,8 @@
     "comingSoon": "Próximamente",
     "philosophy": {
       "label": "Nuestra filosofía",
-      "title": "Propietario. Soberano. Duradero.",
-      "desc": "No construimos MVPs. No vendemos participaciones minoritarias a VCs. Cada activo Aegryn está diseñado para ser totalmente propio y operado soberanamente."
+      "title": "Propietario. Independiente. Duradero.",
+      "desc": "No construimos MVPs. No vendemos participaciones minoritarias a VCs. Cada activo de Aegryn está diseñado para ser poseído en su totalidad, operado de forma independiente y transmitido a las generaciones futuras."
     },
     "pillars": {
       "proprietary": {
@@ -401,7 +497,7 @@
       },
       "sovereign": {
         "stat": "CH",
-        "label": "Soberanía"
+        "label": "Independencia"
       },
       "durable": {
         "stat": "∞",
@@ -412,11 +508,15 @@
       "label": "Aegryn Advisory",
       "text": "¿Su activo aún no ha alcanzado el Grade A?",
       "button": "Descubrir Advisory"
+    },
+    "sovereignty": {
+      "title": "Software con código controlado",
+      "desc": "El verdadero reto de la nube no está en la localización de las máquinas: está en el software. Creamos software con código controlado, desplegable en infraestructuras físicamente localizadas en Europa, ofreciendo una verdadera independencia tecnológica. Para nuestros clientes empresariales e institucionales, diseñamos, mantenemos o reconstruimos software a medida desde cero, respondiendo a una demanda en fuerte crecimiento ante los retos de seguridad, cumplimiento e independencia."
     }
   },
   "whatwedo": {
     "label": "Nuestra Convicción",
-    "conviction": "El mercado europeo de activos tech necesita certificación, discreción y datos fiables.\nEstamos construyendo los tres.",
+    "conviction": "El mercado tech europeo necesita consultoría estratégica, software de propiedad total, y certificación independiente.\nNosotros construimos los tres.",
     "items": [
       {
         "num": "01",
@@ -425,8 +525,8 @@
       },
       {
         "num": "02",
-        "title": "La discreción era sacrificada.",
-        "desc": "Las mejores cesiones no se hacen en público. Se hacen en un círculo cerrado, entre partes que saben lo que buscan. Aegryn es ese círculo."
+        "title": "La independencia tecnológica faltaba.",
+        "desc": "El verdadero reto de la nube no está en la localización de las máquinas: está en el software. Aegryn diseña software europeo de propiedad total, desplegable en infraestructuras locales, para empresas e instituciones. Seguridad, conformidad, independencia."
       },
       {
         "num": "03",
@@ -664,7 +764,7 @@
       "title": "Tres disciplinas.\nUn estándar de mercado.",
       "create": {
         "title": "CONCEPCIÓN",
-        "desc": "Activos tech propietarios, certificables, transferibles. IP registrada, codebase documentada, stack soberana."
+        "desc": "Activos tech propietarios, certificables, transferibles. IP registrada, codebase documentada, stack dominado."
       },
       "simplify": {
         "title": "CERTIFICACIÓN",
@@ -691,7 +791,7 @@
       },
       "sovereignty": {
         "label": "03",
-        "title": "Soberanía",
+        "title": "Independencia estructural",
         "desc": "Nuestros activos, nuestra infraestructura, nuestros datos. Sin dependencias externas críticas. Derecho suizo. Alojamiento europeo. Control total."
       },
       "independence": {
@@ -817,7 +917,7 @@
         },
         "sovereignty": {
           "desc": "Construimos activos independientes. Sin vendor lock-in, sin dependencias.",
-          "title": "Soberanía"
+          "title": "Independencia"
         },
         "trust": {
           "desc": "Transparencia con clientes, socios y dentro del equipo.",
@@ -1223,7 +1323,7 @@
         },
         {
           "title": "Data Engineering & arquitectura de datos",
-          "desc": "Modelado de datos, data warehouse, data lake, gobernanza y calidad de los datos, portabilidad y soberanía de los datasets propietarios."
+          "desc": "Modelado de datos, data warehouse, data lake, gobernanza y calidad de los datos, portabilidad y dominio de los datasets propietarios."
         },
         {
           "title": "Diseño y experiencia de usuario",
@@ -3741,7 +3841,7 @@
       "strategy": "Estrategia",
       "strategyDesc": "Transformación, gobernanza, posicionamiento y dirección estratégica.",
       "technology": "Tecnología",
-      "technologyDesc": "Arquitectura, ciberseguridad, IA, soberanía digital y cumplimiento tecnológico.",
+      "technologyDesc": "Arquitectura, ciberseguridad, IA, independencia digital y cumplimiento tecnológico.",
       "ma": "Fusiones y adquisiciones",
       "maDesc": "Estructuración, due diligence, valoración, cierre e integración post-operación.",
       "security": "Ciberseguridad",
@@ -3759,63 +3859,165 @@
       "title": "Desarrollo de activos digitales a precio fijo - Aegryn",
       "desc": "Activos digitales a precio fijo: SaaS B2B, IA, app móvil. Documentación completa, listo para certificación. Sin desviaciones, valorizable desde el día uno."
     },
-    "label": "Ingenier\u00eda \u2014 Software soberano",
+    "label": "Ingeniería — Software a medida",
     "title": "Aegryn construye el software\nde sus operaciones.",
-    "desc": "De la PYME al gran grupo, en Suiza y en Europa: Aegryn dise\u00f1a, despliega y mantiene software empresarial a medida. Sin dependencia de grandes editores. Sin suscripci\u00f3n SaaS generalista. C\u00f3digo soberano, controlado, integrable en su infraestructura.",
+    "desc": "De la PYME al gran grupo, en Suiza y en Europa: Aegryn diseña, despliega y mantiene software empresarial a medida. Sin dependencia de grandes editores. Sin suscripción SaaS generalista. Código controlado, integrable en su infraestructura.",
     "whySection": {
-      "label": "Por qué software soberano",
+      "label": "Por qué software a medida",
       "title": "Lo que el mercado estándar no puede ofrecerle.",
-      "desc": "El 46,7 % de las empresas europeas usa la nube. El 39,9 % el análisis de datos. Casi el 20 % la IA en 2026. La necesidad de software de calidad, soberano y sin vendor lock-in es estructural. La Comisión Europea reconoce en 2026 que las dependencias de proveedores externos siguen siendo significativas en la nube y la ciberseguridad. Suiza ha situado la soberanía digital entre las prioridades de su estrategia digital 2026.",
+      "desc": "El 46,7 % de las empresas europeas usa la nube. El 39,9 % el análisis de datos. Casi el 20 % la IA en 2026. La necesidad de software de calidad, independiente y sin vendor lock-in es estructural. La Comisión Europea reconoce en 2026 que las dependencias de proveedores externos siguen siendo significativas en la nube y la ciberseguridad. Suiza ha situado la independencia digital entre las prioridades de su estrategia digital 2026.",
       "points": [
-        { "title": "Propiedad total del código", "desc": "Usted es propietario al 100 % del código entregado. Sin licencia, sin contrato de suscripción, sin dependencia de editor." },
-        { "title": "Alojamiento en su infraestructura", "desc": "El software se despliega donde usted lo exige: nube europea certificada, on-premise o infraestructura suiza. Ningún dato sale sin su consentimiento." },
-        { "title": "Integración en sus procesos reales", "desc": "Construimos alrededor de su organización, no al revés. Cada módulo se integra con sus herramientas, datos y flujos de trabajo existentes." },
-        { "title": "Certificable y transferible", "desc": "Cada activo de software entregado por Aegryn está estructurado para ser auditable, calificable y transferible según el protocolo de certificación Aegryn." }
+        {
+          "title": "Propiedad total del código",
+          "desc": "Usted es propietario al 100 % del código entregado. Sin licencia, sin contrato de suscripción, sin dependencia de editor."
+        },
+        {
+          "title": "Alojamiento en su infraestructura",
+          "desc": "El software se despliega donde usted lo exige: nube europea certificada, on-premise o infraestructura suiza. Ningún dato sale sin su consentimiento."
+        },
+        {
+          "title": "Integración en sus procesos reales",
+          "desc": "Construimos alrededor de su organización, no al revés. Cada módulo se integra con sus herramientas, datos y flujos de trabajo existentes."
+        },
+        {
+          "title": "Certificable y transferible",
+          "desc": "Cada activo de software entregado por Aegryn está estructurado para ser auditable, calificable y transferible según el protocolo de certificación Aegryn."
+        }
       ]
     },
     "domainsSection": {
       "label": "10 Dominios de software",
       "title": "Los dominios donde construimos\npara nuestros clientes.",
-      "desc": "Construimos en dominios donde la necesidad es transversal, recurrente y regulatoria, con una capa de IA, soberanía e integración sin dependencia de grandes editores.",
+      "desc": "Construimos en dominios donde la necesidad es transversal, recurrente y regulatoria, con una capa de IA, independencia e integración sin dependencia de grandes editores.",
       "domains": [
-        { "num": "01", "badge": "IA Agéntica", "title": "Agentes IA & Automatización empresarial", "desc": "Orquestación de workflows complejos por agentes IA empresariales conectables a sus sistemas: CRM, ERP, email, documentos, APIs, bases de datos. Cada agente es auditable, con human-in-the-loop y monitoreo de calidad." },
-        { "num": "02", "badge": "Gobernanza IA", "title": "Cumplimiento, Riesgo & Gobernanza IA", "desc": "Plataforma de compliance para EU AI Act, RGPD, LPD suiza, NIS2, DORA, ISO 27001. Registro de tratamientos, controles, evidencias, audit trail. Suiza confirma que su LPD se aplica directamente a los tratamientos basados en IA." },
-        { "num": "03", "badge": "Confianza Digital", "title": "Ciberseguridad & Confianza Digital", "desc": "Evaluación del riesgo cyber, inventario de activos, riesgo de proveedores, gestión de incidentes, evidencias de seguridad, mapeo de conformidad. Alineado con las prioridades europeas 2026 y los requisitos NIS2 para sectores críticos." },
-        { "num": "04", "badge": "Inteligencia Docs", "title": "Documentos, Contratos & Knowledge Intelligence", "desc": "Transforme sus contratos, políticas, facturas y documentos en conocimiento accionable. Identificación de riesgos, plazos críticos y acciones prioritarias. Subblink, activo core Aegryn." },
-        { "num": "05", "badge": "Finance Ops", "title": "Finance, Billing & Automatización E-Invoicing", "desc": "Automatización de facturación, e-invoicing (EU ViDA, obligación Confederación suiza), reconciliación de pagos, cash-flow, IVA transfronterizo. Capa Finance Operations entre CRM y contabilidad." },
-        { "num": "06", "badge": "Decision Intelligence", "title": "Data, BI & Decision Intelligence", "desc": "Análisis causal, simulación de escenarios, recomendaciones automatizadas. El software responde a: qué pasó, por qué, qué pasará, qué hacer. Casi el 40% de las empresas europeas usa análisis de datos en 2026." },
-        { "num": "07", "badge": "Agentic CX", "title": "Customer Experience & Automatización del servicio", "desc": "Arquitectura AI Customer Operations: agente de clientes IA, knowledge bot, next-best-action, resumen de casos, monitoreo de calidad. Relevante para seguros, banca, telecomunicaciones, retail, sanidad." },
-        { "num": "08", "badge": "Riesgo proveedores", "title": "Proveedores, Compras & Riesgo de terceros", "desc": "Scoring de proveedores, análisis de contratos, riesgo cyber, ESG, riesgo de concentración, sanciones, renovaciones. La FINMA señala que la externalización sigue siendo la principal fuente de riesgo operacional en las finanzas suizas." },
-        { "num": "09", "badge": "Identidad & Trust", "title": "Identidad, KYC/KYB & Confianza Digital", "desc": "Onboarding empresarial, KYB, KYC, verificación, titulares reales, firmas, credenciales, registros de confianza. Suiza hace del E-ID una prioridad de su estrategia digital 2026." },
-        { "num": "10", "badge": "Gemelo Digital", "title": "Enterprise Asset & Process Intelligence", "desc": "Representación dinámica de su organización: personas, aplicaciones, procesos, contratos, proveedores, datos. Respuestas en tiempo real sobre dependencias, costos y riesgos operacionales." }
+        {
+          "num": "01",
+          "badge": "IA Agéntica",
+          "title": "Agentes IA & Automatización empresarial",
+          "desc": "Orquestación de workflows complejos por agentes IA empresariales conectables a sus sistemas: CRM, ERP, email, documentos, APIs, bases de datos. Cada agente es auditable, con human-in-the-loop y monitoreo de calidad."
+        },
+        {
+          "num": "02",
+          "badge": "Gobernanza IA",
+          "title": "Cumplimiento, Riesgo & Gobernanza IA",
+          "desc": "Plataforma de compliance para EU AI Act, RGPD, LPD suiza, NIS2, DORA, ISO 27001. Registro de tratamientos, controles, evidencias, audit trail. Suiza confirma que su LPD se aplica directamente a los tratamientos basados en IA."
+        },
+        {
+          "num": "03",
+          "badge": "Confianza Digital",
+          "title": "Ciberseguridad & Confianza Digital",
+          "desc": "Evaluación del riesgo cyber, inventario de activos, riesgo de proveedores, gestión de incidentes, evidencias de seguridad, mapeo de conformidad. Alineado con las prioridades europeas 2026 y los requisitos NIS2 para sectores críticos."
+        },
+        {
+          "num": "04",
+          "badge": "Inteligencia Docs",
+          "title": "Documentos, Contratos & Knowledge Intelligence",
+          "desc": "Transforme sus contratos, políticas, facturas y documentos en conocimiento accionable. Identificación de riesgos, plazos críticos y acciones prioritarias. Subblink, activo core Aegryn."
+        },
+        {
+          "num": "05",
+          "badge": "Finance Ops",
+          "title": "Finance, Billing & Automatización E-Invoicing",
+          "desc": "Automatización de facturación, e-invoicing (EU ViDA, obligación Confederación suiza), reconciliación de pagos, cash-flow, IVA transfronterizo. Capa Finance Operations entre CRM y contabilidad."
+        },
+        {
+          "num": "06",
+          "badge": "Decision Intelligence",
+          "title": "Data, BI & Decision Intelligence",
+          "desc": "Análisis causal, simulación de escenarios, recomendaciones automatizadas. El software responde a: qué pasó, por qué, qué pasará, qué hacer. Casi el 40% de las empresas europeas usa análisis de datos en 2026."
+        },
+        {
+          "num": "07",
+          "badge": "Agentic CX",
+          "title": "Customer Experience & Automatización del servicio",
+          "desc": "Arquitectura AI Customer Operations: agente de clientes IA, knowledge bot, next-best-action, resumen de casos, monitoreo de calidad. Relevante para seguros, banca, telecomunicaciones, retail, sanidad."
+        },
+        {
+          "num": "08",
+          "badge": "Riesgo proveedores",
+          "title": "Proveedores, Compras & Riesgo de terceros",
+          "desc": "Scoring de proveedores, análisis de contratos, riesgo cyber, ESG, riesgo de concentración, sanciones, renovaciones. La FINMA señala que la externalización sigue siendo la principal fuente de riesgo operacional en las finanzas suizas."
+        },
+        {
+          "num": "09",
+          "badge": "Identidad & Trust",
+          "title": "Identidad, KYC/KYB & Confianza Digital",
+          "desc": "Onboarding empresarial, KYB, KYC, verificación, titulares reales, firmas, credenciales, registros de confianza. Suiza hace del E-ID una prioridad de su estrategia digital 2026."
+        },
+        {
+          "num": "10",
+          "badge": "Gemelo Digital",
+          "title": "Enterprise Asset & Process Intelligence",
+          "desc": "Representación dinámica de su organización: personas, aplicaciones, procesos, contratos, proveedores, datos. Respuestas en tiempo real sobre dependencias, costos y riesgos operacionales."
+        }
       ]
     },
     "platformSection": {
-      "label": "Arquitectura com\u00fan",
+      "label": "Arquitectura común",
       "title": "AEGRYN Enterprise Intelligence Platform.",
-      "desc": "Los 10 dominios no son 10 productos independientes. Comparten una infraestructura com\u00fan: la AEGRYN Enterprise Intelligence Platform. Una capa de datos, una capa de IA, una capa de gobernanza \u2014 y encima, aplicaciones empresariales para cada dominio.",
+      "desc": "Los 10 dominios no son 10 productos independientes. Comparten una infraestructura común: la AEGRYN Enterprise Intelligence Platform. Una capa de datos, una capa de IA, una capa de gobernanza — y encima, aplicaciones empresariales para cada dominio.",
       "layers": [
-        { "key": "data", "title": "Data Layer", "desc": "Ingesti\u00f3n, normalizaci\u00f3n y almacenamiento soberano de sus datos empresariales." },
-        { "key": "ai", "title": "AI Layer", "desc": "Modelos IA desplegables on-premise o en cloud CH/EU. Sin env\u00edo de datos a OpenAI, Azure o GCP sin acuerdo expl\u00edcito." },
-        { "key": "knowledge", "title": "Knowledge Layer", "desc": "Grafo de conocimiento, indexaci\u00f3n sem\u00e1ntica, memoria organizacional persistente." },
-        { "key": "governance", "title": "Governance Layer", "desc": "Audit trail, RBAC, registro de tratamientos, conformidad regulatoria (AI Act, NIS2, DORA, LPD)." }
+        {
+          "key": "data",
+          "title": "Data Layer",
+          "desc": "Ingestión, normalización y almacenamiento controlado de sus datos empresariales."
+        },
+        {
+          "key": "ai",
+          "title": "AI Layer",
+          "desc": "Modelos IA desplegables on-premise o en cloud CH/EU. Sin envío de datos a OpenAI, Azure o GCP sin acuerdo explícito."
+        },
+        {
+          "key": "knowledge",
+          "title": "Knowledge Layer",
+          "desc": "Grafo de conocimiento, indexación semántica, memoria organizacional persistente."
+        },
+        {
+          "key": "governance",
+          "title": "Governance Layer",
+          "desc": "Audit trail, RBAC, registro de tratamientos, conformidad regulatoria (AI Act, NIS2, DORA, LPD)."
+        }
       ],
       "verticals": {
         "label": "Mercados verticales",
-        "desc": "FinTech, HealthTech y PropTech son mercados verticales \u2014 no productos de base. Las aplicaciones Aegryn pueden empaquetarse para estos mercados sin crear una nueva arquitectura cada vez."
+        "desc": "FinTech, HealthTech y PropTech son mercados verticales — no productos de base. Las aplicaciones Aegryn pueden empaquetarse para estos mercados sin crear una nueva arquitectura cada vez."
       }
     },
     "sovereigntySection": {
-      "label": "Soberan\u00eda por arquitectura",
+      "label": "Independencia por arquitectura",
       "title": "Sovereignty by Architecture.",
-      "desc": "La soberan\u00eda no es una etiqueta de marketing. Es una propiedad arquitectural verificable.",
+      "desc": "La independencia no es una etiqueta de marketing. Es una propiedad arquitectural verificable.",
       "pillars": [
-        { "key": "data", "title": "Localizaci\u00f3n de datos", "desc": "Sus datos permanecen en Suiza o en la UE. Hosting en infraestructura certificada, contratos de subcontrataci\u00f3n conformes." },
-        { "key": "model", "title": "Localizaci\u00f3n de modelos IA", "desc": "Los modelos se despliegan en su infraestructura \u2014 on-premise o cloud CH/EU. Sin procesamiento en clouds americanos sin su acuerdo expl\u00edcito." },
-        { "key": "ip", "title": "Propiedad intelectual", "desc": "100% IP del cliente. Aegryn nunca es copropietario del c\u00f3digo entregado. Exportaci\u00f3n total del c\u00f3digo fuente, documentaci\u00f3n y base de datos." },
-        { "key": "vendor", "title": "Cero vendor lock-in", "desc": "Arquitectura open source o est\u00e1ndares abiertos. Puede cambiar de integrador en cualquier momento sin depender de Aegryn." },
-        { "key": "audit", "title": "Auditabilidad & control humano", "desc": "Cada decisi\u00f3n IA es trazable, explicable y reversible. Un humano valida las decisiones cr\u00edticas." },
-        { "key": "export", "title": "Exportaci\u00f3n total garantizada", "desc": "En cualquier momento, exportaci\u00f3n completa del c\u00f3digo fuente, datos, modelos y documentaci\u00f3n. Cero retenci\u00f3n." }
+        {
+          "key": "data",
+          "title": "Localización de datos",
+          "desc": "Sus datos permanecen en Suiza o en la UE. Hosting en infraestructura certificada, contratos de subcontratación conformes."
+        },
+        {
+          "key": "model",
+          "title": "Localización de modelos IA",
+          "desc": "Los modelos se despliegan en su infraestructura — on-premise o cloud CH/EU. Sin procesamiento en clouds americanos sin su acuerdo explícito."
+        },
+        {
+          "key": "ip",
+          "title": "Propiedad intelectual",
+          "desc": "100% IP del cliente. Aegryn nunca es copropietario del código entregado. Exportación total del código fuente, documentación y base de datos."
+        },
+        {
+          "key": "vendor",
+          "title": "Cero vendor lock-in",
+          "desc": "Arquitectura open source o estándares abiertos. Puede cambiar de integrador en cualquier momento sin depender de Aegryn."
+        },
+        {
+          "key": "audit",
+          "title": "Auditabilidad & control humano",
+          "desc": "Cada decisión IA es trazable, explicable y reversible. Un humano valida las decisiones críticas."
+        },
+        {
+          "key": "export",
+          "title": "Exportación total garantizada",
+          "desc": "En cualquier momento, exportación completa del código fuente, datos, modelos y documentación. Cero retención."
+        }
       ]
     },
     "difference": {
@@ -6969,34 +7171,82 @@
         "title": "Miembros del Consejo & C-Level",
         "desc": "Colocamos a los miembros del consejo de administración y ejecutivos que definen la estrategia e impulsan la transformación.",
         "profiles": [
-          {"label": "CEO & Managing Director", "desc": "Líderes estratégicos capaces de impulsar la visión, el crecimiento y la transformación de la empresa."},
-          {"label": "COO & Chief Operating Officer", "desc": "Expertos en excelencia operativa, escalado, optimización de procesos y ejecución estratégica."},
-          {"label": "CTO & Chief Technology Officer", "desc": "Visionarios tech capaces de definir la arquitectura, innovación y hoja de ruta tecnológica."},
-          {"label": "CIO & Chief Information Officer", "desc": "Líderes de la transformación digital, infraestructura IT, gobernanza y modernización de sistemas."},
-          {"label": "CHRO & Chief Human Resources Officer", "desc": "Arquitectos de la estrategia RH, cultura empresarial, adquisición de talento y desarrollo organizacional."},
-          {"label": "CFO & Chief Financial Officer", "desc": "Expertos en estrategia financiera, fundraising, M&A, control de gestión y optimización financiera."}
+          {
+            "label": "CEO & Managing Director",
+            "desc": "Líderes estratégicos capaces de impulsar la visión, el crecimiento y la transformación de la empresa."
+          },
+          {
+            "label": "COO & Chief Operating Officer",
+            "desc": "Expertos en excelencia operativa, escalado, optimización de procesos y ejecución estratégica."
+          },
+          {
+            "label": "CTO & Chief Technology Officer",
+            "desc": "Visionarios tech capaces de definir la arquitectura, innovación y hoja de ruta tecnológica."
+          },
+          {
+            "label": "CIO & Chief Information Officer",
+            "desc": "Líderes de la transformación digital, infraestructura IT, gobernanza y modernización de sistemas."
+          },
+          {
+            "label": "CHRO & Chief Human Resources Officer",
+            "desc": "Arquitectos de la estrategia RH, cultura empresarial, adquisición de talento y desarrollo organizacional."
+          },
+          {
+            "label": "CFO & Chief Financial Officer",
+            "desc": "Expertos en estrategia financiera, fundraising, M&A, control de gestión y optimización financiera."
+          }
         ]
       },
       "executiveTech": {
         "title": "Executive Tech",
         "desc": "Colocamos a los líderes técnicos que impulsan la innovación, seguridad, datos e IA.",
         "profiles": [
-          {"label": "Chief AI Officer & VP AI", "desc": "Líderes en inteligencia artificial, machine learning, GenAI, estrategia data-driven y transformación IA."},
-          {"label": "CISO & VP Security", "desc": "Expertos en ciberseguridad, cumplimiento RGPD, gestión de riesgos, resiliencia y gobernanza."},
-          {"label": "Chief Data Officer & VP Data", "desc": "Arquitectos de la estrategia de datos: data engineering, analytics, gobernanza, monetización y cultura data."},
-          {"label": "Chief Product Officer & VP Product", "desc": "Visionarios de producto tech: roadmap, discovery, growth, product-led growth y estrategia go-to-market."},
-          {"label": "VP Engineering & Engineering Director", "desc": "Líderes de equipos técnicos: escalado, cultura engineering, delivery, arquitectura y excelencia operativa."},
-          {"label": "VP Infrastructure & Head of Platform", "desc": "Líderes de infraestructura IT, cloud, DevOps, SRE, modernización legacy y developer experience."}
+          {
+            "label": "Chief AI Officer & VP AI",
+            "desc": "Líderes en inteligencia artificial, machine learning, GenAI, estrategia data-driven y transformación IA."
+          },
+          {
+            "label": "CISO & VP Security",
+            "desc": "Expertos en ciberseguridad, cumplimiento RGPD, gestión de riesgos, resiliencia y gobernanza."
+          },
+          {
+            "label": "Chief Data Officer & VP Data",
+            "desc": "Arquitectos de la estrategia de datos: data engineering, analytics, gobernanza, monetización y cultura data."
+          },
+          {
+            "label": "Chief Product Officer & VP Product",
+            "desc": "Visionarios de producto tech: roadmap, discovery, growth, product-led growth y estrategia go-to-market."
+          },
+          {
+            "label": "VP Engineering & Engineering Director",
+            "desc": "Líderes de equipos técnicos: escalado, cultura engineering, delivery, arquitectura y excelencia operativa."
+          },
+          {
+            "label": "VP Infrastructure & Head of Platform",
+            "desc": "Líderes de infraestructura IT, cloud, DevOps, SRE, modernización legacy y developer experience."
+          }
         ]
       },
       "executiveMA": {
         "title": "Executive M&A",
         "desc": "Colocamos a los líderes especializados en fusiones y adquisiciones, due diligence e integración post-fusión.",
         "profiles": [
-          {"label": "VP M&A & Head of Corporate Development", "desc": "Expertos en estrategia M&A, deal sourcing, estructuración de transacciones y ejecución de adquisiciones."},
-          {"label": "M&A Director & Transaction Lead", "desc": "Líderes de transacciones: valoración, negociación, due diligence financiera y legal, closing."},
-          {"label": "Head of Integration (PMI)", "desc": "Especialistas en integración post-fusión: sinergias, armonización de procesos, gestión del cambio."},
-          {"label": "VP Strategy & Corporate Strategy Director", "desc": "Arquitectos de la estrategia corporativa: crecimiento inorgánico, alianzas estratégicas, gestión de portfolio."}
+          {
+            "label": "VP M&A & Head of Corporate Development",
+            "desc": "Expertos en estrategia M&A, deal sourcing, estructuración de transacciones y ejecución de adquisiciones."
+          },
+          {
+            "label": "M&A Director & Transaction Lead",
+            "desc": "Líderes de transacciones: valoración, negociación, due diligence financiera y legal, closing."
+          },
+          {
+            "label": "Head of Integration (PMI)",
+            "desc": "Especialistas en integración post-fusión: sinergias, armonización de procesos, gestión del cambio."
+          },
+          {
+            "label": "VP Strategy & Corporate Strategy Director",
+            "desc": "Arquitectos de la estrategia corporativa: crecimiento inorgánico, alianzas estratégicas, gestión de portfolio."
+          }
         ]
       }
     },

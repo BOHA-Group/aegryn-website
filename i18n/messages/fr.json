@@ -65,7 +65,7 @@
     "whoWeAre": "QUI SOMMES-NOUS",
     "craftBuild": "Construire",
     "craftBuildDesc": "Conception d'actifs tech durables",
-    "craftBuildAssets": "Actifs souverains",
+    "craftBuildAssets": "Actifs propriétaires",
     "craftBuildEngineering": "Logiciels sur-mesure",
     "craftSupport": "Accompagner",
     "craftSupportDesc": "Conseil en Stratégie, Tech & M&A — Toutes industries",
@@ -183,7 +183,7 @@
     "page": {
       "label": "Écosystème Aegryn",
       "title": "Six actifs propriétaires.\nUne vision commune.",
-      "desc": "Chaque actif Aegryn est conçu, construit et opéré en interne. Propriété totale, souveraineté absolue, durabilité garantie.",
+      "desc": "Chaque actif Aegryn est conçu, construit et opéré en interne. Propriété totale, indépendance garantie, durabilité inscrite dans le code.",
       "meta": {
         "title": "Actifs Aegryn | Écosystème propriétaire",
         "desc": "Découvrez les actifs propriétaires d'Aegryn : subblink, neediu, primiom, movtoo, hobconnect, conçus pour durer, certifiables et transférables."
@@ -478,12 +478,12 @@
   "build": {
     "hero": {
       "label": "Portefeuille Aegryn",
-      "title": "Six actifs souverains.\nUne vision commune.",
-      "desc": "Chaque actif Aegryn est conçu dès l'origine pour être certifiable et transférable, IP déposée, codebase souveraine, stack documentée."
+      "title": "Six actifs propriétaires.\nUne vision commune.",
+      "desc": "Chaque actif Aegryn est conçu dès l'origine pour être certifiable et transférable, IP déposée, codebase documentée, stack maîtrisée."
     },
     "sovereignty": {
-      "title": "Logiciel souverain européen",
-      "desc": "On parle de cloud souverain en Suisse et en Europe, mais le vrai enjeu n'est pas la localisation des machines : c'est le logiciel. Nous créons des logiciels souverains qui peuvent être déployés sur des infrastructures physiquement localisées en Europe, offrant une véritable indépendance technologique. Pour nos clients entreprises et institutionnels, nous concevons, maintenons ou refaisons des logiciels sur mesure de zéro — une demande en très forte croissance face aux enjeux de sécurité, souveraineté et conformité."
+      "title": "Logiciel à code maîtrisé",
+      "desc": "Le vrai enjeu du cloud n'est pas la localisation des machines : c'est le logiciel. Nous créons des logiciels à code maîtrisé, déployables sur des infrastructures physiquement localisées en Europe, offrant une véritable indépendance technologique. Pour nos clients entreprises et institutionnels, nous concevons, maintenons ou refaisons des logiciels sur mesure — une demande en très forte croissance face aux enjeux de sécurité, conformité et indépendance."
     },
     "categories": {
       "ai": "IA & Protocoles",
@@ -502,8 +502,8 @@
     "comingSoon": "Bientôt disponible",
     "philosophy": {
       "label": "Notre philosophie",
-      "title": "Propriétaire. Souverain. Durable.",
-      "desc": "Nous ne construisons pas des MVPs. Nous ne vendons pas de parts minoritaires à des VCs. Chaque actif Aegryn est conçu pour être possédé en totalité, opéré souverainement et transmis aux générations suivantes."
+      "title": "Propriétaire. Indépendant. Durable.",
+      "desc": "Nous ne construisons pas des MVPs. Nous ne vendons pas de parts minoritaires à des VCs. Chaque actif Aegryn est conçu pour être possédé en totalité, opéré de façon indépendante et transmis aux générations suivantes."
     },
     "pillars": {
       "proprietary": {
@@ -512,7 +512,7 @@
       },
       "sovereign": {
         "stat": "CH",
-        "label": "Souveraineté"
+        "label": "Indépendance"
       },
       "durable": {
         "stat": "∞",
@@ -527,7 +527,7 @@
   },
   "whatwedo": {
     "label": "Notre Conviction",
-    "conviction": "Le marché tech européen a besoin de conseil stratégique, de logiciels souverains, et de certification indépendante.\nNous construisons les trois.",
+    "conviction": "Le marché tech européen a besoin de conseil stratégique, de logiciels à propriété totale, et de certification indépendante.\nNous construisons les trois.",
     "items": [
       {
         "num": "01",
@@ -536,8 +536,8 @@
       },
       {
         "num": "02",
-        "title": "La souveraineté technologique manquait.",
-        "desc": "Le vrai enjeu du cloud souverain n'est pas la localisation des machines, c'est le logiciel. Aegryn conçoit des logiciels souverains européens, déployables sur infrastructures locales, pour entreprises et institutionnels. Sécurité, conformité, indépendance."
+        "title": "L'indépendance technologique manquait.",
+        "desc": "Le vrai enjeu du cloud n'est pas la localisation des machines, c'est le logiciel. Aegryn conçoit des logiciels européens à propriété totale, déployables sur infrastructures locales, pour entreprises et institutionnels. Sécurité, conformité, indépendance."
       },
       {
         "num": "03",
@@ -736,7 +736,7 @@
       "title": "Trois disciplines.\nUn standard de marché.",
       "create": {
         "title": "CONCEPTION",
-        "desc": "Actifs tech propriétaires, certifiables, transférables. IP déposée, codebase documentée, stack souveraine."
+        "desc": "Actifs tech propriétaires, certifiables, transférables. IP déposée, codebase documentée, stack maîtrisée."
       },
       "simplify": {
         "title": "CERTIFICATION",
@@ -763,7 +763,7 @@
       },
       "sovereignty": {
         "label": "03",
-        "title": "Souveraineté",
+        "title": "Indépendance structurelle",
         "desc": "Nos actifs, notre infrastructure, nos données. Aucune dépendance externe critique. Droit suisse. Hébergement européen. Contrôle total."
       },
       "independence": {
@@ -822,7 +822,7 @@
     "about": {
       "label": "Qui sommes-nous",
       "title": "Une infrastructure, pas une agence.",
-      "desc": "Fondée sur trois principes, précision, durabilité, souveraineté, Aegryn structure les transactions M&A tech avec une rigueur que le marché n'offrait pas encore. Nos actifs propriétaires, notre protocole de certification et notre réseau advisory forment un écosystème intégré conçu pour les 10 prochaines années.",
+      "desc": "Fondée sur trois principes, précision, durabilité, indépendance, Aegryn structure les transactions M&A tech avec une rigueur que le marché n'offrait pas encore. Nos actifs propriétaires, notre protocole de certification et notre réseau advisory forment un écosystème intégré conçu pour les 10 prochaines années.",
       "tagline": "Suisse · Europe · Indépendant"
     },
     "crafts": {
@@ -860,7 +860,7 @@
           "desc": "Nous construisons pour durer. Pas de raccourcis, pas de bulles. Des actifs solides dans des structures qui tiennent."
         },
         "sovereignty": {
-          "title": "Souveraineté",
+          "title": "Indépendance",
           "desc": "Indépendance structurelle totale vis-à-vis des acheteurs, des vendeurs, des plateformes. Notre seul alignement : la qualité."
         },
         "trust": {
@@ -1271,7 +1271,7 @@
         },
         {
           "title": "Data Engineering & Architecture data",
-          "desc": "Modélisation de données, data warehouse, data lake, gouvernance et qualité de la donnée, portabilité et souveraineté des datasets propriétaires."
+          "desc": "Modélisation de données, data warehouse, data lake, gouvernance et qualité de la donnée, portabilité et maîtrise des datasets propriétaires."
         },
         {
           "title": "Design & Expérience utilisateur",
@@ -3784,7 +3784,7 @@
       "strategy": "Stratégie",
       "strategyDesc": "Transformation, gouvernance, positionnement et pilotage stratégique.",
       "technology": "Technologie",
-      "technologyDesc": "Architecture, cybersécurité, IA, souveraineté numérique et conformité tech.",
+      "technologyDesc": "Architecture, cybersécurité, IA, indépendance numérique et conformité tech.",
       "ma": "Fusions & Acquisitions",
       "maDesc": "Structuration, due diligence, valorisation, closing et intégration post-deal.",
       "security": "Cybersécurité",
@@ -3802,35 +3802,97 @@
       "title": "Conception d'actifs numériques à forfait fixe - Aegryn",
       "desc": "Actifs numériques à forfait fixe : SaaS B2B, IA, app mobile. Documentation complète, prêt pour certification. Zéro dépassement, valorisable dès le premier jour."
     },
-    "label": "Conception — Logiciels souverains",
+    "label": "Conception — Logiciels sur mesure",
     "title": "Aegryn construit le logiciel\nde vos opérations.",
-    "desc": "De la PME au grand groupe, en Suisse et en Europe : Aegryn conçoit, déploie et maintient des logiciels métier sur mesure. Sans dépendance aux grands éditeurs. Sans abonnement SaaS génériste. Un code souverain, maîtrisé, intégrable dans votre infrastructure.",
+    "desc": "De la PME au grand groupe, en Suisse et en Europe : Aegryn conçoit, déploie et maintient des logiciels métier sur mesure. Sans dépendance aux grands éditeurs. Sans abonnement SaaS génériste. Un code maîtrisé, intégrable dans votre infrastructure.",
     "whySection": {
-      "label": "Pourquoi des logiciels souverains",
+      "label": "Pourquoi des logiciels sur mesure",
       "title": "Ce que le marché standard ne peut pas vous offrir.",
-      "desc": "46,7 % des entreprises européennes utilisent le cloud. 39,9 % l'analyse de données. Près de 20 % l'IA en 2026. Le besoin en logiciel de qualité, souverain et sans vendor lock-in, est structurel. La Commission européenne reconnaît en 2026 que les dépendances vis-à-vis de fournisseurs tiers restent significatives dans le cloud et la cybersécurité. La Suisse a placé la souveraineté numérique parmi les priorités de sa stratégie numérique 2026.",
+      "desc": "46,7 % des entreprises européennes utilisent le cloud. 39,9 % l'analyse de données. Près de 20 % l'IA en 2026. Le besoin en logiciel de qualité, indépendant et sans vendor lock-in, est structurel. La Commission européenne reconnaît en 2026 que les dépendances vis-à-vis de fournisseurs tiers restent significatives dans le cloud et la cybersécurité. La Suisse a placé l'indépendance numérique parmi les priorités de sa stratégie numérique 2026.",
       "points": [
-        { "title": "Propriété totale du code", "desc": "Vous êtes propriétaire à 100 % du code livré. Pas de licence, pas de contrat d'abonnement, pas de dépendance d'éditeur." },
-        { "title": "Hébergement sur votre infrastructure", "desc": "Le logiciel se déploie là où vous l'exigez : cloud européen certifié, on-premise ou infrastructure suisse. Aucune donnée ne sort sans votre consentement." },
-        { "title": "Intégration dans vos processus réels", "desc": "Nous construisons autour de votre organisation, pas l'inverse. Chaque module s'intègre à vos outils, données et workflows existants." },
-        { "title": "Certifiable et transmissible", "desc": "Chaque actif logiciel livré par Aegryn est structuré pour être auditable, gradable et transmissible selon le protocole de certification Aegryn." }
+        {
+          "title": "Propriété totale du code",
+          "desc": "Vous êtes propriétaire à 100 % du code livré. Pas de licence, pas de contrat d'abonnement, pas de dépendance d'éditeur."
+        },
+        {
+          "title": "Hébergement sur votre infrastructure",
+          "desc": "Le logiciel se déploie là où vous l'exigez : cloud européen certifié, on-premise ou infrastructure suisse. Aucune donnée ne sort sans votre consentement."
+        },
+        {
+          "title": "Intégration dans vos processus réels",
+          "desc": "Nous construisons autour de votre organisation, pas l'inverse. Chaque module s'intègre à vos outils, données et workflows existants."
+        },
+        {
+          "title": "Certifiable et transmissible",
+          "desc": "Chaque actif logiciel livré par Aegryn est structuré pour être auditable, gradable et transmissible selon le protocole de certification Aegryn."
+        }
       ]
     },
     "domainsSection": {
       "label": "10 domaines logiciels",
       "title": "Les domaines où nous construisons\npour nos clients.",
-      "desc": "Nous construisons dans les domaines où le besoin est transversal, récurrent et réglementaire, avec une couche IA, souveraineté et intégration sans dépendance de grands éditeurs.",
+      "desc": "Nous construisons dans les domaines où le besoin est transversal, récurrent et réglementaire, avec une couche IA, indépendance et intégration sans dépendance de grands éditeurs.",
       "domains": [
-        { "num": "01", "badge": "IA Agentique", "title": "AI Agents & Business Automation", "desc": "Orchestration de workflows complexes par des agents IA métier connectables à vos systèmes : CRM, ERP, email, documents, API, bases de données. Chaque agent est auditable, avec human-in-the-loop et monitoring de qualité." },
-        { "num": "02", "badge": "Gouvernance IA", "title": "Compliance, Risk & AI Governance", "desc": "Plateforme de conformité couvrant AI Act EU, RGPD, LPD suisse, NIS2, DORA, ISO 27001. Registre des traitements, contrôles, preuves, audit trail. La Suisse confirme que sa LPD s'applique directement aux traitements utilisant l'IA." },
-        { "num": "03", "badge": "Trust Numérique", "title": "Cybersecurity & Digital Trust", "desc": "Cyber risk assessment, asset inventory, vendor risk, incident management, security evidence, compliance mapping. Aligné avec les priorités européennes 2026 et les exigences NIS2 pour les secteurs critiques." },
-        { "num": "04", "badge": "Intelligence Docs", "title": "Document, Contract & Knowledge Intelligence", "desc": "Transformation de vos contrats, politiques, factures et documents en knowledge actionnable. Identification des risques, échéances critiques et actions prioritaires. Subblink, actif core Aegryn." },
-        { "num": "05", "badge": "Finance Ops", "title": "Finance, Billing & E-Invoicing Automation", "desc": "Automatisation de la facturation, e-invoicing (ViDA EU, obligation suisse Confédération), rapprochement de paiements, cash-flow, TVA cross-border. Couche Finance Operations entre CRM et comptabilité." },
-        { "num": "06", "badge": "Decision Intelligence", "title": "Data, BI & Decision Intelligence", "desc": "Analyse causale, simulation de scénarios, recommandations automatisées. Le logiciel répond : que s'est-il passé, pourquoi, que va-t-il se passer, que faire. Près de 40 % des entreprises européennes utilisent la data analytique en 2026." },
-        { "num": "07", "badge": "CX Agentique", "title": "Customer Experience & Service Automation", "desc": "Architecture AI Customer Operations : agent client IA, knowledge bot, next-best-action, case summarisation, quality monitoring. Pertinent pour assurance, banque, télécom, retail, healthcare." },
-        { "num": "08", "badge": "Procurement Risk", "title": "Supplier, Procurement & Third-Party Risk", "desc": "Scoring fournisseurs, analyse de contrats, risque cyber, ESG, concentration risk, sanctions, renouvellements. La FINMA souligne que l'externalisation reste la première source de risque opérationnel dans la finance suisse." },
-        { "num": "09", "badge": "Identity & Trust", "title": "Identity, KYC/KYB & Digital Trust", "desc": "Onboarding entreprise, KYB, KYC, vérification, bénéficiaires effectifs, signatures, credentials, trust records. La Suisse fait de l'E-ID une priorité de sa stratégie numérique 2026." },
-        { "num": "10", "badge": "Digital Twin", "title": "Enterprise Asset & Process Intelligence", "desc": "Représentation dynamique de votre organisation : people, applications, processus, contrats, fournisseurs, données. Réponses en temps réel sur les dépendances, coûts et risques opérationnels." }
+        {
+          "num": "01",
+          "badge": "IA Agentique",
+          "title": "AI Agents & Business Automation",
+          "desc": "Orchestration de workflows complexes par des agents IA métier connectables à vos systèmes : CRM, ERP, email, documents, API, bases de données. Chaque agent est auditable, avec human-in-the-loop et monitoring de qualité."
+        },
+        {
+          "num": "02",
+          "badge": "Gouvernance IA",
+          "title": "Compliance, Risk & AI Governance",
+          "desc": "Plateforme de conformité couvrant AI Act EU, RGPD, LPD suisse, NIS2, DORA, ISO 27001. Registre des traitements, contrôles, preuves, audit trail. La Suisse confirme que sa LPD s'applique directement aux traitements utilisant l'IA."
+        },
+        {
+          "num": "03",
+          "badge": "Trust Numérique",
+          "title": "Cybersecurity & Digital Trust",
+          "desc": "Cyber risk assessment, asset inventory, vendor risk, incident management, security evidence, compliance mapping. Aligné avec les priorités européennes 2026 et les exigences NIS2 pour les secteurs critiques."
+        },
+        {
+          "num": "04",
+          "badge": "Intelligence Docs",
+          "title": "Document, Contract & Knowledge Intelligence",
+          "desc": "Transformation de vos contrats, politiques, factures et documents en knowledge actionnable. Identification des risques, échéances critiques et actions prioritaires. Subblink, actif core Aegryn."
+        },
+        {
+          "num": "05",
+          "badge": "Finance Ops",
+          "title": "Finance, Billing & E-Invoicing Automation",
+          "desc": "Automatisation de la facturation, e-invoicing (ViDA EU, obligation suisse Confédération), rapprochement de paiements, cash-flow, TVA cross-border. Couche Finance Operations entre CRM et comptabilité."
+        },
+        {
+          "num": "06",
+          "badge": "Decision Intelligence",
+          "title": "Data, BI & Decision Intelligence",
+          "desc": "Analyse causale, simulation de scénarios, recommandations automatisées. Le logiciel répond : que s'est-il passé, pourquoi, que va-t-il se passer, que faire. Près de 40 % des entreprises européennes utilisent la data analytique en 2026."
+        },
+        {
+          "num": "07",
+          "badge": "CX Agentique",
+          "title": "Customer Experience & Service Automation",
+          "desc": "Architecture AI Customer Operations : agent client IA, knowledge bot, next-best-action, case summarisation, quality monitoring. Pertinent pour assurance, banque, télécom, retail, healthcare."
+        },
+        {
+          "num": "08",
+          "badge": "Procurement Risk",
+          "title": "Supplier, Procurement & Third-Party Risk",
+          "desc": "Scoring fournisseurs, analyse de contrats, risque cyber, ESG, concentration risk, sanctions, renouvellements. La FINMA souligne que l'externalisation reste la première source de risque opérationnel dans la finance suisse."
+        },
+        {
+          "num": "09",
+          "badge": "Identity & Trust",
+          "title": "Identity, KYC/KYB & Digital Trust",
+          "desc": "Onboarding entreprise, KYB, KYC, vérification, bénéficiaires effectifs, signatures, credentials, trust records. La Suisse fait de l'E-ID une priorité de sa stratégie numérique 2026."
+        },
+        {
+          "num": "10",
+          "badge": "Digital Twin",
+          "title": "Enterprise Asset & Process Intelligence",
+          "desc": "Représentation dynamique de votre organisation : people, applications, processus, contrats, fournisseurs, données. Réponses en temps réel sur les dépendances, coûts et risques opérationnels."
+        }
       ]
     },
     "platformSection": {
@@ -3838,10 +3900,26 @@
       "title": "AEGRYN Enterprise Intelligence Platform.",
       "desc": "Les 10 domaines ne sont pas 10 produits indépendants. Ils partagent une infrastructure commune : l'AEGRYN Enterprise Intelligence Platform. Une couche data, une couche IA, une couche gouvernance — et par-dessus, des applications métier pour chaque domaine.",
       "layers": [
-        { "key": "data", "title": "Data Layer", "desc": "Ingestion, normalisation et stockage souverain de vos données métier." },
-        { "key": "ai", "title": "AI Layer", "desc": "Modèles IA déployables on-premise ou cloud CH/EU. Aucun envoi de données vers OpenAI, Azure ou GCP sans accord explicite." },
-        { "key": "knowledge", "title": "Knowledge Layer", "desc": "Graphe de connaissances, indexation sémantique, mémoire organisationnelle persistante." },
-        { "key": "governance", "title": "Governance Layer", "desc": "Audit trail, RBAC, registre des traitements, conformité réglementaire (AI Act, NIS2, DORA, LPD)." }
+        {
+          "key": "data",
+          "title": "Data Layer",
+          "desc": "Ingestion, normalisation et stockage maîtrisé de vos données métier."
+        },
+        {
+          "key": "ai",
+          "title": "AI Layer",
+          "desc": "Modèles IA déployables on-premise ou cloud CH/EU. Aucun envoi de données vers OpenAI, Azure ou GCP sans accord explicite."
+        },
+        {
+          "key": "knowledge",
+          "title": "Knowledge Layer",
+          "desc": "Graphe de connaissances, indexation sémantique, mémoire organisationnelle persistante."
+        },
+        {
+          "key": "governance",
+          "title": "Governance Layer",
+          "desc": "Audit trail, RBAC, registre des traitements, conformité réglementaire (AI Act, NIS2, DORA, LPD)."
+        }
       ],
       "verticals": {
         "label": "Marchés verticaux",
@@ -3849,16 +3927,40 @@
       }
     },
     "sovereigntySection": {
-      "label": "Souveraineté par l'architecture",
-      "title": "Sovereignty by Architecture.",
-      "desc": "La souveraineté n'est pas un label marketing. C'est une propriété architecturale vérifiable.",
+      "label": "Indépendance par l'architecture",
+      "title": "Independence by Architecture.",
+      "desc": "L'indépendance n'est pas un label marketing. C'est une propriété architecturale vérifiable.",
       "pillars": [
-        { "key": "data", "title": "Localisation des données", "desc": "Vos données restent en Suisse ou dans l'UE. Hébergement sur infrastructure certifiée, contrats de sous-traitance conformes." },
-        { "key": "model", "title": "Localisation des modèles IA", "desc": "Les modèles sont déployés dans votre infrastructure — on-premise ou cloud CH/EU. Aucun traitement dans des clouds américains sans votre accord explicite." },
-        { "key": "ip", "title": "Propriété intellectuelle", "desc": "100% IP client. Aegryn n'est jamais co-propriétaire du code livré. Export total du code source, de la documentation et de la base de données." },
-        { "key": "vendor", "title": "Zéro vendor lock-in", "desc": "Architecture open source ou standards ouverts. Vous pouvez changer d'intégrateur à tout moment sans dépendre d'Aegryn." },
-        { "key": "audit", "title": "Auditabilité & contrôle humain", "desc": "Toute décision IA est traçable, explicable et réversible. Un humain valide les décisions critiques." },
-        { "key": "export", "title": "Export total garanti", "desc": "À tout moment, export complet du code source, des données, des modèles et de la documentation. Zéro rétention." }
+        {
+          "key": "data",
+          "title": "Localisation des données",
+          "desc": "Vos données restent en Suisse ou dans l'UE. Hébergement sur infrastructure certifiée, contrats de sous-traitance conformes."
+        },
+        {
+          "key": "model",
+          "title": "Localisation des modèles IA",
+          "desc": "Les modèles sont déployés dans votre infrastructure — on-premise ou cloud CH/EU. Aucun traitement dans des clouds américains sans votre accord explicite."
+        },
+        {
+          "key": "ip",
+          "title": "Propriété intellectuelle",
+          "desc": "100% IP client. Aegryn n'est jamais co-propriétaire du code livré. Export total du code source, de la documentation et de la base de données."
+        },
+        {
+          "key": "vendor",
+          "title": "Zéro vendor lock-in",
+          "desc": "Architecture open source ou standards ouverts. Vous pouvez changer d'intégrateur à tout moment sans dépendre d'Aegryn."
+        },
+        {
+          "key": "audit",
+          "title": "Auditabilité & contrôle humain",
+          "desc": "Toute décision IA est traçable, explicable et réversible. Un humain valide les décisions critiques."
+        },
+        {
+          "key": "export",
+          "title": "Export total garanti",
+          "desc": "À tout moment, export complet du code source, des données, des modèles et de la documentation. Zéro rétention."
+        }
       ]
     },
     "difference": {
@@ -6993,34 +7095,82 @@
         "title": "Board Members & C-Level",
         "desc": "Nous plaçons les membres du conseil d'administration et les dirigeants qui définissent la stratégie et pilotent la transformation.",
         "profiles": [
-          {"label": "CEO & Managing Director", "desc": "Leaders stratégiques capables de piloter la vision, la croissance et la transformation de l'entreprise."},
-          {"label": "COO & Chief Operating Officer", "desc": "Experts en excellence opérationnelle, scaling, optimisation des processus et exécution stratégique."},
-          {"label": "CTO & Chief Technology Officer", "desc": "Visionnaires tech capables de définir l'architecture, l'innovation et la roadmap technologique."},
-          {"label": "CIO & Chief Information Officer", "desc": "Leaders de la transformation digitale, infrastructure IT, gouvernance et modernisation des systèmes."},
-          {"label": "CHRO & Chief Human Resources Officer", "desc": "Architectes de la stratégie RH, culture d'entreprise, talent acquisition et développement organisationnel."},
-          {"label": "CFO & Chief Financial Officer", "desc": "Experts en stratégie financière, fundraising, M&A, contrôle de gestion et optimisation financière."}
+          {
+            "label": "CEO & Managing Director",
+            "desc": "Leaders stratégiques capables de piloter la vision, la croissance et la transformation de l'entreprise."
+          },
+          {
+            "label": "COO & Chief Operating Officer",
+            "desc": "Experts en excellence opérationnelle, scaling, optimisation des processus et exécution stratégique."
+          },
+          {
+            "label": "CTO & Chief Technology Officer",
+            "desc": "Visionnaires tech capables de définir l'architecture, l'innovation et la roadmap technologique."
+          },
+          {
+            "label": "CIO & Chief Information Officer",
+            "desc": "Leaders de la transformation digitale, infrastructure IT, gouvernance et modernisation des systèmes."
+          },
+          {
+            "label": "CHRO & Chief Human Resources Officer",
+            "desc": "Architectes de la stratégie RH, culture d'entreprise, talent acquisition et développement organisationnel."
+          },
+          {
+            "label": "CFO & Chief Financial Officer",
+            "desc": "Experts en stratégie financière, fundraising, M&A, contrôle de gestion et optimisation financière."
+          }
         ]
       },
       "executiveTech": {
         "title": "Executive Tech",
         "desc": "Nous plaçons les leaders techniques qui pilotent l'innovation, la sécurité, les données et l'IA.",
         "profiles": [
-          {"label": "Chief AI Officer & VP AI", "desc": "Leaders en intelligence artificielle, machine learning, GenAI, stratégie data-driven et transformation IA."},
-          {"label": "CISO & VP Security", "desc": "Experts en cybersécurité, conformité RGPD, gestion des risques, résilience et gouvernance."},
-          {"label": "Chief Data Officer & VP Data", "desc": "Architectes de la stratégie data : data engineering, analytics, gouvernance, monétisation et culture data."},
-          {"label": "Chief Product Officer & VP Product", "desc": "Visionnaires produit tech : roadmap, discovery, growth, product-led growth et stratégie go-to-market."},
-          {"label": "VP Engineering & Engineering Director", "desc": "Leaders d'équipes techniques : scaling, culture engineering, delivery, architecture et excellence opérationnelle."},
-          {"label": "VP Infrastructure & Head of Platform", "desc": "Responsables infrastructure IT, cloud, DevOps, SRE, modernisation legacy et developer experience."}
+          {
+            "label": "Chief AI Officer & VP AI",
+            "desc": "Leaders en intelligence artificielle, machine learning, GenAI, stratégie data-driven et transformation IA."
+          },
+          {
+            "label": "CISO & VP Security",
+            "desc": "Experts en cybersécurité, conformité RGPD, gestion des risques, résilience et gouvernance."
+          },
+          {
+            "label": "Chief Data Officer & VP Data",
+            "desc": "Architectes de la stratégie data : data engineering, analytics, gouvernance, monétisation et culture data."
+          },
+          {
+            "label": "Chief Product Officer & VP Product",
+            "desc": "Visionnaires produit tech : roadmap, discovery, growth, product-led growth et stratégie go-to-market."
+          },
+          {
+            "label": "VP Engineering & Engineering Director",
+            "desc": "Leaders d'équipes techniques : scaling, culture engineering, delivery, architecture et excellence opérationnelle."
+          },
+          {
+            "label": "VP Infrastructure & Head of Platform",
+            "desc": "Responsables infrastructure IT, cloud, DevOps, SRE, modernisation legacy et developer experience."
+          }
         ]
       },
       "executiveMA": {
         "title": "Executive M&A",
         "desc": "Nous plaçons les leaders spécialisés en fusions-acquisitions, due diligence et intégration post-fusion.",
         "profiles": [
-          {"label": "VP M&A & Head of Corporate Development", "desc": "Experts en stratégie M&A, deal sourcing, structuration de transactions et exécution d'acquisitions."},
-          {"label": "M&A Director & Transaction Lead", "desc": "Leaders de transactions : valuation, négociation, due diligence financière et juridique, closing."},
-          {"label": "Head of Integration (PMI)", "desc": "Spécialistes de l'intégration post-fusion : synergies, harmonisation des processus, gestion du changement."},
-          {"label": "VP Strategy & Corporate Strategy Director", "desc": "Architectes de la stratégie corporate : croissance inorganique, partenariats stratégiques, portfolio management."}
+          {
+            "label": "VP M&A & Head of Corporate Development",
+            "desc": "Experts en stratégie M&A, deal sourcing, structuration de transactions et exécution d'acquisitions."
+          },
+          {
+            "label": "M&A Director & Transaction Lead",
+            "desc": "Leaders de transactions : valuation, négociation, due diligence financière et juridique, closing."
+          },
+          {
+            "label": "Head of Integration (PMI)",
+            "desc": "Spécialistes de l'intégration post-fusion : synergies, harmonisation des processus, gestion du changement."
+          },
+          {
+            "label": "VP Strategy & Corporate Strategy Director",
+            "desc": "Architectes de la stratégie corporate : croissance inorganique, partenariats stratégiques, portfolio management."
+          }
         ]
       }
     },
