@@ -3369,7 +3369,16 @@
       "kycPending": "Uw KYC-verificatie is in behandeling. U wordt op de hoogte gesteld zodra deze is gevalideerd.",
       "assetsAvailable": "gecertificeerde assets beschikbaar in de catalogus",
       "requestQualifiedAccess": "Toegang tot de gecertificeerde catalogus",
-      "notifySuccessCtaAcquirer": "Catalogus bekijken"
+      "notifySuccessCtaAcquirer": "Catalogus bekijken",
+      "intro": "De Aegryn off-market catalogus brengt gecertificeerde digitale assets samen, klaar voor transactie en toegankelijk voor gekwalificeerde kopers. Elk dossier is geauditeerd, gewaardeerd en gestructureerd volgens het Aegryn-protocol voor toegang.",
+      "upcomingAssets": "Komende assets",
+      "seller": {
+        "label": "EEN ASSET VERKOPEN",
+        "title": "Wilt u uw tech asset verkopen?",
+        "desc": "Aegryn begeleidt oprichters en leidinggevenden bij de structurering en overdracht van hun digitale assets. Audit, waardering, dataroom, identificatie van kopers, signing.",
+        "cta": "Een verkoopsmandaat indienen",
+        "ctaHref": "/transact/sell"
+      }
     },
     "sell": {
       "meta": {

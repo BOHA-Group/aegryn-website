@@ -3369,7 +3369,16 @@
       "kycPending": "La verifica KYC è in corso. Sarà notificato una volta convalidato.",
       "assetsAvailable": "asset certificati disponibili nel catalogo",
       "requestQualifiedAccess": "Accedi al catalogo certificato",
-      "notifySuccessCtaAcquirer": "Sfoglia il catalogo"
+      "notifySuccessCtaAcquirer": "Sfoglia il catalogo",
+      "intro": "Il catalogo offmarket Aegryn riunisce asset digitali certificati, preparati per la transazione e accessibili agli acquirenti qualificati. Ogni fascicolo è stato sottoposto ad audit, valutato e strutturato secondo il protocollo Aegryn prima dell'accesso.",
+      "upcomingAssets": "Asset in arrivo",
+      "seller": {
+        "label": "CEDERE UN ASSET",
+        "title": "Desiderate cedere il vostro asset tech?",
+        "desc": "Aegryn accompagna fondatori e dirigenti nella strutturazione e trasmissione dei loro asset digitali. Audit, valutazione, data room, identificazione degli acquirenti, signing.",
+        "cta": "Depositare un mandato di cessione",
+        "ctaHref": "/transact/sell"
+      }
     },
     "sell": {
       "meta": {

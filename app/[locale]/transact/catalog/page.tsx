@@ -103,6 +103,17 @@ export default async function TransactCatalogPage({ params }: Props) {
         </div>
       </section>
 
+      {/* ── Intro ── */}
+      {tc('intro') && (
+        <section className="border-b border-ag-border bg-ag-white">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 py-10">
+            <p className="text-[15px] text-ag-gray leading-relaxed max-w-3xl">
+              {tc('intro')}
+            </p>
+          </div>
+        </section>
+      )}
+
       {/* ── Bannière tiers ── */}
       <div className="border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -155,7 +166,7 @@ export default async function TransactCatalogPage({ params }: Props) {
       <section className="py-16 px-6 border-b border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-6">
-            Actifs à venir
+            {tc('upcomingAssets')}
           </p>
 
           {/* Métadonnées session */}
@@ -289,19 +300,19 @@ export default async function TransactCatalogPage({ params }: Props) {
             {/* Colonne droite — Seller CTA */}
             <div className="p-10 md:p-12 bg-ag-white flex flex-col gap-6 justify-center">
               <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink">
-                {ts('sellerTitle')}
+                {tc('seller.label')}
               </p>
               <p className="font-sans font-bold text-ag-black text-[22px] leading-snug tracking-[-0.02em]">
-                {tc('sellerCta')}
+                {tc('seller.title')}
               </p>
               <p className="font-sans text-[14px] text-ag-gray leading-relaxed">
-                {ts('sellerDesc')}
+                {tc('seller.desc')}
               </p>
               <Link
-                href="/transact/how-to-sell"
+                href={tc('seller.ctaHref') as never}
                 className="self-start inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
               >
-                {tc('viewAsset')} <ArrowUpRight size={13} />
+                {tc('seller.cta')} <ArrowUpRight size={13} />
               </Link>
             </div>
 

@@ -3494,7 +3494,16 @@
       "kycPending": "Your KYC verification is in progress. You will be notified once validated.",
       "assetsAvailable": "certified assets available in the catalogue",
       "requestQualifiedAccess": "Access the certified catalogue",
-      "notifySuccessCtaAcquirer": "Browse the catalogue"
+      "notifySuccessCtaAcquirer": "Browse the catalogue",
+      "intro": "The Aegryn off-market catalogue brings together certified digital assets, prepared for transaction and accessible to qualified acquirers. Each dossier has been audited, valued and structured according to the Aegryn protocol before access.",
+      "upcomingAssets": "Upcoming assets",
+      "seller": {
+        "label": "SELL AN ASSET",
+        "title": "Looking to sell your tech asset?",
+        "desc": "Aegryn supports founders and executives in structuring and transferring their digital assets. Audit, valuation, data room, acquirer identification, signing. A discreet and rigorous process.",
+        "cta": "Submit a sale mandate",
+        "ctaHref": "/transact/sell"
+      }
     },
     "session": {
       "label": "Next session",

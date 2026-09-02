@@ -3369,7 +3369,16 @@
       "kycPending": "Ihre KYC-Prüfung ist in Bearbeitung. Sie werden nach der Validierung benachrichtigt.",
       "assetsAvailable": "zertifizierte Assets im Katalog verfügbar",
       "requestQualifiedAccess": "Zum zertifizierten Katalog",
-      "notifySuccessCtaAcquirer": "Katalog durchsuchen"
+      "notifySuccessCtaAcquirer": "Katalog durchsuchen",
+      "intro": "Der Aegryn Off-Market-Katalog vereint zertifizierte digitale Assets, die für Transaktionen vorbereitet und qualifizierten Käufern zugänglich sind. Jede Akte wurde vor dem Zugang nach dem Aegryn-Protokoll geprüft, bewertet und strukturiert.",
+      "upcomingAssets": "Kommende Assets",
+      "seller": {
+        "label": "EIN ASSET VERKAUFEN",
+        "title": "Möchten Sie Ihr Tech-Asset veräußern?",
+        "desc": "Aegryn begleitet Gründer und Führungskräfte bei der Strukturierung und Übertragung ihrer digitalen Assets. Audit, Bewertung, Datenraum, Käuferidentifikation, Signing.",
+        "cta": "Verkaufsmandat einreichen",
+        "ctaHref": "/transact/sell"
+      }
     },
     "sell": {
       "meta": {
