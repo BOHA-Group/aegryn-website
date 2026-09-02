@@ -4,6 +4,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { VisionMissionBlock } from '@/components/sections/VisionMissionBlock'
 import { AboutHeroLogo }       from '@/components/brand/AboutHeroLogo'
+import { SegmentsSection }     from '@/components/sections/SegmentsSection'
 import type { Metadata } from 'next'
 
 const BASE = 'https://aegryn.com'
@@ -243,6 +244,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Segments clients */}
+      <SegmentsSection />
 
       {/* Founder */}
       <section className="border-b border-ag-border">
