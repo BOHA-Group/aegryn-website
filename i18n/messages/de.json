@@ -573,7 +573,7 @@
     "cta": "Reichen Sie Ihr Asset zur Zertifizierung ein"
   },
   "founderQuote": {
-    "text": "Wir haben unsere Zeit damit verbracht, Organisationen aufzubauen, zu beraten und umzustrukturieren. Was wir gelernt haben, ist unbezahlbar: Unternehmen, die Bestand haben, wählen nicht zwischen Strategie und Technologie. Sie denken beides zusammen. Aegryn existiert für diejenigen, die das verstanden haben.",
+    "text": "Wir haben mehr als zwanzig Jahre damit verbracht, Organisationen aufzubauen, zu beraten und umzustrukturieren. Was wir gelernt haben, ist unbezahlbar: Unternehmen, die dauern, wählen nicht zwischen Strategie und Technologie. Sie denken sie zusammen. Aegryn existiert für diejenigen, die das verstanden haben.",
     "author": "Der Gründer, Aegryn"
   },
   "aboutSection": {
@@ -639,35 +639,35 @@
   "homeTalent": {
     "label": "REKRUTIEREN",
     "title": "Die Profile, die den Unterschied machen.",
-    "desc": "Wir identifizieren und platzieren Führungskräfte, Tech-Experten und Innovationsprofile, die Organisationen voranbringen. CTO, CISO, Head of AI, COO, DPO, Chief Transformation Officer. In der Schweiz und Europa.\n\nUnser Ziel ist immer dasselbe: den Wert Ihres Unternehmens durch die richtigen Personen zum richtigen Zeitpunkt stärken.",
+    "desc": "Wir identifizieren und platzieren Führungskräfte, Tech-Experten und Innovationsprofile, die Organisationen voranbringen. CTO, CISO, Head of AI, COO, DPO, Chief Transformation Officer. In der Schweiz und in Europa.\n\nUnser Ziel ist immer dasselbe: den Wert Ihres Unternehmens durch die richtigen Personen zum richtigen Zeitpunkt stärken.",
     "cta1": "Profil finden →",
     "cta1Href": "/talent",
     "cta2": "Ich bin Kandidat →",
-    "cta2Href": "/talent#candidat"
+    "cta2Href": "/talent"
   },
   "homeSegments": {
-    "label": "WER NUTZT AEGRYN",
-    "title": "Eine Plattform.\nVier Profile.",
+    "label": "UNSERE KUNDEN",
+    "title": "Wir begleiten Unternehmen in jeder Phase.",
     "cards": [
       {
-        "key": "seller",
-        "title": "Der Verkäufer",
-        "desc": "Gründer oder Führungskraft, der sein Tech-Asset unter den besten Bedingungen veräußern möchte. Audit, Bewertung, Datenraum, Begleitung bis zur Unterzeichnung."
+        "key": "startup",
+        "title": "Startup & Scale-up",
+        "desc": "Die richtigen tech- und strategischen Grundlagen legen. Wert ab dem ersten Tag schaffen. Die nächste Finanzierungsrunde oder den Exit vorbereiten."
       },
       {
-        "key": "buyer",
-        "title": "Der Käufer",
-        "desc": "Fonds, Family Office oder strategischer Käufer auf der Suche nach qualifizierten digitalen Assets. Off-Market-Deal-Flow, zertifizierte Unterlagen, NDA-Zugang."
+        "key": "pme",
+        "title": "Wachsende KMU",
+        "desc": "Transformieren, zertifizieren und rekrutieren, bevor man verkauft oder Kapital aufnimmt. Assets aufbauen, die dauern."
       },
       {
-        "key": "partner",
-        "title": "Der Partner",
-        "desc": "Kanzlei, M&A-Experte, technischer Berater oder Versicherer. Treten Sie dem Alliance-Netzwerk bei und wirken Sie bei strukturierten Transaktionen mit."
+        "key": "enterprise",
+        "title": "Große Konzerne",
+        "desc": "Tech-Strategie, Portfolio-M&A, proprietäre interne Assets, Führungskräfterekrutierung."
       },
       {
-        "key": "founder",
-        "title": "Der Tech-Gründer",
-        "desc": "Sie bauen. Aegryn hilft Ihnen, Ihr Asset zu strukturieren, zu bewerten und zum richtigen Zeitpunkt unter besten Bedingungen zu übertragen."
+        "key": "funds",
+        "title": "Fonds & Investoren",
+        "desc": "Qualifizierter Deal-Flow, Asset-Zertifizierung, Post-Akquisitionsbegleitung, Rekrutierung von Führungsteams."
       }
     ]
   },
@@ -736,7 +736,7 @@
     },
     "vision": {
       "label": "Unsere Vision",
-      "text": "Europa zu einem Referenzmarkt für Tech-M&A machen. Wo jedes digitale Asset mit der Strenge einer dauerhaften Infrastruktur zertifiziert, bewertet und übertragen werden kann."
+      "text": "Unsere Vision ist die einer europäischen Beratungsgruppe, die Unternehmen von Ende zu Ende begleitet, von der Strategie zum Kapital, von der Transformation zur Bewertung.\n\nWir sind Operatoren: Wir bauen und betreiben unsere eigenen Tech-Assets. Was wir beraten, leben wir. Diese Kohärenz ist unsere erste Glaubwürdigkeit.\n\nAegryn ist weder eine klassische Unternehmensberatung, noch eine Tech-Agentur, noch eine M&A-Boutique. Es ist eine hybride Gruppe, verankert in der Schweiz, die die fünf Disziplinen vereint, die für den dauerhaften Wert eines Unternehmens notwendig sind."
     },
     "contribution": {
       "label": "Unser Beitrag",
@@ -810,8 +810,8 @@
     "founder": {
       "label": "Die Gründungsüberzeugung",
       "title": "Von innen heraus gebaut.",
-      "bio1": "Aegryn wurde von jemandem gegründet, der baut. Jahre damit verbracht, digitale Assets aufzubauen, zu auditieren und zu strukturieren und dabei immer wieder dieselbe Lücke zu beobachten: das Fehlen einer standardisierten, unabhängigen Referenz, der beide Seiten einer Tech-Transaktion gleichermaßen vertrauen konnten.",
-      "bio2": "Die Entscheidung, diese Referenz in der Schweiz zu verankern, unter Schweizer Recht und institutionellen Standards, war bewusst. Kein Detail der Gründung, eine Positionierungsentscheidung. Die proprietären Assets, die Aegryn aufbaut, sind darauf ausgelegt, diesen Standard von ihrer ersten Codezeile an zu erfüllen.",
+      "bio1": "Der Gründer von Aegryn ist eine Führungskraft und Operator mit über zwanzig Jahren internationaler Erfahrung in Strategie, Technologie und M&A. Als ehemaliger Executive Director in einer globalen Unternehmensberatung hat er öffentliche und private Organisationen, internationale Konzerne und Institutionen durch ihre komplexesten Transformationen begleitet.",
+      "bio2": "Er entschied sich, Aegryn zu gründen, um in einer Struktur zu vereinen, was der Markt in Silos anbietet: Beratung, Aufbau, Transaktion, Talent und Marktintelligenz. Seine Überzeugung: Unternehmen, die dauern, wählen nicht zwischen Strategie und Technologie. Sie denken sie zusammen.",
       "cta": "Kontakt aufnehmen"
     },
     "whatsnext": {
@@ -7961,5 +7961,26 @@
       "Transport & Logistik"
     ],
     "title": "Industries couvertes"
+  },
+  "aboutPage": {
+    "intro": "Wir glauben, dass der Wert eines Unternehmens nicht unter Druck verhandelt wird. Er wird durch strategische Strenge aufgebaut, durch Technologie gestärkt, in Transparenz validiert und in Vertrauen realisiert.\n\nDeshalb existiert Aegryn: um Führungskräfte zu begleiten, die es ablehnen, ihren Kurs diktiert zu bekommen.",
+    "vision": {
+      "label": "UNSERE VISION",
+      "title": "Eine hybride Gruppe.\nVerankert in der Schweiz.",
+      "text": "Unsere Vision ist die einer europäischen Beratungsgruppe, die Unternehmen von Ende zu Ende begleitet, von der Strategie zum Kapital, von der Transformation zur Bewertung.\n\nWir sind Operatoren: Wir bauen und betreiben unsere eigenen Tech-Assets. Was wir beraten, leben wir. Diese Kohärenz ist unsere erste Glaubwürdigkeit.\n\nAegryn ist weder eine klassische Unternehmensberatung, noch eine Tech-Agentur, noch eine M&A-Boutique. Es ist eine hybride Gruppe, verankert in der Schweiz, die die fünf Disziplinen vereint, die für den dauerhaften Wert eines Unternehmens notwendig sind."
+    },
+    "founder": {
+      "label": "DER GRÜNDER",
+      "title": "Ein Gründer aus der Praxis.",
+      "desc": "Der Gründer von Aegryn ist ein Führungskraft und Operator mit über zwanzig Jahren internationaler Erfahrung in Strategie, Technologie und M&A.\n\nAls ehemaliger Executive Director in einer globalen Unternehmensberatung hat er öffentliche und private Organisationen, internationale Konzerne und Institutionen durch ihre komplexesten Transformationen begleitet.\n\nEr entschied sich, Aegryn zu gründen, um in einer Struktur zu vereinen, was der Markt in Silos anbietet: Beratung, Aufbau, Transaktion, Talent und Marktintelligenz.\n\nSeine Überzeugung: Unternehmen, die dauern, wählen nicht zwischen Strategie und Technologie. Sie denken sie zusammen."
+    },
+    "whyAegryn": {
+      "label": "WARUM AEGRYN",
+      "title": "Warum Aegryn?",
+      "p1": "Die meisten Beratungen beraten ohne zu bauen. Die meisten Agenturen bauen ohne zu beraten. Die meisten M&A-Boutiquen transagieren ohne aufzubauen.\n\nAegryn tut alle fünf. Und was es seinen Kunden rät, wendet es auf sich selbst an. Diese Kohärenz ist das, was wir von Anfang an in unsere DNA einschreiben wollten.",
+      "p2": "Beraten ohne zu bauen bedeutet, eine Karte ohne das Territorium zu liefern. Bauen ohne zu beraten bedeutet, ohne Kurs zu handeln. Transagieren ohne vorzubereiten bedeutet, ohne Bewertung zu verkaufen. Rekrutieren ohne Strategie bedeutet, ohne aufzubauen zu füllen. Informieren ohne zu handeln bedeutet, zu kommentieren ohne zu agieren.\n\nBei Aegryn stärkt jede Disziplin die nächste. Diese Verkettung schafft dauerhaften Wert für unsere Kunden und für uns selbst.",
+      "p3Label": "VERANKERT IN DER SCHWEIZ",
+      "p3": "Saint-Sulpice, Waadt. Eine Schweizer Basis für europäische Mandate. Die Strenge eines führenden Finanzplatzes, die Neutralität eines vertrauenswürdigen Standorts."
+    }
   }
 }

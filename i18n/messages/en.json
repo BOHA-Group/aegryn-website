@@ -573,7 +573,7 @@
     "cta": "Submit your asset for certification"
   },
   "founderQuote": {
-    "text": "We spent our time building, advising and restructuring organisations. What we learned cannot be bought: the companies that last don't choose between strategy and technology. They think them together. Aegryn exists for those who have understood this.",
+    "text": "We spent over twenty years building, advising and restructuring organisations. What we learned cannot be bought: the companies that last don't choose between strategy and technology. They think them together. Aegryn exists for those who have understood this.",
     "author": "The Founder, Aegryn"
   },
   "aboutSection": {
@@ -643,31 +643,31 @@
     "cta1": "Find a profile →",
     "cta1Href": "/talent",
     "cta2": "I am a candidate →",
-    "cta2Href": "/talent#candidat"
+    "cta2Href": "/talent"
   },
   "homeSegments": {
-    "label": "WHO USES AEGRYN",
-    "title": "One platform.\nFour profiles.",
+    "label": "OUR CLIENTS",
+    "title": "We support companies at every stage.",
     "cards": [
       {
-        "key": "seller",
-        "title": "The seller",
-        "desc": "Founder or executive looking to sell their tech asset in the best conditions. Audit, valuation, data room, support through to signing."
+        "key": "startup",
+        "title": "Startup & Scale-up",
+        "desc": "Build the right tech and strategic foundations. Create value from day one. Prepare for the next raise or exit."
       },
       {
-        "key": "buyer",
-        "title": "The acquirer",
-        "desc": "Fund, family office or strategic acquirer seeking qualified digital assets. Off-market deal flow, certified dossiers, NDA access."
+        "key": "pme",
+        "title": "Growing SMEs",
+        "desc": "Transform, certify and recruit before selling or raising. Build assets that last."
       },
       {
-        "key": "partner",
-        "title": "The partner",
-        "desc": "Law firm, M&A expert, technical advisor or insurer. Join the Alliance network and participate in structured transactions."
+        "key": "enterprise",
+        "title": "Large Groups",
+        "desc": "Tech strategy, portfolio M&A, proprietary internal assets, executive recruitment."
       },
       {
-        "key": "founder",
-        "title": "The tech founder",
-        "desc": "You build. Aegryn helps you structure, value and, when the time comes, transfer your asset in the best conditions."
+        "key": "funds",
+        "title": "Funds & Investors",
+        "desc": "Qualified deal flow, asset certification, post-acquisition support, executive team recruitment."
       }
     ]
   },
@@ -715,7 +715,7 @@
     },
     "vision": {
       "label": "Our vision",
-      "text": "Make Europe a reference ground for tech M&A. Where every digital asset can be certified, valued and transferred with the rigour of a permanent infrastructure."
+      "text": "Our vision is that of a European advisory group that accompanies companies end-to-end, from strategy to capital, from transformation to valuation.\n\nWe are operators: we build and operate our own tech assets. What we advise, we live. This consistency is our first credibility.\n\nAegryn is neither a traditional consulting firm, nor a tech agency, nor an M&A boutique. It is a hybrid group, anchored in Switzerland, that brings together the five disciplines necessary for the lasting value of a company."
     },
     "contribution": {
       "label": "Our contribution",
@@ -789,8 +789,8 @@
     "founder": {
       "label": "The founding conviction",
       "title": "Built from the inside.",
-      "bio1": "Aegryn was founded by someone who builds. Years spent constructing, auditing and structuring digital assets and repeatedly observing the same gap: the absence of a standardised, independent reference that both sides of a tech transaction could equally trust.",
-      "bio2": "The choice to anchor that reference in Switzerland, under Swiss law and institutional standards, was deliberate. Not a detail of incorporation, a positioning choice. The proprietary assets Aegryn builds are designed to meet that standard from their first line of code.",
+      "bio1": "Aegryn's founder is an executive and operator with over twenty years of international experience in strategy, technology and M&A. A former executive director at a global consulting firm, he has supported public and private organisations, international groups and institutions through their most complex transformations.",
+      "bio2": "He chose to create Aegryn to bring together within a single structure what the market offers in silos: advisory, build, transaction, talent and market intelligence. His conviction: companies that last do not choose between strategy and technology. They think them together.",
       "cta": "Get in touch"
     },
     "whatsnext": {
@@ -7798,5 +7798,26 @@
       "Transport & Logistics"
     ],
     "title": "Industries couvertes"
+  },
+  "aboutPage": {
+    "intro": "We believe the value of a company is not negotiated under pressure. It is built through strategic rigour, strengthened by technology, validated in transparency, and realised in trust.\n\nThat is why Aegryn exists: to support leaders who refuse to let their trajectory be dictated to them.",
+    "vision": {
+      "label": "OUR VISION",
+      "title": "A hybrid group.\nAnchored in Switzerland.",
+      "text": "Our vision is that of a European advisory group that accompanies companies end-to-end, from strategy to capital, from transformation to valuation.\n\nWe are operators: we build and operate our own tech assets. What we advise, we live. This consistency is our first credibility.\n\nAegryn is neither a traditional consulting firm, nor a tech agency, nor an M&A boutique. It is a hybrid group, anchored in Switzerland, that brings together the five disciplines necessary for the lasting value of a company."
+    },
+    "founder": {
+      "label": "THE FOUNDER",
+      "title": "A founder from the field.",
+      "desc": "Aegryn's founder is an executive and operator with over twenty years of international experience in strategy, technology and M&A.\n\nA former executive director at a global consulting firm, he has supported public and private organisations, international groups and institutions through their most complex transformations.\n\nHe chose to create Aegryn to bring together within a single structure what the market offers in silos: advisory, build, transaction, talent and market intelligence.\n\nHis conviction: companies that last do not choose between strategy and technology. They think them together."
+    },
+    "whyAegryn": {
+      "label": "WHY AEGRYN",
+      "title": "Why Aegryn?",
+      "p1": "Most firms advise without building. Most agencies build without advising. Most M&A boutiques transact without rebuilding.\n\nAegryn does all five. And what it advises for its clients, it applies to itself. This consistency is what we chose to embed in our DNA from day one.",
+      "p2": "Advising without building is delivering a map without the territory. Building without advising is executing without direction. Transacting without preparing is selling without valuing. Recruiting without strategy is filling without building. Publishing without doing is commenting without acting.\n\nAt Aegryn, each discipline strengthens the next. This chain is what creates lasting value for our clients and for ourselves.",
+      "p3Label": "ANCHORED IN SWITZERLAND",
+      "p3": "Saint-Sulpice, Vaud. A Swiss base for European missions. The rigour of a leading financial centre, the neutrality of a trusted jurisdiction."
+    }
   }
 }

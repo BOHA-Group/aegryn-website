@@ -573,7 +573,7 @@
     "cta": "Presenta tu activo para certificación"
   },
   "founderQuote": {
-    "text": "Hemos dedicado nuestro tiempo a construir, asesorar y reestructurar organizaciones. Lo que hemos aprendido no tiene precio: las empresas que perduran no eligen entre estrategia y tecnología. Las piensan juntas. Aegryn existe para quienes han entendido eso.",
+    "text": "Pasamos más de veinte años construyendo, asesorando y reestructurando organizaciones. Lo que aprendimos no tiene precio: las empresas que duran no eligen entre estrategia y tecnología. Las piensan juntas. Aegryn existe para quienes han comprendido esto.",
     "author": "El Fundador, Aegryn"
   },
   "aboutSection": {
@@ -639,35 +639,35 @@
   "homeTalent": {
     "label": "RECLUTAR",
     "title": "Los perfiles que marcan la diferencia.",
-    "desc": "Identificamos y colocamos a los directivos, expertos tech y perfiles de innovación que hacen avanzar las organizaciones. CTO, CISO, Head of AI, COO, DPO, Director de Transformación. En Suiza y en Europa.\n\nNuestro objetivo es siempre el mismo: reforzar el valor de su empresa mediante las personas adecuadas en el momento oportuno.",
+    "desc": "Identificamos y colocamos a los directivos, expertos tech y perfiles de innovación que hacen avanzar a las organizaciones. CTO, CISO, Head of AI, COO, DPO, Director de Transformación. En Suiza y Europa.\n\nNuestro objetivo es siempre el mismo: reforzar el valor de su empresa con las personas adecuadas en el momento oportuno.",
     "cta1": "Encontrar un perfil →",
     "cta1Href": "/talent",
     "cta2": "Soy candidato →",
-    "cta2Href": "/talent#candidat"
+    "cta2Href": "/talent"
   },
   "homeSegments": {
-    "label": "QUIÉN USA AEGRYN",
-    "title": "Una plataforma.\nCuatro perfiles.",
+    "label": "NUESTROS CLIENTES",
+    "title": "Acompañamos a las empresas en cada etapa.",
     "cards": [
       {
-        "key": "seller",
-        "title": "El cedente",
-        "desc": "Fundador o directivo que desea ceder su activo tech en las mejores condiciones. Auditoría, valoración, data room, acompañamiento hasta el signing."
+        "key": "startup",
+        "title": "Startup & Scale-up",
+        "desc": "Sentar las bases tech y estratégicas correctas. Crear valor desde el primer día. Preparar la próxima ronda o la cesión."
       },
       {
-        "key": "buyer",
-        "title": "El adquirente",
-        "desc": "Fondo, family office o adquirente estratégico en busca de activos digitales cualificados. Deal flow offmarket, expedientes certificados, acceso NDA."
+        "key": "pme",
+        "title": "PYME en crecimiento",
+        "desc": "Transformar, certificar y reclutar antes de ceder o captar capital. Construir activos duraderos."
       },
       {
-        "key": "partner",
-        "title": "El socio",
-        "desc": "Despacho jurídico, experto M&A, asesor técnico o asegurador. Únase a la red Alliance e intervenga en transacciones estructuradas."
+        "key": "enterprise",
+        "title": "Grandes grupos",
+        "desc": "Estrategia tech, M&A de portfolio, activos propios internos, reclutamiento de dirección."
       },
       {
-        "key": "founder",
-        "title": "El fundador tech",
-        "desc": "Usted construye. Aegryn le ayuda a estructurar, valorar y, en el momento oportuno, transmitir su activo en las mejores condiciones."
+        "key": "funds",
+        "title": "Fondos & Inversores",
+        "desc": "Deal flow cualificado, certificación de activos, acompañamiento post-adquisición, reclutamiento de equipos directivos."
       }
     ]
   },
@@ -736,7 +736,7 @@
     },
     "vision": {
       "label": "Nuestra visión",
-      "text": "Convertir Europa en un terreno de referencia para el M&A tech. Donde cada activo digital pueda ser certificado, valorado y transmitido con el rigor de una infraestructura permanente."
+      "text": "Nuestra visión es la de un grupo de consultoría europeo que acompaña a las empresas de extremo a extremo, de la estrategia al capital, de la transformación a la valoración.\n\nSomos operadores: construimos y operamos nuestros propios activos tech. Lo que aconsejamos, lo vivimos. Esta coherencia es nuestra primera credibilidad.\n\nAegryn no es ni una consultora clásica, ni una agencia tech, ni una boutique M&A. Es un grupo híbrido, anclado en Suiza, que reúne las cinco disciplinas necesarias para el valor duradero de una empresa."
     },
     "contribution": {
       "label": "Nuestra contribución",
@@ -810,8 +810,8 @@
     "founder": {
       "label": "La convicción fundadora",
       "title": "Construido desde dentro.",
-      "bio1": "Aegryn fue fundada por alguien que construye. Años dedicados a construir, auditar y estructurar activos digitales y observar repetidamente la misma brecha: la ausencia de una referencia estandarizada e independiente en la que ambas partes de una transacción tech pudieran confiar igualmente.",
-      "bio2": "La elección de anclar esa referencia en Suiza, bajo el derecho suizo y los estándares institucionales, fue deliberada. No un detalle de constitución, una elección de posicionamiento. Los activos propietarios que construye Aegryn están diseñados para cumplir ese estándar desde su primera línea de código.",
+      "bio1": "El fundador de Aegryn es un directivo y operador con más de veinte años de experiencia internacional en estrategia, tecnología y M&A. Antiguo director ejecutivo en una consultora de rango mundial, ha acompañado a organizaciones públicas y privadas, grupos internacionales e instituciones en sus transformaciones más complejas.",
+      "bio2": "Eligió crear Aegryn para reunir en una sola estructura lo que el mercado ofrece en silos: consultoría, construcción, transacción, talento e inteligencia de mercado. Su convicción: las empresas que duran no eligen entre estrategia y tecnología. Las piensan juntas.",
       "cta": "Ponerse en contacto"
     },
     "whatsnext": {
@@ -7797,5 +7797,26 @@
       "Transporte & Logística"
     ],
     "title": "Industries couvertes"
+  },
+  "aboutPage": {
+    "intro": "Creemos que el valor de una empresa no se negocia bajo presión. Se construye con rigor estratégico, se refuerza con tecnología, se valida en la transparencia y se realiza en la confianza.\n\nPor eso existe Aegryn: para acompañar a los dirigentes que se niegan a que su trayectoria les sea impuesta.",
+    "vision": {
+      "label": "NUESTRA VISIÓN",
+      "title": "Un grupo híbrido.\nAnclado en Suiza.",
+      "text": "Nuestra visión es la de un grupo de consultoría europeo que acompaña a las empresas de extremo a extremo, de la estrategia al capital, de la transformación a la valoración.\n\nSomos operadores: construimos y operamos nuestros propios activos tech. Lo que aconsejamos, lo vivimos. Esta coherencia es nuestra primera credibilidad.\n\nAegryn no es ni una consultora clásica, ni una agencia tech, ni una boutique M&A. Es un grupo híbrido, anclado en Suiza, que reúne las cinco disciplinas necesarias para el valor duradero de una empresa."
+    },
+    "founder": {
+      "label": "EL FUNDADOR",
+      "title": "Un fundador venido del terreno.",
+      "desc": "El fundador de Aegryn es un directivo y operador con más de veinte años de experiencia internacional en estrategia, tecnología y M&A.\n\nAntiguo director ejecutivo en una consultora de rango mundial, ha acompañado a organizaciones públicas y privadas, grupos internacionales e instituciones en sus transformaciones más complejas.\n\nEligió crear Aegryn para reunir en una sola estructura lo que el mercado ofrece en silos: consultoría, construcción, transacción, talento e inteligencia de mercado.\n\nSu convicción: las empresas que duran no eligen entre estrategia y tecnología. Las piensan juntas."
+    },
+    "whyAegryn": {
+      "label": "POR QUÉ AEGRYN",
+      "title": "¿Por qué Aegryn?",
+      "p1": "La mayoría de los despachos asesoran sin construir. La mayoría de las agencias construyen sin asesorar. La mayoría de las boutiques M&A transaccionan sin reconstruir.\n\nAegryn hace las cinco. Y lo que aconseja a sus clientes, se lo aplica a sí mismo. Esta coherencia es lo que quisimos inscribir en nuestro ADN desde el primer día.",
+      "p2": "Asesorar sin construir es entregar un mapa sin el territorio. Construir sin asesorar es ejecutar sin rumbo. Transaccionar sin preparar es vender sin valorar. Reclutar sin estrategia es cubrir sin construir. Informar sin hacer es comentar sin actuar.\n\nEn Aegryn, cada disciplina refuerza a la siguiente. Este encadenamiento es lo que crea valor duradero para nuestros clientes y para nosotros mismos.",
+      "p3Label": "ANCLADO EN SUIZA",
+      "p3": "Saint-Sulpice, Vaud. Una base suiza para mandatos europeos. El rigor de una plaza financiera de referencia, la neutralidad de un territorio de confianza."
+    }
   }
 }
