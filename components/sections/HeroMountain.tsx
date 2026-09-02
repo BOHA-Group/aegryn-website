@@ -167,9 +167,11 @@ export function HeroMountain() {
                   <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta1Title')}
                   </h3>
-                  <p className="font-sans text-[12px] text-white/75 leading-tight mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
-                    {t('cta1Desc')}
-                  </p>
+                  <div className="overflow-hidden mb-3 group/marquee">
+                    <p className="font-sans text-[12px] text-white/75 leading-tight whitespace-nowrap inline-block animate-marquee-pause group-hover/marquee:animate-marquee">
+                      {t('cta1Desc')}
+                    </p>
+                  </div>
                   <span className="inline-flex items-center gap-1 font-sans text-[9px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
                     {t('cta1Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   </span>
@@ -186,9 +188,11 @@ export function HeroMountain() {
                   <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta2Title')}
                   </h3>
-                  <p className="font-sans text-[12px] text-white/75 leading-tight mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
-                    {t('cta2Desc')}
-                  </p>
+                  <div className="overflow-hidden mb-3 group/marquee">
+                    <p className="font-sans text-[12px] text-white/75 leading-tight whitespace-nowrap inline-block animate-marquee-pause group-hover/marquee:animate-marquee">
+                      {t('cta2Desc')}
+                    </p>
+                  </div>
                   <span className="inline-flex items-center gap-1 font-sans text-[9px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
                     {t('cta2Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   </span>
@@ -205,9 +209,11 @@ export function HeroMountain() {
                   <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta3Title')}
                   </h3>
-                  <p className="font-sans text-[12px] text-white/75 leading-tight mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
-                    {t('cta3Desc')}
-                  </p>
+                  <div className="overflow-hidden mb-3 group/marquee">
+                    <p className="font-sans text-[12px] text-white/75 leading-tight whitespace-nowrap inline-block animate-marquee-pause group-hover/marquee:animate-marquee">
+                      {t('cta3Desc')}
+                    </p>
+                  </div>
                   <span className="inline-flex items-center gap-1 font-sans text-[9px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
                     {t('cta3Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   </span>
@@ -224,9 +230,11 @@ export function HeroMountain() {
                   <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta4Title')}
                   </h3>
-                  <p className="font-sans text-[12px] text-white/75 leading-tight mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
-                    {t('cta4Desc')}
-                  </p>
+                  <div className="overflow-hidden mb-3 group/marquee">
+                    <p className="font-sans text-[12px] text-white/75 leading-tight whitespace-nowrap inline-block animate-marquee-pause group-hover/marquee:animate-marquee">
+                      {t('cta4Desc')}
+                    </p>
+                  </div>
                   <span className="inline-flex items-center gap-1 font-sans text-[9px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
                     {t('cta4Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   </span>
@@ -243,9 +251,11 @@ export function HeroMountain() {
                   <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta5Title')}
                   </h3>
-                  <p className="font-sans text-[12px] text-white/75 leading-tight mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
-                    {t('cta5Desc')}
-                  </p>
+                  <div className="overflow-hidden mb-3 group/marquee">
+                    <p className="font-sans text-[12px] text-white/75 leading-tight whitespace-nowrap inline-block animate-marquee-pause group-hover/marquee:animate-marquee">
+                      {t('cta5Desc')}
+                    </p>
+                  </div>
                   <span className="inline-flex items-center gap-1 font-sans text-[9px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
                     {t('cta5Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   </span>
@@ -255,13 +265,9 @@ export function HeroMountain() {
           </div>
         </div>
 
-        {/* Bottom bar — Rolex-style info strip */}
+        {/* Bottom bar — info strip */}
         <div className="border-t border-white/10 bg-ag-navy/80 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-3 flex items-center gap-8">
-            <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/60">
-              {t('strip')}
-            </span>
-            <span className="hidden sm:block w-px h-3 bg-white/25" />
             <span className="hidden sm:block font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-apex">
               {t('chip2')}
             </span>

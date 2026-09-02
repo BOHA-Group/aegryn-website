@@ -4,7 +4,6 @@ import Link                  from 'next/link'
 import { getUser }           from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { ShieldCheck, CreditCard, AlertCircle, CheckCircle2, Lock } from 'lucide-react'
-import { getAdminUser } from '@/lib/adminAuth'
 import ExpertProfileForm     from './ExpertProfileForm'
 import { cookies } from 'next/headers'
 import { getTranslations } from 'next-intl/server'
@@ -41,9 +40,6 @@ export default async function PartnerExpertProfilePage() {
       .eq('user_id', user.id)
       .maybeSingle(),
   ])
-
-  const adminUser = await getAdminUser()
-  const isAdmin = !!adminUser
 
   const p = profile as Record<string, unknown> | null
   const kycStatus   = (p?.kyc_status as string | null)  ?? 'pending'
@@ -135,17 +131,19 @@ export default async function PartnerExpertProfilePage() {
 
       </div> {/* end max-w-2xl */}
 
-      {isAdmin && (
-        <div className="max-w-2xl mb-8 flex items-start gap-3 px-5 py-4 bg-amber-50 border border-amber-200">
-          <Lock size={16} className="text-amber-500 shrink-0 mt-0.5" />
+      {/* ── Banner suspension workflow ─────────────────────────────── */}
+      <div className="max-w-2xl mb-8 flex items-start gap-3 px-5 py-4 bg-amber-50 border border-amber-200">
+        <Lock size={16} className="text-amber-500 shrink-0 mt-0.5" />
+        <div>
+          <p className="font-sans font-semibold text-[12px] text-amber-800 mb-1">Workflow de publication temporairement suspendu</p>
           <p className="font-sans text-[12px] text-amber-700 leading-relaxed">
-            <strong>Compte administrateur :</strong> la publication de fiche expert est désactivée pour les comptes admin.
-            Cette section est réservée aux partenaires certifiés.
+            La page Réseau d&apos;experts a été refondue. La publication, la validation et le paiement de fiches expert
+            sont désactivés le temps de la migration. Votre profil existant est conservé.
           </p>
         </div>
-      )}
+      </div>
 
-      <div className={isAdmin ? 'opacity-40 pointer-events-none select-none' : ''}>
+      <div className="opacity-40 pointer-events-none select-none">
       <ExpertProfileForm
         kycApproved={kycApproved}
         subscriptionActive={subscriptionActive}

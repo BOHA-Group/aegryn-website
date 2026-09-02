@@ -17,7 +17,7 @@ type LinkHref = ComponentProps<typeof Link>['href']
 const CRAFT_BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftBuildAssets',      href: '/assets' },
   { labelKey: 'craftBuildEngineering', href: '/services/build' },
-  { labelKey: 'solutionsSubblink',     href: 'https://subblink.app' as LinkHref },
+  { labelKey: 'solutionsSubblink',     href: 'https://subblink.com' as LinkHref },
   { labelKey: 'solutionsKryv',         href: '/assets#kryv' as LinkHref },
 ]
 
