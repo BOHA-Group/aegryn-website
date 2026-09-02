@@ -3788,9 +3788,54 @@
       "title": "Fixed-price digital asset engineering - Aegryn",
       "desc": "Fixed-price digital asset engineering: B2B SaaS, AI, mobile app. Full documentation, certification-ready. Zero overruns, asset valorisable from day one."
     },
-    "label": "Services : Asset Design",
-    "title": "We build.\nYou own.\nFixed price. Ready for certification.",
-    "desc": "Aegryn designs digital assets, B2B SaaS, vertical AI, mobile applications, for entrepreneurs, family offices and funds. Turnkey delivery. CIFS-certifiable from day one.",
+    "label": "Engineering \u2014 Sovereign Software",
+    "title": "Aegryn builds the software\nof your operations.",
+    "desc": "From SMEs to large groups, in Switzerland and Europe: Aegryn designs, deploys and maintains custom business software. No dependency on major vendors. No generalist SaaS subscriptions. Sovereign, controlled code, integrable into your infrastructure. 46.7% of European companies use the cloud, 39.9% data analytics, and nearly 20% AI in 2026 \u2014 the need for quality, sovereign, vendor-lock-in-free software is structural.",
+    "domainsSection": {
+      "label": "10 Software Domains",
+      "title": "The domains where we build\nfor our clients.",
+      "desc": "We choose domains where the need is cross-functional, recurring, regulatory or costly \u2014 and where Aegryn can deliver an AI, sovereignty and integration layer without dependency on major vendors.",
+      "domains": [
+        { "num": "01", "badge": "Agentic AI", "title": "AI Agents & Business Automation", "desc": "Orchestration of complex tasks (back-office, compliance, reporting) by autonomous AI agents. Sovereign alternative to market RPA and no-code platforms." },
+        { "num": "02", "badge": "AI Governance", "title": "Compliance, Risk & AI Governance", "desc": "Processing registers, EU AI Act, DORA, NIS2, Swiss FADP. Algorithm risk management and AI decision traceability at enterprise scale." },
+        { "num": "03", "badge": "Digital Trust", "title": "Cybersecurity & Digital Trust", "desc": "Strong authentication, access management, audit trail, digital document vault. Zero-trust architecture and critical asset protection. Kryv \u2014 Aegryn core asset." },
+        { "num": "04", "badge": "Doc Intelligence", "title": "Contracts & Document Intelligence", "desc": "Analysis, extraction and lifecycle management of contracts, purchase orders, NDAs and regulatory clauses. Local AI engine, zero third-party cloud. Subblink \u2014 Aegryn core asset." },
+        { "num": "05", "badge": "Sovereign ERP", "title": "ERP & Operational Management", "desc": "Replacement or extension of generalist ERPs (SAP, Oracle, Sage) with custom modules connected to your real processes. 46.5% of EU companies use an ERP \u2014 often ill-suited." },
+        { "num": "06", "badge": "Data Intelligence", "title": "Data Analytics & Business Intelligence", "desc": "Data pipelines, operational dashboards, predictive models. Sovereign CH/EU hosting, without sending your data to third-party platforms." },
+        { "num": "07", "badge": "Client Relations", "title": "CRM & Client Portals", "desc": "Custom business CRM, partner portals, client extranets with strong authentication. Sovereign alternative to Salesforce, HubSpot and equivalents." },
+        { "num": "08", "badge": "HR & Talent", "title": "HR, Talent & Skills Management", "desc": "HRIS, onboarding, skills mapping, assessment and development plans \u2014 integrated into your real organisation, without a global SaaS layer." },
+        { "num": "09", "badge": "Finance & Audit", "title": "Finance, Reporting & Audit", "desc": "AI-assisted accounting close, regulatory reporting (IFRS, Swiss GAAP), immutable audit trail. Native connection to your existing tools." },
+        { "num": "10", "badge": "Knowledge Graph", "title": "Knowledge Management & Content AI", "desc": "Intelligent knowledge base, semantic search engine, controlled content generation. Structured, private and audited organisational memory." }
+      ]
+    },
+    "platformSection": {
+      "label": "Common Architecture",
+      "title": "AEGRYN Enterprise Intelligence Platform.",
+      "desc": "The 10 domains are not 10 independent products. They share a common infrastructure: the AEGRYN Enterprise Intelligence Platform. A data layer, an AI layer, a governance layer \u2014 and on top, business applications for each domain.",
+      "layers": [
+        { "key": "data", "title": "Data Layer", "desc": "Ingestion, normalisation and sovereign storage of your business data." },
+        { "key": "ai", "title": "AI Layer", "desc": "AI models deployable on-premise or on CH/EU cloud. No data sent to OpenAI, Azure or GCP without explicit agreement." },
+        { "key": "knowledge", "title": "Knowledge Layer", "desc": "Knowledge graph, semantic indexing, persistent organisational memory." },
+        { "key": "governance", "title": "Governance Layer", "desc": "Audit trail, RBAC, processing register, regulatory compliance (AI Act, NIS2, DORA, FADP)." }
+      ],
+      "verticals": {
+        "label": "Vertical Markets",
+        "desc": "FinTech, HealthTech and PropTech are vertical markets \u2014 not core products. Aegryn applications can be packaged for these markets without building a new architecture each time."
+      }
+    },
+    "sovereigntySection": {
+      "label": "Sovereignty by Architecture",
+      "title": "Sovereignty by Architecture.",
+      "desc": "Sovereignty is not a marketing label. It is a verifiable architectural property.",
+      "pillars": [
+        { "key": "data", "title": "Data Localisation", "desc": "Your data stays in Switzerland or the EU. Hosting on certified infrastructure, compliant subcontracting agreements." },
+        { "key": "model", "title": "AI Model Localisation", "desc": "Models are deployed in your infrastructure \u2014 on-premise or CH/EU cloud. No processing in US clouds without your explicit agreement." },
+        { "key": "ip", "title": "Intellectual Property", "desc": "100% client IP. Aegryn is never co-owner of the delivered code. Full export of source code, documentation and database." },
+        { "key": "vendor", "title": "Zero Vendor Lock-in", "desc": "Open source architecture or open standards. You can change integrator at any time without depending on Aegryn." },
+        { "key": "audit", "title": "Auditability & Human Control", "desc": "Every AI decision is traceable, explainable and reversible. A human validates critical decisions." },
+        { "key": "export", "title": "Guaranteed Full Export", "desc": "At any time, full export of source code, data, models and documentation. Zero retention." }
+      ]
+    },
     "difference": {
       "label": "Not an agency. Not a studio.",
       "title": "The Aegryn difference.",

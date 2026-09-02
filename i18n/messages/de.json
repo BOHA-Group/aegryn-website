@@ -3729,9 +3729,54 @@
       "title": "Digitale Asset-Entwicklung zum Festpreis - Aegryn",
       "desc": "Digitale Assets zum Festpreis: B2B SaaS, KI, mobile App. Vollständige Dokumentation, zertifizierungsbereit. Keine Überschreitungen, bewertbar ab Tag eins."
     },
-    "label": "Leistungen, Asset-Design",
-    "title": "Wir bauen.\nSie besitzen.\nFestpreis. Zertifizierungsbereit.",
-    "desc": "Aegryn entwickelt digitale Assets, B2B-SaaS, vertikale KI, mobile Anwendungen, für Unternehmer, Family Offices und Fonds. Schlüsselfertige Lieferung. Von Anfang an CIFS-zertifizierbar.",
+    "label": "Engineering \u2014 Souver\u00e4ne Software",
+    "title": "Aegryn baut die Software\nIhrer Betriebsabl\u00e4ufe.",
+    "desc": "Von KMU bis Konzern, in der Schweiz und in Europa: Aegryn konzipiert, deployt und wartet ma\u00dfgeschneiderte Unternehmenssoftware. Keine Abh\u00e4ngigkeit von gro\u00dfen Anbietern. Kein generalistisches SaaS-Abonnement. Souver\u00e4ner, kontrollierbarer Code, integrierbar in Ihre Infrastruktur. 46,7% der europ\u00e4ischen Unternehmen nutzen die Cloud, 39,9% Datenanalyse und knapp 20% KI 2026 \u2014 der Bedarf an qualitativ hochwertiger, souver\u00e4ner Software ohne Vendor-Lock-in ist strukturell.",
+    "domainsSection": {
+      "label": "10 Software-Dom\u00e4nen",
+      "title": "Die Dom\u00e4nen, in denen wir\nf\u00fcr unsere Kunden bauen.",
+      "desc": "Wir w\u00e4hlen Dom\u00e4nen, in denen der Bedarf abteilungs\u00fcbergreifend, wiederkehrend, regulatorisch oder kostspielig ist \u2014 und wo Aegryn eine KI-, Souver\u00e4nit\u00e4ts- und Integrationsschicht ohne Abh\u00e4ngigkeit von gro\u00dfen Anbietern liefern kann.",
+      "domains": [
+        { "num": "01", "badge": "Agentische KI", "title": "KI-Agenten & Gesch\u00e4ftsautomatisierung", "desc": "Orchestrierung komplexer Aufgaben (Back-Office, Compliance, Reporting) durch autonome KI-Agenten. Souver\u00e4ne Alternative zu RPA- und No-Code-Plattformen am Markt." },
+        { "num": "02", "badge": "KI-Governance", "title": "Compliance, Risiko & KI-Governance", "desc": "Verarbeitungsverzeichnis, EU AI Act, DORA, NIS2, Schweizer DSG. Algorithmisches Risikomanagement und Nachvollziehbarkeit von KI-Entscheidungen auf Unternehmensebene." },
+        { "num": "03", "badge": "Digital Trust", "title": "Cybersicherheit & Digitales Vertrauen", "desc": "Starke Authentifizierung, Zugangsverwaltung, Audit-Trail, digitaler Dokumententresor. Zero-Trust-Architektur und Schutz kritischer Assets. Kryv \u2014 Aegryn-Kernasset." },
+        { "num": "04", "badge": "Dok-Intelligenz", "title": "Vertr\u00e4ge & Dokumentenintelligenz", "desc": "Analyse, Extraktion und Lifecycle-Management von Vertr\u00e4gen, Bestellungen, NDAs und regulatorischen Klauseln. Lokale KI-Engine, kein Drittanbieter-Cloud. Subblink \u2014 Aegryn-Kernasset." },
+        { "num": "05", "badge": "Souver\u00e4nes ERP", "title": "ERP & Betriebsmanagement", "desc": "Ersatz oder Erweiterung von generalistischen ERPs (SAP, Oracle, Sage) durch ma\u00dfgeschneiderte Module, die mit Ihren realen Prozessen verbunden sind. 46,5% der EU-Unternehmen nutzen ein ERP \u2014 oft unpassend." },
+        { "num": "06", "badge": "Data Intelligence", "title": "Datenanalyse & Business Intelligence", "desc": "Datenpipelines, operative Dashboards, Vorhersagemodelle. Souver\u00e4nes CH/EU-Hosting, ohne Ihre Daten an Drittanbieter-Plattformen zu senden." },
+        { "num": "07", "badge": "Kundenbeziehungen", "title": "CRM & Kundenportale", "desc": "Ma\u00dfgeschneidertes Business-CRM, Partnerportale, Kunden-Extranets mit starker Authentifizierung. Souver\u00e4ne Alternative zu Salesforce, HubSpot und \u00c4quivalenten." },
+        { "num": "08", "badge": "HR & Talent", "title": "HR, Talent & Kompetenzmanagement", "desc": "HRIS, Onboarding, Skills-Mapping, Beurteilung und Entwicklungsplan \u2014 integriert in Ihre reale Organisation, ohne globale SaaS-Schicht." },
+        { "num": "09", "badge": "Finance & Audit", "title": "Finance, Reporting & Audit", "desc": "KI-gest\u00fctzter Buchungsabschluss, regulatorisches Reporting (IFRS, Swiss GAAP), unver\u00e4nderlicher Audit-Trail. Native Verbindung zu Ihren bestehenden Tools." },
+        { "num": "10", "badge": "Knowledge Graph", "title": "Wissensmanagement & Content-KI", "desc": "Intelligente Wissensbasis, semantische Suchmaschine, kontrollierte Inhaltsgenerierung. Strukturiertes, privates und gepr\u00fcftes organisatorisches Ged\u00e4chtnis." }
+      ]
+    },
+    "platformSection": {
+      "label": "Gemeinsame Architektur",
+      "title": "AEGRYN Enterprise Intelligence Platform.",
+      "desc": "Die 10 Dom\u00e4nen sind keine 10 unabh\u00e4ngigen Produkte. Sie teilen eine gemeinsame Infrastruktur: die AEGRYN Enterprise Intelligence Platform. Eine Datenschicht, eine KI-Schicht, eine Governance-Schicht \u2014 und dar\u00fcber Gesch\u00e4ftsanwendungen f\u00fcr jede Dom\u00e4ne.",
+      "layers": [
+        { "key": "data", "title": "Data Layer", "desc": "Erfassung, Normalisierung und souver\u00e4ne Speicherung Ihrer Gesch\u00e4ftsdaten." },
+        { "key": "ai", "title": "AI Layer", "desc": "KI-Modelle, on-premise oder in CH/EU-Cloud einsetzbar. Keine Daten an OpenAI, Azure oder GCP ohne ausdr\u00fcckliche Zustimmung." },
+        { "key": "knowledge", "title": "Knowledge Layer", "desc": "Wissensgraph, semantische Indizierung, persistentes organisatorisches Ged\u00e4chtnis." },
+        { "key": "governance", "title": "Governance Layer", "desc": "Audit-Trail, RBAC, Verarbeitungsverzeichnis, regulatorische Konformit\u00e4t (AI Act, NIS2, DORA, DSG)." }
+      ],
+      "verticals": {
+        "label": "Vertikale M\u00e4rkte",
+        "desc": "FinTech, HealthTech und PropTech sind vertikale M\u00e4rkte \u2014 keine Kernprodukte. Aegryn-Anwendungen k\u00f6nnen f\u00fcr diese M\u00e4rkte paketiert werden, ohne jedes Mal eine neue Architektur zu erstellen."
+      }
+    },
+    "sovereigntySection": {
+      "label": "Souver\u00e4nit\u00e4t durch Architektur",
+      "title": "Sovereignty by Architecture.",
+      "desc": "Souver\u00e4nit\u00e4t ist kein Marketinglabel. Es ist eine nachpr\u00fcfbare architektonische Eigenschaft.",
+      "pillars": [
+        { "key": "data", "title": "Datenlokalisierung", "desc": "Ihre Daten bleiben in der Schweiz oder der EU. Hosting auf zertifizierter Infrastruktur, konforme Unterauftragsvertr\u00e4ge." },
+        { "key": "model", "title": "KI-Modell-Lokalisierung", "desc": "Modelle werden in Ihrer Infrastruktur eingesetzt \u2014 on-premise oder CH/EU-Cloud. Keine Verarbeitung in US-Clouds ohne Ihre ausdr\u00fcckliche Zustimmung." },
+        { "key": "ip", "title": "Geistiges Eigentum", "desc": "100% Kunden-IP. Aegryn ist niemals Miteigent\u00fcmer des gelieferten Codes. Vollst\u00e4ndiger Export von Quellcode, Dokumentation und Datenbank." },
+        { "key": "vendor", "title": "Kein Vendor-Lock-in", "desc": "Open-Source-Architektur oder offene Standards. Sie k\u00f6nnen jederzeit den Integrator wechseln, ohne von Aegryn abh\u00e4ngig zu sein." },
+        { "key": "audit", "title": "Auditierbarkeit & menschliche Kontrolle", "desc": "Jede KI-Entscheidung ist nachvollziehbar, erkl\u00e4rbar und umkehrbar. Ein Mensch validiert kritische Entscheidungen." },
+        { "key": "export", "title": "Vollst\u00e4ndiger Export garantiert", "desc": "Jederzeit vollst\u00e4ndiger Export von Quellcode, Daten, Modellen und Dokumentation. Keine Zur\u00fcckbehaltung." }
+      ]
+    },
     "difference": {
       "label": "Keine Agentur. Kein Studio.",
       "title": "Der Aegryn-Unterschied.",

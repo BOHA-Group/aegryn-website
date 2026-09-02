@@ -3775,9 +3775,54 @@
       "title": "Conception d'actifs numériques à forfait fixe - Aegryn",
       "desc": "Actifs numériques à forfait fixe : SaaS B2B, IA, app mobile. Documentation complète, prêt pour certification. Zéro dépassement, valorisable dès le premier jour."
     },
-    "label": "Services - Conception d'actifs",
-    "title": "On construit.\nVous possédez.\nPrix fixe. Prêt pour la certification.",
-    "desc": "Aegryn conçoit des actifs numériques, SaaS B2B, IA verticale, application mobile, à prix forfaitaire défini avant le premier sprint. Chaque actif livré est accompagné d'une documentation complète qui le rend prêt pour la certification dès la livraison.",
+    "label": "Conception — Logiciels souverains",
+    "title": "Aegryn construit le logiciel\nde vos opérations.",
+    "desc": "De la PME au grand groupe, en Suisse et en Europe : Aegryn conçoit, déploie et maintient des logiciels métier sur mesure. Sans dépendance aux grands éditeurs. Sans abonnement SaaS génériste. Un code souverain, maîtrisé, intégrable dans votre infrastructure. 46,7% des entreprises européennes utilisent le cloud, 39,9% l'analyse de données, et près de 20% l'IA en 2026 — le besoin en logiciel de qualité, souverain et sans vendor lock-in, est structurel.",
+    "domainsSection": {
+      "label": "10 domaines logiciels",
+      "title": "Les domaines où nous construisons\npour nos clients.",
+      "desc": "Nous choisissons des domaines où le besoin est transversal, récurrent, réglementaire ou coûteux — et où Aegryn peut apporter une couche IA, souveraineté et intégration sans dépendance de grands éditeurs.",
+      "domains": [
+        { "num": "01", "badge": "IA Agentique", "title": "AI Agents & Automatisation métier", "desc": "Orchestration de tâches complexes (back-office, compliance, reporting) par des agents IA autonomes. Alternative souveraine aux plateformes RPA et no-code du marché." },
+        { "num": "02", "badge": "Gouvernance IA", "title": "Conformité, Risque & Gouvernance IA", "desc": "Registre des traitements, AI Act EU, DORA, NIS2, LPD suisse. Gestion du risque algorithme et traçabilité des décisions IA à l'échelle de l'entreprise." },
+        { "num": "03", "badge": "Trust Numérique", "title": "Cybersécurité & Confiance Numérique", "desc": "Authentification forte, gestion des accès, audit trail, coffre-fort numérique documentaire. Architecture zero-trust et protection des assets critiques. Kryv — actif core Aegryn." },
+        { "num": "04", "badge": "Intelligence Docs", "title": "Contrats & Intelligence Documentaire", "desc": "Analyse, extraction et lifecycle de contrats, bons de commande, NDA et clauses réglementaires. Moteur IA local, zéro cloud tiers. Subblink — actif core Aegryn." },
+        { "num": "05", "badge": "ERP Souverain", "title": "ERP & Gestion opérationnelle", "desc": "Remplacement ou extension d'ERP généristes (SAP, Oracle, Sage) par des modules sur mesure connectés à vos process réels. 46,5% des entreprises EU utilisent un ERP — souvent inadapté." },
+        { "num": "06", "badge": "Data Intelligence", "title": "Analyse de données & Business Intelligence", "desc": "Pipelines de données, dashboards opérationnels, modèles prédictifs. Hébergement souverain CH/EU, sans envoyer vos données à des plateformes tierces." },
+        { "num": "07", "badge": "Relation client", "title": "CRM & Portails clients", "desc": "CRM métier sur mesure, portails partenaires, extranet clients avec authentification forte. Alternative souveraine à Salesforce, HubSpot et équivalents." },
+        { "num": "08", "badge": "RH & Talent", "title": "RH, Talent & Gestion des compétences", "desc": "HRIS, onboarding, skills mapping, évaluation et plan de développement — intégrés à votre organisation réelle, sans couche SaaS globale." },
+        { "num": "09", "badge": "Finance & Audit", "title": "Finance, Reporting & Audit", "desc": "Clôture comptable assistée IA, reporting réglementaire (IFRS, Swiss GAAP), audit trail immuable. Connexion native à vos outils existants." },
+        { "num": "10", "badge": "Knowledge Graph", "title": "Knowledge Management & IA de contenu", "desc": "Base de connaissances intelligente, moteur de recherche sémantique, génération de contenu contrôlée. Mémoire organisationnelle structurée, privée et auditée." }
+      ]
+    },
+    "platformSection": {
+      "label": "Architecture commune",
+      "title": "AEGRYN Enterprise Intelligence Platform.",
+      "desc": "Les 10 domaines ne sont pas 10 produits indépendants. Ils partagent une infrastructure commune : l'AEGRYN Enterprise Intelligence Platform. Une couche data, une couche IA, une couche gouvernance — et par-dessus, des applications métier pour chaque domaine.",
+      "layers": [
+        { "key": "data", "title": "Data Layer", "desc": "Ingestion, normalisation et stockage souverain de vos données métier." },
+        { "key": "ai", "title": "AI Layer", "desc": "Modèles IA déployables on-premise ou cloud CH/EU. Aucun envoi de données vers OpenAI, Azure ou GCP sans accord explicite." },
+        { "key": "knowledge", "title": "Knowledge Layer", "desc": "Graphe de connaissances, indexation sémantique, mémoire organisationnelle persistante." },
+        { "key": "governance", "title": "Governance Layer", "desc": "Audit trail, RBAC, registre des traitements, conformité réglementaire (AI Act, NIS2, DORA, LPD)." }
+      ],
+      "verticals": {
+        "label": "Marchés verticaux",
+        "desc": "FinTech, HealthTech et PropTech sont des marchés verticaux — pas des produits de base. Les applications Aegryn peuvent être packagées pour ces marchés sans créer une nouvelle architecture à chaque fois."
+      }
+    },
+    "sovereigntySection": {
+      "label": "Souveraineté par l'architecture",
+      "title": "Sovereignty by Architecture.",
+      "desc": "La souveraineté n'est pas un label marketing. C'est une propriété architecturale vérifiable.",
+      "pillars": [
+        { "key": "data", "title": "Localisation des données", "desc": "Vos données restent en Suisse ou dans l'UE. Hébergement sur infrastructure certifiée, contrats de sous-traitance conformes." },
+        { "key": "model", "title": "Localisation des modèles IA", "desc": "Les modèles sont déployés dans votre infrastructure — on-premise ou cloud CH/EU. Aucun traitement dans des clouds américains sans votre accord explicite." },
+        { "key": "ip", "title": "Propriété intellectuelle", "desc": "100% IP client. Aegryn n'est jamais co-propriétaire du code livré. Export total du code source, de la documentation et de la base de données." },
+        { "key": "vendor", "title": "Zéro vendor lock-in", "desc": "Architecture open source ou standards ouverts. Vous pouvez changer d'intégrateur à tout moment sans dépendre d'Aegryn." },
+        { "key": "audit", "title": "Auditabilité & contrôle humain", "desc": "Toute décision IA est traçable, explicable et réversible. Un humain valide les décisions critiques." },
+        { "key": "export", "title": "Export total garanti", "desc": "À tout moment, export complet du code source, des données, des modèles et de la documentation. Zéro rétention." }
+      ]
+    },
     "difference": {
       "label": "Pas une agence. Pas un studio.",
       "title": "La différence Aegryn.",

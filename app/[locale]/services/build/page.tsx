@@ -47,6 +47,9 @@ export default async function BuildServicePage({ params }: Props) {
   const assetTypeItems          = t.raw('assetTypes.items')             as { badge: string; title: string; desc: string }[]
   const processSteps            = t.raw('process.steps')                as { num: string; title: string; desc: string }[]
   const feeItems                = t.raw('fees.items')                   as { title: string; desc: string; format: string }[]
+  const domainItems             = t.raw('domainsSection.domains')       as { num: string; badge: string; title: string; desc: string }[]
+  const platformLayers          = t.raw('platformSection.layers')       as { key: string; title: string; desc: string }[]
+  const sovereigntyPillars      = t.raw('sovereigntySection.pillars')   as { key: string; title: string; desc: string }[]
 
   return (
     <main>
@@ -66,6 +69,98 @@ export default async function BuildServicePage({ params }: Props) {
           <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl">
             {t('desc')}
           </p>
+        </div>
+      </section>
+
+      {/* ── Section 1b : 10 Domaines logiciels ───────────────────────── */}
+      <section className="border-b border-ag-border bg-ag-off-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
+            {t('domainsSection.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4 whitespace-pre-line"
+            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+          >
+            {t('domainsSection.title')}
+          </h2>
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-14">
+            {t('domainsSection.desc')}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border border-ag-border">
+            {domainItems.map((item) => (
+              <div key={item.num} className="bg-ag-white p-8 flex flex-col gap-3">
+                <div className="flex items-center gap-3">
+                  <span className="font-mono text-[10px] tracking-[0.22em] text-ag-apex-ink">{item.num}</span>
+                  <span className="inline-flex font-mono text-[9px] tracking-[0.18em] uppercase px-2 py-0.5 border border-ag-navy/20 bg-ag-navy/5 text-ag-navy">
+                    {item.badge}
+                  </span>
+                </div>
+                <h3 className="font-sans font-bold text-ag-black text-[16px] leading-snug">{item.title}</h3>
+                <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 1c : AEGRYN Enterprise Intelligence Platform ──────── */}
+      <section className="border-b border-ag-border bg-ag-navy">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex mb-4">
+            {t('platformSection.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-white tracking-[-0.02em] leading-tight mb-4"
+            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+          >
+            {t('platformSection.title')}
+          </h2>
+          <p className="font-sans text-[14px] text-white/70 leading-relaxed max-w-2xl mb-14">
+            {t('platformSection.desc')}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 mb-10">
+            {platformLayers.map((layer) => (
+              <div key={layer.key} className="bg-ag-navy p-8 flex flex-col gap-3 border border-white/10">
+                <h3 className="font-mono text-[11px] tracking-[0.22em] uppercase text-ag-apex">{layer.title}</h3>
+                <p className="font-sans text-[13px] text-white/70 leading-relaxed">{layer.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="border-l-2 border-ag-apex/40 pl-4 max-w-2xl">
+            <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.22em] text-ag-apex/80 mb-2">
+              {t('platformSection.verticals.label')}
+            </p>
+            <p className="font-sans text-[13px] text-white/60 leading-relaxed">
+              {t('platformSection.verticals.desc')}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 1d : Sovereignty by Architecture ──────────────────── */}
+      <section className="border-b border-ag-border">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
+            {t('sovereigntySection.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4"
+            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+          >
+            {t('sovereigntySection.title')}
+          </h2>
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-xl mb-14">
+            {t('sovereigntySection.desc')}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+            {sovereigntyPillars.map((pillar) => (
+              <div key={pillar.key} className="bg-ag-white p-8 flex flex-col gap-3">
+                <h3 className="font-sans font-bold text-ag-black text-[15px] leading-snug">{pillar.title}</h3>
+                <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{pillar.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
