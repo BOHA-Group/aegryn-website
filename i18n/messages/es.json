@@ -13,7 +13,7 @@
     "transactSell": "Mandato de venta",
     "transactBuy": "Mandato de adquisición",
     "transactMandate": "Depositar un mandato",
-    "transactResults": "Transacciones cerradas",
+    "_disabled_transactResults": "Transacciones cerradas",
     "grade": "Grade",
     "assets": "Activos",
     "services": "Servicios",
@@ -26,7 +26,7 @@
     "transactionBuy": "Convertirse en comprador",
     "transactionBidModels": "Modelos de propuesta",
     "transactionSession": "Proceso",
-    "transactionResults": "Transacciones cerradas",
+    "_disabled_transactionResults": "Transacciones cerradas",
     "gradeSystem": "Sistema de grade",
     "gradeMethod": "Metodología",
     "gradeSubmit": "Certificar un activo",
@@ -79,7 +79,7 @@
     "craftTransactCatalog": "Catálogo offmarket",
     "craftTransactSell": "Ceder un activo",
     "craftTransactBuy": "Convertirse en comprador",
-    "craftTransactResults": "Transacciones cerradas",
+    "_disabled_craftTransactResults": "Transacciones cerradas",
     "craftGrade": "Certificar",
     "craftGradeDesc": "Sistema de calificación independiente",
     "solutionsCore": "CORE",
@@ -230,43 +230,50 @@
     }
   },
   "advisory": {
-    "strip": "Aegryn Advisory | Protegemos lo que tardaste años en construir",
+    "strip": "Aegryn Advisory | Consultoría en estrategia, tecnología y M&A para empresas tech europeas",
     "cta": "Ponerse en contacto",
     "hero": {
-      "title": "Proteger lo que construyes.",
-      "desc": "Creemos que las empresas que construyen para el largo plazo merecen una protección a la altura de su ambición. No informes. Una presencia real antes de que el riesgo se materialice."
+      "title": "Acompañar lo que construyes.",
+      "desc": "Acompañamos a emprendedores y adquirentes en sus decisiones estratégicas, transformación tecnológica y operaciones M&A. No presentaciones. Experiencia operativa al servicio de tu crecimiento."
     },
-    "services": {
-      "cyber": {
-        "title": "Ciberseguridad",
-        "desc": "Auditoría de superficie de ataque, seguridad de aplicaciones, infraestructura cloud y cumplimiento NIS2.",
-        "items": [
-          "Pentest (black/grey/white box)",
-          "Auditoría de seguridad de aplicaciones",
-          "Cumplimiento NIS2",
-          "Seguridad cloud & on-premise"
-        ]
-      },
-      "ai": {
-        "title": "Data & Inteligencia Artificial",
-        "desc": "Estrategia IA, gobernanza de datos, cumplimiento EU AI Act y auditoría de modelos.",
-        "items": [
-          "Auditoría de sesgos algorítmicos",
-          "Cumplimiento EU AI Act",
-          "Red-teaming LLM",
-          "Gobernanza de datos & MLOps"
-        ]
-      },
+    "pillars": {
       "strategy": {
-        "title": "Arquitectura & Ingeniería",
-        "desc": "CTO as a service, revisión de arquitectura full-stack, DevSecOps y calidad de software.",
-        "items": [
-          "Revisión de arquitectura full-stack",
-          "DevSecOps & CI/CD",
-          "Reducción de deuda técnica",
-          "Escalabilidad & migración"
+        "title": "Consultoría Estratégica",
+        "desc": "Ayudamos a los líderes a definir y ejecutar su visión estratégica en un entorno en constante evolución.",
+        "dimensions": [
+          {"label": "Estrategia internacional", "desc": "Expansión geográfica, implantación de filiales, adaptación a mercados locales y alianzas estratégicas."},
+          {"label": "Transformación empresarial", "desc": "Rediseño del modelo operativo, digitalización de procesos, gestión del cambio y alineación organizacional."},
+          {"label": "Optimización de costes", "desc": "Análisis de estructura de costes, identificación de palancas de eficiencia, reestructuración y mejora de rentabilidad."},
+          {"label": "Innovación y crecimiento", "desc": "Estrategia de producto, nuevos mercados, diversificación, alianzas tecnológicas y modelos de ingresos."},
+          {"label": "Talento y organización", "desc": "Diseño organizacional, estrategia de RRHH, cultura empresarial, retención de talento y liderazgo."}
+        ]
+      },
+      "technology": {
+        "title": "Consultoría Tecnológica",
+        "desc": "Acompañamos la transformación tecnológica de las empresas con un enfoque pragmático y operativo.",
+        "dimensions": [
+          {"label": "Transformación digital", "desc": "Estrategia digital, renovación de sistemas legacy, modernización de aplicaciones y experiencia de usuario."},
+          {"label": "Data & Analytics", "desc": "Arquitectura de datos, gobernanza, data lake/warehouse, BI, analítica avanzada y monetización de datos."},
+          {"label": "Inteligencia Artificial", "desc": "Estrategia IA, casos de uso, MLOps, IA generativa, cumplimiento EU AI Act y auditoría de modelos."},
+          {"label": "Ciberseguridad", "desc": "Auditoría de seguridad, pentest, cumplimiento NIS2/ISO27001, gobernanza cyber y resiliencia."},
+          {"label": "Cloud e Infraestructura", "desc": "Migración cloud, arquitectura multi-cloud, DevOps, SRE, escalabilidad y optimización de costes cloud."},
+          {"label": "Blockchain & Web3", "desc": "Estrategia blockchain, tokenización, smart contracts, DeFi y cumplimiento regulatorio."}
+        ]
+      },
+      "ma": {
+        "title": "Consultoría M&A",
+        "desc": "Acompañamos operaciones de fusiones-adquisiciones e integración post-fusión con experiencia tech.",
+        "dimensions": [
+          {"label": "Advisory Transacciones", "desc": "Estructuración de cesiones, adquisiciones, levantamiento de fondos, valoración de activos tech y negociación."},
+          {"label": "Due Diligence Tech", "desc": "Auditoría técnica, evaluación de deuda técnica, análisis de propiedad intelectual y riesgos."},
+          {"label": "Integración Post-Fusión (PMI)", "desc": "Integración de sistemas IT, armonización de procesos, sinergias tecnológicas y gestión del cambio."},
+          {"label": "Carve-out & Spin-off", "desc": "Separación de activos, extracción de unidades de negocio, acuerdos de servicios de transición y autonomización IT."}
         ]
       }
+    },
+    "network": {
+      "partners": {"title": "Red de Socios", "desc": "Colaboramos con una red seleccionada de empresas socias para ampliar nuestra capacidad de intervención en misiones complejas."},
+      "experts": {"title": "Red de Expertos", "desc": "Movilizamos una red de expertos independientes (abogados, contables, asesores fiscales, notarios) para completar nuestras misiones según las necesidades específicas de cada proyecto."}
     },
     "approach": {
       "title": "Un protocolo riguroso, no una promesa.",
