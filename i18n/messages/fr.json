@@ -549,7 +549,7 @@
   "aboutSection": {
     "label": "À propos d'Aegryn",
     "title": "Cinq métiers.\nUn standard de marché.",
-    "desc": "Aegryn conseille, construit, certifie, recrute et informe. Cinq disciplines exercées avec le même standard d’exigence, en Suisse et en Europe.",
+    "desc": "Aegryn construit des logiciels souverains, accompagne les dirigeants tech, certifie et transmet des actifs, recrute des talents executive et documente le marché. Cinq disciplines exercées avec le même niveau d'exigence, en Suisse et en Europe.",
     "tagline": "CONSEIL OPÉRATIONNEL. LOGICIELS SOUVERAINS. CERTIFICATION INDÉPENDANTE.",
     "cta": "À propos d'Aegryn",
     "quote": "Dans un monde qui bouge plus vite que jamais, le conseil est la clé pour avoir une vision claire et un plan d'exécution. Nous accompagnons les dirigeants tech avec une expertise opérationnelle, pas des slides.",
@@ -576,15 +576,15 @@
     "items": [
       {
         "title": "CONSTRUIRE",
-        "desc": "Nous concevons et opérons des actifs tech, SaaS, marketplaces, protocoles IA, structurés dès l'origine pour être certifiables et transférables. Chaque actif résiste à l'audit le plus exigeant."
+        "desc": "Nous concevons, déployons et maintenons des logiciels métier sur mesure pour les entreprises. Code souverain, sans dépendance éditeur, intégrable dans votre infrastructure."
       },
       {
         "title": "ACCOMPAGNER",
-        "desc": "Nous accompagnons les entrepreneurs et les acquéreurs : Conseil Tech (cybersécurité, IA, conformité), Conseil Transaction (structuration, due diligence, closing), et Talent (recrutement et placement de profils tech)."
+        "desc": "Conseil stratégique, technologique et en transactions pour les entreprises tech. Expertise opérationnelle sur la conformité, la cybersécurité, la transformation digitale et les opérations de transmission."
       },
       {
         "title": "TRANSMETTRE",
-        "desc": "Nous certifions et transmettons des actifs tech selon un protocole indépendant sur 4 dimensions : Code, IP, Finance, Sécurité. Mandat exclusif 60 jours. Séquestre institutionnel. Moins de 25% des actifs soumis acceptés."
+        "desc": "Certification indépendante sur 4 dimensions : Code, IP, Finance, Sécurité. Mandat exclusif 60 jours, séquestre institutionnel. Moins de 25 % des actifs soumis sont acceptés."
       },
       {
         "title": "RECRUTER",
@@ -592,7 +592,7 @@
       },
       {
         "title": "S'INFORMER",
-        "desc": "Nous documentons le marché M&A tech européen : Magazine trimestriel Aegryn, Brief hebdomadaire, Articles et analyses. Une vision claire du marché, pour ceux qui le font."
+        "desc": "Magazine trimestriel, brief hebdomadaire, articles et analyses. Nous documentons les transformations du marché tech européen pour les dirigeants qui le font."
       }
     ]
   },
