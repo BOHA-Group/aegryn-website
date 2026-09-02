@@ -202,7 +202,7 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-0.5 leading-snug"
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
               >
                 {t(labelKey)}
               </Link>
@@ -218,7 +218,7 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-0.5 leading-snug"
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
               >
                 {t(labelKey)}
               </Link>
