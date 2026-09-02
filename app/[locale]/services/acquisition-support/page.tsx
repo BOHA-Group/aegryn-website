@@ -16,11 +16,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AcquisitionSupportPage({ params }: Props) {
   const { locale } = await params
   const t          = await getTranslations({ locale, namespace: 'acquisition' })
-  const forWhom    = t.raw('forWhom.items')   as { title: string; desc: string }[]
-  const steps      = t.raw('offer.steps')     as { num: string; title: string; desc: string }[]
-  const diffItems  = t.raw('diff.items')      as { title: string; desc: string }[]
-  const expertPhases   = t.raw('experts.phases')  as { label: string; items: { num: string; title: string; desc: string; badge?: string }[] }[]
-  const roadmapItems    = t.raw('roadmap.items')   as { phase: string; title: string; desc: string; status: string }[]
+  const forWhom    = (t.raw('forWhom.items')   as { title: string; desc: string }[]) || []
+  const steps      = (t.raw('offer.steps')     as { num: string; title: string; desc: string }[]) || []
+  const diffItems  = (t.raw('diff.items')      as { title: string; desc: string }[]) || []
+  const expertPhases   = (t.raw('experts.phases')  as { label: string; items: { num: string; title: string; desc: string; badge?: string }[] }[]) || []
+  const roadmapItems    = (t.raw('roadmap.items')   as { phase: string; title: string; desc: string; status: string }[]) || []
 
   return (
     <main className="bg-ag-white">

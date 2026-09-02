@@ -159,7 +159,7 @@ export default async function ArticlePage({ params }: Props) {
                 )
                 if (block.type === 'list') return (
                   <ul key={i} className="space-y-3 pl-0">
-                    {block.items.map((item, j) => (
+                    {(block.items || []).map((item, j) => (
                       <li key={j} className="flex items-start gap-3 font-sans text-[15px] text-ag-gray leading-relaxed">
                         <span className="shrink-0 mt-1.5 w-1.5 h-1.5 bg-ag-apex rounded-full" />
                         {getLocaleText(item, locale)}
@@ -181,7 +181,7 @@ export default async function ArticlePage({ params }: Props) {
                 )
                 if (block.type === 'stats') return (
                   <div key={i} className="grid grid-cols-2 md:grid-cols-4 gap-px bg-ag-border border border-ag-border my-8">
-                    {block.items.map((stat, j) => (
+                    {(block.items || []).map((stat, j) => (
                       <div key={j} className="bg-ag-off-white p-6">
                         <p className="font-sans font-bold text-ag-apex tracking-[-0.03em] leading-none mb-2"
                            style={{ fontSize: 'clamp(22px,2.5vw,34px)' }}>
