@@ -828,23 +828,27 @@
     },
     "crafts": {
       "label": "Nos métiers",
-      "title": "Des disciplines qui se combinent.",
+      "title": "Cinq disciplines qui se renforcent.",
       "items": {
-        "advisory": {
-          "title": "Conseil Transaction",
-          "desc": "Structuration de cessions, acquisitions et opérations de capital pour des actifs tech certifiés. Due diligence, valorisation, closing."
+        "accompagner": {
+          "title": "Accompagner",
+          "desc": "Conseil en stratégie d'entreprise, tech et M&A. Nous intervenons quand les décisions définissent la trajectoire de l'organisation."
         },
-        "tech": {
-          "title": "Conseil Tech",
-          "desc": "Audit technique, sécurité applicative, conformité réglementaire (RGPD, nLPD, NIS2) et certification indépendante des actifs numériques."
+        "construire": {
+          "title": "Construire",
+          "desc": "Conception d'actifs numériques durables à forfait fixe, propriété totale client. Du diagnostic au produit certifiable."
         },
-        "build": {
-          "title": "Build & Engineering",
-          "desc": "Conception et développement d'actifs propriétaires : SaaS, marketplaces, protocoles IA. De l'idée au produit certifiable."
+        "transmettre": {
+          "title": "Transmettre",
+          "desc": "Certification et cession d'actifs tech. Due diligence, valorisation, structuration et closing dans un cercle d'acquéreurs qualifiés."
         },
-        "intelligence": {
-          "title": "Intelligence",
-          "desc": "Publication annuelle, veille sectorielle, analyse des tendances M&A tech européennes. Notre revue de référence."
+        "recruter": {
+          "title": "Recruter",
+          "desc": "Identification et placement de dirigeants, experts tech et profils innovation. CTO, CISO, COO, DPO, Head of AI — en Suisse et en Europe."
+        },
+        "informer": {
+          "title": "Informer",
+          "desc": "Magazine, veille sectorielle et analyse des tendances tech et M&A en Europe. Nous documentons ce que nous observons et vivons."
         }
       }
     },

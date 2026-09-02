@@ -891,26 +891,30 @@
       "title": "Construir lo que perdura."
     },
     "crafts": {
+      "label": "Nuestras disciplinas",
+      "title": "Cinco disciplinas que se refuerzan mutuamente.",
       "items": {
-        "advisory": {
-          "desc": "Transacción, certificación, estrategia. Asesoramos.",
-          "title": "Advisory"
+        "accompagner": {
+          "title": "Asesorar",
+          "desc": "Consultoría en estrategia, tecnología y M&A. Intervenimos cuando las decisiones definen la trayectoria de la organización."
         },
-        "build": {
-          "desc": "Diseño de activos, producto, go-to-market. Entregamos.",
-          "title": "Build"
+        "construire": {
+          "title": "Construir",
+          "desc": "Activos digitales duraderos a precio fijo, plena propiedad intelectual del cliente. Del diagnóstico al producto certificable."
         },
-        "intelligence": {
-          "desc": "Investigación, editorial, datos. Analizamos.",
-          "title": "Intelligence"
+        "transmettre": {
+          "title": "Transmitir",
+          "desc": "Certificación y cesión de activos tech. Due diligence, valoración, estructuración y cierre en un círculo de compradores cualificados."
         },
-        "tech": {
-          "desc": "Arquitectura, backend, frontend, IA. Construimos el núcleo.",
-          "title": "Ingeniería"
+        "recruter": {
+          "title": "Reclutar",
+          "desc": "Identificación y colocación de directivos, expertos tech y perfiles de innovación. CTO, CISO, COO, DPO, Head of AI — en Suiza y Europa."
+        },
+        "informer": {
+          "title": "Informar",
+          "desc": "Revista, inteligencia sectorial y análisis de tendencias tech y M&A en Europa. Documentamos lo que observamos y vivimos."
         }
-      },
-      "label": "Disciplinas",
-      "title": "Dónde trabajamos."
+      }
     },
     "openings": {
       "cta": "Contáctenos",

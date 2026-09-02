@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-const CRAFTS = ['advisory', 'tech', 'build', 'intelligence'] as const
+const CRAFTS = ['accompagner', 'construire', 'transmettre', 'recruter', 'informer'] as const
 const VALUES = ['precision', 'durability', 'sovereignty', 'trust'] as const
 
 export default async function CareerPage({ params }: Props) {
@@ -82,7 +82,7 @@ export default async function CareerPage({ params }: Props) {
           >
             {t('crafts.title')}
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-ag-border">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-0 border-t border-ag-border">
             {CRAFTS.map((key) => (
               <div key={key} className="border-b sm:border-b-0 sm:border-r last:border-r-0 border-ag-border py-10 px-8 first:pl-0 last:pr-0">
                 <div className="w-8 h-px bg-ag-apex mb-6" />

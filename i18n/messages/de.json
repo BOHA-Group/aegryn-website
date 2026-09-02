@@ -891,26 +891,30 @@
       "title": "Bauen, was bleibt."
     },
     "crafts": {
+      "label": "Unsere Disziplinen",
+      "title": "Fünf Disziplinen, die sich gegenseitig stärken.",
       "items": {
-        "advisory": {
-          "desc": "Transaktion, Zertifizierung, Strategie. Wir beraten.",
-          "title": "Advisory"
+        "accompagner": {
+          "title": "Beraten",
+          "desc": "Strategie-, Tech- und M&A-Beratung. Wir greifen ein, wenn Entscheidungen die Trajektorie der Organisation bestimmen."
         },
-        "build": {
-          "desc": "Asset-Design, Produkt, Go-to-Market. Wir liefern.",
-          "title": "Build"
+        "construire": {
+          "title": "Aufbauen",
+          "desc": "Nachhaltige digitale Assets zu Festpreisen, vollständiges IP-Eigentum des Kunden. Vom Diagnosegespräch zum zertifizierbaren Produkt."
         },
-        "intelligence": {
-          "desc": "Forschung, Redaktion, Daten. Wir analysieren.",
-          "title": "Intelligence"
+        "transmettre": {
+          "title": "Übertragen",
+          "desc": "Tech-Asset-Zertifizierung und Veräußerung. Due Diligence, Bewertung, Strukturierung und Closing im Kreis qualifizierter Käufer."
         },
-        "tech": {
-          "desc": "Architektur, Backend, Frontend, KI. Wir bauen den Kern.",
-          "title": "Engineering"
+        "recruter": {
+          "title": "Rekrutieren",
+          "desc": "Identifizierung und Platzierung von Führungskräften, Tech-Experten und Innovationsprofilen. CTO, CISO, COO, DPO, Head of AI — in der Schweiz und Europa."
+        },
+        "informer": {
+          "title": "Informieren",
+          "desc": "Magazin, Branchenintelligenz und Analyse der Tech- und M&A-Trends in Europa. Wir dokumentieren, was wir beobachten und erleben."
         }
-      },
-      "label": "Disziplinen",
-      "title": "Wo wir arbeiten."
+      }
     },
     "openings": {
       "cta": "Kontakt aufnehmen",

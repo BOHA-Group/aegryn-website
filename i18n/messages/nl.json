@@ -891,26 +891,30 @@
       "title": "Bouwen wat blijft."
     },
     "crafts": {
+      "label": "Onze disciplines",
+      "title": "Vijf disciplines die elkaar versterken.",
       "items": {
-        "advisory": {
-          "desc": "Transactie, certificering, strategie. Wij adviseren.",
-          "title": "Advisory"
+        "accompagner": {
+          "title": "Adviseren",
+          "desc": "Strategie-, tech- en M&A-advies. Wij grijpen in wanneer beslissingen de trajectorie van de organisatie bepalen."
         },
-        "build": {
-          "desc": "Asset-ontwerp, product, go-to-market. Wij leveren.",
-          "title": "Build"
+        "construire": {
+          "title": "Bouwen",
+          "desc": "Duurzame digitale assets tegen vaste prijs, volledige IP-eigendom van de klant. Van diagnose tot certificeerbaar product."
         },
-        "intelligence": {
-          "desc": "Onderzoek, redactie, data. Wij analyseren.",
-          "title": "Intelligence"
+        "transmettre": {
+          "title": "Overdragen",
+          "desc": "Tech-asset certificering en overdracht. Due diligence, waardering, structurering en closing in een kring van gekwalificeerde kopers."
         },
-        "tech": {
-          "desc": "Architectuur, backend, frontend, AI. Wij bouwen de kern.",
-          "title": "Engineering"
+        "recruter": {
+          "title": "Werven",
+          "desc": "Identificatie en plaatsing van leidinggevenden, tech-experts en innovatieprofielen. CTO, CISO, COO, DPO, Head of AI — in Zwitserland en Europa."
+        },
+        "informer": {
+          "title": "Informeren",
+          "desc": "Magazine, sectorenintelligentie en analyse van tech- en M&A-trends in Europa. Wij documenteren wat wij waarnemen en meemaken."
         }
-      },
-      "label": "Disciplines",
-      "title": "Waar wij werken."
+      }
     },
     "openings": {
       "cta": "Neem contact op",

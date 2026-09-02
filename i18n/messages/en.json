@@ -891,26 +891,30 @@
       "title": "Build what endures."
     },
     "crafts": {
+      "label": "Our disciplines",
+      "title": "Five disciplines that strengthen each other.",
       "items": {
-        "advisory": {
-          "desc": "Transaction, certification, strategy. We advise.",
-          "title": "Advisory"
+        "accompagner": {
+          "title": "Advise",
+          "desc": "Strategy, tech and M&A advisory. We step in when decisions define the trajectory of the organisation."
         },
-        "build": {
-          "desc": "Asset design, product, go-to-market. We ship.",
-          "title": "Build"
+        "construire": {
+          "title": "Build",
+          "desc": "Durable digital assets at fixed price, full client IP ownership. From diagnosis to certifiable product."
         },
-        "intelligence": {
-          "desc": "Research, editorial, data. We analyse.",
-          "title": "Intelligence"
+        "transmettre": {
+          "title": "Transact",
+          "desc": "Tech asset certification and divestiture. Due diligence, valuation, structuring and closing within a circle of qualified acquirers."
         },
-        "tech": {
-          "desc": "Architecture, backend, frontend, AI. We build the core.",
-          "title": "Engineering"
+        "recruter": {
+          "title": "Recruit",
+          "desc": "Identifying and placing executives, tech experts and innovation profiles. CTO, CISO, COO, DPO, Head of AI — across Switzerland and Europe."
+        },
+        "informer": {
+          "title": "Inform",
+          "desc": "Magazine, sector intelligence and analysis of tech and M&A trends in Europe. We document what we observe and live."
         }
-      },
-      "label": "Disciplines",
-      "title": "Where we work."
+      }
     },
     "openings": {
       "cta": "Contact us",
