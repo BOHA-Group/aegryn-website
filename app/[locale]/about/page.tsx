@@ -288,18 +288,19 @@ export default function AboutPage() {
       <section className="border-b border-ag-border">
         <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
-            / {t('founder.label')}
+            / {ta('founder.label')}
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
               style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
             >
-              {t('founder.title')}
+              {ta('founder.title')}
             </h2>
             <div className="space-y-5">
-              <p className="text-[15px] text-ag-gray leading-relaxed">{t('founder.bio1')}</p>
-              <p className="text-[15px] text-ag-gray leading-relaxed">{t('founder.bio2')}</p>
+              {ta('founder.desc').split('\n\n').map((para, i) => (
+                <p key={i} className="text-[15px] text-ag-gray leading-relaxed">{para}</p>
+              ))}
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all mt-4"
