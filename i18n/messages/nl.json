@@ -106,7 +106,7 @@
     "whoJoin": "Sluit je bij ons aan",
     "whoJoinDesc": "Carrières, talenten, partners",
     "whoCareers": "Carrières",
-    "whoTalent": "Werving & Plaatsing",
+    "whoTalent": "Executive Recruitment",
     "whoAlliances": "Partner worden",
     "talent": "Talent",
     "thinkingMarket": "Ons marktperspectief",
@@ -138,7 +138,7 @@
     "cta3Desc": "uw asset.",
     "cta3Link": "Schatten",
     "cta4Title": "Rekruteren",
-    "cta4Desc": "experts.",
+    "cta4Desc": "talenten.",
     "cta4Link": "Vinden",
     "cta5Title": "Informeren",
     "cta5Desc": "de markt.",
@@ -422,19 +422,23 @@
     "sub": "Vijf disciplines. Één geïntegreerd ecosysteem.",
     "items": [
       {
-        "title": "ONTWERP",
+        "title": "BOUWEN",
         "desc": "We ontwerpen en exploiteren tech-assets, SaaS, marketplaces, AI-protocollen, vanaf het begin gestructureerd om certificeerbaar en overdraagbaar te zijn. Elk asset weerstaat de meest strikte audit."
-      },
-      {
-        "title": "OVERDRAGEN",
-        "desc": "We certificeren en dragen tech-assets over volgens een onafhankelijk protocol over 4 dimensies: Code, IP, Financiën, Veiligheid. Exclusief mandaat 60 dagen. Institutionele escrow. Minder dan 25% van de ingediende assets geaccepteerd."
       },
       {
         "title": "BEGELEIDEN",
         "desc": "We ondersteunen ondernemers en kopers: Tech Advisory (cybersecurity, AI, compliance), Transaction Advisory (structurering, due diligence, closing) en Talent (werving en plaatsing van tech-profielen)."
       },
       {
-        "title": "INTELLIGENCE",
+        "title": "OVERDRAGEN",
+        "desc": "We certificeren en dragen tech-assets over volgens een onafhankelijk protocol over 4 dimensies: Code, IP, Financiën, Veiligheid. Exclusief mandaat 60 dagen. Institutionele escrow. Minder dan 25% van de ingediende assets geaccepteerd."
+      },
+      {
+        "title": "REKRUTEREN",
+        "desc": "We werven en plaatsen executive tech-profielen: CTO, VP Engineering, Head of Product, cybersecurity- en AI-experts. Gespecialiseerde headhunting voor Europese startups en scale-ups."
+      },
+      {
+        "title": "INFORMEREN",
         "desc": "We documenteren de Europese tech M&A-markt: Driemaandelijks Aegryn Magazine, Wekelijkse Brief, Artikelen en analyses. Een helder zicht op de markt, voor degenen die hem maken."
       }
     ]

@@ -130,7 +130,7 @@ export function HeroMountain() {
 
       {/* Content — bottom anchored, left-aligned */}
       <div className="absolute bottom-0 left-0 right-0 z-10">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pb-14">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pb-16 md:pb-14">
 
           {/* H1 — Unbounded display */}
           <h1

@@ -111,7 +111,7 @@
     "whoJoin": "Join us",
     "whoJoinDesc": "Careers, talent, partners",
     "whoCareers": "Careers",
-    "whoTalent": "Recruitment & Placement",
+    "whoTalent": "Executive Recruitment",
     "whoAlliances": "Become a partner",
     "talent": "Talent",
     "industries": "Industries",
@@ -138,7 +138,7 @@
     "cta3Desc": "your asset.",
     "cta3Link": "Estimate",
     "cta4Title": "Recruit",
-    "cta4Desc": "experts.",
+    "cta4Desc": "talents.",
     "cta4Link": "Find",
     "cta5Title": "Learn",
     "cta5Desc": "the market.",
@@ -426,15 +426,19 @@
         "desc": "We design and operate tech assets, SaaS, marketplaces, AI protocols, structured from inception to be certifiable and transferable. Every asset withstands the most rigorous audit."
       },
       {
-        "title": "TRANSACT",
-        "desc": "We certify and transact tech assets through an independent protocol across 4 dimensions: Code, IP, Finance, Security. Exclusive 60-day mandate. Institutional escrow. Less than 25% of submitted assets accepted."
-      },
-      {
         "title": "ADVISE",
         "desc": "We support entrepreneurs and acquirers: Tech Advisory (cybersecurity, AI, compliance), Transaction Advisory (structuring, due diligence, closing), and Talent (recruitment and placement of tech profiles)."
       },
       {
-        "title": "INTELLIGENCE",
+        "title": "TRANSACT",
+        "desc": "We certify and transact tech assets through an independent protocol across 4 dimensions: Code, IP, Finance, Security. Exclusive 60-day mandate. Institutional escrow. Less than 25% of submitted assets accepted."
+      },
+      {
+        "title": "RECRUIT",
+        "desc": "We recruit and place executive tech profiles: CTO, VP Engineering, Head of Product, cybersecurity and AI experts. Specialized headhunting for European startups and scale-ups."
+      },
+      {
+        "title": "LEARN",
         "desc": "We document the European tech M&A market: Quarterly Aegryn Magazine, Weekly Brief, Articles and analyses. A clear view of the market, for those who make it."
       }
     ]

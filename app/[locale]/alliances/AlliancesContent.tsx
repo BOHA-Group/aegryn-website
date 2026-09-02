@@ -151,12 +151,12 @@ export default function AlliancesContent() {
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-5">
                 {t(`types.${activeTab}.label`)}
               </p>
-              {t.raw(`types.${activeTab}.title`) && (
+              {t.raw(`types.${activeTab}.title`) !== `alliances.types.${activeTab}.title` && (
                 <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6" style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}>
                   {t(`types.${activeTab}.title`)}
                 </h2>
               )}
-              {t.raw(`types.${activeTab}.desc`) && (
+              {t.raw(`types.${activeTab}.desc`) !== `alliances.types.${activeTab}.desc` && (
                 <p className="text-[15px] text-ag-gray leading-relaxed mb-8 max-w-lg">
                   {t(`types.${activeTab}.desc`)}
                 </p>

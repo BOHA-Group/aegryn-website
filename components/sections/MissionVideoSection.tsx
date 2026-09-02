@@ -123,7 +123,7 @@ export function MissionVideoSection() {
         ref={sectionRef}
         className="relative lg:absolute lg:inset-0 z-10"
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:h-full flex flex-col justify-center py-16 lg:py-0">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:h-full flex flex-col justify-center py-16 lg:pt-20 lg:pb-0">
 
           {/* Header row */}
           <div className="mv-border flex items-center justify-between border-b py-4 mb-0">
@@ -135,8 +135,8 @@ export function MissionVideoSection() {
             </p>
           </div>
 
-          {/* 3 colonnes Mission */}
-          <div className="mv-border grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x border-b" style={{ borderColor: 'rgba(226,232,240,1)' }}>
+          {/* 5 colonnes Mission */}
+          <div className="mv-border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 divide-y md:divide-y-0 md:divide-x border-b" style={{ borderColor: 'rgba(226,232,240,1)' }}>
             {missionItems.map((item, i) => (
               <div key={item.title} className="py-12 md:px-10 first:pl-0 last:pr-0">
                 <p className="mv-num font-sans font-semibold text-[10px] tracking-[0.2em] mb-8">

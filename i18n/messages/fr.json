@@ -111,7 +111,7 @@
     "whoJoin": "Nous rejoindre",
     "whoJoinDesc": "Carrières, talents, partenaires",
     "whoCareers": "Carrières",
-    "whoTalent": "Recrutement et Placement",
+    "whoTalent": "Recrutement Executive",
     "whoAlliances": "Devenir partenaire",
     "industries": "Industries",
     "industriesDesc": "Tous secteurs",
@@ -137,7 +137,7 @@
     "cta3Desc": "votre actif.",
     "cta3Link": "Estimer",
     "cta4Title": "Recruter",
-    "cta4Desc": "des experts.",
+    "cta4Desc": "des talents.",
     "cta4Link": "Trouver",
     "cta5Title": "S'informer",
     "cta5Desc": "du marché.",
@@ -385,19 +385,23 @@
     "sub": "Cinq métiers. Un écosystème intégré.",
     "items": [
       {
-        "title": "CONCEPTION",
+        "title": "CONSTRUIRE",
         "desc": "Nous concevons et opérons des actifs tech, SaaS, marketplaces, protocoles IA, structurés dès l'origine pour être certifiables et transférables. Chaque actif résiste à l'audit le plus exigeant."
-      },
-      {
-        "title": "TRANSMETTRE",
-        "desc": "Nous certifions et transmettons des actifs tech selon un protocole indépendant sur 4 dimensions : Code, IP, Finance, Sécurité. Mandat exclusif 60 jours. Séquestre institutionnel. Moins de 25% des actifs soumis acceptés."
       },
       {
         "title": "ACCOMPAGNER",
         "desc": "Nous accompagnons les entrepreneurs et les acquéreurs : Advisory Tech (cybersécurité, IA, conformité), Advisory Transaction (structuration, due diligence, closing), et Talent (recrutement et placement de profils tech)."
       },
       {
-        "title": "INTELLIGENCE",
+        "title": "TRANSMETTRE",
+        "desc": "Nous certifions et transmettons des actifs tech selon un protocole indépendant sur 4 dimensions : Code, IP, Finance, Sécurité. Mandat exclusif 60 jours. Séquestre institutionnel. Moins de 25% des actifs soumis acceptés."
+      },
+      {
+        "title": "RECRUTER",
+        "desc": "Nous recrutons et plaçons des profils tech executive : CTO, VP Engineering, Head of Product, experts cybersécurité et IA. Headhunting spécialisé pour startups et scale-ups européennes."
+      },
+      {
+        "title": "S'INFORMER",
         "desc": "Nous documentons le marché M&A tech européen : Magazine trimestriel Aegryn, Brief hebdomadaire, Articles et analyses. Une vision claire du marché, pour ceux qui le font."
       }
     ]

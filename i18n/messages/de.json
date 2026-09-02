@@ -106,7 +106,7 @@
     "whoJoin": "Uns beitreten",
     "whoJoinDesc": "Karriere, Talente, Partner",
     "whoCareers": "Karriere",
-    "whoTalent": "Rekrutierung & Vermittlung",
+    "whoTalent": "Executive Recruitment",
     "whoAlliances": "Partner werden",
     "talent": "Talent",
     "thinkingMarket": "Unser Marktblick",
@@ -138,7 +138,7 @@
     "cta3Desc": "Ihr Vermögen.",
     "cta3Link": "Schätzen",
     "cta4Title": "Rekrutieren",
-    "cta4Desc": "Experten.",
+    "cta4Desc": "Talente.",
     "cta4Link": "Finden",
     "cta5Title": "Informieren",
     "cta5Desc": "den Markt.",
@@ -422,19 +422,23 @@
     "sub": "Fünf Disziplinen. Ein integriertes Ökosystem.",
     "items": [
       {
-        "title": "KONZEPTION",
+        "title": "AUFBAUEN",
         "desc": "Wir konzipieren und betreiben Tech-Assets, SaaS, Marktplätze, KI-Protokolle, die von Anfang an zertifizierbar und übertragbar sind. Jedes Asset widersteht der strengsten Prüfung."
-      },
-      {
-        "title": "ÜBERTRAGEN",
-        "desc": "Wir zertifizieren und übertragen Tech-Assets nach einem unabhängigen Protokoll über 4 Dimensionen: Code, IP, Finanzen, Sicherheit. Exklusives 60-Tage-Mandat. Institutionelles Treuhand. Weniger als 25% der eingereichten Assets akzeptiert."
       },
       {
         "title": "BEGLEITEN",
         "desc": "Wir unterstützen Unternehmer und Erwerber: Tech Advisory (Cybersicherheit, KI, Compliance), Transaction Advisory (Strukturierung, Due Diligence, Closing) und Talent (Rekrutierung und Platzierung von Tech-Profilen)."
       },
       {
-        "title": "INTELLIGENCE",
+        "title": "ÜBERTRAGEN",
+        "desc": "Wir zertifizieren und übertragen Tech-Assets nach einem unabhängigen Protokoll über 4 Dimensionen: Code, IP, Finanzen, Sicherheit. Exklusives 60-Tage-Mandat. Institutionelles Treuhand. Weniger als 25% der eingereichten Assets akzeptiert."
+      },
+      {
+        "title": "REKRUTIEREN",
+        "desc": "Wir rekrutieren und platzieren Executive-Tech-Profile: CTO, VP Engineering, Head of Product, Cybersicherheits- und KI-Experten. Spezialisiertes Headhunting für europäische Startups und Scale-ups."
+      },
+      {
+        "title": "INFORMIEREN",
         "desc": "Wir dokumentieren den europäischen Tech-M&A-Markt: Vierteljährliches Aegryn Magazin, wöchentlicher Brief, Artikel und Analysen. Ein klarer Blick auf den Markt, für diejenigen, die ihn machen."
       }
     ]

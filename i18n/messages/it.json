@@ -106,7 +106,7 @@
     "whoJoin": "Unisciti a noi",
     "whoJoinDesc": "Carriere, talenti, partner",
     "whoCareers": "Carriere",
-    "whoTalent": "Reclutamento e Collocamento",
+    "whoTalent": "Recruitment Executive",
     "whoAlliances": "Diventa partner",
     "talent": "Talento",
     "thinkingMarket": "Il nostro sguardo sul mercato",
@@ -138,7 +138,7 @@
     "cta3Desc": "il tuo asset.",
     "cta3Link": "Stimare",
     "cta4Title": "Reclutare",
-    "cta4Desc": "esperti.",
+    "cta4Desc": "talenti.",
     "cta4Link": "Trovare",
     "cta5Title": "Informarsi",
     "cta5Desc": "il mercato.",
@@ -422,19 +422,23 @@
     "sub": "Cinque discipline. Un ecosistema integrato.",
     "items": [
       {
-        "title": "PROGETTAZIONE",
+        "title": "COSTRUIRE",
         "desc": "Progettiamo e operiamo asset tech, SaaS, marketplace, protocolli IA, strutturati fin dall'origine per essere certificabili e trasferibili. Ogni asset resiste all'audit più rigoroso."
-      },
-      {
-        "title": "TRASMETTERE",
-        "desc": "Certifichiamo e trasmettiamo asset tech secondo un protocollo indipendente su 4 dimensioni: Codice, IP, Finanza, Sicurezza. Mandato esclusivo 60 giorni. Deposito istituzionale. Meno del 25% degli asset presentati accettati."
       },
       {
         "title": "ACCOMPAGNARE",
         "desc": "Supportiamo imprenditori e acquirenti: Tech Advisory (cybersecurity, IA, compliance), Transaction Advisory (strutturazione, due diligence, closing) e Talento (reclutamento e collocamento di profili tech)."
       },
       {
-        "title": "INTELLIGENCE",
+        "title": "TRASMETTERE",
+        "desc": "Certifichiamo e trasmettiamo asset tech secondo un protocollo indipendente su 4 dimensioni: Codice, IP, Finanza, Sicurezza. Mandato esclusivo 60 giorni. Deposito istituzionale. Meno del 25% degli asset presentati accettati."
+      },
+      {
+        "title": "RECLUTARE",
+        "desc": "Reclut iamo e collochiamo profili tech executive: CTO, VP Engineering, Head of Product, esperti di cybersecurity e IA. Headhunting specializzato per startup e scale-up europee."
+      },
+      {
+        "title": "INFORMARSI",
         "desc": "Documentiamo il mercato M&A tech europeo: Rivista trimestrale Aegryn, Brief settimanale, Articoli e analisi. Una visione chiara del mercato, per chi lo fa."
       }
     ]
