@@ -96,6 +96,18 @@
     "solutionsCoreDesc": "Progettati, sviluppati e gestiti da Aegryn",
     "solutionsPortfolioTitle": "Asset in portafoglio",
     "solutionsPortfolioDesc": "Partecipazioni strategiche e accompagnamento",
+    "solutionsDomainsLabel": "TOP 10 DOMINI SOFTWARE",
+    "solutionsDomainsDesc": "Domini prioritari per la creazione di asset software sovrani",
+    "solutionsDomain1": "AI Agents & Business Automation",
+    "solutionsDomain2": "Compliance, Risk & AI Governance",
+    "solutionsDomain3": "Cybersecurity & Digital Trust",
+    "solutionsDomain4": "Document, Contract & Knowledge Intelligence",
+    "solutionsDomain5": "Finance, Billing & E-Invoicing Automation",
+    "solutionsDomain6": "Data, BI & Decision Intelligence",
+    "solutionsDomain7": "Customer Experience & Service Automation",
+    "solutionsDomain8": "Supplier, Procurement & Third-Party Risk",
+    "solutionsDomain9": "Identity, KYC/KYB & Digital Trust",
+    "solutionsDomain10": "Enterprise Asset & Process Intelligence",
     "solutionsViewAll": "Visualizza tutti gli asset",
     "solutionsSubblink": "subblink (Contratti IA)",
     "solutionsKryv": "kryv (Codice IA)",
@@ -3695,7 +3707,18 @@
     },
     "label": "Ingegneria \u2014 Software sovrano",
     "title": "Aegryn costruisce il software\ndelle vostre operazioni.",
-    "desc": "Dalle PMI ai grandi gruppi, in Svizzera e in Europa: Aegryn progetta, distribuisce e mantiene software aziendale su misura. Senza dipendenza dai grandi editori. Senza abbonamento SaaS generalista. Codice sovrano, controllato, integrabile nella vostra infrastruttura. Il 46,7% delle imprese europee usa il cloud, il 39,9% l'analisi dei dati e quasi il 20% l'IA nel 2026 \u2014 il bisogno di software di qualit\u00e0, sovrano e senza vendor lock-in \u00e8 strutturale.",
+    "desc": "Dalle PMI ai grandi gruppi, in Svizzera e in Europa: Aegryn progetta, distribuisce e mantiene software aziendale su misura. Senza dipendenza dai grandi editori. Senza abbonamento SaaS generalista. Codice sovrano, controllato, integrabile nella vostra infrastruttura.",
+    "whySection": {
+      "label": "Perché software sovrano",
+      "title": "Ciò che il mercato standard non può offrirvi.",
+      "desc": "Il 46,7 % delle imprese europee usa il cloud. Il 39,9 % l'analisi dei dati. Quasi il 20 % l'IA nel 2026. Il bisogno di software di qualità, sovrano e senza vendor lock-in è strutturale. La Commissione europea riconosce nel 2026 che le dipendenze dai fornitori terzi rimangono significative nel cloud e nella cybersicurezza. La Svizzera ha posto la sovranità digitale tra le priorità della sua strategia digitale 2026.",
+      "points": [
+        { "title": "Piena proprietà del codice", "desc": "Siete proprietari al 100 % del codice consegnato. Nessuna licenza, nessun contratto di abbonamento, nessuna dipendenza dall'editore." },
+        { "title": "Hosting sulla vostra infrastruttura", "desc": "Il software viene distribuito dove lo richiedete: cloud europeo certificato, on-premise o infrastruttura svizzera. Nessun dato esce senza il vostro consenso." },
+        { "title": "Integrazione nei vostri processi reali", "desc": "Costruiamo attorno alla vostra organizzazione, non il contrario. Ogni modulo si integra con i vostri strumenti, dati e workflow esistenti." },
+        { "title": "Certificabile e trasferibile", "desc": "Ogni asset software consegnato da Aegryn è strutturato per essere verificabile, valutabile e trasferibile secondo il protocollo di certificazione Aegryn." }
+      ]
+    },
     "domainsSection": {
       "label": "10 domini software",
       "title": "I domini in cui costruiamo\nper i nostri clienti.",

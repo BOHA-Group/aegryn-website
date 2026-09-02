@@ -157,28 +157,7 @@ export function HeroMountain() {
             </p>
 
             <div ref={ctasRef} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 w-full max-w-5xl">
-              {/* CTA 1: Construire */}
-              <Link
-                href="/services/build"
-                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
-                <div className="relative">
-                  <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
-                    {t('cta1Title')}
-                  </h3>
-                  <div className="overflow-hidden mb-3 group/marquee">
-                    <p className="font-sans text-[12px] text-white/75 leading-tight whitespace-nowrap inline-block animate-marquee-pause group-hover/marquee:animate-marquee">
-                      {t('cta1Desc')}
-                    </p>
-                  </div>
-                  <span className="inline-flex items-center gap-1 font-sans text-[9px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
-                    {t('cta1Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-                  </span>
-                </div>
-              </Link>
-
-              {/* CTA 2: Accompagner */}
+              {/* CTA 1: Accompagner — en 1er */}
               <Link
                 href="/advisory"
                 className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
@@ -195,6 +174,27 @@ export function HeroMountain() {
                   </div>
                   <span className="inline-flex items-center gap-1 font-sans text-[9px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
                     {t('cta2Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  </span>
+                </div>
+              </Link>
+
+              {/* CTA 2: Construire — en 2ème */}
+              <Link
+                href="/services/build"
+                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
+                <div className="relative">
+                  <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
+                    {t('cta1Title')}
+                  </h3>
+                  <div className="overflow-hidden mb-3 group/marquee">
+                    <p className="font-sans text-[12px] text-white/75 leading-tight whitespace-nowrap inline-block animate-marquee-pause group-hover/marquee:animate-marquee">
+                      {t('cta1Desc')}
+                    </p>
+                  </div>
+                  <span className="inline-flex items-center gap-1 font-sans text-[9px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
+                    {t('cta1Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   </span>
                 </div>
               </Link>

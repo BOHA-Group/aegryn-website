@@ -17,8 +17,6 @@ type LinkHref = ComponentProps<typeof Link>['href']
 const CRAFT_BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftBuildAssets',      href: '/assets' },
   { labelKey: 'craftBuildEngineering', href: '/services/build' },
-  { labelKey: 'solutionsSubblink',     href: 'https://subblink.com' as LinkHref },
-  { labelKey: 'solutionsKryv',         href: '/assets#kryv' as LinkHref },
 ]
 
 // Nos métiers - Support section
@@ -47,18 +45,22 @@ const CRAFT_RECRUIT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftRecruitExecutiveMA',   href: '/talent' as LinkHref },
 ]
 
-// Nos solutions - Catégories principales
-const SOLUTIONS_CATEGORIES_PRIMARY: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'solutionsCategoryAI',           href: '/assets#ai' as LinkHref },
-  { labelKey: 'solutionsCategoryServices',     href: '/assets#services' as LinkHref },
-  { labelKey: 'solutionsCategoryTransactions', href: '/assets#transactions' as LinkHref },
+// Nos solutions - Top 10 domaines logiciels (colonne gauche)
+const SOLUTIONS_DOMAINS_LEFT: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'solutionsDomain1', href: '/services/build' },
+  { labelKey: 'solutionsDomain2', href: '/services/build' },
+  { labelKey: 'solutionsDomain3', href: '/services/build' },
+  { labelKey: 'solutionsDomain4', href: '/services/build' },
+  { labelKey: 'solutionsDomain5', href: '/services/build' },
 ]
 
-// Nos solutions - Catégories secondaires (marché CH/EU 2026)
-const SOLUTIONS_CATEGORIES_SECONDARY: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'solutionsCategoryFinTech',    href: '/assets#fintech' as LinkHref },
-  { labelKey: 'solutionsCategoryHealthTech', href: '/assets#healthtech' as LinkHref },
-  { labelKey: 'solutionsCategoryPropTech',   href: '/assets#proptech' as LinkHref },
+// Nos solutions - Top 10 domaines logiciels (colonne droite)
+const SOLUTIONS_DOMAINS_RIGHT: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'solutionsDomain6',  href: '/services/build' },
+  { labelKey: 'solutionsDomain7',  href: '/services/build' },
+  { labelKey: 'solutionsDomain8',  href: '/services/build' },
+  { labelKey: 'solutionsDomain9',  href: '/services/build' },
+  { labelKey: 'solutionsDomain10', href: '/services/build' },
 ]
 
 // Nos convictions - Magazine
@@ -90,16 +92,16 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
   return (
     <div className="absolute top-full left-0 mt-2 w-[860px] bg-ag-white border border-ag-border shadow-lg z-50">
       <div className="grid grid-cols-4 gap-px bg-ag-border">
-        {/* Build */}
+        {/* Support — ACCOMPAGNER en 1er */}
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
-            {t('craftBuild')}
+            {t('craftSupport')}
           </p>
           <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
-            {t('craftBuildDesc')}
+            {t('craftSupportDesc')}
           </p>
           <div className="flex flex-col gap-1">
-            {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
+            {CRAFT_SUPPORT_LINKS.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
                 href={href}
@@ -112,16 +114,16 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           </div>
         </div>
 
-        {/* Support */}
+        {/* Build — CONSTRUIRE en 2ème */}
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
-            {t('craftSupport')}
+            {t('craftBuild')}
           </p>
           <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
-            {t('craftSupportDesc')}
+            {t('craftBuildDesc')}
           </p>
           <div className="flex flex-col gap-1">
-            {CRAFT_SUPPORT_LINKS.map(({ labelKey, href }) => (
+            {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
                 href={href}
@@ -182,28 +184,24 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
   )
 }
 
-// Mega-menu Nos solutions (2 colonnes CORE/PORTFOLIO)
+// Mega-menu Nos solutions (2 colonnes — top 10 domaines logiciels)
 function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   return (
     <div className="absolute top-full left-0 mt-2 w-[500px] bg-ag-white border border-ag-border shadow-lg z-50">
+      <div className="px-4 pt-4 pb-2 border-b border-ag-border">
+        <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-1">{t('solutionsDomainsLabel')}</p>
+        <p className="font-sans text-[10px] text-ag-gray-light leading-relaxed">{t('solutionsDomainsDesc')}</p>
+      </div>
       <div className="grid grid-cols-2 gap-px bg-ag-border">
-        {/* CORE */}
+        {/* Domaines 1–5 */}
         <div className="bg-ag-white p-4">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-apex-ink font-bold px-2 py-0.5 border border-ag-apex/30 bg-ag-apex/5">
-              {t('solutionsCore')}
-            </span>
-          </div>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
-            {t('solutionsCoreDesc')}
-          </p>
           <div className="flex flex-col gap-1">
-            {SOLUTIONS_CATEGORIES_PRIMARY.map(({ labelKey, href }) => (
+            {SOLUTIONS_DOMAINS_LEFT.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
+                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-0.5 leading-snug"
               >
                 {t(labelKey)}
               </Link>
@@ -211,23 +209,15 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
           </div>
         </div>
 
-        {/* PORTFOLIO */}
+        {/* Domaines 6–10 */}
         <div className="bg-ag-white p-4">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray font-bold px-2 py-0.5 border border-ag-border bg-ag-off-white">
-              {t('solutionsPortfolio')}
-            </span>
-          </div>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
-            {t('solutionsPortfolioDesc')}
-          </p>
           <div className="flex flex-col gap-1">
-            {SOLUTIONS_CATEGORIES_SECONDARY.map(({ labelKey, href }) => (
+            {SOLUTIONS_DOMAINS_RIGHT.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
+                className="font-sans text-[12px] text-ag-gray hover:text-ag-black transition-colors py-0.5 leading-snug"
               >
                 {t(labelKey)}
               </Link>
@@ -639,15 +629,8 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               </button>
               {mobileAccordion === 'solutions' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-apex mt-2">{t('solutionsCategoriesPrimary')}</p>
-                  {SOLUTIONS_CATEGORIES_PRIMARY.map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
-                      {t(labelKey)}
-                    </Link>
-                  ))}
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('solutionsCategoriesSecondary')}</p>
-                  {SOLUTIONS_CATEGORIES_SECONDARY.map(({ labelKey, href }) => (
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-apex mt-2">{t('solutionsDomainsLabel')}</p>
+                  {[...SOLUTIONS_DOMAINS_LEFT, ...SOLUTIONS_DOMAINS_RIGHT].map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}

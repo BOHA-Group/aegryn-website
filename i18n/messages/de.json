@@ -96,6 +96,18 @@
     "solutionsCoreDesc": "Von Aegryn konzipiert, entwickelt und betrieben",
     "solutionsPortfolioTitle": "Portfolio-Assets",
     "solutionsPortfolioDesc": "Strategische Beteiligungen und Begleitung",
+    "solutionsDomainsLabel": "TOP 10 SOFTWARE-BEREICHE",
+    "solutionsDomainsDesc": "Prioritätsbereiche für den Aufbau souveräner Software-Assets",
+    "solutionsDomain1": "AI Agents & Business Automation",
+    "solutionsDomain2": "Compliance, Risk & AI Governance",
+    "solutionsDomain3": "Cybersecurity & Digital Trust",
+    "solutionsDomain4": "Document, Contract & Knowledge Intelligence",
+    "solutionsDomain5": "Finance, Billing & E-Invoicing Automation",
+    "solutionsDomain6": "Data, BI & Decision Intelligence",
+    "solutionsDomain7": "Customer Experience & Service Automation",
+    "solutionsDomain8": "Supplier, Procurement & Third-Party Risk",
+    "solutionsDomain9": "Identity, KYC/KYB & Digital Trust",
+    "solutionsDomain10": "Enterprise Asset & Process Intelligence",
     "solutionsViewAll": "Alle Assets anzeigen",
     "solutionsSubblink": "subblink (KI-Verträge)",
     "solutionsKryv": "kryv (KI-Code)",
@@ -3731,7 +3743,18 @@
     },
     "label": "Engineering \u2014 Souver\u00e4ne Software",
     "title": "Aegryn baut die Software\nIhrer Betriebsabl\u00e4ufe.",
-    "desc": "Von KMU bis Konzern, in der Schweiz und in Europa: Aegryn konzipiert, deployt und wartet ma\u00dfgeschneiderte Unternehmenssoftware. Keine Abh\u00e4ngigkeit von gro\u00dfen Anbietern. Kein generalistisches SaaS-Abonnement. Souver\u00e4ner, kontrollierbarer Code, integrierbar in Ihre Infrastruktur. 46,7% der europ\u00e4ischen Unternehmen nutzen die Cloud, 39,9% Datenanalyse und knapp 20% KI 2026 \u2014 der Bedarf an qualitativ hochwertiger, souver\u00e4ner Software ohne Vendor-Lock-in ist strukturell.",
+    "desc": "Von KMU bis Konzern, in der Schweiz und in Europa: Aegryn konzipiert, deployt und wartet ma\u00dfgeschneiderte Unternehmenssoftware. Keine Abh\u00e4ngigkeit von gro\u00dfen Anbietern. Kein generalistisches SaaS-Abonnement. Souver\u00e4ner, kontrollierbarer Code, integrierbar in Ihre Infrastruktur.",
+    "whySection": {
+      "label": "Warum souver\u00e4ne Software",
+      "title": "Was der Standardmarkt Ihnen nicht bieten kann.",
+      "desc": "46,7 % der europ\u00e4ischen Unternehmen nutzen die Cloud. 39,9 % die Datenanalyse. Knapp 20 % die KI 2026. Der Bedarf an qualitativ hochwertiger, souver\u00e4ner Software ohne Vendor-Lock-in ist strukturell. Die EU-Kommission erkennt 2026 an, dass die Abh\u00e4ngigkeiten von Drittanbietern in Cloud und Cybersicherheit erheblich bleiben. Die Schweiz hat die digitale Souver\u00e4nit\u00e4t zu einer Priorit\u00e4t ihrer digitalen Strategie 2026 gemacht.",
+      "points": [
+        { "title": "Vollst\u00e4ndiges Code-Eigentum", "desc": "Sie sind zu 100 % Eigent\u00fcmer des gelieferten Codes. Keine Lizenz, kein Abonnementvertrag, keine Anbieterabh\u00e4ngigkeit." },
+        { "title": "Hosting auf Ihrer Infrastruktur", "desc": "Die Software wird dort eingesetzt, wo Sie es verlangen: zertifizierte europ\u00e4ische Cloud, On-Premise oder Schweizer Infrastruktur. Keine Daten verlassen das System ohne Ihre Zustimmung." },
+        { "title": "Integration in Ihre echten Prozesse", "desc": "Wir bauen rund um Ihre Organisation, nicht umgekehrt. Jedes Modul integriert sich in Ihre bestehenden Tools, Daten und Workflows." },
+        { "title": "Zertifizierbar und \u00fcbertragbar", "desc": "Jedes von Aegryn gelieferte Software-Asset ist darauf ausgelegt, nach dem Aegryn-Zertifizierungsprotokoll pr\u00fcfbar, bewertbar und \u00fcbertragbar zu sein." }
+      ]
+    },
     "domainsSection": {
       "label": "10 Software-Dom\u00e4nen",
       "title": "Die Dom\u00e4nen, in denen wir\nf\u00fcr unsere Kunden bauen.",

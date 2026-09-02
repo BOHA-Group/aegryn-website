@@ -96,6 +96,18 @@
     "solutionsCoreDesc": "Diseñados, desarrollados y operados por Aegryn",
     "solutionsPortfolioTitle": "Activos en cartera",
     "solutionsPortfolioDesc": "Participaciones estratégicas y acompañamiento",
+    "solutionsDomainsLabel": "TOP 10 DOMINIOS DE SOFTWARE",
+    "solutionsDomainsDesc": "Dominios prioritarios para la creación de activos de software soberanos",
+    "solutionsDomain1": "AI Agents & Business Automation",
+    "solutionsDomain2": "Compliance, Risk & AI Governance",
+    "solutionsDomain3": "Cybersecurity & Digital Trust",
+    "solutionsDomain4": "Document, Contract & Knowledge Intelligence",
+    "solutionsDomain5": "Finance, Billing & E-Invoicing Automation",
+    "solutionsDomain6": "Data, BI & Decision Intelligence",
+    "solutionsDomain7": "Customer Experience & Service Automation",
+    "solutionsDomain8": "Supplier, Procurement & Third-Party Risk",
+    "solutionsDomain9": "Identity, KYC/KYB & Digital Trust",
+    "solutionsDomain10": "Enterprise Asset & Process Intelligence",
     "solutionsViewAll": "Ver todos los activos",
     "solutionsSubblink": "subblink (Contratos IA)",
     "solutionsKryv": "kryv (Código IA)",
@@ -3695,7 +3707,18 @@
     },
     "label": "Ingenier\u00eda \u2014 Software soberano",
     "title": "Aegryn construye el software\nde sus operaciones.",
-    "desc": "De la PYME al gran grupo, en Suiza y en Europa: Aegryn dise\u00f1a, despliega y mantiene software empresarial a medida. Sin dependencia de grandes editores. Sin suscripci\u00f3n SaaS generalista. C\u00f3digo soberano, controlado, integrable en su infraestructura. El 46,7% de las empresas europeas utiliza la nube, el 39,9% el an\u00e1lisis de datos y casi el 20% la IA en 2026 \u2014 la necesidad de software de calidad, soberano y sin vendor lock-in es estructural.",
+    "desc": "De la PYME al gran grupo, en Suiza y en Europa: Aegryn dise\u00f1a, despliega y mantiene software empresarial a medida. Sin dependencia de grandes editores. Sin suscripci\u00f3n SaaS generalista. C\u00f3digo soberano, controlado, integrable en su infraestructura.",
+    "whySection": {
+      "label": "Por qué software soberano",
+      "title": "Lo que el mercado estándar no puede ofrecerle.",
+      "desc": "El 46,7 % de las empresas europeas usa la nube. El 39,9 % el análisis de datos. Casi el 20 % la IA en 2026. La necesidad de software de calidad, soberano y sin vendor lock-in es estructural. La Comisión Europea reconoce en 2026 que las dependencias de proveedores externos siguen siendo significativas en la nube y la ciberseguridad. Suiza ha situado la soberanía digital entre las prioridades de su estrategia digital 2026.",
+      "points": [
+        { "title": "Propiedad total del código", "desc": "Usted es propietario al 100 % del código entregado. Sin licencia, sin contrato de suscripción, sin dependencia de editor." },
+        { "title": "Alojamiento en su infraestructura", "desc": "El software se despliega donde usted lo exige: nube europea certificada, on-premise o infraestructura suiza. Ningún dato sale sin su consentimiento." },
+        { "title": "Integración en sus procesos reales", "desc": "Construimos alrededor de su organización, no al revés. Cada módulo se integra con sus herramientas, datos y flujos de trabajo existentes." },
+        { "title": "Certificable y transferible", "desc": "Cada activo de software entregado por Aegryn está estructurado para ser auditable, calificable y transferible según el protocolo de certificación Aegryn." }
+      ]
+    },
     "domainsSection": {
       "label": "10 Dominios de software",
       "title": "Los dominios donde construimos\npara nuestros clientes.",

@@ -96,6 +96,18 @@
     "solutionsCoreDesc": "Designed, developed and operated by Aegryn",
     "solutionsPortfolioTitle": "Portfolio assets",
     "solutionsPortfolioDesc": "Strategic participations and support",
+    "solutionsDomainsLabel": "TOP 10 SOFTWARE DOMAINS",
+    "solutionsDomainsDesc": "Priority domains for building sovereign software assets",
+    "solutionsDomain1": "AI Agents & Business Automation",
+    "solutionsDomain2": "Compliance, Risk & AI Governance",
+    "solutionsDomain3": "Cybersecurity & Digital Trust",
+    "solutionsDomain4": "Document, Contract & Knowledge Intelligence",
+    "solutionsDomain5": "Finance, Billing & E-Invoicing Automation",
+    "solutionsDomain6": "Data, BI & Decision Intelligence",
+    "solutionsDomain7": "Customer Experience & Service Automation",
+    "solutionsDomain8": "Supplier, Procurement & Third-Party Risk",
+    "solutionsDomain9": "Identity, KYC/KYB & Digital Trust",
+    "solutionsDomain10": "Enterprise Asset & Process Intelligence",
     "solutionsViewAll": "View all assets",
     "solutionsSubblink": "subblink (AI Contracts)",
     "solutionsKryv": "kryv (AI Code)",
@@ -3785,33 +3797,44 @@
   },
   "build_service": {
     "meta": {
-      "title": "Fixed-price digital asset engineering - Aegryn",
-      "desc": "Fixed-price digital asset engineering: B2B SaaS, AI, mobile app. Full documentation, certification-ready. Zero overruns, asset valorisable from day one."
+      "title": "Fixed-price digital asset design - Aegryn",
+      "desc": "Fixed-price digital assets: B2B SaaS, AI, mobile apps. Full documentation, certification-ready. Zero overruns, valuable from day one."
     },
     "label": "Engineering \u2014 Sovereign Software",
     "title": "Aegryn builds the software\nof your operations.",
-    "desc": "From SMEs to large groups, in Switzerland and Europe: Aegryn designs, deploys and maintains custom business software. No dependency on major vendors. No generalist SaaS subscriptions. Sovereign, controlled code, integrable into your infrastructure. 46.7% of European companies use the cloud, 39.9% data analytics, and nearly 20% AI in 2026 \u2014 the need for quality, sovereign, vendor-lock-in-free software is structural.",
+    "desc": "From SMEs to large groups, in Switzerland and Europe: Aegryn designs, deploys and maintains custom business software. No dependency on major vendors. No generalist SaaS subscriptions. Sovereign, controlled code, integrable into your infrastructure.",
+    "whySection": {
+      "label": "Why sovereign software",
+      "title": "What the standard market cannot offer you.",
+      "desc": "46.7% of European companies use the cloud. 39.9% use data analytics. Nearly 20% use AI in 2026. The need for quality, sovereign, vendor-lock-in-free software is structural. The European Commission acknowledges in 2026 that dependencies on third-country providers remain significant in cloud and cybersecurity. Switzerland has placed digital sovereignty among the priorities of its 2026 digital strategy.",
+      "points": [
+        { "title": "Full code ownership", "desc": "You own 100% of the delivered code. No licence, no subscription contract, no vendor dependency." },
+        { "title": "Hosted on your infrastructure", "desc": "The software deploys where you require: certified European cloud, on-premise or Swiss infrastructure. No data leaves without your consent." },
+        { "title": "Integrated into your real processes", "desc": "We build around your organisation, not the other way around. Each module integrates with your existing tools, data and workflows." },
+        { "title": "Certifiable and transferable", "desc": "Every software asset delivered by Aegryn is structured to be auditable, gradable and transferable under the Aegryn certification protocol." }
+      ]
+    },
     "domainsSection": {
       "label": "10 Software Domains",
       "title": "The domains where we build\nfor our clients.",
-      "desc": "We choose domains where the need is cross-functional, recurring, regulatory or costly \u2014 and where Aegryn can deliver an AI, sovereignty and integration layer without dependency on major vendors.",
+      "desc": "We build in domains where the need is cross-functional, recurring and regulatory, with an AI, sovereignty and integration layer without dependency on major vendors.",
       "domains": [
-        { "num": "01", "badge": "Agentic AI", "title": "AI Agents & Business Automation", "desc": "Orchestration of complex tasks (back-office, compliance, reporting) by autonomous AI agents. Sovereign alternative to market RPA and no-code platforms." },
-        { "num": "02", "badge": "AI Governance", "title": "Compliance, Risk & AI Governance", "desc": "Processing registers, EU AI Act, DORA, NIS2, Swiss FADP. Algorithm risk management and AI decision traceability at enterprise scale." },
-        { "num": "03", "badge": "Digital Trust", "title": "Cybersecurity & Digital Trust", "desc": "Strong authentication, access management, audit trail, digital document vault. Zero-trust architecture and critical asset protection. Kryv \u2014 Aegryn core asset." },
-        { "num": "04", "badge": "Doc Intelligence", "title": "Contracts & Document Intelligence", "desc": "Analysis, extraction and lifecycle management of contracts, purchase orders, NDAs and regulatory clauses. Local AI engine, zero third-party cloud. Subblink \u2014 Aegryn core asset." },
-        { "num": "05", "badge": "Sovereign ERP", "title": "ERP & Operational Management", "desc": "Replacement or extension of generalist ERPs (SAP, Oracle, Sage) with custom modules connected to your real processes. 46.5% of EU companies use an ERP \u2014 often ill-suited." },
-        { "num": "06", "badge": "Data Intelligence", "title": "Data Analytics & Business Intelligence", "desc": "Data pipelines, operational dashboards, predictive models. Sovereign CH/EU hosting, without sending your data to third-party platforms." },
-        { "num": "07", "badge": "Client Relations", "title": "CRM & Client Portals", "desc": "Custom business CRM, partner portals, client extranets with strong authentication. Sovereign alternative to Salesforce, HubSpot and equivalents." },
-        { "num": "08", "badge": "HR & Talent", "title": "HR, Talent & Skills Management", "desc": "HRIS, onboarding, skills mapping, assessment and development plans \u2014 integrated into your real organisation, without a global SaaS layer." },
-        { "num": "09", "badge": "Finance & Audit", "title": "Finance, Reporting & Audit", "desc": "AI-assisted accounting close, regulatory reporting (IFRS, Swiss GAAP), immutable audit trail. Native connection to your existing tools." },
-        { "num": "10", "badge": "Knowledge Graph", "title": "Knowledge Management & Content AI", "desc": "Intelligent knowledge base, semantic search engine, controlled content generation. Structured, private and audited organisational memory." }
+        { "num": "01", "badge": "Agentic AI", "title": "AI Agents & Business Automation", "desc": "Orchestration of complex workflows by business AI agents connectable to your systems: CRM, ERP, email, documents, APIs, databases. Each agent is auditable, with human-in-the-loop and quality monitoring." },
+        { "num": "02", "badge": "AI Governance", "title": "Compliance, Risk & AI Governance", "desc": "Compliance platform covering EU AI Act, GDPR, Swiss FADP, NIS2, DORA, ISO 27001. Processing register, controls, evidence, audit trail. Switzerland confirms its FADP applies directly to AI-based processing." },
+        { "num": "03", "badge": "Digital Trust", "title": "Cybersecurity & Digital Trust", "desc": "Cyber risk assessment, asset inventory, vendor risk, incident management, security evidence, compliance mapping. Aligned with 2026 European priorities and NIS2 requirements for critical sectors." },
+        { "num": "04", "badge": "Doc Intelligence", "title": "Document, Contract & Knowledge Intelligence", "desc": "Transform your contracts, policies, invoices and documents into actionable knowledge. Risk identification, critical deadlines and priority actions. Subblink, Aegryn core asset." },
+        { "num": "05", "badge": "Finance Ops", "title": "Finance, Billing & E-Invoicing Automation", "desc": "Billing automation, e-invoicing (EU ViDA, Swiss Confederation obligation), payment reconciliation, cash-flow, cross-border VAT. Finance Operations layer between CRM and accounting." },
+        { "num": "06", "badge": "Decision Intelligence", "title": "Data, BI & Decision Intelligence", "desc": "Causal analysis, scenario simulation, automated recommendations. The software answers: what happened, why, what will happen, what to do. Nearly 40% of European companies use data analytics in 2026." },
+        { "num": "07", "badge": "Agentic CX", "title": "Customer Experience & Service Automation", "desc": "AI Customer Operations architecture: AI customer agent, knowledge bot, next-best-action, case summarisation, quality monitoring. Relevant for insurance, banking, telecom, retail, healthcare." },
+        { "num": "08", "badge": "Procurement Risk", "title": "Supplier, Procurement & Third-Party Risk", "desc": "Supplier scoring, contract analysis, cyber risk, ESG, concentration risk, sanctions, renewals. FINMA notes that outsourcing remains the primary source of operational risk in Swiss finance." },
+        { "num": "09", "badge": "Identity & Trust", "title": "Identity, KYC/KYB & Digital Trust", "desc": "Enterprise onboarding, KYB, KYC, verification, beneficial owners, signatures, credentials, trust records. Switzerland makes E-ID a priority of its 2026 digital strategy." },
+        { "num": "10", "badge": "Digital Twin", "title": "Enterprise Asset & Process Intelligence", "desc": "Dynamic representation of your organisation: people, applications, processes, contracts, suppliers, data. Real-time answers on dependencies, costs and operational risks." }
       ]
     },
     "platformSection": {
       "label": "Common Architecture",
       "title": "AEGRYN Enterprise Intelligence Platform.",
-      "desc": "The 10 domains are not 10 independent products. They share a common infrastructure: the AEGRYN Enterprise Intelligence Platform. A data layer, an AI layer, a governance layer \u2014 and on top, business applications for each domain.",
+      "desc": "The 10 domains are not 10 independent products. They share a common infrastructure: the AEGRYN Enterprise Intelligence Platform. A data layer, an AI layer, a governance layer and on top, business applications for each domain.",
       "layers": [
         { "key": "data", "title": "Data Layer", "desc": "Ingestion, normalisation and sovereign storage of your business data." },
         { "key": "ai", "title": "AI Layer", "desc": "AI models deployable on-premise or on CH/EU cloud. No data sent to OpenAI, Azure or GCP without explicit agreement." },
@@ -3820,7 +3843,7 @@
       ],
       "verticals": {
         "label": "Vertical Markets",
-        "desc": "FinTech, HealthTech and PropTech are vertical markets \u2014 not core products. Aegryn applications can be packaged for these markets without building a new architecture each time."
+        "desc": "FinTech, HealthTech and PropTech are vertical markets, not core products. Aegryn applications can be packaged for these markets without building a new architecture each time."
       }
     },
     "sovereigntySection": {

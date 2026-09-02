@@ -47,6 +47,7 @@ export default async function BuildServicePage({ params }: Props) {
   const assetTypeItems          = t.raw('assetTypes.items')             as { badge: string; title: string; desc: string }[]
   const processSteps            = t.raw('process.steps')                as { num: string; title: string; desc: string }[]
   const feeItems                = t.raw('fees.items')                   as { title: string; desc: string; format: string }[]
+  const whyPoints               = t.raw('whySection.points')            as { title: string; desc: string }[]
   const domainItems             = t.raw('domainsSection.domains')       as { num: string; badge: string; title: string; desc: string }[]
   const platformLayers          = t.raw('platformSection.layers')       as { key: string; title: string; desc: string }[]
   const sovereigntyPillars      = t.raw('sovereigntySection.pillars')   as { key: string; title: string; desc: string }[]
@@ -72,7 +73,37 @@ export default async function BuildServicePage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── Section 1b : 10 Domaines logiciels ───────────────────────── */}
+      {/* ── Section 1b : Why Sovereign Software ────────────────────────── */}
+      <section className="border-b border-ag-border">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
+            {t('whySection.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-6 max-w-2xl whitespace-pre-line"
+            style={{ fontSize: 'clamp(26px,3.5vw,46px)' }}
+          >
+            {t('whySection.title')}
+          </h2>
+          <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
+            {t('whySection.desc')}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {whyPoints.map((pt, i) => (
+              <div key={i} className="border border-ag-border p-6 bg-ag-off-white">
+                <p className="font-sans font-semibold text-[12px] uppercase tracking-[0.2em] text-ag-apex mb-2">
+                  {pt.title}
+                </p>
+                <p className="text-[14px] text-ag-gray leading-relaxed">
+                  {pt.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 1c : 10 Domaines logiciels ───────────────────────── */}
       <section className="border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">

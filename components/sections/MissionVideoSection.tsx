@@ -144,7 +144,7 @@ export function MissionVideoSection() {
                 </p>
                 <h3
                   className="mv-title font-sans font-bold tracking-[-0.02em] leading-[1.2] pb-[0.15em] mb-5"
-                  style={{ fontSize: 'clamp(22px,2vw,28px)' }}
+                  style={{ fontSize: 'clamp(14px,1.4vw,20px)' }}
                   dangerouslySetInnerHTML={{ __html: item.title }}
                 />
                 <p className="mv-desc font-sans font-normal text-[14px] leading-[1.75]">

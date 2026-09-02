@@ -96,6 +96,18 @@
     "solutionsCoreDesc": "Ontworpen, ontwikkeld en beheerd door Aegryn",
     "solutionsPortfolioTitle": "Portfolio-assets",
     "solutionsPortfolioDesc": "Strategische participaties en begeleiding",
+    "solutionsDomainsLabel": "TOP 10 SOFTWAREDOMEINEN",
+    "solutionsDomainsDesc": "Prioriteitsdomeinen voor het bouwen van soevereine software-assets",
+    "solutionsDomain1": "AI Agents & Business Automation",
+    "solutionsDomain2": "Compliance, Risk & AI Governance",
+    "solutionsDomain3": "Cybersecurity & Digital Trust",
+    "solutionsDomain4": "Document, Contract & Knowledge Intelligence",
+    "solutionsDomain5": "Finance, Billing & E-Invoicing Automation",
+    "solutionsDomain6": "Data, BI & Decision Intelligence",
+    "solutionsDomain7": "Customer Experience & Service Automation",
+    "solutionsDomain8": "Supplier, Procurement & Third-Party Risk",
+    "solutionsDomain9": "Identity, KYC/KYB & Digital Trust",
+    "solutionsDomain10": "Enterprise Asset & Process Intelligence",
     "solutionsViewAll": "Alle assets bekijken",
     "solutionsSubblink": "subblink (AI-contracten)",
     "solutionsKryv": "kryv (AI-code)",
@@ -3885,7 +3897,18 @@
 },
 "label": "Engineering \u2014 Soevereine software",
 "title": "Aegryn bouwt de software\nvan uw bedrijfsvoering.",
-"desc": "Van het MKB tot grote ondernemingen, in Zwitserland en Europa: Aegryn ontwerpt, implementeert en onderhoudt maatwerksoftware voor bedrijven. Geen afhankelijkheid van grote leveranciers. Geen generalistisch SaaS-abonnement. Soevereine, beheersbare code, integreerbaar in uw infrastructuur. 46,7% van de Europese bedrijven gebruikt de cloud, 39,9% data-analyse en bijna 20% AI in 2026 \u2014 de behoefte aan kwalitatieve, soevereine software zonder vendor lock-in is structureel.",
+"desc": "Van het MKB tot grote ondernemingen, in Zwitserland en Europa: Aegryn ontwerpt, implementeert en onderhoudt maatwerksoftware voor bedrijven. Geen afhankelijkheid van grote leveranciers. Geen generalistisch SaaS-abonnement. Soevereine, beheersbare code, integreerbaar in uw infrastructuur.",
+"whySection": {
+"label": "Waarom soevereine software",
+"title": "Wat de standaardmarkt u niet kan bieden.",
+"desc": "46,7 % van de Europese bedrijven gebruikt de cloud. 39,9 % data-analyse. Bijna 20 % AI in 2026. De behoefte aan kwalitatieve, soevereine software zonder vendor lock-in is structureel. De Europese Commissie erkent in 2026 dat afhankelijkheden van externe leveranciers aanzienlijk blijven in cloud en cybersecurity. Zwitserland heeft digitale soevereiniteit tot een prioriteit van zijn digitale strategie 2026 gemaakt.",
+"points": [
+  { "title": "Volledig code-eigendom", "desc": "U bent voor 100 % eigenaar van de geleverde code. Geen licentie, geen abonnementscontract, geen leveranciersafhankelijkheid." },
+  { "title": "Hosting op uw infrastructuur", "desc": "De software wordt ingezet waar u dat vereist: gecertificeerde Europese cloud, on-premise of Zwitserse infrastructuur. Geen data verlaat het systeem zonder uw toestemming." },
+  { "title": "Integratie in uw echte processen", "desc": "Wij bouwen rondom uw organisatie, niet andersom. Elke module integreert met uw bestaande tools, data en workflows." },
+  { "title": "Certificeerbaar en overdraagbaar", "desc": "Elk softwareasset geleverd door Aegryn is gestructureerd om auditeerbaar, beoordeelbaar en overdraagbaar te zijn volgens het Aegryn-certificeringsprotocol." }
+]
+},
 "domainsSection": {
 "label": "10 softwaredomeinen",
 "title": "De domeinen waar we bouwen\nvoor onze klanten.",
