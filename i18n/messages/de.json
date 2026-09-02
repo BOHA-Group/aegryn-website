@@ -3758,29 +3758,29 @@
     "domainsSection": {
       "label": "10 Software-Dom\u00e4nen",
       "title": "Die Dom\u00e4nen, in denen wir\nf\u00fcr unsere Kunden bauen.",
-      "desc": "Wir w\u00e4hlen Dom\u00e4nen, in denen der Bedarf abteilungs\u00fcbergreifend, wiederkehrend, regulatorisch oder kostspielig ist \u2014 und wo Aegryn eine KI-, Souver\u00e4nit\u00e4ts- und Integrationsschicht ohne Abh\u00e4ngigkeit von gro\u00dfen Anbietern liefern kann.",
+      "desc": "Wir bauen in Domänen, in denen der Bedarf abteilungsübergreifend, wiederkehrend und regulatorisch ist, mit einer KI-, Souveränitäts- und Integrationsschicht ohne Abhängigkeit von großen Anbietern.",
       "domains": [
-        { "num": "01", "badge": "Agentische KI", "title": "KI-Agenten & Gesch\u00e4ftsautomatisierung", "desc": "Orchestrierung komplexer Aufgaben (Back-Office, Compliance, Reporting) durch autonome KI-Agenten. Souver\u00e4ne Alternative zu RPA- und No-Code-Plattformen am Markt." },
-        { "num": "02", "badge": "KI-Governance", "title": "Compliance, Risiko & KI-Governance", "desc": "Verarbeitungsverzeichnis, EU AI Act, DORA, NIS2, Schweizer DSG. Algorithmisches Risikomanagement und Nachvollziehbarkeit von KI-Entscheidungen auf Unternehmensebene." },
-        { "num": "03", "badge": "Digital Trust", "title": "Cybersicherheit & Digitales Vertrauen", "desc": "Starke Authentifizierung, Zugangsverwaltung, Audit-Trail, digitaler Dokumententresor. Zero-Trust-Architektur und Schutz kritischer Assets. Kryv \u2014 Aegryn-Kernasset." },
-        { "num": "04", "badge": "Dok-Intelligenz", "title": "Vertr\u00e4ge & Dokumentenintelligenz", "desc": "Analyse, Extraktion und Lifecycle-Management von Vertr\u00e4gen, Bestellungen, NDAs und regulatorischen Klauseln. Lokale KI-Engine, kein Drittanbieter-Cloud. Subblink \u2014 Aegryn-Kernasset." },
-        { "num": "05", "badge": "Souver\u00e4nes ERP", "title": "ERP & Betriebsmanagement", "desc": "Ersatz oder Erweiterung von generalistischen ERPs (SAP, Oracle, Sage) durch ma\u00dfgeschneiderte Module, die mit Ihren realen Prozessen verbunden sind. 46,5% der EU-Unternehmen nutzen ein ERP \u2014 oft unpassend." },
-        { "num": "06", "badge": "Data Intelligence", "title": "Datenanalyse & Business Intelligence", "desc": "Datenpipelines, operative Dashboards, Vorhersagemodelle. Souver\u00e4nes CH/EU-Hosting, ohne Ihre Daten an Drittanbieter-Plattformen zu senden." },
-        { "num": "07", "badge": "Kundenbeziehungen", "title": "CRM & Kundenportale", "desc": "Ma\u00dfgeschneidertes Business-CRM, Partnerportale, Kunden-Extranets mit starker Authentifizierung. Souver\u00e4ne Alternative zu Salesforce, HubSpot und \u00c4quivalenten." },
-        { "num": "08", "badge": "HR & Talent", "title": "HR, Talent & Kompetenzmanagement", "desc": "HRIS, Onboarding, Skills-Mapping, Beurteilung und Entwicklungsplan \u2014 integriert in Ihre reale Organisation, ohne globale SaaS-Schicht." },
-        { "num": "09", "badge": "Finance & Audit", "title": "Finance, Reporting & Audit", "desc": "KI-gest\u00fctzter Buchungsabschluss, regulatorisches Reporting (IFRS, Swiss GAAP), unver\u00e4nderlicher Audit-Trail. Native Verbindung zu Ihren bestehenden Tools." },
-        { "num": "10", "badge": "Knowledge Graph", "title": "Wissensmanagement & Content-KI", "desc": "Intelligente Wissensbasis, semantische Suchmaschine, kontrollierte Inhaltsgenerierung. Strukturiertes, privates und gepr\u00fcftes organisatorisches Ged\u00e4chtnis." }
+        { "num": "01", "badge": "Agentische KI", "title": "KI-Agenten & Geschäftsautomatisierung", "desc": "Orchestrierung komplexer Workflows durch Geschäfts-KI-Agenten, die mit Ihren Systemen verbunden sind: CRM, ERP, E-Mail, Dokumente, APIs, Datenbanken. Jeder Agent ist prüfbar, mit Human-in-the-Loop und Qualitätsüberwachung." },
+        { "num": "02", "badge": "KI-Governance", "title": "Compliance, Risiko & KI-Governance", "desc": "Compliance-Plattform für EU AI Act, DSGVO, Schweizer DSG, NIS2, DORA, ISO 27001. Verarbeitungsverzeichnis, Kontrollen, Nachweise, Audit-Trail. Die Schweiz bestätigt, dass ihr DSG direkt auf KI-basierte Verarbeitungen anwendbar ist." },
+        { "num": "03", "badge": "Digital Trust", "title": "Cybersicherheit & Digitales Vertrauen", "desc": "Cyber-Risikobewertung, Asset-Inventar, Lieferantenrisiko, Incident-Management, Sicherheitsnachweise, Compliance-Mapping. Ausgerichtet an den europäischen Prioritäten 2026 und NIS2-Anforderungen für kritische Sektoren." },
+        { "num": "04", "badge": "Dok-Intelligenz", "title": "Dokument-, Vertrags- & Wissensintelligenz", "desc": "Verwandeln Sie Ihre Verträge, Richtlinien, Rechnungen und Dokumente in handlungsfähiges Wissen. Risikoidentifikation, kritische Fristen und Prioritätsmaßnahmen. Subblink, Aegryn-Kernasset." },
+        { "num": "05", "badge": "Finance Ops", "title": "Finance, Billing & E-Invoicing-Automatisierung", "desc": "Rechnungsautomatisierung, E-Invoicing (EU ViDA, Schweizer Bundespflicht), Zahlungsabgleich, Cash-Flow, grenzüberschreitende Mehrwertsteuer. Finance-Operations-Schicht zwischen CRM und Buchhaltung." },
+        { "num": "06", "badge": "Decision Intelligence", "title": "Data, BI & Decision Intelligence", "desc": "Kausalanalyse, Szenariosimulation, automatisierte Empfehlungen. Die Software beantwortet: Was ist passiert, warum, was wird passieren, was ist zu tun. Fast 40 % der europäischen Unternehmen nutzen 2026 Datenanalyse." },
+        { "num": "07", "badge": "Agentische CX", "title": "Customer Experience & Service-Automatisierung", "desc": "KI-Customer-Operations-Architektur: KI-Kundenagent, Wissensbot, Next-Best-Action, Fall-Zusammenfassung, Qualitätsüberwachung. Relevant für Versicherungen, Banken, Telekommunikation, Handel, Gesundheitswesen." },
+        { "num": "08", "badge": "Beschaffungsrisiko", "title": "Lieferanten, Beschaffung & Drittparteienrisiko", "desc": "Lieferantenbewertung, Vertragsanalyse, Cyberrisiko, ESG, Konzentrationsrisiko, Sanktionen, Verlängerungen. Die FINMA stellt fest, dass Auslagerungen die primäre Quelle operationeller Risiken im Schweizer Finanzwesen bleiben." },
+        { "num": "09", "badge": "Identität & Vertrauen", "title": "Identität, KYC/KYB & Digitales Vertrauen", "desc": "Unternehmens-Onboarding, KYB, KYC, Prüfung, wirtschaftlich Berechtigte, Signaturen, Anmeldeinformationen, Vertrauensaufzeichnungen. Die Schweiz macht E-ID zu einer Priorität ihrer digitalen Strategie 2026." },
+        { "num": "10", "badge": "Digitaler Zwilling", "title": "Enterprise Asset & Process Intelligence", "desc": "Dynamische Darstellung Ihrer Organisation: Personen, Anwendungen, Prozesse, Verträge, Lieferanten, Daten. Echtzeit-Antworten zu Abhängigkeiten, Kosten und operationellen Risiken." }
       ]
     },
     "platformSection": {
       "label": "Gemeinsame Architektur",
       "title": "AEGRYN Enterprise Intelligence Platform.",
-      "desc": "Die 10 Dom\u00e4nen sind keine 10 unabh\u00e4ngigen Produkte. Sie teilen eine gemeinsame Infrastruktur: die AEGRYN Enterprise Intelligence Platform. Eine Datenschicht, eine KI-Schicht, eine Governance-Schicht \u2014 und dar\u00fcber Gesch\u00e4ftsanwendungen f\u00fcr jede Dom\u00e4ne.",
+      "desc": "Die 10 Domänen sind keine 10 unabhängigen Produkte. Sie teilen eine gemeinsame Infrastruktur: die AEGRYN Enterprise Intelligence Platform. Eine Datenschicht, eine KI-Schicht, eine Governance-Schicht — und darüber Geschäftsanwendungen für jede Domäne.",
       "layers": [
-        { "key": "data", "title": "Data Layer", "desc": "Erfassung, Normalisierung und souver\u00e4ne Speicherung Ihrer Gesch\u00e4ftsdaten." },
-        { "key": "ai", "title": "AI Layer", "desc": "KI-Modelle, on-premise oder in CH/EU-Cloud einsetzbar. Keine Daten an OpenAI, Azure oder GCP ohne ausdr\u00fcckliche Zustimmung." },
-        { "key": "knowledge", "title": "Knowledge Layer", "desc": "Wissensgraph, semantische Indizierung, persistentes organisatorisches Ged\u00e4chtnis." },
-        { "key": "governance", "title": "Governance Layer", "desc": "Audit-Trail, RBAC, Verarbeitungsverzeichnis, regulatorische Konformit\u00e4t (AI Act, NIS2, DORA, DSG)." }
+        { "key": "data", "title": "Data Layer", "desc": "Erfassung, Normalisierung und souveräne Speicherung Ihrer Geschäftsdaten." },
+        { "key": "ai", "title": "AI Layer", "desc": "KI-Modelle, on-premise oder in CH/EU-Cloud einsetzbar. Keine Daten an OpenAI, Azure oder GCP ohne ausdrückliche Zustimmung." },
+        { "key": "knowledge", "title": "Knowledge Layer", "desc": "Wissensgraph, semantische Indizierung, persistentes organisatorisches Gedächtnis." },
+        { "key": "governance", "title": "Governance Layer", "desc": "Audit-Trail, RBAC, Verarbeitungsverzeichnis, regulatorische Konformität (AI Act, NIS2, DORA, DSG)." }
       ],
       "verticals": {
         "label": "Vertikale M\u00e4rkte",
