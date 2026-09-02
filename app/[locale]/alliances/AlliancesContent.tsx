@@ -8,7 +8,6 @@ import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 const TAB_KEYS = ['overview', 'advisory_tech', 'advisory_transaction', 'certification', 'dealflow', 'sequestre', 'technique', 'assurance', 'apply'] as const
 type TabKey = typeof TAB_KEYS[number]
 
-const TYPE_KEYS = ['advisory_tech', 'advisory_transaction', 'certification', 'dealflow', 'sequestre', 'technique', 'assurance'] as const
 
 const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
 const selectCls = inputCls + ' appearance-none'
