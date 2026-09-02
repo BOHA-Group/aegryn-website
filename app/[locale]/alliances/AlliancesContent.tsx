@@ -64,18 +64,18 @@ export default function AlliancesContent() {
   return (
     <>
       {/* Hero */}
-      <section className="border-b border-ag-border">
+      <section className="border-b border-ag-border bg-ag-navy">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             {t('hero.label')}
           </p>
           <h1
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8 whitespace-pre-line"
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8 whitespace-pre-line"
             style={{ fontSize: 'clamp(48px,6vw,88px)' }}
           >
             {t('hero.title')}
           </h1>
-          <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl">
+          <p className="text-[15px] text-white/60 leading-relaxed max-w-xl">
             {t('hero.desc')}
           </p>
         </div>
@@ -108,40 +108,70 @@ export default function AlliancesContent() {
 
         {/* Overview */}
         {activeTab === 'overview' && (
-          <section className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-16 items-start">
-              <div>
-                <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">
-                  / Aegryn
+          <>
+            {/* 6 discipline cards */}
+            <section className="border-b border-ag-border bg-ag-off-white">
+              <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+                <div className="flex items-center border-b border-ag-border pb-4 mb-14">
+                  <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+                    / {t('disciplines.label')}
+                  </p>
+                </div>
+                <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-14">
+                  {t('disciplines.intro')}
                 </p>
-                <p
-                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2]"
-                  style={{ fontSize: 'clamp(22px,2.5vw,34px)' }}
-                >
-                  {t('hero.desc')}
-                </p>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                {TYPE_KEYS.map(key => (
-                  <button
-                    key={key}
-                    onClick={() => setTab(key)}
-                    className="text-left flex items-start gap-3 group border border-ag-border p-5 hover:border-ag-black transition-colors"
-                  >
-                    <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-ag-apex" />
-                    <div>
-                      <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-apex mb-1.5">
-                        {t(`types.${key}.label`)}
-                      </p>
-                      <p className="text-[12px] text-ag-gray leading-relaxed">
-                        {t(`types.${key}.profiles`)}
-                      </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border">
+                  {(t.raw('disciplines.items') as { num: string; title: string; desc: string }[]).map(item => (
+                    <div key={item.num} className="bg-ag-off-white p-8 hover:bg-white transition-colors">
+                      <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-5">{item.num}</p>
+                      <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight mb-3">
+                        {item.title}
+                      </h3>
+                      <p className="text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
                     </div>
-                  </button>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
+
+            {/* Alliance Partners bloc */}
+            <section className="border-b border-ag-border bg-ag-white">
+              <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+                <div className="flex items-center border-b border-ag-border pb-4 mb-14">
+                  <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+                    / {t('alliancePartners.label')}
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
+                  <div>
+                    <h2
+                      className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6"
+                      style={{ fontSize: 'clamp(24px,2.5vw,36px)' }}
+                    >
+                      {t('alliancePartners.title')}
+                    </h2>
+                    <a
+                      href={t('alliancePartners.ctaHref')}
+                      onClick={(e) => { e.preventDefault(); setTab('apply') }}
+                      className="inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex hover:text-ag-navy transition-colors"
+                    >
+                      {t('alliancePartners.cta')} <ArrowUpRight size={14} />
+                    </a>
+                  </div>
+                  <p className="text-[15px] text-ag-gray leading-relaxed self-start">
+                    {t('alliancePartners.desc')}
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Partner note */}
+            <section className="max-w-7xl mx-auto px-6 md:px-12 py-12">
+              <p className="font-sans text-[12px] text-ag-gray-light italic">
+                {t('partnerNote')}
+              </p>
+            </section>
+          </>
         )}
 
         {/* Category detail tabs */}

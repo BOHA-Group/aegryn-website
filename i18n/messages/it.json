@@ -3790,8 +3790,8 @@
     },
     "hero": {
       "label": "Aegryn Partnerships",
-      "title": "I partner che rendono\nil grade irrefutabile.",
-      "desc": "Aegryn certifica in modo indipendente. I nostri partner intervengono nella distribuzione, nel deal flow e nella strutturazione delle transazioni e, nel tempo, potranno arricchire certi rapporti con una revisione incrociata complementare. Questo ecosistema è ciò che ci rende operativi."
+      "title": "La nostra rete.\nLa nostra forza.",
+      "desc": "Aegryn opera con una rete di partner esperti, attentamente selezionati per disciplina. Legale, tecnico, finanziario, advisory, assicurativo: ogni partner rafforza la nostra capacità di supportare transazioni complesse con i migliori esperti del mercato."
     },
     "types": {
       "certification": {
@@ -3888,6 +3888,49 @@
       "sequestre": "Deposito",
       "technique": "Tecnico",
       "assurance": "Assicurazione"
+    },
+    "disciplines": {
+      "label": "LE 6 DISCIPLINE DELLA RETE",
+      "intro": "La nostra rete copre l'intera catena del valore di una transazione tech.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Advisory Tech",
+          "desc": "CTO as a service, audit di sicurezza, architettura, DevSecOps, IA. Esperti che rafforzano la solidità degli asset prima e durante la certificazione."
+        },
+        {
+          "num": "02",
+          "title": "Advisory Transazionale",
+          "desc": "Due diligence strategica, valutazione, strutturazione di deal, supporto M&A buy-side e sell-side."
+        },
+        {
+          "num": "03",
+          "title": "Legale & Certificazione",
+          "desc": "Avvocati M&A, diritto digitale, proprietà intellettuale, fiscalità transazionale, conformità GDPR/LPD."
+        },
+        {
+          "num": "04",
+          "title": "Deal Flow & Distribuzione",
+          "desc": "Intermediari qualificati, società M&A, banche d'investimento, family office. Accesso a opportunità offmarket."
+        },
+        {
+          "num": "05",
+          "title": "Deposito & Strutturazione finanziaria",
+          "desc": "Commercialisti, revisori, strutturazione del deposito fiduciario, finanziamento dell'acquisizione."
+        },
+        {
+          "num": "06",
+          "title": "Assicurazione W&I",
+          "desc": "Specialisti in garanzia passiva e assicurazione W&I. Protezione di acquirenti e venditori post-closing."
+        }
+      ]
+    },
+    "alliancePartners": {
+      "label": "PARTNER ALLIANCE",
+      "title": "Partner che condividono il nostro standard.",
+      "desc": "I Partner Alliance sono organizzazioni che hanno firmato un accordo di partnership formale con Aegryn. Beneficiano di accesso prioritario alle opportunità di deal flow, visibilità sul catalogo offmarket e collaborazione diretta sulle transazioni in corso.",
+      "cta": "Diventare Partner Alliance →",
+      "ctaHref": "/alliances?tab=apply"
     }
   },
   "network": {

@@ -3790,8 +3790,8 @@
     },
     "hero": {
       "label": "Aegryn Partnerships",
-      "title": "Die Partner, die den\nGrade unwiderlegbar machen.",
-      "desc": "Aegryn zertifiziert unabhängig. Unsere Partner wirken bei Vertrieb, Deal-Flow und Transaktionsstrukturierung mit und können langfristig bestimmte Berichte mit einer ergänzenden Querprüfung anreichern. Dieses Ökosystem macht uns operationell."
+      "title": "Unser Netzwerk.\nUnsere Stärke.",
+      "desc": "Aegryn arbeitet mit einem Netzwerk sorgfältig ausgewählter Expertenpartner. Rechtlich, technisch, finanziell, beratend, versicherungstechnisch: Jeder Partner stärkt unsere Fähigkeit, komplexe Transaktionen mit den besten Marktexperten zu begleiten."
     },
     "types": {
       "certification": {
@@ -3888,6 +3888,49 @@
       "sequestre": "Treuhand",
       "technique": "Technisch",
       "assurance": "Versicherung"
+    },
+    "disciplines": {
+      "label": "DIE 6 NETZWERKDISZIPLINEN",
+      "intro": "Unser Netzwerk deckt die gesamte Wertschöpfungskette einer Tech-Transaktion ab.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Tech Advisory",
+          "desc": "CTO as a Service, Sicherheitsaudit, Architektur, DevSecOps, KI. Experten, die die Robustheit von Assets vor und während der Zertifizierung stärken."
+        },
+        {
+          "num": "02",
+          "title": "Transaktions-Advisory",
+          "desc": "Strategische Due Diligence, Bewertung, Deal-Strukturierung, Buy-Side- und Sell-Side-M&A-Begleitung."
+        },
+        {
+          "num": "03",
+          "title": "Rechtliches & Zertifizierung",
+          "desc": "M&A-Anwälte, Digitalrecht, Geistiges Eigentum, Transaktionssteuer, DSGVO/DSG-Compliance."
+        },
+        {
+          "num": "04",
+          "title": "Deal Flow & Distribution",
+          "desc": "Qualifizierte Vermittler, M&A-Firmen, Investmentbanken, Family Offices. Zugang zu Off-Market-Möglichkeiten."
+        },
+        {
+          "num": "05",
+          "title": "Treuhand & Finanzstrukturierung",
+          "desc": "Wirtschaftsprüfer, Steuerberater, Treuhand-Strukturierung, Akquisitionsfinanzierung."
+        },
+        {
+          "num": "06",
+          "title": "W&I-Versicherung",
+          "desc": "Spezialisten für Garantie- und W&I-Versicherung. Schutz für Käufer und Verkäufer nach dem Closing."
+        }
+      ]
+    },
+    "alliancePartners": {
+      "label": "ALLIANCE-PARTNER",
+      "title": "Partner, die unseren Standard teilen.",
+      "desc": "Alliance-Partner sind Organisationen, die einen formellen Partnerschaftsvertrag mit Aegryn unterzeichnet haben. Sie profitieren von vorrangigem Zugang zu Deal-Flow-Möglichkeiten, Sichtbarkeit im Off-Market-Katalog und direkter Zusammenarbeit bei laufenden Transaktionen.",
+      "cta": "Alliance-Partner werden →",
+      "ctaHref": "/alliances?tab=apply"
     }
   },
   "network": {

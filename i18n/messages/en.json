@@ -3789,8 +3789,8 @@
     },
     "hero": {
       "label": "Aegryn Partnerships",
-      "title": "The partners that make\nthe grade irrefutable.",
-      "desc": "Aegryn certifies independently. Our partners intervene on distribution, deal flow and transaction structuring and, over time, may enrich certain reports with a complementary cross-review. This ecosystem is what makes us operational."
+      "title": "Our network.\nOur strength.",
+      "desc": "Aegryn operates with a network of expert partners, carefully selected by discipline. Legal, technical, financial, advisory, insurance: each partner strengthens our ability to support complex transactions with the best market experts."
     },
     "types": {
       "certification": {
@@ -3887,6 +3887,49 @@
       "sequestre": "Escrow",
       "technique": "Technical",
       "assurance": "Insurance"
+    },
+    "disciplines": {
+      "label": "THE 6 NETWORK DISCIPLINES",
+      "intro": "Our network covers the entire value chain of a tech transaction.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Tech Advisory",
+          "desc": "CTO as a service, security audit, architecture, DevSecOps, AI. Experts who strengthen asset robustness before and during certification."
+        },
+        {
+          "num": "02",
+          "title": "Transaction Advisory",
+          "desc": "Strategic due diligence, valuation, deal structuring, buy-side and sell-side M&A support."
+        },
+        {
+          "num": "03",
+          "title": "Legal & Certification",
+          "desc": "M&A lawyers, digital law, intellectual property, transactional tax, GDPR/FADP compliance."
+        },
+        {
+          "num": "04",
+          "title": "Deal Flow & Distribution",
+          "desc": "Qualified introducers, M&A firms, investment banks, family offices. Access to off-market opportunities."
+        },
+        {
+          "num": "05",
+          "title": "Escrow & Financial Structuring",
+          "desc": "Chartered accountants, statutory auditors, escrow structuring, acquisition financing."
+        },
+        {
+          "num": "06",
+          "title": "W&I Insurance",
+          "desc": "Warranty & Indemnity insurance specialists. Protection for buyers and sellers post-closing."
+        }
+      ]
+    },
+    "alliancePartners": {
+      "label": "ALLIANCE PARTNERS",
+      "title": "Partners who share our standard.",
+      "desc": "Alliance Partners are organisations that have signed a formal partnership agreement with Aegryn. They benefit from priority access to deal flow opportunities, visibility on the off-market catalogue and direct collaboration on ongoing transactions.",
+      "cta": "Become an Alliance Partner →",
+      "ctaHref": "/alliances?tab=apply"
     }
   },
   "network": {

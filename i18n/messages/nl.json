@@ -3790,8 +3790,8 @@
     },
     "hero": {
       "label": "Aegryn Partnerships",
-      "title": "De partners die de grade\nonweerlegbaar maken.",
-      "desc": "Aegryn certificeert onafhankelijk. Onze partners nemen deel aan distributie, deal flow en transactiestructurering en kunnen op termijn bepaalde rapporten verrijken met een aanvullende kruisreview. Dit ecosysteem maakt ons operationeel."
+      "title": "Ons netwerk.\nOnze kracht.",
+      "desc": "Aegryn werkt met een netwerk van zorgvuldig per discipline geselecteerde expertpartners. Juridisch, technisch, financieel, advisory, verzekering: elke partner versterkt onze capaciteit om complexe transacties te begeleiden met de beste marktexperts."
     },
     "types": {
       "certification": {
@@ -3888,6 +3888,49 @@
       "sequestre": "Escrow",
       "technique": "Technisch",
       "assurance": "Verzekering"
+    },
+    "disciplines": {
+      "label": "DE 6 NETWERKDISCIPLINES",
+      "intro": "Ons netwerk dekt de volledige waardeketen van een techtransactie.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Tech Advisory",
+          "desc": "CTO as a service, beveiligingsaudit, architectuur, DevSecOps, AI. Experts die de soliditeit van assets voor en tijdens certificering versterken."
+        },
+        {
+          "num": "02",
+          "title": "Transactioneel Advisory",
+          "desc": "Strategische due diligence, waardering, deal-structurering, buy-side en sell-side M&A-begeleiding."
+        },
+        {
+          "num": "03",
+          "title": "Juridisch & Certificering",
+          "desc": "M&A-advocaten, digitaal recht, intellectueel eigendom, transactionele fiscaliteit, AVG/DSG-compliance."
+        },
+        {
+          "num": "04",
+          "title": "Deal Flow & Distributie",
+          "desc": "Gekwalificeerde introducers, M&A-kantoren, investeringsbanken, family offices. Toegang tot off-market kansen."
+        },
+        {
+          "num": "05",
+          "title": "Escrow & Financiële structurering",
+          "desc": "Accountants, bedrijfsrevisoren, escrow-structurering, acquisitiefinanciering."
+        },
+        {
+          "num": "06",
+          "title": "W&I-verzekering",
+          "desc": "Specialisten in garantie- en W&I-verzekering. Bescherming van kopers en verkopers na closing."
+        }
+      ]
+    },
+    "alliancePartners": {
+      "label": "ALLIANCE PARTNERS",
+      "title": "Partners die onze standaard delen.",
+      "desc": "Alliance Partners zijn organisaties die een formele samenwerkingsovereenkomst met Aegryn hebben ondertekend. Ze genieten prioritaire toegang tot dealflow-kansen, zichtbaarheid in de offmarket-catalogus en directe samenwerking bij lopende transacties.",
+      "cta": "Alliance Partner worden →",
+      "ctaHref": "/alliances?tab=apply"
     }
   },
   "network": {

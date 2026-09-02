@@ -3733,8 +3733,8 @@
     },
     "hero": {
       "label": "Partenariats Aegryn",
-      "title": "Les partenaires qui rendent\nle grade irréfutable.",
-      "desc": "Aegryn certifie de façon indépendante. Nos partenaires interviennent sur la distribution, le deal flow et la structuration des transactions et, à terme, pourront enrichir certains rapports d'une revue croisée complémentaire. C'est cet écosystème qui nous rend opérationnels."
+      "title": "Notre réseau.\nNotre force.",
+      "desc": "Aegryn opère avec un réseau de partenaires experts, soigneusement sélectionnés par discipline. Juridique, technique, financier, conseil, assurance : chaque partenaire renforce notre capacité à accompagner des transactions complexes avec les meilleurs experts du marché."
     },
     "types": {
       "certification": {
@@ -3831,6 +3831,49 @@
       "sequestre": "Séquestre",
       "technique": "Technique",
       "assurance": "Assurance"
+    },
+    "disciplines": {
+      "label": "LES 6 DISCIPLINES DU RÉSEAU",
+      "intro": "Notre réseau couvre l'intégralité de la chaîne de valeur d'une transaction tech.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Advisory Tech",
+          "desc": "CTO as a service, audit de sécurité, architecture, DevSecOps, IA. Experts qui renforcent la robustesse des actifs avant et pendant la certification."
+        },
+        {
+          "num": "02",
+          "title": "Advisory Transactionnel",
+          "desc": "Due diligence stratégique, valorisation, structuration de deals, accompagnement M&A buy-side et sell-side."
+        },
+        {
+          "num": "03",
+          "title": "Juridique & Certification",
+          "desc": "Avocats M&A, droit numérique, propriété intellectuelle, fiscalité transactionnelle, conformité RGPD/LPD."
+        },
+        {
+          "num": "04",
+          "title": "Deal Flow & Distribution",
+          "desc": "Apporteurs qualifiés, cabinet de M&A, banques d'investissement, family offices. Accès à des opportunités offmarket."
+        },
+        {
+          "num": "05",
+          "title": "Séquestre & Structuration financière",
+          "desc": "Experts-comptables, commissaires aux comptes, structuration du séquestre, financement de l'acquisition."
+        },
+        {
+          "num": "06",
+          "title": "Assurance W&I",
+          "desc": "Spécialistes en garantie de passif et Warranty & Indemnity insurance. Protection des acheteurs et vendeurs post-closing."
+        }
+      ]
+    },
+    "alliancePartners": {
+      "label": "PARTENAIRES ALLIANCE",
+      "title": "Des partenaires qui partagent notre standard.",
+      "desc": "Les Partenaires Alliance sont des organisations ayant signé un accord de partenariat formel avec Aegryn. Ils bénéficient d'un accès prioritaire aux opportunités de deal flow, d'une visibilité sur le catalogue offmarket et d'une collaboration directe sur les transactions en cours.",
+      "cta": "Devenir Partenaire Alliance →",
+      "ctaHref": "/alliances?tab=apply"
     }
   },
   "network": {
