@@ -12,6 +12,7 @@ import { WhyUseApps }        from '@/components/sections/WhyUseApps'
 import { AcqSupportStrip }   from '@/components/sections/AcqSupportStrip'
 import { BuildEngineeringStrip } from '@/components/sections/BuildEngineeringStrip'
 import { AdvisoryTechStrip } from '@/components/sections/AdvisoryTechStrip'
+import { AdvisoryThoughtLeadership } from '@/components/sections/AdvisoryThoughtLeadership'
 import { DiscoverStrip }     from '@/components/sections/DiscoverStrip'
 import type { Metadata }    from 'next'
 
@@ -49,6 +50,8 @@ export default async function HomePage({ params }: Props) {
       {/* ── 04. Conseil ────────────────────────────────────── */}
       {/* Advisory Tech — présentation des 3 domaines */}
       <AdvisoryTechStrip />
+      {/* Thought Leadership — pourquoi stratégie + tech + M&A complémentaires */}
+      <AdvisoryThoughtLeadership />
       {/* Advisory Transaction + Réseau */}
       <AcqSupportStrip />
 
