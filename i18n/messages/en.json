@@ -571,7 +571,7 @@
   "aboutSection": {
     "label": "About Aegryn",
     "title": "Five disciplines.\nOne market standard.",
-    "desc": "Aegryn advises tech leaders on strategic decisions, builds sovereign software, certifies and transfers assets under an independent protocol, recruits leaders, and documents the market every quarter. Advisory, construction, certification, talent, intelligence: an integrated ecosystem for tech M&A in Europe.",
+    "desc": "Aegryn builds sovereign software, advises tech leaders, certifies and transfers assets, recruits executive talent and documents the market. Five disciplines exercised with the same level of rigour, in Switzerland and Europe.",
     "tagline": "OPERATIONAL ADVISORY. SOVEREIGN SOFTWARE. INDEPENDENT CERTIFICATION.",
     "cta": "About Aegryn",
     "quote": "In a world moving faster than ever, advisory is the key to having a clear vision and an execution plan. We support tech leaders with operational expertise — not slides.",
@@ -598,15 +598,15 @@
     "items": [
       {
         "title": "BUILD",
-        "desc": "We design and operate tech assets, SaaS, marketplaces, AI protocols, structured from inception to be certifiable and transferable. Every asset withstands the most rigorous audit."
+        "desc": "We design, deploy and maintain custom business software for enterprises. Sovereign code, no vendor dependency, integrable into your infrastructure."
       },
       {
         "title": "ADVISE",
-        "desc": "We support entrepreneurs and acquirers: Tech Advisory (cybersecurity, AI, compliance), Transaction Advisory (structuring, due diligence, closing), and Talent (recruitment and placement of tech profiles)."
+        "desc": "Strategic, technological and transaction advisory for tech companies. Operational expertise on compliance, cybersecurity, digital transformation and transmission operations."
       },
       {
         "title": "TRANSACT",
-        "desc": "We certify and transact tech assets through an independent protocol across 4 dimensions: Code, IP, Finance, Security. Exclusive 60-day mandate. Institutional escrow. Less than 25% of submitted assets accepted."
+        "desc": "Independent certification on 4 dimensions: Code, IP, Finance, Security. Exclusive 60-day mandate, institutional escrow. Less than 25% of submitted assets are accepted."
       },
       {
         "title": "RECRUIT",
@@ -614,7 +614,7 @@
       },
       {
         "title": "LEARN",
-        "desc": "We document the European tech M&A market: Quarterly Aegryn Magazine, Weekly Brief, Articles and analyses. A clear view of the market, for those who make it."
+        "desc": "Quarterly magazine, weekly brief, articles and analyses. We document the transformations of the European tech market for the leaders who drive it."
       }
     ]
   },

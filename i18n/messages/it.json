@@ -475,7 +475,7 @@
   "aboutSection": {
     "label": "Su Aegryn",
     "title": "Cinque discipline.\nUno standard di mercato.",
-    "desc": "Aegryn progetta asset tech, li certifica sotto un marchio indipendente, li trasmette in un circolo chiuso, supporta imprenditori e acquirenti, e documenta il mercato ogni trimestre. La prima infrastruttura di fiducia per il M&A tech in Europa.",
+    "desc": "Aegryn costruisce software sovrano, accompagna i leader tech, certifica e trasmette asset, recluta talenti executive e documenta il mercato. Cinque discipline esercitate con lo stesso livello di rigore, in Svizzera e in Europa.",
     "tagline": "CERTIFICATO IN SVIZZERA. RIFERIMENTO IN EUROPA.",
     "cta": "Chi è Aegryn",
     "quote": "Un asset tech senza certificazione indipendente è un valore senza prova. Aegryn fornisce la prova su ogni asset, ad ogni trasferimento.",
@@ -502,15 +502,15 @@
     "items": [
       {
         "title": "COSTRUIRE",
-        "desc": "Progettiamo e operiamo asset tech, SaaS, marketplace, protocolli IA, strutturati fin dall'origine per essere certificabili e trasferibili. Ogni asset resiste all'audit più rigoroso."
+        "desc": "Progettiamo, distribuiamo e manteniamo software aziendale su misura per le imprese. Codice sovrano, senza dipendenza dall'editore, integrabile nella vostra infrastruttura."
       },
       {
         "title": "ACCOMPAGNARE",
-        "desc": "Supportiamo imprenditori e acquirenti: Tech Advisory (cybersecurity, IA, compliance), Transaction Advisory (strutturazione, due diligence, closing) e Talento (reclutamento e collocamento di profili tech)."
+        "desc": "Consulenza strategica, tecnologica e in transazioni per le aziende tech. Competenza operativa su compliance, cybersecurity, trasformazione digitale e operazioni di trasmissione."
       },
       {
         "title": "TRASMETTERE",
-        "desc": "Certifichiamo e trasmettiamo asset tech secondo un protocollo indipendente su 4 dimensioni: Codice, IP, Finanza, Sicurezza. Mandato esclusivo 60 giorni. Deposito istituzionale. Meno del 25% degli asset presentati accettati."
+        "desc": "Certificazione indipendente su 4 dimensioni: Codice, IP, Finanza, Sicurezza. Mandato esclusivo 60 giorni, deposito istituzionale. Meno del 25 % degli asset presentati vengono accettati."
       },
       {
         "title": "RECLUTARE",
@@ -518,7 +518,7 @@
       },
       {
         "title": "INFORMARSI",
-        "desc": "Documentiamo il mercato M&A tech europeo: Rivista trimestrale Aegryn, Brief settimanale, Articoli e analisi. Una visione chiara del mercato, per chi lo fa."
+        "desc": "Rivista trimestrale, brief settimanale, articoli e analisi. Documentiamo le trasformazioni del mercato tech europeo per i leader che lo guidano."
       }
     ]
   },

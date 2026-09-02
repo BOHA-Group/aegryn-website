@@ -511,7 +511,7 @@
   "aboutSection": {
     "label": "Über Aegryn",
     "title": "Fünf Disziplinen.\nEin Marktstandard.",
-    "desc": "Aegryn berät Tech-Führungskräfte bei strategischen Entscheidungen, entwickelt souveräne Software, zertifiziert und überträgt Assets nach einem unabhängigen Protokoll, rekrutiert Führungskräfte und dokumentiert den Markt jedes Quartal. Beratung, Aufbau, Zertifizierung, Talent, Information: ein integriertes Ökosystem für Tech-M&A in Europa.",
+    "desc": "Aegryn entwickelt souveräne Software, begleitet Tech-Führungskräfte, zertifiziert und überträgt Assets, rekrutiert Executive-Talente und dokumentiert den Markt. Fünf Disziplinen mit demselben Anspruchsniveau, in der Schweiz und Europa.",
     "tagline": "OPERATIVE BERATUNG. SOUVERÄNE SOFTWARE. UNABHÄNGIGE ZERTIFIZIERUNG.",
     "cta": "Über Aegryn",
     "quote": "In einer Welt, die sich schneller bewegt als je zuvor, ist Beratung der Schlüssel für eine klare Vision und einen Ausführungsplan. Wir unterstützen Tech-Führungskräfte mit operativer Expertise — nicht mit Folien.",
@@ -538,15 +538,15 @@
     "items": [
       {
         "title": "AUFBAUEN",
-        "desc": "Wir konzipieren und betreiben Tech-Assets, SaaS, Marktplätze, KI-Protokolle, die von Anfang an zertifizierbar und übertragbar sind. Jedes Asset widersteht der strengsten Prüfung."
+        "desc": "Wir konzipieren, implementieren und pflegen maßgeschneiderte Geschäftssoftware für Unternehmen. Souveräner Code, ohne Anbieterabhängigkeit, integrierbar in Ihre Infrastruktur."
       },
       {
         "title": "BEGLEITEN",
-        "desc": "Wir unterstützen Unternehmer und Erwerber: Tech Advisory (Cybersicherheit, KI, Compliance), Transaction Advisory (Strukturierung, Due Diligence, Closing) und Talent (Rekrutierung und Platzierung von Tech-Profilen)."
+        "desc": "Strategische, technologische und transaktionsbezogene Beratung für Tech-Unternehmen. Operative Expertise in Compliance, Cybersicherheit, digitaler Transformation und Übertragungsoperationen."
       },
       {
         "title": "ÜBERTRAGEN",
-        "desc": "Wir zertifizieren und übertragen Tech-Assets nach einem unabhängigen Protokoll über 4 Dimensionen: Code, IP, Finanzen, Sicherheit. Exklusives 60-Tage-Mandat. Institutionelles Treuhand. Weniger als 25% der eingereichten Assets akzeptiert."
+        "desc": "Unabhängige Zertifizierung über 4 Dimensionen: Code, IP, Finanzen, Sicherheit. Exklusives 60-Tage-Mandat, institutionelles Treuhand. Weniger als 25 % der eingereichten Assets werden akzeptiert."
       },
       {
         "title": "REKRUTIEREN",
@@ -554,7 +554,7 @@
       },
       {
         "title": "INFORMIEREN",
-        "desc": "Wir dokumentieren den europäischen Tech-M&A-Markt: Vierteljährliches Aegryn Magazin, wöchentlicher Brief, Artikel und Analysen. Ein klarer Blick auf den Markt, für diejenigen, die ihn machen."
+        "desc": "Viertteljährliches Magazin, wöchentlicher Brief, Artikel und Analysen. Wir dokumentieren die Transformationen des europäischen Tech-Markts für die Führungskräfte, die ihn gestalten."
       }
     ]
   },
