@@ -514,32 +514,32 @@
   },
   "whatwedo": {
     "label": "Notre Conviction",
-    "conviction": "Le marché européen des actifs tech a besoin de certification, de discrétion, et de données fiables.\nNous construisons les trois.",
+    "conviction": "Le marché tech européen a besoin de conseil stratégique, de logiciels souverains, et de certification indépendante.\nNous construisons les trois.",
     "items": [
       {
         "num": "01",
-        "title": "La certification manquait.",
-        "desc": "Acheter un actif tech sans certification indépendante, c'est acheter une montre sans papiers. Aegryn apporte les papiers, certifiés, vérifiables, documentés."
+        "title": "Le conseil est la clé.",
+        "desc": "Dans un monde qui bouge plus vite que jamais, les dirigeants tech ont besoin d'une vision claire et d'un plan d'exécution. Aegryn Conseil accompagne les décisions stratégiques, les transformations technologiques et les opérations M&A avec une expertise opérationnelle, pas des slides."
       },
       {
         "num": "02",
-        "title": "La discrétion était sacrifiée.",
-        "desc": "Les meilleures cessions ne se font pas en public. Elles se font dans un cercle fermé, entre des parties qui savent ce qu'elles cherchent. Aegryn est ce cercle."
+        "title": "La souveraineté technologique manquait.",
+        "desc": "Le vrai enjeu du cloud souverain n'est pas la localisation des machines, c'est le logiciel. Aegryn conçoit des logiciels souverains européens, déployables sur infrastructures locales, pour entreprises et institutionnels. Sécurité, conformité, indépendance."
       },
       {
         "num": "03",
-        "title": "La Suisse comme standard de certification.",
-        "desc": "Ancré en Suisse. La rigueur helvétique, la discrétion institutionnelle, et l'accès aux family offices et fonds privés les plus sélectifs du continent."
+        "title": "La certification indépendante comme standard.",
+        "desc": "Acheter un actif tech sans certification indépendante, c'est acheter une montre sans papiers. Aegryn certifie et transmet des actifs tech selon un protocole rigoureux : Code, IP, Finance, Sécurité. Ancré en Suisse, référence en Europe."
       }
     ]
   },
   "aboutSection": {
     "label": "À propos d'Aegryn",
     "title": "Cinq métiers.\nUn standard de marché.",
-    "desc": "Aegryn conçoit des actifs tech, les certifie selon un label indépendant, les transmet dans un cercle fermé, accompagne les entrepreneurs et les acquéreurs, et documente le marché chaque trimestre. La première infrastructure de confiance pour le M&A tech en Europe.",
-    "tagline": "CERTIFIÉ EN SUISSE. RÉFÉRENCE EN EUROPE.",
+    "desc": "Aegryn accompagne les dirigeants tech dans leurs décisions stratégiques, conçoit des logiciels souverains, certifie et transmet des actifs selon un protocole indépendant, recrute des leaders, et documente le marché chaque trimestre. Conseil, construction, certification, talent, information : un écosystème intégré pour le M&A tech en Europe.",
+    "tagline": "CONSEIL OPÉRATIONNEL. LOGICIELS SOUVERAINS. CERTIFICATION INDÉPENDANTE.",
     "cta": "À propos d'Aegryn",
-    "quote": "Un actif tech sans certification indépendante, c'est une valeur sans preuve. Aegryn apporte la preuve sur chaque actif, à chaque transfert.",
+    "quote": "Dans un monde qui bouge plus vite que jamais, le conseil est la clé pour avoir une vision claire et un plan d'exécution. Nous accompagnons les dirigeants tech avec une expertise opérationnelle, pas des slides.",
     "ceoName": "",
     "ceoTitle": "Fondateur, Aegryn",
     "stats": [
@@ -6252,21 +6252,21 @@
   },
   "buildStrip": {
     "label": "Conception",
-    "assetsLabel": "Actifs propriétaires",
-    "assetsTitle": "Un portefeuille\nd'actifs tech sélectifs.",
-    "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques : SaaS B2B, marketplaces, outils IA. Chaque actif est certifié, documenté, opéré en conditions réelles.",
+    "assetsLabel": "Actifs souverains",
+    "assetsTitle": "Un portefeuille\nd'actifs tech souverains.",
+    "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques : SaaS B2B, marketplaces, outils IA. Chaque actif est souverain, certifié, documenté, opéré en conditions réelles. Usage interne et déploiement client.",
     "assetsCta": "Voir le portefeuille",
     "engineeringLabel": "Ingénierie d'actifs",
-    "engineeringTitle": "Conception d'actifs\nsur-mesure pour des tiers.",
-    "engineeringDesc": "Particuliers, entrepreneurs, institutions : Aegryn conçoit votre actif numérique en custom code, forfait fixe, prêt pour la certification. Propriété intellectuelle totale, zéro dette technique.",
-    "engineeringCta": "Découvrir Ingénierie d'actifs"
+    "engineeringTitle": "Logiciels souverains\nsur-mesure pour institutionnels.",
+    "engineeringDesc": "Entreprises, fonds d'investissement, gouvernements : Aegryn conçoit, maintient ou refait vos logiciels de zéro. Code souverain, forfait fixe, déployable sur infrastructures européennes. Propriété intellectuelle totale, sécurité maximale, zéro dette technique. Pas d'intégration de solutions tierces : création pure.",
+    "engineeringCta": "Découvrir l'ingénierie"
   },
   "buildEngineeringStrip": {
     "label": "Ingénierie d'actifs",
-    "title": "Forfait fixe. Code propriétaire. Prêt pour la certification.",
+    "title": "Forfait fixe. Code souverain. Prêt pour la certification.",
     "chip1": "Prix fixe contractualisé",
     "chip2": "10–16 semaines",
-    "chip3": "Prêt pour la certification",
+    "chip3": "Code souverain européen",
     "chip4": "IP 100% client",
     "cta": "Voir la conception d'actifs"
   },
