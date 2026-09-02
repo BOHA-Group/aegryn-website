@@ -68,9 +68,11 @@
     "craftBuildAssets": "Eigene Assets",
     "craftBuildEngineering": "Asset-Engineering",
     "craftSupport": "Begleiten",
-    "craftSupportDesc": "Tech-, KI- & M&A-Beratung — Alle Branchen",
+    "craftSupportDesc": "Strategie-, Tech- & M&A-Beratung — Alle Branchen",
+    "craftSupportStrategy": "Strategieberatung",
+    "craftSupportTechnology": "Technologieberatung",
+    "craftSupportMA": "M&A-Beratung",
     "craftSupportAdvisory": "Tech & KI Advisory",
-    "craftSupportAcquisition": "Fusionen & Übernahmen Advisory",
     "craftSupportAlliances": "Partnernetzwerk",
     "craftSupportExperts": "Expertennetzwerk",
     "craftTransact": "Übertragen",
@@ -245,6 +247,32 @@
       "strategy": {
         "title": "Strategieberatung",
         "desc": "Wir helfen Führungskräften, ihre strategische Vision in einem sich ständig verändernden Umfeld zu definieren und umzusetzen.",
+        "why": {
+          "title": "Warum Strategieberatung?",
+          "desc": "In einem fragmentierten europäischen Markt, in dem 70% der Strategien kein nachhaltiges Wachstum generieren, stehen Tech-Führungskräfte vor kritischen Entscheidungen: internationale Expansion, Transformation des Betriebsmodells, Kapitalallokation zwischen organischem Wachstum und Akquisitionen. Unser Ansatz kombiniert strategische Vision und operative Umsetzung, um Ambitionen in messbare Ergebnisse zu verwandeln."
+        },
+        "approach": {
+          "title": "Unser Ansatz",
+          "desc": "Wir liefern keine Folien. Wir entwickeln gemeinsam mit Ihren Teams einen strategischen Plan, der in der Realität Ihres Marktes, Ihrer Fähigkeiten und Ihrer Einschränkungen verankert ist. Jede Empfehlung wird getestet, quantifiziert und mit einem detaillierten Umsetzungsplan versehen.",
+          "steps": [
+            {
+              "label": "Strategische Diagnose",
+              "desc": "Analyse Ihrer Wettbewerbsposition, Differenzierungsvorteile und Markttrends. Identifizierung von Wachstumschancen und strukturellen Risiken."
+            },
+            {
+              "label": "Visionsdefinition",
+              "desc": "Co-Entwicklung Ihrer 3-5-Jahres-Strategie, abgestimmt auf Ihre Ambitionen und Fähigkeiten. Priorisierung strategischer Wetten mit hoher Wirkung."
+            },
+            {
+              "label": "Roadmap",
+              "desc": "Entwicklung eines detaillierten Umsetzungsplans mit Meilensteinen, KPIs, Ressourcenallokation und Governance. Identifizierung von Quick Wins und strukturellen Transformationen."
+            },
+            {
+              "label": "Umsetzungsbegleitung",
+              "desc": "Überwachung der Implementierung, taktische Anpassungen, Lösung operativer Blockaden. Wissenstransfer an Ihre Teams für Autonomie."
+            }
+          ]
+        },
         "dimensions": [
           {"label": "Internationale Strategie", "desc": "Geografische Expansion, Tochtergesellschaften, lokale Marktanpassung und strategische Partnerschaften."},
           {"label": "Business-Transformation", "desc": "Neugestaltung des Betriebsmodells, Digitalisierung der Prozesse, Change Management und organisatorische Ausrichtung."},
@@ -256,6 +284,32 @@
       "technology": {
         "title": "Technologieberatung",
         "desc": "Wir begleiten die technologische Transformation von Unternehmen mit einem pragmatischen und operativen Ansatz.",
+        "why": {
+          "title": "Warum Technologieberatung?",
+          "desc": "Nur 30% der digitalen Transformationen erreichen ihre Ziele. Technologie ist keine Unterstützung mehr: Sie definiert Ihr Betriebsmodell, Ihre Kundenerfahrung und Ihre Innovationsfähigkeit. Wir helfen Führungskräften, technologische Ambitionen in messbaren Wettbewerbsvorteil zu verwandeln, indem wir strategische Vision und technische Umsetzung kombinieren."
+        },
+        "approach": {
+          "title": "Unser Ansatz",
+          "desc": "Wir machen keine Tech-Strategie in Silos. Jede Empfehlung ist in Ihrer operativen Realität verankert: bestehende Architektur, technische Schulden, interne Kompetenzen, Budgetbeschränkungen. Wir bevorzugen inkrementelle Ansätze, die schnell Wert generieren und gleichzeitig langfristige Grundlagen schaffen.",
+          "steps": [
+            {
+              "label": "Technische Diagnose",
+              "desc": "Audit Ihrer Infrastruktur, Anwendungen, Daten und Prozesse. Identifizierung technischer Schulden, Cyber-Risiken und Optimierungsmöglichkeiten."
+            },
+            {
+              "label": "Vision & Roadmap",
+              "desc": "Definition Ihrer Zielarchitektur und Priorisierung von Projekten. Balance zwischen Quick Wins (6-12 Monate) und strukturellen Transformationen (18-36 Monate)."
+            },
+            {
+              "label": "Proof of Concept",
+              "desc": "Technische und geschäftliche Validierung prioritärer Use Cases. Agiler Ansatz: build, test, learn, iterate. Risikominimierung vor Industrialisierung."
+            },
+            {
+              "label": "Industrialisierung & Transfer",
+              "desc": "Skalierung, Integration in bestehende Prozesse, Teamschulung. Progressive Autonomie zur Nachhaltigkeit der Erfolge."
+            }
+          ]
+        },
         "dimensions": [
           {"label": "Digitale Transformation", "desc": "Digitalstrategie, Legacy-System-Überholung, Anwendungsmodernisierung und Benutzererfahrung."},
           {"label": "Data & Analytics", "desc": "Datenarchitektur, Governance, Data Lake/Warehouse, BI, erweiterte Analysen und Datenmonetarisierung."},
@@ -267,7 +321,33 @@
       },
       "ma": {
         "title": "M&A-Beratung",
-        "desc": "Wir begleiten Fusionen, Übernahmen und Post-Merger-Integration mit Tech-Expertise.",
+        "desc": "Wir begleiten M&A-Operationen und Post-Akquisitions-Integration mit Tech-Expertise.",
+        "why": {
+          "title": "Warum M&A-Beratung?",
+          "desc": "Tech-Akquisitionen scheitern selten an der Strategie, sondern an der Umsetzung: Unterschätzung technischer Schulden, verpfuschte IT-Integration, Flucht von Schlüsseltalenten, nicht realisierte Technologie-Synergien. Wir greifen ab der Due-Diligence-Phase ein, um technische Risiken und Wertschöpfungschancen zu identifizieren, und begleiten dann die Integration bis zum Closing und darüber hinaus."
+        },
+        "approach": {
+          "title": "Unser Ansatz",
+          "desc": "Wir behandeln jede Akquisition als Transformationschance. Über die klassische technische Due Diligence hinaus bewerten wir, wie die Akquisition Ihre IT-Modernisierung beschleunigen, Ihre Data/KI-Fähigkeiten bereichern oder als Plattform zur Marktkonsolidierung dienen kann. Unsere Expertise deckt den gesamten M&A-Zyklus ab.",
+          "steps": [
+            {
+              "label": "Tech Due Diligence",
+              "desc": "Tiefgehende technische Prüfung: Architektur, technische Schulden, Sicherheit, Compliance, IP. Risiko- und Chancenbewertung. Quantifizierung von Technologie-Synergien."
+            },
+            {
+              "label": "Technology Blueprint",
+              "desc": "Definition der Post-Akquisitions-Zielarchitektur. Detaillierter IT-Integrationsplan: Systeme, Daten, Prozesse. Identifizierung von Quick Wins und strukturellen Projekten."
+            },
+            {
+              "label": "Integration Management Office",
+              "desc": "IT-Integrationssteuerung: Governance, Planung, Risikomanagement, Teamkoordination. Überwachung kritischer Meilensteine (Day 1, Day 100, Synergien)."
+            },
+            {
+              "label": "Value Capture & Transformation",
+              "desc": "Realisierung von Technologie-Synergien. Beschleunigte Modernisierung von Legacy-Systemen. Post-Akquisitions-Digitaltransformation zur Maximierung der Wertschöpfung."
+            }
+          ]
+        },
         "dimensions": [
           {"label": "Transaction Advisory", "desc": "Strukturierung von Veräußerungen, Akquisitionen, Fundraising, Tech-Asset-Bewertung und Verhandlung."},
           {"label": "Tech Due Diligence", "desc": "Technisches Audit, Bewertung technischer Schulden, IP-Analyse und Risikobewertung."},
@@ -301,6 +381,16 @@
           "desc": "Abschlussdokumentation, Wissenstransfer und Zugang zur Nachbetreuung."
         }
       ]
+    },
+    "thoughtLeadership": {
+      "title": "Drei komplementäre Dimensionen in einem konsolidierenden Markt",
+      "desc": "Der europäische Tech-Markt durchläuft eine strukturelle Transformation: Technologie ist kein differenzierender Vorteil mehr, sondern eine Überlebensvoraussetzung. In diesem Kontext sind Strategie, Technologie und M&A keine isolierten Disziplinen mehr — sie bilden ein untrennbares Triptychon für Führungskräfte, die wachsen wollen.",
+      "pillars": [
+        {"label": "Strategie: Definieren, wo man spielt", "desc": "Angesichts der Fragmentierung des europäischen Marktes und der technologischen Beschleunigung müssen Führungskräfte radikale Entscheidungen treffen: welche Märkte adressieren, welche Fähigkeiten intern entwickeln, welche Akquisitionen anvisieren, um Lücken zu schließen. Strategie definiert die Vision, aber ohne Technologie-Roadmap oder M&A-Plan bleibt sie toter Buchstabe."},
+        {"label": "Technologie: Den Vorteil aufbauen", "desc": "Technologie ist zum wichtigsten Differenzierungshebel geworden: Kundenerfahrung, operative Effizienz, Innovationsfähigkeit. Aber 70% der digitalen Transformationen scheitern aufgrund mangelnder strategischer Ausrichtung. Eine von der Geschäftsstrategie losgelöste Tech-Vision erzeugt technische Schulden und verlorene Investitionen."},
+        {"label": "M&A: Durch Konsolidierung beschleunigen", "desc": "Organisches Wachstum reicht nicht mehr aus. Europäische Tech-Leader konsolidieren ihre Märkte durch Akquisitionen, um kritische Masse zu gewinnen, seltene Talente zu erwerben oder ihre digitale Transformation zu beschleunigen. Aber ohne rigorose Tech-Due-Diligence und IT-Integrationsplan zerstören Akquisitionen mehr Wert, als sie schaffen."}
+      ],
+      "conclusion": "Aegryn Advisory agiert an der Schnittstelle dieser drei Dimensionen. Wir helfen Tech-Leadern, eine kohärente Wachstumsstrategie zu definieren, die technologischen Fähigkeiten aufzubauen, um sie umzusetzen, und Akquisitionen zu identifizieren, die den Plan beschleunigen, ohne technische Schulden zu schaffen. Ein integrierter Ansatz für einen Markt, der Silos nicht mehr verzeiht."
     },
     "label": "Beratung"
   },
