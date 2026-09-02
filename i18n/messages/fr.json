@@ -119,12 +119,12 @@
   },
   "hero": {
     "tagline": "Nous refusons qu'un actif solide disparaisse dans une transaction mal préparée.",
-    "metaDescription": "AEGRYN certifie et transmet des actifs tech en Europe. Cinq disciplines : conception, advisory, transaction M&A, talent et intelligence de marché. Ancré en Suisse.",
-    "eyebrow": "CINQ DISCIPLINES. UN ÉCOSYSTÈME INTÉGRÉ.",
+    "metaDescription": "AEGRYN conçoit, conseille et transmet des actifs tech certifiés en Europe. Quatre disciplines : conception, conseil, transaction et intelligence de marché. Ancré en Suisse.",
+    "eyebrow": "QUATRE DISCIPLINES. UN LABEL QUALITÉ.",
     "title": "Rare par\nsélection.",
-    "sub": "Aegryn conçoit, certifie et transmet des actifs tech en Europe. Advisory, talent, intelligence de marché : cinq disciplines. Un seul standard.",
+    "sub": "Aegryn conçoit, conseille et transmet des actifs tech certifiés en Europe. Conception, conseil, transaction, intelligence : quatre disciplines. Un label qualité.",
     "cta": "CÉDER UN ACTIF CERTIFIÉ",
-    "strip": "CONCEPTION · CONSEIL · CERTIFICATION · TRANSACTION · INTELLIGENCE",
+    "strip": "CONCEPTION · CONSEIL · TRANSACTION · INTELLIGENCE",
     "geo": "Suisse · Europe · Global",
     "scroll": "Défiler",
     "cta1Title": "Construire",
@@ -142,7 +142,7 @@
     "cta5Title": "S'informer",
     "cta5Desc": "du marché.",
     "cta5Link": "Lire",
-    "chip2": "ÉCOSYSTÈME INTÉGRÉ"
+    "chip2": "LABEL QUALITÉ AEGRYN"
   },
   "assets": {
     "title": "Notre écosystème propre.",
@@ -6725,15 +6725,51 @@
   },
   "talent": {
     "meta": {
-      "title": "Recrutement et Placement | Aegryn Talent",
-      "desc": "Nous connectons les meilleurs talents tech avec les entreprises qui transforment l'Europe. CTO, CISO, Head of AI, VP Engineering."
+      "title": "Recrutement Executive | Aegryn Talent",
+      "desc": "Nous plaçons les leaders qui transforment les entreprises : board members, executives tech et executives M&A. Executive search spécialisé."
     },
     "hero": {
       "label": "Aegryn Talent",
-      "title": "Recrutement executive tech\nC-Level & VP",
-      "desc1": "Nous plaçons les leaders tech qui transforment les entreprises : CTO, CISO, Chief AI Officer, VP Engineering, VP Product, VP Data.",
-      "desc2": "Opérateurs tech, pas consultants RH. Success fee uniquement. Garantie 3 mois.",
+      "title": "Recrutement executive\nBoard · Tech · M&A",
+      "desc1": "Nous plaçons les leaders qui transforment les entreprises : board members (CEO, COO, CTO, CIO, CHRO), executives tech et executives M&A.",
+      "desc2": "Opérateurs, pas consultants RH. Success fee uniquement. Garantie 3 mois.",
       "quote": "Suisse & Europe • 30 pays • 23 industries\nRéponse sous 48h"
+    },
+    "pillars": {
+      "board": {
+        "title": "Board Members & C-Level",
+        "desc": "Nous plaçons les membres du conseil d'administration et les dirigeants qui définissent la stratégie et pilotent la transformation.",
+        "profiles": [
+          {"label": "CEO & Managing Director", "desc": "Leaders stratégiques capables de piloter la vision, la croissance et la transformation de l'entreprise."},
+          {"label": "COO & Chief Operating Officer", "desc": "Experts en excellence opérationnelle, scaling, optimisation des processus et exécution stratégique."},
+          {"label": "CTO & Chief Technology Officer", "desc": "Visionnaires tech capables de définir l'architecture, l'innovation et la roadmap technologique."},
+          {"label": "CIO & Chief Information Officer", "desc": "Leaders de la transformation digitale, infrastructure IT, gouvernance et modernisation des systèmes."},
+          {"label": "CHRO & Chief Human Resources Officer", "desc": "Architectes de la stratégie RH, culture d'entreprise, talent acquisition et développement organisationnel."},
+          {"label": "CFO & Chief Financial Officer", "desc": "Experts en stratégie financière, fundraising, M&A, contrôle de gestion et optimisation financière."}
+        ]
+      },
+      "executiveTech": {
+        "title": "Executive Tech",
+        "desc": "Nous plaçons les leaders techniques qui pilotent l'innovation, la sécurité, les données et l'IA.",
+        "profiles": [
+          {"label": "Chief AI Officer & VP AI", "desc": "Leaders en intelligence artificielle, machine learning, GenAI, stratégie data-driven et transformation IA."},
+          {"label": "CISO & VP Security", "desc": "Experts en cybersécurité, conformité RGPD, gestion des risques, résilience et gouvernance."},
+          {"label": "Chief Data Officer & VP Data", "desc": "Architectes de la stratégie data : data engineering, analytics, gouvernance, monétisation et culture data."},
+          {"label": "Chief Product Officer & VP Product", "desc": "Visionnaires produit tech : roadmap, discovery, growth, product-led growth et stratégie go-to-market."},
+          {"label": "VP Engineering & Engineering Director", "desc": "Leaders d'équipes techniques : scaling, culture engineering, delivery, architecture et excellence opérationnelle."},
+          {"label": "VP Infrastructure & Head of Platform", "desc": "Responsables infrastructure IT, cloud, DevOps, SRE, modernisation legacy et developer experience."}
+        ]
+      },
+      "executiveMA": {
+        "title": "Executive M&A",
+        "desc": "Nous plaçons les leaders spécialisés en fusions-acquisitions, due diligence et intégration post-fusion.",
+        "profiles": [
+          {"label": "VP M&A & Head of Corporate Development", "desc": "Experts en stratégie M&A, deal sourcing, structuration de transactions et exécution d'acquisitions."},
+          {"label": "M&A Director & Transaction Lead", "desc": "Leaders de transactions : valuation, négociation, due diligence financière et juridique, closing."},
+          {"label": "Head of Integration (PMI)", "desc": "Spécialistes de l'intégration post-fusion : synergies, harmonisation des processus, gestion du changement."},
+          {"label": "VP Strategy & Corporate Strategy Director", "desc": "Architectes de la stratégie corporate : croissance inorganique, partenariats stratégiques, portfolio management."}
+        ]
+      }
     },
     "toggle": {
       "candidate": "Je suis candidat",
@@ -6763,48 +6799,8 @@
         "title": "Recrutez les leaders qui transforment",
         "desc": "Aegryn Talent identifie et place les profils tech rares qui accélèrent votre croissance. Notre approche combine expertise sectorielle, réseau européen et processus de certification rigoureux."
       },
-      "profiles": {
-        "intro": "Profils executive que nous plaçons (niveau C-Level, VP, Director)",
-        "cto": {
-          "title": "CTO & VP Engineering",
-          "desc": "Leaders techniques capables de structurer, scaler et innover. Maîtrise des architectures modernes, IA, cloud, sécurité."
-        },
-        "ciso": {
-          "title": "CISO & VP Security",
-          "desc": "Experts en cybersécurité, conformité RGPD, gestion des risques, résilience et gouvernance. Profils certifiés."
-        },
-        "headAI": {
-          "title": "Chief AI Officer & VP AI",
-          "desc": "Leaders en intelligence artificielle, machine learning, GenAI, stratégie data-driven et transformation IA."
-        },
-        "cdo": {
-          "title": "Chief Data Officer & VP Data",
-          "desc": "Architectes de la stratégie data : data engineering, analytics, gouvernance, monétisation et culture data."
-        },
-        "cpo": {
-          "title": "Chief Product Officer & VP Product",
-          "desc": "Visionnaires produit tech : roadmap, discovery, growth, product-led growth et stratégie go-to-market."
-        },
-        "vpe": {
-          "title": "VP Engineering & Engineering Director",
-          "desc": "Leaders d'équipes techniques : scaling, culture engineering, delivery, architecture et excellence opérationnelle."
-        },
-        "cio": {
-          "title": "CIO & VP Infrastructure",
-          "desc": "Responsables infrastructure IT, cloud, DevOps, SRE, modernisation legacy et transformation digitale."
-        },
-        "headML": {
-          "title": "Head of Machine Learning & AI Research",
-          "desc": "Experts ML/AI : deep learning, NLP, computer vision, MLOps, recherche appliquée et déploiement à l'échelle."
-        },
-        "headPlatform": {
-          "title": "Head of Platform & Developer Experience",
-          "desc": "Architectes de plateformes internes : developer productivity, API design, infrastructure as code, observability."
-        },
-        "headQA": {
-          "title": "VP Quality & Head of QA Engineering",
-          "desc": "Leaders qualité : test automation, CI/CD, performance testing, shift-left et culture quality engineering."
-        }
+      "_legacy_profiles": {
+        "intro": "Profils executive que nous plaçons (niveau C-Level, VP, Director)"
       },
       "process": {
         "title": "Notre processus",
