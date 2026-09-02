@@ -245,6 +245,20 @@
       "strategy": {
         "title": "Consultoría Estratégica",
         "desc": "Ayudamos a los líderes a definir y ejecutar su visión estratégica en un entorno en constante evolución.",
+        "why": {
+          "title": "¿Por qué consultoría estratégica?",
+          "desc": "En un mercado europeo fragmentado donde el 70% de las estrategias no logran generar crecimiento sostenible, los líderes tech enfrentan decisiones críticas: expansión internacional, transformación del modelo operativo, asignación de capital entre crecimiento orgánico y adquisiciones. Nuestro enfoque combina visión estratégica y ejecución operativa para transformar la ambición en resultados medibles."
+        },
+        "approach": {
+          "title": "Nuestro enfoque",
+          "desc": "No entregamos diapositivas. Co-construimos con sus equipos un plan estratégico anclado en la realidad de su mercado, capacidades y restricciones. Cada recomendación se prueba, cuantifica y acompaña de un plan de ejecución detallado.",
+          "steps": [
+            {"label": "Diagnóstico estratégico", "desc": "Análisis de su posicionamiento competitivo, ventajas diferenciadoras y tendencias del mercado. Identificación de oportunidades de crecimiento y riesgos estructurales."},
+            {"label": "Definición de visión", "desc": "Co-construcción de su visión estratégica a 3-5 años, alineada con sus ambiciones y capacidades. Priorización de apuestas estratégicas de alto impacto."},
+            {"label": "Hoja de ruta", "desc": "Desarrollo de un plan de ejecución detallado con hitos, KPIs, asignación de recursos y gobernanza. Identificación de quick wins y transformaciones estructurales."},
+            {"label": "Acompañamiento ejecución", "desc": "Seguimiento de implementación, ajustes tácticos, resolución de bloqueos operativos. Transferencia de competencias a sus equipos para autonomía."}
+          ]
+        },
         "dimensions": [
           {"label": "Estrategia internacional", "desc": "Expansión geográfica, implantación de filiales, adaptación a mercados locales y alianzas estratégicas."},
           {"label": "Transformación empresarial", "desc": "Rediseño del modelo operativo, digitalización de procesos, gestión del cambio y alineación organizacional."},
@@ -256,6 +270,20 @@
       "technology": {
         "title": "Consultoría Tecnológica",
         "desc": "Acompañamos la transformación tecnológica de las empresas con un enfoque pragmático y operativo.",
+        "why": {
+          "title": "¿Por qué consultoría tecnológica?",
+          "desc": "Solo el 30% de las transformaciones digitales alcanzan sus objetivos. La tecnología ya no es soporte: define su modelo operativo, experiencia del cliente y capacidad de innovación. Ayudamos a los líderes a transformar la ambición tecnológica en ventaja competitiva medible, combinando visión estratégica y ejecución técnica."
+        },
+        "approach": {
+          "title": "Nuestro enfoque",
+          "desc": "No hacemos estrategia tech en silos. Cada recomendación está anclada en su realidad operativa: arquitectura existente, deuda técnica, competencias internas, restricciones presupuestarias. Privilegiamos enfoques incrementales que generan valor rápidamente mientras construyen fundamentos a largo plazo.",
+          "steps": [
+            {"label": "Diagnóstico técnico", "desc": "Auditoría de su infraestructura, aplicaciones, datos y procesos. Identificación de deuda técnica, riesgos cyber y oportunidades de optimización."},
+            {"label": "Visión y hoja de ruta", "desc": "Definición de su arquitectura objetivo y priorización de proyectos. Equilibrio entre quick wins (6-12 meses) y transformaciones estructurales (18-36 meses)."},
+            {"label": "Proof of Concept", "desc": "Validación técnica y de negocio en casos de uso prioritarios. Enfoque ágil: build, test, learn, iterate. Reducción de riesgos antes de industrialización."},
+            {"label": "Industrialización y transferencia", "desc": "Despliegue a escala, integración en procesos existentes, formación de equipos. Autonomía progresiva para sostener logros."}
+          ]
+        },
         "dimensions": [
           {"label": "Transformación digital", "desc": "Estrategia digital, renovación de sistemas legacy, modernización de aplicaciones y experiencia de usuario."},
           {"label": "Data & Analytics", "desc": "Arquitectura de datos, gobernanza, data lake/warehouse, BI, analítica avanzada y monetización de datos."},

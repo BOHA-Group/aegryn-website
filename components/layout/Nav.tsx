@@ -26,7 +26,7 @@ const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportMA',          href: '/advisory/ma' as LinkHref },
   { labelKey: 'craftSupportAdvisory',    href: '/advisory' },
   { labelKey: 'craftSupportAlliances',   href: '/alliances' },
-  { labelKey: 'craftSupportExperts',     href: '/experts' },
+  // MASKED: { labelKey: 'craftSupportExperts', href: '/experts' }, // Backup: réactiver si besoin
 ]
 
 // Nos métiers - Transaction M&A section
@@ -44,18 +44,18 @@ const CRAFT_RECRUIT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftRecruitExecutiveMA',   href: '/talent' as LinkHref },
 ]
 
-// Nos solutions - CORE assets
-const SOLUTIONS_CORE: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'solutionsSubblink', href: '/assets' },
-  { labelKey: 'solutionsKryv',     href: '/assets' },
+// Nos solutions - Catégories principales
+const SOLUTIONS_CATEGORIES_PRIMARY: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'solutionsCategoryAI',           href: '/assets#ai' as LinkHref },
+  { labelKey: 'solutionsCategoryServices',     href: '/assets#services' as LinkHref },
+  { labelKey: 'solutionsCategoryTransactions', href: '/assets#transactions' as LinkHref },
 ]
 
-// Nos solutions - PORTFOLIO assets
-const SOLUTIONS_PORTFOLIO: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'solutionsNeediu',      href: '/assets' },
-  { labelKey: 'solutionsMovtoo',      href: '/assets' },
-  { labelKey: 'solutionsPrimiom',     href: '/assets' },
-  { labelKey: 'solutionsHobconnect',  href: '/assets' },
+// Nos solutions - Catégories secondaires (marché CH/EU 2026)
+const SOLUTIONS_CATEGORIES_SECONDARY: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'solutionsCategoryFinTech',    href: '/assets#fintech' as LinkHref },
+  { labelKey: 'solutionsCategoryHealthTech', href: '/assets#healthtech' as LinkHref },
+  { labelKey: 'solutionsCategoryPropTech',   href: '/assets#proptech' as LinkHref },
 ]
 
 // Nos convictions - Magazine
@@ -195,7 +195,7 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
             {t('solutionsCoreDesc')}
           </p>
           <div className="flex flex-col gap-1">
-            {SOLUTIONS_CORE.map(({ labelKey, href }) => (
+            {SOLUTIONS_CATEGORIES_PRIMARY.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
                 href={href}
@@ -219,7 +219,7 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
             {t('solutionsPortfolioDesc')}
           </p>
           <div className="flex flex-col gap-1">
-            {SOLUTIONS_PORTFOLIO.map(({ labelKey, href }) => (
+            {SOLUTIONS_CATEGORIES_SECONDARY.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
                 href={href}
@@ -636,15 +636,15 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               </button>
               {mobileAccordion === 'solutions' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-apex mt-2">{t('solutionsCore')}</p>
-                  {SOLUTIONS_CORE.map(({ labelKey, href }) => (
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-apex mt-2">{t('solutionsCategoriesPrimary')}</p>
+                  {SOLUTIONS_CATEGORIES_PRIMARY.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('solutionsPortfolio')}</p>
-                  {SOLUTIONS_PORTFOLIO.map(({ labelKey, href }) => (
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('solutionsCategoriesSecondary')}</p>
+                  {SOLUTIONS_CATEGORIES_SECONDARY.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}

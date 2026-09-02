@@ -76,8 +76,8 @@
     "craftSupportAlliances": "Réseau de partenaires",
     "craftSupportExperts": "Réseau d'experts",
     "craftTransact": "Transmettre",
-    "craftTransactDesc": "Certification, cession, acquisition d'actifs tech",
-    "craftTransactGrade": "Système de certification",
+    "craftTransactDesc": "Certification indépendante, cession, acquisition d'actifs tech",
+    "craftTransactGrade": "Système de certification indépendante",
     "craftTransactCatalog": "Catalogue offmarket",
     "craftTransactSell": "Céder un actif",
     "craftTransactBuy": "Devenir acquéreur",
@@ -89,13 +89,21 @@
     "craftRecruitExecutiveMA": "Executive M&A",
     "craftGrade": "Certifier",
     "craftGradeDesc": "Système de notation indépendant",
-    "solutionsCore": "CORE",
-    "solutionsPortfolio": "PORTFOLIO",
-    "solutionsCoreTitle": "Actifs propriétaires",
-    "solutionsCoreDesc": "Conçus, développés et opérés par Aegryn",
-    "solutionsPortfolioTitle": "Actifs en portefeuille",
-    "solutionsPortfolioDesc": "Participations stratégiques et accompagnement",
-    "solutionsViewAll": "Voir tous les actifs",
+    "solutionsCore": "CATÉGORIES PRINCIPALES",
+    "solutionsPortfolio": "CATÉGORIES COMPLÉMENTAIRES",
+    "solutionsCoreTitle": "Domaines d'expertise prioritaires",
+    "solutionsCoreDesc": "Domaines d'expertise prioritaires",
+    "solutionsPortfolioTitle": "Marchés en forte croissance CH/EU 2026",
+    "solutionsPortfolioDesc": "Marchés en forte croissance CH/EU 2026",
+    "solutionsCategoriesPrimary": "CATÉGORIES PRINCIPALES",
+    "solutionsCategoriesSecondary": "CATÉGORIES COMPLÉMENTAIRES",
+    "solutionsCategoryAI": "IA & Protocoles",
+    "solutionsCategoryServices": "Services & Lifestyle",
+    "solutionsCategoryTransactions": "Transactions & Réseau",
+    "solutionsCategoryFinTech": "FinTech & Paiements",
+    "solutionsCategoryHealthTech": "HealthTech & MedTech",
+    "solutionsCategoryPropTech": "PropTech & Immobilier",
+    "solutionsViewAll": "Voir toutes les solutions",
     "solutionsSubblink": "subblink (Contrats IA)",
     "solutionsKryv": "kryv (Code IA)",
     "solutionsNeediu": "neediu",
@@ -457,13 +465,20 @@
   "build": {
     "hero": {
       "label": "Portefeuille Aegryn",
-      "title": "Six actifs propriétaires.\nUne vision commune.",
-      "desc": "Chaque actif Aegryn est conçu dès l'origine pour être certifiable et transférable, IP déposée, codebase propriétaire, stack documentée."
+      "title": "Six actifs souverains.\nUne vision commune.",
+      "desc": "Chaque actif Aegryn est conçu dès l'origine pour être certifiable et transférable, IP déposée, codebase souveraine, stack documentée."
+    },
+    "sovereignty": {
+      "title": "Logiciel souverain européen",
+      "desc": "On parle de cloud souverain en Suisse et en Europe, mais le vrai enjeu n'est pas la localisation des machines : c'est le logiciel. Nous créons des logiciels souverains qui peuvent être déployés sur des infrastructures physiquement localisées en Europe, offrant une véritable indépendance technologique. Pour nos clients entreprises et institutionnels, nous concevons, maintenons ou refaisons des logiciels sur mesure de zéro — une demande en très forte croissance face aux enjeux de sécurité, souveraineté et conformité."
     },
     "categories": {
       "ai": "IA & Protocoles",
       "lifestyle": "Services & Lifestyle",
-      "transactions": "Transactions & Réseau"
+      "transactions": "Transactions & Réseau",
+      "fintech": "FinTech & Paiements",
+      "healthtech": "HealthTech & MedTech",
+      "proptech": "PropTech & Immobilier"
     },
     "status": {
       "building": "En construction",
