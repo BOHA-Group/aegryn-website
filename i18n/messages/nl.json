@@ -13,7 +13,7 @@
     "transactSell": "Verkoopsmandaat",
     "transactBuy": "Acquisitiemandat",
     "transactMandate": "Mandaat indienen",
-    "transactResults": "Afgesloten transacties",
+    "_disabled_transactResults": "Afgesloten transacties",
     "grade": "Grade",
     "assets": "Assets",
     "services": "Diensten",
@@ -26,7 +26,7 @@
     "transactionBuy": "Koper worden",
     "transactionBidModels": "Voorstelmodellen",
     "transactionSession": "Proces",
-    "transactionResults": "Afgesloten transacties",
+    "_disabled_transactionResults": "Afgesloten transacties",
     "gradeSystem": "Grade-systeem",
     "gradeMethod": "Methodologie",
     "gradeSubmit": "Een asset certificeren",
@@ -79,7 +79,7 @@
     "craftTransactCatalog": "Offmarket-catalogus",
     "craftTransactSell": "Asset verkopen",
     "craftTransactBuy": "Koper worden",
-    "craftTransactResults": "Afgesloten transacties",
+    "_disabled_craftTransactResults": "Afgesloten transacties",
     "craftGrade": "Certificeren",
     "craftGradeDesc": "Onafhankelijk beoordelingssysteem",
     "solutionsCore": "CORE",
@@ -230,43 +230,50 @@
     }
   },
   "advisory": {
-    "strip": "Aegryn Advisory | Wij beschermen wat je jaren hebt opgebouwd",
+    "strip": "Aegryn Advisory | Strategie-, technologie- en M&A-advies voor Europese techbedrijven",
     "cta": "Contact opnemen",
     "hero": {
-      "title": "Beschermen wat jij bouwt.",
-      "desc": "Wij geloven dat bedrijven die op de lange termijn bouwen een bescherming verdienen die past bij hun ambitie. Geen rapporten. Echte aanwezigheid voordat het risico werkelijkheid wordt."
+      "title": "Begeleiden wat jij bouwt.",
+      "desc": "Wij begeleiden ondernemers en overnemers bij hun strategische beslissingen, technologische transformatie en M&A-operaties. Geen presentaties. Operationele expertise ten dienste van uw groei."
     },
-    "services": {
-      "cyber": {
-        "title": "Cyberbeveiliging",
-        "desc": "Audit van aanvalsoppervlak, applicatiebeveiliging, cloudinfrastructuur en NIS2-conformiteit.",
-        "items": [
-          "Pentest (black/grey/white box)",
-          "Applicatiebeveiliging audit",
-          "NIS2-conformiteit",
-          "Cloud- & on-premise-beveiliging"
-        ]
-      },
-      "ai": {
-        "title": "Data & Kunstmatige Intelligentie",
-        "desc": "AI-strategie, databeheer, EU AI Act-conformiteit en modelaudit.",
-        "items": [
-          "Algoritme bias-audit",
-          "EU AI Act-conformiteit",
-          "LLM red-teaming",
-          "Databeheer & MLOps"
-        ]
-      },
+    "pillars": {
       "strategy": {
-        "title": "Architectuur & Engineering",
-        "desc": "CTO as a service, full-stack architectuurreview, DevSecOps en softwarekwaliteit.",
-        "items": [
-          "Full-stack architectuurreview",
-          "DevSecOps & CI/CD",
-          "Vermindering technische schuld",
-          "Schaalbaarheid & migratie"
+        "title": "Strategieadvies",
+        "desc": "Wij helpen leiders hun strategische visie te definiëren en uit te voeren in een voortdurend veranderende omgeving.",
+        "dimensions": [
+          {"label": "Internationale strategie", "desc": "Geografische expansie, vestiging van dochterondernemingen, aanpassing aan lokale markten en strategische partnerschappen."},
+          {"label": "Bedrijfstransformatie", "desc": "Herontwerp van het operationele model, digitalisering van processen, verandermanagement en organisatorische afstemming."},
+          {"label": "Kostenoptimalisatie", "desc": "Analyse van kostenstructuur, identificatie van efficiëntie-hefbomen, herstructurering en verbetering van winstgevendheid."},
+          {"label": "Innovatie & groei", "desc": "Productstrategie, nieuwe markten, diversificatie, technologische partnerschappen en inkomstenmodellen."},
+          {"label": "Talent & organisatie", "desc": "Organisatieontwerp, HR-strategie, bedrijfscultuur, talentbehoud en leiderschap."}
+        ]
+      },
+      "technology": {
+        "title": "Technologieadvies",
+        "desc": "Wij begeleiden de technologische transformatie van bedrijven met een pragmatische en operationele aanpak.",
+        "dimensions": [
+          {"label": "Digitale transformatie", "desc": "Digitale strategie, vernieuwing van legacy-systemen, applicatiemodernisering en gebruikerservaring."},
+          {"label": "Data & Analytics", "desc": "Data-architectuur, governance, data lake/warehouse, BI, geavanceerde analytics en datamonetisatie."},
+          {"label": "Kunstmatige Intelligentie", "desc": "AI-strategie, use cases, MLOps, generatieve AI, EU AI Act-conformiteit en modelaudit."},
+          {"label": "Cyberbeveiliging", "desc": "Beveiligingsaudit, pentest, NIS2/ISO27001-conformiteit, cybergovernance en veerkracht."},
+          {"label": "Cloud & Infrastructuur", "desc": "Cloudmigratie, multi-cloud-architectuur, DevOps, SRE, schaalbaarheid en cloudkostenoptimalisatie."},
+          {"label": "Blockchain & Web3", "desc": "Blockchain-strategie, tokenisatie, smart contracts, DeFi en regelgevende compliance."}
+        ]
+      },
+      "ma": {
+        "title": "M&A-advies",
+        "desc": "Wij begeleiden fusies, overnames en post-merger-integratie met tech-expertise.",
+        "dimensions": [
+          {"label": "Transactieadvies", "desc": "Structurering van overdrachten, overnames, fundraising, waardering van tech-assets en onderhandeling."},
+          {"label": "Tech Due Diligence", "desc": "Technische audit, beoordeling van technische schuld, analyse van intellectueel eigendom en risico's."},
+          {"label": "Post-Merger Integratie (PMI)", "desc": "IT-systeemintegratie, procesharmonisatie, technologische synergieën en verandermanagement."},
+          {"label": "Carve-out & Spin-off", "desc": "Asset-scheiding, extractie van bedrijfseenheden, transitional service agreements en IT-autonomisering."}
         ]
       }
+    },
+    "network": {
+      "partners": {"title": "Partnernetwerk", "desc": "Wij werken samen met een geselecteerd netwerk van partnerbedrijven om onze interventiecapaciteit bij complexe missies uit te breiden."},
+      "experts": {"title": "Expertennetwerk", "desc": "Wij mobiliseren een netwerk van onafhankelijke experts (advocaten, accountants, fiscalisten, notarissen) om onze missies aan te vullen volgens de specifieke behoeften van elk project."}
     },
     "approach": {
       "title": "Een rigoureus protocol, geen belofte.",
