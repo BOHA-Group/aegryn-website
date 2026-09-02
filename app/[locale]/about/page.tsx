@@ -285,7 +285,7 @@ export default function AboutPage() {
       <SegmentsSection />
 
       {/* Founder */}
-      <section className="border-b border-ag-border">
+      <section id="fondateur" className="border-b border-ag-border">
         <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
             / {ta('founder.label')}
