@@ -33,7 +33,6 @@ const CRAFT_TRANSACT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftTransactCatalog', href: '/transact/catalog' },
   { labelKey: 'craftTransactSell',    href: '/transact/how-to-sell' },
   { labelKey: 'craftTransactBuy',     href: '/transact/how-to-buy' },
-  { labelKey: 'craftTransactResults', href: '/transact/results' },
 ]
 
 // Nos solutions - CORE assets
