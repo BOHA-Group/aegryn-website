@@ -6,7 +6,7 @@ import { gsap, SplitText } from '@/lib/gsap'
 
 export function WhyUseApps() {
   const t = useTranslations('whyapps')
-  const items = t.raw('items') as { num: string; title: string; desc: string }[]
+  const items = (t.raw('items') as { num: string; title: string; desc: string }[]) || []
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {

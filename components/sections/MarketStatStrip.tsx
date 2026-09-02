@@ -8,7 +8,7 @@ export function MarketStatStrip() {
   const ref = useRef<HTMLElement>(null)
   const t   = useTranslations('marketStats')
 
-  const stats = t.raw('stats') as { value: string; label: string; source: string }[]
+  const stats = (t.raw('stats') as { value: string; label: string; source: string }[]) || []
 
   useEffect(() => {
     const ctx = gsap.context(() => {

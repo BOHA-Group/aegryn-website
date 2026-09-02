@@ -16,7 +16,7 @@ const GRADE_COLORS: Record<string, string> = {
 
 export function GradeStrip() {
   const t      = useTranslations('gradeStrip')
-  const grades = t.raw('grades') as { grade: string; label: string; desc: string }[]
+  const grades = (t.raw('grades') as { grade: string; label: string; desc: string }[]) || []
   const secRef = useRef<HTMLElement>(null)
 
   useEffect(() => {

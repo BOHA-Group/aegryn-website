@@ -25,7 +25,7 @@ const DOMAIN_IMAGES: Record<string, string> = {
 
 export function EcosystemDomains() {
   const t       = useTranslations('ecosystemDomains')
-  const domains = t.raw('domains') as Domain[]
+  const domains = (t.raw('domains') as Domain[]) || []
 
   const wrapRef   = useRef<HTMLDivElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
