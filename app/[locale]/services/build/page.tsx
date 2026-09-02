@@ -44,7 +44,6 @@ export default async function BuildServicePage({ params }: Props) {
   const marketComparisonAegryn  = t.raw('marketComparison.aegrynItems') as string[]
   const marketComparisonProcess = t.raw('marketComparison.processItems') as string[]
   const certBenefits            = t.raw('certificationBenefits.items')  as { title: string; desc: string }[]
-  const assetTypeItems          = t.raw('assetTypes.items')             as { badge: string; title: string; desc: string }[]
   const processSteps            = t.raw('process.steps')                as { num: string; title: string; desc: string }[]
   const feeItems                = t.raw('fees.items')                   as { title: string; desc: string; format: string }[]
   const whyPoints               = t.raw('whySection.points')            as { title: string; desc: string }[]
@@ -269,32 +268,6 @@ export default async function BuildServicePage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
             {certBenefits.map((item, i) => (
               <div key={i} className="bg-ag-white p-8 flex flex-col gap-4">
-                <h3 className="font-sans font-bold text-ag-black text-[18px] leading-snug">{item.title}</h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Section 5 : Types d'actifs ───────────────────────────────── */}
-      <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('assetTypes.label')}
-          </p>
-          <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-14 whitespace-pre-line"
-            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
-          >
-            {t('assetTypes.title')}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
-            {assetTypeItems.map((item) => (
-              <div key={item.badge} className="bg-ag-white p-8 flex flex-col gap-4">
-                <span className="inline-flex self-start font-mono text-[9px] tracking-[0.22em] uppercase px-3 py-1 border border-ag-navy/30 bg-ag-navy/5 text-ag-navy">
-                  {item.badge}
-                </span>
                 <h3 className="font-sans font-bold text-ag-black text-[18px] leading-snug">{item.title}</h3>
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{item.desc}</p>
               </div>
