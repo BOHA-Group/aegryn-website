@@ -172,8 +172,7 @@ export default function AlliancesContent() {
                   ))}
               </ul>
               <p className="font-sans text-[12px] text-ag-gray-light italic mb-8">
-                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-                Note : Aegryn ne liste pas encore de partenaires nommés publiquement. Ces catégories présentent les profils recherchés. Les premiers partenaires seront publiés sur <a href="/grade/partners" className="underline hover:text-ag-apex transition-colors">/grade/partners</a> dès les premiers mandats formalisés.
+                {t('partnerNote')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
@@ -281,7 +280,7 @@ export default function AlliancesContent() {
       <section className="bg-ag-navy py-24 px-6 md:px-12 border-t border-ag-border">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
           <div>
-            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/50 mb-4">Aegryn</p>
+            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/50 mb-4">{t('hero.label')}</p>
             <h2
               className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl"
               style={{ fontSize: 'clamp(24px,2.8vw,42px)' }}
