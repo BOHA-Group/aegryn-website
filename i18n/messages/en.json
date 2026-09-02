@@ -13,7 +13,7 @@
     "transactSell": "Sale mandate",
     "transactBuy": "Acquisition mandate",
     "transactMandate": "Submit a mandate",
-    "transactResults": "Closed transactions",
+    "_disabled_transactResults": "Closed transactions",
     "grade": "Grade",
     "assets": "Assets",
     "services": "Services",
@@ -26,7 +26,7 @@
     "transactionBuy": "Become a buyer",
     "transactionBidModels": "Proposal models",
     "transactionSession": "Process",
-    "transactionResults": "Closed transactions",
+    "_disabled_transactionResults": "Closed transactions",
     "gradeSystem": "Grade system",
     "gradeMethod": "Methodology",
     "gradeSubmit": "Certify an asset",
@@ -79,7 +79,7 @@
     "craftTransactCatalog": "Offmarket catalog",
     "craftTransactSell": "Sell an asset",
     "craftTransactBuy": "Become a buyer",
-    "craftTransactResults": "Closed transactions",
+    "_disabled_craftTransactResults": "Closed transactions",
     "craftGrade": "Grade",
     "craftGradeDesc": "Independent rating system",
     "solutionsCore": "CORE",
@@ -230,42 +230,100 @@
     }
   },
   "advisory": {
-    "strip": "Aegryn Advisory | We protect what you spent years building",
+    "strip": "Aegryn Advisory | Strategy, technology and M&A consulting for European tech companies",
     "cta": "Get in touch",
     "hero": {
-      "title": "Protecting what you build.",
-      "desc": "We believe companies that build for the long term deserve protection that matches their ambition. Not reports. Real presence before the risk becomes real."
+      "title": "Supporting what you build.",
+      "desc": "We support entrepreneurs and acquirers in their strategic decisions, technology transformation and M&A operations. Not slides. Operational expertise serving your growth."
     },
-    "services": {
-      "cyber": {
-        "title": "Cybersecurity",
-        "desc": "Attack surface audit, application security, cloud infrastructure and NIS2 compliance.",
-        "items": [
-          "Pentest (black/grey/white box)",
-          "Application security audit",
-          "NIS2 compliance",
-          "Cloud & on-premise security"
-        ]
-      },
-      "ai": {
-        "title": "Data & Artificial Intelligence",
-        "desc": "AI strategy, data governance, EU AI Act compliance and model auditing.",
-        "items": [
-          "Algorithmic bias audit",
-          "EU AI Act compliance",
-          "LLM red-teaming",
-          "Data governance & MLOps"
-        ]
-      },
+    "pillars": {
       "strategy": {
-        "title": "Architecture & Engineering",
-        "desc": "CTO as a service, full-stack architecture review, DevSecOps and software quality.",
-        "items": [
-          "Full-stack architecture review",
-          "DevSecOps & CI/CD",
-          "Technical debt reduction",
-          "Scalability & migration"
+        "title": "Strategy Consulting",
+        "desc": "We help leaders define and execute their strategic vision in a constantly evolving environment.",
+        "dimensions": [
+          {
+            "label": "International strategy",
+            "desc": "Geographic expansion, subsidiary establishment, local market adaptation and strategic partnerships."
+          },
+          {
+            "label": "Business transformation",
+            "desc": "Operating model redesign, process digitalization, change management and organizational alignment."
+          },
+          {
+            "label": "Cost optimization",
+            "desc": "Cost structure analysis, efficiency lever identification, restructuring and profitability improvement."
+          },
+          {
+            "label": "Innovation & growth",
+            "desc": "Product strategy, new markets, diversification, technology partnerships and revenue models."
+          },
+          {
+            "label": "Talent & organization",
+            "desc": "Organizational design, HR strategy, company culture, talent retention and leadership."
+          }
         ]
+      },
+      "technology": {
+        "title": "Technology Consulting",
+        "desc": "We support companies' technology transformation with a pragmatic and operational approach.",
+        "dimensions": [
+          {
+            "label": "Digital transformation",
+            "desc": "Digital strategy, legacy system overhaul, application modernization and user experience."
+          },
+          {
+            "label": "Data & Analytics",
+            "desc": "Data architecture, governance, data lake/warehouse, BI, advanced analytics and data monetization."
+          },
+          {
+            "label": "Artificial Intelligence",
+            "desc": "AI strategy, use cases, MLOps, generative AI, EU AI Act compliance and model auditing."
+          },
+          {
+            "label": "Cybersecurity",
+            "desc": "Security audit, pentest, NIS2/ISO27001 compliance, cyber governance and resilience."
+          },
+          {
+            "label": "Cloud & Infrastructure",
+            "desc": "Cloud migration, multi-cloud architecture, DevOps, SRE, scalability and cloud cost optimization."
+          },
+          {
+            "label": "Blockchain & Web3",
+            "desc": "Blockchain strategy, tokenization, smart contracts, DeFi and regulatory compliance."
+          }
+        ]
+      },
+      "ma": {
+        "title": "M&A Consulting",
+        "desc": "We support mergers and acquisitions and post-merger integration with tech expertise.",
+        "dimensions": [
+          {
+            "label": "Transaction Advisory",
+            "desc": "Divestiture structuring, acquisitions, fundraising, tech asset valuation and negotiation."
+          },
+          {
+            "label": "Tech Due Diligence",
+            "desc": "Technical audit, technical debt assessment, intellectual property analysis and risk evaluation."
+          },
+          {
+            "label": "Post-Merger Integration (PMI)",
+            "desc": "IT systems integration, process harmonization, technology synergies and change management."
+          },
+          {
+            "label": "Carve-out & Spin-off",
+            "desc": "Asset separation, business unit extraction, transition services agreements and IT autonomization."
+          }
+        ]
+      }
+    },
+    "network": {
+      "partners": {
+        "title": "Partner Network",
+        "desc": "We collaborate with a selected network of partner companies to extend our intervention capacity on complex missions."
+      },
+      "experts": {
+        "title": "Expert Network",
+        "desc": "We mobilize a network of independent experts (lawyers, accountants, tax advisors, notaries) to complement our missions according to each project's specific needs."
       }
     },
     "approach": {
