@@ -1168,32 +1168,32 @@
   "advisoryPage": {
     "hero": {
       "label": "Aegryn Advisory",
-      "title": "Chiarezza Strategica.\nProfondità Operativa.",
-      "desc1": "In Aegryn Advisory, lavoriamo con fondatori, dirigenti e organizzazioni che affrontano decisioni tecnologiche critiche. La nostra consulenza deriva da come progettiamo, costruiamo e proteggiamo i nostri ecosistemi digitali.",
-      "desc2": "Non ci affidiamo a teorie, tendenze o framework riciclati. Forniamo una direzione strategica chiara, diretta e ancorata all'esecuzione in Data, AI e Cybersicurezza.",
-      "quote": "Nessuna diapositiva infinita. Nessun playbook generico.\nSolo standard testati in ambienti reali.",
+      "title": "Strategia, Tech, M&A.\nUn solo interlocutore.",
+      "desc1": "Aegryn Advisory accompagna fondatori, dirigenti e organizzazioni nelle loro decisioni strategiche, trasformazione tecnologica e operazioni di M&A. Competenza operativa costruita da operatori, non da consulenti di studio.",
+      "desc2": "Ciò che consigliamo, lo applichiamo a noi stessi. I nostri asset propri passano per i nostri stessi metodi. Questa coerenza è ciò che differenzia Aegryn da una società di consulenza convenzionale.",
+      "quote": "Non abbiamo playbook generici.\nAbbiamo metodi collaudati in ambienti reali.",
       "cta": "Prenota una sessione"
     },
     "why": {
-      "label": "Perché Advisory?",
-      "desc1": "Progettare o scalare un ecosistema digitale richiede più dell'ambizione. Richiede chiarezza architettonica, esecuzione disciplinata e pensiero a lungo termine.",
-      "desc2": "Aegryn Advisory esiste per i leader che hanno bisogno di una guida strutturata quando le decisioni in Data, AI e Cybersicurezza definiscono la resilienza futura.",
-      "tagline": "Il nostro ruolo è semplice: portare chiarezza, ridurre i rischi, accelerare le decisioni giuste."
+      "label": "Perché Aegryn Advisory?",
+      "desc1": "Strategia, tecnologia e M&A non sono tre discipline separate. Sono tre facce della stessa realtà: come creare, sviluppare e trasferire valore in un mercato tech europeo che si consolida.",
+      "desc2": "Aegryn Advisory esiste per i leader che vogliono un interlocutore che capisca strategia, tech e transazioni — tutte e tre. Un solo partner per tutte e tre.",
+      "tagline": "Interveniamo quando le decisioni definiscono la traiettoria della vostra organizzazione."
     },
     "whoFor": {
-      "label": "A chi è rivolto Advisory?",
+      "label": "Per chi?",
       "items": [
         {
-          "title": "Fondatori & Builder",
-          "desc": "State costruendo o scalando una piattaforma digitale e affrontate decisioni strutturali che ne determineranno la resilienza a lungo termine. Vi aiutiamo a stabilire solide fondamenta prima che la complessità aumenti."
+          "title": "Startup & Scale-up",
+          "desc": "Porre le giuste basi tecniche e strategiche. Prepararsi al prossimo round o all'exit. Evitare errori strutturali che sono costosi da correggere in seguito."
         },
         {
-          "title": "Organizzazioni in crescita",
-          "desc": "Con la crescita della vostra organizzazione, la profondità tecnica diventa critica. Offriamo una prospettiva indipendente e senior sulla scalabilità dell'infrastruttura, il deployment dell'AI e la coerenza architettonica."
+          "title": "PMI in crescita",
+          "desc": "Trasformare, certificare e reclutare prima di vendere o raccogliere fondi. Costruire asset che reggano al vaglio di acquirenti e investitori."
         },
         {
-          "title": "Leadership in transizione",
-          "desc": "L'evoluzione digitale richiede disciplina strutturale, non rattoppi incrementali. Supportiamo i team di leadership nella modernizzazione legacy, ristrutturazione dei dati e rafforzamento della cybersicurezza."
+          "title": "Grandi organizzazioni",
+          "desc": "Strategia tech, M&A di portafoglio, asset interni proprietari, reclutamento dirigenziale. Un partner che comprende governance, scalabilità e compliance su larga scala."
         }
       ]
     },
@@ -1244,9 +1244,9 @@
       ]
     },
     "approach": {
-      "label": "Approccio",
-      "title": "La decisione giusta inizia con la conversazione giusta.",
-      "desc": "Offriamo tempo senior qualificato, scambi diretti con gli esperti giusti e raccomandazioni immediatamente attuabili. Pagate per competenza ed esperienza, non per struttura.",
+      "label": "Il nostro approccio",
+      "title": "Tempo senior, deliverable attuabili, responsabilità condivisa.",
+      "desc": "Non fatturiamo presenze. Consegniamo diagnosi, raccomandazioni e piani di esecuzione. Tempo senior garantito, interlocutori diretti, nessuno strato intermedio.",
       "cta": "Prenota una sessione"
     },
     "valuationCta": {

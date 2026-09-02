@@ -1216,32 +1216,32 @@
   "advisoryPage": {
     "hero": {
       "label": "Aegryn Conseil",
-      "title": "Clarté Stratégique.\nProfondeur Opérationnelle.",
-      "desc1": "Chez Aegryn Advisory, nous accompagnons les fondateurs, dirigeants et organisations face à des décisions technologiques critiques. Notre conseil repose sur la façon dont nous concevons, construisons et sécurisons nos propres écosystèmes numériques.",
-      "desc2": "Nous ne nous appuyons pas sur la théorie, les tendances ou les frameworks recyclés. Nous apportons une direction stratégique claire, directe et ancrée dans l'exécution, en Data, IA et Cybersécurité.",
-      "quote": "Pas de réponses génériques. Pas de playbooks recyclés.\nUniquement des standards testés dans des environnements réels.",
+      "title": "Stratégie, Tech, M&A.\nUn seul interlocuteur.",
+      "desc1": "Aegryn Conseil accompagne les fondateurs, dirigeants et organisations dans leurs décisions stratégiques, leur transformation technologique et leurs opérations M&A. Une expertise opérationnelle construite par des operators, pas des consultants de cabinet.",
+      "desc2": "Ce que nous conseillons, nous l'appliquons à nous-mêmes. Nos actifs propres passent par nos propres méthodes. Cette cohérence est ce qui différencie Aegryn d'un cabinet de conseil classique.",
+      "quote": "Nous n'avons pas de playbooks génériques.\nNous avons des méthodes éprouvées dans des environnements réels.",
       "cta": "Prendre contact"
     },
     "why": {
-      "label": "Pourquoi Conseil ?",
-      "desc1": "Concevoir ou faire évoluer un écosystème numérique demande plus que de l'ambition. Cela requiert une clarté architecturale, une exécution disciplinée et une vision long terme.",
-      "desc2": "Aegryn Advisory existe pour les dirigeants qui ont besoin d'un accompagnement structuré au moment où les décisions en Data, IA et Cybersécurité définissent la résilience future.",
-      "tagline": "Notre rôle est simple : apporter la clarté, réduire le risque, accélérer les bonnes décisions."
+      "label": "Pourquoi Aegryn Conseil ?",
+      "desc1": "Stratégie, technologie et M&A ne sont pas trois disciplines séparées. Ce sont trois facettes d'une même réalité : comment créer, développer et céder de la valeur dans un marché tech européen qui se consolide.",
+      "desc2": "Aegryn Conseil existe pour les dirigeants qui veulent un interlocuteur qui comprend à la fois la stratégie, la tech et la transaction. Un seul partenaire pour les trois.",
+      "tagline": "Nous intervenons quand les décisions définissent la trajectoire de votre organisation."
     },
     "whoFor": {
-      "label": "Pour qui ?",
+      "label": "Pour qui ?",
       "items": [
         {
-          "title": "Fondateurs & Builders",
-          "desc": "Vous construisez ou faites évoluer une plateforme numérique et faites face à des décisions structurelles qui définiront sa résilience long terme. Nous vous aidons à établir des fondations solides avant que la complexité s'accumule."
+          "title": "Startups & Scale-ups",
+          "desc": "Poser les bonnes bases techniques et stratégiques. Préparer la prochaine levée ou le prochain exit. Éviter les erreurs structurelles qui coûtent cher à corriger plus tard."
         },
         {
-          "title": "Organisations en croissance",
-          "desc": "À mesure que votre organisation grandit, la profondeur technique devient critique. Nous apportons une perspective indépendante et senior sur la scalabilité infra, le déploiement IA et la cohérence architecturale."
+          "title": "PME en croissance",
+          "desc": "Transformer, certifier et recruter avant de vendre ou de lever des fonds. Construire des actifs qui tiennent la route face aux acquéreurs et aux investisseurs."
         },
         {
-          "title": "Directions en transition",
-          "desc": "L'évolution numérique exige une discipline structurelle, pas des correctifs incrémentaux. Nous accompagnons les équipes dirigeantes dans la modernisation legacy, la restructuration data et le renforcement cybersécurité."
+          "title": "Grandes organisations",
+          "desc": "Stratégie tech, M&A de portefeuille, actifs internes propriétaires, recrutement dirigeant. Un partenaire qui comprend les enjeux de gouvernance, de scalabilité et de conformité à l'échelle."
         }
       ]
     },
@@ -1292,9 +1292,9 @@
       ]
     },
     "approach": {
-      "label": "Approche",
-      "title": "La bonne décision commence par la bonne conversation.",
-      "desc": "Nous offrons du temps senior qualifié, des échanges directs avec les bons experts et des recommandations immédiatement actionnables. Vous payez pour l'expertise et l'expérience, pas pour la structure.",
+      "label": "Notre approche",
+      "title": "Temps senior, livraisons actionnables, responsabilité partagée.",
+      "desc": "Nous ne facturons pas des heures de présence. Nous livrons des diagnostics, des recommandations et des plans d'exécution. Temps senior garanti, interlocuteurs directs, aucune couche intermédiaire.",
       "cta": "Prendre contact"
     },
     "valuationCta": {

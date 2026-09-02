@@ -10,8 +10,8 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
-    title: 'Aegryn Advisory — Tech, AI, Cybersecurity & M&A Advisory | All Industries',
-    description: 'Strategic advisory in technology, AI, cybersecurity and M&A. Executive recruitment. Asset engineering. Operating across 23+ industries in Europe. Built by operators.',
+    title: 'Aegryn Advisory — Stratégie, Tech & M&A | Un seul interlocuteur',
+    description: 'Conseil en stratégie, technologie et M&A. Expertise opérationnelle construite par des operators. Recrutement dirigeant, actifs propriétaires, certification Aegryn. Europe.',
     path: '/advisory',
     locale,
     keywords: [
@@ -46,21 +46,26 @@ export default async function AdvisoryPage({ params }: Props) {
       <section className="border-b border-ag-border bg-ag-navy overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 md:px-12 py-32">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
-            {t('hero.label')}
+            / {t('hero.label')}
           </p>
           <h1
-            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8 whitespace-pre-line"
-            style={{ fontSize: 'clamp(48px,6vw,86px)' }}
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8"
+            style={{ fontSize: 'clamp(40px,5.5vw,80px)' }}
           >
-            {t('hero.title')}
+            {t('hero.title').split('\n').map((line, i, arr) => (
+              <span key={i}>
+                {line}{i < arr.length - 1 && <br />}
+              </span>
+            ))}
           </h1>
-          <p className="text-[15px] text-white/60 leading-relaxed max-w-xl mb-10">
-            {t('hero.desc1')}
-            <br /><br />
-            {t('hero.desc2')}
-          </p>
-          <p className="font-sans font-semibold text-[13px] text-white/60 leading-relaxed max-w-xl mb-10 border-l-2 border-ag-apex/40 pl-5 whitespace-pre-line">
-            {t('hero.quote')}
+          <div className="max-w-xl mb-10 space-y-4">
+            <p className="text-[15px] text-white/70 leading-relaxed">{t('hero.desc1')}</p>
+            <p className="text-[15px] text-white/50 leading-relaxed">{t('hero.desc2')}</p>
+          </div>
+          <p className="font-sans font-normal italic text-[14px] text-white/50 leading-relaxed max-w-xl mb-10 border-l-2 border-ag-apex/30 pl-5">
+            {t('hero.quote').split('\n').map((line, i) => (
+              <span key={i}>{line}{i === 0 && <br />}</span>
+            ))}
           </p>
           <Link
             href="/contact"
@@ -80,14 +85,14 @@ export default async function AdvisoryPage({ params }: Props) {
             </p>
           </div>
           <div className="grid md:grid-cols-[1fr_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
-            <div className="py-16 md:pr-16">
-              <p className="text-[15px] text-ag-gray leading-relaxed mb-6">{t('why.desc1')}</p>
+            <div className="py-16 md:pr-16 space-y-5">
+              <p className="text-[15px] text-ag-gray leading-relaxed">{t('why.desc1')}</p>
               <p className="text-[15px] text-ag-gray leading-relaxed">{t('why.desc2')}</p>
             </div>
-            <div className="py-16 md:pl-16">
+            <div className="py-16 md:pl-16 flex items-center">
               <p
-                className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2]"
-                style={{ fontSize: 'clamp(20px,2vw,28px)' }}
+                className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.3]"
+                style={{ fontSize: 'clamp(18px,1.8vw,24px)' }}
               >
                 {t('why.tagline')}
               </p>
@@ -188,21 +193,29 @@ export default async function AdvisoryPage({ params }: Props) {
 
       {/* Approach + CTA */}
       <section className="bg-ag-navy border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <div>
-            <h2 className="font-sans font-bold text-[28px] text-white leading-tight">
-              {t('approach.title')}
-            </h2>
-            <p className="mt-4 text-[14px] text-white/50 max-w-lg leading-relaxed">
-              {t('approach.desc')}
-            </p>
+        <div className="mx-auto max-w-7xl px-6 md:px-12 py-20">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-apex/70 mb-6">
+            / {t('approach.label')}
+          </p>
+          <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-10">
+            <div className="max-w-2xl">
+              <h2
+                className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.2] mb-6"
+                style={{ fontSize: 'clamp(22px,2.5vw,34px)' }}
+              >
+                {t('approach.title')}
+              </h2>
+              <p className="text-[14px] text-white/50 leading-relaxed">
+                {t('approach.desc')}
+              </p>
+            </div>
+            <Link
+              href="/contact"
+              className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3.5 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+            >
+              {t('approach.cta')} <ArrowUpRight size={14} />
+            </Link>
           </div>
-          <Link
-            href="/contact"
-            className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3.5 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
-          >
-            {t('approach.cta')} <ArrowUpRight size={14} />
-          </Link>
         </div>
       </section>
     </>

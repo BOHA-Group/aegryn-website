@@ -1204,32 +1204,32 @@
   "advisoryPage": {
     "hero": {
       "label": "Aegryn Advisory",
-      "title": "Strategische Klarheit.\nOperative Tiefe.",
-      "desc1": "Bei Aegryn Advisory begleiten wir Gründer, Führungskräfte und Organisationen bei kritischen Technologieentscheidungen. Unsere Beratung basiert auf der Art, wie wir unsere eigenen digitalen Ökosysteme gestalten, aufbauen und absichern.",
-      "desc2": "Wir verlassen uns nicht auf Theorie, Trends oder recycelte Frameworks. Wir liefern klare, direkte und ausführungsbasierte strategische Orientierung in Data, KI und Cybersicherheit.",
-      "quote": "Keine endlosen Folien. Keine generischen Playbooks.\nNur Standards, die in realen Umgebungen getestet wurden.",
+      "title": "Strategie, Tech, M&A.\nEin einziger Partner.",
+      "desc1": "Aegryn Advisory begleitet Gründer, Führungskräfte und Organisationen bei strategischen Entscheidungen, technologischer Transformation und M&A-Operationen. Operative Expertise von Praktikern, nicht von Unternehmensberatern.",
+      "desc2": "Was wir beraten, wenden wir auf uns selbst an. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Diese Kohärenz ist es, was Aegryn von einem klassischen Beratungsunternehmen unterscheidet.",
+      "quote": "Wir haben keine generischen Playbooks.\nWir haben Methoden, die in realen Umgebungen erprobt wurden.",
       "cta": "Gespräch vereinbaren"
     },
     "why": {
-      "label": "Warum Advisory?",
-      "desc1": "Ein digitales Ökosystem zu gestalten oder zu skalieren erfordert mehr als Ambition. Es braucht architektonische Klarheit, disziplinierte Ausführung und langfristiges Denken.",
-      "desc2": "Aegryn Advisory existiert für Führungskräfte, die strukturierte Beratung benötigen, wenn Entscheidungen in Data, KI und Cybersicherheit die zukünftige Resilienz bestimmen.",
-      "tagline": "Unsere Rolle ist einfach: Klarheit schaffen. Risiken reduzieren. Die richtigen Entscheidungen beschleunigen."
+      "label": "Warum Aegryn Advisory?",
+      "desc1": "Strategie, Technologie und M&A sind keine drei getrennten Disziplinen. Sie sind drei Facetten einer einzigen Realität: wie man Wert in einem sich konsolidierenden europäischen Tech-Markt schafft, entwickelt und überträgt.",
+      "desc2": "Aegryn Advisory existiert für Führungskräfte, die einen Partner wollen, der Strategie, Tech und Transaktionen versteht — alle drei. Ein einziger Partner für alle drei.",
+      "tagline": "Wir greifen ein, wenn Entscheidungen die Trajektorie Ihrer Organisation bestimmen."
     },
     "whoFor": {
-      "label": "Für wen ist Advisory?",
+      "label": "Für wen?",
       "items": [
         {
-          "title": "Gründer & Builder",
-          "desc": "Sie bauen oder skalieren eine digitale Plattform und treffen strukturelle Entscheidungen, die deren langfristige Resilienz prägen werden. Wir helfen Ihnen, robuste Grundlagen zu schaffen, bevor die Komplexität zunimmt."
+          "title": "Startups & Scale-ups",
+          "desc": "Die richtigen technischen und strategischen Grundlagen legen. Die nächste Finanzierungsrunde oder den Exit vorbereiten. Strukturelle Fehler vermeiden, die später teuer zu korrigieren sind."
         },
         {
-          "title": "Wachsende Organisationen",
-          "desc": "Mit dem Wachstum Ihrer Organisation wird technische Tiefe entscheidend. Wir bieten eine unabhängige, erfahrene Perspektive auf Infrastruktur-Skalierbarkeit, KI-Einsatz und langfristige Architekturkohärenz."
+          "title": "Wachsende KMU",
+          "desc": "Transformieren, zertifizieren und rekrutieren, bevor verkauft oder Kapital aufgenommen wird. Assets aufbauen, die dem Blick von Käufern und Investoren standhalten."
         },
         {
-          "title": "Führungen im Wandel",
-          "desc": "Digitale Evolution erfordert strukturelle Disziplin, keine inkrementellen Flicken. Wir unterstützen Führungsteams bei Legacy-Modernisierung, Datenrestrukturierung und Cybersicherheitsverstärkung."
+          "title": "Große Organisationen",
+          "desc": "Tech-Strategie, Portfolio M&A, proprietäre interne Assets, Executive Recruiting. Ein Partner, der Governance, Skalierbarkeit und Compliance in großem Maßstab versteht."
         }
       ]
     },
@@ -1280,9 +1280,9 @@
       ]
     },
     "approach": {
-      "label": "Ansatz",
-      "title": "Die richtige Entscheidung beginnt mit dem richtigen Gespräch.",
-      "desc": "Wir bieten qualifizierte Senior-Zeit, direkte Austausche mit den richtigen Experten und sofort umsetzbare Empfehlungen. Sie zahlen für Expertise und Erfahrung, nicht für Struktur.",
+      "label": "Unser Ansatz",
+      "title": "Senior-Zeit, umsetzbare Ergebnisse, geteilte Verantwortung.",
+      "desc": "Wir berechnen keine Anwesenheitsstunden. Wir liefern Diagnosen, Empfehlungen und Ausführungspläne. Garantierte Senior-Zeit, direkte Ansprechpartner, keine Zwischenschichten.",
       "cta": "Gespräch vereinbaren"
     },
     "valuationCta": {

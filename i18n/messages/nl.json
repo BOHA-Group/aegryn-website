@@ -1168,32 +1168,32 @@
   "advisoryPage": {
     "hero": {
       "label": "Aegryn Advisory",
-      "title": "Strategische Helderheid.\nOperationele Diepte.",
-      "desc1": "Bij Aegryn Advisory werken we samen met oprichters, leidinggevenden en organisaties die kritieke technologische beslissingen moeten nemen. Onze begeleiding is gebaseerd op hoe wij onze eigen digitale ecosystemen ontwerpen, bouwen en beveiligen.",
-      "desc2": "We baseren ons niet op theorie, trends of gerecyclede frameworks. We bieden duidelijke, directe en uitvoeringsgerichte strategische richting in Data, AI en Cyberbeveiliging.",
-      "quote": "Geen eindeloze slides. Geen generieke playbooks.\nAlleen standaarden die getest zijn in echte omgevingen.",
+      "title": "Strategie, Tech, M&A.\nÉén partner.",
+      "desc1": "Aegryn Advisory begeleidt oprichters, leidinggevenden en organisaties bij strategische beslissingen, technologische transformatie en M&A-operaties. Operationele expertise gebouwd door operators, niet door managementconsultants.",
+      "desc2": "Wat we adviseren, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Die coherentie is wat Aegryn onderscheidt van een conventioneel adviesbureau.",
+      "quote": "We hebben geen generieke playbooks.\nWe hebben methoden die bewezen zijn in echte omgevingen.",
       "cta": "Sessie boeken"
     },
     "why": {
-      "label": "Waarom Advisory?",
-      "desc1": "Het ontwerpen of opschalen van een digitaal ecosysteem vereist meer dan ambitie. Het vereist architectonische helderheid, gedisciplineerde uitvoering en langetermijndenken.",
-      "desc2": "Aegryn Advisory bestaat voor leiders die gestructureerde begeleiding nodig hebben op momenten waarop Data, AI en Cyberbeveiliging de toekomstige veerkracht bepalen.",
-      "tagline": "Onze rol is eenvoudig: helderheid brengen, risico verminderen, de juiste beslissingen versnellen."
+      "label": "Waarom Aegryn Advisory?",
+      "desc1": "Strategie, technologie en M&A zijn geen drie afzonderlijke disciplines. Ze zijn drie facetten van dezelfde realiteit: hoe waarde te creëren, te ontwikkelen en over te dragen in een consoliderende Europese techmarkt.",
+      "desc2": "Aegryn Advisory bestaat voor leiders die een partner willen die strategie, tech en transacties begrijpt — alle drie. Één partner voor alle drie.",
+      "tagline": "We stappen in wanneer beslissingen de koers van uw organisatie bepalen."
     },
     "whoFor": {
-      "label": "Voor wie is Advisory?",
+      "label": "Voor wie?",
       "items": [
         {
-          "title": "Oprichters & Builders",
-          "desc": "U bouwt of schaalt een digitaal platform en staat voor structurele beslissingen die de langetermijnveerkracht zullen bepalen. Wij helpen u robuuste fundamenten te leggen voordat de complexiteit toeneemt."
+          "title": "Startups & Scale-ups",
+          "desc": "De juiste technische en strategische fundamenten leggen. Voorbereiden op de volgende financieringsronde of exit. Structurele fouten vermijden die later duur zijn om te corrigeren."
         },
         {
-          "title": "Groeiende organisaties",
-          "desc": "Naarmate uw organisatie groeit, wordt technische diepgang kritisch. Wij bieden een onafhankelijk, senior perspectief op infrastructuurschaalbaarheid, AI-inzet en architecturele coherentie."
+          "title": "Groeiende KMO's",
+          "desc": "Transformeren, certificeren en rekruteren vóór verkoop of fondsenwerving. Assets bouwen die de toets van kopers en investeerders doorstaan."
         },
         {
-          "title": "Leiderschap in transitie",
-          "desc": "Digitale evolutie vereist structurele discipline, geen incrementele patches. Wij ondersteunen leiderschapsteams bij legacy-modernisering, dataherstructurering en cyberbeveiliging."
+          "title": "Grote organisaties",
+          "desc": "Tech-strategie, portfolio M&A, eigen interne assets, executive rekrutering. Een partner die governance, schaalbaarheid en compliance op grote schaal begrijpt."
         }
       ]
     },
@@ -1244,9 +1244,9 @@
       ]
     },
     "approach": {
-      "label": "Aanpak",
-      "title": "De juiste beslissing begint met het juiste gesprek.",
-      "desc": "Wij bieden gekwalificeerde senior tijd, directe uitwisselingen met de juiste experts en onmiddellijk uitvoerbare aanbevelingen. U betaalt voor expertise en ervaring, niet voor structuur.",
+      "label": "Onze aanpak",
+      "title": "Senior tijd, uitvoerbare deliverables, gedeelde verantwoordelijkheid.",
+      "desc": "We factureren geen aanwezigheid. We leveren diagnoses, aanbevelingen en uitvoeringsplannen. Gegarandeerde senior tijd, directe contactpersonen, geen tussenlagen.",
       "cta": "Sessie boeken"
     },
     "valuationCta": {

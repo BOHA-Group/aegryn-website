@@ -1264,32 +1264,32 @@
   "advisoryPage": {
     "hero": {
       "label": "Aegryn Advisory",
-      "title": "Strategic Clarity.\nOperational Depth.",
-      "desc1": "At Aegryn Advisory, we work with founders, executives and organisations facing critical technology decisions. Our guidance is derived from how we design, build and secure our own digital ecosystems.",
-      "desc2": "We don't rely on theory, trends or recycled frameworks. We provide clear, direct and execution-grounded strategic direction across Data, AI and Cybersecurity, focused on impact, resilience and long-term value.",
-      "quote": "No endless slides. No generic playbooks.\nOnly standards that have been tested in real environments.",
+      "title": "Strategy, Tech, M&A.\nOne partner.",
+      "desc1": "Aegryn Advisory works with founders, executives and organisations on strategic decisions, technology transformation and M&A operations. Operational expertise built by operators, not management consultants.",
+      "desc2": "What we advise, we apply to ourselves. Our own assets go through our own methods. That coherence is what differentiates Aegryn from a conventional advisory firm.",
+      "quote": "We don't have generic playbooks.\nWe have methods proven in real environments.",
       "cta": "Book a session"
     },
     "why": {
-      "label": "Why Advisory?",
-      "desc1": "Designing or scaling a digital ecosystem requires more than ambition. It requires architectural clarity, disciplined execution and long-term thinking.",
-      "desc2": "Aegryn Advisory exists for leaders who need structured guidance in moments where Data, AI and Cybersecurity decisions define future resilience and growth.",
-      "tagline": "Our role is simple: Bring clarity. Reduce risk. Accelerate the right decisions."
+      "label": "Why Aegryn Advisory?",
+      "desc1": "Strategy, technology and M&A are not three separate disciplines. They are three facets of the same reality: how to create, grow and transfer value in a consolidating European tech market.",
+      "desc2": "Aegryn Advisory exists for leaders who want a partner who understands strategy, tech and transactions — all three. One partner for all three.",
+      "tagline": "We step in when decisions define the trajectory of your organisation."
     },
     "whoFor": {
-      "label": "Who is Advisory for?",
+      "label": "Who is it for?",
       "items": [
         {
-          "title": "Founders & Builders",
-          "desc": "You are building or scaling a digital platform and facing structural decisions that will shape its long-term resilience. We help you establish robust foundations before complexity compounds."
+          "title": "Startups & Scale-ups",
+          "desc": "Lay the right technical and strategic foundations. Prepare for your next funding round or exit. Avoid structural mistakes that are expensive to fix later."
         },
         {
-          "title": "Growing Organisations",
-          "desc": "As your organisation grows, technical depth becomes critical. We provide an independent, senior-level perspective on infrastructure scalability, AI deployment and long-term architectural coherence."
+          "title": "Growing SMEs",
+          "desc": "Transform, certify and recruit before selling or raising funds. Build assets that hold up to acquirer and investor scrutiny."
         },
         {
-          "title": "Leadership in Transition",
-          "desc": "Digital evolution requires structural discipline, not incremental patchwork. We support leadership teams navigating legacy modernisation, data restructuring and cybersecurity reinforcement."
+          "title": "Large Organisations",
+          "desc": "Tech strategy, portfolio M&A, proprietary internal assets, executive recruitment. A partner who understands governance, scalability and compliance at scale."
         }
       ]
     },
@@ -1340,9 +1340,9 @@
       ]
     },
     "approach": {
-      "label": "Approach",
-      "title": "Making the right decision starts with the right conversation.",
-      "desc": "We offer qualified senior time, direct exchanges with the right experts, and immediately actionable recommendations. You pay for expertise and experience, not for structure.",
+      "label": "Our approach",
+      "title": "Senior time, actionable deliverables, shared accountability.",
+      "desc": "We don't bill for presence. We deliver diagnostics, recommendations and execution plans. Guaranteed senior time, direct interlocutors, no intermediary layers.",
       "cta": "Book a session"
     },
     "valuationCta": {
