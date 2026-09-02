@@ -68,9 +68,11 @@
     "craftBuildAssets": "Asset proprietari",
     "craftBuildEngineering": "Ingegneria degli asset",
     "craftSupport": "Accompagnare",
-    "craftSupportDesc": "Advisory Tech, IA & M&A — Tutti i settori",
+    "craftSupportDesc": "Consulenza in Strategia, Tech & M&A — Tutti i settori",
+    "craftSupportStrategy": "Consulenza Strategica",
+    "craftSupportTechnology": "Consulenza Tecnologica",
+    "craftSupportMA": "Consulenza M&A",
     "craftSupportAdvisory": "Advisory Tech & IA",
-    "craftSupportAcquisition": "Advisory Fusioni e Acquisizioni",
     "craftSupportAlliances": "Rete di partner",
     "craftSupportExperts": "Rete di esperti",
     "craftTransact": "Trasmettere",
@@ -245,6 +247,20 @@
       "strategy": {
         "title": "Consulenza Strategica",
         "desc": "Aiutiamo i leader a definire ed eseguire la loro visione strategica in un ambiente in costante evoluzione.",
+        "why": {
+          "title": "Perché la consulenza strategica?",
+          "desc": "In un mercato europeo frammentato dove il 70% delle strategie non genera crescita sostenibile, i leader tech affrontano decisioni critiche: espansione internazionale, trasformazione del modello operativo, allocazione del capitale tra crescita organica e acquisizioni. Il nostro approccio combina visione strategica ed esecuzione operativa per trasformare l'ambizione in risultati misurabili."
+        },
+        "approach": {
+          "title": "Il nostro approccio",
+          "desc": "Non consegniamo slide. Co-costruiamo con i vostri team un piano strategico ancorato alla realtà del vostro mercato, delle vostre capacità e dei vostri vincoli. Ogni raccomandazione viene testata, quantificata e accompagnata da un piano di esecuzione dettagliato.",
+          "steps": [
+            {"label": "Diagnosi strategica", "desc": "Analisi del vostro posizionamento competitivo, vantaggi differenzianti e tendenze di mercato. Identificazione di opportunità di crescita e rischi strutturali."},
+            {"label": "Definizione della visione", "desc": "Co-costruzione della vostra visione strategica a 3-5 anni, allineata con le vostre ambizioni e capacità. Prioritizzazione delle scommesse strategiche ad alto impatto."},
+            {"label": "Roadmap", "desc": "Sviluppo di un piano di esecuzione dettagliato con milestone, KPI, allocazione delle risorse e governance. Identificazione di quick wins e trasformazioni strutturali."},
+            {"label": "Accompagnamento all'esecuzione", "desc": "Monitoraggio dell'implementazione, aggiustamenti tattici, risoluzione dei blocchi operativi. Trasferimento di competenze ai vostri team per l'autonomia."}
+          ]
+        },
         "dimensions": [
           {"label": "Strategia internazionale", "desc": "Espansione geografica, costituzione di filiali, adattamento ai mercati locali e partnership strategiche."},
           {"label": "Trasformazione aziendale", "desc": "Riprogettazione del modello operativo, digitalizzazione dei processi, gestione del cambiamento e allineamento organizzativo."},
@@ -256,6 +272,20 @@
       "technology": {
         "title": "Consulenza Tecnologica",
         "desc": "Accompagniamo la trasformazione tecnologica delle aziende con un approccio pragmatico e operativo.",
+        "why": {
+          "title": "Perché la consulenza tecnologica?",
+          "desc": "Solo il 30% delle trasformazioni digitali raggiunge i propri obiettivi. La tecnologia non è più un supporto: definisce il vostro modello operativo, l'esperienza del cliente e la capacità di innovazione. Aiutiamo i leader a trasformare l'ambizione tecnologica in vantaggio competitivo misurabile, combinando visione strategica ed esecuzione tecnica."
+        },
+        "approach": {
+          "title": "Il nostro approccio",
+          "desc": "Non facciamo strategia tech in silos. Ogni raccomandazione è ancorata alla vostra realtà operativa: architettura esistente, debito tecnico, competenze interne, vincoli di budget. Privilegiamo approcci incrementali che generano valore rapidamente costruendo al contempo fondamenta a lungo termine.",
+          "steps": [
+            {"label": "Diagnosi tecnica", "desc": "Audit della vostra infrastruttura, applicazioni, dati e processi. Identificazione del debito tecnico, rischi cyber e opportunità di ottimizzazione."},
+            {"label": "Visione e roadmap", "desc": "Definizione della vostra architettura obiettivo e prioritizzazione dei progetti. Equilibrio tra quick wins (6-12 mesi) e trasformazioni strutturali (18-36 mesi)."},
+            {"label": "Proof of Concept", "desc": "Validazione tecnica e di business su use case prioritari. Approccio agile: build, test, learn, iterate. Riduzione dei rischi prima dell'industrializzazione."},
+            {"label": "Industrializzazione e trasferimento", "desc": "Deployment su scala, integrazione nei processi esistenti, formazione dei team. Autonomia progressiva per sostenere i risultati."}
+          ]
+        },
         "dimensions": [
           {"label": "Trasformazione digitale", "desc": "Strategia digitale, rinnovamento dei sistemi legacy, modernizzazione applicativa e user experience."},
           {"label": "Data & Analytics", "desc": "Architettura dati, governance, data lake/warehouse, BI, analytics avanzati e monetizzazione dei dati."},
@@ -267,7 +297,21 @@
       },
       "ma": {
         "title": "Consulenza M&A",
-        "desc": "Accompagniamo operazioni di fusioni-acquisizioni e integrazione post-fusione con competenza tech.",
+        "desc": "Accompagniamo operazioni di fusioni-acquisizioni e integrazione post-acquisizione con competenza tech.",
+        "why": {
+          "title": "Perché la consulenza M&A?",
+          "desc": "Le acquisizioni tech raramente falliscono sulla strategia, ma sull'esecuzione: sottovalutazione del debito tecnico, integrazione IT fallita, fuga di talenti chiave, sinergie tecnologiche non realizzate. Interveniamo dalla fase di due diligence per identificare rischi tecnici e opportunità di creazione di valore, poi accompagniamo l'integrazione fino alla chiusura e oltre."
+        },
+        "approach": {
+          "title": "Il nostro approccio",
+          "desc": "Trattiamo ogni acquisizione come un'opportunità di trasformazione. Oltre alla classica due diligence tecnica, valutiamo come l'acquisizione possa accelerare la modernizzazione IT, arricchire le capacità data/IA, o servire da piattaforma per consolidare il mercato. La nostra expertise copre l'intero ciclo M&A.",
+          "steps": [
+            {"label": "Tech due diligence", "desc": "Audit tecnico approfondito: architettura, debito tecnico, sicurezza, compliance, IP. Valutazione di rischi e opportunità. Quantificazione delle sinergie tecnologiche."},
+            {"label": "Technology blueprint", "desc": "Definizione dell'architettura obiettivo post-acquisizione. Piano di integrazione IT dettagliato: sistemi, dati, processi. Identificazione di quick wins e progetti strutturali."},
+            {"label": "Integration Management Office", "desc": "Gestione dell'integrazione IT: governance, pianificazione, gestione dei rischi, coordinamento dei team. Monitoraggio dei milestone critici (Day 1, Day 100, sinergie)."},
+            {"label": "Value capture & transformation", "desc": "Realizzazione delle sinergie tecnologiche. Modernizzazione accelerata dei sistemi legacy. Trasformazione digitale post-acquisizione per massimizzare la creazione di valore."}
+          ]
+        },
         "dimensions": [
           {"label": "Advisory Transazioni", "desc": "Strutturazione di cessioni, acquisizioni, fundraising, valutazione di asset tech e negoziazione."},
           {"label": "Due Diligence Tech", "desc": "Audit tecnico, valutazione del debito tecnico, analisi della proprietà intellettuale e dei rischi."},
@@ -301,6 +345,16 @@
           "desc": "Documentazione finale, trasferimento di competenze e accesso al follow-up post-missione."
         }
       ]
+    },
+    "thoughtLeadership": {
+      "title": "Tre dimensioni complementari in un mercato in consolidamento",
+      "desc": "Il mercato tech europeo sta attraversando una trasformazione strutturale: la tecnologia non è più un vantaggio differenziante, ma un prerequisito di sopravvivenza. In questo contesto, strategia, tecnologia e M&A non sono più discipline isolate — formano un trittico inscindibile per i leader che vogliono crescere.",
+      "pillars": [
+        {"label": "Strategia: definire dove giocare", "desc": "Di fronte alla frammentazione del mercato europeo e all'accelerazione tecnologica, i leader devono fare scelte radicali: quali mercati presidiare, quali capacità sviluppare internamente, quali acquisizioni puntare per colmare i gap. La strategia definisce la visione, ma senza roadmap tecnologica né piano M&A, rimane lettera morta."},
+        {"label": "Tecnologia: costruire il vantaggio", "desc": "La tecnologia è diventata la principale leva di differenziazione: esperienza del cliente, efficienza operativa, capacità di innovazione. Ma il 70% delle trasformazioni digitali fallisce per mancanza di allineamento strategico. Una visione tech sconnessa dalla strategia di business genera debito tecnico e investimenti persi."},
+        {"label": "M&A: accelerare attraverso il consolidamento", "desc": "La crescita organica non basta più. I leader tech europei consolidano i loro mercati tramite acquisizioni per guadagnare massa critica, acquisire talenti rari o accelerare la trasformazione digitale. Ma senza una rigorosa due diligence tech e un piano di integrazione IT, le acquisizioni distruggono più valore di quanto ne creino."}
+      ],
+      "conclusion": "Aegryn Advisory interviene all'incrocio di queste tre dimensioni. Aiutiamo i leader tech a definire una strategia di crescita coerente, costruire le capacità tecnologiche per eseguirla e identificare le acquisizioni che accelerano il piano senza creare debito tecnico. Un approccio integrato per un mercato che non perdona più i silos."
     },
     "label": "Consulenza"
   },
@@ -6120,21 +6174,21 @@
   },
   "buildStrip": {
     "label": "Concezione",
-    "assetsLabel": "Asset proprietari",
-    "assetsTitle": "Un portafoglio selettivo\ndi asset tech.",
-    "assetsDesc": "Aegryn progetta e gestisce i propri asset digitali, SaaS B2B, marketplace, strumenti IA. Ogni asset è certificato, documentato e gestito in condizioni reali.",
+    "assetsLabel": "Asset sovrani",
+    "assetsTitle": "Un portafoglio di asset\ntech sovrani.",
+    "assetsDesc": "Aegryn progetta e gestisce i propri asset digitali: SaaS B2B, marketplace, strumenti IA. Ogni asset è sovrano, certificato, documentato e gestito in condizioni reali. Uso interno e deployment per clienti.",
     "assetsCta": "Vedere il portafoglio",
     "engineeringLabel": "Ingegneria degli asset",
-    "engineeringTitle": "Progettazione di asset\nsu misura per terzi.",
-    "engineeringDesc": "Privati, imprenditori, istituzioni: Aegryn progetta il vostro asset digitale in codice personalizzato, prezzo fisso, pronto per la certificazione. Proprietà intellettuale totale, zero debito tecnico.",
-    "engineeringCta": "Scoprire Ingegneria degli asset"
+    "engineeringTitle": "Software sovrano\nsu misura per istituzionali.",
+    "engineeringDesc": "Aziende, fondi di investimento, governi: Aegryn progetta, mantiene o rifà i vostri software da zero. Codice sovrano, prezzo fisso, deployabile su infrastrutture europee. Proprietà intellettuale totale, sicurezza massima, zero debito tecnico. Nessuna integrazione di soluzioni terze: creazione pura.",
+    "engineeringCta": "Scoprire l'ingegneria"
   },
   "buildEngineeringStrip": {
     "label": "Ingegneria degli asset",
-    "title": "Prezzo fisso. Codice proprietario. Pronto per la certificazione.",
+    "title": "Prezzo fisso. Codice sovrano. Pronto per la certificazione.",
     "chip1": "Prezzo fisso contrattualizzato",
     "chip2": "10–16 settimane",
-    "chip3": "Pronto per la certificazione",
+    "chip3": "Codice sovrano europeo",
     "chip4": "IP 100% cliente",
     "cta": "Vedere la progettazione di asset"
   },

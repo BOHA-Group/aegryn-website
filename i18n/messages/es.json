@@ -6174,21 +6174,21 @@
   },
   "buildStrip": {
     "label": "Concepción",
-    "assetsLabel": "Activos propietarios",
-    "assetsTitle": "Una cartera selectiva\nde activos tech.",
-    "assetsDesc": "Aegryn diseña y opera sus propios activos digitales, SaaS B2B, marketplaces, herramientas IA. Cada activo está certificado, documentado y operado en condiciones reales.",
+    "assetsLabel": "Activos soberanos",
+    "assetsTitle": "Una cartera de activos\ntech soberanos.",
+    "assetsDesc": "Aegryn diseña y opera sus propios activos digitales: SaaS B2B, marketplaces, herramientas IA. Cada activo es soberano, certificado, documentado y operado en condiciones reales. Uso interno y despliegue para clientes.",
     "assetsCta": "Ver la cartera",
     "engineeringLabel": "Ingeniería de activos",
-    "engineeringTitle": "Concepción de activos\na medida para terceros.",
-    "engineeringDesc": "Particulares, emprendedores, instituciones: Aegryn diseña su activo digital en código personalizado, precio fijo, listo para certificación. Propiedad intelectual total, cero deuda técnica.",
-    "engineeringCta": "Descubrir Ingeniería de activos"
+    "engineeringTitle": "Software soberano\na medida para institucionales.",
+    "engineeringDesc": "Empresas, fondos de inversión, gobiernos: Aegryn diseña, mantiene o rehace sus programas desde cero. Código soberano, precio fijo, desplegable en infraestructuras europeas. Propiedad intelectual total, máxima seguridad, cero deuda técnica. Sin integraciones de terceros: creación pura.",
+    "engineeringCta": "Descubrir ingeniería"
   },
   "buildEngineeringStrip": {
     "label": "Ingeniería de activos",
-    "title": "Precio fijo. Código exclusivo. Listo para certificación.",
+    "title": "Precio fijo. Código soberano. Listo para certificación.",
     "chip1": "Precio fijo contractualizado",
     "chip2": "10–16 semanas",
-    "chip3": "Listo para certificación",
+    "chip3": "Código soberano europeo",
     "chip4": "IP 100% cliente",
     "cta": "Ver concepción de activos"
   },

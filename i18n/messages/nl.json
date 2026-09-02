@@ -68,9 +68,11 @@
     "craftBuildAssets": "Eigen assets",
     "craftBuildEngineering": "Asset engineering",
     "craftSupport": "Begeleiden",
-    "craftSupportDesc": "Tech-, AI- & M&A-advies — Alle sectoren",
+    "craftSupportDesc": "Strategie-, Tech- & M&A-advies — Alle sectoren",
+    "craftSupportStrategy": "Strategieadvies",
+    "craftSupportTechnology": "Technologieadvies",
+    "craftSupportMA": "M&A-advies",
     "craftSupportAdvisory": "Tech & AI Advisory",
-    "craftSupportAcquisition": "Fusies & Overnames Advisory",
     "craftSupportAlliances": "Partnernetwerk",
     "craftSupportExperts": "Expertennetwerk",
     "craftTransact": "Overdragen",
@@ -245,6 +247,20 @@
       "strategy": {
         "title": "Strategieadvies",
         "desc": "Wij helpen leiders hun strategische visie te definiëren en uit te voeren in een voortdurend veranderende omgeving.",
+        "why": {
+          "title": "Waarom strategieadvies?",
+          "desc": "In een gefragmenteerde Europese markt waar 70% van de strategieën geen duurzame groei genereert, staan tech-leiders voor kritieke beslissingen: internationale expansie, transformatie van het operationeel model, kapitaalallocatie tussen organische groei en overnames. Onze aanpak combineert strategische visie en operationele uitvoering om ambitie om te zetten in meetbare resultaten."
+        },
+        "approach": {
+          "title": "Onze aanpak",
+          "desc": "Wij leveren geen slides. Wij co-creëren met uw teams een strategisch plan verankerd in de realiteit van uw markt, capaciteiten en beperkingen. Elke aanbeveling wordt getest, gekwantificeerd en vergezeld van een gedetailleerd uitvoeringsplan.",
+          "steps": [
+            {"label": "Strategische diagnose", "desc": "Analyse van uw concurrentiepositie, differentiatievoordelen en markttrends. Identificatie van groeikansen en structurele risico's."},
+            {"label": "Visiedefinitie", "desc": "Co-creatie van uw 3-5-jaars strategische visie, afgestemd op uw ambities en capaciteiten. Prioritering van strategische weddenschappen met grote impact."},
+            {"label": "Roadmap", "desc": "Ontwikkeling van een gedetailleerd uitvoeringsplan met mijlpalen, KPI's, resource-allocatie en governance. Identificatie van quick wins en structurele transformaties."},
+            {"label": "Uitvoeringsondersteuning", "desc": "Monitoring van de implementatie, tactische aanpassingen, oplossing van operationele blokkades. Kennisoverdracht aan uw teams voor autonomie."}
+          ]
+        },
         "dimensions": [
           {"label": "Internationale strategie", "desc": "Geografische expansie, vestiging van dochterondernemingen, aanpassing aan lokale markten en strategische partnerschappen."},
           {"label": "Bedrijfstransformatie", "desc": "Herontwerp van het operationele model, digitalisering van processen, verandermanagement en organisatorische afstemming."},
@@ -256,6 +272,20 @@
       "technology": {
         "title": "Technologieadvies",
         "desc": "Wij begeleiden de technologische transformatie van bedrijven met een pragmatische en operationele aanpak.",
+        "why": {
+          "title": "Waarom technologieadvies?",
+          "desc": "Slechts 30% van de digitale transformaties bereikt zijn doelstellingen. Technologie is geen ondersteuning meer: het definieert uw operationeel model, klantervaring en innovatievermogen. Wij helpen leiders technologische ambitie om te zetten in meetbaar concurrentievoordeel door strategische visie en technische uitvoering te combineren."
+        },
+        "approach": {
+          "title": "Onze aanpak",
+          "desc": "Wij doen geen tech-strategie in silo's. Elke aanbeveling is verankerd in uw operationele realiteit: bestaande architectuur, technische schuld, interne competenties, budgetbeperkingen. Wij geven de voorkeur aan incrementele benaderingen die snel waarde genereren terwijl ze langetermijnfundamenten bouwen.",
+          "steps": [
+            {"label": "Technische diagnose", "desc": "Audit van uw infrastructuur, applicaties, data en processen. Identificatie van technische schuld, cyberrisico's en optimalisatiemogelijkheden."},
+            {"label": "Visie en roadmap", "desc": "Definitie van uw doelarchitectuur en prioritering van projecten. Balans tussen quick wins (6-12 maanden) en structurele transformaties (18-36 maanden)."},
+            {"label": "Proof of Concept", "desc": "Technische en zakelijke validatie van prioritaire use cases. Agile aanpak: build, test, learn, iterate. Risicobeperking vóór industrialisatie."},
+            {"label": "Industrialisatie & overdracht", "desc": "Opschaling, integratie in bestaande processen, teamtraining. Progressieve autonomie voor duurzame resultaten."}
+          ]
+        },
         "dimensions": [
           {"label": "Digitale transformatie", "desc": "Digitale strategie, vernieuwing van legacy-systemen, applicatiemodernisering en gebruikerservaring."},
           {"label": "Data & Analytics", "desc": "Data-architectuur, governance, data lake/warehouse, BI, geavanceerde analytics en datamonetisatie."},
@@ -267,7 +297,21 @@
       },
       "ma": {
         "title": "M&A-advies",
-        "desc": "Wij begeleiden fusies, overnames en post-merger-integratie met tech-expertise.",
+        "desc": "Wij begeleiden fusies, overnames en post-acquisitie-integratie met tech-expertise.",
+        "why": {
+          "title": "Waarom M&A-advies?",
+          "desc": "Tech-acquisities mislukken zelden op strategie, maar op uitvoering: onderschatting van technische schuld, mislukte IT-integratie, verlies van sleuteltalenten, niet gerealiseerde technologische synergieën. Wij interveniëren vanaf de due diligence-fase om technische risico's en waardecreatiemogelijkheden te identificeren, en begeleiden vervolgens de integratie tot closing en daarna."
+        },
+        "approach": {
+          "title": "Onze aanpak",
+          "desc": "Wij behandelen elke acquisitie als een transformatiekans. Naast de klassieke technische due diligence beoordelen wij hoe de acquisitie uw IT-modernisering kan versnellen, uw data/AI-capaciteiten kan verrijken, of als platform kan dienen voor marktconsolidatie. Onze expertise bestrijkt de volledige M&A-cyclus.",
+          "steps": [
+            {"label": "Tech due diligence", "desc": "Diepgaande technische audit: architectuur, technische schuld, beveiliging, compliance, IP. Beoordeling van risico's en kansen. Kwantificering van technologische synergieën."},
+            {"label": "Technology blueprint", "desc": "Definitie van de doelarchitectuur na acquisitie. Gedetailleerd IT-integratieplan: systemen, data, processen. Identificatie van quick wins en structurele projecten."},
+            {"label": "Integration Management Office", "desc": "Aansturing van IT-integratie: governance, planning, risicobeheer, teamcoördinatie. Monitoring van kritieke mijlpalen (Day 1, Day 100, synergieën)."},
+            {"label": "Value capture & transformation", "desc": "Realisatie van technologische synergieën. Versnelde modernisering van legacy-systemen. Digitale transformatie na acquisitie voor maximale waardecreatie."}
+          ]
+        },
         "dimensions": [
           {"label": "Transactieadvies", "desc": "Structurering van overdrachten, overnames, fundraising, waardering van tech-assets en onderhandeling."},
           {"label": "Tech Due Diligence", "desc": "Technische audit, beoordeling van technische schuld, analyse van intellectueel eigendom en risico's."},
@@ -301,6 +345,16 @@
           "desc": "Einddocumentatie, kennisoverdracht en toegang tot nazorg."
         }
       ]
+    },
+    "thoughtLeadership": {
+      "title": "Drie complementaire dimensies in een consoliderende markt",
+      "desc": "De Europese tech-markt ondergaat een structurele transformatie: technologie is geen differentiërend voordeel meer, maar een overlevingsvereiste. In deze context zijn strategie, technologie en M&A geen geïsoleerde disciplines meer — ze vormen een onlosmakelijk drieluik voor leiders die willen groeien.",
+      "pillars": [
+        {"label": "Strategie: definiëren waar te spelen", "desc": "Tegenover de fragmentatie van de Europese markt en de technologische versnelling moeten leiders radicale keuzes maken: welke markten aanspreken, welke capaciteiten intern ontwikkelen, welke overnames nastreven om hiaten te dichten. Strategie definieert de visie, maar zonder technologische roadmap of M&A-plan blijft het dode letter."},
+        {"label": "Technologie: het voordeel bouwen", "desc": "Technologie is de belangrijkste differentiatiehefboom geworden: klantervaring, operationele efficiëntie, innovatievermogen. Maar 70% van de digitale transformaties mislukt door gebrek aan strategische afstemming. Een tech-visie losgekoppeld van de bedrijfsstrategie genereert technische schuld en verloren investeringen."},
+        {"label": "M&A: versnellen door consolidatie", "desc": "Organische groei is niet meer genoeg. Europese tech-leiders consolideren hun markten via overnames om kritische massa te bereiken, zeldzame talenten te verwerven of hun digitale transformatie te versnellen. Maar zonder rigoureuze tech due diligence en IT-integratieplan vernietigen overnames meer waarde dan ze creëren."}
+      ],
+      "conclusion": "Aegryn Advisory interveniëert op het snijpunt van deze drie dimensies. Wij helpen tech-leiders een coherente groeistrategie te definiëren, de technologische capaciteiten te bouwen om die uit te voeren, en de overnames te identificeren die het plan versnellen zonder technische schuld te creëren. Een geïntegreerde aanpak voor een markt die silo's niet meer vergeeft."
     },
     "label": "Advies"
   },
@@ -6120,21 +6174,21 @@
   },
   "buildStrip": {
     "label": "Conceptie",
-    "assetsLabel": "Eigen assets",
-    "assetsTitle": "Een selectief portfolio\nvan tech-assets.",
-    "assetsDesc": "Aegryn ontwerpt en beheert eigen digitale assets, B2B SaaS, marktplaatsen, AI-tools. Elk asset is gecertificeerd, gedocumenteerd en beheerd onder echte condities.",
+    "assetsLabel": "Soevereine assets",
+    "assetsTitle": "Een portfolio van soevereine\ntech-assets.",
+    "assetsDesc": "Aegryn ontwerpt en beheert eigen digitale assets: B2B SaaS, marktplaatsen, AI-tools. Elk asset is soeverein, gecertificeerd, gedocumenteerd en beheerd onder echte condities. Intern gebruik en clientdeployment.",
     "assetsCta": "Portfolio bekijken",
     "engineeringLabel": "Asset-engineering",
-    "engineeringTitle": "Op maat gemaakte asset-\nontwerp voor derden.",
-    "engineeringDesc": "Particulieren, ondernemers, instellingen: Aegryn ontwerpt uw digitaal asset in maatwerktechnologie, vaste prijs, klaar voor certificering. Volledig intellectueel eigendom, nul technische schuld.",
-    "engineeringCta": "Asset-engineering ontdekken"
+    "engineeringTitle": "Soevereine software\nop maat voor institutionele klanten.",
+    "engineeringDesc": "Bedrijven, investeringsfondsen, overheden: Aegryn ontwerpt, onderhoudt of herbouwt uw software van nul. Soevereine code, vaste prijs, deploybaar op Europese infrastructuur. Volledig intellectueel eigendom, maximale beveiliging, nul technische schuld. Geen derde-partij-integraties: pure creatie.",
+    "engineeringCta": "Engineering ontdekken"
   },
   "buildEngineeringStrip": {
     "label": "Asset-engineering",
-    "title": "Vaste prijs. Eigen code. Klaar voor certificering.",
+    "title": "Vaste prijs. Soevereine code. Klaar voor certificering.",
     "chip1": "Gecontractualiseerde vaste prijs",
     "chip2": "10–16 weken",
-    "chip3": "Klaar voor certificering",
+    "chip3": "Europese soevereine code",
     "chip4": "100% klant-IP",
     "cta": "Asset-engineering bekijken"
   },

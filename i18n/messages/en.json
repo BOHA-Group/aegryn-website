@@ -499,22 +499,22 @@
   },
   "whatwedo": {
     "label": "Our Conviction",
-    "conviction": "The European tech asset market needs certification, discretion, and reliable data.\nWe are building all three.",
+    "conviction": "The European tech market needs strategic advisory, sovereign software, and independent certification.\nWe are building all three.",
     "items": [
       {
         "num": "01",
-        "title": "Certification was missing.",
-        "desc": "Buying a tech asset without independent certification is like buying a watch without papers. Aegryn provides the papers, certified, verifiable, documented."
+        "title": "Advisory is the key.",
+        "desc": "In a world moving faster than ever, tech leaders need a clear vision and an execution plan. Aegryn Advisory supports strategic decisions, technology transformations and M&A operations with operational expertise — not slides."
       },
       {
         "num": "02",
-        "title": "Discretion was sacrificed.",
-        "desc": "The best disposals do not happen in public. They happen in a closed circle, between parties who know what they are looking for. Aegryn is that circle."
+        "title": "Technological sovereignty was missing.",
+        "desc": "The real challenge of sovereign cloud is not the location of machines — it is the software. Aegryn builds European sovereign software, deployable on locally-located infrastructure, for enterprises and institutional clients. Security, compliance, independence."
       },
       {
         "num": "03",
-        "title": "Switzerland as the certification standard.",
-        "desc": "Rooted in Switzerland. Helvetic rigour, institutional discretion, and access to the continent's most selective family offices and private funds."
+        "title": "Independent certification as a standard.",
+        "desc": "Buying a tech asset without independent certification is like buying a watch without papers. Aegryn certifies and transfers tech assets under a rigorous protocol: Code, IP, Finance, Security. Rooted in Switzerland, reference in Europe."
       }
     ]
   },
@@ -558,10 +558,10 @@
   "aboutSection": {
     "label": "About Aegryn",
     "title": "Five disciplines.\nOne market standard.",
-    "desc": "Aegryn builds tech assets, certifies them under an independent label, transacts them in a closed circle, supports entrepreneurs and acquirers, and documents the market every quarter. The first trust infrastructure for tech M&A in Europe.",
-    "tagline": "CERTIFIED IN SWITZERLAND. REFERENCE IN EUROPE.",
+    "desc": "Aegryn advises tech leaders on strategic decisions, builds sovereign software, certifies and transfers assets under an independent protocol, recruits leaders, and documents the market every quarter. Advisory, construction, certification, talent, intelligence: an integrated ecosystem for tech M&A in Europe.",
+    "tagline": "OPERATIONAL ADVISORY. SOVEREIGN SOFTWARE. INDEPENDENT CERTIFICATION.",
     "cta": "About Aegryn",
-    "quote": "A tech asset without an independent certification is a value without proof. Aegryn provides the proof on every asset, at every transfer.",
+    "quote": "In a world moving faster than ever, advisory is the key to having a clear vision and an execution plan. We support tech leaders with operational expertise — not slides.",
     "ceoName": "",
     "ceoTitle": "Founder, Aegryn",
     "stats": [
@@ -6266,21 +6266,21 @@
   },
   "buildStrip": {
     "label": "Conception",
-    "assetsLabel": "Proprietary Assets",
-    "assetsTitle": "A selective portfolio\nof tech assets.",
-    "assetsDesc": "Aegryn designs and operates its own digital assets, B2B SaaS, marketplaces, AI tools. Each asset is certified, documented, and operated under real conditions.",
+    "assetsLabel": "Sovereign Assets",
+    "assetsTitle": "A portfolio of sovereign\ntech assets.",
+    "assetsDesc": "Aegryn designs and operates its own digital assets: B2B SaaS, marketplaces, AI tools. Each asset is sovereign, certified, documented, and operated under real conditions. Internal use and client deployment.",
     "assetsCta": "View the portfolio",
     "engineeringLabel": "Asset Engineering",
-    "engineeringTitle": "Custom asset design\nfor third parties.",
-    "engineeringDesc": "Individuals, entrepreneurs, institutions: Aegryn designs your digital asset in custom code, fixed price, certification-ready. Full intellectual property, zero technical debt.",
-    "engineeringCta": "Discover Asset Engineering"
+    "engineeringTitle": "Sovereign software\nbuilt for institutional clients.",
+    "engineeringDesc": "Enterprises, investment funds, governments: Aegryn designs, maintains or rebuilds your software from scratch. Sovereign code, fixed price, deployable on European infrastructure. Full IP ownership, maximum security, zero technical debt. No third-party integrations: pure creation.",
+    "engineeringCta": "Discover Engineering"
   },
   "buildEngineeringStrip": {
     "label": "Asset Engineering",
-    "title": "Fixed price. Proprietary code. Certification-ready.",
+    "title": "Fixed price. Sovereign code. Certification-ready.",
     "chip1": "Contractualised fixed price",
     "chip2": "10–16 weeks",
-    "chip3": "Certification-ready",
+    "chip3": "European sovereign code",
     "chip4": "100% client IP",
     "cta": "See asset engineering"
   },
