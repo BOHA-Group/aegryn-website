@@ -91,7 +91,7 @@ export function HeroMountain() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[96vh] min-h-[640px] overflow-hidden"
+      className="relative h-[96vh] min-h-[640px] overflow-hidden pt-20"
       aria-labelledby="hero-title"
     >
       {/* Photo plein format — carousel auto-rotatif + parallax */}
@@ -137,7 +137,7 @@ export function HeroMountain() {
             ref={headingRef}
             id="hero-title"
             className="font-sans font-bold text-white leading-[1.28] tracking-[-0.03em] max-w-4xl mb-6"
-            style={{ fontSize: 'clamp(56px,7.5vw,116px)' }}
+            style={{ fontSize: 'clamp(38px,7.5vw,116px)' }}
             dangerouslySetInnerHTML={{ __html: t('title').replace(/\n/g, '<br>') }}
           />
 
