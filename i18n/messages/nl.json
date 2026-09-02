@@ -4138,63 +4138,63 @@
       "domains": [
         {
           "num": "01",
-          "badge": "Agentic AI",
-          "title": "AI Agents & Business Automation",
-          "desc": "Orchestration of complex workflows by business AI agents connectable to your systems: CRM, ERP, email, documents, APIs, databases. Each agent is auditable, with human-in-the-loop and quality monitoring."
+          "badge": "AI Agenten",
+          "title": "AI Agents & Bedrijfsautomatisering",
+          "desc": "Autonome AI-agenten, workflowautomatisering, RPA en intelligente procesorchestratie om operationele kosten te verlagen en cycli te versnellen."
         },
         {
           "num": "02",
-          "badge": "AI Governance",
-          "title": "Compliance, Risk & AI Governance",
-          "desc": "Compliance platform covering EU AI Act, GDPR, Swiss FADP, NIS2, DORA, ISO 27001. Processing register, controls, evidence, audit trail. Switzerland confirms its FADP applies directly to AI-based processing."
+          "badge": "Compliance AI",
+          "title": "Compliance, Risico & AI Governance",
+          "desc": "Regelgevingsmonitoring, risicoscoring, AI-governance en geautomatiseerde naleving voor NIS2, DORA, AVG en AI Act."
         },
         {
           "num": "03",
-          "badge": "Digital Trust",
-          "title": "Cybersecurity & Digital Trust",
-          "desc": "Cyber risk assessment, asset inventory, vendor risk, incident management, security evidence, compliance mapping. Aligned with 2026 European priorities and NIS2 requirements for critical sectors."
+          "badge": "Cyber Trust",
+          "title": "Cybersecurity & Digitaal Vertrouwen",
+          "desc": "Beveiligingspostuurmanagement, SOC-automatisering, kwetsbaarheidscoring en vertrouwenslabel voor institutionele klanten."
         },
         {
           "num": "04",
-          "badge": "Doc Intelligence",
-          "title": "Document, Contract & Knowledge Intelligence",
-          "desc": "Transform your contracts, policies, invoices and documents into actionable knowledge. Risk identification, critical deadlines and priority actions. Subblink, Aegryn core asset."
+          "badge": "Kennis AI",
+          "title": "Document, Contract & Kennisintellligentie",
+          "desc": "AI-contractanalyse, geautomatiseerde documentextractie, kennisbank en veilige Q&A op eigen corpus."
         },
         {
           "num": "05",
           "badge": "Finance Ops",
-          "title": "Finance, Billing & E-Invoicing Automation",
-          "desc": "Billing automation, e-invoicing (EU ViDA, Swiss Confederation obligation), payment reconciliation, cash-flow, cross-border VAT. Finance Operations layer between CRM and accounting."
+          "title": "Financiën, Facturatie & E-Facturautomatisering",
+          "desc": "Factuurautomatisering, factur-X/ZUGFeRD, betalingsreconciliatie en versnelling van financiële afsluiting."
         },
         {
           "num": "06",
-          "badge": "Decision Intelligence",
-          "title": "Data, BI & Decision Intelligence",
-          "desc": "Causal analysis, scenario simulation, automated recommendations. The software answers: what happened, why, what will happen, what to do. Nearly 40% of European companies use data analytics in 2026."
+          "badge": "Beslissingsintelligentie",
+          "title": "Data, BI & Beslissingsintelligentie",
+          "desc": "Geünificeerde dashboards, voorspellende modellen, KPI-automatisering en real-time beslissingsondersteuning voor leidinggevenden."
         },
         {
           "num": "07",
-          "badge": "Agentic CX",
-          "title": "Customer Experience & Service Automation",
-          "desc": "AI Customer Operations architecture: AI customer agent, knowledge bot, next-best-action, case summarisation, quality monitoring. Relevant for insurance, banking, telecom, retail, healthcare."
+          "badge": "CX Automatisering",
+          "title": "Klantervaring & Service Automatisering",
+          "desc": "Intelligente multichannel ondersteuning, AI-bots, ticketafwijzing en 360° klantervaring-orchestratie."
         },
         {
           "num": "08",
-          "badge": "Procurement Risk",
-          "title": "Supplier, Procurement & Third-Party Risk",
-          "desc": "Supplier scoring, contract analysis, cyber risk, ESG, concentration risk, sanctions, renewals. FINMA notes that outsourcing remains the primary source of operational risk in Swiss finance."
+          "badge": "Inkoop AI",
+          "title": "Leverancier, Inkoop & Derde-Partijrisico",
+          "desc": "Leverancierskwalificatie, geautomatiseerde contractbeoordeling, risicoscoring van derden en ESG-monitoring."
         },
         {
           "num": "09",
-          "badge": "Identity & Trust",
-          "title": "Identity, KYC/KYB & Digital Trust",
-          "desc": "Enterprise onboarding, KYB, KYC, verification, beneficial owners, signatures, credentials, trust records. Switzerland makes E-ID a priority of its 2026 digital strategy."
+          "badge": "Identiteit & Vertrouwen",
+          "title": "Identiteit, KYC/KYB & Digitaal Vertrouwen",
+          "desc": "Digitale identiteitsverificatie, geautomatiseerde KYC/KYB, AML-scoring en gecertificeerde digitale onboarding."
         },
         {
           "num": "10",
-          "badge": "Digital Twin",
-          "title": "Enterprise Asset & Process Intelligence",
-          "desc": "Dynamic representation of your organisation: people, applications, processes, contracts, suppliers, data. Real-time answers on dependencies, costs and operational risks."
+          "badge": "Asset Intelligentie",
+          "title": "Bedrijfsasset & Procesintelligentie",
+          "desc": "Voorspellend onderhoud, IoT-assetbeheer, procesmining en automatisering van operationele efficiëntie."
         }
       ]
     },
@@ -4205,29 +4205,30 @@
       "layers": [
         {
           "key": "data",
-          "title": "Data Layer",
-          "desc": "Ingestion, normalisation and sovereign storage of your business data."
+          "title": "Datalaag",
+          "desc": "Geünificeerde dataverzameling, gestructureerde meren, real-time pipelines en veilige API-connectoren."
         },
         {
           "key": "ai",
-          "title": "AI Layer",
-          "desc": "AI models deployable on-premise or on CH/EU cloud. No data sent to OpenAI, Azure or GCP without explicit agreement."
+          "title": "AI-laag",
+          "desc": "Eigen modellen, fijn-afgestelde LLM's, computer vision en gespecialiseerde AI-agenten."
         },
         {
-          "key": "knowledge",
-          "title": "Knowledge Layer",
-          "desc": "Knowledge graph, semantic indexing, persistent organisational memory."
+          "key": "kennis",
+          "title": "Kennislaag",
+          "desc": "Verrijkte kennisbank, semantische indexering, veilige RAG en regelgevingsintelligentie."
         },
         {
-          "key": "governance",
-          "title": "Governance Layer",
-          "desc": "Audit trail, RBAC, processing register, regulatory compliance (AI Act, NIS2, DORA, FADP)."
+          "key": "action",
+          "title": "Actielaag",
+          "desc": "Workflowautomatisering, intelligente beslissingsbomen, multi-systeemorchestratie en gecertificeerd auditspoor."
         }
       ],
       "verticals": {
         "label": "Vertical Markets",
         "desc": "FinTech, HealthTech and PropTech are vertical markets, not core products. Aegryn applications can be packaged for these markets without building a new architecture each time."
-      }
+      },
+      "subtitle": "Een geïntegreerde architectuur. Vier complementaire lagen."
     },
     "sovereigntySection": {
       "label": "Sovereignty by Architecture",
@@ -4250,7 +4251,7 @@
           "desc": "100% client IP. Aegryn is never co-owner of the delivered code. Full export of source code, documentation and database."
         },
         {
-          "key": "vendor",
+          "key": "leverancier",
           "title": "Zero Vendor Lock-in",
           "desc": "Open source architecture or open standards. You can change integrator at any time without depending on Aegryn."
         },
@@ -4452,11 +4453,11 @@
         }
       ],
       "coInvestNote": "Aegryn may act as a minority co-investor on select projects: equity in exchange for a reduction in build fees. Assessed on a case-by-case basis.",
-      "cta": "Démarrer le processus",
+      "cta": "Het proces starten",
       "exitBanner": {
-        "cta": "En savoir plus sur le processus de cession",
+        "cta": "Meer weten over het desinvesteringsproces",
         "href": "/transact/how-it-works",
-        "text": "La cession est une option, jamais une obligation. Si vous souhaitez céder un jour, early stage ou à maturité, l'actif est conçu pour l'être. La sortie via Aegryn TRANSACT ou confidentielle est disponible si la certification le permet."
+        "text": "Desinvestering is een optie, nooit een verplichting. Als u een asset wilt verkopen, is ons proces er voor u."
       },
       "href": "/en/build",
       "secondary": "Learn more",

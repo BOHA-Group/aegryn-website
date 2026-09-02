@@ -4147,14 +4147,14 @@
         },
         {
           "num": "05",
-          "badge": "Finance Ops",
-          "title": "Finance, Billing & Automatización E-Invoicing",
+          "badge": "Finanzas Ops",
+          "title": "Finanzas, Facturación & Automatización de E-Factura",
           "desc": "Automatización de facturación, e-invoicing (EU ViDA, obligación Confederación suiza), reconciliación de pagos, cash-flow, IVA transfronterizo. Capa Finance Operations entre CRM y contabilidad."
         },
         {
           "num": "06",
-          "badge": "Decision Intelligence",
-          "title": "Data, BI & Decision Intelligence",
+          "badge": "Inteligencia de Decisión",
+          "title": "Datos, BI e Inteligencia de Decisión",
           "desc": "Análisis causal, simulación de escenarios, recomendaciones automatizadas. El software responde a: qué pasó, por qué, qué pasará, qué hacer. Casi el 40% de las empresas europeas usa análisis de datos en 2026."
         },
         {
@@ -4178,10 +4178,12 @@
         {
           "num": "10",
           "badge": "Gemelo Digital",
-          "title": "Enterprise Asset & Process Intelligence",
+          "title": "Inteligencia de Activos y Procesos Empresariales",
           "desc": "Representación dinámica de su organización: personas, aplicaciones, procesos, contratos, proveedores, datos. Respuestas en tiempo real sobre dependencias, costos y riesgos operacionales."
         }
-      ]
+      ],
+      "sectionLabel": "DOMINIOS DE SOLUCIÓN",
+      "intro": "Para cada desafío empresarial, una solución especializada basada en nuestra plataforma Enterprise Intelligence."
     },
     "platformSection": {
       "label": "Arquitectura común",
@@ -4190,33 +4192,34 @@
       "layers": [
         {
           "key": "data",
-          "title": "Data Layer",
-          "desc": "Ingestión, normalización y almacenamiento controlado de sus datos empresariales."
+          "title": "Capa de Datos",
+          "desc": "Recopilación unificada de datos, lagos estructurados, pipelines en tiempo real y conectores API seguros."
         },
         {
           "key": "ai",
-          "title": "AI Layer",
-          "desc": "Modelos IA desplegables on-premise o en cloud CH/EU. Sin envío de datos a OpenAI, Azure o GCP sin acuerdo explícito."
+          "title": "Capa de IA",
+          "desc": "Modelos propietarios, LLMs ajustados, visión por computadora y agentes de IA especializados."
         },
         {
           "key": "knowledge",
-          "title": "Knowledge Layer",
-          "desc": "Grafo de conocimiento, indexación semántica, memoria organizacional persistente."
+          "title": "Capa de Conocimiento",
+          "desc": "Base de conocimiento enriquecida, indexación semántica, RAG seguro e inteligencia regulatoria."
         },
         {
-          "key": "governance",
-          "title": "Governance Layer",
-          "desc": "Audit trail, RBAC, registro de tratamientos, conformidad regulatoria (AI Act, NIS2, DORA, LPD)."
+          "key": "action",
+          "title": "Capa de Acción",
+          "desc": "Automatización de flujos, árboles de decisión inteligentes, orquestación multi-sistema y audit trail certificado."
         }
       ],
       "verticals": {
         "label": "Mercados verticales",
         "desc": "FinTech, HealthTech y PropTech son mercados verticales — no productos de base. Las aplicaciones Aegryn pueden empaquetarse para estos mercados sin crear una nueva arquitectura cada vez."
-      }
+      },
+      "subtitle": "Una arquitectura integrada. Cuatro capas complementarias."
     },
     "sovereigntySection": {
       "label": "Independencia por arquitectura",
-      "title": "Sovereignty by Architecture.",
+      "title": "Independencia por Arquitectura.",
       "desc": "La independencia no es una etiqueta de marketing. Es una propiedad arquitectural verificable.",
       "pillars": [
         {
@@ -4235,7 +4238,7 @@
           "desc": "100% IP del cliente. Aegryn nunca es copropietario del código entregado. Exportación total del código fuente, documentación y base de datos."
         },
         {
-          "key": "vendor",
+          "key": "proveedor",
           "title": "Cero vendor lock-in",
           "desc": "Arquitectura open source o estándares abiertos. Puede cambiar de integrador en cualquier momento sin depender de Aegryn."
         },
@@ -4245,11 +4248,12 @@
           "desc": "Cada decisión IA es trazable, explicable y reversible. Un humano valida las decisiones críticas."
         },
         {
-          "key": "export",
+          "key": "exportacion",
           "title": "Exportación total garantizada",
           "desc": "En cualquier momento, exportación completa del código fuente, datos, modelos y documentación. Cero retención."
         }
-      ]
+      ],
+      "subtitle": "Control del código. Sin dependencia de proveedor. Infraestructura en Europa."
     },
     "difference": {
       "label": "No una agencia. No un estudio.",
@@ -4437,11 +4441,11 @@
         }
       ],
       "coInvestNote": "Aegryn puede actuar como co-inversor minoritario en ciertos proyectos. Evaluado caso por caso.",
-      "cta": "Démarrer le processus",
+      "cta": "Iniciar el proceso",
       "exitBanner": {
-        "cta": "En savoir plus sur le processus de cession",
+        "cta": "Más información sobre el proceso de desinversión",
         "href": "/transact/how-it-works",
-        "text": "La cession est une option, jamais une obligation. Si vous souhaitez céder un jour, early stage ou à maturité, l'actif est conçu pour l'être. La sortie via Aegryn TRANSACT ou confidentielle est disponible si la certification le permet."
+        "text": "La desinversión es una opción, nunca una obligación. Si desea vender un activo, nuestro proceso está disponible."
       },
       "href": "/es/build",
       "secondary": "Más información",

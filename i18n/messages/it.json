@@ -4148,25 +4148,25 @@
         {
           "num": "05",
           "badge": "Finance Ops",
-          "title": "Finance, Billing & Automazione E-Invoicing",
+          "title": "Finanza, Fatturazione & Automazione E-Fattura",
           "desc": "Automazione della fatturazione, e-invoicing (EU ViDA, obbligo Confederazione svizzera), riconciliazione pagamenti, cash-flow, IVA transfrontaliera. Strato Finance Operations tra CRM e contabilità."
         },
         {
           "num": "06",
           "badge": "Decision Intelligence",
-          "title": "Data, BI & Decision Intelligence",
+          "title": "Dati, BI & Decision Intelligence",
           "desc": "Analisi causale, simulazione di scenari, raccomandazioni automatizzate. Il software risponde a: cosa è successo, perché, cosa succederà, cosa fare. Quasi il 40% delle imprese europee usa l'analisi dati nel 2026."
         },
         {
           "num": "07",
           "badge": "Agentic CX",
-          "title": "Customer Experience & Automazione del servizio",
+          "title": "Esperienza Cliente & Automazione Servizi",
           "desc": "Architettura AI Customer Operations: agente clienti IA, knowledge bot, next-best-action, sintesi dei casi, monitoraggio qualità. Rilevante per assicurazioni, banche, telecomunicazioni, retail, sanità."
         },
         {
           "num": "08",
           "badge": "Rischio fornitori",
-          "title": "Fornitori, Procurement & Rischio terze parti",
+          "title": "Fornitori, Approvvigionamento & Rischio Terze Parti",
           "desc": "Scoring fornitori, analisi contratti, rischio cyber, ESG, rischio concentrazione, sanzioni, rinnovi. La FINMA rileva che l'outsourcing rimane la principale fonte di rischio operativo nella finanza svizzera."
         },
         {
@@ -4177,11 +4177,13 @@
         },
         {
           "num": "10",
-          "badge": "Gemello Digitale",
-          "title": "Enterprise Asset & Process Intelligence",
+          "badge": "Asset Intelligence",
+          "title": "Asset Aziendale & Process Intelligence",
           "desc": "Rappresentazione dinamica della vostra organizzazione: persone, applicazioni, processi, contratti, fornitori, dati. Risposte in tempo reale su dipendenze, costi e rischi operativi."
         }
-      ]
+      ],
+      "sectionLabel": "DOMINI DI SOLUZIONE",
+      "intro": "Per ogni sfida aziendale, una soluzione specializzata basata sulla nostra Enterprise Intelligence Platform."
     },
     "platformSection": {
       "label": "Architettura comune",
@@ -4190,33 +4192,34 @@
       "layers": [
         {
           "key": "data",
-          "title": "Data Layer",
-          "desc": "Ingestione, normalizzazione e archiviazione controllata dei vostri dati aziendali."
+          "title": "Livello Dati",
+          "desc": "Raccolta dati unificata, laghi strutturati, pipeline in tempo reale e connettori API sicuri."
         },
         {
           "key": "ai",
-          "title": "AI Layer",
-          "desc": "Modelli IA distribuibili on-premise o cloud CH/EU. Nessun invio di dati a OpenAI, Azure o GCP senza accordo esplicito."
+          "title": "Livello AI",
+          "desc": "Modelli proprietari, LLM ottimizzati, computer vision e agenti AI specializzati."
         },
         {
           "key": "knowledge",
-          "title": "Knowledge Layer",
-          "desc": "Grafo della conoscenza, indicizzazione semantica, memoria organizzativa persistente."
+          "title": "Livello Conoscenza",
+          "desc": "Base di conoscenza arricchita, indicizzazione semantica, RAG sicuro e intelligenza normativa."
         },
         {
-          "key": "governance",
-          "title": "Governance Layer",
-          "desc": "Audit trail, RBAC, registro dei trattamenti, conformità normativa (AI Act, NIS2, DORA, LPD)."
+          "key": "action",
+          "title": "Livello Azione",
+          "desc": "Automazione workflow, alberi decisionali intelligenti, orchestrazione multi-sistema e audit trail certificato."
         }
       ],
       "verticals": {
         "label": "Mercati verticali",
         "desc": "FinTech, HealthTech e PropTech sono mercati verticali — non prodotti di base. Le applicazioni Aegryn possono essere pacchettizzate per questi mercati senza creare una nuova architettura ogni volta."
-      }
+      },
+      "subtitle": "Un'architettura integrata. Quattro livelli complementari."
     },
     "sovereigntySection": {
       "label": "Indipendenza per architettura",
-      "title": "Sovereignty by Architecture.",
+      "title": "Indipendenza per Architettura.",
       "desc": "L'indipendenza non è un'etichetta di marketing. È una proprietà architettonica verificabile.",
       "pillars": [
         {
@@ -4235,7 +4238,7 @@
           "desc": "100% IP del cliente. Aegryn non è mai comproprietario del codice consegnato. Esportazione totale del codice sorgente, documentazione e database."
         },
         {
-          "key": "vendor",
+          "key": "fornitore",
           "title": "Zero vendor lock-in",
           "desc": "Architettura open source o standard aperti. Potete cambiare integratore in qualsiasi momento senza dipendere da Aegryn."
         },
@@ -4245,11 +4248,12 @@
           "desc": "Ogni decisione IA è tracciabile, spiegabile e reversibile. Un essere umano valida le decisioni critiche."
         },
         {
-          "key": "export",
+          "key": "esportazione",
           "title": "Esportazione totale garantita",
           "desc": "In qualsiasi momento, esportazione completa del codice sorgente, dati, modelli e documentazione. Zero ritenzione."
         }
-      ]
+      ],
+      "subtitle": "Controllo del codice. Nessuna dipendenza dal fornitore. Infrastruttura in Europa."
     },
     "difference": {
       "label": "Non un'agenzia. Non uno studio.",
@@ -4437,11 +4441,11 @@
         }
       ],
       "coInvestNote": "Aegryn può agire come co-investitore minoritario su certi progetti. Valutato caso per caso.",
-      "cta": "Démarrer le processus",
+      "cta": "Avviare il processo",
       "exitBanner": {
-        "cta": "En savoir plus sur le processus de cession",
+        "cta": "Scopri di più sul processo di cessione",
         "href": "/transact/how-it-works",
-        "text": "La cession est une option, jamais une obligation. Si vous souhaitez céder un jour, early stage ou à maturité, l'actif est conçu pour l'être. La sortie via Aegryn TRANSACT ou confidentielle est disponible si la certification le permet."
+        "text": "La cessione è un'opzione, mai un obbligo. Se desiderate cedere un asset, il nostro processo è disponibile."
       },
       "href": "/it/build",
       "secondary": "Scopri di più",

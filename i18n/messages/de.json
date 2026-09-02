@@ -4147,14 +4147,14 @@
         },
         {
           "num": "05",
-          "badge": "Finance Ops",
-          "title": "Finance, Billing & E-Invoicing-Automatisierung",
+          "badge": "Finanz-Ops",
+          "title": "Finanzen, Abrechnung & E-Rechnungsautomatisierung",
           "desc": "Rechnungsautomatisierung, E-Invoicing (EU ViDA, Schweizer Bundespflicht), Zahlungsabgleich, Cash-Flow, grenzüberschreitende Mehrwertsteuer. Finance-Operations-Schicht zwischen CRM und Buchhaltung."
         },
         {
           "num": "06",
-          "badge": "Decision Intelligence",
-          "title": "Data, BI & Decision Intelligence",
+          "badge": "Entscheidungsintelligenz",
+          "title": "Daten, BI & Entscheidungsintelligenz",
           "desc": "Kausalanalyse, Szenariosimulation, automatisierte Empfehlungen. Die Software beantwortet: Was ist passiert, warum, was wird passieren, was ist zu tun. Fast 40 % der europäischen Unternehmen nutzen 2026 Datenanalyse."
         },
         {
@@ -4178,10 +4178,12 @@
         {
           "num": "10",
           "badge": "Digitaler Zwilling",
-          "title": "Enterprise Asset & Process Intelligence",
+          "title": "Unternehmensasset & Prozessintelligenz",
           "desc": "Dynamische Darstellung Ihrer Organisation: Personen, Anwendungen, Prozesse, Verträge, Lieferanten, Daten. Echtzeit-Antworten zu Abhängigkeiten, Kosten und operationellen Risiken."
         }
-      ]
+      ],
+      "sectionLabel": "LÖSUNGSDOMÄNEN",
+      "intro": "Für jede Unternehmensherausforderung eine spezialisierte Lösung, die auf unserer Enterprise Intelligence Platform basiert."
     },
     "platformSection": {
       "label": "Gemeinsame Architektur",
@@ -4190,33 +4192,34 @@
       "layers": [
         {
           "key": "data",
-          "title": "Data Layer",
-          "desc": "Erfassung, Normalisierung und beherrschte Speicherung Ihrer Geschäftsdaten."
+          "title": "Datenschicht",
+          "desc": "Einheitliche Datenerfassung, strukturierte Seen, Echtzeit-Pipelines und sichere API-Konnektoren."
         },
         {
           "key": "ai",
-          "title": "AI Layer",
-          "desc": "KI-Modelle, on-premise oder in CH/EU-Cloud einsetzbar. Keine Daten an OpenAI, Azure oder GCP ohne ausdrückliche Zustimmung."
+          "title": "KI-Schicht",
+          "desc": "Proprietäre Modelle, Fine-tuned LLMs, Computer Vision und spezialisierte KI-Agenten."
         },
         {
           "key": "knowledge",
-          "title": "Knowledge Layer",
-          "desc": "Wissensgraph, semantische Indizierung, persistentes organisatorisches Gedächtnis."
+          "title": "Wissensschicht",
+          "desc": "Angereicherte Wissensbasis, semantische Indexierung, sicheres RAG und regulatorische Intelligenz."
         },
         {
-          "key": "governance",
-          "title": "Governance Layer",
-          "desc": "Audit-Trail, RBAC, Verarbeitungsverzeichnis, regulatorische Konformität (AI Act, NIS2, DORA, DSG)."
+          "key": "action",
+          "title": "Aktionsschicht",
+          "desc": "Workflow-Automatisierung, intelligente Entscheidungsbäume, Multi-System-Orchestrierung und zertifizierter Audit-Trail."
         }
       ],
       "verticals": {
         "label": "Vertikale Märkte",
         "desc": "FinTech, HealthTech und PropTech sind vertikale Märkte — keine Kernprodukte. Aegryn-Anwendungen können für diese Märkte paketiert werden, ohne jedes Mal eine neue Architektur zu erstellen."
-      }
+      },
+      "subtitle": "Eine integrierte Architektur. Vier komplementäre Schichten."
     },
     "sovereigntySection": {
       "label": "Unabhängigkeit durch Architektur",
-      "title": "Sovereignty by Architecture.",
+      "title": "Unabhängigkeit durch Architektur.",
       "desc": "Unabhängigkeit ist kein Marketinglabel. Es ist eine nachprüfbare architektonische Eigenschaft.",
       "pillars": [
         {
@@ -4235,7 +4238,7 @@
           "desc": "100% Kunden-IP. Aegryn ist niemals Miteigentümer des gelieferten Codes. Vollständiger Export von Quellcode, Dokumentation und Datenbank."
         },
         {
-          "key": "vendor",
+          "key": "anbieter",
           "title": "Kein Vendor-Lock-in",
           "desc": "Open-Source-Architektur oder offene Standards. Sie können jederzeit den Integrator wechseln, ohne von Aegryn abhängig zu sein."
         },
@@ -4249,7 +4252,8 @@
           "title": "Vollständiger Export garantiert",
           "desc": "Jederzeit vollständiger Export von Quellcode, Daten, Modellen und Dokumentation. Keine Zurückbehaltung."
         }
-      ]
+      ],
+      "subtitle": "Code-Kontrolle. Keine Anbieterabhängigkeit. Infrastruktur in Europa."
     },
     "difference": {
       "label": "Keine Agentur. Kein Studio.",
@@ -4437,11 +4441,11 @@
         }
       ],
       "coInvestNote": "Aegryn kann als Minderheits-Co-Investor auftreten. Fallweise Prüfung.",
-      "cta": "Démarrer le processus",
+      "cta": "Den Prozess starten",
       "exitBanner": {
-        "cta": "En savoir plus sur le processus de cession",
+        "cta": "Mehr über den Veräußerungsprozess erfahren",
         "href": "/transact/how-it-works",
-        "text": "La cession est une option, jamais une obligation. Si vous souhaitez céder un jour, early stage ou à maturité, l'actif est conçu pour l'être. La sortie via Aegryn TRANSACT ou confidentielle est disponible si la certification le permet."
+        "text": "Veräußerung ist eine Option, niemals eine Verpflichtung. Wenn Sie ein Asset verkaufen möchten, ist unser Prozess da."
       },
       "href": "/de/build",
       "secondary": "Mehr erfahren",

@@ -4122,63 +4122,63 @@
       "domains": [
         {
           "num": "01",
-          "badge": "Agentic AI",
+          "badge": "AI Agents",
           "title": "AI Agents & Business Automation",
-          "desc": "Orchestration of complex workflows by business AI agents connectable to your systems: CRM, ERP, email, documents, APIs, databases. Each agent is auditable, with human-in-the-loop and quality monitoring."
+          "desc": "Autonomous AI agents, workflow automation, RPA and intelligent process orchestration to reduce operational costs and accelerate cycles."
         },
         {
           "num": "02",
-          "badge": "AI Governance",
+          "badge": "Compliance AI",
           "title": "Compliance, Risk & AI Governance",
-          "desc": "Compliance platform covering EU AI Act, GDPR, Swiss FADP, NIS2, DORA, ISO 27001. Processing register, controls, evidence, audit trail. Switzerland confirms its FADP applies directly to AI-based processing."
+          "desc": "Regulatory monitoring, risk scoring, AI governance and automated compliance for NIS2, DORA, RGPD and AI Act."
         },
         {
           "num": "03",
-          "badge": "Digital Trust",
+          "badge": "Cyber Trust",
           "title": "Cybersecurity & Digital Trust",
-          "desc": "Cyber risk assessment, asset inventory, vendor risk, incident management, security evidence, compliance mapping. Aligned with 2026 European priorities and NIS2 requirements for critical sectors."
+          "desc": "Security posture management, SOC automation, vulnerability scoring and trust label for institutional clients."
         },
         {
           "num": "04",
-          "badge": "Doc Intelligence",
+          "badge": "Knowledge AI",
           "title": "Document, Contract & Knowledge Intelligence",
-          "desc": "Transform your contracts, policies, invoices and documents into actionable knowledge. Risk identification, critical deadlines and priority actions. Subblink, Aegryn core asset."
+          "desc": "AI contract analysis, automated document extraction, knowledge base and secure Q&A on proprietary corpus."
         },
         {
           "num": "05",
           "badge": "Finance Ops",
           "title": "Finance, Billing & E-Invoicing Automation",
-          "desc": "Billing automation, e-invoicing (EU ViDA, Swiss Confederation obligation), payment reconciliation, cash-flow, cross-border VAT. Finance Operations layer between CRM and accounting."
+          "desc": "Invoice automation, factur-X / ZUGFeRD, payment reconciliation and financial closing acceleration."
         },
         {
           "num": "06",
           "badge": "Decision Intelligence",
           "title": "Data, BI & Decision Intelligence",
-          "desc": "Causal analysis, scenario simulation, automated recommendations. The software answers: what happened, why, what will happen, what to do. Nearly 40% of European companies use data analytics in 2026."
+          "desc": "Unified dashboards, predictive models, KPI automation and real-time decision support for executives."
         },
         {
           "num": "07",
-          "badge": "Agentic CX",
+          "badge": "CX Automation",
           "title": "Customer Experience & Service Automation",
-          "desc": "AI Customer Operations architecture: AI customer agent, knowledge bot, next-best-action, case summarisation, quality monitoring. Relevant for insurance, banking, telecom, retail, healthcare."
+          "desc": "Intelligent multichannel support, AI bots, ticket deflection and 360° customer experience orchestration."
         },
         {
           "num": "08",
-          "badge": "Procurement Risk",
+          "badge": "Procurement AI",
           "title": "Supplier, Procurement & Third-Party Risk",
-          "desc": "Supplier scoring, contract analysis, cyber risk, ESG, concentration risk, sanctions, renewals. FINMA notes that outsourcing remains the primary source of operational risk in Swiss finance."
+          "desc": "Supplier qualification, automated contract review, third-party risk scoring and ESG monitoring."
         },
         {
           "num": "09",
           "badge": "Identity & Trust",
           "title": "Identity, KYC/KYB & Digital Trust",
-          "desc": "Enterprise onboarding, KYB, KYC, verification, beneficial owners, signatures, credentials, trust records. Switzerland makes E-ID a priority of its 2026 digital strategy."
+          "desc": "Digital identity verification, automated KYC/KYB, AML scoring and certified digital onboarding."
         },
         {
           "num": "10",
-          "badge": "Digital Twin",
+          "badge": "Asset Intelligence",
           "title": "Enterprise Asset & Process Intelligence",
-          "desc": "Dynamic representation of your organisation: people, applications, processes, contracts, suppliers, data. Real-time answers on dependencies, costs and operational risks."
+          "desc": "Predictive maintenance, IoT asset management, process mining and operational efficiency automation."
         }
       ]
     },
@@ -4190,28 +4190,29 @@
         {
           "key": "data",
           "title": "Data Layer",
-          "desc": "Ingestion, normalisation and mastered storage of your business data."
+          "desc": "Unified data collection, structured lakes, real-time pipelines and secure API connectors."
         },
         {
           "key": "ai",
           "title": "AI Layer",
-          "desc": "AI models deployable on-premise or on CH/EU cloud. No data sent to OpenAI, Azure or GCP without explicit agreement."
+          "desc": "Proprietary models, fine-tuned LLMs, computer vision and specialised AI agents."
         },
         {
           "key": "knowledge",
           "title": "Knowledge Layer",
-          "desc": "Knowledge graph, semantic indexing, persistent organisational memory."
+          "desc": "Enriched knowledge base, semantic indexing, secure RAG and regulatory intelligence."
         },
         {
-          "key": "governance",
-          "title": "Governance Layer",
-          "desc": "Audit trail, RBAC, processing register, regulatory compliance (AI Act, NIS2, DORA, FADP)."
+          "key": "action",
+          "title": "Action Layer",
+          "desc": "Workflow automation, intelligent decision trees, multi-system orchestration and certified audit trail."
         }
       ],
       "verticals": {
         "label": "Vertical Markets",
         "desc": "FinTech, HealthTech and PropTech are vertical markets, not core products. Aegryn applications can be packaged for these markets without building a new architecture each time."
-      }
+      },
+      "subtitle": "An integrated architecture. Four complementary layers."
     },
     "sovereigntySection": {
       "label": "Independence by Architecture",
@@ -4436,11 +4437,11 @@
         }
       ],
       "coInvestNote": "Aegryn may act as a minority co-investor on select projects: equity in exchange for a reduction in build fees. Assessed on a case-by-case basis.",
-      "cta": "Démarrer le processus",
+      "cta": "Start the process",
       "exitBanner": {
-        "cta": "En savoir plus sur le processus de cession",
+        "cta": "Learn more about the divestiture process",
         "href": "/transact/how-it-works",
-        "text": "La cession est une option, jamais une obligation. Si vous souhaitez céder un jour, early stage ou à maturité, l'actif est conçu pour l'être. La sortie via Aegryn TRANSACT ou confidentielle est disponible si la certification le permet."
+        "text": "Divestiture is an option, never an obligation. If you ever wish to sell an asset, our process is there."
       },
       "href": "/en/build",
       "secondary": "Learn more",
