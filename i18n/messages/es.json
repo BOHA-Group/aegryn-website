@@ -96,8 +96,8 @@
     "solutionsCoreDesc": "Diseñados, desarrollados y operados por Aegryn",
     "solutionsPortfolioTitle": "Activos en cartera",
     "solutionsPortfolioDesc": "Participaciones estratégicas y acompañamiento",
-    "solutionsDomainsLabel": "TOP 10 DOMINIOS DE SOFTWARE",
-    "solutionsDomainsDesc": "Dominios prioritarios para la creación de activos de software soberanos",
+    "solutionsDomainsLabel": "DOMINIOS DE ACTIVOS DE SOFTWARE",
+    "solutionsDomainsDesc": "",
     "solutionsDomain1": "AI Agents & Business Automation",
     "solutionsDomain2": "Compliance, Risk & AI Governance",
     "solutionsDomain3": "Cybersecurity & Digital Trust",
@@ -117,7 +117,7 @@
     "solutionsHobconnect": "hobconnect",
     "thinkingMagazine": "The Aegryn Magazine",
     "thinkingMagazineDesc": "La publicación trimestral de referencia sobre tech y M&A en Europa.",
-    "thinkingMagazineIssues": "Número-01, enero 2027",
+    "thinkingMagazineIssues": "Número-01 - Enero 2027",
     "whoGroup": "El grupo",
     "whoGroupDesc": "Historia, misión, valores",
     "whoAbout": "Acerca de Aegryn",
@@ -472,55 +472,108 @@
     ],
     "cta": "Presenta tu activo para certificación"
   },
+  "founderQuote": {
+    "text": "Hemos dedicado nuestro tiempo a construir, asesorar y reestructurar organizaciones. Lo que hemos aprendido no tiene precio: las empresas que perduran no eligen entre estrategia y tecnología. Las piensan juntas. Aegryn existe para quienes han entendido eso.",
+    "author": "El Fundador, Aegryn"
+  },
   "aboutSection": {
     "label": "Sobre Aegryn",
-    "title": "Cinco disciplinas.\nUn estándar de mercado.",
-    "desc": "Aegryn construye software soberano, acompaña a los líderes tech, certifica y transmite activos, recluta talento executive y documenta el mercado. Cinco disciplinas ejercidas con el mismo nivel de exigencia, en Suiza y Europa.",
-    "tagline": "CERTIFICADO EN SUIZA. REFERENCIA EN EUROPA.",
-    "cta": "Sobre Aegryn",
-    "quote": "Un activo tech sin certificación independiente es un valor sin prueba. Aegryn aporta la prueba en cada activo, en cada transferencia.",
-    "ceoName": "Yohann Bollack",
+    "title": "Cinco disciplinas.\nUna sola empresa.",
+    "desc": "Aegryn es a la vez una consultora y una empresa tech. Asesoramos en estrategia, tecnología y M&A. Construimos activos digitales duraderos para nuestros clientes. Estructuramos transacciones. Reclutamos a los directivos que ejecutan. Y documentamos el mercado.\n\nLo que hacemos para nuestros clientes nos lo aplicamos a nosotros mismos. Nuestros propios activos pasan por nuestros propios métodos. Este ADN híbrido, consultora y empresa tech, es lo que muy pocos actores pueden realmente reivindicar.",
+    "tagline": "ASESORÍA EN ESTRATEGIA, TECH Y M&A. UN ÚNICO ESTÁNDAR.",
+    "cta": "Nuestras disciplinas →",
+    "ctaHref": "/advisory",
+    "quote": "Lo que hacemos para nuestros clientes nos lo aplicamos a nosotros mismos. Nuestros propios activos pasan por nuestros propios métodos. Esta coherencia es nuestra única credibilidad.",
+    "ceoName": "",
     "ceoTitle": "Fundador, Aegryn",
     "stats": [
       {
-        "val": "6",
-        "label": "Activos propietarios"
+        "val": "5",
+        "label": "Disciplinas integradas",
+        "sub": "Asesoría · Construcción · Transacción · Talento · Inteligencia"
       },
       {
-        "val": "5",
-        "label": "Grados de certificación"
+        "val": "23+",
+        "label": "Industrias cubiertas",
+        "sub": "Todos los tamaños, todas las geografías EU"
       },
       {
         "val": "< 25%",
-        "label": "Aceptados"
+        "label": "Tasa de selección",
+        "sub": "Rigor aplicado a cada compromiso"
+      },
+      {
+        "val": "100%",
+        "label": "Alineación con el cliente",
+        "sub": "Lo que asesoramos, nos lo aplicamos"
       }
     ]
   },
   "missionSection": {
     "label": "El Modelo Aegryn",
-    "sub": "Cinco disciplinas. Un ecosistema integrado.",
+    "title": "Cinco disciplinas integradas. Un estándar.",
+    "sub": "Cada disciplina refuerza a las demás. Eso es lo que pocos grupos pueden realmente ofrecer.",
     "items": [
       {
-        "title": "CONSTRUIR",
-        "desc": "Diseñamos, desplegamos y mantenemos software empresarial a medida para empresas. Código soberano, sin dependencia de editor, integrable en su infraestructura."
+        "title": "ASESORAR",
+        "desc": "Asesoría en estrategia, tech y M&A. Intervenimos cuando las decisiones definen la trayectoria de su organización."
       },
       {
-        "title": "ACOMPAÑAR",
-        "desc": "Asesoría estratégica, tecnológica y en transacciones para empresas tech. Experiencia operacional en cumplimiento, ciberseguridad, transformación digital y operaciones de transmisión."
+        "title": "CONSTRUIR",
+        "desc": "Activos digitales duraderos, a precio fijo, propiedad total del cliente. Diseñados para valorizar la empresa, no para ser reemplazados."
       },
       {
         "title": "TRANSMITIR",
-        "desc": "Certificación independiente en 4 dimensiones: Código, PI, Finanzas, Seguridad. Mandato exclusivo 60 días, depósito institucional. Menos del 25 % de los activos presentados son aceptados."
+        "desc": "Certificación y transacción de activos tech. Un proceso confidencial dentro de un círculo de compradores cualificados."
       },
       {
         "title": "RECLUTAR",
-        "desc": "Reclutamos y colocamos perfiles tech executive: CTO, VP Engineering, Head of Product, expertos en ciberseguridad e IA. Headhunting especializado para startups y scale-ups europeas."
+        "desc": "Perfiles executive, tech e innovación. Del CTO al Director General, colocamos los talentos que ejecutan la transformación."
       },
       {
-        "title": "INFORMARSE",
-        "desc": "Revista trimestral, brief semanal, artículos y análisis. Documentamos las transformaciones del mercado tech europeo para los líderes que lo impulsan."
+        "title": "INFORMAR",
+        "desc": "Revista, artículos e inteligencia de mercado. Documentamos lo que observamos y lo que vivimos."
       }
     ]
+  },
+  "homeTalent": {
+    "label": "RECLUTAR",
+    "title": "Los perfiles que marcan la diferencia.",
+    "desc": "Identificamos y colocamos a los directivos, expertos tech y perfiles de innovación que hacen avanzar las organizaciones. CTO, CISO, Head of AI, COO, DPO, Director de Transformación. En Suiza y en Europa.\n\nNuestro objetivo es siempre el mismo: reforzar el valor de su empresa mediante las personas adecuadas en el momento oportuno.",
+    "cta1": "Encontrar un perfil →",
+    "cta1Href": "/talent",
+    "cta2": "Soy candidato →",
+    "cta2Href": "/talent#candidat"
+  },
+  "homeSegments": {
+    "label": "NUESTROS CLIENTES",
+    "title": "Acompañamos empresas en cada etapa.",
+    "cards": [
+      {
+        "key": "startup",
+        "title": "Startup & Scale-up",
+        "desc": "Sentar las bases técnicas y estratégicas correctas. Crear valor desde el primer día. Preparar la próxima ronda o la salida."
+      },
+      {
+        "key": "pme",
+        "title": "PYME en crecimiento",
+        "desc": "Transformar, certificar y reclutar antes de vender o captar fondos. Construir activos que perduren."
+      },
+      {
+        "key": "enterprise",
+        "title": "Grandes corporaciones",
+        "desc": "Estrategia tech, M&A de cartera, activos internos propietarios, reclutamiento directivo."
+      },
+      {
+        "key": "funds",
+        "title": "Fondos & Inversores",
+        "desc": "Deal flow cualificado, certificación de activos, acompañamiento post-adquisición, reclutamiento de equipos directivos."
+      }
+    ]
+  },
+  "homeHybrid": {
+    "title": "Lo que hacemos para nuestros clientes\nnos lo aplicamos a nosotros mismos.",
+    "desc": "Aegryn asesora y construye activos tech.\nAegryn certifica sus propios activos con sus propios métodos.\nAegryn estructura transacciones incluidas las suyas propias.\nAegryn recluta directivos incluidos para sus propias entidades.\nAegryn publica sobre un mercado que conoce desde dentro.\n\nNo es una consultora. No es una agencia. Es un grupo híbrido.\nConsultora y empresa tech. Las dos cosas a la vez."
   },
   "whyapps": {
     "label": "Por qué Aegryn",
@@ -1210,7 +1263,7 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 AEGRYN",
+    "legal": "© 2026 Aegryn SA · Saint-Sulpice, Vaud, Suiza",
     "company": "Una empresa Aegryn",
     "privacy": "Privacidad",
     "terms": "Términos",
@@ -6292,23 +6345,23 @@
     "cta": "Enviar un activo"
   },
   "buildStrip": {
-    "label": "Concepción",
-    "assetsLabel": "Activos soberanos",
-    "assetsTitle": "Una cartera de activos\ntech soberanos.",
-    "assetsDesc": "Aegryn diseña y opera sus propios activos digitales: SaaS B2B, marketplaces, herramientas IA. Cada activo es soberano, certificado, documentado y operado en condiciones reales. Uso interno y despliegue para clientes.",
+    "label": "Construir",
+    "assetsLabel": "Activos propietarios",
+    "assetsTitle": "Una cartera de activos\ntech propietarios.",
+    "assetsDesc": "Aegryn diseña y opera sus propios activos digitales: SaaS B2B, marketplaces, herramientas IA. Cada activo está certificado, documentado y operado en condiciones reales. Software concebido para las operaciones del grupo y abierto al mercado.",
     "assetsCta": "Ver la cartera",
     "engineeringLabel": "Ingeniería de activos",
-    "engineeringTitle": "Software soberano\na medida para institucionales.",
-    "engineeringDesc": "Empresas, fondos de inversión, gobiernos: Aegryn diseña, mantiene o rehace sus programas desde cero. Código soberano, precio fijo, desplegable en infraestructuras europeas. Propiedad intelectual total, máxima seguridad, cero deuda técnica. Sin integraciones de terceros: creación pura.",
+    "engineeringTitle": "Software a medida\npara sus operaciones.",
+    "engineeringDesc": "Empresas, fondos de inversión, instituciones: Aegryn diseña, despliega y mantiene su software de negocio. Precio fijo contractualizado, propiedad IP total del cliente, listo para certificación. Un activo que trabaja para usted y sus inversores.",
     "engineeringCta": "Descubrir ingeniería"
   },
   "buildEngineeringStrip": {
     "label": "Ingeniería de activos",
-    "title": "Precio fijo. Código soberano. Listo para certificación.",
-    "chip1": "Precio fijo contractualizado",
-    "chip2": "10–16 semanas",
-    "chip3": "Código soberano europeo",
-    "chip4": "IP 100% cliente",
+    "title": "Precio fijo. Propiedad IP total. Listo para certificación.",
+    "chip1": "PRECIO FIJO CONTRACTUALIZADO",
+    "chip2": "PROPIEDAD IP TOTAL DEL CLIENTE",
+    "chip3": "LISTO PARA CERTIFICACIÓN",
+    "chip4": "CERO DEPENDENCIA DE PROVEEDOR",
     "cta": "Ver concepción de activos"
   },
   "techStack": {

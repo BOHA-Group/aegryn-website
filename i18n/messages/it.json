@@ -96,8 +96,8 @@
     "solutionsCoreDesc": "Progettati, sviluppati e gestiti da Aegryn",
     "solutionsPortfolioTitle": "Asset in portafoglio",
     "solutionsPortfolioDesc": "Partecipazioni strategiche e accompagnamento",
-    "solutionsDomainsLabel": "TOP 10 DOMINI SOFTWARE",
-    "solutionsDomainsDesc": "Domini prioritari per la creazione di asset software sovrani",
+    "solutionsDomainsLabel": "DOMINI DI ASSET SOFTWARE",
+    "solutionsDomainsDesc": "",
     "solutionsDomain1": "AI Agents & Business Automation",
     "solutionsDomain2": "Compliance, Risk & AI Governance",
     "solutionsDomain3": "Cybersecurity & Digital Trust",
@@ -117,7 +117,7 @@
     "solutionsHobconnect": "hobconnect",
     "thinkingMagazine": "The Aegryn Magazine",
     "thinkingMagazineDesc": "La pubblicazione trimestrale di riferimento su tech e M&A in Europa.",
-    "thinkingMagazineIssues": "Numero-01, gennaio 2027",
+    "thinkingMagazineIssues": "Numero-01 - Gennaio 2027",
     "whoGroup": "Il gruppo",
     "whoGroupDesc": "Storia, missione, valori",
     "whoAbout": "Chi è Aegryn",
@@ -472,55 +472,108 @@
     ],
     "cta": "Sottometti il tuo asset per la certificazione"
   },
+  "founderQuote": {
+    "text": "Abbiamo dedicato il nostro tempo a costruire, consigliare e ristrutturare organizzazioni. Ciò che abbiamo imparato non ha prezzo: le aziende che durano non scelgono tra strategia e tecnologia. Le pensano insieme. Aegryn esiste per coloro che l'hanno capito.",
+    "author": "Il Fondatore, Aegryn"
+  },
   "aboutSection": {
-    "label": "Su Aegryn",
-    "title": "Cinque discipline.\nUno standard di mercato.",
-    "desc": "Aegryn costruisce software sovrano, accompagna i leader tech, certifica e trasmette asset, recluta talenti executive e documenta il mercato. Cinque discipline esercitate con lo stesso livello di rigore, in Svizzera e in Europa.",
-    "tagline": "CERTIFICATO IN SVIZZERA. RIFERIMENTO IN EUROPA.",
-    "cta": "Chi è Aegryn",
-    "quote": "Un asset tech senza certificazione indipendente è un valore senza prova. Aegryn fornisce la prova su ogni asset, ad ogni trasferimento.",
-    "ceoName": "Yohann Bollack",
+    "label": "Chi è Aegryn",
+    "title": "Cinque discipline.\nUna sola azienda.",
+    "desc": "Aegryn è allo stesso tempo una società di consulenza e un'azienda tech. Consigliamo su strategia, tecnologia e M&A. Costruiamo asset digitali duraturi per i nostri clienti. Strutturiamo transazioni. Reclut iamo i dirigenti che eseguono. E documentiamo il mercato.\n\nCiò che facciamo per i nostri clienti, lo applichiamo a noi stessi. I nostri asset passano attraverso i nostri stessi metodi. Questo DNA ibrido, società di consulenza e azienda tech, è ciò che pochissimi attori possono realmente rivendicare.",
+    "tagline": "CONSULENZA IN STRATEGIA, TECH E M&A. UN SOLO STANDARD.",
+    "cta": "Le nostre discipline →",
+    "ctaHref": "/advisory",
+    "quote": "Ciò che facciamo per i nostri clienti, lo applichiamo a noi stessi. I nostri asset passano attraverso i nostri stessi metodi. Questa coerenza è la nostra unica credibilità.",
+    "ceoName": "",
     "ceoTitle": "Fondatore, Aegryn",
     "stats": [
       {
-        "val": "6",
-        "label": "Asset proprietari"
+        "val": "5",
+        "label": "Discipline integrate",
+        "sub": "Consulenza · Costruzione · Transazione · Talento · Intelligence"
       },
       {
-        "val": "5",
-        "label": "Gradi di certificazione"
+        "val": "23+",
+        "label": "Settori coperti",
+        "sub": "Tutte le dimensioni, tutte le geografie EU"
       },
       {
         "val": "< 25%",
-        "label": "Accettati"
+        "label": "Tasso di selezione",
+        "sub": "Rigore applicato ad ogni impegno"
+      },
+      {
+        "val": "100%",
+        "label": "Allineamento cliente",
+        "sub": "Ciò che consigliamo, lo applichiamo a noi stessi"
       }
     ]
   },
   "missionSection": {
     "label": "Il Modello Aegryn",
-    "sub": "Cinque discipline. Un ecosistema integrato.",
+    "title": "Cinque discipline integrate. Un solo standard.",
+    "sub": "Ogni disciplina rafforza le altre. È ciò che pochi gruppi possono realmente offrire.",
     "items": [
       {
-        "title": "COSTRUIRE",
-        "desc": "Progettiamo, distribuiamo e manteniamo software aziendale su misura per le imprese. Codice sovrano, senza dipendenza dall'editore, integrabile nella vostra infrastruttura."
+        "title": "CONSIGLIARE",
+        "desc": "Consulenza in strategia, tech e M&A. Interveniamo quando le decisioni definiscono la traiettoria della vostra organizzazione."
       },
       {
-        "title": "ACCOMPAGNARE",
-        "desc": "Consulenza strategica, tecnologica e in transazioni per le aziende tech. Competenza operativa su compliance, cybersecurity, trasformazione digitale e operazioni di trasmissione."
+        "title": "COSTRUIRE",
+        "desc": "Asset digitali duraturi, a prezzo fisso, totalmente di proprietà del cliente. Progettati per valorizzare l'azienda, non per essere sostituiti."
       },
       {
         "title": "TRASMETTERE",
-        "desc": "Certificazione indipendente su 4 dimensioni: Codice, IP, Finanza, Sicurezza. Mandato esclusivo 60 giorni, deposito istituzionale. Meno del 25 % degli asset presentati vengono accettati."
+        "desc": "Certificazione e transazione di asset tech. Un processo riservato in una cerchia di acquirenti qualificati."
       },
       {
         "title": "RECLUTARE",
-        "desc": "Reclut iamo e collochiamo profili tech executive: CTO, VP Engineering, Head of Product, esperti di cybersecurity e IA. Headhunting specializzato per startup e scale-up europee."
+        "desc": "Profili executive, tech e innovazione. Dal CTO al Direttore Generale, collochiamo i talenti che eseguono la trasformazione."
       },
       {
-        "title": "INFORMARSI",
-        "desc": "Rivista trimestrale, brief settimanale, articoli e analisi. Documentiamo le trasformazioni del mercato tech europeo per i leader che lo guidano."
+        "title": "INFORMARE",
+        "desc": "Rivista, articoli e intelligence di mercato. Documentiamo ciò che osserviamo e ciò che viviamo."
       }
     ]
+  },
+  "homeTalent": {
+    "label": "RECLUTARE",
+    "title": "I profili che fanno la differenza.",
+    "desc": "Identifichiamo e collochiamo i dirigenti, gli esperti tech e i profili dell'innovazione che fanno avanzare le organizzazioni. CTO, CISO, Head of AI, COO, DPO, Chief Transformation Officer. In Svizzera e in Europa.\n\nIl nostro obiettivo è sempre lo stesso: rafforzare il valore della vostra azienda attraverso le persone giuste al momento giusto.",
+    "cta1": "Trovare un profilo →",
+    "cta1Href": "/talent",
+    "cta2": "Sono un candidato →",
+    "cta2Href": "/talent#candidat"
+  },
+  "homeSegments": {
+    "label": "I NOSTRI CLIENTI",
+    "title": "Accompagniamo le aziende in ogni fase.",
+    "cards": [
+      {
+        "key": "startup",
+        "title": "Startup & Scale-up",
+        "desc": "Porre le giuste fondamenta tecniche e strategiche. Costruire valore dal primo giorno. Prepararsi al prossimo round o all'exit."
+      },
+      {
+        "key": "pme",
+        "title": "PMI in crescita",
+        "desc": "Trasformare, certificare e reclutare prima di vendere o raccogliere fondi. Costruire asset che durano."
+      },
+      {
+        "key": "enterprise",
+        "title": "Grandi aziende",
+        "desc": "Strategia tech, M&A di portafoglio, asset interni proprietari, reclutamento dirigenziale."
+      },
+      {
+        "key": "funds",
+        "title": "Fondi & Investitori",
+        "desc": "Deal flow qualificato, certificazione di asset, supporto post-acquisizione, reclutamento dei team di direzione."
+      }
+    ]
+  },
+  "homeHybrid": {
+    "title": "Ciò che facciamo per i nostri clienti,\nlo applichiamo a noi stessi.",
+    "desc": "Aegryn consiglia e costruisce asset tech.\nAegryn certifica i propri asset con i propri metodi.\nAegryn struttura transazioni incluse le proprie.\nAegryn recluta dirigenti anche per le proprie entità.\nAegryn pubblica su un mercato che conosce dall'interno.\n\nNon una consulenza. Non un'agenzia. Un gruppo ibrido.\nSocietà di consulenza e azienda tech. Entrambe allo stesso tempo."
   },
   "whyapps": {
     "label": "Perché Aegryn",
@@ -6292,23 +6345,23 @@
     "cta": "Invia un asset"
   },
   "buildStrip": {
-    "label": "Concezione",
-    "assetsLabel": "Asset sovrani",
-    "assetsTitle": "Un portafoglio di asset\ntech sovrani.",
-    "assetsDesc": "Aegryn progetta e gestisce i propri asset digitali: SaaS B2B, marketplace, strumenti IA. Ogni asset è sovrano, certificato, documentato e gestito in condizioni reali. Uso interno e deployment per clienti.",
+    "label": "Costruire",
+    "assetsLabel": "Asset proprietari",
+    "assetsTitle": "Un portafoglio di asset\ntech proprietari.",
+    "assetsDesc": "Aegryn progetta e gestisce i propri asset digitali: SaaS B2B, marketplace, strumenti IA. Ogni asset è certificato, documentato e gestito in condizioni reali. Software progettato per le operazioni del gruppo e aperto al mercato.",
     "assetsCta": "Vedere il portafoglio",
     "engineeringLabel": "Ingegneria degli asset",
-    "engineeringTitle": "Software sovrano\nsu misura per istituzionali.",
-    "engineeringDesc": "Aziende, fondi di investimento, governi: Aegryn progetta, mantiene o rifà i vostri software da zero. Codice sovrano, prezzo fisso, deployabile su infrastrutture europee. Proprietà intellettuale totale, sicurezza massima, zero debito tecnico. Nessuna integrazione di soluzioni terze: creazione pura.",
+    "engineeringTitle": "Software su misura\nper le vostre operazioni.",
+    "engineeringDesc": "Aziende, fondi di investimento, istituzioni: Aegryn progetta, distribuisce e mantiene i vostri software aziendali. Prezzo fisso contrattualizzato, proprietà IP totale del cliente, pronto per la certificazione. Un asset che lavora per voi e per i vostri investitori.",
     "engineeringCta": "Scoprire l'ingegneria"
   },
   "buildEngineeringStrip": {
     "label": "Ingegneria degli asset",
-    "title": "Prezzo fisso. Codice sovrano. Pronto per la certificazione.",
-    "chip1": "Prezzo fisso contrattualizzato",
-    "chip2": "10–16 settimane",
-    "chip3": "Codice sovrano europeo",
-    "chip4": "IP 100% cliente",
+    "title": "Prezzo fisso. Proprietà IP totale. Pronto per la certificazione.",
+    "chip1": "PREZZO FISSO CONTRATTUALIZZATO",
+    "chip2": "PROPRIETÀ IP TOTALE CLIENTE",
+    "chip3": "PRONTO PER LA CERTIFICAZIONE",
+    "chip4": "ZERO DIPENDENZA DA FORNITORE",
     "cta": "Vedere la progettazione di asset"
   },
   "techStack": {

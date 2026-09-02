@@ -96,8 +96,8 @@
     "solutionsCoreDesc": "Designed, developed and operated by Aegryn",
     "solutionsPortfolioTitle": "Portfolio assets",
     "solutionsPortfolioDesc": "Strategic participations and support",
-    "solutionsDomainsLabel": "TOP 10 SOFTWARE DOMAINS",
-    "solutionsDomainsDesc": "Priority domains for building sovereign software assets",
+    "solutionsDomainsLabel": "SOFTWARE ASSET DOMAINS",
+    "solutionsDomainsDesc": "",
     "solutionsDomain1": "AI Agents & Business Automation",
     "solutionsDomain2": "Compliance, Risk & AI Governance",
     "solutionsDomain3": "Cybersecurity & Digital Trust",
@@ -117,7 +117,7 @@
     "solutionsHobconnect": "hobconnect",
     "thinkingMagazine": "The Aegryn Magazine",
     "thinkingMagazineDesc": "The quarterly reference publication on tech and M&A in Europe.",
-    "thinkingMagazineIssues": "Issue-01, January 2027",
+    "thinkingMagazineIssues": "Issue-01 - January 2027",
     "thinkingMarket": "Our market perspective",
     "thinkingMarketDesc": "Data, analysis and insights from those who make the market.",
     "thinkingMarketArticles": "All articles",
@@ -568,55 +568,108 @@
     ],
     "cta": "Submit your asset for certification"
   },
+  "founderQuote": {
+    "text": "We spent our time building, advising and restructuring organisations. What we learned cannot be bought: the companies that last don't choose between strategy and technology. They think them together. Aegryn exists for those who have understood this.",
+    "author": "The Founder, Aegryn"
+  },
   "aboutSection": {
     "label": "About Aegryn",
-    "title": "Five disciplines.\nOne market standard.",
-    "desc": "Aegryn builds sovereign software, advises tech leaders, certifies and transfers assets, recruits executive talent and documents the market. Five disciplines exercised with the same level of rigour, in Switzerland and Europe.",
-    "tagline": "OPERATIONAL ADVISORY. SOVEREIGN SOFTWARE. INDEPENDENT CERTIFICATION.",
-    "cta": "About Aegryn",
-    "quote": "In a world moving faster than ever, advisory is the key to having a clear vision and an execution plan. We support tech leaders with operational expertise — not slides.",
+    "title": "Five disciplines.\nOne firm.",
+    "desc": "Aegryn is both a consulting firm and a tech company. We advise on strategy, technology and M&A. We build lasting digital assets for our clients. We structure transactions. We recruit the executives who execute. And we document the market.\n\nWhat we do for our clients, we do for ourselves. Our own assets go through our own methods. This hybrid DNA, consulting firm and tech company, is what very few players can genuinely claim.",
+    "tagline": "STRATEGY, TECH AND M&A ADVISORY. ONE STANDARD.",
+    "cta": "Our disciplines →",
+    "ctaHref": "/advisory",
+    "quote": "What we do for our clients, we do for ourselves. Our own assets go through our own methods. This coherence is our only credibility.",
     "ceoName": "",
     "ceoTitle": "Founder, Aegryn",
     "stats": [
       {
-        "val": "6",
-        "label": "Proprietary assets"
+        "val": "5",
+        "label": "Integrated disciplines",
+        "sub": "Advisory · Build · Transaction · Talent · Intelligence"
       },
       {
-        "val": "5",
-        "label": "Certification grades"
+        "val": "23+",
+        "label": "Industries covered",
+        "sub": "All sizes, all EU geographies"
       },
       {
         "val": "< 25%",
-        "label": "Accepted"
+        "label": "Selection rate",
+        "sub": "Rigour applied to every engagement"
+      },
+      {
+        "val": "100%",
+        "label": "Client alignment",
+        "sub": "What we advise, we apply to ourselves"
       }
     ]
   },
   "missionSection": {
     "label": "The Aegryn Model",
-    "sub": "Five disciplines. One integrated ecosystem.",
+    "title": "Five integrated disciplines. One standard.",
+    "sub": "Each discipline strengthens the others. That's what few firms can genuinely offer.",
     "items": [
       {
-        "title": "BUILD",
-        "desc": "We design, deploy and maintain custom business software for enterprises. Sovereign code, no vendor dependency, integrable into your infrastructure."
+        "title": "ADVISE",
+        "desc": "Strategy, tech and M&A advisory. We step in when decisions define the trajectory of your organisation."
       },
       {
-        "title": "ADVISE",
-        "desc": "Strategic, technological and transaction advisory for tech companies. Operational expertise on compliance, cybersecurity, digital transformation and transmission operations."
+        "title": "BUILD",
+        "desc": "Lasting digital assets, at a fixed price, fully owned by the client. Designed to increase company value, not to be replaced."
       },
       {
         "title": "TRANSACT",
-        "desc": "Independent certification on 4 dimensions: Code, IP, Finance, Security. Exclusive 60-day mandate, institutional escrow. Less than 25% of submitted assets are accepted."
+        "desc": "Tech asset certification and transaction. A confidential process within a circle of qualified buyers."
       },
       {
         "title": "RECRUIT",
-        "desc": "We recruit and place executive tech profiles: CTO, VP Engineering, Head of Product, cybersecurity and AI experts. Specialized headhunting for European startups and scale-ups."
+        "desc": "Executive, tech and innovation profiles. From CTO to CEO, we place the talent that executes transformation."
       },
       {
-        "title": "LEARN",
-        "desc": "Quarterly magazine, weekly brief, articles and analyses. We document the transformations of the European tech market for the leaders who drive it."
+        "title": "INFORM",
+        "desc": "Magazine, articles and market intelligence. We document what we observe and what we live."
       }
     ]
+  },
+  "homeTalent": {
+    "label": "RECRUIT",
+    "title": "The profiles that make the difference.",
+    "desc": "We identify and place the executives, tech experts and innovation profiles that move organisations forward. CTO, CISO, Head of AI, COO, DPO, Chief Transformation Officer. Across Switzerland and Europe.\n\nOur goal is always the same: strengthen the value of your company through the right people at the right time.",
+    "cta1": "Find a profile →",
+    "cta1Href": "/talent",
+    "cta2": "I am a candidate →",
+    "cta2Href": "/talent#candidat"
+  },
+  "homeSegments": {
+    "label": "OUR CLIENTS",
+    "title": "We support companies at every stage.",
+    "cards": [
+      {
+        "key": "startup",
+        "title": "Startup & Scale-up",
+        "desc": "Laying the right tech and strategic foundations. Building value from day one. Preparing for the next raise or exit."
+      },
+      {
+        "key": "pme",
+        "title": "Growing SMEs",
+        "desc": "Transform, certify and recruit before selling or raising. Build assets that last."
+      },
+      {
+        "key": "enterprise",
+        "title": "Large Corporates",
+        "desc": "Tech strategy, portfolio M&A, proprietary internal assets, executive recruitment."
+      },
+      {
+        "key": "funds",
+        "title": "Funds & Investors",
+        "desc": "Qualified deal flow, asset certification, post-acquisition support, leadership team recruitment."
+      }
+    ]
+  },
+  "homeHybrid": {
+    "title": "What we do for our clients,\nwe do for ourselves.",
+    "desc": "Aegryn advises on and builds tech assets.\nAegryn certifies its own assets using its own methods.\nAegryn structures transactions including its own.\nAegryn recruits executives including for its own entities.\nAegryn publishes on a market it knows from the inside.\n\nNot a firm. Not an agency. A hybrid group.\nConsulting and tech company. Both at once."
   },
   "whyapps": {
     "label": "Why Aegryn",
@@ -1306,21 +1359,21 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 AEGRYN",
+    "legal": "© 2026 Aegryn SA · Saint-Sulpice, Vaud, Switzerland",
     "company": "An Aegryn company",
     "privacy": "Privacy",
     "terms": "Terms",
     "dataProtection": "Data Protection Notice",
     "neediuLegal": "neediu is a registered trademark of Aegryn. All rights reserved.",
     "tagline": "CERTIFIED TO TRANSACT.",
-    "swissTagline": "The certified reference for premium tech asset transactions in Europe.",
+    "swissTagline": "Strategy, tech and M&A advisory. Lasting digital assets. Transactions, recruitment and market intelligence.",
     "navLabel": "Aegryn",
     "companyLabel": "Company",
     "servicesLabel": "Services",
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosystem",
     "advisoryLabel": "Consulting",
-    "advisoryDesc": "Tech advisory and transaction support for Aegryn-certified digital assets.",
+    "advisoryDesc": "Strategy, tech and M&A advisory. Lasting digital assets. Transactions, recruitment and market intelligence.",
     "advisoryBook": "Book a session ↗",
     "medallionText": "Let's talk . Contact us . Let's talk . Contact us .",
     "contactLabel": "Contact us",
@@ -6384,23 +6437,23 @@
     "cta": "Submit an asset"
   },
   "buildStrip": {
-    "label": "Conception",
-    "assetsLabel": "Sovereign Assets",
-    "assetsTitle": "A portfolio of sovereign\ntech assets.",
-    "assetsDesc": "Aegryn designs and operates its own digital assets: B2B SaaS, marketplaces, AI tools. Each asset is sovereign, certified, documented, and operated under real conditions. Internal use and client deployment.",
+    "label": "Build",
+    "assetsLabel": "Proprietary Assets",
+    "assetsTitle": "A portfolio of proprietary\ntech assets.",
+    "assetsDesc": "Aegryn designs and operates its own digital assets: B2B SaaS, marketplaces, AI tools. Each asset is certified, documented and operated under real conditions. Software built for the group's operations, available to the market.",
     "assetsCta": "View the portfolio",
     "engineeringLabel": "Asset Engineering",
-    "engineeringTitle": "Sovereign software\nbuilt for institutional clients.",
-    "engineeringDesc": "Enterprises, investment funds, governments: Aegryn designs, maintains or rebuilds your software from scratch. Sovereign code, fixed price, deployable on European infrastructure. Full IP ownership, maximum security, zero technical debt. No third-party integrations: pure creation.",
+    "engineeringTitle": "Custom software\nfor your operations.",
+    "engineeringDesc": "Enterprises, investment funds, institutions: Aegryn designs, deploys and maintains your business software. Contractualised fixed price, full client IP ownership, certification-ready. An asset that works for you and your investors.",
     "engineeringCta": "Discover Engineering"
   },
   "buildEngineeringStrip": {
     "label": "Asset Engineering",
-    "title": "Fixed price. Sovereign code. Certification-ready.",
-    "chip1": "Contractualised fixed price",
-    "chip2": "10–16 weeks",
-    "chip3": "European sovereign code",
-    "chip4": "100% client IP",
+    "title": "Fixed price. Full IP ownership. Certification-ready.",
+    "chip1": "CONTRACTUALISED FIXED PRICE",
+    "chip2": "FULL CLIENT IP OWNERSHIP",
+    "chip3": "CERTIFICATION-READY",
+    "chip4": "ZERO VENDOR DEPENDENCY",
     "cta": "See asset engineering"
   },
   "techStack": {

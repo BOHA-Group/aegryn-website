@@ -104,8 +104,8 @@
     "solutionsCategoryFinTech": "FinTech & Paiements",
     "solutionsCategoryHealthTech": "HealthTech & MedTech",
     "solutionsCategoryPropTech": "PropTech & Immobilier",
-    "solutionsDomainsLabel": "TOP 10 DOMAINES LOGICIELS",
-    "solutionsDomainsDesc": "Domaines prioritaires pour la création d’actifs logiciels souverains",
+    "solutionsDomainsLabel": "DOMAINES DE CRÉATION D'ACTIFS LOGICIELS",
+    "solutionsDomainsDesc": "",
     "solutionsDomain1": "AI Agents & Business Automation",
     "solutionsDomain2": "Compliance, Risk & AI Governance",
     "solutionsDomain3": "Cybersecurity & Digital Trust",
@@ -125,7 +125,7 @@
     "solutionsHobconnect": "hobconnect",
     "thinkingMagazine": "The Aegryn Magazine",
     "thinkingMagazineDesc": "La publication trimestrielle de référence sur la tech et le M&A en Europe.",
-    "thinkingMagazineIssues": "Issue-01, janvier 2027",
+    "thinkingMagazineIssues": "Issue-01 - Janvier 2027",
     "thinkingMarket": "Notre regard sur le marché",
     "thinkingMarketDesc": "Données, analyses et points de vue par ceux qui font le marché.",
     "thinkingMarketArticles": "Tous les articles",
@@ -262,7 +262,7 @@
     "cta": "Prendre contact",
     "hero": {
       "title": "Accompagner ce que vous construisez.",
-      "desc": "Nous accompagnons les entrepreneurs et les acquéreurs dans leurs décisions stratégiques, leur transformation technologique et leurs opérations M&A. Pas des slides. Une expertise opérationnelle au service de votre croissance."
+      "desc": "Nous accompagnons les entrepreneurs et les acquéreurs dans leurs décisions stratégiques, leur transformation technologique et leurs opérations M&A. Une expertise opérationnelle au service de votre croissance."
     },
     "pillars": {
       "strategy": {
@@ -274,7 +274,7 @@
         },
         "approach": {
           "title": "Notre approche",
-          "desc": "Nous ne livrons pas de slides. Nous co-construisons avec vos équipes un plan stratégique ancré dans la réalité de votre marché, de vos capacités et de vos contraintes. Chaque recommandation est testée, chiffrée et assortie d'un plan d'exécution détaillé.",
+          "desc": "Nous co-construisons avec vos équipes un plan stratégique ancré dans la réalité de votre marché, de vos capacités et de vos contraintes. Chaque recommandation est testée, chiffrée et assortie d'un plan d'exécution détaillé.",
           "steps": [
             {
               "label": "Diagnostic stratégique",
@@ -532,7 +532,7 @@
       {
         "num": "01",
         "title": "Le conseil est la clé.",
-        "desc": "Dans un monde qui bouge plus vite que jamais, les dirigeants tech ont besoin d'une vision claire et d'un plan d'exécution. Aegryn Conseil accompagne les décisions stratégiques, les transformations technologiques et les opérations M&A avec une expertise opérationnelle, pas des slides."
+        "desc": "Dans un monde qui bouge plus vite que jamais, les dirigeants tech ont besoin d'une vision claire et d'un plan d'exécution. Aegryn Conseil accompagne les décisions stratégiques, les transformations technologiques et les opérations M&A avec une expertise opérationnelle, sans détour."
       },
       {
         "num": "02",
@@ -546,53 +546,67 @@
       }
     ]
   },
+  "founderQuote": {
+    "text": "Nous avons dédié notre temps à construire, conseiller et restructurer des organisations. Ce que nous avons acquis n'a pas de prix : les entreprises qui durent ne choisissent pas entre la stratégie et la technologie. Elles les pensent ensemble. Aegryn existe pour ceux qui ont compris ça.",
+    "author": "Le Fondateur, Aegryn"
+  },
   "aboutSection": {
     "label": "À propos d'Aegryn",
-    "title": "Cinq métiers.\nUn standard de marché.",
-    "desc": "Aegryn construit des logiciels souverains, accompagne les dirigeants tech, certifie et transmet des actifs, recrute des talents executive et documente le marché. Cinq disciplines exercées avec le même niveau d'exigence, en Suisse et en Europe.",
-    "tagline": "CONSEIL OPÉRATIONNEL. LOGICIELS SOUVERAINS. CERTIFICATION INDÉPENDANTE.",
-    "cta": "À propos d'Aegryn",
-    "quote": "Dans un monde qui bouge plus vite que jamais, le conseil est la clé pour avoir une vision claire et un plan d'exécution. Nous accompagnons les dirigeants tech avec une expertise opérationnelle, pas des slides.",
+    "title": "Cinq métiers.\nUn seul cabinet.",
+    "desc": "Aegryn est à la fois un cabinet de conseil et une entreprise tech. Nous conseillons en stratégie, en technologie et en M&A. Nous construisons des actifs numériques durables pour nos clients. Nous accompagnons les transactions. Nous recrutons les dirigeants qui exécutent. Et nous documentons le marché.\n\nCe que nous faisons pour nos clients, nous nous l'appliquons. Nos propres actifs passent par nos propres méthodes. Cet ADN hybride, cabinet de conseil et entreprise tech, est ce que peu d'acteurs peuvent revendiquer sur le marché.",
+    "tagline": "CONSEIL EN STRATÉGIE, TECH ET M&A. UN SEUL STANDARD.",
+    "cta": "Nos métiers →",
+    "ctaHref": "/advisory",
+    "quote": "Ce que nous faisons pour nos clients, nous nous l'appliquons. Nos propres actifs passent par nos propres méthodes. Cette cohérence est notre seule crédibilité.",
     "ceoName": "",
     "ceoTitle": "Fondateur, Aegryn",
     "stats": [
       {
-        "val": "6",
-        "label": "Actifs propriétaires"
+        "val": "5",
+        "label": "Disciplines intégrées",
+        "sub": "Conseil · Construction · Transaction · Talent · Intelligence"
       },
       {
-        "val": "5",
-        "label": "Grades de certification"
+        "val": "23+",
+        "label": "Industries couvertes",
+        "sub": "Toutes tailles, toutes géographies EU"
       },
       {
         "val": "< 25%",
-        "label": "Acceptés"
+        "label": "Taux de sélection",
+        "sub": "Rigueur appliquée à chaque engagement"
+      },
+      {
+        "val": "100%",
+        "label": "Alignement client",
+        "sub": "Ce que nous conseillons, nous nous l'appliquons"
       }
     ]
   },
   "missionSection": {
     "label": "Le Modèle Aegryn",
-    "sub": "Cinq métiers. Un écosystème intégré.",
+    "title": "Cinq disciplines intégrées. Un seul standard.",
+    "sub": "Chaque discipline renforce les autres. C'est ce que peu de groupes peuvent proposer.",
     "items": [
       {
-        "title": "CONSTRUIRE",
-        "desc": "Nous concevons, déployons et maintenons des logiciels métier sur mesure pour les entreprises. Code souverain, sans dépendance éditeur, intégrable dans votre infrastructure."
+        "title": "ACCOMPAGNER",
+        "desc": "Conseil en stratégie, tech et M&A. Nous intervenons au moment où les décisions définissent la trajectoire de votre organisation."
       },
       {
-        "title": "ACCOMPAGNER",
-        "desc": "Conseil stratégique, technologique et en transactions pour les entreprises tech. Expertise opérationnelle sur la conformité, la cybersécurité, la transformation digitale et les opérations de transmission."
+        "title": "CONSTRUIRE",
+        "desc": "Actifs numériques durables, à prix forfaitaire, propriété totale du client. Conçus pour valoriser l'entreprise, pas pour être remplacés."
       },
       {
         "title": "TRANSMETTRE",
-        "desc": "Certification indépendante sur 4 dimensions : Code, IP, Finance, Sécurité. Mandat exclusif 60 jours, séquestre institutionnel. Moins de 25 % des actifs soumis sont acceptés."
+        "desc": "Certification et transaction d'actifs tech. Un processus confidentiel dans un cercle d'acquéreurs qualifiés."
       },
       {
         "title": "RECRUTER",
-        "desc": "Nous recrutons et plaçons des profils tech executive : CTO, VP Engineering, Head of Product, experts cybersécurité et IA. Headhunting spécialisé pour startups et scale-ups européennes."
+        "desc": "Profils executive, tech et innovation. Du CTO au DG, nous plaçons les talents qui exécutent la transformation."
       },
       {
-        "title": "S'INFORMER",
-        "desc": "Magazine trimestriel, brief hebdomadaire, articles et analyses. Nous documentons les transformations du marché tech européen pour les dirigeants qui le font."
+        "title": "INFORMER",
+        "desc": "Magazine, articles et veille de marché. Nous documentons ce que nous observons et ce que nous vivons."
       }
     ]
   },
@@ -1205,7 +1219,7 @@
       "title": "Clarté Stratégique.\nProfondeur Opérationnelle.",
       "desc1": "Chez Aegryn Advisory, nous accompagnons les fondateurs, dirigeants et organisations face à des décisions technologiques critiques. Notre conseil repose sur la façon dont nous concevons, construisons et sécurisons nos propres écosystèmes numériques.",
       "desc2": "Nous ne nous appuyons pas sur la théorie, les tendances ou les frameworks recyclés. Nous apportons une direction stratégique claire, directe et ancrée dans l'exécution, en Data, IA et Cybersécurité.",
-      "quote": "Pas de slides interminables. Pas de playbooks génériques.\nUniquement des standards testés dans des environnements réels.",
+      "quote": "Pas de réponses génériques. Pas de playbooks recyclés.\nUniquement des standards testés dans des environnements réels.",
       "cta": "Prendre contact"
     },
     "why": {
@@ -1297,21 +1311,21 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 AEGRYN",
+    "legal": "© 2026 Aegryn SA · Saint-Sulpice, Vaud, Suisse",
     "company": "Une société Aegryn",
     "privacy": "Confidentialité",
     "terms": "Conditions",
     "dataProtection": "Politique de protection des données",
     "neediuLegal": "neediu est une marque déposée d'Aegryn. Tous droits réservés.",
     "tagline": "CERTIFIED TO TRANSACT.",
-    "swissTagline": "Conseil stratégique, construction d'actifs, transactions certifiées, recrutement executive et veille sectorielle pour les actifs tech européens.",
+    "swissTagline": "Conseil en stratégie, tech et M&A. Construction d'actifs durables. Transmission, recrutement et intelligence de marché.",
     "navLabel": "Aegryn",
     "companyLabel": "Entreprise",
     "servicesLabel": "Services",
     "blogLink": "Blog",
     "ecosystemLabel": "Écosystème",
     "advisoryLabel": "Conseil",
-    "advisoryDesc": "Conseil Tech et accompagnement transactionnel pour les actifs numériques certifiés Aegryn.",
+    "advisoryDesc": "Conseil en stratégie, tech et M&A. Construction d'actifs durables. Transmission, recrutement et intelligence de marché.",
     "advisoryBook": "Prendre contact ↗",
     "medallionText": "Discutons . Contactez-nous . Discutons . Contactez-nous .",
     "contactLabel": "Nous contacter",
@@ -6371,22 +6385,22 @@
   },
   "buildStrip": {
     "label": "Conception",
-    "assetsLabel": "Actifs souverains",
-    "assetsTitle": "Un portefeuille\nd'actifs tech souverains.",
-    "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques : SaaS B2B, marketplaces, outils IA. Chaque actif est souverain, certifié, documenté, opéré en conditions réelles. Usage interne et déploiement client.",
+    "assetsLabel": "Actifs propriétaires",
+    "assetsTitle": "Un portefeuille\nd'actifs tech propriétaires.",
+    "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques : SaaS B2B, marketplaces, outils IA. Chaque actif est certifié, documenté, opéré en conditions réelles. Logiciels conçus pour les opérations du groupe et ouverts au marché.",
     "assetsCta": "Voir le portefeuille",
     "engineeringLabel": "Ingénierie d'actifs",
-    "engineeringTitle": "Logiciels souverains\nsur-mesure pour institutionnels.",
-    "engineeringDesc": "Entreprises, fonds d'investissement, gouvernements : Aegryn conçoit, maintient ou refait vos logiciels de zéro. Code souverain, forfait fixe, déployable sur infrastructures européennes. Propriété intellectuelle totale, sécurité maximale, zéro dette technique. Pas d'intégration de solutions tierces : création pure.",
+    "engineeringTitle": "Logiciels sur-mesure\npour vos opérations.",
+    "engineeringDesc": "Entreprises, fonds d'investissement, institutions : Aegryn conçoit, déploie et maintient vos logiciels métier. Prix fixe contractualisé, propriété IP totale client, prêt pour la certification. Un actif qui travaille pour vous et vos investisseurs.",
     "engineeringCta": "Découvrir l'ingénierie"
   },
   "buildEngineeringStrip": {
     "label": "Ingénierie d'actifs",
-    "title": "Forfait fixe. Code souverain. Prêt pour la certification.",
-    "chip1": "Prix fixe contractualisé",
-    "chip2": "10–16 semaines",
-    "chip3": "Code souverain européen",
-    "chip4": "IP 100% client",
+    "title": "Forfait fixe. Propriété IP totale. Prêt pour la certification.",
+    "chip1": "PRIX FIXE CONTRACTUALISÉ",
+    "chip2": "PROPRIÉTÉ IP TOTALE CLIENT",
+    "chip3": "PRÊT POUR LA CERTIFICATION",
+    "chip4": "ZÉRO DÉPENDANCE ÉDITEUR",
     "cta": "Voir la conception d'actifs"
   },
   "techStack": {

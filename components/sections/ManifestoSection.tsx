@@ -10,7 +10,7 @@ export function ManifestoSection() {
   const tA = useTranslations('aboutSection')
 
   const whatwedoItems = tW.raw('items') as { num: string; title: string; desc: string }[]
-  const stats         = tA.raw('stats') as { val: string; label: string }[]
+  const stats         = tA.raw('stats') as { val: string; label: string; sub?: string }[]
 
   const whatRef    = useRef<HTMLElement>(null)
   const aboutRef   = useRef<HTMLElement>(null)
@@ -168,9 +168,13 @@ export function ManifestoSection() {
                 dangerouslySetInnerHTML={{ __html: tA('title').replace(/\n/g, '<br>') }}
               />
               <div className="about-body space-y-8">
-                <p className="font-sans font-normal text-[15px] text-ag-gray leading-[1.85] max-w-lg">
-                  {tA('desc')}
-                </p>
+                <div className="space-y-4 max-w-lg">
+                  {tA('desc').split('\n\n').map((para, i) => (
+                    <p key={i} className="font-sans font-normal text-[15px] text-ag-gray leading-[1.85]">
+                      {para}
+                    </p>
+                  ))}
+                </div>
                 <div className="flex items-center gap-px">
                   <div className="w-8 h-px bg-ag-apex" />
                   <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-apex-ink ml-3">
@@ -178,7 +182,8 @@ export function ManifestoSection() {
                   </p>
                 </div>
                 <Link
-                  href="/about"
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  href={((tA.raw('ctaHref') as string | undefined) ?? '/about') as any}
                   className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3.5 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300"
                 >
                   {tA('cta')}
@@ -203,18 +208,23 @@ export function ManifestoSection() {
                 </footer>
               </blockquote>
 
-              <div className="about-stats grid grid-cols-1 sm:grid-cols-3 border-t border-ag-border pt-8 gap-4">
+              <div className="about-stats grid grid-cols-2 lg:grid-cols-4 border-t border-ag-border pt-8 gap-6">
                 {stats.map((s) => (
                   <div key={s.label} className="about-stat" style={{ opacity: 0 }}>
                     <p
                       className="font-sans font-bold text-ag-black tracking-[-0.03em] mb-1"
-                      style={{ fontSize: 'clamp(28px,3vw,40px)' }}
+                      style={{ fontSize: 'clamp(24px,2.5vw,36px)' }}
                     >
                       {s.val}
                     </p>
-                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
+                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">
                       {s.label}
                     </p>
+                    {s.sub && (
+                      <p className="font-sans font-normal text-[10px] text-ag-gray-light leading-snug">
+                        {s.sub}
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>

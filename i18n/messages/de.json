@@ -96,8 +96,8 @@
     "solutionsCoreDesc": "Von Aegryn konzipiert, entwickelt und betrieben",
     "solutionsPortfolioTitle": "Portfolio-Assets",
     "solutionsPortfolioDesc": "Strategische Beteiligungen und Begleitung",
-    "solutionsDomainsLabel": "TOP 10 SOFTWARE-BEREICHE",
-    "solutionsDomainsDesc": "Prioritätsbereiche für den Aufbau souveräner Software-Assets",
+    "solutionsDomainsLabel": "SOFTWARE-ASSET-BEREICHE",
+    "solutionsDomainsDesc": "",
     "solutionsDomain1": "AI Agents & Business Automation",
     "solutionsDomain2": "Compliance, Risk & AI Governance",
     "solutionsDomain3": "Cybersecurity & Digital Trust",
@@ -117,7 +117,7 @@
     "solutionsHobconnect": "hobconnect",
     "thinkingMagazine": "The Aegryn Magazine",
     "thinkingMagazineDesc": "Die vierteljährliche Referenzpublikation über Tech und M&A in Europa.",
-    "thinkingMagazineIssues": "Ausgabe-01, Januar 2027",
+    "thinkingMagazineIssues": "Ausgabe-01 - Januar 2027",
     "whoGroup": "Die Gruppe",
     "whoGroupDesc": "Geschichte, Mission, Werte",
     "whoAbout": "Über Aegryn",
@@ -508,55 +508,108 @@
     ],
     "cta": "Reichen Sie Ihr Asset zur Zertifizierung ein"
   },
+  "founderQuote": {
+    "text": "Wir haben unsere Zeit damit verbracht, Organisationen aufzubauen, zu beraten und umzustrukturieren. Was wir gelernt haben, ist unbezahlbar: Unternehmen, die Bestand haben, wählen nicht zwischen Strategie und Technologie. Sie denken beides zusammen. Aegryn existiert für diejenigen, die das verstanden haben.",
+    "author": "Der Gründer, Aegryn"
+  },
   "aboutSection": {
     "label": "Über Aegryn",
-    "title": "Fünf Disziplinen.\nEin Marktstandard.",
-    "desc": "Aegryn entwickelt souveräne Software, begleitet Tech-Führungskräfte, zertifiziert und überträgt Assets, rekrutiert Executive-Talente und dokumentiert den Markt. Fünf Disziplinen mit demselben Anspruchsniveau, in der Schweiz und Europa.",
-    "tagline": "OPERATIVE BERATUNG. SOUVERÄNE SOFTWARE. UNABHÄNGIGE ZERTIFIZIERUNG.",
-    "cta": "Über Aegryn",
-    "quote": "In einer Welt, die sich schneller bewegt als je zuvor, ist Beratung der Schlüssel für eine klare Vision und einen Ausführungsplan. Wir unterstützen Tech-Führungskräfte mit operativer Expertise — nicht mit Folien.",
+    "title": "Fünf Disziplinen.\nEin Unternehmen.",
+    "desc": "Aegryn ist sowohl eine Unternehmensberatung als auch ein Tech-Unternehmen. Wir beraten in Strategie, Technologie und M&A. Wir bauen dauerhafte digitale Assets für unsere Kunden. Wir strukturieren Transaktionen. Wir rekrutieren die Führungskräfte, die umsetzen. Und wir dokumentieren den Markt.\n\nWas wir für unsere Kunden tun, wenden wir auf uns selbst an. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Diese hybride DNA, Beratung und Tech-Unternehmen, ist das, was nur wenige Akteure wirklich vorweisen können.",
+    "tagline": "STRATEGIE-, TECH- UND M&A-BERATUNG. EIN STANDARD.",
+    "cta": "Unsere Disziplinen →",
+    "ctaHref": "/advisory",
+    "quote": "Was wir für unsere Kunden tun, wenden wir auf uns selbst an. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Diese Kohärenz ist unsere einzige Glaubwürdigkeit.",
     "ceoName": "",
     "ceoTitle": "Gründer, Aegryn",
     "stats": [
       {
-        "val": "6",
-        "label": "Eigene Assets"
+        "val": "5",
+        "label": "Integrierte Disziplinen",
+        "sub": "Beratung · Aufbau · Transaktion · Talent · Intelligence"
       },
       {
-        "val": "5",
-        "label": "Zertifizierungsgrades"
+        "val": "23+",
+        "label": "Abgedeckte Branchen",
+        "sub": "Alle Größen, alle EU-Geographien"
       },
       {
         "val": "< 25%",
-        "label": "Akzeptiert"
+        "label": "Auswahlquote",
+        "sub": "Strenge bei jedem Engagement"
+      },
+      {
+        "val": "100%",
+        "label": "Kundenausrichtung",
+        "sub": "Was wir raten, wenden wir auf uns selbst an"
       }
     ]
   },
   "missionSection": {
     "label": "Das Aegryn-Modell",
-    "sub": "Fünf Disziplinen. Ein integriertes Ökosystem.",
+    "title": "Fünf integrierte Disziplinen. Ein Standard.",
+    "sub": "Jede Disziplin stärkt die anderen. Das ist es, was nur wenige Unternehmen wirklich bieten können.",
     "items": [
       {
-        "title": "AUFBAUEN",
-        "desc": "Wir konzipieren, implementieren und pflegen maßgeschneiderte Geschäftssoftware für Unternehmen. Souveräner Code, ohne Anbieterabhängigkeit, integrierbar in Ihre Infrastruktur."
+        "title": "BERATEN",
+        "desc": "Strategie-, Tech- und M&A-Beratung. Wir treten ein, wenn Entscheidungen die Entwicklung Ihrer Organisation bestimmen."
       },
       {
-        "title": "BEGLEITEN",
-        "desc": "Strategische, technologische und transaktionsbezogene Beratung für Tech-Unternehmen. Operative Expertise in Compliance, Cybersicherheit, digitaler Transformation und Übertragungsoperationen."
+        "title": "AUFBAUEN",
+        "desc": "Dauerhafte digitale Assets, zum Festpreis, vollständig im Eigentum des Kunden. Entwickelt, um den Unternehmenswert zu steigern, nicht um ersetzt zu werden."
       },
       {
         "title": "ÜBERTRAGEN",
-        "desc": "Unabhängige Zertifizierung über 4 Dimensionen: Code, IP, Finanzen, Sicherheit. Exklusives 60-Tage-Mandat, institutionelles Treuhand. Weniger als 25 % der eingereichten Assets werden akzeptiert."
+        "desc": "Tech-Asset-Zertifizierung und -Transaktion. Ein vertraulicher Prozess innerhalb eines Kreises qualifizierter Käufer."
       },
       {
         "title": "REKRUTIEREN",
-        "desc": "Wir rekrutieren und platzieren Executive-Tech-Profile: CTO, VP Engineering, Head of Product, Cybersicherheits- und KI-Experten. Spezialisiertes Headhunting für europäische Startups und Scale-ups."
+        "desc": "Executive-, Tech- und Innovationsprofile. Vom CTO zum Geschäftsführer: Wir platzieren Talente, die Transformationen umsetzen."
       },
       {
         "title": "INFORMIEREN",
-        "desc": "Viertteljährliches Magazin, wöchentlicher Brief, Artikel und Analysen. Wir dokumentieren die Transformationen des europäischen Tech-Markts für die Führungskräfte, die ihn gestalten."
+        "desc": "Magazin, Artikel und Marktintelligenz. Wir dokumentieren, was wir beobachten und erleben."
       }
     ]
+  },
+  "homeTalent": {
+    "label": "REKRUTIEREN",
+    "title": "Die Profile, die den Unterschied machen.",
+    "desc": "Wir identifizieren und platzieren Führungskräfte, Tech-Experten und Innovationsprofile, die Organisationen voranbringen. CTO, CISO, Head of AI, COO, DPO, Chief Transformation Officer. In der Schweiz und Europa.\n\nUnser Ziel ist immer dasselbe: den Wert Ihres Unternehmens durch die richtigen Personen zum richtigen Zeitpunkt stärken.",
+    "cta1": "Profil finden →",
+    "cta1Href": "/talent",
+    "cta2": "Ich bin Kandidat →",
+    "cta2Href": "/talent#candidat"
+  },
+  "homeSegments": {
+    "label": "UNSERE KUNDEN",
+    "title": "Wir begleiten Unternehmen in jeder Phase.",
+    "cards": [
+      {
+        "key": "startup",
+        "title": "Startup & Scale-up",
+        "desc": "Die richtigen technischen und strategischen Grundlagen legen. Von Anfang an Wert aufbauen. Auf die nächste Runde oder den Exit vorbereiten."
+      },
+      {
+        "key": "pme",
+        "title": "Wachsende KMU",
+        "desc": "Transformieren, zertifizieren und rekrutieren, bevor man verkauft oder eine Runde abschliesst. Assets aufbauen, die Bestand haben."
+      },
+      {
+        "key": "enterprise",
+        "title": "Grosse Unternehmen",
+        "desc": "Tech-Strategie, Portfolio-M&A, eigene interne Assets, Executive-Rekrutierung."
+      },
+      {
+        "key": "funds",
+        "title": "Fonds & Investoren",
+        "desc": "Qualifizierter Deal Flow, Asset-Zertifizierung, Post-Akquisitions-Begleitung, Rekrutierung der Führungsteams."
+      }
+    ]
+  },
+  "homeHybrid": {
+    "title": "Was wir für unsere Kunden tun,\nwenden wir auf uns selbst an.",
+    "desc": "Aegryn berät und baut Tech-Assets.\nAegryn zertifiziert eigene Assets nach eigenen Methoden.\nAegryn strukturiert Transaktionen auch für sich selbst.\nAegryn rekrutiert Führungskräfte auch für eigene Einheiten.\nAegryn publiziert über einen Markt, den es von innen kennt.\n\nKein Berater. Keine Agentur. Eine hybride Gruppe.\nBeratung und Tech-Unternehmen. Beides zugleich."
   },
   "whyapps": {
     "label": "Warum Aegryn",
@@ -1246,7 +1299,7 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 AEGRYN",
+    "legal": "© 2026 Aegryn SA · Saint-Sulpice, Vaud, Schweiz",
     "company": "Ein Unternehmen von Aegryn",
     "privacy": "Datenschutz",
     "terms": "AGB",
@@ -6328,23 +6381,23 @@
     "cta": "Anlage einreichen"
   },
   "buildStrip": {
-    "label": "Konzeption",
-    "assetsLabel": "Souveräne Assets",
-    "assetsTitle": "Ein Portfolio souveräner\nTech-Assets.",
-    "assetsDesc": "Aegryn entwirft und betreibt eigene digitale Assets: B2B SaaS, Marktplätze, KI-Tools. Jedes Asset ist souverän, zertifiziert, dokumentiert und unter realen Bedingungen betrieben. Intern und für Kunden.",
+    "label": "Aufbauen",
+    "assetsLabel": "Eigene Assets",
+    "assetsTitle": "Ein Portfolio eigener\nTech-Assets.",
+    "assetsDesc": "Aegryn entwirft und betreibt eigene digitale Assets: B2B SaaS, Marktplätze, KI-Tools. Jedes Asset ist zertifiziert, dokumentiert und unter realen Bedingungen betrieben. Software für die Gruppenoperationen, verfügbar für den Markt.",
     "assetsCta": "Portfolio ansehen",
     "engineeringLabel": "Asset-Ingenieurwesen",
-    "engineeringTitle": "Souveräne Software\nfür institutionelle Kunden.",
-    "engineeringDesc": "Unternehmen, Investmentfonds, Behörden: Aegryn entwickelt, wartet oder baut Ihre Software von Grund auf neu. Souveräner Code, Festpreis, auf europäischer Infrastruktur deploybar. Vollständiges geistiges Eigentum, maximale Sicherheit, null technische Schulden. Keine Drittanbieter-Integrationen: reine Eigenentwicklung.",
+    "engineeringTitle": "Maßgeschneiderte Software\nfür Ihre Operationen.",
+    "engineeringDesc": "Unternehmen, Investmentfonds, Institutionen: Aegryn entwickelt, deployt und pflegt Ihre Geschäftssoftware. Vertraglich festgelegter Festpreis, vollständiges Kunden-IP-Eigentum, zertifizierungsbereit. Ein Asset, das für Sie und Ihre Investoren arbeitet.",
     "engineeringCta": "Ingenieurwesen entdecken"
   },
   "buildEngineeringStrip": {
     "label": "Asset-Ingenieurwesen",
-    "title": "Festpreis. Souveräner Code. Zertifizierungsbereit.",
-    "chip1": "Vertraglich festgelegter Festpreis",
-    "chip2": "10–16 Wochen",
-    "chip3": "Europäischer souveräner Code",
-    "chip4": "100% Kunden-IP",
+    "title": "Festpreis. Vollständiges IP-Eigentum. Zertifizierungsbereit.",
+    "chip1": "VERTRAGLICH FESTGELEGTER FESTPREIS",
+    "chip2": "VOLLSTÄNDIGES KUNDEN-IP-EIGENTUM",
+    "chip3": "ZERTIFIZIERUNGSBEREIT",
+    "chip4": "NULL ANBIETERABHÄNGIGKEIT",
     "cta": "Asset-Ingenieurwesen ansehen"
   },
   "techStack": {

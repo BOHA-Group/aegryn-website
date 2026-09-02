@@ -96,8 +96,8 @@
     "solutionsCoreDesc": "Ontworpen, ontwikkeld en beheerd door Aegryn",
     "solutionsPortfolioTitle": "Portfolio-assets",
     "solutionsPortfolioDesc": "Strategische participaties en begeleiding",
-    "solutionsDomainsLabel": "TOP 10 SOFTWAREDOMEINEN",
-    "solutionsDomainsDesc": "Prioriteitsdomeinen voor het bouwen van soevereine software-assets",
+    "solutionsDomainsLabel": "SOFTWARE-ASSET-DOMEINEN",
+    "solutionsDomainsDesc": "",
     "solutionsDomain1": "AI Agents & Business Automation",
     "solutionsDomain2": "Compliance, Risk & AI Governance",
     "solutionsDomain3": "Cybersecurity & Digital Trust",
@@ -117,7 +117,7 @@
     "solutionsHobconnect": "hobconnect",
     "thinkingMagazine": "The Aegryn Magazine",
     "thinkingMagazineDesc": "De driemaandelijkse referentiepublicatie over tech en M&A in Europa.",
-    "thinkingMagazineIssues": "Editie-01, januari 2027",
+    "thinkingMagazineIssues": "Editie-01 - Januari 2027",
     "whoGroup": "De groep",
     "whoGroupDesc": "Geschiedenis, missie, waarden",
     "whoAbout": "Over Aegryn",
@@ -472,55 +472,108 @@
     ],
     "cta": "Dien uw asset in voor certificering"
   },
+  "founderQuote": {
+    "text": "We hebben onze tijd besteed aan het opbouwen, adviseren en herstructureren van organisaties. Wat we geleerd hebben, is van onschatbare waarde: de bedrijven die blijven bestaan, kiezen niet tussen strategie en technologie. Ze denken ze samen. Aegryn bestaat voor degenen die dat hebben begrepen.",
+    "author": "De Oprichter, Aegryn"
+  },
   "aboutSection": {
     "label": "Over Aegryn",
-    "title": "Vijf disciplines.\nÉén marktstandaard.",
-    "desc": "Aegryn bouwt soevereine software, begeleidt tech-leiders, certificeert en draagt assets over, werft executive talenten en documenteert de markt. Vijf disciplines uitgeoefend met hetzelfde niveau van strengheid, in Zwitserland en Europa.",
-    "tagline": "GECERTIFICEERD IN ZWITSERLAND. REFERENTIE IN EUROPA.",
-    "cta": "Over Aegryn",
-    "quote": "Een tech-asset zonder onafhankelijke certificering is een waarde zonder bewijs. Aegryn levert het bewijs bij elk asset, bij elke overdracht.",
-    "ceoName": "Yohann Bollack",
+    "title": "Vijf disciplines.\nÉén bedrijf.",
+    "desc": "Aegryn is zowel een adviesbureau als een tech-bedrijf. We adviseren over strategie, technologie en M&A. We bouwen duurzame digitale assets voor onze klanten. We structureren transacties. We werven de leidinggevenden die uitvoeren. En we documenteren de markt.\n\nWat we voor onze klanten doen, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Dit hybride DNA, adviesbureau en tech-bedrijf, is wat slechts weinig spelers echt kunnen claimen.",
+    "tagline": "STRATEGIE-, TECH- EN M&A-ADVIES. ÉÉN STANDAARD.",
+    "cta": "Onze disciplines →",
+    "ctaHref": "/advisory",
+    "quote": "Wat we voor onze klanten doen, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Deze coherentie is onze enige geloofwaardigheid.",
+    "ceoName": "",
     "ceoTitle": "Oprichter, Aegryn",
     "stats": [
       {
-        "val": "6",
-        "label": "Eigen assets"
+        "val": "5",
+        "label": "Geïntegreerde disciplines",
+        "sub": "Advies · Bouw · Transactie · Talent · Intelligence"
       },
       {
-        "val": "5",
-        "label": "Certificeringsgraden"
+        "val": "23+",
+        "label": "Gedekte sectoren",
+        "sub": "Alle groottes, alle EU-geografieën"
       },
       {
         "val": "< 25%",
-        "label": "Geaccepteerd"
+        "label": "Selectiepercentage",
+        "sub": "Strengheid toegepast op elke opdracht"
+      },
+      {
+        "val": "100%",
+        "label": "Klantafstemming",
+        "sub": "Wat we adviseren, passen we op onszelf toe"
       }
     ]
   },
   "missionSection": {
     "label": "Het Aegryn Model",
-    "sub": "Vijf disciplines. Één geïntegreerd ecosysteem.",
+    "title": "Vijf geïntegreerde disciplines. Één standaard.",
+    "sub": "Elke discipline versterkt de andere. Dat is wat weinig groepen echt kunnen bieden.",
     "items": [
       {
-        "title": "BOUWEN",
-        "desc": "We ontwerpen, implementeren en onderhouden maatwerk bedrijfssoftware voor ondernemingen. Soevereine code, zonder leveranciersafhankelijkheid, integreerbaar in uw infrastructuur."
+        "title": "ADVISEREN",
+        "desc": "Strategie-, tech- en M&A-advies. We stappen in wanneer beslissingen de koers van uw organisatie bepalen."
       },
       {
-        "title": "BEGELEIDEN",
-        "desc": "Strategisch, technologisch en transactioneel advies voor tech-bedrijven. Operationele expertise op het gebied van compliance, cybersecurity, digitale transformatie en overdrachtsoperaties."
+        "title": "BOUWEN",
+        "desc": "Duurzame digitale assets, tegen vaste prijs, volledig eigendom van de klant. Ontworpen om de bedrijfswaarde te verhogen, niet om vervangen te worden."
       },
       {
         "title": "OVERDRAGEN",
-        "desc": "Onafhankelijke certificering op 4 dimensies: Code, IP, Financiën, Veiligheid. Exclusief mandaat 60 dagen, institutionele escrow. Minder dan 25 % van de ingediende assets worden geaccepteerd."
+        "desc": "Tech-asset certificering en transactie. Een vertrouwelijk proces binnen een kring van gekwalificeerde kopers."
       },
       {
         "title": "REKRUTEREN",
-        "desc": "We werven en plaatsen executive tech-profielen: CTO, VP Engineering, Head of Product, cybersecurity- en AI-experts. Gespecialiseerde headhunting voor Europese startups en scale-ups."
+        "desc": "Executive-, tech- en innovatieprofielen. Van CTO tot Directeur-Generaal: we plaatsen de talenten die transformaties uitvoeren."
       },
       {
         "title": "INFORMEREN",
-        "desc": "Driemaandelijks magazine, wekelijkse brief, artikelen en analyses. We documenteren de transformaties van de Europese tech-markt voor de leiders die hem vormgeven."
+        "desc": "Magazine, artikelen en marktintelligentie. We documenteren wat we observeren en wat we meemaken."
       }
     ]
+  },
+  "homeTalent": {
+    "label": "REKRUTEREN",
+    "title": "De profielen die het verschil maken.",
+    "desc": "We identificeren en plaatsen leidinggevenden, tech-experts en innovatieprofielen die organisaties vooruit helpen. CTO, CISO, Head of AI, COO, DPO, Chief Transformation Officer. In Zwitserland en Europa.\n\nOnze doelstelling is altijd dezelfde: de waarde van uw bedrijf versterken via de juiste mensen op het juiste moment.",
+    "cta1": "Een profiel vinden →",
+    "cta1Href": "/talent",
+    "cta2": "Ik ben kandidaat →",
+    "cta2Href": "/talent#candidat"
+  },
+  "homeSegments": {
+    "label": "ONZE KLANTEN",
+    "title": "We begeleiden bedrijven in elke fase.",
+    "cards": [
+      {
+        "key": "startup",
+        "title": "Startup & Scale-up",
+        "desc": "De juiste technische en strategische fundamenten leggen. Waarde opbouwen vanaf dag één. Voorbereiden op de volgende ronde of exit."
+      },
+      {
+        "key": "pme",
+        "title": "Groeiende KMO's",
+        "desc": "Transformeren, certificeren en rekruteren vóór verkoop of fondsenwerving. Assets bouwen die blijven."
+      },
+      {
+        "key": "enterprise",
+        "title": "Grote bedrijven",
+        "desc": "Tech-strategie, portfolio M&A, eigen interne assets, executive rekrutering."
+      },
+      {
+        "key": "funds",
+        "title": "Fondsen & Investeerders",
+        "desc": "Gekwalificeerde deal flow, asset certificering, post-acquisitie begeleiding, rekrutering van leidinggevende teams."
+      }
+    ]
+  },
+  "homeHybrid": {
+    "title": "Wat we voor onze klanten doen,\npassen we op onszelf toe.",
+    "desc": "Aegryn adviseert en bouwt tech-assets.\nAegryn certificeert eigen assets met eigen methoden.\nAegryn structureert transacties inclusief de eigen.\nAegryn werft leidinggevenden ook voor eigen entiteiten.\nAegryn publiceert over een markt die het van binnenuit kent.\n\nGeen adviesbureau. Geen bureau. Een hybride groep.\nAdviesbureau en tech-bedrijf. Beide tegelijk."
   },
   "whyapps": {
     "label": "Waarom Aegryn",
@@ -6716,20 +6769,20 @@
     "cta": "Actief indienen"
   },
   "buildStrip": {
-    "label": "Conceptie",
-    "assetsLabel": "Soevereine assets",
-    "assetsTitle": "Een portfolio van soevereine\ntech-assets.",
-    "assetsDesc": "Aegryn ontwerpt en beheert eigen digitale assets: B2B SaaS, marktplaatsen, AI-tools. Elk asset is soeverein, gecertificeerd, gedocumenteerd en beheerd onder echte condities. Intern gebruik en clientdeployment.",
+    "label": "Bouwen",
+    "assetsLabel": "Eigen assets",
+    "assetsTitle": "Een portfolio van eigen\ntech-assets.",
+    "assetsDesc": "Aegryn ontwerpt en beheert eigen digitale assets: B2B SaaS, marktplaatsen, AI-tools. Elk asset is gecertificeerd, gedocumenteerd en beheerd onder echte condities. Software gebouwd voor de groepsoperaties en beschikbaar voor de markt.",
     "assetsCta": "Portfolio bekijken",
     "engineeringLabel": "Asset-engineering",
-    "engineeringTitle": "Soevereine software\nop maat voor institutionele klanten.",
-    "engineeringDesc": "Bedrijven, investeringsfondsen, overheden: Aegryn ontwerpt, onderhoudt of herbouwt uw software van nul. Soevereine code, vaste prijs, deploybaar op Europese infrastructuur. Volledig intellectueel eigendom, maximale beveiliging, nul technische schuld. Geen derde-partij-integraties: pure creatie.",
+    "engineeringTitle": "Maatwerk software\nvoor uw operaties.",
+    "engineeringDesc": "Bedrijven, investeringsfondsen, instellingen: Aegryn ontwerpt, implementeert en onderhoudt uw bedrijfssoftware. Gecontractualiseerde vaste prijs, volledig klant-IP-eigendom, klaar voor certificering. Een asset dat voor u en uw investeerders werkt.",
     "engineeringCta": "Engineering ontdekken"
   },
   "buildEngineeringStrip": {
     "label": "Asset-engineering",
-    "title": "Vaste prijs. Soevereine code. Klaar voor certificering.",
-    "chip1": "Gecontractualiseerde vaste prijs",
+    "title": "Vaste prijs. Volledig IP-eigendom. Klaar voor certificering.",
+    "chip1": "GECONTRACTUALISEERDE VASTE PRIJS",
     "chip2": "10–16 weken",
     "chip3": "Europese soevereine code",
     "chip4": "100% klant-IP",
