@@ -35,6 +35,13 @@ const CRAFT_TRANSACT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftTransactBuy',     href: '/transact/how-to-buy' },
 ]
 
+// Nos métiers - Recruter section
+const CRAFT_RECRUIT_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'craftRecruitBoard',        href: '/talent' as LinkHref },
+  { labelKey: 'craftRecruitExecutiveTech', href: '/talent' as LinkHref },
+  { labelKey: 'craftRecruitExecutiveMA',   href: '/talent' as LinkHref },
+]
+
 // Nos solutions - CORE assets
 const SOLUTIONS_CORE: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'solutionsSubblink', href: '/assets' },
@@ -70,15 +77,14 @@ const WHO_GROUP_LINKS: { labelKey: string; href: LinkHref }[] = [
 // Qui sommes-nous - Nous rejoindre
 const WHO_JOIN_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'whoCareers',   href: '/career' },
-  { labelKey: 'whoTalent',    href: '/talent' as LinkHref },
   { labelKey: 'whoAlliances', href: '/alliances' },
 ]
 
-// Mega-menu Nos métiers (3 sections)
+// Mega-menu Nos métiers (4 sections)
 function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   return (
-    <div className="absolute top-full left-0 mt-2 w-[650px] bg-ag-white border border-ag-border shadow-lg z-50">
-      <div className="grid grid-cols-3 gap-px bg-ag-border">
+    <div className="absolute top-full left-0 mt-2 w-[860px] bg-ag-white border border-ag-border shadow-lg z-50">
+      <div className="grid grid-cols-4 gap-px bg-ag-border">
         {/* Build */}
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
@@ -133,6 +139,28 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           </p>
           <div className="flex flex-col gap-1">
             {CRAFT_TRANSACT_LINKS.map(({ labelKey, href }) => (
+              <Link
+                key={labelKey}
+                href={href}
+                onClick={onClose}
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
+              >
+                {t(labelKey)}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Recruter */}
+        <div className="bg-ag-white p-4">
+          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+            {t('craftRecruit')}
+          </p>
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
+            {t('craftRecruitDesc')}
+          </p>
+          <div className="flex flex-col gap-1">
+            {CRAFT_RECRUIT_LINKS.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
                 href={href}
