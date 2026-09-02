@@ -46,6 +46,14 @@ const BASE_KEYWORDS = [
   // Advisory
   'cybersecurity', 'advisory', 'AI advisory', 'EU AI Act',
   'RGPD compliance', 'Swiss FADP', 'digital strategy',
+  'board advisory', 'strategy advisory', 'conseil stratégique', 'conseil tech',
+  'CTO as a service', 'DevSecOps', 'audit sécurité', 'security audit',
+  'advisory M&A', 'conseil M&A', 'réseau experts', 'expert network alliance',
+  'alliance partenaires', 'alliance partners tech', 'deal flow partenaire',
+  'Aegryn Advisory', 'Aegryn Alliance', 'partenariat Aegryn',
+  'W&I insurance', 'warranty indemnity', 'assurance cession tech',
+  'séquestre structuré', 'structured escrow', 'financement acquisition tech',
+  'recrutement dirigeant', 'executive recruitment tech', 'talent tech suisse',
   // Geography
   'Switzerland startup', 'Swiss holding', 'holding suisse tech',
   'Europe tech market', 'marché tech européen',
@@ -191,7 +199,7 @@ export const aegrynOrganizationSchema = {
     height:      50,
   },
   image:         `${BASE_URL}/og/default.jpg`,
-  description:   'Aegryn is a Swiss technology holding company that designs, funds, and operates proprietary digital ecosystems across SaaS, AI, real estate, mobility, and social platforms. Headquartered in Switzerland, Aegryn builds long-lasting digital assets engineered to last.',
+  description:   'Aegryn is an independent Swiss tech group. Corporate strategy, tech and M&A advisory, certified digital asset transactions, expert network and trusted partnerships. Building digital assets engineered to last. Switzerland & Europe.',
   slogan:        'Engineered to Last',
   foundingDate:  '2023',
   numberOfEmployees: { '@type': 'QuantitativeValue', value: 5 },
@@ -302,7 +310,7 @@ export const aegrynOrganizationSchema = {
         itemOffered: {
           '@type': 'Service',
           name: 'Aegryn Advisory',
-          description: 'Institutional-grade cybersecurity, AI audit (EU AI Act), and digital strategy advisory for enterprises.',
+          description: 'Corporate strategy, tech and M&A advisory for tech founders, boards and investors. Board advisory, CTO-as-a-service, M&A structuring, expert network, executive recruitment. Switzerland & Europe.',
           url: `${BASE_URL}/en/advisory`,
         },
       },
