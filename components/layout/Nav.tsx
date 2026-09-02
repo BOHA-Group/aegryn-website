@@ -22,6 +22,7 @@ const CRAFT_BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
 // Nos métiers - Support section
 const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportStrategy',    href: '/advisory/strategy' as LinkHref },
+  { labelKey: 'craftSupportTechnology',  href: '/advisory/technology' as LinkHref },
   { labelKey: 'craftSupportAdvisory',    href: '/advisory' },
   { labelKey: 'craftSupportAcquisition', href: '/services/acquisition-support' },
   { labelKey: 'craftSupportAlliances',   href: '/alliances' },
