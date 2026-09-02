@@ -1272,7 +1272,9 @@
       "desc1": "Aegryn Advisory begleitet Gründer, Führungskräfte und Organisationen bei strategischen Entscheidungen, technologischer Transformation und M&A-Operationen. Operative Expertise von Praktikern, nicht von Unternehmensberatern.",
       "desc2": "Was wir beraten, wenden wir auf uns selbst an. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Diese Kohärenz ist es, was Aegryn von einem klassischen Beratungsunternehmen unterscheidet.",
       "quote": "Wir haben keine generischen Playbooks.\nWir haben Methoden, die in realen Umgebungen erprobt wurden.",
-      "cta": "Gespräch vereinbaren"
+      "cta": "Gespräch vereinbaren",
+      "metaTitle": "Aegryn Advisory — Strategie, Tech & M&A | Ein Ansprechpartner",
+      "metaDesc": "Strategische, technologische und M&A-Beratung. Operative Expertise von Operators. Eigene Assets, Expertennetzwerk, Führungskräfterekrutierung. Schweiz & Europa."
     },
     "why": {
       "label": "Warum Aegryn Advisory?",
@@ -1294,11 +1296,19 @@
         {
           "title": "Große Organisationen",
           "desc": "Tech-Strategie, Portfolio M&A, proprietäre interne Assets, Executive Recruiting. Ein Partner, der Governance, Skalierbarkeit und Compliance in großem Maßstab versteht."
+        },
+        {
+          "title": "Fonds & Investoren",
+          "desc": "Sie haben in ein Tech-Unternehmen investiert und benötigen einen unabhängigen Blick auf die Strategie, das Führungsteam oder die Exit-Vorbereitung."
+        },
+        {
+          "title": "Große Organisationen im Wandel",
+          "desc": "Sie leiten ein Transformations- oder Desinvestitionsprojekt. Wir strukturieren und begleiten den gesamten Prozess."
         }
       ]
     },
     "experts": {
-      "label": "Eingesetzte Expertise",
+      "label": "ADVISORY TECH — OPERATIV",
       "desc": "Aegryn Advisory Tech interveniert in den technischen Dimensionen, die die Robustheit und Zertifizierbarkeit eines digitalen Assets definieren: vor, während oder unabhängig von einer Transaktion.",
       "items": [
         {
@@ -1341,7 +1351,8 @@
           "title": "Digitale Barrierefreiheit",
           "desc": "WCAG 2.1 AA-Audit, Konformität mit dem European Accessibility Act (EU-Pflicht seit Juni 2025). Kritisch für HealthTech und EdTech."
         }
-      ]
+      ],
+      "intro": "Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Wenn wir zu Cybersicherheit, KI oder Architektur beraten, tun wir das aus dem Inneren einer Gruppe, die ihre eigenen Systeme aufbaut und betreibt."
     },
     "approach": {
       "label": "Unser Ansatz",
@@ -1354,6 +1365,81 @@
       "title": "Möchten Sie den Wert Ihres Assets schätzen, bevor Sie einen Sanierungsprozess beginnen?",
       "cta": "Mein Asset bewerten",
       "href": "/valuation"
+    },
+    "strategy": {
+      "label": "UNTERNEHMENSSTRATEGIE & BOARD ADVISORY",
+      "intro": "Über Tech und M&A hinaus begleiten wir Führungskräfte bei strategischen Entscheidungen, die die Entwicklung ihrer Organisation definieren. Ein unabhängiger, erfahrener Blick aus der Praxis.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Wachstumsstrategie & Betriebsmodell",
+          "desc": "Marktpositionierung, Geschäftsmodelldesign, Internationalisierungsstrategie, Betriebsmodellüberprüfung."
+        },
+        {
+          "num": "02",
+          "title": "Exit-Vorbereitung & Pre-Sale-Bewertung",
+          "desc": "Investor-Storytelling, strategischer Datenraum, Wertprüfung vor Verkauf oder Kapitalrunde."
+        },
+        {
+          "num": "03",
+          "title": "Organisationaler Wandel",
+          "desc": "Restrukturierung, Organisationsdesign, Change Management, Begleitung von Führungsteams in Übergangsphasen."
+        },
+        {
+          "num": "04",
+          "title": "Governance & Board Advisory",
+          "desc": "Besetzung des Verwaltungsrats, Klärung von Führungsrollen, Gründerbegleitung in der Scale-up- oder Übergabephase."
+        },
+        {
+          "num": "05",
+          "title": "Tech-Unabhängigkeit & digitale Souveränität",
+          "desc": "Audit technologischer Abhängigkeiten, Multi-Cloud-Strategie, Reduktion von Vendor-Lock-in, Migration zu dauerhaften Eigenassets."
+        },
+        {
+          "num": "06",
+          "title": "Strategische Intelligenz & Marktbeobachtung",
+          "desc": "Wettbewerbskartierung, Schwachsignalanalyse, Sektorpositionierung für M&A oder organisches Wachstum."
+        }
+      ]
+    },
+    "ma": {
+      "label": "ADVISORY M&A — TRANSAKTIONSSTRUKTURIERUNG",
+      "intro": "Wir orchestrieren um jede Transaktion die passenden Experten. Rechtlich, steuerlich, finanziell, HR — zum richtigen Zeitpunkt mobilisiert, nicht alle auf einmal.",
+      "phases": [
+        {
+          "num": "01",
+          "title": "Vor der Transaktion",
+          "desc": "Strategischer Audit, Bewertung, Datenraumvorbereitung, Investor-Storytelling, Ziel- oder Käuferidentifikation."
+        },
+        {
+          "num": "02",
+          "title": "Due Diligence",
+          "desc": "Koordination und Aufsicht der technischen, finanziellen, rechtlichen und HR-DD. Risikoanalyse, Anpassungsempfehlungen."
+        },
+        {
+          "num": "03",
+          "title": "Strukturierung",
+          "desc": "Design der Transaktionsstruktur, Verhandlung der Konditionen, Mobilisierung geeigneter Rechts- und Steuerexperten."
+        },
+        {
+          "num": "04",
+          "title": "Closing & Post-Akquisition",
+          "desc": "Signing-Begleitung, Treuhand, Post-Akquisitionsintegration, Rekrutierung von Ausführungsteams."
+        }
+      ]
+    },
+    "network": {
+      "label": "EXPERTENNETZWERK — KOMPETENZEN PRO MISSION AKTIVIERT",
+      "title": "Die richtigen Experten. Zur richtigen Zeit. Bei jeder Mission.",
+      "desc": "Für Spezialmissionen aktivieren wir unser Netzwerk geprüfter unabhängiger Experten. M&A-Anwälte, Wirtschaftsprüfer, Steuerberater, Notare, Digitalrechtsexperten, W&I-Versicherer.\n\nEin Spezialistenpool, der unsere Kapazitäten erweitert ohne unsere Struktur zu belasten.",
+      "cta1": "Netzwerk aufrufen →",
+      "cta1Href": "/alliances",
+      "cta2": "Netzwerk beitreten →",
+      "cta2Href": "/alliances#candidater"
+    },
+    "industries": {
+      "label": "ABGEDECKTE BRANCHEN",
+      "intro": "Wir arbeiten in allen Branchen, wo Tech, Daten und Bewertung Wert schaffen oder schützen."
     }
   },
   "stats": {

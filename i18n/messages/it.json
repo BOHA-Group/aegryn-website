@@ -1272,7 +1272,9 @@
       "desc1": "Aegryn Advisory accompagna fondatori, dirigenti e organizzazioni nelle loro decisioni strategiche, trasformazione tecnologica e operazioni di M&A. Competenza operativa costruita da operatori, non da consulenti di studio.",
       "desc2": "Ciò che consigliamo, lo applichiamo a noi stessi. I nostri asset propri passano per i nostri stessi metodi. Questa coerenza è ciò che differenzia Aegryn da una società di consulenza convenzionale.",
       "quote": "Non abbiamo playbook generici.\nAbbiamo metodi collaudati in ambienti reali.",
-      "cta": "Prenota una sessione"
+      "cta": "Prenota una sessione",
+      "metaTitle": "Aegryn Advisory — Strategia, Tech & M&A | Un unico interlocutore",
+      "metaDesc": "Consulenza strategica, tecnologica e M&A. Expertise operativa costruita da operatori. Asset proprietari, rete di esperti, recruiting esecutivo. Svizzera & Europa."
     },
     "why": {
       "label": "Perché Aegryn Advisory?",
@@ -1294,11 +1296,19 @@
         {
           "title": "Grandi organizzazioni",
           "desc": "Strategia tech, M&A di portafoglio, asset interni proprietari, reclutamento dirigenziale. Un partner che comprende governance, scalabilità e compliance su larga scala."
+        },
+        {
+          "title": "Fondi & Investitori",
+          "desc": "Avete investito in un'azienda tech e avete bisogno di uno sguardo indipendente sulla strategia, il team di direzione o la preparazione alla cessione."
+        },
+        {
+          "title": "Grandi organizzazioni in trasformazione",
+          "desc": "Gestite un progetto di trasformazione o disinvestimento. Strutturiamo e accompagniamo il processo dall'inizio alla fine."
         }
       ]
     },
     "experts": {
-      "label": "Competenze mobilitate",
+      "label": "ADVISORY TECH — OPERATIVO",
       "desc": "Aegryn Advisory Tech interviene nelle dimensioni tecniche che definiscono la robustezza e la certificabilità di un asset digitale: prima, durante o indipendentemente da qualsiasi transazione.",
       "items": [
         {
@@ -1341,7 +1351,8 @@
           "title": "Accessibilità digitale",
           "desc": "Audit WCAG 2.1 AA, conformità all'European Accessibility Act (obbligatorio in UE da giugno 2025). Critico per HealthTech e EdTech."
         }
-      ]
+      ],
+      "intro": "I nostri asset passano attraverso i nostri metodi. Quando consigliamo su cybersecurity, IA o architettura, lo facciamo dall'interno di un gruppo che costruisce e gestisce i propri sistemi."
     },
     "approach": {
       "label": "Il nostro approccio",
@@ -1354,6 +1365,81 @@
       "title": "Volete stimare il valore del vostro asset prima di avviare un processo di remediation?",
       "cta": "Stimare il mio asset",
       "href": "/valuation"
+    },
+    "strategy": {
+      "label": "STRATEGIA AZIENDALE & BOARD ADVISORY",
+      "intro": "Al di là della tech e del M&A, accompagniamo i dirigenti nelle decisioni strategiche che definiscono la traiettoria della loro organizzazione. Una prospettiva senior, indipendente, radicata nell'esecuzione.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Strategia di crescita & modello operativo",
+          "desc": "Posizionamento di mercato, design del modello di business, strategia di internazionalizzazione, revisione del modello operativo."
+        },
+        {
+          "num": "02",
+          "title": "Preparazione all'exit & valutazione pre-cessione",
+          "desc": "Storytelling per investitori, data room strategica, audit del valore prima della cessione o del round di finanziamento."
+        },
+        {
+          "num": "03",
+          "title": "Trasformazione organizzativa",
+          "desc": "Ristrutturazione, design organizzativo, gestione del cambiamento, supporto ai team dirigenziali in periodo di transizione."
+        },
+        {
+          "num": "04",
+          "title": "Governance & Board Advisory",
+          "desc": "Composizione del consiglio, chiarimento dei ruoli esecutivi, accompagnamento del fondatore in fase di scale-up o trasmissione."
+        },
+        {
+          "num": "05",
+          "title": "Indipendenza tech & padronanza digitale",
+          "desc": "Audit delle dipendenze tecnologiche, strategia multi-cloud, riduzione del vendor lock-in, migrazione verso asset proprietari duraturi."
+        },
+        {
+          "num": "06",
+          "title": "Intelligence strategica & osservazione del mercato",
+          "desc": "Mappatura competitiva, analisi dei segnali deboli, posizionamento settoriale per M&A o crescita organica."
+        }
+      ]
+    },
+    "ma": {
+      "label": "ADVISORY M&A — STRUTTURAZIONE DI TRANSAZIONI",
+      "intro": "Orchestriamo intorno a ogni transazione gli esperti adatti alla sua natura e al suo ticket. Legale, fiscale, finanziario, HR — mobilizzati al momento giusto, non tutti insieme.",
+      "phases": [
+        {
+          "num": "01",
+          "title": "Pre-transazione",
+          "desc": "Audit strategico, valutazione, preparazione della data room, storytelling per investitori, identificazione di target o acquirenti."
+        },
+        {
+          "num": "02",
+          "title": "Due Diligence",
+          "desc": "Coordinamento e supervisione della DD tecnica, finanziaria, legale e HR. Analisi dei rischi, raccomandazioni di aggiustamento."
+        },
+        {
+          "num": "03",
+          "title": "Strutturazione",
+          "desc": "Design della struttura transazionale, negoziazione delle condizioni, mobilizzazione di esperti legali e fiscali adeguati."
+        },
+        {
+          "num": "04",
+          "title": "Closing & Post-acquisizione",
+          "desc": "Supporto alla firma, deposito fiduciario, integrazione post-acquisizione, reclutamento dei team di esecuzione."
+        }
+      ]
+    },
+    "network": {
+      "label": "RETE DI ESPERTI — COMPETENZE ATTIVATE PER MISSIONE",
+      "title": "Gli esperti giusti. Al momento giusto. Per ogni missione.",
+      "desc": "Per le missioni specializzate, attiviamo la nostra rete di esperti indipendenti verificati. Avvocati M&A, commercialisti, consulenti fiscali, revisori, notai, specialisti in diritto digitale, assicuratori W&I.\n\nUn pool di specialisti che amplia le nostre capacità senza appesantire la nostra struttura.",
+      "cta1": "Accedere alla rete →",
+      "cta1Href": "/alliances",
+      "cta2": "Unirsi alla rete →",
+      "cta2Href": "/alliances#candidater"
+    },
+    "industries": {
+      "label": "SETTORI COPERTI",
+      "intro": "Interveniamo in tutti i settori dove tech, dati e valorizzazione creano o proteggono valore."
     }
   },
   "stats": {

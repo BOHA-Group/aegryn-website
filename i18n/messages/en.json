@@ -1272,7 +1272,9 @@
       "desc1": "Aegryn Advisory works with founders, executives and organisations on strategic decisions, technology transformation and M&A operations. Operational expertise built by operators, not management consultants.",
       "desc2": "What we advise, we apply to ourselves. Our own assets go through our own methods. That coherence is what differentiates Aegryn from a conventional advisory firm.",
       "quote": "We don't have generic playbooks.\nWe have methods proven in real environments.",
-      "cta": "Book a session"
+      "cta": "Book a session",
+      "metaTitle": "Aegryn Advisory — Strategy, Tech & M&A | One partner",
+      "metaDesc": "Strategic, technology and M&A advisory. Operational expertise built by operators. Proprietary assets, expert network, executive recruitment. Switzerland & Europe."
     },
     "why": {
       "label": "Why Aegryn Advisory?",
@@ -1294,11 +1296,19 @@
         {
           "title": "Large Organisations",
           "desc": "Tech strategy, portfolio M&A, proprietary internal assets, executive recruitment. A partner who understands governance, scalability and compliance at scale."
+        },
+        {
+          "title": "Funds & Investors",
+          "desc": "You have invested in a tech company. You need an independent perspective on its strategy, its leadership team or its readiness for exit."
+        },
+        {
+          "title": "Large organisations in transformation",
+          "desc": "You are managing a transformation or divestiture project. We structure and accompany the process end to end."
         }
       ]
     },
     "experts": {
-      "label": "Expertise mobilised",
+      "label": "ADVISORY TECH — OPERATIONAL",
       "desc": "Aegryn Advisory Tech intervenes on the technical dimensions that define the robustness and certifiability of a digital asset: before, during, or independently of any transaction.",
       "items": [
         {
@@ -1341,7 +1351,8 @@
           "title": "Digital Accessibility",
           "desc": "WCAG 2.1 AA audit, European Accessibility Act compliance (mandatory EU since June 2025). Critical for HealthTech and EdTech."
         }
-      ]
+      ],
+      "intro": "Our own assets go through our own methods. When we advise on cybersecurity, AI or architecture, we do so from inside a group that builds and operates its own systems."
     },
     "approach": {
       "label": "Our approach",
@@ -1354,6 +1365,81 @@
       "title": "Want to estimate the value of your asset before starting a remediation process?",
       "cta": "Estimate my asset",
       "href": "/valuation"
+    },
+    "strategy": {
+      "label": "BUSINESS STRATEGY & BOARD ADVISORY",
+      "intro": "Beyond tech and M&A, we support leaders on the strategic decisions that define their organisation's trajectory. A senior, independent perspective, grounded in execution.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Growth strategy & operating model",
+          "desc": "Market positioning, business model design, internationalisation strategy, operating model review."
+        },
+        {
+          "num": "02",
+          "title": "Exit preparation & pre-sale valuation",
+          "desc": "Investor storytelling, strategic data room, value audit before sale or fundraising. We prepare your company to be seen at its best."
+        },
+        {
+          "num": "03",
+          "title": "Organisational transformation",
+          "desc": "Restructuring, organisational design, change management, support for leadership teams during transitions."
+        },
+        {
+          "num": "04",
+          "title": "Governance & Board Advisory",
+          "desc": "Board composition, clarification of executive roles, founder support during scale-up or handover phases."
+        },
+        {
+          "num": "05",
+          "title": "Tech independence & digital mastery",
+          "desc": "Technology dependency audit, multi-cloud strategy, vendor lock-in reduction, migration to durable proprietary assets."
+        },
+        {
+          "num": "06",
+          "title": "Strategic intelligence & market watch",
+          "desc": "Competitive mapping, weak signal analysis, sector positioning for M&A or organic growth."
+        }
+      ]
+    },
+    "ma": {
+      "label": "ADVISORY M&A — TRANSACTION STRUCTURING",
+      "intro": "We orchestrate around each transaction the experts suited to its nature and ticket. Legal, tax, financial, HR — mobilised at the right moment, not all at once.",
+      "phases": [
+        {
+          "num": "01",
+          "title": "Pre-transaction",
+          "desc": "Strategic audit, valuation, data room preparation, investor storytelling, target or acquirer identification."
+        },
+        {
+          "num": "02",
+          "title": "Due Diligence",
+          "desc": "Coordination and supervision of technical, financial, legal and HR DD. Risk analysis, adjustment recommendations."
+        },
+        {
+          "num": "03",
+          "title": "Structuring",
+          "desc": "Transaction structure design, terms negotiation, mobilisation of appropriate legal and tax experts."
+        },
+        {
+          "num": "04",
+          "title": "Closing & Post-acquisition",
+          "desc": "Signing support, escrow, post-acquisition integration, recruitment of execution teams."
+        }
+      ]
+    },
+    "network": {
+      "label": "EXPERT NETWORK — SKILLS ACTIVATED PER MISSION",
+      "title": "The right experts. At the right time. On every mission.",
+      "desc": "For specialist missions, we activate our network of verified independent experts. M&A lawyers, chartered accountants, tax advisors, statutory auditors, notaries, digital law specialists, W&I insurers.\n\nA group of specialists that extends our capabilities without weighing down our structure. The equivalent of inorganic growth activated per mission.",
+      "cta1": "Access the network →",
+      "cta1Href": "/alliances",
+      "cta2": "Join the network →",
+      "cta2Href": "/alliances#candidater"
+    },
+    "industries": {
+      "label": "INDUSTRIES COVERED",
+      "intro": "We work across all industries where tech, data and valuation create or protect value."
     }
   },
   "stats": {

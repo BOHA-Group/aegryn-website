@@ -1220,7 +1220,9 @@
       "desc1": "Aegryn Conseil accompagne les fondateurs, dirigeants et organisations dans leurs décisions stratégiques, leur transformation technologique et leurs opérations M&A. Une expertise opérationnelle construite par des operators, pas des consultants de cabinet.",
       "desc2": "Ce que nous conseillons, nous l'appliquons à nous-mêmes. Nos actifs propres passent par nos propres méthodes. Cette cohérence est ce qui différencie Aegryn d'un cabinet de conseil classique.",
       "quote": "Nous n'avons pas de playbooks génériques.\nNous avons des méthodes éprouvées dans des environnements réels.",
-      "cta": "Prendre contact"
+      "cta": "Prendre contact",
+      "metaTitle": "Aegryn Advisory — Stratégie, Tech & M&A | Un seul interlocuteur",
+      "metaDesc": "Conseil en stratégie, technologie et M&A. Expertise opérationnelle construite par des operators. Actifs propriétaires, réseau d'experts, recrutement dirigeant. Suisse & Europe."
     },
     "why": {
       "label": "Pourquoi Aegryn Conseil ?",
@@ -1242,11 +1244,19 @@
         {
           "title": "Grandes organisations",
           "desc": "Stratégie tech, M&A de portefeuille, actifs internes propriétaires, recrutement dirigeant. Un partenaire qui comprend les enjeux de gouvernance, de scalabilité et de conformité à l'échelle."
+        },
+        {
+          "title": "Fonds & Investisseurs",
+          "desc": "Vous avez investi dans une société tech. Vous avez besoin d'un regard indépendant sur sa stratégie, son équipe dirigeante ou sa préparation à la cession."
+        },
+        {
+          "title": "Grands groupes en transformation",
+          "desc": "Vous gérez un projet de transformation ou de désinvestissement. Nous structurons et accompagnons le processus de bout en bout."
         }
       ]
     },
     "experts": {
-      "label": "Expertises mobilisées",
+      "label": "ADVISORY TECH — OPÉRATIONNEL",
       "desc": "Aegryn Conseil Tech intervient sur les dimensions techniques qui définissent la robustesse et la certifiabilité d'un actif numérique : avant, pendant ou indépendamment de toute transaction.",
       "items": [
         {
@@ -1289,7 +1299,8 @@
           "title": "Accessibilité numérique",
           "desc": "Audit RGAA 4.1 / WCAG 2.1 AA, conformité European Accessibility Act (obligatoire EU depuis juin 2025). Critique pour HealthTech et EdTech."
         }
-      ]
+      ],
+      "intro": "Nos propres actifs passent par nos propres méthodes. Quand nous conseillons sur la cybersécurité, l'IA ou l'architecture, nous le faisons depuis l'intérieur d'un groupe qui construit et opère ses propres systèmes."
     },
     "approach": {
       "label": "Notre approche",
@@ -1302,6 +1313,81 @@
       "title": "Vous souhaitez estimer la valeur de votre actif avant de commencer un processus de remédiation ?",
       "cta": "Estimer mon actif",
       "href": "/valuation"
+    },
+    "strategy": {
+      "label": "STRATÉGIE D'ENTREPRISE & BOARD ADVISORY",
+      "intro": "Au-delà de la tech et du M&A, nous accompagnons les dirigeants sur les décisions stratégiques qui définissent la trajectoire de leur organisation. Un regard senior, indépendant, ancré dans l'exécution.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Stratégie de croissance & modèle opérationnel",
+          "desc": "Positionnement marché, design du modèle économique, stratégie d'internationalisation, revue du modèle opérationnel."
+        },
+        {
+          "num": "02",
+          "title": "Préparation à l'exit & valorisation pré-cession",
+          "desc": "Storytelling investisseur, data room stratégique, audit de valeur avant cession ou levée de fonds. Nous préparons votre entreprise à être vue sous son meilleur jour."
+        },
+        {
+          "num": "03",
+          "title": "Transformation organisationnelle",
+          "desc": "Restructuration, design organisationnel, conduite du changement, accompagnement des équipes dirigeantes en période de transition."
+        },
+        {
+          "num": "04",
+          "title": "Gouvernance & Board Advisory",
+          "desc": "Composition du conseil d'administration, clarification des rôles exécutifs, accompagnement du fondateur en phase de scale ou de transmission."
+        },
+        {
+          "num": "05",
+          "title": "Indépendance tech & maîtrise numérique",
+          "desc": "Audit de dépendance technologique, stratégie multi-cloud, réduction du vendor lock-in, migration vers des actifs propriétaires pérennes."
+        },
+        {
+          "num": "06",
+          "title": "Intelligence stratégique & veille marché",
+          "desc": "Cartographie concurrentielle, analyse de signaux faibles, positionnement sectoriel pour M&A ou pour la croissance organique."
+        }
+      ]
+    },
+    "ma": {
+      "label": "ADVISORY M&A — STRUCTURATION DE TRANSACTIONS",
+      "intro": "Nous orchestrons autour de chaque transaction les experts adaptés à sa nature et à son ticket. Juridique, fiscal, financier, RH mobilisés au bon moment, pas tous à la fois.",
+      "phases": [
+        {
+          "num": "01",
+          "title": "Pré-transaction",
+          "desc": "Audit stratégique, valorisation, préparation de la data room, storytelling investisseur, identification des cibles ou des acquéreurs."
+        },
+        {
+          "num": "02",
+          "title": "Due Diligence",
+          "desc": "Coordination et supervision de la DD technique, financière, juridique et RH. Analyse des risques, recommandations d'ajustements."
+        },
+        {
+          "num": "03",
+          "title": "Structuration",
+          "desc": "Design de la structure transactionnelle, négociation des conditions, mobilisation des experts juridiques et fiscaux adaptés."
+        },
+        {
+          "num": "04",
+          "title": "Closing & Post-acquisition",
+          "desc": "Accompagnement au signing, séquestre, intégration post-acquisition, recrutement des équipes d'exécution."
+        }
+      ]
+    },
+    "network": {
+      "label": "RÉSEAU D'EXPERTS — COMPÉTENCES ACTIVÉES À LA MISSION",
+      "title": "Les bons experts. Au bon moment. Sur chaque mission.",
+      "desc": "Pour les missions spécialisées, nous activons notre réseau d'experts indépendants vérifiés. Avocats M&A, experts-comptables, fiscalistes, commissaires aux comptes, notaires, spécialistes en droit numérique, assureurs W&I.\n\nUn groupement de spécialistes qui élargit nos capacités sans alourdir notre structure. L'équivalent d'une croissance inorganique activée à la mission.",
+      "cta1": "Accéder au réseau →",
+      "cta1Href": "/alliances",
+      "cta2": "Rejoindre le réseau →",
+      "cta2Href": "/alliances#candidater"
+    },
+    "industries": {
+      "label": "INDUSTRIES COUVERTES",
+      "intro": "Nous intervenons dans toutes les industries où la tech, la donnée et la valorisation créent ou protègent de la valeur."
     }
   },
   "stats": {

@@ -1272,7 +1272,9 @@
       "desc1": "Aegryn Advisory begeleidt oprichters, leidinggevenden en organisaties bij strategische beslissingen, technologische transformatie en M&A-operaties. Operationele expertise gebouwd door operators, niet door managementconsultants.",
       "desc2": "Wat we adviseren, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Die coherentie is wat Aegryn onderscheidt van een conventioneel adviesbureau.",
       "quote": "We hebben geen generieke playbooks.\nWe hebben methoden die bewezen zijn in echte omgevingen.",
-      "cta": "Sessie boeken"
+      "cta": "Sessie boeken",
+      "metaTitle": "Aegryn Advisory — Strategie, Tech & M&A | Één partner",
+      "metaDesc": "Strategisch, technologisch en M&A-advies. Operationele expertise opgebouwd door operators. Eigen assets, expertennetwerk, executive recruitment. Zwitserland & Europa."
     },
     "why": {
       "label": "Waarom Aegryn Advisory?",
@@ -1294,11 +1296,19 @@
         {
           "title": "Grote organisaties",
           "desc": "Tech-strategie, portfolio M&A, eigen interne assets, executive rekrutering. Een partner die governance, schaalbaarheid en compliance op grote schaal begrijpt."
+        },
+        {
+          "title": "Fondsen & Investeerders",
+          "desc": "U heeft geïnvesteerd in een techbedrijf en heeft een onafhankelijk perspectief nodig op de strategie, het leiderschapsteam of de exitgereedheid."
+        },
+        {
+          "title": "Grote organisaties in transformatie",
+          "desc": "U beheert een transformatie- of desinvesteringsproject. Wij structureren en begeleiden het proces van begin tot eind."
         }
       ]
     },
     "experts": {
-      "label": "Ingezette expertise",
+      "label": "ADVISORY TECH — OPERATIONEEL",
       "desc": "Aegryn Advisory Tech grijpt in op de technische dimensies die de robuustheid en certificeerbaarheid van een digitaal actief bepalen: voor, tijdens of onafhankelijk van een transactie.",
       "items": [
         {
@@ -1341,7 +1351,8 @@
           "title": "Digitale toegankelijkheid",
           "desc": "WCAG 2.1 AA-audit, conformiteit met de European Accessibility Act (verplicht in de EU sinds juni 2025). Kritisch voor HealthTech en EdTech."
         }
-      ]
+      ],
+      "intro": "Onze eigen assets doorlopen onze eigen methoden. Wanneer we adviseren over cyberveiligheid, AI of architectuur, doen we dat vanuit een groep die zijn eigen systemen bouwt en beheert."
     },
     "approach": {
       "label": "Onze aanpak",
@@ -1354,6 +1365,81 @@
       "title": "Wilt u de waarde van uw actief schatten voordat u een remediatieproces start?",
       "cta": "Mijn actief waarderen",
       "href": "/valuation"
+    },
+    "strategy": {
+      "label": "BEDRIJFSSTRATEGIE & BOARD ADVISORY",
+      "intro": "Naast tech en M&A begeleiden we leidinggevenden bij strategische beslissingen die de koers van hun organisatie bepalen. Een senior, onafhankelijk perspectief, geworteld in de uitvoering.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Groeistrategie & operationeel model",
+          "desc": "Marktpositionering, businessmodelontwerp, internationaliseringsstrategie, herziening van het operationele model."
+        },
+        {
+          "num": "02",
+          "title": "Exit-voorbereiding & pre-sale waardering",
+          "desc": "Investor storytelling, strategische dataroom, waarde-audit vóór verkoop of financieringsronde."
+        },
+        {
+          "num": "03",
+          "title": "Organisatorische transformatie",
+          "desc": "Herstructurering, organisatieontwerp, verandermanagement, begeleiding van leiderschapsteams in transitieperiodes."
+        },
+        {
+          "num": "04",
+          "title": "Governance & Board Advisory",
+          "desc": "Samenstelling van de raad van bestuur, verduidelijking van uitvoerende rollen, begeleiding van de oprichter in scale-up- of overdrachtsfase."
+        },
+        {
+          "num": "05",
+          "title": "Tech-onafhankelijkheid & digitale beheersing",
+          "desc": "Audit van technologische afhankelijkheden, multi-cloudstrategie, vermindering van vendor lock-in, migratie naar duurzame eigen assets."
+        },
+        {
+          "num": "06",
+          "title": "Strategische intelligentie & marktobservatie",
+          "desc": "Concurrentiekartering, analyse van zwakke signalen, sectorpositionering voor M&A of organische groei."
+        }
+      ]
+    },
+    "ma": {
+      "label": "ADVISORY M&A — TRANSACTIESTRUCTURERING",
+      "intro": "We orkestreren rond elke transactie de experts die passen bij de aard en omvang. Juridisch, fiscaal, financieel, HR — gemobiliseerd op het juiste moment, niet allemaal tegelijk.",
+      "phases": [
+        {
+          "num": "01",
+          "title": "Pre-transactie",
+          "desc": "Strategische audit, waardering, dataroom-voorbereiding, investor storytelling, identificatie van targets of kopers."
+        },
+        {
+          "num": "02",
+          "title": "Due Diligence",
+          "desc": "Coördinatie en toezicht op technische, financiële, juridische en HR-DD. Risicoanalyse, aanpassingsaanbevelingen."
+        },
+        {
+          "num": "03",
+          "title": "Structurering",
+          "desc": "Ontwerp van de transactiestructuur, onderhandeling over voorwaarden, mobilisatie van geschikte juridische en fiscale experts."
+        },
+        {
+          "num": "04",
+          "title": "Closing & Post-acquisitie",
+          "desc": "Begeleiding bij ondertekening, escrow, post-acquisitie-integratie, werving van uitvoeringsteams."
+        }
+      ]
+    },
+    "network": {
+      "label": "EXPERTENNETWERK — VAARDIGHEDEN PER MISSIE GEACTIVEERD",
+      "title": "De juiste experts. Op het juiste moment. Bij elke missie.",
+      "desc": "Voor gespecialiseerde missies activeren we ons netwerk van geverifieerde onafhankelijke experts. M&A-advocaten, accountants, belastingadviseurs, notarissen, digitaalrechtspecialisten, W&I-verzekeraars.\n\nEen pool van specialisten die onze capaciteiten uitbreidt zonder onze structuur te belasten.",
+      "cta1": "Toegang tot het netwerk →",
+      "cta1Href": "/alliances",
+      "cta2": "Het netwerk vervoegen →",
+      "cta2Href": "/alliances#candidater"
+    },
+    "industries": {
+      "label": "GEDEKTE SECTOREN",
+      "intro": "We zijn actief in alle sectoren waar tech, data en waardering waarde creëren of beschermen."
     }
   },
   "stats": {
