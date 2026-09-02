@@ -34,6 +34,8 @@ export default async function StrategyAdvisoryPage({ params }: Props) {
   const pillar = t.raw('pillars.strategy') as {
     title: string
     desc: string
+    why: { title: string; desc: string }
+    approach: { title: string; desc: string; steps: { label: string; desc: string }[] }
     dimensions: { label: string; desc: string }[]
   }
 
@@ -60,6 +62,45 @@ export default async function StrategyAdvisoryPage({ params }: Props) {
           >
             {t('cta')} <ArrowUpRight size={14} />
           </Link>
+        </div>
+      </section>
+
+      {/* Why */}
+      <section className="border-b border-ag-border bg-ag-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+          <h2 className="font-sans font-bold text-[28px] text-ag-navy mb-6">
+            {pillar.why.title}
+          </h2>
+          <p className="text-[15px] text-ag-gray leading-relaxed max-w-3xl">
+            {pillar.why.desc}
+          </p>
+        </div>
+      </section>
+
+      {/* Approach */}
+      <section className="border-b border-ag-border bg-ag-cream">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+          <h2 className="font-sans font-bold text-[28px] text-ag-navy mb-4">
+            {pillar.approach.title}
+          </h2>
+          <p className="text-[15px] text-ag-gray leading-relaxed max-w-3xl mb-12">
+            {pillar.approach.desc}
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {pillar.approach.steps.map((step, idx) => (
+              <div key={idx} className="bg-white border border-ag-border p-6">
+                <div className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-4">
+                  {String(idx + 1).padStart(2, '0')}
+                </div>
+                <h3 className="font-sans font-semibold text-[16px] text-ag-navy mb-3">
+                  {step.label}
+                </h3>
+                <p className="text-[13px] text-ag-gray leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
