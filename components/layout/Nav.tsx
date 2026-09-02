@@ -581,7 +581,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
       {/* Mobile drawer */}
       {mobileOpen && (
         <div ref={drawerRef} className="lg:hidden fixed inset-0 top-16 z-40 bg-ag-navy overflow-y-auto">
-          <div className="px-6 py-8 flex flex-col gap-1">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 py-8 flex flex-col gap-1">
 
             {/* Nos métiers accordion */}
             <div className="mobile-nav-item">
