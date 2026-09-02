@@ -68,9 +68,11 @@
     "craftBuildAssets": "Proprietary assets",
     "craftBuildEngineering": "Asset engineering",
     "craftSupport": "Support",
-    "craftSupportDesc": "Tech, AI & M&A Advisory — All industries",
+    "craftSupportDesc": "Strategy, Tech & M&A Advisory — All industries",
+    "craftSupportStrategy": "Strategy Consulting",
+    "craftSupportTechnology": "Technology Consulting",
+    "craftSupportMA": "M&A Consulting",
     "craftSupportAdvisory": "Tech & AI Advisory",
-    "craftSupportAcquisition": "Mergers & Acquisitions Advisory",
     "craftSupportAlliances": "Partner network",
     "craftSupportExperts": "Expert network",
     "craftTransact": "Transact",
@@ -245,6 +247,32 @@
       "strategy": {
         "title": "Strategy Consulting",
         "desc": "We help leaders define and execute their strategic vision in a constantly evolving environment.",
+        "why": {
+          "title": "Why strategy consulting?",
+          "desc": "In a fragmented European market where 70% of strategies fail to generate sustainable growth, tech leaders face critical choices: international expansion, operating model transformation, capital allocation between organic growth and acquisitions. Our approach combines strategic vision and operational execution to transform ambition into measurable results."
+        },
+        "approach": {
+          "title": "Our approach",
+          "desc": "We don't deliver slides. We co-build with your teams a strategic plan anchored in the reality of your market, capabilities and constraints. Every recommendation is tested, quantified and accompanied by a detailed execution plan.",
+          "steps": [
+            {
+              "label": "Strategic diagnosis",
+              "desc": "Analysis of your competitive positioning, differentiating advantages and market trends. Identification of growth opportunities and structural risks."
+            },
+            {
+              "label": "Vision definition",
+              "desc": "Co-construction of your 3-5 year strategic vision, aligned with your ambitions and capabilities. Prioritization of high-impact strategic bets."
+            },
+            {
+              "label": "Roadmap",
+              "desc": "Development of a detailed execution plan with milestones, KPIs, resource allocation and governance. Identification of quick wins and structural transformations."
+            },
+            {
+              "label": "Execution support",
+              "desc": "Implementation monitoring, tactical adjustments, resolution of operational blockers. Skills transfer to your teams for autonomy."
+            }
+          ]
+        },
         "dimensions": [
           {
             "label": "International strategy",
@@ -271,6 +299,32 @@
       "technology": {
         "title": "Technology Consulting",
         "desc": "We support companies' technology transformation with a pragmatic and operational approach.",
+        "why": {
+          "title": "Why technology consulting?",
+          "desc": "Only 30% of digital transformations achieve their objectives. Technology is no longer support: it defines your operating model, customer experience and ability to innovate. We help leaders transform technological ambition into measurable competitive advantage, combining strategic vision and technical execution."
+        },
+        "approach": {
+          "title": "Our approach",
+          "desc": "We don't do tech strategy in silos. Every recommendation is anchored in your operational reality: existing architecture, technical debt, internal skills, budget constraints. We favor incremental approaches that generate value quickly while building long-term foundations.",
+          "steps": [
+            {
+              "label": "Technical diagnosis",
+              "desc": "Audit of your infrastructure, applications, data and processes. Identification of technical debt, cyber risks and optimization opportunities."
+            },
+            {
+              "label": "Vision & roadmap",
+              "desc": "Definition of your target architecture and prioritization of projects. Balance between quick wins (6-12 months) and structural transformations (18-36 months)."
+            },
+            {
+              "label": "Proof of Concept",
+              "desc": "Technical and business validation on priority use cases. Agile approach: build, test, learn, iterate. De-risking before industrialization."
+            },
+            {
+              "label": "Industrialization & transfer",
+              "desc": "Deployment at scale, integration into existing processes, team training. Progressive autonomy to sustain achievements."
+            }
+          ]
+        },
         "dimensions": [
           {
             "label": "Digital transformation",
@@ -300,7 +354,33 @@
       },
       "ma": {
         "title": "M&A Consulting",
-        "desc": "We support mergers and acquisitions and post-merger integration with tech expertise.",
+        "desc": "We support M&A operations and post-acquisition integration with tech expertise.",
+        "why": {
+          "title": "Why M&A consulting?",
+          "desc": "Tech acquisitions rarely fail on strategy, but on execution: underestimation of technical debt, botched IT integration, flight of key talents, unrealized technology synergies. We intervene from the due diligence phase to identify technical risks and value creation opportunities, then support integration through closing and beyond."
+        },
+        "approach": {
+          "title": "Our approach",
+          "desc": "We treat each acquisition as a transformation opportunity. Beyond classic technical due diligence, we evaluate how the acquisition can accelerate your IT modernization, enrich your data/AI capabilities, or serve as a platform to consolidate your market. Our expertise covers the entire M&A cycle.",
+          "steps": [
+            {
+              "label": "Tech due diligence",
+              "desc": "In-depth technical audit: architecture, technical debt, security, compliance, IP. Risk and opportunity assessment. Quantification of technology synergies."
+            },
+            {
+              "label": "Technology blueprint",
+              "desc": "Definition of post-acquisition target architecture. Detailed IT integration plan: systems, data, processes. Identification of quick wins and structural projects."
+            },
+            {
+              "label": "Integration Management Office",
+              "desc": "IT integration steering: governance, planning, risk management, team coordination. Monitoring of critical milestones (Day 1, Day 100, synergies)."
+            },
+            {
+              "label": "Value capture & transformation",
+              "desc": "Realization of technology synergies. Accelerated modernization of legacy systems. Post-acquisition digital transformation to maximize value creation."
+            }
+          ]
+        },
         "dimensions": [
           {
             "label": "Transaction Advisory",
@@ -352,6 +432,25 @@
           "desc": "Final documentation, skills transfer and access to post-mission follow-up."
         }
       ]
+    },
+    "thoughtLeadership": {
+      "title": "Three complementary dimensions in a consolidating market",
+      "desc": "The European tech market is undergoing a structural transformation: technology is no longer a differentiating advantage, but a survival prerequisite. In this context, strategy, technology and M&A are no longer isolated disciplines — they form an inseparable triptych for leaders who want to grow.",
+      "pillars": [
+        {
+          "label": "Strategy: defining where to play",
+          "desc": "Facing European market fragmentation and technological acceleration, leaders must make radical choices: which markets to address, which capabilities to develop internally, which acquisitions to target to fill gaps. Strategy defines the vision, but without a technology roadmap or M&A plan, it remains a dead letter."
+        },
+        {
+          "label": "Technology: building the advantage",
+          "desc": "Technology has become the main differentiation lever: customer experience, operational efficiency, innovation capacity. But 70% of digital transformations fail due to lack of strategic alignment. A tech vision disconnected from business strategy generates technical debt and lost investments."
+        },
+        {
+          "label": "M&A: accelerating through consolidation",
+          "desc": "Organic growth is no longer enough. European tech leaders consolidate their markets through acquisitions to gain critical mass, acquire rare talents, or accelerate their digital transformation. But without rigorous tech due diligence and IT integration plan, acquisitions destroy more value than they create."
+        }
+      ],
+      "conclusion": "Aegryn Advisory operates at the intersection of these three dimensions. We help tech leaders define a coherent growth strategy, build the technological capabilities to execute it, and identify acquisitions that accelerate the plan without creating technical debt. An integrated approach for a market that no longer forgives silos."
     },
     "label": "Advisory"
   },
