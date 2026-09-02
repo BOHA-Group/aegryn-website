@@ -646,34 +646,35 @@
     "cta2Href": "/talent#candidat"
   },
   "homeSegments": {
-    "label": "UNSERE KUNDEN",
-    "title": "Wir begleiten Unternehmen in jeder Phase.",
+    "label": "WER NUTZT AEGRYN",
+    "title": "Eine Plattform.\nVier Profile.",
     "cards": [
       {
-        "key": "startup",
-        "title": "Startup & Scale-up",
-        "desc": "Die richtigen technischen und strategischen Grundlagen legen. Von Anfang an Wert aufbauen. Auf die nächste Runde oder den Exit vorbereiten."
+        "key": "seller",
+        "title": "Der Verkäufer",
+        "desc": "Gründer oder Führungskraft, der sein Tech-Asset unter den besten Bedingungen veräußern möchte. Audit, Bewertung, Datenraum, Begleitung bis zur Unterzeichnung."
       },
       {
-        "key": "pme",
-        "title": "Wachsende KMU",
-        "desc": "Transformieren, zertifizieren und rekrutieren, bevor man verkauft oder eine Runde abschliesst. Assets aufbauen, die Bestand haben."
+        "key": "buyer",
+        "title": "Der Käufer",
+        "desc": "Fonds, Family Office oder strategischer Käufer auf der Suche nach qualifizierten digitalen Assets. Off-Market-Deal-Flow, zertifizierte Unterlagen, NDA-Zugang."
       },
       {
-        "key": "enterprise",
-        "title": "Grosse Unternehmen",
-        "desc": "Tech-Strategie, Portfolio-M&A, eigene interne Assets, Executive-Rekrutierung."
+        "key": "partner",
+        "title": "Der Partner",
+        "desc": "Kanzlei, M&A-Experte, technischer Berater oder Versicherer. Treten Sie dem Alliance-Netzwerk bei und wirken Sie bei strukturierten Transaktionen mit."
       },
       {
-        "key": "funds",
-        "title": "Fonds & Investoren",
-        "desc": "Qualifizierter Deal Flow, Asset-Zertifizierung, Post-Akquisitions-Begleitung, Rekrutierung der Führungsteams."
+        "key": "founder",
+        "title": "Der Tech-Gründer",
+        "desc": "Sie bauen. Aegryn hilft Ihnen, Ihr Asset zu strukturieren, zu bewerten und zum richtigen Zeitpunkt unter besten Bedingungen zu übertragen."
       }
     ]
   },
   "homeHybrid": {
-    "title": "Was wir für unsere Kunden tun,\nwenden wir auf uns selbst an.",
-    "desc": "Aegryn berät und baut Tech-Assets.\nAegryn zertifiziert eigene Assets nach eigenen Methoden.\nAegryn strukturiert Transaktionen auch für sich selbst.\nAegryn rekrutiert Führungskräfte auch für eigene Einheiten.\nAegryn publiziert über einen Markt, den es von innen kennt.\n\nKein Berater. Keine Agentur. Eine hybride Gruppe.\nBeratung und Tech-Unternehmen. Beides zugleich."
+    "label": "HYBRIDES MODELL",
+    "title": "Wir bauen.\nWir beraten.\nWir übertragen.",
+    "desc": "Aegryn ist keine Kanzlei. Keine Investmentbank. Kein Inkubator.\n\nEs ist eine operative Gruppe, die eigene Assets aufbaut, Gründer und Führungskräfte berät und komplexe Transaktionen strukturiert.\n\nAegryn greift dort ein, wo die Theorie aufhört und die Umsetzung beginnt."
   },
   "whyapps": {
     "label": "Warum Aegryn",

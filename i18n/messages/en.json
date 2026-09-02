@@ -646,34 +646,35 @@
     "cta2Href": "/talent#candidat"
   },
   "homeSegments": {
-    "label": "OUR CLIENTS",
-    "title": "We support companies at every stage.",
+    "label": "WHO USES AEGRYN",
+    "title": "One platform.\nFour profiles.",
     "cards": [
       {
-        "key": "startup",
-        "title": "Startup & Scale-up",
-        "desc": "Laying the right tech and strategic foundations. Building value from day one. Preparing for the next raise or exit."
+        "key": "seller",
+        "title": "The seller",
+        "desc": "Founder or executive looking to sell their tech asset in the best conditions. Audit, valuation, data room, support through to signing."
       },
       {
-        "key": "pme",
-        "title": "Growing SMEs",
-        "desc": "Transform, certify and recruit before selling or raising. Build assets that last."
+        "key": "buyer",
+        "title": "The acquirer",
+        "desc": "Fund, family office or strategic acquirer seeking qualified digital assets. Off-market deal flow, certified dossiers, NDA access."
       },
       {
-        "key": "enterprise",
-        "title": "Large Corporates",
-        "desc": "Tech strategy, portfolio M&A, proprietary internal assets, executive recruitment."
+        "key": "partner",
+        "title": "The partner",
+        "desc": "Law firm, M&A expert, technical advisor or insurer. Join the Alliance network and participate in structured transactions."
       },
       {
-        "key": "funds",
-        "title": "Funds & Investors",
-        "desc": "Qualified deal flow, asset certification, post-acquisition support, leadership team recruitment."
+        "key": "founder",
+        "title": "The tech founder",
+        "desc": "You build. Aegryn helps you structure, value and, when the time comes, transfer your asset in the best conditions."
       }
     ]
   },
   "homeHybrid": {
-    "title": "What we do for our clients,\nwe do for ourselves.",
-    "desc": "Aegryn advises on and builds tech assets.\nAegryn certifies its own assets using its own methods.\nAegryn structures transactions including its own.\nAegryn recruits executives including for its own entities.\nAegryn publishes on a market it knows from the inside.\n\nNot a firm. Not an agency. A hybrid group.\nConsulting and tech company. Both at once."
+    "label": "HYBRID MODEL",
+    "title": "We build.\nWe advise.\nWe transfer.",
+    "desc": "Aegryn is not a firm. Not an investment bank. Not an incubator.\n\nIt is an operational group that builds its own assets, advises founders and executives, and structures complex transactions.\n\nAegryn intervenes where theory stops and execution begins."
   },
   "whyapps": {
     "label": "Why Aegryn",

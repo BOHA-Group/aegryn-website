@@ -7632,5 +7632,36 @@
       "Transport & Logistique"
     ],
     "footerNote": "Cette liste n'est pas exhaustive. Aegryn intervient dans tout secteur où la technologie, l'innovation et la transformation digitale créent de la valeur."
+  },
+  "homeSegments": {
+    "label": "QUI UTILISE AEGRYN",
+    "title": "Une plateforme.\nQuatre profils.",
+    "cards": [
+      {
+        "key": "seller",
+        "title": "Le cédant",
+        "desc": "Fondateur ou dirigeant qui souhaite céder son actif tech dans les meilleures conditions. Audit, valorisation, data room, accompagnement jusqu'au signing."
+      },
+      {
+        "key": "buyer",
+        "title": "L'acquéreur",
+        "desc": "Fonds, family office ou acquéreur stratégique en quête d'actifs numériques qualifiés. Deal flow offmarket, dossiers certifiés, accès NDA."
+      },
+      {
+        "key": "partner",
+        "title": "Le partenaire",
+        "desc": "Cabinet juridique, expert M&A, conseiller technique ou assureur. Intégrez le réseau Alliance et intervenez sur des transactions structurées."
+      },
+      {
+        "key": "founder",
+        "title": "Le fondateur tech",
+        "desc": "Vous construisez. Aegryn vous aide à structurer, valoriser et, le moment venu, à transmettre votre actif dans les meilleures conditions."
+      }
+    ]
+  },
+  "homeHybrid": {
+    "label": "MODÈLE HYBRIDE",
+    "title": "Nous construisons.\nNous conseillons.\nNous transmettons.",
+    "desc": "Aegryn n'est pas un cabinet. Pas une banque d'affaires. Pas un incubateur.\n\nC'est un groupe opérationnel qui construit ses propres actifs, conseille des fondateurs et des dirigeants, et structure des transactions complexes.\n\nAegryn intervient là où la théorie s'arrête et où l'exécution commence."
   }
 }

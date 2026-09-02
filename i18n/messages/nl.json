@@ -646,34 +646,35 @@
     "cta2Href": "/talent#candidat"
   },
   "homeSegments": {
-    "label": "ONZE KLANTEN",
-    "title": "We begeleiden bedrijven in elke fase.",
+    "label": "WIE GEBRUIKT AEGRYN",
+    "title": "Één platform.\nVier profielen.",
     "cards": [
       {
-        "key": "startup",
-        "title": "Startup & Scale-up",
-        "desc": "De juiste technische en strategische fundamenten leggen. Waarde opbouwen vanaf dag één. Voorbereiden op de volgende ronde of exit."
+        "key": "seller",
+        "title": "De verkoper",
+        "desc": "Oprichter of bestuurder die zijn tech asset onder de beste omstandigheden wil verkopen. Audit, waardering, dataroom, begeleiding tot aan de ondertekening."
       },
       {
-        "key": "pme",
-        "title": "Groeiende KMO's",
-        "desc": "Transformeren, certificeren en rekruteren vóór verkoop of fondsenwerving. Assets bouwen die blijven."
+        "key": "buyer",
+        "title": "De koper",
+        "desc": "Fonds, family office of strategische koper op zoek naar gekwalificeerde digitale assets. Off-market dealflow, gecertificeerde dossiers, NDA-toegang."
       },
       {
-        "key": "enterprise",
-        "title": "Grote bedrijven",
-        "desc": "Tech-strategie, portfolio M&A, eigen interne assets, executive rekrutering."
+        "key": "partner",
+        "title": "De partner",
+        "desc": "Advocatenkantoor, M&A-expert, technisch adviseur of verzekeraar. Treed toe tot het Alliance-netwerk en neem deel aan gestructureerde transacties."
       },
       {
-        "key": "funds",
-        "title": "Fondsen & Investeerders",
-        "desc": "Gekwalificeerde deal flow, asset certificering, post-acquisitie begeleiding, rekrutering van leidinggevende teams."
+        "key": "founder",
+        "title": "De tech-oprichter",
+        "desc": "U bouwt. Aegryn helpt u uw asset te structureren, te waarderen en op het juiste moment onder de beste omstandigheden over te dragen."
       }
     ]
   },
   "homeHybrid": {
-    "title": "Wat we voor onze klanten doen,\npassen we op onszelf toe.",
-    "desc": "Aegryn adviseert en bouwt tech-assets.\nAegryn certificeert eigen assets met eigen methoden.\nAegryn structureert transacties inclusief de eigen.\nAegryn werft leidinggevenden ook voor eigen entiteiten.\nAegryn publiceert over een markt die het van binnenuit kent.\n\nGeen adviesbureau. Geen bureau. Een hybride groep.\nAdviesbureau en tech-bedrijf. Beide tegelijk."
+    "label": "HYBRIDE MODEL",
+    "title": "Wij bouwen.\nWij adviseren.\nWij overdragen.",
+    "desc": "Aegryn is geen kantoor. Geen investeringsbank. Geen incubator.\n\nHet is een operationele groep die eigen assets opbouwt, oprichters en leidinggevenden adviseert en complexe transacties structureert.\n\nAegryn treedt op waar de theorie ophoudt en de uitvoering begint."
   },
   "whyapps": {
     "label": "Waarom Aegryn",

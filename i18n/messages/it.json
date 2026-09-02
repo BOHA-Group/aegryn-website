@@ -646,34 +646,35 @@
     "cta2Href": "/talent#candidat"
   },
   "homeSegments": {
-    "label": "I NOSTRI CLIENTI",
-    "title": "Accompagniamo le aziende in ogni fase.",
+    "label": "CHI USA AEGRYN",
+    "title": "Una piattaforma.\nQuattro profili.",
     "cards": [
       {
-        "key": "startup",
-        "title": "Startup & Scale-up",
-        "desc": "Porre le giuste fondamenta tecniche e strategiche. Costruire valore dal primo giorno. Prepararsi al prossimo round o all'exit."
+        "key": "seller",
+        "title": "Il cedente",
+        "desc": "Fondatore o dirigente che desidera cedere il proprio asset tech nelle migliori condizioni. Audit, valutazione, data room, accompagnamento fino alla firma."
       },
       {
-        "key": "pme",
-        "title": "PMI in crescita",
-        "desc": "Trasformare, certificare e reclutare prima di vendere o raccogliere fondi. Costruire asset che durano."
+        "key": "buyer",
+        "title": "L'acquirente",
+        "desc": "Fondo, family office o acquirente strategico alla ricerca di asset digitali qualificati. Deal flow offmarket, fascicoli certificati, accesso NDA."
       },
       {
-        "key": "enterprise",
-        "title": "Grandi aziende",
-        "desc": "Strategia tech, M&A di portafoglio, asset interni proprietari, reclutamento dirigenziale."
+        "key": "partner",
+        "title": "Il partner",
+        "desc": "Studio legale, esperto M&A, consulente tecnico o assicuratore. Entrare nella rete Alliance e partecipare a transazioni strutturate."
       },
       {
-        "key": "funds",
-        "title": "Fondi & Investitori",
-        "desc": "Deal flow qualificato, certificazione di asset, supporto post-acquisizione, reclutamento dei team di direzione."
+        "key": "founder",
+        "title": "Il fondatore tech",
+        "desc": "Costruite. Aegryn vi aiuta a strutturare, valorizzare e, al momento giusto, trasferire il vostro asset nelle migliori condizioni."
       }
     ]
   },
   "homeHybrid": {
-    "title": "Ciò che facciamo per i nostri clienti,\nlo applichiamo a noi stessi.",
-    "desc": "Aegryn consiglia e costruisce asset tech.\nAegryn certifica i propri asset con i propri metodi.\nAegryn struttura transazioni incluse le proprie.\nAegryn recluta dirigenti anche per le proprie entità.\nAegryn pubblica su un mercato che conosce dall'interno.\n\nNon una consulenza. Non un'agenzia. Un gruppo ibrido.\nSocietà di consulenza e azienda tech. Entrambe allo stesso tempo."
+    "label": "MODELLO IBRIDO",
+    "title": "Costruiamo.\nConsigliamo.\nTrasferiamo.",
+    "desc": "Aegryn non è uno studio. Non è una banca d'affari. Non è un incubatore.\n\nÈ un gruppo operativo che costruisce i propri asset, consiglia fondatori e dirigenti e struttura transazioni complesse.\n\nAegryn interviene dove la teoria si ferma e l'esecuzione comincia."
   },
   "whyapps": {
     "label": "Perché Aegryn",
