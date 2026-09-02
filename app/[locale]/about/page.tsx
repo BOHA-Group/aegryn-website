@@ -253,6 +253,34 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Founder */}
+      <section id="fondateur" className="border-b border-ag-border" style={{ scrollMarginTop: '80px' }}>
+        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
+            / {ta('founder.label')}
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <h2
+              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
+              style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+            >
+              {ta('founder.title')}
+            </h2>
+            <div className="space-y-5">
+              {ta('founder.desc').split('\n\n').map((para, i) => (
+                <p key={i} className="text-[15px] text-ag-gray leading-relaxed">{para}</p>
+              ))}
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all mt-4"
+              >
+                {ta('founder.cta')} <ArrowUpRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Swiss */}
       <section className="bg-ag-navy py-28 px-6 md:px-12 border-b border-ag-navy">
         <div className="max-w-7xl mx-auto">
@@ -284,33 +312,6 @@ export default function AboutPage() {
       {/* Segments clients */}
       <SegmentsSection />
 
-      {/* Founder */}
-      <section id="fondateur" className="border-b border-ag-border">
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
-            / {ta('founder.label')}
-          </p>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <h2
-              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
-              style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
-            >
-              {ta('founder.title')}
-            </h2>
-            <div className="space-y-5">
-              {ta('founder.desc').split('\n\n').map((para, i) => (
-                <p key={i} className="text-[15px] text-ag-gray leading-relaxed">{para}</p>
-              ))}
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all mt-4"
-              >
-                {t('founder.cta')} <ArrowUpRight size={14} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* What's next */}
       <section className="border-b border-ag-border bg-ag-off-white/60">

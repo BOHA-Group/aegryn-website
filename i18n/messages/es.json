@@ -3917,35 +3917,115 @@
       "items": [
         {
           "num": "01",
-          "title": "Advisory Tech",
-          "desc": "CTO as a service, auditoría de seguridad, arquitectura, DevSecOps, IA. Expertos que refuerzan la solidez de los activos antes y durante la certificación."
+          "id": "advisory_tech",
+          "title": "Asesoría Tech",
+          "desc": "CTO as a service, audit de sécurité, architecture, DevSecOps, IA.",
+          "tags": [
+            "CTO as a Service",
+            "Architecture SI",
+            "Audit sécurité",
+            "DevSecOps",
+            "IA & Machine Learning",
+            "Cloud & Infra",
+            "API & Intégrations",
+            "Cybersécurité opérationnelle",
+            "Data Engineering",
+            "Product Management tech"
+          ]
         },
         {
           "num": "02",
-          "title": "Advisory Transaccional",
-          "desc": "Due diligence estratégica, valoración, estructuración de deals, acompañamiento M&A buy-side y sell-side."
+          "id": "advisory_transaction",
+          "title": "Asesoría Transaccional",
+          "desc": "Due diligence stratégique, valorisation, structuration de transaction.",
+          "tags": [
+            "Due diligence stratégique",
+            "Valorisation d'actifs",
+            "Structuration M&A",
+            "NDA & Confidentialité",
+            "Data room",
+            "Quality of Earnings",
+            "Earn-out design",
+            "Financement acquisition",
+            "LOI & SPA",
+            "Post-merger integration"
+          ]
         },
         {
           "num": "03",
+          "id": "juridique",
           "title": "Jurídico & Certificación",
-          "desc": "Abogados M&A, derecho digital, propiedad intelectual, fiscalidad transaccional, conformidad RGPD/LOPD."
+          "desc": "Avocats M&A, IP, droit numérique, notaires, audit légal.",
+          "tags": [
+            "Droit des sociétés",
+            "Propriété intellectuelle",
+            "Droit numérique",
+            "RGPD & Conformité",
+            "Droit fiscal M&A",
+            "Audit légal",
+            "Notariat",
+            "Droit du travail",
+            "Contrats SaaS",
+            "NIS2 & DORA"
+          ]
         },
         {
           "num": "04",
+          "id": "dealflow",
           "title": "Deal Flow & Distribución",
-          "desc": "Captadores cualificados, firmas de M&A, bancos de inversión, family offices. Acceso a oportunidades offmarket."
+          "desc": "Accès à un cercle d'acquéreurs qualifiés sous NDA.",
+          "tags": [
+            "Family offices",
+            "Fonds de Private Equity",
+            "Fonds de VC",
+            "Strategic buyers",
+            "Buy-side advisory",
+            "Sell-side advisory",
+            "Co-investissement",
+            "Club deals",
+            "Secondary transactions",
+            "Distressed assets"
+          ]
         },
         {
           "num": "05",
-          "title": "Depósito & Estructuración financiera",
-          "desc": "Contables, auditores, estructuración del depósito en garantía, financiación de la adquisición."
+          "id": "sequestre",
+          "title": "Depósito & Estructuración Financiera",
+          "desc": "Financement relais, earn-out, séquestre, structuration.",
+          "tags": [
+            "Financement relais",
+            "Earn-out structuré",
+            "Séquestre fiduciaire",
+            "Garantie de passif",
+            "Vendor loan",
+            "Mezzanine",
+            "Bridge financing",
+            "Structuration LBO",
+            "Garantie W&I",
+            "Escrow agreements"
+          ]
         },
         {
           "num": "06",
-          "title": "Seguro W&I",
-          "desc": "Especialistas en seguros de garantía y W&I. Protección de compradores y vendedores post-closing."
+          "id": "assurance",
+          "title": "Seguro W&I & Riesgo",
+          "desc": "Spécialistes W&I insurance, risk managers, assureurs professionnels.",
+          "tags": [
+            "W&I Insurance",
+            "Tax liability insurance",
+            "Cyber insurance",
+            "Responsabilité civile pro",
+            "Directors & Officers",
+            "Assurance erreurs & omissions",
+            "Risk mapping",
+            "Environmental liability",
+            "IP infringement cover",
+            "Transaction insurance"
+          ]
         }
-      ]
+      ],
+      "filterAll": "Todos los ámbitos",
+      "filterLabel": "Filtrar por dominio"
     },
     "alliancePartners": {
       "label": "SOCIOS ALLIANCE",
@@ -7888,7 +7968,8 @@
     "founder": {
       "label": "EL FUNDADOR",
       "title": "Un fundador venido del terreno.",
-      "desc": "El fundador de Aegryn es un directivo y operador con más de veinte años de experiencia internacional en estrategia, tecnología y M&A.\n\nAntiguo director ejecutivo en una consultora de rango mundial, ha acompañado a organizaciones públicas y privadas, grupos internacionales e instituciones en sus transformaciones más complejas.\n\nEligió crear Aegryn para reunir en una sola estructura lo que el mercado ofrece en silos: consultoría, construcción, transacción, talento e inteligencia de mercado.\n\nSu convicción: las empresas que duran no eligen entre estrategia y tecnología. Las piensan juntas."
+      "desc": "El fundador de Aegryn es un directivo y operador con más de veinte años de experiencia internacional en estrategia, tecnología y M&A.\n\nAntiguo director ejecutivo en una consultora de rango mundial, ha acompañado a organizaciones públicas y privadas, grupos internacionales e instituciones en sus transformaciones más complejas.\n\nEligió crear Aegryn para reunir en una sola estructura lo que el mercado ofrece en silos: consultoría, construcción, transacción, talento e inteligencia de mercado.\n\nSu convicción: las empresas que duran no eligen entre estrategia y tecnología. Las piensan juntas.",
+      "cta": "Contactar"
     },
     "whyAegryn": {
       "label": "POR QUÉ AEGRYN",

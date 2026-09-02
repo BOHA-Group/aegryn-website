@@ -3916,35 +3916,115 @@
       "items": [
         {
           "num": "01",
+          "id": "advisory_tech",
           "title": "Tech Advisory",
-          "desc": "CTO as a service, security audit, architecture, DevSecOps, AI. Experts who strengthen asset robustness before and during certification."
+          "desc": "CTO as a service, security audit, architecture, DevSecOps, AI.",
+          "tags": [
+            "CTO as a Service",
+            "IT Architecture",
+            "Security Audit",
+            "DevSecOps",
+            "AI & Machine Learning",
+            "Cloud & Infrastructure",
+            "API & Integrations",
+            "Operational Cybersecurity",
+            "Data Engineering",
+            "Tech Product Management"
+          ]
         },
         {
           "num": "02",
+          "id": "advisory_transaction",
           "title": "Transaction Advisory",
-          "desc": "Strategic due diligence, valuation, deal structuring, buy-side and sell-side M&A support."
+          "desc": "Strategic due diligence, valuation, transaction structuring.",
+          "tags": [
+            "Strategic Due Diligence",
+            "Asset Valuation",
+            "M&A Structuring",
+            "NDA & Confidentiality",
+            "Data Room",
+            "Quality of Earnings",
+            "Earn-out Design",
+            "Acquisition Financing",
+            "LOI & SPA",
+            "Post-merger Integration"
+          ]
         },
         {
           "num": "03",
+          "id": "juridique",
           "title": "Legal & Certification",
-          "desc": "M&A lawyers, digital law, intellectual property, transactional tax, GDPR/FADP compliance."
+          "desc": "M&A lawyers, IP, digital law, notaries, legal audit.",
+          "tags": [
+            "Corporate Law",
+            "Intellectual Property",
+            "Digital Law",
+            "GDPR & Compliance",
+            "M&A Tax Law",
+            "Legal Audit",
+            "Notarial Services",
+            "Employment Law",
+            "SaaS Contracts",
+            "NIS2 & DORA"
+          ]
         },
         {
           "num": "04",
+          "id": "dealflow",
           "title": "Deal Flow & Distribution",
-          "desc": "Qualified introducers, M&A firms, investment banks, family offices. Access to off-market opportunities."
+          "desc": "Access to a circle of qualified acquirers under NDA.",
+          "tags": [
+            "Family Offices",
+            "Private Equity Funds",
+            "VC Funds",
+            "Strategic Buyers",
+            "Buy-side Advisory",
+            "Sell-side Advisory",
+            "Co-investment",
+            "Club Deals",
+            "Secondary Transactions",
+            "Distressed Assets"
+          ]
         },
         {
           "num": "05",
+          "id": "sequestre",
           "title": "Escrow & Financial Structuring",
-          "desc": "Chartered accountants, statutory auditors, escrow structuring, acquisition financing."
+          "desc": "Bridge financing, earn-out, escrow, structuring.",
+          "tags": [
+            "Bridge Financing",
+            "Structured Earn-out",
+            "Fiduciary Escrow",
+            "Liability Guarantee",
+            "Vendor Loan",
+            "Mezzanine",
+            "Bridge Financing",
+            "LBO Structuring",
+            "W&I Guarantee",
+            "Escrow Agreements"
+          ]
         },
         {
           "num": "06",
-          "title": "W&I Insurance",
-          "desc": "Warranty & Indemnity insurance specialists. Protection for buyers and sellers post-closing."
+          "id": "assurance",
+          "title": "W&I Insurance & Risk",
+          "desc": "W&I insurance specialists, risk managers, professional insurers.",
+          "tags": [
+            "W&I Insurance",
+            "Tax Liability Insurance",
+            "Cyber Insurance",
+            "Professional Liability",
+            "Directors & Officers",
+            "Errors & Omissions",
+            "Risk Mapping",
+            "Environmental Liability",
+            "IP Infringement Cover",
+            "Transaction Insurance"
+          ]
         }
-      ]
+      ],
+      "filterAll": "All domains",
+      "filterLabel": "Filter by domain"
     },
     "alliancePartners": {
       "label": "ALLIANCE PARTNERS",
@@ -7889,7 +7969,8 @@
     "founder": {
       "label": "THE FOUNDER",
       "title": "A founder from the field.",
-      "desc": "Aegryn's founder is an executive and operator with over twenty years of international experience in strategy, technology and M&A.\n\nA former executive director at a global consulting firm, he has supported public and private organisations, international groups and institutions through their most complex transformations.\n\nHe chose to create Aegryn to bring together within a single structure what the market offers in silos: advisory, build, transaction, talent and market intelligence.\n\nHis conviction: companies that last do not choose between strategy and technology. They think them together."
+      "desc": "Aegryn's founder is an executive and operator with over twenty years of international experience in strategy, technology and M&A.\n\nA former executive director at a global consulting firm, he has supported public and private organisations, international groups and institutions through their most complex transformations.\n\nHe chose to create Aegryn to bring together within a single structure what the market offers in silos: advisory, build, transaction, talent and market intelligence.\n\nHis conviction: companies that last do not choose between strategy and technology. They think them together.",
+      "cta": "Get in touch"
     },
     "whyAegryn": {
       "label": "WHY AEGRYN",

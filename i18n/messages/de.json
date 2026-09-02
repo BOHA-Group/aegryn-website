@@ -3917,35 +3917,115 @@
       "items": [
         {
           "num": "01",
+          "id": "advisory_tech",
           "title": "Tech Advisory",
-          "desc": "CTO as a Service, Sicherheitsaudit, Architektur, DevSecOps, KI. Experten, die die Robustheit von Assets vor und während der Zertifizierung stärken."
+          "desc": "CTO as a service, audit de sécurité, architecture, DevSecOps, IA.",
+          "tags": [
+            "CTO as a Service",
+            "Architecture SI",
+            "Audit sécurité",
+            "DevSecOps",
+            "IA & Machine Learning",
+            "Cloud & Infra",
+            "API & Intégrations",
+            "Cybersécurité opérationnelle",
+            "Data Engineering",
+            "Product Management tech"
+          ]
         },
         {
           "num": "02",
-          "title": "Transaktions-Advisory",
-          "desc": "Strategische Due Diligence, Bewertung, Deal-Strukturierung, Buy-Side- und Sell-Side-M&A-Begleitung."
+          "id": "advisory_transaction",
+          "title": "Transaktionsberatung",
+          "desc": "Due diligence stratégique, valorisation, structuration de transaction.",
+          "tags": [
+            "Due diligence stratégique",
+            "Valorisation d'actifs",
+            "Structuration M&A",
+            "NDA & Confidentialité",
+            "Data room",
+            "Quality of Earnings",
+            "Earn-out design",
+            "Financement acquisition",
+            "LOI & SPA",
+            "Post-merger integration"
+          ]
         },
         {
           "num": "03",
-          "title": "Rechtliches & Zertifizierung",
-          "desc": "M&A-Anwälte, Digitalrecht, Geistiges Eigentum, Transaktionssteuer, DSGVO/DSG-Compliance."
+          "id": "juridique",
+          "title": "Recht & Zertifizierung",
+          "desc": "Avocats M&A, IP, droit numérique, notaires, audit légal.",
+          "tags": [
+            "Droit des sociétés",
+            "Propriété intellectuelle",
+            "Droit numérique",
+            "RGPD & Conformité",
+            "Droit fiscal M&A",
+            "Audit légal",
+            "Notariat",
+            "Droit du travail",
+            "Contrats SaaS",
+            "NIS2 & DORA"
+          ]
         },
         {
           "num": "04",
+          "id": "dealflow",
           "title": "Deal Flow & Distribution",
-          "desc": "Qualifizierte Vermittler, M&A-Firmen, Investmentbanken, Family Offices. Zugang zu Off-Market-Möglichkeiten."
+          "desc": "Accès à un cercle d'acquéreurs qualifiés sous NDA.",
+          "tags": [
+            "Family offices",
+            "Fonds de Private Equity",
+            "Fonds de VC",
+            "Strategic buyers",
+            "Buy-side advisory",
+            "Sell-side advisory",
+            "Co-investissement",
+            "Club deals",
+            "Secondary transactions",
+            "Distressed assets"
+          ]
         },
         {
           "num": "05",
+          "id": "sequestre",
           "title": "Treuhand & Finanzstrukturierung",
-          "desc": "Wirtschaftsprüfer, Steuerberater, Treuhand-Strukturierung, Akquisitionsfinanzierung."
+          "desc": "Financement relais, earn-out, séquestre, structuration.",
+          "tags": [
+            "Financement relais",
+            "Earn-out structuré",
+            "Séquestre fiduciaire",
+            "Garantie de passif",
+            "Vendor loan",
+            "Mezzanine",
+            "Bridge financing",
+            "Structuration LBO",
+            "Garantie W&I",
+            "Escrow agreements"
+          ]
         },
         {
           "num": "06",
-          "title": "W&I-Versicherung",
-          "desc": "Spezialisten für Garantie- und W&I-Versicherung. Schutz für Käufer und Verkäufer nach dem Closing."
+          "id": "assurance",
+          "title": "W&I Versicherung & Risiko",
+          "desc": "Spécialistes W&I insurance, risk managers, assureurs professionnels.",
+          "tags": [
+            "W&I Insurance",
+            "Tax liability insurance",
+            "Cyber insurance",
+            "Responsabilité civile pro",
+            "Directors & Officers",
+            "Assurance erreurs & omissions",
+            "Risk mapping",
+            "Environmental liability",
+            "IP infringement cover",
+            "Transaction insurance"
+          ]
         }
-      ]
+      ],
+      "filterAll": "Alle Bereiche",
+      "filterLabel": "Nach Bereich filtern"
     },
     "alliancePartners": {
       "label": "ALLIANCE-PARTNER",
@@ -8052,7 +8132,8 @@
     "founder": {
       "label": "DER GRÜNDER",
       "title": "Ein Gründer aus der Praxis.",
-      "desc": "Der Gründer von Aegryn ist ein Führungskraft und Operator mit über zwanzig Jahren internationaler Erfahrung in Strategie, Technologie und M&A.\n\nAls ehemaliger Executive Director in einer globalen Unternehmensberatung hat er öffentliche und private Organisationen, internationale Konzerne und Institutionen durch ihre komplexesten Transformationen begleitet.\n\nEr entschied sich, Aegryn zu gründen, um in einer Struktur zu vereinen, was der Markt in Silos anbietet: Beratung, Aufbau, Transaktion, Talent und Marktintelligenz.\n\nSeine Überzeugung: Unternehmen, die dauern, wählen nicht zwischen Strategie und Technologie. Sie denken sie zusammen."
+      "desc": "Der Gründer von Aegryn ist ein Führungskraft und Operator mit über zwanzig Jahren internationaler Erfahrung in Strategie, Technologie und M&A.\n\nAls ehemaliger Executive Director in einer globalen Unternehmensberatung hat er öffentliche und private Organisationen, internationale Konzerne und Institutionen durch ihre komplexesten Transformationen begleitet.\n\nEr entschied sich, Aegryn zu gründen, um in einer Struktur zu vereinen, was der Markt in Silos anbietet: Beratung, Aufbau, Transaktion, Talent und Marktintelligenz.\n\nSeine Überzeugung: Unternehmen, die dauern, wählen nicht zwischen Strategie und Technologie. Sie denken sie zusammen.",
+      "cta": "Kontakt aufnehmen"
     },
     "whyAegryn": {
       "label": "WARUM AEGRYN",

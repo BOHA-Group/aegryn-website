@@ -3848,35 +3848,115 @@
       "items": [
         {
           "num": "01",
+          "id": "advisory_tech",
           "title": "Advisory Tech",
-          "desc": "CTO as a service, audit de sécurité, architecture, DevSecOps, IA. Experts qui renforcent la robustesse des actifs avant et pendant la certification."
+          "desc": "CTO as a service, audit de sécurité, architecture, DevSecOps, IA.",
+          "tags": [
+            "CTO as a Service",
+            "Architecture SI",
+            "Audit sécurité",
+            "DevSecOps",
+            "IA & Machine Learning",
+            "Cloud & Infra",
+            "API & Intégrations",
+            "Cybersécurité opérationnelle",
+            "Data Engineering",
+            "Product Management tech"
+          ]
         },
         {
           "num": "02",
+          "id": "advisory_transaction",
           "title": "Advisory Transactionnel",
-          "desc": "Due diligence stratégique, valorisation, structuration de deals, accompagnement M&A buy-side et sell-side."
+          "desc": "Due diligence stratégique, valorisation, structuration de transaction.",
+          "tags": [
+            "Due diligence stratégique",
+            "Valorisation d'actifs",
+            "Structuration M&A",
+            "NDA & Confidentialité",
+            "Data room",
+            "Quality of Earnings",
+            "Earn-out design",
+            "Financement acquisition",
+            "LOI & SPA",
+            "Post-merger integration"
+          ]
         },
         {
           "num": "03",
+          "id": "juridique",
           "title": "Juridique & Certification",
-          "desc": "Avocats M&A, droit numérique, propriété intellectuelle, fiscalité transactionnelle, conformité RGPD/LPD."
+          "desc": "Avocats M&A, IP, droit numérique, notaires, audit légal.",
+          "tags": [
+            "Droit des sociétés",
+            "Propriété intellectuelle",
+            "Droit numérique",
+            "RGPD & Conformité",
+            "Droit fiscal M&A",
+            "Audit légal",
+            "Notariat",
+            "Droit du travail",
+            "Contrats SaaS",
+            "NIS2 & DORA"
+          ]
         },
         {
           "num": "04",
+          "id": "dealflow",
           "title": "Deal Flow & Distribution",
-          "desc": "Apporteurs qualifiés, cabinet de M&A, banques d'investissement, family offices. Accès à des opportunités offmarket."
+          "desc": "Accès à un cercle d'acquéreurs qualifiés sous NDA.",
+          "tags": [
+            "Family offices",
+            "Fonds de Private Equity",
+            "Fonds de VC",
+            "Strategic buyers",
+            "Buy-side advisory",
+            "Sell-side advisory",
+            "Co-investissement",
+            "Club deals",
+            "Secondary transactions",
+            "Distressed assets"
+          ]
         },
         {
           "num": "05",
+          "id": "sequestre",
           "title": "Séquestre & Structuration financière",
-          "desc": "Experts-comptables, commissaires aux comptes, structuration du séquestre, financement de l'acquisition."
+          "desc": "Financement relais, earn-out, séquestre, structuration.",
+          "tags": [
+            "Financement relais",
+            "Earn-out structuré",
+            "Séquestre fiduciaire",
+            "Garantie de passif",
+            "Vendor loan",
+            "Mezzanine",
+            "Bridge financing",
+            "Structuration LBO",
+            "Garantie W&I",
+            "Escrow agreements"
+          ]
         },
         {
           "num": "06",
-          "title": "Assurance W&I",
-          "desc": "Spécialistes en garantie de passif et Warranty & Indemnity insurance. Protection des acheteurs et vendeurs post-closing."
+          "id": "assurance",
+          "title": "Assurance W&I & Risque",
+          "desc": "Spécialistes W&I insurance, risk managers, assureurs professionnels.",
+          "tags": [
+            "W&I Insurance",
+            "Tax liability insurance",
+            "Cyber insurance",
+            "Responsabilité civile pro",
+            "Directors & Officers",
+            "Assurance erreurs & omissions",
+            "Risk mapping",
+            "Environmental liability",
+            "IP infringement cover",
+            "Transaction insurance"
+          ]
         }
-      ]
+      ],
+      "filterAll": "Tous les domaines",
+      "filterLabel": "Filtrer par domaine"
     },
     "alliancePartners": {
       "label": "PARTENAIRES ALLIANCE",
@@ -7749,7 +7829,8 @@
     "founder": {
       "label": "LE FONDATEUR",
       "title": "Un fondateur issu du terrain.",
-      "desc": "Le fondateur d'Aegryn est un dirigeant et opérateur avec plus de vingt ans d'expérience internationale en stratégie, technologie et M&A.\n\nAncien directeur exécutif dans un cabinet de conseil de rang mondial, il a accompagné des organisations publiques et privées, groupes internationaux, institutions à travers leurs transformations les plus complexes.\n\nIl a choisi de créer Aegryn pour réunir dans une même structure ce que le marché offre en silos : le conseil, la construction, la transaction, le talent et la connaissance du marché.\n\nSa conviction : les entreprises qui durent ne choisissent pas entre la stratégie et la technologie. Elles les pensent ensemble."
+      "desc": "Le fondateur d'Aegryn est un dirigeant et opérateur avec plus de vingt ans d'expérience internationale en stratégie, technologie et M&A.\n\nAncien directeur exécutif dans un cabinet de conseil de rang mondial, il a accompagné des organisations publiques et privées, groupes internationaux, institutions à travers leurs transformations les plus complexes.\n\nIl a choisi de créer Aegryn pour réunir dans une même structure ce que le marché offre en silos : le conseil, la construction, la transaction, le talent et la connaissance du marché.\n\nSa conviction : les entreprises qui durent ne choisissent pas entre la stratégie et la technologie. Elles les pensent ensemble.",
+      "cta": "Prendre contact"
     },
     "whyAegryn": {
       "label": "POURQUOI AEGRYN",
