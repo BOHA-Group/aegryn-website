@@ -13,10 +13,8 @@ import { EcosystemDomains }  from '@/components/sections/EcosystemDomains'
 import { TransactNarrative } from '@/components/sections/TransactionNarrative'
 import { MarketStatStrip }   from '@/components/sections/MarketStatStrip'
 import { WhyUseApps }        from '@/components/sections/WhyUseApps'
-import { AcqSupportStrip }   from '@/components/sections/AcqSupportStrip'
 import { BuildEngineeringStrip } from '@/components/sections/BuildEngineeringStrip'
 import { AdvisoryTechStrip } from '@/components/sections/AdvisoryTechStrip'
-import { AdvisoryThoughtLeadership } from '@/components/sections/AdvisoryThoughtLeadership'
 import { DiscoverStrip }     from '@/components/sections/DiscoverStrip'
 import type { Metadata }    from 'next'
 
@@ -58,8 +56,6 @@ export default async function HomePage({ params }: Props) {
 
       {/* ── 06. Conseil ────────────────────────────────────── */}
       <AdvisoryTechStrip />
-      <AdvisoryThoughtLeadership />
-      <AcqSupportStrip />
 
       {/* ── 07. Conception ─────────────────────────────────── */}
       <BuildStrip />

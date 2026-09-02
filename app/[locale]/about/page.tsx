@@ -50,7 +50,8 @@ const missionPillars = ['create', 'simplify', 'embrace'] as const
 const ctaProfiles = ['seller', 'buyer', 'partner'] as const
 
 export default function AboutPage() {
-  const t = useTranslations('about')
+  const t  = useTranslations('about')
+  const ta = useTranslations('aboutPage')
 
   return (
     <>
@@ -213,6 +214,41 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pourquoi Aegryn */}
+      <section className="border-b border-ag-border bg-ag-white">
+        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
+            / {ta('whyAegryn.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] max-w-2xl mb-12"
+            style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+          >
+            {ta('whyAegryn.title')}
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              {ta('whyAegryn.p1').split('\n\n').map((para, i) => (
+                <p key={i} className="text-[15px] text-ag-gray leading-relaxed">{para}</p>
+              ))}
+            </div>
+            <div className="space-y-6">
+              {ta('whyAegryn.p2').split('\n\n').map((para, i) => (
+                <p key={i} className="text-[15px] text-ag-gray leading-relaxed">{para}</p>
+              ))}
+            </div>
+          </div>
+          <div className="mt-12 pt-10 border-t border-ag-border">
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
+              / {ta('whyAegryn.p3Label')}
+            </p>
+            <p className="text-[14px] text-ag-gray leading-relaxed max-w-xl">
+              {ta('whyAegryn.p3')}
+            </p>
           </div>
         </div>
       </section>
