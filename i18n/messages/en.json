@@ -68,7 +68,7 @@
     "craftBuildAssets": "Proprietary assets",
     "craftBuildEngineering": "Custom Software",
     "craftSupport": "Support",
-    "craftSupportDesc": "Strategy, Tech & M&A Advisory — All industries",
+    "craftSupportDesc": "Strategy, Tech & M&A Advisory : All industries",
     "craftSupportStrategy": "Strategy Consulting",
     "craftSupportTechnology": "Technology Consulting",
     "craftSupportMA": "M&A Consulting",
@@ -152,7 +152,7 @@
     "whoIndustriesDesc": "All covered sectors"
   },
   "hero": {
-    "tagline": "Aegryn — Swiss Tech Group. Strategy, Transactions & Assets.",
+    "tagline": "Aegryn : Swiss Tech Group. Strategy, Transactions & Assets.",
     "metaDescription": "Aegryn is an independent Swiss tech group. Strategic, tech and M&A advisory, certified digital assets, expert network and trusted partnerships. Switzerland & Europe.",
     "eyebrow": "FIVE DISCIPLINES. ONE QUALITY LABEL.",
     "title": "Rare by selection.",
@@ -462,7 +462,7 @@
     },
     "thoughtLeadership": {
       "title": "Three complementary dimensions in a consolidating market",
-      "desc": "The European tech market is undergoing a structural transformation: technology is no longer a differentiating advantage, but a survival prerequisite. In this context, strategy, technology and M&A are no longer isolated disciplines — they form an inseparable triptych for leaders who want to grow.",
+      "desc": "The European tech market is undergoing a structural transformation: technology is no longer a differentiating advantage, but a survival prerequisite. In this context, strategy, technology and M&A are no longer isolated disciplines : they form an inseparable triptych for leaders who want to grow.",
       "pillars": [
         {
           "label": "Strategy: defining where to play",
@@ -528,7 +528,7 @@
     },
     "sovereignty": {
       "title": "Software with mastered code",
-      "desc": "The real challenge of the cloud is not where the machines are: it's the software. We create software with mastered code, deployable on physically European infrastructure, offering genuine technological independence. For our enterprise and institutional clients, we design, maintain or rebuild bespoke software from scratch — a demand growing strongly amid security, compliance and independence challenges."
+      "desc": "The real challenge of the cloud is not where the machines are: it's the software. We create software with mastered code, deployable on physically European infrastructure, offering genuine technological independence. For our enterprise and institutional clients, we design, maintain or rebuild bespoke software from scratch : a demand growing strongly amid security, compliance and independence challenges."
     }
   },
   "whatwedo": {
@@ -538,7 +538,7 @@
       {
         "num": "01",
         "title": "Advisory is the key.",
-        "desc": "In a world moving faster than ever, tech leaders need a clear vision and an execution plan. Aegryn Advisory supports strategic decisions, technology transformations and M&A operations with operational expertise — not slides."
+        "desc": "In a world moving faster than ever, tech leaders need a clear vision and an execution plan. Aegryn Advisory supports strategic decisions, technology transformations and M&A operations with operational expertise : not slides."
       },
       {
         "num": "02",
@@ -684,7 +684,7 @@
       {
         "key": "funds",
         "title": "Funds & Investors",
-        "desc": "Qualified deal flow, asset certification, post-acquisition support, executive team recruitment.\n\nWe work in synergy with the financial partners who support entrepreneurs — banks, funds, family offices — to step in where financing alone is no longer enough."
+        "desc": "Qualified deal flow, asset certification, post-acquisition support, executive team recruitment.\n\nWe work in synergy with the financial partners who support entrepreneurs : banks, funds, family offices : to step in where financing alone is no longer enough."
       }
     ]
   },
@@ -905,7 +905,7 @@
         },
         "construire": {
           "title": "Engineering & Product",
-          "desc": "We design and operate our own digital assets — SaaS, AI platforms, protocols. We hire engineers, tech leads and product managers who build to last, not to ship fast."
+          "desc": "We design and operate our own digital assets : SaaS, AI platforms, protocols. We hire engineers, tech leads and product managers who build to last, not to ship fast."
         },
         "transmettre": {
           "title": "Transactions & M&A",
@@ -1298,13 +1298,13 @@
       "desc2": "What we advise, we apply to ourselves. Our own assets go through our own methods. That coherence is what differentiates Aegryn from a conventional advisory firm.",
       "quote": "We don't have generic playbooks.\nWe have methods proven in real environments.",
       "cta": "Book a session",
-      "metaTitle": "Aegryn Advisory — Strategy, Tech & M&A | One partner",
+      "metaTitle": "Aegryn Advisory : Strategy, Tech & M&A | One partner",
       "metaDesc": "Strategic, technology and M&A advisory. Operational expertise built by operators. Proprietary assets, expert network, executive recruitment. Switzerland & Europe."
     },
     "why": {
       "label": "Why Aegryn Advisory?",
       "desc1": "Strategy, technology and M&A are not three separate disciplines. They are three facets of the same reality: how to create, grow and transfer value in a consolidating European tech market.",
-      "desc2": "Aegryn Advisory exists for leaders who want a partner who understands strategy, tech and transactions — all three. One partner for all three.",
+      "desc2": "Aegryn Advisory exists for leaders who want a partner who understands strategy, tech and transactions : all three. One partner for all three.",
       "tagline": "We step in when decisions define the trajectory of your organisation."
     },
     "whoFor": {
@@ -1333,7 +1333,7 @@
       ]
     },
     "experts": {
-      "label": "ADVISORY TECH — OPERATIONAL",
+      "label": "ADVISORY TECH : OPERATIONAL",
       "desc": "Aegryn Advisory Tech intervenes on the technical dimensions that define the robustness and certifiability of a digital asset: before, during, or independently of any transaction.",
       "items": [
         {
@@ -1428,8 +1428,8 @@
       ]
     },
     "ma": {
-      "label": "ADVISORY M&A — TRANSACTION STRUCTURING",
-      "intro": "We orchestrate around each transaction the experts suited to its nature and ticket. Legal, tax, financial, HR — mobilised at the right moment, not all at once.",
+      "label": "ADVISORY M&A : TRANSACTION STRUCTURING",
+      "intro": "We orchestrate around each transaction the experts suited to its nature and ticket. Legal, tax, financial, HR : mobilised at the right moment, not all at once.",
       "phases": [
         {
           "num": "01",
@@ -1454,7 +1454,7 @@
       ]
     },
     "network": {
-      "label": "EXPERT NETWORK — SKILLS ACTIVATED PER MISSION",
+      "label": "EXPERT NETWORK : SKILLS ACTIVATED PER MISSION",
       "title": "The right experts. At the right time. On every mission.",
       "desc": "For specialist missions, we activate our network of verified independent experts. M&A lawyers, chartered accountants, tax advisors, statutory auditors, notaries, digital law specialists, W&I insurers.\n\nA group of specialists that extends our capabilities without weighing down our structure. The equivalent of inorganic growth activated per mission.",
       "cta1": "Access the network →",
@@ -3534,7 +3534,7 @@
       "buyer": {
         "label": "BECOME A BUYER",
         "title": "Looking to acquire a tech asset?",
-        "desc": "Aegryn identifies and presents certified assets matching your acquisition profile — sector, ticket, structure. A confidential process, reserved for qualified buyers.",
+        "desc": "Aegryn identifies and presents certified assets matching your acquisition profile : sector, ticket, structure. A confidential process, reserved for qualified buyers.",
         "cta": "Learn more about the process",
         "ctaHref": "/transact/how-to-buy"
       },
@@ -4228,7 +4228,7 @@
     "platformSection": {
       "label": "Shared infrastructure",
       "title": "What sets an Aegryn asset apart from standard development.",
-      "desc": "Every software asset delivered by Aegryn is built on the same infrastructure: sovereign data, certifiable AI models, audited governance. The result: an asset documented from the first sprint, structurally ready for certification or transfer — regardless of the business domain.",
+      "desc": "Every software asset delivered by Aegryn is built on the same infrastructure: sovereign data, certifiable AI models, audited governance. The result: an asset documented from the first sprint, structurally ready for certification or transfer : regardless of the business domain.",
       "layers": [
         {
           "key": "data",
@@ -5927,7 +5927,7 @@
       "rolePartner": "Join the partner network",
       "rolePartnerDesc": "Business introducers, expert co-certifiers, access the Aegryn partner space.",
       "roleInternal": "Internal access",
-      "roleInternalDesc": "Aegryn team account — section access is granted by an administrator."
+      "roleInternalDesc": "Aegryn team account : section access is granted by an administrator."
     },
     "account": {
       "eyebrow": "Aegryn Client Area",
@@ -6355,7 +6355,7 @@
     },
     "breadcrumb": "Legal",
     "sectionDpn": "(01)",
-    "h1": "Data Protection Notice – Aegryn neediu",
+    "h1": "Data Protection Notice, Aegryn neediu",
     "disclaimer": "Disclaimer: This data protection notice is an AI-generated translation provided for informational purposes only. In the event of any discrepancies or inconsistencies, the English version shall prevail.",
     "updated": "Last updated: 01/03/2026",
     "dpn": {
@@ -6504,7 +6504,7 @@
     },
     "cgu": {
       "sectionLabel": "(02)",
-      "h2": "Terms of Use – neediu by Aegryn",
+      "h2": "Terms of Use, neediu by Aegryn",
       "disclaimer": "Disclaimer: This data protection statement is an AI-generated translation provided for informational purposes only. In the event of any discrepancies or inconsistencies, the English version shall prevail.",
       "intro": "These Terms of Use (the ToU) apply to any use of the Aegryn Platform, the neediu mobile application, and any service accessible or provided through the Platform (the Services), which are provided and managed by Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland.",
       "s1H": "1. General",
@@ -8046,20 +8046,20 @@
       "label": "WHY AEGRYN",
       "title": "Why Aegryn?",
       "p1": "Most firms advise without building. Most agencies build without advising. Most M&A boutiques transact without rebuilding.\n\nAegryn does all five. And what it advises for its clients, it applies to itself. This consistency is what we chose to embed in our DNA from day one.",
-      "p2": "Advising without building is delivering a map without the territory. Building without advising is executing without direction. Transacting without preparing is selling without valuing. Recruiting without strategy is filling without building. Publishing without doing is commenting without acting.\n\nAt Aegryn, each discipline strengthens the next. This chain is what creates lasting value for our clients and for ourselves.\n\nFinancial partners understood it first: entrepreneurs don't just want capital. They want an exacting perspective and a network. Aegryn carries this same conviction across the entire entrepreneurial journey — from building value to realising it.",
+      "p2": "Advising without building is delivering a map without the territory. Building without advising is executing without direction. Transacting without preparing is selling without valuing. Recruiting without strategy is filling without building. Publishing without doing is commenting without acting.\n\nAt Aegryn, each discipline strengthens the next. This chain is what creates lasting value for our clients and for ourselves.\n\nFinancial partners understood it first: entrepreneurs don't just want capital. They want an exacting perspective and a network. Aegryn carries this same conviction across the entire entrepreneurial journey : from building value to realising it.",
       "p3Label": "ANCHORED IN SWITZERLAND",
       "p3": "Saint-Sulpice, Vaud. A Swiss base for European missions. The rigour of a leading financial centre, the neutrality of a trusted jurisdiction."
     },
     "workWith": {
       "label": "WORKING WITH AEGRYN",
       "title": "Five disciplines.\nOne relationship.",
-      "sub": "Advisory, engineering, transaction, talent, knowledge — integrated in one group, held to the same standards.",
+      "sub": "Advisory, engineering, transaction, talent, knowledge : integrated in one group, held to the same standards.",
       "items": [
         {
           "key": "accompagner",
           "num": "01",
           "title": "ADVISE",
-          "desc": "Strategy, technology and M&A advisory. We intervene where decisions define trajectory — from governance to capital, complementing financial partners.",
+          "desc": "Strategy, technology and M&A advisory. We intervene where decisions define trajectory : from governance to capital, complementing financial partners.",
           "cta": "Discover Advisory",
           "href": "/advisory"
         },
@@ -8067,7 +8067,7 @@
           "key": "construire",
           "num": "02",
           "title": "BUILD",
-          "desc": "Durable digital assets, full client IP ownership, certification-ready. We design and operate SaaS, apps and protocols — for you and our own portfolios.",
+          "desc": "Durable digital assets, full client IP ownership, certification-ready. We design and operate SaaS, apps and protocols : for you and our own portfolios.",
           "cta": "See Asset Engineering",
           "href": "/services/build"
         },
@@ -8083,7 +8083,7 @@
           "key": "recruter",
           "num": "04",
           "title": "RECRUIT",
-          "desc": "Executive, tech and innovation profiles. CTO to CISO — we place the talent that drives transformation. Confidential, pre-qualified, 48h response.",
+          "desc": "Executive, tech and innovation profiles. CTO to CISO : we place the talent that drives transformation. Confidential, pre-qualified, 48h response.",
           "cta": "Submit a mandate",
           "href": "/talent"
         },
@@ -8091,7 +8091,7 @@
           "key": "informer",
           "num": "05",
           "title": "INFORM",
-          "desc": "Quarterly magazine, in-depth articles and market intelligence. We document what we observe and live — without spin.",
+          "desc": "Quarterly magazine, in-depth articles and market intelligence. We document what we observe and live : without spin.",
           "cta": "Read the Magazine",
           "href": "/magazine"
         }

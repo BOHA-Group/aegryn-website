@@ -68,7 +68,7 @@
     "craftBuildAssets": "Asset proprietari",
     "craftBuildEngineering": "Software su misura",
     "craftSupport": "Accompagnare",
-    "craftSupportDesc": "Consulenza in Strategia, Tech & M&A — Tutti i settori",
+    "craftSupportDesc": "Consulenza in Strategia, Tech & M&A : Tutti i settori",
     "craftSupportStrategy": "Consulenza Strategica",
     "craftSupportTechnology": "Consulenza Tecnologica",
     "craftSupportMA": "Consulenza M&A",
@@ -152,7 +152,7 @@
     "whoIndustriesDesc": "Tutti i settori coperti"
   },
   "hero": {
-    "tagline": "Aegryn — Gruppo Tech Svizzero. Strategia, Transazioni & Asset.",
+    "tagline": "Aegryn : Gruppo Tech Svizzero. Strategia, Transazioni & Asset.",
     "metaDescription": "Aegryn è un gruppo tech svizzero indipendente. Consulenza strategica, tech e M&A, asset digitali certificati, rete di esperti e partnership di fiducia. Svizzera & Europa.",
     "eyebrow": "CINQUE DISCIPLINE. UN MARCHIO DI QUALITÀ.",
     "title": "Raro per selezione.",
@@ -462,7 +462,7 @@
     },
     "thoughtLeadership": {
       "title": "Tre dimensioni complementari in un mercato in consolidamento",
-      "desc": "Il mercato tech europeo sta attraversando una trasformazione strutturale: la tecnologia non è più un vantaggio differenziante, ma un prerequisito di sopravvivenza. In questo contesto, strategia, tecnologia e M&A non sono più discipline isolate — formano un trittico inscindibile per i leader che vogliono crescere.",
+      "desc": "Il mercato tech europeo sta attraversando una trasformazione strutturale: la tecnologia non è più un vantaggio differenziante, ma un prerequisito di sopravvivenza. In questo contesto, strategia, tecnologia e M&A non sono più discipline isolate : formano un trittico inscindibile per i leader che vogliono crescere.",
       "pillars": [
         {
           "label": "Strategia: definire dove giocare",
@@ -528,7 +528,7 @@
     },
     "sovereignty": {
       "title": "Software con codice padroneggiato",
-      "desc": "La vera sfida del cloud non riguarda la posizione delle macchine: riguarda il software. Creiamo software con codice padroneggiato, distribuibile su infrastrutture fisicamente situate in Europa, offrendo una vera indipendenza tecnologica. Per i nostri clienti aziendali e istituzionali, progettiamo, manteniamo o ricostruiamo software su misura da zero — una domanda in forte crescita di fronte alle sfide di sicurezza, conformità e indipendenza."
+      "desc": "La vera sfida del cloud non riguarda la posizione delle macchine: riguarda il software. Creiamo software con codice padroneggiato, distribuibile su infrastrutture fisicamente situate in Europa, offrendo una vera indipendenza tecnologica. Per i nostri clienti aziendali e istituzionali, progettiamo, manteniamo o ricostruiamo software su misura da zero : una domanda in forte crescita di fronte alle sfide di sicurezza, conformità e indipendenza."
     }
   },
   "whatwedo": {
@@ -684,7 +684,7 @@
       {
         "key": "funds",
         "title": "Fondi & Investitori",
-        "desc": "Deal flow qualificato, certificazione degli asset, supporto post-acquisizione, selezione dei team dirigenziali.\n\nLavoriamo in sinergia con i partner finanziari che accompagnano gli imprenditori — banche, fondi, family office — per intervenire dove il finanziamento da solo non basta più."
+        "desc": "Deal flow qualificato, certificazione degli asset, supporto post-acquisizione, selezione dei team dirigenziali.\n\nLavoriamo in sinergia con i partner finanziari che accompagnano gli imprenditori : banche, fondi, family office : per intervenire dove il finanziamento da solo non basta più."
       }
     ]
   },
@@ -905,7 +905,7 @@
         },
         "construire": {
           "title": "Engineering & Prodotto",
-          "desc": "Progettiamo e gestiamo i nostri asset digitali — SaaS, piattaforme IA, protocolli. Assumiamo ingegneri, tech lead e product manager che costruiscono per durare."
+          "desc": "Progettiamo e gestiamo i nostri asset digitali : SaaS, piattaforme IA, protocolli. Assumiamo ingegneri, tech lead e product manager che costruiscono per durare."
         },
         "transmettre": {
           "title": "Transazioni & M&A",
@@ -1298,13 +1298,13 @@
       "desc2": "Ciò che consigliamo, lo applichiamo a noi stessi. I nostri asset propri passano per i nostri stessi metodi. Questa coerenza è ciò che differenzia Aegryn da una società di consulenza convenzionale.",
       "quote": "Non abbiamo playbook generici.\nAbbiamo metodi collaudati in ambienti reali.",
       "cta": "Prenota una sessione",
-      "metaTitle": "Aegryn Advisory — Strategia, Tech & M&A | Un unico interlocutore",
+      "metaTitle": "Aegryn Advisory : Strategia, Tech & M&A | Un unico interlocutore",
       "metaDesc": "Consulenza strategica, tecnologica e M&A. Expertise operativa costruita da operatori. Asset proprietari, rete di esperti, recruiting esecutivo. Svizzera & Europa."
     },
     "why": {
       "label": "Perché Aegryn Advisory?",
       "desc1": "Strategia, tecnologia e M&A non sono tre discipline separate. Sono tre facce della stessa realtà: come creare, sviluppare e trasferire valore in un mercato tech europeo che si consolida.",
-      "desc2": "Aegryn Advisory esiste per i leader che vogliono un interlocutore che capisca strategia, tech e transazioni — tutte e tre. Un solo partner per tutte e tre.",
+      "desc2": "Aegryn Advisory esiste per i leader che vogliono un interlocutore che capisca strategia, tech e transazioni : tutte e tre. Un solo partner per tutte e tre.",
       "tagline": "Interveniamo quando le decisioni definiscono la traiettoria della vostra organizzazione."
     },
     "whoFor": {
@@ -1333,7 +1333,7 @@
       ]
     },
     "experts": {
-      "label": "ADVISORY TECH — OPERATIVO",
+      "label": "ADVISORY TECH : OPERATIVO",
       "desc": "Aegryn Advisory Tech interviene nelle dimensioni tecniche che definiscono la robustezza e la certificabilità di un asset digitale: prima, durante o indipendentemente da qualsiasi transazione.",
       "items": [
         {
@@ -1428,8 +1428,8 @@
       ]
     },
     "ma": {
-      "label": "ADVISORY M&A — STRUTTURAZIONE DI TRANSAZIONI",
-      "intro": "Orchestriamo intorno a ogni transazione gli esperti adatti alla sua natura e al suo ticket. Legale, fiscale, finanziario, HR — mobilizzati al momento giusto, non tutti insieme.",
+      "label": "ADVISORY M&A : STRUTTURAZIONE DI TRANSAZIONI",
+      "intro": "Orchestriamo intorno a ogni transazione gli esperti adatti alla sua natura e al suo ticket. Legale, fiscale, finanziario, HR : mobilizzati al momento giusto, non tutti insieme.",
       "phases": [
         {
           "num": "01",
@@ -1454,7 +1454,7 @@
       ]
     },
     "network": {
-      "label": "RETE DI ESPERTI — COMPETENZE ATTIVATE PER MISSIONE",
+      "label": "RETE DI ESPERTI : COMPETENZE ATTIVATE PER MISSIONE",
       "title": "Gli esperti giusti. Al momento giusto. Per ogni missione.",
       "desc": "Per le missioni specializzate, attiviamo la nostra rete di esperti indipendenti verificati. Avvocati M&A, commercialisti, consulenti fiscali, revisori, notai, specialisti in diritto digitale, assicuratori W&I.\n\nUn pool di specialisti che amplia le nostre capacità senza appesantire la nostra struttura.",
       "cta1": "Accedere alla rete →",
@@ -3409,7 +3409,7 @@
       "buyer": {
         "label": "DIVENTARE ACQUIRENTE",
         "title": "Desidera acquisire un attivo tech?",
-        "desc": "Aegryn identifica e presenta attivi certificati corrispondenti al suo profilo di acquisizione — settore, ticket, struttura. Un processo riservato, esclusivo per acquirenti qualificati.",
+        "desc": "Aegryn identifica e presenta attivi certificati corrispondenti al suo profilo di acquisizione : settore, ticket, struttura. Un processo riservato, esclusivo per acquirenti qualificati.",
         "cta": "Scopri di più sul processo",
         "ctaHref": "/transact/how-to-buy"
       },
@@ -5934,7 +5934,7 @@
       "rolePartner": "Unirsi alla rete partner",
       "rolePartnerDesc": "Mediatori d'affari, co-certificatori esperti, acceda allo spazio partner Aegryn.",
       "roleInternal": "Accesso interno",
-      "roleInternalDesc": "Account collaboratore Aegryn — l'accesso alle sezioni viene attivato da un amministratore."
+      "roleInternalDesc": "Account collaboratore Aegryn : l'accesso alle sezioni viene attivato da un amministratore."
     },
     "account": {
       "eyebrow": "Area clienti Aegryn",
@@ -6362,7 +6362,7 @@
     },
     "breadcrumb": "Legal",
     "sectionDpn": "(01)",
-    "h1": "Informativa sulla Protezione dei Dati – Aegryn neediu",
+    "h1": "Informativa sulla Protezione dei Dati, Aegryn neediu",
     "disclaimer": "Disclaimer: La presente informativa sulla protezione dei dati è una traduzione generata dall'intelligenza artificiale, fornita a scopo puramente informativo. In caso di divergenze o incongruenze, prevarrà la versione inglese.",
     "updated": "Ultimo aggiornamento: 01/03/2026",
     "dpn": {
@@ -6511,7 +6511,7 @@
     },
     "cgu": {
       "sectionLabel": "(02)",
-      "h2": "Condizioni d'uso – neediu by Aegryn",
+      "h2": "Condizioni d'uso, neediu by Aegryn",
       "disclaimer": "Disclaimer: La presente dichiarazione sulla protezione dei dati è una traduzione generata dall'IA, fornita a scopo puramente informativo. In caso di divergenze o incongruenze, prevarrà la versione inglese.",
       "intro": "Le presenti Condizioni d'uso (CdU) si applicano a qualsiasi utilizzo della Piattaforma Aegryn, dell'applicazione mobile neediu, nonché di qualsiasi servizio accessibile o fornito tramite la Piattaforma (i Servizi), messi a disposizione e gestiti da Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Svizzera.",
       "s1H": "1. Generalità",
@@ -8049,20 +8049,20 @@
       "label": "PERCHÉ AEGRYN",
       "title": "Perché Aegryn?",
       "p1": "La maggior parte degli studi consiglia senza costruire. La maggior parte delle agenzie costruisce senza consigliare. La maggior parte delle boutique M&A transigono senza ricostruire.\n\nAegryn fa tutte e cinque. E ciò che consiglia ai propri clienti, lo applica a se stesso. Questa coerenza è ciò che abbiamo voluto iscrivere nel nostro DNA dal primo giorno.",
-      "p2": "Consigliare senza costruire significa consegnare una mappa senza il territorio. Costruire senza consigliare significa eseguire senza direzione. Transigere senza preparare significa vendere senza valorizzare. Reclutare senza strategia significa colmare senza costruire. Informare senza fare significa commentare senza agire.\n\nIn Aegryn, ogni disciplina rafforza la successiva. Questa catena crea valore duraturo per i nostri clienti e per noi stessi.\n\nI partner finanziari l'hanno capito per primi: gli imprenditori non vogliono solo capitale. Vogliono uno sguardo esigente e una rete. Aegryn porta questa stessa convinzione lungo l'intero percorso imprenditoriale — dalla costruzione del valore alla sua realizzazione.",
+      "p2": "Consigliare senza costruire significa consegnare una mappa senza il territorio. Costruire senza consigliare significa eseguire senza direzione. Transigere senza preparare significa vendere senza valorizzare. Reclutare senza strategia significa colmare senza costruire. Informare senza fare significa commentare senza agire.\n\nIn Aegryn, ogni disciplina rafforza la successiva. Questa catena crea valore duraturo per i nostri clienti e per noi stessi.\n\nI partner finanziari l'hanno capito per primi: gli imprenditori non vogliono solo capitale. Vogliono uno sguardo esigente e una rete. Aegryn porta questa stessa convinzione lungo l'intero percorso imprenditoriale : dalla costruzione del valore alla sua realizzazione.",
       "p3Label": "ANCORATO IN SVIZZERA",
       "p3": "Saint-Sulpice, Vaud. Una base svizzera per mandati europei. Il rigore di una piazza finanziaria di riferimento, la neutralità di un territorio di fiducia."
     },
     "workWith": {
       "label": "LAVORARE CON AEGRYN",
       "title": "Cinque discipline.\nUna relazione.",
-      "sub": "Advisory, ingegneria, transazione, talento, conoscenza — integrati in un unico gruppo, con gli stessi standard.",
+      "sub": "Advisory, ingegneria, transazione, talento, conoscenza : integrati in un unico gruppo, con gli stessi standard.",
       "items": [
         {
           "key": "accompagner",
           "num": "01",
           "title": "ACCOMPAGNARE",
-          "desc": "Advisory in strategia, tecnologia e M&A. Interveniamo dove le decisioni definiscono la traiettoria — dalla governance al capitale.",
+          "desc": "Advisory in strategia, tecnologia e M&A. Interveniamo dove le decisioni definiscono la traiettoria : dalla governance al capitale.",
           "cta": "Scoprire Advisory",
           "href": "/advisory"
         },
@@ -8086,7 +8086,7 @@
           "key": "recruter",
           "num": "04",
           "title": "RECLUTARE",
-          "desc": "Profili executive, tech e innovazione. CTO a CISO — collochiamo i talenti che guidano la trasformazione. Riservato, pre-qualificati, 48h risposta.",
+          "desc": "Profili executive, tech e innovazione. CTO a CISO : collochiamo i talenti che guidano la trasformazione. Riservato, pre-qualificati, 48h risposta.",
           "cta": "Inviare un mandato",
           "href": "/talent"
         },

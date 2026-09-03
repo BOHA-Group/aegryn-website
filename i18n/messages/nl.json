@@ -68,7 +68,7 @@
     "craftBuildAssets": "Eigen assets",
     "craftBuildEngineering": "Maatwerksoftware",
     "craftSupport": "Begeleiden",
-    "craftSupportDesc": "Strategie-, Tech- & M&A-advies — Alle sectoren",
+    "craftSupportDesc": "Strategie-, Tech- & M&A-advies : Alle sectoren",
     "craftSupportStrategy": "Strategieadvies",
     "craftSupportTechnology": "Technologieadvies",
     "craftSupportMA": "M&A-advies",
@@ -152,7 +152,7 @@
     "whoIndustriesDesc": "Alle gedekte sectoren"
   },
   "hero": {
-    "tagline": "Aegryn — Zwitserse Tech Groep. Strategie, Transacties & Assets.",
+    "tagline": "Aegryn : Zwitserse Tech Groep. Strategie, Transacties & Assets.",
     "metaDescription": "Aegryn is een onafhankelijke Zwitserse tech groep. Strategisch, tech en M&A-advies, gecertificeerde digitale assets, expertennetwerk en betrouwbare partnerships. Zwitserland & Europa.",
     "eyebrow": "VIJF DISCIPLINES. ÉÉN KWALITEITSLABEL.",
     "title": "Zeldzaam door selectie.",
@@ -462,7 +462,7 @@
     },
     "thoughtLeadership": {
       "title": "Drie complementaire dimensies in een consoliderende markt",
-      "desc": "De Europese tech-markt ondergaat een structurele transformatie: technologie is geen differentiërend voordeel meer, maar een overlevingsvereiste. In deze context zijn strategie, technologie en M&A geen geïsoleerde disciplines meer — ze vormen een onlosmakelijk drieluik voor leiders die willen groeien.",
+      "desc": "De Europese tech-markt ondergaat een structurele transformatie: technologie is geen differentiërend voordeel meer, maar een overlevingsvereiste. In deze context zijn strategie, technologie en M&A geen geïsoleerde disciplines meer : ze vormen een onlosmakelijk drieluik voor leiders die willen groeien.",
       "pillars": [
         {
           "label": "Strategie: definiëren waar te spelen",
@@ -528,7 +528,7 @@
     },
     "sovereignty": {
       "title": "Software met beheerste code",
-      "desc": "De echte uitdaging van de cloud ligt niet in de locatie van de machines: het gaat om de software. Wij maken software met beheerste code, inzetbaar op fysiek in Europa gevestigde infrastructuur, en biedt echte technologische onafhankelijkheid. Voor onze zakelijke en institutionele klanten ontwerpen, onderhouden of herbouwen we maatwerksoftware vanaf nul — een sterk groeiende vraag te midden van uitdagingen op het gebied van veiligheid, compliance en onafhankelijkheid."
+      "desc": "De echte uitdaging van de cloud ligt niet in de locatie van de machines: het gaat om de software. Wij maken software met beheerste code, inzetbaar op fysiek in Europa gevestigde infrastructuur, en biedt echte technologische onafhankelijkheid. Voor onze zakelijke en institutionele klanten ontwerpen, onderhouden of herbouwen we maatwerksoftware vanaf nul : een sterk groeiende vraag te midden van uitdagingen op het gebied van veiligheid, compliance en onafhankelijkheid."
     }
   },
   "whatwedo": {
@@ -684,7 +684,7 @@
       {
         "key": "funds",
         "title": "Fondsen & Investeerders",
-        "desc": "Gekwalificeerde dealflow, certificering van activa, ondersteuning na acquisitie, werving van directieteams.\n\nWij werken in synergie met de financiële partners die ondernemers begeleiden — banken, fondsen, family offices — om in te grijpen waar financiering alleen niet meer volstaat."
+        "desc": "Gekwalificeerde dealflow, certificering van activa, ondersteuning na acquisitie, werving van directieteams.\n\nWij werken in synergie met de financiële partners die ondernemers begeleiden : banken, fondsen, family offices : om in te grijpen waar financiering alleen niet meer volstaat."
       }
     ]
   },
@@ -905,7 +905,7 @@
         },
         "construire": {
           "title": "Engineering & Product",
-          "desc": "Wij ontwerpen en exploiteren onze eigen digitale assets — SaaS, AI-platformen, protocollen. Wij werven ingenieurs, tech leads en product managers die bouwen om te blijven."
+          "desc": "Wij ontwerpen en exploiteren onze eigen digitale assets : SaaS, AI-platformen, protocollen. Wij werven ingenieurs, tech leads en product managers die bouwen om te blijven."
         },
         "transmettre": {
           "title": "Transacties & M&A",
@@ -1298,13 +1298,13 @@
       "desc2": "Wat we adviseren, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Die coherentie is wat Aegryn onderscheidt van een conventioneel adviesbureau.",
       "quote": "We hebben geen generieke playbooks.\nWe hebben methoden die bewezen zijn in echte omgevingen.",
       "cta": "Sessie boeken",
-      "metaTitle": "Aegryn Advisory — Strategie, Tech & M&A | Één partner",
+      "metaTitle": "Aegryn Advisory : Strategie, Tech & M&A | Één partner",
       "metaDesc": "Strategisch, technologisch en M&A-advies. Operationele expertise opgebouwd door operators. Eigen assets, expertennetwerk, executive recruitment. Zwitserland & Europa."
     },
     "why": {
       "label": "Waarom Aegryn Advisory?",
       "desc1": "Strategie, technologie en M&A zijn geen drie afzonderlijke disciplines. Ze zijn drie facetten van dezelfde realiteit: hoe waarde te creëren, te ontwikkelen en over te dragen in een consoliderende Europese techmarkt.",
-      "desc2": "Aegryn Advisory bestaat voor leiders die een partner willen die strategie, tech en transacties begrijpt — alle drie. Één partner voor alle drie.",
+      "desc2": "Aegryn Advisory bestaat voor leiders die een partner willen die strategie, tech en transacties begrijpt : alle drie. Één partner voor alle drie.",
       "tagline": "We stappen in wanneer beslissingen de koers van uw organisatie bepalen."
     },
     "whoFor": {
@@ -1333,7 +1333,7 @@
       ]
     },
     "experts": {
-      "label": "ADVISORY TECH — OPERATIONEEL",
+      "label": "ADVISORY TECH : OPERATIONEEL",
       "desc": "Aegryn Advisory Tech grijpt in op de technische dimensies die de robuustheid en certificeerbaarheid van een digitaal actief bepalen: voor, tijdens of onafhankelijk van een transactie.",
       "items": [
         {
@@ -1428,8 +1428,8 @@
       ]
     },
     "ma": {
-      "label": "ADVISORY M&A — TRANSACTIESTRUCTURERING",
-      "intro": "We orkestreren rond elke transactie de experts die passen bij de aard en omvang. Juridisch, fiscaal, financieel, HR — gemobiliseerd op het juiste moment, niet allemaal tegelijk.",
+      "label": "ADVISORY M&A : TRANSACTIESTRUCTURERING",
+      "intro": "We orkestreren rond elke transactie de experts die passen bij de aard en omvang. Juridisch, fiscaal, financieel, HR : gemobiliseerd op het juiste moment, niet allemaal tegelijk.",
       "phases": [
         {
           "num": "01",
@@ -1454,7 +1454,7 @@
       ]
     },
     "network": {
-      "label": "EXPERTENNETWERK — VAARDIGHEDEN PER MISSIE GEACTIVEERD",
+      "label": "EXPERTENNETWERK : VAARDIGHEDEN PER MISSIE GEACTIVEERD",
       "title": "De juiste experts. Op het juiste moment. Bij elke missie.",
       "desc": "Voor gespecialiseerde missies activeren we ons netwerk van geverifieerde onafhankelijke experts. M&A-advocaten, accountants, belastingadviseurs, notarissen, digitaalrechtspecialisten, W&I-verzekeraars.\n\nEen pool van specialisten die onze capaciteiten uitbreidt zonder onze structuur te belasten.",
       "cta1": "Toegang tot het netwerk →",
@@ -3409,7 +3409,7 @@
       "buyer": {
         "label": "KOPER WORDEN",
         "title": "Wilt u een tech-actief verwerven?",
-        "desc": "Aegryn identificeert en presenteert u gecertificeerde activa die overeenkomen met uw acquisiteprofiel — sector, ticket, structuur. Een vertrouwelijk proces, voorbehouden aan gekwalificeerde kopers.",
+        "desc": "Aegryn identificeert en presenteert u gecertificeerde activa die overeenkomen met uw acquisiteprofiel : sector, ticket, structuur. Een vertrouwelijk proces, voorbehouden aan gekwalificeerde kopers.",
         "cta": "Meer weten over het proces",
         "ctaHref": "/transact/how-to-buy"
       },
@@ -5944,7 +5944,7 @@
       "rolePartner": "Join the partner network",
       "rolePartnerDesc": "Business introducers, expert co-certifiers, access the Aegryn partner space.",
       "roleInternal": "Interne toegang",
-      "roleInternalDesc": "Aegryn medewerkeraccount — sectiontoegang wordt ingeschakeld door een beheerder."
+      "roleInternalDesc": "Aegryn medewerkeraccount : sectiontoegang wordt ingeschakeld door een beheerder."
     },
     "account": {
       "eyebrow": "Aegryn Client Area",
@@ -6372,7 +6372,7 @@
     },
     "breadcrumb": "Legal",
     "sectionDpn": "(01)",
-    "h1": "Data Protection Notice – Aegryn neediu",
+    "h1": "Data Protection Notice, Aegryn neediu",
     "disclaimer": "Disclaimer: This data protection notice is an AI-generated translation provided for informational purposes only. In the event of any discrepancies or inconsistencies, the English version shall prevail.",
     "updated": "Last updated: 01/03/2026",
     "dpn": {
@@ -6521,7 +6521,7 @@
     },
     "cgu": {
       "sectionLabel": "(02)",
-      "h2": "Terms of Use – neediu by Aegryn",
+      "h2": "Terms of Use, neediu by Aegryn",
       "disclaimer": "Disclaimer: This data protection statement is an AI-generated translation provided for informational purposes only. In the event of any discrepancies or inconsistencies, the English version shall prevail.",
       "intro": "These Terms of Use (the ToU) apply to any use of the Aegryn Platform, the neediu mobile application, and any service accessible or provided through the Platform (the Services), which are provided and managed by Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland.",
       "s1H": "1. General",
@@ -8063,20 +8063,20 @@
       "label": "WAAROM AEGRYN",
       "title": "Waarom Aegryn?",
       "p1": "De meeste bureaus adviseren zonder te bouwen. De meeste agencies bouwen zonder te adviseren. De meeste M&A-boutiques transacteren zonder te herbouwen.\n\nAegryn doet alle vijf. En wat het zijn klanten adviseert, past het op zichzelf toe. Deze coherentie is wat wij vanaf de eerste dag in ons DNA wilden verankeren.",
-      "p2": "Adviseren zonder te bouwen is een kaart leveren zonder het grondgebied. Bouwen zonder te adviseren is uitvoeren zonder koers. Transacteren zonder voor te bereiden is verkopen zonder te waarderen. Rekruteren zonder strategie is invullen zonder te bouwen. Informeren zonder te doen is commentariëren zonder te handelen.\n\nBij Aegryn versterkt elke discipline de volgende. Dit aaneenketenen creëert duurzame waarde voor onze klanten en voor onszelf.\n\nFinanciële partners begrepen het als eersten: ondernemers willen niet alleen kapitaal. Ze willen een kritische blik en een netwerk. Aegryn draagt dezelfde overtuiging door het volledige ondernemerstraject — van het opbouwen van waarde tot de realisatie ervan.",
+      "p2": "Adviseren zonder te bouwen is een kaart leveren zonder het grondgebied. Bouwen zonder te adviseren is uitvoeren zonder koers. Transacteren zonder voor te bereiden is verkopen zonder te waarderen. Rekruteren zonder strategie is invullen zonder te bouwen. Informeren zonder te doen is commentariëren zonder te handelen.\n\nBij Aegryn versterkt elke discipline de volgende. Dit aaneenketenen creëert duurzame waarde voor onze klanten en voor onszelf.\n\nFinanciële partners begrepen het als eersten: ondernemers willen niet alleen kapitaal. Ze willen een kritische blik en een netwerk. Aegryn draagt dezelfde overtuiging door het volledige ondernemerstraject : van het opbouwen van waarde tot de realisatie ervan.",
       "p3Label": "VERANKERD IN ZWITSERLAND",
       "p3": "Saint-Sulpice, Vaud. Een Zwitserse basis voor Europese mandaten. De strengheid van een toonaangevend financieel centrum, de neutraliteit van een betrouwbare jurisdictie."
     },
     "workWith": {
       "label": "WERKEN MET AEGRYN",
       "title": "Vijf disciplines.\nÉén relatie.",
-      "sub": "Advisory, engineering, transactie, talent, kennis — geïntegreerd in één groep, met dezelfde standaarden.",
+      "sub": "Advisory, engineering, transactie, talent, kennis : geïntegreerd in één groep, met dezelfde standaarden.",
       "items": [
         {
           "key": "accompagner",
           "num": "01",
           "title": "BEGELEIDEN",
-          "desc": "Strategie-, technologie- en M&A-advisory. Wij treden op waar beslissingen de koers bepalen — van governance tot kapitaal.",
+          "desc": "Strategie-, technologie- en M&A-advisory. Wij treden op waar beslissingen de koers bepalen : van governance tot kapitaal.",
           "cta": "Advisory ontdekken",
           "href": "/advisory"
         },
@@ -8100,7 +8100,7 @@
           "key": "recruter",
           "num": "04",
           "title": "WERVEN",
-          "desc": "Executive-, tech- en innovatieprofielen. CTO tot CISO — wij plaatsen het talent dat transformatie uitvoert. Vertrouwelijk, pre-gekwalificeerd, 48u respons.",
+          "desc": "Executive-, tech- en innovatieprofielen. CTO tot CISO : wij plaatsen het talent dat transformatie uitvoert. Vertrouwelijk, pre-gekwalificeerd, 48u respons.",
           "cta": "Mandaat indienen",
           "href": "/talent"
         },
