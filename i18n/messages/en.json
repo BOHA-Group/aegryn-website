@@ -5889,7 +5889,9 @@
       "errorGeneric": "Unable to create account. Please try again.",
       "errorNetwork": "Unable to reach the server. Check your connection.",
       "rolePartner": "Join the partner network",
-      "rolePartnerDesc": "Business introducers, expert co-certifiers, access the Aegryn partner space."
+      "rolePartnerDesc": "Business introducers, expert co-certifiers, access the Aegryn partner space.",
+      "roleInternal": "Internal access",
+      "roleInternalDesc": "Aegryn team account — section access is granted by an administrator."
     },
     "account": {
       "eyebrow": "Aegryn Client Area",

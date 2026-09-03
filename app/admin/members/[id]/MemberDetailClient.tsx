@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Check, Trash2, Save, ExternalLink, AlertTriangle } from 'lucide-react'
 
-const ALL_ROLES = ['buyer', 'seller', 'partner', 'admin', 'super_admin'] as const
+const ALL_ROLES = ['buyer', 'seller', 'partner', 'internal', 'admin', 'super_admin'] as const
 type Role = typeof ALL_ROLES[number]
 
 const STATUS_NDA_COLORS: Record<string, string> = {

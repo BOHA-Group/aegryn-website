@@ -5896,7 +5896,9 @@
       "errorGeneric": "Impossibile creare l'account. Riprova.",
       "errorNetwork": "Impossibile contattare il server. Controlla la connessione.",
       "rolePartner": "Unirsi alla rete partner",
-      "rolePartnerDesc": "Mediatori d'affari, co-certificatori esperti, acceda allo spazio partner Aegryn."
+      "rolePartnerDesc": "Mediatori d'affari, co-certificatori esperti, acceda allo spazio partner Aegryn.",
+      "roleInternal": "Accesso interno",
+      "roleInternalDesc": "Account collaboratore Aegryn — l'accesso alle sezioni viene attivato da un amministratore."
     },
     "account": {
       "eyebrow": "Area clienti Aegryn",

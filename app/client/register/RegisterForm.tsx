@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 import { supabase }        from '@/lib/supabase'
 import { ArrowUpRight, Eye, EyeOff, CheckCircle } from 'lucide-react'
 
-type Role = 'buyer' | 'seller' | 'partner'
+type Role = 'buyer' | 'seller' | 'partner' | 'internal'
 
 function getPasswordStrength(pwd: string): { score: number; rules: boolean[] } {
   const rules = [
@@ -84,6 +84,7 @@ export default function RegisterForm() {
       setTimeout(() => {
         if (effectiveRole === 'seller')       router.push('/client/seller')
         else if (effectiveRole === 'partner') router.push('/client/partner')
+        else if (effectiveRole === 'internal') router.push('/client/internal')
         else                                  router.push('/client/buyer')
       }, 3000)
     } catch {
@@ -104,9 +105,10 @@ export default function RegisterForm() {
   }
 
   const roleOptions: { value: Role; label: string; desc: string }[] = [
-    { value: 'buyer',   label: t('roleBuyer'),   desc: t('roleBuyerDesc')   },
-    { value: 'seller',  label: t('roleSeller'),  desc: t('roleSellerDesc')  },
-    { value: 'partner', label: t('rolePartner'), desc: t('rolePartnerDesc') },
+    { value: 'buyer',    label: t('roleBuyer'),    desc: t('roleBuyerDesc')    },
+    { value: 'seller',   label: t('roleSeller'),   desc: t('roleSellerDesc')   },
+    { value: 'partner',  label: t('rolePartner'),  desc: t('rolePartnerDesc')  },
+    { value: 'internal', label: t('roleInternal'), desc: t('roleInternalDesc') },
   ]
 
   return (

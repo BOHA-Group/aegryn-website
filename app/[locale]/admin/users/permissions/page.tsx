@@ -18,6 +18,7 @@ type Permission = {
   name: string
   description: string | null
   category: string
+  disabled?: boolean
 }
 
 type User = {
@@ -294,11 +295,35 @@ export default function AdminPermissionsPage() {
                         .map(([category, perms]) => (
                           <div key={category}>
                             <h3 className="font-sans font-bold text-ag-black text-[15px] mb-3 uppercase tracking-wider">
-                              {category}
+                              {category === 'experts' ? 'Auditeurs externes' : category}
                             </h3>
                             <div className="space-y-2">
                               {perms.map((perm) => {
                                 const hasPerm = hasPermission(selectedUser, perm.id)
+                                const isDisabled = perm.disabled === true
+                                if (isDisabled) {
+                                  return (
+                                    <div
+                                      key={perm.id}
+                                      className="flex items-start gap-3 p-3 border border-ag-border bg-gray-50 opacity-50 cursor-not-allowed"
+                                      title="Fonctionnalité non encore disponible"
+                                    >
+                                      <div className="mt-1 w-4 h-4 border border-gray-300 rounded-sm bg-gray-100" />
+                                      <div className="flex-1">
+                                        <p className="font-semibold text-[13px] text-ag-gray flex items-center gap-2">
+                                          {perm.name}
+                                          <span className="font-mono text-[9px] uppercase tracking-widest bg-gray-200 text-gray-500 px-1.5 py-0.5">
+                                            Bientôt disponible
+                                          </span>
+                                        </p>
+                                        {perm.description && (
+                                          <p className="text-[12px] text-ag-gray/60 mt-0.5">{perm.description}</p>
+                                        )}
+                                        <p className="text-[11px] text-ag-gray/40 mt-1 font-mono">{perm.id}</p>
+                                      </div>
+                                    </div>
+                                  )
+                                }
                                 return (
                                   <label
                                     key={perm.id}

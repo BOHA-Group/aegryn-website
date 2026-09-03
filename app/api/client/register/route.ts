@@ -6,7 +6,7 @@ const schema = z.object({
   email:    z.string().email(),
   password: z.string().min(8),
   fullName: z.string().min(1).max(120),
-  role:     z.enum(['buyer', 'seller', 'partner']).optional().default('buyer'),
+  role:     z.enum(['buyer', 'seller', 'partner', 'internal']).optional().default('buyer'),
 })
 
 export async function POST(req: NextRequest) {
@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
     .select('id')
     .contains('roles', ['admin'])
   if (admins && admins.length > 0) {
-    const roleLabel2: Record<string, string> = { buyer: 'Acquéreur', seller: 'Cédant', partner: 'Partenaire' }
+    const roleLabel2: Record<string, string> = { buyer: 'Acquéreur', seller: 'Cédant', partner: 'Partenaire', internal: 'Accès interne' }
     await supa.from('user_notifications').insert(
       admins.map((a: { id: string }) => ({
         user_id:     a.id,
@@ -65,9 +65,10 @@ export async function POST(req: NextRequest) {
   const resendKey = process.env.RESEND_API_KEY
   if (resendKey) {
     const roleLabel: Record<string, string> = {
-      buyer:   'Acquéreur',
-      seller:  'Cédant',
-      partner: 'Partenaire',
+      buyer:    'Acquéreur',
+      seller:   'Cédant',
+      partner:  'Partenaire',
+      internal: 'Accès interne',
     }
     await fetch('https://api.resend.com/emails', {
       method: 'POST',

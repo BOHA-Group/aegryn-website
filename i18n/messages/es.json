@@ -5896,7 +5896,9 @@
       "errorGeneric": "No se pudo crear la cuenta. Inténtelo de nuevo.",
       "errorNetwork": "No se pudo contactar con el servidor. Compruebe su conexión.",
       "rolePartner": "Unirse a la red de socios",
-      "rolePartnerDesc": "Intermediarios de negocios, co-certificadores expertos, acceda al espacio socio Aegryn."
+      "rolePartnerDesc": "Intermediarios de negocios, co-certificadores expertos, acceda al espacio socio Aegryn.",
+      "roleInternal": "Acceso interno",
+      "roleInternalDesc": "Cuenta de colaborador Aegryn — el acceso a secciones es activado por un administrador."
     },
     "account": {
       "eyebrow": "Área de clientes Aegryn",

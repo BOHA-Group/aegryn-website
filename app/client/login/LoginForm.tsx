@@ -50,6 +50,8 @@ export default function LoginForm() {
 
       if (roles.includes('admin') || roles.includes('super_admin')) {
         window.location.assign('/admin')
+      } else if (roles.includes('internal') && !roles.includes('buyer') && !roles.includes('seller') && !roles.includes('partner')) {
+        window.location.assign('/client/internal')
       } else if (roles.includes('partner')) {
         window.location.assign('/client/partner')
       } else if (roles.includes('seller') && !roles.includes('buyer')) {

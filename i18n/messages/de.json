@@ -5896,7 +5896,9 @@
       "errorGeneric": "Konto konnte nicht erstellt werden. Bitte versuchen Sie es erneut.",
       "errorNetwork": "Server nicht erreichbar. Bitte Verbindung prüfen.",
       "rolePartner": "Dem Partnernetzwerk beitreten",
-      "rolePartnerDesc": "Geschäftsvermittler, Sachverständige, Zugang zum Aegryn-Partnerbereich."
+      "rolePartnerDesc": "Geschäftsvermittler, Sachverständige, Zugang zum Aegryn-Partnerbereich.",
+      "roleInternal": "Interner Zugang",
+      "roleInternalDesc": "Aegryn-Mitarbeiterkonto — Bereichszugriff wird vom Administrator freigeschaltet."
     },
     "account": {
       "eyebrow": "Aegryn Kundenbereich",
