@@ -975,11 +975,11 @@
         "longDesc": "subblink is the AI-powered contract analyser developed by Aegryn. In 60 seconds, it detects abusive clauses, hidden risks and negotiation points across any contract type: NDA, T&Cs, lease, service agreement, generating a ContractScore from A to E that no generic LLM can replicate. The engine relies on an anonymised sector benchmark database and delivers a clear verdict: SIGN ✓ · NEGOTIATE ⚑ · REFUSE ✗, with counter-proposals drafted clause by clause. At Aegryn, subblink is the backbone of our contractual intelligence practice: every mandate, NDA and transaction agreement is analysed and scored before signing. On the market, subblink is available to individuals, freelancers, SMEs, lawyers and legal professionals across Switzerland and Europe.",
         "audience": "Individuals (lease, divorce, insurance), professionals (NDA, T&Cs, commercial leases), lawyers and legal counsel",
         "features": [
-          "ContractScore from A to E — not replicable by a generic LLM",
+          "ContractScore from A to E, not replicable by a generic LLM",
           "Instant verdict: SIGN ✓ · NEGOTIATE ⚑ · REFUSE ✗",
           "Counter-proposals drafted clause by clause",
           "Anonymised sector benchmark database",
-          "Analysis in 60 seconds — 25+ formats (PDF, Word, Excel, images)",
+          "Analysis in 60 seconds: 25+ formats (PDF, Word, Excel, images)",
           "6 languages: French, English, German, Spanish, Italian, Dutch",
           "94% abusive clause detection rate",
           "Internal use at Aegryn: contractual intelligence on all our mandates",

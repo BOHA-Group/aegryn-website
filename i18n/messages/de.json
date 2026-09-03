@@ -975,11 +975,11 @@
         "longDesc": "subblink ist der KI-gestützte Vertragsanalysator von Aegryn. In 60 Sekunden erkennt er missbräuchliche Klauseln, versteckte Risiken und Verhandlungspunkte in jedem Vertragstyp: NDA, AGB, Mietvertrag, Dienstleistungsvertrag, und erstellt einen ContractScore von A bis E, der von keinem generischen LLM reproduziert werden kann. Das System stützt sich auf eine anonymisierte Sektor-Benchmark-Datenbank und liefert ein klares Urteil: UNTERZEICHNEN ✓ · VERHANDELN ⚑ · ABLEHNEN ✗, mit clauselweise verfassten Gegenvorschlägen. Bei Aegryn ist subblink das zentrale Werkzeug unserer Vertragsintelligenpraxis: jedes Mandat, jede NDA und jeder Transaktionsvertrag wird vor der Unterzeichnung analysiert und bewertet.",
         "audience": "Privatpersonen (Mietvertrag, Scheidung, Versicherung), Unternehmen (NDA, AGB, Gewerbemietverträge), Anwälte und Juristen",
         "features": [
-          "ContractScore von A bis E — nicht durch ein generisches LLM reproduzierbar",
+          "ContractScore von A bis E, nicht durch ein generisches LLM reproduzierbar",
           "Sofortiges Urteil: UNTERZEICHNEN ✓ · VERHANDELN ⚑ · ABLEHNEN ✗",
           "Gegenvorschläge klauselweise verfasst",
           "Anonymisierte Sektor-Benchmark-Datenbank",
-          "Analyse in 60 Sekunden — 25+ Formate (PDF, Word, Excel, Bilder)",
+          "Analyse in 60 Sekunden: 25+ Formate (PDF, Word, Excel, Bilder)",
           "6 Sprachen: Französisch, Englisch, Deutsch, Spanisch, Italienisch, Niederländisch",
           "94 % Erkennungsrate missbäuchlicher Klauseln",
           "Interner Einsatz bei Aegryn: Vertragsanalyse für alle Mandate",
