@@ -4121,7 +4121,11 @@
       "security": "Cybersicherheit",
       "securityDesc": "Audit, NIS2/DORA/ISO 27001-Compliance, Risikomanagement und Cyber-Governance.",
       "compliance": "Compliance & Governance",
-      "complianceDesc": "AI Act, DSGVO, Schweizer DSG, interne Revision und Verarbeitungsverzeichnis."
+      "complianceDesc": "AI Act, DSGVO, Schweizer DSG, interne Revision und Verarbeitungsverzeichnis.",
+      "board": "Board Advisory",
+      "boardDesc": "Governance, Verwaltungsratsbesetzung, Gründerbegleitung und strategische Vision auf höchster Ebene.",
+      "talent": "Executive Search",
+      "talentDesc": "C-Level und VP Rekrutierung, Interim Management, Talent Mapping und Retention für Tech-Führungskräfte."
     },
     "cta": {
       "title": "Dem Aegryn-Netzwerk beitreten.",

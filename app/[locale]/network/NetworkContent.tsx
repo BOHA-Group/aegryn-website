@@ -4,12 +4,12 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import {
-  ArrowUpRight, ShieldCheck, BrainCircuit, Scale, Cpu, ClipboardCheck,
-  Building2, Users, Globe,
+  ArrowUpRight, BrainCircuit, Scale, Cpu,
+  Building2, Users, Globe, UserSearch, Landmark,
 } from 'lucide-react'
 
 /* ─── Types ────────────────────────────────────────────────────────────────── */
-type DimensionKey = 'strategy' | 'technology' | 'ma'
+type DimensionKey = 'board' | 'strategy' | 'technology' | 'ma' | 'talent'
 type ExpertDomain = {
   Icon: React.ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>
   domainKey: string
@@ -26,55 +26,65 @@ type ExpertiseCard = {
 
 /* ─── Grille expertises mobilisables par dimension ─────────────────────────── */
 const EXPERTISE_CARDS: ExpertiseCard[] = [
+  // BOARD ADVISORY (or doré)
+  { title: 'Composition & recrutement CA',  tags: ['Board members', 'Administrateurs indép.', 'Diversité'], dimension: 'board', color: '#C9A84C' },
+  { title: 'Gouvernance & rôles dirigeants', tags: ['CEO/CTO roles', 'Séparation pouvoirs', 'RACI'],         dimension: 'board', color: '#C9A84C' },
+  { title: 'Accompagnement fondateurs',      tags: ['Scale-up', 'Succession', 'Transmission'],               dimension: 'board', color: '#C9A84C' },
+  { title: 'Stratégie & vision long terme',  tags: ['OKR', 'Business model', 'Roadmap 3-5 ans'],             dimension: 'board', color: '#C9A84C' },
+  { title: 'Gestion des crises dirigeantes', tags: ['Conflit associés', 'Turnaround', 'Médiation'],           dimension: 'board', color: '#C9A84C' },
+  { title: 'Relations investisseurs & LP',   tags: ['Reporting board', 'Data room', 'IRR / KPIs'],           dimension: 'board', color: '#C9A84C' },
+
   // STRATEGY (vert apex)
-  { title: 'Stratégie d\'entreprise',    tags: ['Vision long terme', 'OKR', 'Business model'], dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'Transformation digitale',    tags: ['Change management', 'Roadmap SI', 'Adoption'], dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'Gouvernance & Compliance',   tags: ['RGPD', 'NIS2', 'DORA', 'AI Act'],             dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'Intelligence compétitive',   tags: ['Veille marché', 'Benchmarking', 'Tendances'],  dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'Finance & Restructuring',    tags: ['Business plan', 'Restructuration', 'Tréso'],   dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'ESG & Durabilité',           tags: ['Reporting ESG', 'Impact', 'Taxonomie UE'],     dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'Risk Management',            tags: ['Risk mapping', 'Continuité', 'Sinistres'],      dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'Opérations & Lean',          tags: ['Process mining', 'Efficience', 'KPI ops'],     dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'Innovation & Ventures',      tags: ['Open innovation', 'Intrapreneuriat', 'Labs'],  dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Stratégie d\'entreprise',       tags: ['Vision long terme', 'OKR', 'Business model'],           dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Transformation digitale',        tags: ['Change management', 'Roadmap SI', 'Adoption'],          dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Gouvernance & Compliance',        tags: ['RGPD', 'NIS2', 'DORA', 'AI Act'],                       dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Intelligence compétitive',        tags: ['Veille marché', 'Benchmarking', 'Tendances'],           dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Finance & Restructuring',         tags: ['Business plan', 'Restructuration', 'Tréso'],            dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'ESG & Durabilité',               tags: ['Reporting ESG', 'Impact', 'Taxonomie UE'],              dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Risk Management',                tags: ['Risk mapping', 'Continuité', 'Sinistres'],               dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Opérations & Lean',              tags: ['Process mining', 'Efficience', 'KPI ops'],              dimension: 'strategy', color: '#5ADDA4' },
+  { title: 'Innovation & Ventures',          tags: ['Open innovation', 'Intrapreneuriat', 'Labs'],           dimension: 'strategy', color: '#5ADDA4' },
 
   // TECHNOLOGY (bleu)
-  { title: 'Architecture Système',       tags: ['Cloud', 'Microservices', 'API-first'],          dimension: 'technology', color: '#60a5fa' },
-  { title: 'Cybersécurité offensive',    tags: ['Pentest', 'Red team', 'Vuln. scoring'],         dimension: 'technology', color: '#60a5fa' },
-  { title: 'Cybersécurité défensive',    tags: ['SOC', 'SIEM', 'Threat intel'],                  dimension: 'technology', color: '#60a5fa' },
-  { title: 'IA & Machine Learning',      tags: ['LLM', 'Fine-tuning', 'MLOps', 'RAG'],           dimension: 'technology', color: '#60a5fa' },
-  { title: 'DevSecOps',                  tags: ['CI/CD sécurisé', 'SBOM', 'Shift-left'],         dimension: 'technology', color: '#60a5fa' },
-  { title: 'Data & Analytique',          tags: ['Data lake', 'BI', 'Pipelines temps réel'],      dimension: 'technology', color: '#60a5fa' },
-  { title: 'Cloud & Infrastructure',     tags: ['AWS', 'Azure', 'GCP', 'FinOps'],                dimension: 'technology', color: '#60a5fa' },
-  { title: 'Audit Technique Actifs',     tags: ['Code review', 'Dette tech', 'Certification'],   dimension: 'technology', color: '#60a5fa' },
-  { title: 'Product Engineering',        tags: ['SaaS B2B', 'App mobile', 'Protocoles IA'],      dimension: 'technology', color: '#60a5fa' },
+  { title: 'Architecture Système',           tags: ['Cloud', 'Microservices', 'API-first'],                   dimension: 'technology', color: '#60a5fa' },
+  { title: 'Cybersécurité offensive',        tags: ['Pentest', 'Red team', 'Vuln. scoring'],                  dimension: 'technology', color: '#60a5fa' },
+  { title: 'Cybersécurité défensive',        tags: ['SOC', 'SIEM', 'Threat intel'],                           dimension: 'technology', color: '#60a5fa' },
+  { title: 'IA & Machine Learning',          tags: ['LLM', 'Fine-tuning', 'MLOps', 'RAG'],                    dimension: 'technology', color: '#60a5fa' },
+  { title: 'DevSecOps',                      tags: ['CI/CD sécurisé', 'SBOM', 'Shift-left'],                  dimension: 'technology', color: '#60a5fa' },
+  { title: 'Data & Analytique',              tags: ['Data lake', 'BI', 'Pipelines temps réel'],               dimension: 'technology', color: '#60a5fa' },
+  { title: 'Cloud & Infrastructure',         tags: ['AWS', 'Azure', 'GCP', 'FinOps'],                         dimension: 'technology', color: '#60a5fa' },
+  { title: 'Audit Technique Actifs',         tags: ['Code review', 'Dette tech', 'Certification'],            dimension: 'technology', color: '#60a5fa' },
+  { title: 'Product Engineering',            tags: ['SaaS B2B', 'App mobile', 'Protocoles IA'],               dimension: 'technology', color: '#60a5fa' },
 
   // M&A (violet)
-  { title: 'Due Diligence Stratégique',  tags: ['Marché', 'Positionnement', 'Synergies'],        dimension: 'ma', color: '#818cf8' },
-  { title: 'Due Diligence Financière',   tags: ['QoE', 'Normalisation', 'Flux de tréso'],        dimension: 'ma', color: '#818cf8' },
-  { title: 'Due Diligence Technique',    tags: ['Architecture', 'Code', 'Dette', 'IP'],          dimension: 'ma', color: '#818cf8' },
-  { title: 'Valorisation d\'actifs',     tags: ['DCF', 'Multiples', 'ARR/NRR', 'EBITDA'],       dimension: 'ma', color: '#818cf8' },
-  { title: 'Structuration Juridique',    tags: ['SPA', 'LOI', 'Earn-out', 'GAP'],               dimension: 'ma', color: '#818cf8' },
-  { title: 'Fiscalité & Optimisation',   tags: ['Structuration holding', 'Exit tax', 'Treaty'],  dimension: 'ma', color: '#818cf8' },
-  { title: 'Séquestre & Financement',    tags: ['Escrow', 'Bridge', 'Mezzanine', 'LBO'],         dimension: 'ma', color: '#818cf8' },
-  { title: 'Assurance W&I & Risque',     tags: ['W&I insurance', 'Tax liability', 'D&O'],        dimension: 'ma', color: '#818cf8' },
-  { title: 'Post-Merger Integration',    tags: ['PMI', 'Synergies', 'Gouvernance', 'Culture'],   dimension: 'ma', color: '#818cf8' },
+  { title: 'Due Diligence Stratégique',      tags: ['Marché', 'Positionnement', 'Synergies'],                 dimension: 'ma', color: '#818cf8' },
+  { title: 'Due Diligence Financière',       tags: ['QoE', 'Normalisation', 'Flux de tréso'],                 dimension: 'ma', color: '#818cf8' },
+  { title: 'Due Diligence Technique',        tags: ['Architecture', 'Code', 'Dette', 'IP'],                   dimension: 'ma', color: '#818cf8' },
+  { title: 'Valorisation d\'actifs',        tags: ['DCF', 'Multiples', 'ARR/NRR', 'EBITDA'],                dimension: 'ma', color: '#818cf8' },
+  { title: 'Structuration Juridique',        tags: ['SPA', 'LOI', 'Earn-out', 'GAP'],                        dimension: 'ma', color: '#818cf8' },
+  { title: 'Fiscalité & Optimisation',       tags: ['Structuration holding', 'Exit tax', 'Treaty'],           dimension: 'ma', color: '#818cf8' },
+  { title: 'Séquestre & Financement',        tags: ['Escrow', 'Bridge', 'Mezzanine', 'LBO'],                 dimension: 'ma', color: '#818cf8' },
+  { title: 'Assurance W&I & Risque',         tags: ['W&I insurance', 'Tax liability', 'D&O'],                dimension: 'ma', color: '#818cf8' },
+  { title: 'Post-Merger Integration',        tags: ['PMI', 'Synergies', 'Gouvernance', 'Culture'],           dimension: 'ma', color: '#818cf8' },
+
+  // TALENT / EXECUTIVE SEARCH (rose)
+  { title: 'Executive Search C-Level',       tags: ['CEO', 'CTO', 'CISO', 'Chief AI Officer'],               dimension: 'talent', color: '#f472b6' },
+  { title: 'Recrutement VP & Director',      tags: ['VP Engineering', 'VP Product', 'VP Sales'],             dimension: 'talent', color: '#f472b6' },
+  { title: 'Interim Management',             tags: ['CTO interim', 'CISO interim', 'DPO interim'],           dimension: 'talent', color: '#f472b6' },
+  { title: 'Talent Mapping & Pipeline',      tags: ['Market mapping', 'Longlist', 'Assessment'],             dimension: 'talent', color: '#f472b6' },
+  { title: 'Onboarding & Intégration',       tags: ['Premier 90 jours', 'Culture fit', 'KPIs poste'],        dimension: 'talent', color: '#f472b6' },
+  { title: 'Rétention & Incentives',         tags: ['BSPCE', 'Stock options', 'Comp benchmarking'],          dimension: 'talent', color: '#f472b6' },
 ]
 
-/* ─── Domaines d'expertise disponibles (alignés Conseil Strategy/Tech/M&A) ── */
+/* ─── Domaines d'expertise disponibles (alignés Conseil Board/Strategy/Tech/M&A/Talent) ── */
 const EXPERT_DOMAINS: ExpertDomain[] = [
-  { Icon: BrainCircuit,   domainKey: 'strategy',    color: '#5ADDA4', dimension: 'strategy' },
-  { Icon: Cpu,            domainKey: 'technology',  color: '#60a5fa', dimension: 'technology' },
-  { Icon: Scale,          domainKey: 'ma',          color: '#818cf8', dimension: 'ma' },
-  { Icon: ShieldCheck,    domainKey: 'security',    color: '#f472b6', dimension: 'technology' },
-  { Icon: ClipboardCheck, domainKey: 'compliance',  color: '#fb923c', dimension: 'strategy' },
+  { Icon: Landmark,     domainKey: 'board',      color: '#C9A84C', dimension: 'board' },
+  { Icon: BrainCircuit, domainKey: 'strategy',   color: '#5ADDA4', dimension: 'strategy' },
+  { Icon: Cpu,          domainKey: 'technology', color: '#60a5fa', dimension: 'technology' },
+  { Icon: Scale,        domainKey: 'ma',         color: '#818cf8', dimension: 'ma' },
+  { Icon: UserSearch,   domainKey: 'talent',     color: '#f472b6', dimension: 'talent' },
 ]
 
-const DIMENSIONS: { key: DimensionKey | 'all'; labelKey: string }[] = [
-  { key: 'all',        labelKey: 'filters.all' },
-  { key: 'strategy',   labelKey: 'filters.strategy' },
-  { key: 'technology', labelKey: 'filters.technology' },
-  { key: 'ma',         labelKey: 'filters.ma' },
-]
 
 /* ─── ExpertiseCard animée ──────────────────────────────────────────────────── */
 function ExpertiseCardItem({ card }: { card: ExpertiseCard }) {
@@ -180,32 +190,18 @@ function FanCards({
 /* ─── Main Component ─────────────────────────────────────────────────────────── */
 export default function NetworkContent() {
   const t = useTranslations('network')
-  // Filtre boutons dimension (indépendant des fan cards)
-  const [activeDimension, setActiveDimension] = useState<DimensionKey | 'all'>('all')
-  // Fan card sélectionnée — null = aucune (toutes expertises)
-  const [activeDomain, setActiveDomain]       = useState<string | null>(null)
+  // Fan card sélectionnée : null = aucune (toutes expertises visibles)
+  const [activeDomain, setActiveDomain] = useState<string | null>(null)
 
   const visibleDomains = EXPERT_DOMAINS
 
-  // Fan card sélectionnée → filtre par la dimension de ce domaine
-  // Bouton filtre actif (hors 'all') → filtre par dimension du bouton
-  // Les deux peuvent se combiner ; fan card prime si sélectionnée
   const activeDomainMeta = activeDomain
     ? EXPERT_DOMAINS.find(d => d.domainKey === activeDomain)
     : null
 
-  const filteredExpertise = (() => {
-    if (activeDomainMeta) {
-      // Fan card active : filtre par la dimension de ce domaine
-      const dim = activeDomainMeta.dimension
-      return EXPERTISE_CARDS.filter(c => c.dimension === dim)
-    }
-    if (activeDimension !== 'all') {
-      // Bouton filtre actif seulement
-      return EXPERTISE_CARDS.filter(c => c.dimension === activeDimension)
-    }
-    return EXPERTISE_CARDS
-  })()
+  const filteredExpertise = activeDomainMeta
+    ? EXPERTISE_CARDS.filter(c => c.dimension === activeDomainMeta.dimension)
+    : EXPERTISE_CARDS
 
   function handleDomainSelect(domainKey: string) {
     // Toggle : reclic sur la même carte = désélectionner
@@ -276,44 +272,25 @@ export default function NetworkContent() {
       <section className="border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
 
-          {/* Header + filtres */}
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12">
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <span className="font-mono text-[9px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
-                  {t('experts.label')}
-                </span>
-                <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex">
-                  {t('experts.badge')}
-                </span>
-              </div>
-              <h2
-                className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15] whitespace-pre-line"
-                style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-              >
-                {t('experts.title')}
-              </h2>
-              <p className="text-[14px] text-ag-gray leading-relaxed mt-4 max-w-xl">
-                {t('experts.desc')}
-              </p>
+          {/* Header */}
+          <div className="mb-12">
+            <div className="flex items-center gap-4 mb-4">
+              <span className="font-mono text-[9px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
+                {t('experts.label')}
+              </span>
+              <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex">
+                {t('experts.badge')}
+              </span>
             </div>
-            {/* Filtres dimension */}
-            <div className="flex flex-wrap gap-2 shrink-0">
-              {DIMENSIONS.map(d => (
-                <button
-                  key={d.key}
-                  onClick={() => { setActiveDimension(d.key); if (d.key !== 'all') setActiveDomain(d.key) }}
-                  className={[
-                    'px-4 py-2 font-sans font-semibold text-[11px] uppercase tracking-[0.14em] border transition-colors',
-                    activeDimension === d.key
-                      ? 'bg-ag-navy text-white border-ag-navy'
-                      : 'text-ag-gray border-ag-border hover:border-ag-black hover:text-ag-black',
-                  ].join(' ')}
-                >
-                  {t(d.labelKey)}
-                </button>
-              ))}
-            </div>
+            <h2
+              className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15] whitespace-pre-line"
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
+            >
+              {t('experts.title')}
+            </h2>
+            <p className="text-[14px] text-ag-gray leading-relaxed mt-4 max-w-xl">
+              {t('experts.desc')}
+            </p>
           </div>
 
           {/* Fan cards — clic filtre aussi la grille */}

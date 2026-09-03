@@ -4120,7 +4120,11 @@
       "security": "Cybersecurity",
       "securityDesc": "Audit, NIS2/DORA/ISO 27001 compliance, risk management and cyber governance.",
       "compliance": "Compliance & Governance",
-      "complianceDesc": "AI Act, GDPR, Swiss FADP, internal audit and data processing registers."
+      "complianceDesc": "AI Act, GDPR, Swiss FADP, internal audit and data processing registers.",
+      "board": "Board Advisory",
+      "boardDesc": "Governance, board composition, founder support and strategic vision at the highest level.",
+      "talent": "Executive Search",
+      "talentDesc": "C-Level and VP recruitment, interim management, talent mapping and retention for tech leaders."
     },
     "cta": {
       "title": "Join the Aegryn network.",

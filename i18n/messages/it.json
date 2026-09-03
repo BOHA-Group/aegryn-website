@@ -4121,7 +4121,11 @@
       "security": "Cybersecurity",
       "securityDesc": "Audit, conformità NIS2/DORA/ISO 27001, gestione del rischio e governance cyber.",
       "compliance": "Conformità e governance",
-      "complianceDesc": "AI Act, GDPR, LPD svizzera, audit interno e registro dei trattamenti."
+      "complianceDesc": "AI Act, GDPR, LPD svizzera, audit interno e registro dei trattamenti.",
+      "board": "Board Advisory",
+      "boardDesc": "Governance, composizione del consiglio, supporto ai fondatori e visione strategica al massimo livello.",
+      "talent": "Executive Search",
+      "talentDesc": "Reclutamento C-Level e VP, interim management, talent mapping e retention per i leader tech."
     },
     "cta": {
       "title": "Unisciti alla rete Aegryn.",

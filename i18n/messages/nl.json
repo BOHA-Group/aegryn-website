@@ -4121,7 +4121,11 @@
       "security": "Cyberbeveiliging",
       "securityDesc": "Audit, NIS2/DORA/ISO 27001-compliance, risicobeheer en cyber-governance.",
       "compliance": "Compliance en governance",
-      "complianceDesc": "AI Act, AVG, Zwitserse DSG, interne audit en register van verwerkingen."
+      "complianceDesc": "AI Act, AVG, Zwitserse DSG, interne audit en register van verwerkingen.",
+      "board": "Board Advisory",
+      "boardDesc": "Governance, samenstelling raad van bestuur, begeleiding oprichters en strategische visie op het hoogste niveau.",
+      "talent": "Executive Search",
+      "talentDesc": "C-Level en VP werving, interim management, talent mapping en retentie voor tech-leiders."
     },
     "cta": {
       "title": "Word lid van het Aegryn-netwerk.",
