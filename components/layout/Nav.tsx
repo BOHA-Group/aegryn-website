@@ -308,10 +308,10 @@ const WHO_INDUSTRIES_RIGHT = WHO_INDUSTRIES.slice(11)
 // Mega-menu Qui sommes-nous (3 colonnes: Groupe | Industries | Rejoindre)
 function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   return (
-    <div className="absolute top-full left-0 mt-2 w-[750px] bg-ag-white border border-ag-border shadow-lg z-50">
-      <div className="grid grid-cols-3 gap-px bg-ag-border">
+    <div className="absolute top-full right-0 mt-2 w-[820px] bg-ag-white border border-ag-border shadow-lg z-50">
+      <div className="grid gap-px bg-ag-border" style={{ gridTemplateColumns: '1fr 2fr 1fr' }}>
         {/* Le groupe */}
-        <div className="bg-ag-white p-4">
+        <div className="bg-ag-white p-3">
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('whoGroup')}
           </p>
@@ -344,7 +344,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
         </div>
 
         {/* Nos industries — 2 sous-colonnes */}
-        <div className="bg-ag-white p-4 col-span-1">
+        <div className="bg-ag-white p-4">
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-1">
             {t('whoIndustries')}
           </p>
@@ -354,19 +354,19 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
           <div className="grid grid-cols-2 gap-x-3">
             <div className="flex flex-col gap-0.5">
               {WHO_INDUSTRIES_LEFT.map(name => (
-                <span key={name} className="font-sans text-[11px] text-ag-gray py-0.5 leading-snug">{name}</span>
+                <span key={name} className="font-sans text-[13px] text-ag-gray py-0.5 leading-snug">{name}</span>
               ))}
             </div>
             <div className="flex flex-col gap-0.5">
               {WHO_INDUSTRIES_RIGHT.map(name => (
-                <span key={name} className="font-sans text-[11px] text-ag-gray py-0.5 leading-snug">{name}</span>
+                <span key={name} className="font-sans text-[13px] text-ag-gray py-0.5 leading-snug">{name}</span>
               ))}
             </div>
           </div>
         </div>
 
         {/* Nous rejoindre */}
-        <div className="bg-ag-white p-4">
+        <div className="bg-ag-white p-3">
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('whoJoin')}
           </p>
