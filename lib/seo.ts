@@ -262,7 +262,7 @@ export const aegrynOrganizationSchema = {
       url:           `${BASE_URL}/fr/assets/neediu`,
       datePublished: '2025-11-27',
       isPartOf:      { '@type': 'Periodical', name: 'Gala', issn: '1163-5053' },
-      about:         { '@type': 'Product', name: 'neediu', url: 'https://neediu.app' },
+      about:         { '@type': 'SoftwareApplication', name: 'neediu', applicationCategory: 'LifestyleApplication' },
     },
   ],
   hasOfferCatalog: {
