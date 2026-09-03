@@ -972,15 +972,18 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "Analiza todos sus contratos en segundos con una IA calibrada para el derecho suizo y europeo. Riesgos, cláusulas críticas, obligaciones ocultas: todo se identifica y explica en lenguaje claro.",
-        "audience": "Particulares, autónomos, PYME, profesionales del derecho",
+        "longDesc": "subblink es el analizador de contratos por inteligencia artificial desarrollado por BOHA-Group. En 60 segundos detecta cláusulas abusivas, riesgos ocultos y puntos de negociación en cualquier tipo de contrato — NDA, CGV, arrendamiento, prestación de servicios — con un ContractScore de A a E que ningún LLM genérico puede replicar. El motor se basa en una base de benchmarks sectoriales anonimizados y emite un veredicto claro: FIRMAR ✓ · NEGOCIAR ⚑ · RECHAZAR ✗, con contrapropuestas redactadas cláusula por cláusula. En Aegryn, subblink es la herramienta central de nuestra práctica de inteligencia contractual: cada mandato, NDA y contrato de transacción se analiza y puntaúa antes de la firma.",
+        "audience": "Particulares (arrendamiento, divorcio, seguros), profesionales (NDA, CGV, arrendamientos comerciales), abogados y juristas",
         "features": [
-          "Análisis de contratos en 60 segundos",
-          "Conformidad con el derecho suizo (CO) y europeo",
-          "Detección automática de cláusulas de riesgo",
-          "Resumen ejecutivo con puntos de acción priorizados",
-          "Propuestas de actualización de cláusulas y plan de acción",
-          "Exportación PDF anotada y certificada, traducción multilingüe",
+          "ContractScore de A a E — no reproducible por un LLM genérico",
+          "Veredicto inmediato: FIRMAR ✓ · NEGOCIAR ⚑ · RECHAZAR ✗",
+          "Contrapropuestas redactadas cláusula por cláusula",
+          "Base de benchmarks sectoriales anonimizados",
+          "Análisis en 60 segundos — 25+ formatos (PDF, Word, Excel, imágenes)",
+          "6 idiomas: francés, inglés, alemán, español, italiano, neerlandés",
+          "94 % de detección de cláusulas abusivas",
+          "Uso interno en Aegryn: inteligencia contractual en todos nuestros mandatos",
+          "Código de socio Village de la Justice: LEGI-4141-01",
           "API disponible para integración B2B"
         ]
       },

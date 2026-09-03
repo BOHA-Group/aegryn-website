@@ -263,6 +263,81 @@ export default async function AssetPage({ params }: Props) {
         </>
       )}
 
+      {/* Subblink press — Village de la Justice */}
+      {asset.id === 'subblink' && (
+        <>
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context':    'https://schema.org',
+            '@type':       'NewsArticle',
+            headline:      'Village de la Justice vous propose de faire auditer tous vos contrats',
+            description:   'Village de la Justice présente subblink comme une solution IA unique : ContractScore de A à E, analyse en 60 secondes, verdict SIGNER · NÉGOCIER · REFUSER. Code partenaire LEGI-4141-01.',
+            datePublished: '2026-07-16',
+            url:           'https://www.village-justice.com/articles/village-justice-vous-propose-faire-auditer-tous-vos-contrats-obtenir-score-des,57640.html',
+            author:        { '@type': 'Organization', name: 'Village de la Justice', url: 'https://www.village-justice.com' },
+            publisher:     { '@type': 'Organization', name: 'Village de la Justice', url: 'https://www.village-justice.com' },
+            about: {
+              '@type':     'SoftwareApplication',
+              name:        'subblink',
+              url:         'https://subblink.com',
+              applicationCategory: 'BusinessApplication',
+              description: 'Analyseur de contrats par IA. ContractScore A-E, droit suisse et européen, verdict clause par clause.',
+            },
+            mentions: {
+              '@type': 'Organization',
+              name:    'Aegryn',
+              url:     'https://aegryn.com',
+            },
+          }) }}
+        />
+        <section className="border-b border-ag-border bg-ag-off-white">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+            <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
+              PRESSE
+            </p>
+            <div className="flex flex-col md:flex-row gap-12 items-start">
+              {/* Bloc source */}
+              <div className="shrink-0 flex flex-col gap-2">
+                <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light">Partenaire</p>
+                <div className="border border-ag-border bg-ag-white px-6 py-5 w-[220px]">
+                  <p className="font-sans font-bold text-[15px] text-ag-black leading-tight mb-1">
+                    Village de la Justice
+                  </p>
+                  <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-ag-gray-light">
+                    158 140 membres · 1 100 000 visites/mois
+                  </p>
+                  <div className="mt-4 pt-4 border-t border-ag-border">
+                    <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-ag-gray-light mb-1">Code partenaire</p>
+                    <p className="font-mono text-[13px] font-bold text-ag-apex tracking-widest">LEGI-4141-01</p>
+                  </div>
+                  <p className="mt-3 font-mono text-[9px] text-ag-gray-light">16 juillet 2026</p>
+                </div>
+              </div>
+              {/* Contenu article */}
+              <div className="flex-1 max-w-2xl">
+                <p className="font-sans font-bold text-[18px] text-ag-black leading-snug mb-4">
+                  Village de la Justice vous propose de faire auditer en ligne tous vos contrats et d&apos;obtenir un ContractScore et des recommandations
+                </p>
+                <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-6">
+                  Le Village de la Justice présente subblink comme une solution IA unique : ContractScore de A à E non reproductible par un LLM généraliste, adossé à une base de benchmarks sectoriels anonymisés. Analyse en 60 secondes, verdict <strong>SIGNER ✓ · NÉGOCIER ⚑ · REFUSER ✗</strong>, contre-propositions rédigées clause par clause. Couvre particuliers (bail, divorce, assurance), professionnels (NDA, CGV, baux commerciaux) et avocats/juristes.
+                </p>
+                <a
+                  href="https://www.village-justice.com/articles/village-justice-vous-propose-faire-auditer-tous-vos-contrats-obtenir-score-des,57640.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-5 py-3 hover:bg-ag-black hover:text-white transition-colors"
+                >
+                  Lire l&apos;article <ArrowUpRight size={11} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        </>
+      )}
+
       {/* CTA strip */}
       <section className="bg-ag-navy py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">

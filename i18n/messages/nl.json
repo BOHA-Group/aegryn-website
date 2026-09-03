@@ -972,15 +972,18 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "Analyseert al uw contracten in seconden met een AI gecalibreerd voor het Zwitserse en Europese recht. Risico's, kritieke clausules, verborgen verplichtingen: alles wordt geïdentificeerd en uitgelegd in duidelijke taal.",
-        "audience": "Particulieren, zelfstandigen, kmo's, juridische professionals",
+        "longDesc": "subblink is de AI-gestuurde contractanalysator van BOHA-Group. In 60 seconden detecteert het onrechtmatige clausules, verborgen risico's en onderhandelingspunten in elk contracttype — NDA, AV, huurcontract, dienstverlening — met een ContractScore van A tot E die door geen enkele generieke LLM kan worden gerepliceerd. Het systeem maakt gebruik van een anonieme sectorale benchmarkdatabase en geeft een duidelijk oordeel: TEKENEN ✓ · ONDERHANDELEN ⚑ · WEIGEREN ✗, met tegenvoorstellen per clausule opgesteld. Bij Aegryn is subblink het centrale instrument van onze contractuele intelligentiepraktijk: elk mandaat, elke NDA en elk transactiecontract wordt geanalyseerd en gescoord vóór ondertekening.",
+        "audience": "Particulieren (huur, echtscheiding, verzekering), professionals (NDA, AV, commerciële huur), advocaten en juristen",
         "features": [
-          "Contractanalyse in 60 seconden",
-          "Conformiteit met Zwitsers recht (CO) en Europees recht",
-          "Automatische detectie van risicovolle clausules",
-          "Managementsamenvatting met geprioriteerde actiepunten",
-          "Voorstellen voor clausuleherziening en actieplan",
-          "Geannoteerde en gecertificeerde PDF-export, meertalige vertaling",
+          "ContractScore van A tot E — niet repliceerbaar door een generieke LLM",
+          "Direct oordeel: TEKENEN ✓ · ONDERHANDELEN ⚑ · WEIGEREN ✗",
+          "Tegenvoorstellen per clausule opgesteld",
+          "Anonieme sectorale benchmarkdatabase",
+          "Analyse in 60 seconden — 25+ formaten (PDF, Word, Excel, afbeeldingen)",
+          "6 talen: Frans, Engels, Duits, Spaans, Italiaans, Nederlands",
+          "94% detectiegraad van onrechtmatige clausules",
+          "Intern gebruik bij Aegryn: contractuele intelligentie op alle mandaten",
+          "Village de la Justice partnercode: LEGI-4141-01",
           "API beschikbaar voor B2B-integratie"
         ]
       },

@@ -27,7 +27,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     id:               'subblink',
     name:             'subblink',
     slug:             'subblink',
-    url:              'https://subblink.boha-group.com' as string | null,
+    url:              'https://subblink.com' as string | null,
     badge:            'B2B — SaaS',
     tagline:          'Analyse contractuelle par IA',
     description:      "Analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées — tout identifié en langage clair.",
@@ -39,7 +39,6 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     tier:             1 as const,
     ownership:        'core' as const,
     transactionEligible:  false,
-    internalOnly:     true,
   },
   {
     id:               'kryv',
