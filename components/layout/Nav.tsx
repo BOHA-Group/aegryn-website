@@ -301,7 +301,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
   const indRight = allIndustries.slice(11)
 
   return (
-    <div className="absolute top-full right-0 mt-2 w-[820px] bg-ag-white border border-ag-border shadow-lg z-50">
+    <div className="absolute top-full right-0 mr-6 mt-2 w-[820px] bg-ag-white border border-ag-border shadow-lg z-50">
       <div className="grid gap-px bg-ag-border" style={{ gridTemplateColumns: '1fr 2fr 1fr' }}>
         {/* Le groupe */}
         <div className="bg-ag-white p-3">
@@ -345,14 +345,14 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
             {t('whoIndustriesDesc')}
           </p>
           <div className="grid grid-cols-2 gap-x-3">
-            <div className="flex flex-col gap-0.5">
+            <div className="flex flex-col gap-1.5">
               {indLeft.map(name => (
-                <span key={name} className="font-sans text-[13px] text-ag-gray py-0.5 leading-snug">{name}</span>
+                <span key={name} className="font-sans text-[13px] text-ag-gray leading-snug">{name}</span>
               ))}
             </div>
-            <div className="flex flex-col gap-0.5">
+            <div className="flex flex-col gap-1.5">
               {indRight.map(name => (
-                <span key={name} className="font-sans text-[13px] text-ag-gray py-0.5 leading-snug">{name}</span>
+                <span key={name} className="font-sans text-[13px] text-ag-gray leading-snug">{name}</span>
               ))}
             </div>
           </div>
