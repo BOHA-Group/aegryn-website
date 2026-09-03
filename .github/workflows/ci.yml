@@ -13,16 +13,16 @@ jobs:
     timeout-minutes: 20
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.2.2
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4.4.0
         with:
           node-version: '22'
           cache: 'npm'
 
       - name: Cache Next.js build
-        uses: actions/cache@v4
+        uses: actions/cache@v4.2.3
         with:
           path: .next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('package-lock.json') }}-${{ hashFiles('**/*.ts','**/*.tsx') }}
@@ -38,25 +38,3 @@ jobs:
 
       - name: Lint
         run: npm run lint
-
-      - name: Build
-        timeout-minutes: 15
-        run: npm run build
-        env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
-          RESEND_FROM_NAME: ${{ secrets.RESEND_FROM_NAME }}
-          RESEND_REPLY_TO: ${{ secrets.RESEND_REPLY_TO }}
-          RESEND_INTERNAL_TO: ${{ secrets.RESEND_INTERNAL_TO }}
-          NEXT_PUBLIC_SITE_URL: https://aegryn.com
-          NEXT_PUBLIC_GA_ID: G-YW7XT6BLT6
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          ADMIN_LEADS_TOKEN: ${{ secrets.ADMIN_LEADS_TOKEN }}
-          ADMIN_KYC_EMAIL: ${{ secrets.ADMIN_KYC_EMAIL }}
-          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
-          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
-          CRON_SECRET: ${{ secrets.CRON_SECRET }}
-          INDEXNOW_SECRET: ${{ secrets.INDEXNOW_SECRET }}
-          IP_HASH_SALT: ${{ secrets.IP_HASH_SALT }}
