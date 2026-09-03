@@ -293,20 +293,13 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
   )
 }
 
-const WHO_INDUSTRIES = [
-  'Aérospatiale & Défense','Agriculture & Agroalimentaire','Automobile & Mobilité',
-  'Banque & Services Financiers','Chimie & Matériaux Avancés','Construction & Infrastructure',
-  'Éducation & EdTech','Énergie & Utilities','FinTech & Paiements',
-  'GovTech & Secteur Public','HealthTech & MedTech','Hôtellerie & Tourisme',
-  'Industrie & Manufacturing','Logistique & Supply Chain','Luxe & Retail Premium',
-  'Médias & Entertainment','PropTech & Immobilier','Retail & E-commerce',
-  'Santé & Pharmaceutique','Technologie & SaaS','Télécommunications','Transport & Fret',
-]
-const WHO_INDUSTRIES_LEFT  = WHO_INDUSTRIES.slice(0, 11)
-const WHO_INDUSTRIES_RIGHT = WHO_INDUSTRIES.slice(11)
-
 // Mega-menu Qui sommes-nous (3 colonnes: Groupe | Industries | Rejoindre)
 function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
+  const tInd = useTranslations('industries')
+  const allIndustries = (tInd.raw('list') as { name: string }[]).map(i => i.name)
+  const indLeft  = allIndustries.slice(0, 11)
+  const indRight = allIndustries.slice(11)
+
   return (
     <div className="absolute top-full right-0 mt-2 w-[820px] bg-ag-white border border-ag-border shadow-lg z-50">
       <div className="grid gap-px bg-ag-border" style={{ gridTemplateColumns: '1fr 2fr 1fr' }}>
@@ -343,7 +336,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
           </div>
         </div>
 
-        {/* Nos industries — 2 sous-colonnes */}
+        {/* Nos industries — 2 sous-colonnes, noms traduits via i18n */}
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-1">
             {t('whoIndustries')}
@@ -353,12 +346,12 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
           </p>
           <div className="grid grid-cols-2 gap-x-3">
             <div className="flex flex-col gap-0.5">
-              {WHO_INDUSTRIES_LEFT.map(name => (
+              {indLeft.map(name => (
                 <span key={name} className="font-sans text-[13px] text-ag-gray py-0.5 leading-snug">{name}</span>
               ))}
             </div>
             <div className="flex flex-col gap-0.5">
-              {WHO_INDUSTRIES_RIGHT.map(name => (
+              {indRight.map(name => (
                 <span key={name} className="font-sans text-[13px] text-ag-gray py-0.5 leading-snug">{name}</span>
               ))}
             </div>
