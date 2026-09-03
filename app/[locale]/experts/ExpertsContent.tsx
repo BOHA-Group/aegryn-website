@@ -310,7 +310,7 @@ function ContactLeadModal({ expert, filters, onClose }: ContactLeadModalProps) {
               <p className="font-sans text-[12px] text-ag-apex font-semibold mb-6">{expert.profession}</p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className={labelCls}>{t('contactModal.fieldFirstName')} *</label>
                     <input

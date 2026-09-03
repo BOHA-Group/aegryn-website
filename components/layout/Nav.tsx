@@ -642,6 +642,13 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                       {t(labelKey)}
                     </Link>
                   ))}
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('craftRecruit')}</p>
+                  {CRAFT_RECRUIT_LINKS.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile}
+                      className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                      {t(labelKey)}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
