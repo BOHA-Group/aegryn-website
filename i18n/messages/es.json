@@ -1190,7 +1190,7 @@
       "code": {
         "label": "AUDITORÍA CÓDIGO & TECH",
         "desc": "CTO freelance senior o firma independiente especializada en revisión de código y deuda técnica, apoyando la dimensión C (Código) para vendedores y compradores que lo deseen.",
-        "dimension": "Dimensión C, Código"
+        "dimension": "Dimensión C: Código"
       },
       "legal": {
         "label": "LEGAL IP",
@@ -1797,7 +1797,7 @@
       {
         "code": "I",
         "name": "IP",
-        "full": "Intellectual Property & Moat",
+        "full": "Propiedad intelectual & ventaja competitiva",
         "weight": "25 pts",
         "desc": "Propiedad intelectual, barreras de entrada, marcas registradas, patentes y diferenciación sostenible.",
         "criteria": [
@@ -1811,7 +1811,7 @@
       {
         "code": "F",
         "name": "Finance",
-        "full": "Financial Health & Traction",
+        "full": "Salud financiera & tracción",
         "weight": "25 pts",
         "desc": "Métricas financieras clave: ARR, MRR, churn, LTV/CAC, burn rate, runway y crecimiento. Todos los datos son auditados.",
         "criteria": [
@@ -1825,7 +1825,7 @@
       {
         "code": "S",
         "name": "Security",
-        "full": "Security & Governance",
+        "full": "Seguridad & gobernanza",
         "weight": "25 pts",
         "desc": "Cumplimiento GDPR y LPD suizo, seguridad de infraestructura, gestión de accesos y gobernanza de datos.",
         "criteria": [
@@ -3078,56 +3078,56 @@
         "arrPlaceholder": "Ex : 400000",
         "budgetMaxChf": "Budget maximum (CHF)",
         "budgetMinChf": "Budget minimum (CHF)",
-        "budgetNote": "Valorisation indicative pour la cession / ticket pour la levée",
+        "budgetNote": "Valoración indicativa para la cesión / ticket para la ronda",
         "budgetPlaceholder": "Ex : 500000",
-        "companyName": "Société / Structure (optionnel)",
-        "companyPlaceholder": "Holding, startup, cabinet...",
+        "companyName": "Sociedad / Estructura (opcional)",
+        "companyPlaceholder": "Holding, startup, despacho…",
         "contactEmail": "Adresse email",
-        "contactName": "Nom complet",
+        "contactName": "Nombre completo",
         "currentMrr": "MRR actuel (CHF)",
-        "description": "Description & contexte",
-        "descriptionPlaceholder": "Décrivez votre situation, vos objectifs, vos contraintes et toute information utile pour notre équipe.",
-        "equityOfferedPct": "Capital offert (%)",
+        "description": "Descripción & contexto",
+        "descriptionPlaceholder": "Describa su situación, objetivos, restricciones y toda información útil para nuestro equipo.",
+        "equityOfferedPct": "Capital ofrecido (%)",
         "equityPctPlaceholder": "Ex : 15",
         "errorMsg": "Une erreur est survenue. Veuillez réessayer ou nous contacter directement.",
-        "hasIp": "IP ou brevet déposé ?",
+        "hasIp": "¿IP o patente registrada?",
         "hasIpNo": "Non",
         "hasIpPending": "En cours",
         "hasIpYes": "Oui",
         "mrrPlaceholder": "Ex : 80000",
-        "partnerType": "Type de partenaire recherché",
-        "partnerTypePlaceholder": "Opérationnel, financier, industriel...",
-        "profitability": "Rentabilité souhaitée",
-        "profitabilityPlaceholder": "Ex : EBITDA positif, breakeven, early stage",
+        "partnerType": "Tipo de socio buscado",
+        "partnerTypePlaceholder": "Operacional, financiero, industrial…",
+        "profitability": "Rentabilidad objetivo",
+        "profitabilityPlaceholder": "Ej.: EBITDA positivo, breakeven, early stage",
         "revenueChf": "CA annuel (CHF)",
         "revenuePlaceholder": "Ex : 600000",
-        "sectionAsset": "ACTIF / SOCIÉTÉ",
-        "sectionBudget": "BUDGET / VALORISATION",
-        "sectionContact": "VOS COORDONNÉES",
-        "sectionContext": "CONTEXTE & OBJECTIFS",
-        "sectionType": "TYPE DE MANDAT",
-        "stakePctMax": "Part du capital cédée max (%)",
+        "sectionAsset": "ACTIVO / SOCIEDAD",
+        "sectionBudget": "PRESUPUESTO / VALORACIÓN",
+        "sectionContact": "SUS DATOS DE CONTACTO",
+        "sectionContext": "CONTEXTO & OBJETIVOS",
+        "sectionType": "TIPO DE MANDATO",
+        "stakePctMax": "Participación máxima cedida (%)",
         "stakePlaceholder": "Ex : 30",
-        "submit": "Déposer mon mandat",
-        "submitting": "Envoi en cours...",
-        "successDesc": "Notre équipe examinera votre demande sous 48–72h ouvrées et vous contactera pour initier la procédure de qualification. Un NDA sera systématiquement proposé dès le premier échange.",
-        "successTitle": "Mandat reçu.",
+        "submit": "Enviar mi mandato",
+        "submitting": "Enviando…",
+        "successDesc": "Nuestro equipo examinará su solicitud en 48–72 horas laborables y le contactará.",
+        "successTitle": "Mandato recibido.",
         "swissLawLabel": "En soumettant ce formulaire, je reconnais que les mandats Aegryn opèrent sous droit suisse et que toute transaction fait l'objet d'un NDA systématique.",
         "targetArrMin": "ARR cible minimum (CHF)",
-        "targetCountries": "Pays cibles (séparés par virgule)",
-        "targetCountriesPlaceholder": "Ex : fr, ch, de",
+        "targetCountries": "Países objetivo (separados por coma)",
+        "targetCountriesPlaceholder": "Ej.: fr, ch, de",
         "teamPlaceholder": "Ex : 4",
-        "teamSize": "Taille de l'équipe",
-        "typeLabel": "Quel type de mandat souhaitez-vous déposer ?",
+        "teamSize": "Tamaño del equipo",
+        "typeLabel": "¿Qué tipo de mandato desea depositar?",
         "typeOptions": {
-          "buy": "Mandat d'acquisition : Rechercher une cible",
-          "equity_stake": "Ouverture du capital : Intégrer un associé stratégique",
+          "buy": "Mandato de adquisición: Buscar un objetivo",
+          "equity_stake": "Apertura de capital: Integrar un socio estratégico",
           "fundraise": "Levée de fonds : Trouver des investisseurs qualifiés",
-          "sell": "Mandat de cession : Vendre un actif ou une société"
+          "sell": "Mandato de cesión: Vender un activo o sociedad"
         },
-        "typePlaceholder": "Sélectionnez un type de mandat",
-        "useOfFunds": "Usage des fonds",
-        "useOfFundsPlaceholder": "Expansion, R&D, recrutement...",
+        "typePlaceholder": "Seleccione un tipo de mandato",
+        "useOfFunds": "Uso de los fondos",
+        "useOfFundsPlaceholder": "Expansión, I+D, contratación…",
         "vertical": "Secteur vertical",
         "verticalOptions": {
           "deeptech": "Deeptech / IA",
@@ -3137,7 +3137,7 @@
           "healthtech": "Healthtech",
           "infra_devtools": "Infra / DevTools",
           "marketplace": "Marketplace",
-          "media_content": "Média / Contenu",
+          "media_content": "Medios / Contenido",
           "other": "Autre",
           "saas_b2b": "SaaS B2B",
           "saas_b2c": "SaaS B2C"
@@ -3145,7 +3145,7 @@
         "verticalOther": "Précisez le secteur",
         "verticalOtherPlaceholder": "Ex : LegalTech, PropTech...",
         "verticalPlaceholder": "Sélectionnez un secteur",
-        "yoyGrowth": "Croissance YoY (%)",
+        "yoyGrowth": "Crecimiento interanual (%)",
         "yoyPlaceholder": "Ex : 35"
       }
     },
@@ -4010,14 +4010,14 @@
           "title": "Depósito & Estructuración Financiera",
           "desc": "Financement relais, earn-out, séquestre, structuration.",
           "tags": [
-            "Financement relais",
-            "Earn-out structuré",
-            "Séquestre fiduciaire",
-            "Garantie de passif",
+            "Financiación puente",
+            "Earn-out estructurado",
+            "Depósito fiduciario",
+            "Garantía de pasivo",
             "Vendor loan",
             "Mezzanine",
             "Bridge financing",
-            "Structuration LBO",
+            "Estructuración LBO",
             "Garantie W&I",
             "Escrow agreements"
           ]
@@ -4031,10 +4031,10 @@
             "W&I Insurance",
             "Tax liability insurance",
             "Cyber insurance",
-            "Responsabilité civile pro",
+            "Responsabilidad civil profesional",
             "Directors & Officers",
             "Assurance erreurs & omissions",
-            "Risk mapping",
+            "Mapeo de riesgos",
             "Environmental liability",
             "IP infringement cover",
             "Transaction insurance"
@@ -4166,7 +4166,7 @@
         },
         {
           "num": "05",
-          "badge": "Finanzas Ops",
+          "badge": "Finance Ops",
           "title": "Finanzas, Facturación & Automatización de E-Factura",
           "desc": "Automatización de facturación, e-invoicing (EU ViDA, obligación Confederación suiza), reconciliación de pagos, cash-flow, IVA transfronterizo. Capa Finance Operations entre CRM y contabilidad."
         },
@@ -4915,7 +4915,7 @@
     },
     "finance": {
       "title": "Datos financieros",
-      "subtitle": "Dimensión F, Finanzas (0–25 pts)",
+      "subtitle": "Dimensión F: Finanzas (0–25 pts)",
       "arr": "ARR anual (€)",
       "arrPlaceholder": "Ej. 500000",
       "arrHint": "Ingrese 0 si es pre-revenue",
@@ -4943,7 +4943,7 @@
     },
     "code": {
       "title": "Calidad del código",
-      "subtitle": "Dimensión C, Código (0–25 pts)",
+      "subtitle": "Dimensión C: Código (0–25 pts)",
       "tests": "¿Tests automatizados?",
       "testsOptions": {
         "full": "Sí, cobertura completa",
@@ -6675,7 +6675,7 @@
       "data_engineeringDesc": "Modelado de datos, data warehouse, data lake, gobernanza y portabilidad de datasets.",
       "design_ux": "Diseño y experiencia de usuario",
       "design_uxDesc": "UX/UI, design system, identidad de producto, recorridos de usuario, tests de usabilidad.",
-      "product_management": "Product Management y Roadmap",
+      "product_management": "Gestión de producto & hoja de ruta",
       "product_managementDesc": "Definición de producto, backlog, métricas de activación y retención, roadmap.",
       "rgpd": "Conformidad RGPD / LPD",
       "rgpdDesc": "Registro de tratamiento, DPAs, política de privacidad, transferencias fuera de la UE, LPD suiza.",
@@ -7241,13 +7241,13 @@
       "issue01Theme": "Built to Last.",
       "issue01Desc": "La anatomía de un activo tech que se vende y el que no.",
       "issue02Date": "Abril 2027",
-      "issue02Theme": "The Exit Equation",
+      "issue02Theme": "La ecuación del exit",
       "issue02Desc": "La decisión, la preparación, la negociación. Y los 12 meses siguientes.",
       "issue03Date": "Julio 2027",
-      "issue03Theme": "The Buyer Inside",
+      "issue03Theme": "El comprador interior",
       "issue03Desc": "Quién compra tecnología europea en 2027 y cómo toman sus decisiones.",
       "issue04Date": "Octubre 2027",
-      "issue04Theme": "The Succession Wave",
+      "issue04Theme": "La ola de la sucesión",
       "issue04Desc": "3,5 millones de pymes europeas sin sucesor. El momento es ahora.",
       "subscribeTitle": "Reciba cada número 48 horas antes de su publicación.",
       "subscribeBody": "Aegryn Magazine se publica en enero, abril, julio y octubre. El acceso digital es permanente y gratuito. Los suscriptores reciben cada número 48 horas antes de su lanzamiento público.",
@@ -7422,7 +7422,7 @@
     },
     "pillars": {
       "board": {
-        "title": "Miembros del Consejo & C-Level",
+        "title": "Board Members & C-Level",
         "desc": "Colocamos a los miembros del consejo de administración y ejecutivos que definen la estrategia e impulsan la transformación.",
         "profiles": [
           {
@@ -7979,7 +7979,7 @@
         "desc": "Optimización IA rutas y capacidades, contratos multimodales, cumplimiento emisiones, visibilidad flota."
       }
     ],
-    "title": "Industries couvertes"
+    "title": "Industrias cubiertas"
   },
   "aboutPage": {
     "intro": "Creemos que el valor de una empresa no se negocia bajo presión. Se construye con rigor estratégico, se refuerza con tecnología, se valida en la transparencia y se realiza en la confianza.\n\nPor eso existe Aegryn: para acompañar a los dirigentes que se niegan a que su trayectoria les sea impuesta.",

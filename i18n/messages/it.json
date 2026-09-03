@@ -1190,7 +1190,7 @@
       "code": {
         "label": "AUDIT CODICE & TECH",
         "desc": "CTO freelance senior o studio indipendente specializzato in code review e debito tecnico, a supporto della dimensione C (Codice) per venditori e acquirenti che lo desiderano.",
-        "dimension": "Dimensione C, Codice"
+        "dimension": "Dimensione C: Codice"
       },
       "legal": {
         "label": "LEGALE IP",
@@ -1797,7 +1797,7 @@
       {
         "code": "I",
         "name": "IP",
-        "full": "Intellectual Property & Moat",
+        "full": "Proprietà intellettuale & vantaggio competitivo",
         "weight": "25 pt",
         "desc": "Proprietà intellettuale, barriere all'ingresso, marchi registrati, brevetti e differenziazione sostenibile.",
         "criteria": [
@@ -1811,7 +1811,7 @@
       {
         "code": "F",
         "name": "Finance",
-        "full": "Financial Health & Traction",
+        "full": "Salute finanziaria & trazione",
         "weight": "25 pt",
         "desc": "Metriche finanziarie chiave: ARR, MRR, churn, LTV/CAC, burn rate, runway e crescita. Tutti i dati sono verificati su documenti.",
         "criteria": [
@@ -1825,7 +1825,7 @@
       {
         "code": "S",
         "name": "Security",
-        "full": "Security & Governance",
+        "full": "Sicurezza & governance",
         "weight": "25 pt",
         "desc": "Conformità GDPR e LPD svizzero, sicurezza dell'infrastruttura, gestione degli accessi e governance dei dati.",
         "criteria": [
@@ -3078,56 +3078,56 @@
         "arrPlaceholder": "Ex : 400000",
         "budgetMaxChf": "Budget maximum (CHF)",
         "budgetMinChf": "Budget minimum (CHF)",
-        "budgetNote": "Valorisation indicative pour la cession / ticket pour la levée",
+        "budgetNote": "Valutazione indicativa per la cessione / ticket per il round",
         "budgetPlaceholder": "Ex : 500000",
-        "companyName": "Société / Structure (optionnel)",
-        "companyPlaceholder": "Holding, startup, cabinet...",
+        "companyName": "Società / Struttura (opzionale)",
+        "companyPlaceholder": "Holding, startup, studio…",
         "contactEmail": "Adresse email",
-        "contactName": "Nom complet",
+        "contactName": "Nome completo",
         "currentMrr": "MRR actuel (CHF)",
-        "description": "Description & contexte",
-        "descriptionPlaceholder": "Décrivez votre situation, vos objectifs, vos contraintes et toute information utile pour notre équipe.",
-        "equityOfferedPct": "Capital offert (%)",
+        "description": "Descrizione & contesto",
+        "descriptionPlaceholder": "Descriva la sua situazione, obiettivi, vincoli e tutte le informazioni utili per il nostro team.",
+        "equityOfferedPct": "Capitale offerto (%)",
         "equityPctPlaceholder": "Ex : 15",
         "errorMsg": "Une erreur est survenue. Veuillez réessayer ou nous contacter directement.",
-        "hasIp": "IP ou brevet déposé ?",
+        "hasIp": "IP o brevetto depositato?",
         "hasIpNo": "Non",
         "hasIpPending": "En cours",
         "hasIpYes": "Oui",
         "mrrPlaceholder": "Ex : 80000",
-        "partnerType": "Type de partenaire recherché",
-        "partnerTypePlaceholder": "Opérationnel, financier, industriel...",
-        "profitability": "Rentabilité souhaitée",
-        "profitabilityPlaceholder": "Ex : EBITDA positif, breakeven, early stage",
+        "partnerType": "Tipo di partner ricercato",
+        "partnerTypePlaceholder": "Operativo, finanziario, industriale…",
+        "profitability": "Redditività prevista",
+        "profitabilityPlaceholder": "Es. EBITDA positivo, breakeven, early stage",
         "revenueChf": "CA annuel (CHF)",
         "revenuePlaceholder": "Ex : 600000",
-        "sectionAsset": "ACTIF / SOCIÉTÉ",
-        "sectionBudget": "BUDGET / VALORISATION",
-        "sectionContact": "VOS COORDONNÉES",
-        "sectionContext": "CONTEXTE & OBJECTIFS",
-        "sectionType": "TYPE DE MANDAT",
-        "stakePctMax": "Part du capital cédée max (%)",
+        "sectionAsset": "ATTIVO / SOCIETÀ",
+        "sectionBudget": "BUDGET / VALUTAZIONE",
+        "sectionContact": "I SUOI DATI",
+        "sectionContext": "CONTESTO & OBIETTIVI",
+        "sectionType": "TIPO DI MANDATO",
+        "stakePctMax": "Quota massima ceduta (%)",
         "stakePlaceholder": "Ex : 30",
-        "submit": "Déposer mon mandat",
-        "submitting": "Envoi en cours...",
-        "successDesc": "Notre équipe examinera votre demande sous 48–72h ouvrées et vous contactera pour initier la procédure de qualification. Un NDA sera systématiquement proposé dès le premier échange.",
-        "successTitle": "Mandat reçu.",
+        "submit": "Inviare il mio mandato",
+        "submitting": "Invio in corso…",
+        "successDesc": "Il nostro team esaminerà la sua richiesta entro 48–72 ore lavorative e la contatterà.",
+        "successTitle": "Mandato ricevuto.",
         "swissLawLabel": "En soumettant ce formulaire, je reconnais que les mandats Aegryn opèrent sous droit suisse et que toute transaction fait l'objet d'un NDA systématique.",
         "targetArrMin": "ARR cible minimum (CHF)",
-        "targetCountries": "Pays cibles (séparés par virgule)",
-        "targetCountriesPlaceholder": "Ex : fr, ch, de",
+        "targetCountries": "Paesi target (separati da virgola)",
+        "targetCountriesPlaceholder": "Es. fr, ch, de",
         "teamPlaceholder": "Ex : 4",
-        "teamSize": "Taille de l'équipe",
-        "typeLabel": "Quel type de mandat souhaitez-vous déposer ?",
+        "teamSize": "Dimensione del team",
+        "typeLabel": "Che tipo di mandato desidera depositare?",
         "typeOptions": {
-          "buy": "Mandat d'acquisition : Rechercher une cible",
-          "equity_stake": "Ouverture du capital : Intégrer un associé stratégique",
+          "buy": "Mandato di acquisizione: Trovare un obiettivo",
+          "equity_stake": "Apertura del capitale: Integrare un socio strategico",
           "fundraise": "Levée de fonds : Trouver des investisseurs qualifiés",
-          "sell": "Mandat de cession : Vendre un actif ou une société"
+          "sell": "Mandato di cessione: Vendere un attivo o una società"
         },
-        "typePlaceholder": "Sélectionnez un type de mandat",
-        "useOfFunds": "Usage des fonds",
-        "useOfFundsPlaceholder": "Expansion, R&D, recrutement...",
+        "typePlaceholder": "Seleziona un tipo di mandato",
+        "useOfFunds": "Utilizzo dei fondi",
+        "useOfFundsPlaceholder": "Espansione, R&D, assunzioni…",
         "vertical": "Secteur vertical",
         "verticalOptions": {
           "deeptech": "Deeptech / IA",
@@ -3137,7 +3137,7 @@
           "healthtech": "Healthtech",
           "infra_devtools": "Infra / DevTools",
           "marketplace": "Marketplace",
-          "media_content": "Média / Contenu",
+          "media_content": "Media / Contenuto",
           "other": "Autre",
           "saas_b2b": "SaaS B2B",
           "saas_b2c": "SaaS B2C"
@@ -3145,7 +3145,7 @@
         "verticalOther": "Précisez le secteur",
         "verticalOtherPlaceholder": "Ex : LegalTech, PropTech...",
         "verticalPlaceholder": "Sélectionnez un secteur",
-        "yoyGrowth": "Croissance YoY (%)",
+        "yoyGrowth": "Crescita YoY (%)",
         "yoyPlaceholder": "Ex : 35"
       }
     },
@@ -4010,14 +4010,14 @@
           "title": "Deposito & Strutturazione Finanziaria",
           "desc": "Financement relais, earn-out, séquestre, structuration.",
           "tags": [
-            "Financement relais",
-            "Earn-out structuré",
-            "Séquestre fiduciaire",
-            "Garantie de passif",
+            "Finanziamento ponte",
+            "Earn-out strutturato",
+            "Escrow fiduciario",
+            "Garanzia di passivo",
             "Vendor loan",
             "Mezzanine",
             "Bridge financing",
-            "Structuration LBO",
+            "Strutturazione LBO",
             "Garantie W&I",
             "Escrow agreements"
           ]
@@ -4031,10 +4031,10 @@
             "W&I Insurance",
             "Tax liability insurance",
             "Cyber insurance",
-            "Responsabilité civile pro",
+            "Responsabilità civile professionale",
             "Directors & Officers",
             "Assurance erreurs & omissions",
-            "Risk mapping",
+            "Mappatura dei rischi",
             "Environmental liability",
             "IP infringement cover",
             "Transaction insurance"
@@ -4915,7 +4915,7 @@
     },
     "finance": {
       "title": "Dati finanziari",
-      "subtitle": "Dimensione F, Finanza (0–25 pt)",
+      "subtitle": "Dimensione F: Finanza (0–25 pt)",
       "arr": "ARR annuale (€)",
       "arrPlaceholder": "Es. 500000",
       "arrHint": "Inserite 0 se pre-revenue",
@@ -4943,7 +4943,7 @@
     },
     "code": {
       "title": "Qualità del codice",
-      "subtitle": "Dimensione C, Codice (0–25 pt)",
+      "subtitle": "Dimensione C: Codice (0–25 pt)",
       "tests": "Test automatizzati presenti?",
       "testsOptions": {
         "full": "Sì, copertura completa",
@@ -7241,13 +7241,13 @@
       "issue01Theme": "Built to Last.",
       "issue01Desc": "L'anatomia di un asset tech che si vende e uno che non si vende.",
       "issue02Date": "Aprile 2027",
-      "issue02Theme": "The Exit Equation",
+      "issue02Theme": "L'equazione dell'exit",
       "issue02Desc": "La decisione, la preparazione, la negoziazione. E i 12 mesi che seguono.",
       "issue03Date": "Luglio 2027",
-      "issue03Theme": "The Buyer Inside",
+      "issue03Theme": "Il compratore interno",
       "issue03Desc": "Chi acquista tech europeo nel 2027 e come prendono le loro decisioni.",
       "issue04Date": "Ottobre 2027",
-      "issue04Theme": "The Succession Wave",
+      "issue04Theme": "L'onda della successione",
       "issue04Desc": "3,5 milioni di PMI europee senza successore. Il momento è adesso.",
       "subscribeTitle": "Ricevi ogni numero 48 ore prima della pubblicazione.",
       "subscribeBody": "Aegryn Magazine è pubblicato in gennaio, aprile, luglio e ottobre. L'accesso digitale è permanente e gratuito. Gli abbonati ricevono ogni numero 48 ore prima del rilascio pubblico.",
@@ -7422,7 +7422,7 @@
     },
     "pillars": {
       "board": {
-        "title": "Membri del Consiglio & C-Level",
+        "title": "Board Members & C-Level",
         "desc": "Collochiamo i membri del consiglio di amministrazione e gli executive che definiscono la strategia e guidano la trasformazione.",
         "profiles": [
           {
@@ -7980,7 +7980,7 @@
         "desc": "Ottimizzazione IA rotte e capacità, contratti multimodali, conformità emissioni, visibilità flotta."
       }
     ],
-    "title": "Industries couvertes"
+    "title": "Settori coperti"
   },
   "aboutPage": {
     "intro": "Crediamo che il valore di un'azienda non si negozi sotto pressione. Si costruisce con rigore strategico, si rafforza con la tecnologia, si valida nella trasparenza e si realizza nella fiducia.\n\nEcco perché esiste Aegryn: per accompagnare i dirigenti che rifiutano di subire la loro traiettoria.",
