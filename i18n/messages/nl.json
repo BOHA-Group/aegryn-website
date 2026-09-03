@@ -144,7 +144,10 @@
     "solutionsCategoryHealthTech": "HealthTech & MedTech",
     "solutionsCategoryPropTech": "PropTech & Vastgoed",
     "solutionsCategoryServices": "Services & Lifestyle",
-    "solutionsCategoryTransactions": "Transacties & Netwerk"
+    "solutionsCategoryTransactions": "Transacties & Netwerk",
+    "craftSupportNetworkNew": "Partners & expertise",
+    "craftTransactGradeNew": "Certificeringssysteem",
+    "craftTransactAuditors": "Onafhankelijke auditoren"
   },
   "hero": {
     "tagline": "Aegryn — Zwitserse Tech Groep. Strategie, Transacties & Assets.",
@@ -1177,8 +1180,8 @@
   "gradePartners": {
     "back": "← Aegryn Grade",
     "eyebrow": "Aegryn GRADE",
-    "title": "Een expertnetwerk ter ondersteuning, geen verplichting",
-    "intro1": "De Aegryn Grade is een onafhankelijke certificering: Aegryn evalueert en beoordeelt de kwaliteit van te verkopen tech-activa zonder een derde partij nodig te hebben om zijn grade uit te geven. Onze verkopers worden onafhankelijk begeleid in hun verkoopproces.",
+    "title": "Een netwerk van onafhankelijke auditoren, geen verplichting.",
+    "intro1": "Het Aegryn Grade is een onafhankelijke certificering: Aegryn beoordeelt tech-activa zonder opgelegde auditoren. Onafhankelijke professionals kunnen worden gemandateerd voor specifieke gebieden.",
     "intro2": "Wij staan open voor kandidaturen van onafhankelijke experts die zich willen aansluiten bij de certificering of ons netwerk willen vervoegen, op aanvraag inzetbaar voor, tijdens en na een transactie.",
     "openApps": "Kandidaturen open",
     "types": {
@@ -1203,10 +1206,10 @@
         "dimension": "Dimensie S, Beveiliging"
       }
     },
-    "ctaLabel": "VOOR EXPERTS",
-    "ctaTitle": "Bent u een advocatenkantoor, accountant of cyberbeveiligingsspecialist?",
-    "ctaDesc": "Solliciteer om deel uit te maken van het Aegryn expertnetwerk: toegang tot een regelmatige stroom van tech-activa die uw expertise vereisen, institutionele zichtbaarheid, gekwalificeerde cliëntele.",
-    "ctaBtn": "Solliciteren voor het expertnetwerk",
+    "ctaLabel": "VOOR ONAFHANKELIJKE AUDITOREN",
+    "ctaTitle": "Bent u een advocatenkantoor, accountant of cybersecurity-specialist?",
+    "ctaDesc": "Solliciteer voor het Aegryn Grade netwerk van onafhankelijke auditoren.",
+    "ctaBtn": "Solliciteren voor het auditorennetwerk",
     "benefitsLabel": "WAT U KRIJGT",
     "benefits": [
       "Toegang tot een regelmatige stroom van tech-activa die uw expertise vereisen",
@@ -4053,18 +4056,20 @@
       "stat3": "Zwitserland & Europa"
     },
     "partners": {
-      "label": "Partners",
-      "title": "Bedrijven die ons vertrouwen.",
+      "label": "ONZE PARTNERS",
+      "title": "De structuren die met Aegryn samenwerken.",
       "desc": "Een netwerk van partners en bedrijven waarmee Aegryn samenwerkt aan zijn opdrachten. Strikte selectie. Geen publieke categorisering.",
-      "note": "Logo's vertegenwoordigen actieve partners. Aegryn maakt individuele partnervoorwaarden niet openbaar."
+      "note": "Logo's vertegenwoordigen actieve partners. Aegryn maakt individuele partnervoorwaarden niet openbaar.",
+      "badge": "Externe structuren"
     },
     "experts": {
-      "label": "Expertennetwerk",
-      "title": "De gemobiliseerde expertise\nbij elke opdracht.",
+      "label": "ONZE EXPERTISE",
+      "title": "De vaardigheden ingezet\nvoor elke opdracht.",
       "desc": "Het Aegryn-expertennetwerk combineert interne capaciteiten (advies in strategie, technologie en M&A) met die van onze uitgebreide partners. Elk profiel wordt gemobiliseerd op basis van de specifieke behoeften van het dossier.",
       "profilesLabel": "Illustratieve profielen",
       "comingSoonTitle": "Register in opbouw",
-      "comingSoonDesc": "Individuele expertprofielen worden geleidelijk gepubliceerd. Deze sectie illustreert de soorten mobiliseerbare profielen over de adviesinstrumenten van Aegryn."
+      "comingSoonDesc": "Individuele expertprofielen worden geleidelijk gepubliceerd. Deze sectie illustreert de soorten mobiliseerbare profielen over de adviesinstrumenten van Aegryn.",
+      "badge": "Aegryn & partners"
     },
     "filters": {
       "all": "Alle dimensies",

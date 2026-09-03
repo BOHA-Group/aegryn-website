@@ -144,7 +144,10 @@
     "industries": "Industries",
     "industriesDesc": "Tous secteurs",
     "talent": "Talent",
-    "whoFounder": "Le fondateur"
+    "whoFounder": "Le fondateur",
+    "craftSupportNetworkNew": "Partenaires & expertises",
+    "craftTransactGradeNew": "Système de certification",
+    "craftTransactAuditors": "Auditeurs indépendants"
   },
   "hero": {
     "tagline": "Aegryn — Holding Tech Suisse. Stratégie, Transactions & Actifs.",
@@ -1113,8 +1116,8 @@
   "gradePartners": {
     "back": "← Grade Aegryn",
     "eyebrow": "Aegryn GRADE",
-    "title": "Un réseau d'experts en support, pas une obligation",
-    "intro1": "L'Aegryn Grade est une certification indépendante : Aegryn évalue et note la qualité des actifs tech mis en vente sans dépendre d'un tiers pour émettre son grade. Nos vendeurs se font par ailleurs accompagner de façon indépendante dans leur processus de vente.",
+    "title": "Un réseau d'auditeurs indépendants, pas une obligation.",
+    "intro1": "L'Aegryn Grade est une certification indépendante : Aegryn évalue et note la qualité des actifs tech mis en vente sans dépendre d'auditeurs imposés. Des professionnels indépendants peuvent être mandatés pour approfondir certains axes.",
     "intro2": "Nous restons ouverts aux candidatures d'experts indépendants souhaitant s'adosser à la certification ou rejoindre notre réseau, mobilisable à la demande avant, pendant et après une transaction.",
     "openApps": "Candidatures ouvertes",
     "types": {
@@ -1139,10 +1142,10 @@
         "dimension": "Dimension S : Sécurité"
       }
     },
-    "ctaLabel": "POUR LES EXPERTS",
+    "ctaLabel": "POUR LES AUDITEURS INDÉPENDANTS",
     "ctaTitle": "Vous êtes cabinet juridique, expert-comptable ou spécialiste cybersécurité ?",
-    "ctaDesc": "Candidatez pour rejoindre le réseau d'experts Aegryn : accès à un flux régulier d'actifs tech nécessitant votre expertise, visibilité institutionnelle, clientèle qualifiée.",
-    "ctaBtn": "Candidater au réseau d'experts",
+    "ctaDesc": "Candidatez pour rejoindre le réseau d'auditeurs indépendants Aegryn Grade : accès à un flux régulier d'actifs tech nécessitant votre expertise de certification.",
+    "ctaBtn": "Candidater au réseau d'auditeurs",
     "benefitsLabel": "CE QUE VOUS OBTENEZ",
     "benefits": [
       "Accès à un flux régulier d'actifs tech nécessitant votre expertise",
@@ -3984,18 +3987,20 @@
       "stat3": "Suisse & Europe"
     },
     "partners": {
-      "label": "Partenaires",
-      "title": "Les entreprises qui nous font confiance.",
+      "label": "NOS PARTENAIRES",
+      "title": "Les structures qui travaillent avec Aegryn.",
       "desc": "Un réseau de partenaires et d'entreprises avec lesquels Aegryn collabore sur ses missions. Sélection rigoureuse. Aucune catégorisation publique.",
-      "note": "Les logos représentent nos partenaires actifs. Aegryn ne divulgue pas les termes des partenariats individuels."
+      "note": "Les logos représentent nos partenaires actifs. Aegryn ne divulgue pas les termes des partenariats individuels.",
+      "badge": "Structures externes"
     },
     "experts": {
-      "label": "Réseau d'experts",
+      "label": "NOS EXPERTISES",
       "title": "Les compétences mobilisées\nsur chaque mission.",
       "desc": "Le réseau d'experts Aegryn combine les compétences internes (conseil en stratégie, technologie, M&A) et celles de nos partenaires par extension. Chaque profil est mobilisé selon les besoins spécifiques du dossier.",
       "profilesLabel": "Profils illustratifs",
       "comingSoonTitle": "Référentiel en construction",
-      "comingSoonDesc": "Les fiches experts individuelles seront publiées progressivement. Cette section illustre les typologies de profils mobilisables selon les dimensions de conseil Aegryn."
+      "comingSoonDesc": "Les fiches experts individuelles seront publiées progressivement. Cette section illustre les typologies de profils mobilisables selon les dimensions de conseil Aegryn.",
+      "badge": "Aegryn & partenaires"
     },
     "filters": {
       "all": "Toutes dimensions",

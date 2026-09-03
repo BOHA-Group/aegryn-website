@@ -144,7 +144,10 @@
     "solutionsCategoryHealthTech": "HealthTech & MedTech",
     "solutionsCategoryPropTech": "PropTech & Immobilien",
     "solutionsCategoryServices": "Services & Lifestyle",
-    "solutionsCategoryTransactions": "Transaktionen & Netzwerk"
+    "solutionsCategoryTransactions": "Transaktionen & Netzwerk",
+    "craftSupportNetworkNew": "Partner & Expertise",
+    "craftTransactGradeNew": "Zertifizierungssystem",
+    "craftTransactAuditors": "Unabhängige Prüfer"
   },
   "hero": {
     "tagline": "Aegryn — Schweizer Tech-Gruppe. Strategie, Transaktionen & Assets.",
@@ -1177,8 +1180,8 @@
   "gradePartners": {
     "back": "← Aegryn Grade",
     "eyebrow": "Aegryn GRADE",
-    "title": "Ein Expertennetzwerk zur Unterstützung, keine Pflicht",
-    "intro1": "Das Aegryn Grade ist eine unabhängige Zertifizierung: Aegryn bewertet und benotet die Qualität von zum Verkauf stehenden Tech-Assets, ohne für die Ausstellung des Grades auf Dritte angewiesen zu sein. Unsere Verkäufer werden unabhängig in ihrem Verkaufsprozess begleitet.",
+    "title": "Ein Netzwerk unabhängiger Prüfer, keine Pflicht.",
+    "intro1": "Das Aegryn Grade ist eine unabhängige Zertifizierung: Aegryn bewertet Tech-Assets ohne vorgeschriebene Prüfer. Unabhängige Fachleute können für bestimmte Bereiche mandatiert werden.",
     "intro2": "Wir sind offen für Bewerbungen unabhängiger Experten, die sich der Zertifizierung anschließen oder unserem Netzwerk beitreten möchten, das vor, während und nach einer Transaktion auf Abruf mobilisierbar ist.",
     "openApps": "Bewerbungen offen",
     "types": {
@@ -1203,10 +1206,10 @@
         "dimension": "Dimension S : Sicherheit"
       }
     },
-    "ctaLabel": "FÜR EXPERTEN",
-    "ctaTitle": "Sind Sie eine Kanzlei, ein Wirtschaftsprüfer oder ein Cybersicherheitsspezialist?",
-    "ctaDesc": "Bewerben Sie sich für das Aegryn Expertennetzwerk: Zugang zu einem regelmäßigen Strom von Tech-Assets, die Ihr Fachwissen erfordern, institutionelle Sichtbarkeit, qualifizierte Kundschaft.",
-    "ctaBtn": "Für das Expertennetzwerk bewerben",
+    "ctaLabel": "FÜR UNABHÄNGIGE PRÜFER",
+    "ctaTitle": "Sind Sie eine Anwaltskanzlei, Wirtschaftsprüfer oder Cybersicherheitsspezialist?",
+    "ctaDesc": "Bewerben Sie sich für das Aegryn Grade Prüfernetzwerk.",
+    "ctaBtn": "Für das Prüfernetzwerk bewerben",
     "benefitsLabel": "WAS SIE ERHALTEN",
     "benefits": [
       "Zugang zu einem regelmäßigen Strom von Tech-Assets, die Ihr Fachwissen erfordern",
@@ -4053,18 +4056,20 @@
       "stat3": "Schweiz & Europa"
     },
     "partners": {
-      "label": "Partner",
-      "title": "Unternehmen, die uns vertrauen.",
+      "label": "UNSERE PARTNER",
+      "title": "Die Strukturen, die mit Aegryn zusammenarbeiten.",
       "desc": "Ein Netzwerk von Partnern und Unternehmen, mit denen Aegryn bei seinen Mandaten zusammenarbeitet. Strenge Auswahl. Keine öffentliche Kategorisierung.",
-      "note": "Logos repräsentieren aktive Partner. Aegryn legt keine individuellen Partnerschaftsbedingungen offen."
+      "note": "Logos repräsentieren aktive Partner. Aegryn legt keine individuellen Partnerschaftsbedingungen offen.",
+      "badge": "Externe Strukturen"
     },
     "experts": {
-      "label": "Expertennetzwerk",
-      "title": "Die mobilisierten Kompetenzen\nbei jedem Mandat.",
+      "label": "UNSERE EXPERTISE",
+      "title": "Die Kompetenzen für\njeden Auftrag.",
       "desc": "Das Aegryn-Expertennetzwerk vereint interne Fähigkeiten (Strategie-, Technologie- und M&A-Beratung) mit denen unserer erweiterten Partner. Jedes Profil wird je nach spezifischen Anforderungen des Mandats mobilisiert.",
       "profilesLabel": "Illustrative Profile",
       "comingSoonTitle": "Verzeichnis im Aufbau",
-      "comingSoonDesc": "Individuelle Expertenprofile werden schrittweise veröffentlicht. Dieser Abschnitt illustriert die mobilisierbaren Profiltypen über die Beratungsdimensionen von Aegryn."
+      "comingSoonDesc": "Individuelle Expertenprofile werden schrittweise veröffentlicht. Dieser Abschnitt illustriert die mobilisierbaren Profiltypen über die Beratungsdimensionen von Aegryn.",
+      "badge": "Aegryn & Partner"
     },
     "filters": {
       "all": "Alle Dimensionen",

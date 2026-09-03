@@ -24,18 +24,16 @@ const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportStrategy',    href: '/advisory/strategy' as LinkHref },
   { labelKey: 'craftSupportTechnology',  href: '/advisory/technology' as LinkHref },
   { labelKey: 'craftSupportMA',          href: '/advisory/ma' as LinkHref },
-  { labelKey: 'craftSupportNetwork',     href: '/network' as LinkHref },
-  // MASKED: { labelKey: 'craftSupportAdvisory', href: '/advisory' }, // doublon de Conseil en Technologie
-  // MASKED: { labelKey: 'craftSupportAlliances', href: '/alliances' }, // fusionné dans /network
-  // MASKED: { labelKey: 'craftSupportExperts', href: '/experts' }, // fusionné dans /network
+  { labelKey: 'craftSupportNetworkNew',  href: '/network' as LinkHref },
 ]
 
 // Nos métiers - Transaction M&A section
 const CRAFT_TRANSACT_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'craftTransactGrade',   href: '/grade' },
-  { labelKey: 'craftTransactCatalog', href: '/transact/catalog' },
-  { labelKey: 'craftTransactSell',    href: '/transact/how-to-sell' },
-  { labelKey: 'craftTransactBuy',     href: '/transact/how-to-buy' },
+  { labelKey: 'craftTransactGradeNew',     href: '/grade' },
+  { labelKey: 'craftTransactAuditors',     href: '/grade/partners' as LinkHref },
+  { labelKey: 'craftTransactCatalog',      href: '/transact/catalog' },
+  { labelKey: 'craftTransactSell',         href: '/transact/how-to-sell' },
+  { labelKey: 'craftTransactBuy',          href: '/transact/how-to-buy' },
 ]
 
 // Nos métiers - Recruter section

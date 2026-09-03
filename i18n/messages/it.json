@@ -144,7 +144,10 @@
     "solutionsCategoryHealthTech": "HealthTech & MedTech",
     "solutionsCategoryPropTech": "PropTech & Immobiliare",
     "solutionsCategoryServices": "Servizi & Lifestyle",
-    "solutionsCategoryTransactions": "Transazioni & Rete"
+    "solutionsCategoryTransactions": "Transazioni & Rete",
+    "craftSupportNetworkNew": "Partner & competenze",
+    "craftTransactGradeNew": "Sistema di certificazione",
+    "craftTransactAuditors": "Revisori indipendenti"
   },
   "hero": {
     "tagline": "Aegryn — Gruppo Tech Svizzero. Strategia, Transazioni & Asset.",
@@ -1177,8 +1180,8 @@
   "gradePartners": {
     "back": "← Aegryn Grade",
     "eyebrow": "Aegryn GRADE",
-    "title": "Una rete di esperti di supporto, non un obbligo",
-    "intro1": "L'Aegryn Grade è una certificazione indipendente: Aegryn valuta e classifica la qualità degli asset tech in vendita senza dipendere da terzi per emettere il proprio grade. I nostri venditori sono supportati in modo indipendente nel loro processo di vendita.",
+    "title": "Una rete di revisori indipendenti, non un obbligo.",
+    "intro1": "L'Aegryn Grade è una certificazione indipendente: Aegryn valuta asset tech senza revisori imposti. Professionisti indipendenti possono essere incaricati per approfondire aree specifiche.",
     "intro2": "Restiamo aperti alle candidature di esperti indipendenti che desiderano aderire alla certificazione o unirsi alla nostra rete, mobilizzabile su richiesta prima, durante e dopo una transazione.",
     "openApps": "Candidature aperte",
     "types": {
@@ -1203,10 +1206,10 @@
         "dimension": "Dimensione S, Sicurezza"
       }
     },
-    "ctaLabel": "PER GLI ESPERTI",
-    "ctaTitle": "Siete uno studio legale, un commercialista o uno specialista di cybersicurezza?",
-    "ctaDesc": "Candidate per unirvi alla rete di esperti Aegryn: accesso a un flusso regolare di asset tech che richiedono la vostra competenza, visibilità istituzionale, clientela qualificata.",
-    "ctaBtn": "Candidarsi alla rete di esperti",
+    "ctaLabel": "PER REVISORI INDIPENDENTI",
+    "ctaTitle": "Sei uno studio legale, commercialista o specialista in cybersicurezza?",
+    "ctaDesc": "Candidati per entrare nella rete di revisori indipendenti Aegryn Grade.",
+    "ctaBtn": "Candidarsi alla rete di revisori",
     "benefitsLabel": "COSA OTTENETE",
     "benefits": [
       "Accesso a un flusso regolare di asset tech che richiedono la vostra competenza",
@@ -4053,18 +4056,20 @@
       "stat3": "Svizzera & Europa"
     },
     "partners": {
-      "label": "Partner",
-      "title": "Aziende che si fidano di noi.",
+      "label": "I NOSTRI PARTNER",
+      "title": "Le strutture che lavorano con Aegryn.",
       "desc": "Una rete di partner e aziende con cui Aegryn collabora nelle sue missioni. Selezione rigorosa. Nessuna categorizzazione pubblica.",
-      "note": "I loghi rappresentano i partner attivi. Aegryn non divulga i termini individuali delle partnership."
+      "note": "I loghi rappresentano i partner attivi. Aegryn non divulga i termini individuali delle partnership.",
+      "badge": "Strutture esterne"
     },
     "experts": {
-      "label": "Rete di esperti",
-      "title": "Le competenze mobilizzate\nper ogni missione.",
+      "label": "LE NOSTRE COMPETENZE",
+      "title": "Le competenze mobilitate\nper ogni missione.",
       "desc": "La rete di esperti Aegryn combina le capacità interne (consulenza in strategia, tecnologia e M&A) con quelle dei nostri partner estesi. Ogni profilo viene mobilizzato in base alle esigenze specifiche del dossier.",
       "profilesLabel": "Profili illustrativi",
       "comingSoonTitle": "Registro in costruzione",
-      "comingSoonDesc": "I profili di esperti individuali saranno pubblicati progressivamente. Questa sezione illustra i tipi di profili mobilizzabili nelle dimensioni di consulenza Aegryn."
+      "comingSoonDesc": "I profili di esperti individuali saranno pubblicati progressivamente. Questa sezione illustra i tipi di profili mobilizzabili nelle dimensioni di consulenza Aegryn.",
+      "badge": "Aegryn & partner"
     },
     "filters": {
       "all": "Tutte le dimensioni",

@@ -186,6 +186,14 @@ export default function NetworkContent() {
     ? EXPERTISE_CARDS
     : EXPERTISE_CARDS.filter(c => c.dimension === activeDimension)
 
+  function handleDomainSelect(domainKey: string) {
+    setActiveDomain(domainKey)
+    const found = EXPERT_DOMAINS.find(d => d.domainKey === domainKey)
+    if (found && found.dimension !== 'all') {
+      setActiveDimension(found.dimension as DimensionKey)
+    }
+  }
+
   return (
     <>
       {/* ── Hero ── */}
@@ -220,12 +228,17 @@ export default function NetworkContent() {
         </div>
       </section>
 
-      {/* ── Section 1 : Partenaires (logos) ── */}
+      {/* ── Section 1 : Nos partenaires (structures externes) ── */}
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('partners.label')}
-          </p>
+          <div className="flex items-center gap-4 mb-8">
+            <span className="font-mono text-[9px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
+              {t('partners.label')}
+            </span>
+            <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex">
+              {t('partners.badge')}
+            </span>
+          </div>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15] max-w-2xl mb-6"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -235,23 +248,27 @@ export default function NetworkContent() {
           <p className="text-[14px] text-ag-gray leading-relaxed max-w-xl mb-6">
             {t('partners.desc')}
           </p>
-          {/* Logos partenaires — à venir */}
           <p className="font-sans text-[11px] text-ag-gray-light italic">
             {t('partners.note')}
           </p>
         </div>
       </section>
 
-      {/* ── Section 2 : Expertises mobilisables (Fan cards + grille animée) ── */}
+      {/* ── Section 2 : Nos expertises (Aegryn interne + partenaires par extension) ── */}
       <section className="border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
 
           {/* Header + filtres */}
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12">
             <div>
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-                {t('experts.label')}
-              </p>
+              <div className="flex items-center gap-4 mb-4">
+                <span className="font-mono text-[9px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
+                  {t('experts.label')}
+                </span>
+                <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex">
+                  {t('experts.badge')}
+                </span>
+              </div>
               <h2
                 className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15] whitespace-pre-line"
                 style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -267,7 +284,7 @@ export default function NetworkContent() {
               {DIMENSIONS.map(d => (
                 <button
                   key={d.key}
-                  onClick={() => { setActiveDimension(d.key); setActiveDomain('strategy') }}
+                  onClick={() => { setActiveDimension(d.key); setActiveDomain(d.key === 'all' ? 'strategy' : d.key) }}
                   className={[
                     'px-4 py-2 font-sans font-semibold text-[11px] uppercase tracking-[0.14em] border transition-colors',
                     activeDimension === d.key
@@ -281,17 +298,17 @@ export default function NetworkContent() {
             </div>
           </div>
 
-          {/* Fan cards de sélection de domaine */}
+          {/* Fan cards — clic filtre aussi la grille */}
           <div className="mb-12">
             <FanCards
               domains={visibleDomains}
               activeDomain={activeDomain}
-              onSelect={setActiveDomain}
+              onSelect={handleDomainSelect}
               t={t}
             />
           </div>
 
-          {/* Grille expertises animées — 9 cartes par dimension */}
+          {/* Grille expertises animées — filtrée par dimension active */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
             {filteredExpertise.map((card) => (
               <ExpertiseCardItem key={card.title} card={card} />

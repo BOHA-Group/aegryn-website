@@ -144,7 +144,10 @@
     "solutionsCategoryHealthTech": "HealthTech & MedTech",
     "solutionsCategoryPropTech": "PropTech & Inmobiliario",
     "solutionsCategoryServices": "Servicios & Lifestyle",
-    "solutionsCategoryTransactions": "Transacciones & Red"
+    "solutionsCategoryTransactions": "Transacciones & Red",
+    "craftSupportNetworkNew": "Socios & experiencia",
+    "craftTransactGradeNew": "Sistema de certificación",
+    "craftTransactAuditors": "Auditores independientes"
   },
   "hero": {
     "tagline": "Aegryn — Grupo Tech Suizo. Estrategia, Transacciones & Activos.",
@@ -1177,8 +1180,8 @@
   "gradePartners": {
     "back": "← Aegryn Grade",
     "eyebrow": "Aegryn GRADE",
-    "title": "Una red de expertos de apoyo, no una obligación",
-    "intro1": "El Aegryn Grade es una certificación independiente: Aegryn evalúa y califica la calidad de los activos tech en venta sin depender de terceros para emitir su grade. Nuestros vendedores reciben acompañamiento independiente durante su proceso de venta.",
+    "title": "Una red de auditores independientes, no una obligación.",
+    "intro1": "El Aegryn Grade es una certificación independiente: Aegryn evalúa activos tech sin auditores impuestos. Se pueden mandar profesionales independientes para profundizar áreas específicas.",
     "intro2": "Permanecemos abiertos a candidaturas de expertos independientes que deseen unirse a la certificación o a nuestra red, movilizable a demanda antes, durante y después de una transacción.",
     "openApps": "Candidaturas abiertas",
     "types": {
@@ -1203,10 +1206,10 @@
         "dimension": "Dimensión S, Seguridad"
       }
     },
-    "ctaLabel": "PARA EXPERTOS",
-    "ctaTitle": "¿Es usted un despacho jurídico, auditor financiero o especialista en ciberseguridad?",
-    "ctaDesc": "Solicite unirse a la red de expertos Aegryn: acceso a un flujo regular de activos tech que requieren su experiencia, visibilidad institucional, clientela cualificada.",
-    "ctaBtn": "Solicitar unirse a la red de expertos",
+    "ctaLabel": "PARA AUDITORES INDEPENDIENTES",
+    "ctaTitle": "¿Es usted despacho jurídico, auditor contable o especialista en ciberseguridad?",
+    "ctaDesc": "Postule para unirse a la red de auditores independientes Aegryn Grade.",
+    "ctaBtn": "Postularse a la red de auditores",
     "benefitsLabel": "LO QUE OBTIENE",
     "benefits": [
       "Acceso a un flujo regular de activos tech que requieren su experiencia",
@@ -4053,18 +4056,20 @@
       "stat3": "Suiza & Europa"
     },
     "partners": {
-      "label": "Socios",
-      "title": "Empresas que confían en nosotros.",
+      "label": "NUESTROS SOCIOS",
+      "title": "Las estructuras que trabajan con Aegryn.",
       "desc": "Una red de socios y empresas con quienes Aegryn colabora en sus misiones. Selección rigurosa. Sin categorización pública.",
-      "note": "Los logos representan socios activos. Aegryn no divulga los términos individuales de las alianzas."
+      "note": "Los logos representan socios activos. Aegryn no divulga los términos individuales de las alianzas.",
+      "badge": "Estructuras externas"
     },
     "experts": {
-      "label": "Red de expertos",
+      "label": "NUESTRA EXPERIENCIA",
       "title": "Las competencias movilizadas\nen cada misión.",
       "desc": "La red de expertos Aegryn combina capacidades internas (asesoramiento en estrategia, tecnología y M&A) con las de nuestros socios extendidos. Cada perfil se moviliza según las necesidades específicas del expediente.",
       "profilesLabel": "Perfiles ilustrativos",
       "comingSoonTitle": "Directorio en construcción",
-      "comingSoonDesc": "Los perfiles de expertos individuales se publicarán progresivamente. Esta sección ilustra los tipos de perfiles movilizables en las dimensiones de asesoramiento Aegryn."
+      "comingSoonDesc": "Los perfiles de expertos individuales se publicarán progresivamente. Esta sección ilustra los tipos de perfiles movilizables en las dimensiones de asesoramiento Aegryn.",
+      "badge": "Aegryn & socios"
     },
     "filters": {
       "all": "Todas las dimensiones",

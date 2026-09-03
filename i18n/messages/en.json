@@ -144,7 +144,10 @@
     "solutionsCategoryHealthTech": "HealthTech & MedTech",
     "solutionsCategoryPropTech": "PropTech & Real Estate",
     "solutionsCategoryServices": "Services & Lifestyle",
-    "solutionsCategoryTransactions": "Transactions & Network"
+    "solutionsCategoryTransactions": "Transactions & Network",
+    "craftSupportNetworkNew": "Partners & expertise",
+    "craftTransactGradeNew": "Certification system",
+    "craftTransactAuditors": "Independent auditors"
   },
   "hero": {
     "tagline": "Aegryn — Swiss Tech Group. Strategy, Transactions & Assets.",
@@ -1177,8 +1180,8 @@
   "gradePartners": {
     "back": "← Aegryn Grade",
     "eyebrow": "Aegryn GRADE",
-    "title": "An expert network in support, not a requirement",
-    "intro1": "The Aegryn Grade is an independent certification: Aegryn evaluates and rates the quality of tech assets for sale without relying on a third party to issue its grade. Our sellers are independently supported throughout their sales process.",
+    "title": "A network of independent auditors, not an obligation.",
+    "intro1": "The Aegryn Grade is an independent certification: Aegryn evaluates and rates the quality of tech assets for sale without relying on imposed auditors. Independent professionals may be mandated to deepen specific areas.",
     "intro2": "We remain open to applications from independent experts wishing to align with the certification or join our network, mobilisable on demand before, during and after a transaction.",
     "openApps": "Applications open",
     "types": {
@@ -1203,10 +1206,10 @@
         "dimension": "Dimension S : Security"
       }
     },
-    "ctaLabel": "FOR EXPERTS",
+    "ctaLabel": "FOR INDEPENDENT AUDITORS",
     "ctaTitle": "Are you a law firm, chartered accountant or cybersecurity specialist?",
-    "ctaDesc": "Apply to join the Aegryn expert network: access to a regular flow of tech assets requiring your expertise, institutional visibility, qualified clientele.",
-    "ctaBtn": "Apply to the expert network",
+    "ctaDesc": "Apply to join the Aegryn Grade independent auditor network: regular access to tech assets requiring your certification expertise.",
+    "ctaBtn": "Apply to the auditor network",
     "benefitsLabel": "WHAT YOU GET",
     "benefits": [
       "Access to a regular flow of tech assets requiring your expertise",
@@ -4052,18 +4055,20 @@
       "stat3": "Switzerland & Europe"
     },
     "partners": {
-      "label": "Partners",
-      "title": "Companies that trust us.",
+      "label": "OUR PARTNERS",
+      "title": "The firms that work with Aegryn.",
       "desc": "A network of partners and companies with whom Aegryn collaborates on its assignments. Rigorous selection. No public categorisation.",
-      "note": "Logos represent active partners. Aegryn does not disclose individual partnership terms."
+      "note": "Logos represent active partners. Aegryn does not disclose individual partnership terms.",
+      "badge": "External structures"
     },
     "experts": {
-      "label": "Expert Network",
-      "title": "The expertise mobilised\non every assignment.",
+      "label": "OUR EXPERTISE",
+      "title": "The skills mobilised\nfor each engagement.",
       "desc": "The Aegryn expert network combines internal capabilities (strategy, technology, M&A advisory) with those of our extended partners. Each profile is mobilised based on the specific needs of the assignment.",
       "profilesLabel": "Illustrative profiles",
       "comingSoonTitle": "Directory under construction",
-      "comingSoonDesc": "Individual expert profiles will be published progressively. This section illustrates the types of profiles mobilisable across Aegryn advisory dimensions."
+      "comingSoonDesc": "Individual expert profiles will be published progressively. This section illustrates the types of profiles mobilisable across Aegryn advisory dimensions.",
+      "badge": "Aegryn & partners"
     },
     "filters": {
       "all": "All dimensions",
