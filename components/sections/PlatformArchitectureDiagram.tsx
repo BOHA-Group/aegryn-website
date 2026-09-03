@@ -13,7 +13,7 @@ const META: Record<string, { color: string; tag: string }> = {
 
 const CORE_ORDER = ['knowledge', 'ai', 'data']
 const VERTICALS = ['FinTech', 'HealthTech', 'PropTech', 'LegalTech', 'HRTech']
-const APPS = ['ContractAI', 'DataRoom', 'RiskEngine', 'Compliance']
+const APPS = ['Analyse contractuelle', 'Scoring de risque', 'Conformité réglementaire', 'Intelligence documentaire']
 
 // Dependency labels between layers (top→bottom direction)
 const DEP_LABEL: Record<string, string> = {
