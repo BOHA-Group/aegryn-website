@@ -36,26 +36,21 @@ ON CONFLICT (id) DO UPDATE
       description = EXCLUDED.description,
       category    = EXCLUDED.category;
 
--- ─── 2. Étendre la vue user_permissions_summary pour inclure 'internal' ─────
-CREATE OR REPLACE VIEW user_permissions_summary AS
+-- ─── 2. Vue user_permissions_summary ─────────────────────────────────────────
+-- 097 : créée sans 'internal' dans le WHERE
+-- 099 + 100 : recréée avec 'internal' inclus (p.role) — déjà correct en base
+--             grâce à la contrainte profiles_role_check de 098
+-- 101 : pas de modification nécessaire sur la vue — elle est déjà correcte.
+-- Le seul ajout ici est l'ordre explicite 'internal' en position 2 après 'admin'.
+DROP VIEW IF EXISTS user_permissions_summary;
+CREATE VIEW user_permissions_summary AS
 SELECT
   p.id              AS user_id,
   p.email,
   p.full_name,
-  -- Rôle consolidé : on lit le champ roles[] en priorité
-  COALESCE(
-    CASE
-      WHEN 'admin'      = ANY(COALESCE(p.roles, ARRAY[]::text[])) THEN 'admin'
-      WHEN 'internal'   = ANY(COALESCE(p.roles, ARRAY[]::text[])) THEN 'internal'
-      WHEN 'partner'    = ANY(COALESCE(p.roles, ARRAY[]::text[])) THEN 'partner'
-      WHEN 'seller'     = ANY(COALESCE(p.roles, ARRAY[]::text[])) THEN 'seller'
-      WHEN 'buyer'      = ANY(COALESCE(p.roles, ARRAY[]::text[])) THEN 'buyer'
-      ELSE p.role
-    END,
-    p.role
-  ) AS role,
+  p.role,
   CASE
-    WHEN 'admin' = ANY(COALESCE(p.roles, ARRAY[]::text[])) OR p.role = 'admin' THEN 'Full Admin'
+    WHEN p.role = 'admin' THEN 'Full Admin'
     ELSE COALESCE(
       (SELECT string_agg(ap.category, ', ' ORDER BY ap.category)
        FROM user_admin_permissions uap
@@ -65,24 +60,20 @@ SELECT
     )
   END AS permission_summary,
   CASE
-    WHEN 'admin' = ANY(COALESCE(p.roles, ARRAY[]::text[])) OR p.role = 'admin'
-      THEN (SELECT COUNT(*) FROM admin_permissions)
+    WHEN p.role = 'admin'
+      THEN (SELECT COUNT(*) FROM admin_permissions WHERE disabled IS NOT TRUE)
     ELSE (SELECT COUNT(*) FROM user_admin_permissions WHERE user_id = p.id)
   END AS permission_count
 FROM profiles p
-WHERE
-  p.role IN ('admin', 'buyer', 'seller', 'partner', 'internal')
-  OR 'internal' = ANY(COALESCE(p.roles, ARRAY[]::text[]))
-  OR 'admin'    = ANY(COALESCE(p.roles, ARRAY[]::text[]))
+WHERE p.role IN ('admin', 'buyer', 'seller', 'partner', 'internal')
 ORDER BY
-  CASE
-    WHEN 'admin'    = ANY(COALESCE(p.roles, ARRAY[]::text[])) OR p.role = 'admin'    THEN 1
-    WHEN 'internal' = ANY(COALESCE(p.roles, ARRAY[]::text[])) OR p.role = 'internal' THEN 2
+  CASE p.role
+    WHEN 'admin'    THEN 1
+    WHEN 'internal' THEN 2
     ELSE 3
   END,
   p.created_at DESC;
 
--- Ré-accorder le SELECT sur la vue recréée
 GRANT SELECT ON user_permissions_summary TO authenticated, service_role;
 
 -- ─── 3. Marquer experts.validate comme désactivée ────────────────────────────
