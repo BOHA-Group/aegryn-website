@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { gsap, SplitText } from '@/lib/gsap'
 
@@ -11,8 +10,6 @@ export function GradeHero() {
   const headingRef = useRef<HTMLHeadingElement>(null)
   const descRef    = useRef<HTMLParagraphElement>(null)
   const labelRef   = useRef<HTMLParagraphElement>(null)
-  const ctaRef     = useRef<HTMLDivElement>(null)
-
   useEffect(() => {
     if (!headingRef.current) return
     const split = new SplitText(headingRef.current, { type: 'chars,words' })
@@ -21,7 +18,6 @@ export function GradeHero() {
       tl.from(labelRef.current,  { opacity: 0, y: 10, duration: 0.6, delay: 0.1 })
         .from(split.chars, { opacity: 0, yPercent: 110, rotationX: -90, stagger: 0.02, duration: 0.8 }, '-=0.3')
         .from(descRef.current,   { opacity: 0, y: 14, duration: 0.6 }, '-=0.4')
-        .from(ctaRef.current,    { opacity: 0, y: 10, duration: 0.5 }, '-=0.3')
     }, sectionRef)
     return () => { split.revert(); ctx.revert() }
   }, [])
@@ -42,20 +38,6 @@ export function GradeHero() {
         <p ref={descRef} className="font-sans text-[16px] text-white/55 leading-relaxed max-w-xl mb-10">
           {t('desc')}
         </p>
-        <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4">
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
-          >
-            {t('ctaSubmit')} →
-          </Link>
-          <Link
-            href="/grade/methodology"
-            className="inline-flex items-center justify-center gap-2 border border-white/25 text-white/75 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
-          >
-            {t('ctaMethod')}
-          </Link>
-        </div>
       </div>
     </section>
   )

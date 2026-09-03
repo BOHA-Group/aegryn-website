@@ -5,6 +5,7 @@ import { checkAdminAccess }    from '@/lib/adminAuth'
 import Link                    from 'next/link'
 import { ArrowLeft, Clock }    from 'lucide-react'
 import GradeEngineForm         from './GradeEngineForm'
+import { CODE_SUBCODES, IP_SUBCODES, FINANCE_SUBCODES, SECURITY_SUBCODES } from '@/lib/gradingSystem'
 
 export const metadata: Metadata = {
   title: 'Moteur Grade — Admin Aegryn',
@@ -127,6 +128,63 @@ export default async function GradeEnginePage({
             </div>
           </div>
         )}
+
+        {/* ── Référentiel des codes de certification ── */}
+        <div className="mt-12 border border-gray-200 bg-white">
+          <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
+            <div>
+              <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Référentiel CIFS v3.0</p>
+              <h2 className="font-sans font-bold text-gray-900 text-[15px] mt-0.5">Grille des 128 codes de certification</h2>
+            </div>
+            <span className="font-mono text-[9px] uppercase tracking-widest text-amber-600 bg-amber-50 border border-amber-200 px-2 py-1">Confidentiel — usage interne</span>
+          </div>
+          <div className="divide-y divide-gray-100">
+            {[
+              { dim: 'C', label: 'Conformité & Gouvernance', codes: CODE_SUBCODES, color: 'blue' },
+              { dim: 'I', label: 'IP & Propriété Intellectuelle', codes: IP_SUBCODES, color: 'purple' },
+              { dim: 'F', label: 'Finance & Traction', codes: FINANCE_SUBCODES, color: 'emerald' },
+              { dim: 'S', label: 'Sécurité Technique', codes: SECURITY_SUBCODES, color: 'rose' },
+            ].map(({ dim, label, codes, color }) => {
+              const groups = codes.reduce<Record<string, typeof codes>>((acc, c) => {
+                const g = c.group ?? 'Général'
+                if (!acc[g]) acc[g] = []
+                acc[g].push(c)
+                return acc
+              }, {})
+              return (
+                <details key={dim} className="group">
+                  <summary className="flex items-center gap-3 px-6 py-4 cursor-pointer hover:bg-gray-50 transition-colors list-none">
+                    <span className={`font-mono text-[11px] font-bold px-2 py-0.5 rounded ${
+                      color === 'blue'    ? 'bg-blue-100 text-blue-700' :
+                      color === 'purple'  ? 'bg-purple-100 text-purple-700' :
+                      color === 'emerald' ? 'bg-emerald-100 text-emerald-700' :
+                                           'bg-rose-100 text-rose-700'
+                    }`}>{dim}</span>
+                    <span className="font-sans font-semibold text-[13px] text-gray-800">{label}</span>
+                    <span className="font-mono text-[10px] text-gray-400 ml-auto">{codes.length} codes</span>
+                    <span className="text-gray-300 group-open:rotate-90 transition-transform ml-2">›</span>
+                  </summary>
+                  <div className="px-6 pb-6">
+                    {Object.entries(groups).map(([group, items]) => (
+                      <div key={group} className="mb-4">
+                        <p className="font-mono text-[8px] uppercase tracking-widest text-gray-400 mb-2 mt-3">{group}</p>
+                        <div className="grid grid-cols-1 gap-px bg-gray-100 border border-gray-100">
+                          {items.map(c => (
+                            <div key={c.code} className="bg-white flex items-start gap-3 px-3 py-2 hover:bg-gray-50 transition-colors">
+                              <span className="font-mono text-[10px] font-bold text-gray-500 shrink-0 w-12">{c.code}</span>
+                              <span className="font-sans text-[12px] text-gray-700 leading-snug">{c.fr}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </details>
+              )
+            })}
+          </div>
+        </div>
+
       </div>
     </div>
   )
