@@ -51,11 +51,13 @@ const STATIC_ROUTES = [
   { path: '/services/build',                     priority: 0.7,  changeFrequency: 'monthly' as const },
   // ── Magazine ──────────────────────────────────────────────────────────────────
   { path: '/magazine',                           priority: 0.9,  changeFrequency: 'weekly'  as const },
-  { path: '/magazine/issue-01',                  priority: 0.8,  changeFrequency: 'monthly' as const },
+  { path: '/magazine/issue-01/cover',            priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/magazine/issue-01/web',              priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/magazine/issue-01/flipbook',         priority: 0.6,  changeFrequency: 'monthly' as const },
   { path: '/magazine/report',                    priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/magazine/report/2027',               priority: 0.6,  changeFrequency: 'monthly' as const },
+  { path: '/magazine/report/2027/pdf',           priority: 0.5,  changeFrequency: 'yearly'  as const },
+  { path: '/sitemap',                            priority: 0.4,  changeFrequency: 'monthly' as const },
   // ── Help / FAQ ────────────────────────────────────────────────────────────────
   { path: '/help/faq',                           priority: 0.7,  changeFrequency: 'monthly' as const },
   // ── Legal ─────────────────────────────────────────────────────────────────────
