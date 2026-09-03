@@ -2,7 +2,7 @@
 
 import { Link, usePathname } from '@/i18n/navigation'
 import NextLink          from 'next/link'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { useState, useRef, useEffect, type ComponentProps } from 'react'
 import { Menu, X, ChevronDown, User, UserCircle } from 'lucide-react'
 import LanguageSwitcher   from '@/components/layout/LanguageSwitcher'
@@ -73,11 +73,10 @@ const THINKING_MARKET_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'thinkingMarketFAQ',        href: '/blog' },
 ]
 
-// Qui sommes-nous - Le groupe
-const WHO_GROUP_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'whoAbout',    href: '/about' },
-  { labelKey: 'whoFounder',  href: { pathname: '/about', hash: 'fondateur' } as LinkHref },
-  { labelKey: 'whoContact',  href: '/contact' },
+// Qui sommes-nous - Le groupe (hors fondateur qui a un hash natif)
+const WHO_GROUP_LINKS_BASE: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'whoAbout',   href: '/about' },
+  { labelKey: 'whoContact', href: '/contact' },
 ]
 
 // Qui sommes-nous - Nous rejoindre
@@ -296,12 +295,14 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
 // Mega-menu Qui sommes-nous (3 colonnes: Groupe | Industries | Rejoindre)
 function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   const tInd = useTranslations('industries')
+  const locale = useLocale()
   const allIndustries = (tInd.raw('list') as { name: string }[]).map(i => i.name)
   const indLeft  = allIndustries.slice(0, 11)
   const indRight = allIndustries.slice(11)
+  const founderHref = `/${locale}/about#fondateur`
 
   return (
-    <div className="absolute top-full right-0 mr-6 mt-2 w-[820px] bg-ag-white border border-ag-border shadow-lg z-50">
+    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[820px] bg-ag-white border border-ag-border shadow-lg z-50">
       <div className="grid gap-px bg-ag-border" style={{ gridTemplateColumns: '1fr 2fr 1fr' }}>
         {/* Le groupe */}
         <div className="bg-ag-white p-3">
@@ -312,7 +313,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
             {t('whoGroupDesc')}
           </p>
           <div className="flex flex-col gap-1">
-            {WHO_GROUP_LINKS.map(({ labelKey, href }) => (
+            {WHO_GROUP_LINKS_BASE.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
                 href={href}
@@ -322,6 +323,13 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
                 {t(labelKey)}
               </Link>
             ))}
+            <a
+              href={founderHref}
+              onClick={onClose}
+              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
+            >
+              {t('whoFounder')}
+            </a>
           </div>
           {/* Nos bureaux */}
           <div className="mt-4 pt-4 border-t border-ag-border">
@@ -392,6 +400,7 @@ export interface NavUser {
 export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const t = useTranslations('nav')
   const pathname = usePathname()
+  const locale = useLocale()
   
   const isActive = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href)
   
@@ -713,12 +722,16 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               {mobileAccordion === 'who' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
                   <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-2">{t('whoGroup')}</p>
-                  {WHO_GROUP_LINKS.map(({ labelKey, href }) => (
+                  {WHO_GROUP_LINKS_BASE.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
+                  <a href={`/${locale}/about#fondateur`} onClick={closeMobile}
+                    className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                    {t('whoFounder')}
+                  </a>
                   <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('whoJoin')}</p>
                   {WHO_JOIN_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
