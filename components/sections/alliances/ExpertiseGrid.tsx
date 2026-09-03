@@ -64,7 +64,7 @@ export default function ExpertiseGrid() {
 
         {/* Grille */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
-          {visible.map((item, idx) => {
+          {visible.map((item, _idx) => {
             const originalIdx = items.findIndex(i => i.id === item.id)
             const Icon = ICONS[originalIdx] ?? Scale
             return (
