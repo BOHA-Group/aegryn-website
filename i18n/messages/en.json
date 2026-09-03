@@ -2166,19 +2166,19 @@
       },
       {
         "code": "AA",
-        "name": "Very good",
+        "name": "Solid",
         "color": "grade-aa",
         "desc": "Strong metrics, some optimisations recommended. Confirmed valuation."
       },
       {
         "code": "A",
-        "name": "Good",
+        "name": "Developing",
         "color": "grade-a",
         "desc": "Identified potential, documented improvement areas. Value plan proposed."
       },
       {
         "code": "B",
-        "name": "Correct",
+        "name": "Emerging",
         "color": "grade-b",
         "desc": "Asset in development. Remediation plan required before transaction."
       }
@@ -3880,15 +3880,24 @@
       },
       "sequestre": {
         "label": "ESCROW & LEGAL",
-        "profiles": "Depositary banks · Transactional law firms"
+        "profiles": "Depositary banks · Transactional law firms",
+        "title": "Escrow & Legal Partners",
+        "desc": "Custodian banks and transactional law firms that structure and secure escrow and closing mechanisms.",
+        "cta": "Join as a legal partner"
       },
       "technique": {
         "label": "TECHNICAL EXPERTISE",
-        "profiles": "Senior freelance CTOs · PASSI/CREST security auditors · Web3 specialists"
+        "profiles": "Senior freelance CTOs · PASSI/CREST security auditors · Web3 specialists",
+        "title": "Independent Technical Experts",
+        "desc": "CTOs, cybersecurity auditors and blockchain specialists who strengthen our technical due diligence and certification missions.",
+        "cta": "Join as a technical expert"
       },
       "assurance": {
         "label": "INSURANCE & COMPLIANCE",
-        "profiles": "W&I insurers · Transaction-specialized tax advisors"
+        "profiles": "W&I insurers · Transaction-specialized tax advisors",
+        "title": "Insurance & Tax Specialists",
+        "desc": "W&I insurers and transaction-specialist tax advisors who secure disposal and transfer operations.",
+        "cta": "Join as an insurance partner"
       }
     },
     "form": {

@@ -2098,19 +2098,19 @@
       },
       {
         "code": "AA",
-        "name": "Très bon",
+        "name": "Solide",
         "color": "grade-aa",
         "desc": "Bonnes métriques, quelques optimisations recommandées. Valorisation confirmée."
       },
       {
         "code": "A",
-        "name": "Bon",
+        "name": "En développement",
         "color": "grade-a",
         "desc": "Potentiel identifié, axes d'amélioration documentés. Plan de valeur proposé."
       },
       {
         "code": "B",
-        "name": "Correct",
+        "name": "Émergent",
         "color": "grade-b",
         "desc": "Actif en développement. Plan de remédiation requis avant transaction."
       }
@@ -3812,15 +3812,24 @@
       },
       "sequestre": {
         "label": "SÉQUESTRE & JURIDIQUE",
-        "profiles": "Banques dépositaires · Cabinets juridiques transactionnels"
+        "profiles": "Banques dépositaires · Cabinets juridiques transactionnels",
+        "title": "Séquestre & Partenaires juridiques",
+        "desc": "Banques dépositaires et cabinets juridiques transactionnels qui structurent et sécurisent les mécanismes d'escrow et de closing.",
+        "cta": "Rejoindre en tant que partenaire juridique"
       },
       "technique": {
         "label": "EXPERTISE TECHNIQUE",
-        "profiles": "CTO freelance senior · Auditeurs sécurité PASSI/CREST · Spécialistes Web3"
+        "profiles": "CTO freelance senior · Auditeurs sécurité PASSI/CREST · Spécialistes Web3",
+        "title": "Experts techniques indépendants",
+        "desc": "CTO, auditeurs cybersécurité et spécialistes blockchain qui renforcent nos missions de due diligence technique et de certification.",
+        "cta": "Rejoindre en tant qu'expert technique"
       },
       "assurance": {
         "label": "ASSURANCE & CONFORMITÉ",
-        "profiles": "Assureurs W&I · Fiscalistes spécialisés transactions"
+        "profiles": "Assureurs W&I · Fiscalistes spécialisés transactions",
+        "title": "Assureurs & Fiscalistes spécialisés",
+        "desc": "Assureurs W&I et fiscalistes experts en transactions qui sécurisent les opérations de cession et de transmission.",
+        "cta": "Rejoindre en tant que partenaire assurance"
       }
     },
     "form": {

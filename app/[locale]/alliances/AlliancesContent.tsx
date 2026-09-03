@@ -8,6 +8,7 @@ import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 const TAB_KEYS = ['overview', 'advisory_tech', 'advisory_transaction', 'certification', 'dealflow', 'finance', 'sequestre', 'technique', 'assurance', 'apply'] as const
 type TabKey = typeof TAB_KEYS[number]
 
+const CATEGORY_TABS: TabKey[] = ['advisory_tech', 'advisory_transaction', 'certification', 'dealflow', 'finance', 'sequestre', 'technique', 'assurance']
 
 const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
 const selectCls = inputCls + ' appearance-none'
@@ -80,229 +81,274 @@ export default function AlliancesContent() {
         </div>
       </section>
 
-      {/* Sticky tabs nav */}
-      <div className="sticky top-0 z-30 bg-ag-white border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 overflow-x-auto">
-          <div className="flex gap-0 min-w-max">
-            {TAB_KEYS.map(key => (
-              <button
-                key={key}
-                onClick={() => setTab(key)}
-                className={[
-                  'relative px-6 py-4 font-sans font-semibold text-[11px] uppercase tracking-[0.18em] transition-colors whitespace-nowrap',
-                  activeTab === key
-                    ? 'text-ag-black after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-ag-black'
-                    : 'text-ag-gray-light hover:text-ag-black',
-                ].join(' ')}
-              >
-                {t(`tabs.${key}`)}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* Layout : sidebar gauche + contenu droite */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="flex gap-0 min-h-[70vh]">
 
-      {/* Tab panels */}
-      <div className="min-h-[60vh]">
-
-        {/* Overview */}
-        {activeTab === 'overview' && (
-          <>
-            {/* 6 discipline cards */}
-            <section className="border-b border-ag-border bg-ag-off-white">
-              <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-                <div className="flex items-center border-b border-ag-border pb-4 mb-14">
-                  <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-                    / {t('disciplines.label')}
-                  </p>
-                </div>
-                <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-14">
-                  {t('disciplines.intro')}
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border">
-                  {(t.raw('disciplines.items') as { num: string; title: string; desc: string }[]).map(item => (
-                    <div key={item.num} className="bg-ag-off-white p-8 hover:bg-white transition-colors">
-                      <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-5">{item.num}</p>
-                      <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight mb-3">
-                        {item.title}
-                      </h3>
-                      <p className="text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            {/* Alliance Partners bloc */}
-            <section className="border-b border-ag-border bg-ag-white">
-              <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-                <div className="flex items-center border-b border-ag-border pb-4 mb-14">
-                  <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-                    / {t('alliancePartners.label')}
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
-                  <div>
-                    <h2
-                      className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6"
-                      style={{ fontSize: 'clamp(24px,2.5vw,36px)' }}
-                    >
-                      {t('alliancePartners.title')}
-                    </h2>
-                    <a
-                      href={t('alliancePartners.ctaHref')}
-                      onClick={(e) => { e.preventDefault(); setTab('apply') }}
-                      className="inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex hover:text-ag-navy transition-colors"
-                    >
-                      {t('alliancePartners.cta')} <ArrowUpRight size={14} />
-                    </a>
-                  </div>
-                  <p className="text-[15px] text-ag-gray leading-relaxed self-start">
-                    {t('alliancePartners.desc')}
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Partner note */}
-            <section className="max-w-7xl mx-auto px-6 md:px-12 py-12">
-              <p className="font-sans text-[12px] text-ag-gray-light italic">
-                {t('partnerNote')}
+          {/* ── Sidebar navigation verticale ── */}
+          <aside className="hidden lg:flex flex-col shrink-0 w-56 border-r border-ag-border sticky top-0 self-start pt-10 pb-10 min-h-[calc(100vh-80px)]">
+            {/* Section principale */}
+            <div className="mb-6">
+              <p className="font-mono text-[8px] uppercase tracking-[0.26em] text-ag-gray-light px-5 mb-3">
+                {t('disciplines.label')}
               </p>
-            </section>
-          </>
-        )}
-
-        {/* Category detail tabs */}
-        {(activeTab !== 'overview' && activeTab !== 'apply') && (
-          <section className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-            <div className="max-w-2xl">
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-5">
-                {t(`types.${activeTab}.label`)}
-              </p>
-              {t.raw(`types.${activeTab}.title`) !== `alliances.types.${activeTab}.title` && (
-                <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6" style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}>
-                  {t(`types.${activeTab}.title`)}
-                </h2>
-              )}
-              {t.raw(`types.${activeTab}.desc`) !== `alliances.types.${activeTab}.desc` && (
-                <p className="text-[15px] text-ag-gray leading-relaxed mb-8 max-w-lg">
-                  {t(`types.${activeTab}.desc`)}
-                </p>
-              )}
-              <ul className="flex flex-col gap-3 mb-10">
-                {(t(`types.${activeTab}.profiles`) as string)
-                  .split(' · ')
-                  .map((p: string, i: number) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 size={13} className="text-ag-apex mt-0.5 shrink-0" />
-                      <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{p}</span>
-                    </li>
-                  ))}
-              </ul>
-              <p className="font-sans text-[12px] text-ag-gray-light italic mb-8">
-                {t('partnerNote')}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={() => setTab('apply')}
-                  className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-navy-mid transition-colors"
-                >
-                  {t.raw(`types.${activeTab}.cta`) ? t(`types.${activeTab}.cta`) : t('types.certification.cta')} <ArrowUpRight size={12} />
-                </button>
+              <nav className="flex flex-col gap-0">
                 <button
                   onClick={() => setTab('overview')}
-                  className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:border-ag-black transition-colors"
+                  className={[
+                    'relative text-left px-5 py-3 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] transition-colors',
+                    activeTab === 'overview'
+                      ? 'text-ag-black after:absolute after:left-0 after:top-0 after:bottom-0 after:w-0.5 after:bg-ag-apex'
+                      : 'text-ag-gray-light hover:text-ag-black',
+                  ].join(' ')}
                 >
                   {t('tabs.overview')}
                 </button>
-              </div>
+                {CATEGORY_TABS.map(key => (
+                  <button
+                    key={key}
+                    onClick={() => setTab(key)}
+                    className={[
+                      'relative text-left px-5 py-3 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] transition-colors whitespace-nowrap overflow-hidden text-ellipsis',
+                      activeTab === key
+                        ? 'text-ag-black after:absolute after:left-0 after:top-0 after:bottom-0 after:w-0.5 after:bg-ag-apex'
+                        : 'text-ag-gray-light hover:text-ag-black',
+                    ].join(' ')}
+                  >
+                    {t(`tabs.${key}`)}
+                  </button>
+                ))}
+              </nav>
             </div>
-          </section>
-        )}
 
-        {/* Apply — form */}
-        {activeTab === 'apply' && (
-          <section className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16">
-              <div>
-                <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">
-                  / Application
+            {/* Séparateur */}
+            <div className="border-t border-ag-border mx-5 mb-6" />
+
+            {/* Candidature */}
+            <div>
+              <button
+                onClick={() => setTab('apply')}
+                className={[
+                  'relative w-full text-left px-5 py-3 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] transition-colors',
+                  activeTab === 'apply'
+                    ? 'text-ag-black after:absolute after:left-0 after:top-0 after:bottom-0 after:w-0.5 after:bg-ag-apex'
+                    : 'text-ag-gray-light hover:text-ag-black',
+                ].join(' ')}
+              >
+                {t('tabs.apply')}
+              </button>
+            </div>
+          </aside>
+
+          {/* ── Tabs mobile (visible < lg) ── */}
+          <div className="lg:hidden w-full border-b border-ag-border overflow-x-auto">
+            <div className="flex gap-0 min-w-max">
+              {TAB_KEYS.map(key => (
+                <button
+                  key={key}
+                  onClick={() => setTab(key)}
+                  className={[
+                    'relative px-5 py-3.5 font-sans font-semibold text-[10px] uppercase tracking-[0.16em] transition-colors whitespace-nowrap',
+                    activeTab === key
+                      ? 'text-ag-black after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-ag-apex'
+                      : 'text-ag-gray-light hover:text-ag-black',
+                  ].join(' ')}
+                >
+                  {t(`tabs.${key}`)}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Contenu ── */}
+          <div className="flex-1 min-w-0 py-10 lg:pl-12">
+
+            {/* Overview */}
+            {activeTab === 'overview' && (
+              <div className="flex flex-col gap-16">
+                {/* Disciplines */}
+                <div>
+                  <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10 flex items-center gap-3">
+                    <span className="w-6 h-px bg-ag-border inline-block" />
+                    {t('disciplines.label')}
+                  </p>
+                  <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-10">
+                    {t('disciplines.intro')}
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+                    {(t.raw('disciplines.items') as { num: string; title: string; desc: string }[]).map(item => (
+                      <div key={item.num} className="bg-ag-off-white p-8 hover:bg-ag-white transition-colors">
+                        <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-5">{item.num}</p>
+                        <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight mb-3">
+                          {item.title}
+                        </h3>
+                        <p className="text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Alliance Partners */}
+                <div className="border-t border-ag-border pt-12">
+                  <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10 flex items-center gap-3">
+                    <span className="w-6 h-px bg-ag-border inline-block" />
+                    {t('alliancePartners.label')}
+                  </p>
+                  <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 items-start">
+                    <div>
+                      <h2
+                        className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6"
+                        style={{ fontSize: 'clamp(22px,2.5vw,34px)' }}
+                      >
+                        {t('alliancePartners.title')}
+                      </h2>
+                      <button
+                        onClick={() => setTab('apply')}
+                        className="inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex hover:text-ag-navy transition-colors"
+                      >
+                        {t('alliancePartners.cta')} <ArrowUpRight size={14} />
+                      </button>
+                    </div>
+                    <p className="text-[15px] text-ag-gray leading-relaxed self-start">
+                      {t('alliancePartners.desc')}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Note */}
+                <p className="font-sans text-[12px] text-ag-gray-light italic">
+                  {t('partnerNote')}
+                </p>
+              </div>
+            )}
+
+            {/* Category detail panels */}
+            {(activeTab !== 'overview' && activeTab !== 'apply') && (
+              <div className="max-w-2xl">
+                <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-5">
+                  {t(`types.${activeTab}.label`)}
                 </p>
                 <h2
                   className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6"
-                  style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
+                  style={{ fontSize: 'clamp(26px,3vw,48px)' }}
                 >
-                  {t('form.title')}
+                  {t(`types.${activeTab}.title`)}
                 </h2>
-                <p className="text-[13px] text-ag-gray leading-relaxed">
-                  {t('form.note')}
+                <p className="text-[15px] text-ag-gray leading-relaxed mb-10 max-w-lg">
+                  {t(`types.${activeTab}.desc`)}
                 </p>
+                <ul className="flex flex-col gap-3 mb-10">
+                  {(t(`types.${activeTab}.profiles`) as string)
+                    .split(' · ')
+                    .map((p: string, i: number) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <CheckCircle2 size={13} className="text-ag-apex mt-0.5 shrink-0" />
+                        <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{p}</span>
+                      </li>
+                    ))}
+                </ul>
+                <p className="font-sans text-[12px] text-ag-gray-light italic mb-8">
+                  {t('partnerNote')}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button
+                    onClick={() => setTab('apply')}
+                    className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-navy-mid transition-colors"
+                  >
+                    {t(`types.${activeTab}.cta`)} <ArrowUpRight size={12} />
+                  </button>
+                  <button
+                    onClick={() => setTab('overview')}
+                    className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:border-ag-black transition-colors"
+                  >
+                    {t('tabs.overview')}
+                  </button>
+                </div>
               </div>
+            )}
 
-              {submitted ? (
-                <div className="border border-ag-apex/30 bg-ag-off-white p-10 flex flex-col items-start gap-4">
-                  <CheckCircle2 size={28} className="text-ag-apex" />
-                  <p className="font-sans font-bold text-ag-black text-[18px]">{t('form.successTitle')}</p>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('form.successDesc')}</p>
-                </div>
-              ) : (
-              <form onSubmit={handleApply} className="space-y-5">
+            {/* Apply — form */}
+            {activeTab === 'apply' && (
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12">
                 <div>
-                    <label className={labelCls}>{t('form.organizationLabel')}</label>
-                    <input name="organization_name" type="text" required className={inputCls} />
-                  </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className={labelCls}>{t('form.structure')}</label>
-                    <select name="structure_type" required className={selectCls}>
-                      <option value="">{t('form.structurePlaceholder')}</option>
-                      {(['law_firm','audit','bank','fund','notary','accelerator','platform','other'] as const).map(k => (
-                        <option key={k} value={k}>{(t.raw('form.structureOpts') as Record<string,string>)[k]}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label className={labelCls}>{t('form.type')}</label>
-                    <select name="alliance_type" required className={selectCls}>
-                      <option value="">{t('form.typePlaceholder')}</option>
-                      {(['advisory_tech','advisory_transaction','certification','dealflow','finance','sequestre','technique','assurance'] as const).map(k => (
-                        <option key={k} value={k}>{t(`types.${k}.label`)}</option>
-                      ))}
-                      <option value="other">{t('form.typeOtherLabel')}</option>
-                    </select>
-                  </div>
+                  <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">
+                    / Application
+                  </p>
+                  <h2
+                    className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6"
+                    style={{ fontSize: 'clamp(26px,3vw,48px)' }}
+                  >
+                    {t('form.title')}
+                  </h2>
+                  <p className="text-[13px] text-ag-gray leading-relaxed">
+                    {t('form.note')}
+                  </p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className={labelCls}>{t('form.email')}</label>
-                    <input name="email" type="email" required className={inputCls} />
+
+                {submitted ? (
+                  <div className="border border-ag-apex/30 bg-ag-off-white p-10 flex flex-col items-start gap-4">
+                    <CheckCircle2 size={28} className="text-ag-apex" />
+                    <p className="font-sans font-bold text-ag-black text-[18px]">{t('form.successTitle')}</p>
+                    <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('form.successDesc')}</p>
                   </div>
-                  <div>
-                    <label className={labelCls}>{t('form.country')}</label>
-                    <input name="country" type="text" className={inputCls} />
-                  </div>
-                </div>
-                <div>
-                  <label className={labelCls}>{t('form.description')}</label>
-                  <textarea name="description" rows={5} required className={`${inputCls} resize-none`} />
-                </div>
-                {formError && (
-                  <p className="font-sans text-[11px] text-red-500">{t('form.errorMsg')}</p>
+                ) : (
+                  <form onSubmit={handleApply} className="space-y-5">
+                    <div>
+                      <label className={labelCls}>{t('form.organizationLabel')}</label>
+                      <input name="organization_name" type="text" required className={inputCls} />
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      <div>
+                        <label className={labelCls}>{t('form.structure')}</label>
+                        <select name="structure_type" required className={selectCls}>
+                          <option value="">{t('form.structurePlaceholder')}</option>
+                          {(['law_firm','audit','bank','fund','notary','accelerator','platform','other'] as const).map(k => (
+                            <option key={k} value={k}>{(t.raw('form.structureOpts') as Record<string,string>)[k]}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div>
+                        <label className={labelCls}>{t('form.type')}</label>
+                        <select name="alliance_type" required className={selectCls}>
+                          <option value="">{t('form.typePlaceholder')}</option>
+                          {(['advisory_tech','advisory_transaction','certification','dealflow','finance','sequestre','technique','assurance'] as const).map(k => (
+                            <option key={k} value={k}>{t(`types.${k}.label`)}</option>
+                          ))}
+                          <option value="other">{t('form.typeOtherLabel')}</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      <div>
+                        <label className={labelCls}>{t('form.email')}</label>
+                        <input name="email" type="email" required className={inputCls} />
+                      </div>
+                      <div>
+                        <label className={labelCls}>{t('form.country')}</label>
+                        <input name="country" type="text" className={inputCls} />
+                      </div>
+                    </div>
+                    <div>
+                      <label className={labelCls}>{t('form.description')}</label>
+                      <textarea name="description" rows={5} required className={`${inputCls} resize-none`} />
+                    </div>
+                    {formError && (
+                      <p className="font-sans text-[11px] text-red-500">{t('form.errorMsg')}</p>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-8 py-3.5 hover:bg-ag-navy transition-colors disabled:opacity-60"
+                    >
+                      {loading ? t('form.submitting') : t('form.submit')} {!loading && <ArrowUpRight size={13} />}
+                    </button>
+                  </form>
                 )}
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-8 py-3.5 hover:bg-ag-navy transition-colors disabled:opacity-60"
-                >
-                  {loading ? t('form.submitting') : t('form.submit')} {!loading && <ArrowUpRight size={13} />}
-                </button>
-              </form>
-              )}
-            </div>
-          </section>
-        )}
+              </div>
+            )}
 
+          </div>
+        </div>
       </div>
 
       {/* CTA navy */}
@@ -321,7 +367,7 @@ export default function AlliancesContent() {
             onClick={() => setTab('apply')}
             className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
           >
-            {t('types.certification.cta')} <ArrowUpRight size={14} />
+            {t('tabs.apply')} <ArrowUpRight size={14} />
           </button>
         </div>
       </section>

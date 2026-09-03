@@ -2794,19 +2794,19 @@
       },
       {
         "code": "AA",
-        "name": "Zeer goed",
+        "name": "Solide",
         "color": "grade-aa",
         "desc": "Goede metrieken, enkele optimalisaties aanbevolen. Waardering bevestigd."
       },
       {
         "code": "A",
-        "name": "Goed",
+        "name": "In ontwikkeling",
         "color": "grade-a",
         "desc": "Potentieel geïdentificeerd, verbeterpunten gedocumenteerd. Waardeplan voorgesteld."
       },
       {
         "code": "B",
-        "name": "Correct",
+        "name": "Opkomend",
         "color": "grade-b",
         "desc": "Asset in ontwikkeling. Saneringsplan vereist vóór transactie."
       }
@@ -3881,15 +3881,24 @@
       },
       "sequestre": {
         "label": "ESCROW EN JURIDISCH",
-        "profiles": "Bewaarbanken · Transactionele advocatenkantoren"
+        "profiles": "Bewaarbanken · Transactionele advocatenkantoren",
+        "title": "Escrow & juridische partners",
+        "desc": "Bewaarbanken en transactionele advocatenkantoren die escrow- en closingmechanismen structureren en beveiligen.",
+        "cta": "Toetreden als juridische partner"
       },
       "technique": {
         "label": "TECHNISCHE EXPERTISE",
-        "profiles": "Senior freelance CTO's · PASSI/CREST-beveiligingsauditors · Web3-specialisten"
+        "profiles": "Senior freelance CTO's · PASSI/CREST-beveiligingsauditors · Web3-specialisten",
+        "title": "Onafhankelijke technische experts",
+        "desc": "CTO's, cyberbeveiligingsauditors en blockchainspecialisten die onze technische due diligence- en certificeringsmissies versterken.",
+        "cta": "Toetreden als technisch expert"
       },
       "assurance": {
         "label": "VERZEKERING EN COMPLIANCE",
-        "profiles": "W&I-verzekeraars · Op transacties gespecialiseerde belastingadviseurs"
+        "profiles": "W&I-verzekeraars · Op transacties gespecialiseerde belastingadviseurs",
+        "title": "Verzekeringsexperts & belastingspecialisten",
+        "desc": "W&I-verzekeraars en op transacties gespecialiseerde belastingadviseurs die overdrachts- en overdrachtoperaties beveiligen.",
+        "cta": "Toetreden als verzekeringspartner"
       }
     },
     "form": {

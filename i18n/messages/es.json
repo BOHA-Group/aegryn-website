@@ -2794,19 +2794,19 @@
       },
       {
         "code": "AA",
-        "name": "Muy bueno",
+        "name": "Sólido",
         "color": "grade-aa",
         "desc": "Buenas métricas, algunas optimizaciones recomendadas. Valoración confirmada."
       },
       {
         "code": "A",
-        "name": "Bueno",
+        "name": "En desarrollo",
         "color": "grade-a",
         "desc": "Potencial identificado, áreas de mejora documentadas. Plan de valor propuesto."
       },
       {
         "code": "B",
-        "name": "Correcto",
+        "name": "Emergente",
         "color": "grade-b",
         "desc": "Activo en desarrollo. Plan de remediación requerido antes de la transacción."
       }
@@ -3881,15 +3881,24 @@
       },
       "sequestre": {
         "label": "DEPÓSITO Y LEGAL",
-        "profiles": "Bancos depositarios · Despachos jurídicos transaccionales"
+        "profiles": "Bancos depositarios · Despachos jurídicos transaccionales",
+        "title": "Depósito en garantía y socios jurídicos",
+        "desc": "Bancos depositarios y despachos jurídicos transaccionales que estructuran y aseguran los mecanismos de escrow y cierre.",
+        "cta": "Unirse como socio jurídico"
       },
       "technique": {
         "label": "EXPERIENCIA TÉCNICA",
-        "profiles": "CTO freelance senior · Auditores de seguridad PASSI/CREST · Especialistas Web3"
+        "profiles": "CTO freelance senior · Auditores de seguridad PASSI/CREST · Especialistas Web3",
+        "title": "Expertos técnicos independientes",
+        "desc": "CTOs, auditores de ciberseguridad y especialistas en blockchain que refuerzan nuestras misiones de due diligence técnica y certificación.",
+        "cta": "Unirse como experto técnico"
       },
       "assurance": {
         "label": "SEGURO Y CUMPLIMIENTO",
-        "profiles": "Aseguradoras W&I · Asesores fiscales especializados en transacciones"
+        "profiles": "Aseguradoras W&I · Asesores fiscales especializados en transacciones",
+        "title": "Aseguradores y fiscalistas especializados",
+        "desc": "Aseguradoras W&I y asesores fiscales expertos en transacciones que aseguran las operaciones de cesión y transmisión.",
+        "cta": "Unirse como socio de seguros"
       }
     },
     "form": {

@@ -1926,7 +1926,7 @@
       },
       {
         "grade": "B",
-        "label": "Aufstrebend",
+        "label": "Aufkommend",
         "range": "30–44 / 100",
         "color": "#D4820A",
         "rarity": "15–20% der zertifizierten Assets",
@@ -2794,19 +2794,19 @@
       },
       {
         "code": "AA",
-        "name": "Sehr gut",
+        "name": "Solide",
         "color": "grade-aa",
         "desc": "Gute Metriken, einige Optimierungen empfohlen. Bewertung bestätigt."
       },
       {
         "code": "A",
-        "name": "Gut",
+        "name": "In Entwicklung",
         "color": "grade-a",
         "desc": "Potenzial identifiziert, Verbesserungsbereiche dokumentiert. Wertplan vorgeschlagen."
       },
       {
         "code": "B",
-        "name": "Korrekt",
+        "name": "Aufkommend",
         "color": "grade-b",
         "desc": "Asset in Entwicklung. Sanierungsplan vor Transaktion erforderlich."
       }
@@ -3881,15 +3881,24 @@
       },
       "sequestre": {
         "label": "TREUHAND & RECHT",
-        "profiles": "Depotbanken · Transaktionsrechtliche Kanzleien"
+        "profiles": "Depotbanken · Transaktionsrechtliche Kanzleien",
+        "title": "Treuhand- & Rechtspartner",
+        "desc": "Depotbanken und Transaktionskanzleien, die Treuhand- und Abschlussmechanismen strukturieren und absichern.",
+        "cta": "Als Rechtspartner beitreten"
       },
       "technique": {
         "label": "TECHNISCHE EXPERTISE",
-        "profiles": "Senior Freelance-CTOs · PASSI/CREST-Sicherheitsauditoren · Web3-Spezialisten"
+        "profiles": "Senior Freelance-CTOs · PASSI/CREST-Sicherheitsauditoren · Web3-Spezialisten",
+        "title": "Unabhängige technische Experten",
+        "desc": "CTOs, Cybersicherheitsprüfer und Blockchain-Spezialisten, die unsere technischen Due-Diligence- und Zertifizierungsmissionen stärken.",
+        "cta": "Als technischer Experte beitreten"
       },
       "assurance": {
         "label": "VERSICHERUNG & COMPLIANCE",
-        "profiles": "W&I-Versicherer · Auf Transaktionen spezialisierte Steuerberater"
+        "profiles": "W&I-Versicherer · Auf Transaktionen spezialisierte Steuerberater",
+        "title": "Versicherungs- & Steuerexperten",
+        "desc": "W&I-Versicherer und transaktionsspezialisierte Steuerberater, die Veräußerungs- und Übertragungsoperationen absichern.",
+        "cta": "Als Versicherungspartner beitreten"
       }
     },
     "form": {

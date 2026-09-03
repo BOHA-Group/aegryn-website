@@ -2794,19 +2794,19 @@
       },
       {
         "code": "AA",
-        "name": "Molto buono",
+        "name": "Solido",
         "color": "grade-aa",
         "desc": "Buone metriche, alcune ottimizzazioni raccomandate. Valutazione confermata."
       },
       {
         "code": "A",
-        "name": "Buono",
+        "name": "In sviluppo",
         "color": "grade-a",
         "desc": "Potenziale identificato, aree di miglioramento documentate. Piano di valore proposto."
       },
       {
         "code": "B",
-        "name": "Corretto",
+        "name": "Emergente",
         "color": "grade-b",
         "desc": "Asset in sviluppo. Piano di rimedio richiesto prima della transazione."
       }
@@ -3881,15 +3881,24 @@
       },
       "sequestre": {
         "label": "DEPOSITO E LEGALE",
-        "profiles": "Banche depositarie · Studi legali transazionali"
+        "profiles": "Banche depositarie · Studi legali transazionali",
+        "title": "Deposito a garanzia e partner legali",
+        "desc": "Banche depositarie e studi legali transazionali che strutturano e proteggono i meccanismi di escrow e closing.",
+        "cta": "Aderire come partner legale"
       },
       "technique": {
         "label": "COMPETENZA TECNICA",
-        "profiles": "CTO freelance senior · Auditor di sicurezza PASSI/CREST · Specialisti Web3"
+        "profiles": "CTO freelance senior · Auditor di sicurezza PASSI/CREST · Specialisti Web3",
+        "title": "Esperti tecnici indipendenti",
+        "desc": "CTO, revisori della cybersicurezza e specialisti blockchain che rafforzano le nostre missioni di due diligence tecnica e certificazione.",
+        "cta": "Aderire come esperto tecnico"
       },
       "assurance": {
         "label": "ASSICURAZIONE E COMPLIANCE",
-        "profiles": "Assicuratori W&I · Consulenti fiscali specializzati in transazioni"
+        "profiles": "Assicuratori W&I · Consulenti fiscali specializzati in transazioni",
+        "title": "Assicuratori e fiscalisti specializzati",
+        "desc": "Assicuratori W&I e consulenti fiscali specializzati nelle transazioni che tutelano le operazioni di cessione e trasferimento.",
+        "cta": "Aderire come partner assicurativo"
       }
     },
     "form": {
