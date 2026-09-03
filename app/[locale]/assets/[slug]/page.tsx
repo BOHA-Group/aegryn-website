@@ -302,9 +302,13 @@ export default async function AssetPage({ params }: Props) {
               <div className="shrink-0 flex flex-col gap-2">
                 <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light">Partenaire</p>
                 <div className="border border-ag-border bg-ag-white px-6 py-5 w-[220px]">
-                  <p className="font-sans font-bold text-[15px] text-ag-black leading-tight mb-1">
-                    Village de la Justice
-                  </p>
+                  <Image
+                    src="/images/press-village-justice-logo.png"
+                    alt="Village de la Justice — By Legi Team"
+                    width={160}
+                    height={80}
+                    className="object-contain mb-4"
+                  />
                   <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-ag-gray-light">
                     158 140 membres · 1 100 000 visites/mois
                   </p>
