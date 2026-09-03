@@ -4130,6 +4130,339 @@
     "cta": {
       "title": "Word lid van het Aegryn-netwerk.",
       "button": "Partner worden"
+    },
+    "expertiseCards": {
+      "board": [
+        {
+          "title": "Samenstelling & werving RvB",
+          "tags": [
+            "Board members",
+            "Onafh. bestuurders",
+            "Diversiteit"
+          ]
+        },
+        {
+          "title": "Governance & directierollen",
+          "tags": [
+            "CEO/CTO-rollen",
+            "Scheiding bevoegdheden",
+            "RACI"
+          ]
+        },
+        {
+          "title": "Begeleiding oprichters",
+          "tags": [
+            "Scale-up",
+            "Opvolging",
+            "Overdracht"
+          ]
+        },
+        {
+          "title": "Strategie & langetermijnvisie",
+          "tags": [
+            "OKR",
+            "Business model",
+            "3 tot 5 jaar"
+          ]
+        },
+        {
+          "title": "Crisismanagement directie",
+          "tags": [
+            "Aandeelhoudersconflict",
+            "Turnaround",
+            "Bemiddeling"
+          ]
+        },
+        {
+          "title": "Investor- & LP-relaties",
+          "tags": [
+            "Board reporting",
+            "Data room",
+            "IRR, KPIs"
+          ]
+        }
+      ],
+      "strategy": [
+        {
+          "title": "Bedrijfsstrategie",
+          "tags": [
+            "Langetermijnvisie",
+            "OKR",
+            "Business model"
+          ]
+        },
+        {
+          "title": "Digitale transformatie",
+          "tags": [
+            "Change management",
+            "IT-roadmap",
+            "Adoptie"
+          ]
+        },
+        {
+          "title": "Governance & Compliance",
+          "tags": [
+            "AVG",
+            "NIS2",
+            "DORA",
+            "AI Act"
+          ]
+        },
+        {
+          "title": "Concurrentiële intelligentie",
+          "tags": [
+            "Marktobservatie",
+            "Benchmarking",
+            "Trends"
+          ]
+        },
+        {
+          "title": "Finance & Herstructurering",
+          "tags": [
+            "Businessplan",
+            "Herstructurering",
+            "Kasstroom"
+          ]
+        },
+        {
+          "title": "ESG & Duurzaamheid",
+          "tags": [
+            "ESG-rapportage",
+            "Impact",
+            "EU-taxonomie"
+          ]
+        },
+        {
+          "title": "Risicobeheer",
+          "tags": [
+            "Risk mapping",
+            "Continuïteit",
+            "Schadegevallen"
+          ]
+        },
+        {
+          "title": "Operaties & Lean",
+          "tags": [
+            "Process mining",
+            "Efficiëntie",
+            "Ops-KPIs"
+          ]
+        },
+        {
+          "title": "Innovatie & Ventures",
+          "tags": [
+            "Open innovatie",
+            "Intrapreneurship",
+            "Labs"
+          ]
+        }
+      ],
+      "technology": [
+        {
+          "title": "Systeemarchitectuur",
+          "tags": [
+            "Cloud",
+            "Microservices",
+            "API-first"
+          ]
+        },
+        {
+          "title": "Offensieve cyberbeveiliging",
+          "tags": [
+            "Pentest",
+            "Red team",
+            "Vuln. scoring"
+          ]
+        },
+        {
+          "title": "Defensieve cyberbeveiliging",
+          "tags": [
+            "SOC",
+            "SIEM",
+            "Threat intel"
+          ]
+        },
+        {
+          "title": "AI & Machine Learning",
+          "tags": [
+            "LLM",
+            "Fine-tuning",
+            "MLOps",
+            "RAG"
+          ]
+        },
+        {
+          "title": "DevSecOps",
+          "tags": [
+            "Veilige CI/CD",
+            "SBOM",
+            "Shift-left"
+          ]
+        },
+        {
+          "title": "Data & Analyse",
+          "tags": [
+            "Data lake",
+            "BI",
+            "Realtime pipelines"
+          ]
+        },
+        {
+          "title": "Cloud & Infrastructuur",
+          "tags": [
+            "AWS",
+            "Azure",
+            "GCP",
+            "FinOps"
+          ]
+        },
+        {
+          "title": "Technische audit van assets",
+          "tags": [
+            "Code review",
+            "Tech schuld",
+            "Certificering"
+          ]
+        },
+        {
+          "title": "Product Engineering",
+          "tags": [
+            "SaaS B2B",
+            "Mobiele app",
+            "AI-protocollen"
+          ]
+        }
+      ],
+      "ma": [
+        {
+          "title": "Strategische Due Diligence",
+          "tags": [
+            "Markt",
+            "Positionering",
+            "Synergieën"
+          ]
+        },
+        {
+          "title": "Financiële Due Diligence",
+          "tags": [
+            "QoE",
+            "Normalisatie",
+            "Kasstroom"
+          ]
+        },
+        {
+          "title": "Technische Due Diligence",
+          "tags": [
+            "Architectuur",
+            "Code",
+            "Schuld",
+            "IP"
+          ]
+        },
+        {
+          "title": "Waardering van activa",
+          "tags": [
+            "DCF",
+            "Multiples",
+            "ARR/NRR",
+            "EBITDA"
+          ]
+        },
+        {
+          "title": "Juridische structurering",
+          "tags": [
+            "SPA",
+            "LOI",
+            "Earn-out",
+            "GAP"
+          ]
+        },
+        {
+          "title": "Fiscaliteit & Optimalisatie",
+          "tags": [
+            "Holdingstructuur",
+            "Exit tax",
+            "Treaty"
+          ]
+        },
+        {
+          "title": "Escrow & Financiering",
+          "tags": [
+            "Escrow",
+            "Bridge",
+            "Mezzanine",
+            "LBO"
+          ]
+        },
+        {
+          "title": "W&I-verzekering & Risico",
+          "tags": [
+            "W&I insurance",
+            "Tax liability",
+            "D&O"
+          ]
+        },
+        {
+          "title": "Post-fusie-integratie",
+          "tags": [
+            "PMI",
+            "Synergieën",
+            "Governance",
+            "Cultuur"
+          ]
+        }
+      ],
+      "talent": [
+        {
+          "title": "C-Level Executive Search",
+          "tags": [
+            "CEO",
+            "CTO",
+            "CISO",
+            "Chief AI Officer"
+          ]
+        },
+        {
+          "title": "VP & Director werving",
+          "tags": [
+            "VP Engineering",
+            "VP Product",
+            "VP Sales"
+          ]
+        },
+        {
+          "title": "Interim Management",
+          "tags": [
+            "Interim CTO",
+            "Interim CISO",
+            "Interim DPO"
+          ]
+        },
+        {
+          "title": "Talent Mapping & Pipeline",
+          "tags": [
+            "Market mapping",
+            "Longlist",
+            "Assessment"
+          ]
+        },
+        {
+          "title": "Onboarding & Integratie",
+          "tags": [
+            "Eerste 90 dagen",
+            "Culture fit",
+            "Functie-KPIs"
+          ]
+        },
+        {
+          "title": "Retentie & Incentives",
+          "tags": [
+            "BSPCE",
+            "Aandelenopties",
+            "Comp benchmarking"
+          ]
+        }
+      ]
     }
   },
   "transactNarrative": {

@@ -24,57 +24,14 @@ type ExpertiseCard = {
   color: string
 }
 
-/* ─── Grille expertises mobilisables par dimension ─────────────────────────── */
-const EXPERTISE_CARDS: ExpertiseCard[] = [
-  // BOARD ADVISORY (or doré)
-  { title: 'Composition & recrutement CA',  tags: ['Board members', 'Administrateurs indép.', 'Diversité'], dimension: 'board', color: '#C9A84C' },
-  { title: 'Gouvernance & rôles dirigeants', tags: ['CEO/CTO roles', 'Séparation pouvoirs', 'RACI'],         dimension: 'board', color: '#C9A84C' },
-  { title: 'Accompagnement fondateurs',      tags: ['Scale-up', 'Succession', 'Transmission'],               dimension: 'board', color: '#C9A84C' },
-  { title: 'Stratégie & vision long terme',  tags: ['OKR', 'Business model', 'Roadmap 3-5 ans'],             dimension: 'board', color: '#C9A84C' },
-  { title: 'Gestion des crises dirigeantes', tags: ['Conflit associés', 'Turnaround', 'Médiation'],           dimension: 'board', color: '#C9A84C' },
-  { title: 'Relations investisseurs & LP',   tags: ['Reporting board', 'Data room', 'IRR / KPIs'],           dimension: 'board', color: '#C9A84C' },
-
-  // STRATEGY (vert apex)
-  { title: 'Stratégie d\'entreprise',       tags: ['Vision long terme', 'OKR', 'Business model'],           dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'Transformation digitale',        tags: ['Change management', 'Roadmap SI', 'Adoption'],          dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'Gouvernance & Compliance',        tags: ['RGPD', 'NIS2', 'DORA', 'AI Act'],                       dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'Intelligence compétitive',        tags: ['Veille marché', 'Benchmarking', 'Tendances'],           dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'Finance & Restructuring',         tags: ['Business plan', 'Restructuration', 'Tréso'],            dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'ESG & Durabilité',               tags: ['Reporting ESG', 'Impact', 'Taxonomie UE'],              dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'Risk Management',                tags: ['Risk mapping', 'Continuité', 'Sinistres'],               dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'Opérations & Lean',              tags: ['Process mining', 'Efficience', 'KPI ops'],              dimension: 'strategy', color: '#5ADDA4' },
-  { title: 'Innovation & Ventures',          tags: ['Open innovation', 'Intrapreneuriat', 'Labs'],           dimension: 'strategy', color: '#5ADDA4' },
-
-  // TECHNOLOGY (bleu)
-  { title: 'Architecture Système',           tags: ['Cloud', 'Microservices', 'API-first'],                   dimension: 'technology', color: '#60a5fa' },
-  { title: 'Cybersécurité offensive',        tags: ['Pentest', 'Red team', 'Vuln. scoring'],                  dimension: 'technology', color: '#60a5fa' },
-  { title: 'Cybersécurité défensive',        tags: ['SOC', 'SIEM', 'Threat intel'],                           dimension: 'technology', color: '#60a5fa' },
-  { title: 'IA & Machine Learning',          tags: ['LLM', 'Fine-tuning', 'MLOps', 'RAG'],                    dimension: 'technology', color: '#60a5fa' },
-  { title: 'DevSecOps',                      tags: ['CI/CD sécurisé', 'SBOM', 'Shift-left'],                  dimension: 'technology', color: '#60a5fa' },
-  { title: 'Data & Analytique',              tags: ['Data lake', 'BI', 'Pipelines temps réel'],               dimension: 'technology', color: '#60a5fa' },
-  { title: 'Cloud & Infrastructure',         tags: ['AWS', 'Azure', 'GCP', 'FinOps'],                         dimension: 'technology', color: '#60a5fa' },
-  { title: 'Audit Technique Actifs',         tags: ['Code review', 'Dette tech', 'Certification'],            dimension: 'technology', color: '#60a5fa' },
-  { title: 'Product Engineering',            tags: ['SaaS B2B', 'App mobile', 'Protocoles IA'],               dimension: 'technology', color: '#60a5fa' },
-
-  // M&A (violet)
-  { title: 'Due Diligence Stratégique',      tags: ['Marché', 'Positionnement', 'Synergies'],                 dimension: 'ma', color: '#818cf8' },
-  { title: 'Due Diligence Financière',       tags: ['QoE', 'Normalisation', 'Flux de tréso'],                 dimension: 'ma', color: '#818cf8' },
-  { title: 'Due Diligence Technique',        tags: ['Architecture', 'Code', 'Dette', 'IP'],                   dimension: 'ma', color: '#818cf8' },
-  { title: 'Valorisation d\'actifs',        tags: ['DCF', 'Multiples', 'ARR/NRR', 'EBITDA'],                dimension: 'ma', color: '#818cf8' },
-  { title: 'Structuration Juridique',        tags: ['SPA', 'LOI', 'Earn-out', 'GAP'],                        dimension: 'ma', color: '#818cf8' },
-  { title: 'Fiscalité & Optimisation',       tags: ['Structuration holding', 'Exit tax', 'Treaty'],           dimension: 'ma', color: '#818cf8' },
-  { title: 'Séquestre & Financement',        tags: ['Escrow', 'Bridge', 'Mezzanine', 'LBO'],                 dimension: 'ma', color: '#818cf8' },
-  { title: 'Assurance W&I & Risque',         tags: ['W&I insurance', 'Tax liability', 'D&O'],                dimension: 'ma', color: '#818cf8' },
-  { title: 'Post-Merger Integration',        tags: ['PMI', 'Synergies', 'Gouvernance', 'Culture'],           dimension: 'ma', color: '#818cf8' },
-
-  // TALENT / EXECUTIVE SEARCH (rose)
-  { title: 'Executive Search C-Level',       tags: ['CEO', 'CTO', 'CISO', 'Chief AI Officer'],               dimension: 'talent', color: '#f472b6' },
-  { title: 'Recrutement VP & Director',      tags: ['VP Engineering', 'VP Product', 'VP Sales'],             dimension: 'talent', color: '#f472b6' },
-  { title: 'Interim Management',             tags: ['CTO interim', 'CISO interim', 'DPO interim'],           dimension: 'talent', color: '#f472b6' },
-  { title: 'Talent Mapping & Pipeline',      tags: ['Market mapping', 'Longlist', 'Assessment'],             dimension: 'talent', color: '#f472b6' },
-  { title: 'Onboarding & Intégration',       tags: ['Premier 90 jours', 'Culture fit', 'KPIs poste'],        dimension: 'talent', color: '#f472b6' },
-  { title: 'Rétention & Incentives',         tags: ['BSPCE', 'Stock options', 'Comp benchmarking'],          dimension: 'talent', color: '#f472b6' },
-]
+/* Couleurs par dimension */
+const DIM_COLOR: Record<DimensionKey, string> = {
+  board:      '#C9A84C',
+  strategy:   '#5ADDA4',
+  technology: '#60a5fa',
+  ma:         '#818cf8',
+  talent:     '#f472b6',
+}
 
 /* ─── Domaines d'expertise disponibles (alignés Conseil Board/Strategy/Tech/M&A/Talent) ── */
 const EXPERT_DOMAINS: ExpertDomain[] = [
@@ -194,6 +151,12 @@ export default function NetworkContent() {
   const [activeDomain, setActiveDomain] = useState<string | null>(null)
 
   const visibleDomains = EXPERT_DOMAINS
+
+  // Construire les cartes depuis i18n
+  const rawCards = t.raw('expertiseCards') as Record<DimensionKey, { title: string; tags: string[] }[]>
+  const EXPERTISE_CARDS: ExpertiseCard[] = (Object.entries(rawCards) as [DimensionKey, { title: string; tags: string[] }[]][]).flatMap(
+    ([dim, items]) => items.map(item => ({ ...item, dimension: dim, color: DIM_COLOR[dim] }))
+  )
 
   const activeDomainMeta = activeDomain
     ? EXPERT_DOMAINS.find(d => d.domainKey === activeDomain)

@@ -4130,6 +4130,339 @@
     "cta": {
       "title": "Unisciti alla rete Aegryn.",
       "button": "Diventare partner"
+    },
+    "expertiseCards": {
+      "board": [
+        {
+          "title": "Composizione & reclutamento CdA",
+          "tags": [
+            "Board members",
+            "Consiglieri indip.",
+            "Diversità"
+          ]
+        },
+        {
+          "title": "Governance & ruoli dirigenti",
+          "tags": [
+            "Ruoli CEO/CTO",
+            "Separazione poteri",
+            "RACI"
+          ]
+        },
+        {
+          "title": "Supporto ai fondatori",
+          "tags": [
+            "Scale-up",
+            "Successione",
+            "Trasmissione"
+          ]
+        },
+        {
+          "title": "Strategia & visione lungo termine",
+          "tags": [
+            "OKR",
+            "Business model",
+            "3 a 5 anni"
+          ]
+        },
+        {
+          "title": "Gestione crisi dirigenziali",
+          "tags": [
+            "Conflitto soci",
+            "Turnaround",
+            "Mediazione"
+          ]
+        },
+        {
+          "title": "Relazioni investitori & LP",
+          "tags": [
+            "Reporting board",
+            "Data room",
+            "IRR, KPIs"
+          ]
+        }
+      ],
+      "strategy": [
+        {
+          "title": "Strategia aziendale",
+          "tags": [
+            "Visione lungo termine",
+            "OKR",
+            "Business model"
+          ]
+        },
+        {
+          "title": "Trasformazione digitale",
+          "tags": [
+            "Change management",
+            "Roadmap SI",
+            "Adozione"
+          ]
+        },
+        {
+          "title": "Governance & Compliance",
+          "tags": [
+            "GDPR",
+            "NIS2",
+            "DORA",
+            "AI Act"
+          ]
+        },
+        {
+          "title": "Intelligenza competitiva",
+          "tags": [
+            "Market watch",
+            "Benchmarking",
+            "Tendenze"
+          ]
+        },
+        {
+          "title": "Finanza & Ristrutturazione",
+          "tags": [
+            "Business plan",
+            "Ristrutturazione",
+            "Tesoreria"
+          ]
+        },
+        {
+          "title": "ESG & Sostenibilità",
+          "tags": [
+            "Reporting ESG",
+            "Impatto",
+            "Tassonomia UE"
+          ]
+        },
+        {
+          "title": "Gestione del rischio",
+          "tags": [
+            "Risk mapping",
+            "Continuità",
+            "Sinistri"
+          ]
+        },
+        {
+          "title": "Operazioni & Lean",
+          "tags": [
+            "Process mining",
+            "Efficienza",
+            "KPI ops"
+          ]
+        },
+        {
+          "title": "Innovazione & Ventures",
+          "tags": [
+            "Open innovation",
+            "Intrapreneurship",
+            "Labs"
+          ]
+        }
+      ],
+      "technology": [
+        {
+          "title": "Architettura di sistema",
+          "tags": [
+            "Cloud",
+            "Microservices",
+            "API-first"
+          ]
+        },
+        {
+          "title": "Cybersicurezza offensiva",
+          "tags": [
+            "Pentest",
+            "Red team",
+            "Vuln. scoring"
+          ]
+        },
+        {
+          "title": "Cybersicurezza difensiva",
+          "tags": [
+            "SOC",
+            "SIEM",
+            "Threat intel"
+          ]
+        },
+        {
+          "title": "IA & Machine Learning",
+          "tags": [
+            "LLM",
+            "Fine-tuning",
+            "MLOps",
+            "RAG"
+          ]
+        },
+        {
+          "title": "DevSecOps",
+          "tags": [
+            "CI/CD sicuro",
+            "SBOM",
+            "Shift-left"
+          ]
+        },
+        {
+          "title": "Data & Analisi",
+          "tags": [
+            "Data lake",
+            "BI",
+            "Pipeline in tempo reale"
+          ]
+        },
+        {
+          "title": "Cloud & Infrastruttura",
+          "tags": [
+            "AWS",
+            "Azure",
+            "GCP",
+            "FinOps"
+          ]
+        },
+        {
+          "title": "Audit tecnico degli asset",
+          "tags": [
+            "Code review",
+            "Debito tech",
+            "Certificazione"
+          ]
+        },
+        {
+          "title": "Product Engineering",
+          "tags": [
+            "SaaS B2B",
+            "App mobile",
+            "Protocolli IA"
+          ]
+        }
+      ],
+      "ma": [
+        {
+          "title": "Due Diligence strategica",
+          "tags": [
+            "Mercato",
+            "Posizionamento",
+            "Sinergie"
+          ]
+        },
+        {
+          "title": "Due Diligence finanziaria",
+          "tags": [
+            "QoE",
+            "Normalizzazione",
+            "Flusso di cassa"
+          ]
+        },
+        {
+          "title": "Due Diligence tecnica",
+          "tags": [
+            "Architettura",
+            "Codice",
+            "Debito",
+            "IP"
+          ]
+        },
+        {
+          "title": "Valutazione degli asset",
+          "tags": [
+            "DCF",
+            "Multipli",
+            "ARR/NRR",
+            "EBITDA"
+          ]
+        },
+        {
+          "title": "Strutturazione giuridica",
+          "tags": [
+            "SPA",
+            "LOI",
+            "Earn-out",
+            "GAP"
+          ]
+        },
+        {
+          "title": "Fiscalità & Ottimizzazione",
+          "tags": [
+            "Struttura holding",
+            "Exit tax",
+            "Treaty"
+          ]
+        },
+        {
+          "title": "Deposito & Finanziamento",
+          "tags": [
+            "Escrow",
+            "Bridge",
+            "Mezzanine",
+            "LBO"
+          ]
+        },
+        {
+          "title": "Assicurazione W&I & Rischio",
+          "tags": [
+            "W&I insurance",
+            "Tax liability",
+            "D&O"
+          ]
+        },
+        {
+          "title": "Integrazione post-fusione",
+          "tags": [
+            "PMI",
+            "Sinergie",
+            "Governance",
+            "Cultura"
+          ]
+        }
+      ],
+      "talent": [
+        {
+          "title": "Executive Search C-Level",
+          "tags": [
+            "CEO",
+            "CTO",
+            "CISO",
+            "Chief AI Officer"
+          ]
+        },
+        {
+          "title": "Reclutamento VP & Director",
+          "tags": [
+            "VP Engineering",
+            "VP Product",
+            "VP Sales"
+          ]
+        },
+        {
+          "title": "Interim Management",
+          "tags": [
+            "CTO interim",
+            "CISO interim",
+            "DPO interim"
+          ]
+        },
+        {
+          "title": "Talent Mapping & Pipeline",
+          "tags": [
+            "Market mapping",
+            "Longlist",
+            "Assessment"
+          ]
+        },
+        {
+          "title": "Onboarding & Integrazione",
+          "tags": [
+            "Primi 90 giorni",
+            "Culture fit",
+            "KPIs ruolo"
+          ]
+        },
+        {
+          "title": "Fidelizzazione & Incentivi",
+          "tags": [
+            "BSPCE",
+            "Stock options",
+            "Comp benchmarking"
+          ]
+        }
+      ]
     }
   },
   "build_service": {
