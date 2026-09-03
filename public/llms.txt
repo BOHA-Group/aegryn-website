@@ -22,7 +22,7 @@ Swiss holding, holding suisse tech, Swiss technology company, Switzerland startu
 AEGRYN Grade, asset grading, notation actif numérique, tech credit rating,
 club deal acquisition, share deal, asset deal, earnout, SPV co-investment,
 digital ecosystem, ecosystem engineering, Engineered to Last,
-asset engineering, conception actif numérique, custom code digital asset, forfait fixe développement,
+asset engineering, conception actif numérique, custom code digital asset
 fixed price digital build, certification-ready SaaS, IP propriétaire, zéro dette technique,
 actifs propriétaires Aegryn, proprietary digital portfolio, build digital asset Switzerland,
 executive recruitment tech, recrutement executive tech, placement CTO, placement CISO,
@@ -90,7 +90,7 @@ Pages: /experts (fr/en/nl), /experten (de), /expertos (es), /esperti (it), /netw
 
 Quarterly publication on tech M&A, AI, exits and art de vivre. Issue 01 available in web reader and interactive flipbook format.
 Tagline: "Deals, multiples, portraits et art de vivre — trimestriel."
-Pages: /magazine, /magazine/issue-01, /magazine/issue-01/web, /magazine/issue-01/flipbook, /magazine/report, /magazine/report/2027
+Pages: /magazine, /magazine/issue-01/cover, /magazine/issue-01/web, /magazine/issue-01/flipbook, /magazine/report, /magazine/report/2027
 
 ## Philosophy
 
@@ -161,7 +161,7 @@ French (fr), English (en), German (de), Italian (it), Spanish (es), Dutch (nl)
 
 ### Magazine
 - [Magazine](https://aegryn.com/fr/magazine) — Quarterly publication hub
-- [Issue 01](https://aegryn.com/fr/magazine/issue-01) — Issue 01 overview
+- [Issue 01](https://aegryn.com/fr/magazine/issue-01/cover) — Issue 01 overview
 - [Issue 01 Web](https://aegryn.com/fr/magazine/issue-01/web) — Web reader
 - [Issue 01 Flipbook](https://aegryn.com/fr/magazine/issue-01/flipbook) — Interactive flipbook
 - [Report](https://aegryn.com/fr/magazine/report) — Annual reports

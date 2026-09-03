@@ -175,7 +175,7 @@ Issue 01 available as web reader and interactive flipbook (130 pages, StPageFlip
 
 Pages:
 - /magazine — Hub
-- /magazine/issue-01 — Issue 01 overview
+- /magazine/issue-01/cover — Issue 01 overview
 - /magazine/issue-01/web — Web reader (article by article)
 - /magazine/issue-01/flipbook — Interactive flipbook
 - /magazine/report — Annual reports index
@@ -244,7 +244,7 @@ Incorporated: BOHA-Group Sàrl
 | Build Services | /fr/services/build | Custom build |
 | Acquisition Support | /fr/services/acquisition-support | Post-deal services |
 | Magazine | /fr/magazine | Magazine hub |
-| Issue 01 | /fr/magazine/issue-01 | Issue 01 |
+| Issue 01 | /fr/magazine/issue-01/cover | Issue 01 |
 | Issue 01 Web | /fr/magazine/issue-01/web | Web reader |
 | Issue 01 Flipbook | /fr/magazine/issue-01/flipbook | Interactive flipbook |
 | Report | /fr/magazine/report | Annual reports |

@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     'paru dans Gala', 'Gala 27 novembre 2025', 'neediu Gala presse',
     'booking prestataire domicile', 'aide à domicile app', 'service à la personne digital',
     'application home services', 'jardinage app', 'bricolage app', 'babysitting app',
-    'neediu.app', 'An Aegryn company',
+    'An Aegryn company',
   ] : []
   return generateAegrynMetadata({
     title: isNeediu ? 'neediu — Services à domicile, paru dans Gala | Aegryn' : asset.name,
@@ -203,7 +203,7 @@ export default async function AssetPage({ params }: Props) {
             about: {
               '@type':     'MobileApplication',
               name:        'neediu',
-              url:         'https://neediu.app',
+              url:         'https://neediu.com',
               applicationCategory: 'LifestyleApplication',
               operatingSystem: 'iOS, Android',
               description: 'Application de mise en relation avec des prestataires de services à domicile : ménage, jardinage, bricolage, babysitting, aide aux seniors.',
