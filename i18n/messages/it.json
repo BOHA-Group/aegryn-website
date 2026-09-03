@@ -4292,8 +4292,8 @@
       "items": [
         {
           "num": "01",
-          "title": "Nessuno sforamento. Nessuna sorpresa.",
-          "desc": "Il prezzo viene definito e firmato al termine del Discovery, prima del primo commit. Se lo scope cambia, viene firmato un addendum prima dell'esecuzione. Nessuna fattura a sorpresa."
+          "title": "Onorari trasparenti.",
+          "desc": "Gli onorari vengono definiti e firmati al termine del Discovery, prima del primo commit. Se lo scope cambia, viene firmato un addendum prima dell'esecuzione. Nessuna fattura a sorpresa."
         },
         {
           "num": "02",
@@ -4321,7 +4321,7 @@
         "Nessuna garanzia sul valore finale"
       ],
       "aegrynItems": [
-        "Prezzo bloccato al Discovery",
+        "Onorari definiti al Discovery",
         "Milestone misurabili per sprint",
         "Sforamento scope assorbito da Aegryn",
         "Documentazione tecnica completa inclusa",
@@ -4411,7 +4411,7 @@
         {
           "num": "01",
           "title": "Diagnostic & Pianificazione",
-          "desc": "Definizione della proposta di valore, mercato target, stack e piano di uscita. Output: capitolato + accordo a prezzo bloccato firmato. Durata: 1-2 settimane. Costo: incluso nel prezzo totale."
+          "desc": "Definizione della proposta di valore, mercato target, stack e piano di uscita. Output: capitolato + accordo di onorari firmato. Durata: 1-2 settimane. Costo: incluso negli onorari totali."
         },
         {
           "num": "02",
@@ -4458,7 +4458,7 @@
         {
           "title": "Diagnostic (incluso)",
           "desc": "1-2 settimane. Capitolato certificabile. Prezzo di build definito e firmato. Nessun impegno prima della firma dell'accordo.",
-          "format": "Incluso nel prezzo totale"
+          "format": "Incluso negli onorari totali"
         },
         {
           "title": "Progettazione (prezzo bloccato)",

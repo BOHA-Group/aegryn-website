@@ -4292,8 +4292,8 @@
       "items": [
         {
           "num": "01",
-          "title": "Keine Überschreitungen. Keine Überraschungen.",
-          "desc": "Der Preis wird am Ende des Discoverys definiert und unterzeichnet, vor dem ersten Commit. Bei Änderungen des Umfangs wird vor der Ausführung ein Nachtrag unterzeichnet. Keine Überraschungsrechnungen."
+          "title": "Transparente Honorare.",
+          "desc": "Der Honorare werden am Ende des Discoverys definiert und unterzeichnet, vor dem ersten Commit. Bei Änderungen des Umfangs wird vor der Ausführung ein Nachtrag unterzeichnet. Keine Überraschungsrechnungen."
         },
         {
           "num": "02",
@@ -4411,7 +4411,7 @@
         {
           "num": "01",
           "title": "Diagnostic & Planung",
-          "desc": "Definition des Wertversprechens, Zielmarkt, Stack und Exit-Plan. Output: Lastenheft + unterzeichneter Preisvertrag. Dauer: 1 bis 2 Wochen. Kosten: im Gesamtpreis enthalten."
+          "desc": "Definition des Wertversprechens, Zielmarkt, Stack und Exit-Plan. Output: Lastenheft + unterzeichnete Honorarvereinbarung. Dauer: 1 bis 2 Wochen. Kosten: in den Gesamthonoraren enthalten."
         },
         {
           "num": "02",
@@ -4458,7 +4458,7 @@
         {
           "title": "Diagnostic (inklusive)",
           "desc": "1 bis 2 Wochen. Zertifizierbares Lastenheft. Build-Preis definiert und unterzeichnet. Kein Engagement vor Unterzeichnung der Honorarvereinbarung.",
-          "format": "Im Gesamtpreis enthalten"
+          "format": "In den Gesamthonoraren enthalten"
         },
         {
           "title": "Konzeption (fixierter Preis)",

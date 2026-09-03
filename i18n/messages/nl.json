@@ -4305,7 +4305,7 @@
         {
           "num": "01",
           "title": "Fixed price. No overruns.",
-          "desc": "The fixed fee is defined and signed at the end of Discovery, before the first commit. If scope changes, an amendment is signed before execution. No surprise invoicing."
+          "desc": "De honoraria worden aan het einde van de Discovery vastgesteld en ondertekend, vóór de eerste commit. Bij scopewijziging wordt een addendum ondertekend vóór uitvoering. Geen verrassingsrekeningen."
         },
         {
           "num": "02",
@@ -4422,8 +4422,8 @@
       "steps": [
         {
           "num": "01",
-          "title": "Discovery & Fixed Fee",
-          "desc": "Definition of the value proposition, target market, stack and exit plan. Output: specification + signed fixed-price agreement. Duration: 1 to 2 weeks. Cost: included in the total fixed fee."
+          "title": "Discovery & Honorarplanning",
+          "desc": "Definitie van het waardevoorstel, doelmarkt, stack en exitplan. Output: lastenboek + ondertekende honorarovereenkomst. Duur: 1 tot 2 weken. Kosten: inbegrepen in de totale honoraria."
         },
         {
           "num": "02",
@@ -4470,10 +4470,10 @@
         {
           "title": "Diagnostic (included)",
           "desc": "1 to 2 weeks. Certifiable specification. Build price defined and signed. No commitment before fee agreement is signed.",
-          "format": "Included in total fixed fee"
+          "format": "Inbegrepen in de totale honoraria"
         },
         {
-          "title": "Design (fixed fee)",
+          "title": "Ontwerp (geblokkeerde prijs)",
           "desc": "Price locked at Discovery. No overruns. No time & materials. If scope changes: amendment signed before execution. Indicative ranges (excl. Discovery): B2B SaaS from €25,000 excl. VAT, B2C mobile app from €35,000 excl. VAT, Native AI product from €40,000 excl. VAT.",
           "format": "Fixed fee defined at Discovery"
         },

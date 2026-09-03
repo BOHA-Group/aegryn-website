@@ -4219,7 +4219,7 @@
       "items": [
         {
           "num": "01",
-          "title": "Prix fixe. Aucun dépassement.",
+          "title": "Honoraires transparents.",
           "desc": "Le forfait est défini et signé à l'issue du Discovery, avant le premier commit. Si le périmètre évolue, un avenant est signé avant exécution. Jamais de facturation surprise."
         },
         {
@@ -4338,7 +4338,7 @@
         {
           "num": "01",
           "title": "Diagnostic & Cadrage",
-          "desc": "Définition de la proposition de valeur, du marché cible, de la stack et du plan de sortie. Output : cahier des charges + prix forfaitaire signé. Durée : 1 à 2 semaines. Coût : inclus dans le forfait total."
+          "desc": "Définition de la proposition de valeur, du marché cible, de la stack et du plan de sortie. Output : cahier des charges + honoraires définis et signés. Durée : 1 à 2 semaines. Coût : inclus dans le forfait total."
         },
         {
           "num": "02",
@@ -5687,7 +5687,7 @@
           "account"
         ],
         "q": "Construisez-vous des actifs sur mesure ?",
-        "a": "Oui, Aegryn conçoit des actifs tech sur mesure (SaaS, plateformes, outils) pour entrepreneurs et institutions. Prix fixe signé dès la phase de découverte, code custom uniquement (pas de no-code), IP transférée intégralement au client, certification-ready dès le jour 1. Délai : 10-16 semaines. Fourchette indicative : CHF 15'000-150'000+. Détails sur /services/build."
+        "a": "Oui, Aegryn conçoit des actifs tech sur mesure (SaaS, plateformes, outils) pour entrepreneurs et institutions. Honoraires définis et signés dès la phase de découverte, code custom uniquement (pas de no-code), IP transférée intégralement au client, certification-ready dès le jour 1. Délai : 10-16 semaines. Fourchette indicative : CHF 15'000-150'000+. Détails sur /services/build."
       },
       {
         "id": "magazine",

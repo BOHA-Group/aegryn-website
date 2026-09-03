@@ -4292,8 +4292,8 @@
       "items": [
         {
           "num": "01",
-          "title": "Sin desviaciones. Sin sorpresas.",
-          "desc": "El precio se define y firma al final del Discovery, antes del primer commit. Si el alcance cambia, se firma un anexo antes de la ejecución. Sin facturas sorpresa."
+          "title": "Honorarios transparentes.",
+          "desc": "Los honorarios se definen y firman al final del Discovery, antes del primer commit. Si el alcance cambia, se firma un anexo antes de la ejecución. Sin facturas sorpresa."
         },
         {
           "num": "02",
@@ -4321,7 +4321,7 @@
         "Sin garantía sobre el valor final"
       ],
       "aegrynItems": [
-        "Precio bloqueado en el Discovery",
+        "Honorarios definidos en el Discovery",
         "Hitos medibles por sprint",
         "Desviación de alcance absorbida por Aegryn",
         "Documentación técnica completa incluida",
@@ -4411,7 +4411,7 @@
         {
           "num": "01",
           "title": "Diagnostic & Planificación",
-          "desc": "Definición de la propuesta de valor, mercado objetivo, stack y plan de salida. Output: pliego de condiciones + acuerdo de precio bloqueado firmado. Duración: 1 a 2 semanas. Coste: incluido en el precio total."
+          "desc": "Definición de la propuesta de valor, mercado objetivo, stack y plan de salida. Output: pliego de condiciones + acuerdo de honorarios firmado. Duración: 1 a 2 semanas. Coste: incluido en los honorarios totales."
         },
         {
           "num": "02",
@@ -4458,7 +4458,7 @@
         {
           "title": "Diagnostic (incluido)",
           "desc": "1 a 2 semanas. Pliego certificable. Precio de build definido y firmado. Sin compromiso antes de la firma del acuerdo.",
-          "format": "Incluido en el precio total"
+          "format": "Incluido en los honorarios totales"
         },
         {
           "title": "Concepción (precio bloqueado)",
@@ -5764,7 +5764,7 @@
           "account"
         ],
         "q": "¿Construyen activos personalizados?",
-        "a": "Sí, Aegryn diseña activos tech personalizados (SaaS, plataformas, herramientas) para emprendedores e instituciones. Precio acordado en fase de descubrimiento, solo código custom (sin no-code), IP transferida íntegramente al cliente, certification-ready desde el día 1. Plazo: 10-16 semanas. Rango indicativo: CHF 15.000-150.000+. Detalles en /services/build."
+        "a": "Sí, Aegryn diseña activos tech personalizados (SaaS, plataformas, herramientas) para emprendedores e instituciones. Honorarios acordados en fase de descubrimiento, solo código custom (sin no-code), IP transferida íntegramente al cliente, certification-ready desde el día 1. Plazo: 10-16 semanas. Rango indicativo: CHF 15.000-150.000+. Detalles en /services/build."
       },
       {
         "id": "magazine",

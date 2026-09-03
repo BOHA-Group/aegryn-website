@@ -4289,7 +4289,7 @@
         {
           "num": "01",
           "title": "No overruns. No surprises.",
-          "desc": "The fixed fee is defined and signed at the end of Discovery, before the first commit. If scope changes, an amendment is signed before execution. No surprise invoicing."
+          "desc": "Fees are defined and signed at the end of Discovery, before the first commit. If scope changes, an amendment is signed before execution. No surprise invoicing."
         },
         {
           "num": "02",
@@ -4317,7 +4317,7 @@
         "No guarantee on final value"
       ],
       "aegrynItems": [
-        "Fixed fee defined at Discovery",
+        "Fee defined at Discovery",
         "Measurable milestones per sprint",
         "Scope overrun absorbed by Aegryn",
         "Full technical documentation included",
@@ -4406,8 +4406,8 @@
       "steps": [
         {
           "num": "01",
-          "title": "Discovery & Fixed Fee",
-          "desc": "Definition of the value proposition, target market, stack and exit plan. Output: specification + signed fixed-price agreement. Duration: 1 to 2 weeks. Cost: included in the total fixed fee."
+          "title": "Discovery & Fee Scoping",
+          "desc": "Definition of the value proposition, target market, stack and exit plan. Output: specification + signed fee agreement. Duration: 1 to 2 weeks. Cost: included in the total fee."
         },
         {
           "num": "02",
@@ -4459,7 +4459,7 @@
         {
           "title": "Design (locked price)",
           "desc": "Price locked at Discovery. No overruns. No time & materials. If scope changes: amendment signed before execution. Indicative ranges (excl. Discovery): B2B SaaS from €25,000 excl. VAT, B2C mobile app from €35,000 excl. VAT, Native AI product from €40,000 excl. VAT.",
-          "format": "Fixed fee defined at Discovery"
+          "format": "Fee defined at Discovery"
         },
         {
           "title": "Maintenance (subscription)",
