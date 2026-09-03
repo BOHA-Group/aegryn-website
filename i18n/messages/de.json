@@ -637,7 +637,7 @@
       },
       {
         "title": "AUFBAUEN",
-        "desc": "Dauerhafte digitale Assets, zum Festpreis, vollständig im Eigentum des Kunden. Entwickelt, um den Unternehmenswert zu steigern, nicht um ersetzt zu werden."
+        "desc": "Dauerhafte digitale Assets, vollständig im Eigentum des Kunden. Entwickelt, um den Unternehmenswert zu steigern, nicht um ersetzt zu werden."
       },
       {
         "title": "ÜBERTRAGEN",
@@ -4071,7 +4071,7 @@
     },
     "hero": {
       "label": "Aegryn Netzwerk",
-      "title": "Vertrauenswürdige Partner\n& Experten.",
+      "title": "Vertrauenspartner\nund Expertise.",
       "desc": "Aegryn stützt sich auf ein ausgewähltes Netzwerk von Partnern und Experten, um jede Dimension unseres Beratungsangebots zu stärken: Strategie, Technologie, Transaktionen.",
       "stat1": "Qualifizierte Partner",
       "stat2": "Mobilisierbare Experten",
@@ -4118,8 +4118,8 @@
   },
   "build_service": {
     "meta": {
-      "title": "Digitale Asset-Entwicklung zum Festpreis - Aegryn",
-      "desc": "Digitale Assets zum Festpreis: B2B SaaS, KI, mobile App. Vollständige Dokumentation, zertifizierungsbereit. Keine Überschreitungen, bewertbar ab Tag eins."
+      "title": "Digitale Asset-Entwicklung maßgeschneidert - Aegryn",
+      "desc": "Digitale Assets maßgeschneidert: B2B SaaS, KI, mobile App. Vollständige Dokumentation, zertifizierungsbereit. Keine Überschreitungen, bewertbar ab Tag eins."
     },
     "label": "Engineering — Maßgeschneiderte Software",
     "title": "Aegryn baut die Software\nIhrer Betriebsabläufe.",
@@ -4292,8 +4292,8 @@
       "items": [
         {
           "num": "01",
-          "title": "Festpreis. Keine Überschreitungen.",
-          "desc": "Der Festpreis wird am Ende des Discoverys definiert und unterzeichnet, vor dem ersten Commit. Bei Änderungen des Umfangs wird vor der Ausführung ein Nachtrag unterzeichnet. Keine Überraschungsrechnungen."
+          "title": "Keine Überschreitungen. Keine Überraschungen.",
+          "desc": "Der Preis wird am Ende des Discoverys definiert und unterzeichnet, vor dem ersten Commit. Bei Änderungen des Umfangs wird vor der Ausführung ein Nachtrag unterzeichnet. Keine Überraschungsrechnungen."
         },
         {
           "num": "02",
@@ -4321,7 +4321,7 @@
         "Keine Garantie auf den Endwert"
       ],
       "aegrynItems": [
-        "Festpreis beim Discovery definiert",
+        "Preis beim Discovery definiert",
         "Messbare Meilensteine pro Sprint",
         "Umfangsüberschreitung von Aegryn absorbiert",
         "Vollständige technische Dokumentation enthalten",
@@ -4410,8 +4410,8 @@
       "steps": [
         {
           "num": "01",
-          "title": "Diagnostic & Festpreis",
-          "desc": "Definition des Wertversprechens, Zielmarkt, Stack und Exit-Plan. Output: Lastenheft + unterzeichneter Festpreisvertrag. Dauer: 1 bis 2 Wochen. Kosten: im Gesamtfestpreis enthalten."
+          "title": "Diagnostic & Planung",
+          "desc": "Definition des Wertversprechens, Zielmarkt, Stack und Exit-Plan. Output: Lastenheft + unterzeichneter Preisvertrag. Dauer: 1 bis 2 Wochen. Kosten: im Gesamtpreis enthalten."
         },
         {
           "num": "02",
@@ -4452,18 +4452,18 @@
       "note": "Aegryn-Wartung garantiert, dass das Asset sein Grade behält oder verbessert."
     },
     "fees": {
-      "label": "Festpreis",
-      "title": "Festpreis. Keine Überraschungen.",
+      "label": "Honorare",
+      "title": "Transparente Honorare. Keine Überraschungen.",
       "items": [
         {
           "title": "Diagnostic (inklusive)",
           "desc": "1 bis 2 Wochen. Zertifizierbares Lastenheft. Build-Preis definiert und unterzeichnet. Kein Engagement vor Unterzeichnung der Honorarvereinbarung.",
-          "format": "Im Gesamtfestpreis enthalten"
+          "format": "Im Gesamtpreis enthalten"
         },
         {
-          "title": "Konzeption (Festpreis)",
+          "title": "Konzeption (fixierter Preis)",
           "desc": "Preis beim Discovery fixiert. Keine Überschreitungen. Kein Zeit & Material. Bei Änderungen: Nachtrag vor Ausführung unterzeichnet. Richtwerte (ohne Discovery): B2B SaaS ab 25.000€ netto, B2C Mobile App ab 35.000€ netto, Natives KI-Produkt ab 40.000€ netto.",
-          "format": "Festpreis beim Discovery definiert"
+          "format": "Preis beim Discovery definiert und unterzeichnet"
         },
         {
           "title": "Wartung (Abonnement)",
@@ -5764,7 +5764,7 @@
           "account"
         ],
         "q": "Bauen Sie maßgeschneiderte Assets?",
-        "a": "Ja, Aegryn entwirft maßgeschneiderte Tech-Assets (SaaS, Plattformen, Tools) für Unternehmer und Institutionen. Festpreis in der Discovery-Phase vereinbart, nur Custom Code (kein No-Code), IP vollständig auf Kunden übertragen, zertifizierungsbereit ab Tag 1. Zeitrahmen: 10-16 Wochen. Indikative Spanne: CHF 15.000-150.000+. Details unter /services/build."
+        "a": "Ja, Aegryn entwirft maßgeschneiderte Tech-Assets (SaaS, Plattformen, Tools) für Unternehmer und Institutionen. Preis in der Discovery-Phase vereinbart, nur Custom Code (kein No-Code), IP vollständig auf Kunden übertragen, zertifizierungsbereit ab Tag 1. Zeitrahmen: 10-16 Wochen. Indikative Spanne: CHF 15.000-150.000+. Details unter /services/build."
       },
       {
         "id": "magazine",
@@ -6823,16 +6823,16 @@
     "assetsCta": "Portfolio ansehen",
     "engineeringLabel": "Asset-Ingenieurwesen",
     "engineeringTitle": "Maßgeschneiderte Software\nfür Ihre Operationen.",
-    "engineeringDesc": "Unternehmen, Investmentfonds, Institutionen: Aegryn entwickelt, deployt und pflegt Ihre Geschäftssoftware. Vertraglich festgelegter Festpreis, vollständiges Kunden-IP-Eigentum, zertifizierungsbereit. Ein Asset, das für Sie und Ihre Investoren arbeitet.",
+    "engineeringDesc": "Unternehmen, Investmentfonds, Institutionen: Aegryn entwickelt, deployt und pflegt Ihre Geschäftssoftware. Vollständiges Kunden-IP-Eigentum, zertifizierungsbereit. Ein Asset, das für Sie und Ihre Investoren arbeitet.",
     "engineeringCta": "Ingenieurwesen entdecken"
   },
   "buildEngineeringStrip": {
     "label": "Asset-Ingenieurwesen",
-    "title": "Festpreis. Vollständiges IP-Eigentum. Zertifizierungsbereit.",
-    "chip1": "VERTRAGLICH FESTGELEGTER FESTPREIS",
-    "chip2": "VOLLSTÄNDIGES KUNDEN-IP-EIGENTUM",
-    "chip3": "ZERTIFIZIERUNGSBEREIT",
-    "chip4": "NULL ANBIETERABHÄNGIGKEIT",
+    "title": "Vollständiges IP-Eigentum. Zertifizierungsbereit.",
+    "chip1": "VOLLSTÄNDIGES KUNDEN-IP-EIGENTUM",
+    "chip2": "ZERTIFIZIERUNGSBEREIT",
+    "chip3": "NULL ANBIETERABHÄNGIGKEIT",
+    "chip4": "ZERTIFIZIERBARER CUSTOM CODE",
     "cta": "Asset-Ingenieurwesen ansehen"
   },
   "techStack": {
@@ -8179,6 +8179,53 @@
       "p2": "Beraten ohne zu bauen bedeutet, eine Karte ohne das Territorium zu liefern. Bauen ohne zu beraten bedeutet, ohne Kurs zu handeln. Transagieren ohne vorzubereiten bedeutet, ohne Bewertung zu verkaufen. Rekrutieren ohne Strategie bedeutet, ohne aufzubauen zu füllen. Informieren ohne zu handeln bedeutet, zu kommentieren ohne zu agieren.\n\nBei Aegryn stärkt jede Disziplin die nächste. Diese Verkettung schafft dauerhaften Wert für unsere Kunden und für uns selbst.\n\nFinanzpartner haben es zuerst verstanden: Unternehmer wollen nicht nur Kapital. Sie wollen einen anspruchsvollen Blick und ein Netzwerk. Aegryn trägt diese Überzeugung über den gesamten unternehmerischen Weg — vom Aufbau des Wertes bis zu seiner Realisierung.",
       "p3Label": "VERANKERT IN DER SCHWEIZ",
       "p3": "Saint-Sulpice, Waadt. Eine Schweizer Basis für europäische Mandate. Die Strenge eines führenden Finanzplatzes, die Neutralität eines vertrauenswürdigen Standorts."
+    },
+    "workWith": {
+      "label": "MIT AEGRYN ZUSAMMENARBEITEN",
+      "title": "Fünf Disziplinen.\nEine Beziehung.",
+      "sub": "Beratung, Engineering, Transaktion, Talent, Wissen — in einem Unternehmen integriert, nach denselben Standards.",
+      "items": [
+        {
+          "key": "accompagner",
+          "num": "01",
+          "title": "BEGLEITEN",
+          "desc": "Strategie-, Technologie- und M&A-Beratung. Wir handeln dort, wo Entscheidungen die Trajektorie definieren — von der Governance bis zum Kapital.",
+          "cta": "Advisory entdecken",
+          "href": "/advisory"
+        },
+        {
+          "key": "construire",
+          "num": "02",
+          "title": "BAUEN",
+          "desc": "Nachhaltige digitale Assets, vollständiges Kunden-IP-Eigentum, zertifizierungsbereit. Wir entwickeln SaaS, Apps und Protokolle — für Sie und unsere eigenen Portfolios.",
+          "cta": "Asset Engineering",
+          "href": "/services/build"
+        },
+        {
+          "key": "transmettre",
+          "num": "03",
+          "title": "ÜBERTRAGEN",
+          "desc": "Zertifizierung und Verkauf von Tech-Assets in einem vertraulichen Kreis qualifizierter Erwerber. Ein strukturierter, bewerteter Prozess ohne öffentliche Exposition.",
+          "cta": "Plattform erkunden",
+          "href": "/transact"
+        },
+        {
+          "key": "recruter",
+          "num": "04",
+          "title": "REKRUTIEREN",
+          "desc": "Executive-, Tech- und Innovationsprofile. CTO bis CISO — wir vermitteln die Talente, die Transformation umsetzen. Vertraulich, vorqualifiziert, 48h Reaktion.",
+          "cta": "Mandat einreichen",
+          "href": "/talent"
+        },
+        {
+          "key": "informer",
+          "num": "05",
+          "title": "INFORMIEREN",
+          "desc": "Quartalsmagazin, Tiefenanalysen und Marktbeobachtung. Wir dokumentieren, was wir beobachten und erleben.",
+          "cta": "Magazin lesen",
+          "href": "/magazine"
+        }
+      ]
     }
   }
 }

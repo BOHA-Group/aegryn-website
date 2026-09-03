@@ -281,6 +281,47 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Travailler avec Aegryn — 5 disciplines */}
+      <section className="border-b border-ag-border">
+        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
+            / {ta('workWith.label')}
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+            <h2
+              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] whitespace-pre-line"
+              style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+            >
+              {ta('workWith.title')}
+            </h2>
+            <p className="text-[15px] text-ag-gray leading-relaxed self-end">
+              {ta('workWith.sub')}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-px bg-ag-border">
+            {([0, 1, 2, 3, 4] as const).map((i) => (
+              <div key={i} className="bg-ag-white p-8 flex flex-col gap-5">
+                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-gray-light">
+                  {ta(`workWith.items.${i}.num`)}
+                </p>
+                <p className="font-sans font-bold text-ag-black text-[13px] tracking-[0.12em] leading-none">
+                  {ta(`workWith.items.${i}.title`)}
+                </p>
+                <p className="text-[13px] text-ag-gray leading-relaxed flex-1">
+                  {ta(`workWith.items.${i}.desc`)}
+                </p>
+                <Link
+                  href={ta(`workWith.items.${i}.href`) as never}
+                  className="inline-flex items-center gap-2 font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-4 py-2.5 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all self-start"
+                >
+                  {ta(`workWith.items.${i}.cta`)} <ArrowUpRight size={12} />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Swiss */}
       <section className="bg-ag-navy py-28 px-6 md:px-12 border-b border-ag-navy">
         <div className="max-w-7xl mx-auto">

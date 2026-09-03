@@ -637,7 +637,7 @@
       },
       {
         "title": "BUILD",
-        "desc": "Lasting digital assets, at a fixed price, fully owned by the client. Designed to increase company value, not to be replaced."
+        "desc": "Lasting digital assets, fully owned by the client. Designed to increase company value, not to be replaced."
       },
       {
         "title": "TRANSACT",
@@ -4070,7 +4070,7 @@
     },
     "hero": {
       "label": "Aegryn Network",
-      "title": "Trusted partners\n& experts.",
+      "title": "Trusted partners\nand expertise.",
       "desc": "Aegryn relies on a curated network of partners and experts to reinforce every dimension of our advisory offering: strategy, technology, transactions.",
       "stat1": "Qualified partners",
       "stat2": "Mobilisable experts",
@@ -4288,7 +4288,7 @@
       "items": [
         {
           "num": "01",
-          "title": "Fixed price. No overruns.",
+          "title": "No overruns. No surprises.",
           "desc": "The fixed fee is defined and signed at the end of Discovery, before the first commit. If scope changes, an amendment is signed before execution. No surprise invoicing."
         },
         {
@@ -4448,16 +4448,16 @@
       "note": "Aegryn maintenance ensures the asset retains or improves its grade at every cycle: the condition for an exit to remain possible at any time."
     },
     "fees": {
-      "label": "Fixed price",
-      "title": "Fixed fee. No surprises.",
+      "label": "Fees",
+      "title": "Transparent fees. No surprises.",
       "items": [
         {
           "title": "Diagnostic (included)",
           "desc": "1 to 2 weeks. Certifiable specification. Build price defined and signed. No commitment before fee agreement is signed.",
-          "format": "Included in total fixed fee"
+          "format": "Included in total fee"
         },
         {
-          "title": "Design (fixed fee)",
+          "title": "Design (locked price)",
           "desc": "Price locked at Discovery. No overruns. No time & materials. If scope changes: amendment signed before execution. Indicative ranges (excl. Discovery): B2B SaaS from €25,000 excl. VAT, B2C mobile app from €35,000 excl. VAT, Native AI product from €40,000 excl. VAT.",
           "format": "Fixed fee defined at Discovery"
         },
@@ -5757,7 +5757,7 @@
           "account"
         ],
         "q": "Do you build custom assets?",
-        "a": "Yes, Aegryn designs custom tech assets (SaaS, platforms, tools) for entrepreneurs and institutions. Fixed price signed at discovery phase, custom code only (no no-code), IP fully transferred to client, certification-ready from day 1. Timeline: 10-16 weeks. Indicative range: CHF 15,000-150,000+. Details at /services/build."
+        "a": "Yes, Aegryn designs custom tech assets (SaaS, platforms, tools) for entrepreneurs and institutions. Price locked at discovery phase, custom code only (no no-code), IP fully transferred to client, certification-ready from day 1. Timeline: 10-16 weeks. Indicative range: CHF 15,000-150,000+. Details at /services/build."
       },
       {
         "id": "magazine",
@@ -6816,16 +6816,16 @@
     "assetsCta": "View the portfolio",
     "engineeringLabel": "Asset Engineering",
     "engineeringTitle": "Custom software\nfor your operations.",
-    "engineeringDesc": "Enterprises, investment funds, institutions: Aegryn designs, deploys and maintains your business software. Contractualised fixed price, full client IP ownership, certification-ready. An asset that works for you and your investors.",
+    "engineeringDesc": "Enterprises, investment funds, institutions: Aegryn designs, deploys and maintains your business software. Full client IP ownership, certification-ready. An asset that works for you and your investors.",
     "engineeringCta": "Discover Engineering"
   },
   "buildEngineeringStrip": {
     "label": "Asset Engineering",
-    "title": "Fixed price. Full IP ownership. Certification-ready.",
-    "chip1": "CONTRACTUALISED FIXED PRICE",
-    "chip2": "FULL CLIENT IP OWNERSHIP",
-    "chip3": "CERTIFICATION-READY",
-    "chip4": "ZERO VENDOR DEPENDENCY",
+    "title": "Full IP ownership. Certification-ready.",
+    "chip1": "FULL CLIENT IP OWNERSHIP",
+    "chip2": "CERTIFICATION-READY",
+    "chip3": "ZERO VENDOR DEPENDENCY",
+    "chip4": "CERTIFIABLE CUSTOM CODE",
     "cta": "See asset engineering"
   },
   "techStack": {
@@ -8013,6 +8013,53 @@
       "p2": "Advising without building is delivering a map without the territory. Building without advising is executing without direction. Transacting without preparing is selling without valuing. Recruiting without strategy is filling without building. Publishing without doing is commenting without acting.\n\nAt Aegryn, each discipline strengthens the next. This chain is what creates lasting value for our clients and for ourselves.\n\nFinancial partners understood it first: entrepreneurs don't just want capital. They want an exacting perspective and a network. Aegryn carries this same conviction across the entire entrepreneurial journey — from building value to realising it.",
       "p3Label": "ANCHORED IN SWITZERLAND",
       "p3": "Saint-Sulpice, Vaud. A Swiss base for European missions. The rigour of a leading financial centre, the neutrality of a trusted jurisdiction."
+    },
+    "workWith": {
+      "label": "WORKING WITH AEGRYN",
+      "title": "Five disciplines.\nOne relationship.",
+      "sub": "Advisory, engineering, transaction, talent, knowledge — integrated in one group, held to the same standards.",
+      "items": [
+        {
+          "key": "accompagner",
+          "num": "01",
+          "title": "ADVISE",
+          "desc": "Strategy, technology and M&A advisory. We intervene where decisions define trajectory — from governance to capital, complementing financial partners.",
+          "cta": "Discover Advisory",
+          "href": "/advisory"
+        },
+        {
+          "key": "construire",
+          "num": "02",
+          "title": "BUILD",
+          "desc": "Durable digital assets, full client IP ownership, certification-ready. We design and operate SaaS, apps and protocols — for you and our own portfolios.",
+          "cta": "See Asset Engineering",
+          "href": "/services/build"
+        },
+        {
+          "key": "transmettre",
+          "num": "03",
+          "title": "TRANSFER",
+          "desc": "Certification and sale of tech assets within a confidential circle of qualified acquirers. A structured, graded process with no public exposure.",
+          "cta": "Explore the platform",
+          "href": "/transact"
+        },
+        {
+          "key": "recruter",
+          "num": "04",
+          "title": "RECRUIT",
+          "desc": "Executive, tech and innovation profiles. CTO to CISO — we place the talent that drives transformation. Confidential, pre-qualified, 48h response.",
+          "cta": "Submit a mandate",
+          "href": "/talent"
+        },
+        {
+          "key": "informer",
+          "num": "05",
+          "title": "INFORM",
+          "desc": "Quarterly magazine, in-depth articles and market intelligence. We document what we observe and live — without spin.",
+          "cta": "Read the Magazine",
+          "href": "/magazine"
+        }
+      ]
     }
   }
 }

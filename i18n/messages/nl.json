@@ -637,7 +637,7 @@
       },
       {
         "title": "BOUWEN",
-        "desc": "Duurzame digitale assets, tegen vaste prijs, volledig eigendom van de klant. Ontworpen om de bedrijfswaarde te verhogen, niet om vervangen te worden."
+        "desc": "Duurzame digitale assets, tegen volledig eigendom van de klant. Ontworpen om de bedrijfswaarde te verhogen, niet om vervangen te worden."
       },
       {
         "title": "OVERDRAGEN",
@@ -4071,7 +4071,7 @@
     },
     "hero": {
       "label": "Aegryn Netwerk",
-      "title": "Betrouwbare partners\n& experts.",
+      "title": "Vertrouwde partners\nen expertise.",
       "desc": "Aegryn steunt op een zorgvuldig geselecteerd netwerk van partners en experts om elke dimensie van ons adviesdiensten te versterken: strategie, technologie, transacties.",
       "stat1": "Gekwalificeerde partners",
       "stat2": "Mobiliseerbare experts",
@@ -4464,7 +4464,7 @@
       "note": "Aegryn maintenance ensures the asset retains or improves its grade at every cycle: the condition for an exit to remain possible at any time."
     },
     "fees": {
-      "label": "Fixed price",
+      "label": "Vaste prijs",
       "title": "Fixed fee. No surprises.",
       "items": [
         {
@@ -6832,16 +6832,16 @@
     "assetsCta": "View the portfolio",
     "engineeringLabel": "Asset Engineering",
     "engineeringTitle": "Custom software\nfor your operations.",
-    "engineeringDesc": "Enterprises, investment funds, institutions: Aegryn designs, deploys and maintains your business software. Contractualised fixed price, full client IP ownership, certification-ready. An asset that works for you and your investors.",
+    "engineeringDesc": "Ondernemingen, investeringsfondsen, instellingen: Aegryn ontwerpt, implementeert en onderhoudt uw bedrijfssoftware. Volledige IP-eigendom klant, certificeringsklaar. Een asset dat werkt voor u en uw investeerders.",
     "engineeringCta": "Discover Engineering"
   },
   "buildEngineeringStrip": {
     "label": "Asset Engineering",
-    "title": "Fixed price. Full IP ownership. Certification-ready.",
-    "chip1": "CONTRACTUALISED FIXED PRICE",
-    "chip2": "FULL CLIENT IP OWNERSHIP",
-    "chip3": "CERTIFICATION-READY",
-    "chip4": "ZERO VENDOR DEPENDENCY",
+    "title": "Volledige IP-eigendom. Certificeringsklaar.",
+    "chip1": "VOLLEDIGE IP-EIGENDOM KLANT",
+    "chip2": "CERTIFICERINGSKLAAR",
+    "chip3": "NUL LEVERANCIERSAFHANKELIJKHEID",
+    "chip4": "CERTIFICEERBARE MAATCODE",
     "cta": "See asset engineering"
   },
   "techStack": {
@@ -8029,6 +8029,53 @@
       "p2": "Adviseren zonder te bouwen is een kaart leveren zonder het grondgebied. Bouwen zonder te adviseren is uitvoeren zonder koers. Transacteren zonder voor te bereiden is verkopen zonder te waarderen. Rekruteren zonder strategie is invullen zonder te bouwen. Informeren zonder te doen is commentariëren zonder te handelen.\n\nBij Aegryn versterkt elke discipline de volgende. Dit aaneenketenen creëert duurzame waarde voor onze klanten en voor onszelf.\n\nFinanciële partners begrepen het als eersten: ondernemers willen niet alleen kapitaal. Ze willen een kritische blik en een netwerk. Aegryn draagt dezelfde overtuiging door het volledige ondernemerstraject — van het opbouwen van waarde tot de realisatie ervan.",
       "p3Label": "VERANKERD IN ZWITSERLAND",
       "p3": "Saint-Sulpice, Vaud. Een Zwitserse basis voor Europese mandaten. De strengheid van een toonaangevend financieel centrum, de neutraliteit van een betrouwbare jurisdictie."
+    },
+    "workWith": {
+      "label": "WERKEN MET AEGRYN",
+      "title": "Vijf disciplines.\nÉén relatie.",
+      "sub": "Advisory, engineering, transactie, talent, kennis — geïntegreerd in één groep, met dezelfde standaarden.",
+      "items": [
+        {
+          "key": "accompagner",
+          "num": "01",
+          "title": "BEGELEIDEN",
+          "desc": "Strategie-, technologie- en M&A-advisory. Wij treden op waar beslissingen de koers bepalen — van governance tot kapitaal.",
+          "cta": "Advisory ontdekken",
+          "href": "/advisory"
+        },
+        {
+          "key": "construire",
+          "num": "02",
+          "title": "BOUWEN",
+          "desc": "Duurzame digitale assets, volledige IP-eigendom klant, klaar voor certificering. Wij ontwikkelen en exploiteren SaaS, apps en protocollen.",
+          "cta": "Asset Engineering",
+          "href": "/services/build"
+        },
+        {
+          "key": "transmettre",
+          "num": "03",
+          "title": "OVERDRAGEN",
+          "desc": "Certificering en verkoop van tech assets in een vertrouwelijke kring van gekwalificeerde kopers. Gestructureerd proces, zonder publieke blootstelling.",
+          "cta": "Platform verkennen",
+          "href": "/transact"
+        },
+        {
+          "key": "recruter",
+          "num": "04",
+          "title": "WERVEN",
+          "desc": "Executive-, tech- en innovatieprofielen. CTO tot CISO — wij plaatsen het talent dat transformatie uitvoert. Vertrouwelijk, pre-gekwalificeerd, 48u respons.",
+          "cta": "Mandaat indienen",
+          "href": "/talent"
+        },
+        {
+          "key": "informer",
+          "num": "05",
+          "title": "INFORMEREN",
+          "desc": "Kwartaalmagazine, diepte-artikelen en marktintelligentie. Wij documenteren wat wij observeren en beleven.",
+          "cta": "Magazine lezen",
+          "href": "/magazine"
+        }
+      ]
     }
   }
 }

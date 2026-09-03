@@ -637,7 +637,7 @@
       },
       {
         "title": "COSTRUIRE",
-        "desc": "Asset digitali duraturi, a prezzo fisso, totalmente di proprietà del cliente. Progettati per valorizzare l'azienda, non per essere sostituiti."
+        "desc": "Asset digitali duraturi, totalmente di proprietà del cliente. Progettati per valorizzare l'azienda, non per essere sostituiti."
       },
       {
         "title": "TRASMETTERE",
@@ -4071,7 +4071,7 @@
     },
     "hero": {
       "label": "Rete Aegryn",
-      "title": "Partner ed esperti\ndi fiducia.",
+      "title": "Partner di fiducia\ned expertise.",
       "desc": "Aegryn si avvale di una rete selezionata di partner ed esperti per rafforzare ogni dimensione della nostra offerta di consulenza: strategia, tecnologia, transazioni.",
       "stat1": "Partner qualificati",
       "stat2": "Esperti mobilizzabili",
@@ -4118,8 +4118,8 @@
   },
   "build_service": {
     "meta": {
-      "title": "Sviluppo di asset digitali a prezzo fisso - Aegryn",
-      "desc": "Asset digitali a prezzo fisso: SaaS B2B, IA, app mobile. Documentazione completa, pronto per certificazione. Zero sforamenti, valorizzabile dal primo giorno."
+      "title": "Sviluppo di asset digitali su misura - Aegryn",
+      "desc": "Asset digitali su misura: SaaS B2B, IA, app mobile. Documentazione completa, pronto per certificazione. Zero sforamenti, valorizzabile dal primo giorno."
     },
     "label": "Ingegneria — Software su misura",
     "title": "Aegryn costruisce il software\ndelle vostre operazioni.",
@@ -4292,8 +4292,8 @@
       "items": [
         {
           "num": "01",
-          "title": "Prezzo fisso. Nessuno sforamento.",
-          "desc": "Il prezzo fisso viene definito e firmato al termine del Discovery, prima del primo commit. Se lo scope cambia, viene firmato un addendum prima dell'esecuzione. Nessuna fattura a sorpresa."
+          "title": "Nessuno sforamento. Nessuna sorpresa.",
+          "desc": "Il prezzo viene definito e firmato al termine del Discovery, prima del primo commit. Se lo scope cambia, viene firmato un addendum prima dell'esecuzione. Nessuna fattura a sorpresa."
         },
         {
           "num": "02",
@@ -4321,7 +4321,7 @@
         "Nessuna garanzia sul valore finale"
       ],
       "aegrynItems": [
-        "Prezzo fisso definito al Discovery",
+        "Prezzo bloccato al Discovery",
         "Milestone misurabili per sprint",
         "Sforamento scope assorbito da Aegryn",
         "Documentazione tecnica completa inclusa",
@@ -4410,8 +4410,8 @@
       "steps": [
         {
           "num": "01",
-          "title": "Diagnostic & Prezzo Fisso",
-          "desc": "Definizione della proposta di valore, mercato target, stack e piano di uscita. Output: capitolato + accordo a prezzo fisso firmato. Durata: 1-2 settimane. Costo: incluso nel prezzo fisso totale."
+          "title": "Diagnostic & Pianificazione",
+          "desc": "Definizione della proposta di valore, mercato target, stack e piano di uscita. Output: capitolato + accordo a prezzo bloccato firmato. Durata: 1-2 settimane. Costo: incluso nel prezzo totale."
         },
         {
           "num": "02",
@@ -4452,18 +4452,18 @@
       "note": "La manutenzione Aegryn garantisce che l'asset conservi o migliori il suo grade."
     },
     "fees": {
-      "label": "Prezzo fisso",
-      "title": "Prezzo fisso. Nessuna sorpresa.",
+      "label": "Onorari",
+      "title": "Onorari trasparenti. Nessuna sorpresa.",
       "items": [
         {
           "title": "Diagnostic (incluso)",
           "desc": "1-2 settimane. Capitolato certificabile. Prezzo di build definito e firmato. Nessun impegno prima della firma dell'accordo.",
-          "format": "Incluso nel prezzo fisso totale"
+          "format": "Incluso nel prezzo totale"
         },
         {
-          "title": "Progettazione (prezzo fisso)",
+          "title": "Progettazione (prezzo bloccato)",
           "desc": "Prezzo bloccato al Discovery. Nessuno sforamento. Nessun tempo e materiale. Se lo scope cambia: addendum firmato prima dell'esecuzione. Fasce indicative (senza Discovery): SaaS B2B semplice da 25.000€ IVA esclusa, App mobile B2C da 35.000€ IVA esclusa, Prodotto IA nativo da 40.000€ IVA esclusa.",
-          "format": "Prezzo fisso definito al Discovery"
+          "format": "Prezzo definito e firmato al Discovery"
         },
         {
           "title": "Manutenzione (abbonamento)",
@@ -6823,16 +6823,16 @@
     "assetsCta": "Vedere il portafoglio",
     "engineeringLabel": "Ingegneria degli asset",
     "engineeringTitle": "Software su misura\nper le vostre operazioni.",
-    "engineeringDesc": "Aziende, fondi di investimento, istituzioni: Aegryn progetta, distribuisce e mantiene i vostri software aziendali. Prezzo fisso contrattualizzato, proprietà IP totale del cliente, pronto per la certificazione. Un asset che lavora per voi e per i vostri investitori.",
+    "engineeringDesc": "Imprese, fondi di investimento, istituzioni: Aegryn progetta, distribuisce e mantiene il vostro software aziendale. Piena proprietà IP del cliente, pronto per la certificazione. Un asset che lavora per voi e i vostri investitori.",
     "engineeringCta": "Scoprire l'ingegneria"
   },
   "buildEngineeringStrip": {
     "label": "Ingegneria degli asset",
-    "title": "Prezzo fisso. Proprietà IP totale. Pronto per la certificazione.",
-    "chip1": "PREZZO FISSO CONTRATTUALIZZATO",
-    "chip2": "PROPRIETÀ IP TOTALE CLIENTE",
-    "chip3": "PRONTO PER LA CERTIFICAZIONE",
-    "chip4": "ZERO DIPENDENZA DA FORNITORE",
+    "title": "Piena proprietà IP. Pronto per la certificazione.",
+    "chip1": "PIENA PROPRIETÀ IP DEL CLIENTE",
+    "chip2": "PRONTO PER CERTIFICAZIONE",
+    "chip3": "ZERO DIPENDENZA FORNITORE",
+    "chip4": "CODICE PERSONALIZZATO CERTIFICABILE",
     "cta": "Vedere la progettazione di asset"
   },
   "techStack": {
@@ -8016,6 +8016,53 @@
       "p2": "Consigliare senza costruire significa consegnare una mappa senza il territorio. Costruire senza consigliare significa eseguire senza direzione. Transigere senza preparare significa vendere senza valorizzare. Reclutare senza strategia significa colmare senza costruire. Informare senza fare significa commentare senza agire.\n\nIn Aegryn, ogni disciplina rafforza la successiva. Questa catena crea valore duraturo per i nostri clienti e per noi stessi.\n\nI partner finanziari l'hanno capito per primi: gli imprenditori non vogliono solo capitale. Vogliono uno sguardo esigente e una rete. Aegryn porta questa stessa convinzione lungo l'intero percorso imprenditoriale — dalla costruzione del valore alla sua realizzazione.",
       "p3Label": "ANCORATO IN SVIZZERA",
       "p3": "Saint-Sulpice, Vaud. Una base svizzera per mandati europei. Il rigore di una piazza finanziaria di riferimento, la neutralità di un territorio di fiducia."
+    },
+    "workWith": {
+      "label": "LAVORARE CON AEGRYN",
+      "title": "Cinque discipline.\nUna relazione.",
+      "sub": "Advisory, ingegneria, transazione, talento, conoscenza — integrati in un unico gruppo, con gli stessi standard.",
+      "items": [
+        {
+          "key": "accompagner",
+          "num": "01",
+          "title": "ACCOMPAGNARE",
+          "desc": "Advisory in strategia, tecnologia e M&A. Interveniamo dove le decisioni definiscono la traiettoria — dalla governance al capitale.",
+          "cta": "Scoprire Advisory",
+          "href": "/advisory"
+        },
+        {
+          "key": "construire",
+          "num": "02",
+          "title": "COSTRUIRE",
+          "desc": "Asset digitali duraturi, piena proprietà IP del cliente, pronti per la certificazione. Progettiamo e operiamo SaaS, app e protocolli.",
+          "cta": "Vedere Asset Engineering",
+          "href": "/services/build"
+        },
+        {
+          "key": "transmettre",
+          "num": "03",
+          "title": "TRASFERIRE",
+          "desc": "Certificazione e cessione di asset tech in un circolo riservato di acquirenti qualificati. Processo strutturato, senza esposizione pubblica.",
+          "cta": "Esplorare la piattaforma",
+          "href": "/transact"
+        },
+        {
+          "key": "recruter",
+          "num": "04",
+          "title": "RECLUTARE",
+          "desc": "Profili executive, tech e innovazione. CTO a CISO — collochiamo i talenti che guidano la trasformazione. Riservato, pre-qualificati, 48h risposta.",
+          "cta": "Inviare un mandato",
+          "href": "/talent"
+        },
+        {
+          "key": "informer",
+          "num": "05",
+          "title": "INFORMARE",
+          "desc": "Rivista trimestrale, articoli di fondo e intelligence di mercato. Documentiamo ciò che osserviamo e viviamo.",
+          "cta": "Leggere la Rivista",
+          "href": "/magazine"
+        }
+      ]
     }
   }
 }

@@ -178,20 +178,14 @@ export default function NetworkContent() {
   const [activeDimension, setActiveDimension] = useState<DimensionKey | 'all'>('all')
   const [activeDomain, setActiveDomain]       = useState<string>('strategy')
 
-  const visibleDomains = activeDimension === 'all'
-    ? EXPERT_DOMAINS
-    : EXPERT_DOMAINS.filter(d => d.dimension === activeDimension || d.dimension === 'all')
+  const visibleDomains = EXPERT_DOMAINS
 
   const filteredExpertise = activeDimension === 'all'
     ? EXPERTISE_CARDS
     : EXPERTISE_CARDS.filter(c => c.dimension === activeDimension)
 
   function handleDomainSelect(domainKey: string) {
-    setActiveDomain(domainKey)
-    const found = EXPERT_DOMAINS.find(d => d.domainKey === domainKey)
-    if (found && found.dimension !== 'all') {
-      setActiveDimension(found.dimension as DimensionKey)
-    }
+    setActiveDomain(prev => prev === domainKey ? 'strategy' : domainKey)
   }
 
   return (
@@ -284,7 +278,7 @@ export default function NetworkContent() {
               {DIMENSIONS.map(d => (
                 <button
                   key={d.key}
-                  onClick={() => { setActiveDimension(d.key); setActiveDomain(d.key === 'all' ? 'strategy' : d.key) }}
+                  onClick={() => { setActiveDimension(d.key); if (d.key !== 'all') setActiveDomain(d.key) }}
                   className={[
                     'px-4 py-2 font-sans font-semibold text-[11px] uppercase tracking-[0.14em] border transition-colors',
                     activeDimension === d.key

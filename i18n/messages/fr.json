@@ -4002,7 +4002,7 @@
     },
     "hero": {
       "label": "Réseau Aegryn",
-      "title": "Partenaires & experts\nde confiance.",
+      "title": "Partenaires de confiance\net expertises.",
       "desc": "Aegryn s'appuie sur un réseau sélectionné de partenaires et d'experts pour renforcer chaque dimension de notre offre de conseil : stratégie, technologie, transactions.",
       "stat1": "Partenaires qualifiés",
       "stat2": "Experts mobilisables",
@@ -4049,8 +4049,8 @@
   },
   "build_service": {
     "meta": {
-      "title": "Conception d'actifs numériques à forfait fixe - Aegryn",
-      "desc": "Actifs numériques à forfait fixe : SaaS B2B, IA, app mobile. Documentation complète, prêt pour certification. Zéro dépassement, valorisable dès le premier jour."
+      "title": "Conception d'actifs numériques sur-mesure - Aegryn",
+      "desc": "Actifs numériques sur-mesure : : SaaS B2B, IA, app mobile. Documentation complète, prêt pour certification. Zéro dépassement, valorisable dès le premier jour."
     },
     "label": "Conception — Logiciels sur mesure",
     "title": "Aegryn construit le logiciel\nde vos opérations.",
@@ -4248,7 +4248,7 @@
         "Aucune garantie sur la valeur finale"
       ],
       "aegrynItems": [
-        "Forfait fixe défini au Discovery",
+        "Prix verrouillé au Discovery",
         "Jalons mesurables par sprint",
         "Dépassement périmètre absorbé par Aegryn",
         "Documentation technique complète incluse",
@@ -4337,7 +4337,7 @@
       "steps": [
         {
           "num": "01",
-          "title": "Diagnostic & Forfait",
+          "title": "Diagnostic & Cadrage",
           "desc": "Définition de la proposition de valeur, du marché cible, de la stack et du plan de sortie. Output : cahier des charges + prix forfaitaire signé. Durée : 1 à 2 semaines. Coût : inclus dans le forfait total."
         },
         {
@@ -4380,7 +4380,7 @@
     },
     "fees": {
       "label": "Honoraires",
-      "title": "Forfait fixe. Aucune surprise.",
+      "title": "Honoraires transparents. Aucune surprise.",
       "items": [
         {
           "title": "Diagnostic (inclus)",
@@ -4388,9 +4388,9 @@
           "format": "Inclus dans le forfait total"
         },
         {
-          "title": "Conception (forfait fixe)",
+          "title": "Conception (prix verrouillé)",
           "desc": "Prix verrouillé au Discovery. Aucun dépassement. Aucune régie. Si le périmètre évolue : avenant signé avant exécution. Fourchettes indicatives (hors Discovery) : SaaS B2B simple à partir de 25 000€ HT, App mobile B2C à partir de 35 000€ HT, Produit IA natif à partir de 40 000€ HT.",
-          "format": "Forfait fixe défini au Discovery"
+          "format": "Prix verrouillé au Discovery"
         },
         {
           "title": "Maintenance (abonnement)",
@@ -6746,16 +6746,16 @@
     "assetsCta": "Voir le portefeuille",
     "engineeringLabel": "Ingénierie d'actifs",
     "engineeringTitle": "Logiciels sur-mesure\npour vos opérations.",
-    "engineeringDesc": "Entreprises, fonds d'investissement, institutions : Aegryn conçoit, déploie et maintient vos logiciels métier. Prix fixe contractualisé, propriété IP totale client, prêt pour la certification. Un actif qui travaille pour vous et vos investisseurs.",
+    "engineeringDesc": "Entreprises, fonds d'investissement, institutions : Aegryn conçoit, déploie et maintient vos logiciels métier. Propriété IP totale client, prêt pour la certification. Un actif qui travaille pour vous et vos investisseurs.",
     "engineeringCta": "Découvrir l'ingénierie"
   },
   "buildEngineeringStrip": {
     "label": "Ingénierie d'actifs",
-    "title": "Forfait fixe. Propriété IP totale. Prêt pour la certification.",
-    "chip1": "PRIX FIXE CONTRACTUALISÉ",
-    "chip2": "PROPRIÉTÉ IP TOTALE CLIENT",
-    "chip3": "PRÊT POUR LA CERTIFICATION",
-    "chip4": "ZÉRO DÉPENDANCE ÉDITEUR",
+    "title": "Propriété IP totale. Prêt pour la certification.",
+    "chip1": "PROPRIÉTÉ IP TOTALE CLIENT",
+    "chip2": "PRÊT POUR LA CERTIFICATION",
+    "chip3": "ZÉRO DÉPENDANCE ÉDITEUR",
+    "chip4": "CODE SUR-MESURE CERTIFIABLE",
     "cta": "Voir la conception d'actifs"
   },
   "techStack": {
@@ -7872,6 +7872,53 @@
       "p2": "Conseiller sans construire, c'est livrer une carte sans le territoire. Construire sans conseiller, c'est exécuter sans cap. Transiger sans préparer, c'est vendre sans valoriser. Recruter sans stratégie, c'est combler sans construire. Informer sans faire, c'est commenter sans agir.\n\nChez Aegryn, chaque discipline renforce la suivante. C'est ce chaînage qui crée de la valeur durable pour nos clients et pour nous-mêmes.\n\nLes partenaires financiers l'ont compris les premiers : les entrepreneurs ne veulent pas seulement du capital. Ils veulent un regard exigeant et un réseau. Aegryn porte cette même conviction sur la durée entière du parcours entrepreneurial — de la construction de la valeur à sa réalisation.",
       "p3Label": "ANCRÉ EN SUISSE",
       "p3": "Saint-Sulpice, Vaud. Un ancrage suisse pour des missions européennes. La rigueur d'une place financière de référence, la neutralité d'un territoire de confiance."
+    },
+    "workWith": {
+      "label": "TRAVAILLER AVEC AEGRYN",
+      "title": "Cinq disciplines.\nUne seule relation.",
+      "sub": "Conseil, construction, transaction, talent, connaissance — intégrés dans un même groupe, portés par les mêmes standards.",
+      "items": [
+        {
+          "key": "accompagner",
+          "num": "01",
+          "title": "ACCOMPAGNER",
+          "desc": "Conseil en stratégie, transformation technologique et M&A. Nous intervenons là où les décisions définissent la trajectoire — de la gouvernance au capital, en complémentarité des partenaires financiers.",
+          "cta": "Découvrir l'Advisory",
+          "href": "/advisory"
+        },
+        {
+          "key": "construire",
+          "num": "02",
+          "title": "CONSTRUIRE",
+          "desc": "Actifs numériques durables, propriété totale du client, prêts pour la certification. Nous concevons et opérons des SaaS, apps et protocoles — pour vous, et pour nos propres portefeuilles.",
+          "cta": "Voir l'Asset Engineering",
+          "href": "/services/build"
+        },
+        {
+          "key": "transmettre",
+          "num": "03",
+          "title": "TRANSMETTRE",
+          "desc": "Certification et cession d'actifs tech dans un cercle confidentiel d'acquéreurs qualifiés. Un processus structuré, gradé, sans exposition publique.",
+          "cta": "Explorer la plateforme",
+          "href": "/transact"
+        },
+        {
+          "key": "recruter",
+          "num": "04",
+          "title": "RECRUTER",
+          "desc": "Profils executive, tech et innovation. Du CTO au CISO, nous plaçons les talents qui exécutent la transformation — en confidentiel, pré-qualifiés, 48h de réponse.",
+          "cta": "Soumettre un mandat",
+          "href": "/talent"
+        },
+        {
+          "key": "informer",
+          "num": "05",
+          "title": "S'INFORMER",
+          "desc": "Magazine trimestriel, articles de fond et veille de marché. Nous documentons ce que nous observons et ce que nous vivons — sans langue de bois.",
+          "cta": "Lire le Magazine",
+          "href": "/magazine"
+        }
+      ]
     }
   }
 }
