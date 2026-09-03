@@ -78,7 +78,7 @@ export default async function TransactCatalogPage({ params }: Props) {
 
   const sessionDetails = [
     { icon: Calendar, label: ts('date'),     value: ts('dateTbd')       },
-    { icon: Users,    label: ts('format'),   value: ts('formatValue')   }, // eslint-disable-line
+    { icon: Users,    label: ts('format'),   value: ts('formatValue')   },
     { icon: MapPin,   label: ts('location'), value: ts('locationValue') },
   ]
 
