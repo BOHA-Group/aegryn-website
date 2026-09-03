@@ -298,25 +298,13 @@ export default async function AssetPage({ params }: Props) {
               PRESSE
             </p>
 
-            {/* Banner subblink */}
-            <div className="mb-12">
-              <Image
-                src="/images/subblink banner.jpeg"
-                alt="subblink — Analyse contractuelle par IA"
-                width={1200}
-                height={400}
-                className="w-full object-cover"
-                priority
-              />
-            </div>
+            {/* 3 items sur la même ligne */}
+            <div className="flex flex-col md:flex-row gap-8 items-start">
 
-            {/* Ligne : logo partenaire + carte article */}
-            <div className="flex flex-col md:flex-row gap-8 items-start justify-center">
-
-              {/* Bloc logo partenaire */}
-              <div className="shrink-0 flex flex-col items-center gap-3">
-                <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light self-start">Partenaire</p>
-                <div className="border border-ag-border bg-ag-white px-6 py-6 w-[200px] flex flex-col items-center text-center gap-3">
+              {/* 1 — Logo partenaire — référence w-200 */}
+              <div className="shrink-0 flex flex-col gap-3">
+                <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light">Partenaire</p>
+                <div className="border border-ag-border bg-ag-white px-5 py-5 w-[200px] flex flex-col items-center text-center gap-3">
                   <Image
                     src="/images/press-village-justice-logo.png"
                     alt="Village de la Justice — By Legi Team"
@@ -335,12 +323,11 @@ export default async function AssetPage({ params }: Props) {
                 </div>
               </div>
 
-              {/* Carte article style Gala */}
+              {/* 2 — Carte article — w-260 (+30% vs logo) */}
               <div className="shrink-0 flex flex-col gap-3">
                 <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light">Article</p>
-                <div className="border border-ag-border bg-ag-white w-[340px]">
-                  {/* Header carte */}
-                  <div className="bg-ag-navy px-5 py-3 flex items-center gap-2">
+                <div className="border border-ag-border bg-ag-white w-[260px]">
+                  <div className="bg-ag-navy px-5 py-3 flex items-center">
                     <Image
                       src="/images/press-village-justice-logo.png"
                       alt="Village de la Justice"
@@ -349,16 +336,13 @@ export default async function AssetPage({ params }: Props) {
                       className="object-contain brightness-0 invert"
                     />
                   </div>
-                  {/* Corps */}
                   <div className="px-5 py-5 flex flex-col gap-3">
-                    <p className="font-mono text-[8px] tracking-[0.14em] uppercase text-ag-gray-light">
-                      16 juillet 2026
-                    </p>
+                    <p className="font-mono text-[8px] tracking-[0.14em] uppercase text-ag-gray-light">16 juillet 2026</p>
                     <p className="font-sans font-bold text-[13px] text-ag-black leading-snug">
                       Village de la Justice vous propose de faire auditer en ligne tous vos contrats et d&apos;obtenir un ContractScore
                     </p>
                     <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
-                      ContractScore de A à E, analyse en 60 secondes, verdict <strong>SIGNER ✓ · NÉGOCIER ⚑ · REFUSER ✗</strong>. Contre-propositions rédigées clause par clause. Particuliers, professionnels et avocats.
+                      ContractScore de A à E, analyse en 60 secondes, verdict <strong>SIGNER ✓ · NÉGOCIER ⚑ · REFUSER ✗</strong>. Contre-propositions rédigées clause par clause.
                     </p>
                     <a
                       href="https://www.village-justice.com/articles/village-justice-vous-propose-faire-auditer-tous-vos-contrats-obtenir-score-des,57640.html"
@@ -370,6 +354,18 @@ export default async function AssetPage({ params }: Props) {
                     </a>
                   </div>
                 </div>
+              </div>
+
+              {/* 3 — Banner subblink visible en totalité */}
+              <div className="flex flex-col gap-3 flex-1 min-w-0">
+                <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light">Visuel</p>
+                <Image
+                  src="/images/subblink banner.jpeg"
+                  alt="subblink — Analyse contractuelle par IA"
+                  width={800}
+                  height={533}
+                  className="w-full object-contain"
+                />
               </div>
 
             </div>
