@@ -3356,7 +3356,7 @@
       "notifyEmail": "Uw e-mail",
       "notifyEmailPlaceholder": "oprichter@voorbeeld.com",
       "notifyType": "U bent",
-      "notifyTypeIndividual": "Particulier",
+      "notifyTypeIndividual": "Ondernemer",
       "notifyTypeCompany": "Bedrijf",
       "notifyTypeFund": "Fonds / Family Office",
       "notifyCapacity": "Acquisitiecapaciteit",
@@ -3400,7 +3400,19 @@
         "desc": "Aegryn begeleidt oprichters en leidinggevenden bij de structurering en overdracht van hun digitale assets. Audit, waardering, dataroom, identificatie van kopers, signing.",
         "cta": "Een verkoopsmandaat indienen",
         "ctaHref": "/transact/sell"
-      }
+      },
+      "notifySectorOther": "Overige",
+      "notifySectorOtherPlaceholder": "Geef uw sector op…",
+      "buyer": {
+        "label": "KOPER WORDEN",
+        "title": "Wilt u een tech-actief verwerven?",
+        "desc": "Aegryn identificeert en presenteert u gecertificeerde activa die overeenkomen met uw acquisiteprofiel — sector, ticket, structuur. Een vertrouwelijk proces, voorbehouden aan gekwalificeerde kopers.",
+        "cta": "Meer weten over het proces",
+        "ctaHref": "/transact/how-to-buy"
+      },
+      "upcomingLocked": "Toegang voorbehouden aan gekwalificeerde leden",
+      "upcomingLockedDesc": "Dit gedeelte is toegankelijk na validatie van uw account door het Aegryn-team.",
+      "upcomingClientLink": "Toegang tot de privécatalogus →"
     },
     "sell": {
       "meta": {

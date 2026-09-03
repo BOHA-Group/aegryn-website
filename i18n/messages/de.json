@@ -3356,7 +3356,7 @@
       "notifyEmail": "Ihre E-Mail",
       "notifyEmailPlaceholder": "gründer@beispiel.com",
       "notifyType": "Sie sind",
-      "notifyTypeIndividual": "Privatperson",
+      "notifyTypeIndividual": "Unternehmer",
       "notifyTypeCompany": "Unternehmen",
       "notifyTypeFund": "Fonds / Family Office",
       "notifyCapacity": "Akquisitionskapazität",
@@ -3400,7 +3400,19 @@
         "desc": "Aegryn begleitet Gründer und Führungskräfte bei der Strukturierung und Übertragung ihrer digitalen Assets. Audit, Bewertung, Datenraum, Käuferidentifikation, Signing.",
         "cta": "Verkaufsmandat einreichen",
         "ctaHref": "/transact/sell"
-      }
+      },
+      "notifySectorOther": "Sonstige",
+      "notifySectorOtherPlaceholder": "Ihren Sektor angeben…",
+      "buyer": {
+        "label": "KÄUFER WERDEN",
+        "title": "Möchten Sie ein Tech-Asset erwerben?",
+        "desc": "Aegryn identifiziert und präsentiert Ihnen zertifizierte Assets, die Ihrem Akquisitionsprofil entsprechen — Sektor, Ticket, Struktur. Ein vertraulicher Prozess, reserviert für qualifizierte Käufer.",
+        "cta": "Mehr über den Prozess erfahren",
+        "ctaHref": "/transact/how-to-buy"
+      },
+      "upcomingLocked": "Zugang für qualifizierte Mitglieder vorbehalten",
+      "upcomingLockedDesc": "Dieser Bereich ist nach Validierung Ihres Kontos durch das Aegryn-Team zugänglich.",
+      "upcomingClientLink": "Zugang zum privaten Katalog →"
     },
     "sell": {
       "meta": {

@@ -4,6 +4,7 @@ import { useState }        from 'react'
 import { useTranslations } from 'next-intl'
 import { CheckCircle2, ArrowUpRight } from 'lucide-react'
 import NextLink from 'next/link'
+import { X } from 'lucide-react'
 
 const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
 const labelCls  = 'block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-2'
@@ -11,7 +12,7 @@ const labelCls  = 'block font-sans font-semibold text-[10px] uppercase tracking-
 type AcquirerType = 'individual' | 'company' | 'fund'
 type CapacityRange = '<500k' | '500k-2m' | '2m-10m' | '>10m'
 
-const SECTORS = ['saas', 'fintech', 'healthtech', 'edtech', 'proptech', 'hrtech', 'legaltech', 'ecommerce'] as const
+const SECTORS = ['saas', 'fintech', 'healthtech', 'edtech', 'proptech', 'hrtech', 'legaltech', 'ecommerce', 'marketplaces', 'cybersecurity', 'deeptech', 'mediatech'] as const
 
 function RadioGroup<T extends string>({
   options, value, onChange,
@@ -41,6 +42,7 @@ export default function CatalogNotifyForm({ locale }: { locale: string }) {
   const [acquirerType,  setAcquirerType]  = useState<AcquirerType | ''>('')
   const [capacityRange, setCapacityRange] = useState<CapacityRange | ''>('')
   const [sectors,       setSectors]       = useState<string[]>([])
+  const [sectorOther,   setSectorOther]   = useState('')
   const [loading,       setLoading]       = useState(false)
   const [sent,          setSent]          = useState(false)
   const [error,         setError]         = useState(false)
@@ -54,13 +56,16 @@ export default function CatalogNotifyForm({ locale }: { locale: string }) {
     setLoading(true)
     setError(false)
     try {
+      const allSectors = sectorOther.trim()
+        ? [...sectors, sectorOther.trim()]
+        : sectors
       const res = await fetch('/api/catalog/notify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email,
           acquirer_type:    acquirerType || undefined,
-          sectors_interest: sectors,
+          sectors_interest: allSectors,
           capacity_range:   capacityRange || undefined,
           locale,
         }),
@@ -132,7 +137,33 @@ export default function CatalogNotifyForm({ locale }: { locale: string }) {
                 {s}
               </button>
             ))}
+            {/* Chips "autre" */}
+            <button type="button"
+              onClick={() => setSectorOther(prev => prev === '__open' ? '' : '__open')}
+              className={`border px-3 py-1.5 font-sans text-[11px] uppercase tracking-[0.1em] transition-colors ${
+                sectorOther && sectorOther !== '__open' ? 'border-ag-apex bg-ag-apex/10 text-ag-black' : 'border-ag-border text-ag-gray-light hover:border-ag-black'
+              }`}>
+              {t('notifySectorOther')}
+            </button>
           </div>
+          {/* Champ libre si "autre" activé */}
+          {(sectorOther === '__open' || (sectorOther && sectorOther !== '__open')) && (
+            <div className="relative mt-2">
+              <input
+                type="text"
+                value={sectorOther === '__open' ? '' : sectorOther}
+                onChange={e => setSectorOther(e.target.value || '__open')}
+                placeholder={t('notifySectorOtherPlaceholder')}
+                className={`${inputCls} pr-8`}
+              />
+              {sectorOther && sectorOther !== '__open' && (
+                <button type="button" onClick={() => setSectorOther('')}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 text-ag-gray-light hover:text-ag-black">
+                  <X size={12} />
+                </button>
+              )}
+            </div>
+          )}
         </div>
 
         {error && (

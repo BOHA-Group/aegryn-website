@@ -3356,7 +3356,7 @@
       "notifyEmail": "La sua email",
       "notifyEmailPlaceholder": "fondatore@esempio.com",
       "notifyType": "Lei è",
-      "notifyTypeIndividual": "Privato",
+      "notifyTypeIndividual": "Imprenditore",
       "notifyTypeCompany": "Azienda",
       "notifyTypeFund": "Fondo / Family Office",
       "notifyCapacity": "Capacità di acquisizione",
@@ -3400,7 +3400,19 @@
         "desc": "Aegryn accompagna fondatori e dirigenti nella strutturazione e trasmissione dei loro asset digitali. Audit, valutazione, data room, identificazione degli acquirenti, signing.",
         "cta": "Depositare un mandato di cessione",
         "ctaHref": "/transact/sell"
-      }
+      },
+      "notifySectorOther": "Altro",
+      "notifySectorOtherPlaceholder": "Specifichi il suo settore…",
+      "buyer": {
+        "label": "DIVENTARE ACQUIRENTE",
+        "title": "Desidera acquisire un attivo tech?",
+        "desc": "Aegryn identifica e presenta attivi certificati corrispondenti al suo profilo di acquisizione — settore, ticket, struttura. Un processo riservato, esclusivo per acquirenti qualificati.",
+        "cta": "Scopri di più sul processo",
+        "ctaHref": "/transact/how-to-buy"
+      },
+      "upcomingLocked": "Accesso riservato ai membri qualificati",
+      "upcomingLockedDesc": "Questa sezione è accessibile dopo la convalida del suo account da parte del team Aegryn.",
+      "upcomingClientLink": "Accedere al catalogo privato →"
     },
     "sell": {
       "meta": {

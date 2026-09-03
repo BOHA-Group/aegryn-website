@@ -3482,7 +3482,7 @@
       "notifyEmail": "Your email",
       "notifyEmailPlaceholder": "founder@example.com",
       "notifyType": "You are",
-      "notifyTypeIndividual": "Individual",
+      "notifyTypeIndividual": "Entrepreneur",
       "notifyTypeCompany": "Company",
       "notifyTypeFund": "Fund / Family Office",
       "notifyCapacity": "Acquisition capacity",
@@ -3525,7 +3525,19 @@
         "desc": "Aegryn supports founders and executives in structuring and transferring their digital assets. Audit, valuation, data room, acquirer identification, signing. A discreet and rigorous process.",
         "cta": "Submit a sale mandate",
         "ctaHref": "/transact/sell"
-      }
+      },
+      "notifySectorOther": "Other",
+      "notifySectorOtherPlaceholder": "Specify your sector…",
+      "buyer": {
+        "label": "BECOME A BUYER",
+        "title": "Looking to acquire a tech asset?",
+        "desc": "Aegryn identifies and presents certified assets matching your acquisition profile — sector, ticket, structure. A confidential process, reserved for qualified buyers.",
+        "cta": "Learn more about the process",
+        "ctaHref": "/transact/how-to-buy"
+      },
+      "upcomingLocked": "Access reserved for qualified members",
+      "upcomingLockedDesc": "This section is accessible after your account has been validated by the Aegryn team.",
+      "upcomingClientLink": "Access the private catalogue →"
     },
     "session": {
       "label": "Next session",
