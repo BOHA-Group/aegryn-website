@@ -18,8 +18,8 @@ export default async function PartnerNav({ unreadCount }: { unreadCount: number 
         { href: '/client/partner/certifications', label: t('navCosigning'),          icon: 'Award' },
         { href: '/client/partner/introductions',  label: t('navIntroductions'),       icon: 'Users' },
         { href: '/client/partner/mandates',       label: t('navMandates'),            icon: 'Briefcase' },
-        { href: '/client/partner/subscription',   label: t('navPartnerSubscription'), icon: 'CreditCard' },
-        { href: '/client/partner/expert-profile', label: t('navExpertProfile'),        icon: 'BadgeCheck' },
+        // { href: '/client/partner/subscription',   label: t('navPartnerSubscription'), icon: 'CreditCard' },   // MASQUÉ 2026-09-03 — abonnement fiche expert 89€/mois (parking-lot)
+        // { href: '/client/partner/expert-profile', label: t('navExpertProfile'),        icon: 'BadgeCheck' },  // MASQUÉ 2026-09-03 — publication fiche expert (parking-lot)
       ],
     },
     {

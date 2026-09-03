@@ -13,9 +13,13 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
+/* MASQUÉ 2026-09-03 — Publication fiche expert + abonnement 89€/mois désactivée
+   Voir docs/parking-lot.md § "Fiche Expert & Abonnement partenaire"
+   Pour réactiver : supprimer le redirect ci-dessous */
 export default async function PartnerExpertProfilePage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
+  redirect('/client/partner')
 
   const cookieStore = await cookies()
   const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'

@@ -22,6 +22,9 @@ function fmtDate(d: unknown, locale: string) {
 
 function isActiveCheck(p: string | null) { return p === 'active' }
 
+/* MASQUÉ 2026-09-03 — Abonnement Fiche Expert 89€/mois désactivé
+   Voir docs/parking-lot.md § "Fiche Expert & Abonnement partenaire"
+   Pour réactiver : supprimer le redirect ci-dessous */
 export default async function PartnerSubscriptionPage({
   searchParams,
 }: {
@@ -29,6 +32,7 @@ export default async function PartnerSubscriptionPage({
 }) {
   const user = await getUser()
   if (!user) redirect('/client/login')
+  redirect('/client/partner')
 
   const cookieStore = await cookies()
   const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'

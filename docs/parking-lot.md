@@ -208,6 +208,42 @@ Fonctionnalité non activée, le flux de facturation n'est pas encore opération
 
 ---
 
+## Fiche Expert & Abonnement partenaire (espace /client/partner)
+
+**Archivé le :** 2026-09-03  
+**Statut :** Masqué — redirect vers `/client/partner`, pages et code conservés intacts
+
+### Description
+Module permettant aux partenaires de publier une fiche expert publique sur le site Aegryn contre un abonnement mensuel de 89 €/mois (via Stripe). Inclut un système de parrainage (filleul offre 1 mois au parrain).
+
+### Périmètre masqué
+
+| Élément | Fichier | Mécanisme |
+|---|---|---|
+| Page fiche expert | `app/client/partner/expert-profile/page.tsx` | `redirect('/client/partner')` en tête de fonction |
+| Page abonnement Stripe | `app/client/partner/subscription/page.tsx` | `redirect('/client/partner')` en tête de fonction |
+| Nav partenaire, liens | `app/client/partner/PartnerNav.tsx` lignes 21-22 | Commentés avec date |
+
+### Composants conservés (ne pas supprimer)
+- `app/client/partner/expert-profile/ExpertProfileForm.tsx` — formulaire complet fiche expert
+- `app/client/partner/subscription/SubscribeButtons.tsx` — boutons Stripe Checkout
+- `app/client/partner/subscription/CancelButton.tsx` — annulation abonnement
+- `app/client/partner/subscription/ReferralSection.tsx` — parrainage
+- Tables Supabase : `expert_profiles`, `expert_referrals` (si existantes)
+- Webhook Stripe : `applyReferralReward` dans `/api/webhooks/stripe`
+
+### Ce module est DISTINCT des Auditeurs externes
+- `certifications` (revue de grading par expert externe) = **actif, non masqué** — flux auditeur opérationnel
+- `expert-profile` + `subscription` = publication commerciale fiche + abonnement = **masqué**
+
+### Pour réactiver
+1. Supprimer les deux `redirect('/client/partner')` dans les pages concernées
+2. Décommenter les deux lignes dans `PartnerNav.tsx`
+3. Vérifier que les Payment Links Stripe sont configurés (voir § Liens de paiement Stripe ci-dessus)
+4. Activer les notifications parrainage (voir § Notifications in-app, Parrainage expert ci-dessus)
+
+---
+
 ## �🔵 ARCHIVÉ, À réactiver sur décision
 
 ---
