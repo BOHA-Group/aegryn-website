@@ -4165,28 +4165,52 @@
         {
           "key": "data",
           "title": "Data Layer",
-          "desc": "Ingestion, normalisation et stockage maîtrisé de vos données métier."
+          "desc": "Ingestion, normalisation et stockage maîtrisé de vos données métier.",
+          "tag": "Ingestion · Normalisation · Stockage maîtrisé",
+          "dep": null
         },
         {
           "key": "ai",
           "title": "AI Layer",
-          "desc": "Modèles IA déployables on-premise ou cloud CH/EU. Aucun envoi de données vers OpenAI, Azure ou GCP sans accord explicite."
+          "desc": "Modèles IA déployables on-premise ou cloud CH/EU. Aucun envoi de données vers OpenAI, Azure ou GCP sans accord explicite.",
+          "tag": "Modèles IA souverains · On-premise ou Cloud CH/EU",
+          "dep": "traite"
         },
         {
           "key": "knowledge",
           "title": "Knowledge Layer",
-          "desc": "Graphe de connaissances, indexation sémantique, mémoire organisationnelle persistante."
+          "desc": "Graphe de connaissances, indexation sémantique, mémoire organisationnelle persistante.",
+          "tag": "Graphe de connaissances · Mémoire organisationnelle",
+          "dep": "enrichit"
         },
         {
           "key": "governance",
           "title": "Governance Layer",
-          "desc": "Audit trail, RBAC, registre des traitements, conformité réglementaire (AI Act, NIS2, DORA, LPD)."
+          "desc": "Audit trail, RBAC, registre des traitements, conformité réglementaire (AI Act, NIS2, DORA, LPD).",
+          "tag": "",
+          "dep": null
         }
       ],
       "verticals": {
         "label": "Marchés verticaux",
         "desc": "FinTech, HealthTech et PropTech sont des marchés verticaux, pas des produits de base. Les applications Aegryn peuvent être packagées pour ces marchés sans créer une nouvelle architecture à chaque fois."
-      }
+      },
+      "appsLabel": "Applications métier",
+      "packagedLabel": "packagées →",
+      "flowLabel": "Les apps consomment les couches et écrivent dans la Data Layer",
+      "govTooltipLabel": "Encadre toutes les couches",
+      "apps": [
+        "Analyse contractuelle",
+        "Scoring de risque",
+        "Conformité réglementaire",
+        "Intelligence documentaire",
+        "Gestion RH & recrutement",
+        "Prévision financière",
+        "CRM & intelligence client",
+        "Supply chain & logistique",
+        "Cybersécurité & anomalies",
+        "Reporting ESG & audit"
+      ]
     },
     "sovereigntySection": {
       "label": "Indépendance par l'architecture",

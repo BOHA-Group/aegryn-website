@@ -4236,29 +4236,53 @@
         {
           "key": "data",
           "title": "Capa de Datos",
-          "desc": "Recopilación unificada de datos, lagos estructurados, pipelines en tiempo real y conectores API seguros."
+          "desc": "Recopilación unificada de datos, lagos estructurados, pipelines en tiempo real y conectores API seguros.",
+          "tag": "Ingestión · Normalización · Almacenamiento controlado",
+          "dep": null
         },
         {
           "key": "ai",
           "title": "Capa de IA",
-          "desc": "Modelos propietarios, LLMs ajustados, visión por computadora y agentes de IA especializados."
+          "desc": "Modelos propietarios, LLMs ajustados, visión por computadora y agentes de IA especializados.",
+          "tag": "Modelos IA soberanos · On-premise o Cloud CH/EU",
+          "dep": "procesa"
         },
         {
           "key": "knowledge",
           "title": "Capa de Conocimiento",
-          "desc": "Base de conocimiento enriquecida, indexación semántica, RAG seguro e inteligencia regulatoria."
+          "desc": "Base de conocimiento enriquecida, indexación semántica, RAG seguro e inteligencia regulatoria.",
+          "tag": "Grafo de conocimiento · Memoria organizacional",
+          "dep": "enriquece"
         },
         {
           "key": "action",
           "title": "Capa de Acción",
-          "desc": "Automatización de flujos, árboles de decisión inteligentes, orquestación multi-sistema y audit trail certificado."
+          "desc": "Automatización de flujos, árboles de decisión inteligentes, orquestación multi-sistema y audit trail certificado.",
+          "tag": "",
+          "dep": null
         }
       ],
       "verticals": {
         "label": "Mercados verticales",
         "desc": "FinTech, HealthTech y PropTech son mercados verticales, no productos de base. Las aplicaciones Aegryn pueden empaquetarse para estos mercados sin crear una nueva arquitectura cada vez."
       },
-      "subtitle": "Una arquitectura integrada. Cuatro capas complementarias."
+      "subtitle": "Una arquitectura integrada. Cuatro capas complementarias.",
+      "appsLabel": "Aplicaciones empresariales",
+      "packagedLabel": "empaquetadas →",
+      "flowLabel": "Las apps consumen las capas y escriben en la capa de datos",
+      "govTooltipLabel": "Abarca todas las capas",
+      "apps": [
+        "Análisis contractual",
+        "Scoring de riesgo",
+        "Cumplimiento regulatorio",
+        "Inteligencia documental",
+        "RRHH & reclutamiento",
+        "Previsión financiera",
+        "CRM & inteligencia cliente",
+        "Supply chain & logística",
+        "Ciberseguridad & anomalías",
+        "Reporting ESG & auditoría"
+      ]
     },
     "sovereigntySection": {
       "label": "Independencia por arquitectura",

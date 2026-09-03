@@ -49,7 +49,8 @@ export default async function BuildServicePage({ params }: Props) {
   const feeItems                = t.raw('fees.items')                   as { title: string; desc: string; format: string }[]
   const whyPoints               = t.raw('whySection.points')            as { title: string; desc: string }[]
   const domainItems             = t.raw('domainsSection.domains')       as { num: string; badge: string; title: string; desc: string }[]
-  const platformLayers          = t.raw('platformSection.layers')       as { key: string; title: string; desc: string }[]
+  const platformLayers          = t.raw('platformSection.layers')       as { key: string; title: string; desc: string; tag?: string; dep?: string | null }[]
+  const platformApps            = t.raw('platformSection.apps')          as string[]
   const sovereigntyPillars      = t.raw('sovereigntySection.pillars')   as { key: string; title: string; desc: string }[]
 
   return (
@@ -151,7 +152,15 @@ export default async function BuildServicePage({ params }: Props) {
             {t('platformSection.desc')}
           </p>
           {/* Schéma animé */}
-          <PlatformArchitectureDiagram layers={platformLayers} verticalsLabel={t('platformSection.verticals.label')} />
+          <PlatformArchitectureDiagram
+            layers={platformLayers}
+            apps={platformApps}
+            verticalsLabel={t('platformSection.verticals.label')}
+            appsLabel={t('platformSection.appsLabel')}
+            packagedLabel={t('platformSection.packagedLabel')}
+            flowLabel={t('platformSection.flowLabel')}
+            govTooltipLabel={t('platformSection.govTooltipLabel')}
+          />
         </div>
       </section>
 

@@ -4236,29 +4236,53 @@
         {
           "key": "data",
           "title": "Datenschicht",
-          "desc": "Einheitliche Datenerfassung, strukturierte Seen, Echtzeit-Pipelines und sichere API-Konnektoren."
+          "desc": "Einheitliche Datenerfassung, strukturierte Seen, Echtzeit-Pipelines und sichere API-Konnektoren.",
+          "tag": "Ingestion · Normalisierung · Beherrschte Speicherung",
+          "dep": null
         },
         {
           "key": "ai",
           "title": "KI-Schicht",
-          "desc": "Proprietäre Modelle, Fine-tuned LLMs, Computer Vision und spezialisierte KI-Agenten."
+          "desc": "Proprietäre Modelle, Fine-tuned LLMs, Computer Vision und spezialisierte KI-Agenten.",
+          "tag": "Souveräne KI-Modelle · On-premise oder Cloud CH/EU",
+          "dep": "verarbeitet"
         },
         {
           "key": "knowledge",
           "title": "Wissensschicht",
-          "desc": "Angereicherte Wissensbasis, semantische Indexierung, sicheres RAG und regulatorische Intelligenz."
+          "desc": "Angereicherte Wissensbasis, semantische Indexierung, sicheres RAG und regulatorische Intelligenz.",
+          "tag": "Wissensgraph · Organisationsgedächtnis",
+          "dep": "bereichert"
         },
         {
           "key": "action",
           "title": "Aktionsschicht",
-          "desc": "Workflow-Automatisierung, intelligente Entscheidungsbäume, Multi-System-Orchestrierung und zertifizierter Audit-Trail."
+          "desc": "Workflow-Automatisierung, intelligente Entscheidungsbäume, Multi-System-Orchestrierung und zertifizierter Audit-Trail.",
+          "tag": "",
+          "dep": null
         }
       ],
       "verticals": {
         "label": "Vertikale Märkte",
         "desc": "FinTech, HealthTech und PropTech sind vertikale Märkte, keine Kernprodukte. Aegryn-Anwendungen können für diese Märkte paketiert werden, ohne jedes Mal eine neue Architektur zu erstellen."
       },
-      "subtitle": "Eine integrierte Architektur. Vier komplementäre Schichten."
+      "subtitle": "Eine integrierte Architektur. Vier komplementäre Schichten.",
+      "appsLabel": "Geschäftsanwendungen",
+      "packagedLabel": "paketiert →",
+      "flowLabel": "Apps konsumieren die Schichten und schreiben in die Datenschicht",
+      "govTooltipLabel": "Überspannt alle Schichten",
+      "apps": [
+        "Vertragsanalyse",
+        "Risikobewertung",
+        "Regulatorische Compliance",
+        "Dokumentenintelligenz",
+        "HR & Recruiting",
+        "Finanzprognose",
+        "CRM & Kundenintelligenz",
+        "Supply Chain & Logistik",
+        "Cybersicherheit & Anomalien",
+        "ESG-Reporting & Audit"
+      ]
     },
     "sovereigntySection": {
       "label": "Unabhängigkeit durch Architektur",

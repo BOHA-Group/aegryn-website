@@ -4233,29 +4233,53 @@
         {
           "key": "data",
           "title": "Data Layer",
-          "desc": "Unified data collection, structured lakes, real-time pipelines and secure API connectors."
+          "desc": "Unified data collection, structured lakes, real-time pipelines and secure API connectors.",
+          "tag": "Ingestion · Normalisation · Mastered storage",
+          "dep": null
         },
         {
           "key": "ai",
           "title": "AI Layer",
-          "desc": "Proprietary models, fine-tuned LLMs, computer vision and specialised AI agents."
+          "desc": "Proprietary models, fine-tuned LLMs, computer vision and specialised AI agents.",
+          "tag": "Sovereign AI models · On-premise or Cloud CH/EU",
+          "dep": "processes"
         },
         {
           "key": "knowledge",
           "title": "Knowledge Layer",
-          "desc": "Enriched knowledge base, semantic indexing, secure RAG and regulatory intelligence."
+          "desc": "Enriched knowledge base, semantic indexing, secure RAG and regulatory intelligence.",
+          "tag": "Knowledge graph · Organisational memory",
+          "dep": "enriches"
         },
         {
           "key": "action",
           "title": "Action Layer",
-          "desc": "Workflow automation, intelligent decision trees, multi-system orchestration and certified audit trail."
+          "desc": "Workflow automation, intelligent decision trees, multi-system orchestration and certified audit trail.",
+          "tag": "",
+          "dep": null
         }
       ],
       "verticals": {
         "label": "Vertical Markets",
         "desc": "FinTech, HealthTech and PropTech are vertical markets, not core products. Aegryn applications can be packaged for these markets without building a new architecture each time."
       },
-      "subtitle": "An integrated architecture. Four complementary layers."
+      "subtitle": "An integrated architecture. Four complementary layers.",
+      "appsLabel": "Business applications",
+      "packagedLabel": "packaged →",
+      "flowLabel": "Apps consume the layers and write to the Data Layer",
+      "govTooltipLabel": "Spans all layers",
+      "apps": [
+        "Contract analysis",
+        "Risk scoring",
+        "Regulatory compliance",
+        "Document intelligence",
+        "HR & recruitment",
+        "Financial forecasting",
+        "CRM & customer intelligence",
+        "Supply chain & logistics",
+        "Cybersecurity & anomalies",
+        "ESG reporting & audit"
+      ]
     },
     "sovereigntySection": {
       "label": "Independence by Architecture",

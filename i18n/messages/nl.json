@@ -4251,28 +4251,52 @@
         {
           "key": "data",
           "title": "Datalaag",
-          "desc": "Ingestie, normalisatie en beheerste opslag van uw bedrijfsdata."
+          "desc": "Ingestie, normalisatie en beheerste opslag van uw bedrijfsdata.",
+          "tag": "Ingestie · Normalisatie · Beheerste opslag",
+          "dep": null
         },
         {
           "key": "ai",
           "title": "AI-laag",
-          "desc": "AI-modellen inzetbaar on-premise of cloud CH/EU. Geen dataverzending naar OpenAI, Azure of GCP zonder expliciete toestemming."
+          "desc": "AI-modellen inzetbaar on-premise of cloud CH/EU. Geen dataverzending naar OpenAI, Azure of GCP zonder expliciete toestemming.",
+          "tag": "Soevereine AI-modellen · On-premise of Cloud CH/EU",
+          "dep": "verwerkt"
         },
         {
           "key": "knowledge",
           "title": "Kennislaag",
-          "desc": "Kennisgraaf, semantische indexering, persistente organisatorisch geheugen."
+          "desc": "Kennisgraaf, semantische indexering, persistente organisatorisch geheugen.",
+          "tag": "Kennisgraaf · Organisatiegeheugen",
+          "dep": "verrijkt"
         },
         {
           "key": "governance",
           "title": "Governance-laag",
-          "desc": "Audittrail, RBAC, verwerkingsregister, regelgevende naleving (AI Act, NIS2, DORA, AVG)."
+          "desc": "Audittrail, RBAC, verwerkingsregister, regelgevende naleving (AI Act, NIS2, DORA, AVG).",
+          "tag": "",
+          "dep": null
         }
       ],
       "verticals": {
         "label": "Verticale markten",
         "desc": "FinTech, HealthTech en PropTech zijn verticale markten, geen kernproducten. Aegryn-applicaties kunnen voor deze markten worden verpakt zonder elke keer een nieuwe architectuur te bouwen."
-      }
+      },
+      "appsLabel": "Bedrijfsapplicaties",
+      "packagedLabel": "verpakt →",
+      "flowLabel": "Apps verbruiken de lagen en schrijven naar de datalaag",
+      "govTooltipLabel": "Overspant alle lagen",
+      "apps": [
+        "Contractanalyse",
+        "Risicoscoring",
+        "Regelgevende compliance",
+        "Documentintelligentie",
+        "HR & werving",
+        "Financiële prognose",
+        "CRM & klantintelligentie",
+        "Supply chain & logistiek",
+        "Cyberbeveiliging & anomalieën",
+        "ESG-rapportage & audit"
+      ]
     },
     "sovereigntySection": {
       "label": "Onafhankelijkheid door architectuur",

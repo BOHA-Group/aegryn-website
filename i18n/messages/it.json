@@ -4236,29 +4236,53 @@
         {
           "key": "data",
           "title": "Livello Dati",
-          "desc": "Raccolta dati unificata, laghi strutturati, pipeline in tempo reale e connettori API sicuri."
+          "desc": "Raccolta dati unificata, laghi strutturati, pipeline in tempo reale e connettori API sicuri.",
+          "tag": "Ingestione · Normalizzazione · Archiviazione controllata",
+          "dep": null
         },
         {
           "key": "ai",
           "title": "Livello AI",
-          "desc": "Modelli proprietari, LLM ottimizzati, computer vision e agenti AI specializzati."
+          "desc": "Modelli proprietari, LLM ottimizzati, computer vision e agenti AI specializzati.",
+          "tag": "Modelli IA sovrani · On-premise o Cloud CH/EU",
+          "dep": "elabora"
         },
         {
           "key": "knowledge",
           "title": "Livello Conoscenza",
-          "desc": "Base di conoscenza arricchita, indicizzazione semantica, RAG sicuro e intelligenza normativa."
+          "desc": "Base di conoscenza arricchita, indicizzazione semantica, RAG sicuro e intelligenza normativa.",
+          "tag": "Grafo della conoscenza · Memoria organizzativa",
+          "dep": "arricchisce"
         },
         {
           "key": "action",
           "title": "Livello Azione",
-          "desc": "Automazione workflow, alberi decisionali intelligenti, orchestrazione multi-sistema e audit trail certificato."
+          "desc": "Automazione workflow, alberi decisionali intelligenti, orchestrazione multi-sistema e audit trail certificato.",
+          "tag": "",
+          "dep": null
         }
       ],
       "verticals": {
         "label": "Mercati verticali",
         "desc": "FinTech, HealthTech e PropTech sono mercati verticali, non prodotti di base. Le applicazioni Aegryn possono essere pacchettizzate per questi mercati senza creare una nuova architettura ogni volta."
       },
-      "subtitle": "Un'architettura integrata. Quattro livelli complementari."
+      "subtitle": "Un'architettura integrata. Quattro livelli complementari.",
+      "appsLabel": "Applicazioni aziendali",
+      "packagedLabel": "pacchettizzate →",
+      "flowLabel": "Le app consumano i livelli e scrivono nel livello dati",
+      "govTooltipLabel": "Comprende tutti i livelli",
+      "apps": [
+        "Analisi contrattuale",
+        "Scoring del rischio",
+        "Conformità normativa",
+        "Intelligenza documentale",
+        "HR & recruiting",
+        "Previsione finanziaria",
+        "CRM & intelligenza cliente",
+        "Supply chain & logistica",
+        "Sicurezza & anomalie",
+        "Reporting ESG & audit"
+      ]
     },
     "sovereigntySection": {
       "label": "Indipendenza per architettura",
