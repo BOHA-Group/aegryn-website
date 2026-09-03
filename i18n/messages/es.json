@@ -147,7 +147,9 @@
     "solutionsCategoryTransactions": "Transacciones & Red",
     "craftSupportNetworkNew": "Socios & experiencia",
     "craftTransactGradeNew": "Sistema de certificación",
-    "craftTransactAuditors": "Auditores independientes"
+    "craftTransactAuditors": "Auditores independientes",
+    "whoIndustries": "Nuestras industrias",
+    "whoIndustriesDesc": "Todos los sectores cubiertos"
   },
   "hero": {
     "tagline": "Aegryn — Grupo Tech Suizo. Estrategia, Transacciones & Activos.",

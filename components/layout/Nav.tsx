@@ -293,11 +293,23 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
   )
 }
 
-// Mega-menu Qui sommes-nous (2 colonnes Groupe + Rejoindre)
+const WHO_INDUSTRIES = [
+  'Aérospatiale & Défense','Agriculture & Agroalimentaire','Automobile & Mobilité',
+  'Banque & Services Financiers','Chimie & Matériaux Avancés','Construction & Infrastructure',
+  'Éducation & EdTech','Énergie & Utilities','FinTech & Paiements',
+  'GovTech & Secteur Public','HealthTech & MedTech','Hôtellerie & Tourisme',
+  'Industrie & Manufacturing','Logistique & Supply Chain','Luxe & Retail Premium',
+  'Médias & Entertainment','PropTech & Immobilier','Retail & E-commerce',
+  'Santé & Pharmaceutique','Technologie & SaaS','Télécommunications','Transport & Fret',
+]
+const WHO_INDUSTRIES_LEFT  = WHO_INDUSTRIES.slice(0, 11)
+const WHO_INDUSTRIES_RIGHT = WHO_INDUSTRIES.slice(11)
+
+// Mega-menu Qui sommes-nous (3 colonnes: Groupe | Industries | Rejoindre)
 function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   return (
-    <div className="absolute top-full left-0 mt-2 w-[500px] bg-ag-white border border-ag-border shadow-lg z-50">
-      <div className="grid grid-cols-2 gap-px bg-ag-border">
+    <div className="absolute top-full left-0 mt-2 w-[750px] bg-ag-white border border-ag-border shadow-lg z-50">
+      <div className="grid grid-cols-3 gap-px bg-ag-border">
         {/* Le groupe */}
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
@@ -318,7 +330,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
               </Link>
             ))}
           </div>
-          {/* Nos bureaux - affichage statique */}
+          {/* Nos bureaux */}
           <div className="mt-4 pt-4 border-t border-ag-border">
             <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-ag-gray-light mb-2">
               {t('whoOffices')}
@@ -328,6 +340,28 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
               Rue du Centre 142<br />
               1025 St-Sulpice
             </p>
+          </div>
+        </div>
+
+        {/* Nos industries — 2 sous-colonnes */}
+        <div className="bg-ag-white p-4 col-span-1">
+          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-1">
+            {t('whoIndustries')}
+          </p>
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
+            {t('whoIndustriesDesc')}
+          </p>
+          <div className="grid grid-cols-2 gap-x-3">
+            <div className="flex flex-col gap-0.5">
+              {WHO_INDUSTRIES_LEFT.map(name => (
+                <span key={name} className="font-sans text-[11px] text-ag-gray py-0.5 leading-snug">{name}</span>
+              ))}
+            </div>
+            <div className="flex flex-col gap-0.5">
+              {WHO_INDUSTRIES_RIGHT.map(name => (
+                <span key={name} className="font-sans text-[11px] text-ag-gray py-0.5 leading-snug">{name}</span>
+              ))}
+            </div>
           </div>
         </div>
 
