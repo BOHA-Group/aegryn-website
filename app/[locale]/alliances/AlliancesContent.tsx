@@ -5,7 +5,7 @@ import { useTranslations }     from 'next-intl'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 
-const TAB_KEYS = ['overview', 'advisory_tech', 'advisory_transaction', 'certification', 'dealflow', 'sequestre', 'technique', 'assurance', 'apply'] as const
+const TAB_KEYS = ['overview', 'advisory_tech', 'advisory_transaction', 'certification', 'dealflow', 'finance', 'sequestre', 'technique', 'assurance', 'apply'] as const
 type TabKey = typeof TAB_KEYS[number]
 
 
@@ -266,7 +266,7 @@ export default function AlliancesContent() {
                     <label className={labelCls}>{t('form.type')}</label>
                     <select name="alliance_type" required className={selectCls}>
                       <option value="">{t('form.typePlaceholder')}</option>
-                      {(['advisory_tech','advisory_transaction','certification','dealflow','sequestre','technique','assurance'] as const).map(k => (
+                      {(['advisory_tech','advisory_transaction','certification','dealflow','finance','sequestre','technique','assurance'] as const).map(k => (
                         <option key={k} value={k}>{t(`types.${k}.label`)}</option>
                       ))}
                       <option value="other">{t('form.typeOtherLabel')}</option>

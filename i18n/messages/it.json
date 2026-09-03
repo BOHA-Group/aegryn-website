@@ -3860,6 +3860,13 @@
         "profiles": "Studi IP & tech (catena di titoli, licenze) · Avvocati M&A transazionali (SPA, SHA, APA) · Revisori contabili e sindaci · Consulenti fiscali corporate (CH/FR/LU) · Studi HR & diritto del lavoro · Assicuratori W&I (AIG, Tokio Marine) · Esperti due diligence settoriale (FinTech, HealthTech, IA)",
         "cta": "Diventare partner Advisory Transaction"
       },
+      "finance": {
+        "label": "BANCHE & PARTNER FINANZIARI",
+        "title": "Partner finanziari nella catena di trasmissione",
+        "desc": "Istituti bancari, banche regionali e istituzioni finanziarie che accompagnano gli imprenditori in ogni fase di crescita. Una sinergia naturale con il nostro dispositivo di consulenza e trasmissione.",
+        "profiles": "Istituti bancari e banche regionali · Fondi di debito e sviluppo del capitale · Family office e multi-family office · Società di garanzia e cauzioni · Istituzioni finanziarie pubbliche (BPI, ecc.)",
+        "cta": "Diventare partner finanziario"
+      },
       "sequestre": {
         "label": "DEPOSITO E LEGALE",
         "profiles": "Banche depositarie · Studi legali transazionali"
@@ -3918,7 +3925,8 @@
       "apply": "Candidatura",
       "sequestre": "Deposito",
       "technique": "Tecnico",
-      "assurance": "Assicurazione"
+      "assurance": "Assicurazione",
+      "finance": "Banche & Finanza"
     },
     "disciplines": {
       "label": "LE 6 DISCIPLINE DELLA RETE",

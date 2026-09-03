@@ -3859,6 +3859,13 @@
         "profiles": "IP & tech law firms (chain of title, licences) · M&A transactional lawyers (SPA, SHA, APA) · Chartered accountants & statutory auditors · Corporate tax advisors (CH/FR/LU) · HR & employment law firms · W&I insurers (AIG, Tokio Marine) · Sectoral due diligence experts (FinTech, HealthTech, AI)",
         "cta": "Become an Advisory Transaction partner"
       },
+      "finance": {
+        "label": "BANKS & FINANCIAL PARTNERS",
+        "title": "Financial partners in the transfer chain",
+        "desc": "Banking institutions, regional banks and financial entities that support entrepreneurs at every stage of growth. A natural synergy with our advisory and transfer services.",
+        "profiles": "Banking institutions & regional banks · Debt and growth capital funds · Family offices & multi-family offices · Guarantee & surety companies · Public financial institutions (BPI, etc.)",
+        "cta": "Become a financial partner"
+      },
       "sequestre": {
         "label": "ESCROW & LEGAL",
         "profiles": "Depositary banks · Transactional law firms"
@@ -3917,7 +3924,8 @@
       "apply": "Apply",
       "sequestre": "Escrow",
       "technique": "Technical",
-      "assurance": "Insurance"
+      "assurance": "Insurance",
+      "finance": "Banks & Finance"
     },
     "disciplines": {
       "label": "THE 6 NETWORK DISCIPLINES",

@@ -3860,6 +3860,13 @@
         "profiles": "Despachos IP & tech (cadena de títulos, licencias) · Abogados M&A transaccionales (SPA, SHA, APA) · Auditores y comisarios de cuentas · Fiscalistas corporativos (CH/FR/LU) · Despachos de RR.HH. y derecho laboral · Aseguradoras W&I (AIG, Tokio Marine) · Expertos en due diligence sectorial (FinTech, HealthTech, IA)",
         "cta": "Convertirse en socio Advisory Transaction"
       },
+      "finance": {
+        "label": "BANCOS & SOCIOS FINANCIEROS",
+        "title": "Socios financieros en la cadena de transmisión",
+        "desc": "Entidades bancarias, bancos regionales e instituciones financieras que acompañan a los emprendedores en cada etapa de crecimiento. Una sinergia natural con nuestro dispositivo de asesoramiento y transmisión.",
+        "profiles": "Entidades bancarias y bancos regionales · Fondos de deuda y capital de crecimiento · Family offices y multi-family offices · Sociedades de aval y garantía · Instituciones financieras públicas (BPI, etc.)",
+        "cta": "Convertirse en socio financiero"
+      },
       "sequestre": {
         "label": "DEPÓSITO Y LEGAL",
         "profiles": "Bancos depositarios · Despachos jurídicos transaccionales"
@@ -3918,7 +3925,8 @@
       "apply": "Candidatura",
       "sequestre": "Depósito",
       "technique": "Técnico",
-      "assurance": "Seguro"
+      "assurance": "Seguro",
+      "finance": "Bancos & Finanzas"
     },
     "disciplines": {
       "label": "LAS 6 DISCIPLINAS DE LA RED",

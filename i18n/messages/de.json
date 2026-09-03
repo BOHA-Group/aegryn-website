@@ -3860,6 +3860,13 @@
         "profiles": "IP & Tech-Kanzleien (Eigentumskette, Lizenzen) · Transaktionsrechtliche M&A-Anwälte (SPA, SHA, APA) · Wirtschaftsprüfer & Abschlussprufer · Unternehmenssteuerberater (CH/FR/LU) · HR & Arbeitsrechtskanzleien · W&I-Versicherer (AIG, Tokio Marine) · Sektorale Due-Diligence-Experten (FinTech, HealthTech, KI)",
         "cta": "Advisory Transaction-Partner werden"
       },
+      "finance": {
+        "label": "BANKEN & FINANZPARTNER",
+        "title": "Finanzpartner in der Übertragungskette",
+        "desc": "Bankinstitute, Regionalbanken und Finanzinstitutionen, die Unternehmer in jeder Wachstumsphase begleiten. Eine natürliche Synergie mit unserem Beratungs- und Übertragungsangebot.",
+        "profiles": "Bankinstitute & Regionalbanken · Fremdkapital- und Wachstumsfonds · Family Offices & Multi-Family Offices · Bürgschafts- und Garantiegesellschaften · Öffentliche Finanzinstitutionen (BPI usw.)",
+        "cta": "Finanzpartner werden"
+      },
       "sequestre": {
         "label": "TREUHAND & RECHT",
         "profiles": "Depotbanken · Transaktionsrechtliche Kanzleien"
@@ -3918,7 +3925,8 @@
       "apply": "Bewerbung",
       "sequestre": "Treuhand",
       "technique": "Technisch",
-      "assurance": "Versicherung"
+      "assurance": "Versicherung",
+      "finance": "Banken & Finanzen"
     },
     "disciplines": {
       "label": "DIE 6 NETZWERKDISZIPLINEN",

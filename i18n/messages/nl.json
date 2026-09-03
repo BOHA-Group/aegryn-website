@@ -3860,6 +3860,13 @@
         "profiles": "IP & tech-kantoren (eigendomsketen, licenties) · M&A-transactieadvocaten (SPA, SHA, APA) · Accountants en commissarissen · Corporate belastingadviseurs (CH/FR/LU) · HR & arbeidsrechtskantoren · W&I-verzekeraars (AIG, Tokio Marine) · Sectorale due diligence-experts (FinTech, HealthTech, AI)",
         "cta": "Advisory Transaction-partner worden"
       },
+      "finance": {
+        "label": "BANKEN & FINANCIËLE PARTNERS",
+        "title": "Financiële partners in de overdrachtsketen",
+        "desc": "Bankinstellingen, regionale banken en financiële instellingen die ondernemers in elke groeifase begeleiden. Een natuurlijke synergie met ons advies- en overdrachtsaanbod.",
+        "profiles": "Bankinstellingen & regionale banken · Schulden- en groeifondsen · Family offices & multi-family offices · Garantie- en borgstellingmaatschappijen · Publieke financiële instellingen (BPI, enz.)",
+        "cta": "Financiële partner worden"
+      },
       "sequestre": {
         "label": "ESCROW EN JURIDISCH",
         "profiles": "Bewaarbanken · Transactionele advocatenkantoren"
@@ -3918,7 +3925,8 @@
       "apply": "Aanmelden",
       "sequestre": "Escrow",
       "technique": "Technisch",
-      "assurance": "Verzekering"
+      "assurance": "Verzekering",
+      "finance": "Banken & Financiën"
     },
     "disciplines": {
       "label": "DE 6 NETWERKDISCIPLINES",

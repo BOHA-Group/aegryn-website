@@ -3791,6 +3791,13 @@
         "profiles": "Cabinets IP & tech (chaîne de titres, licences) · Avocats M&A transactionnels (SPA, SHA, APA) · Experts-comptables & commissaires aux comptes · Fiscalistes corporate (CH/FR/LU) · Cabinets RH & droit social · Assureurs W&I (AIG, Tokio Marine) · Experts due diligence sectorielle (FinTech, HealthTech, IA)",
         "cta": "Devenir partenaire Conseil Transaction"
       },
+      "finance": {
+        "label": "BANQUES & PARTENAIRES FINANCIERS",
+        "title": "Partenaires financiers de la transmission",
+        "desc": "Établissements bancaires, banques régionales et institutionnels financiers qui accompagnent les entrepreneurs à chaque stade de croissance. Une synergie naturelle avec notre dispositif de conseil et de transmission.",
+        "profiles": "Établissements bancaires & banques régionales · Fonds de dette et de capital-développement · Family offices & multi-family offices · Sociétés de cautionnement & garantie · Institutions financières publiques (BPI, etc.)",
+        "cta": "Devenir partenaire financier"
+      },
       "sequestre": {
         "label": "SÉQUESTRE & JURIDIQUE",
         "profiles": "Banques dépositaires · Cabinets juridiques transactionnels"
@@ -3849,7 +3856,8 @@
       "apply": "Candidature",
       "sequestre": "Séquestre",
       "technique": "Technique",
-      "assurance": "Assurance"
+      "assurance": "Assurance",
+      "finance": "Banques & Financiers"
     },
     "disciplines": {
       "label": "LES 6 DISCIPLINES DU RÉSEAU",
