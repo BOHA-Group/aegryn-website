@@ -298,8 +298,8 @@ export default async function AssetPage({ params }: Props) {
               PRESSE
             </p>
 
-            {/* 3 items sur la même ligne */}
-            <div className="flex flex-col md:flex-row gap-8 items-start">
+            {/* 3 items sur la même ligne — centrés */}
+            <div className="flex flex-col md:flex-row gap-8 items-start justify-center">
 
               {/* 1 — Logo partenaire — référence w-200 */}
               <div className="shrink-0 flex flex-col gap-3">
@@ -328,13 +328,7 @@ export default async function AssetPage({ params }: Props) {
                 <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light">Article</p>
                 <div className="border border-ag-border bg-ag-white w-[260px]">
                   <div className="bg-ag-navy px-5 py-3 flex items-center">
-                    <Image
-                      src="/images/press-village-justice-logo.png"
-                      alt="Village de la Justice"
-                      width={80}
-                      height={40}
-                      className="object-contain brightness-0 invert"
-                    />
+                    <span className="font-mono text-[9px] tracking-[0.18em] uppercase text-white/80">Village de la Justice</span>
                   </div>
                   <div className="px-5 py-5 flex flex-col gap-3">
                     <p className="font-mono text-[8px] tracking-[0.14em] uppercase text-ag-gray-light">16 juillet 2026</p>
@@ -356,15 +350,15 @@ export default async function AssetPage({ params }: Props) {
                 </div>
               </div>
 
-              {/* 3 — Banner subblink visible en totalité */}
-              <div className="flex flex-col gap-3 flex-1 min-w-0">
+              {/* 3 — Banner subblink — 50% réduit */}
+              <div className="flex flex-col gap-3 shrink-0">
                 <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light">Visuel</p>
                 <Image
                   src="/images/subblink banner.jpeg"
                   alt="subblink — Analyse contractuelle par IA"
-                  width={800}
-                  height={533}
-                  className="w-full object-contain"
+                  width={400}
+                  height={267}
+                  className="object-contain"
                 />
               </div>
 
