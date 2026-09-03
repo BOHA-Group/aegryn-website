@@ -297,45 +297,81 @@ export default async function AssetPage({ params }: Props) {
             <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
               PRESSE
             </p>
-            <div className="flex flex-col md:flex-row gap-12 items-start">
-              {/* Bloc source */}
-              <div className="shrink-0 flex flex-col gap-2">
-                <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light">Partenaire</p>
-                <div className="border border-ag-border bg-ag-white px-6 py-5 w-[220px]">
+
+            {/* Banner subblink */}
+            <div className="mb-12">
+              <Image
+                src="/images/subblink banner.jpeg"
+                alt="subblink — Analyse contractuelle par IA"
+                width={1200}
+                height={400}
+                className="w-full object-cover"
+                priority
+              />
+            </div>
+
+            {/* Ligne : logo partenaire + carte article */}
+            <div className="flex flex-col md:flex-row gap-8 items-start justify-center">
+
+              {/* Bloc logo partenaire */}
+              <div className="shrink-0 flex flex-col items-center gap-3">
+                <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light self-start">Partenaire</p>
+                <div className="border border-ag-border bg-ag-white px-6 py-6 w-[200px] flex flex-col items-center text-center gap-3">
                   <Image
                     src="/images/press-village-justice-logo.png"
                     alt="Village de la Justice — By Legi Team"
-                    width={160}
-                    height={80}
-                    className="object-contain mb-4"
+                    width={150}
+                    height={75}
+                    className="object-contain"
                   />
-                  <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-ag-gray-light">
-                    158 140 membres · 1 100 000 visites/mois
+                  <p className="font-mono text-[8px] tracking-[0.12em] uppercase text-ag-gray-light leading-tight">
+                    158 140 membres<br />1 100 000 visites/mois
                   </p>
-                  <div className="mt-4 pt-4 border-t border-ag-border">
-                    <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-ag-gray-light mb-1">Code partenaire</p>
-                    <p className="font-mono text-[13px] font-bold text-ag-apex tracking-widest">LEGI-4141-01</p>
+                  <div className="w-full pt-3 border-t border-ag-border flex flex-col items-center gap-1">
+                    <p className="font-mono text-[8px] tracking-[0.12em] uppercase text-ag-gray-light">Code partenaire</p>
+                    <p className="font-mono text-[12px] font-bold text-ag-apex tracking-widest">LEGI-4141-01</p>
                   </div>
-                  <p className="mt-3 font-mono text-[9px] text-ag-gray-light">16 juillet 2026</p>
+                  <p className="font-mono text-[8px] text-ag-gray-light">16 juillet 2026</p>
                 </div>
               </div>
-              {/* Contenu article */}
-              <div className="flex-1 max-w-2xl">
-                <p className="font-sans font-bold text-[18px] text-ag-black leading-snug mb-4">
-                  Village de la Justice vous propose de faire auditer en ligne tous vos contrats et d&apos;obtenir un ContractScore et des recommandations
-                </p>
-                <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-6">
-                  Le Village de la Justice présente subblink comme une solution IA unique : ContractScore de A à E non reproductible par un LLM généraliste, adossé à une base de benchmarks sectoriels anonymisés. Analyse en 60 secondes, verdict <strong>SIGNER ✓ · NÉGOCIER ⚑ · REFUSER ✗</strong>, contre-propositions rédigées clause par clause. Couvre particuliers (bail, divorce, assurance), professionnels (NDA, CGV, baux commerciaux) et avocats/juristes.
-                </p>
-                <a
-                  href="https://www.village-justice.com/articles/village-justice-vous-propose-faire-auditer-tous-vos-contrats-obtenir-score-des,57640.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-5 py-3 hover:bg-ag-black hover:text-white transition-colors"
-                >
-                  Lire l&apos;article <ArrowUpRight size={11} />
-                </a>
+
+              {/* Carte article style Gala */}
+              <div className="shrink-0 flex flex-col gap-3">
+                <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light">Article</p>
+                <div className="border border-ag-border bg-ag-white w-[340px]">
+                  {/* Header carte */}
+                  <div className="bg-ag-navy px-5 py-3 flex items-center gap-2">
+                    <Image
+                      src="/images/press-village-justice-logo.png"
+                      alt="Village de la Justice"
+                      width={80}
+                      height={40}
+                      className="object-contain brightness-0 invert"
+                    />
+                  </div>
+                  {/* Corps */}
+                  <div className="px-5 py-5 flex flex-col gap-3">
+                    <p className="font-mono text-[8px] tracking-[0.14em] uppercase text-ag-gray-light">
+                      16 juillet 2026
+                    </p>
+                    <p className="font-sans font-bold text-[13px] text-ag-black leading-snug">
+                      Village de la Justice vous propose de faire auditer en ligne tous vos contrats et d&apos;obtenir un ContractScore
+                    </p>
+                    <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
+                      ContractScore de A à E, analyse en 60 secondes, verdict <strong>SIGNER ✓ · NÉGOCIER ⚑ · REFUSER ✗</strong>. Contre-propositions rédigées clause par clause. Particuliers, professionnels et avocats.
+                    </p>
+                    <a
+                      href="https://www.village-justice.com/articles/village-justice-vous-propose-faire-auditer-tous-vos-contrats-obtenir-score-des,57640.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.14em] uppercase text-ag-black border-t border-ag-border pt-3 mt-1 hover:text-ag-apex transition-colors"
+                    >
+                      Lire l&apos;article <ArrowUpRight size={10} />
+                    </a>
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
         </section>

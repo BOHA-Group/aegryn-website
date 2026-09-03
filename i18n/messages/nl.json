@@ -972,7 +972,7 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "subblink is de AI-gestuurde contractanalysator van BOHA-Group. In 60 seconden detecteert het onrechtmatige clausules, verborgen risico's en onderhandelingspunten in elk contracttype — NDA, AV, huurcontract, dienstverlening — met een ContractScore van A tot E die door geen enkele generieke LLM kan worden gerepliceerd. Het systeem maakt gebruik van een anonieme sectorale benchmarkdatabase en geeft een duidelijk oordeel: TEKENEN ✓ · ONDERHANDELEN ⚑ · WEIGEREN ✗, met tegenvoorstellen per clausule opgesteld. Bij Aegryn is subblink het centrale instrument van onze contractuele intelligentiepraktijk: elk mandaat, elke NDA en elk transactiecontract wordt geanalyseerd en gescoord vóór ondertekening.",
+        "longDesc": "subblink is de AI-gestuurde contractanalysator van Aegryn. In 60 seconden detecteert het onrechtmatige clausules, verborgen risico's en onderhandelingspunten in elk contracttype: NDA, AV, huurcontract, dienstverlening, met een ContractScore van A tot E die door geen enkele generieke LLM kan worden gerepliceerd. Het systeem maakt gebruik van een anonieme sectorale benchmarkdatabase en geeft een duidelijk oordeel: TEKENEN ✓ · ONDERHANDELEN ⚑ · WEIGEREN ✗, met tegenvoorstellen per clausule opgesteld. Bij Aegryn is subblink het centrale instrument van onze contractuele intelligentiepraktijk: elk mandaat, elke NDA en elk transactiecontract wordt geanalyseerd en gescoord vóór ondertekening.",
         "audience": "Particulieren (huur, echtscheiding, verzekering), professionals (NDA, AV, commerciële huur), advocaten en juristen",
         "features": [
           "ContractScore van A tot E — niet repliceerbaar door een generieke LLM",

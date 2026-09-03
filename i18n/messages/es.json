@@ -972,7 +972,7 @@
     },
     "assets": {
       "subblink": {
-        "longDesc": "subblink es el analizador de contratos por inteligencia artificial desarrollado por BOHA-Group. En 60 segundos detecta cláusulas abusivas, riesgos ocultos y puntos de negociación en cualquier tipo de contrato — NDA, CGV, arrendamiento, prestación de servicios — con un ContractScore de A a E que ningún LLM genérico puede replicar. El motor se basa en una base de benchmarks sectoriales anonimizados y emite un veredicto claro: FIRMAR ✓ · NEGOCIAR ⚑ · RECHAZAR ✗, con contrapropuestas redactadas cláusula por cláusula. En Aegryn, subblink es la herramienta central de nuestra práctica de inteligencia contractual: cada mandato, NDA y contrato de transacción se analiza y puntaúa antes de la firma.",
+        "longDesc": "subblink es el analizador de contratos por inteligencia artificial desarrollado por Aegryn. En 60 segundos detecta cláusulas abusivas, riesgos ocultos y puntos de negociación en cualquier tipo de contrato: NDA, CGV, arrendamiento, prestación de servicios, con un ContractScore de A a E que ningún LLM genérico puede replicar. El motor se basa en una base de benchmarks sectoriales anonimizados y emite un veredicto claro: FIRMAR ✓ · NEGOCIAR ⚑ · RECHAZAR ✗, con contrapropuestas redactadas cláusula por cláusula. En Aegryn, subblink es la herramienta central de nuestra práctica de inteligencia contractual: cada mandato, NDA y contrato de transacción se analiza y puntaúa antes de la firma.",
         "audience": "Particulares (arrendamiento, divorcio, seguros), profesionales (NDA, CGV, arrendamientos comerciales), abogados y juristas",
         "features": [
           "ContractScore de A a E — no reproducible por un LLM genérico",
