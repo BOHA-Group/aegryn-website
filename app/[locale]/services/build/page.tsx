@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { Link } from '@/i18n/navigation'
 import { TechStackShowcase } from '@/components/sections/TechStackShowcase'
+import { PlatformArchitectureDiagram } from '@/components/sections/PlatformArchitectureDiagram'
 
 const BASE = 'https://aegryn.com'
 
@@ -149,7 +150,11 @@ export default async function BuildServicePage({ params }: Props) {
           <p className="font-sans text-[14px] text-white/70 leading-relaxed max-w-2xl mb-14">
             {t('platformSection.desc')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 mb-10">
+          {/* Schéma animé */}
+          <PlatformArchitectureDiagram />
+
+          {/* Détail textuel des couches */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 mb-10 mt-10">
             {platformLayers.map((layer) => (
               <div key={layer.key} className="bg-ag-navy p-8 flex flex-col gap-3 border border-white/10">
                 <h3 className="font-mono text-[11px] tracking-[0.22em] uppercase text-ag-apex">{layer.title}</h3>
