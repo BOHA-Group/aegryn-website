@@ -1,3 +1,6 @@
+> ⚠️ Ce fichier date de début août 2026. Il est conservé pour historique mais est obsolète.
+> Voir `docs/parking-lot.md` et `docs/internal/DECISIONS.md` pour l'état courant.
+
 # Production Readiness Check - 12 commits
 
 ## ✅ Build & Compilation

@@ -38,6 +38,8 @@ const STATIC_ROUTES = [
   { path: '/advisory',                          priority: 0.9,  changeFrequency: 'monthly' as const },
   // ── Talent ───────────────────────────────────────────────────────────────
   { path: '/talent',                            priority: 0.9,  changeFrequency: 'weekly'  as const },
+  // ── Network ──────────────────────────────────────────────────────────────
+  { path: '/network',                           priority: 0.7,  changeFrequency: 'monthly' as const },
   // ── Assets ───────────────────────────────────────────────────────────────
   { path: '/assets',                            priority: 0.8,  changeFrequency: 'weekly'  as const },
   // ── Services ─────────────────────────────────────────────────────────────

@@ -2,7 +2,7 @@
 
 > **Audience:** Internal, Aegryn team  
 > **Rule:** Any decision that affects the product, stack, or protocol must be logged here.  
-> **Last updated:** 2026-08
+> **Last updated:** 2026-09-03
 
 ---
 
@@ -127,6 +127,20 @@ Conclusion: no technical path exists for Supabase to call these routes, and no o
 ### D-016, Magazine slogan and SEO update
 **Date:** 2026-08  
 **Decision:** Magazine hub description changed from "Publications, rapports et analyses sur le marche M&A tech europeen." to "Deals, multiples, portraits et art de vivre — trimestriel." (all 6 languages). SEO meta title/description updated to match in `magazine.report.meta` namespace. `report` block added to en.json and de.json (was missing).  
+**Status:** ✅ Implemented
+
+---
+
+### D-017, Internal role: granular permission-based access
+**Date:** 2026-09-03
+**Decision:** New user role `internal` created for Aegryn collaborators. Access to the platform is gated by granular permissions assigned by admin (catalog, kyc, grading, dataroom, magazine, experts/auditeurs). The `/client/internal` space is empty by default — sections unlock per permission. The `experts.validate` permission is disabled (grayed out in UI, badge "Bientôt disponible") and renamed "Auditeurs externes". Role `internal` added to all relevant places: register API/form, login redirect, admin member detail, admin permissions page, migration 101.
+**Status:** ✅ Implemented — migrations 098, 101
+
+---
+
+### D-018, Expert profile & subscription masked for partner space
+**Date:** 2026-09-03
+**Decision:** The `/client/partner/expert-profile` and `/client/partner/subscription` pages are temporarily masked (redirect to `/client/partner`). These pages handle the expert listing product (€89/month Stripe subscription). Masked pending product decision. Links removed from `PartnerNav.tsx`. Code and components preserved intact. See `docs/parking-lot.md` § "Fiche Expert & Abonnement partenaire" for reactivation instructions.
 **Status:** ✅ Implemented
 
 ---

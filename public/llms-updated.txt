@@ -267,15 +267,18 @@ Website available in 6 languages:
 
 ## Recent Updates (September 2026)
 
+- ✅ Rôle "internal" (Accès interne) — espace collaborateur avec permissions granulaires admin-contrôlées
+- ✅ Permissions granulaires étendues : catalog, kyc, grading, dataroom, magazine, auditeurs externes
+- ✅ Espace /client/internal — dashboard paramétrable par permissions
 - ✅ Talent recruitment platform launched (candidate + hiring forms)
 - ✅ Industries section added to Advisory page (23+ sectors)
 - ✅ Email confirmation system for talent forms (Resend + React Email)
 - ✅ GDPR/LPD consent checkbox added to all forms
 - ✅ PhoneInput component with 42 European countries
-- ✅ Sitemap updated with /talent route
-- ✅ SEO metadata enhanced with industry keywords
+- ✅ Expert profile + subscription (89€/mois) masqués — en attente décision product
+- ✅ Sitemap updated with /talent, /network routes
 
 ---
 
-Last updated: September 1, 2026
-Version: 2.1
+Last updated: September 3, 2026
+Version: 2.2

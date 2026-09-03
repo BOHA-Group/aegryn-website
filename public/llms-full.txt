@@ -41,7 +41,7 @@ Designs, funds and operates proprietary digital ecosystems (SaaS, B2C, marketpla
 Designs custom digital assets for individuals, entrepreneurs and institutions. Fixed price contract. Custom code only — no no-code/low-code. Full IP to client. Certification-ready from day one. 10–16 weeks delivery.
 - Service page: /services/build
 
-### 3. AEGRYN Auction — Tech Asset M&A Platform
+### 3. AEGRYN Transact — Tech Asset M&A Platform
 Europe's structured auction platform for buying and selling digital tech assets: SaaS businesses, B2C platforms, tech infrastructure. Range: €100K–€50M. Session-based, NDA-gated, graded assets only.
 
 ---
@@ -50,7 +50,7 @@ Europe's structured auction platform for buying and selling digital tech assets:
 
 | Asset | URL | Type | Description |
 |---|---|---|---|
-| Subblink | https://subblink.boha-group.com | B2B SaaS | AI-powered contract analysis — risk detection, obligation mapping, anomaly alerts |
+| Subblink | https://subblink.app | B2B SaaS | AI-powered contract analysis — risk detection, obligation mapping, anomaly alerts |
 | Neediu | — | B2C Marketplace | Home services — cleaning, plumbing, childcare, vetted providers |
 | Primiom | — | B2C PropTech | AI-assisted real estate — buy, rent, estimate property value across Europe |
 | Movtoo | — | B2C Logistics | On-demand urban delivery for individuals and small businesses |
@@ -87,10 +87,10 @@ Aegryn designs custom digital assets for individuals, entrepreneurs and institut
 
 ---
 
-## AEGRYN Auction Platform
+## AEGRYN Transact Platform
 
 ### What it is
-A structured, session-based M&A auction platform dedicated to European digital tech assets. One of the only platforms of its kind in Europe. Not a broker — a platform with standardised process, grading, NDA and structured closing.
+A structured, session-based M&A transact platform dedicated to European digital tech assets. One of the only platforms of its kind in Europe. Not a broker — a platform with standardised process, grading, NDA and structured closing.
 
 ### Process
 1. **Seller submits asset** → AEGRYN team grades the asset (AEG★ to B)
@@ -106,17 +106,19 @@ A structured, session-based M&A auction platform dedicated to European digital t
 - **Model 04 — Equity Stake**: Partial stake acquisition, no fixed minimum, SHA-based commitment
 
 ### Key Pages
-- /auction — Platform overview
-- /auction/sell — Seller funnel: free valuation → readiness score → mandate submission
-- /auction/how-to-sell — Complete guide for sellers
-- /auction/submit — Mandate submission form
-- /auction/buyers — Buyer pre-qualification: profile, sectors, ticket, proof of funds
-- /auction/how-it-works — 6-step process: valuation → mandate+NDA → CIFS certification → buyer matching → auction session → Swiss escrow closing
-- /auction/catalog — Live catalog (NDA required for full dossier)
-- /auction/how-to-buy — Buyer onboarding guide
-- /auction/sessions — Calendar of auction sessions
-- /auction/bid-models — Detailed offer model structures
-- /auction/results — Past auction results
+- /transact — Platform overview
+- /transact/sell — Seller funnel: free valuation → readiness score → mandate submission
+- /transact/how-to-sell — Complete guide for sellers
+- /transact/submit — Mandate submission form
+- /transact/buyers — Buyer pre-qualification: profile, sectors, ticket, proof of funds
+- /transact/how-it-works — 6-step process: valuation → mandate+NDA → CIFS certification → buyer matching → auction session → Swiss escrow closing
+- /transact/catalog — Live catalog (NDA required for full dossier)
+- /transact/how-to-buy — Buyer onboarding guide
+- /transact/sessions — Calendar of auction sessions
+- /transact/bid-models — Detailed offer model structures
+- /transact/results — Past auction results
+- /magazine — Quarterly publication on tech M&A, AI, exits
+- /network — Expert certifications and partner network
 
 ---
 
@@ -165,7 +167,6 @@ Curated network of vetted transactional tech experts for M&A due diligence and a
 - **Real Estate** — asset-backed real estate in tech transactions
 - **ESG/RSE** — sustainability due diligence
 
-Subscription: €89/month excl. VAT (expert listing).
 Page: /experts
 
 ---
@@ -209,17 +210,17 @@ Incorporated: BOHA-Group Sàrl
 | Home | /fr | Main landing page |
 | About | /fr/a-propos | Company story and mission |
 | What We Build | /fr/ce-que-nous-construisons | Proprietary digital ecosystems |
-| Auction | /fr/auction | Auction platform overview |
-| Céder un actif | /fr/auction/sell | Seller funnel: valuation, readiness score, mandate |
-| How to Sell | /fr/auction/how-to-sell | Complete guide for sellers |
-| Submit Mandate | /fr/auction/submit | Mandate submission form |
-| Acheteurs | /fr/auction/buyers | Buyer pre-qualification form |
-| Comment ça marche | /fr/auction/how-it-works | Full 6-step process |
-| Auction Catalog | /fr/auction/catalog | Live assets for sale |
-| How to Buy | /fr/auction/how-to-buy | Buyer guide |
-| Auction Sessions | /fr/auction/sessions | Session calendar |
-| Bid Models | /fr/auction/bid-models | Offer model structures |
-| Auction Results | /fr/auction/results | Past transactions |
+| Auction | /fr/transact | Auction platform overview |
+| Céder un actif | /fr/transact/sell | Seller funnel: valuation, readiness score, mandate |
+| How to Sell | /fr/transact/how-to-sell | Complete guide for sellers |
+| Submit Mandate | /fr/transact/submit | Mandate submission form |
+| Acheteurs | /fr/transact/buyers | Buyer pre-qualification form |
+| Comment ça marche | /fr/transact/how-it-works | Full 6-step process |
+| Auction Catalog | /fr/transact/catalog | Live assets for sale |
+| How to Buy | /fr/transact/how-to-buy | Buyer guide |
+| Auction Sessions | /fr/transact/sessions | Session calendar |
+| Bid Models | /fr/transact/bid-models | Offer model structures |
+| Auction Results | /fr/transact/results | Past transactions |
 | Grade | /fr/grade | Grading system |
 | Grade Methodology | /fr/grade/methodology | Scoring methodology |
 | Grading System | /fr/grade/grading-system | Full grading reference |

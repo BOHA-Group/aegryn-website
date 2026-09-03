@@ -1,7 +1,7 @@
 # ARCHITECTURE, Aegryn Platform
 
 > **Audience:** Internal, developers  
-> **Last updated:** 2026-08
+> **Last updated:** 2026-09-03
 
 ---
 
@@ -38,7 +38,8 @@ github.com/BOHA-Group/aegryn-website
 │   │   ├── client/       ← Authenticated client spaces
 │   │   │   ├── buyer/
 │   │   │   ├── seller/
-│   │   │   └── partner/
+│   │   │   ├── partner/
+│   │   │   └── internal/     ← Espace collaborateur (rôle internal)
 │   │   ├── admin/        ← Internal admin (Aegryn team)
 │   │   └── api/          ← API routes
 │   ├── components/       ← Shared UI components
@@ -86,8 +87,8 @@ github.com/BOHA-Group/aegryn-website
 |---|---|---|
 | `/client/buyer/catalogue` | Buyer | Full NDA-gated catalogue |
 | `/client/seller/actifs` | Seller | Asset tracking dashboard |
-| `/client/partner/subscription` | Partner | Subscription + referral |
-| `/client/partner/certifications` | Partner | CIFS missions |
+| `/client/partner/certifications` | Partner | CIFS missions (auditeurs externes) |
+| `/client/internal` | Internal | Dashboard collaborateur (permissions granulaires) |
 
 ### Admin (`/admin/`)
 | Route | Purpose |
@@ -120,7 +121,7 @@ github.com/BOHA-Group/aegryn-website
 ## 6. Database Migrations
 
 Located in `supabase/migrations/`, sequentially numbered (`001_`, `002_`, ...).
-Current count: ~092.
+Current count: 101 (dernière: 101_internal_role_permissions).
 
 Run via Supabase CLI:
 ```bash
