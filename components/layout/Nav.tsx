@@ -194,15 +194,13 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
         {/* Domaines 1–5 */}
         <div className="bg-ag-white p-4">
           <div className="flex flex-col gap-1">
-            {SOLUTIONS_DOMAINS_LEFT.map(({ labelKey, href }) => (
-              <Link
+            {SOLUTIONS_DOMAINS_LEFT.map(({ labelKey }) => (
+              <span
                 key={labelKey}
-                href={href}
-                onClick={onClose}
-                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
+                className="font-sans text-[13px] text-ag-gray py-1 cursor-default select-none"
               >
                 {t(labelKey)}
-              </Link>
+              </span>
             ))}
           </div>
         </div>
@@ -210,15 +208,13 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
         {/* Domaines 6–10 */}
         <div className="bg-ag-white p-4">
           <div className="flex flex-col gap-1">
-            {SOLUTIONS_DOMAINS_RIGHT.map(({ labelKey, href }) => (
-              <Link
+            {SOLUTIONS_DOMAINS_RIGHT.map(({ labelKey }) => (
+              <span
                 key={labelKey}
-                href={href}
-                onClick={onClose}
-                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
+                className="font-sans text-[13px] text-ag-gray py-1 cursor-default select-none"
               >
                 {t(labelKey)}
-              </Link>
+              </span>
             ))}
           </div>
         </div>
