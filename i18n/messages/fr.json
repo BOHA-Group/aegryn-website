@@ -2165,7 +2165,7 @@
       "label": "Soumettre un actif",
       "title": "Obtenez le grade\nqui donne du prix à votre actif.",
       "desc": "La certification Aegryn est le passeport de votre actif pour accéder aux acquéreurs institutionnels et au processus de cession offmarket.",
-      "cta": "Démarrer la soumission"
+      "cta": "Soumettre mon actif"
     },
     "methodology": {
       "label": "Méthodologie",
@@ -2497,7 +2497,7 @@
     "ctaTitle": "Certifier votre actif",
     "ctaDesc": "Prêt à soumettre votre actif au protocole Aegryn Grade ?",
     "ctaPrimary": "Démarrer la certification",
-    "ctaSecondary": "Découvrir la méthodologie complète",
+    "ctaSecondary": "Notre réseau d'indépendants",
     "disclaimerTitle": "Mention obligatoire",
     "disclaimerText": "Bien que tout ait été mis en œuvre pour rester objectif, les clients sont informés que toute certification comporte une part de jugement expert. Les informations contenues dans un rapport Aegryn Grade sont fournies à titre de certification professionnelle, émise par des analystes certifiés Aegryn. Elles ne constituent pas une garantie de valeur de marché.",
     "refusalTitle": "Conditions de refus automatique",

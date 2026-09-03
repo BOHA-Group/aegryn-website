@@ -2035,7 +2035,7 @@
     "ctaTitle": "Ihr Asset zertifizieren",
     "ctaDesc": "Bereit, Ihr Asset dem Aegryn Grade-Protokoll einzureichen?",
     "ctaPrimary": "Zertifizierung starten",
-    "ctaSecondary": "Vollständige Methodik entdecken",
+    "ctaSecondary": "Unser unabhängiges Netzwerk",
     "disclaimerTitle": "Verpflichtender Hinweis",
     "disclaimerText": "Obwohl alles unternommen wurde, um objektiv zu bleiben, werden Kunden darüber informiert, dass jede Zertifizierung ein Element fachlicher Beurteilung enthält. Die in einem Aegryn Grade-Bericht enthaltenen Informationen werden als professionelle Zertifizierung bereitgestellt, ausgestellt von zertifizierten Aegryn-Analysten. Sie stellen keine Garantie für den Marktwert dar.",
     "refusalTitle": "Bedingungen für automatische Ablehnung",
@@ -2861,7 +2861,7 @@
       "label": "Asset einreichen",
       "title": "Erhalten Sie den Grade,\nder Ihrem Asset Wert verleiht.",
       "desc": "Die Aegryn-Zertifizierung ist der Pass Ihres Assets zu institutionellen Käufern.",
-      "cta": "Einreichung starten"
+      "cta": "Mein Asset einreichen"
     },
     "methodology": {
       "label": "Methodik",

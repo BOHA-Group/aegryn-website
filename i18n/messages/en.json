@@ -2144,7 +2144,7 @@
       "marketTitle": "Certification creates\nmeasurable value.",
       "marketDesc": "The tech M&A market has developed a clear premium for assets whose quality is verifiable. This premium is not a projection, it is observable on completed transactions.",
       "marketCta": "Submit my asset",
-      "marketCtaSecondary": "View methodology"
+      "marketCtaSecondary": "View the methodology"
     },
     "grades": [
       {
@@ -2233,7 +2233,7 @@
       "label": "Submit an asset",
       "title": "Get the grade that\ngives your asset its price.",
       "desc": "Aegryn certification is your asset's passport to institutional buyers and M&A processes.",
-      "cta": "Start submission"
+      "cta": "Submit my asset"
     },
     "methodology": {
       "label": "Methodology",
@@ -2565,7 +2565,7 @@
     "ctaTitle": "Certify your asset",
     "ctaDesc": "Ready to submit your asset to the Aegryn Grade protocol?",
     "ctaPrimary": "Start certification",
-    "ctaSecondary": "Discover the full methodology",
+    "ctaSecondary": "Our independent network",
     "disclaimerTitle": "Mandatory notice",
     "disclaimerText": "While every effort has been made to remain objective, clients are informed that any certification involves an element of expert judgement. The information contained in an Aegryn Grade report is provided as professional certification, issued by Aegryn certified analysts. It does not constitute a guarantee of market value.",
     "refusalTitle": "Automatic refusal conditions",

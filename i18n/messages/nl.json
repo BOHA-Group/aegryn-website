@@ -2035,7 +2035,7 @@
     "ctaTitle": "Certificeer uw asset",
     "ctaDesc": "Klaar om uw asset in te dienen bij het Aegryn Grade-protocol?",
     "ctaPrimary": "Certificering starten",
-    "ctaSecondary": "Ontdek de volledige methodologie",
+    "ctaSecondary": "Ons onafhankelijk netwerk",
     "disclaimerTitle": "Verplichte vermelding",
     "disclaimerText": "Hoewel alles in het werk is gesteld om objectief te blijven, worden klanten geïnformeerd dat elke certificering een element van deskundig oordeel bevat. De informatie in een Aegryn Grade-rapport wordt verstrekt als professionele certificering, uitgegeven door gecertificeerde Aegryn-analisten. Dit vormt geen garantie voor marktwaarde.",
     "refusalTitle": "Voorwaarden voor automatische afwijzing",
@@ -2772,7 +2772,7 @@
       "marketTitle": "Certificering creëert\nmeetbare waarde.",
       "marketDesc": "De tech-M&A-markt heeft een duidelijke premie ontwikkeld voor assets waarvan de kwaliteit verifieerbaar is. Deze premie is geen projectie, ze is waarneembaar op afgeronde transacties.",
       "marketCta": "Mijn asset indienen",
-      "marketCtaSecondary": "Methodologie bekijken"
+      "marketCtaSecondary": "Bekijk de methodologie"
     },
     "grades": [
       {
@@ -2861,7 +2861,7 @@
       "label": "Asset indienen",
       "title": "Ontvang de grade die\nwaarde geeft aan uw asset.",
       "desc": "De Aegryn-certificering is het paspoort van uw asset naar institutionele kopers.",
-      "cta": "Indiening starten"
+      "cta": "Mijn asset indienen"
     },
     "methodology": {
       "label": "Methodologie",

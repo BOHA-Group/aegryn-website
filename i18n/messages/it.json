@@ -2035,7 +2035,7 @@
     "ctaTitle": "Certifica il tuo asset",
     "ctaDesc": "Pronto a inviare il tuo asset al protocollo Aegryn Grade?",
     "ctaPrimary": "Avvia la certificazione",
-    "ctaSecondary": "Scopri la metodologia completa",
+    "ctaSecondary": "La nostra rete di indipendenti",
     "disclaimerTitle": "Avviso obbligatorio",
     "disclaimerText": "Sebbene sia stato fatto ogni sforzo per rimanere obiettivi, i clienti sono informati che ogni certificazione comporta una componente di giudizio esperto. Le informazioni contenute in un rapporto Aegryn Grade sono fornite come certificazione professionale, emessa dagli analisti certificati Aegryn. Non costituiscono una garanzia di valore di mercato.",
     "refusalTitle": "Condizioni di rifiuto automatico",
@@ -2772,7 +2772,7 @@
       "marketTitle": "La certificazione crea\nvalore misurabile.",
       "marketDesc": "Il mercato M&A tech ha sviluppato un premio chiaro per gli asset la cui qualità è verificabile. Questo premio non è una proiezione, è osservabile sulle transazioni realizzate.",
       "marketCta": "Inviare il mio asset",
-      "marketCtaSecondary": "Vedere la metodologia"
+      "marketCtaSecondary": "Vedi la metodologia"
     },
     "grades": [
       {
@@ -2861,7 +2861,7 @@
       "label": "Invia un asset",
       "title": "Ottieni il grade che\ndà valore al tuo asset.",
       "desc": "La certificazione Aegryn è il passaporto del tuo asset verso acquirenti istituzionali.",
-      "cta": "Avvia l'invio"
+      "cta": "Invia il mio asset"
     },
     "methodology": {
       "label": "Metodologia",

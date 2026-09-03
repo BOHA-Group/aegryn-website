@@ -579,13 +579,6 @@ export function GradingSystemPage() {
             >
               {t('ctaSecondary')}
             </Link>
-            <a
-              href="/legal/methodology.pdf"
-              download
-              className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.14em] uppercase text-ag-gray-light hover:text-ag-black px-2 py-4 transition-colors"
-            >
-              {t('downloadCta')}
-            </a>
           </div>
         </div>
       </section>
