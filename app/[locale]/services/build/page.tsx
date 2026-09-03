@@ -151,25 +151,7 @@ export default async function BuildServicePage({ params }: Props) {
             {t('platformSection.desc')}
           </p>
           {/* Schéma animé */}
-          <PlatformArchitectureDiagram />
-
-          {/* Détail textuel des couches */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 mb-10 mt-10">
-            {platformLayers.map((layer) => (
-              <div key={layer.key} className="bg-ag-navy p-8 flex flex-col gap-3 border border-white/10">
-                <h3 className="font-mono text-[11px] tracking-[0.22em] uppercase text-ag-apex">{layer.title}</h3>
-                <p className="font-sans text-[13px] text-white/70 leading-relaxed">{layer.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="border-l-2 border-ag-apex/40 pl-4 max-w-2xl">
-            <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.22em] text-ag-apex/80 mb-2">
-              {t('platformSection.verticals.label')}
-            </p>
-            <p className="font-sans text-[13px] text-white/60 leading-relaxed">
-              {t('platformSection.verticals.desc')}
-            </p>
-          </div>
+          <PlatformArchitectureDiagram layers={platformLayers} verticalsLabel={t('platformSection.verticals.label')} />
         </div>
       </section>
 
