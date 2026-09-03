@@ -1,5 +1,5 @@
 # Aegryn — Full LLM Context File
-> https://aegryn.com | Updated: 2026
+> https://aegryn.com | Updated: 2026-09-03
 > Summary version: https://aegryn.com/llms.txt
 
 ---
@@ -8,11 +8,11 @@
 
 **Name:** Aegryn (AEGRYN)
 **Pronunciation:** FR: É-grin /e.gʁɛ̃/ | EN: AY-grin /ˈeɪ.grɪn/ | DE: Ä-grin /ˈɛː.gʁɪn/
-**Type:** Swiss technology holding company + M&A auction platform for digital assets
+**Type:** Swiss technology holding company + M&A platform for digital assets
 **Tagline:** "Engineered to Last" / "Building What Endures"
 **Slogan:** "Aegryn protects what endures."
 **Incorporated:** Switzerland (BOHA-Group Sàrl)
-**HQ:** St-Sulpice, Switzerland (VD, CH)
+**HQ:** St-Sulpice, Switzerland (VD, CH) — 46.5147, 6.5600
 **Contact:** contact@boha-group.com
 **Website:** https://aegryn.com
 **Languages:** French, English, German, Italian, Spanish, Dutch
@@ -29,104 +29,105 @@ Synthesis: "Aegryn protects what endures."
 
 ---
 
-## Core Activities
+## Four Core Activities
 
-Aegryn operates across three complementary pillars:
+### 1. Asset Engineering — Build
+Aegryn designs, funds and operates its own portfolio of digital assets AND builds custom digital assets for third parties.
 
-### 1. Aegryn Build — Proprietary Assets
-Designs, funds and operates proprietary digital ecosystems (SaaS, B2C, marketplace, social). Full ownership model — no VC dilution. Each asset: certified, documented, operated under real conditions. Built to last, not to flip.
-- Portfolio: /assets
+**Proprietary portfolio** (full IP, sovereign infrastructure, "An Aegryn company"):
+- Subblink (https://subblink.app) — B2B SaaS, AI-powered contract analysis, risk detection, obligation mapping
+- Neediu (https://neediu.com) — B2C marketplace, home services (cleaning, plumbing, childcare)
+- Primiom (https://primiom.com) — B2C PropTech, AI-assisted real estate across Europe
+- Movtoo (https://movtoo.com) — B2C on-demand urban delivery for individuals and businesses
+- Hobconnect (https://hobconnect.com) — B2C social network around shared passions
 
-### 2. Aegryn Build — Asset Engineering (for third parties)
-Designs custom digital assets for individuals, entrepreneurs and institutions. Fixed price contract. Custom code only — no no-code/low-code. Full IP to client. Certification-ready from day one. 10–16 weeks delivery.
-- Service page: /services/build
-
-### 3. AEGRYN Transact — Tech Asset M&A Platform
-Europe's structured auction platform for buying and selling digital tech assets: SaaS businesses, B2C platforms, tech infrastructure. Range: €100K–€50M. Session-based, NDA-gated, graded assets only.
-
----
-
-## Proprietary Portfolio
-
-| Asset | URL | Type | Description |
-|---|---|---|---|
-| Subblink | https://subblink.app | B2B SaaS | AI-powered contract analysis — risk detection, obligation mapping, anomaly alerts |
-| Neediu | — | B2C Marketplace | Home services — cleaning, plumbing, childcare, vetted providers |
-| Primiom | — | B2C PropTech | AI-assisted real estate — buy, rent, estimate property value across Europe |
-| Movtoo | — | B2C Logistics | On-demand urban delivery for individuals and small businesses |
-| Hobconnect | — | B2C Social | Social network built around shared passions and hobbies |
-| Aegryn Advisory | https://www.aegryn.com/fr/advisory | B2B Advisory | Cybersecurity, AI audit, digital strategy for enterprises |
-
-Each asset carries: "An Aegryn company."
+**Custom build for third parties** (Asset Engineering service):
+- Fixed price contract at discovery — no scope creep
+- Custom code only — no no-code/low-code/WordPress
+- 100% IP transfer to client
+- Certification-ready: complete documentation from day one
+- Timeline: 10-16 weeks
+- Range: CHF 15,000-150,000+
+- Pages: /services/build, /ce-que-nous-construisons (fr), /what-we-build (en), /was-wir-bauen (de), /lo-que-construimos (es), /cosa-costruiamo (it), /wat-we-bouwen (nl)
 
 ---
 
-## Asset Engineering — Custom Build for Third Parties
+### 2. Advisory — Cybersecurity, AI, M&A Strategy
 
-URL: https://aegryn.com/en/services/build
+Three specialized advisory pillars across 23+ industries:
 
-Aegryn designs custom digital assets for individuals, entrepreneurs and institutions who need a proprietary digital product built to professional, certification-ready standards.
+**Technology Advisory** (/advisory/technology)
+- Cybersecurity: attack surface audit, penetration testing, incident response, cloud and on-premise hardening
+- AI Audit & Trust: EU AI Act compliance, LLM red-teaming, algorithmic bias audit, decision traceability
+- Tech Architecture: code audit, tech stack review, migration planning, security-by-design
 
-### Key differentiators
-- **Fixed price**: contract signed at discovery phase — price locked, no scope creep
-- **Custom code only**: no WordPress, no Webflow, no no-code — sovereign, maintainable codebase
-- **Full IP transfer**: 100% intellectual property to the client at delivery
-- **Zero technical debt**: clean architecture, documented from day one
-- **Certification-ready**: complete technical documentation enabling future Aegryn Grade certification
-- **Timeline**: 10–16 weeks from discovery to delivery
-- **Indicative range**: CHF 15,000–150,000+
+**Strategy Advisory** (/advisory/strategy)
+- Digital transformation roadmaps
+- Data governance and GDPR/FADP compliance
+- Innovation strategy and technology roadmaps
+- Secure architecture design
 
-### Process (7 steps)
-1. Discovery & Fixed Fee Definition
-2. Architecture & Technical Specifications
-3. UI/UX Design
-4. Frontend Development
-5. Backend & Infrastructure
-6. Testing & Security Audit
-7. Delivery, Documentation & IP Transfer
+**M&A Advisory** (/advisory/ma)
+- Buy-side advisory: target identification, valuation, due diligence
+- Sell-side advisory: preparation, positioning, buyer identification
+- Deal structuring: asset deal vs share deal, earnout, SPV, escrow
+- Post-merger integration
+
+**Industries covered (23+):** Aerospace & Defense, Agriculture & Agritech, Automotive & Mobility, Banking & Financial Services, Chemistry & Materials Science, Construction & Infrastructure, Cybersecurity & Data Protection, E-commerce & Retail, Education & EdTech, Energy & Utilities, Fintech & Blockchain, Healthtech & Biotechnology, Hospitality & Tourism, Real Estate & PropTech, Manufacturing & Industry 4.0, Logistics & Supply Chain, Luxury & Consumer Goods, Media & Entertainment, Natural Resources & Mining, Healthcare & Medical Devices, Professional Services, Telecommunications, Transport & Logistics
 
 ---
 
-## AEGRYN Transact Platform
+### 3. AEGRYN Transact Platform
 
-### What it is
-A structured, session-based M&A transact platform dedicated to European digital tech assets. One of the only platforms of its kind in Europe. Not a broker — a platform with standardised process, grading, NDA and structured closing.
+Europe's structured, session-based M&A platform for buying and selling digital tech assets.
+Range: €100K-€50M. NDA-gated. Graded assets only. Not a broker — a platform with standardized process.
 
-### Process
-1. **Seller submits asset** → AEGRYN team grades the asset (AEG★ to B)
-2. **Asset listed** in the auction catalog with a confidential dossier
-3. **Buyer KYC** → signs NDA → accesses full dossier
-4. **Session opens** → competitive bids submitted
-5. **Closing** → structured legal process with advisors
+**Process:**
+1. Seller submits asset → AEGRYN grades (AEG★ to B)
+2. Asset listed with confidential dossier (CIM)
+3. Buyer KYC → signs NDA → accesses full dossier
+4. Session opens → competitive bids submitted
+5. Closing → structured legal process with advisors
 
-### Offer Models (Bid Models)
-- **Model 01 — Club Deal**: Lead bidder + up to 4 co-investors, single bid, recommended minimum: €100K
-- **Model 02 — Corporate**: Legal entity acquisition (asset deal or share deal), recommended minimum: €250K
-- **Model 03 — Fund**: Institutional funds (PE, VC, Family Office, Search Fund), IC window 5–10 days, recommended minimum: €500K
-- **Model 04 — Equity Stake**: Partial stake acquisition, no fixed minimum, SHA-based commitment
+**Offer Models (Bid Models):**
+- Club Deal — Lead bidder + up to 4 co-investors, single bid, min €100K
+- Corporate — Legal entity (asset deal or share deal), min €250K
+- Fund — PE, VC, Family Office, Search Fund, IC window 5-10 days, min €500K
+- Equity Stake — Partial stake, no fixed minimum, SHA-based commitment
 
-### Key Pages
+**Key Pages:**
 - /transact — Platform overview
-- /transact/sell — Seller funnel: free valuation → readiness score → mandate submission
-- /transact/how-to-sell — Complete guide for sellers
-- /transact/submit — Mandate submission form
-- /transact/buyers — Buyer pre-qualification: profile, sectors, ticket, proof of funds
-- /transact/how-it-works — 6-step process: valuation → mandate+NDA → CIFS certification → buyer matching → auction session → Swiss escrow closing
 - /transact/catalog — Live catalog (NDA required for full dossier)
+- /transact/sessions — Session calendar
+- /transact/mandate — Submit sell mandate
+- /transact/sell — Seller funnel: valuation + readiness score
+- /transact/how-to-sell — Complete seller guide
 - /transact/how-to-buy — Buyer onboarding guide
-- /transact/sessions — Calendar of auction sessions
-- /transact/bid-models — Detailed offer model structures
-- /transact/results — Past auction results
-- /magazine — Quarterly publication on tech M&A, AI, exits
-- /network — Expert certifications and partner network
+- /transact/how-it-works — Full 6-step process
+- /transact/submit — Asset submission form
+- /transact/buyers — Buyer pre-qualification (KYC + proof of funds)
+- /transact/bid-models — Detailed offer structures
+- /transact/results — Past transaction results
 
 ---
 
-## AEGRYN Grade System
+### 4. Talent — Executive Tech Recruitment
 
-Proprietary grading methodology for digital assets. Equivalent to a credit rating for tech companies. Multi-criteria scoring: ARR, NRR, churn, TAM, tech stack, team, IP, compliance.
+Placement of rare executive tech profiles across Europe. Confidential search. Pre-qualified candidates only. 48h response time for hiring mandates.
 
-| Grade | Key | Color | Meaning |
+**Roles:** CTO, CISO, Head of AI / VP AI, VP Engineering, Head of Data, Head of Product, other C-level tech
+**For candidates:** Submit profile → qualification interview → presentation to companies (confidential)
+**For companies:** Submit mandate → 48h response → candidate search → pre-selected profiles → interviews
+**All 23+ industries covered**
+Page: /talent
+
+---
+
+## AEGRYN Grade System — CIFS Protocol
+
+Proprietary grading methodology for digital assets. 5 grades, immutable, based on Code, Infrastructure, Finance, and Strategy scoring.
+
+| Grade | DB Key | Color | Meaning |
 |---|---|---|---|
 | AEG ★ | star | #5ADDA4 (mint) | Apex — absolute excellence |
 | AAA | aaa | #C9A84C (gold) | Premium |
@@ -134,52 +135,51 @@ Proprietary grading methodology for digital assets. Equivalent to a credit ratin
 | A | a | #4A90D9 (blue) | Standard |
 | B | b | #D4820A (amber) | Early stage |
 
-Graded assets only are eligible for the AEGRYN Auction.
-
-Pages: /grade, /grade/methodology, /grade/grading-system, /grade/submit
+Only graded assets are eligible for AEGRYN Transact auction.
+Pages: /grade, /grade/methodology, /grade/grading-system, /grade/submit, /grade/partners
 
 ---
 
-## AEGRYN Valuation Tool
+## Valuation Tool
 
 Free, instant preliminary valuation of digital assets.
-
 Criteria: ARR, NRR, churn, MRR, CAC, LTV, TAM, tech stack, team, IP, compliance.
 Benchmarked against European comparable M&A transactions.
-Output: indicative valuation range + AEGRYN preliminary grade (B by default until validated).
-
 Page: /valuation
 
 ---
 
 ## Expert Network
 
-Curated network of vetted transactional tech experts for M&A due diligence and advisory:
+Curated network of vetted transactional tech experts:
+- M&A Advisors — deal structuring, valuation, SPA
+- Tech Lawyers — IP, share deal, asset deal, NDA
+- Accountants/Auditors — financial due diligence, SaaS metrics
+- CTO/Tech Architects — technical due diligence, code audit
+- Cybersecurity — PASSI/CREST auditors, penetration testing, ISO 27001
+- HR/Employment Law — HR due diligence, social audit
+- W&I Insurance — Warranty & Indemnity, transactional risk
+- Tax Advisors — exit structuring, cross-border taxation
+- Real Estate — asset-backed real estate in tech transactions
+- ESG/RSE — sustainability due diligence
 
-- **M&A Advisors** — deal structuring, valuation, SPA
-- **Tech Lawyers** — IP, share deal, asset deal, NDA
-- **Accountants/Auditors** — financial due diligence, SaaS metrics audit
-- **CTO/Tech Architects** — technical due diligence, code audit, security review
-- **Cybersecurity** — PASSI/CREST auditors, penetration testing, ISO 27001
-- **HR/Employment Law** — HR due diligence, social audit, GDPR compliance
-- **W&I Insurance** — Warranty & Indemnity insurance, transactional risk
-- **Tax Advisors** — exit structuring, cross-border taxation, holding optimization
-- **Real Estate** — asset-backed real estate in tech transactions
-- **ESG/RSE** — sustainability due diligence
-
-Page: /experts
+Pages: /experts (fr/en/nl), /experten (de), /expertos (es), /esperti (it), /network
 
 ---
 
-## Aegryn Advisory
+## Aegryn Magazine
 
-Institutional-grade digital protection and advisory for enterprises:
+Quarterly publication on tech M&A, AI, exits, and art de vivre.
+Tagline: "Deals, multiples, portraits et art de vivre — trimestriel."
+Issue 01 available as web reader and interactive flipbook (130 pages, StPageFlip engine).
 
-- **Cybersecurity** — Attack surface audit, penetration testing, incident response, cloud hardening
-- **AI Audit & Trust** — EU AI Act compliance, LLM red-teaming, algorithmic bias, decision traceability
-- **Digital Strategy** — Data governance, GDPR & Swiss FADP compliance, secure architecture, innovation roadmap
-
-Page: /advisory
+Pages:
+- /magazine — Hub
+- /magazine/issue-01 — Issue 01 overview
+- /magazine/issue-01/web — Web reader (article by article)
+- /magazine/issue-01/flipbook — Interactive flipbook
+- /magazine/report — Annual reports index
+- /magazine/report/2027 — 2027 report
 
 ---
 
@@ -195,54 +195,67 @@ Page: /advisory
 
 ## Compliance & Geography
 
-Headquarters: St-Sulpice, Switzerland (VD)
-Coordinates: 46.5147, 6.5600
+Headquarters: St-Sulpice, Switzerland (VD) — Coordinates: 46.5147, 6.5600
 Markets: CH, FR, DE, BE, LU, IT, ES, NL, EU
 Regulatory: GDPR, Swiss FADP (LPD), EU AI Act aligned
 Incorporated: BOHA-Group Sàrl
 
 ---
 
-## All Site Pages (Canonical URLs — French / Default locale)
+## All Site Pages — Canonical URLs (French locale)
 
 | Page | URL | Description |
 |---|---|---|
 | Home | /fr | Main landing page |
-| About | /fr/a-propos | Company story and mission |
+| About | /fr/about | Company story and mission |
 | What We Build | /fr/ce-que-nous-construisons | Proprietary digital ecosystems |
-| Auction | /fr/transact | Auction platform overview |
-| Céder un actif | /fr/transact/sell | Seller funnel: valuation, readiness score, mandate |
-| How to Sell | /fr/transact/how-to-sell | Complete guide for sellers |
-| Submit Mandate | /fr/transact/submit | Mandate submission form |
-| Acheteurs | /fr/transact/buyers | Buyer pre-qualification form |
-| Comment ça marche | /fr/transact/how-it-works | Full 6-step process |
-| Auction Catalog | /fr/transact/catalog | Live assets for sale |
+| Blog | /fr/blog | Articles and insights |
+| Contact | /fr/contact | Contact form |
+| Career | /fr/career | Open positions |
+| Glossary | /fr/glossaire | Tech M&A glossary |
+| Alliances | /fr/alliances | Strategic partnerships |
+| Roadmap | /fr/roadmap | Product roadmap |
+| Transact | /fr/transact | Transact platform overview |
+| Catalog | /fr/transact/catalog | Live assets for sale |
+| Sessions | /fr/transact/sessions | Session calendar |
+| Mandate | /fr/transact/mandate | Sell mandate submission |
+| Sell | /fr/transact/sell | Seller funnel |
+| How to Sell | /fr/transact/how-to-sell | Seller guide |
 | How to Buy | /fr/transact/how-to-buy | Buyer guide |
-| Auction Sessions | /fr/transact/sessions | Session calendar |
-| Bid Models | /fr/transact/bid-models | Offer model structures |
-| Auction Results | /fr/transact/results | Past transactions |
+| How It Works | /fr/transact/how-it-works | 6-step process |
+| Submit | /fr/transact/submit | Asset submission |
+| Buyers | /fr/transact/buyers | Buyer pre-qualification |
+| Bid Models | /fr/transact/bid-models | Offer structures |
+| Results | /fr/transact/results | Past transactions |
 | Grade | /fr/grade | Grading system |
 | Grade Methodology | /fr/grade/methodology | Scoring methodology |
-| Grading System | /fr/grade/grading-system | Full grading reference |
-| Grade Submit | /fr/grade/submit | Submit asset for grading |
+| Grading System | /fr/grade/grading-system | Full CIFS reference |
+| Grade Submit | /fr/grade/submit | Submit for grading |
 | Grade Partners | /fr/grade/partners | Grading partners |
-| Valuation | /fr/valuation | Free instant valuation tool |
-| Advisory | /fr/advisory | Advisory services |
+| Valuation | /fr/valuation | Free valuation tool |
+| Advisory | /fr/advisory | Advisory overview |
+| Advisory Technology | /fr/advisory/technology | Cybersecurity + AI audit |
+| Advisory Strategy | /fr/advisory/strategy | Digital strategy |
+| Advisory M&A | /fr/advisory/ma | M&A advisory |
+| Talent | /fr/talent | Executive recruitment |
 | Experts | /fr/experts | Expert network |
-| Assets | /fr/assets | Portfolio assets |
+| Network | /fr/network | Partner certifications |
+| Assets | /fr/assets | Proprietary portfolio |
+| Build Services | /fr/services/build | Custom build |
 | Acquisition Support | /fr/services/acquisition-support | Post-deal services |
-| Build Services | /fr/services/build | Tech building services |
-| Alliances | /fr/alliances | Strategic partnerships |
-| Glossary | /fr/glossaire | Tech M&A glossary |
-| Blog | /fr/blog | Articles and insights |
-| Career | /fr/career | Open positions |
-| Contact | /fr/contact | Contact form |
+| Magazine | /fr/magazine | Magazine hub |
+| Issue 01 | /fr/magazine/issue-01 | Issue 01 |
+| Issue 01 Web | /fr/magazine/issue-01/web | Web reader |
+| Issue 01 Flipbook | /fr/magazine/issue-01/flipbook | Interactive flipbook |
+| Report | /fr/magazine/report | Annual reports |
+| Report 2027 | /fr/magazine/report/2027 | 2027 report |
 | FAQ | /fr/help/faq | Frequently asked questions |
-| Roadmap | /fr/roadmap | Product roadmap |
 | Privacy | /fr/privacy | Privacy policy |
 | Terms of Use | /fr/terms/use | Terms of use |
 | CGV | /fr/terms/cgv | General sales conditions |
+| AI Usage | /fr/terms/ai-usage | AI usage policy |
 | Security | /fr/security | Security policy |
+| Neediu GDPR | /fr/data-protection-notice-neediu | Neediu data protection |
 
 ---
 

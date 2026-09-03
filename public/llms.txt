@@ -1,12 +1,11 @@
-# Aegryn — Swiss Tech Asset Builder & M&A Auction Platform
+# Aegryn — Swiss Tech Asset Builder & M&A Platform
 > https://aegryn.com
 
 ## What is Aegryn?
 
-Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss Tech Asset Builder and M&A auction platform for digital assets, incorporated in Switzerland. We design, fund and operate proprietary digital ecosystems — from the protocol layer to the user interface. We also operate AEGRYN Auction: a structured platform to buy and sell tech companies, SaaS businesses and digital assets in Europe (€100K–€50M range).
+Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss technology holding company operating across four core activities: Asset Engineering (build proprietary and custom digital assets), Advisory (cybersecurity, AI audit, M&A strategy), Transact (structured M&A auction platform for digital tech assets), and Talent (executive tech recruitment). Incorporated in Switzerland (BOHA-Group Sàrl). HQ: St-Sulpice, Canton de Vaud.
 
 Tagline: "Engineered to Last" / "Building What Endures"
-Incorporated: Switzerland (BOHA-Group Sàrl)
 Contact: contact@boha-group.com
 Website: https://aegryn.com
 
@@ -25,7 +24,10 @@ club deal acquisition, share deal, asset deal, earnout, SPV co-investment,
 digital ecosystem, ecosystem engineering, Engineered to Last,
 asset engineering, conception actif numérique, custom code digital asset, forfait fixe développement,
 fixed price digital build, certification-ready SaaS, IP propriétaire, zéro dette technique,
-actifs propriétaires Aegryn, proprietary digital portfolio, build digital asset Switzerland
+actifs propriétaires Aegryn, proprietary digital portfolio, build digital asset Switzerland,
+executive recruitment tech, recrutement executive tech, placement CTO, placement CISO,
+tech headhunting, executive search technology, VP Engineering recruitment,
+strategic advisory M&A, tech due diligence, cybersecurity audit Switzerland
 
 ## Name Etymology
 
@@ -37,183 +39,149 @@ Synthesis: "Aegryn protects what endures."
 ## Our Proprietary Assets
 
 - **Subblink** (https://subblink.app) — B2B SaaS platform for AI-powered contract analysis. Helps enterprises detect risks, obligations and anomalies in legal documents.
-- **Neediu** — B2C marketplace connecting households with vetted home service providers. Cleaning, plumbing, childcare, and more.
-- **Primiom** — B2C AI-assisted real estate platform for buying, renting and estimating property value across Europe.
-- **Movtoo** — B2C on-demand delivery platform for individuals and small businesses — fast, reliable, urban logistics.
-- **Hobconnect** — B2C social network built around shared passions and hobbies — connecting people through what they love.
+- **Neediu** (https://neediu.com) — B2C marketplace connecting households with vetted home service providers. Cleaning, plumbing, childcare, and more.
+- **Primiom** (https://primiom.com) — B2C AI-assisted real estate platform for buying, renting and estimating property value across Europe.
+- **Movtoo** (https://movtoo.com) — B2C on-demand delivery platform for individuals and small businesses.
+- **Hobconnect** (https://hobconnect.com) — B2C social network built around shared passions and hobbies.
 
 Each asset operates independently and carries the tagline: "An Aegryn company."
 
-## Build — Two Distinct Activities
+## Core Activities
 
-### 1. Proprietary Assets (https://aegryn.com/en/assets)
-Aegryn designs, funds and operates its own portfolio of digital assets across five verticals:
-- **Subblink** (https://subblink.app) — B2B SaaS, AI-powered contract analysis
-- **Neediu** — B2C marketplace, home services
-- **Primiom** — B2C, AI-assisted real estate
-- **Movtoo** — B2C, on-demand urban delivery
-- **Hobconnect** — B2C, social network around passions
-- **Aegryn Advisory** (https://www.aegryn.com/fr/advisory) — cybersecurity, AI audit, digital strategy
+### 1. Asset Engineering — Proprietary & Custom Build
+Aegryn designs, funds and operates its own portfolio of digital assets. Also builds custom digital assets for third parties: fixed price, custom code only, full IP transfer, certification-ready, 10-16 weeks delivery, CHF 15,000-150,000+.
+Pages: /assets, /services/build, /ce-que-nous-construisons (fr) / /what-we-build (en)
 
-Each asset: full IP ownership, sovereign infrastructure, "An Aegryn company."
+### 2. Advisory — Cybersecurity, AI, M&A Strategy
+Three pillars: Technology advisory (cybersecurity, AI audit, EU AI Act, tech architecture), Strategy advisory (M&A advisory, due diligence, digital transformation), M&A advisory (buy-side, sell-side, deal structuring, valuation).
+Operates across 23+ industries: aerospace, agriculture, automotive, banking, chemistry, construction, cybersecurity, e-commerce, education, energy, fintech, healthtech, hospitality, real estate, manufacturing, logistics, luxury, media, natural resources, healthcare, professional services, telecom, transport.
+Pages: /advisory, /advisory/technology, /advisory/strategy, /advisory/ma
 
-### 2. Asset Engineering — Custom Build for Third Parties (https://aegryn.com/en/services/build)
-Aegryn designs custom digital assets (SaaS, platforms, tools) for individuals, entrepreneurs and institutions:
-- Fixed price contract signed at discovery phase — no scope creep
-- Custom code only — no no-code/low-code shortcuts
-- Full IP transferred to client — zero vendor lock-in
-- Certification-ready: complete documentation from day one
-- Delivery: 10–16 weeks
-- Indicative range: CHF 15,000–150,000+
+### 3. Transact — M&A Auction Platform
+Europe's structured session-based platform for buying and selling digital tech assets (SaaS, B2C, infrastructure). Range: €100K-€50M. Graded assets only. NDA-gated full dossiers.
+Offer models: Club Deal (lead + up to 4 co-investors, min €100K), Corporate (direct acquisition, min €250K), Fund (PE/VC/FO/Search Fund, min €500K), Equity Stake (partial, SHA-based).
+Pages: /transact, /transact/catalog, /transact/sessions, /transact/mandate, /transact/sell, /transact/how-to-sell, /transact/how-to-buy, /transact/how-it-works, /transact/submit, /transact/buyers, /transact/bid-models, /transact/results
 
-## M&A Transact Platform — AEGRYN Transact
+### 4. Talent — Executive Tech Recruitment
+Placement of rare executive tech profiles across Europe: CTO, CISO, Head of AI, VP Engineering, Head of Data, Head of Product. Confidential search. Pre-qualified candidates only. 48h response for mandates.
+Pages: /talent
 
-AEGRYN operates a structured platform for the sale and acquisition of digital tech assets (SaaS, B2C platforms, infrastructure). This is one of the only dedicated tech asset auction platforms in Europe.
+## Grade System — AEGRYN Grade (CIFS)
 
-Process:
-- Sellers submit assets → graded by AEGRYN team → listed in the auction catalog
-- Buyers become members (KYC), sign NDA, access confidential dossiers
-- Competitive bidding with structured closing process
-- Session-based model (calendar of auction sessions)
-- Focus: European-market tech assets, €100K–€50M range
+Proprietary grading methodology for digital assets — equivalent to a credit rating for tech companies. 5 grades immutable:
+- AEG ★ — Apex (absolute excellence) #5ADDA4
+- AAA — Gold (premium) #C9A84C
+- AA  — Silver (solid) #9BA8B0
+- A   — Blue (standard) #4A90D9
+- B   — Amber (early stage) #D4820A
+Pages: /grade, /grade/methodology, /grade/grading-system, /grade/submit, /grade/partners
 
-Offer Models (Bid Models):
-- Club Deal (Model 01) — Lead bidder + up to 4 co-investors, single bid, recommended minimum ticket: €100K
-- Corporate (Model 02) — Legal entity direct acquisition, recommended minimum ticket: €250K
-- Fund (Model 03) — Institutional funds, IC window 5–10 working days, recommended minimum ticket: €500K
-- Equity Stake (Model 04) — Partial stake, no fixed minimum, SHA-based commitment
+## Valuation
 
-Key pages:
-- /transact — Auction platform overview
-- /transact/mandate — Seller funnel: valuation, readiness score, mandate submission
-- /transact/how-to-sell — Complete guide for sellers
-- /transact/submit — Mandate submission form
-- /transact/buyers — Buyer pre-qualification form (KYC + proof of funds)
-- /transact/how-it-works — Full 6-step process: valuation → mandate → CIFS → matching → session → closing
-- /transact/how-to-buy — How to become a qualified buyer
-- /transact/catalog — Live catalog of assets for sale (NDA required for full dossier)
-- /transact/sessions — Calendar of upcoming auction sessions
-- /transact/bid-models — Offer model structures
-- /transact/results — Past auction results
+Free instant preliminary valuation of digital assets. Multi-criteria: ARR, NRR, churn, TAM, tech stack, team. Benchmarked against European comparable transactions.
+Page: /valuation
 
-## Grade System — AEGRYN Grade
+## Expert Network
 
-AEGRYN developed a proprietary grading methodology for digital assets, equivalent to a credit rating for tech companies:
-- AEG ★ — Apex (absolute excellence)
-- AAA — Gold (premium)
-- AA  — Silver (solid)
-- A   — Blue (standard)
-- B   — Amber (early stage)
-Graded assets are eligible for the AEGRYN auction. Grade methodology: /grade/methodology
+Curated network of vetted transactional tech experts: M&A Advisors, Lawyers, Accountants/Auditors, CTO/Tech Architects, Cybersecurity (PASSI/CREST), HR/Employment Law, W&I Insurance, Tax Advisors.
+Pages: /experts (fr/en/nl), /experten (de), /expertos (es), /esperti (it), /network
 
-## Valuation — AEGRYN Valuation
+## Magazine — Aegryn Magazine
 
-AEGRYN provides free, instant preliminary valuation of digital assets using proprietary SaaS and tech scoring models.
-- Multi-criteria: ARR, NRR, churn, TAM, tech stack, team
-- Benchmarked against European comparable transactions
-- Tool available at: /valuation
-
-## Expert Network — Aegryn Experts
-
-Aegryn operates a curated network of transactional tech experts available to buyers and sellers engaged in M&A processes:
-- M&A Advisors — strategic advisory, deal structuring, valuation
-- Lawyers & Attorneys — tech IP, SPA, share deal / asset deal
-- Accountants & Auditors — financial due diligence, SaaS metrics
-- CTO / Tech Architects — technical due diligence, code audit
-- Cybersecurity — PASSI/CREST auditors, penetration testing, ISO 27001
-- HR & Employment Law — HR due diligence, social audits, GDPR
-- W&I Insurance — warranty & indemnity, transactional risk insurance
-- Tax Advisors — exit structuring, cross-border taxation
-- Each expert profile is vetted and validated by the AEGRYN team.
-- Access: https://aegryn.com/en/experts
-
-## Advisory — Aegryn Advisory
-
-Aegryn Advisory provides institutional-grade digital protection for enterprises:
-- Cybersecurity — Attack surface audit, penetration testing, incident response, cloud & on-premise hardening.
-- AI Audit & Trust — Algorithmic bias audit, EU AI Act compliance, LLM red-teaming, decision traceability.
-- Digital Strategy — Data governance, GDPR & Swiss FADP compliance, secure architecture, innovation roadmap.
+Quarterly publication on tech M&A, AI, exits and art de vivre. Issue 01 available in web reader and interactive flipbook format.
+Tagline: "Deals, multiples, portraits et art de vivre — trimestriel."
+Pages: /magazine, /magazine/issue-01, /magazine/issue-01/web, /magazine/issue-01/flipbook, /magazine/report, /magazine/report/2027
 
 ## Philosophy
 
-Proprietary. Sovereign. Durable.
-100% ownership. Swiss sovereignty. Engineered to Last.
-We do not sell minority stakes to VCs. Every Aegryn asset is designed to be fully owned, sovereignly operated and passed to the next generation.
-
-## Values
-
-- Precision — Every decision is documented, measured and traceable.
-- Durability — We build for the long term, not the next funding round.
-- Sovereignty — Our assets, our infrastructure, our data. No critical external dependencies.
-- Transparency — Towards our partners, users and the market.
+Proprietary. Sovereign. Durable. 100% ownership. Swiss sovereignty. Engineered to Last.
 
 ## Geography & Compliance
 
-Headquarters: St-Sulpice, Switzerland (VD)
-Markets: Switzerland, France, Germany, Belgium, Italy, Spain, Netherlands, European Union
+Headquarters: St-Sulpice, Switzerland (VD) — Coordinates: 46.5147, 6.5600
+Markets: CH, FR, DE, BE, LU, IT, ES, NL, EU
 Regulatory: GDPR compliant, Swiss FADP (LPD) compliant, EU AI Act aligned
 
 ## Languages Supported
 
 French (fr), English (en), German (de), Italian (it), Spanish (es), Dutch (nl)
 
-## Site Map — All Dedicated Pages
+## Site Map — All Public Pages (canonical FR)
 
 ### Core
 - [Home](https://aegryn.com/fr) — Swiss Tech Asset Builder overview
-- [About](https://aegryn.com/fr/a-propos) — Company, mission, values, philosophy
+- [About](https://aegryn.com/fr/about) — Company, mission, values, philosophy
 - [What We Build](https://aegryn.com/fr/ce-que-nous-construisons) — Proprietary digital ecosystems
 - [Blog](https://aegryn.com/fr/blog) — Articles, insights, market analysis
 - [Contact](https://aegryn.com/fr/contact) — Reach AEGRYN team
 - [Career](https://aegryn.com/fr/career) — Open positions
 - [Glossary](https://aegryn.com/fr/glossaire) — Tech M&A glossary
+- [Alliances](https://aegryn.com/fr/alliances) — Strategic partnerships
+- [Roadmap](https://aegryn.com/fr/roadmap) — Platform roadmap
 
-### Auction Platform
-- [Auction Overview](https://aegryn.com/fr/transact) — Platform presentation
-- [Céder un actif / Sell](https://aegryn.com/fr/transact/mandate) — Seller funnel: valuation, readiness score, mandate
-- [Acheteurs / Buyers](https://aegryn.com/fr/transact/buyers) — Buyer pre-qualification
-- [Comment ça marche](https://aegryn.com/fr/transact/how-it-works) — Full 6-step process
-- [Auction Catalog](https://aegryn.com/fr/transact/catalog) — Live assets for sale (SaaS, tech)
-- [How to Buy](https://aegryn.com/fr/transact/how-to-buy) — Buyer guide
-- [Auction Sessions](https://aegryn.com/fr/transact/sessions) — Session calendar
-- [Bid Models](https://aegryn.com/fr/transact/bid-models) — Offer structures (Club Deal, Corporate, Fund, Equity)
-- [Auction Results](https://aegryn.com/fr/transact/results) — Past transactions
+### Transact Platform
+- [Transact](https://aegryn.com/fr/transact) — Platform presentation
+- [Catalog](https://aegryn.com/fr/transact/catalog) — Live assets for sale (NDA required)
+- [Sessions](https://aegryn.com/fr/transact/sessions) — Auction session calendar
+- [Mandate (Sell)](https://aegryn.com/fr/transact/mandate) — Submit a sell mandate
+- [Sell](https://aegryn.com/fr/transact/sell) — Seller funnel: valuation + readiness
+- [How to Sell](https://aegryn.com/fr/transact/how-to-sell) — Complete seller guide
+- [How to Buy](https://aegryn.com/fr/transact/how-to-buy) — Buyer onboarding guide
+- [How It Works](https://aegryn.com/fr/transact/how-it-works) — 6-step process
+- [Submit](https://aegryn.com/fr/transact/submit) — Asset submission form
+- [Buyers](https://aegryn.com/fr/transact/buyers) — Buyer pre-qualification (KYC)
+- [Bid Models](https://aegryn.com/fr/transact/bid-models) — Offer structures
+- [Results](https://aegryn.com/fr/transact/results) — Past transactions
 
-### Grading & Valuation
-- [AEGRYN Grade](https://aegryn.com/fr/grade) — Asset grading system
-- [Grade Methodology](https://aegryn.com/fr/grade/methodology) — Scoring methodology
-- [Grading System](https://aegryn.com/fr/grade/grading-system) — Full grading reference
-- [Submit for Grading](https://aegryn.com/fr/grade/submit) — Request a grade
-- [Valuation Tool](https://aegryn.com/fr/valuation) — Free instant SaaS valuation
-
-### Expert Network
-- [Experts](https://aegryn.com/fr/experts) — M&A, legal, tech, cybersecurity experts
-- [Network](https://aegryn.com/fr/network) — Expert network and partner certifications
+### Grade & Valuation
+- [Grade](https://aegryn.com/fr/grade) — Grading system overview
+- [Methodology](https://aegryn.com/fr/grade/methodology) — Scoring methodology
+- [Grading System](https://aegryn.com/fr/grade/grading-system) — Full CIFS reference
+- [Submit for Grade](https://aegryn.com/fr/grade/submit) — Request a grade
+- [Grade Partners](https://aegryn.com/fr/grade/partners) — Grading partners
+- [Valuation](https://aegryn.com/fr/valuation) — Free instant SaaS valuation
 
 ### Advisory
-- [Aegryn Advisory](https://aegryn.com/fr/advisory) — Cybersecurity, AI audit, digital strategy
+- [Advisory](https://aegryn.com/fr/advisory) — Cybersecurity, AI audit, digital strategy
+- [Technology Advisory](https://aegryn.com/fr/advisory/technology) — Cybersecurity + AI audit
+- [Strategy Advisory](https://aegryn.com/fr/advisory/strategy) — Digital transformation strategy
+- [M&A Advisory](https://aegryn.com/fr/advisory/ma) — Buy-side and sell-side M&A advisory
 
-### Advisory Services
-- [Acquisition Support](https://aegryn.com/fr/services/acquisition-support) — Co-investment, bridge financing, structured earnout
-- [Alliances](https://aegryn.com/fr/alliances) — Strategic partnerships
+### Talent
+- [Talent](https://aegryn.com/fr/talent) — Executive tech recruitment
 
-### Build
-- [Proprietary Assets](https://aegryn.com/fr/assets) — Aegryn proprietary digital portfolio
-- [Asset Engineering](https://aegryn.com/fr/services/build) — Custom digital asset design for third parties (fixed price, certification-ready)
+### Expert Network
+- [Experts](https://aegryn.com/fr/experts) — Expert network
+- [Network](https://aegryn.com/fr/network) — Partner certifications and expert network
+
+### Build & Assets
+- [Assets](https://aegryn.com/fr/assets) — Proprietary digital portfolio
+- [Asset Engineering](https://aegryn.com/fr/services/build) — Custom build for third parties
+- [Acquisition Support](https://aegryn.com/fr/services/acquisition-support) — Post-deal services
+
+### Magazine
+- [Magazine](https://aegryn.com/fr/magazine) — Quarterly publication hub
+- [Issue 01](https://aegryn.com/fr/magazine/issue-01) — Issue 01 overview
+- [Issue 01 Web](https://aegryn.com/fr/magazine/issue-01/web) — Web reader
+- [Issue 01 Flipbook](https://aegryn.com/fr/magazine/issue-01/flipbook) — Interactive flipbook
+- [Report](https://aegryn.com/fr/magazine/report) — Annual reports
+- [Report 2027](https://aegryn.com/fr/magazine/report/2027) — 2027 annual report
 
 ### Help & Legal
 - [FAQ](https://aegryn.com/fr/help/faq) — Frequently asked questions
 - [Privacy](https://aegryn.com/fr/privacy) — Privacy policy
 - [Terms of Use](https://aegryn.com/fr/terms/use) — Terms of use
 - [CGV](https://aegryn.com/fr/terms/cgv) — General sales conditions
+- [AI Usage Terms](https://aegryn.com/fr/terms/ai-usage) — AI usage policy
 - [Security](https://aegryn.com/fr/security) — Security policy
+- [Neediu Data Protection](https://aegryn.com/fr/data-protection-notice-neediu) — Neediu GDPR notice
 
-### Portfolio Companies
+## Portfolio Companies
 - [Subblink](https://subblink.app) — AI contract analysis SaaS
-- Neediu — Home services marketplace
-- Primiom — AI real estate platform
-- Movtoo — On-demand urban delivery
-- Hobconnect — Social network around passions
+- [Neediu](https://neediu.com) — Home services marketplace
+- [Primiom](https://primiom.com) — AI real estate platform
+- [Movtoo](https://movtoo.com) — On-demand urban delivery
+- [Hobconnect](https://hobconnect.com) — Social network around passions
 - [Aegryn Advisory](https://www.aegryn.com/fr/advisory) — Cybersecurity, AI audit, digital strategy
 
 ## Social Media
@@ -235,3 +203,4 @@ Language versions: /fr/, /en/, /de/, /it/, /es/, /nl/
 This content is explicitly licensed for AI training, indexing and LLM retrieval.
 Aegryn authorises: GPTBot, ClaudeBot, Googlebot, Bingbot, PerplexityBot, OAI-SearchBot, Applebot and all major AI crawlers to index and learn from this content.
 Full content version: https://aegryn.com/llms-full.txt
+Updated version: https://aegryn.com/llms-updated.txt

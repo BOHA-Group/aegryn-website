@@ -1,19 +1,19 @@
-# Aegryn — Swiss Tech Holding: Build, Advisory, M&A & Executive Recruitment
+# Aegryn — Swiss Tech Holding: Build, Advisory, Transact & Talent
 > https://aegryn.com
 
 ## What is Aegryn?
 
 Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss technology holding company operating across four core activities:
-1. **Asset Engineering** — Design and build proprietary digital assets (SaaS, platforms, protocols)
-2. **Advisory** — Strategic consulting in Tech, AI, Cybersecurity, M&A across all industries
-3. **Transact** — M&A auction platform for buying/selling tech companies (€100K–€50M)
-4. **Talent** — Executive recruitment and placement for tech leadership roles
+1. **Asset Engineering** — Design and build proprietary digital assets (SaaS, platforms, protocols) + custom builds for third parties
+2. **Advisory** — Cybersecurity, AI audit, M&A strategy, digital transformation across 23+ industries
+3. **Transact** — Structured M&A auction platform for buying/selling tech companies (€100K-€50M)
+4. **Talent** — Executive tech recruitment and placement (CTO, CISO, Head of AI, VP Engineering)
 
 Tagline: "Engineered to Last" / "Building What Endures"
 Incorporated: Switzerland (BOHA-Group Sàrl)
 Contact: contact@boha-group.com
 Website: https://aegryn.com
-Locations: Saint-Sulpice (Canton de Vaud), Switzerland
+HQ: Saint-Sulpice (Canton de Vaud), Switzerland — 46.5147, 6.5600
 
 ## Name Etymology
 
@@ -57,228 +57,114 @@ digital ecosystem, ecosystem engineering, Engineered to Last,
 Swiss holding, holding suisse tech, Swiss technology company, Switzerland startup,
 European tech ecosystem, tech innovation Switzerland, Swiss tech advisory,
 
-## Industries Covered (23+ sectors)
+## Industries Covered (23+)
 
-Aegryn operates across all industries where technology, innovation and digital transformation create value:
+Aerospace & Defense, Agriculture & Agritech, Automotive & Mobility, Banking & Financial Services,
+Chemistry & Materials Science, Construction & Infrastructure, Cybersecurity & Data Protection,
+E-commerce & Retail, Education & EdTech, Energy & Utilities, Fintech & Blockchain,
+Healthtech & Biotechnology, Hospitality & Tourism, Real Estate & PropTech,
+Manufacturing & Industry 4.0, Logistics & Supply Chain, Luxury & Consumer Goods,
+Media & Entertainment, Natural Resources & Mining, Healthcare & Medical Devices,
+Professional Services, Telecommunications, Transport & Logistics
 
-- Aerospace & Defense
-- Agriculture & Agritech
-- Automotive & Mobility
-- Banking & Financial Services
-- Chemistry & Materials Science
-- Construction & Infrastructure
-- Cybersecurity & Data Protection
-- E-commerce & Retail
-- Education & EdTech
-- Energy & Utilities
-- Fintech & Blockchain
-- Healthtech & Biotechnology
-- Hospitality & Tourism
-- Real Estate & PropTech
-- Manufacturing & Industry 4.0
-- Logistics & Supply Chain
-- Luxury & Consumer Goods
-- Media & Entertainment
-- Natural Resources & Mining
-- Healthcare & Medical Devices
-- Professional Services
-- Telecommunications
-- Transport & Logistics
+## Proprietary Assets
 
-## Our Proprietary Assets
+- **Subblink** (https://subblink.app) — B2B SaaS, AI-powered contract analysis
+- **Neediu** (https://neediu.com) — B2C marketplace, home services
+- **Primiom** (https://primiom.com) — B2C, AI-assisted real estate
+- **Movtoo** (https://movtoo.com) — B2C, on-demand urban delivery
+- **Hobconnect** (https://hobconnect.com) — B2C, social network around passions
+- **Aegryn Advisory** (https://aegryn.com/advisory) — Cybersecurity, AI audit, digital strategy, M&A advisory
 
-- **Subblink** (https://subblink.app) — B2B SaaS platform for AI-powered contract analysis. Helps enterprises detect risks, obligations and anomalies in legal documents.
-- **Neediu** (https://neediu.com) — B2C marketplace connecting households with vetted home service providers. Cleaning, plumbing, childcare, and more.
-- **Primiom** (https://primiom.com) — B2C AI-assisted real estate platform for buying, renting and estimating property value across Europe.
-- **Movtoo** (https://movtoo.com) — B2C on-demand delivery platform for individuals and small businesses — fast, reliable, urban logistics.
-- **Hobconnect** (https://hobconnect.com) — B2C social network built around shared passions and hobbies — connecting people through what they love.
-- **Aegryn Advisory** (https://aegryn.com/advisory) — Cybersecurity, AI audit, digital strategy, M&A advisory across all industries.
+Each asset: "An Aegryn company."
 
-Each asset operates independently and carries the tagline: "An Aegryn company."
+## Advisory — Three Pillars (https://aegryn.com/advisory)
 
-## 1. Asset Engineering — Build
+### Technology Advisory (/advisory/technology)
+Cybersecurity (attack surface audit, penetration testing, ISO 27001, incident response),
+AI Audit (EU AI Act compliance, LLM red-teaming, bias audit, decision traceability),
+Tech Architecture (code audit, stack review, migration, security-by-design)
 
-### Proprietary Assets (https://aegryn.com/assets)
-Aegryn designs, funds and operates its own portfolio of digital assets across five verticals:
-- Full IP ownership
-- Sovereign infrastructure
-- Long-term value creation
-- "An Aegryn company" branding
+### Strategy Advisory (/advisory/strategy)
+Digital transformation, data governance, GDPR/FADP compliance, innovation roadmaps, secure architecture
 
-### Custom Build for Third Parties (https://aegryn.com/services/build)
-Aegryn designs custom digital assets (SaaS, platforms, tools) for individuals, entrepreneurs and institutions:
-- Fixed price contract signed at discovery phase — no scope creep
-- Custom code only — no no-code/low-code shortcuts
-- Full IP transferred to client — zero vendor lock-in
-- Certification-ready: complete documentation from day one
-- Delivery: 10–16 weeks
-- Indicative range: CHF 15,000–150,000+
+### M&A Advisory (/advisory/ma)
+Buy-side and sell-side advisory, due diligence coordination, deal structuring (asset/share deal, earnout, SPV),
+valuation, post-merger integration
 
-## 2. Advisory — Strategic Consulting (https://aegryn.com/advisory)
+## Transact — M&A Platform (https://aegryn.com/transact)
 
-Aegryn Advisory provides strategic guidance across all industries in:
+Structured session-based platform for digital tech assets. €100K-€50M range. NDA-gated. Graded assets only.
 
-### Core Services
-- **Tech & AI Strategy** — Digital transformation, AI implementation, technology roadmaps
-- **Cybersecurity** — Security audits, GDPR/FADP compliance, risk assessment
-- **M&A Advisory** — Buy-side/sell-side advisory, due diligence, valuation, deal structuring
-- **Data Privacy** — RGPD compliance, EU AI Act, Swiss FADP, data governance
+Offer Models: Club Deal (min €100K), Corporate (min €250K), Fund (min €500K), Equity Stake (SHA-based)
 
-### Industries
-Operating across 23+ industries (see full list above) — from aerospace to telecommunications.
+Key Pages:
+- /transact — Overview
+- /transact/catalog — Live assets (NDA required)
+- /transact/sessions — Session calendar
+- /transact/mandate — Submit sell mandate
+- /transact/sell — Seller funnel
+- /transact/how-to-sell — Seller guide
+- /transact/how-to-buy — Buyer guide
+- /transact/how-it-works — 6-step process
+- /transact/submit — Asset submission form
+- /transact/buyers — Buyer pre-qualification (KYC)
+- /transact/bid-models — Offer structures
+- /transact/results — Past transactions
 
-### Approach
-- Built by operators, not consultants
-- No PowerPoint decks — actionable deliverables only
-- Fixed-scope engagements with clear outcomes
-- European focus with Swiss precision
+## AEGRYN Grade (CIFS) (/grade)
 
-## 3. Transact — M&A Auction Platform (https://aegryn.com/transact)
+5 immutable grades: AEG ★ (Apex, #5ADDA4), AAA (Gold, #C9A84C), AA (Silver, #9BA8B0), A (Blue, #4A90D9), B (Amber, #D4820A)
+Pages: /grade, /grade/methodology, /grade/grading-system, /grade/submit, /grade/partners
 
-AEGRYN operates a structured auction platform for the sale and acquisition of digital tech assets (SaaS, B2C platforms, infrastructure). One of the only dedicated tech asset auction platforms in Europe.
+## Talent (/talent)
 
-### Process
-- Sellers submit assets → graded by AEGRYN team → listed in auction catalog
-- Buyers become members (KYC), sign NDA, access confidential dossiers
-- Competitive bidding with structured closing process
-- Session-based model (calendar of auction sessions)
-- Focus: European-market tech assets, €100K–€50M range
+Executive tech recruitment: CTO, CISO, Head of AI, VP Engineering, Head of Data, Head of Product.
+Confidential search. Pre-qualified candidates. 48h mandate response. All 23+ industries.
 
-### Offer Models (Bid Models)
-1. **Classic Auction** — Highest bid wins, transparent competitive process
-2. **Sealed Bid** — Confidential offers, single-round decision
-3. **Hybrid** — Sealed first round → live auction final round
-4. **Direct Sale** — Fixed price, first-come first-served
-5. **Club Deal** — Co-investment structure, multiple buyers
+## Valuation (/valuation)
 
-### AEGRYN Grade System
-Every asset listed on the platform receives an AEGRYN Grade (★/AAA/AA/A/B):
-- **AEG ★** (Apex) — Excellence absolue, best-in-class
-- **AAA** (Gold) — Premium quality, institutional-grade
-- **AA** (Silver) — Solid fundamentals, proven track record
-- **A** (Blue) — Standard quality, growth potential
-- **B** (Amber) — Early stage, higher risk/reward
+Free instant preliminary valuation. Multi-criteria: ARR, NRR, churn, TAM, tech stack, team.
 
-Grading criteria: code quality, documentation, revenue stability, tech stack, scalability, legal compliance.
+## Expert Network (/experts, /network)
 
-## 4. Talent — Executive Recruitment (https://aegryn.com/talent)
+M&A Advisors, Lawyers, Accountants/Auditors, CTO/Tech Architects, Cybersecurity (PASSI/CREST),
+HR/Employment Law, W&I Insurance, Tax Advisors, Real Estate, ESG/RSE.
 
-Aegryn Talent specializes in placing rare executive tech profiles across Europe:
+## Magazine (/magazine)
 
-### Roles
-- CTO (Chief Technology Officer)
-- CISO (Chief Information Security Officer)
-- Head of AI / VP AI
-- VP Engineering
-- Head of Data
-- Head of Product
-- Other C-level and executive tech roles
+Quarterly publication: "Deals, multiples, portraits et art de vivre — trimestriel."
+Issue 01 available as web reader (/magazine/issue-01/web) and flipbook (/magazine/issue-01/flipbook).
+Annual reports: /magazine/report, /magazine/report/2027
 
-### Process
-- **For Candidates** — Submit profile → qualification interview → presentation to recruiting companies (confidential)
-- **For Companies** — Submit mandate → 48h response → candidate search → pre-selected profiles → interviews
+## Contact
 
-### Industries
-All 23+ industries covered (see full list above)
-
-### Approach
-- Executive-only (no junior/mid-level)
-- European tech ecosystem focus
-- Confidential search process
-- Pre-qualified candidates only
-- 48h response time for mandates
-
-## How to Sell a Tech Company on AEGRYN
-
-1. **Submit Asset** (https://aegryn.com/transact/submit) — Provide basic info (ARR, tech stack, team size)
-2. **Grading** — AEGRYN team evaluates and assigns a grade (★/AAA/AA/A/B)
-3. **Dossier Preparation** — Confidential Information Memorandum (CIM) created
-4. **Listing** — Asset listed in auction catalog with grade and teaser
-5. **Auction Session** — Competitive bidding process
-6. **Closing** — Legal, financial, technical due diligence → transaction closing
-
-Seller Benefits:
-- Competitive bidding drives higher valuations
-- Pre-qualified buyers only (KYC + NDA)
-- Structured process with clear timeline
-- Expert support throughout transaction
-- Transparent grading system
-
-## How to Buy a Tech Company on AEGRYN
-
-1. **Become a Member** (https://aegryn.com/transact/buyers) — KYC verification
-2. **Sign NDA** — Access confidential dossiers
-3. **Browse Catalog** (https://aegryn.com/transact/catalog) — Filter by grade, industry, ARR, tech stack
-4. **Review Dossiers** — Detailed CIM with financials, tech stack, team, roadmap
-5. **Submit Bid** — Choose bid model (classic, sealed, hybrid, direct, club deal)
-6. **Due Diligence** — Technical, financial, legal verification
-7. **Closing** — Transaction finalized with legal support
-
-Buyer Benefits:
-- Access to pre-graded, verified assets
-- Transparent grading system (★/AAA/AA/A/B)
-- Structured due diligence process
-- Multiple bid models to choose from
-- Expert M&A support
-
-## Valuation & Grading
-
-AEGRYN uses a proprietary grading system to evaluate digital assets across 7 dimensions:
-
-1. **Code Quality** — Architecture, documentation, technical debt
-2. **Revenue Stability** — ARR, MRR, churn, growth rate
-3. **Tech Stack** — Modern vs legacy, scalability, maintainability
-4. **Legal Compliance** — GDPR, contracts, IP ownership, licenses
-5. **Team** — Key person risk, documentation, knowledge transfer
-6. **Market Position** — Competitive advantage, moat, differentiation
-7. **Scalability** — Infrastructure, processes, unit economics
-
-Grade Output: ★ (Apex) / AAA (Gold) / AA (Silver) / A (Blue) / B (Amber)
-
-## Contact & Next Steps
-
-- **General Inquiries** — contact@boha-group.com
-- **Sell Your Company** — https://aegryn.com/transact/submit
-- **Buy a Company** — https://aegryn.com/transact/buyers
-- **Advisory Services** — https://aegryn.com/advisory
-- **Talent (Candidates)** — https://aegryn.com/talent (candidate form)
-- **Talent (Recruiters)** — https://aegryn.com/talent (hiring form)
-- **Custom Build** — https://aegryn.com/services/build
-- **Magazine** — https://aegryn.com/magazine (quarterly publication on tech M&A, AI, exits)
-
-## Languages Supported
-
-Website available in 6 languages:
-- French (FR) — https://aegryn.com/fr
-- English (EN) — https://aegryn.com/en
-- German (DE) — https://aegryn.com/de
-- Italian (IT) — https://aegryn.com/it
-- Spanish (ES) — https://aegryn.com/es
-- Dutch (NL) — https://aegryn.com/nl
+- General: contact@boha-group.com
+- Sell: https://aegryn.com/transact/submit
+- Buy: https://aegryn.com/transact/buyers
+- Advisory: https://aegryn.com/advisory
+- Talent: https://aegryn.com/talent
+- Custom Build: https://aegryn.com/services/build
 
 ## Legal & Compliance
 
-- Incorporated: Switzerland (BOHA-Group Sàrl)
-- GDPR/FADP compliant
-- Data processing: contact@boha-group.com for deletion requests
-- Privacy policy: https://aegryn.com/privacy
-- Terms of use: https://aegryn.com/terms/use
-- CGV: https://aegryn.com/terms/cgv
+Incorporated: Switzerland (BOHA-Group Sàrl)
+GDPR/FADP compliant — Data requests: contact@boha-group.com
+Privacy: /privacy — Terms: /terms/use — CGV: /terms/cgv — AI Usage: /terms/ai-usage
 
 ## Recent Updates (September 2026)
 
-- ✅ Rôle "internal" (Accès interne) — espace collaborateur avec permissions granulaires admin-contrôlées
-- ✅ Permissions granulaires étendues : catalog, kyc, grading, dataroom, magazine, auditeurs externes
-- ✅ Espace /client/internal — dashboard paramétrable par permissions
-- ✅ Talent recruitment platform launched (candidate + hiring forms)
-- ✅ Industries section added to Advisory page (23+ sectors)
-- ✅ Email confirmation system for talent forms (Resend + React Email)
-- ✅ GDPR/LPD consent checkbox added to all forms
-- ✅ PhoneInput component with 42 European countries
-- ✅ Expert profile + subscription (89€/mois) masqués — en attente décision product
-- ✅ Sitemap updated with /talent, /network routes
+- Role "internal" (Accès interne): collaborator space with admin-controlled granular permissions (/client/internal)
+- Granular permissions extended: catalog, kyc, grading, dataroom, magazine, auditeurs externes (migration 101)
+- Advisory sub-pages launched: /advisory/technology, /advisory/strategy, /advisory/ma
+- Talent platform launched: candidate + hiring forms, email confirmation (Resend), 42-country PhoneInput
+- Magazine Issue 01 web reader + flipbook published
+- Annual report pages: /magazine/report, /magazine/report/2027
+- AI Usage Terms page: /terms/ai-usage
+- Expert profile + subscription (€89/month) hidden pending product decision
+- All LLM/SEO files updated: /auction → /transact, Subblink URL corrected
 
 ---
 
 Last updated: September 3, 2026
-Version: 2.2
+Version: 2.3
