@@ -256,8 +256,38 @@ export default function NetworkContent() {
             </p>
           </div>
 
-          {/* Fan cards — clic filtre aussi la grille */}
-          <div className="mb-12">
+          {/* Boutons filtres — visibles sur toutes tailles d'écran */}
+          <div className="flex flex-wrap gap-2 mb-10">
+            <button
+              onClick={() => setActiveDomain(null)}
+              className={[
+                'px-4 py-2 font-sans font-semibold text-[11px] uppercase tracking-[0.14em] border transition-colors',
+                activeDomain === null
+                  ? 'bg-ag-navy text-white border-ag-navy'
+                  : 'text-ag-gray border-ag-border hover:border-ag-black hover:text-ag-black',
+              ].join(' ')}
+            >
+              {t('filters.all')}
+            </button>
+            {EXPERT_DOMAINS.map(d => (
+              <button
+                key={d.domainKey}
+                onClick={() => handleDomainSelect(d.domainKey)}
+                style={activeDomain === d.domainKey ? { borderColor: d.color, background: d.color + '18', color: '#0A0C14' } : {}}
+                className={[
+                  'px-4 py-2 font-sans font-semibold text-[11px] uppercase tracking-[0.14em] border transition-colors',
+                  activeDomain === d.domainKey
+                    ? 'border-transparent'
+                    : 'text-ag-gray border-ag-border hover:border-ag-black hover:text-ag-black',
+                ].join(' ')}
+              >
+                {t(`domains.${d.domainKey}`)}
+              </button>
+            ))}
+          </div>
+
+          {/* Fan cards — masquées sur mobile, filtre live sur desktop */}
+          <div className="hidden md:block mb-12">
             <FanCards
               domains={visibleDomains}
               activeDomain={activeDomain}
