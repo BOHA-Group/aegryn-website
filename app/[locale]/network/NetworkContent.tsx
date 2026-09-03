@@ -114,7 +114,7 @@ function FanCards({
   domains, activeDomain, onSelect, t,
 }: {
   domains: ExpertDomain[]
-  activeDomain: string
+  activeDomain: string | null
   onSelect: (key: string) => void
   t: ReturnType<typeof useTranslations>
 }) {
@@ -131,6 +131,8 @@ function FanCards({
         const shiftX    = (i - (n - 1) / 2) * SHIFT_PX
         const isActive  = activeDomain === domainKey
         const isHovered = hovered === i
+        // Si une autre carte est active, les cartes non-actives s'estompent légèrement
+        const isOtherActive = activeDomain !== null && !isActive
         const rest  = `translateX(calc(-50% + ${shiftX}px)) translateY(${arcY}px) rotate(${rotDeg}deg)`
         const lift  = `translateX(calc(-50% + ${shiftX}px)) translateY(-28px) rotate(0deg)`
 
@@ -143,16 +145,19 @@ function FanCards({
             style={{
               position: 'absolute', bottom: 0, left: '50%',
               width: 160, minHeight: 210, borderRadius: 12,
-              border: `1.5px solid ${isActive || isHovered ? color + 'cc' : color + '40'}`,
+              border: `1.5px solid ${isActive ? color + 'cc' : isHovered ? color + 'aa' : color + '40'}`,
               background: '#FFFFFF',
               padding: '18px 12px', textAlign: 'center',
               transformOrigin: 'bottom center',
               transform: isHovered || isActive ? lift : rest,
-              transition: 'transform 0.38s cubic-bezier(0.22,1,0.36,1), box-shadow 0.38s, border-color 0.2s',
+              transition: 'transform 0.38s cubic-bezier(0.22,1,0.36,1), box-shadow 0.38s, border-color 0.2s, opacity 0.3s',
               zIndex: isHovered || isActive ? 20 : i + 1,
-              boxShadow: isHovered || isActive
-                ? `0 16px 48px rgba(0,0,0,0.18), 0 0 0 2px ${color}60`
-                : `0 4px 24px rgba(0,0,0,0.08)`,
+              boxShadow: isActive
+                ? `0 16px 48px rgba(0,0,0,0.18), 0 0 0 2.5px ${color}80`
+                : isHovered
+                  ? `0 12px 36px rgba(0,0,0,0.14), 0 0 0 1.5px ${color}50`
+                  : `0 4px 24px rgba(0,0,0,0.08)`,
+              opacity: isOtherActive && !isHovered ? 0.55 : 1,
               cursor: 'pointer',
             }}
           >
@@ -175,17 +180,36 @@ function FanCards({
 /* ─── Main Component ─────────────────────────────────────────────────────────── */
 export default function NetworkContent() {
   const t = useTranslations('network')
+  // Filtre boutons dimension (indépendant des fan cards)
   const [activeDimension, setActiveDimension] = useState<DimensionKey | 'all'>('all')
-  const [activeDomain, setActiveDomain]       = useState<string>('strategy')
+  // Fan card sélectionnée — null = aucune (toutes expertises)
+  const [activeDomain, setActiveDomain]       = useState<string | null>(null)
 
   const visibleDomains = EXPERT_DOMAINS
 
-  const filteredExpertise = activeDimension === 'all'
-    ? EXPERTISE_CARDS
-    : EXPERTISE_CARDS.filter(c => c.dimension === activeDimension)
+  // Fan card sélectionnée → filtre par la dimension de ce domaine
+  // Bouton filtre actif (hors 'all') → filtre par dimension du bouton
+  // Les deux peuvent se combiner ; fan card prime si sélectionnée
+  const activeDomainMeta = activeDomain
+    ? EXPERT_DOMAINS.find(d => d.domainKey === activeDomain)
+    : null
+
+  const filteredExpertise = (() => {
+    if (activeDomainMeta) {
+      // Fan card active : filtre par la dimension de ce domaine
+      const dim = activeDomainMeta.dimension
+      return EXPERTISE_CARDS.filter(c => c.dimension === dim)
+    }
+    if (activeDimension !== 'all') {
+      // Bouton filtre actif seulement
+      return EXPERTISE_CARDS.filter(c => c.dimension === activeDimension)
+    }
+    return EXPERTISE_CARDS
+  })()
 
   function handleDomainSelect(domainKey: string) {
-    setActiveDomain(prev => prev === domainKey ? 'strategy' : domainKey)
+    // Toggle : reclic sur la même carte = désélectionner
+    setActiveDomain(prev => prev === domainKey ? null : domainKey)
   }
 
   return (
