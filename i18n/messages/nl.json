@@ -4244,9 +4244,9 @@
       "intro": "Voor elke bedrijfsuitdaging een gespecialiseerde oplossing, gebaseerd op ons Enterprise Intelligence Platform."
     },
     "platformSection": {
-      "label": "Gemeenschappelijke architectuur",
-      "title": "AEGRYN Enterprise Intelligence Platform.",
-      "desc": "De 10 domeinen zijn geen 10 onafhankelijke producten. Ze delen een gemeenschappelijke infrastructuur: het AEGRYN Enterprise Intelligence Platform. Een datalaag, een AI-laag, een governance-laag. Daarboven: bedrijfsapplicaties voor elk domein.",
+      "label": "Gedeelde infrastructuur",
+      "title": "Wat een Aegryn-asset onderscheidt van standaardontwikkeling.",
+      "desc": "Elke software die Aegryn levert, is gebouwd op dezelfde infrastructuur: soevereine data, certificeerbare AI-modellen, gecontroleerde governance. Het resultaat: een asset dat vanaf de eerste sprint gedocumenteerd is en structureel klaar voor certificering of overdracht, ongeacht het bedrijfsdomein.",
       "layers": [
         {
           "key": "data",

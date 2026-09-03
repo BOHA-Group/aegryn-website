@@ -4226,9 +4226,9 @@
       ]
     },
     "platformSection": {
-      "label": "Common Architecture",
-      "title": "AEGRYN Enterprise Intelligence Platform.",
-      "desc": "The 10 domains are not 10 independent products. They share a common infrastructure: the AEGRYN Enterprise Intelligence Platform. A data layer, an AI layer, a governance layer and on top, business applications for each domain.",
+      "label": "Shared infrastructure",
+      "title": "What sets an Aegryn asset apart from standard development.",
+      "desc": "Every software asset delivered by Aegryn is built on the same infrastructure: sovereign data, certifiable AI models, audited governance. The result: an asset documented from the first sprint, structurally ready for certification or transfer — regardless of the business domain.",
       "layers": [
         {
           "key": "data",

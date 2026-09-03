@@ -4229,9 +4229,9 @@
       "intro": "Per ogni sfida aziendale, una soluzione specializzata basata sulla nostra Enterprise Intelligence Platform."
     },
     "platformSection": {
-      "label": "Architettura comune",
-      "title": "AEGRYN Enterprise Intelligence Platform.",
-      "desc": "I 10 domini non sono 10 prodotti indipendenti. Condividono un'infrastruttura comune: l'AEGRYN Enterprise Intelligence Platform. Uno strato dati, uno strato IA, uno strato governance. Sopra: applicazioni aziendali per ogni dominio.",
+      "label": "Infrastruttura comune",
+      "title": "Cosa differenzia un asset Aegryn dallo sviluppo standard.",
+      "desc": "Ogni software consegnato da Aegryn è costruito sulla stessa infrastruttura: dati sovrani, modelli IA certificabili, governance verificata. Il risultato: un asset documentato dal primo sprint, strutturalmente pronto per la certificazione o la cessione, indipendentemente dal dominio aziendale.",
       "layers": [
         {
           "key": "data",

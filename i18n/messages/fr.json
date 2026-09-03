@@ -4158,9 +4158,9 @@
       ]
     },
     "platformSection": {
-      "label": "Architecture commune",
-      "title": "AEGRYN Enterprise Intelligence Platform.",
-      "desc": "Les 10 domaines ne sont pas 10 produits indépendants. Ils partagent une infrastructure commune : l'AEGRYN Enterprise Intelligence Platform. Une couche data, une couche IA, une couche gouvernance. Par-dessus : des applications métier pour chaque domaine.",
+      "label": "Infrastructure commune",
+      "title": "Ce qui différencie un actif Aegryn d'un développement standard.",
+      "desc": "Chaque logiciel livré par Aegryn est construit sur la même infrastructure : données souveraines, modèles IA certifiables, gouvernance auditée. Résultat : un actif documenté dès le premier sprint, structurellement prêt pour une certification ou une cession — quel que soit le domaine métier.",
       "layers": [
         {
           "key": "data",
