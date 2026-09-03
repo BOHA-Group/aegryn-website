@@ -36,7 +36,14 @@ ON CONFLICT (id) DO UPDATE
       description = EXCLUDED.description,
       category    = EXCLUDED.category;
 
--- ─── 2. Vue user_permissions_summary ─────────────────────────────────────────
+-- ─── 2. Colonne disabled sur admin_permissions (doit précéder la vue) ─────────
+ALTER TABLE admin_permissions
+  ADD COLUMN IF NOT EXISTS disabled BOOLEAN NOT NULL DEFAULT FALSE;
+
+COMMENT ON COLUMN admin_permissions.disabled IS
+  'Si TRUE, la permission est grisée dans l''UI et non attribuable (fonctionnalité non encore disponible)';
+
+-- ─── 3. Vue user_permissions_summary ─────────────────────────────────────────
 -- 097 : créée sans 'internal' dans le WHERE
 -- 099 + 100 : recréée avec 'internal' inclus (p.role) — déjà correct en base
 --             grâce à la contrainte profiles_role_check de 098
@@ -76,15 +83,7 @@ ORDER BY
 
 GRANT SELECT ON user_permissions_summary TO authenticated, service_role;
 
--- ─── 3. Marquer experts.validate comme désactivée ────────────────────────────
--- Colonne optionnelle pour indiquer les permissions en attente d'activation
-ALTER TABLE admin_permissions
-  ADD COLUMN IF NOT EXISTS disabled BOOLEAN NOT NULL DEFAULT FALSE;
-
+-- ─── 4. Marquer experts.validate comme désactivée ──────────────────────────
 UPDATE admin_permissions
   SET disabled = TRUE
   WHERE id = 'experts.validate';
-
--- ─── 4. Commentaires ─────────────────────────────────────────────────────────
-COMMENT ON COLUMN admin_permissions.disabled IS
-  'Si TRUE, la permission est grisée dans l''UI et non attribuable (fonctionnalité non encore disponible)';
