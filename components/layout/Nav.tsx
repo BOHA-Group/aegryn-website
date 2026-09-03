@@ -770,7 +770,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
 
             {/* Language */}
             <div className="mt-6 pt-6 border-t border-white/10">
-              <LanguageSwitcher />
+              <LanguageSwitcher dark />
             </div>
           </div>
         </div>

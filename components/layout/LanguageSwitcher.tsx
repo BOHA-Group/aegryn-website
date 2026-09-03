@@ -17,7 +17,7 @@ const locales = [
 
 const KNOWN_LOCALES = locales.map(l => l.code)
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ dark = false }: { dark?: boolean }) {
   const locale       = useLocale()
   const t            = useTranslations('languageSwitcher')
   const nextPathname = useNextPathname()
@@ -43,15 +43,20 @@ export default function LanguageSwitcher() {
     window.location.assign(path)
   }
 
+  const wrapCls  = dark ? 'text-white/70'  : 'text-ag-gray'
+  const selectCls = dark
+    ? 'bg-transparent font-sans font-semibold text-[11px] uppercase tracking-[0.12em] text-white/70 cursor-pointer hover:text-white transition-colors appearance-none pr-1 focus:outline-none disabled:opacity-50'
+    : 'bg-transparent font-sans font-semibold text-[11px] uppercase tracking-[0.12em] text-ag-gray cursor-pointer hover:text-ag-black transition-colors appearance-none pr-1 focus:outline-none disabled:opacity-50'
+
   return (
-    <div className="flex items-center gap-1.5 text-ag-gray">
+    <div className={`flex items-center gap-1.5 ${wrapCls}`}>
       <Globe size={13} className={`opacity-60 ${pending ? 'animate-spin' : ''}`} aria-hidden="true" />
       <select
         value={locale}
         onChange={handleChange}
         disabled={pending}
         aria-label={t('select')}
-        className="bg-transparent font-sans font-semibold text-[11px] uppercase tracking-[0.12em] text-ag-gray cursor-pointer hover:text-ag-black transition-colors appearance-none pr-1 focus:outline-none disabled:opacity-50"
+        className={selectCls}
       >
         {locales.map(({ code, label }) => (
           <option key={code} value={code} className="bg-white text-ag-dark">
