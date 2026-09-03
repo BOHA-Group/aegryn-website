@@ -4133,7 +4133,7 @@
       "title": "Digitale Asset-Entwicklung maßgeschneidert - Aegryn",
       "desc": "Digitale Assets maßgeschneidert: B2B SaaS, KI, mobile App. Vollständige Dokumentation, zertifizierungsbereit. Keine Überschreitungen, bewertbar ab Tag eins."
     },
-    "label": "Engineering — Maßgeschneiderte Software",
+    "label": "Engineering: Maßgeschneiderte Software",
     "title": "Aegryn baut die Software\nIhrer Betriebsabläufe.",
     "desc": "Von KMU bis Konzern, in der Schweiz und in Europa: Aegryn konzipiert, deployt und wartet maßgeschneiderte Unternehmenssoftware. Keine Abhängigkeit von großen Anbietern. Kein generalistisches SaaS-Abonnement.  kontrollierbarer Code, integrierbar in Ihre Infrastruktur.",
     "whySection": {
@@ -4231,7 +4231,7 @@
     "platformSection": {
       "label": "Gemeinsame Architektur",
       "title": "AEGRYN Enterprise Intelligence Platform.",
-      "desc": "Die 10 Domänen sind keine 10 unabhängigen Produkte. Sie teilen eine gemeinsame Infrastruktur: die AEGRYN Enterprise Intelligence Platform. Eine Datenschicht, eine KI-Schicht, eine Governance-Schicht — und darüber Geschäftsanwendungen für jede Domäne.",
+      "desc": "Die 10 Domänen sind keine 10 unabhängigen Produkte. Sie teilen eine gemeinsame Infrastruktur: die AEGRYN Enterprise Intelligence Platform. Eine Datenschicht, eine KI-Schicht, eine Governance-Schicht. Darüber: Geschäftsanwendungen für jede Domäne.",
       "layers": [
         {
           "key": "data",
@@ -4256,7 +4256,7 @@
       ],
       "verticals": {
         "label": "Vertikale Märkte",
-        "desc": "FinTech, HealthTech und PropTech sind vertikale Märkte — keine Kernprodukte. Aegryn-Anwendungen können für diese Märkte paketiert werden, ohne jedes Mal eine neue Architektur zu erstellen."
+        "desc": "FinTech, HealthTech und PropTech sind vertikale Märkte, keine Kernprodukte. Aegryn-Anwendungen können für diese Märkte paketiert werden, ohne jedes Mal eine neue Architektur zu erstellen."
       },
       "subtitle": "Eine integrierte Architektur. Vier komplementäre Schichten."
     },
@@ -4273,7 +4273,7 @@
         {
           "key": "model",
           "title": "KI-Modell-Lokalisierung",
-          "desc": "Modelle werden in Ihrer Infrastruktur eingesetzt — on-premise oder CH/EU-Cloud. Keine Verarbeitung in US-Clouds ohne Ihre ausdrückliche Zustimmung."
+          "desc": "Modelle werden in Ihrer Infrastruktur eingesetzt: on-premise oder CH/EU-Cloud. Keine Verarbeitung in US-Clouds ohne Ihre ausdrückliche Zustimmung."
         },
         {
           "key": "ip",
@@ -4340,7 +4340,7 @@
         "Zertifizierungsbereit Asset bei Lieferung"
       ],
       "processItems": [
-        "Discovery 1–2 Wochen inklusive",
+        "Discovery 1 bis 2 Wochen inklusive",
         "Zertifizierbares Lastenheft",
         "Preis vor erstem Commit fixiert",
         "Nachtrag unterzeichnet bei Änderungen",

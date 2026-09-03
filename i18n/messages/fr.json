@@ -4064,7 +4064,7 @@
       "title": "Conception d'actifs numériques sur-mesure - Aegryn",
       "desc": "Actifs numériques sur-mesure : : SaaS B2B, IA, app mobile. Documentation complète, prêt pour certification. Zéro dépassement, valorisable dès le premier jour."
     },
-    "label": "Conception — Logiciels sur mesure",
+    "label": "Conception : Logiciels sur mesure",
     "title": "Aegryn construit le logiciel\nde vos opérations.",
     "desc": "De la PME au grand groupe, en Suisse et en Europe : Aegryn conçoit, déploie et maintient des logiciels métier sur mesure. Sans dépendance aux grands éditeurs. Sans abonnement SaaS génériste. Un code maîtrisé, intégrable dans votre infrastructure.",
     "whySection": {
@@ -4160,7 +4160,7 @@
     "platformSection": {
       "label": "Architecture commune",
       "title": "AEGRYN Enterprise Intelligence Platform.",
-      "desc": "Les 10 domaines ne sont pas 10 produits indépendants. Ils partagent une infrastructure commune : l'AEGRYN Enterprise Intelligence Platform. Une couche data, une couche IA, une couche gouvernance — et par-dessus, des applications métier pour chaque domaine.",
+      "desc": "Les 10 domaines ne sont pas 10 produits indépendants. Ils partagent une infrastructure commune : l'AEGRYN Enterprise Intelligence Platform. Une couche data, une couche IA, une couche gouvernance. Par-dessus : des applications métier pour chaque domaine.",
       "layers": [
         {
           "key": "data",
@@ -4185,7 +4185,7 @@
       ],
       "verticals": {
         "label": "Marchés verticaux",
-        "desc": "FinTech, HealthTech et PropTech sont des marchés verticaux — pas des produits de base. Les applications Aegryn peuvent être packagées pour ces marchés sans créer une nouvelle architecture à chaque fois."
+        "desc": "FinTech, HealthTech et PropTech sont des marchés verticaux, pas des produits de base. Les applications Aegryn peuvent être packagées pour ces marchés sans créer une nouvelle architecture à chaque fois."
       }
     },
     "sovereigntySection": {
@@ -4201,7 +4201,7 @@
         {
           "key": "model",
           "title": "Localisation des modèles IA",
-          "desc": "Les modèles sont déployés dans votre infrastructure — on-premise ou cloud CH/EU. Aucun traitement dans des clouds américains sans votre accord explicite."
+          "desc": "Les modèles sont déployés dans votre infrastructure : on-premise ou cloud CH/EU. Aucun traitement dans des clouds américains sans votre accord explicite."
         },
         {
           "key": "ip",
@@ -4267,7 +4267,7 @@
         "Actif prêt pour la certification à la livraison"
       ],
       "processItems": [
-        "Discovery 1–2 semaines inclus",
+        "Discovery 1 à 2 semaines inclus",
         "Cahier des charges certifiable",
         "Prix verrouillé avant le premier commit",
         "Avenant signé si périmètre évolue",

@@ -4132,7 +4132,7 @@
       "title": "Fixed-price digital asset design - Aegryn",
       "desc": "Fixed-price digital assets: B2B SaaS, AI, mobile apps. Full documentation, certification-ready. Zero overruns, valuable from day one."
     },
-    "label": "Engineering — Bespoke software",
+    "label": "Engineering: Bespoke software",
     "title": "Aegryn builds the software\nof your operations.",
     "desc": "From SMEs to large groups, in Switzerland and Europe: Aegryn designs, deploys and maintains custom business software. No dependency on major vendors. No generalist SaaS subscriptions. Mastered code, integrable into your infrastructure.",
     "whySection": {
@@ -4270,7 +4270,7 @@
         {
           "key": "model",
           "title": "AI Model Localisation",
-          "desc": "Models are deployed in your infrastructure — on-premise or CH/EU cloud. No processing in US clouds without your explicit agreement."
+          "desc": "Models are deployed in your infrastructure: on-premise or CH/EU cloud. No processing in US clouds without your explicit agreement."
         },
         {
           "key": "ip",
@@ -4336,7 +4336,7 @@
         "Certification-ready asset at delivery"
       ],
       "processItems": [
-        "Discovery 1–2 weeks included",
+        "Discovery 1 to 2 weeks included",
         "Certifiable specification document",
         "Price locked before first commit",
         "Amendment signed if scope changes",

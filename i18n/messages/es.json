@@ -4133,7 +4133,7 @@
       "title": "Desarrollo de activos digitales a medida - Aegryn",
       "desc": "Activos digitales a medida: SaaS B2B, IA, app móvil. Documentación completa, listo para certificación. Sin desviaciones, valorizable desde el día uno."
     },
-    "label": "Ingeniería — Software a medida",
+    "label": "Ingeniería: Software a medida",
     "title": "Aegryn construye el software\nde sus operaciones.",
     "desc": "De la PYME al gran grupo, en Suiza y en Europa: Aegryn diseña, despliega y mantiene software empresarial a medida. Sin dependencia de grandes editores. Sin suscripción SaaS generalista. Código controlado, integrable en su infraestructura.",
     "whySection": {
@@ -4231,7 +4231,7 @@
     "platformSection": {
       "label": "Arquitectura común",
       "title": "AEGRYN Enterprise Intelligence Platform.",
-      "desc": "Los 10 dominios no son 10 productos independientes. Comparten una infraestructura común: la AEGRYN Enterprise Intelligence Platform. Una capa de datos, una capa de IA, una capa de gobernanza — y encima, aplicaciones empresariales para cada dominio.",
+      "desc": "Los 10 dominios no son 10 productos independientes. Comparten una infraestructura común: la AEGRYN Enterprise Intelligence Platform. Una capa de datos, una capa de IA, una capa de gobernanza. Encima: aplicaciones empresariales para cada dominio.",
       "layers": [
         {
           "key": "data",
@@ -4256,7 +4256,7 @@
       ],
       "verticals": {
         "label": "Mercados verticales",
-        "desc": "FinTech, HealthTech y PropTech son mercados verticales — no productos de base. Las aplicaciones Aegryn pueden empaquetarse para estos mercados sin crear una nueva arquitectura cada vez."
+        "desc": "FinTech, HealthTech y PropTech son mercados verticales, no productos de base. Las aplicaciones Aegryn pueden empaquetarse para estos mercados sin crear una nueva arquitectura cada vez."
       },
       "subtitle": "Una arquitectura integrada. Cuatro capas complementarias."
     },
@@ -4273,7 +4273,7 @@
         {
           "key": "model",
           "title": "Localización de modelos IA",
-          "desc": "Los modelos se despliegan en su infraestructura — on-premise o cloud CH/EU. Sin procesamiento en clouds americanos sin su acuerdo explícito."
+          "desc": "Los modelos se despliegan en su infraestructura: on-premise o cloud CH/EU. Sin procesamiento en clouds americanos sin su acuerdo explícito."
         },
         {
           "key": "ip",
@@ -4340,7 +4340,7 @@
         "Activo listo para certificación en la entrega"
       ],
       "processItems": [
-        "Discovery 1–2 semanas incluido",
+        "Discovery 1 a 2 semanas incluido",
         "Pliego de condiciones certificable",
         "Precio bloqueado antes del primer commit",
         "Anexo firmado si el alcance cambia",
