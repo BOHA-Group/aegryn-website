@@ -203,7 +203,6 @@ export default async function AssetPage({ params }: Props) {
             about: {
               '@type':     'MobileApplication',
               name:        'neediu',
-              url:         'https://neediu.com',
               applicationCategory: 'LifestyleApplication',
               operatingSystem: 'iOS, Android',
               description: 'Application de mise en relation avec des prestataires de services à domicile : ménage, jardinage, bricolage, babysitting, aide aux seniors.',
