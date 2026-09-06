@@ -556,32 +556,32 @@
   },
   "whatwedo": {
     "label": "Nuestra Convicción",
-    "conviction": "El valor organizacional se crea, documenta y realiza.\nAcompañamos los tres.",
+    "conviction": "El valor de una organización no se mide únicamente en el momento en que se cede. Se mide cada día en la solidez de lo que se ha construido: sus activos, su equipo, su independencia, su capacidad de durar y crecer sin fragilizarse.\n\nAlgunos dirigentes quieren transmitir. Otros quieren captar capital, adquirir, o simplemente construir un patrimonio que resista el paso del tiempo. Sea cual sea la ambición, la preparación es la misma. El valor no se improvisa. Se construye.",
     "items": [
       {
         "num": "01",
-        "title": "El valor se construye antes de venderse.",
-        "desc": "Una empresa bien transmitida es una empresa bien construida. Intervenimos antes: estrategia, organización, activos, documentación."
+        "title": "El valor se construye antes de realizarse.",
+        "desc": "Una organización sólida no es la que se vende bien.\nEs la que vale, ya sea que se ceda, se desarrolle\no se transmita a la siguiente generación.\nIntervenimos antes: estrategia, organización,\nactivos, documentación. Para que el valor sea real\nantes de ser reconocido."
       },
       {
         "num": "02",
         "title": "El asesoramiento debe ser operacional.",
-        "desc": "Una firma que no construye no puede asesorar. Nuestros propios activos pasan por nuestros propios métodos. Lo que recomendamos, lo ejecutamos."
+        "desc": "Una firma que no construye no puede asesorar.\nNuestros propios activos pasan por nuestros propios métodos.\nLo que recomendamos, lo ejecutamos.\nEsta coherencia es nuestra primera credibilidad."
       },
       {
         "num": "03",
-        "title": "La independencia tecnológica es condición de durabilidad.",
-        "desc": "Depender de un solo proveedor expone a la organización a un riesgo no controlado. Diseñamos software de propiedad total. INDEPENDENCIA TECNOLÓGICA."
+        "title": "Poseer lo que se construye es una condición de durabilidad.",
+        "desc": "Depender de un único proveedor o de una infraestructura\nno controlada expone a la organización a un riesgo\nque no se ve, hasta que cuesta.\nConcebirnos activos de propiedad total del cliente,\ndeployables en cualquier infraestructura, certificables\ny transmisibles sin fricción."
       },
       {
         "num": "04",
-        "title": "La certificación cambia la conversación.",
-        "desc": "No una calificación, un protocolo. Antes de cualquier salida al mercado, antes de cualquier negociación. Un activo certificado Aegryn es una certeza documentada."
+        "title": "La documentación cambia la conversación.",
+        "desc": "No una nota. Un protocolo.\nAntes de cualquier decisión estratégica, antes de cualquier salida al mercado,\nantes de cualquier ronda de financiación o negociación.\nUna organización documentada por Aegryn no es una promesa.\nEs una certeza defendible."
       },
       {
         "num": "05",
-        "title": "El talento es un activo como cualquier otro.",
-        "desc": "Las organizaciones que perduran colocan a las personas adecuadas en el momento adecuado. CTO, CISO, DG, Head of AI."
+        "title": "El talento es un activo como los demás.",
+        "desc": "Las organizaciones que perduran colocan a las personas correctas\nen el momento adecuado y saben cómo desarrollarlas.\nCTO, CISO, DG, Head of AI, Director de Transformación:\nidentificamos los perfiles que realmente hacen avanzar\nuna organización, ya sea construyéndola,\ntransformándola o transmitiéndola."
       }
     ]
   },

@@ -137,7 +137,7 @@ export function ManifestoSection() {
                 >
                   {item.title}
                 </h3>
-                <p className="font-sans font-normal text-[13px] text-ag-gray leading-relaxed">
+                <p className="font-sans font-normal text-[13px] text-ag-gray leading-relaxed whitespace-pre-line">
                   {item.desc}
                 </p>
               </div>

@@ -556,32 +556,32 @@
   },
   "whatwedo": {
     "label": "Unsere Überzeugung",
-    "conviction": "Organisationswert wird geschaffen, dokumentiert und realisiert.\nWir begleiten alle drei.",
+    "conviction": "Der Wert einer Organisation wird nicht nur im Moment ihrer Übertragung gemessen. Er zeigt sich jeden Tag in der Solidität des Aufgebauten: seinen Assets, seinem Team, seiner Unabhängigkeit, seiner Fähigkeit zu dauern und zu wachsen, ohne sich zu gefährden.\n\nEinige Führungskräfte wollen übertragen. Andere wollen Kapital aufnehmen, akquirieren oder einfach ein Vermögen aufbauen, das dem Lauf der Zeit standhält. Was auch immer das Ziel ist, die Vorbereitung ist dieselbe. Wert wird nicht improvisiert. Er wird aufgebaut.",
     "items": [
       {
         "num": "01",
-        "title": "Wert wird aufgebaut, bevor er verkauft wird.",
-        "desc": "Ein gut übertragenes Unternehmen ist ein gut aufgebautes Unternehmen. Wir intervenieren vorgelagert: Strategie, Organisation, Assets, Dokumentation."
+        "title": "Wert wird aufgebaut, bevor er realisiert wird.",
+        "desc": "Eine solide Organisation ist nicht eine, die sich gut verkauft.\nSie ist eine, die Wert hat, ob sie veräußert, entwickelt\noder an die nächste Generation weitergegeben wird.\nWir greifen frühzeitig ein: Strategie, Organisation,\nAssets, Dokumentation. Damit Wert real ist,\nbevor er anerkannt wird."
       },
       {
         "num": "02",
-        "title": "Beratung muss operationell sein.",
-        "desc": "Eine Beratungsfirma, die nicht aufbaut, kann nicht beraten. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Was wir empfehlen, führen wir aus."
+        "title": "Beratung muss operativ sein.",
+        "desc": "Eine Firma, die nicht baut, kann nicht beraten.\nUnsere eigenen Assets durchlaufen unsere eigenen Methoden.\nWas wir empfehlen, führen wir aus.\nDiese Kohärenz ist unsere primäre Glaubwürdigkeit."
       },
       {
         "num": "03",
-        "title": "Technologische Unabhängigkeit ist eine Bedingung der Nachhaltigkeit.",
-        "desc": "Von einem einzigen Anbieter abhängig zu sein, setzt die Organisation einem unkontrollierten Risiko aus. Wir entwickeln vollständig eigene Software. TECHNOLOGISCHE UNABHÄNGIGKEIT."
+        "title": "Zu besitzen, was man baut, ist eine Voraussetzung für Dauerhaftigkeit.",
+        "desc": "Von einem einzigen Anbieter oder einer nicht kontrollierten\nInfrastruktur abzuhängen setzt die Organisation\neinem Risiko aus, das man nicht sieht, bis es kostet.\nWir konzipieren Assets mit vollem Kundeneigentum,\nauf jeder Infrastruktur einsetzbar, zertifizierbar\nund reibungslos übertragbar."
       },
       {
         "num": "04",
-        "title": "Zertifizierung verändert das Gespräch.",
-        "desc": "Kein Rating, ein Protokoll. Vor jeder Markteinführung, vor jeder Verhandlung. Ein von Aegryn zertifiziertes Asset ist kein Versprechen, sondern eine dokumentierte Gewissheit."
+        "title": "Dokumentation verändert das Gespräch.",
+        "desc": "Kein Gutachten. Ein Protokoll.\nVor jeder strategischen Entscheidung, vor jeder Markteinführung,\nvor jeder Finanzierungsrunde oder Verhandlung.\nEine von Aegryn dokumentierte Organisation ist kein Versprechen.\nSie ist eine verteidigbare Gewissheit."
       },
       {
         "num": "05",
         "title": "Talent ist ein Asset wie jedes andere.",
-        "desc": "Organisationen, die Bestand haben, platzieren die richtigen Personen zum richtigen Zeitpunkt. CTO, CISO, GF, Head of AI."
+        "desc": "Organisationen, die Bestand haben, setzen die richtigen Personen\nzur richtigen Zeit ein und wissen, wie man sie weiterentwickelt.\nCTO, CISO, GF, Head of AI, Transformationsdirektor:\nWir identifizieren die Profile, die eine Organisation\nwirklich voranbringen, ob beim Aufbau,\nder Transformation oder der Übertragung."
       }
     ]
   },

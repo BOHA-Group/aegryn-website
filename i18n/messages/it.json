@@ -556,32 +556,32 @@
   },
   "whatwedo": {
     "label": "La Nostra Convinzione",
-    "conviction": "Il valore organizzativo si crea, si documenta e si realizza.\nAccompagniamo tutti e tre.",
+    "conviction": "Il valore di un'organizzazione non si misura unicamente nel momento in cui la si cede. Si misura ogni giorno nella solidità di ciò che è stato costruito: i suoi asset, il suo team, la sua indipendenza, la sua capacità di durare e crescere senza fragilizzarsi.\n\nAlcuni dirigenti vogliono trasmettere. Altri vogliono raccogliere capitali, acquisire, o semplicemente costruire un patrimonio che resista nel tempo. Qualunque sia l'ambizione, la preparazione è la stessa. Il valore non si improvvisa. Si costruisce.",
     "items": [
       {
         "num": "01",
-        "title": "Il valore si costruisce prima di essere ceduto.",
-        "desc": "Un'azienda ben trasmessa è un'azienda ben costruita. Interveniamo a monte: strategia, organizzazione, asset, documentazione."
+        "title": "Il valore si costruisce prima di realizzarsi.",
+        "desc": "Un'organizzazione solida non è quella che si vende bene.\nÈ quella che vale, che la si ceda, la si sviluppi\no la si trasmetta alla generazione successiva.\nInterveniamo a monte: strategia, organizzazione,\nasset, documentazione. Affinché il valore sia reale\nprima di essere riconosciuto."
       },
       {
         "num": "02",
         "title": "La consulenza deve essere operativa.",
-        "desc": "Una firma che non costruisce non può consigliare. I nostri asset passano per i nostri metodi. Ciò che raccomandiamo, lo eseguiamo."
+        "desc": "Una firma che non costruisce non può consigliare.\nI nostri asset passano attraverso i nostri metodi.\nCiò che raccomandiamo, lo eseguiamo.\nQuesta coerenza è la nostra prima credibilità."
       },
       {
         "num": "03",
-        "title": "L'indipendenza tecnologica è condizione di durabilità.",
-        "desc": "Dipendere da un solo fornitore espone l'organizzazione a un rischio non controllato. Progettiamo software a proprietà totale. INDIPENDENZA TECNOLOGICA."
+        "title": "Possedere ciò che si costruisce è una condizione di durabilità.",
+        "desc": "Dipendere da un unico fornitore o da un'infrastruttura\nnon controllata espone l'organizzazione a un rischio\nche non si vede, finché non costa.\nProgettiamo asset a piena proprietà del cliente,\ndistribuibili su qualsiasi infrastruttura, certificabili\ne trasferibili senza attriti."
       },
       {
         "num": "04",
-        "title": "La certificazione cambia la conversazione.",
-        "desc": "Non una valutazione, un protocollo. Prima di qualsiasi go-to-market, prima di qualsiasi trattativa. Un asset certificato Aegryn è una certezza documentata."
+        "title": "La documentazione cambia la conversazione.",
+        "desc": "Non una nota. Un protocollo.\nPrima di qualsiasi decisione strategica, prima di qualsiasi go-to-market,\nprima di qualsiasi raccolta fondi o trattativa.\nUn'organizzazione documentata da Aegryn non è una promessa.\nÈ una certezza difendibile."
       },
       {
         "num": "05",
-        "title": "Il talento è un asset come qualsiasi altro.",
-        "desc": "Le organizzazioni che durano collocano le persone giuste al momento giusto. CTO, CISO, DG, Head of AI."
+        "title": "Il talento è un asset come gli altri.",
+        "desc": "Le organizzazioni che durano mettono le persone giuste\nal momento giusto e sanno come farle evolvere.\nCTO, CISO, DG, Head of AI, Direttore della Trasformazione:\nidentifichiamo i profili che fanno davvero avanzare\nun'organizzazione, che si tratti di costruirla,\ntrasformarla o trasmetterla."
       }
     ]
   },

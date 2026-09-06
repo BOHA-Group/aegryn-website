@@ -556,32 +556,32 @@
   },
   "whatwedo": {
     "label": "Notre Conviction",
-    "conviction": "La valeur d’une organisation se crée, se documente et se réalise.\nNous accompagnons les trois.",
+    "conviction": "La valeur d’une organisation ne se mesure pas uniquement au moment où on la cède. Elle se mesure chaque jour dans la solidité de ce qu’on a construit, ses actifs, son équipe, son indépendance, sa capacité à durer et à croître sans se fragiliser.\n\nCertains dirigeants veulent transmettre. D’autres veulent lever, acquérir, ou simplement construire un patrimoine qui résiste au temps. Quelle que soit l’ambition, la préparation est la même. La valeur ne s’improvise pas. Elle se construit.",
     "items": [
       {
         "num": "01",
-        "title": "La valeur se construit avant de se céder.",
-        "desc": "Une entreprise qui se transmet bien est une entreprise qui a été bien construite. Nous intervenons en amont : stratégie, organisation, actifs, documentation. Pour que la valeur soit réelle avant d’être reconnue."
+        "title": "La valeur se construit avant de se réaliser.",
+        "desc": "Une organisation solide n’est pas celle qui se vend bien.\nC’est celle qui vaut, qu’on la cède, qu’on la développe,\nou qu’on la transmette à la génération suivante.\nNous intervenons en amont : stratégie, organisation,\nactifs, documentation. Pour que la valeur soit réelle\navant d’être reconnue."
       },
       {
         "num": "02",
         "title": "Le conseil doit être opérationnel.",
-        "desc": "Un cabinet qui ne construit pas ne peut pas conseiller. Nos propres actifs passent par nos propres méthodes. Ce que nous recommandons, nous l’exécutons. Cette cohérence est notre première crédibilité."
+        "desc": "Un cabinet qui ne construit pas ne peut pas conseiller.\nNos propres actifs passent par nos propres méthodes.\nCe que nous recommandons, nous l’exécutons.\nCette cohérence est notre première crédibilité."
       },
       {
         "num": "03",
-        "title": "L’indépendance technologique est une condition de durabilité.",
-        "desc": "Dépendre d’un éditeur unique, c’est exposer l’organisation à un risque non maîtrisé. Nous concevons des logiciels à propriété totale, déployables sur toute infrastructure. INDÉPENDANCE TECHNOLOGIQUE."
+        "title": "Posséder ce qu’on construit est une condition de durabilité.",
+        "desc": "Dépendre d’un éditeur unique ou d’une infrastructure\nnon maîtrisée, c’est exposer l’organisation à un risque\nqui ne se voit pas, jusqu’au moment où il coûte.\nNous concevons des actifs à propriété totale,\ndéployables sur toute infrastructure, certifiables,\net transmissibles sans friction."
       },
       {
         "num": "04",
-        "title": "La certification change la conversation.",
-        "desc": "Pas une note, un protocole. Avant toute mise en marché, avant toute négociation. Un actif certifié Aegryn n’est pas une promesse, c’est une certitude documentée."
+        "title": "La documentation change la conversation.",
+        "desc": "Pas une note. Un protocole.\nAvant toute décision stratégique, avant toute mise en marché,\navant toute levée ou négociation.\nUne organisation documentée par Aegryn n’est pas une promesse.\nC’est une certitude défendable."
       },
       {
         "num": "05",
         "title": "Le talent est un actif comme les autres.",
-        "desc": "Les organisations qui durent placent les bonnes personnes au bon moment. CTO, CISO, DG, Head of AI : nous identifions les profils qui font réellement avancer une organisation."
+        "desc": "Les organisations qui durent placent les bonnes personnes\nau bon moment et savent les faire évoluer.\nCTO, CISO, DG, Head of AI, Directeur de Transformation :\nnous identifions les profils qui font réellement avancer\nune organisation, qu’il s’agisse de la construire,\nde la transformer ou de la transmettre."
       }
     ]
   },

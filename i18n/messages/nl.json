@@ -556,32 +556,32 @@
   },
   "whatwedo": {
     "label": "Onze Overtuiging",
-    "conviction": "Organisatiewaarde wordt gecreëerd, gedocumenteerd en gerealiseerd.\nWij begeleiden alle drie.",
+    "conviction": "De waarde van een organisatie wordt niet alleen gemeten op het moment van overdracht. Ze wordt elke dag gemeten in de soliditeit van wat is gebouwd: haar assets, haar team, haar onafhankelijkheid, haar vermogen om te duren en te groeien zonder zichzelf te verzwakken.\n\nSommige leiders willen overdragen. Anderen willen kapitaal aantrekken, acquisities doen, of eenvoudigweg een erfenis opbouwen die bestand is tegen de tand des tijds. Wat de ambitie ook is, de voorbereiding is dezelfde. Waarde wordt niet geïmproviseerd. Ze wordt gebouwd.",
     "items": [
       {
         "num": "01",
-        "title": "Waarde wordt opgebouwd voor de verkoop.",
-        "desc": "Een goed overgedragen bedrijf is een goed opgebouwd bedrijf. We interveniëren vroeg: strategie, organisatie, assets, documentatie."
+        "title": "Waarde wordt gebouwd voor ze gerealiseerd wordt.",
+        "desc": "Een solide organisatie is niet degene die goed verkoopt.\nHet is degene die waarde heeft, of ze nu wordt overgedragen, ontwikkeld\nof doorgegeven aan de volgende generatie.\nWij interveniëren vroeg: strategie, organisatie,\nassets, documentatie. Zodat waarde reëel is\nvoordat ze erkend wordt."
       },
       {
         "num": "02",
         "title": "Advies moet operationeel zijn.",
-        "desc": "Een firma die niet bouwt, kan niet adviseren. Onze eigen assets doorlopen onze eigen methoden. Wat we aanbevelen, voeren we uit."
+        "desc": "Een firma die niet bouwt, kan niet adviseren.\nOnze eigen assets doorlopen onze eigen methoden.\nWat wij aanbevelen, voeren wij uit.\nDeze consistentie is onze eerste geloofwaardigheid."
       },
       {
         "num": "03",
-        "title": "Technologische onafhankelijkheid is een voorwaarde voor duurzaamheid.",
-        "desc": "Afhankelijk zijn van één leverancier stelt de organisatie bloot aan een ongecontroleerd risico. We ontwerpen volledig eigen software. TECHNOLOGISCHE ONAFHANKELIJKHEID."
+        "title": "Bezitten wat men bouwt is een voorwaarde voor duurzaamheid.",
+        "desc": "Afhankelijk zijn van één leverancier of een niet-beheerste\ninfrastructuur stelt de organisatie bloot aan een risico\ndat men niet ziet, tot het kost.\nWij ontwerpen assets met volledig eigendom van de klant,\ninzetbaar op elke infrastructuur, certificeerbaar\nen overdraagbaar zonder wrijving."
       },
       {
         "num": "04",
-        "title": "Certificering verandert het gesprek.",
-        "desc": "Geen beoordeling, een protocol. Voor elke marktintroductie, voor elke onderhandeling. Een door Aegryn gecertificeerd asset is geen belofte, maar een gedocumenteerde zekerheid."
+        "title": "Documentatie verandert het gesprek.",
+        "desc": "Geen notitie. Een protocol.\nVoor elke strategische beslissing, voor elke marktintroductie,\nvoor elke kapitaalronde of onderhandeling.\nEen door Aegryn gedocumenteerde organisatie is geen belofte.\nHet is een verdedigbare zekerheid."
       },
       {
         "num": "05",
-        "title": "Talent is een asset zoals elke andere.",
-        "desc": "Organisaties die standhouden plaatsen de juiste mensen op het juiste moment. CTO, CISO, DG, Head of AI."
+        "title": "Talent is een asset zoals alle andere.",
+        "desc": "Organisaties die standhouden, plaatsen de juiste mensen\nop het juiste moment en weten hoe ze ze te laten groeien.\nCTO, CISO, DG, Head of AI, Transformatiedirecteur:\nwij identificeren de profielen die een organisatie\necht vooruithelpen, of het nu gaat om opbouwen,\ntransformeren of overdragen."
       }
     ]
   },
