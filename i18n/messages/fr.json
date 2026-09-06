@@ -272,7 +272,7 @@
     },
     "pillars": {
       "strategy": {
-        "title": "CONSEIL EN STRATÉGIE",
+        "title": "Conseil en stratégie",
         "desc": "Nous définissons avec les dirigeants la trajectoire de leur organisation et les conditions de son exécution.",
         "why": {
           "title": "Pourquoi le conseil en stratégie ?",
@@ -324,7 +324,7 @@
         ]
       },
       "technology": {
-        "title": "CONSEIL EN TECHNOLOGIE",
+        "title": "Conseil en technologie",
         "desc": "Nous intervenons sur la couche technologique de l’organisation, de l’architecture à la conformité.",
         "why": {
           "title": "Pourquoi le conseil en technologie ?",
@@ -376,7 +376,7 @@
         ]
       },
       "ma": {
-        "title": "CONSEIL EN M&A",
+        "title": "Conseil en M&A",
         "desc": "Nous structurons les opérations de croissance externe et accompagnons leur intégration.",
         "why": {
           "title": "Pourquoi le conseil en M&A ?",
@@ -1259,7 +1259,7 @@
   "advisoryPage": {
     "hero": {
       "label": "Aegryn Conseil",
-      "title": "Clarté Stratégique.\nProfondeur Opérationnelle.\nRéseau Activé.",
+      "title": "Clarté stratégique.\nProfondeur opérationnelle.\nRéseau activé.",
       "desc1": "Nous accompagnons les dirigeants dans leurs décisions stratégiques, leur transformation et leurs opérations M&A au niveau du board, avec une expertise opérationnelle et un réseau de spécialistes activé à la mission.",
       "desc2": "Ce que nous conseillons, nous l'appliquons à nous-mêmes. Nos actifs propres passent par nos propres méthodes. Cette cohérence est ce qui différencie Aegryn d'un cabinet de conseil classique.",
       "quote": "Nous n'avons pas de playbooks génériques.\nNous avons des méthodes éprouvées dans des environnements réels.",

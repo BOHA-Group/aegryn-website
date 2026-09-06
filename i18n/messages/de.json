@@ -272,7 +272,7 @@
     },
     "pillars": {
       "strategy": {
-        "title": "STRATEGIEBERATUNG",
+        "title": "Strategieberatung",
         "desc": "Wir definieren gemeinsam mit Führungskräften die Entwicklungslinie ihrer Organisation und die Bedingungen für deren Umsetzung.",
         "why": {
           "title": "Warum Strategieberatung?",
@@ -324,7 +324,7 @@
         ]
       },
       "technology": {
-        "title": "TECHNOLOGIEBERATUNG",
+        "title": "Technologieberatung",
         "desc": "Wir greifen in die Technologieschicht der Organisation ein, von der Architektur bis zur Konformität.",
         "why": {
           "title": "Warum Technologieberatung?",
@@ -376,7 +376,7 @@
         ]
       },
       "ma": {
-        "title": "M&A-BERATUNG",
+        "title": "M&A-Beratung",
         "desc": "Wir strukturieren externe Wachstumsoperationen und begleiten deren Integration.",
         "why": {
           "title": "Warum M&A-Beratung?",

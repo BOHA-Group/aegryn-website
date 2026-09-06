@@ -272,7 +272,7 @@
     },
     "pillars": {
       "strategy": {
-        "title": "STRATEGISCH ADVIES",
+        "title": "Strategieadvies",
         "desc": "Wij definiëren samen met leiders de ontwikkelingslijn van hun organisatie en de voorwaarden voor uitvoering.",
         "why": {
           "title": "Waarom strategieadvies?",
@@ -324,7 +324,7 @@
         ]
       },
       "technology": {
-        "title": "TECHNOLOGISCH ADVIES",
+        "title": "Technologieadvies",
         "desc": "Wij grijpen in op de technologielaag van de organisatie, van architectuur tot compliance.",
         "why": {
           "title": "Waarom technologieadvies?",
@@ -376,7 +376,7 @@
         ]
       },
       "ma": {
-        "title": "M&A ADVIES",
+        "title": "M&A-advies",
         "desc": "Wij structureren externe groeioperaties en begeleiden hun integratie.",
         "why": {
           "title": "Waarom M&A-advies?",
@@ -1323,7 +1323,7 @@
   "advisoryPage": {
     "hero": {
       "label": "Aegryn Advies",
-      "title": "Strategische Helderheid.\nOperationele Diepgang.\nGeactiveerd Netwerk.",
+      "title": "Strategische helderheid.\nOperationele diepgang.\nGeactiveerd netwerk.",
       "desc1": "Wij ondersteunen leiders bij strategische beslissingen, transformatie en M&A-operaties op boardniveau, met operationele expertise en een netwerk van specialisten dat per missie wordt geactiveerd.",
       "desc2": "Wat we adviseren, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Deze coherentie is wat Aegryn onderscheidt van een klassiek adviesbureau.",
       "quote": "We hebben geen generieke playbooks.\nWe hebben methoden bewezen in echte omgevingen.",

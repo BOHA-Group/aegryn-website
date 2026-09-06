@@ -272,7 +272,7 @@
     },
     "pillars": {
       "strategy": {
-        "title": "CONSULTORÍA ESTRATÉGICA",
+        "title": "Consultoría en estrategia",
         "desc": "Definimos con los dirigentes la trayectoria de su organización y las condiciones para su ejecución.",
         "why": {
           "title": "¿Por qué consultoría estratégica?",
@@ -324,7 +324,7 @@
         ]
       },
       "technology": {
-        "title": "CONSULTORÍA TECNOLÓGICA",
+        "title": "Consultoría en tecnología",
         "desc": "Intervenimos en la capa tecnológica de la organización, desde la arquitectura hasta la conformidad.",
         "why": {
           "title": "¿Por qué consultoría tecnológica?",
@@ -376,7 +376,7 @@
         ]
       },
       "ma": {
-        "title": "CONSULTORÍA M&A",
+        "title": "Consultoría en M&A",
         "desc": "Estructuramos las operaciones de crecimiento externo y acompañamos su integración.",
         "why": {
           "title": "¿Por qué consultoría M&A?",
@@ -1323,7 +1323,7 @@
   "advisoryPage": {
     "hero": {
       "label": "Aegryn Consultoría",
-      "title": "Claridad Estratégica.\nProfundidad Operacional.\nRed Activada.",
+      "title": "Claridad estratégica.\nProfundidad operacional.\nRed activada.",
       "desc1": "Acompañamos a los dirigentes en sus decisiones estratégicas, transformación y operaciones M&A a nivel de board, con experiencia operacional y una red de especialistas activada por misión.",
       "desc2": "Lo que aconsejamos, lo aplicamos a nosotros mismos. Nuestros propios activos pasan por nuestros propios métodos. Esta coherencia es lo que diferencia a Aegryn de una firma de consultoría clásica.",
       "quote": "No tenemos playbooks genéricos.\nTenemos métodos probados en entornos reales.",

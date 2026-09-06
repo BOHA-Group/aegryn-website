@@ -272,7 +272,7 @@
     },
     "pillars": {
       "strategy": {
-        "title": "STRATEGY ADVISORY",
+        "title": "Strategy advisory",
         "desc": "We define with leaders the trajectory of their organisation and the conditions for its execution.",
         "why": {
           "title": "Why strategy consulting?",
@@ -324,7 +324,7 @@
         ]
       },
       "technology": {
-        "title": "TECHNOLOGY ADVISORY",
+        "title": "Technology advisory",
         "desc": "We intervene on the technology layer of the organisation, from architecture to compliance.",
         "why": {
           "title": "Why technology consulting?",
@@ -376,7 +376,7 @@
         ]
       },
       "ma": {
-        "title": "M&A ADVISORY",
+        "title": "M&A advisory",
         "desc": "We structure external growth operations and support their integration.",
         "why": {
           "title": "Why M&A consulting?",
@@ -1323,7 +1323,7 @@
   "advisoryPage": {
     "hero": {
       "label": "Aegryn Advisory",
-      "title": "Strategic Clarity.\nOperational Depth.\nActivated Network.",
+      "title": "Strategic clarity.\nOperational depth.\nActivated network.",
       "desc1": "We support leaders in their strategic decisions, transformation and M&A operations at board level, with operational expertise and a network of specialists activated for each mission.",
       "desc2": "What we advise, we apply to ourselves. Our own assets go through our own methods. This coherence is what differentiates Aegryn from a traditional advisory firm.",
       "quote": "We have no generic playbooks.\nWe have methods proven in real environments.",
