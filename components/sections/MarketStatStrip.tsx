@@ -41,9 +41,11 @@ export function MarketStatStrip() {
               <p className="text-[12px] text-white/60 leading-snug mb-1.5">
                 {stat.label}
               </p>
-              <p className="font-mono text-[10px] text-white/30 tracking-wide">
-                {stat.source}
-              </p>
+              {stat.source && (
+                <p className="font-mono text-[10px] text-white/30 tracking-wide">
+                  {stat.source}
+                </p>
+              )}
             </div>
           ))}
         </div>
